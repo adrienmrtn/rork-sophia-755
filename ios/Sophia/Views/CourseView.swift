@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 struct CourseView: View {
     let course: Course
@@ -13,6 +14,7 @@ struct CourseView: View {
     @State private var quizButtonPulse: Bool = false
     @State private var quizButtonShimmer: CGFloat = -200
     @State private var showQuizPrePaywall: Bool = false
+    @ObservedObject private var imageCredits = ImageCreditsStore.shared
 
     private var isLastLesson: Bool {
         currentIndex == course.lessons.count - 1
@@ -125,10 +127,27 @@ struct CourseView: View {
                     .font(.system(.title2, design: .rounded, weight: .bold))
                     .foregroundStyle(.white)
 
-                Text(markdownAttributedString(lesson.content))
-                    .font(.system(.body, design: .rounded))
-                    .foregroundStyle(.white.opacity(0.85))
-                    .lineSpacing(6)
+                let blocks = LessonContentParser.parse(lesson.content)
+                VStack(alignment: .leading, spacing: 16) {
+                    ForEach(blocks) { block in
+                        switch block.kind {
+                        case .text(let text):
+                            Text(markdownAttributedString(text))
+                                .font(.system(.body, design: .rounded))
+                                .foregroundStyle(.white.opacity(0.85))
+                                .lineSpacing(6)
+                        case .image(let token):
+                            CourseInlineImageView(
+                                token: token,
+                                credit: imageCredits.credit(for: token)
+                            )
+                        case .funFact(let text):
+                            FunFactBox(text: text)
+                        case .highlight(let text):
+                            HighlightBox(text: text)
+                        }
+                    }
+                }
             }
             .padding(.horizontal, 24)
             .padding(.top, 20)
@@ -232,6 +251,94 @@ struct CourseView: View {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
             if isLastLesson && course.hasQuiz {
                 shimmerLoop()
+            }
+        }
+    }
+}
+
+private struct FunFactBox: View {
+    let text: String
+
+    var body: some View {
+        HStack(alignment: .top, spacing: 12) {
+            Image(systemName: "sparkles")
+                .font(.system(size: 16, weight: .semibold))
+                .foregroundStyle(SophiaTheme.emerald)
+                .padding(.top, 2)
+            Text(text)
+                .font(.system(.subheadline, design: .rounded))
+                .foregroundStyle(.white.opacity(0.9))
+                .lineSpacing(5)
+            Spacer(minLength: 0)
+        }
+        .padding(16)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(.white.opacity(0.06), in: .rect(cornerRadius: 16))
+        .overlay(
+            RoundedRectangle(cornerRadius: 16)
+                .strokeBorder(SophiaTheme.emerald.opacity(0.35), lineWidth: 1)
+        )
+    }
+}
+
+private struct HighlightBox: View {
+    let text: String
+
+    var body: some View {
+        HStack(alignment: .top, spacing: 12) {
+            Image(systemName: "bookmark.fill")
+                .font(.system(size: 16, weight: .semibold))
+                .foregroundStyle(.yellow)
+                .padding(.top, 2)
+            Text(text)
+                .font(.system(.subheadline, design: .rounded, weight: .semibold))
+                .foregroundStyle(.white)
+                .lineSpacing(5)
+            Spacer(minLength: 0)
+        }
+        .padding(16)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(.white.opacity(0.08), in: .rect(cornerRadius: 16))
+        .overlay(
+            RoundedRectangle(cornerRadius: 16)
+                .strokeBorder(.yellow.opacity(0.35), lineWidth: 1)
+        )
+    }
+}
+
+private struct CourseInlineImageView: View {
+    let token: String
+    let credit: ImageCredit?
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            if let url = IllustrationFileIndex.shared.url(for: token), let uiImage = UIImage(contentsOfFile: url.path) {
+                Image(uiImage: uiImage)
+                    .resizable()
+                    .scaledToFit()
+                    .clipShape(.rect(cornerRadius: 14))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 14)
+                            .strokeBorder(.white.opacity(0.08), lineWidth: 1)
+                    )
+            } else {
+                HStack(spacing: 10) {
+                    Image(systemName: "photo")
+                        .foregroundStyle(.white.opacity(0.5))
+                    Text(token)
+                        .font(.system(.subheadline, design: .rounded, weight: .semibold))
+                        .foregroundStyle(.white.opacity(0.7))
+                    Spacer()
+                }
+                .padding(14)
+                .frame(maxWidth: .infinity)
+                .background(.white.opacity(0.05), in: .rect(cornerRadius: 14))
+            }
+
+            if let credit {
+                Text("\(credit.originalName) — \(credit.author)")
+                    .font(.system(.caption, design: .rounded))
+                    .foregroundStyle(.white.opacity(0.55))
             }
         }
     }
