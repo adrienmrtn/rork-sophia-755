@@ -24,20 +24,36 @@ enum LessonContentParser {
         func flushText() {
             let trimmed = buffer.trimmingCharacters(in: .whitespacesAndNewlines)
             if !trimmed.isEmpty {
-                blocks.append(LessonContentBlock(id: UUID(), kind: .text(buffer)))
+                blocks.append(LessonContentBlock(id: UUID(), kind: .text(trimmed)))
             }
             buffer = ""
+        }
+
+        func isStandaloneLine(tokenRange: Range<String.Index>) -> Bool {
+            let lineStart = input[..<tokenRange.lowerBound].lastIndex(of: "\n").map { input.index(after: $0) } ?? input.startIndex
+            let lineEnd = input[tokenRange.upperBound...].firstIndex(of: "\n") ?? input.endIndex
+            let line = input[lineStart..<lineEnd].trimmingCharacters(in: .whitespacesAndNewlines)
+            return line == input[tokenRange]
         }
 
         var i = input.startIndex
         while i < input.endIndex {
             if input[i] == "[" {
                 if let close = input[i...].firstIndex(of: "]") {
-                    let inside = String(input[input.index(after: i)..<close]).trimmingCharacters(in: .whitespacesAndNewlines)
-                    if !inside.isEmpty {
-                        flushText()
-                        blocks.append(LessonContentBlock(id: UUID(), kind: .image(inside)))
-                        i = input.index(after: close)
+                    let tokenStart = i
+                    let tokenEnd = input.index(after: close)
+                    let tokenRange = tokenStart..<tokenEnd
+                    if isStandaloneLine(tokenRange: tokenRange) {
+                        let inside = String(input[input.index(after: i)..<close]).trimmingCharacters(in: .whitespacesAndNewlines)
+                        if !inside.isEmpty {
+                            flushText()
+                            blocks.append(LessonContentBlock(id: UUID(), kind: .image(inside)))
+                            i = tokenEnd
+                            continue
+                        }
+                    } else {
+                        buffer.append(contentsOf: input[tokenRange])
+                        i = tokenEnd
                         continue
                     }
                 }
@@ -45,11 +61,20 @@ enum LessonContentParser {
 
             if input[i] == "{" {
                 if let close = input[i...].firstIndex(of: "}") {
-                    let inside = String(input[input.index(after: i)..<close]).trimmingCharacters(in: .whitespacesAndNewlines)
-                    if !inside.isEmpty {
-                        flushText()
-                        blocks.append(LessonContentBlock(id: UUID(), kind: .funFact(inside)))
-                        i = input.index(after: close)
+                    let tokenStart = i
+                    let tokenEnd = input.index(after: close)
+                    let tokenRange = tokenStart..<tokenEnd
+                    if isStandaloneLine(tokenRange: tokenRange) {
+                        let inside = String(input[input.index(after: i)..<close]).trimmingCharacters(in: .whitespacesAndNewlines)
+                        if !inside.isEmpty {
+                            flushText()
+                            blocks.append(LessonContentBlock(id: UUID(), kind: .funFact(inside)))
+                            i = tokenEnd
+                            continue
+                        }
+                    } else {
+                        buffer.append(contentsOf: input[tokenRange])
+                        i = tokenEnd
                         continue
                     }
                 }
@@ -60,11 +85,20 @@ enum LessonContentParser {
                 if next < input.endIndex, input[next] == "|" {
                     let start = input.index(i, offsetBy: 2)
                     if let end = input[start...].range(of: "||")?.lowerBound {
-                        let inside = String(input[start..<end]).trimmingCharacters(in: .whitespacesAndNewlines)
-                        if !inside.isEmpty {
-                            flushText()
-                            blocks.append(LessonContentBlock(id: UUID(), kind: .highlight(inside)))
-                            i = input.index(end, offsetBy: 2)
+                        let tokenStart = i
+                        let tokenEnd = input.index(end, offsetBy: 2)
+                        let tokenRange = tokenStart..<tokenEnd
+                        if isStandaloneLine(tokenRange: tokenRange) {
+                            let inside = String(input[start..<end]).trimmingCharacters(in: .whitespacesAndNewlines)
+                            if !inside.isEmpty {
+                                flushText()
+                                blocks.append(LessonContentBlock(id: UUID(), kind: .highlight(inside)))
+                                i = tokenEnd
+                                continue
+                            }
+                        } else {
+                            buffer.append(contentsOf: input[tokenRange])
+                            i = tokenEnd
                             continue
                         }
                     }
@@ -160,7 +194,6 @@ final class ImageCreditsStore: ObservableObject {
                     normalized(row["copyright"])
 
                 guard !originalName.isEmpty else { continue }
-                guard let author, !author.isEmpty else { continue }
 
                 let license =
                     normalized(row["licence"]) ??
@@ -171,7 +204,15 @@ final class ImageCreditsStore: ObservableObject {
                     normalized(row["lien"]) ??
                     normalized(row["url"])
 
-                let credit = ImageCredit(originalName: originalName, author: author, license: license, source: source)
+                let authorValue = author ?? ""
+                if authorValue.isEmpty, (license ?? "").isEmpty, (source ?? "").isEmpty { continue }
+
+                let credit = ImageCredit(
+                    originalName: htmlUnescape(originalName),
+                    author: htmlUnescape(authorValue),
+                    license: license.map(htmlUnescape),
+                    source: source.map(htmlUnescape)
+                )
 
                 for key in fileKeyVariants(token) + fileKeyVariants(originalName) {
                     merged[key] = credit
@@ -312,6 +353,22 @@ final class ImageCreditsStore: ObservableObject {
             return standardizedSlashes.split(separator: "/").last.map(String.init) ?? standardizedSlashes
         }
         return standardizedSlashes
+    }
+
+    private static func htmlUnescape(_ raw: String) -> String {
+        var s = raw
+        let replacements: [(String, String)] = [
+            ("&amp;", "&"),
+            ("&quot;", "\""),
+            ("&#39;", "'"),
+            ("&apos;", "'"),
+            ("&lt;", "<"),
+            ("&gt;", ">"),
+        ]
+        for (from, to) in replacements {
+            s = s.replacingOccurrences(of: from, with: to, options: [.caseInsensitive], range: nil)
+        }
+        return s
     }
 }
 

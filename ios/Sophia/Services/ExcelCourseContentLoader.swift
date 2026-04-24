@@ -15,6 +15,23 @@ enum ExcelCourseContentLoader {
             guard let n = courseNumber(from: course.id) else { return nil }
             return (n, course)
         })
+        let baseByTitleKey: [String: Course] = {
+            var out: [String: Course] = [:]
+            var dupes = Set<String>()
+            for course in baseCourses {
+                let key = titleKey(course.title)
+                if key.isEmpty { continue }
+                if out[key] != nil {
+                    dupes.insert(key)
+                } else {
+                    out[key] = course
+                }
+            }
+            for key in dupes {
+                out[key] = nil
+            }
+            return out
+        }()
 
         let contentRows = try readRowsAllSheets(
             xlsxResource: "Excel_cours",
@@ -29,17 +46,21 @@ enum ExcelCourseContentLoader {
         )
 
         var updatedById = Dictionary(uniqueKeysWithValues: baseCourses.map { ($0.id, $0) })
+        var excelNumberToCourseId: [Int: String] = [:]
 
         for row in contentRows {
             guard let idValue = firstValue(in: row, keys: ["id"]) ?? firstValueContaining(in: row, substrings: ["id"]) else { continue }
             guard let number = parseCourseNumber(idValue) else { continue }
-            let base = baseByNumber[number]
-            let courseId = base?.id ?? "course_\(number)"
 
             let subjectValue = firstValue(in: row, keys: ["matiere"]) ?? firstValueContaining(in: row, substrings: ["matiere"]) ?? ""
+            let title = normalized(row["titre"]) ?? "Cours \(number)"
+            let titleKeyValue = titleKey(title)
+            let base = baseByNumber[number] ?? (titleKeyValue.isEmpty ? nil : baseByTitleKey[titleKeyValue])
+            let courseId = base?.id ?? "course_\(number)"
+            excelNumberToCourseId[number] = courseId
+
             let subject = parseSubject(subjectValue) ?? base?.subject ?? .histoire
             let subcategory = normalized(firstValue(in: row, keys: ["sous categorie"]) ?? firstValueContaining(in: row, substrings: ["sous", "categorie"])) ?? base?.subcategory ?? ""
-            let title = normalized(row["titre"]) ?? base?.title ?? "Cours \(number)"
 
             let intro = normalized(row["intro"]) ?? ""
             var lessonPages: [LessonPage] = []
@@ -87,11 +108,16 @@ enum ExcelCourseContentLoader {
             updatedById[courseId] = merged
         }
 
+        var quizByCourseId: [String: [QuizQuestion]] = [:]
+
         for row in quizRows {
-            guard let idValue = firstValue(in: row, keys: ["id"]) ?? firstValueContaining(in: row, substrings: ["id"]) else { continue }
+            guard
+                let idValue =
+                    firstValue(in: row, keys: ["id", "cours", "course", "numero"]) ??
+                    firstValueContaining(in: row, substrings: ["id", "cours", "numero"])
+            else { continue }
             guard let number = parseCourseNumber(idValue) else { continue }
-            let base = baseByNumber[number]
-            let courseId = base?.id ?? "course_\(number)"
+            let courseId = excelNumberToCourseId[number] ?? baseByNumber[number]?.id ?? "course_\(number)"
 
             var questions: [QuizQuestion] = []
             for qIndex in 1...20 {
@@ -123,6 +149,16 @@ enum ExcelCourseContentLoader {
 
             guard !questions.isEmpty else { continue }
 
+            if let existing = quizByCourseId[courseId] {
+                if questions.count > existing.count {
+                    quizByCourseId[courseId] = questions
+                }
+            } else {
+                quizByCourseId[courseId] = questions
+            }
+        }
+
+        for (courseId, questions) in quizByCourseId {
             if let existing = updatedById[courseId] {
                 updatedById[courseId] = Course(
                     id: existing.id,
@@ -133,7 +169,7 @@ enum ExcelCourseContentLoader {
                     lessons: existing.lessons,
                     quiz: questions
                 )
-            } else if let base {
+            } else if let base = baseCourses.first(where: { $0.id == courseId }) {
                 updatedById[courseId] = Course(
                     id: base.id,
                     title: base.title,
@@ -320,6 +356,22 @@ enum ExcelCourseContentLoader {
         }
 
         return out.joined(separator: " ")
+    }
+
+    private static func titleKey(_ raw: String) -> String {
+        let folded = raw
+            .replacingOccurrences(of: "\\n", with: " ")
+            .folding(options: [.diacriticInsensitive, .caseInsensitive], locale: .current)
+
+        let sanitized = folded.unicodeScalars.map { scalar -> Character in
+            if CharacterSet.alphanumerics.contains(scalar) { return Character(scalar) }
+            return " "
+        }
+
+        return String(sanitized)
+            .lowercased()
+            .split(whereSeparator: { $0.isWhitespace })
+            .joined(separator: " ")
     }
 
     private static func firstValue(in row: [String: String], keys: [String]) -> String? {

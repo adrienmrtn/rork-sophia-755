@@ -3,14 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		XX298127CFBB2CF3FA631BXX /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = XXDCC169DE7B2F3C1C8B10XX /* RevenueCat */; };
-		XXA1B2C3D4E5F6A7B8C9D0XX /* RevenueCatUI in Frameworks */ = {isa = PBXBuildFile; productRef = XXA1B2C3D4E5F6A7B8C9D1XX /* RevenueCatUI */; };
 		106F0C0A0000000000000001 /* CoreXLSX in Frameworks */ = {isa = PBXBuildFile; productRef = 106F0C0A0000000000000002 /* CoreXLSX */; };
 		106F0C0A0000000000000006 /* data in Resources */ = {isa = PBXBuildFile; fileRef = 106F0C0A0000000000000005 /* data */; };
+		XX298127CFBB2CF3FA631BXX /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = XXDCC169DE7B2F3C1C8B10XX /* RevenueCat */; };
+		XXA1B2C3D4E5F6A7B8C9D0XX /* RevenueCatUI in Frameworks */ = {isa = PBXBuildFile; productRef = XXA1B2C3D4E5F6A7B8C9D1XX /* RevenueCatUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +36,12 @@
 		105FC5932E9EAD3200EA8BCF /* SophiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SophiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		106F0C0A0000000000000005 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data; path = ../data; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		105FC57C2E9EAD3100EA8BCF /* Sophia */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Sophia; sourceTree = "<group>"; };
+		105FC58C2E9EAD3200EA8BCF /* SophiaTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = SophiaTests; sourceTree = "<group>"; };
+		105FC5962E9EAD3200EA8BCF /* SophiaUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = SophiaUITests; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		105FC5772E9EAD3100EA8BCF /* Frameworks */ = {
@@ -63,24 +69,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		105FC57C2E9EAD3100EA8BCF /* Sophia */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Sophia;
-			sourceTree = "<group>";
-		};
-		105FC58C2E9EAD3200EA8BCF /* SophiaTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SophiaTests;
-			sourceTree = "<group>";
-		};
-		105FC5962E9EAD3200EA8BCF /* SophiaUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SophiaUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXGroup section */
 		105FC5712E9EAD3100EA8BCF = {
@@ -186,7 +174,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2600;
-				LastUpgradeCheck = 2600;
+				LastUpgradeCheck = 2640;
 				TargetAttributes = {
 					105FC5792E9EAD3100EA8BCF = {
 						CreatedOnToolsVersion = 26.0;
@@ -215,7 +203,6 @@
 				106F0C0A0000000000000003 /* XCRemoteSwiftPackageReference "CoreXLSX" */,
 				XX4AC81916604C4344ADC0XX /* XCRemoteSwiftPackageReference "purchases-ios-spm" */,
 			);
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 105FC57B2E9EAD3100EA8BCF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -349,6 +336,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -406,6 +394,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -629,15 +618,15 @@
 			package = 106F0C0A0000000000000003 /* XCRemoteSwiftPackageReference "CoreXLSX" */;
 			productName = CoreXLSX;
 		};
-		XXDCC169DE7B2F3C1C8B10XX /* RevenueCat */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = XX4AC81916604C4344ADC0XX /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;
-			productName = RevenueCat;
-		};
 		XXA1B2C3D4E5F6A7B8C9D1XX /* RevenueCatUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = XX4AC81916604C4344ADC0XX /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;
 			productName = RevenueCatUI;
+		};
+		XXDCC169DE7B2F3C1C8B10XX /* RevenueCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = XX4AC81916604C4344ADC0XX /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;
+			productName = RevenueCat;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

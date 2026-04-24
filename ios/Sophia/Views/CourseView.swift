@@ -139,7 +139,7 @@ struct CourseView: View {
                         case .image(let token):
                             CourseInlineImageView(
                                 token: token,
-                                credit: imageCredits.credit(for: token)
+                                creditsStore: imageCredits
                             )
                         case .funFact(let text):
                             FunFactBox(text: text)
@@ -308,11 +308,23 @@ private struct HighlightBox: View {
 
 private struct CourseInlineImageView: View {
     let token: String
-    let credit: ImageCredit?
+    @ObservedObject var creditsStore: ImageCreditsStore
 
     var body: some View {
+        let imageURL = IllustrationFileIndex.shared.url(for: token)
+        let resolvedCredit =
+            creditsStore.credit(for: token) ??
+            (imageURL.flatMap { creditsStore.credit(for: $0.lastPathComponent) }) ??
+            (imageURL.flatMap { creditsStore.credit(for: $0.deletingPathExtension().lastPathComponent) })
+
+        let displayToken = {
+            let trimmed = token.trimmingCharacters(in: .whitespacesAndNewlines)
+            let base = trimmed.components(separatedBy: ".").dropLast().joined(separator: ".")
+            return base.isEmpty ? trimmed : base
+        }()
+
         VStack(alignment: .leading, spacing: 10) {
-            if let url = IllustrationFileIndex.shared.url(for: token), let uiImage = UIImage(contentsOfFile: url.path) {
+            if let imageURL, let uiImage = UIImage(contentsOfFile: imageURL.path) {
                 Image(uiImage: uiImage)
                     .resizable()
                     .scaledToFit()
@@ -335,11 +347,38 @@ private struct CourseInlineImageView: View {
                 .background(.white.opacity(0.05), in: .rect(cornerRadius: 14))
             }
 
-            if let credit {
-                Text("\(credit.originalName) — \(credit.author)")
-                    .font(.system(.caption, design: .rounded))
-                    .foregroundStyle(.white.opacity(0.55))
+            if let credit = resolvedCredit {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(displayToken.lowercased())
+                        .font(.system(.subheadline, design: .rounded, weight: .semibold))
+                        .foregroundStyle(.white.opacity(0.85))
+
+                    Text(credit.originalName)
+                        .font(.system(.caption, design: .rounded))
+                        .foregroundStyle(.white.opacity(0.65))
+                        .italic()
+
+                    Text(copyrightLine(for: credit))
+                        .font(.system(.caption2, design: .rounded))
+                        .foregroundStyle(.white.opacity(0.55))
+                }
             }
         }
+    }
+
+    private func copyrightLine(for credit: ImageCredit) -> String {
+        let trimmedAuthor = credit.author.trimmingCharacters(in: .whitespacesAndNewlines)
+        if trimmedAuthor.isEmpty {
+            let license = credit.license?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+            if !license.isEmpty { return license }
+            let source = credit.source?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+            return source
+        }
+
+        let authorPart = trimmedAuthor.hasPrefix("©") ? trimmedAuthor : "© \(trimmedAuthor)"
+
+        let license = credit.license?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        if license.isEmpty { return authorPart }
+        return authorPart + " — " + license
     }
 }
