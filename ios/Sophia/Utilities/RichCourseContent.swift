@@ -17,99 +17,76 @@ struct LessonContentBlock: Identifiable, Equatable {
 enum LessonContentParser {
     static func parse(_ raw: String) -> [LessonContentBlock] {
         let input = raw.replacingOccurrences(of: "\\n", with: "\n")
-
         var blocks: [LessonContentBlock] = []
-        var buffer = ""
+        var paragraphLines: [String] = []
+        var pendingBlocks: [LessonContentBlock.Kind] = []
 
-        func flushText() {
-            let trimmed = buffer.trimmingCharacters(in: .whitespacesAndNewlines)
-            if !trimmed.isEmpty {
-                blocks.append(LessonContentBlock(id: UUID(), kind: .text(trimmed)))
+        func flushParagraph() {
+            let text = paragraphLines.joined(separator: "\n").trimmingCharacters(in: .whitespacesAndNewlines)
+            if !text.isEmpty {
+                blocks.append(LessonContentBlock(id: UUID(), kind: .text(text)))
             }
-            buffer = ""
+            for kind in pendingBlocks {
+                blocks.append(LessonContentBlock(id: UUID(), kind: kind))
+            }
+            paragraphLines.removeAll(keepingCapacity: true)
+            pendingBlocks.removeAll(keepingCapacity: true)
         }
 
-        func isStandaloneLine(tokenRange: Range<String.Index>) -> Bool {
-            let lineStart = input[..<tokenRange.lowerBound].lastIndex(of: "\n").map { input.index(after: $0) } ?? input.startIndex
-            let lineEnd = input[tokenRange.upperBound...].firstIndex(of: "\n") ?? input.endIndex
-            let line = input[lineStart..<lineEnd].trimmingCharacters(in: .whitespacesAndNewlines)
-            return line == input[tokenRange]
+        func parseStandaloneMarker(from trimmedLine: String) -> LessonContentBlock.Kind? {
+            if trimmedLine.hasPrefix("["), trimmedLine.hasSuffix("]"), trimmedLine.count >= 2 {
+                let inside = trimmedLine.dropFirst().dropLast().trimmingCharacters(in: .whitespacesAndNewlines)
+                if !inside.isEmpty { return .image(String(inside)) }
+            }
+
+            if trimmedLine.hasPrefix("{"), trimmedLine.hasSuffix("}"), trimmedLine.count >= 2 {
+                let inside = trimmedLine.dropFirst().dropLast().trimmingCharacters(in: .whitespacesAndNewlines)
+                if !inside.isEmpty { return .funFact(String(inside)) }
+            }
+
+            if trimmedLine.hasPrefix("||"), trimmedLine.hasSuffix("||"), trimmedLine.count >= 4 {
+                let inside = trimmedLine.dropFirst(2).dropLast(2).trimmingCharacters(in: .whitespacesAndNewlines)
+                if !inside.isEmpty { return .highlight(String(inside)) }
+            }
+
+            return nil
         }
 
-        var i = input.startIndex
-        while i < input.endIndex {
-            if input[i] == "[" {
-                if let close = input[i...].firstIndex(of: "]") {
-                    let tokenStart = i
-                    let tokenEnd = input.index(after: close)
-                    let tokenRange = tokenStart..<tokenEnd
-                    if isStandaloneLine(tokenRange: tokenRange) {
-                        let inside = String(input[input.index(after: i)..<close]).trimmingCharacters(in: .whitespacesAndNewlines)
-                        if !inside.isEmpty {
-                            flushText()
-                            blocks.append(LessonContentBlock(id: UUID(), kind: .image(inside)))
-                            i = tokenEnd
-                            continue
-                        }
-                    } else {
-                        buffer.append(contentsOf: input[tokenRange])
-                        i = tokenEnd
-                        continue
-                    }
-                }
-            }
-
-            if input[i] == "{" {
-                if let close = input[i...].firstIndex(of: "}") {
-                    let tokenStart = i
-                    let tokenEnd = input.index(after: close)
-                    let tokenRange = tokenStart..<tokenEnd
-                    if isStandaloneLine(tokenRange: tokenRange) {
-                        let inside = String(input[input.index(after: i)..<close]).trimmingCharacters(in: .whitespacesAndNewlines)
-                        if !inside.isEmpty {
-                            flushText()
-                            blocks.append(LessonContentBlock(id: UUID(), kind: .funFact(inside)))
-                            i = tokenEnd
-                            continue
-                        }
-                    } else {
-                        buffer.append(contentsOf: input[tokenRange])
-                        i = tokenEnd
-                        continue
-                    }
-                }
-            }
-
-            if input[i] == "|" {
-                let next = input.index(after: i)
-                if next < input.endIndex, input[next] == "|" {
-                    let start = input.index(i, offsetBy: 2)
-                    if let end = input[start...].range(of: "||")?.lowerBound {
-                        let tokenStart = i
-                        let tokenEnd = input.index(end, offsetBy: 2)
-                        let tokenRange = tokenStart..<tokenEnd
-                        if isStandaloneLine(tokenRange: tokenRange) {
-                            let inside = String(input[start..<end]).trimmingCharacters(in: .whitespacesAndNewlines)
-                            if !inside.isEmpty {
-                                flushText()
-                                blocks.append(LessonContentBlock(id: UUID(), kind: .highlight(inside)))
-                                i = tokenEnd
-                                continue
-                            }
-                        } else {
-                            buffer.append(contentsOf: input[tokenRange])
-                            i = tokenEnd
-                            continue
-                        }
-                    }
-                }
-            }
-
-            buffer.append(input[i])
-            i = input.index(after: i)
+        func looksLikeStandaloneMarkerLine(_ line: String) -> Bool {
+            let trimmed = line.trimmingCharacters(in: .whitespacesAndNewlines)
+            return parseStandaloneMarker(from: trimmed) != nil
         }
 
-        flushText()
+        let lines = input.split(separator: "\n", omittingEmptySubsequences: false).map(String.init)
+
+        for index in lines.indices {
+            let line = lines[index]
+            let trimmed = line.trimmingCharacters(in: .whitespacesAndNewlines)
+
+            if trimmed.isEmpty {
+                flushParagraph()
+                continue
+            }
+
+            if let kind = parseStandaloneMarker(from: trimmed) {
+                let hasPrevText = !paragraphLines.isEmpty
+                let nextLine = (index + 1 < lines.count) ? lines[index + 1] : nil
+                let nextTrimmed = nextLine?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+                let hasNextText = !nextTrimmed.isEmpty && !looksLikeStandaloneMarkerLine(nextLine ?? "")
+
+                if hasPrevText && hasNextText {
+                    pendingBlocks.append(kind)
+                } else {
+                    flushParagraph()
+                    blocks.append(LessonContentBlock(id: UUID(), kind: kind))
+                }
+                continue
+            }
+
+            paragraphLines.append(line)
+        }
+
+        flushParagraph()
         return blocks
     }
 }
@@ -168,7 +145,9 @@ final class ImageCreditsStore: ObservableObject {
 
         var merged: [String: ImageCredit] = [:]
         for url in files {
-            let rows = try readRows(fileURL: url, sheetName: "Crédits")
+            let rows =
+                (try? readRows(fileURL: url, preferredSheetNames: ["Crédits", "Credits", "Crédit", "Credit", "Sheet1"])) ??
+                []
             for row in rows {
                 let token =
                     normalized(row["image"]) ??
@@ -223,6 +202,24 @@ final class ImageCreditsStore: ObservableObject {
         return merged
     }
 
+    private static func readRows(fileURL: URL, preferredSheetNames: [String]) throws -> [[String: String]] {
+        guard let file = XLSXFile(filepath: fileURL.path) else { return [] }
+        let sharedStrings = try file.parseSharedStrings()
+        guard let workbook = try file.parseWorkbooks().first else { return [] }
+        let pathsAndNames = try file.parseWorksheetPathsAndNames(workbook: workbook)
+
+        let normalizedPreferred = preferredSheetNames.map { headerKey($0) }
+        let pathFromPreferred = pathsAndNames.first(where: { item in
+            let nameKey = headerKey(item.name ?? "")
+            return normalizedPreferred.contains(nameKey)
+        })?.path
+
+        let worksheetPath = pathFromPreferred ?? pathsAndNames.first?.path
+        guard let worksheetPath else { return [] }
+
+        return try readRows(file: file, sharedStrings: sharedStrings, worksheetPath: worksheetPath)
+    }
+
     private static func readRows(fileURL: URL, sheetName: String) throws -> [[String: String]] {
         guard let file = XLSXFile(filepath: fileURL.path) else { return [] }
         let sharedStrings = try file.parseSharedStrings()
@@ -230,7 +227,10 @@ final class ImageCreditsStore: ObservableObject {
         let pathsAndNames = try file.parseWorksheetPathsAndNames(workbook: workbook)
         let worksheetPath = pathsAndNames.first(where: { ($0.name ?? "") == sheetName })?.path ?? pathsAndNames.first?.path
         guard let worksheetPath else { return [] }
+        return try readRows(file: file, sharedStrings: sharedStrings, worksheetPath: worksheetPath)
+    }
 
+    private static func readRows(file: XLSXFile, sharedStrings: SharedStrings?, worksheetPath: String) throws -> [[String: String]] {
         let worksheet = try file.parseWorksheet(at: worksheetPath)
         let rows = worksheet.data?.rows ?? []
         guard let headerRow = rows.first else { return [] }
