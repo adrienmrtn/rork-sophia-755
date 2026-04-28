@@ -1,9 +1,9 @@
 import Foundation
+import Combine
 
-@Observable
 @MainActor
-class ProgressManager {
-    var progress: UserProgress = .empty
+final class ProgressManager: ObservableObject {
+    @Published var progress: UserProgress = .empty
 
     private let key = "sophia_user_progress"
     private let dateFormatter: DateFormatter = {

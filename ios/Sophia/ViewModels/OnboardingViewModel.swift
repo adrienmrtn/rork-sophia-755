@@ -2,17 +2,18 @@ import SwiftUI
 import AVFoundation
 import StoreKit
 import RevenueCat
+import Combine
 
-@Observable
-class OnboardingViewModel {
-    var currentScreen: Int = 0
-    var phoneTimeSelection: Int? = nil
-    var objectives: Set<String> = []
-    var interests: Set<String> = []
-    var ageRange: String? = nil
-    var loadingProgress: Double = 0
-    var loadingStep: String = ""
-    var isLoadingComplete: Bool = false
+@MainActor
+final class OnboardingViewModel: ObservableObject {
+    @Published var currentScreen: Int = 0
+    @Published var phoneTimeSelection: Int? = nil
+    @Published var objectives: Set<String> = []
+    @Published var interests: Set<String> = []
+    @Published var ageRange: String? = nil
+    @Published var loadingProgress: Double = 0
+    @Published var loadingStep: String = ""
+    @Published var isLoadingComplete: Bool = false
 
     let totalScreens = 18
 

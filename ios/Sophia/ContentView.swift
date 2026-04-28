@@ -2,8 +2,8 @@ import SwiftUI
 import RevenueCatUI
 
 struct ContentView: View {
-    @State private var progressManager = ProgressManager()
-    @State private var storeVM = StoreViewModel()
+    @StateObject private var progressManager = ProgressManager()
+    @StateObject private var storeVM = StoreViewModel()
     @State private var selectedTab: Int = 0
     @State private var selectedCourse: Course? = nil
     @State private var showPaywall: Bool = false

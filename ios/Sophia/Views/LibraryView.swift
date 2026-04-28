@@ -135,6 +135,7 @@ struct LibraryCardView: View {
     let onTap: () -> Void
     var progressManager: ProgressManager? = nil
     @State private var favTrigger: Int = 0
+    @ObservedObject private var creditsStore = ImageCreditsStore.shared
 
     var body: some View {
         Button(action: onTap) {
@@ -160,6 +161,18 @@ struct LibraryCardView: View {
                                     .foregroundStyle(.white.opacity(0.2))
                                     .rotationEffect(.degrees(-12))
                             }
+                        }
+                    }
+                    .overlay(alignment: .bottomLeading) {
+                        if let credit = resolvedCourseCredit {
+                            Text(credit.displayCopyrightLine)
+                                .font(.system(.caption2, design: .rounded))
+                                .foregroundStyle(.white.opacity(0.65))
+                                .lineLimit(1)
+                                .padding(.horizontal, 8)
+                                .padding(.vertical, 6)
+                                .background(.black.opacity(0.35), in: Capsule())
+                                .padding(8)
                         }
                     }
                     .clipShape(.rect(cornerRadii: .init(topLeading: 16, topTrailing: 16)))
@@ -204,6 +217,17 @@ struct LibraryCardView: View {
             .opacity(status == .completed ? 0.7 : 1.0)
         }
         .buttonStyle(.plain)
+    }
+
+    private var resolvedCourseCredit: ImageCredit? {
+        if let prompt = CourseIllustrationPromptIndex.shared.prompt(forCourseId: course.id),
+           let credit = creditsStore.credit(for: prompt) {
+            return credit
+        }
+        if let name = CourseImageMap.imageName(for: course.id) {
+            return creditsStore.credit(for: name) ?? creditsStore.credit(for: name + ".jpg")
+        }
+        return nil
     }
 
     @ViewBuilder

@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct OnboardingInterestsScreen: View {
-    @Bindable var viewModel: OnboardingViewModel
+    @ObservedObject var viewModel: OnboardingViewModel
     let onNext: () -> Void
     @State private var appeared: Bool = false
 
@@ -92,6 +92,7 @@ private struct InterestCard: View {
     let isSelected: Bool
     let action: () -> Void
     @State private var image: UIImage?
+    @ObservedObject private var creditsStore = ImageCreditsStore.shared
 
     var body: some View {
         Button(action: action) {
@@ -110,6 +111,18 @@ private struct InterestCard: View {
                                 startPoint: .topLeading,
                                 endPoint: .bottomTrailing
                             )
+                        }
+                    }
+                    .overlay(alignment: .bottomLeading) {
+                        if let credit = resolvedCourseCredit {
+                            Text(credit.displayCopyrightLine)
+                                .font(.system(.caption2, design: .rounded))
+                                .foregroundStyle(.white.opacity(0.65))
+                                .lineLimit(1)
+                                .padding(.horizontal, 8)
+                                .padding(.vertical, 6)
+                                .background(.black.opacity(0.35), in: Capsule())
+                                .padding(8)
                         }
                     }
                     .overlay {
@@ -146,5 +159,16 @@ private struct InterestCard: View {
         .onAppear {
             image = CourseImageMap.loadImage(for: imageId)
         }
+    }
+
+    private var resolvedCourseCredit: ImageCredit? {
+        if let prompt = CourseIllustrationPromptIndex.shared.prompt(forCourseId: imageId),
+           let credit = creditsStore.credit(for: prompt) {
+            return credit
+        }
+        if let name = CourseImageMap.imageName(for: imageId) {
+            return creditsStore.credit(for: name) ?? creditsStore.credit(for: name + ".jpg")
+        }
+        return nil
     }
 }

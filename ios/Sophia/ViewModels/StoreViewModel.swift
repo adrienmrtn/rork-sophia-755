@@ -1,14 +1,14 @@
 import Foundation
-import Observation
+import Combine
 import RevenueCat
 
-@Observable
-class StoreViewModel {
-    var offerings: Offerings?
-    var isPremium: Bool = false
-    var isLoading: Bool = false
-    var isPurchasing: Bool = false
-    var error: String?
+@MainActor
+final class StoreViewModel: ObservableObject {
+    @Published var offerings: Offerings?
+    @Published var isPremium: Bool = false
+    @Published var isLoading: Bool = false
+    @Published var isPurchasing: Bool = false
+    @Published var error: String?
 
     init() {
         Task { await listenForUpdates() }

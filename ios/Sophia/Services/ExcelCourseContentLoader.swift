@@ -208,7 +208,7 @@ enum ExcelCourseContentLoader {
             throw NSError(domain: "ExcelCourseContentLoader", code: 2)
         }
 
-        let sharedStrings = try file.parseSharedStrings()
+        let sharedStrings = try? file.parseSharedStrings()
         guard let workbook = try file.parseWorkbooks().first else {
             throw NSError(domain: "ExcelCourseContentLoader", code: 3)
         }
@@ -252,7 +252,7 @@ enum ExcelCourseContentLoader {
             throw NSError(domain: "ExcelCourseContentLoader", code: 2)
         }
 
-        let sharedStrings = try file.parseSharedStrings()
+        let sharedStrings = try? file.parseSharedStrings()
         guard let workbook = try file.parseWorkbooks().first else {
             throw NSError(domain: "ExcelCourseContentLoader", code: 3)
         }
@@ -312,6 +312,9 @@ enum ExcelCourseContentLoader {
         if let sharedStrings, let value = cell.stringValue(sharedStrings) {
             return value
         }
+        if let inline = cell.inlineString?.text {
+            return inline
+        }
         if let value = cell.value {
             return value
         }
@@ -320,13 +323,16 @@ enum ExcelCourseContentLoader {
 
     private static func normalized(_ value: String?) -> String? {
         guard let value else { return nil }
-        let replaced = value.replacingOccurrences(of: "\\n", with: "\n")
+        let replaced = value
+            .replacingOccurrences(of: "\u{00A0}", with: " ")
+            .replacingOccurrences(of: "\\n", with: "\n")
         let trimmed = replaced.trimmingCharacters(in: .whitespacesAndNewlines)
         return trimmed.isEmpty ? nil : trimmed
     }
 
     private static func headerKey(_ raw: String) -> String {
         let folded = raw
+            .replacingOccurrences(of: "\u{00A0}", with: " ")
             .replacingOccurrences(of: "\\n", with: " ")
             .folding(options: [.diacriticInsensitive, .caseInsensitive], locale: .current)
 
@@ -360,6 +366,7 @@ enum ExcelCourseContentLoader {
 
     private static func titleKey(_ raw: String) -> String {
         let folded = raw
+            .replacingOccurrences(of: "\u{00A0}", with: " ")
             .replacingOccurrences(of: "\\n", with: " ")
             .folding(options: [.diacriticInsensitive, .caseInsensitive], locale: .current)
 

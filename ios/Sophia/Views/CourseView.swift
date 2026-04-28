@@ -309,10 +309,12 @@ private struct HighlightBox: View {
 private struct CourseInlineImageView: View {
     let token: String
     @ObservedObject var creditsStore: ImageCreditsStore
+    @State private var onDemandCredit: ImageCredit?
 
     var body: some View {
         let imageURL = IllustrationFileIndex.shared.url(for: token)
         let resolvedCredit =
+            onDemandCredit ??
             creditsStore.credit(for: token) ??
             (imageURL.flatMap { creditsStore.credit(for: $0.lastPathComponent) }) ??
             (imageURL.flatMap { creditsStore.credit(for: $0.deletingPathExtension().lastPathComponent) })
@@ -358,27 +360,22 @@ private struct CourseInlineImageView: View {
                         .foregroundStyle(.white.opacity(0.65))
                         .italic()
 
-                    Text(copyrightLine(for: credit))
+                    Text(credit.displayCopyrightLine)
                         .font(.system(.caption2, design: .rounded))
                         .foregroundStyle(.white.opacity(0.55))
                 }
+                .padding(10)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(.black.opacity(0.22), in: .rect(cornerRadius: 12))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 12)
+                        .strokeBorder(.white.opacity(0.08), lineWidth: 1)
+                )
             }
         }
-    }
-
-    private func copyrightLine(for credit: ImageCredit) -> String {
-        let trimmedAuthor = credit.author.trimmingCharacters(in: .whitespacesAndNewlines)
-        if trimmedAuthor.isEmpty {
-            let license = credit.license?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-            if !license.isEmpty { return license }
-            let source = credit.source?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-            return source
+        .task(id: imageURL?.path ?? token) {
+            creditsStore.preloadCreditsIfNeeded(near: imageURL)
+            onDemandCredit = await creditsStore.ensureCredit(for: token, near: imageURL)
         }
-
-        let authorPart = trimmedAuthor.hasPrefix("©") ? trimmedAuthor : "© \(trimmedAuthor)"
-
-        let license = credit.license?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-        if license.isEmpty { return authorPart }
-        return authorPart + " — " + license
     }
 }

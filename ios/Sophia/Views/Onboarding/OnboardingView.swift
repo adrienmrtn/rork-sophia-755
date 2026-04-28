@@ -2,8 +2,8 @@ import SwiftUI
 import RevenueCatUI
 
 struct OnboardingView: View {
-    @State private var viewModel = OnboardingViewModel()
-    @State private var storeVM = StoreViewModel()
+    @StateObject private var viewModel = OnboardingViewModel()
+    @StateObject private var storeVM = StoreViewModel()
     let onComplete: () -> Void
     @State private var direction: Edge = .trailing
     @State private var showSpecialOffer: Bool = false
