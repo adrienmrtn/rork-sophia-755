@@ -226,7 +226,6 @@ struct FlashCard: View {
     let onStart: () -> Void
     @State private var cachedImage: UIImage?
     @State private var buttonTrigger: Int = 0
-    @ObservedObject private var creditsStore = ImageCreditsStore.shared
 
     var body: some View {
         VStack(spacing: 0) {
@@ -323,35 +322,8 @@ struct FlashCard: View {
                 }
             }
             .overlay(alignment: .bottomLeading) {
-                if let credit = resolvedCourseCredit {
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text(credit.originalName)
-                            .font(.system(.caption, design: .rounded))
-                            .foregroundStyle(.white.opacity(0.75))
-                            .italic()
-                            .lineLimit(2)
-
-                        Text(credit.displayCopyrightLine)
-                            .font(.system(.caption2, design: .rounded))
-                            .foregroundStyle(.white.opacity(0.6))
-                            .lineLimit(2)
-                    }
-                    .padding(10)
-                    .background(.black.opacity(0.35), in: .rect(cornerRadius: 12))
-                    .padding(12)
-                }
+                EmptyView()
             }
             .clipShape(.rect(cornerRadii: .init(topLeading: 24, topTrailing: 24)))
-    }
-
-    private var resolvedCourseCredit: ImageCredit? {
-        if let prompt = CourseIllustrationPromptIndex.shared.prompt(forCourseId: course.id),
-           let credit = creditsStore.credit(for: prompt) {
-            return credit
-        }
-        if let name = CourseImageMap.imageName(for: course.id) {
-            return creditsStore.credit(for: name) ?? creditsStore.credit(for: name + ".jpg")
-        }
-        return nil
     }
 }

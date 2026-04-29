@@ -319,12 +319,6 @@ private struct CourseInlineImageView: View {
             (imageURL.flatMap { creditsStore.credit(for: $0.lastPathComponent) }) ??
             (imageURL.flatMap { creditsStore.credit(for: $0.deletingPathExtension().lastPathComponent) })
 
-        let displayToken = {
-            let trimmed = token.trimmingCharacters(in: .whitespacesAndNewlines)
-            let base = trimmed.components(separatedBy: ".").dropLast().joined(separator: ".")
-            return base.isEmpty ? trimmed : base
-        }()
-
         VStack(alignment: .leading, spacing: 10) {
             if let imageURL, let uiImage = UIImage(contentsOfFile: imageURL.path) {
                 Image(uiImage: uiImage)
@@ -351,14 +345,9 @@ private struct CourseInlineImageView: View {
 
             if let credit = resolvedCredit {
                 VStack(alignment: .leading, spacing: 4) {
-                    Text(displayToken.lowercased())
+                    Text(credit.originalName)
                         .font(.system(.subheadline, design: .rounded, weight: .semibold))
                         .foregroundStyle(.white.opacity(0.85))
-
-                    Text(credit.originalName)
-                        .font(.system(.caption, design: .rounded))
-                        .foregroundStyle(.white.opacity(0.65))
-                        .italic()
 
                     Text(credit.displayCopyrightLine)
                         .font(.system(.caption2, design: .rounded))
