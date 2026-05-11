@@ -10,10 +10,10 @@ struct OnboardingWastedTimeScreen: View {
     private var targetValue: Int {
         guard let sel = viewModel.phoneTimeSelection else { return 0 }
         switch sel {
-        case 0: return 182
+        case 0: return 365
         case 1: return 547
         case 2: return 1095
-        case 3: return 2190
+        case 3: return 1460
         default: return 0
         }
     }
@@ -58,6 +58,25 @@ struct OnboardingWastedTimeScreen: View {
                             Text("Soit " + viewModel.wastedTimeDays + " complets.")
                                 .font(.system(.headline, design: .rounded, weight: .bold))
                                 .foregroundStyle(.white)
+
+                            Text("Moins de scroll.\nPlus de mémoire.")
+                                .font(.system(.headline, design: .rounded, weight: .bold))
+                                .foregroundStyle(.white)
+                                .multilineTextAlignment(.center)
+                                .padding(.vertical, 14)
+                                .frame(maxWidth: .infinity)
+                                .background(.white.opacity(0.05), in: .rect(cornerRadius: 16))
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 16)
+                                        .strokeBorder(.white.opacity(0.08), lineWidth: 1)
+                                )
+                                .padding(.top, 10)
+
+                            Text("Le scrolling excessif fragmente l'attention et affaiblit la mémoire.\nLe micro-learning renforce la mémoire et la plasticité cérébrale.\nTon cerveau apprend mieux en petites doses, chaque jour.")
+                                .font(.system(.subheadline, design: .rounded, weight: .medium))
+                                .foregroundStyle(.white.opacity(0.7))
+                                .multilineTextAlignment(.center)
+                                .padding(.top, 8)
 
                             Text("Avec Sophia, fais un bon usage de ton temps.")
                                 .font(.system(.body, design: .rounded))

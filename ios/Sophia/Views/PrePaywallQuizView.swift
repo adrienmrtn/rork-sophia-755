@@ -53,14 +53,14 @@ struct PrePaywallQuizView: View {
                 Spacer()
 
                 VStack(spacing: 12) {
-                    Text("Débloquez gratuitement\nles quiz")
+                    Text("Les quiz sont réservés\naux membres Premium")
                         .font(.system(.title2, design: .rounded, weight: .bold))
                         .foregroundStyle(.white)
                         .multilineTextAlignment(.center)
                         .opacity(appeared ? 1 : 0)
                         .offset(y: appeared ? 0 : 10)
 
-                    Text("Testez vos connaissances et\nprogressez chaque jour")
+                    Text("Passe Premium pour tester tes\nconnaissances et progresser chaque jour")
                         .font(.system(.body, design: .rounded))
                         .foregroundStyle(.white.opacity(0.6))
                         .multilineTextAlignment(.center)

@@ -18,6 +18,7 @@ final class StoreViewModel: ObservableObject {
     private func listenForUpdates() async {
         for await info in Purchases.shared.customerInfoStream {
             self.isPremium = info.entitlements["premium"]?.isActive == true
+            UserDefaults.standard.set(self.isPremium, forKey: "sophia_is_premium")
         }
     }
 
@@ -38,6 +39,7 @@ final class StoreViewModel: ObservableObject {
             let result = try await Purchases.shared.purchase(package: package)
             if !result.userCancelled {
                 isPremium = result.customerInfo.entitlements["premium"]?.isActive == true
+                UserDefaults.standard.set(isPremium, forKey: "sophia_is_premium")
                 return isPremium
             }
             return false
@@ -55,6 +57,7 @@ final class StoreViewModel: ObservableObject {
         do {
             let info = try await Purchases.shared.restorePurchases()
             isPremium = info.entitlements["premium"]?.isActive == true
+            UserDefaults.standard.set(isPremium, forKey: "sophia_is_premium")
         } catch {
             self.error = error.localizedDescription
         }
@@ -64,6 +67,7 @@ final class StoreViewModel: ObservableObject {
         do {
             let info = try await Purchases.shared.customerInfo()
             isPremium = info.entitlements["premium"]?.isActive == true
+            UserDefaults.standard.set(isPremium, forKey: "sophia_is_premium")
         } catch {
             self.error = error.localizedDescription
         }
