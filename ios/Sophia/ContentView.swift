@@ -65,6 +65,10 @@ struct ContentView: View {
             .sensoryFeedback(.selection, trigger: selectedTab)
             .onChange(of: selectedCourse) { _, newCourse in
                 guard let course = newCourse else { return }
+                if progressManager.courseStatus(for: course.id) == .completed {
+                    pendingCourse = course
+                    return
+                }
                 if storeVM.isPremium {
                     pendingCourse = course
                 } else {

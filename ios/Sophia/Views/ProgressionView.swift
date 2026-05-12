@@ -301,40 +301,47 @@ struct ProgressionView: View {
             } else {
                 VStack(spacing: 10) {
                     ForEach(completed) { course in
-                        HStack(spacing: 12) {
-                            ZStack {
-                                Circle()
-                                    .fill(course.subject.color.opacity(0.2))
-                                    .frame(width: 36, height: 36)
-                                Image(systemName: course.subject.icon)
-                                    .font(.system(size: 14, weight: .semibold))
-                                    .foregroundStyle(course.subject.color)
+                        Button {
+                            let g = UIImpactFeedbackGenerator(style: .light)
+                            g.impactOccurred()
+                            selectedCourse = course
+                        } label: {
+                            HStack(spacing: 12) {
+                                ZStack {
+                                    Circle()
+                                        .fill(course.subject.color.opacity(0.2))
+                                        .frame(width: 36, height: 36)
+                                    Image(systemName: course.subject.icon)
+                                        .font(.system(size: 14, weight: .semibold))
+                                        .foregroundStyle(course.subject.color)
+                                }
+
+                                VStack(alignment: .leading, spacing: 2) {
+                                    Text(course.title)
+                                        .font(.system(.subheadline, design: .rounded, weight: .bold))
+                                        .foregroundStyle(.white)
+                                        .lineLimit(1)
+                                    let dateText = displayDate(progressManager.completionDateString(for: course.id))
+                                    Text("\(course.subject.shortName) • \(dateText)")
+                                        .font(.system(.caption, design: .rounded, weight: .medium))
+                                        .foregroundStyle(.white.opacity(0.55))
+                                        .lineLimit(1)
+                                }
+
+                                Spacer()
+
+                                Image(systemName: "checkmark.circle.fill")
+                                    .font(.system(.title3, weight: .bold))
+                                    .foregroundStyle(SophiaTheme.emerald)
                             }
-
-                            VStack(alignment: .leading, spacing: 2) {
-                                Text(course.title)
-                                    .font(.system(.subheadline, design: .rounded, weight: .bold))
-                                    .foregroundStyle(.white)
-                                    .lineLimit(1)
-                                let dateText = displayDate(progressManager.completionDateString(for: course.id))
-                                Text("\(course.subject.shortName) • \(dateText)")
-                                    .font(.system(.caption, design: .rounded, weight: .medium))
-                                    .foregroundStyle(.white.opacity(0.55))
-                                    .lineLimit(1)
-                            }
-
-                            Spacer()
-
-                            Image(systemName: "checkmark.circle.fill")
-                                .font(.system(.title3, weight: .bold))
-                                .foregroundStyle(SophiaTheme.emerald)
+                            .padding(14)
+                            .background(.white.opacity(0.05), in: .rect(cornerRadius: 14))
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 14)
+                                    .strokeBorder(.white.opacity(0.08), lineWidth: 1)
+                            )
                         }
-                        .padding(14)
-                        .background(.white.opacity(0.05), in: .rect(cornerRadius: 14))
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 14)
-                                .strokeBorder(.white.opacity(0.08), lineWidth: 1)
-                        )
+                        .buttonStyle(.plain)
                     }
                 }
             }
