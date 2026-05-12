@@ -1,10 +1,14 @@
 import SwiftUI
+import RevenueCatUI
 
 struct QuizView: View {
     let course: Course
     let progressManager: ProgressManager
+    let isPremium: Bool
     let onReturnHome: () -> Void
     @Environment(\.dismiss) private var dismiss
+    @State private var unlocked: Bool = false
+    @State private var showPaywall: Bool = false
 
     @State private var currentQuestionIndex: Int = 0
     @State private var selectedOptionIndex: Int? = nil
@@ -53,7 +57,14 @@ struct QuizView: View {
         ZStack {
             SophiaTheme.background.ignoresSafeArea()
 
-            if showCelebration {
+            if !unlocked {
+                Color.clear
+                    .onAppear {
+                        if !showPaywall {
+                            showPaywall = true
+                        }
+                    }
+            } else if showCelebration {
                 celebrationView
                     .transition(.opacity)
             } else if isFinished {
@@ -73,9 +84,13 @@ struct QuizView: View {
             }
         }
         .onAppear {
+            unlocked = isPremium
             streakBefore = progressManager.streak
             completedBefore = progressManager.completedCount
             shuffleAllQuestions()
+            if !unlocked {
+                showPaywall = true
+            }
         }
         .sheet(isPresented: $showCorrections) {
             QuizCorrectionsSheet(
@@ -83,6 +98,21 @@ struct QuizView: View {
                 answers: userAnswers
             )
             .presentationDragIndicator(.visible)
+        }
+        .sheet(isPresented: $showPaywall, onDismiss: {
+            if !unlocked {
+                onReturnHome()
+            }
+        }) {
+            PaywallView()
+                .onPurchaseCompleted { _ in
+                    unlocked = true
+                    showPaywall = false
+                }
+                .onRestoreCompleted { _ in
+                    unlocked = true
+                    showPaywall = false
+                }
         }
     }
 

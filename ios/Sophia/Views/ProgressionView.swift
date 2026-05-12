@@ -19,10 +19,19 @@ struct ProgressionView: View {
 
     private var freemiumSubjects: Set<String> {
         if store.isPremium { return Set(Subject.allCases.map(\.rawValue)) }
-        if let raw = UserDefaults.standard.array(forKey: "sophia_freemium_subjects") as? [String], !raw.isEmpty {
+        if let raw = UserDefaults.standard.array(forKey: "sophia_freemium_subjects") as? [String], raw.count == 3 {
             return Set(raw)
         }
-        return Set(Subject.allCases.map(\.rawValue))
+
+        let best3 = bestFreemiumSubjectsFromThemeLevels()
+        if best3.count == 3 {
+            UserDefaults.standard.set(best3, forKey: "sophia_freemium_subjects")
+            return Set(best3)
+        }
+
+        let fallback = Array(Subject.allCases.prefix(3)).map(\.rawValue)
+        UserDefaults.standard.set(fallback, forKey: "sophia_freemium_subjects")
+        return Set(fallback)
     }
 
     private var isInactiveSinceYesterday: Bool {
@@ -362,6 +371,29 @@ struct ProgressionView: View {
         return f.string(from: date)
     }
 
+    private func bestFreemiumSubjectsFromThemeLevels() -> [String] {
+        guard let data = UserDefaults.standard.data(forKey: "sophia_theme_levels"),
+              let decodedAny = (try? JSONDecoder().decode([String: Double].self, from: data)) ?? (try? JSONDecoder().decode([String: Int].self, from: data).mapValues { v in
+                  switch max(0, min(2, v)) {
+                  case 0: 0.15
+                  case 1: 0.50
+                  default: 0.85
+                  }
+              }) else { return [] }
+
+        let order = Subject.allCases
+        let ranked = order
+            .map { subject in
+                (subject: subject, value: decodedAny[subject.rawValue] ?? 0)
+            }
+            .sorted { lhs, rhs in
+                if lhs.value != rhs.value { return lhs.value > rhs.value }
+                return order.firstIndex(of: lhs.subject) ?? 0 < order.firstIndex(of: rhs.subject) ?? 0
+            }
+
+        return Array(ranked.prefix(3)).map(\.subject.rawValue)
+    }
+
     private func displayDate(_ stored: String?) -> String {
         guard let stored, !stored.isEmpty else { return "—" }
         let inF = DateFormatter()
@@ -558,6 +590,7 @@ private struct MyQuizzesView: View {
             QuizView(
                 course: course,
                 progressManager: progressManager,
+                isPremium: store.isPremium,
                 onReturnHome: {
                     selectedQuizCourse = nil
                 }
@@ -578,44 +611,43 @@ private struct MyQuizzesView: View {
         let dateText = displayDate(progressManager.completionDateString(for: course.id))
         let score = progressManager.bestScore(for: course.id) ?? 0
 
-        return HStack(spacing: 12) {
-            ZStack {
-                Circle()
-                    .fill(course.subject.color.opacity(0.2))
-                    .frame(width: 36, height: 36)
-                Image(systemName: course.subject.icon)
-                    .font(.system(size: 14, weight: .semibold))
-                    .foregroundStyle(course.subject.color)
-            }
-
-            VStack(alignment: .leading, spacing: 2) {
-                Text(course.title)
-                    .font(.system(.subheadline, design: .rounded, weight: .bold))
-                    .foregroundStyle(.white)
-                    .lineLimit(1)
-                Text("\(course.subject.shortName) • \(dateText)")
-                    .font(.system(.caption, design: .rounded, weight: .medium))
-                    .foregroundStyle(.white.opacity(0.55))
-            }
-
-            Spacer()
-
+        return Button {
+            let g = UIImpactFeedbackGenerator(style: .light)
+            g.impactOccurred()
             if store.isPremium {
-                if score >= 1 {
-                    VStack(alignment: .trailing, spacing: 6) {
+                selectedQuizCourse = course
+            } else {
+                showPaywall = true
+            }
+        } label: {
+            HStack(spacing: 12) {
+                ZStack {
+                    Circle()
+                        .fill(course.subject.color.opacity(0.2))
+                        .frame(width: 36, height: 36)
+                    Image(systemName: course.subject.icon)
+                        .font(.system(size: 14, weight: .semibold))
+                        .foregroundStyle(course.subject.color)
+                }
+
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(course.title)
+                        .font(.system(.subheadline, design: .rounded, weight: .bold))
+                        .foregroundStyle(.white)
+                        .lineLimit(1)
+                    Text("\(course.subject.shortName) • \(dateText)")
+                        .font(.system(.caption, design: .rounded, weight: .medium))
+                        .foregroundStyle(.white.opacity(0.55))
+                }
+
+                Spacer()
+
+                if store.isPremium {
+                    if score >= 1 {
                         Text("\(score)/\(course.quiz.count)")
                             .font(.system(.caption, design: .rounded, weight: .bold))
                             .foregroundStyle(SophiaTheme.emerald)
-                        Button("Refaire") {
-                            selectedQuizCourse = course
-                        }
-                        .font(.system(.caption, design: .rounded, weight: .bold))
-                        .foregroundStyle(.white.opacity(0.75))
-                    }
-                } else {
-                    Button {
-                        selectedQuizCourse = course
-                    } label: {
+                    } else {
                         Text("Faire le quiz →")
                             .font(.system(.caption, design: .rounded, weight: .bold))
                             .foregroundStyle(.white)
@@ -623,21 +655,21 @@ private struct MyQuizzesView: View {
                             .padding(.vertical, 8)
                             .background(SophiaTheme.emerald, in: Capsule())
                     }
-                    .buttonStyle(.plain)
+                } else {
+                    Image(systemName: "lock.fill")
+                        .font(.system(.subheadline, weight: .bold))
+                        .foregroundStyle(.white.opacity(0.45))
                 }
-            } else {
-                Image(systemName: "lock.fill")
-                    .font(.system(.subheadline, weight: .bold))
-                    .foregroundStyle(.white.opacity(0.45))
             }
+            .padding(14)
+            .background(.white.opacity(0.05), in: .rect(cornerRadius: 14))
+            .overlay(
+                RoundedRectangle(cornerRadius: 14)
+                    .strokeBorder(.white.opacity(0.08), lineWidth: 1)
+            )
+            .opacity(store.isPremium ? 1 : 0.6)
         }
-        .padding(14)
-        .background(.white.opacity(0.05), in: .rect(cornerRadius: 14))
-        .overlay(
-            RoundedRectangle(cornerRadius: 14)
-                .strokeBorder(.white.opacity(0.08), lineWidth: 1)
-        )
-        .opacity(store.isPremium ? 1 : 0.6)
+        .buttonStyle(.plain)
     }
 
     private func displayDate(_ stored: String?) -> String {

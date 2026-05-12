@@ -8,6 +8,7 @@ struct CourseView: View {
     let isPremium: Bool
     let onDismissToHome: () -> Void
     @Environment(\.dismiss) private var dismiss
+    @AppStorage("sophia_is_premium") private var isPremiumStored: Bool = false
     @State private var currentIndex: Int = 0
     @State private var showQuiz: Bool = false
     @State private var appeared: Bool = false
@@ -23,6 +24,10 @@ struct CourseView: View {
 
     private var isLastLesson: Bool {
         currentIndex == course.lessons.count - 1
+    }
+
+    private var premiumActive: Bool {
+        isPremium || isPremiumStored
     }
 
     private var progressValue: Double {
@@ -62,6 +67,7 @@ struct CourseView: View {
             QuizView(
                 course: course,
                 progressManager: progressManager,
+                isPremium: premiumActive,
                 onReturnHome: {
                     showQuiz = false
                     onDismissToHome()
@@ -233,7 +239,7 @@ struct CourseView: View {
             g.impactOccurred()
             if isLastLesson {
                 progressManager.updateLessonProgress(courseId: course.id, lessonIndex: currentIndex)
-                if isPremium {
+                if premiumActive {
                     if course.hasQuiz {
                         showQuiz = true
                     } else {
@@ -252,9 +258,9 @@ struct CourseView: View {
             }
         } label: {
             HStack(spacing: 8) {
-                Text(isLastLesson ? (isPremium && course.hasQuiz ? "Passer au quiz" : "Continuer") : "Continuer")
+                Text(isLastLesson ? (premiumActive && course.hasQuiz ? "Passer au quiz" : "Continuer") : "Continuer")
                     .font(.system(.headline, design: .rounded, weight: .bold))
-                Image(systemName: isLastLesson ? (isPremium && course.hasQuiz ? "questionmark.circle.fill" : "arrow.right") : "arrow.right")
+                Image(systemName: isLastLesson ? (premiumActive && course.hasQuiz ? "questionmark.circle.fill" : "arrow.right") : "arrow.right")
                     .font(.subheadline.weight(.semibold))
             }
             .foregroundStyle(.white)
@@ -264,7 +270,7 @@ struct CourseView: View {
                 ZStack {
                     RoundedRectangle(cornerRadius: 16)
                         .fill(SophiaTheme.emerald)
-                    if isLastLesson && course.hasQuiz && isPremium {
+                    if isLastLesson && course.hasQuiz && premiumActive {
                         GeometryReader { geo in
                             Rectangle()
                                 .fill(
@@ -283,18 +289,18 @@ struct CourseView: View {
                 }
             }
             .clipShape(.rect(cornerRadius: 16))
-            .shadow(color: SophiaTheme.emerald.opacity(isLastLesson && course.hasQuiz && isPremium ? 0.5 : 0.25), radius: isLastLesson && course.hasQuiz && isPremium ? 16 : 8, y: 2)
-            .scaleEffect(isLastLesson && course.hasQuiz && isPremium && quizButtonPulse ? 1.04 : 1.0)
+            .shadow(color: SophiaTheme.emerald.opacity(isLastLesson && course.hasQuiz && premiumActive ? 0.5 : 0.25), radius: isLastLesson && course.hasQuiz && premiumActive ? 16 : 8, y: 2)
+            .scaleEffect(isLastLesson && course.hasQuiz && premiumActive && quizButtonPulse ? 1.04 : 1.0)
         }
         .padding(.horizontal, 24)
         .padding(.bottom, 24)
         .onChange(of: isLastLesson) { _, newValue in
-            if newValue && course.hasQuiz && isPremium {
+            if newValue && course.hasQuiz && premiumActive {
                 startQuizButtonAnimations()
             }
         }
         .onAppear {
-            if isLastLesson && course.hasQuiz && isPremium {
+            if isLastLesson && course.hasQuiz && premiumActive {
                 startQuizButtonAnimations()
             }
         }

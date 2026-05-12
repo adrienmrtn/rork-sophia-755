@@ -18,7 +18,7 @@ final class OnboardingViewModel: ObservableObject {
             UserDefaults.standard.set(dailyLearningGoal, forKey: "sophia_daily_learning_goal")
         }
     }
-    @Published var themeLevels: [Subject: Int] = [:]
+    @Published var themeLevels: [Subject: Double] = [:]
     @Published var loadingProgress: Double = 0
     @Published var loadingStep: String = ""
     @Published var isLoadingComplete: Bool = false
@@ -102,14 +102,20 @@ final class OnboardingViewModel: ObservableObject {
         UserDefaults.standard.set(primaryObjective, forKey: "sophia_onboarding_primary_objective")
     }
 
-    func themeLevel(for subject: Subject) -> Int {
+    func themeLevelValue(for subject: Subject) -> Double {
         themeLevels[subject] ?? 0
     }
 
-    func setThemeLevel(_ level: Int, for subject: Subject) {
-        let clamped = max(0, min(2, level))
+    func themeTier(for subject: Subject) -> Int {
+        tier(forValue: themeLevelValue(for: subject))
+    }
+
+    func setThemeLevelValue(_ value: Double, for subject: Subject) {
+        let clamped = max(0, min(1, value))
         themeLevels[subject] = clamped
         saveThemeLevels(themeLevels)
+        let best3 = bestFreemiumSubjects(from: themeLevels)
+        UserDefaults.standard.set(best3, forKey: "sophia_freemium_subjects")
     }
 
     func toggleInterest(_ interest: String) {
@@ -122,10 +128,6 @@ final class OnboardingViewModel: ObservableObject {
         }
 
         UserDefaults.standard.set(interestOrder, forKey: "sophia_onboarding_interests_order")
-        let subjects = interestOrder
-            .compactMap { subjectForInterestLabel($0)?.rawValue }
-        let top3 = Array(subjects.prefix(3))
-        UserDefaults.standard.set(top3, forKey: "sophia_freemium_subjects")
     }
 
     func startProfileLoading() {
@@ -174,28 +176,66 @@ final class OnboardingViewModel: ObservableObject {
         UserDefaults.standard.set(true, forKey: "sophia_special_offer_seen")
     }
 
-    private func loadThemeLevels() -> [Subject: Int] {
-        let defaults = Subject.allCases.reduce(into: [Subject: Int]()) { acc, subject in
+    private func loadThemeLevels() -> [Subject: Double] {
+        let defaults = Subject.allCases.reduce(into: [Subject: Double]()) { acc, subject in
             acc[subject] = 0
         }
-        guard let data = UserDefaults.standard.data(forKey: "sophia_theme_levels"),
-              let decoded = try? JSONDecoder().decode([String: Int].self, from: data) else {
+        guard let data = UserDefaults.standard.data(forKey: "sophia_theme_levels") else {
             return defaults
         }
 
-        var mapped = defaults
-        for (raw, level) in decoded {
-            if let subject = Subject(rawValue: raw) {
-                mapped[subject] = max(0, min(2, level))
+        if let decoded = try? JSONDecoder().decode([String: Double].self, from: data) {
+            var mapped = defaults
+            for (raw, value) in decoded {
+                if let subject = Subject(rawValue: raw) {
+                    mapped[subject] = max(0, min(1, value))
+                }
             }
+            return mapped
         }
-        return mapped
+
+        if let decodedInt = try? JSONDecoder().decode([String: Int].self, from: data) {
+            var mapped = defaults
+            for (raw, level) in decodedInt {
+                if let subject = Subject(rawValue: raw) {
+                    let v: Double
+                    switch max(0, min(2, level)) {
+                    case 0: v = 0.15
+                    case 1: v = 0.50
+                    default: v = 0.85
+                    }
+                    mapped[subject] = v
+                }
+            }
+            return mapped
+        }
+
+        return defaults
     }
 
-    private func saveThemeLevels(_ levels: [Subject: Int]) {
+    private func saveThemeLevels(_ levels: [Subject: Double]) {
         let encoded = Dictionary(uniqueKeysWithValues: levels.map { ($0.key.rawValue, $0.value) })
         guard let data = try? JSONEncoder().encode(encoded) else { return }
         UserDefaults.standard.set(data, forKey: "sophia_theme_levels")
+    }
+
+    private func bestFreemiumSubjects(from levels: [Subject: Double]) -> [String] {
+        let ranked = Subject.allCases
+            .map { subject in
+                (subject: subject, tier: tier(forValue: levels[subject] ?? 0), value: levels[subject] ?? 0)
+            }
+            .sorted { lhs, rhs in
+                if lhs.tier != rhs.tier { return lhs.tier > rhs.tier }
+                if lhs.value != rhs.value { return lhs.value > rhs.value }
+                return Subject.allCases.firstIndex(of: lhs.subject) ?? 0 < Subject.allCases.firstIndex(of: rhs.subject) ?? 0
+            }
+        return Array(ranked.prefix(3)).map(\.subject.rawValue)
+    }
+
+    private func tier(forValue value: Double) -> Int {
+        if value < 0.34 { return 0 }
+        if value < 0.67 { return 1 }
+        return 2
     }
 
     private func subjectForInterestLabel(_ label: String) -> Subject? {

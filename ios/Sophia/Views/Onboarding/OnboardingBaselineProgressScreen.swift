@@ -80,9 +80,9 @@ struct OnboardingBaselineProgressScreen: View {
 
     private func progressRow(subject: Subject) -> some View {
         let fraction = progresses[subject] ?? 0
-        let level = viewModel.themeLevel(for: subject)
-        let label = levelLabel(level)
-        let labelColor = levelColor(level)
+        let tier = viewModel.themeTier(for: subject)
+        let label = levelLabel(tier)
+        let labelColor = levelColor(tier)
 
         return VStack(spacing: 10) {
             HStack(spacing: 10) {
@@ -131,7 +131,7 @@ struct OnboardingBaselineProgressScreen: View {
 
     private func animateBars() {
         for (index, subject) in subjects.enumerated() {
-            let target = targetFraction(for: viewModel.themeLevel(for: subject))
+            let target = targetFraction(for: viewModel.themeTier(for: subject))
             let delay = 0.55 + Double(index) * 0.18
             DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                 withAnimation(.spring(response: 0.65, dampingFraction: 0.85)) {
@@ -150,24 +150,24 @@ struct OnboardingBaselineProgressScreen: View {
         }
     }
 
-    private func targetFraction(for level: Int) -> CGFloat {
-        switch level {
+    private func targetFraction(for tier: Int) -> CGFloat {
+        switch tier {
         case 0: 0.2
         case 1: 0.5
         default: 0.8
         }
     }
 
-    private func levelLabel(_ level: Int) -> String {
-        switch level {
+    private func levelLabel(_ tier: Int) -> String {
+        switch tier {
         case 0: "Débutant"
         case 1: "Moyen"
         default: "À l'aise"
         }
     }
 
-    private func levelColor(_ level: Int) -> Color {
-        switch level {
+    private func levelColor(_ tier: Int) -> Color {
+        switch tier {
         case 0: SophiaTheme.accent
         case 1: SophiaTheme.emerald
         default: Color(red: 0.25, green: 0.72, blue: 0.85)

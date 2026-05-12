@@ -88,15 +88,12 @@ final class ProgressManager: ObservableObject {
 
     func canOpenFreeCourseToday(courseId: String) -> Bool {
         resetDailyFreeCourseIfNeeded()
-        if hasCompletedDailyFreeCourseToday { return false }
-        guard let lockedId = progress.dailyFreeCourseId else { return true }
-        return lockedId == courseId
+        return !hasCompletedDailyFreeCourseToday
     }
 
     func reserveTodayFreeCourseIfNeeded(courseId: String) {
         resetDailyFreeCourseIfNeeded()
-        if progress.dailyFreeCourseId == nil {
-            progress.dailyFreeCourseId = courseId
+        if progress.dailyFreeCourseDate == nil {
             progress.dailyFreeCourseDate = dateFormatter.string(from: Date())
             save()
         }
@@ -265,9 +262,8 @@ final class ProgressManager: ObservableObject {
 
     private func markDailyFreeCourseCompletedIfNeeded(courseId: String) {
         resetDailyFreeCourseIfNeeded()
-        if progress.dailyFreeCourseId == courseId {
-            progress.dailyFreeCourseCompletedDate = dateFormatter.string(from: Date())
-        }
+        progress.dailyFreeCourseId = nil
+        progress.dailyFreeCourseCompletedDate = dateFormatter.string(from: Date())
     }
 
     private func applyThemeRegressionIfNeeded() {

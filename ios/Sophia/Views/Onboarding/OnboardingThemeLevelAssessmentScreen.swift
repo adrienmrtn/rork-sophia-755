@@ -18,14 +18,21 @@ struct OnboardingThemeLevelAssessmentScreen: View {
         ZStack {
             SophiaTheme.background.ignoresSafeArea()
 
-            VStack(spacing: 0) {
-                Spacer()
+            ScrollView {
+                VStack(spacing: 16) {
+                    Image("logo_white")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 26)
+                        .padding(.top, 14)
+                        .opacity(appeared ? 0.9 : 0)
+                        .offset(y: appeared ? 0 : 10)
 
-                VStack(spacing: 22) {
                     Text("Comment estimes-tu ton niveau\ndans ces thèmes ?")
-                        .font(.system(.title2, design: .rounded, weight: .bold))
+                        .font(.system(.title3, design: .rounded, weight: .bold))
                         .foregroundStyle(.white)
                         .multilineTextAlignment(.center)
+                        .padding(.horizontal, 16)
                         .opacity(appeared ? 1 : 0)
                         .offset(y: appeared ? 0 : 16)
 
@@ -37,12 +44,22 @@ struct OnboardingThemeLevelAssessmentScreen: View {
                                 .animation(.spring(response: 0.55).delay(Double(i) * 0.05), value: appeared)
                         }
                     }
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, 16)
+                    .padding(.bottom, 120)
                 }
-
-                Spacer()
-
+            }
+            .safeAreaInset(edge: .bottom) {
                 OnboardingButton(title: "Continuer", action: onNext)
+                    .padding(.horizontal, 24)
+                    .padding(.bottom, 12)
+                    .background(
+                        LinearGradient(
+                            colors: [SophiaTheme.background.opacity(0), SophiaTheme.background],
+                            startPoint: .top,
+                            endPoint: .bottom
+                        )
+                        .ignoresSafeArea()
+                    )
                     .opacity(appeared ? 1 : 0)
                     .offset(y: appeared ? 0 : 30)
             }
@@ -55,21 +72,22 @@ struct OnboardingThemeLevelAssessmentScreen: View {
     }
 
     private func levelRow(subject: Subject) -> some View {
-        let level = viewModel.themeLevel(for: subject)
-        let config = levelConfig(level)
+        let value = viewModel.themeLevelValue(for: subject)
+        let tier = viewModel.themeTier(for: subject)
+        let config = levelConfig(tier)
         return VStack(alignment: .leading, spacing: 10) {
             HStack(spacing: 10) {
                 ZStack {
                     Circle()
                         .fill(subject.color.opacity(0.22))
-                        .frame(width: 26, height: 26)
+                        .frame(width: 24, height: 24)
                     Image(systemName: subject.icon)
-                        .font(.system(size: 12, weight: .semibold))
+                        .font(.system(size: 11, weight: .semibold))
                         .foregroundStyle(subject.color)
                 }
 
                 Text(subject.shortName)
-                    .font(.system(.headline, design: .rounded, weight: .bold))
+                    .font(.system(.subheadline, design: .rounded, weight: .bold))
                     .foregroundStyle(.white)
 
                 Spacer()
@@ -84,13 +102,10 @@ struct OnboardingThemeLevelAssessmentScreen: View {
 
             Slider(
                 value: Binding(
-                    get: { Double(viewModel.themeLevel(for: subject)) },
-                    set: { newValue in
-                        viewModel.setThemeLevel(Int(newValue.rounded()), for: subject)
-                    }
+                    get: { viewModel.themeLevelValue(for: subject) },
+                    set: { newValue in viewModel.setThemeLevelValue(newValue, for: subject) }
                 ),
-                in: 0...2,
-                step: 1
+                in: 0...1
             )
             .tint(config.color)
 
@@ -104,17 +119,17 @@ struct OnboardingThemeLevelAssessmentScreen: View {
             .font(.system(.caption2, design: .rounded, weight: .medium))
             .foregroundStyle(.white.opacity(0.35))
         }
-        .padding(14)
-        .background(.white.opacity(0.04), in: .rect(cornerRadius: 16))
+        .padding(12)
+        .background(.white.opacity(0.04), in: .rect(cornerRadius: 14))
         .overlay(
-            RoundedRectangle(cornerRadius: 16)
+            RoundedRectangle(cornerRadius: 14)
                 .strokeBorder(.white.opacity(0.08), lineWidth: 1)
         )
-        .animation(.snappy(duration: 0.12), value: level)
+        .animation(.snappy(duration: 0.12), value: value)
     }
 
-    private func levelConfig(_ level: Int) -> (label: String, color: Color) {
-        switch level {
+    private func levelConfig(_ tier: Int) -> (label: String, color: Color) {
+        switch tier {
         case 0:
             return ("Débutant", SophiaTheme.accent)
         case 1:

@@ -18,39 +18,63 @@ struct OnboardingCuriosityQuestionsScreen: View {
                 Spacer()
 
                 VStack(spacing: 22) {
+                    Image("logo_white")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 26)
+                        .opacity(appeared ? 0.9 : 0)
+                        .offset(y: appeared ? 0 : 10)
+
                     Text("Saurais-tu répondre à ces questions ?")
-                        .font(.system(.title2, design: .rounded, weight: .bold))
+                        .font(.system(.title3, design: .rounded, weight: .bold))
                         .foregroundStyle(.white)
                         .multilineTextAlignment(.center)
                         .opacity(appeared ? 1 : 0)
                         .offset(y: appeared ? 0 : 18)
 
-                    VStack(alignment: .leading, spacing: 14) {
-                        ForEach(Array(questions.enumerated()), id: \.offset) { _, q in
-                            HStack(alignment: .top, spacing: 10) {
-                                Text("•")
-                                    .font(.system(.body, design: .rounded, weight: .bold))
-                                    .foregroundStyle(.white.opacity(0.9))
-                                    .padding(.top, 1)
-                                Text(q)
-                                    .font(.system(.body, design: .rounded, weight: .medium))
-                                    .foregroundStyle(.white.opacity(0.85))
-                                    .fixedSize(horizontal: false, vertical: true)
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 18)
+                            .fill(
+                                LinearGradient(
+                                    colors: [
+                                        SophiaTheme.emerald.opacity(0.20),
+                                        SophiaTheme.accent.opacity(0.12),
+                                        .clear
+                                    ],
+                                    startPoint: .topLeading,
+                                    endPoint: .bottomTrailing
+                                )
+                            )
+                            .blur(radius: 12)
+                            .offset(y: 10)
+
+                        VStack(alignment: .leading, spacing: 12) {
+                            ForEach(Array(questions.enumerated()), id: \.offset) { _, q in
+                                HStack(alignment: .top, spacing: 10) {
+                                    Circle()
+                                        .fill(.white.opacity(0.65))
+                                        .frame(width: 6, height: 6)
+                                        .padding(.top, 7)
+                                    Text(q)
+                                        .font(.system(.callout, design: .rounded, weight: .semibold))
+                                        .foregroundStyle(.white.opacity(0.88))
+                                        .fixedSize(horizontal: false, vertical: true)
+                                }
                             }
                         }
+                        .padding(18)
+                        .background(.white.opacity(0.06), in: .rect(cornerRadius: 18))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 18)
+                                .strokeBorder(.white.opacity(0.10), lineWidth: 1)
+                        )
                     }
-                    .padding(18)
-                    .background(.white.opacity(0.05), in: .rect(cornerRadius: 16))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                            .strokeBorder(.white.opacity(0.08), lineWidth: 1)
-                    )
                     .padding(.horizontal, 24)
                     .opacity(appeared ? 1 : 0)
                     .offset(y: appeared ? 0 : 18)
 
                     Text("Sophia t'aide à répondre à ces questions tous les jours, et de manière passionnante.")
-                        .font(.system(.subheadline, design: .rounded, weight: .medium))
+                        .font(.system(.footnote, design: .rounded, weight: .medium))
                         .foregroundStyle(.white.opacity(0.65))
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 28)

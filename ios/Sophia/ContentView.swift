@@ -84,15 +84,7 @@ struct ContentView: View {
                         return
                     }
 
-                    if progressManager.canOpenFreeCourseToday(courseId: course.id) {
-                        progressManager.reserveTodayFreeCourseIfNeeded(courseId: course.id)
-                        pendingCourse = course
-                    } else {
-                        selectedCourse = nil
-                        pendingCourse = nil
-                        showPaywall = true
-                        UINotificationFeedbackGenerator().notificationOccurred(.warning)
-                    }
+                    pendingCourse = course
                 }
             }
             .fullScreenCover(item: $pendingCourse) { course in
@@ -151,18 +143,54 @@ struct ContentView: View {
                 }
             }
         }
+        .onReceive(NotificationCenter.default.publisher(for: UserDefaults.didChangeNotification)) { _ in
+            freemiumSubjects = loadFreemiumSubjects()
+        }
         .onChange(of: scenePhase) { _, phase in
             if phase == .active {
+                freemiumSubjects = loadFreemiumSubjects()
                 rescheduleNotifications()
             }
         }
     }
 
     private func loadFreemiumSubjects() -> Set<String> {
-        if let raw = UserDefaults.standard.array(forKey: "sophia_freemium_subjects") as? [String], !raw.isEmpty {
+        if let raw = UserDefaults.standard.array(forKey: "sophia_freemium_subjects") as? [String], raw.count == 3 {
             return Set(raw)
         }
-        return Set(Subject.allCases.map(\.rawValue))
+
+        let best3 = bestFreemiumSubjectsFromThemeLevels()
+        if best3.count == 3 {
+            UserDefaults.standard.set(best3, forKey: "sophia_freemium_subjects")
+            return Set(best3)
+        }
+
+        let fallback = Array(Subject.allCases.prefix(3)).map(\.rawValue)
+        UserDefaults.standard.set(fallback, forKey: "sophia_freemium_subjects")
+        return Set(fallback)
+    }
+
+    private func bestFreemiumSubjectsFromThemeLevels() -> [String] {
+        guard let data = UserDefaults.standard.data(forKey: "sophia_theme_levels"),
+              let decodedAny = (try? JSONDecoder().decode([String: Double].self, from: data)) ?? (try? JSONDecoder().decode([String: Int].self, from: data).mapValues { v in
+                  switch max(0, min(2, v)) {
+                  case 0: 0.15
+                  case 1: 0.50
+                  default: 0.85
+                  }
+              }) else { return [] }
+
+        let order = Subject.allCases
+        let ranked = order
+            .map { subject in
+                (subject: subject, value: decodedAny[subject.rawValue] ?? 0)
+            }
+            .sorted { lhs, rhs in
+                if lhs.value != rhs.value { return lhs.value > rhs.value }
+                return order.firstIndex(of: lhs.subject) ?? 0 < order.firstIndex(of: rhs.subject) ?? 0
+            }
+
+        return Array(ranked.prefix(3)).map(\.subject.rawValue)
     }
 
     private func rescheduleNotifications() {
