@@ -23,7 +23,7 @@ final class OnboardingViewModel: ObservableObject {
     @Published var loadingStep: String = ""
     @Published var isLoadingComplete: Bool = false
 
-    let totalScreens = 21
+    let totalScreens = 22
 
     init() {
         if let savedObjectives = UserDefaults.standard.array(forKey: "sophia_onboarding_objectives") as? [String] {
@@ -72,7 +72,7 @@ final class OnboardingViewModel: ObservableObject {
         case 3: return phoneTimeSelection != nil
         case 5: return !objectives.isEmpty
         case 10: return !interests.isEmpty
-        case 14: return ageRange != nil
+        case 15: return ageRange != nil
         default: return true
         }
     }

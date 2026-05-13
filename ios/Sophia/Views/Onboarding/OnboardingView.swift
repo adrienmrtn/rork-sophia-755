@@ -99,22 +99,24 @@ struct OnboardingView: View {
                 case 11:
                     OnboardingDailyGoalScreen(viewModel: viewModel, onNext: advance)
                 case 12:
-                    OnboardingProjectionScreen(onNext: advance)
+                    OnboardingAnnualRecapScreen(viewModel: viewModel, onNext: advance)
                 case 13:
-                    OnboardingAgeScreen(viewModel: viewModel, onNext: advance)
+                    OnboardingProjectionScreen(onNext: advance)
                 case 14:
-                    OnboardingThemeLevelAssessmentScreen(viewModel: viewModel, onNext: advance)
+                    OnboardingAgeScreen(viewModel: viewModel, onNext: advance)
                 case 15:
-                    OnboardingLoadingScreen(viewModel: viewModel, onNext: advance)
+                    OnboardingThemeLevelAssessmentScreen(viewModel: viewModel, onNext: advance)
                 case 16:
-                    OnboardingFinalScreen(onComplete: advance)
+                    OnboardingLoadingScreen(viewModel: viewModel, onNext: advance)
                 case 17:
-                    OnboardingFreeTrialIntroView(onNext: advance)
+                    OnboardingFinalScreen(onComplete: advance)
                 case 18:
-                    OnboardingFreeTrialTimelineView(onNext: advance)
+                    OnboardingFreeTrialIntroView(onNext: advance)
                 case 19:
-                    OnboardingBaselineProgressScreen(viewModel: viewModel, onNext: advance)
+                    OnboardingFreeTrialTimelineView(onNext: advance)
                 case 20:
+                    OnboardingBaselineProgressScreen(viewModel: viewModel, onNext: advance)
+                case 21:
                     Color.clear
                         .onAppear {
                             showRCPaywall = true
@@ -128,9 +130,9 @@ struct OnboardingView: View {
                 removal: .move(edge: .leading).combined(with: .opacity)
             ))
 
-            if viewModel.currentScreen > 0 && viewModel.currentScreen < 14 {
+            if viewModel.currentScreen > 0 && viewModel.currentScreen < 15 {
                 VStack {
-                    OnboardingProgressDots(current: viewModel.currentScreen, total: 14)
+                    OnboardingProgressDots(current: viewModel.currentScreen, total: 15)
                         .frame(maxWidth: .infinity)
                         .padding(.top, 16)
                     Spacer()

@@ -16,81 +16,51 @@ struct OnboardingCuriosityQuestionsScreen: View {
 
             LinearGradient(
                 colors: [
-                    SophiaTheme.emerald.opacity(0.12),
+                    SophiaTheme.accent.opacity(0.14),
                     .clear,
-                    SophiaTheme.accent.opacity(0.10)
+                    SophiaTheme.emerald.opacity(0.14),
                 ],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
+                startPoint: .topTrailing,
+                endPoint: .bottomLeading
             )
             .ignoresSafeArea()
 
             VStack(spacing: 0) {
                 Spacer()
 
-                VStack(spacing: 22) {
-                    Text("Saurais-tu répondre à ces questions ?")
-                        .font(.system(.title3, design: .rounded, weight: .bold))
-                        .foregroundStyle(.white)
-                        .multilineTextAlignment(.center)
-                        .opacity(appeared ? 1 : 0)
-                        .offset(y: appeared ? 0 : 18)
+                VStack(spacing: 18) {
+                    VStack(spacing: 10) {
+                        Text("Ta curiosité va exploser")
+                            .font(.system(.title2, design: .rounded, weight: .bold))
+                            .foregroundStyle(.white)
+                            .multilineTextAlignment(.center)
 
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 18)
-                            .fill(
-                                LinearGradient(
-                                    colors: [
-                                        SophiaTheme.emerald.opacity(0.20),
-                                        SophiaTheme.accent.opacity(0.12),
-                                        .clear
-                                    ],
-                                    startPoint: .topLeading,
-                                    endPoint: .bottomTrailing
-                                )
-                            )
-                            .blur(radius: 12)
-                            .offset(y: 10)
-
-                        VStack(alignment: .leading, spacing: 12) {
-                            ForEach(Array(questions.enumerated()), id: \.offset) { _, q in
-                                HStack(alignment: .top, spacing: 10) {
-                                    Circle()
-                                        .fill(.white.opacity(0.65))
-                                        .frame(width: 6, height: 6)
-                                        .padding(.top, 7)
-                                    Text(q)
-                                        .font(.system(.callout, design: .rounded, weight: .semibold))
-                                        .foregroundStyle(.white.opacity(0.88))
-                                        .fixedSize(horizontal: false, vertical: true)
-                                }
-                            }
-                        }
-                        .padding(18)
-                        .background(.white.opacity(0.06), in: .rect(cornerRadius: 18))
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 18)
-                                .strokeBorder(.white.opacity(0.10), lineWidth: 1)
-                        )
+                        Text("Chaque jour, Sophia te donne une réponse claire,\navec une histoire qui se retient.")
+                            .font(.system(.subheadline, design: .rounded, weight: .medium))
+                            .foregroundStyle(.white.opacity(0.65))
+                            .multilineTextAlignment(.center)
                     }
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, 26)
                     .opacity(appeared ? 1 : 0)
-                    .offset(y: appeared ? 0 : 18)
+                    .offset(y: appeared ? 0 : 16)
 
-                    Text("Sophia t'aide à répondre à ces questions tous les jours, et de manière passionnante.")
-                        .font(.system(.footnote, design: .rounded, weight: .medium))
-                        .foregroundStyle(.white.opacity(0.65))
-                        .multilineTextAlignment(.center)
-                        .padding(.horizontal, 28)
-                        .opacity(appeared ? 1 : 0)
-                        .offset(y: appeared ? 0 : 18)
+                    TabView {
+                        questionCard(icon: "sparkles", title: "Question du jour", text: questions[0], tint: SophiaTheme.emerald)
+                        questionCard(icon: "book.closed.fill", title: "Culture générale", text: questions[1], tint: SophiaTheme.accent)
+                        questionCard(icon: "bolt.fill", title: "Anecdote", text: questions[2], tint: SophiaTheme.streakOrange)
+                    }
+                    .tabViewStyle(.page(indexDisplayMode: .always))
+                    .frame(height: 210)
+                    .padding(.horizontal, 18)
+                    .opacity(appeared ? 1 : 0)
+                    .offset(y: appeared ? 0 : 16)
                 }
 
                 Spacer()
 
                 OnboardingButton(title: "Continuer", action: onNext)
                     .opacity(appeared ? 1 : 0)
-                    .offset(y: appeared ? 0 : 30)
+                    .offset(y: appeared ? 0 : 26)
             }
         }
         .onAppear {
@@ -98,5 +68,61 @@ struct OnboardingCuriosityQuestionsScreen: View {
                 appeared = true
             }
         }
+    }
+
+    private func questionCard(icon: String, title: String, text: String, tint: Color) -> some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack(spacing: 10) {
+                ZStack {
+                    Circle()
+                        .fill(tint.opacity(0.18))
+                        .frame(width: 36, height: 36)
+                    Image(systemName: icon)
+                        .font(.system(size: 16, weight: .semibold))
+                        .foregroundStyle(tint)
+                }
+                Text(title)
+                    .font(.system(.subheadline, design: .rounded, weight: .bold))
+                    .foregroundStyle(.white.opacity(0.9))
+                Spacer()
+            }
+
+            Text(text)
+                .font(.system(.body, design: .rounded, weight: .semibold))
+                .foregroundStyle(.white)
+                .fixedSize(horizontal: false, vertical: true)
+                .lineSpacing(4)
+
+            Spacer(minLength: 0)
+
+            HStack(spacing: 8) {
+                Image(systemName: "clock")
+                    .font(.system(size: 12, weight: .semibold))
+                    .foregroundStyle(.white.opacity(0.55))
+                Text("2 minutes pour comprendre")
+                    .font(.system(.caption, design: .rounded, weight: .medium))
+                    .foregroundStyle(.white.opacity(0.55))
+                Spacer()
+            }
+        }
+        .padding(18)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+        .background(
+            LinearGradient(
+                colors: [
+                    tint.opacity(0.20),
+                    .white.opacity(0.06),
+                    .black.opacity(0.02),
+                ],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            ),
+            in: .rect(cornerRadius: 22)
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 22)
+                .strokeBorder(.white.opacity(0.10), lineWidth: 1)
+        )
+        .padding(.vertical, 6)
     }
 }
