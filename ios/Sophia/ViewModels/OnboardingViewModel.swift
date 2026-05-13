@@ -23,7 +23,7 @@ final class OnboardingViewModel: ObservableObject {
     @Published var loadingStep: String = ""
     @Published var isLoadingComplete: Bool = false
 
-    let totalScreens = 22
+    let totalScreens = 21
 
     init() {
         if let savedObjectives = UserDefaults.standard.array(forKey: "sophia_onboarding_objectives") as? [String] {

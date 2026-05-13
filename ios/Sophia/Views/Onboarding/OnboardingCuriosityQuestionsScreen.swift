@@ -14,17 +14,21 @@ struct OnboardingCuriosityQuestionsScreen: View {
         ZStack {
             SophiaTheme.background.ignoresSafeArea()
 
+            LinearGradient(
+                colors: [
+                    SophiaTheme.emerald.opacity(0.12),
+                    .clear,
+                    SophiaTheme.accent.opacity(0.10)
+                ],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+            .ignoresSafeArea()
+
             VStack(spacing: 0) {
                 Spacer()
 
                 VStack(spacing: 22) {
-                    Image("logo_white")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(height: 26)
-                        .opacity(appeared ? 0.9 : 0)
-                        .offset(y: appeared ? 0 : 10)
-
                     Text("Saurais-tu répondre à ces questions ?")
                         .font(.system(.title3, design: .rounded, weight: .bold))
                         .foregroundStyle(.white)

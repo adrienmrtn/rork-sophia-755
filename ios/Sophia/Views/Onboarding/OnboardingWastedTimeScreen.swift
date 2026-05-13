@@ -25,36 +25,37 @@ struct OnboardingWastedTimeScreen: View {
             VStack(spacing: 0) {
                 Spacer()
 
-                VStack(spacing: 28) {
+                VStack(spacing: 22) {
                     Image(systemName: "hourglass")
-                        .font(.system(size: 48))
+                        .font(.system(size: 44))
                         .foregroundStyle(SophiaTheme.streakOrange)
                         .symbolEffect(.wiggle, value: appeared)
                         .opacity(appeared ? 1 : 0)
 
                     VStack(spacing: 8) {
                         Text("C'est")
-                            .font(.system(.title3, design: .rounded, weight: .medium))
+                            .font(.system(.subheadline, design: .rounded, weight: .semibold))
                             .foregroundStyle(.white.opacity(0.6))
 
-                        HStack(alignment: .firstTextBaseline, spacing: 6) {
+                        HStack(alignment: .firstTextBaseline, spacing: 8) {
                             Text("\(counterValue)")
                                 .font(.system(size: 64, weight: .heavy, design: .rounded))
                                 .foregroundStyle(SophiaTheme.streakOrange)
                                 .contentTransition(.numericText(countsDown: false))
                             Text("heures")
-                                .font(.system(.title2, design: .rounded, weight: .bold))
-                                .foregroundStyle(.white.opacity(0.7))
+                                .font(.system(.title3, design: .rounded, weight: .bold))
+                                .foregroundStyle(.white.opacity(0.75))
                         }
 
                         Text("perdues par an.")
-                            .font(.system(.title3, design: .rounded, weight: .medium))
+                            .font(.system(.subheadline, design: .rounded, weight: .semibold))
                             .foregroundStyle(.white.opacity(0.6))
                     }
+                    .multilineTextAlignment(.center)
                     .opacity(appeared ? 1 : 0)
 
                     if showMessage {
-                        VStack(spacing: 6) {
+                        VStack(spacing: 14) {
                             Text("Soit " + viewModel.wastedTimeDays + " complets.")
                                 .font(.system(.headline, design: .rounded, weight: .bold))
                                 .foregroundStyle(.white)
@@ -63,24 +64,17 @@ struct OnboardingWastedTimeScreen: View {
                                 .font(.system(.headline, design: .rounded, weight: .bold))
                                 .foregroundStyle(.white)
                                 .multilineTextAlignment(.center)
-                                .padding(.vertical, 14)
+                                .padding(.vertical, 16)
                                 .frame(maxWidth: .infinity)
-                                .background(.white.opacity(0.05), in: .rect(cornerRadius: 16))
+                                .background(.white.opacity(0.06), in: .rect(cornerRadius: 18))
                                 .overlay(
-                                    RoundedRectangle(cornerRadius: 16)
-                                        .strokeBorder(.white.opacity(0.08), lineWidth: 1)
+                                    RoundedRectangle(cornerRadius: 18)
+                                        .strokeBorder(.white.opacity(0.10), lineWidth: 1)
                                 )
-                                .padding(.top, 10)
 
-                            Text("Le scrolling excessif fragmente l'attention et affaiblit la mémoire.\nLe micro-learning renforce la mémoire et la plasticité cérébrale.\nTon cerveau apprend mieux en petites doses, chaque jour.")
-                                .font(.system(.subheadline, design: .rounded, weight: .medium))
-                                .foregroundStyle(.white.opacity(0.7))
-                                .multilineTextAlignment(.center)
-                                .padding(.top, 8)
-
-                            Text("Avec Sophia, fais un bon usage de ton temps.")
-                                .font(.system(.body, design: .rounded))
-                                .foregroundStyle(SophiaTheme.emerald)
+                            Text("10 minutes utiles par jour, pour apprendre sans scroller.")
+                                .font(.system(.footnote, design: .rounded, weight: .semibold))
+                                .foregroundStyle(.white.opacity(0.6))
                                 .multilineTextAlignment(.center)
                         }
                         .padding(.horizontal, 24)

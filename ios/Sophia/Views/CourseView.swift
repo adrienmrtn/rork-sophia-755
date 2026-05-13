@@ -422,11 +422,11 @@ private struct CourseCompletionSummaryScreen: View {
                             Image(systemName: "arrow.right")
                                 .font(.subheadline.weight(.semibold))
                         }
-                        .foregroundStyle(.black.opacity(0.9))
+                        .foregroundStyle(.white)
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 18)
-                        .background(Color.yellow, in: .rect(cornerRadius: 18))
-                        .shadow(color: Color.yellow.opacity(0.25), radius: 14, y: 4)
+                        .background(SophiaTheme.emerald, in: .rect(cornerRadius: 18))
+                        .shadow(color: SophiaTheme.emerald.opacity(0.25), radius: 14, y: 4)
                     }
                 }
                 .padding(.horizontal, 24)

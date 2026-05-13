@@ -99,24 +99,22 @@ struct OnboardingView: View {
                 case 11:
                     OnboardingDailyGoalScreen(viewModel: viewModel, onNext: advance)
                 case 12:
-                    OnboardingAnnualRecapScreen(viewModel: viewModel, onNext: advance)
-                case 13:
                     OnboardingProjectionScreen(onNext: advance)
-                case 14:
+                case 13:
                     OnboardingAgeScreen(viewModel: viewModel, onNext: advance)
-                case 15:
+                case 14:
                     OnboardingThemeLevelAssessmentScreen(viewModel: viewModel, onNext: advance)
-                case 16:
+                case 15:
                     OnboardingLoadingScreen(viewModel: viewModel, onNext: advance)
-                case 17:
+                case 16:
                     OnboardingFinalScreen(onComplete: advance)
-                case 18:
+                case 17:
                     OnboardingFreeTrialIntroView(onNext: advance)
-                case 19:
+                case 18:
                     OnboardingFreeTrialTimelineView(onNext: advance)
-                case 20:
+                case 19:
                     OnboardingBaselineProgressScreen(viewModel: viewModel, onNext: advance)
-                case 21:
+                case 20:
                     Color.clear
                         .onAppear {
                             showRCPaywall = true
@@ -130,9 +128,9 @@ struct OnboardingView: View {
                 removal: .move(edge: .leading).combined(with: .opacity)
             ))
 
-            if viewModel.currentScreen > 0 && viewModel.currentScreen < 15 {
+            if viewModel.currentScreen > 0 && viewModel.currentScreen < 14 {
                 VStack {
-                    OnboardingProgressDots(current: viewModel.currentScreen, total: 15)
+                    OnboardingProgressDots(current: viewModel.currentScreen, total: 14)
                         .frame(maxWidth: .infinity)
                         .padding(.top, 16)
                     Spacer()

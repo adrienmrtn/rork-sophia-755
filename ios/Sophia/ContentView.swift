@@ -1,5 +1,6 @@
 import SwiftUI
 import RevenueCatUI
+import RevenueCat
 import StoreKit
 import UIKit
 
@@ -9,6 +10,7 @@ struct ContentView: View {
     @State private var selectedTab: Int = 0
     @State private var selectedCourse: Course? = nil
     @State private var showPaywall: Bool = false
+    @State private var paywallStep: PaywallStep = .primary
     @Environment(\.scenePhase) private var scenePhase
 
     @State private var showSwipeTutorial: Bool = false
@@ -27,9 +29,11 @@ struct ContentView: View {
                         isPremium: storeVM.isPremium,
                         freemiumSubjects: freemiumSubjects,
                         onShowPaywallFromStart: {
+                            paywallStep = .primary
                             showPaywall = true
                         },
                         onShowPaywallFromQuizBanner: {
+                            paywallStep = .primary
                             showPaywall = true
                         }
                     )
@@ -55,6 +59,7 @@ struct ContentView: View {
                         progressManager: progressManager,
                         store: storeVM,
                         onShowPaywall: {
+                            paywallStep = .primary
                             showPaywall = true
                         }
                     )
@@ -75,6 +80,7 @@ struct ContentView: View {
                     if !freemiumSubjects.isEmpty && !freemiumSubjects.contains(course.subject.rawValue) {
                         selectedCourse = nil
                         pendingCourse = nil
+                        paywallStep = .primary
                         showPaywall = true
                         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                         return
@@ -83,6 +89,7 @@ struct ContentView: View {
                     if progressManager.hasCompletedDailyFreeCourseToday {
                         selectedCourse = nil
                         pendingCourse = nil
+                        paywallStep = .primary
                         showPaywall = true
                         UINotificationFeedbackGenerator().notificationOccurred(.warning)
                         return
@@ -123,14 +130,20 @@ struct ContentView: View {
             }
 
         }
-        .sheet(isPresented: $showPaywall) {
-            PaywallView()
-                .onPurchaseCompleted { _ in
+        .sheet(isPresented: $showPaywall, onDismiss: {
+            if !storeVM.isPremium && paywallStep == .primary {
+                paywallStep = .defaut3
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+                    showPaywall = true
+                }
+            }
+        }) {
+            PaywallSheetView(
+                step: paywallStep,
+                onPurchasedOrRestored: {
                     showPaywall = false
                 }
-                .onRestoreCompleted { _ in
-                    showPaywall = false
-                }
+            )
         }
         .onReceive(NotificationCenter.default.publisher(for: .sophiaRequestReview)) { _ in
             requestReviewIfAllowed()
@@ -216,5 +229,51 @@ struct ContentView: View {
 
         guard let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene else { return }
         SKStoreReviewController.requestReview(in: scene)
+    }
+}
+
+private enum PaywallStep: String {
+    case primary
+    case defaut3
+}
+
+private struct PaywallSheetView: View {
+    let step: PaywallStep
+    let onPurchasedOrRestored: () -> Void
+    @State private var offering: Offering? = nil
+
+    var body: some View {
+        Group {
+            if let offering {
+                PaywallView(offering: offering)
+                    .onPurchaseCompleted { _ in
+                        onPurchasedOrRestored()
+                    }
+                    .onRestoreCompleted { _ in
+                        onPurchasedOrRestored()
+                    }
+            } else {
+                ZStack {
+                    SophiaTheme.background.ignoresSafeArea()
+                    ProgressView()
+                        .tint(.white)
+                        .scaleEffect(1.2)
+                }
+            }
+        }
+        .task(id: step) {
+            offering = nil
+            do {
+                let offerings = try await Purchases.shared.offerings()
+                switch step {
+                case .primary:
+                    offering = offerings.current
+                case .defaut3:
+                    offering = offerings.offering(identifier: "defaut3") ?? offerings.current
+                }
+            } catch {
+                offering = nil
+            }
+        }
     }
 }
