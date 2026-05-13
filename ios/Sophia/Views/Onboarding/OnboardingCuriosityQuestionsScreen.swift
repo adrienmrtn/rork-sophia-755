@@ -3,6 +3,7 @@ import SwiftUI
 struct OnboardingCuriosityQuestionsScreen: View {
     let onNext: () -> Void
     @State private var appeared: Bool = false
+    @State private var selectedIndex: Int = 0
 
     private let questions = [
         "Sais-tu pourquoi la Joconde est vraiment connue ?",
@@ -30,6 +31,13 @@ struct OnboardingCuriosityQuestionsScreen: View {
 
                 VStack(spacing: 18) {
                     VStack(spacing: 10) {
+                        Image("logo_white")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(height: 22)
+                            .opacity(appeared ? 0.9 : 0)
+                            .offset(y: appeared ? 0 : 10)
+
                         Text("Ta curiosité va exploser")
                             .font(.system(.title2, design: .rounded, weight: .bold))
                             .foregroundStyle(.white)
@@ -44,16 +52,25 @@ struct OnboardingCuriosityQuestionsScreen: View {
                     .opacity(appeared ? 1 : 0)
                     .offset(y: appeared ? 0 : 16)
 
-                    TabView {
+                    TabView(selection: $selectedIndex) {
                         questionCard(icon: "sparkles", title: "Question du jour", text: questions[0], tint: SophiaTheme.emerald)
+                            .tag(0)
                         questionCard(icon: "book.closed.fill", title: "Culture générale", text: questions[1], tint: SophiaTheme.accent)
+                            .tag(1)
                         questionCard(icon: "bolt.fill", title: "Anecdote", text: questions[2], tint: SophiaTheme.streakOrange)
+                            .tag(2)
                     }
-                    .tabViewStyle(.page(indexDisplayMode: .always))
+                    .tabViewStyle(.page(indexDisplayMode: .never))
                     .frame(height: 210)
                     .padding(.horizontal, 18)
                     .opacity(appeared ? 1 : 0)
                     .offset(y: appeared ? 0 : 16)
+                    .overlay(alignment: .bottomTrailing) {
+                        pageDots(current: selectedIndex, total: 3)
+                            .padding(.trailing, 18)
+                            .padding(.bottom, 14)
+                            .opacity(appeared ? 1 : 0)
+                    }
                 }
 
                 Spacer()
@@ -68,6 +85,24 @@ struct OnboardingCuriosityQuestionsScreen: View {
                 appeared = true
             }
         }
+    }
+
+    private func pageDots(current: Int, total: Int) -> some View {
+        HStack(spacing: 7) {
+            ForEach(0..<total, id: \.self) { i in
+                Capsule()
+                    .fill(i == current ? .white.opacity(0.85) : .white.opacity(0.28))
+                    .frame(width: i == current ? 16 : 7, height: 7)
+                    .animation(.spring(response: 0.25), value: current)
+            }
+        }
+        .padding(.horizontal, 10)
+        .padding(.vertical, 8)
+        .background(.black.opacity(0.20), in: Capsule())
+        .overlay(
+            Capsule()
+                .strokeBorder(.white.opacity(0.10), lineWidth: 1)
+        )
     }
 
     private func questionCard(icon: String, title: String, text: String, tint: Color) -> some View {
