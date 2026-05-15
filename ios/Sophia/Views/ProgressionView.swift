@@ -5,7 +5,7 @@ struct ProgressionView: View {
     let progressManager: ProgressManager
     let store: StoreViewModel
     @Binding var selectedCourse: Course?
-    @State private var showPaywall: Bool = false
+    let onShowPaywall: () -> Void
     @State private var milestonePulse: Bool = false
 
     private let subjects: [Subject] = [
@@ -67,15 +67,6 @@ struct ProgressionView: View {
             }
             .navigationTitle("Progression")
             .toolbarColorScheme(.dark, for: .navigationBar)
-            .sheet(isPresented: $showPaywall) {
-                PaywallView()
-                    .onPurchaseCompleted { _ in
-                        showPaywall = false
-                    }
-                    .onRestoreCompleted { _ in
-                        showPaywall = false
-                    }
-            }
         }
     }
 
@@ -192,7 +183,12 @@ struct ProgressionView: View {
                 .foregroundStyle(.white)
 
             NavigationLink {
-                MyQuizzesView(progressManager: progressManager, store: store, selectedCourse: $selectedCourse)
+                MyQuizzesView(
+                    progressManager: progressManager,
+                    store: store,
+                    selectedCourse: $selectedCourse,
+                    onShowPaywall: onShowPaywall
+                )
             } label: {
                 HStack(spacing: 10) {
                     Text("📖 Voir les quiz des cours que j'ai lus →")
@@ -519,7 +515,7 @@ private struct MyQuizzesView: View {
     let progressManager: ProgressManager
     let store: StoreViewModel
     @Binding var selectedCourse: Course?
-    @State private var showPaywall: Bool = false
+    let onShowPaywall: () -> Void
     @State private var selectedQuizCourse: Course? = nil
 
     private var completedCoursesWithQuiz: [Course] {
@@ -559,7 +555,7 @@ private struct MyQuizzesView: View {
                             Button {
                                 let g = UIImpactFeedbackGenerator(style: .medium)
                                 g.impactOccurred()
-                                showPaywall = true
+                                onShowPaywall()
                             } label: {
                                 HStack(spacing: 10) {
                                     Text("Débloquer mes quiz →")
@@ -603,15 +599,6 @@ private struct MyQuizzesView: View {
                 }
             )
         }
-        .sheet(isPresented: $showPaywall) {
-            PaywallView()
-                .onPurchaseCompleted { _ in
-                    showPaywall = false
-                }
-                .onRestoreCompleted { _ in
-                    showPaywall = false
-                }
-        }
     }
 
     private func quizRow(_ course: Course) -> some View {
@@ -624,7 +611,7 @@ private struct MyQuizzesView: View {
             if store.isPremium {
                 selectedQuizCourse = course
             } else {
-                showPaywall = true
+                onShowPaywall()
             }
         } label: {
             HStack(spacing: 12) {

@@ -8,6 +8,7 @@ struct CourseView: View {
     let isPremium: Bool
     let onDismissToHome: () -> Void
     @Environment(\.dismiss) private var dismiss
+    @EnvironmentObject private var paywall: PaywallCoordinator
     @AppStorage("sophia_is_premium") private var isPremiumStored: Bool = false
     @State private var currentIndex: Int = 0
     @State private var showQuiz: Bool = false
@@ -18,8 +19,6 @@ struct CourseView: View {
     @State private var showCompletionSummary: Bool = false
     @State private var showStreakSummary: Bool = false
     @State private var showMoreCoursePrompt: Bool = false
-    @State private var showPaywallMiniQuiz: Bool = false
-    @State private var showPaywallMoreCourse: Bool = false
     @ObservedObject private var imageCredits = ImageCreditsStore.shared
 
     private var isLastLesson: Bool {
@@ -84,7 +83,9 @@ struct CourseView: View {
                 },
                 onMiniQuiz: {
                     showCompletionSummary = false
-                    showPaywallMiniQuiz = true
+                    paywall.presentPrimary(onPurchasedOrRestored: {
+                        showQuiz = true
+                    })
                 }
             )
         }
@@ -106,35 +107,15 @@ struct CourseView: View {
                 },
                 onAccessMore: {
                     showMoreCoursePrompt = false
-                    showPaywallMoreCourse = true
+                    paywall.presentPrimary(onPurchasedOrRestored: {
+                        onDismissToHome()
+                    })
                 }
             )
         }
         .onChange(of: currentIndex) { _, _ in
             let g = UIImpactFeedbackGenerator(style: .light)
             g.impactOccurred()
-        }
-        .sheet(isPresented: $showPaywallMiniQuiz) {
-            PaywallView()
-                .onPurchaseCompleted { _ in
-                    showPaywallMiniQuiz = false
-                    showQuiz = true
-                }
-                .onRestoreCompleted { _ in
-                    showPaywallMiniQuiz = false
-                    showQuiz = true
-                }
-        }
-        .sheet(isPresented: $showPaywallMoreCourse) {
-            PaywallView()
-                .onPurchaseCompleted { _ in
-                    showPaywallMoreCourse = false
-                    onDismissToHome()
-                }
-                .onRestoreCompleted { _ in
-                    showPaywallMoreCourse = false
-                    onDismissToHome()
-                }
         }
         .onAppear {
             progressManager.recordReadingActivity()

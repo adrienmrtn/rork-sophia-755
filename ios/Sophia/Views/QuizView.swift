@@ -7,8 +7,9 @@ struct QuizView: View {
     let isPremium: Bool
     let onReturnHome: () -> Void
     @Environment(\.dismiss) private var dismiss
+    @EnvironmentObject private var paywall: PaywallCoordinator
     @State private var unlocked: Bool = false
-    @State private var showPaywall: Bool = false
+    @State private var didRequestPaywall: Bool = false
 
     @State private var currentQuestionIndex: Int = 0
     @State private var selectedOptionIndex: Int? = nil
@@ -57,14 +58,7 @@ struct QuizView: View {
         ZStack {
             SophiaTheme.background.ignoresSafeArea()
 
-            if !unlocked {
-                Color.clear
-                    .onAppear {
-                        if !showPaywall {
-                            showPaywall = true
-                        }
-                    }
-            } else if showCelebration {
+            if showCelebration {
                 celebrationView
                     .transition(.opacity)
             } else if isFinished {
@@ -88,8 +82,16 @@ struct QuizView: View {
             streakBefore = progressManager.streak
             completedBefore = progressManager.completedCount
             shuffleAllQuestions()
-            if !unlocked {
-                showPaywall = true
+            if !unlocked, !didRequestPaywall {
+                didRequestPaywall = true
+                paywall.presentPrimary(
+                    onPurchasedOrRestored: {
+                        unlocked = true
+                    },
+                    onDismissWithoutPurchase: {
+                        onReturnHome()
+                    }
+                )
             }
         }
         .sheet(isPresented: $showCorrections) {
@@ -98,21 +100,6 @@ struct QuizView: View {
                 answers: userAnswers
             )
             .presentationDragIndicator(.visible)
-        }
-        .sheet(isPresented: $showPaywall, onDismiss: {
-            if !unlocked {
-                onReturnHome()
-            }
-        }) {
-            PaywallView()
-                .onPurchaseCompleted { _ in
-                    unlocked = true
-                    showPaywall = false
-                }
-                .onRestoreCompleted { _ in
-                    unlocked = true
-                    showPaywall = false
-                }
         }
     }
 

@@ -4,7 +4,7 @@ struct OnboardingCuriosityQuestionsScreen: View {
     let onNext: () -> Void
     @State private var appeared: Bool = false
     @State private var selectedIndex: Int = 0
-
+    
     private let questions = [
         "Sais-tu pourquoi la Joconde est vraiment connue ?",
         "Saurais-tu expliquer pourquoi l'Empire Romain a chuté ?",
@@ -15,21 +15,10 @@ struct OnboardingCuriosityQuestionsScreen: View {
         ZStack {
             SophiaTheme.background.ignoresSafeArea()
 
-            LinearGradient(
-                colors: [
-                    SophiaTheme.accent.opacity(0.14),
-                    .clear,
-                    SophiaTheme.emerald.opacity(0.14),
-                ],
-                startPoint: .topTrailing,
-                endPoint: .bottomLeading
-            )
-            .ignoresSafeArea()
-
             VStack(spacing: 0) {
                 Spacer()
 
-                VStack(spacing: 18) {
+                VStack(spacing: 22) {
                     VStack(spacing: 10) {
                         Image("logo_white")
                             .resizable()
@@ -37,6 +26,13 @@ struct OnboardingCuriosityQuestionsScreen: View {
                             .frame(height: 22)
                             .opacity(appeared ? 0.9 : 0)
                             .offset(y: appeared ? 0 : 10)
+
+                        Image(systemName: "sparkles")
+                            .font(.system(size: 40))
+                            .foregroundStyle(SophiaTheme.emerald)
+                            .symbolEffect(.pulse, isActive: appeared)
+                            .opacity(appeared ? 1 : 0)
+                            .offset(y: appeared ? 0 : 12)
 
                         Text("Ta curiosité va exploser")
                             .font(.system(.title2, design: .rounded, weight: .bold))
@@ -52,25 +48,47 @@ struct OnboardingCuriosityQuestionsScreen: View {
                     .opacity(appeared ? 1 : 0)
                     .offset(y: appeared ? 0 : 16)
 
-                    TabView(selection: $selectedIndex) {
-                        questionCard(icon: "sparkles", title: "Question du jour", text: questions[0], tint: SophiaTheme.emerald)
-                            .tag(0)
-                        questionCard(icon: "book.closed.fill", title: "Culture générale", text: questions[1], tint: SophiaTheme.accent)
-                            .tag(1)
-                        questionCard(icon: "bolt.fill", title: "Anecdote", text: questions[2], tint: SophiaTheme.streakOrange)
-                            .tag(2)
+                    VStack(alignment: .leading, spacing: 14) {
+                        ForEach(Array(questions.enumerated()), id: \.offset) { _, q in
+                            HStack(alignment: .top, spacing: 10) {
+                                Circle()
+                                    .fill(SophiaTheme.emerald.opacity(0.85))
+                                    .frame(width: 6, height: 6)
+                                    .padding(.top, 8)
+                                Text(q)
+                                    .font(.system(.callout, design: .rounded, weight: .semibold))
+                                    .foregroundStyle(.white.opacity(0.9))
+                                    .fixedSize(horizontal: false, vertical: true)
+                            }
+                        }
+
+                        HStack(spacing: 8) {
+                            Image(systemName: "clock")
+                                .font(.system(size: 12, weight: .semibold))
+                                .foregroundStyle(.white.opacity(0.55))
+                            Text("2 minutes par jour pour progresser")
+                                .font(.system(.caption, design: .rounded, weight: .semibold))
+                                .foregroundStyle(.white.opacity(0.55))
+                            Spacer()
+                        }
                     }
-                    .tabViewStyle(.page(indexDisplayMode: .never))
-                    .frame(height: 210)
-                    .padding(.horizontal, 18)
+                    .padding(18)
+                    .background(.white.opacity(0.06), in: .rect(cornerRadius: 18))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 18)
+                            .strokeBorder(.white.opacity(0.10), lineWidth: 1)
+                    )
+                    .padding(.horizontal, 24)
                     .opacity(appeared ? 1 : 0)
                     .offset(y: appeared ? 0 : 16)
-                    .overlay(alignment: .bottomTrailing) {
-                        pageDots(current: selectedIndex, total: 3)
-                            .padding(.trailing, 18)
-                            .padding(.bottom, 14)
-                            .opacity(appeared ? 1 : 0)
-                    }
+
+                    Text("Sophia t'aide à répondre à ces questions tous les jours, et de manière passionnante.")
+                        .font(.system(.footnote, design: .rounded, weight: .medium))
+                        .foregroundStyle(.white.opacity(0.65))
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 28)
+                        .opacity(appeared ? 1 : 0)
+                        .offset(y: appeared ? 0 : 16)
                 }
 
                 Spacer()
@@ -85,79 +103,5 @@ struct OnboardingCuriosityQuestionsScreen: View {
                 appeared = true
             }
         }
-    }
-
-    private func pageDots(current: Int, total: Int) -> some View {
-        HStack(spacing: 7) {
-            ForEach(0..<total, id: \.self) { i in
-                Capsule()
-                    .fill(i == current ? .white.opacity(0.85) : .white.opacity(0.28))
-                    .frame(width: i == current ? 16 : 7, height: 7)
-                    .animation(.spring(response: 0.25), value: current)
-            }
-        }
-        .padding(.horizontal, 10)
-        .padding(.vertical, 8)
-        .background(.black.opacity(0.20), in: Capsule())
-        .overlay(
-            Capsule()
-                .strokeBorder(.white.opacity(0.10), lineWidth: 1)
-        )
-    }
-
-    private func questionCard(icon: String, title: String, text: String, tint: Color) -> some View {
-        VStack(alignment: .leading, spacing: 12) {
-            HStack(spacing: 10) {
-                ZStack {
-                    Circle()
-                        .fill(tint.opacity(0.18))
-                        .frame(width: 36, height: 36)
-                    Image(systemName: icon)
-                        .font(.system(size: 16, weight: .semibold))
-                        .foregroundStyle(tint)
-                }
-                Text(title)
-                    .font(.system(.subheadline, design: .rounded, weight: .bold))
-                    .foregroundStyle(.white.opacity(0.9))
-                Spacer()
-            }
-
-            Text(text)
-                .font(.system(.body, design: .rounded, weight: .semibold))
-                .foregroundStyle(.white)
-                .fixedSize(horizontal: false, vertical: true)
-                .lineSpacing(4)
-
-            Spacer(minLength: 0)
-
-            HStack(spacing: 8) {
-                Image(systemName: "clock")
-                    .font(.system(size: 12, weight: .semibold))
-                    .foregroundStyle(.white.opacity(0.55))
-                Text("2 minutes pour comprendre")
-                    .font(.system(.caption, design: .rounded, weight: .medium))
-                    .foregroundStyle(.white.opacity(0.55))
-                Spacer()
-            }
-        }
-        .padding(18)
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-        .background(
-            LinearGradient(
-                colors: [
-                    tint.opacity(0.20),
-                    .white.opacity(0.06),
-                    .black.opacity(0.02),
-                ],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            ),
-            in: .rect(cornerRadius: 22)
-        )
-        .overlay(
-            RoundedRectangle(cornerRadius: 22)
-                .strokeBorder(.white.opacity(0.10), lineWidth: 1)
-        )
-        .padding(.vertical, 6)
     }
 }

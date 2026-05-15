@@ -1,13 +1,12 @@
 import SwiftUI
 import AVKit
-import RevenueCatUI
 
 struct PrePaywallQuizView: View {
     let onContinue: () -> Void
+    @EnvironmentObject private var paywall: PaywallCoordinator
     @State private var appeared: Bool = false
     @State private var shimmerOffset: CGFloat = -200
     @State private var player: AVPlayer?
-    @State private var showPaywall: Bool = false
 
     var body: some View {
         ZStack {
@@ -73,7 +72,9 @@ struct PrePaywallQuizView: View {
                 VStack(spacing: 10) {
                     Button {
                         triggerHaptic(.medium)
-                        showPaywall = true
+                        paywall.presentPrimary(onPurchasedOrRestored: {
+                            onContinue()
+                        })
                     } label: {
                         HStack(spacing: 10) {
                             Image(systemName: "lock.open.fill")
@@ -109,17 +110,6 @@ struct PrePaywallQuizView: View {
                     .allowsHitTesting(false)
             }
             .clipped()
-        }
-        .sheet(isPresented: $showPaywall) {
-            PaywallView()
-                .onPurchaseCompleted { _ in
-                    showPaywall = false
-                    onContinue()
-                }
-                .onRestoreCompleted { _ in
-                    showPaywall = false
-                    onContinue()
-                }
         }
         .onAppear {
             setupPlayer()

@@ -4,13 +4,69 @@ import RevenueCat
 import StoreKit
 import UIKit
 
+@MainActor
+final class PaywallCoordinator: ObservableObject {
+    @Published var isPresented: Bool = false
+    @Published var step: PaywallStep = .primary
+
+    private var didPurchaseOrRestore: Bool = false
+    private var pendingOnPurchasedOrRestored: (() -> Void)?
+    private var pendingOnDismissWithoutPurchase: (() -> Void)?
+
+    func presentPrimary(
+        onPurchasedOrRestored: (() -> Void)? = nil,
+        onDismissWithoutPurchase: (() -> Void)? = nil
+    ) {
+        step = .primary
+        pendingOnPurchasedOrRestored = onPurchasedOrRestored
+        pendingOnDismissWithoutPurchase = onDismissWithoutPurchase
+        didPurchaseOrRestore = false
+        isPresented = true
+    }
+
+    func markPurchasedOrRestored() {
+        didPurchaseOrRestore = true
+        pendingOnPurchasedOrRestored?()
+        pendingOnPurchasedOrRestored = nil
+        pendingOnDismissWithoutPurchase = nil
+    }
+
+    func handleDismiss(isPremium: Bool) {
+        let dismissedStep = step
+        let didPurchase = didPurchaseOrRestore
+        didPurchaseOrRestore = false
+
+        if dismissedStep == .defaut3, !isPremium, !didPurchase {
+            UserDefaults.standard.set(true, forKey: "sophia_second_paywall_dismissed")
+        }
+
+        if !isPremium,
+           dismissedStep == .primary,
+           !didPurchase,
+           !UserDefaults.standard.bool(forKey: "sophia_second_paywall_dismissed") {
+            step = .defaut3
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+                self.isPresented = true
+            }
+            return
+        }
+
+        step = .primary
+
+        if !didPurchase {
+            pendingOnDismissWithoutPurchase?()
+        }
+        pendingOnDismissWithoutPurchase = nil
+        pendingOnPurchasedOrRestored = nil
+    }
+}
+
 struct ContentView: View {
     @StateObject private var progressManager = ProgressManager()
     @StateObject private var storeVM = StoreViewModel()
     @State private var selectedTab: Int = 0
     @State private var selectedCourse: Course? = nil
-    @State private var showPaywall: Bool = false
-    @State private var paywallStep: PaywallStep = .primary
+    @StateObject private var paywall = PaywallCoordinator()
     @Environment(\.scenePhase) private var scenePhase
 
     @State private var showSwipeTutorial: Bool = false
@@ -29,12 +85,10 @@ struct ContentView: View {
                         isPremium: storeVM.isPremium,
                         freemiumSubjects: freemiumSubjects,
                         onShowPaywallFromStart: {
-                            paywallStep = .primary
-                            showPaywall = true
+                            paywall.presentPrimary()
                         },
                         onShowPaywallFromQuizBanner: {
-                            paywallStep = .primary
-                            showPaywall = true
+                            paywall.presentPrimary()
                         }
                     )
                 }
@@ -50,7 +104,10 @@ struct ContentView: View {
                     ProgressionView(
                         progressManager: progressManager,
                         store: storeVM,
-                        selectedCourse: $selectedCourse
+                        selectedCourse: $selectedCourse,
+                        onShowPaywall: {
+                            paywall.presentPrimary()
+                        }
                     )
                 }
 
@@ -59,8 +116,7 @@ struct ContentView: View {
                         progressManager: progressManager,
                         store: storeVM,
                         onShowPaywall: {
-                            paywallStep = .primary
-                            showPaywall = true
+                            paywall.presentPrimary()
                         }
                     )
                 }
@@ -80,8 +136,7 @@ struct ContentView: View {
                     if !freemiumSubjects.isEmpty && !freemiumSubjects.contains(course.subject.rawValue) {
                         selectedCourse = nil
                         pendingCourse = nil
-                        paywallStep = .primary
-                        showPaywall = true
+                        paywall.presentPrimary()
                         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                         return
                     }
@@ -89,8 +144,7 @@ struct ContentView: View {
                     if progressManager.hasCompletedDailyFreeCourseToday {
                         selectedCourse = nil
                         pendingCourse = nil
-                        paywallStep = .primary
-                        showPaywall = true
+                        paywall.presentPrimary()
                         UINotificationFeedbackGenerator().notificationOccurred(.warning)
                         return
                     }
@@ -130,18 +184,15 @@ struct ContentView: View {
             }
 
         }
-        .sheet(isPresented: $showPaywall, onDismiss: {
-            if !storeVM.isPremium && paywallStep == .primary {
-                paywallStep = .defaut3
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
-                    showPaywall = true
-                }
-            }
+        .environmentObject(paywall)
+        .sheet(isPresented: $paywall.isPresented, onDismiss: {
+            paywall.handleDismiss(isPremium: storeVM.isPremium)
         }) {
             PaywallSheetView(
-                step: paywallStep,
+                step: paywall.step,
                 onPurchasedOrRestored: {
-                    showPaywall = false
+                    paywall.markPurchasedOrRestored()
+                    paywall.isPresented = false
                 }
             )
         }
