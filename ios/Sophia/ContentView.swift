@@ -3,6 +3,7 @@ import RevenueCatUI
 import RevenueCat
 import StoreKit
 import UIKit
+import Combine
 
 @MainActor
 final class PaywallCoordinator: ObservableObject {
@@ -283,7 +284,7 @@ struct ContentView: View {
     }
 }
 
-private enum PaywallStep: String {
+enum PaywallStep: String {
     case primary
     case defaut3
 }
