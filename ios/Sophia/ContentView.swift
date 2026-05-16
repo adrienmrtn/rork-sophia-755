@@ -27,9 +27,12 @@ final class PaywallCoordinator: ObservableObject {
 
     func markPurchasedOrRestored() {
         didPurchaseOrRestore = true
-        pendingOnPurchasedOrRestored?()
+        let callback = pendingOnPurchasedOrRestored
         pendingOnPurchasedOrRestored = nil
         pendingOnDismissWithoutPurchase = nil
+        DispatchQueue.main.async {
+            callback?()
+        }
     }
 
     func handleDismiss(isPremium: Bool) {
@@ -321,7 +324,10 @@ private struct PaywallSheetView: View {
                 case .primary:
                     offering = offerings.current
                 case .defaut3:
-                    offering = offerings.offering(identifier: "defaut3") ?? offerings.current
+                    offering =
+                        offerings.offering(identifier: "default3") ??
+                        offerings.offering(identifier: "defaut3") ??
+                        offerings.current
                 }
             } catch {
                 offering = nil

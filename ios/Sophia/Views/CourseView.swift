@@ -18,7 +18,6 @@ struct CourseView: View {
     @State private var quizButtonShimmer: CGFloat = -200
     @State private var showCompletionSummary: Bool = false
     @State private var showStreakSummary: Bool = false
-    @State private var showMoreCoursePrompt: Bool = false
     @ObservedObject private var imageCredits = ImageCreditsStore.shared
 
     private var isLastLesson: Bool {
@@ -83,9 +82,24 @@ struct CourseView: View {
                 },
                 onMiniQuiz: {
                     showCompletionSummary = false
-                    paywall.presentPrimary(onPurchasedOrRestored: {
-                        showQuiz = true
-                    })
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
+                        if premiumActive {
+                            showQuiz = true
+                        } else {
+                            paywall.presentPrimary(
+                                onPurchasedOrRestored: {
+                                    DispatchQueue.main.async {
+                                        showQuiz = true
+                                    }
+                                },
+                                onDismissWithoutPurchase: {
+                                    DispatchQueue.main.async {
+                                        onDismissToHome()
+                                    }
+                                }
+                            )
+                        }
+                    }
                 }
             )
         }
@@ -95,21 +109,7 @@ struct CourseView: View {
                 streak: max(1, progressManager.streak),
                 onNext: {
                     showStreakSummary = false
-                    showMoreCoursePrompt = true
-                }
-            )
-        }
-        .fullScreenCover(isPresented: $showMoreCoursePrompt) {
-            MoreCoursePromptScreen(
-                onClose: {
-                    showMoreCoursePrompt = false
                     onDismissToHome()
-                },
-                onAccessMore: {
-                    showMoreCoursePrompt = false
-                    paywall.presentPrimary(onPurchasedOrRestored: {
-                        onDismissToHome()
-                    })
                 }
             )
         }
@@ -537,74 +537,6 @@ private struct WeekStreakRow: View {
             RoundedRectangle(cornerRadius: 16)
                 .strokeBorder(.white.opacity(0.08), lineWidth: 1)
         )
-    }
-}
-
-private struct MoreCoursePromptScreen: View {
-    let onClose: () -> Void
-    let onAccessMore: () -> Void
-    @State private var appeared: Bool = false
-
-    var body: some View {
-        ZStack {
-            SophiaTheme.background.ignoresSafeArea()
-
-            VStack(spacing: 0) {
-                Spacer()
-
-                VStack(spacing: 12) {
-                    Text("Accéder à un cours de plus ?")
-                        .font(.system(.title2, design: .rounded, weight: .bold))
-                        .foregroundStyle(.white)
-                        .multilineTextAlignment(.center)
-                        .opacity(appeared ? 1 : 0)
-                        .offset(y: appeared ? 0 : 14)
-
-                    Text("Passe en essai gratuit pour continuer à apprendre.")
-                        .font(.system(.subheadline, design: .rounded, weight: .medium))
-                        .foregroundStyle(.white.opacity(0.6))
-                        .multilineTextAlignment(.center)
-                        .padding(.horizontal, 28)
-                        .opacity(appeared ? 1 : 0)
-                        .offset(y: appeared ? 0 : 14)
-                }
-
-                Spacer()
-
-                VStack(spacing: 14) {
-                    Button(action: onAccessMore) {
-                        HStack(spacing: 10) {
-                            Text("Accéder à un cours de plus")
-                                .font(.system(.headline, design: .rounded, weight: .bold))
-                            Image(systemName: "arrow.right")
-                                .font(.subheadline.weight(.semibold))
-                        }
-                        .foregroundStyle(.white)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 18)
-                        .background(SophiaTheme.emerald, in: .rect(cornerRadius: 16))
-                        .shadow(color: SophiaTheme.emerald.opacity(0.25), radius: 12, y: 3)
-                    }
-
-                    Button(action: onClose) {
-                        Image(systemName: "xmark")
-                            .font(.system(.headline, design: .rounded, weight: .bold))
-                            .foregroundStyle(.white.opacity(0.8))
-                            .frame(width: 54, height: 54)
-                            .background(.white.opacity(0.10), in: Circle())
-                    }
-                }
-                .padding(.horizontal, 24)
-                .padding(.bottom, 34)
-                .opacity(appeared ? 1 : 0)
-                .offset(y: appeared ? 0 : 20)
-            }
-        }
-        .onAppear {
-            withAnimation(.spring(response: 0.7, dampingFraction: 0.75).delay(0.15)) {
-                appeared = true
-            }
-        }
     }
 }
 
