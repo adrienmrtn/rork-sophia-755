@@ -3,7 +3,7 @@ import RevenueCat
 
 @main
 struct SophiaApp: App {
-    @State private var showOnboarding: Bool = !OnboardingViewModel.isOnboardingCompleted
+    @AppStorage("sophia_onboarding_completed") private var onboardingCompleted: Bool = false
 
     init() {
         #if DEBUG
@@ -16,10 +16,10 @@ struct SophiaApp: App {
 
     var body: some Scene {
         WindowGroup {
-            if showOnboarding {
+            if !onboardingCompleted {
                 OnboardingView(onComplete: {
                     withAnimation(.spring(response: 0.5)) {
-                        showOnboarding = false
+                        onboardingCompleted = true
                     }
                 })
             } else {

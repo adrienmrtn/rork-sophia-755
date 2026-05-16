@@ -49,8 +49,11 @@ final class PaywallCoordinator: ObservableObject {
            !didPurchase,
            !UserDefaults.standard.bool(forKey: "sophia_second_paywall_dismissed") {
             step = .defaut3
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
-                self.isPresented = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                self.isPresented = false
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+                    self.isPresented = true
+                }
             }
             return
         }
@@ -62,6 +65,26 @@ final class PaywallCoordinator: ObservableObject {
         }
         pendingOnDismissWithoutPurchase = nil
         pendingOnPurchasedOrRestored = nil
+    }
+}
+
+struct PaywallHost: ViewModifier {
+    let isPremium: Bool
+    @EnvironmentObject private var paywall: PaywallCoordinator
+
+    func body(content: Content) -> some View {
+        content
+            .sheet(isPresented: $paywall.isPresented, onDismiss: {
+                paywall.handleDismiss(isPremium: isPremium)
+            }) {
+                PaywallSheetView(
+                    step: paywall.step,
+                    onPurchasedOrRestored: {
+                        paywall.markPurchasedOrRestored()
+                        paywall.isPresented = false
+                    }
+                )
+            }
     }
 }
 
@@ -189,17 +212,7 @@ struct ContentView: View {
 
         }
         .environmentObject(paywall)
-        .sheet(isPresented: $paywall.isPresented, onDismiss: {
-            paywall.handleDismiss(isPremium: storeVM.isPremium)
-        }) {
-            PaywallSheetView(
-                step: paywall.step,
-                onPurchasedOrRestored: {
-                    paywall.markPurchasedOrRestored()
-                    paywall.isPresented = false
-                }
-            )
-        }
+        .modifier(PaywallHost(isPremium: storeVM.isPremium))
         .onReceive(NotificationCenter.default.publisher(for: .sophiaRequestReview)) { _ in
             requestReviewIfAllowed()
         }
@@ -292,7 +305,7 @@ enum PaywallStep: String {
     case defaut3
 }
 
-private struct PaywallSheetView: View {
+struct PaywallSheetView: View {
     let step: PaywallStep
     let onPurchasedOrRestored: () -> Void
     @State private var offering: Offering? = nil
@@ -325,8 +338,8 @@ private struct PaywallSheetView: View {
                     offering = offerings.current
                 case .defaut3:
                     offering =
-                        offerings.offering(identifier: "default3") ??
                         offerings.offering(identifier: "defaut3") ??
+                        offerings.offering(identifier: "default3") ??
                         offerings.current
                 }
             } catch {

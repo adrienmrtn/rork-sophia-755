@@ -111,6 +111,7 @@ struct PrePaywallQuizView: View {
             }
             .clipped()
         }
+        .modifier(PaywallHost(isPremium: false))
         .onAppear {
             setupPlayer()
             withAnimation(.spring(response: 0.7, dampingFraction: 0.75).delay(0.15)) {

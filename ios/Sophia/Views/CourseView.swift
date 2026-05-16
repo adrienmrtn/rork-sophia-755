@@ -61,6 +61,7 @@ struct CourseView: View {
             .offset(y: appeared ? 0 : 20)
         }
         .navigationBarBackButtonHidden()
+        .modifier(PaywallHost(isPremium: premiumActive))
         .fullScreenCover(isPresented: $showQuiz) {
             QuizView(
                 course: course,
@@ -81,24 +82,28 @@ struct CourseView: View {
                     showStreakSummary = true
                 },
                 onMiniQuiz: {
-                    showCompletionSummary = false
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
-                        if premiumActive {
+                    if premiumActive {
+                        showCompletionSummary = false
+                        DispatchQueue.main.async {
                             showQuiz = true
-                        } else {
-                            paywall.presentPrimary(
-                                onPurchasedOrRestored: {
-                                    DispatchQueue.main.async {
-                                        showQuiz = true
-                                    }
-                                },
-                                onDismissWithoutPurchase: {
-                                    DispatchQueue.main.async {
-                                        onDismissToHome()
-                                    }
-                                }
-                            )
                         }
+                        return
+                    }
+
+                    showCompletionSummary = false
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+                        paywall.presentPrimary(
+                            onPurchasedOrRestored: {
+                                DispatchQueue.main.async {
+                                    showQuiz = true
+                                }
+                            },
+                            onDismissWithoutPurchase: {
+                                DispatchQueue.main.async {
+                                    onDismissToHome()
+                                }
+                            }
+                        )
                     }
                 }
             )

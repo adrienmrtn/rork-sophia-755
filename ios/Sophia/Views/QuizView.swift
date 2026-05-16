@@ -77,6 +77,7 @@ struct QuizView: View {
                     .zIndex(20)
             }
         }
+        .modifier(PaywallHost(isPremium: isPremium))
         .onAppear {
             unlocked = isPremium
             streakBefore = progressManager.streak
