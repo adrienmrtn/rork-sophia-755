@@ -123,6 +123,11 @@ struct ContentView: View {
                 Tab("Biblio", systemImage: "books.vertical.fill", value: 1) {
                     LibraryView(
                         progressManager: progressManager,
+                        isPremium: storeVM.isPremium,
+                        freemiumSubjects: freemiumSubjects,
+                        onShowPaywall: {
+                            paywall.presentPrimary()
+                        },
                         selectedCourse: $selectedCourse
                     )
                 }
@@ -335,7 +340,9 @@ struct PaywallSheetView: View {
                 let offerings = try await Purchases.shared.offerings()
                 switch step {
                 case .primary:
-                    offering = offerings.current
+                    offering =
+                        offerings.offering(identifier: "default") ??
+                        offerings.current
                 case .defaut3:
                     offering =
                         offerings.offering(identifier: "defaut3") ??
