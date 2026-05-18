@@ -56,7 +56,7 @@ struct LibraryView: View {
 
     private func previewSection(subject: Subject, courses: [Course]) -> some View {
         let locked = isSubjectLocked(subject)
-        VStack(alignment: .leading, spacing: 14) {
+        return VStack(alignment: .leading, spacing: 14) {
             Group {
                 if locked {
                     Button(action: onShowPaywall) {
@@ -146,7 +146,7 @@ struct LibraryView: View {
 
     private func searchSection(subject: Subject, courses: [Course]) -> some View {
         let locked = isSubjectLocked(subject)
-        VStack(alignment: .leading, spacing: 14) {
+        return VStack(alignment: .leading, spacing: 14) {
             HStack(spacing: 8) {
                 Image(systemName: subject.icon)
                     .foregroundStyle(locked ? .white.opacity(0.25) : subject.color)
