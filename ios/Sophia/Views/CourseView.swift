@@ -61,7 +61,7 @@ struct CourseView: View {
             .offset(y: appeared ? 0 : 20)
         }
         .navigationBarBackButtonHidden()
-        .modifier(PaywallHost(isPremium: premiumActive, isEnabled: !showQuiz))
+        .modifier(PaywallHost(paywall: paywall, isPremium: premiumActive, isEnabled: !showQuiz))
         .fullScreenCover(isPresented: $showQuiz) {
             QuizView(
                 course: course,

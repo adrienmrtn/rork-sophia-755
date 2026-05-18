@@ -47,9 +47,14 @@ struct HomeView: View {
     }
 
     private func loadCards() {
-        let filtered = CourseData.allCourses
+        var filtered = CourseData.allCourses
             .filter { progressManager.courseStatus(for: $0.id) != .completed }
-            .shuffled()
+
+        if !isPremium, !freemiumSubjects.isEmpty {
+            filtered = filtered.filter { freemiumSubjects.contains($0.subject.rawValue) }
+        }
+
+        filtered.shuffle()
         cards = filtered
         let preloadIds = filtered.prefix(5).map(\.id)
         CourseImageMap.preloadImages(for: preloadIds)
@@ -101,6 +106,12 @@ struct HomeView: View {
             withAnimation(.spring(response: 0.6, dampingFraction: 0.8).delay(0.2)) {
                 cardAppeared = true
             }
+        }
+        .onChange(of: isPremium) { _, _ in
+            loadCards()
+        }
+        .onChange(of: freemiumSubjects) { _, _ in
+            loadCards()
         }
         .onChange(of: autoSwipeCourseId) { _, newId in
             guard let courseId = newId else { return }

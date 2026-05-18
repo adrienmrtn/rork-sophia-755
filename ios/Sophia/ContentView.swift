@@ -69,29 +69,29 @@ final class PaywallCoordinator: ObservableObject {
 }
 
 struct PaywallHost: ViewModifier {
+    @ObservedObject var paywall: PaywallCoordinator
     let isPremium: Bool
     var isEnabled: Bool = true
-    @EnvironmentObject private var paywall: PaywallCoordinator
 
     func body(content: Content) -> some View {
-        if !isEnabled {
-            return AnyView(content)
-        }
-
-        return AnyView(
-            content
-            .sheet(isPresented: $paywall.isPresented, onDismiss: {
-                paywall.handleDismiss(isPremium: isPremium)
-            }) {
-                PaywallSheetView(
-                    step: paywall.step,
-                    onPurchasedOrRestored: {
-                        paywall.markPurchasedOrRestored()
-                        paywall.isPresented = false
+        Group {
+            if isEnabled {
+                content
+                    .sheet(isPresented: $paywall.isPresented, onDismiss: {
+                        paywall.handleDismiss(isPremium: isPremium)
+                    }) {
+                        PaywallSheetView(
+                            step: paywall.step,
+                            onPurchasedOrRestored: {
+                                paywall.markPurchasedOrRestored()
+                                paywall.isPresented = false
+                            }
+                        )
                     }
-                )
+            } else {
+                content
             }
-        )
+        }
     }
 }
 
@@ -224,7 +224,7 @@ struct ContentView: View {
 
         }
         .environmentObject(paywall)
-        .modifier(PaywallHost(isPremium: storeVM.isPremium, isEnabled: pendingCourse == nil))
+        .modifier(PaywallHost(paywall: paywall, isPremium: storeVM.isPremium, isEnabled: pendingCourse == nil))
         .onReceive(NotificationCenter.default.publisher(for: .sophiaRequestReview)) { _ in
             requestReviewIfAllowed()
         }
