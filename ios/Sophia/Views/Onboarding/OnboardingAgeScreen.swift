@@ -30,7 +30,7 @@ struct OnboardingAgeScreen: View {
 
                         Text("Tu as quel âge ?")
                             .font(.system(.title2, design: .rounded, weight: .bold))
-                            .foregroundStyle(SophiaTheme.textPrimary)
+                            .foregroundStyle(.white)
                             .opacity(appeared ? 1 : 0)
                     }
 
@@ -46,7 +46,7 @@ struct OnboardingAgeScreen: View {
                                 HStack {
                                     Text(range)
                                         .font(.system(.body, design: .rounded, weight: .semibold))
-                                        .foregroundStyle(SophiaTheme.textPrimary)
+                                        .foregroundStyle(.white)
                                     Spacer()
                                     if isSelected {
                                         Image(systemName: "checkmark.circle.fill")
@@ -56,7 +56,7 @@ struct OnboardingAgeScreen: View {
                                 }
                                 .padding(16)
                                 .background(
-                                    isSelected ? SophiaTheme.emerald.opacity(0.12) : Color.black.opacity(0.05),
+                                    isSelected ? SophiaTheme.emerald.opacity(0.12) : .white.opacity(0.05),
                                     in: .rect(cornerRadius: 14)
                                 )
                                 .overlay(

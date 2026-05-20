@@ -52,14 +52,14 @@ struct LibraryView: View {
                         .foregroundStyle(subject.color)
                     Text(subject.rawValue)
                         .font(.system(.title3, design: .rounded, weight: .bold))
-                        .foregroundStyle(SophiaTheme.textPrimary)
+                        .foregroundStyle(.white)
                     Spacer()
                     Text("Voir plus")
                         .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                        .foregroundStyle(Color.black.opacity(0.5))
+                        .foregroundStyle(.white.opacity(0.5))
                     Image(systemName: "chevron.right")
                         .font(.system(.caption, weight: .semibold))
-                        .foregroundStyle(Color.black.opacity(0.3))
+                        .foregroundStyle(.white.opacity(0.3))
                 }
             }
             .buttonStyle(.plain)
@@ -102,11 +102,11 @@ struct LibraryView: View {
                     .foregroundStyle(subject.color)
                 Text(subject.rawValue)
                     .font(.system(.title3, design: .rounded, weight: .bold))
-                    .foregroundStyle(SophiaTheme.textPrimary)
+                    .foregroundStyle(.white)
                 Spacer()
                 Text("\(courses.count)")
                     .font(.system(.caption, design: .rounded, weight: .semibold))
-                    .foregroundStyle(Color.black.opacity(0.4))
+                    .foregroundStyle(.white.opacity(0.4))
             }
             .padding(.horizontal, 16)
 
@@ -157,7 +157,7 @@ struct LibraryCardView: View {
                                 )
                                 Image(systemName: course.subject.icon)
                                     .font(.system(size: 32, weight: .light))
-                                    .foregroundStyle(Color.black.opacity(0.2))
+                                    .foregroundStyle(.white.opacity(0.2))
                                     .rotationEffect(.degrees(-12))
                             }
                         }
@@ -177,7 +177,7 @@ struct LibraryCardView: View {
                             } label: {
                                 Image(systemName: pm.isFavorite(course.id) ? "heart.fill" : "heart")
                                     .font(.callout)
-                                    .foregroundStyle(pm.isFavorite(course.id) ? .pink : Color.black.opacity(0.7))
+                                    .foregroundStyle(pm.isFavorite(course.id) ? .pink : .white.opacity(0.7))
                                     .frame(width: 30, height: 30)
                                     .background(.black.opacity(0.45), in: Circle())
                             }
@@ -192,7 +192,7 @@ struct LibraryCardView: View {
                         .foregroundStyle(course.subject.color)
                     Text(course.title)
                         .font(.system(.subheadline, design: .rounded, weight: .bold))
-                        .foregroundStyle(SophiaTheme.textPrimary)
+                        .foregroundStyle(.white)
                         .fixedSize(horizontal: false, vertical: true)
                         .multilineTextAlignment(.leading)
                 }

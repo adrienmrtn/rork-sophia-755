@@ -34,7 +34,7 @@ struct OnboardingSocialProofScreen: View {
 
                         Text("des utilisateurs affirment que Sophia\nles a rendus plus intéressants\net à l'aise en société.")
                             .font(.system(.body, design: .rounded, weight: .medium))
-                            .foregroundStyle(Color.black.opacity(0.8))
+                            .foregroundStyle(.white.opacity(0.8))
                             .multilineTextAlignment(.center)
                     }
                     .opacity(appeared ? 1 : 0)
@@ -50,7 +50,7 @@ struct OnboardingSocialProofScreen: View {
                                         HStack(spacing: 4) {
                                             Text(review.name)
                                                 .font(.system(.subheadline, design: .rounded, weight: .bold))
-                                                .foregroundStyle(SophiaTheme.textPrimary)
+                                                .foregroundStyle(.white)
                                             Spacer()
                                             HStack(spacing: 2) {
                                                 ForEach(0..<review.stars, id: \.self) { _ in
@@ -62,12 +62,12 @@ struct OnboardingSocialProofScreen: View {
                                         }
                                         Text(review.text)
                                             .font(.system(.caption, design: .rounded))
-                                            .foregroundStyle(Color.black.opacity(0.6))
+                                            .foregroundStyle(.white.opacity(0.6))
                                             .fixedSize(horizontal: false, vertical: true)
                                     }
                                 }
                                 .padding(14)
-                                .background(Color.black.opacity(0.05), in: .rect(cornerRadius: 14))
+                                .background(.white.opacity(0.05), in: .rect(cornerRadius: 14))
                                 .opacity(showReviews ? 1 : 0)
                                 .offset(y: showReviews ? 0 : 15)
                                 .animation(.spring(response: 0.5).delay(Double(i) * 0.12), value: showReviews)

@@ -27,9 +27,9 @@ struct OnboardingPaywallView: View {
                     } label: {
                         Image(systemName: "xmark")
                             .font(.system(size: 14, weight: .bold))
-                            .foregroundStyle(Color.black.opacity(0.4))
+                            .foregroundStyle(.white.opacity(0.4))
                             .frame(width: 32, height: 32)
-                            .background(Color.black.opacity(0.08), in: .circle)
+                            .background(.white.opacity(0.08), in: .circle)
                     }
                     .padding(.trailing, 20)
                     .padding(.top, 16)
@@ -47,13 +47,13 @@ struct OnboardingPaywallView: View {
 
                             Text("Débloque ton essai gratuit de Sophia Premium")
                                 .font(.system(.title2, design: .rounded, weight: .bold))
-                                .foregroundStyle(SophiaTheme.textPrimary)
+                                .foregroundStyle(.white)
                                 .multilineTextAlignment(.center)
                                 .opacity(appeared ? 1 : 0)
 
                             Text("Accès illimité à Sophia Pro")
                                 .font(.system(.subheadline, design: .rounded))
-                                .foregroundStyle(Color.black.opacity(0.5))
+                                .foregroundStyle(.white.opacity(0.5))
                                 .opacity(appeared ? 1 : 0)
                         }
                         .padding(.top, 8)
@@ -130,14 +130,14 @@ struct OnboardingPaywallView: View {
 
                     Text("Sans engagement")
                         .font(.system(.caption, design: .rounded, weight: .medium))
-                        .foregroundStyle(Color.black.opacity(0.5))
+                        .foregroundStyle(.white.opacity(0.5))
 
                     Button {
                         Task { await store.restore() }
                     } label: {
                         Text("Restaurer les achats")
                             .font(.system(.caption, design: .rounded))
-                            .foregroundStyle(Color.black.opacity(0.35))
+                            .foregroundStyle(.white.opacity(0.35))
                     }
 
                     HStack(spacing: 12) {
@@ -146,17 +146,17 @@ struct OnboardingPaywallView: View {
                         } label: {
                             Text("Conditions générales")
                                 .font(.system(.caption2, design: .rounded))
-                                .foregroundStyle(Color.black.opacity(0.25))
+                                .foregroundStyle(.white.opacity(0.25))
                         }
                         Text("·")
                             .font(.caption2)
-                            .foregroundStyle(Color.black.opacity(0.2))
+                            .foregroundStyle(.white.opacity(0.2))
                         Button {
                             showPrivacy = true
                         } label: {
                             Text("Politique de confidentialité")
                                 .font(.system(.caption2, design: .rounded))
-                                .foregroundStyle(Color.black.opacity(0.25))
+                                .foregroundStyle(.white.opacity(0.25))
                         }
                     }
                 }
@@ -203,7 +203,7 @@ private struct PaywallFeatureRow: View {
                 .background(SophiaTheme.emerald.opacity(0.12), in: .circle)
             Text(text)
                 .font(.system(.subheadline, design: .rounded, weight: .medium))
-                .foregroundStyle(Color.black.opacity(0.85))
+                .foregroundStyle(.white.opacity(0.85))
             Spacer()
         }
     }
@@ -237,7 +237,7 @@ private struct PlanCard: View {
                         HStack(spacing: 8) {
                             Text(title)
                                 .font(.system(.headline, design: .rounded, weight: .bold))
-                                .foregroundStyle(SophiaTheme.textPrimary)
+                                .foregroundStyle(.white)
 
                             if let savings {
                                 Text(savings)
@@ -250,7 +250,7 @@ private struct PlanCard: View {
                         }
                         Text(priceDetail)
                             .font(.system(.caption, design: .rounded))
-                            .foregroundStyle(Color.black.opacity(0.5))
+                            .foregroundStyle(.white.opacity(0.5))
                     }
 
                     Spacer()
@@ -259,24 +259,24 @@ private struct PlanCard: View {
                         if let originalPrice {
                             Text(originalPrice)
                                 .font(.system(.caption, design: .rounded))
-                                .foregroundStyle(Color.black.opacity(0.35))
-                                .strikethrough(color: Color.black.opacity(0.35))
+                                .foregroundStyle(.white.opacity(0.35))
+                                .strikethrough(color: .white.opacity(0.35))
                         }
                         Text(priceMain)
                             .font(.system(.subheadline, design: .rounded, weight: .bold))
-                            .foregroundStyle(SophiaTheme.textPrimary)
+                            .foregroundStyle(.white)
                     }
                 }
                 .padding(.horizontal, 18)
                 .padding(.vertical, badge != nil ? 14 : 18)
             }
             .background(
-                isSelected ? SophiaTheme.emerald.opacity(0.08) : Color.black.opacity(0.04),
+                isSelected ? SophiaTheme.emerald.opacity(0.08) : .white.opacity(0.04),
                 in: .rect(cornerRadius: 16)
             )
             .overlay(
                 RoundedRectangle(cornerRadius: 16)
-                    .strokeBorder(isSelected ? SophiaTheme.emerald.opacity(0.5) : Color.black.opacity(0.08), lineWidth: isSelected ? 2 : 1)
+                    .strokeBorder(isSelected ? SophiaTheme.emerald.opacity(0.5) : .white.opacity(0.08), lineWidth: isSelected ? 2 : 1)
             )
         }
     }

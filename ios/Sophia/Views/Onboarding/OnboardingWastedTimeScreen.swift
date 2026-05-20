@@ -35,7 +35,7 @@ struct OnboardingWastedTimeScreen: View {
                     VStack(spacing: 8) {
                         Text("C'est")
                             .font(.system(.title3, design: .rounded, weight: .medium))
-                            .foregroundStyle(Color.black.opacity(0.6))
+                            .foregroundStyle(.white.opacity(0.6))
 
                         HStack(alignment: .firstTextBaseline, spacing: 6) {
                             Text("\(counterValue)")
@@ -44,12 +44,12 @@ struct OnboardingWastedTimeScreen: View {
                                 .contentTransition(.numericText(countsDown: false))
                             Text("heures")
                                 .font(.system(.title2, design: .rounded, weight: .bold))
-                                .foregroundStyle(Color.black.opacity(0.7))
+                                .foregroundStyle(.white.opacity(0.7))
                         }
 
                         Text("perdues par an.")
                             .font(.system(.title3, design: .rounded, weight: .medium))
-                            .foregroundStyle(Color.black.opacity(0.6))
+                            .foregroundStyle(.white.opacity(0.6))
                     }
                     .opacity(appeared ? 1 : 0)
 
@@ -57,7 +57,7 @@ struct OnboardingWastedTimeScreen: View {
                         VStack(spacing: 6) {
                             Text("Soit " + viewModel.wastedTimeDays + " complets.")
                                 .font(.system(.headline, design: .rounded, weight: .bold))
-                                .foregroundStyle(SophiaTheme.textPrimary)
+                                .foregroundStyle(.white)
 
                             Text("Avec Sophia, fais un bon usage de ton temps.")
                                 .font(.system(.body, design: .rounded))

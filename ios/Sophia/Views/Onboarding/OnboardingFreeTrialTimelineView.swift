@@ -29,14 +29,14 @@ struct OnboardingFreeTrialTimelineView: View {
                     VStack(spacing: 16) {
                         Text("Nous vous notifierons\n1 jour avant la fin\nde votre essai gratuit")
                             .font(.system(.title2, design: .rounded, weight: .bold))
-                            .foregroundStyle(SophiaTheme.textPrimary)
+                            .foregroundStyle(.white)
                             .multilineTextAlignment(.center)
                             .opacity(appeared ? 1 : 0)
                             .offset(y: appeared ? 0 : 15)
 
                         Text("Annulez à tout moment, sans frais.")
                             .font(.system(.subheadline, design: .rounded))
-                            .foregroundStyle(Color.black.opacity(0.5))
+                            .foregroundStyle(.white.opacity(0.5))
                             .opacity(appeared ? 1 : 0)
                             .offset(y: appeared ? 0 : 10)
                     }

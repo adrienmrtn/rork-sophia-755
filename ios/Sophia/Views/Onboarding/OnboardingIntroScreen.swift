@@ -53,7 +53,7 @@ struct OnboardingIntroScreen: View {
 
                     Text("Deviens vraiment cultivé\nen seulement 10 minutes\npar jour")
                         .font(.system(.title3, design: .rounded, weight: .bold))
-                        .foregroundStyle(SophiaTheme.textPrimary)
+                        .foregroundStyle(.white)
                         .multilineTextAlignment(.center)
                         .opacity(appeared ? 1 : 0)
                         .offset(y: appeared ? 0 : titleOffset)

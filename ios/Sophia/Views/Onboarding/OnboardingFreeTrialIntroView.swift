@@ -52,7 +52,7 @@ struct OnboardingFreeTrialIntroView: View {
                     Text("Vos 3 premiers jours sont offerts")
                         .fixedSize(horizontal: false, vertical: true)
                         .font(.system(.title, design: .rounded, weight: .bold))
-                        .foregroundStyle(SophiaTheme.textPrimary)
+                        .foregroundStyle(.white)
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 24)
                         .opacity(appeared ? 1 : 0)
@@ -78,7 +78,7 @@ struct OnboardingFreeTrialIntroView: View {
                 Rectangle()
                     .fill(
                         LinearGradient(
-                            colors: [.clear, Color.black.opacity(0.06), .clear],
+                            colors: [.clear, .white.opacity(0.06), .clear],
                             startPoint: .leading,
                             endPoint: .trailing
                         )
@@ -138,10 +138,10 @@ private struct TrialFeaturePill: View {
                 .foregroundStyle(SophiaTheme.emerald)
             Text(text)
                 .font(.system(.caption, design: .rounded, weight: .semibold))
-                .foregroundStyle(Color.black.opacity(0.8))
+                .foregroundStyle(.white.opacity(0.8))
         }
         .padding(.horizontal, 14)
         .padding(.vertical, 10)
-        .background(Color.black.opacity(0.06), in: .capsule)
+        .background(.white.opacity(0.06), in: .capsule)
     }
 }

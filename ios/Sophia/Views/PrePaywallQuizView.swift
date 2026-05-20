@@ -55,14 +55,14 @@ struct PrePaywallQuizView: View {
                 VStack(spacing: 12) {
                     Text("Débloquez gratuitement\nles quiz")
                         .font(.system(.title2, design: .rounded, weight: .bold))
-                        .foregroundStyle(SophiaTheme.textPrimary)
+                        .foregroundStyle(.white)
                         .multilineTextAlignment(.center)
                         .opacity(appeared ? 1 : 0)
                         .offset(y: appeared ? 0 : 10)
 
                     Text("Testez vos connaissances et\nprogressez chaque jour")
                         .font(.system(.body, design: .rounded))
-                        .foregroundStyle(Color.black.opacity(0.6))
+                        .foregroundStyle(.white.opacity(0.6))
                         .multilineTextAlignment(.center)
                         .opacity(appeared ? 1 : 0)
                         .offset(y: appeared ? 0 : 10)
@@ -98,7 +98,7 @@ struct PrePaywallQuizView: View {
                 Rectangle()
                     .fill(
                         LinearGradient(
-                            colors: [.clear, Color.black.opacity(0.05), .clear],
+                            colors: [.clear, .white.opacity(0.05), .clear],
                             startPoint: .leading,
                             endPoint: .trailing
                         )

@@ -36,7 +36,7 @@ struct OnboardingLoadingScreen: View {
                         GeometryReader { geo in
                             ZStack(alignment: .leading) {
                                 Capsule()
-                                    .fill(Color.black.opacity(0.1))
+                                    .fill(.white.opacity(0.1))
                                     .frame(height: 8)
                                 Capsule()
                                     .fill(
@@ -55,7 +55,7 @@ struct OnboardingLoadingScreen: View {
 
                         Text(viewModel.loadingStep)
                             .font(.system(.body, design: .rounded, weight: .medium))
-                            .foregroundStyle(Color.black.opacity(0.6))
+                            .foregroundStyle(.white.opacity(0.6))
                             .contentTransition(.opacity)
                             .animation(.easeInOut(duration: 0.3), value: viewModel.loadingStep)
 

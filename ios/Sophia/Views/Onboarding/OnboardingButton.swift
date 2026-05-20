@@ -19,7 +19,7 @@ struct OnboardingButton: View {
                 Image(systemName: "arrow.right")
                     .font(.subheadline.weight(.semibold))
             }
-            .foregroundStyle(SophiaTheme.textPrimary)
+            .foregroundStyle(.white)
             .frame(maxWidth: .infinity)
             .padding(.vertical, 18)
             .background(

@@ -184,7 +184,7 @@ struct OnboardingProgressDots: View {
         HStack(spacing: 6) {
             ForEach(0..<total, id: \.self) { i in
                 Capsule()
-                    .fill(i <= current ? SophiaTheme.emerald : Color.black.opacity(0.15))
+                    .fill(i <= current ? SophiaTheme.emerald : .white.opacity(0.15))
                     .frame(width: i == current ? 24 : 8, height: 4)
                     .animation(.spring(response: 0.3), value: current)
             }

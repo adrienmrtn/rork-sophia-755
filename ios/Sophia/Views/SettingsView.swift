@@ -31,10 +31,10 @@ struct SettingsView: View {
                         VStack(alignment: .leading, spacing: 4) {
                             Text("\(progressManager.completedCount) cours terminés")
                                 .font(.system(.headline, design: .rounded, weight: .bold))
-                                .foregroundStyle(SophiaTheme.textPrimary)
+                                .foregroundStyle(.white)
                             Text("sur \(CourseData.allCourses.count) disponibles")
                                 .font(.system(.subheadline, design: .rounded))
-                                .foregroundStyle(Color.black.opacity(0.6))
+                                .foregroundStyle(.white.opacity(0.6))
                         }
                     }
                     .listRowBackground(SophiaTheme.cardBackground)
@@ -51,17 +51,17 @@ struct SettingsView: View {
                             VStack(alignment: .leading, spacing: 4) {
                                 Text("\(progressManager.streak) jours de suite")
                                     .font(.system(.headline, design: .rounded, weight: .bold))
-                                    .foregroundStyle(SophiaTheme.textPrimary)
+                                    .foregroundStyle(.white)
                                 Text("Continue comme ça !")
                                     .font(.system(.subheadline, design: .rounded))
-                                    .foregroundStyle(Color.black.opacity(0.6))
+                                    .foregroundStyle(.white.opacity(0.6))
                             }
                         }
                         .listRowBackground(SophiaTheme.cardBackground)
                     }
                 } header: {
                     Text("Progression")
-                        .foregroundStyle(Color.black.opacity(0.6))
+                        .foregroundStyle(.white.opacity(0.6))
                 }
 
                 if !store.isPremium {
@@ -82,15 +82,15 @@ struct SettingsView: View {
                                 VStack(alignment: .leading, spacing: 2) {
                                     Text("Passer à Premium")
                                         .font(.system(.headline, design: .rounded, weight: .bold))
-                                        .foregroundStyle(SophiaTheme.textPrimary)
+                                        .foregroundStyle(.white)
                                     Text("Cours et quiz illimités")
                                         .font(.system(.caption, design: .rounded))
-                                        .foregroundStyle(Color.black.opacity(0.5))
+                                        .foregroundStyle(.white.opacity(0.5))
                                 }
                                 Spacer()
                                 Image(systemName: "chevron.right")
                                     .font(.caption.weight(.semibold))
-                                    .foregroundStyle(Color.black.opacity(0.3))
+                                    .foregroundStyle(.white.opacity(0.3))
                             }
                         }
                         .listRowBackground(SophiaTheme.cardBackground)
@@ -111,7 +111,7 @@ struct SettingsView: View {
                     .listRowBackground(SophiaTheme.cardBackground)
                 } header: {
                     Text("Données")
-                        .foregroundStyle(Color.black.opacity(0.6))
+                        .foregroundStyle(.white.opacity(0.6))
                 }
 
                 Section {
@@ -121,14 +121,14 @@ struct SettingsView: View {
                     } label: {
                         HStack {
                             Image(systemName: "doc.text")
-                                .foregroundStyle(Color.black.opacity(0.6))
+                                .foregroundStyle(.white.opacity(0.6))
                             Text("Conditions générales d'utilisation")
                                 .font(.system(.body, design: .rounded))
-                                .foregroundStyle(SophiaTheme.textPrimary)
+                                .foregroundStyle(.white)
                             Spacer()
                             Image(systemName: "chevron.right")
                                 .font(.caption.weight(.semibold))
-                                .foregroundStyle(Color.black.opacity(0.3))
+                                .foregroundStyle(.white.opacity(0.3))
                         }
                     }
                     .listRowBackground(SophiaTheme.cardBackground)
@@ -139,14 +139,14 @@ struct SettingsView: View {
                     } label: {
                         HStack {
                             Image(systemName: "hand.raised")
-                                .foregroundStyle(Color.black.opacity(0.6))
+                                .foregroundStyle(.white.opacity(0.6))
                             Text("Politique de confidentialité")
                                 .font(.system(.body, design: .rounded))
-                                .foregroundStyle(SophiaTheme.textPrimary)
+                                .foregroundStyle(.white)
                             Spacer()
                             Image(systemName: "chevron.right")
                                 .font(.caption.weight(.semibold))
-                                .foregroundStyle(Color.black.opacity(0.3))
+                                .foregroundStyle(.white.opacity(0.3))
                         }
                     }
                     .listRowBackground(SophiaTheme.cardBackground)
@@ -158,48 +158,48 @@ struct SettingsView: View {
                         } label: {
                             HStack {
                                 Image(systemName: "arrow.clockwise")
-                                    .foregroundStyle(Color.black.opacity(0.6))
+                                    .foregroundStyle(.white.opacity(0.6))
                                 Text("Restaurer les achats")
                                     .font(.system(.body, design: .rounded))
-                                    .foregroundStyle(SophiaTheme.textPrimary)
+                                    .foregroundStyle(.white)
                                 Spacer()
                                 Image(systemName: "chevron.right")
                                     .font(.caption.weight(.semibold))
-                                    .foregroundStyle(Color.black.opacity(0.3))
+                                    .foregroundStyle(.white.opacity(0.3))
                             }
                         }
                         .listRowBackground(SophiaTheme.cardBackground)
                     }
                 } header: {
                     Text("Légal")
-                        .foregroundStyle(Color.black.opacity(0.6))
+                        .foregroundStyle(.white.opacity(0.6))
                 }
 
                 Section {
                     HStack {
                         Text("Version")
                             .font(.system(.body, design: .rounded))
-                            .foregroundStyle(SophiaTheme.textPrimary)
+                            .foregroundStyle(.white)
                         Spacer()
                         Text(appVersionString)
                             .font(.system(.body, design: .rounded))
-                            .foregroundStyle(Color.black.opacity(0.5))
+                            .foregroundStyle(.white.opacity(0.5))
                     }
                     .listRowBackground(SophiaTheme.cardBackground)
 
                     HStack {
                         Text("Cours disponibles")
                             .font(.system(.body, design: .rounded))
-                            .foregroundStyle(SophiaTheme.textPrimary)
+                            .foregroundStyle(.white)
                         Spacer()
                         Text("\(CourseData.allCourses.count)")
                             .font(.system(.body, design: .rounded))
-                            .foregroundStyle(Color.black.opacity(0.5))
+                            .foregroundStyle(.white.opacity(0.5))
                     }
                     .listRowBackground(SophiaTheme.cardBackground)
                 } header: {
                     Text("À propos")
-                        .foregroundStyle(Color.black.opacity(0.6))
+                        .foregroundStyle(.white.opacity(0.6))
                 }
             }
             .scrollContentBackground(.hidden)

@@ -25,7 +25,7 @@ struct OnboardingProjectionScreen: View {
                     VStack(spacing: 16) {
                         Text("D'ici la fin de l'année,\ntu auras appris")
                             .font(.system(.title3, design: .rounded, weight: .medium))
-                            .foregroundStyle(Color.black.opacity(0.7))
+                            .foregroundStyle(.white.opacity(0.7))
                             .multilineTextAlignment(.center)
                             .opacity(appeared ? 1 : 0)
 
@@ -36,7 +36,7 @@ struct OnboardingProjectionScreen: View {
                                 .contentTransition(.numericText(countsDown: false))
                             Text("sujets")
                                 .font(.system(.title2, design: .rounded, weight: .bold))
-                                .foregroundStyle(Color.black.opacity(0.7))
+                                .foregroundStyle(.white.opacity(0.7))
                         }
                         .opacity(appeared ? 1 : 0)
 
@@ -49,7 +49,7 @@ struct OnboardingProjectionScreen: View {
                     GeometryReader { geo in
                         ZStack(alignment: .leading) {
                             Capsule()
-                                .fill(Color.black.opacity(0.1))
+                                .fill(.white.opacity(0.1))
                                 .frame(height: 10)
                             Capsule()
                                 .fill(

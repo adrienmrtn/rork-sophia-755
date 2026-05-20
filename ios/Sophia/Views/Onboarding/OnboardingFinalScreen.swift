@@ -38,7 +38,7 @@ struct OnboardingFinalScreen: View {
                     VStack(spacing: 14) {
                         Text("Votre profil est configuré")
                             .font(.system(.title, design: .rounded, weight: .bold))
-                            .foregroundStyle(SophiaTheme.textPrimary)
+                            .foregroundStyle(.white)
                             .opacity(appeared ? 1 : 0)
 
                         Text("Bienvenue dans Sophia.")
@@ -48,7 +48,7 @@ struct OnboardingFinalScreen: View {
 
                         Text("Commence à apprendre dès maintenant.")
                             .font(.system(.body, design: .rounded))
-                            .foregroundStyle(Color.black.opacity(0.6))
+                            .foregroundStyle(.white.opacity(0.6))
                             .multilineTextAlignment(.center)
                             .opacity(appeared ? 1 : 0)
                     }

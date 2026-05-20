@@ -48,7 +48,7 @@ struct ContentView: View {
                 }
             }
             .tint(SophiaTheme.emerald)
-            .preferredColorScheme(.light)
+            .preferredColorScheme(.dark)
             .sensoryFeedback(.selection, trigger: selectedTab)
             .onChange(of: selectedCourse) { _, newCourse in
                 guard let course = newCourse else { return }

@@ -22,7 +22,7 @@ struct SubjectCoursesView: View {
                     VStack(alignment: .leading, spacing: 12) {
                         Text(subcategory)
                             .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                            .foregroundStyle(Color.black.opacity(0.6))
+                            .foregroundStyle(.white.opacity(0.6))
                             .padding(.leading, 4)
 
                         LazyVGrid(columns: [GridItem(.flexible(), spacing: 12), GridItem(.flexible(), spacing: 12)], spacing: 12) {
@@ -66,11 +66,11 @@ struct SubjectCoursesView: View {
             VStack(alignment: .leading, spacing: 2) {
                 Text("\(courses.count) cours")
                     .font(.system(.headline, design: .rounded, weight: .bold))
-                    .foregroundStyle(SophiaTheme.textPrimary)
+                    .foregroundStyle(.white)
                 let completed = courses.filter { progressManager.courseStatus(for: $0.id) == .completed }.count
                 Text("\(completed) termine\(completed > 1 ? "s" : "")")
                     .font(.system(.subheadline, design: .rounded))
-                    .foregroundStyle(Color.black.opacity(0.5))
+                    .foregroundStyle(.white.opacity(0.5))
             }
 
             Spacer()

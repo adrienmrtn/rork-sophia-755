@@ -23,7 +23,7 @@ struct SwipeTutorialOverlay: View {
                 ZStack {
                     Image(systemName: "hand.draw.fill")
                         .font(.system(size: 52))
-                        .foregroundStyle(SophiaTheme.textPrimary)
+                        .foregroundStyle(.white)
                         .offset(x: handOffset)
                         .opacity(handOpacity)
                 }
@@ -31,11 +31,11 @@ struct SwipeTutorialOverlay: View {
                 VStack(spacing: 10) {
                     Text("Swipe pour explorer")
                         .font(.system(.title3, design: .rounded, weight: .bold))
-                        .foregroundStyle(SophiaTheme.textPrimary)
+                        .foregroundStyle(.white)
 
                     Text("Glisse a gauche ou a droite\npour decouvrir de nouveaux cours")
                         .font(.system(.subheadline, design: .rounded))
-                        .foregroundStyle(Color.black.opacity(0.7))
+                        .foregroundStyle(.white.opacity(0.7))
                         .multilineTextAlignment(.center)
                 }
 

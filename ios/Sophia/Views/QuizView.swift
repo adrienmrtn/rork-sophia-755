@@ -105,7 +105,7 @@ struct QuizView: View {
                 VStack(alignment: .leading, spacing: 24) {
                     Text(currentQuestion.question)
                         .font(.system(.title3, design: .rounded, weight: .bold))
-                        .foregroundStyle(SophiaTheme.textPrimary)
+                        .foregroundStyle(.white)
                         .id("question_\(currentQuestionIndex)")
                         .opacity(questionAppeared ? 1 : 0)
                         .offset(y: questionAppeared ? 0 : 15)
@@ -141,7 +141,7 @@ struct QuizView: View {
             GeometryReader { geo in
                 ZStack(alignment: .leading) {
                     Capsule()
-                        .fill(Color.black.opacity(0.1))
+                        .fill(.white.opacity(0.1))
                         .frame(height: 14)
                     Capsule()
                         .fill(
@@ -186,16 +186,16 @@ struct QuizView: View {
             } label: {
                 Image(systemName: "xmark")
                     .font(.title3.weight(.semibold))
-                    .foregroundStyle(Color.black.opacity(0.7))
+                    .foregroundStyle(.white.opacity(0.7))
                     .frame(width: 36, height: 36)
-                    .background(Color.black.opacity(0.1), in: Circle())
+                    .background(.white.opacity(0.1), in: Circle())
             }
 
             Spacer()
 
             Text("\(currentQuestionIndex + 1)/\(shuffledQuestions.count)")
                 .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                .foregroundStyle(Color.black.opacity(0.6))
+                .foregroundStyle(.white.opacity(0.6))
         }
         .padding(.horizontal, 20)
         .padding(.top, 12)
@@ -239,7 +239,7 @@ struct QuizView: View {
 
                 Text(text)
                     .font(.system(.body, design: .rounded, weight: .semibold))
-                    .foregroundStyle(SophiaTheme.textPrimary)
+                    .foregroundStyle(.white)
                     .multilineTextAlignment(.leading)
 
                 Spacer()
@@ -278,35 +278,35 @@ struct QuizView: View {
     }
 
     private func optionLetterColor(for index: Int) -> Color {
-        guard hasAnswered else { return Color.black.opacity(0.6) }
+        guard hasAnswered else { return .white.opacity(0.6) }
         if index == currentQuestion.correctIndex { return .white }
         if index == selectedOptionIndex { return .white }
-        return Color.black.opacity(0.3)
+        return .white.opacity(0.3)
     }
 
     private func optionLetterBg(for index: Int) -> some ShapeStyle {
-        guard hasAnswered else { return AnyShapeStyle(Color.black.opacity(0.08)) }
+        guard hasAnswered else { return AnyShapeStyle(.white.opacity(0.08)) }
         if index == currentQuestion.correctIndex { return AnyShapeStyle(SophiaTheme.emerald) }
         if index == selectedOptionIndex { return AnyShapeStyle(SophiaTheme.errorRed) }
-        return AnyShapeStyle(Color.black.opacity(0.04))
+        return AnyShapeStyle(.white.opacity(0.04))
     }
 
     private func duoBorderColor(for index: Int) -> Color {
         guard hasAnswered else {
-            return Color.black.opacity(0.12)
+            return .white.opacity(0.12)
         }
         if index == currentQuestion.correctIndex { return SophiaTheme.emerald }
         if index == selectedOptionIndex { return SophiaTheme.errorRed }
-        return Color.black.opacity(0.06)
+        return .white.opacity(0.06)
     }
 
     private func duoOptionBg(for index: Int) -> Color {
         guard hasAnswered else {
-            return Color.black.opacity(0.05)
+            return .white.opacity(0.05)
         }
         if index == currentQuestion.correctIndex { return SophiaTheme.emerald.opacity(0.1) }
         if index == selectedOptionIndex { return SophiaTheme.errorRed.opacity(0.1) }
-        return Color.black.opacity(0.02)
+        return .white.opacity(0.02)
     }
 
     private func showXPBubble(xp: Int) {
@@ -355,11 +355,11 @@ struct QuizView: View {
                     VStack(alignment: .leading, spacing: 4) {
                         Text(isCorrect ? (comboCount >= 3 ? "Incroyable ! 🔥" : comboCount >= 2 ? "Excellent !" : "Bonne réponse !") : "Pas tout à fait...")
                             .font(.system(.headline, design: .rounded, weight: .bold))
-                            .foregroundStyle(SophiaTheme.textPrimary)
+                            .foregroundStyle(.white)
                         if !isCorrect {
                             Text("Réponse : \(currentQuestion.options[currentQuestion.correctIndex])")
                                 .font(.system(.caption, design: .rounded))
-                                .foregroundStyle(Color.black.opacity(0.55))
+                                .foregroundStyle(.white.opacity(0.55))
                                 .lineLimit(2)
                         }
                     }
@@ -384,7 +384,7 @@ struct QuizView: View {
                 } label: {
                     Text("Continuer")
                         .font(.system(.headline, design: .rounded, weight: .bold))
-                        .foregroundStyle(SophiaTheme.textPrimary)
+                        .foregroundStyle(.white)
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 16)
                         .background(
@@ -479,7 +479,7 @@ struct QuizView: View {
                 VStack(spacing: 10) {
                     Text("Bravo, cours terminé !")
                         .font(.system(.title, design: .rounded, weight: .bold))
-                        .foregroundStyle(SophiaTheme.textPrimary)
+                        .foregroundStyle(.white)
                         .opacity(resultAppeared ? 1 : 0)
                         .offset(y: resultAppeared ? 0 : 15)
                         .animation(.spring(response: 0.5).delay(0.3), value: resultAppeared)
@@ -491,14 +491,14 @@ struct QuizView: View {
                             .contentTransition(.numericText(countsDown: false))
                         Text("/ \(shuffledQuestions.count)")
                             .font(.system(.title2, design: .rounded, weight: .medium))
-                            .foregroundStyle(Color.black.opacity(0.5))
+                            .foregroundStyle(.white.opacity(0.5))
                     }
                     .opacity(resultAppeared ? 1 : 0)
                     .animation(.spring(response: 0.5).delay(0.5), value: resultAppeared)
 
                     Text("bonnes réponses")
                         .font(.system(.subheadline, design: .rounded))
-                        .foregroundStyle(Color.black.opacity(0.5))
+                        .foregroundStyle(.white.opacity(0.5))
                         .opacity(resultAppeared ? 1 : 0)
                         .animation(.spring(response: 0.5).delay(0.6), value: resultAppeared)
 
@@ -642,7 +642,7 @@ struct QuizView: View {
                 let isFilled = index < starsRevealed
                 Image(systemName: isFilled ? "star.fill" : "star")
                     .font(.system(size: 36))
-                    .foregroundStyle(isFilled ? SophiaTheme.streakOrange : Color.black.opacity(0.12))
+                    .foregroundStyle(isFilled ? SophiaTheme.streakOrange : .white.opacity(0.12))
                     .scaleEffect(isFilled ? 1.15 : 0.85)
                     .shadow(color: isFilled ? SophiaTheme.streakOrange.opacity(0.5) : .clear, radius: isFilled ? 10 : 0)
                     .animation(.spring(response: 0.4, dampingFraction: 0.4), value: starsRevealed)
@@ -744,13 +744,13 @@ struct QuizView: View {
                     VStack(spacing: 10) {
                         Text("Bravo !")
                             .font(.system(size: 38, weight: .black, design: .rounded))
-                            .foregroundStyle(SophiaTheme.textPrimary)
+                            .foregroundStyle(.white)
                             .opacity(celebrationAppeared ? 1 : 0)
                             .scaleEffect(celebrationAppeared ? 1 : 0.7)
 
                         Text("Tu as terminé ton \(ordinal(newCompletedCount)) cours !")
                             .font(.system(.title3, design: .rounded, weight: .semibold))
-                            .foregroundStyle(Color.black.opacity(0.7))
+                            .foregroundStyle(.white.opacity(0.7))
                             .opacity(celebrationAppeared ? 1 : 0)
                             .offset(y: celebrationAppeared ? 0 : 10)
                     }

@@ -33,13 +33,13 @@ struct OnboardingInterestsScreen: View {
 
                     Text("Quels sujets t'intéressent ?")
                         .font(.system(.title2, design: .rounded, weight: .bold))
-                        .foregroundStyle(SophiaTheme.textPrimary)
+                        .foregroundStyle(.white)
                         .multilineTextAlignment(.center)
                         .opacity(appeared ? 1 : 0)
 
                     Text("Sélectionne au moins un sujet")
                         .font(.system(.subheadline, design: .rounded))
-                        .foregroundStyle(Color.black.opacity(0.4))
+                        .foregroundStyle(.white.opacity(0.4))
                         .opacity(appeared ? 1 : 0)
                 }
                 .padding(.top, 60)
@@ -117,7 +117,7 @@ private struct InterestCard: View {
                             Color.black.opacity(0.3)
                             Image(systemName: "checkmark.circle.fill")
                                 .font(.system(size: 32))
-                                .foregroundStyle(SophiaTheme.textPrimary)
+                                .foregroundStyle(.white)
                                 .transition(.scale.combined(with: .opacity))
                         }
                     }
@@ -129,7 +129,7 @@ private struct InterestCard: View {
                         .foregroundStyle(color)
                     Text(label)
                         .font(.system(.subheadline, design: .rounded, weight: .bold))
-                        .foregroundStyle(SophiaTheme.textPrimary)
+                        .foregroundStyle(.white)
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 12)

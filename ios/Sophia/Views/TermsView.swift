@@ -62,13 +62,13 @@ struct TermsView: View {
     private func sectionTitle(_ text: String) -> some View {
         Text(text)
             .font(.system(.headline, design: .rounded, weight: .bold))
-            .foregroundStyle(SophiaTheme.textPrimary)
+            .foregroundStyle(.white)
     }
 
     private func sectionBody(_ text: String) -> some View {
         Text(text)
             .font(.system(.subheadline, design: .rounded))
-            .foregroundStyle(Color.black.opacity(0.7))
+            .foregroundStyle(.white.opacity(0.7))
             .lineSpacing(4)
     }
 }

@@ -98,14 +98,14 @@ struct HomeView: View {
                 .font(.title3)
             Text("\(progressManager.streak)")
                 .font(.system(.title3, design: .rounded, weight: .heavy))
-                .foregroundStyle(SophiaTheme.textPrimary)
+                .foregroundStyle(.white)
             Text(progressManager.streak <= 1 ? "jour" : "jours")
                 .font(.system(.caption, design: .rounded, weight: .medium))
-                .foregroundStyle(Color.black.opacity(0.6))
+                .foregroundStyle(.white.opacity(0.6))
         }
         .padding(.horizontal, 14)
         .padding(.vertical, 8)
-        .background(Color.black.opacity(0.08), in: Capsule())
+        .background(.white.opacity(0.08), in: Capsule())
     }
 
     private var promptSection: some View {
@@ -113,10 +113,10 @@ struct HomeView: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text("Prêt à apprendre ?")
                     .font(.system(.title, design: .rounded, weight: .bold))
-                    .foregroundStyle(SophiaTheme.textPrimary)
+                    .foregroundStyle(.white)
                 Text("Swipe pour découvrir un cours")
                     .font(.system(.subheadline, design: .rounded))
-                    .foregroundStyle(Color.black.opacity(0.5))
+                    .foregroundStyle(.white.opacity(0.5))
             }
             Spacer()
         }
@@ -188,10 +188,10 @@ struct HomeView: View {
                 Text("Passer")
                     .font(.system(.caption, design: .rounded, weight: .medium))
             }
-            .foregroundStyle(Color.black.opacity(0.3))
+            .foregroundStyle(.white.opacity(0.3))
 
             Circle()
-                .fill(Color.black.opacity(0.1))
+                .fill(.white.opacity(0.1))
                 .frame(width: 6, height: 6)
 
             HStack(spacing: 6) {
@@ -200,7 +200,7 @@ struct HomeView: View {
                 Image(systemName: "arrow.right")
                     .font(.caption)
             }
-            .foregroundStyle(Color.black.opacity(0.3))
+            .foregroundStyle(.white.opacity(0.3))
         }
     }
 
@@ -211,10 +211,10 @@ struct HomeView: View {
                 .foregroundStyle(SophiaTheme.emerald)
             Text("Bravo !")
                 .font(.system(.largeTitle, design: .rounded, weight: .bold))
-                .foregroundStyle(SophiaTheme.textPrimary)
+                .foregroundStyle(.white)
             Text("Tu as terminé tous les cours disponibles.")
                 .font(.system(.body, design: .rounded))
-                .foregroundStyle(Color.black.opacity(0.7))
+                .foregroundStyle(.white.opacity(0.7))
                 .multilineTextAlignment(.center)
         }
         .padding(40)
@@ -232,27 +232,26 @@ struct FlashCard: View {
             courseIllustration
 
             VStack(alignment: .leading, spacing: 10) {
-                HStack(spacing: 6) {
+                HStack(spacing: 8) {
                     Image(systemName: course.subject.icon)
-                        .font(.caption2)
+                        .font(.caption)
                         .foregroundStyle(.white)
                     Text(course.subject.shortName.uppercased())
-                        .font(.system(.caption2, design: .rounded, weight: .heavy))
+                        .font(.system(.caption2, design: .rounded, weight: .bold))
                         .foregroundStyle(.white)
-                        .tracking(0.5)
                 }
                 .padding(.horizontal, 10)
                 .padding(.vertical, 5)
-                .background(Color.black, in: Capsule())
+                .background(course.subject.color.opacity(0.85), in: Capsule())
 
                 Text(course.title)
                     .font(.system(.title3, design: .rounded, weight: .bold))
-                    .foregroundStyle(SophiaTheme.textPrimary)
+                    .foregroundStyle(.white)
                     .fixedSize(horizontal: false, vertical: true)
 
                 boldText(course.description)
                     .font(.system(.caption, design: .rounded))
-                    .foregroundStyle(Color.black.opacity(0.55))
+                    .foregroundStyle(.white.opacity(0.55))
                     .lineLimit(2)
 
                 Button {
@@ -316,7 +315,7 @@ struct FlashCard: View {
                         )
                         Image(systemName: course.subject.icon)
                             .font(.system(size: 56, weight: .light))
-                            .foregroundStyle(Color.black.opacity(0.2))
+                            .foregroundStyle(.white.opacity(0.2))
                             .rotationEffect(.degrees(-12))
                             .offset(x: 50, y: -10)
                     }

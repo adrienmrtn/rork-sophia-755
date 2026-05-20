@@ -18,28 +18,28 @@ struct OnboardingComparisonGraphScreen: View {
                     VStack(spacing: 10) {
                         Text("Ta progression culturelle")
                             .font(.system(.title2, design: .rounded, weight: .bold))
-                            .foregroundStyle(SophiaTheme.textPrimary)
+                            .foregroundStyle(.white)
                             .opacity(appeared ? 1 : 0)
 
                         Text("Avec et sans Sophia")
                             .font(.system(.body, design: .rounded))
-                            .foregroundStyle(Color.black.opacity(0.5))
+                            .foregroundStyle(.white.opacity(0.5))
                             .opacity(appeared ? 1 : 0)
                     }
 
                     ZStack {
                         RoundedRectangle(cornerRadius: 20)
-                            .fill(Color.black.opacity(0.04))
+                            .fill(.white.opacity(0.04))
                             .overlay(
                                 RoundedRectangle(cornerRadius: 20)
-                                    .strokeBorder(Color.black.opacity(0.08), lineWidth: 1)
+                                    .strokeBorder(.white.opacity(0.08), lineWidth: 1)
                             )
 
                         VStack(spacing: 0) {
                             HStack {
                                 Text("Culture")
                                     .font(.system(.caption, design: .rounded, weight: .medium))
-                                    .foregroundStyle(Color.black.opacity(0.3))
+                                    .foregroundStyle(.white.opacity(0.3))
                                 Spacer()
                             }
                             .padding(.horizontal, 20)
@@ -56,13 +56,13 @@ struct OnboardingComparisonGraphScreen: View {
                                             path.move(to: CGPoint(x: 20, y: y))
                                             path.addLine(to: CGPoint(x: 20 + w, y: y))
                                         }
-                                        .stroke(Color.black.opacity(0.05), lineWidth: 1)
+                                        .stroke(.white.opacity(0.05), lineWidth: 1)
                                     }
 
                                     ComparisonCurve(progress: graphProgress, isWithSophia: false)
                                         .trim(from: 0, to: graphProgress)
                                         .stroke(
-                                            Color.black.opacity(0.25),
+                                            .white.opacity(0.25),
                                             style: StrokeStyle(lineWidth: 3, lineCap: .round, dash: [6, 4])
                                         )
                                         .padding(.horizontal, 20)
@@ -97,10 +97,10 @@ struct OnboardingComparisonGraphScreen: View {
                                         VStack(alignment: .leading, spacing: 6) {
                                             Text("Sans Sophia")
                                                 .font(.system(.caption, design: .rounded, weight: .bold))
-                                                .foregroundStyle(Color.black.opacity(0.4))
+                                                .foregroundStyle(.white.opacity(0.4))
                                                 .padding(.horizontal, 10)
                                                 .padding(.vertical, 4)
-                                                .background(Color.black.opacity(0.06), in: .capsule)
+                                                .background(.white.opacity(0.06), in: .capsule)
                                         }
                                         .position(x: 20 + w * 0.75, y: h * 0.65)
                                         .transition(.opacity.combined(with: .scale(scale: 0.8)))
@@ -111,11 +111,11 @@ struct OnboardingComparisonGraphScreen: View {
                             HStack {
                                 Text("Aujourd'hui")
                                     .font(.system(.caption2, design: .rounded))
-                                    .foregroundStyle(Color.black.opacity(0.3))
+                                    .foregroundStyle(.white.opacity(0.3))
                                 Spacer()
                                 Text("1 an")
                                     .font(.system(.caption2, design: .rounded))
-                                    .foregroundStyle(Color.black.opacity(0.3))
+                                    .foregroundStyle(.white.opacity(0.3))
                             }
                             .padding(.horizontal, 20)
                             .padding(.bottom, 12)
@@ -127,7 +127,7 @@ struct OnboardingComparisonGraphScreen: View {
 
                     Text("Sophia accélère ta culture\ngénérale de manière exponentielle.")
                         .font(.system(.subheadline, design: .rounded, weight: .medium))
-                        .foregroundStyle(Color.black.opacity(0.6))
+                        .foregroundStyle(.white.opacity(0.6))
                         .multilineTextAlignment(.center)
                         .opacity(showLabels ? 1 : 0)
                         .offset(y: showLabels ? 0 : 10)

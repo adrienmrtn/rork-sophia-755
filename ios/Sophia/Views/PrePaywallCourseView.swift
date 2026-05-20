@@ -53,7 +53,7 @@ struct PrePaywallCourseView: View {
                 VStack(spacing: 20) {
                     Text("Continuez à apprendre et\ndécouvrez de nouveaux sujets")
                         .font(.system(.body, design: .rounded))
-                        .foregroundStyle(Color.black.opacity(0.6))
+                        .foregroundStyle(.white.opacity(0.6))
                         .multilineTextAlignment(.center)
                         .opacity(appeared ? 1 : 0)
                         .offset(y: appeared ? 0 : 10)
@@ -89,7 +89,7 @@ struct PrePaywallCourseView: View {
                 Rectangle()
                     .fill(
                         LinearGradient(
-                            colors: [.clear, Color.black.opacity(0.05), .clear],
+                            colors: [.clear, .white.opacity(0.05), .clear],
                             startPoint: .leading,
                             endPoint: .trailing
                         )

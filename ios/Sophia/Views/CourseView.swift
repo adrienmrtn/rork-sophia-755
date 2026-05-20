@@ -82,16 +82,16 @@ struct CourseView: View {
             } label: {
                 Image(systemName: "xmark")
                     .font(.title3.weight(.semibold))
-                    .foregroundStyle(Color.black.opacity(0.7))
+                    .foregroundStyle(.white.opacity(0.7))
                     .frame(width: 36, height: 36)
-                    .background(Color.black.opacity(0.1), in: Circle())
+                    .background(.white.opacity(0.1), in: Circle())
             }
 
             Spacer()
 
             Text("\(currentIndex + 1) / \(course.lessons.count)")
                 .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                .foregroundStyle(Color.black.opacity(0.6))
+                .foregroundStyle(.white.opacity(0.6))
         }
         .padding(.horizontal, 20)
         .padding(.top, 12)
@@ -101,7 +101,7 @@ struct CourseView: View {
         GeometryReader { geo in
             ZStack(alignment: .leading) {
                 Capsule()
-                    .fill(Color.black.opacity(0.15))
+                    .fill(.white.opacity(0.15))
                     .frame(height: 6)
                 Capsule()
                     .fill(SophiaTheme.emerald)
@@ -123,11 +123,11 @@ struct CourseView: View {
 
                 Text(lesson.title)
                     .font(.system(.title2, design: .rounded, weight: .bold))
-                    .foregroundStyle(SophiaTheme.textPrimary)
+                    .foregroundStyle(.white)
 
                 Text(markdownAttributedString(lesson.content))
                     .font(.system(.body, design: .rounded))
-                    .foregroundStyle(Color.black.opacity(0.85))
+                    .foregroundStyle(.white.opacity(0.85))
                     .lineSpacing(6)
             }
             .padding(.horizontal, 24)
@@ -174,7 +174,7 @@ struct CourseView: View {
                 Image(systemName: isLastLesson ? (course.hasQuiz ? "questionmark.circle.fill" : "checkmark.circle.fill") : "arrow.right")
                     .font(.subheadline.weight(.semibold))
             }
-            .foregroundStyle(SophiaTheme.textPrimary)
+            .foregroundStyle(.white)
             .frame(maxWidth: .infinity)
             .padding(.vertical, 18)
             .background {
@@ -186,7 +186,7 @@ struct CourseView: View {
                             Rectangle()
                                 .fill(
                                     LinearGradient(
-                                        colors: [.clear, Color.black.opacity(0.25), .clear],
+                                        colors: [.clear, .white.opacity(0.25), .clear],
                                         startPoint: .leading,
                                         endPoint: .trailing
                                     )
