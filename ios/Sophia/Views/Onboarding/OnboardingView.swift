@@ -2,8 +2,8 @@ import SwiftUI
 import RevenueCatUI
 
 struct OnboardingView: View {
-    @StateObject private var viewModel = OnboardingViewModel()
-    @StateObject private var storeVM = StoreViewModel()
+    @State private var viewModel = OnboardingViewModel()
+    @State private var storeVM = StoreViewModel()
     let onComplete: () -> Void
     @State private var direction: Edge = .trailing
     @State private var showSpecialOffer: Bool = false
@@ -69,52 +69,44 @@ struct OnboardingView: View {
                 case 1:
                     OnboardingWelcomeScreen(onNext: advance)
                 case 2:
-                    OnboardingCuriosityQuestionsScreen(onNext: advance)
-                case 3:
                     OnboardingPhoneTimeScreen(viewModel: viewModel, onNext: advance)
-                case 4:
+                case 3:
                     OnboardingWastedTimeScreen(viewModel: viewModel, onNext: advance)
-                case 5:
+                case 4:
                     OnboardingObjectivesScreen(viewModel: viewModel, onNext: advance)
-                case 6:
-                    OnboardingPerceivedConfidenceScreen(onNext: advance)
-                case 7:
+                case 5:
                     OnboardingSocialProofScreen(onNext: advance)
-                case 8:
+                case 6:
                     OnboardingTopicsCarouselScreen(
                         title: "Sophia t'aide à comprendre\nle monde qui t'entoure",
                         subtitle: "Géopolitique, économie, environnement...\nles enjeux actuels expliqués simplement.",
                         categories: mondeActuelCategories,
                         onNext: advance
                     )
-                case 9:
+                case 7:
                     OnboardingTopicsCarouselScreen(
                         title: "Maîtrise enfin les grandes\nœuvres de l'histoire",
                         subtitle: "Littérature, art, cinéma, mythologie...\nles clés pour en parler avec aisance.",
                         categories: cultureCategories,
                         onNext: advance
                     )
-                case 10:
+                case 8:
                     OnboardingInterestsScreen(viewModel: viewModel, onNext: advance)
-                case 11:
-                    OnboardingDailyGoalScreen(viewModel: viewModel, onNext: advance)
-                case 12:
-                    OnboardingAnnualRecapScreen(viewModel: viewModel, onNext: advance)
-                case 13:
+                case 9:
+                    OnboardingProjectionScreen(onNext: advance)
+                case 10:
                     OnboardingAgeScreen(viewModel: viewModel, onNext: advance)
-                case 14:
-                    OnboardingThemeLevelAssessmentScreen(viewModel: viewModel, onNext: advance)
-                case 15:
+                case 11:
+                    OnboardingProfileGenScreen(onNext: advance)
+                case 12:
                     OnboardingLoadingScreen(viewModel: viewModel, onNext: advance)
-                case 16:
+                case 13:
                     OnboardingFinalScreen(onComplete: advance)
-                case 17:
+                case 14:
                     OnboardingFreeTrialIntroView(onNext: advance)
-                case 18:
+                case 15:
                     OnboardingFreeTrialTimelineView(onNext: advance)
-                case 19:
-                    OnboardingBaselineProgressScreen(viewModel: viewModel, onNext: advance)
-                case 20:
+                case 16:
                     Color.clear
                         .onAppear {
                             showRCPaywall = true
@@ -128,9 +120,9 @@ struct OnboardingView: View {
                 removal: .move(edge: .leading).combined(with: .opacity)
             ))
 
-            if viewModel.currentScreen > 0 && viewModel.currentScreen < 15 {
+            if viewModel.currentScreen > 0 && viewModel.currentScreen < 11 {
                 VStack {
-                    OnboardingProgressDots(current: viewModel.currentScreen, total: 15)
+                    OnboardingProgressDots(current: viewModel.currentScreen, total: 11)
                         .frame(maxWidth: .infinity)
                         .padding(.top, 16)
                     Spacer()

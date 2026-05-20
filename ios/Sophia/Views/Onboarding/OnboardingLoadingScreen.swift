@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct OnboardingLoadingScreen: View {
-    @ObservedObject var viewModel: OnboardingViewModel
+    @Bindable var viewModel: OnboardingViewModel
     let onNext: () -> Void
     @State private var appeared: Bool = false
     @State private var pulsing: Bool = false

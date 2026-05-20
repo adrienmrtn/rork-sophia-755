@@ -4,30 +4,10 @@ struct HomeView: View {
     let progressManager: ProgressManager
     @Binding var selectedCourse: Course?
     @Binding var autoSwipeCourseId: String?
-    let isPremium: Bool
-    let freemiumSubjects: Set<String>
-    let onShowPaywallFromStart: () -> Void
-    let onShowPaywallFromQuizBanner: () -> Void
     @State private var cards: [Course] = []
     @State private var topCardOffset: CGSize = .zero
     @State private var topCardRotation: Double = 0
     @State private var cardAppeared: Bool = false
-
-    private var hasCompletedDailyCourse: Bool {
-        !isPremium && progressManager.hasCompletedDailyFreeCourseToday
-    }
-
-    private var dailyBadgeText: String {
-        hasCompletedDailyCourse ? "✓ Cours du jour fait — reviens demain 🔥" : "✓ 1 cours gratuit disponible aujourd'hui"
-    }
-
-    private var dailyBadgeBackground: Color {
-        hasCompletedDailyCourse ? .white.opacity(0.08) : SophiaTheme.emerald.opacity(0.18)
-    }
-
-    private var dailyBadgeForeground: Color {
-        hasCompletedDailyCourse ? .white.opacity(0.65) : SophiaTheme.emerald
-    }
 
     private func performAutoSwipe() {
         let g = UIImpactFeedbackGenerator(style: .light)
@@ -47,14 +27,9 @@ struct HomeView: View {
     }
 
     private func loadCards() {
-        var filtered = CourseData.allCourses
+        let filtered = CourseData.allCourses
             .filter { progressManager.courseStatus(for: $0.id) != .completed }
-
-        if !isPremium, !freemiumSubjects.isEmpty {
-            filtered = filtered.filter { freemiumSubjects.contains($0.subject.rawValue) }
-        }
-
-        filtered.shuffle()
+            .shuffled()
         cards = filtered
         let preloadIds = filtered.prefix(5).map(\.id)
         CourseImageMap.preloadImages(for: preloadIds)
@@ -79,12 +54,6 @@ struct HomeView: View {
                     allCompletedView
                     Spacer()
                 } else {
-                    if !isPremium {
-                        dailyBadge
-                            .padding(.top, 12)
-                            .padding(.horizontal, 20)
-                    }
-
                     cardStack
                         .padding(.top, 16)
                         .opacity(cardAppeared ? 1 : 0)
@@ -92,12 +61,6 @@ struct HomeView: View {
                     Spacer()
                     swipeHint
                         .padding(.bottom, 24)
-
-                    if hasCompletedDailyCourse {
-                        quizBanner
-                            .padding(.horizontal, 20)
-                            .padding(.bottom, 18)
-                    }
                 }
             }
         }
@@ -106,12 +69,6 @@ struct HomeView: View {
             withAnimation(.spring(response: 0.6, dampingFraction: 0.8).delay(0.2)) {
                 cardAppeared = true
             }
-        }
-        .onChange(of: isPremium) { _, _ in
-            loadCards()
-        }
-        .onChange(of: freemiumSubjects) { _, _ in
-            loadCards()
         }
         .onChange(of: autoSwipeCourseId) { _, newId in
             guard let courseId = newId else { return }
@@ -131,9 +88,7 @@ struct HomeView: View {
 
             Spacer()
 
-            if progressManager.streak > 0 {
-                streakBadge
-            }
+            streakBadge
         }
     }
 
@@ -141,14 +96,12 @@ struct HomeView: View {
         HStack(spacing: 6) {
             Text("🔥")
                 .font(.title3)
-            Text("Jour \(progressManager.streak)")
-                .font(.system(.subheadline, design: .rounded, weight: .bold))
+            Text("\(progressManager.streak)")
+                .font(.system(.title3, design: .rounded, weight: .heavy))
                 .foregroundStyle(.white)
-            if isPremium && progressManager.shieldCount > 0 {
-                Text("🛡️")
-                    .font(.subheadline)
-                    .foregroundStyle(.white.opacity(0.85))
-            }
+            Text(progressManager.streak <= 1 ? "jour" : "jours")
+                .font(.system(.caption, design: .rounded, weight: .medium))
+                .foregroundStyle(.white.opacity(0.6))
         }
         .padding(.horizontal, 14)
         .padding(.vertical, 8)
@@ -164,34 +117,6 @@ struct HomeView: View {
                 Text("Swipe pour découvrir un cours")
                     .font(.system(.subheadline, design: .rounded))
                     .foregroundStyle(.white.opacity(0.5))
-
-                if progressManager.didBreakStreakToday {
-                    Text("Ta série est brisée. Recommence dès aujourd'hui.")
-                        .font(.system(.caption, design: .rounded, weight: .semibold))
-                        .foregroundStyle(.white.opacity(0.85))
-                        .padding(.horizontal, 10)
-                        .padding(.vertical, 8)
-                        .background(SophiaTheme.errorRed.opacity(0.12), in: Capsule())
-                        .overlay(
-                            Capsule()
-                                .strokeBorder(SophiaTheme.errorRed.opacity(0.35), lineWidth: 1)
-                        )
-                        .padding(.top, 6)
-                }
-
-                if isPremium && progressManager.didUseShieldToday, let value = progressManager.shieldProtectedStreakValue {
-                    Text("Ton bouclier a protégé ta série de \(value) jours")
-                        .font(.system(.caption, design: .rounded, weight: .semibold))
-                        .foregroundStyle(.white.opacity(0.85))
-                        .padding(.horizontal, 10)
-                        .padding(.vertical, 8)
-                        .background(.white.opacity(0.10), in: Capsule())
-                        .overlay(
-                            Capsule()
-                                .strokeBorder(.white.opacity(0.12), lineWidth: 1)
-                        )
-                        .padding(.top, 6)
-                }
             }
             Spacer()
         }
@@ -201,17 +126,9 @@ struct HomeView: View {
         ZStack {
             ForEach(Array(cards.prefix(3).enumerated().reversed()), id: \.element.id) { index, course in
                 let isTop = index == 0
-                let isSubjectLocked = !isPremium && !freemiumSubjects.isEmpty && !freemiumSubjects.contains(course.subject.rawValue)
-                let isStartLocked = hasCompletedDailyCourse || isSubjectLocked
                 FlashCard(
                     course: course,
-                    isStartLocked: isStartLocked,
-                    onStart: { selectedCourse = course },
-                    onLockedStart: {
-                        let g = UIImpactFeedbackGenerator(style: .medium)
-                        g.impactOccurred()
-                        onShowPaywallFromStart()
-                    }
+                    onStart: { selectedCourse = course }
                 )
                 .offset(
                     x: isTop ? topCardOffset.width : 0,
@@ -287,41 +204,6 @@ struct HomeView: View {
         }
     }
 
-    private var dailyBadge: some View {
-        HStack {
-            Text(dailyBadgeText)
-                .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                .foregroundStyle(dailyBadgeForeground)
-                .padding(.horizontal, 14)
-                .padding(.vertical, 10)
-                .background(dailyBadgeBackground, in: Capsule())
-            Spacer()
-        }
-    }
-
-    private var quizBanner: some View {
-        Button {
-            let g = UIImpactFeedbackGenerator(style: .light)
-            g.impactOccurred()
-            onShowPaywallFromQuizBanner()
-        } label: {
-            HStack(spacing: 10) {
-                Text("🔒 Accède aux quiz — essai gratuit →")
-                    .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                    .foregroundStyle(.white.opacity(0.75))
-                Spacer()
-            }
-            .padding(.horizontal, 14)
-            .padding(.vertical, 12)
-            .background(.white.opacity(0.06), in: .rect(cornerRadius: 14))
-            .overlay(
-                RoundedRectangle(cornerRadius: 14)
-                    .strokeBorder(.white.opacity(0.08), lineWidth: 1)
-            )
-        }
-        .buttonStyle(.plain)
-    }
-
     private var allCompletedView: some View {
         VStack(spacing: 20) {
             Image(systemName: "checkmark.seal.fill")
@@ -341,9 +223,7 @@ struct HomeView: View {
 
 struct FlashCard: View {
     let course: Course
-    let isStartLocked: Bool
     let onStart: () -> Void
-    let onLockedStart: () -> Void
     @State private var cachedImage: UIImage?
     @State private var buttonTrigger: Int = 0
 
@@ -376,26 +256,18 @@ struct FlashCard: View {
 
                 Button {
                     buttonTrigger += 1
-                    if isStartLocked {
-                        onLockedStart()
-                    } else {
-                        onStart()
-                    }
+                    onStart()
                 } label: {
                     HStack(spacing: 8) {
-                        Text(isStartLocked ? "🔒 Commencer — essai gratuit" : "Commencer")
+                        Text("Commencer")
                             .font(.system(.subheadline, design: .rounded, weight: .bold))
-                        Image(systemName: isStartLocked ? "lock.fill" : "play.fill")
-                            .font(.caption.weight(.semibold))
+                        Image(systemName: "play.fill")
+                            .font(.caption)
                     }
                     .foregroundStyle(.white)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 14)
-                    .background(
-                        isStartLocked ? .white.opacity(0.10) : SophiaTheme.emerald,
-                        in: .rect(cornerRadius: 14)
-                    )
-                    .opacity(isStartLocked ? 0.7 : 1.0)
+                    .background(SophiaTheme.emerald, in: .rect(cornerRadius: 14))
                 }
                 .sensoryFeedback(.impact(weight: .medium), trigger: buttonTrigger)
             }
@@ -448,9 +320,6 @@ struct FlashCard: View {
                             .offset(x: 50, y: -10)
                     }
                 }
-            }
-            .overlay(alignment: .bottomLeading) {
-                EmptyView()
             }
             .clipShape(.rect(cornerRadii: .init(topLeading: 24, topTrailing: 24)))
     }

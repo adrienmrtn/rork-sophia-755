@@ -56,7 +56,7 @@ struct OnboardingFinalScreen: View {
 
                 Spacer()
 
-                OnboardingButton(title: "Voir mes 3 premiers jours offerts", action: onComplete)
+                OnboardingButton(title: "Commencer à apprendre", action: onComplete)
                     .opacity(appeared ? 1 : 0)
                     .offset(y: appeared ? 0 : 30)
             }

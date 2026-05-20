@@ -1,7 +1,7 @@
 import Foundation
 
 struct CourseData {
-    static let baseCourses: [Course] = [
+    static let allCourses: [Course] = [
 Course(
     id: "course_1_la_naissance_de_l_islam_622",
     title: "La naissance de l'islam (622)",
@@ -4788,6 +4788,4 @@ Course(
             ]
         )
     ]
-
-    static let allCourses: [Course] = ExcelCourseContentLoader.loadCourses(baseCourses: baseCourses)
 }

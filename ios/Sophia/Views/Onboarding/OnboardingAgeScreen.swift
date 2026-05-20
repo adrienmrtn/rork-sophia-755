@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct OnboardingAgeScreen: View {
-    @ObservedObject var viewModel: OnboardingViewModel
+    @Bindable var viewModel: OnboardingViewModel
     let onNext: () -> Void
     @State private var appeared: Bool = false
 

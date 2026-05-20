@@ -1,11 +1,7 @@
 import SwiftUI
-import UIKit
 
 struct LibraryView: View {
     let progressManager: ProgressManager
-    let isPremium: Bool
-    let freemiumSubjects: Set<String>
-    let onShowPaywall: () -> Void
     @Binding var selectedCourse: Course?
     @State private var searchText: String = ""
 
@@ -48,53 +44,22 @@ struct LibraryView: View {
         }
     }
 
-    private func isSubjectLocked(_ subject: Subject) -> Bool {
-        if isPremium { return false }
-        if freemiumSubjects.isEmpty { return false }
-        return !freemiumSubjects.contains(subject.rawValue)
-    }
-
     private func previewSection(subject: Subject, courses: [Course]) -> some View {
-        let locked = isSubjectLocked(subject)
-        return VStack(alignment: .leading, spacing: 14) {
-            Group {
-                if locked {
-                    Button(action: onShowPaywall) {
-                        HStack(spacing: 8) {
-                            Image(systemName: subject.icon)
-                                .foregroundStyle(.white.opacity(0.25))
-                            Text(subject.rawValue)
-                                .font(.system(.title3, design: .rounded, weight: .bold))
-                                .foregroundStyle(.white.opacity(0.35))
-                            Spacer()
-                            Image(systemName: "lock.fill")
-                                .font(.system(.subheadline, weight: .semibold))
-                                .foregroundStyle(.white.opacity(0.35))
-                            Text("Voir plus")
-                                .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                                .foregroundStyle(.white.opacity(0.35))
-                            Image(systemName: "chevron.right")
-                                .font(.system(.caption, weight: .semibold))
-                                .foregroundStyle(.white.opacity(0.25))
-                        }
-                    }
-                } else {
-                    NavigationLink(value: subject) {
-                        HStack(spacing: 8) {
-                            Image(systemName: subject.icon)
-                                .foregroundStyle(subject.color)
-                            Text(subject.rawValue)
-                                .font(.system(.title3, design: .rounded, weight: .bold))
-                                .foregroundStyle(.white)
-                            Spacer()
-                            Text("Voir plus")
-                                .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                                .foregroundStyle(.white.opacity(0.5))
-                            Image(systemName: "chevron.right")
-                                .font(.system(.caption, weight: .semibold))
-                                .foregroundStyle(.white.opacity(0.3))
-                        }
-                    }
+        VStack(alignment: .leading, spacing: 14) {
+            NavigationLink(value: subject) {
+                HStack(spacing: 8) {
+                    Image(systemName: subject.icon)
+                        .foregroundStyle(subject.color)
+                    Text(subject.rawValue)
+                        .font(.system(.title3, design: .rounded, weight: .bold))
+                        .foregroundStyle(.white)
+                    Spacer()
+                    Text("Voir plus")
+                        .font(.system(.subheadline, design: .rounded, weight: .semibold))
+                        .foregroundStyle(.white.opacity(0.5))
+                    Image(systemName: "chevron.right")
+                        .font(.system(.caption, weight: .semibold))
+                        .foregroundStyle(.white.opacity(0.3))
                 }
             }
             .buttonStyle(.plain)
@@ -107,24 +72,13 @@ struct LibraryView: View {
                             course: course,
                             status: progressManager.courseStatus(for: course.id),
                             onTap: {
-                                if locked {
-                                    onShowPaywall()
-                                } else {
-                                    let g = UIImpactFeedbackGenerator(style: .light)
-                                    g.impactOccurred()
-                                    selectedCourse = course
-                                }
+                                let g = UIImpactFeedbackGenerator(style: .light)
+                                g.impactOccurred()
+                                selectedCourse = course
                             },
-                            progressManager: locked ? nil : progressManager
+                            progressManager: progressManager
                         )
                         .frame(width: 160)
-                        .saturation(locked ? 0 : 1)
-                        .opacity(locked ? 0.45 : 1)
-                        .overlay {
-                            if locked {
-                                LockedOverlay()
-                            }
-                        }
                     }
                 }
             }
@@ -136,29 +90,20 @@ struct LibraryView: View {
                 subject: subject,
                 courses: courses,
                 progressManager: progressManager,
-                isPremium: isPremium,
-                freemiumSubjects: freemiumSubjects,
-                onShowPaywall: onShowPaywall,
                 selectedCourse: $selectedCourse
             )
         }
     }
 
     private func searchSection(subject: Subject, courses: [Course]) -> some View {
-        let locked = isSubjectLocked(subject)
-        return VStack(alignment: .leading, spacing: 14) {
+        VStack(alignment: .leading, spacing: 14) {
             HStack(spacing: 8) {
                 Image(systemName: subject.icon)
-                    .foregroundStyle(locked ? .white.opacity(0.25) : subject.color)
+                    .foregroundStyle(subject.color)
                 Text(subject.rawValue)
                     .font(.system(.title3, design: .rounded, weight: .bold))
-                    .foregroundStyle(locked ? .white.opacity(0.35) : .white)
+                    .foregroundStyle(.white)
                 Spacer()
-                if locked {
-                    Image(systemName: "lock.fill")
-                        .font(.system(.caption, weight: .semibold))
-                        .foregroundStyle(.white.opacity(0.35))
-                }
                 Text("\(courses.count)")
                     .font(.system(.caption, design: .rounded, weight: .semibold))
                     .foregroundStyle(.white.opacity(0.4))
@@ -171,42 +116,16 @@ struct LibraryView: View {
                         course: course,
                         status: progressManager.courseStatus(for: course.id),
                         onTap: {
-                            if locked {
-                                onShowPaywall()
-                            } else {
-                                let g = UIImpactFeedbackGenerator(style: .light)
-                                g.impactOccurred()
-                                selectedCourse = course
-                            }
+                            let g = UIImpactFeedbackGenerator(style: .light)
+                            g.impactOccurred()
+                            selectedCourse = course
                         },
-                        progressManager: locked ? nil : progressManager
+                        progressManager: progressManager
                     )
-                    .saturation(locked ? 0 : 1)
-                    .opacity(locked ? 0.45 : 1)
-                    .overlay {
-                        if locked {
-                            LockedOverlay()
-                        }
-                    }
                 }
             }
             .padding(.horizontal, 16)
         }
-    }
-}
-
-private struct LockedOverlay: View {
-    var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 16)
-                .fill(.black.opacity(0.25))
-            Image(systemName: "lock.fill")
-                .font(.system(.title3, weight: .semibold))
-                .foregroundStyle(.white.opacity(0.7))
-                .padding(10)
-                .background(.black.opacity(0.35), in: Circle())
-        }
-        .allowsHitTesting(false)
     }
 }
 

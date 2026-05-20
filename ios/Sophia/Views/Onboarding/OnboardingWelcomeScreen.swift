@@ -23,7 +23,7 @@ struct OnboardingWelcomeScreen: View {
                         .offset(y: appeared ? 0 : 20)
                         .offset(y: dismissing ? 0 : 0)
 
-                    Text("La dernière fois que tu as appris\nquelque chose qui t'a vraiment surpris...\nc'était quand ?")
+                    Text("Sophia est ton compagnon quotidien.\nTous les jours, il te raconte\nquelque chose de nouveau.")
                         .font(.system(.body, design: .rounded))
                         .foregroundStyle(.white.opacity(0.7))
                         .multilineTextAlignment(.center)
