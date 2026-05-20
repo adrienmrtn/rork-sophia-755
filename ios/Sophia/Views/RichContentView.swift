@@ -146,7 +146,7 @@ struct CourseInlineImage: View {
 
     var body: some View {
         Group {
-            if let ui = UIImage(named: assetName) {
+            if let ui = Self.loadImage(named: assetName) {
                 Image(uiImage: ui)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
@@ -180,6 +180,27 @@ struct CourseInlineImage: View {
                     .padding(.horizontal, 12)
             }
         }
+    }
+
+    /// Tries asset catalog first, then bundle resources (jpg/png/jpeg).
+    /// Loose files inside synchronized folder groups are not auto-indexed by
+    /// `UIImage(named:)` without extension, so we look them up explicitly.
+    static func loadImage(named name: String) -> UIImage? {
+        if let ui = UIImage(named: name) { return ui }
+        let bundle = Bundle.main
+        for ext in ["jpg", "jpeg", "png", "JPG", "PNG"] {
+            if let url = bundle.url(forResource: name, withExtension: ext),
+               let data = try? Data(contentsOf: url),
+               let ui = UIImage(data: data) {
+                return ui
+            }
+            if let url = bundle.url(forResource: name, withExtension: ext, subdirectory: "CourseImages"),
+               let data = try? Data(contentsOf: url),
+               let ui = UIImage(data: data) {
+                return ui
+            }
+        }
+        return nil
     }
 
     nonisolated static func slug(_ s: String) -> String {
