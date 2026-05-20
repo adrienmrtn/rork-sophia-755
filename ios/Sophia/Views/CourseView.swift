@@ -22,13 +22,16 @@ struct CourseView: View {
         Double(currentIndex + 1) / Double(course.lessons.count)
     }
 
+    private let cream = Color(red: 0.984, green: 0.961, blue: 0.918)
+    private let ink = Color.black
+    private let pink = Color(red: 1.0, green: 0.553, blue: 0.706)
+
     var body: some View {
         ZStack {
-            SophiaTheme.background.ignoresSafeArea()
+            cream.ignoresSafeArea()
 
             VStack(spacing: 0) {
                 headerBar
-                progressBar
 
                 TabView(selection: $currentIndex) {
                     ForEach(Array(course.lessons.enumerated()), id: \.element.id) { index, lesson in
@@ -74,59 +77,60 @@ struct CourseView: View {
     }
 
     private var headerBar: some View {
-        HStack {
+        HStack(spacing: 14) {
             Button {
                 let g = UIImpactFeedbackGenerator(style: .light)
                 g.impactOccurred()
                 dismiss()
             } label: {
                 Image(systemName: "xmark")
-                    .font(.title3.weight(.semibold))
-                    .foregroundStyle(.white.opacity(0.7))
-                    .frame(width: 36, height: 36)
-                    .background(.white.opacity(0.1), in: Circle())
+                    .font(.system(size: 16, weight: .bold))
+                    .foregroundStyle(ink)
+                    .frame(width: 40, height: 40)
+                    .background(Color.white, in: Circle())
+                    .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
             }
 
-            Spacer()
+            progressBar
 
             Text("\(currentIndex + 1) / \(course.lessons.count)")
-                .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                .foregroundStyle(.white.opacity(0.6))
+                .font(.system(.subheadline, design: .rounded, weight: .bold))
+                .foregroundStyle(ink)
         }
         .padding(.horizontal, 20)
         .padding(.top, 12)
+        .padding(.bottom, 12)
     }
 
     private var progressBar: some View {
         GeometryReader { geo in
             ZStack(alignment: .leading) {
                 Capsule()
-                    .fill(.white.opacity(0.15))
-                    .frame(height: 6)
+                    .fill(Color.white)
+                    .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
                 Capsule()
-                    .fill(SophiaTheme.emerald)
-                    .frame(width: geo.size.width * progressValue, height: 6)
+                    .fill(pink)
+                    .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
+                    .frame(width: max(20, geo.size.width * progressValue))
                     .animation(.spring(response: 0.4), value: progressValue)
             }
         }
-        .frame(height: 6)
-        .padding(.horizontal, 20)
-        .padding(.top, 16)
-        .padding(.bottom, 8)
+        .frame(height: 18)
     }
 
     private func lessonContent(lesson: LessonPage) -> some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 20) {
+            VStack(alignment: .leading, spacing: 24) {
                 Text(lesson.title)
-                    .font(.system(.title2, design: .rounded, weight: .bold))
-                    .foregroundStyle(.white)
+                    .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                    .foregroundStyle(ink)
+                    .fixedSize(horizontal: false, vertical: true)
 
                 RichContentView(content: lesson.content, accent: course.subject.color)
             }
             .padding(.horizontal, 24)
-            .padding(.top, 20)
-            .padding(.bottom, 100)
+            .padding(.top, 24)
+            .padding(.bottom, 120)
         }
         .scrollIndicators(.hidden)
     }
@@ -160,19 +164,18 @@ struct CourseView: View {
                 Image(systemName: isLastLesson ? (course.hasQuiz ? "questionmark.circle.fill" : "checkmark.circle.fill") : "arrow.right")
                     .font(.subheadline.weight(.semibold))
             }
-            .foregroundStyle(.white)
+            .foregroundStyle(ink)
             .frame(maxWidth: .infinity)
-            .padding(.vertical, 18)
+            .padding(.vertical, 20)
             .background {
                 ZStack {
-                    RoundedRectangle(cornerRadius: 16)
-                        .fill(SophiaTheme.emerald)
+                    Capsule().fill(pink)
                     if isLastLesson && course.hasQuiz {
                         GeometryReader { geo in
                             Rectangle()
                                 .fill(
                                     LinearGradient(
-                                        colors: [.clear, .white.opacity(0.25), .clear],
+                                        colors: [.clear, .white.opacity(0.35), .clear],
                                         startPoint: .leading,
                                         endPoint: .trailing
                                     )
@@ -181,12 +184,13 @@ struct CourseView: View {
                                 .offset(x: quizButtonShimmer)
                                 .allowsHitTesting(false)
                         }
-                        .clipShape(.rect(cornerRadius: 16))
+                        .clipShape(Capsule())
                     }
                 }
             }
-            .clipShape(.rect(cornerRadius: 16))
-            .shadow(color: SophiaTheme.emerald.opacity(isLastLesson && course.hasQuiz ? 0.5 : 0.25), radius: isLastLesson && course.hasQuiz ? 16 : 8, y: 2)
+            .clipShape(Capsule())
+            .overlay { Capsule().strokeBorder(ink, lineWidth: 3) }
+            .shadow(color: ink.opacity(0.9), radius: 0, x: 0, y: 4)
             .scaleEffect(isLastLesson && course.hasQuiz && quizButtonPulse ? 1.04 : 1.0)
         }
         .padding(.horizontal, 24)

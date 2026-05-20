@@ -9,8 +9,10 @@ struct RichContentView: View {
     let content: String
     let accent: Color
 
+    static let ink = Color.black
+
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
+        VStack(alignment: .leading, spacing: 20) {
             ForEach(Array(blocks.enumerated()), id: \.offset) { _, block in
                 blockView(block)
             }
@@ -22,9 +24,9 @@ struct RichContentView: View {
         switch block {
         case .text(let str):
             Text(markdown(str))
-                .font(.system(.body, design: .rounded))
-                .foregroundStyle(.white.opacity(0.85))
-                .lineSpacing(6)
+                .font(.system(.title3, design: .rounded, weight: .bold))
+                .foregroundStyle(Self.ink)
+                .lineSpacing(8)
                 .fixedSize(horizontal: false, vertical: true)
         case .image(let name):
             CourseInlineImage(rawName: name)
@@ -158,16 +160,16 @@ struct CourseInlineImage: View {
             }
             .frame(maxWidth: .infinity)
             .frame(height: 200)
-            .clipShape(.rect(cornerRadius: 14))
+            .clipShape(.rect(cornerRadius: 18))
             .overlay {
-                RoundedRectangle(cornerRadius: 14)
-                    .strokeBorder(.white.opacity(0.06), lineWidth: 1)
+                RoundedRectangle(cornerRadius: 18)
+                    .strokeBorder(.black, lineWidth: 2.5)
             }
 
             if let credit, !credit.formatted.isEmpty {
                 Text(credit.formatted)
                     .font(.system(.caption2, design: .rounded))
-                    .foregroundStyle(.white.opacity(0.4))
+                    .foregroundStyle(.black.opacity(0.4))
                     .lineSpacing(2)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.horizontal, 4)
@@ -177,17 +179,14 @@ struct CourseInlineImage: View {
 
     private var placeholder: some View {
         ZStack {
-            LinearGradient(
-                colors: [Color.white.opacity(0.06), Color.white.opacity(0.02)],
-                startPoint: .topLeading, endPoint: .bottomTrailing
-            )
+            Color.white
             VStack(spacing: 8) {
                 Image(systemName: "photo")
                     .font(.title2)
-                    .foregroundStyle(.white.opacity(0.35))
+                    .foregroundStyle(.black.opacity(0.4))
                 Text(rawName)
-                    .font(.system(.caption, design: .rounded))
-                    .foregroundStyle(.white.opacity(0.45))
+                    .font(.system(.caption, design: .rounded, weight: .semibold))
+                    .foregroundStyle(.black.opacity(0.55))
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 12)
             }
@@ -233,40 +232,51 @@ struct CourseInlineImage: View {
     }
 }
 
-/// "Le saviez-vous ?" card.
+/// "Le saviez-vous ?" card — neobrutalism style with cyan pill badge.
 struct FunFactBox: View {
     let text: String
 
-    var body: some View {
-        HStack(alignment: .top, spacing: 12) {
-            Image(systemName: "lightbulb.fill")
-                .font(.system(size: 18, weight: .semibold))
-                .foregroundStyle(Color(red: 0.99, green: 0.78, blue: 0.30))
-                .frame(width: 28, height: 28)
-                .background(Color(red: 0.99, green: 0.78, blue: 0.30).opacity(0.15), in: Circle())
+    private let mint = Color(red: 0.553, green: 0.953, blue: 0.953)
 
-            VStack(alignment: .leading, spacing: 6) {
-                Text("Le saviez-vous ?")
-                    .font(.system(.caption, design: .rounded, weight: .bold))
-                    .foregroundStyle(Color(red: 0.99, green: 0.78, blue: 0.30))
-                    .textCase(.uppercase)
-                    .tracking(0.6)
-                Text(markdown(text))
-                    .font(.system(.subheadline, design: .rounded))
-                    .foregroundStyle(.white.opacity(0.92))
-                    .lineSpacing(4)
-                    .fixedSize(horizontal: false, vertical: true)
-            }
-        }
-        .padding(14)
-        .background {
-            RoundedRectangle(cornerRadius: 14)
-                .fill(Color(red: 0.99, green: 0.78, blue: 0.30).opacity(0.08))
-                .overlay {
-                    RoundedRectangle(cornerRadius: 14)
-                        .strokeBorder(Color(red: 0.99, green: 0.78, blue: 0.30).opacity(0.25), lineWidth: 1)
+    var body: some View {
+        ZStack(alignment: .topLeading) {
+            Text(markdown(text))
+                .font(.system(.body, design: .rounded, weight: .bold))
+                .italic()
+                .foregroundStyle(.black)
+                .lineSpacing(4)
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.horizontal, 20)
+                .padding(.top, 36)
+                .padding(.bottom, 22)
+                .background {
+                    RoundedRectangle(cornerRadius: 22)
+                        .fill(Color.white)
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 22)
+                                .strokeBorder(.black, lineWidth: 3)
+                        }
                 }
+                .padding(.top, 18)
+
+            HStack(spacing: 6) {
+                Text("🧠").font(.system(size: 14))
+                Text("LE SAVIEZ-VOUS ?")
+                    .font(.system(.caption2, design: .rounded, weight: .heavy))
+                    .foregroundStyle(.black)
+                    .tracking(0.8)
+            }
+            .padding(.horizontal, 12)
+            .padding(.vertical, 8)
+            .background {
+                Capsule()
+                    .fill(mint)
+                    .overlay { Capsule().strokeBorder(.black, lineWidth: 2.5) }
+            }
+            .padding(.leading, 16)
         }
+        .shadow(color: .black.opacity(0.9), radius: 0, x: 0, y: 4)
     }
 
     private func markdown(_ s: String) -> AttributedString {
@@ -277,41 +287,53 @@ struct FunFactBox: View {
     }
 }
 
-/// "À retenir" key takeaway card.
+/// "À retenir" key takeaway card — neobrutalism style with pink badge.
 struct HighlightBox: View {
     let text: String
     let accent: Color
 
-    var body: some View {
-        HStack(alignment: .top, spacing: 12) {
-            Image(systemName: "bookmark.fill")
-                .font(.system(size: 18, weight: .semibold))
-                .foregroundStyle(accent)
-                .frame(width: 28, height: 28)
-                .background(accent.opacity(0.18), in: Circle())
+    private let pink = Color(red: 1.0, green: 0.553, blue: 0.706)
 
-            VStack(alignment: .leading, spacing: 6) {
-                Text("À retenir")
-                    .font(.system(.caption, design: .rounded, weight: .bold))
-                    .foregroundStyle(accent)
-                    .textCase(.uppercase)
-                    .tracking(0.6)
-                Text(markdown(text))
-                    .font(.system(.subheadline, design: .rounded, weight: .medium))
-                    .foregroundStyle(.white)
-                    .lineSpacing(4)
-                    .fixedSize(horizontal: false, vertical: true)
-            }
-        }
-        .padding(14)
-        .background {
-            RoundedRectangle(cornerRadius: 14)
-                .fill(accent.opacity(0.12))
-                .overlay {
-                    RoundedRectangle(cornerRadius: 14)
-                        .strokeBorder(accent.opacity(0.35), lineWidth: 1)
+    var body: some View {
+        ZStack(alignment: .topLeading) {
+            Text(markdown(text))
+                .font(.system(.body, design: .rounded, weight: .bold))
+                .foregroundStyle(.black)
+                .lineSpacing(4)
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.horizontal, 20)
+                .padding(.top, 36)
+                .padding(.bottom, 22)
+                .background {
+                    RoundedRectangle(cornerRadius: 22)
+                        .fill(Color.white)
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 22)
+                                .strokeBorder(.black, lineWidth: 3)
+                        }
                 }
+                .padding(.top, 18)
+
+            HStack(spacing: 6) {
+                Image(systemName: "bookmark.fill")
+                    .font(.system(size: 12, weight: .bold))
+                    .foregroundStyle(.black)
+                Text("À RETENIR")
+                    .font(.system(.caption2, design: .rounded, weight: .heavy))
+                    .foregroundStyle(.black)
+                    .tracking(0.8)
+            }
+            .padding(.horizontal, 12)
+            .padding(.vertical, 8)
+            .background {
+                Capsule()
+                    .fill(pink)
+                    .overlay { Capsule().strokeBorder(.black, lineWidth: 2.5) }
+            }
+            .padding(.leading, 16)
         }
+        .shadow(color: .black.opacity(0.9), radius: 0, x: 0, y: 4)
     }
 
     private func markdown(_ s: String) -> AttributedString {
