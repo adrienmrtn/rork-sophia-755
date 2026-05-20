@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct OnboardingLoadingScreen: View {
-    @ObservedObject var viewModel: OnboardingViewModel
+    @Bindable var viewModel: OnboardingViewModel
     let onNext: () -> Void
     @State private var appeared: Bool = false
     @State private var pulsing: Bool = false
@@ -36,7 +36,7 @@ struct OnboardingLoadingScreen: View {
                         GeometryReader { geo in
                             ZStack(alignment: .leading) {
                                 Capsule()
-                                    .fill(.white.opacity(0.1))
+                                    .fill(Color.black.opacity(0.1))
                                     .frame(height: 8)
                                 Capsule()
                                     .fill(
@@ -55,7 +55,7 @@ struct OnboardingLoadingScreen: View {
 
                         Text(viewModel.loadingStep)
                             .font(.system(.body, design: .rounded, weight: .medium))
-                            .foregroundStyle(.white.opacity(0.6))
+                            .foregroundStyle(Color.black.opacity(0.6))
                             .contentTransition(.opacity)
                             .animation(.easeInOut(duration: 0.3), value: viewModel.loadingStep)
 

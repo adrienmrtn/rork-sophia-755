@@ -15,7 +15,7 @@ struct OnboardingTopicsCarouselScreen: View {
                 VStack(spacing: 10) {
                     Text(title)
                         .font(.system(.title2, design: .rounded, weight: .bold))
-                        .foregroundStyle(.white)
+                        .foregroundStyle(SophiaTheme.textPrimary)
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 24)
                         .opacity(appeared ? 1 : 0)
@@ -23,7 +23,7 @@ struct OnboardingTopicsCarouselScreen: View {
 
                     Text(subtitle)
                         .font(.system(.subheadline, design: .rounded))
-                        .foregroundStyle(.white.opacity(0.6))
+                        .foregroundStyle(Color.black.opacity(0.6))
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 32)
                         .opacity(appeared ? 1 : 0)
@@ -37,7 +37,7 @@ struct OnboardingTopicsCarouselScreen: View {
                             VStack(alignment: .leading, spacing: 10) {
                                 Text(category.name)
                                     .font(.system(.headline, design: .rounded, weight: .bold))
-                                    .foregroundStyle(.white.opacity(0.8))
+                                    .foregroundStyle(Color.black.opacity(0.8))
                                     .padding(.horizontal, 24)
 
                                 ContinuousScrollingRow(
@@ -184,7 +184,7 @@ struct OnboardingMiniCard: View {
 
             Text(title)
                 .font(.system(.caption2, design: .rounded, weight: .bold))
-                .foregroundStyle(.white)
+                .foregroundStyle(SophiaTheme.textPrimary)
                 .lineLimit(2)
                 .multilineTextAlignment(.leading)
                 .frame(width: 140, alignment: .leading)

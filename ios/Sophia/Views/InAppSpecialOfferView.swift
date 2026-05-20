@@ -43,9 +43,9 @@ struct InAppSpecialOfferView: View {
                     } label: {
                         Image(systemName: "xmark")
                             .font(.system(size: 14, weight: .bold))
-                            .foregroundStyle(.white.opacity(0.4))
+                            .foregroundStyle(Color.black.opacity(0.4))
                             .frame(width: 32, height: 32)
-                            .background(.white.opacity(0.08), in: .circle)
+                            .background(Color.black.opacity(0.08), in: .circle)
                     }
                     .padding(.trailing, 20)
                     .padding(.top, 16)
@@ -56,7 +56,7 @@ struct InAppSpecialOfferView: View {
                         VStack(spacing: 12) {
                             Text("Votre offre unique")
                                 .font(.system(.title2, design: .rounded, weight: .bold))
-                                .foregroundStyle(.white)
+                                .foregroundStyle(SophiaTheme.textPrimary)
                                 .opacity(appeared ? 1 : 0)
                                 .offset(y: appeared ? 0 : 15)
 
@@ -77,27 +77,27 @@ struct InAppSpecialOfferView: View {
                         VStack(spacing: 8) {
                             Text("1,67 \u{20AC}")
                                 .font(.system(size: 52, weight: .heavy, design: .rounded))
-                                .foregroundStyle(.white)
+                                .foregroundStyle(SophiaTheme.textPrimary)
                             + Text(" /mois")
                                 .font(.system(.title3, design: .rounded, weight: .medium))
-                                .foregroundStyle(.white.opacity(0.6))
+                                .foregroundStyle(Color.black.opacity(0.6))
 
                             HStack(spacing: 8) {
                                 Text("factur\u{00E9}")
                                     .font(.system(.subheadline, design: .rounded))
-                                    .foregroundStyle(.white.opacity(0.5))
+                                    .foregroundStyle(Color.black.opacity(0.5))
                                 Text("69,99 \u{20AC}")
                                     .font(.system(.subheadline, design: .rounded, weight: .medium))
-                                    .foregroundStyle(.white.opacity(0.35))
-                                    .strikethrough(color: .white.opacity(0.35))
+                                    .foregroundStyle(Color.black.opacity(0.35))
+                                    .strikethrough(color: Color.black.opacity(0.35))
                                 Text("19,99 \u{20AC}/an")
                                     .font(.system(.subheadline, design: .rounded, weight: .bold))
-                                    .foregroundStyle(.white)
+                                    .foregroundStyle(SophiaTheme.textPrimary)
                             }
                         }
                         .padding(.vertical, 24)
                         .frame(maxWidth: .infinity)
-                        .background(.white.opacity(0.04), in: .rect(cornerRadius: 20))
+                        .background(Color.black.opacity(0.04), in: .rect(cornerRadius: 20))
                         .overlay(
                             RoundedRectangle(cornerRadius: 20)
                                 .strokeBorder(
@@ -119,7 +119,7 @@ struct InAppSpecialOfferView: View {
                                 .foregroundStyle(SophiaTheme.streakOrange)
                             Text("Expire dans")
                                 .font(.system(.subheadline, design: .rounded, weight: .medium))
-                                .foregroundStyle(.white.opacity(0.7))
+                                .foregroundStyle(Color.black.opacity(0.7))
                             Text("\(String(format: "%02d", countdownMinutes)):\(String(format: "%02d", countdownSeconds))")
                                 .font(.system(.title3, design: .monospaced, weight: .bold))
                                 .foregroundStyle(SophiaTheme.streakOrange)
@@ -163,7 +163,7 @@ struct InAppSpecialOfferView: View {
                             Text("D\u{00E9}bloquer mon acc\u{00E8}s -70%")
                                 .font(.system(.headline, design: .rounded, weight: .bold))
                         }
-                        .foregroundStyle(.white)
+                        .foregroundStyle(SophiaTheme.textPrimary)
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 18)
                         .background(
@@ -185,7 +185,7 @@ struct InAppSpecialOfferView: View {
                     } label: {
                         Text("Restaurer les achats")
                             .font(.system(.caption, design: .rounded))
-                            .foregroundStyle(.white.opacity(0.35))
+                            .foregroundStyle(Color.black.opacity(0.35))
                     }
                 }
                 .padding(.bottom, 40)
@@ -247,7 +247,7 @@ private struct InAppSpecialFeature: View {
                 .foregroundStyle(SophiaTheme.emerald)
             Text(text)
                 .font(.system(.subheadline, design: .rounded))
-                .foregroundStyle(.white.opacity(0.8))
+                .foregroundStyle(Color.black.opacity(0.8))
             Spacer()
         }
     }

@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct OnboardingInterestsScreen: View {
-    @ObservedObject var viewModel: OnboardingViewModel
+    @Bindable var viewModel: OnboardingViewModel
     let onNext: () -> Void
     @State private var appeared: Bool = false
 
@@ -33,13 +33,13 @@ struct OnboardingInterestsScreen: View {
 
                     Text("Quels sujets t'intéressent ?")
                         .font(.system(.title2, design: .rounded, weight: .bold))
-                        .foregroundStyle(.white)
+                        .foregroundStyle(SophiaTheme.textPrimary)
                         .multilineTextAlignment(.center)
                         .opacity(appeared ? 1 : 0)
 
                     Text("Sélectionne au moins un sujet")
                         .font(.system(.subheadline, design: .rounded))
-                        .foregroundStyle(.white.opacity(0.4))
+                        .foregroundStyle(Color.black.opacity(0.4))
                         .opacity(appeared ? 1 : 0)
                 }
                 .padding(.top, 60)
@@ -117,7 +117,7 @@ private struct InterestCard: View {
                             Color.black.opacity(0.3)
                             Image(systemName: "checkmark.circle.fill")
                                 .font(.system(size: 32))
-                                .foregroundStyle(.white)
+                                .foregroundStyle(SophiaTheme.textPrimary)
                                 .transition(.scale.combined(with: .opacity))
                         }
                     }
@@ -129,7 +129,7 @@ private struct InterestCard: View {
                         .foregroundStyle(color)
                     Text(label)
                         .font(.system(.subheadline, design: .rounded, weight: .bold))
-                        .foregroundStyle(.white)
+                        .foregroundStyle(SophiaTheme.textPrimary)
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 12)

@@ -62,13 +62,13 @@ struct PrivacyPolicyView: View {
     private func sectionTitle(_ text: String) -> some View {
         Text(text)
             .font(.system(.headline, design: .rounded, weight: .bold))
-            .foregroundStyle(.white)
+            .foregroundStyle(SophiaTheme.textPrimary)
     }
 
     private func sectionBody(_ text: String) -> some View {
         Text(text)
             .font(.system(.subheadline, design: .rounded))
-            .foregroundStyle(.white.opacity(0.7))
+            .foregroundStyle(Color.black.opacity(0.7))
             .lineSpacing(4)
     }
 }

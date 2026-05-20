@@ -46,13 +46,13 @@ struct FavoritesView: View {
         VStack(spacing: 16) {
             Image(systemName: "heart.slash")
                 .font(.system(size: 52))
-                .foregroundStyle(.white.opacity(0.2))
+                .foregroundStyle(Color.black.opacity(0.2))
             Text("Aucun favori")
                 .font(.system(.title2, design: .rounded, weight: .bold))
-                .foregroundStyle(.white)
+                .foregroundStyle(SophiaTheme.textPrimary)
             Text("Appuie sur le cœur d'un cours\npour le retrouver ici.")
                 .font(.system(.subheadline, design: .rounded))
-                .foregroundStyle(.white.opacity(0.5))
+                .foregroundStyle(Color.black.opacity(0.5))
                 .multilineTextAlignment(.center)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

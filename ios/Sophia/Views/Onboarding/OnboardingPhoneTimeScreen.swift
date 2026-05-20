@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct OnboardingPhoneTimeScreen: View {
-    @ObservedObject var viewModel: OnboardingViewModel
+    @Bindable var viewModel: OnboardingViewModel
     let onNext: () -> Void
     @State private var appeared: Bool = false
 
@@ -29,7 +29,7 @@ struct OnboardingPhoneTimeScreen: View {
 
                         Text("Combien de temps par jour\npasses-tu sur ton téléphone ?")
                             .font(.system(.title2, design: .rounded, weight: .bold))
-                            .foregroundStyle(.white)
+                            .foregroundStyle(SophiaTheme.textPrimary)
                             .multilineTextAlignment(.center)
                             .opacity(appeared ? 1 : 0)
                             .offset(y: appeared ? 0 : 15)
@@ -47,11 +47,11 @@ struct OnboardingPhoneTimeScreen: View {
                                 HStack(spacing: 14) {
                                     Image(systemName: option.icon)
                                         .font(.title3)
-                                        .foregroundStyle(isSelected ? SophiaTheme.emerald : .white.opacity(0.5))
+                                        .foregroundStyle(isSelected ? SophiaTheme.emerald : Color.black.opacity(0.5))
                                         .frame(width: 32)
                                     Text(option.label)
                                         .font(.system(.body, design: .rounded, weight: .semibold))
-                                        .foregroundStyle(.white)
+                                        .foregroundStyle(SophiaTheme.textPrimary)
                                     Spacer()
                                     if isSelected {
                                         Image(systemName: "checkmark.circle.fill")
@@ -61,7 +61,7 @@ struct OnboardingPhoneTimeScreen: View {
                                 }
                                 .padding(16)
                                 .background(
-                                    isSelected ? SophiaTheme.emerald.opacity(0.12) : .white.opacity(0.05),
+                                    isSelected ? SophiaTheme.emerald.opacity(0.12) : Color.black.opacity(0.05),
                                     in: .rect(cornerRadius: 14)
                                 )
                                 .overlay(

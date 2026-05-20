@@ -1,12 +1,13 @@
 import SwiftUI
 import AVKit
+import RevenueCatUI
 
 struct PrePaywallQuizView: View {
     let onContinue: () -> Void
-    @EnvironmentObject private var paywall: PaywallCoordinator
     @State private var appeared: Bool = false
     @State private var shimmerOffset: CGFloat = -200
     @State private var player: AVPlayer?
+    @State private var showPaywall: Bool = false
 
     var body: some View {
         ZStack {
@@ -52,16 +53,16 @@ struct PrePaywallQuizView: View {
                 Spacer()
 
                 VStack(spacing: 12) {
-                    Text("Les quiz sont réservés\naux membres Premium")
+                    Text("Débloquez gratuitement\nles quiz")
                         .font(.system(.title2, design: .rounded, weight: .bold))
-                        .foregroundStyle(.white)
+                        .foregroundStyle(SophiaTheme.textPrimary)
                         .multilineTextAlignment(.center)
                         .opacity(appeared ? 1 : 0)
                         .offset(y: appeared ? 0 : 10)
 
-                    Text("Passe Premium pour tester tes\nconnaissances et progresser chaque jour")
+                    Text("Testez vos connaissances et\nprogressez chaque jour")
                         .font(.system(.body, design: .rounded))
-                        .foregroundStyle(.white.opacity(0.6))
+                        .foregroundStyle(Color.black.opacity(0.6))
                         .multilineTextAlignment(.center)
                         .opacity(appeared ? 1 : 0)
                         .offset(y: appeared ? 0 : 10)
@@ -72,9 +73,7 @@ struct PrePaywallQuizView: View {
                 VStack(spacing: 10) {
                     Button {
                         triggerHaptic(.medium)
-                        paywall.presentPrimary(onPurchasedOrRestored: {
-                            onContinue()
-                        })
+                        showPaywall = true
                     } label: {
                         HStack(spacing: 10) {
                             Image(systemName: "lock.open.fill")
@@ -99,7 +98,7 @@ struct PrePaywallQuizView: View {
                 Rectangle()
                     .fill(
                         LinearGradient(
-                            colors: [.clear, .white.opacity(0.05), .clear],
+                            colors: [.clear, Color.black.opacity(0.05), .clear],
                             startPoint: .leading,
                             endPoint: .trailing
                         )
@@ -111,7 +110,17 @@ struct PrePaywallQuizView: View {
             }
             .clipped()
         }
-        .modifier(PaywallHost(paywall: paywall, isPremium: false))
+        .sheet(isPresented: $showPaywall) {
+            PaywallView()
+                .onPurchaseCompleted { _ in
+                    showPaywall = false
+                    onContinue()
+                }
+                .onRestoreCompleted { _ in
+                    showPaywall = false
+                    onContinue()
+                }
+        }
         .onAppear {
             setupPlayer()
             withAnimation(.spring(response: 0.7, dampingFraction: 0.75).delay(0.15)) {

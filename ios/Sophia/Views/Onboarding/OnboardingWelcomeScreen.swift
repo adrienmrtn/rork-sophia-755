@@ -18,14 +18,14 @@ struct OnboardingWelcomeScreen: View {
                 VStack(spacing: 16) {
                     Text("Bienvenue sur Sophia")
                         .font(.system(.title, design: .rounded, weight: .bold))
-                        .foregroundStyle(.white)
+                        .foregroundStyle(SophiaTheme.textPrimary)
                         .opacity(appeared ? 1 : 0)
                         .offset(y: appeared ? 0 : 20)
                         .offset(y: dismissing ? 0 : 0)
 
-                    Text("La dernière fois que tu as appris\nquelque chose qui t'a vraiment surpris...\nc'était quand ?")
+                    Text("Sophia est ton compagnon quotidien.\nTous les jours, il te raconte\nquelque chose de nouveau.")
                         .font(.system(.body, design: .rounded))
-                        .foregroundStyle(.white.opacity(0.7))
+                        .foregroundStyle(Color.black.opacity(0.7))
                         .multilineTextAlignment(.center)
                         .opacity(appeared ? 1 : 0)
                         .offset(y: appeared ? 0 : 20)

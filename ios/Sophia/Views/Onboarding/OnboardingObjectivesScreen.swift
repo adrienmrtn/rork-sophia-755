@@ -1,16 +1,16 @@
 import SwiftUI
 
 struct OnboardingObjectivesScreen: View {
-    @ObservedObject var viewModel: OnboardingViewModel
+    @Bindable var viewModel: OnboardingViewModel
     let onNext: () -> Void
     @State private var appeared: Bool = false
 
-    private let objectives: [(icon: String, label: String, detail: String)] = [
-        ("sparkles", "Être plus curieux", "Découvre des anecdotes surprenantes sur chaque sujet"),
-        ("lightbulb.fill", "Apprendre de nouvelles choses", "Un nouveau sujet maîtrisé chaque jour"),
-        ("star.fill", "Impressionner tes proches", "Brille en conversation — des faits que personne ne connaît"),
-        ("bubble.left.and.bubble.right.fill", "Renforcer ton aisance en société", "Les clés culturelles pour parler de tout"),
-        ("arrow.down.circle.fill", "Réduire ton temps à scroller", "10 min utiles au lieu de 30 min vides"),
+    private let objectives: [(icon: String, label: String)] = [
+        ("sparkles", "Être plus curieux"),
+        ("lightbulb.fill", "Apprendre de nouvelles choses"),
+        ("star.fill", "Impressionner tes proches"),
+        ("bubble.left.and.bubble.right.fill", "Renforcer ton aisance en société"),
+        ("arrow.down.circle.fill", "Réduire ton temps à scroller"),
     ]
 
     var body: some View {
@@ -30,13 +30,13 @@ struct OnboardingObjectivesScreen: View {
 
                         Text("Quel est ton objectif\navec Sophia ?")
                             .font(.system(.title2, design: .rounded, weight: .bold))
-                            .foregroundStyle(.white)
+                            .foregroundStyle(SophiaTheme.textPrimary)
                             .multilineTextAlignment(.center)
                             .opacity(appeared ? 1 : 0)
 
                         Text("Sélectionne un ou plusieurs objectifs")
                             .font(.system(.subheadline, design: .rounded))
-                            .foregroundStyle(.white.opacity(0.4))
+                            .foregroundStyle(Color.black.opacity(0.4))
                             .opacity(appeared ? 1 : 0)
                     }
 
@@ -52,25 +52,17 @@ struct OnboardingObjectivesScreen: View {
                                 HStack(spacing: 14) {
                                     Image(systemName: obj.icon)
                                         .font(.title3)
-                                        .foregroundStyle(isSelected ? SophiaTheme.emerald : .white.opacity(0.4))
+                                        .foregroundStyle(isSelected ? SophiaTheme.emerald : Color.black.opacity(0.4))
                                         .frame(width: 28, alignment: .center)
-                                    VStack(alignment: .leading, spacing: 3) {
-                                        Text(obj.label)
-                                            .font(.system(.body, design: .rounded, weight: .medium))
-                                            .foregroundStyle(.white)
-                                            .multilineTextAlignment(.leading)
-                                            .fixedSize(horizontal: false, vertical: true)
-
-                                        Text(obj.detail)
-                                            .font(.system(.caption, design: .rounded, weight: .medium))
-                                            .foregroundStyle(.white.opacity(0.55))
-                                            .multilineTextAlignment(.leading)
-                                            .fixedSize(horizontal: false, vertical: true)
-                                    }
-                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    Text(obj.label)
+                                        .font(.system(.body, design: .rounded, weight: .medium))
+                                        .foregroundStyle(SophiaTheme.textPrimary)
+                                        .multilineTextAlignment(.leading)
+                                        .fixedSize(horizontal: false, vertical: true)
+                                        .frame(maxWidth: .infinity, alignment: .leading)
                                     ZStack {
                                         Circle()
-                                            .strokeBorder(.white.opacity(0.2), lineWidth: 2)
+                                            .strokeBorder(Color.black.opacity(0.2), lineWidth: 2)
                                             .frame(width: 24, height: 24)
                                         if isSelected {
                                             Circle()
@@ -79,7 +71,7 @@ struct OnboardingObjectivesScreen: View {
                                                 .overlay {
                                                     Image(systemName: "checkmark")
                                                         .font(.caption.weight(.bold))
-                                                        .foregroundStyle(.white)
+                                                        .foregroundStyle(SophiaTheme.textPrimary)
                                                 }
                                                 .transition(.scale.combined(with: .opacity))
                                         }
@@ -88,7 +80,7 @@ struct OnboardingObjectivesScreen: View {
                                 }
                                 .padding(14)
                                 .background(
-                                    isSelected ? SophiaTheme.emerald.opacity(0.1) : .white.opacity(0.04),
+                                    isSelected ? SophiaTheme.emerald.opacity(0.1) : Color.black.opacity(0.04),
                                     in: .rect(cornerRadius: 14)
                                 )
                                 .overlay(

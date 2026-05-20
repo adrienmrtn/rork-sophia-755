@@ -37,12 +37,12 @@ struct OnboardingProfileGenScreen: View {
                     VStack(spacing: 12) {
                         Text("Il est temps de générer\nvotre profil personnalisé")
                             .font(.system(.title2, design: .rounded, weight: .bold))
-                            .foregroundStyle(.white)
+                            .foregroundStyle(SophiaTheme.textPrimary)
                             .multilineTextAlignment(.center)
 
                         Text("9 utilisateurs sur 10 se sentent\nplus cultivés après une semaine")
                             .font(.system(.body, design: .rounded))
-                            .foregroundStyle(.white.opacity(0.6))
+                            .foregroundStyle(Color.black.opacity(0.6))
                             .multilineTextAlignment(.center)
                     }
                     .opacity(appeared ? 1 : 0)

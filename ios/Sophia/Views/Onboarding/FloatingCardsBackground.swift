@@ -81,7 +81,7 @@ private struct FloatingCardItem: View {
 
             Text(title)
                 .font(.system(cardScale > 1.1 ? .caption : .caption2, design: .rounded, weight: .bold))
-                .foregroundStyle(.white)
+                .foregroundStyle(SophiaTheme.textPrimary)
                 .lineLimit(2)
                 .frame(width: w, alignment: .leading)
                 .padding(.horizontal, 6)

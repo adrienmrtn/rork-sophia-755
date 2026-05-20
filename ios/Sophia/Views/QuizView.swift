@@ -1,15 +1,10 @@
 import SwiftUI
-import RevenueCatUI
 
 struct QuizView: View {
     let course: Course
     let progressManager: ProgressManager
-    let isPremium: Bool
     let onReturnHome: () -> Void
     @Environment(\.dismiss) private var dismiss
-    @EnvironmentObject private var paywall: PaywallCoordinator
-    @State private var unlocked: Bool = false
-    @State private var didRequestPaywall: Bool = false
 
     @State private var currentQuestionIndex: Int = 0
     @State private var selectedOptionIndex: Int? = nil
@@ -39,8 +34,6 @@ struct QuizView: View {
     @State private var showCombo: Bool = false
     @State private var xpEarned: Int = 0
     @State private var showXPPopup: Bool = false
-    @State private var userAnswers: [Int?] = []
-    @State private var showCorrections: Bool = false
 
     private var currentQuestion: ShuffledQuestion {
         shuffledQuestions[currentQuestionIndex]
@@ -77,95 +70,10 @@ struct QuizView: View {
                     .zIndex(20)
             }
         }
-        .modifier(PaywallHost(paywall: paywall, isPremium: isPremium))
         .onAppear {
-            unlocked = isPremium
             streakBefore = progressManager.streak
             completedBefore = progressManager.completedCount
             shuffleAllQuestions()
-            if !unlocked, !didRequestPaywall {
-                didRequestPaywall = true
-                paywall.presentPrimary(
-                    onPurchasedOrRestored: {
-                        unlocked = true
-                    },
-                    onDismissWithoutPurchase: {
-                        onReturnHome()
-                    }
-                )
-            }
-        }
-        .sheet(isPresented: $showCorrections) {
-            QuizCorrectionsSheet(
-                questions: shuffledQuestions,
-                answers: userAnswers
-            )
-            .presentationDragIndicator(.visible)
-        }
-    }
-
-    private struct QuizCorrectionsSheet: View {
-        let questions: [ShuffledQuestion]
-        let answers: [Int?]
-
-        var body: some View {
-            ZStack {
-                SophiaTheme.background.ignoresSafeArea()
-
-                ScrollView {
-                    VStack(alignment: .leading, spacing: 14) {
-                        VStack(alignment: .leading, spacing: 6) {
-                            Text("Corrections")
-                                .font(.system(.title2, design: .rounded, weight: .bold))
-                                .foregroundStyle(.white)
-                            Text("Retrouve la bonne réponse pour chaque question")
-                                .font(.system(.subheadline, design: .rounded, weight: .medium))
-                                .foregroundStyle(.white.opacity(0.6))
-                        }
-                        .padding(.top, 8)
-
-                        VStack(spacing: 12) {
-                            ForEach(Array(questions.enumerated()), id: \.offset) { i, q in
-                                let selected = i < answers.count ? answers[i] : nil
-                                let isCorrect = selected == q.correctIndex
-                                VStack(alignment: .leading, spacing: 10) {
-                                    HStack(alignment: .top, spacing: 10) {
-                                        ZStack {
-                                            Circle()
-                                                .fill((isCorrect ? SophiaTheme.emerald : SophiaTheme.errorRed).opacity(0.18))
-                                                .frame(width: 28, height: 28)
-                                            Image(systemName: isCorrect ? "checkmark" : "xmark")
-                                                .font(.system(size: 12, weight: .bold))
-                                                .foregroundStyle(isCorrect ? SophiaTheme.emerald : SophiaTheme.errorRed)
-                                        }
-                                        Text(q.question)
-                                            .font(.system(.subheadline, design: .rounded, weight: .bold))
-                                            .foregroundStyle(.white)
-                                        Spacer(minLength: 0)
-                                    }
-
-                                    Text("Ta réponse : " + (selected.map { q.options[$0] } ?? "—"))
-                                        .font(.system(.caption, design: .rounded, weight: .medium))
-                                        .foregroundStyle(.white.opacity(0.65))
-
-                                    Text("Bonne réponse : " + q.options[q.correctIndex])
-                                        .font(.system(.caption, design: .rounded, weight: .bold))
-                                        .foregroundStyle(SophiaTheme.emerald)
-                                }
-                                .padding(14)
-                                .background(.white.opacity(0.05), in: .rect(cornerRadius: 14))
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 14)
-                                        .strokeBorder(.white.opacity(0.08), lineWidth: 1)
-                                )
-                            }
-                        }
-                        .padding(.top, 6)
-                    }
-                    .padding(.horizontal, 16)
-                    .padding(.bottom, 28)
-                }
-            }
         }
     }
 
@@ -180,7 +88,6 @@ struct QuizView: View {
                 correctIndex: newCorrectIndex
             )
         }
-        userAnswers = Array(repeating: nil, count: shuffledQuestions.count)
         questionAppeared = false
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             withAnimation(.spring(response: 0.5, dampingFraction: 0.8)) {
@@ -198,7 +105,7 @@ struct QuizView: View {
                 VStack(alignment: .leading, spacing: 24) {
                     Text(currentQuestion.question)
                         .font(.system(.title3, design: .rounded, weight: .bold))
-                        .foregroundStyle(.white)
+                        .foregroundStyle(SophiaTheme.textPrimary)
                         .id("question_\(currentQuestionIndex)")
                         .opacity(questionAppeared ? 1 : 0)
                         .offset(y: questionAppeared ? 0 : 15)
@@ -234,7 +141,7 @@ struct QuizView: View {
             GeometryReader { geo in
                 ZStack(alignment: .leading) {
                     Capsule()
-                        .fill(.white.opacity(0.1))
+                        .fill(Color.black.opacity(0.1))
                         .frame(height: 14)
                     Capsule()
                         .fill(
@@ -279,16 +186,16 @@ struct QuizView: View {
             } label: {
                 Image(systemName: "xmark")
                     .font(.title3.weight(.semibold))
-                    .foregroundStyle(.white.opacity(0.7))
+                    .foregroundStyle(Color.black.opacity(0.7))
                     .frame(width: 36, height: 36)
-                    .background(.white.opacity(0.1), in: Circle())
+                    .background(Color.black.opacity(0.1), in: Circle())
             }
 
             Spacer()
 
             Text("\(currentQuestionIndex + 1)/\(shuffledQuestions.count)")
                 .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                .foregroundStyle(.white.opacity(0.6))
+                .foregroundStyle(Color.black.opacity(0.6))
         }
         .padding(.horizontal, 20)
         .padding(.top, 12)
@@ -298,9 +205,6 @@ struct QuizView: View {
         Button {
             guard !hasAnswered else { return }
             selectedOptionIndex = index
-            if currentQuestionIndex < userAnswers.count {
-                userAnswers[currentQuestionIndex] = index
-            }
             hasAnswered = true
             if index == currentQuestion.correctIndex {
                 UINotificationFeedbackGenerator().notificationOccurred(.success)
@@ -335,7 +239,7 @@ struct QuizView: View {
 
                 Text(text)
                     .font(.system(.body, design: .rounded, weight: .semibold))
-                    .foregroundStyle(.white)
+                    .foregroundStyle(SophiaTheme.textPrimary)
                     .multilineTextAlignment(.leading)
 
                 Spacer()
@@ -374,35 +278,35 @@ struct QuizView: View {
     }
 
     private func optionLetterColor(for index: Int) -> Color {
-        guard hasAnswered else { return .white.opacity(0.6) }
+        guard hasAnswered else { return Color.black.opacity(0.6) }
         if index == currentQuestion.correctIndex { return .white }
         if index == selectedOptionIndex { return .white }
-        return .white.opacity(0.3)
+        return Color.black.opacity(0.3)
     }
 
     private func optionLetterBg(for index: Int) -> some ShapeStyle {
-        guard hasAnswered else { return AnyShapeStyle(.white.opacity(0.08)) }
+        guard hasAnswered else { return AnyShapeStyle(Color.black.opacity(0.08)) }
         if index == currentQuestion.correctIndex { return AnyShapeStyle(SophiaTheme.emerald) }
         if index == selectedOptionIndex { return AnyShapeStyle(SophiaTheme.errorRed) }
-        return AnyShapeStyle(.white.opacity(0.04))
+        return AnyShapeStyle(Color.black.opacity(0.04))
     }
 
     private func duoBorderColor(for index: Int) -> Color {
         guard hasAnswered else {
-            return .white.opacity(0.12)
+            return Color.black.opacity(0.12)
         }
         if index == currentQuestion.correctIndex { return SophiaTheme.emerald }
         if index == selectedOptionIndex { return SophiaTheme.errorRed }
-        return .white.opacity(0.06)
+        return Color.black.opacity(0.06)
     }
 
     private func duoOptionBg(for index: Int) -> Color {
         guard hasAnswered else {
-            return .white.opacity(0.05)
+            return Color.black.opacity(0.05)
         }
         if index == currentQuestion.correctIndex { return SophiaTheme.emerald.opacity(0.1) }
         if index == selectedOptionIndex { return SophiaTheme.errorRed.opacity(0.1) }
-        return .white.opacity(0.02)
+        return Color.black.opacity(0.02)
     }
 
     private func showXPBubble(xp: Int) {
@@ -451,11 +355,11 @@ struct QuizView: View {
                     VStack(alignment: .leading, spacing: 4) {
                         Text(isCorrect ? (comboCount >= 3 ? "Incroyable ! 🔥" : comboCount >= 2 ? "Excellent !" : "Bonne réponse !") : "Pas tout à fait...")
                             .font(.system(.headline, design: .rounded, weight: .bold))
-                            .foregroundStyle(.white)
+                            .foregroundStyle(SophiaTheme.textPrimary)
                         if !isCorrect {
                             Text("Réponse : \(currentQuestion.options[currentQuestion.correctIndex])")
                                 .font(.system(.caption, design: .rounded))
-                                .foregroundStyle(.white.opacity(0.55))
+                                .foregroundStyle(Color.black.opacity(0.55))
                                 .lineLimit(2)
                         }
                     }
@@ -480,7 +384,7 @@ struct QuizView: View {
                 } label: {
                     Text("Continuer")
                         .font(.system(.headline, design: .rounded, weight: .bold))
-                        .foregroundStyle(.white)
+                        .foregroundStyle(SophiaTheme.textPrimary)
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 16)
                         .background(
@@ -575,7 +479,7 @@ struct QuizView: View {
                 VStack(spacing: 10) {
                     Text("Bravo, cours terminé !")
                         .font(.system(.title, design: .rounded, weight: .bold))
-                        .foregroundStyle(.white)
+                        .foregroundStyle(SophiaTheme.textPrimary)
                         .opacity(resultAppeared ? 1 : 0)
                         .offset(y: resultAppeared ? 0 : 15)
                         .animation(.spring(response: 0.5).delay(0.3), value: resultAppeared)
@@ -587,14 +491,14 @@ struct QuizView: View {
                             .contentTransition(.numericText(countsDown: false))
                         Text("/ \(shuffledQuestions.count)")
                             .font(.system(.title2, design: .rounded, weight: .medium))
-                            .foregroundStyle(.white.opacity(0.5))
+                            .foregroundStyle(Color.black.opacity(0.5))
                     }
                     .opacity(resultAppeared ? 1 : 0)
                     .animation(.spring(response: 0.5).delay(0.5), value: resultAppeared)
 
                     Text("bonnes réponses")
                         .font(.system(.subheadline, design: .rounded))
-                        .foregroundStyle(.white.opacity(0.5))
+                        .foregroundStyle(Color.black.opacity(0.5))
                         .opacity(resultAppeared ? 1 : 0)
                         .animation(.spring(response: 0.5).delay(0.6), value: resultAppeared)
 
@@ -640,25 +544,6 @@ struct QuizView: View {
                         .padding(.vertical, 18)
                         .background(SophiaTheme.emerald, in: .rect(cornerRadius: 16))
                         .shadow(color: SophiaTheme.emerald.opacity(0.3), radius: 8, y: 2)
-                    }
-
-                    Button {
-                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                        showCorrections = true
-                    } label: {
-                        HStack(spacing: 8) {
-                            Image(systemName: "list.bullet.rectangle")
-                            Text("Voir les corrections")
-                        }
-                        .font(.system(.headline, design: .rounded, weight: .semibold))
-                        .foregroundStyle(.white.opacity(0.85))
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 18)
-                        .background(.white.opacity(0.08), in: .rect(cornerRadius: 16))
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 16)
-                                .strokeBorder(.white.opacity(0.10), lineWidth: 1)
-                        )
                     }
 
                     Button {
@@ -757,7 +642,7 @@ struct QuizView: View {
                 let isFilled = index < starsRevealed
                 Image(systemName: isFilled ? "star.fill" : "star")
                     .font(.system(size: 36))
-                    .foregroundStyle(isFilled ? SophiaTheme.streakOrange : .white.opacity(0.12))
+                    .foregroundStyle(isFilled ? SophiaTheme.streakOrange : Color.black.opacity(0.12))
                     .scaleEffect(isFilled ? 1.15 : 0.85)
                     .shadow(color: isFilled ? SophiaTheme.streakOrange.opacity(0.5) : .clear, radius: isFilled ? 10 : 0)
                     .animation(.spring(response: 0.4, dampingFraction: 0.4), value: starsRevealed)
@@ -859,13 +744,13 @@ struct QuizView: View {
                     VStack(spacing: 10) {
                         Text("Bravo !")
                             .font(.system(size: 38, weight: .black, design: .rounded))
-                            .foregroundStyle(.white)
+                            .foregroundStyle(SophiaTheme.textPrimary)
                             .opacity(celebrationAppeared ? 1 : 0)
                             .scaleEffect(celebrationAppeared ? 1 : 0.7)
 
                         Text("Tu as terminé ton \(ordinal(newCompletedCount)) cours !")
                             .font(.system(.title3, design: .rounded, weight: .semibold))
-                            .foregroundStyle(.white.opacity(0.7))
+                            .foregroundStyle(Color.black.opacity(0.7))
                             .opacity(celebrationAppeared ? 1 : 0)
                             .offset(y: celebrationAppeared ? 0 : 10)
                     }

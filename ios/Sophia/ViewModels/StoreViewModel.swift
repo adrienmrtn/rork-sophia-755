@@ -1,14 +1,14 @@
 import Foundation
-import Combine
+import Observation
 import RevenueCat
 
-@MainActor
-final class StoreViewModel: ObservableObject {
-    @Published var offerings: Offerings?
-    @Published var isPremium: Bool = false
-    @Published var isLoading: Bool = false
-    @Published var isPurchasing: Bool = false
-    @Published var error: String?
+@Observable
+class StoreViewModel {
+    var offerings: Offerings?
+    var isPremium: Bool = false
+    var isLoading: Bool = false
+    var isPurchasing: Bool = false
+    var error: String?
 
     init() {
         Task { await listenForUpdates() }
@@ -18,7 +18,6 @@ final class StoreViewModel: ObservableObject {
     private func listenForUpdates() async {
         for await info in Purchases.shared.customerInfoStream {
             self.isPremium = info.entitlements["premium"]?.isActive == true
-            UserDefaults.standard.set(self.isPremium, forKey: "sophia_is_premium")
         }
     }
 
@@ -39,7 +38,6 @@ final class StoreViewModel: ObservableObject {
             let result = try await Purchases.shared.purchase(package: package)
             if !result.userCancelled {
                 isPremium = result.customerInfo.entitlements["premium"]?.isActive == true
-                UserDefaults.standard.set(isPremium, forKey: "sophia_is_premium")
                 return isPremium
             }
             return false
@@ -57,7 +55,6 @@ final class StoreViewModel: ObservableObject {
         do {
             let info = try await Purchases.shared.restorePurchases()
             isPremium = info.entitlements["premium"]?.isActive == true
-            UserDefaults.standard.set(isPremium, forKey: "sophia_is_premium")
         } catch {
             self.error = error.localizedDescription
         }
@@ -67,7 +64,6 @@ final class StoreViewModel: ObservableObject {
         do {
             let info = try await Purchases.shared.customerInfo()
             isPremium = info.entitlements["premium"]?.isActive == true
-            UserDefaults.standard.set(isPremium, forKey: "sophia_is_premium")
         } catch {
             self.error = error.localizedDescription
         }
