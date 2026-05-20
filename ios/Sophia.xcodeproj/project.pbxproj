@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		106F0C0A0000000000000001 /* CoreXLSX in Frameworks */ = {isa = PBXBuildFile; productRef = 106F0C0A0000000000000002 /* CoreXLSX */; };
-		106F0C0A0000000000000006 /* data in Resources */ = {isa = PBXBuildFile; fileRef = 106F0C0A0000000000000005 /* data */; };
 		XX298127CFBB2CF3FA631BXX /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = XXDCC169DE7B2F3C1C8B10XX /* RevenueCat */; };
 		XXA1B2C3D4E5F6A7B8C9D0XX /* RevenueCatUI in Frameworks */ = {isa = PBXBuildFile; productRef = XXA1B2C3D4E5F6A7B8C9D1XX /* RevenueCatUI */; };
 /* End PBXBuildFile section */
@@ -34,7 +33,6 @@
 		105FC57A2E9EAD3100EA8BCF /* Sophia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sophia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		105FC5892E9EAD3200EA8BCF /* SophiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SophiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		105FC5932E9EAD3200EA8BCF /* SophiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SophiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		106F0C0A0000000000000005 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data; path = ../data; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -74,7 +72,6 @@
 		105FC5712E9EAD3100EA8BCF = {
 			isa = PBXGroup;
 			children = (
-				106F0C0A0000000000000005 /* data */,
 				105FC57C2E9EAD3100EA8BCF /* Sophia */,
 				105FC58C2E9EAD3200EA8BCF /* SophiaTests */,
 				105FC5962E9EAD3200EA8BCF /* SophiaUITests */,
@@ -219,7 +216,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				106F0C0A0000000000000006 /* data in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
