@@ -10,10 +10,10 @@ struct OnboardingWastedTimeScreen: View {
     private var targetValue: Int {
         guard let sel = viewModel.phoneTimeSelection else { return 0 }
         switch sel {
-        case 0: return 182
+        case 0: return 365
         case 1: return 547
         case 2: return 1095
-        case 3: return 2190
+        case 3: return 1460
         default: return 0
         }
     }
@@ -25,43 +25,56 @@ struct OnboardingWastedTimeScreen: View {
             VStack(spacing: 0) {
                 Spacer()
 
-                VStack(spacing: 28) {
+                VStack(spacing: 22) {
                     Image(systemName: "hourglass")
-                        .font(.system(size: 48))
+                        .font(.system(size: 44))
                         .foregroundStyle(SophiaTheme.streakOrange)
                         .symbolEffect(.wiggle, value: appeared)
                         .opacity(appeared ? 1 : 0)
 
                     VStack(spacing: 8) {
                         Text("C'est")
-                            .font(.system(.title3, design: .rounded, weight: .medium))
+                            .font(.system(.subheadline, design: .rounded, weight: .semibold))
                             .foregroundStyle(.white.opacity(0.6))
 
-                        HStack(alignment: .firstTextBaseline, spacing: 6) {
+                        HStack(alignment: .firstTextBaseline, spacing: 8) {
                             Text("\(counterValue)")
                                 .font(.system(size: 64, weight: .heavy, design: .rounded))
                                 .foregroundStyle(SophiaTheme.streakOrange)
                                 .contentTransition(.numericText(countsDown: false))
                             Text("heures")
-                                .font(.system(.title2, design: .rounded, weight: .bold))
-                                .foregroundStyle(.white.opacity(0.7))
+                                .font(.system(.title3, design: .rounded, weight: .bold))
+                                .foregroundStyle(.white.opacity(0.75))
                         }
 
                         Text("perdues par an.")
-                            .font(.system(.title3, design: .rounded, weight: .medium))
+                            .font(.system(.subheadline, design: .rounded, weight: .semibold))
                             .foregroundStyle(.white.opacity(0.6))
                     }
+                    .multilineTextAlignment(.center)
                     .opacity(appeared ? 1 : 0)
 
                     if showMessage {
-                        VStack(spacing: 6) {
+                        VStack(spacing: 14) {
                             Text("Soit " + viewModel.wastedTimeDays + " complets.")
                                 .font(.system(.headline, design: .rounded, weight: .bold))
                                 .foregroundStyle(.white)
 
-                            Text("Avec Sophia, fais un bon usage de ton temps.")
-                                .font(.system(.body, design: .rounded))
-                                .foregroundStyle(SophiaTheme.emerald)
+                            Text("Moins de scroll.\nPlus de mémoire.")
+                                .font(.system(.headline, design: .rounded, weight: .bold))
+                                .foregroundStyle(.white)
+                                .multilineTextAlignment(.center)
+                                .padding(.vertical, 16)
+                                .frame(maxWidth: .infinity)
+                                .background(.white.opacity(0.06), in: .rect(cornerRadius: 18))
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 18)
+                                        .strokeBorder(.white.opacity(0.10), lineWidth: 1)
+                                )
+
+                            Text("10 minutes utiles par jour, pour apprendre sans scroller.")
+                                .font(.system(.footnote, design: .rounded, weight: .semibold))
+                                .foregroundStyle(.white.opacity(0.6))
                                 .multilineTextAlignment(.center)
                         }
                         .padding(.horizontal, 24)

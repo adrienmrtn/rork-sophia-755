@@ -1,10 +1,15 @@
 import SwiftUI
+import RevenueCatUI
 
 struct QuizView: View {
     let course: Course
     let progressManager: ProgressManager
+    let isPremium: Bool
     let onReturnHome: () -> Void
     @Environment(\.dismiss) private var dismiss
+    @EnvironmentObject private var paywall: PaywallCoordinator
+    @State private var unlocked: Bool = false
+    @State private var didRequestPaywall: Bool = false
 
     @State private var currentQuestionIndex: Int = 0
     @State private var selectedOptionIndex: Int? = nil
@@ -34,6 +39,8 @@ struct QuizView: View {
     @State private var showCombo: Bool = false
     @State private var xpEarned: Int = 0
     @State private var showXPPopup: Bool = false
+    @State private var userAnswers: [Int?] = []
+    @State private var showCorrections: Bool = false
 
     private var currentQuestion: ShuffledQuestion {
         shuffledQuestions[currentQuestionIndex]
@@ -70,10 +77,95 @@ struct QuizView: View {
                     .zIndex(20)
             }
         }
+        .modifier(PaywallHost(paywall: paywall, isPremium: isPremium))
         .onAppear {
+            unlocked = isPremium
             streakBefore = progressManager.streak
             completedBefore = progressManager.completedCount
             shuffleAllQuestions()
+            if !unlocked, !didRequestPaywall {
+                didRequestPaywall = true
+                paywall.presentPrimary(
+                    onPurchasedOrRestored: {
+                        unlocked = true
+                    },
+                    onDismissWithoutPurchase: {
+                        onReturnHome()
+                    }
+                )
+            }
+        }
+        .sheet(isPresented: $showCorrections) {
+            QuizCorrectionsSheet(
+                questions: shuffledQuestions,
+                answers: userAnswers
+            )
+            .presentationDragIndicator(.visible)
+        }
+    }
+
+    private struct QuizCorrectionsSheet: View {
+        let questions: [ShuffledQuestion]
+        let answers: [Int?]
+
+        var body: some View {
+            ZStack {
+                SophiaTheme.background.ignoresSafeArea()
+
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 14) {
+                        VStack(alignment: .leading, spacing: 6) {
+                            Text("Corrections")
+                                .font(.system(.title2, design: .rounded, weight: .bold))
+                                .foregroundStyle(.white)
+                            Text("Retrouve la bonne réponse pour chaque question")
+                                .font(.system(.subheadline, design: .rounded, weight: .medium))
+                                .foregroundStyle(.white.opacity(0.6))
+                        }
+                        .padding(.top, 8)
+
+                        VStack(spacing: 12) {
+                            ForEach(Array(questions.enumerated()), id: \.offset) { i, q in
+                                let selected = i < answers.count ? answers[i] : nil
+                                let isCorrect = selected == q.correctIndex
+                                VStack(alignment: .leading, spacing: 10) {
+                                    HStack(alignment: .top, spacing: 10) {
+                                        ZStack {
+                                            Circle()
+                                                .fill((isCorrect ? SophiaTheme.emerald : SophiaTheme.errorRed).opacity(0.18))
+                                                .frame(width: 28, height: 28)
+                                            Image(systemName: isCorrect ? "checkmark" : "xmark")
+                                                .font(.system(size: 12, weight: .bold))
+                                                .foregroundStyle(isCorrect ? SophiaTheme.emerald : SophiaTheme.errorRed)
+                                        }
+                                        Text(q.question)
+                                            .font(.system(.subheadline, design: .rounded, weight: .bold))
+                                            .foregroundStyle(.white)
+                                        Spacer(minLength: 0)
+                                    }
+
+                                    Text("Ta réponse : " + (selected.map { q.options[$0] } ?? "—"))
+                                        .font(.system(.caption, design: .rounded, weight: .medium))
+                                        .foregroundStyle(.white.opacity(0.65))
+
+                                    Text("Bonne réponse : " + q.options[q.correctIndex])
+                                        .font(.system(.caption, design: .rounded, weight: .bold))
+                                        .foregroundStyle(SophiaTheme.emerald)
+                                }
+                                .padding(14)
+                                .background(.white.opacity(0.05), in: .rect(cornerRadius: 14))
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 14)
+                                        .strokeBorder(.white.opacity(0.08), lineWidth: 1)
+                                )
+                            }
+                        }
+                        .padding(.top, 6)
+                    }
+                    .padding(.horizontal, 16)
+                    .padding(.bottom, 28)
+                }
+            }
         }
     }
 
@@ -88,6 +180,7 @@ struct QuizView: View {
                 correctIndex: newCorrectIndex
             )
         }
+        userAnswers = Array(repeating: nil, count: shuffledQuestions.count)
         questionAppeared = false
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             withAnimation(.spring(response: 0.5, dampingFraction: 0.8)) {
@@ -205,6 +298,9 @@ struct QuizView: View {
         Button {
             guard !hasAnswered else { return }
             selectedOptionIndex = index
+            if currentQuestionIndex < userAnswers.count {
+                userAnswers[currentQuestionIndex] = index
+            }
             hasAnswered = true
             if index == currentQuestion.correctIndex {
                 UINotificationFeedbackGenerator().notificationOccurred(.success)
@@ -544,6 +640,25 @@ struct QuizView: View {
                         .padding(.vertical, 18)
                         .background(SophiaTheme.emerald, in: .rect(cornerRadius: 16))
                         .shadow(color: SophiaTheme.emerald.opacity(0.3), radius: 8, y: 2)
+                    }
+
+                    Button {
+                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                        showCorrections = true
+                    } label: {
+                        HStack(spacing: 8) {
+                            Image(systemName: "list.bullet.rectangle")
+                            Text("Voir les corrections")
+                        }
+                        .font(.system(.headline, design: .rounded, weight: .semibold))
+                        .foregroundStyle(.white.opacity(0.85))
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 18)
+                        .background(.white.opacity(0.08), in: .rect(cornerRadius: 16))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 16)
+                                .strokeBorder(.white.opacity(0.10), lineWidth: 1)
+                        )
                     }
 
                     Button {

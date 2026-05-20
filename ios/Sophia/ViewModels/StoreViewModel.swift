@@ -1,14 +1,14 @@
 import Foundation
-import Observation
+import Combine
 import RevenueCat
 
-@Observable
-class StoreViewModel {
-    var offerings: Offerings?
-    var isPremium: Bool = false
-    var isLoading: Bool = false
-    var isPurchasing: Bool = false
-    var error: String?
+@MainActor
+final class StoreViewModel: ObservableObject {
+    @Published var offerings: Offerings?
+    @Published var isPremium: Bool = false
+    @Published var isLoading: Bool = false
+    @Published var isPurchasing: Bool = false
+    @Published var error: String?
 
     init() {
         Task { await listenForUpdates() }
@@ -18,6 +18,7 @@ class StoreViewModel {
     private func listenForUpdates() async {
         for await info in Purchases.shared.customerInfoStream {
             self.isPremium = info.entitlements["premium"]?.isActive == true
+            UserDefaults.standard.set(self.isPremium, forKey: "sophia_is_premium")
         }
     }
 
@@ -38,6 +39,7 @@ class StoreViewModel {
             let result = try await Purchases.shared.purchase(package: package)
             if !result.userCancelled {
                 isPremium = result.customerInfo.entitlements["premium"]?.isActive == true
+                UserDefaults.standard.set(isPremium, forKey: "sophia_is_premium")
                 return isPremium
             }
             return false
@@ -55,6 +57,7 @@ class StoreViewModel {
         do {
             let info = try await Purchases.shared.restorePurchases()
             isPremium = info.entitlements["premium"]?.isActive == true
+            UserDefaults.standard.set(isPremium, forKey: "sophia_is_premium")
         } catch {
             self.error = error.localizedDescription
         }
@@ -64,6 +67,7 @@ class StoreViewModel {
         do {
             let info = try await Purchases.shared.customerInfo()
             isPremium = info.entitlements["premium"]?.isActive == true
+            UserDefaults.standard.set(isPremium, forKey: "sophia_is_premium")
         } catch {
             self.error = error.localizedDescription
         }

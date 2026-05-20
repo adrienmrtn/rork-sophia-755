@@ -1,13 +1,12 @@
 import SwiftUI
 import AVKit
-import RevenueCatUI
 
 struct PrePaywallQuizView: View {
     let onContinue: () -> Void
+    @EnvironmentObject private var paywall: PaywallCoordinator
     @State private var appeared: Bool = false
     @State private var shimmerOffset: CGFloat = -200
     @State private var player: AVPlayer?
-    @State private var showPaywall: Bool = false
 
     var body: some View {
         ZStack {
@@ -53,14 +52,14 @@ struct PrePaywallQuizView: View {
                 Spacer()
 
                 VStack(spacing: 12) {
-                    Text("Débloquez gratuitement\nles quiz")
+                    Text("Les quiz sont réservés\naux membres Premium")
                         .font(.system(.title2, design: .rounded, weight: .bold))
                         .foregroundStyle(.white)
                         .multilineTextAlignment(.center)
                         .opacity(appeared ? 1 : 0)
                         .offset(y: appeared ? 0 : 10)
 
-                    Text("Testez vos connaissances et\nprogressez chaque jour")
+                    Text("Passe Premium pour tester tes\nconnaissances et progresser chaque jour")
                         .font(.system(.body, design: .rounded))
                         .foregroundStyle(.white.opacity(0.6))
                         .multilineTextAlignment(.center)
@@ -73,7 +72,9 @@ struct PrePaywallQuizView: View {
                 VStack(spacing: 10) {
                     Button {
                         triggerHaptic(.medium)
-                        showPaywall = true
+                        paywall.presentPrimary(onPurchasedOrRestored: {
+                            onContinue()
+                        })
                     } label: {
                         HStack(spacing: 10) {
                             Image(systemName: "lock.open.fill")
@@ -110,17 +111,7 @@ struct PrePaywallQuizView: View {
             }
             .clipped()
         }
-        .sheet(isPresented: $showPaywall) {
-            PaywallView()
-                .onPurchaseCompleted { _ in
-                    showPaywall = false
-                    onContinue()
-                }
-                .onRestoreCompleted { _ in
-                    showPaywall = false
-                    onContinue()
-                }
-        }
+        .modifier(PaywallHost(paywall: paywall, isPremium: false))
         .onAppear {
             setupPlayer()
             withAnimation(.spring(response: 0.7, dampingFraction: 0.75).delay(0.15)) {

@@ -2,8 +2,8 @@ import SwiftUI
 import RevenueCatUI
 
 struct OnboardingView: View {
-    @State private var viewModel = OnboardingViewModel()
-    @State private var storeVM = StoreViewModel()
+    @StateObject private var viewModel = OnboardingViewModel()
+    @StateObject private var storeVM = StoreViewModel()
     let onComplete: () -> Void
     @State private var direction: Edge = .trailing
     @State private var showSpecialOffer: Bool = false
@@ -69,44 +69,52 @@ struct OnboardingView: View {
                 case 1:
                     OnboardingWelcomeScreen(onNext: advance)
                 case 2:
-                    OnboardingPhoneTimeScreen(viewModel: viewModel, onNext: advance)
+                    OnboardingCuriosityQuestionsScreen(onNext: advance)
                 case 3:
-                    OnboardingWastedTimeScreen(viewModel: viewModel, onNext: advance)
+                    OnboardingPhoneTimeScreen(viewModel: viewModel, onNext: advance)
                 case 4:
-                    OnboardingObjectivesScreen(viewModel: viewModel, onNext: advance)
+                    OnboardingWastedTimeScreen(viewModel: viewModel, onNext: advance)
                 case 5:
-                    OnboardingSocialProofScreen(onNext: advance)
+                    OnboardingObjectivesScreen(viewModel: viewModel, onNext: advance)
                 case 6:
+                    OnboardingPerceivedConfidenceScreen(onNext: advance)
+                case 7:
+                    OnboardingSocialProofScreen(onNext: advance)
+                case 8:
                     OnboardingTopicsCarouselScreen(
                         title: "Sophia t'aide à comprendre\nle monde qui t'entoure",
                         subtitle: "Géopolitique, économie, environnement...\nles enjeux actuels expliqués simplement.",
                         categories: mondeActuelCategories,
                         onNext: advance
                     )
-                case 7:
+                case 9:
                     OnboardingTopicsCarouselScreen(
                         title: "Maîtrise enfin les grandes\nœuvres de l'histoire",
                         subtitle: "Littérature, art, cinéma, mythologie...\nles clés pour en parler avec aisance.",
                         categories: cultureCategories,
                         onNext: advance
                     )
-                case 8:
-                    OnboardingInterestsScreen(viewModel: viewModel, onNext: advance)
-                case 9:
-                    OnboardingProjectionScreen(onNext: advance)
                 case 10:
-                    OnboardingAgeScreen(viewModel: viewModel, onNext: advance)
+                    OnboardingInterestsScreen(viewModel: viewModel, onNext: advance)
                 case 11:
-                    OnboardingProfileGenScreen(onNext: advance)
+                    OnboardingDailyGoalScreen(viewModel: viewModel, onNext: advance)
                 case 12:
-                    OnboardingLoadingScreen(viewModel: viewModel, onNext: advance)
+                    OnboardingAnnualRecapScreen(viewModel: viewModel, onNext: advance)
                 case 13:
-                    OnboardingFinalScreen(onComplete: advance)
+                    OnboardingAgeScreen(viewModel: viewModel, onNext: advance)
                 case 14:
-                    OnboardingFreeTrialIntroView(onNext: advance)
+                    OnboardingThemeLevelAssessmentScreen(viewModel: viewModel, onNext: advance)
                 case 15:
-                    OnboardingFreeTrialTimelineView(onNext: advance)
+                    OnboardingLoadingScreen(viewModel: viewModel, onNext: advance)
                 case 16:
+                    OnboardingFinalScreen(onComplete: advance)
+                case 17:
+                    OnboardingFreeTrialIntroView(onNext: advance)
+                case 18:
+                    OnboardingFreeTrialTimelineView(onNext: advance)
+                case 19:
+                    OnboardingBaselineProgressScreen(viewModel: viewModel, onNext: advance)
+                case 20:
                     Color.clear
                         .onAppear {
                             showRCPaywall = true
@@ -120,9 +128,9 @@ struct OnboardingView: View {
                 removal: .move(edge: .leading).combined(with: .opacity)
             ))
 
-            if viewModel.currentScreen > 0 && viewModel.currentScreen < 11 {
+            if viewModel.currentScreen > 0 && viewModel.currentScreen < 15 {
                 VStack {
-                    OnboardingProgressDots(current: viewModel.currentScreen, total: 11)
+                    OnboardingProgressDots(current: viewModel.currentScreen, total: 15)
                         .frame(maxWidth: .infinity)
                         .padding(.top, 16)
                     Spacer()
