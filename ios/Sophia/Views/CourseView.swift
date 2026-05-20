@@ -167,32 +167,9 @@ struct CourseView: View {
             .foregroundStyle(ink)
             .frame(maxWidth: .infinity)
             .padding(.vertical, 20)
-            .background {
-                ZStack {
-                    Capsule().fill(pink)
-                    if isLastLesson && course.hasQuiz {
-                        GeometryReader { geo in
-                            Rectangle()
-                                .fill(
-                                    LinearGradient(
-                                        colors: [.clear, .white.opacity(0.35), .clear],
-                                        startPoint: .leading,
-                                        endPoint: .trailing
-                                    )
-                                )
-                                .frame(width: 80)
-                                .offset(x: quizButtonShimmer)
-                                .allowsHitTesting(false)
-                        }
-                        .clipShape(Capsule())
-                    }
-                }
-            }
-            .clipShape(Capsule())
-            .overlay { Capsule().strokeBorder(ink, lineWidth: 3) }
-            .shadow(color: ink.opacity(0.9), radius: 0, x: 0, y: 4)
-            .scaleEffect(isLastLesson && course.hasQuiz && quizButtonPulse ? 1.04 : 1.0)
         }
+        .buttonStyle(DuolingoButtonStyle(fill: pink, shimmer: isLastLesson && course.hasQuiz ? quizButtonShimmer : nil))
+        .scaleEffect(isLastLesson && course.hasQuiz && quizButtonPulse ? 1.04 : 1.0)
         .padding(.horizontal, 24)
         .padding(.bottom, 24)
         .onChange(of: isLastLesson) { _, newValue in
@@ -226,3 +203,46 @@ struct CourseView: View {
         }
     }
 }
+
+/// Duolingo-style 3D button: solid offset shadow plate behind the colored capsule.
+/// Pressing the button drops the front capsule onto the shadow (no blur, no double-text).
+private struct DuolingoButtonStyle: ButtonStyle {
+    let fill: Color
+    let shimmer: CGFloat?
+    private let depth: CGFloat = 5
+
+    func makeBody(configuration: Configuration) -> some View {
+        ZStack {
+            Capsule()
+                .fill(Color.black)
+                .offset(y: depth)
+
+            ZStack {
+                Capsule().fill(fill)
+                if let shimmer {
+                    GeometryReader { _ in
+                        Rectangle()
+                            .fill(
+                                LinearGradient(
+                                    colors: [.clear, .white.opacity(0.35), .clear],
+                                    startPoint: .leading,
+                                    endPoint: .trailing
+                                )
+                            )
+                            .frame(width: 80)
+                            .offset(x: shimmer)
+                            .allowsHitTesting(false)
+                    }
+                    .clipShape(Capsule())
+                }
+                configuration.label
+            }
+            .overlay { Capsule().strokeBorder(.black, lineWidth: 3) }
+            .clipShape(Capsule())
+            .offset(y: configuration.isPressed ? depth : 0)
+        }
+        .animation(.spring(response: 0.18, dampingFraction: 0.7), value: configuration.isPressed)
+        .padding(.bottom, depth)
+    }
+}
+

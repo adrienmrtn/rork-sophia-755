@@ -251,14 +251,20 @@ struct FunFactBox: View {
                 .padding(.top, 36)
                 .padding(.bottom, 22)
                 .background {
-                    RoundedRectangle(cornerRadius: 22)
-                        .fill(Color.white)
-                        .overlay {
-                            RoundedRectangle(cornerRadius: 22)
-                                .strokeBorder(.black, lineWidth: 3)
-                        }
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 22)
+                            .fill(.black)
+                            .offset(y: 4)
+                        RoundedRectangle(cornerRadius: 22)
+                            .fill(Color.white)
+                            .overlay {
+                                RoundedRectangle(cornerRadius: 22)
+                                    .strokeBorder(.black, lineWidth: 3)
+                            }
+                    }
                 }
                 .padding(.top, 18)
+                .padding(.bottom, 4)
 
             HStack(spacing: 6) {
                 Text("🧠").font(.system(size: 14))
@@ -276,7 +282,6 @@ struct FunFactBox: View {
             }
             .padding(.leading, 16)
         }
-        .shadow(color: .black.opacity(0.9), radius: 0, x: 0, y: 4)
     }
 
     private func markdown(_ s: String) -> AttributedString {
@@ -306,14 +311,20 @@ struct HighlightBox: View {
                 .padding(.top, 36)
                 .padding(.bottom, 22)
                 .background {
-                    RoundedRectangle(cornerRadius: 22)
-                        .fill(Color.white)
-                        .overlay {
-                            RoundedRectangle(cornerRadius: 22)
-                                .strokeBorder(.black, lineWidth: 3)
-                        }
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 22)
+                            .fill(.black)
+                            .offset(y: 4)
+                        RoundedRectangle(cornerRadius: 22)
+                            .fill(Color.white)
+                            .overlay {
+                                RoundedRectangle(cornerRadius: 22)
+                                    .strokeBorder(.black, lineWidth: 3)
+                            }
+                    }
                 }
                 .padding(.top, 18)
+                .padding(.bottom, 4)
 
             HStack(spacing: 6) {
                 Image(systemName: "bookmark.fill")
@@ -333,7 +344,6 @@ struct HighlightBox: View {
             }
             .padding(.leading, 16)
         }
-        .shadow(color: .black.opacity(0.9), radius: 0, x: 0, y: 4)
     }
 
     private func markdown(_ s: String) -> AttributedString {
