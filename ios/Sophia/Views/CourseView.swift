@@ -118,31 +118,17 @@ struct CourseView: View {
     private func lessonContent(lesson: LessonPage) -> some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
-                Text(lesson.emoji)
-                    .font(.system(size: 48))
-
                 Text(lesson.title)
                     .font(.system(.title2, design: .rounded, weight: .bold))
                     .foregroundStyle(.white)
 
-                Text(markdownAttributedString(lesson.content))
-                    .font(.system(.body, design: .rounded))
-                    .foregroundStyle(.white.opacity(0.85))
-                    .lineSpacing(6)
+                RichContentView(content: lesson.content, accent: course.subject.color)
             }
             .padding(.horizontal, 24)
             .padding(.top, 20)
             .padding(.bottom, 100)
         }
         .scrollIndicators(.hidden)
-    }
-
-    private func markdownAttributedString(_ text: String) -> AttributedString {
-        let cleaned = text.replacingOccurrences(of: "\\n", with: "\n")
-        if let attributed = try? AttributedString(markdown: cleaned, options: .init(interpretedSyntax: .inlineOnlyPreservingWhitespace)) {
-            return attributed
-        }
-        return AttributedString(cleaned)
     }
 
     private var bottomButton: some View {

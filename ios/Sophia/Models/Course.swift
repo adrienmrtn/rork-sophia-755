@@ -46,7 +46,6 @@ nonisolated struct LessonPage: Codable, Identifiable, Sendable {
     let id: String
     let title: String
     let content: String
-    let emoji: String
 }
 
 nonisolated struct QuizQuestion: Codable, Identifiable, Sendable {
