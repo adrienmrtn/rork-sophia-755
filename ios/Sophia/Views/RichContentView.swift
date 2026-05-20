@@ -143,23 +143,35 @@ struct CourseInlineImage: View {
     let rawName: String
 
     private var assetName: String { Self.slug(rawName) }
+    private var credit: ImageCredit? { ImageCreditStore.shared.credit(for: assetName) }
 
     var body: some View {
-        Group {
-            if let ui = Self.loadImage(named: assetName) {
-                Image(uiImage: ui)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-            } else {
-                placeholder
+        VStack(alignment: .leading, spacing: 6) {
+            Group {
+                if let ui = Self.loadImage(named: assetName) {
+                    Image(uiImage: ui)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                } else {
+                    placeholder
+                }
             }
-        }
-        .frame(maxWidth: .infinity)
-        .frame(height: 200)
-        .clipShape(.rect(cornerRadius: 14))
-        .overlay {
-            RoundedRectangle(cornerRadius: 14)
-                .strokeBorder(.white.opacity(0.06), lineWidth: 1)
+            .frame(maxWidth: .infinity)
+            .frame(height: 200)
+            .clipShape(.rect(cornerRadius: 14))
+            .overlay {
+                RoundedRectangle(cornerRadius: 14)
+                    .strokeBorder(.white.opacity(0.06), lineWidth: 1)
+            }
+
+            if let credit, !credit.formatted.isEmpty {
+                Text(credit.formatted)
+                    .font(.system(.caption2, design: .rounded))
+                    .foregroundStyle(.white.opacity(0.4))
+                    .lineSpacing(2)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(.horizontal, 4)
+            }
         }
     }
 
