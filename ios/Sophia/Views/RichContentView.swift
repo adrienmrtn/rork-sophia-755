@@ -24,9 +24,11 @@ struct RichContentView: View {
         switch block {
         case .text(let str):
             Text(markdown(str))
-                .font(.system(.title3, design: .rounded, weight: .bold))
+                .font(.system(.title3, design: .rounded, weight: .medium))
                 .foregroundStyle(Self.ink)
                 .lineSpacing(8)
+                .multilineTextAlignment(.leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .fixedSize(horizontal: false, vertical: true)
         case .image(let name):
             CourseInlineImage(rawName: name)
@@ -241,10 +243,11 @@ struct FunFactBox: View {
     var body: some View {
         ZStack(alignment: .topLeading) {
             Text(markdown(text))
-                .font(.system(.body, design: .rounded, weight: .bold))
+                .font(.system(.body, design: .rounded, weight: .medium))
                 .italic()
                 .foregroundStyle(.black)
                 .lineSpacing(4)
+                .multilineTextAlignment(.leading)
                 .fixedSize(horizontal: false, vertical: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal, 20)
@@ -302,9 +305,10 @@ struct HighlightBox: View {
     var body: some View {
         ZStack(alignment: .topLeading) {
             Text(markdown(text))
-                .font(.system(.body, design: .rounded, weight: .bold))
+                .font(.system(.body, design: .rounded, weight: .semibold))
                 .foregroundStyle(.black)
                 .lineSpacing(4)
+                .multilineTextAlignment(.leading)
                 .fixedSize(horizontal: false, vertical: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal, 20)

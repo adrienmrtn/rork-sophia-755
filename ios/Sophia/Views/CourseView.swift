@@ -212,37 +212,37 @@ private struct DuolingoButtonStyle: ButtonStyle {
     private let depth: CGFloat = 5
 
     func makeBody(configuration: Configuration) -> some View {
-        ZStack {
-            Capsule()
-                .fill(Color.black)
-                .offset(y: depth)
-
-            ZStack {
+        configuration.label
+            .background(
                 Capsule().fill(fill)
-                if let shimmer {
-                    GeometryReader { _ in
-                        Rectangle()
-                            .fill(
-                                LinearGradient(
-                                    colors: [.clear, .white.opacity(0.35), .clear],
-                                    startPoint: .leading,
-                                    endPoint: .trailing
+                    .overlay {
+                        if let shimmer {
+                            Capsule()
+                                .fill(
+                                    LinearGradient(
+                                        colors: [.clear, .white.opacity(0.35), .clear],
+                                        startPoint: .leading,
+                                        endPoint: .trailing
+                                    )
                                 )
-                            )
-                            .frame(width: 80)
-                            .offset(x: shimmer)
-                            .allowsHitTesting(false)
+                                .mask {
+                                    GeometryReader { geo in
+                                        Rectangle()
+                                            .frame(width: 80, height: geo.size.height)
+                                            .offset(x: shimmer)
+                                    }
+                                }
+                                .allowsHitTesting(false)
+                        }
                     }
-                    .clipShape(Capsule())
-                }
-                configuration.label
-            }
-            .overlay { Capsule().strokeBorder(.black, lineWidth: 3) }
-            .clipShape(Capsule())
+                    .overlay { Capsule().strokeBorder(.black, lineWidth: 3) }
+            )
             .offset(y: configuration.isPressed ? depth : 0)
-        }
-        .animation(.spring(response: 0.18, dampingFraction: 0.7), value: configuration.isPressed)
-        .padding(.bottom, depth)
+            .background(
+                Capsule().fill(Color.black).offset(y: depth)
+            )
+            .animation(.spring(response: 0.18, dampingFraction: 0.7), value: configuration.isPressed)
+            .padding(.bottom, depth)
     }
 }
 
