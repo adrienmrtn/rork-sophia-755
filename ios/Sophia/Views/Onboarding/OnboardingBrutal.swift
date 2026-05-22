@@ -42,24 +42,24 @@ struct BrutalPinkButtonStyle: ButtonStyle {
 
     func makeBody(configuration: Configuration) -> some View {
         let pressed = configuration.isPressed
-        ZStack(alignment: .top) {
-            Capsule()
-                .fill(BrutalPalette.ink)
-                .offset(y: depth)
-
-            configuration.label
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 18)
-                .background(
-                    Capsule().fill(isEnabled ? BrutalPalette.pink : Color(red: 0.92, green: 0.88, blue: 0.85))
-                )
-                .overlay {
-                    Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 2.5)
+        configuration.label
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 18)
+            .background(
+                ZStack(alignment: .top) {
+                    Capsule()
+                        .fill(BrutalPalette.ink)
+                        .offset(y: depth)
+                    Capsule()
+                        .fill(isEnabled ? BrutalPalette.pink : Color(red: 0.92, green: 0.88, blue: 0.85))
+                        .overlay {
+                            Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 2.5)
+                        }
+                        .offset(y: pressed ? depth : 0)
                 }
-                .offset(y: pressed ? depth : 0)
-        }
-        .padding(.bottom, depth)
-        .animation(.spring(response: 0.18, dampingFraction: 0.7), value: pressed)
+            )
+            .padding(.bottom, depth)
+            .animation(.spring(response: 0.18, dampingFraction: 0.7), value: pressed)
     }
 }
 
@@ -155,24 +155,23 @@ struct BrutalRowButtonStyle: ButtonStyle {
 
     func makeBody(configuration: Configuration) -> some View {
         let pressed = configuration.isPressed
-        ZStack(alignment: .top) {
-            RoundedRectangle(cornerRadius: 14, style: .continuous)
-                .fill(BrutalPalette.ink)
-                .offset(y: depth)
-
-            configuration.label
-                .background(
+        configuration.label
+            .background(
+                ZStack(alignment: .top) {
+                    RoundedRectangle(cornerRadius: 14, style: .continuous)
+                        .fill(BrutalPalette.ink)
+                        .offset(y: depth)
                     RoundedRectangle(cornerRadius: 14, style: .continuous)
                         .fill(isSelected ? accentColor.opacity(0.35) : Color.white)
-                )
-                .overlay {
-                    RoundedRectangle(cornerRadius: 14, style: .continuous)
-                        .strokeBorder(BrutalPalette.ink, lineWidth: 2.5)
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 14, style: .continuous)
+                                .strokeBorder(BrutalPalette.ink, lineWidth: 2.5)
+                        }
+                        .offset(y: pressed ? depth : 0)
                 }
-                .offset(y: pressed ? depth : 0)
-        }
-        .padding(.bottom, depth)
-        .animation(.spring(response: 0.18, dampingFraction: 0.7), value: pressed)
+            )
+            .padding(.bottom, depth)
+            .animation(.spring(response: 0.18, dampingFraction: 0.7), value: pressed)
     }
 }
 
