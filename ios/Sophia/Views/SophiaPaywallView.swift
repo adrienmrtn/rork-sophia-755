@@ -47,8 +47,17 @@ struct SophiaPaywallView: View {
     private func resolveOffering() async {
         do {
             let offerings = try await Purchases.shared.offerings()
-            offering = offerings.offering(identifier: context.rawValue)
+            let id = context.rawValue
+            let resolved = offerings.all[id] ?? offerings.offering(identifier: id)
+            #if DEBUG
+            let available = offerings.all.keys.joined(separator: ", ")
+            print("[SophiaPaywall] looking for '\(id)' — available offerings: [\(available)] — current: \(offerings.current?.identifier ?? "nil") — resolved: \(resolved?.identifier ?? "nil")")
+            #endif
+            offering = resolved
         } catch {
+            #if DEBUG
+            print("[SophiaPaywall] failed to fetch offerings: \(error)")
+            #endif
             offering = nil
         }
         loaded = true
