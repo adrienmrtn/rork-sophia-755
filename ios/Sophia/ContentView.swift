@@ -116,13 +116,11 @@ struct ContentView: View {
 
         }
         .sheet(isPresented: $showPaywall) {
-            PaywallView()
-                .onPurchaseCompleted { _ in
-                    showPaywall = false
-                }
-                .onRestoreCompleted { _ in
-                    showPaywall = false
-                }
+            SophiaPaywallView(
+                context: .coursGratuit,
+                onPurchased: { showPaywall = false },
+                onRestored: { showPaywall = false }
+            )
         }
         .onAppear {
             if !progressManager.hasSeenSwipeTutorial {

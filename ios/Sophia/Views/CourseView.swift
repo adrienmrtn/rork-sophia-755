@@ -90,9 +90,11 @@ struct CourseView: View {
             .presentationDragIndicator(.visible)
         }
         .sheet(isPresented: $showEndFlowPaywall) {
-            PaywallView()
-                .onPurchaseCompleted { _ in showEndFlowPaywall = false }
-                .onRestoreCompleted { _ in showEndFlowPaywall = false }
+            SophiaPaywallView(
+                context: .quizz,
+                onPurchased: { showEndFlowPaywall = false },
+                onRestored: { showEndFlowPaywall = false }
+            )
         }
         .onAppear {
             withAnimation(.spring(response: 0.5, dampingFraction: 0.8).delay(0.1)) {

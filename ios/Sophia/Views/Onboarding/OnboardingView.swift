@@ -153,17 +153,19 @@ struct OnboardingView: View {
             viewModel.completeOnboarding()
             onComplete()
         }) {
-            PaywallView()
-                .onPurchaseCompleted { _ in
+            SophiaPaywallView(
+                context: .finOnboarding,
+                onPurchased: {
+                    showRCPaywall = false
+                    viewModel.completeOnboarding()
+                    onComplete()
+                },
+                onRestored: {
                     showRCPaywall = false
                     viewModel.completeOnboarding()
                     onComplete()
                 }
-                .onRestoreCompleted { _ in
-                    showRCPaywall = false
-                    viewModel.completeOnboarding()
-                    onComplete()
-                }
+            )
         }
     }
 

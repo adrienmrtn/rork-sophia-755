@@ -111,15 +111,17 @@ struct PrePaywallQuizView: View {
             .clipped()
         }
         .sheet(isPresented: $showPaywall) {
-            PaywallView()
-                .onPurchaseCompleted { _ in
+            SophiaPaywallView(
+                context: .quizz,
+                onPurchased: {
+                    showPaywall = false
+                    onContinue()
+                },
+                onRestored: {
                     showPaywall = false
                     onContinue()
                 }
-                .onRestoreCompleted { _ in
-                    showPaywall = false
-                    onContinue()
-                }
+            )
         }
         .onAppear {
             setupPlayer()
