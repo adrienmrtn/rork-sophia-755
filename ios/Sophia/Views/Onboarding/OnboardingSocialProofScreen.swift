@@ -7,80 +7,65 @@ struct OnboardingSocialProofScreen: View {
     @State private var percentValue: Int = 0
     @State private var showReviews: Bool = false
 
-    private let reviews: [(name: String, text: String, stars: Int, photoFile: String)] = [
-        ("Lucas M.", "Je me sentais nul en culture G, maintenant j'ai toujours un truc intéressant à raconter.", 5, "lucas_m_profile"),
-        ("Camille R.", "10 min par jour et j'ai l'impression d'apprendre plus qu'en cours.", 5, "camille_r_profile"),
-        ("Thomas D.", "J'adore le format. C'est clair, rapide et on retient vraiment.", 5, "thomas_d_profile"),
+    private let reviews: [(name: String, text: String, stars: Int, photoFile: String, accent: Color)] = [
+        ("Lucas M.", "Je me sentais nul en culture G, maintenant j'ai toujours un truc intéressant à raconter.", 5, "lucas_m_profile", Color(red: 0.66, green: 0.92, blue: 0.96)),
+        ("Camille R.", "10 min par jour et j'ai l'impression d'apprendre plus qu'en cours.", 5, "camille_r_profile", Color(red: 0.70, green: 0.95, blue: 0.80)),
+        ("Thomas D.", "J'adore le format. C'est clair, rapide et on retient vraiment.", 5, "thomas_d_profile", Color(red: 1.0, green: 0.86, blue: 0.62)),
     ]
 
     var body: some View {
         ZStack {
-            SophiaTheme.background.ignoresSafeArea()
+            BrutalPalette.cream.ignoresSafeArea()
 
             VStack(spacing: 0) {
-                Spacer()
+                Spacer().frame(height: 50)
 
-                VStack(spacing: 32) {
-                    VStack(spacing: 16) {
-                        HStack(alignment: .firstTextBaseline, spacing: 2) {
-                            Text("\(percentValue)")
-                                .font(.system(size: 72, weight: .heavy, design: .rounded))
-                                .foregroundStyle(SophiaTheme.emerald)
-                                .contentTransition(.numericText(countsDown: false))
-                            Text("%")
-                                .font(.system(.largeTitle, design: .rounded, weight: .heavy))
-                                .foregroundStyle(SophiaTheme.emerald)
-                        }
+                VStack(spacing: 18) {
+                    BrutalPill(text: "Avis vérifiés", icon: "star.fill", background: BrutalPalette.pink, foreground: BrutalPalette.ink)
+                        .opacity(appeared ? 1 : 0)
 
-                        Text("des utilisateurs affirment que Sophia\nles a rendus plus intéressants\net à l'aise en société.")
-                            .font(.system(.body, design: .rounded, weight: .medium))
-                            .foregroundStyle(.white.opacity(0.8))
-                            .multilineTextAlignment(.center)
+                    HStack(alignment: .firstTextBaseline, spacing: 4) {
+                        Text("\(percentValue)")
+                            .font(.system(size: 80, weight: .heavy, design: .rounded))
+                            .foregroundStyle(BrutalPalette.ink)
+                            .contentTransition(.numericText(countsDown: false))
+                        Text("%")
+                            .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                            .foregroundStyle(BrutalPalette.ink)
                     }
                     .opacity(appeared ? 1 : 0)
 
-                    if showReviews {
-                        VStack(spacing: 12) {
-                            ForEach(Array(reviews.enumerated()), id: \.offset) { i, review in
-                                HStack(alignment: .top, spacing: 12) {
-                                    ProfilePhotoView(fileName: review.photoFile, fallbackLetter: String(review.name.prefix(1)))
-                                        .frame(width: 40, height: 40)
+                    Text("des utilisateurs se sentent\nplus intéressants et à l'aise\nen société grâce à Sophia.")
+                        .font(.system(.body, design: .rounded, weight: .semibold))
+                        .foregroundStyle(BrutalPalette.ink.opacity(0.65))
+                        .multilineTextAlignment(.center)
+                        .opacity(appeared ? 1 : 0)
+                }
+                .padding(.horizontal, 24)
 
-                                    VStack(alignment: .leading, spacing: 4) {
-                                        HStack(spacing: 4) {
-                                            Text(review.name)
-                                                .font(.system(.subheadline, design: .rounded, weight: .bold))
-                                                .foregroundStyle(.white)
-                                            Spacer()
-                                            HStack(spacing: 2) {
-                                                ForEach(0..<review.stars, id: \.self) { _ in
-                                                    Image(systemName: "star.fill")
-                                                        .font(.caption2)
-                                                        .foregroundStyle(SophiaTheme.streakOrange)
-                                                }
-                                            }
-                                        }
-                                        Text(review.text)
-                                            .font(.system(.caption, design: .rounded))
-                                            .foregroundStyle(.white.opacity(0.6))
-                                            .fixedSize(horizontal: false, vertical: true)
-                                    }
-                                }
-                                .padding(14)
-                                .background(.white.opacity(0.05), in: .rect(cornerRadius: 14))
-                                .opacity(showReviews ? 1 : 0)
-                                .offset(y: showReviews ? 0 : 15)
-                                .animation(.spring(response: 0.5).delay(Double(i) * 0.12), value: showReviews)
-                            }
+                Spacer().frame(height: 28)
+
+                if showReviews {
+                    VStack(spacing: 12) {
+                        ForEach(Array(reviews.enumerated()), id: \.offset) { i, review in
+                            ReviewCard(
+                                name: review.name,
+                                text: review.text,
+                                stars: review.stars,
+                                photoFile: review.photoFile,
+                                accent: review.accent
+                            )
+                            .opacity(showReviews ? 1 : 0)
+                            .offset(y: showReviews ? 0 : 15)
+                            .animation(.spring(response: 0.5).delay(Double(i) * 0.12), value: showReviews)
                         }
-                        .padding(.horizontal, 24)
-                        .transition(.opacity)
                     }
+                    .padding(.horizontal, 24)
                 }
 
                 Spacer()
 
-                OnboardingButton(title: "Continuer", action: onNext)
+                OnboardingPrimaryButton(title: "Continuer", action: onNext)
                     .opacity(showReviews ? 1 : 0)
             }
         }
@@ -115,8 +100,7 @@ struct OnboardingSocialProofScreen: View {
         }
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.8) {
-            let heavy = UIImpactFeedbackGenerator(style: .medium)
-            heavy.impactOccurred()
+            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
             withAnimation(.spring(response: 0.5)) {
                 showReviews = true
             }
@@ -129,31 +113,73 @@ struct OnboardingSocialProofScreen: View {
     }
 }
 
+private struct ReviewCard: View {
+    let name: String
+    let text: String
+    let stars: Int
+    let photoFile: String
+    let accent: Color
+
+    var body: some View {
+        HStack(alignment: .top, spacing: 12) {
+            ProfilePhotoView(fileName: photoFile, fallbackLetter: String(name.prefix(1)), accent: accent)
+                .frame(width: 44, height: 44)
+
+            VStack(alignment: .leading, spacing: 6) {
+                HStack(spacing: 4) {
+                    Text(name)
+                        .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                        .foregroundStyle(BrutalPalette.ink)
+                    Spacer()
+                    HStack(spacing: 2) {
+                        ForEach(0..<stars, id: \.self) { _ in
+                            Image(systemName: "star.fill")
+                                .font(.caption2.weight(.heavy))
+                                .foregroundStyle(BrutalPalette.ink)
+                        }
+                    }
+                }
+                Text(text)
+                    .font(.system(.caption, design: .rounded, weight: .semibold))
+                    .foregroundStyle(BrutalPalette.ink.opacity(0.7))
+                    .fixedSize(horizontal: false, vertical: true)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
+        }
+        .padding(14)
+        .brutalOnboardingCard(depth: 3, corner: 14)
+    }
+}
+
 private struct ProfilePhotoView: View {
     let fileName: String
     let fallbackLetter: String
+    let accent: Color
     @State private var image: UIImage?
 
     var body: some View {
-        Group {
-            if let image {
-                Image(uiImage: image)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .clipShape(Circle())
-            } else {
-                ZStack {
-                    Circle()
-                        .fill(SophiaTheme.accent.opacity(0.2))
-                    Text(fallbackLetter)
-                        .font(.system(.headline, design: .rounded, weight: .bold))
-                        .foregroundStyle(SophiaTheme.accent)
+        ZStack {
+            Circle()
+                .fill(BrutalPalette.ink)
+                .offset(y: 2)
+            Group {
+                if let image {
+                    Image(uiImage: image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                } else {
+                    ZStack {
+                        accent
+                        Text(fallbackLetter)
+                            .font(.system(.headline, design: .rounded, weight: .heavy))
+                            .foregroundStyle(BrutalPalette.ink)
+                    }
                 }
             }
+            .clipShape(Circle())
+            .overlay { Circle().strokeBorder(BrutalPalette.ink, lineWidth: 2) }
         }
-        .onAppear {
-            loadPhoto()
-        }
+        .onAppear { loadPhoto() }
     }
 
     private func loadPhoto() {

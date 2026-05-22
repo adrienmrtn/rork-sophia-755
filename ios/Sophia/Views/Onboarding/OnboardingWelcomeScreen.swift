@@ -7,7 +7,7 @@ struct OnboardingWelcomeScreen: View {
 
     var body: some View {
         ZStack {
-            SophiaTheme.background.ignoresSafeArea()
+            BrutalPalette.cream.ignoresSafeArea()
 
             FloatingCardsBackground(dismissing: dismissing)
                 .opacity(appeared ? 1 : 0)
@@ -15,17 +15,21 @@ struct OnboardingWelcomeScreen: View {
             VStack(spacing: 0) {
                 Spacer()
 
-                VStack(spacing: 16) {
-                    Text("Bienvenue sur Sophia")
-                        .font(.system(.title, design: .rounded, weight: .bold))
-                        .foregroundStyle(.white)
+                VStack(spacing: 18) {
+                    BrutalPill(text: "Bienvenue", icon: "sparkles", background: BrutalPalette.pink, foreground: BrutalPalette.ink)
                         .opacity(appeared ? 1 : 0)
                         .offset(y: appeared ? 0 : 20)
-                        .offset(y: dismissing ? 0 : 0)
 
-                    Text("Sophia est ton compagnon quotidien.\nTous les jours, il te raconte\nquelque chose de nouveau.")
-                        .font(.system(.body, design: .rounded))
-                        .foregroundStyle(.white.opacity(0.7))
+                    Text("Bienvenue\nsur Sophia")
+                        .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                        .foregroundStyle(BrutalPalette.ink)
+                        .multilineTextAlignment(.center)
+                        .opacity(appeared ? 1 : 0)
+                        .offset(y: appeared ? 0 : 20)
+
+                    Text("Ton compagnon quotidien.\nChaque jour, il te raconte\nquelque chose de nouveau.")
+                        .font(.system(.body, design: .rounded, weight: .semibold))
+                        .foregroundStyle(BrutalPalette.ink.opacity(0.65))
                         .multilineTextAlignment(.center)
                         .opacity(appeared ? 1 : 0)
                         .offset(y: appeared ? 0 : 20)
@@ -34,7 +38,7 @@ struct OnboardingWelcomeScreen: View {
 
                 Spacer()
 
-                OnboardingButton(title: "Suivant", action: handleNext)
+                OnboardingPrimaryButton(title: "Suivant", action: handleNext)
                     .opacity(appeared ? 1 : 0)
                     .offset(y: appeared ? 0 : 30)
             }

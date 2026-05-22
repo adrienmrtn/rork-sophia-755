@@ -9,57 +9,54 @@ struct OnboardingProjectionScreen: View {
 
     var body: some View {
         ZStack {
-            SophiaTheme.background.ignoresSafeArea()
+            BrutalPalette.cream.ignoresSafeArea()
 
             VStack(spacing: 0) {
                 Spacer()
 
-                VStack(spacing: 36) {
-                    Image(systemName: "chart.line.uptrend.xyaxis")
-                        .font(.system(size: 48))
-                        .foregroundStyle(SophiaTheme.emerald)
-                        .opacity(appeared ? 1 : 0)
-                        .scaleEffect(appeared ? 1 : 0.5)
-                        .symbolEffect(.bounce, value: showNumber)
+                VStack(spacing: 32) {
+                    BrutalPill(
+                        text: "Ta projection",
+                        icon: "chart.line.uptrend.xyaxis",
+                        background: Color(red: 0.70, green: 0.95, blue: 0.80),
+                        foreground: BrutalPalette.ink
+                    )
+                    .opacity(appeared ? 1 : 0)
 
-                    VStack(spacing: 16) {
+                    VStack(spacing: 14) {
                         Text("D'ici la fin de l'année,\ntu auras appris")
-                            .font(.system(.title3, design: .rounded, weight: .medium))
-                            .foregroundStyle(.white.opacity(0.7))
+                            .font(.system(.title3, design: .rounded, weight: .semibold))
+                            .foregroundStyle(BrutalPalette.ink.opacity(0.6))
                             .multilineTextAlignment(.center)
                             .opacity(appeared ? 1 : 0)
 
                         HStack(alignment: .firstTextBaseline, spacing: 8) {
                             Text("\(counterValue)")
-                                .font(.system(size: 60, weight: .heavy, design: .rounded))
-                                .foregroundStyle(SophiaTheme.emerald)
+                                .font(.system(size: 76, weight: .heavy, design: .rounded))
+                                .foregroundStyle(BrutalPalette.ink)
                                 .contentTransition(.numericText(countsDown: false))
                             Text("sujets")
-                                .font(.system(.title2, design: .rounded, weight: .bold))
-                                .foregroundStyle(.white.opacity(0.7))
+                                .font(.system(.title, design: .rounded, weight: .heavy))
+                                .foregroundStyle(BrutalPalette.ink)
                         }
                         .opacity(appeared ? 1 : 0)
 
                         Text("en seulement 10 minutes par jour.")
-                            .font(.system(.body, design: .rounded, weight: .semibold))
-                            .foregroundStyle(SophiaTheme.streakOrange)
+                            .font(.system(.body, design: .rounded, weight: .heavy))
+                            .foregroundStyle(BrutalPalette.ink)
                             .opacity(showNumber ? 1 : 0)
                     }
 
                     GeometryReader { geo in
                         ZStack(alignment: .leading) {
                             Capsule()
-                                .fill(.white.opacity(0.1))
-                                .frame(height: 10)
+                                .fill(Color.white)
+                                .overlay { Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 2.5) }
+                                .frame(height: 16)
                             Capsule()
-                                .fill(
-                                    LinearGradient(
-                                        colors: [SophiaTheme.emerald, SophiaTheme.streakOrange],
-                                        startPoint: .leading,
-                                        endPoint: .trailing
-                                    )
-                                )
-                                .frame(width: progressWidth, height: 10)
+                                .fill(BrutalPalette.pink)
+                                .overlay { Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 2.5) }
+                                .frame(width: progressWidth, height: 16)
                         }
                         .onAppear {
                             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
@@ -69,17 +66,15 @@ struct OnboardingProjectionScreen: View {
                             }
                         }
                     }
-                    .frame(height: 10)
+                    .frame(height: 16)
                     .padding(.horizontal, 40)
                     .opacity(appeared ? 1 : 0)
                 }
 
                 Spacer()
 
-                OnboardingButton(title: "C'est parti !", action: {
-                    onNext()
-                })
-                .opacity(showNumber ? 1 : 0)
+                OnboardingPrimaryButton(title: "C'est parti !", action: onNext)
+                    .opacity(showNumber ? 1 : 0)
             }
         }
         .onAppear {
@@ -113,8 +108,7 @@ struct OnboardingProjectionScreen: View {
         }
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-            let heavy = UIImpactFeedbackGenerator(style: .medium)
-            heavy.impactOccurred()
+            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
             withAnimation(.spring(response: 0.5)) {
                 showNumber = true
             }

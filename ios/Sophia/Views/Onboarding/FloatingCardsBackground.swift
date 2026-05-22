@@ -31,7 +31,8 @@ struct FloatingCardsBackground: View {
                     cardScale: card.scale,
                     dismissing: dismissing,
                     index: i,
-                    phaseOffset: Double(i) * 1.2
+                    phaseOffset: Double(i) * 1.2,
+                    accent: OnboardingPastels.at(i)
                 )
             }
         }
@@ -48,6 +49,7 @@ private struct FloatingCardItem: View {
     let dismissing: Bool
     let index: Int
     let phaseOffset: Double
+    let accent: Color
     @State private var floatY: CGFloat = 0
     @State private var floatX: CGFloat = 0
     @State private var floatRotation: Double = 0
@@ -59,40 +61,53 @@ private struct FloatingCardItem: View {
     var body: some View {
         let w = baseWidth * cardScale
         let h = baseImageHeight * cardScale
+        let corner: CGFloat = 14
+        let depth: CGFloat = 5
 
-        VStack(spacing: 0) {
-            Color(.secondarySystemBackground)
-                .frame(width: w, height: h)
-                .overlay {
-                    if let image {
-                        Image(uiImage: image)
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .allowsHitTesting(false)
-                    } else {
-                        LinearGradient(
-                            colors: [SophiaTheme.accent.opacity(0.3), SophiaTheme.accent.opacity(0.1)],
-                            startPoint: .topLeading,
-                            endPoint: .bottomTrailing
-                        )
+        ZStack(alignment: .top) {
+            RoundedRectangle(cornerRadius: corner, style: .continuous)
+                .fill(BrutalPalette.ink)
+                .frame(width: w, height: h + cardLabelHeight + 4)
+                .offset(y: depth)
+
+            VStack(spacing: 0) {
+                Color(red: 0.96, green: 0.93, blue: 0.88)
+                    .frame(width: w, height: h)
+                    .overlay {
+                        if let image {
+                            Image(uiImage: image)
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .allowsHitTesting(false)
+                        } else {
+                            accent
+                        }
                     }
-                }
-                .clipShape(.rect(cornerRadii: .init(topLeading: 10, topTrailing: 10)))
+                    .clipShape(.rect(cornerRadii: .init(topLeading: corner, topTrailing: corner)))
+                    .overlay(alignment: .bottom) {
+                        Rectangle().fill(BrutalPalette.ink).frame(height: 2.5)
+                    }
 
-            Text(title)
-                .font(.system(cardScale > 1.1 ? .caption : .caption2, design: .rounded, weight: .bold))
-                .foregroundStyle(.white)
-                .lineLimit(2)
-                .frame(width: w, alignment: .leading)
-                .padding(.horizontal, 6)
-                .padding(.vertical, 6)
-                .background(SophiaTheme.cardBackground)
-                .clipShape(.rect(cornerRadii: .init(bottomLeading: 10, bottomTrailing: 10)))
+                Text(title)
+                    .font(.system(cardScale > 1.1 ? .caption : .caption2, design: .rounded, weight: .heavy))
+                    .foregroundStyle(BrutalPalette.ink)
+                    .lineLimit(2)
+                    .frame(width: w, alignment: .leading)
+                    .padding(.horizontal, 8)
+                    .padding(.vertical, 8)
+                    .frame(height: cardLabelHeight, alignment: .topLeading)
+                    .background(accent)
+                    .clipShape(.rect(cornerRadii: .init(bottomLeading: corner, bottomTrailing: corner)))
+            }
+            .frame(width: w)
+            .overlay {
+                RoundedRectangle(cornerRadius: corner, style: .continuous)
+                    .strokeBorder(BrutalPalette.ink, lineWidth: 2.5)
+            }
         }
-        .shadow(color: .black.opacity(0.4), radius: 12, y: 6)
         .rotationEffect(.degrees(rotation + floatRotation))
         .position(x: position.x + floatX, y: position.y + floatY)
-        .opacity(dismissing ? 0 : 0.55)
+        .opacity(dismissing ? 0 : 1)
         .offset(y: dismissing ? -250 : 0)
         .scaleEffect(dismissing ? 0.4 : 1.0)
         .animation(.spring(response: 0.5, dampingFraction: 0.7).delay(Double(index) * 0.08), value: dismissing)
@@ -118,5 +133,9 @@ private struct FloatingCardItem: View {
                 floatRotation = rotAmp
             }
         }
+    }
+
+    private var cardLabelHeight: CGFloat {
+        cardScale > 1.1 ? 44 : 36
     }
 }

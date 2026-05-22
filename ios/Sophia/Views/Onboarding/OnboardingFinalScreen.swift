@@ -8,12 +8,14 @@ struct OnboardingFinalScreen: View {
 
     var body: some View {
         ZStack {
-            SophiaTheme.background.ignoresSafeArea()
+            BrutalPalette.cream.ignoresSafeArea()
 
             ForEach(particles) { p in
-                Circle()
+                Rectangle()
                     .fill(p.color)
-                    .frame(width: p.size, height: p.size)
+                    .frame(width: p.size, height: p.size * 1.4)
+                    .overlay { Rectangle().strokeBorder(BrutalPalette.ink, lineWidth: 1.5) }
+                    .rotationEffect(.degrees(p.rotation))
                     .position(p.position)
                     .opacity(p.opacity)
             }
@@ -24,31 +26,32 @@ struct OnboardingFinalScreen: View {
                 VStack(spacing: 28) {
                     ZStack {
                         Circle()
-                            .fill(SophiaTheme.emerald.opacity(0.12))
-                            .frame(width: 120, height: 120)
+                            .fill(BrutalPalette.ink)
+                            .frame(width: 140, height: 140)
+                            .offset(y: 6)
 
-                        Image(systemName: "checkmark.seal.fill")
-                            .font(.system(size: 56))
-                            .foregroundStyle(SophiaTheme.emerald)
+                        Circle()
+                            .fill(Color(red: 0.70, green: 0.95, blue: 0.80))
+                            .frame(width: 130, height: 130)
+                            .overlay { Circle().strokeBorder(BrutalPalette.ink, lineWidth: 3) }
+
+                        Image(systemName: "checkmark")
+                            .font(.system(size: 56, weight: .heavy))
+                            .foregroundStyle(BrutalPalette.ink)
                             .symbolEffect(.bounce, value: confettiTrigger)
                     }
                     .opacity(appeared ? 1 : 0)
                     .scaleEffect(appeared ? 1 : 0.3)
 
-                    VStack(spacing: 14) {
-                        Text("Votre profil est configuré")
-                            .font(.system(.title, design: .rounded, weight: .bold))
-                            .foregroundStyle(.white)
+                    VStack(spacing: 12) {
+                        Text("Profil prêt !")
+                            .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                            .foregroundStyle(BrutalPalette.ink)
                             .opacity(appeared ? 1 : 0)
 
-                        Text("Bienvenue dans Sophia.")
-                            .font(.system(.title3, design: .rounded, weight: .medium))
-                            .foregroundStyle(SophiaTheme.emerald)
-                            .opacity(appeared ? 1 : 0)
-
-                        Text("Commence à apprendre dès maintenant.")
-                            .font(.system(.body, design: .rounded))
-                            .foregroundStyle(.white.opacity(0.6))
+                        Text("Bienvenue dans Sophia.\nCommence à apprendre dès maintenant.")
+                            .font(.system(.body, design: .rounded, weight: .semibold))
+                            .foregroundStyle(BrutalPalette.ink.opacity(0.6))
                             .multilineTextAlignment(.center)
                             .opacity(appeared ? 1 : 0)
                     }
@@ -56,7 +59,7 @@ struct OnboardingFinalScreen: View {
 
                 Spacer()
 
-                OnboardingButton(title: "Commencer à apprendre", action: onComplete)
+                OnboardingPrimaryButton(title: "Commencer à apprendre", action: onComplete)
                     .opacity(appeared ? 1 : 0)
                     .offset(y: appeared ? 0 : 30)
             }
@@ -75,7 +78,13 @@ struct OnboardingFinalScreen: View {
     }
 
     private func spawnConfetti() {
-        let colors: [Color] = [SophiaTheme.emerald, SophiaTheme.accent, SophiaTheme.streakOrange, .white, SophiaTheme.errorRed]
+        let colors: [Color] = [
+            BrutalPalette.pink,
+            Color(red: 0.70, green: 0.95, blue: 0.80),
+            Color(red: 1.0, green: 0.86, blue: 0.62),
+            Color(red: 0.66, green: 0.92, blue: 0.96),
+            Color(red: 0.82, green: 0.78, blue: 1.0),
+        ]
         let screenWidth = UIScreen.main.bounds.width
         let screenHeight = UIScreen.main.bounds.height
 
@@ -83,8 +92,9 @@ struct OnboardingFinalScreen: View {
             let p = OnboardingConfetti(
                 id: i,
                 color: colors[i % colors.count],
-                size: CGFloat.random(in: 4...10),
+                size: CGFloat.random(in: 8...14),
                 position: CGPoint(x: screenWidth / 2, y: screenHeight * 0.4),
+                rotation: Double.random(in: -30...30),
                 opacity: 1.0
             )
             particles.append(p)
@@ -92,10 +102,12 @@ struct OnboardingFinalScreen: View {
             let targetX = CGFloat.random(in: 20...(screenWidth - 20))
             let targetY = CGFloat.random(in: 50...(screenHeight - 100))
             let delay = Double(i) * 0.02
+            let endRotation = Double.random(in: -180...180)
 
             withAnimation(.spring(response: 0.8, dampingFraction: 0.6).delay(delay)) {
                 if let idx = particles.firstIndex(where: { $0.id == i }) {
                     particles[idx].position = CGPoint(x: targetX, y: targetY)
+                    particles[idx].rotation = endRotation
                 }
             }
 
@@ -115,5 +127,6 @@ struct OnboardingConfetti: Identifiable {
     let color: Color
     let size: CGFloat
     var position: CGPoint
+    var rotation: Double
     var opacity: Double
 }

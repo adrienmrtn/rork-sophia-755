@@ -15,78 +15,33 @@ struct OnboardingObjectivesScreen: View {
 
     var body: some View {
         ZStack {
-            SophiaTheme.background.ignoresSafeArea()
+            BrutalPalette.cream.ignoresSafeArea()
 
             VStack(spacing: 0) {
-                Spacer()
+                Spacer().frame(height: 60)
 
-                VStack(spacing: 28) {
-                    VStack(spacing: 12) {
-                        Image(systemName: "target")
-                            .font(.system(size: 40))
-                            .foregroundStyle(SophiaTheme.accent)
-                            .opacity(appeared ? 1 : 0)
-                            .scaleEffect(appeared ? 1 : 0.6)
+                OnboardingHeader(
+                    title: "Ton objectif\navec Sophia ?",
+                    subtitle: "Sélectionne un ou plusieurs objectifs.",
+                    appeared: appeared
+                )
 
-                        Text("Quel est ton objectif\navec Sophia ?")
-                            .font(.system(.title2, design: .rounded, weight: .bold))
-                            .foregroundStyle(.white)
-                            .multilineTextAlignment(.center)
-                            .opacity(appeared ? 1 : 0)
+                Spacer().frame(height: 28)
 
-                        Text("Sélectionne un ou plusieurs objectifs")
-                            .font(.system(.subheadline, design: .rounded))
-                            .foregroundStyle(.white.opacity(0.4))
-                            .opacity(appeared ? 1 : 0)
-                    }
-
+                ScrollView {
                     VStack(spacing: 10) {
                         ForEach(Array(objectives.enumerated()), id: \.offset) { i, obj in
                             let isSelected = viewModel.objectives.contains(obj.label)
-                            Button {
+                            BrutalSelectableRow(
+                                icon: obj.icon,
+                                label: obj.label,
+                                isSelected: isSelected,
+                                accentColor: OnboardingPastels.at(i)
+                            ) {
                                 UIImpactFeedbackGenerator(style: .light).impactOccurred()
                                 withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
                                     viewModel.toggleObjective(obj.label)
                                 }
-                            } label: {
-                                HStack(spacing: 14) {
-                                    Image(systemName: obj.icon)
-                                        .font(.title3)
-                                        .foregroundStyle(isSelected ? SophiaTheme.emerald : .white.opacity(0.4))
-                                        .frame(width: 28, alignment: .center)
-                                    Text(obj.label)
-                                        .font(.system(.body, design: .rounded, weight: .medium))
-                                        .foregroundStyle(.white)
-                                        .multilineTextAlignment(.leading)
-                                        .fixedSize(horizontal: false, vertical: true)
-                                        .frame(maxWidth: .infinity, alignment: .leading)
-                                    ZStack {
-                                        Circle()
-                                            .strokeBorder(.white.opacity(0.2), lineWidth: 2)
-                                            .frame(width: 24, height: 24)
-                                        if isSelected {
-                                            Circle()
-                                                .fill(SophiaTheme.emerald)
-                                                .frame(width: 24, height: 24)
-                                                .overlay {
-                                                    Image(systemName: "checkmark")
-                                                        .font(.caption.weight(.bold))
-                                                        .foregroundStyle(.white)
-                                                }
-                                                .transition(.scale.combined(with: .opacity))
-                                        }
-                                    }
-                                    .frame(width: 24)
-                                }
-                                .padding(14)
-                                .background(
-                                    isSelected ? SophiaTheme.emerald.opacity(0.1) : .white.opacity(0.04),
-                                    in: .rect(cornerRadius: 14)
-                                )
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 14)
-                                        .strokeBorder(isSelected ? SophiaTheme.emerald.opacity(0.4) : .clear, lineWidth: 1.5)
-                                )
                             }
                             .opacity(appeared ? 1 : 0)
                             .offset(y: appeared ? 0 : 15)
@@ -94,11 +49,11 @@ struct OnboardingObjectivesScreen: View {
                         }
                     }
                     .padding(.horizontal, 24)
+                    .padding(.bottom, 20)
                 }
+                .scrollIndicators(.hidden)
 
-                Spacer()
-
-                OnboardingButton(title: "Suivant", isEnabled: viewModel.canProceed, action: onNext)
+                OnboardingPrimaryButton(title: "Suivant", isEnabled: viewModel.canProceed, action: onNext)
                     .opacity(appeared ? 1 : 0)
             }
         }

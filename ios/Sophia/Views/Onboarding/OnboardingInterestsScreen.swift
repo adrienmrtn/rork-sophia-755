@@ -6,12 +6,12 @@ struct OnboardingInterestsScreen: View {
     @State private var appeared: Bool = false
 
     private let interests: [(label: String, icon: String, imageId: String, color: Color)] = [
-        ("Histoire", "building.columns", "course_12_la_strategie_de_napoleon_a_ulm_1805", Color(red: 0.96, green: 0.62, blue: 0.04)),
-        ("Sciences", "atom", "course_67_qu_est_ce_qu_un_trou_noir", Color(red: 0.20, green: 0.83, blue: 0.60)),
-        ("Littérature", "book.closed", "course_97_le_mythe_de_sisyphe_camus", Color(red: 0.93, green: 0.35, blue: 0.45)),
-        ("Art", "paintpalette", "course_150_la_nuit_etoilee_van_gogh", Color(red: 0.85, green: 0.55, blue: 0.95)),
-        ("Mythologie", "bolt.fill", "course_162_promethee_le_voleur_de_feu", Color(red: 0.56, green: 0.40, blue: 0.92)),
-        ("Monde actuel", "globe.europe.africa", "course_204_le_concept_de_monde_multipolaire", Color(red: 0.25, green: 0.72, blue: 0.85)),
+        ("Histoire", "building.columns", "course_12_la_strategie_de_napoleon_a_ulm_1805", Color(red: 1.0, green: 0.86, blue: 0.62)),
+        ("Sciences", "atom", "course_67_qu_est_ce_qu_un_trou_noir", Color(red: 0.70, green: 0.95, blue: 0.80)),
+        ("Littérature", "book.closed", "course_97_le_mythe_de_sisyphe_camus", Color(red: 1.0, green: 0.78, blue: 0.78)),
+        ("Art", "paintpalette", "course_150_la_nuit_etoilee_van_gogh", Color(red: 0.66, green: 0.92, blue: 0.96)),
+        ("Mythologie", "bolt.fill", "course_162_promethee_le_voleur_de_feu", Color(red: 0.82, green: 0.78, blue: 1.0)),
+        ("Monde actuel", "globe.europe.africa", "course_204_le_concept_de_monde_multipolaire", Color(red: 0.74, green: 0.90, blue: 1.0)),
     ]
 
     private let columns = [
@@ -21,55 +21,46 @@ struct OnboardingInterestsScreen: View {
 
     var body: some View {
         ZStack {
-            SophiaTheme.background.ignoresSafeArea()
+            BrutalPalette.cream.ignoresSafeArea()
 
             VStack(spacing: 0) {
-                VStack(spacing: 12) {
-                    Image(systemName: "heart.text.clipboard.fill")
-                        .font(.system(size: 40))
-                        .foregroundStyle(SophiaTheme.emerald)
-                        .opacity(appeared ? 1 : 0)
-                        .scaleEffect(appeared ? 1 : 0.5)
+                Spacer().frame(height: 60)
 
-                    Text("Quels sujets t'intéressent ?")
-                        .font(.system(.title2, design: .rounded, weight: .bold))
-                        .foregroundStyle(.white)
-                        .multilineTextAlignment(.center)
-                        .opacity(appeared ? 1 : 0)
+                OnboardingHeader(
+                    title: "Quels sujets\nt'intéressent ?",
+                    subtitle: "Sélectionne au moins un sujet.",
+                    appeared: appeared
+                )
 
-                    Text("Sélectionne au moins un sujet")
-                        .font(.system(.subheadline, design: .rounded))
-                        .foregroundStyle(.white.opacity(0.4))
-                        .opacity(appeared ? 1 : 0)
-                }
-                .padding(.top, 60)
-                .padding(.bottom, 28)
+                Spacer().frame(height: 24)
 
-                LazyVGrid(columns: columns, spacing: 14) {
-                    ForEach(Array(interests.enumerated()), id: \.offset) { i, interest in
-                        let isSelected = viewModel.interests.contains(interest.label)
-                        InterestCard(
-                            label: interest.label,
-                            icon: interest.icon,
-                            imageId: interest.imageId,
-                            color: interest.color,
-                            isSelected: isSelected
-                        ) {
-                            UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                            withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
-                                viewModel.toggleInterest(interest.label)
+                ScrollView {
+                    LazyVGrid(columns: columns, spacing: 14) {
+                        ForEach(Array(interests.enumerated()), id: \.offset) { i, interest in
+                            let isSelected = viewModel.interests.contains(interest.label)
+                            InterestCard(
+                                label: interest.label,
+                                icon: interest.icon,
+                                imageId: interest.imageId,
+                                color: interest.color,
+                                isSelected: isSelected
+                            ) {
+                                UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                                withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
+                                    viewModel.toggleInterest(interest.label)
+                                }
                             }
+                            .opacity(appeared ? 1 : 0)
+                            .offset(y: appeared ? 0 : 20)
+                            .animation(.spring(response: 0.5).delay(Double(i) * 0.06), value: appeared)
                         }
-                        .opacity(appeared ? 1 : 0)
-                        .offset(y: appeared ? 0 : 20)
-                        .animation(.spring(response: 0.5).delay(Double(i) * 0.06), value: appeared)
                     }
+                    .padding(.horizontal, 24)
+                    .padding(.bottom, 24)
                 }
-                .padding(.horizontal, 24)
+                .scrollIndicators(.hidden)
 
-                Spacer()
-
-                OnboardingButton(title: "Suivant", isEnabled: viewModel.canProceed, action: onNext)
+                OnboardingPrimaryButton(title: "Suivant", isEnabled: viewModel.canProceed, action: onNext)
                     .opacity(appeared ? 1 : 0)
             }
         }
@@ -96,7 +87,7 @@ private struct InterestCard: View {
     var body: some View {
         Button(action: action) {
             VStack(spacing: 0) {
-                Color(.secondarySystemBackground)
+                Color(red: 0.96, green: 0.93, blue: 0.88)
                     .frame(height: 100)
                     .overlay {
                         if let image {
@@ -105,46 +96,68 @@ private struct InterestCard: View {
                                 .aspectRatio(contentMode: .fill)
                                 .allowsHitTesting(false)
                         } else {
-                            LinearGradient(
-                                colors: [color.opacity(0.4), color.opacity(0.15)],
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
-                            )
+                            color
                         }
                     }
                     .overlay {
                         if isSelected {
-                            Color.black.opacity(0.3)
-                            Image(systemName: "checkmark.circle.fill")
-                                .font(.system(size: 32))
-                                .foregroundStyle(.white)
-                                .transition(.scale.combined(with: .opacity))
+                            ZStack {
+                                Color.black.opacity(0.35)
+                                Image(systemName: "checkmark")
+                                    .font(.system(size: 28, weight: .heavy))
+                                    .foregroundStyle(.white)
+                                    .padding(10)
+                                    .background(Circle().fill(BrutalPalette.ink))
+                                    .overlay { Circle().strokeBorder(.white, lineWidth: 2) }
+                                    .transition(.scale.combined(with: .opacity))
+                            }
                         }
                     }
                     .clipShape(.rect(cornerRadii: .init(topLeading: 14, topTrailing: 14)))
+                    .overlay(alignment: .bottom) {
+                        Rectangle().fill(BrutalPalette.ink).frame(height: 2.5)
+                    }
 
                 HStack(spacing: 6) {
                     Image(systemName: icon)
-                        .font(.caption)
-                        .foregroundStyle(color)
+                        .font(.system(size: 13, weight: .heavy))
+                        .foregroundStyle(BrutalPalette.ink)
                     Text(label)
-                        .font(.system(.subheadline, design: .rounded, weight: .bold))
-                        .foregroundStyle(.white)
+                        .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                        .foregroundStyle(BrutalPalette.ink)
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 12)
-                .background(SophiaTheme.cardBackground)
+                .background(color)
                 .clipShape(.rect(cornerRadii: .init(bottomLeading: 14, bottomTrailing: 14)))
             }
-            .overlay(
-                RoundedRectangle(cornerRadius: 14)
-                    .strokeBorder(isSelected ? color.opacity(0.7) : .clear, lineWidth: 2)
-            )
-            .scaleEffect(isSelected ? 0.96 : 1.0)
         }
-        .buttonStyle(.plain)
+        .buttonStyle(BrutalCardSelectableStyle())
         .onAppear {
             image = CourseImageMap.loadImage(for: imageId)
         }
+    }
+}
+
+private struct BrutalCardSelectableStyle: ButtonStyle {
+    var depth: CGFloat = 4
+
+    func makeBody(configuration: Configuration) -> some View {
+        let pressed = configuration.isPressed
+        ZStack(alignment: .top) {
+            RoundedRectangle(cornerRadius: 14, style: .continuous)
+                .fill(BrutalPalette.ink)
+                .offset(y: depth)
+
+            configuration.label
+                .clipShape(.rect(cornerRadius: 14))
+                .overlay {
+                    RoundedRectangle(cornerRadius: 14, style: .continuous)
+                        .strokeBorder(BrutalPalette.ink, lineWidth: 2.5)
+                }
+                .offset(y: pressed ? depth : 0)
+        }
+        .padding(.bottom, depth)
+        .animation(.spring(response: 0.18, dampingFraction: 0.7), value: pressed)
     }
 }

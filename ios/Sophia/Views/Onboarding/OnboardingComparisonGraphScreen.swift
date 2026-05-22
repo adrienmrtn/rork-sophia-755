@@ -9,100 +9,84 @@ struct OnboardingComparisonGraphScreen: View {
 
     var body: some View {
         ZStack {
-            SophiaTheme.background.ignoresSafeArea()
+            BrutalPalette.cream.ignoresSafeArea()
 
             VStack(spacing: 0) {
                 Spacer()
 
                 VStack(spacing: 28) {
                     VStack(spacing: 10) {
-                        Text("Ta progression culturelle")
-                            .font(.system(.title2, design: .rounded, weight: .bold))
-                            .foregroundStyle(.white)
+                        Text("Ta progression\nculturelle")
+                            .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                            .foregroundStyle(BrutalPalette.ink)
+                            .multilineTextAlignment(.center)
                             .opacity(appeared ? 1 : 0)
 
                         Text("Avec et sans Sophia")
-                            .font(.system(.body, design: .rounded))
-                            .foregroundStyle(.white.opacity(0.5))
+                            .font(.system(.subheadline, design: .rounded, weight: .semibold))
+                            .foregroundStyle(BrutalPalette.ink.opacity(0.55))
                             .opacity(appeared ? 1 : 0)
                     }
 
                     ZStack {
-                        RoundedRectangle(cornerRadius: 20)
-                            .fill(.white.opacity(0.04))
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 20)
-                                    .strokeBorder(.white.opacity(0.08), lineWidth: 1)
-                            )
-
                         VStack(spacing: 0) {
                             HStack {
-                                Text("Culture")
-                                    .font(.system(.caption, design: .rounded, weight: .medium))
-                                    .foregroundStyle(.white.opacity(0.3))
+                                Text("CULTURE")
+                                    .font(.system(.caption2, design: .rounded, weight: .heavy))
+                                    .tracking(1.0)
+                                    .foregroundStyle(BrutalPalette.ink.opacity(0.5))
                                 Spacer()
                             }
-                            .padding(.horizontal, 20)
-                            .padding(.top, 16)
+                            .padding(.horizontal, 18)
+                            .padding(.top, 14)
 
                             GeometryReader { geo in
-                                let w = geo.size.width - 40
-                                let h = geo.size.height - 20
+                                let w = geo.size.width - 36
+                                let h = geo.size.height - 14
 
                                 ZStack(alignment: .bottomLeading) {
                                     ForEach(0..<5) { i in
                                         Path { path in
                                             let y = h - (h * CGFloat(i) / 4)
-                                            path.move(to: CGPoint(x: 20, y: y))
-                                            path.addLine(to: CGPoint(x: 20 + w, y: y))
+                                            path.move(to: CGPoint(x: 18, y: y))
+                                            path.addLine(to: CGPoint(x: 18 + w, y: y))
                                         }
-                                        .stroke(.white.opacity(0.05), lineWidth: 1)
+                                        .stroke(BrutalPalette.ink.opacity(0.1), lineWidth: 1)
                                     }
 
                                     ComparisonCurve(progress: graphProgress, isWithSophia: false)
                                         .trim(from: 0, to: graphProgress)
                                         .stroke(
-                                            .white.opacity(0.25),
-                                            style: StrokeStyle(lineWidth: 3, lineCap: .round, dash: [6, 4])
+                                            BrutalPalette.ink.opacity(0.35),
+                                            style: StrokeStyle(lineWidth: 4, lineCap: .round, dash: [6, 5])
                                         )
-                                        .padding(.horizontal, 20)
-                                        .padding(.bottom, 10)
+                                        .padding(.horizontal, 18)
+                                        .padding(.bottom, 8)
 
                                     ComparisonCurve(progress: graphProgress, isWithSophia: true)
                                         .trim(from: 0, to: graphProgress)
                                         .stroke(
-                                            LinearGradient(
-                                                colors: [SophiaTheme.emerald, SophiaTheme.emerald.opacity(0.8)],
-                                                startPoint: .leading,
-                                                endPoint: .trailing
-                                            ),
-                                            style: StrokeStyle(lineWidth: 4, lineCap: .round)
+                                            BrutalPalette.pink,
+                                            style: StrokeStyle(lineWidth: 6, lineCap: .round)
                                         )
-                                        .padding(.horizontal, 20)
-                                        .padding(.bottom, 10)
-                                        .shadow(color: SophiaTheme.emerald.opacity(0.4), radius: 8, y: 2)
+                                        .padding(.horizontal, 18)
+                                        .padding(.bottom, 8)
 
                                     if showLabels {
-                                        VStack(alignment: .leading, spacing: 6) {
-                                            Text("Avec Sophia")
-                                                .font(.system(.caption, design: .rounded, weight: .bold))
-                                                .foregroundStyle(SophiaTheme.emerald)
-                                                .padding(.horizontal, 10)
-                                                .padding(.vertical, 4)
-                                                .background(SophiaTheme.emerald.opacity(0.15), in: .capsule)
-                                        }
-                                        .position(x: 20 + w * 0.75, y: h * 0.15)
+                                        BrutalPill(
+                                            text: "Avec Sophia",
+                                            background: BrutalPalette.pink,
+                                            foreground: BrutalPalette.ink
+                                        )
+                                        .position(x: 18 + w * 0.72, y: h * 0.18)
                                         .transition(.opacity.combined(with: .scale(scale: 0.8)))
 
-                                        VStack(alignment: .leading, spacing: 6) {
-                                            Text("Sans Sophia")
-                                                .font(.system(.caption, design: .rounded, weight: .bold))
-                                                .foregroundStyle(.white.opacity(0.4))
-                                                .padding(.horizontal, 10)
-                                                .padding(.vertical, 4)
-                                                .background(.white.opacity(0.06), in: .capsule)
-                                        }
-                                        .position(x: 20 + w * 0.75, y: h * 0.65)
+                                        BrutalPill(
+                                            text: "Sans Sophia",
+                                            background: Color.white,
+                                            foreground: BrutalPalette.ink
+                                        )
+                                        .position(x: 18 + w * 0.72, y: h * 0.62)
                                         .transition(.opacity.combined(with: .scale(scale: 0.8)))
                                     }
                                 }
@@ -110,24 +94,25 @@ struct OnboardingComparisonGraphScreen: View {
 
                             HStack {
                                 Text("Aujourd'hui")
-                                    .font(.system(.caption2, design: .rounded))
-                                    .foregroundStyle(.white.opacity(0.3))
+                                    .font(.system(.caption2, design: .rounded, weight: .heavy))
+                                    .foregroundStyle(BrutalPalette.ink.opacity(0.5))
                                 Spacer()
                                 Text("1 an")
-                                    .font(.system(.caption2, design: .rounded))
-                                    .foregroundStyle(.white.opacity(0.3))
+                                    .font(.system(.caption2, design: .rounded, weight: .heavy))
+                                    .foregroundStyle(BrutalPalette.ink.opacity(0.5))
                             }
-                            .padding(.horizontal, 20)
+                            .padding(.horizontal, 18)
                             .padding(.bottom, 12)
                         }
                     }
                     .frame(height: 260)
+                    .brutalOnboardingCard()
                     .padding(.horizontal, 24)
                     .opacity(appeared ? 1 : 0)
 
-                    Text("Sophia accélère ta culture\ngénérale de manière exponentielle.")
-                        .font(.system(.subheadline, design: .rounded, weight: .medium))
-                        .foregroundStyle(.white.opacity(0.6))
+                    Text("Sophia accélère ta culture\nde manière exponentielle.")
+                        .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                        .foregroundStyle(BrutalPalette.ink.opacity(0.7))
                         .multilineTextAlignment(.center)
                         .opacity(showLabels ? 1 : 0)
                         .offset(y: showLabels ? 0 : 10)
@@ -135,7 +120,7 @@ struct OnboardingComparisonGraphScreen: View {
 
                 Spacer()
 
-                OnboardingButton(title: "Continuer", action: onNext)
+                OnboardingPrimaryButton(title: "Continuer", action: onNext)
                     .opacity(showLabels ? 1 : 0)
             }
         }

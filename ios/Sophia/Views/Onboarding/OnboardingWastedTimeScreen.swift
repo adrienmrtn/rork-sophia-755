@@ -20,50 +20,51 @@ struct OnboardingWastedTimeScreen: View {
 
     var body: some View {
         ZStack {
-            SophiaTheme.background.ignoresSafeArea()
+            BrutalPalette.cream.ignoresSafeArea()
 
             VStack(spacing: 0) {
                 Spacer()
 
-                VStack(spacing: 28) {
-                    Image(systemName: "hourglass")
-                        .font(.system(size: 48))
-                        .foregroundStyle(SophiaTheme.streakOrange)
-                        .symbolEffect(.wiggle, value: appeared)
+                VStack(spacing: 24) {
+                    BrutalPill(text: "Temps perdu", icon: "hourglass", background: Color(red: 1.0, green: 0.78, blue: 0.78), foreground: BrutalPalette.ink)
                         .opacity(appeared ? 1 : 0)
 
                     VStack(spacing: 8) {
                         Text("C'est")
-                            .font(.system(.title3, design: .rounded, weight: .medium))
-                            .foregroundStyle(.white.opacity(0.6))
+                            .font(.system(.title3, design: .rounded, weight: .semibold))
+                            .foregroundStyle(BrutalPalette.ink.opacity(0.55))
 
-                        HStack(alignment: .firstTextBaseline, spacing: 6) {
+                        HStack(alignment: .firstTextBaseline, spacing: 8) {
                             Text("\(counterValue)")
-                                .font(.system(size: 64, weight: .heavy, design: .rounded))
-                                .foregroundStyle(SophiaTheme.streakOrange)
+                                .font(.system(size: 76, weight: .heavy, design: .rounded))
+                                .foregroundStyle(BrutalPalette.ink)
                                 .contentTransition(.numericText(countsDown: false))
-                            Text("heures")
-                                .font(.system(.title2, design: .rounded, weight: .bold))
-                                .foregroundStyle(.white.opacity(0.7))
+                            Text("h")
+                                .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                                .foregroundStyle(BrutalPalette.ink)
                         }
 
                         Text("perdues par an.")
-                            .font(.system(.title3, design: .rounded, weight: .medium))
-                            .foregroundStyle(.white.opacity(0.6))
+                            .font(.system(.title3, design: .rounded, weight: .semibold))
+                            .foregroundStyle(BrutalPalette.ink.opacity(0.55))
                     }
                     .opacity(appeared ? 1 : 0)
 
                     if showMessage {
-                        VStack(spacing: 6) {
-                            Text("Soit " + viewModel.wastedTimeDays + " complets.")
-                                .font(.system(.headline, design: .rounded, weight: .bold))
-                                .foregroundStyle(.white)
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Soit \(viewModel.wastedTimeDays) complets.")
+                                .font(.system(.headline, design: .rounded, weight: .heavy))
+                                .foregroundStyle(BrutalPalette.ink)
+                                .frame(maxWidth: .infinity, alignment: .leading)
 
-                            Text("Avec Sophia, fais un bon usage de ton temps.")
-                                .font(.system(.body, design: .rounded))
-                                .foregroundStyle(SophiaTheme.emerald)
-                                .multilineTextAlignment(.center)
+                            Text("Avec Sophia, fais un bon usage\nde ton temps.")
+                                .font(.system(.body, design: .rounded, weight: .semibold))
+                                .foregroundStyle(BrutalPalette.ink.opacity(0.7))
+                                .frame(maxWidth: .infinity, alignment: .leading)
                         }
+                        .padding(.horizontal, 18)
+                        .padding(.vertical, 16)
+                        .brutalOnboardingCard()
                         .padding(.horizontal, 24)
                         .transition(.opacity.combined(with: .offset(y: 10)))
                     }
@@ -71,7 +72,7 @@ struct OnboardingWastedTimeScreen: View {
 
                 Spacer()
 
-                OnboardingButton(title: "Continuer", action: onNext)
+                OnboardingPrimaryButton(title: "Continuer", action: onNext)
                     .opacity(showMessage ? 1 : 0)
             }
         }
@@ -107,8 +108,7 @@ struct OnboardingWastedTimeScreen: View {
         }
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.6) {
-            let heavy = UIImpactFeedbackGenerator(style: .heavy)
-            heavy.impactOccurred()
+            UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
             withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
                 showMessage = true
             }

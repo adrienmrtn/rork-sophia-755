@@ -4,7 +4,9 @@ struct SettingsView: View {
     let progressManager: ProgressManager
     let store: StoreViewModel
     var onShowPaywall: (() -> Void)? = nil
+    var onResetOnboarding: (() -> Void)? = nil
     @State private var showResetAlert: Bool = false
+    @State private var showResetOnboardingAlert: Bool = false
     @State private var showTerms: Bool = false
     @State private var showPrivacy: Bool = false
     @State private var hapticTrigger: Int = 0
@@ -145,6 +147,24 @@ struct SettingsView: View {
                         .brutalCard()
                         .padding(.horizontal, 20)
 
+                        #if DEBUG
+                        if onResetOnboarding != nil {
+                            sectionHeader("Développeur")
+                            VStack(spacing: 0) {
+                                actionRow(
+                                    icon: "arrow.triangle.2.circlepath",
+                                    iconBg: Color(red: 1.0, green: 0.78, blue: 0.78),
+                                    title: "Refaire l'onboarding"
+                                ) {
+                                    hapticTrigger += 1
+                                    showResetOnboardingAlert = true
+                                }
+                            }
+                            .brutalCard()
+                            .padding(.horizontal, 20)
+                        }
+                        #endif
+
                         Text("Made with ♥ — Sophia")
                             .font(.system(.caption, design: .rounded, weight: .heavy))
                             .foregroundStyle(ink.opacity(0.4))
@@ -163,6 +183,14 @@ struct SettingsView: View {
                 }
             } message: {
                 Text("Toute ta progression sera effacée. Cette action est irréversible.")
+            }
+            .alert("Refaire l'onboarding ?", isPresented: $showResetOnboardingAlert) {
+                Button("Annuler", role: .cancel) { }
+                Button("Relancer", role: .destructive) {
+                    onResetOnboarding?()
+                }
+            } message: {
+                Text("L'onboarding sera relancé depuis le début (DEBUG uniquement).")
             }
             .sheet(isPresented: $showTerms) {
                 TermsView()

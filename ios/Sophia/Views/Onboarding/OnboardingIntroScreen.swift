@@ -9,79 +9,70 @@ struct OnboardingIntroScreen: View {
 
     var body: some View {
         ZStack {
-            SophiaTheme.background.ignoresSafeArea()
+            BrutalPalette.cream.ignoresSafeArea()
 
             VStack(spacing: 0) {
-                if let player {
-                    ZStack(alignment: .bottom) {
-                        VideoPlayer(player: player)
-                            .disabled(true)
-                            .aspectRatio(9/16, contentMode: .fill)
-                            .frame(maxWidth: .infinity)
-                            .frame(height: UIScreen.main.bounds.height * 0.72)
-                            .clipped()
-                            .opacity(appeared ? 1 : 0)
-                            .scaleEffect(appeared ? 1 : 0.95)
-
-                        LinearGradient(
-                            colors: [
-                                .clear,
-                                .clear,
-                                .clear,
-                                SophiaTheme.background.opacity(0.5),
-                                SophiaTheme.background.opacity(0.85),
-                                SophiaTheme.background
-                            ],
-                            startPoint: .top,
-                            endPoint: .bottom
-                        )
-                        .frame(height: 220)
-                        .allowsHitTesting(false)
+                ZStack(alignment: .bottom) {
+                    Group {
+                        if let player {
+                            VideoPlayer(player: player)
+                                .disabled(true)
+                                .aspectRatio(9/16, contentMode: .fill)
+                        } else {
+                            BrutalPalette.pink
+                        }
                     }
-                } else {
-                    Spacer()
-                        .frame(height: UIScreen.main.bounds.height * 0.72)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: UIScreen.main.bounds.height * 0.62)
+                    .clipped()
+                    .overlay(alignment: .bottom) {
+                        Rectangle()
+                            .fill(BrutalPalette.ink)
+                            .frame(height: 3)
+                    }
+                    .opacity(appeared ? 1 : 0)
+                    .scaleEffect(appeared ? 1 : 0.98)
+
+                    LinearGradient(
+                        colors: [
+                            .clear,
+                            .clear,
+                            BrutalPalette.cream.opacity(0.4),
+                            BrutalPalette.cream.opacity(0.9),
+                            BrutalPalette.cream
+                        ],
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                    .frame(height: 180)
+                    .allowsHitTesting(false)
                 }
 
-                VStack(spacing: 14) {
-                    Image("logo_white")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(height: 34)
-                        .opacity(appeared ? 1 : 0)
-                        .offset(y: appeared ? 0 : 20)
+                VStack(spacing: 16) {
+                    BrutalPill(
+                        text: "Sophia",
+                        icon: "sparkles",
+                        background: BrutalPalette.pink,
+                        foreground: BrutalPalette.ink
+                    )
+                    .opacity(appeared ? 1 : 0)
+                    .offset(y: appeared ? 0 : 20)
 
-                    Text("Deviens vraiment cultivé\nen seulement 10 minutes\npar jour")
-                        .font(.system(.title3, design: .rounded, weight: .bold))
-                        .foregroundStyle(.white)
+                    Text("Deviens cultivé\nen 10 minutes\npar jour")
+                        .font(.system(.title, design: .rounded, weight: .heavy))
+                        .foregroundStyle(BrutalPalette.ink)
                         .multilineTextAlignment(.center)
                         .opacity(appeared ? 1 : 0)
                         .offset(y: appeared ? 0 : titleOffset)
                 }
-                .offset(y: -50)
+                .padding(.top, 8)
+                .offset(y: -40)
 
                 Spacer()
 
-                Button(action: {
-                    let g = UIImpactFeedbackGenerator(style: .medium)
-                    g.impactOccurred()
-                    onNext()
-                }) {
-                    HStack(spacing: 10) {
-                        Text("Commencer")
-                            .font(.system(.headline, design: .rounded, weight: .bold))
-                        Image(systemName: "arrow.right")
-                            .font(.subheadline.weight(.semibold))
-                    }
-                    .foregroundStyle(.white)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 18)
-                    .background(SophiaTheme.emerald, in: .rect(cornerRadius: 16))
-                }
-                .padding(.horizontal, 24)
-                .padding(.bottom, 50)
-                .opacity(appeared ? 1 : 0)
-                .offset(y: appeared ? 0 : 30)
+                OnboardingPrimaryButton(title: "Commencer", action: onNext)
+                    .opacity(appeared ? 1 : 0)
+                    .offset(y: appeared ? 0 : 30)
             }
         }
         .onAppear {

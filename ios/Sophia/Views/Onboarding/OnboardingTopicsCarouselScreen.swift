@@ -9,36 +9,38 @@ struct OnboardingTopicsCarouselScreen: View {
 
     var body: some View {
         ZStack {
-            SophiaTheme.background.ignoresSafeArea()
+            BrutalPalette.cream.ignoresSafeArea()
 
             VStack(spacing: 0) {
                 VStack(spacing: 10) {
                     Text(title)
-                        .font(.system(.title2, design: .rounded, weight: .bold))
-                        .foregroundStyle(.white)
+                        .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                        .foregroundStyle(BrutalPalette.ink)
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 24)
                         .opacity(appeared ? 1 : 0)
                         .offset(y: appeared ? 0 : 15)
 
                     Text(subtitle)
-                        .font(.system(.subheadline, design: .rounded))
-                        .foregroundStyle(.white.opacity(0.6))
+                        .font(.system(.subheadline, design: .rounded, weight: .semibold))
+                        .foregroundStyle(BrutalPalette.ink.opacity(0.55))
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 32)
                         .opacity(appeared ? 1 : 0)
                         .offset(y: appeared ? 0 : 15)
                 }
-                .padding(.top, 60)
+                .padding(.top, 70)
 
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack(alignment: .leading, spacing: 24) {
                         ForEach(Array(categories.enumerated()), id: \.offset) { catIdx, category in
-                            VStack(alignment: .leading, spacing: 10) {
-                                Text(category.name)
-                                    .font(.system(.headline, design: .rounded, weight: .bold))
-                                    .foregroundStyle(.white.opacity(0.8))
-                                    .padding(.horizontal, 24)
+                            VStack(alignment: .leading, spacing: 12) {
+                                BrutalPill(
+                                    text: category.name,
+                                    background: OnboardingPastels.at(catIdx),
+                                    foreground: BrutalPalette.ink
+                                )
+                                .padding(.horizontal, 24)
 
                                 ContinuousScrollingRow(
                                     courses: category.courses,
@@ -49,7 +51,7 @@ struct OnboardingTopicsCarouselScreen: View {
                         }
                     }
                     .padding(.top, 20)
-                    .padding(.bottom, 120)
+                    .padding(.bottom, 140)
                 }
 
                 Spacer(minLength: 0)
@@ -57,10 +59,10 @@ struct OnboardingTopicsCarouselScreen: View {
 
             VStack {
                 Spacer()
-                OnboardingButton(title: "Continuer", action: onNext)
+                OnboardingPrimaryButton(title: "Continuer", action: onNext)
                     .background(
                         LinearGradient(
-                            colors: [SophiaTheme.background.opacity(0), SophiaTheme.background, SophiaTheme.background],
+                            colors: [BrutalPalette.cream.opacity(0), BrutalPalette.cream, BrutalPalette.cream],
                             startPoint: .top,
                             endPoint: .bottom
                         )
@@ -89,20 +91,20 @@ private struct ContinuousScrollingRow: View {
     @State private var isUserDragging: Bool = false
     @State private var timer: Timer?
 
-    private let cardWidth: CGFloat = 140
-    private let spacing: CGFloat = 12
-    private let speed: CGFloat = 30
+    private let cardWidth: CGFloat = 150
+    private let spacing: CGFloat = 14
+    private let speed: CGFloat = 28
 
     var body: some View {
         let extendedCourses = courses + courses + courses
 
-        GeometryReader { geo in
-            let viewWidth = geo.size.width
+        GeometryReader { _ in
             HStack(spacing: spacing) {
                 ForEach(Array(extendedCourses.enumerated()), id: \.offset) { idx, course in
                     OnboardingMiniCard(
                         title: course.title,
-                        courseId: course.courseId
+                        courseId: course.courseId,
+                        accent: OnboardingPastels.at(categoryIndex)
                     )
                     .opacity(appeared ? 1 : 0)
                     .animation(
@@ -136,7 +138,7 @@ private struct ContinuousScrollingRow: View {
                     }
             )
         }
-        .frame(height: 120)
+        .frame(height: 140)
         .clipped()
     }
 
@@ -160,38 +162,55 @@ private struct ContinuousScrollingRow: View {
 struct OnboardingMiniCard: View {
     let title: String
     let courseId: String
+    let accent: Color
     @State private var image: UIImage?
 
-    var body: some View {
-        VStack(spacing: 0) {
-            Color(.secondarySystemBackground)
-                .frame(width: 140, height: 90)
-                .overlay {
-                    if let image {
-                        Image(uiImage: image)
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .allowsHitTesting(false)
-                    } else {
-                        LinearGradient(
-                            colors: [SophiaTheme.accent.opacity(0.3), SophiaTheme.accent.opacity(0.1)],
-                            startPoint: .topLeading,
-                            endPoint: .bottomTrailing
-                        )
-                    }
-                }
-                .clipShape(.rect(cornerRadii: .init(topLeading: 12, topTrailing: 12)))
+    private let w: CGFloat = 150
+    private let h: CGFloat = 90
+    private let corner: CGFloat = 14
+    private let depth: CGFloat = 4
 
-            Text(title)
-                .font(.system(.caption2, design: .rounded, weight: .bold))
-                .foregroundStyle(.white)
-                .lineLimit(2)
-                .multilineTextAlignment(.leading)
-                .frame(width: 140, alignment: .leading)
-                .padding(.horizontal, 8)
-                .padding(.vertical, 8)
-                .background(SophiaTheme.cardBackground)
-                .clipShape(.rect(cornerRadii: .init(bottomLeading: 12, bottomTrailing: 12)))
+    var body: some View {
+        ZStack(alignment: .top) {
+            RoundedRectangle(cornerRadius: corner, style: .continuous)
+                .fill(BrutalPalette.ink)
+                .frame(width: w, height: h + 50)
+                .offset(y: depth)
+
+            VStack(spacing: 0) {
+                Color(red: 0.96, green: 0.93, blue: 0.88)
+                    .frame(width: w, height: h)
+                    .overlay {
+                        if let image {
+                            Image(uiImage: image)
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .allowsHitTesting(false)
+                        } else {
+                            accent
+                        }
+                    }
+                    .clipShape(.rect(cornerRadii: .init(topLeading: corner, topTrailing: corner)))
+                    .overlay(alignment: .bottom) {
+                        Rectangle().fill(BrutalPalette.ink).frame(height: 2.5)
+                    }
+
+                Text(title)
+                    .font(.system(.caption2, design: .rounded, weight: .heavy))
+                    .foregroundStyle(BrutalPalette.ink)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
+                    .frame(width: w, height: 50, alignment: .topLeading)
+                    .padding(.horizontal, 8)
+                    .padding(.vertical, 8)
+                    .background(accent)
+                    .clipShape(.rect(cornerRadii: .init(bottomLeading: corner, bottomTrailing: corner)))
+            }
+            .frame(width: w)
+            .overlay {
+                RoundedRectangle(cornerRadius: corner, style: .continuous)
+                    .strokeBorder(BrutalPalette.ink, lineWidth: 2.5)
+            }
         }
         .onAppear {
             image = CourseImageMap.loadImage(for: courseId)

@@ -23,7 +23,13 @@ struct SophiaApp: App {
                     }
                 })
             } else {
-                ContentView()
+                ContentView(onResetOnboarding: {
+                    UserDefaults.standard.set(false, forKey: "sophia_onboarding_completed")
+                    UserDefaults.standard.set(false, forKey: "sophia_special_offer_seen")
+                    withAnimation(.spring(response: 0.5)) {
+                        showOnboarding = true
+                    }
+                })
             }
         }
     }

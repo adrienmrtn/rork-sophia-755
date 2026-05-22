@@ -2,6 +2,8 @@ import SwiftUI
 import RevenueCatUI
 
 struct ContentView: View {
+    var onResetOnboarding: (() -> Void)? = nil
+
     @State private var progressManager = ProgressManager()
     @State private var storeVM = StoreViewModel()
     @State private var selectedTab: Int = 0
@@ -43,7 +45,8 @@ struct ContentView: View {
                         store: storeVM,
                         onShowPaywall: {
                             showPaywall = true
-                        }
+                        },
+                        onResetOnboarding: onResetOnboarding
                     )
                 }
             }

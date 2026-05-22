@@ -60,7 +60,7 @@ struct OnboardingView: View {
 
     var body: some View {
         ZStack {
-            SophiaTheme.background.ignoresSafeArea()
+            BrutalPalette.cream.ignoresSafeArea()
 
             Group {
                 switch viewModel.currentScreen {
@@ -148,7 +148,7 @@ struct OnboardingView: View {
                 .transition(.move(edge: .bottom).combined(with: .opacity))
             }
         }
-        .preferredColorScheme(.dark)
+        .preferredColorScheme(.light)
         .sheet(isPresented: $showRCPaywall, onDismiss: {
             viewModel.completeOnboarding()
             onComplete()
@@ -184,8 +184,8 @@ struct OnboardingProgressDots: View {
         HStack(spacing: 6) {
             ForEach(0..<total, id: \.self) { i in
                 Capsule()
-                    .fill(i <= current ? SophiaTheme.emerald : .white.opacity(0.15))
-                    .frame(width: i == current ? 24 : 8, height: 4)
+                    .fill(i <= current ? BrutalPalette.ink : BrutalPalette.ink.opacity(0.15))
+                    .frame(width: i == current ? 28 : 10, height: 5)
                     .animation(.spring(response: 0.3), value: current)
             }
         }

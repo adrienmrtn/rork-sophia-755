@@ -9,7 +9,7 @@ struct OnboardingLoadingScreen: View {
 
     var body: some View {
         ZStack {
-            SophiaTheme.background.ignoresSafeArea()
+            BrutalPalette.cream.ignoresSafeArea()
 
             VStack(spacing: 40) {
                 Spacer()
@@ -17,18 +17,19 @@ struct OnboardingLoadingScreen: View {
                 VStack(spacing: 32) {
                     ZStack {
                         Circle()
-                            .fill(SophiaTheme.emerald.opacity(0.08))
-                            .frame(width: 120, height: 120)
-                            .scaleEffect(pulsing ? 1.15 : 0.95)
+                            .fill(BrutalPalette.ink)
+                            .frame(width: 130, height: 130)
+                            .offset(y: 6)
 
                         Circle()
-                            .fill(SophiaTheme.emerald.opacity(0.15))
-                            .frame(width: 80, height: 80)
-                            .scaleEffect(pulsing ? 1.1 : 0.9)
+                            .fill(BrutalPalette.pink)
+                            .frame(width: 120, height: 120)
+                            .overlay { Circle().strokeBorder(BrutalPalette.ink, lineWidth: 2.5) }
+                            .scaleEffect(pulsing ? 1.05 : 0.95)
 
                         Image(systemName: "sparkles")
-                            .font(.system(size: 36))
-                            .foregroundStyle(SophiaTheme.emerald)
+                            .font(.system(size: 44, weight: .heavy))
+                            .foregroundStyle(BrutalPalette.ink)
                             .symbolEffect(.pulse, isActive: !viewModel.isLoadingComplete)
                     }
 
@@ -36,32 +37,28 @@ struct OnboardingLoadingScreen: View {
                         GeometryReader { geo in
                             ZStack(alignment: .leading) {
                                 Capsule()
-                                    .fill(.white.opacity(0.1))
-                                    .frame(height: 8)
+                                    .fill(Color.white)
+                                    .overlay { Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 2.5) }
+                                    .frame(height: 14)
                                 Capsule()
-                                    .fill(
-                                        LinearGradient(
-                                            colors: [SophiaTheme.emerald, SophiaTheme.accent],
-                                            startPoint: .leading,
-                                            endPoint: .trailing
-                                        )
-                                    )
-                                    .frame(width: geo.size.width * viewModel.loadingProgress, height: 8)
+                                    .fill(BrutalPalette.pink)
+                                    .overlay { Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 2.5) }
+                                    .frame(width: max(0, geo.size.width * viewModel.loadingProgress), height: 14)
                                     .animation(.easeInOut(duration: 0.6), value: viewModel.loadingProgress)
                             }
                         }
-                        .frame(height: 8)
+                        .frame(height: 14)
                         .padding(.horizontal, 48)
 
                         Text(viewModel.loadingStep)
-                            .font(.system(.body, design: .rounded, weight: .medium))
-                            .foregroundStyle(.white.opacity(0.6))
+                            .font(.system(.body, design: .rounded, weight: .heavy))
+                            .foregroundStyle(BrutalPalette.ink.opacity(0.65))
                             .contentTransition(.opacity)
                             .animation(.easeInOut(duration: 0.3), value: viewModel.loadingStep)
 
                         Text("\(Int(viewModel.loadingProgress * 100))%")
-                            .font(.system(.title3, design: .rounded, weight: .bold))
-                            .foregroundStyle(SophiaTheme.emerald)
+                            .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                            .foregroundStyle(BrutalPalette.ink)
                             .contentTransition(.numericText(countsDown: false))
                     }
                 }
@@ -73,14 +70,12 @@ struct OnboardingLoadingScreen: View {
         .onChange(of: viewModel.loadingStep) { _, newStep in
             if !newStep.isEmpty && newStep != lastStep {
                 lastStep = newStep
-                let g = UIImpactFeedbackGenerator(style: .light)
-                g.impactOccurred()
+                UIImpactFeedbackGenerator(style: .light).impactOccurred()
             }
         }
         .onChange(of: viewModel.loadingProgress) { _, newProgress in
             if newProgress > 0 && Int(newProgress * 100) % 25 == 0 {
-                let g = UIImpactFeedbackGenerator(style: .soft)
-                g.impactOccurred()
+                UIImpactFeedbackGenerator(style: .soft).impactOccurred()
             }
         }
         .onAppear {
