@@ -1,4 +1,5 @@
 import SwiftUI
+import RevenueCatUI
 
 struct CourseView: View {
     let course: Course
@@ -13,6 +14,9 @@ struct CourseView: View {
     @State private var quizButtonPulse: Bool = false
     @State private var quizButtonShimmer: CGFloat = -200
     @State private var showQuizPrePaywall: Bool = false
+    @State private var endPhase: CourseEndPhase = .none
+    @State private var previousSubjectCount: Int = 0
+    @State private var showEndFlowPaywall: Bool = false
 
     private var isLastLesson: Bool {
         currentIndex == course.lessons.count - 1
@@ -30,22 +34,38 @@ struct CourseView: View {
         ZStack {
             cream.ignoresSafeArea()
 
-            VStack(spacing: 0) {
-                headerBar
-
-                TabView(selection: $currentIndex) {
-                    ForEach(Array(course.lessons.enumerated()), id: \.element.id) { index, lesson in
-                        lessonContent(lesson: lesson)
-                            .tag(index)
+            switch endPhase {
+            case .none:
+                lessonsBody
+            case .completed:
+                CourseCompletedView(
+                    course: course,
+                    progressManager: progressManager,
+                    previousSubjectCount: previousSubjectCount,
+                    showFreemiumGate: !isPremium,
+                    onClose: {
+                        withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
+                            endPhase = .streak
+                        }
+                    },
+                    onQuizTapped: {
+                        if isPremium {
+                            showQuiz = true
+                        } else {
+                            showEndFlowPaywall = true
+                        }
                     }
-                }
-                .tabViewStyle(.page(indexDisplayMode: .never))
-                .animation(.spring(response: 0.4), value: currentIndex)
-
-                bottomButton
+                )
+                .transition(.opacity.combined(with: .scale(scale: 0.98)))
+            case .streak:
+                StreakCelebrationView(
+                    streak: progressManager.streak,
+                    subject: course.subject,
+                    lastActiveDate: progressManager.progress.lastActiveDate,
+                    onReturnHome: { onDismissToHome() }
+                )
+                .transition(.opacity.combined(with: .move(edge: .bottom)))
             }
-            .opacity(appeared ? 1 : 0)
-            .offset(y: appeared ? 0 : 20)
         }
         .navigationBarBackButtonHidden()
         .fullScreenCover(isPresented: $showQuiz) {
@@ -68,6 +88,11 @@ struct CourseView: View {
                 showQuiz = true
             })
             .presentationDragIndicator(.visible)
+        }
+        .sheet(isPresented: $showEndFlowPaywall) {
+            PaywallView()
+                .onPurchaseCompleted { _ in showEndFlowPaywall = false }
+                .onRestoreCompleted { _ in showEndFlowPaywall = false }
         }
         .onAppear {
             withAnimation(.spring(response: 0.5, dampingFraction: 0.8).delay(0.1)) {
@@ -135,6 +160,26 @@ struct CourseView: View {
         .scrollIndicators(.hidden)
     }
 
+    /// Lessons body extracted so we can swap to the end-of-course phase screens.
+    private var lessonsBody: some View {
+        VStack(spacing: 0) {
+            headerBar
+
+            TabView(selection: $currentIndex) {
+                ForEach(Array(course.lessons.enumerated()), id: \.element.id) { index, lesson in
+                    lessonContent(lesson: lesson)
+                        .tag(index)
+                }
+            }
+            .tabViewStyle(.page(indexDisplayMode: .never))
+            .animation(.spring(response: 0.4), value: currentIndex)
+
+            bottomButton
+        }
+        .opacity(appeared ? 1 : 0)
+        .offset(y: appeared ? 0 : 20)
+    }
+
     private var bottomButton: some View {
         Button {
             let g = UIImpactFeedbackGenerator(style: .medium)
@@ -142,15 +187,16 @@ struct CourseView: View {
             if isLastLesson {
                 progressManager.updateLessonProgress(courseId: course.id, lessonIndex: currentIndex)
                 progressManager.markCourseCompletedToday()
-                if course.hasQuiz {
-                    if isPremium {
-                        showQuiz = true
-                    } else {
-                        showQuizPrePaywall = true
-                    }
+                if isPremium && course.hasQuiz {
+                    showQuiz = true
                 } else {
+                    // Capture subject count BEFORE marking the course completed so we can
+                    // animate the progression bar advancing by one step on the celebration screen.
+                    previousSubjectCount = progressManager.completedCount(for: course.subject)
                     progressManager.completeCourse(courseId: course.id, quizScore: 0)
-                    onDismissToHome()
+                    withAnimation(.spring(response: 0.5, dampingFraction: 0.85)) {
+                        endPhase = .completed
+                    }
                 }
             } else {
                 withAnimation(.spring(response: 0.4)) {
@@ -160,9 +206,9 @@ struct CourseView: View {
             }
         } label: {
             HStack(spacing: 8) {
-                Text(isLastLesson ? (course.hasQuiz ? "Passer au quiz" : "Terminer le cours") : "Continuer")
+                Text(isLastLesson ? "Terminer le cours" : "Continuer")
                     .font(.system(.headline, design: .rounded, weight: .bold))
-                Image(systemName: isLastLesson ? (course.hasQuiz ? "questionmark.circle.fill" : "checkmark.circle.fill") : "arrow.right")
+                Image(systemName: isLastLesson ? "checkmark.circle.fill" : "arrow.right")
                     .font(.subheadline.weight(.semibold))
             }
             .foregroundStyle(ink)

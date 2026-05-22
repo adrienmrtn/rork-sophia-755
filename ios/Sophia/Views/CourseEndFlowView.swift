@@ -1,0 +1,556 @@
+import SwiftUI
+
+// MARK: - Phase enum used by CourseView to drive the end-of-course freemium flow.
+
+nonisolated enum CourseEndPhase: Sendable {
+    case none
+    case completed
+    case streak
+}
+
+// MARK: - Course Completed (full-screen celebration shown after the last slide in freemium)
+
+struct CourseCompletedView: View {
+    let course: Course
+    let progressManager: ProgressManager
+    /// Count of completed courses in the subject BEFORE this course was completed.
+    let previousSubjectCount: Int
+    /// Whether the locked freemium banner + Mini Quiz CTA are shown.
+    let showFreemiumGate: Bool
+    let onClose: () -> Void
+    let onQuizTapped: () -> Void
+
+    @State private var appeared: Bool = false
+    @State private var thumbScale: CGFloat = 0.6
+    @State private var progressAnimated: Bool = false
+    @State private var displayedCount: Int = 0
+    @State private var cachedThumb: UIImage?
+
+    private let ink = Color.black
+    private let cream = Color(red: 0.984, green: 0.961, blue: 0.918)
+    private let pink = Color(red: 1.0, green: 0.553, blue: 0.706)
+
+    private var currentSubjectCount: Int {
+        progressManager.completedCount(for: course.subject)
+    }
+
+    private var pastel: Color {
+        switch course.subject {
+        case .histoire: return Color(red: 1.0, green: 0.86, blue: 0.62)
+        case .sciences: return Color(red: 0.70, green: 0.95, blue: 0.80)
+        case .litterature: return Color(red: 1.0, green: 0.78, blue: 0.78)
+        case .art: return Color(red: 0.66, green: 0.92, blue: 0.96)
+        case .mythologie: return Color(red: 0.82, green: 0.78, blue: 1.0)
+        case .comprendreLeMonde: return Color(red: 0.74, green: 0.90, blue: 1.0)
+        }
+    }
+
+    /// (level, lower, upper) tiers matching ProfileView.
+    private static let tiers: [(level: Int, lower: Int, upper: Int)] = [
+        (1, 0, 5), (2, 5, 15), (3, 15, 30), (4, 30, 50), (5, 50, 100)
+    ]
+
+    private func tier(for count: Int) -> (level: Int, lower: Int, upper: Int) {
+        Self.tiers.last(where: { count >= $0.lower }) ?? Self.tiers[0]
+    }
+
+    private var progressFraction: Double {
+        let count = progressAnimated ? currentSubjectCount : previousSubjectCount
+        let t = tier(for: count)
+        if t.level == 5 { return 1.0 }
+        let span = max(1, t.upper - t.lower)
+        return min(1.0, max(0.0, Double(count - t.lower) / Double(span)))
+    }
+
+    var body: some View {
+        ZStack {
+            cream.ignoresSafeArea()
+
+            VStack(spacing: 0) {
+                Spacer(minLength: 12)
+
+                thumbnail
+                    .scaleEffect(thumbScale)
+                    .opacity(appeared ? 1 : 0)
+
+                Spacer(minLength: 18)
+
+                VStack(spacing: 8) {
+                    Text("Apprentissage terminé !")
+                        .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                        .foregroundStyle(ink)
+                        .multilineTextAlignment(.center)
+
+                    Text("Tu gagnes en culture")
+                        .font(.system(.headline, design: .rounded, weight: .heavy))
+                        .foregroundStyle(ink.opacity(0.55))
+                }
+                .padding(.horizontal, 24)
+                .opacity(appeared ? 1 : 0)
+                .offset(y: appeared ? 0 : 12)
+
+                Spacer(minLength: 20)
+
+                progressionCard
+                    .padding(.horizontal, 20)
+                    .opacity(appeared ? 1 : 0)
+                    .offset(y: appeared ? 0 : 16)
+
+                if showFreemiumGate {
+                    freemiumNote
+                        .padding(.horizontal, 20)
+                        .padding(.top, 14)
+                        .opacity(appeared ? 1 : 0)
+                }
+
+                Spacer(minLength: 20)
+
+                actionButtons
+                    .padding(.horizontal, 20)
+                    .padding(.bottom, 24)
+                    .opacity(appeared ? 1 : 0)
+                    .offset(y: appeared ? 0 : 12)
+            }
+        }
+        .onAppear {
+            cachedThumb = CourseImageMap.loadImage(for: course.id)
+            displayedCount = previousSubjectCount
+
+            withAnimation(.spring(response: 0.55, dampingFraction: 0.75)) {
+                appeared = true
+                thumbScale = 1.0
+            }
+
+            // Animate progression bar + counter after a short beat.
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.55) {
+                withAnimation(.spring(response: 0.7, dampingFraction: 0.75)) {
+                    progressAnimated = true
+                }
+                animateCounter(from: previousSubjectCount, to: currentSubjectCount)
+                let g = UINotificationFeedbackGenerator()
+                g.notificationOccurred(.success)
+            }
+        }
+    }
+
+    // MARK: Thumbnail
+
+    private var thumbnail: some View {
+        ZStack(alignment: .top) {
+            RoundedRectangle(cornerRadius: 22, style: .continuous)
+                .fill(ink)
+                .offset(y: 6)
+
+            ZStack {
+                pastel
+                if let img = cachedThumb {
+                    Image(uiImage: img)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .allowsHitTesting(false)
+                } else {
+                    Image(systemName: course.subject.icon)
+                        .font(.system(size: 56, weight: .heavy))
+                        .foregroundStyle(ink.opacity(0.5))
+                }
+            }
+            .frame(width: 160, height: 160)
+            .clipShape(.rect(cornerRadius: 22))
+            .overlay {
+                RoundedRectangle(cornerRadius: 22, style: .continuous)
+                    .strokeBorder(ink, lineWidth: 3)
+            }
+            .overlay(alignment: .bottomTrailing) {
+                ZStack {
+                    Circle().fill(pink)
+                        .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
+                    Image(systemName: "checkmark")
+                        .font(.system(size: 18, weight: .heavy))
+                        .foregroundStyle(ink)
+                }
+                .frame(width: 44, height: 44)
+                .offset(x: 10, y: 10)
+            }
+        }
+        .frame(width: 170, height: 170)
+    }
+
+    // MARK: Progression card
+
+    private var progressionCard: some View {
+        let tierNow = tier(for: progressAnimated ? currentSubjectCount : previousSubjectCount)
+
+        return ZStack(alignment: .top) {
+            RoundedRectangle(cornerRadius: 20, style: .continuous)
+                .fill(ink)
+                .offset(y: 5)
+
+            VStack(alignment: .leading, spacing: 12) {
+                HStack(spacing: 10) {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                            .fill(pastel)
+                            .overlay {
+                                RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                    .strokeBorder(ink, lineWidth: 2)
+                            }
+                        Image(systemName: course.subject.icon)
+                            .font(.system(size: 16, weight: .heavy))
+                            .foregroundStyle(ink)
+                    }
+                    .frame(width: 38, height: 38)
+
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(course.subject.shortName)
+                            .font(.system(.headline, design: .rounded, weight: .heavy))
+                            .foregroundStyle(ink)
+                        Text("\(displayedCount) cours lus")
+                            .font(.system(.caption, design: .rounded, weight: .heavy))
+                            .foregroundStyle(ink.opacity(0.55))
+                            .contentTransition(.numericText())
+                    }
+                    Spacer()
+                    Text("NIV. \(tierNow.level)")
+                        .font(.system(.caption2, design: .rounded, weight: .heavy))
+                        .foregroundStyle(.white)
+                        .tracking(0.6)
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 5)
+                        .background(ink, in: Capsule())
+                }
+
+                GeometryReader { geo in
+                    ZStack(alignment: .leading) {
+                        Capsule()
+                            .fill(Color(white: 0.94))
+                            .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
+                        Capsule()
+                            .fill(pastel)
+                            .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
+                            .frame(width: max(14, geo.size.width * progressFraction))
+                    }
+                }
+                .frame(height: 16)
+            }
+            .padding(16)
+            .background(Color.white)
+            .clipShape(.rect(cornerRadius: 20))
+            .overlay {
+                RoundedRectangle(cornerRadius: 20, style: .continuous)
+                    .strokeBorder(ink, lineWidth: 2.5)
+            }
+        }
+        .padding(.bottom, 5)
+    }
+
+    // MARK: Freemium note
+
+    private var freemiumNote: some View {
+        HStack(spacing: 8) {
+            Image(systemName: "checkmark.seal.fill")
+                .font(.system(size: 14, weight: .heavy))
+                .foregroundStyle(ink)
+            Text("Tu as terminé ton cours gratuit du jour")
+                .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                .foregroundStyle(ink)
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
+        }
+        .padding(.horizontal, 14)
+        .padding(.vertical, 10)
+        .background(Color.white, in: Capsule())
+        .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
+    }
+
+    // MARK: Action buttons (X close · Mini Quiz)
+
+    private var actionButtons: some View {
+        HStack(spacing: 14) {
+            // X close
+            Button {
+                let g = UIImpactFeedbackGenerator(style: .medium)
+                g.impactOccurred()
+                onClose()
+            } label: {
+                Image(systemName: "xmark")
+                    .font(.system(size: 18, weight: .heavy))
+                    .foregroundStyle(ink)
+                    .frame(width: 64, height: 60)
+            }
+            .buttonStyle(EndFlowCircleButtonStyle(fill: .white))
+
+            // Mini Quiz
+            Button {
+                let g = UIImpactFeedbackGenerator(style: .medium)
+                g.impactOccurred()
+                onQuizTapped()
+            } label: {
+                HStack(spacing: 8) {
+                    if showFreemiumGate {
+                        Image(systemName: "lock.fill")
+                            .font(.system(size: 14, weight: .heavy))
+                    }
+                    Text("Mini Quiz")
+                        .font(.system(.headline, design: .rounded, weight: .heavy))
+                    Image(systemName: "arrow.right")
+                        .font(.system(size: 14, weight: .heavy))
+                }
+                .foregroundStyle(ink)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 18)
+            }
+            .buttonStyle(EndFlowPillButtonStyle(fill: pink))
+        }
+    }
+
+    private func animateCounter(from start: Int, to end: Int) {
+        guard end > start else {
+            displayedCount = end
+            return
+        }
+        let steps = end - start
+        let stepDuration: Double = 0.35 / Double(max(1, steps))
+        for i in 1...steps {
+            DispatchQueue.main.asyncAfter(deadline: .now() + stepDuration * Double(i)) {
+                withAnimation(.snappy) {
+                    displayedCount = start + i
+                }
+            }
+        }
+    }
+}
+
+// MARK: - Streak Celebration screen
+
+struct StreakCelebrationView: View {
+    let streak: Int
+    let subject: Subject
+    let lastActiveDate: String?
+    let onReturnHome: () -> Void
+
+    @State private var appeared: Bool = false
+    @State private var flameScale: CGFloat = 0.4
+    @State private var flameRotation: Double = -8
+    @State private var numberAppeared: Bool = false
+    @State private var displayedStreak: Int = 0
+
+    private let ink = Color.black
+    private let cream = Color(red: 0.984, green: 0.961, blue: 0.918)
+    private let pink = Color(red: 1.0, green: 0.553, blue: 0.706)
+    private let orange = Color(red: 1.0, green: 0.55, blue: 0.18)
+    private let yellow = Color(red: 1.0, green: 0.84, blue: 0.35)
+
+    var body: some View {
+        ZStack {
+            cream.ignoresSafeArea()
+
+            VStack(spacing: 0) {
+                Spacer(minLength: 16)
+
+                flameView
+                    .scaleEffect(flameScale)
+                    .rotationEffect(.degrees(flameRotation))
+
+                Spacer(minLength: 8)
+
+                VStack(spacing: 4) {
+                    Text("\(displayedStreak)")
+                        .font(.system(size: 96, weight: .heavy, design: .rounded))
+                        .foregroundStyle(ink)
+                        .contentTransition(.numericText())
+                        .scaleEffect(numberAppeared ? 1 : 0.5)
+                        .opacity(numberAppeared ? 1 : 0)
+
+                    Text(streak <= 1 ? "Jour de suite" : "Jours de suite")
+                        .font(.system(.title3, design: .rounded, weight: .heavy))
+                        .foregroundStyle(ink)
+                        .opacity(numberAppeared ? 1 : 0)
+                }
+
+                Text("Tu deviens vraiment cultivé, tu deviens incollable en \(subject.shortName) !")
+                    .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                    .foregroundStyle(ink.opacity(0.6))
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 28)
+                    .padding(.top, 14)
+                    .opacity(appeared ? 1 : 0)
+
+                Spacer(minLength: 22)
+
+                weekStrip
+                    .padding(.horizontal, 22)
+                    .opacity(appeared ? 1 : 0)
+                    .offset(y: appeared ? 0 : 12)
+
+                Spacer(minLength: 18)
+
+                Text("En route pour ta série !")
+                    .font(.system(.headline, design: .rounded, weight: .heavy))
+                    .foregroundStyle(ink)
+                    .opacity(appeared ? 1 : 0)
+
+                Spacer(minLength: 20)
+
+                Button {
+                    let g = UIImpactFeedbackGenerator(style: .medium)
+                    g.impactOccurred()
+                    onReturnHome()
+                } label: {
+                    HStack(spacing: 8) {
+                        Text("Retour à l'accueil")
+                            .font(.system(.headline, design: .rounded, weight: .heavy))
+                        Image(systemName: "house.fill")
+                            .font(.system(size: 14, weight: .heavy))
+                    }
+                    .foregroundStyle(ink)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 18)
+                }
+                .buttonStyle(EndFlowPillButtonStyle(fill: pink))
+                .padding(.horizontal, 20)
+                .padding(.bottom, 28)
+                .opacity(appeared ? 1 : 0)
+                .offset(y: appeared ? 0 : 12)
+            }
+        }
+        .onAppear {
+            displayedStreak = max(0, streak - 1)
+
+            withAnimation(.spring(response: 0.55, dampingFraction: 0.7).delay(0.05)) {
+                flameScale = 1.0
+                flameRotation = 0
+            }
+            withAnimation(.spring(response: 0.5, dampingFraction: 0.7).delay(0.3)) {
+                numberAppeared = true
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
+                withAnimation(.snappy) { displayedStreak = streak }
+                let g = UINotificationFeedbackGenerator()
+                g.notificationOccurred(.success)
+            }
+            withAnimation(.easeOut(duration: 0.45).delay(0.55)) {
+                appeared = true
+            }
+            // Idle flicker
+            withAnimation(.easeInOut(duration: 1.4).repeatForever(autoreverses: true).delay(0.6)) {
+                flameScale = 1.06
+            }
+            withAnimation(.easeInOut(duration: 1.1).repeatForever(autoreverses: true).delay(0.6)) {
+                flameRotation = 4
+            }
+        }
+    }
+
+    private var flameView: some View {
+        ZStack {
+            // Outer glow plate (peach circle for brutalist depth)
+            Circle()
+                .fill(yellow.opacity(0.5))
+                .frame(width: 200, height: 200)
+                .blur(radius: 30)
+
+            Image(systemName: "flame.fill")
+                .font(.system(size: 140, weight: .heavy))
+                .foregroundStyle(
+                    LinearGradient(
+                        colors: [orange, yellow],
+                        startPoint: .bottom,
+                        endPoint: .top
+                    )
+                )
+                .symbolEffect(.variableColor.iterative.reversing)
+                .shadow(color: orange.opacity(0.45), radius: 18, y: 8)
+        }
+        .frame(height: 200)
+    }
+
+    private var weekStrip: some View {
+        let calendar = Calendar.current
+        let today = calendar.startOfDay(for: Date())
+        let dayLetters = ["L", "M", "M", "J", "V", "S", "D"]
+        let weekday = calendar.component(.weekday, from: today)
+        let mondayOffset = ((weekday + 5) % 7)
+        let monday = calendar.date(byAdding: .day, value: -mondayOffset, to: today) ?? today
+
+        let fmt = DateFormatter()
+        fmt.dateFormat = "yyyy-MM-dd"
+
+        return HStack(spacing: 8) {
+            ForEach(0..<7, id: \.self) { i in
+                let date = calendar.date(byAdding: .day, value: i, to: monday) ?? today
+                let isToday = calendar.isDate(date, inSameDayAs: today)
+                let isFuture = date > today
+                let dateStr = fmt.string(from: date)
+
+                let isDone: Bool = {
+                    guard let last = lastActiveDate,
+                          let lastDate = fmt.date(from: last) else { return false }
+                    let daysFromLast = calendar.dateComponents([.day], from: date, to: lastDate).day ?? 999
+                    if isFuture { return false }
+                    return dateStr <= last && daysFromLast >= 0 && daysFromLast < streak
+                }()
+
+                VStack(spacing: 6) {
+                    Text(dayLetters[i])
+                        .font(.system(.caption2, design: .rounded, weight: .heavy))
+                        .foregroundStyle(ink.opacity(isFuture ? 0.25 : 0.55))
+                    ZStack {
+                        Circle()
+                            .fill(isDone ? ink : Color.white)
+                            .overlay { Circle().strokeBorder(ink, lineWidth: 2) }
+                        if isDone {
+                            Image(systemName: "flame.fill")
+                                .font(.system(size: 14, weight: .heavy))
+                                .foregroundStyle(.white)
+                        } else if isToday {
+                            Circle().fill(ink).frame(width: 7, height: 7)
+                        }
+                    }
+                    .frame(width: 36, height: 36)
+                    .opacity(isFuture ? 0.4 : 1)
+                }
+                .frame(maxWidth: .infinity)
+            }
+        }
+    }
+}
+
+// MARK: - Local button styles for the end-of-course flow
+
+private struct EndFlowPillButtonStyle: ButtonStyle {
+    let fill: Color
+    private let depth: CGFloat = 5
+
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .background(
+                Capsule().fill(fill)
+                    .overlay { Capsule().strokeBorder(.black, lineWidth: 3) }
+            )
+            .offset(y: configuration.isPressed ? depth : 0)
+            .background(
+                Capsule().fill(Color.black).offset(y: depth)
+            )
+            .animation(.spring(response: 0.18, dampingFraction: 0.7), value: configuration.isPressed)
+            .padding(.bottom, depth)
+    }
+}
+
+private struct EndFlowCircleButtonStyle: ButtonStyle {
+    let fill: Color
+    private let depth: CGFloat = 5
+
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .background(
+                Capsule().fill(fill)
+                    .overlay { Capsule().strokeBorder(.black, lineWidth: 3) }
+            )
+            .offset(y: configuration.isPressed ? depth : 0)
+            .background(
+                Capsule().fill(Color.black).offset(y: depth)
+            )
+            .animation(.spring(response: 0.18, dampingFraction: 0.7), value: configuration.isPressed)
+            .padding(.bottom, depth)
+    }
+}
