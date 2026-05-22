@@ -49,7 +49,6 @@ struct LibraryView: View {
                     VStack(alignment: .leading, spacing: 28) {
                         searchBar
                             .padding(.horizontal, 20)
-                            .padding(.top, 4)
 
                         ForEach(Subject.allCases, id: \.self) { subject in
                             let courses = filteredCourses.filter { $0.subject == subject }
@@ -67,12 +66,12 @@ struct LibraryView: View {
                                 .padding(.top, 60)
                         }
                     }
-                    .padding(.top, 8)
                     .padding(.bottom, 40)
                 }
                 .scrollDismissesKeyboard(.interactively)
             }
             .navigationTitle("Bibliothèque")
+            .navigationBarTitleDisplayMode(.large)
             .toolbarBackground(cream, for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)
             .toolbarColorScheme(.light, for: .navigationBar)
@@ -189,7 +188,7 @@ struct LibraryView: View {
             .padding(.horizontal, 20)
 
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 14) {
+                HStack(alignment: .top, spacing: 14) {
                     ForEach(Array(courses.prefix(previewCount))) { course in
                         LibraryCardView(
                             course: course,
@@ -361,9 +360,8 @@ struct LibraryCardView: View {
             Text(course.title)
                 .font(.system(.subheadline, design: .rounded, weight: .heavy))
                 .foregroundStyle(ink)
-                .fixedSize(horizontal: false, vertical: true)
                 .multilineTextAlignment(.leading)
-                .lineLimit(2)
+                .lineLimit(2, reservesSpace: true)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.horizontal, 12)
