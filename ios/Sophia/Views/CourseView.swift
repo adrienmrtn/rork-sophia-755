@@ -141,6 +141,7 @@ struct CourseView: View {
             g.impactOccurred()
             if isLastLesson {
                 progressManager.updateLessonProgress(courseId: course.id, lessonIndex: currentIndex)
+                progressManager.markCourseCompletedToday()
                 if course.hasQuiz {
                     if isPremium {
                         showQuiz = true

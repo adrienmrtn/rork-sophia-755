@@ -4,6 +4,7 @@ struct HomeView: View {
     let progressManager: ProgressManager
     @Binding var selectedCourse: Course?
     @Binding var autoSwipeCourseId: String?
+    var onLockedTap: (() -> Void)? = nil
     @State private var cards: [Course] = []
     @State private var topCardOffset: CGSize = .zero
     @State private var topCardRotation: Double = 0
@@ -133,7 +134,14 @@ struct HomeView: View {
                 let isTop = index == 0
                 FlashCard(
                     course: course,
-                    onStart: { selectedCourse = course }
+                    dailyDone: progressManager.hasCompletedCourseToday,
+                    onStart: {
+                        if progressManager.hasCompletedCourseToday {
+                            onLockedTap?()
+                        } else {
+                            selectedCourse = course
+                        }
+                    }
                 )
                 .offset(
                     x: isTop ? topCardOffset.width : 0,
@@ -228,6 +236,7 @@ struct HomeView: View {
 
 struct FlashCard: View {
     let course: Course
+    var dailyDone: Bool = false
     let onStart: () -> Void
     @State private var cachedImage: UIImage?
     @State private var buttonTrigger: Int = 0
@@ -343,27 +352,53 @@ struct FlashCard: View {
                 .multilineTextAlignment(.leading)
                 .frame(maxWidth: .infinity, alignment: .leading)
 
-            Button {
-                buttonTrigger += 1
-                onStart()
-            } label: {
-                HStack(spacing: 8) {
-                    Text("Commencer")
-                        .font(.system(.headline, design: .rounded, weight: .heavy))
-                    Image(systemName: "play.fill")
-                        .font(.subheadline.weight(.bold))
+            if dailyDone {
+                dailyDoneBadge
+                    .padding(.top, 4)
+            } else {
+                Button {
+                    buttonTrigger += 1
+                    onStart()
+                } label: {
+                    HStack(spacing: 8) {
+                        Text("Commencer")
+                            .font(.system(.headline, design: .rounded, weight: .heavy))
+                        Image(systemName: "play.fill")
+                            .font(.subheadline.weight(.bold))
+                    }
+                    .foregroundStyle(ink)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 16)
                 }
-                .foregroundStyle(ink)
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 16)
+                .buttonStyle(BrutalistButtonStyle(fill: pink))
+                .sensoryFeedback(.impact(weight: .medium), trigger: buttonTrigger)
+                .padding(.top, 4)
             }
-            .buttonStyle(BrutalistButtonStyle(fill: pink))
-            .sensoryFeedback(.impact(weight: .medium), trigger: buttonTrigger)
-            .padding(.top, 4)
         }
         .padding(20)
         .frame(maxWidth: .infinity)
         .background(pastel)
+    }
+
+    /// Badge replacing the "Commencer" button once the user has completed their free daily course.
+    private var dailyDoneBadge: some View {
+        HStack(spacing: 8) {
+            Image(systemName: "checkmark.circle.fill")
+                .font(.system(.subheadline, weight: .heavy))
+                .foregroundStyle(ink)
+            Text("Cours du jour fait — reviens demain")
+                .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                .foregroundStyle(ink)
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
+            Text("🔥")
+                .font(.subheadline)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 16)
+        .padding(.horizontal, 12)
+        .background(Color.white, in: Capsule())
+        .overlay { Capsule().strokeBorder(ink, lineWidth: 3) }
     }
 
     private func boldText(_ input: String) -> Text {

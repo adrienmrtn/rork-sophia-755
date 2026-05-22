@@ -28,10 +28,12 @@ nonisolated struct UserProgress: Codable, Sendable {
     var freeCoursesOpened: Int
     var hasSeenSwipeTutorial: Bool
     var hasSeenSpecialOffer: Bool
+    /// yyyy-MM-dd date string for the last day the user fully completed (swiped to last slide + tapped Continuer) a course. Used for the freemium daily course gate.
+    var lastCourseCompletedDate: String?
 
-    static let empty = UserProgress(courseProgress: [:], streak: 0, lastActiveDate: nil, favoriteCourseIds: [], freeCoursesOpened: 0, hasSeenSwipeTutorial: false, hasSeenSpecialOffer: false)
+    static let empty = UserProgress(courseProgress: [:], streak: 0, lastActiveDate: nil, favoriteCourseIds: [], freeCoursesOpened: 0, hasSeenSwipeTutorial: false, hasSeenSpecialOffer: false, lastCourseCompletedDate: nil)
 
-    init(courseProgress: [String: CourseProgress], streak: Int, lastActiveDate: String?, favoriteCourseIds: [String] = [], freeCoursesOpened: Int = 0, hasSeenSwipeTutorial: Bool = false, hasSeenSpecialOffer: Bool = false) {
+    init(courseProgress: [String: CourseProgress], streak: Int, lastActiveDate: String?, favoriteCourseIds: [String] = [], freeCoursesOpened: Int = 0, hasSeenSwipeTutorial: Bool = false, hasSeenSpecialOffer: Bool = false, lastCourseCompletedDate: String? = nil) {
         self.courseProgress = courseProgress
         self.streak = streak
         self.lastActiveDate = lastActiveDate
@@ -39,5 +41,6 @@ nonisolated struct UserProgress: Codable, Sendable {
         self.freeCoursesOpened = freeCoursesOpened
         self.hasSeenSwipeTutorial = hasSeenSwipeTutorial
         self.hasSeenSpecialOffer = hasSeenSpecialOffer
+        self.lastCourseCompletedDate = lastCourseCompletedDate
     }
 }

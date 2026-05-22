@@ -98,6 +98,20 @@ class ProgressManager {
         save()
     }
 
+    /// True if the user already completed (swiped to last slide + tapped Continuer) a course today.
+    /// Used for the freemium daily gate — resets at local midnight.
+    var hasCompletedCourseToday: Bool {
+        guard let last = progress.lastCourseCompletedDate else { return false }
+        return last == dateFormatter.string(from: Date())
+    }
+
+    /// Marks today as the date the user fully completed a course. Called when the user taps
+    /// the bottom button on the last lesson slide (regardless of whether a quiz follows).
+    func markCourseCompletedToday() {
+        progress.lastCourseCompletedDate = dateFormatter.string(from: Date())
+        save()
+    }
+
     var freeCoursesOpened: Int { progress.freeCoursesOpened }
 
     func incrementFreeCoursesOpened() {

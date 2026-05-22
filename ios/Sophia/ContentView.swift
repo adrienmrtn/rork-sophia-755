@@ -21,7 +21,12 @@ struct ContentView: View {
                     HomeView(
                         progressManager: progressManager,
                         selectedCourse: $selectedCourse,
-                        autoSwipeCourseId: $autoSwipeCourseId
+                        autoSwipeCourseId: $autoSwipeCourseId,
+                        onLockedTap: {
+                            if storeVM.isPremium { return }
+                            showPaywall = true
+                            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+                        }
                     )
                 }
 
