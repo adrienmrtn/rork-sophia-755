@@ -35,6 +35,26 @@ struct QuizView: View {
     @State private var xpEarned: Int = 0
     @State private var showXPPopup: Bool = false
 
+    // Neo-brutalist palette
+    private let ink = Color.black
+    private let cream = Color(red: 0.984, green: 0.961, blue: 0.918)
+    private let pink = Color(red: 1.0, green: 0.553, blue: 0.706)
+    private let mint = Color(red: 0.70, green: 0.95, blue: 0.80)
+    private let coral = Color(red: 1.0, green: 0.55, blue: 0.55)
+    private let yellow = Color(red: 1.0, green: 0.84, blue: 0.35)
+    private let orange = Color(red: 1.0, green: 0.55, blue: 0.18)
+
+    private var pastel: Color {
+        switch course.subject {
+        case .histoire: return Color(red: 1.0, green: 0.86, blue: 0.62)
+        case .sciences: return Color(red: 0.70, green: 0.95, blue: 0.80)
+        case .litterature: return Color(red: 1.0, green: 0.78, blue: 0.78)
+        case .art: return Color(red: 0.66, green: 0.92, blue: 0.96)
+        case .mythologie: return Color(red: 0.82, green: 0.78, blue: 1.0)
+        case .comprendreLeMonde: return Color(red: 0.74, green: 0.90, blue: 1.0)
+        }
+    }
+
     private var currentQuestion: ShuffledQuestion {
         shuffledQuestions[currentQuestionIndex]
     }
@@ -49,7 +69,7 @@ struct QuizView: View {
 
     var body: some View {
         ZStack {
-            SophiaTheme.background.ignoresSafeArea()
+            cream.ignoresSafeArea()
 
             if showCelebration {
                 celebrationView
@@ -99,21 +119,18 @@ struct QuizView: View {
     private var questionView: some View {
         VStack(spacing: 0) {
             quizHeader
-            duoProgressBar
+            brutalProgressBar
 
             ScrollView {
                 VStack(alignment: .leading, spacing: 24) {
-                    Text(currentQuestion.question)
-                        .font(.system(.title3, design: .rounded, weight: .bold))
-                        .foregroundStyle(.white)
-                        .id("question_\(currentQuestionIndex)")
+                    questionCard
                         .opacity(questionAppeared ? 1 : 0)
-                        .offset(y: questionAppeared ? 0 : 15)
-                        .padding(.top, 24)
+                        .offset(y: questionAppeared ? 0 : 20)
+                        .padding(.top, 20)
 
-                    VStack(spacing: 12) {
+                    VStack(spacing: 14) {
                         ForEach(Array(currentQuestion.options.enumerated()), id: \.offset) { index, option in
-                            duoOptionButton(index: index, text: option)
+                            brutalOptionButton(index: index, text: option)
                                 .opacity(questionAppeared ? 1 : 0)
                                 .offset(y: questionAppeared ? 0 : CGFloat(20 + index * 8))
                                 .animation(
@@ -124,58 +141,98 @@ struct QuizView: View {
                     }
                     .id("options_\(currentQuestionIndex)")
                 }
-                .padding(.horizontal, 24)
-                .padding(.bottom, showFeedback ? 240 : 40)
+                .padding(.horizontal, 20)
+                .padding(.bottom, showFeedback ? 260 : 40)
             }
             .scrollIndicators(.hidden)
 
             if showFeedback {
-                duoFeedbackBar
+                brutalFeedbackBar
                     .transition(.move(edge: .bottom).combined(with: .opacity))
             }
         }
     }
 
-    private var duoProgressBar: some View {
-        HStack(spacing: 10) {
-            GeometryReader { geo in
-                ZStack(alignment: .leading) {
-                    Capsule()
-                        .fill(.white.opacity(0.1))
-                        .frame(height: 14)
-                    Capsule()
-                        .fill(
-                            LinearGradient(
-                                colors: [SophiaTheme.emerald, SophiaTheme.emerald.opacity(0.7)],
-                                startPoint: .leading,
-                                endPoint: .trailing
-                            )
-                        )
-                        .frame(width: max(geo.size.width * progressValue, 14), height: 14)
-                        .animation(.spring(response: 0.5, dampingFraction: 0.8), value: progressValue)
-                        .shadow(color: SophiaTheme.emerald.opacity(0.4), radius: 4, y: 0)
+    private var questionCard: some View {
+        ZStack(alignment: .topLeading) {
+            RoundedRectangle(cornerRadius: 22, style: .continuous)
+                .fill(ink)
+                .offset(y: 6)
+            VStack(alignment: .leading, spacing: 12) {
+                HStack(spacing: 6) {
+                    Image(systemName: course.subject.icon)
+                        .font(.caption2.weight(.bold))
+                        .foregroundStyle(.white)
+                    Text(course.subject.shortName.uppercased())
+                        .font(.system(.caption, design: .rounded, weight: .heavy))
+                        .foregroundStyle(.white)
+                        .tracking(0.5)
                 }
+                .padding(.horizontal, 12)
+                .padding(.vertical, 6)
+                .background(ink, in: Capsule())
+
+                Text(currentQuestion.question)
+                    .font(.system(.title3, design: .rounded, weight: .heavy))
+                    .foregroundStyle(ink)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .id("question_\(currentQuestionIndex)")
             }
-            .frame(height: 14)
+            .padding(20)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(pastel)
+            .clipShape(.rect(cornerRadius: 22))
+            .overlay {
+                RoundedRectangle(cornerRadius: 22, style: .continuous)
+                    .strokeBorder(ink, lineWidth: 3)
+            }
+        }
+    }
+
+    private var brutalProgressBar: some View {
+        HStack(spacing: 12) {
+            ZStack(alignment: .leading) {
+                Capsule()
+                    .fill(ink)
+                    .frame(height: 18)
+                    .offset(y: 4)
+                GeometryReader { geo in
+                    ZStack(alignment: .leading) {
+                        Capsule()
+                            .fill(Color.white)
+                            .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
+                            .frame(height: 18)
+                        Capsule()
+                            .fill(pink)
+                            .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
+                            .frame(width: max(geo.size.width * progressValue, 18), height: 18)
+                            .animation(.spring(response: 0.5, dampingFraction: 0.8), value: progressValue)
+                    }
+                }
+                .frame(height: 18)
+            }
+            .padding(.bottom, 4)
 
             if showCombo && comboCount >= 2 {
-                HStack(spacing: 3) {
+                HStack(spacing: 4) {
                     Image(systemName: "flame.fill")
-                        .font(.caption2)
-                        .foregroundStyle(SophiaTheme.streakOrange)
+                        .font(.caption2.weight(.heavy))
+                        .foregroundStyle(ink)
                     Text("x\(comboCount)")
                         .font(.system(.caption2, design: .rounded, weight: .heavy))
-                        .foregroundStyle(SophiaTheme.streakOrange)
+                        .foregroundStyle(ink)
                 }
-                .padding(.horizontal, 8)
-                .padding(.vertical, 4)
-                .background(SophiaTheme.streakOrange.opacity(0.15), in: .capsule)
+                .padding(.horizontal, 10)
+                .padding(.vertical, 6)
+                .background(yellow, in: Capsule())
+                .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
                 .transition(.scale.combined(with: .opacity))
             }
         }
         .padding(.horizontal, 20)
-        .padding(.top, 12)
-        .padding(.bottom, 8)
+        .padding(.top, 8)
+        .padding(.bottom, 4)
     }
 
     private var quizHeader: some View {
@@ -185,23 +242,27 @@ struct QuizView: View {
                 dismiss()
             } label: {
                 Image(systemName: "xmark")
-                    .font(.title3.weight(.semibold))
-                    .foregroundStyle(.white.opacity(0.7))
-                    .frame(width: 36, height: 36)
-                    .background(.white.opacity(0.1), in: Circle())
+                    .font(.system(.subheadline, weight: .heavy))
+                    .foregroundStyle(ink)
+                    .frame(width: 40, height: 40)
+                    .background(Color.white, in: Circle())
+                    .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
             }
 
             Spacer()
 
-            Text("\(currentQuestionIndex + 1)/\(shuffledQuestions.count)")
-                .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                .foregroundStyle(.white.opacity(0.6))
+            Text("\(currentQuestionIndex + 1) / \(shuffledQuestions.count)")
+                .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                .foregroundStyle(.white)
+                .padding(.horizontal, 14)
+                .padding(.vertical, 8)
+                .background(ink, in: Capsule())
         }
         .padding(.horizontal, 20)
         .padding(.top, 12)
     }
 
-    private func duoOptionButton(index: Int, text: String) -> some View {
+    private func brutalOptionButton(index: Int, text: String) -> some View {
         Button {
             guard !hasAnswered else { return }
             selectedOptionIndex = index
@@ -229,84 +290,82 @@ struct QuizView: View {
                 showFeedback = true
             }
         } label: {
-            HStack(spacing: 14) {
-                Text("\(Character(UnicodeScalar(65 + index)!))")
-                    .font(.system(.callout, design: .rounded, weight: .heavy))
-                    .foregroundStyle(optionLetterColor(for: index))
-                    .frame(width: 42, height: 42)
-                    .background(optionLetterBg(for: index))
-                    .clipShape(.rect(cornerRadius: 12))
+            ZStack {
+                RoundedRectangle(cornerRadius: 18, style: .continuous)
+                    .fill(ink)
+                    .offset(y: 5)
+                HStack(spacing: 14) {
+                    Text("\(Character(UnicodeScalar(65 + index)!))")
+                        .font(.system(.title3, design: .rounded, weight: .black))
+                        .foregroundStyle(optionLetterFg(for: index))
+                        .frame(width: 42, height: 42)
+                        .background(optionLetterBg(for: index))
+                        .clipShape(.rect(cornerRadius: 12))
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 12, style: .continuous)
+                                .strokeBorder(ink, lineWidth: 2.5)
+                        }
 
-                Text(text)
-                    .font(.system(.body, design: .rounded, weight: .semibold))
-                    .foregroundStyle(.white)
-                    .multilineTextAlignment(.leading)
+                    Text(text)
+                        .font(.system(.body, design: .rounded, weight: .heavy))
+                        .foregroundStyle(ink)
+                        .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
 
-                Spacer()
+                    Spacer(minLength: 4)
 
-                if hasAnswered && index == currentQuestion.correctIndex {
-                    Image(systemName: "checkmark.circle.fill")
-                        .font(.title3)
-                        .foregroundStyle(SophiaTheme.emerald)
-                        .transition(.scale.combined(with: .opacity))
+                    if hasAnswered && index == currentQuestion.correctIndex {
+                        Image(systemName: "checkmark")
+                            .font(.system(.headline, weight: .black))
+                            .foregroundStyle(.white)
+                            .frame(width: 32, height: 32)
+                            .background(mint, in: Circle())
+                            .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
+                            .transition(.scale.combined(with: .opacity))
+                    } else if hasAnswered && index == selectedOptionIndex && !isCorrect {
+                        Image(systemName: "xmark")
+                            .font(.system(.headline, weight: .black))
+                            .foregroundStyle(.white)
+                            .frame(width: 32, height: 32)
+                            .background(coral, in: Circle())
+                            .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
+                            .transition(.scale.combined(with: .opacity))
+                    }
                 }
-
-                if hasAnswered && index == selectedOptionIndex && !isCorrect {
-                    Image(systemName: "xmark.circle.fill")
-                        .font(.title3)
-                        .foregroundStyle(SophiaTheme.errorRed)
-                        .transition(.scale.combined(with: .opacity))
+                .padding(.horizontal, 16)
+                .padding(.vertical, 16)
+                .background(optionCardBg(for: index))
+                .clipShape(.rect(cornerRadius: 18))
+                .overlay {
+                    RoundedRectangle(cornerRadius: 18, style: .continuous)
+                        .strokeBorder(ink, lineWidth: 3)
                 }
+                .offset(y: hasAnswered && index == selectedOptionIndex ? 3 : 0)
             }
-            .padding(.horizontal, 16)
-            .padding(.vertical, 14)
-            .background(duoOptionBg(for: index))
-            .clipShape(.rect(cornerRadius: 16))
-            .overlay(
-                RoundedRectangle(cornerRadius: 16)
-                    .strokeBorder(duoBorderColor(for: index), lineWidth: hasAnswered && (index == currentQuestion.correctIndex || index == selectedOptionIndex) ? 2.5 : 1.5)
-            )
-            .shadow(
-                color: hasAnswered && index == currentQuestion.correctIndex ? SophiaTheme.emerald.opacity(0.2) : .clear,
-                radius: 8, y: 2
-            )
-            .scaleEffect(hasAnswered && index == selectedOptionIndex ? 0.97 : 1.0)
         }
         .buttonStyle(.plain)
         .animation(.spring(response: 0.3, dampingFraction: 0.7), value: hasAnswered)
-
     }
 
-    private func optionLetterColor(for index: Int) -> Color {
-        guard hasAnswered else { return .white.opacity(0.6) }
-        if index == currentQuestion.correctIndex { return .white }
-        if index == selectedOptionIndex { return .white }
-        return .white.opacity(0.3)
+    private func optionCardBg(for index: Int) -> Color {
+        guard hasAnswered else { return Color.white }
+        if index == currentQuestion.correctIndex { return mint }
+        if index == selectedOptionIndex { return coral }
+        return Color.white.opacity(0.6)
+    }
+
+    private func optionLetterFg(for index: Int) -> Color {
+        guard hasAnswered else { return ink }
+        if index == currentQuestion.correctIndex { return ink }
+        if index == selectedOptionIndex { return ink }
+        return ink.opacity(0.4)
     }
 
     private func optionLetterBg(for index: Int) -> some ShapeStyle {
-        guard hasAnswered else { return AnyShapeStyle(.white.opacity(0.08)) }
-        if index == currentQuestion.correctIndex { return AnyShapeStyle(SophiaTheme.emerald) }
-        if index == selectedOptionIndex { return AnyShapeStyle(SophiaTheme.errorRed) }
-        return AnyShapeStyle(.white.opacity(0.04))
-    }
-
-    private func duoBorderColor(for index: Int) -> Color {
-        guard hasAnswered else {
-            return .white.opacity(0.12)
-        }
-        if index == currentQuestion.correctIndex { return SophiaTheme.emerald }
-        if index == selectedOptionIndex { return SophiaTheme.errorRed }
-        return .white.opacity(0.06)
-    }
-
-    private func duoOptionBg(for index: Int) -> Color {
-        guard hasAnswered else {
-            return .white.opacity(0.05)
-        }
-        if index == currentQuestion.correctIndex { return SophiaTheme.emerald.opacity(0.1) }
-        if index == selectedOptionIndex { return SophiaTheme.errorRed.opacity(0.1) }
-        return .white.opacity(0.02)
+        guard hasAnswered else { return AnyShapeStyle(yellow) }
+        if index == currentQuestion.correctIndex { return AnyShapeStyle(Color.white) }
+        if index == selectedOptionIndex { return AnyShapeStyle(Color.white) }
+        return AnyShapeStyle(Color.white.opacity(0.5))
     }
 
     private func showXPBubble(xp: Int) {
@@ -324,81 +383,92 @@ struct QuizView: View {
         VStack {
             Spacer()
                 .frame(height: 100)
-            Text("+\(comboCount >= 3 ? 15 : (comboCount >= 2 ? 12 : 10)) XP")
-                .font(.system(.headline, design: .rounded, weight: .heavy))
-                .foregroundStyle(SophiaTheme.emerald)
-                .padding(.horizontal, 16)
-                .padding(.vertical, 8)
-                .background(SophiaTheme.emerald.opacity(0.15), in: .capsule)
+            HStack(spacing: 6) {
+                Image(systemName: "star.fill")
+                    .font(.subheadline.weight(.heavy))
+                    .foregroundStyle(ink)
+                Text("+\(comboCount >= 3 ? 15 : (comboCount >= 2 ? 12 : 10)) XP")
+                    .font(.system(.headline, design: .rounded, weight: .heavy))
+                    .foregroundStyle(ink)
+            }
+            .padding(.horizontal, 16)
+            .padding(.vertical, 10)
+            .background(yellow, in: Capsule())
+            .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
+            .shadow(color: ink.opacity(0.9), radius: 0, x: 0, y: 4)
             Spacer()
         }
     }
 
-    private var duoFeedbackBar: some View {
+    private var brutalFeedbackBar: some View {
         VStack(spacing: 0) {
             Rectangle()
-                .fill(isCorrect ? SophiaTheme.emerald.opacity(0.3) : SophiaTheme.errorRed.opacity(0.3))
-                .frame(height: 1)
+                .fill(ink)
+                .frame(height: 3)
 
             VStack(spacing: 16) {
                 HStack(spacing: 14) {
                     ZStack {
                         Circle()
-                            .fill(isCorrect ? SophiaTheme.emerald.opacity(0.2) : SophiaTheme.errorRed.opacity(0.2))
-                            .frame(width: 52, height: 52)
-                        Image(systemName: isCorrect ? "checkmark.circle.fill" : "xmark.circle.fill")
-                            .font(.title2)
-                            .foregroundStyle(isCorrect ? SophiaTheme.emerald : SophiaTheme.errorRed)
+                            .fill(ink)
+                            .offset(y: 4)
+                            .frame(width: 56, height: 56)
+                        Circle()
+                            .fill(isCorrect ? mint : coral)
+                            .frame(width: 56, height: 56)
+                            .overlay { Circle().strokeBorder(ink, lineWidth: 3) }
+                        Image(systemName: isCorrect ? "checkmark" : "xmark")
+                            .font(.title2.weight(.black))
+                            .foregroundStyle(ink)
                             .symbolEffect(.bounce, value: showFeedback)
                     }
+                    .frame(width: 56, height: 60, alignment: .top)
 
                     VStack(alignment: .leading, spacing: 4) {
-                        Text(isCorrect ? (comboCount >= 3 ? "Incroyable ! 🔥" : comboCount >= 2 ? "Excellent !" : "Bonne réponse !") : "Pas tout à fait...")
-                            .font(.system(.headline, design: .rounded, weight: .bold))
-                            .foregroundStyle(.white)
+                        Text(isCorrect ? (comboCount >= 3 ? "Incroyable !" : comboCount >= 2 ? "Excellent !" : "Bonne réponse !") : "Pas tout à fait...")
+                            .font(.system(.title3, design: .rounded, weight: .black))
+                            .foregroundStyle(ink)
                         if !isCorrect {
                             Text("Réponse : \(currentQuestion.options[currentQuestion.correctIndex])")
-                                .font(.system(.caption, design: .rounded))
-                                .foregroundStyle(.white.opacity(0.55))
+                                .font(.system(.subheadline, design: .rounded, weight: .semibold))
+                                .foregroundStyle(ink.opacity(0.7))
                                 .lineLimit(2)
+                        } else if comboCount >= 2 {
+                            HStack(spacing: 4) {
+                                Image(systemName: "flame.fill")
+                                    .font(.caption.weight(.heavy))
+                                Text("Combo x\(comboCount)")
+                                    .font(.system(.caption, design: .rounded, weight: .heavy))
+                            }
+                            .foregroundStyle(ink)
                         }
                     }
 
                     Spacer()
-
-                    if isCorrect && comboCount >= 2 {
-                        VStack(spacing: 2) {
-                            Text("🔥")
-                                .font(.title3)
-                            Text("x\(comboCount)")
-                                .font(.system(.caption2, design: .rounded, weight: .heavy))
-                                .foregroundStyle(SophiaTheme.streakOrange)
-                        }
-                        .transition(.scale.combined(with: .opacity))
-                    }
                 }
 
                 Button {
                     UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                     nextQuestion()
                 } label: {
-                    Text("Continuer")
-                        .font(.system(.headline, design: .rounded, weight: .bold))
-                        .foregroundStyle(.white)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 16)
-                        .background(
-                            isCorrect ? SophiaTheme.emerald : SophiaTheme.errorRed,
-                            in: .rect(cornerRadius: 14)
-                        )
-                        .shadow(color: (isCorrect ? SophiaTheme.emerald : SophiaTheme.errorRed).opacity(0.3), radius: 8, y: 2)
+                    HStack(spacing: 8) {
+                        Text("Continuer")
+                            .font(.system(.headline, design: .rounded, weight: .heavy))
+                        Image(systemName: "arrow.right")
+                            .font(.subheadline.weight(.heavy))
+                    }
+                    .foregroundStyle(ink)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 16)
                 }
+                .buttonStyle(BrutalPillStyle(fill: isCorrect ? mint : pink))
             }
             .padding(.horizontal, 20)
-            .padding(.vertical, 20)
+            .padding(.top, 18)
+            .padding(.bottom, 20)
             .background(
-                (isCorrect ? SophiaTheme.emerald.opacity(0.04) : SophiaTheme.errorRed.opacity(0.04))
-                    .background(SophiaTheme.cardBackground)
+                (isCorrect ? mint.opacity(0.35) : coral.opacity(0.35))
+                    .background(cream)
                     .ignoresSafeArea(edges: .bottom)
             )
         }
@@ -433,87 +503,84 @@ struct QuizView: View {
 
     private var resultView: some View {
         ZStack {
-            ResultParticlesView()
-                .ignoresSafeArea()
-                .allowsHitTesting(false)
-                .opacity(resultAppeared ? 1 : 0)
+            VStack(spacing: 24) {
+                Spacer(minLength: 20)
 
-            VStack(spacing: 28) {
-                Spacer()
-
+                // Trophy plate — yellow card with black border + offset
                 ZStack {
-                    Circle()
-                        .fill(SophiaTheme.emerald.opacity(0.06))
+                    RoundedRectangle(cornerRadius: 28, style: .continuous)
+                        .fill(ink)
                         .frame(width: 200, height: 200)
-                        .scaleEffect(resultAppeared ? 1 : 0.3)
-                        .opacity(resultAppeared ? 1 : 0)
+                        .offset(y: 8)
+                    ZStack {
+                        Circle()
+                            .fill(yellow)
+                            .frame(width: 200, height: 200)
+                            .overlay { Circle().strokeBorder(ink, lineWidth: 3.5) }
 
-                    Circle()
-                        .trim(from: 0, to: ringProgress)
-                        .stroke(
-                            AngularGradient(
-                                colors: [SophiaTheme.emerald, SophiaTheme.emerald.opacity(0.3), SophiaTheme.emerald],
-                                center: .center
-                            ),
-                            style: StrokeStyle(lineWidth: 8, lineCap: .round)
-                        )
-                        .frame(width: 170, height: 170)
-                        .rotationEffect(.degrees(-90))
+                        Circle()
+                            .trim(from: 0, to: ringProgress)
+                            .stroke(ink, style: StrokeStyle(lineWidth: 8, lineCap: .round))
+                            .frame(width: 170, height: 170)
+                            .rotationEffect(.degrees(-90))
 
-                    Circle()
-                        .fill(SophiaTheme.emerald.opacity(0.12))
-                        .frame(width: 140, height: 140)
-                        .scaleEffect(resultAppeared ? 1 : 0.5)
-
-                    VStack(spacing: 4) {
                         Image(systemName: "trophy.fill")
-                            .font(.system(size: 48))
-                            .foregroundStyle(SophiaTheme.streakOrange)
+                            .font(.system(size: 70, weight: .black))
+                            .foregroundStyle(ink)
                             .symbolEffect(.bounce, value: trophyBounce)
-                            .shadow(color: SophiaTheme.streakOrange.opacity(glowPulse ? 0.6 : 0.2), radius: glowPulse ? 20 : 8)
+                            .scaleEffect(glowPulse ? 1.05 : 1.0)
                     }
-                    .scaleEffect(resultAppeared ? 1 : 0)
+                    .scaleEffect(resultAppeared ? 1 : 0.3)
+                    .opacity(resultAppeared ? 1 : 0)
                 }
                 .animation(.spring(response: 0.7, dampingFraction: 0.6).delay(0.1), value: resultAppeared)
 
                 VStack(spacing: 10) {
-                    Text("Bravo, cours terminé !")
-                        .font(.system(.title, design: .rounded, weight: .bold))
-                        .foregroundStyle(.white)
+                    Text("Bravo, quiz terminé !")
+                        .font(.system(.title, design: .rounded, weight: .black))
+                        .foregroundStyle(ink)
                         .opacity(resultAppeared ? 1 : 0)
                         .offset(y: resultAppeared ? 0 : 15)
                         .animation(.spring(response: 0.5).delay(0.3), value: resultAppeared)
 
-                    HStack(spacing: 4) {
+                    HStack(alignment: .firstTextBaseline, spacing: 6) {
                         Text("\(scoreAnimated)")
-                            .font(.system(size: 52, weight: .heavy, design: .rounded))
-                            .foregroundStyle(SophiaTheme.emerald)
+                            .font(.system(size: 60, weight: .black, design: .rounded))
+                            .foregroundStyle(ink)
                             .contentTransition(.numericText(countsDown: false))
                         Text("/ \(shuffledQuestions.count)")
-                            .font(.system(.title2, design: .rounded, weight: .medium))
-                            .foregroundStyle(.white.opacity(0.5))
+                            .font(.system(.title2, design: .rounded, weight: .heavy))
+                            .foregroundStyle(ink.opacity(0.5))
+                    }
+                    .padding(.horizontal, 24)
+                    .padding(.vertical, 8)
+                    .background(Color.white, in: .rect(cornerRadius: 18))
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 18, style: .continuous)
+                            .strokeBorder(ink, lineWidth: 3)
                     }
                     .opacity(resultAppeared ? 1 : 0)
                     .animation(.spring(response: 0.5).delay(0.5), value: resultAppeared)
 
                     Text("bonnes réponses")
-                        .font(.system(.subheadline, design: .rounded))
-                        .foregroundStyle(.white.opacity(0.5))
+                        .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                        .foregroundStyle(ink.opacity(0.65))
                         .opacity(resultAppeared ? 1 : 0)
                         .animation(.spring(response: 0.5).delay(0.6), value: resultAppeared)
 
                     if xpEarned > 0 {
                         HStack(spacing: 6) {
                             Image(systemName: "star.fill")
-                                .font(.caption)
-                                .foregroundStyle(SophiaTheme.streakOrange)
+                                .font(.caption.weight(.heavy))
+                                .foregroundStyle(ink)
                             Text("+\(xpEarned) XP")
-                                .font(.system(.subheadline, design: .rounded, weight: .bold))
-                                .foregroundStyle(SophiaTheme.streakOrange)
+                                .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                                .foregroundStyle(ink)
                         }
-                        .padding(.horizontal, 16)
+                        .padding(.horizontal, 14)
                         .padding(.vertical, 8)
-                        .background(SophiaTheme.streakOrange.opacity(0.12), in: .capsule)
+                        .background(yellow, in: Capsule())
+                        .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
                         .scaleEffect(resultAppeared ? 1 : 0.5)
                         .opacity(resultAppeared ? 1 : 0)
                         .animation(.spring(response: 0.5, dampingFraction: 0.6).delay(0.8), value: resultAppeared)
@@ -524,7 +591,7 @@ struct QuizView: View {
 
                 Spacer()
 
-                VStack(spacing: 12) {
+                VStack(spacing: 14) {
                     Button {
                         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                         withAnimation(.easeInOut(duration: 0.3)) {
@@ -538,13 +605,12 @@ struct QuizView: View {
                             Image(systemName: "house.fill")
                             Text("Retour à l'accueil")
                         }
-                        .font(.system(.headline, design: .rounded, weight: .bold))
-                        .foregroundStyle(.white)
+                        .font(.system(.headline, design: .rounded, weight: .black))
+                        .foregroundStyle(ink)
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 18)
-                        .background(SophiaTheme.emerald, in: .rect(cornerRadius: 16))
-                        .shadow(color: SophiaTheme.emerald.opacity(0.3), radius: 8, y: 2)
                     }
+                    .buttonStyle(BrutalPillStyle(fill: pink))
 
                     Button {
                         UIImpactFeedbackGenerator(style: .light).impactOccurred()
@@ -554,12 +620,12 @@ struct QuizView: View {
                             Image(systemName: "arrow.counterclockwise")
                             Text("Refaire le quiz")
                         }
-                        .font(.system(.headline, design: .rounded, weight: .semibold))
-                        .foregroundStyle(SophiaTheme.accent)
+                        .font(.system(.headline, design: .rounded, weight: .heavy))
+                        .foregroundStyle(ink)
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 18)
-                        .background(SophiaTheme.accent.opacity(0.12), in: .rect(cornerRadius: 16))
                     }
+                    .buttonStyle(BrutalPillStyle(fill: Color.white))
                 }
                 .padding(.horizontal, 24)
                 .padding(.bottom, 32)
@@ -637,15 +703,27 @@ struct QuizView: View {
     }
 
     private var animatedScoreStars: some View {
-        HStack(spacing: 16) {
+        HStack(spacing: 14) {
             ForEach(0..<3, id: \.self) { index in
                 let isFilled = index < starsRevealed
-                Image(systemName: isFilled ? "star.fill" : "star")
-                    .font(.system(size: 36))
-                    .foregroundStyle(isFilled ? SophiaTheme.streakOrange : .white.opacity(0.12))
-                    .scaleEffect(isFilled ? 1.15 : 0.85)
-                    .shadow(color: isFilled ? SophiaTheme.streakOrange.opacity(0.5) : .clear, radius: isFilled ? 10 : 0)
-                    .animation(.spring(response: 0.4, dampingFraction: 0.4), value: starsRevealed)
+                ZStack {
+                    if isFilled {
+                        Image(systemName: "star.fill")
+                            .font(.system(size: 38, weight: .black))
+                            .foregroundStyle(yellow)
+                            .shadow(color: ink, radius: 0, x: 0, y: 3)
+                    }
+                    Image(systemName: isFilled ? "star.fill" : "star")
+                        .font(.system(size: 38, weight: .black))
+                        .foregroundStyle(.clear)
+                        .overlay {
+                            Image(systemName: isFilled ? "star.fill" : "star")
+                                .font(.system(size: 38, weight: .black))
+                                .foregroundStyle(isFilled ? yellow : ink.opacity(0.15))
+                        }
+                }
+                .scaleEffect(isFilled ? 1.15 : 0.85)
+                .animation(.spring(response: 0.4, dampingFraction: 0.4), value: starsRevealed)
             }
         }
         .opacity(resultAppeared ? 1 : 0)
@@ -707,13 +785,13 @@ struct QuizView: View {
 
     private var celebrationView: some View {
         ZStack {
-            SophiaTheme.background.ignoresSafeArea()
+            cream.ignoresSafeArea()
 
             ConfettiView(trigger: confettiTrigger)
                 .ignoresSafeArea()
                 .allowsHitTesting(false)
 
-            VStack(spacing: 28) {
+            VStack(spacing: 24) {
                 Spacer()
 
                 let newCompletedCount = progressManager.completedCount
@@ -721,36 +799,61 @@ struct QuizView: View {
 
                 VStack(spacing: 20) {
                     if isNewStreak {
-                        VStack(spacing: 8) {
-                            Text("🔥")
-                                .font(.system(size: 80))
-                                .scaleEffect(celebrationScale)
-                                .shadow(color: SophiaTheme.streakOrange.opacity(0.6), radius: 20)
+                        VStack(spacing: 12) {
+                            ZStack {
+                                Circle()
+                                    .fill(ink)
+                                    .frame(width: 140, height: 140)
+                                    .offset(y: 7)
+                                Circle()
+                                    .fill(orange)
+                                    .frame(width: 140, height: 140)
+                                    .overlay { Circle().strokeBorder(ink, lineWidth: 3.5) }
+                                Image(systemName: "flame.fill")
+                                    .font(.system(size: 70, weight: .black))
+                                    .foregroundStyle(.white)
+                            }
+                            .scaleEffect(celebrationScale)
+
                             Text("\(progressManager.streak) jours de suite !")
-                                .font(.system(.title2, design: .rounded, weight: .heavy))
-                                .foregroundStyle(SophiaTheme.streakOrange)
+                                .font(.system(.title2, design: .rounded, weight: .black))
+                                .foregroundStyle(ink)
+                                .padding(.horizontal, 16)
+                                .padding(.vertical, 8)
+                                .background(yellow, in: Capsule())
+                                .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
                                 .opacity(celebrationAppeared ? 1 : 0)
                                 .offset(y: celebrationAppeared ? 0 : 10)
                         }
                     } else {
-                        Image(systemName: "party.popper.fill")
-                            .font(.system(size: 72))
-                            .foregroundStyle(SophiaTheme.streakOrange)
-                            .symbolEffect(.bounce, value: celebrationEmojiBounce)
-                            .shadow(color: SophiaTheme.streakOrange.opacity(0.5), radius: 16)
-                            .scaleEffect(celebrationAppeared ? 1 : 0.3)
+                        ZStack {
+                            Circle()
+                                .fill(ink)
+                                .frame(width: 140, height: 140)
+                                .offset(y: 7)
+                            Circle()
+                                .fill(pink)
+                                .frame(width: 140, height: 140)
+                                .overlay { Circle().strokeBorder(ink, lineWidth: 3.5) }
+                            Image(systemName: "party.popper.fill")
+                                .font(.system(size: 64, weight: .black))
+                                .foregroundStyle(ink)
+                                .symbolEffect(.bounce, value: celebrationEmojiBounce)
+                        }
+                        .scaleEffect(celebrationAppeared ? 1 : 0.3)
                     }
 
                     VStack(spacing: 10) {
                         Text("Bravo !")
-                            .font(.system(size: 38, weight: .black, design: .rounded))
-                            .foregroundStyle(.white)
+                            .font(.system(size: 42, weight: .black, design: .rounded))
+                            .foregroundStyle(ink)
                             .opacity(celebrationAppeared ? 1 : 0)
                             .scaleEffect(celebrationAppeared ? 1 : 0.7)
 
                         Text("Tu as terminé ton \(ordinal(newCompletedCount)) cours !")
-                            .font(.system(.title3, design: .rounded, weight: .semibold))
-                            .foregroundStyle(.white.opacity(0.7))
+                            .font(.system(.title3, design: .rounded, weight: .heavy))
+                            .foregroundStyle(ink.opacity(0.7))
+                            .multilineTextAlignment(.center)
                             .opacity(celebrationAppeared ? 1 : 0)
                             .offset(y: celebrationAppeared ? 0 : 10)
                     }
@@ -759,15 +862,17 @@ struct QuizView: View {
 
                 if progressManager.streak >= 2 {
                     HStack(spacing: 8) {
-                        Text("🔥")
-                            .font(.title2)
+                        Image(systemName: "flame.fill")
+                            .font(.title3.weight(.heavy))
+                            .foregroundStyle(ink)
                         Text("Streak : \(progressManager.streak) jour\(progressManager.streak > 1 ? "s" : "")")
-                            .font(.system(.headline, design: .rounded, weight: .bold))
-                            .foregroundStyle(SophiaTheme.streakOrange)
+                            .font(.system(.headline, design: .rounded, weight: .black))
+                            .foregroundStyle(ink)
                     }
-                    .padding(.horizontal, 24)
-                    .padding(.vertical, 14)
-                    .background(SophiaTheme.streakOrange.opacity(0.15), in: Capsule())
+                    .padding(.horizontal, 22)
+                    .padding(.vertical, 12)
+                    .background(orange, in: Capsule())
+                    .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
                     .scaleEffect(streakBarAppeared ? 1 : 0.5)
                     .opacity(streakBarAppeared ? 1 : 0)
                 }
@@ -782,13 +887,12 @@ struct QuizView: View {
                         Image(systemName: "house.fill")
                         Text("Retour à l'accueil")
                     }
-                    .font(.system(.headline, design: .rounded, weight: .bold))
-                    .foregroundStyle(.white)
+                    .font(.system(.headline, design: .rounded, weight: .black))
+                    .foregroundStyle(ink)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 18)
-                    .background(SophiaTheme.emerald, in: .rect(cornerRadius: 16))
-                    .shadow(color: SophiaTheme.emerald.opacity(0.4), radius: 12, y: 4)
                 }
+                .buttonStyle(BrutalPillStyle(fill: pink))
                 .padding(.horizontal, 24)
                 .padding(.bottom, 40)
                 .scaleEffect(celebrationButtonAppeared ? 1 : 0.8)
@@ -800,6 +904,26 @@ struct QuizView: View {
     private func ordinal(_ n: Int) -> String {
         if n == 1 { return "1er" }
         return "\(n)e"
+    }
+}
+
+/// Neo-brutalist pill button: solid black offset plate behind a colored capsule.
+private struct BrutalPillStyle: ButtonStyle {
+    let fill: Color
+    private let depth: CGFloat = 5
+
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .background(
+                Capsule().fill(fill)
+                    .overlay { Capsule().strokeBorder(.black, lineWidth: 3) }
+            )
+            .offset(y: configuration.isPressed ? depth : 0)
+            .background(
+                Capsule().fill(Color.black).offset(y: depth)
+            )
+            .animation(.spring(response: 0.18, dampingFraction: 0.7), value: configuration.isPressed)
+            .padding(.bottom, depth)
     }
 }
 
@@ -841,13 +965,13 @@ struct ConfettiView: View {
 
     private func spawnParticles() {
         let colors: [Color] = [
-            SophiaTheme.emerald,
-            SophiaTheme.streakOrange,
-            SophiaTheme.accent,
-            SophiaTheme.errorRed,
-            .yellow,
-            .cyan,
-            .pink,
+            Color(red: 1.0, green: 0.553, blue: 0.706),  // pink
+            Color(red: 1.0, green: 0.84, blue: 0.35),    // yellow
+            Color(red: 0.70, green: 0.95, blue: 0.80),   // mint
+            Color(red: 0.66, green: 0.92, blue: 0.96),   // cyan
+            Color(red: 0.82, green: 0.78, blue: 1.0),    // lavender
+            Color(red: 1.0, green: 0.55, blue: 0.18),    // orange
+            .black,
         ]
         let now = Date().timeIntervalSinceReferenceDate
         var newParticles: [ConfettiParticle] = []
@@ -918,57 +1042,4 @@ struct FloatingEmoji: View {
                 }
             }
     }
-}
-
-struct ResultParticlesView: View {
-    @State private var particles: [ResultGlowParticle] = []
-
-    var body: some View {
-        TimelineView(.animation) { timeline in
-            Canvas { context, size in
-                let now = timeline.date.timeIntervalSinceReferenceDate
-                for p in particles {
-                    let elapsed = now - p.startTime
-                    let looped = elapsed.truncatingRemainder(dividingBy: p.duration)
-                    let progress = looped / p.duration
-                    let y = p.startY - progress * size.height * 1.2
-                    let x = p.startX + sin(looped * p.wobble) * 20
-                    let alpha = sin(progress * .pi) * 0.4
-                    context.opacity = alpha
-                    let rect = CGRect(x: x - p.radius, y: y - p.radius, width: p.radius * 2, height: p.radius * 2)
-                    context.fill(Path(ellipseIn: rect), with: .color(p.color))
-                    context.opacity = 1
-                }
-            }
-        }
-        .onAppear {
-            let colors: [Color] = [SophiaTheme.emerald.opacity(0.6), SophiaTheme.streakOrange.opacity(0.5), .cyan.opacity(0.4), .purple.opacity(0.4)]
-            let now = Date().timeIntervalSinceReferenceDate
-            var arr: [ResultGlowParticle] = []
-            for i in 0..<20 {
-                arr.append(ResultGlowParticle(
-                    id: i,
-                    startX: Double.random(in: 0...400),
-                    startY: Double.random(in: 600...900),
-                    radius: Double.random(in: 2...5),
-                    color: colors.randomElement()!,
-                    duration: Double.random(in: 3...6),
-                    wobble: Double.random(in: 1...3),
-                    startTime: now - Double.random(in: 0...3)
-                ))
-            }
-            particles = arr
-        }
-    }
-}
-
-nonisolated struct ResultGlowParticle: Sendable {
-    let id: Int
-    let startX: Double
-    let startY: Double
-    let radius: Double
-    let color: Color
-    let duration: Double
-    let wobble: Double
-    let startTime: Double
 }
