@@ -401,7 +401,7 @@ struct ProfileView: View {
                     let unlocked = unlockedSubjects.contains(subject)
                     SubjectProgressCard(
                         subject: subject,
-                        completed: progressManager.completedCount(for: subject),
+                        xp: progressManager.xp(for: subject),
                         unlocked: unlocked,
                         onUnlock: {
                             hapticTrigger += 1
@@ -418,30 +418,24 @@ struct ProfileView: View {
 
 private struct SubjectProgressCard: View {
     let subject: Subject
-    let completed: Int
+    let xp: Int
     let unlocked: Bool
     let onUnlock: () -> Void
 
     private let ink = BrutalPalette.ink
 
-    /// (level, lowerBound, upperBound). Niveau 1: 0-4, 2: 5-14, 3: 15-29, 4: 30-49, 5: 50+.
-    private static let tiers: [(level: Int, lower: Int, upper: Int)] = [
-        (1, 0, 5),
-        (2, 5, 15),
-        (3, 15, 30),
-        (4, 30, 50),
-        (5, 50, 100),
-    ]
+    /// XP-based tiers. NIV 1: 0-49, 2: 50-149, 3: 150-349, 4: 350-699, 5: 700+.
+    private static let tiers: [(level: Int, lower: Int, upper: Int)] = ProgressManager.subjectXPTiers
 
     private var currentTier: (level: Int, lower: Int, upper: Int) {
-        Self.tiers.last(where: { completed >= $0.lower }) ?? Self.tiers[0]
+        Self.tiers.last(where: { xp >= $0.lower }) ?? Self.tiers[0]
     }
 
     private var progressInLevel: Double {
         let tier = currentTier
         if tier.level == 5 { return 1.0 }
         let span = max(1, tier.upper - tier.lower)
-        let inLevel = max(0, completed - tier.lower)
+        let inLevel = max(0, xp - tier.lower)
         return min(1.0, Double(inLevel) / Double(span))
     }
 
@@ -526,9 +520,9 @@ private struct SubjectProgressCard: View {
 
     private var progressLabel: String {
         let tier = currentTier
-        if tier.level == 5 { return "\(completed) cours · niveau max" }
-        let toNext = max(0, tier.upper - completed)
-        return "\(completed) cours · \(toNext) avant niv. \(tier.level + 1)"
+        if tier.level == 5 { return "\(xp) XP · niveau max" }
+        let toNext = max(0, tier.upper - xp)
+        return "\(xp) XP · \(toNext) avant niv. \(tier.level + 1)"
     }
 }
 

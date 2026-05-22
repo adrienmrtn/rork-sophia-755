@@ -273,6 +273,7 @@ struct QuizView: View {
                 comboCount += 1
                 let xp = comboCount >= 3 ? 15 : (comboCount >= 2 ? 12 : 10)
                 xpEarned += xp
+                progressManager.addXP(subject: course.subject, amount: xp)
                 showXPBubble(xp: xp)
                 if comboCount >= 2 {
                     withAnimation(.spring(response: 0.3)) {

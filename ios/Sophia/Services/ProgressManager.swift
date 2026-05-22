@@ -54,6 +54,28 @@ class ProgressManager {
         save()
     }
 
+    /// XP thresholds for subject levels: NIV 1: 0-49, 2: 50-149, 3: 150-349, 4: 350-699, 5: 700+.
+    static let subjectXPTiers: [(level: Int, lower: Int, upper: Int)] = [
+        (1, 0, 50),
+        (2, 50, 150),
+        (3, 150, 350),
+        (4, 350, 700),
+        (5, 700, 1400),
+    ]
+
+    /// Returns the persisted XP for a given subject.
+    func xp(for subject: Subject) -> Int {
+        progress.subjectXP[subject.rawValue] ?? 0
+    }
+
+    /// Adds XP to a subject and persists it. Called from the quiz when the user answers correctly.
+    func addXP(subject: Subject, amount: Int) {
+        guard amount > 0 else { return }
+        let current = progress.subjectXP[subject.rawValue] ?? 0
+        progress.subjectXP[subject.rawValue] = current + amount
+        save()
+    }
+
     /// Number of completed courses for a given subject. Used for the subject level (1–5).
     func completedCount(for subject: Subject) -> Int {
         let coursesInSubject = Set(CourseData.allCourses.filter { $0.subject == subject }.map(\.id))
