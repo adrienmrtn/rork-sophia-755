@@ -112,6 +112,12 @@ class ProgressManager {
         save()
     }
 
+    /// DEBUG helper: clears the daily course flag so the user can read another free course immediately.
+    func resetDailyCourseFlag() {
+        progress.lastCourseCompletedDate = nil
+        save()
+    }
+
     var freeCoursesOpened: Int { progress.freeCoursesOpened }
 
     func incrementFreeCoursesOpened() {

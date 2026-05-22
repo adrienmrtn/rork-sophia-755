@@ -163,9 +163,9 @@ struct SettingsView: View {
                         .padding(.horizontal, 20)
 
                         #if DEBUG
-                        if onResetOnboarding != nil {
-                            sectionHeader("Développeur")
-                            VStack(spacing: 0) {
+                        sectionHeader("Développeur")
+                        VStack(spacing: 0) {
+                            if onResetOnboarding != nil {
                                 actionRow(
                                     icon: "arrow.triangle.2.circlepath",
                                     iconBg: Color(red: 1.0, green: 0.78, blue: 0.78),
@@ -174,10 +174,20 @@ struct SettingsView: View {
                                     hapticTrigger += 1
                                     showResetOnboardingAlert = true
                                 }
+                                divider
                             }
-                            .brutalCard()
-                            .padding(.horizontal, 20)
+                            actionRow(
+                                icon: "calendar.badge.minus",
+                                iconBg: Color(red: 1.0, green: 0.86, blue: 0.55),
+                                title: "Reset cours du jour",
+                                subtitle: progressManager.hasCompletedCourseToday ? "Fait aujourd'hui" : "Pas encore fait"
+                            ) {
+                                hapticTrigger += 1
+                                progressManager.resetDailyCourseFlag()
+                            }
                         }
+                        .brutalCard()
+                        .padding(.horizontal, 20)
                         #endif
 
                         Text("Made with ♥ — Sophia")
@@ -268,15 +278,23 @@ struct SettingsView: View {
         icon: String,
         iconBg: Color,
         title: String,
+        subtitle: String? = nil,
         destructive: Bool = false,
         action: @escaping () -> Void
     ) -> some View {
         Button(action: action) {
             HStack(spacing: 14) {
                 iconBadge(name: icon, bg: iconBg)
-                Text(title)
-                    .font(.system(.body, design: .rounded, weight: .semibold))
-                    .foregroundStyle(destructive ? Color(red: 0.85, green: 0.1, blue: 0.2) : ink)
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(title)
+                        .font(.system(.body, design: .rounded, weight: .semibold))
+                        .foregroundStyle(destructive ? Color(red: 0.85, green: 0.1, blue: 0.2) : ink)
+                    if let subtitle {
+                        Text(subtitle)
+                            .font(.system(.caption, design: .rounded, weight: .semibold))
+                            .foregroundStyle(ink.opacity(0.5))
+                    }
+                }
                 Spacer()
                 Image(systemName: "chevron.right")
                     .font(.system(size: 13, weight: .heavy))
