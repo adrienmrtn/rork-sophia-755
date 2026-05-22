@@ -8,7 +8,7 @@ class OnboardingViewModel {
     var currentScreen: Int = 0
     var phoneTimeSelection: Int? = nil
     var objectives: Set<String> = []
-    var interests: Set<String> = []
+    var interests: Set<String> = OnboardingViewModel.loadPersistedInterests()
     var ageRange: String? = nil
     var loadingProgress: Double = 0
     var loadingStep: String = ""
@@ -67,6 +67,22 @@ class OnboardingViewModel {
         } else {
             interests.insert(interest)
         }
+        persistInterests()
+    }
+
+    private func persistInterests() {
+        UserDefaults.standard.set(Array(interests), forKey: OnboardingViewModel.interestsKey)
+    }
+
+    static let interestsKey = "sophia_user_interests"
+
+    static func loadPersistedInterests() -> Set<String> {
+        guard let arr = UserDefaults.standard.array(forKey: interestsKey) as? [String] else { return [] }
+        return Set(arr)
+    }
+
+    static func userInterestLabels() -> Set<String> {
+        loadPersistedInterests()
     }
 
     func startProfileLoading() {
@@ -100,6 +116,7 @@ class OnboardingViewModel {
     }
 
     func completeOnboarding() {
+        persistInterests()
         UserDefaults.standard.set(true, forKey: "sophia_onboarding_completed")
     }
 

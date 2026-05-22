@@ -5,6 +5,7 @@ struct SettingsView: View {
     let store: StoreViewModel
     var onShowPaywall: (() -> Void)? = nil
     var onResetOnboarding: (() -> Void)? = nil
+    var onDismiss: (() -> Void)? = nil
     @State private var showResetAlert: Bool = false
     @State private var showResetOnboardingAlert: Bool = false
     @State private var showTerms: Bool = false
@@ -27,12 +28,26 @@ struct SettingsView: View {
 
                 ScrollView {
                     VStack(alignment: .leading, spacing: 24) {
-                        // Title
-                        Text("Options")
-                            .font(.system(.largeTitle, design: .rounded, weight: .heavy))
-                            .foregroundStyle(ink)
-                            .padding(.horizontal, 20)
-                            .padding(.top, 4)
+                        // Title + optional close
+                        HStack {
+                            Text("Options")
+                                .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                                .foregroundStyle(ink)
+                            Spacer()
+                            if let onDismiss {
+                                Button(action: onDismiss) {
+                                    Image(systemName: "xmark")
+                                        .font(.system(size: 15, weight: .heavy))
+                                        .foregroundStyle(ink)
+                                        .frame(width: 38, height: 38)
+                                        .background(Color.white)
+                                        .clipShape(Circle())
+                                        .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
+                                }
+                            }
+                        }
+                        .padding(.horizontal, 20)
+                        .padding(.top, 4)
 
                         // Progression
                         sectionHeader("Progression")
@@ -289,31 +304,4 @@ struct SettingsView: View {
     }
 }
 
-/// Brutalist card modifier: white background, black border, solid black offset shadow.
-private struct BrutalCardModifier: ViewModifier {
-    let ink = BrutalPalette.ink
-    let depth: CGFloat = 4
-
-    func body(content: Content) -> some View {
-        ZStack(alignment: .top) {
-            RoundedRectangle(cornerRadius: 18, style: .continuous)
-                .fill(ink)
-                .offset(y: depth)
-
-            content
-                .background(Color.white)
-                .clipShape(.rect(cornerRadius: 18))
-                .overlay {
-                    RoundedRectangle(cornerRadius: 18, style: .continuous)
-                        .strokeBorder(ink, lineWidth: 2.5)
-                }
-        }
-        .padding(.bottom, depth)
-    }
-}
-
-private extension View {
-    func brutalCard() -> some View {
-        modifier(BrutalCardModifier())
-    }
-}
+// brutalCard() modifier is shared from ProfileView.swift

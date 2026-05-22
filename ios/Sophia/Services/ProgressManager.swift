@@ -48,9 +48,32 @@ class ProgressManager {
         if quizScore > cp.bestQuizScore {
             cp.bestQuizScore = quizScore
         }
+        cp.lastQuizDate = ISO8601DateFormatter().string(from: Date())
         progress.courseProgress[courseId] = cp
         recordActivity()
         save()
+    }
+
+    /// Number of completed courses for a given subject. Used for the subject level (1–5).
+    func completedCount(for subject: Subject) -> Int {
+        let coursesInSubject = Set(CourseData.allCourses.filter { $0.subject == subject }.map(\.id))
+        return progress.courseProgress.filter { id, cp in
+            cp.isCompleted && coursesInSubject.contains(id)
+        }.count
+    }
+
+    /// Recent quizzes (courses completed with a quiz score), most recent first.
+    var recentQuizzes: [(course: Course, score: Int, totalQuestions: Int, date: Date)] {
+        let entries: [(String, CourseProgress, Date)] = progress.courseProgress.compactMap { id, cp in
+            guard cp.isCompleted, let dateStr = cp.lastQuizDate,
+                  let date = ISO8601DateFormatter().date(from: dateStr) else { return nil }
+            return (id, cp, date)
+        }
+        let sorted = entries.sorted { $0.2 > $1.2 }
+        return sorted.compactMap { id, cp, date in
+            guard let course = CourseData.allCourses.first(where: { $0.id == id }) else { return nil }
+            return (course, cp.bestQuizScore, course.quiz.count, date)
+        }
     }
 
     func resetProgress() {

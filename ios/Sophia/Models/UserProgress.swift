@@ -4,6 +4,14 @@ nonisolated struct CourseProgress: Codable, Sendable {
     var lastLessonIndex: Int
     var isCompleted: Bool
     var bestQuizScore: Int
+    var lastQuizDate: String?
+
+    init(lastLessonIndex: Int, isCompleted: Bool, bestQuizScore: Int, lastQuizDate: String? = nil) {
+        self.lastLessonIndex = lastLessonIndex
+        self.isCompleted = isCompleted
+        self.bestQuizScore = bestQuizScore
+        self.lastQuizDate = lastQuizDate
+    }
 }
 
 nonisolated struct ShuffledQuestion: Sendable {

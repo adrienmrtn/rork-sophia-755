@@ -32,17 +32,11 @@ struct ContentView: View {
                     )
                 }
 
-                Tab("Favoris", systemImage: "heart.fill", value: 2) {
-                    FavoritesView(
-                        progressManager: progressManager,
-                        selectedCourse: $selectedCourse
-                    )
-                }
-
-                Tab("Options", systemImage: "gearshape.fill", value: 3) {
-                    SettingsView(
+                Tab("Profil", systemImage: "person.fill", value: 2) {
+                    ProfileView(
                         progressManager: progressManager,
                         store: storeVM,
+                        selectedCourse: $selectedCourse,
                         onShowPaywall: {
                             showPaywall = true
                         },
