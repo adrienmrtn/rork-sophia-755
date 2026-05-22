@@ -76,6 +76,23 @@ struct LibraryView: View {
             .toolbarBackground(cream, for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)
             .toolbarColorScheme(.light, for: .navigationBar)
+            .onAppear {
+                let appearance = UINavigationBarAppearance()
+                appearance.configureWithOpaqueBackground()
+                appearance.backgroundColor = UIColor(cream)
+                appearance.shadowColor = .clear
+                appearance.titleTextAttributes = [
+                    .foregroundColor: UIColor.black,
+                    .font: UIFont.systemFont(ofSize: 17, weight: .heavy)
+                ]
+                appearance.largeTitleTextAttributes = [
+                    .foregroundColor: UIColor.black,
+                    .font: UIFont.systemFont(ofSize: 34, weight: .heavy)
+                ]
+                UINavigationBar.appearance().standardAppearance = appearance
+                UINavigationBar.appearance().scrollEdgeAppearance = appearance
+                UINavigationBar.appearance().compactAppearance = appearance
+            }
             .navigationDestination(for: Subject.self) { subject in
                 let courses = CourseData.allCourses.filter { $0.subject == subject }
                 SubjectCoursesView(
@@ -235,6 +252,17 @@ struct LibraryView: View {
     }
 }
 
+/// Button style that gives the press-down 3D feel without intercepting scroll gestures.
+struct BrutalCardButtonStyle: ButtonStyle {
+    var depth: CGFloat = 2
+
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .offset(y: configuration.isPressed ? depth : 0)
+            .animation(.spring(response: 0.18, dampingFraction: 0.7), value: configuration.isPressed)
+    }
+}
+
 /// Neo-brutalist library card — white body, black border, solid black offset shadow,
 /// pastel bottom panel matching the Home FlashCard style.
 struct LibraryCardView: View {
@@ -243,7 +271,6 @@ struct LibraryCardView: View {
     let onTap: () -> Void
     var progressManager: ProgressManager? = nil
     @State private var favTrigger: Int = 0
-    @State private var pressed: Bool = false
 
     private let ink = BrutalPalette.ink
     private let depth: CGFloat = 4
@@ -270,16 +297,9 @@ struct LibraryCardView: View {
                 }
             }
             .opacity(status == .completed ? 0.78 : 1.0)
-            .offset(y: pressed ? 2 : 0)
-            .animation(.spring(response: 0.18, dampingFraction: 0.7), value: pressed)
             .padding(.bottom, depth)
         }
-        .buttonStyle(.plain)
-        .simultaneousGesture(
-            DragGesture(minimumDistance: 0)
-                .onChanged { _ in pressed = true }
-                .onEnded { _ in pressed = false }
-        )
+        .buttonStyle(BrutalCardButtonStyle(depth: 2))
     }
 
     private var illustration: some View {
