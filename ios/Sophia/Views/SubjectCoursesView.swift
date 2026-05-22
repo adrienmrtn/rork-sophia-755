@@ -4,6 +4,9 @@ struct SubjectCoursesView: View {
     let subject: Subject
     let courses: [Course]
     let progressManager: ProgressManager
+    var isPremium: Bool = true
+    var unlocked: Bool = true
+    var onShowPaywall: (() -> Void)? = nil
     @Binding var selectedCourse: Course?
     @Environment(\.dismiss) private var dismiss
     @State private var hapticTrigger: Int = 0
@@ -51,9 +54,14 @@ struct SubjectCoursesView: View {
                                     LibraryCardView(
                                         course: course,
                                         status: progressManager.courseStatus(for: course.id),
+                                        locked: !unlocked,
                                         onTap: {
                                             hapticTrigger += 1
-                                            selectedCourse = course
+                                            if unlocked {
+                                                selectedCourse = course
+                                            } else {
+                                                onShowPaywall?()
+                                            }
                                         },
                                         progressManager: progressManager
                                     )

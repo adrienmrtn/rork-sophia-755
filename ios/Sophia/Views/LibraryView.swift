@@ -21,9 +21,15 @@ enum BrutalPalette {
 
 struct LibraryView: View {
     let progressManager: ProgressManager
+    var isPremium: Bool = true
+    var onShowPaywall: (() -> Void)? = nil
     @Binding var selectedCourse: Course?
     @State private var searchText: String = ""
     @FocusState private var searchFocused: Bool
+
+    private var unlockedSubjects: Set<Subject> {
+        FreemiumGate.unlockedSubjects(isPremium: isPremium)
+    }
 
     private let previewCount = 4
     private let ink = BrutalPalette.ink
@@ -52,11 +58,12 @@ struct LibraryView: View {
 
                         ForEach(Subject.allCases, id: \.self) { subject in
                             let courses = filteredCourses.filter { $0.subject == subject }
+                            let unlocked = unlockedSubjects.contains(subject)
                             if !courses.isEmpty {
                                 if isSearching {
-                                    searchSection(subject: subject, courses: courses)
+                                    searchSection(subject: subject, courses: courses, unlocked: unlocked)
                                 } else {
-                                    previewSection(subject: subject, courses: courses)
+                                    previewSection(subject: subject, courses: courses, unlocked: unlocked)
                                 }
                             }
                         }
@@ -98,6 +105,9 @@ struct LibraryView: View {
                     subject: subject,
                     courses: courses,
                     progressManager: progressManager,
+                    isPremium: isPremium,
+                    unlocked: unlockedSubjects.contains(subject),
+                    onShowPaywall: onShowPaywall,
                     selectedCourse: $selectedCourse
                 )
             }
@@ -155,37 +165,10 @@ struct LibraryView: View {
         .frame(maxWidth: .infinity)
     }
 
-    private func previewSection(subject: Subject, courses: [Course]) -> some View {
+    private func previewSection(subject: Subject, courses: [Course], unlocked: Bool) -> some View {
         VStack(alignment: .leading, spacing: 14) {
-            NavigationLink(value: subject) {
-                HStack(spacing: 10) {
-                    HStack(spacing: 8) {
-                        Image(systemName: subject.icon)
-                            .font(.system(size: 14, weight: .heavy))
-                            .foregroundStyle(.white)
-                        Text(subject.shortName.uppercased())
-                            .font(.system(.caption, design: .rounded, weight: .heavy))
-                            .foregroundStyle(.white)
-                            .tracking(0.5)
-                    }
-                    .padding(.horizontal, 12)
-                    .padding(.vertical, 7)
-                    .background(ink, in: Capsule())
-
-                    Spacer()
-
-                    HStack(spacing: 4) {
-                        Text("Voir plus")
-                            .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                            .foregroundStyle(ink)
-                        Image(systemName: "arrow.right")
-                            .font(.system(size: 13, weight: .heavy))
-                            .foregroundStyle(ink)
-                    }
-                }
-            }
-            .buttonStyle(.plain)
-            .padding(.horizontal, 20)
+            sectionHeader(subject: subject, unlocked: unlocked)
+                .padding(.horizontal, 20)
 
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .top, spacing: 14) {
@@ -193,10 +176,15 @@ struct LibraryView: View {
                         LibraryCardView(
                             course: course,
                             status: progressManager.courseStatus(for: course.id),
+                            locked: !unlocked,
                             onTap: {
                                 let g = UIImpactFeedbackGenerator(style: .light)
                                 g.impactOccurred()
-                                selectedCourse = course
+                                if unlocked {
+                                    selectedCourse = course
+                                } else {
+                                    onShowPaywall?()
+                                }
                             },
                             progressManager: progressManager
                         )
@@ -208,11 +196,73 @@ struct LibraryView: View {
         }
     }
 
-    private func searchSection(subject: Subject, courses: [Course]) -> some View {
+    @ViewBuilder
+    private func sectionHeader(subject: Subject, unlocked: Bool) -> some View {
+        if unlocked {
+            NavigationLink(value: subject) {
+                sectionHeaderContent(subject: subject, unlocked: true)
+            }
+            .buttonStyle(.plain)
+        } else {
+            Button {
+                let g = UIImpactFeedbackGenerator(style: .light)
+                g.impactOccurred()
+                onShowPaywall?()
+            } label: {
+                sectionHeaderContent(subject: subject, unlocked: false)
+            }
+            .buttonStyle(.plain)
+        }
+    }
+
+    private func sectionHeaderContent(subject: Subject, unlocked: Bool) -> some View {
+        HStack(spacing: 10) {
+            HStack(spacing: 8) {
+                Image(systemName: unlocked ? subject.icon : "lock.fill")
+                    .font(.system(size: 14, weight: .heavy))
+                    .foregroundStyle(.white)
+                Text(subject.shortName.uppercased())
+                    .font(.system(.caption, design: .rounded, weight: .heavy))
+                    .foregroundStyle(.white)
+                    .tracking(0.5)
+            }
+            .padding(.horizontal, 12)
+            .padding(.vertical, 7)
+            .background(ink, in: Capsule())
+
+            Spacer()
+
+            if unlocked {
+                HStack(spacing: 4) {
+                    Text("Voir plus")
+                        .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                        .foregroundStyle(ink)
+                    Image(systemName: "arrow.right")
+                        .font(.system(size: 13, weight: .heavy))
+                        .foregroundStyle(ink)
+                }
+            } else {
+                HStack(spacing: 4) {
+                    Text("Débloquer")
+                        .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                        .foregroundStyle(ink)
+                    Image(systemName: "lock.fill")
+                        .font(.system(size: 12, weight: .heavy))
+                        .foregroundStyle(ink)
+                }
+                .padding(.horizontal, 10)
+                .padding(.vertical, 6)
+                .background(BrutalPalette.pink, in: Capsule())
+                .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
+            }
+        }
+    }
+
+    private func searchSection(subject: Subject, courses: [Course], unlocked: Bool) -> some View {
         VStack(alignment: .leading, spacing: 14) {
             HStack(spacing: 10) {
                 HStack(spacing: 8) {
-                    Image(systemName: subject.icon)
+                    Image(systemName: unlocked ? subject.icon : "lock.fill")
                         .font(.system(size: 14, weight: .heavy))
                         .foregroundStyle(.white)
                     Text(subject.shortName.uppercased())
@@ -237,10 +287,15 @@ struct LibraryView: View {
                     LibraryCardView(
                         course: course,
                         status: progressManager.courseStatus(for: course.id),
+                        locked: !unlocked,
                         onTap: {
                             let g = UIImpactFeedbackGenerator(style: .light)
                             g.impactOccurred()
-                            selectedCourse = course
+                            if unlocked {
+                                selectedCourse = course
+                            } else {
+                                onShowPaywall?()
+                            }
                         },
                         progressManager: progressManager
                     )
@@ -267,6 +322,7 @@ struct BrutalCardButtonStyle: ButtonStyle {
 struct LibraryCardView: View {
     let course: Course
     let status: CourseStatus
+    var locked: Bool = false
     let onTap: () -> Void
     var progressManager: ProgressManager? = nil
     @State private var favTrigger: Int = 0
@@ -296,6 +352,30 @@ struct LibraryCardView: View {
                 }
             }
             .opacity(status == .completed ? 0.78 : 1.0)
+            .overlay {
+                if locked {
+                    RoundedRectangle(cornerRadius: 18, style: .continuous)
+                        .fill(Color.white.opacity(0.55))
+                        .overlay {
+                            VStack(spacing: 6) {
+                                Image(systemName: "lock.fill")
+                                    .font(.system(size: 22, weight: .heavy))
+                                    .foregroundStyle(ink)
+                                    .frame(width: 44, height: 44)
+                                    .background(Color.white, in: Circle())
+                                    .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
+                                Text("VERROUILLÉ")
+                                    .font(.system(.caption2, design: .rounded, weight: .heavy))
+                                    .foregroundStyle(ink)
+                                    .tracking(0.8)
+                                    .padding(.horizontal, 8)
+                                    .padding(.vertical, 3)
+                                    .background(Color.white, in: Capsule())
+                                    .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
+                            }
+                        }
+                }
+            }
             .padding(.bottom, depth)
         }
         .buttonStyle(BrutalCardButtonStyle(depth: 2))

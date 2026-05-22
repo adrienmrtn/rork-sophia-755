@@ -16,25 +16,9 @@ struct ProfileView: View {
     private let ink = BrutalPalette.ink
     private let cream = BrutalPalette.cream
 
-    /// Interest labels selected during onboarding. Maps to Subject.
+    /// Subjects unlocked for the current user (based on onboarding interests for freemium).
     private var unlockedSubjects: Set<Subject> {
-        if store.isPremium { return Set(Subject.allCases) }
-        let labels = OnboardingViewModel.userInterestLabels()
-        let mapped = labels.compactMap { Self.subjectFromInterestLabel($0) }
-        // If onboarding hasn't been completed or interests empty, fallback to first 3 subjects.
-        return mapped.isEmpty ? Set(Subject.allCases.prefix(3)) : Set(mapped)
-    }
-
-    private static func subjectFromInterestLabel(_ label: String) -> Subject? {
-        switch label {
-        case "Histoire": return .histoire
-        case "Sciences": return .sciences
-        case "Littérature": return .litterature
-        case "Art": return .art
-        case "Mythologie": return .mythologie
-        case "Monde actuel": return .comprendreLeMonde
-        default: return nil
-        }
+        FreemiumGate.unlockedSubjects(isPremium: store.isPremium)
     }
 
     var body: some View {

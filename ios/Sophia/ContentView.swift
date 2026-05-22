@@ -33,6 +33,11 @@ struct ContentView: View {
                 Tab("Biblio", systemImage: "books.vertical.fill", value: 1) {
                     LibraryView(
                         progressManager: progressManager,
+                        isPremium: storeVM.isPremium,
+                        onShowPaywall: {
+                            showPaywall = true
+                            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+                        },
                         selectedCourse: $selectedCourse
                     )
                 }
@@ -56,16 +61,26 @@ struct ContentView: View {
                 guard let course = newCourse else { return }
                 if storeVM.isPremium {
                     pendingCourse = course
+                    return
+                }
+                // Freemium: lock courses from non-priority subjects.
+                if !FreemiumGate.isUnlocked(course.subject, isPremium: false) {
+                    selectedCourse = nil
+                    pendingCourse = nil
+                    showPaywall = true
+                    UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+                    return
+                }
+                // Freemium: 1 free course per day. Reading the slides is free for the
+                // first course of the day; further attempts open the paywall.
+                if progressManager.hasCompletedCourseToday {
+                    selectedCourse = nil
+                    pendingCourse = nil
+                    showPaywall = true
+                    UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                 } else {
                     progressManager.incrementFreeCoursesOpened()
-                    if progressManager.freeCoursesOpened >= 4 {
-                        selectedCourse = nil
-                        pendingCourse = nil
-                        showPaywall = true
-                        UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-                    } else {
-                        pendingCourse = course
-                    }
+                    pendingCourse = course
                 }
             }
             .fullScreenCover(item: $pendingCourse) { course in
