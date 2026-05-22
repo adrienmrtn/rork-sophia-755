@@ -9,6 +9,9 @@ struct SettingsView: View {
     @State private var showPrivacy: Bool = false
     @State private var hapticTrigger: Int = 0
 
+    private let ink = BrutalPalette.ink
+    private let cream = BrutalPalette.cream
+
     private var appVersionString: String {
         let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0.0"
         let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "1"
@@ -17,195 +20,141 @@ struct SettingsView: View {
 
     var body: some View {
         NavigationStack {
-            List {
-                Section {
-                    HStack(spacing: 16) {
-                        ZStack {
-                            Circle()
-                                .fill(SophiaTheme.emerald.opacity(0.2))
-                                .frame(width: 50, height: 50)
-                            Image(systemName: "trophy.fill")
-                                .font(.title3)
-                                .foregroundStyle(SophiaTheme.emerald)
-                        }
-                        VStack(alignment: .leading, spacing: 4) {
-                            Text("\(progressManager.completedCount) cours terminés")
-                                .font(.system(.headline, design: .rounded, weight: .bold))
-                                .foregroundStyle(.white)
-                            Text("sur \(CourseData.allCourses.count) disponibles")
-                                .font(.system(.subheadline, design: .rounded))
-                                .foregroundStyle(.white.opacity(0.6))
-                        }
-                    }
-                    .listRowBackground(SophiaTheme.cardBackground)
+            ZStack {
+                cream.ignoresSafeArea()
 
-                    if progressManager.streak > 0 {
-                        HStack(spacing: 16) {
-                            ZStack {
-                                Circle()
-                                    .fill(SophiaTheme.streakOrange.opacity(0.2))
-                                    .frame(width: 50, height: 50)
-                                Text("🔥")
-                                    .font(.title3)
-                            }
-                            VStack(alignment: .leading, spacing: 4) {
-                                Text("\(progressManager.streak) jours de suite")
-                                    .font(.system(.headline, design: .rounded, weight: .bold))
-                                    .foregroundStyle(.white)
-                                Text("Continue comme ça !")
-                                    .font(.system(.subheadline, design: .rounded))
-                                    .foregroundStyle(.white.opacity(0.6))
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 24) {
+                        // Title
+                        Text("Options")
+                            .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                            .foregroundStyle(ink)
+                            .padding(.horizontal, 20)
+                            .padding(.top, 4)
+
+                        // Progression
+                        sectionHeader("Progression")
+                        VStack(spacing: 0) {
+                            statRow(
+                                icon: "trophy.fill",
+                                iconBg: BrutalPalette.pastel(for: .histoire),
+                                title: "\(progressManager.completedCount) cours terminés",
+                                subtitle: "sur \(CourseData.allCourses.count) disponibles"
+                            )
+                            if progressManager.streak > 0 {
+                                divider
+                                statRow(
+                                    icon: "flame.fill",
+                                    iconBg: BrutalPalette.pink,
+                                    title: "\(progressManager.streak) jours de suite",
+                                    subtitle: "Continue comme ça !"
+                                )
                             }
                         }
-                        .listRowBackground(SophiaTheme.cardBackground)
-                    }
-                } header: {
-                    Text("Progression")
-                        .foregroundStyle(.white.opacity(0.6))
-                }
+                        .brutalCard()
+                        .padding(.horizontal, 20)
 
-                if !store.isPremium {
-                    Section {
-                        Button {
-                            hapticTrigger += 1
-                            onShowPaywall?()
-                        } label: {
-                            HStack(spacing: 14) {
-                                ZStack {
-                                    Circle()
-                                        .fill(SophiaTheme.accent.opacity(0.2))
-                                        .frame(width: 40, height: 40)
-                                    Image(systemName: "crown.fill")
-                                        .font(.system(size: 16))
-                                        .foregroundStyle(SophiaTheme.streakOrange)
+                        // Premium
+                        if !store.isPremium {
+                            sectionHeader("Premium")
+                            Button {
+                                hapticTrigger += 1
+                                onShowPaywall?()
+                            } label: {
+                                HStack(spacing: 14) {
+                                    iconBadge(name: "crown.fill", bg: Color(red: 1.0, green: 0.86, blue: 0.4))
+                                    VStack(alignment: .leading, spacing: 2) {
+                                        Text("Passer à Premium")
+                                            .font(.system(.headline, design: .rounded, weight: .heavy))
+                                            .foregroundStyle(ink)
+                                        Text("Cours et quiz illimités")
+                                            .font(.system(.caption, design: .rounded, weight: .semibold))
+                                            .foregroundStyle(ink.opacity(0.55))
+                                    }
+                                    Spacer()
+                                    Image(systemName: "arrow.right")
+                                        .font(.system(size: 14, weight: .heavy))
+                                        .foregroundStyle(ink)
                                 }
-                                VStack(alignment: .leading, spacing: 2) {
-                                    Text("Passer à Premium")
-                                        .font(.system(.headline, design: .rounded, weight: .bold))
-                                        .foregroundStyle(.white)
-                                    Text("Cours et quiz illimités")
-                                        .font(.system(.caption, design: .rounded))
-                                        .foregroundStyle(.white.opacity(0.5))
+                                .padding(.horizontal, 14)
+                                .padding(.vertical, 14)
+                            }
+                            .buttonStyle(BrutalCardButtonStyle(depth: 2))
+                            .brutalCard()
+                            .padding(.horizontal, 20)
+                        }
+
+                        // Data
+                        sectionHeader("Données")
+                        VStack(spacing: 0) {
+                            actionRow(
+                                icon: "arrow.counterclockwise",
+                                iconBg: Color(red: 1.0, green: 0.78, blue: 0.78),
+                                title: "Réinitialiser la progression",
+                                destructive: true
+                            ) {
+                                hapticTrigger += 1
+                                showResetAlert = true
+                            }
+                        }
+                        .brutalCard()
+                        .padding(.horizontal, 20)
+
+                        // Legal
+                        sectionHeader("Légal")
+                        VStack(spacing: 0) {
+                            actionRow(
+                                icon: "doc.text.fill",
+                                iconBg: BrutalPalette.pastel(for: .art),
+                                title: "Conditions générales"
+                            ) {
+                                hapticTrigger += 1
+                                showTerms = true
+                            }
+                            divider
+                            actionRow(
+                                icon: "hand.raised.fill",
+                                iconBg: BrutalPalette.pastel(for: .mythologie),
+                                title: "Politique de confidentialité"
+                            ) {
+                                hapticTrigger += 1
+                                showPrivacy = true
+                            }
+                            if !store.isPremium {
+                                divider
+                                actionRow(
+                                    icon: "arrow.clockwise",
+                                    iconBg: BrutalPalette.pastel(for: .sciences),
+                                    title: "Restaurer les achats"
+                                ) {
+                                    hapticTrigger += 1
+                                    Task { await store.restore() }
                                 }
-                                Spacer()
-                                Image(systemName: "chevron.right")
-                                    .font(.caption.weight(.semibold))
-                                    .foregroundStyle(.white.opacity(0.3))
                             }
                         }
-                        .listRowBackground(SophiaTheme.cardBackground)
-                    }
-                }
+                        .brutalCard()
+                        .padding(.horizontal, 20)
 
-                Section {
-                    Button(role: .destructive) {
-                        hapticTrigger += 1
-                        showResetAlert = true
-                    } label: {
-                        HStack {
-                            Image(systemName: "arrow.counterclockwise")
-                            Text("Réinitialiser la progression")
+                        // About
+                        sectionHeader("À propos")
+                        VStack(spacing: 0) {
+                            infoRow(label: "Version", value: appVersionString)
+                            divider
+                            infoRow(label: "Cours disponibles", value: "\(CourseData.allCourses.count)")
                         }
-                        .font(.system(.body, design: .rounded))
-                    }
-                    .listRowBackground(SophiaTheme.cardBackground)
-                } header: {
-                    Text("Données")
-                        .foregroundStyle(.white.opacity(0.6))
-                }
+                        .brutalCard()
+                        .padding(.horizontal, 20)
 
-                Section {
-                    Button {
-                        hapticTrigger += 1
-                        showTerms = true
-                    } label: {
-                        HStack {
-                            Image(systemName: "doc.text")
-                                .foregroundStyle(.white.opacity(0.6))
-                            Text("Conditions générales d'utilisation")
-                                .font(.system(.body, design: .rounded))
-                                .foregroundStyle(.white)
-                            Spacer()
-                            Image(systemName: "chevron.right")
-                                .font(.caption.weight(.semibold))
-                                .foregroundStyle(.white.opacity(0.3))
-                        }
+                        Text("Made with ♥ — Sophia")
+                            .font(.system(.caption, design: .rounded, weight: .heavy))
+                            .foregroundStyle(ink.opacity(0.4))
+                            .frame(maxWidth: .infinity, alignment: .center)
+                            .padding(.top, 8)
+                            .padding(.bottom, 32)
                     }
-                    .listRowBackground(SophiaTheme.cardBackground)
-
-                    Button {
-                        hapticTrigger += 1
-                        showPrivacy = true
-                    } label: {
-                        HStack {
-                            Image(systemName: "hand.raised")
-                                .foregroundStyle(.white.opacity(0.6))
-                            Text("Politique de confidentialité")
-                                .font(.system(.body, design: .rounded))
-                                .foregroundStyle(.white)
-                            Spacer()
-                            Image(systemName: "chevron.right")
-                                .font(.caption.weight(.semibold))
-                                .foregroundStyle(.white.opacity(0.3))
-                        }
-                    }
-                    .listRowBackground(SophiaTheme.cardBackground)
-
-                    if !store.isPremium {
-                        Button {
-                            hapticTrigger += 1
-                            Task { await store.restore() }
-                        } label: {
-                            HStack {
-                                Image(systemName: "arrow.clockwise")
-                                    .foregroundStyle(.white.opacity(0.6))
-                                Text("Restaurer les achats")
-                                    .font(.system(.body, design: .rounded))
-                                    .foregroundStyle(.white)
-                                Spacer()
-                                Image(systemName: "chevron.right")
-                                    .font(.caption.weight(.semibold))
-                                    .foregroundStyle(.white.opacity(0.3))
-                            }
-                        }
-                        .listRowBackground(SophiaTheme.cardBackground)
-                    }
-                } header: {
-                    Text("Légal")
-                        .foregroundStyle(.white.opacity(0.6))
-                }
-
-                Section {
-                    HStack {
-                        Text("Version")
-                            .font(.system(.body, design: .rounded))
-                            .foregroundStyle(.white)
-                        Spacer()
-                        Text(appVersionString)
-                            .font(.system(.body, design: .rounded))
-                            .foregroundStyle(.white.opacity(0.5))
-                    }
-                    .listRowBackground(SophiaTheme.cardBackground)
-
-                    HStack {
-                        Text("Cours disponibles")
-                            .font(.system(.body, design: .rounded))
-                            .foregroundStyle(.white)
-                        Spacer()
-                        Text("\(CourseData.allCourses.count)")
-                            .font(.system(.body, design: .rounded))
-                            .foregroundStyle(.white.opacity(0.5))
-                    }
-                    .listRowBackground(SophiaTheme.cardBackground)
-                } header: {
-                    Text("À propos")
-                        .foregroundStyle(.white.opacity(0.6))
                 }
             }
-            .scrollContentBackground(.hidden)
-            .background(SophiaTheme.background)
-            .navigationTitle("Réglages")
-            .toolbarColorScheme(.dark, for: .navigationBar)
+            .navigationBarHidden(true)
             .sensoryFeedback(.impact(weight: .light), trigger: hapticTrigger)
             .alert("Réinitialiser ?", isPresented: $showResetAlert) {
                 Button("Annuler", role: .cancel) { }
@@ -222,5 +171,121 @@ struct SettingsView: View {
                 PrivacyPolicyView()
             }
         }
+    }
+
+    // MARK: - Building blocks
+
+    private func sectionHeader(_ title: String) -> some View {
+        Text(title.uppercased())
+            .font(.system(.caption, design: .rounded, weight: .heavy))
+            .foregroundStyle(ink.opacity(0.55))
+            .tracking(1.2)
+            .padding(.horizontal, 28)
+    }
+
+    private var divider: some View {
+        Rectangle()
+            .fill(ink)
+            .frame(height: 2)
+    }
+
+    private func iconBadge(name: String, bg: Color) -> some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                .fill(bg)
+                .overlay {
+                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                        .strokeBorder(ink, lineWidth: 2)
+                }
+            Image(systemName: name)
+                .font(.system(size: 16, weight: .heavy))
+                .foregroundStyle(ink)
+        }
+        .frame(width: 40, height: 40)
+    }
+
+    private func statRow(icon: String, iconBg: Color, title: String, subtitle: String) -> some View {
+        HStack(spacing: 14) {
+            iconBadge(name: icon, bg: iconBg)
+            VStack(alignment: .leading, spacing: 2) {
+                Text(title)
+                    .font(.system(.headline, design: .rounded, weight: .heavy))
+                    .foregroundStyle(ink)
+                Text(subtitle)
+                    .font(.system(.caption, design: .rounded, weight: .semibold))
+                    .foregroundStyle(ink.opacity(0.55))
+            }
+            Spacer()
+        }
+        .padding(.horizontal, 14)
+        .padding(.vertical, 14)
+    }
+
+    private func actionRow(
+        icon: String,
+        iconBg: Color,
+        title: String,
+        destructive: Bool = false,
+        action: @escaping () -> Void
+    ) -> some View {
+        Button(action: action) {
+            HStack(spacing: 14) {
+                iconBadge(name: icon, bg: iconBg)
+                Text(title)
+                    .font(.system(.body, design: .rounded, weight: .semibold))
+                    .foregroundStyle(destructive ? Color(red: 0.85, green: 0.1, blue: 0.2) : ink)
+                Spacer()
+                Image(systemName: "chevron.right")
+                    .font(.system(size: 13, weight: .heavy))
+                    .foregroundStyle(ink.opacity(0.4))
+            }
+            .padding(.horizontal, 14)
+            .padding(.vertical, 12)
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+    }
+
+    private func infoRow(label: String, value: String) -> some View {
+        HStack {
+            Text(label)
+                .font(.system(.body, design: .rounded, weight: .semibold))
+                .foregroundStyle(ink)
+            Spacer()
+            Text(value)
+                .font(.system(.body, design: .rounded, weight: .heavy))
+                .foregroundStyle(ink.opacity(0.55))
+        }
+        .padding(.horizontal, 14)
+        .padding(.vertical, 14)
+    }
+}
+
+/// Brutalist card modifier: white background, black border, solid black offset shadow.
+private struct BrutalCardModifier: ViewModifier {
+    let ink = BrutalPalette.ink
+    let depth: CGFloat = 4
+
+    func body(content: Content) -> some View {
+        ZStack(alignment: .top) {
+            RoundedRectangle(cornerRadius: 18, style: .continuous)
+                .fill(ink)
+                .offset(y: depth)
+
+            content
+                .background(Color.white)
+                .clipShape(.rect(cornerRadius: 18))
+                .overlay {
+                    RoundedRectangle(cornerRadius: 18, style: .continuous)
+                        .strokeBorder(ink, lineWidth: 2.5)
+                }
+        }
+        .padding(.bottom, depth)
+    }
+}
+
+private extension View {
+    func brutalCard() -> some View {
+        modifier(BrutalCardModifier())
     }
 }

@@ -5,55 +5,118 @@ struct FavoritesView: View {
     @Binding var selectedCourse: Course?
     @State private var hapticTrigger: Int = 0
 
+    private let ink = BrutalPalette.ink
+    private let cream = BrutalPalette.cream
+
     private var favorites: [Course] {
         progressManager.favoriteCourses
     }
 
     var body: some View {
         NavigationStack {
-            Group {
+            ZStack {
+                cream.ignoresSafeArea()
+
                 if favorites.isEmpty {
                     emptyState
                 } else {
                     ScrollView {
-                        LazyVGrid(columns: [GridItem(.flexible(), spacing: 12), GridItem(.flexible(), spacing: 12)], spacing: 12) {
-                            ForEach(favorites) { course in
-                                LibraryCardView(
-                                    course: course,
-                                    status: progressManager.courseStatus(for: course.id),
-                                    onTap: {
-                                        hapticTrigger += 1
-                                        selectedCourse = course
-                                    },
-                                    progressManager: progressManager
-                                )
+                        VStack(alignment: .leading, spacing: 0) {
+                            header
+                                .padding(.horizontal, 20)
+                                .padding(.top, 4)
+                                .padding(.bottom, 18)
+
+                            LazyVGrid(
+                                columns: [
+                                    GridItem(.flexible(), spacing: 14),
+                                    GridItem(.flexible(), spacing: 14)
+                                ],
+                                alignment: .leading,
+                                spacing: 18
+                            ) {
+                                ForEach(favorites) { course in
+                                    LibraryCardView(
+                                        course: course,
+                                        status: progressManager.courseStatus(for: course.id),
+                                        onTap: {
+                                            hapticTrigger += 1
+                                            selectedCourse = course
+                                        },
+                                        progressManager: progressManager
+                                    )
+                                }
                             }
+                            .padding(.horizontal, 20)
+                            .padding(.bottom, 40)
                         }
-                        .padding(.horizontal, 16)
-                        .padding(.top, 8)
-                        .padding(.bottom, 32)
                     }
                 }
             }
-            .background(SophiaTheme.background)
-            .navigationTitle("Favoris")
-            .toolbarColorScheme(.dark, for: .navigationBar)
+            .navigationBarHidden(true)
             .sensoryFeedback(.impact(weight: .light), trigger: hapticTrigger)
         }
     }
 
+    private var header: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Text("Favoris")
+                .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                .foregroundStyle(ink)
+
+            HStack(spacing: 8) {
+                Image(systemName: "heart.fill")
+                    .font(.system(size: 11, weight: .heavy))
+                    .foregroundStyle(.white)
+                Text("\(favorites.count) COURS")
+                    .font(.system(.caption, design: .rounded, weight: .heavy))
+                    .foregroundStyle(.white)
+                    .tracking(0.5)
+            }
+            .padding(.horizontal, 12)
+            .padding(.vertical, 6)
+            .background(ink, in: Capsule())
+        }
+    }
+
     private var emptyState: some View {
-        VStack(spacing: 16) {
-            Image(systemName: "heart.slash")
-                .font(.system(size: 52))
-                .foregroundStyle(.white.opacity(0.2))
+        VStack(spacing: 0) {
+            Spacer()
+
+            // Big brutalist heart card
+            ZStack {
+                RoundedRectangle(cornerRadius: 28, style: .continuous)
+                    .fill(ink)
+                    .offset(y: 6)
+
+                RoundedRectangle(cornerRadius: 28, style: .continuous)
+                    .fill(BrutalPalette.pink)
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 28, style: .continuous)
+                            .strokeBorder(ink, lineWidth: 3)
+                    }
+                    .overlay {
+                        Image(systemName: "heart.fill")
+                            .font(.system(size: 72, weight: .heavy))
+                            .foregroundStyle(ink)
+                    }
+            }
+            .frame(width: 160, height: 160)
+            .padding(.bottom, 28)
+
             Text("Aucun favori")
-                .font(.system(.title2, design: .rounded, weight: .bold))
-                .foregroundStyle(.white)
+                .font(.system(.title, design: .rounded, weight: .heavy))
+                .foregroundStyle(ink)
+
             Text("Appuie sur le cœur d'un cours\npour le retrouver ici.")
-                .font(.system(.subheadline, design: .rounded))
-                .foregroundStyle(.white.opacity(0.5))
+                .font(.system(.subheadline, design: .rounded, weight: .semibold))
+                .foregroundStyle(ink.opacity(0.55))
                 .multilineTextAlignment(.center)
+                .padding(.top, 8)
+                .padding(.horizontal, 40)
+
+            Spacer()
+            Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
