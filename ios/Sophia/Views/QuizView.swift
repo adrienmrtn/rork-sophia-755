@@ -12,21 +12,21 @@ struct QuizView: View {
     @State private var correctCount: Int = 0
     @State private var isFinished: Bool = false
     @State private var showFeedback: Bool = false
-    @State private var showCelebration: Bool = false
-    @State private var celebrationScale: CGFloat = 0.3
+    @State private var showXPProgress: Bool = false
     @State private var confettiTrigger: Int = 0
     @State private var streakBefore: Int = 0
     @State private var completedBefore: Int = 0
+    @State private var subjectXPBefore: Int = 0
     @State private var resultAppeared: Bool = false
     @State private var trophyBounce: Int = 0
     @State private var scoreAnimated: Int = 0
     @State private var starsRevealed: Int = 0
     @State private var ringProgress: CGFloat = 0
-    @State private var celebrationAppeared: Bool = false
-    @State private var celebrationEmojiBounce: Int = 0
-    @State private var streakBarAppeared: Bool = false
-    @State private var celebrationButtonAppeared: Bool = false
-    @State private var celebrationParticles: [CelebrationParticle] = []
+    @State private var xpScreenAppeared: Bool = false
+    @State private var xpBarAnimated: Bool = false
+    @State private var displayedXP: Int = 0
+    @State private var xpButtonAppeared: Bool = false
+    @State private var levelUpBounce: Int = 0
     @State private var glowPulse: Bool = false
     @State private var shuffledQuestions: [ShuffledQuestion] = []
     @State private var questionAppeared: Bool = false
@@ -34,6 +34,9 @@ struct QuizView: View {
     @State private var showCombo: Bool = false
     @State private var xpEarned: Int = 0
     @State private var showXPPopup: Bool = false
+
+    /// Fixed XP bonus awarded when the quiz is fully completed.
+    private let quizCompletionXPBonus: Int = 10
 
     // Neo-brutalist palette
     private let ink = Color.black
@@ -71,8 +74,8 @@ struct QuizView: View {
         ZStack {
             cream.ignoresSafeArea()
 
-            if showCelebration {
-                celebrationView
+            if showXPProgress {
+                xpProgressionView
                     .transition(.opacity)
             } else if isFinished {
                 resultView
@@ -93,6 +96,7 @@ struct QuizView: View {
         .onAppear {
             streakBefore = progressManager.streak
             completedBefore = progressManager.completedCount
+            subjectXPBefore = progressManager.xp(for: course.subject)
             shuffleAllQuestions()
         }
     }
@@ -271,7 +275,7 @@ struct QuizView: View {
                 UINotificationFeedbackGenerator().notificationOccurred(.success)
                 correctCount += 1
                 comboCount += 1
-                let xp = comboCount >= 3 ? 15 : (comboCount >= 2 ? 12 : 10)
+                let xp = comboCount >= 3 ? 3 : (comboCount >= 2 ? 2 : 1)
                 xpEarned += xp
                 progressManager.addXP(subject: course.subject, amount: xp)
                 showXPBubble(xp: xp)
@@ -388,7 +392,7 @@ struct QuizView: View {
                 Image(systemName: "star.fill")
                     .font(.subheadline.weight(.heavy))
                     .foregroundStyle(ink)
-                Text("+\(comboCount >= 3 ? 15 : (comboCount >= 2 ? 12 : 10)) XP")
+                Text("+\(comboCount >= 3 ? 3 : (comboCount >= 2 ? 2 : 1)) XP")
                     .font(.system(.headline, design: .rounded, weight: .heavy))
                     .foregroundStyle(ink)
             }
@@ -494,6 +498,9 @@ struct QuizView: View {
             withAnimation(.easeOut(duration: 0.25)) {
                 showFeedback = false
             }
+            // Award the fixed quiz-completion XP bonus once, before transitioning to the result screen.
+            progressManager.addXP(subject: course.subject, amount: quizCompletionXPBonus)
+            xpEarned += quizCompletionXPBonus
             progressManager.completeCourse(courseId: course.id, quizScore: correctCount)
             withAnimation(.spring(response: 0.5, dampingFraction: 0.8)) {
                 isFinished = true
@@ -596,11 +603,9 @@ struct QuizView: View {
                     Button {
                         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                         withAnimation(.easeInOut(duration: 0.3)) {
-                            showCelebration = true
+                            showXPProgress = true
                         }
-                        celebrationAppeared = false
-                        confettiTrigger += 1
-                        startCelebrationSequence()
+                        startXPProgressionSequence()
                     } label: {
                         HStack(spacing: 8) {
                             Image(systemName: "house.fill")
@@ -731,60 +736,64 @@ struct QuizView: View {
         .animation(.spring(response: 0.5).delay(1.4), value: resultAppeared)
     }
 
-    private func startCelebrationSequence() {
-        celebrationScale = 0.3
-        celebrationAppeared = false
-        streakBarAppeared = false
-        celebrationButtonAppeared = false
-        celebrationEmojiBounce = 0
-        spawnCelebrationParticles()
+    // MARK: - Post-quiz XP progression screen
+
+    /// XP-based tiers (mirrors ProgressManager).
+    private var subjectTier: (level: Int, lower: Int, upper: Int) {
+        let xp = displayedXP
+        return ProgressManager.subjectXPTiers.last(where: { xp >= $0.lower }) ?? ProgressManager.subjectXPTiers[0]
+    }
+
+    private var subjectTierProgress: Double {
+        let t = subjectTier
+        if t.level == 5 { return 1.0 }
+        let span = max(1, t.upper - t.lower)
+        return min(1.0, max(0.0, Double(displayedXP - t.lower) / Double(span)))
+    }
+
+    private var didLevelUp: Bool {
+        let before = ProgressManager.subjectXPTiers.last(where: { subjectXPBefore >= $0.lower })?.level ?? 1
+        let after = ProgressManager.subjectXPTiers.last(where: { progressManager.xp(for: course.subject) >= $0.lower })?.level ?? 1
+        return after > before
+    }
+
+    private func startXPProgressionSequence() {
+        xpScreenAppeared = false
+        xpBarAnimated = false
+        xpButtonAppeared = false
+        displayedXP = subjectXPBefore
+        confettiTrigger += 1
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-            withAnimation(.spring(response: 0.7, dampingFraction: 0.5)) {
-                celebrationAppeared = true
-                celebrationScale = 1.0
+            withAnimation(.spring(response: 0.6, dampingFraction: 0.7)) {
+                xpScreenAppeared = true
             }
             UINotificationFeedbackGenerator().notificationOccurred(.success)
         }
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            celebrationEmojiBounce += 1
-            UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
-        }
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
-            withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
-                streakBarAppeared = true
+        // Animate the XP counter + progress bar from the pre-quiz value to the new value.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.55) {
+            withAnimation(.easeOut(duration: 1.1)) {
+                xpBarAnimated = true
+                displayedXP = progressManager.xp(for: course.subject)
             }
             UIImpactFeedbackGenerator(style: .light).impactOccurred()
+            if didLevelUp {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                    levelUpBounce += 1
+                    UINotificationFeedbackGenerator().notificationOccurred(.success)
+                }
+            }
         }
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.8) {
             withAnimation(.spring(response: 0.5, dampingFraction: 0.8)) {
-                celebrationButtonAppeared = true
+                xpButtonAppeared = true
             }
         }
     }
 
-    private func spawnCelebrationParticles() {
-        var p: [CelebrationParticle] = []
-        let emojis = ["🎉", "⭐", "✨", "🏆", "🎊", "💫"]
-        for i in 0..<12 {
-            p.append(CelebrationParticle(
-                id: i,
-                emoji: emojis[i % emojis.count],
-                x: Double.random(in: 30...350),
-                y: Double.random(in: 60...700),
-                size: Double.random(in: 18...32),
-                delay: Double.random(in: 0...1.5),
-                duration: Double.random(in: 2.5...4.0),
-                drift: Double.random(in: -30...30)
-            ))
-        }
-        celebrationParticles = p
-    }
-
-    private var celebrationView: some View {
+    private var xpProgressionView: some View {
         ZStack {
             cream.ignoresSafeArea()
 
@@ -792,93 +801,122 @@ struct QuizView: View {
                 .ignoresSafeArea()
                 .allowsHitTesting(false)
 
-            VStack(spacing: 24) {
-                Spacer()
+            VStack(spacing: 22) {
+                Spacer(minLength: 12)
 
-                let newCompletedCount = progressManager.completedCount
-                let isNewStreak = progressManager.streak > streakBefore
+                // Subject pill
+                HStack(spacing: 8) {
+                    Image(systemName: course.subject.icon)
+                        .font(.system(.subheadline, weight: .heavy))
+                        .foregroundStyle(.white)
+                    Text(course.subject.shortName.uppercased())
+                        .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                        .foregroundStyle(.white)
+                        .tracking(0.6)
+                }
+                .padding(.horizontal, 16)
+                .padding(.vertical, 10)
+                .background(ink, in: Capsule())
+                .scaleEffect(xpScreenAppeared ? 1 : 0.6)
+                .opacity(xpScreenAppeared ? 1 : 0)
 
-                VStack(spacing: 20) {
-                    if isNewStreak {
-                        VStack(spacing: 12) {
-                            ZStack {
-                                Circle()
-                                    .fill(ink)
-                                    .frame(width: 140, height: 140)
-                                    .offset(y: 7)
-                                Circle()
-                                    .fill(orange)
-                                    .frame(width: 140, height: 140)
-                                    .overlay { Circle().strokeBorder(ink, lineWidth: 3.5) }
-                                Image(systemName: "flame.fill")
-                                    .font(.system(size: 70, weight: .black))
-                                    .foregroundStyle(.white)
+                // Big XP star badge with level
+                ZStack {
+                    RoundedRectangle(cornerRadius: 32, style: .continuous)
+                        .fill(ink)
+                        .frame(width: 200, height: 200)
+                        .offset(y: 8)
+                    ZStack {
+                        Circle()
+                            .fill(yellow)
+                            .frame(width: 200, height: 200)
+                            .overlay { Circle().strokeBorder(ink, lineWidth: 3.5) }
+                        VStack(spacing: 2) {
+                            Image(systemName: "star.fill")
+                                .font(.system(size: 56, weight: .black))
+                                .foregroundStyle(ink)
+                                .symbolEffect(.bounce, value: levelUpBounce)
+                                .scaleEffect(glowPulse ? 1.05 : 1.0)
+                            Text("NIV. \(subjectTier.level)")
+                                .font(.system(.title3, design: .rounded, weight: .black))
+                                .foregroundStyle(ink)
+                                .tracking(0.6)
+                                .contentTransition(.numericText())
+                        }
+                    }
+                    .scaleEffect(xpScreenAppeared ? 1 : 0.3)
+                }
+
+                // Title + total XP
+                VStack(spacing: 6) {
+                    Text(didLevelUp ? "Niveau supérieur !" : "Progression XP")
+                        .font(.system(.title, design: .rounded, weight: .black))
+                        .foregroundStyle(ink)
+                        .opacity(xpScreenAppeared ? 1 : 0)
+
+                    HStack(alignment: .firstTextBaseline, spacing: 6) {
+                        Text("\(displayedXP)")
+                            .font(.system(size: 44, weight: .black, design: .rounded))
+                            .foregroundStyle(ink)
+                            .contentTransition(.numericText(countsDown: false))
+                        Text("XP")
+                            .font(.system(.title2, design: .rounded, weight: .heavy))
+                            .foregroundStyle(ink.opacity(0.55))
+                    }
+                    .opacity(xpScreenAppeared ? 1 : 0)
+                }
+
+                // Progress bar with neo-brutalist style
+                VStack(alignment: .leading, spacing: 6) {
+                    ZStack(alignment: .leading) {
+                        Capsule()
+                            .fill(ink)
+                            .frame(height: 22)
+                            .offset(y: 5)
+                        GeometryReader { geo in
+                            ZStack(alignment: .leading) {
+                                Capsule()
+                                    .fill(Color.white)
+                                    .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
+                                    .frame(height: 22)
+                                Capsule()
+                                    .fill(pink)
+                                    .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
+                                    .frame(width: max(geo.size.width * subjectTierProgress, 22), height: 22)
                             }
-                            .scaleEffect(celebrationScale)
-
-                            Text("\(progressManager.streak) jours de suite !")
-                                .font(.system(.title2, design: .rounded, weight: .black))
-                                .foregroundStyle(ink)
-                                .padding(.horizontal, 16)
-                                .padding(.vertical, 8)
-                                .background(yellow, in: Capsule())
-                                .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
-                                .opacity(celebrationAppeared ? 1 : 0)
-                                .offset(y: celebrationAppeared ? 0 : 10)
                         }
-                    } else {
-                        ZStack {
-                            Circle()
-                                .fill(ink)
-                                .frame(width: 140, height: 140)
-                                .offset(y: 7)
-                            Circle()
-                                .fill(pink)
-                                .frame(width: 140, height: 140)
-                                .overlay { Circle().strokeBorder(ink, lineWidth: 3.5) }
-                            Image(systemName: "party.popper.fill")
-                                .font(.system(size: 64, weight: .black))
-                                .foregroundStyle(ink)
-                                .symbolEffect(.bounce, value: celebrationEmojiBounce)
-                        }
-                        .scaleEffect(celebrationAppeared ? 1 : 0.3)
+                        .frame(height: 22)
                     }
+                    .padding(.bottom, 5)
 
-                    VStack(spacing: 10) {
-                        Text("Bravo !")
-                            .font(.system(size: 42, weight: .black, design: .rounded))
-                            .foregroundStyle(ink)
-                            .opacity(celebrationAppeared ? 1 : 0)
-                            .scaleEffect(celebrationAppeared ? 1 : 0.7)
-
-                        Text("Tu as terminé ton \(ordinal(newCompletedCount)) cours !")
-                            .font(.system(.title3, design: .rounded, weight: .heavy))
-                            .foregroundStyle(ink.opacity(0.7))
-                            .multilineTextAlignment(.center)
-                            .opacity(celebrationAppeared ? 1 : 0)
-                            .offset(y: celebrationAppeared ? 0 : 10)
-                    }
-                    .animation(.spring(response: 0.6, dampingFraction: 0.7).delay(0.2), value: celebrationAppeared)
+                    Text(xpProgressLabel)
+                        .font(.system(.caption, design: .rounded, weight: .heavy))
+                        .foregroundStyle(ink.opacity(0.6))
+                        .contentTransition(.numericText())
                 }
+                .padding(.horizontal, 24)
+                .opacity(xpScreenAppeared ? 1 : 0)
 
-                if progressManager.streak >= 2 {
-                    HStack(spacing: 8) {
-                        Image(systemName: "flame.fill")
-                            .font(.title3.weight(.heavy))
-                            .foregroundStyle(ink)
-                        Text("Streak : \(progressManager.streak) jour\(progressManager.streak > 1 ? "s" : "")")
-                            .font(.system(.headline, design: .rounded, weight: .black))
-                            .foregroundStyle(ink)
-                    }
-                    .padding(.horizontal, 22)
-                    .padding(.vertical, 12)
-                    .background(orange, in: Capsule())
-                    .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
-                    .scaleEffect(streakBarAppeared ? 1 : 0.5)
-                    .opacity(streakBarAppeared ? 1 : 0)
+                // Breakdown pills
+                VStack(spacing: 10) {
+                    breakdownPill(
+                        icon: "checkmark.circle.fill",
+                        label: "Bonnes réponses",
+                        amount: xpEarned - quizCompletionXPBonus,
+                        fill: mint
+                    )
+                    breakdownPill(
+                        icon: "trophy.fill",
+                        label: "Quiz terminé",
+                        amount: quizCompletionXPBonus,
+                        fill: yellow
+                    )
                 }
+                .padding(.horizontal, 24)
+                .opacity(xpScreenAppeared ? 1 : 0)
+                .offset(y: xpScreenAppeared ? 0 : 14)
 
-                Spacer()
+                Spacer(minLength: 8)
 
                 Button {
                     UIImpactFeedbackGenerator(style: .medium).impactOccurred()
@@ -895,16 +933,54 @@ struct QuizView: View {
                 }
                 .buttonStyle(BrutalPillStyle(fill: pink))
                 .padding(.horizontal, 24)
-                .padding(.bottom, 40)
-                .scaleEffect(celebrationButtonAppeared ? 1 : 0.8)
-                .opacity(celebrationButtonAppeared ? 1 : 0)
+                .padding(.bottom, 32)
+                .scaleEffect(xpButtonAppeared ? 1 : 0.85)
+                .opacity(xpButtonAppeared ? 1 : 0)
             }
         }
     }
 
-    private func ordinal(_ n: Int) -> String {
-        if n == 1 { return "1er" }
-        return "\(n)e"
+    private var xpProgressLabel: String {
+        let t = subjectTier
+        if t.level == 5 { return "\(displayedXP) XP · niveau max" }
+        let toNext = max(0, t.upper - displayedXP)
+        return "\(toNext) XP avant niv. \(t.level + 1)"
+    }
+
+    private func breakdownPill(icon: String, label: String, amount: Int, fill: Color) -> some View {
+        HStack(spacing: 12) {
+            ZStack {
+                Circle()
+                    .fill(fill)
+                    .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
+                Image(systemName: icon)
+                    .font(.system(.subheadline, weight: .heavy))
+                    .foregroundStyle(ink)
+            }
+            .frame(width: 38, height: 38)
+
+            Text(label)
+                .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                .foregroundStyle(ink)
+
+            Spacer(minLength: 4)
+
+            Text("+\(amount) XP")
+                .font(.system(.headline, design: .rounded, weight: .black))
+                .foregroundStyle(ink)
+                .padding(.horizontal, 12)
+                .padding(.vertical, 6)
+                .background(fill, in: Capsule())
+                .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
+        }
+        .padding(.horizontal, 14)
+        .padding(.vertical, 12)
+        .background(Color.white)
+        .clipShape(.rect(cornerRadius: 16))
+        .overlay {
+            RoundedRectangle(cornerRadius: 16, style: .continuous)
+                .strokeBorder(ink, lineWidth: 2.5)
+        }
     }
 }
 
@@ -1007,40 +1083,4 @@ nonisolated struct ConfettiParticle: Sendable {
     let startTime: Double
 }
 
-struct CelebrationParticle: Identifiable {
-    let id: Int
-    let emoji: String
-    let x: Double
-    let y: Double
-    let size: Double
-    let delay: Double
-    let duration: Double
-    let drift: Double
-}
 
-struct FloatingEmoji: View {
-    let particle: CelebrationParticle
-    @State private var appeared: Bool = false
-    @State private var floatOffset: CGFloat = 0
-
-    var body: some View {
-        Text(particle.emoji)
-            .font(.system(size: particle.size))
-            .position(x: particle.x + (appeared ? particle.drift : 0), y: particle.y)
-            .offset(y: floatOffset)
-            .opacity(appeared ? 0.7 : 0)
-            .scaleEffect(appeared ? 1 : 0.2)
-            .onAppear {
-                withAnimation(.spring(response: 0.6, dampingFraction: 0.5).delay(particle.delay)) {
-                    appeared = true
-                }
-                withAnimation(
-                    .easeInOut(duration: particle.duration)
-                    .repeatForever(autoreverses: true)
-                    .delay(particle.delay)
-                ) {
-                    floatOffset = -15
-                }
-            }
-    }
-}
