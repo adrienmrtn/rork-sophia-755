@@ -104,21 +104,40 @@ struct OnboardingView: View {
                 case 14:
                     OnboardingFreeTrialTimelineView(onNext: advance)
                 case 15:
-                    SophiaPaywallView(
-                        context: .finOnboarding,
-                        onPurchased: {
+                    ZStack(alignment: .topTrailing) {
+                        SophiaPaywallView(
+                            context: .finOnboarding,
+                            onPurchased: {
+                                viewModel.completeOnboarding()
+                                onComplete()
+                            },
+                            onRestored: {
+                                viewModel.completeOnboarding()
+                                onComplete()
+                            },
+                            onDismissed: {
+                                viewModel.completeOnboarding()
+                                onComplete()
+                            }
+                        )
+
+                        Button {
+                            let g = UIImpactFeedbackGenerator(style: .light)
+                            g.impactOccurred()
                             viewModel.completeOnboarding()
                             onComplete()
-                        },
-                        onRestored: {
-                            viewModel.completeOnboarding()
-                            onComplete()
-                        },
-                        onDismissed: {
-                            viewModel.completeOnboarding()
-                            onComplete()
+                        } label: {
+                            Image(systemName: "xmark")
+                                .font(.system(size: 14, weight: .bold))
+                                .foregroundStyle(.white)
+                                .frame(width: 32, height: 32)
+                                .background(Color.black.opacity(0.45))
+                                .clipShape(Circle())
                         }
-                    )
+                        .padding(.top, 12)
+                        .padding(.trailing, 16)
+                        .accessibilityLabel("Fermer")
+                    }
                 default:
                     EmptyView()
                 }
