@@ -13,8 +13,18 @@ class OnboardingViewModel {
     var loadingProgress: Double = 0
     var loadingStep: String = ""
     var isLoadingComplete: Bool = false
+    var dailyLearningGoal: Int = 1
 
     let totalScreens = 18
+    let dailyLearningGoalRange: ClosedRange<Int> = 1...5
+
+    var projectedYearlyLearnings: Int {
+        dailyLearningGoal * 365
+    }
+
+    var dailyLearningGoalLabel: String {
+        dailyLearningGoal == 1 ? "apprentissage" : "apprentissages"
+    }
 
     var wastedTimePerYear: String {
         guard let selection = phoneTimeSelection else { return "" }
@@ -43,7 +53,7 @@ class OnboardingViewModel {
         case 2: return phoneTimeSelection != nil
         case 4: return !objectives.isEmpty
         case 8: return !interests.isEmpty
-        case 10: return ageRange != nil
+        case 11: return ageRange != nil
         default: return true
         }
     }
@@ -68,6 +78,11 @@ class OnboardingViewModel {
             interests.insert(interest)
         }
         persistInterests()
+    }
+
+    func adjustDailyLearningGoal(by delta: Int) {
+        let proposedGoal = dailyLearningGoal + delta
+        dailyLearningGoal = min(max(proposedGoal, dailyLearningGoalRange.lowerBound), dailyLearningGoalRange.upperBound)
     }
 
     private func persistInterests() {

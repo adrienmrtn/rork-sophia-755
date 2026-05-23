@@ -93,20 +93,22 @@ struct OnboardingView: View {
                 case 8:
                     OnboardingInterestsScreen(viewModel: viewModel, onNext: advance)
                 case 9:
-                    OnboardingProjectionScreen(onNext: advance)
+                    OnboardingDailyGoalScreen(viewModel: viewModel, onNext: advance)
                 case 10:
-                    OnboardingAgeScreen(viewModel: viewModel, onNext: advance)
+                    OnboardingProjectionScreen(viewModel: viewModel, onNext: advance)
                 case 11:
-                    OnboardingProfileGenScreen(onNext: advance)
+                    OnboardingAgeScreen(viewModel: viewModel, onNext: advance)
                 case 12:
-                    OnboardingLoadingScreen(viewModel: viewModel, onNext: advance)
+                    OnboardingProfileGenScreen(onNext: advance)
                 case 13:
-                    OnboardingFinalScreen(onComplete: advance)
+                    OnboardingLoadingScreen(viewModel: viewModel, onNext: advance)
                 case 14:
-                    OnboardingFreeTrialIntroView(onNext: advance)
+                    OnboardingFinalScreen(onComplete: advance)
                 case 15:
-                    OnboardingFreeTrialTimelineView(onNext: advance)
+                    OnboardingFreeTrialIntroView(onNext: advance)
                 case 16:
+                    OnboardingFreeTrialTimelineView(onNext: advance)
+                case 17:
                     Color.clear
                         .onAppear {
                             showRCPaywall = true
@@ -120,9 +122,9 @@ struct OnboardingView: View {
                 removal: .move(edge: .leading).combined(with: .opacity)
             ))
 
-            if viewModel.currentScreen > 0 && viewModel.currentScreen < 11 {
+            if viewModel.currentScreen > 0 && viewModel.currentScreen < 12 {
                 VStack {
-                    OnboardingProgressDots(current: viewModel.currentScreen, total: 11)
+                    OnboardingProgressDots(current: viewModel.currentScreen, total: 12)
                         .frame(maxWidth: .infinity)
                         .padding(.top, 16)
                     Spacer()

@@ -1,7 +1,11 @@
 import SwiftUI
 
 struct OnboardingProjectionScreen: View {
+    @Bindable var viewModel: OnboardingViewModel
     let onNext: () -> Void
+
+    private let backgroundPink = Color(red: 254.0 / 255.0, green: 150.0 / 255.0, blue: 188.0 / 255.0)
+    private let softCream = Color(red: 1.0, green: 0.96, blue: 0.82)
     @State private var appeared: Bool = false
     @State private var progressWidth: CGFloat = 0
     @State private var showNumber: Bool = false
@@ -9,7 +13,7 @@ struct OnboardingProjectionScreen: View {
 
     var body: some View {
         ZStack {
-            BrutalPalette.cream.ignoresSafeArea()
+            backgroundPink.ignoresSafeArea()
 
             VStack(spacing: 0) {
                 Spacer()
@@ -18,7 +22,7 @@ struct OnboardingProjectionScreen: View {
                     BrutalPill(
                         text: "Ta projection",
                         icon: "chart.line.uptrend.xyaxis",
-                        background: Color(red: 0.70, green: 0.95, blue: 0.80),
+                        background: softCream,
                         foreground: BrutalPalette.ink
                     )
                     .opacity(appeared ? 1 : 0)
@@ -26,7 +30,7 @@ struct OnboardingProjectionScreen: View {
                     VStack(spacing: 14) {
                         Text("D'ici la fin de l'année,\ntu auras appris")
                             .font(.system(.title3, design: .rounded, weight: .semibold))
-                            .foregroundStyle(BrutalPalette.ink.opacity(0.6))
+                            .foregroundStyle(BrutalPalette.ink.opacity(0.68))
                             .multilineTextAlignment(.center)
                             .opacity(appeared ? 1 : 0)
 
@@ -41,7 +45,7 @@ struct OnboardingProjectionScreen: View {
                         }
                         .opacity(appeared ? 1 : 0)
 
-                        Text("en seulement 10 minutes par jour.")
+                        Text("avec \(viewModel.dailyLearningGoal) \(viewModel.dailyLearningGoalLabel) par jour.")
                             .font(.system(.body, design: .rounded, weight: .heavy))
                             .foregroundStyle(BrutalPalette.ink)
                             .opacity(showNumber ? 1 : 0)
@@ -50,11 +54,11 @@ struct OnboardingProjectionScreen: View {
                     GeometryReader { geo in
                         ZStack(alignment: .leading) {
                             Capsule()
-                                .fill(Color.white)
+                                .fill(softCream)
                                 .overlay { Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 2.5) }
                                 .frame(height: 16)
                             Capsule()
-                                .fill(BrutalPalette.pink)
+                                .fill(Color.white)
                                 .overlay { Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 2.5) }
                                 .frame(width: progressWidth, height: 16)
                         }
@@ -95,7 +99,7 @@ struct OnboardingProjectionScreen: View {
             let delay = 0.8 + interval * Double(step)
             let progress = Double(step) / Double(steps)
             let eased = 1 - pow(1 - progress, 3)
-            let value = Int(eased * 365)
+            let value = Int(eased * Double(viewModel.projectedYearlyLearnings))
 
             DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                 withAnimation(.snappy(duration: 0.08)) {
