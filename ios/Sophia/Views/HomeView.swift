@@ -342,13 +342,13 @@ struct FlashCard: View {
             Text(course.title)
                 .font(.system(.title2, design: .rounded, weight: .heavy))
                 .foregroundStyle(ink)
-                .lineLimit(2, reservesSpace: true)
+                .lineLimit(3, reservesSpace: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
 
             boldText(course.description)
                 .font(.system(.subheadline, design: .rounded, weight: .semibold))
                 .foregroundStyle(ink.opacity(0.85))
-                .lineLimit(3, reservesSpace: true)
+                .lineLimit(4, reservesSpace: true)
                 .multilineTextAlignment(.leading)
                 .frame(maxWidth: .infinity, alignment: .leading)
 
