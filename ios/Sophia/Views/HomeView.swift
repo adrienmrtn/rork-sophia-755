@@ -135,6 +135,10 @@ struct HomeView: View {
                 FlashCard(
                     course: course,
                     dailyDone: progressManager.hasCompletedCourseToday,
+                    isFavorite: progressManager.isFavorite(course.id),
+                    onToggleFavorite: {
+                        progressManager.toggleFavorite(course.id)
+                    },
                     onStart: {
                         if progressManager.hasCompletedCourseToday {
                             onLockedTap?()
@@ -237,10 +241,11 @@ struct HomeView: View {
 struct FlashCard: View {
     let course: Course
     var dailyDone: Bool = false
+    var isFavorite: Bool = false
+    var onToggleFavorite: (() -> Void)? = nil
     let onStart: () -> Void
     @State private var cachedImage: UIImage?
     @State private var buttonTrigger: Int = 0
-    @State private var bookmarked: Bool = false
 
     private let ink = Color.black
     private let pink = Color(red: 1.0, green: 0.553, blue: 0.706)
@@ -310,9 +315,9 @@ struct FlashCard: View {
                 Button {
                     let g = UIImpactFeedbackGenerator(style: .light)
                     g.impactOccurred()
-                    bookmarked.toggle()
+                    onToggleFavorite?()
                 } label: {
-                    Image(systemName: bookmarked ? "bookmark.fill" : "bookmark")
+                    Image(systemName: isFavorite ? "bookmark.fill" : "bookmark")
                         .font(.system(size: 16, weight: .bold))
                         .foregroundStyle(ink)
                         .frame(width: 40, height: 40)
