@@ -13,6 +13,7 @@ struct QuizView: View {
     @State private var isFinished: Bool = false
     @State private var showFeedback: Bool = false
     @State private var showXPProgress: Bool = false
+    @State private var showStreak: Bool = false
     @State private var confettiTrigger: Int = 0
     @State private var streakBefore: Int = 0
     @State private var completedBefore: Int = 0
@@ -74,7 +75,15 @@ struct QuizView: View {
         ZStack {
             cream.ignoresSafeArea()
 
-            if showXPProgress {
+            if showStreak {
+                StreakCelebrationView(
+                    streak: progressManager.streak,
+                    subject: course.subject,
+                    lastActiveDate: progressManager.progress.lastActiveDate,
+                    onReturnHome: { onReturnHome() }
+                )
+                .transition(.opacity.combined(with: .move(edge: .bottom)))
+            } else if showXPProgress {
                 xpProgressionView
                     .transition(.opacity)
             } else if isFinished {
@@ -920,11 +929,13 @@ struct QuizView: View {
 
                 Button {
                     UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-                    onReturnHome()
+                    withAnimation(.spring(response: 0.5, dampingFraction: 0.85)) {
+                        showStreak = true
+                    }
                 } label: {
                     HStack(spacing: 8) {
-                        Image(systemName: "house.fill")
-                        Text("Retour à l'accueil")
+                        Image(systemName: "arrow.right")
+                        Text("Continuer")
                     }
                     .font(.system(.headline, design: .rounded, weight: .black))
                     .foregroundStyle(ink)
