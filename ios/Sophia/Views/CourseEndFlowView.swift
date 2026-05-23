@@ -13,8 +13,10 @@ nonisolated enum CourseEndPhase: Sendable {
 struct CourseCompletedView: View {
     let course: Course
     let progressManager: ProgressManager
-    /// Count of completed courses in the subject BEFORE this course was completed.
-    let previousSubjectCount: Int
+    /// XP for this subject BEFORE awarding the +10 course-completion bonus.
+    let previousSubjectXP: Int
+    /// XP awarded for finishing this course (typically +10, always granted).
+    let earnedXP: Int
     /// Whether the locked freemium banner + Mini Quiz CTA are shown.
     let showFreemiumGate: Bool
     let onClose: () -> Void
@@ -23,15 +25,15 @@ struct CourseCompletedView: View {
     @State private var appeared: Bool = false
     @State private var thumbScale: CGFloat = 0.6
     @State private var progressAnimated: Bool = false
-    @State private var displayedCount: Int = 0
+    @State private var displayedXP: Int = 0
     @State private var cachedThumb: UIImage?
 
     private let ink = Color.black
     private let cream = Color(red: 0.984, green: 0.961, blue: 0.918)
     private let pink = Color(red: 1.0, green: 0.553, blue: 0.706)
 
-    private var currentSubjectCount: Int {
-        progressManager.completedCount(for: course.subject)
+    private var currentSubjectXP: Int {
+        progressManager.xp(for: course.subject)
     }
 
     private var pastel: Color {
@@ -45,21 +47,20 @@ struct CourseCompletedView: View {
         }
     }
 
-    /// (level, lower, upper) tiers matching ProfileView.
-    private static let tiers: [(level: Int, lower: Int, upper: Int)] = [
-        (1, 0, 5), (2, 5, 15), (3, 15, 30), (4, 30, 50), (5, 50, 100)
-    ]
+    private func tier(for xp: Int) -> (level: Int, lower: Int, upper: Int) {
+        ProgressManager.subjectXPTiers.last(where: { xp >= $0.lower }) ?? ProgressManager.subjectXPTiers[0]
+    }
 
-    private func tier(for count: Int) -> (level: Int, lower: Int, upper: Int) {
-        Self.tiers.last(where: { count >= $0.lower }) ?? Self.tiers[0]
+    private var animatedXP: Int {
+        progressAnimated ? currentSubjectXP : previousSubjectXP
     }
 
     private var progressFraction: Double {
-        let count = progressAnimated ? currentSubjectCount : previousSubjectCount
-        let t = tier(for: count)
+        let xp = animatedXP
+        let t = tier(for: xp)
         if t.level == 5 { return 1.0 }
         let span = max(1, t.upper - t.lower)
-        return min(1.0, max(0.0, Double(count - t.lower) / Double(span)))
+        return min(1.0, max(0.0, Double(xp - t.lower) / Double(span)))
     }
 
     var body: some View {
@@ -114,19 +115,19 @@ struct CourseCompletedView: View {
         }
         .onAppear {
             cachedThumb = CourseImageMap.loadImage(for: course.id)
-            displayedCount = previousSubjectCount
+            displayedXP = previousSubjectXP
 
             withAnimation(.spring(response: 0.55, dampingFraction: 0.75)) {
                 appeared = true
                 thumbScale = 1.0
             }
 
-            // Animate progression bar + counter after a short beat.
+            // Animate progression bar + XP counter from the pre-course value to the new value.
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.55) {
-                withAnimation(.spring(response: 0.7, dampingFraction: 0.75)) {
+                withAnimation(.easeOut(duration: 1.1)) {
                     progressAnimated = true
+                    displayedXP = currentSubjectXP
                 }
-                animateCounter(from: previousSubjectCount, to: currentSubjectCount)
                 let g = UINotificationFeedbackGenerator()
                 g.notificationOccurred(.success)
             }
@@ -178,7 +179,8 @@ struct CourseCompletedView: View {
     // MARK: Progression card
 
     private var progressionCard: some View {
-        let tierNow = tier(for: progressAnimated ? currentSubjectCount : previousSubjectCount)
+        let tierNow = tier(for: animatedXP)
+        let xpToNext = max(0, tierNow.upper - animatedXP)
 
         return ZStack(alignment: .top) {
             RoundedRectangle(cornerRadius: 20, style: .continuous)
@@ -204,10 +206,20 @@ struct CourseCompletedView: View {
                         Text(course.subject.shortName)
                             .font(.system(.headline, design: .rounded, weight: .heavy))
                             .foregroundStyle(ink)
-                        Text("\(displayedCount) cours lus")
-                            .font(.system(.caption, design: .rounded, weight: .heavy))
-                            .foregroundStyle(ink.opacity(0.55))
-                            .contentTransition(.numericText())
+                        HStack(spacing: 4) {
+                            Image(systemName: "star.fill")
+                                .font(.system(size: 10, weight: .heavy))
+                                .foregroundStyle(ink.opacity(0.7))
+                            Text("\(displayedXP) XP")
+                                .font(.system(.caption, design: .rounded, weight: .heavy))
+                                .foregroundStyle(ink.opacity(0.55))
+                                .contentTransition(.numericText())
+                            if tierNow.level < 5 {
+                                Text("· \(xpToNext) avant niv. \(tierNow.level + 1)")
+                                    .font(.system(.caption, design: .rounded, weight: .heavy))
+                                    .foregroundStyle(ink.opacity(0.4))
+                            }
+                        }
                     }
                     Spacer()
                     Text("NIV. \(tierNow.level)")
@@ -231,6 +243,20 @@ struct CourseCompletedView: View {
                     }
                 }
                 .frame(height: 16)
+
+                // +N XP earned pill
+                HStack(spacing: 6) {
+                    Image(systemName: "star.fill")
+                        .font(.system(size: 11, weight: .heavy))
+                        .foregroundStyle(ink)
+                    Text("+\(earnedXP) XP gagnés")
+                        .font(.system(.caption, design: .rounded, weight: .heavy))
+                        .foregroundStyle(ink)
+                }
+                .padding(.horizontal, 10)
+                .padding(.vertical, 6)
+                .background(pastel, in: Capsule())
+                .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
             }
             .padding(16)
             .background(Color.white)
@@ -303,21 +329,6 @@ struct CourseCompletedView: View {
         }
     }
 
-    private func animateCounter(from start: Int, to end: Int) {
-        guard end > start else {
-            displayedCount = end
-            return
-        }
-        let steps = end - start
-        let stepDuration: Double = 0.35 / Double(max(1, steps))
-        for i in 1...steps {
-            DispatchQueue.main.asyncAfter(deadline: .now() + stepDuration * Double(i)) {
-                withAnimation(.snappy) {
-                    displayedCount = start + i
-                }
-            }
-        }
-    }
 }
 
 // MARK: - Streak Celebration screen

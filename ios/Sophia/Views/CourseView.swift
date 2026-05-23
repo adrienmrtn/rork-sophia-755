@@ -16,7 +16,11 @@ struct CourseView: View {
     @State private var showQuizPrePaywall: Bool = false
     @State private var endPhase: CourseEndPhase = .none
     @State private var previousSubjectCount: Int = 0
+    @State private var previousSubjectXP: Int = 0
     @State private var showEndFlowPaywall: Bool = false
+
+    /// Fixed XP awarded for finishing a course (reaching the completion screen). Always granted.
+    private let courseCompletionXP: Int = 10
 
     private var isLastLesson: Bool {
         currentIndex == course.lessons.count - 1
@@ -41,7 +45,8 @@ struct CourseView: View {
                 CourseCompletedView(
                     course: course,
                     progressManager: progressManager,
-                    previousSubjectCount: previousSubjectCount,
+                    previousSubjectXP: previousSubjectXP,
+                    earnedXP: courseCompletionXP,
                     showFreemiumGate: !isPremium,
                     onClose: {
                         withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
@@ -189,16 +194,14 @@ struct CourseView: View {
             if isLastLesson {
                 progressManager.updateLessonProgress(courseId: course.id, lessonIndex: currentIndex)
                 progressManager.markCourseCompletedToday()
-                if isPremium && course.hasQuiz {
-                    showQuiz = true
-                } else {
-                    // Capture subject count BEFORE marking the course completed so we can
-                    // animate the progression bar advancing by one step on the celebration screen.
-                    previousSubjectCount = progressManager.completedCount(for: course.subject)
-                    progressManager.completeCourse(courseId: course.id, quizScore: 0)
-                    withAnimation(.spring(response: 0.5, dampingFraction: 0.85)) {
-                        endPhase = .completed
-                    }
+                // Capture XP/count BEFORE awarding so we can animate the bar advancing.
+                previousSubjectCount = progressManager.completedCount(for: course.subject)
+                previousSubjectXP = progressManager.xp(for: course.subject)
+                progressManager.completeCourse(courseId: course.id, quizScore: 0)
+                // Always award +10 XP when reaching the end-of-course screen, premium or free.
+                progressManager.addXP(subject: course.subject, amount: courseCompletionXP)
+                withAnimation(.spring(response: 0.5, dampingFraction: 0.85)) {
+                    endPhase = .completed
                 }
             } else {
                 withAnimation(.spring(response: 0.4)) {
