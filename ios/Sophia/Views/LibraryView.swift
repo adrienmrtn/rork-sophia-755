@@ -53,6 +53,15 @@ struct LibraryView: View {
 
                 ScrollView {
                     VStack(alignment: .leading, spacing: 28) {
+                        HStack {
+                            Text("Bibliothèque")
+                                .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                                .foregroundStyle(ink)
+                            Spacer()
+                        }
+                        .padding(.horizontal, 20)
+                        .padding(.top, 8)
+
                         searchBar
                             .padding(.horizontal, 20)
 
@@ -77,28 +86,7 @@ struct LibraryView: View {
                 }
                 .scrollDismissesKeyboard(.interactively)
             }
-            .navigationTitle("Bibliothèque")
-            .navigationBarTitleDisplayMode(.large)
-            .toolbarBackground(cream, for: .navigationBar)
-            .toolbarBackground(.visible, for: .navigationBar)
-            .toolbarColorScheme(.light, for: .navigationBar)
-            .onAppear {
-                let appearance = UINavigationBarAppearance()
-                appearance.configureWithOpaqueBackground()
-                appearance.backgroundColor = UIColor(cream)
-                appearance.shadowColor = .clear
-                appearance.titleTextAttributes = [
-                    .foregroundColor: UIColor.black,
-                    .font: UIFont.systemFont(ofSize: 17, weight: .heavy)
-                ]
-                appearance.largeTitleTextAttributes = [
-                    .foregroundColor: UIColor.black,
-                    .font: UIFont.systemFont(ofSize: 34, weight: .heavy)
-                ]
-                UINavigationBar.appearance().standardAppearance = appearance
-                UINavigationBar.appearance().scrollEdgeAppearance = appearance
-                UINavigationBar.appearance().compactAppearance = appearance
-            }
+            .toolbar(.hidden, for: .navigationBar)
             .navigationDestination(for: Subject.self) { subject in
                 let courses = CourseData.allCourses.filter { $0.subject == subject }
                 SubjectCoursesView(

@@ -244,7 +244,7 @@ struct FlashCard: View {
 
     private let ink = Color.black
     private let pink = Color(red: 1.0, green: 0.553, blue: 0.706)
-    private let depth: CGFloat = 4
+    private let depth: CGFloat = 2
 
     /// Pastel tint for the subject — mixes the subject color with white for a soft brutalist panel.
     private var pastel: Color {
