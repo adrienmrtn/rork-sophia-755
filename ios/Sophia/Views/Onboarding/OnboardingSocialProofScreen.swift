@@ -147,7 +147,12 @@ private struct ReviewCard: View {
             }
         }
         .padding(14)
-        .brutalOnboardingCard(depth: 3, corner: 14)
+        .background(BrutalPalette.cream, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 14, style: .continuous)
+                .strokeBorder(BrutalPalette.ink, lineWidth: 2.5)
+        }
+        .shadow(color: BrutalPalette.ink.opacity(0.16), radius: 0, x: 0, y: 3)
     }
 }
 
