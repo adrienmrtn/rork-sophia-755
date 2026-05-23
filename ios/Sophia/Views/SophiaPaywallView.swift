@@ -44,6 +44,7 @@ struct SophiaPaywallView: View {
     var fallbackContext: SophiaPaywallContext? = .coursGratuit
     var onPurchased: () -> Void = {}
     var onRestored: () -> Void = {}
+    var onDismissed: (() -> Void)? = nil
 
     @State private var offering: Offering?
     @State private var loaded: Bool = false
@@ -54,11 +55,13 @@ struct SophiaPaywallView: View {
                 PaywallView(offering: offering)
                     .onPurchaseCompleted { _ in onPurchased() }
                     .onRestoreCompleted { _ in onRestored() }
+                    .onRequestedDismissal { onDismissed?() }
             } else if loaded {
                 // Fallback: use the default current offering.
                 PaywallView()
                     .onPurchaseCompleted { _ in onPurchased() }
                     .onRestoreCompleted { _ in onRestored() }
+                    .onRequestedDismissal { onDismissed?() }
             } else {
                 ZStack {
                     Color.black.ignoresSafeArea()

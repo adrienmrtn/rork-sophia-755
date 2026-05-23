@@ -113,6 +113,10 @@ struct OnboardingView: View {
                         onRestored: {
                             viewModel.completeOnboarding()
                             onComplete()
+                        },
+                        onDismissed: {
+                            viewModel.completeOnboarding()
+                            onComplete()
                         }
                     )
                 default:
