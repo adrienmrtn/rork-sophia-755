@@ -42,6 +42,10 @@ struct HomeView: View {
         CourseImageMap.preloadImages(for: preloadIds)
     }
 
+    private var unlockedSubjects: Set<Subject> {
+        FreemiumGate.unlockedSubjects(isPremium: isPremium)
+    }
+
     var body: some View {
         ZStack {
             cream.ignoresSafeArea()
@@ -139,14 +143,18 @@ struct HomeView: View {
         ZStack {
             ForEach(Array(cards.prefix(3).enumerated().reversed()), id: \.element.id) { index, course in
                 let isTop = index == 0
+                let subjectLocked = !isPremium && !unlockedSubjects.contains(course.subject)
                 FlashCard(
                     course: course,
                     isFavorite: progressManager.isFavorite(course.id),
+                    isSubjectLocked: subjectLocked,
                     onToggleFavorite: {
                         progressManager.toggleFavorite(course.id)
                     },
                     onStart: {
-                        if !isPremium && progressManager.hasCompletedCourseToday {
+                        if subjectLocked {
+                            onLockedTap?()
+                        } else if !isPremium && progressManager.hasCompletedCourseToday {
                             onLockedTap?()
                         } else {
                             selectedCourse = course
@@ -265,6 +273,7 @@ struct HomeView: View {
 struct FlashCard: View {
     let course: Course
     var isFavorite: Bool = false
+    var isSubjectLocked: Bool = false
     var onToggleFavorite: (() -> Void)? = nil
     let onStart: () -> Void
     @State private var cachedImage: UIImage?
@@ -348,6 +357,23 @@ struct FlashCard: View {
                         .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
                 }
                 .padding(14)
+            }
+            .overlay(alignment: .topLeading) {
+                if isSubjectLocked {
+                    HStack(spacing: 5) {
+                        Image(systemName: "lock.fill")
+                            .font(.system(size: 11, weight: .bold))
+                        Text("Verrouillé")
+                            .font(.system(.caption2, design: .rounded, weight: .heavy))
+                            .tracking(0.3)
+                    }
+                    .foregroundStyle(ink)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 6)
+                    .background(Color.white, in: Capsule())
+                    .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
+                    .padding(14)
+                }
             }
     }
 
