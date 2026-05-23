@@ -2,6 +2,7 @@ import SwiftUI
 
 struct HomeView: View {
     let progressManager: ProgressManager
+    var isPremium: Bool = false
     @Binding var selectedCourse: Course?
     @Binding var autoSwipeCourseId: String?
     var onLockedTap: (() -> Void)? = nil
@@ -53,6 +54,12 @@ struct HomeView: View {
                 promptSection
                     .padding(.top, 20)
                     .padding(.horizontal, 20)
+
+                if !isPremium && progressManager.hasCompletedCourseToday {
+                    dailyDonePill
+                        .padding(.top, 12)
+                        .padding(.horizontal, 20)
+                }
 
                 if cards.isEmpty {
                     Spacer()
@@ -134,13 +141,12 @@ struct HomeView: View {
                 let isTop = index == 0
                 FlashCard(
                     course: course,
-                    dailyDone: progressManager.hasCompletedCourseToday,
                     isFavorite: progressManager.isFavorite(course.id),
                     onToggleFavorite: {
                         progressManager.toggleFavorite(course.id)
                     },
                     onStart: {
-                        if progressManager.hasCompletedCourseToday {
+                        if !isPremium && progressManager.hasCompletedCourseToday {
                             onLockedTap?()
                         } else {
                             selectedCourse = course
@@ -221,6 +227,24 @@ struct HomeView: View {
         }
     }
 
+    private var dailyDonePill: some View {
+        HStack(spacing: 6) {
+            Image(systemName: "checkmark.circle.fill")
+                .font(.caption.weight(.heavy))
+                .foregroundStyle(ink)
+            Text("Cours du jour fait — reviens demain")
+                .font(.system(.caption, design: .rounded, weight: .heavy))
+                .foregroundStyle(ink)
+            Text("🔥")
+                .font(.caption)
+        }
+        .padding(.horizontal, 12)
+        .padding(.vertical, 6)
+        .background(Color.white, in: Capsule())
+        .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
     private var allCompletedView: some View {
         VStack(spacing: 20) {
             Image(systemName: "checkmark.seal.fill")
@@ -240,7 +264,6 @@ struct HomeView: View {
 
 struct FlashCard: View {
     let course: Course
-    var dailyDone: Bool = false
     var isFavorite: Bool = false
     var onToggleFavorite: (() -> Void)? = nil
     let onStart: () -> Void
@@ -357,53 +380,27 @@ struct FlashCard: View {
                 .multilineTextAlignment(.leading)
                 .frame(maxWidth: .infinity, alignment: .leading)
 
-            if dailyDone {
-                dailyDoneBadge
-                    .padding(.top, 4)
-            } else {
-                Button {
-                    buttonTrigger += 1
-                    onStart()
-                } label: {
-                    HStack(spacing: 8) {
-                        Text("Commencer")
-                            .font(.system(.headline, design: .rounded, weight: .heavy))
-                        Image(systemName: "play.fill")
-                            .font(.subheadline.weight(.bold))
-                    }
-                    .foregroundStyle(ink)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 16)
+            Button {
+                buttonTrigger += 1
+                onStart()
+            } label: {
+                HStack(spacing: 8) {
+                    Text("Commencer")
+                        .font(.system(.headline, design: .rounded, weight: .heavy))
+                    Image(systemName: "play.fill")
+                        .font(.subheadline.weight(.bold))
                 }
-                .buttonStyle(BrutalistButtonStyle(fill: pink))
-                .sensoryFeedback(.impact(weight: .medium), trigger: buttonTrigger)
-                .padding(.top, 4)
+                .foregroundStyle(ink)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 16)
             }
+            .buttonStyle(BrutalistButtonStyle(fill: pink))
+            .sensoryFeedback(.impact(weight: .medium), trigger: buttonTrigger)
+            .padding(.top, 4)
         }
         .padding(20)
         .frame(maxWidth: .infinity)
         .background(pastel)
-    }
-
-    /// Badge replacing the "Commencer" button once the user has completed their free daily course.
-    private var dailyDoneBadge: some View {
-        HStack(spacing: 8) {
-            Image(systemName: "checkmark.circle.fill")
-                .font(.system(.subheadline, weight: .heavy))
-                .foregroundStyle(ink)
-            Text("Cours du jour fait — reviens demain")
-                .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                .foregroundStyle(ink)
-                .lineLimit(1)
-                .minimumScaleFactor(0.8)
-            Text("🔥")
-                .font(.subheadline)
-        }
-        .frame(maxWidth: .infinity)
-        .padding(.vertical, 16)
-        .padding(.horizontal, 12)
-        .background(Color.white, in: Capsule())
-        .overlay { Capsule().strokeBorder(ink, lineWidth: 3) }
     }
 
     private func boldText(_ input: String) -> Text {

@@ -20,6 +20,7 @@ struct ContentView: View {
                 Tab("Home", systemImage: "house.fill", value: 0) {
                     HomeView(
                         progressManager: progressManager,
+                        isPremium: storeVM.isPremium,
                         selectedCourse: $selectedCourse,
                         autoSwipeCourseId: $autoSwipeCourseId,
                         onLockedTap: {
