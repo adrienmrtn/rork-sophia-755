@@ -12,27 +12,32 @@ struct OnboardingTopicsCarouselScreen: View {
             BrutalPalette.cream.ignoresSafeArea()
 
             VStack(spacing: 0) {
-                VStack(spacing: 10) {
+                VStack(spacing: 8) {
                     Text(title)
-                        .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                        .font(.system(size: 28, weight: .heavy, design: .rounded))
+                        .lineSpacing(-2)
                         .foregroundStyle(BrutalPalette.ink)
                         .multilineTextAlignment(.center)
-                        .padding(.horizontal, 24)
+                        .padding(.horizontal, 28)
+                        .fixedSize(horizontal: false, vertical: true)
                         .opacity(appeared ? 1 : 0)
-                        .offset(y: appeared ? 0 : 15)
+                        .offset(y: appeared ? 0 : 12)
 
                     Text(subtitle)
-                        .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                        .foregroundStyle(BrutalPalette.ink.opacity(0.55))
+                        .font(.system(size: 14, weight: .semibold, design: .rounded))
+                        .lineSpacing(1)
+                        .foregroundStyle(BrutalPalette.ink.opacity(0.58))
                         .multilineTextAlignment(.center)
-                        .padding(.horizontal, 32)
+                        .padding(.horizontal, 34)
+                        .fixedSize(horizontal: false, vertical: true)
                         .opacity(appeared ? 1 : 0)
-                        .offset(y: appeared ? 0 : 15)
+                        .offset(y: appeared ? 0 : 12)
                 }
-                .padding(.top, 70)
+                .padding(.top, 54)
+                .padding(.bottom, 6)
 
                 ScrollView(.vertical, showsIndicators: false) {
-                    VStack(alignment: .leading, spacing: 24) {
+                    VStack(alignment: .leading, spacing: 18) {
                         ForEach(Array(categories.enumerated()), id: \.offset) { catIdx, category in
                             VStack(alignment: .leading, spacing: 12) {
                                 BrutalPill(
@@ -50,8 +55,8 @@ struct OnboardingTopicsCarouselScreen: View {
                             }
                         }
                     }
-                    .padding(.top, 20)
-                    .padding(.bottom, 140)
+                    .padding(.top, 12)
+                    .padding(.bottom, 126)
                 }
 
                 Spacer(minLength: 0)
@@ -138,7 +143,7 @@ private struct ContinuousScrollingRow: View {
                     }
             )
         }
-        .frame(height: 140)
+        .frame(height: 132)
         .clipped()
     }
 
@@ -166,7 +171,7 @@ struct OnboardingMiniCard: View {
     @State private var image: UIImage?
 
     private let w: CGFloat = 150
-    private let h: CGFloat = 90
+    private let h: CGFloat = 84
     private let corner: CGFloat = 14
     private let depth: CGFloat = 4
 
@@ -174,7 +179,7 @@ struct OnboardingMiniCard: View {
         ZStack(alignment: .top) {
             RoundedRectangle(cornerRadius: corner, style: .continuous)
                 .fill(BrutalPalette.ink)
-                .frame(width: w, height: h + 50)
+                .frame(width: w, height: h + 48)
                 .offset(y: depth)
 
             VStack(spacing: 0) {
@@ -200,9 +205,9 @@ struct OnboardingMiniCard: View {
                     .foregroundStyle(BrutalPalette.ink)
                     .lineLimit(2)
                     .multilineTextAlignment(.leading)
-                    .frame(width: w, height: 50, alignment: .topLeading)
+                    .frame(width: w, height: 48, alignment: .topLeading)
                     .padding(.horizontal, 8)
-                    .padding(.vertical, 8)
+                    .padding(.vertical, 7)
                     .background(accent)
                     .clipShape(.rect(cornerRadii: .init(bottomLeading: corner, bottomTrailing: corner)))
             }

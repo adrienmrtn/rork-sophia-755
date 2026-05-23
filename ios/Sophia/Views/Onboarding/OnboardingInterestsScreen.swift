@@ -24,18 +24,30 @@ struct OnboardingInterestsScreen: View {
             BrutalPalette.cream.ignoresSafeArea()
 
             VStack(spacing: 0) {
-                Spacer().frame(height: 60)
+                Spacer().frame(height: 44)
 
-                OnboardingHeader(
-                    title: "Quels sujets\nt'intéressent ?",
-                    subtitle: "Sélectionne au moins un sujet.",
-                    appeared: appeared
-                )
+                VStack(spacing: 8) {
+                    Text("Quels sujets\nt'intéressent ?")
+                        .font(.system(size: 30, weight: .heavy, design: .rounded))
+                        .lineSpacing(-2)
+                        .foregroundStyle(BrutalPalette.ink)
+                        .multilineTextAlignment(.center)
+                        .opacity(appeared ? 1 : 0)
+                        .offset(y: appeared ? 0 : 14)
 
-                Spacer().frame(height: 24)
+                    Text("Sélectionne au moins un sujet.")
+                        .font(.system(size: 14, weight: .semibold, design: .rounded))
+                        .foregroundStyle(BrutalPalette.ink.opacity(0.58))
+                        .multilineTextAlignment(.center)
+                        .opacity(appeared ? 1 : 0)
+                        .offset(y: appeared ? 0 : 14)
+                }
+                .padding(.horizontal, 24)
+
+                Spacer().frame(height: 18)
 
                 ScrollView {
-                    LazyVGrid(columns: columns, spacing: 14) {
+                    LazyVGrid(columns: columns, spacing: 12) {
                         ForEach(Array(interests.enumerated()), id: \.offset) { i, interest in
                             let isSelected = viewModel.interests.contains(interest.label)
                             InterestCard(
@@ -56,7 +68,7 @@ struct OnboardingInterestsScreen: View {
                         }
                     }
                     .padding(.horizontal, 24)
-                    .padding(.bottom, 24)
+                    .padding(.bottom, 18)
                 }
                 .scrollIndicators(.hidden)
 
@@ -88,7 +100,7 @@ private struct InterestCard: View {
         Button(action: action) {
             VStack(spacing: 0) {
                 Color(red: 0.96, green: 0.93, blue: 0.88)
-                    .frame(height: 100)
+                    .frame(height: 88)
                     .overlay {
                         if let image {
                             Image(uiImage: image)
@@ -127,7 +139,7 @@ private struct InterestCard: View {
                         .foregroundStyle(BrutalPalette.ink)
                 }
                 .frame(maxWidth: .infinity)
-                .padding(.vertical, 12)
+                .padding(.vertical, 10)
                 .background(color)
                 .clipShape(.rect(cornerRadii: .init(bottomLeading: 14, bottomTrailing: 14)))
             }
@@ -140,21 +152,18 @@ private struct InterestCard: View {
 }
 
 private struct BrutalCardSelectableStyle: ButtonStyle {
-    var depth: CGFloat = 4
+    var depth: CGFloat = 2
 
     func makeBody(configuration: Configuration) -> some View {
         let pressed = configuration.isPressed
         ZStack(alignment: .top) {
-            RoundedRectangle(cornerRadius: 14, style: .continuous)
-                .fill(BrutalPalette.ink)
-                .offset(y: depth)
-
             configuration.label
                 .clipShape(.rect(cornerRadius: 14))
                 .overlay {
                     RoundedRectangle(cornerRadius: 14, style: .continuous)
                         .strokeBorder(BrutalPalette.ink, lineWidth: 2.5)
                 }
+                .shadow(color: BrutalPalette.ink.opacity(0.18), radius: 0, x: 0, y: pressed ? 1 : 3)
                 .offset(y: pressed ? depth : 0)
         }
         .padding(.bottom, depth)
