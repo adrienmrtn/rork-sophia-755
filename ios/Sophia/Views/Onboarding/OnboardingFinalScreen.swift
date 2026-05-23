@@ -6,6 +6,20 @@ struct OnboardingFinalScreen: View {
     @State private var confettiTrigger: Int = 0
     @State private var particles: [OnboardingConfetti] = []
 
+    private static let allInterests: [(label: String, icon: String, color: Color)] = [
+        ("Histoire", "building.columns", Color(red: 1.0, green: 0.86, blue: 0.62)),
+        ("Sciences", "atom", Color(red: 0.70, green: 0.95, blue: 0.80)),
+        ("Littérature", "book.closed", Color(red: 1.0, green: 0.78, blue: 0.78)),
+        ("Art", "paintpalette", Color(red: 0.66, green: 0.92, blue: 0.96)),
+        ("Mythologie", "bolt.fill", Color(red: 0.82, green: 0.78, blue: 1.0)),
+        ("Monde actuel", "globe.europe.africa", Color(red: 0.74, green: 0.90, blue: 1.0)),
+    ]
+
+    private var selectedInterests: [(label: String, icon: String, color: Color)] {
+        let saved = UserDefaults.standard.array(forKey: "sophia_user_interests") as? [String] ?? []
+        return Self.allInterests.filter { saved.contains($0.label) }
+    }
+
     var body: some View {
         ZStack {
             BrutalPalette.cream.ignoresSafeArea()
@@ -54,6 +68,42 @@ struct OnboardingFinalScreen: View {
                             .foregroundStyle(BrutalPalette.ink.opacity(0.6))
                             .multilineTextAlignment(.center)
                             .opacity(appeared ? 1 : 0)
+                    }
+
+                    if !selectedInterests.isEmpty {
+                        VStack(spacing: 10) {
+                            Text("TES MATIÈRES")
+                                .font(.system(size: 11, weight: .heavy, design: .rounded))
+                                .tracking(1.2)
+                                .foregroundStyle(BrutalPalette.ink.opacity(0.5))
+
+                            HStack(spacing: 8) {
+                                ForEach(Array(selectedInterests.enumerated()), id: \.offset) { idx, interest in
+                                    HStack(spacing: 6) {
+                                        Image(systemName: interest.icon)
+                                            .font(.system(size: 12, weight: .heavy))
+                                            .foregroundStyle(BrutalPalette.ink)
+                                        Text(interest.label)
+                                            .font(.system(size: 13, weight: .heavy, design: .rounded))
+                                            .foregroundStyle(BrutalPalette.ink)
+                                            .lineLimit(1)
+                                    }
+                                    .padding(.horizontal, 10)
+                                    .padding(.vertical, 8)
+                                    .background(interest.color)
+                                    .clipShape(.rect(cornerRadius: 10))
+                                    .overlay {
+                                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                            .strokeBorder(BrutalPalette.ink, lineWidth: 2)
+                                    }
+                                    .shadow(color: BrutalPalette.ink.opacity(0.18), radius: 0, x: 0, y: 2)
+                                    .opacity(appeared ? 1 : 0)
+                                    .scaleEffect(appeared ? 1 : 0.6)
+                                    .animation(.spring(response: 0.5, dampingFraction: 0.65).delay(0.6 + Double(idx) * 0.1), value: appeared)
+                                }
+                            }
+                        }
+                        .opacity(appeared ? 1 : 0)
                     }
                 }
 
