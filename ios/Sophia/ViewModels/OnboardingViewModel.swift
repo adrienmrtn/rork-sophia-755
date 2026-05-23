@@ -9,13 +9,12 @@ class OnboardingViewModel {
     var phoneTimeSelection: Int? = nil
     var objectives: Set<String> = []
     var interests: Set<String> = OnboardingViewModel.loadPersistedInterests()
-    var ageRange: String? = nil
     var loadingProgress: Double = 0
     var loadingStep: String = ""
     var isLoadingComplete: Bool = false
     var dailyLearningGoal: Int = 1
 
-    let totalScreens = 18
+    let totalScreens = 16
     let dailyLearningGoalRange: ClosedRange<Int> = 1...5
 
     var projectedYearlyLearnings: Int {
@@ -53,7 +52,6 @@ class OnboardingViewModel {
         case 2: return phoneTimeSelection != nil
         case 4: return !objectives.isEmpty
         case 8: return !interests.isEmpty
-        case 11: return ageRange != nil
         default: return true
         }
     }

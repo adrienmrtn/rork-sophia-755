@@ -97,18 +97,14 @@ struct OnboardingView: View {
                 case 10:
                     OnboardingProjectionScreen(viewModel: viewModel, onNext: advance)
                 case 11:
-                    OnboardingAgeScreen(viewModel: viewModel, onNext: advance)
-                case 12:
-                    OnboardingProfileGenScreen(onNext: advance)
-                case 13:
                     OnboardingLoadingScreen(viewModel: viewModel, onNext: advance)
-                case 14:
+                case 12:
                     OnboardingFinalScreen(onComplete: advance)
-                case 15:
+                case 13:
                     OnboardingFreeTrialIntroView(onNext: advance)
-                case 16:
+                case 14:
                     OnboardingFreeTrialTimelineView(onNext: advance)
-                case 17:
+                case 15:
                     Color.clear
                         .onAppear {
                             showRCPaywall = true
@@ -122,9 +118,9 @@ struct OnboardingView: View {
                 removal: .move(edge: .leading).combined(with: .opacity)
             ))
 
-            if viewModel.currentScreen > 0 && viewModel.currentScreen < 12 {
+            if viewModel.currentScreen > 0 && viewModel.currentScreen < 11 {
                 VStack {
-                    OnboardingProgressDots(current: viewModel.currentScreen, total: 12)
+                    OnboardingProgressDots(current: viewModel.currentScreen, total: 11)
                         .frame(maxWidth: .infinity)
                         .padding(.top, 16)
                     Spacer()
