@@ -4,110 +4,102 @@ import AVKit
 struct OnboardingFreeTrialIntroView: View {
     let onNext: () -> Void
     @State private var appeared: Bool = false
-    @State private var giftBounce: Int = 0
-    @State private var shimmerOffset: CGFloat = -200
+    @State private var pillsAppeared: Bool = false
+    @State private var buttonAppeared: Bool = false
     @State private var player: AVPlayer?
 
     var body: some View {
         ZStack {
-            SophiaTheme.background.ignoresSafeArea()
+            BrutalPalette.cream.ignoresSafeArea()
 
-            VStack(spacing: 0) {
-                if let player {
-                    ZStack(alignment: .bottom) {
-                        VideoPlayer(player: player)
-                            .disabled(true)
-                            .aspectRatio(9/16, contentMode: .fill)
-                            .frame(maxWidth: .infinity)
-                            .frame(height: UIScreen.main.bounds.height * 0.55)
-                            .clipped()
-                            .opacity(appeared ? 1 : 0)
+            VStack(spacing: 24) {
+                Spacer().frame(height: 8)
 
-                        LinearGradient(
-                            colors: [
-                                .clear,
-                                .clear,
-                                SophiaTheme.background.opacity(0.6),
-                                SophiaTheme.background.opacity(0.9),
-                                SophiaTheme.background
-                            ],
-                            startPoint: .top,
-                            endPoint: .bottom
-                        )
-                        .frame(height: 200)
-                        .allowsHitTesting(false)
-                    }
-                } else {
-                    Spacer()
-                        .frame(height: UIScreen.main.bounds.height * 0.55)
-                }
-
-                VStack(spacing: 16) {
-                    Image("logo_white")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(height: 30)
-                        .opacity(appeared ? 1 : 0)
-
-                    Text("Vos 3 premiers jours sont offerts")
-                        .fixedSize(horizontal: false, vertical: true)
-                        .font(.system(.title, design: .rounded, weight: .bold))
-                        .foregroundStyle(.white)
-                        .multilineTextAlignment(.center)
-                        .padding(.horizontal, 24)
-                        .opacity(appeared ? 1 : 0)
-                        .offset(y: appeared ? 0 : 20)
-
-                    HStack(spacing: 16) {
-                        TrialFeaturePill(icon: "book.fill", text: "Cours illimités")
-                        TrialFeaturePill(icon: "checkmark.circle.fill", text: "Tous les quiz")
-                    }
+                // Brutal pill badge
+                BrutalPill(text: "Offre de bienvenue", icon: "gift.fill", background: BrutalPalette.pink, foreground: BrutalPalette.ink)
                     .opacity(appeared ? 1 : 0)
-                    .offset(y: appeared ? 0 : 10)
+                    .offset(y: appeared ? 0 : -10)
+
+                // Title
+                Text("Vos 3 premiers jours\nsont offerts")
+                    .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                    .foregroundStyle(BrutalPalette.ink)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(.horizontal, 24)
+                    .opacity(appeared ? 1 : 0)
+                    .offset(y: appeared ? 0 : 18)
+
+                // Video inside brutal card
+                videoCard
+                    .padding(.horizontal, 24)
+                    .opacity(appeared ? 1 : 0)
+                    .scaleEffect(appeared ? 1 : 0.94)
+
+                // Brutal feature pills
+                HStack(spacing: 10) {
+                    BrutalFeaturePill(icon: "book.fill", text: "Cours illimités", tint: OnboardingPastels.at(1))
+                    BrutalFeaturePill(icon: "checkmark.circle.fill", text: "Tous les quiz", tint: OnboardingPastels.at(3))
                 }
-                .offset(y: -30)
+                .padding(.horizontal, 24)
+                .opacity(pillsAppeared ? 1 : 0)
+                .offset(y: pillsAppeared ? 0 : 14)
 
                 Spacer()
 
-                OnboardingButton(title: "Continuer", action: onNext)
-                    .opacity(appeared ? 1 : 0)
-                    .offset(y: appeared ? 0 : 30)
+                OnboardingPrimaryButton(title: "Continuer", action: onNext)
+                    .opacity(buttonAppeared ? 1 : 0)
+                    .offset(y: buttonAppeared ? 0 : 24)
             }
-
-            GeometryReader { geo in
-                Rectangle()
-                    .fill(
-                        LinearGradient(
-                            colors: [.clear, .white.opacity(0.06), .clear],
-                            startPoint: .leading,
-                            endPoint: .trailing
-                        )
-                    )
-                    .frame(width: 120, height: geo.size.height * 2)
-                    .rotationEffect(.degrees(15))
-                    .offset(x: shimmerOffset)
-                    .allowsHitTesting(false)
-            }
-            .clipped()
         }
         .onAppear {
             setupPlayer()
-            withAnimation(.spring(response: 0.7, dampingFraction: 0.7).delay(0.2)) {
+            withAnimation(.spring(response: 0.65, dampingFraction: 0.78).delay(0.15)) {
                 appeared = true
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                giftBounce += 1
+            withAnimation(.spring(response: 0.6, dampingFraction: 0.8).delay(0.55)) {
+                pillsAppeared = true
+            }
+            withAnimation(.spring(response: 0.6, dampingFraction: 0.8).delay(0.8)) {
+                buttonAppeared = true
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
                 let g = UINotificationFeedbackGenerator()
                 g.notificationOccurred(.success)
-            }
-            withAnimation(.easeInOut(duration: 2.5).delay(0.8)) {
-                shimmerOffset = UIScreen.main.bounds.width + 200
             }
         }
         .onDisappear {
             player?.pause()
             player = nil
         }
+    }
+
+    @ViewBuilder
+    private var videoCard: some View {
+        ZStack(alignment: .top) {
+            RoundedRectangle(cornerRadius: 22, style: .continuous)
+                .fill(BrutalPalette.ink)
+                .offset(y: 5)
+
+            Group {
+                if let player {
+                    VideoPlayer(player: player)
+                        .disabled(true)
+                        .aspectRatio(9/16, contentMode: .fill)
+                } else {
+                    Rectangle()
+                        .fill(BrutalPalette.pink.opacity(0.35))
+                }
+            }
+            .frame(maxWidth: .infinity)
+            .frame(height: UIScreen.main.bounds.height * 0.42)
+            .clipShape(.rect(cornerRadius: 22))
+            .overlay {
+                RoundedRectangle(cornerRadius: 22, style: .continuous)
+                    .strokeBorder(BrutalPalette.ink, lineWidth: 3)
+            }
+        }
+        .padding(.bottom, 5)
     }
 
     private func setupPlayer() {
@@ -127,21 +119,34 @@ struct OnboardingFreeTrialIntroView: View {
     }
 }
 
-private struct TrialFeaturePill: View {
+private struct BrutalFeaturePill: View {
     let icon: String
     let text: String
+    let tint: Color
 
     var body: some View {
         HStack(spacing: 8) {
             Image(systemName: icon)
-                .font(.caption.weight(.semibold))
-                .foregroundStyle(SophiaTheme.emerald)
+                .font(.system(size: 13, weight: .heavy))
+                .foregroundStyle(BrutalPalette.ink)
             Text(text)
-                .font(.system(.caption, design: .rounded, weight: .semibold))
-                .foregroundStyle(.white.opacity(0.8))
+                .font(.system(.footnote, design: .rounded, weight: .heavy))
+                .foregroundStyle(BrutalPalette.ink)
         }
         .padding(.horizontal, 14)
         .padding(.vertical, 10)
-        .background(.white.opacity(0.06), in: .capsule)
+        .background(
+            ZStack(alignment: .top) {
+                Capsule()
+                    .fill(BrutalPalette.ink)
+                    .offset(y: 3)
+                Capsule()
+                    .fill(tint)
+                    .overlay {
+                        Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 2)
+                    }
+            }
+        )
+        .padding(.bottom, 3)
     }
 }
