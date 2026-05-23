@@ -6,7 +6,7 @@ struct SubjectCoursesView: View {
     let progressManager: ProgressManager
     var isPremium: Bool = true
     var unlocked: Bool = true
-    var onShowPaywall: (() -> Void)? = nil
+    var onShowPaywall: ((SophiaPaywallContext) -> Void)? = nil
     @Binding var selectedCourse: Course?
     @Environment(\.dismiss) private var dismiss
     @State private var hapticTrigger: Int = 0
@@ -60,7 +60,7 @@ struct SubjectCoursesView: View {
                                             if unlocked {
                                                 selectedCourse = course
                                             } else {
-                                                onShowPaywall?()
+                                                onShowPaywall?(.matiereBlock(for: subject))
                                             }
                                         },
                                         progressManager: progressManager

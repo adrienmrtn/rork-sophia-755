@@ -8,7 +8,7 @@ struct ContentView: View {
     @State private var storeVM = StoreViewModel()
     @State private var selectedTab: Int = 0
     @State private var selectedCourse: Course? = nil
-    @State private var showPaywall: Bool = false
+    @State private var paywallContext: SophiaPaywallContext? = nil
 
     @State private var showSwipeTutorial: Bool = false
     @State private var pendingCourse: Course? = nil
@@ -23,9 +23,9 @@ struct ContentView: View {
                         isPremium: storeVM.isPremium,
                         selectedCourse: $selectedCourse,
                         autoSwipeCourseId: $autoSwipeCourseId,
-                        onLockedTap: {
+                        onLockedTap: { context in
                             if storeVM.isPremium { return }
-                            showPaywall = true
+                            paywallContext = context
                             UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                         }
                     )
@@ -35,8 +35,8 @@ struct ContentView: View {
                     LibraryView(
                         progressManager: progressManager,
                         isPremium: storeVM.isPremium,
-                        onShowPaywall: {
-                            showPaywall = true
+                        onShowPaywall: { context in
+                            paywallContext = context
                             UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                         },
                         selectedCourse: $selectedCourse
@@ -49,7 +49,7 @@ struct ContentView: View {
                         store: storeVM,
                         selectedCourse: $selectedCourse,
                         onShowPaywall: {
-                            showPaywall = true
+                            paywallContext = .coursGratuit
                         },
                         onResetOnboarding: onResetOnboarding
                     )
@@ -60,29 +60,21 @@ struct ContentView: View {
             .sensoryFeedback(.selection, trigger: selectedTab)
             .onChange(of: selectedCourse) { _, newCourse in
                 guard let course = newCourse else { return }
-                if storeVM.isPremium {
-                    pendingCourse = course
-                    return
-                }
-                // Freemium: lock courses from non-priority subjects.
-                if !FreemiumGate.isUnlocked(course.subject, isPremium: false) {
+                if let context = FreemiumGate.paywallContext(
+                    for: course,
+                    isPremium: storeVM.isPremium,
+                    hasCompletedCourseToday: progressManager.hasCompletedCourseToday
+                ) {
                     selectedCourse = nil
                     pendingCourse = nil
-                    showPaywall = true
+                    paywallContext = context
                     UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                     return
                 }
-                // Freemium: 1 free course per day. Reading the slides is free for the
-                // first course of the day; further attempts open the paywall.
-                if progressManager.hasCompletedCourseToday {
-                    selectedCourse = nil
-                    pendingCourse = nil
-                    showPaywall = true
-                    UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-                } else {
+                if !storeVM.isPremium {
                     progressManager.incrementFreeCoursesOpened()
-                    pendingCourse = course
                 }
+                pendingCourse = course
             }
             .fullScreenCover(item: $pendingCourse) { course in
                 CourseView(
@@ -116,11 +108,11 @@ struct ContentView: View {
             }
 
         }
-        .sheet(isPresented: $showPaywall) {
+        .sheet(item: $paywallContext) { context in
             SophiaPaywallView(
-                context: .coursGratuit,
-                onPurchased: { showPaywall = false },
-                onRestored: { showPaywall = false }
+                context: context,
+                onPurchased: { paywallContext = nil },
+                onRestored: { paywallContext = nil }
             )
         }
         .onAppear {

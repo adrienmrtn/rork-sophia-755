@@ -35,4 +35,23 @@ enum FreemiumGate {
     static func isUnlocked(_ subject: Subject, isPremium: Bool) -> Bool {
         unlockedSubjects(isPremium: isPremium).contains(subject)
     }
+
+    /// Returns the paywall to show when a free user taps a course, or `nil`
+    /// if the course can be opened normally.
+    ///
+    /// Priority (per product decision):
+    /// 1. Daily quota reached → `cours_gratuit` (wins even if subject is also locked).
+    /// 2. Subject not in the user's 3 picked interests → `matiere_block_<subject>`.
+    static func paywallContext(
+        for course: Course,
+        isPremium: Bool,
+        hasCompletedCourseToday: Bool
+    ) -> SophiaPaywallContext? {
+        if isPremium { return nil }
+        if hasCompletedCourseToday { return .coursGratuit }
+        if !isUnlocked(course.subject, isPremium: false) {
+            return .matiereBlock(for: course.subject)
+        }
+        return nil
+    }
 }

@@ -5,7 +5,7 @@ struct HomeView: View {
     var isPremium: Bool = false
     @Binding var selectedCourse: Course?
     @Binding var autoSwipeCourseId: String?
-    var onLockedTap: (() -> Void)? = nil
+    var onLockedTap: ((SophiaPaywallContext) -> Void)? = nil
     @State private var cards: [Course] = []
     @State private var topCardOffset: CGSize = .zero
     @State private var topCardRotation: Double = 0
@@ -152,10 +152,12 @@ struct HomeView: View {
                         progressManager.toggleFavorite(course.id)
                     },
                     onStart: {
-                        if subjectLocked {
-                            onLockedTap?()
-                        } else if !isPremium && progressManager.hasCompletedCourseToday {
-                            onLockedTap?()
+                        if let context = FreemiumGate.paywallContext(
+                            for: course,
+                            isPremium: isPremium,
+                            hasCompletedCourseToday: progressManager.hasCompletedCourseToday
+                        ) {
+                            onLockedTap?(context)
                         } else {
                             selectedCourse = course
                         }

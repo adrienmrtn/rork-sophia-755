@@ -22,7 +22,7 @@ enum BrutalPalette {
 struct LibraryView: View {
     let progressManager: ProgressManager
     var isPremium: Bool = true
-    var onShowPaywall: (() -> Void)? = nil
+    var onShowPaywall: ((SophiaPaywallContext) -> Void)? = nil
     @Binding var selectedCourse: Course?
     @State private var searchText: String = ""
     @FocusState private var searchFocused: Bool
@@ -95,7 +95,7 @@ struct LibraryView: View {
                     progressManager: progressManager,
                     isPremium: isPremium,
                     unlocked: unlockedSubjects.contains(subject),
-                    onShowPaywall: onShowPaywall,
+                    onShowPaywall: { ctx in onShowPaywall?(ctx) },
                     selectedCourse: $selectedCourse
                 )
             }
@@ -171,7 +171,7 @@ struct LibraryView: View {
                                 if unlocked {
                                     selectedCourse = course
                                 } else {
-                                    onShowPaywall?()
+                                    onShowPaywall?(.matiereBlock(for: subject))
                                 }
                             },
                             progressManager: progressManager
@@ -195,7 +195,7 @@ struct LibraryView: View {
             Button {
                 let g = UIImpactFeedbackGenerator(style: .light)
                 g.impactOccurred()
-                onShowPaywall?()
+                onShowPaywall?(.matiereBlock(for: subject))
             } label: {
                 sectionHeaderContent(subject: subject, unlocked: false)
             }
@@ -282,7 +282,7 @@ struct LibraryView: View {
                             if unlocked {
                                 selectedCourse = course
                             } else {
-                                onShowPaywall?()
+                                onShowPaywall?(.matiereBlock(for: subject))
                             }
                         },
                         progressManager: progressManager
