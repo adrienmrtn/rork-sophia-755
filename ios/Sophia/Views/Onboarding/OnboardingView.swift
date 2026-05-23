@@ -147,7 +147,7 @@ struct OnboardingView: View {
             }
         }
         .preferredColorScheme(.light)
-        .sheet(isPresented: $showRCPaywall, onDismiss: {
+        .fullScreenCover(isPresented: $showRCPaywall, onDismiss: {
             viewModel.completeOnboarding()
             onComplete()
         }) {
