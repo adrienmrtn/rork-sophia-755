@@ -7,6 +7,7 @@ import RevenueCatUI
 /// differently from the RC dashboard without redeploying.
 enum SophiaPaywallContext: String, Identifiable {
     case finOnboarding = "fin_onboarding"
+    case offreDiscount = "offre_discount"
     case quizz = "quizz"
     case coursGratuit = "cours_gratuit"
     case matiereBlockHistoire = "matiere_block_histoire"

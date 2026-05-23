@@ -2,10 +2,12 @@ import SwiftUI
 
 struct HomeView: View {
     let progressManager: ProgressManager
+    let discountManager: DiscountOfferManager
     var isPremium: Bool = false
     @Binding var selectedCourse: Course?
     @Binding var autoSwipeCourseId: String?
     var onLockedTap: ((SophiaPaywallContext) -> Void)? = nil
+    var onShowDiscountPaywall: (() -> Void)? = nil
     @State private var cards: [Course] = []
     @State private var topCardOffset: CGSize = .zero
     @State private var topCardRotation: Double = 0
@@ -96,15 +98,46 @@ struct HomeView: View {
     }
 
     private var headerSection: some View {
-        HStack(alignment: .center) {
+        HStack(alignment: .center, spacing: 8) {
             Text("Sophia")
                 .font(.system(.title2, design: .rounded, weight: .heavy))
                 .foregroundStyle(ink)
 
             Spacer()
 
+            if !isPremium && discountManager.isActive {
+                discountBadge
+                    .transition(.scale.combined(with: .opacity))
+            }
+
             streakBadge
         }
+        .animation(.spring(response: 0.45, dampingFraction: 0.75), value: discountManager.isActive)
+    }
+
+    private var discountBadge: some View {
+        Button {
+            let g = UIImpactFeedbackGenerator(style: .medium)
+            g.impactOccurred()
+            onShowDiscountPaywall?()
+        } label: {
+            HStack(spacing: 6) {
+                Image(systemName: "flame.fill")
+                    .font(.system(size: 12, weight: .heavy))
+                    .foregroundStyle(.white)
+                Text(discountManager.formattedRemaining)
+                    .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                    .foregroundStyle(.white)
+                    .monospacedDigit()
+                    .contentTransition(.numericText(countsDown: true))
+            }
+            .padding(.horizontal, 12)
+            .padding(.vertical, 8)
+            .background(pink, in: Capsule())
+            .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
+        }
+        .buttonStyle(.plain)
+        .id(discountManager.tick)
     }
 
     private var streakBadge: some View {
@@ -189,6 +222,10 @@ struct HomeView: View {
                 let velocity = value.velocity.width
 
                 if abs(value.translation.width) > threshold || abs(velocity) > 800 {
+                    if !isPremium && !discountManager.hasBeenTriggered {
+                        discountManager.triggerIfNeeded()
+                        onShowDiscountPaywall?()
+                    }
                     let direction: CGFloat = value.translation.width > 0 ? 1 : -1
                     let g = UIImpactFeedbackGenerator(style: .light)
                     g.impactOccurred()

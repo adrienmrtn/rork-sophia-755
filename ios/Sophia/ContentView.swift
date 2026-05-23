@@ -6,6 +6,7 @@ struct ContentView: View {
 
     @State private var progressManager = ProgressManager()
     @State private var storeVM = StoreViewModel()
+    @State private var discountManager = DiscountOfferManager()
     @State private var selectedTab: Int = 0
     @State private var selectedCourse: Course? = nil
     @State private var paywallContext: SophiaPaywallContext? = nil
@@ -20,6 +21,7 @@ struct ContentView: View {
                 Tab("Home", systemImage: "house.fill", value: 0) {
                     HomeView(
                         progressManager: progressManager,
+                        discountManager: discountManager,
                         isPremium: storeVM.isPremium,
                         selectedCourse: $selectedCourse,
                         autoSwipeCourseId: $autoSwipeCourseId,
@@ -27,6 +29,10 @@ struct ContentView: View {
                             if storeVM.isPremium { return }
                             paywallContext = context
                             UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+                        },
+                        onShowDiscountPaywall: {
+                            if storeVM.isPremium { return }
+                            paywallContext = .offreDiscount
                         }
                     )
                 }
@@ -111,7 +117,10 @@ struct ContentView: View {
         .sheet(item: $paywallContext) { context in
             SophiaPaywallView(
                 context: context,
-                onPurchased: { paywallContext = nil },
+                onPurchased: {
+                    if context == .offreDiscount { discountManager.markExpired() }
+                    paywallContext = nil
+                },
                 onRestored: { paywallContext = nil }
             )
         }
