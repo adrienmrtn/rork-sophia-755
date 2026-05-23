@@ -6,6 +6,9 @@ struct OnboardingWastedTimeScreen: View {
     @State private var appeared: Bool = false
     @State private var counterValue: Int = 0
     @State private var showMessage: Bool = false
+    @State private var showProofPill: Bool = false
+
+    private let blushBackground = Color(red: 1.0, green: 0.937, blue: 0.925)
 
     private var targetValue: Int {
         guard let sel = viewModel.phoneTimeSelection else { return 0 }
@@ -20,7 +23,7 @@ struct OnboardingWastedTimeScreen: View {
 
     var body: some View {
         ZStack {
-            BrutalPalette.cream.ignoresSafeArea()
+            blushBackground.ignoresSafeArea()
 
             VStack(spacing: 0) {
                 Spacer()
@@ -50,23 +53,31 @@ struct OnboardingWastedTimeScreen: View {
                     }
                     .opacity(appeared ? 1 : 0)
 
-                    if showMessage {
-                        VStack(alignment: .leading, spacing: 8) {
-                            Text("Soit \(viewModel.wastedTimeDays) complets.")
-                                .font(.system(.headline, design: .rounded, weight: .heavy))
-                                .foregroundStyle(BrutalPalette.ink)
-                                .frame(maxWidth: .infinity, alignment: .leading)
+                    VStack(spacing: 12) {
+                        if showMessage {
+                            VStack(alignment: .leading, spacing: 8) {
+                                Text("Soit \(viewModel.wastedTimeDays) complets.")
+                                    .font(.system(.headline, design: .rounded, weight: .heavy))
+                                    .foregroundStyle(BrutalPalette.ink)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
 
-                            Text("Avec Sophia, fais un bon usage\nde ton temps.")
-                                .font(.system(.body, design: .rounded, weight: .semibold))
-                                .foregroundStyle(BrutalPalette.ink.opacity(0.7))
-                                .frame(maxWidth: .infinity, alignment: .leading)
+                                Text("Avec Sophia, fais un bon usage\nde ton temps.")
+                                    .font(.system(.body, design: .rounded, weight: .semibold))
+                                    .foregroundStyle(BrutalPalette.ink.opacity(0.7))
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                            }
+                            .padding(.horizontal, 18)
+                            .padding(.vertical, 16)
+                            .brutalOnboardingCard(depth: 2, corner: 18)
+                            .padding(.horizontal, 28)
+                            .transition(.opacity.combined(with: .offset(y: 10)))
                         }
-                        .padding(.horizontal, 18)
-                        .padding(.vertical, 16)
-                        .brutalOnboardingCard()
-                        .padding(.horizontal, 24)
-                        .transition(.opacity.combined(with: .offset(y: 10)))
+
+                        if showProofPill {
+                            ScientificProofPill()
+                                .padding(.horizontal, 28)
+                                .transition(.opacity.combined(with: .scale(scale: 0.96)).combined(with: .offset(y: 8)))
+                        }
                     }
                 }
 
@@ -112,6 +123,45 @@ struct OnboardingWastedTimeScreen: View {
             withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
                 showMessage = true
             }
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.95) {
+            UIImpactFeedbackGenerator(style: .soft).impactOccurred(intensity: 0.7)
+            withAnimation(.spring(response: 0.5, dampingFraction: 0.78)) {
+                showProofPill = true
+            }
+        }
+    }
+}
+
+private struct ScientificProofPill: View {
+    var body: some View {
+        HStack(alignment: .top, spacing: 10) {
+            Image(systemName: "brain.head.profile")
+                .font(.system(size: 15, weight: .heavy))
+                .foregroundStyle(BrutalPalette.ink)
+                .frame(width: 24, height: 24)
+                .background(Color.white.opacity(0.75), in: Circle())
+
+            VStack(alignment: .leading, spacing: 3) {
+                Text("PREUVE SCIENTIFIQUE")
+                    .font(.system(size: 10, weight: .heavy, design: .rounded))
+                    .tracking(0.9)
+                    .foregroundStyle(BrutalPalette.ink.opacity(0.55))
+
+                Text("Le scrolling excessif fragmente l'attention et affaiblit la mémoire")
+                    .font(.system(.footnote, design: .rounded, weight: .bold))
+                    .foregroundStyle(BrutalPalette.ink)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+        }
+        .padding(.horizontal, 14)
+        .padding(.vertical, 12)
+        .background(Color.white.opacity(0.58), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 18, style: .continuous)
+                .strokeBorder(BrutalPalette.ink.opacity(0.18), lineWidth: 1.5)
         }
     }
 }
