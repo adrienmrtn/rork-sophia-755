@@ -7,7 +7,6 @@ struct OnboardingView: View {
     let onComplete: () -> Void
     @State private var direction: Edge = .trailing
     @State private var showSpecialOffer: Bool = false
-    @State private var showRCPaywall: Bool = false
 
     private let mondeActuelCategories: [(name: String, courses: [(title: String, courseId: String)])] = [
         ("Conflits & géopolitique", [
@@ -105,10 +104,17 @@ struct OnboardingView: View {
                 case 14:
                     OnboardingFreeTrialTimelineView(onNext: advance)
                 case 15:
-                    Color.clear
-                        .onAppear {
-                            showRCPaywall = true
+                    SophiaPaywallView(
+                        context: .finOnboarding,
+                        onPurchased: {
+                            viewModel.completeOnboarding()
+                            onComplete()
+                        },
+                        onRestored: {
+                            viewModel.completeOnboarding()
+                            onComplete()
                         }
+                    )
                 default:
                     EmptyView()
                 }
@@ -147,24 +153,6 @@ struct OnboardingView: View {
             }
         }
         .preferredColorScheme(.light)
-        .fullScreenCover(isPresented: $showRCPaywall, onDismiss: {
-            viewModel.completeOnboarding()
-            onComplete()
-        }) {
-            SophiaPaywallView(
-                context: .finOnboarding,
-                onPurchased: {
-                    showRCPaywall = false
-                    viewModel.completeOnboarding()
-                    onComplete()
-                },
-                onRestored: {
-                    showRCPaywall = false
-                    viewModel.completeOnboarding()
-                    onComplete()
-                }
-            )
-        }
     }
 
     private func advance() {
