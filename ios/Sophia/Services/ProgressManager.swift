@@ -134,6 +134,19 @@ class ProgressManager {
         save()
     }
 
+    /// True if the streak celebration screen has not been shown yet today (local day).
+    /// Used to only display the streak page once per day across course/quiz completions.
+    var shouldShowStreakToday: Bool {
+        guard let last = progress.lastStreakShownDate else { return true }
+        return last != dateFormatter.string(from: Date())
+    }
+
+    /// Marks the streak celebration screen as shown today.
+    func markStreakShownToday() {
+        progress.lastStreakShownDate = dateFormatter.string(from: Date())
+        save()
+    }
+
     /// DEBUG helper: clears the daily course flag so the user can read another free course immediately.
     func resetDailyCourseFlag() {
         progress.lastCourseCompletedDate = nil

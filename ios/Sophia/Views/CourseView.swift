@@ -49,8 +49,13 @@ struct CourseView: View {
                     earnedXP: courseCompletionXP,
                     showFreemiumGate: !isPremium,
                     onClose: {
-                        withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
-                            endPhase = .streak
+                        if progressManager.shouldShowStreakToday {
+                            progressManager.markStreakShownToday()
+                            withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
+                                endPhase = .streak
+                            }
+                        } else {
+                            onDismissToHome()
                         }
                     },
                     onQuizTapped: {

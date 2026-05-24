@@ -929,8 +929,13 @@ struct QuizView: View {
 
                 Button {
                     UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-                    withAnimation(.spring(response: 0.5, dampingFraction: 0.85)) {
-                        showStreak = true
+                    if progressManager.shouldShowStreakToday {
+                        progressManager.markStreakShownToday()
+                        withAnimation(.spring(response: 0.5, dampingFraction: 0.85)) {
+                            showStreak = true
+                        }
+                    } else {
+                        onReturnHome()
                     }
                 } label: {
                     HStack(spacing: 8) {

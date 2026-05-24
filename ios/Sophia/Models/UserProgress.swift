@@ -30,12 +30,14 @@ nonisolated struct UserProgress: Codable, Sendable {
     var hasSeenSpecialOffer: Bool
     /// yyyy-MM-dd date string for the last day the user fully completed (swiped to last slide + tapped Continuer) a course. Used for the freemium daily course gate.
     var lastCourseCompletedDate: String?
+    /// yyyy-MM-dd date string for the last day we displayed the streak celebration screen. Used to only show it once per day.
+    var lastStreakShownDate: String?
     /// XP earned per subject (key = Subject.rawValue). Drives the per-subject level shown on the profile.
     var subjectXP: [String: Int]
 
-    static let empty = UserProgress(courseProgress: [:], streak: 0, lastActiveDate: nil, favoriteCourseIds: [], freeCoursesOpened: 0, hasSeenSwipeTutorial: false, hasSeenSpecialOffer: false, lastCourseCompletedDate: nil, subjectXP: [:])
+    static let empty = UserProgress(courseProgress: [:], streak: 0, lastActiveDate: nil, favoriteCourseIds: [], freeCoursesOpened: 0, hasSeenSwipeTutorial: false, hasSeenSpecialOffer: false, lastCourseCompletedDate: nil, lastStreakShownDate: nil, subjectXP: [:])
 
-    init(courseProgress: [String: CourseProgress], streak: Int, lastActiveDate: String?, favoriteCourseIds: [String] = [], freeCoursesOpened: Int = 0, hasSeenSwipeTutorial: Bool = false, hasSeenSpecialOffer: Bool = false, lastCourseCompletedDate: String? = nil, subjectXP: [String: Int] = [:]) {
+    init(courseProgress: [String: CourseProgress], streak: Int, lastActiveDate: String?, favoriteCourseIds: [String] = [], freeCoursesOpened: Int = 0, hasSeenSwipeTutorial: Bool = false, hasSeenSpecialOffer: Bool = false, lastCourseCompletedDate: String? = nil, lastStreakShownDate: String? = nil, subjectXP: [String: Int] = [:]) {
         self.courseProgress = courseProgress
         self.streak = streak
         self.lastActiveDate = lastActiveDate
@@ -44,12 +46,13 @@ nonisolated struct UserProgress: Codable, Sendable {
         self.hasSeenSwipeTutorial = hasSeenSwipeTutorial
         self.hasSeenSpecialOffer = hasSeenSpecialOffer
         self.lastCourseCompletedDate = lastCourseCompletedDate
+        self.lastStreakShownDate = lastStreakShownDate
         self.subjectXP = subjectXP
     }
 
     enum CodingKeys: String, CodingKey {
         case courseProgress, streak, lastActiveDate, favoriteCourseIds, freeCoursesOpened
-        case hasSeenSwipeTutorial, hasSeenSpecialOffer, lastCourseCompletedDate, subjectXP
+        case hasSeenSwipeTutorial, hasSeenSpecialOffer, lastCourseCompletedDate, lastStreakShownDate, subjectXP
     }
 
     init(from decoder: Decoder) throws {
@@ -62,6 +65,7 @@ nonisolated struct UserProgress: Codable, Sendable {
         self.hasSeenSwipeTutorial = try c.decodeIfPresent(Bool.self, forKey: .hasSeenSwipeTutorial) ?? false
         self.hasSeenSpecialOffer = try c.decodeIfPresent(Bool.self, forKey: .hasSeenSpecialOffer) ?? false
         self.lastCourseCompletedDate = try c.decodeIfPresent(String.self, forKey: .lastCourseCompletedDate)
+        self.lastStreakShownDate = try c.decodeIfPresent(String.self, forKey: .lastStreakShownDate)
         self.subjectXP = try c.decodeIfPresent([String: Int].self, forKey: .subjectXP) ?? [:]
     }
 }
