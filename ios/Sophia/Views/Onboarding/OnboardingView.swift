@@ -144,7 +144,7 @@ struct OnboardingView: View {
             }
             .transition(.asymmetric(
                 insertion: .move(edge: .trailing),
-                removal: .move(edge: .leading)
+                removal: .identity
             ))
 
             if viewModel.currentScreen > 0 && viewModel.currentScreen < 11 {
@@ -184,7 +184,7 @@ struct OnboardingView: View {
         if viewModel.currentScreen == 8 {
             viewModel.finalizeInterests()
         }
-        withAnimation(.easeInOut(duration: 0.32)) {
+        withAnimation(.easeInOut(duration: 0.4)) {
             viewModel.nextScreen()
         }
     }
