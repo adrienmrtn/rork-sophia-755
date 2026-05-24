@@ -142,10 +142,12 @@ struct OnboardingView: View {
                     EmptyView()
                 }
             }
+            .id(viewModel.currentScreen)
             .transition(.asymmetric(
                 insertion: .move(edge: .trailing),
                 removal: .identity
             ))
+            .zIndex(Double(viewModel.currentScreen))
 
             if viewModel.currentScreen > 0 && viewModel.currentScreen < 11 {
                 VStack {
