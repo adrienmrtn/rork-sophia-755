@@ -2,10 +2,10 @@ import SwiftUI
 
 struct OnboardingWelcomeScreen: View {
     let onNext: () -> Void
-    @State private var titleAppeared: Bool = false
-    @State private var visibleQuestions: Int = 0
-    @State private var subtitleAppeared: Bool = false
-    @State private var ctaAppeared: Bool = false
+    @State private var titleAppeared: Bool = true
+    @State private var visibleQuestions: Int = 3
+    @State private var subtitleAppeared: Bool = true
+    @State private var ctaAppeared: Bool = true
 
     private let questions: [String] = [
         "Sais-tu pourquoi la Joconde est vraiment connue ?",
@@ -57,47 +57,7 @@ struct OnboardingWelcomeScreen: View {
                 }
             }
         }
-        .onAppear(perform: runEntranceAnimation)
-    }
 
-    private func runEntranceAnimation() {
-        // Title
-        withAnimation(.spring(response: 0.6, dampingFraction: 0.75).delay(0.15)) {
-            titleAppeared = true
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-            UIImpactFeedbackGenerator(style: .soft).impactOccurred()
-        }
-
-        // Questions, one by one
-        for index in 0..<questions.count {
-            let delay = 0.55 + Double(index) * 0.55
-            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-                withAnimation(.spring(response: 0.55, dampingFraction: 0.72)) {
-                    visibleQuestions = index + 1
-                }
-                let generator = UIImpactFeedbackGenerator(style: index == questions.count - 1 ? .medium : .light)
-                generator.impactOccurred(intensity: index == questions.count - 1 ? 1.0 : 0.85)
-            }
-        }
-
-        // Subtitle
-        let subtitleDelay = 0.55 + Double(questions.count) * 0.55 + 0.1
-        DispatchQueue.main.asyncAfter(deadline: .now() + subtitleDelay) {
-            withAnimation(.spring(response: 0.55, dampingFraction: 0.8)) {
-                subtitleAppeared = true
-            }
-            UIImpactFeedbackGenerator(style: .soft).impactOccurred(intensity: 0.7)
-        }
-
-        // CTA
-        DispatchQueue.main.asyncAfter(deadline: .now() + subtitleDelay + 0.25) {
-            withAnimation(.spring(response: 0.5, dampingFraction: 0.75)) {
-                ctaAppeared = true
-            }
-            let notif = UINotificationFeedbackGenerator()
-            notif.notificationOccurred(.success)
-        }
     }
 
     private func handleNext() {
