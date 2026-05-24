@@ -7,6 +7,8 @@ struct OnboardingView: View {
     let onComplete: () -> Void
     @State private var direction: Edge = .trailing
     @State private var showSpecialOffer: Bool = false
+    @State private var previousScreen: Int? = nil
+    @State private var newScreenOffset: CGFloat = 0
 
     private let mondeActuelCategories: [(name: String, courses: [(title: String, courseId: String)])] = [
         ("Conflits & géopolitique", [
@@ -58,11 +60,63 @@ struct OnboardingView: View {
     ]
 
     var body: some View {
-        ZStack {
-            BrutalPalette.cream.ignoresSafeArea()
+        GeometryReader { geo in
+            ZStack {
+                BrutalPalette.cream.ignoresSafeArea()
 
-            Group {
-                switch viewModel.currentScreen {
+                // Ancien écran qui reste figé en dessous pendant la transition
+                if let prev = previousScreen {
+                    screenView(for: prev)
+                        .id("prev-\(prev)")
+                        .zIndex(0)
+                }
+
+                // Nouvel écran qui glisse par-dessus depuis la droite
+                screenView(for: viewModel.currentScreen)
+                    .id("cur-\(viewModel.currentScreen)")
+                    .offset(x: newScreenOffset)
+                    .zIndex(1)
+
+                if viewModel.currentScreen > 0 && viewModel.currentScreen < 11 {
+                    VStack {
+                        OnboardingProgressDots(current: viewModel.currentScreen, total: 11)
+                            .frame(maxWidth: .infinity)
+                            .padding(.top, 16)
+                        Spacer()
+                    }
+                    .zIndex(2)
+                }
+
+                if showSpecialOffer {
+                    OnboardingSpecialOfferView(
+                        store: storeVM,
+                        onSubscribed: {
+                            showSpecialOffer = false
+                            viewModel.completeOnboarding()
+                            onComplete()
+                        },
+                        onSkip: {
+                            withAnimation(.spring(response: 0.4, dampingFraction: 0.85)) {
+                                showSpecialOffer = false
+                            }
+                            viewModel.completeOnboarding()
+                            onComplete()
+                        }
+                    )
+                    .transition(.move(edge: .bottom).combined(with: .opacity))
+                    .zIndex(3)
+                }
+            }
+            .frame(width: geo.size.width, height: geo.size.height)
+        }
+        .preferredColorScheme(.light)
+        .ignoresSafeArea(.keyboard)
+    }
+
+    @ViewBuilder
+    private func screenView(for screen: Int) -> some View {
+        Group {
+            switch screen {
                 case 0:
                     OnboardingIntroScreen(onNext: advance)
                 case 1:
@@ -142,43 +196,7 @@ struct OnboardingView: View {
                     EmptyView()
                 }
             }
-            .id(viewModel.currentScreen)
-            .transition(.asymmetric(
-                insertion: .move(edge: .trailing),
-                removal: .identity
-            ))
-            .zIndex(Double(viewModel.currentScreen))
-
-            if viewModel.currentScreen > 0 && viewModel.currentScreen < 11 {
-                VStack {
-                    OnboardingProgressDots(current: viewModel.currentScreen, total: 11)
-                        .frame(maxWidth: .infinity)
-                        .padding(.top, 16)
-                    Spacer()
-                }
-            }
-
-            if showSpecialOffer {
-                OnboardingSpecialOfferView(
-                    store: storeVM,
-                    onSubscribed: {
-                        showSpecialOffer = false
-                        viewModel.completeOnboarding()
-                        onComplete()
-                    },
-                    onSkip: {
-                        withAnimation(.spring(response: 0.4, dampingFraction: 0.85)) {
-                            showSpecialOffer = false
-                        }
-                        viewModel.completeOnboarding()
-                        onComplete()
-                    }
-                )
-                .transition(.move(edge: .bottom).combined(with: .opacity))
-            }
         }
-        .preferredColorScheme(.light)
-    }
 
     private func advance() {
         let g = UIImpactFeedbackGenerator(style: .light)
@@ -186,8 +204,26 @@ struct OnboardingView: View {
         if viewModel.currentScreen == 8 {
             viewModel.finalizeInterests()
         }
+
+        // Capture l'écran courant comme "précédent" qui restera figé
+        let from = viewModel.currentScreen
+        previousScreen = from
+
+        // Place le nouvel écran hors écran à droite, puis bascule la valeur
+        let width = UIScreen.main.bounds.width
+        newScreenOffset = width
+        viewModel.nextScreen()
+
+        // Anime le slide du nouvel écran par-dessus l'ancien
         withAnimation(.easeInOut(duration: 0.4)) {
-            viewModel.nextScreen()
+            newScreenOffset = 0
+        }
+
+        // Retire l'ancien écran à la fin de l'animation
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.42) {
+            if previousScreen == from {
+                previousScreen = nil
+            }
         }
     }
 }
