@@ -3,7 +3,7 @@ import SwiftUI
 struct OnboardingPhoneTimeScreen: View {
     @Bindable var viewModel: OnboardingViewModel
     let onNext: () -> Void
-    @State private var appeared: Bool = false
+    @State private var appeared: Bool = true
 
     private let options = [
         (icon: "clock", label: "Moins de 1h", index: 0),

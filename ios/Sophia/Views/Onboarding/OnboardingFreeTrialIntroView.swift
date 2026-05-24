@@ -3,7 +3,7 @@ import AVKit
 
 struct OnboardingFreeTrialIntroView: View {
     let onNext: () -> Void
-    @State private var appeared: Bool = false
+    @State private var appeared: Bool = true
     @State private var pillsAppeared: Bool = false
     @State private var buttonAppeared: Bool = false
     @State private var player: AVPlayer?

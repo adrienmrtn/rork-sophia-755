@@ -2,7 +2,7 @@ import SwiftUI
 
 struct OnboardingFinalScreen: View {
     let onComplete: () -> Void
-    @State private var appeared: Bool = false
+    @State private var appeared: Bool = true
     @State private var confettiTrigger: Int = 0
     @State private var particles: [OnboardingConfetti] = []
 

@@ -3,7 +3,7 @@ import StoreKit
 
 struct OnboardingSocialProofScreen: View {
     let onNext: () -> Void
-    @State private var appeared: Bool = false
+    @State private var appeared: Bool = true
     @State private var percentValue: Int = 0
     @State private var showReviews: Bool = false
 

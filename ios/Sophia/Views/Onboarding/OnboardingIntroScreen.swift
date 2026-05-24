@@ -3,7 +3,7 @@ import AVKit
 
 struct OnboardingIntroScreen: View {
     let onNext: () -> Void
-    @State private var appeared: Bool = false
+    @State private var appeared: Bool = true
     @State private var titleOffset: CGFloat = 40
     @State private var player: AVPlayer?
 

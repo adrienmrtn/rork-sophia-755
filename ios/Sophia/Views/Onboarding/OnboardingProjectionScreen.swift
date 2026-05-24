@@ -6,7 +6,7 @@ struct OnboardingProjectionScreen: View {
 
     private let backgroundPink = Color(red: 254.0 / 255.0, green: 150.0 / 255.0, blue: 188.0 / 255.0)
     private let softCream = Color(red: 1.0, green: 0.96, blue: 0.82)
-    @State private var appeared: Bool = false
+    @State private var appeared: Bool = true
     @State private var progressWidth: CGFloat = 0
     @State private var showNumber: Bool = false
     @State private var counterValue: Int = 0

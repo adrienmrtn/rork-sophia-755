@@ -3,7 +3,7 @@ import SwiftUI
 struct OnboardingWastedTimeScreen: View {
     let viewModel: OnboardingViewModel
     let onNext: () -> Void
-    @State private var appeared: Bool = false
+    @State private var appeared: Bool = true
     @State private var counterValue: Int = 0
     @State private var showMessage: Bool = false
     @State private var showProofPill: Bool = false

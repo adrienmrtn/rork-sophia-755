@@ -3,7 +3,7 @@ import SwiftUI
 struct OnboardingObjectivesScreen: View {
     @Bindable var viewModel: OnboardingViewModel
     let onNext: () -> Void
-    @State private var appeared: Bool = false
+    @State private var appeared: Bool = true
 
     private let objectives: [(icon: String, label: String)] = [
         ("sparkles", "Être plus curieux"),

@@ -2,7 +2,7 @@ import SwiftUI
 
 struct OnboardingFreeTrialTimelineView: View {
     let onNext: () -> Void
-    @State private var appeared: Bool = false
+    @State private var appeared: Bool = true
     @State private var cardAppeared: Bool = false
     @State private var buttonAppeared: Bool = false
     @State private var iconBounce: Int = 0

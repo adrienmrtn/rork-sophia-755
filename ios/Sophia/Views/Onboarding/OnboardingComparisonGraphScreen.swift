@@ -2,7 +2,7 @@ import SwiftUI
 
 struct OnboardingComparisonGraphScreen: View {
     let onNext: () -> Void
-    @State private var appeared: Bool = false
+    @State private var appeared: Bool = true
     @State private var graphProgress: CGFloat = 0
     @State private var showLabels: Bool = false
     @State private var hapticTick: Int = 0

@@ -3,7 +3,7 @@ import SwiftUI
 struct OnboardingInterestsScreen: View {
     @Bindable var viewModel: OnboardingViewModel
     let onNext: () -> Void
-    @State private var appeared: Bool = false
+    @State private var appeared: Bool = true
 
     private let interests: [(label: String, icon: String, imageId: String, color: Color)] = [
         ("Histoire", "building.columns", "course_12_la_strategie_de_napoleon_a_ulm_1805", Color(red: 1.0, green: 0.86, blue: 0.62)),

@@ -3,7 +3,7 @@ import SwiftUI
 struct OnboardingDailyGoalScreen: View {
     @Bindable var viewModel: OnboardingViewModel
     let onNext: () -> Void
-    @State private var appeared: Bool = false
+    @State private var appeared: Bool = true
     @State private var pulse: Bool = false
 
     var body: some View {

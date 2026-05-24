@@ -5,7 +5,7 @@ struct OnboardingTopicsCarouselScreen: View {
     let subtitle: String
     let categories: [(name: String, courses: [(title: String, courseId: String)])]
     let onNext: () -> Void
-    @State private var appeared: Bool = false
+    @State private var appeared: Bool = true
 
     var body: some View {
         ZStack {

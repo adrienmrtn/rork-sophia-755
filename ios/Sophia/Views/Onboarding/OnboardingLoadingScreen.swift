@@ -3,7 +3,7 @@ import SwiftUI
 struct OnboardingLoadingScreen: View {
     @Bindable var viewModel: OnboardingViewModel
     let onNext: () -> Void
-    @State private var appeared: Bool = false
+    @State private var appeared: Bool = true
     @State private var pulsing: Bool = false
     @State private var lastStep: String = ""
 
