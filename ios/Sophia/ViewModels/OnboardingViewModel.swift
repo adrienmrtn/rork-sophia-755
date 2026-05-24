@@ -51,7 +51,6 @@ class OnboardingViewModel {
         switch currentScreen {
         case 2: return phoneTimeSelection != nil
         case 4: return !objectives.isEmpty
-        case 8: return !interests.isEmpty
         default: return true
         }
     }
@@ -85,6 +84,34 @@ class OnboardingViewModel {
 
     private func persistInterests() {
         UserDefaults.standard.set(Array(interests), forKey: OnboardingViewModel.interestsKey)
+    }
+
+    /// All available interest labels (mirrors the cards on OnboardingInterestsScreen).
+    static let allInterestLabels: [String] = [
+        "Histoire", "Sciences", "Littérature", "Art", "Mythologie", "Monde actuel"
+    ]
+
+    /// Normalize the user's selection to **exactly 3** interests, one-shot:
+    /// - 0 selected → pick 3 fully random.
+    /// - 1 or 2 selected → keep them, complete randomly from the remaining pool.
+    /// - 3 selected → keep as-is.
+    /// - 4+ selected → keep 3 random from the user's selection.
+    /// Then persist. Should be called once when leaving the interests step.
+    func finalizeInterests() {
+        let all = OnboardingViewModel.allInterestLabels
+        let selected = interests
+        var result: Set<String>
+        if selected.count == 3 {
+            result = selected
+        } else if selected.count < 3 {
+            let pool = all.filter { !selected.contains($0) }.shuffled()
+            let needed = 3 - selected.count
+            result = selected.union(pool.prefix(needed))
+        } else {
+            result = Set(selected.shuffled().prefix(3))
+        }
+        interests = result
+        persistInterests()
     }
 
     static let interestsKey = "sophia_user_interests"

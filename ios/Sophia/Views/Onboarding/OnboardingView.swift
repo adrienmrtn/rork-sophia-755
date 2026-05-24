@@ -181,6 +181,9 @@ struct OnboardingView: View {
     private func advance() {
         let g = UIImpactFeedbackGenerator(style: .light)
         g.impactOccurred()
+        if viewModel.currentScreen == 8 {
+            viewModel.finalizeInterests()
+        }
         withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
             viewModel.nextScreen()
         }
