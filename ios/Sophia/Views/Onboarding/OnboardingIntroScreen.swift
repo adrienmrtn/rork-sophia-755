@@ -70,7 +70,7 @@ struct OnboardingIntroScreen: View {
 
                 Spacer()
 
-                OnboardingPrimaryButton(title: "Commencer", shiny: true, action: onNext)
+                OnboardingPrimaryButton(title: "Commencer", action: onNext)
                     .opacity(appeared ? 1 : 0)
                     .offset(y: appeared ? 0 : 30)
             }

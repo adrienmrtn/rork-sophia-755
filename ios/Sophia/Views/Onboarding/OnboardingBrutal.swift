@@ -39,14 +39,12 @@ extension View {
 struct BrutalPinkButtonStyle: ButtonStyle {
     var depth: CGFloat = 6
     var isEnabled: Bool = true
-    var shiny: Bool = false
 
     func makeBody(configuration: Configuration) -> some View {
         let pressed = configuration.isPressed
         configuration.label
             .frame(maxWidth: .infinity)
             .padding(.vertical, 18)
-            .offset(y: pressed ? depth : 0)
             .background(
                 ZStack(alignment: .top) {
                     Capsule()
@@ -55,9 +53,6 @@ struct BrutalPinkButtonStyle: ButtonStyle {
                     Capsule()
                         .fill(isEnabled ? BrutalPalette.pink : Color(red: 0.92, green: 0.88, blue: 0.85))
                         .overlay {
-                            if shiny, isEnabled, !pressed {
-                                ShimmerOverlay()
-                            }
                             Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 2.5)
                         }
                         .offset(y: pressed ? depth : 0)
@@ -68,46 +63,9 @@ struct BrutalPinkButtonStyle: ButtonStyle {
     }
 }
 
-/// Narrow highlight bar that slides across the button, matching the "Terminer le cours" shimmer.
-struct ShimmerOverlay: View {
-    @State private var offset: CGFloat = -100
-    private let barWidth: CGFloat = 80
-
-    var body: some View {
-        Capsule()
-            .fill(
-                LinearGradient(
-                    colors: [.clear, .white.opacity(0.35), .clear],
-                    startPoint: .leading,
-                    endPoint: .trailing
-                )
-            )
-            .mask {
-                GeometryReader { geo in
-                    Rectangle()
-                        .frame(width: barWidth, height: geo.size.height)
-                        .offset(x: offset)
-                }
-            }
-            .allowsHitTesting(false)
-            .onAppear { startLoop() }
-    }
-
-    private func startLoop() {
-        offset = -barWidth
-        withAnimation(.easeInOut(duration: 1.5)) {
-            offset = UIScreen.main.bounds.width + barWidth
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-            startLoop()
-        }
-    }
-}
-
 struct OnboardingPrimaryButton: View {
     let title: String
     var isEnabled: Bool = true
-    var shiny: Bool = false
     let action: () -> Void
     @State private var tapCount: Int = 0
 
@@ -125,7 +83,7 @@ struct OnboardingPrimaryButton: View {
             }
             .foregroundStyle(isEnabled ? BrutalPalette.ink : BrutalPalette.ink.opacity(0.4))
         }
-        .buttonStyle(BrutalPinkButtonStyle(isEnabled: isEnabled, shiny: shiny))
+        .buttonStyle(BrutalPinkButtonStyle(isEnabled: isEnabled))
         .disabled(!isEnabled)
         .padding(.horizontal, 24)
         .padding(.bottom, 40)

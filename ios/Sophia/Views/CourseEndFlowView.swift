@@ -325,7 +325,7 @@ struct CourseCompletedView: View {
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 18)
             }
-            .buttonStyle(EndFlowPillButtonStyle(fill: pink, shiny: true))
+            .buttonStyle(EndFlowPillButtonStyle(fill: pink))
         }
     }
 
@@ -530,18 +530,12 @@ struct StreakCelebrationView: View {
 
 private struct EndFlowPillButtonStyle: ButtonStyle {
     let fill: Color
-    var shiny: Bool = false
     private let depth: CGFloat = 5
 
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .background(
                 Capsule().fill(fill)
-                    .overlay {
-                        if shiny, !configuration.isPressed {
-                            ShimmerOverlay()
-                        }
-                    }
                     .overlay { Capsule().strokeBorder(.black, lineWidth: 3) }
             )
             .offset(y: configuration.isPressed ? depth : 0)
