@@ -1,4 +1,5 @@
 import SwiftUI
+import RevenueCat
 
 struct OnboardingView: View {
     @State private var viewModel = OnboardingViewModel()
@@ -158,18 +159,32 @@ struct OnboardingView: View {
                     OnboardingFreeTrialTimelineView(onNext: advance)
                 case 15:
                     OnboardingNativePaywallView(
-                        onPurchase: { _ in
-                            // Step 2: trigger Purchases.shared.purchase(package:) for the selected plan.
-                            // For now, complete the onboarding so the flow stays runnable.
-                            viewModel.completeOnboarding()
-                            onComplete()
+                        store: storeVM,
+                        onPurchase: { plan in
+                            Task {
+                                guard let package = packageFor(plan: plan) else {
+                                    #if DEBUG
+                                    print("[OnboardingPaywall] no package found for plan \(plan)")
+                                    #endif
+                                    return
+                                }
+                                let success = await storeVM.purchase(package: package)
+                                if success {
+                                    await MainActor.run {
+                                        viewModel.completeOnboarding()
+                                        onComplete()
+                                    }
+                                }
+                            }
                         },
                         onRestore: {
                             Task {
                                 await storeVM.restore()
-                                await MainActor.run {
-                                    viewModel.completeOnboarding()
-                                    onComplete()
+                                if storeVM.isPremium {
+                                    await MainActor.run {
+                                        viewModel.completeOnboarding()
+                                        onComplete()
+                                    }
                                 }
                             }
                         },
@@ -183,6 +198,15 @@ struct OnboardingView: View {
                 }
             }
         }
+
+    private func packageFor(plan: OnboardingNativePaywallView.Plan) -> RevenueCat.Package? {
+        switch plan {
+        case .yearly:
+            return storeVM.annualPackage
+        case .monthly:
+            return storeVM.monthlyPackage
+        }
+    }
 
     private func advance() {
         let g = UIImpactFeedbackGenerator(style: .light)

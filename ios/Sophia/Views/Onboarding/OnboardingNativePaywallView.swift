@@ -15,6 +15,7 @@ struct OnboardingNativePaywallView: View {
         var id: String { rawValue }
     }
 
+    var store: StoreViewModel
     let onPurchase: (Plan) -> Void
     let onRestore: () -> Void
     let onClose: () -> Void
@@ -48,9 +49,11 @@ struct OnboardingNativePaywallView: View {
                     .padding(.bottom, 12)
                 }
 
-                OnboardingPrimaryButton(title: "Continuer") {
+                OnboardingPrimaryButton(title: store.isPurchasing ? "Traitement…" : "Continuer") {
+                    guard !store.isPurchasing else { return }
                     showReminderSheet = true
                 }
+                .disabled(store.isPurchasing)
             }
 
             closeButton
