@@ -67,13 +67,13 @@ struct OnboardingView: View {
                 // Ancien écran qui reste figé en dessous pendant la transition
                 if let prev = previousScreen {
                     screenView(for: prev)
-                        .id("prev-\(prev)")
+                        .id(prev)
                         .zIndex(0)
                 }
 
                 // Nouvel écran qui glisse par-dessus depuis la droite
                 screenView(for: viewModel.currentScreen)
-                    .id("cur-\(viewModel.currentScreen)")
+                    .id(viewModel.currentScreen)
                     .offset(x: newScreenOffset)
                     .zIndex(1)
 
