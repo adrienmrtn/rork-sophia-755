@@ -39,12 +39,14 @@ extension View {
 struct BrutalPinkButtonStyle: ButtonStyle {
     var depth: CGFloat = 6
     var isEnabled: Bool = true
+    var shiny: Bool = false
 
     func makeBody(configuration: Configuration) -> some View {
         let pressed = configuration.isPressed
         configuration.label
             .frame(maxWidth: .infinity)
             .padding(.vertical, 18)
+            .offset(y: pressed ? depth : 0)
             .background(
                 ZStack(alignment: .top) {
                     Capsule()
@@ -53,6 +55,23 @@ struct BrutalPinkButtonStyle: ButtonStyle {
                     Capsule()
                         .fill(isEnabled ? BrutalPalette.pink : Color(red: 0.92, green: 0.88, blue: 0.85))
                         .overlay {
+                            if shiny, isEnabled, !pressed {
+                                Capsule()
+                                    .fill(
+                                        LinearGradient(
+                                            colors: [
+                                                .white.opacity(0),
+                                                .white.opacity(0.5),
+                                                .white.opacity(0.15),
+                                                .white.opacity(0),
+                                                .white.opacity(0),
+                                            ],
+                                            startPoint: .leading,
+                                            endPoint: .trailing
+                                        )
+                                    )
+                                    .modifier(ShimmerModifier())
+                            }
                             Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 2.5)
                         }
                         .offset(y: pressed ? depth : 0)
@@ -63,9 +82,39 @@ struct BrutalPinkButtonStyle: ButtonStyle {
     }
 }
 
+// MARK: - Shimmer modifier (slides highlight across surface)
+
+private struct ShimmerModifier: ViewModifier {
+    @State private var phase: CGFloat = -2
+
+    func body(content: Content) -> some View {
+        content
+            .mask(
+                GeometryReader { geo in
+                    Rectangle()
+                        .fill(
+                            LinearGradient(
+                                colors: [.black, .black, .clear, .clear],
+                                startPoint: UnitPoint(x: phase - 0.3, y: 0.5),
+                                endPoint: UnitPoint(x: phase + 0.7, y: 0.5)
+                            )
+                        )
+                        .frame(width: geo.size.width * 1.5)
+                        .offset(x: -geo.size.width * 0.2)
+                }
+            )
+            .onAppear {
+                withAnimation(.linear(duration: 2.3).repeatForever(autoreverses: false)) {
+                    phase = 2
+                }
+            }
+    }
+}
+
 struct OnboardingPrimaryButton: View {
     let title: String
     var isEnabled: Bool = true
+    var shiny: Bool = false
     let action: () -> Void
     @State private var tapCount: Int = 0
 
@@ -83,7 +132,7 @@ struct OnboardingPrimaryButton: View {
             }
             .foregroundStyle(isEnabled ? BrutalPalette.ink : BrutalPalette.ink.opacity(0.4))
         }
-        .buttonStyle(BrutalPinkButtonStyle(isEnabled: isEnabled))
+        .buttonStyle(BrutalPinkButtonStyle(isEnabled: isEnabled, shiny: shiny))
         .disabled(!isEnabled)
         .padding(.horizontal, 24)
         .padding(.bottom, 40)
