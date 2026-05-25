@@ -1,5 +1,4 @@
 import SwiftUI
-import RevenueCatUI
 
 struct OnboardingView: View {
     @State private var viewModel = OnboardingViewModel()
@@ -158,40 +157,27 @@ struct OnboardingView: View {
                 case 14:
                     OnboardingFreeTrialTimelineView(onNext: advance)
                 case 15:
-                    ZStack(alignment: .topTrailing) {
-                        SophiaPaywallView(
-                            context: .finOnboarding,
-                            onPurchased: {
-                                viewModel.completeOnboarding()
-                                onComplete()
-                            },
-                            onRestored: {
-                                viewModel.completeOnboarding()
-                                onComplete()
-                            },
-                            onDismissed: {
-                                viewModel.completeOnboarding()
-                                onComplete()
-                            }
-                        )
-
-                        Button {
-                            let g = UIImpactFeedbackGenerator(style: .light)
-                            g.impactOccurred()
+                    OnboardingNativePaywallView(
+                        onPurchase: { _ in
+                            // Step 2: trigger Purchases.shared.purchase(package:) for the selected plan.
+                            // For now, complete the onboarding so the flow stays runnable.
                             viewModel.completeOnboarding()
                             onComplete()
-                        } label: {
-                            Image(systemName: "xmark")
-                                .font(.system(size: 14, weight: .bold))
-                                .foregroundStyle(.white)
-                                .frame(width: 32, height: 32)
-                                .background(Color.black.opacity(0.45))
-                                .clipShape(Circle())
+                        },
+                        onRestore: {
+                            Task {
+                                await storeVM.restore()
+                                await MainActor.run {
+                                    viewModel.completeOnboarding()
+                                    onComplete()
+                                }
+                            }
+                        },
+                        onClose: {
+                            viewModel.completeOnboarding()
+                            onComplete()
                         }
-                        .padding(.top, 12)
-                        .padding(.trailing, 16)
-                        .accessibilityLabel("Fermer")
-                    }
+                    )
                 default:
                     EmptyView()
                 }
