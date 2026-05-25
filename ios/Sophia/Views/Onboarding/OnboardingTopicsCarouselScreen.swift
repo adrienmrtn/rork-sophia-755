@@ -64,7 +64,7 @@ struct OnboardingTopicsCarouselScreen: View {
 
             VStack {
                 Spacer()
-                OnboardingPrimaryButton(title: "Suivant", action: onNext)
+                OnboardingPrimaryButton(title: "Continuer", action: onNext)
                     .background(
                         LinearGradient(
                             colors: [BrutalPalette.cream.opacity(0), BrutalPalette.cream, BrutalPalette.cream],
