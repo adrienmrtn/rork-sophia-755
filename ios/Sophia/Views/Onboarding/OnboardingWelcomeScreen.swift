@@ -36,47 +36,39 @@ struct OnboardingWelcomeScreen: View {
                 Spacer()
 
                 // Card
-                ZStack(alignment: .top) {
-                    RoundedRectangle(cornerRadius: 24, style: .continuous)
-                        .fill(BrutalPalette.ink)
-                        .offset(y: 4)
+                VStack(spacing: 28) {
+                    Text("Sophia est ton partenaire\npour maîtriser")
+                        .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                        .foregroundStyle(BrutalPalette.ink)
+                        .multilineTextAlignment(.center)
+                        .fixedSize(horizontal: false, vertical: true)
 
-                    VStack(spacing: 28) {
-                        Text("Sophia est ton partenaire\npour maîtriser")
-                            .font(.system(.largeTitle, design: .rounded, weight: .heavy))
-                            .foregroundStyle(BrutalPalette.ink)
-                            .multilineTextAlignment(.center)
-                            .fixedSize(horizontal: false, vertical: true)
-
-                        // Animated pill with subject color
-                        ZStack {
-                            Text(subjects[subjectIndex])
-                                .font(.system(.title, design: .rounded, weight: .heavy))
-                                .foregroundStyle(BrutalPalette.ink)
-                                .padding(.horizontal, 28)
-                                .padding(.vertical, 12)
-                                .background(subjectColors[subjectIndex], in: .capsule)
-                                .overlay {
-                                    Capsule()
-                                        .strokeBorder(BrutalPalette.ink, lineWidth: 2)
-                                }
-                                .opacity(pillOpacity)
-                                .offset(y: pillOffset)
+                    // Animated pill with subject color
+                    Text(subjects[subjectIndex])
+                        .font(.system(.title, design: .rounded, weight: .heavy))
+                        .foregroundStyle(BrutalPalette.ink)
+                        .padding(.horizontal, 28)
+                        .padding(.vertical, 12)
+                        .background(subjectColors[subjectIndex], in: .capsule)
+                        .overlay {
+                            Capsule()
+                                .strokeBorder(BrutalPalette.ink, lineWidth: 2)
                         }
+                        .opacity(pillOpacity)
+                        .offset(y: pillOffset)
                         .animation(.easeInOut(duration: 0.35), value: pillOpacity)
                         .animation(.easeInOut(duration: 0.35), value: pillOffset)
-                    }
-                    .padding(.horizontal, 24)
-                    .padding(.vertical, 36)
-                    .background(.white)
-                    .clipShape(.rect(cornerRadius: 24))
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 24, style: .continuous)
-                            .strokeBorder(BrutalPalette.ink, lineWidth: 2.5)
-                    }
                 }
                 .padding(.horizontal, 24)
-                .padding(.bottom, 6)
+                .padding(.vertical, 36)
+                .background(.white)
+                .clipShape(.rect(cornerRadius: 24))
+                .overlay {
+                    RoundedRectangle(cornerRadius: 24, style: .continuous)
+                        .strokeBorder(BrutalPalette.ink, lineWidth: 2.5)
+                }
+                .shadow(color: BrutalPalette.ink.opacity(0.16), radius: 0, x: 0, y: 4)
+                .padding(.horizontal, 24)
                 .opacity(appeared ? 1 : 0)
                 .offset(y: appeared ? 0 : 24)
 
