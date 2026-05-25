@@ -5,10 +5,10 @@ struct OnboardingView: View {
     @State private var viewModel = OnboardingViewModel()
     @State private var storeVM = StoreViewModel()
     let onComplete: () -> Void
-    @State private var direction: Edge = .trailing
     @State private var showSpecialOffer: Bool = false
-    @State private var previousScreen: Int? = nil
-    @State private var newScreenOffset: CGFloat = 0
+    @State private var displayedScreen: Int = 0
+    @State private var incomingScreen: Int? = nil
+    @State private var slideOffset: CGFloat = 0
 
     private let mondeActuelCategories: [(name: String, courses: [(title: String, courseId: String)])] = [
         ("Conflits & géopolitique", [
@@ -64,18 +64,16 @@ struct OnboardingView: View {
             ZStack {
                 BrutalPalette.cream.ignoresSafeArea()
 
-                // Ancien écran qui reste figé en dessous pendant la transition
-                if let prev = previousScreen {
-                    screenView(for: prev)
-                        .id(prev)
-                        .zIndex(0)
-                }
+                // Écran affiché en fond, stable pendant la transition
+                screenView(for: displayedScreen)
+                    .zIndex(0)
 
                 // Nouvel écran qui glisse par-dessus depuis la droite
-                screenView(for: viewModel.currentScreen)
-                    .id(viewModel.currentScreen)
-                    .offset(x: newScreenOffset)
-                    .zIndex(1)
+                if let incoming = incomingScreen {
+                    screenView(for: incoming)
+                        .offset(x: slideOffset)
+                        .zIndex(1)
+                }
 
                 if viewModel.currentScreen > 0 && viewModel.currentScreen < 11 {
                     VStack {
@@ -209,25 +207,24 @@ struct OnboardingView: View {
             viewModel.finalizeInterests()
         }
 
-        // Capture l'écran courant comme "précédent" qui restera figé
-        let from = viewModel.currentScreen
-        previousScreen = from
-
-        // Place le nouvel écran hors écran à droite, puis bascule la valeur
+        let to = viewModel.currentScreen + 1
         let width = UIScreen.main.bounds.width
-        newScreenOffset = width
+
+        // La nouvelle slide démarre hors écran à droite
+        incomingScreen = to
+        slideOffset = width
         viewModel.nextScreen()
 
-        // Anime le slide du nouvel écran par-dessus l'ancien
+        // Elle glisse par-dessus l'écran affiché (qui reste stable, sans reconstruction)
         withAnimation(.easeInOut(duration: 0.4)) {
-            newScreenOffset = 0
+            slideOffset = 0
         }
 
-        // Retire l'ancien écran à la fin de l'animation
+        // Une fois l'animation terminée, la slide entrante devient l'écran affiché
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.42) {
-            if previousScreen == from {
-                previousScreen = nil
-            }
+            displayedScreen = to
+            incomingScreen = nil
+            slideOffset = 0
         }
     }
 }
