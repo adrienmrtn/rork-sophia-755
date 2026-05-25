@@ -152,12 +152,6 @@ struct OnboardingView: View {
                 case 11:
                     OnboardingLoadingScreen(viewModel: viewModel, onNext: advance)
                 case 12:
-                    OnboardingFinalScreen(onComplete: advance)
-                case 13:
-                    OnboardingFreeTrialIntroView(onNext: advance)
-                case 14:
-                    OnboardingFreeTrialTimelineView(onNext: advance)
-                case 15:
                     OnboardingNativePaywallView(
                         store: storeVM,
                         onPurchase: { plan in
