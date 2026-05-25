@@ -65,7 +65,7 @@ struct OnboardingSocialProofScreen: View {
 
                 Spacer()
 
-                OnboardingPrimaryButton(title: "Continuer", action: onNext)
+                OnboardingPrimaryButton(title: "Suivant", action: onNext)
                     .opacity(showReviews ? 1 : 0)
             }
         }

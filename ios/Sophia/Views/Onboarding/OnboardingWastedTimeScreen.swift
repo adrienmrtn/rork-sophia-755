@@ -91,7 +91,7 @@ struct OnboardingWastedTimeScreen: View {
 
                 Spacer()
 
-                OnboardingPrimaryButton(title: "Continuer", action: onNext)
+                OnboardingPrimaryButton(title: "Suivant", action: onNext)
                     .opacity(showMessage ? 1 : 0)
             }
         }

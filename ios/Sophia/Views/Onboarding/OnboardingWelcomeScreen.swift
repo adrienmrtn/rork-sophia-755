@@ -74,7 +74,7 @@ struct OnboardingWelcomeScreen: View {
 
                 Spacer()
 
-                OnboardingPrimaryButton(title: "Suivant \u{2192}", action: handleNext)
+                OnboardingPrimaryButton(title: "Suivant", action: handleNext)
                     .opacity(appeared ? 1 : 0)
                     .offset(y: appeared ? 0 : 20)
             }

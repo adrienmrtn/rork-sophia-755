@@ -7,8 +7,6 @@ struct OnboardingView: View {
     let onComplete: () -> Void
     @State private var showSpecialOffer: Bool = false
     @State private var displayedScreen: Int = 0
-    @State private var incomingScreen: Int? = nil
-    @State private var slideOffset: CGFloat = 0
 
     private let mondeActuelCategories: [(name: String, courses: [(title: String, courseId: String)])] = [
         ("Conflits & géopolitique", [
@@ -64,16 +62,13 @@ struct OnboardingView: View {
             ZStack {
                 BrutalPalette.cream.ignoresSafeArea()
 
-                // Écran affiché en fond, stable pendant la transition
                 screenView(for: displayedScreen)
+                    .id(displayedScreen)
+                    .transition(.asymmetric(
+                        insertion: .move(edge: .trailing),
+                        removal: .identity
+                    ))
                     .zIndex(0)
-
-                // Nouvel écran qui glisse par-dessus depuis la droite
-                if let incoming = incomingScreen {
-                    screenView(for: incoming)
-                        .offset(x: slideOffset)
-                        .zIndex(1)
-                }
 
                 if viewModel.currentScreen > 0 && viewModel.currentScreen < 11 {
                     VStack {
@@ -206,25 +201,10 @@ struct OnboardingView: View {
         if viewModel.currentScreen == 8 {
             viewModel.finalizeInterests()
         }
-
-        let to = viewModel.currentScreen + 1
-        let width = UIScreen.main.bounds.width
-
-        // La nouvelle slide démarre hors écran à droite
-        incomingScreen = to
-        slideOffset = width
+        let next = viewModel.currentScreen + 1
         viewModel.nextScreen()
-
-        // Elle glisse par-dessus l'écran affiché (qui reste stable, sans reconstruction)
         withAnimation(.easeInOut(duration: 0.4)) {
-            slideOffset = 0
-        }
-
-        // Une fois l'animation terminée, la slide entrante devient l'écran affiché
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.42) {
-            displayedScreen = to
-            incomingScreen = nil
-            slideOffset = 0
+            displayedScreen = next
         }
     }
 }
