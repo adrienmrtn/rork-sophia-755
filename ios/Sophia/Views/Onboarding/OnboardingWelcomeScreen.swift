@@ -17,6 +17,15 @@ struct OnboardingWelcomeScreen: View {
         "le monde actuel"
     ]
 
+    private let subjectColors: [Color] = [
+        Color(red: 0.66, green: 0.92, blue: 0.96), // art - cyan
+        Color(red: 1.0, green: 0.86, blue: 0.62),  // histoire - peach
+        Color(red: 0.70, green: 0.95, blue: 0.80), // sciences - mint
+        Color(red: 1.0, green: 0.78, blue: 0.78),  // littérature - soft red
+        Color(red: 0.82, green: 0.78, blue: 1.0),  // mythologie - lavender
+        Color(red: 0.74, green: 0.90, blue: 1.0),  // monde actuel - sky
+    ]
+
     private let timer = Timer.publish(every: 2.0, on: .main, in: .common).autoconnect()
 
     var body: some View {
@@ -30,7 +39,7 @@ struct OnboardingWelcomeScreen: View {
                 ZStack(alignment: .top) {
                     RoundedRectangle(cornerRadius: 24, style: .continuous)
                         .fill(BrutalPalette.ink)
-                        .offset(y: 6)
+                        .offset(y: 4)
 
                     VStack(spacing: 28) {
                         Text("Sophia est ton partenaire\npour maîtriser")
@@ -39,14 +48,18 @@ struct OnboardingWelcomeScreen: View {
                             .multilineTextAlignment(.center)
                             .fixedSize(horizontal: false, vertical: true)
 
-                        // Animated pill
+                        // Animated pill with subject color
                         ZStack {
                             Text(subjects[subjectIndex])
                                 .font(.system(.title, design: .rounded, weight: .heavy))
-                                .foregroundStyle(.white)
+                                .foregroundStyle(BrutalPalette.ink)
                                 .padding(.horizontal, 28)
                                 .padding(.vertical, 12)
-                                .background(BrutalPalette.ink, in: .capsule)
+                                .background(subjectColors[subjectIndex], in: .capsule)
+                                .overlay {
+                                    Capsule()
+                                        .strokeBorder(BrutalPalette.ink, lineWidth: 2)
+                                }
                                 .opacity(pillOpacity)
                                 .offset(y: pillOffset)
                         }

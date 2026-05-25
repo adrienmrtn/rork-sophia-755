@@ -56,21 +56,7 @@ struct BrutalPinkButtonStyle: ButtonStyle {
                         .fill(isEnabled ? BrutalPalette.pink : Color(red: 0.92, green: 0.88, blue: 0.85))
                         .overlay {
                             if shiny, isEnabled, !pressed {
-                                Capsule()
-                                    .fill(
-                                        LinearGradient(
-                                            colors: [
-                                                .white.opacity(0),
-                                                .white.opacity(0.5),
-                                                .white.opacity(0.15),
-                                                .white.opacity(0),
-                                                .white.opacity(0),
-                                            ],
-                                            startPoint: .leading,
-                                            endPoint: .trailing
-                                        )
-                                    )
-                                    .modifier(ShimmerModifier())
+                                ShimmerOverlay()
                             }
                             Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 2.5)
                         }
@@ -82,32 +68,39 @@ struct BrutalPinkButtonStyle: ButtonStyle {
     }
 }
 
-// MARK: - Shimmer modifier (slides highlight across surface)
+/// Narrow highlight bar that slides across the button, matching the "Terminer le cours" shimmer.
+struct ShimmerOverlay: View {
+    @State private var offset: CGFloat = -100
+    private let barWidth: CGFloat = 80
 
-private struct ShimmerModifier: ViewModifier {
-    @State private var phase: CGFloat = -2
-
-    func body(content: Content) -> some View {
-        content
-            .mask(
+    var body: some View {
+        Capsule()
+            .fill(
+                LinearGradient(
+                    colors: [.clear, .white.opacity(0.35), .clear],
+                    startPoint: .leading,
+                    endPoint: .trailing
+                )
+            )
+            .mask {
                 GeometryReader { geo in
                     Rectangle()
-                        .fill(
-                            LinearGradient(
-                                colors: [.black, .black, .clear, .clear],
-                                startPoint: UnitPoint(x: phase - 0.3, y: 0.5),
-                                endPoint: UnitPoint(x: phase + 0.7, y: 0.5)
-                            )
-                        )
-                        .frame(width: geo.size.width * 1.5)
-                        .offset(x: -geo.size.width * 0.2)
-                }
-            )
-            .onAppear {
-                withAnimation(.linear(duration: 2.3).repeatForever(autoreverses: false)) {
-                    phase = 2
+                        .frame(width: barWidth, height: geo.size.height)
+                        .offset(x: offset)
                 }
             }
+            .allowsHitTesting(false)
+            .onAppear { startLoop() }
+    }
+
+    private func startLoop() {
+        offset = -barWidth
+        withAnimation(.easeInOut(duration: 1.5)) {
+            offset = UIScreen.main.bounds.width + barWidth
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+            startLoop()
+        }
     }
 }
 
