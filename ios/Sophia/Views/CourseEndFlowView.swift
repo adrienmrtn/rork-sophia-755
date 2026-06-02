@@ -22,11 +22,27 @@ struct CourseCompletedView: View {
     let onClose: () -> Void
     let onQuizTapped: () -> Void
 
+    @State private var phase: EndFlowPhaseStep = .celebration
     @State private var appeared: Bool = false
-    @State private var thumbScale: CGFloat = 0.6
-    @State private var progressAnimated: Bool = false
+    @State private var showTitle: Bool = false
+    @State private var showCard: Bool = false
+    @State private var showNote: Bool = false
+    @State private var showButtons: Bool = false
+    @State private var showLevelUp: Bool = false
+    @State private var thumbScale: CGFloat = 0.55
     @State private var displayedXP: Int = 0
+    @State private var displayedLevel: Int = 1
+    @State private var barFill: CGFloat = 0
+    @State private var barShimmer: CGFloat = -80
     @State private var cachedThumb: UIImage?
+    @State private var quizButtonShimmer: CGFloat = -100
+    @State private var shimmerActive: Bool = false
+    @State private var barShimmerActive: Bool = false
+    @State private var barFillStarted: Bool = false
+
+    private enum EndFlowPhaseStep {
+        case celebration, progression, actions
+    }
 
     private let ink = Color.black
     private let cream = Color(red: 0.984, green: 0.961, blue: 0.918)
@@ -52,15 +68,26 @@ struct CourseCompletedView: View {
     }
 
     private var animatedXP: Int {
-        progressAnimated ? currentSubjectXP : previousSubjectXP
+        displayedXP
     }
 
-    private var progressFraction: Double {
-        let xp = animatedXP
+    private var startLevel: Int {
+        tier(for: previousSubjectXP).level
+    }
+
+    private var endLevel: Int {
+        tier(for: currentSubjectXP).level
+    }
+
+    private var didLevelUp: Bool {
+        endLevel > startLevel
+    }
+
+    private func barFraction(for xp: Int) -> CGFloat {
         let t = tier(for: xp)
         if t.level == 5 { return 1.0 }
         let span = max(1, t.upper - t.lower)
-        return min(1.0, max(0.0, Double(xp - t.lower) / Double(span)))
+        return CGFloat(min(1.0, max(0.0, Double(xp - t.lower) / Double(span))))
     }
 
     var body: some View {
@@ -81,55 +108,132 @@ struct CourseCompletedView: View {
                         .font(.system(.largeTitle, design: .rounded, weight: .heavy))
                         .foregroundStyle(ink)
                         .multilineTextAlignment(.center)
-
-                    Text("Tu gagnes en culture")
-                        .font(.system(.headline, design: .rounded, weight: .heavy))
-                        .foregroundStyle(ink.opacity(0.55))
                 }
                 .padding(.horizontal, 24)
-                .opacity(appeared ? 1 : 0)
-                .offset(y: appeared ? 0 : 12)
+                .opacity(showTitle ? 1 : 0)
+                .offset(y: showTitle ? 0 : 14)
 
                 Spacer(minLength: 20)
 
-                progressionCard
-                    .padding(.horizontal, 20)
-                    .opacity(appeared ? 1 : 0)
-                    .offset(y: appeared ? 0 : 16)
+                if phase != .celebration {
+                    progressionCard
+                        .padding(.horizontal, 20)
+                        .opacity(showCard ? 1 : 0)
+                        .offset(y: showCard ? 0 : 18)
+                        .transition(.opacity.combined(with: .offset(y: 18)))
+                }
 
-                if showFreemiumGate {
+                if showFreemiumGate && phase == .actions {
                     freemiumNote
                         .padding(.horizontal, 20)
                         .padding(.top, 14)
-                        .opacity(appeared ? 1 : 0)
+                        .opacity(showNote ? 1 : 0)
+                        .offset(y: showNote ? 0 : 10)
                 }
 
                 Spacer(minLength: 20)
 
-                actionButtons
-                    .padding(.horizontal, 20)
-                    .padding(.bottom, 24)
-                    .opacity(appeared ? 1 : 0)
-                    .offset(y: appeared ? 0 : 12)
+                if phase == .actions {
+                    actionButtons
+                        .padding(.horizontal, 20)
+                        .padding(.bottom, 24)
+                        .opacity(showButtons ? 1 : 0)
+                        .offset(y: showButtons ? 0 : 14)
+                }
             }
+        }
+        .fullScreenCover(isPresented: $showLevelUp) {
+            LevelUpCelebrationView(
+                subject: course.subject,
+                previousLevel: startLevel,
+                newLevel: endLevel,
+                onContinue: {
+                    showLevelUp = false
+                    revealActions()
+                }
+            )
         }
         .onAppear {
             cachedThumb = CourseImageMap.loadImage(for: course.id)
             displayedXP = previousSubjectXP
+            displayedLevel = startLevel
+            barFill = barFraction(for: previousSubjectXP)
+            shimmerActive = true
+            ShimmerAnimation.runLoop(offset: $quizButtonShimmer) { shimmerActive }
+            runOpeningSequence()
+        }
+        .onDisappear {
+            shimmerActive = false
+            barShimmerActive = false
+        }
+    }
 
-            withAnimation(.spring(response: 0.55, dampingFraction: 0.75)) {
-                appeared = true
-                thumbScale = 1.0
+    private func runOpeningSequence() {
+        // Phase 1 — celebration
+        withAnimation(.spring(response: 0.85, dampingFraction: 0.78)) {
+            appeared = true
+            thumbScale = 1.0
+            showTitle = true
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.85) {
+            phase = .progression
+            withAnimation(.spring(response: 0.85, dampingFraction: 0.82)) {
+                showCard = true
             }
+            // Bar fill starts 0.5s after card appears
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                animateProgression()
+            }
+        }
+    }
 
-            // Animate progression bar + XP counter from the pre-course value to the new value.
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.55) {
-                withAnimation(.easeOut(duration: 1.1)) {
-                    progressAnimated = true
-                    displayedXP = currentSubjectXP
+    private func animateProgression() {
+        guard !barFillStarted else { return }
+        barFillStarted = true
+        barShimmerActive = true
+        ShimmerAnimation.runLoop(offset: $barShimmer) { barShimmerActive }
+
+        XPProgressAnimator.animate(
+            from: previousSubjectXP,
+            to: currentSubjectXP,
+            setXP: { displayedXP = $0 },
+            setLevel: { displayedLevel = $0 },
+            setBarFill: { fill, animated in
+                if animated {
+                    barFill = fill
+                } else {
+                    var transaction = Transaction()
+                    transaction.disablesAnimations = true
+                    withTransaction(transaction) { barFill = fill }
                 }
-                let g = UINotificationFeedbackGenerator()
-                g.notificationOccurred(.success)
+            },
+            haptic: {
+                XPProgressAnimator.progressionHaptic(intensity: 0.62)
+                UIImpactFeedbackGenerator(style: .rigid).impactOccurred(intensity: 0.35)
+            },
+            completion: {
+                barShimmerActive = false
+                UINotificationFeedbackGenerator().notificationOccurred(.success)
+                if didLevelUp {
+                    showLevelUp = true
+                } else {
+                    revealActions()
+                }
+            }
+        )
+    }
+
+    private func revealActions() {
+        phase = .actions
+        if showFreemiumGate {
+            withAnimation(.easeOut(duration: 0.55)) {
+                showNote = true
+            }
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            withAnimation(.spring(response: 0.75, dampingFraction: 0.82)) {
+                showButtons = true
             }
         }
     }
@@ -137,22 +241,20 @@ struct CourseCompletedView: View {
     // MARK: Thumbnail
 
     private var thumbnail: some View {
-        ZStack(alignment: .top) {
-            RoundedRectangle(cornerRadius: 22, style: .continuous)
-                .fill(ink)
-                .offset(y: 6)
-
+        ZStack {
             ZStack {
                 pastel
                 if let img = cachedThumb {
-                    Image(uiImage: img)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
+                    Color.clear
+                        .overlay {
+                            Image(uiImage: img)
+                                .resizable()
+                                .scaledToFill()
+                        }
+                        .clipped()
                         .allowsHitTesting(false)
                 } else {
-                    Image(systemName: course.subject.icon)
-                        .font(.system(size: 56, weight: .heavy))
-                        .foregroundStyle(ink.opacity(0.5))
+                    SubjectBadgeView(subject: course.subject, emojiSize: 56, cornerRadius: 0)
                 }
             }
             .frame(width: 160, height: 160)
@@ -173,7 +275,14 @@ struct CourseCompletedView: View {
                 .offset(x: 10, y: 10)
             }
         }
-        .frame(width: 170, height: 170)
+        .frame(width: 160, height: 160)
+        .background(alignment: .top) {
+            RoundedRectangle(cornerRadius: 22, style: .continuous)
+                .fill(ink)
+                .frame(width: 160, height: 160)
+                .offset(y: 6)
+        }
+        .padding(.bottom, 6)
     }
 
     // MARK: Progression card
@@ -182,91 +291,84 @@ struct CourseCompletedView: View {
         let tierNow = tier(for: animatedXP)
         let xpToNext = max(0, tierNow.upper - animatedXP)
 
-        return ZStack(alignment: .top) {
-            RoundedRectangle(cornerRadius: 20, style: .continuous)
-                .fill(ink)
-                .offset(y: 5)
-
-            VStack(alignment: .leading, spacing: 12) {
-                HStack(spacing: 10) {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 10, style: .continuous)
-                            .fill(pastel)
-                            .overlay {
-                                RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                    .strokeBorder(ink, lineWidth: 2)
-                            }
-                        Image(systemName: course.subject.icon)
-                            .font(.system(size: 16, weight: .heavy))
-                            .foregroundStyle(ink)
-                    }
+        return VStack(alignment: .leading, spacing: 12) {
+            HStack(spacing: 10) {
+                SubjectBadgeView(subject: course.subject, emojiSize: 22, cornerRadius: 10)
                     .frame(width: 38, height: 38)
 
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text(course.subject.shortName)
-                            .font(.system(.headline, design: .rounded, weight: .heavy))
-                            .foregroundStyle(ink)
-                        HStack(spacing: 4) {
-                            Image(systemName: "star.fill")
-                                .font(.system(size: 10, weight: .heavy))
-                                .foregroundStyle(ink.opacity(0.7))
-                            Text("\(displayedXP) XP")
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(course.subject.shortName)
+                        .font(.system(.headline, design: .rounded, weight: .heavy))
+                        .foregroundStyle(ink)
+                    HStack(spacing: 4) {
+                        Image(systemName: "star.fill")
+                            .font(.system(size: 10, weight: .heavy))
+                            .foregroundStyle(ink.opacity(0.7))
+                        Text("\(displayedXP) XP")
+                            .font(.system(.caption, design: .rounded, weight: .heavy))
+                            .foregroundStyle(ink.opacity(0.55))
+                            .monospacedDigit()
+                        if tierNow.level < 5 {
+                            Text("· \(xpToNext) avant niv. \(tierNow.level + 1)")
                                 .font(.system(.caption, design: .rounded, weight: .heavy))
-                                .foregroundStyle(ink.opacity(0.55))
-                                .contentTransition(.numericText())
-                            if tierNow.level < 5 {
-                                Text("· \(xpToNext) avant niv. \(tierNow.level + 1)")
-                                    .font(.system(.caption, design: .rounded, weight: .heavy))
-                                    .foregroundStyle(ink.opacity(0.4))
-                            }
+                                .foregroundStyle(ink.opacity(0.4))
                         }
                     }
-                    Spacer()
-                    Text("NIV. \(tierNow.level)")
-                        .font(.system(.caption2, design: .rounded, weight: .heavy))
-                        .foregroundStyle(.white)
-                        .tracking(0.6)
-                        .padding(.horizontal, 10)
-                        .padding(.vertical, 5)
-                        .background(ink, in: Capsule())
                 }
-
-                GeometryReader { geo in
-                    ZStack(alignment: .leading) {
-                        Capsule()
-                            .fill(Color(white: 0.94))
-                            .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
-                        Capsule()
-                            .fill(pastel)
-                            .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
-                            .frame(width: max(14, geo.size.width * progressFraction))
-                    }
-                }
-                .frame(height: 16)
-
-                // +N XP earned pill
-                HStack(spacing: 6) {
-                    Image(systemName: "star.fill")
-                        .font(.system(size: 11, weight: .heavy))
-                        .foregroundStyle(ink)
-                    Text("+\(earnedXP) XP gagnés")
-                        .font(.system(.caption, design: .rounded, weight: .heavy))
-                        .foregroundStyle(ink)
-                }
-                .padding(.horizontal, 10)
-                .padding(.vertical, 6)
-                .background(pastel, in: Capsule())
-                .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
+                Spacer()
+                Text("NIV. \(displayedLevel)")
+                    .font(.system(.caption2, design: .rounded, weight: .heavy))
+                    .foregroundStyle(.white)
+                    .tracking(0.6)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 5)
+                    .background(ink, in: Capsule())
             }
-            .padding(16)
-            .background(Color.white)
-            .clipShape(.rect(cornerRadius: 20))
-            .overlay {
-                RoundedRectangle(cornerRadius: 20, style: .continuous)
-                    .strokeBorder(ink, lineWidth: 2.5)
+
+            GeometryReader { geo in
+                ZStack(alignment: .leading) {
+                    Capsule()
+                        .fill(Color(white: 0.94))
+                        .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
+                    Capsule()
+                        .fill(pastel)
+                        .overlay {
+                            Capsule()
+                                .fill(
+                                    LinearGradient(
+                                        colors: [.clear, .white.opacity(0.45), .clear],
+                                        startPoint: .leading,
+                                        endPoint: .trailing
+                                    )
+                                )
+                                .mask {
+                                    Rectangle()
+                                        .frame(width: 60, height: 20)
+                                        .offset(x: barShimmer)
+                                }
+                                .allowsHitTesting(false)
+                        }
+                        .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
+                        .frame(width: geo.size.width * barFill)
+                }
             }
+            .frame(height: 16)
+
+            HStack(spacing: 6) {
+                Image(systemName: "star.fill")
+                    .font(.system(size: 11, weight: .heavy))
+                    .foregroundStyle(ink)
+                Text("+\(earnedXP) XP gagnés")
+                    .font(.system(.caption, design: .rounded, weight: .heavy))
+                    .foregroundStyle(ink)
+            }
+            .padding(.horizontal, 10)
+            .padding(.vertical, 6)
+            .background(pastel, in: Capsule())
+            .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
         }
-        .padding(.bottom, 5)
+        .padding(16)
+        .brutalOnboardingCard(depth: 4, corner: 20)
     }
 
     // MARK: Freemium note
@@ -325,7 +427,7 @@ struct CourseCompletedView: View {
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 18)
             }
-            .buttonStyle(EndFlowPillButtonStyle(fill: pink))
+            .buttonStyle(DuolingoButtonStyle(fill: pink, shimmer: quizButtonShimmer))
         }
     }
 

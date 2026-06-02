@@ -11,20 +11,18 @@ struct BrutalOnboardingCard: ViewModifier {
     var borderWidth: CGFloat = 2.5
 
     func body(content: Content) -> some View {
-        ZStack(alignment: .top) {
-            RoundedRectangle(cornerRadius: corner, style: .continuous)
-                .fill(BrutalPalette.ink)
-                .offset(y: depth)
-
-            content
-                .background(Color.white)
-                .clipShape(.rect(cornerRadius: corner))
-                .overlay {
-                    RoundedRectangle(cornerRadius: corner, style: .continuous)
-                        .strokeBorder(BrutalPalette.ink, lineWidth: borderWidth)
-                }
-        }
-        .padding(.bottom, depth)
+        content
+            .background(Color.white, in: RoundedRectangle(cornerRadius: corner, style: .continuous))
+            .overlay {
+                RoundedRectangle(cornerRadius: corner, style: .continuous)
+                    .strokeBorder(BrutalPalette.ink, lineWidth: borderWidth)
+            }
+            .background(alignment: .top) {
+                RoundedRectangle(cornerRadius: corner, style: .continuous)
+                    .fill(BrutalPalette.ink)
+                    .offset(y: depth)
+            }
+            .padding(.bottom, depth)
     }
 }
 
@@ -43,6 +41,7 @@ struct BrutalPinkButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         let pressed = configuration.isPressed
         configuration.label
+            .offset(y: pressed ? depth : 0)
             .frame(maxWidth: .infinity)
             .padding(.vertical, 18)
             .background(
@@ -72,7 +71,7 @@ struct OnboardingPrimaryButton: View {
     var body: some View {
         Button {
             tapCount += 1
-            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+            OnboardingHaptics.primaryCTA()
             action()
         } label: {
             HStack(spacing: 10) {
@@ -156,13 +155,14 @@ struct BrutalRowButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         let pressed = configuration.isPressed
         configuration.label
+            .offset(y: pressed ? depth : 0)
             .background(
                 ZStack(alignment: .top) {
                     RoundedRectangle(cornerRadius: 14, style: .continuous)
                         .fill(BrutalPalette.ink)
                         .offset(y: depth)
                     RoundedRectangle(cornerRadius: 14, style: .continuous)
-                        .fill(isSelected ? accentColor.opacity(0.35) : Color.white)
+                        .fill(isSelected ? accentColor : Color.white)
                         .overlay {
                             RoundedRectangle(cornerRadius: 14, style: .continuous)
                                 .strokeBorder(BrutalPalette.ink, lineWidth: 2.5)

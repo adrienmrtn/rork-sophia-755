@@ -20,11 +20,8 @@ struct OnboardingInterestsScreen: View {
     ]
 
     var body: some View {
-        ZStack {
-            BrutalPalette.cream.ignoresSafeArea()
-
-            VStack(spacing: 0) {
-                Spacer().frame(height: 44)
+        VStack(spacing: 0) {
+            Spacer().frame(height: 44)
 
                 VStack(spacing: 8) {
                     Text("Quels sujets\nt'intéressent ?")
@@ -57,7 +54,7 @@ struct OnboardingInterestsScreen: View {
                                 color: interest.color,
                                 isSelected: isSelected
                             ) {
-                                UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                                OnboardingHaptics.selection()
                                 withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
                                     viewModel.toggleInterest(interest.label)
                                 }
@@ -74,8 +71,8 @@ struct OnboardingInterestsScreen: View {
 
                 OnboardingPrimaryButton(title: "Suivant", isEnabled: viewModel.canProceed, action: onNext)
                     .opacity(appeared ? 1 : 0)
-            }
         }
+        .onboardingFullBleedBackground(BrutalPalette.cream)
         .sensoryFeedback(.selection, trigger: viewModel.interests.count)
         .onAppear {
             let ids = interests.map(\.imageId)

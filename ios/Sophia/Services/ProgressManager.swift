@@ -54,10 +54,10 @@ class ProgressManager {
         save()
     }
 
-    /// XP thresholds for subject levels: NIV 1: 0-49, 2: 50-149, 3: 150-349, 4: 350-699, 5: 700+.
+    /// XP thresholds for subject levels: NIV 1: 0-9, 2: 10-149, 3: 150-349, 4: 350-699, 5: 700+.
     static let subjectXPTiers: [(level: Int, lower: Int, upper: Int)] = [
-        (1, 0, 50),
-        (2, 50, 150),
+        (1, 0, 10),
+        (2, 10, 150),
         (3, 150, 350),
         (4, 350, 700),
         (5, 700, 1400),

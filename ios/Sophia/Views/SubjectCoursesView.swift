@@ -95,9 +95,8 @@ struct SubjectCoursesView: View {
                         .fill(BrutalPalette.pastel(for: subject))
                         .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
                         .frame(width: 56, height: 56)
-                    Image(systemName: subject.icon)
-                        .font(.system(size: 24, weight: .heavy))
-                        .foregroundStyle(ink)
+                    Text(subject.emoji)
+                        .font(.system(size: 28))
                 }
 
                 VStack(alignment: .leading, spacing: 2) {

@@ -7,11 +7,8 @@ struct OnboardingDailyGoalScreen: View {
     @State private var pulse: Bool = false
 
     var body: some View {
-        ZStack {
-            BrutalPalette.cream.ignoresSafeArea()
-
-            VStack(spacing: 0) {
-                Spacer().frame(height: 86)
+        VStack(spacing: 0) {
+            Spacer().frame(height: 48)
 
                 VStack(spacing: 10) {
                     Text("Chaque jour, tu veux apprendre...")
@@ -72,8 +69,8 @@ struct OnboardingDailyGoalScreen: View {
 
                 OnboardingPrimaryButton(title: "C'est parti !", action: onNext)
                     .opacity(appeared ? 1 : 0)
-            }
         }
+        .onboardingFullBleedBackground(BrutalPalette.cream)
         .onAppear {
             withAnimation(.spring(response: 0.6, dampingFraction: 0.82).delay(0.08)) {
                 appeared = true
@@ -82,7 +79,7 @@ struct OnboardingDailyGoalScreen: View {
     }
 
     private func updateGoal(by delta: Int) {
-        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+        OnboardingHaptics.selection()
         withAnimation(.spring(response: 0.28, dampingFraction: 0.62)) {
             viewModel.adjustDailyLearningGoal(by: delta)
             pulse = true

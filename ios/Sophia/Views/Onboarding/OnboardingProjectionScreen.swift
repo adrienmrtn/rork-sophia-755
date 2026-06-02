@@ -4,117 +4,105 @@ struct OnboardingProjectionScreen: View {
     @Bindable var viewModel: OnboardingViewModel
     let onNext: () -> Void
 
-    private let backgroundPink = Color(red: 254.0 / 255.0, green: 150.0 / 255.0, blue: 188.0 / 255.0)
-    private let softCream = Color(red: 1.0, green: 0.96, blue: 0.82)
-    @State private var appeared: Bool = true
-    @State private var progressWidth: CGFloat = 0
-    @State private var showNumber: Bool = false
+    private let ink = BrutalPalette.ink
+    private let lineFont = Font.system(size: 34, weight: .regular, design: .rounded)
+    private let lineFontBold = Font.system(size: 34, weight: .heavy, design: .rounded)
+    private let numberFont = Font.system(size: 68, weight: .heavy, design: .rounded)
+
     @State private var counterValue: Int = 0
+    @State private var isRaining: Bool = false
+    @State private var showCTA: Bool = false
+    @State private var counterStarted: Bool = false
 
     var body: some View {
         ZStack {
-            backgroundPink.ignoresSafeArea()
+            CourseCardRainOverlay(isActive: isRaining)
+                .zIndex(0)
 
             VStack(spacing: 0) {
-                Spacer()
+                Spacer(minLength: 0)
 
-                VStack(spacing: 32) {
-                    BrutalPill(
-                        text: "Ta projection",
-                        icon: "chart.line.uptrend.xyaxis",
-                        background: softCream,
-                        foreground: BrutalPalette.ink
-                    )
-                    .opacity(appeared ? 1 : 0)
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Petite habitude,")
+                        .font(lineFont)
+                        .foregroundStyle(ink)
 
-                    VStack(spacing: 14) {
-                        Text("D'ici la fin de l'année,\ntu auras appris")
-                            .font(.system(.title3, design: .rounded, weight: .semibold))
-                            .foregroundStyle(BrutalPalette.ink.opacity(0.68))
-                            .multilineTextAlignment(.center)
-                            .opacity(appeared ? 1 : 0)
+                    Text("résultats incroyables.")
+                        .font(lineFontBold)
+                        .foregroundStyle(ink)
 
-                        HStack(alignment: .firstTextBaseline, spacing: 8) {
-                            Text("\(counterValue)")
-                                .font(.system(size: 76, weight: .heavy, design: .rounded))
-                                .foregroundStyle(BrutalPalette.ink)
-                                .contentTransition(.numericText(countsDown: false))
-                            Text("sujets")
-                                .font(.system(.title, design: .rounded, weight: .heavy))
-                                .foregroundStyle(BrutalPalette.ink)
-                        }
-                        .opacity(appeared ? 1 : 0)
+                    HStack(alignment: .firstTextBaseline, spacing: 10) {
+                        Text("C'est")
+                            .font(lineFont)
+                            .foregroundStyle(ink)
 
-                        Text("avec \(viewModel.dailyLearningGoal) \(viewModel.dailyLearningGoalLabel) par jour.")
-                            .font(.system(.body, design: .rounded, weight: .heavy))
-                            .foregroundStyle(BrutalPalette.ink)
-                            .opacity(showNumber ? 1 : 0)
+                        Text("\(counterValue)")
+                            .font(numberFont)
+                            .foregroundStyle(.white)
+                            .contentTransition(.numericText(countsDown: false))
+                            .minimumScaleFactor(0.7)
+                            .lineLimit(1)
                     }
+                    .padding(.top, 4)
 
-                    GeometryReader { geo in
-                        ZStack(alignment: .leading) {
-                            Capsule()
-                                .fill(softCream)
-                                .overlay { Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 2.5) }
-                                .frame(height: 16)
-                            Capsule()
-                                .fill(Color.white)
-                                .overlay { Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 2.5) }
-                                .frame(width: progressWidth, height: 16)
-                        }
-                        .onAppear {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                                withAnimation(.easeInOut(duration: 2.0)) {
-                                    progressWidth = geo.size.width
-                                }
-                            }
-                        }
-                    }
-                    .frame(height: 16)
-                    .padding(.horizontal, 40)
-                    .opacity(appeared ? 1 : 0)
+                    Text("nouvelles choses que tu sauras")
+                        .font(lineFont)
+                        .foregroundStyle(ink)
+                        .padding(.top, 2)
+
+                    Text("d'ici un an.")
+                        .font(lineFontBold)
+                        .foregroundStyle(ink)
                 }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.horizontal, 32)
+                .zIndex(1)
 
-                Spacer()
+                Spacer(minLength: 0)
 
                 OnboardingPrimaryButton(title: "C'est parti !", action: onNext)
-                    .opacity(showNumber ? 1 : 0)
+                    .opacity(showCTA ? 1 : 0)
+                    .offset(y: showCTA ? 0 : 24)
+                    .zIndex(1)
             }
         }
-        .onAppear {
-            withAnimation(.spring(response: 0.6).delay(0.2)) {
-                appeared = true
-            }
+        .onboardingFullBleedBackground(OnboardingScreenColors.projectionPink)
+        .onOnboardingSlideSettled(delay: 0.5) {
+            guard !counterStarted else { return }
+            counterStarted = true
+            isRaining = true
             animateCounter()
+        }
+        .onDisappear {
+            isRaining = false
         }
     }
 
     private func animateCounter() {
-        let generator = UIImpactFeedbackGenerator(style: .light)
-        generator.prepare()
-        let steps = 35
-        let interval = 2.0 / Double(steps)
+        let steps = 42
+        let duration: Double = 2.8
+        let interval = duration / Double(steps)
+        let target = viewModel.projectedYearlyLearnings
 
         for step in 0...steps {
-            let delay = 0.8 + interval * Double(step)
+            let delay = interval * Double(step)
             let progress = Double(step) / Double(steps)
             let eased = 1 - pow(1 - progress, 3)
-            let value = Int(eased * Double(viewModel.projectedYearlyLearnings))
+            let value = Int(eased * Double(target))
 
             DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-                withAnimation(.snappy(duration: 0.08)) {
+                withAnimation(.easeOut(duration: 0.12)) {
                     counterValue = value
                 }
-                if step % 4 == 0 {
-                    generator.impactOccurred(intensity: 0.3 + 0.7 * progress)
-                }
+                OnboardingHaptics.counterTick(progress: progress)
             }
         }
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-            withAnimation(.spring(response: 0.5)) {
-                showNumber = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + duration + 0.35) {
+            isRaining = false
+            OnboardingHaptics.counterComplete()
+            withAnimation(.easeOut(duration: 0.75)) {
+                showCTA = true
             }
         }
     }

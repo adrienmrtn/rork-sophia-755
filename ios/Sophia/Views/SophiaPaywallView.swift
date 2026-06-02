@@ -19,7 +19,6 @@ enum SophiaPaywallContext: String, Identifiable {
 
     var id: String { rawValue }
 
-    /// Returns the per-subject "matière bloquée" paywall identifier.
     static func matiereBlock(for subject: Subject) -> SophiaPaywallContext {
         switch subject {
         case .histoire: return .matiereBlockHistoire
@@ -28,6 +27,17 @@ enum SophiaPaywallContext: String, Identifiable {
         case .art: return .matiereBlockArt
         case .mythologie: return .matiereBlockMythologie
         case .comprendreLeMonde: return .matiereBlockMondeActuel
+        }
+    }
+
+    /// Only matière-block paywalls fall back to `cours_gratuit` when RC isn't configured yet.
+    static func fallback(for context: SophiaPaywallContext) -> SophiaPaywallContext? {
+        switch context {
+        case .matiereBlockHistoire, .matiereBlockSciences, .matiereBlockLitterature,
+             .matiereBlockArt, .matiereBlockMythologie, .matiereBlockMondeActuel:
+            return .coursGratuit
+        default:
+            return nil
         }
     }
 }
@@ -39,15 +49,18 @@ enum SophiaPaywallContext: String, Identifiable {
 struct SophiaPaywallView: View {
     let context: SophiaPaywallContext
     /// Offering id tried if the primary `context` offering isn't found in RC.
-    /// Defaults to `cours_gratuit` for the new "matière bloquée" paywalls so the
-    /// user always sees a working paywall even before the dashboard is configured.
-    var fallbackContext: SophiaPaywallContext? = .coursGratuit
+    /// Only matière-block paywalls fall back to `cours_gratuit`; other contexts must match exactly.
+    var fallbackContext: SophiaPaywallContext? = nil
     var onPurchased: () -> Void = {}
     var onRestored: () -> Void = {}
     var onDismissed: (() -> Void)? = nil
 
     @State private var offering: Offering?
     @State private var loaded: Bool = false
+
+    private var resolvedFallback: SophiaPaywallContext? {
+        fallbackContext ?? SophiaPaywallContext.fallback(for: context)
+    }
 
     var body: some View {
         Group {
@@ -57,11 +70,14 @@ struct SophiaPaywallView: View {
                     .onRestoreCompleted { _ in onRestored() }
                     .onRequestedDismissal { onDismissed?() }
             } else if loaded {
-                // Fallback: use the default current offering.
-                PaywallView()
-                    .onPurchaseCompleted { _ in onPurchased() }
-                    .onRestoreCompleted { _ in onRestored() }
-                    .onRequestedDismissal { onDismissed?() }
+                if context == .finOnboarding || context == .coursGratuit {
+                    PaywallView()
+                        .onPurchaseCompleted { _ in onPurchased() }
+                        .onRestoreCompleted { _ in onRestored() }
+                        .onRequestedDismissal { onDismissed?() }
+                } else {
+                    paywallUnavailableView
+                }
             } else {
                 ZStack {
                     Color.black.ignoresSafeArea()
@@ -77,7 +93,7 @@ struct SophiaPaywallView: View {
             let offerings = try await Purchases.shared.offerings()
             let id = context.rawValue
             var resolved = offerings.all[id] ?? offerings.offering(identifier: id)
-            if resolved == nil, let fallback = fallbackContext, fallback != context {
+            if resolved == nil, let fallback = resolvedFallback, fallback != context {
                 let fid = fallback.rawValue
                 resolved = offerings.all[fid] ?? offerings.offering(identifier: fid)
                 #if DEBUG
@@ -96,5 +112,27 @@ struct SophiaPaywallView: View {
             offering = nil
         }
         loaded = true
+    }
+
+    private var paywallUnavailableView: some View {
+        VStack(spacing: 16) {
+            Text("Offre indisponible")
+                .font(.system(.title3, design: .rounded, weight: .heavy))
+                .foregroundStyle(.white)
+            Text("Impossible de charger «\(context.rawValue)» pour le moment.")
+                .font(.system(.body, design: .rounded))
+                .foregroundStyle(.white.opacity(0.7))
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, 24)
+            Button("Fermer") { onDismissed?() }
+                .font(.system(.headline, design: .rounded, weight: .heavy))
+                .foregroundStyle(.black)
+                .padding(.horizontal, 24)
+                .padding(.vertical, 14)
+                .background(.white, in: Capsule())
+                .padding(.top, 8)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.black.ignoresSafeArea())
     }
 }

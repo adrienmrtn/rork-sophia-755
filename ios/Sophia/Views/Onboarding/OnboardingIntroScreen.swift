@@ -6,10 +6,13 @@ struct OnboardingIntroScreen: View {
     @State private var appeared: Bool = true
     @State private var titleOffset: CGFloat = 40
     @State private var player: AVPlayer?
+    @State private var buttonShimmer: CGFloat = -100
+    @State private var tapCount: Int = 0
+    @State private var shimmerActive: Bool = true
 
     var body: some View {
         ZStack {
-            BrutalPalette.cream.ignoresSafeArea()
+            BrutalPalette.cream
 
             VStack(spacing: 0) {
                 ZStack(alignment: .bottom) {
@@ -70,19 +73,42 @@ struct OnboardingIntroScreen: View {
 
                 Spacer()
 
-                OnboardingPrimaryButton(title: "Commencer", action: onNext)
-                    .opacity(appeared ? 1 : 0)
-                    .offset(y: appeared ? 0 : 30)
+                Button {
+                    tapCount += 1
+                    UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+                    onNext()
+                } label: {
+                    HStack(spacing: 10) {
+                        Text("Commencer")
+                            .font(.system(.headline, design: .rounded, weight: .heavy))
+                        Image(systemName: "arrow.right")
+                            .font(.subheadline.weight(.heavy))
+                    }
+                    .foregroundStyle(BrutalPalette.ink)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 18)
+                }
+                .buttonStyle(DuolingoButtonStyle(fill: BrutalPalette.pink, shimmer: buttonShimmer))
+                .padding(.horizontal, 24)
+                .padding(.bottom, 40)
+                .sensoryFeedback(.impact(weight: .medium), trigger: tapCount)
+                .opacity(appeared ? 1 : 0)
+                .offset(y: appeared ? 0 : 30)
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(BrutalPalette.cream)
         .onAppear {
             setupPlayer()
+            shimmerActive = true
+            ShimmerAnimation.runLoop(offset: $buttonShimmer) { shimmerActive }
             withAnimation(.spring(response: 0.8, dampingFraction: 0.75).delay(0.3)) {
                 appeared = true
                 titleOffset = 0
             }
         }
         .onDisappear {
+            shimmerActive = false
             player?.pause()
             player = nil
         }

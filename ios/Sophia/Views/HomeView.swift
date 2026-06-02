@@ -12,6 +12,8 @@ struct HomeView: View {
     @State private var topCardOffset: CGSize = .zero
     @State private var topCardRotation: Double = 0
     @State private var cardAppeared: Bool = false
+    @State private var discountShimmer: CGFloat = -80
+    @State private var discountShimmerActive: Bool = false
 
     private let cream = Color(red: 0.984, green: 0.961, blue: 0.918)
     private let ink = Color.black
@@ -29,6 +31,7 @@ struct HomeView: View {
             if !cards.isEmpty {
                 let removed = cards.removeFirst()
                 cards.append(removed)
+                cards = DeckBalancer.afterSwipe(cards, unlockedSubjects: unlockedSubjects, isPremium: isPremium)
             }
             topCardOffset = .zero
             topCardRotation = 0
@@ -38,9 +41,12 @@ struct HomeView: View {
     private func loadCards() {
         let filtered = CourseData.allCourses
             .filter { progressManager.courseStatus(for: $0.id) != .completed }
-            .shuffled()
-        cards = filtered
-        let preloadIds = filtered.prefix(5).map(\.id)
+        cards = DeckBalancer.balancedDeck(
+            courses: filtered,
+            unlockedSubjects: unlockedSubjects,
+            isPremium: isPremium
+        )
+        let preloadIds = cards.prefix(5).map(\.id)
         CourseImageMap.preloadImages(for: preloadIds)
     }
 
@@ -57,26 +63,16 @@ struct HomeView: View {
                     .padding(.horizontal, 20)
                     .padding(.top, 8)
 
-                promptSection
-                    .padding(.top, 20)
-                    .padding(.horizontal, 20)
-
-                if !isPremium && progressManager.hasCompletedCourseToday {
-                    dailyDonePill
-                        .padding(.top, 12)
-                        .padding(.horizontal, 20)
-                }
-
                 if cards.isEmpty {
                     Spacer()
                     allCompletedView
                     Spacer()
                 } else {
+                    Spacer(minLength: 0)
                     cardStack
-                        .padding(.top, 18)
                         .opacity(cardAppeared ? 1 : 0)
                         .scaleEffect(cardAppeared ? 1 : 0.95)
-                    Spacer(minLength: 8)
+                    Spacer(minLength: 0)
                     swipeHint
                         .padding(.bottom, 18)
                 }
@@ -84,8 +80,20 @@ struct HomeView: View {
         }
         .onAppear {
             loadCards()
+            discountShimmerActive = !isPremium && discountManager.isActive
+            if discountShimmerActive {
+                ShimmerAnimation.runLoop(offset: $discountShimmer) { discountShimmerActive }
+            }
             withAnimation(.spring(response: 0.6, dampingFraction: 0.8).delay(0.2)) {
                 cardAppeared = true
+            }
+        }
+        .onChange(of: discountManager.isActive) { _, active in
+            discountShimmerActive = !isPremium && active
+            if discountShimmerActive {
+                ShimmerAnimation.runLoop(offset: $discountShimmer) { discountShimmerActive }
+            } else {
+                discountShimmerActive = false
             }
         }
         .onChange(of: autoSwipeCourseId) { _, newId in
@@ -122,9 +130,7 @@ struct HomeView: View {
             onShowDiscountPaywall?()
         } label: {
             HStack(spacing: 6) {
-                Image(systemName: "flame.fill")
-                    .font(.system(size: 12, weight: .heavy))
-                    .foregroundStyle(.white)
+                AnimatedFlameBadge(size: 14, showGlow: false)
                 Text(discountManager.formattedRemaining)
                     .font(.system(.subheadline, design: .rounded, weight: .heavy))
                     .foregroundStyle(.white)
@@ -134,6 +140,22 @@ struct HomeView: View {
             .padding(.horizontal, 12)
             .padding(.vertical, 8)
             .background(pink, in: Capsule())
+            .overlay {
+                Capsule()
+                    .fill(
+                        LinearGradient(
+                            colors: [.clear, .white.opacity(0.4), .clear],
+                            startPoint: .leading,
+                            endPoint: .trailing
+                        )
+                    )
+                    .mask {
+                        Rectangle()
+                            .frame(width: 50, height: 40)
+                            .offset(x: discountShimmer)
+                    }
+                    .allowsHitTesting(false)
+            }
             .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
         }
         .buttonStyle(.plain)
@@ -142,8 +164,7 @@ struct HomeView: View {
 
     private var streakBadge: some View {
         HStack(spacing: 6) {
-            Text("🔥")
-                .font(.subheadline)
+            AnimatedFlameBadge(size: 16, showGlow: false)
             Text("\(progressManager.streak)")
                 .font(.system(.subheadline, design: .rounded, weight: .heavy))
                 .foregroundStyle(ink)
@@ -158,19 +179,6 @@ struct HomeView: View {
         .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
     }
 
-    private var promptSection: some View {
-        HStack {
-            VStack(alignment: .leading, spacing: 4) {
-                Text("Prêt à apprendre ?")
-                    .font(.system(.largeTitle, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink)
-                Text("Swipe pour découvrir un cours")
-                    .font(.system(.subheadline, design: .rounded, weight: .medium))
-                    .foregroundStyle(ink.opacity(0.5))
-            }
-            Spacer()
-        }
-    }
 
     private var cardStack: some View {
         ZStack {
@@ -237,6 +245,7 @@ struct HomeView: View {
                         if !cards.isEmpty {
                             let removed = cards.removeFirst()
                             cards.append(removed)
+                            cards = DeckBalancer.afterSwipe(cards, unlockedSubjects: unlockedSubjects, isPremium: isPremium)
                         }
                         topCardOffset = .zero
                         topCardRotation = 0
@@ -274,23 +283,6 @@ struct HomeView: View {
         }
     }
 
-    private var dailyDonePill: some View {
-        HStack(spacing: 6) {
-            Image(systemName: "checkmark.circle.fill")
-                .font(.caption.weight(.heavy))
-                .foregroundStyle(ink)
-            Text("Cours du jour fait — reviens demain")
-                .font(.system(.caption, design: .rounded, weight: .heavy))
-                .foregroundStyle(ink)
-            Text("🔥")
-                .font(.caption)
-        }
-        .padding(.horizontal, 12)
-        .padding(.vertical, 6)
-        .background(Color.white, in: Capsule())
-        .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
-        .frame(maxWidth: .infinity, alignment: .leading)
-    }
 
     private var allCompletedView: some View {
         VStack(spacing: 20) {
@@ -364,16 +356,19 @@ struct FlashCard: View {
             .frame(height: 240)
             .overlay {
                 if let uiImage = cachedImage {
-                    Image(uiImage: uiImage)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
+                    Color.clear
+                        .overlay {
+                            Image(uiImage: uiImage)
+                                .resizable()
+                                .scaledToFill()
+                        }
+                        .clipped()
                         .allowsHitTesting(false)
                 } else {
                     ZStack {
                         pastel
-                        Image(systemName: course.subject.icon)
-                            .font(.system(size: 64, weight: .light))
-                            .foregroundStyle(ink.opacity(0.25))
+                        Text(course.subject.emoji)
+                            .font(.system(size: 64))
                     }
                 }
             }
@@ -420,9 +415,8 @@ struct FlashCard: View {
         VStack(alignment: .leading, spacing: 12) {
             // Subject pill — black with icon + uppercase name
             HStack(spacing: 6) {
-                Image(systemName: course.subject.icon)
-                    .font(.caption2.weight(.bold))
-                    .foregroundStyle(.white)
+                Text(course.subject.emoji)
+                    .font(.system(size: 16))
                 Text(course.subject.shortName.uppercased())
                     .font(.system(.caption, design: .rounded, weight: .heavy))
                     .foregroundStyle(.white)

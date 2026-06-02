@@ -5,6 +5,7 @@ enum BrutalPalette {
     static let cream = Color(red: 0.984, green: 0.961, blue: 0.918)
     static let ink = Color.black
     static let pink = Color(red: 1.0, green: 0.553, blue: 0.706)
+    static let yellow = Color(red: 1.0, green: 0.84, blue: 0.35)
 
     /// Pastel tint matching the Home FlashCard for each subject.
     static func pastel(for subject: Subject) -> Color {
@@ -108,13 +109,21 @@ struct LibraryView: View {
                 .font(.system(size: 16, weight: .heavy))
                 .foregroundStyle(ink)
 
-            TextField("Rechercher un cours...", text: $searchText)
-                .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                .foregroundStyle(ink)
-                .tint(ink)
-                .focused($searchFocused)
-                .autocorrectionDisabled()
-                .textInputAutocapitalization(.never)
+            ZStack(alignment: .leading) {
+                if searchText.isEmpty {
+                    Text("Rechercher un cours...")
+                        .font(.system(.subheadline, design: .rounded, weight: .semibold))
+                        .foregroundStyle(ink.opacity(0.38))
+                        .allowsHitTesting(false)
+                }
+                TextField("", text: $searchText)
+                    .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                    .foregroundStyle(ink)
+                    .tint(ink)
+                    .focused($searchFocused)
+                    .autocorrectionDisabled()
+                    .textInputAutocapitalization(.never)
+            }
 
             if !searchText.isEmpty {
                 Button {
@@ -206,9 +215,14 @@ struct LibraryView: View {
     private func sectionHeaderContent(subject: Subject, unlocked: Bool) -> some View {
         HStack(spacing: 10) {
             HStack(spacing: 8) {
-                Image(systemName: unlocked ? subject.icon : "lock.fill")
-                    .font(.system(size: 14, weight: .heavy))
-                    .foregroundStyle(.white)
+                if unlocked {
+                    Text(subject.emoji)
+                        .font(.system(size: 16))
+                } else {
+                    Image(systemName: "lock.fill")
+                        .font(.system(size: 12, weight: .heavy))
+                        .foregroundStyle(.white)
+                }
                 Text(subject.shortName.uppercased())
                     .font(.system(.caption, design: .rounded, weight: .heavy))
                     .foregroundStyle(.white)
@@ -250,9 +264,14 @@ struct LibraryView: View {
         VStack(alignment: .leading, spacing: 14) {
             HStack(spacing: 10) {
                 HStack(spacing: 8) {
-                    Image(systemName: unlocked ? subject.icon : "lock.fill")
-                        .font(.system(size: 14, weight: .heavy))
-                        .foregroundStyle(.white)
+                    if unlocked {
+                        Text(subject.emoji)
+                            .font(.system(size: 16))
+                    } else {
+                        Image(systemName: "lock.fill")
+                            .font(.system(size: 12, weight: .heavy))
+                            .foregroundStyle(.white)
+                    }
                     Text(subject.shortName.uppercased())
                         .font(.system(.caption, design: .rounded, weight: .heavy))
                         .foregroundStyle(.white)
@@ -374,16 +393,19 @@ struct LibraryCardView: View {
             .frame(height: 110)
             .overlay {
                 if let uiImage = CourseImageMap.loadImage(for: course.id) {
-                    Image(uiImage: uiImage)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
+                    Color.clear
+                        .overlay {
+                            Image(uiImage: uiImage)
+                                .resizable()
+                                .scaledToFill()
+                        }
+                        .clipped()
                         .allowsHitTesting(false)
                 } else {
                     ZStack {
                         pastel
-                        Image(systemName: course.subject.icon)
-                            .font(.system(size: 36, weight: .light))
-                            .foregroundStyle(ink.opacity(0.25))
+                        Text(course.subject.emoji)
+                            .font(.system(size: 36))
                     }
                 }
             }

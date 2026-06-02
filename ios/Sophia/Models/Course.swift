@@ -30,6 +30,17 @@ nonisolated enum Subject: String, Codable, CaseIterable, Sendable {
         }
     }
 
+    var emoji: String {
+        switch self {
+        case .histoire: "🗽"
+        case .sciences: "🦠"
+        case .litterature: "📖"
+        case .art: "🎨"
+        case .mythologie: "⚡️"
+        case .comprendreLeMonde: "🌍"
+        }
+    }
+
     var shortName: String {
         switch self {
         case .histoire: "Histoire"
@@ -53,6 +64,7 @@ nonisolated struct QuizQuestion: Codable, Identifiable, Sendable {
     let question: String
     let options: [String]
     let correctIndex: Int
+    let explanation: String
 }
 
 nonisolated struct Course: Codable, Identifiable, Sendable, Equatable {

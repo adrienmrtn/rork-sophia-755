@@ -2,97 +2,110 @@ import SwiftUI
 
 struct OnboardingWelcomeScreen: View {
     let onNext: () -> Void
-    @State private var titleAppeared: Bool = true
-    @State private var visibleQuestions: Int = 3
-    @State private var subtitleAppeared: Bool = true
-    @State private var ctaAppeared: Bool = true
+    @State private var titleAppeared: Bool = false
+    @State private var pillAppeared: Bool = false
+    @State private var ctaAppeared: Bool = false
+    @State private var subjectIndex: Int = 0
+    @State private var pillOpacity: Double = 1
+    @State private var pillOffset: CGFloat = 0
+    @State private var rotationTimer: Timer?
 
-    private let questions: [String] = [
-        "Sais-tu pourquoi la Joconde est vraiment connue ?",
-        "Saurais-tu expliquer pourquoi l'Empire Romain a chuté ?",
-        "Savais-tu que le micro-ondes a été découvert car une barre chocolatée avait fondu devant un radar militaire ?",
+    private let subjects: [(label: String, colorIndex: Int)] = [
+        ("l'art", 3),
+        ("l'histoire", 0),
+        ("les sciences", 1),
+        ("la littérature", 2),
+        ("la mythologie", 4),
+        ("le monde actuel", 5),
     ]
 
     var body: some View {
         ZStack {
-            BrutalPalette.cream.ignoresSafeArea()
+            BrutalPalette.cream
 
             VStack(spacing: 0) {
-                Spacer(minLength: 24)
+                Spacer()
 
-                VStack(alignment: .leading, spacing: 28) {
-                    Text("Saurais-tu répondre\nà ces questions ?")
+                VStack(spacing: 24) {
+                    Text("Sophia est ton partenaire pour maîtriser")
                         .font(.system(.largeTitle, design: .rounded, weight: .heavy))
                         .foregroundStyle(BrutalPalette.ink)
-                        .multilineTextAlignment(.leading)
-                        .fixedSize(horizontal: false, vertical: true)
-                        .opacity(titleAppeared ? 1 : 0)
-                        .offset(y: titleAppeared ? 0 : 20)
-
-                    VStack(alignment: .leading, spacing: 16) {
-                        ForEach(0..<questions.count, id: \.self) { index in
-                            QuestionRow(text: questions[index])
-                                .opacity(index < visibleQuestions ? 1 : 0)
-                                .offset(y: index < visibleQuestions ? 0 : 18)
-                                .scaleEffect(index < visibleQuestions ? 1 : 0.96, anchor: .leading)
-                        }
-                    }
-                }
-                .padding(.horizontal, 24)
-
-                Spacer(minLength: 24)
-
-                VStack(spacing: 18) {
-                    Text("Sophia t'aide à répondre à ces questions tous les jours, et de manière passionnante.")
-                        .font(.system(.body, design: .rounded, weight: .semibold))
-                        .foregroundStyle(BrutalPalette.ink.opacity(0.65))
                         .multilineTextAlignment(.center)
-                        .padding(.horizontal, 24)
-                        .opacity(subtitleAppeared ? 1 : 0)
-                        .offset(y: subtitleAppeared ? 0 : 16)
+                        .fixedSize(horizontal: false, vertical: true)
 
-                    OnboardingPrimaryButton(title: "Continuer →", action: handleNext)
-                        .opacity(ctaAppeared ? 1 : 0)
-                        .offset(y: ctaAppeared ? 0 : 24)
+                    rotatingSubjectPill
                 }
+                .padding(.horizontal, 28)
+                .opacity(titleAppeared ? 1 : 0)
+                .offset(y: titleAppeared ? 0 : 20)
+
+                Spacer()
+
+                OnboardingPrimaryButton(title: "Suivant", action: handleNext)
+                    .opacity(ctaAppeared ? 1 : 0)
+                    .offset(y: ctaAppeared ? 0 : 24)
+            }
+            .padding(.top, 16)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(BrutalPalette.cream)
+        .onOnboardingSlideSettled {
+            withAnimation(.spring(response: 0.6, dampingFraction: 0.78)) {
+                titleAppeared = true
+            }
+            withAnimation(.spring(response: 0.6, dampingFraction: 0.78).delay(0.2)) {
+                pillAppeared = true
+            }
+            withAnimation(.spring(response: 0.6, dampingFraction: 0.78).delay(0.38)) {
+                ctaAppeared = true
+            }
+            startSubjectRotation()
+        }
+        .onDisappear {
+            rotationTimer?.invalidate()
+            rotationTimer = nil
+        }
+    }
+
+    private var rotatingSubjectPill: some View {
+        let subject = subjects[subjectIndex]
+        return Text(subject.label)
+            .font(.system(.title2, design: .rounded, weight: .heavy))
+            .foregroundStyle(BrutalPalette.ink)
+            .padding(.horizontal, 20)
+            .padding(.vertical, 12)
+            .background(OnboardingPastels.at(subject.colorIndex), in: .capsule)
+            .overlay {
+                Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 2.5)
+            }
+            .opacity(pillOpacity * (pillAppeared ? 1 : 0))
+            .offset(y: pillOffset)
+    }
+
+    private func startSubjectRotation() {
+        rotationTimer?.invalidate()
+        rotationTimer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { _ in
+            cycleSubject()
+        }
+    }
+
+    private func cycleSubject() {
+        withAnimation(.easeOut(duration: 0.2)) {
+            pillOpacity = 0
+            pillOffset = -8
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.22) {
+            subjectIndex = (subjectIndex + 1) % subjects.count
+            pillOffset = 8
+            withAnimation(.spring(response: 0.45, dampingFraction: 0.75)) {
+                pillOpacity = 1
+                pillOffset = 0
             }
         }
-
     }
 
     private func handleNext() {
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
         onNext()
-    }
-}
-
-private struct QuestionRow: View {
-    let text: String
-
-    var body: some View {
-        HStack(alignment: .top, spacing: 12) {
-            Circle()
-                .fill(BrutalPalette.ink)
-                .frame(width: 8, height: 8)
-                .padding(.top, 8)
-
-            Text(text)
-                .font(.system(.body, design: .rounded, weight: .semibold))
-                .foregroundStyle(BrutalPalette.ink)
-                .multilineTextAlignment(.leading)
-                .fixedSize(horizontal: false, vertical: true)
-        }
-        .padding(.vertical, 14)
-        .padding(.horizontal, 16)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(
-            RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .fill(.white)
-        )
-        .overlay(
-            RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .stroke(BrutalPalette.ink, lineWidth: 2)
-        )
-        .shadow(color: BrutalPalette.ink.opacity(0.12), radius: 0, x: 3, y: 3)
     }
 }

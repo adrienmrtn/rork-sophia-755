@@ -9,12 +9,11 @@ class OnboardingViewModel {
     var phoneTimeSelection: Int? = nil
     var objectives: Set<String> = []
     var interests: Set<String> = OnboardingViewModel.loadPersistedInterests()
-    var loadingProgress: Double = 0
-    var loadingStep: String = ""
+    var loadingBarProgress: [Double] = [0, 0, 0]
     var isLoadingComplete: Bool = false
     var dailyLearningGoal: Int = 1
 
-    let totalScreens = 13
+    let totalScreens = 11
     let dailyLearningGoalRange: ClosedRange<Int> = 1...5
 
     var projectedYearlyLearnings: Int {
@@ -23,6 +22,17 @@ class OnboardingViewModel {
 
     var dailyLearningGoalLabel: String {
         dailyLearningGoal == 1 ? "apprentissage" : "apprentissages"
+    }
+
+    var phoneHoursPerDayLabel: String {
+        guard let selection = phoneTimeSelection else { return "" }
+        switch selection {
+        case 0: return "1 heure"
+        case 1: return "2 heures"
+        case 2: return "3 heures"
+        case 3: return "5 heures"
+        default: return ""
+        }
     }
 
     var wastedTimePerYear: String {
@@ -126,30 +136,26 @@ class OnboardingViewModel {
     }
 
     func startProfileLoading() {
-        loadingProgress = 0
+        loadingBarProgress = [0, 0, 0]
         isLoadingComplete = false
 
-        let steps = [
-            "Analyse de tes objectifs...",
-            "Sélection des sujets...",
-            "Personnalisation du contenu...",
-            "Création de ton profil..."
-        ]
+        let barDuration: Double = 2.0
+        let barStarts: [Double] = [0, 1.2, 2.4]
 
-        for (index, step) in steps.enumerated() {
-            let delay = Double(index) * 1.0
-            let progress = Double(index + 1) / Double(steps.count)
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
+        for (index, start) in barStarts.enumerated() {
+            DispatchQueue.main.asyncAfter(deadline: .now() + start) { [weak self] in
                 guard let self else { return }
-                withAnimation(.easeInOut(duration: 0.4)) {
-                    self.loadingStep = step
-                    self.loadingProgress = progress
+                withAnimation(.easeInOut(duration: barDuration)) {
+                    var bars = self.loadingBarProgress
+                    guard bars.indices.contains(index) else { return }
+                    bars[index] = 1.0
+                    self.loadingBarProgress = bars
                 }
             }
         }
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4.2) { [weak self] in
+        let totalDuration = barStarts.last! + barDuration + 0.2
+        DispatchQueue.main.asyncAfter(deadline: .now() + totalDuration) { [weak self] in
             guard let self else { return }
             self.isLoadingComplete = true
         }

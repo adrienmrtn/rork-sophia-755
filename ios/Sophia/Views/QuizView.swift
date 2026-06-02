@@ -25,16 +25,22 @@ struct QuizView: View {
     @State private var ringProgress: CGFloat = 0
     @State private var xpScreenAppeared: Bool = false
     @State private var xpBarAnimated: Bool = false
+    @State private var xpBarFill: CGFloat = 0
     @State private var displayedXP: Int = 0
     @State private var xpButtonAppeared: Bool = false
     @State private var levelUpBounce: Int = 0
     @State private var glowPulse: Bool = false
+    @State private var showLevelUpCelebration: Bool = false
+    @State private var xpBarShimmer: CGFloat = -80
+    @State private var xpBarShimmerActive: Bool = false
+    @State private var cachedCourseThumb: UIImage?
     @State private var shuffledQuestions: [ShuffledQuestion] = []
     @State private var questionAppeared: Bool = false
     @State private var comboCount: Int = 0
     @State private var showCombo: Bool = false
     @State private var xpEarned: Int = 0
     @State private var showXPPopup: Bool = false
+    @State private var popupXPAmount: Int = 0
 
     /// Fixed XP bonus awarded when the quiz is fully completed.
     private let quizCompletionXPBonus: Int = 10
@@ -102,6 +108,17 @@ struct QuizView: View {
                     .zIndex(20)
             }
         }
+        .fullScreenCover(isPresented: $showLevelUpCelebration) {
+            LevelUpCelebrationView(
+                subject: course.subject,
+                previousLevel: levelBefore,
+                newLevel: levelAfter,
+                onContinue: {
+                    showLevelUpCelebration = false
+                    revealXPContinueButton()
+                }
+            )
+        }
         .onAppear {
             streakBefore = progressManager.streak
             completedBefore = progressManager.completedCount
@@ -118,7 +135,8 @@ struct QuizView: View {
             return ShuffledQuestion(
                 question: q.question,
                 options: indexedOptions.map(\.1),
-                correctIndex: newCorrectIndex
+                correctIndex: newCorrectIndex,
+                explanation: q.explanation
             )
         }
         questionAppeared = false
@@ -173,9 +191,8 @@ struct QuizView: View {
                 .offset(y: 6)
             VStack(alignment: .leading, spacing: 12) {
                 HStack(spacing: 6) {
-                    Image(systemName: course.subject.icon)
-                        .font(.caption2.weight(.bold))
-                        .foregroundStyle(.white)
+                    Text(course.subject.emoji)
+                        .font(.system(size: 14))
                     Text(course.subject.shortName.uppercased())
                         .font(.system(.caption, design: .rounded, weight: .heavy))
                         .foregroundStyle(.white)
@@ -325,29 +342,14 @@ struct QuizView: View {
                         .foregroundStyle(ink)
                         .multilineTextAlignment(.leading)
                         .fixedSize(horizontal: false, vertical: true)
+                        .frame(maxWidth: .infinity, alignment: .leading)
 
-                    Spacer(minLength: 4)
-
-                    if hasAnswered && index == currentQuestion.correctIndex {
-                        Image(systemName: "checkmark")
-                            .font(.system(.headline, weight: .black))
-                            .foregroundStyle(.white)
-                            .frame(width: 32, height: 32)
-                            .background(mint, in: Circle())
-                            .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
-                            .transition(.scale.combined(with: .opacity))
-                    } else if hasAnswered && index == selectedOptionIndex && !isCorrect {
-                        Image(systemName: "xmark")
-                            .font(.system(.headline, weight: .black))
-                            .foregroundStyle(.white)
-                            .frame(width: 32, height: 32)
-                            .background(coral, in: Circle())
-                            .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
-                            .transition(.scale.combined(with: .opacity))
-                    }
+                    optionTrailingIcon(for: index)
+                        .frame(width: 32, height: 32)
                 }
                 .padding(.horizontal, 16)
                 .padding(.vertical, 16)
+                .frame(minHeight: 76)
                 .background(optionCardBg(for: index))
                 .clipShape(.rect(cornerRadius: 18))
                 .overlay {
@@ -364,30 +366,53 @@ struct QuizView: View {
     private func optionCardBg(for index: Int) -> Color {
         guard hasAnswered else { return Color.white }
         if index == currentQuestion.correctIndex { return mint }
-        if index == selectedOptionIndex { return coral }
-        return Color.white.opacity(0.6)
+        if index == selectedOptionIndex, index != currentQuestion.correctIndex { return coral }
+        return Color.white
     }
 
     private func optionLetterFg(for index: Int) -> Color {
-        guard hasAnswered else { return ink }
-        if index == currentQuestion.correctIndex { return ink }
-        if index == selectedOptionIndex { return ink }
-        return ink.opacity(0.4)
+        ink
     }
 
     private func optionLetterBg(for index: Int) -> some ShapeStyle {
-        guard hasAnswered else { return AnyShapeStyle(yellow) }
-        if index == currentQuestion.correctIndex { return AnyShapeStyle(Color.white) }
-        if index == selectedOptionIndex { return AnyShapeStyle(Color.white) }
-        return AnyShapeStyle(Color.white.opacity(0.5))
+        if hasAnswered,
+           index == currentQuestion.correctIndex || (index == selectedOptionIndex && index != currentQuestion.correctIndex) {
+            return AnyShapeStyle(Color.white)
+        }
+        return AnyShapeStyle(yellow)
+    }
+
+    @ViewBuilder
+    private func optionTrailingIcon(for index: Int) -> some View {
+        if hasAnswered && index == currentQuestion.correctIndex {
+            Image(systemName: "checkmark")
+                .font(.system(.headline, weight: .black))
+                .foregroundStyle(.white)
+                .frame(width: 32, height: 32)
+                .background(mint, in: Circle())
+                .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
+                .transition(.scale.combined(with: .opacity))
+        } else if hasAnswered && index == selectedOptionIndex && !isCorrect {
+            Image(systemName: "xmark")
+                .font(.system(.headline, weight: .black))
+                .foregroundStyle(.white)
+                .frame(width: 32, height: 32)
+                .background(coral, in: Circle())
+                .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
+                .transition(.scale.combined(with: .opacity))
+        } else {
+            Color.clear
+                .frame(width: 32, height: 32)
+        }
     }
 
     private func showXPBubble(xp: Int) {
-        withAnimation(.spring(response: 0.3, dampingFraction: 0.6)) {
+        popupXPAmount = xp
+        withAnimation(.spring(response: 0.35, dampingFraction: 0.72)) {
             showXPPopup = true
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-            withAnimation(.easeOut(duration: 0.3)) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            withAnimation(.easeOut(duration: 0.35)) {
                 showXPPopup = false
             }
         }
@@ -401,7 +426,7 @@ struct QuizView: View {
                 Image(systemName: "star.fill")
                     .font(.subheadline.weight(.heavy))
                     .foregroundStyle(ink)
-                Text("+\(comboCount >= 3 ? 3 : (comboCount >= 2 ? 2 : 1)) XP")
+                Text("+\(popupXPAmount) XP")
                     .font(.system(.headline, design: .rounded, weight: .heavy))
                     .foregroundStyle(ink)
             }
@@ -409,9 +434,15 @@ struct QuizView: View {
             .padding(.vertical, 10)
             .background(yellow, in: Capsule())
             .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
-            .shadow(color: ink.opacity(0.9), radius: 0, x: 0, y: 4)
+            .background(alignment: .top) {
+                Capsule()
+                    .fill(ink)
+                    .offset(y: 3)
+            }
+            .padding(.bottom, 3)
             Spacer()
         }
+        .allowsHitTesting(false)
     }
 
     private var brutalFeedbackBar: some View {
@@ -455,6 +486,14 @@ struct QuizView: View {
                                     .font(.system(.caption, design: .rounded, weight: .heavy))
                             }
                             .foregroundStyle(ink)
+                        }
+
+                        if !currentQuestion.explanation.isEmpty {
+                            Text(currentQuestion.explanation)
+                                .font(.system(.subheadline, design: .rounded, weight: .medium))
+                                .foregroundStyle(ink.opacity(0.85))
+                                .fixedSize(horizontal: false, vertical: true)
+                                .padding(.top, 4)
                         }
                     }
 
@@ -760,6 +799,21 @@ struct QuizView: View {
         return min(1.0, max(0.0, Double(displayedXP - t.lower) / Double(span)))
     }
 
+    private var barFractionBefore: Double {
+        let t = ProgressManager.subjectXPTiers.last(where: { subjectXPBefore >= $0.lower }) ?? ProgressManager.subjectXPTiers[0]
+        if t.level == 5 { return 1.0 }
+        let span = max(1, t.upper - t.lower)
+        return min(1.0, max(0.0, Double(subjectXPBefore - t.lower) / Double(span)))
+    }
+
+    private var targetBarProgress: Double {
+        let xp = progressManager.xp(for: course.subject)
+        let t = ProgressManager.subjectXPTiers.last(where: { xp >= $0.lower }) ?? ProgressManager.subjectXPTiers[0]
+        if t.level == 5 { return 1.0 }
+        let span = max(1, t.upper - t.lower)
+        return min(1.0, max(0.0, Double(xp - t.lower) / Double(span)))
+    }
+
     private var didLevelUp: Bool {
         let before = ProgressManager.subjectXPTiers.last(where: { subjectXPBefore >= $0.lower })?.level ?? 1
         let after = ProgressManager.subjectXPTiers.last(where: { progressManager.xp(for: course.subject) >= $0.lower })?.level ?? 1
@@ -771,6 +825,8 @@ struct QuizView: View {
         xpBarAnimated = false
         xpButtonAppeared = false
         displayedXP = subjectXPBefore
+        xpBarFill = XPProgressAnimator.barFraction(for: subjectXPBefore)
+        cachedCourseThumb = CourseImageMap.loadImage(for: course.id)
         confettiTrigger += 1
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
@@ -780,26 +836,58 @@ struct QuizView: View {
             UINotificationFeedbackGenerator().notificationOccurred(.success)
         }
 
-        // Animate the XP counter + progress bar from the pre-quiz value to the new value.
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.55) {
-            withAnimation(.easeOut(duration: 1.1)) {
-                xpBarAnimated = true
-                displayedXP = progressManager.xp(for: course.subject)
-            }
-            UIImpactFeedbackGenerator(style: .light).impactOccurred()
-            if didLevelUp {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-                    levelUpBounce += 1
-                    UINotificationFeedbackGenerator().notificationOccurred(.success)
-                }
-            }
-        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.65) {
+            xpBarAnimated = true
+            xpBarShimmerActive = true
+            ShimmerAnimation.runLoop(offset: $xpBarShimmer) { xpBarShimmerActive }
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.8) {
+            let endXP = progressManager.xp(for: course.subject)
+            XPProgressAnimator.animate(
+                from: subjectXPBefore,
+                to: endXP,
+                setXP: { displayedXP = $0 },
+                setLevel: { _ in },
+                setBarFill: { fill, animated in
+                    if animated {
+                        xpBarFill = fill
+                    } else {
+                        var transaction = Transaction()
+                        transaction.disablesAnimations = true
+                        withTransaction(transaction) { xpBarFill = fill }
+                    }
+                },
+                haptic: {
+                    XPProgressAnimator.progressionHaptic(intensity: 0.62)
+                    UIImpactFeedbackGenerator(style: .rigid).impactOccurred(intensity: 0.35)
+                },
+                completion: {
+                    xpBarShimmerActive = false
+                    displayedXP = endXP
+                    UINotificationFeedbackGenerator().notificationOccurred(.success)
+                    if didLevelUp {
+                        showLevelUpCelebration = true
+                    } else {
+                        revealXPContinueButton()
+                    }
+                }
+            )
+        }
+    }
+
+    private func revealXPContinueButton() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
             withAnimation(.spring(response: 0.5, dampingFraction: 0.8)) {
                 xpButtonAppeared = true
             }
         }
+    }
+
+    private var levelBefore: Int {
+        ProgressManager.subjectXPTiers.last(where: { subjectXPBefore >= $0.lower })?.level ?? 1
+    }
+
+    private var levelAfter: Int {
+        ProgressManager.subjectXPTiers.last(where: { progressManager.xp(for: course.subject) >= $0.lower })?.level ?? 1
     }
 
     private var xpProgressionView: some View {
@@ -813,11 +901,9 @@ struct QuizView: View {
             VStack(spacing: 22) {
                 Spacer(minLength: 12)
 
-                // Subject pill
                 HStack(spacing: 8) {
-                    Image(systemName: course.subject.icon)
-                        .font(.system(.subheadline, weight: .heavy))
-                        .foregroundStyle(.white)
+                    Text(course.subject.emoji)
+                        .font(.system(size: 16))
                     Text(course.subject.shortName.uppercased())
                         .font(.system(.subheadline, design: .rounded, weight: .heavy))
                         .foregroundStyle(.white)
@@ -829,34 +915,36 @@ struct QuizView: View {
                 .scaleEffect(xpScreenAppeared ? 1 : 0.6)
                 .opacity(xpScreenAppeared ? 1 : 0)
 
-                // Big XP star badge with level
                 ZStack {
                     RoundedRectangle(cornerRadius: 32, style: .continuous)
                         .fill(ink)
                         .frame(width: 200, height: 200)
                         .offset(y: 8)
                     ZStack {
-                        Circle()
-                            .fill(yellow)
+                        RoundedRectangle(cornerRadius: 28, style: .continuous)
+                            .fill(yellow.opacity(0.35))
                             .frame(width: 200, height: 200)
-                            .overlay { Circle().strokeBorder(ink, lineWidth: 3.5) }
-                        VStack(spacing: 2) {
-                            Image(systemName: "star.fill")
-                                .font(.system(size: 56, weight: .black))
-                                .foregroundStyle(ink)
-                                .symbolEffect(.bounce, value: levelUpBounce)
-                                .scaleEffect(glowPulse ? 1.05 : 1.0)
-                            Text("NIV. \(subjectTier.level)")
-                                .font(.system(.title3, design: .rounded, weight: .black))
-                                .foregroundStyle(ink)
-                                .tracking(0.6)
-                                .contentTransition(.numericText())
+                            .overlay {
+                                RoundedRectangle(cornerRadius: 28, style: .continuous)
+                                    .strokeBorder(ink, lineWidth: 3.5)
+                            }
+                        if let thumb = cachedCourseThumb {
+                            Color.clear
+                                .frame(width: 200, height: 200)
+                                .overlay {
+                                    Image(uiImage: thumb)
+                                        .resizable()
+                                        .scaledToFill()
+                                }
+                                .clipShape(RoundedRectangle(cornerRadius: 28, style: .continuous))
+                        } else {
+                            SubjectBadgeView(subject: course.subject, emojiSize: 72, cornerRadius: 28)
+                                .frame(width: 200, height: 200)
                         }
                     }
                     .scaleEffect(xpScreenAppeared ? 1 : 0.3)
                 }
 
-                // Title + total XP
                 VStack(spacing: 6) {
                     Text(didLevelUp ? "Niveau supérieur !" : "Progression XP")
                         .font(.system(.title, design: .rounded, weight: .black))
@@ -867,7 +955,7 @@ struct QuizView: View {
                         Text("\(displayedXP)")
                             .font(.system(size: 44, weight: .black, design: .rounded))
                             .foregroundStyle(ink)
-                            .contentTransition(.numericText(countsDown: false))
+                            .monospacedDigit()
                         Text("XP")
                             .font(.system(.title2, design: .rounded, weight: .heavy))
                             .foregroundStyle(ink.opacity(0.55))
@@ -875,7 +963,6 @@ struct QuizView: View {
                     .opacity(xpScreenAppeared ? 1 : 0)
                 }
 
-                // Progress bar with neo-brutalist style
                 VStack(alignment: .leading, spacing: 6) {
                     ZStack(alignment: .leading) {
                         Capsule()
@@ -890,8 +977,24 @@ struct QuizView: View {
                                     .frame(height: 22)
                                 Capsule()
                                     .fill(pink)
+                                    .overlay {
+                                        Capsule()
+                                            .fill(
+                                                LinearGradient(
+                                                    colors: [.clear, .white.opacity(0.45), .clear],
+                                                    startPoint: .leading,
+                                                    endPoint: .trailing
+                                                )
+                                            )
+                                            .mask {
+                                                Rectangle()
+                                                    .frame(width: 60, height: 22)
+                                                    .offset(x: xpBarShimmer)
+                                            }
+                                            .allowsHitTesting(false)
+                                    }
                                     .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
-                                    .frame(width: max(geo.size.width * subjectTierProgress, 22), height: 22)
+                                    .frame(width: max(geo.size.width * xpBarFill, 22), height: 22)
                             }
                         }
                         .frame(height: 22)
@@ -901,7 +1004,6 @@ struct QuizView: View {
                     Text(xpProgressLabel)
                         .font(.system(.caption, design: .rounded, weight: .heavy))
                         .foregroundStyle(ink.opacity(0.6))
-                        .contentTransition(.numericText())
                 }
                 .padding(.horizontal, 24)
                 .opacity(xpScreenAppeared ? 1 : 0)

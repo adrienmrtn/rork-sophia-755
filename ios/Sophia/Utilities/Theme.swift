@@ -1,4 +1,19 @@
 import SwiftUI
+import UIKit
+
+enum SophiaTabBarStyle {
+    static func apply() {
+        let cream = UIColor(red: 0.984, green: 0.961, blue: 0.918, alpha: 1)
+        let appearance = UITabBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = cream
+        appearance.shadowColor = UIColor.black.withAlphaComponent(0.08)
+        UITabBar.appearance().standardAppearance = appearance
+        UITabBar.appearance().scrollEdgeAppearance = appearance
+        UITabBar.appearance().tintColor = .black
+        UITabBar.appearance().unselectedItemTintColor = UIColor.black.withAlphaComponent(0.35)
+    }
+}
 
 enum SophiaTheme {
     static let background = Color(red: 0.04, green: 0.086, blue: 0.157)

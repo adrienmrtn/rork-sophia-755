@@ -3,9 +3,10 @@ import StoreKit
 
 struct OnboardingSocialProofScreen: View {
     let onNext: () -> Void
-    @State private var appeared: Bool = true
     @State private var percentValue: Int = 0
     @State private var showReviews: Bool = false
+    @State private var showHeader: Bool = false
+    @State private var didRequestReview: Bool = false
 
     private let reviews: [(name: String, text: String, stars: Int, photoFile: String, accent: Color)] = [
         ("Lucas M.", "Je me sentais nul en culture G, maintenant j'ai toujours un truc intéressant à raconter.", 5, "lucas_m_profile", Color(red: 0.66, green: 0.92, blue: 0.96)),
@@ -14,15 +15,12 @@ struct OnboardingSocialProofScreen: View {
     ]
 
     var body: some View {
-        ZStack {
-            BrutalPalette.cream.ignoresSafeArea()
-
-            VStack(spacing: 0) {
-                Spacer().frame(height: 50)
+        VStack(spacing: 0) {
+            Spacer().frame(height: 50)
 
                 VStack(spacing: 18) {
                     BrutalPill(text: "Avis vérifiés", icon: "star.fill", background: BrutalPalette.pink, foreground: BrutalPalette.ink)
-                        .opacity(appeared ? 1 : 0)
+                        .opacity(showHeader ? 1 : 0)
 
                     HStack(alignment: .firstTextBaseline, spacing: 4) {
                         Text("\(percentValue)")
@@ -33,13 +31,13 @@ struct OnboardingSocialProofScreen: View {
                             .font(.system(.largeTitle, design: .rounded, weight: .heavy))
                             .foregroundStyle(BrutalPalette.ink)
                     }
-                    .opacity(appeared ? 1 : 0)
+                    .opacity(showHeader ? 1 : 0)
 
                     Text("des utilisateurs se sentent\nplus intéressants et à l'aise\nen société grâce à Sophia.")
                         .font(.system(.body, design: .rounded, weight: .semibold))
                         .foregroundStyle(BrutalPalette.ink.opacity(0.65))
                         .multilineTextAlignment(.center)
-                        .opacity(appeared ? 1 : 0)
+                        .opacity(showHeader ? 1 : 0)
                 }
                 .padding(.horizontal, 24)
 
@@ -67,19 +65,17 @@ struct OnboardingSocialProofScreen: View {
 
                 OnboardingPrimaryButton(title: "Continuer", action: onNext)
                     .opacity(showReviews ? 1 : 0)
-            }
         }
-        .onAppear {
-            withAnimation(.spring(response: 0.5).delay(0.2)) {
-                appeared = true
+        .onboardingFullBleedBackground(BrutalPalette.cream)
+        .onOnboardingSlideSettled {
+            withAnimation(.spring(response: 0.5).delay(0.1)) {
+                showHeader = true
             }
             animatePercent()
         }
     }
 
     private func animatePercent() {
-        let generator = UIImpactFeedbackGenerator(style: .light)
-        generator.prepare()
         let steps = 30
         let interval = 1.2 / Double(steps)
 
@@ -93,21 +89,25 @@ struct OnboardingSocialProofScreen: View {
                 withAnimation(.snappy(duration: 0.08)) {
                     percentValue = value
                 }
-                if step % 4 == 0 {
-                    generator.impactOccurred(intensity: 0.3 + 0.7 * progress)
-                }
+                OnboardingHaptics.counterTick(progress: progress)
             }
         }
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.8) {
-            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+            OnboardingHaptics.counterComplete()
             withAnimation(.spring(response: 0.5)) {
                 showReviews = true
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
-                    SKStoreReviewController.requestReview(in: scene)
-                }
+            requestAppReviewOnce()
+        }
+    }
+
+    private func requestAppReviewOnce() {
+        guard !didRequestReview else { return }
+        didRequestReview = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+            if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+                SKStoreReviewController.requestReview(in: scene)
             }
         }
     }
@@ -130,7 +130,7 @@ private struct ReviewCard: View {
                     Text(name)
                         .font(.system(.subheadline, design: .rounded, weight: .heavy))
                         .foregroundStyle(BrutalPalette.ink)
-                    Spacer()
+                    Spacer(minLength: 0)
                     HStack(spacing: 2) {
                         ForEach(0..<stars, id: \.self) { _ in
                             Image(systemName: "star.fill")
@@ -141,18 +141,14 @@ private struct ReviewCard: View {
                 }
                 Text(text)
                     .font(.system(.caption, design: .rounded, weight: .semibold))
-                    .foregroundStyle(BrutalPalette.ink.opacity(0.7))
+                    .foregroundStyle(BrutalPalette.ink.opacity(0.72))
                     .fixedSize(horizontal: false, vertical: true)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
         }
         .padding(14)
-        .background(BrutalPalette.cream, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
-        .overlay {
-            RoundedRectangle(cornerRadius: 14, style: .continuous)
-                .strokeBorder(BrutalPalette.ink, lineWidth: 2.5)
-        }
-        .shadow(color: BrutalPalette.ink.opacity(0.16), radius: 0, x: 0, y: 3)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .brutalOnboardingCard(depth: 3, corner: 14)
     }
 }
 

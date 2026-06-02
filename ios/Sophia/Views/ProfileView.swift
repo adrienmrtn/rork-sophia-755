@@ -120,26 +120,23 @@ struct ProfileView: View {
                 .offset(y: 6)
 
             VStack(alignment: .leading, spacing: 18) {
-                HStack(alignment: .top) {
-                    VStack(alignment: .leading, spacing: 6) {
-                        Text("🔥")
-                            .font(.system(size: 56))
-                        HStack(alignment: .firstTextBaseline, spacing: 8) {
-                            Text("\(streak)")
-                                .font(.system(size: 64, weight: .heavy, design: .rounded))
-                                .foregroundStyle(ink)
-                                .contentTransition(.numericText())
-                            Text(streak <= 1 ? "JOUR" : "JOURS")
-                                .font(.system(.headline, design: .rounded, weight: .heavy))
-                                .foregroundStyle(ink)
-                                .tracking(1)
-                        }
-                        Text(streakSubtitle(streak))
-                            .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                            .foregroundStyle(ink.opacity(0.65))
+                HStack(alignment: .center, spacing: 10) {
+                    AnimatedFlameBadge(size: 44, showGlow: false)
+                    HStack(alignment: .firstTextBaseline, spacing: 8) {
+                        Text("\(streak)")
+                            .font(.system(size: 64, weight: .heavy, design: .rounded))
+                            .foregroundStyle(ink)
+                            .contentTransition(.numericText())
+                        Text(streak <= 1 ? "JOUR" : "JOURS")
+                            .font(.system(.headline, design: .rounded, weight: .heavy))
+                            .foregroundStyle(ink)
+                            .tracking(1)
                     }
-                    Spacer()
                 }
+
+                Text(streakSubtitle(streak))
+                    .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                    .foregroundStyle(ink.opacity(0.65))
 
                 weekStrip
             }
@@ -396,7 +393,7 @@ struct ProfileView: View {
             }
             .padding(.horizontal, 8)
 
-            VStack(spacing: 14) {
+            LazyVGrid(columns: [GridItem(.flexible(), spacing: 14), GridItem(.flexible(), spacing: 14)], spacing: 14) {
                 ForEach(Subject.allCases, id: \.self) { subject in
                     let unlocked = unlockedSubjects.contains(subject)
                     SubjectProgressCard(
@@ -445,65 +442,64 @@ private struct SubjectProgressCard: View {
                 .fill(ink)
                 .offset(y: 4)
 
-            HStack(spacing: 14) {
-                // Subject icon badge
-                ZStack {
-                    RoundedRectangle(cornerRadius: 12, style: .continuous)
-                        .fill(unlocked ? BrutalPalette.pastel(for: subject) : Color(white: 0.92))
-                        .overlay {
-                            RoundedRectangle(cornerRadius: 12, style: .continuous)
-                                .strokeBorder(ink, lineWidth: 2)
-                        }
-                    Image(systemName: unlocked ? subject.icon : "lock.fill")
-                        .font(.system(size: 18, weight: .heavy))
-                        .foregroundStyle(unlocked ? ink : ink.opacity(0.55))
-                }
-                .frame(width: 48, height: 48)
+            VStack(alignment: .leading, spacing: 10) {
+                SubjectBadgeView(subject: subject, unlocked: unlocked, emojiSize: 36, cornerRadius: 14)
+                    .frame(width: 56, height: 56)
 
-                VStack(alignment: .leading, spacing: 6) {
-                    HStack(spacing: 8) {
-                        Text(subject.shortName)
-                            .font(.system(.headline, design: .rounded, weight: .heavy))
-                            .foregroundStyle(unlocked ? ink : ink.opacity(0.45))
-                        if unlocked {
-                            Text("NIV. \(currentTier.level)")
-                                .font(.system(.caption2, design: .rounded, weight: .heavy))
-                                .foregroundStyle(.white)
-                                .tracking(0.6)
-                                .padding(.horizontal, 8)
-                                .padding(.vertical, 3)
-                                .background(ink, in: Capsule())
+                Text(subject.shortName)
+                    .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                    .foregroundStyle(unlocked ? ink : ink.opacity(0.45))
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.85)
+
+                if unlocked {
+                    Text("NIV. \(currentTier.level)")
+                        .font(.system(.caption2, design: .rounded, weight: .heavy))
+                        .foregroundStyle(.white)
+                        .tracking(0.6)
+                        .padding(.horizontal, 8)
+                        .padding(.vertical, 3)
+                        .background(ink, in: Capsule())
+
+                    GeometryReader { geo in
+                        ZStack(alignment: .leading) {
+                            Capsule()
+                                .fill(Color(white: 0.94))
+                                .overlay { Capsule().strokeBorder(ink, lineWidth: 1.5) }
+                            Capsule()
+                                .fill(BrutalPalette.pastel(for: subject))
+                                .overlay { Capsule().strokeBorder(ink, lineWidth: 1.5) }
+                                .frame(width: max(8, geo.size.width * progressInLevel))
                         }
-                        Spacer(minLength: 0)
                     }
+                    .frame(height: 8)
 
-                    if unlocked {
-                        // Progress bar
-                        GeometryReader { geo in
-                            ZStack(alignment: .leading) {
-                                Capsule()
-                                    .fill(Color(white: 0.94))
-                                    .overlay { Capsule().strokeBorder(ink, lineWidth: 1.5) }
-                                Capsule()
-                                    .fill(BrutalPalette.pastel(for: subject))
-                                    .overlay { Capsule().strokeBorder(ink, lineWidth: 1.5) }
-                                    .frame(width: max(10, geo.size.width * progressInLevel))
-                            }
-                        }
-                        .frame(height: 10)
+                    Text(progressLabel)
+                        .font(.system(.caption2, design: .rounded, weight: .heavy))
+                        .foregroundStyle(ink.opacity(0.55))
+                        .lineLimit(2)
+                } else {
+                    Text("Débloque avec l'essai gratuit")
+                        .font(.system(.caption2, design: .rounded, weight: .heavy))
+                        .foregroundStyle(ink.opacity(0.45))
+                        .lineLimit(2)
+                        .frame(height: 32, alignment: .topLeading)
 
-                        Text(progressLabel)
-                            .font(.system(.caption2, design: .rounded, weight: .heavy))
-                            .foregroundStyle(ink.opacity(0.55))
-                    } else {
-                        Text("Débloque avec l'essai gratuit")
-                            .font(.system(.caption, design: .rounded, weight: .heavy))
-                            .foregroundStyle(ink.opacity(0.5))
-                    }
+                    Capsule()
+                        .fill(Color(white: 0.94))
+                        .overlay { Capsule().strokeBorder(ink.opacity(0.25), lineWidth: 1.5) }
+                        .frame(height: 8)
+
+                    Text(" ")
+                        .font(.system(.caption2, design: .rounded, weight: .heavy))
+                        .opacity(0)
+                        .frame(height: 14)
                 }
+
+                Spacer(minLength: 0)
             }
-            .padding(.horizontal, 14)
-            .padding(.vertical, 14)
+            .padding(14)
+            .frame(maxWidth: .infinity, minHeight: 168, alignment: .topLeading)
             .background(unlocked ? Color.white : Color(white: 0.97))
             .clipShape(.rect(cornerRadius: 18))
             .overlay {
@@ -513,6 +509,7 @@ private struct SubjectProgressCard: View {
             .opacity(unlocked ? 1 : 0.85)
         }
         .padding(.bottom, 4)
+        .frame(maxWidth: .infinity, minHeight: 176, maxHeight: 176)
         .onTapGesture {
             if !unlocked { onUnlock() }
         }

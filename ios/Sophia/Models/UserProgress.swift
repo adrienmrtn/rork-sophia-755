@@ -18,6 +18,7 @@ nonisolated struct ShuffledQuestion: Sendable {
     let question: String
     let options: [String]
     let correctIndex: Int
+    let explanation: String
 }
 
 nonisolated struct UserProgress: Codable, Sendable {

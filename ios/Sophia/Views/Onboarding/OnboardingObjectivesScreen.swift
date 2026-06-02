@@ -14,11 +14,8 @@ struct OnboardingObjectivesScreen: View {
     ]
 
     var body: some View {
-        ZStack {
-            BrutalPalette.cream.ignoresSafeArea()
-
-            VStack(spacing: 0) {
-                Spacer().frame(height: 60)
+        VStack(spacing: 0) {
+            Spacer().frame(height: 32)
 
                 OnboardingHeader(
                     title: "Ton objectif\navec Sophia ?",
@@ -38,7 +35,7 @@ struct OnboardingObjectivesScreen: View {
                                 isSelected: isSelected,
                                 accentColor: OnboardingPastels.at(i)
                             ) {
-                                UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                                OnboardingHaptics.selection()
                                 withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
                                     viewModel.toggleObjective(obj.label)
                                 }
@@ -55,8 +52,8 @@ struct OnboardingObjectivesScreen: View {
 
                 OnboardingPrimaryButton(title: "Suivant", isEnabled: viewModel.canProceed, action: onNext)
                     .opacity(appeared ? 1 : 0)
-            }
         }
+        .onboardingFullBleedBackground(BrutalPalette.cream)
         .sensoryFeedback(.selection, trigger: viewModel.objectives.count)
         .onAppear {
             withAnimation(.spring(response: 0.6).delay(0.1)) {

@@ -61,9 +61,12 @@ struct ContentView: View {
                     )
                 }
             }
-            .tint(SophiaTheme.emerald)
-            .preferredColorScheme(.dark)
+            .tint(BrutalPalette.ink)
+            .toolbarBackground(BrutalPalette.cream, for: .tabBar)
+            .toolbarBackground(.visible, for: .tabBar)
+            .preferredColorScheme(.light)
             .sensoryFeedback(.selection, trigger: selectedTab)
+            .onAppear { SophiaTabBarStyle.apply() }
             .onChange(of: selectedCourse) { _, newCourse in
                 guard let course = newCourse else { return }
                 if let context = FreemiumGate.paywallContext(
@@ -121,7 +124,8 @@ struct ContentView: View {
                     if context == .offreDiscount { discountManager.markExpired() }
                     paywallContext = nil
                 },
-                onRestored: { paywallContext = nil }
+                onRestored: { paywallContext = nil },
+                onDismissed: { paywallContext = nil }
             )
         }
         .onAppear {

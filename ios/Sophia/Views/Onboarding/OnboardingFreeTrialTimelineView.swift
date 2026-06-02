@@ -7,6 +7,12 @@ struct OnboardingFreeTrialTimelineView: View {
     @State private var buttonAppeared: Bool = false
     @State private var iconBounce: Int = 0
 
+    private let steps: [(day: String, title: String, tint: Color, highlighted: Bool)] = [
+        ("JOUR 1", "Accès complet", OnboardingPastels.at(3), false),
+        ("JOUR 2", "Notification envoyée", BrutalPalette.pink, true),
+        ("JOUR 3", "Fin de l'essai", OnboardingPastels.at(0), false),
+    ]
+
     var body: some View {
         ZStack {
             BrutalPalette.cream.ignoresSafeArea()
@@ -14,12 +20,10 @@ struct OnboardingFreeTrialTimelineView: View {
             VStack(spacing: 28) {
                 Spacer()
 
-                // Pill badge
                 BrutalPill(text: "Pas de surprise", icon: "bell.fill", background: BrutalPalette.pink, foreground: BrutalPalette.ink)
                     .opacity(appeared ? 1 : 0)
                     .offset(y: appeared ? 0 : -10)
 
-                // Title
                 Text("Nous vous notifierons\n1 jour avant la fin\nde votre essai gratuit")
                     .font(.system(.title, design: .rounded, weight: .heavy))
                     .foregroundStyle(BrutalPalette.ink)
@@ -29,7 +33,6 @@ struct OnboardingFreeTrialTimelineView: View {
                     .opacity(appeared ? 1 : 0)
                     .offset(y: appeared ? 0 : 18)
 
-                // Brutal card with icon + reassurance
                 timelineCard
                     .padding(.horizontal, 24)
                     .opacity(cardAppeared ? 1 : 0)
@@ -68,7 +71,6 @@ struct OnboardingFreeTrialTimelineView: View {
     @ViewBuilder
     private var timelineCard: some View {
         VStack(spacing: 18) {
-            // Big bell icon in a brutal square
             ZStack {
                 RoundedRectangle(cornerRadius: 22, style: .continuous)
                     .fill(BrutalPalette.ink)
@@ -88,11 +90,17 @@ struct OnboardingFreeTrialTimelineView: View {
             }
             .padding(.top, 4)
 
-            // Mini timeline rows
-            VStack(spacing: 12) {
-                TimelineRow(day: "JOUR 1", title: "Accès complet", tint: OnboardingPastels.at(3))
-                TimelineRow(day: "JOUR 2", title: "Notification envoyée", tint: BrutalPalette.pink, isHighlighted: true)
-                TimelineRow(day: "JOUR 3", title: "Fin de l'essai", tint: OnboardingPastels.at(0))
+            VStack(spacing: 0) {
+                ForEach(Array(steps.enumerated()), id: \.offset) { index, step in
+                    TimelineRow(
+                        day: step.day,
+                        title: step.title,
+                        tint: step.tint,
+                        isHighlighted: step.highlighted,
+                        isFirst: index == 0,
+                        isLast: index == steps.count - 1
+                    )
+                }
             }
         }
         .padding(.horizontal, 16)
@@ -106,31 +114,62 @@ private struct TimelineRow: View {
     let title: String
     let tint: Color
     var isHighlighted: Bool = false
+    var isFirst: Bool = false
+    var isLast: Bool = false
 
     var body: some View {
-        HStack(spacing: 12) {
-            Text(day)
-                .font(.system(.caption, design: .rounded, weight: .heavy))
-                .tracking(0.8)
-                .foregroundStyle(BrutalPalette.ink)
-                .padding(.horizontal, 10)
-                .padding(.vertical, 6)
-                .background(tint, in: .capsule)
-                .overlay {
-                    Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 2)
+        HStack(alignment: .top, spacing: 12) {
+            VStack(spacing: 0) {
+                if !isFirst {
+                    Rectangle()
+                        .fill(BrutalPalette.ink.opacity(0.15))
+                        .frame(width: 2, height: 10)
+                } else {
+                    Color.clear.frame(width: 2, height: 10)
                 }
-                .frame(width: 92, alignment: .leading)
 
-            Text(title)
-                .font(.system(.subheadline, design: .rounded, weight: isHighlighted ? .heavy : .semibold))
-                .foregroundStyle(BrutalPalette.ink)
-                .frame(maxWidth: .infinity, alignment: .leading)
+                Circle()
+                    .fill(isHighlighted ? BrutalPalette.pink : BrutalPalette.ink.opacity(0.12))
+                    .frame(width: 10, height: 10)
+                    .overlay {
+                        Circle().strokeBorder(BrutalPalette.ink.opacity(isHighlighted ? 1 : 0.25), lineWidth: 1.5)
+                    }
 
-            if isHighlighted {
-                Image(systemName: "bell.fill")
-                    .font(.system(size: 14, weight: .heavy))
-                    .foregroundStyle(BrutalPalette.ink)
+                if !isLast {
+                    Rectangle()
+                        .fill(BrutalPalette.ink.opacity(0.15))
+                        .frame(width: 2)
+                        .frame(minHeight: 34)
+                }
             }
+            .frame(width: 10)
+            .padding(.top, 14)
+
+            HStack(spacing: 12) {
+                Text(day)
+                    .font(.system(.caption, design: .rounded, weight: .heavy))
+                    .tracking(0.8)
+                    .foregroundStyle(BrutalPalette.ink)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 6)
+                    .background(tint, in: .capsule)
+                    .overlay {
+                        Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 2)
+                    }
+                    .frame(width: 92, alignment: .leading)
+
+                Text(title)
+                    .font(.system(.subheadline, design: .rounded, weight: isHighlighted ? .heavy : .semibold))
+                    .foregroundStyle(BrutalPalette.ink)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+
+                if isHighlighted {
+                    Image(systemName: "bell.fill")
+                        .font(.system(size: 14, weight: .heavy))
+                        .foregroundStyle(BrutalPalette.ink)
+                }
+            }
+            .padding(.vertical, 10)
         }
     }
 }

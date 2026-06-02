@@ -17,7 +17,6 @@ struct CourseView: View {
     @State private var endPhase: CourseEndPhase = .none
     @State private var previousSubjectCount: Int = 0
     @State private var previousSubjectXP: Int = 0
-    @State private var showEndFlowPaywall: Bool = false
 
     /// Fixed XP awarded for finishing a course (reaching the completion screen). Always granted.
     private let courseCompletionXP: Int = 10
@@ -62,7 +61,7 @@ struct CourseView: View {
                         if isPremium {
                             showQuiz = true
                         } else {
-                            showEndFlowPaywall = true
+                            showQuizPrePaywall = true
                         }
                     }
                 )
@@ -98,13 +97,6 @@ struct CourseView: View {
                 showQuiz = true
             })
             .presentationDragIndicator(.visible)
-        }
-        .sheet(isPresented: $showEndFlowPaywall) {
-            SophiaPaywallView(
-                context: .quizz,
-                onPurchased: { showEndFlowPaywall = false },
-                onRestored: { showEndFlowPaywall = false }
-            )
         }
         .onAppear {
             withAnimation(.spring(response: 0.5, dampingFraction: 0.8).delay(0.1)) {
@@ -163,7 +155,11 @@ struct CourseView: View {
                     .foregroundStyle(ink)
                     .fixedSize(horizontal: false, vertical: true)
 
-                RichContentView(content: lesson.content, accent: course.subject.color)
+                RichContentView(
+                    content: lesson.content,
+                    accent: course.subject.color,
+                    courseTitle: course.title
+                )
             }
             .padding(.horizontal, 24)
             .padding(.top, 24)
@@ -249,57 +245,8 @@ struct CourseView: View {
     }
 
     private func shimmerLoop() {
-        quizButtonShimmer = -100
-        withAnimation(.easeInOut(duration: 1.5)) {
-            quizButtonShimmer = UIScreen.main.bounds.width + 100
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-            if isLastLesson && course.hasQuiz {
-                shimmerLoop()
-            }
+        ShimmerAnimation.runLoop(offset: $quizButtonShimmer) {
+            isLastLesson && course.hasQuiz
         }
     }
 }
-
-/// Duolingo-style 3D button: solid offset shadow plate behind the colored capsule.
-/// Pressing the button drops the front capsule onto the shadow (no blur, no double-text).
-private struct DuolingoButtonStyle: ButtonStyle {
-    let fill: Color
-    let shimmer: CGFloat?
-    private let depth: CGFloat = 5
-
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .background(
-                Capsule().fill(fill)
-                    .overlay {
-                        if let shimmer {
-                            Capsule()
-                                .fill(
-                                    LinearGradient(
-                                        colors: [.clear, .white.opacity(0.35), .clear],
-                                        startPoint: .leading,
-                                        endPoint: .trailing
-                                    )
-                                )
-                                .mask {
-                                    GeometryReader { geo in
-                                        Rectangle()
-                                            .frame(width: 80, height: geo.size.height)
-                                            .offset(x: shimmer)
-                                    }
-                                }
-                                .allowsHitTesting(false)
-                        }
-                    }
-                    .overlay { Capsule().strokeBorder(.black, lineWidth: 3) }
-            )
-            .offset(y: configuration.isPressed ? depth : 0)
-            .background(
-                Capsule().fill(Color.black).offset(y: depth)
-            )
-            .animation(.spring(response: 0.18, dampingFraction: 0.7), value: configuration.isPressed)
-            .padding(.bottom, depth)
-    }
-}
-

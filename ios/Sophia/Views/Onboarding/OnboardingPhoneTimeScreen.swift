@@ -13,11 +13,8 @@ struct OnboardingPhoneTimeScreen: View {
     ]
 
     var body: some View {
-        ZStack {
-            BrutalPalette.cream.ignoresSafeArea()
-
-            VStack(spacing: 0) {
-                Spacer().frame(height: 60)
+        VStack(spacing: 0) {
+            Spacer().frame(height: 32)
 
                 OnboardingHeader(
                     title: "Combien de temps\nsur ton téléphone ?",
@@ -36,7 +33,7 @@ struct OnboardingPhoneTimeScreen: View {
                             isSelected: isSelected,
                             accentColor: OnboardingPastels.at(i)
                         ) {
-                            UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                            OnboardingHaptics.selection()
                             withAnimation(.spring(response: 0.35, dampingFraction: 0.7)) {
                                 viewModel.phoneTimeSelection = option.index
                             }
@@ -52,8 +49,8 @@ struct OnboardingPhoneTimeScreen: View {
 
                 OnboardingPrimaryButton(title: "Suivant", isEnabled: viewModel.canProceed, action: onNext)
                     .opacity(appeared ? 1 : 0)
-            }
         }
+        .onboardingFullBleedBackground(BrutalPalette.cream)
         .sensoryFeedback(.selection, trigger: viewModel.phoneTimeSelection)
         .onAppear {
             withAnimation(.spring(response: 0.6, dampingFraction: 0.75).delay(0.15)) {

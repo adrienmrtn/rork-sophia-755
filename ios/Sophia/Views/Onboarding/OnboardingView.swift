@@ -10,79 +10,16 @@ struct OnboardingView: View {
     @State private var incomingScreen: Int? = nil
     @State private var slideOffset: CGFloat = 0
 
-    private let mondeActuelCategories: [(name: String, courses: [(title: String, courseId: String)])] = [
-        ("Conflits & géopolitique", [
-            ("La naissance du conflit israélo-palestinien", "course_201_la_naissance_du_conflit_israelo_palestin"),
-            ("La rivalité Chine-États-Unis", "course_202_la_rivalite_chine_etats_unis"),
-            ("Les tensions autour de Taïwan", "course_203_les_tensions_autour_de_taiwan"),
-            ("La guerre en Ukraine expliquée", "course_210_la_guerre_en_ukraine_expliquee"),
-            ("La Russie de Poutine", "course_209_la_russie_de_poutine"),
-            ("L'OTAN : à quoi ça sert ?", "course_207_l_otan_a_quoi_ca_sert_encore"),
-        ]),
-        ("Économie & société", [
-            ("Comment fonctionne le prix du pétrole", "course_211_comment_fonctionne_le_prix_du_petrole"),
-            ("Les paradis fiscaux expliqués", "course_212_les_paradis_fiscaux_expliques"),
-            ("L'évasion fiscale des multinationales", "course_213_l_evasion_fiscale_des_multinationales"),
-            ("La dette mondiale", "course_216_la_dette_mondiale"),
-            ("Les inégalités Nord-Sud", "course_215_les_inegalites_nord_sud"),
-        ]),
-        ("Environnement & avenir", [
-            ("La crise de la biodiversité", "course_222_la_crise_de_la_biodiversite"),
-            ("La montée des eaux", "course_225_la_montee_des_eaux"),
-            ("L'IA et l'emploi", "course_226_l_ia_et_l_emploi"),
-            ("Les migrations climatiques", "course_231_les_migrations_climatiques"),
-        ]),
-    ]
-
-    private let cultureCategories: [(name: String, courses: [(title: String, courseId: String)])] = [
-        ("Littérature classique", [
-            ("1984, George Orwell", "course_101_1984_george_orwell"),
-            ("Hamlet, Shakespeare", "course_103_hamlet_shakespeare"),
-            ("Roméo et Juliette, Shakespeare", "course_104_romeo_et_juliette_shakespeare"),
-            ("Frankenstein, Mary Shelley", "course_106_frankenstein_mary_shelley"),
-            ("Le Meilleur des Mondes, Huxley", "course_105_le_meilleur_des_mondes_aldous_huxley"),
-            ("Crime et Châtiment, Dostoïevski", "course_107_crime_et_chatiment_dostoievski"),
-        ]),
-        ("Art & Cinéma", [
-            ("La naissance de la photographie", "course_141_la_naissance_de_la_photographie"),
-            ("Orson Welles et Citizen Kane", "course_143_orson_welles_et_citizen_kane"),
-            ("La Nouvelle Vague française", "course_144_la_nouvelle_vague_francaise"),
-            ("Hitchcock et le suspense", "course_146_hitchcock_et_le_suspense"),
-            ("Kubrick : 2001, l'Odyssée de l'espace", "course_145_kubrick_2001_l_odyssee_de_l_espace"),
-        ]),
-        ("Mythologie", [
-            ("Les dieux grecs et l'Olympe", "course_161_la_naissance_des_dieux_grecs_cronos_zeus"),
-            ("Ulysse et l'Odyssée", "course_81_l_odyssee_homere"),
-            ("Hercule et les 12 travaux", "course_171_hercule_et_ses_12_travaux"),
-            ("Thor et Loki, mythologie nordique", "course_180_thor_et_loki_mythologie_nordique"),
-            ("Les grands mythes romains", "course_184_romulus_et_remus_la_fondation_de_rome"),
-        ]),
-    ]
-
     var body: some View {
         GeometryReader { geo in
             ZStack {
-                BrutalPalette.cream.ignoresSafeArea()
-
-                // Écran affiché en fond, stable pendant la transition
-                screenView(for: displayedScreen)
+                screenView(for: displayedScreen, in: geo.size)
                     .zIndex(0)
 
-                // Nouvel écran qui glisse par-dessus depuis la droite
                 if let incoming = incomingScreen {
-                    screenView(for: incoming)
+                    screenView(for: incoming, in: geo.size)
                         .offset(x: slideOffset)
                         .zIndex(1)
-                }
-
-                if viewModel.currentScreen > 0 && viewModel.currentScreen < 11 {
-                    VStack {
-                        OnboardingProgressDots(current: viewModel.currentScreen, total: 11)
-                            .frame(maxWidth: .infinity)
-                            .padding(.top, 16)
-                        Spacer()
-                    }
-                    .zIndex(2)
                 }
 
                 if showSpecialOffer {
@@ -105,6 +42,13 @@ struct OnboardingView: View {
                     .zIndex(3)
                 }
             }
+            .overlay(alignment: .top) {
+                if displayedScreen > 0 && displayedScreen < 9 && incomingScreen == nil {
+                    OnboardingProgressDots(current: displayedScreen, total: 9)
+                        .padding(.top, 10)
+                        .allowsHitTesting(false)
+                }
+            }
             .frame(width: geo.size.width, height: geo.size.height)
         }
         .preferredColorScheme(.light)
@@ -112,8 +56,13 @@ struct OnboardingView: View {
     }
 
     @ViewBuilder
-    private func screenView(for screen: Int) -> some View {
-        Group {
+    private func screenView(for screen: Int, in size: CGSize) -> some View {
+        let slideSettled = displayedScreen == screen && incomingScreen == nil
+        ZStack {
+            OnboardingScreenColors.background(for: screen)
+                .ignoresSafeArea()
+
+            Group {
             switch screen {
                 case 0:
                     OnboardingIntroScreen(onNext: advance)
@@ -128,28 +77,14 @@ struct OnboardingView: View {
                 case 5:
                     OnboardingSocialProofScreen(onNext: advance)
                 case 6:
-                    OnboardingTopicsCarouselScreen(
-                        title: "Sophia t'aide à comprendre\nle monde qui t'entoure",
-                        subtitle: "Géopolitique, économie, environnement...\nles enjeux actuels expliqués simplement.",
-                        categories: mondeActuelCategories,
-                        onNext: advance
-                    )
-                case 7:
-                    OnboardingTopicsCarouselScreen(
-                        title: "Maîtrise enfin les grandes\nœuvres de l'histoire",
-                        subtitle: "Littérature, art, cinéma, mythologie...\nles clés pour en parler avec aisance.",
-                        categories: cultureCategories,
-                        onNext: advance
-                    )
-                case 8:
                     OnboardingInterestsScreen(viewModel: viewModel, onNext: advance)
-                case 9:
+                case 7:
                     OnboardingDailyGoalScreen(viewModel: viewModel, onNext: advance)
-                case 10:
+                case 8:
                     OnboardingProjectionScreen(viewModel: viewModel, onNext: advance)
-                case 11:
+                case 9:
                     OnboardingLoadingScreen(viewModel: viewModel, onNext: advance)
-                case 12:
+                case 10:
                     OnboardingNativePaywallView(
                         store: storeVM,
                         onPurchase: { plan in
@@ -187,9 +122,12 @@ struct OnboardingView: View {
                     )
                 default:
                     EmptyView()
-                }
+            }
             }
         }
+        .frame(width: size.width, height: size.height)
+        .environment(\.onboardingSlideSettled, slideSettled)
+    }
 
     private func packageFor(plan: OnboardingNativePaywallView.Plan) -> RevenueCat.Package? {
         switch plan {
@@ -201,26 +139,22 @@ struct OnboardingView: View {
     }
 
     private func advance() {
-        let g = UIImpactFeedbackGenerator(style: .light)
-        g.impactOccurred()
-        if viewModel.currentScreen == 8 {
+        OnboardingHaptics.slideTransition()
+        if viewModel.currentScreen == 6 {
             viewModel.finalizeInterests()
         }
 
         let to = viewModel.currentScreen + 1
         let width = UIScreen.main.bounds.width
 
-        // La nouvelle slide démarre hors écran à droite
         incomingScreen = to
         slideOffset = width
         viewModel.nextScreen()
 
-        // Elle glisse par-dessus l'écran affiché (qui reste stable, sans reconstruction)
         withAnimation(.easeInOut(duration: 0.4)) {
             slideOffset = 0
         }
 
-        // Une fois l'animation terminée, la slide entrante devient l'écran affiché
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.42) {
             displayedScreen = to
             incomingScreen = nil

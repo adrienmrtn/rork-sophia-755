@@ -120,7 +120,8 @@ struct PrePaywallQuizView: View {
                 onRestored: {
                     showPaywall = false
                     onContinue()
-                }
+                },
+                onDismissed: { showPaywall = false }
             )
         }
         .onAppear {
