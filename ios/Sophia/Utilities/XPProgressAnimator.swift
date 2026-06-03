@@ -56,12 +56,13 @@ enum XPProgressAnimator {
 
         // Phase 1 — decelerate into tier cap, brief hold, instant reset, then fill new tier
         let capXP = max(startXP, startTier.upper - 1)
+        let fillToFullDuration = (startTier.level == 1 && endTier.level == 2) ? 2.35 : 1.5
         runSegment(
             xpFrom: startXP,
             xpTo: capXP,
             fillFrom: barFraction(for: startXP),
             fillTo: 1.0,
-            duration: 1.5,
+            duration: fillToFullDuration,
             steps: 36,
             decelerate: true,
             setXP: setXP,

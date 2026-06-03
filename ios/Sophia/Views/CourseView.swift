@@ -1,3 +1,4 @@
+import StoreKit
 import SwiftUI
 import RevenueCatUI
 
@@ -77,6 +78,13 @@ struct CourseView: View {
             }
         }
         .navigationBarBackButtonHidden()
+        .onAppear {
+            progressManager.registerFirstCourseOpenedIfNeeded(course.id)
+            requestAppStoreReviewIfEligible(lessonIndex: currentIndex)
+        }
+        .onChange(of: currentIndex) { _, newIndex in
+            requestAppStoreReviewIfEligible(lessonIndex: newIndex)
+        }
         .fullScreenCover(isPresented: $showQuiz) {
             QuizView(
                 course: course,
@@ -247,6 +255,19 @@ struct CourseView: View {
     private func shimmerLoop() {
         ShimmerAnimation.runLoop(offset: $quizButtonShimmer) {
             isLastLesson && course.hasQuiz
+        }
+    }
+
+    /// Third lesson (index 2) of the first course ever opened — once per install.
+    private func requestAppStoreReviewIfEligible(lessonIndex: Int) {
+        guard lessonIndex == 2 else { return }
+        guard progressManager.firstCourseOpenedId == course.id else { return }
+        guard !progressManager.hasRequestedAppStoreReview else { return }
+        progressManager.markAppStoreReviewRequested()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            guard let scene = UIApplication.shared.connectedScenes
+                .first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene else { return }
+            SKStoreReviewController.requestReview(in: scene)
         }
     }
 }

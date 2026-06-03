@@ -43,10 +43,11 @@ struct OnboardingView: View {
                 }
             }
             .overlay(alignment: .top) {
-                if displayedScreen > 0 && displayedScreen < 9 && incomingScreen == nil {
-                    OnboardingProgressDots(current: displayedScreen, total: 9)
+                if showsOnboardingProgressDots {
+                    OnboardingProgressDots(current: onboardingProgressIndex, total: 9)
                         .padding(.top, 10)
                         .allowsHitTesting(false)
+                        .zIndex(10)
                 }
             }
             .frame(width: geo.size.width, height: geo.size.height)
@@ -136,6 +137,16 @@ struct OnboardingView: View {
         case .monthly:
             return storeVM.monthlyPackage
         }
+    }
+
+    /// Progress dots for OB steps 1–8; stays visible during slide transitions.
+    private var showsOnboardingProgressDots: Bool {
+        let active = incomingScreen ?? displayedScreen
+        return active >= 1 && active <= 8
+    }
+
+    private var onboardingProgressIndex: Int {
+        min(max(incomingScreen ?? displayedScreen, 1), 8)
     }
 
     private func advance() {

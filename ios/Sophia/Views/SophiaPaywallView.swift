@@ -70,7 +70,7 @@ struct SophiaPaywallView: View {
                     .onRestoreCompleted { _ in onRestored() }
                     .onRequestedDismissal { onDismissed?() }
             } else if loaded {
-                if context == .finOnboarding || context == .coursGratuit {
+                if context == .finOnboarding || context == .coursGratuit || context == .offreDiscount {
                     PaywallView()
                         .onPurchaseCompleted { _ in onPurchased() }
                         .onRestoreCompleted { _ in onRestored() }
@@ -98,6 +98,12 @@ struct SophiaPaywallView: View {
                 resolved = offerings.all[fid] ?? offerings.offering(identifier: fid)
                 #if DEBUG
                 print("[SophiaPaywall] '\(id)' not found — falling back to '\(fid)': \(resolved?.identifier ?? "nil")")
+                #endif
+            }
+            if resolved == nil, context == .offreDiscount {
+                resolved = offerings.current
+                #if DEBUG
+                print("[SophiaPaywall] 'offre_discount' not found — using current offering: \(resolved?.identifier ?? "nil")")
                 #endif
             }
             #if DEBUG

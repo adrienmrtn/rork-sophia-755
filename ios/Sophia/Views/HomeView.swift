@@ -130,7 +130,7 @@ struct HomeView: View {
             onShowDiscountPaywall?()
         } label: {
             HStack(spacing: 6) {
-                AnimatedFlameBadge(size: 14, showGlow: false)
+                AnimatedCrownBadge(size: 14)
                 Text(discountManager.formattedRemaining)
                     .font(.system(.subheadline, design: .rounded, weight: .heavy))
                     .foregroundStyle(.white)
@@ -168,13 +168,17 @@ struct HomeView: View {
             Text("\(progressManager.streak)")
                 .font(.system(.subheadline, design: .rounded, weight: .heavy))
                 .foregroundStyle(ink)
+                .monospacedDigit()
             Text(progressManager.streak <= 1 ? "JOUR" : "JOURS")
                 .font(.system(.caption, design: .rounded, weight: .heavy))
                 .foregroundStyle(ink)
                 .tracking(0.5)
+                .fixedSize(horizontal: true, vertical: true)
+                .lineLimit(1)
         }
-        .padding(.horizontal, 14)
+        .padding(.horizontal, 18)
         .padding(.vertical, 8)
+        .frame(minWidth: 96)
         .background(Color.white, in: Capsule())
         .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
     }
@@ -309,6 +313,8 @@ struct FlashCard: View {
     let onStart: () -> Void
     @State private var cachedImage: UIImage?
     @State private var buttonTrigger: Int = 0
+    @State private var startShimmer: CGFloat = -100
+    @State private var startShimmerActive: Bool = false
 
     private let ink = Color.black
     private let pink = Color(red: 1.0, green: 0.553, blue: 0.706)
@@ -348,6 +354,11 @@ struct FlashCard: View {
             if cachedImage == nil {
                 cachedImage = CourseImageMap.loadImage(for: course.id)
             }
+            startShimmerActive = true
+            ShimmerAnimation.runLoop(offset: $startShimmer) { startShimmerActive }
+        }
+        .onDisappear {
+            startShimmerActive = false
         }
     }
 
@@ -453,7 +464,7 @@ struct FlashCard: View {
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 16)
             }
-            .buttonStyle(BrutalistButtonStyle(fill: pink))
+            .buttonStyle(DuolingoButtonStyle(fill: pink, shimmer: startShimmer))
             .sensoryFeedback(.impact(weight: .medium), trigger: buttonTrigger)
             .padding(.top, 4)
         }

@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 /// Renders course lesson content with inline rich blocks:
 /// - `[image description]`   → inline image (looked up in CourseImages asset catalog by slug)
@@ -14,7 +15,7 @@ struct RichContentView: View {
     @State private var selectedGlossaryEntry: GlossaryEntry?
 
     static let ink = Color.black
-    fileprivate static let bodyFont = Font.system(.title3, design: .rounded)
+    fileprivate static let bodyFont = Font.system(.body, design: .rounded)
 
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
@@ -196,6 +197,13 @@ private struct FlowProseTokenKey: LayoutValueKey {
     static let defaultValue = false
 }
 
+private struct CourseTextWidthKey: PreferenceKey {
+    static var defaultValue: CGFloat = 0
+    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
+        value = max(value, nextValue())
+    }
+}
+
 private extension View {
     func flowGlossaryToken() -> some View {
         layoutValue(key: FlowGlossaryTokenKey.self, value: true)
@@ -211,8 +219,14 @@ private struct CourseInlineText: View {
     let courseTitle: String
     let onGlossaryTap: (GlossaryEntry) -> Void
 
+    @State private var contentWidth: CGFloat = UIScreen.main.bounds.width - 48
+
     private var paragraphs: [ParagraphContent] {
-        Self.buildParagraphContent(from: raw, courseTitle: courseTitle)
+        Self.buildParagraphContent(
+            from: raw,
+            courseTitle: courseTitle,
+            maxWidth: max(contentWidth, 1)
+        )
     }
 
     var body: some View {
@@ -242,6 +256,15 @@ private struct CourseInlineText: View {
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
+        .background {
+            GeometryReader { geo in
+                Color.clear.preference(key: CourseTextWidthKey.self, value: geo.size.width)
+            }
+        }
+        .onPreferenceChange(CourseTextWidthKey.self) { width in
+            guard width > 0, abs(width - contentWidth) > 0.5 else { return }
+            contentWidth = width
+        }
     }
 
     private struct ParagraphContent {
@@ -253,7 +276,11 @@ private struct CourseInlineText: View {
         case glossary(String, bold: Bool, entry: GlossaryEntry)
     }
 
-    private static func buildParagraphContent(from raw: String, courseTitle: String) -> [ParagraphContent] {
+    private static func buildParagraphContent(
+        from raw: String,
+        courseTitle: String,
+        maxWidth: CGFloat
+    ) -> [ParagraphContent] {
         let normalized = raw.replacingOccurrences(of: "\\n", with: "\n")
         return normalized
             .components(separatedBy: "\n\n")
@@ -265,20 +292,33 @@ private struct CourseInlineText: View {
                     .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
                     .filter { !$0.isEmpty }
                     .map { line in
-                        buildFlowTokens(from: RichContentView.tokenizeInline(line), courseTitle: courseTitle)
+                        buildFlowTokens(
+                            from: RichContentView.tokenizeInline(line),
+                            courseTitle: courseTitle,
+                            maxWidth: maxWidth
+                        )
                     }
                 return ParagraphContent(lines: lines)
             }
     }
 
-    private static func buildFlowTokens(from runs: [InlineRun], courseTitle: String) -> [FlowToken] {
+    private static func buildFlowTokens(
+        from runs: [InlineRun],
+        courseTitle: String,
+        maxWidth: CGFloat
+    ) -> [FlowToken] {
         var tokens: [FlowToken] = []
 
         for run in runs {
             switch run.kind {
             case .glossary:
                 if let entry = GlossaryStore.entry(courseTitle: courseTitle, displayTerm: run.content) {
-                    tokens.append(.glossary(run.content, bold: run.bold, entry: entry))
+                    tokens.append(contentsOf: glossaryLineSegments(
+                        displayTerm: run.content,
+                        bold: run.bold,
+                        entry: entry,
+                        maxWidth: maxWidth
+                    ))
                 } else {
                     tokens.append(contentsOf: proseTokens(from: run.content, bold: run.bold))
                 }
@@ -287,6 +327,49 @@ private struct CourseInlineText: View {
             }
         }
         return tokens
+    }
+
+    /// One pill per visual line when the term wraps; does not pull the preceding word down.
+    private static func glossaryLineSegments(
+        displayTerm: String,
+        bold: Bool,
+        entry: GlossaryEntry,
+        maxWidth: CGFloat
+    ) -> [FlowToken] {
+        let trimmed = displayTerm.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else { return [] }
+
+        let words = trimmed.split(whereSeparator: \.isWhitespace).map(String.init)
+        guard words.count > 1 else {
+            return [.glossary(trimmed, bold: bold, entry: entry)]
+        }
+
+        let uiWeight: UIFont.Weight = bold ? .semibold : .medium
+        let font = UIFont.systemFont(ofSize: UIFont.preferredFont(forTextStyle: .body).pointSize, weight: uiWeight)
+        let pillPadding: CGFloat = 18
+
+        func textWidth(_ text: String) -> CGFloat {
+            (text as NSString).size(withAttributes: [.font: font]).width + pillPadding
+        }
+
+        var lines: [String] = []
+        var current = ""
+
+        for word in words {
+            let candidate = current.isEmpty ? word : "\(current) \(word)"
+            if textWidth(candidate) <= maxWidth {
+                current = candidate
+            } else {
+                if !current.isEmpty { lines.append(current) }
+                current = word
+            }
+        }
+        if !current.isEmpty { lines.append(current) }
+
+        if lines.isEmpty {
+            return [.glossary(trimmed, bold: bold, entry: entry)]
+        }
+        return lines.map { .glossary($0, bold: bold, entry: entry) }
     }
 
     /// Splits prose into whitespace + word tokens so glossary pills flow inline with the sentence.
@@ -324,7 +407,10 @@ private struct ShinyGlossaryPill: View {
     let action: () -> Void
 
     var body: some View {
-        Button(action: action) {
+        Button {
+            UIImpactFeedbackGenerator(style: .light).impactOccurred()
+            action()
+        } label: {
             Text(term)
                 .font(RichContentView.bodyFont)
                 .fontWeight(bold ? .semibold : .medium)
@@ -419,48 +505,11 @@ private struct FlowInlineLayout: Layout {
         for index in subviews.indices {
             let subview = subviews[index]
             let size = subview.sizeThatFits(.unspecified)
-            let isGlossary = subview[FlowGlossaryTokenKey.self]
-            let isProse = subview[FlowProseTokenKey.self]
-
-            if isProse, isFollowedByGlossary(at: index, subviews: subviews) {
-                let groupWidth = widthThroughNextGlossary(from: index, subviews: subviews, spacing: spacing)
-                if x > 0, x + groupWidth > maxWidth + 0.5 {
-                    x = 0
-                    y += rowHeight + rowSpacing
-                    rowHeight = 0
-                }
-            }
 
             if x > 0, x + size.width > maxWidth + 0.5 {
-                if isGlossary, let wordIndex = proseWordBeforeGlossary(
-                    at: index,
-                    subviews: subviews,
-                    frames: frames,
-                    rowY: y
-                ), frames[wordIndex].minX > 0.5 {
-                    let oldRowHeight = frames[..<wordIndex].map(\.height).max() ?? rowHeight
-                    x = 0
-                    y += oldRowHeight + rowSpacing
-                    let newRowY = y
-                    rowHeight = 0
-                    x = 0
-
-                    for moveIndex in wordIndex..<index {
-                        let moving = frames[moveIndex]
-                        frames[moveIndex] = CGRect(
-                            x: x,
-                            y: newRowY,
-                            width: moving.width,
-                            height: moving.height
-                        )
-                        rowHeight = max(rowHeight, moving.height)
-                        x += moving.width + spacing
-                    }
-                } else {
-                    x = 0
-                    y += rowHeight + rowSpacing
-                    rowHeight = 0
-                }
+                x = 0
+                y += rowHeight + rowSpacing
+                rowHeight = 0
             }
 
             frames.append(CGRect(x: x, y: y, width: size.width, height: size.height))
@@ -475,57 +524,6 @@ private struct FlowInlineLayout: Layout {
         }
 
         return (CGSize(width: maxWidth, height: y + rowHeight), frames)
-    }
-
-    private func proseWordBeforeGlossary(
-        at index: Int,
-        subviews: Subviews,
-        frames: [CGRect],
-        rowY: CGFloat
-    ) -> Int? {
-        guard index > 0 else { return nil }
-
-        var candidate = index - 1
-        if candidate >= 0,
-           subviews[candidate][FlowProseTokenKey.self],
-           frames[candidate].width < 6,
-           candidate > 0 {
-            candidate -= 1
-        }
-
-        guard candidate >= 0,
-              subviews[candidate][FlowProseTokenKey.self],
-              frames[candidate].minY == rowY,
-              frames[candidate].width >= 6 else {
-            return nil
-        }
-        return candidate
-    }
-
-    private func isFollowedByGlossary(at index: Int, subviews: Subviews) -> Bool {
-        var lookahead = index + 1
-        while lookahead < subviews.count {
-            if subviews[lookahead][FlowGlossaryTokenKey.self] { return true }
-            if subviews[lookahead][FlowProseTokenKey.self],
-               subviews[lookahead].sizeThatFits(.unspecified).width >= 6 {
-                return false
-            }
-            lookahead += 1
-        }
-        return false
-    }
-
-    private func widthThroughNextGlossary(from index: Int, subviews: Subviews, spacing: CGFloat) -> CGFloat {
-        var width: CGFloat = 0
-        var lookahead = index
-        while lookahead < subviews.count {
-            let size = subviews[lookahead].sizeThatFits(.unspecified)
-            width += size.width
-            if lookahead > index { width += spacing }
-            if subviews[lookahead][FlowGlossaryTokenKey.self] { break }
-            lookahead += 1
-        }
-        return width
     }
 }
 

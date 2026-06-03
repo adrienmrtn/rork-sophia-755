@@ -219,6 +219,28 @@ class ProgressManager {
         guard let data = try? JSONEncoder().encode(progress) else { return }
         UserDefaults.standard.set(data, forKey: key)
     }
+
+    // MARK: - App Store review (once per install, first course only)
+
+    private static let appReviewRequestedKey = "sophia_app_store_review_requested"
+    private static let firstCourseOpenedKey = "sophia_first_course_opened_id"
+
+    var hasRequestedAppStoreReview: Bool {
+        UserDefaults.standard.bool(forKey: Self.appReviewRequestedKey)
+    }
+
+    func markAppStoreReviewRequested() {
+        UserDefaults.standard.set(true, forKey: Self.appReviewRequestedKey)
+    }
+
+    var firstCourseOpenedId: String? {
+        UserDefaults.standard.string(forKey: Self.firstCourseOpenedKey)
+    }
+
+    func registerFirstCourseOpenedIfNeeded(_ courseId: String) {
+        guard firstCourseOpenedId == nil else { return }
+        UserDefaults.standard.set(courseId, forKey: Self.firstCourseOpenedKey)
+    }
 }
 
 nonisolated enum CourseStatus: Sendable {

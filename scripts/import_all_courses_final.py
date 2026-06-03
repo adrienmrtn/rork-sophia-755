@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Import all courses from Excel_cours_final.xlsx + Glossaire_culture_generale.xlsx."""
+"""Import all courses from Excel_cours_systeme_modifie.xlsx + Glossaire_culture_generale_modifie.xlsx."""
 
 import re
 import sys
@@ -20,8 +20,8 @@ from import_courses_and_glossary import (  # noqa: E402
     wrap_glossary_terms_in_content,
 )
 
-EXCEL_COURS = Path("/Users/didiermartinot/Desktop/Excel_cours_final.xlsx")
-EXCEL_GLOSS = Path("/Users/didiermartinot/Desktop/Glossaire_culture_generale.xlsx")
+EXCEL_COURS = Path("/Users/didiermartinot/Desktop/Excel_cours_systeme_modifie.xlsx")
+EXCEL_GLOSS = Path("/Users/didiermartinot/Desktop/Glossaire_culture_generale_modifie.xlsx")
 
 CLASSIFICATION_MAP = {
     "Référence historique": "referenceHistorique",
@@ -229,7 +229,7 @@ def write_glossary_swift(entries: dict) -> str:
     body = ",\n".join(lines)
     return f"""import Foundation
 
-/// Glossary entries — generated from Glossaire_culture_generale.xlsx.
+/// Glossary entries — generated from Glossaire_culture_generale_modifie.xlsx.
 nonisolated enum GlossaryData {{
     static let entries: [String: GlossaryEntry] = [
 {body}

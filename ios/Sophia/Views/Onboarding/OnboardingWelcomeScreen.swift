@@ -84,7 +84,7 @@ struct OnboardingWelcomeScreen: View {
 
     private func startSubjectRotation() {
         rotationTimer?.invalidate()
-        rotationTimer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { _ in
+        rotationTimer = Timer.scheduledTimer(withTimeInterval: 1.2, repeats: true) { _ in
             cycleSubject()
         }
     }
