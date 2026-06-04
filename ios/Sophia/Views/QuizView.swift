@@ -473,12 +473,7 @@ struct QuizView: View {
                         Text(isCorrect ? (comboCount >= 3 ? "Incroyable !" : comboCount >= 2 ? "Excellent !" : "Bonne réponse !") : "Pas tout à fait...")
                             .font(.system(.title3, design: .rounded, weight: .black))
                             .foregroundStyle(ink)
-                        if !isCorrect {
-                            Text("Réponse : \(currentQuestion.options[currentQuestion.correctIndex])")
-                                .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                                .foregroundStyle(ink.opacity(0.7))
-                                .lineLimit(2)
-                        } else if comboCount >= 2 {
+                        if isCorrect, comboCount >= 2 {
                             HStack(spacing: 4) {
                                 Image(systemName: "flame.fill")
                                     .font(.caption.weight(.heavy))

@@ -197,6 +197,31 @@ private struct FlowProseTokenKey: LayoutValueKey {
     static let defaultValue = false
 }
 
+private struct FlowForceWrapKey: LayoutValueKey {
+    static let defaultValue = false
+}
+
+/// Width estimates aligned with body text and glossary pills in course content.
+private enum InlineTextMetrics {
+    private static var bodyPointSize: CGFloat {
+        UIFont.preferredFont(forTextStyle: .body).pointSize
+    }
+
+    static func proseWidth(_ text: String, bold: Bool) -> CGFloat {
+        guard !text.isEmpty else { return 0 }
+        let weight: UIFont.Weight = bold ? .semibold : .regular
+        let font = UIFont.systemFont(ofSize: bodyPointSize, weight: weight)
+        return (text as NSString).size(withAttributes: [.font: font]).width
+    }
+
+    static func pillWidth(_ text: String, bold: Bool) -> CGFloat {
+        let weight: UIFont.Weight = bold ? .semibold : .medium
+        let font = UIFont.systemFont(ofSize: bodyPointSize, weight: weight)
+        let textWidth = (text as NSString).size(withAttributes: [.font: font]).width
+        return textWidth + 16
+    }
+}
+
 private struct CourseTextWidthKey: PreferenceKey {
     static var defaultValue: CGFloat = 0
     static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
@@ -211,6 +236,10 @@ private extension View {
 
     func flowProseToken() -> some View {
         layoutValue(key: FlowProseTokenKey.self, value: true)
+    }
+
+    func flowForceWrapBefore(_ active: Bool) -> some View {
+        layoutValue(key: FlowForceWrapKey.self, value: active)
     }
 }
 
@@ -243,11 +272,12 @@ private struct CourseInlineText: View {
                                         .fontWeight(bold ? .semibold : .regular)
                                         .foregroundStyle(RichContentView.ink.opacity(bold ? 1.0 : 0.9))
                                         .flowProseToken()
-                                case .glossary(let term, let bold, let entry):
+                                case .glossary(let term, let bold, let entry, let forceWrap):
                                     ShinyGlossaryPill(term: term, bold: bold, pastel: entry.classification.pastel) {
                                         onGlossaryTap(entry)
                                     }
                                     .flowGlossaryToken()
+                                    .flowForceWrapBefore(forceWrap)
                                 }
                             }
                         }
@@ -273,7 +303,7 @@ private struct CourseInlineText: View {
 
     private enum FlowToken {
         case prose(String, bold: Bool)
-        case glossary(String, bold: Bool, entry: GlossaryEntry)
+        case glossary(String, bold: Bool, entry: GlossaryEntry, forceWrapBefore: Bool)
     }
 
     private static func buildParagraphContent(
@@ -308,68 +338,134 @@ private struct CourseInlineText: View {
         maxWidth: CGFloat
     ) -> [FlowToken] {
         var tokens: [FlowToken] = []
+        var x: CGFloat = 0
+        let limit = max(maxWidth, 1)
 
         for run in runs {
             switch run.kind {
             case .glossary:
                 if let entry = GlossaryStore.entry(courseTitle: courseTitle, displayTerm: run.content) {
-                    tokens.append(contentsOf: glossaryLineSegments(
-                        displayTerm: run.content,
+                    appendGlossaryTerm(
+                        run.content,
                         bold: run.bold,
                         entry: entry,
-                        maxWidth: maxWidth
-                    ))
+                        maxWidth: limit,
+                        tokens: &tokens,
+                        x: &x
+                    )
                 } else {
-                    tokens.append(contentsOf: proseTokens(from: run.content, bold: run.bold))
+                    for piece in proseTokens(from: run.content, bold: run.bold) {
+                        appendProse(piece, bold: run.bold, maxWidth: limit, tokens: &tokens, x: &x)
+                    }
                 }
             case .text:
-                tokens.append(contentsOf: proseTokens(from: run.content, bold: run.bold))
+                for piece in proseTokens(from: run.content, bold: run.bold) {
+                    appendProse(piece, bold: run.bold, maxWidth: limit, tokens: &tokens, x: &x)
+                }
             }
         }
         return tokens
     }
 
-    /// One pill per visual line when the term wraps; does not pull the preceding word down.
-    private static func glossaryLineSegments(
-        displayTerm: String,
+    /// One pill per line segment; uses remaining line width (tracked `x`), not full container width.
+    private static func appendGlossaryTerm(
+        _ displayTerm: String,
         bold: Bool,
         entry: GlossaryEntry,
-        maxWidth: CGFloat
-    ) -> [FlowToken] {
+        maxWidth: CGFloat,
+        tokens: inout [FlowToken],
+        x: inout CGFloat
+    ) {
         let trimmed = displayTerm.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !trimmed.isEmpty else { return [] }
+        guard !trimmed.isEmpty else { return }
 
         let words = trimmed.split(whereSeparator: \.isWhitespace).map(String.init)
-        guard words.count > 1 else {
-            return [.glossary(trimmed, bold: bold, entry: entry)]
+        if words.count <= 1 {
+            emitGlossaryPill(
+                trimmed,
+                bold: bold,
+                entry: entry,
+                forceWrapBefore: false,
+                maxWidth: maxWidth,
+                tokens: &tokens,
+                x: &x
+            )
+            return
         }
 
-        let uiWeight: UIFont.Weight = bold ? .semibold : .medium
-        let font = UIFont.systemFont(ofSize: UIFont.preferredFont(forTextStyle: .body).pointSize, weight: uiWeight)
-        let pillPadding: CGFloat = 18
-
-        func textWidth(_ text: String) -> CGFloat {
-            (text as NSString).size(withAttributes: [.font: font]).width + pillPadding
-        }
-
-        var lines: [String] = []
-        var current = ""
-
+        var segment: [String] = []
+        var forceWrapBefore = false
         for word in words {
-            let candidate = current.isEmpty ? word : "\(current) \(word)"
-            if textWidth(candidate) <= maxWidth {
-                current = candidate
+            let candidate = segment + [word]
+            let candidateText = candidate.joined(separator: " ")
+            let width = InlineTextMetrics.pillWidth(candidateText, bold: bold)
+
+            if x > 0.5, x + width > maxWidth + 0.5 {
+                if !segment.isEmpty {
+                    emitGlossaryPill(
+                        segment.joined(separator: " "),
+                        bold: bold,
+                        entry: entry,
+                        forceWrapBefore: forceWrapBefore,
+                        maxWidth: maxWidth,
+                        tokens: &tokens,
+                        x: &x
+                    )
+                    segment = []
+                    forceWrapBefore = true
+                }
+                x = 0
+                segment = [word]
             } else {
-                if !current.isEmpty { lines.append(current) }
-                current = word
+                segment = candidate
             }
         }
-        if !current.isEmpty { lines.append(current) }
 
-        if lines.isEmpty {
-            return [.glossary(trimmed, bold: bold, entry: entry)]
+        if !segment.isEmpty {
+            emitGlossaryPill(
+                segment.joined(separator: " "),
+                bold: bold,
+                entry: entry,
+                forceWrapBefore: forceWrapBefore,
+                maxWidth: maxWidth,
+                tokens: &tokens,
+                x: &x
+            )
         }
-        return lines.map { .glossary($0, bold: bold, entry: entry) }
+    }
+
+    private static func emitGlossaryPill(
+        _ text: String,
+        bold: Bool,
+        entry: GlossaryEntry,
+        forceWrapBefore: Bool,
+        maxWidth: CGFloat,
+        tokens: inout [FlowToken],
+        x: inout CGFloat
+    ) {
+        let width = InlineTextMetrics.pillWidth(text, bold: bold)
+        if forceWrapBefore, x > 0.5 {
+            x = 0
+        } else if x > 0.5, x + width > maxWidth + 0.5 {
+            x = 0
+        }
+        tokens.append(.glossary(text, bold: bold, entry: entry, forceWrapBefore: forceWrapBefore))
+        x += width
+    }
+
+    private static func appendProse(
+        _ text: String,
+        bold: Bool,
+        maxWidth: CGFloat,
+        tokens: inout [FlowToken],
+        x: inout CGFloat
+    ) {
+        let width = InlineTextMetrics.proseWidth(text, bold: bold)
+        if !text.isEmpty, x > 0.5, x + width > maxWidth + 0.5 {
+            x = 0
+        }
+        tokens.append(.prose(text, bold: bold))
+        x += width
     }
 
     /// Splits prose into whitespace + word tokens so glossary pills flow inline with the sentence.
@@ -505,6 +601,12 @@ private struct FlowInlineLayout: Layout {
         for index in subviews.indices {
             let subview = subviews[index]
             let size = subview.sizeThatFits(.unspecified)
+
+            if subview[FlowForceWrapKey.self], x > 0.5 {
+                x = 0
+                y += rowHeight + rowSpacing
+                rowHeight = 0
+            }
 
             if x > 0, x + size.width > maxWidth + 0.5 {
                 x = 0
