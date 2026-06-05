@@ -354,12 +354,12 @@ private struct CourseInlineText: View {
                         x: &x
                     )
                 } else {
-                    for piece in proseTokens(from: run.content, bold: run.bold) {
+                    for piece in proseTokens(from: run.content) {
                         appendProse(piece, bold: run.bold, maxWidth: limit, tokens: &tokens, x: &x)
                     }
                 }
             case .text:
-                for piece in proseTokens(from: run.content, bold: run.bold) {
+                for piece in proseTokens(from: run.content) {
                     appendProse(piece, bold: run.bold, maxWidth: limit, tokens: &tokens, x: &x)
                 }
             }
@@ -469,9 +469,9 @@ private struct CourseInlineText: View {
     }
 
     /// Splits prose into whitespace + word tokens so glossary pills flow inline with the sentence.
-    private static func proseTokens(from text: String, bold: Bool) -> [FlowToken] {
+    private static func proseTokens(from text: String) -> [String] {
         guard !text.isEmpty else { return [] }
-        var tokens: [FlowToken] = []
+        var tokens: [String] = []
         var index = text.startIndex
 
         while index < text.endIndex {
@@ -481,7 +481,7 @@ private struct CourseInlineText: View {
                     whitespace.append(text[index])
                     index = text.index(after: index)
                 }
-                tokens.append(.prose(whitespace, bold: bold))
+                tokens.append(whitespace)
                 continue
             }
 
@@ -490,7 +490,7 @@ private struct CourseInlineText: View {
                 chunk.append(text[index])
                 index = text.index(after: index)
             }
-            tokens.append(.prose(chunk, bold: bold))
+            tokens.append(chunk)
         }
         return tokens
     }
