@@ -119,6 +119,23 @@ nonisolated struct CollectionProgressEvent: Identifiable, Sendable {
     }
 }
 
+nonisolated struct CardUnlockEvent: Identifiable, Sendable {
+    var id: String { card.id }
+    let card: CollectibleCard
+    let awardResult: GlobalXPAwardResult
+}
+
+nonisolated struct QuizStatsSummary: Sendable {
+    let completedQuizCount: Int
+    let correctAnswerCount: Int
+    let totalQuestionCount: Int
+
+    var successPercent: Int {
+        guard totalQuestionCount > 0 else { return 0 }
+        return Int((Double(correctAnswerCount) / Double(totalQuestionCount) * 100).rounded())
+    }
+}
+
 @Observable
 @MainActor
 class ProgressManager {
@@ -223,13 +240,18 @@ class ProgressManager {
         save()
     }
 
-    func completeCourse(courseId: String, quizScore: Int) {
+    func completeCourse(courseId: String, quizScore: Int, completedQuiz: Bool = false) {
         var cp = progress.courseProgress[courseId] ?? CourseProgress(lastLessonIndex: 0, isCompleted: false, bestQuizScore: 0)
         cp.isCompleted = true
         if quizScore > cp.bestQuizScore {
             cp.bestQuizScore = quizScore
         }
-        cp.lastQuizDate = ISO8601DateFormatter().string(from: Date())
+        if completedQuiz {
+            cp.lastQuizDate = ISO8601DateFormatter().string(from: Date())
+            if !progress.completedQuizCourseIds.contains(courseId) {
+                progress.completedQuizCourseIds.append(courseId)
+            }
+        }
         progress.courseProgress[courseId] = cp
         recordActivity()
         save()
@@ -361,10 +383,58 @@ class ProgressManager {
         }
     }
 
+    var quizStatsSummary: QuizStatsSummary {
+        let quizCourseIds = Set(progress.completedQuizCourseIds)
+        let quizCourses = CourseData.allCourses.filter { quizCourseIds.contains($0.id) && !$0.quiz.isEmpty }
+        let correct = quizCourses.reduce(0) { partial, course in
+            partial + (progress.courseProgress[course.id]?.bestQuizScore ?? 0)
+        }
+        let total = quizCourses.reduce(0) { $0 + $1.quiz.count }
+        return QuizStatsSummary(
+            completedQuizCount: quizCourses.count,
+            correctAnswerCount: correct,
+            totalQuestionCount: total
+        )
+    }
+
+    func isCardUnlocked(_ card: CollectibleCard) -> Bool {
+        if progress.unlockedCardIds.contains(card.id) { return true }
+        return card.courseIds.contains { courseId in
+            progress.courseProgress[courseId]?.isCompleted == true
+        }
+    }
+
+    var unlockedCards: [CollectibleCard] {
+        CardData.allCards.filter { isCardUnlocked($0) }
+    }
+
+    var recentlyUnlockedCards: [CollectibleCard] {
+        let explicit = progress.unlockedCardIds.reversed().compactMap { cardId in
+            CardData.allCards.first { $0.id == cardId }
+        }
+        if !explicit.isEmpty { return Array(explicit.prefix(6)) }
+        return Array(unlockedCards.prefix(6))
+    }
+
+    func cardUnlockCandidates(forCompletingCourseId courseId: String) -> [CollectibleCard] {
+        guard progress.courseProgress[courseId]?.isCompleted != true else { return [] }
+        return (CardData.cardsByCourseId[courseId] ?? []).filter { card in
+            !isCardUnlocked(card)
+        }
+    }
+
+    func unlockCard(_ card: CollectibleCard) -> CardUnlockEvent? {
+        guard !progress.unlockedCardIds.contains(card.id) else { return nil }
+        progress.unlockedCardIds.append(card.id)
+        save()
+        let award = awardGlobalXP(reason: .cardUnlocked(id: card.id), amount: card.rarity.xpReward)
+        return CardUnlockEvent(card: card, awardResult: award)
+    }
+
     /// Recent quizzes (courses completed with a quiz score), most recent first.
     var recentQuizzes: [(course: Course, score: Int, totalQuestions: Int, date: Date)] {
         let entries: [(String, CourseProgress, Date)] = progress.courseProgress.compactMap { id, cp in
-            guard cp.isCompleted, let dateStr = cp.lastQuizDate,
+            guard cp.isCompleted, progress.completedQuizCourseIds.contains(id), let dateStr = cp.lastQuizDate,
                   let date = ISO8601DateFormatter().date(from: dateStr) else { return nil }
             return (id, cp, date)
         }

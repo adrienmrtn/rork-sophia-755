@@ -19,6 +19,10 @@ struct CourseView: View {
     @State private var previousSubjectCount: Int = 0
     @State private var previousSubjectXP: Int = 0
     @State private var globalCourseAwardResult: GlobalXPAwardResult?
+    @State private var pendingCardCandidates: [CollectibleCard] = []
+    @State private var currentCardUnlockEvent: CardUnlockEvent?
+    @State private var showCardUnlock: Bool = false
+    @State private var showCardRankUp: Bool = false
     @State private var pendingCollectionEvents: [CollectionProgressEvent] = []
     @State private var currentCollectionEvent: CollectionProgressEvent?
     @State private var collectionCompletionAwardResult: GlobalXPAwardResult?
@@ -91,6 +95,7 @@ struct CourseView: View {
                 course: course,
                 progressManager: progressManager,
                 initialCollectionEvents: pendingCollectionEvents,
+                initialCardCandidates: pendingCardCandidates,
                 onReturnHome: {
                     showQuiz = false
                     onDismissToHome()
@@ -107,6 +112,33 @@ struct CourseView: View {
                 showQuiz = true
             })
             .presentationDragIndicator(.visible)
+        }
+        .fullScreenCover(isPresented: $showCardUnlock) {
+            if let currentCardUnlockEvent {
+                CardUnlockCelebrationView(event: currentCardUnlockEvent) {
+                    showCardUnlock = false
+                    self.currentCardUnlockEvent = nil
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+                        continueAfterCourseCompletion()
+                    }
+                }
+            }
+        }
+        .fullScreenCover(isPresented: $showCardRankUp) {
+            if let pending = progressManager.pendingGlobalRankUp() {
+                GlobalRankUpCelebrationView(
+                    previousRank: pending.previous,
+                    newRank: pending.new,
+                    newLevel: pending.newLevel,
+                    onContinue: {
+                        progressManager.clearPendingGlobalRankUp()
+                        showCardRankUp = false
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+                            continueAfterCourseCompletion()
+                        }
+                    }
+                )
+            }
         }
         .fullScreenCover(isPresented: $showCollectionProgress) {
             if let currentCollectionEvent {
@@ -264,6 +296,7 @@ struct CourseView: View {
                 progressManager.updateLessonProgress(courseId: course.id, lessonIndex: currentIndex)
                 progressManager.markCourseCompletedToday()
                 let wasCompletedBefore = progressManager.courseStatus(for: course.id) == .completed
+                let cardCandidates = progressManager.cardUnlockCandidates(forCompletingCourseId: course.id)
                 // Capture XP/count BEFORE awarding so we can animate the bar advancing.
                 previousSubjectCount = progressManager.completedCount(for: course.subject)
                 previousSubjectXP = progressManager.xp(for: course.subject)
@@ -274,6 +307,7 @@ struct CourseView: View {
                     reason: .courseCompleted(courseId: course.id),
                     amount: ProgressManager.globalCourseCompletionXP
                 )
+                pendingCardCandidates = wasCompletedBefore ? [] : cardCandidates
                 pendingCollectionEvents = wasCompletedBefore ? [] : progressManager.collectionProgressEvents(forNewlyCompletedCourseId: course.id)
                 withAnimation(.spring(response: 0.5, dampingFraction: 0.85)) {
                     endPhase = .completed
@@ -338,6 +372,20 @@ struct CourseView: View {
     }
 
     private func continueAfterCourseCompletion() {
+        if !pendingCardCandidates.isEmpty {
+            let card = pendingCardCandidates.removeFirst()
+            if let event = progressManager.unlockCard(card) {
+                currentCardUnlockEvent = event
+                showCardUnlock = true
+                return
+            }
+            continueAfterCourseCompletion()
+            return
+        }
+        if progressManager.pendingGlobalRankUp() != nil {
+            showCardRankUp = true
+            return
+        }
         if !pendingCollectionEvents.isEmpty {
             currentCollectionEvent = pendingCollectionEvents.removeFirst()
             showCollectionProgress = true

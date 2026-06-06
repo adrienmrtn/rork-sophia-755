@@ -45,12 +45,16 @@ nonisolated struct UserProgress: Codable, Sendable {
     var globalCollectionXPAwardedIds: [String]
     /// Card IDs that already granted their one-time global unlock reward.
     var globalCardXPAwardedIds: [String]
+    /// Cards explicitly unlocked after the card feature launched. Older completed courses are reflected dynamically without retroactive XP.
+    var unlockedCardIds: [String]
+    /// Course IDs for which the user actually completed the quiz flow.
+    var completedQuizCourseIds: [String]
     /// Highest global rank animation waiting to be shown.
     var pendingGlobalRankUp: PendingGlobalRankUp?
 
-    static let empty = UserProgress(courseProgress: [:], streak: 0, lastActiveDate: nil, favoriteCourseIds: [], freeCoursesOpened: 0, hasSeenSwipeTutorial: false, hasSeenSpecialOffer: false, lastCourseCompletedDate: nil, lastStreakShownDate: nil, subjectXP: [:], globalXP: 0, globalCourseXPAwardedIds: [], globalQuizXPAwardedIds: [], globalCollectionXPAwardedIds: [], globalCardXPAwardedIds: [], pendingGlobalRankUp: nil)
+    static let empty = UserProgress(courseProgress: [:], streak: 0, lastActiveDate: nil, favoriteCourseIds: [], freeCoursesOpened: 0, hasSeenSwipeTutorial: false, hasSeenSpecialOffer: false, lastCourseCompletedDate: nil, lastStreakShownDate: nil, subjectXP: [:], globalXP: 0, globalCourseXPAwardedIds: [], globalQuizXPAwardedIds: [], globalCollectionXPAwardedIds: [], globalCardXPAwardedIds: [], unlockedCardIds: [], completedQuizCourseIds: [], pendingGlobalRankUp: nil)
 
-    init(courseProgress: [String: CourseProgress], streak: Int, lastActiveDate: String?, favoriteCourseIds: [String] = [], freeCoursesOpened: Int = 0, hasSeenSwipeTutorial: Bool = false, hasSeenSpecialOffer: Bool = false, lastCourseCompletedDate: String? = nil, lastStreakShownDate: String? = nil, subjectXP: [String: Int] = [:], globalXP: Int = 0, globalCourseXPAwardedIds: [String] = [], globalQuizXPAwardedIds: [String] = [], globalCollectionXPAwardedIds: [String] = [], globalCardXPAwardedIds: [String] = [], pendingGlobalRankUp: PendingGlobalRankUp? = nil) {
+    init(courseProgress: [String: CourseProgress], streak: Int, lastActiveDate: String?, favoriteCourseIds: [String] = [], freeCoursesOpened: Int = 0, hasSeenSwipeTutorial: Bool = false, hasSeenSpecialOffer: Bool = false, lastCourseCompletedDate: String? = nil, lastStreakShownDate: String? = nil, subjectXP: [String: Int] = [:], globalXP: Int = 0, globalCourseXPAwardedIds: [String] = [], globalQuizXPAwardedIds: [String] = [], globalCollectionXPAwardedIds: [String] = [], globalCardXPAwardedIds: [String] = [], unlockedCardIds: [String] = [], completedQuizCourseIds: [String] = [], pendingGlobalRankUp: PendingGlobalRankUp? = nil) {
         self.courseProgress = courseProgress
         self.streak = streak
         self.lastActiveDate = lastActiveDate
@@ -66,13 +70,15 @@ nonisolated struct UserProgress: Codable, Sendable {
         self.globalQuizXPAwardedIds = globalQuizXPAwardedIds
         self.globalCollectionXPAwardedIds = globalCollectionXPAwardedIds
         self.globalCardXPAwardedIds = globalCardXPAwardedIds
+        self.unlockedCardIds = unlockedCardIds
+        self.completedQuizCourseIds = completedQuizCourseIds
         self.pendingGlobalRankUp = pendingGlobalRankUp
     }
 
     enum CodingKeys: String, CodingKey {
         case courseProgress, streak, lastActiveDate, favoriteCourseIds, freeCoursesOpened
         case hasSeenSwipeTutorial, hasSeenSpecialOffer, lastCourseCompletedDate, lastStreakShownDate, subjectXP
-        case globalXP, globalCourseXPAwardedIds, globalQuizXPAwardedIds, globalCollectionXPAwardedIds, globalCardXPAwardedIds, pendingGlobalRankUp
+        case globalXP, globalCourseXPAwardedIds, globalQuizXPAwardedIds, globalCollectionXPAwardedIds, globalCardXPAwardedIds, unlockedCardIds, completedQuizCourseIds, pendingGlobalRankUp
     }
 
     init(from decoder: Decoder) throws {
@@ -92,6 +98,8 @@ nonisolated struct UserProgress: Codable, Sendable {
         self.globalQuizXPAwardedIds = try c.decodeIfPresent([String].self, forKey: .globalQuizXPAwardedIds) ?? []
         self.globalCollectionXPAwardedIds = try c.decodeIfPresent([String].self, forKey: .globalCollectionXPAwardedIds) ?? []
         self.globalCardXPAwardedIds = try c.decodeIfPresent([String].self, forKey: .globalCardXPAwardedIds) ?? []
+        self.unlockedCardIds = try c.decodeIfPresent([String].self, forKey: .unlockedCardIds) ?? []
+        self.completedQuizCourseIds = try c.decodeIfPresent([String].self, forKey: .completedQuizCourseIds) ?? []
         self.pendingGlobalRankUp = try c.decodeIfPresent(PendingGlobalRankUp.self, forKey: .pendingGlobalRankUp)
     }
 }
