@@ -19,6 +19,12 @@ struct CourseView: View {
     @State private var previousSubjectCount: Int = 0
     @State private var previousSubjectXP: Int = 0
     @State private var globalCourseAwardResult: GlobalXPAwardResult?
+    @State private var pendingCollectionEvents: [CollectionProgressEvent] = []
+    @State private var currentCollectionEvent: CollectionProgressEvent?
+    @State private var collectionCompletionAwardResult: GlobalXPAwardResult?
+    @State private var showCollectionProgress: Bool = false
+    @State private var showCollectionCompleted: Bool = false
+    @State private var showCollectionRankUp: Bool = false
 
     /// Fixed XP awarded for finishing a course (reaching the completion screen). Always granted.
     private let courseCompletionXP: Int = 10
@@ -51,14 +57,7 @@ struct CourseView: View {
                     globalAwardResult: globalCourseAwardResult,
                     showFreemiumGate: !isPremium,
                     onClose: {
-                        if progressManager.shouldShowStreakToday {
-                            progressManager.markStreakShownToday()
-                            withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
-                                endPhase = .streak
-                            }
-                        } else {
-                            onDismissToHome()
-                        }
+                        continueAfterCourseCompletion()
                     },
                     onQuizTapped: {
                         if isPremium {
@@ -91,6 +90,7 @@ struct CourseView: View {
             QuizView(
                 course: course,
                 progressManager: progressManager,
+                initialCollectionEvents: pendingCollectionEvents,
                 onReturnHome: {
                     showQuiz = false
                     onDismissToHome()
@@ -107,6 +107,64 @@ struct CourseView: View {
                 showQuiz = true
             })
             .presentationDragIndicator(.visible)
+        }
+        .fullScreenCover(isPresented: $showCollectionProgress) {
+            if let currentCollectionEvent {
+                CollectionProgressCelebrationView(event: currentCollectionEvent) {
+                    showCollectionProgress = false
+                    if currentCollectionEvent.didCompleteCollection {
+                        collectionCompletionAwardResult = progressManager.awardGlobalXP(
+                            reason: .collectionCompleted(id: currentCollectionEvent.collection.id),
+                            amount: progressManager.collectionCompletionXP(for: currentCollectionEvent.collection)
+                        )
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+                            showCollectionCompleted = true
+                        }
+                    } else {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+                            continueAfterCourseCompletion()
+                        }
+                    }
+                }
+            }
+        }
+        .fullScreenCover(isPresented: $showCollectionCompleted) {
+            if let currentCollectionEvent {
+                CollectionCompletedCelebrationView(
+                    event: currentCollectionEvent,
+                    awardedXP: collectionCompletionAwardResult?.awardedXP ?? 0,
+                    onContinue: {
+                        showCollectionCompleted = false
+                        if collectionCompletionAwardResult?.didRankUp == true || progressManager.pendingGlobalRankUp() != nil {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+                                showCollectionRankUp = true
+                            }
+                        } else {
+                            collectionCompletionAwardResult = nil
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+                                continueAfterCourseCompletion()
+                            }
+                        }
+                    }
+                )
+            }
+        }
+        .fullScreenCover(isPresented: $showCollectionRankUp) {
+            if let pending = progressManager.pendingGlobalRankUp() {
+                GlobalRankUpCelebrationView(
+                    previousRank: pending.previous,
+                    newRank: pending.new,
+                    newLevel: pending.newLevel,
+                    onContinue: {
+                        progressManager.clearPendingGlobalRankUp()
+                        collectionCompletionAwardResult = nil
+                        showCollectionRankUp = false
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+                            continueAfterCourseCompletion()
+                        }
+                    }
+                )
+            }
         }
         .onAppear {
             withAnimation(.spring(response: 0.5, dampingFraction: 0.8).delay(0.1)) {
@@ -205,6 +263,7 @@ struct CourseView: View {
             if isLastLesson {
                 progressManager.updateLessonProgress(courseId: course.id, lessonIndex: currentIndex)
                 progressManager.markCourseCompletedToday()
+                let wasCompletedBefore = progressManager.courseStatus(for: course.id) == .completed
                 // Capture XP/count BEFORE awarding so we can animate the bar advancing.
                 previousSubjectCount = progressManager.completedCount(for: course.subject)
                 previousSubjectXP = progressManager.xp(for: course.subject)
@@ -215,6 +274,7 @@ struct CourseView: View {
                     reason: .courseCompleted(courseId: course.id),
                     amount: ProgressManager.globalCourseCompletionXP
                 )
+                pendingCollectionEvents = wasCompletedBefore ? [] : progressManager.collectionProgressEvents(forNewlyCompletedCourseId: course.id)
                 withAnimation(.spring(response: 0.5, dampingFraction: 0.85)) {
                     endPhase = .completed
                 }
@@ -274,6 +334,23 @@ struct CourseView: View {
             guard let scene = UIApplication.shared.connectedScenes
                 .first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene else { return }
             SKStoreReviewController.requestReview(in: scene)
+        }
+    }
+
+    private func continueAfterCourseCompletion() {
+        if !pendingCollectionEvents.isEmpty {
+            currentCollectionEvent = pendingCollectionEvents.removeFirst()
+            showCollectionProgress = true
+            return
+        }
+        currentCollectionEvent = nil
+        if progressManager.shouldShowStreakToday {
+            progressManager.markStreakShownToday()
+            withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
+                endPhase = .streak
+            }
+        } else {
+            onDismissToHome()
         }
     }
 }

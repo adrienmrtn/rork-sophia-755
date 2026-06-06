@@ -107,6 +107,18 @@ nonisolated struct GlobalXPAwardResult: Sendable {
     var didRankUp: Bool { previousRank != newRank }
 }
 
+nonisolated struct CollectionProgressEvent: Identifiable, Sendable {
+    var id: String { collection.id }
+    let collection: LearningCollection
+    let previousCompletedCount: Int
+    let newCompletedCount: Int
+    let totalCount: Int
+
+    var didCompleteCollection: Bool {
+        previousCompletedCount < totalCount && newCompletedCount == totalCount
+    }
+}
+
 @Observable
 @MainActor
 class ProgressManager {
@@ -128,6 +140,7 @@ class ProgressManager {
 
     static let globalCourseCompletionXP = 50
     static let globalQuizCompletionXP = 50
+    static let globalCollectionXPPerCourse = 25
 
     private static let globalLevelXPRequirements: [Int] = {
         (1..<100).map { level in
@@ -312,6 +325,40 @@ class ProgressManager {
         return progress.courseProgress.filter { id, cp in
             cp.isCompleted && coursesInSubject.contains(id)
         }.count
+    }
+
+    func completedCount(for collection: LearningCollection) -> Int {
+        collection.courseIds.filter { courseId in
+            progress.courseProgress[courseId]?.isCompleted == true
+        }.count
+    }
+
+    func progressFraction(for collection: LearningCollection) -> Double {
+        guard !collection.courseIds.isEmpty else { return 0 }
+        return min(1, Double(completedCount(for: collection)) / Double(collection.courseIds.count))
+    }
+
+    func isCollectionCompleted(_ collection: LearningCollection) -> Bool {
+        !collection.courseIds.isEmpty && completedCount(for: collection) == collection.courseIds.count
+    }
+
+    func collectionCompletionXP(for collection: LearningCollection) -> Int {
+        collection.courseIds.count * Self.globalCollectionXPPerCourse
+    }
+
+    func collectionProgressEvents(forNewlyCompletedCourseId courseId: String) -> [CollectionProgressEvent] {
+        CollectionData.allCollections.compactMap { collection in
+            guard collection.courseIds.contains(courseId) else { return nil }
+            let newCount = completedCount(for: collection)
+            let previousCount = max(0, newCount - 1)
+            guard newCount > previousCount else { return nil }
+            return CollectionProgressEvent(
+                collection: collection,
+                previousCompletedCount: previousCount,
+                newCompletedCount: newCount,
+                totalCount: collection.courseIds.count
+            )
+        }
     }
 
     /// Recent quizzes (courses completed with a quiz score), most recent first.

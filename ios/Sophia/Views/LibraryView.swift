@@ -21,11 +21,17 @@ enum BrutalPalette {
 }
 
 struct LibraryView: View {
+    private enum LibraryTab: String, CaseIterable {
+        case courses = "Cours"
+        case collections = "Collections"
+    }
+
     let progressManager: ProgressManager
     var isPremium: Bool = true
     var onShowPaywall: ((SophiaPaywallContext) -> Void)? = nil
     @Binding var selectedCourse: Course?
     @State private var searchText: String = ""
+    @State private var selectedTab: LibraryTab = .courses
     @FocusState private var searchFocused: Bool
 
     private var unlockedSubjects: Set<Subject> {
@@ -63,24 +69,36 @@ struct LibraryView: View {
                         .padding(.horizontal, 20)
                         .padding(.top, 8)
 
-                        searchBar
+                        tabSwitcher
                             .padding(.horizontal, 20)
 
-                        ForEach(Subject.allCases, id: \.self) { subject in
-                            let courses = filteredCourses.filter { $0.subject == subject }
-                            let unlocked = unlockedSubjects.contains(subject)
-                            if !courses.isEmpty {
-                                if isSearching {
-                                    searchSection(subject: subject, courses: courses, unlocked: unlocked)
-                                } else {
-                                    previewSection(subject: subject, courses: courses, unlocked: unlocked)
+                        if selectedTab == .courses {
+                            searchBar
+                                .padding(.horizontal, 20)
+
+                            ForEach(Subject.allCases, id: \.self) { subject in
+                                let courses = filteredCourses.filter { $0.subject == subject }
+                                let unlocked = unlockedSubjects.contains(subject)
+                                if !courses.isEmpty {
+                                    if isSearching {
+                                        searchSection(subject: subject, courses: courses, unlocked: unlocked)
+                                    } else {
+                                        previewSection(subject: subject, courses: courses, unlocked: unlocked)
+                                    }
                                 }
                             }
-                        }
 
-                        if isSearching && filteredCourses.isEmpty {
-                            emptyResults
-                                .padding(.top, 60)
+                            if isSearching && filteredCourses.isEmpty {
+                                emptyResults
+                                    .padding(.top, 60)
+                            }
+                        } else {
+                            CollectionsOverviewView(
+                                progressManager: progressManager,
+                                isPremium: isPremium,
+                                onShowPaywall: { ctx in onShowPaywall?(ctx) },
+                                selectedCourse: $selectedCourse
+                            )
                         }
                     }
                     .padding(.bottom, 40)
@@ -100,7 +118,46 @@ struct LibraryView: View {
                     selectedCourse: $selectedCourse
                 )
             }
+            .navigationDestination(for: LearningCollection.self) { collection in
+                CollectionDetailView(
+                    collection: collection,
+                    progressManager: progressManager,
+                    isPremium: isPremium,
+                    onShowPaywall: { ctx in onShowPaywall?(ctx) },
+                    selectedCourse: $selectedCourse
+                )
+            }
         }
+    }
+
+    private var tabSwitcher: some View {
+        HStack(spacing: 8) {
+            ForEach(LibraryTab.allCases, id: \.self) { tab in
+                Button {
+                    let g = UIImpactFeedbackGenerator(style: .light)
+                    g.impactOccurred()
+                    withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
+                        selectedTab = tab
+                        if tab == .collections {
+                            searchText = ""
+                            searchFocused = false
+                        }
+                    }
+                } label: {
+                    Text(tab.rawValue)
+                        .font(.system(.subheadline, design: .rounded, weight: .black))
+                        .foregroundStyle(selectedTab == tab ? .white : ink)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 12)
+                        .background(selectedTab == tab ? ink : Color.white, in: Capsule())
+                        .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
+                }
+                .buttonStyle(BrutalIconButtonStyle(depth: 1))
+            }
+        }
+        .padding(5)
+        .background(Color.white.opacity(0.55), in: Capsule())
+        .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
     }
 
     private var searchBar: some View {
