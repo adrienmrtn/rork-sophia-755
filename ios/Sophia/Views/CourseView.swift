@@ -18,6 +18,7 @@ struct CourseView: View {
     @State private var endPhase: CourseEndPhase = .none
     @State private var previousSubjectCount: Int = 0
     @State private var previousSubjectXP: Int = 0
+    @State private var globalCourseAwardResult: GlobalXPAwardResult?
 
     /// Fixed XP awarded for finishing a course (reaching the completion screen). Always granted.
     private let courseCompletionXP: Int = 10
@@ -47,6 +48,7 @@ struct CourseView: View {
                     progressManager: progressManager,
                     previousSubjectXP: previousSubjectXP,
                     earnedXP: courseCompletionXP,
+                    globalAwardResult: globalCourseAwardResult,
                     showFreemiumGate: !isPremium,
                     onClose: {
                         if progressManager.shouldShowStreakToday {
@@ -209,6 +211,10 @@ struct CourseView: View {
                 progressManager.completeCourse(courseId: course.id, quizScore: 0)
                 // Always award +10 XP when reaching the end-of-course screen, premium or free.
                 progressManager.addXP(subject: course.subject, amount: courseCompletionXP)
+                globalCourseAwardResult = progressManager.awardGlobalXP(
+                    reason: .courseCompleted(courseId: course.id),
+                    amount: ProgressManager.globalCourseCompletionXP
+                )
                 withAnimation(.spring(response: 0.5, dampingFraction: 0.85)) {
                     endPhase = .completed
                 }

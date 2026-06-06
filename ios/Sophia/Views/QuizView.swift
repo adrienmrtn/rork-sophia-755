@@ -31,6 +31,7 @@ struct QuizView: View {
     @State private var levelUpBounce: Int = 0
     @State private var glowPulse: Bool = false
     @State private var showLevelUpCelebration: Bool = false
+    @State private var showGlobalRankUpCelebration: Bool = false
     @State private var xpBarShimmer: CGFloat = -80
     @State private var xpBarShimmerActive: Bool = false
     @State private var cachedCourseThumb: UIImage?
@@ -41,6 +42,7 @@ struct QuizView: View {
     @State private var xpEarned: Int = 0
     @State private var showXPPopup: Bool = false
     @State private var popupXPAmount: Int = 0
+    @State private var globalQuizAwardResult: GlobalXPAwardResult?
 
     /// Fixed XP bonus awarded when the quiz is fully completed.
     private let quizCompletionXPBonus: Int = 10
@@ -115,9 +117,24 @@ struct QuizView: View {
                 newLevel: levelAfter,
                 onContinue: {
                     showLevelUpCelebration = false
-                    revealXPContinueButton()
+                    revealAfterSubjectLevelUp()
                 }
             )
+        }
+        .fullScreenCover(isPresented: $showGlobalRankUpCelebration) {
+            if let pendingGlobalRankUp {
+                GlobalRankUpCelebrationView(
+                    previousRank: pendingGlobalRankUp.previous,
+                    newRank: pendingGlobalRankUp.new,
+                    newLevel: pendingGlobalRankUp.newLevel,
+                    onContinue: {
+                        progressManager.clearPendingGlobalRankUp()
+                        globalQuizAwardResult = nil
+                        showGlobalRankUpCelebration = false
+                        revealXPContinueButton()
+                    }
+                )
+            }
         }
         .onAppear {
             streakBefore = progressManager.streak
@@ -544,6 +561,10 @@ struct QuizView: View {
             // Award the fixed quiz-completion XP bonus once, before transitioning to the result screen.
             progressManager.addXP(subject: course.subject, amount: quizCompletionXPBonus)
             xpEarned += quizCompletionXPBonus
+            globalQuizAwardResult = progressManager.awardGlobalXP(
+                reason: .quizCompleted(courseId: course.id),
+                amount: ProgressManager.globalQuizCompletionXP
+            )
             progressManager.completeCourse(courseId: course.id, quizScore: correctCount)
             withAnimation(.spring(response: 0.5, dampingFraction: 0.8)) {
                 isFinished = true
@@ -861,6 +882,8 @@ struct QuizView: View {
                     UINotificationFeedbackGenerator().notificationOccurred(.success)
                     if didLevelUp {
                         showLevelUpCelebration = true
+                    } else if pendingGlobalRankUp != nil {
+                        showGlobalRankUpCelebration = true
                     } else {
                         revealXPContinueButton()
                     }
@@ -875,6 +898,21 @@ struct QuizView: View {
                 xpButtonAppeared = true
             }
         }
+    }
+
+    private func revealAfterSubjectLevelUp() {
+        if pendingGlobalRankUp != nil {
+            showGlobalRankUpCelebration = true
+        } else {
+            revealXPContinueButton()
+        }
+    }
+
+    private var pendingGlobalRankUp: (previous: GlobalRank, new: GlobalRank, newLevel: Int)? {
+        if let globalQuizAwardResult, globalQuizAwardResult.didRankUp {
+            return (globalQuizAwardResult.previousRank, globalQuizAwardResult.newRank, globalQuizAwardResult.newLevel)
+        }
+        return progressManager.pendingGlobalRankUp()
     }
 
     private var levelBefore: Int {
