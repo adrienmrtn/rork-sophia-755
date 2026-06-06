@@ -3,6 +3,7 @@ import SwiftUI
 struct QuizView: View {
     let course: Course
     let progressManager: ProgressManager
+    var initialCollectionEvents: [CollectionProgressEvent] = []
     let onReturnHome: () -> Void
     @Environment(\.dismiss) private var dismiss
 
@@ -31,6 +32,7 @@ struct QuizView: View {
     @State private var levelUpBounce: Int = 0
     @State private var glowPulse: Bool = false
     @State private var showLevelUpCelebration: Bool = false
+    @State private var showGlobalRankUpCelebration: Bool = false
     @State private var xpBarShimmer: CGFloat = -80
     @State private var xpBarShimmerActive: Bool = false
     @State private var cachedCourseThumb: UIImage?
@@ -41,6 +43,14 @@ struct QuizView: View {
     @State private var xpEarned: Int = 0
     @State private var showXPPopup: Bool = false
     @State private var popupXPAmount: Int = 0
+    @State private var globalQuizAwardResult: GlobalXPAwardResult?
+    @State private var courseWasCompletedBeforeQuiz: Bool = false
+    @State private var pendingCollectionEvents: [CollectionProgressEvent] = []
+    @State private var currentCollectionEvent: CollectionProgressEvent?
+    @State private var collectionCompletionAwardResult: GlobalXPAwardResult?
+    @State private var showCollectionProgress: Bool = false
+    @State private var showCollectionCompleted: Bool = false
+    @State private var showCollectionRankUp: Bool = false
 
     /// Fixed XP bonus awarded when the quiz is fully completed.
     private let quizCompletionXPBonus: Int = 10
@@ -115,14 +125,89 @@ struct QuizView: View {
                 newLevel: levelAfter,
                 onContinue: {
                     showLevelUpCelebration = false
-                    revealXPContinueButton()
+                    revealAfterSubjectLevelUp()
                 }
             )
+        }
+        .fullScreenCover(isPresented: $showGlobalRankUpCelebration) {
+            if let pendingGlobalRankUp {
+                GlobalRankUpCelebrationView(
+                    previousRank: pendingGlobalRankUp.previous,
+                    newRank: pendingGlobalRankUp.new,
+                    newLevel: pendingGlobalRankUp.newLevel,
+                    onContinue: {
+                        progressManager.clearPendingGlobalRankUp()
+                        globalQuizAwardResult = nil
+                        showGlobalRankUpCelebration = false
+                        revealXPContinueButton()
+                    }
+                )
+            }
+        }
+        .fullScreenCover(isPresented: $showCollectionProgress) {
+            if let currentCollectionEvent {
+                CollectionProgressCelebrationView(event: currentCollectionEvent) {
+                    showCollectionProgress = false
+                    if currentCollectionEvent.didCompleteCollection {
+                        collectionCompletionAwardResult = progressManager.awardGlobalXP(
+                            reason: .collectionCompleted(id: currentCollectionEvent.collection.id),
+                            amount: progressManager.collectionCompletionXP(for: currentCollectionEvent.collection)
+                        )
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+                            showCollectionCompleted = true
+                        }
+                    } else {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+                            continueAfterQuizCompletion()
+                        }
+                    }
+                }
+            }
+        }
+        .fullScreenCover(isPresented: $showCollectionCompleted) {
+            if let currentCollectionEvent {
+                CollectionCompletedCelebrationView(
+                    event: currentCollectionEvent,
+                    awardedXP: collectionCompletionAwardResult?.awardedXP ?? 0,
+                    onContinue: {
+                        showCollectionCompleted = false
+                        if collectionCompletionAwardResult?.didRankUp == true || progressManager.pendingGlobalRankUp() != nil {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+                                showCollectionRankUp = true
+                            }
+                        } else {
+                            collectionCompletionAwardResult = nil
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+                                continueAfterQuizCompletion()
+                            }
+                        }
+                    }
+                )
+            }
+        }
+        .fullScreenCover(isPresented: $showCollectionRankUp) {
+            if let pending = progressManager.pendingGlobalRankUp() {
+                GlobalRankUpCelebrationView(
+                    previousRank: pending.previous,
+                    newRank: pending.new,
+                    newLevel: pending.newLevel,
+                    onContinue: {
+                        progressManager.clearPendingGlobalRankUp()
+                        collectionCompletionAwardResult = nil
+                        showCollectionRankUp = false
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+                            continueAfterQuizCompletion()
+                        }
+                    }
+                )
+            }
         }
         .onAppear {
             streakBefore = progressManager.streak
             completedBefore = progressManager.completedCount
             subjectXPBefore = progressManager.xp(for: course.subject)
+            courseWasCompletedBeforeQuiz = progressManager.courseStatus(for: course.id) == .completed
+            pendingCollectionEvents = initialCollectionEvents
             shuffleAllQuestions()
         }
     }
@@ -544,7 +629,14 @@ struct QuizView: View {
             // Award the fixed quiz-completion XP bonus once, before transitioning to the result screen.
             progressManager.addXP(subject: course.subject, amount: quizCompletionXPBonus)
             xpEarned += quizCompletionXPBonus
+            globalQuizAwardResult = progressManager.awardGlobalXP(
+                reason: .quizCompleted(courseId: course.id),
+                amount: ProgressManager.globalQuizCompletionXP
+            )
             progressManager.completeCourse(courseId: course.id, quizScore: correctCount)
+            if !courseWasCompletedBeforeQuiz {
+                pendingCollectionEvents = progressManager.collectionProgressEvents(forNewlyCompletedCourseId: course.id)
+            }
             withAnimation(.spring(response: 0.5, dampingFraction: 0.8)) {
                 isFinished = true
             }
@@ -861,6 +953,8 @@ struct QuizView: View {
                     UINotificationFeedbackGenerator().notificationOccurred(.success)
                     if didLevelUp {
                         showLevelUpCelebration = true
+                    } else if pendingGlobalRankUp != nil {
+                        showGlobalRankUpCelebration = true
                     } else {
                         revealXPContinueButton()
                     }
@@ -875,6 +969,38 @@ struct QuizView: View {
                 xpButtonAppeared = true
             }
         }
+    }
+
+    private func revealAfterSubjectLevelUp() {
+        if pendingGlobalRankUp != nil {
+            showGlobalRankUpCelebration = true
+        } else {
+            revealXPContinueButton()
+        }
+    }
+
+    private func continueAfterQuizCompletion() {
+        if !pendingCollectionEvents.isEmpty {
+            currentCollectionEvent = pendingCollectionEvents.removeFirst()
+            showCollectionProgress = true
+            return
+        }
+        currentCollectionEvent = nil
+        if progressManager.shouldShowStreakToday {
+            progressManager.markStreakShownToday()
+            withAnimation(.spring(response: 0.5, dampingFraction: 0.85)) {
+                showStreak = true
+            }
+        } else {
+            onReturnHome()
+        }
+    }
+
+    private var pendingGlobalRankUp: (previous: GlobalRank, new: GlobalRank, newLevel: Int)? {
+        if let globalQuizAwardResult, globalQuizAwardResult.didRankUp {
+            return (globalQuizAwardResult.previousRank, globalQuizAwardResult.newRank, globalQuizAwardResult.newLevel)
+        }
+        return progressManager.pendingGlobalRankUp()
     }
 
     private var levelBefore: Int {
@@ -1026,14 +1152,7 @@ struct QuizView: View {
 
                 Button {
                     UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-                    if progressManager.shouldShowStreakToday {
-                        progressManager.markStreakShownToday()
-                        withAnimation(.spring(response: 0.5, dampingFraction: 0.85)) {
-                            showStreak = true
-                        }
-                    } else {
-                        onReturnHome()
-                    }
+                    continueAfterQuizCompletion()
                 } label: {
                     HStack(spacing: 8) {
                         Image(systemName: "arrow.right")

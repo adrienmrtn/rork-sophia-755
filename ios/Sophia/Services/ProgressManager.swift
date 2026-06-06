@@ -1,4 +1,123 @@
 import Foundation
+import SwiftUI
+
+nonisolated enum GlobalRank: String, Codable, CaseIterable, Sendable {
+    case curieux = "Curieux"
+    case erudit = "Érudit"
+    case savant = "Savant"
+    case maitre = "Maître"
+    case legende = "Légende"
+
+    var lowerLevel: Int {
+        switch self {
+        case .curieux: 1
+        case .erudit: 20
+        case .savant: 40
+        case .maitre: 60
+        case .legende: 80
+        }
+    }
+
+    var upperLevel: Int {
+        switch self {
+        case .curieux: 19
+        case .erudit: 39
+        case .savant: 59
+        case .maitre: 79
+        case .legende: 100
+        }
+    }
+
+    var next: GlobalRank? {
+        switch self {
+        case .curieux: .erudit
+        case .erudit: .savant
+        case .savant: .maitre
+        case .maitre: .legende
+        case .legende: nil
+        }
+    }
+
+    var symbolName: String {
+        switch self {
+        case .curieux: "sparkles"
+        case .erudit: "book.closed.fill"
+        case .savant: "brain.head.profile"
+        case .maitre: "crown.fill"
+        case .legende: "star.circle.fill"
+        }
+    }
+
+    var primaryColor: Color {
+        switch self {
+        case .curieux: Color(red: 0.74, green: 0.90, blue: 1.0)
+        case .erudit: Color(red: 0.82, green: 0.78, blue: 1.0)
+        case .savant: Color(red: 0.70, green: 0.95, blue: 0.80)
+        case .maitre: Color(red: 1.0, green: 0.78, blue: 0.36)
+        case .legende: Color(red: 1.0, green: 0.68, blue: 0.82)
+        }
+    }
+
+    var secondaryColor: Color {
+        switch self {
+        case .curieux: Color(red: 0.50, green: 0.75, blue: 1.0)
+        case .erudit: Color(red: 0.62, green: 0.48, blue: 1.0)
+        case .savant: Color(red: 0.38, green: 0.86, blue: 0.62)
+        case .maitre: Color(red: 1.0, green: 0.52, blue: 0.18)
+        case .legende: Color(red: 1.0, green: 0.84, blue: 0.35)
+        }
+    }
+}
+
+nonisolated enum GlobalXPReason: Sendable {
+    case courseCompleted(courseId: String)
+    case quizCompleted(courseId: String)
+    case collectionCompleted(id: String)
+    case cardUnlocked(id: String)
+}
+
+nonisolated struct GlobalLevelProgress: Sendable {
+    let xp: Int
+    let level: Int
+    let rank: GlobalRank
+    let currentRankLowerXP: Int
+    let nextRankXP: Int?
+
+    var progressToNextRank: Double {
+        guard let nextRankXP else { return 1.0 }
+        let span = max(1, nextRankXP - currentRankLowerXP)
+        return min(1.0, max(0.0, Double(xp - currentRankLowerXP) / Double(span)))
+    }
+
+    var xpToNextRank: Int? {
+        guard let nextRankXP else { return nil }
+        return max(0, nextRankXP - xp)
+    }
+}
+
+nonisolated struct GlobalXPAwardResult: Sendable {
+    let awardedXP: Int
+    let previousXP: Int
+    let newXP: Int
+    let previousLevel: Int
+    let newLevel: Int
+    let previousRank: GlobalRank
+    let newRank: GlobalRank
+
+    var didRankUp: Bool { previousRank != newRank }
+}
+
+nonisolated struct CollectionProgressEvent: Identifiable, Sendable {
+    var id: String { collection.id }
+    let collection: LearningCollection
+    let previousCompletedCount: Int
+    let newCompletedCount: Int
+    let totalCount: Int
+
+    var didCompleteCollection: Bool {
+        previousCompletedCount < totalCount && newCompletedCount == totalCount
+    }
+}
 
 @Observable
 @MainActor
@@ -18,6 +137,68 @@ class ProgressManager {
     }
 
     var streak: Int { progress.streak }
+
+    static let globalCourseCompletionXP = 50
+    static let globalQuizCompletionXP = 50
+    static let globalCollectionXPPerCourse = 25
+
+    private static let globalLevelXPRequirements: [Int] = {
+        (1..<100).map { level in
+            switch level {
+            case 1..<10: 100
+            case 10..<30: 150
+            case 30..<60: 250
+            case 60..<80: 400
+            default: 700
+            }
+        }
+    }()
+
+    static func xpThreshold(forGlobalLevel level: Int) -> Int {
+        let clamped = min(100, max(1, level))
+        guard clamped > 1 else { return 0 }
+        return globalLevelXPRequirements.prefix(clamped - 1).reduce(0, +)
+    }
+
+    static func globalLevel(for xp: Int) -> Int {
+        let safeXP = max(0, xp)
+        var level = 1
+        var cumulativeXP = 0
+        for requirement in globalLevelXPRequirements {
+            if safeXP < cumulativeXP + requirement { break }
+            cumulativeXP += requirement
+            level += 1
+        }
+        return min(100, level)
+    }
+
+    static func globalRank(forLevel level: Int) -> GlobalRank {
+        switch level {
+        case 1...19: .curieux
+        case 20...39: .erudit
+        case 40...59: .savant
+        case 60...79: .maitre
+        default: .legende
+        }
+    }
+
+    var globalLevelProgress: GlobalLevelProgress {
+        Self.globalLevelProgress(for: progress.globalXP)
+    }
+
+    static func globalLevelProgress(for xp: Int) -> GlobalLevelProgress {
+        let level = globalLevel(for: xp)
+        let rank = globalRank(forLevel: level)
+        let lowerXP = xpThreshold(forGlobalLevel: rank.lowerLevel)
+        let nextRankXP = rank.next.map { xpThreshold(forGlobalLevel: $0.lowerLevel) }
+        return GlobalLevelProgress(
+            xp: max(0, xp),
+            level: level,
+            rank: rank,
+            currentRankLowerXP: lowerXP,
+            nextRankXP: nextRankXP
+        )
+    }
 
     func courseStatus(for courseId: String) -> CourseStatus {
         guard let cp = progress.courseProgress[courseId] else { return .notStarted }
@@ -54,6 +235,68 @@ class ProgressManager {
         save()
     }
 
+    @discardableResult
+    func awardGlobalXP(reason: GlobalXPReason, amount: Int) -> GlobalXPAwardResult {
+        guard amount > 0 else {
+            let current = Self.globalLevelProgress(for: progress.globalXP)
+            return GlobalXPAwardResult(awardedXP: 0, previousXP: progress.globalXP, newXP: progress.globalXP, previousLevel: current.level, newLevel: current.level, previousRank: current.rank, newRank: current.rank)
+        }
+
+        switch reason {
+        case .courseCompleted(let courseId):
+            guard !progress.globalCourseXPAwardedIds.contains(courseId) else {
+                return noGlobalXPAwardResult()
+            }
+            progress.globalCourseXPAwardedIds.append(courseId)
+        case .quizCompleted(let courseId):
+            guard !progress.globalQuizXPAwardedIds.contains(courseId) else {
+                return noGlobalXPAwardResult()
+            }
+            progress.globalQuizXPAwardedIds.append(courseId)
+        case .collectionCompleted(let id):
+            guard !progress.globalCollectionXPAwardedIds.contains(id) else {
+                return noGlobalXPAwardResult()
+            }
+            progress.globalCollectionXPAwardedIds.append(id)
+        case .cardUnlocked(let id):
+            guard !progress.globalCardXPAwardedIds.contains(id) else {
+                return noGlobalXPAwardResult()
+            }
+            progress.globalCardXPAwardedIds.append(id)
+        }
+
+        let previousXP = progress.globalXP
+        let previous = Self.globalLevelProgress(for: previousXP)
+        progress.globalXP = previousXP + amount
+        let new = Self.globalLevelProgress(for: progress.globalXP)
+        if previous.rank != new.rank {
+            progress.pendingGlobalRankUp = PendingGlobalRankUp(
+                previousRankRawValue: previous.rank.rawValue,
+                newRankRawValue: new.rank.rawValue,
+                newLevel: new.level
+            )
+        }
+        save()
+        return GlobalXPAwardResult(awardedXP: amount, previousXP: previousXP, newXP: progress.globalXP, previousLevel: previous.level, newLevel: new.level, previousRank: previous.rank, newRank: new.rank)
+    }
+
+    func pendingGlobalRankUp() -> (previous: GlobalRank, new: GlobalRank, newLevel: Int)? {
+        guard let pending = progress.pendingGlobalRankUp,
+              let previous = GlobalRank(rawValue: pending.previousRankRawValue),
+              let new = GlobalRank(rawValue: pending.newRankRawValue) else { return nil }
+        return (previous, new, pending.newLevel)
+    }
+
+    func clearPendingGlobalRankUp() {
+        progress.pendingGlobalRankUp = nil
+        save()
+    }
+
+    private func noGlobalXPAwardResult() -> GlobalXPAwardResult {
+        let current = Self.globalLevelProgress(for: progress.globalXP)
+        return GlobalXPAwardResult(awardedXP: 0, previousXP: progress.globalXP, newXP: progress.globalXP, previousLevel: current.level, newLevel: current.level, previousRank: current.rank, newRank: current.rank)
+    }
+
     /// XP thresholds for subject levels: NIV 1: 0-9, 2: 10-149, 3: 150-349, 4: 350-699, 5: 700+.
     static let subjectXPTiers: [(level: Int, lower: Int, upper: Int)] = [
         (1, 0, 10),
@@ -82,6 +325,40 @@ class ProgressManager {
         return progress.courseProgress.filter { id, cp in
             cp.isCompleted && coursesInSubject.contains(id)
         }.count
+    }
+
+    func completedCount(for collection: LearningCollection) -> Int {
+        collection.courseIds.filter { courseId in
+            progress.courseProgress[courseId]?.isCompleted == true
+        }.count
+    }
+
+    func progressFraction(for collection: LearningCollection) -> Double {
+        guard !collection.courseIds.isEmpty else { return 0 }
+        return min(1, Double(completedCount(for: collection)) / Double(collection.courseIds.count))
+    }
+
+    func isCollectionCompleted(_ collection: LearningCollection) -> Bool {
+        !collection.courseIds.isEmpty && completedCount(for: collection) == collection.courseIds.count
+    }
+
+    func collectionCompletionXP(for collection: LearningCollection) -> Int {
+        collection.courseIds.count * Self.globalCollectionXPPerCourse
+    }
+
+    func collectionProgressEvents(forNewlyCompletedCourseId courseId: String) -> [CollectionProgressEvent] {
+        CollectionData.allCollections.compactMap { collection in
+            guard collection.courseIds.contains(courseId) else { return nil }
+            let newCount = completedCount(for: collection)
+            let previousCount = max(0, newCount - 1)
+            guard newCount > previousCount else { return nil }
+            return CollectionProgressEvent(
+                collection: collection,
+                previousCompletedCount: previousCount,
+                newCompletedCount: newCount,
+                totalCount: collection.courseIds.count
+            )
+        }
     }
 
     /// Recent quizzes (courses completed with a quiz score), most recent first.

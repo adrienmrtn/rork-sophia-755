@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """Import course lesson content from Excel_cours_V5.xlsx and generate GlossaryData.swift."""
 
-import openpyxl
 import re
 from pathlib import Path
 
@@ -43,11 +42,14 @@ def normalize_content(s) -> str:
         return ""
     s = str(s)
     s = s.replace("\\n", "\n")
+    s = s.replace("/n", "\n")
     s = re.sub(r"\n{3,}", "\n\n", s)
     return s.strip()
 
 
 def load_excel_courses():
+    import openpyxl
+
     wb = openpyxl.load_workbook(EXCEL_COURS, data_only=True)
     ws = wb["Sheet1"]
     courses = {}
@@ -76,6 +78,8 @@ def load_excel_courses():
 
 
 def load_glossary():
+    import openpyxl
+
     wb = openpyxl.load_workbook(EXCEL_GLOSS, data_only=True)
     ws = wb["Glossaire"]
     by_course = {}

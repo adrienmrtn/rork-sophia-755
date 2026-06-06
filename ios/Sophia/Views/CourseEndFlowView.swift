@@ -17,6 +17,8 @@ struct CourseCompletedView: View {
     let previousSubjectXP: Int
     /// XP awarded for finishing this course (typically +10, always granted).
     let earnedXP: Int
+    /// Global XP reward result for finishing this course (+50 once per course).
+    let globalAwardResult: GlobalXPAwardResult?
     /// Whether the locked freemium banner + Mini Quiz CTA are shown.
     let showFreemiumGate: Bool
     let onClose: () -> Void
@@ -29,6 +31,7 @@ struct CourseCompletedView: View {
     @State private var showNote: Bool = false
     @State private var showButtons: Bool = false
     @State private var showLevelUp: Bool = false
+    @State private var showGlobalRankUp: Bool = false
     @State private var thumbScale: CGFloat = 0.55
     @State private var displayedXP: Int = 0
     @State private var displayedLevel: Int = 1
@@ -81,6 +84,13 @@ struct CourseCompletedView: View {
 
     private var didLevelUp: Bool {
         endLevel > startLevel
+    }
+
+    private var pendingGlobalRankUp: (previous: GlobalRank, new: GlobalRank, newLevel: Int)? {
+        if let globalAwardResult, globalAwardResult.didRankUp {
+            return (globalAwardResult.previousRank, globalAwardResult.newRank, globalAwardResult.newLevel)
+        }
+        return progressManager.pendingGlobalRankUp()
     }
 
     private func barFraction(for xp: Int) -> CGFloat {
@@ -149,9 +159,23 @@ struct CourseCompletedView: View {
                 newLevel: endLevel,
                 onContinue: {
                     showLevelUp = false
-                    revealActions()
+                    revealAfterSubjectLevelUp()
                 }
             )
+        }
+        .fullScreenCover(isPresented: $showGlobalRankUp) {
+            if let pendingGlobalRankUp {
+                GlobalRankUpCelebrationView(
+                    previousRank: pendingGlobalRankUp.previous,
+                    newRank: pendingGlobalRankUp.new,
+                    newLevel: pendingGlobalRankUp.newLevel,
+                    onContinue: {
+                        progressManager.clearPendingGlobalRankUp()
+                        showGlobalRankUp = false
+                        revealActions()
+                    }
+                )
+            }
         }
         .onAppear {
             cachedThumb = CourseImageMap.loadImage(for: course.id)
@@ -217,11 +241,21 @@ struct CourseCompletedView: View {
                 UINotificationFeedbackGenerator().notificationOccurred(.success)
                 if didLevelUp {
                     showLevelUp = true
+                } else if pendingGlobalRankUp != nil {
+                    showGlobalRankUp = true
                 } else {
                     revealActions()
                 }
             }
         )
+    }
+
+    private func revealAfterSubjectLevelUp() {
+        if pendingGlobalRankUp != nil {
+            showGlobalRankUp = true
+        } else {
+            revealActions()
+        }
     }
 
     private func revealActions() {

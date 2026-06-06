@@ -10,6 +10,7 @@ struct ProfileView: View {
     @State private var showSettings: Bool = false
     @State private var showFavorites: Bool = false
     @State private var showAllQuizzes: Bool = false
+    @State private var showPendingGlobalRankUp: Bool = false
     @State private var hapticTrigger: Int = 0
     @State private var appeared: Bool = false
 
@@ -33,6 +34,9 @@ struct ProfileView: View {
                             .padding(.top, 4)
 
                         streakHero
+                            .padding(.horizontal, 20)
+
+                        GlobalRankProfileCard(progress: progressManager.globalLevelProgress)
                             .padding(.horizontal, 20)
 
                         favoritesShortcut
@@ -74,10 +78,30 @@ struct ProfileView: View {
                     onDismiss: { showAllQuizzes = false }
                 )
             }
+            .fullScreenCover(isPresented: $showPendingGlobalRankUp) {
+                if let pending = progressManager.pendingGlobalRankUp() {
+                    GlobalRankUpCelebrationView(
+                        previousRank: pending.previous,
+                        newRank: pending.new,
+                        newLevel: pending.newLevel,
+                        onContinue: {
+                            progressManager.clearPendingGlobalRankUp()
+                            showPendingGlobalRankUp = false
+                        }
+                    )
+                }
+            }
         }
         .onAppear {
             withAnimation(.spring(response: 0.5, dampingFraction: 0.85).delay(0.05)) {
                 appeared = true
+            }
+            if progressManager.pendingGlobalRankUp() != nil {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
+                    if !showSettings && !showFavorites && !showAllQuizzes {
+                        showPendingGlobalRankUp = true
+                    }
+                }
             }
         }
     }
