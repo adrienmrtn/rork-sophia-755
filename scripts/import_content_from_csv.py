@@ -16,6 +16,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from import_courses_and_glossary import (  # noqa: E402
     COURSE_DATA,
     GLOSSARY_DATA,
+    collect_glossary_links,
     find_quiz_blocks,
     normalize_content,
     swift_escape,
@@ -155,22 +156,54 @@ def load_quizzes(path: Path) -> dict[str, list[dict[str, object]]]:
     return quizzes
 
 
-def load_glossary(path: Path) -> dict[str, dict[str, str]]:
-    entries: dict[str, dict[str, str]] = {}
+def load_glossary_rows(path: Path) -> dict[str, list[dict[str, str]]]:
+    rows_by_course: dict[str, list[dict[str, str]]] = {}
     for row in read_csv(path):
         course = (row.get("Nom du cours") or "").strip()
         term = (row.get("Terme") or "").strip()
         classification = (row.get("Classification") or "").strip()
         if course in SKIP_TITLES or not term:
             continue
+        rows_by_course.setdefault(course, []).append(
+            {
+                "term": term,
+                "classification": classification,
+                "explanation": normalize_content(row.get("Explication")),
+            }
+        )
+    return rows_by_course
+
+
+def entries_from_glossary_rows(glossary_rows: dict[str, list[dict[str, str]]]) -> dict[str, dict[str, str]]:
+    entries: dict[str, dict[str, str]] = {}
+    for course, rows in glossary_rows.items():
+        for row in rows:
+            classification = row["classification"]
+            term = row["term"]
+            swift_classification = CLASSIFICATION_MAP.get(classification)
+            if not swift_classification:
+                raise ValueError(f"Unknown glossary classification: {classification!r}")
+
+            entries[f"{course}|{term}"] = {
+                "displayTerm": term,
+                "classification": swift_classification,
+                "explanation": row["explanation"],
+            }
+    return entries
+
+
+def entries_from_content_links(links: dict[tuple[str, str], dict[str, str]]) -> dict[str, dict[str, str]]:
+    entries: dict[str, dict[str, str]] = {}
+    for (course, display), link in links.items():
+        classification = link["classification"]
         swift_classification = CLASSIFICATION_MAP.get(classification)
         if not swift_classification:
             raise ValueError(f"Unknown glossary classification: {classification!r}")
 
-        entries[f"{course}|{term}"] = {
-            "displayTerm": term,
+        entries[f"{course}|{display}"] = {
+            "displayTerm": link["displayTerm"],
             "classification": swift_classification,
-            "explanation": normalize_content(row.get("Explication")),
+            "explanation": normalize_content(link["explanation"]),
         }
     return entries
 
@@ -315,7 +348,10 @@ def main() -> None:
     args = parse_args()
     csv_courses = load_courses(args.courses_csv)
     csv_quizzes = load_quizzes(args.quiz_csv)
-    glossary_entries = load_glossary(args.glossary_csv)
+    glossary_rows = load_glossary_rows(args.glossary_csv)
+    glossary_entries = entries_from_glossary_rows(glossary_rows)
+    content_link_entries = entries_from_content_links(collect_glossary_links(csv_courses, glossary_rows))
+    glossary_entries = {**glossary_entries, **content_link_entries}
 
     app_courses = parse_all_courses(COURSE_DATA.read_text(encoding="utf-8"))
     write_course_data(app_courses, csv_courses, csv_quizzes)
@@ -325,6 +361,8 @@ def main() -> None:
     print(f"App courses updated: {len(app_courses)}")
     print(f"CSV courses loaded: {len(csv_courses)}")
     print(f"CSV quizzes loaded: {len(csv_quizzes)}")
+    print(f"Glossary CSV entries loaded: {sum(len(rows) for rows in glossary_rows.values())}")
+    print(f"Glossary link aliases added: {len(content_link_entries)}")
     print(f"Glossary entries written: {len(glossary_entries)}")
 
 
