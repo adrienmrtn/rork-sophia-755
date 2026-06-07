@@ -257,6 +257,7 @@ struct CollectibleMiniCard: View {
 
     var body: some View {
         CollectibleCardArtView(card: card, unlocked: unlocked, compact: true)
+            .frame(width: 92, height: 154)
     }
 }
 
@@ -301,7 +302,8 @@ struct CollectibleCardArtView: View {
             RoundedRectangle(cornerRadius: compact ? 14 : 22, style: .continuous)
                 .strokeBorder(ink, lineWidth: compact ? 2 : 3)
         }
-        .shadow(color: ink.opacity(compact ? 0.28 : 0.22), radius: 0, x: 0, y: compact ? 3 : 5)
+        .frame(height: compact ? 154 : nil, alignment: .top)
+        .shadow(color: ink.opacity(0.9), radius: 0, x: 0, y: compact ? 3 : 4)
         .opacity(unlocked ? 1 : 0.72)
         .padding(.bottom, compact ? 4 : 6)
     }
@@ -396,7 +398,6 @@ struct CardUnlockCelebrationView: View {
 
                 revealCard
                 .scaleEffect(appeared ? 1 : 0.78)
-                .shadow(color: event.card.rarity.secondaryColor.opacity(glow ? 0.75 : 0.25), radius: glow ? 28 : 10, y: 10)
                 .onTapGesture { revealIfNeeded() }
 
                 Spacer(minLength: 24)
@@ -442,8 +443,7 @@ struct CardUnlockCelebrationView: View {
 
     private var revealCard: some View {
         ZStack {
-            CollectibleCardArtView(card: event.card, unlocked: true, compact: false)
-                .frame(width: 240)
+            unlockCardFace
                 .blur(radius: revealed ? 0 : 10)
                 .saturation(revealed ? 1 : 0.2)
                 .opacity(revealed ? 1 : 0.22)
@@ -459,6 +459,70 @@ struct CardUnlockCelebrationView: View {
             }
         }
         .animation(.spring(response: 1.1, dampingFraction: 0.82), value: revealed)
+    }
+
+    private var unlockCardFace: some View {
+        VStack(spacing: 0) {
+            unlockArt
+                .frame(height: 224)
+                .overlay(alignment: .topTrailing) {
+                    rarityBadge
+                        .padding(10)
+                }
+                .overlay(alignment: .bottom) {
+                    Rectangle().fill(ink).frame(height: 3)
+                }
+
+            VStack(alignment: .leading, spacing: 8) {
+                Text(event.card.name)
+                    .font(.system(.headline, design: .rounded, weight: .black))
+                    .foregroundStyle(ink)
+                    .lineLimit(2, reservesSpace: true)
+                    .multilineTextAlignment(.leading)
+
+                Text(event.card.rarity.rawValue)
+                    .font(.system(.subheadline, design: .rounded, weight: .black))
+                    .foregroundStyle(ink.opacity(0.58))
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+            .padding(.horizontal, 14)
+            .padding(.vertical, 14)
+            .background(event.card.rarity.primaryColor)
+        }
+        .frame(width: 260, height: 360)
+        .background(Color.white)
+        .clipShape(.rect(cornerRadius: 24))
+        .overlay {
+            RoundedRectangle(cornerRadius: 24, style: .continuous)
+                .strokeBorder(ink, lineWidth: 4)
+        }
+        .shadow(color: ink.opacity(0.9), radius: 0, x: 0, y: 4)
+    }
+
+    @ViewBuilder
+    private var unlockArt: some View {
+        if let image = UIImage(named: event.card.imageAssetName) {
+            Image(uiImage: image)
+                .resizable()
+                .scaledToFill()
+                .clipped()
+        } else {
+            ZStack {
+                LinearGradient(colors: [event.card.rarity.primaryColor, event.card.rarity.secondaryColor], startPoint: .topLeading, endPoint: .bottomTrailing)
+                Image(systemName: "person.crop.circle.fill")
+                    .font(.system(size: 86, weight: .black))
+                    .foregroundStyle(ink.opacity(0.45))
+            }
+        }
+    }
+
+    private var rarityBadge: some View {
+        Image(systemName: event.card.rarity.symbolName)
+            .font(.system(size: 14, weight: .black))
+            .foregroundStyle(ink)
+            .frame(width: 34, height: 34)
+            .background(event.card.rarity.secondaryColor, in: Circle())
+            .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
     }
 
     private var cardBack: some View {
@@ -487,8 +551,8 @@ struct CardUnlockCelebrationView: View {
                     .foregroundStyle(ink)
                 }
         }
-        .frame(width: 240, height: 318)
-        .shadow(color: ink.opacity(0.22), radius: 0, x: 0, y: 5)
+        .frame(width: 260, height: 360)
+        .shadow(color: ink.opacity(0.9), radius: 0, x: 0, y: 4)
     }
 
     private func runSequence() {

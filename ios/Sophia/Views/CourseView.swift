@@ -83,6 +83,19 @@ struct CourseView: View {
                 )
                 .transition(.opacity.combined(with: .move(edge: .bottom)))
             }
+
+            if showRewardFlow {
+                PostCompletionRewardFlowView(
+                    steps: rewardSteps,
+                    progressManager: progressManager,
+                    onFinished: {
+                        showRewardFlow = false
+                        onDismissToHome()
+                    }
+                )
+                .transition(.opacity.combined(with: .scale(scale: 0.985)))
+                .zIndex(50)
+            }
         }
         .navigationBarBackButtonHidden()
         .onAppear {
@@ -114,16 +127,6 @@ struct CourseView: View {
                 showQuiz = true
             })
             .presentationDragIndicator(.visible)
-        }
-        .fullScreenCover(isPresented: $showRewardFlow) {
-            PostCompletionRewardFlowView(
-                steps: rewardSteps,
-                progressManager: progressManager,
-                onFinished: {
-                    showRewardFlow = false
-                    onDismissToHome()
-                }
-            )
         }
         .fullScreenCover(isPresented: $showCardUnlock) {
             if let currentCardUnlockEvent {
