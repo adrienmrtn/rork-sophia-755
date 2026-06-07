@@ -113,7 +113,6 @@ struct CardsProfileSection: View {
                         HStack(spacing: 12) {
                             ForEach(progressManager.recentlyUnlockedCards) { card in
                                 CollectibleMiniCard(card: card, unlocked: true)
-                                    .frame(width: 92)
                             }
                         }
                     }
@@ -255,9 +254,13 @@ struct CollectibleMiniCard: View {
     let card: CollectibleCard
     let unlocked: Bool
 
+    private static let width: CGFloat = 92
+    private static let faceHeight: CGFloat = 154
+    private static let depth: CGFloat = 4
+
     var body: some View {
         CollectibleCardArtView(card: card, unlocked: unlocked, compact: true)
-            .frame(width: 92, height: 154)
+            .frame(width: Self.width, height: Self.faceHeight + Self.depth)
     }
 }
 
@@ -292,14 +295,14 @@ struct CollectibleCardArtView: View {
                     Text(card.name)
                         .font(.system(compact ? .caption : .subheadline, design: .rounded, weight: .black))
                         .foregroundStyle(ink.opacity(unlocked ? 1 : 0.62))
-                        .lineLimit(2, reservesSpace: !compact)
+                        .lineLimit(2, reservesSpace: true)
                         .multilineTextAlignment(.leading)
 
                     Text(card.rarity.rawValue)
                         .font(.system(.caption2, design: .rounded, weight: .black))
                         .foregroundStyle(ink.opacity(0.55))
                 }
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .frame(maxWidth: .infinity, maxHeight: compact ? .infinity : nil, alignment: .topLeading)
                 .padding(.horizontal, compact ? 8 : 12)
                 .padding(.vertical, compact ? 8 : 12)
                 .background(card.rarity.primaryColor.opacity(unlocked ? 1 : 0.55))
