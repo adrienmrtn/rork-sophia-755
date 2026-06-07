@@ -1,7 +1,7 @@
 import Foundation
 
 enum DeckBalancer {
-    /// Builds an initial deck: never more than 2 consecutive locked-subject cards.
+    /// Builds an initial deck: first card is always unlocked when possible; never more than 2 consecutive locked-subject cards.
     static func balancedDeck(courses: [Course], unlockedSubjects: Set<Subject>, isPremium: Bool) -> [Course] {
         guard !isPremium, !courses.isEmpty else { return courses.shuffled() }
 
@@ -15,7 +15,7 @@ enum DeckBalancer {
         var consecutiveLocked = 0
 
         while !unlockedPool.isEmpty || !lockedPool.isEmpty {
-            let mustPickUnlocked = consecutiveLocked >= 2 && !unlockedPool.isEmpty
+            let mustPickUnlocked = !unlockedPool.isEmpty && (result.isEmpty || consecutiveLocked >= 2)
 
             if mustPickUnlocked || lockedPool.isEmpty {
                 result.append(unlockedPool.removeFirst())
