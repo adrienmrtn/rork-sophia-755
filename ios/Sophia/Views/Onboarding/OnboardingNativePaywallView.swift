@@ -457,10 +457,16 @@ struct OnboardingNativePaywallView: View {
                 }
                 .padding(.horizontal, 16)
                 .padding(.vertical, 16)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(isSelected ? tint : Color.white)
             }
             .clipShape(RoundedRectangle(cornerRadius: cardCorner, style: .continuous))
+            .overlay {
+                RoundedRectangle(cornerRadius: cardCorner, style: .continuous)
+                    .strokeBorder(BrutalPalette.ink, lineWidth: 2.5)
+            }
         }
-        .buttonStyle(BrutalRowButtonStyle(isSelected: isSelected, accentColor: tint, corner: cardCorner))
+        .buttonStyle(PlanCardButtonStyle())
     }
 
     private var restoreRow: some View {
