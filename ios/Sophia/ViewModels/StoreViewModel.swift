@@ -81,38 +81,7 @@ class StoreViewModel {
         offerings?.offering(identifier: "special_promo")?.package(identifier: "$rc_annual")
     }
 
-    // MARK: - Onboarding paywall
-
-    private static let onboardingOfferingIDs = ["fin_onboarding", "default"]
-
-    /// Offering used by the native onboarding paywall — prefers `fin_onboarding`, then `default`, then RC current.
-    var onboardingOffering: Offering? {
-        guard let offerings else { return nil }
-        for id in Self.onboardingOfferingIDs {
-            if let offering = offerings.offering(identifier: id) ?? offerings.all[id] {
-                return offering
-            }
-        }
-        return offerings.current
-    }
-
-    var onboardingMonthlyPackage: Package? {
-        onboardingOffering?.package(identifier: "$rc_monthly") ?? onboardingOffering?.monthly
-    }
-
-    var onboardingAnnualPackage: Package? {
-        onboardingOffering?.package(identifier: "$rc_annual") ?? onboardingOffering?.annual
-    }
-
-    func onboardingPackage(forAnnual annual: Bool) -> Package? {
-        annual ? onboardingAnnualPackage : onboardingMonthlyPackage
-    }
-
-    func hasIntroductoryOffer(for package: Package?) -> Bool {
-        package?.storeProduct.introductoryDiscount != nil
-    }
-
-    /// Logs which offering/packages resolve and whether StoreKit reports an intro offer (for trial diagnostics).
+    /// Logs current offering packages and whether StoreKit reports an intro offer (for trial diagnostics).
     func logOnboardingPurchaseDiagnostics() {
         guard let offerings else {
             print("[OnboardingPaywall] offerings is nil — fetchOfferings may have failed: \(error ?? "unknown")")
@@ -120,18 +89,12 @@ class StoreViewModel {
         }
 
         let available = offerings.all.keys.sorted().joined(separator: ", ")
-        print("[OnboardingPaywall] RC offerings available: [\(available)] — current: \(offerings.current?.identifier ?? "nil")")
+        let currentID = offerings.current?.identifier ?? "nil"
+        print("[OnboardingPaywall] RC offerings available: [\(available)] — current: \(currentID)")
 
-        guard let offering = onboardingOffering else {
-            print("[OnboardingPaywall] no onboarding offering resolved")
-            return
-        }
-
-        print("[OnboardingPaywall] using offering: \(offering.identifier)")
-
-        for (label, package) in [("annual", onboardingAnnualPackage), ("monthly", onboardingMonthlyPackage)] {
+        for (label, package) in [("annual", annualPackage), ("monthly", monthlyPackage)] {
             guard let package else {
-                print("[OnboardingPaywall] \(label) package missing in offering '\(offering.identifier)'")
+                print("[OnboardingPaywall] \(label) package missing in current offering '\(currentID)'")
                 continue
             }
             let product = package.storeProduct

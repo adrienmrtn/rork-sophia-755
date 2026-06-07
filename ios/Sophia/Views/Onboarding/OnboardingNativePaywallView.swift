@@ -365,7 +365,7 @@ struct OnboardingNativePaywallView: View {
     // MARK: - Plan card
 
     private func package(for plan: Plan) -> Package? {
-        store.onboardingPackage(forAnnual: plan == .yearly)
+        plan == .yearly ? store.annualPackage : store.monthlyPackage
     }
 
     private func planCopy(for plan: Plan) -> (title: String, subtitle: String, price: String, period: String, badge: String?) {

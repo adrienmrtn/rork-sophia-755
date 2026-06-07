@@ -133,9 +133,9 @@ struct OnboardingView: View {
     private func packageFor(plan: OnboardingNativePaywallView.Plan) -> RevenueCat.Package? {
         switch plan {
         case .yearly:
-            return storeVM.onboardingAnnualPackage ?? storeVM.annualPackage
+            return storeVM.annualPackage
         case .monthly:
-            return storeVM.onboardingMonthlyPackage ?? storeVM.monthlyPackage
+            return storeVM.monthlyPackage
         }
     }
 
