@@ -348,6 +348,7 @@ struct CollectionDetailView: View {
 }
 
 private struct CollectionCourseRow: View {
+    @Environment(LanguageManager.self) private var languageManager
     let index: Int
     let course: Course
     let status: CourseStatus
@@ -385,7 +386,7 @@ private struct CollectionCourseRow: View {
                         .lineLimit(2)
                         .multilineTextAlignment(.leading)
 
-                    Text(course.subject.shortName)
+                    Text(course.subject.localizedShortName(language: languageManager.current))
                         .font(.system(.caption2, design: .rounded, weight: .heavy))
                         .foregroundStyle(ink.opacity(0.5))
                 }

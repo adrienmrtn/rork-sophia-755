@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct LevelUpCelebrationView: View {
+    @Environment(LanguageManager.self) private var languageManager
     let subject: Subject
     let previousLevel: Int
     let newLevel: Int
@@ -35,21 +36,21 @@ struct LevelUpCelebrationView: View {
 
                 Spacer(minLength: 28)
 
-                Text("Niveau supérieur !")
+                Text(languageManager.text("levelUp.title"))
                     .font(.system(.largeTitle, design: .rounded, weight: .heavy))
                     .foregroundStyle(ink)
                     .multilineTextAlignment(.center)
                     .opacity(appeared ? 1 : 0)
                     .offset(y: appeared ? 0 : 16)
 
-                Text(subject.shortName)
+                Text(subject.localizedShortName(language: languageManager.current))
                     .font(.system(.title3, design: .rounded, weight: .heavy))
                     .foregroundStyle(ink.opacity(0.55))
                     .padding(.top, 8)
                     .opacity(appeared ? 1 : 0)
 
                 HStack(alignment: .firstTextBaseline, spacing: 16) {
-                    Text("NIV. \(previousLevel)")
+                    Text(String(format: languageManager.text("common.levelShort"), previousLevel))
                         .font(.system(.title, design: .rounded, weight: .heavy))
                         .foregroundStyle(ink.opacity(showNewLevel ? 0.35 : 1))
                         .scaleEffect(showNewLevel ? 0.85 : 1)
@@ -59,7 +60,7 @@ struct LevelUpCelebrationView: View {
                         .foregroundStyle(pink)
                         .opacity(showNewLevel ? 1 : 0.3)
 
-                    Text("NIV. \(newLevel)")
+                    Text(String(format: languageManager.text("common.levelShort"), newLevel))
                         .font(.system(size: 52, weight: .heavy, design: .rounded))
                         .foregroundStyle(ink)
                         .scaleEffect(levelScale)
@@ -73,7 +74,7 @@ struct LevelUpCelebrationView: View {
                     UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                     onContinue()
                 } label: {
-                    Text("Continuer")
+                    Text(languageManager.text("common.continue"))
                         .font(.system(.headline, design: .rounded, weight: .heavy))
                         .foregroundStyle(ink)
                         .frame(maxWidth: .infinity)

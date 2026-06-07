@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct GlobalRankProfileCard: View {
+    @Environment(LanguageManager.self) private var languageManager
     let progress: GlobalLevelProgress
 
     @State private var appeared = false
@@ -10,9 +11,13 @@ struct GlobalRankProfileCard: View {
 
     private var nextRankText: String {
         guard let next = progress.rank.next, let remaining = progress.xpToNextRank else {
-            return "Niveau max"
+            return languageManager.text("globalRank.maxLevel")
         }
-        return "\(remaining) XP avant \(next.rawValue)"
+        return String(
+            format: languageManager.text("globalRank.xpBefore"),
+            remaining,
+            next.localizedName(language: languageManager.current)
+        )
     }
 
     var body: some View {
@@ -29,7 +34,7 @@ struct GlobalRankProfileCard: View {
 
                     VStack(alignment: .leading, spacing: 8) {
                         HStack(spacing: 8) {
-                            Text("NIV. \(progress.level)")
+                            Text(String(format: languageManager.text("common.levelShort"), progress.level))
                                 .font(.system(.caption, design: .rounded, weight: .black))
                                 .foregroundStyle(.white)
                                 .tracking(0.8)
@@ -43,13 +48,13 @@ struct GlobalRankProfileCard: View {
                                 .monospacedDigit()
                         }
 
-                        Text(progress.rank.rawValue)
+                        Text(progress.rank.localizedName(language: languageManager.current))
                             .font(.system(size: 34, weight: .black, design: .rounded))
                             .foregroundStyle(ink)
                             .lineLimit(1)
                             .minimumScaleFactor(0.75)
 
-                        Text("Rang global")
+                        Text(languageManager.text("globalRank.title"))
                             .font(.system(.subheadline, design: .rounded, weight: .heavy))
                             .foregroundStyle(ink.opacity(0.58))
                     }
@@ -152,6 +157,7 @@ struct GlobalRankProfileCard: View {
 }
 
 struct GlobalRankUpCelebrationView: View {
+    @Environment(LanguageManager.self) private var languageManager
     let previousRank: GlobalRank
     let newRank: GlobalRank
     let newLevel: Int
@@ -179,14 +185,14 @@ struct GlobalRankUpCelebrationView: View {
             VStack(spacing: 0) {
                 Spacer(minLength: 24)
 
-                Text("Nouveau rang !")
+                Text(languageManager.text("globalRank.newRank"))
                     .font(.system(size: 42, weight: .black, design: .rounded))
                     .foregroundStyle(ink)
                     .multilineTextAlignment(.center)
                     .opacity(appeared ? 1 : 0)
                     .offset(y: appeared ? 0 : 18)
 
-                Text("Tu viens d’atteindre le niveau \(newLevel)")
+                Text(String(format: languageManager.text("globalRank.reachedLevel"), newLevel))
                     .font(.system(.headline, design: .rounded, weight: .heavy))
                     .foregroundStyle(ink.opacity(0.58))
                     .padding(.top, 8)
@@ -215,7 +221,7 @@ struct GlobalRankUpCelebrationView: View {
                     UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                     onContinue()
                 } label: {
-                    Text("Continuer")
+                    Text(languageManager.text("common.continue"))
                         .font(.system(.headline, design: .rounded, weight: .black))
                         .foregroundStyle(ink)
                         .frame(maxWidth: .infinity)
@@ -267,11 +273,11 @@ struct GlobalRankUpCelebrationView: View {
                     GlobalRankAnimatedIcon(rank: newRank, size: 134, intensity: .celebration)
                         .scaleEffect(iconScale)
 
-                    Text(newRank.rawValue)
+                    Text(newRank.localizedName(language: languageManager.current))
                         .font(.system(size: 38, weight: .black, design: .rounded))
                         .foregroundStyle(ink)
 
-                    Text("RANG GLOBAL")
+                    Text(languageManager.text("globalRank.badge"))
                         .font(.system(.caption, design: .rounded, weight: .black))
                         .foregroundStyle(.white)
                         .tracking(1.2)
@@ -293,7 +299,7 @@ struct GlobalRankUpCelebrationView: View {
         HStack(spacing: 7) {
             Image(systemName: rank.symbolName)
                 .font(.system(size: 13, weight: .black))
-            Text(rank.rawValue)
+            Text(rank.localizedName(language: languageManager.current))
                 .font(.system(.caption, design: .rounded, weight: .black))
         }
         .foregroundStyle(ink.opacity(faded ? 0.45 : 1))

@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct OnboardingWelcomeScreen: View {
+    @Environment(LanguageManager.self) private var languageManager
     let onNext: () -> Void
     @State private var titleAppeared: Bool = false
     @State private var pillAppeared: Bool = false
@@ -10,13 +11,13 @@ struct OnboardingWelcomeScreen: View {
     @State private var pillOffset: CGFloat = 0
     @State private var rotationTimer: Timer?
 
-    private let subjects: [(label: String, colorIndex: Int)] = [
-        ("l'art", 3),
-        ("l'histoire", 0),
-        ("les sciences", 1),
-        ("la littérature", 2),
-        ("la mythologie", 4),
-        ("le monde actuel", 5),
+    private let subjects: [(storageKey: String, colorIndex: Int)] = [
+        ("art", 3),
+        ("histoire", 0),
+        ("sciences", 1),
+        ("litterature", 2),
+        ("mythologie", 4),
+        ("comprendreLeMonde", 5),
     ]
 
     var body: some View {
@@ -27,7 +28,7 @@ struct OnboardingWelcomeScreen: View {
                 Spacer()
 
                 VStack(spacing: 24) {
-                    Text("Sophia est ton partenaire pour maîtriser")
+                    Text(languageManager.text("onboarding.welcome.title"))
                         .font(.system(.largeTitle, design: .rounded, weight: .heavy))
                         .foregroundStyle(BrutalPalette.ink)
                         .multilineTextAlignment(.center)
@@ -41,7 +42,7 @@ struct OnboardingWelcomeScreen: View {
 
                 Spacer()
 
-                OnboardingPrimaryButton(title: "Suivant", action: handleNext)
+                OnboardingPrimaryButton(title: languageManager.text("common.next"), action: handleNext)
                     .opacity(ctaAppeared ? 1 : 0)
                     .offset(y: ctaAppeared ? 0 : 24)
             }
@@ -69,7 +70,7 @@ struct OnboardingWelcomeScreen: View {
 
     private var rotatingSubjectPill: some View {
         let subject = subjects[subjectIndex]
-        return Text(subject.label)
+        return Text(languageManager.text("onboarding.welcome.rotating.\(subject.storageKey)"))
             .font(.system(.title2, design: .rounded, weight: .heavy))
             .foregroundStyle(BrutalPalette.ink)
             .padding(.horizontal, 20)

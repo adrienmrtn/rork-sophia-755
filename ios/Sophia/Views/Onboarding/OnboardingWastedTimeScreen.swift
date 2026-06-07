@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct OnboardingWastedTimeScreen: View {
+    @Environment(LanguageManager.self) private var languageManager
     let viewModel: OnboardingViewModel
     let onNext: () -> Void
     @State private var showIntro: Bool = false
@@ -25,7 +26,10 @@ struct OnboardingWastedTimeScreen: View {
     }
 
     private var introSentence: String {
-        "\(viewModel.phoneHoursPerDayLabel) par jour sur ton téléphone, c'est"
+        String(
+            format: languageManager.text("onboarding.wasted.intro"),
+            viewModel.phoneHoursPerDayLabel(language: languageManager.current)
+        )
     }
 
     var body: some View {
@@ -46,7 +50,7 @@ struct OnboardingWastedTimeScreen: View {
                             .foregroundStyle(accentNumber)
                             .contentTransition(.numericText(countsDown: false))
 
-                        Text("heures perdues par an.")
+                        Text(languageManager.text("onboarding.wasted.hoursLost"))
                             .font(bodyFont)
                             .foregroundStyle(ink.opacity(0.9))
                             .lineSpacing(6)
@@ -56,12 +60,15 @@ struct OnboardingWastedTimeScreen: View {
 
                 if showDaysMessage {
                     VStack(alignment: .leading, spacing: 10) {
-                        Text("Soit \(viewModel.wastedTimeDays) complets.")
+                        Text(String(
+                            format: languageManager.text("onboarding.wasted.daysComplete"),
+                            viewModel.wastedTimeDays(language: languageManager.current)
+                        ))
                             .font(bodyFont)
                             .foregroundStyle(ink.opacity(0.9))
                             .lineSpacing(6)
 
-                        Text("Avec Sophia, transforme ce temps en culture.")
+                        Text(languageManager.text("onboarding.wasted.transform"))
                             .font(bodyFont)
                             .foregroundStyle(ink.opacity(0.9))
                             .lineSpacing(6)
@@ -76,7 +83,7 @@ struct OnboardingWastedTimeScreen: View {
             VStack {
                 Spacer()
 
-                OnboardingPrimaryButton(title: "C'est parti", action: onNext)
+                OnboardingPrimaryButton(title: languageManager.text("common.letsGoShort"), action: onNext)
                     .opacity(showCTA ? 1 : 0)
                     .offset(y: showCTA ? 0 : 24)
             }

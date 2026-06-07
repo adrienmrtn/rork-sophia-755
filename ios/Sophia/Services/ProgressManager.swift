@@ -67,6 +67,24 @@ nonisolated enum GlobalRank: String, Codable, CaseIterable, Sendable {
         case .legende: Color(red: 1.0, green: 0.84, blue: 0.35)
         }
     }
+
+    var storageKey: String {
+        switch self {
+        case .curieux: "curieux"
+        case .erudit: "erudit"
+        case .savant: "savant"
+        case .maitre: "maitre"
+        case .legende: "legende"
+        }
+    }
+
+    func localizedName(language: AppLanguage) -> String {
+        AppLocalizable.string("globalRank.\(storageKey)", language: language)
+    }
+
+    var displayName: String {
+        localizedName(language: AppLanguage.currentPersisted())
+    }
 }
 
 nonisolated enum GlobalXPReason: Sendable {

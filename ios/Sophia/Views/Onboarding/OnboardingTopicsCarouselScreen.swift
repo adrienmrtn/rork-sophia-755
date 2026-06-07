@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct OnboardingTopicsCarouselScreen: View {
+    @Environment(LanguageManager.self) private var languageManager
     let title: String
     let subtitle: String
     let categories: [(name: String, courses: [(title: String, courseId: String)])]
@@ -64,7 +65,7 @@ struct OnboardingTopicsCarouselScreen: View {
 
             VStack {
                 Spacer()
-                OnboardingPrimaryButton(title: "Continuer", action: onNext)
+                OnboardingPrimaryButton(title: languageManager.text("common.continue"), action: onNext)
                     .background(
                         LinearGradient(
                             colors: [BrutalPalette.cream.opacity(0), BrutalPalette.cream, BrutalPalette.cream],

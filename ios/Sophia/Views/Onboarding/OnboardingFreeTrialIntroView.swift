@@ -2,6 +2,7 @@ import SwiftUI
 import AVKit
 
 struct OnboardingFreeTrialIntroView: View {
+    @Environment(LanguageManager.self) private var languageManager
     let onNext: () -> Void
     @State private var appeared: Bool = true
     @State private var pillsAppeared: Bool = false
@@ -16,12 +17,12 @@ struct OnboardingFreeTrialIntroView: View {
                 Spacer().frame(height: 8)
 
                 // Brutal pill badge
-                BrutalPill(text: "Offre de bienvenue", icon: "gift.fill", background: BrutalPalette.pink, foreground: BrutalPalette.ink)
+                BrutalPill(text: languageManager.text("onboarding.trial.badge"), icon: "gift.fill", background: BrutalPalette.pink, foreground: BrutalPalette.ink)
                     .opacity(appeared ? 1 : 0)
                     .offset(y: appeared ? 0 : -10)
 
                 // Title
-                Text("Vos 3 premiers jours\nsont offerts")
+                Text(languageManager.text("onboarding.trial.title"))
                     .font(.system(.largeTitle, design: .rounded, weight: .heavy))
                     .foregroundStyle(BrutalPalette.ink)
                     .multilineTextAlignment(.center)
@@ -38,8 +39,8 @@ struct OnboardingFreeTrialIntroView: View {
 
                 // Brutal feature pills
                 HStack(spacing: 10) {
-                    BrutalFeaturePill(icon: "book.fill", text: "Cours illimités", tint: OnboardingPastels.at(1))
-                    BrutalFeaturePill(icon: "checkmark.circle.fill", text: "Tous les quiz", tint: OnboardingPastels.at(3))
+                    BrutalFeaturePill(icon: "book.fill", text: languageManager.text("onboarding.trial.unlimitedCourses"), tint: OnboardingPastels.at(1))
+                    BrutalFeaturePill(icon: "checkmark.circle.fill", text: languageManager.text("onboarding.trial.allQuizzes"), tint: OnboardingPastels.at(3))
                 }
                 .padding(.horizontal, 24)
                 .opacity(pillsAppeared ? 1 : 0)
@@ -47,7 +48,7 @@ struct OnboardingFreeTrialIntroView: View {
 
                 Spacer()
 
-                OnboardingPrimaryButton(title: "Continuer", action: onNext)
+                OnboardingPrimaryButton(title: languageManager.text("common.continue"), action: onNext)
                     .opacity(buttonAppeared ? 1 : 0)
                     .offset(y: buttonAppeared ? 0 : 24)
             }

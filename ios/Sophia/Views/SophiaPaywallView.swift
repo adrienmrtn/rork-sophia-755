@@ -47,6 +47,7 @@ enum SophiaPaywallContext: String, Identifiable {
 /// found — e.g. while offerings are still loading or if the dashboard hasn't
 /// been configured yet.
 struct SophiaPaywallView: View {
+    @Environment(LanguageManager.self) private var languageManager
     let context: SophiaPaywallContext
     /// Offering id tried if the primary `context` offering isn't found in RC.
     /// Only matière-block paywalls fall back to `cours_gratuit`; other contexts must match exactly.
@@ -122,15 +123,15 @@ struct SophiaPaywallView: View {
 
     private var paywallUnavailableView: some View {
         VStack(spacing: 16) {
-            Text("Offre indisponible")
+            Text(languageManager.text("paywall.unavailable.title"))
                 .font(.system(.title3, design: .rounded, weight: .heavy))
                 .foregroundStyle(.white)
-            Text("Impossible de charger «\(context.rawValue)» pour le moment.")
+            Text(languageManager.text("paywall.unavailable.message"))
                 .font(.system(.body, design: .rounded))
                 .foregroundStyle(.white.opacity(0.7))
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 24)
-            Button("Fermer") { onDismissed?() }
+            Button(languageManager.text("common.close")) { onDismissed?() }
                 .font(.system(.headline, design: .rounded, weight: .heavy))
                 .foregroundStyle(.black)
                 .padding(.horizontal, 24)

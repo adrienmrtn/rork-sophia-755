@@ -2,24 +2,27 @@ import SwiftUI
 import StoreKit
 
 struct OnboardingSocialProofScreen: View {
+    @Environment(LanguageManager.self) private var languageManager
     let onNext: () -> Void
     @State private var percentValue: Int = 0
     @State private var showReviews: Bool = false
     @State private var showHeader: Bool = false
     @State private var didRequestReview: Bool = false
 
-    private let reviews: [(name: String, text: String, stars: Int, photoFile: String, accent: Color)] = [
-        ("Lucas M.", "Je me sentais nul en culture G, maintenant j'ai toujours un truc intéressant à raconter.", 5, "lucas_m_profile", Color(red: 0.66, green: 0.92, blue: 0.96)),
-        ("Camille R.", "10 min par jour et j'ai l'impression d'apprendre plus qu'en cours.", 5, "camille_r_profile", Color(red: 0.70, green: 0.95, blue: 0.80)),
-        ("Thomas D.", "J'adore le format. C'est clair, rapide et on retient vraiment.", 5, "thomas_d_profile", Color(red: 1.0, green: 0.86, blue: 0.62)),
-    ]
+    private var reviews: [(name: String, text: String, stars: Int, photoFile: String, accent: Color)] {
+        [
+            (languageManager.text("onboarding.social.review1.name"), languageManager.text("onboarding.social.review1.text"), 5, "lucas_m_profile", Color(red: 0.66, green: 0.92, blue: 0.96)),
+            (languageManager.text("onboarding.social.review2.name"), languageManager.text("onboarding.social.review2.text"), 5, "camille_r_profile", Color(red: 0.70, green: 0.95, blue: 0.80)),
+            (languageManager.text("onboarding.social.review3.name"), languageManager.text("onboarding.social.review3.text"), 5, "thomas_d_profile", Color(red: 1.0, green: 0.86, blue: 0.62)),
+        ]
+    }
 
     var body: some View {
         VStack(spacing: 0) {
             Spacer().frame(height: 50)
 
                 VStack(spacing: 18) {
-                    BrutalPill(text: "Avis vérifiés", icon: "star.fill", background: BrutalPalette.pink, foreground: BrutalPalette.ink)
+                    BrutalPill(text: languageManager.text("onboarding.social.badge"), icon: "star.fill", background: BrutalPalette.pink, foreground: BrutalPalette.ink)
                         .opacity(showHeader ? 1 : 0)
 
                     HStack(alignment: .firstTextBaseline, spacing: 4) {
@@ -33,7 +36,7 @@ struct OnboardingSocialProofScreen: View {
                     }
                     .opacity(showHeader ? 1 : 0)
 
-                    Text("des utilisateurs se sentent\nplus intéressants et à l'aise\nen société grâce à Sophia.")
+                    Text(languageManager.text("onboarding.social.stat"))
                         .font(.system(.body, design: .rounded, weight: .semibold))
                         .foregroundStyle(BrutalPalette.ink.opacity(0.65))
                         .multilineTextAlignment(.center)
@@ -63,7 +66,7 @@ struct OnboardingSocialProofScreen: View {
 
                 Spacer()
 
-                OnboardingPrimaryButton(title: "Continuer", action: onNext)
+                OnboardingPrimaryButton(title: languageManager.text("common.continue"), action: onNext)
                     .opacity(showReviews ? 1 : 0)
         }
         .onboardingFullBleedBackground(BrutalPalette.cream)

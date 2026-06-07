@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct QuizView: View {
+    @Environment(LanguageManager.self) private var languageManager
     let course: Course
     let progressManager: ProgressManager
     var initialCollectionEvents: [CollectionProgressEvent] = []
@@ -326,7 +327,7 @@ struct QuizView: View {
                 HStack(spacing: 6) {
                     Text(course.subject.emoji)
                         .font(.system(size: 14))
-                    Text(course.subject.shortName.uppercased())
+                    Text(course.subject.localizedShortName(language: languageManager.current).uppercased())
                         .font(.system(.caption, design: .rounded, weight: .heavy))
                         .foregroundStyle(.white)
                         .tracking(0.5)
@@ -603,7 +604,7 @@ struct QuizView: View {
                     .frame(width: 56, height: 60, alignment: .top)
 
                     VStack(alignment: .leading, spacing: 4) {
-                        Text(isCorrect ? (comboCount >= 3 ? "Incroyable !" : comboCount >= 2 ? "Excellent !" : "Bonne réponse !") : "Pas tout à fait...")
+                        Text(feedbackTitle(isCorrect: isCorrect, comboCount: comboCount))
                             .font(.system(.title3, design: .rounded, weight: .black))
                             .foregroundStyle(ink)
                         if isCorrect, comboCount >= 2 {
@@ -633,7 +634,7 @@ struct QuizView: View {
                     nextQuestion()
                 } label: {
                     HStack(spacing: 8) {
-                        Text("Continuer")
+                        Text(languageManager.text("common.continue"))
                             .font(.system(.headline, design: .rounded, weight: .heavy))
                         Image(systemName: "arrow.right")
                             .font(.subheadline.weight(.heavy))
@@ -729,7 +730,7 @@ struct QuizView: View {
                 .animation(.spring(response: 0.7, dampingFraction: 0.6).delay(0.1), value: resultAppeared)
 
                 VStack(spacing: 10) {
-                    Text("Bravo, quiz terminé !")
+                    Text(languageManager.text("quiz.completed"))
                         .font(.system(.title, design: .rounded, weight: .black))
                         .foregroundStyle(ink)
                         .opacity(resultAppeared ? 1 : 0)
@@ -755,7 +756,7 @@ struct QuizView: View {
                     .opacity(resultAppeared ? 1 : 0)
                     .animation(.spring(response: 0.5).delay(0.5), value: resultAppeared)
 
-                    Text("bonnes réponses")
+                    Text(languageManager.text("quiz.correctAnswers"))
                         .font(.system(.subheadline, design: .rounded, weight: .heavy))
                         .foregroundStyle(ink.opacity(0.65))
                         .opacity(resultAppeared ? 1 : 0)
@@ -794,7 +795,7 @@ struct QuizView: View {
                     } label: {
                         HStack(spacing: 8) {
                             Image(systemName: "house.fill")
-                            Text("Retour à l'accueil")
+                            Text(languageManager.text("common.backHome"))
                         }
                         .font(.system(.headline, design: .rounded, weight: .black))
                         .foregroundStyle(ink)
@@ -809,7 +810,7 @@ struct QuizView: View {
                     } label: {
                         HStack(spacing: 8) {
                             Image(systemName: "arrow.counterclockwise")
-                            Text("Refaire le quiz")
+                            Text(languageManager.text("common.retryQuiz"))
                         }
                         .font(.system(.headline, design: .rounded, weight: .heavy))
                         .foregroundStyle(ink)
@@ -1104,7 +1105,7 @@ struct QuizView: View {
                 HStack(spacing: 8) {
                     Text(course.subject.emoji)
                         .font(.system(size: 16))
-                    Text(course.subject.shortName.uppercased())
+                    Text(course.subject.localizedShortName(language: languageManager.current).uppercased())
                         .font(.system(.subheadline, design: .rounded, weight: .heavy))
                         .foregroundStyle(.white)
                         .tracking(0.6)
@@ -1146,7 +1147,7 @@ struct QuizView: View {
                 }
 
                 VStack(spacing: 6) {
-                    Text(didLevelUp ? "Niveau supérieur !" : "Progression XP")
+                    Text(didLevelUp ? languageManager.text("quiz.levelUp") : languageManager.text("quiz.xpProgress"))
                         .font(.system(.title, design: .rounded, weight: .black))
                         .foregroundStyle(ink)
                         .opacity(xpScreenAppeared ? 1 : 0)
@@ -1212,13 +1213,13 @@ struct QuizView: View {
                 VStack(spacing: 10) {
                     breakdownPill(
                         icon: "checkmark.circle.fill",
-                        label: "Bonnes réponses",
+                        label: languageManager.text("quiz.breakdown.correct"),
                         amount: xpEarned - quizCompletionXPBonus,
                         fill: mint
                     )
                     breakdownPill(
                         icon: "trophy.fill",
-                        label: "Quiz terminé",
+                        label: languageManager.text("quiz.breakdown.completed"),
                         amount: quizCompletionXPBonus,
                         fill: yellow
                     )
@@ -1235,7 +1236,7 @@ struct QuizView: View {
                 } label: {
                     HStack(spacing: 8) {
                         Image(systemName: "arrow.right")
-                        Text("Continuer")
+                        Text(languageManager.text("common.continue"))
                     }
                     .font(.system(.headline, design: .rounded, weight: .black))
                     .foregroundStyle(ink)
@@ -1253,9 +1254,18 @@ struct QuizView: View {
 
     private var xpProgressLabel: String {
         let t = subjectTier
-        if t.level == 5 { return "\(displayedXP) XP · niveau max" }
+        if t.level == 5 {
+            return String(format: languageManager.text("quiz.xpProgress.max"), displayedXP)
+        }
         let toNext = max(0, t.upper - displayedXP)
-        return "\(toNext) XP avant niv. \(t.level + 1)"
+        return String(format: languageManager.text("quiz.xpProgress.toNext"), toNext, t.level + 1)
+    }
+
+    private func feedbackTitle(isCorrect: Bool, comboCount: Int) -> String {
+        guard isCorrect else { return languageManager.text("quiz.feedback.wrong") }
+        if comboCount >= 3 { return languageManager.text("quiz.feedback.amazing") }
+        if comboCount >= 2 { return languageManager.text("quiz.feedback.excellent") }
+        return languageManager.text("quiz.feedback.correct")
     }
 
     private func breakdownPill(icon: String, label: String, amount: Int, fill: Color) -> some View {
