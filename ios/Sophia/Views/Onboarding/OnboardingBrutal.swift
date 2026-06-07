@@ -161,6 +161,7 @@ struct BrutalRowButtonStyle: ButtonStyle {
     var isSelected: Bool = false
     var accentColor: Color = BrutalPalette.pink
     var depth: CGFloat = 3
+    var corner: CGFloat = 14
 
     func makeBody(configuration: Configuration) -> some View {
         let pressed = configuration.isPressed
@@ -168,13 +169,13 @@ struct BrutalRowButtonStyle: ButtonStyle {
             .offset(y: pressed ? depth : 0)
             .background(
                 ZStack(alignment: .top) {
-                    RoundedRectangle(cornerRadius: 14, style: .continuous)
+                    RoundedRectangle(cornerRadius: corner, style: .continuous)
                         .fill(BrutalPalette.ink)
                         .offset(y: depth)
-                    RoundedRectangle(cornerRadius: 14, style: .continuous)
+                    RoundedRectangle(cornerRadius: corner, style: .continuous)
                         .fill(isSelected ? accentColor : Color.white)
                         .overlay {
-                            RoundedRectangle(cornerRadius: 14, style: .continuous)
+                            RoundedRectangle(cornerRadius: corner, style: .continuous)
                                 .strokeBorder(BrutalPalette.ink, lineWidth: 2.5)
                         }
                         .offset(y: pressed ? depth : 0)

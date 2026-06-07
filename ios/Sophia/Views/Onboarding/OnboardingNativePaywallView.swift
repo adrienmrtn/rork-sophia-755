@@ -1,4 +1,5 @@
 import SwiftUI
+import RevenueCat
 
 struct OnboardingNativePaywallView: View {
     enum Plan: String, CaseIterable, Identifiable {
@@ -14,7 +15,6 @@ struct OnboardingNativePaywallView: View {
 
     @State private var selectedPlan: Plan = .yearly
     @State private var showReminderSheet: Bool = false
-    @State private var subjectPaywallContext: SophiaPaywallContext?
 
     private var unlockedSubjects: Set<Subject> {
         FreemiumGate.unlockedSubjects(isPremium: false)
@@ -22,6 +22,23 @@ struct OnboardingNativePaywallView: View {
 
     private var lockedSubjects: [Subject] {
         Subject.allCases.filter { !unlockedSubjects.contains($0) }
+    }
+
+    private var lockedCourseTeasers: [PaywallCourseTeaser] {
+        let layouts: [PaywallTeaserLayout] = [.hero, .compact, .tall, .wide, .standard, .compact]
+        var teasers: [PaywallCourseTeaser] = []
+        var layoutIndex = 0
+
+        for subject in lockedSubjects {
+            let candidates = CourseData.allCourses.filter {
+                $0.subject == subject && CourseImageMap.imageName(for: $0.id) != nil
+            }
+            for course in candidates.prefix(2) where layoutIndex < layouts.count {
+                teasers.append(PaywallCourseTeaser(course: course, layout: layouts[layoutIndex]))
+                layoutIndex += 1
+            }
+        }
+        return teasers
     }
 
     var body: some View {
@@ -37,6 +54,11 @@ struct OnboardingNativePaywallView: View {
                         subjectsBlock
                             .padding(.horizontal, 24)
 
+                        if !lockedCourseTeasers.isEmpty {
+                            lockedCoursesTeaserBlock
+                                .padding(.horizontal, 24)
+                        }
+
                         featureComparison
                             .padding(.horizontal, 24)
 
@@ -46,7 +68,7 @@ struct OnboardingNativePaywallView: View {
                         }
                         .padding(.horizontal, 24)
 
-                        socialProof
+                        PaywallReviewsCarousel()
                             .padding(.horizontal, 24)
 
                         restoreRow
@@ -79,6 +101,9 @@ struct OnboardingNativePaywallView: View {
                 .padding(.bottom, 4)
             }
         }
+        .onAppear {
+            store.logOnboardingPurchaseDiagnostics()
+        }
         .sheet(isPresented: $showReminderSheet) {
             TrialTimelineSheet(
                 onContinue: {
@@ -90,54 +115,38 @@ struct OnboardingNativePaywallView: View {
             .presentationDragIndicator(.visible)
             .presentationCornerRadius(28)
         }
-        .sheet(item: $subjectPaywallContext) { context in
-            SophiaPaywallView(
-                context: context,
-                onDismissed: { subjectPaywallContext = nil }
-            )
-        }
     }
 
     // MARK: - Header
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            Text("Deviens la personne\nla plus intéressante\nde la pièce.")
-                .font(.system(size: 34, weight: .heavy, design: .rounded))
-                .foregroundStyle(BrutalPalette.ink)
-                .fixedSize(horizontal: false, vertical: true)
-                .padding(.horizontal, 24)
-
-            HStack {
-                Spacer()
-                Text("📚")
-                    .font(.system(size: 64))
-                    .rotationEffect(.degrees(12))
-            }
-            .padding(.horizontal, 32)
-        }
+        Text("Deviens la personne\nla plus intéressante\nde la pièce.")
+            .font(.system(size: 34, weight: .heavy, design: .rounded))
+            .foregroundStyle(BrutalPalette.ink)
+            .fixedSize(horizontal: false, vertical: true)
+            .padding(.horizontal, 24)
     }
 
     // MARK: - Subjects
 
     private var subjectsBlock: some View {
         VStack(alignment: .leading, spacing: 18) {
-            VStack(alignment: .leading, spacing: 8) {
+            VStack(alignment: .leading, spacing: 10) {
                 Text("Tes 3 matières gratuites")
                     .font(.system(.headline, design: .rounded, weight: .heavy))
                     .foregroundStyle(BrutalPalette.ink)
-                FlowLayout(spacing: 8) {
+                FlowLayout(spacing: 10) {
                     ForEach(Array(unlockedSubjects).sorted(by: { $0.shortName < $1.shortName }), id: \.self) { subject in
                         subjectPill(subject, locked: false)
                     }
                 }
             }
 
-            VStack(alignment: .leading, spacing: 8) {
+            VStack(alignment: .leading, spacing: 10) {
                 Text("3 matières à débloquer")
                     .font(.system(.headline, design: .rounded, weight: .heavy))
                     .foregroundStyle(BrutalPalette.ink.opacity(0.55))
-                FlowLayout(spacing: 8) {
+                FlowLayout(spacing: 10) {
                     ForEach(lockedSubjects, id: \.self) { subject in
                         subjectPill(subject, locked: true)
                     }
@@ -149,42 +158,146 @@ struct OnboardingNativePaywallView: View {
         .brutalOnboardingCard(depth: 4, corner: 20)
     }
 
-    @ViewBuilder
     private func subjectPill(_ subject: Subject, locked: Bool) -> some View {
-        if locked {
-            Button {
-                OnboardingHaptics.primaryCTA()
-                subjectPaywallContext = .matiereBlock(for: subject)
-            } label: {
-                subjectPillContent(subject: subject, locked: true)
-            }
-            .buttonStyle(.plain)
-        } else {
-            subjectPillContent(subject: subject, locked: false)
-        }
-    }
-
-    private func subjectPillContent(subject: Subject, locked: Bool) -> some View {
-        HStack(spacing: 6) {
-            if locked {
-                Image(systemName: "lock.fill")
-                    .font(.system(size: 11, weight: .heavy))
-                    .frame(width: 16)
-            } else {
-                Text(subject.emoji)
-                    .font(.system(size: 16))
-                    .frame(width: 16)
-            }
+        HStack(spacing: 8) {
+            subjectIconBadge(subject: subject, locked: locked)
             Text(subject.shortName)
                 .font(.system(.caption, design: .rounded, weight: .heavy))
                 .lineLimit(1)
         }
-        .foregroundStyle(locked ? BrutalPalette.ink.opacity(0.45) : BrutalPalette.ink)
-        .padding(.horizontal, 12)
-        .padding(.vertical, 8)
-        .frame(minHeight: 36)
-        .background(locked ? Color(white: 0.94) : BrutalPalette.pastel(for: subject), in: Capsule())
+        .foregroundStyle(locked ? BrutalPalette.ink.opacity(0.5) : BrutalPalette.ink)
+        .padding(.leading, 6)
+        .padding(.trailing, 13)
+        .padding(.vertical, 7)
+        .background(locked ? Color(white: 0.95) : BrutalPalette.pastel(for: subject), in: Capsule())
         .overlay { Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 2) }
+    }
+
+    private func subjectIconBadge(subject: Subject, locked: Bool) -> some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                .fill(locked ? Color.white : BrutalPalette.pastel(for: subject).opacity(0.55))
+                .frame(width: 32, height: 32)
+                .overlay {
+                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                        .strokeBorder(BrutalPalette.ink, lineWidth: 2)
+                }
+            Image(systemName: locked ? "lock.fill" : subject.icon)
+                .font(.system(size: locked ? 12 : 14, weight: .black))
+                .foregroundStyle(BrutalPalette.ink)
+                .symbolRenderingMode(.hierarchical)
+        }
+    }
+
+    // MARK: - Locked course teasers
+
+    private var lockedCoursesTeaserBlock: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            VStack(alignment: .leading, spacing: 4) {
+                Text("Un aperçu de ce qui t'attend")
+                    .font(.system(.headline, design: .rounded, weight: .heavy))
+                    .foregroundStyle(BrutalPalette.ink)
+                Text("Des centaines de cours premium à débloquer")
+                    .font(.system(.caption, design: .rounded, weight: .semibold))
+                    .foregroundStyle(BrutalPalette.ink.opacity(0.5))
+            }
+
+            lockedCourseTeaserCollage
+        }
+        .padding(18)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .brutalOnboardingCard(depth: 4, corner: 20)
+    }
+
+    @ViewBuilder
+    private var lockedCourseTeaserCollage: some View {
+        let teasers = lockedCourseTeasers
+        VStack(alignment: .leading, spacing: 10) {
+            if let first = teasers.first {
+                if teasers.count == 1 {
+                    courseTeaserCard(first)
+                } else {
+                    HStack(alignment: .top, spacing: 10) {
+                        courseTeaserCard(first)
+                        if teasers.count > 1 {
+                            courseTeaserCard(teasers[1])
+                        }
+                    }
+                }
+            }
+            if teasers.count > 2 {
+                courseTeaserCard(teasers[2])
+            }
+            if teasers.count > 3 {
+                HStack(alignment: .top, spacing: 10) {
+                    courseTeaserCard(teasers[3])
+                    if teasers.count > 4 {
+                        courseTeaserCard(teasers[4])
+                    }
+                }
+            }
+            if teasers.count > 5 {
+                courseTeaserCard(teasers[5])
+            }
+        }
+    }
+
+    private func courseTeaserCard(_ teaser: PaywallCourseTeaser) -> some View {
+        let layout = teaser.layout
+        let pastel = BrutalPalette.pastel(for: teaser.course.subject)
+
+        return VStack(alignment: .leading, spacing: 0) {
+            ZStack(alignment: .bottomLeading) {
+                Group {
+                    if let image = CourseImageMap.loadImage(for: teaser.course.id) {
+                        Image(uiImage: image)
+                            .resizable()
+                            .scaledToFill()
+                    } else {
+                        pastel
+                    }
+                }
+                .frame(maxWidth: .infinity)
+                .frame(height: layout.imageHeight)
+                .clipped()
+
+                LinearGradient(
+                    colors: [.clear, BrutalPalette.ink.opacity(0.55)],
+                    startPoint: .center,
+                    endPoint: .bottom
+                )
+                .frame(height: layout.imageHeight * 0.55)
+
+                Text(teaser.course.subject.shortName.uppercased())
+                    .font(.system(size: 9, weight: .heavy, design: .rounded))
+                    .tracking(0.6)
+                    .foregroundStyle(.white.opacity(0.9))
+                    .padding(.horizontal, 8)
+                    .padding(.vertical, 4)
+                    .background(BrutalPalette.ink.opacity(0.35), in: Capsule())
+                    .padding(8)
+            }
+
+            Text(teaser.course.title)
+                .font(.system(layout == .compact ? .caption2 : .caption, design: .rounded, weight: .heavy))
+                .foregroundStyle(BrutalPalette.ink)
+                .lineLimit(layout == .compact ? 2 : 3)
+                .multilineTextAlignment(.leading)
+                .padding(.horizontal, 10)
+                .padding(.vertical, 9)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(pastel.opacity(0.55))
+        }
+        .background(Color.white)
+        .clipShape(RoundedRectangle(cornerRadius: layout.cornerRadius, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: layout.cornerRadius, style: .continuous)
+                .strokeBorder(BrutalPalette.ink, lineWidth: 2)
+        }
+        .frame(maxWidth: layout.fixedWidth == nil ? .infinity : nil)
+        .frame(width: layout.fixedWidth)
+        .rotationEffect(.degrees(layout.rotation))
+        .allowsHitTesting(false)
     }
 
     // MARK: - Feature comparison
@@ -251,11 +364,36 @@ struct OnboardingNativePaywallView: View {
 
     // MARK: - Plan card
 
+    private func package(for plan: Plan) -> Package? {
+        store.onboardingPackage(forAnnual: plan == .yearly)
+    }
+
+    private func planCopy(for plan: Plan) -> (title: String, subtitle: String, price: String, period: String, badge: String?) {
+        let isYearly = plan == .yearly
+        guard let pkg = package(for: plan) else {
+            return (
+                isYearly ? "Annuel" : "Mensuel",
+                isYearly ? "3,33 € / mois" : "Sans engagement",
+                isYearly ? "39,99 €" : "9,99 €",
+                isYearly ? "/ an" : "/ mois",
+                isYearly ? "-58%" : nil
+            )
+        }
+
+        let price = pkg.localizedPriceString
+        if isYearly {
+            return ("Annuel", "Facturé annuellement", price, "/ an", "-58%")
+        }
+        return ("Mensuel", "Sans engagement", price, "/ mois", nil)
+    }
+
     @ViewBuilder
     private func planCard(_ plan: Plan) -> some View {
         let isSelected = selectedPlan == plan
         let isYearly = plan == .yearly
         let tint: Color = isYearly ? OnboardingPastels.at(3) : OnboardingPastels.at(1)
+        let copy = planCopy(for: plan)
+        let cardCorner: CGFloat = 14
 
         Button {
             OnboardingHaptics.planSelected()
@@ -264,14 +402,12 @@ struct OnboardingNativePaywallView: View {
             }
         } label: {
             VStack(spacing: 0) {
-                if isYearly {
-                    Text("Essai gratuit 3 jours")
-                        .font(.system(.caption, design: .rounded, weight: .heavy))
-                        .foregroundStyle(BrutalPalette.ink)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 8)
-                        .background(BrutalPalette.yellow)
-                }
+                Text("Essai gratuit 3 jours")
+                    .font(.system(.caption, design: .rounded, weight: .heavy))
+                    .foregroundStyle(BrutalPalette.ink)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 7)
+                    .background(BrutalPalette.yellow)
 
                 HStack(spacing: 14) {
                     ZStack {
@@ -291,10 +427,10 @@ struct OnboardingNativePaywallView: View {
                     }
 
                     VStack(alignment: .leading, spacing: 4) {
-                        Text(isYearly ? "Annuel" : "Mensuel")
+                        Text(copy.title)
                             .font(.system(.headline, design: .rounded, weight: .heavy))
                             .foregroundStyle(BrutalPalette.ink)
-                        Text(isYearly ? "3,33 € / mois" : "Sans engagement")
+                        Text(copy.subtitle)
                             .font(.system(.footnote, design: .rounded, weight: .semibold))
                             .foregroundStyle(BrutalPalette.ink.opacity(0.6))
                     }
@@ -302,16 +438,16 @@ struct OnboardingNativePaywallView: View {
                     Spacer(minLength: 8)
 
                     VStack(alignment: .trailing, spacing: 2) {
-                        Text(isYearly ? "39,99 €" : "9,99 €")
+                        Text(copy.price)
                             .font(.system(.title3, design: .rounded, weight: .heavy))
                             .foregroundStyle(BrutalPalette.ink)
-                        Text(isYearly ? "/ an" : "/ mois")
+                        Text(copy.period)
                             .font(.system(.caption, design: .rounded, weight: .bold))
                             .foregroundStyle(BrutalPalette.ink.opacity(0.55))
                     }
 
-                    if isYearly {
-                        Text("-58%")
+                    if let badge = copy.badge {
+                        Text(badge)
                             .font(.system(.caption2, design: .rounded, weight: .heavy))
                             .foregroundStyle(.white)
                             .padding(.horizontal, 6)
@@ -320,32 +456,11 @@ struct OnboardingNativePaywallView: View {
                     }
                 }
                 .padding(.horizontal, 16)
-                .padding(.vertical, 18)
+                .padding(.vertical, 16)
             }
+            .clipShape(RoundedRectangle(cornerRadius: cardCorner, style: .continuous))
         }
-        .buttonStyle(BrutalRowButtonStyle(isSelected: isSelected, accentColor: tint))
-    }
-
-    // MARK: - Social proof
-
-    private var socialProof: some View {
-        VStack(spacing: 12) {
-            HStack(spacing: 4) {
-                ForEach(0..<5, id: \.self) { _ in
-                    Image(systemName: "star.fill")
-                        .font(.system(size: 14, weight: .heavy))
-                        .foregroundStyle(BrutalPalette.yellow)
-                }
-            }
-            Text("\"Parfait dans les transports. J'apprends chaque jour sans effort.\"")
-                .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                .foregroundStyle(BrutalPalette.ink.opacity(0.75))
-                .multilineTextAlignment(.center)
-                .italic()
-        }
-        .padding(18)
-        .frame(maxWidth: .infinity)
-        .brutalOnboardingCard(depth: 3, corner: 18)
+        .buttonStyle(BrutalRowButtonStyle(isSelected: isSelected, accentColor: tint, corner: cardCorner))
     }
 
     private var restoreRow: some View {
@@ -377,7 +492,91 @@ struct OnboardingNativePaywallView: View {
     }
 }
 
-// MARK: - Trial timeline sheet (GenK-inspired)
+// MARK: - Course teaser models
+
+private struct PaywallCourseTeaser: Identifiable {
+    let course: Course
+    let layout: PaywallTeaserLayout
+    var id: String { course.id }
+}
+
+private struct PaywallTeaserLayout {
+    let imageHeight: CGFloat
+    let cornerRadius: CGFloat
+    let fixedWidth: CGFloat?
+    let isFullWidth: Bool
+    let rotation: Double
+
+    static let hero = PaywallTeaserLayout(imageHeight: 128, cornerRadius: 16, fixedWidth: nil, isFullWidth: true, rotation: -0.6)
+    static let compact = PaywallTeaserLayout(imageHeight: 72, cornerRadius: 14, fixedWidth: 112, isFullWidth: false, rotation: 1.8)
+    static let tall = PaywallTeaserLayout(imageHeight: 108, cornerRadius: 15, fixedWidth: nil, isFullWidth: false, rotation: -1.2)
+    static let wide = PaywallTeaserLayout(imageHeight: 92, cornerRadius: 16, fixedWidth: nil, isFullWidth: true, rotation: 0.4)
+    static let standard = PaywallTeaserLayout(imageHeight: 86, cornerRadius: 14, fixedWidth: nil, isFullWidth: false, rotation: -0.8)
+}
+
+// MARK: - Reviews carousel
+
+private struct PaywallReviewsCarousel: View {
+    private struct Review: Identifiable {
+        let id = UUID()
+        let quote: String
+        let author: String
+    }
+
+    private let reviews: [Review] = [
+        Review(quote: "Parfait dans les transports. J'apprends chaque jour sans effort.", author: "Marie, 28 ans"),
+        Review(quote: "Enfin une app qui me fait passer du scroll à la culture.", author: "Thomas, 34 ans"),
+        Review(quote: "Les cours sont courts, drôles, et je retiens vraiment.", author: "Inès, 22 ans"),
+        Review(quote: "Mes amis me demandent d'où je sors toutes ces anecdotes.", author: "Lucas, 31 ans"),
+        Review(quote: "L'onboarding personnalisé m'a convaincu dès la première minute.", author: "Sarah, 26 ans"),
+    ]
+
+    @State private var index: Int = 0
+    private let timer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
+
+    var body: some View {
+        VStack(spacing: 12) {
+            HStack(spacing: 4) {
+                ForEach(0..<5, id: \.self) { _ in
+                    Image(systemName: "star.fill")
+                        .font(.system(size: 14, weight: .heavy))
+                        .foregroundStyle(BrutalPalette.yellow)
+                }
+            }
+
+            TabView(selection: $index) {
+                ForEach(Array(reviews.enumerated()), id: \.element.id) { offset, review in
+                    VStack(spacing: 8) {
+                        Text("\"\(review.quote)\"")
+                            .font(.system(.subheadline, design: .rounded, weight: .semibold))
+                            .foregroundStyle(BrutalPalette.ink.opacity(0.75))
+                            .multilineTextAlignment(.center)
+                            .italic()
+                            .fixedSize(horizontal: false, vertical: true)
+
+                        Text(review.author)
+                            .font(.system(.caption, design: .rounded, weight: .heavy))
+                            .foregroundStyle(BrutalPalette.ink.opacity(0.45))
+                    }
+                    .padding(.horizontal, 4)
+                    .tag(offset)
+                }
+            }
+            .tabViewStyle(.page(indexDisplayMode: .automatic))
+            .frame(height: 108)
+        }
+        .padding(18)
+        .frame(maxWidth: .infinity)
+        .brutalOnboardingCard(depth: 3, corner: 18)
+        .onReceive(timer) { _ in
+            withAnimation(.easeInOut(duration: 0.45)) {
+                index = (index + 1) % reviews.count
+            }
+        }
+    }
+}
+
+// MARK: - Trial timeline sheet
 
 private struct TrialTimelineSheet: View {
     let onContinue: () -> Void
@@ -398,7 +597,7 @@ private struct TrialTimelineSheet: View {
                 .padding(.horizontal, 24)
                 .padding(.top, 8)
 
-            VStack(alignment: .leading, spacing: 0) {
+            VStack(alignment: .leading, spacing: 2) {
                 ForEach(Array(steps.enumerated()), id: \.offset) { index, step in
                     TrialTimelineStepRow(
                         icon: step.icon,
@@ -411,21 +610,22 @@ private struct TrialTimelineSheet: View {
                 }
             }
             .padding(.horizontal, 24)
-            .padding(.top, 20)
+            .padding(.top, 14)
 
-            Spacer(minLength: 0)
+            Spacer(minLength: 12)
 
-            Text("Annule à tout moment, sans frais.")
-                .font(.system(.caption, design: .rounded, weight: .semibold))
-                .foregroundStyle(BrutalPalette.ink.opacity(0.5))
-                .multilineTextAlignment(.center)
-                .frame(maxWidth: .infinity)
-                .padding(.bottom, 8)
+            VStack(spacing: 10) {
+                Text("Annule à tout moment, sans frais.")
+                    .font(.system(.caption, design: .rounded, weight: .semibold))
+                    .foregroundStyle(BrutalPalette.ink.opacity(0.5))
+                    .multilineTextAlignment(.center)
+                    .frame(maxWidth: .infinity)
 
-            OnboardingPrimaryButton(title: "Commencer l'essai gratuit", action: {
-                OnboardingHaptics.primaryCTA()
-                onContinue()
-            })
+                OnboardingPrimaryButton(title: "Commencer l'essai gratuit", action: {
+                    OnboardingHaptics.primaryCTA()
+                    onContinue()
+                })
+            }
             .padding(.horizontal, 24)
             .padding(.bottom, 16)
         }
@@ -443,26 +643,26 @@ private struct TrialTimelineStepRow: View {
     let isLast: Bool
 
     var body: some View {
-        HStack(alignment: .top, spacing: 16) {
+        HStack(alignment: .top, spacing: 14) {
             VStack(spacing: 0) {
                 if !isFirst {
                     Rectangle()
                         .fill(BrutalPalette.ink.opacity(0.18))
-                        .frame(width: 3, height: 10)
+                        .frame(width: 3, height: 6)
                 } else {
-                    Color.clear.frame(width: 3, height: 10)
+                    Color.clear.frame(width: 3, height: 6)
                 }
 
                 ZStack {
                     RoundedRectangle(cornerRadius: 12, style: .continuous)
                         .fill(BrutalPalette.pink)
-                        .frame(width: 44, height: 44)
+                        .frame(width: 42, height: 42)
                         .overlay {
                             RoundedRectangle(cornerRadius: 12, style: .continuous)
                                 .strokeBorder(BrutalPalette.ink, lineWidth: 2)
                         }
                     Image(systemName: icon)
-                        .font(.system(size: 18, weight: .heavy))
+                        .font(.system(size: 17, weight: .heavy))
                         .foregroundStyle(.white)
                 }
 
@@ -470,12 +670,12 @@ private struct TrialTimelineStepRow: View {
                     Rectangle()
                         .fill(BrutalPalette.ink.opacity(0.18))
                         .frame(width: 3)
-                        .frame(minHeight: 36)
+                        .frame(height: 18)
                 }
             }
-            .frame(width: 44)
+            .frame(width: 42)
 
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: 3) {
                 Text(title)
                     .font(.system(.headline, design: .rounded, weight: .heavy))
                     .foregroundStyle(BrutalPalette.ink)
@@ -489,13 +689,14 @@ private struct TrialTimelineStepRow: View {
                     .foregroundStyle(BrutalPalette.ink.opacity(0.65))
                     .fixedSize(horizontal: false, vertical: true)
             }
-            .padding(.top, 6)
-            .padding(.bottom, isLast ? 0 : 8)
+            .padding(.top, 4)
+            .padding(.bottom, isLast ? 0 : 4)
         }
     }
 }
 
-// Simple flow layout for subject pills
+// MARK: - Flow layout
+
 private struct FlowLayout: Layout {
     var spacing: CGFloat = 8
 
