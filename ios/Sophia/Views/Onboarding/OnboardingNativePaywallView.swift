@@ -1,3 +1,4 @@
+import Combine
 import SwiftUI
 import RevenueCat
 
@@ -279,9 +280,9 @@ struct OnboardingNativePaywallView: View {
             }
 
             Text(teaser.course.title)
-                .font(.system(layout == .compact ? .caption2 : .caption, design: .rounded, weight: .heavy))
+                .font(.system(layout == PaywallTeaserLayout.compact ? .caption2 : .caption, design: .rounded, weight: .heavy))
                 .foregroundStyle(BrutalPalette.ink)
-                .lineLimit(layout == .compact ? 2 : 3)
+                .lineLimit(layout == PaywallTeaserLayout.compact ? 2 : 3)
                 .multilineTextAlignment(.leading)
                 .padding(.horizontal, 10)
                 .padding(.vertical, 9)
@@ -506,7 +507,7 @@ private struct PaywallCourseTeaser: Identifiable {
     var id: String { course.id }
 }
 
-private struct PaywallTeaserLayout {
+private struct PaywallTeaserLayout: Equatable {
     let imageHeight: CGFloat
     let cornerRadius: CGFloat
     let fixedWidth: CGFloat?
