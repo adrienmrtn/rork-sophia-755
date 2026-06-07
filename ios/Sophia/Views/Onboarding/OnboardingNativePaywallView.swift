@@ -31,7 +31,7 @@ struct OnboardingNativePaywallView: View {
         var layoutIndex = 0
 
         for subject in lockedSubjects {
-            let candidates = CourseData.allCourses.filter {
+            let candidates = ContentCatalog.activeCourses.filter {
                 $0.subject == subject && CourseImageMap.imageName(for: $0.id) != nil
             }
             for course in candidates.prefix(2) where layoutIndex < layouts.count {

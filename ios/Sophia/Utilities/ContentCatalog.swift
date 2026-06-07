@@ -1,21 +1,58 @@
 import Foundation
 
 /// Locale-aware access to bundled learning content.
-///
-/// Phase 1: French catalog only (`CourseData.allCourses`).
-/// Phase 2: load per-locale JSON bundles from CSV exports; omit entries without a translation.
 enum ContentCatalog {
     static func courses(for language: AppLanguage) -> [Course] {
         switch language {
         case .french:
             return CourseData.allCourses
         case .english:
-            // Phase 2 — JSON bundle keyed by stable course IDs.
-            return CourseData.allCourses
+            return LocalizedContentLoader.courses()
+        }
+    }
+
+    static func collections(for language: AppLanguage) -> [LearningCollection] {
+        switch language {
+        case .french:
+            return CollectionData.allCollections
+        case .english:
+            return LocalizedContentLoader.collections()
+        }
+    }
+
+    static func cards(for language: AppLanguage) -> [CollectibleCard] {
+        switch language {
+        case .french:
+            return CardData.allCards
+        case .english:
+            return LocalizedContentLoader.cards()
         }
     }
 
     static var activeCourses: [Course] {
         courses(for: AppLanguage.currentPersisted())
+    }
+
+    static var activeCollections: [LearningCollection] {
+        collections(for: AppLanguage.currentPersisted())
+    }
+
+    static var activeCards: [CollectibleCard] {
+        cards(for: AppLanguage.currentPersisted())
+    }
+
+    static var activeCardsByCourseId: [String: [CollectibleCard]] {
+        var map: [String: [CollectibleCard]] = [:]
+        for card in activeCards {
+            for courseId in card.courseIds {
+                map[courseId, default: []].append(card)
+            }
+        }
+        return map
+    }
+
+    static func course(withId id: String, language: AppLanguage? = nil) -> Course? {
+        let language = language ?? AppLanguage.currentPersisted()
+        return courses(for: language).first { $0.id == id }
     }
 }

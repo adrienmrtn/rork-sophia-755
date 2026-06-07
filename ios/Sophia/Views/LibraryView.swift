@@ -21,11 +21,21 @@ enum BrutalPalette {
 }
 
 struct LibraryView: View {
-    private enum LibraryTab: String, CaseIterable {
-        case courses = "Cours"
-        case collections = "Collections"
+    private enum LibraryTab: CaseIterable, Hashable {
+        case courses
+        case collections
+
+        func label(language: AppLanguage) -> String {
+            switch self {
+            case .courses:
+                AppLocalizable.string("library.tab.courses", language: language)
+            case .collections:
+                AppLocalizable.string("library.tab.collections", language: language)
+            }
+        }
     }
 
+    @Environment(LanguageManager.self) private var languageManager
     let progressManager: ProgressManager
     var isPremium: Bool = true
     var onShowPaywall: ((SophiaPaywallContext) -> Void)? = nil
@@ -43,11 +53,11 @@ struct LibraryView: View {
     private let cream = BrutalPalette.cream
 
     private var filteredCourses: [Course] {
-        if searchText.isEmpty { return CourseData.allCourses }
-        return CourseData.allCourses.filter {
+        if searchText.isEmpty { return ContentCatalog.activeCourses }
+        return ContentCatalog.activeCourses.filter {
             $0.title.localizedStandardContains(searchText) ||
             $0.subcategory.localizedStandardContains(searchText) ||
-            $0.subject.rawValue.localizedStandardContains(searchText)
+            $0.subject.localizedShortName(language: languageManager.current).localizedStandardContains(searchText)
         }
     }
 
@@ -61,7 +71,7 @@ struct LibraryView: View {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 28) {
                         HStack {
-                            Text("Bibliothèque")
+                            Text(languageManager.text("library.title"))
                                 .font(.system(.largeTitle, design: .rounded, weight: .heavy))
                                 .foregroundStyle(ink)
                             Spacer()
@@ -107,7 +117,7 @@ struct LibraryView: View {
             }
             .toolbar(.hidden, for: .navigationBar)
             .navigationDestination(for: Subject.self) { subject in
-                let courses = CourseData.allCourses.filter { $0.subject == subject }
+                let courses = ContentCatalog.activeCourses.filter { $0.subject == subject }
                 SubjectCoursesView(
                     subject: subject,
                     courses: courses,
@@ -144,7 +154,7 @@ struct LibraryView: View {
                         }
                     }
                 } label: {
-                    Text(tab.rawValue)
+                    Text(tab.label(language: languageManager.current))
                         .font(.system(.subheadline, design: .rounded, weight: .black))
                         .foregroundStyle(selectedTab == tab ? .white : ink)
                         .frame(maxWidth: .infinity)
@@ -165,7 +175,7 @@ struct LibraryView: View {
 
             ZStack(alignment: .leading) {
                 if searchText.isEmpty {
-                    Text("Rechercher un cours...")
+                    Text(languageManager.text("library.search.placeholder"))
                         .font(.system(.subheadline, design: .rounded, weight: .semibold))
                         .foregroundStyle(ink.opacity(0.38))
                         .allowsHitTesting(false)
@@ -206,10 +216,10 @@ struct LibraryView: View {
             Image(systemName: "magnifyingglass")
                 .font(.system(size: 40, weight: .light))
                 .foregroundStyle(ink.opacity(0.3))
-            Text("Aucun résultat")
+            Text(languageManager.text("library.empty.title"))
                 .font(.system(.title3, design: .rounded, weight: .heavy))
                 .foregroundStyle(ink)
-            Text("Essaie un autre mot-clé.")
+            Text(languageManager.text("library.empty.subtitle"))
                 .font(.system(.subheadline, design: .rounded, weight: .medium))
                 .foregroundStyle(ink.opacity(0.5))
         }
@@ -277,7 +287,7 @@ struct LibraryView: View {
                         .font(.system(size: 12, weight: .heavy))
                         .foregroundStyle(.white)
                 }
-                Text(subject.shortName.uppercased())
+                Text(subject.localizedShortName(language: languageManager.current).uppercased())
                     .font(.system(.caption, design: .rounded, weight: .heavy))
                     .foregroundStyle(.white)
                     .tracking(0.5)
@@ -290,7 +300,7 @@ struct LibraryView: View {
 
             if unlocked {
                 HStack(spacing: 4) {
-                    Text("Voir plus")
+                    Text(languageManager.text("library.seeMore"))
                         .font(.system(.subheadline, design: .rounded, weight: .heavy))
                         .foregroundStyle(ink)
                     Image(systemName: "arrow.right")
@@ -299,7 +309,7 @@ struct LibraryView: View {
                 }
             } else {
                 HStack(spacing: 4) {
-                    Text("Débloquer")
+                    Text(languageManager.text("library.unlock"))
                         .font(.system(.subheadline, design: .rounded, weight: .heavy))
                         .foregroundStyle(ink)
                     Image(systemName: "lock.fill")
@@ -326,7 +336,7 @@ struct LibraryView: View {
                             .font(.system(size: 12, weight: .heavy))
                             .foregroundStyle(.white)
                     }
-                    Text(subject.shortName.uppercased())
+                    Text(subject.localizedShortName(language: languageManager.current).uppercased())
                         .font(.system(.caption, design: .rounded, weight: .heavy))
                         .foregroundStyle(.white)
                         .tracking(0.5)
@@ -381,6 +391,7 @@ struct BrutalCardButtonStyle: ButtonStyle {
 /// Neo-brutalist library card — white body, black border, solid black offset shadow,
 /// pastel bottom panel matching the Home FlashCard style.
 struct LibraryCardView: View {
+    @Environment(LanguageManager.self) private var languageManager
     let course: Course
     let status: CourseStatus
     var locked: Bool = false
@@ -425,7 +436,7 @@ struct LibraryCardView: View {
                                     .frame(width: 44, height: 44)
                                     .background(Color.white, in: Circle())
                                     .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
-                                Text("VERROUILLÉ")
+                                Text(languageManager.text("library.lockedBadge"))
                                     .font(.system(.caption2, design: .rounded, weight: .heavy))
                                     .foregroundStyle(ink)
                                     .tracking(0.8)
@@ -496,7 +507,7 @@ struct LibraryCardView: View {
 
     private var bottomPanel: some View {
         VStack(alignment: .leading, spacing: 6) {
-            Text(course.subject.shortName.uppercased())
+            Text(course.subject.localizedShortName(language: languageManager.current).uppercased())
                 .font(.system(.caption2, design: .rounded, weight: .heavy))
                 .foregroundStyle(ink.opacity(0.55))
                 .tracking(0.5)

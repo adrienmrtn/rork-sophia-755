@@ -19,7 +19,7 @@ struct GlossaryTermSheet: View {
 
             VStack(alignment: .leading, spacing: 16) {
                 HStack(spacing: 8) {
-                    Text(entry.classification.shortLabel.uppercased())
+                    Text(entry.classification.localizedShortLabel(language: AppLanguage.currentPersisted()).uppercased())
                         .font(.system(.caption2, design: .rounded, weight: .heavy))
                         .foregroundStyle(ink)
                         .tracking(0.6)

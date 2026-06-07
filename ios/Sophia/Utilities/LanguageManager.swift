@@ -18,6 +18,7 @@ final class LanguageManager {
         guard current != language else { return }
         current = language
         UserDefaults.standard.set(language.rawValue, forKey: AppLanguage.userDefaultsKey)
+        LocalizedContentLoader.resetCache()
     }
 
     func text(_ key: String) -> String {

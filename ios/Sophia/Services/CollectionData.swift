@@ -8,8 +8,9 @@ nonisolated struct LearningCollection: Identifiable, Hashable, Sendable {
     let courseIds: [String]
 
     var courses: [Course] {
-        courseIds.compactMap { courseId in
-            CourseData.allCourses.first { $0.id == courseId }
+        let catalog = ContentCatalog.activeCourses
+        return courseIds.compactMap { courseId in
+            catalog.first { $0.id == courseId }
         }
     }
 }

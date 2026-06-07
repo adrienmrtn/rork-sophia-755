@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct CollectionProgressCelebrationView: View {
+    @Environment(LanguageManager.self) private var languageManager
     let event: CollectionProgressEvent
     let onContinue: () -> Void
 
@@ -30,7 +31,7 @@ struct CollectionProgressCelebrationView: View {
             VStack(spacing: 0) {
                 Spacer(minLength: 24)
 
-                Text("Collection avancée !")
+                Text(languageManager.text("celebration.collectionAdvanced"))
                     .font(.system(.largeTitle, design: .rounded, weight: .black))
                     .foregroundStyle(ink)
                     .multilineTextAlignment(.center)
@@ -66,7 +67,7 @@ struct CollectionProgressCelebrationView: View {
                     onContinue()
                 } label: {
                     HStack(spacing: 8) {
-                        Text("Continuer")
+                        Text(languageManager.text("common.continue"))
                         Image(systemName: "arrow.right")
                     }
                     .font(.system(.headline, design: .rounded, weight: .black))
@@ -85,7 +86,7 @@ struct CollectionProgressCelebrationView: View {
     }
 
     private var coverCard: some View {
-        CollectionCoverView(collection: event.collection, accentIndex: CollectionData.allCollections.firstIndex(of: event.collection) ?? 0)
+        CollectionCoverView(collection: event.collection, accentIndex: ContentCatalog.activeCollections.firstIndex(of: event.collection) ?? 0)
             .aspectRatio(16 / 9, contentMode: .fit)
             .clipShape(.rect(cornerRadius: 30))
             .overlay {
@@ -119,7 +120,7 @@ struct CollectionProgressCelebrationView: View {
                 Text("/ \(event.totalCount)")
                     .font(.system(.title2, design: .rounded, weight: .black))
                     .foregroundStyle(ink.opacity(0.45))
-                Text("cours terminés")
+                Text(languageManager.text("celebration.coursesCompleted"))
                     .font(.system(.subheadline, design: .rounded, weight: .heavy))
                     .foregroundStyle(ink.opacity(0.55))
                     .padding(.leading, 2)
@@ -196,6 +197,7 @@ struct CollectionProgressCelebrationView: View {
 }
 
 struct CollectionCompletedCelebrationView: View {
+    @Environment(LanguageManager.self) private var languageManager
     let event: CollectionProgressEvent
     let awardedXP: Int
     let onContinue: () -> Void
@@ -220,7 +222,7 @@ struct CollectionCompletedCelebrationView: View {
             VStack(spacing: 0) {
                 Spacer(minLength: 24)
 
-                Text("Collection terminée !")
+                Text(languageManager.text("celebration.collectionComplete"))
                     .font(.system(size: 40, weight: .black, design: .rounded))
                     .foregroundStyle(ink)
                     .multilineTextAlignment(.center)
@@ -256,7 +258,7 @@ struct CollectionCompletedCelebrationView: View {
                     UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                     onContinue()
                 } label: {
-                    Text("Continuer")
+                    Text(languageManager.text("common.continue"))
                         .font(.system(.headline, design: .rounded, weight: .black))
                         .foregroundStyle(ink)
                         .frame(maxWidth: .infinity)
@@ -273,7 +275,7 @@ struct CollectionCompletedCelebrationView: View {
     }
 
     private var completedCard: some View {
-        CollectionCoverView(collection: event.collection, accentIndex: CollectionData.allCollections.firstIndex(of: event.collection) ?? 0)
+        CollectionCoverView(collection: event.collection, accentIndex: ContentCatalog.activeCollections.firstIndex(of: event.collection) ?? 0)
             .aspectRatio(16 / 9, contentMode: .fit)
             .clipShape(.rect(cornerRadius: 34))
             .overlay {
@@ -301,7 +303,7 @@ struct CollectionCompletedCelebrationView: View {
                     }
                     .frame(width: 112, height: 112)
 
-                    Text("Parcours complet")
+                    Text(languageManager.text("collections.pathComplete"))
                         .font(.system(.title2, design: .rounded, weight: .black))
                         .foregroundStyle(ink)
                         .padding(.horizontal, 16)
@@ -317,7 +319,7 @@ struct CollectionCompletedCelebrationView: View {
         HStack(spacing: 10) {
             Image(systemName: "star.fill")
                 .font(.system(size: 18, weight: .black))
-            Text("+\(awardedXP) XP globaux")
+            Text(String(format: languageManager.text("cards.globalXP"), awardedXP))
                 .font(.system(.title3, design: .rounded, weight: .black))
                 .monospacedDigit()
         }

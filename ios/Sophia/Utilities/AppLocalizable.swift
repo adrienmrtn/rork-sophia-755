@@ -13,6 +13,11 @@ enum AppLocalizable {
         "tab.library": "Biblio",
         "tab.profile": "Profil",
 
+        "library.title": "Bibliothèque",
+        "library.tab.courses": "Cours",
+        "library.tab.collections": "Collections",
+        "library.search.placeholder": "Rechercher un cours...",
+
         "language.section": "Langue",
         "language.french": "Français",
         "language.english": "English",
@@ -72,6 +77,52 @@ enum AppLocalizable {
         "rarity.rare": "Rare",
         "rarity.epique": "Épique",
         "rarity.legendaire": "Légendaire",
+
+        "home.skip": "Passer",
+        "home.bravo": "Bravo !",
+        "home.allCompleted": "Tu as terminé tous les cours disponibles.",
+        "home.locked": "Verrouillé",
+        "home.start": "Commencer",
+
+        "library.empty.title": "Aucun résultat",
+        "library.empty.subtitle": "Essaie un autre mot-clé.",
+        "library.seeMore": "Voir plus",
+        "library.unlock": "Débloquer",
+        "library.lockedBadge": "VERROUILLÉ",
+
+        "collections.title": "COLLECTIONS",
+        "collections.subtitle": "Des parcours guidés pour relier les idées entre elles.",
+        "collections.complete": "Collection terminée",
+        "collections.progress": "%d / %d cours terminés",
+        "collections.badge.complete": "TERMINÉE",
+        "collections.badge.path": "PARCOURS",
+        "collections.xpAtEnd": "+%d XP à la fin",
+        "collections.pathComplete": "Parcours complet",
+
+        "subject.courses.count": "%d cours",
+        "subject.completed.singular": "%d terminé",
+        "subject.completed.plural": "%d terminés",
+
+        "cards.collect.title": "CARTES À COLLECTER",
+        "cards.seeAll": "Voir tout →",
+        "cards.unit": "cartes",
+        "cards.empty": "Termine un cours pour débloquer tes premières cartes.",
+        "cards.quizStats.title": "QUIZZ RÉUSSIS",
+        "cards.correctAnswers": "bonnes réponses",
+        "cards.successRate": "réussite",
+        "cards.myCards": "Mes cartes",
+        "cards.unlocked": "débloquées",
+        "cards.unlocked.title": "Carte débloquée !",
+        "cards.tapToReveal": "Tape pour révéler",
+        "cards.globalXP": "+%d XP globaux",
+
+        "course.keyTakeaway": "À RETENIR",
+
+        "common.continue": "Continuer",
+
+        "celebration.collectionAdvanced": "Collection avancée !",
+        "celebration.coursesCompleted": "cours terminés",
+        "celebration.collectionComplete": "Collection terminée !",
     ]
 
     // MARK: - English
@@ -80,6 +131,11 @@ enum AppLocalizable {
         "tab.home": "Home",
         "tab.library": "Library",
         "tab.profile": "Profile",
+
+        "library.title": "Library",
+        "library.tab.courses": "Courses",
+        "library.tab.collections": "Collections",
+        "library.search.placeholder": "Search for a course...",
 
         "language.section": "Language",
         "language.french": "Français",
@@ -140,5 +196,51 @@ enum AppLocalizable {
         "rarity.rare": "Rare",
         "rarity.epique": "Epic",
         "rarity.legendaire": "Legendary",
+
+        "home.skip": "Skip",
+        "home.bravo": "Bravo!",
+        "home.allCompleted": "You've completed all available courses.",
+        "home.locked": "Locked",
+        "home.start": "Start",
+
+        "library.empty.title": "No results",
+        "library.empty.subtitle": "Try another keyword.",
+        "library.seeMore": "See more",
+        "library.unlock": "Unlock",
+        "library.lockedBadge": "LOCKED",
+
+        "collections.title": "COLLECTIONS",
+        "collections.subtitle": "Guided journeys to connect ideas.",
+        "collections.complete": "Collection complete",
+        "collections.progress": "%d / %d courses completed",
+        "collections.badge.complete": "COMPLETE",
+        "collections.badge.path": "JOURNEY",
+        "collections.xpAtEnd": "+%d XP at the end",
+        "collections.pathComplete": "Journey complete",
+
+        "subject.courses.count": "%d courses",
+        "subject.completed.singular": "%d completed",
+        "subject.completed.plural": "%d completed",
+
+        "cards.collect.title": "CARDS TO COLLECT",
+        "cards.seeAll": "See all →",
+        "cards.unit": "cards",
+        "cards.empty": "Complete a course to unlock your first cards.",
+        "cards.quizStats.title": "QUIZZES PASSED",
+        "cards.correctAnswers": "correct answers",
+        "cards.successRate": "success rate",
+        "cards.myCards": "My cards",
+        "cards.unlocked": "unlocked",
+        "cards.unlocked.title": "Card unlocked!",
+        "cards.tapToReveal": "Tap to reveal",
+        "cards.globalXP": "+%d global XP",
+
+        "course.keyTakeaway": "KEY TAKEAWAY",
+
+        "common.continue": "Continue",
+
+        "celebration.collectionAdvanced": "Collection progressed!",
+        "celebration.coursesCompleted": "courses completed",
+        "celebration.collectionComplete": "Collection complete!",
     ]
 }
