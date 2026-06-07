@@ -155,9 +155,6 @@ struct LibraryView: View {
                 .buttonStyle(BrutalIconButtonStyle(depth: 1))
             }
         }
-        .padding(5)
-        .background(Color.white.opacity(0.55), in: Capsule())
-        .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
     }
 
     private var searchBar: some View {
