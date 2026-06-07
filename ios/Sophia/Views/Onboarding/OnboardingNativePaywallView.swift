@@ -593,6 +593,9 @@ private struct TrialTimelineSheet: View {
         ("star.fill", "Dans 3 jours", "Ton abonnement démarre", "Annule avant si tu ne veux pas continuer."),
     ]
 
+    private let iconColumnWidth: CGFloat = 42
+    private let connectorHeight: CGFloat = 12
+
     var body: some View {
         VStack(spacing: 0) {
             Text("Commence ton essai\ngratuit de 3 jours")
@@ -602,41 +605,55 @@ private struct TrialTimelineSheet: View {
                 .frame(maxWidth: .infinity)
                 .padding(.horizontal, 24)
                 .padding(.top, 8)
+                .padding(.bottom, 20)
 
-            VStack(alignment: .leading, spacing: 2) {
-                ForEach(Array(steps.enumerated()), id: \.offset) { index, step in
-                    TrialTimelineStepRow(
-                        icon: step.icon,
-                        title: step.title,
-                        subtitle: step.subtitle,
-                        detail: step.detail,
-                        isFirst: index == 0,
-                        isLast: index == steps.count - 1
-                    )
+            VStack(alignment: .leading, spacing: 16) {
+                VStack(alignment: .leading, spacing: 0) {
+                    ForEach(Array(steps.enumerated()), id: \.offset) { index, step in
+                        TrialTimelineStepRow(
+                            icon: step.icon,
+                            title: step.title,
+                            subtitle: step.subtitle,
+                            detail: step.detail,
+                            iconColumnWidth: iconColumnWidth
+                        )
+
+                        if index < steps.count - 1 {
+                            timelineConnector
+                        }
+                    }
                 }
-            }
-            .padding(.horizontal, 24)
-            .padding(.top, 14)
+                .fixedSize(horizontal: false, vertical: true)
 
-            Spacer(minLength: 12)
-
-            VStack(spacing: 10) {
                 Text("Annule à tout moment, sans frais.")
                     .font(.system(.caption, design: .rounded, weight: .semibold))
                     .foregroundStyle(BrutalPalette.ink.opacity(0.5))
-                    .multilineTextAlignment(.center)
-                    .frame(maxWidth: .infinity)
-
-                OnboardingPrimaryButton(title: "Commencer l'essai gratuit", action: {
-                    OnboardingHaptics.primaryCTA()
-                    onContinue()
-                })
+                    .padding(.leading, iconColumnWidth + 14)
             }
+            .fixedSize(horizontal: false, vertical: true)
+            .padding(.horizontal, 24)
+
+            Spacer(minLength: 24)
+
+            OnboardingPrimaryButton(title: "Commencer l'essai gratuit", action: {
+                OnboardingHaptics.primaryCTA()
+                onContinue()
+            })
             .padding(.horizontal, 24)
             .padding(.bottom, 16)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .background(BrutalPalette.cream.ignoresSafeArea())
+    }
+
+    private var timelineConnector: some View {
+        HStack(spacing: 0) {
+            Rectangle()
+                .fill(BrutalPalette.ink.opacity(0.18))
+                .frame(width: 3, height: connectorHeight)
+                .frame(width: iconColumnWidth)
+            Spacer(minLength: 0)
+        }
     }
 }
 
@@ -645,41 +662,23 @@ private struct TrialTimelineStepRow: View {
     let title: String
     let subtitle: String
     let detail: String
-    let isFirst: Bool
-    let isLast: Bool
+    let iconColumnWidth: CGFloat
 
     var body: some View {
         HStack(alignment: .top, spacing: 14) {
-            VStack(spacing: 0) {
-                if !isFirst {
-                    Rectangle()
-                        .fill(BrutalPalette.ink.opacity(0.18))
-                        .frame(width: 3, height: 6)
-                } else {
-                    Color.clear.frame(width: 3, height: 6)
-                }
-
-                ZStack {
-                    RoundedRectangle(cornerRadius: 12, style: .continuous)
-                        .fill(BrutalPalette.pink)
-                        .frame(width: 42, height: 42)
-                        .overlay {
-                            RoundedRectangle(cornerRadius: 12, style: .continuous)
-                                .strokeBorder(BrutalPalette.ink, lineWidth: 2)
-                        }
-                    Image(systemName: icon)
-                        .font(.system(size: 17, weight: .heavy))
-                        .foregroundStyle(.white)
-                }
-
-                if !isLast {
-                    Rectangle()
-                        .fill(BrutalPalette.ink.opacity(0.18))
-                        .frame(width: 3)
-                        .frame(height: 18)
-                }
+            ZStack {
+                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                    .fill(BrutalPalette.pink)
+                    .frame(width: iconColumnWidth, height: iconColumnWidth)
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 12, style: .continuous)
+                            .strokeBorder(BrutalPalette.ink, lineWidth: 2)
+                    }
+                Image(systemName: icon)
+                    .font(.system(size: 17, weight: .heavy))
+                    .foregroundStyle(.white)
             }
-            .frame(width: 42)
+            .frame(width: iconColumnWidth, height: iconColumnWidth)
 
             VStack(alignment: .leading, spacing: 3) {
                 Text(title)
@@ -695,9 +694,10 @@ private struct TrialTimelineStepRow: View {
                     .foregroundStyle(BrutalPalette.ink.opacity(0.65))
                     .fixedSize(horizontal: false, vertical: true)
             }
-            .padding(.top, 4)
-            .padding(.bottom, isLast ? 0 : 4)
+            .padding(.top, 2)
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
+        .fixedSize(horizontal: false, vertical: true)
     }
 }
 
