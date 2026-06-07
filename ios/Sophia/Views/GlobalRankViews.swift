@@ -58,18 +58,6 @@ struct GlobalRankProfileCard: View {
                 }
 
                 VStack(alignment: .leading, spacing: 9) {
-                    HStack {
-                        Text(progress.rank.next == nil ? "Rang ultime atteint" : "Progression vers \(progress.rank.next?.rawValue ?? "")")
-                            .font(.system(.caption, design: .rounded, weight: .black))
-                            .foregroundStyle(ink.opacity(0.62))
-                            .tracking(0.5)
-                        Spacer()
-                        Text("\(Int((progress.progressToNextRank * 100).rounded()))%")
-                            .font(.system(.caption, design: .rounded, weight: .black))
-                            .foregroundStyle(ink)
-                            .monospacedDigit()
-                    }
-
                     GeometryReader { geo in
                         ZStack(alignment: .leading) {
                             Capsule()
@@ -114,8 +102,6 @@ struct GlobalRankProfileCard: View {
                         .foregroundStyle(ink.opacity(0.62))
                         .monospacedDigit()
                 }
-
-                rankLadder
             }
             .padding(20)
             .background(
@@ -145,32 +131,6 @@ struct GlobalRankProfileCard: View {
             }
             withAnimation(.linear(duration: 1.6).repeatForever(autoreverses: false)) {
                 shimmerOffset = 260
-            }
-        }
-    }
-
-    private var rankLadder: some View {
-        HStack(spacing: 8) {
-            ForEach(GlobalRank.allCases, id: \.self) { rank in
-                let unlocked = progress.level >= rank.lowerLevel
-                VStack(spacing: 6) {
-                    ZStack {
-                        Circle()
-                            .fill(unlocked ? rank.secondaryColor : Color.white.opacity(0.55))
-                            .overlay { Circle().strokeBorder(ink.opacity(unlocked ? 1 : 0.35), lineWidth: 2) }
-                        Image(systemName: rank.symbolName)
-                            .font(.system(size: 12, weight: .black))
-                            .foregroundStyle(ink.opacity(unlocked ? 1 : 0.35))
-                    }
-                    .frame(width: 30, height: 30)
-
-                    Text(rank.rawValue)
-                        .font(.system(size: 8.5, weight: .black, design: .rounded))
-                        .foregroundStyle(ink.opacity(unlocked ? 0.8 : 0.35))
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.6)
-                }
-                .frame(maxWidth: .infinity)
             }
         }
     }

@@ -86,12 +86,8 @@ struct CollectionProgressCelebrationView: View {
 
     private var coverCard: some View {
         ZStack(alignment: .top) {
-            RoundedRectangle(cornerRadius: 30, style: .continuous)
-                .fill(ink)
-                .offset(y: 8)
-
             CollectionCoverView(collection: event.collection, accentIndex: CollectionData.allCollections.firstIndex(of: event.collection) ?? 0)
-                .frame(height: 210)
+                .aspectRatio(16 / 9, contentMode: .fit)
                 .clipShape(.rect(cornerRadius: 30))
                 .overlay {
                     RoundedRectangle(cornerRadius: 30, style: .continuous)
@@ -111,6 +107,7 @@ struct CollectionProgressCelebrationView: View {
                     .offset(x: -14, y: 28)
                 }
         }
+        .shadow(color: ink.opacity(0.22), radius: 0, x: 0, y: 5)
         .padding(.bottom, 8)
     }
 
@@ -250,9 +247,11 @@ struct CollectionCompletedCelebrationView: View {
 
                 Spacer(minLength: 26)
 
-                xpPill
-                    .opacity(appeared ? 1 : 0)
-                    .scaleEffect(appeared ? 1 : 0.75)
+                if awardedXP > 0 {
+                    xpPill
+                        .opacity(appeared ? 1 : 0)
+                        .scaleEffect(appeared ? 1 : 0.75)
+                }
 
                 Spacer(minLength: 28)
 
@@ -278,12 +277,8 @@ struct CollectionCompletedCelebrationView: View {
 
     private var completedCard: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 34, style: .continuous)
-                .fill(ink)
-                .offset(y: 9)
-
             CollectionCoverView(collection: event.collection, accentIndex: CollectionData.allCollections.firstIndex(of: event.collection) ?? 0)
-                .frame(height: 260)
+                .aspectRatio(16 / 9, contentMode: .fit)
                 .clipShape(.rect(cornerRadius: 34))
                 .overlay {
                     RoundedRectangle(cornerRadius: 34, style: .continuous)
@@ -320,6 +315,7 @@ struct CollectionCompletedCelebrationView: View {
                     }
                 }
         }
+        .shadow(color: ink.opacity(0.22), radius: 0, x: 0, y: 5)
         .padding(.bottom, 9)
     }
 

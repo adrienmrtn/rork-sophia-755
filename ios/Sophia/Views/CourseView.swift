@@ -29,6 +29,8 @@ struct CourseView: View {
     @State private var showCollectionProgress: Bool = false
     @State private var showCollectionCompleted: Bool = false
     @State private var showCollectionRankUp: Bool = false
+    @State private var rewardSteps: [PostCompletionRewardStep] = []
+    @State private var showRewardFlow: Bool = false
 
     /// Fixed XP awarded for finishing a course (reaching the completion screen). Always granted.
     private let courseCompletionXP: Int = 10
@@ -112,6 +114,16 @@ struct CourseView: View {
                 showQuiz = true
             })
             .presentationDragIndicator(.visible)
+        }
+        .fullScreenCover(isPresented: $showRewardFlow) {
+            PostCompletionRewardFlowView(
+                steps: rewardSteps,
+                progressManager: progressManager,
+                onFinished: {
+                    showRewardFlow = false
+                    onDismissToHome()
+                }
+            )
         }
         .fullScreenCover(isPresented: $showCardUnlock) {
             if let currentCardUnlockEvent {
@@ -372,33 +384,48 @@ struct CourseView: View {
     }
 
     private func continueAfterCourseCompletion() {
-        if !pendingCardCandidates.isEmpty {
+        rewardSteps = buildRewardSteps()
+        if rewardSteps.isEmpty {
+            onDismissToHome()
+        } else {
+            showRewardFlow = true
+        }
+    }
+
+    private func buildRewardSteps() -> [PostCompletionRewardStep] {
+        var steps: [PostCompletionRewardStep] = []
+
+        while !pendingCardCandidates.isEmpty {
             let card = pendingCardCandidates.removeFirst()
             if let event = progressManager.unlockCard(card) {
-                currentCardUnlockEvent = event
-                showCardUnlock = true
-                return
+                steps.append(.card(event))
             }
-            continueAfterCourseCompletion()
-            return
         }
         if progressManager.pendingGlobalRankUp() != nil {
-            showCardRankUp = true
-            return
+            if let pending = progressManager.pendingGlobalRankUp() {
+                steps.append(.globalRankUp(previous: pending.previous, new: pending.new, newLevel: pending.newLevel))
+            }
         }
-        if !pendingCollectionEvents.isEmpty {
-            currentCollectionEvent = pendingCollectionEvents.removeFirst()
-            showCollectionProgress = true
-            return
+
+        while !pendingCollectionEvents.isEmpty {
+            let event = pendingCollectionEvents.removeFirst()
+            steps.append(.collectionProgress(event))
+            if event.didCompleteCollection {
+                let award = progressManager.awardGlobalXP(
+                    reason: .collectionCompleted(id: event.collection.id),
+                    amount: progressManager.collectionCompletionXP(for: event.collection)
+                )
+                steps.append(.collectionCompleted(event, awardedXP: award.awardedXP))
+                if award.didRankUp {
+                    steps.append(.globalRankUp(previous: award.previousRank, new: award.newRank, newLevel: award.newLevel))
+                }
+            }
         }
-        currentCollectionEvent = nil
+
         if progressManager.shouldShowStreakToday {
             progressManager.markStreakShownToday()
-            withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
-                endPhase = .streak
-            }
-        } else {
-            onDismissToHome()
+            steps.append(.streak(streak: progressManager.streak, subject: course.subject, lastActiveDate: progressManager.progress.lastActiveDate))
         }
+        return steps
     }
 }
