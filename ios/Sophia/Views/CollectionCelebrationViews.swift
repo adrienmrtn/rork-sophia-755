@@ -86,6 +86,10 @@ struct CollectionProgressCelebrationView: View {
 
     private var coverCard: some View {
         ZStack(alignment: .top) {
+            RoundedRectangle(cornerRadius: 30, style: .continuous)
+                .fill(ink)
+                .offset(y: 8)
+
             CollectionCoverView(collection: event.collection, accentIndex: CollectionData.allCollections.firstIndex(of: event.collection) ?? 0)
                 .aspectRatio(16 / 9, contentMode: .fit)
                 .clipShape(.rect(cornerRadius: 30))
@@ -107,7 +111,6 @@ struct CollectionProgressCelebrationView: View {
                     .offset(x: -14, y: 28)
                 }
         }
-        .shadow(color: ink.opacity(0.9), radius: 0, x: 0, y: 4)
         .padding(.bottom, 8)
     }
 
@@ -276,7 +279,11 @@ struct CollectionCompletedCelebrationView: View {
     }
 
     private var completedCard: some View {
-        ZStack {
+        ZStack(alignment: .top) {
+            RoundedRectangle(cornerRadius: 34, style: .continuous)
+                .fill(ink)
+                .offset(y: 9)
+
             CollectionCoverView(collection: event.collection, accentIndex: CollectionData.allCollections.firstIndex(of: event.collection) ?? 0)
                 .aspectRatio(16 / 9, contentMode: .fit)
                 .clipShape(.rect(cornerRadius: 34))
@@ -315,7 +322,6 @@ struct CollectionCompletedCelebrationView: View {
                     }
                 }
         }
-        .shadow(color: ink.opacity(0.9), radius: 0, x: 0, y: 4)
         .padding(.bottom, 9)
     }
 
