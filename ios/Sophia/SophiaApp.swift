@@ -3,6 +3,7 @@ import RevenueCat
 
 @main
 struct SophiaApp: App {
+    @State private var languageManager = LanguageManager.shared
     @State private var showOnboarding: Bool = !OnboardingViewModel.isOnboardingCompleted
 
     init() {
@@ -32,5 +33,7 @@ struct SophiaApp: App {
                 })
             }
         }
+        .environment(languageManager)
+        .environment(\.locale, languageManager.locale)
     }
 }

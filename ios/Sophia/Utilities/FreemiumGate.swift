@@ -8,17 +8,9 @@ import Foundation
 ///
 /// Premium users have everything unlocked.
 enum FreemiumGate {
-    /// Maps an onboarding interest label to a `Subject`.
-    static func subject(fromInterestLabel label: String) -> Subject? {
-        switch label {
-        case "Histoire": return .histoire
-        case "Sciences": return .sciences
-        case "Littérature": return .litterature
-        case "Art": return .art
-        case "Mythologie": return .mythologie
-        case "Monde actuel": return .comprendreLeMonde
-        default: return nil
-        }
+    /// Maps a persisted onboarding interest key to a `Subject`.
+    static func subject(fromInterestKey key: String) -> Subject? {
+        Subject.from(storageKey: OnboardingViewModel.migrateInterestKey(key))
     }
 
     /// Set of subjects accessible to the user.
@@ -26,8 +18,8 @@ enum FreemiumGate {
     /// Falls back to the first 3 subjects if onboarding interests are missing.
     static func unlockedSubjects(isPremium: Bool) -> Set<Subject> {
         if isPremium { return Set(Subject.allCases) }
-        let labels = OnboardingViewModel.userInterestLabels()
-        let mapped = labels.compactMap { subject(fromInterestLabel: $0) }
+        let keys = OnboardingViewModel.userInterestKeys()
+        let mapped = keys.compactMap { subject(fromInterestKey: $0) }
         if mapped.isEmpty { return Set(Subject.allCases.prefix(3)) }
         return Set(mapped)
     }

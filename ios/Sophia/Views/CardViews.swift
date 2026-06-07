@@ -1,6 +1,19 @@
 import SwiftUI
 
 extension CollectibleCardRarity {
+    func localizedName(language: AppLanguage) -> String {
+        switch self {
+        case .commune: AppLocalizable.string("rarity.commune", language: language)
+        case .rare: AppLocalizable.string("rarity.rare", language: language)
+        case .epique: AppLocalizable.string("rarity.epique", language: language)
+        case .legendaire: AppLocalizable.string("rarity.legendaire", language: language)
+        }
+    }
+
+    var displayName: String {
+        localizedName(language: AppLanguage.currentPersisted())
+    }
+
     var primaryColor: Color {
         switch self {
         case .commune: Color(red: 0.92, green: 0.93, blue: 0.94)
@@ -316,7 +329,7 @@ struct CollectibleCardArtView: View {
                     .lineLimit(2, reservesSpace: true)
                     .multilineTextAlignment(.leading)
 
-                Text(card.rarity.rawValue)
+                Text(card.rarity.displayName)
                     .font(.system(.caption2, design: .rounded, weight: .black))
                     .foregroundStyle(ink.opacity(0.55))
             }
@@ -425,7 +438,7 @@ struct CardUnlockCelebrationView: View {
                     .opacity(appeared ? 1 : 0)
                     .offset(y: appeared ? 0 : 16)
 
-                Text(event.card.rarity.rawValue)
+                Text(event.card.rarity.displayName)
                     .font(.system(.headline, design: .rounded, weight: .black))
                     .foregroundStyle(ink.opacity(0.58))
                     .padding(.top, 8)
@@ -517,7 +530,7 @@ struct CardUnlockCelebrationView: View {
                     .multilineTextAlignment(.leading)
                     .minimumScaleFactor(0.85)
 
-                Text(event.card.rarity.rawValue)
+                Text(event.card.rarity.displayName)
                     .font(.system(size: 18, weight: .black, design: .rounded))
                     .foregroundStyle(ink.opacity(0.58))
             }

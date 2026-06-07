@@ -96,10 +96,8 @@ class OnboardingViewModel {
         UserDefaults.standard.set(Array(interests), forKey: OnboardingViewModel.interestsKey)
     }
 
-    /// All available interest labels (mirrors the cards on OnboardingInterestsScreen).
-    static let allInterestLabels: [String] = [
-        "Histoire", "Sciences", "Littérature", "Art", "Mythologie", "Monde actuel"
-    ]
+    /// Stable subject keys for onboarding interests (language-independent).
+    static let allInterestKeys: [String] = Subject.allCases.map(\.storageKey)
 
     /// Normalize the user's selection to **exactly 3** interests, one-shot:
     /// - 0 selected → pick 3 fully random.
@@ -108,7 +106,7 @@ class OnboardingViewModel {
     /// - 4+ selected → keep 3 random from the user's selection.
     /// Then persist. Should be called once when leaving the interests step.
     func finalizeInterests() {
-        let all = OnboardingViewModel.allInterestLabels
+        let all = OnboardingViewModel.allInterestKeys
         let selected = interests
         var result: Set<String>
         if selected.count == 3 {
@@ -128,11 +126,25 @@ class OnboardingViewModel {
 
     static func loadPersistedInterests() -> Set<String> {
         guard let arr = UserDefaults.standard.array(forKey: interestsKey) as? [String] else { return [] }
-        return Set(arr)
+        return Set(arr.map(migrateInterestKey))
     }
 
-    static func userInterestLabels() -> Set<String> {
+    static func userInterestKeys() -> Set<String> {
         loadPersistedInterests()
+    }
+
+    /// Migrates legacy French display labels to stable subject storage keys.
+    static func migrateInterestKey(_ value: String) -> String {
+        if Subject.from(storageKey: value) != nil { return value }
+        switch value {
+        case "Histoire": return Subject.histoire.storageKey
+        case "Sciences": return Subject.sciences.storageKey
+        case "Littérature": return Subject.litterature.storageKey
+        case "Art": return Subject.art.storageKey
+        case "Mythologie": return Subject.mythologie.storageKey
+        case "Monde actuel": return Subject.comprendreLeMonde.storageKey
+        default: return value
+        }
     }
 
     func startProfileLoading() {

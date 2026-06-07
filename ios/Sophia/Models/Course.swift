@@ -42,14 +42,31 @@ nonisolated enum Subject: String, Codable, CaseIterable, Sendable {
     }
 
     var shortName: String {
+        localizedShortName(language: AppLanguage.currentPersisted())
+    }
+
+    /// Stable key persisted in UserDefaults (language-independent).
+    var storageKey: String {
         switch self {
-        case .histoire: "Histoire"
-        case .sciences: "Sciences"
-        case .litterature: "Littérature"
-        case .art: "Art"
-        case .mythologie: "Mythologie"
-        case .comprendreLeMonde: "Monde actuel"
+        case .histoire: "histoire"
+        case .sciences: "sciences"
+        case .litterature: "litterature"
+        case .art: "art"
+        case .mythologie: "mythologie"
+        case .comprendreLeMonde: "comprendreLeMonde"
         }
+    }
+
+    static func from(storageKey key: String) -> Subject? {
+        allCases.first { $0.storageKey == key }
+    }
+
+    func localizedName(language: AppLanguage) -> String {
+        AppLocalizable.string("subject.\(storageKey)", language: language)
+    }
+
+    func localizedShortName(language: AppLanguage) -> String {
+        AppLocalizable.string("subject.\(storageKey).short", language: language)
     }
 }
 
