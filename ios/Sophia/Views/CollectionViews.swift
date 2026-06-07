@@ -419,11 +419,11 @@ struct CollectionCoverView: View {
                 Image(uiImage: image)
                     .resizable()
                     .scaledToFill()
-                    .clipped()
             } else {
                 fallbackCover
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .clipped()
     }
 
