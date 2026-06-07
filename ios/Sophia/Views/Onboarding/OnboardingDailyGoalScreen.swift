@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct OnboardingDailyGoalScreen: View {
+    @Environment(LanguageManager.self) private var languageManager
     @Bindable var viewModel: OnboardingViewModel
     let onNext: () -> Void
     @State private var appeared: Bool = true
@@ -11,14 +12,14 @@ struct OnboardingDailyGoalScreen: View {
             Spacer().frame(height: 48)
 
                 VStack(spacing: 10) {
-                    Text("Chaque jour, tu veux apprendre...")
+                    Text(languageManager.text("onboarding.dailyGoal.title"))
                         .font(.system(size: 30, weight: .heavy, design: .rounded))
                         .foregroundStyle(BrutalPalette.ink)
                         .multilineTextAlignment(.center)
                         .opacity(appeared ? 1 : 0)
                         .offset(y: appeared ? 0 : 14)
 
-                    Text("Tu pourras modifier ton objectif plus tard.")
+                    Text(languageManager.text("onboarding.dailyGoal.subtitle"))
                         .font(.system(.subheadline, design: .rounded, weight: .semibold))
                         .foregroundStyle(BrutalPalette.ink.opacity(0.58))
                         .multilineTextAlignment(.center)
@@ -53,7 +54,10 @@ struct OnboardingDailyGoalScreen: View {
                         }
                     }
 
-                    Text("\(viewModel.dailyLearningGoalLabel) par jour !")
+                    Text(String(
+                        format: languageManager.text("onboarding.dailyGoal.perDay"),
+                        "\(viewModel.dailyLearningGoal) \(viewModel.dailyLearningGoalLabel(language: languageManager.current))"
+                    ))
                         .font(.system(.title3, design: .rounded, weight: .heavy))
                         .foregroundStyle(BrutalPalette.ink)
                         .padding(.horizontal, 18)
@@ -67,7 +71,7 @@ struct OnboardingDailyGoalScreen: View {
 
                 Spacer()
 
-                OnboardingPrimaryButton(title: "C'est parti !", action: onNext)
+                OnboardingPrimaryButton(title: languageManager.text("common.letsGo"), action: onNext)
                     .opacity(appeared ? 1 : 0)
         }
         .onboardingFullBleedBackground(BrutalPalette.cream)
@@ -93,6 +97,7 @@ struct OnboardingDailyGoalScreen: View {
 }
 
 private struct GoalStepperButton: View {
+    @Environment(LanguageManager.self) private var languageManager
     let symbol: String
     let isEnabled: Bool
     let action: () -> Void
@@ -109,6 +114,8 @@ private struct GoalStepperButton: View {
         }
         .disabled(!isEnabled)
         .buttonStyle(.plain)
-        .accessibilityLabel(symbol == "plus" ? "Augmenter l'objectif" : "Réduire l'objectif")
+        .accessibilityLabel(symbol == "plus"
+            ? languageManager.text("common.increaseGoal")
+            : languageManager.text("common.decreaseGoal"))
     }
 }

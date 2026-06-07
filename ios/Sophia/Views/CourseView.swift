@@ -273,6 +273,7 @@ struct CourseView: View {
                 RichContentView(
                     content: lesson.content,
                     accent: course.subject.color,
+                    courseId: course.id,
                     courseTitle: course.title
                 )
             }

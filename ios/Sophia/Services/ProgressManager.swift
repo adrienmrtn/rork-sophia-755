@@ -67,6 +67,24 @@ nonisolated enum GlobalRank: String, Codable, CaseIterable, Sendable {
         case .legende: Color(red: 1.0, green: 0.84, blue: 0.35)
         }
     }
+
+    var storageKey: String {
+        switch self {
+        case .curieux: "curieux"
+        case .erudit: "erudit"
+        case .savant: "savant"
+        case .maitre: "maitre"
+        case .legende: "legende"
+        }
+    }
+
+    func localizedName(language: AppLanguage) -> String {
+        AppLocalizable.string("globalRank.\(storageKey)", language: language)
+    }
+
+    var displayName: String {
+        localizedName(language: AppLanguage.currentPersisted())
+    }
 }
 
 nonisolated enum GlobalXPReason: Sendable {
@@ -343,7 +361,7 @@ class ProgressManager {
 
     /// Number of completed courses for a given subject. Used for the subject level (1–5).
     func completedCount(for subject: Subject) -> Int {
-        let coursesInSubject = Set(CourseData.allCourses.filter { $0.subject == subject }.map(\.id))
+        let coursesInSubject = Set(ContentCatalog.activeCourses.filter { $0.subject == subject }.map(\.id))
         return progress.courseProgress.filter { id, cp in
             cp.isCompleted && coursesInSubject.contains(id)
         }.count
@@ -369,7 +387,7 @@ class ProgressManager {
     }
 
     func collectionProgressEvents(forNewlyCompletedCourseId courseId: String) -> [CollectionProgressEvent] {
-        CollectionData.allCollections.compactMap { collection in
+        ContentCatalog.activeCollections.compactMap { collection in
             guard collection.courseIds.contains(courseId) else { return nil }
             let newCount = completedCount(for: collection)
             let previousCount = max(0, newCount - 1)
@@ -385,7 +403,7 @@ class ProgressManager {
 
     var quizStatsSummary: QuizStatsSummary {
         let quizCourseIds = Set(progress.completedQuizCourseIds)
-        let quizCourses = CourseData.allCourses.filter { quizCourseIds.contains($0.id) && !$0.quiz.isEmpty }
+        let quizCourses = ContentCatalog.activeCourses.filter { quizCourseIds.contains($0.id) && !$0.quiz.isEmpty }
         let correct = quizCourses.reduce(0) { partial, course in
             partial + (progress.courseProgress[course.id]?.bestQuizScore ?? 0)
         }
@@ -405,12 +423,12 @@ class ProgressManager {
     }
 
     var unlockedCards: [CollectibleCard] {
-        CardData.allCards.filter { isCardUnlocked($0) }
+        ContentCatalog.activeCards.filter { isCardUnlocked($0) }
     }
 
     var recentlyUnlockedCards: [CollectibleCard] {
         let explicit = progress.unlockedCardIds.reversed().compactMap { cardId in
-            CardData.allCards.first { $0.id == cardId }
+            ContentCatalog.activeCards.first { $0.id == cardId }
         }
         if !explicit.isEmpty { return Array(explicit.prefix(6)) }
         return Array(unlockedCards.prefix(6))
@@ -418,7 +436,7 @@ class ProgressManager {
 
     func cardUnlockCandidates(forCompletingCourseId courseId: String) -> [CollectibleCard] {
         guard progress.courseProgress[courseId]?.isCompleted != true else { return [] }
-        return (CardData.cardsByCourseId[courseId] ?? []).filter { card in
+        return (ContentCatalog.activeCardsByCourseId[courseId] ?? []).filter { card in
             !isCardUnlocked(card)
         }
     }
@@ -440,7 +458,7 @@ class ProgressManager {
         }
         let sorted = entries.sorted { $0.2 > $1.2 }
         return sorted.compactMap { id, cp, date in
-            guard let course = CourseData.allCourses.first(where: { $0.id == id }) else { return nil }
+            guard let course = ContentCatalog.activeCourses.first(where: { $0.id == id }) else { return nil }
             return (course, cp.bestQuizScore, course.quiz.count, date)
         }
     }
@@ -522,7 +540,7 @@ class ProgressManager {
     }
 
     var favoriteCourses: [Course] {
-        CourseData.allCourses.filter { progress.favoriteCourseIds.contains($0.id) }
+        ContentCatalog.activeCourses.filter { progress.favoriteCourseIds.contains($0.id) }
     }
 
     private func updateStreak() {

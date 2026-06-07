@@ -21,7 +21,7 @@ struct FloatingCardsBackground: View {
         GeometryReader { geo in
             ForEach(Array(cards.enumerated()), id: \.offset) { i, card in
                 FloatingCardItem(
-                    title: card.title,
+                    title: ContentCatalog.course(withId: card.courseId)?.title ?? card.title,
                     courseId: card.courseId,
                     rotation: card.rotation,
                     position: CGPoint(

@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct OnboardingProjectionScreen: View {
+    @Environment(LanguageManager.self) private var languageManager
     @Bindable var viewModel: OnboardingViewModel
     let onNext: () -> Void
 
@@ -23,16 +24,16 @@ struct OnboardingProjectionScreen: View {
                 Spacer(minLength: 0)
 
                 VStack(alignment: .leading, spacing: 2) {
-                    Text("Petite habitude,")
+                    Text(languageManager.text("onboarding.projection.line1"))
                         .font(lineFont)
                         .foregroundStyle(ink)
 
-                    Text("résultats incroyables.")
+                    Text(languageManager.text("onboarding.projection.line2"))
                         .font(lineFontBold)
                         .foregroundStyle(ink)
 
                     HStack(alignment: .firstTextBaseline, spacing: 10) {
-                        Text("C'est")
+                        Text(languageManager.text("onboarding.projection.its"))
                             .font(lineFont)
                             .foregroundStyle(ink)
 
@@ -45,12 +46,12 @@ struct OnboardingProjectionScreen: View {
                     }
                     .padding(.top, 4)
 
-                    Text("nouvelles choses que tu sauras")
+                    Text(languageManager.text("onboarding.projection.newThings"))
                         .font(lineFont)
                         .foregroundStyle(ink)
                         .padding(.top, 2)
 
-                    Text("d'ici un an.")
+                    Text(languageManager.text("onboarding.projection.inOneYear"))
                         .font(lineFontBold)
                         .foregroundStyle(ink)
                 }
@@ -60,7 +61,7 @@ struct OnboardingProjectionScreen: View {
 
                 Spacer(minLength: 0)
 
-                OnboardingPrimaryButton(title: "C'est parti !", action: onNext)
+                OnboardingPrimaryButton(title: languageManager.text("common.letsGo"), action: onNext)
                     .opacity(showCTA ? 1 : 0)
                     .offset(y: showCTA ? 0 : 24)
                     .zIndex(1)

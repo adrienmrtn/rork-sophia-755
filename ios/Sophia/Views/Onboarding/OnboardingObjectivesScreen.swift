@@ -1,16 +1,17 @@
 import SwiftUI
 
 struct OnboardingObjectivesScreen: View {
+    @Environment(LanguageManager.self) private var languageManager
     @Bindable var viewModel: OnboardingViewModel
     let onNext: () -> Void
     @State private var appeared: Bool = true
 
-    private let objectives: [(icon: String, label: String)] = [
-        ("sparkles", "Être plus curieux"),
-        ("lightbulb.fill", "Apprendre de nouvelles choses"),
-        ("star.fill", "Impressionner tes proches"),
-        ("bubble.left.and.bubble.right.fill", "Renforcer ton aisance en société"),
-        ("arrow.down.circle.fill", "Réduire ton temps à scroller"),
+    private let objectives: [(icon: String, key: String)] = [
+        ("sparkles", "curious"),
+        ("lightbulb.fill", "learnNew"),
+        ("star.fill", "impress"),
+        ("bubble.left.and.bubble.right.fill", "social"),
+        ("arrow.down.circle.fill", "reduceScroll"),
     ]
 
     var body: some View {
@@ -18,8 +19,8 @@ struct OnboardingObjectivesScreen: View {
             Spacer().frame(height: 32)
 
                 OnboardingHeader(
-                    title: "Ton objectif\navec Sophia ?",
-                    subtitle: "Sélectionne un ou plusieurs objectifs.",
+                    title: languageManager.text("onboarding.objectives.title"),
+                    subtitle: languageManager.text("onboarding.objectives.subtitle"),
                     appeared: appeared
                 )
 
@@ -28,16 +29,16 @@ struct OnboardingObjectivesScreen: View {
                 ScrollView {
                     VStack(spacing: 10) {
                         ForEach(Array(objectives.enumerated()), id: \.offset) { i, obj in
-                            let isSelected = viewModel.objectives.contains(obj.label)
+                            let isSelected = viewModel.objectives.contains(obj.key)
                             BrutalSelectableRow(
                                 icon: obj.icon,
-                                label: obj.label,
+                                label: OnboardingViewModel.objectiveLabel(obj.key, language: languageManager.current),
                                 isSelected: isSelected,
                                 accentColor: OnboardingPastels.at(i)
                             ) {
                                 OnboardingHaptics.selection()
                                 withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
-                                    viewModel.toggleObjective(obj.label)
+                                    viewModel.toggleObjective(obj.key)
                                 }
                             }
                             .opacity(appeared ? 1 : 0)
@@ -50,7 +51,7 @@ struct OnboardingObjectivesScreen: View {
                 }
                 .scrollIndicators(.hidden)
 
-                OnboardingPrimaryButton(title: "Suivant", isEnabled: viewModel.canProceed, action: onNext)
+                OnboardingPrimaryButton(title: languageManager.text("common.next"), isEnabled: viewModel.canProceed, action: onNext)
                     .opacity(appeared ? 1 : 0)
         }
         .onboardingFullBleedBackground(BrutalPalette.cream)

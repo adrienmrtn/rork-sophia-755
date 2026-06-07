@@ -25,7 +25,7 @@ struct OnboardingInterestsScreen: View {
             Spacer().frame(height: 44)
 
                 VStack(spacing: 8) {
-                    Text("Quels sujets\nt'intéressent ?")
+                    Text(languageManager.text("onboarding.interests.title"))
                         .font(.system(size: 30, weight: .heavy, design: .rounded))
                         .lineSpacing(-2)
                         .foregroundStyle(BrutalPalette.ink)
@@ -33,7 +33,7 @@ struct OnboardingInterestsScreen: View {
                         .opacity(appeared ? 1 : 0)
                         .offset(y: appeared ? 0 : 14)
 
-                    Text("Sélectionne au moins un sujet.")
+                    Text(languageManager.text("onboarding.interests.subtitle"))
                         .font(.system(size: 14, weight: .semibold, design: .rounded))
                         .foregroundStyle(BrutalPalette.ink.opacity(0.58))
                         .multilineTextAlignment(.center)
@@ -71,7 +71,7 @@ struct OnboardingInterestsScreen: View {
                 }
                 .scrollIndicators(.hidden)
 
-                OnboardingPrimaryButton(title: "Suivant", isEnabled: viewModel.canProceed, action: onNext)
+                OnboardingPrimaryButton(title: languageManager.text("common.next"), isEnabled: viewModel.canProceed, action: onNext)
                     .opacity(appeared ? 1 : 0)
         }
         .onboardingFullBleedBackground(BrutalPalette.cream)

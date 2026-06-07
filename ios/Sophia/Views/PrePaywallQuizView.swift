@@ -3,6 +3,7 @@ import AVKit
 import RevenueCatUI
 
 struct PrePaywallQuizView: View {
+    @Environment(LanguageManager.self) private var languageManager
     let onContinue: () -> Void
     @State private var appeared: Bool = false
     @State private var shimmerOffset: CGFloat = -200
@@ -53,14 +54,14 @@ struct PrePaywallQuizView: View {
                 Spacer()
 
                 VStack(spacing: 12) {
-                    Text("Débloquez gratuitement\nles quiz")
+                    Text(languageManager.text("prepaywall.quiz.title"))
                         .font(.system(.title2, design: .rounded, weight: .bold))
                         .foregroundStyle(.white)
                         .multilineTextAlignment(.center)
                         .opacity(appeared ? 1 : 0)
                         .offset(y: appeared ? 0 : 10)
 
-                    Text("Testez vos connaissances et\nprogressez chaque jour")
+                    Text(languageManager.text("prepaywall.quiz.subtitle"))
                         .font(.system(.body, design: .rounded))
                         .foregroundStyle(.white.opacity(0.6))
                         .multilineTextAlignment(.center)
@@ -78,7 +79,7 @@ struct PrePaywallQuizView: View {
                         HStack(spacing: 10) {
                             Image(systemName: "lock.open.fill")
                                 .font(.subheadline.weight(.semibold))
-                            Text("Continuer")
+                            Text(languageManager.text("common.continue"))
                                 .font(.system(.headline, design: .rounded, weight: .bold))
                         }
                         .foregroundStyle(.white)

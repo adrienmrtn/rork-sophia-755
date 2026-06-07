@@ -20,41 +20,39 @@ class OnboardingViewModel {
         dailyLearningGoal * 365
     }
 
-    var dailyLearningGoalLabel: String {
-        dailyLearningGoal == 1 ? "apprentissage" : "apprentissages"
+    func dailyLearningGoalLabel(language: AppLanguage) -> String {
+        let key = dailyLearningGoal == 1 ? "onboarding.dailyGoal.singular" : "onboarding.dailyGoal.plural"
+        return AppLocalizable.string(key, language: language)
     }
 
-    var phoneHoursPerDayLabel: String {
+    func phoneHoursPerDayLabel(language: AppLanguage) -> String {
         guard let selection = phoneTimeSelection else { return "" }
-        switch selection {
-        case 0: return "1 heure"
-        case 1: return "2 heures"
-        case 2: return "3 heures"
-        case 3: return "5 heures"
-        default: return ""
-        }
+        let keys = [
+            "onboarding.phone.hours.1",
+            "onboarding.phone.hours.2",
+            "onboarding.phone.hours.3",
+            "onboarding.phone.hours.5",
+        ]
+        guard selection >= 0, selection < keys.count else { return "" }
+        return AppLocalizable.string(keys[selection], language: language)
     }
 
-    var wastedTimePerYear: String {
+    func wastedTimeDays(language: AppLanguage) -> String {
         guard let selection = phoneTimeSelection else { return "" }
-        switch selection {
-        case 0: return "182 heures"
-        case 1: return "547 heures"
-        case 2: return "1 095 heures"
-        case 3: return "2 190 heures"
-        default: return ""
-        }
+        let keys = [
+            "onboarding.wasted.days.7",
+            "onboarding.wasted.days.23",
+            "onboarding.wasted.days.45",
+            "onboarding.wasted.days.91",
+        ]
+        guard selection >= 0, selection < keys.count else { return "" }
+        return AppLocalizable.string(keys[selection], language: language)
     }
 
-    var wastedTimeDays: String {
-        guard let selection = phoneTimeSelection else { return "" }
-        switch selection {
-        case 0: return "7 jours"
-        case 1: return "23 jours"
-        case 2: return "45 jours"
-        case 3: return "91 jours"
-        default: return ""
-        }
+    static let objectiveKeys = ["curious", "learnNew", "impress", "social", "reduceScroll"]
+
+    static func objectiveLabel(_ key: String, language: AppLanguage) -> String {
+        AppLocalizable.string("onboarding.objective.\(key)", language: language)
     }
 
     var canProceed: Bool {

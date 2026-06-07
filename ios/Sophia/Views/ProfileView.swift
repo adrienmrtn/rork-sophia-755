@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @Environment(LanguageManager.self) private var languageManager
     let progressManager: ProgressManager
     let store: StoreViewModel
     @Binding var selectedCourse: Course?
@@ -129,7 +130,7 @@ struct ProfileView: View {
 
     private var titleBar: some View {
         HStack(alignment: .center) {
-            Text("Profil")
+            Text(languageManager.text("profile.title"))
                 .font(.system(.largeTitle, design: .rounded, weight: .heavy))
                 .foregroundStyle(ink)
 
@@ -170,7 +171,7 @@ struct ProfileView: View {
                             .font(.system(size: 64, weight: .heavy, design: .rounded))
                             .foregroundStyle(ink)
                             .contentTransition(.numericText())
-                        Text(streak <= 1 ? "JOUR" : "JOURS")
+                        Text(streak <= 1 ? languageManager.text("common.streak.day") : languageManager.text("common.streak.days"))
                             .font(.system(.headline, design: .rounded, weight: .heavy))
                             .foregroundStyle(ink)
                             .tracking(1)
@@ -196,10 +197,10 @@ struct ProfileView: View {
 
     private func streakSubtitle(_ s: Int) -> String {
         switch s {
-        case 0: "Lis un cours pour démarrer !"
-        case 1...2: "Tu as commencé, continue !"
-        case 3...6: "Belle régularité 👏"
-        default: "Tu es en feu 🔥"
+        case 0: languageManager.text("profile.streak.start")
+        case 1...2: languageManager.text("profile.streak.beginning")
+        case 3...6: languageManager.text("profile.streak.good")
+        default: languageManager.text("profile.streak.great")
         }
     }
 
@@ -279,10 +280,10 @@ struct ProfileView: View {
                 .frame(width: 40, height: 40)
 
                 VStack(alignment: .leading, spacing: 2) {
-                    Text("Mes favoris")
+                    Text(languageManager.text("profile.favorites"))
                         .font(.system(.headline, design: .rounded, weight: .heavy))
                         .foregroundStyle(ink)
-                    Text("\(progressManager.favoriteCourses.count) cours sauvegardés")
+                    Text(String(format: languageManager.text("profile.favorites.count"), progressManager.favoriteCourses.count))
                         .font(.system(.caption, design: .rounded, weight: .semibold))
                         .foregroundStyle(ink.opacity(0.55))
                 }
@@ -303,7 +304,7 @@ struct ProfileView: View {
     private var quizSection: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack {
-                Text("MES QUIZ RÉCENTS")
+                Text(languageManager.text("profile.quiz.recent"))
                     .font(.system(.caption, design: .rounded, weight: .heavy))
                     .foregroundStyle(ink.opacity(0.55))
                     .tracking(1.2)
@@ -313,7 +314,7 @@ struct ProfileView: View {
                         hapticTrigger += 1
                         showAllQuizzes = true
                     } label: {
-                        Text("Voir plus →")
+                        Text(languageManager.text("common.seeMoreArrow"))
                             .font(.system(.subheadline, design: .rounded, weight: .heavy))
                             .foregroundStyle(ink)
                     }
@@ -364,10 +365,10 @@ struct ProfileView: View {
                 .frame(width: 40, height: 40)
 
                 VStack(alignment: .leading, spacing: 2) {
-                    Text("Quiz verrouillés")
+                    Text(languageManager.text("profile.quiz.locked"))
                         .font(.system(.headline, design: .rounded, weight: .heavy))
                         .foregroundStyle(ink)
-                    Text("Disponibles avec l'essai gratuit — 3 jours offerts")
+                    Text(languageManager.text("profile.quiz.lockedSubtitle"))
                         .font(.system(.caption, design: .rounded, weight: .semibold))
                         .foregroundStyle(ink.opacity(0.6))
                         .fixedSize(horizontal: false, vertical: true)
@@ -380,7 +381,7 @@ struct ProfileView: View {
                 onShowPaywall?()
             } label: {
                 HStack(spacing: 8) {
-                    Text("Débloquer mes quiz")
+                    Text(languageManager.text("profile.quiz.unlock"))
                         .font(.system(.subheadline, design: .rounded, weight: .heavy))
                     Image(systemName: "arrow.right")
                         .font(.system(size: 13, weight: .heavy))
@@ -409,10 +410,10 @@ struct ProfileView: View {
             .frame(width: 40, height: 40)
 
             VStack(alignment: .leading, spacing: 2) {
-                Text("Pas encore de quiz")
+                Text(languageManager.text("profile.quiz.emptyTitle"))
                     .font(.system(.headline, design: .rounded, weight: .heavy))
                     .foregroundStyle(ink)
-                Text("Termine un cours pour passer ton premier quiz.")
+                Text(languageManager.text("profile.quiz.emptySubtitle"))
                     .font(.system(.caption, design: .rounded, weight: .semibold))
                     .foregroundStyle(ink.opacity(0.55))
                     .fixedSize(horizontal: false, vertical: true)
@@ -428,7 +429,7 @@ struct ProfileView: View {
     private var progressionSection: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack {
-                Text("PROGRESSION PAR THÈME")
+                Text(languageManager.text("profile.progress.bySubject"))
                     .font(.system(.caption, design: .rounded, weight: .heavy))
                     .foregroundStyle(ink.opacity(0.55))
                     .tracking(1.2)
@@ -457,6 +458,7 @@ struct ProfileView: View {
 // MARK: - Subject progress card
 
 private struct SubjectProgressCard: View {
+    @Environment(LanguageManager.self) private var languageManager
     let subject: Subject
     let xp: Int
     let unlocked: Bool
@@ -489,14 +491,14 @@ private struct SubjectProgressCard: View {
                 SubjectBadgeView(subject: subject, unlocked: unlocked, emojiSize: 36, cornerRadius: 14)
                     .frame(width: 56, height: 56)
 
-                Text(subject.shortName)
+                Text(subject.localizedShortName(language: languageManager.current))
                     .font(.system(.subheadline, design: .rounded, weight: .heavy))
                     .foregroundStyle(unlocked ? ink : ink.opacity(0.45))
                     .lineLimit(2)
                     .minimumScaleFactor(0.85)
 
                 if unlocked {
-                    Text("NIV. \(currentTier.level)")
+                    Text(String(format: languageManager.text("common.levelShort"), currentTier.level))
                         .font(.system(.caption2, design: .rounded, weight: .heavy))
                         .foregroundStyle(.white)
                         .tracking(0.6)
@@ -522,7 +524,7 @@ private struct SubjectProgressCard: View {
                         .foregroundStyle(ink.opacity(0.55))
                         .lineLimit(2)
                 } else {
-                    Text("Débloque avec l'essai gratuit")
+                    Text(languageManager.text("profile.unlock.trial"))
                         .font(.system(.caption2, design: .rounded, weight: .heavy))
                         .foregroundStyle(ink.opacity(0.45))
                         .lineLimit(2)
@@ -560,15 +562,18 @@ private struct SubjectProgressCard: View {
 
     private var progressLabel: String {
         let tier = currentTier
-        if tier.level == 5 { return "\(xp) XP · niveau max" }
+        if tier.level == 5 {
+            return String(format: languageManager.text("profile.progress.max"), xp)
+        }
         let toNext = max(0, tier.upper - xp)
-        return "\(xp) XP · \(toNext) avant niv. \(tier.level + 1)"
+        return String(format: languageManager.text("profile.progress.toNext"), xp, toNext, tier.level + 1)
     }
 }
 
 // MARK: - Quiz row
 
 private struct QuizRowView: View {
+    @Environment(LanguageManager.self) private var languageManager
     let course: Course
     let score: Int
     let total: Int
@@ -610,7 +615,7 @@ private struct QuizRowView: View {
                 HStack(spacing: 4) {
                     Image(systemName: "arrow.clockwise")
                         .font(.system(size: 11, weight: .heavy))
-                    Text("Refaire")
+                    Text(languageManager.text("profile.quiz.retry"))
                         .font(.system(.caption, design: .rounded, weight: .heavy))
                 }
                 .foregroundStyle(ink)
@@ -629,6 +634,7 @@ private struct QuizRowView: View {
 // MARK: - All quizzes screen
 
 struct AllQuizzesView: View {
+    @Environment(LanguageManager.self) private var languageManager
     let progressManager: ProgressManager
     @Binding var selectedCourse: Course?
     var onDismiss: () -> Void
@@ -643,7 +649,7 @@ struct AllQuizzesView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
                     HStack {
-                        Text("Tous mes quiz")
+                        Text(languageManager.text("profile.quiz.all"))
                             .font(.system(.largeTitle, design: .rounded, weight: .heavy))
                             .foregroundStyle(ink)
                         Spacer()
@@ -663,7 +669,7 @@ struct AllQuizzesView: View {
                     Group {
 
                     if progressManager.recentQuizzes.isEmpty {
-                        Text("Aucun quiz pour le moment.")
+                        Text(languageManager.text("profile.quiz.none"))
                             .font(.system(.subheadline, design: .rounded, weight: .heavy))
                             .foregroundStyle(ink.opacity(0.55))
                             .padding(.horizontal, 20)

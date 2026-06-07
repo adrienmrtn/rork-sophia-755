@@ -8,6 +8,7 @@ struct SubjectCoursesView: View {
     var unlocked: Bool = true
     var onShowPaywall: ((SophiaPaywallContext) -> Void)? = nil
     @Binding var selectedCourse: Course?
+    @Environment(LanguageManager.self) private var languageManager
     @Environment(\.dismiss) private var dismiss
     @State private var hapticTrigger: Int = 0
 
@@ -75,7 +76,7 @@ struct SubjectCoursesView: View {
                 .padding(.bottom, 40)
             }
         }
-        .navigationTitle(subject.rawValue)
+        .navigationTitle(subject.localizedName(language: languageManager.current))
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(cream, for: .navigationBar)
         .toolbarBackground(.visible, for: .navigationBar)
@@ -100,10 +101,13 @@ struct SubjectCoursesView: View {
                 }
 
                 VStack(alignment: .leading, spacing: 2) {
-                    Text("\(courses.count) cours")
+                    Text(String(format: languageManager.text("subject.courses.count"), courses.count))
                         .font(.system(.title3, design: .rounded, weight: .heavy))
                         .foregroundStyle(ink)
-                    Text("\(completedCount) termine\(completedCount > 1 ? "s" : "")")
+                    Text(String(
+                        format: languageManager.text(completedCount > 1 ? "subject.completed.plural" : "subject.completed.singular"),
+                        completedCount
+                    ))
                         .font(.system(.subheadline, design: .rounded, weight: .semibold))
                         .foregroundStyle(ink.opacity(0.55))
                 }

@@ -3,6 +3,7 @@ import SwiftUI
 import RevenueCat
 
 struct OnboardingNativePaywallView: View {
+    @Environment(LanguageManager.self) private var languageManager
     enum Plan: String, CaseIterable, Identifiable {
         case yearly
         case monthly
@@ -31,7 +32,7 @@ struct OnboardingNativePaywallView: View {
         var layoutIndex = 0
 
         for subject in lockedSubjects {
-            let candidates = CourseData.allCourses.filter {
+            let candidates = ContentCatalog.activeCourses.filter {
                 $0.subject == subject && CourseImageMap.imageName(for: $0.id) != nil
             }
             for course in candidates.prefix(2) where layoutIndex < layouts.count {
@@ -79,11 +80,11 @@ struct OnboardingNativePaywallView: View {
                 }
 
                 VStack(spacing: 8) {
-                    Text("Annule à tout moment, sans frais.")
+                    Text(languageManager.text("paywall.cancelAnytime"))
                         .font(.system(.caption, design: .rounded, weight: .semibold))
                         .foregroundStyle(BrutalPalette.ink.opacity(0.5))
 
-                    OnboardingPrimaryButton(title: store.isPurchasing ? "Traitement…" : "Continuer") {
+                    OnboardingPrimaryButton(title: store.isPurchasing ? languageManager.text("common.processing") : languageManager.text("common.continue")) {
                         guard !store.isPurchasing else { return }
                         OnboardingHaptics.primaryCTA()
                         showReminderSheet = true
@@ -121,7 +122,7 @@ struct OnboardingNativePaywallView: View {
     // MARK: - Header
 
     private var header: some View {
-        Text("Deviens la personne\nla plus intéressante\nde la pièce.")
+        Text(languageManager.text("paywall.header"))
             .font(.system(size: 34, weight: .heavy, design: .rounded))
             .foregroundStyle(BrutalPalette.ink)
             .fixedSize(horizontal: false, vertical: true)
@@ -133,18 +134,18 @@ struct OnboardingNativePaywallView: View {
     private var subjectsBlock: some View {
         VStack(alignment: .leading, spacing: 18) {
             VStack(alignment: .leading, spacing: 10) {
-                Text("Tes 3 matières gratuites")
+                Text(languageManager.text("paywall.freeSubjects"))
                     .font(.system(.headline, design: .rounded, weight: .heavy))
                     .foregroundStyle(BrutalPalette.ink)
                 FlowLayout(spacing: 10) {
-                    ForEach(Array(unlockedSubjects).sorted(by: { $0.shortName < $1.shortName }), id: \.self) { subject in
+                    ForEach(Array(unlockedSubjects).sorted(by: { $0.localizedShortName(language: languageManager.current) < $1.localizedShortName(language: languageManager.current) }), id: \.self) { subject in
                         subjectPill(subject, locked: false)
                     }
                 }
             }
 
             VStack(alignment: .leading, spacing: 10) {
-                Text("3 matières à débloquer")
+                Text(languageManager.text("paywall.lockedSubjects"))
                     .font(.system(.headline, design: .rounded, weight: .heavy))
                     .foregroundStyle(BrutalPalette.ink.opacity(0.55))
                 FlowLayout(spacing: 10) {
@@ -162,7 +163,7 @@ struct OnboardingNativePaywallView: View {
     private func subjectPill(_ subject: Subject, locked: Bool) -> some View {
         HStack(spacing: 8) {
             subjectIconBadge(subject: subject, locked: locked)
-            Text(subject.shortName)
+            Text(subject.localizedShortName(language: languageManager.current))
                 .font(.system(.caption, design: .rounded, weight: .heavy))
                 .lineLimit(1)
         }
@@ -195,10 +196,10 @@ struct OnboardingNativePaywallView: View {
     private var lockedCoursesTeaserBlock: some View {
         VStack(alignment: .leading, spacing: 14) {
             VStack(alignment: .leading, spacing: 4) {
-                Text("Un aperçu de ce qui t'attend")
+                Text(languageManager.text("paywall.teaserTitle"))
                     .font(.system(.headline, design: .rounded, weight: .heavy))
                     .foregroundStyle(BrutalPalette.ink)
-                Text("Des centaines de cours premium à débloquer")
+                Text(languageManager.text("paywall.teaserSubtitle"))
                     .font(.system(.caption, design: .rounded, weight: .semibold))
                     .foregroundStyle(BrutalPalette.ink.opacity(0.5))
             }
@@ -269,7 +270,7 @@ struct OnboardingNativePaywallView: View {
                 )
                 .frame(height: layout.imageHeight * 0.55)
 
-                Text(teaser.course.subject.shortName.uppercased())
+                Text(teaser.course.subject.localizedShortName(language: languageManager.current).uppercased())
                     .font(.system(size: 9, weight: .heavy, design: .rounded))
                     .tracking(0.6)
                     .foregroundStyle(.white.opacity(0.9))
@@ -306,15 +307,15 @@ struct OnboardingNativePaywallView: View {
     private var featureComparison: some View {
         VStack(spacing: 0) {
             HStack {
-                Text("Fonctionnalité")
+                Text(languageManager.text("paywall.featureColumn"))
                     .font(.system(.caption, design: .rounded, weight: .heavy))
                     .foregroundStyle(BrutalPalette.ink.opacity(0.5))
                 Spacer()
-                Text("Gratuit")
+                Text(languageManager.text("paywall.freeColumn"))
                     .font(.system(.caption, design: .rounded, weight: .heavy))
                     .foregroundStyle(BrutalPalette.ink.opacity(0.5))
                     .frame(width: 56)
-                Text("Premium")
+                Text(languageManager.text("paywall.premiumColumn"))
                     .font(.system(.caption, design: .rounded, weight: .heavy))
                     .foregroundStyle(BrutalPalette.ink)
                     .frame(width: 72)
@@ -324,11 +325,11 @@ struct OnboardingNativePaywallView: View {
 
             Divider().overlay(BrutalPalette.ink.opacity(0.15))
 
-            featureRow("3 matières", free: true, premium: true)
-            featureRow("Toutes les matières", free: false, premium: true)
-            featureRow("Cours illimités", free: false, premium: true)
-            featureRow("Mini Quiz", free: false, premium: true)
-            featureRow("Bibliothèque complète", free: false, premium: true)
+            featureRow(languageManager.text("paywall.feature.3subjects"), free: true, premium: true)
+            featureRow(languageManager.text("paywall.feature.allSubjects"), free: false, premium: true)
+            featureRow(languageManager.text("paywall.feature.unlimitedCourses"), free: false, premium: true)
+            featureRow(languageManager.text("paywall.feature.miniQuiz"), free: false, premium: true)
+            featureRow(languageManager.text("paywall.feature.fullLibrary"), free: false, premium: true)
         }
         .brutalOnboardingCard(depth: 3, corner: 18)
     }
@@ -371,21 +372,34 @@ struct OnboardingNativePaywallView: View {
 
     private func planCopy(for plan: Plan) -> (title: String, subtitle: String, price: String, period: String, badge: String?) {
         let isYearly = plan == .yearly
+        let lang = languageManager.current
         guard let pkg = package(for: plan) else {
             return (
-                isYearly ? "Annuel" : "Mensuel",
-                isYearly ? "3,33 € / mois" : "Sans engagement",
-                isYearly ? "39,99 €" : "9,99 €",
-                isYearly ? "/ an" : "/ mois",
-                isYearly ? "-58%" : nil
+                isYearly ? AppLocalizable.string("paywall.plan.yearly", language: lang) : AppLocalizable.string("paywall.plan.monthly", language: lang),
+                isYearly ? AppLocalizable.string("paywall.plan.fallback.yearlyMonthly", language: lang) : AppLocalizable.string("paywall.plan.monthlySubtitle", language: lang),
+                isYearly ? AppLocalizable.string("paywall.plan.fallback.yearlyPrice", language: lang) : AppLocalizable.string("paywall.plan.fallback.monthlyPrice", language: lang),
+                isYearly ? AppLocalizable.string("paywall.plan.perYear", language: lang) : AppLocalizable.string("paywall.plan.perMonth", language: lang),
+                isYearly ? AppLocalizable.string("paywall.plan.discount", language: lang) : nil
             )
         }
 
         let price = pkg.localizedPriceString
         if isYearly {
-            return ("Annuel", "Facturé annuellement", price, "/ an", "-58%")
+            return (
+                AppLocalizable.string("paywall.plan.yearly", language: lang),
+                AppLocalizable.string("paywall.plan.yearlySubtitle", language: lang),
+                price,
+                AppLocalizable.string("paywall.plan.perYear", language: lang),
+                AppLocalizable.string("paywall.plan.discount", language: lang)
+            )
         }
-        return ("Mensuel", "Sans engagement", price, "/ mois", nil)
+        return (
+            AppLocalizable.string("paywall.plan.monthly", language: lang),
+            AppLocalizable.string("paywall.plan.monthlySubtitle", language: lang),
+            price,
+            AppLocalizable.string("paywall.plan.perMonth", language: lang),
+            nil
+        )
     }
 
     @ViewBuilder
@@ -403,7 +417,7 @@ struct OnboardingNativePaywallView: View {
             }
         } label: {
             VStack(spacing: 0) {
-                Text("Essai gratuit 3 jours")
+                Text(languageManager.text("paywall.trialBadge"))
                     .font(.system(.caption, design: .rounded, weight: .heavy))
                     .foregroundStyle(BrutalPalette.ink)
                     .frame(maxWidth: .infinity)
@@ -475,7 +489,7 @@ struct OnboardingNativePaywallView: View {
             OnboardingHaptics.selection()
             onRestore()
         } label: {
-            Text("Restaurer · Conditions · Confidentialité")
+            Text(languageManager.text("paywall.restoreRow"))
                 .font(.system(.footnote, design: .rounded, weight: .semibold))
                 .foregroundStyle(BrutalPalette.ink.opacity(0.55))
         }
@@ -495,7 +509,7 @@ struct OnboardingNativePaywallView: View {
                 .clipShape(Circle())
                 .overlay { Circle().strokeBorder(BrutalPalette.ink, lineWidth: 2) }
         }
-        .accessibilityLabel("Fermer")
+        .accessibilityLabel(languageManager.text("common.close"))
     }
 }
 
@@ -524,19 +538,23 @@ private struct PaywallTeaserLayout: Equatable {
 // MARK: - Reviews carousel
 
 private struct PaywallReviewsCarousel: View {
+    @Environment(LanguageManager.self) private var languageManager
+
     private struct Review: Identifiable {
         let id = UUID()
         let quote: String
         let author: String
     }
 
-    private let reviews: [Review] = [
-        Review(quote: "Parfait dans les transports. J'apprends chaque jour sans effort.", author: "Marie, 28 ans"),
-        Review(quote: "Enfin une app qui me fait passer du scroll à la culture.", author: "Thomas, 34 ans"),
-        Review(quote: "Les cours sont courts, drôles, et je retiens vraiment.", author: "Inès, 22 ans"),
-        Review(quote: "Mes amis me demandent d'où je sors toutes ces anecdotes.", author: "Lucas, 31 ans"),
-        Review(quote: "L'onboarding personnalisé m'a convaincu dès la première minute.", author: "Sarah, 26 ans"),
-    ]
+    private var reviews: [Review] {
+        [
+            Review(quote: languageManager.text("paywall.review1.quote"), author: languageManager.text("paywall.review1.author")),
+            Review(quote: languageManager.text("paywall.review2.quote"), author: languageManager.text("paywall.review2.author")),
+            Review(quote: languageManager.text("paywall.review3.quote"), author: languageManager.text("paywall.review3.author")),
+            Review(quote: languageManager.text("paywall.review4.quote"), author: languageManager.text("paywall.review4.author")),
+            Review(quote: languageManager.text("paywall.review5.quote"), author: languageManager.text("paywall.review5.author")),
+        ]
+    }
 
     @State private var index: Int = 0
     private let timer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
@@ -586,20 +604,23 @@ private struct PaywallReviewsCarousel: View {
 // MARK: - Trial timeline sheet
 
 private struct TrialTimelineSheet: View {
+    @Environment(LanguageManager.self) private var languageManager
     let onContinue: () -> Void
 
-    private let steps: [(icon: String, title: String, subtitle: String, detail: String)] = [
-        ("lock.open.fill", "Aujourd'hui", "Aucun paiement", "Accès à toutes les fonctionnalités Premium."),
-        ("bell.fill", "Dans 2 jours", "On te prévient", "Notification 1 jour avant la fin de l'essai."),
-        ("star.fill", "Dans 3 jours", "Ton abonnement démarre", "Annule avant si tu ne veux pas continuer."),
-    ]
+    private var steps: [(icon: String, title: String, subtitle: String, detail: String)] {
+        [
+            ("lock.open.fill", languageManager.text("paywall.trial.today"), languageManager.text("paywall.trial.noPayment"), languageManager.text("paywall.trial.todayDetail")),
+            ("bell.fill", languageManager.text("paywall.trial.in2days"), languageManager.text("paywall.trial.reminder"), languageManager.text("paywall.trial.reminderDetail")),
+            ("star.fill", languageManager.text("paywall.trial.in3days"), languageManager.text("paywall.trial.starts"), languageManager.text("paywall.trial.startsDetail")),
+        ]
+    }
 
     private let iconColumnWidth: CGFloat = 42
     private let connectorHeight: CGFloat = 12
 
     var body: some View {
         VStack(spacing: 0) {
-            Text("Commence ton essai\ngratuit de 3 jours")
+            Text(languageManager.text("paywall.trialSheet.title"))
                 .font(.system(.title, design: .rounded, weight: .heavy))
                 .foregroundStyle(BrutalPalette.ink)
                 .multilineTextAlignment(.center)
@@ -626,7 +647,7 @@ private struct TrialTimelineSheet: View {
                 }
                 .fixedSize(horizontal: false, vertical: true)
 
-                Text("Annule à tout moment, sans frais.")
+                Text(languageManager.text("paywall.cancelAnytime"))
                     .font(.system(.caption, design: .rounded, weight: .semibold))
                     .foregroundStyle(BrutalPalette.ink.opacity(0.5))
                     .padding(.leading, iconColumnWidth + 14)
@@ -636,7 +657,7 @@ private struct TrialTimelineSheet: View {
 
             Spacer(minLength: 24)
 
-            OnboardingPrimaryButton(title: "Commencer l'essai gratuit", action: {
+            OnboardingPrimaryButton(title: languageManager.text("paywall.trialSheet.start"), action: {
                 OnboardingHaptics.primaryCTA()
                 onContinue()
             })

@@ -11,6 +11,7 @@ nonisolated enum CourseEndPhase: Sendable {
 // MARK: - Course Completed (full-screen celebration shown after the last slide in freemium)
 
 struct CourseCompletedView: View {
+    @Environment(LanguageManager.self) private var languageManager
     let course: Course
     let progressManager: ProgressManager
     /// XP for this subject BEFORE awarding the +10 course-completion bonus.
@@ -114,7 +115,7 @@ struct CourseCompletedView: View {
                 Spacer(minLength: 18)
 
                 VStack(spacing: 8) {
-                    Text("Apprentissage terminé !")
+                    Text(languageManager.text("course.completed"))
                         .font(.system(.largeTitle, design: .rounded, weight: .heavy))
                         .foregroundStyle(ink)
                         .multilineTextAlignment(.center)
@@ -331,7 +332,7 @@ struct CourseCompletedView: View {
                     .frame(width: 38, height: 38)
 
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(course.subject.shortName)
+                    Text(course.subject.localizedShortName(language: languageManager.current))
                         .font(.system(.headline, design: .rounded, weight: .heavy))
                         .foregroundStyle(ink)
                     HStack(spacing: 4) {
@@ -343,14 +344,14 @@ struct CourseCompletedView: View {
                             .foregroundStyle(ink.opacity(0.55))
                             .monospacedDigit()
                         if tierNow.level < 5 {
-                            Text("· \(xpToNext) avant niv. \(tierNow.level + 1)")
+                            Text(String(format: languageManager.text("common.xpBeforeNext"), xpToNext, tierNow.level + 1))
                                 .font(.system(.caption, design: .rounded, weight: .heavy))
                                 .foregroundStyle(ink.opacity(0.4))
                         }
                     }
                 }
                 Spacer()
-                Text("NIV. \(displayedLevel)")
+                Text(String(format: languageManager.text("common.levelShort"), displayedLevel))
                     .font(.system(.caption2, design: .rounded, weight: .heavy))
                     .foregroundStyle(.white)
                     .tracking(0.6)
@@ -392,7 +393,7 @@ struct CourseCompletedView: View {
                 Image(systemName: "star.fill")
                     .font(.system(size: 11, weight: .heavy))
                     .foregroundStyle(ink)
-                Text("+\(earnedXP) XP gagnés")
+                Text(String(format: languageManager.text("common.xpEarned"), earnedXP))
                     .font(.system(.caption, design: .rounded, weight: .heavy))
                     .foregroundStyle(ink)
             }
@@ -412,7 +413,7 @@ struct CourseCompletedView: View {
             Image(systemName: "checkmark.seal.fill")
                 .font(.system(size: 14, weight: .heavy))
                 .foregroundStyle(ink)
-            Text("Tu as terminé ton cours gratuit du jour")
+            Text(languageManager.text("course.dailyFreeDone"))
                 .font(.system(.subheadline, design: .rounded, weight: .heavy))
                 .foregroundStyle(ink)
                 .lineLimit(1)
@@ -452,7 +453,7 @@ struct CourseCompletedView: View {
                         Image(systemName: "lock.fill")
                             .font(.system(size: 14, weight: .heavy))
                     }
-                    Text("Mini Quiz")
+                    Text(languageManager.text("common.miniQuiz"))
                         .font(.system(.headline, design: .rounded, weight: .heavy))
                     Image(systemName: "arrow.right")
                         .font(.system(size: 14, weight: .heavy))
@@ -470,6 +471,7 @@ struct CourseCompletedView: View {
 // MARK: - Streak Celebration screen
 
 struct StreakCelebrationView: View {
+    @Environment(LanguageManager.self) private var languageManager
     let streak: Int
     let subject: Subject
     let lastActiveDate: String?
@@ -508,13 +510,13 @@ struct StreakCelebrationView: View {
                         .scaleEffect(numberAppeared ? 1 : 0.5)
                         .opacity(numberAppeared ? 1 : 0)
 
-                    Text(streak <= 1 ? "Jour de suite" : "Jours de suite")
+                    Text(streak <= 1 ? languageManager.text("course.streak.day") : languageManager.text("course.streak.days"))
                         .font(.system(.title3, design: .rounded, weight: .heavy))
                         .foregroundStyle(ink)
                         .opacity(numberAppeared ? 1 : 0)
                 }
 
-                Text("Tu deviens vraiment cultivé, tu deviens incollable en \(subject.shortName) !")
+                Text(String(format: languageManager.text("course.streak.message"), subject.localizedShortName(language: languageManager.current)))
                     .font(.system(.subheadline, design: .rounded, weight: .heavy))
                     .foregroundStyle(ink.opacity(0.6))
                     .multilineTextAlignment(.center)
@@ -531,7 +533,7 @@ struct StreakCelebrationView: View {
 
                 Spacer(minLength: 18)
 
-                Text("En route pour ta série !")
+                Text(languageManager.text("course.streak.onTrack"))
                     .font(.system(.headline, design: .rounded, weight: .heavy))
                     .foregroundStyle(ink)
                     .opacity(appeared ? 1 : 0)
@@ -544,7 +546,7 @@ struct StreakCelebrationView: View {
                     onReturnHome()
                 } label: {
                     HStack(spacing: 8) {
-                        Text("Retour à l'accueil")
+                        Text(languageManager.text("common.backHome"))
                             .font(.system(.headline, design: .rounded, weight: .heavy))
                         Image(systemName: "house.fill")
                             .font(.system(size: 14, weight: .heavy))

@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct OnboardingComparisonGraphScreen: View {
+    @Environment(LanguageManager.self) private var languageManager
     let onNext: () -> Void
     @State private var appeared: Bool = true
     @State private var graphProgress: CGFloat = 0
@@ -16,13 +17,13 @@ struct OnboardingComparisonGraphScreen: View {
 
                 VStack(spacing: 28) {
                     VStack(spacing: 10) {
-                        Text("Ta progression\nculturelle")
+                        Text(languageManager.text("onboarding.graph.title"))
                             .font(.system(.largeTitle, design: .rounded, weight: .heavy))
                             .foregroundStyle(BrutalPalette.ink)
                             .multilineTextAlignment(.center)
                             .opacity(appeared ? 1 : 0)
 
-                        Text("Avec et sans Sophia")
+                        Text(languageManager.text("onboarding.graph.subtitle"))
                             .font(.system(.subheadline, design: .rounded, weight: .semibold))
                             .foregroundStyle(BrutalPalette.ink.opacity(0.55))
                             .opacity(appeared ? 1 : 0)
@@ -31,7 +32,7 @@ struct OnboardingComparisonGraphScreen: View {
                     ZStack {
                         VStack(spacing: 0) {
                             HStack {
-                                Text("CULTURE")
+                                Text(languageManager.text("onboarding.graph.culture"))
                                     .font(.system(.caption2, design: .rounded, weight: .heavy))
                                     .tracking(1.0)
                                     .foregroundStyle(BrutalPalette.ink.opacity(0.5))
@@ -74,7 +75,7 @@ struct OnboardingComparisonGraphScreen: View {
 
                                     if showLabels {
                                         BrutalPill(
-                                            text: "Avec Sophia",
+                                            text: languageManager.text("onboarding.graph.withSophia"),
                                             background: BrutalPalette.pink,
                                             foreground: BrutalPalette.ink
                                         )
@@ -82,7 +83,7 @@ struct OnboardingComparisonGraphScreen: View {
                                         .transition(.opacity.combined(with: .scale(scale: 0.8)))
 
                                         BrutalPill(
-                                            text: "Sans Sophia",
+                                            text: languageManager.text("onboarding.graph.withoutSophia"),
                                             background: Color.white,
                                             foreground: BrutalPalette.ink
                                         )
@@ -93,11 +94,11 @@ struct OnboardingComparisonGraphScreen: View {
                             }
 
                             HStack {
-                                Text("Aujourd'hui")
+                                Text(languageManager.text("onboarding.graph.today"))
                                     .font(.system(.caption2, design: .rounded, weight: .heavy))
                                     .foregroundStyle(BrutalPalette.ink.opacity(0.5))
                                 Spacer()
-                                Text("1 an")
+                                Text(languageManager.text("onboarding.graph.oneYear"))
                                     .font(.system(.caption2, design: .rounded, weight: .heavy))
                                     .foregroundStyle(BrutalPalette.ink.opacity(0.5))
                             }
@@ -110,7 +111,7 @@ struct OnboardingComparisonGraphScreen: View {
                     .padding(.horizontal, 24)
                     .opacity(appeared ? 1 : 0)
 
-                    Text("Sophia accélère ta culture\nde manière exponentielle.")
+                    Text(languageManager.text("onboarding.graph.tagline"))
                         .font(.system(.subheadline, design: .rounded, weight: .heavy))
                         .foregroundStyle(BrutalPalette.ink.opacity(0.7))
                         .multilineTextAlignment(.center)
@@ -120,7 +121,7 @@ struct OnboardingComparisonGraphScreen: View {
 
                 Spacer()
 
-                OnboardingPrimaryButton(title: "Continuer", action: onNext)
+                OnboardingPrimaryButton(title: languageManager.text("common.continue"), action: onNext)
                     .opacity(showLabels ? 1 : 0)
             }
         }
