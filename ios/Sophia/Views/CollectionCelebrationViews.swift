@@ -107,7 +107,7 @@ struct CollectionProgressCelebrationView: View {
                     .offset(x: -14, y: 28)
                 }
         }
-        .shadow(color: ink.opacity(0.22), radius: 0, x: 0, y: 5)
+        .shadow(color: ink.opacity(0.9), radius: 0, x: 0, y: 4)
         .padding(.bottom, 8)
     }
 
@@ -315,7 +315,7 @@ struct CollectionCompletedCelebrationView: View {
                     }
                 }
         }
-        .shadow(color: ink.opacity(0.22), radius: 0, x: 0, y: 5)
+        .shadow(color: ink.opacity(0.9), radius: 0, x: 0, y: 4)
         .padding(.bottom, 9)
     }
 

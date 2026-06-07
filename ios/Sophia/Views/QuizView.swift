@@ -124,6 +124,19 @@ struct QuizView: View {
                     .transition(.scale.combined(with: .opacity))
                     .zIndex(20)
             }
+
+            if showRewardFlow {
+                PostCompletionRewardFlowView(
+                    steps: rewardSteps,
+                    progressManager: progressManager,
+                    onFinished: {
+                        showRewardFlow = false
+                        onReturnHome()
+                    }
+                )
+                .transition(.opacity.combined(with: .scale(scale: 0.985)))
+                .zIndex(100)
+            }
         }
         .fullScreenCover(isPresented: $showLevelUpCelebration) {
             LevelUpCelebrationView(
@@ -150,16 +163,6 @@ struct QuizView: View {
                     }
                 )
             }
-        }
-        .fullScreenCover(isPresented: $showRewardFlow) {
-            PostCompletionRewardFlowView(
-                steps: rewardSteps,
-                progressManager: progressManager,
-                onFinished: {
-                    showRewardFlow = false
-                    onReturnHome()
-                }
-            )
         }
         .fullScreenCover(isPresented: $showCardUnlock) {
             if let currentCardUnlockEvent {
