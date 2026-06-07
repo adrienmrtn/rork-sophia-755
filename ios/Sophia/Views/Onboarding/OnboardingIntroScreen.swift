@@ -10,31 +10,42 @@ struct OnboardingIntroScreen: View {
     @State private var tapCount: Int = 0
     @State private var shimmerActive: Bool = true
 
+    private let videoHeightRatio: CGFloat = 0.62
+    private let videoCropOffset: CGFloat = 36
+
     var body: some View {
         ZStack {
             BrutalPalette.cream
 
             VStack(spacing: 0) {
                 ZStack(alignment: .bottom) {
-                    Group {
-                        if let player {
-                            VideoPlayer(player: player)
-                                .disabled(true)
-                                .aspectRatio(9/16, contentMode: .fill)
-                        } else {
-                            BrutalPalette.pink
+                    let videoHeight = UIScreen.main.bounds.height * videoHeightRatio
+
+                    Color.clear
+                        .frame(maxWidth: .infinity)
+                        .frame(height: videoHeight)
+                        .overlay {
+                            Group {
+                                if let player {
+                                    VideoPlayer(player: player)
+                                        .disabled(true)
+                                        .aspectRatio(9 / 16, contentMode: .fill)
+                                } else {
+                                    BrutalPalette.pink
+                                }
+                            }
+                            .frame(maxWidth: .infinity)
+                            .frame(height: videoHeight + videoCropOffset)
+                            .offset(y: videoCropOffset)
                         }
-                    }
-                    .frame(maxWidth: .infinity)
-                    .frame(height: UIScreen.main.bounds.height * 0.62)
-                    .clipped()
-                    .overlay(alignment: .bottom) {
-                        Rectangle()
-                            .fill(BrutalPalette.ink)
-                            .frame(height: 3)
-                    }
-                    .opacity(appeared ? 1 : 0)
-                    .scaleEffect(appeared ? 1 : 0.98)
+                        .clipped()
+                        .overlay(alignment: .bottom) {
+                            Rectangle()
+                                .fill(BrutalPalette.ink)
+                                .frame(height: 3)
+                        }
+                        .opacity(appeared ? 1 : 0)
+                        .scaleEffect(appeared ? 1 : 0.98)
 
                     LinearGradient(
                         colors: [
@@ -51,25 +62,14 @@ struct OnboardingIntroScreen: View {
                     .allowsHitTesting(false)
                 }
 
-                VStack(spacing: 16) {
-                    BrutalPill(
-                        text: "Sophia",
-                        icon: "sparkles",
-                        background: BrutalPalette.pink,
-                        foreground: BrutalPalette.ink
-                    )
+                Text("Deviens cultivé\nen 10 minutes\npar jour")
+                    .font(.system(.title, design: .rounded, weight: .heavy))
+                    .foregroundStyle(BrutalPalette.ink)
+                    .multilineTextAlignment(.center)
+                    .padding(.top, 8)
+                    .offset(y: -28)
                     .opacity(appeared ? 1 : 0)
-                    .offset(y: appeared ? 0 : 20)
-
-                    Text("Deviens cultivé\nen 10 minutes\npar jour")
-                        .font(.system(.title, design: .rounded, weight: .heavy))
-                        .foregroundStyle(BrutalPalette.ink)
-                        .multilineTextAlignment(.center)
-                        .opacity(appeared ? 1 : 0)
-                        .offset(y: appeared ? 0 : titleOffset)
-                }
-                .padding(.top, 8)
-                .offset(y: -40)
+                    .offset(y: appeared ? 0 : titleOffset)
 
                 Spacer()
 

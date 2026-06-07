@@ -37,10 +37,8 @@ struct OnboardingLoadingScreen: View {
                     Image("logo_white")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 44, height: 44)
-                        .padding(18)
-                        .background(BrutalPalette.pink, in: Circle())
-                        .overlay { Circle().strokeBorder(BrutalPalette.ink, lineWidth: 2.5) }
+                        .frame(width: 68, height: 68)
+                        .foregroundStyle(BrutalPalette.ink)
                         .scaleEffect(pulse ? 1.04 : 1.0)
                 }
 
