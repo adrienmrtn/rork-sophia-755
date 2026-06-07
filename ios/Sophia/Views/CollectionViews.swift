@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct CollectionsOverviewView: View {
+    @Environment(LanguageManager.self) private var languageManager
     let progressManager: ProgressManager
     let isPremium: Bool
     let onShowPaywall: (SophiaPaywallContext) -> Void
@@ -11,18 +12,18 @@ struct CollectionsOverviewView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 18) {
             VStack(alignment: .leading, spacing: 6) {
-                Text("COLLECTIONS")
+                Text(languageManager.text("collections.title"))
                     .font(.system(.caption, design: .rounded, weight: .black))
                     .foregroundStyle(ink.opacity(0.55))
                     .tracking(1.2)
-                Text("Des parcours guidés pour relier les idées entre elles.")
+                Text(languageManager.text("collections.subtitle"))
                     .font(.system(.subheadline, design: .rounded, weight: .heavy))
                     .foregroundStyle(ink.opacity(0.62))
             }
             .padding(.horizontal, 20)
 
             LazyVStack(spacing: 18) {
-                ForEach(Array(CollectionData.allCollections.enumerated()), id: \.element.id) { index, collection in
+                ForEach(Array(ContentCatalog.activeCollections.enumerated()), id: \.element.id) { index, collection in
                     NavigationLink(value: collection) {
                         CollectionOverviewCard(
                             collection: collection,
@@ -39,6 +40,7 @@ struct CollectionsOverviewView: View {
 }
 
 private struct CollectionOverviewCard: View {
+    @Environment(LanguageManager.self) private var languageManager
     let collection: LearningCollection
     let progressManager: ProgressManager
     let accentIndex: Int
@@ -99,7 +101,9 @@ private struct CollectionOverviewCard: View {
                     HStack(spacing: 8) {
                         Image(systemName: isComplete ? "checkmark.seal.fill" : "square.grid.2x2.fill")
                             .font(.system(size: 12, weight: .black))
-                        Text(isComplete ? "Collection terminée" : "\(completed) / \(total) cours terminés")
+                        Text(isComplete
+                            ? languageManager.text("collections.complete")
+                            : String(format: languageManager.text("collections.progress"), completed, total))
                             .font(.system(.caption, design: .rounded, weight: .black))
                             .monospacedDigit()
                         Spacer()
@@ -138,7 +142,9 @@ private struct CollectionOverviewCard: View {
         HStack(spacing: 6) {
             Image(systemName: isComplete ? "checkmark" : "sparkles")
                 .font(.system(size: 11, weight: .black))
-            Text(isComplete ? "TERMINÉE" : "PARCOURS")
+            Text(isComplete
+                ? languageManager.text("collections.badge.complete")
+                : languageManager.text("collections.badge.path"))
                 .font(.system(.caption2, design: .rounded, weight: .black))
                 .tracking(0.8)
         }
@@ -175,6 +181,7 @@ private struct CollectionOverviewCard: View {
 }
 
 struct CollectionDetailView: View {
+    @Environment(LanguageManager.self) private var languageManager
     let collection: LearningCollection
     let progressManager: ProgressManager
     let isPremium: Bool
@@ -253,7 +260,7 @@ struct CollectionDetailView: View {
 
     private var hero: some View {
         VStack(alignment: .leading, spacing: 16) {
-            CollectionCoverView(collection: collection, accentIndex: CollectionData.allCollections.firstIndex(of: collection) ?? 0)
+            CollectionCoverView(collection: collection, accentIndex: ContentCatalog.activeCollections.firstIndex(of: collection) ?? 0)
                 .frame(height: 200)
                 .clipShape(.rect(cornerRadius: 26))
                 .overlay { RoundedRectangle(cornerRadius: 26).strokeBorder(ink, lineWidth: 3) }
@@ -288,12 +295,12 @@ struct CollectionDetailView: View {
                 .frame(height: 22)
 
                 HStack {
-                    Text("\(completed) / \(total) cours terminés")
+                    Text(String(format: languageManager.text("collections.progress"), completed, total))
                         .font(.system(.caption, design: .rounded, weight: .black))
                         .foregroundStyle(ink.opacity(0.62))
                         .monospacedDigit()
                     Spacer()
-                    Text("+\(progressManager.collectionCompletionXP(for: collection)) XP à la fin")
+                    Text(String(format: languageManager.text("collections.xpAtEnd"), progressManager.collectionCompletionXP(for: collection)))
                         .font(.system(.caption2, design: .rounded, weight: .black))
                         .foregroundStyle(ink)
                         .padding(.horizontal, 10)
@@ -341,6 +348,7 @@ struct CollectionDetailView: View {
 }
 
 private struct CollectionCourseRow: View {
+    @Environment(LanguageManager.self) private var languageManager
     let index: Int
     let course: Course
     let status: CourseStatus
@@ -378,7 +386,7 @@ private struct CollectionCourseRow: View {
                         .lineLimit(2)
                         .multilineTextAlignment(.leading)
 
-                    Text(course.subject.shortName)
+                    Text(course.subject.localizedShortName(language: languageManager.current))
                         .font(.system(.caption2, design: .rounded, weight: .heavy))
                         .foregroundStyle(ink.opacity(0.5))
                 }

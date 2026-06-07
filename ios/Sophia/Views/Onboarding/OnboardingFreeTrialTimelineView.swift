@@ -1,17 +1,20 @@
 import SwiftUI
 
 struct OnboardingFreeTrialTimelineView: View {
+    @Environment(LanguageManager.self) private var languageManager
     let onNext: () -> Void
     @State private var appeared: Bool = true
     @State private var cardAppeared: Bool = false
     @State private var buttonAppeared: Bool = false
     @State private var iconBounce: Int = 0
 
-    private let steps: [(day: String, title: String, tint: Color, highlighted: Bool)] = [
-        ("JOUR 1", "Accès complet", OnboardingPastels.at(3), false),
-        ("JOUR 2", "Notification envoyée", BrutalPalette.pink, true),
-        ("JOUR 3", "Fin de l'essai", OnboardingPastels.at(0), false),
-    ]
+    private var steps: [(day: String, title: String, tint: Color, highlighted: Bool)] {
+        [
+            (languageManager.text("onboarding.trial.day1"), languageManager.text("onboarding.trial.fullAccess"), OnboardingPastels.at(3), false),
+            (languageManager.text("onboarding.trial.day2"), languageManager.text("onboarding.trial.notificationSent"), BrutalPalette.pink, true),
+            (languageManager.text("onboarding.trial.day3"), languageManager.text("onboarding.trial.trialEnds"), OnboardingPastels.at(0), false),
+        ]
+    }
 
     var body: some View {
         ZStack {
@@ -20,11 +23,11 @@ struct OnboardingFreeTrialTimelineView: View {
             VStack(spacing: 28) {
                 Spacer()
 
-                BrutalPill(text: "Pas de surprise", icon: "bell.fill", background: BrutalPalette.pink, foreground: BrutalPalette.ink)
+                BrutalPill(text: languageManager.text("onboarding.trial.noSurprise"), icon: "bell.fill", background: BrutalPalette.pink, foreground: BrutalPalette.ink)
                     .opacity(appeared ? 1 : 0)
                     .offset(y: appeared ? 0 : -10)
 
-                Text("Nous vous notifierons\n1 jour avant la fin\nde votre essai gratuit")
+                Text(languageManager.text("onboarding.trial.notifyTitle"))
                     .font(.system(.title, design: .rounded, weight: .heavy))
                     .foregroundStyle(BrutalPalette.ink)
                     .multilineTextAlignment(.center)
@@ -38,14 +41,14 @@ struct OnboardingFreeTrialTimelineView: View {
                     .opacity(cardAppeared ? 1 : 0)
                     .scaleEffect(cardAppeared ? 1 : 0.94)
 
-                Text("Annulez à tout moment, sans frais.")
+                Text(languageManager.text("onboarding.trial.cancelAnytime"))
                     .font(.system(.subheadline, design: .rounded, weight: .semibold))
                     .foregroundStyle(BrutalPalette.ink.opacity(0.6))
                     .opacity(cardAppeared ? 1 : 0)
 
                 Spacer()
 
-                OnboardingPrimaryButton(title: "Continuer", action: onNext)
+                OnboardingPrimaryButton(title: languageManager.text("common.continue"), action: onNext)
                     .opacity(buttonAppeared ? 1 : 0)
                     .offset(y: buttonAppeared ? 0 : 24)
             }

@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct OnboardingLoadingScreen: View {
+    @Environment(LanguageManager.self) private var languageManager
     @Bindable var viewModel: OnboardingViewModel
     let onNext: () -> Void
     @State private var appeared: Bool = false
@@ -8,11 +9,13 @@ struct OnboardingLoadingScreen: View {
     @State private var pulse: Bool = false
     @State private var firedHapticSteps: Set<Int> = []
 
-    private let steps = [
-        "Analyse de tes réponses",
-        "Sélection de tes 3 matières",
-        "Préparation de ton parcours",
-    ]
+    private var steps: [String] {
+        [
+            languageManager.text("onboarding.loading.step1"),
+            languageManager.text("onboarding.loading.step2"),
+            languageManager.text("onboarding.loading.step3"),
+        ]
+    }
 
     var body: some View {
         VStack(spacing: 0) {
@@ -43,12 +46,12 @@ struct OnboardingLoadingScreen: View {
                 }
 
                 VStack(spacing: 10) {
-                    Text("On prépare ton parcours")
+                    Text(languageManager.text("onboarding.loading.title"))
                         .font(.system(.title, design: .rounded, weight: .heavy))
                         .foregroundStyle(BrutalPalette.ink)
                         .multilineTextAlignment(.center)
 
-                    Text("Quelques secondes, promis.")
+                    Text(languageManager.text("onboarding.loading.subtitle"))
                         .font(.system(.body, design: .rounded, weight: .medium))
                         .foregroundStyle(BrutalPalette.ink.opacity(0.55))
                 }

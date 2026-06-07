@@ -1,23 +1,30 @@
 import SwiftUI
 
 struct OnboardingFinalScreen: View {
+    @Environment(LanguageManager.self) private var languageManager
     let onComplete: () -> Void
     @State private var appeared: Bool = true
     @State private var confettiTrigger: Int = 0
     @State private var particles: [OnboardingConfetti] = []
 
-    private static let allInterests: [(label: String, icon: String, color: Color)] = [
-        ("Histoire", "building.columns", Color(red: 1.0, green: 0.86, blue: 0.62)),
-        ("Sciences", "atom", Color(red: 0.70, green: 0.95, blue: 0.80)),
-        ("Littérature", "book.closed", Color(red: 1.0, green: 0.78, blue: 0.78)),
-        ("Art", "paintpalette", Color(red: 0.66, green: 0.92, blue: 0.96)),
-        ("Mythologie", "bolt.fill", Color(red: 0.82, green: 0.78, blue: 1.0)),
-        ("Monde actuel", "globe.europe.africa", Color(red: 0.74, green: 0.90, blue: 1.0)),
+    private static let allInterests: [(subject: Subject, icon: String, color: Color)] = [
+        (.histoire, "building.columns", Color(red: 1.0, green: 0.86, blue: 0.62)),
+        (.sciences, "atom", Color(red: 0.70, green: 0.95, blue: 0.80)),
+        (.litterature, "book.closed", Color(red: 1.0, green: 0.78, blue: 0.78)),
+        (.art, "paintpalette", Color(red: 0.66, green: 0.92, blue: 0.96)),
+        (.mythologie, "bolt.fill", Color(red: 0.82, green: 0.78, blue: 1.0)),
+        (.comprendreLeMonde, "globe.europe.africa", Color(red: 0.74, green: 0.90, blue: 1.0)),
     ]
 
     private var selectedInterests: [(label: String, icon: String, color: Color)] {
-        let saved = UserDefaults.standard.array(forKey: "sophia_user_interests") as? [String] ?? []
-        return Self.allInterests.filter { saved.contains($0.label) }
+        let saved = OnboardingViewModel.loadPersistedInterests()
+        return Self.allInterests
+            .filter { saved.contains($0.subject.storageKey) }
+            .map { (
+                label: $0.subject.localizedShortName(language: languageManager.current),
+                icon: $0.icon,
+                color: $0.color
+            ) }
     }
 
     var body: some View {
@@ -58,12 +65,12 @@ struct OnboardingFinalScreen: View {
                     .scaleEffect(appeared ? 1 : 0.3)
 
                     VStack(spacing: 12) {
-                        Text("Profil prêt !")
+                        Text(languageManager.text("onboarding.final.title"))
                             .font(.system(.largeTitle, design: .rounded, weight: .heavy))
                             .foregroundStyle(BrutalPalette.ink)
                             .opacity(appeared ? 1 : 0)
 
-                        Text("Bienvenue dans Sophia.\nCommence à apprendre dès maintenant.")
+                        Text(languageManager.text("onboarding.final.subtitle"))
                             .font(.system(.body, design: .rounded, weight: .semibold))
                             .foregroundStyle(BrutalPalette.ink.opacity(0.6))
                             .multilineTextAlignment(.center)
@@ -72,7 +79,7 @@ struct OnboardingFinalScreen: View {
 
                     if !selectedInterests.isEmpty {
                         VStack(spacing: 10) {
-                            Text("TES MATIÈRES")
+                            Text(languageManager.text("onboarding.final.subjects"))
                                 .font(.system(size: 11, weight: .heavy, design: .rounded))
                                 .tracking(1.2)
                                 .foregroundStyle(BrutalPalette.ink.opacity(0.5))
@@ -109,7 +116,7 @@ struct OnboardingFinalScreen: View {
 
                 Spacer()
 
-                OnboardingPrimaryButton(title: "Commencer à apprendre", action: onComplete)
+                OnboardingPrimaryButton(title: languageManager.text("common.startLearning"), action: onComplete)
                     .opacity(appeared ? 1 : 0)
                     .offset(y: appeared ? 0 : 30)
             }

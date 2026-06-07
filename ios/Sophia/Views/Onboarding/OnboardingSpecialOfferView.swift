@@ -3,6 +3,7 @@ import RevenueCat
 import Combine
 
 struct OnboardingSpecialOfferView: View {
+    @Environment(LanguageManager.self) private var languageManager
     let store: StoreViewModel
     let onSubscribed: () -> Void
     let onSkip: () -> Void
@@ -54,13 +55,13 @@ struct OnboardingSpecialOfferView: View {
                 ScrollView(showsIndicators: false) {
                     VStack(spacing: 28) {
                         VStack(spacing: 12) {
-                            Text("Votre offre unique")
+                            Text(languageManager.text("offer.unique"))
                                 .font(.system(.title2, design: .rounded, weight: .bold))
                                 .foregroundStyle(.white)
                                 .opacity(appeared ? 1 : 0)
                                 .offset(y: appeared ? 0 : 15)
 
-                            Text("-70% POUR TOUJOURS")
+                            Text(languageManager.text("offer.discount"))
                                 .font(.system(.title, design: .rounded, weight: .black))
                                 .foregroundStyle(
                                     LinearGradient(
@@ -78,12 +79,12 @@ struct OnboardingSpecialOfferView: View {
                             Text("1,67 \u{20AC}")
                                 .font(.system(size: 52, weight: .heavy, design: .rounded))
                                 .foregroundStyle(.white)
-                            + Text(" /mois")
+                            + Text(" \(languageManager.text("offer.perMonth"))")
                                 .font(.system(.title3, design: .rounded, weight: .medium))
                                 .foregroundStyle(.white.opacity(0.6))
 
                             HStack(spacing: 8) {
-                                Text("factur\u{00E9}")
+                                Text(languageManager.text("offer.billed"))
                                     .font(.system(.subheadline, design: .rounded))
                                     .foregroundStyle(.white.opacity(0.5))
                                 Text("69,99 \u{20AC}")
@@ -117,7 +118,7 @@ struct OnboardingSpecialOfferView: View {
                             Image(systemName: "clock.fill")
                                 .font(.system(size: 18))
                                 .foregroundStyle(SophiaTheme.streakOrange)
-                            Text("Expire dans")
+                            Text(languageManager.text("offer.expiresIn"))
                                 .font(.system(.subheadline, design: .rounded, weight: .medium))
                                 .foregroundStyle(.white.opacity(0.7))
                             Text("\(String(format: "%02d", countdownMinutes)):\(String(format: "%02d", countdownSeconds))")
@@ -139,9 +140,9 @@ struct OnboardingSpecialOfferView: View {
                         .scaleEffect(pulsing ? 1.02 : 1.0)
 
                         VStack(spacing: 8) {
-                            SpecialOfferFeature(text: "240 cours de culture g\u{00E9}n\u{00E9}rale")
-                            SpecialOfferFeature(text: "Quiz interactifs illimit\u{00E9}s")
-                            SpecialOfferFeature(text: "Nouveau contenu chaque semaine")
+                            SpecialOfferFeature(text: languageManager.text("offer.feature1"))
+                            SpecialOfferFeature(text: languageManager.text("offer.feature2"))
+                            SpecialOfferFeature(text: languageManager.text("offer.feature3"))
                         }
                         .padding(.horizontal, 28)
                         .opacity(appeared ? 1 : 0)
@@ -160,7 +161,7 @@ struct OnboardingSpecialOfferView: View {
                         HStack(spacing: 10) {
                             Image(systemName: "bolt.fill")
                                 .font(.subheadline.weight(.bold))
-                            Text("D\u{00E9}bloquer mon acc\u{00E8}s -70%")
+                            Text(languageManager.text("offer.unlock"))
                                 .font(.system(.headline, design: .rounded, weight: .bold))
                         }
                         .foregroundStyle(.white)
@@ -183,7 +184,7 @@ struct OnboardingSpecialOfferView: View {
                     Button {
                         Task { await store.restore() }
                     } label: {
-                        Text("Restaurer les achats")
+                        Text(languageManager.text("offer.restore"))
                             .font(.system(.caption, design: .rounded))
                             .foregroundStyle(.white.opacity(0.35))
                     }

@@ -1,24 +1,27 @@
 import SwiftUI
 
 struct OnboardingPhoneTimeScreen: View {
+    @Environment(LanguageManager.self) private var languageManager
     @Bindable var viewModel: OnboardingViewModel
     let onNext: () -> Void
     @State private var appeared: Bool = true
 
-    private let options = [
-        (icon: "clock", label: "Moins de 1h", index: 0),
-        (icon: "clock.badge.checkmark", label: "1h à 2h", index: 1),
-        (icon: "clock.badge.exclamationmark", label: "2h à 4h", index: 2),
-        (icon: "clock.badge.xmark", label: "Plus de 4h", index: 3),
-    ]
+    private var options: [(icon: String, labelKey: String, index: Int)] {
+        [
+            (icon: "clock", labelKey: "onboarding.phone.lessThan1h", index: 0),
+            (icon: "clock.badge.checkmark", labelKey: "onboarding.phone.1to2h", index: 1),
+            (icon: "clock.badge.exclamationmark", labelKey: "onboarding.phone.2to4h", index: 2),
+            (icon: "clock.badge.xmark", labelKey: "onboarding.phone.moreThan4h", index: 3),
+        ]
+    }
 
     var body: some View {
         VStack(spacing: 0) {
             Spacer().frame(height: 32)
 
                 OnboardingHeader(
-                    title: "Combien de temps\nsur ton téléphone ?",
-                    subtitle: "Chaque jour, en moyenne.",
+                    title: languageManager.text("onboarding.phone.title"),
+                    subtitle: languageManager.text("onboarding.phone.subtitle"),
                     appeared: appeared
                 )
 
@@ -29,7 +32,7 @@ struct OnboardingPhoneTimeScreen: View {
                         let isSelected = viewModel.phoneTimeSelection == option.index
                         BrutalSelectableRow(
                             icon: option.icon,
-                            label: option.label,
+                            label: languageManager.text(option.labelKey),
                             isSelected: isSelected,
                             accentColor: OnboardingPastels.at(i)
                         ) {
@@ -47,7 +50,7 @@ struct OnboardingPhoneTimeScreen: View {
 
                 Spacer()
 
-                OnboardingPrimaryButton(title: "Suivant", isEnabled: viewModel.canProceed, action: onNext)
+                OnboardingPrimaryButton(title: languageManager.text("common.next"), isEnabled: viewModel.canProceed, action: onNext)
                     .opacity(appeared ? 1 : 0)
         }
         .onboardingFullBleedBackground(BrutalPalette.cream)

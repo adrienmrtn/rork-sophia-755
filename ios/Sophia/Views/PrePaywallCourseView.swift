@@ -2,6 +2,7 @@ import SwiftUI
 import AVKit
 
 struct PrePaywallCourseView: View {
+    @Environment(LanguageManager.self) private var languageManager
     let onContinue: () -> Void
     @State private var appeared: Bool = false
     @State private var shimmerOffset: CGFloat = -200
@@ -51,7 +52,7 @@ struct PrePaywallCourseView: View {
                 Spacer()
 
                 VStack(spacing: 20) {
-                    Text("Continuez à apprendre et\ndécouvrez de nouveaux sujets")
+                    Text(languageManager.text("prepaywall.course.subtitle"))
                         .font(.system(.body, design: .rounded))
                         .foregroundStyle(.white.opacity(0.6))
                         .multilineTextAlignment(.center)
@@ -69,7 +70,7 @@ struct PrePaywallCourseView: View {
                         HStack(spacing: 10) {
                             Image(systemName: "sparkles")
                                 .font(.subheadline.weight(.semibold))
-                            Text("Accéder au cours")
+                            Text(languageManager.text("prepaywall.course.access"))
                                 .font(.system(.headline, design: .rounded, weight: .bold))
                         }
                         .foregroundStyle(.white)

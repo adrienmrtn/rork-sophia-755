@@ -10,6 +10,7 @@ import UIKit
 struct RichContentView: View {
     let content: String
     let accent: Color
+    let courseId: String
     let courseTitle: String
 
     @State private var selectedGlossaryEntry: GlossaryEntry?
@@ -34,6 +35,7 @@ struct RichContentView: View {
         case .text(let str):
             CourseInlineText(
                 raw: str,
+                courseId: courseId,
                 courseTitle: courseTitle,
                 onGlossaryTap: { selectedGlossaryEntry = $0 }
             )
@@ -245,6 +247,7 @@ private extension View {
 
 private struct CourseInlineText: View {
     let raw: String
+    let courseId: String
     let courseTitle: String
     let onGlossaryTap: (GlossaryEntry) -> Void
 
@@ -253,6 +256,7 @@ private struct CourseInlineText: View {
     private var paragraphs: [ParagraphContent] {
         Self.buildParagraphContent(
             from: raw,
+            courseId: courseId,
             courseTitle: courseTitle,
             maxWidth: max(contentWidth, 1)
         )
@@ -308,6 +312,7 @@ private struct CourseInlineText: View {
 
     private static func buildParagraphContent(
         from raw: String,
+        courseId: String,
         courseTitle: String,
         maxWidth: CGFloat
     ) -> [ParagraphContent] {
@@ -324,6 +329,7 @@ private struct CourseInlineText: View {
                     .map { line in
                         buildFlowTokens(
                             from: RichContentView.tokenizeInline(line),
+                            courseId: courseId,
                             courseTitle: courseTitle,
                             maxWidth: maxWidth
                         )
@@ -334,6 +340,7 @@ private struct CourseInlineText: View {
 
     private static func buildFlowTokens(
         from runs: [InlineRun],
+        courseId: String,
         courseTitle: String,
         maxWidth: CGFloat
     ) -> [FlowToken] {
@@ -344,7 +351,7 @@ private struct CourseInlineText: View {
         for run in runs {
             switch run.kind {
             case .glossary:
-                if let entry = GlossaryStore.entry(courseTitle: courseTitle, displayTerm: run.content) {
+                if let entry = GlossaryStore.entry(courseId: courseId, courseTitle: courseTitle, displayTerm: run.content) {
                     appendGlossaryTerm(
                         run.content,
                         bold: run.bold,
@@ -831,7 +838,7 @@ struct HighlightBox: View {
                 Image(systemName: "bookmark.fill")
                     .font(.system(size: 12, weight: .bold))
                     .foregroundStyle(.black)
-                Text("À RETENIR")
+                Text(AppLocalizable.string("course.keyTakeaway", language: AppLanguage.currentPersisted()))
                     .font(.system(.caption2, design: .rounded, weight: .heavy))
                     .foregroundStyle(.black)
                     .tracking(0.8)

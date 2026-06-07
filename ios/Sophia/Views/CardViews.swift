@@ -50,25 +50,26 @@ extension CollectibleCardRarity {
 }
 
 struct CardsProfileSection: View {
+    @Environment(LanguageManager.self) private var languageManager
     let progressManager: ProgressManager
     let onShowAllCards: () -> Void
 
     private let ink = BrutalPalette.ink
 
     private var unlocked: [CollectibleCard] { progressManager.unlockedCards }
-    private var total: Int { CardData.allCards.count }
+    private var total: Int { ContentCatalog.activeCards.count }
     private var fraction: Double { total == 0 ? 0 : Double(unlocked.count) / Double(total) }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack {
-                Text("CARTES À COLLECTER")
+                Text(languageManager.text("cards.collect.title"))
                     .font(.system(.caption, design: .rounded, weight: .black))
                     .foregroundStyle(ink.opacity(0.55))
                     .tracking(1.2)
                 Spacer()
                 Button(action: onShowAllCards) {
-                    Text("Voir tout →")
+                    Text(languageManager.text("cards.seeAll"))
                         .font(.system(.subheadline, design: .rounded, weight: .black))
                         .foregroundStyle(ink)
                 }
@@ -84,7 +85,7 @@ struct CardsProfileSection: View {
                     Text("/ \(total)")
                         .font(.system(.title3, design: .rounded, weight: .black))
                         .foregroundStyle(ink.opacity(0.45))
-                    Text("cartes")
+                    Text(languageManager.text("cards.unit"))
                         .font(.system(.subheadline, design: .rounded, weight: .heavy))
                         .foregroundStyle(ink.opacity(0.55))
                     Spacer()
@@ -117,7 +118,7 @@ struct CardsProfileSection: View {
                             .frame(width: 48, height: 48)
                             .background(BrutalPalette.yellow, in: Circle())
                             .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
-                        Text("Termine un cours pour débloquer tes premières cartes.")
+                        Text(languageManager.text("cards.empty"))
                             .font(.system(.subheadline, design: .rounded, weight: .heavy))
                             .foregroundStyle(ink.opacity(0.62))
                     }
@@ -139,13 +140,14 @@ struct CardsProfileSection: View {
 }
 
 struct QuizStatsProfileCard: View {
+    @Environment(LanguageManager.self) private var languageManager
     let stats: QuizStatsSummary
 
     private let ink = BrutalPalette.ink
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("QUIZZ RÉUSSIS")
+            Text(languageManager.text("cards.quizStats.title"))
                 .font(.system(.caption, design: .rounded, weight: .black))
                 .foregroundStyle(ink.opacity(0.55))
                 .tracking(1.2)
@@ -155,13 +157,13 @@ struct QuizStatsProfileCard: View {
                 statBlock(
                     icon: "checkmark.circle.fill",
                     value: "\(stats.correctAnswerCount)",
-                    label: "bonnes réponses",
+                    label: languageManager.text("cards.correctAnswers"),
                     fill: BrutalPalette.yellow
                 )
                 statBlock(
                     icon: "target",
                     value: "\(stats.successPercent)%",
-                    label: "réussite",
+                    label: languageManager.text("cards.successRate"),
                     fill: BrutalPalette.pink
                 )
             }
@@ -193,6 +195,7 @@ struct QuizStatsProfileCard: View {
 }
 
 struct AllCardsView: View {
+    @Environment(LanguageManager.self) private var languageManager
     let progressManager: ProgressManager
     var onDismiss: () -> Void
 
@@ -214,7 +217,7 @@ struct AllCardsView: View {
                         .padding(.top, 8)
 
                     LazyVGrid(columns: columns, spacing: 18) {
-                        ForEach(CardData.allCards) { card in
+                        ForEach(ContentCatalog.activeCards) { card in
                             CollectibleCardTile(
                                 card: card,
                                 unlocked: progressManager.isCardUnlocked(card)
@@ -231,10 +234,10 @@ struct AllCardsView: View {
     private var header: some View {
         HStack {
             VStack(alignment: .leading, spacing: 4) {
-                Text("Mes cartes")
+                Text(languageManager.text("cards.myCards"))
                     .font(.system(.largeTitle, design: .rounded, weight: .black))
                     .foregroundStyle(ink)
-                Text("\(progressManager.unlockedCards.count) / \(CardData.allCards.count) débloquées")
+                Text("\(progressManager.unlockedCards.count) / \(ContentCatalog.activeCards.count) \(languageManager.text("cards.unlocked"))")
                     .font(.system(.subheadline, design: .rounded, weight: .heavy))
                     .foregroundStyle(ink.opacity(0.55))
                     .monospacedDigit()
@@ -408,6 +411,7 @@ struct CollectibleCardArtView: View {
 }
 
 struct CardUnlockCelebrationView: View {
+    @Environment(LanguageManager.self) private var languageManager
     let event: CardUnlockEvent
     let onContinue: () -> Void
 
@@ -431,14 +435,14 @@ struct CardUnlockCelebrationView: View {
             VStack(spacing: 0) {
                 Spacer(minLength: 28)
 
-                Text("Carte débloquée !")
+                Text(languageManager.text("cards.unlocked.title"))
                     .font(.system(size: 40, weight: .black, design: .rounded))
                     .foregroundStyle(ink)
                     .multilineTextAlignment(.center)
                     .opacity(appeared ? 1 : 0)
                     .offset(y: appeared ? 0 : 16)
 
-                Text(event.card.rarity.displayName)
+                Text(event.card.rarity.localizedName(language: languageManager.current))
                     .font(.system(.headline, design: .rounded, weight: .black))
                     .foregroundStyle(ink.opacity(0.58))
                     .padding(.top, 8)
@@ -455,7 +459,7 @@ struct CardUnlockCelebrationView: View {
                 HStack(spacing: 10) {
                     Image(systemName: "star.fill")
                         .font(.system(size: 16, weight: .black))
-                    Text("+\(event.awardResult.awardedXP) XP globaux")
+                    Text(String(format: languageManager.text("cards.globalXP"), event.awardResult.awardedXP))
                         .font(.system(.headline, design: .rounded, weight: .black))
                         .monospacedDigit()
                 }
@@ -473,7 +477,7 @@ struct CardUnlockCelebrationView: View {
                     UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                     onContinue()
                 } label: {
-                    Text("Continuer")
+                    Text(languageManager.text("common.continue"))
                         .font(.system(.headline, design: .rounded, weight: .black))
                         .foregroundStyle(ink)
                         .frame(maxWidth: .infinity)
@@ -594,7 +598,7 @@ struct CardUnlockCelebrationView: View {
                     Text("SOPHIA")
                         .font(.system(.title, design: .rounded, weight: .black))
                         .tracking(3)
-                    Text("Tape pour révéler")
+                    Text(languageManager.text("cards.tapToReveal"))
                         .font(.system(.headline, design: .rounded, weight: .black))
                         .padding(.horizontal, 16)
                         .padding(.vertical, 9)

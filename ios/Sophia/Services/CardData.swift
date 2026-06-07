@@ -6,6 +6,16 @@ nonisolated enum CollectibleCardRarity: String, Codable, CaseIterable, Sendable 
     case epique = "Épique"
     case legendaire = "Légendaire"
 
+    init?(catalogKey: String) {
+        switch catalogKey {
+        case "commune": self = .commune
+        case "rare": self = .rare
+        case "epique": self = .epique
+        case "legendaire": self = .legendaire
+        default: return nil
+        }
+    }
+
     var xpReward: Int {
         switch self {
         case .commune: 10

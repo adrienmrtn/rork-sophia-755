@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @Environment(LanguageManager.self) private var languageManager
     let progressManager: ProgressManager
     let discountManager: DiscountOfferManager
     var isPremium: Bool = false
@@ -39,7 +40,7 @@ struct HomeView: View {
     }
 
     private func loadCards() {
-        let filtered = CourseData.allCourses
+        let filtered = ContentCatalog.activeCourses
             .filter { progressManager.courseStatus(for: $0.id) != .completed }
         cards = DeckBalancer.balancedDeck(
             courses: filtered,
@@ -102,6 +103,9 @@ struct HomeView: View {
             if let firstCard = cards.first, firstCard.id == courseId {
                 performAutoSwipe()
             }
+        }
+        .onChange(of: languageManager.current) { _, _ in
+            loadCards()
         }
     }
 
@@ -191,6 +195,7 @@ struct HomeView: View {
                 let subjectLocked = !isPremium && !unlockedSubjects.contains(course.subject)
                 FlashCard(
                     course: course,
+                    language: languageManager.current,
                     isFavorite: progressManager.isFavorite(course.id),
                     isSubjectLocked: subjectLocked,
                     onToggleFavorite: {
@@ -268,7 +273,7 @@ struct HomeView: View {
             HStack(spacing: 6) {
                 Image(systemName: "arrow.left")
                     .font(.caption)
-                Text("Passer")
+                Text(languageManager.text("home.skip"))
                     .font(.system(.caption, design: .rounded, weight: .semibold))
             }
             .foregroundStyle(ink.opacity(0.35))
@@ -278,7 +283,7 @@ struct HomeView: View {
                 .frame(width: 6, height: 6)
 
             HStack(spacing: 6) {
-                Text("Passer")
+                Text(languageManager.text("home.skip"))
                     .font(.system(.caption, design: .rounded, weight: .semibold))
                 Image(systemName: "arrow.right")
                     .font(.caption)
@@ -293,10 +298,10 @@ struct HomeView: View {
             Image(systemName: "checkmark.seal.fill")
                 .font(.system(size: 64))
                 .foregroundStyle(ink)
-            Text("Bravo !")
+            Text(languageManager.text("home.bravo"))
                 .font(.system(.largeTitle, design: .rounded, weight: .heavy))
                 .foregroundStyle(ink)
-            Text("Tu as terminé tous les cours disponibles.")
+            Text(languageManager.text("home.allCompleted"))
                 .font(.system(.body, design: .rounded, weight: .medium))
                 .foregroundStyle(ink.opacity(0.6))
                 .multilineTextAlignment(.center)
@@ -307,6 +312,7 @@ struct HomeView: View {
 
 struct FlashCard: View {
     let course: Course
+    var language: AppLanguage = .french
     var isFavorite: Bool = false
     var isSubjectLocked: Bool = false
     var onToggleFavorite: (() -> Void)? = nil
@@ -408,7 +414,7 @@ struct FlashCard: View {
                     HStack(spacing: 5) {
                         Image(systemName: "lock.fill")
                             .font(.system(size: 11, weight: .bold))
-                        Text("Verrouillé")
+                        Text(AppLocalizable.string("home.locked", language: language))
                             .font(.system(.caption2, design: .rounded, weight: .heavy))
                             .tracking(0.3)
                     }
@@ -428,7 +434,7 @@ struct FlashCard: View {
             HStack(spacing: 6) {
                 Text(course.subject.emoji)
                     .font(.system(size: 16))
-                Text(course.subject.shortName.uppercased())
+                Text(course.subject.localizedShortName(language: language).uppercased())
                     .font(.system(.caption, design: .rounded, weight: .heavy))
                     .foregroundStyle(.white)
                     .tracking(0.5)
@@ -455,7 +461,7 @@ struct FlashCard: View {
                 onStart()
             } label: {
                 HStack(spacing: 8) {
-                    Text("Commencer")
+                    Text(AppLocalizable.string("home.start", language: language))
                         .font(.system(.headline, design: .rounded, weight: .heavy))
                     Image(systemName: "play.fill")
                         .font(.subheadline.weight(.bold))
