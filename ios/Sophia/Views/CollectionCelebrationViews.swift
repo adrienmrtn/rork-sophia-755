@@ -85,33 +85,27 @@ struct CollectionProgressCelebrationView: View {
     }
 
     private var coverCard: some View {
-        ZStack(alignment: .top) {
-            RoundedRectangle(cornerRadius: 30, style: .continuous)
-                .fill(ink)
-                .offset(y: 8)
-
-            CollectionCoverView(collection: event.collection, accentIndex: CollectionData.allCollections.firstIndex(of: event.collection) ?? 0)
-                .aspectRatio(16 / 9, contentMode: .fit)
-                .clipShape(.rect(cornerRadius: 30))
-                .overlay {
-                    RoundedRectangle(cornerRadius: 30, style: .continuous)
-                        .strokeBorder(ink, lineWidth: 3.5)
+        CollectionCoverView(collection: event.collection, accentIndex: CollectionData.allCollections.firstIndex(of: event.collection) ?? 0)
+            .aspectRatio(16 / 9, contentMode: .fit)
+            .clipShape(.rect(cornerRadius: 30))
+            .overlay {
+                RoundedRectangle(cornerRadius: 30, style: .continuous)
+                    .strokeBorder(ink, lineWidth: 3.5)
+            }
+            .overlay(alignment: .bottomTrailing) {
+                ZStack {
+                    Circle()
+                        .fill(BrutalPalette.yellow)
+                        .overlay { Circle().strokeBorder(ink, lineWidth: 3) }
+                    Image(systemName: "plus")
+                        .font(.system(size: 22, weight: .black))
+                        .foregroundStyle(ink)
+                        .symbolEffect(.bounce, value: pulse)
                 }
-                .overlay(alignment: .bottomTrailing) {
-                    ZStack {
-                        Circle()
-                            .fill(BrutalPalette.yellow)
-                            .overlay { Circle().strokeBorder(ink, lineWidth: 3) }
-                        Image(systemName: "plus")
-                            .font(.system(size: 22, weight: .black))
-                            .foregroundStyle(ink)
-                            .symbolEffect(.bounce, value: pulse)
-                    }
-                    .frame(width: 58, height: 58)
-                    .offset(x: -14, y: 28)
-                }
-        }
-        .padding(.bottom, 8)
+                .frame(width: 58, height: 58)
+                .offset(x: -14, y: 28)
+            }
+            .brutalOffsetPlate(depth: 5, corner: 30)
     }
 
     private var progressCard: some View {
@@ -279,50 +273,44 @@ struct CollectionCompletedCelebrationView: View {
     }
 
     private var completedCard: some View {
-        ZStack(alignment: .top) {
-            RoundedRectangle(cornerRadius: 34, style: .continuous)
-                .fill(ink)
-                .offset(y: 9)
-
-            CollectionCoverView(collection: event.collection, accentIndex: CollectionData.allCollections.firstIndex(of: event.collection) ?? 0)
-                .aspectRatio(16 / 9, contentMode: .fit)
-                .clipShape(.rect(cornerRadius: 34))
-                .overlay {
-                    RoundedRectangle(cornerRadius: 34, style: .continuous)
-                        .strokeBorder(ink, lineWidth: 4)
-                }
-                .overlay {
-                    RadialGradient(
-                        colors: [BrutalPalette.yellow.opacity(glow ? 0.48 : 0.16), .clear],
-                        center: .center,
-                        startRadius: 20,
-                        endRadius: 190
-                    )
-                }
-                .overlay {
-                    VStack(spacing: 12) {
-                        ZStack {
-                            Circle()
-                                .fill(BrutalPalette.yellow)
-                                .overlay { Circle().strokeBorder(ink, lineWidth: 4) }
-                            Image(systemName: "checkmark.seal.fill")
-                                .font(.system(size: 54, weight: .black))
-                                .foregroundStyle(ink)
-                                .symbolEffect(.bounce, value: trophyBounce)
-                        }
-                        .frame(width: 112, height: 112)
-
-                        Text("Parcours complet")
-                            .font(.system(.title2, design: .rounded, weight: .black))
+        CollectionCoverView(collection: event.collection, accentIndex: CollectionData.allCollections.firstIndex(of: event.collection) ?? 0)
+            .aspectRatio(16 / 9, contentMode: .fit)
+            .clipShape(.rect(cornerRadius: 34))
+            .overlay {
+                RoundedRectangle(cornerRadius: 34, style: .continuous)
+                    .strokeBorder(ink, lineWidth: 4)
+            }
+            .overlay {
+                RadialGradient(
+                    colors: [BrutalPalette.yellow.opacity(glow ? 0.48 : 0.16), .clear],
+                    center: .center,
+                    startRadius: 20,
+                    endRadius: 190
+                )
+            }
+            .overlay {
+                VStack(spacing: 12) {
+                    ZStack {
+                        Circle()
+                            .fill(BrutalPalette.yellow)
+                            .overlay { Circle().strokeBorder(ink, lineWidth: 4) }
+                        Image(systemName: "checkmark.seal.fill")
+                            .font(.system(size: 54, weight: .black))
                             .foregroundStyle(ink)
-                            .padding(.horizontal, 16)
-                            .padding(.vertical, 8)
-                            .background(Color.white, in: Capsule())
-                            .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
+                            .symbolEffect(.bounce, value: trophyBounce)
                     }
+                    .frame(width: 112, height: 112)
+
+                    Text("Parcours complet")
+                        .font(.system(.title2, design: .rounded, weight: .black))
+                        .foregroundStyle(ink)
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 8)
+                        .background(Color.white, in: Capsule())
+                        .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
                 }
-        }
-        .padding(.bottom, 9)
+            }
+            .brutalOffsetPlate(depth: 5, corner: 34)
     }
 
     private var xpPill: some View {

@@ -256,7 +256,7 @@ struct CollectibleMiniCard: View {
 
     private static let width: CGFloat = 92
     private static let faceHeight: CGFloat = 154
-    private static let depth: CGFloat = 4
+    private static let depth: CGFloat = 3
 
     var body: some View {
         CollectibleCardArtView(card: card, unlocked: unlocked, compact: true)
@@ -272,65 +272,62 @@ struct CollectibleCardArtView: View {
     private let ink = BrutalPalette.ink
 
     var body: some View {
-        let depth: CGFloat = compact ? 4 : 6
+        let depth: CGFloat = compact ? 3 : 4
         let corner: CGFloat = compact ? 14 : 22
 
-        return ZStack(alignment: .top) {
-            RoundedRectangle(cornerRadius: corner, style: .continuous)
-                .fill(ink)
-                .offset(y: depth)
-
-            VStack(spacing: 0) {
-                art
-                    .frame(height: compact ? 86 : 150)
-                    .overlay(alignment: .topTrailing) {
-                        rarityBadge
-                            .padding(compact ? 6 : 9)
-                    }
-                    .overlay(alignment: .bottom) {
-                        Rectangle().fill(ink).frame(height: compact ? 2 : 3)
-                    }
-
-                VStack(alignment: .leading, spacing: compact ? 3 : 7) {
-                    Text(card.name)
-                        .font(.system(compact ? .caption : .subheadline, design: .rounded, weight: .black))
-                        .foregroundStyle(ink.opacity(unlocked ? 1 : 0.62))
-                        .lineLimit(2, reservesSpace: true)
-                        .multilineTextAlignment(.leading)
-
-                    Text(card.rarity.rawValue)
-                        .font(.system(.caption2, design: .rounded, weight: .black))
-                        .foregroundStyle(ink.opacity(0.55))
+        return VStack(spacing: 0) {
+            art
+                .overlay(alignment: .topTrailing) {
+                    rarityBadge
+                        .padding(compact ? 6 : 9)
                 }
-                .frame(maxWidth: .infinity, maxHeight: compact ? .infinity : nil, alignment: .topLeading)
-                .padding(.horizontal, compact ? 8 : 12)
-                .padding(.vertical, compact ? 8 : 12)
-                .background(card.rarity.primaryColor.opacity(unlocked ? 1 : 0.55))
+                .overlay(alignment: .bottom) {
+                    Rectangle().fill(ink).frame(height: compact ? 2 : 3)
+                }
+
+            VStack(alignment: .leading, spacing: compact ? 3 : 7) {
+                Text(card.name)
+                    .font(.system(compact ? .caption : .subheadline, design: .rounded, weight: .black))
+                    .foregroundStyle(ink.opacity(unlocked ? 1 : 0.62))
+                    .lineLimit(2, reservesSpace: true)
+                    .multilineTextAlignment(.leading)
+
+                Text(card.rarity.rawValue)
+                    .font(.system(.caption2, design: .rounded, weight: .black))
+                    .foregroundStyle(ink.opacity(0.55))
             }
-            .background(Color.white)
-            .clipShape(.rect(cornerRadius: corner))
-            .overlay {
-                RoundedRectangle(cornerRadius: corner, style: .continuous)
-                    .strokeBorder(ink, lineWidth: compact ? 2 : 3)
-            }
-            .frame(height: compact ? 154 : nil, alignment: .top)
-            .opacity(unlocked ? 1 : 0.72)
+            .frame(maxWidth: .infinity, maxHeight: compact ? .infinity : nil, alignment: .topLeading)
+            .padding(.horizontal, compact ? 8 : 12)
+            .padding(.vertical, compact ? 8 : 12)
+            .background(card.rarity.primaryColor.opacity(unlocked ? 1 : 0.55))
         }
-        .padding(.bottom, depth)
+        .background(Color.white)
+        .clipShape(.rect(cornerRadius: corner))
+        .overlay {
+            RoundedRectangle(cornerRadius: corner, style: .continuous)
+                .strokeBorder(ink, lineWidth: compact ? 2 : 3)
+        }
+        .frame(height: compact ? 154 : nil, alignment: .top)
+        .opacity(unlocked ? 1 : 0.72)
+        .brutalOffsetPlate(depth: depth, corner: corner)
     }
 
     @ViewBuilder
     private var art: some View {
-        if unlocked, let image = UIImage(named: card.imageAssetName) {
-            Image(uiImage: image)
-                .resizable()
-                .scaledToFill()
-                .clipped()
-        } else if unlocked {
-            fallbackArt
-        } else {
-            lockedArt
+        Group {
+            if unlocked, let image = UIImage(named: card.imageAssetName) {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFill()
+            } else if unlocked {
+                fallbackArt
+            } else {
+                lockedArt
+            }
         }
+        .frame(maxWidth: .infinity)
+        .frame(height: compact ? 86 : 150)
+        .clipped()
     }
 
     private var fallbackArt: some View {
@@ -473,64 +470,61 @@ struct CardUnlockCelebrationView: View {
     }
 
     private var unlockCardFace: some View {
-        ZStack(alignment: .top) {
-            RoundedRectangle(cornerRadius: 24, style: .continuous)
-                .fill(ink)
-                .offset(y: 4)
-
-            VStack(spacing: 0) {
-                unlockArt
-                    .frame(height: 224)
-                    .overlay(alignment: .topTrailing) {
-                        rarityBadge
-                            .padding(10)
-                    }
-                    .overlay(alignment: .bottom) {
-                        Rectangle().fill(ink).frame(height: 3)
-                    }
-
-                VStack(alignment: .leading, spacing: 8) {
-                    Text(event.card.name)
-                        .font(.system(.headline, design: .rounded, weight: .black))
-                        .foregroundStyle(ink)
-                        .lineLimit(2, reservesSpace: true)
-                        .multilineTextAlignment(.leading)
-
-                    Text(event.card.rarity.rawValue)
-                        .font(.system(.subheadline, design: .rounded, weight: .black))
-                        .foregroundStyle(ink.opacity(0.58))
+        VStack(spacing: 0) {
+            unlockArt
+                .overlay(alignment: .topTrailing) {
+                    rarityBadge
+                        .padding(10)
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-                .padding(.horizontal, 14)
-                .padding(.vertical, 14)
-                .background(event.card.rarity.primaryColor)
+                .overlay(alignment: .bottom) {
+                    Rectangle().fill(ink).frame(height: 3)
+                }
+
+            VStack(alignment: .leading, spacing: 8) {
+                Text(event.card.name)
+                    .font(.system(.headline, design: .rounded, weight: .black))
+                    .foregroundStyle(ink)
+                    .lineLimit(2, reservesSpace: true)
+                    .multilineTextAlignment(.leading)
+
+                Text(event.card.rarity.rawValue)
+                    .font(.system(.subheadline, design: .rounded, weight: .black))
+                    .foregroundStyle(ink.opacity(0.58))
             }
-            .frame(width: 260, height: 360)
-            .background(Color.white)
-            .clipShape(.rect(cornerRadius: 24))
-            .overlay {
-                RoundedRectangle(cornerRadius: 24, style: .continuous)
-                    .strokeBorder(ink, lineWidth: 4)
-            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+            .padding(.horizontal, 14)
+            .padding(.vertical, 14)
+            .background(event.card.rarity.primaryColor)
         }
-        .padding(.bottom, 4)
+        .frame(width: 260, height: 360)
+        .background(Color.white)
+        .clipShape(.rect(cornerRadius: 24))
+        .overlay {
+            RoundedRectangle(cornerRadius: 24, style: .continuous)
+                .strokeBorder(ink, lineWidth: 4)
+        }
+        .brutalOffsetPlate(depth: 4, corner: 24)
     }
 
     @ViewBuilder
     private var unlockArt: some View {
-        if let image = UIImage(named: event.card.imageAssetName) {
-            Image(uiImage: image)
-                .resizable()
-                .scaledToFill()
-                .clipped()
-        } else {
-            ZStack {
-                LinearGradient(colors: [event.card.rarity.primaryColor, event.card.rarity.secondaryColor], startPoint: .topLeading, endPoint: .bottomTrailing)
-                Image(systemName: "person.crop.circle.fill")
-                    .font(.system(size: 86, weight: .black))
-                    .foregroundStyle(ink.opacity(0.45))
+        Group {
+            if let image = UIImage(named: event.card.imageAssetName) {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFill()
+            } else {
+                ZStack {
+                    LinearGradient(colors: [event.card.rarity.primaryColor, event.card.rarity.secondaryColor], startPoint: .topLeading, endPoint: .bottomTrailing)
+                    Image(systemName: "person.crop.circle.fill")
+                        .font(.system(size: 86, weight: .black))
+                        .foregroundStyle(ink.opacity(0.45))
+                }
             }
         }
+        .frame(maxWidth: .infinity)
+        .frame(height: 224)
+        .clipped()
     }
 
     private var rarityBadge: some View {
@@ -543,37 +537,31 @@ struct CardUnlockCelebrationView: View {
     }
 
     private var cardBack: some View {
-        ZStack(alignment: .top) {
-            RoundedRectangle(cornerRadius: 24, style: .continuous)
-                .fill(ink)
-                .offset(y: 4)
-
-            RoundedRectangle(cornerRadius: 24, style: .continuous)
-                .fill(LinearGradient(colors: [event.card.rarity.secondaryColor, event.card.rarity.primaryColor], startPoint: .topLeading, endPoint: .bottomTrailing))
-                .overlay {
-                    RoundedRectangle(cornerRadius: 24, style: .continuous)
-                        .strokeBorder(ink, lineWidth: 4)
+        RoundedRectangle(cornerRadius: 24, style: .continuous)
+            .fill(LinearGradient(colors: [event.card.rarity.secondaryColor, event.card.rarity.primaryColor], startPoint: .topLeading, endPoint: .bottomTrailing))
+            .overlay {
+                RoundedRectangle(cornerRadius: 24, style: .continuous)
+                    .strokeBorder(ink, lineWidth: 4)
+            }
+            .overlay {
+                VStack(spacing: 16) {
+                    Image(systemName: "sparkles.rectangle.stack.fill")
+                        .font(.system(size: 64, weight: .black))
+                    Text("SOPHIA")
+                        .font(.system(.title, design: .rounded, weight: .black))
+                        .tracking(3)
+                    Text("Tape pour révéler")
+                        .font(.system(.headline, design: .rounded, weight: .black))
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 9)
+                        .background(Color.white, in: Capsule())
+                        .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
+                        .scaleEffect(promptPulse ? 1.05 : 0.96)
                 }
-                .overlay {
-                    VStack(spacing: 16) {
-                        Image(systemName: "sparkles.rectangle.stack.fill")
-                            .font(.system(size: 64, weight: .black))
-                        Text("SOPHIA")
-                            .font(.system(.title, design: .rounded, weight: .black))
-                            .tracking(3)
-                        Text("Tape pour révéler")
-                            .font(.system(.headline, design: .rounded, weight: .black))
-                            .padding(.horizontal, 16)
-                            .padding(.vertical, 9)
-                            .background(Color.white, in: Capsule())
-                            .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
-                            .scaleEffect(promptPulse ? 1.05 : 0.96)
-                    }
-                    .foregroundStyle(ink)
-                }
-        }
-        .frame(width: 260, height: 360)
-        .padding(.bottom, 4)
+                .foregroundStyle(ink)
+            }
+            .frame(width: 260, height: 360)
+            .brutalOffsetPlate(depth: 4, corner: 24)
     }
 
     private func runSequence() {

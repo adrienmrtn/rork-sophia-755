@@ -30,6 +30,16 @@ extension View {
     func brutalOnboardingCard(depth: CGFloat = 4, corner: CGFloat = 18, borderWidth: CGFloat = 2.5) -> some View {
         modifier(BrutalOnboardingCard(depth: depth, corner: corner, borderWidth: borderWidth))
     }
+
+    /// Solid offset plate sized to the content — avoids ZStack plates expanding with parent layout.
+    func brutalOffsetPlate(depth: CGFloat = 4, corner: CGFloat = 18) -> some View {
+        background(alignment: .top) {
+            RoundedRectangle(cornerRadius: corner, style: .continuous)
+                .fill(BrutalPalette.ink)
+                .offset(y: depth)
+        }
+        .padding(.bottom, depth)
+    }
 }
 
 // MARK: - Duolingo-style 3D pink capsule button
