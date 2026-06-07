@@ -1,17 +1,18 @@
 import SwiftUI
 
 struct OnboardingInterestsScreen: View {
+    @Environment(LanguageManager.self) private var languageManager
     @Bindable var viewModel: OnboardingViewModel
     let onNext: () -> Void
     @State private var appeared: Bool = true
 
-    private let interests: [(label: String, icon: String, imageId: String, color: Color)] = [
-        ("Histoire", "building.columns", "course_12_la_strategie_de_napoleon_a_ulm_1805", Color(red: 1.0, green: 0.86, blue: 0.62)),
-        ("Sciences", "atom", "course_67_qu_est_ce_qu_un_trou_noir", Color(red: 0.70, green: 0.95, blue: 0.80)),
-        ("Littérature", "book.closed", "course_97_le_mythe_de_sisyphe_camus", Color(red: 1.0, green: 0.78, blue: 0.78)),
-        ("Art", "paintpalette", "course_150_la_nuit_etoilee_van_gogh", Color(red: 0.66, green: 0.92, blue: 0.96)),
-        ("Mythologie", "bolt.fill", "course_162_promethee_le_voleur_de_feu", Color(red: 0.82, green: 0.78, blue: 1.0)),
-        ("Monde actuel", "globe.europe.africa", "course_204_le_concept_de_monde_multipolaire", Color(red: 0.74, green: 0.90, blue: 1.0)),
+    private let interests: [(subject: Subject, icon: String, imageId: String, color: Color)] = [
+        (.histoire, "building.columns", "course_12_la_strategie_de_napoleon_a_ulm_1805", Color(red: 1.0, green: 0.86, blue: 0.62)),
+        (.sciences, "atom", "course_67_qu_est_ce_qu_un_trou_noir", Color(red: 0.70, green: 0.95, blue: 0.80)),
+        (.litterature, "book.closed", "course_97_le_mythe_de_sisyphe_camus", Color(red: 1.0, green: 0.78, blue: 0.78)),
+        (.art, "paintpalette", "course_150_la_nuit_etoilee_van_gogh", Color(red: 0.66, green: 0.92, blue: 0.96)),
+        (.mythologie, "bolt.fill", "course_162_promethee_le_voleur_de_feu", Color(red: 0.82, green: 0.78, blue: 1.0)),
+        (.comprendreLeMonde, "globe.europe.africa", "course_204_le_concept_de_monde_multipolaire", Color(red: 0.74, green: 0.90, blue: 1.0)),
     ]
 
     private let columns = [
@@ -46,9 +47,10 @@ struct OnboardingInterestsScreen: View {
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 12) {
                         ForEach(Array(interests.enumerated()), id: \.offset) { i, interest in
-                            let isSelected = viewModel.interests.contains(interest.label)
+                            let key = interest.subject.storageKey
+                            let isSelected = viewModel.interests.contains(key)
                             InterestCard(
-                                label: interest.label,
+                                label: interest.subject.localizedShortName(language: languageManager.current),
                                 icon: interest.icon,
                                 imageId: interest.imageId,
                                 color: interest.color,
@@ -56,7 +58,7 @@ struct OnboardingInterestsScreen: View {
                             ) {
                                 OnboardingHaptics.selection()
                                 withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
-                                    viewModel.toggleInterest(interest.label)
+                                    viewModel.toggleInterest(key)
                                 }
                             }
                             .opacity(appeared ? 1 : 0)

@@ -2,6 +2,7 @@ import SwiftUI
 import RevenueCatUI
 
 struct ContentView: View {
+    @Environment(LanguageManager.self) private var languageManager
     var onResetOnboarding: (() -> Void)? = nil
 
     @State private var progressManager = ProgressManager()
@@ -18,7 +19,7 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             TabView(selection: $selectedTab) {
-                Tab("Home", systemImage: "house.fill", value: 0) {
+                Tab(languageManager.text("tab.home"), systemImage: "house.fill", value: 0) {
                     HomeView(
                         progressManager: progressManager,
                         discountManager: discountManager,
@@ -37,7 +38,7 @@ struct ContentView: View {
                     )
                 }
 
-                Tab("Biblio", systemImage: "books.vertical.fill", value: 1) {
+                Tab(languageManager.text("tab.library"), systemImage: "books.vertical.fill", value: 1) {
                     LibraryView(
                         progressManager: progressManager,
                         isPremium: storeVM.isPremium,
@@ -49,7 +50,7 @@ struct ContentView: View {
                     )
                 }
 
-                Tab("Profil", systemImage: "person.fill", value: 2) {
+                Tab(languageManager.text("tab.profile"), systemImage: "person.fill", value: 2) {
                     ProfileView(
                         progressManager: progressManager,
                         store: storeVM,

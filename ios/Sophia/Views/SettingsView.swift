@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @Environment(LanguageManager.self) private var languageManager
     let progressManager: ProgressManager
     let store: StoreViewModel
     var onShowPaywall: (() -> Void)? = nil
@@ -30,7 +31,7 @@ struct SettingsView: View {
                     VStack(alignment: .leading, spacing: 24) {
                         // Title + optional close
                         HStack {
-                            Text("Options")
+                            Text(languageManager.text("settings.title"))
                                 .font(.system(.largeTitle, design: .rounded, weight: .heavy))
                                 .foregroundStyle(ink)
                             Spacer()
@@ -49,22 +50,48 @@ struct SettingsView: View {
                         .padding(.horizontal, 20)
                         .padding(.top, 4)
 
+                        sectionHeader(languageManager.text("language.section"))
+                        VStack(spacing: 0) {
+                            HStack {
+                                Text(languageManager.text("language.french"))
+                                    .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                                    .foregroundStyle(ink)
+                                Spacer()
+                                Text(languageManager.text("language.english"))
+                                    .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                                    .foregroundStyle(ink)
+                            }
+                            .padding(.horizontal, 14)
+                            .padding(.top, 14)
+                            .padding(.bottom, 8)
+
+                            HStack {
+                                Spacer()
+                                LanguagePickerControl()
+                                Spacer()
+                            }
+                            .padding(.horizontal, 14)
+                            .padding(.bottom, 14)
+                        }
+                        .brutalCard()
+                        .padding(.horizontal, 20)
+
                         // Progression
-                        sectionHeader("Progression")
+                        sectionHeader(languageManager.text("settings.section.progress"))
                         VStack(spacing: 0) {
                             statRow(
                                 icon: "trophy.fill",
                                 iconBg: BrutalPalette.pastel(for: .histoire),
-                                title: "\(progressManager.completedCount) cours terminés",
-                                subtitle: "sur \(CourseData.allCourses.count) disponibles"
+                                title: String(format: languageManager.text("settings.courses.completed"), progressManager.completedCount),
+                                subtitle: String(format: languageManager.text("settings.courses.available"), ContentCatalog.activeCourses.count)
                             )
                             if progressManager.streak > 0 {
                                 divider
                                 statRow(
                                     icon: "flame.fill",
                                     iconBg: BrutalPalette.pink,
-                                    title: "\(progressManager.streak) jours de suite",
-                                    subtitle: "Continue comme ça !"
+                                    title: String(format: languageManager.text("settings.streak.title"), progressManager.streak),
+                                    subtitle: languageManager.text("settings.streak.subtitle")
                                 )
                             }
                         }
@@ -73,7 +100,7 @@ struct SettingsView: View {
 
                         // Premium
                         if !store.isPremium {
-                            sectionHeader("Premium")
+                            sectionHeader(languageManager.text("settings.section.premium"))
                             Button {
                                 hapticTrigger += 1
                                 onShowPaywall?()
@@ -81,10 +108,10 @@ struct SettingsView: View {
                                 HStack(spacing: 14) {
                                     iconBadge(name: "crown.fill", bg: Color(red: 1.0, green: 0.86, blue: 0.4))
                                     VStack(alignment: .leading, spacing: 2) {
-                                        Text("Passer à Premium")
+                                        Text(languageManager.text("settings.premium.title"))
                                             .font(.system(.headline, design: .rounded, weight: .heavy))
                                             .foregroundStyle(ink)
-                                        Text("Cours et quiz illimités")
+                                        Text(languageManager.text("settings.premium.subtitle"))
                                             .font(.system(.caption, design: .rounded, weight: .semibold))
                                             .foregroundStyle(ink.opacity(0.55))
                                     }
@@ -102,12 +129,12 @@ struct SettingsView: View {
                         }
 
                         // Data
-                        sectionHeader("Données")
+                        sectionHeader(languageManager.text("settings.section.data"))
                         VStack(spacing: 0) {
                             actionRow(
                                 icon: "arrow.counterclockwise",
                                 iconBg: Color(red: 1.0, green: 0.78, blue: 0.78),
-                                title: "Réinitialiser la progression",
+                                title: languageManager.text("settings.reset.title"),
                                 destructive: true
                             ) {
                                 hapticTrigger += 1
@@ -118,12 +145,12 @@ struct SettingsView: View {
                         .padding(.horizontal, 20)
 
                         // Legal
-                        sectionHeader("Légal")
+                        sectionHeader(languageManager.text("settings.section.legal"))
                         VStack(spacing: 0) {
                             actionRow(
                                 icon: "doc.text.fill",
                                 iconBg: BrutalPalette.pastel(for: .art),
-                                title: "Conditions générales"
+                                title: languageManager.text("settings.terms.title")
                             ) {
                                 hapticTrigger += 1
                                 showTerms = true
@@ -132,7 +159,7 @@ struct SettingsView: View {
                             actionRow(
                                 icon: "hand.raised.fill",
                                 iconBg: BrutalPalette.pastel(for: .mythologie),
-                                title: "Politique de confidentialité"
+                                title: languageManager.text("settings.privacy.title")
                             ) {
                                 hapticTrigger += 1
                                 showPrivacy = true
@@ -142,7 +169,7 @@ struct SettingsView: View {
                                 actionRow(
                                     icon: "arrow.clockwise",
                                     iconBg: BrutalPalette.pastel(for: .sciences),
-                                    title: "Restaurer les achats"
+                                    title: languageManager.text("settings.restore.title")
                                 ) {
                                     hapticTrigger += 1
                                     Task { await store.restore() }
@@ -153,23 +180,23 @@ struct SettingsView: View {
                         .padding(.horizontal, 20)
 
                         // About
-                        sectionHeader("À propos")
+                        sectionHeader(languageManager.text("settings.section.about"))
                         VStack(spacing: 0) {
-                            infoRow(label: "Version", value: appVersionString)
+                            infoRow(label: languageManager.text("settings.about.version"), value: appVersionString)
                             divider
-                            infoRow(label: "Cours disponibles", value: "\(CourseData.allCourses.count)")
+                            infoRow(label: languageManager.text("settings.about.courses"), value: "\(ContentCatalog.activeCourses.count)")
                         }
                         .brutalCard()
                         .padding(.horizontal, 20)
 
                         #if DEBUG
-                        sectionHeader("Développeur")
+                        sectionHeader(languageManager.text("settings.section.developer"))
                         VStack(spacing: 0) {
                             if onResetOnboarding != nil {
                                 actionRow(
                                     icon: "arrow.triangle.2.circlepath",
                                     iconBg: Color(red: 1.0, green: 0.78, blue: 0.78),
-                                    title: "Refaire l'onboarding"
+                                    title: languageManager.text("settings.debug.resetOnboarding")
                                 ) {
                                     hapticTrigger += 1
                                     showResetOnboardingAlert = true
@@ -179,8 +206,10 @@ struct SettingsView: View {
                             actionRow(
                                 icon: "calendar.badge.minus",
                                 iconBg: Color(red: 1.0, green: 0.86, blue: 0.55),
-                                title: "Reset cours du jour",
-                                subtitle: progressManager.hasCompletedCourseToday ? "Fait aujourd'hui" : "Pas encore fait"
+                                title: languageManager.text("settings.debug.resetDaily"),
+                                subtitle: progressManager.hasCompletedCourseToday
+                                    ? languageManager.text("settings.debug.daily.done")
+                                    : languageManager.text("settings.debug.daily.pending")
                             ) {
                                 hapticTrigger += 1
                                 progressManager.resetDailyCourseFlag()
@@ -190,7 +219,7 @@ struct SettingsView: View {
                         .padding(.horizontal, 20)
                         #endif
 
-                        Text("Made with ♥ — Sophia")
+                        Text(languageManager.text("settings.footer"))
                             .font(.system(.caption, design: .rounded, weight: .heavy))
                             .foregroundStyle(ink.opacity(0.4))
                             .frame(maxWidth: .infinity, alignment: .center)
@@ -201,21 +230,21 @@ struct SettingsView: View {
             }
             .navigationBarHidden(true)
             .sensoryFeedback(.impact(weight: .light), trigger: hapticTrigger)
-            .alert("Réinitialiser ?", isPresented: $showResetAlert) {
-                Button("Annuler", role: .cancel) { }
-                Button("Réinitialiser", role: .destructive) {
+            .alert(languageManager.text("settings.reset.alert.title"), isPresented: $showResetAlert) {
+                Button(languageManager.text("settings.reset.alert.cancel"), role: .cancel) { }
+                Button(languageManager.text("settings.reset.alert.confirm"), role: .destructive) {
                     progressManager.resetProgress()
                 }
             } message: {
-                Text("Toute ta progression sera effacée. Cette action est irréversible.")
+                Text(languageManager.text("settings.reset.alert.message"))
             }
-            .alert("Refaire l'onboarding ?", isPresented: $showResetOnboardingAlert) {
-                Button("Annuler", role: .cancel) { }
-                Button("Relancer", role: .destructive) {
+            .alert(languageManager.text("settings.onboarding.alert.title"), isPresented: $showResetOnboardingAlert) {
+                Button(languageManager.text("settings.reset.alert.cancel"), role: .cancel) { }
+                Button(languageManager.text("settings.onboarding.alert.confirm"), role: .destructive) {
                     onResetOnboarding?()
                 }
             } message: {
-                Text("L'onboarding sera relancé depuis le début (DEBUG uniquement).")
+                Text(languageManager.text("settings.onboarding.alert.message"))
             }
             .sheet(isPresented: $showTerms) {
                 TermsView()

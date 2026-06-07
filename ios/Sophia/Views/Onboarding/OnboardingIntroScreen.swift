@@ -2,6 +2,7 @@ import SwiftUI
 import AVKit
 
 struct OnboardingIntroScreen: View {
+    @Environment(LanguageManager.self) private var languageManager
     let onNext: () -> Void
     @State private var appeared: Bool = true
     @State private var titleOffset: CGFloat = 40
@@ -14,7 +15,7 @@ struct OnboardingIntroScreen: View {
     private let videoCropOffset: CGFloat = 36
 
     var body: some View {
-        ZStack {
+        ZStack(alignment: .topTrailing) {
             BrutalPalette.cream
 
             VStack(spacing: 0) {
@@ -62,7 +63,7 @@ struct OnboardingIntroScreen: View {
                     .allowsHitTesting(false)
                 }
 
-                Text("Deviens cultivé\nen 10 minutes\npar jour")
+                Text(languageManager.text("onboarding.intro.title"))
                     .font(.system(.title, design: .rounded, weight: .heavy))
                     .foregroundStyle(BrutalPalette.ink)
                     .multilineTextAlignment(.center)
@@ -79,7 +80,7 @@ struct OnboardingIntroScreen: View {
                     onNext()
                 } label: {
                     HStack(spacing: 10) {
-                        Text("Commencer")
+                        Text(languageManager.text("onboarding.intro.cta"))
                             .font(.system(.headline, design: .rounded, weight: .heavy))
                         Image(systemName: "arrow.right")
                             .font(.subheadline.weight(.heavy))
@@ -95,6 +96,11 @@ struct OnboardingIntroScreen: View {
                 .opacity(appeared ? 1 : 0)
                 .offset(y: appeared ? 0 : 30)
             }
+
+            LanguagePickerControl()
+                .padding(.top, 12)
+                .padding(.trailing, 20)
+                .opacity(appeared ? 1 : 0)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(BrutalPalette.cream)
