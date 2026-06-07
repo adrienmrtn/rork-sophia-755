@@ -156,11 +156,30 @@ struct BrutalSelectableRow: View {
     }
 }
 
+/// Plan/paywall card — label draws the full face; style only adds the offset plate.
+struct PlanCardButtonStyle: ButtonStyle {
+    var depth: CGFloat = 3
+
+    func makeBody(configuration: Configuration) -> some View {
+        let pressed = configuration.isPressed
+        configuration.label
+            .offset(y: pressed ? depth : 0)
+            .background(alignment: .top) {
+                RoundedRectangle(cornerRadius: 14, style: .continuous)
+                    .fill(BrutalPalette.ink)
+                    .offset(y: depth)
+            }
+            .padding(.bottom, depth)
+            .animation(.spring(response: 0.18, dampingFraction: 0.7), value: pressed)
+    }
+}
+
 /// Row button style: white card by default, pastel-tinted when selected, with solid offset shadow that compresses on press.
 struct BrutalRowButtonStyle: ButtonStyle {
     var isSelected: Bool = false
     var accentColor: Color = BrutalPalette.pink
     var depth: CGFloat = 3
+    var corner: CGFloat = 14
 
     func makeBody(configuration: Configuration) -> some View {
         let pressed = configuration.isPressed
@@ -168,13 +187,13 @@ struct BrutalRowButtonStyle: ButtonStyle {
             .offset(y: pressed ? depth : 0)
             .background(
                 ZStack(alignment: .top) {
-                    RoundedRectangle(cornerRadius: 14, style: .continuous)
+                    RoundedRectangle(cornerRadius: corner, style: .continuous)
                         .fill(BrutalPalette.ink)
                         .offset(y: depth)
-                    RoundedRectangle(cornerRadius: 14, style: .continuous)
+                    RoundedRectangle(cornerRadius: corner, style: .continuous)
                         .fill(isSelected ? accentColor : Color.white)
                         .overlay {
-                            RoundedRectangle(cornerRadius: 14, style: .continuous)
+                            RoundedRectangle(cornerRadius: corner, style: .continuous)
                                 .strokeBorder(BrutalPalette.ink, lineWidth: 2.5)
                         }
                         .offset(y: pressed ? depth : 0)

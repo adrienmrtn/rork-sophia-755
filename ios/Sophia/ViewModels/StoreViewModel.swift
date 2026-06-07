@@ -80,4 +80,33 @@ class StoreViewModel {
     var promoPackage: Package? {
         offerings?.offering(identifier: "special_promo")?.package(identifier: "$rc_annual")
     }
+
+    /// Logs current offering packages and whether StoreKit reports an intro offer (for trial diagnostics).
+    func logOnboardingPurchaseDiagnostics() {
+        guard let offerings else {
+            print("[OnboardingPaywall] offerings is nil — fetchOfferings may have failed: \(error ?? "unknown")")
+            return
+        }
+
+        let available = offerings.all.keys.sorted().joined(separator: ", ")
+        let currentID = offerings.current?.identifier ?? "nil"
+        print("[OnboardingPaywall] RC offerings available: [\(available)] — current: \(currentID)")
+
+        for (label, package) in [("annual", annualPackage), ("monthly", monthlyPackage)] {
+            guard let package else {
+                print("[OnboardingPaywall] \(label) package missing in current offering '\(currentID)'")
+                continue
+            }
+            let product = package.storeProduct
+            let intro = product.introductoryDiscount
+            let introSummary: String
+            if let intro {
+                let period = intro.subscriptionPeriod
+                introSummary = "\(intro.paymentMode) \(intro.numberOfPeriods)x \(period.value) \(period.unit) @ \(intro.localizedPriceString)"
+            } else {
+                introSummary = "none (check App Store intro offer + RC product link, or sandbox trial already consumed)"
+            }
+            print("[OnboardingPaywall] \(label) id=\(package.identifier) price=\(product.localizedPriceString) intro=\(introSummary)")
+        }
+    }
 }
