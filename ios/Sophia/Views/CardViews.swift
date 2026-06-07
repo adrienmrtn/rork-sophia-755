@@ -240,6 +240,30 @@ struct AllCardsView: View {
     }
 }
 
+/// Fills a card illustration slot edge-to-edge; slight overscale crops baked-in margins in assets.
+private struct CardArtFillImage: View {
+    let assetName: String
+    var overscale: CGFloat = 1.1
+    var backdrop: Color
+
+    var body: some View {
+        GeometryReader { geo in
+            ZStack {
+                backdrop
+                if let image = UIImage(named: assetName) {
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFill()
+                        .scaleEffect(overscale)
+                        .frame(width: geo.size.width, height: geo.size.height)
+                        .position(x: geo.size.width / 2, y: geo.size.height / 2)
+                }
+            }
+        }
+        .clipped()
+    }
+}
+
 struct CollectibleCardTile: View {
     let card: CollectibleCard
     let unlocked: Bool
@@ -315,7 +339,12 @@ struct CollectibleCardArtView: View {
     @ViewBuilder
     private var art: some View {
         Group {
-            if unlocked, let image = UIImage(named: card.imageAssetName) {
+            if unlocked, compact {
+                CardArtFillImage(
+                    assetName: card.imageAssetName,
+                    backdrop: card.rarity.secondaryColor.opacity(0.35)
+                )
+            } else if unlocked, let image = UIImage(named: card.imageAssetName) {
                 Image(uiImage: image)
                     .resizable()
                     .scaledToFill()
@@ -480,15 +509,16 @@ struct CardUnlockCelebrationView: View {
                     Rectangle().fill(ink).frame(height: 3)
                 }
 
-            VStack(alignment: .leading, spacing: 8) {
+            VStack(alignment: .leading, spacing: 6) {
                 Text(event.card.name)
-                    .font(.system(.headline, design: .rounded, weight: .black))
+                    .font(.system(size: 24, weight: .black, design: .rounded))
                     .foregroundStyle(ink)
                     .lineLimit(2, reservesSpace: true)
                     .multilineTextAlignment(.leading)
+                    .minimumScaleFactor(0.85)
 
                 Text(event.card.rarity.rawValue)
-                    .font(.system(.subheadline, design: .rounded, weight: .black))
+                    .font(.system(size: 18, weight: .black, design: .rounded))
                     .foregroundStyle(ink.opacity(0.58))
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
@@ -509,10 +539,11 @@ struct CardUnlockCelebrationView: View {
     @ViewBuilder
     private var unlockArt: some View {
         Group {
-            if let image = UIImage(named: event.card.imageAssetName) {
-                Image(uiImage: image)
-                    .resizable()
-                    .scaledToFill()
+            if UIImage(named: event.card.imageAssetName) != nil {
+                CardArtFillImage(
+                    assetName: event.card.imageAssetName,
+                    backdrop: event.card.rarity.secondaryColor.opacity(0.35)
+                )
             } else {
                 ZStack {
                     LinearGradient(colors: [event.card.rarity.primaryColor, event.card.rarity.secondaryColor], startPoint: .topLeading, endPoint: .bottomTrailing)
