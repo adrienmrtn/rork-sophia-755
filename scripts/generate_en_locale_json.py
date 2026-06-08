@@ -21,7 +21,8 @@ from import_content_from_csv import (  # noqa: E402
 )
 
 COURSE_DATA = ROOT / "ios/Sophia/Services/CourseData.swift"
-DEFAULT_OUT = ROOT / "ios/Sophia/Locales/en"
+LOCALE_BUNDLE_DIR = ROOT / "ios/Sophia/Resources/Locales"
+DEFAULT_LANG = "en"
 
 SUBJECT_EN_MAP = {
     "History": "histoire",
@@ -324,6 +325,12 @@ def write_json(path: Path, payload: object) -> None:
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+def write_locale_bundle(lang: str, name: str, payload: object) -> Path:
+    path = LOCALE_BUNDLE_DIR / f"{name}.{lang}.json"
+    write_json(path, payload)
+    return path
+
+
 def parse_args() -> argparse.Namespace:
     source = ROOT / "content/locales/en/source"
     parser = argparse.ArgumentParser()
@@ -332,7 +339,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--glossary-csv", type=Path, default=source / "Glossaire_culture_generale_modifie_EN_96bc.csv")
     parser.add_argument("--collections-csv", type=Path, default=source / "Collections_EN_23b7.csv")
     parser.add_argument("--cards-csv", type=Path, default=source / "Cartes_EN_c174.csv")
-    parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUT)
+    parser.add_argument("--lang", default=DEFAULT_LANG)
     return parser.parse_args()
 
 
@@ -349,17 +356,21 @@ def main() -> None:
     collections = build_collections_json(args.collections_csv, en_title_to_id)
     cards = build_cards_json(args.cards_csv, en_title_to_id)
 
-    out = args.output_dir
-    write_json(out / "courses.json", courses)
-    write_json(out / "glossary.json", glossary)
-    write_json(out / "collections.json", collections)
-    write_json(out / "cards.json", cards)
+    lang = args.lang
+    bundles = {
+        "courses": courses,
+        "glossary": glossary,
+        "collections": collections,
+        "cards": cards,
+    }
+    for name, payload in bundles.items():
+        write_locale_bundle(lang, name, payload)
 
     print(f"Courses written: {len(courses)} / {len(app_courses)}")
     print(f"Glossary entries: {len(glossary)}")
     print(f"Collections written: {len(collections)}")
     print(f"Cards written: {len(cards)}")
-    print(f"Output: {out}")
+    print(f"Output: {LOCALE_BUNDLE_DIR} (*.{lang}.json)")
 
 
 if __name__ == "__main__":

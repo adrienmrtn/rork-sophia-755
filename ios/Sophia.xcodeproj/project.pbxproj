@@ -34,29 +34,8 @@
 		105FC5932E9EAD3200EA8BCF /* SophiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SophiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		A1B2C3D42E9EAD3100EA8BCF /* Exceptions for "Sophia" folder in "Sophia" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Locales,
-			);
-			target = 105FC5792E9EAD3100EA8BCF /* Sophia */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		105FC57C2E9EAD3100EA8BCF /* Sophia */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				A1B2C3D42E9EAD3100EA8BCF /* Exceptions for "Sophia" folder in "Sophia" target */,
-			);
-			explicitFileTypes = {};
-			explicitFolders = (
-				Locales,
-			);
-			path = Sophia;
-			sourceTree = "<group>";
-		};
+		105FC57C2E9EAD3100EA8BCF /* Sophia */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Sophia; sourceTree = "<group>"; };
 		105FC58C2E9EAD3200EA8BCF /* SophiaTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = SophiaTests; sourceTree = "<group>"; };
 		105FC5962E9EAD3200EA8BCF /* SophiaUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = SophiaUITests; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */

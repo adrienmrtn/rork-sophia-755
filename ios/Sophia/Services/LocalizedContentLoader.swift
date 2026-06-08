@@ -134,42 +134,75 @@ enum LocalizedContentLoader {
         return mapped
     }
 
-    private static func localeFolder(for language: AppLanguage) -> String? {
-        switch language {
-        case .french:
-            return nil
-        case .english:
-            return "Locales/en"
-        case .spanish:
-            return "Locales/es"
-        case .german:
-            return "Locales/de"
-        case .portuguese:
-            return "Locales/pt"
-        case .italian:
-            return "Locales/it"
+    private static func jsonURL(named name: String, language: AppLanguage) -> URL? {
+        guard language != .french else { return nil }
+
+        let code = language.rawValue
+        let localizedName = "\(name).\(code)"
+        let bundleSubdirectories = [
+            "Resources/Locales",
+            "Locales",
+        ]
+
+        for subdirectory in bundleSubdirectories {
+            if let url = Bundle.main.url(
+                forResource: localizedName,
+                withExtension: "json",
+                subdirectory: subdirectory
+            ) {
+                return url
+            }
         }
+
+        if let url = Bundle.main.url(forResource: localizedName, withExtension: "json") {
+            return url
+        }
+
+        // Legacy layout: Locales/{code}/{name}.json
+        let legacySubdirectories = [
+            "Locales/\(code)",
+            "Resources/Locales/\(code)",
+        ]
+        for subdirectory in legacySubdirectories {
+            if let url = Bundle.main.url(
+                forResource: name,
+                withExtension: "json",
+                subdirectory: subdirectory
+            ) {
+                return url
+            }
+        }
+
+        guard let resourceURL = Bundle.main.resourceURL else { return nil }
+        let legacyRelativePaths = [
+            "Resources/Locales/\(localizedName).json",
+            "Locales/\(localizedName).json",
+            "Locales/\(code)/\(name).json",
+            "Resources/Locales/\(code)/\(name).json",
+        ]
+        for relativePath in legacyRelativePaths {
+            let candidate = resourceURL.appendingPathComponent(relativePath)
+            if FileManager.default.fileExists(atPath: candidate.path) {
+                return candidate
+            }
+        }
+
+        return findJSON(named: localizedName, under: resourceURL)
     }
 
-    private static func jsonURL(named name: String, language: AppLanguage) -> URL? {
-        guard let localeFolder = localeFolder(for: language) else { return nil }
-        let subdirectories: [String?] = [
-            localeFolder,
-            "Resources/\(localeFolder)",
-            nil,
-        ]
-        for subdirectory in subdirectories {
-            let url: URL?
-            if let subdirectory {
-                url = Bundle.main.url(
-                    forResource: name,
-                    withExtension: "json",
-                    subdirectory: subdirectory
-                )
-            } else {
-                url = Bundle.main.url(forResource: name, withExtension: "json")
-            }
-            if let url { return url }
+    private static func findJSON(named resourceName: String, under root: URL) -> URL? {
+        let fileManager = FileManager.default
+        guard let enumerator = fileManager.enumerator(
+            at: root,
+            includingPropertiesForKeys: [.isRegularFileKey],
+            options: [.skipsHiddenFiles]
+        ) else {
+            return nil
+        }
+
+        for case let fileURL as URL in enumerator {
+            guard fileURL.lastPathComponent == "\(resourceName).json" else { continue }
+            return fileURL
         }
         return nil
     }

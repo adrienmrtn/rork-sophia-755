@@ -21,12 +21,12 @@ from generate_en_locale_json import (  # noqa: E402
     load_en_quizzes,
     make_description,
     read_csv,
-    write_json,
+    write_locale_bundle,
 )
 from import_content_from_csv import lesson_ids_for_course, normalize_content, parse_all_courses  # noqa: E402
 
 COURSE_DATA = ROOT / "ios/Sophia/Services/CourseData.swift"
-DEFAULT_OUT = ROOT / "ios/Sophia/Locales/de"
+DEFAULT_LANG = "de"
 
 SUBJECT_DE_MAP = {
     "Geschichte": "histoire",
@@ -242,7 +242,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--glossary-csv", type=Path, default=source / "Glossaire_culture_generale_modifie_DE_507c.csv")
     parser.add_argument("--collections-csv", type=Path, default=source / "Collections_DE_443e.csv")
     parser.add_argument("--cards-csv", type=Path, default=source / "Cartes_DE_ba02.csv")
-    parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUT)
+    parser.add_argument("--lang", default=DEFAULT_LANG)
     return parser.parse_args()
 
 
@@ -259,17 +259,20 @@ def main() -> None:
     collections = build_collections_json_de(args.collections_csv, de_title_to_id)
     cards = build_cards_json_de(args.cards_csv, de_title_to_id)
 
-    out = args.output_dir
-    write_json(out / "courses.json", courses)
-    write_json(out / "glossary.json", glossary)
-    write_json(out / "collections.json", collections)
-    write_json(out / "cards.json", cards)
+    lang = args.lang
+    for name, payload in {
+        "courses": courses,
+        "glossary": glossary,
+        "collections": collections,
+        "cards": cards,
+    }.items():
+        write_locale_bundle(lang, name, payload)
 
     print(f"Courses written: {len(courses)} / {len(app_courses)}")
     print(f"Glossary entries: {len(glossary)}")
     print(f"Collections written: {len(collections)}")
     print(f"Cards written: {len(cards)}")
-    print(f"Output: {out}")
+    print(f"Output: courses.{lang}.json, glossary.{lang}.json, ...")
 
 
 if __name__ == "__main__":
