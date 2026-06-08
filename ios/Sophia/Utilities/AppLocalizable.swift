@@ -2,8 +2,14 @@ import Foundation
 
 enum AppLocalizable {
     static func string(_ key: String, language: AppLanguage) -> String {
-        let table = language == .french ? french : english
-        return table[key] ?? english[key] ?? key
+        switch language {
+        case .french:
+            return french[key] ?? english[key] ?? key
+        case .english:
+            return english[key] ?? key
+        case .spanish:
+            return spanish[key] ?? english[key] ?? key
+        }
     }
 
     // MARK: - French
@@ -21,6 +27,7 @@ enum AppLocalizable {
         "language.section": "Langue",
         "language.french": "Français",
         "language.english": "English",
+        "language.spanish": "Español",
 
         "onboarding.intro.title": "Deviens cultivé\nen 10 minutes\npar jour",
         "onboarding.intro.cta": "Commencer",
@@ -373,6 +380,7 @@ enum AppLocalizable {
         "language.section": "Language",
         "language.french": "Français",
         "language.english": "English",
+        "language.spanish": "Español",
 
         "onboarding.intro.title": "Become cultured\nin 10 minutes\na day",
         "onboarding.intro.cta": "Get started",
@@ -708,5 +716,53 @@ enum AppLocalizable {
 
         "paywall.unavailable.title": "Offer unavailable",
         "paywall.unavailable.message": "Unable to load this offer right now.",
+    ]
+
+    // MARK: - Spanish (shell — phase 1; full UI in phase 2)
+
+    private static let spanish: [String: String] = [
+        "tab.home": "Inicio",
+        "tab.library": "Biblioteca",
+        "tab.profile": "Perfil",
+
+        "library.title": "Biblioteca",
+        "library.tab.courses": "Cursos",
+        "library.tab.collections": "Colecciones",
+        "library.search.placeholder": "Buscar un curso...",
+
+        "language.section": "Idioma",
+        "language.french": "Français",
+        "language.english": "English",
+        "language.spanish": "Español",
+
+        "onboarding.intro.title": "Cultívate\nen 10 minutos\nal día",
+        "onboarding.intro.cta": "Empezar",
+
+        "settings.title": "Ajustes",
+        "settings.section.progress": "Progreso",
+        "settings.section.premium": "Premium",
+        "settings.section.data": "Datos",
+        "settings.section.legal": "Legal",
+        "settings.section.about": "Acerca de",
+        "settings.section.developer": "Desarrollador",
+        "settings.courses.completed": "%d cursos completados",
+        "settings.courses.available": "de %d disponibles",
+        "settings.footer": "Made with ♥ — Sophia",
+
+        "legal.terms.title": "Términos",
+        "legal.privacy.title": "Privacidad",
+
+        "subject.histoire": "Historia",
+        "subject.sciences": "Ciencias",
+        "subject.litterature": "Literatura",
+        "subject.art": "Arte",
+        "subject.mythologie": "Mitología",
+        "subject.comprendreLeMonde": "Comprender el mundo actual",
+        "subject.histoire.short": "Historia",
+        "subject.sciences.short": "Ciencias",
+        "subject.litterature.short": "Literatura",
+        "subject.art.short": "Arte",
+        "subject.mythologie.short": "Mitología",
+        "subject.comprendreLeMonde.short": "Mundo actual",
     ]
 }

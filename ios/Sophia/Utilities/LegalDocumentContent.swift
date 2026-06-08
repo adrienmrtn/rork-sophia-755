@@ -8,11 +8,17 @@ struct LegalSection: Identifiable {
 
 enum LegalDocumentContent {
     static func terms(language: AppLanguage) -> [LegalSection] {
-        language == .french ? termsFrench : termsEnglish
+        switch language {
+        case .french: termsFrench
+        case .english, .spanish: termsEnglish
+        }
     }
 
     static func privacy(language: AppLanguage) -> [LegalSection] {
-        language == .french ? privacyFrench : privacyEnglish
+        switch language {
+        case .french: privacyFrench
+        case .english, .spanish: privacyEnglish
+        }
     }
 
     // MARK: - Terms (FR)
