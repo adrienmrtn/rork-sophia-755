@@ -10,6 +10,12 @@ enum ContentCatalog {
             return LocalizedContentLoader.courses(for: .english)
         case .spanish:
             return LocalizedContentLoader.courses(for: .spanish)
+        case .german:
+            return LocalizedContentLoader.courses(for: .german)
+        case .portuguese:
+            return LocalizedContentLoader.courses(for: .portuguese)
+        case .italian:
+            return LocalizedContentLoader.courses(for: .italian)
         }
     }
 
@@ -21,6 +27,12 @@ enum ContentCatalog {
             return LocalizedContentLoader.collections(for: .english)
         case .spanish:
             return LocalizedContentLoader.collections(for: .spanish)
+        case .german:
+            return LocalizedContentLoader.collections(for: .german)
+        case .portuguese:
+            return LocalizedContentLoader.collections(for: .portuguese)
+        case .italian:
+            return LocalizedContentLoader.collections(for: .italian)
         }
     }
 
@@ -32,6 +44,12 @@ enum ContentCatalog {
             return LocalizedContentLoader.cards(for: .english)
         case .spanish:
             return LocalizedContentLoader.cards(for: .spanish)
+        case .german:
+            return LocalizedContentLoader.cards(for: .german)
+        case .portuguese:
+            return LocalizedContentLoader.cards(for: .portuguese)
+        case .italian:
+            return LocalizedContentLoader.cards(for: .italian)
         }
     }
 

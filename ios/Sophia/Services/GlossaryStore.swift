@@ -41,6 +41,21 @@ enum GlossaryClassification: String, CaseIterable, Sendable {
         case (.evenementConnexe, .spanish): "Evento"
         case (.personnage, .spanish): "Figura"
         case (.lieuInstitution, .spanish): "Lugar"
+        case (.referenceHistorique, .german): "Bezug"
+        case (.concept, .german): "Konzept"
+        case (.evenementConnexe, .german): "Ereignis"
+        case (.personnage, .german): "Person"
+        case (.lieuInstitution, .german): "Ort"
+        case (.referenceHistorique, .portuguese): "Referência"
+        case (.concept, .portuguese): "Conceito"
+        case (.evenementConnexe, .portuguese): "Evento"
+        case (.personnage, .portuguese): "Figura"
+        case (.lieuInstitution, .portuguese): "Lugar"
+        case (.referenceHistorique, .italian): "Riferimento"
+        case (.concept, .italian): "Concetto"
+        case (.evenementConnexe, .italian): "Evento"
+        case (.personnage, .italian): "Personaggio"
+        case (.lieuInstitution, .italian): "Luogo"
         default: shortLabel
         }
     }
@@ -94,9 +109,7 @@ enum GlossaryStore {
 
     static func entry(courseId: String, courseTitle: String, displayTerm: String) -> GlossaryEntry? {
         switch AppLanguage.currentPersisted() {
-        case .english:
-            return localizedEntry(courseId: courseId, displayTerm: displayTerm)
-        case .spanish:
+        case .english, .spanish, .german, .portuguese, .italian:
             return localizedEntry(courseId: courseId, displayTerm: displayTerm)
         case .french:
             return frenchEntry(courseTitle: courseTitle, displayTerm: displayTerm)

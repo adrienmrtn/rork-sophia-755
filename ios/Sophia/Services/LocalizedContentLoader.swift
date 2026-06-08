@@ -142,6 +142,12 @@ enum LocalizedContentLoader {
             return "Locales/en"
         case .spanish:
             return "Locales/es"
+        case .german:
+            return "Locales/de"
+        case .portuguese:
+            return "Locales/pt"
+        case .italian:
+            return "Locales/it"
         }
     }
 

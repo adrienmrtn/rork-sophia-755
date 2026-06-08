@@ -10,14 +10,14 @@ enum LegalDocumentContent {
     static func terms(language: AppLanguage) -> [LegalSection] {
         switch language {
         case .french: termsFrench
-        case .english, .spanish: termsEnglish
+        case .english, .spanish, .german, .portuguese, .italian: termsEnglish
         }
     }
 
     static func privacy(language: AppLanguage) -> [LegalSection] {
         switch language {
         case .french: privacyFrench
-        case .english, .spanish: privacyEnglish
+        case .english, .spanish, .german, .portuguese, .italian: privacyEnglish
         }
     }
 
