@@ -3,6 +3,7 @@ import Foundation
 enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
     case french = "fr"
     case english = "en"
+    case portuguese = "pt"
 
     var id: String { rawValue }
 
@@ -10,6 +11,7 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
         switch self {
         case .french: "fr_FR"
         case .english: "en_US"
+        case .portuguese: "pt_PT"
         }
     }
 
@@ -17,6 +19,7 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
         switch self {
         case .french: "🇫🇷"
         case .english: "🇬🇧"
+        case .portuguese: "🇵🇹"
         }
     }
 
@@ -24,14 +27,16 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
         switch self {
         case .french: "Français"
         case .english: "English"
+        case .portuguese: "Português"
         }
     }
 
     /// Resolves the initial language from the device locale.
-    /// French if the system language is French; otherwise English.
     static func resolvedFromSystem() -> AppLanguage {
         let preferred = Locale.preferredLanguages.first ?? "en"
-        if preferred.lowercased().hasPrefix("fr") { return .french }
+        let code = preferred.lowercased()
+        if code.hasPrefix("fr") { return .french }
+        if code.hasPrefix("pt") { return .portuguese }
         return .english
     }
 
