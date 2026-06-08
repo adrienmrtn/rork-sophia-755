@@ -97,10 +97,7 @@ enum GlossaryStore {
         case .english:
             return localizedEntry(courseId: courseId, displayTerm: displayTerm)
         case .spanish:
-            if let entry = localizedEntry(courseId: courseId, displayTerm: displayTerm) {
-                return entry
-            }
-            return frenchEntry(courseTitle: courseTitle, displayTerm: displayTerm)
+            return localizedEntry(courseId: courseId, displayTerm: displayTerm)
         case .french:
             return frenchEntry(courseTitle: courseTitle, displayTerm: displayTerm)
         }
