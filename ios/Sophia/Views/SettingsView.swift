@@ -52,8 +52,8 @@ struct SettingsView: View {
 
                         sectionHeader(languageManager.text("language.section"))
                         HStack {
-                            Spacer()
                             LanguagePickerControl()
+                            Spacer(minLength: 0)
                         }
                         .padding(.horizontal, 20)
 

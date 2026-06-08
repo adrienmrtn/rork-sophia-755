@@ -41,9 +41,6 @@ struct OnboardingNativePaywallView: View {
                         subjectsSection
                             .padding(.horizontal, 20)
 
-                        boostSection
-                            .padding(.horizontal, 20)
-
                         premiumSection
                             .padding(.horizontal, 20)
 
@@ -80,7 +77,7 @@ struct OnboardingNativePaywallView: View {
                     onPurchase(selectedPlan)
                 }
             )
-            .presentationDetents([.large])
+            .presentationDetents([.fraction(0.68)])
             .presentationDragIndicator(.visible)
             .presentationCornerRadius(28)
         }
@@ -93,23 +90,15 @@ struct OnboardingNativePaywallView: View {
     // MARK: - Header
 
     private var header: some View {
-        ZStack(alignment: .bottomTrailing) {
-            highlightedHeadline(
-                full: fr("paywall.header"),
-                highlight: fr("paywall.header.highlight"),
-                highlightColor: PaywallDesign.orange,
-                fontSize: 32,
-                lineSpacing: 4
-            )
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.horizontal, 24)
-            .padding(.trailing, 44)
-
-            PaywallLightbulbView(size: 44)
-                .rotationEffect(.degrees(10))
-                .offset(x: 8, y: 6)
-        }
-        .padding(.horizontal, 4)
+        highlightedHeadline(
+            full: fr("paywall.header"),
+            highlight: fr("paywall.header.highlight"),
+            highlightColor: PaywallDesign.orange,
+            fontSize: 32,
+            lineSpacing: 4
+        )
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.horizontal, 16)
     }
 
     // MARK: - Subjects
@@ -123,11 +112,11 @@ struct OnboardingNativePaywallView: View {
 
             lockedSubjectsCard
                 .rotationEffect(.degrees(-3.27))
-                .offset(y: 96)
+                .offset(y: 118)
                 .zIndex(0)
         }
         .frame(maxWidth: .infinity)
-        .frame(height: 290)
+        .frame(height: 318)
         .padding(.bottom, 8)
     }
 
@@ -188,30 +177,6 @@ struct OnboardingNativePaywallView: View {
                 in: Capsule()
             )
             .overlay { Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 3) }
-    }
-
-    // MARK: - Boost
-
-    private var boostSection: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            highlightedHeadline(
-                full: fr("paywall.boostHeadline"),
-                highlight: fr("paywall.boostHeadline.highlight"),
-                highlightColor: PaywallDesign.accentPink,
-                fontSize: 30,
-                lineSpacing: 2
-            )
-
-            VStack(alignment: .leading, spacing: 10) {
-                PaywallSpeechPill(title: fr("paywall.boostBubble.conversations"), fill: PaywallDesign.bubbleBlue)
-                HStack {
-                    Spacer(minLength: 0)
-                    PaywallSpeechPill(title: fr("paywall.boostBubble.curiosity"), fill: PaywallDesign.bubblePurple)
-                }
-                PaywallSpeechPill(title: fr("paywall.boostBubble.confidence"), fill: PaywallDesign.bubbleOrange)
-            }
-        }
-        .padding(.top, 4)
     }
 
     // MARK: - Premium comparison
@@ -359,9 +324,6 @@ struct OnboardingNativePaywallView: View {
                     Spacer(minLength: 8)
 
                     VStack(alignment: .trailing, spacing: 4) {
-                        if isYearly, let badge = copy.badge {
-                            PaywallDiscountBadge(text: badge)
-                        }
                         Text(copy.price)
                             .font(.system(size: 24, weight: .black, design: .rounded))
                             .foregroundStyle(BrutalPalette.ink)
@@ -459,6 +421,7 @@ struct OnboardingNativePaywallView: View {
         .font(.system(size: fontSize, weight: .black, design: .rounded))
         .lineSpacing(lineSpacing)
         .multilineTextAlignment(.leading)
+        .frame(maxWidth: .infinity, alignment: .leading)
         .fixedSize(horizontal: false, vertical: true)
     }
 }
@@ -527,8 +490,7 @@ private struct PaywallTrialTimelineSheet: View {
                 }
             }
             .padding(.horizontal, 28)
-
-            Spacer(minLength: 20)
+            .padding(.bottom, 12)
 
             Text(fr("paywall.cancelAnytime"))
                 .font(.system(.caption, design: .rounded, weight: .semibold))
@@ -540,6 +502,7 @@ private struct PaywallTrialTimelineSheet: View {
                 OnboardingHaptics.primaryCTA()
                 onContinue()
             })
+            .padding(.bottom, -24)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .background(PaywallDesign.background.ignoresSafeArea())

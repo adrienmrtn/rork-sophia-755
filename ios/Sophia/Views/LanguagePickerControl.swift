@@ -4,8 +4,11 @@ struct LanguagePickerControl: View {
     @Environment(LanguageManager.self) private var languageManager
     @State private var isExpanded: Bool = false
 
+    /// Compact dropdown width for onboarding overlays.
+    var compact: Bool = false
+
     var body: some View {
-        VStack(alignment: .trailing, spacing: 8) {
+        VStack(alignment: .leading, spacing: 8) {
             Button {
                 UIImpactFeedbackGenerator(style: .light).impactOccurred()
                 withAnimation(.spring(response: 0.32, dampingFraction: 0.82)) {
@@ -44,13 +47,13 @@ struct LanguagePickerControl: View {
                         isExpanded = false
                     }
                 } label: {
-                    HStack(spacing: 12) {
+                    HStack(spacing: 10) {
                         Text(language.flag)
                             .font(.system(size: 20))
                         Text(language.displayName)
                             .font(.system(.subheadline, design: .rounded, weight: .heavy))
                             .foregroundStyle(BrutalPalette.ink)
-                        Spacer(minLength: 0)
+                            .lineLimit(1)
                         if languageManager.current == language {
                             Image(systemName: "checkmark")
                                 .font(.system(size: 12, weight: .heavy))
@@ -83,6 +86,7 @@ struct LanguagePickerControl: View {
                 .offset(y: 3)
         }
         .padding(.bottom, 3)
-        .frame(minWidth: 196)
+        .fixedSize(horizontal: true, vertical: true)
+        .frame(maxWidth: compact ? nil : 220, alignment: .leading)
     }
 }
