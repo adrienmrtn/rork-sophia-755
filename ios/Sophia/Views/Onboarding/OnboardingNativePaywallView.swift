@@ -34,9 +34,9 @@ struct OnboardingNativePaywallView: View {
 
             VStack(spacing: 0) {
                 ScrollView(showsIndicators: false) {
-                    VStack(spacing: 28) {
+                    VStack(spacing: 22) {
                         header
-                            .padding(.top, 56)
+                            .padding(.top, 8)
 
                         subjectsSection
                             .padding(.horizontal, 20)
@@ -80,7 +80,7 @@ struct OnboardingNativePaywallView: View {
                     onPurchase(selectedPlan)
                 }
             )
-            .presentationDetents([.medium, .large])
+            .presentationDetents([.large])
             .presentationDragIndicator(.visible)
             .presentationCornerRadius(28)
         }
@@ -93,7 +93,7 @@ struct OnboardingNativePaywallView: View {
     // MARK: - Header
 
     private var header: some View {
-        ZStack(alignment: .topTrailing) {
+        ZStack(alignment: .bottomTrailing) {
             highlightedHeadline(
                 full: fr("paywall.header"),
                 highlight: fr("paywall.header.highlight"),
@@ -103,11 +103,13 @@ struct OnboardingNativePaywallView: View {
             )
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.horizontal, 24)
+            .padding(.trailing, 44)
 
-            PaywallLightbulbView(size: 52)
-                .rotationEffect(.degrees(12))
-                .offset(x: -8, y: -18)
+            PaywallLightbulbView(size: 44)
+                .rotationEffect(.degrees(10))
+                .offset(x: 8, y: 6)
         }
+        .padding(.horizontal, 4)
     }
 
     // MARK: - Subjects
@@ -116,21 +118,17 @@ struct OnboardingNativePaywallView: View {
         ZStack {
             freeSubjectsCard
                 .rotationEffect(.degrees(3.27))
-                .offset(y: -28)
+                .offset(y: -12)
                 .zIndex(1)
-
-            PaywallStarCluster()
-                .offset(y: 52)
-                .zIndex(2)
 
             lockedSubjectsCard
                 .rotationEffect(.degrees(-3.27))
-                .offset(y: 118)
+                .offset(y: 96)
                 .zIndex(0)
         }
         .frame(maxWidth: .infinity)
-        .frame(height: 340)
-        .padding(.bottom, 24)
+        .frame(height: 290)
+        .padding(.bottom, 8)
     }
 
     private var freeSubjectsCard: some View {
@@ -147,10 +145,10 @@ struct OnboardingNativePaywallView: View {
         }
         .padding(18)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .paywallBrutalCard()
+        .brutalOnboardingCard(depth: 3, corner: 17, borderWidth: 3)
         .overlay(alignment: .top) {
             PaywallGreyStarBadge()
-                .offset(y: -24)
+                .offset(y: -22)
         }
     }
 
@@ -169,7 +167,11 @@ struct OnboardingNativePaywallView: View {
         }
         .padding(18)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .paywallBrutalCard()
+        .brutalOnboardingCard(depth: 3, corner: 17, borderWidth: 3)
+        .overlay(alignment: .top) {
+            PaywallStarCluster()
+                .offset(y: -20)
+        }
     }
 
     private func subjectPill(_ subject: Subject, locked: Bool) -> some View {
@@ -186,54 +188,30 @@ struct OnboardingNativePaywallView: View {
                 in: Capsule()
             )
             .overlay { Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 3) }
-            .shadow(color: BrutalPalette.ink, radius: 0, x: 1, y: 1)
     }
 
     // MARK: - Boost
 
     private var boostSection: some View {
-        ZStack {
-            PaywallBlobShape()
-                .fill(PaywallDesign.bubbleBlue.opacity(0.85))
-                .frame(width: 68, height: 58)
-                .rotationEffect(.degrees(-8))
-                .offset(x: -118, y: 34)
+        VStack(alignment: .leading, spacing: 16) {
+            highlightedHeadline(
+                full: fr("paywall.boostHeadline"),
+                highlight: fr("paywall.boostHeadline.highlight"),
+                highlightColor: PaywallDesign.accentPink,
+                fontSize: 30,
+                lineSpacing: 2
+            )
 
-            PaywallBlobShape()
-                .fill(PaywallDesign.bubblePurple.opacity(0.9))
-                .frame(width: 88, height: 68)
-                .rotationEffect(.degrees(8))
-                .offset(x: 96, y: 18)
-
-            PaywallStarShape()
-                .fill(PaywallDesign.bubbleOrange)
-                .frame(width: 72, height: 72)
-                .rotationEffect(.degrees(-12))
-                .offset(x: -118, y: 108)
-
-            VStack(spacing: 18) {
-                highlightedHeadline(
-                    full: fr("paywall.boostHeadline"),
-                    highlight: fr("paywall.boostHeadline.highlight"),
-                    highlightColor: PaywallDesign.accentPink,
-                    fontSize: 30,
-                    lineSpacing: 2
-                )
-                .frame(maxWidth: .infinity, alignment: .leading)
-
-                ZStack {
-                    PaywallSpeechPill(title: fr("paywall.boostBubble.conversations"), fill: PaywallDesign.bubbleBlue)
-                        .offset(x: -52, y: -8)
+            VStack(alignment: .leading, spacing: 10) {
+                PaywallSpeechPill(title: fr("paywall.boostBubble.conversations"), fill: PaywallDesign.bubbleBlue)
+                HStack {
+                    Spacer(minLength: 0)
                     PaywallSpeechPill(title: fr("paywall.boostBubble.curiosity"), fill: PaywallDesign.bubblePurple)
-                        .offset(x: 48, y: 28)
-                    PaywallSpeechPill(title: fr("paywall.boostBubble.confidence"), fill: PaywallDesign.bubbleOrange)
-                        .offset(x: -36, y: 72)
                 }
-                .frame(maxWidth: .infinity)
-                .frame(height: 150)
+                PaywallSpeechPill(title: fr("paywall.boostBubble.confidence"), fill: PaywallDesign.bubbleOrange)
             }
         }
-        .padding(.top, 8)
+        .padding(.top, 4)
     }
 
     // MARK: - Premium comparison
@@ -257,44 +235,38 @@ struct OnboardingNativePaywallView: View {
     }
 
     private var featureComparison: some View {
-        ZStack(alignment: .trailing) {
-            RoundedRectangle(cornerRadius: 17, style: .continuous)
-                .fill(PaywallDesign.creamHighlight)
-                .overlay {
-                    RoundedRectangle(cornerRadius: 17, style: .continuous)
-                        .strokeBorder(PaywallDesign.orange, lineWidth: 3)
-                }
-                .frame(width: 78)
-                .padding(.top, 44)
-                .padding(.trailing, 3)
-                .padding(.bottom, 3)
-
-            VStack(spacing: 0) {
-                HStack {
-                    Text(fr("paywall.featureColumn"))
-                        .font(.system(size: 9.5, weight: .bold, design: .rounded))
-                        .foregroundStyle(BrutalPalette.ink)
-                    Spacer()
-                    Text(fr("paywall.freeColumn"))
-                        .font(.system(size: 9.5, weight: .bold, design: .rounded))
-                        .foregroundStyle(BrutalPalette.ink)
-                        .frame(width: 52)
-                    Text(fr("paywall.premiumColumn"))
-                        .font(.system(size: 9.5, weight: .black, design: .rounded))
-                        .foregroundStyle(BrutalPalette.ink)
-                        .frame(width: 72)
-                }
-                .padding(.horizontal, 16)
-                .padding(.vertical, 14)
-
-                featureRow(fr("paywall.feature.3subjects"), free: .freeCheck, premium: .premiumCheck)
-                featureRow(fr("paywall.feature.allSubjects"), free: .denied, premium: .premiumCheck)
-                featureRow(fr("paywall.feature.unlimitedCourses"), free: .denied, premium: .premiumCheck)
-                featureRow(fr("paywall.feature.miniQuiz"), free: .denied, premium: .premiumCheck)
-                featureRow(fr("paywall.feature.fullLibrary"), free: .denied, premium: .premiumCheck)
+        VStack(spacing: 0) {
+            HStack {
+                Text(fr("paywall.featureColumn"))
+                    .font(.system(size: 9.5, weight: .bold, design: .rounded))
+                    .foregroundStyle(BrutalPalette.ink)
+                Spacer()
+                Text(fr("paywall.freeColumn"))
+                    .font(.system(size: 9.5, weight: .bold, design: .rounded))
+                    .foregroundStyle(BrutalPalette.ink)
+                    .frame(width: 52)
+                Text(fr("paywall.premiumColumn"))
+                    .font(.system(size: 9.5, weight: .black, design: .rounded))
+                    .foregroundStyle(BrutalPalette.ink)
+                    .frame(width: 72)
             }
-            .paywallBrutalCard()
+            .padding(.horizontal, 16)
+            .padding(.vertical, 14)
+
+            featureRow(fr("paywall.feature.3subjects"), free: .freeCheck, premium: .premiumCheck)
+            featureRow(fr("paywall.feature.allSubjects"), free: .denied, premium: .premiumCheck)
+            featureRow(fr("paywall.feature.unlimitedCourses"), free: .denied, premium: .premiumCheck)
+            featureRow(fr("paywall.feature.miniQuiz"), free: .denied, premium: .premiumCheck)
+            featureRow(fr("paywall.feature.fullLibrary"), free: .denied, premium: .premiumCheck)
         }
+        .background(alignment: .trailing) {
+            RoundedRectangle(cornerRadius: 14, style: .continuous)
+                .fill(PaywallDesign.creamHighlight)
+                .frame(width: 76)
+                .padding(.trailing, 10)
+                .padding(.vertical, 10)
+        }
+        .brutalOnboardingCard(depth: 3, corner: 17, borderWidth: 3)
     }
 
     private func featureRow(_ title: String, free: PaywallFeatureMark.Kind, premium: PaywallFeatureMark.Kind) -> some View {
@@ -355,7 +327,6 @@ struct OnboardingNativePaywallView: View {
         let isYearly = plan == .yearly
         let copy = planCopy(for: plan)
         let accentBorder = isSelected ? (isYearly ? PaywallDesign.orange : BrutalPalette.ink) : BrutalPalette.ink
-        let accentShadow = isSelected && isYearly ? PaywallDesign.orange : BrutalPalette.ink
         let bodyFill = isSelected && isYearly ? PaywallDesign.creamHighlight : Color.white
         let bodyBorderWidth: CGFloat = isSelected ? (isYearly ? 4 : 3.5) : 3
 
@@ -365,68 +336,53 @@ struct OnboardingNativePaywallView: View {
                 selectedPlan = plan
             }
         } label: {
-            ZStack(alignment: .topTrailing) {
-                VStack(spacing: 0) {
-                    Text(fr("paywall.trialBadge"))
-                        .font(.system(size: 11.5, weight: .heavy, design: .rounded))
-                        .foregroundStyle(BrutalPalette.ink)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 8)
-                        .background(PaywallDesign.orange)
-                        .overlay(alignment: .bottom) {
-                            Rectangle()
-                                .fill(accentBorder)
-                                .frame(height: 3)
-                        }
+            VStack(spacing: 0) {
+                Text(fr("paywall.trialBadge"))
+                    .font(.system(size: 11.5, weight: .heavy, design: .rounded))
+                    .foregroundStyle(BrutalPalette.ink)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 8)
+                    .background(PaywallDesign.orange)
 
-                    HStack(spacing: 14) {
-                        PaywallPlanRadio(isSelected: isSelected)
+                HStack(spacing: 14) {
+                    PaywallPlanRadio(isSelected: isSelected)
 
-                        VStack(alignment: .leading, spacing: 4) {
-                            Text(copy.title)
-                                .font(.system(size: 21.5, weight: .heavy, design: .rounded))
-                                .foregroundStyle(BrutalPalette.ink)
-                            Text(copy.subtitle)
-                                .font(.system(size: 11, weight: .semibold, design: .rounded))
-                                .foregroundStyle(BrutalPalette.ink.opacity(0.6))
-                        }
-
-                        Spacer(minLength: 8)
-
-                        VStack(alignment: .trailing, spacing: 2) {
-                            Text(copy.price)
-                                .font(.system(size: 24, weight: .black, design: .rounded))
-                                .foregroundStyle(BrutalPalette.ink)
-                            Text(copy.period)
-                                .font(.system(size: 11, weight: .semibold, design: .rounded))
-                                .foregroundStyle(BrutalPalette.ink.opacity(0.6))
-                        }
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(copy.title)
+                            .font(.system(size: 21.5, weight: .heavy, design: .rounded))
+                            .foregroundStyle(BrutalPalette.ink)
+                        Text(copy.subtitle)
+                            .font(.system(size: 11, weight: .semibold, design: .rounded))
+                            .foregroundStyle(BrutalPalette.ink.opacity(0.6))
                     }
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 16)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .background(bodyFill)
-                }
-                .clipShape(RoundedRectangle(cornerRadius: 17, style: .continuous))
-                .overlay {
-                    RoundedRectangle(cornerRadius: 17, style: .continuous)
-                        .strokeBorder(accentBorder, lineWidth: bodyBorderWidth)
-                }
-                .background(alignment: .topLeading) {
-                    RoundedRectangle(cornerRadius: 17, style: .continuous)
-                        .fill(accentShadow)
-                        .offset(x: 3, y: 3)
-                }
-                .padding(.bottom, 3)
-                .padding(.trailing, 3)
 
-                if isYearly, let badge = copy.badge {
-                    PaywallDiscountBadge(text: badge)
-                        .offset(x: 10, y: 36)
+                    Spacer(minLength: 8)
+
+                    VStack(alignment: .trailing, spacing: 4) {
+                        if isYearly, let badge = copy.badge {
+                            PaywallDiscountBadge(text: badge)
+                        }
+                        Text(copy.price)
+                            .font(.system(size: 24, weight: .black, design: .rounded))
+                            .foregroundStyle(BrutalPalette.ink)
+                        Text(copy.period)
+                            .font(.system(size: 11, weight: .semibold, design: .rounded))
+                            .foregroundStyle(BrutalPalette.ink.opacity(0.6))
+                    }
                 }
+                .padding(.horizontal, 16)
+                .padding(.vertical, 16)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(bodyFill)
             }
+            .clipShape(RoundedRectangle(cornerRadius: 17, style: .continuous))
+            .overlay {
+                RoundedRectangle(cornerRadius: 17, style: .continuous)
+                    .strokeBorder(accentBorder, lineWidth: bodyBorderWidth)
+            }
+            .brutalOffsetPlate(depth: 3, corner: 17)
         }
-        .buttonStyle(PlanCardButtonStyle())
+        .buttonStyle(.plain)
     }
 
     // MARK: - Footer
@@ -470,7 +426,6 @@ struct OnboardingNativePaywallView: View {
                 .background(Color.white)
                 .clipShape(Circle())
                 .overlay { Circle().strokeBorder(BrutalPalette.ink, lineWidth: 3) }
-                .shadow(color: BrutalPalette.ink, radius: 0, x: 3, y: 1)
         }
         .accessibilityLabel(fr("common.close"))
     }
@@ -573,17 +528,18 @@ private struct PaywallTrialTimelineSheet: View {
             }
             .padding(.horizontal, 28)
 
+            Spacer(minLength: 20)
+
             Text(fr("paywall.cancelAnytime"))
                 .font(.system(.caption, design: .rounded, weight: .semibold))
                 .foregroundStyle(BrutalPalette.ink.opacity(0.5))
-                .padding(.top, 16)
                 .padding(.horizontal, 28)
+                .padding(.bottom, 8)
 
             OnboardingPrimaryButton(title: fr("paywall.trialSheet.start"), action: {
                 OnboardingHaptics.primaryCTA()
                 onContinue()
             })
-            .padding(.top, 12)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .background(PaywallDesign.background.ignoresSafeArea())

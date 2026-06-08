@@ -30,11 +30,12 @@ enum SophiaPaywallContext: String, Identifiable {
         }
     }
 
-    /// Only matière-block paywalls fall back to `cours_gratuit` when RC isn't configured yet.
+    /// Matière-block and quiz paywalls fall back to `cours_gratuit` when RC isn't configured yet.
     static func fallback(for context: SophiaPaywallContext) -> SophiaPaywallContext? {
         switch context {
         case .matiereBlockHistoire, .matiereBlockSciences, .matiereBlockLitterature,
-             .matiereBlockArt, .matiereBlockMythologie, .matiereBlockMondeActuel:
+             .matiereBlockArt, .matiereBlockMythologie, .matiereBlockMondeActuel,
+             .quizz:
             return .coursGratuit
         default:
             return nil
@@ -50,7 +51,7 @@ struct SophiaPaywallView: View {
     @Environment(LanguageManager.self) private var languageManager
     let context: SophiaPaywallContext
     /// Offering id tried if the primary `context` offering isn't found in RC.
-    /// Only matière-block paywalls fall back to `cours_gratuit`; other contexts must match exactly.
+    /// Matière-block and quiz paywalls fall back to `cours_gratuit` when the primary offering is missing.
     var fallbackContext: SophiaPaywallContext? = nil
     var onPurchased: () -> Void = {}
     var onRestored: () -> Void = {}

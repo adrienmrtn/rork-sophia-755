@@ -27,45 +27,6 @@ enum PaywallDesign {
     }
 }
 
-// MARK: - Card chrome
-
-struct PaywallBrutalCard: ViewModifier {
-    var fill: Color = .white
-    var border: Color = BrutalPalette.ink
-    var borderWidth: CGFloat = 3
-    var corner: CGFloat = 17
-    var shadow: Color = BrutalPalette.ink
-    var shadowOffset: CGSize = CGSize(width: 3, height: 3)
-
-    func body(content: Content) -> some View {
-        content
-            .background(fill, in: RoundedRectangle(cornerRadius: corner, style: .continuous))
-            .overlay {
-                RoundedRectangle(cornerRadius: corner, style: .continuous)
-                    .strokeBorder(border, lineWidth: borderWidth)
-            }
-            .background(alignment: .topLeading) {
-                RoundedRectangle(cornerRadius: corner, style: .continuous)
-                    .fill(shadow)
-                    .offset(x: shadowOffset.width, y: shadowOffset.height)
-            }
-            .padding(.bottom, shadowOffset.height)
-            .padding(.trailing, shadowOffset.width)
-    }
-}
-
-extension View {
-    func paywallBrutalCard(
-        fill: Color = .white,
-        border: Color = BrutalPalette.ink,
-        borderWidth: CGFloat = 3,
-        corner: CGFloat = 17,
-        shadow: Color = BrutalPalette.ink
-    ) -> some View {
-        modifier(PaywallBrutalCard(fill: fill, border: border, borderWidth: borderWidth, corner: corner, shadow: shadow))
-    }
-}
-
 // MARK: - Shapes
 
 struct PaywallStarShape: Shape {
@@ -147,7 +108,6 @@ struct PaywallStickerStar: View {
             }
             .frame(width: size, height: size)
             .rotationEffect(.degrees(rotation))
-            .shadow(color: BrutalPalette.ink, radius: 0, x: 3, y: 1)
     }
 }
 
@@ -174,7 +134,6 @@ struct PaywallGreyStarBadge: View {
                     RoundedRectangle(cornerRadius: 10, style: .continuous)
                         .strokeBorder(BrutalPalette.ink, lineWidth: 3)
                 }
-                .shadow(color: BrutalPalette.ink, radius: 0, x: 3, y: 1)
             Image(systemName: "star.fill")
                 .font(.system(size: 16, weight: .black))
                 .foregroundStyle(BrutalPalette.ink.opacity(0.35))
@@ -183,7 +142,7 @@ struct PaywallGreyStarBadge: View {
 }
 
 struct PaywallLightbulbView: View {
-    var size: CGFloat = 56
+    var size: CGFloat = 48
 
     var body: some View {
         ZStack {
@@ -205,7 +164,6 @@ struct PaywallLightbulbView: View {
                 .offset(y: size * 0.34)
         }
         .frame(width: size, height: size)
-        .shadow(color: BrutalPalette.ink, radius: 0, x: 3, y: 1)
     }
 }
 
@@ -229,10 +187,7 @@ struct PaywallSpeechPill: View {
             .padding(.horizontal, 20)
             .padding(.vertical, 12)
             .background(fill, in: Capsule())
-            .overlay {
-                Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 3.2)
-            }
-            .shadow(color: BrutalPalette.ink, radius: 0, x: 3.2, y: 1.1)
+            .overlay { Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 3) }
     }
 }
 
@@ -252,8 +207,7 @@ struct PaywallDiscountBadge: View {
                 .foregroundStyle(BrutalPalette.ink)
                 .rotationEffect(.degrees(7))
         }
-        .frame(width: 62, height: 62)
-        .shadow(color: BrutalPalette.ink.opacity(0.15), radius: 0, x: 2, y: 2)
+        .frame(width: 56, height: 56)
     }
 }
 
@@ -278,7 +232,6 @@ struct PaywallFeatureMark: View {
             }
         }
         .frame(width: 22, height: 22)
-        .shadow(color: BrutalPalette.ink, radius: 0, x: 3, y: 1)
     }
 
     private func checkCircle(fill: Color) -> some View {
