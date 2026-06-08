@@ -30,39 +30,22 @@ enum SophiaPaywallContext: String, Identifiable {
         }
     }
 
-    /// Matière-block and quiz paywalls fall back to `cours_gratuit` when RC isn't configured yet.
-    static func fallback(for context: SophiaPaywallContext) -> SophiaPaywallContext? {
-        switch context {
-        case .matiereBlockHistoire, .matiereBlockSciences, .matiereBlockLitterature,
-             .matiereBlockArt, .matiereBlockMythologie, .matiereBlockMondeActuel,
-             .quizz:
-            return .coursGratuit
-        default:
-            return nil
-        }
-    }
+    static let defaultOfferingIdentifier = "default"
 }
 
 /// Wrapper around `RevenueCatUI.PaywallView` that loads a specific offering by
-/// identifier and falls back to the default (current) offering if it can't be
-/// found — e.g. while offerings are still loading or if the dashboard hasn't
+/// identifier and falls back to the RevenueCat `default` offering if it can't
+/// be found — e.g. while offerings are still loading or if the dashboard hasn't
 /// been configured yet.
 struct SophiaPaywallView: View {
     @Environment(LanguageManager.self) private var languageManager
     let context: SophiaPaywallContext
-    /// Offering id tried if the primary `context` offering isn't found in RC.
-    /// Matière-block and quiz paywalls fall back to `cours_gratuit` when the primary offering is missing.
-    var fallbackContext: SophiaPaywallContext? = nil
     var onPurchased: () -> Void = {}
     var onRestored: () -> Void = {}
     var onDismissed: (() -> Void)? = nil
 
     @State private var offering: Offering?
     @State private var loaded: Bool = false
-
-    private var resolvedFallback: SophiaPaywallContext? {
-        fallbackContext ?? SophiaPaywallContext.fallback(for: context)
-    }
 
     var body: some View {
         Group {
@@ -72,14 +55,7 @@ struct SophiaPaywallView: View {
                     .onRestoreCompleted { _ in onRestored() }
                     .onRequestedDismissal { onDismissed?() }
             } else if loaded {
-                if context == .finOnboarding || context == .coursGratuit || context == .offreDiscount {
-                    PaywallView()
-                        .onPurchaseCompleted { _ in onPurchased() }
-                        .onRestoreCompleted { _ in onRestored() }
-                        .onRequestedDismissal { onDismissed?() }
-                } else {
-                    paywallUnavailableView
-                }
+                paywallUnavailableView
             } else {
                 ZStack {
                     Color.black.ignoresSafeArea()
@@ -95,17 +71,11 @@ struct SophiaPaywallView: View {
             let offerings = try await Purchases.shared.offerings()
             let id = context.rawValue
             var resolved = offerings.all[id] ?? offerings.offering(identifier: id)
-            if resolved == nil, let fallback = resolvedFallback, fallback != context {
-                let fid = fallback.rawValue
+            if resolved == nil, id != SophiaPaywallContext.defaultOfferingIdentifier {
+                let fid = SophiaPaywallContext.defaultOfferingIdentifier
                 resolved = offerings.all[fid] ?? offerings.offering(identifier: fid)
                 #if DEBUG
                 print("[SophiaPaywall] '\(id)' not found — falling back to '\(fid)': \(resolved?.identifier ?? "nil")")
-                #endif
-            }
-            if resolved == nil, context == .offreDiscount {
-                resolved = offerings.current
-                #if DEBUG
-                print("[SophiaPaywall] 'offre_discount' not found — using current offering: \(resolved?.identifier ?? "nil")")
                 #endif
             }
             #if DEBUG
