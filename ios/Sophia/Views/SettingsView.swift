@@ -51,30 +51,10 @@ struct SettingsView: View {
                         .padding(.top, 4)
 
                         sectionHeader(languageManager.text("language.section"))
-                        VStack(spacing: 0) {
-                            HStack {
-                                ForEach(AppLanguage.allCases) { language in
-                                    Text(language.displayName)
-                                        .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                                        .foregroundStyle(ink)
-                                    if language != AppLanguage.allCases.last {
-                                        Spacer()
-                                    }
-                                }
-                            }
-                            .padding(.horizontal, 14)
-                            .padding(.top, 14)
-                            .padding(.bottom, 8)
-
-                            HStack {
-                                Spacer()
-                                LanguagePickerControl()
-                                Spacer()
-                            }
-                            .padding(.horizontal, 14)
-                            .padding(.bottom, 14)
+                        HStack {
+                            Spacer()
+                            LanguagePickerControl()
                         }
-                        .brutalCard()
                         .padding(.horizontal, 20)
 
                         // Progression

@@ -56,7 +56,7 @@ struct ContentView: View {
                         store: storeVM,
                         selectedCourse: $selectedCourse,
                         onShowPaywall: {
-                            paywallContext = .coursGratuit
+                            paywallContext = .quizz
                         },
                         onResetOnboarding: onResetOnboarding
                     )
