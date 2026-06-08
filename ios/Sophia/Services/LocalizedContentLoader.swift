@@ -126,14 +126,30 @@ enum LocalizedContentLoader {
         return mapped
     }
 
-    private static func load<T: Decodable>(_ name: String) -> T? {
-        let url = Bundle.main.url(
-            forResource: name,
-            withExtension: "json",
-            subdirectory: localeFolder
-        ) ?? Bundle.main.url(forResource: name, withExtension: "json", subdirectory: "Resources/\(localeFolder)")
+    private static func jsonURL(named name: String) -> URL? {
+        let subdirectories: [String?] = [
+            localeFolder,
+            "Resources/\(localeFolder)",
+            nil,
+        ]
+        for subdirectory in subdirectories {
+            let url: URL?
+            if let subdirectory {
+                url = Bundle.main.url(
+                    forResource: name,
+                    withExtension: "json",
+                    subdirectory: subdirectory
+                )
+            } else {
+                url = Bundle.main.url(forResource: name, withExtension: "json")
+            }
+            if let url { return url }
+        }
+        return nil
+    }
 
-        guard let url else { return nil }
+    private static func load<T: Decodable>(_ name: String) -> T? {
+        guard let url = jsonURL(named: name) else { return nil }
         do {
             let data = try Data(contentsOf: url)
             return try JSONDecoder().decode(T.self, from: data)

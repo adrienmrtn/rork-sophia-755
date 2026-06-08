@@ -21,7 +21,7 @@ from import_content_from_csv import (  # noqa: E402
 )
 
 COURSE_DATA = ROOT / "ios/Sophia/Services/CourseData.swift"
-DEFAULT_OUT = ROOT / "ios/Sophia/Resources/Locales/en"
+DEFAULT_OUT = ROOT / "ios/Sophia/Locales/en"
 
 SUBJECT_EN_MAP = {
     "History": "histoire",
