@@ -53,43 +53,48 @@ private struct LocaleCardDTO: Decodable {
 }
 
 enum LocalizedContentLoader {
-    private static let localeFolder = "Locales/en"
-    private static var cachedCourses: [Course]?
-    private static var cachedGlossary: [String: GlossaryEntry]?
-    private static var cachedCollections: [LearningCollection]?
-    private static var cachedCards: [CollectibleCard]?
-
-    static func resetCache() {
-        cachedCourses = nil
-        cachedGlossary = nil
-        cachedCollections = nil
-        cachedCards = nil
+    private struct Cache {
+        var courses: [Course]?
+        var glossary: [String: GlossaryEntry]?
+        var collections: [LearningCollection]?
+        var cards: [CollectibleCard]?
     }
 
-    static func courses() -> [Course] {
-        if let cachedCourses { return cachedCourses }
-        let decoded: [LocaleCourseDTO] = load("courses") ?? []
+    private static var caches: [AppLanguage: Cache] = [:]
+
+    static func resetCache() {
+        caches.removeAll()
+    }
+
+    static func courses(for language: AppLanguage) -> [Course] {
+        var cache = caches[language, default: Cache()]
+        if let cachedCourses = cache.courses { return cachedCourses }
+        let decoded: [LocaleCourseDTO] = load("courses", language: language) ?? []
         let mapped = decoded.compactMap { $0.toCourse() }
-        cachedCourses = mapped
+        cache.courses = mapped
+        caches[language] = cache
         return mapped
     }
 
-    static func glossaryEntries() -> [String: GlossaryEntry] {
-        if let cachedGlossary { return cachedGlossary }
-        let decoded: [String: LocaleGlossaryEntryDTO] = load("glossary") ?? [:]
+    static func glossaryEntries(for language: AppLanguage) -> [String: GlossaryEntry] {
+        var cache = caches[language, default: Cache()]
+        if let cachedGlossary = cache.glossary { return cachedGlossary }
+        let decoded: [String: LocaleGlossaryEntryDTO] = load("glossary", language: language) ?? [:]
         var mapped: [String: GlossaryEntry] = [:]
         for (key, dto) in decoded {
             if let entry = dto.toEntry() {
                 mapped[key] = entry
             }
         }
-        cachedGlossary = mapped
+        cache.glossary = mapped
+        caches[language] = cache
         return mapped
     }
 
-    static func collections() -> [LearningCollection] {
-        if let cachedCollections { return cachedCollections }
-        let decoded: [LocaleCollectionDTO] = load("collections") ?? []
+    static func collections(for language: AppLanguage) -> [LearningCollection] {
+        var cache = caches[language, default: Cache()]
+        if let cachedCollections = cache.collections { return cachedCollections }
+        let decoded: [LocaleCollectionDTO] = load("collections", language: language) ?? []
         let mapped = decoded.compactMap { dto -> LearningCollection? in
             guard let base = CollectionData.allCollections.first(where: { $0.id == dto.id }) else {
                 return nil
@@ -102,13 +107,15 @@ enum LocalizedContentLoader {
                 courseIds: dto.courseIds
             )
         }
-        cachedCollections = mapped
+        cache.collections = mapped
+        caches[language] = cache
         return mapped
     }
 
-    static func cards() -> [CollectibleCard] {
-        if let cachedCards { return cachedCards }
-        let decoded: [LocaleCardDTO] = load("cards") ?? []
+    static func cards(for language: AppLanguage) -> [CollectibleCard] {
+        var cache = caches[language, default: Cache()]
+        if let cachedCards = cache.cards { return cachedCards }
+        let decoded: [LocaleCardDTO] = load("cards", language: language) ?? []
         let mapped = decoded.compactMap { dto -> CollectibleCard? in
             guard let base = CardData.allCards.first(where: { $0.id == dto.id }),
                   let rarity = CollectibleCardRarity(catalogKey: dto.rarity) else {
@@ -122,11 +129,24 @@ enum LocalizedContentLoader {
                 courseIds: dto.courseIds
             )
         }
-        cachedCards = mapped
+        cache.cards = mapped
+        caches[language] = cache
         return mapped
     }
 
-    private static func jsonURL(named name: String) -> URL? {
+    private static func localeFolder(for language: AppLanguage) -> String? {
+        switch language {
+        case .french:
+            return nil
+        case .english:
+            return "Locales/en"
+        case .portuguese:
+            return "Locales/pt"
+        }
+    }
+
+    private static func jsonURL(named name: String, language: AppLanguage) -> URL? {
+        guard let localeFolder = localeFolder(for: language) else { return nil }
         let subdirectories: [String?] = [
             localeFolder,
             "Resources/\(localeFolder)",
@@ -148,13 +168,13 @@ enum LocalizedContentLoader {
         return nil
     }
 
-    private static func load<T: Decodable>(_ name: String) -> T? {
-        guard let url = jsonURL(named: name) else { return nil }
+    private static func load<T: Decodable>(_ name: String, language: AppLanguage) -> T? {
+        guard let url = jsonURL(named: name, language: language) else { return nil }
         do {
             let data = try Data(contentsOf: url)
             return try JSONDecoder().decode(T.self, from: data)
         } catch {
-            assertionFailure("Failed to load \(name).json: \(error)")
+            assertionFailure("Failed to load \(name).json for \(language.rawValue): \(error)")
             return nil
         }
     }

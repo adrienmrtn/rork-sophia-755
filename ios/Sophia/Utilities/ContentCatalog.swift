@@ -7,7 +7,9 @@ enum ContentCatalog {
         case .french:
             return CourseData.allCourses
         case .english:
-            return LocalizedContentLoader.courses()
+            return LocalizedContentLoader.courses(for: .english)
+        case .portuguese:
+            return LocalizedContentLoader.courses(for: .portuguese)
         }
     }
 
@@ -16,7 +18,9 @@ enum ContentCatalog {
         case .french:
             return CollectionData.allCollections
         case .english:
-            return LocalizedContentLoader.collections()
+            return LocalizedContentLoader.collections(for: .english)
+        case .portuguese:
+            return LocalizedContentLoader.collections(for: .portuguese)
         }
     }
 
@@ -25,7 +29,9 @@ enum ContentCatalog {
         case .french:
             return CardData.allCards
         case .english:
-            return LocalizedContentLoader.cards()
+            return LocalizedContentLoader.cards(for: .english)
+        case .portuguese:
+            return LocalizedContentLoader.cards(for: .portuguese)
         }
     }
 

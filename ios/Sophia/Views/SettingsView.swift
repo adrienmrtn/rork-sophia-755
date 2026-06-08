@@ -53,13 +53,14 @@ struct SettingsView: View {
                         sectionHeader(languageManager.text("language.section"))
                         VStack(spacing: 0) {
                             HStack {
-                                Text(languageManager.text("language.french"))
-                                    .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                                    .foregroundStyle(ink)
-                                Spacer()
-                                Text(languageManager.text("language.english"))
-                                    .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                                    .foregroundStyle(ink)
+                                ForEach(AppLanguage.allCases) { language in
+                                    Text(language.displayName)
+                                        .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                                        .foregroundStyle(ink)
+                                    if language != AppLanguage.allCases.last {
+                                        Spacer()
+                                    }
+                                }
                             }
                             .padding(.horizontal, 14)
                             .padding(.top, 14)
