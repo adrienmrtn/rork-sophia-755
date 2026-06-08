@@ -35,11 +35,13 @@ struct OnboardingNativePaywallView: View {
             VStack(spacing: 0) {
                 ScrollView(showsIndicators: false) {
                     VStack(spacing: 22) {
-                        header
-                            .padding(.top, 8)
+                        VStack(spacing: 12) {
+                            header
+                                .padding(.top, 4)
 
-                        subjectsSection
-                            .padding(.horizontal, 20)
+                            subjectsSection
+                        }
+                        .padding(.horizontal, 20)
 
                         premiumSection
                             .padding(.horizontal, 20)
@@ -104,20 +106,15 @@ struct OnboardingNativePaywallView: View {
     // MARK: - Subjects
 
     private var subjectsSection: some View {
-        ZStack {
+        VStack(spacing: 30) {
             freeSubjectsCard
                 .rotationEffect(.degrees(3.27))
-                .offset(y: -12)
-                .zIndex(1)
 
             lockedSubjectsCard
                 .rotationEffect(.degrees(-3.27))
-                .offset(y: 118)
-                .zIndex(0)
         }
         .frame(maxWidth: .infinity)
-        .frame(height: 318)
-        .padding(.bottom, 8)
+        .padding(.bottom, 4)
     }
 
     private var freeSubjectsCard: some View {
