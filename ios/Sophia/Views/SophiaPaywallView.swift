@@ -30,15 +30,15 @@ enum SophiaPaywallContext: String, Identifiable {
         }
     }
 
-    static let defaultOfferingIdentifier = "default"
+    /// RC offering used when a context-specific paywall cannot be resolved.
+    static let fallbackOfferingIdentifier = finOnboarding.rawValue
 }
 
 /// Wrapper around `RevenueCatUI.PaywallView` that loads a specific offering by
-/// identifier and falls back to the RevenueCat `default` offering if it can't
+/// identifier and falls back to the `fin_onboarding` RC paywall when it can't
 /// be found — e.g. while offerings are still loading or if the dashboard hasn't
 /// been configured yet.
 struct SophiaPaywallView: View {
-    @Environment(LanguageManager.self) private var languageManager
     let context: SophiaPaywallContext
     var onPurchased: () -> Void = {}
     var onRestored: () -> Void = {}
@@ -55,7 +55,10 @@ struct SophiaPaywallView: View {
                     .onRestoreCompleted { _ in onRestored() }
                     .onRequestedDismissal { onDismissed?() }
             } else if loaded {
-                paywallUnavailableView
+                PaywallView()
+                    .onPurchaseCompleted { _ in onPurchased() }
+                    .onRestoreCompleted { _ in onRestored() }
+                    .onRequestedDismissal { onDismissed?() }
             } else {
                 ZStack {
                     Color.black.ignoresSafeArea()
@@ -71,8 +74,8 @@ struct SophiaPaywallView: View {
             let offerings = try await Purchases.shared.offerings()
             let id = context.rawValue
             var resolved = offerings.all[id] ?? offerings.offering(identifier: id)
-            if resolved == nil, id != SophiaPaywallContext.defaultOfferingIdentifier {
-                let fid = SophiaPaywallContext.defaultOfferingIdentifier
+            if resolved == nil, id != SophiaPaywallContext.fallbackOfferingIdentifier {
+                let fid = SophiaPaywallContext.fallbackOfferingIdentifier
                 resolved = offerings.all[fid] ?? offerings.offering(identifier: fid)
                 #if DEBUG
                 print("[SophiaPaywall] '\(id)' not found — falling back to '\(fid)': \(resolved?.identifier ?? "nil")")
@@ -90,27 +93,5 @@ struct SophiaPaywallView: View {
             offering = nil
         }
         loaded = true
-    }
-
-    private var paywallUnavailableView: some View {
-        VStack(spacing: 16) {
-            Text(languageManager.text("paywall.unavailable.title"))
-                .font(.system(.title3, design: .rounded, weight: .heavy))
-                .foregroundStyle(.white)
-            Text(languageManager.text("paywall.unavailable.message"))
-                .font(.system(.body, design: .rounded))
-                .foregroundStyle(.white.opacity(0.7))
-                .multilineTextAlignment(.center)
-                .padding(.horizontal, 24)
-            Button(languageManager.text("common.close")) { onDismissed?() }
-                .font(.system(.headline, design: .rounded, weight: .heavy))
-                .foregroundStyle(.black)
-                .padding(.horizontal, 24)
-                .padding(.vertical, 14)
-                .background(.white, in: Capsule())
-                .padding(.top, 8)
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.black.ignoresSafeArea())
     }
 }
