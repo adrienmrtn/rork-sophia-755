@@ -97,7 +97,7 @@ struct OnboardingIntroScreen: View {
                 .offset(y: appeared ? 0 : 30)
             }
 
-            LanguagePickerControl()
+            LanguagePickerControl(compact: true)
                 .padding(.top, 12)
                 .padding(.trailing, 20)
                 .opacity(appeared ? 1 : 0)
