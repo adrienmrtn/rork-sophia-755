@@ -36,6 +36,11 @@ enum GlossaryClassification: String, CaseIterable, Sendable {
         case (.evenementConnexe, .english): "Event"
         case (.personnage, .english): "Figure"
         case (.lieuInstitution, .english): "Place"
+        case (.referenceHistorique, .german): "Bezug"
+        case (.concept, .german): "Konzept"
+        case (.evenementConnexe, .german): "Ereignis"
+        case (.personnage, .german): "Person"
+        case (.lieuInstitution, .german): "Ort"
         default: shortLabel
         }
     }
@@ -89,7 +94,7 @@ enum GlossaryStore {
 
     static func entry(courseId: String, courseTitle: String, displayTerm: String) -> GlossaryEntry? {
         switch AppLanguage.currentPersisted() {
-        case .english:
+        case .english, .german:
             return localizedEntry(courseId: courseId, displayTerm: displayTerm)
         case .french:
             return frenchEntry(courseTitle: courseTitle, displayTerm: displayTerm)
@@ -97,7 +102,8 @@ enum GlossaryStore {
     }
 
     private static func localizedEntry(courseId: String, displayTerm: String) -> GlossaryEntry? {
-        let entries = LocalizedContentLoader.glossaryEntries()
+        let language = AppLanguage.currentPersisted()
+        let entries = LocalizedContentLoader.glossaryEntries(for: language)
         if let exact = entries[localizedKey(courseId: courseId, displayTerm: displayTerm)] {
             return exact
         }
