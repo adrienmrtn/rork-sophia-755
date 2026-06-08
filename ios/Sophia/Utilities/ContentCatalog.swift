@@ -7,7 +7,10 @@ enum ContentCatalog {
         case .french:
             return CourseData.allCourses
         case .english:
-            return LocalizedContentLoader.courses()
+            return LocalizedContentLoader.courses(for: .english)
+        case .portuguese:
+            // Phase 2 — JSON bundle keyed by stable course IDs.
+            return CourseData.allCourses
         }
     }
 
@@ -16,7 +19,9 @@ enum ContentCatalog {
         case .french:
             return CollectionData.allCollections
         case .english:
-            return LocalizedContentLoader.collections()
+            return LocalizedContentLoader.collections(for: .english)
+        case .portuguese:
+            return CollectionData.allCollections
         }
     }
 
@@ -25,7 +30,9 @@ enum ContentCatalog {
         case .french:
             return CardData.allCards
         case .english:
-            return LocalizedContentLoader.cards()
+            return LocalizedContentLoader.cards(for: .english)
+        case .portuguese:
+            return CardData.allCards
         }
     }
 
