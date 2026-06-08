@@ -1,9 +1,7 @@
-import Combine
 import SwiftUI
 import RevenueCat
 
 struct OnboardingNativePaywallView: View {
-    @Environment(LanguageManager.self) private var languageManager
     enum Plan: String, CaseIterable, Identifiable {
         case yearly
         case monthly
@@ -17,6 +15,10 @@ struct OnboardingNativePaywallView: View {
 
     @State private var selectedPlan: Plan = .yearly
     @State private var showReminderSheet: Bool = false
+    @State private var showLegalSafari: Bool = false
+
+    private let paywallLanguage: AppLanguage = .french
+    private let legalURL = URL(string: "https://vikstudios.com/sophia")!
 
     private var unlockedSubjects: Set<Subject> {
         FreemiumGate.unlockedSubjects(isPremium: false)
@@ -26,345 +28,291 @@ struct OnboardingNativePaywallView: View {
         Subject.allCases.filter { !unlockedSubjects.contains($0) }
     }
 
-    private var lockedCourseTeasers: [PaywallCourseTeaser] {
-        let layouts: [PaywallTeaserLayout] = [.hero, .compact, .tall, .wide, .standard, .compact]
-        var teasers: [PaywallCourseTeaser] = []
-        var layoutIndex = 0
-
-        for subject in lockedSubjects {
-            let candidates = ContentCatalog.activeCourses.filter {
-                $0.subject == subject && CourseImageMap.imageName(for: $0.id) != nil
-            }
-            for course in candidates.prefix(2) where layoutIndex < layouts.count {
-                teasers.append(PaywallCourseTeaser(course: course, layout: layouts[layoutIndex]))
-                layoutIndex += 1
-            }
-        }
-        return teasers
-    }
-
     var body: some View {
         ZStack(alignment: .topTrailing) {
-            BrutalPalette.cream.ignoresSafeArea()
+            PaywallDesign.background.ignoresSafeArea()
 
             VStack(spacing: 0) {
                 ScrollView(showsIndicators: false) {
                     VStack(spacing: 28) {
                         header
-                            .padding(.top, 8)
+                            .padding(.top, 56)
 
-                        subjectsBlock
-                            .padding(.horizontal, 24)
+                        subjectsSection
+                            .padding(.horizontal, 20)
 
-                        if !lockedCourseTeasers.isEmpty {
-                            lockedCoursesTeaserBlock
-                                .padding(.horizontal, 24)
-                        }
+                        boostSection
+                            .padding(.horizontal, 20)
 
-                        featureComparison
-                            .padding(.horizontal, 24)
+                        premiumSection
+                            .padding(.horizontal, 20)
 
                         VStack(spacing: 14) {
                             planCard(.yearly)
                             planCard(.monthly)
                         }
-                        .padding(.horizontal, 24)
+                        .padding(.horizontal, 20)
 
-                        PaywallReviewsCarousel()
-                            .padding(.horizontal, 24)
-
-                        restoreRow
+                        legalRow
                             .padding(.bottom, 8)
                     }
                     .padding(.bottom, 12)
                 }
 
-                VStack(spacing: 8) {
-                    Text(languageManager.text("paywall.cancelAnytime"))
-                        .font(.system(.caption, design: .rounded, weight: .semibold))
-                        .foregroundStyle(BrutalPalette.ink.opacity(0.5))
-
-                    OnboardingPrimaryButton(title: store.isPurchasing ? languageManager.text("common.processing") : languageManager.text("common.continue")) {
-                        guard !store.isPurchasing else { return }
-                        OnboardingHaptics.primaryCTA()
-                        showReminderSheet = true
-                    }
-                    .disabled(store.isPurchasing)
-                }
-                .padding(.horizontal, 24)
-                .padding(.bottom, 8)
+                footer
             }
-            .safeAreaInset(edge: .top, spacing: 0) {
-                HStack {
-                    Spacer()
-                    closeButton
-                }
-                .padding(.horizontal, 16)
-                .padding(.bottom, 4)
+        }
+        .safeAreaInset(edge: .top, spacing: 0) {
+            HStack {
+                Spacer()
+                closeButton
             }
+            .padding(.horizontal, 16)
+            .padding(.top, 8)
         }
         .onAppear {
             store.logOnboardingPurchaseDiagnostics()
         }
         .sheet(isPresented: $showReminderSheet) {
-            TrialTimelineSheet(
+            PaywallTrialTimelineSheet(
                 onContinue: {
                     showReminderSheet = false
                     onPurchase(selectedPlan)
                 }
             )
-            .presentationDetents([.large])
+            .presentationDetents([.medium, .large])
             .presentationDragIndicator(.visible)
             .presentationCornerRadius(28)
+        }
+        .sheet(isPresented: $showLegalSafari) {
+            InAppSafariView(url: legalURL)
+                .ignoresSafeArea()
         }
     }
 
     // MARK: - Header
 
     private var header: some View {
-        Text(languageManager.text("paywall.header"))
-            .font(.system(size: 34, weight: .heavy, design: .rounded))
-            .foregroundStyle(BrutalPalette.ink)
-            .fixedSize(horizontal: false, vertical: true)
+        ZStack(alignment: .topTrailing) {
+            highlightedHeadline(
+                full: fr("paywall.header"),
+                highlight: fr("paywall.header.highlight"),
+                highlightColor: PaywallDesign.orange,
+                fontSize: 32,
+                lineSpacing: 4
+            )
+            .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.horizontal, 24)
+
+            PaywallLightbulbView(size: 52)
+                .rotationEffect(.degrees(12))
+                .offset(x: -8, y: -18)
+        }
     }
 
     // MARK: - Subjects
 
-    private var subjectsBlock: some View {
-        VStack(alignment: .leading, spacing: 18) {
-            VStack(alignment: .leading, spacing: 10) {
-                Text(languageManager.text("paywall.freeSubjects"))
-                    .font(.system(.headline, design: .rounded, weight: .heavy))
-                    .foregroundStyle(BrutalPalette.ink)
-                FlowLayout(spacing: 10) {
-                    ForEach(Array(unlockedSubjects).sorted(by: { $0.localizedShortName(language: languageManager.current) < $1.localizedShortName(language: languageManager.current) }), id: \.self) { subject in
-                        subjectPill(subject, locked: false)
-                    }
-                }
-            }
+    private var subjectsSection: some View {
+        ZStack {
+            freeSubjectsCard
+                .rotationEffect(.degrees(3.27))
+                .offset(y: -28)
+                .zIndex(1)
 
-            VStack(alignment: .leading, spacing: 10) {
-                Text(languageManager.text("paywall.lockedSubjects"))
-                    .font(.system(.headline, design: .rounded, weight: .heavy))
-                    .foregroundStyle(BrutalPalette.ink.opacity(0.55))
-                FlowLayout(spacing: 10) {
-                    ForEach(lockedSubjects, id: \.self) { subject in
-                        subjectPill(subject, locked: true)
-                    }
+            PaywallStarCluster()
+                .offset(y: 52)
+                .zIndex(2)
+
+            lockedSubjectsCard
+                .rotationEffect(.degrees(-3.27))
+                .offset(y: 118)
+                .zIndex(0)
+        }
+        .frame(maxWidth: .infinity)
+        .frame(height: 340)
+        .padding(.bottom, 24)
+    }
+
+    private var freeSubjectsCard: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            Text(fr("paywall.freeSubjects"))
+                .font(.system(size: 19.5, weight: .black, design: .rounded))
+                .foregroundStyle(BrutalPalette.ink)
+
+            FlowLayout(spacing: 10) {
+                ForEach(Array(unlockedSubjects).sorted(by: subjectSort), id: \.self) { subject in
+                    subjectPill(subject, locked: false)
                 }
             }
         }
         .padding(18)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .brutalOnboardingCard(depth: 4, corner: 20)
+        .paywallBrutalCard()
+        .overlay(alignment: .top) {
+            PaywallGreyStarBadge()
+                .offset(y: -24)
+        }
+    }
+
+    private var lockedSubjectsCard: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            Text(fr("paywall.lockedSubjects"))
+                .font(.system(size: 19.5, weight: .black, design: .rounded))
+                .foregroundStyle(BrutalPalette.ink)
+
+            FlowLayout(spacing: 10) {
+                ForEach(lockedSubjects, id: \.self) { subject in
+                    subjectPill(subject, locked: true)
+                }
+            }
+            .opacity(0.5)
+        }
+        .padding(18)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .paywallBrutalCard()
     }
 
     private func subjectPill(_ subject: Subject, locked: Bool) -> some View {
-        HStack(spacing: 8) {
-            subjectIconBadge(subject: subject, locked: locked)
-            Text(subject.localizedShortName(language: languageManager.current))
-                .font(.system(.caption, design: .rounded, weight: .heavy))
-                .lineLimit(1)
-        }
-        .foregroundStyle(locked ? BrutalPalette.ink.opacity(0.5) : BrutalPalette.ink)
-        .padding(.leading, 6)
-        .padding(.trailing, 13)
-        .padding(.vertical, 7)
-        .background(locked ? Color(white: 0.95) : BrutalPalette.pastel(for: subject), in: Capsule())
-        .overlay { Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 2) }
+        let label = subject.localizedShortName(language: paywallLanguage)
+        let text = locked ? "🔒 \(label)" : "\(subject.emoji) \(label)"
+
+        return Text(text)
+            .font(.system(size: 14.5, weight: .bold, design: .rounded))
+            .foregroundStyle(BrutalPalette.ink)
+            .padding(.horizontal, 14)
+            .padding(.vertical, 10)
+            .background(
+                locked ? PaywallDesign.lockedPill : PaywallDesign.freePillColor(for: subject),
+                in: Capsule()
+            )
+            .overlay { Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 3) }
+            .shadow(color: BrutalPalette.ink, radius: 0, x: 1, y: 1)
     }
 
-    private func subjectIconBadge(subject: Subject, locked: Bool) -> some View {
+    // MARK: - Boost
+
+    private var boostSection: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 10, style: .continuous)
-                .fill(locked ? Color.white : BrutalPalette.pastel(for: subject).opacity(0.55))
-                .frame(width: 32, height: 32)
-                .overlay {
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .strokeBorder(BrutalPalette.ink, lineWidth: 2)
-                }
-            Image(systemName: locked ? "lock.fill" : subject.icon)
-                .font(.system(size: locked ? 12 : 14, weight: .black))
-                .foregroundStyle(BrutalPalette.ink)
-                .symbolRenderingMode(.hierarchical)
-        }
-    }
+            PaywallBlobShape()
+                .fill(PaywallDesign.bubbleBlue.opacity(0.85))
+                .frame(width: 68, height: 58)
+                .rotationEffect(.degrees(-8))
+                .offset(x: -118, y: 34)
 
-    // MARK: - Locked course teasers
+            PaywallBlobShape()
+                .fill(PaywallDesign.bubblePurple.opacity(0.9))
+                .frame(width: 88, height: 68)
+                .rotationEffect(.degrees(8))
+                .offset(x: 96, y: 18)
 
-    private var lockedCoursesTeaserBlock: some View {
-        VStack(alignment: .leading, spacing: 14) {
-            VStack(alignment: .leading, spacing: 4) {
-                Text(languageManager.text("paywall.teaserTitle"))
-                    .font(.system(.headline, design: .rounded, weight: .heavy))
-                    .foregroundStyle(BrutalPalette.ink)
-                Text(languageManager.text("paywall.teaserSubtitle"))
-                    .font(.system(.caption, design: .rounded, weight: .semibold))
-                    .foregroundStyle(BrutalPalette.ink.opacity(0.5))
-            }
+            PaywallStarShape()
+                .fill(PaywallDesign.bubbleOrange)
+                .frame(width: 72, height: 72)
+                .rotationEffect(.degrees(-12))
+                .offset(x: -118, y: 108)
 
-            lockedCourseTeaserCollage
-        }
-        .padding(18)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .brutalOnboardingCard(depth: 4, corner: 20)
-    }
+            VStack(spacing: 18) {
+                highlightedHeadline(
+                    full: fr("paywall.boostHeadline"),
+                    highlight: fr("paywall.boostHeadline.highlight"),
+                    highlightColor: PaywallDesign.accentPink,
+                    fontSize: 30,
+                    lineSpacing: 2
+                )
+                .frame(maxWidth: .infinity, alignment: .leading)
 
-    @ViewBuilder
-    private var lockedCourseTeaserCollage: some View {
-        let teasers = lockedCourseTeasers
-        VStack(alignment: .leading, spacing: 10) {
-            if let first = teasers.first {
-                if teasers.count == 1 {
-                    courseTeaserCard(first)
-                } else {
-                    HStack(alignment: .top, spacing: 10) {
-                        courseTeaserCard(first)
-                        if teasers.count > 1 {
-                            courseTeaserCard(teasers[1])
-                        }
-                    }
-                }
-            }
-            if teasers.count > 2 {
-                courseTeaserCard(teasers[2])
-            }
-            if teasers.count > 3 {
-                HStack(alignment: .top, spacing: 10) {
-                    courseTeaserCard(teasers[3])
-                    if teasers.count > 4 {
-                        courseTeaserCard(teasers[4])
-                    }
-                }
-            }
-            if teasers.count > 5 {
-                courseTeaserCard(teasers[5])
-            }
-        }
-    }
-
-    private func courseTeaserCard(_ teaser: PaywallCourseTeaser) -> some View {
-        let layout = teaser.layout
-        let pastel = BrutalPalette.pastel(for: teaser.course.subject)
-
-        return VStack(alignment: .leading, spacing: 0) {
-            ZStack(alignment: .bottomLeading) {
-                Group {
-                    if let image = CourseImageMap.loadImage(for: teaser.course.id) {
-                        Image(uiImage: image)
-                            .resizable()
-                            .scaledToFill()
-                    } else {
-                        pastel
-                    }
+                ZStack {
+                    PaywallSpeechPill(title: fr("paywall.boostBubble.conversations"), fill: PaywallDesign.bubbleBlue)
+                        .offset(x: -52, y: -8)
+                    PaywallSpeechPill(title: fr("paywall.boostBubble.curiosity"), fill: PaywallDesign.bubblePurple)
+                        .offset(x: 48, y: 28)
+                    PaywallSpeechPill(title: fr("paywall.boostBubble.confidence"), fill: PaywallDesign.bubbleOrange)
+                        .offset(x: -36, y: 72)
                 }
                 .frame(maxWidth: .infinity)
-                .frame(height: layout.imageHeight)
-                .clipped()
-
-                LinearGradient(
-                    colors: [.clear, BrutalPalette.ink.opacity(0.55)],
-                    startPoint: .center,
-                    endPoint: .bottom
-                )
-                .frame(height: layout.imageHeight * 0.55)
-
-                Text(teaser.course.subject.localizedShortName(language: languageManager.current).uppercased())
-                    .font(.system(size: 9, weight: .heavy, design: .rounded))
-                    .tracking(0.6)
-                    .foregroundStyle(.white.opacity(0.9))
-                    .padding(.horizontal, 8)
-                    .padding(.vertical, 4)
-                    .background(BrutalPalette.ink.opacity(0.35), in: Capsule())
-                    .padding(8)
+                .frame(height: 150)
             }
-
-            Text(teaser.course.title)
-                .font(.system(layout == PaywallTeaserLayout.compact ? .caption2 : .caption, design: .rounded, weight: .heavy))
-                .foregroundStyle(BrutalPalette.ink)
-                .lineLimit(layout == PaywallTeaserLayout.compact ? 2 : 3)
-                .multilineTextAlignment(.leading)
-                .padding(.horizontal, 10)
-                .padding(.vertical, 9)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .background(pastel.opacity(0.55))
         }
-        .background(Color.white)
-        .clipShape(RoundedRectangle(cornerRadius: layout.cornerRadius, style: .continuous))
-        .overlay {
-            RoundedRectangle(cornerRadius: layout.cornerRadius, style: .continuous)
-                .strokeBorder(BrutalPalette.ink, lineWidth: 2)
-        }
-        .frame(maxWidth: layout.fixedWidth == nil ? .infinity : nil)
-        .frame(width: layout.fixedWidth)
-        .rotationEffect(.degrees(layout.rotation))
-        .allowsHitTesting(false)
+        .padding(.top, 8)
     }
 
-    // MARK: - Feature comparison
+    // MARK: - Premium comparison
+
+    private var premiumSection: some View {
+        VStack(alignment: .leading, spacing: 18) {
+            highlightedHeadline(
+                full: fr("paywall.premiumHeadline"),
+                highlight: fr("paywall.premiumHeadline.highlight"),
+                highlightColor: PaywallDesign.orange,
+                fontSize: 30,
+                lineSpacing: 2
+            )
+
+            ZStack(alignment: .top) {
+                featureComparison
+                PaywallStarCluster()
+                    .offset(y: -22)
+            }
+        }
+    }
 
     private var featureComparison: some View {
-        VStack(spacing: 0) {
-            HStack {
-                Text(languageManager.text("paywall.featureColumn"))
-                    .font(.system(.caption, design: .rounded, weight: .heavy))
-                    .foregroundStyle(BrutalPalette.ink.opacity(0.5))
-                Spacer()
-                Text(languageManager.text("paywall.freeColumn"))
-                    .font(.system(.caption, design: .rounded, weight: .heavy))
-                    .foregroundStyle(BrutalPalette.ink.opacity(0.5))
-                    .frame(width: 56)
-                Text(languageManager.text("paywall.premiumColumn"))
-                    .font(.system(.caption, design: .rounded, weight: .heavy))
-                    .foregroundStyle(BrutalPalette.ink)
-                    .frame(width: 72)
+        ZStack(alignment: .trailing) {
+            RoundedRectangle(cornerRadius: 17, style: .continuous)
+                .fill(PaywallDesign.creamHighlight)
+                .overlay {
+                    RoundedRectangle(cornerRadius: 17, style: .continuous)
+                        .strokeBorder(PaywallDesign.orange, lineWidth: 3)
+                }
+                .frame(width: 78)
+                .padding(.top, 44)
+                .padding(.trailing, 3)
+                .padding(.bottom, 3)
+
+            VStack(spacing: 0) {
+                HStack {
+                    Text(fr("paywall.featureColumn"))
+                        .font(.system(size: 9.5, weight: .bold, design: .rounded))
+                        .foregroundStyle(BrutalPalette.ink)
+                    Spacer()
+                    Text(fr("paywall.freeColumn"))
+                        .font(.system(size: 9.5, weight: .bold, design: .rounded))
+                        .foregroundStyle(BrutalPalette.ink)
+                        .frame(width: 52)
+                    Text(fr("paywall.premiumColumn"))
+                        .font(.system(size: 9.5, weight: .black, design: .rounded))
+                        .foregroundStyle(BrutalPalette.ink)
+                        .frame(width: 72)
+                }
+                .padding(.horizontal, 16)
+                .padding(.vertical, 14)
+
+                featureRow(fr("paywall.feature.3subjects"), free: .freeCheck, premium: .premiumCheck)
+                featureRow(fr("paywall.feature.allSubjects"), free: .denied, premium: .premiumCheck)
+                featureRow(fr("paywall.feature.unlimitedCourses"), free: .denied, premium: .premiumCheck)
+                featureRow(fr("paywall.feature.miniQuiz"), free: .denied, premium: .premiumCheck)
+                featureRow(fr("paywall.feature.fullLibrary"), free: .denied, premium: .premiumCheck)
             }
-            .padding(.horizontal, 16)
-            .padding(.vertical, 12)
-
-            Divider().overlay(BrutalPalette.ink.opacity(0.15))
-
-            featureRow(languageManager.text("paywall.feature.3subjects"), free: true, premium: true)
-            featureRow(languageManager.text("paywall.feature.allSubjects"), free: false, premium: true)
-            featureRow(languageManager.text("paywall.feature.unlimitedCourses"), free: false, premium: true)
-            featureRow(languageManager.text("paywall.feature.miniQuiz"), free: false, premium: true)
-            featureRow(languageManager.text("paywall.feature.fullLibrary"), free: false, premium: true)
+            .paywallBrutalCard()
         }
-        .brutalOnboardingCard(depth: 3, corner: 18)
     }
 
-    private func featureRow(_ title: String, free: Bool, premium: Bool) -> some View {
-        HStack {
+    private func featureRow(_ title: String, free: PaywallFeatureMark.Kind, premium: PaywallFeatureMark.Kind) -> some View {
+        HStack(spacing: 8) {
             Text(title)
-                .font(.system(.subheadline, design: .rounded, weight: .semibold))
+                .font(.system(size: 13.5, weight: .heavy, design: .rounded))
                 .foregroundStyle(BrutalPalette.ink)
-            Spacer()
-            featureCheck(free).frame(width: 56)
-            featureCheck(premium).frame(width: 72)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            PaywallFeatureMark(kind: free)
+                .frame(width: 52)
+            PaywallFeatureMark(kind: premium)
+                .frame(width: 72)
         }
         .padding(.horizontal, 16)
-        .padding(.vertical, 10)
+        .padding(.vertical, 9)
     }
 
-    private func featureCheck(_ on: Bool) -> some View {
-        Group {
-            if on {
-                ZStack {
-                    Circle().fill(BrutalPalette.yellow).frame(width: 22, height: 22)
-                    Image(systemName: "checkmark")
-                        .font(.system(size: 10, weight: .heavy))
-                        .foregroundStyle(BrutalPalette.ink)
-                }
-            } else {
-                Text("—")
-                    .font(.system(.subheadline, weight: .heavy))
-                    .foregroundStyle(BrutalPalette.ink.opacity(0.25))
-            }
-        }
-    }
-
-    // MARK: - Plan card
+    // MARK: - Plans
 
     private func package(for plan: Plan) -> Package? {
         plan == .yearly ? store.annualPackage : store.monthlyPackage
@@ -372,32 +320,31 @@ struct OnboardingNativePaywallView: View {
 
     private func planCopy(for plan: Plan) -> (title: String, subtitle: String, price: String, period: String, badge: String?) {
         let isYearly = plan == .yearly
-        let lang = languageManager.current
         guard let pkg = package(for: plan) else {
             return (
-                isYearly ? AppLocalizable.string("paywall.plan.yearly", language: lang) : AppLocalizable.string("paywall.plan.monthly", language: lang),
-                isYearly ? AppLocalizable.string("paywall.plan.fallback.yearlyMonthly", language: lang) : AppLocalizable.string("paywall.plan.monthlySubtitle", language: lang),
-                isYearly ? AppLocalizable.string("paywall.plan.fallback.yearlyPrice", language: lang) : AppLocalizable.string("paywall.plan.fallback.monthlyPrice", language: lang),
-                isYearly ? AppLocalizable.string("paywall.plan.perYear", language: lang) : AppLocalizable.string("paywall.plan.perMonth", language: lang),
-                isYearly ? AppLocalizable.string("paywall.plan.discount", language: lang) : nil
+                isYearly ? fr("paywall.plan.yearly") : fr("paywall.plan.monthly"),
+                isYearly ? fr("paywall.plan.fallback.yearlyMonthly") : fr("paywall.plan.monthlySubtitle"),
+                isYearly ? fr("paywall.plan.fallback.yearlyPrice") : fr("paywall.plan.fallback.monthlyPrice"),
+                isYearly ? fr("paywall.plan.perYear") : fr("paywall.plan.perMonth"),
+                isYearly ? fr("paywall.plan.discount") : nil
             )
         }
 
         let price = pkg.localizedPriceString
         if isYearly {
             return (
-                AppLocalizable.string("paywall.plan.yearly", language: lang),
-                AppLocalizable.string("paywall.plan.yearlySubtitle", language: lang),
+                fr("paywall.plan.yearly"),
+                fr("paywall.plan.fallback.yearlyMonthly"),
                 price,
-                AppLocalizable.string("paywall.plan.perYear", language: lang),
-                AppLocalizable.string("paywall.plan.discount", language: lang)
+                fr("paywall.plan.perYear"),
+                fr("paywall.plan.discount")
             )
         }
         return (
-            AppLocalizable.string("paywall.plan.monthly", language: lang),
-            AppLocalizable.string("paywall.plan.monthlySubtitle", language: lang),
+            fr("paywall.plan.monthly"),
+            fr("paywall.plan.monthlySubtitle"),
             price,
-            AppLocalizable.string("paywall.plan.perMonth", language: lang),
+            fr("paywall.plan.perMonth"),
             nil
         )
     }
@@ -406,9 +353,11 @@ struct OnboardingNativePaywallView: View {
     private func planCard(_ plan: Plan) -> some View {
         let isSelected = selectedPlan == plan
         let isYearly = plan == .yearly
-        let tint: Color = isYearly ? OnboardingPastels.at(3) : OnboardingPastels.at(1)
         let copy = planCopy(for: plan)
-        let cardCorner: CGFloat = 14
+        let accentBorder = isSelected ? (isYearly ? PaywallDesign.orange : BrutalPalette.ink) : BrutalPalette.ink
+        let accentShadow = isSelected && isYearly ? PaywallDesign.orange : BrutalPalette.ink
+        let bodyFill = isSelected && isYearly ? PaywallDesign.creamHighlight : Color.white
+        let bodyBorderWidth: CGFloat = isSelected ? (isYearly ? 4 : 3.5) : 3
 
         Button {
             OnboardingHaptics.planSelected()
@@ -416,83 +365,96 @@ struct OnboardingNativePaywallView: View {
                 selectedPlan = plan
             }
         } label: {
-            VStack(spacing: 0) {
-                Text(languageManager.text("paywall.trialBadge"))
-                    .font(.system(.caption, design: .rounded, weight: .heavy))
-                    .foregroundStyle(BrutalPalette.ink)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 7)
-                    .background(BrutalPalette.yellow)
+            ZStack(alignment: .topTrailing) {
+                VStack(spacing: 0) {
+                    Text(fr("paywall.trialBadge"))
+                        .font(.system(size: 11.5, weight: .heavy, design: .rounded))
+                        .foregroundStyle(BrutalPalette.ink)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 8)
+                        .background(PaywallDesign.orange)
+                        .overlay(alignment: .bottom) {
+                            Rectangle()
+                                .fill(accentBorder)
+                                .frame(height: 3)
+                        }
 
-                HStack(spacing: 14) {
-                    ZStack {
-                        Circle()
-                            .strokeBorder(BrutalPalette.ink, lineWidth: 2.5)
-                            .frame(width: 26, height: 26)
-                        if isSelected {
-                            Circle()
-                                .fill(BrutalPalette.yellow)
-                                .frame(width: 26, height: 26)
-                                .overlay {
-                                    Image(systemName: "checkmark")
-                                        .font(.system(size: 12, weight: .heavy))
-                                        .foregroundStyle(BrutalPalette.ink)
-                                }
+                    HStack(spacing: 14) {
+                        PaywallPlanRadio(isSelected: isSelected)
+
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text(copy.title)
+                                .font(.system(size: 21.5, weight: .heavy, design: .rounded))
+                                .foregroundStyle(BrutalPalette.ink)
+                            Text(copy.subtitle)
+                                .font(.system(size: 11, weight: .semibold, design: .rounded))
+                                .foregroundStyle(BrutalPalette.ink.opacity(0.6))
+                        }
+
+                        Spacer(minLength: 8)
+
+                        VStack(alignment: .trailing, spacing: 2) {
+                            Text(copy.price)
+                                .font(.system(size: 24, weight: .black, design: .rounded))
+                                .foregroundStyle(BrutalPalette.ink)
+                            Text(copy.period)
+                                .font(.system(size: 11, weight: .semibold, design: .rounded))
+                                .foregroundStyle(BrutalPalette.ink.opacity(0.6))
                         }
                     }
-
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text(copy.title)
-                            .font(.system(.headline, design: .rounded, weight: .heavy))
-                            .foregroundStyle(BrutalPalette.ink)
-                        Text(copy.subtitle)
-                            .font(.system(.footnote, design: .rounded, weight: .semibold))
-                            .foregroundStyle(BrutalPalette.ink.opacity(0.6))
-                    }
-
-                    Spacer(minLength: 8)
-
-                    VStack(alignment: .trailing, spacing: 2) {
-                        Text(copy.price)
-                            .font(.system(.title3, design: .rounded, weight: .heavy))
-                            .foregroundStyle(BrutalPalette.ink)
-                        Text(copy.period)
-                            .font(.system(.caption, design: .rounded, weight: .bold))
-                            .foregroundStyle(BrutalPalette.ink.opacity(0.55))
-                    }
-
-                    if let badge = copy.badge {
-                        Text(badge)
-                            .font(.system(.caption2, design: .rounded, weight: .heavy))
-                            .foregroundStyle(.white)
-                            .padding(.horizontal, 6)
-                            .padding(.vertical, 4)
-                            .background(BrutalPalette.ink, in: RoundedRectangle(cornerRadius: 6))
-                    }
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 16)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(bodyFill)
                 }
-                .padding(.horizontal, 16)
-                .padding(.vertical, 16)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .background(isSelected ? tint : Color.white)
-            }
-            .clipShape(RoundedRectangle(cornerRadius: cardCorner, style: .continuous))
-            .overlay {
-                RoundedRectangle(cornerRadius: cardCorner, style: .continuous)
-                    .strokeBorder(BrutalPalette.ink, lineWidth: 2.5)
+                .clipShape(RoundedRectangle(cornerRadius: 17, style: .continuous))
+                .overlay {
+                    RoundedRectangle(cornerRadius: 17, style: .continuous)
+                        .strokeBorder(accentBorder, lineWidth: bodyBorderWidth)
+                }
+                .background(alignment: .topLeading) {
+                    RoundedRectangle(cornerRadius: 17, style: .continuous)
+                        .fill(accentShadow)
+                        .offset(x: 3, y: 3)
+                }
+                .padding(.bottom, 3)
+                .padding(.trailing, 3)
+
+                if isYearly, let badge = copy.badge {
+                    PaywallDiscountBadge(text: badge)
+                        .offset(x: 10, y: 36)
+                }
             }
         }
         .buttonStyle(PlanCardButtonStyle())
     }
 
-    private var restoreRow: some View {
-        Button {
-            OnboardingHaptics.selection()
-            onRestore()
-        } label: {
-            Text(languageManager.text("paywall.restoreRow"))
-                .font(.system(.footnote, design: .rounded, weight: .semibold))
-                .foregroundStyle(BrutalPalette.ink.opacity(0.55))
+    // MARK: - Footer
+
+    private var footer: some View {
+        VStack(spacing: 8) {
+            Text(fr("paywall.cancelAnytime"))
+                .font(.system(.caption, design: .rounded, weight: .semibold))
+                .foregroundStyle(BrutalPalette.ink.opacity(0.5))
+
+            OnboardingPrimaryButton(title: store.isPurchasing ? fr("common.processing") : fr("common.continue")) {
+                guard !store.isPurchasing else { return }
+                showReminderSheet = true
+            }
+            .disabled(store.isPurchasing)
         }
+    }
+
+    private var legalRow: some View {
+        HStack(spacing: 6) {
+            Button("Restaurer", action: onRestore)
+            Text("·")
+            Button("Conditions") { showLegalSafari = true }
+            Text("·")
+            Button("Confidentialité") { showLegalSafari = true }
+        }
+        .font(.system(.footnote, design: .rounded, weight: .semibold))
+        .foregroundStyle(BrutalPalette.ink.opacity(0.55))
         .buttonStyle(.plain)
     }
 
@@ -504,222 +466,146 @@ struct OnboardingNativePaywallView: View {
             Image(systemName: "xmark")
                 .font(.system(size: 14, weight: .bold))
                 .foregroundStyle(BrutalPalette.ink)
-                .frame(width: 44, height: 44)
+                .frame(width: 42, height: 42)
                 .background(Color.white)
                 .clipShape(Circle())
-                .overlay { Circle().strokeBorder(BrutalPalette.ink, lineWidth: 2) }
+                .overlay { Circle().strokeBorder(BrutalPalette.ink, lineWidth: 3) }
+                .shadow(color: BrutalPalette.ink, radius: 0, x: 3, y: 1)
         }
-        .accessibilityLabel(languageManager.text("common.close"))
-    }
-}
-
-// MARK: - Course teaser models
-
-private struct PaywallCourseTeaser: Identifiable {
-    let course: Course
-    let layout: PaywallTeaserLayout
-    var id: String { course.id }
-}
-
-private struct PaywallTeaserLayout: Equatable {
-    let imageHeight: CGFloat
-    let cornerRadius: CGFloat
-    let fixedWidth: CGFloat?
-    let isFullWidth: Bool
-    let rotation: Double
-
-    static let hero = PaywallTeaserLayout(imageHeight: 128, cornerRadius: 16, fixedWidth: nil, isFullWidth: true, rotation: -0.6)
-    static let compact = PaywallTeaserLayout(imageHeight: 72, cornerRadius: 14, fixedWidth: 112, isFullWidth: false, rotation: 1.8)
-    static let tall = PaywallTeaserLayout(imageHeight: 108, cornerRadius: 15, fixedWidth: nil, isFullWidth: false, rotation: -1.2)
-    static let wide = PaywallTeaserLayout(imageHeight: 92, cornerRadius: 16, fixedWidth: nil, isFullWidth: true, rotation: 0.4)
-    static let standard = PaywallTeaserLayout(imageHeight: 86, cornerRadius: 14, fixedWidth: nil, isFullWidth: false, rotation: -0.8)
-}
-
-// MARK: - Reviews carousel
-
-private struct PaywallReviewsCarousel: View {
-    @Environment(LanguageManager.self) private var languageManager
-
-    private struct Review: Identifiable {
-        let id = UUID()
-        let quote: String
-        let author: String
+        .accessibilityLabel(fr("common.close"))
     }
 
-    private var reviews: [Review] {
-        [
-            Review(quote: languageManager.text("paywall.review1.quote"), author: languageManager.text("paywall.review1.author")),
-            Review(quote: languageManager.text("paywall.review2.quote"), author: languageManager.text("paywall.review2.author")),
-            Review(quote: languageManager.text("paywall.review3.quote"), author: languageManager.text("paywall.review3.author")),
-            Review(quote: languageManager.text("paywall.review4.quote"), author: languageManager.text("paywall.review4.author")),
-            Review(quote: languageManager.text("paywall.review5.quote"), author: languageManager.text("paywall.review5.author")),
-        ]
+    // MARK: - Helpers
+
+    private func fr(_ key: String) -> String {
+        AppLocalizable.string(key, language: paywallLanguage)
     }
 
-    @State private var index: Int = 0
-    private let timer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
+    private func subjectSort(_ lhs: Subject, _ rhs: Subject) -> Bool {
+        lhs.localizedShortName(language: paywallLanguage) < rhs.localizedShortName(language: paywallLanguage)
+    }
 
-    var body: some View {
-        VStack(spacing: 12) {
-            HStack(spacing: 4) {
-                ForEach(0..<5, id: \.self) { _ in
-                    Image(systemName: "star.fill")
-                        .font(.system(size: 14, weight: .heavy))
-                        .foregroundStyle(BrutalPalette.yellow)
-                }
-            }
-
-            TabView(selection: $index) {
-                ForEach(Array(reviews.enumerated()), id: \.element.id) { offset, review in
-                    VStack(spacing: 8) {
-                        Text("\"\(review.quote)\"")
-                            .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                            .foregroundStyle(BrutalPalette.ink.opacity(0.75))
-                            .multilineTextAlignment(.center)
-                            .italic()
-                            .fixedSize(horizontal: false, vertical: true)
-
-                        Text(review.author)
-                            .font(.system(.caption, design: .rounded, weight: .heavy))
-                            .foregroundStyle(BrutalPalette.ink.opacity(0.45))
-                    }
-                    .padding(.horizontal, 4)
-                    .tag(offset)
-                }
-            }
-            .tabViewStyle(.page(indexDisplayMode: .automatic))
-            .frame(height: 108)
-        }
-        .padding(18)
-        .frame(maxWidth: .infinity)
-        .brutalOnboardingCard(depth: 3, corner: 18)
-        .onReceive(timer) { _ in
-            withAnimation(.easeInOut(duration: 0.45)) {
-                index = (index + 1) % reviews.count
-            }
-        }
+    private func highlightedHeadline(
+        full: String,
+        highlight: String,
+        highlightColor: Color,
+        fontSize: CGFloat,
+        lineSpacing: CGFloat
+    ) -> some View {
+        let parts = full.components(separatedBy: highlight)
+        return (
+            Text(parts.first ?? "")
+                .foregroundStyle(BrutalPalette.ink)
+            + Text(highlight)
+                .foregroundStyle(highlightColor)
+            + Text(parts.count > 1 ? parts.dropFirst().joined(separator: highlight) : "")
+                .foregroundStyle(BrutalPalette.ink)
+        )
+        .font(.system(size: fontSize, weight: .black, design: .rounded))
+        .lineSpacing(lineSpacing)
+        .multilineTextAlignment(.leading)
+        .fixedSize(horizontal: false, vertical: true)
     }
 }
 
 // MARK: - Trial timeline sheet
 
-private struct TrialTimelineSheet: View {
-    @Environment(LanguageManager.self) private var languageManager
+private struct PaywallTrialTimelineSheet: View {
     let onContinue: () -> Void
+
+    private let paywallLanguage: AppLanguage = .french
+    private let iconColumnWidth: CGFloat = 42
+    private let rowSpacing: CGFloat = 18
 
     private var steps: [(icon: String, title: String, subtitle: String, detail: String)] {
         [
-            ("lock.open.fill", languageManager.text("paywall.trial.today"), languageManager.text("paywall.trial.noPayment"), languageManager.text("paywall.trial.todayDetail")),
-            ("bell.fill", languageManager.text("paywall.trial.in2days"), languageManager.text("paywall.trial.reminder"), languageManager.text("paywall.trial.reminderDetail")),
-            ("star.fill", languageManager.text("paywall.trial.in3days"), languageManager.text("paywall.trial.starts"), languageManager.text("paywall.trial.startsDetail")),
+            ("lock.open.fill", fr("paywall.trial.today"), fr("paywall.trial.noPayment"), fr("paywall.trial.todayDetail")),
+            ("bell.fill", fr("paywall.trial.in2days"), fr("paywall.trial.reminder"), fr("paywall.trial.reminderDetail")),
+            ("star.fill", fr("paywall.trial.in3days"), fr("paywall.trial.starts"), fr("paywall.trial.startsDetail")),
         ]
     }
 
-    private let iconColumnWidth: CGFloat = 42
-    private let connectorHeight: CGFloat = 12
-
     var body: some View {
         VStack(spacing: 0) {
-            Text(languageManager.text("paywall.trialSheet.title"))
-                .font(.system(.title, design: .rounded, weight: .heavy))
+            Capsule()
+                .fill(BrutalPalette.ink.opacity(0.15))
+                .frame(width: 40, height: 5)
+                .padding(.top, 10)
+                .padding(.bottom, 18)
+
+            Text(fr("paywall.trialSheet.title"))
+                .font(.system(size: 28, weight: .black, design: .rounded))
                 .foregroundStyle(BrutalPalette.ink)
                 .multilineTextAlignment(.center)
-                .frame(maxWidth: .infinity)
-                .padding(.horizontal, 24)
-                .padding(.top, 8)
-                .padding(.bottom, 20)
+                .lineSpacing(2)
+                .padding(.horizontal, 28)
+                .padding(.bottom, 22)
 
-            VStack(alignment: .leading, spacing: 16) {
-                VStack(alignment: .leading, spacing: 0) {
-                    ForEach(Array(steps.enumerated()), id: \.offset) { index, step in
-                        TrialTimelineStepRow(
-                            icon: step.icon,
-                            title: step.title,
-                            subtitle: step.subtitle,
-                            detail: step.detail,
-                            iconColumnWidth: iconColumnWidth
-                        )
-
-                        if index < steps.count - 1 {
-                            timelineConnector
+            VStack(alignment: .leading, spacing: 0) {
+                ForEach(Array(steps.enumerated()), id: \.offset) { index, step in
+                    HStack(alignment: .top, spacing: 14) {
+                        VStack(spacing: 0) {
+                            timelineIcon(step.icon)
+                            if index < steps.count - 1 {
+                                Rectangle()
+                                    .fill(BrutalPalette.ink.opacity(0.16))
+                                    .frame(width: 3, height: rowSpacing + 34)
+                            }
                         }
+                        .frame(width: iconColumnWidth)
+
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text(step.title)
+                                .font(.system(.headline, design: .rounded, weight: .heavy))
+                                .foregroundStyle(BrutalPalette.ink)
+                            Text(step.subtitle)
+                                .font(.system(.subheadline, design: .rounded, weight: .semibold))
+                                .foregroundStyle(BrutalPalette.ink.opacity(0.55))
+                            Text(step.detail)
+                                .font(.system(.subheadline, design: .rounded, weight: .medium))
+                                .foregroundStyle(BrutalPalette.ink.opacity(0.65))
+                                .fixedSize(horizontal: false, vertical: true)
+                        }
+                        .padding(.top, 2)
+                        .padding(.bottom, index < steps.count - 1 ? rowSpacing : 0)
                     }
                 }
-                .fixedSize(horizontal: false, vertical: true)
-
-                Text(languageManager.text("paywall.cancelAnytime"))
-                    .font(.system(.caption, design: .rounded, weight: .semibold))
-                    .foregroundStyle(BrutalPalette.ink.opacity(0.5))
-                    .padding(.leading, iconColumnWidth + 14)
             }
-            .fixedSize(horizontal: false, vertical: true)
-            .padding(.horizontal, 24)
+            .padding(.horizontal, 28)
 
-            Spacer(minLength: 24)
+            Text(fr("paywall.cancelAnytime"))
+                .font(.system(.caption, design: .rounded, weight: .semibold))
+                .foregroundStyle(BrutalPalette.ink.opacity(0.5))
+                .padding(.top, 16)
+                .padding(.horizontal, 28)
 
-            OnboardingPrimaryButton(title: languageManager.text("paywall.trialSheet.start"), action: {
+            OnboardingPrimaryButton(title: fr("paywall.trialSheet.start"), action: {
                 OnboardingHaptics.primaryCTA()
                 onContinue()
             })
-            .padding(.horizontal, 24)
-            .padding(.bottom, 16)
+            .padding(.top, 12)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-        .background(BrutalPalette.cream.ignoresSafeArea())
+        .background(PaywallDesign.background.ignoresSafeArea())
     }
 
-    private var timelineConnector: some View {
-        HStack(spacing: 0) {
-            Rectangle()
-                .fill(BrutalPalette.ink.opacity(0.18))
-                .frame(width: 3, height: connectorHeight)
-                .frame(width: iconColumnWidth)
-            Spacer(minLength: 0)
+    private func timelineIcon(_ icon: String) -> some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 12, style: .continuous)
+                .fill(BrutalPalette.pink)
+                .frame(width: iconColumnWidth, height: iconColumnWidth)
+                .overlay {
+                    RoundedRectangle(cornerRadius: 12, style: .continuous)
+                        .strokeBorder(BrutalPalette.ink, lineWidth: 2)
+                }
+            Image(systemName: icon)
+                .font(.system(size: 17, weight: .heavy))
+                .foregroundStyle(.white)
         }
     }
-}
 
-private struct TrialTimelineStepRow: View {
-    let icon: String
-    let title: String
-    let subtitle: String
-    let detail: String
-    let iconColumnWidth: CGFloat
-
-    var body: some View {
-        HStack(alignment: .top, spacing: 14) {
-            ZStack {
-                RoundedRectangle(cornerRadius: 12, style: .continuous)
-                    .fill(BrutalPalette.pink)
-                    .frame(width: iconColumnWidth, height: iconColumnWidth)
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 12, style: .continuous)
-                            .strokeBorder(BrutalPalette.ink, lineWidth: 2)
-                    }
-                Image(systemName: icon)
-                    .font(.system(size: 17, weight: .heavy))
-                    .foregroundStyle(.white)
-            }
-            .frame(width: iconColumnWidth, height: iconColumnWidth)
-
-            VStack(alignment: .leading, spacing: 3) {
-                Text(title)
-                    .font(.system(.headline, design: .rounded, weight: .heavy))
-                    .foregroundStyle(BrutalPalette.ink)
-
-                Text(subtitle)
-                    .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                    .foregroundStyle(BrutalPalette.ink.opacity(0.55))
-
-                Text(detail)
-                    .font(.system(.subheadline, design: .rounded, weight: .medium))
-                    .foregroundStyle(BrutalPalette.ink.opacity(0.65))
-                    .fixedSize(horizontal: false, vertical: true)
-            }
-            .padding(.top, 2)
-            .frame(maxWidth: .infinity, alignment: .leading)
-        }
-        .fixedSize(horizontal: false, vertical: true)
+    private func fr(_ key: String) -> String {
+        AppLocalizable.string(key, language: paywallLanguage)
     }
 }
 
@@ -729,14 +615,16 @@ private struct FlowLayout: Layout {
     var spacing: CGFloat = 8
 
     func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
-        let result = arrange(proposal: proposal, subviews: subviews)
-        return result.size
+        arrange(proposal: proposal, subviews: subviews).size
     }
 
     func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
         let result = arrange(proposal: proposal, subviews: subviews)
         for (index, frame) in result.frames.enumerated() {
-            subviews[index].place(at: CGPoint(x: bounds.minX + frame.minX, y: bounds.minY + frame.minY), proposal: .unspecified)
+            subviews[index].place(
+                at: CGPoint(x: bounds.minX + frame.minX, y: bounds.minY + frame.minY),
+                proposal: .unspecified
+            )
         }
     }
 
