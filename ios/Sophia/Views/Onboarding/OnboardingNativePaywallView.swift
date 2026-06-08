@@ -2,6 +2,8 @@ import SwiftUI
 import RevenueCat
 
 struct OnboardingNativePaywallView: View {
+    @Environment(LanguageManager.self) private var languageManager
+
     enum Plan: String, CaseIterable, Identifiable {
         case yearly
         case monthly
@@ -17,7 +19,6 @@ struct OnboardingNativePaywallView: View {
     @State private var showReminderSheet: Bool = false
     @State private var showLegalSafari: Bool = false
 
-    private let paywallLanguage: AppLanguage = .french
     private let legalURL = URL(string: "https://vikstudios.com/sophia")!
 
     private var unlockedSubjects: Set<Subject> {
@@ -248,28 +249,13 @@ struct OnboardingNativePaywallView: View {
 
     // MARK: - Plans
 
-    private func package(for plan: Plan) -> Package? {
-        plan == .yearly ? store.annualPackage : store.monthlyPackage
-    }
-
     private func planCopy(for plan: Plan) -> (title: String, subtitle: String, price: String, period: String, badge: String?) {
         let isYearly = plan == .yearly
-        guard let pkg = package(for: plan) else {
-            return (
-                isYearly ? fr("paywall.plan.yearly") : fr("paywall.plan.monthly"),
-                isYearly ? fr("paywall.plan.fallback.yearlyMonthly") : fr("paywall.plan.monthlySubtitle"),
-                isYearly ? fr("paywall.plan.fallback.yearlyPrice") : fr("paywall.plan.fallback.monthlyPrice"),
-                isYearly ? fr("paywall.plan.perYear") : fr("paywall.plan.perMonth"),
-                isYearly ? fr("paywall.plan.discount") : nil
-            )
-        }
-
-        let price = pkg.localizedPriceString
         if isYearly {
             return (
                 fr("paywall.plan.yearly"),
                 fr("paywall.plan.fallback.yearlyMonthly"),
-                price,
+                fr("paywall.plan.fallback.yearlyPrice"),
                 fr("paywall.plan.perYear"),
                 fr("paywall.plan.discount")
             )
@@ -277,7 +263,7 @@ struct OnboardingNativePaywallView: View {
         return (
             fr("paywall.plan.monthly"),
             fr("paywall.plan.monthlySubtitle"),
-            price,
+            fr("paywall.plan.fallback.monthlyPrice"),
             fr("paywall.plan.perMonth"),
             nil
         )
@@ -362,11 +348,11 @@ struct OnboardingNativePaywallView: View {
 
     private var legalRow: some View {
         HStack(spacing: 6) {
-            Button("Restaurer", action: onRestore)
+            Button(fr("paywall.restore"), action: onRestore)
             Text("·")
-            Button("Conditions") { showLegalSafari = true }
+            Button(fr("paywall.terms")) { showLegalSafari = true }
             Text("·")
-            Button("Confidentialité") { showLegalSafari = true }
+            Button(fr("paywall.privacy")) { showLegalSafari = true }
         }
         .font(.system(.footnote, design: .rounded, weight: .semibold))
         .foregroundStyle(BrutalPalette.ink.opacity(0.55))
@@ -391,6 +377,10 @@ struct OnboardingNativePaywallView: View {
 
     // MARK: - Helpers
 
+    private var paywallLanguage: AppLanguage {
+        languageManager.current
+    }
+
     private func fr(_ key: String) -> String {
         AppLocalizable.string(key, language: paywallLanguage)
     }
@@ -406,6 +396,16 @@ struct OnboardingNativePaywallView: View {
         fontSize: CGFloat,
         lineSpacing: CGFloat
     ) -> some View {
+        guard !highlight.isEmpty, full.contains(highlight) else {
+            return Text(full)
+                .foregroundStyle(BrutalPalette.ink)
+                .font(.system(size: fontSize, weight: .black, design: .rounded))
+                .lineSpacing(lineSpacing)
+                .multilineTextAlignment(.leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+
         let parts = full.components(separatedBy: highlight)
         return (
             Text(parts.first ?? "")
@@ -426,9 +426,10 @@ struct OnboardingNativePaywallView: View {
 // MARK: - Trial timeline sheet
 
 private struct PaywallTrialTimelineSheet: View {
+    @Environment(LanguageManager.self) private var languageManager
+
     let onContinue: () -> Void
 
-    private let paywallLanguage: AppLanguage = .french
     private let iconColumnWidth: CGFloat = 42
     private let rowSpacing: CGFloat = 18
 
@@ -518,6 +519,10 @@ private struct PaywallTrialTimelineSheet: View {
                 .font(.system(size: 17, weight: .heavy))
                 .foregroundStyle(.white)
         }
+    }
+
+    private var paywallLanguage: AppLanguage {
+        languageManager.current
     }
 
     private func fr(_ key: String) -> String {
