@@ -14,7 +14,7 @@ struct CourseView: View {
     @State private var pageTransition: Bool = false
     @State private var quizButtonPulse: Bool = false
     @State private var quizButtonShimmer: CGFloat = -200
-    @State private var showQuizPrePaywall: Bool = false
+    @State private var showQuizPaywall: Bool = false
     @State private var endPhase: CourseEndPhase = .none
     @State private var previousSubjectCount: Int = 0
     @State private var previousSubjectXP: Int = 0
@@ -69,7 +69,7 @@ struct CourseView: View {
                         if isPremium {
                             showQuiz = true
                         } else {
-                            showQuizPrePaywall = true
+                            showQuizPaywall = true
                         }
                     }
                 )
@@ -121,11 +121,19 @@ struct CourseView: View {
             let g = UIImpactFeedbackGenerator(style: .light)
             g.impactOccurred()
         }
-        .sheet(isPresented: $showQuizPrePaywall) {
-            PrePaywallQuizView(onContinue: {
-                showQuizPrePaywall = false
-                showQuiz = true
-            })
+        .sheet(isPresented: $showQuizPaywall) {
+            SophiaPaywallView(
+                context: .quizz,
+                onPurchased: {
+                    showQuizPaywall = false
+                    showQuiz = true
+                },
+                onRestored: {
+                    showQuizPaywall = false
+                    showQuiz = true
+                },
+                onDismissed: { showQuizPaywall = false }
+            )
             .presentationDragIndicator(.visible)
         }
         .fullScreenCover(isPresented: $showCardUnlock) {
