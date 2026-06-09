@@ -55,10 +55,19 @@ struct SophiaPaywallView: View {
                     .onRestoreCompleted { _ in onRestored() }
                     .onRequestedDismissal { onDismissed?() }
             } else if loaded {
-                PaywallView()
-                    .onPurchaseCompleted { _ in onPurchased() }
-                    .onRestoreCompleted { _ in onRestored() }
-                    .onRequestedDismissal { onDismissed?() }
+                ZStack {
+                    Color.black.ignoresSafeArea()
+                    VStack(spacing: 16) {
+                        Text("Unable to load paywall")
+                            .font(.headline)
+                            .foregroundStyle(.white)
+                        Button("Retry") {
+                            loaded = false
+                            Task { await resolveOffering() }
+                        }
+                        .buttonStyle(.borderedProminent)
+                    }
+                }
             } else {
                 ZStack {
                     Color.black.ignoresSafeArea()
@@ -73,16 +82,15 @@ struct SophiaPaywallView: View {
         do {
             let offerings = try await Purchases.shared.offerings()
             let id = context.rawValue
-            var resolved = offerings.all[id] ?? offerings.offering(identifier: id)
+            var resolved = Self.offering(withIdentifier: id, in: offerings)
             if resolved == nil, id != SophiaPaywallContext.fallbackOfferingIdentifier {
-                let fid = SophiaPaywallContext.fallbackOfferingIdentifier
-                resolved = offerings.all[fid] ?? offerings.offering(identifier: fid)
+                resolved = Self.finOnboardingOffering(from: offerings)
                 #if DEBUG
-                print("[SophiaPaywall] '\(id)' not found — falling back to '\(fid)': \(resolved?.identifier ?? "nil")")
+                print("[SophiaPaywall] '\(id)' not found — falling back to '\(SophiaPaywallContext.fallbackOfferingIdentifier)': \(resolved?.identifier ?? "nil")")
                 #endif
             }
             #if DEBUG
-            let available = offerings.all.keys.joined(separator: ", ")
+            let available = offerings.all.values.map(\.identifier).joined(separator: ", ")
             print("[SophiaPaywall] looking for '\(id)' — available offerings: [\(available)] — current: \(offerings.current?.identifier ?? "nil") — resolved: \(resolved?.identifier ?? "nil")")
             #endif
             offering = resolved
@@ -93,5 +101,18 @@ struct SophiaPaywallView: View {
             offering = nil
         }
         loaded = true
+    }
+
+    private static func offering(withIdentifier identifier: String, in offerings: Offerings) -> Offering? {
+        if let offering = offerings.all[identifier] { return offering }
+        if let offering = offerings.offering(identifier: identifier) { return offering }
+        return offerings.all.values.first { $0.identifier == identifier }
+    }
+
+    private static func finOnboardingOffering(from offerings: Offerings) -> Offering? {
+        let identifier = SophiaPaywallContext.fallbackOfferingIdentifier
+        if let offering = offering(withIdentifier: identifier, in: offerings) { return offering }
+        if offerings.current?.identifier == identifier { return offerings.current }
+        return nil
     }
 }
