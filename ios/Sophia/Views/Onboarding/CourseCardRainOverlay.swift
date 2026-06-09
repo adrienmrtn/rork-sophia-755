@@ -3,25 +3,38 @@ import SwiftUI
 struct CourseCardRainOverlay: View {
     let isActive: Bool
 
+    @Environment(LanguageManager.self) private var languageManager
+
     @State private var fallingCards: [FallingCardModel] = []
     @State private var spawnTimer: Timer?
     @State private var spawnSessionID = UUID()
+    @State private var overlaySize: CGSize = .zero
 
     private let spawnInterval: TimeInterval = 0.22
-    private let pool: [(title: String, courseId: String, colorIndex: Int)] = [
-        ("La naissance de l'islam", "course_1_la_naissance_de_l_islam_622", 0),
-        ("1984, George Orwell", "course_101_1984_george_orwell", 2),
-        ("Charlemagne", "course_4_le_couronnement_de_charlemagne_800", 0),
-        ("Jeanne d'Arc", "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14", 0),
-        ("La Bastille", "course_11_la_prise_de_la_bastille_1789", 0),
-        ("Rosa Parks", "course_21_rosa_parks_et_montgomery_1955", 0),
-        ("Plan Marshall", "course_31_le_plan_marshall_1947_1952", 5),
-        ("Hamlet", "course_103_hamlet_shakespeare", 2),
-        ("Nouvelle Vague", "course_144_la_nouvelle_vague_francaise", 3),
-        ("Dieux grecs", "course_161_la_naissance_des_dieux_grecs_cronos_zeus", 4),
-        ("Guerre en Ukraine", "course_210_la_guerre_en_ukraine_expliquee", 5),
-        ("L'IA et l'emploi", "course_226_l_ia_et_l_emploi", 5),
+    private let pool: [(courseId: String, colorIndex: Int)] = [
+        ("course_1_la_naissance_de_l_islam_622", 0),
+        ("course_101_1984_george_orwell", 2),
+        ("course_4_le_couronnement_de_charlemagne_800", 0),
+        ("course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14", 0),
+        ("course_11_la_prise_de_la_bastille_1789", 0),
+        ("course_21_rosa_parks_et_montgomery_1955", 0),
+        ("course_31_le_plan_marshall_1947_1952", 5),
+        ("course_103_hamlet_shakespeare", 2),
+        ("course_144_la_nouvelle_vague_francaise", 3),
+        ("course_161_la_naissance_des_dieux_grecs_cronos_zeus", 4),
+        ("course_210_la_guerre_en_ukraine_expliquee", 5),
+        ("course_226_l_ia_et_l_emploi", 5),
     ]
+
+    private var localizedPool: [(title: String, courseId: String, colorIndex: Int)] {
+        let titles = Dictionary(
+            uniqueKeysWithValues: LocalizedContentLoader.courses(for: languageManager.current).map { ($0.id, $0.title) }
+        )
+        return pool.compactMap { item in
+            guard let title = titles[item.courseId] else { return nil }
+            return (title, item.courseId, item.colorIndex)
+        }
+    }
 
     var body: some View {
         GeometryReader { geo in
@@ -39,12 +52,22 @@ struct CourseCardRainOverlay: View {
             }
             .frame(width: geo.size.width, height: geo.size.height)
             .clipped()
+            .onAppear {
+                overlaySize = geo.size
+            }
+            .onChange(of: geo.size) { _, size in
+                overlaySize = size
+            }
             .onChange(of: isActive) { _, active in
                 if active {
                     startSpawning(in: geo.size)
                 } else {
                     stopSpawning(clearCards: false)
                 }
+            }
+            .onChange(of: languageManager.current) { _, _ in
+                guard isActive, overlaySize != .zero else { return }
+                startSpawning(in: overlaySize)
             }
             .onDisappear {
                 stopSpawning(clearCards: true)
@@ -73,6 +96,9 @@ struct CourseCardRainOverlay: View {
 
     private func spawnCard(in size: CGSize, session: UUID) {
         guard isActive, session == spawnSessionID else { return }
+
+        let pool = localizedPool
+        guard !pool.isEmpty else { return }
 
         let visibleIds = Set(fallingCards.map(\.courseId))
         let available = pool.filter { !visibleIds.contains($0.courseId) }
