@@ -109,4 +109,66 @@ class StoreViewModel {
             print("[OnboardingPaywall] \(label) id=\(package.identifier) price=\(product.localizedPriceString) intro=\(introSummary)")
         }
     }
+
+    struct PaywallPriceDisplay {
+        let yearlyPrice: String
+        let yearlyPerMonth: String
+        let monthlyPrice: String
+        let discountBadge: String?
+    }
+
+    func paywallPriceDisplay(language: AppLanguage) -> PaywallPriceDisplay {
+        if let annual = annualPackage?.storeProduct,
+           let monthly = monthlyPackage?.storeProduct {
+            let locale = pricingLocale(annualCurrencyCode: annual.currencyCode, language: language)
+            let perMonth = formatCurrency(annual.price / 12, currencyCode: annual.currencyCode, locale: locale)
+            let perMonthLabel = AppLocalizable.string("paywall.plan.perMonth", language: language)
+            return PaywallPriceDisplay(
+                yearlyPrice: annual.localizedPriceString,
+                yearlyPerMonth: "\(perMonth) \(perMonthLabel)",
+                monthlyPrice: monthly.localizedPriceString,
+                discountBadge: savingsBadge(annual: annual.price, monthly: monthly.price)
+            )
+        }
+        return Self.fallbackPaywallPrices(language: language)
+    }
+
+    private func pricingLocale(annualCurrencyCode: String?, language: AppLanguage) -> Locale {
+        if let code = annualCurrencyCode {
+            switch code {
+            case "EUR": return Locale(identifier: "fr_FR")
+            case "GBP": return Locale(identifier: "en_GB")
+            case "USD": return Locale(identifier: "en_US")
+            default: break
+            }
+        }
+        return Locale(identifier: language.localeIdentifier)
+    }
+
+    private func formatCurrency(_ amount: Decimal, currencyCode: String?, locale: Locale) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = locale
+        formatter.currencyCode = currencyCode
+        return formatter.string(from: amount as NSDecimalNumber) ?? "\(amount)"
+    }
+
+    private func savingsBadge(annual: Decimal, monthly: Decimal) -> String? {
+        guard monthly > 0 else { return nil }
+        let fullYearAtMonthly = monthly * 12
+        guard fullYearAtMonthly > annual else { return nil }
+        let ratio = (fullYearAtMonthly - annual) / fullYearAtMonthly
+        let percent = Int((ratio as NSDecimalNumber).doubleValue * 100)
+        guard percent > 0 else { return nil }
+        return "-\(percent)%"
+    }
+
+    private static func fallbackPaywallPrices(language: AppLanguage) -> PaywallPriceDisplay {
+        PaywallPriceDisplay(
+            yearlyPrice: AppLocalizable.string("paywall.plan.fallback.yearlyPrice", language: language),
+            yearlyPerMonth: AppLocalizable.string("paywall.plan.fallback.yearlyMonthly", language: language),
+            monthlyPrice: AppLocalizable.string("paywall.plan.fallback.monthlyPrice", language: language),
+            discountBadge: AppLocalizable.string("paywall.plan.discount", language: language)
+        )
+    }
 }

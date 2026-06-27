@@ -35,9 +35,9 @@ enum SophiaPaywallContext: String, Identifiable {
 }
 
 /// Wrapper around `RevenueCatUI.PaywallView` that loads a specific offering by
-/// identifier and falls back to the `fin_onboarding` RC paywall when it can't
-/// be found — e.g. while offerings are still loading or if the dashboard hasn't
-/// been configured yet.
+/// identifier and falls back to the `fin_onboarding` RC paywall when it can't be found
+/// or has no active paywall template — e.g. while offerings are still loading,
+/// if the dashboard paywall is inactive, or if the offering hasn't been configured yet.
 struct SophiaPaywallView: View {
     let context: SophiaPaywallContext
     var onPurchased: () -> Void = {}
@@ -82,16 +82,10 @@ struct SophiaPaywallView: View {
         do {
             let offerings = try await Purchases.shared.offerings()
             let id = context.rawValue
-            var resolved = Self.offering(withIdentifier: id, in: offerings)
-            if resolved == nil, id != SophiaPaywallContext.fallbackOfferingIdentifier {
-                resolved = Self.finOnboardingOffering(from: offerings)
-                #if DEBUG
-                print("[SophiaPaywall] '\(id)' not found — falling back to '\(SophiaPaywallContext.fallbackOfferingIdentifier)': \(resolved?.identifier ?? "nil")")
-                #endif
-            }
+            let resolved = Self.resolveOffering(for: id, in: offerings)
             #if DEBUG
-            let available = offerings.all.values.map(\.identifier).joined(separator: ", ")
-            print("[SophiaPaywall] looking for '\(id)' — available offerings: [\(available)] — current: \(offerings.current?.identifier ?? "nil") — resolved: \(resolved?.identifier ?? "nil")")
+            let available = offerings.all.values.map { "\($0.identifier)(paywall:\($0.hasPaywall))" }.joined(separator: ", ")
+            print("[SophiaPaywall] looking for '\(id)' — available: [\(available)] — current: \(offerings.current?.identifier ?? "nil") — resolved: \(resolved?.identifier ?? "nil")")
             #endif
             offering = resolved
         } catch {
@@ -109,10 +103,49 @@ struct SophiaPaywallView: View {
         return offerings.all.values.first { $0.identifier == identifier }
     }
 
-    private static func finOnboardingOffering(from offerings: Offerings) -> Offering? {
-        let identifier = SophiaPaywallContext.fallbackOfferingIdentifier
-        if let offering = offering(withIdentifier: identifier, in: offerings) { return offering }
-        if offerings.current?.identifier == identifier { return offerings.current }
+    /// Returns an offering only when RevenueCat has an active paywall template for it.
+    /// Offerings without a paywall (inactive / unconfigured) must not be passed to
+    /// `PaywallView(offering:)` — RC would silently show its generic default UI.
+    private static func offeringWithPaywall(withIdentifier identifier: String, in offerings: Offerings) -> Offering? {
+        guard let offering = offering(withIdentifier: identifier, in: offerings),
+              offering.hasPaywall else {
+            return nil
+        }
+        return offering
+    }
+
+    private static func resolveOffering(for contextIdentifier: String, in offerings: Offerings) -> Offering? {
+        if let primary = offeringWithPaywall(withIdentifier: contextIdentifier, in: offerings) {
+            return primary
+        }
+
+        #if DEBUG
+        if let existing = offering(withIdentifier: contextIdentifier, in: offerings) {
+            print("[SophiaPaywall] '\(contextIdentifier)' exists but has no active paywall (hasPaywall=\(existing.hasPaywall))")
+        } else {
+            print("[SophiaPaywall] '\(contextIdentifier)' not found in offerings")
+        }
+        #endif
+
+        guard contextIdentifier != SophiaPaywallContext.fallbackOfferingIdentifier else { return nil }
+
+        let fallbackId = SophiaPaywallContext.fallbackOfferingIdentifier
+        if let fallback = offeringWithPaywall(withIdentifier: fallbackId, in: offerings) {
+            #if DEBUG
+            print("[SophiaPaywall] falling back to '\(fallbackId)'")
+            #endif
+            return fallback
+        }
+
+        if let current = offerings.current,
+           current.hasPaywall,
+           current.identifier != contextIdentifier {
+            #if DEBUG
+            print("[SophiaPaywall] falling back to current offering '\(current.identifier)'")
+            #endif
+            return current
+        }
+
         return nil
     }
 }

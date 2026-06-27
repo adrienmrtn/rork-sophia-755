@@ -3,11 +3,38 @@ import SwiftUI
 // MARK: - Figma tokens
 
 enum PaywallDesign {
+    static let canvasWidth: CGFloat = 402
+
     static let background = Color(red: 254 / 255, green: 245 / 255, blue: 233 / 255)
-    static let orange = Color(red: 1, green: 0.698, blue: 0.18)
-    static let accentPink = Color(red: 1, green: 0.522, blue: 0.71)
-    static let creamHighlight = Color(red: 1, green: 0.925, blue: 0.796)
-    static let lockedPill = Color(red: 1, green: 0.835, blue: 0.553)
+    static let orange = Color(red: 1, green: 0.780, blue: 0.227) // #ffc73a
+    static let orangeShadow = Color(red: 1, green: 0.698, blue: 0.180) // #ffb22e
+    static let accentPink = Color(red: 1, green: 0.522, blue: 0.71) // #ff85b5
+    static let creamHighlight = Color(red: 1, green: 0.925, blue: 0.796) // #ffeccb
+    static let lockedPill = Color(red: 1, green: 0.780, blue: 0.227) // #ffc73a
+    static let highlightYellow = Color(red: 1, green: 0.780, blue: 0.227).opacity(0.5)
+    static let highlightPink = Color(red: 1, green: 0.522, blue: 0.710).opacity(0.5)
+
+    static func scale(for width: CGFloat) -> CGFloat { width / canvasWidth }
+    static func s(_ value: CGFloat, width: CGFloat) -> CGFloat { value * scale(for: width) }
+
+    // Figma type styles (Product Sans / Quicksand / Nunito → system equivalents)
+    static func productSans(_ size: CGFloat, width: CGFloat) -> Font {
+        .system(size: s(size, width: width), weight: .bold, design: .default)
+    }
+
+    static func quicksandBold(_ size: CGFloat, width: CGFloat) -> Font {
+        .system(size: s(size, width: width), weight: .bold, design: .rounded)
+    }
+
+    static func quicksandSemiBold(_ size: CGFloat, width: CGFloat) -> Font {
+        .system(size: s(size, width: width), weight: .semibold, design: .rounded)
+    }
+
+    static func nunitoExtraBold(_ size: CGFloat, width: CGFloat) -> Font {
+        .system(size: s(size, width: width), weight: .heavy, design: .rounded)
+    }
+
+    static let productTracking: CGFloat = 0.34 / 100
     static let bubbleBlue = Color(red: 0.584, green: 0.847, blue: 0.949)
     static let bubblePurple = Color(red: 0.878, green: 0.686, blue: 0.984)
     static let bubbleOrange = Color(red: 1, green: 0.671, blue: 0.435)
@@ -17,13 +44,190 @@ enum PaywallDesign {
 
     static func freePillColor(for subject: Subject) -> Color {
         switch subject {
-        case .art: Color(red: 0.584, green: 0.925, blue: 0.973)
-        case .litterature: Color(red: 1, green: 0.769, blue: 0.78)
-        case .comprendreLeMonde: Color(red: 0.698, green: 0.91, blue: 1)
-        case .histoire: Color(red: 1, green: 0.835, blue: 0.553)
-        case .sciences: Color(red: 0.698, green: 0.949, blue: 0.78)
-        case .mythologie: Color(red: 0.82, green: 0.78, blue: 1)
+        case .art: Color(red: 0.584, green: 0.925, blue: 0.973) // #95ecf8
+        case .litterature: Color(red: 1, green: 0.769, blue: 0.780) // #ffc4c7
+        case .comprendreLeMonde: Color(red: 0.698, green: 0.910, blue: 1) // #b2e8ff
+        case .histoire: Color(red: 1, green: 0.780, blue: 0.227)
+        case .sciences: Color(red: 1, green: 0.780, blue: 0.227)
+        case .mythologie: Color(red: 1, green: 0.780, blue: 0.227)
         }
+    }
+}
+
+// MARK: - Figma drop shadow (0, depth, 0 — no blur)
+
+struct PaywallFigmaShadow: ViewModifier {
+    var corner: CGFloat
+    var depth: CGFloat
+    var shadowColor: Color
+    var borderColor: Color
+    var borderWidth: CGFloat
+
+    func body(content: Content) -> some View {
+        content
+            .overlay {
+                RoundedRectangle(cornerRadius: corner, style: .continuous)
+                    .strokeBorder(borderColor, lineWidth: borderWidth)
+            }
+            .background(alignment: .top) {
+                RoundedRectangle(cornerRadius: corner, style: .continuous)
+                    .fill(shadowColor)
+                    .offset(y: depth)
+            }
+            .padding(.bottom, depth)
+    }
+}
+
+extension View {
+    func paywallFigmaShadow(
+        corner: CGFloat,
+        depth: CGFloat = 3,
+        shadowColor: Color = BrutalPalette.ink,
+        borderColor: Color = BrutalPalette.ink,
+        borderWidth: CGFloat = 2
+    ) -> some View {
+        modifier(PaywallFigmaShadow(
+            corner: corner,
+            depth: depth,
+            shadowColor: shadowColor,
+            borderColor: borderColor,
+            borderWidth: borderWidth
+        ))
+    }
+}
+
+// MARK: - Highlighted headline (per-word background, Figma-accurate)
+
+struct PaywallHighlightedHeadline: View {
+    let text: String
+    let highlight: String
+    let fontSize: CGFloat
+    let lineHeight: CGFloat
+    let highlightColor: Color
+    let layoutWidth: CGFloat
+
+    var body: some View {
+        let font = PaywallDesign.productSans(fontSize, width: layoutWidth)
+        let spacing = max(0, PaywallDesign.s(lineHeight - fontSize, width: layoutWidth))
+
+        VStack(alignment: .leading, spacing: spacing) {
+            ForEach(Array(text.components(separatedBy: "\n").enumerated()), id: \.offset) { _, line in
+                highlightedLine(line, font: font)
+            }
+        }
+        .tracking(PaywallDesign.productTracking * fontSize)
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    @ViewBuilder
+    private func highlightedLine(_ line: String, font: Font) -> some View {
+        if !highlight.isEmpty, let range = line.range(of: highlight) {
+            let before = String(line[..<range.lowerBound])
+            let word = String(line[range])
+            let after = String(line[range.upperBound...])
+            (
+                Text(before).foregroundStyle(BrutalPalette.ink)
+                + Text(word)
+                    .foregroundStyle(BrutalPalette.ink)
+                    .background(
+                        RoundedRectangle(cornerRadius: PaywallDesign.s(5, width: layoutWidth), style: .continuous)
+                            .fill(highlightColor)
+                            .padding(.horizontal, PaywallDesign.s(-1, width: layoutWidth))
+                            .padding(.vertical, PaywallDesign.s(-2, width: layoutWidth))
+                    )
+                + Text(after).foregroundStyle(BrutalPalette.ink)
+            )
+            .font(font)
+            .fixedSize(horizontal: false, vertical: true)
+        } else {
+            Text(line)
+                .font(font)
+                .foregroundStyle(BrutalPalette.ink)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+    }
+}
+
+// MARK: - Decorative Figma stars
+
+struct PaywallFigmaStars: View {
+    let layoutWidth: CGFloat
+
+    var body: some View {
+        let s = PaywallDesign.scale(for: layoutWidth)
+        ZStack(alignment: .topLeading) {
+            Color.clear
+            star("paywall_star_1", size: CGSize(width: 15, height: 14))
+                .offset(x: PaywallDesign.s(286, width: layoutWidth), y: PaywallDesign.s(99, width: layoutWidth))
+            star("paywall_star_2", size: CGSize(width: 9, height: 8))
+                .offset(x: PaywallDesign.s(276, width: layoutWidth), y: PaywallDesign.s(124, width: layoutWidth))
+        }
+        .frame(height: PaywallDesign.s(140, width: layoutWidth))
+        .allowsHitTesting(false)
+    }
+
+    private func star(_ name: String, size: CGSize) -> some View {
+        Image(name)
+            .resizable()
+            .scaledToFit()
+            .frame(
+                width: PaywallDesign.s(size.width, width: layoutWidth),
+                height: PaywallDesign.s(size.height, width: layoutWidth)
+            )
+    }
+}
+
+struct PaywallSubjectsStars: View {
+    let layoutWidth: CGFloat
+
+    var body: some View {
+        ZStack(alignment: .topLeading) {
+            Color.clear
+            Image("paywall_star_3")
+                .resizable()
+                .scaledToFit()
+                .frame(
+                    width: PaywallDesign.s(15, width: layoutWidth),
+                    height: PaywallDesign.s(13, width: layoutWidth)
+                )
+                .offset(x: PaywallDesign.s(95, width: layoutWidth), y: PaywallDesign.s(200, width: layoutWidth))
+            Image("paywall_star_4")
+                .resizable()
+                .scaledToFit()
+                .frame(
+                    width: PaywallDesign.s(8, width: layoutWidth),
+                    height: PaywallDesign.s(9, width: layoutWidth)
+                )
+                .offset(x: PaywallDesign.s(84, width: layoutWidth), y: PaywallDesign.s(180, width: layoutWidth))
+        }
+        .allowsHitTesting(false)
+    }
+}
+
+struct PaywallWeaponStars: View {
+    let layoutWidth: CGFloat
+
+    var body: some View {
+        ZStack(alignment: .topLeading) {
+            Color.clear
+            Image("paywall_star_5")
+                .resizable()
+                .scaledToFit()
+                .frame(
+                    width: PaywallDesign.s(9, width: layoutWidth),
+                    height: PaywallDesign.s(9, width: layoutWidth)
+                )
+                .offset(x: PaywallDesign.s(261, width: layoutWidth), y: PaywallDesign.s(8, width: layoutWidth))
+            Image("paywall_star_6")
+                .resizable()
+                .scaledToFit()
+                .frame(
+                    width: PaywallDesign.s(6, width: layoutWidth),
+                    height: PaywallDesign.s(6, width: layoutWidth)
+                )
+                .offset(x: PaywallDesign.s(273, width: layoutWidth), y: PaywallDesign.s(24, width: layoutWidth))
+        }
+        .allowsHitTesting(false)
     }
 }
 
