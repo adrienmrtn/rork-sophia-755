@@ -125,18 +125,25 @@ struct PaywallHighlightedHeadline: View {
             let before = String(line[..<range.lowerBound])
             let word = String(line[range])
             let after = String(line[range.upperBound...])
-            (
-                Text(before).foregroundStyle(BrutalPalette.ink)
-                + Text(word)
-                    .foregroundStyle(BrutalPalette.ink)
-                    .background(
-                        RoundedRectangle(cornerRadius: PaywallDesign.s(5, width: layoutWidth), style: .continuous)
-                            .fill(highlightColor)
-                            .padding(.horizontal, PaywallDesign.s(-1, width: layoutWidth))
-                            .padding(.vertical, PaywallDesign.s(-2, width: layoutWidth))
-                    )
-                + Text(after).foregroundStyle(BrutalPalette.ink)
+            let highlightBackground = RoundedRectangle(
+                cornerRadius: PaywallDesign.s(5, width: layoutWidth),
+                style: .continuous
             )
+            .fill(highlightColor)
+            .padding(.horizontal, PaywallDesign.s(-1, width: layoutWidth))
+            .padding(.vertical, PaywallDesign.s(-2, width: layoutWidth))
+
+            HStack(spacing: 0) {
+                if !before.isEmpty {
+                    Text(before).foregroundStyle(BrutalPalette.ink)
+                }
+                Text(word)
+                    .foregroundStyle(BrutalPalette.ink)
+                    .background(highlightBackground)
+                if !after.isEmpty {
+                    Text(after).foregroundStyle(BrutalPalette.ink)
+                }
+            }
             .font(font)
             .fixedSize(horizontal: false, vertical: true)
         } else {
