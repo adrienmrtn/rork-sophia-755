@@ -10,14 +10,6 @@ struct OnboardingNativePaywallView: View {
         var id: String { rawValue }
     }
 
-    private struct Benefit: Identifiable {
-        let id = UUID()
-        let text: String
-        let color: Color
-        let rotation: Double
-        let leadingInset: CGFloat
-    }
-
     var store: StoreViewModel
     let onPurchase: (Plan) -> Void
     let onRestore: () -> Void
@@ -41,46 +33,23 @@ struct OnboardingNativePaywallView: View {
         store.paywallPriceDisplay(language: paywallLanguage)
     }
 
-    private func benefits(width: CGFloat) -> [Benefit] {
-        [
-            Benefit(text: fr("paywall.benefit.conversations"), color: Color(red: 1, green: 0.820, blue: 0.659), rotation: -2.95, leadingInset: 30),
-            Benefit(text: fr("paywall.benefit.curiosity"), color: Color(red: 1, green: 0.839, blue: 0.945), rotation: 3.09, leadingInset: 84),
-            Benefit(text: fr("paywall.benefit.confidence"), color: Color(red: 0.792, green: 0.867, blue: 0.898), rotation: -2.08, leadingInset: 27),
-            Benefit(text: fr("paywall.benefit.screenTime"), color: Color(red: 0.937, green: 0.992, blue: 0.882), rotation: 0.79, leadingInset: 68),
-        ].map { benefit in
-            Benefit(
-                text: benefit.text,
-                color: benefit.color,
-                rotation: benefit.rotation,
-                leadingInset: PaywallDesign.s(benefit.leadingInset, width: width)
-            )
-        }
-    }
-
     var body: some View {
         GeometryReader { geo in
             let w = geo.size.width
+            let canvasHeight = PaywallDesign.s(PaywallFigmaLayout.scrollHeight, width: w)
 
             ZStack(alignment: .topTrailing) {
                 PaywallDesign.background.ignoresSafeArea()
 
                 VStack(spacing: 0) {
                     ScrollView(showsIndicators: false) {
-                        VStack(spacing: PaywallDesign.s(28, width: w)) {
-                            headerSection(width: w)
-                            subjectsCard(width: w)
-                            weaponSection(width: w)
-                            premiumSection(width: w)
-                            VStack(spacing: PaywallDesign.s(27, width: w)) {
-                                planCard(.yearly, width: w)
-                                planCard(.monthly, width: w)
-                            }
-                            legalRow(width: w)
-                                .padding(.bottom, PaywallDesign.s(8, width: w))
+                        ZStack(alignment: .topLeading) {
+                            Color.clear
+                                .frame(width: w, height: canvasHeight)
+
+                            paywallCanvas(width: w)
                         }
-                        .padding(.horizontal, PaywallDesign.s(27, width: w))
-                        .padding(.top, PaywallDesign.s(8, width: w))
-                        .padding(.bottom, PaywallDesign.s(12, width: w))
+                        .frame(width: w, height: canvasHeight)
                     }
 
                     footer(width: w)
@@ -115,90 +84,199 @@ struct OnboardingNativePaywallView: View {
         }
     }
 
-    // MARK: - Header
+    // MARK: - Figma canvas (node 167:93)
 
-    private func headerSection(width w: CGFloat) -> some View {
-        ZStack(alignment: .topTrailing) {
-            PaywallFigmaStars(layoutWidth: w)
+    @ViewBuilder
+    private func paywallCanvas(width w: CGFloat) -> some View {
+        let s: (CGFloat) -> CGFloat = { PaywallDesign.s($0, width: w) }
 
-            PaywallHighlightedHeadline(
-                text: fr("paywall.header"),
-                highlight: fr("paywall.header.highlight"),
-                fontSize: 34.071,
-                lineHeight: 37.965,
-                highlightColor: PaywallDesign.highlightYellow,
-                layoutWidth: w
-            )
-            .padding(.trailing, PaywallDesign.s(56, width: w))
+        // Highlight bars (behind headlines)
+        figmaHighlightBar(PaywallFigmaLayout.headerHighlight, color: PaywallDesign.highlightYellow, layoutWidth: w)
+        figmaHighlightBar(PaywallFigmaLayout.weaponHighlight, color: PaywallDesign.highlightPink, layoutWidth: w)
+        figmaHighlightBar(PaywallFigmaLayout.premiumHighlight, color: PaywallDesign.highlightYellow, layoutWidth: w)
 
-            Image("paywall_lightbulb")
-                .resizable()
-                .scaledToFit()
-                .frame(
-                    width: PaywallDesign.s(52.207, width: w),
-                    height: PaywallDesign.s(79.927, width: w)
-                )
-                .rotationEffect(.degrees(15.61))
-                .offset(x: PaywallDesign.s(-4, width: w), y: PaywallDesign.s(8, width: w))
+        // Headlines
+        figmaHeadline(
+            textKey: "paywall.header",
+            highlightKey: "paywall.header.highlight",
+            fontSize: 34.071,
+            lineHeight: 37.965,
+            rect: PaywallFigmaLayout.headerText,
+            layoutWidth: w
+        )
+
+        // Header stars + lightbulb
+        figmaStar("paywall_star_1", rect: PaywallFigmaLayout.star1, layoutWidth: w)
+        figmaStar("paywall_star_2", rect: PaywallFigmaLayout.star2, layoutWidth: w)
+
+        Image("paywall_lightbulb")
+            .resizable()
+            .scaledToFit()
+            .frame(width: s(PaywallFigmaLayout.lightbulb.width), height: s(PaywallFigmaLayout.lightbulb.height))
+            .rotationEffect(.degrees(PaywallFigmaLayout.lightbulbRotation))
+            .paywallFigmaRect(PaywallFigmaLayout.lightbulb, layoutWidth: w)
+
+        subjectsCardCanvas(width: w)
+
+        Image("paywall_pencil")
+            .resizable()
+            .scaledToFit()
+            .frame(width: s(PaywallFigmaLayout.pencil.width), height: s(PaywallFigmaLayout.pencil.height))
+            .rotationEffect(.degrees(PaywallFigmaLayout.pencilRotation))
+            .paywallFigmaRect(PaywallFigmaLayout.pencil, layoutWidth: w)
+
+        figmaStar("paywall_star_3", rect: PaywallFigmaLayout.star3, layoutWidth: w)
+        figmaStar("paywall_star_4", rect: PaywallFigmaLayout.star4, layoutWidth: w)
+
+        figmaHeadline(
+            textKey: "paywall.weaponHeadline",
+            highlightKey: "paywall.weaponHeadline.highlight",
+            fontSize: 34.071,
+            lineHeight: 37.965,
+            rect: PaywallFigmaLayout.weaponText,
+            layoutWidth: w
+        )
+
+        Image("paywall_phi")
+            .resizable()
+            .scaledToFit()
+            .frame(width: s(PaywallFigmaLayout.phi.width), height: s(PaywallFigmaLayout.phi.height))
+            .rotationEffect(.degrees(PaywallFigmaLayout.phiRotation))
+            .paywallFigmaRect(PaywallFigmaLayout.phi, layoutWidth: w)
+
+        figmaStar("paywall_star_5", rect: PaywallFigmaLayout.star5, layoutWidth: w)
+        figmaStar("paywall_star_6", rect: PaywallFigmaLayout.star6, layoutWidth: w)
+
+        ForEach(Array(PaywallFigmaLayout.benefits.enumerated()), id: \.offset) { _, benefit in
+            benefitCardCanvas(benefit, layoutWidth: w)
         }
-        .padding(.top, PaywallDesign.s(4, width: w))
+
+        figmaHeadline(
+            textKey: "paywall.premiumHeadline",
+            highlightKey: "paywall.premiumHeadline.highlight",
+            fontSize: 34,
+            lineHeight: 38,
+            rect: PaywallFigmaLayout.premiumText,
+            layoutWidth: w
+        )
+
+        featureComparison(width: w)
+            .paywallFigmaRect(PaywallFigmaLayout.comparisonTable, layoutWidth: w)
+
+        planCard(.yearly, width: w)
+            .paywallFigmaRect(PaywallFigmaLayout.yearlyPlan, layoutWidth: w)
+
+        planCard(.monthly, width: w)
+            .paywallFigmaRect(PaywallFigmaLayout.monthlyPlan, layoutWidth: w)
+
+        if selectedPlan == .yearly {
+            let badge = prices.discountBadge ?? fr("paywall.plan.discount")
+            Text(badge)
+                .font(PaywallDesign.nunitoExtraBold(13.595, width: w))
+                .foregroundStyle(BrutalPalette.ink)
+                .frame(width: s(PaywallFigmaLayout.discountBadge.width), height: s(PaywallFigmaLayout.discountBadge.height))
+                .background(PaywallDesign.accentPink, in: RoundedRectangle(cornerRadius: s(9.021), style: .continuous))
+                .paywallFigmaRect(PaywallFigmaLayout.discountBadge, layoutWidth: w)
+        }
+
+        legalRow(width: w)
+            .frame(maxWidth: .infinity)
+            .paywallFigmaPosition(x: 0, y: PaywallFigmaLayout.legalRowY, layoutWidth: w)
+    }
+
+    private func figmaHighlightBar(_ rect: CGRect, color: Color, layoutWidth w: CGFloat) -> some View {
+        RoundedRectangle(cornerRadius: PaywallDesign.s(5, width: w), style: .continuous)
+            .fill(color)
+            .paywallFigmaRect(rect, layoutWidth: w)
+    }
+
+    private func figmaHeadline(
+        textKey: String,
+        highlightKey: String,
+        fontSize: CGFloat,
+        lineHeight: CGFloat,
+        rect: CGRect,
+        layoutWidth w: CGFloat
+    ) -> some View {
+        PaywallHighlightedHeadline(
+            text: fr(textKey),
+            highlight: "",
+            fontSize: fontSize,
+            lineHeight: lineHeight,
+            highlightColor: .clear,
+            layoutWidth: w
+        )
+        .frame(width: PaywallDesign.s(rect.width, width: w), alignment: .leading)
+        .paywallFigmaRect(rect, layoutWidth: w)
+    }
+
+    private func figmaStar(_ name: String, rect: CGRect, layoutWidth w: CGFloat) -> some View {
+        Image(name)
+            .resizable()
+            .scaledToFit()
+            .paywallFigmaRect(rect, layoutWidth: w)
+    }
+
+    private func subjectsCardCanvas(width w: CGFloat) -> some View {
+        let innerW = PaywallFigmaLayout.subjectsCardInner.width
+        let innerH = PaywallFigmaLayout.subjectsCardInner.height
+        let corner = PaywallDesign.s(15, width: w)
+
+        return VStack(alignment: .leading, spacing: PaywallDesign.s(14, width: w)) {
+            Text(fr("paywall.freeSubjects"))
+                .font(PaywallDesign.quicksandBold(15, width: w))
+                .foregroundStyle(BrutalPalette.ink)
+
+            FlowLayout(spacing: PaywallDesign.s(10, width: w)) {
+                ForEach(Array(unlockedSubjects).sorted(by: subjectSort), id: \.self) { subject in
+                    subjectPill(subject, locked: false, width: w)
+                }
+            }
+
+            Text(fr("paywall.lockedSubjectsWithPremium"))
+                .font(PaywallDesign.quicksandBold(15, width: w))
+                .foregroundStyle(BrutalPalette.ink.opacity(0.4))
+                .padding(.top, PaywallDesign.s(4, width: w))
+
+            FlowLayout(spacing: PaywallDesign.s(12, width: w)) {
+                ForEach(lockedSubjects, id: \.self) { subject in
+                    subjectPill(subject, locked: true, width: w)
+                }
+            }
+            .opacity(0.4)
+        }
+        .padding(PaywallDesign.s(18, width: w))
+        .frame(width: PaywallDesign.s(innerW, width: w), height: PaywallDesign.s(innerH, width: w), alignment: .topLeading)
+        .background(Color.white, in: RoundedRectangle(cornerRadius: corner, style: .continuous))
+        .paywallFigmaShadow(corner: corner, depth: PaywallDesign.s(3, width: w))
+        .rotationEffect(.degrees(PaywallFigmaLayout.subjectsCardRotation))
+        .paywallFigmaRect(PaywallFigmaLayout.subjectsCard, layoutWidth: w)
+    }
+
+    private func benefitCardCanvas(_ benefit: PaywallFigmaLayout.Benefit, layoutWidth w: CGFloat) -> some View {
+        let s: (CGFloat) -> CGFloat = { PaywallDesign.s($0, width: w) }
+
+        return Color.clear
+            .frame(width: s(benefit.width), height: s(benefit.height))
+            .overlay {
+                Text(fr(benefit.textKey))
+                    .font(PaywallDesign.quicksandBold(13.67, width: w))
+                    .foregroundStyle(BrutalPalette.ink)
+                    .multilineTextAlignment(.leading)
+                    .padding(.horizontal, s(20))
+                    .frame(width: s(benefit.cardWidth), height: s(benefit.cardHeight), alignment: .leading)
+                    .background(benefit.color, in: RoundedRectangle(cornerRadius: s(13), style: .continuous))
+                    .paywallFigmaShadow(
+                        corner: s(13),
+                        depth: s(2),
+                        borderWidth: s(1.5)
+                    )
+                    .rotationEffect(.degrees(benefit.rotation))
+            }
+            .paywallFigmaPosition(x: benefit.x, y: benefit.y, layoutWidth: w)
     }
 
     // MARK: - Subjects
-
-    private func subjectsCard(width w: CGFloat) -> some View {
-        ZStack(alignment: .leading) {
-            Image("paywall_pencil")
-                .resizable()
-                .scaledToFit()
-                .frame(
-                    width: PaywallDesign.s(139.794, width: w),
-                    height: PaywallDesign.s(101.354, width: w)
-                )
-                .rotationEffect(.degrees(-178.83))
-                .offset(x: PaywallDesign.s(-6, width: w), y: PaywallDesign.s(70, width: w))
-                .zIndex(0)
-
-            ZStack(alignment: .topLeading) {
-                PaywallSubjectsStars(layoutWidth: w)
-
-                VStack(alignment: .leading, spacing: PaywallDesign.s(14, width: w)) {
-                    Text(fr("paywall.freeSubjects"))
-                        .font(PaywallDesign.quicksandBold(15, width: w))
-                        .foregroundStyle(BrutalPalette.ink)
-
-                    FlowLayout(spacing: PaywallDesign.s(10, width: w)) {
-                        ForEach(Array(unlockedSubjects).sorted(by: subjectSort), id: \.self) { subject in
-                            subjectPill(subject, locked: false, width: w)
-                        }
-                    }
-
-                    Text(fr("paywall.lockedSubjectsWithPremium"))
-                        .font(PaywallDesign.quicksandBold(15, width: w))
-                        .foregroundStyle(BrutalPalette.ink.opacity(0.4))
-                        .padding(.top, PaywallDesign.s(4, width: w))
-
-                    FlowLayout(spacing: PaywallDesign.s(12, width: w)) {
-                        ForEach(lockedSubjects, id: \.self) { subject in
-                            subjectPill(subject, locked: true, width: w)
-                        }
-                    }
-                    .opacity(0.4)
-                }
-                .padding(PaywallDesign.s(18, width: w))
-                .frame(maxWidth: .infinity, minHeight: PaywallDesign.s(180, width: w), alignment: .leading)
-                .background(Color.white, in: RoundedRectangle(cornerRadius: PaywallDesign.s(15, width: w), style: .continuous))
-                .paywallFigmaShadow(
-                    corner: PaywallDesign.s(15, width: w),
-                    depth: PaywallDesign.s(3, width: w)
-                )
-                .rotationEffect(.degrees(-1.98))
-            }
-            .padding(.leading, PaywallDesign.s(22, width: w))
-            .zIndex(1)
-        }
-        .padding(.vertical, PaywallDesign.s(8, width: w))
-    }
 
     private func subjectPill(_ subject: Subject, locked: Bool, width w: CGFloat) -> some View {
         let label = subject.localizedShortName(language: paywallLanguage)
@@ -216,122 +294,59 @@ struct OnboardingNativePaywallView: View {
             .shadow(color: BrutalPalette.ink, radius: 0, x: 0, y: PaywallDesign.s(0.909, width: w))
     }
 
-    // MARK: - Weapon / benefits
-
-    private func weaponSection(width w: CGFloat) -> some View {
-        ZStack(alignment: .topTrailing) {
-            PaywallWeaponStars(layoutWidth: w)
-
-            VStack(alignment: .leading, spacing: PaywallDesign.s(16, width: w)) {
-                PaywallHighlightedHeadline(
-                    text: fr("paywall.weaponHeadline"),
-                    highlight: fr("paywall.weaponHeadline.highlight"),
-                    fontSize: 34.071,
-                    lineHeight: 37.965,
-                    highlightColor: PaywallDesign.highlightPink,
-                    layoutWidth: w
-                )
-                .padding(.trailing, PaywallDesign.s(48, width: w))
-
-                VStack(spacing: PaywallDesign.s(12, width: w)) {
-                    ForEach(benefits(width: w)) { benefit in
-                        benefitCard(benefit, width: w)
-                    }
-                }
-                .padding(.top, PaywallDesign.s(4, width: w))
-            }
-
-            Image("paywall_phi")
-                .resizable()
-                .scaledToFit()
-                .frame(
-                    width: PaywallDesign.s(63.062, width: w),
-                    height: PaywallDesign.s(77.634, width: w)
-                )
-                .rotationEffect(.degrees(-9.06))
-                .offset(x: PaywallDesign.s(4, width: w), y: PaywallDesign.s(2, width: w))
-        }
-    }
-
-    private func benefitCard(_ benefit: Benefit, width w: CGFloat) -> some View {
-        HStack(spacing: 0) {
-            Color.clear.frame(width: benefit.leadingInset)
-
-            Text(benefit.text)
-                .font(PaywallDesign.quicksandBold(13.67, width: w))
-                .foregroundStyle(BrutalPalette.ink)
-                .multilineTextAlignment(.leading)
-                .padding(.horizontal, PaywallDesign.s(20, width: w))
-                .frame(maxWidth: .infinity, minHeight: PaywallDesign.s(49, width: w), alignment: .leading)
-                .background(benefit.color, in: RoundedRectangle(cornerRadius: PaywallDesign.s(13, width: w), style: .continuous))
-                .paywallFigmaShadow(
-                    corner: PaywallDesign.s(13, width: w),
-                    depth: PaywallDesign.s(2, width: w),
-                    borderWidth: PaywallDesign.s(1.5, width: w)
-                )
-        }
-        .rotationEffect(.degrees(benefit.rotation))
-    }
-
     // MARK: - Premium comparison
-
-    private func premiumSection(width w: CGFloat) -> some View {
-        VStack(alignment: .leading, spacing: PaywallDesign.s(18, width: w)) {
-            PaywallHighlightedHeadline(
-                text: fr("paywall.premiumHeadline"),
-                highlight: fr("paywall.premiumHeadline.highlight"),
-                fontSize: 34,
-                lineHeight: 38,
-                highlightColor: PaywallDesign.highlightYellow,
-                layoutWidth: w
-            )
-
-            featureComparison(width: w)
-        }
-    }
 
     private func featureComparison(width w: CGFloat) -> some View {
         let corner = PaywallDesign.s(17, width: w)
-        let premiumWidth = PaywallDesign.s(82, width: w)
+        let premiumRelX = PaywallFigmaLayout.premiumColumn.minX - PaywallFigmaLayout.comparisonTable.minX
+        let premiumWidth = PaywallFigmaLayout.premiumColumn.width
+        let premiumHeight = PaywallFigmaLayout.premiumColumn.height
 
-        return VStack(spacing: 0) {
-            HStack {
-                Text(fr("paywall.featureColumn"))
-                    .font(PaywallDesign.quicksandBold(9.243, width: w))
-                    .foregroundStyle(BrutalPalette.ink)
-                Spacer()
-                Text(fr("paywall.freeColumn"))
-                    .font(PaywallDesign.quicksandBold(9.243, width: w))
-                    .foregroundStyle(BrutalPalette.ink)
-                    .frame(width: PaywallDesign.s(52, width: w))
-                Text(fr("paywall.premiumColumn"))
-                    .font(PaywallDesign.quicksandBold(9.243, width: w))
-                    .foregroundStyle(BrutalPalette.ink)
-                    .frame(width: PaywallDesign.s(72, width: w))
-            }
-            .padding(.horizontal, PaywallDesign.s(16, width: w))
-            .padding(.vertical, PaywallDesign.s(14, width: w))
-
-            featureRow(fr("paywall.feature.3subjects"), freeIcon: "paywall_free_3matieres", premiumIcon: "paywall_check_premium", width: w)
-            featureRow(fr("paywall.feature.allSubjects"), freeIcon: "paywall_free_toutes", premiumIcon: "paywall_check_premium", width: w)
-            featureRow(fr("paywall.feature.unlimitedCourses"), freeIcon: "paywall_free_cours", premiumIcon: "paywall_check_premium", width: w)
-            featureRow(fr("paywall.feature.miniQuiz"), freeIcon: "paywall_free_quiz", premiumIcon: "paywall_check_premium", width: w)
-            featureRow(fr("paywall.feature.fullLibrary"), freeIcon: "paywall_free_biblio", premiumIcon: "paywall_check_premium", width: w)
-        }
-        .background(alignment: .trailing) {
+        return ZStack(alignment: .topLeading) {
             RoundedRectangle(cornerRadius: PaywallDesign.s(14, width: w), style: .continuous)
                 .fill(PaywallDesign.creamHighlight)
                 .overlay {
                     RoundedRectangle(cornerRadius: PaywallDesign.s(14, width: w), style: .continuous)
                         .strokeBorder(PaywallDesign.orange, lineWidth: PaywallDesign.s(2, width: w))
                 }
-                .frame(width: premiumWidth)
-                .padding(.trailing, PaywallDesign.s(10, width: w))
-                .padding(.vertical, PaywallDesign.s(6, width: w))
-                .offset(y: PaywallDesign.s(-4, width: w))
+                .frame(
+                    width: PaywallDesign.s(premiumWidth, width: w),
+                    height: PaywallDesign.s(premiumHeight, width: w)
+                )
+                .offset(x: PaywallDesign.s(premiumRelX, width: w))
+
+            VStack(spacing: 0) {
+                HStack {
+                    Text(fr("paywall.featureColumn"))
+                        .font(PaywallDesign.quicksandBold(9.243, width: w))
+                        .foregroundStyle(BrutalPalette.ink)
+                    Spacer()
+                    Text(fr("paywall.freeColumn"))
+                        .font(PaywallDesign.quicksandBold(9.243, width: w))
+                        .foregroundStyle(BrutalPalette.ink)
+                        .frame(width: PaywallDesign.s(52, width: w))
+                    Text(fr("paywall.premiumColumn"))
+                        .font(PaywallDesign.quicksandBold(9.243, width: w))
+                        .foregroundStyle(BrutalPalette.ink)
+                        .frame(width: PaywallDesign.s(72, width: w))
+                }
+                .padding(.horizontal, PaywallDesign.s(16, width: w))
+                .padding(.vertical, PaywallDesign.s(14, width: w))
+
+                featureRow(fr("paywall.feature.3subjects"), freeIcon: "paywall_free_3matieres", premiumIcon: "paywall_check_premium", width: w)
+                featureRow(fr("paywall.feature.allSubjects"), freeIcon: "paywall_free_toutes", premiumIcon: "paywall_check_premium", width: w)
+                featureRow(fr("paywall.feature.unlimitedCourses"), freeIcon: "paywall_free_cours", premiumIcon: "paywall_check_premium", width: w)
+                featureRow(fr("paywall.feature.miniQuiz"), freeIcon: "paywall_free_quiz", premiumIcon: "paywall_check_premium", width: w)
+                featureRow(fr("paywall.feature.fullLibrary"), freeIcon: "paywall_free_biblio", premiumIcon: "paywall_check_premium", width: w)
+            }
+            .background(Color.white, in: RoundedRectangle(cornerRadius: corner, style: .continuous))
+            .paywallFigmaShadow(corner: corner, depth: PaywallDesign.s(3, width: w))
         }
-        .background(Color.white, in: RoundedRectangle(cornerRadius: corner, style: .continuous))
-        .paywallFigmaShadow(corner: corner, depth: PaywallDesign.s(3, width: w))
+        .frame(
+            width: PaywallDesign.s(PaywallFigmaLayout.comparisonTable.width, width: w),
+            height: PaywallDesign.s(PaywallFigmaLayout.comparisonTable.height, width: w),
+            alignment: .topLeading
+        )
     }
 
     private func featureRow(_ title: String, freeIcon: String, premiumIcon: String, width w: CGFloat) -> some View {
@@ -363,7 +378,9 @@ struct OnboardingNativePaywallView: View {
         let isYearly = plan == .yearly
         let faded = !isSelected
         let corner = PaywallDesign.s(13, width: w)
-        let cardHeight = PaywallDesign.s(117, width: w)
+        let cardW = PaywallDesign.s(PaywallFigmaLayout.yearlyPlan.width, width: w)
+        let cardH = PaywallDesign.s(PaywallFigmaLayout.yearlyPlan.height, width: w)
+        let bodyH = PaywallDesign.s(88, width: w)
 
         Button {
             OnboardingHaptics.planSelected()
@@ -371,77 +388,63 @@ struct OnboardingNativePaywallView: View {
                 selectedPlan = plan
             }
         } label: {
-            ZStack(alignment: .bottomTrailing) {
-                VStack(spacing: 0) {
-                    Text(fr("paywall.trialBadge"))
-                        .font(PaywallDesign.nunitoExtraBold(11.607, width: w))
-                        .foregroundStyle(BrutalPalette.ink)
-                        .frame(maxWidth: .infinity)
-                        .frame(height: PaywallDesign.s(29, width: w))
-                        .background(
-                            isYearly
-                                ? PaywallDesign.orange
-                                : PaywallDesign.orange.opacity(faded ? 0.4 : 1)
-                        )
+            VStack(spacing: 0) {
+                Text(fr("paywall.trialBadge"))
+                    .font(PaywallDesign.nunitoExtraBold(11.607, width: w))
+                    .foregroundStyle(BrutalPalette.ink)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: PaywallDesign.s(29, width: w))
+                    .background(
+                        isYearly
+                            ? PaywallDesign.orange
+                            : PaywallDesign.orange.opacity(faded ? 0.4 : 1)
+                    )
 
-                    HStack(spacing: PaywallDesign.s(14, width: w)) {
-                        PaywallPlanRadio(isSelected: isSelected)
-                            .frame(
-                                width: PaywallDesign.s(32, width: w),
-                                height: PaywallDesign.s(32, width: w)
-                            )
-                            .opacity(faded ? 0.5 : 1)
-
-                        VStack(alignment: .leading, spacing: PaywallDesign.s(4, width: w)) {
-                            Text(isYearly ? fr("paywall.plan.yearly") : fr("paywall.plan.monthly"))
-                                .font(PaywallDesign.productSans(17, width: w))
-                                .foregroundStyle(BrutalPalette.ink.opacity(faded ? 0.5 : 1))
-                            Text(isYearly ? prices.yearlyPerMonth : fr("paywall.plan.monthlySubtitle"))
-                                .font(.system(size: PaywallDesign.s(11.051, width: w), weight: .regular, design: .default))
-                                .foregroundStyle(BrutalPalette.ink.opacity(faded ? 0.3 : 0.6))
-                        }
-
-                        Spacer(minLength: PaywallDesign.s(8, width: w))
-
-                        VStack(alignment: .trailing, spacing: PaywallDesign.s(4, width: w)) {
-                            Text(isYearly ? prices.yearlyPrice : prices.monthlyPrice)
-                                .font(PaywallDesign.productSans(17, width: w))
-                                .foregroundStyle(BrutalPalette.ink.opacity(faded ? 0.5 : 1))
-                            Text(isYearly ? fr("paywall.plan.perYear") : fr("paywall.plan.perMonth"))
-                                .font(.system(size: PaywallDesign.s(11.051, width: w), weight: .regular, design: .default))
-                                .foregroundStyle(BrutalPalette.ink.opacity(faded ? 0.3 : 0.6))
-                        }
-                    }
-                    .padding(.horizontal, PaywallDesign.s(16, width: w))
-                    .padding(.vertical, PaywallDesign.s(14, width: w))
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-                    .background(isSelected && isYearly ? PaywallDesign.creamHighlight : Color.white)
-                }
-                .frame(height: cardHeight)
-                .clipShape(RoundedRectangle(cornerRadius: corner, style: .continuous))
-                .paywallFigmaShadow(
-                    corner: corner,
-                    depth: isYearly && isSelected ? PaywallDesign.s(3, width: w) : PaywallDesign.s(3, width: w),
-                    shadowColor: isYearly && isSelected ? PaywallDesign.orangeShadow : BrutalPalette.ink.opacity(0.3),
-                    borderColor: isSelected
-                        ? (isYearly ? PaywallDesign.orange : BrutalPalette.ink)
-                        : BrutalPalette.ink.opacity(0.3),
-                    borderWidth: PaywallDesign.s(2, width: w)
-                )
-
-                if isYearly {
-                    let badge = prices.discountBadge ?? fr("paywall.plan.discount")
-                    Text(badge)
-                        .font(PaywallDesign.nunitoExtraBold(13.595, width: w))
-                        .foregroundStyle(BrutalPalette.ink)
+                HStack(spacing: PaywallDesign.s(14, width: w)) {
+                    Image(isSelected ? "paywall_checkbox_on" : "paywall_checkbox_off")
+                        .resizable()
+                        .scaledToFit()
                         .frame(
-                            width: PaywallDesign.s(53, width: w),
-                            height: PaywallDesign.s(33.83, width: w)
+                            width: PaywallDesign.s(32, width: w),
+                            height: PaywallDesign.s(32, width: w)
                         )
-                        .background(PaywallDesign.accentPink, in: RoundedRectangle(cornerRadius: PaywallDesign.s(9.021, width: w), style: .continuous))
-                        .offset(x: PaywallDesign.s(-8, width: w), y: PaywallDesign.s(8, width: w))
+                        .opacity(faded ? 0.55 : 1)
+
+                    VStack(alignment: .leading, spacing: PaywallDesign.s(4, width: w)) {
+                        Text(isYearly ? fr("paywall.plan.yearly") : fr("paywall.plan.monthly"))
+                            .font(PaywallDesign.productSans(17, width: w))
+                            .foregroundStyle(BrutalPalette.ink.opacity(faded ? 0.5 : 1))
+                        Text(isYearly ? prices.yearlyPerMonth : fr("paywall.plan.monthlySubtitle"))
+                            .font(.system(size: PaywallDesign.s(11.051, width: w), weight: .regular, design: .default))
+                            .foregroundStyle(BrutalPalette.ink.opacity(faded ? 0.35 : 0.6))
+                    }
+
+                    Spacer(minLength: PaywallDesign.s(8, width: w))
+
+                    VStack(alignment: .trailing, spacing: PaywallDesign.s(4, width: w)) {
+                        Text(isYearly ? prices.yearlyPrice : prices.monthlyPrice)
+                            .font(PaywallDesign.productSans(17, width: w))
+                            .foregroundStyle(BrutalPalette.ink.opacity(faded ? 0.5 : 1))
+                        Text(isYearly ? fr("paywall.plan.perYear") : fr("paywall.plan.perMonth"))
+                            .font(.system(size: PaywallDesign.s(11.051, width: w), weight: .regular, design: .default))
+                            .foregroundStyle(BrutalPalette.ink.opacity(faded ? 0.35 : 0.6))
+                    }
                 }
+                .padding(.horizontal, PaywallDesign.s(16, width: w))
+                .padding(.vertical, PaywallDesign.s(14, width: w))
+                .frame(width: cardW, height: bodyH, alignment: .leading)
+                .background(isSelected && isYearly ? PaywallDesign.creamHighlight : Color.white)
             }
+            .frame(width: cardW, height: cardH)
+            .paywallFigmaShadow(
+                corner: corner,
+                depth: PaywallDesign.s(3, width: w),
+                shadowColor: isYearly && isSelected ? PaywallDesign.orangeShadow : BrutalPalette.ink.opacity(0.3),
+                borderColor: isSelected
+                    ? (isYearly ? PaywallDesign.orange : BrutalPalette.ink)
+                    : BrutalPalette.ink.opacity(0.3),
+                borderWidth: PaywallDesign.s(2, width: w)
+            )
         }
         .buttonStyle(.plain)
     }
