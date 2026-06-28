@@ -119,8 +119,14 @@ struct PaywallHighlightedHeadline: View {
         .frame(maxWidth: .infinity, alignment: .leading)
     }
 
-    @ViewBuilder
     private func highlightedLine(_ line: String, font: Font) -> some View {
+        Text(attributedLine(line))
+            .font(font)
+            .multilineTextAlignment(.leading)
+            .fixedSize(horizontal: false, vertical: true)
+    }
+
+    private func attributedLine(_ line: String) -> AttributedString {
         var attributed = AttributedString(line)
         attributed.foregroundColor = BrutalPalette.ink
 
@@ -128,10 +134,7 @@ struct PaywallHighlightedHeadline: View {
             attributed[range].backgroundColor = highlightColor
         }
 
-        Text(attributed)
-            .font(font)
-            .multilineTextAlignment(.leading)
-            .fixedSize(horizontal: false, vertical: true)
+        return attributed
     }
 }
 
