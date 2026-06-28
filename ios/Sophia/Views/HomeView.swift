@@ -270,25 +270,17 @@ struct HomeView: View {
 
     private var swipeHint: some View {
         HStack(spacing: 24) {
-            HStack(spacing: 6) {
-                Image(systemName: "arrow.left")
-                    .font(.caption)
-                Text(languageManager.text("home.skip"))
-                    .font(.system(.caption, design: .rounded, weight: .semibold))
-            }
-            .foregroundStyle(ink.opacity(0.35))
+            Text(languageManager.text("home.swipe.left"))
+                .font(.system(.caption, design: .rounded, weight: .heavy))
+                .foregroundStyle(ink.opacity(0.35))
 
             Circle()
                 .fill(ink.opacity(0.25))
                 .frame(width: 6, height: 6)
 
-            HStack(spacing: 6) {
-                Text(languageManager.text("home.skip"))
-                    .font(.system(.caption, design: .rounded, weight: .semibold))
-                Image(systemName: "arrow.right")
-                    .font(.caption)
-            }
-            .foregroundStyle(ink.opacity(0.55))
+            Text(languageManager.text("home.swipe.right"))
+                .font(.system(.caption, design: .rounded, weight: .heavy))
+                .foregroundStyle(ink.opacity(0.55))
         }
     }
 

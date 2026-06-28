@@ -79,6 +79,7 @@ struct OnboardingNativePaywallView: View {
                                 .padding(.bottom, PaywallDesign.s(8, width: w))
                         }
                         .padding(.horizontal, PaywallDesign.s(27, width: w))
+                        .padding(.top, PaywallDesign.s(8, width: w))
                         .padding(.bottom, PaywallDesign.s(12, width: w))
                     }
 
@@ -128,7 +129,7 @@ struct OnboardingNativePaywallView: View {
                 highlightColor: PaywallDesign.highlightYellow,
                 layoutWidth: w
             )
-            .padding(.trailing, PaywallDesign.s(72, width: w))
+            .padding(.trailing, PaywallDesign.s(56, width: w))
 
             Image("paywall_lightbulb")
                 .resizable()
@@ -147,40 +148,6 @@ struct OnboardingNativePaywallView: View {
 
     private func subjectsCard(width w: CGFloat) -> some View {
         ZStack(alignment: .leading) {
-            PaywallSubjectsStars(layoutWidth: w)
-
-            VStack(alignment: .leading, spacing: PaywallDesign.s(14, width: w)) {
-                Text(fr("paywall.freeSubjects"))
-                    .font(PaywallDesign.quicksandBold(15, width: w))
-                    .foregroundStyle(BrutalPalette.ink)
-
-                FlowLayout(spacing: PaywallDesign.s(10, width: w)) {
-                    ForEach(Array(unlockedSubjects).sorted(by: subjectSort), id: \.self) { subject in
-                        subjectPill(subject, locked: false, width: w)
-                    }
-                }
-
-                Text(fr("paywall.lockedSubjectsWithPremium"))
-                    .font(PaywallDesign.quicksandBold(15, width: w))
-                    .foregroundStyle(BrutalPalette.ink.opacity(0.4))
-                    .padding(.top, PaywallDesign.s(4, width: w))
-
-                FlowLayout(spacing: PaywallDesign.s(12, width: w)) {
-                    ForEach(lockedSubjects, id: \.self) { subject in
-                        subjectPill(subject, locked: true, width: w)
-                    }
-                }
-                .opacity(0.4)
-            }
-            .padding(PaywallDesign.s(18, width: w))
-            .frame(maxWidth: .infinity, minHeight: PaywallDesign.s(180, width: w), alignment: .leading)
-            .background(Color.white, in: RoundedRectangle(cornerRadius: PaywallDesign.s(15, width: w), style: .continuous))
-            .paywallFigmaShadow(
-                corner: PaywallDesign.s(15, width: w),
-                depth: PaywallDesign.s(3, width: w)
-            )
-            .rotationEffect(.degrees(-1.98))
-
             Image("paywall_pencil")
                 .resizable()
                 .scaledToFit()
@@ -189,8 +156,46 @@ struct OnboardingNativePaywallView: View {
                     height: PaywallDesign.s(101.354, width: w)
                 )
                 .rotationEffect(.degrees(-178.83))
-                .offset(x: PaywallDesign.s(-60, width: w), y: PaywallDesign.s(48, width: w))
-                .allowsHitTesting(false)
+                .offset(x: PaywallDesign.s(-6, width: w), y: PaywallDesign.s(70, width: w))
+                .zIndex(0)
+
+            ZStack(alignment: .topLeading) {
+                PaywallSubjectsStars(layoutWidth: w)
+
+                VStack(alignment: .leading, spacing: PaywallDesign.s(14, width: w)) {
+                    Text(fr("paywall.freeSubjects"))
+                        .font(PaywallDesign.quicksandBold(15, width: w))
+                        .foregroundStyle(BrutalPalette.ink)
+
+                    FlowLayout(spacing: PaywallDesign.s(10, width: w)) {
+                        ForEach(Array(unlockedSubjects).sorted(by: subjectSort), id: \.self) { subject in
+                            subjectPill(subject, locked: false, width: w)
+                        }
+                    }
+
+                    Text(fr("paywall.lockedSubjectsWithPremium"))
+                        .font(PaywallDesign.quicksandBold(15, width: w))
+                        .foregroundStyle(BrutalPalette.ink.opacity(0.4))
+                        .padding(.top, PaywallDesign.s(4, width: w))
+
+                    FlowLayout(spacing: PaywallDesign.s(12, width: w)) {
+                        ForEach(lockedSubjects, id: \.self) { subject in
+                            subjectPill(subject, locked: true, width: w)
+                        }
+                    }
+                    .opacity(0.4)
+                }
+                .padding(PaywallDesign.s(18, width: w))
+                .frame(maxWidth: .infinity, minHeight: PaywallDesign.s(180, width: w), alignment: .leading)
+                .background(Color.white, in: RoundedRectangle(cornerRadius: PaywallDesign.s(15, width: w), style: .continuous))
+                .paywallFigmaShadow(
+                    corner: PaywallDesign.s(15, width: w),
+                    depth: PaywallDesign.s(3, width: w)
+                )
+                .rotationEffect(.degrees(-1.98))
+            }
+            .padding(.leading, PaywallDesign.s(22, width: w))
+            .zIndex(1)
         }
         .padding(.vertical, PaywallDesign.s(8, width: w))
     }
@@ -226,8 +231,9 @@ struct OnboardingNativePaywallView: View {
                     highlightColor: PaywallDesign.highlightPink,
                     layoutWidth: w
                 )
+                .padding(.trailing, PaywallDesign.s(48, width: w))
 
-                VStack(spacing: PaywallDesign.s(5, width: w)) {
+                VStack(spacing: PaywallDesign.s(12, width: w)) {
                     ForEach(benefits(width: w)) { benefit in
                         benefitCard(benefit, width: w)
                     }
@@ -248,20 +254,23 @@ struct OnboardingNativePaywallView: View {
     }
 
     private func benefitCard(_ benefit: Benefit, width w: CGFloat) -> some View {
-        Text(benefit.text)
-            .font(PaywallDesign.quicksandBold(13.67, width: w))
-            .foregroundStyle(BrutalPalette.ink)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.horizontal, PaywallDesign.s(20, width: w))
-            .frame(height: PaywallDesign.s(49, width: w))
-            .background(benefit.color, in: RoundedRectangle(cornerRadius: PaywallDesign.s(13, width: w), style: .continuous))
-            .paywallFigmaShadow(
-                corner: PaywallDesign.s(13, width: w),
-                depth: PaywallDesign.s(2, width: w),
-                borderWidth: PaywallDesign.s(1.5, width: w)
-            )
-            .padding(.leading, benefit.leadingInset)
-            .rotationEffect(.degrees(benefit.rotation))
+        HStack(spacing: 0) {
+            Color.clear.frame(width: benefit.leadingInset)
+
+            Text(benefit.text)
+                .font(PaywallDesign.quicksandBold(13.67, width: w))
+                .foregroundStyle(BrutalPalette.ink)
+                .multilineTextAlignment(.leading)
+                .padding(.horizontal, PaywallDesign.s(20, width: w))
+                .frame(maxWidth: .infinity, minHeight: PaywallDesign.s(49, width: w), alignment: .leading)
+                .background(benefit.color, in: RoundedRectangle(cornerRadius: PaywallDesign.s(13, width: w), style: .continuous))
+                .paywallFigmaShadow(
+                    corner: PaywallDesign.s(13, width: w),
+                    depth: PaywallDesign.s(2, width: w),
+                    borderWidth: PaywallDesign.s(1.5, width: w)
+                )
+        }
+        .rotationEffect(.degrees(benefit.rotation))
     }
 
     // MARK: - Premium comparison
@@ -376,9 +385,7 @@ struct OnboardingNativePaywallView: View {
                         )
 
                     HStack(spacing: PaywallDesign.s(14, width: w)) {
-                        Image(isSelected ? "paywall_checkbox_on" : "paywall_checkbox_off")
-                            .resizable()
-                            .scaledToFit()
+                        PaywallPlanRadio(isSelected: isSelected)
                             .frame(
                                 width: PaywallDesign.s(32, width: w),
                                 height: PaywallDesign.s(32, width: w)

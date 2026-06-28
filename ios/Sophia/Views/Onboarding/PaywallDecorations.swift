@@ -115,43 +115,23 @@ struct PaywallHighlightedHeadline: View {
                 highlightedLine(line, font: font)
             }
         }
-        .tracking(PaywallDesign.productTracking * fontSize)
+        .tracking(PaywallDesign.productTracking * PaywallDesign.s(fontSize, width: layoutWidth))
         .frame(maxWidth: .infinity, alignment: .leading)
     }
 
     @ViewBuilder
     private func highlightedLine(_ line: String, font: Font) -> some View {
-        if !highlight.isEmpty, let range = line.range(of: highlight) {
-            let before = String(line[..<range.lowerBound])
-            let word = String(line[range])
-            let after = String(line[range.upperBound...])
-            let highlightBackground = RoundedRectangle(
-                cornerRadius: PaywallDesign.s(5, width: layoutWidth),
-                style: .continuous
-            )
-            .fill(highlightColor)
-            .padding(.horizontal, PaywallDesign.s(-1, width: layoutWidth))
-            .padding(.vertical, PaywallDesign.s(-2, width: layoutWidth))
+        var attributed = AttributedString(line)
+        attributed.foregroundColor = BrutalPalette.ink
 
-            HStack(spacing: 0) {
-                if !before.isEmpty {
-                    Text(before).foregroundStyle(BrutalPalette.ink)
-                }
-                Text(word)
-                    .foregroundStyle(BrutalPalette.ink)
-                    .background(highlightBackground)
-                if !after.isEmpty {
-                    Text(after).foregroundStyle(BrutalPalette.ink)
-                }
-            }
-            .font(font)
-            .fixedSize(horizontal: false, vertical: true)
-        } else {
-            Text(line)
-                .font(font)
-                .foregroundStyle(BrutalPalette.ink)
-                .fixedSize(horizontal: false, vertical: true)
+        if !highlight.isEmpty, let range = attributed.range(of: highlight) {
+            attributed[range].backgroundColor = highlightColor
         }
+
+        Text(attributed)
+            .font(font)
+            .multilineTextAlignment(.leading)
+            .fixedSize(horizontal: false, vertical: true)
     }
 }
 
