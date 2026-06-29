@@ -2,6 +2,9 @@ import SwiftUI
 import RevenueCat
 
 struct OnboardingView: View {
+    /// Flip to `true` to restore the custom native paywall at the end of onboarding.
+    private let useNativeOnboardingPaywall = false
+
     @State private var viewModel = OnboardingViewModel()
     @State private var storeVM = StoreViewModel()
     let onComplete: () -> Void
@@ -9,6 +12,8 @@ struct OnboardingView: View {
     @State private var displayedScreen: Int = 0
     @State private var incomingScreen: Int? = nil
     @State private var slideOffset: CGFloat = 0
+    @State private var finOnboardingOffering: Offering?
+    @State private var finOnboardingOfferingResolved = false
 
     var body: some View {
         GeometryReader { geo in
@@ -54,6 +59,16 @@ struct OnboardingView: View {
         }
         .preferredColorScheme(.light)
         .ignoresSafeArea(.keyboard)
+        .onChange(of: displayedScreen) { _, screen in
+            if screen == 9, !useNativeOnboardingPaywall {
+                prefetchFinOnboardingOffering()
+            }
+        }
+        .onChange(of: incomingScreen) { _, screen in
+            if screen == 9, !useNativeOnboardingPaywall {
+                prefetchFinOnboardingOffering()
+            }
+        }
     }
 
     @ViewBuilder
@@ -86,41 +101,11 @@ struct OnboardingView: View {
                 case 9:
                     OnboardingLoadingScreen(viewModel: viewModel, onNext: advance)
                 case 10:
-                    OnboardingNativePaywallView(
-                        store: storeVM,
-                        onPurchase: { plan in
-                            Task {
-                                guard let package = packageFor(plan: plan) else {
-                                    #if DEBUG
-                                    print("[OnboardingPaywall] no package found for plan \(plan)")
-                                    #endif
-                                    return
-                                }
-                                let success = await storeVM.purchase(package: package)
-                                if success {
-                                    await MainActor.run {
-                                        viewModel.completeOnboarding()
-                                        onComplete()
-                                    }
-                                }
-                            }
-                        },
-                        onRestore: {
-                            Task {
-                                await storeVM.restore()
-                                if storeVM.isPremium {
-                                    await MainActor.run {
-                                        viewModel.completeOnboarding()
-                                        onComplete()
-                                    }
-                                }
-                            }
-                        },
-                        onClose: {
-                            viewModel.completeOnboarding()
-                            onComplete()
-                        }
-                    )
+                    if useNativeOnboardingPaywall {
+                        nativePaywallScreen
+                    } else {
+                        revenueCatPaywallScreen(in: size)
+                    }
                 default:
                     EmptyView()
             }
@@ -130,6 +115,62 @@ struct OnboardingView: View {
         .environment(\.onboardingSlideSettled, slideSettled)
     }
 
+    @ViewBuilder
+    private var nativePaywallScreen: some View {
+        OnboardingNativePaywallView(
+            store: storeVM,
+            onPurchase: { plan in
+                Task {
+                    guard let package = packageFor(plan: plan) else {
+                        #if DEBUG
+                        print("[OnboardingPaywall] no package found for plan \(plan)")
+                        #endif
+                        return
+                    }
+                    let success = await storeVM.purchase(package: package)
+                    if success {
+                        await MainActor.run { finishOnboarding() }
+                    }
+                }
+            },
+            onRestore: {
+                Task {
+                    await storeVM.restore()
+                    if storeVM.isPremium {
+                        await MainActor.run { finishOnboarding() }
+                    }
+                }
+            },
+            onClose: finishOnboarding
+        )
+    }
+
+    @ViewBuilder
+    private func revenueCatPaywallScreen(in size: CGSize) -> some View {
+        Group {
+            if let finOnboardingOffering {
+                SophiaPaywallView(
+                    context: .finOnboarding,
+                    preloadedOffering: finOnboardingOffering,
+                    onPurchased: finishOnboarding,
+                    onRestored: finishOnboarding,
+                    onDismissed: finishOnboarding
+                )
+            } else if finOnboardingOfferingResolved {
+                Color.clear
+                    .onAppear { finishOnboarding() }
+            } else {
+                ZStack {
+                    BrutalPalette.cream.ignoresSafeArea()
+                    ProgressView()
+                        .tint(BrutalPalette.ink)
+                }
+                .onAppear { prefetchFinOnboardingOffering() }
+            }
+        }
+        .frame(width: size.width, height: size.height)
+    }
+
     private func packageFor(plan: OnboardingNativePaywallView.Plan) -> RevenueCat.Package? {
         switch plan {
         case .yearly:
@@ -137,6 +178,22 @@ struct OnboardingView: View {
         case .monthly:
             return storeVM.monthlyPackage
         }
+    }
+
+    private func prefetchFinOnboardingOffering() {
+        guard !finOnboardingOfferingResolved else { return }
+        Task {
+            let offering = await SophiaPaywallView.loadOffering(for: .finOnboarding)
+            await MainActor.run {
+                finOnboardingOffering = offering
+                finOnboardingOfferingResolved = true
+            }
+        }
+    }
+
+    private func finishOnboarding() {
+        viewModel.completeOnboarding()
+        onComplete()
     }
 
     /// Progress dots for OB steps 1–8; stays visible during slide transitions.

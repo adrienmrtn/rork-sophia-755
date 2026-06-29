@@ -40,6 +40,8 @@ enum SophiaPaywallContext: String, Identifiable {
 /// if the dashboard paywall is inactive, or if the offering hasn't been configured yet.
 struct SophiaPaywallView: View {
     let context: SophiaPaywallContext
+    /// When set, skips the async offerings fetch (e.g. onboarding prefetch).
+    var preloadedOffering: Offering? = nil
     var onPurchased: () -> Void = {}
     var onRestored: () -> Void = {}
     var onDismissed: (() -> Void)? = nil
@@ -73,9 +75,22 @@ struct SophiaPaywallView: View {
                     Color.black.ignoresSafeArea()
                     ProgressView().tint(.white)
                 }
-                .task { await resolveOffering() }
+                .task(id: preloadedOffering?.identifier) {
+                    if let preloadedOffering {
+                        offering = preloadedOffering
+                        loaded = true
+                    } else {
+                        await resolveOffering()
+                    }
+                }
             }
         }
+    }
+
+    /// Loads an offering with an active RC paywall template for the given context.
+    static func loadOffering(for context: SophiaPaywallContext) async -> Offering? {
+        guard let offerings = try? await Purchases.shared.offerings() else { return nil }
+        return resolveOffering(for: context.rawValue, in: offerings)
     }
 
     private func resolveOffering() async {

@@ -173,7 +173,9 @@ struct HomeView: View {
                 .font(.system(.subheadline, design: .rounded, weight: .heavy))
                 .foregroundStyle(ink)
                 .monospacedDigit()
-            Text(progressManager.streak <= 1 ? "JOUR" : "JOURS")
+            Text(progressManager.streak <= 1
+                ? languageManager.text("common.streak.day")
+                : languageManager.text("common.streak.days"))
                 .font(.system(.caption, design: .rounded, weight: .heavy))
                 .foregroundStyle(ink)
                 .tracking(0.5)
