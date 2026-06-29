@@ -5,6 +5,8 @@ struct OnboardingView: View {
     /// Flip to `true` to restore the custom native paywall at the end of onboarding.
     private let useNativeOnboardingPaywall = false
 
+    @Environment(LanguageManager.self) private var languageManager
+
     @State private var viewModel = OnboardingViewModel()
     @State private var storeVM = StoreViewModel()
     let onComplete: () -> Void
@@ -15,6 +17,7 @@ struct OnboardingView: View {
     @State private var finOnboardingOffering: Offering?
     @State private var finOnboardingOfferingResolved = false
     @State private var showRCPaywall = false
+    @State private var didFinishOnboarding = false
 
     var body: some View {
         GeometryReader { geo in
@@ -33,15 +36,13 @@ struct OnboardingView: View {
                         store: storeVM,
                         onSubscribed: {
                             showSpecialOffer = false
-                            viewModel.completeOnboarding()
-                            onComplete()
+                            finishOnboarding()
                         },
                         onSkip: {
                             withAnimation(.spring(response: 0.4, dampingFraction: 0.85)) {
                                 showSpecialOffer = false
                             }
-                            viewModel.completeOnboarding()
-                            onComplete()
+                            finishOnboarding()
                         }
                     )
                     .transition(.move(edge: .bottom).combined(with: .opacity))
@@ -62,13 +63,17 @@ struct OnboardingView: View {
         .ignoresSafeArea(.keyboard)
         .fullScreenCover(isPresented: $showRCPaywall, onDismiss: finishOnboarding) {
             if let finOnboardingOffering {
-                SophiaPaywallView(
-                    context: .finOnboarding,
-                    preloadedOffering: finOnboardingOffering,
-                    onPurchased: { showRCPaywall = false },
-                    onRestored: { showRCPaywall = false },
-                    onDismissed: { showRCPaywall = false }
-                )
+                ZStack(alignment: .topTrailing) {
+                    SophiaPaywallView(
+                        context: .finOnboarding,
+                        preloadedOffering: finOnboardingOffering,
+                        onPurchased: finishOnboarding,
+                        onRestored: finishOnboarding,
+                        onDismissed: finishOnboarding
+                    )
+
+                    revenueCatCloseFallbackButton
+                }
             }
         }
         .onChange(of: displayedScreen) { _, screen in
@@ -202,8 +207,28 @@ struct OnboardingView: View {
     }
 
     private func finishOnboarding() {
+        guard !didFinishOnboarding else { return }
+        didFinishOnboarding = true
+        showSpecialOffer = false
+        showRCPaywall = false
         viewModel.completeOnboarding()
         onComplete()
+    }
+
+    /// Defensive overlay for the RevenueCat dashboard close control. It keeps
+    /// the visible RC paywall untouched but guarantees the top-right close tap
+    /// exits onboarding even if the remote template action is misconfigured.
+    private var revenueCatCloseFallbackButton: some View {
+        Button(action: finishOnboarding) {
+            Color.clear
+                .frame(width: 88, height: 88)
+                .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel(AppLocalizable.string("common.close", language: languageManager.current))
+        .padding(.top, 4)
+        .padding(.trailing, 4)
+        .zIndex(10)
     }
 
     /// Progress dots for OB steps 1–8; stays visible during slide transitions.
