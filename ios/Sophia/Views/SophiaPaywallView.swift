@@ -49,13 +49,23 @@ struct SophiaPaywallView: View {
     @State private var offering: Offering?
     @State private var loaded: Bool = false
 
+    @ViewBuilder
+    private func configuredPaywall(offering: Offering) -> some View {
+        let paywall = PaywallView(offering: offering)
+            .onPurchaseCompleted { _ in onPurchased() }
+            .onRestoreCompleted { _ in onRestored() }
+
+        if let onDismissed {
+            paywall.onRequestedDismissal(onDismissed)
+        } else {
+            paywall
+        }
+    }
+
     var body: some View {
         Group {
             if let offering {
-                PaywallView(offering: offering)
-                    .onPurchaseCompleted { _ in onPurchased() }
-                    .onRestoreCompleted { _ in onRestored() }
-                    .onRequestedDismissal { onDismissed?() }
+                configuredPaywall(offering: offering)
             } else if loaded {
                 ZStack {
                     Color.black.ignoresSafeArea()

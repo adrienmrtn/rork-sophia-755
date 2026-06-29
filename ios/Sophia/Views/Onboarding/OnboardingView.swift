@@ -14,6 +14,7 @@ struct OnboardingView: View {
     @State private var slideOffset: CGFloat = 0
     @State private var finOnboardingOffering: Offering?
     @State private var finOnboardingOfferingResolved = false
+    @State private var showRCPaywall = false
 
     var body: some View {
         GeometryReader { geo in
@@ -59,6 +60,17 @@ struct OnboardingView: View {
         }
         .preferredColorScheme(.light)
         .ignoresSafeArea(.keyboard)
+        .fullScreenCover(isPresented: $showRCPaywall, onDismiss: finishOnboarding) {
+            if let finOnboardingOffering {
+                SophiaPaywallView(
+                    context: .finOnboarding,
+                    preloadedOffering: finOnboardingOffering,
+                    onPurchased: { showRCPaywall = false },
+                    onRestored: { showRCPaywall = false },
+                    onDismissed: { showRCPaywall = false }
+                )
+            }
+        }
         .onChange(of: displayedScreen) { _, screen in
             if screen == 9, !useNativeOnboardingPaywall {
                 prefetchFinOnboardingOffering()
@@ -99,13 +111,9 @@ struct OnboardingView: View {
                 case 8:
                     OnboardingProjectionScreen(viewModel: viewModel, onNext: advance)
                 case 9:
-                    OnboardingLoadingScreen(viewModel: viewModel, onNext: advance)
+                    OnboardingLoadingScreen(viewModel: viewModel, onNext: loadingScreenCompleted)
                 case 10:
-                    if useNativeOnboardingPaywall {
-                        nativePaywallScreen
-                    } else {
-                        revenueCatPaywallScreen(in: size)
-                    }
+                    nativePaywallScreen
                 default:
                     EmptyView()
             }
@@ -145,30 +153,32 @@ struct OnboardingView: View {
         )
     }
 
-    @ViewBuilder
-    private func revenueCatPaywallScreen(in size: CGSize) -> some View {
-        Group {
-            if let finOnboardingOffering {
-                SophiaPaywallView(
-                    context: .finOnboarding,
-                    preloadedOffering: finOnboardingOffering,
-                    onPurchased: finishOnboarding,
-                    onRestored: finishOnboarding,
-                    onDismissed: finishOnboarding
-                )
-            } else if finOnboardingOfferingResolved {
-                Color.clear
-                    .onAppear { finishOnboarding() }
-            } else {
-                ZStack {
-                    BrutalPalette.cream.ignoresSafeArea()
-                    ProgressView()
-                        .tint(BrutalPalette.ink)
+    private func loadingScreenCompleted() {
+        if useNativeOnboardingPaywall {
+            advance()
+        } else {
+            presentOnboardingPaywall()
+        }
+    }
+
+    private func presentOnboardingPaywall() {
+        Task {
+            if !finOnboardingOfferingResolved {
+                let offering = await SophiaPaywallView.loadOffering(for: .finOnboarding)
+                await MainActor.run {
+                    finOnboardingOffering = offering
+                    finOnboardingOfferingResolved = true
                 }
-                .onAppear { prefetchFinOnboardingOffering() }
+            }
+
+            await MainActor.run {
+                if finOnboardingOffering != nil {
+                    showRCPaywall = true
+                } else {
+                    finishOnboarding()
+                }
             }
         }
-        .frame(width: size.width, height: size.height)
     }
 
     private func packageFor(plan: OnboardingNativePaywallView.Plan) -> RevenueCat.Package? {
