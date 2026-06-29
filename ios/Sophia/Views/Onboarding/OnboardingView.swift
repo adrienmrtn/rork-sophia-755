@@ -15,6 +15,7 @@ struct OnboardingView: View {
     @State private var finOnboardingOffering: Offering?
     @State private var finOnboardingOfferingResolved = false
     @State private var showRCPaywall = false
+    @State private var didFinishOnboarding = false
 
     var body: some View {
         GeometryReader { geo in
@@ -33,15 +34,13 @@ struct OnboardingView: View {
                         store: storeVM,
                         onSubscribed: {
                             showSpecialOffer = false
-                            viewModel.completeOnboarding()
-                            onComplete()
+                            finishOnboarding()
                         },
                         onSkip: {
                             withAnimation(.spring(response: 0.4, dampingFraction: 0.85)) {
                                 showSpecialOffer = false
                             }
-                            viewModel.completeOnboarding()
-                            onComplete()
+                            finishOnboarding()
                         }
                     )
                     .transition(.move(edge: .bottom).combined(with: .opacity))
@@ -65,9 +64,10 @@ struct OnboardingView: View {
                 SophiaPaywallView(
                     context: .finOnboarding,
                     preloadedOffering: finOnboardingOffering,
-                    onPurchased: { showRCPaywall = false },
-                    onRestored: { showRCPaywall = false },
-                    onDismissed: { showRCPaywall = false }
+                    onPurchased: finishOnboarding,
+                    onRestored: finishOnboarding
+                    // Keep RevenueCat's default close behavior here; the cover's
+                    // onDismiss completes onboarding after the RC close button dismisses.
                 )
             }
         }
@@ -202,6 +202,10 @@ struct OnboardingView: View {
     }
 
     private func finishOnboarding() {
+        guard !didFinishOnboarding else { return }
+        didFinishOnboarding = true
+        showSpecialOffer = false
+        showRCPaywall = false
         viewModel.completeOnboarding()
         onComplete()
     }
