@@ -39,6 +39,8 @@ enum SophiaPaywallContext: String, Identifiable {
 /// or has no active paywall template — e.g. while offerings are still loading,
 /// if the dashboard paywall is inactive, or if the offering hasn't been configured yet.
 struct SophiaPaywallView: View {
+    @Environment(\.dismiss) private var dismiss
+
     let context: SophiaPaywallContext
     /// When set, skips the async offerings fetch (e.g. onboarding prefetch).
     var preloadedOffering: Offering? = nil
@@ -55,10 +57,9 @@ struct SophiaPaywallView: View {
             .onPurchaseCompleted { _ in onPurchased() }
             .onRestoreCompleted { _ in onRestored() }
 
-        if let onDismissed {
-            paywall.onRequestedDismissal(onDismissed)
-        } else {
-            paywall
+        paywall.onRequestedDismissal {
+            dismiss()
+            onDismissed?()
         }
     }
 

@@ -5,6 +5,8 @@ struct OnboardingView: View {
     /// Flip to `true` to restore the custom native paywall at the end of onboarding.
     private let useNativeOnboardingPaywall = false
 
+    @Environment(LanguageManager.self) private var languageManager
+
     @State private var viewModel = OnboardingViewModel()
     @State private var storeVM = StoreViewModel()
     let onComplete: () -> Void
@@ -61,14 +63,17 @@ struct OnboardingView: View {
         .ignoresSafeArea(.keyboard)
         .fullScreenCover(isPresented: $showRCPaywall, onDismiss: finishOnboarding) {
             if let finOnboardingOffering {
-                SophiaPaywallView(
-                    context: .finOnboarding,
-                    preloadedOffering: finOnboardingOffering,
-                    onPurchased: finishOnboarding,
-                    onRestored: finishOnboarding
-                    // Keep RevenueCat's default close behavior here; the cover's
-                    // onDismiss completes onboarding after the RC close button dismisses.
-                )
+                ZStack(alignment: .topTrailing) {
+                    SophiaPaywallView(
+                        context: .finOnboarding,
+                        preloadedOffering: finOnboardingOffering,
+                        onPurchased: finishOnboarding,
+                        onRestored: finishOnboarding,
+                        onDismissed: finishOnboarding
+                    )
+
+                    revenueCatCloseFallbackButton
+                }
             }
         }
         .onChange(of: displayedScreen) { _, screen in
@@ -208,6 +213,22 @@ struct OnboardingView: View {
         showRCPaywall = false
         viewModel.completeOnboarding()
         onComplete()
+    }
+
+    /// Defensive overlay for the RevenueCat dashboard close control. It keeps
+    /// the visible RC paywall untouched but guarantees the top-right close tap
+    /// exits onboarding even if the remote template action is misconfigured.
+    private var revenueCatCloseFallbackButton: some View {
+        Button(action: finishOnboarding) {
+            Color.clear
+                .frame(width: 88, height: 88)
+                .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel(AppLocalizable.string("common.close", language: languageManager.current))
+        .padding(.top, 4)
+        .padding(.trailing, 4)
+        .zIndex(10)
     }
 
     /// Progress dots for OB steps 1–8; stays visible during slide transitions.
