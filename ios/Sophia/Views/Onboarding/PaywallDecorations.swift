@@ -17,21 +17,20 @@ enum PaywallDesign {
     static func scale(for width: CGFloat) -> CGFloat { width / canvasWidth }
     static func s(_ value: CGFloat, width: CGFloat) -> CGFloat { value * scale(for: width) }
 
-    // Figma type styles (Product Sans / Quicksand / Nunito → system equivalents)
     static func productSans(_ size: CGFloat, width: CGFloat) -> Font {
-        .system(size: s(size, width: width), weight: .bold, design: .default)
+        PaywallFonts.productSans(size, width: width)
     }
 
     static func quicksandBold(_ size: CGFloat, width: CGFloat) -> Font {
-        .system(size: s(size, width: width), weight: .bold, design: .rounded)
+        PaywallFonts.quicksandBold(size, width: width)
     }
 
     static func quicksandSemiBold(_ size: CGFloat, width: CGFloat) -> Font {
-        .system(size: s(size, width: width), weight: .semibold, design: .rounded)
+        PaywallFonts.quicksandSemiBold(size, width: width)
     }
 
     static func nunitoExtraBold(_ size: CGFloat, width: CGFloat) -> Font {
-        .system(size: s(size, width: width), weight: .heavy, design: .rounded)
+        PaywallFonts.nunitoExtraBold(size, width: width)
     }
 
     static let productTracking: CGFloat = 0.34 / 100
@@ -466,5 +465,33 @@ struct PaywallPlanRadio: View {
             }
         }
         .frame(width: 36, height: 36)
+    }
+}
+
+/// Square plan checkbox (Figma style) — avoids broken SVG rendering on device.
+struct PaywallSquareCheckbox: View {
+    let isSelected: Bool
+    let layoutWidth: CGFloat
+    var faded: Bool = false
+
+    var body: some View {
+        let side = PaywallDesign.s(32, width: layoutWidth)
+        let corner = PaywallDesign.s(4, width: layoutWidth)
+
+        ZStack {
+            RoundedRectangle(cornerRadius: corner, style: .continuous)
+                .fill(isSelected ? PaywallDesign.orange : Color.white)
+                .overlay {
+                    RoundedRectangle(cornerRadius: corner, style: .continuous)
+                        .strokeBorder(BrutalPalette.ink, lineWidth: PaywallDesign.s(2, width: layoutWidth))
+                }
+            if isSelected {
+                Image(systemName: "checkmark")
+                    .font(.system(size: PaywallDesign.s(14, width: layoutWidth), weight: .heavy))
+                    .foregroundStyle(BrutalPalette.ink)
+            }
+        }
+        .frame(width: side, height: side)
+        .opacity(faded ? 0.55 : 1)
     }
 }
