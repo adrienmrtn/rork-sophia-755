@@ -115,7 +115,7 @@ struct HomeViewLegacy: View {
             Image("sophia_mark")
                 .resizable()
                 .scaledToFit()
-                .frame(height: 36)
+                .frame(height: 30)
 
             Spacer()
 
