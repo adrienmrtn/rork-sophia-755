@@ -18,6 +18,8 @@ struct OnboardingView: View {
     @State private var finOnboardingOfferingResolved = false
     @State private var showRCPaywall = false
     @State private var didFinishOnboarding = false
+    @State private var didTrackOnboardingStart = false
+    @State private var sawOnboardingPaywall = false
 
     var body: some View {
         GeometryReader { geo in
@@ -85,6 +87,20 @@ struct OnboardingView: View {
                 prefetchFinOnboardingOffering()
             }
         }
+        .onChange(of: displayedScreen) { _, screen in
+            trackOnboardingScreen(screen)
+        }
+        .onAppear {
+            if !didTrackOnboardingStart {
+                didTrackOnboardingStart = true
+                AnalyticsService.trackOnboardingStarted()
+                AnalyticsService.trackOnboardingStepViewed(stepIndex: 0)
+            }
+        }
+    }
+
+    private func trackOnboardingScreen(_ screen: Int) {
+        AnalyticsService.trackOnboardingStepViewed(stepIndex: screen)
     }
 
     @ViewBuilder
@@ -115,7 +131,13 @@ struct OnboardingView: View {
                 case 8:
                     OnboardingProjectionScreen(viewModel: viewModel, onNext: advance)
                 case 9:
-                    OnboardingWidgetScreen(onNext: advance, onSkip: advance)
+                    OnboardingWidgetScreen(
+                        onNext: advance,
+                        onSkip: {
+                            AnalyticsService.trackOnboardingStepViewed(stepIndex: 9, action: "skip")
+                            advance()
+                        }
+                    )
                 case 10:
                     OnboardingLoadingScreen(viewModel: viewModel, onNext: loadingScreenCompleted)
                 case 11:
@@ -196,6 +218,7 @@ struct OnboardingView: View {
 
             await MainActor.run {
                 if finOnboardingOffering != nil {
+                    sawOnboardingPaywall = true
                     showRCPaywall = true
                 } else {
                     finishOnboarding()
@@ -229,6 +252,10 @@ struct OnboardingView: View {
         didFinishOnboarding = true
         showSpecialOffer = false
         showRCPaywall = false
+        AnalyticsService.trackOnboardingCompleted(
+            sawPaywall: sawOnboardingPaywall,
+            isPremiumAtExit: storeVM.isPremium
+        )
         viewModel.completeOnboarding()
         onComplete()
     }
@@ -247,6 +274,7 @@ struct OnboardingView: View {
         OnboardingHaptics.slideTransition()
         if viewModel.currentScreen == 6 {
             viewModel.finalizeInterests()
+            AnalyticsService.trackOnboardingInterestsSet(viewModel.interests)
         }
 
         let to = viewModel.currentScreen + 1

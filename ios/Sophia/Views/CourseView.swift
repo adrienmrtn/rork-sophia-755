@@ -6,6 +6,7 @@ struct CourseView: View {
     let course: Course
     let progressManager: ProgressManager
     let isPremium: Bool
+    var openSource: String = "unknown"
     let onDismissToHome: () -> Void
     @Environment(\.dismiss) private var dismiss
     @State private var currentIndex: Int = 0
@@ -31,6 +32,7 @@ struct CourseView: View {
     @State private var showCollectionRankUp: Bool = false
     @State private var rewardSteps: [PostCompletionRewardStep] = []
     @State private var showRewardFlow: Bool = false
+    @State private var sessionTracker: CourseSessionTracker?
 
     /// Fixed XP awarded for finishing a course (reaching the completion screen). Always granted.
     private let courseCompletionXP: Int = 10
@@ -101,9 +103,23 @@ struct CourseView: View {
         .onAppear {
             progressManager.registerFirstCourseOpenedIfNeeded(course.id)
             requestAppStoreReviewIfEligible(lessonIndex: currentIndex)
+            sessionTracker = CourseSessionTracker(course: course)
+            sessionTracker?.recordLessonIndex(currentIndex)
+            AnalyticsService.trackCourseOpened(
+                courseId: course.id,
+                subject: course.subject,
+                source: openSource,
+                isFreeUser: !isPremium
+            )
+        }
+        .onDisappear {
+            let reason = sessionTracker?.completed == true ? "completed" : "dismiss"
+            sessionTracker?.finish(exitReason: reason)
+            sessionTracker = nil
         }
         .onChange(of: currentIndex) { _, newIndex in
             requestAppStoreReviewIfEligible(lessonIndex: newIndex)
+            sessionTracker?.recordLessonIndex(newIndex)
         }
         .fullScreenCover(isPresented: $showQuiz) {
             QuizView(
@@ -290,6 +306,12 @@ struct CourseView: View {
             .padding(.bottom, 120)
         }
         .scrollIndicators(.hidden)
+        .onScrollGeometryChange(for: CGFloat.self) { geometry in
+            geometry.contentOffset.y
+        } action: { _, offset in
+            guard currentIndex == 0, offset > 120 else { return }
+            sessionTracker?.scrolledOnFirstLesson = true
+        }
     }
 
     /// Lessons body extracted so we can swap to the end-of-course phase screens.
@@ -317,6 +339,8 @@ struct CourseView: View {
             let g = UIImpactFeedbackGenerator(style: .medium)
             g.impactOccurred()
             if isLastLesson {
+                sessionTracker?.recordContinueTap()
+                sessionTracker?.markCompleted()
                 progressManager.updateLessonProgress(courseId: course.id, lessonIndex: currentIndex)
                 progressManager.markCourseCompletedToday()
                 let wasCompletedBefore = progressManager.courseStatus(for: course.id) == .completed
@@ -333,10 +357,12 @@ struct CourseView: View {
                 )
                 pendingCardCandidates = wasCompletedBefore ? [] : cardCandidates
                 pendingCollectionEvents = wasCompletedBefore ? [] : progressManager.collectionProgressEvents(forNewlyCompletedCourseId: course.id)
+                AnalyticsService.trackCourseCompleted(course: course)
                 withAnimation(.spring(response: 0.5, dampingFraction: 0.85)) {
                     endPhase = .completed
                 }
             } else {
+                sessionTracker?.recordContinueTap()
                 withAnimation(.spring(response: 0.4)) {
                     currentIndex += 1
                 }

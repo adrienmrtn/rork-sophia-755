@@ -16,6 +16,7 @@ struct ContentView: View {
     @State private var showSwipeTutorial: Bool = false
     @State private var pendingCourse: Course? = nil
     @State private var autoSwipeCourseId: String? = nil
+    @State private var pendingCourseSource = "home_tinder"
 
     var body: some View {
         ZStack {
@@ -29,11 +30,18 @@ struct ContentView: View {
                         autoSwipeCourseId: $autoSwipeCourseId,
                         onLockedTap: { context in
                             if storeVM.isPremium { return }
+                            if let subject = Self.subject(from: context) {
+                                AnalyticsService.trackLockedContentTapped(
+                                    subject: subject,
+                                    surface: "home"
+                                )
+                            }
                             paywallContext = context
                             UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                         },
                         onShowDiscountPaywall: {
                             if storeVM.isPremium { return }
+                            AnalyticsService.trackDiscountOfferViewed(source: "home_banner")
                             paywallContext = .offreDiscount
                         }
                     )
@@ -78,6 +86,12 @@ struct ContentView: View {
                 ) {
                     selectedCourse = nil
                     pendingCourse = nil
+                    let gateType = context == .coursGratuit ? "daily_quota" : "locked_subject"
+                    AnalyticsService.trackFreemiumGateHit(
+                        gateType: gateType,
+                        subject: course.subject,
+                        courseId: course.id
+                    )
                     paywallContext = context
                     UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                     return
@@ -85,6 +99,7 @@ struct ContentView: View {
                 if !storeVM.isPremium {
                     progressManager.incrementFreeCoursesOpened()
                 }
+                pendingCourseSource = courseSourceForCurrentTab()
                 pendingCourse = course
             }
             .fullScreenCover(item: $pendingCourse) { course in
@@ -92,6 +107,7 @@ struct ContentView: View {
                     course: course,
                     progressManager: progressManager,
                     isPremium: storeVM.isPremium,
+                    openSource: pendingCourseSource,
                     onDismissToHome: {
                         let courseId = course.id
                         pendingCourse = nil
@@ -132,6 +148,11 @@ struct ContentView: View {
         }
         .onAppear {
             syncWidgetData()
+            AnalyticsService.updateUserContext(
+                language: languageManager.current,
+                isPremium: storeVM.isPremium,
+                onboardingCompleted: true
+            )
             guard HomeCardPresentation.style == .legacy else { return }
             if !progressManager.hasSeenSwipeTutorial {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
@@ -142,8 +163,13 @@ struct ContentView: View {
             }
             syncWidgetData()
         }
-        .onChange(of: storeVM.isPremium) { _, _ in
+        .onChange(of: storeVM.isPremium) { _, isPremium in
             syncWidgetData()
+            AnalyticsService.updateUserContext(
+                language: languageManager.current,
+                isPremium: isPremium,
+                onboardingCompleted: true
+            )
         }
         .onChange(of: progressManager.completedCount) { _, _ in
             syncWidgetData()
@@ -153,6 +179,32 @@ struct ContentView: View {
         }
         .onReceive(NotificationCenter.default.publisher(for: .sophiaWidgetDataShouldSync)) { _ in
             syncWidgetData()
+        }
+        .trackAnalyticsLifecycle(isPremium: storeVM.isPremium)
+    }
+
+    private func courseSourceForCurrentTab() -> String {
+        switch selectedTab {
+        case 0:
+            return HomeCardPresentation.style == .legacy ? "home_legacy" : "home_tinder"
+        case 1:
+            return "library"
+        case 2:
+            return "profile"
+        default:
+            return "unknown"
+        }
+    }
+
+    private static func subject(from context: SophiaPaywallContext) -> Subject? {
+        switch context {
+        case .matiereBlockHistoire: .histoire
+        case .matiereBlockSciences: .sciences
+        case .matiereBlockLitterature: .litterature
+        case .matiereBlockArt: .art
+        case .matiereBlockMythologie: .mythologie
+        case .matiereBlockMondeActuel: .comprendreLeMonde
+        default: nil
         }
     }
 
@@ -176,6 +228,8 @@ struct ContentView: View {
             return
         }
         selectedTab = 0
+        pendingCourseSource = "widget"
+        AnalyticsService.trackWidgetDeepLinkOpened(courseId: courseId)
         selectedCourse = course
         deepLinkCourseId = nil
     }

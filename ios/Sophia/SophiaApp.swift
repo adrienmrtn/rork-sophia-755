@@ -8,6 +8,7 @@ struct SophiaApp: App {
     @State private var deepLinkCourseId: String?
 
     init() {
+        AnalyticsService.configure()
         #if DEBUG
         Purchases.logLevel = .debug
         Purchases.configure(withAPIKey: AppConfig.EXPO_PUBLIC_REVENUECAT_TEST_API_KEY)
@@ -25,6 +26,7 @@ struct SophiaApp: App {
                             showOnboarding = false
                         }
                     })
+                    .trackAnalyticsLifecycle(isPremium: false)
                 } else {
                     ContentView(
                         onResetOnboarding: {

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		XX298127CFBB2CF3FA631BXX /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = XXDCC169DE7B2F3C1C8B10XX /* RevenueCat */; };
 		XXA1B2C3D4E5F6A7B8C9D0XX /* RevenueCatUI in Frameworks */ = {isa = PBXBuildFile; productRef = XXA1B2C3D4E5F6A7B8C9D1XX /* RevenueCatUI */; };
+		MPBF00012E9EAD3100EA8BCF /* Mixpanel in Frameworks */ = {isa = PBXBuildFile; productRef = MPRD00012E9EAD3100EA8BCF /* Mixpanel */; };
 		W1FC00092E9EAD3100EA8BCF /* SophiaWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = W1FC00012E9EAD3100EA8BCF /* SophiaWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 			files = (
 				XX298127CFBB2CF3FA631BXX /* RevenueCat in Frameworks */,
 				XXA1B2C3D4E5F6A7B8C9D0XX /* RevenueCatUI in Frameworks */,
+				MPBF00012E9EAD3100EA8BCF /* Mixpanel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +135,7 @@
 			packageProductDependencies = (
 				XXDCC169DE7B2F3C1C8B10XX /* RevenueCat */,
 				XXA1B2C3D4E5F6A7B8C9D1XX /* RevenueCatUI */,
+				MPRD00012E9EAD3100EA8BCF /* Mixpanel */,
 			);
 			productName = Sophia;
 			productReference = 105FC57A2E9EAD3100EA8BCF /* Sophia.app */;
@@ -246,6 +249,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				XX4AC81916604C4344ADC0XX /* XCRemoteSwiftPackageReference "purchases-ios-spm" */,
+				MPKG00012E9EAD3100EA8BCF /* XCRemoteSwiftPackageReference "mixpanel-swift" */,
 			);
 			productRefGroup = 105FC57B2E9EAD3100EA8BCF /* Products */;
 			projectDirPath = "";
@@ -756,9 +760,22 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		MPKG00012E9EAD3100EA8BCF /* XCRemoteSwiftPackageReference "mixpanel-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mixpanel/mixpanel-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		MPRD00012E9EAD3100EA8BCF /* Mixpanel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = MPKG00012E9EAD3100EA8BCF /* XCRemoteSwiftPackageReference "mixpanel-swift" */;
+			productName = Mixpanel;
+		};
 		XXA1B2C3D4E5F6A7B8C9D1XX /* RevenueCatUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = XX4AC81916604C4344ADC0XX /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;

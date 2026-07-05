@@ -559,6 +559,7 @@ class ProgressManager {
     private func recordActivity() {
         let today = dateFormatter.string(from: Date())
         if progress.lastActiveDate != today {
+            let previousStreak = progress.streak
             if let lastDate = progress.lastActiveDate {
                 let yesterday = dateFormatter.string(from: Calendar.current.date(byAdding: .day, value: -1, to: Date()) ?? Date())
                 if lastDate == yesterday {
@@ -571,6 +572,10 @@ class ProgressManager {
             }
             progress.lastActiveDate = today
             save()
+            AnalyticsService.trackStreakUpdated(
+                streakDays: progress.streak,
+                isNewRecord: progress.streak > previousStreak
+            )
         }
     }
 

@@ -121,6 +121,7 @@ struct SettingsView: View {
                             ) {
                                 hapticTrigger += 1
                                 showWidgetTutorial = true
+                                AnalyticsService.trackWidgetTutorialOpened(source: "settings")
                             }
                             divider
                             actionRow(

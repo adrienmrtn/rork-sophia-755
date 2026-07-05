@@ -61,6 +61,7 @@ struct OnboardingWidgetScreen: View {
         }
         .onboardingFullBleedBackground(BrutalPalette.cream)
         .onAppear {
+            AnalyticsService.trackWidgetTutorialOpened(source: "onboarding")
             withAnimation(.spring(response: 0.55, dampingFraction: 0.85)) {
                 appeared = true
             }

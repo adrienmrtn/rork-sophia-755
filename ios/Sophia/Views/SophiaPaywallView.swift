@@ -50,6 +50,8 @@ struct SophiaPaywallView: View {
 
     @State private var offering: Offering?
     @State private var loaded: Bool = false
+    @State private var presentedAt: Date?
+    @State private var didTrackDismiss = false
 
     @ViewBuilder
     private func configuredPaywall(offering: Offering) -> some View {
@@ -58,6 +60,7 @@ struct SophiaPaywallView: View {
             .onRestoreCompleted { _ in onRestored() }
 
         paywall.onRequestedDismissal {
+            trackDismissIfNeeded()
             dismiss()
             onDismissed?()
         }
@@ -96,6 +99,21 @@ struct SophiaPaywallView: View {
                 }
             }
         }
+        .onAppear {
+            presentedAt = Date()
+            didTrackDismiss = false
+            AnalyticsService.trackPaywallViewed(context: context.rawValue)
+        }
+        .onDisappear {
+            trackDismissIfNeeded()
+        }
+    }
+
+    private func trackDismissIfNeeded() {
+        guard !didTrackDismiss else { return }
+        didTrackDismiss = true
+        let duration = Int(Date().timeIntervalSince(presentedAt ?? Date()))
+        AnalyticsService.trackPaywallDismissed(context: context.rawValue, durationSeconds: max(0, duration))
     }
 
     /// Loads an offering with an active RC paywall template for the given context.

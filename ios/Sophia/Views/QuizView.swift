@@ -258,6 +258,9 @@ struct QuizView: View {
             pendingCollectionEvents = initialCollectionEvents
             pendingCardCandidates = initialCardCandidates
             shuffleAllQuestions()
+            if !course.quiz.isEmpty {
+                AnalyticsService.trackQuizStarted(course: course)
+            }
         }
     }
 
@@ -688,6 +691,11 @@ struct QuizView: View {
                 pendingCardCandidates = cardCandidates
                 pendingCollectionEvents = progressManager.collectionProgressEvents(forNewlyCompletedCourseId: course.id)
             }
+            AnalyticsService.trackQuizCompleted(
+                course: course,
+                score: correctCount,
+                total: shuffledQuestions.count
+            )
             withAnimation(.spring(response: 0.5, dampingFraction: 0.8)) {
                 isFinished = true
             }
