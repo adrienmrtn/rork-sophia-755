@@ -583,6 +583,7 @@ class ProgressManager {
     private func save() {
         guard let data = try? JSONEncoder().encode(progress) else { return }
         UserDefaults.standard.set(data, forKey: key)
+        NotificationCenter.default.post(name: .sophiaWidgetDataShouldSync, object: nil)
     }
 
     // MARK: - App Store review (once per install, first course only)

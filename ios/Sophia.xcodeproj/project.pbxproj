@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		XX298127CFBB2CF3FA631BXX /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = XXDCC169DE7B2F3C1C8B10XX /* RevenueCat */; };
 		XXA1B2C3D4E5F6A7B8C9D0XX /* RevenueCatUI in Frameworks */ = {isa = PBXBuildFile; productRef = XXA1B2C3D4E5F6A7B8C9D1XX /* RevenueCatUI */; };
+		W1FC00092E9EAD3100EA8BCF /* SophiaWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = W1FC00012E9EAD3100EA8BCF /* SophiaWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,18 +27,28 @@
 			remoteGlobalIDString = 105FC5792E9EAD3100EA8BCF;
 			remoteInfo = SophiaUITests;
 		};
+		W1FC000A2E9EAD3100EA8BCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 105FC5722E9EAD3100EA8BCF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = W1FC00042E9EAD3100EA8BCF;
+			remoteInfo = SophiaWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		105FC57A2E9EAD3100EA8BCF /* Sophia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sophia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		105FC5892E9EAD3200EA8BCF /* SophiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SophiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		105FC5932E9EAD3200EA8BCF /* SophiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SophiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		W1FC00012E9EAD3100EA8BCF /* SophiaWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SophiaWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		105FC57C2E9EAD3100EA8BCF /* Sophia */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Sophia; sourceTree = "<group>"; };
 		105FC58C2E9EAD3200EA8BCF /* SophiaTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = SophiaTests; sourceTree = "<group>"; };
 		105FC5962E9EAD3200EA8BCF /* SophiaUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = SophiaUITests; sourceTree = "<group>"; };
+		W1FC00022E9EAD3100EA8BCF /* SophiaWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = SophiaWidget; sourceTree = "<group>"; };
+		W1FC00032E9EAD3100EA8BCF /* SophiaShared */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = SophiaShared; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +75,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		W1FC00062E9EAD3100EA8BCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -71,6 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				105FC57C2E9EAD3100EA8BCF /* Sophia */,
+				W1FC00032E9EAD3100EA8BCF /* SophiaShared */,
+				W1FC00022E9EAD3100EA8BCF /* SophiaWidget */,
 				105FC58C2E9EAD3200EA8BCF /* SophiaTests */,
 				105FC5962E9EAD3200EA8BCF /* SophiaUITests */,
 				105FC57B2E9EAD3100EA8BCF /* Products */,
@@ -81,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				105FC57A2E9EAD3100EA8BCF /* Sophia.app */,
+				W1FC00012E9EAD3100EA8BCF /* SophiaWidgetExtension.appex */,
 				105FC5892E9EAD3200EA8BCF /* SophiaTests.xctest */,
 				105FC5932E9EAD3200EA8BCF /* SophiaUITests.xctest */,
 			);
@@ -97,13 +118,16 @@
 				105FC5762E9EAD3100EA8BCF /* Sources */,
 				105FC5772E9EAD3100EA8BCF /* Frameworks */,
 				105FC5782E9EAD3100EA8BCF /* Resources */,
+				W1FC00082E9EAD3100EA8BCF /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				W1FC000B2E9EAD3100EA8BCF /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				105FC57C2E9EAD3100EA8BCF /* Sophia */,
+				W1FC00032E9EAD3100EA8BCF /* SophiaShared */,
 			);
 			name = Sophia;
 			packageProductDependencies = (
@@ -160,6 +184,29 @@
 			productReference = 105FC5932E9EAD3200EA8BCF /* SophiaUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		W1FC00042E9EAD3100EA8BCF /* SophiaWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = W1FC000D2E9EAD3100EA8BCF /* Build configuration list for PBXNativeTarget "SophiaWidgetExtension" */;
+			buildPhases = (
+				W1FC00052E9EAD3100EA8BCF /* Sources */,
+				W1FC00062E9EAD3100EA8BCF /* Frameworks */,
+				W1FC00072E9EAD3100EA8BCF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				W1FC00022E9EAD3100EA8BCF /* SophiaWidget */,
+				W1FC00032E9EAD3100EA8BCF /* SophiaShared */,
+			);
+			name = SophiaWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = SophiaWidgetExtension;
+			productReference = W1FC00012E9EAD3100EA8BCF /* SophiaWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -180,6 +227,9 @@
 					105FC5922E9EAD3200EA8BCF = {
 						CreatedOnToolsVersion = 26.0;
 						TestTargetID = 105FC5792E9EAD3100EA8BCF;
+					};
+					W1FC00042E9EAD3100EA8BCF = {
+						CreatedOnToolsVersion = 26.0;
 					};
 				};
 			};
@@ -202,11 +252,26 @@
 			projectRoot = "";
 			targets = (
 				105FC5792E9EAD3100EA8BCF /* Sophia */,
+				W1FC00042E9EAD3100EA8BCF /* SophiaWidgetExtension */,
 				105FC5882E9EAD3200EA8BCF /* SophiaTests */,
 				105FC5922E9EAD3200EA8BCF /* SophiaUITests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		W1FC00082E9EAD3100EA8BCF /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				W1FC00092E9EAD3100EA8BCF /* SophiaWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXResourcesBuildPhase section */
 		105FC5782E9EAD3100EA8BCF /* Resources */ = {
@@ -224,6 +289,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		105FC5912E9EAD3200EA8BCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		W1FC00072E9EAD3100EA8BCF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -254,6 +326,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		W1FC00052E9EAD3100EA8BCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -266,6 +345,11 @@
 			isa = PBXTargetDependency;
 			target = 105FC5792E9EAD3100EA8BCF /* Sophia */;
 			targetProxy = 105FC5942E9EAD3200EA8BCF /* PBXContainerItemProxy */;
+		};
+		W1FC000B2E9EAD3100EA8BCF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = W1FC00042E9EAD3100EA8BCF /* SophiaWidgetExtension */;
+			targetProxy = W1FC000A2E9EAD3100EA8BCF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -403,6 +487,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Sophia;
+				INFOPLIST_KEY_CFBundleURLTypes = "{\n    CFBundleURLName = \"app.rork.sophia\";\n    CFBundleURLSchemes =     (\n        sophia\n    );\n}";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -446,6 +531,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Sophia;
+				INFOPLIST_KEY_CFBundleURLTypes = "{\n    CFBundleURLName = \"app.rork.sophia\";\n    CFBundleURLSchemes =     (\n        sophia\n    );\n}";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -561,6 +647,58 @@
 			};
 			name = Release;
 		};
+		W1FC000C2E9EAD3100EA8BCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = SophiaWidget/SophiaWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 67;
+				DEVELOPMENT_TEAM = K792T8TQ4X;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Cours du jour";
+				INFOPLIST_KEY_NSExtension_NSExtensionPointIdentifier = "com.apple.widgetkit-extension";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.7;
+				PRODUCT_BUNDLE_IDENTIFIER = app.rork.assvmps5x7hpyq0ezcsut.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		W1FC000E2E9EAD3100EA8BCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = SophiaWidget/SophiaWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 67;
+				DEVELOPMENT_TEAM = K792T8TQ4X;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Cours du jour";
+				INFOPLIST_KEY_NSExtension_NSExtensionPointIdentifier = "com.apple.widgetkit-extension";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.7;
+				PRODUCT_BUNDLE_IDENTIFIER = app.rork.assvmps5x7hpyq0ezcsut.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -596,6 +734,15 @@
 			buildConfigurations = (
 				105FC5A42E9EAD3200EA8BCF /* Debug */,
 				105FC5A52E9EAD3200EA8BCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		W1FC000D2E9EAD3100EA8BCF /* Build configuration list for PBXNativeTarget "SophiaWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				W1FC000C2E9EAD3100EA8BCF /* Debug */,
+				W1FC000E2E9EAD3100EA8BCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
