@@ -94,7 +94,7 @@ struct HomeViewTinder: View {
             Image("sophia_mark")
                 .resizable()
                 .scaledToFit()
-                .frame(height: 32)
+                .frame(height: 36)
 
             Spacer()
 

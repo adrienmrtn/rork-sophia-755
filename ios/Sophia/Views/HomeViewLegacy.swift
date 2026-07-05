@@ -112,9 +112,10 @@ struct HomeViewLegacy: View {
 
     private var headerSection: some View {
         HStack(alignment: .center, spacing: 8) {
-            Text("Sophia")
-                .font(.system(.title2, design: .rounded, weight: .heavy))
-                .foregroundStyle(ink)
+            Image("sophia_mark")
+                .resizable()
+                .scaledToFit()
+                .frame(height: 36)
 
             Spacer()
 
