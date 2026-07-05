@@ -8,13 +8,13 @@ struct SophiaApp: App {
     @State private var deepLinkCourseId: String?
 
     init() {
-        AnalyticsService.configure()
         #if DEBUG
         Purchases.logLevel = .debug
         Purchases.configure(withAPIKey: AppConfig.EXPO_PUBLIC_REVENUECAT_TEST_API_KEY)
         #else
         Purchases.configure(withAPIKey: AppConfig.EXPO_PUBLIC_REVENUECAT_IOS_API_KEY)
         #endif
+        AnalyticsService.configure()
     }
 
     var body: some Scene {

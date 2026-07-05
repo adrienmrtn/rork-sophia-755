@@ -22,8 +22,6 @@ enum AnalyticsService {
         if UserDefaults.standard.object(forKey: firstOpenKey) == nil {
             UserDefaults.standard.set(Date().timeIntervalSince1970, forKey: firstOpenKey)
         }
-
-        linkRevenueCatUserIfNeeded()
     }
 
     static func updateUserContext(
@@ -52,6 +50,7 @@ enum AnalyticsService {
     }
 
     static func linkRevenueCatUserIfNeeded() {
+        guard Purchases.isConfigured else { return }
         let rcUserID = Purchases.shared.appUserID
         guard !rcUserID.isEmpty else { return }
         Mixpanel.mainInstance().identify(distinctId: rcUserID)
