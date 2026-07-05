@@ -107,7 +107,7 @@ struct ContentView: View {
                 }
             }
 
-            if showSwipeTutorial {
+            if showSwipeTutorial, HomeCardPresentation.style == .legacy {
                 SwipeTutorialOverlay(onDismiss: {
                     withAnimation(.easeOut(duration: 0.35)) {
                         showSwipeTutorial = false
@@ -130,6 +130,7 @@ struct ContentView: View {
             )
         }
         .onAppear {
+            guard HomeCardPresentation.style == .legacy else { return }
             if !progressManager.hasSeenSwipeTutorial {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
                     withAnimation(.easeIn(duration: 0.3)) {
