@@ -4,6 +4,7 @@ import RevenueCatUI
 struct ContentView: View {
     @Environment(LanguageManager.self) private var languageManager
     var onResetOnboarding: (() -> Void)? = nil
+    @Binding var deepLinkCourseId: String?
 
     @State private var progressManager = ProgressManager()
     @State private var storeVM = StoreViewModel()
@@ -130,6 +131,7 @@ struct ContentView: View {
             )
         }
         .onAppear {
+            syncWidgetData()
             guard HomeCardPresentation.style == .legacy else { return }
             if !progressManager.hasSeenSwipeTutorial {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
@@ -138,6 +140,43 @@ struct ContentView: View {
                     }
                 }
             }
+            syncWidgetData()
         }
+        .onChange(of: storeVM.isPremium) { _, _ in
+            syncWidgetData()
+        }
+        .onChange(of: progressManager.completedCount) { _, _ in
+            syncWidgetData()
+        }
+        .onChange(of: deepLinkCourseId) { _, courseId in
+            openDeepLinkedCourse(courseId)
+        }
+        .onReceive(NotificationCenter.default.publisher(for: .sophiaWidgetDataShouldSync)) { _ in
+            syncWidgetData()
+        }
+    }
+
+    private func syncWidgetData() {
+        let completedIds = Set(
+            ContentCatalog.activeCourses
+                .filter { progressManager.courseStatus(for: $0.id) == .completed }
+                .map(\.id)
+        )
+        WidgetDataSync.sync(
+            isPremium: storeVM.isPremium,
+            completedCourseIds: completedIds,
+            language: languageManager.current
+        )
+    }
+
+    private func openDeepLinkedCourse(_ courseId: String?) {
+        guard let courseId,
+              let course = ContentCatalog.course(withId: courseId) else {
+            deepLinkCourseId = nil
+            return
+        }
+        selectedTab = 0
+        selectedCourse = course
+        deepLinkCourseId = nil
     }
 }

@@ -5,6 +5,7 @@ import RevenueCat
 struct SophiaApp: App {
     @State private var languageManager = LanguageManager.shared
     @State private var showOnboarding: Bool = !OnboardingViewModel.isOnboardingCompleted
+    @State private var deepLinkCourseId: String?
 
     init() {
         #if DEBUG
@@ -24,16 +25,24 @@ struct SophiaApp: App {
                     }
                 })
             } else {
-                ContentView(onResetOnboarding: {
-                    UserDefaults.standard.set(false, forKey: "sophia_onboarding_completed")
-                    UserDefaults.standard.set(false, forKey: "sophia_special_offer_seen")
-                    withAnimation(.spring(response: 0.5)) {
-                        showOnboarding = true
-                    }
-                })
+                ContentView(
+                    onResetOnboarding: {
+                        UserDefaults.standard.set(false, forKey: "sophia_onboarding_completed")
+                        UserDefaults.standard.set(false, forKey: "sophia_special_offer_seen")
+                        withAnimation(.spring(response: 0.5)) {
+                            showOnboarding = true
+                        }
+                    },
+                    deepLinkCourseId: $deepLinkCourseId
+                )
             }
         }
         .environment(languageManager)
         .environment(\.locale, languageManager.locale)
+        .onOpenURL { url in
+            if let courseId = WidgetDeepLink.courseId(from: url) {
+                deepLinkCourseId = courseId
+            }
+        }
     }
 }

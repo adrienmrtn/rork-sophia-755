@@ -51,7 +51,7 @@ struct OnboardingView: View {
             }
             .overlay(alignment: .top) {
                 if showsOnboardingProgressDots {
-                    OnboardingProgressDots(current: onboardingProgressIndex, total: 9)
+                    OnboardingProgressDots(current: onboardingProgressIndex, total: 10)
                         .padding(.top, 10)
                         .allowsHitTesting(false)
                         .zIndex(10)
@@ -76,12 +76,12 @@ struct OnboardingView: View {
             }
         }
         .onChange(of: displayedScreen) { _, screen in
-            if screen == 9, !useNativeOnboardingPaywall {
+            if screen == 10, !useNativeOnboardingPaywall {
                 prefetchFinOnboardingOffering()
             }
         }
         .onChange(of: incomingScreen) { _, screen in
-            if screen == 9, !useNativeOnboardingPaywall {
+            if screen == 10, !useNativeOnboardingPaywall {
                 prefetchFinOnboardingOffering()
             }
         }
@@ -115,12 +115,14 @@ struct OnboardingView: View {
                 case 8:
                     OnboardingProjectionScreen(viewModel: viewModel, onNext: advance)
                 case 9:
-                    OnboardingLoadingScreen(viewModel: viewModel, onNext: loadingScreenCompleted)
+                    OnboardingWidgetScreen(onNext: advance, onSkip: advance)
                 case 10:
-                    OnboardingPremiumGiftScreen(onNext: advance)
+                    OnboardingLoadingScreen(viewModel: viewModel, onNext: loadingScreenCompleted)
                 case 11:
-                    OnboardingPremiumTrialTimelineScreen(onUnlockTrial: trialTimelineCompleted)
+                    OnboardingPremiumGiftScreen(onNext: advance)
                 case 12:
+                    OnboardingPremiumTrialTimelineScreen(onUnlockTrial: trialTimelineCompleted)
+                case 13:
                     nativePaywallScreen
                 default:
                     EmptyView()
@@ -231,14 +233,14 @@ struct OnboardingView: View {
         onComplete()
     }
 
-    /// Progress dots for OB steps 1–8; stays visible during slide transitions.
+    /// Progress dots for OB steps 1–9; stays visible during slide transitions.
     private var showsOnboardingProgressDots: Bool {
         let active = incomingScreen ?? displayedScreen
-        return active >= 1 && active <= 8
+        return active >= 1 && active <= 9
     }
 
     private var onboardingProgressIndex: Int {
-        min(max(incomingScreen ?? displayedScreen, 1), 8)
+        min(max(incomingScreen ?? displayedScreen, 1), 9)
     }
 
     private func advance() {
