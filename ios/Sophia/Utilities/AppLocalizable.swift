@@ -255,6 +255,23 @@ enum AppLocalizable {
         "onboarding.trial.notificationSent": "Notification envoyée",
         "onboarding.trial.trialEnds": "Fin de l'essai",
 
+        "onboarding.premiumGift.badge": "Cadeau offert",
+        "onboarding.premiumGift.title": "Nous voulons vous offrir gratuitement un accès à toutes les fonctionnalités premium de Sophia",
+        "onboarding.premiumGift.perk.courses": "Cours illimités",
+        "onboarding.premiumGift.perk.quizzes": "Tous les quiz",
+        "onboarding.premiumGift.perk.allSubjects": "Toutes les matières",
+
+        "onboarding.premiumTrial.badge": "Pas de surprise",
+        "onboarding.premiumTrial.title": "Comment fonctionne\nvotre essai gratuit",
+        "onboarding.premiumTrial.step1.label": "MAINTENANT",
+        "onboarding.premiumTrial.step1.title": "Débloquez toutes les fonctionnalités",
+        "onboarding.premiumTrial.step2.label": "JOUR 2",
+        "onboarding.premiumTrial.step2.title": "Nous vous enverrons une notification 1 jour avant",
+        "onboarding.premiumTrial.step3.label": "JOUR 3",
+        "onboarding.premiumTrial.step3.title": "Si vous n'avez pas annulé, vous serez débité",
+        "onboarding.premiumTrial.cancelAnytime": "Annulez à tout moment, sans frais.",
+        "onboarding.premiumTrial.cta": "Débloquer mon essai gratuit",
+
         "paywall.cancelAnytime": "Annule à tout moment, sans frais.",
         "paywall.header": "Deviens la personne\nla plus intéressante\nde la pièce.",
         "paywall.header.highlight": "intéressante",
