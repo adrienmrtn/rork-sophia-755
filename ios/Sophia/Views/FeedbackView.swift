@@ -28,7 +28,7 @@ struct FeedbackView: View {
     }
 
     private var canSubmit: Bool {
-        trimmedMessage.count >= 10 && !isSubmitting
+        trimmedMessage.count >= 3 && !isSubmitting
     }
 
     var body: some View {
@@ -55,57 +55,62 @@ struct FeedbackView: View {
     }
 
     private var formView: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 20) {
-                Text(languageManager.text("feedback.subtitle"))
-                    .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                    .foregroundStyle(ink.opacity(0.7))
-                    .frame(maxWidth: .infinity, alignment: .leading)
-
-                fieldLabel(languageManager.text("feedback.category.label"))
-                categoryPicker
-
-                fieldLabel(languageManager.text("feedback.message.label"))
-                messageField
-
-                fieldLabel(languageManager.text("feedback.email.label"))
-                emailField
-
-                Text(languageManager.text("feedback.technicalNote"))
-                    .font(.system(.caption, design: .rounded, weight: .semibold))
-                    .foregroundStyle(ink.opacity(0.45))
-                    .frame(maxWidth: .infinity, alignment: .leading)
-
-                if let errorMessage {
-                    Text(errorMessage)
-                        .font(.system(.caption, design: .rounded, weight: .heavy))
-                        .foregroundStyle(Color(red: 0.85, green: 0.1, blue: 0.2))
+        VStack(spacing: 0) {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 20) {
+                    Text(languageManager.text("feedback.subtitle"))
+                        .font(.system(.subheadline, design: .rounded, weight: .semibold))
+                        .foregroundStyle(ink.opacity(0.7))
                         .frame(maxWidth: .infinity, alignment: .leading)
-                }
 
-                Button(action: submit) {
-                    HStack(spacing: 10) {
-                        if isSubmitting {
-                            ProgressView()
-                                .tint(ink)
-                        }
-                        Text(languageManager.text("feedback.submit"))
-                            .font(.system(.headline, design: .rounded, weight: .heavy))
-                            .foregroundStyle(ink)
+                    fieldLabel(languageManager.text("feedback.category.label"))
+                    categoryPicker
+
+                    fieldLabel(languageManager.text("feedback.message.label"))
+                    messageField
+
+                    fieldLabel(languageManager.text("feedback.email.label"))
+                    emailField
+
+                    Text(languageManager.text("feedback.technicalNote"))
+                        .font(.system(.caption, design: .rounded, weight: .semibold))
+                        .foregroundStyle(ink.opacity(0.45))
+                        .frame(maxWidth: .infinity, alignment: .leading)
+
+                    if let errorMessage {
+                        Text(errorMessage)
+                            .font(.system(.caption, design: .rounded, weight: .heavy))
+                            .foregroundStyle(Color(red: 0.85, green: 0.1, blue: 0.2))
+                            .frame(maxWidth: .infinity, alignment: .leading)
                     }
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 16)
                 }
-                .buttonStyle(BrutalCardButtonStyle(depth: 3))
-                .brutalCard()
-                .disabled(!canSubmit)
-                .opacity(canSubmit ? 1 : 0.55)
+                .padding(.horizontal, 20)
+                .padding(.top, 8)
+                .padding(.bottom, 16)
             }
-            .padding(.horizontal, 20)
-            .padding(.top, 8)
-            .padding(.bottom, 32)
+            .scrollDismissesKeyboard(.interactively)
+
+            submitButton
+                .padding(.horizontal, 20)
+                .padding(.top, 8)
+                .padding(.bottom, 32)
         }
-        .scrollDismissesKeyboard(.interactively)
+    }
+
+    private var submitButton: some View {
+        Button(action: submit) {
+            HStack(spacing: 10) {
+                if isSubmitting {
+                    ProgressView()
+                        .tint(ink)
+                }
+                Text(languageManager.text("feedback.submit"))
+                    .font(.system(.headline, design: .rounded, weight: .heavy))
+                    .foregroundStyle(ink)
+            }
+        }
+        .buttonStyle(BrutalFeedbackButtonStyle(isEnabled: canSubmit))
+        .disabled(!canSubmit)
     }
 
     private var successView: some View {
@@ -134,11 +139,8 @@ struct FeedbackView: View {
                 Text(languageManager.text("feedback.success.close"))
                     .font(.system(.headline, design: .rounded, weight: .heavy))
                     .foregroundStyle(ink)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 16)
             }
-            .buttonStyle(BrutalCardButtonStyle(depth: 3))
-            .brutalCard()
+            .buttonStyle(BrutalFeedbackButtonStyle())
             .padding(.horizontal, 20)
             .padding(.bottom, 32)
         }
@@ -162,6 +164,7 @@ struct FeedbackView: View {
                             .overlay {
                                 Capsule().strokeBorder(ink, lineWidth: 2)
                             }
+                            .contentShape(Capsule())
                     }
                     .buttonStyle(.plain)
                 }
@@ -234,6 +237,8 @@ struct FeedbackView: View {
     }
 
     private func submit() {
+        guard canSubmit else { return }
+
         focusedField = nil
         errorMessage = nil
         isSubmitting = true
@@ -262,5 +267,38 @@ struct FeedbackView: View {
                 }
             }
         }
+    }
+}
+
+/// Brutalist feedback button — shadow and label move together on press.
+private struct BrutalFeedbackButtonStyle: ButtonStyle {
+    var depth: CGFloat = 3
+    var isEnabled: Bool = true
+
+    func makeBody(configuration: Configuration) -> some View {
+        let pressed = configuration.isPressed && isEnabled
+
+        configuration.label
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 16)
+            .background(
+                ZStack(alignment: .top) {
+                    RoundedRectangle(cornerRadius: 18, style: .continuous)
+                        .fill(BrutalPalette.ink)
+                        .offset(y: depth)
+
+                    RoundedRectangle(cornerRadius: 18, style: .continuous)
+                        .fill(Color.white)
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 18, style: .continuous)
+                                .strokeBorder(BrutalPalette.ink, lineWidth: 2.5)
+                        }
+                        .offset(y: pressed ? depth : 0)
+                }
+            )
+            .padding(.bottom, depth)
+            .opacity(isEnabled ? 1 : 0.55)
+            .contentShape(Rectangle())
+            .animation(.spring(response: 0.18, dampingFraction: 0.7), value: pressed)
     }
 }
