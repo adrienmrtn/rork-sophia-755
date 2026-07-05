@@ -18,30 +18,32 @@ struct SophiaApp: App {
 
     var body: some Scene {
         WindowGroup {
-            if showOnboarding {
-                OnboardingView(onComplete: {
-                    withAnimation(.spring(response: 0.5)) {
-                        showOnboarding = false
-                    }
-                })
-            } else {
-                ContentView(
-                    onResetOnboarding: {
-                        UserDefaults.standard.set(false, forKey: "sophia_onboarding_completed")
-                        UserDefaults.standard.set(false, forKey: "sophia_special_offer_seen")
+            Group {
+                if showOnboarding {
+                    OnboardingView(onComplete: {
                         withAnimation(.spring(response: 0.5)) {
-                            showOnboarding = true
+                            showOnboarding = false
                         }
-                    },
-                    deepLinkCourseId: $deepLinkCourseId
-                )
+                    })
+                } else {
+                    ContentView(
+                        onResetOnboarding: {
+                            UserDefaults.standard.set(false, forKey: "sophia_onboarding_completed")
+                            UserDefaults.standard.set(false, forKey: "sophia_special_offer_seen")
+                            withAnimation(.spring(response: 0.5)) {
+                                showOnboarding = true
+                            }
+                        },
+                        deepLinkCourseId: $deepLinkCourseId
+                    )
+                }
             }
-        }
-        .environment(languageManager)
-        .environment(\.locale, languageManager.locale)
-        .onOpenURL { url in
-            if let courseId = WidgetDeepLink.courseId(from: url) {
-                deepLinkCourseId = courseId
+            .environment(languageManager)
+            .environment(\.locale, languageManager.locale)
+            .onOpenURL { url in
+                if let courseId = WidgetDeepLink.courseId(from: url) {
+                    deepLinkCourseId = courseId
+                }
             }
         }
     }

@@ -33,7 +33,7 @@ enum WidgetDataSync {
         isPremium: Bool,
         completedCourseIds: Set<String>,
         language: AppLanguage
-    ) async {
+    ) {
         let dayKey = dayFormatter.string(from: Date())
         let unlockedSubjects = FreemiumGate.unlockedSubjects(isPremium: isPremium)
         let unlockedKeys = Set(unlockedSubjects.map(\.storageKey))
