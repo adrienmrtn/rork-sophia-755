@@ -41,7 +41,7 @@ struct OnboardingPremiumGiftScreen: View {
             Spacer().frame(height: 28)
 
             Text(languageManager.text("onboarding.premiumGift.title"))
-                .font(.system(.title, design: .rounded, weight: .heavy))
+                .font(.system(.title2, design: .rounded, weight: .heavy))
                 .foregroundStyle(BrutalPalette.ink)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)

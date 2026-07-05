@@ -123,18 +123,31 @@ struct OnboardingPremiumTrialTimelineScreen: View {
             }
             .padding(.top, 4)
 
-            VStack(spacing: 0) {
-                ForEach(Array(steps.enumerated()), id: \.offset) { index, step in
-                    PremiumTrialTimelineRow(
-                        label: step.label,
-                        title: step.title,
-                        tint: step.tint,
-                        isHighlighted: step.highlighted,
-                        isFirst: index == 0,
-                        isLast: index == steps.count - 1
-                    )
+            ZStack(alignment: .topLeading) {
+                GeometryReader { geo in
+                    let firstCenterY: CGFloat = 24
+                    let lastCenterY = geo.size.height - 24
+                    let lineX: CGFloat = 4
+
+                    Path { path in
+                        path.move(to: CGPoint(x: lineX, y: firstCenterY))
+                        path.addLine(to: CGPoint(x: lineX, y: lastCenterY))
+                    }
+                    .stroke(BrutalPalette.ink.opacity(0.15), lineWidth: 2)
+                }
+
+                VStack(spacing: 0) {
+                    ForEach(Array(steps.enumerated()), id: \.offset) { index, step in
+                        PremiumTrialTimelineRow(
+                            label: step.label,
+                            title: step.title,
+                            tint: step.tint,
+                            isHighlighted: step.highlighted
+                        )
+                    }
                 }
             }
+            .fixedSize(horizontal: false, vertical: true)
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 20)
@@ -147,59 +160,44 @@ private struct PremiumTrialTimelineRow: View {
     let title: String
     let tint: Color
     var isHighlighted: Bool = false
-    var isFirst: Bool = false
-    var isLast: Bool = false
 
     var body: some View {
         HStack(alignment: .top, spacing: 12) {
-            VStack(spacing: 0) {
-                if !isFirst {
-                    Rectangle()
-                        .fill(BrutalPalette.ink.opacity(0.15))
-                        .frame(width: 2, height: 10)
-                } else {
-                    Color.clear.frame(width: 2, height: 10)
+            Circle()
+                .fill(isHighlighted ? BrutalPalette.pink : BrutalPalette.ink.opacity(0.12))
+                .frame(width: 10, height: 10)
+                .overlay {
+                    Circle().strokeBorder(BrutalPalette.ink.opacity(isHighlighted ? 1 : 0.25), lineWidth: 1.5)
                 }
+                .padding(.top, 19)
+                .frame(width: 10)
 
-                Circle()
-                    .fill(isHighlighted ? BrutalPalette.pink : BrutalPalette.ink.opacity(0.12))
-                    .frame(width: 10, height: 10)
-                    .overlay {
-                        Circle().strokeBorder(BrutalPalette.ink.opacity(isHighlighted ? 1 : 0.25), lineWidth: 1.5)
-                    }
-
-                if !isLast {
-                    Rectangle()
-                        .fill(BrutalPalette.ink.opacity(0.15))
-                        .frame(width: 2)
-                        .frame(minHeight: 34)
-                }
-            }
-            .frame(width: 10)
-            .padding(.top, 14)
-
-            HStack(spacing: 12) {
+            HStack(alignment: .top, spacing: 12) {
                 Text(label)
                     .font(.system(.caption, design: .rounded, weight: .heavy))
-                    .tracking(0.8)
+                    .tracking(0.6)
                     .foregroundStyle(BrutalPalette.ink)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.85)
                     .padding(.horizontal, 10)
                     .padding(.vertical, 6)
                     .background(tint, in: .capsule)
                     .overlay {
                         Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 2)
                     }
-                    .frame(width: 92, alignment: .leading)
+                    .fixedSize(horizontal: true, vertical: false)
 
                 Text(title)
                     .font(.system(.subheadline, design: .rounded, weight: isHighlighted ? .heavy : .semibold))
                     .foregroundStyle(BrutalPalette.ink)
+                    .fixedSize(horizontal: false, vertical: true)
                     .frame(maxWidth: .infinity, alignment: .leading)
 
                 if isHighlighted {
                     Image(systemName: "bell.fill")
                         .font(.system(size: 14, weight: .heavy))
                         .foregroundStyle(BrutalPalette.ink)
+                        .padding(.top, 2)
                 }
             }
             .padding(.vertical, 10)
