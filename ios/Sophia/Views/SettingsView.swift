@@ -11,6 +11,7 @@ struct SettingsView: View {
     @State private var showResetOnboardingAlert: Bool = false
     @State private var showTerms: Bool = false
     @State private var showPrivacy: Bool = false
+    @State private var showFeedback: Bool = false
     @State private var hapticTrigger: Int = 0
 
     private let ink = BrutalPalette.ink
@@ -125,6 +126,22 @@ struct SettingsView: View {
                         .brutalCard()
                         .padding(.horizontal, 20)
 
+                        // Help & feedback
+                        sectionHeader(languageManager.text("settings.section.help"))
+                        VStack(spacing: 0) {
+                            actionRow(
+                                icon: "bubble.left.and.bubble.right.fill",
+                                iconBg: BrutalPalette.pastel(for: .litterature),
+                                title: languageManager.text("settings.feedback.title"),
+                                subtitle: languageManager.text("settings.feedback.subtitle")
+                            ) {
+                                hapticTrigger += 1
+                                showFeedback = true
+                            }
+                        }
+                        .brutalCard()
+                        .padding(.horizontal, 20)
+
                         // Legal
                         sectionHeader(languageManager.text("settings.section.legal"))
                         VStack(spacing: 0) {
@@ -232,6 +249,9 @@ struct SettingsView: View {
             }
             .sheet(isPresented: $showPrivacy) {
                 PrivacyPolicyView()
+            }
+            .sheet(isPresented: $showFeedback) {
+                FeedbackView(isPremium: store.isPremium)
             }
         }
     }

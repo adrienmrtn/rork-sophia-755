@@ -233,6 +233,20 @@ enum AnalyticsService {
         track("deep_link_opened", ["course_id": courseId])
     }
 
+    // MARK: - Feedback
+
+    static func trackFeedbackOpened() {
+        track("feedback_opened")
+    }
+
+    static func trackFeedbackSubmitted(category: String) {
+        track("feedback_submitted", ["category": category])
+    }
+
+    static func trackFeedbackFailed(category: String) {
+        track("feedback_failed", ["category": category])
+    }
+
     // MARK: - Helpers
 
     static func onboardingStepName(for index: Int) -> String {
