@@ -42,11 +42,18 @@ struct HomeViewTinder: View {
                     allCompletedView
                     Spacer()
                 } else {
-                    cardStack
-                        .padding(.horizontal, 10)
-                        .padding(.bottom, 8)
-                        .opacity(cardAppeared ? 1 : 0)
-                        .scaleEffect(cardAppeared ? 1 : 0.97)
+                    VStack(spacing: 14) {
+                        cardStack
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .opacity(cardAppeared ? 1 : 0)
+                            .scaleEffect(cardAppeared ? 1 : 0.97)
+
+                        swipeActionButtons
+                            .padding(.horizontal, 36)
+                            .padding(.bottom, 4)
+                            .opacity(cardAppeared ? 1 : 0)
+                    }
+                    .padding(.horizontal, 10)
                 }
             }
         }
@@ -84,9 +91,10 @@ struct HomeViewTinder: View {
 
     private var headerSection: some View {
         HStack(alignment: .center, spacing: 8) {
-            Text("Sophia")
-                .font(.system(.title2, design: .rounded, weight: .heavy))
-                .foregroundStyle(ink)
+            Image("sophia_mark")
+                .resizable()
+                .scaledToFit()
+                .frame(height: 32)
 
             Spacer()
 
@@ -222,6 +230,21 @@ struct HomeViewTinder: View {
     private func stampProgress(for width: CGFloat, direction: CGFloat) -> CGFloat {
         let raw = width / stampFullOpacityDistance * direction
         return min(max(raw, 0), 1)
+    }
+
+    private var swipeActionButtons: some View {
+        HStack {
+            SwipeActionButton(kind: .reject) {
+                commitSwipeLeft()
+            }
+
+            Spacer()
+
+            SwipeActionButton(kind: .accept) {
+                guard let course = cards.first else { return }
+                commitSwipeRight(for: course)
+            }
+        }
     }
 
     // MARK: - Gestures
@@ -378,10 +401,11 @@ private struct TinderFlashCard: View {
                         .frame(height: max(geo.size.height * 0.58, 220))
 
                     bottomPanel
-                        .frame(maxHeight: .infinity, alignment: .top)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
                 }
+                .frame(width: geo.size.width, height: geo.size.height)
+                .background(pastel)
             }
-            .background(Color.white)
             .clipShape(.rect(cornerRadius: 24))
             .overlay {
                 RoundedRectangle(cornerRadius: 24, style: .continuous)
@@ -491,8 +515,7 @@ private struct TinderFlashCard: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
         .padding(20)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(pastel)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
     }
 
     private func boldText(_ input: String) -> Text {
@@ -509,7 +532,51 @@ private struct TinderFlashCard: View {
     }
 }
 
-// MARK: - Neo-brutalist swipe stamps
+// MARK: - Neo-brutalist swipe controls
+
+private enum SwipeActionKind {
+    case accept
+    case reject
+}
+
+private struct SwipeActionButton: View {
+    let kind: SwipeActionKind
+    let action: () -> Void
+
+    private let ink = Color.black
+    private let acceptFill = Color(red: 0.62, green: 0.94, blue: 0.72)
+    private let rejectFill = Color(red: 1.0, green: 0.55, blue: 0.58)
+    private let depth: CGFloat = 4
+    private let size: CGFloat = 60
+
+    var body: some View {
+        Button(action: {
+            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+            action()
+        }) {
+            ZStack {
+                Circle()
+                    .fill(ink)
+                    .offset(y: depth)
+                    .frame(width: size, height: size)
+
+                Circle()
+                    .fill(kind == .accept ? acceptFill : rejectFill)
+                    .overlay {
+                        Circle().strokeBorder(ink, lineWidth: 3)
+                    }
+                    .frame(width: size, height: size)
+                    .overlay {
+                        Image(systemName: kind == .accept ? "checkmark" : "xmark")
+                            .font(.system(size: 26, weight: .heavy))
+                            .foregroundStyle(ink)
+                    }
+            }
+            .padding(.bottom, depth)
+        }
+        .buttonStyle(.plain)
+    }
+}
 
 private struct SwipeStampIcon: View {
     enum Kind {
