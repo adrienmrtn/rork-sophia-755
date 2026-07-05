@@ -43,7 +43,7 @@ struct SophiaApp: App {
             .environment(languageManager)
             .environment(\.locale, languageManager.locale)
             .onOpenURL { url in
-                if let courseId = WidgetDeepLink.courseId(from: url) {
+                if let courseId = SophiaDeepLink.courseId(from: url) {
                     deepLinkCourseId = courseId
                 }
             }

@@ -228,14 +228,10 @@ enum AnalyticsService {
         ])
     }
 
-    // MARK: - Widget
+    // MARK: - Deep links
 
-    static func trackWidgetDeepLinkOpened(courseId: String) {
-        track("widget_deep_link_opened", ["course_id": courseId])
-    }
-
-    static func trackWidgetTutorialOpened(source: String) {
-        track("widget_tutorial_opened", ["source": source])
+    static func trackDeepLinkOpened(courseId: String) {
+        track("deep_link_opened", ["course_id": courseId])
     }
 
     // MARK: - Helpers
@@ -251,11 +247,10 @@ enum AnalyticsService {
         case 6: "interests"
         case 7: "daily_goal"
         case 8: "projection"
-        case 9: "widget"
-        case 10: "loading"
-        case 11: "premium_gift"
-        case 12: "trial_timeline"
-        case 13: "paywall"
+        case 9: "loading"
+        case 10: "premium_gift"
+        case 11: "trial_timeline"
+        case 12: "paywall"
         default: "unknown"
         }
     }

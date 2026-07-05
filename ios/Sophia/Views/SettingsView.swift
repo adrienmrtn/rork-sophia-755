@@ -11,7 +11,6 @@ struct SettingsView: View {
     @State private var showResetOnboardingAlert: Bool = false
     @State private var showTerms: Bool = false
     @State private var showPrivacy: Bool = false
-    @State private var showWidgetTutorial: Bool = false
     @State private var hapticTrigger: Int = 0
 
     private let ink = BrutalPalette.ink
@@ -113,17 +112,6 @@ struct SettingsView: View {
                         // Data
                         sectionHeader(languageManager.text("settings.section.data"))
                         VStack(spacing: 0) {
-                            actionRow(
-                                icon: "square.grid.2x2.fill",
-                                iconBg: BrutalPalette.pastel(for: .sciences),
-                                title: languageManager.text("settings.widget.title"),
-                                subtitle: languageManager.text("settings.widget.subtitle")
-                            ) {
-                                hapticTrigger += 1
-                                showWidgetTutorial = true
-                                AnalyticsService.trackWidgetTutorialOpened(source: "settings")
-                            }
-                            divider
                             actionRow(
                                 icon: "arrow.counterclockwise",
                                 iconBg: Color(red: 1.0, green: 0.78, blue: 0.78),
@@ -244,11 +232,6 @@ struct SettingsView: View {
             }
             .sheet(isPresented: $showPrivacy) {
                 PrivacyPolicyView()
-            }
-            .sheet(isPresented: $showWidgetTutorial) {
-                WidgetTutorialView {
-                    showWidgetTutorial = false
-                }
             }
         }
     }

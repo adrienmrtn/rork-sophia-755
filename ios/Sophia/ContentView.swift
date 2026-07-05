@@ -147,7 +147,6 @@ struct ContentView: View {
             )
         }
         .onAppear {
-            syncWidgetData()
             AnalyticsService.updateUserContext(
                 language: languageManager.current,
                 isPremium: storeVM.isPremium,
@@ -161,24 +160,16 @@ struct ContentView: View {
                     }
                 }
             }
-            syncWidgetData()
         }
         .onChange(of: storeVM.isPremium) { _, isPremium in
-            syncWidgetData()
             AnalyticsService.updateUserContext(
                 language: languageManager.current,
                 isPremium: isPremium,
                 onboardingCompleted: true
             )
         }
-        .onChange(of: progressManager.completedCount) { _, _ in
-            syncWidgetData()
-        }
         .onChange(of: deepLinkCourseId) { _, courseId in
             openDeepLinkedCourse(courseId)
-        }
-        .onReceive(NotificationCenter.default.publisher(for: .sophiaWidgetDataShouldSync)) { _ in
-            syncWidgetData()
         }
         .trackAnalyticsLifecycle(isPremium: storeVM.isPremium)
     }
@@ -208,19 +199,6 @@ struct ContentView: View {
         }
     }
 
-    private func syncWidgetData() {
-        let completedIds = Set(
-            ContentCatalog.activeCourses
-                .filter { progressManager.courseStatus(for: $0.id) == .completed }
-                .map(\.id)
-        )
-        WidgetDataSync.sync(
-            isPremium: storeVM.isPremium,
-            completedCourseIds: completedIds,
-            language: languageManager.current
-        )
-    }
-
     private func openDeepLinkedCourse(_ courseId: String?) {
         guard let courseId,
               let course = ContentCatalog.course(withId: courseId) else {
@@ -228,8 +206,8 @@ struct ContentView: View {
             return
         }
         selectedTab = 0
-        pendingCourseSource = "widget"
-        AnalyticsService.trackWidgetDeepLinkOpened(courseId: courseId)
+        pendingCourseSource = "deep_link"
+        AnalyticsService.trackDeepLinkOpened(courseId: courseId)
         selectedCourse = course
         deepLinkCourseId = nil
     }

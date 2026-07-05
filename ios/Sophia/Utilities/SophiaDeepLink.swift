@@ -1,6 +1,6 @@
 import Foundation
 
-enum WidgetDeepLink {
+enum SophiaDeepLink {
     static let scheme = "sophia"
 
     static func courseURL(for courseId: String) -> URL? {
