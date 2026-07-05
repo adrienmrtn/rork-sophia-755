@@ -72,7 +72,7 @@ struct OnboardingView: View {
                     onRestored: finishOnboarding,
                     onDismissed: finishOnboarding
                 )
-                .presentationDetents([.fraction(0.9)])
+                .presentationDetents([.large])
                 .presentationDragIndicator(.visible)
                 .presentationCornerRadius(28)
             }
