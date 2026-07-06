@@ -190,33 +190,29 @@ struct CourseView: View {
         .frame(height: 18)
     }
 
+    @ViewBuilder
     private func lessonContent(lesson: LessonPage, lessonIndex: Int) -> some View {
-        let locked = FreemiumGate.isLessonContentLocked(lessonIndex: lessonIndex, isPremium: isPremium)
+        if FreemiumGate.isLessonContentLocked(lessonIndex: lessonIndex, isPremium: isPremium) {
+            lockedLessonView(lesson: lesson)
+        } else {
+            unlockedLessonView(lesson: lesson, lessonIndex: lessonIndex)
+        }
+    }
 
-        return ScrollView {
+    private func unlockedLessonView(lesson: LessonPage, lessonIndex: Int) -> some View {
+        ScrollView {
             VStack(alignment: .leading, spacing: 24) {
                 Text(lesson.title)
                     .font(.system(.largeTitle, design: .rounded, weight: .heavy))
                     .foregroundStyle(ink)
                     .fixedSize(horizontal: false, vertical: true)
 
-                ZStack {
-                    RichContentView(
-                        content: lesson.content,
-                        accent: course.subject.color,
-                        courseId: course.id,
-                        courseTitle: course.title
-                    )
-                    .blur(radius: locked ? 10 : 0)
-                    .allowsHitTesting(!locked)
-
-                    if locked {
-                        CourseLessonLockOverlay {
-                            presentDebloquerPaywall()
-                        }
-                    }
-                }
-                .frame(minHeight: locked ? 280 : 0)
+                RichContentView(
+                    content: lesson.content,
+                    accent: course.subject.color,
+                    courseId: course.id,
+                    courseTitle: course.title
+                )
             }
             .padding(.horizontal, 24)
             .padding(.top, 24)
@@ -228,6 +224,42 @@ struct CourseView: View {
         } action: { _, offset in
             guard lessonIndex == 0, offset > 120 else { return }
             sessionTracker?.scrolledOnFirstLesson = true
+        }
+    }
+
+    /// Locked pages don't scroll: title stays crisp, the body progressively blurs
+    /// toward the bottom, and the unlock card sits centered on the visible screen
+    /// (not the full scrollable content) so it never drifts out of view.
+    private func lockedLessonView(lesson: LessonPage) -> some View {
+        GeometryReader { geo in
+            ZStack {
+                VStack(alignment: .leading, spacing: 20) {
+                    Text(lesson.title)
+                        .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                        .foregroundStyle(ink)
+                        .fixedSize(horizontal: false, vertical: true)
+
+                    ProgressiveBlurView {
+                        RichContentView(
+                            content: lesson.content,
+                            accent: course.subject.color,
+                            courseId: course.id,
+                            courseTitle: course.title
+                        )
+                    }
+                    .frame(maxHeight: .infinity, alignment: .top)
+                    .clipped()
+                }
+                .padding(.horizontal, 24)
+                .padding(.top, 24)
+                .padding(.bottom, 24)
+                .frame(width: geo.size.width, height: geo.size.height, alignment: .top)
+                .allowsHitTesting(false)
+
+                CourseLessonLockOverlay {
+                    presentDebloquerPaywall()
+                }
+            }
         }
     }
 

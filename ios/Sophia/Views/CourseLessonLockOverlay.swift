@@ -1,26 +1,27 @@
 import SwiftUI
 
-/// Central locker overlay shown on blurred lesson pages for free users.
+/// Central locker overlay shown on progressively-blurred lesson pages for free users.
 struct CourseLessonLockOverlay: View {
     @Environment(LanguageManager.self) private var languageManager
     let onUnlock: () -> Void
 
     @State private var appeared = false
-    @State private var shimmerOffset: CGFloat = -200
-    @State private var shimmerActive = false
+    @State private var pulse = false
 
     private let ink = Color.black
-    private let emerald = Color(red: 0.18, green: 0.72, blue: 0.55)
+    private let pink = Color(red: 1.0, green: 0.553, blue: 0.706)
 
     var body: some View {
-        VStack(spacing: 18) {
+        VStack(spacing: 20) {
             ZStack {
                 Circle()
-                    .fill(Color.white)
-                    .frame(width: 72, height: 72)
+                    .fill(pink)
+                    .frame(width: 76, height: 76)
                     .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
+                    .scaleEffect(pulse ? 1.06 : 1)
+
                 Image(systemName: "lock.fill")
-                    .font(.system(size: 28, weight: .heavy))
+                    .font(.system(size: 30, weight: .heavy))
                     .foregroundStyle(ink)
             }
 
@@ -28,56 +29,30 @@ struct CourseLessonLockOverlay: View {
                 UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                 onUnlock()
             } label: {
-                HStack(spacing: 10) {
+                HStack(spacing: 8) {
                     Image(systemName: "sparkles")
-                        .font(.subheadline.weight(.semibold))
+                        .font(.subheadline.weight(.heavy))
                     Text(languageManager.text("course.unlock.free"))
-                        .font(.system(.headline, design: .rounded, weight: .bold))
+                        .font(.system(.headline, design: .rounded, weight: .heavy))
                 }
-                .foregroundStyle(.white)
+                .foregroundStyle(ink)
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 16)
-                .background(emerald, in: .rect(cornerRadius: 16))
-                .overlay {
-                    GeometryReader { geo in
-                        Rectangle()
-                            .fill(
-                                LinearGradient(
-                                    colors: [.clear, .white.opacity(0.45), .clear],
-                                    startPoint: .leading,
-                                    endPoint: .trailing
-                                )
-                            )
-                            .frame(width: 80, height: geo.size.height * 2)
-                            .rotationEffect(.degrees(12))
-                            .offset(x: shimmerOffset)
-                            .allowsHitTesting(false)
-                    }
-                    .clipShape(.rect(cornerRadius: 16))
-                }
-                .shadow(color: emerald.opacity(0.35), radius: 12, y: 4)
             }
-            .buttonStyle(.plain)
+            .buttonStyle(DuolingoButtonStyle(fill: pink, shimmer: nil, depth: 4))
         }
-        .padding(22)
+        .padding(24)
         .frame(maxWidth: 300)
-        .background(Color.white.opacity(0.94), in: RoundedRectangle(cornerRadius: 22, style: .continuous))
-        .overlay {
-            RoundedRectangle(cornerRadius: 22, style: .continuous)
-                .strokeBorder(ink, lineWidth: 2.5)
-        }
-        .shadow(color: ink.opacity(0.1), radius: 18, y: 8)
+        .brutalOnboardingCard(depth: 5, corner: 24)
         .opacity(appeared ? 1 : 0)
         .scaleEffect(appeared ? 1 : 0.94)
         .onAppear {
             withAnimation(.spring(response: 0.5, dampingFraction: 0.82)) {
                 appeared = true
             }
-            shimmerActive = true
-            ShimmerAnimation.runLoop(offset: $shimmerOffset) { shimmerActive }
-        }
-        .onDisappear {
-            shimmerActive = false
+            withAnimation(.easeInOut(duration: 1.4).repeatForever(autoreverses: true)) {
+                pulse = true
+            }
         }
     }
 }
