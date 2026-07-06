@@ -11,24 +11,27 @@ struct OnboardingPremiumTrialTimelineScreen: View {
     @State private var buttonAppeared = false
     @State private var bellBounce = 0
 
-    private var steps: [(label: String, title: String, tint: Color, highlighted: Bool)] {
+    private var steps: [(label: String, title: String, tint: Color, icon: String, highlighted: Bool)] {
         [
             (
                 languageManager.text("onboarding.premiumTrial.step1.label"),
                 languageManager.text("onboarding.premiumTrial.step1.title"),
                 OnboardingPastels.at(3),
+                "lock.open.fill",
                 false
             ),
             (
                 languageManager.text("onboarding.premiumTrial.step2.label"),
                 languageManager.text("onboarding.premiumTrial.step2.title"),
                 BrutalPalette.pink,
+                "bell.fill",
                 true
             ),
             (
                 languageManager.text("onboarding.premiumTrial.step3.label"),
                 languageManager.text("onboarding.premiumTrial.step3.title"),
                 OnboardingPastels.at(0),
+                "creditcard.fill",
                 false
             ),
         ]
@@ -102,57 +105,42 @@ struct OnboardingPremiumTrialTimelineScreen: View {
 
     @ViewBuilder
     private var timelineCard: some View {
-        VStack(spacing: 18) {
+        VStack(spacing: 24) {
             ZStack {
-                RoundedRectangle(cornerRadius: 22, style: .continuous)
+                RoundedRectangle(cornerRadius: 24, style: .continuous)
                     .fill(BrutalPalette.ink)
-                    .offset(y: 4)
-                    .frame(width: 96, height: 96)
+                    .offset(y: 5)
+                    .frame(width: 92, height: 92)
 
-                RoundedRectangle(cornerRadius: 22, style: .continuous)
+                RoundedRectangle(cornerRadius: 24, style: .continuous)
                     .fill(OnboardingPastels.at(1))
                     .overlay {
-                        RoundedRectangle(cornerRadius: 22, style: .continuous)
+                        RoundedRectangle(cornerRadius: 24, style: .continuous)
                             .strokeBorder(BrutalPalette.ink, lineWidth: 2.5)
                     }
-                    .frame(width: 96, height: 96)
+                    .frame(width: 92, height: 92)
 
                 Image(systemName: "sparkles")
-                    .font(.system(size: 42, weight: .heavy))
+                    .font(.system(size: 40, weight: .heavy))
                     .foregroundStyle(BrutalPalette.ink)
                     .symbolEffect(.bounce, value: bellBounce)
             }
-            .padding(.top, 4)
 
-            ZStack(alignment: .topLeading) {
-                GeometryReader { geo in
-                    let firstCenterY: CGFloat = 24
-                    let lastCenterY = geo.size.height - 24
-                    let lineX: CGFloat = 4
-
-                    Path { path in
-                        path.move(to: CGPoint(x: lineX, y: firstCenterY))
-                        path.addLine(to: CGPoint(x: lineX, y: lastCenterY))
-                    }
-                    .stroke(BrutalPalette.ink.opacity(0.15), lineWidth: 2)
-                }
-
-                VStack(spacing: 0) {
-                    ForEach(Array(steps.enumerated()), id: \.offset) { index, step in
-                        PremiumTrialTimelineRow(
-                            label: step.label,
-                            title: step.title,
-                            tint: step.tint,
-                            isHighlighted: step.highlighted
-                        )
-                    }
+            VStack(spacing: 0) {
+                ForEach(Array(steps.enumerated()), id: \.offset) { index, step in
+                    PremiumTrialTimelineRow(
+                        label: step.label,
+                        title: step.title,
+                        tint: step.tint,
+                        icon: step.icon,
+                        isHighlighted: step.highlighted,
+                        isLast: index == steps.count - 1
+                    )
                 }
             }
             .fixedSize(horizontal: false, vertical: true)
         }
         .padding(.horizontal, 16)
-        .padding(.vertical, 20)
-        .brutalOnboardingCard(depth: 4, corner: 22)
     }
 }
 
@@ -160,48 +148,64 @@ private struct PremiumTrialTimelineRow: View {
     let label: String
     let title: String
     let tint: Color
+    var icon: String = "checkmark"
     var isHighlighted: Bool = false
+    var isLast: Bool = false
+
+    private let nodeSize: CGFloat = 38
 
     var body: some View {
-        HStack(alignment: .top, spacing: 12) {
-            Circle()
-                .fill(isHighlighted ? BrutalPalette.pink : BrutalPalette.ink.opacity(0.12))
-                .frame(width: 10, height: 10)
-                .overlay {
-                    Circle().strokeBorder(BrutalPalette.ink.opacity(isHighlighted ? 1 : 0.25), lineWidth: 1.5)
-                }
-                .padding(.top, 19)
-                .frame(width: 10)
+        HStack(alignment: .top, spacing: 16) {
+            // Connected node column
+            VStack(spacing: 0) {
+                ZStack {
+                    Circle()
+                        .fill(BrutalPalette.ink)
+                        .offset(y: 3)
+                        .frame(width: nodeSize, height: nodeSize)
 
-            HStack(alignment: .top, spacing: 12) {
+                    Circle()
+                        .fill(isHighlighted ? BrutalPalette.pink : tint)
+                        .overlay { Circle().strokeBorder(BrutalPalette.ink, lineWidth: 2.5) }
+                        .frame(width: nodeSize, height: nodeSize)
+
+                    Image(systemName: icon)
+                        .font(.system(size: 15, weight: .heavy))
+                        .foregroundStyle(BrutalPalette.ink)
+                }
+
+                if !isLast {
+                    Capsule()
+                        .fill(BrutalPalette.ink.opacity(0.22))
+                        .frame(width: 3)
+                        .frame(maxHeight: .infinity)
+                        .padding(.vertical, 5)
+                }
+            }
+            .frame(width: nodeSize)
+
+            // Step content
+            VStack(alignment: .leading, spacing: 7) {
                 Text(label)
-                    .font(.system(.caption, design: .rounded, weight: .heavy))
-                    .tracking(0.6)
+                    .font(.system(.caption2, design: .rounded, weight: .heavy))
+                    .tracking(0.8)
                     .foregroundStyle(BrutalPalette.ink)
                     .lineLimit(1)
-                    .minimumScaleFactor(0.85)
-                    .padding(.horizontal, 10)
-                    .padding(.vertical, 6)
+                    .minimumScaleFactor(0.8)
+                    .padding(.horizontal, 11)
+                    .padding(.vertical, 5)
                     .background(tint, in: .capsule)
-                    .overlay {
-                        Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 2)
-                    }
+                    .overlay { Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 2) }
                     .fixedSize(horizontal: true, vertical: false)
 
                 Text(title)
                     .font(.system(.subheadline, design: .rounded, weight: isHighlighted ? .heavy : .semibold))
-                    .foregroundStyle(BrutalPalette.ink)
+                    .foregroundStyle(BrutalPalette.ink.opacity(isHighlighted ? 1 : 0.78))
                     .fixedSize(horizontal: false, vertical: true)
                     .frame(maxWidth: .infinity, alignment: .leading)
-
-                if isHighlighted {
-                    Image(systemName: "bell.fill")
-                        .font(.system(size: 13, weight: .heavy))
-                        .foregroundStyle(BrutalPalette.ink.opacity(0.7))
-                        .padding(.top, 2)
-                }
             }
-            .padding(.vertical, 10)
+            .padding(.top, 3)
+            .padding(.bottom, isLast ? 0 : 22)
         }
     }
 }
