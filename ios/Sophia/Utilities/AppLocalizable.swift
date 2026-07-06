@@ -402,6 +402,7 @@ enum AppLocalizable {
 
         "course.completed": "Apprentissage terminé !",
         "course.dailyFreeDone": "Tu as terminé ton cours gratuit du jour",
+        "course.unlock.free": "Débloquez gratuitement",
         "course.streak.day": "Jour de suite",
         "course.streak.days": "Jours de suite",
         "course.streak.message": "Tu deviens vraiment cultivé, tu deviens incollable en %@ !",

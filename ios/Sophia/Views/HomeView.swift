@@ -6,7 +6,6 @@ struct HomeView: View {
     var isPremium: Bool = false
     @Binding var selectedCourse: Course?
     @Binding var autoSwipeCourseId: String?
-    var onLockedTap: ((SophiaPaywallContext) -> Void)? = nil
     var onShowDiscountPaywall: (() -> Void)? = nil
 
     var body: some View {
@@ -18,7 +17,6 @@ struct HomeView: View {
                 isPremium: isPremium,
                 selectedCourse: $selectedCourse,
                 autoSwipeCourseId: $autoSwipeCourseId,
-                onLockedTap: onLockedTap,
                 onShowDiscountPaywall: onShowDiscountPaywall
             )
         case .tinder:
@@ -28,7 +26,6 @@ struct HomeView: View {
                 isPremium: isPremium,
                 selectedCourse: $selectedCourse,
                 autoSwipeCourseId: $autoSwipeCourseId,
-                onLockedTap: onLockedTap,
                 onShowDiscountPaywall: onShowDiscountPaywall
             )
         }

@@ -19,11 +19,6 @@ struct ProfileView: View {
     private let ink = BrutalPalette.ink
     private let cream = BrutalPalette.cream
 
-    /// Subjects unlocked for the current user (based on onboarding interests for freemium).
-    private var unlockedSubjects: Set<Subject> {
-        FreemiumGate.unlockedSubjects(isPremium: store.isPremium)
-    }
-
     var body: some View {
         NavigationStack {
             ZStack {
@@ -322,11 +317,9 @@ struct ProfileView: View {
             }
             .padding(.horizontal, 8)
 
-            if !store.isPremium {
-                quizLockedBanner
-            } else if progressManager.recentQuizzes.isEmpty {
+            if progressManager.recentQuizzes.isEmpty {
                 emptyQuizzesCard
-            } else {
+            } else if store.isPremium {
                 VStack(spacing: 0) {
                     ForEach(Array(progressManager.recentQuizzes.prefix(3).enumerated()), id: \.element.course.id) { idx, item in
                         QuizRowView(
@@ -344,54 +337,10 @@ struct ProfileView: View {
                     }
                 }
                 .brutalCard()
+            } else {
+                emptyQuizzesCard
             }
         }
-    }
-
-    private var quizLockedBanner: some View {
-        VStack(alignment: .leading, spacing: 14) {
-            HStack(spacing: 10) {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .fill(BrutalPalette.pink)
-                        .overlay {
-                            RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                .strokeBorder(ink, lineWidth: 2)
-                        }
-                    Image(systemName: "lock.fill")
-                        .font(.system(size: 16, weight: .heavy))
-                        .foregroundStyle(ink)
-                }
-                .frame(width: 40, height: 40)
-
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(languageManager.text("profile.quiz.locked"))
-                        .font(.system(.headline, design: .rounded, weight: .heavy))
-                        .foregroundStyle(ink)
-                    Text(languageManager.text("profile.quiz.lockedSubtitle"))
-                        .font(.system(.caption, design: .rounded, weight: .semibold))
-                        .foregroundStyle(ink.opacity(0.6))
-                        .fixedSize(horizontal: false, vertical: true)
-                }
-                Spacer(minLength: 0)
-            }
-
-            Button {
-                hapticTrigger += 1
-                onShowPaywall?()
-            } label: {
-                HStack(spacing: 8) {
-                    Text(languageManager.text("profile.quiz.unlock"))
-                        .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                    Image(systemName: "arrow.right")
-                        .font(.system(size: 13, weight: .heavy))
-                }
-                .foregroundStyle(ink)
-            }
-            .buttonStyle(BrutalPinkButtonCompact())
-        }
-        .padding(16)
-        .brutalCard()
     }
 
     private var emptyQuizzesCard: some View {
@@ -439,15 +388,9 @@ struct ProfileView: View {
 
             LazyVGrid(columns: [GridItem(.flexible(), spacing: 14), GridItem(.flexible(), spacing: 14)], spacing: 14) {
                 ForEach(Subject.allCases, id: \.self) { subject in
-                    let unlocked = unlockedSubjects.contains(subject)
                     SubjectProgressCard(
                         subject: subject,
-                        xp: progressManager.xp(for: subject),
-                        unlocked: unlocked,
-                        onUnlock: {
-                            hapticTrigger += 1
-                            onShowPaywall?()
-                        }
+                        xp: progressManager.xp(for: subject)
                     )
                 }
             }
@@ -461,8 +404,6 @@ private struct SubjectProgressCard: View {
     @Environment(LanguageManager.self) private var languageManager
     let subject: Subject
     let xp: Int
-    let unlocked: Bool
-    let onUnlock: () -> Void
 
     private let ink = BrutalPalette.ink
 
@@ -488,76 +429,54 @@ private struct SubjectProgressCard: View {
                 .offset(y: 4)
 
             VStack(alignment: .leading, spacing: 10) {
-                SubjectBadgeView(subject: subject, unlocked: unlocked, emojiSize: 36, cornerRadius: 14)
+                SubjectBadgeView(subject: subject, unlocked: true, emojiSize: 36, cornerRadius: 14)
                     .frame(width: 56, height: 56)
 
                 Text(subject.localizedShortName(language: languageManager.current))
                     .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                    .foregroundStyle(unlocked ? ink : ink.opacity(0.45))
+                    .foregroundStyle(ink)
                     .lineLimit(2)
                     .minimumScaleFactor(0.85)
 
-                if unlocked {
-                    Text(String(format: languageManager.text("common.levelShort"), currentTier.level))
-                        .font(.system(.caption2, design: .rounded, weight: .heavy))
-                        .foregroundStyle(.white)
-                        .tracking(0.6)
-                        .padding(.horizontal, 8)
-                        .padding(.vertical, 3)
-                        .background(ink, in: Capsule())
+                Text(String(format: languageManager.text("common.levelShort"), currentTier.level))
+                    .font(.system(.caption2, design: .rounded, weight: .heavy))
+                    .foregroundStyle(.white)
+                    .tracking(0.6)
+                    .padding(.horizontal, 8)
+                    .padding(.vertical, 3)
+                    .background(ink, in: Capsule())
 
-                    GeometryReader { geo in
-                        ZStack(alignment: .leading) {
-                            Capsule()
-                                .fill(Color(white: 0.94))
-                                .overlay { Capsule().strokeBorder(ink, lineWidth: 1.5) }
-                            Capsule()
-                                .fill(BrutalPalette.pastel(for: subject))
-                                .overlay { Capsule().strokeBorder(ink, lineWidth: 1.5) }
-                                .frame(width: max(8, geo.size.width * progressInLevel))
-                        }
+                GeometryReader { geo in
+                    ZStack(alignment: .leading) {
+                        Capsule()
+                            .fill(Color(white: 0.94))
+                            .overlay { Capsule().strokeBorder(ink, lineWidth: 1.5) }
+                        Capsule()
+                            .fill(BrutalPalette.pastel(for: subject))
+                            .overlay { Capsule().strokeBorder(ink, lineWidth: 1.5) }
+                            .frame(width: max(8, geo.size.width * progressInLevel))
                     }
-                    .frame(height: 8)
-
-                    Text(progressLabel)
-                        .font(.system(.caption2, design: .rounded, weight: .heavy))
-                        .foregroundStyle(ink.opacity(0.55))
-                        .lineLimit(2)
-                } else {
-                    Text(languageManager.text("profile.unlock.trial"))
-                        .font(.system(.caption2, design: .rounded, weight: .heavy))
-                        .foregroundStyle(ink.opacity(0.45))
-                        .lineLimit(2)
-                        .frame(height: 32, alignment: .topLeading)
-
-                    Capsule()
-                        .fill(Color(white: 0.94))
-                        .overlay { Capsule().strokeBorder(ink.opacity(0.25), lineWidth: 1.5) }
-                        .frame(height: 8)
-
-                    Text(" ")
-                        .font(.system(.caption2, design: .rounded, weight: .heavy))
-                        .opacity(0)
-                        .frame(height: 14)
                 }
+                .frame(height: 8)
+
+                Text(progressLabel)
+                    .font(.system(.caption2, design: .rounded, weight: .heavy))
+                    .foregroundStyle(ink.opacity(0.55))
+                    .lineLimit(2)
 
                 Spacer(minLength: 0)
             }
             .padding(14)
             .frame(maxWidth: .infinity, minHeight: 168, alignment: .topLeading)
-            .background(unlocked ? Color.white : Color(white: 0.97))
+            .background(Color.white)
             .clipShape(.rect(cornerRadius: 18))
             .overlay {
                 RoundedRectangle(cornerRadius: 18, style: .continuous)
                     .strokeBorder(ink, lineWidth: 2.5)
             }
-            .opacity(unlocked ? 1 : 0.85)
         }
         .padding(.bottom, 4)
         .frame(maxWidth: .infinity, minHeight: 176, maxHeight: 176)
-        .onTapGesture {
-            if !unlocked { onUnlock() }
-        }
     }
 
     private var progressLabel: String {

@@ -4,9 +4,6 @@ struct SubjectCoursesView: View {
     let subject: Subject
     let courses: [Course]
     let progressManager: ProgressManager
-    var isPremium: Bool = true
-    var unlocked: Bool = true
-    var onShowPaywall: ((SophiaPaywallContext) -> Void)? = nil
     @Binding var selectedCourse: Course?
     @Environment(LanguageManager.self) private var languageManager
     @Environment(\.dismiss) private var dismiss
@@ -55,14 +52,9 @@ struct SubjectCoursesView: View {
                                     LibraryCardView(
                                         course: course,
                                         status: progressManager.courseStatus(for: course.id),
-                                        locked: !unlocked,
                                         onTap: {
                                             hapticTrigger += 1
-                                            if unlocked {
-                                                selectedCourse = course
-                                            } else {
-                                                onShowPaywall?(.matiereBlock(for: subject))
-                                            }
+                                            selectedCourse = course
                                         },
                                         progressManager: progressManager
                                     )

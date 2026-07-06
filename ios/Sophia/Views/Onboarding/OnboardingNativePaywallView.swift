@@ -23,11 +23,11 @@ struct OnboardingNativePaywallView: View {
     private let benefits = PaywallBenefitItem.figmaItems()
 
     private var unlockedSubjects: Set<Subject> {
-        FreemiumGate.unlockedSubjects(isPremium: false)
+        Set(Subject.allCases)
     }
 
     private var lockedSubjects: [Subject] {
-        Subject.allCases.filter { !unlockedSubjects.contains($0) }
+        []
     }
 
     private var prices: StoreViewModel.PaywallPriceDisplay {

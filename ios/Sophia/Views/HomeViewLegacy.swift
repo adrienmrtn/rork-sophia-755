@@ -8,7 +8,6 @@ struct HomeViewLegacy: View {
     var isPremium: Bool = false
     @Binding var selectedCourse: Course?
     @Binding var autoSwipeCourseId: String?
-    var onLockedTap: ((SophiaPaywallContext) -> Void)? = nil
     var onShowDiscountPaywall: (() -> Void)? = nil
     @State private var cards: [Course] = []
     @State private var topCardOffset: CGSize = .zero
@@ -33,7 +32,6 @@ struct HomeViewLegacy: View {
             if !cards.isEmpty {
                 let removed = cards.removeFirst()
                 cards.append(removed)
-                cards = DeckBalancer.afterSwipe(cards, unlockedSubjects: unlockedSubjects, isPremium: isPremium)
             }
             topCardOffset = .zero
             topCardRotation = 0
@@ -43,17 +41,9 @@ struct HomeViewLegacy: View {
     private func loadCards() {
         let filtered = ContentCatalog.activeCourses
             .filter { progressManager.courseStatus(for: $0.id) != .completed }
-        cards = DeckBalancer.balancedDeck(
-            courses: filtered,
-            unlockedSubjects: unlockedSubjects,
-            isPremium: isPremium
-        )
+        cards = filtered.shuffled()
         let preloadIds = cards.prefix(5).map(\.id)
         CourseImageMap.preloadImages(for: preloadIds)
-    }
-
-    private var unlockedSubjects: Set<Subject> {
-        FreemiumGate.unlockedSubjects(isPremium: isPremium)
     }
 
     var body: some View {
@@ -196,25 +186,15 @@ struct HomeViewLegacy: View {
         ZStack {
             ForEach(Array(cards.prefix(3).enumerated().reversed()), id: \.element.id) { index, course in
                 let isTop = index == 0
-                let subjectLocked = !isPremium && !unlockedSubjects.contains(course.subject)
                 FlashCard(
                     course: course,
                     language: languageManager.current,
                     isFavorite: progressManager.isFavorite(course.id),
-                    isSubjectLocked: subjectLocked,
                     onToggleFavorite: {
                         progressManager.toggleFavorite(course.id)
                     },
                     onStart: {
-                        if let context = FreemiumGate.paywallContext(
-                            for: course,
-                            isPremium: isPremium,
-                            hasCompletedCourseToday: progressManager.hasCompletedCourseToday
-                        ) {
-                            onLockedTap?(context)
-                        } else {
-                            selectedCourse = course
-                        }
+                        selectedCourse = course
                     }
                 )
                 .offset(
@@ -258,7 +238,6 @@ struct HomeViewLegacy: View {
                         if !cards.isEmpty {
                             let removed = cards.removeFirst()
                             cards.append(removed)
-                            cards = DeckBalancer.afterSwipe(cards, unlockedSubjects: unlockedSubjects, isPremium: isPremium)
                         }
                         topCardOffset = .zero
                         topCardRotation = 0
@@ -310,7 +289,6 @@ struct FlashCard: View {
     let course: Course
     var language: AppLanguage = .french
     var isFavorite: Bool = false
-    var isSubjectLocked: Bool = false
     var onToggleFavorite: (() -> Void)? = nil
     let onStart: () -> Void
     @State private var cachedImage: UIImage?
@@ -404,23 +382,6 @@ struct FlashCard: View {
                         .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
                 }
                 .padding(14)
-            }
-            .overlay(alignment: .topLeading) {
-                if isSubjectLocked {
-                    HStack(spacing: 5) {
-                        Image(systemName: "lock.fill")
-                            .font(.system(size: 11, weight: .bold))
-                        Text(AppLocalizable.string("home.locked", language: language))
-                            .font(.system(.caption2, design: .rounded, weight: .heavy))
-                            .tracking(0.3)
-                    }
-                    .foregroundStyle(ink)
-                    .padding(.horizontal, 10)
-                    .padding(.vertical, 6)
-                    .background(Color.white, in: Capsule())
-                    .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
-                    .padding(14)
-                }
             }
     }
 

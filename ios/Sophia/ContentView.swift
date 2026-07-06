@@ -28,17 +28,6 @@ struct ContentView: View {
                         isPremium: storeVM.isPremium,
                         selectedCourse: $selectedCourse,
                         autoSwipeCourseId: $autoSwipeCourseId,
-                        onLockedTap: { context in
-                            if storeVM.isPremium { return }
-                            if let subject = Self.subject(from: context) {
-                                AnalyticsService.trackLockedContentTapped(
-                                    subject: subject,
-                                    surface: "home"
-                                )
-                            }
-                            paywallContext = context
-                            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-                        },
                         onShowDiscountPaywall: {
                             if storeVM.isPremium { return }
                             AnalyticsService.trackDiscountOfferViewed(source: "home_banner")
@@ -50,11 +39,6 @@ struct ContentView: View {
                 Tab(languageManager.text("tab.library"), systemImage: "books.vertical.fill", value: 1) {
                     LibraryView(
                         progressManager: progressManager,
-                        isPremium: storeVM.isPremium,
-                        onShowPaywall: { context in
-                            paywallContext = context
-                            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-                        },
                         selectedCourse: $selectedCourse
                     )
                 }
@@ -65,7 +49,7 @@ struct ContentView: View {
                         store: storeVM,
                         selectedCourse: $selectedCourse,
                         onShowPaywall: {
-                            paywallContext = .quizz
+                            paywallContext = .debloquerCours
                         },
                         onResetOnboarding: onResetOnboarding
                     )
@@ -79,23 +63,6 @@ struct ContentView: View {
             .onAppear { SophiaTabBarStyle.apply() }
             .onChange(of: selectedCourse) { _, newCourse in
                 guard let course = newCourse else { return }
-                if let context = FreemiumGate.paywallContext(
-                    for: course,
-                    isPremium: storeVM.isPremium,
-                    hasCompletedCourseToday: progressManager.hasCompletedCourseToday
-                ) {
-                    selectedCourse = nil
-                    pendingCourse = nil
-                    let gateType = context == .coursGratuit ? "daily_quota" : "locked_subject"
-                    AnalyticsService.trackFreemiumGateHit(
-                        gateType: gateType,
-                        subject: course.subject,
-                        courseId: course.id
-                    )
-                    paywallContext = context
-                    UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-                    return
-                }
                 if !storeVM.isPremium {
                     progressManager.incrementFreeCoursesOpened()
                 }
@@ -106,7 +73,7 @@ struct ContentView: View {
                 CourseView(
                     course: course,
                     progressManager: progressManager,
-                    isPremium: storeVM.isPremium,
+                    store: storeVM,
                     openSource: pendingCourseSource,
                     onDismissToHome: {
                         let courseId = course.id
@@ -184,18 +151,6 @@ struct ContentView: View {
             return "profile"
         default:
             return "unknown"
-        }
-    }
-
-    private static func subject(from context: SophiaPaywallContext) -> Subject? {
-        switch context {
-        case .matiereBlockHistoire: .histoire
-        case .matiereBlockSciences: .sciences
-        case .matiereBlockLitterature: .litterature
-        case .matiereBlockArt: .art
-        case .matiereBlockMythologie: .mythologie
-        case .matiereBlockMondeActuel: .comprendreLeMonde
-        default: nil
         }
     }
 
