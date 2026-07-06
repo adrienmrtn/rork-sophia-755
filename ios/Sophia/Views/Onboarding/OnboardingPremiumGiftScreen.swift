@@ -7,17 +7,8 @@ struct OnboardingPremiumGiftScreen: View {
     @State private var badgeAppeared = false
     @State private var giftAppeared = false
     @State private var titleAppeared = false
-    @State private var perksAppeared = false
     @State private var buttonAppeared = false
     @State private var giftBounce = 0
-
-    private var perks: [(icon: String, text: String, tint: Color)] {
-        [
-            ("book.fill", languageManager.text("onboarding.premiumGift.perk.courses"), OnboardingPastels.at(1)),
-            ("checkmark.circle.fill", languageManager.text("onboarding.premiumGift.perk.quizzes"), OnboardingPastels.at(3)),
-            ("sparkles", languageManager.text("onboarding.premiumGift.perk.allSubjects"), OnboardingPastels.at(4)),
-        ]
-    }
 
     var body: some View {
         VStack(spacing: 0) {
@@ -32,34 +23,22 @@ struct OnboardingPremiumGiftScreen: View {
             .opacity(badgeAppeared ? 1 : 0)
             .offset(y: badgeAppeared ? 0 : -12)
 
-            Spacer().frame(height: 28)
+            Spacer().frame(height: 32)
 
             giftCard
                 .opacity(giftAppeared ? 1 : 0)
                 .scaleEffect(giftAppeared ? 1 : 0.9)
 
-            Spacer().frame(height: 28)
+            Spacer().frame(height: 32)
 
             Text(languageManager.text("onboarding.premiumGift.title"))
-                .font(.system(.title2, design: .rounded, weight: .heavy))
+                .font(.system(.largeTitle, design: .rounded, weight: .heavy))
                 .foregroundStyle(BrutalPalette.ink)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
-                .padding(.horizontal, 28)
+                .padding(.horizontal, 32)
                 .opacity(titleAppeared ? 1 : 0)
                 .offset(y: titleAppeared ? 0 : 16)
-
-            Spacer().frame(height: 24)
-
-            VStack(spacing: 10) {
-                ForEach(Array(perks.enumerated()), id: \.offset) { index, perk in
-                    BrutalFeaturePill(icon: perk.icon, text: perk.text, tint: perk.tint)
-                        .opacity(perksAppeared ? 1 : 0)
-                        .offset(y: perksAppeared ? 0 : 12)
-                        .animation(.spring(response: 0.55, dampingFraction: 0.8).delay(Double(index) * 0.08), value: perksAppeared)
-                }
-            }
-            .padding(.horizontal, 24)
 
             Spacer()
 
@@ -78,10 +57,7 @@ struct OnboardingPremiumGiftScreen: View {
             withAnimation(.spring(response: 0.6, dampingFraction: 0.8).delay(0.28)) {
                 titleAppeared = true
             }
-            withAnimation(.spring(response: 0.6, dampingFraction: 0.8).delay(0.45)) {
-                perksAppeared = true
-            }
-            withAnimation(.spring(response: 0.6, dampingFraction: 0.8).delay(0.65)) {
+            withAnimation(.spring(response: 0.6, dampingFraction: 0.8).delay(0.48)) {
                 buttonAppeared = true
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
@@ -113,33 +89,5 @@ struct OnboardingPremiumGiftScreen: View {
                 .symbolEffect(.bounce, value: giftBounce)
         }
         .padding(.bottom, 6)
-    }
-}
-
-private struct BrutalFeaturePill: View {
-    let icon: String
-    let text: String
-    let tint: Color
-
-    var body: some View {
-        HStack(spacing: 10) {
-            Image(systemName: icon)
-                .font(.system(size: 15, weight: .heavy))
-                .foregroundStyle(BrutalPalette.ink)
-                .frame(width: 28)
-
-            Text(text)
-                .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                .foregroundStyle(BrutalPalette.ink)
-                .frame(maxWidth: .infinity, alignment: .leading)
-        }
-        .padding(.horizontal, 14)
-        .padding(.vertical, 12)
-        .background(tint, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
-        .overlay {
-            RoundedRectangle(cornerRadius: 14, style: .continuous)
-                .strokeBorder(BrutalPalette.ink, lineWidth: 2)
-        }
-        .brutalOffsetPlate(depth: 3, corner: 14)
     }
 }
