@@ -30,9 +30,7 @@ enum AnalyticsService {
         onboardingCompleted: Bool
     ) {
         let interests = Array(OnboardingViewModel.userInterestKeys()).sorted()
-        let unlocked = FreemiumGate.unlockedSubjects(isPremium: isPremium)
-            .map(\.storageKey)
-            .sorted()
+        let unlocked = Subject.allCases.map(\.storageKey).sorted()
 
         let mixpanel = Mixpanel.mainInstance()
         mixpanel.registerSuperProperties([

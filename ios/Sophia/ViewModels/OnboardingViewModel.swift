@@ -8,12 +8,12 @@ class OnboardingViewModel {
     var currentScreen: Int = 0
     var phoneTimeSelection: Int? = nil
     var objectives: Set<String> = []
-    var interests: Set<String> = OnboardingViewModel.loadPersistedInterests()
+    var interests: Set<String> = []
     var loadingBarProgress: [Double] = [0, 0, 0]
     var isLoadingComplete: Bool = false
     var dailyLearningGoal: Int = 1
 
-    let totalScreens = 13
+    let totalScreens = 18
     let dailyLearningGoalRange: ClosedRange<Int> = 1...5
 
     var projectedYearlyLearnings: Int {
@@ -58,7 +58,7 @@ class OnboardingViewModel {
     var canProceed: Bool {
         switch currentScreen {
         case 2: return phoneTimeSelection != nil
-        case 4: return !objectives.isEmpty
+        case 5: return !objectives.isEmpty
         default: return true
         }
     }
@@ -82,7 +82,6 @@ class OnboardingViewModel {
         } else {
             interests.insert(interest)
         }
-        persistInterests()
     }
 
     func adjustDailyLearningGoal(by delta: Int) {
@@ -90,19 +89,11 @@ class OnboardingViewModel {
         dailyLearningGoal = min(max(proposedGoal, dailyLearningGoalRange.lowerBound), dailyLearningGoalRange.upperBound)
     }
 
-    private func persistInterests() {
-        UserDefaults.standard.set(Array(interests), forKey: OnboardingViewModel.interestsKey)
-    }
-
     /// Stable subject keys for onboarding interests (language-independent).
     static let allInterestKeys: [String] = Subject.allCases.map(\.storageKey)
 
-    /// Normalize the user's selection to **exactly 3** interests, one-shot:
-    /// - 0 selected → pick 3 fully random.
-    /// - 1 or 2 selected → keep them, complete randomly from the remaining pool.
-    /// - 3 selected → keep as-is.
-    /// - 4+ selected → keep 3 random from the user's selection.
-    /// Then persist. Should be called once when leaving the interests step.
+    /// Normalize the user's selection to **exactly 3** interests for the onboarding UI.
+    /// Not persisted — used only during the flow.
     func finalizeInterests() {
         let all = OnboardingViewModel.allInterestKeys
         let selected = interests
@@ -117,7 +108,6 @@ class OnboardingViewModel {
             result = Set(selected.shuffled().prefix(3))
         }
         interests = result
-        persistInterests()
     }
 
     static let interestsKey = "sophia_user_interests"
@@ -172,7 +162,6 @@ class OnboardingViewModel {
     }
 
     func completeOnboarding() {
-        persistInterests()
         UserDefaults.standard.set(true, forKey: "sophia_onboarding_completed")
     }
 

@@ -3,33 +3,26 @@ import SwiftUI
 import RevenueCatUI
 
 struct CourseView: View {
+    @Environment(LanguageManager.self) private var languageManager
+
     let course: Course
     let progressManager: ProgressManager
-    let isPremium: Bool
+    @Bindable var store: StoreViewModel
     var openSource: String = "unknown"
     let onDismissToHome: () -> Void
     @Environment(\.dismiss) private var dismiss
     @State private var currentIndex: Int = 0
     @State private var showQuiz: Bool = false
     @State private var appeared: Bool = false
-    @State private var pageTransition: Bool = false
     @State private var quizButtonPulse: Bool = false
     @State private var quizButtonShimmer: CGFloat = -200
-    @State private var showQuizPaywall: Bool = false
+    @State private var showDebloquerPaywall: Bool = false
     @State private var endPhase: CourseEndPhase = .none
     @State private var previousSubjectCount: Int = 0
     @State private var previousSubjectXP: Int = 0
     @State private var globalCourseAwardResult: GlobalXPAwardResult?
     @State private var pendingCardCandidates: [CollectibleCard] = []
-    @State private var currentCardUnlockEvent: CardUnlockEvent?
-    @State private var showCardUnlock: Bool = false
-    @State private var showCardRankUp: Bool = false
     @State private var pendingCollectionEvents: [CollectionProgressEvent] = []
-    @State private var currentCollectionEvent: CollectionProgressEvent?
-    @State private var collectionCompletionAwardResult: GlobalXPAwardResult?
-    @State private var showCollectionProgress: Bool = false
-    @State private var showCollectionCompleted: Bool = false
-    @State private var showCollectionRankUp: Bool = false
     @State private var rewardSteps: [PostCompletionRewardStep] = []
     @State private var showRewardFlow: Bool = false
     @State private var sessionTracker: CourseSessionTracker?
@@ -37,8 +30,14 @@ struct CourseView: View {
     /// Fixed XP awarded for finishing a course (reaching the completion screen). Always granted.
     private let courseCompletionXP: Int = 10
 
+    private var isPremium: Bool { store.isPremium }
+
     private var isLastLesson: Bool {
         currentIndex == course.lessons.count - 1
+    }
+
+    private var showsUnlockInsteadOfComplete: Bool {
+        isLastLesson && !isPremium
     }
 
     private var progressValue: Double {
@@ -63,16 +62,12 @@ struct CourseView: View {
                     previousSubjectXP: previousSubjectXP,
                     earnedXP: courseCompletionXP,
                     globalAwardResult: globalCourseAwardResult,
-                    showFreemiumGate: !isPremium,
+                    showFreemiumGate: false,
                     onClose: {
                         continueAfterCourseCompletion()
                     },
                     onQuizTapped: {
-                        if isPremium {
-                            showQuiz = true
-                        } else {
-                            showQuizPaywall = true
-                        }
+                        showQuiz = true
                     }
                 )
                 .transition(.opacity.combined(with: .scale(scale: 0.98)))
@@ -137,105 +132,14 @@ struct CourseView: View {
             let g = UIImpactFeedbackGenerator(style: .light)
             g.impactOccurred()
         }
-        .sheet(isPresented: $showQuizPaywall) {
+        .sheet(isPresented: $showDebloquerPaywall) {
             SophiaPaywallView(
-                context: .quizz,
-                onPurchased: {
-                    showQuizPaywall = false
-                    showQuiz = true
-                },
-                onRestored: {
-                    showQuizPaywall = false
-                    showQuiz = true
-                },
-                onDismissed: { showQuizPaywall = false }
+                context: .debloquerCours,
+                onPurchased: { showDebloquerPaywall = false },
+                onRestored: { showDebloquerPaywall = false },
+                onDismissed: { showDebloquerPaywall = false }
             )
             .presentationDragIndicator(.visible)
-        }
-        .fullScreenCover(isPresented: $showCardUnlock) {
-            if let currentCardUnlockEvent {
-                CardUnlockCelebrationView(event: currentCardUnlockEvent) {
-                    showCardUnlock = false
-                    self.currentCardUnlockEvent = nil
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                        continueAfterCourseCompletion()
-                    }
-                }
-            }
-        }
-        .fullScreenCover(isPresented: $showCardRankUp) {
-            if let pending = progressManager.pendingGlobalRankUp() {
-                GlobalRankUpCelebrationView(
-                    previousRank: pending.previous,
-                    newRank: pending.new,
-                    newLevel: pending.newLevel,
-                    onContinue: {
-                        progressManager.clearPendingGlobalRankUp()
-                        showCardRankUp = false
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                            continueAfterCourseCompletion()
-                        }
-                    }
-                )
-            }
-        }
-        .fullScreenCover(isPresented: $showCollectionProgress) {
-            if let currentCollectionEvent {
-                CollectionProgressCelebrationView(event: currentCollectionEvent) {
-                    showCollectionProgress = false
-                    if currentCollectionEvent.didCompleteCollection {
-                        collectionCompletionAwardResult = progressManager.awardGlobalXP(
-                            reason: .collectionCompleted(id: currentCollectionEvent.collection.id),
-                            amount: progressManager.collectionCompletionXP(for: currentCollectionEvent.collection)
-                        )
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                            showCollectionCompleted = true
-                        }
-                    } else {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                            continueAfterCourseCompletion()
-                        }
-                    }
-                }
-            }
-        }
-        .fullScreenCover(isPresented: $showCollectionCompleted) {
-            if let currentCollectionEvent {
-                CollectionCompletedCelebrationView(
-                    event: currentCollectionEvent,
-                    awardedXP: collectionCompletionAwardResult?.awardedXP ?? 0,
-                    onContinue: {
-                        showCollectionCompleted = false
-                        if collectionCompletionAwardResult?.didRankUp == true || progressManager.pendingGlobalRankUp() != nil {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                                showCollectionRankUp = true
-                            }
-                        } else {
-                            collectionCompletionAwardResult = nil
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                                continueAfterCourseCompletion()
-                            }
-                        }
-                    }
-                )
-            }
-        }
-        .fullScreenCover(isPresented: $showCollectionRankUp) {
-            if let pending = progressManager.pendingGlobalRankUp() {
-                GlobalRankUpCelebrationView(
-                    previousRank: pending.previous,
-                    newRank: pending.new,
-                    newLevel: pending.newLevel,
-                    onContinue: {
-                        progressManager.clearPendingGlobalRankUp()
-                        collectionCompletionAwardResult = nil
-                        showCollectionRankUp = false
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                            continueAfterCourseCompletion()
-                        }
-                    }
-                )
-            }
         }
         .onAppear {
             withAnimation(.spring(response: 0.5, dampingFraction: 0.8).delay(0.1)) {
@@ -286,20 +190,33 @@ struct CourseView: View {
         .frame(height: 18)
     }
 
-    private func lessonContent(lesson: LessonPage) -> some View {
-        ScrollView {
+    private func lessonContent(lesson: LessonPage, lessonIndex: Int) -> some View {
+        let locked = FreemiumGate.isLessonContentLocked(lessonIndex: lessonIndex, isPremium: isPremium)
+
+        return ScrollView {
             VStack(alignment: .leading, spacing: 24) {
                 Text(lesson.title)
                     .font(.system(.largeTitle, design: .rounded, weight: .heavy))
                     .foregroundStyle(ink)
                     .fixedSize(horizontal: false, vertical: true)
 
-                RichContentView(
-                    content: lesson.content,
-                    accent: course.subject.color,
-                    courseId: course.id,
-                    courseTitle: course.title
-                )
+                ZStack {
+                    RichContentView(
+                        content: lesson.content,
+                        accent: course.subject.color,
+                        courseId: course.id,
+                        courseTitle: course.title
+                    )
+                    .blur(radius: locked ? 10 : 0)
+                    .allowsHitTesting(!locked)
+
+                    if locked {
+                        CourseLessonLockOverlay {
+                            presentDebloquerPaywall()
+                        }
+                    }
+                }
+                .frame(minHeight: locked ? 280 : 0)
             }
             .padding(.horizontal, 24)
             .padding(.top, 24)
@@ -309,19 +226,18 @@ struct CourseView: View {
         .onScrollGeometryChange(for: CGFloat.self) { geometry in
             geometry.contentOffset.y
         } action: { _, offset in
-            guard currentIndex == 0, offset > 120 else { return }
+            guard lessonIndex == 0, offset > 120 else { return }
             sessionTracker?.scrolledOnFirstLesson = true
         }
     }
 
-    /// Lessons body extracted so we can swap to the end-of-course phase screens.
     private var lessonsBody: some View {
         VStack(spacing: 0) {
             headerBar
 
             TabView(selection: $currentIndex) {
                 ForEach(Array(course.lessons.enumerated()), id: \.element.id) { index, lesson in
-                    lessonContent(lesson: lesson)
+                    lessonContent(lesson: lesson, lessonIndex: index)
                         .tag(index)
                 }
             }
@@ -338,18 +254,20 @@ struct CourseView: View {
         Button {
             let g = UIImpactFeedbackGenerator(style: .medium)
             g.impactOccurred()
+            if showsUnlockInsteadOfComplete {
+                presentDebloquerPaywall()
+                return
+            }
             if isLastLesson {
+                guard FreemiumGate.canCompleteCourse(isPremium: isPremium) else { return }
                 sessionTracker?.recordContinueTap()
                 sessionTracker?.markCompleted()
                 progressManager.updateLessonProgress(courseId: course.id, lessonIndex: currentIndex)
-                progressManager.markCourseCompletedToday()
                 let wasCompletedBefore = progressManager.courseStatus(for: course.id) == .completed
                 let cardCandidates = progressManager.cardUnlockCandidates(forCompletingCourseId: course.id)
-                // Capture XP/count BEFORE awarding so we can animate the bar advancing.
                 previousSubjectCount = progressManager.completedCount(for: course.subject)
                 previousSubjectXP = progressManager.xp(for: course.subject)
                 progressManager.completeCourse(courseId: course.id, quizScore: 0)
-                // Always award +10 XP when reaching the end-of-course screen, premium or free.
                 progressManager.addXP(subject: course.subject, amount: courseCompletionXP)
                 globalCourseAwardResult = progressManager.awardGlobalXP(
                     reason: .courseCompleted(courseId: course.id),
@@ -370,29 +288,46 @@ struct CourseView: View {
             }
         } label: {
             HStack(spacing: 8) {
-                Text(isLastLesson ? "Terminer le cours" : "Continuer")
-                    .font(.system(.headline, design: .rounded, weight: .bold))
-                Image(systemName: isLastLesson ? "checkmark.circle.fill" : "arrow.right")
-                    .font(.subheadline.weight(.semibold))
+                if showsUnlockInsteadOfComplete {
+                    Image(systemName: "sparkles")
+                        .font(.subheadline.weight(.semibold))
+                    Text(languageManager.text("course.unlock.free"))
+                        .font(.system(.headline, design: .rounded, weight: .bold))
+                } else {
+                    Text(isLastLesson ? "Terminer le cours" : "Continuer")
+                        .font(.system(.headline, design: .rounded, weight: .bold))
+                    Image(systemName: isLastLesson ? "checkmark.circle.fill" : "arrow.right")
+                        .font(.subheadline.weight(.semibold))
+                }
             }
             .foregroundStyle(ink)
             .frame(maxWidth: .infinity)
             .padding(.vertical, 20)
         }
-        .buttonStyle(DuolingoButtonStyle(fill: pink, shimmer: isLastLesson && course.hasQuiz ? quizButtonShimmer : nil))
-        .scaleEffect(isLastLesson && course.hasQuiz && quizButtonPulse ? 1.04 : 1.0)
+        .buttonStyle(
+            DuolingoButtonStyle(
+                fill: showsUnlockInsteadOfComplete ? Color(red: 0.18, green: 0.72, blue: 0.55) : pink,
+                shimmer: isLastLesson && course.hasQuiz && isPremium ? quizButtonShimmer : nil
+            )
+        )
+        .scaleEffect(isLastLesson && course.hasQuiz && isPremium && quizButtonPulse ? 1.04 : 1.0)
         .padding(.horizontal, 24)
         .padding(.bottom, 24)
         .onChange(of: isLastLesson) { _, newValue in
-            if newValue && course.hasQuiz {
+            if newValue && course.hasQuiz && isPremium {
                 startQuizButtonAnimations()
             }
         }
         .onAppear {
-            if isLastLesson && course.hasQuiz {
+            if isLastLesson && course.hasQuiz && isPremium {
                 startQuizButtonAnimations()
             }
         }
+    }
+
+    private func presentDebloquerPaywall() {
+        UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+        showDebloquerPaywall = true
     }
 
     private func startQuizButtonAnimations() {
@@ -404,7 +339,7 @@ struct CourseView: View {
 
     private func shimmerLoop() {
         ShimmerAnimation.runLoop(offset: $quizButtonShimmer) {
-            isLastLesson && course.hasQuiz
+            isLastLesson && course.hasQuiz && isPremium
         }
     }
 

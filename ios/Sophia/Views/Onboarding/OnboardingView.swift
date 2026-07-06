@@ -53,7 +53,7 @@ struct OnboardingView: View {
             }
             .overlay(alignment: .top) {
                 if showsOnboardingProgressDots {
-                    OnboardingProgressDots(current: onboardingProgressIndex, total: 9)
+                    OnboardingProgressDots(current: onboardingProgressIndex, total: Self.progressQuestionScreens.count)
                         .padding(.top, 10)
                         .allowsHitTesting(false)
                         .zIndex(10)
@@ -78,12 +78,12 @@ struct OnboardingView: View {
             }
         }
         .onChange(of: displayedScreen) { _, screen in
-            if screen == 9, !useNativeOnboardingPaywall {
+            if screen == 14, !useNativeOnboardingPaywall {
                 prefetchFinOnboardingOffering()
             }
         }
         .onChange(of: incomingScreen) { _, screen in
-            if screen == 9, !useNativeOnboardingPaywall {
+            if screen == 14, !useNativeOnboardingPaywall {
                 prefetchFinOnboardingOffering()
             }
         }
@@ -119,24 +119,34 @@ struct OnboardingView: View {
                 case 2:
                     OnboardingPhoneTimeScreen(viewModel: viewModel, onNext: advance)
                 case 3:
-                    OnboardingWastedTimeScreen(viewModel: viewModel, onNext: advance)
+                    OnboardingShowcaseCoursesScreen(onNext: advance)
                 case 4:
-                    OnboardingObjectivesScreen(viewModel: viewModel, onNext: advance)
+                    OnboardingWastedTimeScreen(viewModel: viewModel, onNext: advance)
                 case 5:
-                    OnboardingSocialProofScreen(onNext: advance)
+                    OnboardingObjectivesScreen(viewModel: viewModel, onNext: advance)
                 case 6:
-                    OnboardingInterestsScreen(viewModel: viewModel, onNext: advance)
+                    OnboardingShowcaseQuizScreen(onNext: advance)
                 case 7:
-                    OnboardingDailyGoalScreen(viewModel: viewModel, onNext: advance)
+                    OnboardingSocialProofScreen(onNext: advance)
                 case 8:
-                    OnboardingProjectionScreen(viewModel: viewModel, onNext: advance)
+                    OnboardingInterestsScreen(viewModel: viewModel, onNext: advance)
                 case 9:
-                    OnboardingLoadingScreen(viewModel: viewModel, onNext: loadingScreenCompleted)
+                    OnboardingShowcaseCollectionsScreen(onNext: advance)
                 case 10:
-                    OnboardingPremiumGiftScreen(onNext: advance)
+                    OnboardingDailyGoalScreen(viewModel: viewModel, onNext: advance)
                 case 11:
-                    OnboardingPremiumTrialTimelineScreen(onUnlockTrial: trialTimelineCompleted)
+                    OnboardingShowcaseCardsScreen(onNext: advance)
                 case 12:
+                    OnboardingProjectionScreen(viewModel: viewModel, onNext: advance)
+                case 13:
+                    OnboardingShowcaseXPScreen(onNext: advance)
+                case 14:
+                    OnboardingLoadingScreen(viewModel: viewModel, onNext: loadingScreenCompleted)
+                case 15:
+                    OnboardingPremiumGiftScreen(onNext: advance)
+                case 16:
+                    OnboardingPremiumTrialTimelineScreen(onUnlockTrial: trialTimelineCompleted)
+                case 17:
                     nativePaywallScreen
                 default:
                     EmptyView()
@@ -252,19 +262,22 @@ struct OnboardingView: View {
         onComplete()
     }
 
-    /// Progress dots for OB steps 1–8; stays visible during slide transitions.
+    /// Question screens that show progress dots (excludes intro, showcases, loading, paywall).
+    private static let progressQuestionScreens = [1, 2, 4, 5, 7, 8, 10, 12]
+
     private var showsOnboardingProgressDots: Bool {
         let active = incomingScreen ?? displayedScreen
-        return active >= 1 && active <= 8
+        return Self.progressQuestionScreens.contains(active)
     }
 
     private var onboardingProgressIndex: Int {
-        min(max(incomingScreen ?? displayedScreen, 1), 8)
+        let active = incomingScreen ?? displayedScreen
+        return Self.progressQuestionScreens.firstIndex(of: active) ?? 0
     }
 
     private func advance() {
         OnboardingHaptics.slideTransition()
-        if viewModel.currentScreen == 6 {
+        if viewModel.currentScreen == 8 {
             viewModel.finalizeInterests()
             AnalyticsService.trackOnboardingInterestsSet(viewModel.interests)
         }

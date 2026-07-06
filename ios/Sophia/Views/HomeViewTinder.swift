@@ -7,7 +7,6 @@ struct HomeViewTinder: View {
     var isPremium: Bool = false
     @Binding var selectedCourse: Course?
     @Binding var autoSwipeCourseId: String?
-    var onLockedTap: ((SophiaPaywallContext) -> Void)? = nil
     var onShowDiscountPaywall: (() -> Void)? = nil
 
     @State private var cards: [Course] = []
@@ -22,10 +21,6 @@ struct HomeViewTinder: View {
     private let pink = Color(red: 1.0, green: 0.553, blue: 0.706)
     private let swipeCommitThreshold: CGFloat = 120
     private let stampFullOpacityDistance: CGFloat = 100
-
-    private var unlockedSubjects: Set<Subject> {
-        FreemiumGate.unlockedSubjects(isPremium: isPremium)
-    }
 
     var body: some View {
         ZStack {
@@ -176,13 +171,11 @@ struct HomeViewTinder: View {
             ZStack {
                 ForEach(Array(cards.prefix(3).enumerated().reversed()), id: \.element.id) { index, course in
                     let isTop = index == 0
-                    let subjectLocked = !isPremium && !unlockedSubjects.contains(course.subject)
 
                     TinderFlashCard(
                         course: course,
                         language: languageManager.current,
                         isFavorite: progressManager.isFavorite(course.id),
-                        isSubjectLocked: subjectLocked,
                         onToggleFavorite: {
                             progressManager.toggleFavorite(course.id)
                         }
@@ -320,28 +313,16 @@ struct HomeViewTinder: View {
         guard !cards.isEmpty else { return }
         let removed = cards.removeFirst()
         cards.append(removed)
-        cards = DeckBalancer.afterSwipe(cards, unlockedSubjects: unlockedSubjects, isPremium: isPremium)
     }
 
     private func openCourse(_ course: Course) {
-        if let context = FreemiumGate.paywallContext(
-            for: course,
-            isPremium: isPremium,
-            hasCompletedCourseToday: progressManager.hasCompletedCourseToday
-        ) {
-            onLockedTap?(context)
-        } else {
-            selectedCourse = course
-        }
+        selectedCourse = course
     }
 
     private func loadCards() {
-        let filtered = ContentCatalog.activeCourses
-            .filter { progressManager.courseStatus(for: $0.id) != .completed }
-        cards = DeckBalancer.balancedDeck(
-            courses: filtered,
-            unlockedSubjects: unlockedSubjects,
-            isPremium: isPremium
+        cards = HomeDeckBuilder.deck(
+            from: ContentCatalog.activeCourses,
+            isCompleted: { progressManager.courseStatus(for: $0) == .completed }
         )
         let preloadIds = cards.prefix(5).map(\.id)
         CourseImageMap.preloadImages(for: preloadIds)
@@ -370,7 +351,6 @@ private struct TinderFlashCard: View {
     let course: Course
     var language: AppLanguage = .french
     var isFavorite: Bool = false
-    var isSubjectLocked: Bool = false
     var onToggleFavorite: (() -> Void)? = nil
 
     @State private var cachedImage: UIImage?
@@ -466,23 +446,6 @@ private struct TinderFlashCard: View {
                         .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
                 }
                 .padding(14)
-            }
-            .overlay(alignment: .topLeading) {
-                if isSubjectLocked {
-                    HStack(spacing: 5) {
-                        Image(systemName: "lock.fill")
-                            .font(.system(size: 11, weight: .bold))
-                        Text(AppLocalizable.string("home.locked", language: language))
-                            .font(.system(.caption2, design: .rounded, weight: .heavy))
-                            .tracking(0.3)
-                    }
-                    .foregroundStyle(ink)
-                    .padding(.horizontal, 10)
-                    .padding(.vertical, 6)
-                    .background(Color.white, in: Capsule())
-                    .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
-                    .padding(14)
-                }
             }
     }
 

@@ -37,16 +37,10 @@ struct LibraryView: View {
 
     @Environment(LanguageManager.self) private var languageManager
     let progressManager: ProgressManager
-    var isPremium: Bool = true
-    var onShowPaywall: ((SophiaPaywallContext) -> Void)? = nil
     @Binding var selectedCourse: Course?
     @State private var searchText: String = ""
     @State private var selectedTab: LibraryTab = .courses
     @FocusState private var searchFocused: Bool
-
-    private var unlockedSubjects: Set<Subject> {
-        FreemiumGate.unlockedSubjects(isPremium: isPremium)
-    }
 
     private let previewCount = 4
     private let ink = BrutalPalette.ink
@@ -88,12 +82,11 @@ struct LibraryView: View {
 
                             ForEach(Subject.allCases, id: \.self) { subject in
                                 let courses = filteredCourses.filter { $0.subject == subject }
-                                let unlocked = unlockedSubjects.contains(subject)
                                 if !courses.isEmpty {
                                     if isSearching {
-                                        searchSection(subject: subject, courses: courses, unlocked: unlocked)
+                                        searchSection(subject: subject, courses: courses)
                                     } else {
-                                        previewSection(subject: subject, courses: courses, unlocked: unlocked)
+                                        previewSection(subject: subject, courses: courses)
                                     }
                                 }
                             }
@@ -105,8 +98,6 @@ struct LibraryView: View {
                         } else {
                             CollectionsOverviewView(
                                 progressManager: progressManager,
-                                isPremium: isPremium,
-                                onShowPaywall: { ctx in onShowPaywall?(ctx) },
                                 selectedCourse: $selectedCourse
                             )
                         }
@@ -122,9 +113,6 @@ struct LibraryView: View {
                     subject: subject,
                     courses: courses,
                     progressManager: progressManager,
-                    isPremium: isPremium,
-                    unlocked: unlockedSubjects.contains(subject),
-                    onShowPaywall: { ctx in onShowPaywall?(ctx) },
                     selectedCourse: $selectedCourse
                 )
             }
@@ -132,8 +120,6 @@ struct LibraryView: View {
                 CollectionDetailView(
                     collection: collection,
                     progressManager: progressManager,
-                    isPremium: isPremium,
-                    onShowPaywall: { ctx in onShowPaywall?(ctx) },
                     selectedCourse: $selectedCourse
                 )
             }
@@ -226,9 +212,9 @@ struct LibraryView: View {
         .frame(maxWidth: .infinity)
     }
 
-    private func previewSection(subject: Subject, courses: [Course], unlocked: Bool) -> some View {
+    private func previewSection(subject: Subject, courses: [Course]) -> some View {
         VStack(alignment: .leading, spacing: 14) {
-            sectionHeader(subject: subject, unlocked: unlocked)
+            sectionHeader(subject: subject)
                 .padding(.horizontal, 20)
 
             ScrollView(.horizontal, showsIndicators: false) {
@@ -237,15 +223,10 @@ struct LibraryView: View {
                         LibraryCardView(
                             course: course,
                             status: progressManager.courseStatus(for: course.id),
-                            locked: !unlocked,
                             onTap: {
                                 let g = UIImpactFeedbackGenerator(style: .light)
                                 g.impactOccurred()
-                                if unlocked {
-                                    selectedCourse = course
-                                } else {
-                                    onShowPaywall?(.matiereBlock(for: subject))
-                                }
+                                selectedCourse = course
                             },
                             progressManager: progressManager
                         )
@@ -257,36 +238,18 @@ struct LibraryView: View {
         }
     }
 
-    @ViewBuilder
-    private func sectionHeader(subject: Subject, unlocked: Bool) -> some View {
-        if unlocked {
-            NavigationLink(value: subject) {
-                sectionHeaderContent(subject: subject, unlocked: true)
-            }
-            .buttonStyle(.plain)
-        } else {
-            Button {
-                let g = UIImpactFeedbackGenerator(style: .light)
-                g.impactOccurred()
-                onShowPaywall?(.matiereBlock(for: subject))
-            } label: {
-                sectionHeaderContent(subject: subject, unlocked: false)
-            }
-            .buttonStyle(.plain)
+    private func sectionHeader(subject: Subject) -> some View {
+        NavigationLink(value: subject) {
+            sectionHeaderContent(subject: subject)
         }
+        .buttonStyle(.plain)
     }
 
-    private func sectionHeaderContent(subject: Subject, unlocked: Bool) -> some View {
+    private func sectionHeaderContent(subject: Subject) -> some View {
         HStack(spacing: 10) {
             HStack(spacing: 8) {
-                if unlocked {
-                    Text(subject.emoji)
-                        .font(.system(size: 16))
-                } else {
-                    Image(systemName: "lock.fill")
-                        .font(.system(size: 12, weight: .heavy))
-                        .foregroundStyle(.white)
-                }
+                Text(subject.emoji)
+                    .font(.system(size: 16))
                 Text(subject.localizedShortName(language: languageManager.current).uppercased())
                     .font(.system(.caption, design: .rounded, weight: .heavy))
                     .foregroundStyle(.white)
@@ -298,44 +261,23 @@ struct LibraryView: View {
 
             Spacer()
 
-            if unlocked {
-                HStack(spacing: 4) {
-                    Text(languageManager.text("library.seeMore"))
-                        .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                        .foregroundStyle(ink)
-                    Image(systemName: "arrow.right")
-                        .font(.system(size: 13, weight: .heavy))
-                        .foregroundStyle(ink)
-                }
-            } else {
-                HStack(spacing: 4) {
-                    Text(languageManager.text("library.unlock"))
-                        .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                        .foregroundStyle(ink)
-                    Image(systemName: "lock.fill")
-                        .font(.system(size: 12, weight: .heavy))
-                        .foregroundStyle(ink)
-                }
-                .padding(.horizontal, 10)
-                .padding(.vertical, 6)
-                .background(BrutalPalette.pink, in: Capsule())
-                .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
+            HStack(spacing: 4) {
+                Text(languageManager.text("library.seeMore"))
+                    .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                    .foregroundStyle(ink)
+                Image(systemName: "arrow.right")
+                    .font(.system(size: 13, weight: .heavy))
+                    .foregroundStyle(ink)
             }
         }
     }
 
-    private func searchSection(subject: Subject, courses: [Course], unlocked: Bool) -> some View {
+    private func searchSection(subject: Subject, courses: [Course]) -> some View {
         VStack(alignment: .leading, spacing: 14) {
             HStack(spacing: 10) {
                 HStack(spacing: 8) {
-                    if unlocked {
-                        Text(subject.emoji)
-                            .font(.system(size: 16))
-                    } else {
-                        Image(systemName: "lock.fill")
-                            .font(.system(size: 12, weight: .heavy))
-                            .foregroundStyle(.white)
-                    }
+                    Text(subject.emoji)
+                        .font(.system(size: 16))
                     Text(subject.localizedShortName(language: languageManager.current).uppercased())
                         .font(.system(.caption, design: .rounded, weight: .heavy))
                         .foregroundStyle(.white)
@@ -358,15 +300,10 @@ struct LibraryView: View {
                     LibraryCardView(
                         course: course,
                         status: progressManager.courseStatus(for: course.id),
-                        locked: !unlocked,
                         onTap: {
                             let g = UIImpactFeedbackGenerator(style: .light)
                             g.impactOccurred()
-                            if unlocked {
-                                selectedCourse = course
-                            } else {
-                                onShowPaywall?(.matiereBlock(for: subject))
-                            }
+                            selectedCourse = course
                         },
                         progressManager: progressManager
                     )
@@ -394,7 +331,6 @@ struct LibraryCardView: View {
     @Environment(LanguageManager.self) private var languageManager
     let course: Course
     let status: CourseStatus
-    var locked: Bool = false
     let onTap: () -> Void
     var progressManager: ProgressManager? = nil
     @State private var favTrigger: Int = 0
@@ -407,7 +343,6 @@ struct LibraryCardView: View {
     var body: some View {
         Button(action: onTap) {
             ZStack(alignment: .top) {
-                // Solid black offset plate
                 RoundedRectangle(cornerRadius: 18, style: .continuous)
                     .fill(ink)
                     .offset(y: depth)
@@ -424,30 +359,6 @@ struct LibraryCardView: View {
                 }
             }
             .opacity(status == .completed ? 0.78 : 1.0)
-            .overlay {
-                if locked {
-                    RoundedRectangle(cornerRadius: 18, style: .continuous)
-                        .fill(Color.white.opacity(0.55))
-                        .overlay {
-                            VStack(spacing: 6) {
-                                Image(systemName: "lock.fill")
-                                    .font(.system(size: 22, weight: .heavy))
-                                    .foregroundStyle(ink)
-                                    .frame(width: 44, height: 44)
-                                    .background(Color.white, in: Circle())
-                                    .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
-                                Text(languageManager.text("library.lockedBadge"))
-                                    .font(.system(.caption2, design: .rounded, weight: .heavy))
-                                    .foregroundStyle(ink)
-                                    .tracking(0.8)
-                                    .padding(.horizontal, 8)
-                                    .padding(.vertical, 3)
-                                    .background(Color.white, in: Capsule())
-                                    .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
-                            }
-                        }
-                }
-            }
             .padding(.bottom, depth)
         }
         .buttonStyle(BrutalCardButtonStyle(depth: 2))

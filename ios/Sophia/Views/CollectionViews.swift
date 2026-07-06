@@ -3,8 +3,6 @@ import SwiftUI
 struct CollectionsOverviewView: View {
     @Environment(LanguageManager.self) private var languageManager
     let progressManager: ProgressManager
-    let isPremium: Bool
-    let onShowPaywall: (SophiaPaywallContext) -> Void
     @Binding var selectedCourse: Course?
 
     private let ink = BrutalPalette.ink
@@ -184,8 +182,6 @@ struct CollectionDetailView: View {
     @Environment(LanguageManager.self) private var languageManager
     let collection: LearningCollection
     let progressManager: ProgressManager
-    let isPremium: Bool
-    let onShowPaywall: (SophiaPaywallContext) -> Void
     @Binding var selectedCourse: Course?
     @Environment(\.dismiss) private var dismiss
 
@@ -193,10 +189,6 @@ struct CollectionDetailView: View {
 
     private let ink = BrutalPalette.ink
     private let cream = BrutalPalette.cream
-
-    private var unlockedSubjects: Set<Subject> {
-        FreemiumGate.unlockedSubjects(isPremium: isPremium)
-    }
 
     private var completed: Int { progressManager.completedCount(for: collection) }
     private var total: Int { collection.courseIds.count }
@@ -322,19 +314,13 @@ struct CollectionDetailView: View {
 
             VStack(spacing: 0) {
                 ForEach(Array(collection.courses.enumerated()), id: \.element.id) { index, course in
-                    let unlocked = unlockedSubjects.contains(course.subject)
                     CollectionCourseRow(
                         index: index + 1,
                         course: course,
                         status: progressManager.courseStatus(for: course.id),
-                        locked: !unlocked,
                         onTap: {
                             UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                            if unlocked {
-                                selectedCourse = course
-                            } else {
-                                onShowPaywall(.matiereBlock(for: course.subject))
-                            }
+                            selectedCourse = course
                         }
                     )
                     if index < collection.courses.count - 1 {
@@ -352,7 +338,6 @@ private struct CollectionCourseRow: View {
     let index: Int
     let course: Course
     let status: CourseStatus
-    let locked: Bool
     let onTap: () -> Void
 
     private let ink = BrutalPalette.ink
@@ -364,10 +349,7 @@ private struct CollectionCourseRow: View {
                     Circle()
                         .fill(status == .completed ? BrutalPalette.yellow : BrutalPalette.pastel(for: course.subject))
                         .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
-                    if locked {
-                        Image(systemName: "lock.fill")
-                            .font(.system(size: 13, weight: .black))
-                    } else if status == .completed {
+                    if status == .completed {
                         Image(systemName: "checkmark")
                             .font(.system(size: 14, weight: .black))
                     } else {
@@ -382,7 +364,7 @@ private struct CollectionCourseRow: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(course.title)
                         .font(.system(.subheadline, design: .rounded, weight: .black))
-                        .foregroundStyle(ink.opacity(locked ? 0.45 : 1))
+                        .foregroundStyle(ink)
                         .lineLimit(2)
                         .multilineTextAlignment(.leading)
 
@@ -393,13 +375,13 @@ private struct CollectionCourseRow: View {
 
                 Spacer(minLength: 8)
 
-                Image(systemName: locked ? "lock.fill" : "arrow.right")
+                Image(systemName: "arrow.right")
                     .font(.system(size: 13, weight: .black))
-                    .foregroundStyle(ink.opacity(locked ? 0.42 : 1))
+                    .foregroundStyle(ink)
             }
             .padding(.horizontal, 14)
             .padding(.vertical, 13)
-            .background(locked ? Color(white: 0.97) : Color.white)
+            .background(Color.white)
         }
         .buttonStyle(.plain)
     }

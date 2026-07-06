@@ -40,7 +40,7 @@ struct OnboardingPremiumTrialTimelineScreen: View {
 
             BrutalPill(
                 text: languageManager.text("onboarding.premiumTrial.badge"),
-                icon: "bell.fill",
+                icon: "sparkles",
                 background: BrutalPalette.pink,
                 foreground: BrutalPalette.ink
             )
@@ -48,11 +48,11 @@ struct OnboardingPremiumTrialTimelineScreen: View {
             .offset(y: badgeAppeared ? 0 : -10)
 
             Text(languageManager.text("onboarding.premiumTrial.title"))
-                .font(.system(.title, design: .rounded, weight: .heavy))
+                .font(.system(.largeTitle, design: .rounded, weight: .heavy))
                 .foregroundStyle(BrutalPalette.ink)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, 28)
                 .opacity(titleAppeared ? 1 : 0)
                 .offset(y: titleAppeared ? 0 : 18)
 
@@ -62,8 +62,9 @@ struct OnboardingPremiumTrialTimelineScreen: View {
                 .scaleEffect(cardAppeared ? 1 : 0.94)
 
             Text(languageManager.text("onboarding.premiumTrial.cancelAnytime"))
-                .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                .foregroundStyle(BrutalPalette.ink.opacity(0.6))
+                .font(.system(.caption, design: .rounded, weight: .heavy))
+                .foregroundStyle(BrutalPalette.ink.opacity(0.5))
+                .tracking(0.4)
                 .opacity(footerAppeared ? 1 : 0)
 
             Spacer()
@@ -116,7 +117,7 @@ struct OnboardingPremiumTrialTimelineScreen: View {
                     }
                     .frame(width: 96, height: 96)
 
-                Image(systemName: "bell.badge.fill")
+                Image(systemName: "sparkles")
                     .font(.system(size: 42, weight: .heavy))
                     .foregroundStyle(BrutalPalette.ink)
                     .symbolEffect(.bounce, value: bellBounce)
@@ -195,8 +196,8 @@ private struct PremiumTrialTimelineRow: View {
 
                 if isHighlighted {
                     Image(systemName: "bell.fill")
-                        .font(.system(size: 14, weight: .heavy))
-                        .foregroundStyle(BrutalPalette.ink)
+                        .font(.system(size: 13, weight: .heavy))
+                        .foregroundStyle(BrutalPalette.ink.opacity(0.7))
                         .padding(.top, 2)
                 }
             }

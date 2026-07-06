@@ -8,27 +8,9 @@ import RevenueCatUI
 enum SophiaPaywallContext: String, Identifiable {
     case finOnboarding = "fin_onboarding"
     case offreDiscount = "offre_discount"
-    case quizz = "quizz"
-    case coursGratuit = "cours_gratuit"
-    case matiereBlockHistoire = "matiere_block_histoire"
-    case matiereBlockSciences = "matiere_block_sciences"
-    case matiereBlockLitterature = "matiere_block_litterature"
-    case matiereBlockArt = "matiere_block_art"
-    case matiereBlockMythologie = "matiere_block_mythologie"
-    case matiereBlockMondeActuel = "matiere_block_monde_actuel"
+    case debloquerCours = "debloquer_cours"
 
     var id: String { rawValue }
-
-    static func matiereBlock(for subject: Subject) -> SophiaPaywallContext {
-        switch subject {
-        case .histoire: return .matiereBlockHistoire
-        case .sciences: return .matiereBlockSciences
-        case .litterature: return .matiereBlockLitterature
-        case .art: return .matiereBlockArt
-        case .mythologie: return .matiereBlockMythologie
-        case .comprendreLeMonde: return .matiereBlockMondeActuel
-        }
-    }
 
     /// RC offering used when a context-specific paywall cannot be resolved.
     static let fallbackOfferingIdentifier = finOnboarding.rawValue
