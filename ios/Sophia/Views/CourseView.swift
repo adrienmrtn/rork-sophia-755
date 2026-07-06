@@ -17,6 +17,7 @@ struct CourseView: View {
     @State private var quizButtonPulse: Bool = false
     @State private var quizButtonShimmer: CGFloat = -200
     @State private var showDebloquerPaywall: Bool = false
+    @State private var showQuizPaywall: Bool = false
     @State private var endPhase: CourseEndPhase = .none
     @State private var previousSubjectCount: Int = 0
     @State private var previousSubjectXP: Int = 0
@@ -141,6 +142,15 @@ struct CourseView: View {
             )
             .presentationDragIndicator(.visible)
         }
+        .sheet(isPresented: $showQuizPaywall) {
+            SophiaPaywallView(
+                context: .quizz,
+                onPurchased: { showQuizPaywall = false },
+                onRestored: { showQuizPaywall = false },
+                onDismissed: { showQuizPaywall = false }
+            )
+            .presentationDragIndicator(.visible)
+        }
         .onAppear {
             withAnimation(.spring(response: 0.5, dampingFraction: 0.8).delay(0.1)) {
                 appeared = true
@@ -239,14 +249,15 @@ struct CourseView: View {
                             .foregroundStyle(ink)
                             .fixedSize(horizontal: false, vertical: true)
 
-                        ProgressiveBlurView(blurRadius: 18, fullBlurLocation: 0.08) {
-                            RichContentView(
-                                content: lesson.content,
-                                accent: course.subject.color,
-                                courseId: course.id,
-                                courseTitle: course.title
-                            )
-                        }
+                        RichContentView(
+                            content: lesson.content,
+                            accent: course.subject.color,
+                            courseId: course.id,
+                            courseTitle: course.title
+                        )
+                        .compositingGroup()
+                        .blur(radius: 5)
+                        .allowsHitTesting(false)
                     }
                     .padding(.horizontal, 24)
                     .padding(.top, 24)
@@ -286,7 +297,7 @@ struct CourseView: View {
             let g = UIImpactFeedbackGenerator(style: .medium)
             g.impactOccurred()
             if showsUnlockInsteadOfComplete {
-                presentDebloquerPaywall()
+                showQuizPaywall = true
                 return
             }
             if isLastLesson {
