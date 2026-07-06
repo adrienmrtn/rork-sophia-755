@@ -8,7 +8,7 @@ enum CuratedStarterCourses {
     static let ids: [String] = [
         "course_12_la_strategie_de_napoleon_a_ulm_1805",       // Histoire — Napoléon
         "course_67_qu_est_ce_qu_un_trou_noir",                 // Sciences — trous noirs
-        "course_162_promethee_le_voleur_de_feu",               // Mythologie — Prométhée
+        "course_198_sindbad_le_marin",                         // Littérature — Sindbad
         "course_150_la_nuit_etoilee_van_gogh",                 // Art — Van Gogh
         "course_9_l_empire_azteque",                           // Histoire — Aztèques
         "course_184_romulus_et_remus_la_fondation_de_rome",    // Mythologie — Rome

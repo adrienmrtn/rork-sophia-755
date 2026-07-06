@@ -6,8 +6,8 @@ enum OnboardingScreenColors {
 
     static func background(for screen: Int) -> Color {
         switch screen {
-        case 3: return blush
-        case 8: return projectionPink
+        case 4: return blush
+        case 12: return projectionPink
         default: return BrutalPalette.cream
         }
     }
