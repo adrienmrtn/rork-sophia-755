@@ -320,9 +320,10 @@ struct HomeViewTinder: View {
     }
 
     private func loadCards() {
-        let filtered = ContentCatalog.activeCourses
-            .filter { progressManager.courseStatus(for: $0.id) != .completed }
-        cards = filtered.shuffled()
+        cards = HomeDeckBuilder.deck(
+            from: ContentCatalog.activeCourses,
+            isCompleted: { progressManager.courseStatus(for: $0) == .completed }
+        )
         let preloadIds = cards.prefix(5).map(\.id)
         CourseImageMap.preloadImages(for: preloadIds)
     }
