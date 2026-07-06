@@ -227,34 +227,33 @@ struct CourseView: View {
         }
     }
 
-    /// Locked pages don't scroll: title stays crisp, the body progressively blurs
-    /// toward the bottom, and the unlock card sits centered on the visible screen
-    /// (not the full scrollable content) so it never drifts out of view.
+    /// Locked pages stay vertically scrollable: title stays crisp, the body
+    /// quickly blurs, and the unlock card remains centered on the visible screen.
     private func lockedLessonView(lesson: LessonPage) -> some View {
         GeometryReader { geo in
             ZStack {
-                VStack(alignment: .leading, spacing: 20) {
-                    Text(lesson.title)
-                        .font(.system(.largeTitle, design: .rounded, weight: .heavy))
-                        .foregroundStyle(ink)
-                        .fixedSize(horizontal: false, vertical: true)
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 20) {
+                        Text(lesson.title)
+                            .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                            .foregroundStyle(ink)
+                            .fixedSize(horizontal: false, vertical: true)
 
-                    ProgressiveBlurView {
-                        RichContentView(
-                            content: lesson.content,
-                            accent: course.subject.color,
-                            courseId: course.id,
-                            courseTitle: course.title
-                        )
+                        ProgressiveBlurView(blurRadius: 18, fullBlurLocation: 0.08) {
+                            RichContentView(
+                                content: lesson.content,
+                                accent: course.subject.color,
+                                courseId: course.id,
+                                courseTitle: course.title
+                            )
+                        }
                     }
-                    .frame(maxHeight: .infinity, alignment: .top)
-                    .clipped()
+                    .padding(.horizontal, 24)
+                    .padding(.top, 24)
+                    .padding(.bottom, max(geo.size.height * 0.34, 180))
+                    .frame(maxWidth: .infinity, alignment: .leading)
                 }
-                .padding(.horizontal, 24)
-                .padding(.top, 24)
-                .padding(.bottom, 24)
-                .frame(width: geo.size.width, height: geo.size.height, alignment: .top)
-                .allowsHitTesting(false)
+                .scrollIndicators(.hidden)
 
                 CourseLessonLockOverlay {
                     presentDebloquerPaywall()
@@ -323,7 +322,7 @@ struct CourseView: View {
                 if showsUnlockInsteadOfComplete {
                     Image(systemName: "sparkles")
                         .font(.subheadline.weight(.semibold))
-                    Text(languageManager.text("course.unlock.free"))
+                    Text(languageManager.text("course.quiz.access"))
                         .font(.system(.headline, design: .rounded, weight: .bold))
                 } else {
                     Text(isLastLesson ? "Terminer le cours" : "Continuer")
@@ -339,22 +338,30 @@ struct CourseView: View {
         .buttonStyle(
             DuolingoButtonStyle(
                 fill: showsUnlockInsteadOfComplete ? Color(red: 0.18, green: 0.72, blue: 0.55) : pink,
-                shimmer: isLastLesson && course.hasQuiz && isPremium ? quizButtonShimmer : nil
+                shimmer: shouldShimmerBottomButton ? quizButtonShimmer : nil
             )
         )
-        .scaleEffect(isLastLesson && course.hasQuiz && isPremium && quizButtonPulse ? 1.04 : 1.0)
+        .scaleEffect(shouldPulseBottomButton && quizButtonPulse ? 1.04 : 1.0)
         .padding(.horizontal, 24)
         .padding(.bottom, 24)
         .onChange(of: isLastLesson) { _, newValue in
-            if newValue && course.hasQuiz && isPremium {
+            if newValue && shouldPulseBottomButton {
                 startQuizButtonAnimations()
             }
         }
         .onAppear {
-            if isLastLesson && course.hasQuiz && isPremium {
+            if shouldPulseBottomButton {
                 startQuizButtonAnimations()
             }
         }
+    }
+
+    private var shouldShimmerBottomButton: Bool {
+        showsUnlockInsteadOfComplete || (isLastLesson && course.hasQuiz && isPremium)
+    }
+
+    private var shouldPulseBottomButton: Bool {
+        shouldShimmerBottomButton
     }
 
     private func presentDebloquerPaywall() {

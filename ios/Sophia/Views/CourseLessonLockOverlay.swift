@@ -7,6 +7,8 @@ struct CourseLessonLockOverlay: View {
 
     @State private var appeared = false
     @State private var pulse = false
+    @State private var buttonShimmer: CGFloat = -100
+    @State private var shimmerActive = false
 
     private let ink = Color.black
     private let pink = Color(red: 1.0, green: 0.553, blue: 0.706)
@@ -39,7 +41,7 @@ struct CourseLessonLockOverlay: View {
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 16)
             }
-            .buttonStyle(DuolingoButtonStyle(fill: pink, shimmer: nil, depth: 4))
+            .buttonStyle(DuolingoButtonStyle(fill: pink, shimmer: buttonShimmer, depth: 4))
         }
         .padding(24)
         .frame(maxWidth: 300)
@@ -53,6 +55,11 @@ struct CourseLessonLockOverlay: View {
             withAnimation(.easeInOut(duration: 1.4).repeatForever(autoreverses: true)) {
                 pulse = true
             }
+            shimmerActive = true
+            ShimmerAnimation.runLoop(offset: $buttonShimmer) { shimmerActive }
+        }
+        .onDisappear {
+            shimmerActive = false
         }
     }
 }
