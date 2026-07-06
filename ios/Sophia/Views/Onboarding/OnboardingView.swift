@@ -119,9 +119,9 @@ struct OnboardingView: View {
                 case 2:
                     OnboardingPhoneTimeScreen(viewModel: viewModel, onNext: advance)
                 case 3:
-                    OnboardingShowcaseCoursesScreen(onNext: advance)
-                case 4:
                     OnboardingWastedTimeScreen(viewModel: viewModel, onNext: advance)
+                case 4:
+                    OnboardingShowcaseCoursesScreen(onNext: advance)
                 case 5:
                     OnboardingObjectivesScreen(viewModel: viewModel, onNext: advance)
                 case 6:
@@ -262,8 +262,8 @@ struct OnboardingView: View {
         onComplete()
     }
 
-    /// Question screens that show progress dots (excludes intro, showcases, loading, paywall).
-    private static let progressQuestionScreens = [1, 2, 4, 5, 7, 8, 11, 12]
+    /// Onboarding value screens that show progress dots (excludes intro, loading, and paywalls).
+    private static let progressQuestionScreens = Array(1...13)
 
     private var showsOnboardingProgressDots: Bool {
         let active = incomingScreen ?? displayedScreen

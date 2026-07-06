@@ -2,7 +2,7 @@ import SwiftUI
 
 // MARK: - Shared layout
 
-/// Minimal showcase layout: one short punchy title, a hero animation, and a CTA.
+/// Minimal showcase layout: one factual title, a hero animation, and a CTA.
 /// No subtitle — the visual does the talking.
 private struct OnboardingShowcaseLayout<Hero: View>: View {
     @Environment(LanguageManager.self) private var languageManager
@@ -17,7 +17,7 @@ private struct OnboardingShowcaseLayout<Hero: View>: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            Spacer(minLength: 8)
+            Spacer(minLength: 38)
 
             Text(languageManager.text(titleKey))
                 .font(.system(size: 34, weight: .heavy, design: .rounded))
@@ -29,14 +29,14 @@ private struct OnboardingShowcaseLayout<Hero: View>: View {
                 .opacity(titleAppeared ? 1 : 0)
                 .offset(y: titleAppeared ? 0 : 16)
 
-            Spacer(minLength: 24)
+            Spacer(minLength: 18)
 
             hero()
                 .padding(.horizontal, heroEdgeToEdge ? 0 : 24)
                 .opacity(heroAppeared ? 1 : 0)
                 .scaleEffect(heroAppeared ? 1 : 0.92)
 
-            Spacer(minLength: 24)
+            Spacer(minLength: 18)
 
             OnboardingPrimaryButton(title: languageManager.text("common.continue"), action: onNext)
                 .opacity(ctaAppeared ? 1 : 0)
@@ -56,98 +56,236 @@ private struct OnboardingShowcaseLayout<Hero: View>: View {
     }
 }
 
-// MARK: - 3 · Cours — dual marquee wall of the curated courses
+// MARK: - 4 · Cours — swipeable examples from real course content
 
 struct OnboardingShowcaseCoursesScreen: View {
     @Environment(LanguageManager.self) private var languageManager
     let onNext: () -> Void
 
-    private var titles: [String: String] {
-        Dictionary(uniqueKeysWithValues: ContentCatalog.courses(for: languageManager.current).map { ($0.id, $0.title) })
+    @State private var selectedCourse = 0
+
+    private var courses: [Course] {
+        Array(
+            CuratedStarterCourses.ids
+                .compactMap { ContentCatalog.course(withId: $0, language: languageManager.current) }
+                .prefix(5)
+        )
     }
 
-    private var topRowIds: [String] { Array(CuratedStarterCourses.ids.prefix(5)) }
-    private var bottomRowIds: [String] { Array(CuratedStarterCourses.ids.suffix(5)) }
-
     var body: some View {
-        OnboardingShowcaseLayout(titleKey: "onboarding.showcase.courses.title", heroEdgeToEdge: true, onNext: onNext) {
-            VStack(spacing: 16) {
-                CourseMarqueeRow(courseIds: topRowIds, titles: titles, reversed: false, rowSeed: 0)
-                    .rotationEffect(.degrees(-2.5))
-                CourseMarqueeRow(courseIds: bottomRowIds, titles: titles, reversed: true, rowSeed: 3)
-                    .rotationEffect(.degrees(2.5))
+        OnboardingShowcaseLayout(titleKey: "onboarding.showcase.courses.title", onNext: onNext) {
+            VStack(spacing: 12) {
+                TabView(selection: $selectedCourse) {
+                    ForEach(Array(courses.enumerated()), id: \.element.id) { index, course in
+                        OnboardingCourseExampleCard(
+                            course: course,
+                            accent: OnboardingPastels.at(index)
+                        )
+                        .padding(.horizontal, 2)
+                        .tag(index)
+                    }
+                }
+                .tabViewStyle(.page(indexDisplayMode: .never))
+                .frame(height: 340)
+
+                HStack(spacing: 6) {
+                    ForEach(0..<courses.count, id: \.self) { index in
+                        Capsule()
+                            .fill(index == selectedCourse ? BrutalPalette.ink : BrutalPalette.ink.opacity(0.18))
+                            .frame(width: index == selectedCourse ? 24 : 8, height: 7)
+                            .animation(.spring(response: 0.3), value: selectedCourse)
+                    }
+                }
+
+                Text(languageManager.text("onboarding.showcase.courses.swipe"))
+                    .font(.system(.caption, design: .rounded, weight: .black))
+                    .foregroundStyle(BrutalPalette.ink.opacity(0.55))
+                    .tracking(0.7)
             }
-            .frame(height: 300)
-            .mask(
-                LinearGradient(
-                    stops: [
-                        .init(color: .clear, location: 0),
-                        .init(color: .black, location: 0.08),
-                        .init(color: .black, location: 0.92),
-                        .init(color: .clear, location: 1),
-                    ],
-                    startPoint: .leading,
-                    endPoint: .trailing
-                )
-            )
+            .onAppear {
+                CourseImageMap.preloadImages(for: courses.map(\.id))
+            }
         }
     }
 }
 
-private struct CourseMarqueeRow: View {
-    let courseIds: [String]
-    let titles: [String: String]
-    let reversed: Bool
-    let rowSeed: Int
+private struct OnboardingCourseExampleCard: View {
+    @Environment(LanguageManager.self) private var languageManager
+    let course: Course
+    let accent: Color
 
-    @State private var offset: CGFloat = 0
-    @State private var timer: Timer?
+    @State private var image: UIImage?
 
-    private let cardWidth: CGFloat = 150
-    private let spacing: CGFloat = 14
-    private let speed: CGFloat = 20
-
-    private var loopedIds: [String] { courseIds + courseIds + courseIds }
+    private var inlineImages: [String] {
+        var names: [String] = []
+        for lesson in course.lessons {
+            var searchRange = lesson.content.startIndex..<lesson.content.endIndex
+            while let open = lesson.content[searchRange].firstIndex(of: "["),
+                  let close = lesson.content[open...].firstIndex(of: "]") {
+                let name = String(lesson.content[lesson.content.index(after: open)..<close])
+                if !name.isEmpty, !names.contains(name) {
+                    names.append(name)
+                }
+                searchRange = lesson.content.index(after: close)..<lesson.content.endIndex
+                if names.count == 2 { return names }
+            }
+        }
+        return names
+    }
 
     var body: some View {
-        GeometryReader { _ in
-            HStack(spacing: spacing) {
-                ForEach(Array(loopedIds.enumerated()), id: \.offset) { idx, id in
-                    OnboardingMiniCard(
-                        title: titles[id] ?? "",
-                        courseId: id,
-                        accent: OnboardingPastels.at(idx + rowSeed)
+        VStack(spacing: 0) {
+            ZStack(alignment: .bottomLeading) {
+                Rectangle()
+                    .fill(accent)
+                    .overlay {
+                        if let image {
+                            Image(uiImage: image)
+                                .resizable()
+                                .scaledToFill()
+                                .allowsHitTesting(false)
+                        }
+                    }
+                    .frame(height: 116)
+                    .clipped()
+
+                LinearGradient(
+                    colors: [.clear, .black.opacity(0.48)],
+                    startPoint: .center,
+                    endPoint: .bottom
+                )
+                .allowsHitTesting(false)
+
+                BrutalPill(
+                    text: course.subject.localizedShortName(language: languageManager.current),
+                    icon: course.subject.icon,
+                    background: Color.white,
+                    foreground: BrutalPalette.ink
+                )
+                .padding(12)
+            }
+
+            VStack(alignment: .leading, spacing: 8) {
+                Text(course.title)
+                    .font(.system(.title3, design: .rounded, weight: .black))
+                    .foregroundStyle(BrutalPalette.ink)
+                    .lineLimit(2)
+                    .fixedSize(horizontal: false, vertical: true)
+
+                Text(course.description)
+                    .font(.system(.caption, design: .rounded, weight: .heavy))
+                    .foregroundStyle(BrutalPalette.ink.opacity(0.58))
+                    .lineLimit(2)
+                    .fixedSize(horizontal: false, vertical: true)
+
+                HStack(spacing: 8) {
+                    ForEach(inlineImages, id: \.self) { name in
+                        OnboardingInlineCourseImage(rawName: name, accent: accent)
+                    }
+                    if inlineImages.isEmpty {
+                        OnboardingCourseStatChip(
+                            icon: "doc.text.fill",
+                            text: lessonCountText,
+                            fill: accent
+                        )
+                    }
+                }
+
+                HStack(spacing: 8) {
+                    OnboardingCourseStatChip(
+                        icon: "rectangle.stack.fill",
+                        text: lessonCountText,
+                        fill: BrutalPalette.yellow
+                    )
+                    OnboardingCourseStatChip(
+                        icon: "checkmark.circle.fill",
+                        text: quizCountText,
+                        fill: accent
                     )
                 }
             }
-            .offset(x: -offset)
-            .onAppear {
-                let contentWidth = CGFloat(courseIds.count) * (cardWidth + spacing)
-                offset = reversed ? contentWidth : 0
-                startScrolling(contentWidth: contentWidth)
-            }
-            .onDisappear {
-                timer?.invalidate()
-                timer = nil
-            }
+            .padding(14)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(Color.white)
         }
-        .frame(height: 136)
-        .clipped()
+        .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 24, style: .continuous)
+                .strokeBorder(BrutalPalette.ink, lineWidth: 3)
+        }
+        .brutalOffsetPlate(depth: 5, corner: 24)
+        .onAppear {
+            image = CourseImageMap.loadImage(for: course.id)
+        }
     }
 
-    private func startScrolling(contentWidth: CGFloat) {
-        timer?.invalidate()
-        let interval: TimeInterval = 1.0 / 60.0
-        let step = speed * interval
-        timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { _ in
-            if reversed {
-                offset -= step
-                if offset <= 0 { offset += contentWidth }
+    private var lessonCountText: String {
+        String(format: languageManager.text("onboarding.showcase.courses.lessons"), course.lessons.count)
+    }
+
+    private var quizCountText: String {
+        String(format: languageManager.text("onboarding.showcase.courses.quizCount"), course.quiz.count)
+    }
+}
+
+private struct OnboardingInlineCourseImage: View {
+    let rawName: String
+    let accent: Color
+
+    @State private var image: UIImage?
+
+    var body: some View {
+        ZStack(alignment: .bottomLeading) {
+            RoundedRectangle(cornerRadius: 14, style: .continuous)
+                .fill(accent.opacity(0.65))
+
+            if let image {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFill()
             } else {
-                offset += step
-                if offset >= contentWidth * 2 { offset -= contentWidth }
+                Image(systemName: "photo")
+                    .font(.system(size: 18, weight: .black))
+                    .foregroundStyle(BrutalPalette.ink.opacity(0.45))
             }
+
+            Text(rawName)
+                .font(.system(size: 9, weight: .black, design: .rounded))
+                .foregroundStyle(.white)
+                .lineLimit(2)
+                .shadow(color: .black.opacity(0.45), radius: 2, y: 1)
+                .padding(6)
         }
+        .frame(maxWidth: .infinity)
+        .frame(height: 52)
+        .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 14, style: .continuous)
+                .strokeBorder(BrutalPalette.ink, lineWidth: 2)
+        }
+        .onAppear {
+            image = CourseInlineImage.loadImage(named: CourseInlineImage.slug(rawName))
+        }
+    }
+}
+
+private struct OnboardingCourseStatChip: View {
+    let icon: String
+    let text: String
+    let fill: Color
+
+    var body: some View {
+        HStack(spacing: 5) {
+            Image(systemName: icon)
+                .font(.system(size: 10, weight: .black))
+            Text(text)
+                .font(.system(.caption2, design: .rounded, weight: .black))
+        }
+        .foregroundStyle(BrutalPalette.ink)
+        .padding(.horizontal, 9)
+        .padding(.vertical, 6)
+        .background(fill, in: Capsule())
+        .overlay { Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 1.6) }
     }
 }
 
@@ -329,58 +467,53 @@ struct OnboardingShowcaseCollectionsScreen: View {
         let total = max(collection.courseIds.count, 1)
         let completed = min(Int((progress * 3).rounded()), total)
 
-        ZStack(alignment: .top) {
-            RoundedRectangle(cornerRadius: 22, style: .continuous)
-                .fill(ink)
-                .offset(y: depth)
-
-            VStack(alignment: .leading, spacing: 0) {
-                CollectionCoverView(collection: collection, accentIndex: accentIndex)
-                    .frame(height: 128)
-                    .overlay(alignment: .bottom) {
-                        Rectangle().fill(ink).frame(height: 3)
-                    }
-
-                VStack(alignment: .leading, spacing: 12) {
-                    Text(collection.title)
-                        .font(.system(.title3, design: .rounded, weight: .black))
-                        .foregroundStyle(ink)
-                        .lineLimit(2)
-
-                    GeometryReader { geo in
-                        ZStack(alignment: .leading) {
-                            Capsule().fill(ink.opacity(0.1))
-                            Capsule()
-                                .fill(BrutalPalette.pink)
-                                .frame(width: geo.size.width * min(progress, 1))
-                        }
-                    }
-                    .frame(height: 10)
-
-                    HStack {
-                        Text("\(completed) / \(total)")
-                            .font(.system(.caption, design: .rounded, weight: .black))
-                            .monospacedDigit()
-                        Spacer()
-                        Text("+\(total * ProgressManager.globalCollectionXPPerCourse) XP")
-                            .font(.system(.caption2, design: .rounded, weight: .black))
-                            .padding(.horizontal, 8)
-                            .padding(.vertical, 4)
-                            .background(BrutalPalette.yellow, in: Capsule())
-                            .overlay { Capsule().strokeBorder(ink, lineWidth: 1.5) }
-                    }
-                    .foregroundStyle(ink.opacity(0.7))
+        VStack(alignment: .leading, spacing: 0) {
+            CollectionCoverView(collection: collection, accentIndex: accentIndex)
+                .frame(height: 128)
+                .overlay(alignment: .bottom) {
+                    Rectangle().fill(ink).frame(height: 3)
                 }
-                .padding(16)
-                .background(Color.white)
+
+            VStack(alignment: .leading, spacing: 12) {
+                Text(collection.title)
+                    .font(.system(.title3, design: .rounded, weight: .black))
+                    .foregroundStyle(ink)
+                    .lineLimit(2)
+
+                GeometryReader { geo in
+                    ZStack(alignment: .leading) {
+                        Capsule().fill(ink.opacity(0.1))
+                        Capsule()
+                            .fill(BrutalPalette.pink)
+                            .frame(width: geo.size.width * min(progress, 1))
+                    }
+                }
+                .frame(height: 10)
+
+                HStack {
+                    Text("\(completed) / \(total)")
+                        .font(.system(.caption, design: .rounded, weight: .black))
+                        .monospacedDigit()
+                    Spacer()
+                    Text("+\(total * ProgressManager.globalCollectionXPPerCourse) XP")
+                        .font(.system(.caption2, design: .rounded, weight: .black))
+                        .padding(.horizontal, 8)
+                        .padding(.vertical, 4)
+                        .background(BrutalPalette.yellow, in: Capsule())
+                        .overlay { Capsule().strokeBorder(ink, lineWidth: 1.5) }
+                }
+                .foregroundStyle(ink.opacity(0.7))
             }
-            .clipShape(.rect(cornerRadius: 22))
-            .overlay {
-                RoundedRectangle(cornerRadius: 22, style: .continuous)
-                    .strokeBorder(ink, lineWidth: 3)
-            }
+            .padding(16)
+            .background(Color.white)
         }
-        .padding(.bottom, depth)
+        .frame(maxWidth: 320)
+        .clipShape(.rect(cornerRadius: 22))
+        .overlay {
+            RoundedRectangle(cornerRadius: 22, style: .continuous)
+                .strokeBorder(ink, lineWidth: 3)
+        }
+        .brutalOffsetPlate(depth: depth, corner: 22)
     }
 }
 
@@ -539,18 +672,25 @@ struct OnboardingShowcaseXPScreen: View {
             }
         }
 
-        withAnimation(.easeOut(duration: 1.5)) {
-            barFill = 0.92
+        withAnimation(.timingCurve(0.12, 0.92, 0.18, 1.0, duration: 1.55)) {
+            barFill = 1.0
         }
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.55) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.72) {
             levelBounce = true
             withAnimation(.spring(response: 0.4, dampingFraction: 0.5)) {
                 showLevelPop = true
             }
             OnboardingHaptics.primaryCTA()
-            withAnimation(.easeOut(duration: 0.4)) {
-                barFill = 0.18
+            var transaction = Transaction()
+            transaction.disablesAnimations = true
+            withTransaction(transaction) {
+                barFill = 0
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
+                withAnimation(.easeOut(duration: 0.65)) {
+                    barFill = 0.22
+                }
             }
         }
     }
