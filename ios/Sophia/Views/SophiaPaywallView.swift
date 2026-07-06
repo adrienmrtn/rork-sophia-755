@@ -9,6 +9,7 @@ enum SophiaPaywallContext: String, Identifiable {
     case finOnboarding = "fin_onboarding"
     case offreDiscount = "offre_discount"
     case debloquerCours = "debloquer_cours"
+    case quizz = "quizz"
 
     var id: String { rawValue }
 

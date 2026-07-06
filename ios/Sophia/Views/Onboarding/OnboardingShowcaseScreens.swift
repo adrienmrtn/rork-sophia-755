@@ -133,11 +133,13 @@ private struct OnboardingCourseExampleCard: View {
         return names
     }
 
+    private let corner: CGFloat = 24
+    private let heroHeight: CGFloat = 116
+
     var body: some View {
         VStack(spacing: 0) {
             ZStack(alignment: .bottomLeading) {
-                Rectangle()
-                    .fill(accent)
+                accent
                     .overlay {
                         if let image {
                             Image(uiImage: image)
@@ -146,8 +148,6 @@ private struct OnboardingCourseExampleCard: View {
                                 .allowsHitTesting(false)
                         }
                     }
-                    .frame(height: 116)
-                    .clipped()
 
                 LinearGradient(
                     colors: [.clear, .black.opacity(0.48)],
@@ -163,6 +163,20 @@ private struct OnboardingCourseExampleCard: View {
                     foreground: BrutalPalette.ink
                 )
                 .padding(12)
+            }
+            .frame(maxWidth: .infinity)
+            .frame(height: heroHeight)
+            .clipShape(
+                UnevenRoundedRectangle(
+                    topLeadingRadius: corner,
+                    topTrailingRadius: corner,
+                    style: .continuous
+                )
+            )
+            .overlay(alignment: .bottom) {
+                Rectangle()
+                    .fill(BrutalPalette.ink)
+                    .frame(height: 3)
             }
 
             VStack(alignment: .leading, spacing: 8) {
@@ -208,12 +222,12 @@ private struct OnboardingCourseExampleCard: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(Color.white)
         }
-        .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
+        .clipShape(RoundedRectangle(cornerRadius: corner, style: .continuous))
         .overlay {
-            RoundedRectangle(cornerRadius: 24, style: .continuous)
+            RoundedRectangle(cornerRadius: corner, style: .continuous)
                 .strokeBorder(BrutalPalette.ink, lineWidth: 3)
         }
-        .brutalOffsetPlate(depth: 5, corner: 24)
+        .brutalOffsetPlate(depth: 5, corner: corner)
         .onAppear {
             image = CourseImageMap.loadImage(for: course.id)
         }
