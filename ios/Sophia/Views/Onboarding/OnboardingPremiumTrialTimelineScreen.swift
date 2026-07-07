@@ -5,69 +5,49 @@ struct OnboardingPremiumTrialTimelineScreen: View {
     let onUnlockTrial: () -> Void
 
     @State private var badgeAppeared = false
+    @State private var iconAppeared = false
     @State private var titleAppeared = false
-    @State private var cardAppeared = false
     @State private var footerAppeared = false
     @State private var buttonAppeared = false
-    @State private var bellBounce = 0
 
-    private var steps: [(label: String, title: String, tint: Color, icon: String, highlighted: Bool)] {
-        [
-            (
-                languageManager.text("onboarding.premiumTrial.step1.label"),
-                languageManager.text("onboarding.premiumTrial.step1.title"),
-                OnboardingPastels.at(3),
-                "lock.open.fill",
-                false
-            ),
-            (
-                languageManager.text("onboarding.premiumTrial.step2.label"),
-                languageManager.text("onboarding.premiumTrial.step2.title"),
-                BrutalPalette.pink,
-                "bell.fill",
-                true
-            ),
-            (
-                languageManager.text("onboarding.premiumTrial.step3.label"),
-                languageManager.text("onboarding.premiumTrial.step3.title"),
-                OnboardingPastels.at(0),
-                "creditcard.fill",
-                false
-            ),
-        ]
-    }
+    @State private var bellSwing = false
+    @State private var ringPulse = false
+    @State private var dotPop = false
+
+    private let ink = BrutalPalette.ink
+    private let pink = BrutalPalette.pink
 
     var body: some View {
-        VStack(spacing: 28) {
+        VStack(spacing: 26) {
             Spacer()
 
             BrutalPill(
                 text: languageManager.text("onboarding.premiumTrial.badge"),
                 icon: "sparkles",
-                background: BrutalPalette.pink,
-                foreground: BrutalPalette.ink
+                background: pink,
+                foreground: ink
             )
             .opacity(badgeAppeared ? 1 : 0)
             .offset(y: badgeAppeared ? 0 : -10)
 
-            Text(languageManager.text("onboarding.premiumTrial.title"))
-                .font(.system(.largeTitle, design: .rounded, weight: .heavy))
-                .foregroundStyle(BrutalPalette.ink)
-                .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
-                .padding(.horizontal, 28)
-                .opacity(titleAppeared ? 1 : 0)
-                .offset(y: titleAppeared ? 0 : 18)
+            notificationIcon
+                .opacity(iconAppeared ? 1 : 0)
+                .scaleEffect(iconAppeared ? 1 : 0.82)
 
-            timelineCard
-                .padding(.horizontal, 24)
-                .opacity(cardAppeared ? 1 : 0)
-                .scaleEffect(cardAppeared ? 1 : 0.94)
+            Text(languageManager.text("onboarding.trial.notifyTitle"))
+                .font(.system(.title2, design: .rounded, weight: .heavy))
+                .foregroundStyle(ink)
+                .multilineTextAlignment(.center)
+                .lineSpacing(2)
+                .fixedSize(horizontal: false, vertical: true)
+                .padding(.horizontal, 30)
+                .opacity(titleAppeared ? 1 : 0)
+                .offset(y: titleAppeared ? 0 : 16)
 
             Text(languageManager.text("onboarding.premiumTrial.cancelAnytime"))
-                .font(.system(.caption, design: .rounded, weight: .heavy))
-                .foregroundStyle(BrutalPalette.ink.opacity(0.5))
-                .tracking(0.4)
+                .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                .foregroundStyle(ink.opacity(0.5))
+                .tracking(0.3)
                 .opacity(footerAppeared ? 1 : 0)
 
             Spacer()
@@ -84,128 +64,80 @@ struct OnboardingPremiumTrialTimelineScreen: View {
             withAnimation(.spring(response: 0.6, dampingFraction: 0.78)) {
                 badgeAppeared = true
             }
-            withAnimation(.spring(response: 0.6, dampingFraction: 0.78).delay(0.12)) {
+            withAnimation(.spring(response: 0.6, dampingFraction: 0.72).delay(0.1)) {
+                iconAppeared = true
+            }
+            withAnimation(.spring(response: 0.6, dampingFraction: 0.78).delay(0.26)) {
                 titleAppeared = true
             }
-            withAnimation(.spring(response: 0.6, dampingFraction: 0.8).delay(0.32)) {
-                cardAppeared = true
-            }
-            withAnimation(.spring(response: 0.6, dampingFraction: 0.8).delay(0.5)) {
+            withAnimation(.spring(response: 0.6, dampingFraction: 0.8).delay(0.42)) {
                 footerAppeared = true
             }
-            withAnimation(.spring(response: 0.6, dampingFraction: 0.8).delay(0.62)) {
+            withAnimation(.spring(response: 0.6, dampingFraction: 0.8).delay(0.54)) {
                 buttonAppeared = true
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
-                bellBounce += 1
-                UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-            }
+            startBellAnimations()
         }
     }
 
-    @ViewBuilder
-    private var timelineCard: some View {
-        VStack(spacing: 24) {
-            ZStack {
-                RoundedRectangle(cornerRadius: 24, style: .continuous)
-                    .fill(BrutalPalette.ink)
-                    .offset(y: 5)
-                    .frame(width: 92, height: 92)
+    private var notificationIcon: some View {
+        ZStack {
+            // Expanding pulse rings behind the badge.
+            ForEach(0..<2, id: \.self) { i in
+                Circle()
+                    .strokeBorder(pink.opacity(0.45), lineWidth: 3)
+                    .frame(width: 108, height: 108)
+                    .scaleEffect(ringPulse ? 1.55 : 0.9)
+                    .opacity(ringPulse ? 0 : 0.7)
+                    .animation(
+                        .easeOut(duration: 1.8)
+                            .repeatForever(autoreverses: false)
+                            .delay(Double(i) * 0.9),
+                        value: ringPulse
+                    )
+            }
 
-                RoundedRectangle(cornerRadius: 24, style: .continuous)
+            // Brutalist badge with the bell.
+            ZStack {
+                RoundedRectangle(cornerRadius: 26, style: .continuous)
+                    .fill(ink)
+                    .offset(y: 5)
+                    .frame(width: 100, height: 100)
+
+                RoundedRectangle(cornerRadius: 26, style: .continuous)
                     .fill(OnboardingPastels.at(1))
                     .overlay {
-                        RoundedRectangle(cornerRadius: 24, style: .continuous)
-                            .strokeBorder(BrutalPalette.ink, lineWidth: 2.5)
+                        RoundedRectangle(cornerRadius: 26, style: .continuous)
+                            .strokeBorder(ink, lineWidth: 2.5)
                     }
-                    .frame(width: 92, height: 92)
+                    .frame(width: 100, height: 100)
 
-                Image(systemName: "sparkles")
-                    .font(.system(size: 40, weight: .heavy))
-                    .foregroundStyle(BrutalPalette.ink)
-                    .symbolEffect(.bounce, value: bellBounce)
-            }
-
-            VStack(spacing: 0) {
-                ForEach(Array(steps.enumerated()), id: \.offset) { index, step in
-                    PremiumTrialTimelineRow(
-                        label: step.label,
-                        title: step.title,
-                        tint: step.tint,
-                        icon: step.icon,
-                        isHighlighted: step.highlighted,
-                        isLast: index == steps.count - 1
+                Image(systemName: "bell.fill")
+                    .font(.system(size: 44, weight: .heavy))
+                    .foregroundStyle(ink)
+                    .rotationEffect(.degrees(bellSwing ? 11 : -11), anchor: .top)
+                    .animation(
+                        .easeInOut(duration: 0.55).repeatForever(autoreverses: true),
+                        value: bellSwing
                     )
-                }
             }
-            .fixedSize(horizontal: false, vertical: true)
+
+            // Notification dot.
+            Circle()
+                .fill(Color(red: 0.95, green: 0.24, blue: 0.34))
+                .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
+                .frame(width: 24, height: 24)
+                .offset(x: 34, y: -34)
+                .scaleEffect(dotPop ? 1 : 0)
+                .animation(.spring(response: 0.4, dampingFraction: 0.5).delay(0.5), value: dotPop)
         }
-        .padding(.horizontal, 16)
+        .frame(height: 128)
     }
-}
 
-private struct PremiumTrialTimelineRow: View {
-    let label: String
-    let title: String
-    let tint: Color
-    var icon: String = "checkmark"
-    var isHighlighted: Bool = false
-    var isLast: Bool = false
-
-    private let nodeSize: CGFloat = 38
-
-    var body: some View {
-        HStack(alignment: .top, spacing: 16) {
-            // Connected node column
-            VStack(spacing: 0) {
-                ZStack {
-                    Circle()
-                        .fill(BrutalPalette.ink)
-                        .offset(y: 3)
-                        .frame(width: nodeSize, height: nodeSize)
-
-                    Circle()
-                        .fill(isHighlighted ? BrutalPalette.pink : tint)
-                        .overlay { Circle().strokeBorder(BrutalPalette.ink, lineWidth: 2.5) }
-                        .frame(width: nodeSize, height: nodeSize)
-
-                    Image(systemName: icon)
-                        .font(.system(size: 15, weight: .heavy))
-                        .foregroundStyle(BrutalPalette.ink)
-                }
-
-                if !isLast {
-                    Capsule()
-                        .fill(BrutalPalette.ink.opacity(0.22))
-                        .frame(width: 3)
-                        .frame(maxHeight: .infinity)
-                        .padding(.vertical, 5)
-                }
-            }
-            .frame(width: nodeSize)
-
-            // Step content
-            VStack(alignment: .leading, spacing: 7) {
-                Text(label)
-                    .font(.system(.caption2, design: .rounded, weight: .heavy))
-                    .tracking(0.8)
-                    .foregroundStyle(BrutalPalette.ink)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.8)
-                    .padding(.horizontal, 11)
-                    .padding(.vertical, 5)
-                    .background(tint, in: .capsule)
-                    .overlay { Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 2) }
-                    .fixedSize(horizontal: true, vertical: false)
-
-                Text(title)
-                    .font(.system(.subheadline, design: .rounded, weight: isHighlighted ? .heavy : .semibold))
-                    .foregroundStyle(BrutalPalette.ink.opacity(isHighlighted ? 1 : 0.78))
-                    .fixedSize(horizontal: false, vertical: true)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-            }
-            .padding(.top, 3)
-            .padding(.bottom, isLast ? 0 : 22)
-        }
+    private func startBellAnimations() {
+        bellSwing = true
+        ringPulse = true
+        dotPop = true
+        UIImpactFeedbackGenerator(style: .medium).impactOccurred()
     }
 }

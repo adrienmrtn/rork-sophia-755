@@ -389,7 +389,7 @@ struct CourseView: View {
 
     private func shimmerLoop() {
         ShimmerAnimation.runLoop(offset: $quizButtonShimmer) {
-            isLastLesson && course.hasQuiz && isPremium
+            shouldShimmerBottomButton
         }
     }
 

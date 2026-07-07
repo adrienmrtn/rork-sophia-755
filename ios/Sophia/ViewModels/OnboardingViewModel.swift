@@ -58,7 +58,7 @@ class OnboardingViewModel {
     var canProceed: Bool {
         switch currentScreen {
         case 2: return phoneTimeSelection != nil
-        case 5: return !objectives.isEmpty
+        case 4: return !objectives.isEmpty
         default: return true
         }
     }
