@@ -253,7 +253,7 @@ enum AppLocalizable {
         "onboarding.showcase.quiz.option.3": "Le temps",
         "onboarding.showcase.collections.title": "Suis des parcours\nthématiques",
         "onboarding.showcase.cards.title": "Collectionne des\ncartes de cours",
-        "onboarding.showcase.xp.title": "Progresse grâce\naux niveaux",
+        "onboarding.showcase.xp.title": "Prends des niveaux\net hisse-toi au classement\ndes plus cultivés",
         "onboarding.showcase.xp.level": "NIVEAU",
 
         "onboarding.social.badge": "Avis vérifiés",
@@ -681,7 +681,7 @@ enum AppLocalizable {
         "onboarding.showcase.quiz.option.3": "Time",
         "onboarding.showcase.collections.title": "Follow thematic\nlearning paths",
         "onboarding.showcase.cards.title": "Collect course\ncards",
-        "onboarding.showcase.xp.title": "Progress with\na level system",
+        "onboarding.showcase.xp.title": "Level up and climb\nthe leaderboard of\nthe most cultured",
         "onboarding.showcase.xp.level": "LEVEL",
 
         "onboarding.social.badge": "Verified reviews",
@@ -1275,7 +1275,7 @@ enum AppLocalizable {
         "onboarding.showcase.quiz.option.3": "El tiempo",
         "onboarding.showcase.collections.title": "Sigue rutas\ntemáticas",
         "onboarding.showcase.cards.title": "Colecciona cartas\nde cursos",
-        "onboarding.showcase.xp.title": "Progresa con\nlos niveles",
+        "onboarding.showcase.xp.title": "Sube de nivel y escala\nla clasificación de\nlos más cultos",
         "onboarding.showcase.xp.level": "NIVEL",
 
         "levelUp.title": "¡Subes de nivel!",
@@ -1701,7 +1701,7 @@ enum AppLocalizable {
         "onboarding.showcase.quiz.option.3": "Die Zeit",
         "onboarding.showcase.collections.title": "Folge thematischen\nLernpfaden",
         "onboarding.showcase.cards.title": "Sammle\nKurskarten",
-        "onboarding.showcase.xp.title": "Mach Fortschritte\nmit Levels",
+        "onboarding.showcase.xp.title": "Steig auf und klettere\nim Ranking der\nGebildetsten",
         "onboarding.showcase.xp.level": "LEVEL",
 
         "levelUp.title": "Neue Stufe!",
@@ -2127,7 +2127,7 @@ enum AppLocalizable {
         "onboarding.showcase.quiz.option.3": "O tempo",
         "onboarding.showcase.collections.title": "Segue percursos\ntemáticos",
         "onboarding.showcase.cards.title": "Coleciona cartas\nde cursos",
-        "onboarding.showcase.xp.title": "Progride com\nos níveis",
+        "onboarding.showcase.xp.title": "Sobe de nível e escala\no ranking dos\nmais cultos",
         "onboarding.showcase.xp.level": "NÍVEL",
 
         "levelUp.title": "Subiste de nível!",
@@ -2522,7 +2522,7 @@ enum AppLocalizable {
         "onboarding.showcase.quiz.option.3": "Il tempo",
         "onboarding.showcase.collections.title": "Segui percorsi\ntematici",
         "onboarding.showcase.cards.title": "Colleziona carte\ndei corsi",
-        "onboarding.showcase.xp.title": "Progredisci con\ni livelli",
+        "onboarding.showcase.xp.title": "Sali di livello e scala\nla classifica dei\npiù colti",
         "onboarding.showcase.xp.level": "LIVELLO",
         "levelUp.title": "Sali di livello!",
         "globalRank.curieux": "Curioso",

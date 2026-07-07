@@ -82,11 +82,13 @@ struct OnboardingShowcaseCoursesScreen: View {
                             accent: OnboardingPastels.at(index)
                         )
                         .padding(.horizontal, 2)
+                        .frame(maxHeight: .infinity, alignment: .top)
+                        .padding(.bottom, 6)
                         .tag(index)
                     }
                 }
                 .tabViewStyle(.page(indexDisplayMode: .never))
-                .frame(height: 340)
+                .frame(height: 344)
 
                 HStack(spacing: 6) {
                     ForEach(0..<courses.count, id: \.self) { index in
@@ -192,16 +194,13 @@ private struct OnboardingCourseExampleCard: View {
                     .lineLimit(2)
                     .fixedSize(horizontal: false, vertical: true)
 
-                HStack(spacing: 8) {
-                    ForEach(inlineImages, id: \.self) { name in
-                        OnboardingInlineCourseImage(rawName: name, accent: accent)
-                    }
-                    if inlineImages.isEmpty {
-                        OnboardingCourseStatChip(
-                            icon: "doc.text.fill",
-                            text: lessonCountText,
-                            fill: accent
-                        )
+                Spacer(minLength: 10)
+
+                if !inlineImages.isEmpty {
+                    HStack(spacing: 8) {
+                        ForEach(inlineImages, id: \.self) { name in
+                            OnboardingInlineCourseImage(rawName: name, accent: accent)
+                        }
                     }
                 }
 
@@ -219,9 +218,10 @@ private struct OnboardingCourseExampleCard: View {
                 }
             }
             .padding(14)
-            .frame(maxWidth: .infinity, alignment: .leading)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             .background(Color.white)
         }
+        .frame(maxHeight: .infinity)
         .clipShape(RoundedRectangle(cornerRadius: corner, style: .continuous))
         .overlay {
             RoundedRectangle(cornerRadius: corner, style: .continuous)
@@ -309,31 +309,61 @@ struct OnboardingShowcaseQuizScreen: View {
     @Environment(LanguageManager.self) private var languageManager
     let onNext: () -> Void
 
-    @State private var revealedOption: Int? = nil
+    private struct QuizPrompt: Identifiable {
+        let id = UUID()
+        let question: String
+        let options: [String]
+        let correctIndex: Int
+    }
+
+    @State private var prompts: [QuizPrompt] = []
+    @State private var qIndex = 0
+    @State private var revealed = false
     @State private var showCheck = false
     @State private var showXPBadge = false
 
     private let ink = BrutalPalette.ink
-    private let correctIndex = 1
+
+    private var fallbackPrompt: QuizPrompt {
+        QuizPrompt(
+            question: languageManager.text("onboarding.showcase.quiz.question"),
+            options: (0..<4).map { languageManager.text("onboarding.showcase.quiz.option.\($0)") },
+            correctIndex: 1
+        )
+    }
+
+    private var current: QuizPrompt {
+        prompts.indices.contains(qIndex) ? prompts[qIndex] : fallbackPrompt
+    }
+
+    private var dotCount: Int { max(prompts.count, 1) }
 
     var body: some View {
         OnboardingShowcaseLayout(titleKey: "onboarding.showcase.quiz.title", onNext: onNext) {
             VStack(alignment: .leading, spacing: 16) {
                 quizProgressDots
 
-                Text(languageManager.text("onboarding.showcase.quiz.question"))
-                    .font(.system(.title3, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink)
-                    .multilineTextAlignment(.leading)
-                    .fixedSize(horizontal: false, vertical: true)
+                VStack(alignment: .leading, spacing: 16) {
+                    Text(current.question)
+                        .font(.system(.title3, design: .rounded, weight: .heavy))
+                        .foregroundStyle(ink)
+                        .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
 
-                VStack(spacing: 10) {
-                    ForEach(0..<4, id: \.self) { index in
-                        quizOption(index: index)
+                    VStack(spacing: 10) {
+                        ForEach(Array(current.options.enumerated()), id: \.offset) { index, option in
+                            quizOption(index: index, option: option)
+                        }
                     }
                 }
+                .id(qIndex)
+                .transition(.asymmetric(
+                    insertion: .move(edge: .trailing).combined(with: .opacity),
+                    removal: .move(edge: .leading).combined(with: .opacity)
+                ))
             }
             .padding(20)
+            .frame(maxWidth: .infinity, minHeight: 330, alignment: .topLeading)
             .brutalOnboardingCard(depth: 5, corner: 24)
             .overlay(alignment: .topTrailing) {
                 if showXPBadge {
@@ -348,38 +378,41 @@ struct OnboardingShowcaseQuizScreen: View {
                         .transition(.scale(scale: 0.6).combined(with: .opacity))
                 }
             }
+            .clipped()
         }
-        .onOnboardingSlideSettled(delay: 0.5) {
-            animateQuiz()
+        .onOnboardingSlideSettled(delay: 0.4) {
+            if prompts.isEmpty { prompts = buildPrompts() }
+            runQuestion(0)
         }
     }
 
     private var quizProgressDots: some View {
         HStack(spacing: 5) {
-            ForEach(0..<5, id: \.self) { i in
+            ForEach(0..<dotCount, id: \.self) { i in
                 Capsule()
-                    .fill(i == 0 ? BrutalPalette.pink : ink.opacity(0.12))
-                    .frame(width: i == 1 ? 22 : 10, height: 6)
+                    .fill(i == qIndex ? BrutalPalette.pink : ink.opacity(0.12))
+                    .frame(width: i == qIndex ? 22 : 10, height: 6)
+                    .animation(.spring(response: 0.3), value: qIndex)
             }
         }
     }
 
     @ViewBuilder
-    private func quizOption(index: Int) -> some View {
-        let isCorrect = index == correctIndex
-        let isRevealed = revealedOption == index
-        let bg: Color = isRevealed && isCorrect ? Color(red: 0.70, green: 0.95, blue: 0.80) : Color.white
+    private func quizOption(index: Int, option: String) -> some View {
+        let isCorrect = index == current.correctIndex
+        let isRevealed = revealed && isCorrect
+        let bg: Color = isRevealed ? Color(red: 0.70, green: 0.95, blue: 0.80) : Color.white
 
         HStack(spacing: 12) {
             ZStack {
                 Circle()
-                    .fill(isRevealed && isCorrect ? ink : Color.clear)
+                    .fill(isRevealed ? ink : Color.clear)
                     .overlay {
-                        Circle().strokeBorder(ink.opacity(isRevealed && isCorrect ? 1 : 0.25), lineWidth: 2)
+                        Circle().strokeBorder(ink.opacity(isRevealed ? 1 : 0.25), lineWidth: 2)
                     }
                     .frame(width: 22, height: 22)
 
-                if isRevealed && isCorrect && showCheck {
+                if isRevealed && showCheck {
                     Image(systemName: "checkmark")
                         .font(.system(size: 11, weight: .black))
                         .foregroundStyle(.white)
@@ -387,10 +420,11 @@ struct OnboardingShowcaseQuizScreen: View {
                 }
             }
 
-            Text(languageManager.text("onboarding.showcase.quiz.option.\(index)"))
+            Text(option)
                 .font(.system(.subheadline, design: .rounded, weight: .heavy))
                 .foregroundStyle(ink)
                 .multilineTextAlignment(.leading)
+                .fixedSize(horizontal: false, vertical: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
         .padding(.horizontal, 14)
@@ -400,134 +434,168 @@ struct OnboardingShowcaseQuizScreen: View {
             RoundedRectangle(cornerRadius: 14, style: .continuous)
                 .strokeBorder(ink, lineWidth: 2.2)
         }
-        .scaleEffect(isRevealed && isCorrect ? 1.02 : 1)
+        .scaleEffect(isRevealed ? 1.02 : 1)
         .animation(.spring(response: 0.35, dampingFraction: 0.7), value: isRevealed)
     }
 
-    private func animateQuiz() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
-            withAnimation(.spring(response: 0.4, dampingFraction: 0.72)) {
-                revealedOption = correctIndex
+    /// Onboarding question first, then a couple of real (already-localized) course
+    /// quiz questions, kept short so the card height stays stable.
+    private func buildPrompts() -> [QuizPrompt] {
+        var list: [QuizPrompt] = [fallbackPrompt]
+        let extra = CuratedStarterCourses.ids
+            .compactMap { ContentCatalog.course(withId: $0, language: languageManager.current) }
+            .flatMap(\.quiz)
+            .filter { q in
+                q.options.count == 4
+                    && q.question.count <= 80
+                    && q.options.allSatisfy { $0.count <= 34 }
             }
+        for q in extra {
+            list.append(QuizPrompt(question: q.question, options: q.options, correctIndex: q.correctIndex))
+            if list.count == 3 { break }
+        }
+        return list
+    }
+
+    private func runQuestion(_ i: Int) {
+        withAnimation(.spring(response: 0.45, dampingFraction: 0.82)) {
+            qIndex = i
+            revealed = false
+            showCheck = false
+            showXPBadge = false
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.75) {
+            guard qIndex == i else { return }
+            withAnimation(.spring(response: 0.4, dampingFraction: 0.72)) { revealed = true }
             OnboardingHaptics.selection()
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.05) {
-            withAnimation(.spring(response: 0.3, dampingFraction: 0.6)) {
-                showCheck = true
-            }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.1) {
+            guard qIndex == i else { return }
+            withAnimation(.spring(response: 0.3, dampingFraction: 0.6)) { showCheck = true }
             OnboardingHaptics.primaryCTA()
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.45) {
-            withAnimation(.spring(response: 0.45, dampingFraction: 0.65)) {
-                showXPBadge = true
-            }
+            guard qIndex == i else { return }
+            withAnimation(.spring(response: 0.45, dampingFraction: 0.65)) { showXPBadge = true }
+        }
+
+        // Chain to the next question, then stop on the last one (revealed).
+        guard i + 1 < max(prompts.count, 1) else { return }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.6) {
+            runQuestion(i + 1)
         }
     }
 }
 
-// MARK: - 9 · Collections — two covers crossfading with a fill-up progress bar
+// MARK: - Collections — a single collection with a segmented fill-in animation
 
 struct OnboardingShowcaseCollectionsScreen: View {
     let onNext: () -> Void
 
-    @State private var progress: CGFloat = 0
-    @State private var activeIndex: Int = 0
+    @State private var filledCount: Int = 0
+    @State private var cardPop = false
 
-    private var collections: [LearningCollection] {
-        Array(ContentCatalog.activeCollections.prefix(2))
+    private var collection: LearningCollection? {
+        ContentCatalog.activeCollections.first
+    }
+
+    private var stepCount: Int {
+        max(collection?.courseIds.count ?? 3, 1)
     }
 
     var body: some View {
         OnboardingShowcaseLayout(titleKey: "onboarding.showcase.collections.title", onNext: onNext) {
-            ZStack {
-                ForEach(Array(collections.enumerated()), id: \.element.id) { index, collection in
-                    mockCollectionCard(collection, accentIndex: index)
-                        .opacity(activeIndex == index ? 1 : 0)
-                        .scaleEffect(activeIndex == index ? 1 : 0.95)
-                        .rotation3DEffect(
-                            .degrees(activeIndex == index ? 0 : 8),
-                            axis: (x: 0, y: 1, z: 0)
-                        )
-                }
+            if let collection {
+                collectionCard(collection)
+                    .scaleEffect(cardPop ? 1 : 0.96)
             }
         }
-        .onOnboardingSlideSettled(delay: 0.35) {
-            animateFirst()
-            guard collections.count > 1 else { return }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.3) {
-                withAnimation(.spring(response: 0.55, dampingFraction: 0.78)) {
-                    activeIndex = 1
-                    progress = 0
-                }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-                    withAnimation(.easeInOut(duration: 1.1)) { progress = 1 }
+        .onOnboardingSlideSettled(delay: 0.3) {
+            withAnimation(.spring(response: 0.5, dampingFraction: 0.72)) {
+                cardPop = true
+            }
+            animateSteps()
+        }
+    }
+
+    private func animateSteps() {
+        for step in 1...stepCount {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.35 * Double(step)) {
+                withAnimation(.spring(response: 0.42, dampingFraction: 0.68)) {
+                    filledCount = step
                 }
                 OnboardingHaptics.selection()
             }
         }
     }
 
-    private func animateFirst() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
-            withAnimation(.easeInOut(duration: 1.3)) { progress = 1 }
-            OnboardingHaptics.selection()
-        }
-    }
-
     @ViewBuilder
-    private func mockCollectionCard(_ collection: LearningCollection, accentIndex: Int) -> some View {
+    private func collectionCard(_ collection: LearningCollection) -> some View {
         let ink = BrutalPalette.ink
-        let depth: CGFloat = 5
-        let total = max(collection.courseIds.count, 1)
-        let completed = min(Int((progress * 3).rounded()), total)
+        let total = stepCount
+        let isComplete = filledCount >= total
 
         VStack(alignment: .leading, spacing: 0) {
-            CollectionCoverView(collection: collection, accentIndex: accentIndex)
-                .frame(height: 128)
+            CollectionCoverView(collection: collection, accentIndex: 0)
+                .frame(height: 150)
                 .overlay(alignment: .bottom) {
                     Rectangle().fill(ink).frame(height: 3)
                 }
 
-            VStack(alignment: .leading, spacing: 12) {
+            VStack(alignment: .leading, spacing: 16) {
                 Text(collection.title)
                     .font(.system(.title3, design: .rounded, weight: .black))
                     .foregroundStyle(ink)
                     .lineLimit(2)
+                    .fixedSize(horizontal: false, vertical: true)
 
-                GeometryReader { geo in
-                    ZStack(alignment: .leading) {
-                        Capsule().fill(ink.opacity(0.1))
+                // Segmented progress — one crisp segment per course, filling in sequence.
+                HStack(spacing: 6) {
+                    ForEach(0..<total, id: \.self) { index in
+                        let filled = index < filledCount
                         Capsule()
-                            .fill(BrutalPalette.pink)
-                            .frame(width: geo.size.width * min(progress, 1))
+                            .fill(filled ? BrutalPalette.pink : ink.opacity(0.1))
+                            .frame(height: 12)
+                            .overlay {
+                                Capsule().strokeBorder(ink.opacity(filled ? 1 : 0.2), lineWidth: 1.8)
+                            }
+                            .scaleEffect(y: filled ? 1 : 0.82)
                     }
                 }
-                .frame(height: 10)
 
-                HStack {
-                    Text("\(completed) / \(total)")
+                HStack(spacing: 8) {
+                    Image(systemName: isComplete ? "checkmark.seal.fill" : "square.stack.3d.up.fill")
+                        .font(.system(size: 13, weight: .black))
+                        .foregroundStyle(ink.opacity(0.75))
+                        .contentTransition(.symbolEffect(.replace))
+
+                    Text("\(filledCount) / \(total)")
                         .font(.system(.caption, design: .rounded, weight: .black))
                         .monospacedDigit()
+                        .foregroundStyle(ink.opacity(0.75))
+
                     Spacer()
+
                     Text("+\(total * ProgressManager.globalCollectionXPPerCourse) XP")
                         .font(.system(.caption2, design: .rounded, weight: .black))
-                        .padding(.horizontal, 8)
-                        .padding(.vertical, 4)
+                        .foregroundStyle(ink)
+                        .padding(.horizontal, 9)
+                        .padding(.vertical, 5)
                         .background(BrutalPalette.yellow, in: Capsule())
                         .overlay { Capsule().strokeBorder(ink, lineWidth: 1.5) }
+                        .scaleEffect(isComplete ? 1.06 : 1)
                 }
-                .foregroundStyle(ink.opacity(0.7))
             }
             .padding(16)
             .background(Color.white)
         }
-        .frame(maxWidth: 320)
+        .frame(maxWidth: 330)
         .clipShape(.rect(cornerRadius: 22))
         .overlay {
             RoundedRectangle(cornerRadius: 22, style: .continuous)
                 .strokeBorder(ink, lineWidth: 3)
         }
-        .brutalOffsetPlate(depth: depth, corner: 22)
+        .brutalOffsetPlate(depth: 5, corner: 22)
     }
 }
 

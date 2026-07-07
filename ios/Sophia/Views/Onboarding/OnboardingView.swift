@@ -121,23 +121,23 @@ struct OnboardingView: View {
                 case 3:
                     OnboardingWastedTimeScreen(viewModel: viewModel, onNext: advance)
                 case 4:
-                    OnboardingShowcaseCoursesScreen(onNext: advance)
-                case 5:
                     OnboardingObjectivesScreen(viewModel: viewModel, onNext: advance)
-                case 6:
-                    OnboardingShowcaseQuizScreen(onNext: advance)
-                case 7:
-                    OnboardingSocialProofScreen(onNext: advance)
-                case 8:
+                case 5:
                     OnboardingInterestsScreen(viewModel: viewModel, onNext: advance)
-                case 9:
-                    OnboardingShowcaseCollectionsScreen(onNext: advance)
-                case 10:
-                    OnboardingShowcaseCardsScreen(onNext: advance)
-                case 11:
+                case 6:
+                    OnboardingSocialProofScreen(onNext: advance)
+                case 7:
+                    OnboardingShowcaseCoursesScreen(onNext: advance)
+                case 8:
                     OnboardingDailyGoalScreen(viewModel: viewModel, onNext: advance)
-                case 12:
+                case 9:
                     OnboardingProjectionScreen(viewModel: viewModel, onNext: advance)
+                case 10:
+                    OnboardingShowcaseQuizScreen(onNext: advance)
+                case 11:
+                    OnboardingShowcaseCardsScreen(onNext: advance)
+                case 12:
+                    OnboardingShowcaseCollectionsScreen(onNext: advance)
                 case 13:
                     OnboardingShowcaseXPScreen(onNext: advance)
                 case 14:
@@ -277,7 +277,7 @@ struct OnboardingView: View {
 
     private func advance() {
         OnboardingHaptics.slideTransition()
-        if viewModel.currentScreen == 8 {
+        if viewModel.currentScreen == 5 {
             viewModel.finalizeInterests()
             AnalyticsService.trackOnboardingInterestsSet(viewModel.interests)
         }

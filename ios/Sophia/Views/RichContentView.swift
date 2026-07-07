@@ -267,7 +267,7 @@ private struct CourseInlineText: View {
             ForEach(Array(paragraphs.enumerated()), id: \.offset) { _, paragraph in
                 VStack(alignment: .leading, spacing: 6) {
                     ForEach(Array(paragraph.lines.enumerated()), id: \.offset) { _, line in
-                        FlowInlineLayout(spacing: 0, rowSpacing: 10) {
+                        FlowInlineLayout(spacing: 0, rowSpacing: 7) {
                             ForEach(Array(line.enumerated()), id: \.offset) { _, token in
                                 switch token {
                                 case .prose(let text, let bold):

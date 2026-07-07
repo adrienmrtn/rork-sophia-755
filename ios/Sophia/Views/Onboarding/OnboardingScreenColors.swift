@@ -8,11 +8,11 @@ enum OnboardingScreenColors {
     static func background(for screen: Int) -> Color {
         switch screen {
         case 3: return blush
-        case 4: return OnboardingPastels.at(0)   // Showcase Cours — peach
-        case 6: return OnboardingPastels.at(1)   // Showcase Quiz — mint
-        case 9: return OnboardingPastels.at(5)   // Showcase Collections — sky
-        case 10: return OnboardingPastels.at(4)  // Showcase Cartes — lavande
-        case 12: return projectionPink
+        case 7: return OnboardingPastels.at(0)   // Showcase Cours — peach
+        case 9: return projectionPink            // Projection — animation
+        case 10: return OnboardingPastels.at(1)  // Showcase Quiz — mint
+        case 11: return OnboardingPastels.at(4)  // Showcase Cartes — lavande
+        case 12: return OnboardingPastels.at(5)  // Showcase Collections — sky
         case 13: return goldXP                   // Showcase XP — gold
         default: return BrutalPalette.cream
         }
