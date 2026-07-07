@@ -348,7 +348,7 @@ struct CourseView: View {
         }
         .buttonStyle(
             DuolingoButtonStyle(
-                fill: showsUnlockInsteadOfComplete ? Color(red: 0.18, green: 0.72, blue: 0.55) : pink,
+                fill: showsUnlockInsteadOfComplete ? Color(red: 0.11, green: 0.85, blue: 0.53) : pink,
                 shimmer: shouldShimmerBottomButton ? quizButtonShimmer : nil
             )
         )

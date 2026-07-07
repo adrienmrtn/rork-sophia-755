@@ -278,7 +278,6 @@ struct OnboardingView: View {
     private func advance() {
         OnboardingHaptics.slideTransition()
         if viewModel.currentScreen == 5 {
-            viewModel.finalizeInterests()
             AnalyticsService.trackOnboardingInterestsSet(viewModel.interests)
         }
 
