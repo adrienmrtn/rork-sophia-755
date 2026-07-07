@@ -89,27 +89,6 @@ class OnboardingViewModel {
         dailyLearningGoal = min(max(proposedGoal, dailyLearningGoalRange.lowerBound), dailyLearningGoalRange.upperBound)
     }
 
-    /// Stable subject keys for onboarding interests (language-independent).
-    static let allInterestKeys: [String] = Subject.allCases.map(\.storageKey)
-
-    /// Normalize the user's selection to **exactly 3** interests for the onboarding UI.
-    /// Not persisted — used only during the flow.
-    func finalizeInterests() {
-        let all = OnboardingViewModel.allInterestKeys
-        let selected = interests
-        var result: Set<String>
-        if selected.count == 3 {
-            result = selected
-        } else if selected.count < 3 {
-            let pool = all.filter { !selected.contains($0) }.shuffled()
-            let needed = 3 - selected.count
-            result = selected.union(pool.prefix(needed))
-        } else {
-            result = Set(selected.shuffled().prefix(3))
-        }
-        interests = result
-    }
-
     static let interestsKey = "sophia_user_interests"
 
     static func loadPersistedInterests() -> Set<String> {

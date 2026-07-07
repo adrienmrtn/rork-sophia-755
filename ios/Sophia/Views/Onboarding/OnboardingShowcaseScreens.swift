@@ -82,13 +82,11 @@ struct OnboardingShowcaseCoursesScreen: View {
                             accent: OnboardingPastels.at(index)
                         )
                         .padding(.horizontal, 2)
-                        .frame(maxHeight: .infinity, alignment: .top)
-                        .padding(.bottom, 6)
                         .tag(index)
                     }
                 }
                 .tabViewStyle(.page(indexDisplayMode: .never))
-                .frame(height: 344)
+                .frame(height: 348)
 
                 HStack(spacing: 6) {
                     ForEach(0..<courses.count, id: \.self) { index in
@@ -136,7 +134,8 @@ private struct OnboardingCourseExampleCard: View {
     }
 
     private let corner: CGFloat = 24
-    private let heroHeight: CGFloat = 116
+    private let heroHeight: CGFloat = 108
+    private let cardHeight: CGFloat = 316
 
     var body: some View {
         VStack(spacing: 0) {
@@ -221,7 +220,7 @@ private struct OnboardingCourseExampleCard: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             .background(Color.white)
         }
-        .frame(maxHeight: .infinity)
+        .frame(height: cardHeight)
         .clipShape(RoundedRectangle(cornerRadius: corner, style: .continuous))
         .overlay {
             RoundedRectangle(cornerRadius: corner, style: .continuous)
@@ -271,7 +270,7 @@ private struct OnboardingInlineCourseImage: View {
                 .padding(6)
         }
         .frame(maxWidth: .infinity)
-        .frame(height: 52)
+        .frame(height: 44)
         .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
         .overlay {
             RoundedRectangle(cornerRadius: 14, style: .continuous)
@@ -357,10 +356,7 @@ struct OnboardingShowcaseQuizScreen: View {
                     }
                 }
                 .id(qIndex)
-                .transition(.asymmetric(
-                    insertion: .move(edge: .trailing).combined(with: .opacity),
-                    removal: .move(edge: .leading).combined(with: .opacity)
-                ))
+                .transition(.opacity.combined(with: .scale(scale: 0.97)))
             }
             .padding(20)
             .frame(maxWidth: .infinity, minHeight: 330, alignment: .topLeading)
@@ -374,11 +370,10 @@ struct OnboardingShowcaseQuizScreen: View {
                         .padding(.vertical, 6)
                         .background(BrutalPalette.yellow, in: Capsule())
                         .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
-                        .offset(x: 6, y: -12)
+                        .offset(x: -2, y: -10)
                         .transition(.scale(scale: 0.6).combined(with: .opacity))
                 }
             }
-            .clipped()
         }
         .onOnboardingSlideSettled(delay: 0.4) {
             if prompts.isEmpty { prompts = buildPrompts() }
