@@ -5,10 +5,12 @@ struct OnboardingPhoneTimeScreen: View {
     @Bindable var viewModel: OnboardingViewModel
     let onNext: () -> Void
 
-    @State private var appeared: Bool = false
-    @State private var numberPulse: Bool = false
+    @State private var appeared: Bool = true
 
     private let ink = BrutalPalette.ink
+
+    private var wholeHours: Int { Int(viewModel.phoneDailyHours) }
+    private var hasHalf: Bool { (viewModel.phoneDailyHours - Double(wholeHours)) >= 0.25 }
 
     private var hoursBinding: Binding<Double> {
         Binding(
@@ -46,7 +48,6 @@ struct OnboardingPhoneTimeScreen: View {
 
             VStack(spacing: 12) {
                 SmoothHoursSlider(hours: hoursBinding) {
-                    numberPulse.toggle()
                     OnboardingHaptics.selection()
                 }
 
@@ -71,22 +72,32 @@ struct OnboardingPhoneTimeScreen: View {
         .onboardingFullBleedBackground(BrutalPalette.cream)
         .onAppear {
             viewModel.setPhoneDailyHours(viewModel.phoneDailyHours)
-            withAnimation(.spring(response: 0.6, dampingFraction: 0.75).delay(0.15)) {
-                appeared = true
-            }
         }
     }
 
     private var hoursDisplay: some View {
         VStack(spacing: 14) {
-            Text(viewModel.phoneHoursPerDayLabel(language: languageManager.current))
-                .font(.system(size: 84, weight: .heavy, design: .rounded))
-                .foregroundStyle(ink)
-                .monospacedDigit()
-                .contentTransition(.numericText())
-                .animation(.snappy(duration: 0.28), value: viewModel.phoneDailyHours)
-                .scaleEffect(numberPulse ? 1.06 : 1.0)
-                .animation(.spring(response: 0.25, dampingFraction: 0.5), value: numberPulse)
+            HStack(alignment: .firstTextBaseline, spacing: 1) {
+                Text("\(wholeHours)")
+                    .font(.system(size: 88, weight: .heavy, design: .rounded))
+                    .foregroundStyle(ink)
+                    .monospacedDigit()
+                    .contentTransition(.numericText())
+
+                Text("h")
+                    .font(.system(size: 52, weight: .heavy, design: .rounded))
+                    .foregroundStyle(ink.opacity(0.7))
+
+                if hasHalf {
+                    Text("30")
+                        .font(.system(size: 44, weight: .heavy, design: .rounded))
+                        .foregroundStyle(ink.opacity(0.7))
+                        .monospacedDigit()
+                        .transition(.opacity)
+                }
+            }
+            .animation(.snappy(duration: 0.3), value: wholeHours)
+            .animation(.snappy(duration: 0.3), value: hasHalf)
 
             HStack(spacing: 6) {
                 Circle()
@@ -96,13 +107,12 @@ struct OnboardingPhoneTimeScreen: View {
                 Text(languageManager.text(intensity.labelKey))
                     .font(.system(.subheadline, design: .rounded, weight: .black))
                     .foregroundStyle(ink)
-                    .contentTransition(.opacity)
             }
             .padding(.horizontal, 14)
             .padding(.vertical, 8)
             .background(intensity.color.opacity(0.28), in: Capsule())
             .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
-            .animation(.snappy(duration: 0.25), value: viewModel.phoneDailyHours)
+            .animation(.snappy(duration: 0.25), value: wholeHours)
         }
     }
 }
@@ -136,8 +146,7 @@ private struct SmoothHoursSlider: View {
                 Capsule()
                     .fill(LinearGradient(colors: [BrutalPalette.pink, BrutalPalette.yellow], startPoint: .leading, endPoint: .trailing))
                     .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
-                    .frame(width: x + thumb / 2 + trackHeight / 2, height: trackHeight)
-                    .animation(.snappy(duration: 0.22), value: hours)
+                    .frame(width: max(trackHeight, x + thumb / 2), height: trackHeight)
 
                 ZStack {
                     Circle().fill(ink).frame(width: thumb, height: thumb).offset(y: 3)
@@ -149,9 +158,8 @@ private struct SmoothHoursSlider: View {
                         .font(.system(size: 15, weight: .black))
                         .foregroundStyle(ink)
                 }
-                .scaleEffect(dragging ? 1.18 : 1.0)
+                .scaleEffect(dragging ? 1.16 : 1.0)
                 .offset(x: x)
-                .animation(.snappy(duration: 0.22), value: hours)
                 .animation(.spring(response: 0.25, dampingFraction: 0.6), value: dragging)
             }
             .frame(height: thumb, alignment: .center)
@@ -159,7 +167,7 @@ private struct SmoothHoursSlider: View {
             .gesture(
                 DragGesture(minimumDistance: 0)
                     .onChanged { value in
-                        dragging = true
+                        if !dragging { dragging = true }
                         let loc = min(max(0, value.location.x - thumb / 2), usable)
                         let raw = range.lowerBound + Double(loc / usable) * (range.upperBound - range.lowerBound)
                         let snapped = min(range.upperBound, max(range.lowerBound, (raw / step).rounded() * step))
