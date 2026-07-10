@@ -4,61 +4,173 @@ struct OnboardingPhoneTimeScreen: View {
     @Environment(LanguageManager.self) private var languageManager
     @Bindable var viewModel: OnboardingViewModel
     let onNext: () -> Void
-    @State private var appeared: Bool = true
 
-    private var options: [(icon: String, labelKey: String, index: Int)] {
-        [
-            (icon: "clock", labelKey: "onboarding.phone.lessThan1h", index: 0),
-            (icon: "clock.badge.checkmark", labelKey: "onboarding.phone.1to2h", index: 1),
-            (icon: "clock.badge.exclamationmark", labelKey: "onboarding.phone.2to4h", index: 2),
-            (icon: "clock.badge.xmark", labelKey: "onboarding.phone.moreThan4h", index: 3),
-        ]
+    @State private var appeared: Bool = false
+    @State private var numberPulse: Bool = false
+
+    private let ink = BrutalPalette.ink
+
+    private var hoursBinding: Binding<Double> {
+        Binding(
+            get: { viewModel.phoneDailyHours },
+            set: { viewModel.setPhoneDailyHours($0) }
+        )
+    }
+
+    private var intensity: (labelKey: String, color: Color) {
+        switch OnboardingViewModel.phoneBucket(forHours: viewModel.phoneDailyHours) {
+        case 0: return ("onboarding.phone.intensity.light", OnboardingPastels.at(1))
+        case 1: return ("onboarding.phone.intensity.moderate", OnboardingPastels.at(0))
+        case 2: return ("onboarding.phone.intensity.high", BrutalPalette.pink)
+        default: return ("onboarding.phone.intensity.intense", Color(red: 1.0, green: 0.45, blue: 0.45))
+        }
     }
 
     var body: some View {
         VStack(spacing: 0) {
-            Spacer().frame(height: 32)
+            Spacer().frame(height: 40)
 
-                OnboardingHeader(
-                    title: languageManager.text("onboarding.phone.title"),
-                    subtitle: languageManager.text("onboarding.phone.subtitle"),
-                    appeared: appeared
-                )
+            OnboardingHeader(
+                title: languageManager.text("onboarding.phone.title"),
+                subtitle: languageManager.text("onboarding.phone.subtitle"),
+                appeared: appeared
+            )
 
-                Spacer().frame(height: 32)
+            Spacer()
 
-                VStack(spacing: 10) {
-                    ForEach(Array(options.enumerated()), id: \.offset) { i, option in
-                        let isSelected = viewModel.phoneTimeSelection == option.index
-                        BrutalSelectableRow(
-                            icon: option.icon,
-                            label: languageManager.text(option.labelKey),
-                            isSelected: isSelected,
-                            accentColor: OnboardingPastels.at(i)
-                        ) {
-                            OnboardingHaptics.selection()
-                            withAnimation(.spring(response: 0.35, dampingFraction: 0.7)) {
-                                viewModel.phoneTimeSelection = option.index
-                            }
-                        }
-                        .opacity(appeared ? 1 : 0)
-                        .offset(y: appeared ? 0 : 20)
-                        .animation(.spring(response: 0.5).delay(Double(i) * 0.08), value: appeared)
+            hoursDisplay
+                .opacity(appeared ? 1 : 0)
+                .scaleEffect(appeared ? 1 : 0.85)
+
+            Spacer().frame(height: 40)
+
+            VStack(spacing: 12) {
+                SmoothHoursSlider(hours: hoursBinding) {
+                    numberPulse.toggle()
+                    OnboardingHaptics.selection()
+                }
+
+                HStack {
+                    ForEach([0, 2, 4, 6, 8], id: \.self) { tick in
+                        Text("\(tick)h")
+                            .font(.system(.caption2, design: .rounded, weight: .heavy))
+                            .foregroundStyle(ink.opacity(0.4))
+                            .frame(maxWidth: .infinity)
                     }
                 }
-                .padding(.horizontal, 24)
+            }
+            .padding(.horizontal, 28)
+            .opacity(appeared ? 1 : 0)
+            .offset(y: appeared ? 0 : 20)
 
-                Spacer()
+            Spacer()
 
-                OnboardingPrimaryButton(title: languageManager.text("common.continue"), isEnabled: viewModel.canProceed, action: onNext)
-                    .opacity(appeared ? 1 : 0)
+            OnboardingPrimaryButton(title: languageManager.text("common.continue"), isEnabled: viewModel.canProceed, action: onNext)
+                .opacity(appeared ? 1 : 0)
         }
         .onboardingFullBleedBackground(BrutalPalette.cream)
-        .sensoryFeedback(.selection, trigger: viewModel.phoneTimeSelection)
         .onAppear {
+            viewModel.setPhoneDailyHours(viewModel.phoneDailyHours)
             withAnimation(.spring(response: 0.6, dampingFraction: 0.75).delay(0.15)) {
                 appeared = true
             }
         }
+    }
+
+    private var hoursDisplay: some View {
+        VStack(spacing: 14) {
+            Text(viewModel.phoneHoursPerDayLabel(language: languageManager.current))
+                .font(.system(size: 84, weight: .heavy, design: .rounded))
+                .foregroundStyle(ink)
+                .monospacedDigit()
+                .contentTransition(.numericText())
+                .animation(.snappy(duration: 0.28), value: viewModel.phoneDailyHours)
+                .scaleEffect(numberPulse ? 1.06 : 1.0)
+                .animation(.spring(response: 0.25, dampingFraction: 0.5), value: numberPulse)
+
+            HStack(spacing: 6) {
+                Circle()
+                    .fill(intensity.color)
+                    .frame(width: 9, height: 9)
+                    .overlay { Circle().strokeBorder(ink, lineWidth: 1.5) }
+                Text(languageManager.text(intensity.labelKey))
+                    .font(.system(.subheadline, design: .rounded, weight: .black))
+                    .foregroundStyle(ink)
+                    .contentTransition(.opacity)
+            }
+            .padding(.horizontal, 14)
+            .padding(.vertical, 8)
+            .background(intensity.color.opacity(0.28), in: Capsule())
+            .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
+            .animation(.snappy(duration: 0.25), value: viewModel.phoneDailyHours)
+        }
+    }
+}
+
+/// Chunky neo-brutalist slider with snapping and a satisfying draggable thumb.
+private struct SmoothHoursSlider: View {
+    @Binding var hours: Double
+    var onStepChange: () -> Void
+
+    private let range: ClosedRange<Double> = 0...8
+    private let step: Double = 0.5
+    private let thumb: CGFloat = 38
+    private let trackHeight: CGFloat = 18
+
+    @State private var dragging = false
+
+    private let ink = BrutalPalette.ink
+
+    var body: some View {
+        GeometryReader { geo in
+            let usable = max(1, geo.size.width - thumb)
+            let frac = CGFloat((hours - range.lowerBound) / (range.upperBound - range.lowerBound))
+            let x = usable * frac
+
+            ZStack(alignment: .leading) {
+                Capsule()
+                    .fill(Color.white)
+                    .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
+                    .frame(height: trackHeight)
+
+                Capsule()
+                    .fill(LinearGradient(colors: [BrutalPalette.pink, BrutalPalette.yellow], startPoint: .leading, endPoint: .trailing))
+                    .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
+                    .frame(width: x + thumb / 2 + trackHeight / 2, height: trackHeight)
+                    .animation(.snappy(duration: 0.22), value: hours)
+
+                ZStack {
+                    Circle().fill(ink).frame(width: thumb, height: thumb).offset(y: 3)
+                    Circle()
+                        .fill(BrutalPalette.pink)
+                        .frame(width: thumb, height: thumb)
+                        .overlay { Circle().strokeBorder(ink, lineWidth: 3) }
+                    Image(systemName: "iphone")
+                        .font(.system(size: 15, weight: .black))
+                        .foregroundStyle(ink)
+                }
+                .scaleEffect(dragging ? 1.18 : 1.0)
+                .offset(x: x)
+                .animation(.snappy(duration: 0.22), value: hours)
+                .animation(.spring(response: 0.25, dampingFraction: 0.6), value: dragging)
+            }
+            .frame(height: thumb, alignment: .center)
+            .contentShape(Rectangle())
+            .gesture(
+                DragGesture(minimumDistance: 0)
+                    .onChanged { value in
+                        dragging = true
+                        let loc = min(max(0, value.location.x - thumb / 2), usable)
+                        let raw = range.lowerBound + Double(loc / usable) * (range.upperBound - range.lowerBound)
+                        let snapped = min(range.upperBound, max(range.lowerBound, (raw / step).rounded() * step))
+                        if snapped != hours {
+                            hours = snapped
+                            onStepChange()
+                        }
+                    }
+                    .onEnded { _ in dragging = false }
+            )
+        }
+        .frame(height: thumb)
     }
 }

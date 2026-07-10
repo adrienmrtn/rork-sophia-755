@@ -149,7 +149,6 @@ struct ProfileView: View {
 
     private var identityHeader: some View {
         let p = progressManager.globalLevelProgress
-        let streak = progressManager.streak
 
         return ZStack(alignment: .top) {
             RoundedRectangle(cornerRadius: 26, style: .continuous)
@@ -182,7 +181,9 @@ struct ProfileView: View {
                         .minimumScaleFactor(0.8)
                         .fixedSize(horizontal: false, vertical: true)
 
-                    streakInlineChip(streak)
+                    Text(languageManager.text("globalRank.title"))
+                        .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                        .foregroundStyle(ink.opacity(0.5))
                 }
 
                 Spacer(minLength: 0)
@@ -196,23 +197,6 @@ struct ProfileView: View {
             }
         }
         .padding(.bottom, 7)
-    }
-
-    private func streakInlineChip(_ streak: Int) -> some View {
-        HStack(spacing: 6) {
-            AnimatedFlameBadge(size: 15, showGlow: false)
-            Text("\(streak)")
-                .font(.system(.subheadline, design: .rounded, weight: .black))
-                .foregroundStyle(ink)
-                .monospacedDigit()
-            Text(streak <= 1 ? languageManager.text("common.streak.day") : languageManager.text("common.streak.days"))
-                .font(.system(.caption, design: .rounded, weight: .heavy))
-                .foregroundStyle(ink.opacity(0.6))
-        }
-        .padding(.horizontal, 12)
-        .padding(.vertical, 7)
-        .background(BrutalPalette.pastel(for: .histoire), in: Capsule())
-        .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
     }
 
     // MARK: - Bento stats
