@@ -51,7 +51,7 @@ struct OnboardingObjectivesScreen: View {
                 }
                 .scrollIndicators(.hidden)
 
-                OnboardingPrimaryButton(title: languageManager.text("common.next"), isEnabled: viewModel.canProceed, action: onNext)
+                OnboardingPrimaryButton(title: languageManager.text("common.continue"), isEnabled: viewModel.canProceed, action: onNext)
                     .opacity(appeared ? 1 : 0)
         }
         .onboardingFullBleedBackground(BrutalPalette.cream)

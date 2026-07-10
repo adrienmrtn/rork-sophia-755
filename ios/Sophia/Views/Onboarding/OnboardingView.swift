@@ -78,12 +78,12 @@ struct OnboardingView: View {
             }
         }
         .onChange(of: displayedScreen) { _, screen in
-            if screen == 14, !useNativeOnboardingPaywall {
+            if screen == 13, !useNativeOnboardingPaywall {
                 prefetchFinOnboardingOffering()
             }
         }
         .onChange(of: incomingScreen) { _, screen in
-            if screen == 14, !useNativeOnboardingPaywall {
+            if screen == 13, !useNativeOnboardingPaywall {
                 prefetchFinOnboardingOffering()
             }
         }
@@ -139,9 +139,9 @@ struct OnboardingView: View {
                 case 12:
                     OnboardingShowcaseCollectionsScreen(onNext: advance)
                 case 13:
-                    OnboardingShowcaseXPScreen(onNext: advance)
-                case 14:
                     OnboardingLoadingScreen(viewModel: viewModel, onNext: loadingScreenCompleted)
+                case 14:
+                    OnboardingProgramScreen(viewModel: viewModel, onNext: advance)
                 case 15:
                     OnboardingPremiumGiftScreen(onNext: advance)
                 case 16:
@@ -171,6 +171,11 @@ struct OnboardingView: View {
                     }
                     let success = await storeVM.purchase(package: package)
                     if success {
+                        AnalyticsService.trackPurchaseCompleted(
+                            context: SophiaPaywallContext.finOnboarding.rawValue,
+                            offeringId: storeVM.offerings?.current?.identifier,
+                            packageId: package.identifier
+                        )
                         await MainActor.run { finishOnboarding() }
                     }
                 }
@@ -262,8 +267,8 @@ struct OnboardingView: View {
         onComplete()
     }
 
-    /// Onboarding value screens that show progress dots (excludes intro, loading, and paywalls).
-    private static let progressQuestionScreens = Array(1...13)
+    /// Onboarding value screens that show progress dots (excludes intro, loading, program, and paywalls).
+    private static let progressQuestionScreens = Array(1...12)
 
     private var showsOnboardingProgressDots: Bool {
         let active = incomingScreen ?? displayedScreen
@@ -278,6 +283,7 @@ struct OnboardingView: View {
     private func advance() {
         OnboardingHaptics.slideTransition()
         if viewModel.currentScreen == 5 {
+            viewModel.persistInterests()
             AnalyticsService.trackOnboardingInterestsSet(viewModel.interests)
         }
 

@@ -39,7 +39,13 @@ struct SophiaPaywallView: View {
     @ViewBuilder
     private func configuredPaywall(offering: Offering) -> some View {
         let paywall = PaywallView(offering: offering)
-            .onPurchaseCompleted { _ in onPurchased() }
+            .onPurchaseCompleted { _ in
+                AnalyticsService.trackPurchaseCompleted(
+                    context: context.rawValue,
+                    offeringId: offering.identifier
+                )
+                onPurchased()
+            }
             .onRestoreCompleted { _ in onRestored() }
 
         paywall.onRequestedDismissal {

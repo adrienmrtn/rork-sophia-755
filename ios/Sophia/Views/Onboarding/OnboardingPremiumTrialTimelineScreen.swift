@@ -53,7 +53,7 @@ struct OnboardingPremiumTrialTimelineScreen: View {
             Spacer()
 
             OnboardingPrimaryButton(
-                title: languageManager.text("onboarding.premiumTrial.cta"),
+                title: languageManager.text("common.continue"),
                 action: onUnlockTrial
             )
             .opacity(buttonAppeared ? 1 : 0)

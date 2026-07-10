@@ -11,9 +11,9 @@ enum OnboardingScreenColors {
         case 7: return OnboardingPastels.at(0)   // Showcase Cours — peach
         case 9: return projectionPink            // Projection — animation
         case 10: return OnboardingPastels.at(1)  // Showcase Quiz — mint
-        case 11: return OnboardingPastels.at(4)  // Showcase Cartes — lavande
+        case 11: return goldXP                   // Showcase Cartes + XP — gold
         case 12: return OnboardingPastels.at(5)  // Showcase Collections — sky
-        case 13: return goldXP                   // Showcase XP — gold
+        case 14: return OnboardingPastels.at(1)  // Programme personnalisé — mint
         default: return BrutalPalette.cream
         }
     }

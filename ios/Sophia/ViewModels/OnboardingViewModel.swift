@@ -91,6 +91,27 @@ class OnboardingViewModel {
 
     static let interestsKey = "sophia_user_interests"
 
+    func profileNicknames(language: AppLanguage) -> [String] {
+        let keys = Subject.allCases.map(\.storageKey).filter { interests.contains($0) }
+        if keys.isEmpty {
+            return [AppLocalizable.string("onboarding.program.nickname.default", language: language)]
+        }
+        return keys.map { AppLocalizable.string("onboarding.program.nickname.\($0)", language: language) }
+    }
+
+    func recommendedProgramCourses(language: AppLanguage) -> [Course] {
+        OnboardingCourseRecommender.recommendedCourses(interests: interests, language: language, limit: 4)
+    }
+
+    /// Rough estimate: ~12 minutes reclaimed per daily lesson, compounded over a year.
+    var projectedHoursSavedPerYear: Int {
+        max(24, (dailyLearningGoal * 12 * 365) / 60)
+    }
+
+    func persistInterests() {
+        UserDefaults.standard.set(Array(interests).sorted(), forKey: Self.interestsKey)
+    }
+
     static func loadPersistedInterests() -> Set<String> {
         guard let arr = UserDefaults.standard.array(forKey: interestsKey) as? [String] else { return [] }
         return Set(arr.map(migrateInterestKey))
@@ -118,25 +139,30 @@ class OnboardingViewModel {
         loadingBarProgress = [0, 0, 0]
         isLoadingComplete = false
 
-        let barDuration: Double = 2.0
-        let barStarts: [Double] = [0, 1.2, 2.4]
+        let plans: [(index: Int, start: Double, duration: Double, checkpoints: [Double])] = [
+            (0, 0.0, 2.4, [0.12, 0.28, 0.46, 0.63, 0.81, 0.94, 1.0]),
+            (1, 1.1, 2.8, [0.08, 0.22, 0.39, 0.55, 0.72, 0.88, 1.0]),
+            (2, 2.6, 3.1, [0.1, 0.24, 0.41, 0.58, 0.74, 0.9, 1.0]),
+        ]
 
-        for (index, start) in barStarts.enumerated() {
-            DispatchQueue.main.asyncAfter(deadline: .now() + start) { [weak self] in
-                guard let self else { return }
-                withAnimation(.easeInOut(duration: barDuration)) {
-                    var bars = self.loadingBarProgress
-                    guard bars.indices.contains(index) else { return }
-                    bars[index] = 1.0
-                    self.loadingBarProgress = bars
+        for plan in plans {
+            for checkpoint in plan.checkpoints {
+                let delay = plan.start + plan.duration * checkpoint
+                DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
+                    guard let self else { return }
+                    withAnimation(.easeOut(duration: 0.35)) {
+                        var bars = self.loadingBarProgress
+                        guard bars.indices.contains(plan.index) else { return }
+                        bars[plan.index] = checkpoint
+                        self.loadingBarProgress = bars
+                    }
                 }
             }
         }
 
-        let totalDuration = barStarts.last! + barDuration + 0.2
-        DispatchQueue.main.asyncAfter(deadline: .now() + totalDuration) { [weak self] in
-            guard let self else { return }
-            self.isLoadingComplete = true
+        let finishDelay = plans.map { $0.start + $0.duration }.max() ?? 5.5
+        DispatchQueue.main.asyncAfter(deadline: .now() + finishDelay + 0.35) { [weak self] in
+            self?.isLoadingComplete = true
         }
     }
 

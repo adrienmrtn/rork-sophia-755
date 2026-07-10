@@ -80,7 +80,7 @@ struct OnboardingIntroScreen: View {
                     onNext()
                 } label: {
                     HStack(spacing: 10) {
-                        Text(languageManager.text("onboarding.intro.cta"))
+                        Text(languageManager.text("common.continue"))
                             .font(.system(.headline, design: .rounded, weight: .heavy))
                         Image(systemName: "arrow.right")
                             .font(.subheadline.weight(.heavy))
