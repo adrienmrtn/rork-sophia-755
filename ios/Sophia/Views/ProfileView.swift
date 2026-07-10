@@ -15,6 +15,7 @@ struct ProfileView: View {
     @State private var showPendingGlobalRankUp: Bool = false
     @State private var hapticTrigger: Int = 0
     @State private var appeared: Bool = false
+    @State private var showSubjectDetails: Bool = false
 
     private let ink = BrutalPalette.ink
     private let cream = BrutalPalette.cream
@@ -25,36 +26,24 @@ struct ProfileView: View {
                 cream.ignoresSafeArea()
 
                 ScrollView {
-                    VStack(alignment: .leading, spacing: 24) {
+                    VStack(alignment: .leading, spacing: 22) {
                         titleBar
                             .padding(.horizontal, 20)
                             .padding(.top, 4)
 
-                        streakHero
+                        identityHeader
                             .padding(.horizontal, 20)
 
-                        GlobalRankProfileCard(progress: progressManager.globalLevelProgress)
+                        bentoStats
                             .padding(.horizontal, 20)
 
-                        CardsProfileSection(
-                            progressManager: progressManager,
-                            onShowAllCards: {
-                                hapticTrigger += 1
-                                showAllCards = true
-                            }
-                        )
-                        .padding(.horizontal, 20)
-
-                        QuizStatsProfileCard(stats: progressManager.quizStatsSummary)
+                        radarSection
                             .padding(.horizontal, 20)
 
                         favoritesShortcut
                             .padding(.horizontal, 20)
 
                         quizSection
-                            .padding(.horizontal, 20)
-
-                        progressionSection
                             .padding(.horizontal, 20)
                             .padding(.bottom, 40)
                     }
@@ -147,56 +136,230 @@ struct ProfileView: View {
         }
     }
 
-    // MARK: - Streak hero
+    // MARK: - Identity header (rank ring + nickname + streak inline)
 
-    private var streakHero: some View {
+    private var nickname: String {
+        let interests = OnboardingViewModel.userInterestKeys()
+        let keys = Subject.allCases.map(\.storageKey).filter { interests.contains($0) }
+        guard let first = keys.first else {
+            return languageManager.text("onboarding.program.nickname.default")
+        }
+        return languageManager.text("onboarding.program.nickname.\(first)")
+    }
+
+    private var identityHeader: some View {
+        let p = progressManager.globalLevelProgress
         let streak = progressManager.streak
-        let peach = BrutalPalette.pastel(for: .histoire)
 
         return ZStack(alignment: .top) {
-            RoundedRectangle(cornerRadius: 24, style: .continuous)
+            RoundedRectangle(cornerRadius: 26, style: .continuous)
                 .fill(ink)
-                .offset(y: 6)
+                .offset(y: 7)
 
-            VStack(alignment: .leading, spacing: 18) {
-                HStack(alignment: .center, spacing: 10) {
-                    AnimatedFlameBadge(size: 44, showGlow: false)
-                    HStack(alignment: .firstTextBaseline, spacing: 8) {
-                        Text("\(streak)")
-                            .font(.system(size: 64, weight: .heavy, design: .rounded))
-                            .foregroundStyle(ink)
-                            .contentTransition(.numericText())
-                        Text(streak <= 1 ? languageManager.text("common.streak.day") : languageManager.text("common.streak.days"))
-                            .font(.system(.headline, design: .rounded, weight: .heavy))
-                            .foregroundStyle(ink)
-                            .tracking(1)
+            HStack(alignment: .center, spacing: 16) {
+                GlobalRankRing(progress: p, size: 104)
+
+                VStack(alignment: .leading, spacing: 8) {
+                    HStack(spacing: 8) {
+                        Text(String(format: languageManager.text("common.levelShort"), p.level))
+                            .font(.system(.caption2, design: .rounded, weight: .black))
+                            .foregroundStyle(.white)
+                            .tracking(0.6)
+                            .padding(.horizontal, 9)
+                            .padding(.vertical, 4)
+                            .background(ink, in: Capsule())
+                        Text(p.rank.localizedName(language: languageManager.current))
+                            .font(.system(.caption, design: .rounded, weight: .black))
+                            .foregroundStyle(ink.opacity(0.55))
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.7)
                     }
+
+                    Text(nickname)
+                        .font(.system(size: 25, weight: .heavy, design: .rounded))
+                        .foregroundStyle(ink)
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.8)
+                        .fixedSize(horizontal: false, vertical: true)
+
+                    streakInlineChip(streak)
                 }
 
-                Text(streakSubtitle(streak))
-                    .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink.opacity(0.65))
-
-                weekStrip
+                Spacer(minLength: 0)
             }
-            .padding(20)
-            .background(peach)
-            .clipShape(.rect(cornerRadius: 24))
+            .padding(18)
+            .background(Color.white)
+            .clipShape(.rect(cornerRadius: 26))
             .overlay {
-                RoundedRectangle(cornerRadius: 24, style: .continuous)
+                RoundedRectangle(cornerRadius: 26, style: .continuous)
                     .strokeBorder(ink, lineWidth: 3)
             }
         }
-        .padding(.bottom, 6)
+        .padding(.bottom, 7)
     }
 
-    private func streakSubtitle(_ s: Int) -> String {
-        switch s {
-        case 0: languageManager.text("profile.streak.start")
-        case 1...2: languageManager.text("profile.streak.beginning")
-        case 3...6: languageManager.text("profile.streak.good")
-        default: languageManager.text("profile.streak.great")
+    private func streakInlineChip(_ streak: Int) -> some View {
+        HStack(spacing: 6) {
+            AnimatedFlameBadge(size: 15, showGlow: false)
+            Text("\(streak)")
+                .font(.system(.subheadline, design: .rounded, weight: .black))
+                .foregroundStyle(ink)
+                .monospacedDigit()
+            Text(streak <= 1 ? languageManager.text("common.streak.day") : languageManager.text("common.streak.days"))
+                .font(.system(.caption, design: .rounded, weight: .heavy))
+                .foregroundStyle(ink.opacity(0.6))
         }
+        .padding(.horizontal, 12)
+        .padding(.vertical, 7)
+        .background(BrutalPalette.pastel(for: .histoire), in: Capsule())
+        .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
+    }
+
+    // MARK: - Bento stats
+
+    private var completedCoursesCount: Int {
+        ContentCatalog.activeCourses.filter { progressManager.courseStatus(for: $0.id) == .completed }.count
+    }
+
+    private var bentoStats: some View {
+        let stats = progressManager.quizStatsSummary
+        let cardsUnlocked = progressManager.unlockedCards.count
+        let cardsTotal = ContentCatalog.activeCards.count
+
+        return VStack(spacing: 14) {
+            streakTile
+
+            HStack(spacing: 14) {
+                bentoTile(
+                    icon: "checkmark.seal.fill",
+                    iconFill: BrutalPalette.pastel(for: .sciences),
+                    value: "\(completedCoursesCount)",
+                    label: languageManager.text("profile.stats.coursesDone")
+                )
+                bentoTile(
+                    icon: "target",
+                    iconFill: BrutalPalette.pink,
+                    value: "\(stats.successPercent)%",
+                    label: languageManager.text("cards.successRate")
+                )
+            }
+
+            cardsTile(unlocked: cardsUnlocked, total: cardsTotal)
+        }
+    }
+
+    private var streakTile: some View {
+        ZStack(alignment: .top) {
+            RoundedRectangle(cornerRadius: 22, style: .continuous).fill(ink).offset(y: 5)
+            VStack(alignment: .leading, spacing: 14) {
+                HStack(alignment: .center, spacing: 10) {
+                    AnimatedFlameBadge(size: 34, showGlow: false)
+                    HStack(alignment: .firstTextBaseline, spacing: 6) {
+                        Text("\(progressManager.streak)")
+                            .font(.system(size: 40, weight: .heavy, design: .rounded))
+                            .foregroundStyle(ink)
+                            .contentTransition(.numericText())
+                        Text(progressManager.streak <= 1 ? languageManager.text("common.streak.day") : languageManager.text("common.streak.days"))
+                            .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                            .foregroundStyle(ink.opacity(0.7))
+                    }
+                    Spacer()
+                }
+                weekStrip
+            }
+            .padding(18)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(BrutalPalette.pastel(for: .histoire))
+            .clipShape(.rect(cornerRadius: 22))
+            .overlay { RoundedRectangle(cornerRadius: 22, style: .continuous).strokeBorder(ink, lineWidth: 3) }
+        }
+        .padding(.bottom, 5)
+    }
+
+    private func bentoTile(icon: String, iconFill: Color, value: String, label: String) -> some View {
+        ZStack(alignment: .top) {
+            RoundedRectangle(cornerRadius: 20, style: .continuous).fill(ink).offset(y: 5)
+            VStack(alignment: .leading, spacing: 10) {
+                Image(systemName: icon)
+                    .font(.system(size: 16, weight: .black))
+                    .foregroundStyle(ink)
+                    .frame(width: 40, height: 40)
+                    .background(iconFill, in: Circle())
+                    .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
+                Text(value)
+                    .font(.system(size: 32, weight: .black, design: .rounded))
+                    .foregroundStyle(ink)
+                    .monospacedDigit()
+                Text(label)
+                    .font(.system(.caption, design: .rounded, weight: .black))
+                    .foregroundStyle(ink.opacity(0.55))
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            .frame(maxWidth: .infinity, minHeight: 120, alignment: .topLeading)
+            .padding(14)
+            .background(Color.white)
+            .clipShape(.rect(cornerRadius: 20))
+            .overlay { RoundedRectangle(cornerRadius: 20, style: .continuous).strokeBorder(ink, lineWidth: 2.5) }
+        }
+        .padding(.bottom, 5)
+    }
+
+    private func cardsTile(unlocked: Int, total: Int) -> some View {
+        let fraction = total == 0 ? 0 : Double(unlocked) / Double(total)
+        return Button {
+            hapticTrigger += 1
+            showAllCards = true
+        } label: {
+            ZStack(alignment: .top) {
+                RoundedRectangle(cornerRadius: 20, style: .continuous).fill(ink).offset(y: 5)
+                VStack(alignment: .leading, spacing: 12) {
+                    HStack(spacing: 12) {
+                        Image(systemName: "rectangle.stack.fill")
+                            .font(.system(size: 16, weight: .black))
+                            .foregroundStyle(ink)
+                            .frame(width: 40, height: 40)
+                            .background(BrutalPalette.yellow, in: Circle())
+                            .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
+
+                        HStack(alignment: .firstTextBaseline, spacing: 4) {
+                            Text("\(unlocked)")
+                                .font(.system(size: 30, weight: .black, design: .rounded))
+                                .foregroundStyle(ink)
+                                .monospacedDigit()
+                            Text("/ \(total)")
+                                .font(.system(.subheadline, design: .rounded, weight: .black))
+                                .foregroundStyle(ink.opacity(0.45))
+                        }
+
+                        Spacer()
+
+                        Text(languageManager.text("profile.stats.cards"))
+                            .font(.system(.caption, design: .rounded, weight: .black))
+                            .foregroundStyle(ink.opacity(0.55))
+                        Image(systemName: "arrow.right")
+                            .font(.system(size: 13, weight: .black))
+                            .foregroundStyle(ink)
+                    }
+
+                    GeometryReader { geo in
+                        ZStack(alignment: .leading) {
+                            Capsule().fill(Color.white).overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
+                            Capsule()
+                                .fill(LinearGradient(colors: [BrutalPalette.pink, BrutalPalette.yellow], startPoint: .leading, endPoint: .trailing))
+                                .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
+                                .frame(width: max(14, geo.size.width * CGFloat(fraction)))
+                        }
+                    }
+                    .frame(height: 14)
+                }
+                .padding(16)
+                .background(Color.white)
+                .clipShape(.rect(cornerRadius: 20))
+                .overlay { RoundedRectangle(cornerRadius: 20, style: .continuous).strokeBorder(ink, lineWidth: 2.5) }
+            }
+            .padding(.bottom, 5)
+        }
+        .buttonStyle(BrutalCardButtonStyle(depth: 3))
     }
 
     private var weekStrip: some View {
@@ -373,12 +536,18 @@ struct ProfileView: View {
         .brutalCard()
     }
 
-    // MARK: - Progression by subject
+    // MARK: - Subject mastery radar
 
-    private var progressionSection: some View {
+    private var radarValues: [(subject: Subject, value: Double)] {
+        Subject.allCases.map { subject in
+            (subject, max(0.06, min(1.0, Double(progressManager.xp(for: subject)) / 700.0)))
+        }
+    }
+
+    private var radarSection: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack {
-                Text(languageManager.text("profile.progress.bySubject"))
+                Text(languageManager.text("profile.mastery.title"))
                     .font(.system(.caption, design: .rounded, weight: .heavy))
                     .foregroundStyle(ink.opacity(0.55))
                     .tracking(1.2)
@@ -386,13 +555,47 @@ struct ProfileView: View {
             }
             .padding(.horizontal, 8)
 
-            LazyVGrid(columns: [GridItem(.flexible(), spacing: 14), GridItem(.flexible(), spacing: 14)], spacing: 14) {
-                ForEach(Subject.allCases, id: \.self) { subject in
-                    SubjectProgressCard(
-                        subject: subject,
-                        xp: progressManager.xp(for: subject)
-                    )
+            Button {
+                hapticTrigger += 1
+                withAnimation(.spring(response: 0.45, dampingFraction: 0.82)) {
+                    showSubjectDetails.toggle()
                 }
+            } label: {
+                ZStack(alignment: .top) {
+                    RoundedRectangle(cornerRadius: 22, style: .continuous).fill(ink).offset(y: 5)
+                    VStack(spacing: 10) {
+                        SubjectRadarChart(values: radarValues)
+                            .frame(height: 250)
+
+                        HStack(spacing: 6) {
+                            Text(languageManager.text(showSubjectDetails ? "profile.mastery.hide" : "profile.mastery.details"))
+                                .font(.system(.caption, design: .rounded, weight: .black))
+                                .foregroundStyle(ink.opacity(0.6))
+                            Image(systemName: showSubjectDetails ? "chevron.up" : "chevron.down")
+                                .font(.system(size: 11, weight: .black))
+                                .foregroundStyle(ink.opacity(0.6))
+                        }
+                    }
+                    .padding(16)
+                    .frame(maxWidth: .infinity)
+                    .background(Color.white)
+                    .clipShape(.rect(cornerRadius: 22))
+                    .overlay { RoundedRectangle(cornerRadius: 22, style: .continuous).strokeBorder(ink, lineWidth: 3) }
+                }
+                .padding(.bottom, 5)
+            }
+            .buttonStyle(BrutalCardButtonStyle(depth: 3))
+
+            if showSubjectDetails {
+                LazyVGrid(columns: [GridItem(.flexible(), spacing: 14), GridItem(.flexible(), spacing: 14)], spacing: 14) {
+                    ForEach(Subject.allCases, id: \.self) { subject in
+                        SubjectProgressCard(
+                            subject: subject,
+                            xp: progressManager.xp(for: subject)
+                        )
+                    }
+                }
+                .transition(.opacity.combined(with: .move(edge: .top)))
             }
         }
     }
@@ -486,6 +689,137 @@ private struct SubjectProgressCard: View {
         }
         let toNext = max(0, tier.upper - xp)
         return String(format: languageManager.text("profile.progress.toNext"), xp, toNext, tier.level + 1)
+    }
+}
+
+// MARK: - Global rank progress ring
+
+private struct GlobalRankRing: View {
+    let progress: GlobalLevelProgress
+    var size: CGFloat = 104
+
+    @State private var appeared = false
+    private let ink = BrutalPalette.ink
+
+    var body: some View {
+        ZStack {
+            Circle()
+                .stroke(ink.opacity(0.1), lineWidth: size * 0.085)
+                .frame(width: size, height: size)
+
+            Circle()
+                .trim(from: 0, to: appeared ? CGFloat(progress.progressToNextRank) : 0)
+                .stroke(
+                    LinearGradient(
+                        colors: [progress.rank.primaryColor, progress.rank.secondaryColor, progress.rank.primaryColor],
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    ),
+                    style: StrokeStyle(lineWidth: size * 0.085, lineCap: .round)
+                )
+                .rotationEffect(.degrees(-90))
+                .frame(width: size, height: size)
+
+            GlobalRankAnimatedIcon(rank: progress.rank, size: size * 0.7, intensity: .profile)
+        }
+        .frame(width: size, height: size)
+        .onAppear {
+            withAnimation(.spring(response: 0.8, dampingFraction: 0.82).delay(0.15)) {
+                appeared = true
+            }
+        }
+    }
+}
+
+// MARK: - Subject mastery radar (hexagon)
+
+private struct SubjectRadarChart: View {
+    let values: [(subject: Subject, value: Double)]
+
+    @State private var appeared = false
+    private let ink = BrutalPalette.ink
+
+    private func angle(_ i: Int) -> Double { -.pi / 2 + Double(i) * (.pi / 3) }
+
+    private func point(_ center: CGPoint, _ radius: CGFloat, _ i: Int) -> CGPoint {
+        CGPoint(x: center.x + cos(angle(i)) * radius, y: center.y + sin(angle(i)) * radius)
+    }
+
+    private func hexPath(_ center: CGPoint, _ radius: CGFloat) -> Path {
+        var p = Path()
+        for i in 0..<6 {
+            let pt = point(center, radius, i)
+            if i == 0 { p.move(to: pt) } else { p.addLine(to: pt) }
+        }
+        p.closeSubpath()
+        return p
+    }
+
+    private func dataPath(_ center: CGPoint, _ maxR: CGFloat, _ scale: CGFloat) -> Path {
+        var p = Path()
+        for i in 0..<6 {
+            let r = max(2, maxR * CGFloat(values[i].value) * scale)
+            let pt = point(center, r, i)
+            if i == 0 { p.move(to: pt) } else { p.addLine(to: pt) }
+        }
+        p.closeSubpath()
+        return p
+    }
+
+    var body: some View {
+        GeometryReader { geo in
+            let side = min(geo.size.width, geo.size.height)
+            let center = CGPoint(x: geo.size.width / 2, y: geo.size.height / 2)
+            let maxR = side / 2 - 30
+            let scale: CGFloat = appeared ? 1 : 0.001
+
+            ZStack {
+                ForEach(1...3, id: \.self) { ring in
+                    hexPath(center, maxR * CGFloat(ring) / 3)
+                        .stroke(ink.opacity(0.12), lineWidth: 1.5)
+                }
+
+                Path { p in
+                    for i in 0..<6 {
+                        p.move(to: center)
+                        p.addLine(to: point(center, maxR, i))
+                    }
+                }
+                .stroke(ink.opacity(0.12), lineWidth: 1.5)
+
+                dataPath(center, maxR, scale)
+                    .fill(
+                        LinearGradient(
+                            colors: [BrutalPalette.pink.opacity(0.4), BrutalPalette.yellow.opacity(0.4)],
+                            startPoint: .top,
+                            endPoint: .bottom
+                        )
+                    )
+
+                dataPath(center, maxR, scale)
+                    .stroke(ink, lineWidth: 2.5)
+
+                ForEach(0..<6, id: \.self) { i in
+                    Circle()
+                        .fill(BrutalPalette.pink)
+                        .frame(width: 9, height: 9)
+                        .overlay { Circle().strokeBorder(ink, lineWidth: 1.8) }
+                        .position(point(center, max(2, maxR * CGFloat(values[i].value) * scale), i))
+                }
+
+                ForEach(0..<6, id: \.self) { i in
+                    Text(values[i].subject.emoji)
+                        .font(.system(size: 22))
+                        .position(point(center, maxR + 20, i))
+                }
+            }
+            .onAppear {
+                withAnimation(.spring(response: 0.7, dampingFraction: 0.7).delay(0.15)) {
+                    appeared = true
+                }
+            }
+        }
+        .aspectRatio(1, contentMode: .fit)
     }
 }
 
