@@ -8,7 +8,9 @@ struct OnboardingProgramScreen: View {
     @State private var headerIn = false
     @State private var profileIn = false
     @State private var statsIn = false
-    @State private var coursesIn = false
+    @State private var coursesTitleIn = false
+    @State private var featuredIn = false
+    @State private var revealedRows = 0
     @State private var ctaIn = false
 
     private let ink = BrutalPalette.ink
@@ -43,8 +45,6 @@ struct OnboardingProgramScreen: View {
             .scrollIndicators(.hidden)
 
             OnboardingPrimaryButton(title: languageManager.text("common.continue"), action: onNext)
-                .padding(.horizontal, 22)
-                .padding(.bottom, 24)
                 .opacity(ctaIn ? 1 : 0)
                 .offset(y: ctaIn ? 0 : 22)
         }
@@ -56,11 +56,27 @@ struct OnboardingProgramScreen: View {
     }
 
     private func animateIn() {
-        withAnimation(.spring(response: 0.55, dampingFraction: 0.8)) { headerIn = true }
-        withAnimation(.spring(response: 0.6, dampingFraction: 0.78).delay(0.12)) { profileIn = true }
-        withAnimation(.spring(response: 0.6, dampingFraction: 0.78).delay(0.24)) { statsIn = true }
-        withAnimation(.spring(response: 0.6, dampingFraction: 0.78).delay(0.36)) { coursesIn = true }
-        withAnimation(.spring(response: 0.6, dampingFraction: 0.8).delay(0.5)) { ctaIn = true }
+        withAnimation(.spring(response: 0.55, dampingFraction: 0.78)) { headerIn = true }
+        withAnimation(.spring(response: 0.6, dampingFraction: 0.72).delay(0.12)) { profileIn = true }
+        withAnimation(.spring(response: 0.6, dampingFraction: 0.72).delay(0.26)) { statsIn = true }
+        withAnimation(.spring(response: 0.5, dampingFraction: 0.8).delay(0.4)) { coursesTitleIn = true }
+        withAnimation(.spring(response: 0.62, dampingFraction: 0.72).delay(0.5)) { featuredIn = true }
+
+        // Reveal each compact course row one after another for a satisfying cascade.
+        let rowCount = max(0, courses.count - 1)
+        for row in 0..<rowCount {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.64 + Double(row) * 0.12) {
+                withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
+                    revealedRows = row + 1
+                }
+                OnboardingHaptics.selection()
+            }
+        }
+
+        let ctaDelay = 0.7 + Double(rowCount) * 0.12
+        DispatchQueue.main.asyncAfter(deadline: .now() + ctaDelay) {
+            withAnimation(.spring(response: 0.6, dampingFraction: 0.78)) { ctaIn = true }
+        }
     }
 
     // MARK: - Header
@@ -82,7 +98,8 @@ struct OnboardingProgramScreen: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .opacity(headerIn ? 1 : 0)
-        .offset(y: headerIn ? 0 : 16)
+        .offset(y: headerIn ? 0 : 18)
+        .scaleEffect(headerIn ? 1 : 0.96, anchor: .leading)
     }
 
     // MARK: - Profile identity card
@@ -139,7 +156,8 @@ struct OnboardingProgramScreen: View {
         }
         .brutalOffsetPlate(depth: 6, corner: 24)
         .opacity(profileIn ? 1 : 0)
-        .offset(y: profileIn ? 0 : 16)
+        .offset(y: profileIn ? 0 : 20)
+        .scaleEffect(profileIn ? 1 : 0.94)
     }
 
     // MARK: - Stats
@@ -153,6 +171,10 @@ struct OnboardingProgramScreen: View {
                 unit: viewModel.dailyLearningGoalLabel(language: languageManager.current),
                 caption: languageManager.text("onboarding.program.dailyGoalCaption")
             )
+            .opacity(statsIn ? 1 : 0)
+            .offset(y: statsIn ? 0 : 18)
+            .scaleEffect(statsIn ? 1 : 0.9)
+
             statTile(
                 emoji: "⏳",
                 fill: OnboardingPastels.at(0),
@@ -160,9 +182,11 @@ struct OnboardingProgramScreen: View {
                 unit: languageManager.text("onboarding.program.hoursUnit"),
                 caption: languageManager.text("onboarding.program.hoursSavedCaption")
             )
+            .opacity(statsIn ? 1 : 0)
+            .offset(y: statsIn ? 0 : 18)
+            .scaleEffect(statsIn ? 1 : 0.9)
+            .animation(.spring(response: 0.6, dampingFraction: 0.7).delay(0.08), value: statsIn)
         }
-        .opacity(statsIn ? 1 : 0)
-        .offset(y: statsIn ? 0 : 16)
     }
 
     private func statTile(emoji: String, fill: Color, value: String, unit: String, caption: String) -> some View {
@@ -204,19 +228,25 @@ struct OnboardingProgramScreen: View {
                 .font(.system(size: 22, weight: .heavy, design: .rounded))
                 .foregroundStyle(ink)
                 .fixedSize(horizontal: false, vertical: true)
+                .opacity(coursesTitleIn ? 1 : 0)
+                .offset(y: coursesTitleIn ? 0 : 12)
 
             if let featured = courses.first {
                 FeaturedCourseCard(course: featured, accent: OnboardingPastels.at(0))
+                    .opacity(featuredIn ? 1 : 0)
+                    .offset(y: featuredIn ? 0 : 24)
+                    .scaleEffect(featuredIn ? 1 : 0.93)
             }
 
             VStack(spacing: 12) {
                 ForEach(Array(courses.dropFirst().enumerated()), id: \.element.id) { index, course in
                     CompactCourseRow(course: course, accent: OnboardingPastels.at(index + 1), rank: index + 2)
+                        .opacity(index < revealedRows ? 1 : 0)
+                        .offset(x: index < revealedRows ? 0 : 40)
+                        .scaleEffect(index < revealedRows ? 1 : 0.96, anchor: .leading)
                 }
             }
         }
-        .opacity(coursesIn ? 1 : 0)
-        .offset(y: coursesIn ? 0 : 16)
     }
 }
 

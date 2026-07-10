@@ -13,7 +13,7 @@ class OnboardingViewModel {
     var isLoadingComplete: Bool = false
     var dailyLearningGoal: Int = 1
 
-    let totalScreens = 18
+    let totalScreens = 19
     let dailyLearningGoalRange: ClosedRange<Int> = 1...5
 
     var projectedYearlyLearnings: Int {
@@ -57,8 +57,8 @@ class OnboardingViewModel {
 
     var canProceed: Bool {
         switch currentScreen {
-        case 2: return phoneTimeSelection != nil
-        case 4: return !objectives.isEmpty
+        case 3: return phoneTimeSelection != nil
+        case 5: return !objectives.isEmpty
         default: return true
         }
     }

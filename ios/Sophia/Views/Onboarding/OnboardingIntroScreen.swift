@@ -96,11 +96,6 @@ struct OnboardingIntroScreen: View {
                 .opacity(appeared ? 1 : 0)
                 .offset(y: appeared ? 0 : 30)
             }
-
-            LanguagePickerControl(compact: true)
-                .padding(.top, 12)
-                .padding(.trailing, 20)
-                .opacity(appeared ? 1 : 0)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(BrutalPalette.cream)

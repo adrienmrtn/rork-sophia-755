@@ -116,8 +116,22 @@ struct ContentView: View {
                 .zIndex(50)
             }
 
+            if discountManager.isActive,
+               !storeVM.isPremium,
+               !discountManager.isGiftPending,
+               pendingCourse == nil,
+               paywallContext == nil {
+                DiscountSideTab(discountManager: discountManager) {
+                    AnalyticsService.trackDiscountOfferViewed(source: "side_tab")
+                    paywallContext = .offreDiscount
+                }
+                .transition(.move(edge: .trailing).combined(with: .opacity))
+                .zIndex(40)
+            }
+
         }
         .animation(.easeInOut(duration: 0.3), value: discountManager.isGiftPending)
+        .animation(.spring(response: 0.5, dampingFraction: 0.8), value: discountManager.isActive)
         .sheet(item: $paywallContext) { context in
             SophiaPaywallView(
                 context: context,

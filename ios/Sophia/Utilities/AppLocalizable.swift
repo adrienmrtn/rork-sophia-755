@@ -40,6 +40,9 @@ enum AppLocalizable {
 
         "onboarding.intro.title": "Deviens cultivé\nen 10 minutes\npar jour",
         "onboarding.intro.cta": "Commencer",
+        "onboarding.language.title": "Choisis ta langue",
+        "onboarding.language.subtitle": "Tu pourras la changer plus tard.",
+        "discount.sideTab.label": "OFFRE",
 
         "settings.title": "Options",
         "settings.section.progress": "Progression",
@@ -492,6 +495,9 @@ enum AppLocalizable {
 
         "onboarding.intro.title": "Become cultured\nin 10 minutes\na day",
         "onboarding.intro.cta": "Get started",
+        "onboarding.language.title": "Choose your language",
+        "onboarding.language.subtitle": "You can change it later.",
+        "discount.sideTab.label": "OFFER",
 
         "settings.title": "Settings",
         "settings.section.progress": "Progress",
@@ -938,6 +944,9 @@ enum AppLocalizable {
 
         "onboarding.intro.title": "Cultívate\nen 10 minutos\nal día",
         "onboarding.intro.cta": "Empezar",
+        "onboarding.language.title": "Elige tu idioma",
+        "onboarding.language.subtitle": "Podrás cambiarlo más tarde.",
+        "discount.sideTab.label": "OFERTA",
 
         "settings.title": "Ajustes",
         "settings.section.progress": "Progreso",
@@ -1387,6 +1396,9 @@ enum AppLocalizable {
 
         "onboarding.intro.title": "Bilde dich\nin 10 Minuten\npro Tag weiter",
         "onboarding.intro.cta": "Loslegen",
+        "onboarding.language.title": "Wähle deine Sprache",
+        "onboarding.language.subtitle": "Du kannst sie später ändern.",
+        "discount.sideTab.label": "ANGEBOT",
 
         "settings.title": "Einstellungen",
         "settings.section.progress": "Fortschritt",
@@ -1836,6 +1848,9 @@ enum AppLocalizable {
 
         "onboarding.intro.title": "Cultiva-te\nem 10 minutos\npor dia",
         "onboarding.intro.cta": "Começar",
+        "onboarding.language.title": "Escolhe o teu idioma",
+        "onboarding.language.subtitle": "Podes mudá-lo mais tarde.",
+        "discount.sideTab.label": "OFERTA",
 
         "settings.title": "Definições",
         "settings.section.progress": "Progresso",
@@ -2282,6 +2297,9 @@ enum AppLocalizable {
         "language.italian": "Italiano",
         "onboarding.intro.title": "Coltiva te stesso\ntra 10 minuti\nal giorno",
         "onboarding.intro.cta": "Inizia",
+        "onboarding.language.title": "Scegli la tua lingua",
+        "onboarding.language.subtitle": "Potrai cambiarla più tardi.",
+        "discount.sideTab.label": "OFFERTA",
         "settings.title": "Impostazioni",
         "settings.section.progress": "Progressi",
         "settings.section.premium": "Premium",
