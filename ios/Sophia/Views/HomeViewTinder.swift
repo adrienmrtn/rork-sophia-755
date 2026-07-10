@@ -267,6 +267,7 @@ struct HomeViewTinder: View {
     }
 
     private func commitSwipeRight(for course: Course) {
+        registerDiscountSwipe()
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
         withAnimation(.snappy(duration: 0.35)) {
             topCardOffset = CGSize(width: 520, height: topCardOffset.height)
@@ -279,11 +280,13 @@ struct HomeViewTinder: View {
         }
     }
 
+    private func registerDiscountSwipe() {
+        guard !isPremium else { return }
+        discountManager.registerSwipe()
+    }
+
     private func commitSwipeLeft() {
-        if !isPremium && !discountManager.hasBeenTriggered {
-            discountManager.triggerIfNeeded()
-            onShowDiscountPaywall?()
-        }
+        registerDiscountSwipe()
         UIImpactFeedbackGenerator(style: .light).impactOccurred()
         withAnimation(.snappy(duration: 0.35)) {
             topCardOffset = CGSize(width: -520, height: topCardOffset.height)

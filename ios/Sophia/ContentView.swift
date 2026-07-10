@@ -101,7 +101,23 @@ struct ContentView: View {
                 .transition(.opacity)
             }
 
+            if discountManager.isGiftPending,
+               !storeVM.isPremium,
+               selectedTab == 0,
+               pendingCourse == nil,
+               paywallContext == nil {
+                DiscountGiftOverlay(onOpened: {
+                    discountManager.consumeGift()
+                    discountManager.triggerIfNeeded()
+                    AnalyticsService.trackDiscountOfferViewed(source: "gift")
+                    paywallContext = .offreDiscount
+                })
+                .transition(.opacity)
+                .zIndex(50)
+            }
+
         }
+        .animation(.easeInOut(duration: 0.3), value: discountManager.isGiftPending)
         .sheet(item: $paywallContext) { context in
             SophiaPaywallView(
                 context: context,

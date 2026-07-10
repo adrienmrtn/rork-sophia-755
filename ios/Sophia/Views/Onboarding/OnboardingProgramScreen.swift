@@ -5,227 +5,363 @@ struct OnboardingProgramScreen: View {
     @Bindable var viewModel: OnboardingViewModel
     let onNext: () -> Void
 
-    @State private var appeared = false
-    @State private var statsAppeared = false
-    @State private var coursesAppeared = false
+    @State private var headerIn = false
+    @State private var profileIn = false
+    @State private var statsIn = false
+    @State private var coursesIn = false
+    @State private var ctaIn = false
+
+    private let ink = BrutalPalette.ink
+    private let pink = BrutalPalette.pink
+    private let gold = BrutalPalette.yellow
 
     private var courses: [Course] {
         viewModel.recommendedProgramCourses(language: languageManager.current)
     }
 
+    private var nicknames: [String] {
+        viewModel.profileNicknames(language: languageManager.current)
+    }
+
+    private var primarySubject: Subject? {
+        Subject.allCases.first { viewModel.interests.contains($0.storageKey) }
+    }
+
     var body: some View {
         VStack(spacing: 0) {
             ScrollView {
-                VStack(alignment: .leading, spacing: 22) {
-                    headerSection
-                    nicknameSection
-                    statsSection
+                VStack(alignment: .leading, spacing: 20) {
+                    header
+                    profileCard
+                    statsRow
                     coursesSection
                 }
-                .padding(.horizontal, 24)
-                .padding(.top, 52)
-                .padding(.bottom, 16)
+                .padding(.horizontal, 22)
+                .padding(.top, 56)
+                .padding(.bottom, 12)
             }
             .scrollIndicators(.hidden)
 
             OnboardingPrimaryButton(title: languageManager.text("common.continue"), action: onNext)
-                .padding(.horizontal, 24)
-                .padding(.bottom, 28)
-                .opacity(appeared ? 1 : 0)
-                .offset(y: appeared ? 0 : 20)
+                .padding(.horizontal, 22)
+                .padding(.bottom, 24)
+                .opacity(ctaIn ? 1 : 0)
+                .offset(y: ctaIn ? 0 : 22)
         }
-        .onboardingFullBleedBackground(Color(red: 0.98, green: 0.96, blue: 0.93))
+        .onboardingFullBleedBackground(BrutalPalette.cream)
         .onOnboardingSlideSettled {
             CourseImageMap.preloadImages(for: courses.map(\.id))
-            withAnimation(.spring(response: 0.55, dampingFraction: 0.82)) {
-                appeared = true
-            }
-            withAnimation(.spring(response: 0.6, dampingFraction: 0.78).delay(0.18)) {
-                statsAppeared = true
-            }
-            withAnimation(.spring(response: 0.6, dampingFraction: 0.78).delay(0.38)) {
-                coursesAppeared = true
-            }
+            animateIn()
         }
     }
 
-    private var headerSection: some View {
-        VStack(alignment: .leading, spacing: 8) {
+    private func animateIn() {
+        withAnimation(.spring(response: 0.55, dampingFraction: 0.8)) { headerIn = true }
+        withAnimation(.spring(response: 0.6, dampingFraction: 0.78).delay(0.12)) { profileIn = true }
+        withAnimation(.spring(response: 0.6, dampingFraction: 0.78).delay(0.24)) { statsIn = true }
+        withAnimation(.spring(response: 0.6, dampingFraction: 0.78).delay(0.36)) { coursesIn = true }
+        withAnimation(.spring(response: 0.6, dampingFraction: 0.8).delay(0.5)) { ctaIn = true }
+    }
+
+    // MARK: - Header
+
+    private var header: some View {
+        VStack(alignment: .leading, spacing: 10) {
             BrutalPill(
                 text: languageManager.text("onboarding.program.badge"),
                 icon: "sparkles",
-                background: BrutalPalette.pink,
-                foreground: BrutalPalette.ink
+                background: gold,
+                foreground: ink
             )
 
             Text(languageManager.text("onboarding.program.title"))
-                .font(.system(size: 34, weight: .heavy, design: .rounded))
-                .lineSpacing(-2)
-                .foregroundStyle(BrutalPalette.ink)
-                .fixedSize(horizontal: false, vertical: true)
-        }
-        .opacity(appeared ? 1 : 0)
-        .offset(y: appeared ? 0 : 16)
-    }
-
-    private var nicknameSection: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text(languageManager.text("onboarding.program.profileLabel"))
-                .font(.system(.caption, design: .rounded, weight: .black))
-                .foregroundStyle(BrutalPalette.ink.opacity(0.5))
-                .tracking(0.8)
-
-            FlowLayout(spacing: 8) {
-                ForEach(Array(viewModel.profileNicknames(language: languageManager.current).enumerated()), id: \.offset) { index, nickname in
-                    Text(nickname)
-                        .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                        .foregroundStyle(BrutalPalette.ink)
-                        .padding(.horizontal, 14)
-                        .padding(.vertical, 9)
-                        .background(OnboardingPastels.at(index), in: Capsule())
-                        .overlay { Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 2) }
-                }
-            }
-        }
-        .opacity(appeared ? 1 : 0)
-        .offset(y: appeared ? 0 : 12)
-    }
-
-    private var statsSection: some View {
-        HStack(spacing: 12) {
-            statCard(
-                icon: "target",
-                value: String(
-                    format: languageManager.text("onboarding.program.dailyGoal"),
-                    viewModel.dailyLearningGoal,
-                    viewModel.dailyLearningGoalLabel(language: languageManager.current)
-                ),
-                caption: languageManager.text("onboarding.program.dailyGoalCaption")
-            )
-
-            statCard(
-                icon: "hourglass.bottomhalf.filled",
-                value: String(
-                    format: languageManager.text("onboarding.program.hoursSaved"),
-                    viewModel.projectedHoursSavedPerYear
-                ),
-                caption: languageManager.text("onboarding.program.hoursSavedCaption")
-            )
-        }
-        .opacity(statsAppeared ? 1 : 0)
-        .offset(y: statsAppeared ? 0 : 14)
-    }
-
-    private func statCard(icon: String, value: String, caption: String) -> some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Image(systemName: icon)
-                .font(.system(size: 16, weight: .black))
-                .foregroundStyle(BrutalPalette.ink)
-                .padding(8)
-                .background(BrutalPalette.yellow, in: Circle())
-                .overlay { Circle().strokeBorder(BrutalPalette.ink, lineWidth: 1.8) }
-
-            Text(value)
-                .font(.system(.headline, design: .rounded, weight: .heavy))
-                .foregroundStyle(BrutalPalette.ink)
-                .fixedSize(horizontal: false, vertical: true)
-
-            Text(caption)
-                .font(.system(.caption2, design: .rounded, weight: .heavy))
-                .foregroundStyle(BrutalPalette.ink.opacity(0.55))
+                .font(.system(size: 36, weight: .heavy, design: .rounded))
+                .lineSpacing(-3)
+                .foregroundStyle(ink)
                 .fixedSize(horizontal: false, vertical: true)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(14)
-        .background(Color.white, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
-        .overlay {
-            RoundedRectangle(cornerRadius: 18, style: .continuous)
-                .strokeBorder(BrutalPalette.ink, lineWidth: 2.5)
-        }
-        .brutalOffsetPlate(depth: 4, corner: 18)
+        .opacity(headerIn ? 1 : 0)
+        .offset(y: headerIn ? 0 : 16)
     }
+
+    // MARK: - Profile identity card
+
+    private var profileCard: some View {
+        HStack(spacing: 16) {
+            ZStack {
+                Circle()
+                    .fill(pink)
+                    .frame(width: 66, height: 66)
+                    .overlay { Circle().strokeBorder(ink, lineWidth: 3) }
+                Text(primarySubject?.emoji ?? "✨")
+                    .font(.system(size: 32))
+            }
+            .background(alignment: .center) {
+                Circle().fill(ink).frame(width: 66, height: 66).offset(x: 3, y: 4)
+            }
+
+            VStack(alignment: .leading, spacing: 6) {
+                Text(languageManager.text("onboarding.program.profileLabel"))
+                    .font(.system(size: 11, weight: .black, design: .rounded))
+                    .foregroundStyle(ink.opacity(0.45))
+                    .tracking(1.0)
+
+                Text(nicknames.first ?? "")
+                    .font(.system(size: 22, weight: .heavy, design: .rounded))
+                    .foregroundStyle(ink)
+                    .fixedSize(horizontal: false, vertical: true)
+
+                if nicknames.count > 1 {
+                    FlowLayout(spacing: 6) {
+                        ForEach(Array(nicknames.dropFirst().enumerated()), id: \.offset) { index, nickname in
+                            Text(nickname)
+                                .font(.system(.caption, design: .rounded, weight: .heavy))
+                                .foregroundStyle(ink)
+                                .padding(.horizontal, 10)
+                                .padding(.vertical, 5)
+                                .background(OnboardingPastels.at(index + 1), in: Capsule())
+                                .overlay { Capsule().strokeBorder(ink, lineWidth: 1.8) }
+                        }
+                    }
+                    .padding(.top, 2)
+                }
+            }
+
+            Spacer(minLength: 0)
+        }
+        .padding(18)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Color.white, in: RoundedRectangle(cornerRadius: 24, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 24, style: .continuous)
+                .strokeBorder(ink, lineWidth: 3)
+        }
+        .brutalOffsetPlate(depth: 6, corner: 24)
+        .opacity(profileIn ? 1 : 0)
+        .offset(y: profileIn ? 0 : 16)
+    }
+
+    // MARK: - Stats
+
+    private var statsRow: some View {
+        HStack(spacing: 12) {
+            statTile(
+                emoji: "🎯",
+                fill: OnboardingPastels.at(1),
+                value: "\(viewModel.dailyLearningGoal)",
+                unit: viewModel.dailyLearningGoalLabel(language: languageManager.current),
+                caption: languageManager.text("onboarding.program.dailyGoalCaption")
+            )
+            statTile(
+                emoji: "⏳",
+                fill: OnboardingPastels.at(0),
+                value: "\(viewModel.projectedHoursSavedPerYear)",
+                unit: languageManager.text("onboarding.program.hoursUnit"),
+                caption: languageManager.text("onboarding.program.hoursSavedCaption")
+            )
+        }
+        .opacity(statsIn ? 1 : 0)
+        .offset(y: statsIn ? 0 : 16)
+    }
+
+    private func statTile(emoji: String, fill: Color, value: String, unit: String, caption: String) -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text(emoji)
+                .font(.system(size: 24))
+
+            HStack(alignment: .firstTextBaseline, spacing: 3) {
+                Text(value)
+                    .font(.system(size: 30, weight: .heavy, design: .rounded))
+                    .foregroundStyle(ink)
+                Text(unit)
+                    .font(.system(.caption, design: .rounded, weight: .heavy))
+                    .foregroundStyle(ink.opacity(0.6))
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
+            }
+
+            Text(caption)
+                .font(.system(.caption2, design: .rounded, weight: .heavy))
+                .foregroundStyle(ink.opacity(0.5))
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(16)
+        .background(fill, in: RoundedRectangle(cornerRadius: 22, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 22, style: .continuous)
+                .strokeBorder(ink, lineWidth: 3)
+        }
+        .brutalOffsetPlate(depth: 5, corner: 22)
+    }
+
+    // MARK: - Courses
 
     private var coursesSection: some View {
         VStack(alignment: .leading, spacing: 14) {
             Text(languageManager.text("onboarding.program.coursesTitle"))
-                .font(.system(.title3, design: .rounded, weight: .heavy))
-                .foregroundStyle(BrutalPalette.ink)
+                .font(.system(size: 22, weight: .heavy, design: .rounded))
+                .foregroundStyle(ink)
                 .fixedSize(horizontal: false, vertical: true)
 
+            if let featured = courses.first {
+                FeaturedCourseCard(course: featured, accent: OnboardingPastels.at(0))
+            }
+
             VStack(spacing: 12) {
-                ForEach(Array(courses.enumerated()), id: \.element.id) { index, course in
-                    OnboardingProgramCourseRow(
-                        course: course,
-                        accent: OnboardingPastels.at(index)
-                    )
-                    .opacity(coursesAppeared ? 1 : 0)
-                    .offset(y: coursesAppeared ? 0 : 12)
-                    .animation(.spring(response: 0.5, dampingFraction: 0.8).delay(Double(index) * 0.08), value: coursesAppeared)
+                ForEach(Array(courses.dropFirst().enumerated()), id: \.element.id) { index, course in
+                    CompactCourseRow(course: course, accent: OnboardingPastels.at(index + 1), rank: index + 2)
                 }
             }
         }
-        .opacity(coursesAppeared ? 1 : 0)
+        .opacity(coursesIn ? 1 : 0)
+        .offset(y: coursesIn ? 0 : 16)
     }
 }
 
-private struct OnboardingProgramCourseRow: View {
+// MARK: - Featured course card (editorial hero)
+
+private struct FeaturedCourseCard: View {
     @Environment(LanguageManager.self) private var languageManager
     let course: Course
     let accent: Color
 
     @State private var image: UIImage?
 
+    private let ink = BrutalPalette.ink
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            ZStack(alignment: .topLeading) {
+                accent
+                    .overlay {
+                        if let image {
+                            Image(uiImage: image)
+                                .resizable()
+                                .scaledToFill()
+                        }
+                    }
+                LinearGradient(colors: [.clear, .black.opacity(0.35)], startPoint: .center, endPoint: .bottom)
+
+                HStack(spacing: 6) {
+                    Image(systemName: "star.fill")
+                        .font(.system(size: 10, weight: .black))
+                    Text(languageManager.text("onboarding.program.topPick").uppercased())
+                        .font(.system(.caption2, design: .rounded, weight: .black))
+                        .tracking(0.6)
+                }
+                .foregroundStyle(ink)
+                .padding(.horizontal, 10)
+                .padding(.vertical, 6)
+                .background(BrutalPalette.yellow, in: Capsule())
+                .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
+                .padding(12)
+            }
+            .frame(height: 132)
+            .frame(maxWidth: .infinity)
+            .clipped()
+            .overlay(alignment: .bottom) { Rectangle().fill(ink).frame(height: 3) }
+
+            VStack(alignment: .leading, spacing: 8) {
+                BrutalPill(
+                    text: course.subject.localizedShortName(language: languageManager.current),
+                    icon: course.subject.icon,
+                    background: accent.opacity(0.6),
+                    foreground: ink
+                )
+
+                Text(course.title)
+                    .font(.system(.title3, design: .rounded, weight: .heavy))
+                    .foregroundStyle(ink)
+                    .lineLimit(2)
+                    .fixedSize(horizontal: false, vertical: true)
+
+                HStack(spacing: 8) {
+                    statChip(icon: "rectangle.stack.fill", text: String(format: languageManager.text("onboarding.showcase.courses.lessons"), course.lessons.count))
+                    statChip(icon: "checkmark.circle.fill", text: String(format: languageManager.text("onboarding.showcase.courses.quizCount"), course.quiz.count))
+                }
+            }
+            .padding(16)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(Color.white)
+        }
+        .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 24, style: .continuous)
+                .strokeBorder(ink, lineWidth: 3)
+        }
+        .brutalOffsetPlate(depth: 6, corner: 24)
+        .onAppear { image = CourseImageMap.loadImage(for: course.id) }
+    }
+
+    private func statChip(icon: String, text: String) -> some View {
+        HStack(spacing: 5) {
+            Image(systemName: icon).font(.system(size: 10, weight: .black))
+            Text(text).font(.system(.caption2, design: .rounded, weight: .black))
+        }
+        .foregroundStyle(ink)
+        .padding(.horizontal, 9)
+        .padding(.vertical, 6)
+        .background(Color(red: 0.96, green: 0.93, blue: 0.88), in: Capsule())
+        .overlay { Capsule().strokeBorder(ink.opacity(0.5), lineWidth: 1.5) }
+    }
+}
+
+// MARK: - Compact course row
+
+private struct CompactCourseRow: View {
+    @Environment(LanguageManager.self) private var languageManager
+    let course: Course
+    let accent: Color
+    let rank: Int
+
+    @State private var image: UIImage?
+
+    private let ink = BrutalPalette.ink
+
     var body: some View {
         HStack(spacing: 12) {
             ZStack {
                 accent
                 if let image {
-                    Image(uiImage: image)
-                        .resizable()
-                        .scaledToFill()
+                    Image(uiImage: image).resizable().scaledToFill()
                 }
             }
-            .frame(width: 64, height: 64)
+            .frame(width: 58, height: 58)
             .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
             .overlay {
                 RoundedRectangle(cornerRadius: 14, style: .continuous)
-                    .strokeBorder(BrutalPalette.ink, lineWidth: 2)
+                    .strokeBorder(ink, lineWidth: 2.5)
             }
 
-            VStack(alignment: .leading, spacing: 4) {
-                BrutalPill(
-                    text: course.subject.localizedShortName(language: languageManager.current),
-                    icon: course.subject.icon,
-                    background: accent.opacity(0.55),
-                    foreground: BrutalPalette.ink
-                )
-
+            VStack(alignment: .leading, spacing: 3) {
+                Text(course.subject.localizedShortName(language: languageManager.current).uppercased())
+                    .font(.system(size: 10, weight: .black, design: .rounded))
+                    .foregroundStyle(ink.opacity(0.5))
+                    .tracking(0.5)
                 Text(course.title)
                     .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                    .foregroundStyle(BrutalPalette.ink)
+                    .foregroundStyle(ink)
                     .lineLimit(2)
                     .fixedSize(horizontal: false, vertical: true)
             }
 
             Spacer(minLength: 0)
-
-            Image(systemName: "chevron.right")
-                .font(.system(size: 12, weight: .black))
-                .foregroundStyle(BrutalPalette.ink.opacity(0.35))
         }
-        .padding(12)
+        .padding(10)
+        .frame(maxWidth: .infinity, alignment: .leading)
         .background(Color.white, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
         .overlay {
             RoundedRectangle(cornerRadius: 18, style: .continuous)
-                .strokeBorder(BrutalPalette.ink.opacity(0.15), lineWidth: 1.5)
+                .strokeBorder(ink, lineWidth: 2.5)
         }
-        .onAppear {
-            image = CourseImageMap.loadImage(for: course.id)
-        }
+        .onAppear { image = CourseImageMap.loadImage(for: course.id) }
     }
 }
 
-/// Simple wrapping layout for nickname pills.
+// MARK: - Flow layout for nickname pills
+
 private struct FlowLayout: Layout {
     var spacing: CGFloat = 8
 
@@ -245,7 +381,6 @@ private struct FlowLayout: Layout {
             rowHeight = max(rowHeight, size.height)
             x += size.width + spacing
         }
-
         return CGSize(width: width, height: y + rowHeight)
     }
 

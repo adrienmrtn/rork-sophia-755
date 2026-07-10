@@ -224,9 +224,8 @@ struct HomeViewLegacy: View {
                 let velocity = value.velocity.width
 
                 if abs(value.translation.width) > threshold || abs(velocity) > 800 {
-                    if !isPremium && !discountManager.hasBeenTriggered {
-                        discountManager.triggerIfNeeded()
-                        onShowDiscountPaywall?()
+                    if !isPremium {
+                        discountManager.registerSwipe()
                     }
                     let direction: CGFloat = value.translation.width > 0 ? 1 : -1
                     let g = UIImpactFeedbackGenerator(style: .light)
