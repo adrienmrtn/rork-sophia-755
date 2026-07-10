@@ -13,13 +13,9 @@ struct HomeViewLegacy: View {
     @State private var topCardOffset: CGSize = .zero
     @State private var topCardRotation: Double = 0
     @State private var cardAppeared: Bool = false
-    @State private var discountShimmer: CGFloat = -80
-    @State private var discountShimmerActive: Bool = false
 
     private let cream = Color(red: 0.984, green: 0.961, blue: 0.918)
     private let ink = Color.black
-    private let pink = Color(red: 1.0, green: 0.553, blue: 0.706)
-    private let streakOrange = Color(red: 1.0, green: 0.45, blue: 0.10)
 
     private func performAutoSwipe() {
         let g = UIImpactFeedbackGenerator(style: .light)
@@ -73,20 +69,8 @@ struct HomeViewLegacy: View {
         }
         .onAppear {
             loadCards()
-            discountShimmerActive = !isPremium && discountManager.isActive
-            if discountShimmerActive {
-                ShimmerAnimation.runLoop(offset: $discountShimmer) { discountShimmerActive }
-            }
             withAnimation(.spring(response: 0.6, dampingFraction: 0.8).delay(0.2)) {
                 cardAppeared = true
-            }
-        }
-        .onChange(of: discountManager.isActive) { _, active in
-            discountShimmerActive = !isPremium && active
-            if discountShimmerActive {
-                ShimmerAnimation.runLoop(offset: $discountShimmer) { discountShimmerActive }
-            } else {
-                discountShimmerActive = false
             }
         }
         .onChange(of: autoSwipeCourseId) { _, newId in
@@ -108,55 +92,10 @@ struct HomeViewLegacy: View {
                 .scaledToFit()
                 .frame(height: 30)
 
-            Spacer()
-
-            if !isPremium && discountManager.isActive {
-                discountBadge
-                    .transition(.scale.combined(with: .opacity))
-            }
+            Spacer(minLength: 8)
 
             streakBadge
         }
-        .animation(.spring(response: 0.45, dampingFraction: 0.75), value: discountManager.isActive)
-    }
-
-    private var discountBadge: some View {
-        Button {
-            let g = UIImpactFeedbackGenerator(style: .medium)
-            g.impactOccurred()
-            onShowDiscountPaywall?()
-        } label: {
-            HStack(spacing: 6) {
-                AnimatedCrownBadge(size: 14)
-                Text(discountManager.formattedRemaining)
-                    .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                    .foregroundStyle(.white)
-                    .monospacedDigit()
-                    .contentTransition(.numericText(countsDown: true))
-            }
-            .padding(.horizontal, 12)
-            .padding(.vertical, 8)
-            .background(pink, in: Capsule())
-            .overlay {
-                Capsule()
-                    .fill(
-                        LinearGradient(
-                            colors: [.clear, .white.opacity(0.4), .clear],
-                            startPoint: .leading,
-                            endPoint: .trailing
-                        )
-                    )
-                    .mask {
-                        Rectangle()
-                            .frame(width: 50, height: 40)
-                            .offset(x: discountShimmer)
-                    }
-                    .allowsHitTesting(false)
-            }
-            .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
-        }
-        .buttonStyle(.plain)
-        .id(discountManager.tick)
     }
 
     private var streakBadge: some View {
@@ -166,6 +105,8 @@ struct HomeViewLegacy: View {
                 .font(.system(.subheadline, design: .rounded, weight: .heavy))
                 .foregroundStyle(ink)
                 .monospacedDigit()
+                .fixedSize(horizontal: true, vertical: true)
+                .layoutPriority(1)
             Text(progressManager.streak <= 1
                 ? languageManager.text("common.streak.day")
                 : languageManager.text("common.streak.days"))
@@ -175,9 +116,9 @@ struct HomeViewLegacy: View {
                 .fixedSize(horizontal: true, vertical: true)
                 .lineLimit(1)
         }
-        .padding(.horizontal, 18)
+        .padding(.horizontal, 16)
         .padding(.vertical, 8)
-        .frame(minWidth: 96)
+        .fixedSize(horizontal: true, vertical: false)
         .background(Color.white, in: Capsule())
         .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
     }
