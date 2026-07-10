@@ -4,23 +4,37 @@ import Observation
 /// Manages the 60-minute "offre_discount" flash promo.
 ///
 /// Flow:
-/// 1. Free user performs their first card swipe on Home → `triggerIfNeeded()` starts the 60 min clock.
-/// 2. While `isActive == true`, a timer badge is shown on Home; tapping it re-opens the paywall.
-/// 3. Once the 60 min elapse the offer is marked expired forever (locally, persists across app launches).
-/// 4. The start date is persisted in UserDefaults so the clock keeps ticking even when the app is closed
+/// 1. Free user swipes cards on Home. After `swipesBeforeGift` swipes a surprise gift
+///    appears over the app (`isGiftPending`). The user taps it open to reveal the offer.
+/// 2. Opening the gift calls `triggerIfNeeded()` which starts the 60 min clock and shows the paywall.
+/// 3. While `isActive == true`, a timer badge is shown on Home; tapping it re-opens the paywall.
+/// 4. Once the 60 min elapse the offer is marked expired forever (locally, persists across app launches).
+/// 5. The start date is persisted in UserDefaults so the clock keeps ticking even when the app is closed
 ///    or the user leaves and comes back later (e.g. 30 min later → 30 min already consumed).
-/// 5. Resets on uninstall (UserDefaults is wiped).
+/// 6. Resets on uninstall (UserDefaults is wiped).
 @Observable
 @MainActor
 class DiscountOfferManager {
     private let startKey: String = "sophia_discount_offer_start"
     private let expiredKey: String = "sophia_discount_offer_expired"
+    private let swipeCountKey: String = "sophia_discount_swipe_count"
+    private let giftPendingKey: String = "sophia_discount_gift_pending"
 
     /// Total promo duration: 60 minutes.
     static let duration: TimeInterval = 60 * 60
 
+    /// Number of card swipes a free user must perform before the surprise gift appears.
+    static let swipesBeforeGift: Int = 3
+
     private(set) var startDate: Date?
     private(set) var isExpiredForever: Bool = false
+
+    /// Free-user card swipe count (persisted). Drives the surprise-gift reveal.
+    private(set) var swipeCount: Int = 0
+
+    /// True once the surprise gift is on screen waiting to be opened. Persisted so it
+    /// survives the user leaving and coming back before tapping it open.
+    private(set) var isGiftPending: Bool = false
 
     /// Bumped every second while the offer is active so SwiftUI views observing this
     /// `@Observable` instance re-render the countdown.
@@ -57,6 +71,25 @@ class DiscountOfferManager {
         let m = total / 60
         let s = total % 60
         return String(format: "%02d:%02d", m, s)
+    }
+
+    /// Registers a free-user card swipe. Once `swipesBeforeGift` swipes are reached,
+    /// the surprise gift becomes pending (shown over the app) — but the discount clock
+    /// only starts when the user actually opens the gift (`triggerIfNeeded`).
+    func registerSwipe() {
+        guard !isExpiredForever, startDate == nil, !isGiftPending else { return }
+        swipeCount += 1
+        if swipeCount >= Self.swipesBeforeGift {
+            isGiftPending = true
+        }
+        save()
+    }
+
+    /// Consumes the pending gift (called when the user finishes opening it).
+    func consumeGift() {
+        guard isGiftPending else { return }
+        isGiftPending = false
+        save()
     }
 
     /// Starts the 60-minute offer if it hasn't been triggered yet.
@@ -109,6 +142,8 @@ class DiscountOfferManager {
             startDate = date
         }
         isExpiredForever = defaults.bool(forKey: expiredKey)
+        swipeCount = defaults.integer(forKey: swipeCountKey)
+        isGiftPending = defaults.bool(forKey: giftPendingKey)
     }
 
     private func save() {
@@ -117,5 +152,7 @@ class DiscountOfferManager {
             defaults.set(startDate, forKey: startKey)
         }
         defaults.set(isExpiredForever, forKey: expiredKey)
+        defaults.set(swipeCount, forKey: swipeCountKey)
+        defaults.set(isGiftPending, forKey: giftPendingKey)
     }
 }
