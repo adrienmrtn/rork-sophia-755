@@ -7,6 +7,8 @@ import RevenueCat
 class OnboardingViewModel {
     var currentScreen: Int = 0
     var phoneTimeSelection: Int? = nil
+    /// Continuous daily phone-time in hours, chosen via the slider (0...8, 0.5 steps).
+    var phoneDailyHours: Double = 3.0
     var objectives: Set<String> = []
     var interests: Set<String> = []
     var loadingBarProgress: [Double] = [0, 0, 0]
@@ -25,16 +27,24 @@ class OnboardingViewModel {
         return AppLocalizable.string(key, language: language)
     }
 
+    /// Updates the slider hours and derives the downstream bucket selection.
+    func setPhoneDailyHours(_ hours: Double) {
+        phoneDailyHours = hours
+        phoneTimeSelection = Self.phoneBucket(forHours: hours)
+    }
+
+    /// Maps continuous hours to the 4 legacy buckets used for the "wasted time" projection.
+    static func phoneBucket(forHours hours: Double) -> Int {
+        if hours < 1 { return 0 }
+        if hours < 2 { return 1 }
+        if hours < 4 { return 2 }
+        return 3
+    }
+
     func phoneHoursPerDayLabel(language: AppLanguage) -> String {
-        guard let selection = phoneTimeSelection else { return "" }
-        let keys = [
-            "onboarding.phone.hours.1",
-            "onboarding.phone.hours.2",
-            "onboarding.phone.hours.3",
-            "onboarding.phone.hours.5",
-        ]
-        guard selection >= 0, selection < keys.count else { return "" }
-        return AppLocalizable.string(keys[selection], language: language)
+        let whole = Int(phoneDailyHours)
+        let hasHalf = (phoneDailyHours - Double(whole)) >= 0.25
+        return hasHalf ? "\(whole)h30" : "\(whole)h"
     }
 
     func wastedTimeDays(language: AppLanguage) -> String {
