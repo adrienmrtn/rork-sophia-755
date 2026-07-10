@@ -1,5 +1,50 @@
 import SwiftUI
 
+/// Standalone Collections tab (separate page from the Library).
+struct CollectionsView: View {
+    @Environment(LanguageManager.self) private var languageManager
+    let progressManager: ProgressManager
+    @Binding var selectedCourse: Course?
+
+    private let ink = BrutalPalette.ink
+    private let cream = BrutalPalette.cream
+
+    var body: some View {
+        NavigationStack {
+            ZStack {
+                cream.ignoresSafeArea()
+
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 22) {
+                        HStack {
+                            Text(languageManager.text("library.tab.collections"))
+                                .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                                .foregroundStyle(ink)
+                            Spacer()
+                        }
+                        .padding(.horizontal, 20)
+                        .padding(.top, 8)
+
+                        CollectionsOverviewView(
+                            progressManager: progressManager,
+                            selectedCourse: $selectedCourse
+                        )
+                    }
+                    .padding(.bottom, 40)
+                }
+            }
+            .toolbar(.hidden, for: .navigationBar)
+            .navigationDestination(for: LearningCollection.self) { collection in
+                CollectionDetailView(
+                    collection: collection,
+                    progressManager: progressManager,
+                    selectedCourse: $selectedCourse
+                )
+            }
+        }
+    }
+}
+
 struct CollectionsOverviewView: View {
     @Environment(LanguageManager.self) private var languageManager
     let progressManager: ProgressManager
@@ -30,16 +75,10 @@ struct CollectionsOverviewView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            VStack(alignment: .leading, spacing: 6) {
-                Text(languageManager.text("collections.title"))
-                    .font(.system(.caption, design: .rounded, weight: .black))
-                    .foregroundStyle(ink.opacity(0.55))
-                    .tracking(1.2)
-                Text(languageManager.text("collections.subtitle"))
-                    .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink.opacity(0.62))
-            }
-            .padding(.horizontal, 20)
+            Text(languageManager.text("collections.subtitle"))
+                .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                .foregroundStyle(ink.opacity(0.62))
+                .padding(.horizontal, 20)
 
             if let featured {
                 NavigationLink(value: featured) {

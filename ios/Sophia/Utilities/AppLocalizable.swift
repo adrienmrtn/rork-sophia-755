@@ -23,6 +23,7 @@ enum AppLocalizable {
     private static let french: [String: String] = [
         "tab.home": "Home",
         "tab.library": "Biblio",
+        "tab.collections": "Collections",
         "tab.profile": "Profil",
 
         "library.title": "Bibliothèque",
@@ -499,6 +500,7 @@ enum AppLocalizable {
 
         "tab.home": "Home",
         "tab.library": "Library",
+        "tab.collections": "Collections",
         "tab.profile": "Profile",
 
         "library.title": "Library",
@@ -969,6 +971,7 @@ enum AppLocalizable {
     private static let spanish: [String: String] = [
         "tab.home": "Inicio",
         "tab.library": "Biblioteca",
+        "tab.collections": "Colecciones",
         "tab.profile": "Perfil",
 
         "library.title": "Biblioteca",
@@ -1442,6 +1445,7 @@ enum AppLocalizable {
     private static let german: [String: String] = [
         "tab.home": "Start",
         "tab.library": "Bibliothek",
+        "tab.collections": "Sammlungen",
         "tab.profile": "Profil",
 
         "library.title": "Bibliothek",
@@ -1915,6 +1919,7 @@ enum AppLocalizable {
     private static let portuguese: [String: String] = [
         "tab.home": "Início",
         "tab.library": "Biblioteca",
+        "tab.collections": "Coleções",
         "tab.profile": "Perfil",
 
         "library.title": "Biblioteca",
@@ -2388,6 +2393,7 @@ enum AppLocalizable {
     private static let italian: [String: String] = [
         "tab.home": "Home",
         "tab.library": "Biblioteca",
+        "tab.collections": "Collezioni",
         "tab.profile": "Profilo",
         "library.title": "Biblioteca",
         "library.tab.courses": "Corsi",

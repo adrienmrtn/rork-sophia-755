@@ -701,6 +701,8 @@ private struct GlobalRankRing: View {
     @State private var appeared = false
     private let ink = BrutalPalette.ink
 
+    private var inner: CGFloat { size * 0.66 }
+
     var body: some View {
         ZStack {
             Circle()
@@ -711,7 +713,7 @@ private struct GlobalRankRing: View {
                 .trim(from: 0, to: appeared ? CGFloat(progress.progressToNextRank) : 0)
                 .stroke(
                     LinearGradient(
-                        colors: [progress.rank.primaryColor, progress.rank.secondaryColor, progress.rank.primaryColor],
+                        colors: [progress.rank.primaryColor, progress.rank.secondaryColor],
                         startPoint: .topLeading,
                         endPoint: .bottomTrailing
                     ),
@@ -719,12 +721,33 @@ private struct GlobalRankRing: View {
                 )
                 .rotationEffect(.degrees(-90))
                 .frame(width: size, height: size)
+                .animation(.easeOut(duration: 0.9), value: appeared)
 
-            GlobalRankAnimatedIcon(rank: progress.rank, size: size * 0.7, intensity: .profile)
+            // Calm static rank medallion (no perpetual animation).
+            ZStack {
+                Circle()
+                    .fill(ink)
+                    .frame(width: inner, height: inner)
+                    .offset(y: 3)
+                Circle()
+                    .fill(
+                        LinearGradient(
+                            colors: [progress.rank.primaryColor, progress.rank.secondaryColor],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
+                    )
+                    .frame(width: inner, height: inner)
+                    .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
+                Image(systemName: progress.rank.symbolName)
+                    .font(.system(size: inner * 0.44, weight: .black))
+                    .foregroundStyle(ink)
+            }
+            .scaleEffect(appeared ? 1 : 0.8)
         }
         .frame(width: size, height: size)
         .onAppear {
-            withAnimation(.spring(response: 0.8, dampingFraction: 0.82).delay(0.15)) {
+            withAnimation(.spring(response: 0.55, dampingFraction: 0.8).delay(0.1)) {
                 appeared = true
             }
         }

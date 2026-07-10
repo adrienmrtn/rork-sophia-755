@@ -75,9 +75,12 @@ struct SubjectCoursesView: View {
 
             ScrollView {
                 VStack(alignment: .leading, spacing: 24) {
-                    header
+                    topBar
                         .padding(.horizontal, 20)
                         .padding(.top, 8)
+
+                    header
+                        .padding(.horizontal, 20)
 
                     filterChips
 
@@ -104,6 +107,15 @@ struct SubjectCoursesView: View {
         .sensoryFeedback(.impact(weight: .light), trigger: hapticTrigger)
         .onAppear {
             withAnimation(.spring(response: 0.5, dampingFraction: 0.85)) { appeared = true }
+        }
+    }
+
+    // MARK: - Top bar (back button on its own row)
+
+    private var topBar: some View {
+        HStack {
+            backButton
+            Spacer()
         }
     }
 
@@ -178,9 +190,6 @@ struct SubjectCoursesView: View {
                 }
             }
             .padding(.bottom, 6)
-
-            backButton
-                .offset(x: -4, y: -6)
         }
     }
 
