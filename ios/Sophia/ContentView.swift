@@ -43,7 +43,14 @@ struct ContentView: View {
                     )
                 }
 
-                Tab(languageManager.text("tab.profile"), systemImage: "person.fill", value: 2) {
+                Tab(languageManager.text("tab.collections"), systemImage: "square.stack.3d.up.fill", value: 2) {
+                    CollectionsView(
+                        progressManager: progressManager,
+                        selectedCourse: $selectedCourse
+                    )
+                }
+
+                Tab(languageManager.text("tab.profile"), systemImage: "person.fill", value: 3) {
                     ProfileView(
                         progressManager: progressManager,
                         store: storeVM,
@@ -178,6 +185,8 @@ struct ContentView: View {
         case 1:
             return "library"
         case 2:
+            return "collections"
+        case 3:
             return "profile"
         default:
             return "unknown"

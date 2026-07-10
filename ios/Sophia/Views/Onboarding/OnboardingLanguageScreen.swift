@@ -83,36 +83,35 @@ private struct LanguageCard: View {
 
     var body: some View {
         Button(action: action) {
-            HStack(spacing: 12) {
+            HStack(spacing: 10) {
                 Text(language.flag)
-                    .font(.system(size: 30))
+                    .font(.system(size: 28))
 
                 Text(language.displayName)
                     .font(.system(.subheadline, design: .rounded, weight: .heavy))
                     .foregroundStyle(ink)
                     .lineLimit(1)
-                    .minimumScaleFactor(0.8)
-
-                Spacer(minLength: 0)
+                    .minimumScaleFactor(0.6)
+                    .frame(maxWidth: .infinity, alignment: .leading)
 
                 ZStack {
                     Circle()
                         .strokeBorder(ink.opacity(isSelected ? 1 : 0.25), lineWidth: 2)
-                        .frame(width: 22, height: 22)
+                        .frame(width: 20, height: 20)
                     if isSelected {
                         Circle()
                             .fill(ink)
-                            .frame(width: 22, height: 22)
+                            .frame(width: 20, height: 20)
                             .overlay {
                                 Image(systemName: "checkmark")
-                                    .font(.system(size: 11, weight: .heavy))
+                                    .font(.system(size: 10, weight: .heavy))
                                     .foregroundStyle(.white)
                             }
                             .transition(.scale.combined(with: .opacity))
                     }
                 }
             }
-            .padding(.horizontal, 14)
+            .padding(.horizontal, 12)
             .padding(.vertical, 16)
         }
         .buttonStyle(BrutalRowButtonStyle(isSelected: isSelected, accentColor: BrutalPalette.pink))

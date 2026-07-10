@@ -21,25 +21,10 @@ enum BrutalPalette {
 }
 
 struct LibraryView: View {
-    private enum LibraryTab: CaseIterable, Hashable {
-        case courses
-        case collections
-
-        func label(language: AppLanguage) -> String {
-            switch self {
-            case .courses:
-                AppLocalizable.string("library.tab.courses", language: language)
-            case .collections:
-                AppLocalizable.string("library.tab.collections", language: language)
-            }
-        }
-    }
-
     @Environment(LanguageManager.self) private var languageManager
     let progressManager: ProgressManager
     @Binding var selectedCourse: Course?
     @State private var searchText: String = ""
-    @State private var selectedTab: LibraryTab = .courses
     @State private var featuredIndex: Int = 0
     @FocusState private var searchFocused: Bool
 
@@ -97,55 +82,45 @@ struct LibraryView: View {
                         .padding(.horizontal, 20)
                         .padding(.top, 8)
 
-                        tabSwitcher
+                        searchBar
                             .padding(.horizontal, 20)
 
-                        if selectedTab == .courses {
-                            searchBar
-                                .padding(.horizontal, 20)
-
-                            if isSearching {
-                                ForEach(Subject.allCases, id: \.self) { subject in
-                                    let courses = filteredCourses.filter { $0.subject == subject }
-                                    if !courses.isEmpty {
-                                        searchSection(subject: subject, courses: courses)
-                                    }
-                                }
-                                if filteredCourses.isEmpty {
-                                    emptyResults
-                                        .padding(.top, 60)
-                                }
-                            } else {
-                                if !featuredCourses.isEmpty {
-                                    featuredCarousel
-                                }
-
-                                if !inProgressCourses.isEmpty {
-                                    courseRow(
-                                        title: languageManager.text("library.section.continue"),
-                                        courses: inProgressCourses
-                                    )
-                                }
-
-                                if !recommendedCourses.isEmpty {
-                                    courseRow(
-                                        title: languageManager.text("library.section.recommended"),
-                                        courses: recommendedCourses
-                                    )
-                                }
-
-                                ForEach(Subject.allCases, id: \.self) { subject in
-                                    let courses = filteredCourses.filter { $0.subject == subject }
-                                    if !courses.isEmpty {
-                                        previewSection(subject: subject, courses: courses)
-                                    }
+                        if isSearching {
+                            ForEach(Subject.allCases, id: \.self) { subject in
+                                let courses = filteredCourses.filter { $0.subject == subject }
+                                if !courses.isEmpty {
+                                    searchSection(subject: subject, courses: courses)
                                 }
                             }
+                            if filteredCourses.isEmpty {
+                                emptyResults
+                                    .padding(.top, 60)
+                            }
                         } else {
-                            CollectionsOverviewView(
-                                progressManager: progressManager,
-                                selectedCourse: $selectedCourse
-                            )
+                            if !featuredCourses.isEmpty {
+                                featuredCarousel
+                            }
+
+                            if !inProgressCourses.isEmpty {
+                                courseRow(
+                                    title: languageManager.text("library.section.continue"),
+                                    courses: inProgressCourses
+                                )
+                            }
+
+                            if !recommendedCourses.isEmpty {
+                                courseRow(
+                                    title: languageManager.text("library.section.recommended"),
+                                    courses: recommendedCourses
+                                )
+                            }
+
+                            ForEach(Subject.allCases, id: \.self) { subject in
+                                let courses = filteredCourses.filter { $0.subject == subject }
+                                if !courses.isEmpty {
+                                    previewSection(subject: subject, courses: courses)
+                                }
+                            }
                         }
                     }
                     .padding(.bottom, 40)
@@ -161,40 +136,6 @@ struct LibraryView: View {
                     progressManager: progressManager,
                     selectedCourse: $selectedCourse
                 )
-            }
-            .navigationDestination(for: LearningCollection.self) { collection in
-                CollectionDetailView(
-                    collection: collection,
-                    progressManager: progressManager,
-                    selectedCourse: $selectedCourse
-                )
-            }
-        }
-    }
-
-    private var tabSwitcher: some View {
-        HStack(spacing: 8) {
-            ForEach(LibraryTab.allCases, id: \.self) { tab in
-                Button {
-                    let g = UIImpactFeedbackGenerator(style: .light)
-                    g.impactOccurred()
-                    withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
-                        selectedTab = tab
-                        if tab == .collections {
-                            searchText = ""
-                            searchFocused = false
-                        }
-                    }
-                } label: {
-                    Text(tab.label(language: languageManager.current))
-                        .font(.system(.subheadline, design: .rounded, weight: .black))
-                        .foregroundStyle(selectedTab == tab ? .white : ink)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 12)
-                        .background(selectedTab == tab ? ink : Color.white, in: Capsule())
-                        .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
-                }
-                .buttonStyle(BrutalIconButtonStyle(depth: 1))
             }
         }
     }
@@ -286,7 +227,7 @@ struct LibraryView: View {
                 }
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
-            .frame(height: 320)
+            .frame(height: 344)
             .onAppear {
                 CourseImageMap.preloadImages(for: featuredCourses.map(\.id))
             }
@@ -502,12 +443,12 @@ struct LibraryFeaturedCard: View {
                         }
                     }
                 }
-                .frame(height: 168)
+                .frame(height: 150)
                 .frame(maxWidth: .infinity)
                 .clipped()
 
             LinearGradient(colors: [.clear, .black.opacity(0.35)], startPoint: .center, endPoint: .bottom)
-                .frame(height: 168)
+                .frame(height: 150)
                 .allowsHitTesting(false)
 
             HStack(spacing: 6) {
@@ -523,7 +464,7 @@ struct LibraryFeaturedCard: View {
             .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
             .padding(12)
         }
-        .frame(height: 168)
+        .frame(height: 150)
         .overlay(alignment: .bottomLeading) {
             HStack(spacing: 6) {
                 Text(course.subject.emoji).font(.system(size: 13))
@@ -547,16 +488,14 @@ struct LibraryFeaturedCard: View {
             Text(course.title)
                 .font(.system(.title3, design: .rounded, weight: .black))
                 .foregroundStyle(ink)
-                .lineLimit(2)
+                .lineLimit(2, reservesSpace: true)
                 .multilineTextAlignment(.leading)
-                .fixedSize(horizontal: false, vertical: true)
 
             Text(course.description)
                 .font(.system(.caption, design: .rounded, weight: .semibold))
                 .foregroundStyle(ink.opacity(0.6))
-                .lineLimit(2)
+                .lineLimit(2, reservesSpace: true)
                 .multilineTextAlignment(.leading)
-                .fixedSize(horizontal: false, vertical: true)
 
             HStack(spacing: 8) {
                 metaChip(icon: "rectangle.stack.fill", text: String(format: languageManager.text("onboarding.showcase.courses.lessons"), course.lessons.count), fill: pastel)
