@@ -127,6 +127,14 @@ enum AnalyticsService {
         track("discount_offer_viewed", ["source": source])
     }
 
+    static func trackPurchaseCompleted(context: String, offeringId: String? = nil, packageId: String? = nil) {
+        var props: [String: MixpanelType] = ["context": context]
+        if let offeringId { props["offering_id"] = offeringId }
+        if let packageId { props["package_id"] = packageId }
+        track("purchase_completed", props)
+        Mixpanel.mainInstance().people.set(property: "is_premium", to: true)
+    }
+
     // MARK: - Course
 
     static func trackCourseOpened(

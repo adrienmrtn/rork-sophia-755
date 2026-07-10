@@ -155,7 +155,14 @@ struct OnboardingSpecialOfferView: View {
                         Task {
                             guard let pkg = store.promoPackage else { return }
                             let success = await store.purchase(package: pkg)
-                            if success { onSubscribed() }
+                            if success {
+                                AnalyticsService.trackPurchaseCompleted(
+                                    context: SophiaPaywallContext.offreDiscount.rawValue,
+                                    offeringId: store.offerings?.offering(identifier: "special_promo")?.identifier,
+                                    packageId: pkg.identifier
+                                )
+                                onSubscribed()
+                            }
                         }
                     } label: {
                         HStack(spacing: 10) {

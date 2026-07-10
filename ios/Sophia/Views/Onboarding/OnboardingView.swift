@@ -171,6 +171,11 @@ struct OnboardingView: View {
                     }
                     let success = await storeVM.purchase(package: package)
                     if success {
+                        AnalyticsService.trackPurchaseCompleted(
+                            context: SophiaPaywallContext.finOnboarding.rawValue,
+                            offeringId: storeVM.offerings?.current?.identifier,
+                            packageId: package.identifier
+                        )
                         await MainActor.run { finishOnboarding() }
                     }
                 }
