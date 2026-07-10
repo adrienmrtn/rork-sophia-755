@@ -40,6 +40,7 @@ struct LibraryView: View {
     @Binding var selectedCourse: Course?
     @State private var searchText: String = ""
     @State private var selectedTab: LibraryTab = .courses
+    @State private var featuredIndex: Int = 0
     @FocusState private var searchFocused: Bool
 
     private let previewCount = 4
@@ -56,6 +57,29 @@ struct LibraryView: View {
     }
 
     private var isSearching: Bool { !searchText.isEmpty }
+
+    /// Hand-picked editorial highlights for the top swipeable carousel.
+    private var featuredCourses: [Course] {
+        let lang = languageManager.current
+        let curated = CuratedStarterCourses.ids.compactMap { ContentCatalog.course(withId: $0, language: lang) }
+        return Array(curated.prefix(6))
+    }
+
+    /// Courses the user already started — surfaced as a "continue" row.
+    private var inProgressCourses: [Course] {
+        ContentCatalog.activeCourses.filter { progressManager.courseStatus(for: $0.id) == .inProgress }
+    }
+
+    /// Personalized picks based on the interests chosen during onboarding.
+    private var recommendedCourses: [Course] {
+        let recos = OnboardingCourseRecommender.recommendedCourses(
+            interests: OnboardingViewModel.userInterestKeys(),
+            language: languageManager.current,
+            limit: 10
+        )
+        let featuredIds = Set(featuredCourses.map(\.id))
+        return recos.filter { !featuredIds.contains($0.id) }
+    }
 
     var body: some View {
         NavigationStack {
@@ -80,20 +104,42 @@ struct LibraryView: View {
                             searchBar
                                 .padding(.horizontal, 20)
 
-                            ForEach(Subject.allCases, id: \.self) { subject in
-                                let courses = filteredCourses.filter { $0.subject == subject }
-                                if !courses.isEmpty {
-                                    if isSearching {
+                            if isSearching {
+                                ForEach(Subject.allCases, id: \.self) { subject in
+                                    let courses = filteredCourses.filter { $0.subject == subject }
+                                    if !courses.isEmpty {
                                         searchSection(subject: subject, courses: courses)
-                                    } else {
+                                    }
+                                }
+                                if filteredCourses.isEmpty {
+                                    emptyResults
+                                        .padding(.top, 60)
+                                }
+                            } else {
+                                if !featuredCourses.isEmpty {
+                                    featuredCarousel
+                                }
+
+                                if !inProgressCourses.isEmpty {
+                                    courseRow(
+                                        title: languageManager.text("library.section.continue"),
+                                        courses: inProgressCourses
+                                    )
+                                }
+
+                                if !recommendedCourses.isEmpty {
+                                    courseRow(
+                                        title: languageManager.text("library.section.recommended"),
+                                        courses: recommendedCourses
+                                    )
+                                }
+
+                                ForEach(Subject.allCases, id: \.self) { subject in
+                                    let courses = filteredCourses.filter { $0.subject == subject }
+                                    if !courses.isEmpty {
                                         previewSection(subject: subject, courses: courses)
                                     }
                                 }
-                            }
-
-                            if isSearching && filteredCourses.isEmpty {
-                                emptyResults
-                                    .padding(.top, 60)
                             }
                         } else {
                             CollectionsOverviewView(
@@ -212,6 +258,83 @@ struct LibraryView: View {
         .frame(maxWidth: .infinity)
     }
 
+    // MARK: - Featured swipeable carousel
+
+    private var featuredCarousel: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack(spacing: 8) {
+                Text(languageManager.text("library.section.featured"))
+                    .font(.system(.title3, design: .rounded, weight: .heavy))
+                    .foregroundStyle(ink)
+                Spacer()
+            }
+            .padding(.horizontal, 20)
+
+            TabView(selection: $featuredIndex) {
+                ForEach(Array(featuredCourses.enumerated()), id: \.element.id) { index, course in
+                    LibraryFeaturedCard(
+                        course: course,
+                        status: progressManager.courseStatus(for: course.id),
+                        onTap: {
+                            UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                            selectedCourse = course
+                        }
+                    )
+                    .padding(.horizontal, 20)
+                    .padding(.bottom, 8)
+                    .tag(index)
+                }
+            }
+            .tabViewStyle(.page(indexDisplayMode: .never))
+            .frame(height: 320)
+            .onAppear {
+                CourseImageMap.preloadImages(for: featuredCourses.map(\.id))
+            }
+
+            HStack(spacing: 6) {
+                ForEach(featuredCourses.indices, id: \.self) { i in
+                    Capsule()
+                        .fill(i == featuredIndex ? ink : ink.opacity(0.2))
+                        .frame(width: i == featuredIndex ? 24 : 8, height: 8)
+                        .animation(.spring(response: 0.3), value: featuredIndex)
+                }
+            }
+            .frame(maxWidth: .infinity)
+        }
+    }
+
+    // MARK: - Generic horizontal course row (continue / recommended)
+
+    private func courseRow(title: String, courses: [Course]) -> some View {
+        VStack(alignment: .leading, spacing: 14) {
+            HStack {
+                Text(title)
+                    .font(.system(.title3, design: .rounded, weight: .heavy))
+                    .foregroundStyle(ink)
+                Spacer()
+            }
+            .padding(.horizontal, 20)
+
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(alignment: .top, spacing: 14) {
+                    ForEach(courses) { course in
+                        LibraryCardView(
+                            course: course,
+                            status: progressManager.courseStatus(for: course.id),
+                            onTap: {
+                                UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                                selectedCourse = course
+                            },
+                            progressManager: progressManager
+                        )
+                        .frame(width: 180)
+                    }
+                }
+            }
+            .contentMargins(.horizontal, 20)
+        }
+    }
+
     private func previewSection(subject: Subject, courses: [Course]) -> some View {
         VStack(alignment: .leading, spacing: 14) {
             sectionHeader(subject: subject)
@@ -322,6 +445,147 @@ struct BrutalCardButtonStyle: ButtonStyle {
         configuration.label
             .offset(y: configuration.isPressed ? depth : 0)
             .animation(.spring(response: 0.18, dampingFraction: 0.7), value: configuration.isPressed)
+    }
+}
+
+/// Large editorial "featured" card used in the swipeable Library carousel.
+struct LibraryFeaturedCard: View {
+    @Environment(LanguageManager.self) private var languageManager
+    let course: Course
+    let status: CourseStatus
+    let onTap: () -> Void
+
+    @State private var image: UIImage?
+
+    private let ink = BrutalPalette.ink
+    private let depth: CGFloat = 6
+    private var pastel: Color { BrutalPalette.pastel(for: course.subject) }
+
+    var body: some View {
+        Button(action: onTap) {
+            VStack(alignment: .leading, spacing: 0) {
+                cover
+                infoPanel
+            }
+            .background(Color.white)
+            .clipShape(.rect(cornerRadius: 24))
+            .overlay {
+                RoundedRectangle(cornerRadius: 24, style: .continuous)
+                    .strokeBorder(ink, lineWidth: 3)
+            }
+            .background(alignment: .top) {
+                RoundedRectangle(cornerRadius: 24, style: .continuous)
+                    .fill(ink)
+                    .offset(y: depth)
+            }
+            .padding(.bottom, depth)
+        }
+        .buttonStyle(BrutalCardButtonStyle(depth: 3))
+        .onAppear {
+            if image == nil { image = CourseImageMap.loadImage(for: course.id) }
+        }
+    }
+
+    private var cover: some View {
+        ZStack(alignment: .topLeading) {
+            Color(.secondarySystemBackground)
+                .overlay {
+                    if let image {
+                        Image(uiImage: image)
+                            .resizable()
+                            .scaledToFill()
+                            .allowsHitTesting(false)
+                    } else {
+                        ZStack {
+                            pastel
+                            Text(course.subject.emoji).font(.system(size: 52))
+                        }
+                    }
+                }
+                .frame(height: 168)
+                .frame(maxWidth: .infinity)
+                .clipped()
+
+            LinearGradient(colors: [.clear, .black.opacity(0.35)], startPoint: .center, endPoint: .bottom)
+                .frame(height: 168)
+                .allowsHitTesting(false)
+
+            HStack(spacing: 6) {
+                Image(systemName: "sparkles").font(.system(size: 10, weight: .black))
+                Text(languageManager.text("library.featured.badge"))
+                    .font(.system(.caption2, design: .rounded, weight: .black))
+                    .tracking(0.6)
+            }
+            .foregroundStyle(ink)
+            .padding(.horizontal, 10)
+            .padding(.vertical, 6)
+            .background(BrutalPalette.yellow, in: Capsule())
+            .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
+            .padding(12)
+        }
+        .frame(height: 168)
+        .overlay(alignment: .bottomLeading) {
+            HStack(spacing: 6) {
+                Text(course.subject.emoji).font(.system(size: 13))
+                Text(course.subject.localizedShortName(language: languageManager.current).uppercased())
+                    .font(.system(.caption2, design: .rounded, weight: .heavy))
+                    .foregroundStyle(.white)
+                    .tracking(0.5)
+            }
+            .padding(.horizontal, 10)
+            .padding(.vertical, 6)
+            .background(ink, in: Capsule())
+            .padding(12)
+        }
+        .overlay(alignment: .bottom) {
+            Rectangle().fill(ink).frame(height: 3)
+        }
+    }
+
+    private var infoPanel: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text(course.title)
+                .font(.system(.title3, design: .rounded, weight: .black))
+                .foregroundStyle(ink)
+                .lineLimit(2)
+                .multilineTextAlignment(.leading)
+                .fixedSize(horizontal: false, vertical: true)
+
+            Text(course.description)
+                .font(.system(.caption, design: .rounded, weight: .semibold))
+                .foregroundStyle(ink.opacity(0.6))
+                .lineLimit(2)
+                .multilineTextAlignment(.leading)
+                .fixedSize(horizontal: false, vertical: true)
+
+            HStack(spacing: 8) {
+                metaChip(icon: "rectangle.stack.fill", text: String(format: languageManager.text("onboarding.showcase.courses.lessons"), course.lessons.count), fill: pastel)
+                metaChip(icon: "checkmark.circle.fill", text: String(format: languageManager.text("onboarding.showcase.courses.quizCount"), course.quiz.count), fill: BrutalPalette.yellow)
+
+                Spacer(minLength: 0)
+
+                Image(systemName: status == .completed ? "checkmark.circle.fill" : "arrow.right")
+                    .font(.system(size: 15, weight: .black))
+                    .foregroundStyle(ink)
+                    .frame(width: 34, height: 34)
+                    .background(status == .completed ? BrutalPalette.yellow : BrutalPalette.pink, in: Circle())
+                    .overlay { Circle().strokeBorder(ink, lineWidth: 2) }
+            }
+        }
+        .padding(16)
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    private func metaChip(icon: String, text: String, fill: Color) -> some View {
+        HStack(spacing: 5) {
+            Image(systemName: icon).font(.system(size: 10, weight: .black))
+            Text(text).font(.system(.caption2, design: .rounded, weight: .black))
+        }
+        .foregroundStyle(ink)
+        .padding(.horizontal, 9)
+        .padding(.vertical, 6)
+        .background(fill, in: Capsule())
+        .overlay { Capsule().strokeBorder(ink, lineWidth: 1.6) }
     }
 }
 
