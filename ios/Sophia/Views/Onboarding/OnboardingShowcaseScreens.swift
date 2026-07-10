@@ -594,14 +594,22 @@ struct OnboardingShowcaseCollectionsScreen: View {
     }
 }
 
-// MARK: - 10 · Cartes — three-card fan with a legendary reveal
+// MARK: - Cartes + XP — card fan reveal and level-up preview on one screen
 
 struct OnboardingShowcaseCardsScreen: View {
+    @Environment(LanguageManager.self) private var languageManager
     let onNext: () -> Void
 
     @State private var fanned = false
     @State private var glow = false
     @State private var centerFlipped = false
+    @State private var barFill: CGFloat = 0
+    @State private var levelBounce = false
+    @State private var showLevelPop = false
+    @State private var floatingChips: [FloatingXPChip] = []
+    @State private var xpStarted = false
+
+    private let ink = BrutalPalette.ink
 
     private var heroCards: [CollectibleCard] {
         let legendary = CardData.allCards.first { $0.rarity == .legendaire }
@@ -611,31 +619,82 @@ struct OnboardingShowcaseCardsScreen: View {
     }
 
     var body: some View {
-        OnboardingShowcaseLayout(titleKey: "onboarding.showcase.cards.title", onNext: onNext) {
-            ZStack {
-                if glow {
-                    Circle()
-                        .fill(BrutalPalette.yellow.opacity(0.4))
-                        .frame(width: 190, height: 190)
-                        .blur(radius: 28)
-                        .scaleEffect(glow ? 1.1 : 0.85)
-                        .animation(.easeInOut(duration: 1.3).repeatForever(autoreverses: true), value: glow)
-                }
+        OnboardingShowcaseLayout(titleKey: "onboarding.showcase.cardsXp.title", onNext: onNext) {
+            VStack(spacing: 18) {
+                ZStack {
+                    if glow {
+                        Circle()
+                            .fill(BrutalPalette.yellow.opacity(0.4))
+                            .frame(width: 190, height: 190)
+                            .blur(radius: 28)
+                            .scaleEffect(glow ? 1.1 : 0.85)
+                            .animation(.easeInOut(duration: 1.3).repeatForever(autoreverses: true), value: glow)
+                    }
 
-                ForEach(Array(heroCards.enumerated()), id: \.element.id) { index, card in
-                    let isCenter = index == 1
-                    CollectibleMiniCard(card: card, unlocked: isCenter ? centerFlipped : true)
-                        .rotationEffect(.degrees(fanned ? sideRotation(for: index) : 0))
-                        .offset(
-                            x: fanned ? sideOffset(for: index) : 0,
-                            y: isCenter ? 0 : (fanned ? 16 : 0)
-                        )
-                        .scaleEffect(isCenter ? (centerFlipped ? 1.08 : 0.94) : 0.86)
-                        .zIndex(isCenter ? 1 : 0)
-                        .opacity(fanned ? 1 : 0)
+                    ForEach(Array(heroCards.enumerated()), id: \.element.id) { index, card in
+                        let isCenter = index == 1
+                        CollectibleMiniCard(card: card, unlocked: isCenter ? centerFlipped : true)
+                            .rotationEffect(.degrees(fanned ? sideRotation(for: index) : 0))
+                            .offset(
+                                x: fanned ? sideOffset(for: index) : 0,
+                                y: isCenter ? 0 : (fanned ? 16 : 0)
+                            )
+                            .scaleEffect(isCenter ? (centerFlipped ? 1.08 : 0.94) : 0.86)
+                            .zIndex(isCenter ? 1 : 0)
+                            .opacity(fanned ? 1 : 0)
+                    }
+                }
+                .frame(height: 200)
+
+                ZStack {
+                    HStack(spacing: 14) {
+                        ZStack {
+                            Circle()
+                                .fill(BrutalPalette.pink)
+                                .frame(width: 52, height: 52)
+                                .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
+                                .scaleEffect(levelBounce ? 1.12 : 1)
+                                .animation(.spring(response: 0.4, dampingFraction: 0.5), value: levelBounce)
+
+                            Text(showLevelPop ? "2" : "1")
+                                .font(.system(size: 22, weight: .heavy, design: .rounded))
+                                .foregroundStyle(ink)
+                                .contentTransition(.numericText())
+                        }
+
+                        VStack(alignment: .leading, spacing: 6) {
+                            Text(languageManager.text("onboarding.showcase.xp.level"))
+                                .font(.system(.caption2, design: .rounded, weight: .black))
+                                .foregroundStyle(ink.opacity(0.5))
+                                .tracking(0.8)
+
+                            GeometryReader { geo in
+                                ZStack(alignment: .leading) {
+                                    Capsule().fill(ink.opacity(0.1))
+                                    Capsule()
+                                        .fill(BrutalPalette.pink)
+                                        .frame(width: geo.size.width * barFill)
+                                }
+                            }
+                            .frame(height: 14)
+                        }
+                    }
+                    .padding(16)
+                    .brutalOnboardingCard(depth: 4, corner: 20)
+
+                    ForEach(floatingChips) { chip in
+                        Text("+\(chip.amount)")
+                            .font(.system(.caption, design: .rounded, weight: .black))
+                            .foregroundStyle(ink)
+                            .padding(.horizontal, 8)
+                            .padding(.vertical, 3)
+                            .background(BrutalPalette.yellow, in: Capsule())
+                            .overlay { Capsule().strokeBorder(ink, lineWidth: 1.6) }
+                            .offset(x: chip.x, y: chip.y)
+                            .opacity(chip.opacity)
+                    }
                 }
             }
-            .frame(height: 220)
         }
         .onOnboardingSlideSettled(delay: 0.35) {
             withAnimation(.spring(response: 0.6, dampingFraction: 0.72)) {
@@ -647,6 +706,11 @@ struct OnboardingShowcaseCardsScreen: View {
                 }
                 glow = true
                 OnboardingHaptics.primaryCTA()
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.35) {
+                guard !xpStarted else { return }
+                xpStarted = true
+                animateXP()
             }
         }
     }
@@ -666,82 +730,12 @@ struct OnboardingShowcaseCardsScreen: View {
         default: return 0
         }
     }
-}
-
-// MARK: - 13 · XP — bar fill with floating XP chips and a level-up pop
-
-struct OnboardingShowcaseXPScreen: View {
-    @Environment(LanguageManager.self) private var languageManager
-    let onNext: () -> Void
-
-    @State private var barFill: CGFloat = 0
-    @State private var levelBounce = false
-    @State private var showLevelPop = false
-    @State private var floatingChips: [FloatingXPChip] = []
-
-    private let ink = BrutalPalette.ink
-
-    var body: some View {
-        OnboardingShowcaseLayout(titleKey: "onboarding.showcase.xp.title", onNext: onNext) {
-            ZStack {
-                HStack(spacing: 16) {
-                    ZStack {
-                        Circle()
-                            .fill(BrutalPalette.pink)
-                            .frame(width: 62, height: 62)
-                            .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
-                            .scaleEffect(levelBounce ? 1.15 : 1)
-                            .animation(.spring(response: 0.4, dampingFraction: 0.5), value: levelBounce)
-
-                        Text(showLevelPop ? "2" : "1")
-                            .font(.system(size: 26, weight: .heavy, design: .rounded))
-                            .foregroundStyle(ink)
-                            .contentTransition(.numericText())
-                    }
-
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text(languageManager.text("onboarding.showcase.xp.level"))
-                            .font(.system(.caption, design: .rounded, weight: .black))
-                            .foregroundStyle(ink.opacity(0.5))
-                            .tracking(0.8)
-
-                        GeometryReader { geo in
-                            ZStack(alignment: .leading) {
-                                Capsule().fill(ink.opacity(0.1))
-                                Capsule()
-                                    .fill(BrutalPalette.pink)
-                                    .frame(width: geo.size.width * barFill)
-                            }
-                        }
-                        .frame(height: 16)
-                    }
-                }
-                .padding(20)
-                .brutalOnboardingCard(depth: 5, corner: 24)
-
-                ForEach(floatingChips) { chip in
-                    Text("+\(chip.amount)")
-                        .font(.system(.subheadline, design: .rounded, weight: .black))
-                        .foregroundStyle(ink)
-                        .padding(.horizontal, 10)
-                        .padding(.vertical, 4)
-                        .background(BrutalPalette.yellow, in: Capsule())
-                        .overlay { Capsule().strokeBorder(ink, lineWidth: 1.6) }
-                        .offset(x: chip.x, y: chip.y)
-                        .opacity(chip.opacity)
-                }
-            }
-        }
-        .onOnboardingSlideSettled(delay: 0.4) {
-            animateXP()
-        }
-    }
 
     private func animateXP() {
         let chipPlan: [(amount: Int, x: CGFloat, delay: Double)] = [
-            (10, -50, 0.15),
-            (15, 8, 0.55),
-            (8, 55, 0.95),
+            (10, -42, 0.1),
+            (15, 6, 0.45),
+            (8, 48, 0.8),
         ]
         for plan in chipPlan {
             DispatchQueue.main.asyncAfter(deadline: .now() + plan.delay) {
@@ -749,23 +743,23 @@ struct OnboardingShowcaseXPScreen: View {
             }
         }
 
-        withAnimation(.timingCurve(0.12, 0.92, 0.18, 1.0, duration: 1.55)) {
+        withAnimation(.timingCurve(0.12, 0.92, 0.18, 1.0, duration: 1.35)) {
             barFill = 1.0
         }
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.72) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             levelBounce = true
             withAnimation(.spring(response: 0.4, dampingFraction: 0.5)) {
                 showLevelPop = true
             }
-            OnboardingHaptics.primaryCTA()
+            OnboardingHaptics.selection()
             var transaction = Transaction()
             transaction.disablesAnimations = true
             withTransaction(transaction) {
                 barFill = 0
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
-                withAnimation(.easeOut(duration: 0.65)) {
+                withAnimation(.easeOut(duration: 0.55)) {
                     barFill = 0.22
                 }
             }
@@ -773,22 +767,22 @@ struct OnboardingShowcaseXPScreen: View {
     }
 
     private func spawnChip(amount: Int, xOffset: CGFloat) {
-        let chip = FloatingXPChip(amount: amount, x: xOffset, y: 30, opacity: 0)
+        let chip = FloatingXPChip(amount: amount, x: xOffset, y: 24, opacity: 0)
         floatingChips.append(chip)
         let id = chip.id
 
         withAnimation(.easeOut(duration: 0.25)) {
             updateChip(id: id) { $0.opacity = 1 }
         }
-        withAnimation(.easeOut(duration: 1.1)) {
-            updateChip(id: id) { $0.y = -74 }
+        withAnimation(.easeOut(duration: 1.0)) {
+            updateChip(id: id) { $0.y = -58 }
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.75) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
             withAnimation(.easeIn(duration: 0.3)) {
                 updateChip(id: id) { $0.opacity = 0 }
             }
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             floatingChips.removeAll { $0.id == id }
         }
     }

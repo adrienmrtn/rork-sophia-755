@@ -61,7 +61,7 @@ struct OnboardingProjectionScreen: View {
 
                 Spacer(minLength: 0)
 
-                OnboardingPrimaryButton(title: languageManager.text("common.letsGo"), action: onNext)
+                OnboardingPrimaryButton(title: languageManager.text("common.continue"), action: onNext)
                     .opacity(showCTA ? 1 : 0)
                     .offset(y: showCTA ? 0 : 24)
                     .zIndex(1)

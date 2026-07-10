@@ -83,7 +83,7 @@ struct OnboardingWastedTimeScreen: View {
             VStack {
                 Spacer()
 
-                OnboardingPrimaryButton(title: languageManager.text("common.letsGoShort"), action: onNext)
+                OnboardingPrimaryButton(title: languageManager.text("common.continue"), action: onNext)
                     .opacity(showCTA ? 1 : 0)
                     .offset(y: showCTA ? 0 : 24)
             }

@@ -42,7 +42,7 @@ struct OnboardingWelcomeScreen: View {
 
                 Spacer()
 
-                OnboardingPrimaryButton(title: languageManager.text("common.next"), action: handleNext)
+                OnboardingPrimaryButton(title: languageManager.text("common.continue"), action: handleNext)
                     .opacity(ctaAppeared ? 1 : 0)
                     .offset(y: ctaAppeared ? 0 : 24)
             }

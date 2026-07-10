@@ -71,7 +71,7 @@ struct OnboardingDailyGoalScreen: View {
 
                 Spacer()
 
-                OnboardingPrimaryButton(title: languageManager.text("common.letsGo"), action: onNext)
+                OnboardingPrimaryButton(title: languageManager.text("common.continue"), action: onNext)
                     .opacity(appeared ? 1 : 0)
         }
         .onboardingFullBleedBackground(BrutalPalette.cream)
