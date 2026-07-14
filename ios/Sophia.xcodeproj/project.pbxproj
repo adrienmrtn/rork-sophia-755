@@ -10,6 +10,7 @@
 		XX298127CFBB2CF3FA631BXX /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = XXDCC169DE7B2F3C1C8B10XX /* RevenueCat */; };
 		XXA1B2C3D4E5F6A7B8C9D0XX /* RevenueCatUI in Frameworks */ = {isa = PBXBuildFile; productRef = XXA1B2C3D4E5F6A7B8C9D1XX /* RevenueCatUI */; };
 		MPBF00012E9EAD3100EA8BCF /* Mixpanel in Frameworks */ = {isa = PBXBuildFile; productRef = MPRD00012E9EAD3100EA8BCF /* Mixpanel */; };
+		FBBF00012E9EAD3100EA8BCF /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = FBRD00012E9EAD3100EA8BCF /* FacebookCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 				XX298127CFBB2CF3FA631BXX /* RevenueCat in Frameworks */,
 				XXA1B2C3D4E5F6A7B8C9D0XX /* RevenueCatUI in Frameworks */,
 				MPBF00012E9EAD3100EA8BCF /* Mixpanel in Frameworks */,
+				FBBF00012E9EAD3100EA8BCF /* FacebookCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +114,7 @@
 				XXDCC169DE7B2F3C1C8B10XX /* RevenueCat */,
 				XXA1B2C3D4E5F6A7B8C9D1XX /* RevenueCatUI */,
 				MPRD00012E9EAD3100EA8BCF /* Mixpanel */,
+				FBRD00012E9EAD3100EA8BCF /* FacebookCore */,
 			);
 			productName = Sophia;
 			productReference = 105FC57A2E9EAD3100EA8BCF /* Sophia.app */;
@@ -200,6 +203,7 @@
 			packageReferences = (
 				XX4AC81916604C4344ADC0XX /* XCRemoteSwiftPackageReference "purchases-ios-spm" */,
 				MPKG00012E9EAD3100EA8BCF /* XCRemoteSwiftPackageReference "mixpanel-swift" */,
+				FBKG00012E9EAD3100EA8BCF /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = 105FC57B2E9EAD3100EA8BCF /* Products */;
 			projectDirPath = "";
@@ -406,8 +410,8 @@
 				DEVELOPMENT_TEAM = K792T8TQ4X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Sophia;
-				INFOPLIST_KEY_CFBundleURLTypes = "{\n    CFBundleURLName = \"app.rork.sophia\";\n    CFBundleURLSchemes =     (\n        sophia\n    );\n}";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -450,8 +454,8 @@
 				DEVELOPMENT_TEAM = K792T8TQ4X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Sophia;
-				INFOPLIST_KEY_CFBundleURLTypes = "{\n    CFBundleURLName = \"app.rork.sophia\";\n    CFBundleURLSchemes =     (\n        sophia\n    );\n}";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -625,9 +629,22 @@
 				minimumVersion = 6.0.0;
 			};
 		};
+		FBKG00012E9EAD3100EA8BCF /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 18.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FBRD00012E9EAD3100EA8BCF /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBKG00012E9EAD3100EA8BCF /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
 		MPRD00012E9EAD3100EA8BCF /* Mixpanel */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = MPKG00012E9EAD3100EA8BCF /* XCRemoteSwiftPackageReference "mixpanel-swift" */;

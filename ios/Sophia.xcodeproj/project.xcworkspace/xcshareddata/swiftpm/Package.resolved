@@ -2,6 +2,15 @@
   "originHash" : "0046ce31fd89b5cedd3207a6f16b9a21ef6411c59e4b9afa6de70a0ff7cf1e2f",
   "pins" : [
     {
+      "identity" : "facebook-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/facebook/facebook-ios-sdk",
+      "state" : {
+        "revision" : "3818dd2ccb6547c6d320ff68a1bd599789c3a44f",
+        "version" : "18.1.0"
+      }
+    },
+    {
       "identity" : "json-logic-swift",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/advantagefse/json-logic-swift",
