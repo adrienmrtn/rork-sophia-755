@@ -15,6 +15,8 @@ struct SophiaApp: App {
         Purchases.configure(withAPIKey: AppConfig.EXPO_PUBLIC_REVENUECAT_IOS_API_KEY)
         #endif
         AnalyticsService.configure()
+        // FacebookCore : lecture App ID / Client Token via Info.plist uniquement.
+        MetaAdsService.configure()
     }
 
     var body: some Scene {
@@ -43,6 +45,8 @@ struct SophiaApp: App {
             .environment(languageManager)
             .environment(\.locale, languageManager.locale)
             .onOpenURL { url in
+                // Callbacks Meta (fb…) + deep links Sophia (`sophia://…`).
+                MetaAdsService.handleOpenURL(url)
                 if let courseId = SophiaDeepLink.courseId(from: url) {
                     deepLinkCourseId = courseId
                 }

@@ -284,12 +284,18 @@ struct OnboardingView: View {
 
     private func advance() {
         OnboardingHaptics.slideTransition()
-        if viewModel.currentScreen == 6 {
+        let fromScreen = viewModel.currentScreen
+        if fromScreen == 6 {
             viewModel.persistInterests()
             AnalyticsService.trackOnboardingInterestsSet(viewModel.interests)
         }
 
-        let to = viewModel.currentScreen + 1
+        // ATT après le 1er écran d'onboarding (pas au lancement de l'app).
+        if fromScreen == 0 {
+            MetaAdsService.requestTrackingAuthorizationAfterFirstScreen()
+        }
+
+        let to = fromScreen + 1
         let width = UIScreen.main.bounds.width
 
         incomingScreen = to

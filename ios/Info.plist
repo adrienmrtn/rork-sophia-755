@@ -2,6 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<!-- Deep links app Sophia + callback URL scheme Meta (fb + App ID). -->
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -19,9 +20,17 @@
 			</array>
 		</dict>
 	</array>
+	<!-- Identifiant numérique de l'app Meta (lu automatiquement par FacebookCore). -->
 	<key>FacebookAppID</key>
 	<string>2056318204963651</string>
+	<!-- Client token Meta — secret d'app, uniquement ici (pas dans le code Swift). -->
+	<key>FacebookClientToken</key>
+	<string>d5806d3f17a5fcabc6a31ea59bd08d99</string>
+	<!-- Nom affiché côté Meta / Facebook. -->
 	<key>FacebookDisplayName</key>
 	<string>Sophia</string>
+	<!-- Texte ATT affiché par iOS avant la demande de tracking publicitaire. -->
+	<key>NSUserTrackingUsageDescription</key>
+	<string>Sophia utilise cet identifiant pour mesurer l'efficacité de ses campagnes publicitaires et améliorer la pertinence des annonces.</string>
 </dict>
 </plist>
