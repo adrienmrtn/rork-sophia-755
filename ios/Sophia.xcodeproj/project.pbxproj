@@ -406,8 +406,8 @@
 				DEVELOPMENT_TEAM = K792T8TQ4X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Sophia;
-				INFOPLIST_KEY_CFBundleURLTypes = "{\n    CFBundleURLName = \"app.rork.sophia\";\n    CFBundleURLSchemes =     (\n        sophia\n    );\n}";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -450,8 +450,8 @@
 				DEVELOPMENT_TEAM = K792T8TQ4X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Sophia;
-				INFOPLIST_KEY_CFBundleURLTypes = "{\n    CFBundleURLName = \"app.rork.sophia\";\n    CFBundleURLSchemes =     (\n        sophia\n    );\n}";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
