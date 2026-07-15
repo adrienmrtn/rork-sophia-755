@@ -3,6 +3,9 @@ import RevenueCat
 
 @main
 struct SophiaApp: App {
+    // Pont UIKit : FacebookCore s'initialise dans didFinishLaunching / applicationDidBecomeActive.
+    @UIApplicationDelegateAdaptor(SophiaAppDelegate.self) private var appDelegate
+
     @State private var languageManager = LanguageManager.shared
     @State private var showOnboarding: Bool = !OnboardingViewModel.isOnboardingCompleted
     @State private var deepLinkCourseId: String?
@@ -15,8 +18,6 @@ struct SophiaApp: App {
         Purchases.configure(withAPIKey: AppConfig.EXPO_PUBLIC_REVENUECAT_IOS_API_KEY)
         #endif
         AnalyticsService.configure()
-        // FacebookCore : lecture App ID / Client Token via Info.plist uniquement.
-        MetaAdsService.configure()
     }
 
     var body: some Scene {

@@ -29,6 +29,20 @@
 	<!-- Nom affiché côté Meta / Facebook. -->
 	<key>FacebookDisplayName</key>
 	<string>Sophia</string>
+	<!-- Active l'envoi automatique d'App Events (install, lancement) — requis par Meta App Manager. -->
+	<key>FacebookAutoLogAppEventsEnabled</key>
+	<true/>
+	<!-- Autorise la collecte IDFA quand l'utilisateur consent via ATT. -->
+	<key>FacebookAdvertiserIDCollectionEnabled</key>
+	<true/>
+	<!-- Schémas requis pour que le SDK détecte / interagisse avec l'écosystème Facebook. -->
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
 	<!-- Texte ATT affiché par iOS avant la demande de tracking publicitaire. -->
 	<key>NSUserTrackingUsageDescription</key>
 	<string>Sophia utilise cet identifiant pour mesurer l'efficacité de ses campagnes publicitaires et améliorer la pertinence des annonces.</string>

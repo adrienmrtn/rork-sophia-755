@@ -3,7 +3,7 @@ import FacebookCore
 import Foundation
 import UIKit
 
-/// Intégration Meta Ads (FacebookCore) : bootstrap SDK + ATT.
+/// Intégration Meta Ads (FacebookCore) : bootstrap SDK, App Events et ATT.
 /// Les secrets (App ID, Client Token) restent uniquement dans Info.plist.
 enum MetaAdsService {
     /// Garde anti-double appel pendant la même session (onboarding + ContentView).
@@ -11,14 +11,22 @@ enum MetaAdsService {
 
     // MARK: - Bootstrap SDK
 
-    /// Initialise FacebookCore au lancement, en lisant App ID / Client Token depuis Info.plist.
-    /// À appeler depuis `SophiaApp.init()` (cycle de vie SwiftUI App, sans AppDelegate dédié).
-    static func configure() {
-        // Transmet le démarrage de l'app au SDK pour activer App Events / AEM.
+    /// Initialise FacebookCore au lancement via AppDelegate (cycle de vie UIKit attendu par Meta).
+    /// Lit App ID / Client Token depuis Info.plist — aucun secret en dur ici.
+    static func configure(launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) {
         ApplicationDelegate.shared.application(
             UIApplication.shared,
-            didFinishLaunchingWithOptions: nil
+            didFinishLaunchingWithOptions: launchOptions
         )
+
+        // Utilisateur déjà onboardé : reflète tout de suite le choix ATT connu (retour app / relance).
+        syncAdvertiserTrackingFromATT()
+    }
+
+    /// Notifie Meta à chaque retour au premier plan (App Events + détection SDK côté App Manager).
+    static func handleBecomeActive() {
+        AppEvents.shared.activateApp()
+        syncAdvertiserTrackingFromATT()
     }
 
     // MARK: - URL callbacks
@@ -37,9 +45,8 @@ enum MetaAdsService {
     // MARK: - App Tracking Transparency
 
     /// Demande l'autorisation ATT après le premier écran (pas au cold start),
-    /// puis aligne `Settings.shared.isAdvertiserTrackingEnabled` sur le résultat.
+    /// puis active AdvertisingTrackingEnabled et les flags Meta associés.
     static func requestTrackingAuthorizationAfterFirstScreen() {
-        // Une seule invite ATT par session, même si onboarding et home appellent tous les deux.
         guard !didRequestTrackingThisSession else { return }
         didRequestTrackingThisSession = true
 
@@ -49,11 +56,10 @@ enum MetaAdsService {
         }
     }
 
-    /// Affiche la modale ATT si le statut est encore `.notDetermined`, sinon synchronise seulement le flag Meta.
+    /// Affiche la modale ATT si le statut est encore `.notDetermined`, sinon synchronise seulement les flags Meta.
     private static func promptTrackingAuthorizationIfNeeded() {
         let currentStatus = ATTrackingManager.trackingAuthorizationStatus
 
-        // Déjà décidé (autorisé / refusé / restreint) : on répercute sans re-demander.
         guard currentStatus == .notDetermined else {
             applyAdvertiserTracking(enabled: currentStatus == .authorized)
             return
@@ -67,8 +73,21 @@ enum MetaAdsService {
         }
     }
 
-    /// Indique au SDK Meta si le tracking publicitaire est autorisé (SKAdNetwork / IDFA côté Ads).
+    /// Lit le statut ATT courant (iOS 17+ : le SDK s'appuie dessus pour AdvertisingTrackingEnabled).
+    private static func syncAdvertiserTrackingFromATT() {
+        guard #available(iOS 14, *) else { return }
+        applyAdvertiserTracking(enabled: ATTrackingManager.trackingAuthorizationStatus == .authorized)
+    }
+
+    /// Active le suivi publicitaire Meta (ATE) et les collectes associées selon le consentement ATT.
     private static func applyAdvertiserTracking(enabled: Bool) {
-        Settings.shared.isAdvertiserTrackingEnabled = enabled
+        // iOS 14–16 : flag explicite requis par Meta pour compter les events iOS 14.5+.
+        if #unavailable(iOS 17) {
+            Settings.shared.isAdvertiserTrackingEnabled = enabled
+        }
+
+        // Auto-log App Events + IDFA : activés seulement si l'utilisateur a autorisé le tracking.
+        Settings.shared.isAutoLogAppEventsEnabled = enabled
+        Settings.shared.isAdvertiserIDCollectionEnabled = enabled
     }
 }
