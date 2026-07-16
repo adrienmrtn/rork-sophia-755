@@ -15,7 +15,7 @@ class OnboardingViewModel {
     var isLoadingComplete: Bool = false
     var dailyLearningGoal: Int = 1
 
-    let totalScreens = 19
+    let totalScreens = 18
     let dailyLearningGoalRange: ClosedRange<Int> = 1...5
 
     var projectedYearlyLearnings: Int {

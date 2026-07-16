@@ -78,12 +78,12 @@ struct OnboardingView: View {
             }
         }
         .onChange(of: displayedScreen) { _, screen in
-            if screen == 14, !useNativeOnboardingPaywall {
+            if screen == 13, !useNativeOnboardingPaywall {
                 prefetchFinOnboardingOffering()
             }
         }
         .onChange(of: incomingScreen) { _, screen in
-            if screen == 14, !useNativeOnboardingPaywall {
+            if screen == 13, !useNativeOnboardingPaywall {
                 prefetchFinOnboardingOffering()
             }
         }
@@ -127,28 +127,26 @@ struct OnboardingView: View {
                 case 6:
                     OnboardingInterestsScreen(viewModel: viewModel, onNext: advance)
                 case 7:
-                    OnboardingSocialProofScreen(onNext: advance)
-                case 8:
                     OnboardingShowcaseCoursesScreen(onNext: advance)
-                case 9:
+                case 8:
                     OnboardingDailyGoalScreen(viewModel: viewModel, onNext: advance)
-                case 10:
+                case 9:
                     OnboardingProjectionScreen(viewModel: viewModel, onNext: advance)
-                case 11:
+                case 10:
                     OnboardingShowcaseQuizScreen(onNext: advance)
-                case 12:
+                case 11:
                     OnboardingShowcaseCardsScreen(onNext: advance)
-                case 13:
+                case 12:
                     OnboardingShowcaseCollectionsScreen(onNext: advance)
-                case 14:
+                case 13:
                     OnboardingLoadingScreen(viewModel: viewModel, onNext: loadingScreenCompleted)
-                case 15:
+                case 14:
                     OnboardingProgramScreen(viewModel: viewModel, onNext: advance)
-                case 16:
+                case 15:
                     OnboardingPremiumGiftScreen(onNext: advance)
-                case 17:
+                case 16:
                     OnboardingPremiumTrialTimelineScreen(onUnlockTrial: trialTimelineCompleted)
-                case 18:
+                case 17:
                     nativePaywallScreen
                 default:
                     EmptyView()
@@ -270,7 +268,7 @@ struct OnboardingView: View {
     }
 
     /// Onboarding value screens that show progress dots (excludes intro, language, loading, program, and paywalls).
-    private static let progressQuestionScreens = Array(2...13)
+    private static let progressQuestionScreens = Array(2...12)
 
     private var showsOnboardingProgressDots: Bool {
         let active = incomingScreen ?? displayedScreen
