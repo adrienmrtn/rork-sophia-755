@@ -12,7 +12,9 @@ struct SettingsView: View {
     @State private var showTerms: Bool = false
     @State private var showPrivacy: Bool = false
     @State private var showFeedback: Bool = false
+    @State private var showAmbassador: Bool = false
     @State private var hapticTrigger: Int = 0
+    @State private var ambassadorShimmer = false
 
     private let ink = BrutalPalette.ink
     private let cream = BrutalPalette.cream
@@ -125,6 +127,10 @@ struct SettingsView: View {
                         }
                         .brutalCard()
                         .padding(.horizontal, 20)
+
+                        // Ambassador CTA
+                        ambassadorBanner
+                            .padding(.horizontal, 20)
 
                         // Help & feedback
                         sectionHeader(languageManager.text("settings.section.help"))
@@ -253,7 +259,111 @@ struct SettingsView: View {
             .sheet(isPresented: $showFeedback) {
                 FeedbackView(isPremium: store.isPremium)
             }
+            .sheet(isPresented: $showAmbassador) {
+                AmbassadorView()
+            }
+            .onAppear {
+                ambassadorShimmer = true
+            }
         }
+    }
+
+    // MARK: - Ambassador banner
+
+    private var ambassadorBanner: some View {
+        Button {
+            hapticTrigger += 1
+            showAmbassador = true
+        } label: {
+            ZStack {
+                RoundedRectangle(cornerRadius: 20, style: .continuous)
+                    .fill(
+                        LinearGradient(
+                            colors: [
+                                Color(red: 1.0, green: 0.86, blue: 0.35),
+                                Color(red: 1.0, green: 0.55, blue: 0.72),
+                                Color(red: 0.78, green: 0.62, blue: 1.0),
+                            ],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
+                    )
+
+                // Shimmer sweep
+                RoundedRectangle(cornerRadius: 20, style: .continuous)
+                    .fill(
+                        LinearGradient(
+                            colors: [
+                                .white.opacity(0),
+                                .white.opacity(0.45),
+                                .white.opacity(0),
+                            ],
+                            startPoint: .leading,
+                            endPoint: .trailing
+                        )
+                    )
+                    .frame(width: 90)
+                    .offset(x: ambassadorShimmer ? 160 : -160)
+                    .animation(
+                        .easeInOut(duration: 1.8).repeatForever(autoreverses: false),
+                        value: ambassadorShimmer
+                    )
+
+                HStack(spacing: 14) {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 12, style: .continuous)
+                            .fill(Color.white.opacity(0.85))
+                            .overlay {
+                                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                                    .strokeBorder(ink, lineWidth: 2)
+                            }
+                        Image(systemName: "sparkles")
+                            .font(.system(size: 18, weight: .heavy))
+                            .foregroundStyle(ink)
+                    }
+                    .frame(width: 44, height: 44)
+
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(languageManager.text("settings.ambassador.banner.badge"))
+                            .font(.system(.caption2, design: .rounded, weight: .heavy))
+                            .foregroundStyle(ink)
+                            .padding(.horizontal, 8)
+                            .padding(.vertical, 3)
+                            .background(Color.white.opacity(0.9))
+                            .clipShape(Capsule())
+                            .overlay { Capsule().strokeBorder(ink, lineWidth: 1.5) }
+
+                        Text(languageManager.text("settings.ambassador.banner.title"))
+                            .font(.system(.title3, design: .rounded, weight: .heavy))
+                            .foregroundStyle(ink)
+
+                        Text(languageManager.text("settings.ambassador.banner.subtitle"))
+                            .font(.system(.caption, design: .rounded, weight: .semibold))
+                            .foregroundStyle(ink.opacity(0.72))
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+
+                    Spacer(minLength: 0)
+
+                    Image(systemName: "arrow.right")
+                        .font(.system(size: 16, weight: .heavy))
+                        .foregroundStyle(ink)
+                        .frame(width: 34, height: 34)
+                        .background(Color.white.opacity(0.9))
+                        .clipShape(Circle())
+                        .overlay { Circle().strokeBorder(ink, lineWidth: 2) }
+                }
+                .padding(.horizontal, 16)
+                .padding(.vertical, 16)
+            }
+            .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+            .overlay {
+                RoundedRectangle(cornerRadius: 20, style: .continuous)
+                    .strokeBorder(ink, lineWidth: 3)
+            }
+            .shadow(color: ink.opacity(0.18), radius: 0, x: 0, y: 4)
+        }
+        .buttonStyle(BrutalCardButtonStyle(depth: 3))
     }
 
     // MARK: - Building blocks
