@@ -71,7 +71,7 @@ struct LegalHeader: View {
             .buttonStyle(.plain)
         }
         .padding(.horizontal, 20)
-        .padding(.top, 8)
+        .padding(.top, 24)
         .padding(.bottom, 14)
         .overlay(alignment: .bottom) {
             Rectangle()

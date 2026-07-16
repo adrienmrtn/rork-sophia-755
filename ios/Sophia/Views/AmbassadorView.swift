@@ -24,6 +24,7 @@ struct AmbassadorView: View {
     private let ink = BrutalPalette.ink
     private let cream = BrutalPalette.cream
     private let presentationLimit = 1_500
+    private let presentationMin = 10
 
     private var parsedAge: Int? {
         Int(ageText.trimmingCharacters(in: .whitespacesAndNewlines))
@@ -37,11 +38,15 @@ struct AmbassadorView: View {
         presentation.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 
+    private var presentationCount: Int {
+        trimmedPresentation.count
+    }
+
     private var canSubmit: Bool {
         guard !isSubmitting else { return false }
         guard trimmedEmail.contains("@"), trimmedEmail.contains(".") else { return false }
         guard let age = parsedAge, age >= 16, age <= 120 else { return false }
-        guard trimmedPresentation.count >= 10 else { return false }
+        guard presentationCount >= presentationMin else { return false }
         guard wantsSlideshow || wantsUGC else { return false }
         guard countryConfirmed else { return false }
         return true
@@ -76,9 +81,12 @@ struct AmbassadorView: View {
                         .foregroundStyle(ink.opacity(0.72))
                         .frame(maxWidth: .infinity, alignment: .leading)
 
+                    replyPromiseBanner
+
                     premiumBonusBadge
 
                     roleCard(
+                        icon: "rectangle.stack.fill",
                         title: languageManager.text("ambassador.role.slideshow.title"),
                         income: languageManager.text("ambassador.role.slideshow.income"),
                         time: languageManager.text("ambassador.role.slideshow.time"),
@@ -87,6 +95,7 @@ struct AmbassadorView: View {
                     )
 
                     roleCard(
+                        icon: "video.fill",
                         title: languageManager.text("ambassador.role.ugc.title"),
                         income: languageManager.text("ambassador.role.ugc.income"),
                         time: languageManager.text("ambassador.role.ugc.time"),
@@ -112,6 +121,7 @@ struct AmbassadorView: View {
 
                     fieldLabel(languageManager.text("ambassador.form.presentation.label"))
                     presentationField
+                    presentationHint
 
                     countryConfirmToggle
 
@@ -128,22 +138,53 @@ struct AmbassadorView: View {
             }
             .scrollDismissesKeyboard(.interactively)
 
-            Button(action: submit) {
-                HStack(spacing: 10) {
-                    if isSubmitting {
-                        ProgressView()
-                            .tint(ink)
-                    }
-                    Text(languageManager.text("ambassador.form.submit"))
-                        .font(.system(.headline, design: .rounded, weight: .heavy))
-                        .foregroundStyle(ink)
+            VStack(spacing: 8) {
+                if !canSubmit {
+                    Text(languageManager.text("ambassador.form.hint"))
+                        .font(.system(.caption, design: .rounded, weight: .semibold))
+                        .foregroundStyle(ink.opacity(0.55))
+                        .multilineTextAlignment(.center)
+                        .frame(maxWidth: .infinity)
                 }
+
+                Button(action: submit) {
+                    HStack(spacing: 10) {
+                        if isSubmitting {
+                            ProgressView()
+                                .tint(ink)
+                        }
+                        Text(languageManager.text("ambassador.form.submit"))
+                            .font(.system(.headline, design: .rounded, weight: .heavy))
+                            .foregroundStyle(ink)
+                    }
+                }
+                .buttonStyle(BrutalAmbassadorButtonStyle(isEnabled: canSubmit))
+                .disabled(!canSubmit)
             }
-            .buttonStyle(BrutalAmbassadorButtonStyle(isEnabled: canSubmit))
-            .disabled(!canSubmit)
             .padding(.horizontal, 20)
             .padding(.top, 8)
             .padding(.bottom, 32)
+        }
+    }
+
+    private var replyPromiseBanner: some View {
+        HStack(alignment: .top, spacing: 10) {
+            Image(systemName: "bolt.fill")
+                .font(.system(size: 16, weight: .heavy))
+                .foregroundStyle(ink)
+            Text(languageManager.text("ambassador.cta48h"))
+                .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                .foregroundStyle(ink)
+                .fixedSize(horizontal: false, vertical: true)
+            Spacer(minLength: 0)
+        }
+        .padding(.horizontal, 14)
+        .padding(.vertical, 12)
+        .background(BrutalPalette.pastel(for: .sciences))
+        .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 14, style: .continuous)
+                .strokeBorder(ink, lineWidth: 2.5)
         }
     }
 
@@ -177,24 +218,42 @@ struct AmbassadorView: View {
         }
     }
 
-    private func roleCard(title: String, income: String, time: String, body: String, accent: Color) -> some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text(title)
-                .font(.system(.headline, design: .rounded, weight: .heavy))
-                .foregroundStyle(ink)
+    private func roleCard(
+        icon: String,
+        title: String,
+        income: String,
+        time: String,
+        body: String,
+        accent: Color
+    ) -> some View {
+        HStack(alignment: .top, spacing: 0) {
+            Rectangle()
+                .fill(accent)
+                .frame(width: 8)
 
-            HStack(spacing: 8) {
-                metaChip(income, bg: accent)
-                metaChip(time, bg: Color.white)
+            VStack(alignment: .leading, spacing: 10) {
+                HStack(spacing: 8) {
+                    Image(systemName: icon)
+                        .font(.system(size: 14, weight: .heavy))
+                        .foregroundStyle(ink)
+                    Text(title)
+                        .font(.system(.headline, design: .rounded, weight: .heavy))
+                        .foregroundStyle(ink)
+                }
+
+                HStack(spacing: 8) {
+                    metaChip(income, bg: accent)
+                    metaChip(time, bg: Color.white)
+                }
+
+                Text(body)
+                    .font(.system(.subheadline, design: .rounded, weight: .semibold))
+                    .foregroundStyle(ink.opacity(0.7))
             }
-
-            Text(body)
-                .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                .foregroundStyle(ink.opacity(0.7))
+            .padding(14)
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .padding(14)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color.white)
+        .background(accent.opacity(0.28))
         .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
         .overlay {
             RoundedRectangle(cornerRadius: 16, style: .continuous)
@@ -215,21 +274,16 @@ struct AmbassadorView: View {
 
     private var conditionsBlock: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text(languageManager.text("ambassador.conditions.title"))
-                .font(.system(.headline, design: .rounded, weight: .heavy))
-                .foregroundStyle(ink)
+            Text(languageManager.text("ambassador.conditions.title").uppercased())
+                .font(.system(.caption, design: .rounded, weight: .heavy))
+                .foregroundStyle(ink.opacity(0.5))
+                .tracking(1.1)
 
             conditionRow(languageManager.text("ambassador.conditions.countries"))
             conditionRow(languageManager.text("ambassador.conditions.age"))
         }
-        .padding(14)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color.white)
-        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
-        .overlay {
-            RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .strokeBorder(ink, lineWidth: 2.5)
-        }
+        .padding(.horizontal, 4)
+        .padding(.vertical, 4)
     }
 
     private func conditionRow(_ text: String) -> some View {
@@ -399,6 +453,23 @@ struct AmbassadorView: View {
         }
     }
 
+    private var presentationHint: some View {
+        Text(
+            String(
+                format: languageManager.text("ambassador.form.presentation.hint"),
+                presentationCount,
+                presentationMin
+            )
+        )
+        .font(.system(.caption, design: .rounded, weight: .semibold))
+        .foregroundStyle(
+            presentationCount >= presentationMin
+                ? Color(red: 0.12, green: 0.55, blue: 0.32)
+                : ink.opacity(0.5)
+        )
+        .frame(maxWidth: .infinity, alignment: .trailing)
+    }
+
     private var successView: some View {
         VStack(spacing: 16) {
             Spacer()
@@ -418,6 +489,21 @@ struct AmbassadorView: View {
                 .foregroundStyle(ink.opacity(0.65))
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 24)
+
+            Text(languageManager.text("ambassador.cta48h"))
+                .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                .foregroundStyle(ink)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, 20)
+                .padding(.vertical, 12)
+                .frame(maxWidth: .infinity)
+                .background(BrutalPalette.pastel(for: .sciences))
+                .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+                .overlay {
+                    RoundedRectangle(cornerRadius: 14, style: .continuous)
+                        .strokeBorder(ink, lineWidth: 2.5)
+                }
+                .padding(.horizontal, 20)
 
             Spacer()
 
