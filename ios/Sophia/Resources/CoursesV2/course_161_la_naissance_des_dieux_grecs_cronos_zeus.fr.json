@@ -1,0 +1,75 @@
+{
+  "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus",
+  "title": "La naissance des dieux grecs",
+  "subtitle": "Cronos, Zeus, l'Olympe",
+  "subject": "mythologie",
+  "subcategory": "Grèce : les dieux",
+  "description": "Avant Zeus, son père Cronos dévorait ses enfants. Voici comment le vide a donné naissance aux dieux de l'Olympe.",
+  "hero": {
+    "image": "la_naissance_des_dieux_grecs",
+    "ratio": "16:9",
+    "hook": "Avant l'Olympe, le monde naît dans le vide, la violence et les coups d'État familiaux."
+  },
+  "sections": [
+    {
+      "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Avant que les dieux de l'**Olympe** ne règnent, la mythologie grecque imagine un vide originel : le **Chaos**. Ce n'est pas un désordre bruyant. C'est une béance, un abîme d'où surgit la vie." },
+        { "type": "paragraph", "text": "La naissance des dieux n'est pas douce. C'est une suite de crises et de prises de pouvoir. Le poète **Hésiode**, au VIIIe siècle avant notre ère, la raconte dans la [[Théogonie d'Hésiode]]. Voici comment le monde passe du vide à la cour de **Zeus**." }
+      ]
+    },
+    {
+      "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus_p1",
+      "title": "Du Chaos naissent la Terre et le Ciel",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Du **Chaos** naissent d'abord des forces sans visage humain. **Gaïa**, la Terre, offre un sol solide. Le **Tartare** est une prison profonde sous le monde. **Éros**, le désir, permet aux êtres de s'unir." },
+        { "type": "image", "asset": "la_naissance_des_dieux_grecs", "ratio": "4:3", "caption": "Gaïa, la Terre, première puissance du monde grec." },
+        { "type": "paragraph", "text": "Gaïa engendre seule **Ouranos**, le Ciel étoilé. De leur couple naissent les **Titans**, dieux de la force brute, et des monstres : les **Cyclopes** et les **Hécatonchires**, géants aux cent bras." },
+        { "type": "funFact", "text": "Pour les Grecs, le monde ne naît pas du néant. Il naît d'une séparation : l'espace entre Ciel et Terre laisse enfin place à la vie." },
+        { "type": "paragraph", "text": "Ouranos hait ses enfants. Il les enferme dans le ventre de Gaïa. La Terre étouffe. La première révolution du cosmos se prépare." }
+      ]
+    },
+    {
+      "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus_p2",
+      "title": "Cronos renverse son père",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Gaïa forge une faucille d'[[adamant]], un métal légendaire d'une dureté absolue. Seul le plus jeune des Titans, le rusé **Cronos**, accepte d'agir. Caché dans le flanc de sa mère, il castre Ouranos et sépare pour toujours le Ciel de la Terre." },
+        { "type": "paragraph", "text": "Cronos devient roi. Mais le sang d'Ouranos fertilise encore le monde : naissent les **Érinyes**, déesses de la vengeance familiale, et **Aphrodite**, déesse de l'amour, sortie de l'écume de mer." },
+        { "type": "funFact", "text": "Le nom d'**Aphrodite** vient du grec « aphros », « écume ». Sa naissance rappelle le crime qui a ouvert le règne de Cronos." },
+        { "type": "paragraph", "text": "Une prophétie menace Cronos : un de ses fils le détrônera. Pour l'éviter, il dévore ses enfants dès leur naissance, **Hestia**, **Déméter**, **Héra**, **Hadès**, **Poséidon**. Les dieux grecs ont des peurs très humaines : c'est l'[[anthropomorphisme divin grec]]." }
+      ]
+    },
+    {
+      "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus_p3",
+      "title": "Zeus libère ses frères et sœurs",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "**Rhéa**, épouse de Cronos, refuse de perdre son dernier enfant. Elle lui tend une pierre emmaillotée. Le vrai bébé, **Zeus**, grandit en secret dans la grotte de [[Dicté]], en Crète. Les [[Courètes]], guerriers sacrés, couvrent ses pleurs de leurs cris. La chèvre **Amalthée** le nourrit." },
+        { "type": "paragraph", "text": "Adulte, Zeus force Cronos à régurgiter sa fratrie. Les enfants ressortent prêts au combat. Commence la **Titanomachie**, une guerre de dix ans entre Titans et futurs Olympiens. Les Cyclopes offrent à Zeus l'arme décisive : la **foudre**." },
+        { "type": "timeline", "events": [
+          { "date": "1", "title": "Chaos", "detail": "Le vide originel ouvre l'espace du monde." },
+          { "date": "2", "title": "Gaïa et Ouranos", "detail": "La Terre et le Ciel engendrent les Titans." },
+          { "date": "3", "title": "Cronos roi", "detail": "Il castre son père, puis dévore ses enfants." },
+          { "date": "4", "title": "Victoire de Zeus", "detail": "La foudre décide la Titanomachie." },
+          { "date": "5", "title": "L'Olympe", "detail": "Zeus, Poséidon et Hadès se partagent le monde." }
+        ] },
+        { "type": "paragraph", "text": "Les Titans sont jetés dans le Tartare. **Zeus** prend le Ciel, **Poséidon** les mers, **Hadès** le monde des morts. L'**Olympe** devient une cour divine, plus ordonnée que la force des Titans." }
+      ]
+    },
+    {
+      "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus_p4",
+      "title": "Un ordre fragile, très humain",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Même vainqueur, Zeus reste inquiet. Il épouse **Métis**, la Sagesse, puis l'avale par peur d'un fils plus fort. De cet acte naît **Athéna**, sortie tout armée du crâne de son père : la stratégie devient le pilier du pouvoir." },
+        { "type": "funFact", "text": "Le mot **panique** vient du dieu **Pan**. Lors d'une guerre contre les Géants, son cri aurait semé une terreur soudaine et irrationnelle." },
+        { "type": "paragraph", "text": "Ces mythes ne font pas des dieux des modèles de vertu. Ils en font des miroirs : jalousie, peur de la succession, soif de règne. Du Chaos à l'Olympe, les Grecs racontent comment la civilisation tente de maîtriser la violence brute." },
+        { "type": "takeaway", "text": "La mythologie grecque passe du **Chaos** à l'ordre de l'**Olympe** par des coups de force successifs. Les dieux partagent nos passions, mais pas notre mortalité." }
+      ]
+    }
+  ]
+}

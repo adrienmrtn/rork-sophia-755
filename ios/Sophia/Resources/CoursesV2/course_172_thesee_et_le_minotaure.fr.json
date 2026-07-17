@@ -1,0 +1,66 @@
+﻿{
+  "id": "course_172_thesee_et_le_minotaure",
+  "title": "Thésée et le Minotaure",
+  "subtitle": "Le fil, le monstre, les voiles",
+  "subject": "mythologie",
+  "subcategory": "Grèce : les héros",
+  "description": "Thésée tue le Minotaure grâce au fil d'Ariane. Mais il oublie de changer les voiles : son père Égée se jette à la mer, qui porte encore son nom.",
+  "hero": {
+    "image": "thesee_et_le_minotaure",
+    "ratio": "16:9",
+    "hook": "Un monstre dans un labyrinthe. Un fil pour en sortir. Des voiles oubliées qui baptisent une mer."
+  },
+  "sections": [
+    {
+      "id": "course_172_thesee_et_le_minotaure_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "**Thésée**, héros fondateur d'Athènes, affronte le **Minotaure**, créature mi-homme mi-taureau cachée dans le [[Labyrinthe]] de Crète. Le récit mêle courage, ruse amoureuse et tragédie familiale." },
+        { "type": "paragraph", "text": "En tuant le monstre, Thésée libère Athènes d'un tribut sanglant. Mais un détail oublié, des voiles noires au lieu de blanches, coûtera la vie à son père et donnera son nom à la mer Égée." }
+      ]
+    },
+    {
+      "id": "course_172_thesee_et_le_minotaure_p1",
+      "title": "Le Minotaure et le tribut d'Athènes",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le roi **Minos** de Crète refuse de sacrifier un taureau blanc à **Poséidon**, dieu des mers. Pour se venger, Poséidon inspire à la reine **Pasiphaé** une passion pour l'animal. Naît le Minotaure. Minos charge l'inventeur [[Dédale]] de bâtir une prison sans issue : le Labyrinthe." },
+        { "type": "image", "asset": "thesee_et_le_minotaure", "ratio": "4:3", "caption": "Le Minotaure, enfermé dans le Labyrinthe crétois." },
+        { "type": "paragraph", "text": "La Crète domine alors la mer : une [[Thalassocratie]]. Après une guerre perdue, Athènes doit livrer tous les neuf ans **sept jeunes hommes et sept jeunes filles** en pâture au monstre. À la troisième livraison, **Thésée**, fils du roi **Égée**, se porte volontaire." },
+        { "type": "funFact", "text": "Égée et Thésée conviennent d'un signal : voiles **blanches** si le héros revient vivant, voiles **noires** s'il est mort. Ce détail décidera d'un drame." }
+      ]
+    },
+    {
+      "id": "course_172_thesee_et_le_minotaure_p2",
+      "title": "Le fil d'Ariane",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "En Crète, **Ariane**, fille de Minos, s'éprend de Thésée. Elle sait que la force ne suffit pas dans le Labyrinthe. Avec l'aide de Dédale, elle lui remet une pelote de laine : [[Le fil d'Ariane]]. Il l'attache à l'entrée et déroule le fil en avançant." },
+        { "type": "image", "asset": "thesee_et_le_minotaure", "ratio": "4:3", "caption": "Ariane remet à Thésée le fil qui sauvera sa vie." },
+        { "type": "paragraph", "text": "Thésée tue le Minotaure, puis rembobine le fil pour sortir. Il fuit avec les jeunes Athéniens et Ariane. Mais sur l'île de **Naxos**, il l'abandonne endormie. Certains disent que le dieu **Dionysos** la voulait pour épouse. Ariane, désespérée puis divinisée, reçoit une couronne d'or devenue constellation." }
+      ]
+    },
+    {
+      "id": "course_172_thesee_et_le_minotaure_p3",
+      "title": "Les voiles noires du Cap Sounion",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le retour devrait être une fête. Grisé par la victoire ou troublé par l'abandon d'Ariane, Thésée oublie de hisser les voiles blanches. Le navire approche d'Athènes sous voiles noires." },
+        { "type": "image", "asset": "thesee_et_le_minotaure", "ratio": "4:3", "caption": "Le Cap Sounion, d'où Égée guettait le retour de son fils." },
+        { "type": "paragraph", "text": "Au **Cap Sounion**, le vieux roi Égée scrute l'horizon. Il ne voit que le noir du deuil. Persuadé que son fils est mort, il se jette de la falaise. La mer porte depuis son nom : la **mer Égée**. Thésée débarque roi… et orphelin par sa propre négligence." },
+        { "type": "funFact", "text": "Le « navire de Thésée » est devenu un paradoxe philosophique : si l'on remplace toutes les planches une à une, est-ce encore le même bateau ?" }
+      ]
+    },
+    {
+      "id": "course_172_thesee_et_le_minotaure_p4",
+      "title": "Thésée, roi d'Athènes",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Couronné, Thésée devient un roi organisateur. On lui attribue le [[Synoécisme]] : l'unification des bourgades de l'Attique autour d'Athènes. Il institue les [[Panathénées]], grandes fêtes de la cité. La force s'allie au droit." },
+        { "type": "paragraph", "text": "Son règne compte d'autres aventures, comme le combat contre les [[Amazones]]. Mais le Labyrinthe reste sa marque : savoir dénouer l'inextricable, tout en restant vulnérable à l'oubli. Thésée forge la grandeur d'Athènes sur les cendres d'un drame familial." },
+        { "type": "takeaway", "text": "**Thésée** tue le **Minotaure** grâce au fil d'**Ariane**. En oubliant de changer les voiles, il provoque le suicide de son père **Égée**, qui donne son nom à la mer Égée." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+﻿{
+  "id": "course_178_antigone_devoir_familial_vs_loi_de_l_eta",
+  "title": "Antigone : devoir familial vs loi de l'État",
+  "subtitle": "Conscience contre décret",
+  "subject": "mythologie",
+  "subcategory": "Grèce : les héros",
+  "description": "Antigone enterre son frère contre l'ordre du roi Créon. Sophocle pose un conflit toujours actuel : loi de l'État ou devoir moral plus haut ?",
+  "hero": {
+    "image": "antigone_devoir_familial_vs_loi",
+    "ratio": "16:9",
+    "hook": "Un roi interdit d'enterrer un traître. Une sœur désobéit. Deux justices s'affrontent, et Thèbes s'effondre."
+  },
+  "sections": [
+    {
+      "id": "course_178_antigone_devoir_familial_vs_loi_de_l_eta_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "**Antigone** est la fille d'Œdipe et de Jocaste. Vers **441 av. J.-C.**, le tragédien **Sophocle** fait d'elle l'héroïne d'une pièce devenue universelle." },
+        { "type": "paragraph", "text": "Face au roi **Créon**, elle pose une question qui traverse les siècles : quand une loi de l'État contredit une conviction morale plus haute, faut-il obéir ou résister ? Ici, ce n'est pas le bien contre le mal. Ce sont deux idées de la justice qui s'entrechoquent." }
+      ]
+    },
+    {
+      "id": "course_178_antigone_devoir_familial_vs_loi_de_l_eta_p1",
+      "title": "Deux frères morts, un décret cruel",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "À [[Thèbes]], après l'exil d'Œdipe, ses fils **Étéocle** et **Polynice** devaient régner à tour de rôle. Étéocle refuse de céder. Polynice attaque sa propre cité avec une armée étrangère. Les deux frères s'entretuent." },
+        { "type": "image", "asset": "antigone_devoir_familial_vs_loi", "ratio": "4:3", "caption": "Antigone face à Créon : piété familiale contre ordre d'État." },
+        { "type": "paragraph", "text": "Créon, leur oncle, prend le pouvoir. Étéocle, défenseur de la ville, aura des funérailles solennelles. Polynice, traité en traître, restera sans sépulture. Pour les Grecs, c'est terrifiant : sans rite, l'âme erre près du [[Styx]], fleuve des Enfers, sans repos." },
+        { "type": "funFact", "text": "Une simple poignée de terre suffisait, symboliquement, à accomplir le rite funéraire. L'acte d'Antigone est discret… et lourd de conséquences." }
+      ]
+    },
+    {
+      "id": "course_178_antigone_devoir_familial_vs_loi_de_l_eta_p2",
+      "title": "Enterrer malgré l'interdit",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Antigone refuse. Elle ne nie pas la trahison de Polynice. Elle affirme qu'aucun roi ne peut annuler les devoirs dus aux morts. Sa sœur **Ismène** hésite, prudente. Antigone agit seule et recouvre le corps." },
+        { "type": "image", "asset": "antigone_devoir_familial_vs_loi", "ratio": "4:3", "caption": "Antigone accomplissant le rite funéraire pour Polynice." },
+        { "type": "paragraph", "text": "Devant Créon, elle revendique le [[Droit naturel]] : des lois « non écrites et immuables », plus anciennes que les décrets humains. Créon y voit une menace pour l'État. Il la condamne à être emmurée vivante." }
+      ]
+    },
+    {
+      "id": "course_178_antigone_devoir_familial_vs_loi_de_l_eta_p3",
+      "title": "Quand l'inflexibilité détruit tout",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "**Hémon**, fils de Créon et fiancé d'Antigone, tente de raisonner son père. Créon s'enferme. Le devin **Tirésias** annonce la colère des dieux : la cité est souillée par le cadavre abandonné et par l'emprisonnement d'Antigone." },
+        { "type": "image", "asset": "antigone_devoir_familial_vs_loi", "ratio": "4:3", "caption": "Au tombeau, trop tard : la tragédie emporte Antigone et Hémon." },
+        { "type": "paragraph", "text": "Créon cède enfin, trop tard. Antigone s'est pendue. Hémon se suicide. **Eurydice**, épouse de Créon, se donne la mort. En voulant sauver la loi, Créon a anéanti sa famille. Il reste seul, roi d'un ordre devenu vide." }
+      ]
+    },
+    {
+      "id": "course_178_antigone_devoir_familial_vs_loi_de_l_eta_p4",
+      "title": "Un mythe politique sans cesse relu",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Sophocle ne fait pas de Créon un simple méchant. C'est un chef qui veut éviter le chaos. Antigone, elle, est d'une rigidité extrême. La [[Dialectique hégélienne d'Antigone]] y voit la collision de deux sphères : la famille contre la cité." },
+        { "type": "funFact", "text": "En 1944, l'[[Antigone de Jean Anouilh (1944)]] est jouée sous l'Occupation. La censure allemande y voit l'ordre de Créon ; le public français y lit souvent l'héroïsme de la Résistance." },
+        { "type": "paragraph", "text": "Le conflit entre conscience individuelle et raison d'État reste au cœur de la pensée politique. Antigone rappelle que la justice absolue, sans dialogue, peut détruire ceux qu'elle prétend défendre." },
+        { "type": "takeaway", "text": "Antigone oppose les lois sacrées de la famille au décret de Créon. Leur refus mutuel de tout compromis ruine Thèbes et la lignée royale." }
+      ]
+    }
+  ]
+}

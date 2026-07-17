@@ -1,0 +1,144 @@
+{
+  "id": "course_126_le_cubisme_picasso_et_braque",
+  "title": "Le cubisme : Picasso et Braque",
+  "subtitle": "1907-1920",
+  "subject": "art",
+  "subcategory": "Peinture & mouvements",
+  "description": "Entre 1907 et 1920, **Picasso** et **Braque** brisent l'objet en facettes vues de plusieurs angles à la fois. La plus radicale révolution depuis la Renaissance.",
+  "hero": {
+    "image": "le_cubisme_picasso_et_braque",
+    "ratio": "16:9",
+    "hook": "Et si un tableau n'était plus une fenêtre, mais un objet reconstruit sous tous les angles ?"
+  },
+  "sections": [
+    {
+      "id": "course_126_le_cubisme_picasso_et_braque_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le cubisme naît entre **1907** et **1908**. C'est peut-être la révolution la plus radicale depuis la perspective du [[Quattrocento]], le XVe siècle italien. **Pablo Picasso** et **Georges Braque** brisent l'objet en fragments géométriques."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fini le tableau-fenêtre sur le monde. Le peintre ne copie plus la nature : il la reconstruit. Cette déconstruction ouvre la voie à l'art abstrait."
+        }
+      ]
+    },
+    {
+      "id": "course_126_le_cubisme_picasso_et_braque_p1",
+      "title": "Cézanne et le choc des masques",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Avant le cubisme, **Paul Cézanne** cherche la solidité des formes derrière la lumière changeante. Il conseille de « traiter la nature par le cylindre, la sphère, le cône ». Dans ses vues de la montagne Sainte-Victoire, il aplatit l'espace et multiplie les points de vue grâce aux [[passages]], ces zones où les plans se fondent."
+        },
+        {
+          "type": "image",
+          "asset": "cezanne_mont_sainte_victoire_painting",
+          "ratio": "4:3",
+          "caption": "Cézanne : la nature vue comme un assemblage de volumes."
+        },
+        {
+          "type": "funFact",
+          "text": "En 1907, Picasso décrit sa visite au musée du Trocadéro non comme une leçon de beau, mais comme un exorcisme face à la force des masques."
+        },
+        {
+          "type": "paragraph",
+          "text": "En **1907**, Picasso découvre au musée d'ethnographie du [[Trocadéro]] les [[arts africains et océaniens]]. Les masques ne copient pas le visage : ils le conceptualisent. L'objet n'est plus peint tel qu'on le voit, mais tel qu'on le sait."
+        }
+      ]
+    },
+    {
+      "id": "course_126_le_cubisme_picasso_et_braque_p2",
+      "title": "Le cubisme analytique : disséquer l'objet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **1907**, Picasso achève *Les Demoiselles d'Avignon*. Cinq nus aux facettes tranchantes ; certains visages deviennent des masques. Même [[Apollinaire]], son ami poète, est sidéré."
+        },
+        {
+          "type": "image",
+          "asset": "picasso_les_demoiselles_d_avignon_painting",
+          "ratio": "4:3",
+          "caption": "Les Demoiselles d'Avignon : le point de non-retour."
+        },
+        {
+          "type": "paragraph",
+          "text": "De **1908** à **1912**, Picasso et Braque inventent le **cubisme analytique**. Ils observent un volume sous tous les angles et posent ces vues en même temps sur la toile. La couleur presque disparaît : gris et ocres, pour forcer le regard sur l'espace. De petits indices (une clé, une corde de guitare) empêchent de basculer dans l'abstraction totale."
+        },
+        {
+          "type": "funFact",
+          "text": "Ils poussaient la collaboration si loin qu'ils s'habillaient parfois en ouvriers, pour souligner le côté artisanal de leur recherche."
+        }
+      ]
+    },
+    {
+      "id": "course_126_le_cubisme_picasso_et_braque_p3",
+      "title": "Le cubisme synthétique et le collage",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vers **1912**, face au risque d'illisibilité, ils inventent le **cubisme synthétique**. On ne découpe plus l'objet en mille fragments : on le résume par ses signes les plus clairs. Apparaît alors le [[collage]] : journaux, papiers peints collés sur la toile."
+        },
+        {
+          "type": "image",
+          "asset": "picasso_cubist_collage_newspaper",
+          "ratio": "4:3",
+          "caption": "Le collage : le réel entre dans le tableau."
+        },
+        {
+          "type": "funFact",
+          "text": "Braque, ancien peintre-décorateur, peignait des faux bois au peigne d'acier si parfaits qu'ils semblaient plus vrais que le bois réellement collé."
+        },
+        {
+          "type": "paragraph",
+          "text": "La couleur revient. Les formes s'élargissent. Une guitare peut n'être qu'une courbe. Le tableau n'est plus un miroir : c'est un objet autonome, construit selon ses propres lois."
+        }
+      ]
+    },
+    {
+      "id": "course_126_le_cubisme_picasso_et_braque_p4",
+      "title": "Un héritage qui déborde la peinture",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le cubisme se répand vite. **Juan Gris** y apporte une rigueur mathématique ; le [[Groupe de Puteaux]] l'adapte à l'esthétique de la machine. Le mouvement nourrit le futurisme italien, l'abstraction de Mondrian, et influence le [[design graphique]] comme l'architecture."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1907",
+              "title": "Les Demoiselles d'Avignon",
+              "detail": "Picasso brise les canons du nu classique."
+            },
+            {
+              "date": "1908-1912",
+              "title": "Cubisme analytique",
+              "detail": "Picasso et Braque dissèquent l'objet."
+            },
+            {
+              "date": "1912",
+              "title": "Collage et cubisme synthétique",
+              "detail": "Le réel entre dans l'œuvre par fragments."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Surtout, le spectateur devient actif : c'est à lui de recomposer l'image. L'art se sépare enfin de la simple imitation."
+        },
+        {
+          "type": "takeaway",
+          "text": "En brisant la perspective de la Renaissance et en inventant le collage, Picasso et Braque ont transformé le tableau en architecture mentale, plus en miroir du réel."
+        }
+      ]
+    }
+  ]
+}

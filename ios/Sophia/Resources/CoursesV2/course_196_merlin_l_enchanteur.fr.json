@@ -1,0 +1,66 @@
+﻿{
+  "id": "course_196_merlin_l_enchanteur",
+  "title": "Merlin l'Enchanteur",
+  "subtitle": "Le mage d'Arthur",
+  "subject": "mythologie",
+  "subcategory": "Autres mythologies",
+  "description": "Merlin, conseiller d'Arthur, prophète et mage : une figure née d'un démon et d'un baptême, architecte de Camelot, prisonnier de son propre amour.",
+  "hero": {
+    "image": "merlin_l_enchanteur",
+    "ratio": "16:9",
+    "hook": "Fils d'un démon, baptisé dès le berceau : Merlin sert le bien avec des pouvoirs nés du mal."
+  },
+  "sections": [
+    {
+      "id": "course_196_merlin_l_enchanteur_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "**Merlin** est le magicien le plus célèbre du Moyen Âge occidental. Barde, prophète, conseiller du roi **Arthur** : il se tient à la frontière entre le monde celte ancien et la chevalerie chrétienne." },
+        { "type": "paragraph", "text": "Sa nature est paradoxale. Une part de lui vient des démons, l'autre du ciel. Son histoire n'est pas celle d'un spectacle de magie : c'est la lutte d'un être hybride qui choisit de servir le bien, jusqu'à ce que l'amour le retire du monde." }
+      ]
+    },
+    {
+      "id": "course_196_merlin_l_enchanteur_p1",
+      "title": "L'origine hybride entre démon et baptême",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Chez le poète **Robert de Boron** (XIIe siècle), les démons veulent créer un antéchrist. Un [[démon incube]], esprit qui s'unit à une femme endormie, séduit une jeune chrétienne pieuse. Le plan échoue : la mère se confesse et fait baptiser l'enfant." },
+        { "type": "image", "asset": "merlin_l_enchanteur", "ratio": "4:3", "caption": "Merlin, figure du mage médiéval entre forêt et cour." },
+        { "type": "funFact", "text": "Le nom « Merlin » vient du gallois **Myrddin**. Geoffroy de Monmouth changea le « d » en « l » pour éviter un jeu de mots trop proche du latin *merda*." },
+        { "type": "paragraph", "text": "Le [[baptême]] efface la malédiction, mais laisse les pouvoirs : connaissance du passé (héritage démoniaque) et don de [[prophétie dans la culture médiévale]]. Merlin peut se métamorphoser. Derrière lui, on retrouve **Myrddin Wyllt**, barde gallois du VIe siècle qui, fou après une bataille, s'enfuit dans la forêt de [[Celyddon]]." }
+      ]
+    },
+    {
+      "id": "course_196_merlin_l_enchanteur_p2",
+      "title": "L'architecte du destin arthurien",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Merlin n'est pas un illusionniste. Il est le garant du royaume. Il aide le roi [[Utherpendragón]] à prendre les traits du duc de Cornouailles pour rejoindre la duchesse **Igerne**. De cette nuit naît **Arthur**." },
+        { "type": "image", "asset": "merlin_l_enchanteur", "ratio": "4:3", "caption": "Merlin guide Arthur vers le trône et Camelot." },
+        { "type": "paragraph", "text": "Il élève l'enfant en secret, orchestre l'épée dans l'enclume, puis conduit Arthur vers la Dame du Lac pour obtenir [[Excalibur]], dont le fourreau protège des blessures mortelles. À **Camelot**, il conçoit la **Table Ronde** et place le [[Siège périlleux]], siège vacant réservé au chevalier le plus pur. Il voit les dangers venir. Il sait aussi que le destin finit toujours par passer." }
+      ]
+    },
+    {
+      "id": "course_196_merlin_l_enchanteur_p3",
+      "title": "La chute de l'enchanteur : l'amour et l'oubli",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Merlin connaît sa fin. Il tombe pourtant amoureux de **Viviane**, la Dame du Lac, près de la fontaine de Barenton. Il lui enseigne ses sortilèges les plus secrets, même s'il sait qu'elle le perdra." },
+        { "type": "image", "asset": "merlin_l_enchanteur", "ratio": "4:3", "caption": "Viviane enferme Merlin : la fin du temps des mages." },
+        { "type": "funFact", "text": "Selon les versions, Viviane l'enferme dans un buisson d'aubépine, une tour de verre ou une cavité de **Brocéliande**. Immortel, Merlin n'est pas mort : il dort hors du monde." },
+        { "type": "paragraph", "text": "Quand les chevaliers partent vers le Graal, la magie de Merlin n'a plus de place. Son retrait marque le passage du temps des mythes au temps de la foi." }
+      ]
+    },
+    {
+      "id": "course_196_merlin_l_enchanteur_p4",
+      "title": "Héritage littéraire et figure de l'archimage",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Merlin a fixé l'image du vieux sage : barbe, bâton, énigmes. De lui descendent **Gandalf** chez Tolkien et **Dumbledore** chez Rowling. Il est l'adjuvant qui sait, mais ne peut agir à la place du héros." },
+        { "type": "paragraph", "text": "Pont entre la forêt sauvage et la cour, il garde une empreinte [[druidique]] tout en conseillant les rois. Aujourd'hui encore, il murmure que les empires sont fragiles, et que la sagesse ne protège pas toujours de soi-même." },
+        { "type": "takeaway", "text": "**Merlin**, né d'un démon et sauvé par le baptême, bâtit le destin d'**Arthur** puis disparaît, prisonnier de **Viviane** : le modèle durable de l'enchanteur occidental." }
+      ]
+    }
+  ]
+}

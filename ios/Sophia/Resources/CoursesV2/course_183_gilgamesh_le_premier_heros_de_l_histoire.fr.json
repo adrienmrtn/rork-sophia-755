@@ -1,0 +1,66 @@
+﻿{
+  "id": "course_183_gilgamesh_le_premier_heros_de_l_histoire",
+  "title": "Gilgamesh : le premier héros de l'histoire",
+  "subtitle": "Mésopotamie",
+  "subject": "mythologie",
+  "subcategory": "Autres mythologies",
+  "description": "Roi d'Uruk, ami d'Enkidu, chercheur d'immortalité : l'Épopée de Gilgamesh, écrite il y a 4 000 ans, est le plus ancien grand récit de l'humanité.",
+  "hero": {
+    "image": "gilgamesh_le_premier_heros",
+    "ratio": "16:9",
+    "hook": "Avant Homère, avant la Bible : un roi terrifié par la mort part au bout du monde… et ramène une leçon, pas l'éternité."
+  },
+  "sections": [
+    {
+      "id": "course_183_gilgamesh_le_premier_heros_de_l_histoire_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "**Gilgamesh**, roi de la cité d'**Uruk** en Mésopotamie, est le héros de l'**Épopée de Gilgamesh**. Gravée sur des tablettes d'argile il y a plus de **4 000 ans**, cette œuvre précède Homère et les récits bibliques." },
+        { "type": "paragraph", "text": "Ce n'est pas seulement une aventure. C'est l'histoire d'un tyran qui découvre l'amitié, puis la peur de mourir, puis une sagesse dure : l'immortalité n'est pas dans le corps, mais dans ce qu'on laisse derrière soi." }
+      ]
+    },
+    {
+      "id": "course_183_gilgamesh_le_premier_heros_de_l_histoire_p1",
+      "title": "Une épopée sortie du sable",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le texte assemble d'anciens récits sumériens. Sa version classique, en akkadien, est attribuée au scribe [[Sîn-leqi-unninni]] (vers le XIIe siècle av. J.-C.). Oubliée sous les sables, elle ressurgit au XIXe siècle dans la bibliothèque du roi [[Assurbanipal]] à **Ninive**." },
+        { "type": "image", "asset": "gilgamesh_le_premier_heros", "ratio": "4:3", "caption": "Tablette cunéiforme de l'épopée, British Museum." },
+        { "type": "paragraph", "text": "En **1872**, l'assyriologue **George Smith** déchiffre au British Museum un récit de déluge, d'arche et de survie, antérieur d'environ un millénaire à la Genèse. L'écriture **cunéiforme**, pressée dans l'argile, a sauvé le texte là où le papyrus aurait disparu." },
+        { "type": "funFact", "text": "En lisant la tablette du Déluge, George Smith aurait été si excité qu'il se serait mis à se déshabiller devant ses collègues stupéfaits du British Museum." }
+      ]
+    },
+    {
+      "id": "course_183_gilgamesh_le_premier_heros_de_l_histoire_p2",
+      "title": "Gilgamesh et Enkidu",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Au début, **Gilgamesh** est un roi insupportable : deux tiers divin, un tiers humain, mais tyran pour Uruk. Pour le canaliser, la déesse [[Aruru]] façonne **Enkidu**, un homme sauvage qui vit parmi les gazelles." },
+        { "type": "image", "asset": "gilgamesh_le_premier_heros", "ratio": "4:3", "caption": "Gilgamesh et Enkidu : de la bagarre à l'amitié fraternelle." },
+        { "type": "paragraph", "text": "Ils se battent, personne ne gagne, et la rivalité devient amitié. Ensemble, ils tuent le monstre **Humbaba** dans la Forêt des Cèdres, puis le **Taureau Céleste** envoyé par la déesse **Ishtar**. Les dieux, irrités, condamnent Enkidu à mourir de maladie. La mort de l'ami change tout." }
+      ]
+    },
+    {
+      "id": "course_183_gilgamesh_le_premier_heros_de_l_histoire_p3",
+      "title": "La quête d'immortalité",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Devant le cadavre d'Enkidu, Gilgamesh comprend qu'il mourra aussi. Il abandonne sa couronne, se couvre de peaux de bêtes et part chercher **Ut-napishti**, seul homme devenu immortel après le [[Récit du Déluge dans l'Épopée]]. Le voyage le mène au-delà des montagnes de [[Mashu]] et des Eaux de la Mort." },
+        { "type": "image", "asset": "gilgamesh_le_premier_heros", "ratio": "4:3", "caption": "Le récit du Déluge : mille ans avant Noé, déjà sur l'argile." },
+        { "type": "paragraph", "text": "Ut-napishti lui impose une épreuve : rester éveillé six jours et sept nuits. Gilgamesh s'endort aussitôt. Celui qui ne vainc pas le sommeil ne vaincra pas la mort. On lui indique une plante de jouvence ; un serpent la lui vole pendant qu'il se baigne. Le serpent mue. Le roi repart les mains vides." },
+        { "type": "funFact", "text": "Ce [[Récit du Déluge dans l'Épopée]] précède d'environ **1 000 ans** le récit biblique de Noé : même fond culturel mésopotamien, version plus ancienne." }
+      ]
+    },
+    {
+      "id": "course_183_gilgamesh_le_premier_heros_de_l_histoire_p4",
+      "title": "L'éternité des murs d'Uruk",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "De retour à **Uruk**, Gilgamesh regarde les remparts de sa cité. La leçon est claire : l'immortalité biologique appartient aux dieux. L'homme, lui, dure par ses œuvres et par la mémoire des vivants." },
+        { "type": "paragraph", "text": "Quatre millénaires plus tard, le récit nourrit encore la culture mondiale, du Noé biblique aux théories du monomythe chez [[Joseph Campbell]]. Lire Gilgamesh, c'est entendre les premières grandes questions humaines face à la mort." },
+        { "type": "takeaway", "text": "L'**Épopée de Gilgamesh**, vieille de **4 000 ans**, contient déjà un déluge avant la Bible. Son héros apprend que l'immortalité n'est pas biologique : elle est dans les murs qu'on bâtit et dans la mémoire qu'on laisse." }
+      ]
+    }
+  ]
+}

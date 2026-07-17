@@ -1,0 +1,73 @@
+{
+  "id": "course_164_demeter_et_persephone_les_saisons",
+  "title": "Déméter et Perséphone",
+  "subtitle": "Pourquoi les saisons existent",
+  "subject": "mythologie",
+  "subcategory": "Grèce : les dieux",
+  "description": "Hadès enlève Perséphone. Sa mère Déméter, déesse des moissons, laisse la terre mourir de faim. Un mythe pour expliquer les saisons.",
+  "hero": {
+    "image": "demeter_et_persephone",
+    "ratio": "16:9",
+    "hook": "Quand une fille disparaît sous terre, sa mère arrête les moissons. Le monde découvre l'hiver."
+  },
+  "sections": [
+    {
+      "id": "course_164_demeter_et_persephone_les_saisons_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "**Déméter** est la déesse grecque des moissons et de la fertilité. Sa fille **Perséphone** incarne le printemps. Leur histoire explique le [[cycle agricole dans la religion grecque]] : pourquoi la terre meurt l'hiver et renaît l'été." },
+        { "type": "paragraph", "text": "C'est aussi un drame de mère et de fille, entre le monde des vivants et celui des morts. De ce récit naissent les [[Mystères d'Éleusis]], rites secrets qui promettaient aux initiés une espérance face à la mort." }
+      ]
+    },
+    {
+      "id": "course_164_demeter_et_persephone_les_saisons_p1",
+      "title": "Hadès enlève la jeune fille",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "On appelle d'abord Perséphone **Koré**, « la jeune fille ». Un jour, dans une prairie, elle cueille un narcisse. La terre s'ouvre. **Hadès**, roi du monde souterrain, surgit sur son char. Avec l'accord secret de **Zeus**, père de la jeune fille, il l'emporte aux Enfers pour en faire sa reine." },
+        { "type": "image", "asset": "demeter_et_persephone", "ratio": "4:3", "caption": "L'enlèvement de Perséphone : le printemps disparaît sous terre." },
+        { "type": "funFact", "text": "Selon le mythe, **Gaïa**, la Terre, avait créé ce narcisse sur ordre de Zeus. Son parfum devait piéger Perséphone." },
+        { "type": "paragraph", "text": "Déméter, inconsolable, quitte l'Olympe. Elle interdit à la terre de germer. Les champs restent stériles. Une **famine** menace les humains, et donc les sacrifices offerts aux dieux. Zeus doit réagir." }
+      ]
+    },
+    {
+      "id": "course_164_demeter_et_persephone_les_saisons_p2",
+      "title": "Les pépins de grenade décident du sort",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Zeus envoie **Hermès**, messager des dieux, exiger le retour de Perséphone. Hadès feint d'obéir. Avant qu'elle parte, il lui offre quelques **pépins de grenade**. Quiconque mange dans le royaume des morts lui appartient. Le piège est tendu." },
+        { "type": "paragraph", "text": "Un compromis s'impose. Perséphone passera une partie de l'année auprès d'Hadès, le reste auprès de sa mère. Quand elle remonte, Déméter fait reverdir la nature : c'est le printemps et l'été. Quand elle redescend, la déesse des moissons retire sa grâce : c'est l'automne et l'hiver." },
+        { "type": "timeline", "events": [
+          { "date": "1", "title": "L'enlèvement", "detail": "Hadès emmène Perséphone sous terre." },
+          { "date": "2", "title": "La famine", "detail": "Déméter arrête la croissance des plantes." },
+          { "date": "3", "title": "La grenade", "detail": "Perséphone mange des pépins aux Enfers." },
+          { "date": "4", "title": "Le partage", "detail": "Elle partage l'année entre mère et époux." },
+          { "date": "5", "title": "Les saisons", "detail": "Son aller-retour rythme le cycle des cultures." }
+        ] },
+        { "type": "funFact", "text": "Certaines versions disent que Perséphone ne mange pas ces pépins par accident. Curiosité ou attachement naissant : le récit devient aussi une entrée dans l'âge adulte." }
+      ]
+    },
+    {
+      "id": "course_164_demeter_et_persephone_les_saisons_p3",
+      "title": "À Éleusis, l'espoir après la nuit",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Pendant son errance, Déméter s'arrête à **Éleusis**, près d'Athènes, déguisée en vieille femme. Accueillie par la famille royale, elle finit par révéler sa nature divine et ordonne la construction d'un temple. Naissent les [[Mystères d'Éleusis]]." },
+        { "type": "paragraph", "text": "Les initiés marchent neuf jours, jeûnent, boivent le **kykeon**, boisson d'orge et de menthe. Dans le [[Telesterion]], immense salle d'initiation, la lumière éclate après l'obscurité. On y révèle des objets sacrés, dans le plus grand secret." },
+        { "type": "funFact", "text": "Certains chercheurs modernes pensent que le kykeon contenait de l'ergot de seigle, un champignon hallucinogène. Cela expliquerait les visions rapportées par les initiés." },
+        { "type": "paragraph", "text": "Le rite imite le voyage de la déesse. Traverser la mort de la nature avec Déméter, puis renaître avec Perséphone : les participants croyaient gagner un sort meilleur dans l'au-delà." }
+      ]
+    },
+    {
+      "id": "course_164_demeter_et_persephone_les_saisons_p4",
+      "title": "Le grain qui meurt pour renaître",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Pour les Grecs, le grain de blé enfoui dans le sol vit le même destin que Perséphone. Il disparaît sous terre pour revenir en tige. Le mythe lie agriculture, mort et renaissance." },
+        { "type": "paragraph", "text": "Il parle aussi du mariage antique, souvent vécu comme un départ douloureux : la jeune fille quitte sa mère pour rejoindre un autre foyer. Entre Hadès et Déméter, l'accord final tient les contraires ensemble : ombre et lumière, mort et vie." },
+        { "type": "takeaway", "text": "Le séjour de **Perséphone** aux Enfers rythme les saisons : son absence provoque le deuil de **Déméter** (automne-hiver), son retour fait renaître les plantes (printemps-été)." }
+      ]
+    }
+  ]
+}

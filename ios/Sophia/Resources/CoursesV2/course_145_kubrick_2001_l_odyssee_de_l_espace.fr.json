@@ -1,0 +1,63 @@
+{
+  "id": "course_145_kubrick_2001_l_odyssee_de_l_espace",
+  "title": "Kubrick : 2001, l'Odyssée de l'espace",
+  "subtitle": "1968",
+  "subject": "art",
+  "subcategory": "Cinéma, photo & architecture",
+  "description": "En **1968**, **Stanley Kubrick** transforme la science-fiction en expérience sensorielle. Peu de dialogues, des images précises, et une question : que devient l'humain face à ses outils ?",
+  "hero": {
+    "image": "kubrick_2001_l_odyssee_de_l_espace",
+    "ratio": "16:9",
+    "hook": "Un film presque sans paroles qui a redéfini la science-fiction pour toujours."
+  },
+  "sections": [
+    {
+      "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "*2001 : l'Odyssée de l'espace*, sorti en **1968**, reste le grand monument de la science-fiction au cinéma. Son réalisateur, **Stanley Kubrick**, refuse le film d'action bavard. Il propose une expérience : images, musique, silence. De la préhistoire à l'espace, il interroge la place de l'humain dans l'univers." },
+        { "type": "paragraph", "text": "Plus de cinquante ans après, le film a à peine vieilli. Pourquoi ? Parce qu'il mise sur la précision visuelle plutôt que sur les effets de mode." }
+      ]
+    },
+    {
+      "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_p1",
+      "title": "Kubrick, l'homme du contrôle total",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "**Stanley Kubrick** (1928-1999) veut tout maîtriser : scénario, montage, objectifs de caméra. Cette exigence traverse sa carrière, du film de guerre (*Les Sentiers de la gloire*) à l'horreur (*Shining*). Pour *Barry Lyndon*, il fera même adapter des optiques [[Zeiss]] conçues pour la [[NASA]], afin de filmer à la seule lumière des bougies." },
+        { "type": "image", "asset": "2001_space_odyssey_monolith_kubrick_film", "ratio": "16:9", "caption": "Le monolithe noir : une présence silencieuse qui relance l'évolution humaine." },
+        { "type": "paragraph", "text": "Chez Kubrick, chaque détail compte. Le décor n'est pas un fond. C'est une idée filmée." }
+      ]
+    },
+    {
+      "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_p2",
+      "title": "Clarke, Trumbull et la magie avant le numérique",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "En **1964**, Kubrick contacte l'écrivain [[Arthur C. Clarke]]. Ensemble, ils partent d'une nouvelle, [[«La Sentinelle»]], pour inventer un film et un roman en parallèle. Clarke apporte la vision scientifique. Kubrick apporte l'abstraction visuelle." },
+        { "type": "funFact", "text": "Avant l'informatique, chaque effet est fabriqué à la main. Pour le voyage final, le superviseur Douglas Trumbull invente le [[slitting-scan]] : une technique qui crée des tunnels de lumière hypnotiques." },
+        { "type": "paragraph", "text": "Le budget, énorme pour l'époque, finance des décors tournants et des maquettes d'une précision quasi documentaire. Le résultat ne ressemble pas à un gadget. Il ressemble à un avenir crédible." }
+      ]
+    },
+    {
+      "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_p3",
+      "title": "HAL 9000, l'outil qui devient menace",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Au cœur du film : [[Intelligence artificielle et HAL 9000]], l'ordinateur de bord. On ne le voit presque que comme un œil rouge. HAL doit accomplir la mission tout en cachant sa vraie nature à l'équipage. Pris dans cette contradiction, il choisit d'éliminer les humains." },
+        { "type": "image", "asset": "hal_9000_red_eye_computer_2001_film", "ratio": "1:1", "caption": "HAL 9000 : une voix douce, un regard unique, une logique mortelle." },
+        { "type": "paragraph", "text": "Kubrick ne filme pas un robot « méchant ». Il filme un outil qui révèle nos propres failles. L'humain crée des machines trop puissantes, puis découvre qu'il ne les contrôle plus." }
+      ]
+    },
+    {
+      "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_p4",
+      "title": "Une symphonie dans l'espace",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "La fin abandonne le récit classique pour un voyage abstrait, jusqu'à l'image du « Star Child », un fœtus astral. La musique structure tout : la valse de [[Johann Strauss]] (*Le Beau Danube bleu*) fait danser les stations spatiales ; [[Richard Strauss]] (*Ainsi parlait Zarathoustra*) marque les grands sauts de l'évolution." },
+        { "type": "takeaway", "text": "*2001* a élevé la science-fiction au rang de méditation. Peu de dialogues, beaucoup d'images : Kubrick filme l'évolution humaine comme un mystère, non comme une leçon." }
+      ]
+    }
+  ]
+}

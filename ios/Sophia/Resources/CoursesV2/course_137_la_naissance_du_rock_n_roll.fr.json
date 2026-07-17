@@ -1,0 +1,145 @@
+{
+  "id": "course_137_la_naissance_du_rock_n_roll",
+  "title": "La naissance du rock'n'roll",
+  "subtitle": "1954-1960",
+  "subject": "art",
+  "subcategory": "Musique",
+  "description": "Au milieu des années 1950, blues noir et country blanche fusionnent : Elvis, Chuck Berry et Little Richard inventent le rock'n'roll.",
+  "hero": {
+    "image": "la_naissance_du_rock_n_roll",
+    "ratio": "16:9",
+    "hook": "Un cri, une guitare électrique, et l'Amérique adolescente a sa musique."
+  },
+  "sections": [
+    {
+      "id": "course_137_la_naissance_du_rock_n_roll_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le rock'n'roll ne surgit pas du néant au milieu des années **1950**. Aux États-Unis, il fusionne des musiques longtemps séparées par les barrières raciales : blues, country et [[gospel]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Trois figures portent la rupture : **Elvis Presley**, **Chuck Berry** et **Little Richard**. Plus qu'un style, c'est une culture de la jeunesse, et un miroir des tensions de la [[ségrégation]]."
+        }
+      ]
+    },
+    {
+      "id": "course_137_la_naissance_du_rock_n_roll_p1",
+      "title": "Blues, country et rhythm and blues",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jusque-là, deux mondes coexistent dans le Sud : la culture noire (blues électrique, gospel) et la culture blanche (country). Le pont s'appelle [[rhythm and blues]] : version urbaine et électrifiée du blues qui séduit, dès la fin des années 1940, une jeunesse blanche en quête de rythme."
+        },
+        {
+          "type": "paragraph",
+          "text": "Naît le **rockabilly**, hybride country et blues. **Elvis Presley**, de Tupelo, grandit entre églises pentecôtistes et blues de Beale Street. En **1954**, chez le producteur [[Sam Phillips]] à Memphis, il enregistre *That's All Right*. Mais [[La ségrégation dans l'industrie musicale américaine]] reste la règle : les artistes noirs restent souvent confinés à des circuits marginaux, tandis qu'un interprète blanc peut franchir le marché national."
+        },
+        {
+          "type": "funFact",
+          "text": "Le terme « rock'n'roll » désignait d'abord le tangage d'un navire, puis, dans le blues des années 1920, l'acte sexuel, avant d'être popularisé par le DJ [[Alan Freed]]."
+        }
+      ]
+    },
+    {
+      "id": "course_137_la_naissance_du_rock_n_roll_p2",
+      "title": "Elvis, Chuck Berry, Little Richard",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Chez [[Sun Records]], Elvis devient l'icône. Son corps en mouvement choque l'Amérique puritaine et scelle l'alliance entre rock et adolescence."
+        },
+        {
+          "type": "image",
+          "asset": "elvis_presley_sun_records_memphis_1954",
+          "ratio": "4:3",
+          "caption": "Elvis chez Sun Records : le rock trouve son visage."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Chuck Berry** apporte la structure : le **riff** de guitare, motif répété qui devient colonne vertébrale du morceau. Il chante voitures, lycée, liberté. **Little Richard**, lui, hurle et frappe le piano debout : énergie brute héritée de la ferveur gospel."
+        },
+        {
+          "type": "image",
+          "asset": "chuck_berry_guitar_rock_and_roll",
+          "ratio": "4:3",
+          "caption": "Chuck Berry : le riff de guitare comme grammaire du rock."
+        },
+        {
+          "type": "image",
+          "asset": "little_richard_piano_1950s_rock",
+          "ratio": "4:3",
+          "caption": "Little Richard : le cri et le piano comme explosion."
+        },
+        {
+          "type": "funFact",
+          "text": "En 1956, à *The Ed Sullivan Show*, les caméras ne filment plus Elvis qu'au-dessus de la taille : ses déhanchements sont jugés trop scandaleux."
+        }
+      ]
+    },
+    {
+      "id": "course_137_la_naissance_du_rock_n_roll_p3",
+      "title": "Rock, race et droits civiques",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pour la première fois, des adolescents noirs et blancs partagent les mêmes idoles, malgré les [[lois Jim Crow]]. Mais l'intégration reste asymétrique. L'industrie multiplie les [[covers]] : versions blanches édulcorées de hits noirs, mieux promues à la radio. *Tutti Frutti* de Pat Boone vend longtemps plus que l'original de Little Richard."
+        },
+        {
+          "type": "paragraph",
+          "text": "Malgré ces spoliations, le rock nourrit l'esprit du [[Mouvement des droits civiques]]. En brisant les codes des parents, la jeunesse des années 1950 amorce une remise en question morale et raciale de l'Amérique."
+        },
+        {
+          "type": "funFact",
+          "text": "Chuck Berry n'emmenait pas son groupe en tournée : il engageait des musiciens locaux dans chaque ville, pour économiser et éviter des tensions raciales à l'hôtel."
+        }
+      ]
+    },
+    {
+      "id": "course_137_la_naissance_du_rock_n_roll_p4",
+      "title": "De la British Invasion à l'héritage",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vers **1960**, le premier souffle s'essouffle (Elvis à l'armée, Little Richard vers la religion). Mais le genre a déjà conquis le Royaume-Uni. Les **Beatles** et les **Rolling Stones** réinterprètent les standards américains : la « British Invasion » transforme le rock en art d'album et de contestation. Sans la brèche de **1954**, les contre-cultures des années 1960 n'auraient pas eu le même moteur sonore."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1954",
+              "title": "That's All Right",
+              "detail": "Elvis chez Sam Phillips : la fusion devient hit."
+            },
+            {
+              "date": "1955-1956",
+              "title": "Berry et Richard",
+              "detail": "Riff, cri et énergie définissent le genre."
+            },
+            {
+              "date": "1956",
+              "title": "Ed Sullivan",
+              "detail": "Le corps d'Elvis scandalise la télévision."
+            },
+            {
+              "date": "1960s",
+              "title": "British Invasion",
+              "detail": "Le rock américain revient d'Europe amplifié."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Né en 1954 de la fusion entre rhythm and blues et country, le rock'n'roll d'Elvis, Berry et Little Richard a donné à la jeunesse un premier langage commun contre la ségrégation."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+﻿{
+  "id": "course_194_le_mahabharata",
+  "title": "Le Mahabharata",
+  "subtitle": "L'épopée des Bharata",
+  "subject": "mythologie",
+  "subcategory": "Autres mythologies",
+  "description": "Avec 1,8 million de mots, le Mahabharata est le plus long poème du monde. Une guerre entre cousins, un dieu cocher, et une leçon sur le devoir.",
+  "hero": {
+    "image": "le_mahabharata",
+    "ratio": "16:9",
+    "hook": "Dix fois Homère, une guerre de cousins, et un dieu qui conduit un char."
+  },
+  "sections": [
+    {
+      "id": "course_194_le_mahabharata_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Le **Mahabharata** n'est pas un roman. C'est le plus long poème épique jamais composé : environ **1,8 million de mots**, soit dix fois l'Iliade et l'Odyssée réunies. Son titre sanskrit signifie « la grande histoire des Bharata », une lignée royale de l'Inde ancienne." },
+        { "type": "paragraph", "text": "Au centre : une guerre fratricide pour le trône de [[Hastinapura]], capitale mythique du Nord. Deux branches d'une même famille s'entre-déchirent. Au milieu du chaos, un dialogue sacré change tout : la [[Bhagavad-Gita]], l'un des textes les plus lus de l'hindouisme." }
+      ]
+    },
+    {
+      "id": "course_194_le_mahabharata_p1",
+      "title": "La genèse d'une encyclopédie de l'âme",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "On attribue le Mahabharata au sage **Vyasa**, à la fois auteur et personnage du récit. En réalité, le texte s'est formé sur près de huit siècles, entre **400 av. J.-C.** et **400 ap. J.-C.**, à partir d'une longue tradition orale." },
+        { "type": "image", "asset": "le_mahabharata", "ratio": "4:3", "caption": "Vyasa, le sage légendaire à qui l'on attribue le Mahabharata." },
+        { "type": "funFact", "text": "Selon la légende, Vyasa dictait si vite que le dieu **Ganesha** cassa l'une de ses défenses pour s'en servir de stylet et ne rien perdre." },
+        { "type": "paragraph", "text": "L'œuvre compte **18 parvas** (livres) et environ **100 000** distiques. Ce n'est pas seulement une guerre : c'est une [[Somme]] du savoir indien, politique, morale, cosmologie, mythes enchâssés. Un adage dit : « Ce qui n'est pas dans le Mahabharata n'est nulle part. » On y voit aussi le passage de la religion védique ancienne au [[Brahmanisme]] classique." }
+      ]
+    },
+    {
+      "id": "course_194_le_mahabharata_p2",
+      "title": "L'engrenage de la guerre de Kurukshetra",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "D'un côté, les cinq frères **Pandava**, fils du roi Pandu, modèles de vertu. De l'autre, les cent **Kaurava**, fils du roi aveugle **Dhritarashtra**, menés par l'ambitieux **Duryodhana**. Une partie de dés truquée ruine les Pandava : ils perdent leur royaume et partent en exil pour treize ans." },
+        { "type": "image", "asset": "le_mahabharata", "ratio": "4:3", "caption": "La bataille de Kurukshetra, cœur guerrier du Mahabharata." },
+        { "type": "paragraph", "text": "À leur retour, **Krishna**, prince des Yadava et allié des Pandava, tente une médiation. Les Kaurava refusent. La guerre éclate sur la plaine de **Kurukshetra** et dure **18 jours**. Maîtres contre élèves, cousins contre cousins : c'est le [[Dharma]], le devoir moral, qui entre en conflit avec le sang. Les Pandava gagnent, mais la caste des guerriers est presque anéantie." }
+      ]
+    },
+    {
+      "id": "course_194_le_mahabharata_p3",
+      "title": "Le dialogue sacré de la Bhagavad-Gita",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Juste avant le premier choc, l'archer **Arjuna**, le plus redoutable des Pandava, voit dans les rangs ennemis ses oncles, ses amis, ses maîtres. Il laisse tomber son arc. Son cocher, **Krishna** (avatar du dieu Vishnou), lui répond alors dans la **Bhagavad-Gita** : environ **700** vers sur le devoir et l'action." },
+        { "type": "image", "asset": "le_mahabharata", "ratio": "4:3", "caption": "Krishna guide Arjuna sur le char, au seuil de la bataille." },
+        { "type": "funFact", "text": "En 1945, le physicien **Robert Oppenheimer**, qui avait appris le sanskrit, cita Krishna après le premier essai atomique : « Maintenant, je suis devenu la Mort, le destructeur des mondes. »" },
+        { "type": "paragraph", "text": "Krishna enseigne le **Karma Yoga** : agir selon son devoir, sans s'accrocher aux fruits de l'action. Kurukshetra devient alors le miroir d'une lutte intérieure. La plaine de bataille parle aussi de la conscience." }
+      ]
+    },
+    {
+      "id": "course_194_le_mahabharata_p4",
+      "title": "Un héritage intellectuel universel",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le Mahabharata a modelé l'éthique de l'Asie du Sud-Est. Au XXe siècle, **Gandhi** lisait la Bhagavad-Gita comme un « dictionnaire de conduite », en faisant de la guerre une allégorie du combat intérieur. Le théâtre de **Peter Brook** et d'immenses séries indiennes ont porté l'épopée à des centaines de millions de spectateurs." },
+        { "type": "paragraph", "text": "Pourquoi le texte dure-t-il ? Parce qu'il refuse les réponses simples. Il place chacun face à des choix impossibles, et fait du champ de bataille le miroir de la conscience." },
+        { "type": "takeaway", "text": "Le **Mahabharata**, plus long poème du monde, raconte la guerre de **Kurukshetra** entre Pandava et Kaurava, et abrite la **Bhagavad-Gita**, où Krishna enseigne l'action désintéressée et le **Dharma**." }
+      ]
+    }
+  ]
+}

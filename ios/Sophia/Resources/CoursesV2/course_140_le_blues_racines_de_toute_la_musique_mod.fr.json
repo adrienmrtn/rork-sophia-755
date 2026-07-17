@@ -1,0 +1,145 @@
+{
+  "id": "course_140_le_blues_racines_de_toute_la_musique_mod",
+  "title": "Le blues : racines de toute la musique moderne",
+  "subtitle": "1870-1960",
+  "subject": "art",
+  "subcategory": "Musique",
+  "description": "Né dans les champs de coton du Mississippi, le blues invente la grille en 12 mesures et nourrit jazz, rock, soul et hip-hop.",
+  "hero": {
+    "image": "le_blues_racines_de_toute_la_musique_moderne",
+    "ratio": "16:9",
+    "hook": "Un cri dans les champs de coton, et toute la musique moderne a une racine."
+  },
+  "sections": [
+    {
+      "id": "course_140_le_blues_racines_de_toute_la_musique_mod_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le blues n'est pas seulement un genre. C'est la matrice d'une grande part de la musique populaire occidentale du XXe siècle. Il naît dans le dénuement des champs de coton du **Mississippi**, à la fin du XIXe siècle, comme résistance et expression des Africains-Américains."
+        },
+        {
+          "type": "paragraph",
+          "text": "Du jazz au rock'n'roll, de la soul au hip-hop, ses structures et son émotion irriguent encore nos oreilles. Comprendre le blues, c'est remonter à la source d'un cri transformé en art."
+        }
+      ]
+    },
+    {
+      "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p1",
+      "title": "Champs de coton, hollers et 12 mesures",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Entre **1870** et **1890**, dans le [[Deep South]] marqué par la ségrégation et la misère des métayers, le blues synthétise des traditions orales africaines. Les [[field hollers]] (cris de travail solitaires) et les [[work songs]] (chants cadencés pour synchroniser l'effort) croisent les [[spirituals]], chants religieux parfois porteurs de messages de liberté."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'innovation majeure : la [[structure en 12 mesures]], grille de trois accords qui sert de canevas à l'improvisation. Les [[blue notes]], notes fléchies, imitent la douleur de la voix. La guitare, souvent avec un [[bottleneck]] (tube de verre ou métal glissé sur les cordes), dialogue avec le chanteur."
+        },
+        {
+          "type": "funFact",
+          "text": "Dans les paroles, le mot « rider » (cavalier) codait souvent un amant, pour aborder des thèmes tabous devant un public non averti."
+        }
+      ]
+    },
+    {
+      "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p2",
+      "title": "Robert Johnson et le mythe du Delta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le **Delta du Mississippi**, entre Memphis et Vicksburg, est le berceau du **Delta blues**, forme brute du genre. **Robert Johnson** (**1911**-**1938**) incarne le musicien errant : seulement **29** enregistrements, une influence immense. Son [[fingerpicking]] traite la guitare comme un orchestre miniature."
+        },
+        {
+          "type": "image",
+          "asset": "mississippi_delta_blues_cotton_fields",
+          "ratio": "4:3",
+          "caption": "Le Delta du Mississippi : berceau du blues rural."
+        },
+        {
+          "type": "image",
+          "asset": "robert_johnson_blues_guitarist_crossroads",
+          "ratio": "4:3",
+          "caption": "Robert Johnson : 29 titres, une légende éternelle."
+        },
+        {
+          "type": "paragraph",
+          "text": "La légende dit qu'il aurait vendu son âme au diable à un [[crossroads]] (carrefour) en échange de sa maîtrise. Le blues était alors souvent dit « musique du diable », face aux chants d'église. Johnson meurt empoisonné, jeune. *Cross Road Blues* et *Sweet Home Chicago* deviennent des standards."
+        },
+        {
+          "type": "funFact",
+          "text": "Il enregistrait face au mur dans une chambre d'hôtel de San Antonio, non par timidité, mais pour exploiter l'acoustique de la pièce."
+        }
+      ]
+    },
+    {
+      "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p3",
+      "title": "Chicago : le blues devient électrique",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dans les années **1940**, la Grande Migration emmène des millions d'Africains-Américains vers le Nord industriel. À **Chicago**, le blues s'électrifie pour couvrir le bruit des usines. **Muddy Waters** et **Howlin' Wolf** imposent guitare électrique, basse, batterie."
+        },
+        {
+          "type": "image",
+          "asset": "muddy_waters_chicago_electric_blues",
+          "ratio": "4:3",
+          "caption": "Muddy Waters à Chicago : le blues branché sur le courant."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cette électrification mène au rock'n'roll. **Chuck Berry** et **Bo Diddley** accélèrent le tempo. Dans les années 1960, les **Rolling Stones** (nom tiré d'un titre de Muddy Waters) et **Led Zeppelin** réexportent ces racines vers le public blanc, souvent sans que les créateurs originaux en tirent fortune."
+        },
+        {
+          "type": "funFact",
+          "text": "Muddy Waters a été « découvert » par le musicologue Alan Lomax alors qu'il conduisait encore un tracteur dans une plantation de coton."
+        }
+      ]
+    },
+    {
+      "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p4",
+      "title": "De B.B. King au sampling",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le jazz lui emprunte structures et improvisation. La soul et le R&B gardent sa voix viscérale. Le hip-hop recycle son héritage par le [[sampling]] de vieux vinyles. **B.B. King** popularise le solo de guitare mélodique. Plus qu'un style historique, le blues reste un langage sur l'amour perdu, l'injustice et l'espoir."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1870-1890",
+              "title": "Naissance dans le Deep South",
+              "detail": "Hollers, spirituals et grille en 12 mesures."
+            },
+            {
+              "date": "1930s",
+              "title": "Robert Johnson",
+              "detail": "Le mythe du Delta et du carrefour."
+            },
+            {
+              "date": "1940s-1950s",
+              "title": "Chicago électrique",
+              "detail": "Muddy Waters ouvre la voie au rock."
+            },
+            {
+              "date": "1960s",
+              "title": "Renaissance britannique",
+              "detail": "Stones et Zeppelin mondialise le blues."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Né de la souffrance des communautés noires du Mississippi, le blues a donné au monde la grille en 12 mesures et, via Chicago, le rock et bien plus encore."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+﻿{
+  "id": "course_171_hercule_et_ses_12_travaux",
+  "title": "Hercule et ses 12 travaux",
+  "subtitle": "Du chaos à l'Olympe",
+  "subject": "mythologie",
+  "subcategory": "Grèce : les héros",
+  "description": "Héraclès, fils de Zeus, tue sa famille dans un accès de folie. Ses Douze Travaux sont une pénitence : tuer des monstres, puis vaincre la mort elle-même.",
+  "hero": {
+    "image": "hercule_et_ses_12_travaux",
+    "ratio": "16:9",
+    "hook": "Douze épreuves pour laver un crime. Un demi-dieu qui finit parmi les dieux."
+  },
+  "sections": [
+    {
+      "id": "course_171_hercule_et_ses_12_travaux_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "**Héraclès**, appelé **Hercule** par les Romains, est le plus grand héros grec. Fils de [[Zeus]], roi des dieux, et de la mortelle **Alcmène**, il n'est pas seulement un colosse. Il incarne la force, mais aussi la violence et la rédemption." },
+        { "type": "paragraph", "text": "Ses **Douze Travaux** ne sont pas une quête de gloire volontaire. C'est une pénitence pour un crime atroce. En purgeant le monde des monstres, Héraclès ouvre la voie à la civilisation… et gagne, rare privilège, l'immortalité." }
+      ]
+    },
+    {
+      "id": "course_171_hercule_et_ses_12_travaux_p1",
+      "title": "La folie d'Héra, le crime, la pénitence",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "[[Héra]], épouse légitime de Zeus, hait l'enfant né d'une infidélité. Dès le berceau, elle envoie deux serpents. Le nourrisson les étouffe à mains nues. Plus tard, Héraclès épouse **Mégara**, fille du roi de Thèbes. Héra le frappe alors de folie : il massacre sa femme et ses enfants." },
+        { "type": "paragraph", "text": "Ce crime de sang, un [[Miasme]], le place hors de la société. L'oracle de Delphes lui ordonne de servir son cousin, le roi **Eurysthée**. Ce souverain peureux, guidé par Héra, lui impose dix travaux, puis douze, car il refuse d'en compter certains." },
+        { "type": "funFact", "text": "Selon la légende, le lait d'Héra, jailli de son sein alors qu'elle allaitait Héraclès par ruse, aurait formé la **Voie lactée** dans le ciel." }
+      ]
+    },
+    {
+      "id": "course_171_hercule_et_ses_12_travaux_p2",
+      "title": "Lions, hydres et écuries",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le premier défi est le **Lion de Némée**, à la peau impénétrable. Héraclès l'étrangle, puis le dépouille avec ses propres griffes. Cette peau, la [[Léonté]], devient son armure. Vient ensuite l'**Hydre de Lerne**, serpent à plusieurs têtes : pour chaque tête coupée, deux repoussent. Avec son neveu Iolaos, il cautérise les cous au feu." },
+        { "type": "image", "asset": "hercule_et_ses_12_travaux", "ratio": "4:3", "caption": "Héraclès face au Lion de Némée et à l'Hydre." },
+        { "type": "funFact", "text": "Les Anciens disaient que Zeus avait placé le Lion de Némée parmi les étoiles : la constellation du **Lion**." },
+        { "type": "paragraph", "text": "Les **Écuries d'Augias** changent de registre. Des milliers de bœufs n'ont pas été nettoyés depuis trente ans. Eurysthée veut humilier le héros. Héraclès détourne les fleuves [[Alphée]] et Pénée : en un jour, le courant emporte le fumier. L'intelligence vaut autant que les muscles." }
+      ]
+    },
+    {
+      "id": "course_171_hercule_et_ses_12_travaux_p3",
+      "title": "Jusqu'aux confins du monde",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Les travaux l'éloignent de la Grèce : Taureau de Crète, juments mangeuses d'hommes, ceinture d'**Hippolyte**, reine des Amazones. Pour le troupeau du géant **Géryon**, à l'extrême Occident, Héraclès ouvre un passage entre Méditerranée et Atlantique : les [[Colonnes d'Hercule]], aujourd'hui le détroit de Gibraltar." },
+        { "type": "paragraph", "text": "Il vole les **pommes d'or** des Hespérides en rusant avec le titan [[Atlas]], qui porte le ciel. Le dernier travail est le plus terrible : descendre aux Enfers et en ramener **Cerbère**, le chien à plusieurs têtes. En ressortir vivant, c'est symboliquement vaincre la mort." },
+        { "type": "funFact", "text": "L'explorateur Orellana aurait nommé le fleuve **Amazone** après avoir cru voir des guerrières sur ses rives, en écho aux Amazones du mythe." }
+      ]
+    },
+    {
+      "id": "course_171_hercule_et_ses_12_travaux_p4",
+      "title": "L'apothéose : un héros devient dieu",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Les Travaux finissent, mais pas les tragédies. Sa femme **Déjanire** lui fait porter une tunique imbibée du sang empoisonné du [[centaure]] Nessus. Brûlé vif, Héraclès monte sur un bûcher au mont Œta. Sa part mortelle brûle. Son essence divine monte vers l'Olympe : c'est l'**apothéose**." },
+        { "type": "image", "asset": "hercule_et_ses_12_travaux", "ratio": "4:3", "caption": "L'apothéose d'Héraclès : le héros rejoint les dieux." },
+        { "type": "paragraph", "text": "Réconcilié avec Héra, il épouse **Hébé**, l'éternelle jeunesse. Les Romains adoptent sa figure sous le nom d'**Hercule**. Un « travail herculéen » désigne encore une tâche immense. Héraclès n'est pas qu'un tueur de monstres : il est un architecte de l'ordre." },
+        { "type": "takeaway", "text": "**Héraclès** (Hercule) accomplit douze travaux pour expier le meurtre de sa famille. Du Lion de Némée à Cerbère, il passe du chaos à la civilisation… et gagne l'immortalité." }
+      ]
+    }
+  ]
+}

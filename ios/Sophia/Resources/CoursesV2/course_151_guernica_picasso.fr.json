@@ -1,0 +1,130 @@
+{
+  "id": "course_151_guernica_picasso",
+  "title": "Guernica, Picasso",
+  "subtitle": "1937",
+  "subject": "art",
+  "subcategory": "Cinéma, photo & architecture + œuvres iconiques",
+  "description": "Après le bombardement de Guernica, Picasso peint un cri noir et blanc contre la guerre. L'œuvre voyage, puis rentre en Espagne après Franco.",
+  "hero": {
+    "image": "guernica_picasso",
+    "ratio": "16:9",
+    "hook": "Un village basque incendié, une toile qui refuse d'oublier."
+  },
+  "sections": [
+    {
+      "id": "course_151_guernica_picasso_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le **26 avril 1937**, la ville basque de Guernica est bombardée pendant la [[Guerre civile espagnole]]. Picasso, à Paris, répond par une toile immense, en noir et blanc."
+        },
+        {
+          "type": "paragraph",
+          "text": "*Guernica* devient l'une des images anti-guerre les plus puissantes du XXe siècle."
+        }
+      ]
+    },
+    {
+      "id": "course_151_guernica_picasso_p1",
+      "title": "La guerre d'Espagne",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Depuis **1936**, l'Espagne se déchire entre la [[Seconde République espagnole]] et les nationalistes de Franco, soutenus par la [[Légion Condor]] allemande. Le [[bombardement de saturation]] de Guernica vise à terroriser."
+        },
+        {
+          "type": "paragraph",
+          "text": "Picasso travaille vite, sur de grandes études. Il abandonne la couleur pour coller à l'urgence du témoignage. Le format monumental interdit la contemplation confortable."
+        },
+        {
+          "type": "image",
+          "asset": "guernica_bombing_aftermath_1937",
+          "ratio": "4:3",
+          "caption": "Guernica en ruines : le fait divers devient symbole."
+        }
+      ]
+    },
+    {
+      "id": "course_151_guernica_picasso_p2",
+      "title": "Une peinture-cri",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Picasso compose un chaos de corps, cheval, taureau, ampoule. Pas de couleur : comme une une de journal. La monumentalité force le spectateur à faire face."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cheval éventré, mère à l'enfant, bras levés : chaque motif est lisible sans légende. C'est une grammaire de la terreur civile, pas une bataille héroïque."
+        },
+        {
+          "type": "funFact",
+          "text": "Il a refusé que le tableau aille en Espagne tant que Franco resterait au pouvoir."
+        }
+      ]
+    },
+    {
+      "id": "course_151_guernica_picasso_p3",
+      "title": "Exil au MoMA",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Après l'Exposition universelle de Paris, *Guernica* voyage puis reste longtemps au [[MoMA]] de New York, protégé pendant la [[Guerre froide]] franquiste. Il rentre à Madrid en **1981**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pendant la dictature, le tableau devient un exilé politique. Son retour en Espagne après Franco est un événement national autant qu'esthétique."
+        },
+        {
+          "type": "image",
+          "asset": "guernica_picasso_painting_detail",
+          "ratio": "4:3",
+          "caption": "Noir, blanc, gris : la guerre sans héroïsme."
+        }
+      ]
+    },
+    {
+      "id": "course_151_guernica_picasso_p4",
+      "title": "Héritage",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Reproduite devant l'[[ONU]] comme avertissement, l'œuvre reste un langage universel contre le massacre des civils."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour bien saisir Guernica, Picasso, il faut garder une chose en tête : chaque détail technique sert une émotion ou une idée. L'œuvre n'est jamais seulement décorative."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le contexte compte autant que le style. Dates, lieux, commanditaires, public : tout cela explique pourquoi une forme apparaît à un moment précis, et pas avant."
+        },
+        {
+          "type": "paragraph",
+          "text": "Enfin, l'héritage se mesure dans le temps long. Ce que nous voyons aujourd'hui dans les musées, les films ou la musique populaire porte encore la trace de ces inventions."
+        },
+        {
+          "type": "paragraph",
+          "text": "Chaque nouvelle guerre redonne à *Guernica* une actualité triste. L'œuvre fonctionne comme un avertissement qu'on n'écoute jamais assez."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour bien saisir Guernica, Picasso, il faut garder une chose en tête : chaque détail technique sert une émotion ou une idée. L'œuvre n'est jamais seulement décorative."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le contexte compte autant que le style. Dates, lieux, commanditaires, public : tout cela explique pourquoi une forme apparaît à un moment précis, et pas avant."
+        },
+        {
+          "type": "takeaway",
+          "text": "Avec Guernica, Picasso a transformé un bombardement de 1937 en mémoire visuelle mondiale de la guerre totale."
+        }
+      ]
+    }
+  ]
+}

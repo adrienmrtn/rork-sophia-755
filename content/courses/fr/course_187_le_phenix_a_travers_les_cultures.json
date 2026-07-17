@@ -1,0 +1,67 @@
+﻿{
+  "id": "course_187_le_phenix_a_travers_les_cultures",
+  "title": "Le Phénix à travers les cultures",
+  "subtitle": "Renaissance et immortalité",
+  "subject": "mythologie",
+  "subcategory": "Autres mythologies",
+  "description": "De l'Égypte à la Chine, l'oiseau qui renaît de ses cendres traverse les civilisations. Un même rêve : que la destruction ne soit jamais définitive.",
+  "hero": {
+    "image": "le_phenix_a_travers_les_cultures",
+    "ratio": "16:9",
+    "hook": "Un oiseau meurt dans le feu et revient. Pourquoi tant de cultures ont-elles inventé le même rêve ?"
+  },
+  "sections": [
+    {
+      "id": "course_187_le_phenix_a_travers_les_cultures_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Le **Phénix** est l'oiseau de feu qui renaît de ses propres cendres. Plus qu'une créature de conte, il porte un rêve humain : la **résurrection**, le renouveau, le triomphe de la vie sur la mort." },
+        { "type": "paragraph", "text": "De la vallée du Nil aux palais de Chine, la figure change de forme. Mais l'idée reste : ce qui brûle peut recommencer. Voici comment le mythe voyage, de l'Égypte antique jusqu'à nos villes rebâties." }
+      ]
+    },
+    {
+      "id": "course_187_le_phenix_a_travers_les_cultures_p1",
+      "title": "Le Bénou égyptien, ancêtre solaire",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "L'ancêtre du Phénix est égyptien : le **Bénou**. Son nom vient d'un verbe qui signifie « briller » ou « s'élever ». On le représentait souvent comme un héron, pas comme un rapace en flammes." },
+        { "type": "image", "asset": "le_phenix_a_travers_les_cultures", "ratio": "4:3", "caption": "Le Bénou, héron sacré lié au soleil et à la création." },
+        { "type": "paragraph", "text": "Selon les prêtres d'[[Héliopolis]], cité du culte solaire, le Bénou fut le premier être vivant sur la **Pierre Benben**, colline sortie du chaos liquide. Son cri ouvrit le temps. Lié au dieu soleil **Rê**, puis à **Osiris**, dieu des morts, il promettait le cycle : le soleil meurt chaque soir et renaît chaque matin." },
+        { "type": "funFact", "text": "Le héron cendré, modèle probable du Bénou, se tient souvent immobile face au soleil levant. Les Égyptiens y ont vu un geste d'adoration solaire." }
+      ]
+    },
+    {
+      "id": "course_187_le_phenix_a_travers_les_cultures_p2",
+      "title": "Les Grecs et les Romains inventent le bûcher",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "L'historien grec **Hérodote** transforme le Bénou en **Phénix** : oiseau rare aux plumes rouges et dorées, qui revient tous les **500 ans**. Les Romains, dont le poète **Ovide** et le naturaliste **Pline l'Ancien**, fixent la fin spectaculaire." },
+        { "type": "image", "asset": "le_phenix_a_travers_les_cultures", "ratio": "4:3", "caption": "Le Phénix s'embrase : destruction et renaissance en un seul geste." },
+        { "type": "paragraph", "text": "Le Phénix est unique. Quand il faiblit, il bâtit un nid d'épices, cannelle, myrrhe, nard. Le soleil ou le battement de ses ailes met le feu. Des cendres naît un jeune oiseau. Il porte les restes de son aîné vers l'autel du soleil en Égypte." },
+        { "type": "paragraph", "text": "Pour Rome, l'oiseau devient symbole de l'**Aeternitas**, l'éternité de l'Empire. Plus tard, les chrétiens y liront l'image de la résurrection." }
+      ]
+    },
+    {
+      "id": "course_187_le_phenix_a_travers_les_cultures_p3",
+      "title": "En Asie, un autre oiseau de vertu",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "En Chine, [[Le Fenghuang chinois]] n'est pas vraiment un oiseau qui brûle. C'est une créature d'harmonie, souvent liée à l'**impératrice**. Son apparition annonce un souverain juste ou une ère de paix." },
+        { "type": "image", "asset": "le_phenix_a_travers_les_cultures", "ratio": "4:3", "caption": "Le Fenghuang : présage de paix et symbole impérial." },
+        { "type": "paragraph", "text": "Au Japon, le **Hōō** joue un rôle voisin. On le voit sur les toits de temples à [[Kyoto]], et sur les billets de **10 000 yens**. Ici, l'oiseau parle moins de survie après la mort que d'équilibre moral et cosmique." }
+      ]
+    },
+    {
+      "id": "course_187_le_phenix_a_travers_les_cultures_p4",
+      "title": "Des alchimistes aux villes qui renaissent",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Au Moyen Âge, les alchimistes font du Phénix une métaphore. La [[transmutation]] des métaux, et surtout la phase sombre appelée [[nigredo]], rappelle son cycle : il faut détruire pour purifier. Le [[Phénix en alchimie médiévale]] devient image de l'esprit qui renaît." },
+        { "type": "funFact", "text": "La ville de **Phoenix**, en Arizona, a été nommée ainsi en **1867** : elle s'élevait sur les canaux et ruines de la civilisation Hohokam, disparue des siècles plus tôt." },
+        { "type": "paragraph", "text": "D'autres oiseaux cousins peuplent le monde : le **Simorgh** perse, l'**Anqa** des traditions islamiques. Partout, le même besoin : croire que la destruction n'est pas définitive." },
+        { "type": "takeaway", "text": "Du **Bénou** égyptien au Phénix gréco-romain et au **Fenghuang** asiatique, l'oiseau de renouveau relie soleil, feu et immortalité. Un mythe universel pour dire que l'on peut renaître après l'incendie." }
+      ]
+    }
+  ]
+}

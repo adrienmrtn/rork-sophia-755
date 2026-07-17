@@ -1,0 +1,66 @@
+{
+  "id": "course_166_narcisse_et_echo",
+  "title": "Narcisse et Écho",
+  "subtitle": "L'amour qui ne peut se rencontrer",
+  "subject": "mythologie",
+  "subcategory": "Grèce : les dieux",
+  "description": "Écho ne peut que répéter. Narcisse n'aime que son reflet. Deux destins qui n'arrivent jamais à se rejoindre, et qui donnent naissance au mot narcissisme.",
+  "hero": {
+    "image": "narcisse_et_echo",
+    "ratio": "16:9",
+    "hook": "Elle n'a plus de voix à elle. Il n'a d'yeux que pour lui. Leur rencontre est impossible."
+  },
+  "sections": [
+    {
+      "id": "course_166_narcisse_et_echo_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Le poète romain [[Ovide]] raconte dans ses [[Métamorphoses]] le destin croisé de **Narcisse** et d'**Écho**. Elle est une nymphe privée de sa propre parole. Lui, un jeune homme captivé par son image." },
+        { "type": "paragraph", "text": "Ce mythe est la source directe du mot **narcissisme**. Il parle d'amour impossible, d'indifférence et du piège de ne désirer que soi." }
+      ]
+    },
+    {
+      "id": "course_166_narcisse_et_echo_p1",
+      "title": "Écho perd sa voix",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Avant de devenir un simple phénomène sonore, **Écho** est une [[Oréade]], nymphe des montagnes, célèbre pour sa parole abondante. Elle aide **Zeus**, roi des dieux, à masquer ses infidélités. Pendant qu'il rejoint d'autres nymphes, elle retient **Héra**, l'épouse jalouse, par d'interminables conversations." },
+        { "type": "image", "asset": "narcisse_et_echo", "ratio": "4:3", "caption": "Écho, condamnée à n'être plus qu'une voix qui répète." },
+        { "type": "paragraph", "text": "Quand Héra découvre la ruse, elle punit Écho. La nymphe ne peut plus commencer une phrase. Elle ne peut que **répéter les derniers mots** d'autrui. Ses propres désirs n'ont plus de langue." },
+        { "type": "funFact", "text": "Dans une autre version, le dieu **Pan**, furieux d'être éconduit, fait mettre Écho en pièces. La version d'Ovide, où elle se consume d'amour, est restée la plus célèbre." }
+      ]
+    },
+    {
+      "id": "course_166_narcisse_et_echo_p2",
+      "title": "Narcisse refuse tout amour",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "**Narcisse** est fils du dieu-fleuve Céphise et de la nymphe Liriopé. Sa beauté attire tout le monde. Son orgueil, lui, repousse tout le monde. Le devin **Tirésias** avait prévenu sa mère : « Il vivra vieux s'il ne se connaît pas. »" },
+        { "type": "paragraph", "text": "Dans les bois, Écho le voit et en tombe amoureuse. Incapable de parler la première, elle attend. Narcisse appelle : « Y a-t-il quelqu'un ? » Elle répond : « Quelqu'un ! » Quand elle s'approche pour l'étreindre, il la rejette avec mépris." },
+        { "type": "funFact", "text": "Humiliée, Écho se retire dans les grottes. Elle cesse de manger. Son corps se dessèche, ses os deviennent pierre. Il ne reste qu'une voix errante dans les montagnes." }
+      ]
+    },
+    {
+      "id": "course_166_narcisse_et_echo_p3",
+      "title": "Le reflet dans la source",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "La cruauté de Narcisse lasse les dieux. Une de ses victimes prie [[Némésis]], déesse de la juste vengeance : qu'il aime ainsi lui-même et ne puisse jamais posséder l'objet de son amour. Le vœu est exaucé." },
+        { "type": "paragraph", "text": "Un jour de chaleur, Narcisse se penche sur une source limpide. Il découvre son visage. Il croit voir un esprit des eaux. Il en tombe amoureux. La prophétie de Tirésias s'accomplit : en se connaissant, il se perd." },
+        { "type": "funFact", "text": "Il tente d'embrasser le reflet. L'eau se trouble. Prisonnier de cette passion stérile, il oublie de manger et de boire." },
+        { "type": "paragraph", "text": "Puis vient la lucidité tragique : « Je suis celui que je vois. » Impossible de s'unir à soi-même. Narcisse se consume. Écho, fidèle malgré tout, répète son dernier adieu." }
+      ]
+    },
+    {
+      "id": "course_166_narcisse_et_echo_p4",
+      "title": "De la fleur au mot narcissisme",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Quand les [[Naïades]], nymphes des eaux, et les [[Dryades]], nymphes des arbres, viennent pour les funérailles, le corps a disparu. À sa place pousse une fleur au cœur jaune et aux pétales blancs : le **narcisse**, penché vers l'eau comme le jeune homme vers son image." },
+        { "type": "paragraph", "text": "En **1914**, **Freud** publie « Pour introduire le narcissisme ». Il y décrit l'amour tourné vers soi plutôt que vers l'autre. Le mythe devient une clé de la psychologie moderne, et un avertissement : sans vraie rencontre, il ne reste qu'une voix sans corps et une fleur sans âme." },
+        { "type": "takeaway", "text": "**Écho** meurt de ne pouvoir dire son désir. **Narcisse** périt pour n'avoir désiré que lui-même. Deux façons de manquer l'autre, une seule tragédie." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+﻿{
+  "id": "course_197_les_mille_et_une_nuits_sheherazade",
+  "title": "Les Mille et Une Nuits (Shéhérazade)",
+  "subtitle": "Raconter pour survivre",
+  "subject": "mythologie",
+  "subcategory": "Autres mythologies",
+  "description": "Shéhérazade survit 1001 nuits en racontant des histoires. Un recueil né entre Perse, Bagdad et l'Égypte, devenu mythe mondial.",
+  "hero": {
+    "image": "les_mille_et_une_nuits_sheherazade",
+    "ratio": "16:9",
+    "hook": "Chaque nuit, une femme raconte une histoire pour ne pas mourir à l'aube."
+  },
+  "sections": [
+    {
+      "id": "course_197_les_mille_et_une_nuits_sheherazade_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Les **Mille et Une Nuits** (*Alf Layla wa-Layla*) ne sont pas un livre d'un seul auteur. C'est un palimpseste : des siècles de contes oraux et écrits, indiens, persans, arabes, égyptiens." },
+        { "type": "paragraph", "text": "Au centre, une idée vertigineuse : une femme, **Shéhérazade**, transforme le récit en bouclier. Tant qu'elle parle, le roi qui voulait la tuer doit attendre. Voici comment la parole devient une arme de survie." }
+      ]
+    },
+    {
+      "id": "course_197_les_mille_et_une_nuits_sheherazade_p1",
+      "title": "Une architecture de papier : la genèse d'un texte-monde",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le noyau vient d'un fonds persan, les [[Hazār Afsāna]] (« Mille contes »), eux-mêmes nourris de traditions indiennes. À Bagdad, sous les califes [[Abbassides]] (VIIIe-XIIIe siècles), le recueil s'arabise : légendes urbaines, anecdotes de cour, ton parfois satirique." },
+        { "type": "image", "asset": "les_mille_et_une_nuits_sheherazade", "ratio": "4:3", "caption": "Manuscrit des Mille et Une Nuits : un texte-monde en formation." },
+        { "type": "funFact", "text": "« Mille et une » ne désigne pas un décompte exact. En arabe, ce chiffre suggère l'abondance, presque l'infini. Certains scribes y voyaient même un talisman contre le mauvais œil." },
+        { "type": "paragraph", "text": "En Égypte, à l'époque des [[Mamelouks]], de nouveaux cycles s'ajoutent. Surprise pour l'Occident : **Aladin** et **Ali Baba** manquent aux manuscrits arabes médiévaux. Ce sont des « contes orphelins », entrés plus tard via l'Europe." }
+      ]
+    },
+    {
+      "id": "course_197_les_mille_et_une_nuits_sheherazade_p2",
+      "title": "L'Hégémonie de Shéhérazade : la narration comme bouclier",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le roi **Shahryar**, trahi par sa première épouse, épouse une jeune femme chaque soir et la fait tuer à l'aube. **Shéhérazade**, fille du vizir, se propose. Elle raconte… et s'arrête au moment le plus tendu." },
+        { "type": "image", "asset": "les_mille_et_une_nuits_sheherazade", "ratio": "4:3", "caption": "Shéhérazade face à Shahryar : la narration comme bouclier." },
+        { "type": "paragraph", "text": "Elle empile des [[histoires emboîtées (récit-cadre)]] : un personnage raconte un autre, qui en raconte un troisième. Le roi, captif du désir d'entendre la suite, reporte l'exécution. Après **mille et une nuits**, l'écoute a changé Shahryar : il retrouve l'empathie. Shéhérazade n'a pas seulement diverti. Elle a réparé un tyran." }
+      ]
+    },
+    {
+      "id": "course_197_les_mille_et_une_nuits_sheherazade_p3",
+      "title": "Le basculement vers l'Occident et l'invention d'un mythe",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Entre **1704** et **1717**, l'orientaliste français **Antoine Galland** publie sa traduction. Il adapte le texte au goût de la cour de **Louis XIV** et ajoute des contes entendus de [[Hanna Diyab]], un Syrien de passage. Aladin entre ainsi dans le corpus." },
+        { "type": "image", "asset": "les_mille_et_une_nuits_sheherazade", "ratio": "4:3", "caption": "Galland ouvre les Nuits à l'Europe du XVIIIe siècle." },
+        { "type": "funFact", "text": "Des jeunes gens réveillaient parfois Galland la nuit en criant sous sa fenêtre : « Monsieur Galland, si vous ne dormez pas, racontez-nous une de vos histoires ! »" },
+        { "type": "paragraph", "text": "Le succès invente un [[orientalisme européen]] : tapis volants, génies, califes déguisés. Vision fantasmée, souvent réductrice, mais d'une influence immense, de **Proust** à **Borges**, qui voyait dans ces boucles narratives l'image même de l'infini littéraire." }
+      ]
+    },
+    {
+      "id": "course_197_les_mille_et_une_nuits_sheherazade_p4",
+      "title": "Modernité et portée philosophique du récit",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Pourquoi raconter ? Les Nuits répondent : pour tenir la mort à distance. Tant que la voix de Shéhérazade résonne, l'aube fatale est suspendue. La fiction donne forme au chaos." },
+        { "type": "paragraph", "text": "Cette mécanique nourrit encore nos séries : le [[cliffhanger]], cette coupure au bord du précipice, est l'héritière directe de la narratrice. Un livre ouvert sur l'infini, qui refuse de se fermer." },
+        { "type": "takeaway", "text": "**Shéhérazade** survit **1001** nuits grâce aux récits enchâssés : elle invente le suspense comme outil de survie, et transforme la parole en pouvoir politique." }
+      ]
+    }
+  ]
+}

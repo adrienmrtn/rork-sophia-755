@@ -1,0 +1,65 @@
+﻿{
+  "id": "course_198_sindbad_le_marin",
+  "title": "Sindbad le marin",
+  "subtitle": "Sept voyages",
+  "subject": "mythologie",
+  "subcategory": "Autres mythologies",
+  "description": "Sindbad le marin : sept voyages, monstres et trésors. Derrière le merveilleux, le portrait du marchand-aventurier de l'âge d'or islamique.",
+  "hero": {
+    "image": "sindbad_le_marin",
+    "ratio": "16:9",
+    "hook": "Sept fois, il part riche ou curieux. Sept fois, la mer le brise. Sept fois, il revient plus riche encore."
+  },
+  "sections": [
+    {
+      "id": "course_198_sindbad_le_marin_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "**Sindbad le marin** appartient aux **Mille et Une Nuits**, mais pas au vieux noyau perse du recueil. Son cycle de sept voyages s'est fixé plus tard, en Égypte, vers le XVe siècle." },
+        { "type": "paragraph", "text": "Il incarne le voyageur-marchand de l'**âge d'or islamique** : piété, cupidité, courage, et l'incapacité de rester tranquille une fois riche. Derrière les monstres, on lit une allégorie de la fortune qui monte et qui tombe." }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p1",
+      "title": "La structure cyclique de l'aventure",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le récit s'ouvre à Bagdad. **Sindbad le Marin**, désormais âgé et fortuné, raconte ses épreuves à un porteur nommé lui aussi Sindbad (parfois Hindbad). Le contraste de classe est immédiat." },
+        { "type": "image", "asset": "sindbad_le_marin", "ratio": "4:3", "caption": "Bagdad, point de départ et de retour des voyages de Sindbad." },
+        { "type": "paragraph", "text": "Chaque voyage suit la même mécanique : lassitude de la vie sédentaire, départ du port de [[Bassora]], naufrage, survie dans une terre inconnue, retour chargé de trésors. Le chiffre sept, chargé de sens dans la [[cosmologie islamique]], donne à la série une dimension initiatique : de l'imprudence à la sagesse." }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p2",
+      "title": "Un bestiaire fantastique entre mythe et réalité",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le **Roc** (ou Rokh), oiseau dont l'envergure occulte le soleil, a marqué l'imaginaire mondial. On y voit l'écho de récits de voyageurs arabes sur les côtes d'Afrique de l'Est." },
+        { "type": "image", "asset": "sindbad_le_marin", "ratio": "4:3", "caption": "Le Roc, oiseau géant des voyages de Sindbad." },
+        { "type": "funFact", "text": "Le Roc s'inspire probablement de l'**Aepyornis**, oiseau-éléphant de Madagascar disparu vers l'an 1000. Ses œufs faisaient jusqu'à 150 fois le volume d'un œuf de poule." },
+        { "type": "paragraph", "text": "Sindbad affronte aussi le **Vieillard de la mer**, qui s'accroche à son dos, et l'**île-tortue**, sol trompeur. La **vallée des diamants**, où l'on jette de la viande pour coller les gemmes, circule déjà chez les Anciens. Le merveilleux sédimente des siècles de [[routes commerciales arabes médiévales]]." }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p3",
+      "title": "Le miroir de l'Âge d'or du commerce arabe",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le cadre est historique. Aux VIIIe et IXe siècles, les marins de Bassora et de Siraf dominent l'océan Indien. Les escales de Sindbad évoquent des lieux réels : [[Serendib]] (Ceylan) pour les épices, l'Asie du Sud-Est pour le camphre, les côtes pour les perles." },
+        { "type": "image", "asset": "sindbad_le_marin", "ratio": "4:3", "caption": "Navires arabes sur les routes de l'océan Indien." },
+        { "type": "paragraph", "text": "Sindbad n'est pas un guerrier : c'est un marchand-aventurier, statut prestigieux dans une société qui valorise le commerce. On y trouve la mousson, des navires cousus de fibres de coco plutôt que cloués. Parallèle occidental : [[Marco Polo (parallèle occidental)]], qui décrit l'Asie en faits, là où Sindbad la peint en merveilles." }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p4",
+      "title": "L'héritage universel : de l'Orient à l'Occident",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Traduits au XVIIIe siècle par **Antoine Galland**, les voyages nourrissent le [[roman d'aventures]] européen, de Defoe à Jules Verne. Le cinéma en fait souvent un corsaire au service de princesses. Erreur : Sindbad est d'abord un citadin de Bagdad, survivant par la foi et l'ingéniosité." },
+        { "type": "funFact", "text": "Le nom de Sindbad évoquerait le « prince du fleuve Sindh », l'Indus, au carrefour des mondes arabe et indien." },
+        { "type": "takeaway", "text": "**Sindbad** incarne l'âge d'or maritime islamique en **sept** voyages cycliques : le Roc et les diamants masquent une réalité, celle des marchands arabes maîtres de l'océan Indien." }
+      ]
+    }
+  ]
+}

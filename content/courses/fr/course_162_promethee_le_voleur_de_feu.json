@@ -1,0 +1,67 @@
+{
+  "id": "course_162_promethee_le_voleur_de_feu",
+  "title": "Prométhée : le voleur de feu",
+  "subtitle": "Le Titan qui défie Zeus",
+  "subject": "mythologie",
+  "subcategory": "Grèce : les dieux",
+  "description": "Prométhée vole le feu des dieux pour les hommes, puis endure un supplice sans fin. Un mythe sur le progrès, la ruse et le prix de la liberté.",
+  "hero": {
+    "image": "promethee_le_voleur_de_feu",
+    "ratio": "16:9",
+    "hook": "Un Titan vole le feu de l'Olympe. Les hommes gagnent la civilisation. Lui gagne un aigle et une chaîne."
+  },
+  "sections": [
+    {
+      "id": "course_162_promethee_le_voleur_de_feu_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "**Prométhée** est un Titan, un dieu de la génération précédente. Son nom évoque celui qui prévoit. Dans les mythes grecs, il façonne les premiers hommes, les protège face à **Zeus**, roi de l'Olympe, et paie ce choix d'un châtiment atroce." },
+        { "type": "paragraph", "text": "En volant le feu pour les mortels, il donne aux humains la technique et le savoir. Son supplice sur le Caucase devient le symbole du génie qui ose défier le pouvoir." }
+      ]
+    },
+    {
+      "id": "course_162_promethee_le_voleur_de_feu_p1",
+      "title": "L'homme naît nu, Prométhée ruse",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "On raconte que Prométhée modèle les premiers hommes avec de l'argile et de l'eau. Son frère [[Épiméthée]], lui, agit trop vite. Chargé de doter les animaux, il donne tout : griffes, ailes, fourrure, vitesse. Quand vient le tour de l'homme, il ne reste plus rien. L'humain naît fragile et sans défense." },
+        { "type": "paragraph", "text": "Prométhée décide de compenser. Lors d'un sacrifice à [[Mékoné]], il découpe un bœuf en deux parts. Sous une peau laide, il cache la bonne viande. Sous une graisse appétissante, il cache les os. **Zeus** choisit la belle apparence. Depuis, les hommes mangent la chair et offrent les os aux dieux." },
+        { "type": "funFact", "text": "Pour cacher le feu, Prométhée utilise une tige de [[férule]]. Sa moelle brûle très lentement : les bergers méditerranéens s'en servaient vraiment comme briquet portatif." },
+        { "type": "paragraph", "text": "Furieux d'avoir été trompé, Zeus retire aux hommes le feu. Sans chaleur ni lumière, ils retombent dans une vie presque animale." }
+      ]
+    },
+    {
+      "id": "course_162_promethee_le_voleur_de_feu_p2",
+      "title": "Le vol du feu et le supplice",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Prométhée s'introduit sur l'Olympe. Il dérobe une étincelle au char du Soleil, ou à la forge d'**Héphaïstos**, dieu des forgerons, selon les versions. Il la cache dans sa tige creuse et la rapporte aux mortels." },
+        { "type": "image", "asset": "promethee_le_voleur_de_feu", "ratio": "4:3", "caption": "Prométhée apporte le feu aux humains, acte fondateur de la technique." },
+        { "type": "paragraph", "text": "Pour les Grecs, le feu n'est pas seulement une flamme. Il incarne la **technique** et la **raison**, ce qui permet à l'homme de transformer le monde. Zeus riposte. Contre l'humanité, il enverra plus tard Pandore. Contre Prométhée, le châtiment est direct." },
+        { "type": "funFact", "text": "Dans la médecine antique, le **foie** était vu comme le siège des émotions et de la vitalité. Zeus choisit cet organe pour briser la volonté du Titan." },
+        { "type": "paragraph", "text": "Le Titan est enchaîné à une paroi du **Caucase**. Chaque jour, un aigle lui dévore le foie. Chaque nuit, l'organe renaît. Le supplice recommence à l'aube, sans fin." }
+      ]
+    },
+    {
+      "id": "course_162_promethee_le_voleur_de_feu_p3",
+      "title": "Héraclès brise les chaînes",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Pendant des siècles, Prométhée refuse de céder. Il connaît un secret dangereux : quelle femme mettra au monde un fils plus fort que Zeus. Malgré la torture, il se tait. Il devient le symbole de la résistance face à la tyrannie." },
+        { "type": "paragraph", "text": "Le héros **Héraclès**, fils de Zeus, finit par arriver au Caucase. Il abat l'aigle d'une flèche et libère le prisonnier. Zeus accepte la grâce : Prométhée révèle enfin le secret sur la nymphe **Thétis**. Le roi des dieux évite ainsi sa propre chute." },
+        { "type": "paragraph", "text": "Pour respecter le serment qui le liait au rocher, Prométhée porte une bague faite du fer de ses chaînes et d'un fragment de pierre. Il reste « lié » à la montagne, mais libre." }
+      ]
+    },
+    {
+      "id": "course_162_promethee_le_voleur_de_feu_p4",
+      "title": "Un mythe qui ne s'éteint pas",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Au Ve siècle avant notre ère, le tragédien [[Eschyle]] met en scène « Prométhée enchaîné ». Plus tard, le mythe inspire la science et le progrès. Mary Shelley sous-titre « Frankenstein » « Le Prométhée moderne » : créer la vie sans sagesse peut aussi détruire." },
+        { "type": "paragraph", "text": "Le philosophe [[Gaston Bachelard]] parle même d'un « complexe de Prométhée » : cette envie d'en savoir plus que ses maîtres. Aujourd'hui, on compare souvent l'intelligence artificielle ou la génétique à un nouveau feu : un pouvoir immense, encore mal maîtrisé." },
+        { "type": "takeaway", "text": "**Prométhée** offre aux hommes la civilisation par le vol du feu, endure un supplice millénaire, puis est délivré par **Héraclès**. Le progrès a un prix, et le pouvoir divin aussi." }
+      ]
+    }
+  ]
+}
