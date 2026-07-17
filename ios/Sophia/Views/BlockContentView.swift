@@ -16,10 +16,10 @@ struct BlockContentView: View {
 
     @State private var selectedGlossaryEntry: GlossaryEntry?
 
-    private static let ink = Color.black
+    private static let ink = DS.ink
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 22) {
+        VStack(alignment: .leading, spacing: 24) {
             header
 
             ForEach(Array(section.blocks.enumerated()), id: \.offset) { _, block in
@@ -43,7 +43,7 @@ struct BlockContentView: View {
             )
         } else {
             Text(section.title)
-                .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                .font(DS.serif(.largeTitle, .semibold))
                 .foregroundStyle(Self.ink)
                 .fixedSize(horizontal: false, vertical: true)
         }
@@ -54,7 +54,7 @@ struct BlockContentView: View {
         switch block {
         case .heading(let text):
             Text(text)
-                .font(.system(.title2, design: .rounded, weight: .heavy))
+                .font(DS.serif(.title2, .semibold))
                 .foregroundStyle(Self.ink)
                 .fixedSize(horizontal: false, vertical: true)
                 .padding(.top, 4)
@@ -231,9 +231,9 @@ enum InlineAttributedBuilder {
         if GlossaryStore.entry(courseId: courseId, courseTitle: courseTitle, displayTerm: term) != nil,
            let url = GlossaryStore.linkURL(courseId: courseId, courseTitle: courseTitle, displayTerm: term) {
             attributes[glossaryURLKey] = url
-            attributes[.underlineStyle] = NSUnderlineStyle.thick.rawValue
+            attributes[.underlineStyle] = NSUnderlineStyle.single.rawValue
             attributes[.underlineColor] = accent
-            attributes[.foregroundColor] = UIColor.label
+            attributes[.foregroundColor] = DS.uiInk
         }
         result.append(NSAttributedString(string: term, attributes: attributes))
     }
@@ -246,21 +246,16 @@ enum InlineAttributedBuilder {
     ) -> [NSAttributedString.Key: Any] {
         _ = highlight // marker highlight deprecated: markers are stripped, no visual style.
         let attributes: [NSAttributedString.Key: Any] = [
-            .font: roundedFont(bold: bold, italic: italic),
+            .font: proseFont(bold: bold, italic: italic),
             .paragraphStyle: paragraphStyle,
-            .foregroundColor: bold
-                ? UIColor.label
-                : UIColor.label.withAlphaComponent(0.9),
+            .foregroundColor: DS.uiInk,
         ]
         return attributes
     }
 
-    private static func roundedFont(bold: Bool, italic: Bool) -> UIFont {
+    private static func proseFont(bold: Bool, italic: Bool) -> UIFont {
         let base = UIFont.preferredFont(forTextStyle: .body)
         var descriptor = base.fontDescriptor
-        if let rounded = descriptor.withDesign(.rounded) {
-            descriptor = rounded
-        }
         var traits: UIFontDescriptor.SymbolicTraits = []
         if bold { traits.insert(.traitBold) }
         if italic { traits.insert(.traitItalic) }
@@ -385,7 +380,7 @@ private struct HeroBlockView: View {
     let subtitle: String?
     let accent: Color
 
-    private let ink = Color.black
+    private let ink = DS.ink
 
     private var ratio: CGFloat {
         AspectRatioSpec.value(from: hero.ratio) ?? (16.0 / 9.0)
@@ -420,41 +415,37 @@ private struct HeroBlockView: View {
                 }
             }
             .frame(maxWidth: .infinity)
-            .clipShape(.rect(cornerRadius: 22))
+            .clipShape(.rect(cornerRadius: DS.Radius.card))
             .overlay {
-                RoundedRectangle(cornerRadius: 22)
-                    .strokeBorder(ink, lineWidth: 3)
+                RoundedRectangle(cornerRadius: DS.Radius.card)
+                    .strokeBorder(DS.hairline, lineWidth: 1)
             }
 
             if let creditText, !creditText.isEmpty {
                 Text(creditText)
-                    .font(.system(.caption2, design: .rounded))
-                    .foregroundStyle(ink.opacity(0.4))
+                    .font(DS.sans(.caption2))
+                    .foregroundStyle(DS.inkTertiary)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.horizontal, 4)
             }
 
-            VStack(alignment: .leading, spacing: 8) {
+            VStack(alignment: .leading, spacing: 10) {
                 if let subtitle, !subtitle.isEmpty {
                     Text(subtitle.uppercased())
-                        .font(.system(.caption, design: .rounded, weight: .heavy))
-                        .foregroundStyle(ink)
-                        .tracking(0.8)
-                        .padding(.horizontal, 12)
-                        .padding(.vertical, 6)
-                        .background(accent, in: Capsule())
-                        .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
+                        .font(DS.sans(.caption, .semibold))
+                        .foregroundStyle(DS.accentSoft)
+                        .tracking(1.2)
                 }
 
                 Text(title)
-                    .font(.system(.largeTitle, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink)
+                    .font(DS.serif(.largeTitle, .semibold))
+                    .foregroundStyle(DS.ink)
                     .fixedSize(horizontal: false, vertical: true)
 
                 if let hook = hero.hook, !hook.isEmpty {
                     Text(hook)
-                        .font(.system(.title3, design: .rounded, weight: .semibold))
-                        .foregroundStyle(ink.opacity(0.7))
+                        .font(DS.serif(.title3, .regular))
+                        .foregroundStyle(DS.inkSecondary)
                         .fixedSize(horizontal: false, vertical: true)
                 }
             }
@@ -470,7 +461,7 @@ struct AspectImageView: View {
 
     @State private var fullscreenItem: FullscreenCourseImage?
 
-    private let ink = Color.black
+    private let ink = DS.ink
 
     private var slug: String { CourseInlineImage.slug(block.asset) }
     private var image: UIImage? { CourseInlineImage.loadImage(named: slug) }
@@ -509,24 +500,24 @@ struct AspectImageView: View {
                 }
             }
             .frame(maxWidth: .infinity)
-            .clipShape(.rect(cornerRadius: 18))
+            .clipShape(.rect(cornerRadius: DS.Radius.control))
             .overlay {
-                RoundedRectangle(cornerRadius: 18)
-                    .strokeBorder(ink, lineWidth: 2.5)
+                RoundedRectangle(cornerRadius: DS.Radius.control)
+                    .strokeBorder(DS.hairline, lineWidth: 1)
             }
 
             if let caption = block.caption, !caption.isEmpty {
                 Text(caption)
-                    .font(.system(.footnote, design: .rounded, weight: .semibold))
-                    .foregroundStyle(ink.opacity(0.7))
+                    .font(DS.sans(.footnote))
+                    .foregroundStyle(DS.inkSecondary)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.horizontal, 4)
             }
 
             if let creditText, !creditText.isEmpty {
                 Text(creditText)
-                    .font(.system(.caption2, design: .rounded))
-                    .foregroundStyle(ink.opacity(0.4))
+                    .font(DS.sans(.caption2))
+                    .foregroundStyle(DS.inkTertiary)
                     .lineSpacing(2)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.horizontal, 4)
@@ -550,14 +541,14 @@ private struct ImagePlaceholder: View {
 
     var body: some View {
         ZStack {
-            Color.white
+            DS.surfaceMuted
             VStack(spacing: 8) {
                 Image(systemName: "photo")
                     .font(.title2)
-                    .foregroundStyle(.black.opacity(0.4))
+                    .foregroundStyle(DS.inkTertiary)
                 Text(label)
-                    .font(.system(.caption, design: .rounded, weight: .semibold))
-                    .foregroundStyle(.black.opacity(0.55))
+                    .font(DS.sans(.caption, .medium))
+                    .foregroundStyle(DS.inkSecondary)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 12)
             }
@@ -572,7 +563,7 @@ struct TimelineBlockView: View {
     let events: [TimelineEventV2]
     let accent: Color
 
-    private let ink = Color.black
+    private let ink = DS.ink
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -580,46 +571,46 @@ struct TimelineBlockView: View {
                 HStack(alignment: .top, spacing: 14) {
                     VStack(spacing: 0) {
                         Circle()
-                            .fill(accent)
-                            .frame(width: 16, height: 16)
-                            .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
+                            .fill(DS.accentSoft)
+                            .frame(width: 10, height: 10)
+                            .padding(.top, 5)
                         if index < events.count - 1 {
                             Rectangle()
-                                .fill(ink.opacity(0.25))
-                                .frame(width: 3)
+                                .fill(DS.hairline)
+                                .frame(width: 1.5)
                                 .frame(maxHeight: .infinity)
                         }
                     }
-                    .frame(width: 16)
+                    .frame(width: 10)
 
                     VStack(alignment: .leading, spacing: 4) {
                         Text(event.date)
-                            .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                            .foregroundStyle(ink)
-                            .padding(.horizontal, 10)
-                            .padding(.vertical, 4)
-                            .background(accent.opacity(0.30), in: Capsule())
+                            .font(DS.sans(.subheadline, .semibold))
+                            .foregroundStyle(DS.accentSoft)
                         Text(event.title)
-                            .font(.system(.body, design: .rounded, weight: .bold))
-                            .foregroundStyle(ink)
+                            .font(DS.sans(.body, .semibold))
+                            .foregroundStyle(DS.ink)
                             .fixedSize(horizontal: false, vertical: true)
                         if let detail = event.detail, !detail.isEmpty {
                             Text(detail)
-                                .font(.system(.subheadline, design: .rounded))
-                                .foregroundStyle(ink.opacity(0.7))
+                                .font(DS.sans(.subheadline))
+                                .foregroundStyle(DS.inkSecondary)
                                 .fixedSize(horizontal: false, vertical: true)
                         }
                     }
-                    .padding(.bottom, index < events.count - 1 ? 18 : 0)
+                    .padding(.bottom, index < events.count - 1 ? 20 : 0)
                 }
             }
         }
-        .padding(18)
+        .padding(DS.Space.l)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background {
-            RoundedRectangle(cornerRadius: 22)
-                .fill(Color.white)
-                .overlay { RoundedRectangle(cornerRadius: 22).strokeBorder(ink, lineWidth: 3) }
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .fill(DS.surface)
+                .overlay {
+                    RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                        .strokeBorder(DS.hairline, lineWidth: 1)
+                }
         }
     }
 }
@@ -631,32 +622,28 @@ struct QuoteBlockView: View {
     let attribution: String?
     let accent: Color
 
-    private let ink = Color.black
+    private let ink = DS.ink
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("\u{201C}")
-                .font(.system(size: 44, weight: .black, design: .serif))
-                .foregroundStyle(accent)
-                .frame(height: 24, alignment: .top)
             Text(text)
-                .font(.system(.title3, design: .rounded, weight: .semibold))
+                .font(DS.serif(.title3, .regular))
                 .italic()
-                .foregroundStyle(ink)
+                .foregroundStyle(DS.ink)
                 .fixedSize(horizontal: false, vertical: true)
             if let attribution, !attribution.isEmpty {
                 Text(attribution.uppercased())
-                    .font(.system(.caption, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink.opacity(0.55))
-                    .tracking(0.6)
+                    .font(DS.sans(.caption, .semibold))
+                    .foregroundStyle(DS.inkTertiary)
+                    .tracking(1.0)
             }
         }
         .padding(.leading, 18)
         .frame(maxWidth: .infinity, alignment: .leading)
         .overlay(alignment: .leading) {
-            RoundedRectangle(cornerRadius: 3)
-                .fill(accent)
-                .frame(width: 5)
+            RoundedRectangle(cornerRadius: 2)
+                .fill(DS.accentSoft)
+                .frame(width: 3)
         }
     }
 }
@@ -674,7 +661,7 @@ struct FunFactCardV2: View {
 
     @State private var revealed = false
 
-    private let ink = Color.black
+    private let ink = DS.ink
 
     private var title: String {
         AppLocalizable.string("course.funFact", language: AppLanguage.currentPersisted())
@@ -701,30 +688,29 @@ struct FunFactCardV2: View {
             } label: {
                 HStack(spacing: 12) {
                     ZStack {
-                        Circle().fill(accent)
-                        Image(systemName: "lightbulb.fill")
-                            .font(.system(size: 15, weight: .bold))
-                            .foregroundStyle(ink)
+                        Circle().fill(DS.accentTint)
+                        Image(systemName: "lightbulb")
+                            .font(.system(size: 15, weight: .medium))
+                            .foregroundStyle(DS.accentSoft)
                     }
                     .frame(width: 36, height: 36)
-                    .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
 
                     VStack(alignment: .leading, spacing: 1) {
                         Text(title)
-                            .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                            .foregroundStyle(ink)
+                            .font(DS.sans(.subheadline, .semibold))
+                            .foregroundStyle(DS.ink)
                         if !revealed {
                             Text(hint)
-                                .font(.system(.caption2, design: .rounded, weight: .semibold))
-                                .foregroundStyle(ink.opacity(0.45))
+                                .font(DS.sans(.caption2))
+                                .foregroundStyle(DS.inkTertiary)
                         }
                     }
 
                     Spacer(minLength: 8)
 
                     Image(systemName: "chevron.down")
-                        .font(.system(size: 14, weight: .heavy))
-                        .foregroundStyle(ink.opacity(0.6))
+                        .font(.system(size: 13, weight: .semibold))
+                        .foregroundStyle(DS.inkTertiary)
                         .rotationEffect(.degrees(revealed ? 180 : 0))
                 }
                 .contentShape(Rectangle())
@@ -747,22 +733,17 @@ struct FunFactCardV2: View {
                 .transition(.opacity)
             }
         }
-        .padding(18)
+        .padding(DS.Space.l)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background {
-            ZStack {
-                RoundedRectangle(cornerRadius: 22)
-                    .fill(.black)
-                    .offset(y: 4)
-                RoundedRectangle(cornerRadius: 22)
-                    .fill(Color.white)
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 22)
-                            .strokeBorder(.black, lineWidth: 3)
-                    }
-            }
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .fill(DS.surface)
+                .overlay {
+                    RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                        .strokeBorder(DS.hairline, lineWidth: 1)
+                }
         }
-        .padding(.bottom, 4)
+        .dsSoftShadow()
     }
 }
 
@@ -774,14 +755,10 @@ struct TakeawayCardV2: View {
     let accent: Color
     let onGlossaryTap: (GlossaryEntry) -> Void
 
-    private let pink = Color(red: 1.0, green: 0.553, blue: 0.706)
-
     var body: some View {
-        BrutalCallout(
-            badgeIcon: "bookmark.fill",
-            badgeEmoji: nil,
-            badgeText: AppLocalizable.string("course.keyTakeaway", language: AppLanguage.currentPersisted()),
-            badgeColor: pink
+        CalloutCard(
+            badgeIcon: "bookmark",
+            badgeText: AppLocalizable.string("course.keyTakeaway", language: AppLanguage.currentPersisted())
         ) {
             ProseTextView(
                 attributed: InlineAttributedBuilder.build(
@@ -799,61 +776,39 @@ struct TakeawayCardV2: View {
     }
 }
 
-/// Shared neobrutalist callout container with a floating pill badge.
-private struct BrutalCallout<Content: View>: View {
+/// Shared calm callout container: a quiet header row (icon + label) above the content,
+/// wrapped in a soft surface card.
+private struct CalloutCard<Content: View>: View {
     let badgeIcon: String?
-    let badgeEmoji: String?
     let badgeText: String
-    let badgeColor: Color
     @ViewBuilder let content: () -> Content
 
-    private let ink = Color.black
-
     var body: some View {
-        ZStack(alignment: .topLeading) {
-            content()
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.horizontal, 20)
-                .padding(.top, 36)
-                .padding(.bottom, 22)
-                .background {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 22)
-                            .fill(.black)
-                            .offset(y: 4)
-                        RoundedRectangle(cornerRadius: 22)
-                            .fill(Color.white)
-                            .overlay {
-                                RoundedRectangle(cornerRadius: 22)
-                                    .strokeBorder(.black, lineWidth: 3)
-                            }
-                    }
-                }
-                .padding(.top, 18)
-                .padding(.bottom, 4)
-
-            HStack(spacing: 6) {
-                if let badgeEmoji {
-                    Text(badgeEmoji).font(.system(size: 14))
-                }
+        VStack(alignment: .leading, spacing: 12) {
+            HStack(spacing: 8) {
                 if let badgeIcon {
                     Image(systemName: badgeIcon)
-                        .font(.system(size: 12, weight: .bold))
-                        .foregroundStyle(ink)
+                        .font(.system(size: 12, weight: .semibold))
+                        .foregroundStyle(DS.accentSoft)
                 }
-                Text(badgeText)
-                    .font(.system(.caption2, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink)
-                    .tracking(0.8)
+                Text(badgeText.uppercased())
+                    .font(DS.sans(.caption2, .semibold))
+                    .foregroundStyle(DS.accentSoft)
+                    .tracking(1.2)
             }
-            .padding(.horizontal, 12)
-            .padding(.vertical, 8)
-            .background {
-                Capsule()
-                    .fill(badgeColor)
-                    .overlay { Capsule().strokeBorder(.black, lineWidth: 2.5) }
-            }
-            .padding(.leading, 16)
+
+            content()
+                .frame(maxWidth: .infinity, alignment: .leading)
+        }
+        .padding(DS.Space.l)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background {
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .fill(DS.surfaceMuted)
+                .overlay {
+                    RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                        .strokeBorder(DS.hairline, lineWidth: 1)
+                }
         }
     }
 }

@@ -14,8 +14,6 @@ struct CourseView: View {
     @State private var currentIndex: Int = 0
     @State private var showQuiz: Bool = false
     @State private var appeared: Bool = false
-    @State private var quizButtonPulse: Bool = false
-    @State private var quizButtonShimmer: CGFloat = -200
     @State private var showDebloquerPaywall: Bool = false
     @State private var showQuizPaywall: Bool = false
     @State private var endPhase: CourseEndPhase = .none
@@ -45,9 +43,7 @@ struct CourseView: View {
         Double(currentIndex + 1) / Double(course.lessons.count)
     }
 
-    private let cream = Color(red: 0.984, green: 0.961, blue: 0.918)
-    private let ink = Color.black
-    private let pink = Color(red: 1.0, green: 0.553, blue: 0.706)
+    private let cream = DS.canvas
 
     /// Anchor id used to snap each lesson page back to the top on arrival.
     private static let lessonTopID = "lessonTopAnchor"
@@ -169,18 +165,19 @@ struct CourseView: View {
                 dismiss()
             } label: {
                 Image(systemName: "xmark")
-                    .font(.system(size: 16, weight: .bold))
-                    .foregroundStyle(ink)
+                    .font(.system(size: 15, weight: .medium))
+                    .foregroundStyle(DS.inkSecondary)
                     .frame(width: 40, height: 40)
-                    .background(Color.white, in: Circle())
-                    .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
+                    .background(DS.surface, in: Circle())
+                    .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
             }
 
             progressBar
 
             Text("\(currentIndex + 1) / \(course.lessons.count)")
-                .font(.system(.subheadline, design: .rounded, weight: .bold))
-                .foregroundStyle(ink)
+                .font(DS.sans(.subheadline, .medium))
+                .foregroundStyle(DS.inkSecondary)
+                .monospacedDigit()
         }
         .padding(.horizontal, 20)
         .padding(.top, 12)
@@ -191,16 +188,14 @@ struct CourseView: View {
         GeometryReader { geo in
             ZStack(alignment: .leading) {
                 Capsule()
-                    .fill(Color.white)
-                    .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
+                    .fill(DS.hairline)
                 Capsule()
-                    .fill(pink)
-                    .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
-                    .frame(width: max(20, geo.size.width * progressValue))
+                    .fill(DS.accent)
+                    .frame(width: max(8, geo.size.width * progressValue))
                     .animation(.spring(response: 0.4), value: progressValue)
             }
         }
-        .frame(height: 18)
+        .frame(height: 6)
     }
 
     @ViewBuilder
@@ -221,20 +216,20 @@ struct CourseView: View {
                 content: resolved.content,
                 section: resolved.section,
                 isFirst: resolved.isFirst,
-                accent: course.subject.color,
+                accent: DS.accentSoft,
                 courseId: course.id,
                 courseTitle: course.title
             )
         } else {
             VStack(alignment: .leading, spacing: 24) {
                 Text(lesson.title)
-                    .font(.system(.largeTitle, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink)
+                    .font(DS.serif(.largeTitle, .semibold))
+                    .foregroundStyle(DS.ink)
                     .fixedSize(horizontal: false, vertical: true)
 
                 RichContentView(
                     content: lesson.content,
-                    accent: course.subject.color,
+                    accent: DS.accentSoft,
                     courseId: course.id,
                     courseTitle: course.title
                 )
@@ -355,66 +350,24 @@ struct CourseView: View {
         } label: {
             HStack(spacing: 8) {
                 if showsUnlockInsteadOfComplete {
-                    Image(systemName: "sparkles")
-                        .font(.subheadline.weight(.semibold))
                     Text(languageManager.text("course.quiz.access"))
-                        .font(.system(.headline, design: .rounded, weight: .bold))
+                    Image(systemName: "arrow.right")
+                        .font(.subheadline.weight(.semibold))
                 } else {
                     Text(isLastLesson ? "Terminer le cours" : "Continuer")
-                        .font(.system(.headline, design: .rounded, weight: .bold))
-                    Image(systemName: isLastLesson ? "checkmark.circle.fill" : "arrow.right")
+                    Image(systemName: isLastLesson ? "checkmark" : "arrow.right")
                         .font(.subheadline.weight(.semibold))
                 }
             }
-            .foregroundStyle(ink)
-            .frame(maxWidth: .infinity)
-            .padding(.vertical, 20)
         }
-        .buttonStyle(
-            DuolingoButtonStyle(
-                fill: showsUnlockInsteadOfComplete ? Color(red: 0.11, green: 0.85, blue: 0.53) : pink,
-                shimmer: shouldShimmerBottomButton ? quizButtonShimmer : nil
-            )
-        )
-        .scaleEffect(shouldPulseBottomButton && quizButtonPulse ? 1.04 : 1.0)
+        .buttonStyle(DSPrimaryButtonStyle())
         .padding(.horizontal, 24)
         .padding(.bottom, 24)
-        .onChange(of: isLastLesson) { _, newValue in
-            if newValue && shouldPulseBottomButton {
-                startQuizButtonAnimations()
-            }
-        }
-        .onAppear {
-            if shouldPulseBottomButton {
-                startQuizButtonAnimations()
-            }
-        }
-    }
-
-    private var shouldShimmerBottomButton: Bool {
-        showsUnlockInsteadOfComplete || (isLastLesson && course.hasQuiz && isPremium)
-    }
-
-    private var shouldPulseBottomButton: Bool {
-        shouldShimmerBottomButton
     }
 
     private func presentDebloquerPaywall() {
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
         showDebloquerPaywall = true
-    }
-
-    private func startQuizButtonAnimations() {
-        withAnimation(.easeInOut(duration: 1.0).repeatForever(autoreverses: true)) {
-            quizButtonPulse = true
-        }
-        shimmerLoop()
-    }
-
-    private func shimmerLoop() {
-        ShimmerAnimation.runLoop(offset: $quizButtonShimmer) {
-            shouldShimmerBottomButton
-        }
     }
 
     /// Third lesson (index 2) of the first course ever opened — once per install.

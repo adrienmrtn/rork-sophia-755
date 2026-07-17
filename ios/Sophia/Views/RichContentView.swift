@@ -15,8 +15,8 @@ struct RichContentView: View {
 
     @State private var selectedGlossaryEntry: GlossaryEntry?
 
-    static let ink = Color.black
-    fileprivate static let bodyFont = Font.system(.body, design: .rounded)
+    static let ink = DS.ink
+    fileprivate static let bodyFont = DS.sans(.body)
 
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
@@ -274,7 +274,7 @@ private struct CourseInlineText: View {
                                     Text(verbatim: text)
                                         .font(RichContentView.bodyFont)
                                         .fontWeight(bold ? .semibold : .regular)
-                                        .foregroundStyle(RichContentView.ink.opacity(bold ? 1.0 : 0.9))
+                                        .foregroundStyle(DS.ink)
                                         .flowProseToken()
                                 case .glossary(let term, let bold, let entry, let forceWrap):
                                     ShinyGlossaryPill(term: term, bold: bold, pastel: entry.classification.pastel) {
@@ -517,33 +517,19 @@ private struct ShinyGlossaryPill: View {
             Text(term)
                 .font(RichContentView.bodyFont)
                 .fontWeight(bold ? .semibold : .medium)
-                .foregroundStyle(RichContentView.ink)
+                .foregroundStyle(DS.ink)
                 .padding(.horizontal, 8)
                 .padding(.top, 1)
                 .padding(.bottom, 2)
                 .background {
                     Capsule(style: .continuous)
-                        .fill(
-                            LinearGradient(
-                                colors: [pastel.opacity(0.98), pastel.opacity(0.72)],
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
-                            )
-                        )
-                        .overlay {
-                            Capsule(style: .continuous)
-                                .strokeBorder(pastel.opacity(0.95), lineWidth: 1)
-                        }
-                        .overlay {
-                            Capsule(style: .continuous)
-                                .fill(
-                                    LinearGradient(
-                                        colors: [.white.opacity(0.55), .white.opacity(0.05), .clear],
-                                        startPoint: .topLeading,
-                                        endPoint: .bottomTrailing
-                                    )
-                                )
-                        }
+                        .fill(DS.accentTint)
+                }
+                .overlay(alignment: .bottom) {
+                    Capsule(style: .continuous)
+                        .fill(DS.accentSoft)
+                        .frame(height: 1.5)
+                        .padding(.horizontal, 6)
                 }
         }
         .buttonStyle(.plain)
@@ -677,16 +663,16 @@ struct CourseInlineImage: View {
                         .frame(height: 200)
                 }
             }
-            .clipShape(.rect(cornerRadius: 18))
+            .clipShape(.rect(cornerRadius: DS.Radius.control))
             .overlay {
-                RoundedRectangle(cornerRadius: 18)
-                    .strokeBorder(.black, lineWidth: 2.5)
+                RoundedRectangle(cornerRadius: DS.Radius.control)
+                    .strokeBorder(DS.hairline, lineWidth: 1)
             }
 
             if let credit, !credit.formatted.isEmpty {
                 Text(credit.formatted)
-                    .font(.system(.caption2, design: .rounded))
-                    .foregroundStyle(.black.opacity(0.4))
+                    .font(DS.sans(.caption2))
+                    .foregroundStyle(DS.inkTertiary)
                     .lineSpacing(2)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.horizontal, 4)
@@ -700,14 +686,14 @@ struct CourseInlineImage: View {
 
     private var placeholder: some View {
         ZStack {
-            Color.white
+            DS.surfaceMuted
             VStack(spacing: 8) {
                 Image(systemName: "photo")
                     .font(.title2)
-                    .foregroundStyle(.black.opacity(0.4))
+                    .foregroundStyle(DS.inkTertiary)
                 Text(rawName)
-                    .font(.system(.caption, design: .rounded, weight: .semibold))
-                    .foregroundStyle(.black.opacity(0.55))
+                    .font(DS.sans(.caption, .medium))
+                    .foregroundStyle(DS.inkSecondary)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 12)
             }
@@ -750,107 +736,71 @@ struct CourseInlineImage: View {
     }
 }
 
-/// "Le saviez-vous ?" card — neobrutalism style with cyan pill badge.
+/// "Le saviez-vous ?" card — calm surface card with a quiet header row.
 struct FunFactBox: View {
     let text: String
 
-    private let mint = Color(red: 0.553, green: 0.953, blue: 0.953)
-
     var body: some View {
-        ZStack(alignment: .topLeading) {
-            SimpleBoldText(raw: text, font: .system(.body, design: .rounded), italic: true)
+        LegacyCalloutCard(
+            icon: "lightbulb",
+            title: AppLocalizable.string("course.funFact", language: AppLanguage.currentPersisted())
+        ) {
+            SimpleBoldText(raw: text, font: DS.sans(.body), italic: true)
                 .lineSpacing(4)
                 .multilineTextAlignment(.leading)
                 .fixedSize(horizontal: false, vertical: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.horizontal, 20)
-                .padding(.top, 36)
-                .padding(.bottom, 22)
-                .background {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 22)
-                            .fill(.black)
-                            .offset(y: 4)
-                        RoundedRectangle(cornerRadius: 22)
-                            .fill(Color.white)
-                            .overlay {
-                                RoundedRectangle(cornerRadius: 22)
-                                    .strokeBorder(.black, lineWidth: 3)
-                            }
-                    }
-                }
-                .padding(.top, 18)
-                .padding(.bottom, 4)
-
-            HStack(spacing: 6) {
-                Text("🧠").font(.system(size: 14))
-                Text(AppLocalizable.string("course.funFact", language: AppLanguage.currentPersisted()))
-                    .font(.system(.caption2, design: .rounded, weight: .heavy))
-                    .foregroundStyle(.black)
-                    .tracking(0.8)
-            }
-            .padding(.horizontal, 12)
-            .padding(.vertical, 8)
-            .background {
-                Capsule()
-                    .fill(mint)
-                    .overlay { Capsule().strokeBorder(.black, lineWidth: 2.5) }
-            }
-            .padding(.leading, 16)
         }
     }
 }
 
-/// "À retenir" key takeaway card — neobrutalism style with pink badge.
+/// "À retenir" key takeaway card — calm surface card with a quiet header row.
 struct HighlightBox: View {
     let text: String
     let accent: Color
 
-    private let pink = Color(red: 1.0, green: 0.553, blue: 0.706)
-
     var body: some View {
-        ZStack(alignment: .topLeading) {
-            SimpleBoldText(raw: text, font: .system(.body, design: .rounded), baseWeight: .semibold)
+        LegacyCalloutCard(
+            icon: "bookmark",
+            title: AppLocalizable.string("course.keyTakeaway", language: AppLanguage.currentPersisted())
+        ) {
+            SimpleBoldText(raw: text, font: DS.sans(.body), baseWeight: .semibold)
                 .lineSpacing(4)
                 .multilineTextAlignment(.leading)
                 .fixedSize(horizontal: false, vertical: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.horizontal, 20)
-                .padding(.top, 36)
-                .padding(.bottom, 22)
-                .background {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 22)
-                            .fill(.black)
-                            .offset(y: 4)
-                        RoundedRectangle(cornerRadius: 22)
-                            .fill(Color.white)
-                            .overlay {
-                                RoundedRectangle(cornerRadius: 22)
-                                    .strokeBorder(.black, lineWidth: 3)
-                            }
-                    }
-                }
-                .padding(.top, 18)
-                .padding(.bottom, 4)
+        }
+    }
+}
 
-            HStack(spacing: 6) {
-                Image(systemName: "bookmark.fill")
-                    .font(.system(size: 12, weight: .bold))
-                    .foregroundStyle(.black)
-                Text(AppLocalizable.string("course.keyTakeaway", language: AppLanguage.currentPersisted()))
-                    .font(.system(.caption2, design: .rounded, weight: .heavy))
-                    .foregroundStyle(.black)
-                    .tracking(0.8)
+/// Calm callout container shared by the legacy fun-fact / takeaway boxes.
+private struct LegacyCalloutCard<Content: View>: View {
+    let icon: String
+    let title: String
+    @ViewBuilder let content: () -> Content
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack(spacing: 8) {
+                Image(systemName: icon)
+                    .font(.system(size: 12, weight: .semibold))
+                    .foregroundStyle(DS.accentSoft)
+                Text(title.uppercased())
+                    .font(DS.sans(.caption2, .semibold))
+                    .foregroundStyle(DS.accentSoft)
+                    .tracking(1.2)
             }
-            .padding(.horizontal, 12)
-            .padding(.vertical, 8)
-            .background {
-                Capsule()
-                    .fill(pink)
-                    .overlay { Capsule().strokeBorder(.black, lineWidth: 2.5) }
-            }
-            .padding(.leading, 16)
+            content()
+        }
+        .padding(DS.Space.l)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background {
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .fill(DS.surfaceMuted)
+                .overlay {
+                    RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                        .strokeBorder(DS.hairline, lineWidth: 1)
+                }
         }
     }
 }
@@ -885,6 +835,6 @@ private struct SimpleBoldText: View {
         Text(verbatim: run.content)
             .fontWeight(run.bold ? .semibold : baseWeight)
             .italic(italic)
-            .foregroundColor(RichContentView.ink.opacity(run.bold ? 1.0 : 0.9))
+            .foregroundColor(DS.ink)
     }
 }
