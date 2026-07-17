@@ -13,7 +13,12 @@ Objectif : des cours **courts, vivants, séduisants**, à l'opposé du texte « 
 - **Concision.** ~400 à 700 mots par cours (contre ~1000-1500 aujourd'hui). Phrases courtes. Zéro remplissage.
 - **1 idée = 1 écran.** Chaque section porte une seule idée claire, titrée.
 - **Concret et incarné.** Anecdotes, personnages, chiffres marquants, dates clés. On raconte, on n'énumère pas.
-- **Accessible sans être simpliste.** Le contenu reste sérieux et de même longueur, mais se comprend facilement : on limite le jargon et les mots savants « hors contexte ». Quand un terme technique est nécessaire, il est soit expliqué en clair juste après, soit transformé en terme de glossaire cliquable `[[Terme]]`. On préfère la phrase simple à la tournure alambiquée.
+- **Clair avant tout.** Le lecteur ne doit jamais se sentir perdu. Règles dures :
+  - **Pas de nom / lieu / concept sorti de nulle part.** Avant de nommer quelqu'un ou quelque chose, on dit qui c'est / où c'est / pourquoi ça compte (ex. : « l'empereur de Byzance, Alexis », pas juste « Alexis Ier Comnène » ; « la capitale de l'Empire romain d'Orient, Constantinople », pas juste « Byzance » sans contexte).
+  - **Pas de mot savant sans sens immédiat.** Si un mot n'aide pas à comprendre, on le retire. S'il est utile, on l'explique en une courte clause juste après, ou on le met en `[[Terme]]` glossaire. Interdits en prose « nue » : jargon académique (primauté, paradigme, systémique, féodalité brute, etc.) sans explication.
+  - **Une idée par phrase.** Phrases courtes. On raconte une histoire, on n'écrit pas un manuel.
+  - **Le titre de section doit être compréhensible seul** (pas « Mantzikert, le déclencheur » si le lecteur ne connaît pas Mantzikert).
+  - **Préférer le français courant** aux formules « très IA » (fulgurant, redoutable, onde de choc, chef-d'œuvre de…).
 - **Rythme visuel.** Toujours au moins une image par cours ; idéalement une image ou un élément visuel (frise, citation) tous les 1-2 écrans.
 - **Ton.** Direct, curieux, un brin complice. On tutoie l'intérêt du lecteur sans être infantilisant.
 - **Ponctuation.** **Pas de tirets cadratins (`—`)** dans le texte. On utilise des virgules, des deux-points, des parenthèses ou on refait la phrase.
@@ -172,6 +177,9 @@ Un fichier JSON par cours : `content/courses/fr/<course_id>.json`.
 - **Terme de glossaire** : couleur du texte = encre normale (**plus de bleu**), seul le soulignement est coloré ; **plus de décalage du mot au tap** (attribut custom au lieu de `.link`).
 - **« Le saviez-vous ? »** : le contenu apparaît **en fondu sur place**, sans glissement depuis le haut.
 - **Navigation** : « Continuer » amène en **haut** de l'écran suivant, en **swipe** ; correction du **saut sans animation** entre l'avant-dernier et le dernier écran.
+
+### Itération 4 (clarté)
+- Les 40 cours d'histoire sont **réécrits pour la clarté** : plus de noms sortis de nulle part, plus de jargon sans explication, phrases plus simples et agréables à lire, contexte toujours planté avant les détails.
 
 ### Itération 3 (retours)
 - **Tap glossaire** : plus aucun **décalage du paragraphe** au tap (on ne réécrit plus l'`attributedText` de l'`UITextView` quand le contenu n'a pas changé, ce qui évitait un re-calcul de hauteur au moment de l'ouverture de la fiche).

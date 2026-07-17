@@ -16,17 +16,17 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "Au cœur du Mexique actuel, les Aztèques bâtissent en moins de deux siècles une capitale lacustre de **200 000 habitants**. Plus grande que Londres ou Rome à la même époque. Leur puissance mêle génie hydraulique, religion exigeante et guerre permanente." },
-        { "type": "paragraph", "text": "Entre **1519** et **1521**, cet empire s'effondre. Non seulement sous les canons de Cortés, mais sous la haine de ses sujets et sous une arme invisible : la maladie." }
+        { "type": "paragraph", "text": "Au cœur du Mexique actuel, les Aztèques bâtissent en moins de deux siècles une capitale sur un lac, peuplée de **200 000 habitants**. Plus grande que Londres ou Rome à la même époque. Leur puissance mêle génie hydraulique, religion exigeante et guerre permanente." },
+        { "type": "paragraph", "text": "Entre **1519** et **1521**, cet empire s'effondre. Non seulement sous les canons de Cortés, le conquistador espagnol, mais sous la haine de ses sujets et sous une arme invisible : la maladie." }
       ]
     },
     {
       "id": "course_9_l_empire_azteque_p1",
-      "title": "Des marais à Tenochtitlán",
+      "title": "Des marais à une capitale sur l'eau",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Les **Mexica**, venus du mythique [[Aztlán]], arrivent au XIIIe siècle dans la vallée de Mexico. Méprisés, ils cherchent un signe de leur dieu [[Huitzilopochtli]] : un aigle dévorant un serpent sur un cactus. En **1325**, ils le trouvent sur un îlot du lac **Texcoco**. Naît [[Tenochtitlán]]." },
-        { "type": "paragraph", "text": "Pour nourrir la ville, ils perfectionnent les [[Les chinampas]], îles artificielles ultra-fertiles. Trois chaussées, des digues, des canaux : la cité devient une forteresse lacustre et un marché géant." },
+        { "type": "paragraph", "text": "Les **Mexica**, le peuple qu'on appellera Aztèques, viennent du mythique [[Aztlán]], un lieu d'origine au nord. Ils arrivent au XIIIe siècle dans la vallée de Mexico. Méprisés, ils cherchent un signe de leur dieu [[Huitzilopochtli]], dieu du soleil et de la guerre : un aigle dévorant un serpent sur un cactus. En **1325**, ils le trouvent sur un îlot du lac **Texcoco**. Naît [[Tenochtitlán]], leur future capitale." },
+        { "type": "paragraph", "text": "Pour nourrir la ville, ils perfectionnent les [[Les chinampas]], îles artificielles ultra-fertiles faites de boue et de végétaux. Trois chaussées, des digues, des canaux : la cité devient une forteresse lacustre et un marché géant." },
         { "type": "funFact", "text": "Les Aztèques n'utilisaient pas la roue pour le transport et n'avaient aucune bête de somme. Ils ont pourtant déplacé des millions de tonnes de pierre pour leurs pyramides." }
       ]
     },
@@ -35,7 +35,7 @@
       "title": "La Triple Alliance et le tribut",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "En **1428**, Tenochtitlán s'allie à Texcoco et Tlacopan : la **Triple Alliance**. Bientôt, les Mexica dominent seuls. Leur empire n'assimile pas : il exige un **tribut** régulier, maïs, cacao, plumes, métaux. La richesse de la capitale nourrit la haine des peuples soumis, comme les [[Tlaxcaltèques]]." },
+        { "type": "paragraph", "text": "En **1428**, Tenochtitlán s'allie à deux cités voisines, Texcoco et Tlacopan : la **Triple Alliance**. Bientôt, les Mexica dominent seuls. Leur empire n'assimile pas : il exige un **tribut** régulier, maïs, cacao, plumes, métaux. La richesse de la capitale nourrit la haine des peuples soumis, comme les [[Tlaxcaltèques]], farouches ennemis des Aztèques." },
         { "type": "image", "asset": "tenochtitlan_aztec_city_illustration", "ratio": "4:3", "caption": "Tenochtitlán, métropole lacustre au cœur de l'empire aztèque." },
         { "type": "paragraph", "text": "C'est une machine de guerre qui a besoin de conquêtes perpétuelles. Quand les Espagnols arriveront, ils n'auront qu'à fédérer ces rancœurs." },
         { "type": "funFact", "text": "Les fèves de cacao servaient de monnaie. À Tenochtitlán, un lapin valait dix fèves ; un esclave de bonne constitution, environ cent." }
@@ -46,8 +46,8 @@
       "title": "Dieux, Cortés et variole",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Selon la [[Cosmogonie des Cinq Soleils]], le soleil ne survit que s'il est nourri de sang humain. Au [[Templo Mayor]], les sacrifices ne sont pas une cruauté gratuite : ils sont, pour les Aztèques, une nécessité cosmique." },
-        { "type": "paragraph", "text": "En **1519**, **Hernán Cortés** débarque. [[Moctezuma II]] hésite. L'acier, les armes à feu et les chevaux font peur. Mais le tueur principal est la [[variole]]. Sans immunité, les populations s'effondrent. Cortés assiège la capitale avec des milliers d'alliés indigènes." },
+        { "type": "paragraph", "text": "Selon la [[Cosmogonie des Cinq Soleils]], mythe aztèque, le soleil ne survit que s'il est nourri de sang humain. Au [[Templo Mayor]], la grande pyramide du centre, les sacrifices ne sont pas une cruauté gratuite : ils sont, pour les Aztèques, une nécessité pour que le monde continue." },
+        { "type": "paragraph", "text": "En **1519**, **Hernán Cortés** débarque avec quelques centaines d'Espagnols. [[Moctezuma II]], l'empereur aztèque, hésite. L'acier, les armes à feu et les chevaux font peur. Mais le tueur principal est la [[variole]], maladie européenne contre laquelle les populations n'ont aucune immunité. Cortés assiège la capitale avec des milliers d'alliés indigènes." },
         { "type": "timeline", "events": [
           { "date": "1325", "title": "Fondation de Tenochtitlán", "detail": "Les Mexica s'installent sur le lac Texcoco." },
           { "date": "1428", "title": "Triple Alliance", "detail": "Début de l'expansion impériale aztèque." },
@@ -61,8 +61,8 @@
       "title": "Sur les ruines, Mexico",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "En **1521**, après **80 jours** de siège, Tenochtitlán tombe. Affamée, privée d'eau, ravagée par la maladie. Ses pierres servent à bâtir Mexico, capitale de la [[Nouvelle-Espagne]]." },
-        { "type": "paragraph", "text": "Tout ne disparaît pas. Les [[chinampas]] existent encore. Le [[nahuatl]] est parlé par plus d'un million de personnes. L'aigle et le serpent restent l'emblème du Mexique. Une civilisation brillante survit dans la mémoire et le paysage." },
+        { "type": "paragraph", "text": "En **1521**, après **80 jours** de siège, Tenochtitlán tombe. Affamée, privée d'eau, ravagée par la maladie. Ses pierres servent à bâtir Mexico, capitale de la [[Nouvelle-Espagne]], la colonie espagnole." },
+        { "type": "paragraph", "text": "Tout ne disparaît pas. Les [[chinampas]] existent encore. Le [[nahuatl]], langue des Aztèques, est parlé par plus d'un million de personnes. L'aigle et le serpent restent l'emblème du Mexique. Une civilisation brillante survit dans la mémoire et le paysage." },
         { "type": "takeaway", "text": "Les Aztèques ont bâti une métropole de **200 000** habitants sur un lac. Leur système de tribut et la [[variole]] ont permis à quelques centaines d'Espagnols, aidés d'alliés locaux, de détruire l'empire en deux ans." }
       ]
     }

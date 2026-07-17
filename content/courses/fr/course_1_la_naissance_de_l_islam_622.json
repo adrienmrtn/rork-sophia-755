@@ -16,8 +16,8 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "En **622**, un marchand de La Mecque nommé **Muhammad** doit fuir sa ville natale : on veut le tuer. Son départ vers l'oasis de Médine porte un nom, l'**Hégire**, et il deviendra l'an 1 du calendrier musulman." },
-        { "type": "paragraph", "text": "Personne ne l'imagine encore, mais en moins d'un siècle, ce message né dans le désert va faire tomber deux immenses empires et donner naissance à un État qui s'étend de l'Espagne aux portes de l'Inde. Voici comment tout a commencé." }
+        { "type": "paragraph", "text": "En **622**, un marchand de La Mecque, dans l'actuelle Arabie saoudite, doit fuir sa ville. On veut le tuer. Cet homme s'appelle **Muhammad**. Son départ vers l'oasis de Médine porte un nom : l'**Hégire**. Plus tard, cette date devient l'an 1 du calendrier musulman." },
+        { "type": "paragraph", "text": "Personne ne le voit encore. Mais en moins d'un siècle, le message né dans ce désert fera tomber de grands empires et donnera naissance à un État qui s'étend de l'Espagne aux portes de l'Inde. Voici comment tout a commencé." }
       ]
     },
     {
@@ -25,10 +25,10 @@
       "title": "Une Arabie oubliée du monde",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Au VIIe siècle, l'Arabie n'intéresse presque personne. On y vit en tribus : les [[Bédouins]], nomades du désert, et quelques villes de commerce comme La Mecque. La religion y est polythéiste : on prie de nombreuses idoles réunies autour d'un sanctuaire cubique, la **Kaaba**. Ce lieu saint attire des pèlerins, et donc de l'argent, que contrôle la puissante tribu des [[Quraysh]]." },
+        { "type": "paragraph", "text": "Au VIIe siècle, l'Arabie n'intéresse presque personne. On y vit en tribus. Les [[Bédouins]], nomades du désert, côtoient quelques villes de commerce comme La Mecque. La religion y est polythéiste : on prie de nombreuses idoles. Le cœur du culte est un sanctuaire cubique, la **Kaaba**. Les pèlerins y affluent, et avec eux l'argent. La puissante tribu des [[Quraysh]] contrôle ce commerce." },
         { "type": "funFact", "text": "La Kaaba abritait environ **360 idoles**, soit à peu près une pour chaque jour du calendrier lunaire arabe. Muhammad les fit toutes retirer en une seule journée." },
         { "type": "image", "asset": "mecca_7th_century", "ratio": "4:3", "caption": "La Mecque, carrefour du commerce et centre de pèlerinage au VIIe siècle." },
-        { "type": "paragraph", "text": "Tout autour, deux géants s'épuisent dans des guerres interminables : [[L'Empire byzantin et sassanide]]. C'est dans ce grand vide que **Muhammad**, né vers **570**, dit recevoir des révélations à partir de **610**, dans une grotte du mont Hira. Son idée d'un **Dieu unique** menace directement le commerce de La Mecque, qui vit des idoles." }
+        { "type": "paragraph", "text": "Tout autour, deux géants s'épuisent dans des guerres sans fin : [[L'Empire byzantin et sassanide]], c'est-à-dire l'Empire romain d'Orient et l'empire perse. C'est dans ce vide que **Muhammad**, né vers **570**, dit recevoir des révélations à partir de **610**, dans une grotte du mont Hira. Son idée d'un **Dieu unique** menace le commerce de La Mecque, qui vit des idoles." }
       ]
     },
     {
@@ -36,10 +36,10 @@
       "title": "622 : l'Hégire, tout bascule",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Menacé de mort, Muhammad accepte l'invitation de l'oasis de Yathrib, qui cherche un arbitre pour calmer ses conflits. C'est l'**Hégire** : il passe du statut de persécuté à celui de chef. Là-bas, il n'est plus seulement un prophète, il devient chef d'État. Il rédige la [[Constitution de Médine]] et fonde [[La Oumma]], la communauté des croyants qui dépasse les clans." },
+        { "type": "paragraph", "text": "Menacé de mort, Muhammad accepte l'invitation d'une oasis appelée Yathrib. Ses habitants cherchent un arbitre pour calmer leurs conflits. Ce départ, c'est l'**Hégire**. Là-bas, il n'est plus seulement un prophète : il devient chef. Il rédige la [[Constitution de Médine]], un pacte entre les clans, et fonde [[La Oumma]], la communauté des croyants qui dépasse les liens de sang." },
         { "type": "funFact", "text": "Avant l'Hégire, Médine s'appelait **Yathrib**. Rebaptisée « ville du Prophète » (Madinat al-Nabi), elle en a gardé le nom jusqu'à aujourd'hui." },
         { "type": "image", "asset": "medina_prophet_s_mosque", "ratio": "4:3", "caption": "Médine, la « ville du Prophète », première capitale de l'islam." },
-        { "type": "paragraph", "text": "La guerre avec La Mecque commence. Muhammad lance des [[razzias]] pour couper les caravanes ennemies. Pourtant en infériorité numérique, ses fidèles l'emportent à **Badr (624)**, une victoire vécue comme un miracle. Malgré un échec à Uhud, ils résistent au **siège de Médine (627)**, ce qui assoit son autorité." }
+        { "type": "paragraph", "text": "La guerre avec La Mecque commence. Muhammad lance des [[razzias]], des raids rapides, pour couper les caravanes ennemies. Pourtant en infériorité numérique, ses fidèles l'emportent à **Badr** en **624**. Cette victoire est vécue comme un miracle. Malgré un échec à Uhud, ils résistent au **siège de Médine** en **627**. Son autorité s'affirme." }
       ]
     },
     {
@@ -47,8 +47,8 @@
       "title": "630 : le retour triomphal",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "En **630**, la situation s'inverse totalement. Muhammad marche sur La Mecque avec **10 000 hommes**. La ville, incapable de résister, se rend sans combattre. Au lieu de se venger, il accorde un **pardon général** : un geste politique habile qui pousse les tribus à le rejoindre." },
-        { "type": "paragraph", "text": "Il entre dans la **Kaaba**, en brise les idoles et la consacre au Dieu unique. À sa mort en **632**, presque toute l'Arabie est unie pour la première fois. Le pouvoir passe alors aux [[Calife]]s : Abu Bakr, puis Umar, lancent une expansion éclair vers la Syrie, l'Irak et l'Égypte." },
+        { "type": "paragraph", "text": "En **630**, la situation s'inverse. Muhammad marche sur La Mecque avec **10 000 hommes**. La ville se rend sans combattre. Au lieu de se venger, il accorde un **pardon général**. Ce geste pousse les tribus à le rejoindre." },
+        { "type": "paragraph", "text": "Il entre dans la **Kaaba**, en brise les idoles et la consacre au Dieu unique. À sa mort en **632**, presque toute l'Arabie est unie pour la première fois. Le pouvoir passe alors aux [[Calife]]s, ses successeurs. Abu Bakr, puis Umar, lancent une expansion rapide vers la Syrie, l'Irak et l'Égypte." },
         { "type": "funFact", "text": "Le premier **muezzin** de l'islam, celui qui appelle à la prière, était Bilal, un ancien esclave venu d'Éthiopie : un symbole de l'égalité entre croyants défendue par le message." },
         { "type": "timeline", "events": [
           { "date": "622", "title": "L'Hégire", "detail": "Départ vers Médine, début de l'ère musulmane." },
@@ -64,10 +64,10 @@
       "title": "Les racines d'une civilisation",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "L'expansion n'est pas seulement militaire, elle est aussi organisée. Les conquérants mettent en place la [[Dhimma]] : les chrétiens et les juifs gardent leur religion en échange d'un impôt, la [[jizya]]. Cette tolérance encadrée facilite l'installation du nouveau pouvoir dans des régions fatiguées de Byzance." },
+        { "type": "paragraph", "text": "L'expansion n'est pas seulement militaire. Elle est aussi organisée. Les conquérants mettent en place la [[Dhimma]] : les chrétiens et les juifs gardent leur religion en échange d'un impôt, la [[jizya]]. Cette tolérance encadrée facilite l'installation du nouveau pouvoir dans des régions fatiguées de Byzance." },
         { "type": "funFact", "text": "Émerveillés par Alexandrie lors de la conquête de l'Égypte, les Arabes préférèrent fonder une nouvelle capitale, **Fostat** (le futur Le Caire), plutôt que d'abîmer la cité antique." },
-        { "type": "paragraph", "text": "La langue arabe devient le ciment de l'empire, à la fois langue de l'administration et langue sacrée. Portée par l'idéal du [[Le djihad]], à la fois effort sur soi et défense de la communauté, la civilisation islamique devient un carrefour entre les savoirs grec, perse et indien, et referme peu à peu l'Antiquité." },
-        { "type": "takeaway", "text": "En seulement **22 ans** (610-632), Muhammad a transformé un message spirituel en une véritable puissance politique. Il a posé les bases d'un empire qui dominera une partie du monde pendant des siècles." }
+        { "type": "paragraph", "text": "La langue arabe devient le ciment de l'empire : langue de l'administration et langue sacrée. Portée aussi par l'idéal du [[Le djihad]], à la fois effort sur soi et défense de la communauté, la civilisation islamique devient un carrefour entre les savoirs grec, perse et indien. Peu à peu, l'Antiquité se referme." },
+        { "type": "takeaway", "text": "En seulement **22 ans** (610-632), Muhammad a transformé un message spirituel en une vraie puissance politique. Il a posé les bases d'un empire qui dominera une partie du monde pendant des siècles." }
       ]
     }
   ]
