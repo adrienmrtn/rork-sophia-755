@@ -14,38 +14,37 @@ struct HomeViewTinder: View {
     @State private var topCardRotation: Double = 0
     @State private var cardAppeared: Bool = false
 
-    private let cream = Color(red: 0.984, green: 0.961, blue: 0.918)
-    private let ink = Color.black
     private let swipeCommitThreshold: CGFloat = 120
     private let stampFullOpacityDistance: CGFloat = 100
 
     var body: some View {
         ZStack {
-            cream.ignoresSafeArea()
+            DS.canvas.ignoresSafeArea()
 
             VStack(spacing: 0) {
                 headerSection
-                    .padding(.horizontal, 20)
+                    .padding(.horizontal, DS.Space.l)
                     .padding(.top, 8)
-                    .padding(.bottom, 10)
+                    .padding(.bottom, DS.Space.s)
 
                 if cards.isEmpty {
                     Spacer()
                     allCompletedView
                     Spacer()
                 } else {
-                    VStack(spacing: 14) {
+                    VStack(spacing: DS.Space.l) {
                         cardStack
                             .frame(maxWidth: .infinity, maxHeight: .infinity)
                             .opacity(cardAppeared ? 1 : 0)
                             .scaleEffect(cardAppeared ? 1 : 0.97)
 
                         swipeActionButtons
-                            .padding(.horizontal, 36)
+                            .padding(.horizontal, 40)
                             .padding(.bottom, 4)
                             .opacity(cardAppeared ? 1 : 0)
                     }
-                    .padding(.horizontal, 10)
+                    .padding(.horizontal, DS.Space.m)
+                    .padding(.bottom, 4)
                 }
             }
         }
@@ -74,7 +73,7 @@ struct HomeViewTinder: View {
             Image("sophia_mark")
                 .resizable()
                 .scaledToFit()
-                .frame(height: 30)
+                .frame(height: 28)
 
             Spacer(minLength: 8)
 
@@ -84,27 +83,28 @@ struct HomeViewTinder: View {
 
     private var streakBadge: some View {
         HStack(spacing: 6) {
-            AnimatedFlameBadge(size: 16, showGlow: false)
+            Image(systemName: "flame")
+                .font(.system(size: 14, weight: .medium))
+                .foregroundStyle(DS.inkSecondary)
             Text("\(progressManager.streak)")
-                .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                .foregroundStyle(ink)
+                .font(DS.sans(.subheadline, .semibold))
+                .foregroundStyle(DS.ink)
                 .monospacedDigit()
                 .fixedSize(horizontal: true, vertical: true)
                 .layoutPriority(1)
             Text(progressManager.streak <= 1
                 ? languageManager.text("common.streak.day")
                 : languageManager.text("common.streak.days"))
-                .font(.system(.caption, design: .rounded, weight: .heavy))
-                .foregroundStyle(ink)
-                .tracking(0.5)
+                .font(DS.sans(.caption, .medium))
+                .foregroundStyle(DS.inkSecondary)
                 .fixedSize(horizontal: true, vertical: true)
                 .lineLimit(1)
         }
-        .padding(.horizontal, 16)
+        .padding(.horizontal, 14)
         .padding(.vertical, 8)
         .fixedSize(horizontal: true, vertical: false)
-        .background(Color.white, in: Capsule())
-        .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
+        .background(DS.surface, in: Capsule())
+        .overlay { Capsule().strokeBorder(DS.hairline, lineWidth: 1) }
     }
 
     // MARK: - Card stack
@@ -275,16 +275,16 @@ struct HomeViewTinder: View {
     }
 
     private var allCompletedView: some View {
-        VStack(spacing: 20) {
-            Image(systemName: "checkmark.seal.fill")
-                .font(.system(size: 64))
-                .foregroundStyle(ink)
+        VStack(spacing: 16) {
+            Image(systemName: "checkmark.circle")
+                .font(.system(size: 52, weight: .light))
+                .foregroundStyle(DS.accentSoft)
             Text(languageManager.text("home.bravo"))
-                .font(.system(.largeTitle, design: .rounded, weight: .heavy))
-                .foregroundStyle(ink)
+                .font(DS.serif(.title, .semibold))
+                .foregroundStyle(DS.ink)
             Text(languageManager.text("home.allCompleted"))
-                .font(.system(.body, design: .rounded, weight: .medium))
-                .foregroundStyle(ink.opacity(0.6))
+                .font(DS.sans(.body))
+                .foregroundStyle(DS.inkSecondary)
                 .multilineTextAlignment(.center)
         }
         .padding(40)
@@ -301,44 +301,24 @@ private struct TinderFlashCard: View {
 
     @State private var cachedImage: UIImage?
 
-    private let ink = Color.black
-    private let depth: CGFloat = 3
-
-    private var pastel: Color {
-        switch course.subject {
-        case .histoire: return Color(red: 1.0, green: 0.86, blue: 0.62)
-        case .sciences: return Color(red: 0.70, green: 0.95, blue: 0.80)
-        case .litterature: return Color(red: 1.0, green: 0.78, blue: 0.78)
-        case .art: return Color(red: 0.66, green: 0.92, blue: 0.96)
-        case .mythologie: return Color(red: 0.82, green: 0.78, blue: 1.0)
-        case .comprendreLeMonde: return Color(red: 0.74, green: 0.90, blue: 1.0)
-        }
-    }
-
     var body: some View {
-        ZStack(alignment: .top) {
-            RoundedRectangle(cornerRadius: 24, style: .continuous)
-                .fill(ink)
-                .offset(y: depth)
+        GeometryReader { geo in
+            VStack(spacing: 0) {
+                courseIllustration
+                    .frame(height: max(geo.size.height * 0.56, 220))
 
-            GeometryReader { geo in
-                VStack(spacing: 0) {
-                    courseIllustration
-                        .frame(height: max(geo.size.height * 0.58, 220))
-
-                    bottomPanel
-                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-                }
-                .frame(width: geo.size.width, height: geo.size.height)
-                .background(pastel)
+                bottomPanel
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             }
-            .clipShape(.rect(cornerRadius: 24))
-            .overlay {
-                RoundedRectangle(cornerRadius: 24, style: .continuous)
-                    .strokeBorder(ink, lineWidth: 3)
-            }
+            .frame(width: geo.size.width, height: geo.size.height)
+            .background(DS.surface)
         }
-        .padding(.bottom, depth)
+        .clipShape(.rect(cornerRadius: DS.Radius.card))
+        .overlay {
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .strokeBorder(DS.hairline, lineWidth: 1)
+        }
+        .dsSoftShadow()
         .onAppear {
             if cachedImage == nil {
                 cachedImage = CourseImageMap.loadImage(for: course.id)
@@ -347,7 +327,7 @@ private struct TinderFlashCard: View {
     }
 
     private var courseIllustration: some View {
-        Color(.secondarySystemBackground)
+        DS.surfaceMuted
             .overlay {
                 if let uiImage = cachedImage {
                     Color.clear
@@ -360,24 +340,12 @@ private struct TinderFlashCard: View {
                         .allowsHitTesting(false)
                 } else {
                     ZStack {
-                        pastel
-                        Text(course.subject.emoji)
-                            .font(.system(size: 72))
+                        DS.surfaceMuted
+                        Image(systemName: course.subject.icon)
+                            .font(.system(size: 44, weight: .light))
+                            .foregroundStyle(DS.accentSoft.opacity(0.5))
                     }
                 }
-            }
-            .overlay(alignment: .bottom) {
-                LinearGradient(
-                    colors: [.clear, ink.opacity(0.12)],
-                    startPoint: .top,
-                    endPoint: .bottom
-                )
-                .frame(height: 48)
-            }
-            .overlay(alignment: .bottom) {
-                Rectangle()
-                    .fill(ink)
-                    .frame(height: 3)
             }
             .overlay(alignment: .topTrailing) {
                 Button {
@@ -385,45 +353,39 @@ private struct TinderFlashCard: View {
                     onToggleFavorite?()
                 } label: {
                     Image(systemName: isFavorite ? "bookmark.fill" : "bookmark")
-                        .font(.system(size: 16, weight: .bold))
-                        .foregroundStyle(ink)
-                        .frame(width: 40, height: 40)
-                        .background(Color.white, in: Circle())
-                        .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
+                        .font(.system(size: 15, weight: .medium))
+                        .foregroundStyle(isFavorite ? DS.accent : DS.inkSecondary)
+                        .frame(width: 38, height: 38)
+                        .background(.ultraThinMaterial, in: Circle())
+                        .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
                 }
                 .padding(14)
             }
     }
 
     private var bottomPanel: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            HStack(spacing: 6) {
-                Text(course.subject.emoji)
-                    .font(.system(size: 16))
-                Text(course.subject.localizedShortName(language: language).uppercased())
-                    .font(.system(.caption, design: .rounded, weight: .heavy))
-                    .foregroundStyle(.white)
-                    .tracking(0.5)
-            }
-            .padding(.horizontal, 12)
-            .padding(.vertical, 6)
-            .background(ink, in: Capsule())
+        VStack(alignment: .leading, spacing: 12) {
+            Text(course.subject.localizedShortName(language: language).uppercased())
+                .font(DS.sans(.caption, .semibold))
+                .foregroundStyle(DS.accentSoft)
+                .tracking(1.2)
 
             Text(course.title)
-                .font(.system(.title2, design: .rounded, weight: .heavy))
-                .foregroundStyle(ink)
+                .font(DS.serif(.title2, .semibold))
+                .foregroundStyle(DS.ink)
                 .lineLimit(3)
                 .fixedSize(horizontal: false, vertical: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
 
             boldText(course.description)
-                .font(.system(.body, design: .rounded, weight: .semibold))
-                .foregroundStyle(ink.opacity(0.85))
+                .font(DS.sans(.subheadline))
+                .foregroundStyle(DS.inkSecondary)
+                .lineSpacing(3)
                 .lineLimit(4)
                 .multilineTextAlignment(.leading)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .padding(20)
+        .padding(DS.Space.l)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
     }
 
@@ -432,7 +394,7 @@ private struct TinderFlashCard: View {
         var result = Text("")
         for (index, part) in parts.enumerated() {
             if index % 2 == 1 {
-                result = result + Text(part).bold()
+                result = result + Text(part).fontWeight(.semibold).foregroundColor(DS.ink)
             } else {
                 result = result + Text(part)
             }
@@ -441,7 +403,7 @@ private struct TinderFlashCard: View {
     }
 }
 
-// MARK: - Neo-brutalist swipe controls
+// MARK: - Calm swipe controls
 
 private enum SwipeActionKind {
     case accept
@@ -452,36 +414,25 @@ private struct SwipeActionButton: View {
     let kind: SwipeActionKind
     let action: () -> Void
 
-    private let ink = Color.black
-    private let acceptFill = Color(red: 0.62, green: 0.94, blue: 0.72)
-    private let rejectFill = Color(red: 1.0, green: 0.55, blue: 0.58)
-    private let depth: CGFloat = 4
-    private let size: CGFloat = 60
+    private let size: CGFloat = 58
 
     var body: some View {
         Button(action: {
             UIImpactFeedbackGenerator(style: .medium).impactOccurred()
             action()
         }) {
-            ZStack {
-                Circle()
-                    .fill(ink)
-                    .offset(y: depth)
-                    .frame(width: size, height: size)
-
-                Circle()
-                    .fill(kind == .accept ? acceptFill : rejectFill)
-                    .overlay {
-                        Circle().strokeBorder(ink, lineWidth: 3)
-                    }
-                    .frame(width: size, height: size)
-                    .overlay {
-                        Image(systemName: kind == .accept ? "checkmark" : "xmark")
-                            .font(.system(size: 26, weight: .heavy))
-                            .foregroundStyle(ink)
-                    }
-            }
-            .padding(.bottom, depth)
+            Circle()
+                .fill(kind == .accept ? DS.accent : DS.surface)
+                .frame(width: size, height: size)
+                .overlay {
+                    Circle().strokeBorder(kind == .accept ? Color.clear : DS.hairline, lineWidth: 1)
+                }
+                .overlay {
+                    Image(systemName: kind == .accept ? "arrow.right" : "xmark")
+                        .font(.system(size: 20, weight: .semibold))
+                        .foregroundStyle(kind == .accept ? Color.white : DS.inkSecondary)
+                }
+                .dsSoftShadow()
         }
         .buttonStyle(.plain)
     }
@@ -496,34 +447,21 @@ private struct SwipeStampIcon: View {
     let kind: Kind
     let progress: CGFloat
 
-    private let ink = Color.black
-    private let acceptFill = Color(red: 0.62, green: 0.94, blue: 0.72)
-    private let rejectFill = Color(red: 1.0, green: 0.55, blue: 0.58)
-    private let depth: CGFloat = 4
-
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 18, style: .continuous)
-                .fill(ink)
-                .offset(x: depth * 0.6, y: depth)
-                .frame(width: 68, height: 68)
-
-            RoundedRectangle(cornerRadius: 18, style: .continuous)
-                .fill(kind == .accept ? acceptFill : rejectFill)
-                .overlay {
-                    RoundedRectangle(cornerRadius: 18, style: .continuous)
-                        .strokeBorder(ink, lineWidth: 3)
-                }
-                .frame(width: 68, height: 68)
-                .overlay {
-                    Image(systemName: kind == .accept ? "checkmark" : "xmark")
-                        .font(.system(size: 30, weight: .heavy))
-                        .foregroundStyle(ink)
-                }
-        }
-        .padding(.bottom, depth)
-        .rotationEffect(.degrees(kind == .accept ? -14 : 14))
-        .opacity(Double(progress))
-        .scaleEffect(0.82 + 0.18 * progress)
+        Text(kind == .accept
+             ? AppLocalizable.string("home.start", language: AppLanguage.currentPersisted())
+             : AppLocalizable.string("home.skip", language: AppLanguage.currentPersisted()))
+            .font(DS.sans(.subheadline, .semibold))
+            .tracking(1.5)
+            .foregroundStyle(kind == .accept ? DS.accent : DS.inkSecondary)
+            .padding(.horizontal, 16)
+            .padding(.vertical, 8)
+            .background(DS.surface, in: Capsule())
+            .overlay {
+                Capsule().strokeBorder(kind == .accept ? DS.accent : DS.hairline, lineWidth: 1.5)
+            }
+            .rotationEffect(.degrees(kind == .accept ? -10 : 10))
+            .opacity(Double(progress))
+            .scaleEffect(0.85 + 0.15 * progress)
     }
 }

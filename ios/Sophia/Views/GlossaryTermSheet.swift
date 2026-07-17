@@ -6,39 +6,38 @@ struct GlossaryTermSheet: View {
 
     @State private var contentHeight: CGFloat = 280
 
-    private let ink = Color.black
-    private let cream = Color(red: 0.984, green: 0.961, blue: 0.918)
+    private let ink = DS.ink
+    private let cream = DS.canvas
 
     var body: some View {
         VStack(spacing: 0) {
             Capsule()
-                .fill(ink.opacity(0.15))
-                .frame(width: 44, height: 5)
+                .fill(DS.hairline)
+                .frame(width: 40, height: 5)
                 .padding(.top, 10)
                 .padding(.bottom, 18)
 
             VStack(alignment: .leading, spacing: 16) {
                 HStack(spacing: 8) {
                     Text(entry.classification.localizedShortLabel(language: AppLanguage.currentPersisted()).uppercased())
-                        .font(.system(.caption2, design: .rounded, weight: .heavy))
-                        .foregroundStyle(ink)
-                        .tracking(0.6)
+                        .font(DS.sans(.caption2, .semibold))
+                        .foregroundStyle(DS.accentSoft)
+                        .tracking(1.0)
                         .padding(.horizontal, 10)
                         .padding(.vertical, 6)
-                        .background(entry.classification.pastel, in: Capsule())
-                        .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
+                        .background(DS.accentTint, in: Capsule())
 
                     Spacer()
                 }
 
                 Text(entry.displayTerm)
-                    .font(.system(.title2, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink)
+                    .font(DS.serif(.title2, .semibold))
+                    .foregroundStyle(DS.ink)
                     .fixedSize(horizontal: false, vertical: true)
 
                 Text(entry.explanation)
-                    .font(.system(.body, design: .rounded, weight: .medium))
-                    .foregroundStyle(ink.opacity(0.85))
+                    .font(DS.sans(.body))
+                    .foregroundStyle(DS.inkSecondary)
                     .lineSpacing(5)
                     .fixedSize(horizontal: false, vertical: true)
             }
