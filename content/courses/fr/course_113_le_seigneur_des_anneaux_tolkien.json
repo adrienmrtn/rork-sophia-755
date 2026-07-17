@@ -1,0 +1,110 @@
+{
+  "id": "course_113_le_seigneur_des_anneaux_tolkien",
+  "title": "Le Seigneur des Anneaux, Tolkien",
+  "subtitle": "1954-1955",
+  "subject": "litterature",
+  "subcategory": "Anglo-saxons & littérature mondiale",
+  "description": "Frodon doit détruire l'Anneau Unique au Mont Destin. Tolkien invente la Terre du Milieu et redéfinit la fantasy moderne.",
+  "hero": {
+    "image": "le_seigneur_des_anneaux_tolkien",
+    "ratio": "16:9",
+    "hook": "Un anneau pour les dominer tous : l'épopée qui a inventé la fantasy telle qu'on la connaît."
+  },
+  "sections": [
+    {
+      "id": "course_113_le_seigneur_des_anneaux_tolkien_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Le Seigneur des Anneaux** (1954-1955) est l'acte de naissance de la [[High Fantasy]]. **J.R.R. Tolkien** y crée la **Terre du Milieu**, un univers d'une profondeur historique, linguistique et mythologique sans précédent."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fruit de plusieurs décennies de travail, ce récit médite sur le pouvoir, l'héroïsme ordinaire et la perte. Tolkien ne se contente pas de raconter une aventure : il instaure un monde cohérent où chaque peuple a sa langue et son histoire."
+        }
+      ]
+    },
+    {
+      "id": "course_113_le_seigneur_des_anneaux_tolkien_p1",
+      "title": "Tolkien : le philologue créateur de mondes",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tolkien était professeur de [[vieil anglais]] à Oxford. Sa spécialité, la philologie, est la base de son univers. Il invente d'abord des langues (quenya, sindarin), puis imagine les peuples qui les parlent."
+        },
+        {
+          "type": "image",
+          "asset": "j_r_r_tolkien_portrait_photograph",
+          "ratio": "4:3",
+          "caption": "J.R.R. Tolkien, philologue d'Oxford devenu père de la fantasy moderne."
+        },
+        {
+          "type": "paragraph",
+          "text": "En s'appuyant sur les [[mythologies nordiques et anglo-saxonnes]], il cherche à offrir à l'Angleterre une mythologie propre. Ce processus de [[sous-création tolkienienne]] vise une cohérence si forte que le lecteur accepte les lois de ce monde comme des vérités."
+        },
+        {
+          "type": "funFact",
+          "text": "Tolkien a réécrit le chapitre « Le Conseil d'Elrond » plus de dix fois pour que les arbres généalogiques et les nuances linguistiques restent parfaitement cohérents."
+        }
+      ]
+    },
+    {
+      "id": "course_113_le_seigneur_des_anneaux_tolkien_p2",
+      "title": "La quête de l'Unique : une épopée de la fragilité",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L'**Anneau Unique**, forgé par le [[Maia]] déchu **Sauron**, concentre sa puissance. **Frodon Sacquet**, simple hobbit, doit le détruire au **Mont Destin**, au cœur du **Mordor**."
+        },
+        {
+          "type": "image",
+          "asset": "lord_of_the_rings_middle_earth_illustration",
+          "ratio": "16:9",
+          "caption": "La Terre du Milieu : de la Comté au Mordor, une épopée à travers des paysages mythiques."
+        },
+        {
+          "type": "paragraph",
+          "text": "La **Communauté de l'Anneau** réunit neuf représentants des peuples libres. Tandis qu'**Aragorn**, héritier de [[Gondor]], mène des batailles, Frodon et **Sam** avancent seuls dans la solitude, illustrant le sacrifice discret face à la grande Histoire."
+        }
+      ]
+    },
+    {
+      "id": "course_113_le_seigneur_des_anneaux_tolkien_p3",
+      "title": "Théologie et philosophie : le refus de l'allégorie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tolkien refuse l'allégorie explicite, mais son œuvre explore la **corruption par le pouvoir**. L'Anneau attaque la volonté de son porteur. Un hobbit sans ambition politique est le candidat idéal pour ce fardeau."
+        },
+        {
+          "type": "paragraph",
+          "text": "Des actes de pitié passés produisent des conséquences majeures. **Gollum**, corrompu par l'anneau, est épargné par compassion. Sans le savoir, il permet l'accomplissement final de la quête quand Frodon, à son tour, échoue à jeter l'anneau."
+        }
+      ]
+    },
+    {
+      "id": "course_113_le_seigneur_des_anneaux_tolkien_p4",
+      "title": "Héritage et révolution culturelle",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Publié entre **1954** et **1955**, le roman devient l'un des livres les plus vendus du XXe siècle. Il fixe les codes de la fantasy moderne : elfes, nains, quête en groupe. L'adaptation de **Peter Jackson** au début des années 2000 renforce son impact planétaire."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tolkien influence aussi le jeu de rôle, la musique et l'écologie. Sa vision d'une nature menacée par la démesure technologique résonne encore aujourd'hui."
+        },
+        {
+          "type": "takeaway",
+          "text": "Tolkien a consacré plus d'un demi-siècle à la Terre du Milieu, créant des langues et un univers d'une cohérence absolue dont **Le Seigneur des Anneaux** reste le chef-d'œuvre incontesté."
+        }
+      ]
+    }
+  ]
+}

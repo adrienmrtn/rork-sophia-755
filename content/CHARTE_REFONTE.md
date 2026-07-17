@@ -181,6 +181,18 @@ Un fichier JSON par cours : `content/courses/fr/<course_id>.json`.
 ### Itération 4 (clarté)
 - Les 40 cours d'histoire sont **réécrits pour la clarté** : plus de noms sortis de nulle part, plus de jargon sans explication, phrases plus simples et agréables à lire, contexte toujours planté avant les détails.
 
+### Itération 5 (art)
+- Les **40 cours d'art** (peinture, musique, cinéma / photo / architecture / œuvres iconiques, théâtre) sont **migrés en V2** et réécrits selon la charte de clarté : intro freemium, hero 16:9, blocs structurés, pas de `keyDates`, pas de tirets cadratins ni de `==`.
+
+### Itération 5 (littérature)
+- Les **40 cours de littérature** (`subject: litterature`, ids `course_81` à `course_120`) sont réécrits en JSON V2 selon la charte de clarté : accroche hero, sections courtes, noms et notions introduits, glossaire `[[Terme]]` uniquement si présent pour le titre du cours, pas de tirets cadratins ni de `==`, takeaway en fin, funFact placé par la logique du récit.
+
+### Itération 5 (art)
+- Les **40 cours d'art** (peinture, musique, cinéma / photo / architecture / œuvres iconiques, `course_121` à `course_160`) sont **migrés en V2** selon la charte de clarté : même gabarit de blocs, glossaire `[[Terme]]` uniquement si le terme existe pour le titre du cours, pas de `keyDates`, pas de tirets cadratins ni de `==`.
+
+### Itération 5 (mythologie)
+- Les **39 cours de mythologie** (`subject: mythologie`, ids `course_161` à `course_200`, sans `course_190`) sont **réécrits en JSON V2** selon la charte de clarté : intro freemium, hero 16:9, dieux et héros présentés avant les noms grecs/latins, glossaire `[[Terme]]` uniquement si présent pour le titre du cours, pas de `keyDates`, pas de tirets cadratins ni de `==`, takeaway en fin, funFact placé par la logique du récit.
+
 ### Itération 3 (retours)
 - **Tap glossaire** : plus aucun **décalage du paragraphe** au tap (on ne réécrit plus l'`attributedText` de l'`UITextView` quand le contenu n'a pas changé, ce qui évitait un re-calcul de hauteur au moment de l'ouverture de la fiche).
 - **Le saviez-vous ?** : repositionné **au milieu** des sections dans « Pourquoi le ciel est-il bleu ? » et « La Renaissance italienne », là où il éclaire le passage lu (placement guidé par la logique, pas par une règle stricte).

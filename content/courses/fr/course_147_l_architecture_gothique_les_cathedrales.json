@@ -1,0 +1,122 @@
+{
+  "id": "course_147_l_architecture_gothique_les_cathedrales",
+  "title": "L'architecture gothique : les cathédrales",
+  "subtitle": "XIIe-XVe siècle",
+  "subject": "art",
+  "subcategory": "Cinéma, photo & architecture + œuvres iconiques",
+  "description": "À partir de Saint-Denis, l'art gothique élève des forêts de pierre. Ogives, arcs-boutants, lumière colorée : la cathédrale comme théologie construite.",
+  "hero": {
+    "image": "l_architecture_gothique_les_cathedrales",
+    "ratio": "16:9",
+    "hook": "Comment faire tenir un ciel de pierre et de verre ?"
+  },
+  "sections": [
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Au XIIe siècle, en Île-de-France, naît l'architecture gothique. Les cathédrales montent plus haut, s'ouvrent à la lumière. Ce n'est pas seulement une technique : c'est une vision du divin."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le chantier part souvent de la [[basilique de Saint-Denis]], sous l'impulsion de l'[[abbé Suger]]."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p1",
+      "title": "Ogives et arcs-boutants",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La voûte d'ogives concentre les poussées. L'[[arc-boutant]] les transfère hors des murs. Résultat : moins de pierre pleine, plus de vitraux. Voir [[L'arc-boutant et la voûte d'ogives]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le passage du roman au gothique n'est pas un simple goût esthétique. C'est une solution d'ingénieurs médiévaux pour ouvrir les murs. Plus on monte, plus il faut évacuer les forces vers l'extérieur."
+        },
+        {
+          "type": "image",
+          "asset": "gothic_cathedral_flying_buttresses",
+          "ratio": "4:3",
+          "caption": "L'arc-boutant : l'échafaudage devenu sculpture."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p2",
+      "title": "La théologie de la lumière",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pour Suger, la lumière filtrée par le verre coloré élève l'âme. C'est la [[théologie de la lumière (abbé Suger)]]. Chartres, Reims, Amiens deviennent des Bibles de pierre pour fidèles souvent illettrés."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les portails sculptés racontent le Jugement, les métiers, les saisons. L'illétré « lit » la pierre. La cathédrale est une encyclopédie verticale autant qu'un lieu de culte."
+        },
+        {
+          "type": "funFact",
+          "text": "Une cathédrale pouvait prendre un siècle à construire : plusieurs générations pour un même rêve vertical."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p3",
+      "title": "Villes, orgueil, savoir-faire",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Les cathédrales sont aussi des affaires de prestige urbain. Corporations, donateurs, évêques : toute une société se projette dans la flèche. Les accidents existent ; les audaces aussi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Incendies, effondrements, guerres : ces chantiers sont fragiles. Chaque génération répare, allonge une nef, ajoute une flèche. L'édifice est une œuvre collective dans le temps."
+        },
+        {
+          "type": "image",
+          "asset": "chartres_cathedral_stained_glass",
+          "ratio": "4:3",
+          "caption": "Le vitrail : la lumière devenue récit."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p4",
+      "title": "Héritage",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le gothique a façonné le paysage européen. Au XIXe siècle, on le restaure et on l'imite. Aujourd'hui encore, ces nefs définissent l'idée même de « cathédrale »."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour bien saisir L'architecture gothique : les cathédrales, il faut garder une chose en tête : chaque détail technique sert une émotion ou une idée. L'œuvre n'est jamais seulement décorative."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le contexte compte autant que le style. Dates, lieux, commanditaires, public : tout cela explique pourquoi une forme apparaît à un moment précis, et pas avant."
+        },
+        {
+          "type": "paragraph",
+          "text": "Enfin, l'héritage se mesure dans le temps long. Ce que nous voyons aujourd'hui dans les musées, les films ou la musique populaire porte encore la trace de ces inventions."
+        },
+        {
+          "type": "paragraph",
+          "text": "Viollet-le-Duc au XIXe siècle restaure et parfois réinvente. Le néogothique des hôtels de ville et des églises prouve que le style est devenu symbole national autant que religieux."
+        },
+        {
+          "type": "takeaway",
+          "text": "Grâce à l'ogive et à l'arc-boutant, le gothique a transformé la pierre en lumière… et la foi en skyline."
+        }
+      ]
+    }
+  ]
+}

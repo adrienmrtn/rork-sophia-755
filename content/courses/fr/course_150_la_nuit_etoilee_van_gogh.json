@@ -1,0 +1,122 @@
+{
+  "id": "course_150_la_nuit_etoilee_van_gogh",
+  "title": "La Nuit étoilée, Van Gogh",
+  "subtitle": "1889",
+  "subject": "art",
+  "subcategory": "Cinéma, photo & architecture + œuvres iconiques",
+  "description": "Peinte à Saint-Rémy, La Nuit étoilée transforme le ciel en tourbillon émotionnel. Van Gogh invente un art de l'intérieur qui annonce l'expressionnisme.",
+  "hero": {
+    "image": "la_nuit_etoilee_van_gogh",
+    "ratio": "16:9",
+    "hook": "Un ciel qui tourne plus fort que le village endormi."
+  },
+  "sections": [
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **1889**, **Vincent van Gogh**, né aux [[Pays-Bas]], peint *La Nuit étoilée* depuis l'asile de Saint-Rémy-de-Provence. Le village dort. Le ciel, lui, brûle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce n'est pas un paysage « exact ». C'est de l'[[Art comme expression intérieure]]."
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p1",
+      "title": "Arles, Gauguin, la crise",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Avant Saint-Rémy, le [[Drame d'Arles avec Gauguin]] a brisé sa vie commune avec Paul Gauguin. Oreille mutilée, isolement, puis internement. Pourtant, la production picturale explose."
+        },
+        {
+          "type": "paragraph",
+          "text": "Van Gogh écrit à son frère Théo des lettres qui éclairent la toile : il veut peindre des étoiles « plus grandes », plus vibrantes que le visible. L'exagération est un choix, pas une erreur."
+        },
+        {
+          "type": "image",
+          "asset": "van_gogh_starry_night_detail",
+          "ratio": "4:3",
+          "caption": "Des touches qui tournent comme des ondes."
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p2",
+      "title": "Un ciel inventé",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le cyprès monte comme une flamme noire. Les étoiles sont des vortex. Van Gogh a pu s'inspirer d'estampes japonaises comme la [[Grande Vague de Kanagawa]], où la nature devient force pure."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le village sous le ciel reste stable, presque naïf. Ce contraste donne son sens au tableau : le monde humain dort, le cosmos s'enflamme. L'asile n'apparaît pas ; la vision, si."
+        },
+        {
+          "type": "funFact",
+          "text": "L'église du tableau ne ressemble pas à celle de Saint-Rémy : Vincent peint parfois de mémoire, ou d'espoir."
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p3",
+      "title": "Après Van Gogh",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mort en **1890**, il vend très peu de son vivant. Les [[Fauves]], puis les expressionnistes, reconnaîtront en lui un frère. Aujourd'hui, *La Nuit étoilée* est au MoMA de New York."
+        },
+        {
+          "type": "paragraph",
+          "text": "Après sa mort, les expositions et les marchands construisent le mythe du génie maudit. *La Nuit étoilée* concentre ce récit : beauté née dans la crise."
+        },
+        {
+          "type": "image",
+          "asset": "van_gogh_saint_remy_asylum",
+          "ratio": "4:3",
+          "caption": "Saint-Rémy : peindre pour tenir."
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p4",
+      "title": "Héritage",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L'œuvre dit qu'un ciel peut raconter une psyché. C'est pour cela qu'elle traverse les posters et les écrans sans s'épuiser."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour bien saisir La Nuit étoilée, Van Gogh, il faut garder une chose en tête : chaque détail technique sert une émotion ou une idée. L'œuvre n'est jamais seulement décorative."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le contexte compte autant que le style. Dates, lieux, commanditaires, public : tout cela explique pourquoi une forme apparaît à un moment précis, et pas avant."
+        },
+        {
+          "type": "paragraph",
+          "text": "Enfin, l'héritage se mesure dans le temps long. Ce que nous voyons aujourd'hui dans les musées, les films ou la musique populaire porte encore la trace de ces inventions."
+        },
+        {
+          "type": "paragraph",
+          "text": "Reproduite à l'infini, l'œuvre risque le cliché. Devant l'original, les touffes de peinture rappellent pourtant qu'il s'agit d'un travail physique, presque sculpté sur la toile."
+        },
+        {
+          "type": "takeaway",
+          "text": "À Saint-Rémy en 1889, Van Gogh a transformé la nuit en émotion pure, ouvrant la voie à l'art d'expression du XXe siècle."
+        }
+      ]
+    }
+  ]
+}

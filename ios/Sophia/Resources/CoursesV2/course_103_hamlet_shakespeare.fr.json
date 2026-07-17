@@ -1,0 +1,116 @@
+{
+  "id": "course_103_hamlet_shakespeare",
+  "title": "Hamlet, Shakespeare",
+  "subtitle": "vers 1601",
+  "subject": "litterature",
+  "subcategory": "Anglo-saxons & littérature mondiale",
+  "description": "Vers 1601, Shakespeare écrit Hamlet, prince hésitant face au meurtre de son père. Entre vengeance, folie simulée et « Être ou ne pas être », naît le héros moderne de la conscience.",
+  "hero": {
+    "image": "hamlet_shakespeare",
+    "ratio": "16:9",
+    "hook": "Un fantôme, un prince qui hésite, et la question existentielle la plus célèbre du théâtre."
+  },
+  "sections": [
+    {
+      "id": "course_103_hamlet_shakespeare_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vers **1601**, **William Shakespeare** écrit [[Hamlet, Prince de Danemark]]. Ce n'est pas seulement une tragédie de vengeance : c'est le portrait d'une conscience moderne, partagée entre action et doute. Le monologue « **Être ou ne pas être** » est devenu la question existentielle par excellence du théâtre occidental."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fantômes, folie simulée, duel final : la pièce mêle le surnaturel et la psychologie. Hamlet ne ressemble pas aux héros classiques impulsifs. Il pense trop pour agir vite, et c'est précisément ce qui le rend immortel."
+        }
+      ]
+    },
+    {
+      "id": "course_103_hamlet_shakespeare_p1",
+      "title": "Le contexte élisabéthain : un théâtre du monde",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Shakespeare écrit à l'apogée du théâtre anglais, sous **Élisabeth Ire**. Les pièces se jouent au **Globe Theatre**, théâtre circulaire en bois, ouvert sur le ciel. Riches et pauvres se côtoient. Les acteurs sont tous des hommes : les femmes sont interdites sur scène."
+        },
+        {
+          "type": "image",
+          "asset": "william_shakespeare_portrait",
+          "ratio": "4:3",
+          "caption": "William Shakespeare, auteur de la tragédie la plus commentée du monde."
+        },
+        {
+          "type": "funFact",
+          "text": "Le rôle d'Ophélie fut créé par un adolescent dont la voix n'avait pas encore mué, conformément aux usages de l'époque."
+        },
+        {
+          "type": "image",
+          "asset": "globe_theatre_london_elizabethan",
+          "ratio": "16:9",
+          "caption": "Le Globe Theatre : scène du théâtre élisabéthain où Hamlet a conquis le public."
+        },
+        {
+          "type": "paragraph",
+          "text": "Shakespeare cherche la vérité du cœur plus que le réalisme plat. Dans Hamlet, il met en scène une pièce dans la pièce, la « Souricière », pour piéger **Claudius**. Le théâtre devient un miroir du monde."
+        }
+      ]
+    },
+    {
+      "id": "course_103_hamlet_shakespeare_p2",
+      "title": "La spirale de la vengeance et le poids de l'hésitation",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le roi de Danemark est assassiné par son frère **Claudius**, qui épouse la reine **Gertrude** et prend le trône. Le fantôme révèle le crime à **Hamlet**, étudiant à **Wittenberg**. Le devoir semble clair : venger le père. Mais Hamlet doute : ce spectre est-il vraiment son père ? La vengeance est-elle juste ?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tiraillé entre la [[Loi du talion]] et la conscience chrétienne, il simule la folie pour enquêter. Cette stratégie échoue : il brise le cœur d'**Ophélie** et tue par erreur **Polonius**, conseiller du roi. L'engrenage mène au massacre final de la cour."
+        }
+      ]
+    },
+    {
+      "id": "course_103_hamlet_shakespeare_p3",
+      "title": "La mélancolie et la corruption du Danemark",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "« Il y a quelque chose de pourri au royaume de Danemark. » La pièce respire la décomposition morale. Le langage d'Hamlet est saturé d'images de maladie et de cadavres. Sa [[La mélancolie au XVIe siècle]], excès de bile noire selon la médecine de l'époque, le rend brillant mais paralysé."
+        },
+        {
+          "type": "image",
+          "asset": "hamlet_skull_yorick_delacroix_painting",
+          "ratio": "4:3",
+          "caption": "Hamlet et le crâne de Yorick : la mort rappelle la vanité de toute ambition."
+        },
+        {
+          "type": "paragraph",
+          "text": "« Être ou ne pas être » interroge l'existence elle-même. Agir, c'est se salir dans un monde corrompu ; ne pas agir, c'est laisser le mal triompher. Hamlet devient le premier héros moderne, incapable de réconcilier pensée et acte."
+        }
+      ]
+    },
+    {
+      "id": "course_103_hamlet_shakespeare_p4",
+      "title": "Héritage et postérité d'un mythe universel",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Depuis quatre siècles, Hamlet est réinterprété sans fin. Les Romantiques y voyaient l'artiste tourmenté ; Freud y lisait le [[complexe d'Oedipe]]. La pièce parle de la perte d'un parent, de la noirceur du monde et du passage à l'âge adulte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Son influence dépasse le théâtre : cinéma, opéra, bandes dessinées. Shakespeare transforme une histoire de fantôme en enquête métaphysique. Hamlet reste la tragédie de l'indécision, où la conscience devient un fardeau."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Hamlet** montre qu'un héros peut être immortel non parce qu'il agit vite, mais parce qu'il doute profondément. Shakespeare invente ici la modernité du théâtre : penser, c'est déjà souffrir."
+        }
+      ]
+    }
+  ]
+}

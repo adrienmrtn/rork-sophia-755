@@ -1,0 +1,126 @@
+{
+  "id": "course_93_le_rouge_et_le_noir_stendhal",
+  "title": "Le Rouge et le Noir, Stendhal",
+  "subtitle": "1830",
+  "subject": "litterature",
+  "subcategory": "Classiques français & européens",
+  "description": "Julien Sorel, fils de charpentier, veut s'élever dans une France fermée. Stendhal invente le roman psychologique moderne.",
+  "hero": {
+    "image": "le_rouge_et_le_noir_stendhal",
+    "ratio": "16:9",
+    "hook": "Rouge pour l'uniforme, noir pour la soutane : deux couleurs, une seule ambition."
+  },
+  "sections": [
+    {
+      "id": "course_93_le_rouge_et_le_noir_stendhal_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Publié en **1830**, **Le Rouge et le Noir** est l'acte de naissance du roman psychologique. **Stendhal**, de son vrai nom Henri Beyle, suit **Julien Sorel**, jeune roturier dévoré par l'ambition dans la [[Restauration française (1815-1830)]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Entre nostalgie napoléonienne et société étouffante, le roman analyse l'hypocrisie sociale et les tourments d'une âme qui cherche sa place."
+        }
+      ]
+    },
+    {
+      "id": "course_93_le_rouge_et_le_noir_stendhal_p1",
+      "title": "Stendhal et le beylisme",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stendhal revendique un style sec, influencé par sa carrière militaire. Il appelle cela le **[[Beylisme]]** : clarté, sincérité, refus de l'emphase romantique."
+        },
+        {
+          "type": "image",
+          "asset": "stendhal_henri_beyle_portrait",
+          "ratio": "4:3",
+          "caption": "Stendhal : l'analyste implacable des passions."
+        },
+        {
+          "type": "funFact",
+          "text": "Stendhal lisait chaque matin quelques pages du Code civil pour garder un ton naturel et dénué d'emphase."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le sous-titre, **[[Chronique de 1830]]**, rappelle la double ambition : peindre l'âme avec précision et dresser le portrait d'une France sclérosée."
+        }
+      ]
+    },
+    {
+      "id": "course_93_le_rouge_et_le_noir_stendhal_p2",
+      "title": "Julien Sorel : l'énergie contre le système",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fils de charpentier méprisé, Julien possède une intelligence rare. Il récite la **[[Vulgate]]** en latin. En **1830**, le « rouge » de l'uniforme militaire a cédé au « noir » de la robe ecclésiastique, seul vecteur de pouvoir pour un roturier instruit."
+        },
+        {
+          "type": "image",
+          "asset": "french_restoration_era_1830_painting",
+          "ratio": "4:3",
+          "caption": "La France de la Restauration : une société où l'ambition doit se cacher."
+        },
+        {
+          "type": "paragraph",
+          "text": "Julien entre au séminaire, puis devient précepteur chez les **de Rênal** à Verrières. Sa conquête de Mme de Rênal est d'abord une opération de guerre. L'hypocrisie devient son outil de survie. L'intrigue s'inspire de l'affaire Antoine Berthet, séminariste condamné à mort en **1827**."
+        }
+      ]
+    },
+    {
+      "id": "course_93_le_rouge_et_le_noir_stendhal_p3",
+      "title": "De la province aux salons parisiens",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "À Paris, Julien devient secrétaire du **marquis de La Mole**. Il séduit **Mathilde de La Mole**, aristocrate fière qui aime le danger. Julien la voit comme le trophée ultime de son ascension."
+        },
+        {
+          "type": "paragraph",
+          "text": "Chez Stendhal, l'amour est souvent une mise en scène où l'on s'observe plus qu'on ne s'abandonne. Julien obtient un titre et l'accord pour épouser Mathilde, mais une lettre de Mme de Rênal dénonce ses mensonges. Le **[[Le symbolisme du Rouge et du Noir]]** oppose l'uniforme militaire à la robe ecclésiastique, seuls leviers d'ascension pour un roturier."
+        }
+      ]
+    },
+    {
+      "id": "course_93_le_rouge_et_le_noir_stendhal_p4",
+      "title": "La vérité au pied de l'échafaud",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Julien tire sur Mme de Rênal dans l'église de Verrières. En prison, il cesse de calculer. Face à la mort, l'ambition s'efface devant le regret du bonheur vécu avec elle. Il refuse de sauver sa tête par l'intrigue."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1827",
+              "title": "Fait divers",
+              "detail": "L'affaire Antoine Berthet inspire le roman."
+            },
+            {
+              "date": "1830",
+              "title": "Publication",
+              "detail": "Le roman paraît peu avant les Trois Glorieuses."
+            },
+            {
+              "date": "Fin",
+              "title": "Exécution",
+              "detail": "Mathilde emporte la tête tranchée de Julien."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Dans **Le Rouge et le Noir** (1830), Stendhal montre comment l'ambition sociale et le bonheur sincère s'opposent dans une société fondée sur l'hypocrisie."
+        }
+      ]
+    }
+  ]
+}

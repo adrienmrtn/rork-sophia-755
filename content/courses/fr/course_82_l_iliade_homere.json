@@ -1,0 +1,131 @@
+{
+  "id": "course_82_l_iliade_homere",
+  "title": "L'Iliade, Homère",
+  "subtitle": "VIIIe siècle av. J.-C.",
+  "subject": "litterature",
+  "subcategory": "Grecs & Philosophes antiques",
+  "description": "Pas toute la guerre de Troie : 51 jours de colère. Achille se retire, Patrocle meurt, Hector tombe. Homère montre comment la gloire peut devenir bestiale, puis humaine.",
+  "hero": {
+    "image": "l_iliade_homere",
+    "ratio": "16:9",
+    "hook": "Un seul mot ouvre le poème : la colère. Et toute la guerre bascule."
+  },
+  "sections": [
+    {
+      "id": "course_82_l_iliade_homere_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "On croit souvent que l'**Iliade** raconte toute la guerre de Troie. En réalité, le poème attribué à **Homère** se concentre sur **51 jours** de la dixième année. Son premier thème n'est pas Troie : c'est la **colère** d'**Achille**, le meilleur guerrier grec."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le nom vient d'**Ilion**, autre nom de Troie, sur la côte de l'actuelle Turquie. Sous les dieux et les duels, Homère pose une question simple : que vaut la gloire quand tout le monde meurt ?"
+        }
+      ]
+    },
+    {
+      "id": "course_82_l_iliade_homere_p1",
+      "title": "Pourquoi Achille quitte le combat",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le prétexte mythique est connu : **Pâris** a enlevé **Hélène**, reine de Sparte. **Agamemnon**, chef des Grecs, mène la coalition. Mais le poème s'ouvre sur une crise interne. Agamemnon humilie Achille en lui prenant **Briséis**, sa captive. Pour Achille, c'est une atteinte à sa [[timè]], l'honneur dû au mérite."
+        },
+        {
+          "type": "image",
+          "asset": "achilles_agamemnon_quarrel_painting",
+          "ratio": "4:3",
+          "caption": "La dispute entre Achille et Agamemnon, point de départ de toute l'Iliade."
+        },
+        {
+          "type": "paragraph",
+          "text": "Achille se retire sous sa tente. Pire : il demande à sa mère **Thétis** d'obtenir de **Zeus** une défaite grecque. Son ressentiment passe avant la survie de ses compagnons. La guerre devient d'abord une affaire d'ego."
+        }
+      ]
+    },
+    {
+      "id": "course_82_l_iliade_homere_p2",
+      "title": "Patrocle meurt, la colère change de nature",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sans leur champion, les Grecs plient. Les Troyens, menés par le prince **Hector**, menacent les navires. **Patrocle**, compagnon d'Achille, emprunte son armure pour faire peur à l'ennemi. Achille accepte, mais lui interdit d'aller trop loin."
+        },
+        {
+          "type": "funFact",
+          "text": "Dans l'Iliade, les dieux se blessent aussi. Le guerrier Diomède blesse Aphrodite à la main, et le dieu de la guerre Arès doit fuir en hurlant."
+        },
+        {
+          "type": "paragraph",
+          "text": "Patrocle désobéit. Hector le tue, aidé par Apollon. La colère d'Achille, d'abord sociale, devient une soif de vengeance. Ce n'est plus l'honneur bafoué : c'est le deuil qui arme le héros."
+        }
+      ]
+    },
+    {
+      "id": "course_82_l_iliade_homere_p3",
+      "title": "Achille contre Hector : la gloire devient bestiale",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Achille revient. Armé par **Héphaïstos**, il entre dans son [[Aristie homérique]], cette séquence où le héros surpasse les limites humaines. Il tue Hector devant Troie. Puis il attache le corps à son char et le traîne dans la poussière, sous les yeux de la famille."
+        },
+        {
+          "type": "image",
+          "asset": "trojan_war_ancient_greek_vase_painting",
+          "ratio": "4:3",
+          "caption": "La guerre de Troie sur un vase grec : gloire, violence et destin mêlés."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour les Grecs, refuser les rites funéraires, c'est sortir de l'humain. Achille, héros absolu, devient presque une bête. Homère montre le prix de cette colère sacrée, la **mênis**, poussée jusqu'au bout."
+        }
+      ]
+    },
+    {
+      "id": "course_82_l_iliade_homere_p4",
+      "title": "Priam devant Achille : l'humanité revient",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le vieux roi **Priam** traverse les lignes ennemies pour baiser les mains qui ont tué son fils. Face à ce père brisé, Achille pense à son propre père. Il rend le corps et accorde une trêve. Le poème s'achève sur les funérailles d'Hector, pas sur le [[cheval de Troie]], qui n'y figure pas."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Jour 1",
+              "title": "Dispute Achille-Agamemnon",
+              "detail": "Achille se retire du combat."
+            },
+            {
+              "date": "Milieu",
+              "title": "Mort de Patrocle",
+              "detail": "La vengeance remplace l'honneur blessé."
+            },
+            {
+              "date": "Duel",
+              "title": "Mort d'Hector",
+              "detail": "Achille triomphe, puis profane le corps."
+            },
+            {
+              "date": "Fin",
+              "title": "Priam et Achille",
+              "detail": "Le deuil commun ramène un peu d'humain."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "L'**Iliade** n'est pas un manuel de gloire. En **51 jours**, Homère montre comment la colère détruit, puis comment deux ennemis se reconnaissent dans la même douleur."
+        }
+      ]
+    }
+  ]
+}

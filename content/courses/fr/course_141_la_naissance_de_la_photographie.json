@@ -1,0 +1,69 @@
+{
+  "id": "course_141_la_naissance_de_la_photographie",
+  "title": "La naissance de la photographie",
+  "subtitle": "1839",
+  "subject": "art",
+  "subcategory": "Cinéma, photo & architecture",
+  "description": "En **1839**, plusieurs inventeurs trouvent enfin comment fixer une image sur une plaque. En moins d'un siècle, la photographie change notre façon de voir, de se souvenir et de croire.",
+  "hero": {
+    "image": "la_naissance_de_la_photographie",
+    "ratio": "16:9",
+    "hook": "Comment une invention chimique a volé à la peinture son monopole sur le réel."
+  },
+  "sections": [
+    {
+      "id": "course_141_la_naissance_de_la_photographie_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Pendant des siècles, les artistes utilisent la [[chambre noire]] : une boîte sombre qui projette le monde extérieur sur une paroi. Le problème reste le même : l'image disparaît dès qu'on éteint la lumière. En **1839**, la photographie naît officiellement. Ce n'est pas l'œuvre d'un seul génie, mais une course entre inventeurs français et britanniques." },
+        { "type": "paragraph", "text": "En moins d'un siècle, ce procédé libère la peinture de son rôle de document et devient le premier média de masse. Il change notre rapport au temps, à la mémoire et à la vérité visuelle." }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p1",
+      "title": "De Niépce au daguerréotype",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Tout commence avec **Nicéphore Niépce**, inventeur français. Vers **1826-1827**, il fixe la première image permanente : *Vue depuis la fenêtre du Gras*. Il enduit une plaque d'étain de [[bitume de Judée]], un goudron qui durcit à la lumière. L'exposition dure environ **8 heures** : le soleil a le temps d'éclairer les deux côtés des bâtiments." },
+        { "type": "image", "asset": "niepce_first_photograph_view_from_window_gras", "ratio": "4:3", "caption": "La plus ancienne photographie connue, prise par Niépce depuis sa fenêtre." },
+        { "type": "funFact", "text": "Sur cette image, les ombres des deux façades sont visibles en même temps : la prise de vue a duré si longtemps que le soleil a fait le tour du ciel." },
+        { "type": "paragraph", "text": "Après la mort de Niépce, son associé **Louis Daguerre** découvre l'effet des vapeurs d'iode et de mercure sur l'argent. Il met au point le **daguerréotype**, présenté à l'Académie des sciences en **1839**. En Angleterre, **William Fox Talbot** développe en parallèle le [[Le calotype de William Fox Talbot]], qui permet de tirer plusieurs copies à partir d'un négatif." }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p2",
+      "title": "Le portrait pour tous, la preuve pour tous",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Dès les années **1840**, la photo sort des laboratoires. Jusque-là, avoir son portrait était un luxe réservé à ceux qui pouvaient payer un peintre. Avec les studios et la [[carte-de-visite]], un petit format bon marché, la bourgeoisie puis les classes populaires accèdent à l'image d'elles-mêmes." },
+        { "type": "image", "asset": "louis_daguerre_daguerreotype_silver_plate", "ratio": "4:3", "caption": "Le daguerréotype : une image unique, d'un détail saisissant, sur plaque d'argent." },
+        { "type": "paragraph", "text": "La photo devient aussi une preuve. Pendant la guerre de Crimée (**1855**), **Roger Fenton** rapporte des images du front. Pendant la guerre de Sécession américaine, **Mathew Brady** photographie les soldats et les champs de bataille. L'événement n'est plus seulement raconté : il est montré." }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p3",
+      "title": "Quand la peinture doit se réinventer",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Si une machine copie un visage mieux qu'un peintre, à quoi sert encore la peinture ? C'est [[L'impact de la photo sur la peinture figurative]] : l'art figuratif perd son monopole sur le réel. Libérés de ce devoir, les artistes explorent autre chose : la sensation lumineuse avec l'[[impressionnisme]], puis la déformation des formes avec le [[cubisme]]." },
+        { "type": "paragraph", "text": "La photographie, elle, revendique peu à peu son propre langage : cadrage, lumière, instant. Elle n'est plus une simple copie du monde. Elle devient un art à part entière." }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p4",
+      "title": "Kodak et la culture de l'image",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "À la fin du XIXe siècle, **George Eastman**, fondateur de Kodak, remplace les lourdes plaques de verre par un film souple. L'appareil devient portatif. Le slogan « Vous appuyez sur le bouton, nous faisons le reste » marque la naissance de l'amateur. L'album de famille et le reportage mondial naissent ensemble." },
+        { "type": "timeline", "events": [
+          { "date": "1826", "title": "Première photo de Niépce", "detail": "Vue depuis la fenêtre du Gras, après des heures d'exposition." },
+          { "date": "1839", "title": "Le daguerréotype", "detail": "Daguerre présente son procédé à Paris." },
+          { "date": "1841", "title": "Le calotype", "detail": "Talbot permet le tirage en plusieurs exemplaires." },
+          { "date": "1888", "title": "Kodak pour tous", "detail": "Eastman démocratise l'appareil photo amateur." }
+        ] },
+        { "type": "takeaway", "text": "Née en **1839**, la photographie a d'abord fixé le réel mieux que la peinture, puis a inventé notre [[culture visuelle]] moderne : celle où l'on croit d'abord ce que l'on voit." }
+      ]
+    }
+  ]
+}

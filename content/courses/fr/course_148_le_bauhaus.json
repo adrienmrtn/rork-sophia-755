@@ -1,0 +1,122 @@
+{
+  "id": "course_148_le_bauhaus",
+  "title": "Le Bauhaus",
+  "subtitle": "1919-1933",
+  "subject": "art",
+  "subcategory": "Cinéma, photo & architecture + œuvres iconiques",
+  "description": "Fondé par Gropius à Weimar, le Bauhaus unit art et industrie. Chaises, typo, bâtiments : un style moderne que les nazis ferment… et que le monde adopte.",
+  "hero": {
+    "image": "le_bauhaus",
+    "ratio": "16:9",
+    "hook": "Une école fermée en 1933 dont le design remplit encore nos vies."
+  },
+  "sections": [
+    {
+      "id": "course_148_le_bauhaus_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **1919**, à Weimar, l'architecte **Walter Gropius** fonde le **Bauhaus**. Objectif : réconcilier l'art, l'artisanat et l'industrie."
+        },
+        {
+          "type": "paragraph",
+          "text": "En quatorze ans seulement, l'école invente une grande part de l'esthétique moderne."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p1",
+      "title": "Ateliers et idée neuve",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "On y apprend en faisant : métal, textile, typographie, architecture. [[Vassily Kandinsky]] y enseigne. L'idéal est le [[Fonctionnalisme en design]] : la forme suit l'usage."
+        },
+        {
+          "type": "paragraph",
+          "text": "Après la Première Guerre mondiale, l'Allemagne cherche un avenir. Gropius répond par une école où peindre, souder et construire se parlent. L'artiste doit comprendre la machine, non la fuir."
+        },
+        {
+          "type": "image",
+          "asset": "bauhaus_dessau_building",
+          "ratio": "4:3",
+          "caption": "Dessau : l'école comme manifeste de verre et d'acier."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p2",
+      "title": "Un alphabet du quotidien",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Chaises tubulaires, lampes, caractères [[sans-serif]] : le Bauhaus dessine des objets simples, reproductibles. Proche parfois de [[De Stijl]], il veut un langage clair, sans ornement inutile."
+        },
+        {
+          "type": "paragraph",
+          "text": "À Dessau, le bâtiment de l'école est lui-même un manifeste : verre, béton, asymétrie lisible. On enseigne autant le regard que le geste. L'élève sort capable de penser un objet utile."
+        },
+        {
+          "type": "funFact",
+          "text": "Beaucoup d'objets « design » d'aujourd'hui reprennent des idées nées dans ces ateliers."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p3",
+      "title": "La fermeture nazie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **1933**, [[La fermeture par les nazis (1933)]] met fin à l'école, jugée trop cosmopolite et « dégénérée ». Les maîtres s'exilent. Leurs idées voyagent aux États-Unis, en Israël (la [[Ville blanche de Tel-Aviv]]), partout."
+        },
+        {
+          "type": "paragraph",
+          "text": "Quand le pouvoir nazi s'affirme, l'ouverture internationale du Bauhaus devient suspecte. La fermeture disperse les talents : New York, Chicago, Tel-Aviv. L'exil devient diffusion."
+        },
+        {
+          "type": "image",
+          "asset": "bauhaus_furniture_tubular_chair",
+          "ratio": "4:3",
+          "caption": "Le tube d'acier : l'élégance industrielle."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p4",
+      "title": "Héritage",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fermé politiquement, le Bauhaus a gagné culturellement. Interfaces, logos, immeubles modernes : son ombre est partout."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour bien saisir Le Bauhaus, il faut garder une chose en tête : chaque détail technique sert une émotion ou une idée. L'œuvre n'est jamais seulement décorative."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le contexte compte autant que le style. Dates, lieux, commanditaires, public : tout cela explique pourquoi une forme apparaît à un moment précis, et pas avant."
+        },
+        {
+          "type": "paragraph",
+          "text": "Enfin, l'héritage se mesure dans le temps long. Ce que nous voyons aujourd'hui dans les musées, les films ou la musique populaire porte encore la trace de ces inventions."
+        },
+        {
+          "type": "paragraph",
+          "text": "Du logo plat à l'immeuble HLM moderniste, l'héritage est ambivalent. Le Bauhaus a voulu le beau pour tous ; on lui a parfois reproché une froideur standardisée. Le débat continue."
+        },
+        {
+          "type": "takeaway",
+          "text": "En 14 ans, le Bauhaus a uni art et industrie… avant que les nazis ne ferment l'école dont le monde entier a gardé le style."
+        }
+      ]
+    }
+  ]
+}

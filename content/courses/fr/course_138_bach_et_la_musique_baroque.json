@@ -1,0 +1,145 @@
+{
+  "id": "course_138_bach_et_la_musique_baroque",
+  "title": "Bach et la musique baroque",
+  "subtitle": "1685-1750",
+  "subject": "art",
+  "subcategory": "Musique",
+  "description": "Johann Sebastian Bach, cantor à Leipzig, porte la fugue et le contrepoint à leur sommet et devient l'architecte du baroque.",
+  "hero": {
+    "image": "bach_et_la_musique_baroque",
+    "ratio": "16:9",
+    "hook": "Un cantor de Leipzig construit la cathédrale sonore de l'Occident."
+  },
+  "sections": [
+    {
+      "id": "course_138_bach_et_la_musique_baroque_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Johann Sebastian Bach** (**1685**-**1750**) est souvent tenu pour le sommet de la musique occidentale. Architecte des sons, il porte à perfection l'art de la **fugue** et du [[Contrepoint]] : plusieurs lignes mélodiques indépendantes qui s'entrelacent."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sa vie n'est pas celle d'une star de cour. C'est celle d'un artisan de génie, au service de l'Église et des princes, dont l'œuvre ne sera pleinement redécouverte qu'au XIXe siècle."
+        }
+      ]
+    },
+    {
+      "id": "course_138_bach_et_la_musique_baroque_p1",
+      "title": "Le baroque : église, cour et scène",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L'ère **baroque** va environ de **1600** à la mort de Bach. Elle aime contraste, mouvement, ornement. **Vivaldi** en Italie, **Haendel** en Allemagne puis en Angleterre, dominent le paysage. La musique sert trois missions : l'église (orgue et chant sacré), la chambre des princes, et la scène (opéra)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bach n'écrit pas d'opéra, mais il injecte le drame lyrique dans ses Passions et oratorios. Il synthétise mesure française, lyrisme italien et rigueur allemande. Pour lui, la musique reflète un ordre divin, pas seulement un agrément."
+        },
+        {
+          "type": "funFact",
+          "text": "En 1717 à Weimar, Bach passe un mois en prison pour avoir insisté trop fort à démissionner : le duc refusait de le laisser partir pour Köthen."
+        }
+      ]
+    },
+    {
+      "id": "course_138_bach_et_la_musique_baroque_p2",
+      "title": "Leipzig : le cantor et ses cantates",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Né à **Eisenach** en **1685** dans une dynastie de musiciens, Bach s'installe en **1723** à **Leipzig** comme [[cantor]] de l'église Saint-Thomas. Charge écrasante : une nouvelle [[cantate]] presque chaque semaine, plus l'enseignement à la [[Thomasschule]]."
+        },
+        {
+          "type": "image",
+          "asset": "bach_eisenach_birthplace_portrait",
+          "ratio": "4:3",
+          "caption": "Bach, héritier d'une lignée de musiciens allemands."
+        },
+        {
+          "type": "image",
+          "asset": "leipzig_st_thomas_church_bach_cantor",
+          "ratio": "4:3",
+          "caption": "Saint-Thomas de Leipzig : le quotidien du cantor Bach."
+        },
+        {
+          "type": "paragraph",
+          "text": "On estime environ **300** cantates composées, dont quelque **200** nous sont parvenues. Il a **20** enfants de deux mariages ; **Carl Philipp Emanuel** et **Johann Christian** deviennent eux-mêmes des compositeurs majeurs. Le soir, il dirige le [[Collegium Musicum]], ensemble pour lequel il écrit concertos et suites profanes."
+        },
+        {
+          "type": "funFact",
+          "text": "En fin de vie, opéré des yeux par le chirurgien itinérant John Taylor, Bach devient aveugle peu avant de mourir."
+        }
+      ]
+    },
+    {
+      "id": "course_138_bach_et_la_musique_baroque_p3",
+      "title": "Le Clavier bien tempéré et la redécouverte",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Avec le [[Tempérament égal]], système d'accordage qui unifie les intervalles, Bach prouve qu'un clavier peut jouer dans toutes les tonalités. *Le Clavier bien tempéré* (48 préludes et fugues) ouvre la voie à la musique moderne. Sa fugue superpose un thème repris par plusieurs voix : architecture mathématique."
+        },
+        {
+          "type": "image",
+          "asset": "bach_well_tempered_clavier_manuscript_fugue",
+          "ratio": "4:3",
+          "caption": "Le Clavier bien tempéré : toutes les tonalités sur un seul clavier."
+        },
+        {
+          "type": "paragraph",
+          "text": "À sa mort, la mode préfère le [[Style galant]], plus léger. Bach paraît « gothique ». En **1829**, le jeune **Felix Mendelssohn** dirige à Berlin la *Passion selon Saint-Matthieu* : début de la « Renaissance Bach ». Sans lui, des centaines de partitions auraient pu disparaître."
+        },
+        {
+          "type": "funFact",
+          "text": "Mendelssohn plaisantait : il fallait qu'un juif converti et un acteur (son ami Devrient) rendent au monde le plus grand chef-d'œuvre de la musique chrétienne."
+        }
+      ]
+    },
+    {
+      "id": "course_138_bach_et_la_musique_baroque_p4",
+      "title": "SDG, Voyager et l'héritage universel",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fervent luthérien, Bach signe souvent **SDG** (*Soli Deo Gloria* : à Dieu seul la gloire). Il joue avec la [[Numérologie]] et code son nom (B-A-C-H) en notes. En **1977**, la NASA place plusieurs de ses œuvres sur le [[Golden Record]] des sondes Voyager : ambassade sonore de l'humanité vers l'espace."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1685",
+              "title": "Naissance à Eisenach",
+              "detail": "Une dynastie de musiciens donne Bach au monde."
+            },
+            {
+              "date": "1723",
+              "title": "Cantor à Leipzig",
+              "detail": "Cantates hebdomadaires et œuvre sacrée immense."
+            },
+            {
+              "date": "1722-1742",
+              "title": "Clavier bien tempéré",
+              "detail": "Toutes les tonalités, la fugue comme cathédrale."
+            },
+            {
+              "date": "1829",
+              "title": "Mendelssohn",
+              "detail": "La Passion selon Saint-Matthieu revient à la lumière."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Cantor de Leipzig, Bach a porté le contrepoint et la fugue à leur sommet ; oublié puis ressuscité par Mendelssohn, il reste l'architecte du baroque."
+        }
+      ]
+    }
+  ]
+}

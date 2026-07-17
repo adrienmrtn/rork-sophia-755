@@ -1,0 +1,110 @@
+{
+  "id": "course_109_don_quichotte_cervantes",
+  "title": "Don Quichotte, Cervantès",
+  "subtitle": "1605-1615",
+  "subject": "litterature",
+  "subcategory": "Anglo-saxons & littérature mondiale",
+  "description": "Don Quichotte attaque des moulins à vent en croyant combattre des géants. Cervantès invente le roman moderne, entre folie généreuse, ironie et métafiction.",
+  "hero": {
+    "image": "don_quichotte_cervantes",
+    "ratio": "16:9",
+    "hook": "Un gentilhomme lit trop de romances de chevalerie et part sauver le monde."
+  },
+  "sections": [
+    {
+      "id": "course_109_don_quichotte_cervantes_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Publié en **1605** puis **1615**, **Don Quichotte** de **Miguel de Cervantès** est souvent considéré comme le premier roman moderne de l'Occident. Alonso Quijano, hidalgo de la Manche, se prend pour un chevalier errant et part combattre des moulins qu'il croit être des géants."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bien plus qu'une parodie des romans de chevalerie, le livre invente une manière nouvelle de raconter : personnages changeants, doute, humour et profondeur mêlés."
+        }
+      ]
+    },
+    {
+      "id": "course_109_don_quichotte_cervantes_p1",
+      "title": "Cervantès : une vie d'aventures et la naissance du roman",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cervantès (**1547-1616**) mène une vie d'aventures : blessé à la [[Bataille de Lépante (1571) et captivité de Cervantès]], captif cinq ans à Alger. De retour en Espagne, dans une relative pauvreté, il publie la première partie en **1605** avec un succès immédiat."
+        },
+        {
+          "type": "image",
+          "asset": "miguel_de_cervantes_portrait_painting",
+          "ratio": "4:3",
+          "caption": "Miguel de Cervantès, soldat, captif et inventeur du roman moderne."
+        },
+        {
+          "type": "funFact",
+          "text": "En 1614, un auteur publie une fausse suite. Furieux, Cervantès écrit la vraie seconde partie en 1615, où les héros découvrent qu'ils sont célèbres grâce au premier tome."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cervantès critique les romans de chevalerie obsolètes, mais surtout il invente la polyphonie narrative : chaque personnage a sa voix, sa perspective, son ironie."
+        }
+      ]
+    },
+    {
+      "id": "course_109_don_quichotte_cervantes_p2",
+      "title": "L'antagonisme fondateur : le Chevalier et l'Écuyer",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Don Quichotte** et **Sancho Panza** forment un duo immortel. L'un rêve de chevalerie, l'autre pense au ventre et au gouvernement d'une île promise. Sancho tente de corriger son maître, notamment quand celui-ci attaque des moulins à vent qu'il prend pour des géants."
+        },
+        {
+          "type": "image",
+          "asset": "don_quixote_windmills_gustave_dore_illustration",
+          "ratio": "4:3",
+          "caption": "Don Quichotte et les moulins : l'idéal heurte le réel."
+        },
+        {
+          "type": "paragraph",
+          "text": "Au fil du voyage, Sancho se laisse séduire par le rêve tandis que Quichotte doute face aux humiliations. Cette « quichottisation » et « sanchification » mutuelles transforment une farce en méditation sur l'amitié."
+        }
+      ]
+    },
+    {
+      "id": "course_109_don_quichotte_cervantes_p3",
+      "title": "La métafiction et le jeu des réalités",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cervantès pratique la [[Métafiction et réflexivité narrative]] : il prétend traduire un manuscrit arabe trouvé sur un marché. Le narrateur est mis en doute, le lecteur aussi. Dans la seconde partie, des nobles qui ont lu le livre organisent des mises en scène pour tromper le chevalier."
+        },
+        {
+          "type": "paragraph",
+          "text": "La folie n'est plus seulement dans la tête de Quichotte : la société la fabrique aussi. L'identité devient un récit qu'on se raconte. Cervantès pose les bases du roman psychologique moderne."
+        }
+      ]
+    },
+    {
+      "id": "course_109_don_quichotte_cervantes_p4",
+      "title": "Postérité : du quichottisme à l'héritage universel",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le « quichottisme » désigne un idéalisme généreux, parfois naïf. Flaubert, Dostoïevski et [[James Joyce]] s'inspirent de Cervantès. Le roman accepte l'ambiguïté : plus une seule Vérité imposée, mais des vérités conflictuelles portées par des individus."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vaincu par le Chevalier de la Blanche Lune, Don Quichotte retrouve la raison et meurt en Alonso Quijano le Bon. Paradoxe final : la raison est nécessaire pour vivre en société, mais l'imagination donne un sens héroïque à l'existence."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Don Quichotte** invente le roman moderne en jouant entre illusion et réalité. Cervantès montre qu'on peut être fou et lucide à la fois, et que l'idéal transforme le monde, même quand il échoue."
+        }
+      ]
+    }
+  ]
+}

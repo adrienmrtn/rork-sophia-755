@@ -1,0 +1,110 @@
+{
+  "id": "course_92_madame_bovary_flaubert",
+  "title": "Madame Bovary, Flaubert",
+  "subtitle": "1857",
+  "subject": "litterature",
+  "subcategory": "Classiques français & européens",
+  "description": "Emma Bovary confond la vie réelle avec les romans sentimentaux qu'elle a lus. Flaubert invente le roman moderne et le procès qui le rend célèbre.",
+  "hero": {
+    "image": "madame_bovary_flaubert",
+    "ratio": "16:9",
+    "hook": "Une femme qui s'ennuie en province. Puis l'adultère, les dettes, et un mot qui deviendra un diagnostic."
+  },
+  "sections": [
+    {
+      "id": "course_92_madame_bovary_flaubert_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **1857**, **Gustave Flaubert** publie **Madame Bovary**, roman d'une femme déçue par la province et sombrant dans l'adultère. Le livre marque une rupture dans la littérature : le **[[réalisme]]** moderne naît ici."
+        },
+        {
+          "type": "paragraph",
+          "text": "Flaubert sera jugé pour immoralité. Son procès fera du roman un scandale, puis un classique. À travers **Emma**, il interroge le pouvoir des fictions sur nos vies."
+        }
+      ]
+    },
+    {
+      "id": "course_92_madame_bovary_flaubert_p1",
+      "title": "Flaubert et l'ascèse du mot juste",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Gustave Flaubert** (1821-1880) s'isole à Croisset et consacre **cinq ans** (1851-1856) à ce roman. Sa règle : le « mot juste », sans répétition ni emphase. L'écrivain doit devenir invisible."
+        },
+        {
+          "type": "image",
+          "asset": "gustave_flaubert_portrait_photograph",
+          "ratio": "4:3",
+          "caption": "Flaubert : l'artisan du style pur."
+        },
+        {
+          "type": "funFact",
+          "text": "« Madame Bovary, c'est moi » : Flaubert ne parle pas d'autobiographie, mais d'une immersion totale dans la douleur de son héroïne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il déteste le romantisme de pacotille, tout en reconnaissant en lui la tentation du rêve. Cette tension alimente le drame d'Emma."
+        }
+      ]
+    },
+    {
+      "id": "course_92_madame_bovary_flaubert_p2",
+      "title": "Emma : le choc entre rêve et réalité",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Emma Rouault** a grandi au couvent avec des romans sentimentaux. Elle épouse **Charles Bovary**, médecin provincial honnête mais terne. Le couple s'installe à **Yonville**, en Normandie."
+        },
+        {
+          "type": "image",
+          "asset": "french_provincial_town_19th_century",
+          "ratio": "4:3",
+          "caption": "La province normande : décor de l'ennui qui pousse Emma vers l'adultère."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour fuir l'ennui, Emma aime **Rodolphe**, puis **Léon**. Chaque amant se révèle aussi banal que son mari. Le marchand **Lheureux** la pousse à l'endettement. Le roman s'inspire d'un fait divers : l'affaire Delphine Delamare, morte en **1848**."
+        }
+      ]
+    },
+    {
+      "id": "course_92_madame_bovary_flaubert_p3",
+      "title": "Style indirect libre et procès",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Flaubert invente le **[[style indirect libre]]** : la voix du narrateur se fond avec celle d'Emma, sans guillemets. Le lecteur accède à ses pensées tout en gardant une distance ironique."
+        },
+        {
+          "type": "paragraph",
+          "text": "En **1857**, Flaubert est acquitté d'« outrage à la morale publique ». Emma se suicide à l'arsenic volé chez l'apothicaire **[[Homais]]**. Charles meurt de chagrin, leur fille Berthe part travailler en usine, et Homais reçoit la croix d'honneur. Pas de justice poétique."
+        }
+      ]
+    },
+    {
+      "id": "course_92_madame_bovary_flaubert_p4",
+      "title": "Le bovarysme : une maladie moderne",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le philosophe Jules de Gaultier forge le terme **[[bovarysme]]** : l'insatisfaction chronique de celui qui préfère le fantasme au réel. Emma n'est pas seulement une femme adultère. Elle est la première figure de la frustration moderne liée à la consommation."
+        },
+        {
+          "type": "paragraph",
+          "text": "Flaubert élève la forme au-dessus du sujet : un livre sur « rien » peut être un chef-d'œuvre si le style est parfait. **Marcel Proust**, **Franz Kafka** et le Nouveau Roman lui doivent beaucoup."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Madame Bovary** (1857) révolutionne le roman par le **[[style indirect libre]]** et le **[[bovarysme]]** : confondre la vie réelle avec les fictions qu'on lit peut mener à la catastrophe."
+        }
+      ]
+    }
+  ]
+}

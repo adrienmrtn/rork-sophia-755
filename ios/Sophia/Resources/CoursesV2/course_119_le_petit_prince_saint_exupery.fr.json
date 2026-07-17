@@ -1,0 +1,110 @@
+{
+  "id": "course_119_le_petit_prince_saint_exupery",
+  "title": "Le Petit Prince, Saint-Exupéry",
+  "subtitle": "1943",
+  "subject": "litterature",
+  "subcategory": "Anglo-saxons & littérature mondiale",
+  "description": "Un petit prince venu d'une planète minuscule enseigne au pilote que l'essentiel est invisible pour les yeux.",
+  "hero": {
+    "image": "le_petit_prince_saint_exupery",
+    "ratio": "16:9",
+    "hook": "Apprivoiser, c'est créer des liens : la leçon du renard devenue universelle."
+  },
+  "sections": [
+    {
+      "id": "course_119_le_petit_prince_saint_exupery_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Le Petit Prince** (1943) est le livre français le plus traduit au monde, avec des versions dans plus de **300 langues**. Derrière la simplicité du trait de crayon se cache une méditation sur la condition humaine, l'altérité et la quête de sens."
+        },
+        {
+          "type": "paragraph",
+          "text": "Écrit en exil pendant la Seconde Guerre mondiale, c'est le testament spirituel d'**Antoine de Saint-Exupéry**, pilote de l'[[Aéropostale]] qui cherche dans l'innocence de l'enfance un remède au désenchantement."
+        }
+      ]
+    },
+    {
+      "id": "course_119_le_petit_prince_saint_exupery_p1",
+      "title": "Antoine de Saint-Exupéry et la genèse du Petit Prince",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **1942**, Saint-Exupéry est exilé à [[New York]] : la France est occupée. C'est paradoxalement dans le confort de [[Long Island]] qu'il écrit ce récit de désert, publié aux États-Unis en **avril 1943** par [[Reynal & Hitchcock]]."
+        },
+        {
+          "type": "image",
+          "asset": "antoine_de_saint_exupery_portrait_photograph",
+          "ratio": "4:3",
+          "caption": "Antoine de Saint-Exupéry, écrivain-pilote disparu en mer en 1944."
+        },
+        {
+          "type": "funFact",
+          "text": "Le **31 juillet 1944**, son avion, un [[Lockheed P-38 Lightning]], disparaît en mer. Son épave ne sera identifiée qu'en l'an 2000, au large de Marseille."
+        },
+        {
+          "type": "paragraph",
+          "text": "Saint-Exupéry n'a jamais connu le succès planétaire de son œuvre. Le manuscrit original ne montrait pas de mouton dans une caisse : un ami lui suggéra de le cacher pour laisser place à l'imagination."
+        }
+      ]
+    },
+    {
+      "id": "course_119_le_petit_prince_saint_exupery_p2",
+      "title": "Le voyage du Petit Prince : une satire de la modernité",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le récit s'ouvre sur une panne en plein Sahara. Le narrateur rencontre un petit être venu de l'astéroïde B-612, où l'on arrache les [[baobabs]] pour sauver sa planète minuscule."
+        },
+        {
+          "type": "image",
+          "asset": "little_prince_original_illustration_saint_exupery",
+          "ratio": "4:3",
+          "caption": "Les aquarelles originales de Saint-Exupéry : simplicité et profondeur."
+        },
+        {
+          "type": "paragraph",
+          "text": "De planète en planète, le Petit Prince rencontre des adultes obsédés : le Roi par le pouvoir, le Vaniteux par le narcissisme, le Businessman par la possession comptable. Seul l'allumeur de réverbères trouve grâce, car il éclaire le monde pour autrui."
+        }
+      ]
+    },
+    {
+      "id": "course_119_le_petit_prince_saint_exupery_p3",
+      "title": "Le renard et la philosophie de l'apprivoisement",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sur Terre, perdu parmi cinq mille roses, le Petit Prince croit sa **Rose** ordinaire. Le **Renard** lui enseigne d'**apprivoiser** : créer des liens qui rendent l'autre unique. « Tu deviens responsable pour toujours de ce que tu as apprivoisé. »"
+        },
+        {
+          "type": "paragraph",
+          "text": "« L'essentiel est invisible pour les yeux » : la vérité d'un être réside dans la relation, pas dans l'apparence. Le dénouement, où le Petit Prince accepte la morsure du serpent, reste l'un des plus ambigus de la littérature."
+        }
+      ]
+    },
+    {
+      "id": "course_119_le_petit_prince_saint_exupery_p4",
+      "title": "Une portée universelle et mémorielle",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le livre se lit à tous les âges : conte pour les enfants, critique du matérialisme pour les adultes. L'astéroïde (46610) a été nommé [[Bésixdouze]] en hommage à l'adresse spatiale du personnage."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le dessin du chapeau qui est en réalité un boa ayant mangé un éléphant est devenu le symbole de l'imagination contre le rationalisme étroit. Ce qui a été apprivoisé survit à la distance et au temps."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Le Petit Prince**, écrit en exil avant la disparition de Saint-Exupéry en **1944**, est une fable universelle sur l'apprivoisement et la responsabilité, devenue l'œuvre française la plus diffusée au monde."
+        }
+      ]
+    }
+  ]
+}

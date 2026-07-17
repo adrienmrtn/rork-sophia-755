@@ -1,0 +1,130 @@
+{
+  "id": "course_96_l_etranger_camus",
+  "title": "L'Étranger, Camus",
+  "subtitle": "1942",
+  "subject": "litterature",
+  "subcategory": "Classiques français & européens",
+  "description": "Meursault ne pleure pas à l'enterrement de sa mère. Camus invente l'absurde en 123 pages d'une sécheresse radicale.",
+  "hero": {
+    "image": "l_etranger_camus",
+    "ratio": "16:9",
+    "hook": "« Aujourd'hui, maman est morte. » Une phrase simple. Un procès pour tout autre chose que le meurtre."
+  },
+  "sections": [
+    {
+      "id": "course_96_l_etranger_camus_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**L'Étranger** (1942) est le premier roman d'**Albert Camus**. En **123 pages** d'**écriture blanche**, il suit **Meursault**, employé de bureau à Alger dont l'indifférence aux conventions le mène à sa perte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le livre met en fiction l'**[[Absurde chez Camus]]** : le divorce entre notre appel au sens et le silence du monde."
+        }
+      ]
+    },
+    {
+      "id": "course_96_l_etranger_camus_p1",
+      "title": "Camus et le cycle de l'absurde",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Albert Camus** (1913-1960) grandit dans l'**[[Algérie coloniale comme contexte]]** des années 1930, dans une famille modeste marquée par le silence. Il développe le cycle de l'absurde : le roman, l'essai **Le Mythe de Sisyphe** et la pièce **Caligula**."
+        },
+        {
+          "type": "image",
+          "asset": "albert_camus_portrait_photograph",
+          "ratio": "4:3",
+          "caption": "Albert Camus : lucidité, révolte et refus de tricher."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour Camus, l'absurde n'aboutit pas au nihilisme mais à la **révolte** : vivre malgré l'absence de sens. Le roman paraît chez **[[Gallimard]]** en pleine Occupation."
+        }
+      ]
+    },
+    {
+      "id": "course_96_l_etranger_camus_p2",
+      "title": "Meursault : l'homme sans masque",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Meursault refuse de mentir sur ses sentiments, à l'enterrement de sa mère comme face à **Marie**. Il vit le présent et ses sensations physiques plus que la morale."
+        },
+        {
+          "type": "image",
+          "asset": "algiers_beach_mediterranean_sunlight",
+          "ratio": "4:3",
+          "caption": "La plage d'Alger : lumière écrasante, déclencheur du drame."
+        },
+        {
+          "type": "funFact",
+          "text": "En français algérien de l'époque, « maman » était un terme affectueux courant, dépourvu de la connotation enfantine qu'il porte en métropole."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ébloui par le soleil sur une plage, Meursault tire sur un « Arabe » dont le texte tait le nom. Le geste n'est ni haine ni vengeance, mais une coïncidence tragique."
+        }
+      ]
+    },
+    {
+      "id": "course_96_l_etranger_camus_p3",
+      "title": "Le procès de l'âme",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le procès ne juge pas seulement le meurtre. Le procureur accuse Meursault d'avoir bu du café au lait devant le cercueil de sa mère et d'être allé au cinéma le lendemain."
+        },
+        {
+          "type": "paragraph",
+          "text": "La société condamne celui qui refuse les rituels collectifs. Meursault sera exécuté pour avoir « enterré sa mère avec un cœur de criminel ». Face à l'aumônier, il revendique sa vie et accepte la « tendre indifférence du monde »."
+        }
+      ]
+    },
+    {
+      "id": "course_96_l_etranger_camus_p4",
+      "title": "Un choc qui ne faiblit pas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Jean-Paul Sartre** explique l'importance du style haché à la première personne. Le roman annonce le **[[Nouveau Roman]]**. Les études **[[postcoloniales]]** interrogent l'anonymat de la victime, relu par **[[Kamel Daoud]]** dans « Meursault, contre-enquête »."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1942",
+              "title": "Publication",
+              "detail": "L'Étranger paraît chez Gallimard."
+            },
+            {
+              "date": "Procès",
+              "title": "Condamnation morale",
+              "detail": "Meursault est jugé sur ses émotions, pas seulement son crime."
+            },
+            {
+              "date": "1957",
+              "title": "Prix Nobel",
+              "detail": "Camus reçoit la distinction à 44 ans."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Camus n'écrit pas un manuel. Il montre un homme qui refuse les phrases toutes faites, jusqu'à en payer le prix. Soleil, plage, procès : chaque détail concret prépare une question plus large sur le sens."
+        },
+        {
+          "type": "takeaway",
+          "text": "**L'Étranger** (1942) illustre l'**[[Absurde chez Camus]]** : Meursault est condamné moins pour son crime que pour son refus de simuler des émotions imposées par la société."
+        }
+      ]
+    }
+  ]
+}

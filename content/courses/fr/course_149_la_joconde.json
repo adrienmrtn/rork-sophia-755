@@ -1,0 +1,122 @@
+{
+  "id": "course_149_la_joconde",
+  "title": "La Joconde",
+  "subtitle": "vers 1503-1519",
+  "subject": "art",
+  "subcategory": "Cinéma, photo & architecture + œuvres iconiques",
+  "description": "Portrait de Lisa Gherardini par Léonard, la Joconde doit sa gloire au sfumato… et à un vol spectaculaire en 1911.",
+  "hero": {
+    "image": "la_joconde",
+    "ratio": "16:9",
+    "hook": "Un sourire discret, un vol célèbre, et le tableau le plus regardé du monde."
+  },
+  "sections": [
+    {
+      "id": "course_149_la_joconde_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La *Joconde* est un petit portrait peint par **Léonard de Vinci** au début du XVIe siècle. Aujourd'hui au Louvre, derrière un [[Verre pare-balles]], elle attire des millions de visiteurs."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pourquoi elle, plutôt qu'une autre Madone ? Technique, mystère… et faits divers."
+        }
+      ]
+    },
+    {
+      "id": "course_149_la_joconde_p1",
+      "title": "Lisa et le sfumato",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le modèle est probablement [[Lisa Gherardini]], épouse d'un marchand florentin. Léonard utilise le [[Le sfumato léonardien]] : transitions douces, sans contour dur. La [[Perspective atmosphérique]] fond l'arrière-plan dans la brume."
+        },
+        {
+          "type": "paragraph",
+          "text": "Léonard travaille par couches translucides. Le regard semble suivre le visiteur parce que les ombres autour des yeux restent ambiguës. La technique sert le mystère, pas l'inverse."
+        },
+        {
+          "type": "image",
+          "asset": "mona_lisa_leonardo_louvre",
+          "ratio": "4:3",
+          "caption": "Le sourire qui refuse de se fixer."
+        }
+      ]
+    },
+    {
+      "id": "course_149_la_joconde_p2",
+      "title": "De Fontainebleau au Louvre",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le tableau suit Léonard en France, chez François Ier. Il entre dans les collections royales, puis au Louvre. Longtemps admiré des connaisseurs, il n'est pas encore l'icône planétaire."
+        },
+        {
+          "type": "paragraph",
+          "text": "François Ier attire Léonard en France. La toile reste dans la sphère royale, puis nationale. Elle survit aux révolutions comme un trésor d'État autant qu'une peinture."
+        },
+        {
+          "type": "funFact",
+          "text": "Léonard n'a jamais vraiment « livré » le tableau : il l'a gardé et retravaillé pendant des années."
+        }
+      ]
+    },
+    {
+      "id": "course_149_la_joconde_p3",
+      "title": "Le vol de 1911",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **1911**, [[Vincenzo Peruggia]], un Italien du Louvre, vole la toile. [[Le vol de la Joconde (1911)]] fait la une mondiale. On interroge même [[Guillaume Apollinaire]] et [[Pablo Picasso]]. Quand le tableau revient en **1913**, il est devenu une star."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le vol de 1911 transforme l'œuvre en serial médiatique. Cartes postales, chansons, files d'attente : la célébrité moderne naît d'un scandale autant que d'un génie."
+        },
+        {
+          "type": "image",
+          "asset": "mona_lisa_empty_wall_1911",
+          "ratio": "4:3",
+          "caption": "1911 : le mur vide qui invente la célébrité moderne."
+        }
+      ]
+    },
+    {
+      "id": "course_149_la_joconde_p4",
+      "title": "Icône",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Parodies, pubs, selfies : la Joconde est partout. On vient souvent « la voir » plus qu'on ne la regarde. Reste une leçon de peinture : la douceur peut être plus troublante que le spectacle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour bien saisir La Joconde, il faut garder une chose en tête : chaque détail technique sert une émotion ou une idée. L'œuvre n'est jamais seulement décorative."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le contexte compte autant que le style. Dates, lieux, commanditaires, public : tout cela explique pourquoi une forme apparaît à un moment précis, et pas avant."
+        },
+        {
+          "type": "paragraph",
+          "text": "Enfin, l'héritage se mesure dans le temps long. Ce que nous voyons aujourd'hui dans les musées, les films ou la musique populaire porte encore la trace de ces inventions."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aujourd'hui, on photographie surtout le verre et la foule. Pourtant, à l'échelle réelle, le tableau est petit, intime. Son pouvoir tient à cette contradiction : une icône planétaire peinte comme un murmure."
+        },
+        {
+          "type": "takeaway",
+          "text": "Chef-d'œuvre de sfumato, la Joconde est devenue icône mondiale surtout après le vol de 1911."
+        }
+      ]
+    }
+  ]
+}

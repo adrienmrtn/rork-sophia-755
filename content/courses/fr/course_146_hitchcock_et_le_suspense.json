@@ -1,0 +1,63 @@
+{
+  "id": "course_146_hitchcock_et_le_suspense",
+  "title": "Hitchcock et le suspense",
+  "subtitle": "1899-1980",
+  "subject": "art",
+  "subcategory": "Cinéma, photo & architecture",
+  "description": "**Alfred Hitchcock** invente le suspense moderne : donner au public une information que les personnages n'ont pas. Avec *Psycho*, *Vertigo* ou *La Fenêtre sur cour*, il manipule notre regard.",
+  "hero": {
+    "image": "hitchcock_et_le_suspense",
+    "ratio": "16:9",
+    "hook": "Le vrai suspense ne surprend pas : il vous laisse voir la bombe sous la table."
+  },
+  "sections": [
+    {
+      "id": "course_146_hitchcock_et_le_suspense_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "**Alfred Hitchcock** (1899-1980) est surnommé le « maître du suspense ». En plus de cinquante films, il transforme le thriller en art de la manipulation. *Psycho*, *Vertigo*, *La Fenêtre sur cour* : à chaque fois, la caméra ne raconte pas seulement une histoire. Elle joue avec nos nerfs." },
+        { "type": "paragraph", "text": "Son sujet favori n'est pas le crime. C'est le regard : culpabilité, obsession, voyeurisme. Hitchcock filme autant le spectateur que les personnages." }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p1",
+      "title": "Surprise contre suspense",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "En **1966**, Hitchcock explique sa méthode à [[François Truffaut]], critique puis cinéaste français. La **surprise**, dit-il, c'est une bombe qui explose sans prévenir : choc bref. Le **suspense**, c'est montrer la bombe au public alors que les personnages l'ignorent. La tension dure. On devient complices, et impuissants." },
+        { "type": "image", "asset": "alfred_hitchcock_portrait_director", "ratio": "4:3", "caption": "Hitchcock : un visage, une silhouette, une marque mondiale du frisson." },
+        { "type": "funFact", "text": "Pour faire avancer l'intrigue, il utilise souvent un [[MacGuffin]] : un objet ou un secret qui motive les personnages, mais dont la nature exacte importe peu. L'important, c'est la chasse." },
+        { "type": "paragraph", "text": "Cette asymétrie d'information est sa grammaire. Dès qu'on sait plus que le héros, on a peur pour lui." }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p2",
+      "title": "Inventions techniques pour filmer l'angoisse",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "En **1948**, avec *La Corde*, Hitchcock simule un [[plan-séquence]] unique : le film semble tourné d'une seule traite. Les bobines ne durent que dix minutes, alors il cache les coupes derrière un dos ou un meuble sombre. L'effet est étouffant : on reste enfermé avec les meurtriers." },
+        { "type": "image", "asset": "hitchcock_vertigo_james_stewart_kim_novak_film", "ratio": "4:3", "caption": "Vertigo : le vertige filmé comme une distorsion de l'espace." },
+        { "type": "paragraph", "text": "En **1958**, pour *Vertigo*, il invente le [[Dolly Zoom]] : la caméra recule pendant que le zoom avance (ou l'inverse). L'espace se déforme. On ne voit plus le vertige. On le ressent." }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p3",
+      "title": "Nous sommes tous des voyeurs",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Dans *La Fenêtre sur cour* (**1954**), un photographe à la jambe cassée espionne ses voisins. Il est le double du spectateur dans le noir. Hitchcock utilise la [[caméra subjective]] : nous voyons exactement ce que voit le héros, rien de plus." },
+        { "type": "paragraph", "text": "Cette identification est morale autant que visuelle. On cherche des indices, mais on partage aussi la culpabilité de regarder ce qui ne nous regarde pas. Hitchcock mêle thriller et [[psychanalyse]] : peurs enfouies, désirs interdits, doubles identités." }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p4",
+      "title": "Une marque, une musique, un héritage",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Hitchcock transforme son nom en marque, jusqu'à sa série télévisée *Alfred Hitchcock présente*. Pour *Psycho*, il interdit l'entrée après le début de séance : le secret devient événement. Sa collaboration avec le compositeur [[Bernard Herrmann]] lie musique et [[montage]] pour accélérer le pouls du public." },
+        { "type": "takeaway", "text": "Hitchcock a codifié le suspense moderne : informer le spectateur, diriger son regard, et transformer la peur en plaisir contrôlé. Des décennies plus tard, le thriller lui doit encore sa grammaire." }
+      ]
+    }
+  ]
+}

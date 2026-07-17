@@ -1,0 +1,106 @@
+{
+  "id": "course_102_la_ferme_des_animaux_george_orwell",
+  "title": "La Ferme des animaux, George Orwell",
+  "subtitle": "1945",
+  "subject": "litterature",
+  "subcategory": "Anglo-saxons & littérature mondiale",
+  "description": "En 1945, Orwell raconte une ferme où les animaux chassent l'homme, puis voient les cochons reprendre le pouvoir. Une allégorie limpide de la Révolution russe et de la trahison révolutionnaire.",
+  "hero": {
+    "image": "la_ferme_des_animaux_orwell",
+    "ratio": "16:9",
+    "hook": "Trente mille mots, des animaux, et une leçon politique que le monde n'a pas fini d'apprendre."
+  },
+  "sections": [
+    {
+      "id": "course_102_la_ferme_des_animaux_george_orwell_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Publié en **1945**, **La Ferme des animaux** ressemble à un conte pour enfants. Sous cette apparence simple, **George Orwell** décrit comment une révolution populaire peut être confisquée par une élite. En à peine **30 000 mots**, il livre l'une des [[Allégorie de la Révolution russe]] les plus efficaces jamais écrites."
+        },
+        {
+          "type": "image",
+          "asset": "animal_farm_pigs_barnyard_orwell",
+          "ratio": "4:3",
+          "caption": "Des cochons au pouvoir : la fable qui dénonce la corruption révolutionnaire."
+        }
+      ]
+    },
+    {
+      "id": "course_102_la_ferme_des_animaux_george_orwell_p1",
+      "title": "Une allégorie chirurgicale de l'histoire soviétique",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le livre naît pendant la [[Seconde Guerre mondiale]]. Critiquer Staline passe alors pour une trahison : l'URSS est l'alliée de l'Occident. Orwell attend la fin du conflit pour publier. Chaque animal correspond à une figure : le **Vieux Major** évoque **Marx** et **Lénine**, **Napoléon** calque **Staline**, **Boule de neige** rappelle **Trotski**."
+        },
+        {
+          "type": "funFact",
+          "text": "T.S. Eliot, alors éditeur, refusa le manuscrit en arguant que les porcs intelligents risquaient d'offenser les hommes d'État."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les **chiens** de Napoléon figurent la police secrète. **Malabar**, le cheval laborieux, incarne le [[prolétariat]] exploité jusqu'à l'épuisement. **Brille-Babil**, le propagandiste, transforme chaque échec en victoire officielle. Orwell décrit [[Le stalinisme]] avec la précision d'un pamphlet et la légèreté d'une fable."
+        }
+      ]
+    },
+    {
+      "id": "course_102_la_ferme_des_animaux_george_orwell_p2",
+      "title": "Le basculement : de l'utopie à la dictature",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Les animaux chassent le fermier **Jones**, symbole du [[Tsar Nicolas II]]. Ils proclament l'**Animalisme** et inscrivent les **Sept Commandements** sur le mur de la grange. L'égalité semble possible. Puis Napoléon chasse Boule de neige avec ses chiens et installe la terreur."
+        },
+        {
+          "type": "image",
+          "asset": "farm_animals_barn_countryside",
+          "ratio": "16:9",
+          "caption": "La ferme au départ : une utopie qui bascule vers la dictature."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le moulin à vent devient un symbole de mobilisation forcée : les animaux s'épuisent pendant que les cochons se déclarent « travailleurs intellectuels ». Les pommes et le lait sont d'abord réservés aux dirigeants, au nom du « cerveau » qu'il faut nourrir. La corruption commence par de petits privilèges."
+        }
+      ]
+    },
+    {
+      "id": "course_102_la_ferme_des_animaux_george_orwell_p3",
+      "title": "La modification du langage et la trahison finale",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Orwell montre que celui qui contrôle les mots contrôle la réalité. Les cochons modifient les Commandements la nuit : « Aucun animal ne dormira dans un lit » devient « avec des draps ». L'interdiction de l'alcool gagne la mention « avec excès ». La mémoire collective est effacée mot par mot."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le paroxysme arrive avec la formule : **« Tous les animaux sont égaux, mais certains animaux sont plus égaux que d'autres. »** C'est une [[novlangue]] avant l'heure : le langage ne communique plus, il masque. À la fin, les cochons marchent sur deux pattes, s'habillent et banquetent avec des fermiers. Les autres animaux ne distinguent plus les porcs des humains."
+        }
+      ]
+    },
+    {
+      "id": "course_102_la_ferme_des_animaux_george_orwell_p4",
+      "title": "Un avertissement universel sur le pouvoir",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Si le livre vise d'abord la [[Révolution russe]], son message dépasse l'histoire soviétique. Orwell analyse la soumission, la propagande et la fragilité des idéaux face à l'ambition. Sans éducation critique, les peuples voient leurs rêves de liberté dévoyés."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vendu à plus de **30 millions** d'exemplaires, le roman touche des lecteurs de tous âges. Enfant, on lit une histoire d'animaux ; adulte, on y lit un traité de science politique. La leçon reste simple : quand les mots perdent leur sens, la liberté physique suit."
+        },
+        {
+          "type": "takeaway",
+          "text": "**La Ferme des animaux** montre qu'une révolution trahie passe par la manipulation du langage et la confiscation de la mémoire. Orwell prouve qu'une fable courte peut dire plus qu'un discours de mille pages."
+        }
+      ]
+    }
+  ]
+}

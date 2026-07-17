@@ -1,0 +1,130 @@
+{
+  "id": "course_100_les_fleurs_du_mal_baudelaire",
+  "title": "Les Fleurs du Mal, Baudelaire",
+  "subtitle": "1857",
+  "subject": "litterature",
+  "subcategory": "Classiques français & européens",
+  "description": "Baudelaire extrait la beauté du mal et du quotidien parisien. Condamné en 1857, le recueil fonde la poésie moderne.",
+  "hero": {
+    "image": "les_fleurs_du_mal_baudelaire",
+    "ratio": "16:9",
+    "hook": "Six poèmes censurés, une condamnation, et la naissance de la poésie moderne."
+  },
+  "sections": [
+    {
+      "id": "course_100_les_fleurs_du_mal_baudelaire_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Publié en **1857**, **Les Fleurs du Mal** marquent l'acte de naissance de la poésie moderne. **Charles Baudelaire** rompt avec le **[[Romantisme]]** pour explorer la laideur, le péché et l'angoisse urbaine."
+        },
+        {
+          "type": "paragraph",
+          "text": "Condamné pour « outrage à la morale publique », le recueil propose une alchimie nouvelle : extraire la beauté de la boue."
+        }
+      ]
+    },
+    {
+      "id": "course_100_les_fleurs_du_mal_baudelaire_p1",
+      "title": "Baudelaire : le dandy maudit",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Charles Baudelaire** (1821-1867) incarne le poète maudit, entre **dandysme** et déchéance. Orphelin de père, en conflit avec son beau-père le général Aupick, il mène une vie marquée par la précarité et l'amour tourmenté avec **Jeanne Duval**."
+        },
+        {
+          "type": "image",
+          "asset": "charles_baudelaire_portrait_photograph",
+          "ratio": "4:3",
+          "caption": "Charles Baudelaire : élégance, douleur et modernité."
+        },
+        {
+          "type": "funFact",
+          "text": "Six poèmes furent condamnés en 1857 et ne furent officiellement réhabilités qu'en 1949, soit 92 ans après la condamnation."
+        },
+        {
+          "type": "paragraph",
+          "text": "En **1857**, année de **[[Madame Bovary]]**, **Les Fleurs du Mal** déclenchent un scandale. Baudelaire traduit aussi **Edgar Poe**, « frère d'âme » partageant le goût du macabre."
+        }
+      ]
+    },
+    {
+      "id": "course_100_les_fleurs_du_mal_baudelaire_p2",
+      "title": "Architecture du recueil",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le livre possède « un commencement et une fin ». **« Spleen et Idéal »** expose la déchirure entre soif d'élévation et poids de la chair. Le poète y est l'**albatros**, majestueux en vol mais ridicule au sol."
+        },
+        {
+          "type": "image",
+          "asset": "paris_1850s_night_streets_gas_lamps",
+          "ratio": "4:3",
+          "caption": "Paris nocturne des années 1850 : décor du spleen baudelairien."
+        },
+        {
+          "type": "paragraph",
+          "text": "**« Tableaux parisiens »** fait de la ville un paysage psychologique. Sous **[[Baron Haussmann]]**, le poète erre en **flâneur**, observant foules et passantes. Les sections « Le Vin », « Fleurs du Mal » et « La Révolte » tentent l'évasion avant « La Mort »."
+        }
+      ]
+    },
+    {
+      "id": "course_100_les_fleurs_du_mal_baudelaire_p3",
+      "title": "Correspondances et alchimie poétique",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Baudelaire lie forme classique (sonnet, alexandrin) et vision nouvelle. **« Correspondances »** décrit la nature comme un temple de signes. La **synesthésie** unit parfums, couleurs et sons."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cette poétique fonde le **[[symbolisme]]**, porté par Verlaine et Mallarmé. L'**alchimie poétique** résume tout : « Tu m'as donné ta boue et j'en ai fait de l'or »."
+        }
+      ]
+    },
+    {
+      "id": "course_100_les_fleurs_du_mal_baudelaire_p4",
+      "title": "Modernité et postérité",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pour Baudelaire, la **[[Modernité]]** est « le transitoire, le fugitif, le contingent » mêlé à l'éternel. Il ouvre la voie au **[[Poème en prose]]** dans **[[Le Spleen de Paris]]**."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1857",
+              "title": "Publication",
+              "detail": "Scandale et condamnation pour immoralité."
+            },
+            {
+              "date": "1949",
+              "title": "Réhabilitation",
+              "detail": "Les six poèmes censurés sont enfin levés."
+            },
+            {
+              "date": "Postérité",
+              "title": "Symbolisme",
+              "detail": "Verlaine, Mallarmé et la poésie du XXe siècle."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Baudelaire cherche une beauté urbaine, nerveuse, capable de dire le spleen moderne. Le recueil scandalise, puis devient une référence pour tout le siècle suivant."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Les Fleurs du Mal** (1857) révolutionnent la poésie en extrayant la beauté du mal et du quotidien urbain, instaurant la **[[Modernité]]** et le **[[symbolisme]]** malgré une condamnation qui dura près d'un siècle."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "course_86_la_republique_platon",
+  "title": "La République, Platon",
+  "subtitle": "IVe siècle av. J.-C.",
+  "subject": "litterature",
+  "subcategory": "Grecs & Philosophes antiques",
+  "description": "Pour définir la justice, Platon imagine une cité idéale et le mythe de la caverne. La République n'est pas un programme électoral : c'est une enquête sur l'âme et le pouvoir.",
+  "hero": {
+    "image": "la_republique_platon",
+    "ratio": "16:9",
+    "hook": "Et si la justice se comprenait mieux en dessinant une cité entière ?"
+  },
+  "sections": [
+    {
+      "id": "course_86_la_republique_platon_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vers **380 avant J.-C.**, **Platon** écrit la **République**. Le dialogue part d'une question simple : qu'est-ce que la justice ? Pour y répondre, Socrate propose un détour étonnant : construire en paroles une cité idéale, la [[Kallipolis]], la « belle cité »."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce n'est pas un roman d'anticipation. C'est une analogie : comprendre la cité pour comprendre l'âme, et l'âme pour juger le pouvoir. [[Alfred North Whitehead]] dira plus tard que la philosophie occidentale est une série de notes en bas de page à Platon. Ce livre explique pourquoi."
+        }
+      ]
+    },
+    {
+      "id": "course_86_la_republique_platon_p1",
+      "title": "L'âme et la cité, même plan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Platon découpe l'âme en trois : le désir ([[Epithumia]]), le courage ([[Thumos]]), et la raison ([[Logos]]). La cité idéale a trois classes : producteurs, gardiens, dirigeants. La justice, c'est que chaque partie fasse son travail sans empiéter sur les autres."
+        },
+        {
+          "type": "image",
+          "asset": "plato_academy_athens_painting",
+          "ratio": "4:3",
+          "caption": "L'Académie de Platon à Athènes : penser la cité pour éduquer l'âme."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'idée choque encore : elle lie morale privée et organisation politique. Pour Platon, une cité injuste fabrique des âmes tordues."
+        }
+      ]
+    },
+    {
+      "id": "course_86_la_republique_platon_p2",
+      "title": "Qui doit gouverner ?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Les dirigeants idéaux sont les [[philosophes-rois]] : ceux qui aiment le vrai plus que le pouvoir. Ils vivent sans propriété privée excessive, formés longtemps aux mathématiques et à la dialectique. Platon méfie la démocratie athénienne, qui a condamné Socrate."
+        },
+        {
+          "type": "funFact",
+          "text": "[[Karl Popper]], au XXe siècle, accusera la République d'annoncer les totalitarismes. D'autres y voient une utopie éducative, pas un manuel de police. Le débat reste ouvert."
+        },
+        {
+          "type": "paragraph",
+          "text": "Derrière le schéma politique, il y a [[La théorie des Idées de Platon]] : le monde sensible n'est qu'ombre. Gouverner bien, c'est voir le Bien, pas seulement gérer des opinions."
+        }
+      ]
+    },
+    {
+      "id": "course_86_la_republique_platon_p3",
+      "title": "La caverne : sortir de l'illusion",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le mythe de la caverne est le plus célèbre. Des prisonniers enchaînés ne voient que des ombres sur un mur. L'un est libéré, sort au soleil, revient prévenir les autres. On le traite de fou. L'éducation, dit Platon, n'est pas remplir un vase. C'est tourner le regard."
+        },
+        {
+          "type": "image",
+          "asset": "plato_portrait_bust_sculpture",
+          "ratio": "1:1",
+          "caption": "Platon : penser, c'est accepter de quitter les ombres familières."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cette image a traversé les siècles : médias, idéologies, confort intellectuel. Sortir de la caverne coûte. Rester dedans rassure."
+        }
+      ]
+    },
+    {
+      "id": "course_86_la_republique_platon_p4",
+      "title": "Des régimes qui pourrissent, une œuvre qui reste",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Platon décrit aussi le déclin : aristocratie, timocratie, oligarchie, démocratie, tyrannie. Chaque régime naît des vices du précédent. La leçon n'est pas le fatalisme. C'est la vigilance : les institutions suivent le caractère des citoyens."
+        },
+        {
+          "type": "takeaway",
+          "text": "La **République** lie justice personnelle et justice politique. Par la cité idéale et la caverne, Platon demande : que vaut un pouvoir qui ne cherche pas le vrai ?"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "id": "course_98_a_la_recherche_du_temps_perdu_proust",
+  "title": "À la recherche du temps perdu, Proust",
+  "subtitle": "1913-1927",
+  "subject": "litterature",
+  "subcategory": "Classiques français & européens",
+  "description": "Sept volumes, 1,5 million de mots : Proust explore la mémoire involontaire et fait du temps le personnage principal du roman.",
+  "hero": {
+    "image": "a_la_recherche_du_temps_perdu_proust",
+    "ratio": "16:9",
+    "hook": "Une madeleine trempée dans du thé. Et soudain, toute une enfance revient."
+  },
+  "sections": [
+    {
+      "id": "course_98_a_la_recherche_du_temps_perdu_proust_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**À la recherche du temps perdu** (1913-1927) compte **7 volumes**, **3 200 pages** et **1,5 million de mots**. **Marcel Proust** déplace le roman vers l'intériorité et place la **[[mémoire involontaire]]** au centre du récit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le temps n'est plus un simple décor : il devient le personnage principal d'une aventure métaphysique."
+        }
+      ]
+    },
+    {
+      "id": "course_98_a_la_recherche_du_temps_perdu_proust_p1",
+      "title": "Proust et la chambre de liège",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Marcel Proust** (1871-1922) fréquente les **[[Salons mondains]]** parisiens, puis s'isole après la mort de sa mère en **1905**. Il tapisse sa chambre de liège pour se protéger du bruit et du pollen."
+        },
+        {
+          "type": "image",
+          "asset": "marcel_proust_portrait_photograph",
+          "ratio": "4:3",
+          "caption": "Marcel Proust : écrivain-reclus au service de la mémoire."
+        },
+        {
+          "type": "funFact",
+          "text": "Proust mourut en corrigeant ses épreuves, demandant à sa servante Céleste d'ajouter des « paperoles » aux marges pour allonger ses textes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le premier tome, **Du côté de chez Swann** (1913), essuie les refus. **[[André Gide]]** admettra plus tard avoir commis une grave erreur en dédaignant le manuscrit."
+        }
+      ]
+    },
+    {
+      "id": "course_98_a_la_recherche_du_temps_perdu_proust_p2",
+      "title": "La madeleine et le souvenir vivant",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Proust distingue la mémoire volontaire, « froide », de la **[[mémoire involontaire]]**, provoquée par une sensation. La **madeleine** trempée dans du thé ressuscite **Combray** dans son intégralité affective."
+        },
+        {
+          "type": "image",
+          "asset": "madeleine_tea_cup_proust_memory",
+          "ratio": "4:3",
+          "caption": "La madeleine : déclencheur le plus célèbre de la mémoire involontaire."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le passé n'est pas mort : il est déposé en nous dans des objets ou des sensations. L'écrivain doit traduire ces impressions en langage. Proust était obsédé par les odeurs et parfumait parfois son courrier pour préserver ses lettres du temps."
+        }
+      ]
+    },
+    {
+      "id": "course_98_a_la_recherche_du_temps_perdu_proust_p3",
+      "title": "Amour, jalousie et snobisme",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La Recherche analyse la déliquescence de l'aristocratie et les snobismes. Le narrateur navigue entre le côté de **Swann** et celui des **Guermantes**."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'amour est une maladie de l'imagination, indissociable de la jalousie. **[[Monsieur de Charlus]]** introduit des thèmes autrefois tabous. Proust décrit une société de secrets et de masques, où chacun joue un rôle dicté par ses désirs."
+        }
+      ]
+    },
+    {
+      "id": "course_98_a_la_recherche_du_temps_perdu_proust_p4",
+      "title": "Le temps retrouvé par l'art",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le septième volume, **[[temps retrouvé par l'art]]**, apporte la réponse finale. De nouveaux souvenirs involontaires révèlent au narrateur sa vocation : écrire l'œuvre que nous venons de lire."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1913",
+              "title": "Du côté de chez Swann",
+              "detail": "Premier tome publié à compte d'auteur."
+            },
+            {
+              "date": "1919",
+              "title": "Prix Goncourt",
+              "detail": "Reconnaissance pour A l'ombre des jeunes filles en fleurs."
+            },
+            {
+              "date": "1927",
+              "title": "Fin de l'œuvre",
+              "detail": "Le Temps retrouvé paraît après la mort de Proust."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Chez Proust, le temps perdu n'est pas seulement le passé. C'est aussi le temps mal vécu, dispersé dans les habitudes. L'art, en fixant une sensation vraie, le rend enfin lisible."
+        },
+        {
+          "type": "takeaway",
+          "text": "**À la recherche du temps perdu** : **1,5 million de mots** pour montrer que seul l'art, par la **[[mémoire involontaire]]**, peut sauver le passé de la destruction par le temps."
+        }
+      ]
+    }
+  ]
+}

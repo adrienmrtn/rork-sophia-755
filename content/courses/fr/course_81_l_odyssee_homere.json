@@ -1,0 +1,135 @@
+{
+  "id": "course_81_l_odyssee_homere",
+  "title": "L'Odyssée, Homère",
+  "subtitle": "VIIIe siècle av. J.-C.",
+  "subject": "litterature",
+  "subcategory": "Grecs & Philosophes antiques",
+  "description": "Après Troie, le roi d'Ithaque Ulysse met dix ans à rentrer chez lui. Monstres, dieux et tentations jalonnent ce voyage qui invente le héros rusé de la littérature occidentale.",
+  "hero": {
+    "image": "l_odyssee_homere",
+    "ratio": "16:9",
+    "hook": "Dix ans pour rentrer chez soi : le plus grand voyage de retour de la littérature."
+  },
+  "sections": [
+    {
+      "id": "course_81_l_odyssee_homere_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vers le **VIIIe siècle avant J.-C.**, un poème grec raconte le retour d'un homme. Cet homme s'appelle **Ulysse**, roi de la petite île d'**Ithaque**. La guerre de Troie est finie. Ses compagnons veulent rentrer. Mais le voyage dure **dix ans**. C'est l'**Odyssée**, l'autre pilier de la culture européenne avec l'Iliade."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ici, on ne chante plus seulement la fureur des armes. On suit un héros qui survit par la ruse, le langage et l'endurance. Pour rentrer, Ulysse devra parfois accepter de n'être « Personne »."
+        }
+      ]
+    },
+    {
+      "id": "course_81_l_odyssee_homere_p1",
+      "title": "Homère, ou comment on chantait avant d'écrire",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "On attribue le poème à **Homère**, figure semi-légendaire. Était-ce un seul poète, ou le nom d'une tradition ? La recherche moderne, avec [[Milman Parry]], montre que le texte vient d'une longue tradition orale. Pendant des siècles, des [[aèdes]], des chanteurs, composaient en live avec des formules toutes prêtes : « Ulysse aux mille ruses », « l'Aurore aux doigts de rose »."
+        },
+        {
+          "type": "funFact",
+          "text": "En grec, le nom *Homeros* peut évoquer « celui qui ne voit pas ». D'où la légende d'un poète aveugle allant de cité en cité."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'épopée compte environ **12 000 vers** et **24 chants**. Une fois écrite, elle fixe une langue artificielle, le grec homérique, jamais parlée telle quelle. Cela donne au récit un air sacré, hors du temps."
+        }
+      ]
+    },
+    {
+      "id": "course_81_l_odyssee_homere_p2",
+      "title": "L'errance : monstres, oubli et hospitalité",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le récit commence [[in media res]], au milieu de l'action : Ulysse est retenu par la nymphe **Calypso**. Les aventures célèbres arrivent en flashback, une [[analepse]], quand il les raconte aux Phéaciens. Le guerrier devient conteur de sa propre légende."
+        },
+        {
+          "type": "image",
+          "asset": "odysseus_cyclops_polyphemus_ancient_vase",
+          "ratio": "4:3",
+          "caption": "Ulysse face au Cyclope Polyphème, sur un vase grec antique."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tout bascule après le Cyclope **Polyphème**. Pour sauver ses hommes, Ulysse l'aveugle, puis crie son vrai nom. **Poséidon**, père du géant, le poursuit. Chez les Lotophages, il arrache ses compagnons à l'oubli. Chez **Circé**, il leur rend forme humaine. Chaque étape teste l'hospitalité antique. La [[nékya]], sa descente aux Enfers, le confronte à sa propre limite : parler aux morts."
+        }
+      ]
+    },
+    {
+      "id": "course_81_l_odyssee_homere_p3",
+      "title": "Ithaque : le retour et le lit d'olivier",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pendant ce temps, à Ithaque, la reine **Pénélope** résiste aux prétendants qui pillent le palais. Elle promet de se remarier quand le linceul de Laërte sera fini, puis le défait chaque nuit. C'est la ruse au féminin."
+        },
+        {
+          "type": "image",
+          "asset": "penelope_weaving_tapestry_painting",
+          "ratio": "4:3",
+          "caption": "Pénélope tissant le jour, défaisant la nuit : gagner du temps contre les prétendants."
+        },
+        {
+          "type": "funFact",
+          "text": "Ulysse est reconnu d'abord par son vieux chien **Argos**, puis par sa nourrice **Euryclée**, avant que Pénélope ne le teste avec le secret de leur lit, sculpté dans un olivier vivant."
+        },
+        {
+          "type": "paragraph",
+          "text": "Déguisé en mendiant grâce à **Athéna**, Ulysse observe, puis frappe. Le concours à l'arc et le massacre des prétendants restaurent l'ordre du palais. Le foyer n'est pas seulement une maison : c'est un lien qu'on prouve."
+        }
+      ]
+    },
+    {
+      "id": "course_81_l_odyssee_homere_p4",
+      "title": "Pourquoi Ulysse nous parle encore",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ulysse n'est pas un demi-dieu invincible. Son arme, c'est l'adaptation. Au XXe siècle, [[James Joyce]] transpose cette errance dans une journée à Dublin. Du Bellay au cinéma, le naufragé qui cherche sa patrie reste un moteur de récit."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "VIIIe s. av. J.-C.",
+              "title": "Composition orale",
+              "detail": "L'épopée se fixe dans la tradition grecque."
+            },
+            {
+              "date": "10 ans",
+              "title": "Le nostos",
+              "detail": "Le retour d'Ulysse après Troie."
+            },
+            {
+              "date": "24 chants",
+              "title": "Forme écrite",
+              "detail": "Le poème tel qu'il nous est parvenu."
+            },
+            {
+              "date": "1922",
+              "title": "Ulysse de Joyce",
+              "detail": "L'épopée devient une journée moderne à Dublin."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "L'**Odyssée** invente le héros qui rentre chez lui par la ruse et l'endurance. Le but du voyage n'est pas l'immortalité promise par Calypso, mais une vie humaine, fragile et choisie."
+        }
+      ]
+    }
+  ]
+}
