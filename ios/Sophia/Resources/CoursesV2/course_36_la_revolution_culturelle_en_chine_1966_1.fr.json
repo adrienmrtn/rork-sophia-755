@@ -1,0 +1,139 @@
+{
+  "id": "course_36_la_revolution_culturelle_en_chine_1966_1",
+  "title": "La Révolution culturelle en Chine",
+  "subtitle": "1966-1976",
+  "subject": "histoire",
+  "subcategory": "Guerre froide & monde contemporain",
+  "description": "Entre 1966 et 1976, Mao Zedong lance une purge d'une violence extrême pour reconquérir le pouvoir. Gardes rouges, chaos, puis virage pragmatique de Deng Xiaoping.",
+  "hero": {
+    "image": "la_revolution_culturelle_en_chine",
+    "ratio": "16:9",
+    "hook": "Quand un chef d'État appelle la jeunesse à détruire son propre parti."
+  },
+  "sections": [
+    {
+      "id": "course_36_la_revolution_culturelle_en_chine_1966_1_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Entre **1966** et **1976**, la Chine traverse l'une des périodes les plus sombres de son histoire moderne : la Révolution culturelle. **Mao Zedong** n'y lance pas une réforme, mais une purge pour reconquérir un pouvoir absolu."
+        },
+        {
+          "type": "paragraph",
+          "text": "En mobilisant la jeunesse contre l'État et la société, il provoque la persécution de dizaines de millions de personnes et la destruction d'une part immense du patrimoine chinois."
+        }
+      ]
+    },
+    {
+      "id": "course_36_la_revolution_culturelle_en_chine_1966_1_p1",
+      "title": "Après le Grand Bond",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tout part de l'échec du **[[Grand Bond en Avant]]** (**1958-1962**) : famine, millions de morts, prestige de Mao ébranlé. Des pragmatiques comme **[[Liu Shaoqi]]** et **[[Deng Xiaoping]]** reprennent l'économie en main."
+        },
+        {
+          "type": "image",
+          "asset": "mao_zedong_portrait",
+          "ratio": "1:1",
+          "caption": "Mao Zedong, le « Grand Timonier », au centre du culte de la personnalité."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mao contourne le Parti. En **1966**, sa **[[Dazibao]]** « Bombardez le quartier général » accuse les dirigeants d'être des « révisionnistes ». Le chef d'État déclare la guerre à sa propre administration."
+        },
+        {
+          "type": "funFact",
+          "text": "À 72 ans, Mao nage dans le Yangtsé en juillet **1966**. La propagande affirme un record impossible de 15 km en 65 minutes : preuve qu'il est « prêt au combat »."
+        }
+      ]
+    },
+    {
+      "id": "course_36_la_revolution_culturelle_en_chine_1966_1_p2",
+      "title": "La fureur des Gardes rouges",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Des millions de lycéens et d'étudiants forment les **[[Gardes rouges]]**. Mission : détruire les « quatre vieilleries » (idées, culture, coutumes, habitudes). Leur bible : le Petit Livre rouge."
+        },
+        {
+          "type": "image",
+          "asset": "red_guards_cultural_revolution_china",
+          "ratio": "4:3",
+          "caption": "Gardes rouges brandissant le Petit Livre rouge."
+        },
+        {
+          "type": "paragraph",
+          "text": "Professeurs humiliés, cadres traînés dans la rue, écoles fermées : la pureté idéologique prime sur tout. Porter un vêtement occidental ou un livre étranger peut coûter cher."
+        },
+        {
+          "type": "funFact",
+          "text": "À Pékin, des Gardes rouges tentèrent de faire du feu rouge le signal pour « passer », parce que le rouge était la couleur révolutionnaire."
+        }
+      ]
+    },
+    {
+      "id": "course_36_la_revolution_culturelle_en_chine_1966_1_p3",
+      "title": "Anarchie puis reprise en main",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dès **1967**, les factions de Gardes rouges s'entre-tuent. Mao fait intervenir l'**[[Armée populaire de libération]]** et envoie **17 millions** de jeunes urbains « se rééduquer » à la campagne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Au sommet, la lutte pour la succession oppose les radicaux de la **[[Bande des Quatre]]**, dont **[[Jiang Qing]]**, épouse de Mao, aux rescapés des purges. La mort de Mao, le **9 septembre 1976**, puis l'arrestation de la Bande des Quatre, ferment la décennie de chaos."
+        }
+      ]
+    },
+    {
+      "id": "course_36_la_revolution_culturelle_en_chine_1966_1_p4",
+      "title": "Bilan et virage pragmatique",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le bilan humain est estimé entre **500 000** et **2 millions** de morts directs, sans compter les vies brisées. En **1981**, le Parti reconnaît une « grave erreur », tout en préservant Mao comme père de la nation."
+        },
+        {
+          "type": "paragraph",
+          "text": "**[[Deng Xiaoping]]**, deux fois purgé, impose l'ouverture économique : « Peu importe que le chat soit blanc ou noir, tant qu'il attrape les souris. » La Chine passe de la lutte des classes à la croissance."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1966",
+              "title": "Lancement",
+              "detail": "Appel à « bombarder le quartier général »."
+            },
+            {
+              "date": "1967-68",
+              "title": "Pic de violence",
+              "detail": "Affrontements et envoi des jeunes à la campagne."
+            },
+            {
+              "date": "1976",
+              "title": "Mort de Mao",
+              "detail": "Arrestation de la Bande des Quatre."
+            },
+            {
+              "date": "1978",
+              "title": "Réformes de Deng",
+              "detail": "Ouverture et pragmatisme économique."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "La Révolution culturelle (**1966-1976**) fut une décennie de purges lancée par Mao pour reprendre le pouvoir, marquée par les **[[Gardes rouges]]**, puis refermée par le pragmatisme de **[[Deng Xiaoping]]**."
+        }
+      ]
+    }
+  ]
+}

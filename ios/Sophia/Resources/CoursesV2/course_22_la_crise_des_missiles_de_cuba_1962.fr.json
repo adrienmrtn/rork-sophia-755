@@ -1,0 +1,135 @@
+{
+  "id": "course_22_la_crise_des_missiles_de_cuba_1962",
+  "title": "La crise des missiles de Cuba",
+  "subtitle": "1962",
+  "subject": "histoire",
+  "subcategory": "Guerre froide & monde contemporain",
+  "description": "En octobre **1962**, le monde passe **13 jours** à quelques minutes d'une guerre nucléaire. Missiles à Cuba, flottes en alerte : la Guerre froide atteint son pic.",
+  "hero": {
+    "image": "la_crise_des_missiles_de_cuba_1962",
+    "ratio": "16:9",
+    "hook": "Treize jours où un seul « oui » aurait pu déclencher l'apocalypse nucléaire."
+  },
+  "sections": [
+    {
+      "id": "course_22_la_crise_des_missiles_de_cuba_1962_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En octobre **1962**, l'humanité frôle l'apocalypse. Pendant **13 jours**, États-Unis et URSS s'affrontent autour de missiles nucléaires installés à Cuba. Les bombardiers sont en alerte. Une erreur de calcul, et le monde bascule."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cette crise est le sommet de la Guerre froide. Elle se joue autant dans les bureaux de Washington et de Moscou que dans un sous-marin isolé, où un officier anonyme refuse un tir fatal."
+        }
+      ]
+    },
+    {
+      "id": "course_22_la_crise_des_missiles_de_cuba_1962_p1",
+      "title": "Cuba, poudrière aux portes des USA",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **1959**, **Fidel Castro** prend le pouvoir à Cuba, à moins de 150 km de la Floride. Pour Washington, un allié de Moscou dans sa « chasse gardée » est inacceptable. En avril **1961**, la CIA orchestre le débarquement de la [[Baie des Cochons]] : un désastre qui humilie **Kennedy** et pousse Castro vers l'URSS."
+        },
+        {
+          "type": "funFact",
+          "text": "Pour camoufler l'opération [[Anadyr]], les Soviétiques embarquent aussi du matériel agricole… et des vêtements d'hiver russes, comme si la destination était ailleurs."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Nikita Khrouchtchev** voit l'occasion d'équilibrer la menace : les Américains ont déjà déployé des missiles [[Jupiter]] en Italie et en [[Turquie]]. Il décide d'installer secrètement des missiles à moyenne portée sur le sol cubain."
+        }
+      ]
+    },
+    {
+      "id": "course_22_la_crise_des_missiles_de_cuba_1962_p2",
+      "title": "14 octobre : le secret éclate",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le **14 octobre**, un avion espion **U-2** photographie des rampes pour missiles [[SS-4]]. Kennedy réunit l'ExComm, un comité restreint. Pendant six jours de secret absolu, on pèse toutes les options : frappes aériennes, invasion, diplomatie."
+        },
+        {
+          "type": "image",
+          "asset": "u_2_spy_plane_aerial_photography",
+          "ratio": "4:3",
+          "caption": "Les photos du U-2 révèlent les missiles soviétiques à Cuba."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les généraux, comme Curtis LeMay, veulent frapper. Kennedy choisit une voie intermédiaire : un blocus naval, rebaptisé « quarantaine » pour éviter le mot « blocus », acte de guerre en droit. Le **22 octobre**, à la télévision, il révèle les missiles au monde et exige leur retrait."
+        }
+      ]
+    },
+    {
+      "id": "course_22_la_crise_des_missiles_de_cuba_1962_p3",
+      "title": "Le Samedi noir",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le **27 octobre**, surnommé « Samedi noir », un U-2 est abattu au-dessus de Cuba. En mer, le sous-marin soviétique **B-59**, harcelé et coupé de Moscou, s'apprête à lancer une torpille nucléaire. Le protocole exige l'accord de trois officiers. Deux disent oui. **Vasili Arkhipov** dit non."
+        },
+        {
+          "type": "image",
+          "asset": "cuban_missile_crisis_1962_kennedy",
+          "ratio": "4:3",
+          "caption": "Kennedy face à la crise, octobre 1962."
+        },
+        {
+          "type": "funFact",
+          "text": "Le fameux « téléphone rouge » installé après la crise est en réalité un **téléscripteur**. Le téléphone rouge n'existe que dans les films."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dans les coulisses, un accord se noue : l'URSS retire ses missiles de Cuba, les USA s'engagent à ne pas envahir l'île. Clause secrète : les missiles américains de Turquie seront retirés plus tard."
+        }
+      ]
+    },
+    {
+      "id": "course_22_la_crise_des_missiles_de_cuba_1962_p4",
+      "title": "De la terreur à la Détente",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La crise ouvre une phase de [[Détente]]. Une ligne directe relie bientôt le Kremlin et la Maison-Blanche. La doctrine de la [[Destruction mutuelle assurée (MAD)]] s'impose : puisque personne ne peut gagner, personne ne doit attaquer."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "14 oct. 1962",
+              "title": "Découverte des missiles",
+              "detail": "Un U-2 photographie les rampes à Cuba."
+            },
+            {
+              "date": "22 oct. 1962",
+              "title": "Discours de Kennedy",
+              "detail": "Quarantaine navale et ultimatum public."
+            },
+            {
+              "date": "27 oct. 1962",
+              "title": "Samedi noir",
+              "detail": "U-2 abattu ; Arkhipov refuse le tir nucléaire."
+            },
+            {
+              "date": "28 oct. 1962",
+              "title": "Accord",
+              "detail": "Khrouchtchev annonce le retrait des missiles."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "En **13 jours**, la crise de Cuba montre que la Guerre froide pouvait détruire le monde… et qu'elle a parfois tenu à un seul refus, celui d'Arkhipov."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "course_3_la_prise_de_rome_par_les_wisigoths_410",
+  "title": "La prise de Rome par les Wisigoths",
+  "subtitle": "410",
+  "subject": "histoire",
+  "subcategory": "Antiquité & Moyen Âge",
+  "description": "En août 410, les Wisigoths d'Alaric pillent Rome pendant trois jours. Pour la première fois depuis huit siècles, une armée ennemie entre dans la Ville éternelle.",
+  "hero": {
+    "image": "la_prise_de_rome_par_les_wisigoths",
+    "ratio": "16:9",
+    "hook": "En 410, Rome tombe. Et avec elle, l'idée d'un empire invincible."
+  },
+  "sections": [
+    {
+      "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "En août **410**, l'inimaginable arrive. Menés par le roi **Alaric**, les Wisigoths forcent les portes de Rome. Pour la première fois depuis le sac gaulois de **390 av. J.-C.**, soit près de **800 ans**, une armée ennemie pille la Ville éternelle." },
+        { "type": "paragraph", "text": "Rome n'est plus la capitale politique de l'Empire, mais elle reste son cœur symbolique. Ce choc révèle une vérité que personne ne voulait voir : l'Occident romain agonise." }
+      ]
+    },
+    {
+      "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_p1",
+      "title": "Un empire qui se vide",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Au début du Ve siècle, l'Empire d'Occident manque d'argent et de soldats. Pour tenir les frontières, il multiplie les traités du type [[Le foedus romain]] : des peuples barbares s'installent en échange d'un service militaire. La machine romaine tient encore, mais elle dépend de ceux qu'elle peinait autrefois à contenir." },
+        { "type": "paragraph", "text": "En **402**, l'empereur [[Honorius]] abandonne Rome pour [[Ravenne]], protégée par ses marais. Pendant que la cour se terre, l'aristocratie romaine continue de vivre comme si rien n'avait changé. Le pouvoir réel glisse vers des généraux d'origine germanique." },
+        { "type": "funFact", "text": "À l'annonce de la chute de « Rome », Honorius aurait paniqué : il croyait qu'on parlait de sa poule préférée, baptisée ainsi. Soulagé, dit-on, d'apprendre qu'il ne s'agissait « que » de la ville." }
+      ]
+    },
+    {
+      "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_p2",
+      "title": "Alaric, un Romain déçu",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "[[Alaric Ier]] n'est pas un sauvage venu du néant. Ancien officier de l'armée romaine, poussé vers l'Ouest par [[Les Huns]], il veut des terres et un titre officiel pour son peuple. Face au mépris de Ravenne, il utilise Rome comme otage. Deux sièges, des rançons, puis l'assaut." },
+        { "type": "image", "asset": "alaric_king_visigoths", "ratio": "4:3", "caption": "Alaric Ier, roi des Wisigoths et ancien officier romain." },
+        { "type": "paragraph", "text": "Le **24 août 410**, la porte Salaria s'ouvre. Le pillage dure **trois jours**. Chrétien de confession [[arienne]], Alaric ordonne de respecter l'asile des églises. Violence réelle, mais pas destruction totale : il se veut héritier de Rome, pas fossoyeur." },
+        { "type": "funFact", "text": "Selon la légende, à sa mort, ses hommes auraient détourné le fleuve Busento pour enterrer Alaric et son trésor, puis remis l'eau dans son lit." }
+      ]
+    },
+    {
+      "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_p3",
+      "title": "Le choc et La Cité de Dieu",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Depuis la Palestine, [[Saint Jérôme]] s'écrie : « En une seule ville, c'est l'univers entier qui a péri. » Les païens accusent le christianisme d'avoir affaibli Rome. Pour répondre, **Saint Augustin** écrit [[La Cité de Dieu]] : les empires terrestres passent ; l'Église, elle, demeure." },
+        { "type": "image", "asset": "sack_of_rome_410_alaric", "ratio": "4:3", "caption": "Le sac de Rome en 410, choc pour tout le monde antique." },
+        { "type": "paragraph", "text": "Le signal est clair pour [[Vandales]] et [[Francs]] : l'Occident est une proie. En **455**, les Vandales pillent Rome bien plus durement. En **476**, le chef [[Hérule]] [[Odoacre]] dépose [[Romulus Augustule]]. Les insignes partent à Constantinople. L'Empire d'Occident s'éteint." },
+        { "type": "timeline", "events": [
+          { "date": "402", "title": "Ravenne, nouvelle capitale", "detail": "Honorius abandonne Rome pour une ville mieux défendue." },
+          { "date": "410", "title": "Sac de Rome", "detail": "Alaric et les Wisigoths pillent la ville trois jours." },
+          { "date": "455", "title": "Sac vandale", "detail": "Rome est pillée de façon bien plus destructrice." },
+          { "date": "476", "title": "Fin de l'Empire d'Occident", "detail": "Odoacre dépose Romulus Augustule." }
+        ] }
+      ]
+    },
+    {
+      "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_p4",
+      "title": "La bascule vers le Moyen Âge",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Les Wisigoths finissent par s'installer en Aquitaine, puis en Hispanie. Ils ne détruisent pas toute la culture classique : ils en deviennent les passeurs, mêlant droit romain, foi chrétienne et traditions germaniques." },
+        { "type": "paragraph", "text": "Le sac de **410** reste la rupture mémorielle. Ce n'est pas encore la fin administrative de l'Empire, mais c'est la fin de l'illusion. L'Europe médiévale commence dans les décombres d'un mythe." },
+        { "type": "takeaway", "text": "En **410**, Rome tombe pour la première fois depuis **800 ans**. Des Wisigoths formés à la romaine y pillent pendant trois jours. Le choc ouvre la voie à **476** et à l'Europe médiévale." }
+      ]
+    }
+  ]
+}

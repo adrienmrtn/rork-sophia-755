@@ -1,0 +1,129 @@
+{
+  "id": "course_31_le_plan_marshall_1947_1952",
+  "title": "Le plan Marshall",
+  "subtitle": "1947-1952",
+  "subject": "histoire",
+  "subcategory": "Guerre froide & monde contemporain",
+  "description": "En juin 1947, George Marshall propose une aide massive à l'Europe en ruines. Derrière la reconstruction, une stratégie pour contenir le communisme et forger le lien transatlantique.",
+  "hero": {
+    "image": "le_plan_marshall",
+    "ratio": "16:9",
+    "hook": "Comment 13 milliards de dollars ont reconstruit l'Europe et scellé la Guerre froide."
+  },
+  "sections": [
+    {
+      "id": "course_31_le_plan_marshall_1947_1952_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En juin **1947**, l'Europe s'enfonce dans la misère. Le secrétaire d'État américain **George Marshall** propose alors un plan d'aide sans précédent : l'**[[ERP]]**, le European Recovery Program."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce n'est pas seulement de l'humanitaire. C'est la plus grande opération de reconstruction du XXe siècle, conçue pour stabiliser l'Ouest et l'ancrer dans le camp démocratique face à Moscou."
+        }
+      ]
+    },
+    {
+      "id": "course_31_le_plan_marshall_1947_1952_p1",
+      "title": "L'Europe au bord du gouffre",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "À la fin de la guerre, les villes sont en ruines, les réseaux électriques coupés, les transports anéantis. L'hiver **1946-1947**, l'un des plus rudes du siècle, aggrave tout : charbon rare, famine, émeutes."
+        },
+        {
+          "type": "paragraph",
+          "text": "La production industrielle française stagne à **38 %** de son niveau de 1938. En France et en Italie, les partis communistes cartonnent aux élections. Pour Washington, la faim est l'alliée du **[[Kominform (1947)]]** : si l'Europe bascule par les urnes, la Guerre froide est perdue sans un tir."
+        },
+        {
+          "type": "image",
+          "asset": "marshall_plan_poster_american_aid",
+          "ratio": "4:3",
+          "caption": "Affiche du plan Marshall : l'aide américaine présentée comme un projet collectif européen."
+        },
+        {
+          "type": "funFact",
+          "text": "Pour populariser le plan, les Américains organisent un concours d'affiches en Europe : plus de **10 000** dessins sont soumis."
+        }
+      ]
+    },
+    {
+      "id": "course_31_le_plan_marshall_1947_1952_p2",
+      "title": "L'offre de Harvard et la rupture Est-Ouest",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le **5 juin 1947**, à **Harvard**, Marshall pose sa condition : les Européens doivent s'entendre sur un plan commun, pas quémander des aides bilatérales éparpillées."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'offre est d'abord ouverte à l'URSS. Mais à Paris, en juillet, **Staline** refuse et interdit à la Pologne et à la Tchécoslovaquie d'y participer. Seuls **16 pays** d'Europe de l'Ouest fondent l'**[[OECE]]** pour répartir les fonds. La partition du continent est actée."
+        }
+      ]
+    },
+    {
+      "id": "course_31_le_plan_marshall_1947_1952_p3",
+      "title": "Une machine de reconstruction",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Entre **1948** et **1952**, les États-Unis transfèrent environ **13 milliards de dollars** (plus de **150 milliards** aujourd'hui). Pas surtout des billets : des machines, du charbon, des tracteurs, des denrées."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le mécanisme est malin : l'Europe revend ces biens en monnaie locale, et les « fonds de contrepartie » financent routes, usines, modernisation. Dès **1952**, la production industrielle dépasse de **35 %** les niveaux d'avant-guerre. L'Allemagne de l'Ouest entame son **[[Wirtschaftswunder]]**."
+        },
+        {
+          "type": "funFact",
+          "text": "L'aide correspondait grosso modo au déficit européen de balance des paiements : assez pour que l'Europe continue d'acheter américain sans faire faillite."
+        }
+      ]
+    },
+    {
+      "id": "course_31_le_plan_marshall_1947_1952_p4",
+      "title": "Victoire stratégique",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le plan applique la **[[Doctrine Truman]]** : contenir Moscou par la prospérité. Il affaiblit les partis révolutionnaires, scelle le lien transatlantique et force d'anciens ennemis, France et Allemagne, à coopérer dans l'**[[OECE]]**, racines de la future **[[CEE]]**."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1947",
+              "title": "Discours de Harvard",
+              "detail": "Marshall annonce le principe de l'aide coordonnée."
+            },
+            {
+              "date": "1948",
+              "title": "Lancement de l'ERP",
+              "detail": "Les premiers transferts commencent vers l'Ouest."
+            },
+            {
+              "date": "1952",
+              "title": "Bilan industriel",
+              "detail": "La production dépasse nettement les niveaux d'avant-guerre."
+            },
+            {
+              "date": "1953",
+              "title": "Prix Nobel",
+              "detail": "Marshall est récompensé pour la paix par la reconstruction."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Entre **1948** et **1952**, le plan Marshall injecte **13 milliards** pour reconstruire l'Europe de l'Ouest, contenir le communisme et poser les bases de la coopération européenne."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "id": "course_15_la_belle_epoque_1871_1914",
+  "title": "La Belle Époque",
+  "subtitle": "1871-1914",
+  "subject": "histoire",
+  "subcategory": "Révolutions & conflits modernes",
+  "description": "Entre la fin de la guerre de 1870 et août 1914, l'Europe croit au progrès infini. Électricité, expositions, arts nouveaux… et fractures qui mènent à la catastrophe.",
+  "hero": {
+    "image": "la_belle_epoque",
+    "ratio": "16:9",
+    "hook": "Quarante ans de foi dans le progrès… avant que tout bascule en 1914."
+  },
+  "sections": [
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La **Belle Époque** désigne la période de paix relative entre la fin de la [[Guerre franco-prussienne]] (**1871**) et le déclenchement de la [[Première Guerre mondiale]] (**1914**). On y croit à la science, au progrès, à la raison."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour les classes aisées d'Europe occidentale, ce sont quatre décennies de prospérité et d'inventions. Mais sous le vernis brillent déjà des fractures sociales et des rivalités qui feront tout exploser."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p1",
+      "title": "L'accélération technologique et la foi dans le progrès",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La deuxième révolution industrielle apporte l'**électricité**, le **pétrole**, la chimie. Le tramway et le métro (Paris, **1900**) changent la ville. L'automobile et l'avion naissent. Le téléphone accélère le monde."
+        },
+        {
+          "type": "image",
+          "asset": "paris_universal_exhibition_1900",
+          "ratio": "4:3",
+          "caption": "L'Exposition universelle de 1900 à Paris, vitrine du progrès."
+        },
+        {
+          "type": "funFact",
+          "text": "Le nom « Belle Époque » n'apparaît qu'après **1914**. Les contemporains ne vivaient pas « la Belle Époque » : ce sont les survivants des tranchées qui ont inventé ce paradis perdu."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'**Exposition universelle de 1900** attire **50 millions** de visiteurs. Le cinéma des frères Lumière et le Moulin Rouge font de Paris le centre du monde. Le [[Le positivisme d'Auguste Comte]] résume l'optimisme : la science résoudra tout."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p2",
+      "title": "L'envers du décor : fractures sociales et impérialisme",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Derrière les boulevards, les ouvriers travaillent souvent **10 à 12 heures** par jour, sans vraie protection. La misère urbaine nourrit les tensions de classe."
+        },
+        {
+          "type": "image",
+          "asset": "eiffel_tower_1889",
+          "ratio": "4:3",
+          "caption": "La tour Eiffel (1889), icône d'une modernité qui ne profite pas à tous."
+        },
+        {
+          "type": "paragraph",
+          "text": "À l'échelle du monde, l'Europe se partage l'Afrique. La [[Conférence de Berlin]] (**1884-1885**) fixe des frontières arbitraires. En France, l'[[Affaire Dreyfus]] déchire la République et révèle un antisémitisme violent."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p3",
+      "title": "Une révolution des consciences et des arts",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Les arts explosent : [[Art nouveau]], [[fauvisme]], [[cubisme]]. [[Sigmund Freud]] explore l'inconscient. Einstein publie la [[Relativité]] en **1905**. La modernité bouscule aussi les corps et les oreilles."
+        },
+        {
+          "type": "funFact",
+          "text": "En **1913**, le ballet *Le Sacre du printemps* de Stravinsky provoque un tel scandale à Paris que des spectateurs en viennent aux mains."
+        },
+        {
+          "type": "paragraph",
+          "text": "Puis tout bascule. Le **28 juin 1914**, l'assassinat de **François-Ferdinand** à Sarajevo déclenche l'engrenage. Le **4 août**, le Royaume-Uni entre en guerre. La foi dans le progrès meurt dans les tranchées."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1871",
+              "title": "Fin de la guerre franco-prussienne",
+              "detail": "Naissance d'une Allemagne unifiée, ressentiment français."
+            },
+            {
+              "date": "1889",
+              "title": "Tour Eiffel",
+              "detail": "Symbole de la modernité technique."
+            },
+            {
+              "date": "1894-1906",
+              "title": "Affaire Dreyfus",
+              "detail": "La République se déchire."
+            },
+            {
+              "date": "1900",
+              "title": "Exposition universelle",
+              "detail": "Paris vitrine du monde."
+            },
+            {
+              "date": "août 1914",
+              "title": "Grande Guerre",
+              "detail": "La Belle Époque s'achève brutalement."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "La Belle Époque (**1871-1914**) allie progrès technique fulgurant et fractures profondes, avant de sombrer dans le chaos de la Grande Guerre."
+        }
+      ]
+    }
+  ]
+}

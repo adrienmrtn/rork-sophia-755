@@ -1,0 +1,129 @@
+{
+  "id": "course_24_la_bataille_de_dien_bien_phu_1954",
+  "title": "La bataille de Diên Biên Phu",
+  "subtitle": "1954",
+  "subject": "histoire",
+  "subcategory": "Guerre froide & monde contemporain",
+  "description": "Du **13 mars** au **7 mai 1954**, une armée française assiégée dans une cuvette du Nord-Vietnam capitule face au Viet-Minh du général Giap. La défaite sonne la fin de l'Indochine française.",
+  "hero": {
+    "image": "la_bataille_de_dien_bien_phu",
+    "ratio": "16:9",
+    "hook": "Dans une cuvette du Vietnam, une armée coloniale découvre que la jungle peut vaincre l'aviation."
+  },
+  "sections": [
+    {
+      "id": "course_24_la_bataille_de_dien_bien_phu_1954_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le **7 mai 1954**, dans une vallée du Nord-Vietnam, une armée coloniale européenne capitule face à une armée de paysans-soldats. **Diên Biên Phu** n'est pas seulement un désastre français : c'est le signal que l'ère coloniale vacille, en pleine Guerre froide."
+        },
+        {
+          "type": "paragraph",
+          "text": "Comment un ancien professeur d'histoire, le général **Giáp**, a-t-il vaincu une armée moderne ? Par la logistique, la patience, et en retournant contre les Français leur propre certitude de supériorité."
+        }
+      ]
+    },
+    {
+      "id": "course_24_la_bataille_de_dien_bien_phu_1954_p1",
+      "title": "L'Indochine en guerre",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Depuis les années 1880, la France domine l'Indochine. En **septembre 1945**, [[Hô Chi Minh]] proclame l'indépendance. Paris refuse. Commence la guerre d'Indochine : d'un côté le Corps expéditionnaire, chars et avions ; de l'autre le Viet-Minh et sa [[guerre de guérilla]] dans le [[Tonkin]]."
+        },
+        {
+          "type": "image",
+          "asset": "general_giap_viet_minh",
+          "ratio": "4:3",
+          "caption": "Le général Võ Nguyên Giáp, stratège du Viet-Minh."
+        },
+        {
+          "type": "funFact",
+          "text": "[[Le général Võ Nguyên Giáp]] n'a jamais suivi d'école militaire. Il dit avoir appris la stratégie en lisant les campagnes de Napoléon à la bibliothèque de Hanoï."
+        },
+        {
+          "type": "paragraph",
+          "text": "Giáp théorise une guerre en étapes : clandestinité, guérilla mobile, puis offensive générale. En 1953, il juge son armée prête. Les Français, eux, cherchent le terrain d'une bataille décisive."
+        }
+      ]
+    },
+    {
+      "id": "course_24_la_bataille_de_dien_bien_phu_1954_p2",
+      "title": "Le piège de la cuvette",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le général **Navarre** lance l'**opération Castor** : installer une base aéro-terrestre à Diên Biên Phu pour forcer le Viet-Minh à l'attaquer. En **novembre 1953**, des parachutistes sautent dans la cuvette. Points d'appui aux noms féminins : Béatrice, Gabrielle, Éliane…"
+        },
+        {
+          "type": "paragraph",
+          "text": "Le calcul français : l'ennemi ne pourra jamais hisser de l'artillerie lourde dans la jungle. Erreur. Des dizaines de milliers de porteurs acheminent canons et munitions à dos d'homme et de bicyclettes renforcées. Les pièces sont camouflées sur les crêtes qui dominent le camp."
+        }
+      ]
+    },
+    {
+      "id": "course_24_la_bataille_de_dien_bien_phu_1954_p3",
+      "title": "55 jours d'agonie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le **13 mars 1954**, le déluge commence. La piste d'aviation est détruite dès les premières heures. Le colonel Piroth, qui avait promis de faire taire l'artillerie ennemie, se suicide. Le siège dure **55 jours**. Sous la [[mousson]], la cuvette devient un bourbier. Les tranchées viet-minh se rapprochent chaque nuit."
+        },
+        {
+          "type": "funFact",
+          "text": "Le premier jour, les Français tirent **6 000** obus. L'artillerie de Giáp en tire **9 000** : une puissance que l'état-major jugeait impossible pour une armée de guérilla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les États-Unis refusent une intervention aérienne massive. Le **7 mai**, après des combats au corps à corps sur Éliane, le cessez-le-feu est sonné."
+        }
+      ]
+    },
+    {
+      "id": "course_24_la_bataille_de_dien_bien_phu_1954_p4",
+      "title": "La fin d'un empire",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Les [[accords de Genève]] (juillet 1954) actent le départ français. Le Vietnam est divisé au **17e parallèle**. Plus de **2 000** morts côté français, **11 000** prisonniers ; moins de **4 000** reviendront. Quelques mois plus tard, l'Algérie s'embrase. Les États-Unis, eux, s'engagent peu à peu dans ce qui deviendra la [[guerre du Vietnam]]."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "nov. 1953",
+              "title": "Opération Castor",
+              "detail": "Les Français s'installent dans la cuvette."
+            },
+            {
+              "date": "13 mars 1954",
+              "title": "Offensive viet-minh",
+              "detail": "L'artillerie détruit la piste d'aviation."
+            },
+            {
+              "date": "7 mai 1954",
+              "title": "Capitulation",
+              "detail": "Fin de 55 jours de siège."
+            },
+            {
+              "date": "juil. 1954",
+              "title": "Accords de Genève",
+              "detail": "Fin de la guerre d'Indochine, Vietnam divisé."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Diên Biên Phu (**13 mars - 7 mai 1954**) montre qu'une logistique populaire et une stratégie patientes peuvent vaincre une armée coloniale moderne."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "id": "course_17_la_revolution_russe_1917",
+  "title": "La Révolution russe",
+  "subtitle": "1917",
+  "subject": "histoire",
+  "subcategory": "Révolutions & conflits modernes",
+  "description": "En moins de huit mois, la Russie passe de l'autocratie des tsars au pouvoir bolchevique. 1917 invente un modèle qui divisera le monde pendant des décennies.",
+  "hero": {
+    "image": "la_revolution_russe_1917",
+    "ratio": "16:9",
+    "hook": "En huit mois, un empire millénaire bascule… et le XXe siècle se fend en deux."
+  },
+  "sections": [
+    {
+      "id": "course_17_la_revolution_russe_1917_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **1917**, en moins de huit mois, la Russie passe d'une autocratie millénaire à un régime dirigé par une avant-garde révolutionnaire. Ce n'est pas un simple soulèvement : c'est l'effondrement d'un empire sous le poids de la guerre, puis la prise du vide par les bolcheviks de **Lénine**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce basculement invente un modèle qui divisera le monde pendant une grande partie du XXe siècle."
+        }
+      ]
+    },
+    {
+      "id": "course_17_la_revolution_russe_1917_p1",
+      "title": "La Russie en guerre : l'agonie de l'Empire",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Engagée dans la [[Première Guerre mondiale]] depuis 1914, la Russie ne suit plus. Déjà **1,7 million** de soldats morts, mutineries, pénuries de farine et de charbon à [[Petrograd]]. Le tsar **Nicolas II** refuse les réformes demandées par la [[Douma]]."
+        },
+        {
+          "type": "image",
+          "asset": "tsar_nicholas_ii_portrait",
+          "ratio": "4:3",
+          "caption": "Nicolas II, dernier tsar d'une monarchie à bout de souffle."
+        },
+        {
+          "type": "funFact",
+          "text": "Le poison destiné à tuer [[Raspoutine]] aurait été neutralisé par le sucre des gâteaux où on l'avait glissé : la légende de son assassinat en dit long sur le discrédit de la cour."
+        },
+        {
+          "type": "paragraph",
+          "text": "En prenant le commandement au front en **1915**, le tsar devient seul responsable des défaites. L'influence de [[Raspoutine]] sur la tsarine **Alexandra** achève de ruiner le prestige du trône."
+        }
+      ]
+    },
+    {
+      "id": "course_17_la_revolution_russe_1917_p2",
+      "title": "De l'abdication au double pouvoir",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **février 1917** (selon le [[calendrier julien]]), la révolution part du pain. Les ouvrières descendent dans la rue. La garnison fraternise. Nicolas II abdique le **2 mars** : **300 ans** de Romanov s'achèvent."
+        },
+        {
+          "type": "image",
+          "asset": "russian_revolution_1917_petrograd",
+          "ratio": "4:3",
+          "caption": "Petrograd 1917 : la rue prend le pas sur le trône."
+        },
+        {
+          "type": "paragraph",
+          "text": "S'installe alors le « double pouvoir » : un Gouvernement provisoire légal, et le [[Soviet de Petrograd]], qui contrôle usines et casernes. **Kerenski** maintient la Russie dans la guerre. Le peuple, lui, veut la paix, le pain et la terre."
+        }
+      ]
+    },
+    {
+      "id": "course_17_la_revolution_russe_1917_p3",
+      "title": "Le retour de Lénine et le coup de force d'octobre",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lénine revient d'exil dans un « train plombé » organisé par l'Allemagne. Dès avril, ses [[Thèses d'Avril]] claquent : **« Paix, Pain, Terre »**. Avec [[Léon Trotski]], les bolcheviks préparent l'insurrection."
+        },
+        {
+          "type": "image",
+          "asset": "lenin_portrait",
+          "ratio": "4:3",
+          "caption": "Lénine, stratège d'une prise de pouvoir organisée."
+        },
+        {
+          "type": "funFact",
+          "text": "Lors de la prise du palais d'Hiver, les caves à vin des tsars étaient si vastes qu'il fallut poster des gardes pour empêcher la révolution de sombrer dans l'ivresse."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dans la nuit du **7 novembre 1917** (25 octobre julien), ponts, gares et télégraphes tombent presque sans coup de feu. Le palais d'Hiver suit. Commence alors une guerre civile sanglante jusqu'en **1922**."
+        }
+      ]
+    },
+    {
+      "id": "course_17_la_revolution_russe_1917_p4",
+      "title": "Naissance d'un État et d'un modèle mondial",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La **Tchéka** lance la terreur politique. En juillet **1918**, la famille impériale est exécutée à Ekaterinbourg. La paix de [[Brest-Litovsk]] retire la Russie de la guerre au prix de lourdes pertes territoriales. En **1922**, naît l'**URSS**, premier État du [[marxisme-léninisme]]."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "fév. 1917",
+              "title": "Révolution de Février",
+              "detail": "Abdication de Nicolas II."
+            },
+            {
+              "date": "avril 1917",
+              "title": "Thèses d'Avril",
+              "detail": "Lénine refuse le compromis avec le provisoire."
+            },
+            {
+              "date": "oct./nov. 1917",
+              "title": "Prise du pouvoir",
+              "detail": "Coup de force bolchevique à Petrograd."
+            },
+            {
+              "date": "mars 1918",
+              "title": "Brest-Litovsk",
+              "detail": "Sortie de la guerre, pertes territoriales."
+            },
+            {
+              "date": "1922",
+              "title": "Naissance de l'URSS",
+              "detail": "Un nouvel État s'installe durablement."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "En **1917**, l'effondrement du tsarisme et le coup de force bolchevique ont transformé une révolte pour le pain en naissance du premier État communiste mondial."
+        }
+      ]
+    }
+  ]
+}

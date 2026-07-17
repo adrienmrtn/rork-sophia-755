@@ -1,0 +1,139 @@
+{
+  "id": "course_35_l_apartheid_et_mandela_1948_1994",
+  "title": "L'apartheid et Mandela",
+  "subtitle": "1948-1994",
+  "subject": "histoire",
+  "subcategory": "Guerre froide & monde contemporain",
+  "description": "Pendant 46 ans, l'Afrique du Sud organise légalement la ségrégation raciale. Nelson Mandela, après 27 ans de prison, devient l'architecte d'une transition démocratique sans guerre civile.",
+  "hero": {
+    "image": "l_apartheid_et_mandela",
+    "ratio": "16:9",
+    "hook": "Un système de ségrégation totale, puis une sortie de crise sans guerre civile."
+  },
+  "sections": [
+    {
+      "id": "course_35_l_apartheid_et_mandela_1948_1994_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **1948**, alors que le monde commence à condamner le racisme d'État, l'Afrique du Sud prend le chemin inverse. Pendant **46 ans**, elle organise légalement la ségrégation totale : l'**[[apartheid]]**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce régime s'effondre au début des années **1990** sans sombrer dans la guerre civile. Au centre de ce basculement : **Nelson Mandela**, libéré après **27 ans** de captivité."
+        }
+      ]
+    },
+    {
+      "id": "course_35_l_apartheid_et_mandela_1948_1994_p1",
+      "title": "L'architecture de la séparation",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L'**[[apartheid]]** (« séparation » en afrikaans) est mis en place par le Parti national après mai **1948**. Chaque citoyen est classé : Blanc, Noir, Métis, Indien. Ce label décide du vote, du travail, du lieu de vie."
+        },
+        {
+          "type": "image",
+          "asset": "apartheid_segregation_signs_south_africa",
+          "ratio": "4:3",
+          "caption": "Panneaux de ségrégation : l'espace public découpé par la loi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les **[[bantoustans]]**, 13 % du territoire, doivent servir de « foyers nationaux » aux Noirs, en réalité pour les priver de citoyenneté sud-africaine. Sans **pass**, pas de circulation dans les zones blanches : la prison attend."
+        },
+        {
+          "type": "funFact",
+          "text": "Pour des raisons commerciales, les Japonais étaient officiellement classés « Blancs honoraires ». Le racisme savait plier devant les marchés."
+        }
+      ]
+    },
+    {
+      "id": "course_35_l_apartheid_et_mandela_1948_1994_p2",
+      "title": "De la non-violence à la lutte armée",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L'**[[ANC]]** organise la résistance. Mandela, avocat né en **1918**, croit d'abord à la non-violence. Puis vient le **[[massacre de Sharpeville]]** (mars **1960**) : la police tire sur une foule désarmée, **69** morts."
+        },
+        {
+          "type": "image",
+          "asset": "sharpeville_massacre_1960",
+          "ratio": "4:3",
+          "caption": "Sharpeville, 1960 : tournant vers la lutte armée."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'ANC est interdite. Mandela cofonde Umkhonto we Sizwe pour saboter l'appareil du régime. Arrêté en **1962**, condamné à vie au procès de Rivonia (**1964**), il devient à Robben Island le prisonnier politique le plus célèbre du monde."
+        }
+      ]
+    },
+    {
+      "id": "course_35_l_apartheid_et_mandela_1948_1994_p3",
+      "title": "Négocier la liberté",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dans les années **1980**, sanctions, embargo et soulèvements asphyxient le régime. **F. W. de Klerk**, arrivé au pouvoir en **1989**, comprend que la survie passe par la fin de l'apartheid."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le **11 février 1990**, Mandela sort de prison. Quatre ans de négociations suivent. En avril **1994**, les premières élections multiraciales : l'ANC l'emporte et Mandela devient président avec **62,6 %** des voix, dans un gouvernement d'union nationale."
+        },
+        {
+          "type": "funFact",
+          "text": "En **1995**, Mandela enfile le maillot vert des Springboks, symbole afrikaner, lors de la Coupe du monde de rugby : un geste de réconciliation télévisé dans le monde entier."
+        }
+      ]
+    },
+    {
+      "id": "course_35_l_apartheid_et_mandela_1948_1994_p4",
+      "title": "Nation Arc-en-ciel",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Avec Desmond Tutu, Mandela mise sur la réconciliation. La **[[Commission Vérité et Réconciliation]]** propose l'amnistie contre des aveux publics : une **[[justice transitionnelle]]** pour connaître le sort des victimes sans faire exploser le pays."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mandela quitte le pouvoir en **1999** après un seul mandat. Le racisme légal est mort, mais les inégalités économiques restent le grand défi sud-africain."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1948",
+              "title": "Apartheid institutionnalisé",
+              "detail": "Victoire du Parti national."
+            },
+            {
+              "date": "1960",
+              "title": "Sharpeville",
+              "detail": "Massacre et bascule vers la lutte armée."
+            },
+            {
+              "date": "1990",
+              "title": "Libération de Mandela",
+              "detail": "Début de la transition."
+            },
+            {
+              "date": "1994",
+              "title": "Élections multiraciales",
+              "detail": "Mandela élu président."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "L'**[[apartheid]]** (**1948-1994**) fut un système de ségrégation raciale d'État. Sa chute, négociée par Mandela et de Klerk, a ouvert une démocratie multiraciale fondée sur la réconciliation."
+        }
+      ]
+    }
+  ]
+}

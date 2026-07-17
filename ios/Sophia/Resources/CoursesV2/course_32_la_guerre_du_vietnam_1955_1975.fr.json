@@ -1,0 +1,134 @@
+{
+  "id": "course_32_la_guerre_du_vietnam_1955_1975",
+  "title": "La guerre du Vietnam",
+  "subtitle": "1955-1975",
+  "subject": "histoire",
+  "subcategory": "Guerre froide & monde contemporain",
+  "description": "Pendant vingt ans, les États-Unis engagent une puissance immense pour contenir le communisme au Vietnam. Ils s'enlisent, se divisent, et subissent un échec stratégique majeur.",
+  "hero": {
+    "image": "la_guerre_du_vietnam",
+    "ratio": "16:9",
+    "hook": "La première puissance mondiale face à une guerre qu'elle ne pouvait pas gagner."
+  },
+  "sections": [
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Au cœur de la **Guerre froide**, le Vietnam oppose le Nord communiste au Sud soutenu par l'Occident. Les États-Unis y engagent des moyens colossaux. Pourtant, ils s'enlisent."
+        },
+        {
+          "type": "paragraph",
+          "text": "Entre traumatisme moral, contestation intérieure et limite de la force brute, ce conflit redéfinit le rapport entre grandes puissances et mouvements de libération nationale."
+        }
+      ]
+    },
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_p1",
+      "title": "De la division à l'escalade",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Après la défaite française dans la **[[Guerre d'Indochine]]**, les accords de Genève (**1954**) partagent le pays au **17e parallèle**. Au Nord, **[[Ho Chi Minh]]**. Au Sud, un régime autoritaire soutenu par Washington."
+        },
+        {
+          "type": "paragraph",
+          "text": "Craignant la **[[Théorie des dominos]]**, Kennedy puis Johnson renforcent l'aide. En **août 1964**, l'incident du golfe du Tonkin sert de prétexte à une résolution qui donne les pleins pouvoirs militaires. Dès **1965**, l'opération **[[Rolling Thunder]]** bombarde le Nord et les Marines débarquent à Da Nang."
+        },
+        {
+          "type": "image",
+          "asset": "vietnam_war_american_soldiers",
+          "ratio": "4:3",
+          "caption": "Soldats américains au Vietnam : une guerre d'usure dans la jungle."
+        },
+        {
+          "type": "funFact",
+          "text": "Johnson aurait confié en privé, après le Tonkin : « Pour autant que je sache, notre marine tirait sur des baleines ce soir-là. »"
+        }
+      ]
+    },
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_p2",
+      "title": "L'échec de la force brute",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **1969**, **543 000** soldats américains sont sur place. La stratégie du **[[search and destroy]]** et la supériorité aérienne ne brisent pas la piste Ho Chi Minh. Le général **Giap** impose le harcèlement, les pièges, l'immersion dans la population."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les Américains utilisent des défoliants comme l'**Agent Orange**. Le coût explose, les cercueils rentrent, et le **[[Pentagone]]** découvre qu'une détermination politique peut tenir face à la technologie."
+        },
+        {
+          "type": "funFact",
+          "text": "Plus de **80 millions** de litres d'herbicides ont été déversés sur la jungle, détruisant environ **20 %** des forêts du Sud-Vietnam."
+        }
+      ]
+    },
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_p3",
+      "title": "Le tournant du Têt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le **30 janvier 1968**, pendant le Nouvel An vietnamien, l'**[[Offensive du Têt]]** frappe plus de 100 villes. Militairment, c'est un désastre pour le Nord. Psychologiquement, c'est un choc pour l'Amérique : la télévision montre que la « victoire proche » était un mensonge."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Nixon** lance la « vietnamisation » : retirer les troupes tout en armant le Sud. Les accords de Paris (**1973**) actent le départ américain. Sans protecteur, Saïgon s'effondre en deux ans."
+        }
+      ]
+    },
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_p4",
+      "title": "Traumatisme et héritage",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le **30 avril 1975**, Saïgon tombe. Environ **58 000** Américains sont morts ; les pertes vietnamiennes se comptent en millions. Première guerre télévisée, le conflit révèle aussi des atrocités comme **[[My Lai]]** et laisse le « syndrome du Vietnam » : une Amérique plus réticente à intervenir."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1954",
+              "title": "Accords de Genève",
+              "detail": "Partition provisoire au 17e parallèle."
+            },
+            {
+              "date": "1965",
+              "title": "Escalade américaine",
+              "detail": "Bombardements et débarquement des Marines."
+            },
+            {
+              "date": "1968",
+              "title": "Offensive du Têt",
+              "detail": "Choc télévisé et bascule de l'opinion."
+            },
+            {
+              "date": "1973",
+              "title": "Accords de Paris",
+              "detail": "Retrait des forces américaines."
+            },
+            {
+              "date": "1975",
+              "title": "Chute de Saïgon",
+              "detail": "Réunification sous le communisme."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Après **20 ans** de conflit, les États-Unis subissent au Vietnam un échec stratégique majeur : puissance militaire défaite politiquement, pays réunifié sous le communisme, société américaine durablement divisée."
+        }
+      ]
+    }
+  ]
+}

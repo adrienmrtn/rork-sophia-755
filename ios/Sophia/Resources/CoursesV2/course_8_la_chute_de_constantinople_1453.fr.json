@@ -1,0 +1,71 @@
+{
+  "id": "course_8_la_chute_de_constantinople_1453",
+  "title": "La chute de Constantinople",
+  "subtitle": "1453",
+  "subject": "histoire",
+  "subcategory": "Antiquité & Moyen Âge",
+  "description": "Le 29 mai 1453, après 53 jours de siège, les Ottomans forcent les murailles de Constantinople. La Nouvelle Rome tombe, et le Moyen Âge bascule.",
+  "hero": {
+    "image": "la_chute_de_constantinople_1453",
+    "ratio": "16:9",
+    "hook": "Mille ans de remparts. Cinquante-trois jours de canons. Une ville qui ferme une époque."
+  },
+  "sections": [
+    {
+      "id": "course_8_la_chute_de_constantinople_1453_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Le **29 mai 1453**, après **53 jours** de siège, les soldats du sultan ottoman entrent dans **Constantinople**. La cité qui avait résisté pendant plus d'un millénaire cède sous les coups d'une artillerie nouvelle." },
+        { "type": "paragraph", "text": "Ce n'est pas seulement la fin de l'Empire romain d'Orient. En verrouillant les routes vers l'Est, la chute de la « Nouvelle Rome » pousse l'Europe à chercher d'autres chemins. Le Moyen Âge se ferme." }
+      ]
+    },
+    {
+      "id": "course_8_la_chute_de_constantinople_1453_p1",
+      "title": "Une capitale déjà presque morte",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Fondée en **330** par Constantin, la ville fut longtemps le phare de l'Europe. Au XVe siècle, l'Empire byzantin n'est plus qu'une ombre, affaibli surtout par [[le Sac de Constantinople par la 4e Croisade (1204)]]. Il reste la capitale et quelques territoires grecs. Environ **50 000** habitants vivent parmi les ruines, là où l'on comptait autrefois **500 000** âmes." },
+        { "type": "image", "asset": "constantinople_theodosian_walls", "ratio": "4:3", "caption": "Les murailles théodosiennes, longtemps jugées imprenables." },
+        { "type": "paragraph", "text": "Son dernier atout : les [[Murailles théodosiennes]], triple ligne du Ve siècle. Pendant mille ans, personne ne les a forcées par la terre. Constantinople est une île chrétienne dans une mer ottomane." },
+        { "type": "funFact", "text": "Même encerclés, les Byzantins continuaient de se disputer sur des points de théologie minuscules. L'expression « discussion byzantine » est restée." }
+      ]
+    },
+    {
+      "id": "course_8_la_chute_de_constantinople_1453_p2",
+      "title": "Mehmed II et le canon",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "En **1451**, **Mehmed II** a **19 ans** et une obsession : prendre la Ville. Il engage le fondeur **Urban**, qui lui forge la « Basilique », un canon de **8 mètres** tirant des boulets de **600 kg**. Les fortifications médiévales deviennent obsolètes." },
+        { "type": "image", "asset": "mehmed_ii_portrait_sultan", "ratio": "4:3", "caption": "Mehmed II, le jeune sultan qui veut Constantinople." },
+        { "type": "paragraph", "text": "Le siège commence le **2 avril 1453**. Face à **80 000 à 200 000** Ottomans, dont les [[Janissaires]], [[Constantin XI Paléologue]] n'aligne que **7 000** défenseurs. Chaque nuit, ils reboucheront les brèches avec du bois et de la terre." },
+        { "type": "funFact", "text": "Le canon d'Urban était si lourd qu'il fallait **60 bœufs** et **400 hommes** pour le déplacer. Il ne pouvait tirer que **7 fois** par jour, sous peine d'exploser." }
+      ]
+    },
+    {
+      "id": "course_8_la_chute_de_constantinople_1453_p3",
+      "title": "Le 29 mai",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Bloqué à la [[Corne d'Or]] par une chaîne, Mehmed fait tracter **70 navires** par voie terrestre derrière la défense. Le **29 mai**, à l'aube, l'assaut général emporte une brèche près de Saint-Romain. On parle aussi d'une petite porte, la **Kerkoporta**, laissée ouverte." },
+        { "type": "paragraph", "text": "Constantin XI se jette dans la mêlée ; son corps ne sera jamais formellement identifié. Mehmed convertit **Sainte-Sophie** en mosquée. Constantinople devient [[Istanbul]], capitale d'un empire conquérant." },
+        { "type": "timeline", "events": [
+          { "date": "1204", "title": "Sac de la 4e Croisade", "detail": "Byzance est durablement affaiblie par les Latins." },
+          { "date": "1451", "title": "Avènement de Mehmed II", "detail": "Le jeune sultan prépare la prise de la Ville." },
+          { "date": "2 avril 1453", "title": "Début du siège", "detail": "L'artillerie ottomane frappe les murailles." },
+          { "date": "29 mai 1453", "title": "Chute de la cité", "detail": "Constantinople devient capitale ottomane." }
+        ] }
+      ]
+    },
+    {
+      "id": "course_8_la_chute_de_constantinople_1453_p4",
+      "title": "Choc en retour sur l'Europe",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Des savants grecs fuient vers l'Italie avec leurs manuscrits : [[la Diaspora grecque et la Renaissance]]. Sur le plan commercial, les Ottomans taxent lourdement les routes d'Orient. Portugal et Espagne cherchent l'Atlantique. En **1492**, Colomb bute sur l'Amérique." },
+        { "type": "paragraph", "text": "La chute met fin à la continuité vivante du [[le Droit byzantin et l'héritage romain]]. L'Europe moderne naît en partie de ce deuil : un empire millénaire s'éteint, un autre monde s'ouvre." },
+        { "type": "takeaway", "text": "Le **29 mai 1453**, Constantinople tombe après mille ans de résistance. Fin de Byzance, essor ottoman, accélération de la Renaissance et des Grandes Découvertes : une date charnière." }
+      ]
+    }
+  ]
+}

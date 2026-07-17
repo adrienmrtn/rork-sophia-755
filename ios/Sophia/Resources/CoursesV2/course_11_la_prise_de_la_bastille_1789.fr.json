@@ -1,0 +1,144 @@
+{
+  "id": "course_11_la_prise_de_la_bastille_1789",
+  "title": "La prise de la Bastille",
+  "subtitle": "1789",
+  "subject": "histoire",
+  "subcategory": "Révolutions & conflits modernes",
+  "description": "Le 14 juillet 1789, des Parisiens prennent d'assaut une forteresse qui ne contenait que **7 prisonniers**. Ce geste symbolique devient l'acte fondateur de la Révolution française.",
+  "hero": {
+    "image": "la_prise_de_la_bastille_1789",
+    "ratio": "16:9",
+    "hook": "Le 14 juillet 1789, Paris prend d'assaut une forteresse… pour de la poudre."
+  },
+  "sections": [
+    {
+      "id": "course_11_la_prise_de_la_bastille_1789_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le **14 juillet 1789**, une foule de Parisiens en colère prend d'assaut la **Bastille**, une forteresse qui domine l'est de la capitale. Ce n'est pas encore « la démocratie » : c'est la panique, la faillite de l'État, et la peur des troupes royales massées autour de Paris."
+        },
+        {
+          "type": "paragraph",
+          "text": "Loin d'être une libération massive de prisonniers politiques, cet assaut devient pourtant l'acte fondateur de la **Révolution française**. Voici comment une émeute pour de la poudre a fait basculer un royaume."
+        }
+      ]
+    },
+    {
+      "id": "course_11_la_prise_de_la_bastille_1789_p1",
+      "title": "L'impasse politique et la naissance de l'Assemblée",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En 1789, la France est au bord de la faillite. Le coût de la [[guerre d'Indépendance américaine]] a vidé le trésor. Pour lever de nouveaux impôts, **Louis XVI** convoque les **États généraux** en mai."
+        },
+        {
+          "type": "image",
+          "asset": "estates_general_1789_france",
+          "ratio": "4:3",
+          "caption": "Les États généraux de 1789 : le Tiers État face au clergé et à la noblesse."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mais le système de l'[[Ancien Régime et les trois ordres]] bloque toute réforme : clergé et noblesse refusent de perdre leurs privilèges. Le **17 juin**, le **Tiers État** se proclame **Assemblée nationale**. Le **20 juin**, au **Serment du Jeu de Paume**, les députés jurent de ne pas se séparer avant d'avoir écrit une constitution."
+        },
+        {
+          "type": "funFact",
+          "text": "Le **14 juillet 1789**, la Bastille ne contenait que **7 prisonniers** : 4 faussaires, 2 fous et un aristocrate libertin. Sa force était surtout symbolique."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le roi semble céder, mais il masse **30 000 soldats** autour de Paris. Le **11 juillet**, le renvoi de **Jacques Necker**, ministre des Finances très populaire, met le feu aux poudres."
+        }
+      ]
+    },
+    {
+      "id": "course_11_la_prise_de_la_bastille_1789_p2",
+      "title": "La quête des armes et le siège de la forteresse",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Les **12** et **13 juillet**, Paris s'insurge. On brûle les barrières d'octroi, on pille les armureries. Le matin du **14**, la foule saisit environ **32 000 fusils** aux **Invalides**. Il manque la poudre."
+        },
+        {
+          "type": "image",
+          "asset": "storming_of_the_bastille_1789",
+          "ratio": "4:3",
+          "caption": "La prise de la Bastille, 14 juillet 1789."
+        },
+        {
+          "type": "paragraph",
+          "text": "La rumeur dit qu'elle est à la Bastille. Cette forteresse incarne l'arbitraire royal via la [[lettre de cachet]]. Le gouverneur **de Launay** refuse de livrer la poudre. Vers **13 h 30**, des coups de feu éclatent : **98 morts** parmi les assaillants. Des soldats mutinés de la Garde française amènent des canons. En fin d'après-midi, la forteresse tombe. De Launay est lynché."
+        }
+      ]
+    },
+    {
+      "id": "course_11_la_prise_de_la_bastille_1789_p3",
+      "title": "La chute du symbole et la Grande Peur",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le **15 juillet**, on réveille Louis XVI. « Est-ce une révolte ? » demande-t-il. On lui répond : « Non Sire, c'est une révolution. » Ironie cruelle : dans son journal, le roi avait noté « Rien » le 14, pensant à sa chasse."
+        },
+        {
+          "type": "funFact",
+          "text": "L'entrepreneur **Palloy**, chargé de démolir la Bastille, fit tailler des dominos dans ses pierres et en offrit un jeu au Dauphin, « pour qu'il joue avec les restes du despotisme »."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le roi rappelle Necker, retire ses troupes et accepte la **cocarde tricolore**. Dans les campagnes, la nouvelle alimente [[La Grande Peur]] : les paysans brûlent les registres des droits seigneuriaux. Dans la nuit du **4 août 1789**, l'Assemblée abolit les privilèges."
+        }
+      ]
+    },
+    {
+      "id": "course_11_la_prise_de_la_bastille_1789_p4",
+      "title": "De l'événement au mythe national",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dès le lendemain, on démolit la Bastille. Un an plus tard, la **Fête de la Fédération** célèbre l'unité nationale. Mais le 14 juillet ne devient fête nationale qu'en **1880**, sous la IIIe République : on célèbre à la fois 1789 et la réconciliation de 1790."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "5 mai 1789",
+              "title": "États généraux",
+              "detail": "Louis XVI convoque le royaume pour sortir de la faillite."
+            },
+            {
+              "date": "20 juin 1789",
+              "title": "Serment du Jeu de Paume",
+              "detail": "Les députés jurent de donner une constitution à la France."
+            },
+            {
+              "date": "14 juillet 1789",
+              "title": "Prise de la Bastille",
+              "detail": "Paris s'empare de la poudre et du symbole royal."
+            },
+            {
+              "date": "4 août 1789",
+              "title": "Abolition des privilèges",
+              "detail": "La Grande Peur force la fin juridique de la féodalité."
+            },
+            {
+              "date": "26 août 1789",
+              "title": "Déclaration des droits",
+              "detail": "Les sujets deviennent citoyens devant la loi."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "En prenant la Bastille le **14 juillet 1789** pour de la poudre, le peuple de Paris a transformé une crise financière en révolution et précipité la fin de l'ordre féodal."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "id": "course_20_hiroshima_et_nagasaki_1945",
+  "title": "Hiroshima et Nagasaki",
+  "subtitle": "1945",
+  "subject": "histoire",
+  "subcategory": "Révolutions & conflits modernes",
+  "description": "Le **6 août 1945**, une bombe atomique rase Hiroshima. Trois jours plus tard, Nagasaki. La Seconde Guerre mondiale s'achève… et l'ère nucléaire commence.",
+  "hero": {
+    "image": "hiroshima_et_nagasaki_1945",
+    "ratio": "16:9",
+    "hook": "En un éclair plus brillant que mille soleils, une ville entière disparaît."
+  },
+  "sections": [
+    {
+      "id": "course_20_hiroshima_et_nagasaki_1945_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le **6 août 1945**, à **8 h 15**, le ciel d'**Hiroshima** s'embrase. En un instant, une seule bombe tue entre **70 000 et 80 000** personnes. Trois jours plus tard, **Nagasaki** subit le même sort."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ces frappes terminent la guerre en Asie et ouvrent l'**ère nucléaire** : pour la première fois, l'humanité peut s'autodétruire."
+        }
+      ]
+    },
+    {
+      "id": "course_20_hiroshima_et_nagasaki_1945_p1",
+      "title": "Le Projet Manhattan : l'odyssée scientifique et militaire",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Par peur d'une bombe nazie, une lettre d'Einstein rédigée par [[Leó Szilárd]] pousse Washington à lancer en **1942** le **Projet Manhattan** : environ **130 000** personnes, **2 milliards** de dollars. Oak Ridge, Hanford, Los Alamos…"
+        },
+        {
+          "type": "image",
+          "asset": "trinity_nuclear_test_1945",
+          "ratio": "4:3",
+          "caption": "Le test Trinity, 16 juillet 1945 : la première explosion nucléaire."
+        },
+        {
+          "type": "funFact",
+          "text": "Le test **Trinity**, dans le désert de [[Jornada del Muerto]], fut si puissant que des habitants à plus de **150 km** crurent voir le soleil se lever deux fois."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le **16 juillet 1945**, le test **Trinity** réussit. **Oppenheimer** pense alors à une phrase du Mahabharata : « Je suis devenu la Mort, le destructeur des mondes. »"
+        }
+      ]
+    },
+    {
+      "id": "course_20_hiroshima_et_nagasaki_1945_p2",
+      "title": "Le dilemme de Truman et la fin de l'impasse",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "À la mort de Roosevelt, **Truman** découvre la bombe. L'Allemagne a capitulé, mais le Japon continue, notamment avec les [[kamikazes]]. Une invasion (opération Downfall) pourrait coûter **500 000 à un million** de pertes américaines."
+        },
+        {
+          "type": "funFact",
+          "text": "Hiroshima avait été délibérément épargnée des raids classiques, pour mesurer précisément les effets d'une seule explosion nucléaire."
+        },
+        {
+          "type": "paragraph",
+          "text": "À [[Potsdam]], les tensions avec l'URSS montent. Utiliser la bombe, c'est aussi afficher une suprématie américaine. Hiroshima est choisie pour son rôle militaire et son relief en cuvette."
+        }
+      ]
+    },
+    {
+      "id": "course_20_hiroshima_et_nagasaki_1945_p3",
+      "title": "L'apocalypse atomique et le choc de la capitulation",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le **6 août**, l'**Enola Gay** largue **Little Boy**. Jusqu'à **140 000** morts d'ici la fin de l'année, brûlures et [[La maladie des rayons (syndrome aigu d'irradiation)]] compris. Le **9 août**, le [[Bockscar]] vise [[Kokura]], mais les nuages le renvoient sur **Nagasaki** et **Fat Man**."
+        },
+        {
+          "type": "image",
+          "asset": "hiroshima_atomic_bomb_mushroom_cloud_1945",
+          "ratio": "4:3",
+          "caption": "Le champignon atomique d'Hiroshima, 6 août 1945."
+        },
+        {
+          "type": "funFact",
+          "text": "**Tsutomu Yamaguchi** survécut aux deux bombes : blessé à Hiroshima le 6, il rentra à Nagasaki… où il se trouvait encore le 9 août."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le même jour, l'[[Entrée en guerre de l'URSS contre le Japon (9 août 1945)]] anéantit l'espoir d'une médiation. Le **15 août**, l'empereur **Hirohito** annonce la reddition dans le [[Gyokuon-hōsō]]."
+        }
+      ]
+    },
+    {
+      "id": "course_20_hiroshima_et_nagasaki_1945_p4",
+      "title": "Héritage moral et conséquences systémiques",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Les survivants, les [[Hibakusha]], portent cancers, stigmates et un débat éthique sans fin. Géopolitiquement, commence l'âge de la [[Dissuasion nucléaire]] et de la Guerre froide. Hiroshima reste l'avertissement absolu de la science mise au service de la destruction."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "16 juil. 1945",
+              "title": "Trinity",
+              "detail": "Premier essai nucléaire réussi."
+            },
+            {
+              "date": "6 août 1945",
+              "title": "Hiroshima",
+              "detail": "Little Boy rase la ville."
+            },
+            {
+              "date": "9 août 1945",
+              "title": "Nagasaki et URSS",
+              "detail": "Fat Man et entrée en guerre soviétique."
+            },
+            {
+              "date": "15 août 1945",
+              "title": "Capitulation",
+              "detail": "Hirohito impose la paix."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "**Hiroshima**, **6 août 1945** : des dizaines de milliers de morts en un instant. Après Nagasaki, le Japon capitule… et l'ère nucléaire commence."
+        }
+      ]
+    }
+  ]
+}

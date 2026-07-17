@@ -1,0 +1,139 @@
+{
+  "id": "course_39_la_democratie_athenienne",
+  "title": "La démocratie athénienne",
+  "subtitle": "Ve siècle av. J.-C.",
+  "subject": "histoire",
+  "subcategory": "Guerre froide & monde contemporain",
+  "description": "Au Ve siècle avant J.-C., Athènes invente un système où les citoyens gouvernent directement. Tirage au sort, égalité de parole, mais aussi exclusion massive : le paradoxe fondateur de la démocratie.",
+  "hero": {
+    "image": "la_democratie_athenienne",
+    "ratio": "16:9",
+    "hook": "Comment une cité grecque a inventé le pouvoir du peuple, et ses limites."
+  },
+  "sections": [
+    {
+      "id": "course_39_la_democratie_athenienne_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Au Ve siècle avant J.-C., Athènes invente quelque chose de radical : la **[[politique]]** au sens où les citoyens ne sont plus sujets d'un roi, mais acteurs de leur destin. Le pouvoir (*kratos*) appartient au peuple (*demos*)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cette démocratie directe, née de crises et de réformes, reste le socle de la pensée politique occidentale, avec ses forces et ses angles morts."
+        }
+      ]
+    },
+    {
+      "id": "course_39_la_democratie_athenienne_p1",
+      "title": "De Solon à Clisthène",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Au VIIe siècle, Athènes est déchirée entre aristocrates et paysans endettés. **[[Solon]]** (**594 av. J.-C.**) abolit l'esclavage pour dettes et ouvre les magistratures selon la fortune, pas seulement le sang."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le vrai tournant, c'est **[[Clisthène]]** (**508-507**). Il crée **10 tribus** mixtes pour casser les clans, et institue la **[[Boulé]]**, Conseil des Cinq Cents tirés au sort. Chaque citoyen peut servir la cité."
+        },
+        {
+          "type": "image",
+          "asset": "athens_agora_ancient_ruins",
+          "ratio": "4:3",
+          "caption": "L'Agora d'Athènes, cœur de la vie civique."
+        },
+        {
+          "type": "funFact",
+          "text": "Pour écarter un homme trop puissant, les Athéniens votaient l'**[[Ostracisme]]** sur un tesson de céramique, avec un quorum de **6 000** votants."
+        }
+      ]
+    },
+    {
+      "id": "course_39_la_democratie_athenienne_p2",
+      "title": "L'apogée sous Périclès",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Au milieu du Ve siècle, sous **Périclès**, le système devient « radical ». L'**Ecclésia**, assemblée des citoyens, se réunit environ **40 fois** par an sur la Pnyx. Elle vote les lois, la guerre, la paix, le budget."
+        },
+        {
+          "type": "image",
+          "asset": "pericles_bust_sculpture",
+          "ratio": "1:1",
+          "caption": "Périclès, stratège réélu quinze fois, figure de l'âge d'or athénien."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'**[[Iségoria]]** garantit l'égalité de parole. Le **[[Misthos]]**, indemnité journalière, permet aux plus pauvres de siéger. La justice passe par l'**[[Héliée]]** : **6 000** jurés tirés au sort. Le tirage au sort limite l'accaparement du pouvoir, sauf pour les stratèges militaires."
+        }
+      ]
+    },
+    {
+      "id": "course_39_la_democratie_athenienne_p3",
+      "title": "Une démocratie d'exclusion",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sur environ **300 000** habitants, seuls **30 000 à 50 000** citoyens mâles votent. Femmes, esclaves et métèques sont exclus. En **451**, Périclès durcit même la règle : il faut deux parents citoyens."
+        },
+        {
+          "type": "paragraph",
+          "text": "Paradoxe fondateur : l'égalité entre pairs repose sur l'esclavage et l'exclusion. Une démocratie de face-à-face, intense, mais fermée."
+        },
+        {
+          "type": "funFact",
+          "text": "Celui qui se désintéressait de la vie publique était appelé *idiotes* (« particulier »). Le mot a donné « idiot » : se couper du bien commun passait pour un manque de raison."
+        }
+      ]
+    },
+    {
+      "id": "course_39_la_democratie_athenienne_p4",
+      "title": "Fragilités et héritage",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un [[Démagogue]] habile peut emporter l'assemblée par l'émotion. **Platon**, marqué par la mort de **Socrate** (**399 av. J.-C.**), voit dans la démocratie le règne de l'opinion contre la vérité, et l'exemple type de la tyrannie de la majorité."
+        },
+        {
+          "type": "paragraph",
+          "text": "Malgré ses failles, Athènes lègue des idées durables : responsabilité des gouvernants, égalité devant la loi, débat contradictoire. Aujourd'hui, le tirage au sort et la démocratie directe reviennent même dans les discussions contemporaines."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "594 av. J.-C.",
+              "title": "Solon",
+              "detail": "Fin de l'esclavage pour dettes."
+            },
+            {
+              "date": "508 av. J.-C.",
+              "title": "Clisthène",
+              "detail": "Tribus mixtes et Boulé."
+            },
+            {
+              "date": "Ve siècle",
+              "title": "Périclès",
+              "detail": "Misthos et démocratie radicale."
+            },
+            {
+              "date": "399 av. J.-C.",
+              "title": "Mort de Socrate",
+              "detail": "Face sombre de la souveraineté populaire."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "La démocratie athénienne est un gouvernement direct des citoyens mâles libres, fondé sur le tirage au sort et l'égalité de parole, qui excluait environ **85 %** de la population mais a inventé le débat public occidental."
+        }
+      ]
+    }
+  ]
+}

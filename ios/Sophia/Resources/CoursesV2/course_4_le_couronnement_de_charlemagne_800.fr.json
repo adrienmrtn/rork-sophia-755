@@ -1,0 +1,71 @@
+{
+  "id": "course_4_le_couronnement_de_charlemagne_800",
+  "title": "Le couronnement de Charlemagne",
+  "subtitle": "800",
+  "subject": "histoire",
+  "subcategory": "Antiquité & Moyen Âge",
+  "description": "Le jour de Noël 800, à Rome, le pape Léon III pose une couronne sur la tête de Charlemagne. L'Occident retrouve un empereur, et l'Europe un modèle durable.",
+  "hero": {
+    "image": "le_couronnement_de_charlemagne",
+    "ratio": "16:9",
+    "hook": "Noël 800 : un roi franc devient empereur, et l'Europe change de siècle."
+  },
+  "sections": [
+    {
+      "id": "course_4_le_couronnement_de_charlemagne_800_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Le **25 décembre 800**, dans la basilique Saint-Pierre de Rome, le pape **Léon III** pose une couronne sur la tête de **Charles**, roi des Francs. Ce geste prétend restaurer l'Empire romain disparu en Occident depuis **476**." },
+        { "type": "paragraph", "text": "Ce n'est pas qu'une cérémonie. C'est la naissance d'une ambition : un empire chrétien latin, distinct de Byzance, qui jette les bases administratives et culturelles de l'Europe continentale." }
+      ]
+    },
+    {
+      "id": "course_4_le_couronnement_de_charlemagne_800_p1",
+      "title": "Quarante ans de conquêtes",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "**Charlemagne** hérite du royaume franc en **768**. Après la mort de son frère, il conquiert sans relâche. Trente ans de guerres contre les **Saxons**, conversion forcée comprise. En **774**, il renverse le royaume [[Lombard]]. Il soumet la Bavière, écrase les [[Avars]], et tente l'Espagne : l'embuscade de [[Roncevaux]] (**778**) entre dans la légende." },
+        { "type": "image", "asset": "le_couronnement_de_charlemagne", "ratio": "4:3", "caption": "Charlemagne couronné empereur à Rome, le jour de Noël 800." },
+        { "type": "paragraph", "text": "À son apogée, l'empire couvre environ **1,1 million de km²**. Trop vaste pour tenir par la seule épée. Charles doit inventer une autre façon de gouverner." },
+        { "type": "funFact", "text": "Charlemagne mesurait environ **1,84 m**, une taille exceptionnelle à une époque où la moyenne masculine tournait autour de **1,65 m**." }
+      ]
+    },
+    {
+      "id": "course_4_le_couronnement_de_charlemagne_800_p2",
+      "title": "Administrer et faire lire",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Pour tenir l'empire, Charlemagne s'appuie sur des [[Comtes]] et sur [[Les missi dominici]], inspecteurs envoyés par paires pour contrôler les provinces. À Aix-la-Chapelle, [[Alcuin de York]] dirige l'école palatine. On restaure le latin, on forme des clercs, on invente l'**écriture caroline**, lisible partout." },
+        { "type": "paragraph", "text": "Les monastères copient les textes antiques. Sur le plan économique, le [[Denier d'argent]] remplace l'or trop rare : une monnaie stable pour le commerce quotidien. C'est la **Renaissance carolingienne** : moins de splendeur artistique que d'ordre et de savoir utile." },
+        { "type": "funFact", "text": "Pour que ses lois soient comprises, Charlemagne exigeait qu'on les lise à voix haute au peuple, les jours de marché ou après la messe." }
+      ]
+    },
+    {
+      "id": "course_4_le_couronnement_de_charlemagne_800_p3",
+      "title": "Noël 800 : le sacre ambigu",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "En **799**, Léon III, agressé à Rome, se réfugie auprès de Charles. Le roi le rétablit. Le jour de Noël, le pape le couronne **« Empereur des Romains »**. Selon son biographe Eginhard, Charles aurait été gêné : en posant lui-même la couronne, le pape suggère que le pouvoir vient de l'Église." },
+        { "type": "paragraph", "text": "Byzance hurle à l'usurpation. Pour Constantinople, il n'existe qu'un seul empereur romain. Charlemagne crée un second pôle. L'Occident latin affirme son indépendance. Naît l'idée du [[Le Saint-Empire romain germanique]]." },
+        { "type": "timeline", "events": [
+          { "date": "768", "title": "Avènement", "detail": "Charlemagne hérite du royaume franc." },
+          { "date": "774", "title": "Conquête lombarde", "detail": "Il prend la couronne d'Italie du Nord." },
+          { "date": "800", "title": "Couronnement à Rome", "detail": "Léon III le fait empereur le jour de Noël." },
+          { "date": "814", "title": "Mort de Charlemagne", "detail": "Louis le Pieux lui succède." },
+          { "date": "843", "title": "Traité de Verdun", "detail": "L'empire est partagé entre ses petits-fils." }
+        ] }
+      ]
+    },
+    {
+      "id": "course_4_le_couronnement_de_charlemagne_800_p4",
+      "title": "Un empire cassé, une idée vivante",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Après **814**, l'unité ne tient pas. En **843**, le traité de Verdun partage l'empire : France à l'ouest, Allemagne à l'est, Lotharingie au centre. La féodalité gagne du terrain. Mais les comtés, l'écriture, la monnaie et le rêve impérial survivent." },
+        { "type": "paragraph", "text": "Le titre impérial durera jusqu'en **1806**. Charlemagne devient le « Père de l'Europe » : non pas parce que son empire a tenu, mais parce qu'il a donné à l'Occident un premier grand cadre commun." },
+        { "type": "takeaway", "text": "Le **25 décembre 800**, Charlemagne restaure l'Empire en Occident. Divisé dès **843**, ce projet laisse pourtant à l'Europe ses premiers outils d'unité : administration, écriture, monnaie et idée impériale." }
+      ]
+    }
+  ]
+}

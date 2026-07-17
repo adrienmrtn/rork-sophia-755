@@ -1,0 +1,140 @@
+{
+  "id": "course_16_la_bataille_de_verdun_1916",
+  "title": "La bataille de Verdun",
+  "subtitle": "1916",
+  "subject": "histoire",
+  "subcategory": "Révolutions & conflits modernes",
+  "description": "Pendant **299 jours**, Français et Allemands s'entre-déchirent autour de Verdun. **700 000** pertes pour un gain territorial quasi nul : le symbole de l'horreur des tranchées.",
+  "hero": {
+    "image": "la_bataille_de_verdun_1916",
+    "ratio": "16:9",
+    "hook": "299 jours pour quelques kilomètres de boue et 700 000 hommes hors de combat."
+  },
+  "sections": [
+    {
+      "id": "course_16_la_bataille_de_verdun_1916_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **1916**, pendant **299 jours**, deux armées s'affrontent sur quelques kilomètres carrés. **Verdun** n'est pas une percée brillante : c'est l'apogée de la guerre industrielle, avec environ **700 000** morts ou blessés."
+        },
+        {
+          "type": "paragraph",
+          "text": "La bataille devient le symbole de l'horreur des tranchées… puis, des décennies plus tard, celui de la réconciliation franco-allemande."
+        }
+      ]
+    },
+    {
+      "id": "course_16_la_bataille_de_verdun_1916_p1",
+      "title": "Le plan allemand : une stratégie d'usure calculée",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le front est figé dans la [[Guerre de tranchées]]. Le général **Falkenhayn** veut « saigner la France à blanc ». Il choisit Verdun, place forte que Paris ne peut abandonner sans perdre la face. L'opération s'appelle [[Gericht]], « le tribunal »."
+        },
+        {
+          "type": "image",
+          "asset": "battle_of_verdun_trenches_1916",
+          "ratio": "4:3",
+          "caption": "Les tranchées de Verdun : un paysage dévoré par l'artillerie."
+        },
+        {
+          "type": "funFact",
+          "text": "Le bombardement d'ouverture du **21 février 1916** était si violent qu'on l'entendait jusque dans les Vosges, à plus de **150 km**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le **21 février**, **1 200 canons** pilonnent les lignes françaises. Le **25**, le **fort de Douaumont** tombe presque sans combat. Paris doit désormais tout miser sur Verdun : le piège de Falkenhayn fonctionne."
+        }
+      ]
+    },
+    {
+      "id": "course_16_la_bataille_de_verdun_1916_p2",
+      "title": "L'organisation de la défense et le miracle logistique",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Philippe Pétain** organise la survie du secteur. La **Voie Sacrée** relie [[Bar-le-Duc]] à Verdun : près de **6 000 camions** par jour, un véhicule toutes les **14 secondes**. En panne, on pousse le camion dans le fossé."
+        },
+        {
+          "type": "image",
+          "asset": "voie_sacree_verdun_trucks",
+          "ratio": "4:3",
+          "caption": "La Voie Sacrée, artère vitale du ravitaillement français."
+        },
+        {
+          "type": "paragraph",
+          "text": "Avec la [[Noria]], il fait tourner les divisions rapidement. Résultat : environ **70 %** de l'armée française combat à Verdun à un moment ou un autre. La bataille devient une expérience nationale."
+        }
+      ]
+    },
+    {
+      "id": "course_16_la_bataille_de_verdun_1916_p3",
+      "title": "L'enfer industriel et la victoire de l'endurance",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L'été, la [[Bataille de la Somme (1916)]] soulage Verdun. Sous **Nivelle**, les Français reprennent Douaumont puis Vaux. La bataille s'achève le **18 décembre 1916**. Les lignes n'ont presque pas bougé."
+        },
+        {
+          "type": "funFact",
+          "text": "Fleury-devant-Douaumont fut pris et repris **16 fois** en deux mois, puis rayé de la carte. Il fait partie des « villages morts pour la France », encore administrés sans habitants."
+        },
+        {
+          "type": "paragraph",
+          "text": "Environ **370 000** Français et **330 000** Allemands tombent ou sont mutilés. L'[[Artillerie lourde de la Grande Guerre]] tue plus que le corps à corps. Des [[Zones rouges]] restent impropres à toute vie civile."
+        }
+      ]
+    },
+    {
+      "id": "course_16_la_bataille_de_verdun_1916_p4",
+      "title": "De l'ossuaire de Douaumont à la réconciliation",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L'**ossuaire de Douaumont** (1932) abrite les restes de **130 000** soldats français et allemands mêlés. Le **22 septembre 1984**, **Mitterrand** et **Kohl** se tiennent la main devant le monument : Verdun devient symbole de paix européenne."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "21 fév. 1916",
+              "title": "Ouverture de Gericht",
+              "detail": "Barrage d'artillerie sans précédent."
+            },
+            {
+              "date": "25 fév. 1916",
+              "title": "Chute de Douaumont",
+              "detail": "Choc politique à Paris."
+            },
+            {
+              "date": "été 1916",
+              "title": "Somme",
+              "detail": "Les Alliés soulagent le front de Verdun."
+            },
+            {
+              "date": "18 déc. 1916",
+              "title": "Fin de la bataille",
+              "detail": "Presque aucun gain territorial."
+            },
+            {
+              "date": "22 sept. 1984",
+              "title": "Mitterrand-Kohl",
+              "detail": "Geste de réconciliation franco-allemande."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "**Verdun** (**1916**) : **299** jours de guerre industrielle, environ **700 000** pertes pour un gain territorial nul, et plus tard le symbole de la réconciliation franco-allemande."
+        }
+      ]
+    }
+  ]
+}

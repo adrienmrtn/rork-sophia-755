@@ -1,0 +1,116 @@
+{
+  "id": "course_26_la_creation_de_l_onu_1945",
+  "title": "La création de l'ONU",
+  "subtitle": "1945",
+  "subject": "histoire",
+  "subcategory": "Guerre froide & monde contemporain",
+  "description": "Le **26 juin 1945**, **51** pays signent à San Francisco la Charte des Nations Unies. Née des cendres de la Seconde Guerre mondiale, l'ONU veut épargner aux peuples le fléau de la guerre.",
+  "hero": {
+    "image": "la_creation_de_l_onu_1945",
+    "ratio": "16:9",
+    "hook": "Après deux guerres mondiales, une idée audacieuse : forcer les nations à parler avant de tirer."
+  },
+  "sections": [
+    {
+      "id": "course_26_la_creation_de_l_onu_1945_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le **26 juin 1945**, **51** pays signent à San Francisco la **Charte des Nations Unies**. L'objectif est clair : épargner aux générations futures le fléau de la guerre. L'ONU n'est pas une simple alliance ; elle veut être un cadre juridique et moral universel."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le projet tente de concilier deux principes souvent contradictoires : l'égalité des nations… et le poids réel des grandes puissances vainqueurs."
+        }
+      ]
+    },
+    {
+      "id": "course_26_la_creation_de_l_onu_1945_p1",
+      "title": "L'échec de la SDN, la leçon de 1945",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L'idée d'une [[gouvernance mondiale]] vient de loin. Après 1918, **Woodrow Wilson** lance la **Société des Nations**. Basée à Genève, elle veut régler les conflits par le droit. Mais le Sénat américain, attaché à l'[[Isolationnisme]], refuse d'y entrer. Sans les États-Unis, la SDN manque de poids."
+        },
+        {
+          "type": "image",
+          "asset": "league_of_nations_geneva",
+          "ratio": "4:3",
+          "caption": "La Société des Nations à Genève, ancêtre fragile de l'ONU."
+        },
+        {
+          "type": "funFact",
+          "text": "La SDN a officiellement survécu pendant toute la Seconde Guerre mondiale. Elle n'est dissoute qu'en **1946**, pour transmettre ses biens à la nouvelle ONU."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sans force de coercition, sans [[Casques bleus]], elle ne peut arrêter le Japon en Mandchourie ni l'Italie en Éthiopie. Sa faillite enseigne aux fondateurs de l'ONU une règle : il faut les grandes puissances à l'intérieur, et des moyens de pression réels."
+        }
+      ]
+    },
+    {
+      "id": "course_26_la_creation_de_l_onu_1945_p2",
+      "title": "Le Conseil de sécurité et le veto",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La Charte crée une structure à deux têtes. L'**Assemblée générale** donne une voix à chaque État. Le **Conseil de sécurité** agit comme organe exécutif : sanctions, recours à la force. Pour que les plus forts restent à table, on invente le [[Le droit de veto au Conseil de sécurité]]."
+        },
+        {
+          "type": "image",
+          "asset": "un_security_council_chamber",
+          "ratio": "4:3",
+          "caption": "La salle du Conseil de sécurité, cœur politique de l'ONU."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cinq vainqueurs de 1945 deviennent membres permanents : États-Unis, URSS, Royaume-Uni, France, Chine. Chacun peut bloquer une résolution. Dès la Guerre froide, le veto paralyse souvent le Conseil dès qu'un conflit touche les intérêts d'un bloc."
+        }
+      ]
+    },
+    {
+      "id": "course_26_la_creation_de_l_onu_1945_p3",
+      "title": "Ce que l'ONU réussit dans l'ombre",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Si la diplomatie bloque, les agences spécialisées transforment des vies. L'**OMS** coordonne la santé mondiale et permet l'éradication de la **variole** en 1980. L'**UNICEF**, le **HCR**, l'**UNESCO**, la **FAO** : un maillage technique qui dépasse les frontières."
+        },
+        {
+          "type": "paragraph",
+          "text": "Là où la SDN avait échoué, l'ONU devient indispensable au fonctionnement du monde moderne : aviation civile, télécoms, aide alimentaire, réfugiés. Moins spectaculaire que le Conseil, ce travail est son vrai succès quotidien."
+        }
+      ]
+    },
+    {
+      "id": "course_26_la_creation_de_l_onu_1945_p4",
+      "title": "Une institution contestée, toujours unique",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aujourd'hui, l'ONU compte **193** membres. Sa structure de 1945, issue notamment de [[La conférence de Yalta (février 1945)]], ne reflète plus le monde : Inde, Brésil, Afrique réclament une réforme du veto. Le budget annuel, environ **3 milliards** de dollars, reste dérisoire face aux ambitions."
+        },
+        {
+          "type": "funFact",
+          "text": "Le siège de l'ONU à New York est une zone internationale : sécurité propre, pompiers propres, et même des timbres-poste utilisables seulement depuis le bâtiment."
+        },
+        {
+          "type": "image",
+          "asset": "un_charter_signing_san_francisco_1945",
+          "ratio": "4:3",
+          "caption": "Signature de la Charte des Nations Unies, San Francisco, 1945."
+        },
+        {
+          "type": "takeaway",
+          "text": "Créée en **1945** pour corriger l'échec de la SDN, l'ONU allie un Conseil de sécurité puissant mais souvent paralysé, et des agences dont l'action humanitaire a changé le XXe siècle."
+        }
+      ]
+    }
+  ]
+}

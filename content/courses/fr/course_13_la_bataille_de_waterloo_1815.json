@@ -1,0 +1,134 @@
+{
+  "id": "course_13_la_bataille_de_waterloo_1815",
+  "title": "La bataille de Waterloo",
+  "subtitle": "1815",
+  "subject": "histoire",
+  "subcategory": "Révolutions & conflits modernes",
+  "description": "Le **18 juin 1815**, en une journée de pluie en Belgique, l'Empire de Napoléon s'effondre. Waterloo clôt les Cent-Jours et ouvre un siècle d'ordre monarchique en Europe.",
+  "hero": {
+    "image": "la_bataille_de_waterloo_1815",
+    "ratio": "16:9",
+    "hook": "Une journée de boue en Belgique, et l'Empire s'effondre pour de bon."
+  },
+  "sections": [
+    {
+      "id": "course_13_la_bataille_de_waterloo_1815_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le **18 juin 1815**, sur une terre détrempée, le destin de l'Europe se joue en Belgique. À **Waterloo**, Napoléon affronte **Wellington** et le Prussien **Blücher**. Ce n'est pas seulement une défaite : c'est la fin du Premier Empire."
+        },
+        {
+          "type": "paragraph",
+          "text": "En une journée, le génie tactique qui avait dominé l'Europe se brise sur des erreurs, la pluie, et une coalition qui tient enfin ensemble."
+        }
+      ]
+    },
+    {
+      "id": "course_13_la_bataille_de_waterloo_1815_p1",
+      "title": "L'envol de l'Aigle : le pari fou des Cent-Jours",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Après l'abdication d'**avril 1814**, Napoléon est exilé à Elbe. Les vainqueurs redessinent l'Europe au [[Congrès de Vienne]]. Le **1er mars 1815**, il débarque près d'Antibes. C'est le début des **Cent-Jours** : les troupes envoyées pour l'arrêter se rallient. Il reprend Paris sans effusion de sang."
+        },
+        {
+          "type": "image",
+          "asset": "napoleon_return_from_elba_1815",
+          "ratio": "4:3",
+          "caption": "Le retour de l'île d'Elbe : l'Aigle reprend son envol."
+        },
+        {
+          "type": "funFact",
+          "text": "Napoléon et Wellington ne s'étaient jamais rencontrés avant Waterloo. Le champ de bataille belge fut leur seul face-à-face."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'Europe le déclare « hors-la-loi ». Son plan : battre séparément Wellington et Blücher grâce à la [[Position centrale]], avant qu'ils ne se rejoignent."
+        }
+      ]
+    },
+    {
+      "id": "course_13_la_bataille_de_waterloo_1815_p2",
+      "title": "Ligny et Quatre-Bras : le prologue sanglant",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le **16 juin**, Napoléon bat les Prussiens à **Ligny**, tandis que [[Le maréchal Ney]] tient les Britanniques aux **Quatre-Bras**. Mais il croit les Prussiens hors de combat et détache **Grouchy** avec **33 000 hommes** pour les poursuivre."
+        },
+        {
+          "type": "funFact",
+          "text": "Certains historiens attribuent le retard du matin du 18 juin à une crise d'hémorroïdes qui aurait empêché Napoléon de monter à cheval pour ses reconnaissances habituelles."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le **18**, après la pluie, il attend **11 h 30** pour que le sol sèche et déplacer sa [[Grande Batterie]]. Ce délai offre à Blücher le temps de marcher vers le canon."
+        }
+      ]
+    },
+    {
+      "id": "course_13_la_bataille_de_waterloo_1815_p3",
+      "title": "Le choc des géants : la plaine de la mort",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La bataille s'engage autour d'**Hougoumont** et de la **Haie Sainte**. Les charges de Ney se brisent sur les [[Carré]] d'infanterie britanniques, formations hérissées de baïonnettes. Vers **16 h 30**, les Prussiens apparaissent sur le flanc droit. Grouchy, lui, reste loin."
+        },
+        {
+          "type": "paragraph",
+          "text": "En dernier recours, Napoléon lance la **Garde impériale**. Pour la première fois, elle recule. Le cri « La Garde recule ! » déclenche la panique. La retraite devient déroute. Wellington et Blücher se rejoignent à la **Belle-Alliance**."
+        }
+      ]
+    },
+    {
+      "id": "course_13_la_bataille_de_waterloo_1815_p4",
+      "title": "L'exil de l'Aigle et l'Europe de la paix",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Napoléon abdique le **22 juin 1815**. Exilé à **Sainte-Hélène**, il meurt en **1821**. Le Congrès de Vienne impose la [[Légitimité]] monarchique. Russie, Autriche et Prusse encadrent le continent. Le « Concert européen » maintient une paix relative jusqu'en **1914**."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1er mars 1815",
+              "title": "Retour d'Elbe",
+              "detail": "Début des Cent-Jours."
+            },
+            {
+              "date": "16 juin 1815",
+              "title": "Ligny et Quatre-Bras",
+              "detail": "Victoire partielle, mais les Prussiens ne sont pas écrasés."
+            },
+            {
+              "date": "18 juin 1815",
+              "title": "Waterloo",
+              "detail": "Défaite décisive face à Wellington et Blücher."
+            },
+            {
+              "date": "22 juin 1815",
+              "title": "Seconde abdication",
+              "detail": "Fin définitive de l'Empire."
+            },
+            {
+              "date": "1821",
+              "title": "Mort à Sainte-Hélène",
+              "detail": "L'Aigle s'éteint en exil."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "**Waterloo** (**18 juin 1815**) achève Napoléon : malgré les Cent-Jours, le retard de l'attaque, l'absence de Grouchy et la jonction alliée font chuter l'Empire et ouvrent un siècle d'ordre monarchique."
+        }
+      ]
+    }
+  ]
+}

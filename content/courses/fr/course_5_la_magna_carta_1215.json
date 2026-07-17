@@ -1,0 +1,70 @@
+{
+  "id": "course_5_la_magna_carta_1215",
+  "title": "La Magna Carta",
+  "subtitle": "1215",
+  "subject": "histoire",
+  "subcategory": "Antiquité & Moyen Âge",
+  "description": "En juin 1215, Jean sans Terre appose son sceau sur une charte imposée par ses barons. Un texte féodal devient, au fil des siècles, le symbole de la loi au-dessus du roi.",
+  "hero": {
+    "image": "la_magna_carta_1215",
+    "ratio": "16:9",
+    "hook": "Un roi acculé signe. Huit siècles plus tard, le monde entier en parle encore."
+  },
+  "sections": [
+    {
+      "id": "course_5_la_magna_carta_1215_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "En juin **1215**, dans la prairie de **Runnymede**, le roi d'Angleterre **Jean sans Terre** appose son sceau sur la **Magna Carta**. Ce n'est pas un geste de générosité. C'est un bras de fer : les barons veulent briser l'arbitraire royal." },
+        { "type": "paragraph", "text": "Le texte naît pour éviter une guerre civile. Son application immédiate échoue. Pourtant, il devient peu à peu le symbole d'une idée explosive : même le roi est sous la loi." }
+      ]
+    },
+    {
+      "id": "course_5_la_magna_carta_1215_p1",
+      "title": "Jean sans Terre au bord du gouffre",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Roi depuis **1199**, Jean enchaîne les catastrophes. Face à [[Philippe II Auguste]], il subit la [[perte de la Normandie (1204)]]. Pour reconquérir ses terres, il presse le [[système féodal]] : taxes, otages, amendes arbitraires. Les coutumes qui liaient le suzerain à ses vassaux volent en éclats." },
+        { "type": "paragraph", "text": "Le conflit avec le pape [[Innocent III]] l'isole encore. Après la défaite de [[Bouvines]] (**1214**), les barons se rebellent et prennent Londres. Jean n'a plus le choix : négocier, ou perdre la couronne." },
+        { "type": "funFact", "text": "Le surnom « Sans Terre » ne vient pas de ses défaites françaises. Dernier fils d'Henri II, il n'avait tout simplement reçu aucun apanage à sa naissance." }
+      ]
+    },
+    {
+      "id": "course_5_la_magna_carta_1215_p2",
+      "title": "Runnymede, 63 clauses",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le **15 juin 1215**, les parties se rencontrent à Runnymede. Influencé par l'archevêque [[Stephen Langton]], le document compte **63 clauses**. Deux d'entre elles changent tout. La **clause 39** : aucun homme libre ne peut être arrêté sans un jugement de ses pairs. La **clause 40** : le roi ne peut ni vendre ni retarder la justice." },
+        { "type": "image", "asset": "magna_carta_1215_manuscript", "ratio": "4:3", "caption": "La Magna Carta de 1215, parchemin devenu mythe politique." },
+        { "type": "paragraph", "text": "Ce n'est pas encore la démocratie. La charte parle surtout aux « hommes libres », pas aux serfs. C'est d'abord un traité de paix féodal. Mais l'idée est posée : le pouvoir a des limites écrites." }
+      ]
+    },
+    {
+      "id": "course_5_la_magna_carta_1215_p3",
+      "title": "D'un échec à un mythe",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Dès août, Jean fait annuler le texte par le pape. La guerre civile reprend. La charte survit grâce à la mort du roi en **1216** : le jeune **Henri III** la réémet pour apaiser le royaume. Confirmée encore et encore, elle entre dans le droit anglais." },
+        { "type": "funFact", "text": "Il n'existe pas d'original unique de 1215, mais plusieurs copies envoyées dans les comtés. Quatre seulement ont survécu." },
+        { "type": "paragraph", "text": "Au XVIIe siècle, des juristes comme [[Edward Coke]] la ressortent contre l'absolutisme des Stuarts. Un parchemin médiéval devient l'ancêtre revendiqué des libertés parlementaires." },
+        { "type": "timeline", "events": [
+          { "date": "1204", "title": "Perte de la Normandie", "detail": "Jean sans Terre perd ses revenus continentaux." },
+          { "date": "1214", "title": "Bouvines", "detail": "La défaite isole définitivement le roi." },
+          { "date": "1215", "title": "Magna Carta", "detail": "Sceau apposé à Runnymede sous la pression des barons." },
+          { "date": "1216", "title": "Réémission", "detail": "Henri III sauve le texte pour stabiliser le trône." }
+        ] }
+      ]
+    },
+    {
+      "id": "course_5_la_magna_carta_1215_p4",
+      "title": "Un héritage mondial",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Les colons britanniques emportent la charte en Amérique. Les Pères fondateurs s'en inspirent pour le [[Bill of Rights]]. Le [[Habeas corpus]] prolonge la clause 39. En **1948**, [[Eleanor Roosevelt]] y voit une « Grande Charte » pour toute l'humanité." },
+        { "type": "paragraph", "text": "Aujourd'hui, seules trois clauses restent en vigueur en Angleterre. Peu importe. La Magna Carta compte moins comme loi vivante que comme symbole : nul n'est au-dessus du droit." },
+        { "type": "takeaway", "text": "Arrachée à Jean sans Terre en **1215**, la Magna Carta affirme que le roi aussi est sous la loi. D'un traité féodal est né l'un des mythes fondateurs des libertés modernes." }
+      ]
+    }
+  ]
+}

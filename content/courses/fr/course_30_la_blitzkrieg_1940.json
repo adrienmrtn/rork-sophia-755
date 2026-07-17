@@ -1,0 +1,135 @@
+{
+  "id": "course_30_la_blitzkrieg_1940",
+  "title": "La Blitzkrieg",
+  "subtitle": "1940",
+  "subject": "histoire",
+  "subcategory": "Guerre froide & monde contemporain",
+  "description": "En **six semaines**, du **10 mai** au **22 juin 1940**, l'armée allemande conquiert la France et le Benelux. La « guerre éclair » révolutionne l'art de la guerre par la vitesse.",
+  "hero": {
+    "image": "la_blitzkrieg_1940",
+    "ratio": "16:9",
+    "hook": "Six semaines pour faire tomber ce que l'on croyait la première armée d'Europe."
+  },
+  "sections": [
+    {
+      "id": "course_30_la_blitzkrieg_1940_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Du **10 mai** au **22 juin 1940**, en seulement six semaines, l'armée allemande conquiert la France, les Pays-Bas, la Belgique et le Luxembourg. La première puissance militaire européenne s'effondre sous les yeux du monde."
+        },
+        {
+          "type": "paragraph",
+          "text": "La **Blitzkrieg** (guerre éclair) n'est pas seulement une série de victoires. C'est une révolution : la vitesse et la désorganisation de l'ennemi comptent plus que sa destruction physique immédiate."
+        }
+      ]
+    },
+    {
+      "id": "course_30_la_blitzkrieg_1940_p1",
+      "title": "Une doctrine de la rupture",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le mot Blitzkrieg n'est pas officiel dans la [[Wehrmacht]] : c'est la presse anglo-saxonne qui l'invente. Les Allemands parlent de guerre de mouvement. Le principe du [[Schwerpunkt]] : concentrer tous les moyens sur un point étroit pour briser le front."
+        },
+        {
+          "type": "funFact",
+          "text": "Les sirènes des Stukas, surnommées « trompettes de Jéricho », n'ont aucune utilité militaire réelle. Elles servent uniquement à terroriser soldats et civils pendant le piqué."
+        },
+        {
+          "type": "paragraph",
+          "text": "Là où les Français dispersent les chars en appui d'infanterie, les Allemands les regroupent en divisions blindées autonomes, reliées par radio. Les Stukas agissent comme une artillerie volante. Pendant ce temps, la France croit encore à [[La ligne Maginot]]."
+        }
+      ]
+    },
+    {
+      "id": "course_30_la_blitzkrieg_1940_p2",
+      "title": "Le coup de faucille",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sur les conseils d'**Erich von Manstein**, Hitler adopte le [[Sichelschnitt]] : attirer les Alliés en Belgique, pendant que le gros des panzers traverse les **Ardennes**, jugées infranchissables. Le **13 mai**, Guderian franchit la Meuse à **Sedan**. La route de la Manche est ouverte."
+        },
+        {
+          "type": "image",
+          "asset": "german_tanks_blitzkrieg_1940",
+          "ratio": "4:3",
+          "caption": "Chars allemands pendant la campagne de 1940."
+        },
+        {
+          "type": "paragraph",
+          "text": "En une semaine, les armées alliées sont encerclées, dos à la mer. À Dunkerque, [[L'opération Dynamo (Dunkerque)]] évacue **338 000** soldats franco-britanniques. La Grande-Bretagne sauve son armée ; la France reste seule."
+        },
+        {
+          "type": "image",
+          "asset": "dunkirk_evacuation_beach_1940",
+          "ratio": "4:3",
+          "caption": "Évacuation de Dunkerque, mai-juin 1940."
+        }
+      ]
+    },
+    {
+      "id": "course_30_la_blitzkrieg_1940_p3",
+      "title": "L'armistice et l'appel",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Privée de ses meilleures divisions, la France s'effondre. Paris est déclarée ville ouverte le **14 juin**. **Pétain** demande l'armistice, signé le **22 juin** à Compiègne, dans le même wagon qu'en **1918** : Hitler met en scène la revanche."
+        },
+        {
+          "type": "funFact",
+          "text": "Pour la cérémonie, Hitler fait sortir le wagon du musée de Compiègne et le replace exactement là où l'Allemagne avait capitulé 22 ans plus tôt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le **18 juin**, depuis Londres, le **général de Gaulle** lance son appel à la BBC : la France a perdu une bataille, pas la guerre. L'impact immédiat est faible ; les bases de la France libre sont posées."
+        }
+      ]
+    },
+    {
+      "id": "course_30_la_blitzkrieg_1940_p4",
+      "title": "Une victoire à double tranchant",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1940 consacre l'Allemagne maîtresse de l'Europe. Mais la Blitzkrieg est une stratégie de guerre courte : carburant limité, logistique fragile. En **1941**, face à l'immensité soviétique, elle s'enlise. L'historien **Marc Bloch** parlera d'« Étrange Défaite » : un échec intellectuel français autant que matériel."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "10 mai 1940",
+              "title": "Offensive à l'Ouest",
+              "detail": "Attaque simultanée du Benelux et percée des Ardennes."
+            },
+            {
+              "date": "13 mai 1940",
+              "title": "Percée de Sedan",
+              "detail": "Les panzers franchissent la Meuse."
+            },
+            {
+              "date": "mai-juin 1940",
+              "title": "Dunkerque",
+              "detail": "338 000 soldats évacués vers l'Angleterre."
+            },
+            {
+              "date": "22 juin 1940",
+              "title": "Armistice",
+              "detail": "La France cesse le combat à Compiègne."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "En six semaines, la Blitzkrieg combine blindés, aviation et radio pour pulvériser une doctrine défensive. La vitesse et la concentration des forces l'emportent sur la ligne Maginot."
+        }
+      ]
+    }
+  ]
+}

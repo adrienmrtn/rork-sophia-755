@@ -1,0 +1,71 @@
+{
+  "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14",
+  "title": "Jeanne d'Arc et la Guerre de Cent Ans",
+  "subtitle": "1429",
+  "subject": "histoire",
+  "subcategory": "Antiquité & Moyen Âge",
+  "description": "En 1429, une paysanne de 17 ans convainc le dauphin de lui confier une armée. En quelques mois, Jeanne d'Arc renverse le cours d'une guerre que la France semblait avoir perdue.",
+  "hero": {
+    "image": "jeanne_d_arc_et_la_guerre_de_cent_ans",
+    "ratio": "16:9",
+    "hook": "Dix-sept ans, une bannière, et un royaume qui bascule."
+  },
+  "sections": [
+    {
+      "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "En **1429**, la France semble perdue. Anglais et Bourguignons tiennent le Nord. Le dauphin Charles végète au sud de la Loire. C'est alors qu'une paysanne de **17 ans**, venue de Domrémy, affirme avoir une mission divine." },
+        { "type": "paragraph", "text": "**Jeanne d'Arc** ne transforme pas seulement le front. Elle change la légitimité même du conflit, portée par le [[providentialisme]] de son époque : Dieu choisit ses rois, et elle dit savoir lequel." }
+      ]
+    },
+    {
+      "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_p1",
+      "title": "Une France coupée en deux",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "La Guerre de Cent Ans (1337-1453) oppose Plantagenêts et Valois. En 1429, le pays est aussi déchiré par une guerre civile : [[Armagnacs]] contre [[Bourguignons]]. Le [[traité de Troyes (1420)]] a déshérité le dauphin au profit du roi d'Angleterre. À Paris, on proclame Henri VI. Charles VII n'est plus que le « petit roi de Bourges »." },
+        { "type": "image", "asset": "joan_of_arc_portrait", "ratio": "4:3", "caption": "Jeanne d'Arc, figure de la reconquête française." },
+        { "type": "paragraph", "text": "En **1428**, les Anglais assiègent **Orléans**. Si la ville tombe, le sud s'ouvre. C'est dans ce désespoir que Jeanne quitte la Lorraine." },
+        { "type": "funFact", "text": "Jeanne n'a jamais tué d'ennemi de sa main. Elle préférait porter sa bannière plutôt que l'épée, pour diriger sans verser le sang elle-même." }
+      ]
+    },
+    {
+      "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_p2",
+      "title": "De Domrémy à Chinon",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Née vers **1412**, Jeanne dit entendre saint Michel, sainte Catherine et sainte Marguerite dès **13 ans**. Leur ordre : lever le siège d'Orléans, puis mener le dauphin au [[sacre de Reims]]. Seul ce rite fait un vrai roi aux yeux du royaume." },
+        { "type": "paragraph", "text": "En **février 1429**, à **Chinon**, elle reconnaît Charles au milieu de ses courtisans déguisés. Les théologiens de Poitiers l'examinent trois semaines, puis l'autorisent. On lui donne une armure, une bannière, un convoi pour Orléans." },
+        { "type": "funFact", "text": "À Poitiers, des matrones vérifièrent sa virginité. On croyait qu'une sorcière ne pouvait l'être, car elle aurait forcément pactisé charnellement avec le diable." }
+      ]
+    },
+    {
+      "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_p3",
+      "title": "Orléans, Reims, puis la chute",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "En **mai 1429**, Jeanne brise en **neuf jours** un siège de sept mois. Les troupes françaises se galvanisent. Les Anglais battent en retraite. Le **17 juillet**, Charles est sacré à Reims, en plein territoire bourguignon. Le traité de Troyes devient politiquement caduc : le roi est oint." },
+        { "type": "paragraph", "text": "L'élan s'essouffle. Paris résiste. Le **23 mai 1430**, à Compiègne, Jeanne est capturée par les Bourguignons, puis vendue aux Anglais pour **10 000 livres**. À Rouen, l'évêque [[Pierre Cauchon]] orchestre un procès d'hérésie. Le **30 mai 1431**, elle est brûlée vive." },
+        { "type": "timeline", "events": [
+          { "date": "1420", "title": "Traité de Troyes", "detail": "Le dauphin est déshérité au profit de l'Angleterre." },
+          { "date": "1429", "title": "Orléans et Reims", "detail": "Jeanne lève le siège, puis fait sacrer Charles VII." },
+          { "date": "1431", "title": "Bûcher de Rouen", "detail": "Jeanne est brûlée après un procès politique." },
+          { "date": "1453", "title": "Castillon", "detail": "Victoire française : fin effective de la guerre." },
+          { "date": "1456", "title": "Réhabilitation", "detail": "La sentence de 1431 est cassée." }
+        ] }
+      ]
+    },
+    {
+      "id": "course_7_jeanne_d_arc_et_la_guerre_de_cent_ans_14_p4",
+      "title": "Martyre et mémoire",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "La mort de Jeanne ne stoppe pas la reconquête. Elle a soudé le sentiment national autour du trône. En **1456**, Charles VII la fait réhabiliter. La guerre s'achève à [[Castillon]] en **1453** : les Anglais sont presque chassés de France." },
+        { "type": "paragraph", "text": "Paysanne illettrée, chef de guerre, martyre, sainte : Jeanne traverse les siècles comme une figure que chaque époque réinvente. En quelques mois, elle a rendu possible ce qui semblait perdu." },
+        { "type": "takeaway", "text": "En **1429**, Jeanne d'Arc, **17 ans**, lève le siège d'Orléans et fait sacrer Charles VII. Brûlée en **1431**, réhabilitée en **1456**, elle reste le symbole d'un royaume qui refuse de disparaître." }
+      ]
+    }
+  ]
+}
