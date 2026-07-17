@@ -1,0 +1,74 @@
+{
+  "id": "course_121_la_renaissance_italienne",
+  "title": "La Renaissance italienne",
+  "subtitle": "XIVe-XVIe siècle",
+  "subject": "art",
+  "subcategory": "Peinture & mouvements",
+  "description": "En deux siècles, l'Italie réinvente la peinture, la sculpture et l'architecture, et change notre façon de voir le monde. Voici comment cette révolution est née.",
+  "hero": {
+    "image": "la_renaissance_italienne",
+    "ratio": "16:9",
+    "hook": "En deux siècles, l'Italie réinvente l'art et notre façon de regarder le monde."
+  },
+  "sections": [
+    {
+      "id": "course_121_la_renaissance_italienne_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "La Renaissance italienne (XIVe-XVIe siècle) n'est pas qu'un simple changement de style. C'est une nouvelle façon de voir le monde. En deux siècles, l'Italie devient le laboratoire d'une époque qui tourne le dos au Moyen Âge pour placer l'observation, la raison et l'individu au centre de tout." },
+        { "type": "paragraph", "text": "Née dans les riches cités-États de la péninsule, cette révolution réinvente la peinture, la sculpture et l'architecture. Elle s'appuie sur deux moteurs : la redécouverte de l'Antiquité grecque et romaine, et des innovations techniques audacieuses." }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p1",
+      "title": "Florence, la ville qui allume la mèche",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "La Renaissance démarre à **Florence**, une ville qui domine l'économie européenne au XIVe siècle grâce au textile et à la banque. La famille des **Médicis**, immensément riche, y prend le pouvoir. Ces banquiers utilisent le [[mécénat]], c'est-à-dire le financement des artistes, comme un outil de prestige et de pouvoir. En couvrant la ville d'églises et de palais, ils la transforment en musée à ciel ouvert." },
+        { "type": "image", "asset": "lorenzo_de_medici_portrait_florence", "ratio": "4:3", "caption": "Laurent de Médicis, dit « le Magnifique », grand protecteur des artistes de Florence." },
+        { "type": "paragraph", "text": "En parallèle, l'**humanisme** change la place de l'homme dans le monde. Des penseurs comme [[Pic de la Mirandole]] affirment que l'être humain n'est plus une simple créature marquée par le péché, mais un esprit doué de raison, capable de comprendre la nature. Ce mouvement d'idées est renforcé par la chute de Constantinople en **1453** : des savants fuient en Italie avec des manuscrits grecs oubliés." },
+        { "type": "funFact", "text": "Pour contourner l'interdiction de prêter de l'argent avec intérêt, les Médicis inventent des astuces bancaires. L'Église fermait les yeux, tant qu'ils finançaient généreusement la construction de chapelles." }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p2",
+      "title": "Peindre le vrai : la perspective et le corps",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Au XVe siècle, l'image change de nature. L'architecte **Brunelleschi** invente vers **1420** la [[perspective linéaire]]. Fini le Moyen Âge, où l'on peignait les personnages plus grands parce qu'ils étaient plus importants : désormais, l'espace suit des règles mathématiques précises, comme si le tableau était une fenêtre ouverte sur le réel." },
+        { "type": "image", "asset": "brunelleschi_linear_perspective_florence", "ratio": "4:3", "caption": "La perspective donne l'illusion de la profondeur sur une surface plane." },
+        { "type": "paragraph", "text": "Les artistes ne copient plus, ils observent. **Léonard de Vinci** pousse la logique très loin en disséquant des corps pour comprendre les muscles et les nerfs. Il apprend ainsi à peindre non seulement le corps, mais aussi les émotions. La peinture à l'huile, venue de Flandre, remplace peu à peu la vieille [[tempera]] et permet des jeux de lumière inédits, dont le [[clair-obscur]]." },
+        { "type": "funFact", "text": "Le corps que Léonard a le plus étudié était celui d'un vieil homme de cent ans, croisé dans un hôpital. En l'examinant, il a décrit l'un des premiers cas connus d'artère bouchée par l'âge." }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p3",
+      "title": "Les trois géants : Léonard, Michel-Ange, Raphaël",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Au début du XVIe siècle, Rome prend la place de Florence, portée par des papes bâtisseurs comme **Jules II**. C'est l'époque de l'« homme complet », qui refuse de se limiter à un seul domaine. **Léonard de Vinci** en est le modèle : peintre, mais aussi ingénieur, anatomiste et inventeur." },
+        { "type": "paragraph", "text": "**Michel-Ange** incarne la force. Son **David** est bien plus qu'une statue : c'est le symbole de la fierté de Florence. Entre **1508** et **1512**, il peint le plafond de la **Chapelle Sixtine**, un chantier gigantesque de 500 mètres carrés. **Raphaël**, lui, incarne la grâce et l'équilibre parfait, comme dans sa fresque « L'École d'Athènes »." },
+        { "type": "image", "asset": "michelangelo_david_sistine_chapel_ceiling", "ratio": "4:3", "caption": "Michel-Ange, du David au plafond de la Chapelle Sixtine." },
+        { "type": "funFact", "text": "Dans « Le Jugement dernier », Michel-Ange a peint son propre visage sur une peau écorchée tenue par un saint : une manière de dire à quel point ce travail l'avait épuisé." }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p4",
+      "title": "L'héritage : une révolution qui dépasse l'Italie",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Après la mort de Raphaël en **1520**, le bel équilibre se dérègle. Les artistes cherchent à surprendre, avec des corps étirés et des couleurs étranges : c'est le [[maniérisme]], un art plus inquiet, à l'image d'une Italie déchirée par les guerres." },
+        { "type": "paragraph", "text": "La Renaissance italienne franchit alors les Alpes. Le roi de France **François Ier** invite Léonard de Vinci et lance la **Renaissance française**, avec les châteaux de la Loire. Partout en Europe, la perspective et l'idéal humaniste se diffusent. Cette période a fait de l'artiste un intellectuel respecté et a inventé notre façon moderne de représenter l'espace." },
+        { "type": "timeline", "events": [
+          { "date": "1420", "title": "La perspective linéaire", "detail": "Brunelleschi met l'espace en équations, à Florence." },
+          { "date": "1453", "title": "Chute de Constantinople", "detail": "Des savants fuient en Italie avec leurs manuscrits grecs." },
+          { "date": "1504", "title": "Le David de Michel-Ange", "detail": "Florence se choisit un symbole de fierté civique." },
+          { "date": "1508", "title": "Plafond de la Chapelle Sixtine", "detail": "Michel-Ange lance un chantier hors norme (jusqu'en 1512)." },
+          { "date": "1520", "title": "Mort de Raphaël", "detail": "La Haute Renaissance s'achève, le maniérisme commence." }
+        ] },
+        { "type": "takeaway", "text": "Née à Florence grâce aux Médicis, la Renaissance italienne a révolutionné l'art avec la perspective (vers 1420) et l'étude du corps humain, avant d'atteindre son sommet à Rome avec Léonard, Michel-Ange et Raphaël." }
+      ]
+    }
+  ]
+}

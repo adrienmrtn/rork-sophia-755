@@ -22,10 +22,6 @@ struct BlockContentView: View {
         VStack(alignment: .leading, spacing: 22) {
             header
 
-            if isFirst, let dates = content.keyDates, !dates.isEmpty {
-                KeyDatesCard(dates: dates, accent: accent)
-            }
-
             ForEach(Array(section.blocks.enumerated()), id: \.offset) { _, block in
                 blockView(block)
             }
@@ -162,7 +158,6 @@ enum InlineAttributedBuilder {
                         bold: bold,
                         highlight: highlight,
                         italic: italic,
-                        accent: accent,
                         paragraphStyle: paragraphStyle
                     )
                 )
@@ -225,7 +220,6 @@ enum InlineAttributedBuilder {
             bold: bold,
             highlight: false,
             italic: italic,
-            accent: accent,
             paragraphStyle: paragraphStyle
         )
 
@@ -243,19 +237,16 @@ enum InlineAttributedBuilder {
         bold: Bool,
         highlight: Bool,
         italic: Bool,
-        accent: UIColor,
         paragraphStyle: NSParagraphStyle
     ) -> [NSAttributedString.Key: Any] {
-        var attributes: [NSAttributedString.Key: Any] = [
+        _ = highlight // marker highlight deprecated: markers are stripped, no visual style.
+        let attributes: [NSAttributedString.Key: Any] = [
             .font: roundedFont(bold: bold, italic: italic),
             .paragraphStyle: paragraphStyle,
             .foregroundColor: bold
                 ? UIColor.label
                 : UIColor.label.withAlphaComponent(0.9),
         ]
-        if highlight {
-            attributes[.backgroundColor] = accent.withAlphaComponent(0.30)
-        }
         return attributes
     }
 
@@ -303,17 +294,22 @@ struct ProseTextView: UIViewRepresentable {
         let textView = UITextView()
         textView.isEditable = false
         textView.isScrollEnabled = false
-        textView.isSelectable = true
+        // Disable text selection so glossary taps fire instantly, without waiting on
+        // UITextView's built-in selection/long-press disambiguation (the source of the
+        // perceived latency). A custom tap recognizer handles link taps directly.
+        textView.isSelectable = false
         textView.backgroundColor = .clear
         textView.textContainerInset = .zero
         textView.textContainer.lineFragmentPadding = 0
         textView.dataDetectorTypes = []
-        textView.delegate = context.coordinator
-        textView.linkTextAttributes = [
-            .foregroundColor: UIColor.label,
-            .underlineColor: linkUnderlineColor,
-            .underlineStyle: NSUnderlineStyle.thick.rawValue,
-        ]
+
+        let tap = UITapGestureRecognizer(
+            target: context.coordinator,
+            action: #selector(Coordinator.handleTap(_:))
+        )
+        tap.cancelsTouchesInView = false
+        textView.addGestureRecognizer(tap)
+
         textView.setContentCompressionResistancePriority(.required, for: .vertical)
         textView.setContentHuggingPriority(.required, for: .vertical)
         return textView
@@ -322,11 +318,6 @@ struct ProseTextView: UIViewRepresentable {
     func updateUIView(_ uiView: UITextView, context: Context) {
         context.coordinator.onGlossaryTap = onGlossaryTap
         uiView.attributedText = attributed
-        uiView.linkTextAttributes = [
-            .foregroundColor: UIColor.label,
-            .underlineColor: linkUnderlineColor,
-            .underlineStyle: NSUnderlineStyle.thick.rawValue,
-        ]
         uiView.invalidateIntrinsicContentSize()
     }
 
@@ -341,24 +332,36 @@ struct ProseTextView: UIViewRepresentable {
         Coordinator(onGlossaryTap: onGlossaryTap)
     }
 
-    final class Coordinator: NSObject, UITextViewDelegate {
+    final class Coordinator: NSObject, UIGestureRecognizerDelegate {
         var onGlossaryTap: (GlossaryEntry) -> Void
 
         init(onGlossaryTap: @escaping (GlossaryEntry) -> Void) {
             self.onGlossaryTap = onGlossaryTap
         }
 
-        func textView(
-            _ textView: UITextView,
-            shouldInteractWith URL: URL,
-            in characterRange: NSRange,
-            interaction: UITextItemInteraction
-        ) -> Bool {
-            if let entry = GlossaryStore.entry(from: URL) {
+        @objc func handleTap(_ gesture: UITapGestureRecognizer) {
+            guard let textView = gesture.view as? UITextView else { return }
+            let layoutManager = textView.layoutManager
+            var location = gesture.location(in: textView)
+            location.x -= textView.textContainerInset.left
+            location.y -= textView.textContainerInset.top
+
+            let glyphIndex = layoutManager.glyphIndex(for: location, in: textView.textContainer)
+            // Ensure the tap actually landed on a glyph (not empty trailing space).
+            let glyphRect = layoutManager.boundingRect(
+                forGlyphRange: NSRange(location: glyphIndex, length: 1),
+                in: textView.textContainer
+            )
+            guard glyphRect.contains(location) else { return }
+
+            let charIndex = layoutManager.characterIndexForGlyph(at: glyphIndex)
+            guard charIndex < textView.textStorage.length else { return }
+
+            if let url = textView.textStorage.attribute(.link, at: charIndex, effectiveRange: nil) as? URL,
+               let entry = GlossaryStore.entry(from: url) {
                 UIImpactFeedbackGenerator(style: .light).impactOccurred()
                 onGlossaryTap(entry)
             }
-            return false
         }
     }
 }
@@ -610,48 +613,6 @@ struct TimelineBlockView: View {
     }
 }
 
-/// Compact "key dates" reference card shown at the top of the intro.
-struct KeyDatesCard: View {
-    let dates: [KeyDateV2]
-    let accent: Color
-
-    private let ink = Color.black
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            HStack(spacing: 6) {
-                Image(systemName: "calendar")
-                    .font(.system(size: 12, weight: .bold))
-                Text("REPÈRES")
-                    .font(.system(.caption2, design: .rounded, weight: .heavy))
-                    .tracking(0.8)
-            }
-            .foregroundStyle(ink)
-
-            ForEach(dates) { entry in
-                HStack(alignment: .top, spacing: 12) {
-                    Text(entry.date)
-                        .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                        .foregroundStyle(ink)
-                        .frame(minWidth: 54, alignment: .leading)
-                    Text(entry.label)
-                        .font(.system(.subheadline, design: .rounded, weight: .medium))
-                        .foregroundStyle(ink.opacity(0.8))
-                        .fixedSize(horizontal: false, vertical: true)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                }
-            }
-        }
-        .padding(18)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background {
-            RoundedRectangle(cornerRadius: 22)
-                .fill(accent.opacity(0.16))
-                .overlay { RoundedRectangle(cornerRadius: 22).strokeBorder(ink, lineWidth: 3) }
-        }
-    }
-}
-
 // MARK: - Quote
 
 struct QuoteBlockView: View {
@@ -673,9 +634,10 @@ struct QuoteBlockView: View {
                 .foregroundStyle(ink)
                 .fixedSize(horizontal: false, vertical: true)
             if let attribution, !attribution.isEmpty {
-                Text("— \(attribution)")
-                    .font(.system(.subheadline, design: .rounded, weight: .bold))
-                    .foregroundStyle(ink.opacity(0.6))
+                Text(attribution.uppercased())
+                    .font(.system(.caption, design: .rounded, weight: .heavy))
+                    .foregroundStyle(ink.opacity(0.55))
+                    .tracking(0.6)
             }
         }
         .padding(.leading, 18)
@@ -690,7 +652,8 @@ struct QuoteBlockView: View {
 
 // MARK: - Fun fact / takeaway cards (restyled, glossary-aware)
 
-/// "Le saviez-vous ?" card — neobrutalism, prose rendered natively.
+/// "Le saviez-vous ?" card — restyled to match the course DA and made interactive:
+/// it starts collapsed and reveals its content with a spring animation on tap.
 struct FunFactCardV2: View {
     let raw: String
     let courseId: String
@@ -698,28 +661,100 @@ struct FunFactCardV2: View {
     let accent: Color
     let onGlossaryTap: (GlossaryEntry) -> Void
 
-    private let mint = Color(red: 0.553, green: 0.953, blue: 0.953)
+    @State private var revealed = false
+
+    private let ink = Color.black
+
+    private var title: String {
+        AppLocalizable.string("course.funFact", language: AppLanguage.currentPersisted())
+    }
+
+    private var hint: String {
+        switch AppLanguage.currentPersisted() {
+        case .french: return "Toucher pour révéler"
+        case .english: return "Tap to reveal"
+        case .spanish: return "Toca para revelar"
+        case .german: return "Zum Aufdecken tippen"
+        case .portuguese: return "Toque para revelar"
+        case .italian: return "Tocca per scoprire"
+        }
+    }
 
     var body: some View {
-        BrutalCallout(
-            badgeIcon: nil,
-            badgeEmoji: "\u{1F9E0}",
-            badgeText: AppLocalizable.string("course.funFact", language: AppLanguage.currentPersisted()),
-            badgeColor: mint
-        ) {
-            ProseTextView(
-                attributed: InlineAttributedBuilder.build(
-                    raw: raw,
-                    courseId: courseId,
-                    courseTitle: courseTitle,
-                    accent: UIColor(accent),
-                    italic: true,
-                    alignment: .left
-                ),
-                linkUnderlineColor: UIColor(accent),
-                onGlossaryTap: onGlossaryTap
-            )
+        VStack(alignment: .leading, spacing: 0) {
+            Button {
+                UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+                withAnimation(.spring(response: 0.42, dampingFraction: 0.78)) {
+                    revealed.toggle()
+                }
+            } label: {
+                HStack(spacing: 12) {
+                    ZStack {
+                        Circle().fill(accent)
+                        Image(systemName: "lightbulb.fill")
+                            .font(.system(size: 15, weight: .bold))
+                            .foregroundStyle(ink)
+                    }
+                    .frame(width: 36, height: 36)
+                    .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
+
+                    VStack(alignment: .leading, spacing: 1) {
+                        Text(title)
+                            .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                            .foregroundStyle(ink)
+                        if !revealed {
+                            Text(hint)
+                                .font(.system(.caption2, design: .rounded, weight: .semibold))
+                                .foregroundStyle(ink.opacity(0.45))
+                        }
+                    }
+
+                    Spacer(minLength: 8)
+
+                    Image(systemName: "chevron.down")
+                        .font(.system(size: 14, weight: .heavy))
+                        .foregroundStyle(ink.opacity(0.6))
+                        .rotationEffect(.degrees(revealed ? 180 : 0))
+                }
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+
+            if revealed {
+                ProseTextView(
+                    attributed: InlineAttributedBuilder.build(
+                        raw: raw,
+                        courseId: courseId,
+                        courseTitle: courseTitle,
+                        accent: UIColor(accent),
+                        alignment: .left
+                    ),
+                    linkUnderlineColor: UIColor(accent),
+                    onGlossaryTap: onGlossaryTap
+                )
+                .padding(.top, 14)
+                .transition(.asymmetric(
+                    insertion: .opacity.combined(with: .move(edge: .top)),
+                    removal: .opacity
+                ))
+            }
         }
+        .padding(18)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background {
+            ZStack {
+                RoundedRectangle(cornerRadius: 22)
+                    .fill(.black)
+                    .offset(y: 4)
+                RoundedRectangle(cornerRadius: 22)
+                    .fill(Color.white)
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 22)
+                            .strokeBorder(.black, lineWidth: 3)
+                    }
+            }
+        }
+        .padding(.bottom, 4)
     }
 }
 

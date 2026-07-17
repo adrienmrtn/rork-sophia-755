@@ -13,15 +13,17 @@ Objectif : des cours **courts, vivants, séduisants**, à l'opposé du texte « 
 - **Concision.** ~400 à 700 mots par cours (contre ~1000-1500 aujourd'hui). Phrases courtes. Zéro remplissage.
 - **1 idée = 1 écran.** Chaque section porte une seule idée claire, titrée.
 - **Concret et incarné.** Anecdotes, personnages, chiffres marquants, dates clés. On raconte, on n'énumère pas.
-- **Rythme visuel.** Toujours au moins une image par cours ; idéalement une image ou un élément visuel (frise, dates clés, citation) tous les 1-2 écrans.
+- **Accessible sans être simpliste.** Le contenu reste sérieux et de même longueur, mais se comprend facilement : on limite le jargon et les mots savants « hors contexte ». Quand un terme technique est nécessaire, il est soit expliqué en clair juste après, soit transformé en terme de glossaire cliquable `[[Terme]]`. On préfère la phrase simple à la tournure alambiquée.
+- **Rythme visuel.** Toujours au moins une image par cours ; idéalement une image ou un élément visuel (frise, citation) tous les 1-2 écrans.
 - **Ton.** Direct, curieux, un brin complice. On tutoie l'intérêt du lecteur sans être infantilisant.
+- **Ponctuation.** **Pas de tirets cadratins (`—`)** dans le texte. On utilise des virgules, des deux-points, des parenthèses ou on refait la phrase.
 
 ### Règles de placement (strictes)
 
 - **Hero** : uniquement en tête de la section d'introduction.
-- **Le saviez-vous (funFact)** : au fil du contenu, jamais après la conclusion.
+- **Le saviez-vous (funFact)** : placé de façon **logique**, au plus près du passage qu'il enrichit (au fil du contenu), **jamais systématiquement collé en fin d'écran** et jamais après la conclusion. Idéalement 0 ou 1 par section, là où il apporte un vrai « bonus » à ce qui vient d'être lu.
 - **À retenir (takeaway)** : toujours en toute fin de la dernière section, jamais ailleurs.
-- **Frise / dates clés** : là où elles éclairent le récit (souvent en intro ou en fin de section historique).
+- **Frise chronologique** : là où elle éclaire le récit (souvent en fin de section historique). **Plus de tableau « Repères / dates clés » en introduction** (retiré : rendu jugé peu esthétique). Les dates importantes sont soit dans le texte, soit dans la frise.
 
 ---
 
@@ -50,20 +52,24 @@ Le quiz existant est **conservé tel quel** (hors périmètre de cette refonte).
 ### Hero
 - Image large en tête d'intro (ratio `16:9` ou `3:2`), titre + sous-titre (ex. année) en surimpression ou juste dessous, + hook.
 
-### Frise chronologique / dates clés
-- **Frise** : suite d'événements datés (date, titre, détail court), rendu vertical scrollable, style néobrutaliste.
-- **Dates clés** : encart compact « points de repère » (année → libellé).
+### Frise chronologique
+- **Frise** : suite d'événements datés (date, titre, détail court), rendu vertical, style néobrutaliste.
+- Le tableau « Repères / dates clés » en tête d'intro est **abandonné**.
+
+### Le saviez-vous ? (funFact) — refonte DA + interaction
+- **Direction artistique harmonisée** avec le reste du cours (carte néobrutaliste blanche, contour noir, coins arrondis), au lieu de l'ancien encart trop « à part ». Pastille badge sobre à l'accent du sujet, sans emoji criard.
+- **Interactif** : la carte s'affiche d'abord **repliée** (titre « Le saviez-vous ? » + invite « toucher pour révéler »). Un tap la **déplie** avec une animation ressort douce et satisfaisante (chevron qui pivote, contenu qui apparaît en fondu + glissement) et un retour haptique. Cela crée un mini-moment de découverte.
 
 ### Typographie et texte
 - Police arrondie existante (`.rounded`).
 - **Justification** : texte de prose justifié (bords gauche et droit alignés) pour un rendu « éditorial » propre, avec césure activée pour éviter les trous.
 - Interlignage confortable.
 
-### Surlignage (refonte)
-Deux mécanismes distincts, tous deux au rendu **fiable** (fini les sauts de ligne / désalignements du moteur maison) :
-- **Surlignage marqueur** (`==texte==`) : fond coloré translucide type surligneur, **non cliquable**, pour les mots/expressions clés.
-- **Terme de glossaire** (`[[Terme]]`) : soulignement coloré épais (style « lien savant »), **cliquable**, ouvre la fiche glossaire existante. Fini les pastilles capsule.
-- **Gras** (`**texte**`) : emphase simple.
+### Emphase & glossaire (refonte)
+- **Plus de surlignage marqueur.** Le fond coloré type surligneur (`==texte==`) est **supprimé** (jugé peu esthétique). Le balisage `==...==` éventuellement présent est ignoré au rendu.
+- **Terme de glossaire** (`[[Terme]]`) : **conservé** — soulignement coloré épais (style « lien savant »), **cliquable**, ouvre la fiche glossaire existante. C'est le seul mécanisme de « surlignage » retenu.
+- **Gras** (`**texte**`) : emphase simple, pour les mots-clés et les chiffres marquants.
+- **Réactivité du glossaire** : l'ouverture de la fiche au tap sur un terme doit être **instantanée** (gestuelle native custom, sans le délai de sélection d'`UITextView`).
 
 ---
 
@@ -85,10 +91,8 @@ Un fichier JSON par cours : `content/courses/fr/<course_id>.json`.
     "credit": "…",                                 // optionnel
     "hook": "En 622, un homme réfugié va changer le cours du monde."
   },
-  "keyDates": [                                      // optionnel
-    { "date": "570", "label": "Naissance de Muhammad à La Mecque" },
-    { "date": "622", "label": "L'Hégire : départ vers Médine" }
-  ],
+  // "keyDates" : DÉPRÉCIÉ — le tableau de repères en intro a été retiré.
+  //              Utiliser une "timeline" dans une section à la place.
   "sections": [
     {
       "id": "course_1_la_naissance_de_l_islam_622_intro",  // = id de la LessonPage legacy
@@ -110,7 +114,7 @@ Un fichier JSON par cours : `content/courses/fr/<course_id>.json`.
 | type        | champs                                                        | rendu |
 |-------------|---------------------------------------------------------------|-------|
 | `heading`   | `text`                                                        | titre de sous-partie |
-| `paragraph` | `text` (avec inline `**gras**`, `==surlignage==`, `[[Terme]]`)| prose justifiée |
+| `paragraph` | `text` (avec inline `**gras**`, `[[Terme]]`)                 | prose justifiée |
 | `image`     | `asset`, `ratio?`, `caption?`, `credit?`, `fullBleed?`        | image à vrai ratio + légende |
 | `timeline`  | `events: [{ date, title, detail? }]`                          | frise chronologique |
 | `funFact`   | `text`                                                        | encart « Le saviez-vous ? » |
@@ -119,8 +123,9 @@ Un fichier JSON par cours : `content/courses/fr/<course_id>.json`.
 
 ### Balisage inline (dans `paragraph`, `funFact`, `takeaway`)
 - `**gras**`
-- `==surlignage==` (marqueur, non cliquable)
 - `[[Terme]]` (glossaire cliquable ; le terme doit exister dans `glossary` du cours ou le glossaire global)
+- `==surlignage==` : **déprécié** — n'a plus d'effet visuel, à ne plus utiliser.
+- Aucun tiret cadratin (`—`) dans les textes.
 
 ---
 
@@ -142,3 +147,16 @@ Un fichier JSON par cours : `content/courses/fr/<course_id>.json`.
 - Pas de modification des quiz.
 - Abandon d'Excel comme format d'édition.
 - Les traductions ne sont générées qu'après validation du contenu FR d'un cours.
+
+---
+
+## 7. Journal des itérations
+
+### Itération 1 (retours sur le pilote)
+- Langage rendu **plus accessible** (moins de mots savants hors contexte), à longueur et sérieux constants.
+- **Surlignage marqueur `==...==` supprimé** ; seul le glossaire cliquable souligné `[[Terme]]` est conservé.
+- **Tableau « Repères / dates clés » retiré** de l'introduction.
+- **Le saviez-vous ?** : placement plus logique, DA harmonisée, et **carte interactive** (tap pour révéler, animation ressort + haptique).
+- **Latence du tap glossaire corrigée** (gestuelle native custom).
+- **Interdiction des tirets cadratins (`—`)** dans les textes.
+- Cours mis à jour : « La naissance de l'islam (622) », « Pourquoi le ciel est-il bleu ? », « La Renaissance italienne ».
