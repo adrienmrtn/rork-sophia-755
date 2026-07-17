@@ -181,6 +181,9 @@ Un fichier JSON par cours : `content/courses/fr/<course_id>.json`.
 ### Itération 4 (clarté)
 - Les 40 cours d'histoire sont **réécrits pour la clarté** : plus de noms sortis de nulle part, plus de jargon sans explication, phrases plus simples et agréables à lire, contexte toujours planté avant les détails.
 
+### Itération 6 (monde actuel)
+- Les **40 cours « Comprendre le monde actuel »** (`subject: comprendreLeMonde`, ids `course_201` à `course_240`) sont **migrés en V2** selon la charte de clarté : géopolitique, économie & société, environnement & avenir ; même gabarit de blocs, glossaire `[[Terme]]` uniquement si le terme existe pour le titre du cours, pas de `keyDates`, pas de tirets cadratins ni de `==`.
+
 ### Itération 5 (littérature)
 - Les **40 cours de littérature** (`subject: litterature`, ids `course_81` à `course_120`) sont réécrits en JSON V2 selon la charte de clarté : accroche hero, sections courtes, noms et notions introduits, glossaire `[[Terme]]` uniquement si présent pour le titre du cours, pas de tirets cadratins ni de `==`, takeaway en fin, funFact placé par la logique du récit.
 

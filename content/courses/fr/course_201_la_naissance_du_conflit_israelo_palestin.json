@@ -1,0 +1,71 @@
+{
+  "id": "course_201_la_naissance_du_conflit_israelo_palestin",
+  "title": "La naissance du conflit israélo-palestinien",
+  "subtitle": "1917-1949",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Conflits & géopolitique",
+  "description": "Une même terre, deux peuples, une promesse britannique impossible à tenir. Comment **1948** a fait naître le conflit le plus long du Moyen-Orient.",
+  "hero": {
+    "image": "la_naissance_du_conflit_israelo_palestinien",
+    "ratio": "16:9",
+    "hook": "Comment une lettre écrite en 1917 a fait naître le conflit le plus long du Moyen-Orient."
+  },
+  "sections": [
+    {
+      "id": "course_201_la_naissance_du_conflit_israelo_palestin_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "À la fin du XIXe siècle, la **Palestine** est une province tranquille de l'**Empire ottoman**, majoritairement arabe et musulmane, avec des minorités chrétiennes et une petite communauté juive ancienne. Rien ne laisse deviner que ce territoire deviendra le théâtre d'un des conflits les plus longs du monde. Tout commence par la rencontre de deux mouvements nationaux qui réclament la même terre : l'un né en Europe chez des Juifs voulant échapper aux persécutions, l'autre chez les Arabes de la région qui rêvent eux aussi d'un pays à eux. Entre les deux, une puissance coloniale multiplie les promesses contradictoires." }
+      ]
+    },
+    {
+      "id": "course_201_la_naissance_du_conflit_israelo_palestin_p1",
+      "title": "L'éveil des nationalismes en Palestine ottomane",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le contexte change avec l'apparition du **[[Sionisme]]** en Europe, théorisé par **Theodor Herzl** lors d'un congrès à Bâle en 1897, en réponse à la montée de l'antisémitisme. Pour Herzl, les Juifs ne seront jamais en sécurité sans un État qui leur soit propre." },
+        { "type": "funFact", "text": "Theodor Herzl, pourtant fondateur du sionisme politique, ne parlait pas l'hébreu et envisagea même l'Argentine comme terre d'accueil, avant de se rallier à la Palestine." },
+        { "type": "paragraph", "text": "La rupture survient pendant la Première Guerre mondiale : en 1917, le gouvernement britannique publie la **[[Déclaration Balfour]]**, qui promet un « foyer national pour le peuple juif » en Palestine, tout en précisant que rien ne doit nuire aux droits des communautés déjà présentes. Pour les Arabes de la région, cette promesse ressemble à une trahison." }
+      ]
+    },
+    {
+      "id": "course_201_la_naissance_du_conflit_israelo_palestin_p2",
+      "title": "L'impasse du mandat britannique",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Après la défaite ottomane, la Société des Nations confie à la Grande-Bretagne le **mandat de Palestine** en 1922 : Londres doit à la fois favoriser l'installation de Juifs venus d'Europe et protéger les droits de la population arabe, majoritaire sur le territoire." },
+        { "type": "paragraph", "text": "Dans les années 1930, l'arrivée des nazis en Allemagne provoque une vague d'immigration juive, l'**Alya** : la population juive passe de 8 % en 1918 à plus de 30 % avant la Seconde Guerre mondiale, inquiétant les Arabes de Palestine, qui se soulèvent entre 1936 et 1939." },
+        { "type": "funFact", "text": "Tel-Aviv, fondée en 1909 sur des dunes de sable, tire son nom d'un roman de Herzl : « Tel » pour la colline ancienne, « Aviv » pour le printemps." },
+        { "type": "paragraph", "text": "Les Britanniques limitent alors l'immigration juive, au moment où les Juifs d'Europe fuient la Shoah, ce qui retourne les milices juives contre l'occupant. Épuisée, la Grande-Bretagne finit par confier son mandat à l'ONU." }
+      ]
+    },
+    {
+      "id": "course_201_la_naissance_du_conflit_israelo_palestin_p3",
+      "title": "1947-1948 : le partage puis la guerre",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "En novembre 1947, l'ONU adopte un plan de partage de la Palestine en deux États, un juif et un arabe, tandis que Jérusalem obtient un statut international spécial. Les dirigeants sionistes acceptent ce plan, les Arabes le rejettent : une guerre civile éclate presque immédiatement." },
+        { "type": "image", "asset": "la_naissance_du_conflit_israelo_palestinien", "ratio": "16:9", "caption": "Le 14 mai 1948, David Ben Gourion proclame la naissance de l'État d'Israël, quelques heures avant la fin du mandat britannique." },
+        { "type": "paragraph", "text": "Le 14 mai 1948, David Ben Gourion proclame la naissance de l'**État d'Israël**. Le lendemain, plusieurs armées arabes envahissent le territoire pour s'y opposer, mais les forces israéliennes, mieux organisées, repoussent l'offensive et étendent leur contrôle à 78 % de l'ancienne Palestine mandataire." }
+      ]
+    },
+    {
+      "id": "course_201_la_naissance_du_conflit_israelo_palestin_p4",
+      "title": "La Nakba et la question des réfugiés",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Pour les Israéliens, cette victoire assure leur survie. Pour les Palestiniens, l'événement porte un nom : la **Nakba**, « la catastrophe ». Entre 700 000 et 750 000 Arabes palestiniens fuient ou sont chassés de leurs foyers, souvent dans l'espoir de revenir après la victoire arabe." },
+        { "type": "paragraph", "text": "Ces réfugiés s'installent à Gaza, en Cisjordanie ou dans les pays voisins. Israël refuse leur retour, craignant de perdre sa majorité juive. Au même moment, environ 800 000 Juifs des pays arabes rejoignent Israël, souvent sous la contrainte." },
+        { "type": "paragraph", "text": "En 1949, l'ONU crée l'agence **[[UNRWA]]** pour aider les réfugiés palestiniens. Ce qui devait être provisoire devient permanent : aucun accord ne fixe de frontières définitives ni ne règle le sort des exilés, et l'absence d'État palestinien reste au cœur du conflit." },
+        { "type": "timeline", "events": [
+          { "date": "1897", "title": "Congrès de Bâle", "detail": "Herzl théorise le sionisme politique." },
+          { "date": "1917", "title": "Déclaration Balfour", "detail": "Londres promet un foyer national juif en Palestine." },
+          { "date": "1947", "title": "Plan de partage de l'ONU", "detail": "Deux États sont proposés, les Arabes le refusent." },
+          { "date": "1948", "title": "Indépendance et Nakba", "detail": "Israël naît, la guerre éclate, des centaines de milliers de Palestiniens fuient." }
+        ] },
+        { "type": "takeaway", "text": "En 1947, l'ONU propose de partager la Palestine en deux États. Les Juifs acceptent, les Arabes refusent. La guerre qui suit la création d'Israël en 1948 se termine par une victoire israélienne et l'exode de plus de 700 000 Palestiniens : le début de la Nakba et d'une crise des réfugiés jamais résolue." }
+      ]
+    }
+  ]
+}

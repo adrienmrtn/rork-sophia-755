@@ -1,0 +1,69 @@
+{
+  "id": "course_229_l_ue_comment_ca_marche_vraiment",
+  "title": "L'UE : comment ça marche vraiment ?",
+  "subtitle": "Dans les coulisses de Bruxelles",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environnement & avenir",
+  "description": "L'Union européenne gouverne **450 millions de citoyens**, mais son fonctionnement passe souvent pour une boîte noire. Voici comment une loi européenne naît vraiment, et qui décide quoi.",
+  "hero": {
+    "image": "l_ue_comment_ca_marche",
+    "ratio": "16:9",
+    "hook": "27 pays, une seule règle commune : plonger dans la mécanique la plus complexe de la politique mondiale."
+  },
+  "sections": [
+    {
+      "id": "course_229_l_ue_comment_ca_marche_vraiment_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "L'**Union européenne** est l'expérience d'union entre pays la plus poussée de l'histoire moderne. Elle a transformé un continent ravagé par les guerres en un vaste espace économique et politique commun." },
+        { "type": "paragraph", "text": "Pourtant, son fonctionnement reste souvent perçu comme une boîte noire par les 450 millions de citoyens qu'elle concerne. Comprendre comment une décision naît à Bruxelles permet de mieux suivre les grands sujets européens, de l'écologie à la sécurité numérique." }
+      ]
+    },
+    {
+      "id": "course_229_l_ue_comment_ca_marche_vraiment_p1",
+      "title": "Trois pouvoirs, aucun seul aux commandes",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "L'UE fonctionne sur un système de trois institutions qui doivent se mettre d'accord entre elles. Le **Conseil européen**, composé des chefs d'État des pays membres, fixe les grandes orientations politiques lors de sommets, sans écrire de lois lui-même." },
+        { "type": "image", "asset": "European_Council_leaders_Brussels_summit", "ratio": "16:9", "caption": "Les chefs d'État se réunissent au Conseil européen pour fixer les grandes orientations." },
+        { "type": "paragraph", "text": "Le pouvoir de faire les lois est partagé entre le [[Conseil de l'UE]], qui représente les 27 gouvernements, et le **Parlement européen**, seule institution élue directement par les citoyens. Ce dernier assure la légitimité démocratique du système." },
+        { "type": "paragraph", "text": "Enfin, la [[Commission européenne]] joue le rôle d'exécutif. Elle est la seule à pouvoir proposer une nouvelle loi, une exclusivité appelée [[La Commission européenne et le monopole d'initiative législative]]. Elle veille aussi à ce que les pays respectent bien les règles communes." },
+        { "type": "funFact", "text": "Le Parlement européen siège officiellement dans deux villes : Bruxelles et Strasbourg. Chaque mois, ses 705 députés et tout leur personnel prennent un train spécial pour rejoindre l'Alsace, un rituel coûteux mais symbolique de la réconciliation franco-allemande." }
+      ]
+    },
+    {
+      "id": "course_229_l_ue_comment_ca_marche_vraiment_p2",
+      "title": "Comment naît une loi européenne",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Une loi européenne suit un chemin précis, appelé procédure législative ordinaire. Tout commence par une proposition de la Commission, souvent après une longue phase de consultation d'experts et de [[groupes d'intérêt]]." },
+        { "type": "paragraph", "text": "Le texte est ensuite examiné par le Parlement et le Conseil de l'UE. S'ils ne sont pas d'accord, une navette s'organise entre les deux institutions. En dernier recours, un [[comité de conciliation]] est réuni pour trouver un compromis." },
+        { "type": "paragraph", "text": "Une fois adoptée, la loi peut prendre deux formes : le **règlement**, qui s'applique directement et de la même façon dans tous les pays, ou la **directive**, qui fixe un objectif mais laisse chaque pays choisir comment l'atteindre." },
+        { "type": "funFact", "text": "La Cour de justice de l'UE a dû trancher des conflits parfois insolites, comme la fameuse « guerre de la banane », un litige sur les tarifs douaniers des fruits tropicaux qui a duré plus de vingt ans." }
+      ]
+    },
+    {
+      "id": "course_229_l_ue_comment_ca_marche_vraiment_p3",
+      "title": "Ce que l'UE peut faire, et ce qu'elle ne peut pas",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "L'UE n'a pas un pouvoir sans limite : elle ne peut agir que dans les domaines que les pays lui ont confiés. Certaines compétences lui appartiennent en propre, comme la gestion de la monnaie unique ou les règles du commerce international." },
+        { "type": "image", "asset": "EU_flag_stars_Brussels_institutions", "ratio": "4:3", "caption": "L'Union européenne partage ses pouvoirs entre plusieurs niveaux de décision." },
+        { "type": "paragraph", "text": "D'autres compétences sont partagées avec les pays, comme l'environnement ou les transports : c'est là que l'UE agit le plus souvent, mais seulement quand son action est plus efficace que celle de chaque pays isolé." },
+        { "type": "paragraph", "text": "Enfin, des sujets sensibles comme la fiscalité, la santé ou la défense restent presque entièrement gérés par chaque pays, et demandent souvent l'accord unanime de tous les membres via [[L'unanimité au Conseil de l'UE]]. C'est ce blocage qui explique pourquoi l'UE peut sanctionner facilement une grande entreprise, mais peine parfois à s'accorder sur une position commune face à une crise internationale." }
+      ]
+    },
+    {
+      "id": "course_229_l_ue_comment_ca_marche_vraiment_p4",
+      "title": "Un système imparfait, mais en évolution",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "L'image d'une Europe dirigée par des « technocrates non élus » mérite d'être nuancée. Les responsables de la Commission sont nommés par des gouvernements élus démocratiquement, puis validés par le Parlement. L'administration européenne reste d'ailleurs modeste : environ 60 000 agents pour gérer un continent entier, moins que la seule ville de Paris." },
+        { "type": "paragraph", "text": "Le défi du sentiment de distance avec les citoyens reste réel. Pour y répondre, l'UE a créé l'Initiative citoyenne européenne, qui permet à un million de citoyens de demander à la Commission d'étudier une nouvelle loi." },
+        { "type": "paragraph", "text": "La pandémie de 2020 a marqué un tournant : pour la première fois, les pays membres ont accepté d'emprunter ensemble sur les marchés financiers avec le plan Next Generation EU. Ce passage d'une union de marchés à une union plus solidaire montre une Europe qui continue d'évoluer." },
+        { "type": "takeaway", "text": "L'Union européenne repose sur un partage du pouvoir entre 27 pays et trois institutions, aucune ne pouvant décider seule. Ce système complexe garantit la paix et la stabilité, mais reste souvent lent face aux crises rapides." }
+      ]
+    }
+  ]
+}

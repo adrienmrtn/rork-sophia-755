@@ -1,0 +1,65 @@
+{
+  "id": "course_239_le_futur_du_travail",
+  "title": "Le futur du travail",
+  "subtitle": "Automatisation & intelligence artificielle",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environnement & avenir",
+  "description": "L'intelligence artificielle et de nouvelles formes d'emploi bousculent un modèle du travail hérité de l'ère industrielle.",
+  "hero": {
+    "image": "le_futur_du_travail",
+    "ratio": "16:9",
+    "hook": "Les machines travaillent plus vite que jamais. Reste à savoir ce qu'il restera à faire aux humains."
+  },
+  "sections": [
+    {
+      "id": "course_239_le_futur_du_travail_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Le travail ne définit pas seulement nos revenus : il façonne aussi notre identité sociale et le sens que nous donnons à nos journées. Or l'intelligence artificielle, la robotique et de nouvelles façons de travailler bousculent aujourd'hui ce modèle hérité de l'ère industrielle." },
+        { "type": "paragraph", "text": "Ce cours explore comment le travail change de forme, et les grandes questions que soulève cette transformation : moins d'heures, plus de machines, et un nouveau partage des richesses." }
+      ]
+    },
+    {
+      "id": "course_239_le_futur_du_travail_p1",
+      "title": "La fin du modèle né avec Henry Ford",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le travail moderne s'est longtemps organisé autour d'une idée popularisée par **[[Henry Ford]]**, qui instaure la semaine de 40 heures en 1926. Ce choix n'était pas un geste de générosité : des ouvriers disposant de temps libre deviennent aussi des clients, capables d'acheter les produits qu'ils fabriquent eux-mêmes." },
+        { "type": "funFact", "text": "En 1930, l'économiste John Maynard Keynes avait prédit que ses petits-enfants ne travailleraient que 15 heures par semaine, grâce aux progrès technologiques. Presque un siècle plus tard, nous disposons de cette technologie, mais nous travaillons toujours autant." },
+        { "type": "paragraph", "text": "Ce modèle s'effrite aujourd'hui au profit de la **gig economy**, l'économie « à la tâche » : plus de 57 millions de travailleurs aux États-Unis vendent désormais leurs services via des plateformes numériques, hors du salariat classique. L'automatisation gagne aussi des tâches de plus en plus complexes, tandis que le télétravail, accéléré par la pandémie de 2020, redessine la géographie même du travail." }
+      ]
+    },
+    {
+      "id": "course_239_le_futur_du_travail_p2",
+      "title": "L'IA et le défi de la destruction créatrice",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le débat sur l'avenir du travail s'appuie souvent sur une idée du philosophe et économiste **[[Joseph Schumpeter]]** : la **[[destruction créatrice]]**. Selon lui, chaque révolution technologique détruit des métiers anciens, mais finit par en créer de nouveaux, souvent plus qualifiés. L'intelligence artificielle générative introduit toutefois une nouveauté : elle menace, pour la première fois, des emplois de bureau et des professions considérées comme intellectuelles." },
+        { "type": "funFact", "text": "En 2023, une étude a montré que l'intelligence artificielle réussissait mieux que 99 % des humains à un test de créativité, remettant en cause l'idée que la créativité serait notre dernier avantage face aux machines." },
+        { "type": "paragraph", "text": "Trois scénarios se dessinent. L'optimiste imagine une hausse de productivité qui libérerait l'humain des tâches répétitives. Le pessimiste redoute que l'IA n'avance plus vite que notre capacité à nous reconvertir, créant un chômage massif. L'hybride, enfin, mise sur une collaboration entre l'humain et la machine, où la compétence clé deviendrait la capacité à diriger les outils plutôt qu'à maîtriser un savoir-faire figé." }
+      ]
+    },
+    {
+      "id": "course_239_le_futur_du_travail_p3",
+      "title": "Redistribuer le temps et l'argent",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Face au risque d'une société à deux vitesses, de nouveaux outils sont à l'étude. Le **revenu universel de base** propose de verser une somme fixe à chaque citoyen, sans condition, pour sécuriser les parcours de vie dans une économie où le travail devient plus intermittent." },
+        { "type": "image", "asset": "le_futur_du_travail", "ratio": "16:9", "caption": "Automatisation, intelligence artificielle et nouvelles formes d'emploi redessinent le monde du travail." },
+        { "type": "paragraph", "text": "En complément, l'idée d'une **[[semaine de 4 jours]]** gagne du terrain : si les machines produisent davantage en moins de temps, il paraît logique que le temps de travail humain diminue en retour, pour maintenir l'emploi et préserver la santé des travailleurs. Reste une question de financement : si la valeur est de plus en plus créée par des logiciels, les impôts devront sans doute glisser des revenus du travail vers ceux du capital." }
+      ]
+    },
+    {
+      "id": "course_239_le_futur_du_travail_p4",
+      "title": "Quel sens donner au travail de demain",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Une fois l'équation économique résolue reste une question plus profonde : que devient le sens de nos journées dans un monde où le travail serait moins central ? Historiquement, le travail a structuré le quotidien et l'estime de soi. Sa disparition partielle pourrait mener soit à l'ennui, soit à un renouveau des activités bénévoles, artistiques ou civiques." },
+        { "type": "funFact", "text": "Le mot « travail » vient du latin tripalium, un instrument de torture à trois pieux. Une origine qui rappelle qu'il fut longtemps perçu comme une souffrance avant de devenir une identité." },
+        { "type": "paragraph", "text": "Dans ce contexte, apprendre à apprendre devient une compétence essentielle. Le véritable enjeu n'est pas seulement technologique, mais politique : utiliserons-nous l'intelligence artificielle pour augmenter nos capacités, ou seulement pour réduire les coûts des entreprises ? La réponse déterminera si le travail de demain sera une libération ou une nouvelle contrainte." },
+        { "type": "takeaway", "text": "Le futur du travail est marqué par la fin du salariat unique, au profit de la gig economy, et par le défi de l'intelligence artificielle, qui menace pour la première fois des emplois intellectuels. Notre modèle social devra sans doute redistribuer les gains de productivité, par un revenu universel ou une semaine de travail plus courte." }
+      ]
+    }
+  ]
+}

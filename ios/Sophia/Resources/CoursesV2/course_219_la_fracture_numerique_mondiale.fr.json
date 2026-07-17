@@ -1,0 +1,63 @@
+{
+  "id": "course_219_la_fracture_numerique_mondiale",
+  "title": "La fracture numérique mondiale",
+  "subtitle": "Un tiers de l'humanité hors ligne",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Économie & société",
+  "description": "2,7 milliards de personnes n'ont toujours pas accès à Internet. Dans un monde de plus en plus numérique, cette absence de connexion devient une nouvelle forme d'exclusion.",
+  "hero": {
+    "image": "la_fracture_numerique_mondiale",
+    "ratio": "16:9",
+    "hook": "Le Kenya a inventé le paiement par téléphone dix ans avant l'Europe, faute d'agences bancaires."
+  },
+  "sections": [
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Alors que les sociétés développées vivent une révolution portée par l'intelligence artificielle, une réalité brutale persiste : **2,7 milliards de personnes**, soit environ un tiers de l'humanité, n'ont toujours pas accès à Internet." },
+        { "type": "paragraph", "text": "Cette **fracture numérique** n'est pas qu'un retard technique : elle est devenue une véritable barrière, qui éloigne des millions de personnes de l'éducation, de la santé et de l'économie mondiale. Voici pourquoi elle persiste, et comment certains pays tentent de la combler." }
+      ]
+    },
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_p1",
+      "title": "Une carte du monde à deux vitesses",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "En 2024, environ 5,4 milliards de personnes sont connectées à Internet dans le monde, mais la progression stagne dans les régions les plus pauvres. L'Europe et l'Amérique du Nord dépassent les 90% de connexion, alors que l'Afrique subsaharienne reste à seulement 37%." },
+        { "type": "paragraph", "text": "Cette exclusion tient à plusieurs causes. D'abord, l'absence d'infrastructures : installer la fibre optique dans certaines régions isolées est jugé trop coûteux par les opérateurs. Ensuite, le prix : dans certains pays, un simple [[smartphone]] d'entrée de gamme représente plusieurs mois de salaire. Enfin, la barrière de la langue (environ 70% du contenu du web est en anglais) et le manque de formation numérique limitent l'usage même quand une connexion existe." }
+      ]
+    },
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_p2",
+      "title": "Quand le manque d'infrastructure force l'innovation",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Cette fracture agit comme un multiplicateur d'inégalités. Dans un monde où le télétravail, le commerce en ligne et l'éducation en ligne (les [[MOOC]]) deviennent la norme, ne pas être connecté revient à devenir invisible pour l'économie mondiale." },
+        { "type": "image", "asset": "la_fracture_numerique_mondiale", "ratio": "16:9", "caption": "Dans de nombreuses régions rurales, le téléphone mobile reste le seul point d'accès à Internet." },
+        { "type": "paragraph", "text": "Le Kenya illustre une autre voie : faute d'agences bancaires suffisantes, le pays a massivement adopté dès 2007 un système de paiement par simple SMS, le [[M-Pesa kenyan]], devançant l'Europe de dix ans. Ce système a permis à des millions de personnes sans compte bancaire de réaliser des transactions sécurisées avec un simple téléphone." },
+        { "type": "funFact", "text": "Le Kenya a surnommé cette stratégie le « saut-de-mouton » technologique : plutôt que d'installer des infrastructures coûteuses et dépassées, le pays est directement passé à une solution plus moderne et moins chère." }
+      ]
+    },
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_p3",
+      "title": "Internet par satellite : une solution sous conditions",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Pour connecter les villages les plus isolés, de nouveaux acteurs misent sur l'espace. Le projet [[Starlink]] envoie des milliers de satellites en orbite basse, permettant une connexion rapide même dans les déserts ou les hautes montagnes, sans avoir à poser le moindre câble." },
+        { "type": "paragraph", "text": "Mais le coût de l'abonnement et du matériel reste aligné sur les standards occidentaux, ce qui rend ces solutions inaccessibles aux populations rurales les plus pauvres sans aide extérieure. Résoudre la fracture numérique ne pourra donc pas se faire par la seule technologie : cela demande aussi une volonté politique pour faire d'Internet un bien accessible à tous." }
+      ]
+    },
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_p4",
+      "title": "L'intelligence artificielle, un nouveau fossé",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "L'essor rapide de l'intelligence artificielle menace d'aggraver encore cette fracture. Elle exige d'immenses puissances de calcul et de données, des ressources concentrées entre les mains de quelques pays et entreprises. Les populations déconnectées risquent alors de devenir dépendantes d'outils conçus sans tenir compte de leur culture ou de leur langue." },
+        { "type": "paragraph", "text": "L'écart de compétences entre élèves connectés et non connectés pourrait aussi se creuser très rapidement. L'enjeu des prochaines années ne sera donc plus seulement d'apporter une connexion, mais de garantir un accès juste à la création de valeur numérique, en combinant baisse des coûts, contenus locaux et formation." },
+        { "type": "takeaway", "text": "2,7 milliards de personnes restent aujourd'hui exclues d'Internet, une fracture qui risque de s'aggraver avec l'intelligence artificielle. Réduire cet écart demande de transformer la connectivité en un véritable bien accessible à tous, et pas seulement en un produit à vendre." }
+      ]
+    }
+  ]
+}

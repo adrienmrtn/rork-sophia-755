@@ -1,0 +1,67 @@
+{
+  "id": "course_230_la_liberte_de_la_presse_dans_le_monde",
+  "title": "La liberté de la presse dans le monde",
+  "subtitle": "Un droit sous pression",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environnement & avenir",
+  "description": "Moins de **10% de la population mondiale** vit dans un pays où la presse est vraiment libre. Entre censure d'État et pressions économiques, ce droit essentiel recule presque partout.",
+  "hero": {
+    "image": "la_liberte_de_la_presse_dans_le_monde",
+    "ratio": "16:9",
+    "hook": "Informer coûte parfois la liberté, ou même la vie : voyage au cœur d'un droit fragile."
+  },
+  "sections": [
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "La **liberté de la presse** est un des meilleurs indicateurs de la santé démocratique d'un pays. Elle ne se limite pas au droit de publier : elle inclut la capacité des citoyens à accéder à une information vérifiée et indépendante des pouvoirs en place. Dans le monde entier, ce droit subit une double pression : une répression directe dans les régimes autoritaires, et un affaiblissement plus discret dans les démocraties elles-mêmes." }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p1",
+      "title": "Un métier de plus en plus dangereux",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Chaque année, l'organisation [[Reporters Sans Frontières (RSF)]] publie un rapport de référence sur les obstacles au métier de journaliste dans le monde." },
+        { "type": "image", "asset": "press_freedom_world_map_RSF_index", "ratio": "16:9", "caption": "Moins de 10% de la population mondiale vit dans un pays où la presse est vraiment libre." },
+        { "type": "paragraph", "text": "Les données de 2024 sont alarmantes : moins de **10%** de la population mondiale vit dans une zone où la presse travaille sans entrave. Si des pays comme la Norvège gardent des standards élevés, de vastes régions comme la Chine, la Russie ou l'Iran considèrent le journalisme d'enquête comme une forme de trahison." },
+        { "type": "funFact", "text": "Au Turkménistan, l'État contrôle si strictement l'information qu'il a interdit le mot « coronavirus » dans les médias au début de la pandémie de 2020." },
+        { "type": "paragraph", "text": "En 2023, au moins 79 journalistes ont perdu la vie dans l'exercice de leur métier, souvent visés pour faire taire des enquêtes gênantes. Près de 600 journalistes sont emprisonnés chaque année à travers le monde." }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p2",
+      "title": "Les démocraties ne sont pas à l'abri",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Contrairement à une idée reçue, la liberté de la presse n'est pas acquise pour toujours dans les pays occidentaux. Elle y subit des transformations plus discrètes, liées à la [[concentration médiatique]] et à l'influence financière de quelques grands groupes." },
+        { "type": "paragraph", "text": "En Hongrie, [[Viktor Orbán]] a mis en place une stratégie efficace : plutôt que d'interdire les médias d'opposition, il a favorisé leur rachat par des proches du gouvernement, transformant peu à peu le paysage médiatique en chambre d'écho officielle." },
+        { "type": "paragraph", "text": "En France, le débat porte surtout sur la concentration des médias entre les mains de quelques grands groupes, ce qui fait craindre une autocensure des rédactions. Ailleurs, des poursuites judiciaires abusives, appelées [[SLAPP]], se multiplient pour intimider les voix critiques." }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p3",
+      "title": "L'argent, nouvel adversaire du journalisme",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Au-delà des menaces politiques, le journalisme fait face à une crise économique profonde. Le modèle historique, basé sur la vente au numéro et la publicité, s'est effondré avec le numérique, les grandes plateformes captant désormais l'essentiel de la publicité en ligne." },
+        { "type": "image", "asset": "newspaper_crisis_digital_transformation_journalism", "ratio": "4:3", "caption": "Le modèle économique historique de la presse s'est effondré avec le numérique." },
+        { "type": "paragraph", "text": "Cette baisse de ressources fait fermer de nombreux journaux locaux, créant des « déserts d'information » où plus personne ne surveille l'action des élus locaux. Face à cela, de nouveaux modèles émergent, financés par des dons ou des abonnements directs, comme Mediapart en France ou ProPublica aux États-Unis, qui prouvent qu'un journalisme indépendant peut aussi être rentable." },
+        { "type": "funFact", "text": "Le premier journal imprimé de l'histoire, la « Relation », a été lancé à Strasbourg en 1605 par Johann Carolus, bien avant l'invention légale de la liberté de la presse." }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p4",
+      "title": "Vérifier le réel dans un monde saturé d'images",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "L'ère numérique a rendu l'information plus rapide, mais elle a aussi ouvert la porte à la [[désinformation]]. Les algorithmes des réseaux sociaux favorisent les contenus émotionnels plutôt que l'analyse factuelle, fragmentant notre vision commune du monde." },
+        { "type": "paragraph", "text": "Le rôle du journaliste évolue donc vers celui d'un « vérificateur » du réel, dans un flux permanent d'images et de données. Les questions éthiques deviennent plus complexes, comme dans le photojournalisme en zone de conflit, où le respect de la dignité humaine se heurte parfois à la nécessité de montrer." },
+        { "type": "paragraph", "text": "Défendre la liberté de la presse suppose donc une meilleure régulation des grandes plateformes numériques et une éducation aux médias renforcée. Sans une presse libre capable de vérifier les faits, le débat démocratique risque de se dissoudre dans un monde où toutes les opinions se valent, peu importe leur véracité." },
+        { "type": "takeaway", "text": "Moins de 10% de la population mondiale vit dans un pays où la presse est vraiment libre. Entre répression directe, pressions économiques et désinformation numérique, ce droit essentiel à la démocratie recule presque partout." }
+      ]
+    }
+  ]
+}

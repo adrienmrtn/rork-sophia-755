@@ -1,0 +1,69 @@
+{
+  "id": "course_223_l_economie_circulaire",
+  "title": "L'économie circulaire",
+  "subtitle": "Sortir du tout-jetable",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environnement & avenir",
+  "description": "**Extraire, fabriquer, jeter** : ce modèle épuise la planète. L'économie circulaire propose l'inverse : garder les objets et les matériaux en circulation le plus longtemps possible.",
+  "hero": {
+    "image": "l_economie_circulaire",
+    "ratio": "16:9",
+    "hook": "Et si le déchet n'existait pas ? C'est le pari d'un modèle économique inspiré de la nature."
+  },
+  "sections": [
+    {
+      "id": "course_223_l_economie_circulaire_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Depuis la révolution industrielle, notre économie fonctionne dans un seul sens : on extrait des ressources, on fabrique des objets, puis on les jette. Ce modèle suppose que les ressources sont infinies. Elles ne le sont pas." },
+        { "type": "paragraph", "text": "L'**économie circulaire** propose une autre logique, inspirée de la nature, où rien ne se perd vraiment. Elle vise à garder la valeur des produits et des matériaux en circulation le plus longtemps possible, au lieu de les transformer en déchets." }
+      ]
+    },
+    {
+      "id": "course_223_l_economie_circulaire_p1",
+      "title": "Le modèle linéaire arrive à ses limites",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "L'économie moderne s'est construite sur un modèle dit **linéaire** : extraire, fabriquer, jeter. On prend des matières premières dans la nature, on en fait des produits, et une fois usés ou démodés, ces produits deviennent des déchets." },
+        { "type": "image", "asset": "landfill_waste_garbage_linear_economy", "ratio": "16:9", "caption": "Le modèle « extraire, fabriquer, jeter » suppose des ressources infinies." },
+        { "type": "paragraph", "text": "Ce système repose sur l'idée que les ressources sont illimitées, et que la nature peut absorber toute la pollution. Mais aujourd'hui, l'économie mondiale consomme chaque année l'équivalent de 1,7 planète en ressources. Certains métaux essentiels aux technologies numériques, comme le [[Lithium]], pourraient devenir difficiles à trouver dès 2040." },
+        { "type": "funFact", "text": "Seulement 9% de tout le plastique jamais produit par l'humanité a été recyclé. Le reste finit dans la nature ou en décharge, où il peut rester 450 ans." },
+        { "type": "paragraph", "text": "Le coût du nettoyage et de la gestion des déchets n'est presque jamais inclus dans le prix de vente d'un produit. C'est un coût caché, payé plus tard par tout le monde." }
+      ]
+    },
+    {
+      "id": "course_223_l_economie_circulaire_p2",
+      "title": "Réparer avant de recycler",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "L'économie circulaire propose plusieurs boucles, et toujours dans le même ordre de priorité : mieux vaut la boucle la plus courte, car elle gaspille moins d'énergie et de matière. Tout commence par l'**éco-conception**, c'est-à-dire penser l'impact environnemental d'un produit dès sa création, en choisissant des matériaux durables et faciles à démonter." },
+        { "type": "paragraph", "text": "Ensuite vient la **réutilisation** (un objet change de propriétaire sans être transformé, comme sur un marché de l'occasion), puis la **réparation**, qui prolonge la vie d'un produit. Ces étapes luttent directement contre l'[[L'obsolescence programmée]], cette pratique qui réduit volontairement la durée de vie d'un objet." },
+        { "type": "image", "asset": "recycling_sorting_waste_materials", "ratio": "4:3", "caption": "Le recyclage arrive en dernier recours, après la réutilisation et la réparation." },
+        { "type": "paragraph", "text": "Le **recyclage** n'intervient qu'en dernier recours. Il reste utile : recycler de l'aluminium consomme 95% moins d'énergie que d'en extraire à partir du minerai brut, la [[Bauxite]]. Mais c'est toujours moins efficace que de simplement réutiliser un objet." }
+      ]
+    },
+    {
+      "id": "course_223_l_economie_circulaire_p3",
+      "title": "Pourquoi c'est encore difficile aujourd'hui",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Malgré tout son intérêt, l'économie circulaire se heurte à un problème simple : le modèle linéaire reste souvent **moins cher à court terme**. Extraire une matière neuve coûte parfois moins que trier et recycler un déchet complexe, surtout quand les matières premières sont bon marché." },
+        { "type": "image", "asset": "repair_right_electronics_reuse", "ratio": "4:3", "caption": "Le « droit à la réparation » impose aux fabricants de fournir des pièces détachées." },
+        { "type": "paragraph", "text": "Face à cela, les pouvoirs publics interviennent de plus en plus. L'Union européenne a lancé en 2020 un plan qui impose des règles plus strictes de durabilité. L'un des axes majeurs est le « droit à la réparation », qui oblige les fabricants d'appareils électroniques à fournir des pièces détachées pendant plusieurs années." },
+        { "type": "paragraph", "text": "Autre levier : la [[Responsabilité Élargie du Producteur]], qui fait payer aux fabricants la gestion des déchets de leurs produits. Cela les incite financièrement à concevoir des objets moins polluants et plus faciles à réparer." }
+      ]
+    },
+    {
+      "id": "course_223_l_economie_circulaire_p4",
+      "title": "Vers une société de la ressource",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "L'économie circulaire n'est pas qu'une question de recyclage : c'est un projet de société plus sobre et plus résistante. En dépendant moins des importations de matières premières, un pays gagne aussi en sécurité dans un monde plus instable." },
+        { "type": "paragraph", "text": "Le succès de cette transformation dépend aussi de nous, comme consommateurs. La règle des 3R, réduire, réutiliser, recycler, commence par la première étape : réduire, c'est-à-dire se demander si l'achat est vraiment nécessaire. C'est ce premier geste qui a le plus grand effet sur le climat." },
+        { "type": "funFact", "text": "Il y a aujourd'hui plus d'or dans une tonne de vieilles cartes électroniques de smartphones que dans une tonne de minerai extrait d'une mine d'or classique." },
+        { "type": "takeaway", "text": "L'économie circulaire vise à casser le cycle « extraire, fabriquer, jeter » en gardant les ressources en circulation grâce à l'éco-conception, la réparation et le recyclage, pour respecter les limites physiques de notre planète." }
+      ]
+    }
+  ]
+}

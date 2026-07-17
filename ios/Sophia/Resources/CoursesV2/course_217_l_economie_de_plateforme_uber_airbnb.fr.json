@@ -1,0 +1,64 @@
+{
+  "id": "course_217_l_economie_de_plateforme_uber_airbnb",
+  "title": "L'économie de plateforme (Uber, Airbnb...)",
+  "subtitle": "Un capitalisme sans usines",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Économie & société",
+  "description": "Uber, Airbnb, Deliveroo ne possèdent presque rien : ni voitures, ni appartements, ni salariés. Comment ces plateformes sont-elles devenues des géants mondiaux ?",
+  "hero": {
+    "image": "l_economie_de_plateforme",
+    "ratio": "16:9",
+    "hook": "Uber n'a jamais possédé une seule voiture, et pourtant a bouleversé le transport dans le monde entier."
+  },
+  "sections": [
+    {
+      "id": "course_217_l_economie_de_plateforme_uber_airbnb_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Uber, Airbnb, Amazon ou Deliveroo appartiennent à une nouvelle catégorie d'entreprises : les **plateformes numériques**. Elles ne se contentent pas de numériser des services qui existaient déjà : elles changent la façon même de posséder, de travailler et d'être protégé." },
+        { "type": "paragraph", "text": "Ce modèle a inventé une forme inédite de capitalisme, qui interroge notre contrat social. Comprenons comment il fonctionne, et pourquoi il fait autant débat." }
+      ]
+    },
+    {
+      "id": "course_217_l_economie_de_plateforme_uber_airbnb_p1",
+      "title": "Un capitalisme sans usines ni salariés",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Une entreprise classique possède des usines, des véhicules, des stocks, et emploie des salariés. Une plateforme casse ce modèle : elle devient une simple infrastructure numérique qui met en relation une offre et une demande, sans rien produire elle-même." },
+        { "type": "paragraph", "text": "Ce système s'appuie sur l'[[effet de réseau]] : plus une plateforme a d'utilisateurs, plus elle devient utile, ce qui attire encore plus d'utilisateurs. Pour un service de transport, plus il y a de chauffeurs disponibles, moins l'attente est longue, ce qui attire plus de clients, qui attirent à leur tour plus de chauffeurs. Ce cercle mène presque toujours à des situations de quasi-monopole." },
+        { "type": "funFact", "text": "Uber a dépensé des milliards de dollars en recherche sur les voitures autonomes, dans le but, à terme, de se débarrasser de son dernier grand coût : le chauffeur humain." }
+      ]
+    },
+    {
+      "id": "course_217_l_economie_de_plateforme_uber_airbnb_p2",
+      "title": "Un travail sans les protections du salariat",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Cette innovation technique s'accompagne d'une innovation juridique plus contestée. Dans la [[gig economy]], la plateforme refuse le statut d'employeur pour se présenter comme un simple intermédiaire technologique, ce qui lui évite de payer des cotisations sociales, un salaire minimum ou des congés payés." },
+        { "type": "image", "asset": "l_economie_de_plateforme", "ratio": "16:9", "caption": "Chauffeurs et livreurs sont souvent classés comme indépendants, et non comme salariés." },
+        { "type": "paragraph", "text": "Le travailleur devient un indépendant qui porte seul tous les risques : maladie, accident, baisse de la demande. Pourtant, il reste souvent soumis aux règles de l'application (tarifs imposés, notation, sanctions), une situation que l'on appelle la **subordination algorithmique**. Face à cela, des tribunaux dans plusieurs pays ont commencé à imposer la [[requalification]] de ces contrats en véritables emplois salariés." }
+      ]
+    },
+    {
+      "id": "course_217_l_economie_de_plateforme_uber_airbnb_p3",
+      "title": "Des villes bouleversées",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "L'impact de ces plateformes dépasse le monde du travail : il transforme aussi les villes. Airbnb, en facilitant la location touristique de courte durée, concurrence les hôtels traditionnels tout en réduisant le nombre de logements disponibles pour les habitants." },
+        { "type": "paragraph", "text": "Résultat : les loyers grimpent dans les centres-villes, et des métropoles comme Paris ou Barcelone ont dû imposer des règles strictes, comme des quotas de jours de location. Les États cherchent aussi à instaurer une **taxation numérique** pour que ces plateformes paient leur part d'impôts là où elles gagnent réellement leur argent." },
+        { "type": "funFact", "text": "À New York, une régulation stricte contre Airbnb en 2023 a fait chuter le nombre d'annonces légales de 80% en quelques mois." }
+      ]
+    },
+    {
+      "id": "course_217_l_economie_de_plateforme_uber_airbnb_p4",
+      "title": "Vers un nouveau statut pour les travailleurs ?",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "L'économie de plateforme a apporté des services rapides et souvent moins coûteux, et permis à certaines personnes de trouver un revenu plus facilement. Mais cette efficacité repose sur une fragilisation des protections construites au XXe siècle." },
+        { "type": "paragraph", "text": "Le débat actuel porte sur la création d'un statut intermédiaire, entre salarié et indépendant, avec une portabilité des droits : chaque travailleur accumulerait des protections sociales, peu importe le nombre de plateformes pour lesquelles il travaille. L'avenir de ce modèle dépendra de la capacité des régulateurs à l'encadrer sans étouffer l'innovation." },
+        { "type": "takeaway", "text": "L'économie de plateforme repose sur un capitalisme sans usines qui exploite l'effet de réseau, tout en transformant ses travailleurs en indépendants souvent précaires. La bataille pour de meilleures protections sociales, sans casser ce modèle, ne fait que commencer." }
+      ]
+    }
+  ]
+}

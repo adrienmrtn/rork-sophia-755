@@ -1,0 +1,67 @@
+{
+  "id": "course_226_l_ia_et_l_emploi",
+  "title": "L'IA et l'emploi",
+  "subtitle": "Menace ou nouvelle vague ?",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environnement & avenir",
+  "description": "Chaque révolution technologique a fait peur pour l'emploi. Mais l'IA générative touche pour la première fois les métiers **intellectuels**, pas seulement la force physique.",
+  "hero": {
+    "image": "l_ia_et_l_emploi",
+    "ratio": "16:9",
+    "hook": "Les machines ont déjà remplacé des bras. Vont-elles maintenant remplacer des cerveaux ?"
+  },
+  "sections": [
+    {
+      "id": "course_226_l_ia_et_l_emploi_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "L'intelligence artificielle va-t-elle détruire des millions d'emplois, ou en créer de nouveaux ? Cette question revient à chaque grande avancée technologique depuis deux siècles." },
+        { "type": "paragraph", "text": "Cette fois, la nouveauté est ailleurs : l'IA ne remplace plus seulement la force physique, mais des tâches qu'on pensait réservées à l'esprit humain, comme rédiger un texte ou analyser un dossier. Ce cours retrace cette peur ancienne et explore ce qui change vraiment aujourd'hui." }
+      ]
+    },
+    {
+      "id": "course_226_l_ia_et_l_emploi_p1",
+      "title": "Une peur aussi vieille que la machine",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "La crainte que la machine remplace l'humain n'est pas nouvelle. Au début du XIXe siècle, les [[Les Luddites (1811-1816)]], des ouvriers du textile britannique, ont détruit des métiers à tisser mécaniques qui menaçaient leur savoir-faire." },
+        { "type": "image", "asset": "luddites_industrial_revolution_machine_breaking", "ratio": "4:3", "caption": "Au XIXe siècle, les Luddites s'en prenaient aux machines qui menaçaient leur métier." },
+        { "type": "paragraph", "text": "Chaque grande vague technologique a suivi la même logique : elle détruit certains emplois, mais en crée d'autres ailleurs. Le passage de l'agriculture à l'industrie a fait tomber la part des agriculteurs de 40% à 2% de la population active en un siècle, sans provoquer un chômage permanent, car ces travailleurs se sont déplacés vers de nouveaux secteurs." },
+        { "type": "funFact", "text": "Le mot « sabotage » viendrait d'ouvriers français qui jetaient leurs chaussures en bois, les sabots, dans les engrenages des machines pour les bloquer, bien que l'origine exacte du mot reste débattue." }
+      ]
+    },
+    {
+      "id": "course_226_l_ia_et_l_emploi_p2",
+      "title": "Une rupture : l'IA s'attaque aux métiers du savoir",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "L'[[Intelligence artificielle (IA) générative]] marque un vrai changement, car elle ne suit plus seulement des règles fixées à l'avance : elle crée des contenus originaux. L'informatique classique remplaçait des tâches répétitives comme la saisie de données. L'IA moderne, elle, sait rédiger, analyser un contrat, composer de la musique ou même aider à poser un diagnostic médical." },
+        { "type": "image", "asset": "AI_generative_writing_artificial_intelligence", "ratio": "4:3", "caption": "L'IA générative s'attaque à des tâches qu'on pensait réservées à l'esprit humain." },
+        { "type": "paragraph", "text": "Cette polyvalence expose surtout les [[cols blancs]], les métiers du secteur des services dont l'outil de travail principal est l'analyse. Selon des rapports récents, les juristes, les rédacteurs et les analystes financiers font partie des métiers les plus exposés à ce changement." },
+        { "type": "funFact", "text": "En 1950, Alan Turing prédisait qu'une machine pourrait un jour tromper un humain en simulant sa pensée. Certaines IA ont depuis été créditées comme co-auteurs de véritables brevets scientifiques." }
+      ]
+    },
+    {
+      "id": "course_226_l_ia_et_l_emploi_p3",
+      "title": "Un copilote plutôt qu'un remplaçant ?",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Une vision plus optimiste voit l'IA comme un assistant plutôt qu'un remplaçant. En automatisant les tâches les moins intéressantes, comme les recherches documentaires ou les résumés, elle laisserait plus de temps aux professionnels pour l'aspect humain, éthique ou stratégique de leur travail." },
+        { "type": "paragraph", "text": "De nouveaux métiers apparaissent déjà, comme l'[[Ingénieur en prompts]], qui sait formuler des instructions précises pour obtenir le meilleur d'une IA. Un médecin aidé par une IA ne disparaît pas : il peut suivre plus de patients avec plus de précision." },
+        { "type": "paragraph", "text": "Le point d'inquiétude reste la vitesse du changement. Les révolutions industrielles précédentes s'étalaient sur des décennies, laissant le temps de s'adapter. Celle de l'IA se déroule en quelques années, ce qui peut créer un écart de compétences difficile à combler pour de nombreux travailleurs." }
+      ]
+    },
+    {
+      "id": "course_226_l_ia_et_l_emploi_p4",
+      "title": "Repenser le travail et sa valeur",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "L'issue de ce changement dépendra surtout des choix politiques qui l'accompagneront. La formation continue devient indispensable pour aider les travailleurs à évoluer vers de nouvelles compétences." },
+        { "type": "paragraph", "text": "Le débat sur la redistribution de la richesse créée par les machines refait aussi surface. Si l'IA permet de produire plus avec moins de travailleurs, comment financer nos systèmes sociaux ? C'est dans ce contexte que l'idée d'un [[Le revenu universel de base (RUB)]] gagne du terrain, non comme une utopie, mais comme un vrai filet de sécurité." },
+        { "type": "paragraph", "text": "Certains proposent aussi une taxe sur l'usage de l'intelligence artificielle pour compenser la baisse des cotisations liées à l'emploi. L'IA nous pousse finalement à repenser la place du travail lui-même dans nos vies." },
+        { "type": "takeaway", "text": "Les révolutions industrielles précédentes ont détruit des emplois en créant d'autres ailleurs. L'IA générative est la première à menacer en même temps les tâches cognitives et créatives, ce qui rend l'adaptation plus urgente que jamais." }
+      ]
+    }
+  ]
+}

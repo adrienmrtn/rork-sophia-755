@@ -1,0 +1,63 @@
+{
+  "id": "course_220_la_desinformation_et_les_fake_news",
+  "title": "La désinformation et les fake news",
+  "subtitle": "Le mensonge à l'ère virale",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Économie & société",
+  "description": "Les fausses informations se propagent 6 fois plus vite que la vérité sur les réseaux sociaux. Pourquoi, et comment s'en protéger ?",
+  "hero": {
+    "image": "la_desinformation_et_les_fake_news",
+    "ratio": "16:9",
+    "hook": "Une étude du MIT a montré que les fake news voyagent 6 fois plus vite que la vérité sur Twitter. Voici pourquoi."
+  },
+  "sections": [
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Mentir pour servir un but politique n'a rien de nouveau : on en trouve des traces depuis l'Antiquité. Mais Internet et les réseaux sociaux ont changé la donne : la fausse information ne circule plus seulement d'un État vers sa population, elle se propage désormais de façon horizontale, entre citoyens." },
+        { "type": "paragraph", "text": "Ce basculement a créé un monde où la vérité semble parfois facultative face à la viralité. Comprendre comment la **désinformation** se propage, et qui en profite, est devenu essentiel pour préserver la confiance entre citoyens." }
+      ]
+    },
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_p1",
+      "title": "Pourquoi le mensonge voyage plus vite que la vérité",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Il faut distinguer la désinformation, diffusée volontairement pour manipuler, de la simple erreur de bonne foi. Le succès de ces fausses informations repose sur ce que les chercheurs appellent l'**économie de l'attention** : les algorithmes des réseaux sociaux sont conçus pour maximiser le temps passé devant l'écran, et nos cerveaux réagissent plus fort à l'émotion et au choc qu'à la nuance." },
+        { "type": "funFact", "text": "Une étude du [[MIT]] publiée en 2018 a montré que les fausses informations se propagent environ 6 fois plus vite que les informations vérifiées sur Twitter, car elles paraissent plus nouvelles et plus intenses émotionnellement." },
+        { "type": "paragraph", "text": "Les algorithmes enferment aussi les internautes dans des [[bulles de filtre]] : ils ne leur montrent que des contenus confirmant leurs opinions déjà en place. Une personne convaincue d'une théorie complotiste voit alors chaque nouvelle fausse information comme une preuve supplémentaire, ce qui rend toute correction ultérieure très difficile." }
+      ]
+    },
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_p2",
+      "title": "Une industrie du mensonge, entre États et profit",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "La désinformation est devenue une véritable industrie. Des États comme la Russie, à travers l'Internet Research Agency, ont créé des milliers de faux comptes automatisés pour attiser les tensions au sein des démocraties occidentales, sans même chercher à défendre un camp précis : le but est souvent de créer le chaos et de faire croire que « tout le monde ment »." },
+        { "type": "image", "asset": "fake_news_social_media_manipulation_phone", "ratio": "4:3", "caption": "Les fausses informations se diffusent en quelques secondes sur les réseaux sociaux." },
+        { "type": "paragraph", "text": "Il existe aussi une dimension purement lucrative : dans la ville de Veles, en Macédoine du Nord, de jeunes entrepreneurs ont créé en 2016 des sites sensationnalistes sans aucune conviction politique, uniquement pour gagner de l'argent grâce au trafic généré sur les réseaux sociaux. Le mensonge devient alors une simple marchandise rentable." }
+      ]
+    },
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_p3",
+      "title": "Comment démêler le vrai du faux",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Face à ce déluge, le monde de l'information s'organise. Le **fact-checking**, c'est-à-dire la vérification des faits, est devenu une discipline journalistique à part entière. Des agences comme l'[[AFP]] ou des rédactions spécialisées utilisent des outils de recherche d'images pour détecter les trucages et analyser les contenus suspects." },
+        { "type": "paragraph", "text": "Mais la course entre l'attaque et la défense reste inégale. L'apparition des [[deepfakes]], des vidéos truquées par intelligence artificielle où l'on fait dire n'importe quoi à une personne avec un réalisme troublant, rend la distinction entre le vrai et le faux de plus en plus difficile pour un œil non entraîné." }
+      ]
+    },
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_p4",
+      "title": "Retrouver confiance dans un monde d'images",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "L'effet à long terme de la désinformation est profond : on parle désormais d'ère de la **post-vérité**, où les faits objectifs pèsent parfois moins que les émotions et les croyances personnelles. Cette relativisation généralisée fragilise la confiance nécessaire pour affronter ensemble des défis mondiaux comme le climat ou la santé publique." },
+        { "type": "paragraph", "text": "La réponse la plus solide reste l'éducation aux médias : apprendre à vérifier une source, croiser plusieurs informations, et comprendre comment fonctionnent les algorithmes. Certains misent aussi sur des technologies de certification des contenus, pour garantir l'origine d'une vidéo dès sa création. En attendant, la vigilance de chacun reste la première ligne de défense." },
+        { "type": "takeaway", "text": "Les fausses informations se propagent en moyenne 6 fois plus vite que la vérité sur les réseaux sociaux, car elles exploitent nos émotions et notre soif de nouveauté. Face aux deepfakes et aux fermes de trolls, l'éducation aux médias reste la meilleure arme pour préserver la confiance collective." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "id": "course_234_la_securite_alimentaire_mondiale",
+  "title": "La sécurité alimentaire mondiale",
+  "subtitle": "800 millions de personnes",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environnement & avenir",
+  "description": "La Terre produit assez de nourriture pour tout le monde. Alors pourquoi **800 millions de personnes** souffrent-elles encore de la faim ?",
+  "hero": {
+    "image": "la_securite_alimentaire_mondiale",
+    "ratio": "16:9",
+    "hook": "La faim de 800 millions d'humains n'est pas un problème de nourriture, mais de partage."
+  },
+  "sections": [
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Aujourd'hui, environ **800 millions de personnes** souffrent de la faim dans le monde, soit une personne sur dix. Ce chiffre est d'autant plus étrange que l'humanité n'a jamais produit autant de nourriture : statistiquement, il y a largement assez à manger pour tout le monde." },
+        { "type": "paragraph", "text": "La faim n'est donc pas un problème de quantité, mais de répartition. Comprendre la sécurité alimentaire mondiale, c'est comprendre pourquoi l'abondance et la famine peuvent coexister sur la même planète." }
+      ]
+    },
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_p1",
+      "title": "La géographie de la faim",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Selon la **[[FAO]]**, l'agence des Nations unies pour l'alimentation, la sous-alimentation chronique touchait encore environ 800 millions de personnes en 2024. Ce chiffre global cache des réalités très différentes. Les zones les plus touchées se trouvent en Afrique subsaharienne, où plus d'un quart de la population manque régulièrement de nourriture, et en Asie du Sud." },
+        { "type": "image", "asset": "la_securite_alimentaire_mondiale", "ratio": "16:9", "caption": "La faim touche aujourd'hui environ 800 millions de personnes, concentrées surtout en Afrique subsaharienne et en Asie du Sud." },
+        { "type": "paragraph", "text": "Il existe plusieurs formes de détresse alimentaire. La **sous-alimentation** correspond à un manque de calories. Les **carences en micronutriments**, souvent appelées « faim cachée », touchent 2 milliards de personnes qui manquent de vitamines ou de minéraux essentiels, avec des conséquences sur la croissance ou la santé. Enfin, la **malnutrition** inclut aussi, de façon surprenante, l'obésité : dans de nombreux pays en développement, les habitants remplacent peu à peu les produits frais par des aliments transformés, riches en calories mais pauvres en nutriments." },
+        { "type": "funFact", "text": "Si l'on réduisait le gaspillage alimentaire mondial de seulement 25 %, on pourrait théoriquement nourrir l'ensemble des 800 millions de personnes qui souffrent aujourd'hui de la faim." }
+      ]
+    },
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_p2",
+      "title": "Le paradoxe de l'abondance et du gaspillage",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le monde produit actuellement l'équivalent de 2 800 kilocalories par personne et par jour, largement assez pour éliminer la faim. Le vrai problème n'est donc pas la pénurie, mais l'**accès** : les populations les plus pauvres n'ont simplement pas les moyens d'acheter des aliments dont le prix varie sans cesse sur les marchés mondiaux." },
+        { "type": "paragraph", "text": "L'autre versant de ce paradoxe est le **gaspillage**. Environ un tiers de la production mondiale, soit 1,3 milliard de tonnes de nourriture, est perdu chaque année. Dans les pays pauvres, les pertes surviennent tôt : manque de lieux de stockage, absence de chambres froides, routes en mauvais état. Dans les pays riches, le gaspillage a lieu plus tard, au moment de la distribution et de la consommation." },
+        { "type": "funFact", "text": "Depuis les années 2010, l'obésité et les maladies liées au surpoids tuent chaque année davantage de personnes dans le monde que la sous-nutrition, un tournant historique pour la santé publique mondiale." }
+      ]
+    },
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_p3",
+      "title": "Quand la nourriture devient une arme géopolitique",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "La sécurité alimentaire est aussi une question de géopolitique. De nombreux pays dépendent des exportations de quelques grandes puissances agricoles, ce qui les rend très vulnérables au moindre blocage. L'Ukraine et la Russie assurent ensemble près de 30 % des exportations mondiales de blé. Quand ce flux s'arrête, les prix s'envolent sur le **[[marché à terme]]** de Chicago, où se négocient les récoltes futures, et des pays comme l'Égypte ou le Liban basculent dans une crise sociale grave." },
+        { "type": "paragraph", "text": "Cette fragilité vient aussi d'un choix fait dans les années 1960 : la **[[révolution verte]]**. Cette vague de nouvelles techniques agricoles a permis d'augmenter fortement les rendements, mais elle a aussi réduit la diversité des cultures et rendu les agriculteurs dépendants des engrais chimiques. Résultat, chaque hausse du prix du pétrole se répercute directement sur le prix du pain." },
+        { "type": "paragraph", "text": "Le concept de **food power** désigne justement l'utilisation volontaire des exportations de nourriture comme moyen de pression diplomatique, voire comme sanction contre un pays adverse." }
+      ]
+    },
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_p4",
+      "title": "Nourrir 10 milliards d'humains sans épuiser la planète",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "D'ici 2050, la population mondiale devrait atteindre 10 milliards d'habitants. Le changement climatique menace déjà les rendements en multipliant sécheresses et inondations, déplaçant les terres cultivables. L'agriculture intensive épuise aussi les sols et les nappes d'eau souterraines, qui se vident parfois plus vite qu'elles ne se remplissent." },
+        { "type": "paragraph", "text": "L'une des pistes d'avenir s'appelle l'**[[agroécologie]]** : produire en s'appuyant sur les cycles naturels, comme le compost ou la rotation des cultures, plutôt qu'en les combattant à coups de produits chimiques. L'enjeu est de garantir, pour chaque être humain, un accès permanent à une nourriture saine, sans épuiser davantage la planète." },
+        { "type": "takeaway", "text": "La Terre produit assez de calories pour nourrir tout le monde. La faim de 800 millions de personnes vient donc d'un problème d'accès, de gaspillage et de crises géopolitiques, aggravé par le changement climatique." }
+      ]
+    }
+  ]
+}

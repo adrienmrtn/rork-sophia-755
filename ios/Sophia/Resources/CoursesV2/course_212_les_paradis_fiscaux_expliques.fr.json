@@ -1,0 +1,64 @@
+{
+  "id": "course_212_les_paradis_fiscaux_expliques",
+  "title": "Les paradis fiscaux expliqués",
+  "subtitle": "10 000 milliards planqués",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Économie & société",
+  "description": "Environ 10% de la richesse mondiale échappe à l'impôt dans des territoires opaques. Comment ce système fonctionne-t-il, et pourquoi résiste-t-il si bien ?",
+  "hero": {
+    "image": "les_paradis_fiscaux_expliques",
+    "ratio": "16:9",
+    "hook": "Les îles Caïmans comptent 65 000 habitants et plus de 100 000 entreprises. Bienvenue dans le monde des paradis fiscaux."
+  },
+  "sections": [
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Certains territoires, souvent minuscules, permettent à des entreprises et à des grandes fortunes d'échapper presque totalement à l'impôt de leur pays d'origine. On appelle cela des **paradis fiscaux**. On estime qu'environ 10 000 milliards de dollars, soit 8 à 10% de la richesse mondiale, y sont logés." },
+        { "type": "paragraph", "text": "Ce n'est pas qu'un problème de comptables : cela prive les États de 600 milliards de dollars par an, de l'argent qui aurait pu financer des hôpitaux ou des écoles. Voici comment ce système discret fonctionne, et pourquoi il résiste si bien aux tentatives de régulation." }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p1",
+      "title": "Comment se cache l'argent",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Un paradis fiscal repose sur trois piliers : des impôts proches de zéro, une grande opacité, et peu de coopération avec les autres pays. Ces territoires attirent ainsi des capitaux venus du monde entier, ce qu'on appelle l'économie [[offshore]]." },
+        { "type": "paragraph", "text": "Dans plusieurs de ces territoires, il est possible de créer une société écran : une entreprise sans bureau ni employé, qui existe seulement sur papier. Son seul but est souvent de cacher l'identité du véritable propriétaire de l'argent, appelé le bénéficiaire effectif." },
+        { "type": "image", "asset": "cayman_islands_offshore_banking_paradise", "ratio": "4:3", "caption": "Les îles Caïmans, l'un des plus grands centres financiers du monde malgré leur petite taille." },
+        { "type": "funFact", "text": "Les îles Caïmans comptent seulement 65 000 habitants, mais plus de 100 000 entreprises y sont enregistrées : c'est le cinquième centre financier mondial pour les dépôts bancaires, sur un territoire plus petit que Paris." }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p2",
+      "title": "L'art de faire disparaître un profit",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Pour les grandes entreprises, l'objectif n'est pas forcément illégal : on parle d'**optimisation fiscale**, c'est-à-dire l'utilisation habile des règles de chaque pays pour payer moins d'impôts. Le principal outil s'appelle le [[prix de transfert]] : une entreprise fixe elle-même le prix des échanges entre ses propres filiales, pour faire apparaître ses profits là où l'impôt est le plus faible." },
+        { "type": "paragraph", "text": "Une méthode fréquente consiste à transférer une marque ou un brevet vers une filiale installée dans un paradis fiscal. Les autres filiales, situées par exemple en France, doivent alors payer des sommes énormes pour avoir le droit d'utiliser cette marque. Ces paiements réduisent leur profit imposable localement, tout en le faisant gonfler dans le paradis fiscal." },
+        { "type": "funFact", "text": "Le mot français « paradis fiscal » vient d'une erreur de traduction : l'anglais dit « tax haven », un port sûr pour l'argent (haven), pas un paradis (heaven). Une confusion de sonorités a changé le sens du mot." }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p3",
+      "title": "Le monde réagit (un peu)",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "La crise financière de 2008, puis la publication des [[Panama Papers]] en 2016, ont provoqué une vague d'indignation. Sous la pression de l'OCDE et du G20, les banques doivent désormais transmettre automatiquement aux administrations fiscales les informations sur leurs clients étrangers." },
+        { "type": "paragraph", "text": "L'avancée la plus marquante a eu lieu en 2021, avec un accord international fixant un taux minimum d'imposition de 15% pour les multinationales. L'idée : empêcher les pays de se faire concurrence en baissant sans fin leurs impôts pour attirer les entreprises. Si une entreprise ne paie que 5% dans un paradis fiscal, son pays d'origine peut désormais réclamer les 10% restants." }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p4",
+      "title": "Une justice fiscale encore fragile",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Quand les plus grandes fortunes échappent à l'impôt, ce sont les classes moyennes et les petites entreprises locales qui portent une plus grande part de la charge fiscale. Cela affaiblit aussi les services publics comme la santé ou l'éducation, faute de moyens." },
+        { "type": "paragraph", "text": "La bataille se déplace aujourd'hui vers le numérique : les plateformes en ligne n'ont plus besoin de bureaux pour gagner de l'argent dans un pays, ce qui rend les frontières fiscales de plus en plus poreuses. Les administrations utilisent désormais le big data pour repérer les anomalies, et réclament des registres publics révélant l'identité des vrais propriétaires des sociétés." },
+        { "type": "takeaway", "text": "Les paradis fiscaux abritent environ 10% de la richesse mondiale grâce au secret bancaire et à une fiscalité quasi nulle. Depuis 2021, un taux d'imposition minimum mondial de 15% tente de limiter cette évasion, mais la bataille reste loin d'être gagnée." }
+      ]
+    }
+  ]
+}
