@@ -70,9 +70,16 @@ enum CourseContentStore {
 
     private static func resourceURL(courseId: String, code: String) -> URL? {
         let resource = "\(courseId).\(code)"
-        let subdirectories = ["Resources/CoursesV2", "CoursesV2"]
+        let fileName = "\(resource).json"
+        let subdirectories = ["Resources/CoursesV2", "CoursesV2", ""]
 
         for subdirectory in subdirectories {
+            if subdirectory.isEmpty {
+                if let url = Bundle.main.url(forResource: resource, withExtension: "json") {
+                    return url
+                }
+                continue
+            }
             if let url = Bundle.main.url(
                 forResource: resource,
                 withExtension: "json",
@@ -81,19 +88,28 @@ enum CourseContentStore {
                 return url
             }
         }
-        if let url = Bundle.main.url(forResource: resource, withExtension: "json") {
-            return url
-        }
 
         guard let resourceRoot = Bundle.main.resourceURL else { return nil }
         let relativePaths = [
-            "Resources/CoursesV2/\(resource).json",
-            "CoursesV2/\(resource).json",
+            "Resources/CoursesV2/\(fileName)",
+            "CoursesV2/\(fileName)",
+            fileName,
         ]
         for relativePath in relativePaths {
             let candidate = resourceRoot.appendingPathComponent(relativePath)
             if FileManager.default.fileExists(atPath: candidate.path) {
                 return candidate
+            }
+        }
+
+        // Last resort: walk the bundle (handles unexpected nesting after Xcode sync).
+        if let enumerator = FileManager.default.enumerator(
+            at: resourceRoot,
+            includingPropertiesForKeys: nil,
+            options: [.skipsHiddenFiles]
+        ) {
+            for case let url as URL in enumerator where url.lastPathComponent == fileName {
+                return url
             }
         }
         return nil
