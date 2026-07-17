@@ -4,6 +4,13 @@ struct AmbassadorView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(LanguageManager.self) private var languageManager
 
+    private enum Stage {
+        case program
+        case form
+        case success
+    }
+
+    @State private var stage: Stage = .program
     @State private var wantsSlideshow = false
     @State private var wantsUGC = false
     @State private var email = ""
@@ -11,7 +18,6 @@ struct AmbassadorView: View {
     @State private var presentation = ""
     @State private var countryConfirmed = false
     @State private var isSubmitting = false
-    @State private var didSucceed = false
     @State private var errorMessage: String?
     @FocusState private var focusedField: Field?
 
@@ -23,6 +29,7 @@ struct AmbassadorView: View {
 
     private let ink = BrutalPalette.ink
     private let cream = BrutalPalette.cream
+    private let green = Color(red: 0.12, green: 0.55, blue: 0.32)
     private let presentationLimit = 1_500
     private let presentationMin = 10
 
@@ -42,14 +49,22 @@ struct AmbassadorView: View {
         trimmedPresentation.count
     }
 
+    private var emailValid: Bool {
+        trimmedEmail.contains("@") && trimmedEmail.contains(".")
+    }
+
+    private var ageValid: Bool {
+        guard let age = parsedAge else { return false }
+        return age >= 16 && age <= 120
+    }
+
+    private var roleValid: Bool {
+        wantsSlideshow || wantsUGC
+    }
+
     private var canSubmit: Bool {
-        guard !isSubmitting else { return false }
-        guard trimmedEmail.contains("@"), trimmedEmail.contains(".") else { return false }
-        guard let age = parsedAge, age >= 16, age <= 120 else { return false }
-        guard presentationCount >= presentationMin else { return false }
-        guard wantsSlideshow || wantsUGC else { return false }
-        guard countryConfirmed else { return false }
-        return true
+        !isSubmitting && emailValid && ageValid
+            && presentationCount >= presentationMin && roleValid && countryConfirmed
     }
 
     var body: some View {
@@ -57,33 +72,107 @@ struct AmbassadorView: View {
             cream.ignoresSafeArea()
 
             VStack(spacing: 0) {
-                LegalHeader(
-                    title: languageManager.text("ambassador.title"),
-                    onClose: { dismiss() }
-                )
+                header
 
-                if didSucceed {
+                if stage != .success {
+                    stepIndicator
+                        .padding(.horizontal, 20)
+                        .padding(.top, 14)
+                        .padding(.bottom, 4)
+                }
+
+                switch stage {
+                case .program:
+                    programStep
+                        .transition(.asymmetric(
+                            insertion: .move(edge: .leading).combined(with: .opacity),
+                            removal: .move(edge: .leading).combined(with: .opacity)
+                        ))
+                case .form:
+                    formStep
+                        .transition(.asymmetric(
+                            insertion: .move(edge: .trailing).combined(with: .opacity),
+                            removal: .move(edge: .trailing).combined(with: .opacity)
+                        ))
+                case .success:
                     successView
-                } else {
-                    formScroll
+                        .transition(.opacity)
                 }
             }
         }
         .presentationDragIndicator(.visible)
     }
 
-    private var formScroll: some View {
+    // MARK: - Header
+
+    private var header: some View {
+        LegalHeader(
+            title: languageManager.text("ambassador.title"),
+            onClose: { dismiss() }
+        )
+    }
+
+    private var stepIndicator: some View {
+        HStack(spacing: 10) {
+            stepPill(
+                index: 1,
+                label: languageManager.text("ambassador.step.program"),
+                active: true
+            )
+            stepPill(
+                index: 2,
+                label: languageManager.text("ambassador.step.apply"),
+                active: stage == .form
+            )
+        }
+    }
+
+    private func stepPill(index: Int, label: String, active: Bool) -> some View {
+        HStack(spacing: 8) {
+            ZStack {
+                Circle()
+                    .fill(active ? ink : Color.white)
+                    .overlay { Circle().strokeBorder(ink, lineWidth: 2) }
+                Text("\(index)")
+                    .font(.system(size: 13, weight: .heavy, design: .rounded))
+                    .foregroundStyle(active ? cream : ink.opacity(0.55))
+            }
+            .frame(width: 26, height: 26)
+
+            Text(label)
+                .font(.system(.caption, design: .rounded, weight: .heavy))
+                .foregroundStyle(active ? ink : ink.opacity(0.45))
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 8)
+        .background(active ? BrutalPalette.yellow.opacity(0.35) : Color.white.opacity(0.6))
+        .clipShape(Capsule())
+        .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
+    }
+
+    // MARK: - Step 1 — Program
+
+    private var programStep: some View {
         VStack(spacing: 0) {
             ScrollView {
-                VStack(alignment: .leading, spacing: 20) {
+                VStack(alignment: .leading, spacing: 18) {
+                    Text(languageManager.text("ambassador.program.heading"))
+                        .font(.system(.title, design: .rounded, weight: .heavy))
+                        .foregroundStyle(ink)
+                        .fixedSize(horizontal: false, vertical: true)
+
                     Text(languageManager.text("ambassador.intro"))
                         .font(.system(.subheadline, design: .rounded, weight: .semibold))
                         .foregroundStyle(ink.opacity(0.72))
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .fixedSize(horizontal: false, vertical: true)
 
-                    replyPromiseBanner
+                    highlightChips
 
-                    premiumBonusBadge
+                    howItWorksCard
+
+                    sectionTitle(languageManager.text("ambassador.roles.title"))
 
                     roleCard(
                         icon: "rectangle.stack.fill",
@@ -103,97 +192,69 @@ struct AmbassadorView: View {
                         accent: BrutalPalette.pink
                     )
 
-                    conditionsBlock
-
-                    Text(languageManager.text("ambassador.form.title"))
-                        .font(.system(.title3, design: .rounded, weight: .heavy))
-                        .foregroundStyle(ink)
-                        .padding(.top, 4)
-
-                    fieldLabel(languageManager.text("ambassador.form.roles.label"))
-                    roleCheckboxes
-
-                    fieldLabel(languageManager.text("ambassador.form.email.label"))
-                    emailField
-
-                    fieldLabel(languageManager.text("ambassador.form.age.label"))
-                    ageField
-
-                    fieldLabel(languageManager.text("ambassador.form.presentation.label"))
-                    presentationField
-                    presentationHint
-
-                    countryConfirmToggle
-
-                    if let errorMessage {
-                        Text(errorMessage)
-                            .font(.system(.caption, design: .rounded, weight: .heavy))
-                            .foregroundStyle(Color(red: 0.85, green: 0.1, blue: 0.2))
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                    }
+                    sectionTitle(languageManager.text("ambassador.conditions.title"))
+                    conditionsCard
                 }
                 .padding(.horizontal, 20)
-                .padding(.top, 8)
+                .padding(.top, 12)
                 .padding(.bottom, 16)
             }
-            .scrollDismissesKeyboard(.interactively)
 
-            VStack(spacing: 8) {
-                if !canSubmit {
-                    Text(languageManager.text("ambassador.form.hint"))
-                        .font(.system(.caption, design: .rounded, weight: .semibold))
-                        .foregroundStyle(ink.opacity(0.55))
-                        .multilineTextAlignment(.center)
-                        .frame(maxWidth: .infinity)
-                }
-
-                Button(action: submit) {
-                    HStack(spacing: 10) {
-                        if isSubmitting {
-                            ProgressView()
-                                .tint(ink)
-                        }
-                        Text(languageManager.text("ambassador.form.submit"))
+            bottomBar {
+                Button {
+                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                    withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
+                        stage = .form
+                    }
+                } label: {
+                    HStack(spacing: 8) {
+                        Text(languageManager.text("ambassador.discover.cta"))
                             .font(.system(.headline, design: .rounded, weight: .heavy))
+                            .foregroundStyle(ink)
+                        Image(systemName: "arrow.right")
+                            .font(.system(size: 15, weight: .heavy))
                             .foregroundStyle(ink)
                     }
                 }
-                .buttonStyle(BrutalAmbassadorButtonStyle(isEnabled: canSubmit))
-                .disabled(!canSubmit)
+                .buttonStyle(BrutalAmbassadorButtonStyle(isEnabled: true))
             }
-            .padding(.horizontal, 20)
-            .padding(.top, 8)
-            .padding(.bottom, 32)
         }
     }
 
-    private var replyPromiseBanner: some View {
-        HStack(alignment: .top, spacing: 10) {
-            Image(systemName: "bolt.fill")
-                .font(.system(size: 16, weight: .heavy))
-                .foregroundStyle(ink)
-            Text(languageManager.text("ambassador.cta48h"))
-                .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                .foregroundStyle(ink)
-                .fixedSize(horizontal: false, vertical: true)
-            Spacer(minLength: 0)
-        }
-        .padding(.horizontal, 14)
-        .padding(.vertical, 12)
-        .background(BrutalPalette.pastel(for: .sciences))
-        .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
-        .overlay {
-            RoundedRectangle(cornerRadius: 14, style: .continuous)
-                .strokeBorder(ink, lineWidth: 2.5)
+    private var highlightChips: some View {
+        VStack(spacing: 10) {
+            highlightRow(
+                icon: "crown.fill",
+                text: languageManager.text("ambassador.bonus"),
+                gradient: [
+                    Color(red: 1.0, green: 0.92, blue: 0.45),
+                    Color(red: 1.0, green: 0.78, blue: 0.55),
+                ]
+            )
+            highlightRow(
+                icon: "bolt.fill",
+                text: languageManager.text("ambassador.cta48h"),
+                gradient: [
+                    BrutalPalette.pastel(for: .sciences),
+                    BrutalPalette.pastel(for: .sciences),
+                ]
+            )
         }
     }
 
-    private var premiumBonusBadge: some View {
-        HStack(spacing: 10) {
-            Image(systemName: "crown.fill")
-                .font(.system(size: 16, weight: .heavy))
-                .foregroundStyle(ink)
-            Text(languageManager.text("ambassador.bonus"))
+    private func highlightRow(icon: String, text: String, gradient: [Color]) -> some View {
+        HStack(spacing: 12) {
+            ZStack {
+                Circle()
+                    .fill(Color.white.opacity(0.9))
+                    .overlay { Circle().strokeBorder(ink, lineWidth: 2) }
+                Image(systemName: icon)
+                    .font(.system(size: 15, weight: .heavy))
+                    .foregroundStyle(ink)
+            }
+            .frame(width: 36, height: 36)
+
+            Text(text)
                 .font(.system(.subheadline, design: .rounded, weight: .heavy))
                 .foregroundStyle(ink)
                 .fixedSize(horizontal: false, vertical: true)
@@ -202,19 +263,55 @@ struct AmbassadorView: View {
         .padding(.horizontal, 14)
         .padding(.vertical, 12)
         .background(
-            LinearGradient(
-                colors: [
-                    Color(red: 1.0, green: 0.92, blue: 0.45),
-                    Color(red: 1.0, green: 0.78, blue: 0.55),
-                ],
-                startPoint: .leading,
-                endPoint: .trailing
-            )
+            LinearGradient(colors: gradient, startPoint: .leading, endPoint: .trailing)
         )
         .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
         .overlay {
             RoundedRectangle(cornerRadius: 14, style: .continuous)
                 .strokeBorder(ink, lineWidth: 2.5)
+        }
+    }
+
+    private var howItWorksCard: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            Text(languageManager.text("ambassador.how.title"))
+                .font(.system(.headline, design: .rounded, weight: .heavy))
+                .foregroundStyle(ink)
+
+            howStep(1, languageManager.text("ambassador.how.step1"))
+            howStep(2, languageManager.text("ambassador.how.step2"))
+            howStep(3, languageManager.text("ambassador.how.step3"))
+        }
+        .padding(16)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Color.white)
+        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 16, style: .continuous)
+                .strokeBorder(ink, lineWidth: 2.5)
+        }
+    }
+
+    private func howStep(_ index: Int, _ text: String) -> some View {
+        HStack(alignment: .top, spacing: 12) {
+            ZStack {
+                RoundedRectangle(cornerRadius: 8, style: .continuous)
+                    .fill(BrutalPalette.yellow)
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 8, style: .continuous)
+                            .strokeBorder(ink, lineWidth: 2)
+                    }
+                Text("\(index)")
+                    .font(.system(size: 14, weight: .heavy, design: .rounded))
+                    .foregroundStyle(ink)
+            }
+            .frame(width: 28, height: 28)
+
+            Text(text)
+                .font(.system(.subheadline, design: .rounded, weight: .semibold))
+                .foregroundStyle(ink.opacity(0.8))
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
 
@@ -226,34 +323,86 @@ struct AmbassadorView: View {
         body: String,
         accent: Color
     ) -> some View {
-        HStack(alignment: .top, spacing: 0) {
-            Rectangle()
-                .fill(accent)
-                .frame(width: 8)
-
-            VStack(alignment: .leading, spacing: 10) {
-                HStack(spacing: 8) {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack(spacing: 10) {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                        .fill(accent)
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                .strokeBorder(ink, lineWidth: 2)
+                        }
                     Image(systemName: icon)
-                        .font(.system(size: 14, weight: .heavy))
-                        .foregroundStyle(ink)
-                    Text(title)
-                        .font(.system(.headline, design: .rounded, weight: .heavy))
+                        .font(.system(size: 16, weight: .heavy))
                         .foregroundStyle(ink)
                 }
+                .frame(width: 40, height: 40)
 
-                HStack(spacing: 8) {
-                    metaChip(income, bg: accent)
-                    metaChip(time, bg: Color.white)
-                }
-
-                Text(body)
-                    .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                    .foregroundStyle(ink.opacity(0.7))
+                Text(title)
+                    .font(.system(.headline, design: .rounded, weight: .heavy))
+                    .foregroundStyle(ink)
+                Spacer(minLength: 0)
             }
-            .padding(14)
-            .frame(maxWidth: .infinity, alignment: .leading)
+
+            HStack(spacing: 10) {
+                statBlock(
+                    value: income,
+                    label: languageManager.text("ambassador.stat.income"),
+                    bg: accent.opacity(0.35)
+                )
+                statBlock(
+                    value: time,
+                    label: languageManager.text("ambassador.stat.time"),
+                    bg: Color.white
+                )
+            }
+
+            Text(body)
+                .font(.system(.subheadline, design: .rounded, weight: .semibold))
+                .foregroundStyle(ink.opacity(0.72))
+                .fixedSize(horizontal: false, vertical: true)
         }
-        .background(accent.opacity(0.28))
+        .padding(16)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Color.white)
+        .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 18, style: .continuous)
+                .strokeBorder(ink, lineWidth: 2.5)
+        }
+    }
+
+    private func statBlock(value: String, label: String, bg: Color) -> some View {
+        VStack(alignment: .leading, spacing: 2) {
+            Text(value)
+                .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                .foregroundStyle(ink)
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
+            Text(label.uppercased())
+                .font(.system(size: 9, weight: .heavy, design: .rounded))
+                .foregroundStyle(ink.opacity(0.5))
+                .tracking(0.8)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.horizontal, 12)
+        .padding(.vertical, 10)
+        .background(bg)
+        .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 12, style: .continuous)
+                .strokeBorder(ink, lineWidth: 2)
+        }
+    }
+
+    private var conditionsCard: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            conditionRow(languageManager.text("ambassador.conditions.countries"))
+            conditionRow(languageManager.text("ambassador.conditions.age"))
+        }
+        .padding(16)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Color.white)
         .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
         .overlay {
             RoundedRectangle(cornerRadius: 16, style: .continuous)
@@ -261,39 +410,131 @@ struct AmbassadorView: View {
         }
     }
 
-    private func metaChip(_ text: String, bg: Color) -> some View {
-        Text(text)
-            .font(.system(.caption2, design: .rounded, weight: .heavy))
-            .foregroundStyle(ink)
-            .padding(.horizontal, 10)
-            .padding(.vertical, 6)
-            .background(bg)
-            .clipShape(Capsule())
-            .overlay { Capsule().strokeBorder(ink, lineWidth: 1.5) }
-    }
-
-    private var conditionsBlock: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text(languageManager.text("ambassador.conditions.title").uppercased())
-                .font(.system(.caption, design: .rounded, weight: .heavy))
-                .foregroundStyle(ink.opacity(0.5))
-                .tracking(1.1)
-
-            conditionRow(languageManager.text("ambassador.conditions.countries"))
-            conditionRow(languageManager.text("ambassador.conditions.age"))
-        }
-        .padding(.horizontal, 4)
-        .padding(.vertical, 4)
-    }
-
     private func conditionRow(_ text: String) -> some View {
-        HStack(alignment: .top, spacing: 8) {
+        HStack(alignment: .top, spacing: 10) {
             Image(systemName: "checkmark.circle.fill")
-                .font(.system(size: 14, weight: .heavy))
-                .foregroundStyle(BrutalPalette.pastel(for: .sciences))
+                .font(.system(size: 16, weight: .heavy))
+                .foregroundStyle(green)
             Text(text)
                 .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                .foregroundStyle(ink.opacity(0.75))
+                .foregroundStyle(ink.opacity(0.8))
+                .fixedSize(horizontal: false, vertical: true)
+        }
+    }
+
+    // MARK: - Step 2 — Form
+
+    private var formStep: some View {
+        VStack(spacing: 0) {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 18) {
+                    fieldGroup(
+                        label: languageManager.text("ambassador.form.roles.label"),
+                        valid: roleValid
+                    ) {
+                        roleCheckboxes
+                    }
+
+                    fieldGroup(
+                        label: languageManager.text("ambassador.form.email.label"),
+                        valid: emailValid
+                    ) {
+                        emailField
+                    }
+
+                    fieldGroup(
+                        label: languageManager.text("ambassador.form.age.label"),
+                        valid: ageValid
+                    ) {
+                        ageField
+                    }
+
+                    fieldGroup(
+                        label: languageManager.text("ambassador.form.presentation.label"),
+                        valid: presentationCount >= presentationMin
+                    ) {
+                        VStack(alignment: .leading, spacing: 6) {
+                            presentationField
+                            presentationHint
+                        }
+                    }
+
+                    countryConfirmToggle
+
+                    if let errorMessage {
+                        Text(errorMessage)
+                            .font(.system(.caption, design: .rounded, weight: .heavy))
+                            .foregroundStyle(Color(red: 0.85, green: 0.1, blue: 0.2))
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+                }
+                .padding(.horizontal, 20)
+                .padding(.top, 12)
+                .padding(.bottom, 16)
+            }
+            .scrollDismissesKeyboard(.interactively)
+
+            bottomBar {
+                VStack(spacing: 8) {
+                    if !canSubmit && errorMessage == nil {
+                        Text(languageManager.text("ambassador.form.hint"))
+                            .font(.system(.caption, design: .rounded, weight: .semibold))
+                            .foregroundStyle(ink.opacity(0.55))
+                            .multilineTextAlignment(.center)
+                            .frame(maxWidth: .infinity)
+                    }
+
+                    HStack(spacing: 12) {
+                        Button {
+                            focusedField = nil
+                            UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                            withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
+                                stage = .program
+                            }
+                        } label: {
+                            Image(systemName: "chevron.left")
+                                .font(.system(size: 16, weight: .heavy))
+                                .foregroundStyle(ink)
+                                .frame(width: 54, height: 54)
+                        }
+                        .buttonStyle(BrutalIconButtonStyle())
+
+                        Button(action: submit) {
+                            HStack(spacing: 10) {
+                                if isSubmitting {
+                                    ProgressView().tint(ink)
+                                }
+                                Text(languageManager.text("ambassador.form.submit"))
+                                    .font(.system(.headline, design: .rounded, weight: .heavy))
+                                    .foregroundStyle(ink)
+                            }
+                        }
+                        .buttonStyle(BrutalAmbassadorButtonStyle(isEnabled: canSubmit))
+                        .disabled(!canSubmit)
+                    }
+                }
+            }
+        }
+    }
+
+    private func fieldGroup<Content: View>(
+        label: String,
+        valid: Bool,
+        @ViewBuilder content: () -> Content
+    ) -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack(spacing: 6) {
+                Text(label.uppercased())
+                    .font(.system(.caption, design: .rounded, weight: .heavy))
+                    .foregroundStyle(ink.opacity(0.55))
+                    .tracking(1.1)
+                if valid {
+                    Image(systemName: "checkmark.circle.fill")
+                        .font(.system(size: 12, weight: .heavy))
+                        .foregroundStyle(green)
+                }
+            }
+            content()
         }
     }
 
@@ -326,8 +567,8 @@ struct AmbassadorView: View {
                 Spacer(minLength: 0)
             }
             .padding(.horizontal, 14)
-            .padding(.vertical, 12)
-            .background(Color.white)
+            .padding(.vertical, 14)
+            .background(isOn.wrappedValue ? BrutalPalette.yellow.opacity(0.35) : Color.white)
             .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
             .overlay {
                 RoundedRectangle(cornerRadius: 14, style: .continuous)
@@ -354,7 +595,7 @@ struct AmbassadorView: View {
                 Spacer(minLength: 0)
             }
             .padding(.horizontal, 14)
-            .padding(.vertical, 12)
+            .padding(.vertical, 14)
             .background(countryConfirmed ? BrutalPalette.pastel(for: .sciences).opacity(0.45) : Color.white)
             .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
             .overlay {
@@ -404,9 +645,7 @@ struct AmbassadorView: View {
         .focused($focusedField, equals: .age)
         .onChange(of: ageText) { _, newValue in
             let digits = newValue.filter(\.isNumber)
-            if digits != newValue {
-                ageText = String(digits.prefix(3))
-            } else if digits.count > 3 {
+            if digits != newValue || digits.count > 3 {
                 ageText = String(digits.prefix(3))
             }
         }
@@ -462,22 +701,26 @@ struct AmbassadorView: View {
             )
         )
         .font(.system(.caption, design: .rounded, weight: .semibold))
-        .foregroundStyle(
-            presentationCount >= presentationMin
-                ? Color(red: 0.12, green: 0.55, blue: 0.32)
-                : ink.opacity(0.5)
-        )
+        .foregroundStyle(presentationCount >= presentationMin ? green : ink.opacity(0.5))
         .frame(maxWidth: .infinity, alignment: .trailing)
     }
+
+    // MARK: - Success
 
     private var successView: some View {
         VStack(spacing: 16) {
             Spacer()
 
-            Image(systemName: "sparkles")
-                .font(.system(size: 56, weight: .heavy))
-                .foregroundStyle(BrutalPalette.yellow)
-                .symbolEffect(.bounce, value: didSucceed)
+            ZStack {
+                Circle()
+                    .fill(BrutalPalette.yellow)
+                    .overlay { Circle().strokeBorder(ink, lineWidth: 3) }
+                Image(systemName: "checkmark")
+                    .font(.system(size: 44, weight: .heavy))
+                    .foregroundStyle(ink)
+            }
+            .frame(width: 96, height: 96)
+            .symbolEffect(.bounce, value: stage == .success)
 
             Text(languageManager.text("ambassador.success.title"))
                 .font(.system(.title2, design: .rounded, weight: .heavy))
@@ -490,20 +733,24 @@ struct AmbassadorView: View {
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 24)
 
-            Text(languageManager.text("ambassador.cta48h"))
-                .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                .foregroundStyle(ink)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal, 20)
-                .padding(.vertical, 12)
-                .frame(maxWidth: .infinity)
-                .background(BrutalPalette.pastel(for: .sciences))
-                .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
-                .overlay {
-                    RoundedRectangle(cornerRadius: 14, style: .continuous)
-                        .strokeBorder(ink, lineWidth: 2.5)
-                }
-                .padding(.horizontal, 20)
+            HStack(spacing: 10) {
+                Image(systemName: "bolt.fill")
+                    .font(.system(size: 15, weight: .heavy))
+                    .foregroundStyle(ink)
+                Text(languageManager.text("ambassador.cta48h"))
+                    .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                    .foregroundStyle(ink)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            .padding(.horizontal, 16)
+            .padding(.vertical, 14)
+            .background(BrutalPalette.pastel(for: .sciences))
+            .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+            .overlay {
+                RoundedRectangle(cornerRadius: 14, style: .continuous)
+                    .strokeBorder(ink, lineWidth: 2.5)
+            }
+            .padding(.horizontal, 20)
 
             Spacer()
 
@@ -518,11 +765,27 @@ struct AmbassadorView: View {
         }
     }
 
-    private func fieldLabel(_ text: String) -> some View {
+    // MARK: - Shared
+
+    private func sectionTitle(_ text: String) -> some View {
         Text(text.uppercased())
             .font(.system(.caption, design: .rounded, weight: .heavy))
-            .foregroundStyle(ink.opacity(0.55))
-            .tracking(1.1)
+            .foregroundStyle(ink.opacity(0.5))
+            .tracking(1.2)
+    }
+
+    private func bottomBar<Content: View>(@ViewBuilder content: () -> Content) -> some View {
+        content()
+            .padding(.horizontal, 20)
+            .padding(.top, 10)
+            .padding(.bottom, 28)
+            .background(
+                cream
+                    .overlay(alignment: .top) {
+                        Rectangle().fill(ink.opacity(0.12)).frame(height: 2)
+                    }
+                    .ignoresSafeArea(edges: .bottom)
+            )
     }
 
     private func submit() {
@@ -545,7 +808,9 @@ struct AmbassadorView: View {
                 )
                 await MainActor.run {
                     isSubmitting = false
-                    didSucceed = true
+                    withAnimation(.spring(response: 0.4, dampingFraction: 0.85)) {
+                        stage = .success
+                    }
                     UINotificationFeedbackGenerator().notificationOccurred(.success)
                 }
             } catch let error as AmbassadorService.SubmissionError {
@@ -597,6 +862,34 @@ private struct BrutalAmbassadorButtonStyle: ButtonStyle {
             )
             .padding(.bottom, depth)
             .opacity(isEnabled ? 1 : 0.55)
+            .contentShape(Rectangle())
+            .animation(.spring(response: 0.18, dampingFraction: 0.7), value: pressed)
+    }
+}
+
+private struct BrutalIconButtonStyle: ButtonStyle {
+    var depth: CGFloat = 3
+
+    func makeBody(configuration: Configuration) -> some View {
+        let pressed = configuration.isPressed
+
+        configuration.label
+            .background(
+                ZStack(alignment: .top) {
+                    RoundedRectangle(cornerRadius: 18, style: .continuous)
+                        .fill(BrutalPalette.ink)
+                        .offset(y: depth)
+
+                    RoundedRectangle(cornerRadius: 18, style: .continuous)
+                        .fill(Color.white)
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 18, style: .continuous)
+                                .strokeBorder(BrutalPalette.ink, lineWidth: 2.5)
+                        }
+                        .offset(y: pressed ? depth : 0)
+                }
+            )
+            .padding(.bottom, depth)
             .contentShape(Rectangle())
             .animation(.spring(response: 0.18, dampingFraction: 0.7), value: pressed)
     }

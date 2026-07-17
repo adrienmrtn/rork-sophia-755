@@ -784,7 +784,7 @@ struct FunFactBox: View {
 
             HStack(spacing: 6) {
                 Text("🧠").font(.system(size: 14))
-                Text("LE SAVIEZ-VOUS ?")
+                Text(AppLocalizable.string("course.funFact", language: AppLanguage.currentPersisted()))
                     .font(.system(.caption2, design: .rounded, weight: .heavy))
                     .foregroundStyle(.black)
                     .tracking(0.8)

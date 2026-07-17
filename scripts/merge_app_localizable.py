@@ -4,7 +4,6 @@
 from __future__ import annotations
 
 import re
-import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -51,10 +50,6 @@ EXTRA_LANGUAGE_KEYS: dict[str, dict[str, str]] = {
 }
 
 
-def git_show(ref: str, path: str) -> str:
-    return subprocess.check_output(["git", "show", f"{ref}:{path}"], text=True)
-
-
 def extract_dict(source: str, name: str) -> str:
     for match in DICT_RE.finditer(source):
         if match.group("name") == name:
@@ -66,13 +61,18 @@ def inject_language_keys(body: str, lang: str) -> str:
     extras = EXTRA_LANGUAGE_KEYS.get(lang, {})
     if not extras:
         return body
+    # Only inject keys that are not already present, so the script is
+    # idempotent and safe to re-run against an already-merged file.
+    missing = {k: v for k, v in extras.items() if f'"{k}"' not in body}
+    if not missing:
+        return body
     lines = body.splitlines()
     out: list[str] = []
     inserted = False
     for line in lines:
         out.append(line)
         if not inserted and '"language.english"' in line:
-            for key, value in extras.items():
+            for key, value in missing.items():
                 indent = re.match(r"^(\s*)", line).group(1)
                 out.append(f'{indent}"{key}": "{value}",')
             inserted = True
@@ -82,16 +82,16 @@ def inject_language_keys(body: str, lang: str) -> str:
 
 
 def render() -> str:
-    main_src = git_show("main", "ios/Sophia/Utilities/AppLocalizable.swift")
-    es_src = git_show("origin/cursor/i18n-es-phase2-fa8a", "ios/Sophia/Utilities/AppLocalizable.swift")
-    de_src = git_show("origin/cursor/i18n-de-phase2-fa8a", "ios/Sophia/Utilities/AppLocalizable.swift")
-    pt_src = git_show("origin/cursor/i18n-pt-phase2-fa8a", "ios/Sophia/Utilities/AppLocalizable.swift")
+    # AppLocalizable.swift in the working tree is the single source of truth for
+    # every language. Reading from it (instead of divergent remote branches)
+    # keeps this script idempotent and prevents regressing hand-edited strings.
+    local_src = TARGET.read_text(encoding="utf-8")
 
-    french = inject_language_keys(extract_dict(main_src, "french"), "french")
-    english = inject_language_keys(extract_dict(main_src, "english"), "english")
-    spanish = inject_language_keys(extract_dict(es_src, "spanish"), "spanish")
-    german = inject_language_keys(extract_dict(de_src, "german"), "german")
-    portuguese = inject_language_keys(extract_dict(pt_src, "portuguese"), "portuguese")
+    french = inject_language_keys(extract_dict(local_src, "french"), "french")
+    english = inject_language_keys(extract_dict(local_src, "english"), "english")
+    spanish = inject_language_keys(extract_dict(local_src, "spanish"), "spanish")
+    german = inject_language_keys(extract_dict(local_src, "german"), "german")
+    portuguese = inject_language_keys(extract_dict(local_src, "portuguese"), "portuguese")
 
     italian_body = (ROOT / "content/locales/it/ui_strings_swift.txt").read_text(encoding="utf-8").strip("\n")
     italian = inject_language_keys(italian_body, "italian")

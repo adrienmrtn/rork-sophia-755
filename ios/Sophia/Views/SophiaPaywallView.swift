@@ -63,10 +63,10 @@ struct SophiaPaywallView: View {
                 ZStack {
                     Color.black.ignoresSafeArea()
                     VStack(spacing: 16) {
-                        Text("Unable to load paywall")
+                        Text(AppLocalizable.string("paywall.error.unavailable", language: AppLanguage.currentPersisted()))
                             .font(.headline)
                             .foregroundStyle(.white)
-                        Button("Retry") {
+                        Button(AppLocalizable.string("paywall.error.retry", language: AppLanguage.currentPersisted())) {
                             loaded = false
                             Task { await resolveOffering() }
                         }

@@ -646,7 +646,7 @@ struct LibraryCardView: View {
             HStack(spacing: 4) {
                 Image(systemName: "checkmark")
                     .font(.system(size: 10, weight: .heavy))
-                Text("FAIT")
+                Text(languageManager.text("library.status.done"))
                     .font(.system(.caption2, design: .rounded, weight: .heavy))
                     .tracking(0.5)
             }
@@ -658,7 +658,7 @@ struct LibraryCardView: View {
             HStack(spacing: 4) {
                 Image(systemName: "play.fill")
                     .font(.system(size: 9, weight: .heavy))
-                Text("EN COURS")
+                Text(languageManager.text("library.status.inProgress"))
                     .font(.system(.caption2, design: .rounded, weight: .heavy))
                     .tracking(0.5)
             }

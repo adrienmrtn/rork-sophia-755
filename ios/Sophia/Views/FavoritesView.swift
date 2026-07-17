@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct FavoritesView: View {
+    @Environment(LanguageManager.self) private var languageManager
     let progressManager: ProgressManager
     @Binding var selectedCourse: Course?
     @State private var hapticTrigger: Int = 0
@@ -60,7 +61,7 @@ struct FavoritesView: View {
 
     private var header: some View {
         VStack(alignment: .leading, spacing: 6) {
-            Text("Favoris")
+            Text(languageManager.text("library.filter.favorites"))
                 .font(.system(.largeTitle, design: .rounded, weight: .heavy))
                 .foregroundStyle(ink)
 
@@ -68,7 +69,7 @@ struct FavoritesView: View {
                 Image(systemName: "heart.fill")
                     .font(.system(size: 11, weight: .heavy))
                     .foregroundStyle(.white)
-                Text("\(favorites.count) COURS")
+                Text(String(format: languageManager.text("favorites.badge.count"), favorites.count))
                     .font(.system(.caption, design: .rounded, weight: .heavy))
                     .foregroundStyle(.white)
                     .tracking(0.5)
@@ -104,11 +105,11 @@ struct FavoritesView: View {
             .frame(width: 160, height: 160)
             .padding(.bottom, 28)
 
-            Text("Aucun favori")
+            Text(languageManager.text("favorites.empty.title"))
                 .font(.system(.title, design: .rounded, weight: .heavy))
                 .foregroundStyle(ink)
 
-            Text("Appuie sur le cœur d'un cours\npour le retrouver ici.")
+            Text(languageManager.text("favorites.empty.subtitle"))
                 .font(.system(.subheadline, design: .rounded, weight: .semibold))
                 .foregroundStyle(ink.opacity(0.55))
                 .multilineTextAlignment(.center)

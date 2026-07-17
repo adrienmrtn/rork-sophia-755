@@ -43,26 +43,17 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
         }
     }
 
-    /// Resolves the initial language from the device locale.
-    static func resolvedFromSystem() -> AppLanguage {
-        let preferred = Locale.preferredLanguages.first ?? "en"
-        let code = preferred.lowercased()
-        if code.hasPrefix("fr") { return .french }
-        if code.hasPrefix("es") { return .spanish }
-        if code.hasPrefix("de") { return .german }
-        if code.hasPrefix("pt") { return .portuguese }
-        if code.hasPrefix("it") { return .italian }
-        return .english
-    }
+    /// The default language used when the user has not chosen one yet.
+    static let defaultLanguage: AppLanguage = .english
 
     static let userDefaultsKey = "sophia_app_language"
 
-    /// Reads the persisted language, or resolves from the system locale.
+    /// Reads the persisted language, or falls back to the default language (English).
     static func currentPersisted() -> AppLanguage {
         if let stored = UserDefaults.standard.string(forKey: userDefaultsKey),
            let language = AppLanguage(rawValue: stored) {
             return language
         }
-        return resolvedFromSystem()
+        return defaultLanguage
     }
 }
