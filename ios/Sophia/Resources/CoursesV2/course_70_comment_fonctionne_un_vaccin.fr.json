@@ -1,0 +1,65 @@
+{
+  "id": "course_70_comment_fonctionne_un_vaccin",
+  "title": "Comment fonctionne un vaccin ?",
+  "subtitle": "Immunité",
+  "subject": "sciences",
+  "subcategory": "Notre quotidien expliqué",
+  "description": "Un vaccin n'injecte pas la maladie pour te faire peur. Il entraîne ton système immunitaire avec une version inoffensive, pour qu'il réagisse vite la prochaine fois.",
+  "hero": {
+    "image": "comment_fonctionne_un_vaccin",
+    "ratio": "16:9",
+    "hook": "Le vaccin apprend à ton corps à reconnaître un danger… sans lui faire vivre la vraie maladie."
+  },
+  "sections": [
+    {
+      "id": "course_70_comment_fonctionne_un_vaccin_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Les vaccins ont sauvé plus de vies que presque n'importe quelle autre invention médicale. La **variole**, qui tuait encore des centaines de millions de personnes au XXe siècle, a été éradiquée grâce à la vaccination." },
+        { "type": "paragraph", "text": "Le principe est simple : montrer au corps un « mannequin d'entraînement », pour qu'il crée une **mémoire immunitaire** sans passer par la vraie maladie." }
+      ]
+    },
+    {
+      "id": "course_70_comment_fonctionne_un_vaccin_p1",
+      "title": "La mémoire du système immunitaire",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Quand un microbe (virus ou bactérie) entre pour la première fois, ton corps met souvent **7 à 14 jours** à monter une défense efficace. Pendant ce temps, tu peux être malade." },
+        { "type": "paragraph", "text": "Certaines cellules, les [[lymphocytes B]], fabriquent des **anticorps** (des protéines qui collent à l'intrus). D'autres, les [[lymphocytes T]], détruisent les cellules déjà infectées. Une fois la menace vaincue, une partie de ces cellules reste en veille : ce sont des **cellules mémoire**." },
+        { "type": "paragraph", "text": "Si le même microbe revient, la réponse part beaucoup plus vite. Souvent, tu ne tombes même pas malade. Le vaccin crée cette mémoire… sans le risque de la vraie infection." }
+      ]
+    },
+    {
+      "id": "course_70_comment_fonctionne_un_vaccin_p2",
+      "title": "Plusieurs façons d'entraîner le corps",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Les **vaccins atténués** contiennent un microbe vivant, mais rendu très faible (ex. rougeole). Ils entraînent bien, mais sont déconseillés si le système immunitaire est très fragile." },
+        { "type": "paragraph", "text": "Les **vaccins inactivés** utilisent un microbe tué (ex. certaines grippes). Plus sûrs, ils demandent souvent des rappels. Les **vaccins sous-unitaires** ne montrent qu'un morceau du microbe, par exemple une protéine de surface." },
+        { "type": "paragraph", "text": "Les **vaccins à ARNm** apportent une courte instruction : tes cellules fabriquent temporairement une protéine inoffensive du virus. Ton immunité apprend à la reconnaître. L'ARNm se dégrade ensuite ; il ne modifie pas ton ADN." },
+        { "type": "funFact", "text": "Bien avant Jenner, on pratiquait déjà en Chine une forme de « variolisation » : exposer volontairement à une forme atténuée de variole pour se protéger." }
+      ]
+    },
+    {
+      "id": "course_70_comment_fonctionne_un_vaccin_p3",
+      "title": "L'immunité collective",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Quand assez de personnes sont protégées, le microbe circule moins. C'est l'[[Immunité de groupe]]. Elle protège aussi ceux qui ne peuvent pas être vaccinés (nouveaux-nés, personnes immunodéprimées)." },
+        { "type": "paragraph", "text": "Le seuil dépend de la contagiosité. Pour la **rougeole**, il faut souvent **92 à 95 %** de couverture. Pour la polio, plutôt autour de **80 à 85 %**." },
+        { "type": "funFact", "text": "La variole a été déclarée éradiquée en **1980**. Le dernier cas naturel connu date de **1977**, en Somalie." }
+      ]
+    },
+    {
+      "id": "course_70_comment_fonctionne_un_vaccin_p4",
+      "title": "Sécurité et vigilance",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Un vaccin passe par des essais stricts avant autorisation. Certains contiennent des [[adjuvants]] : des substances qui aident le système immunitaire à mieux « remarquer » le vaccin." },
+        { "type": "paragraph", "text": "Paradoxalement, quand les maladies disparaissent de la vie quotidienne, on oublie leur danger. Des foyers de rougeole rappellent que la protection collective reste fragile si la couverture baisse." },
+        { "type": "takeaway", "text": "Un vaccin entraîne le système immunitaire avec une version inoffensive du danger. Il crée une mémoire cellulaire, protège l'individu, et, à l'échelle d'une population, freine ou stoppe les épidémies." }
+      ]
+    }
+  ]
+}

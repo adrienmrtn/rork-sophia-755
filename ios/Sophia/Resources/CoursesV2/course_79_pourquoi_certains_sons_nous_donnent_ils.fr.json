@@ -1,0 +1,63 @@
+{
+  "id": "course_79_pourquoi_certains_sons_nous_donnent_ils",
+  "title": "Pourquoi certains sons nous donnent-ils des frissons ?",
+  "subtitle": "Musique & cerveau",
+  "subject": "sciences",
+  "subcategory": "La Terre et l'Univers",
+  "description": "Chair de poule, picotements, cœur qui s'accélère : la musique peut pirater nos circuits de plaisir et de survie. Voici pourquoi.",
+  "hero": {
+    "image": "pourquoi_certains_sons_nous_donnent_des_frissons",
+    "ratio": "16:9",
+    "hook": "Une note, et la peau se hérisse. La musique vient de pirater votre cerveau de survie."
+  },
+  "sections": [
+    {
+      "id": "course_79_pourquoi_certains_sons_nous_donnent_ils_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Environ **55 à 70 %** des personnes ressentent des frissons à la musique : chair de poule, picotements, montée d'émotion. On parle de **frisson esthétique**, ou *chills* en anglais." },
+        { "type": "paragraph", "text": "Ce n'est pas qu'une image. Des ondes sonores déclenchent une vraie tempête chimique dans le cerveau, en empruntant des circuits conçus pour la survie… et détournés vers le beau." }
+      ]
+    },
+    {
+      "id": "course_79_pourquoi_certains_sons_nous_donnent_ils_p1",
+      "title": "Le même circuit que la récompense",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Quand un morceau « touche », le cerveau active son **système de récompense**, le même que pour la nourriture, le sexe… ou certaines drogues. L'imagerie cérébrale montre deux temps : d'abord l'**anticipation**, avec de la dopamine pendant qu'on attend le moment fort ; puis le frisson lui-même, quand le plaisir éclate." },
+        { "type": "paragraph", "text": "La preuve chimique : la **naltrexone**, médicament qui bloque les récepteurs opioïdes, peut presque effacer le plaisir musical. Le cerveau produit donc ses propres « drogues » internes pour récompenser une expérience esthétique." },
+        { "type": "funFact", "text": "Environ **5 %** des gens n'éprouvent aucun plaisir à la musique malgré une ouïe normale. On parle d'anhédonie musicale spécifique." }
+      ]
+    },
+    {
+      "id": "course_79_pourquoi_certains_sons_nous_donnent_ils_p2",
+      "title": "La surprise qui fait frissonner",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le frisson naît souvent d'une [[violation d'attente musicale]]. Le cerveau prédit sans cesse la note suivante. Un chœur qui entre trop tôt, une modulation inattendue, une tension qui tarde à se résoudre : l'alerte émotionnelle s'allume." },
+        { "type": "paragraph", "text": "L'**amygdale**, zone liée au danger, réagit une fraction de seconde. La chair de poule est un vieux réflexe : hérisser les poils pour paraître plus grand ou garder la chaleur. Puis le cortex comprend que c'est de l'art, pas une menace. Le soulagement devient plaisir intense." },
+        { "type": "funFact", "text": "La chair de poule s'appelle la **piloérection**. Chez l'humain moderne, la musique la déclenche surtout sur des passages tristes ou mélancoliques." }
+      ]
+    },
+    {
+      "id": "course_79_pourquoi_certains_sons_nous_donnent_ils_p3",
+      "title": "Pourquoi certains y sont plus sensibles",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le chercheur [[Matthew Sachs]] a montré que les personnes sujettes aux frissons ont souvent plus de connexions (substance blanche) entre le cortex auditif, le cortex préfrontal et l'**insula**, zone d'intégration des émotions. Leur cerveau relie plus directement son et sentiment." },
+        { "type": "paragraph", "text": "Ce trait va aussi avec l'[[ouverture à l'expérience]] : curiosité, goût pour la complexité et l'ambiguïté. Plus on accueille l'inattendu, plus le cerveau a d'occasions de déclencher sa récompense." }
+      ]
+    },
+    {
+      "id": "course_79_pourquoi_certains_sons_nous_donnent_ils_p4",
+      "title": "Un héritage évolutif détourné",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Darwiniennement, le frisson musical est un paradoxe : il ne nourrit ni ne protège directement. Mais synchroniser les émotions d'un groupe a pu favoriser la **cohésion sociale**. Les fréquences qui frappent le plus rappellent aussi les pleurs ou les cris de détresse : l'urgence d'abord, la beauté ensuite." },
+        { "type": "paragraph", "text": "Au fond, la musique pirate des systèmes anciens pour offrir l'une des expériences les plus corporelles de l'art : une vibration de l'air devenue sensation sur la peau." },
+        { "type": "takeaway", "text": "Les frissons musicaux naissent d'une libération de dopamine déclenchée par une surprise harmonique, surtout chez les cerveaux très connectés entre audition et émotion." }
+      ]
+    }
+  ]
+}

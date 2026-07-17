@@ -1,0 +1,65 @@
+{
+  "id": "course_42_pourquoi_reve_t_on",
+  "title": "Pourquoi rêve-t-on ?",
+  "subtitle": "Cerveau & sommeil",
+  "subject": "sciences",
+  "subcategory": "Notre quotidien expliqué",
+  "description": "Chaque nuit, tu rêves environ deux heures. La plupart des rêves s'effacent au réveil. Voici ce que la science comprend aujourd'hui de ce mystère.",
+  "hero": {
+    "image": "pourquoi_reve_t_on",
+    "ratio": "16:9",
+    "hook": "Tu rêves environ six ans de ta vie. Et tu en oublies presque tout."
+  },
+  "sections": [
+    {
+      "id": "course_42_pourquoi_reve_t_on_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Chaque nuit, tu passes environ **deux heures** à rêver. Sur une vie, cela fait près de **six ans**. Pourtant, au réveil, la plupart de ces histoires disparaissent en quelques secondes." },
+        { "type": "paragraph", "text": "Les scientifiques ne sont pas tous d'accord sur le « pourquoi ». Mais ils savent de mieux en mieux **quand** on rêve, et ce que le cerveau fait pendant ce temps." }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p1",
+      "title": "Le sommeil, ce n'est pas « éteint »",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le sommeil n'est pas une coupure totale. Il avance par **cycles** d'environ **90 minutes**, plusieurs fois par nuit. Dans chaque cycle, le cerveau passe par des phases différentes : un sommeil léger, un sommeil profond (utile pour récupérer le corps), puis une phase très particulière." },
+        { "type": "image", "asset": "sleeping_person_rem_dream", "ratio": "4:3", "caption": "Pendant le sommeil paradoxal, les yeux bougent sous les paupières." },
+        { "type": "paragraph", "text": "Cette phase s'appelle le [[Sommeil paradoxal (REM)]] (en anglais : Rapid Eye Movement). Le cerveau est presque aussi actif qu'éveillé, mais le corps est paralysé. C'est surtout là que naissent les rêves longs et narratifs. Cette paralysie évite de « jouer » physiquement ce qu'on rêve." },
+        { "type": "funFact", "text": "On rêve **4 à 6 fois** par nuit. On en oublie environ **95 %** dans les dix minutes après le réveil. Si tu te souviens d'un rêve, c'est souvent parce que tu t'es réveillé pile pendant ou juste après." }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p2",
+      "title": "À quoi ça sert de rêver ?",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Freud pensait que le rêve révélait surtout des désirs cachés. Aujourd'hui, les chercheurs préfèrent des explications plus concrètes, basées sur l'imagerie cérébrale. Le rêve active surtout les zones des émotions." },
+        { "type": "image", "asset": "brain_activity_dreaming_scan", "ratio": "4:3", "caption": "Pendant le rêve, le cerveau travaille : émotions, images, souvenirs." },
+        { "type": "paragraph", "text": "Trois grandes pistes dominent. Première : **trier la mémoire** (garder l'utile, laisser partir le reste). Deuxième : **s'entraîner au danger** dans un monde sans risque réel. Troisième : **digérer les émotions** : pendant le rêve, le cerveau revisite des moments forts avec moins d'hormone du stress, la noradrénaline." }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p3",
+      "title": "Pourquoi on oublie ses rêves",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Pour stocker un souvenir durablement, le cerveau a besoin de certaines substances chimiques. Or, pendant le sommeil paradoxal, le niveau de **noradrénaline** chute. Résultat : le rêve reste dans une mémoire très fragile." },
+        { "type": "paragraph", "text": "Dès que tu ouvres les yeux, la lumière, les sons et les pensées de la journée écrasent ce souvenir fragile. Le meilleur moyen de le garder ? Noter le rêve **tout de suite**, avant même de bouger." },
+        { "type": "funFact", "text": "Avant la télévision couleur, peu de gens disaient rêver en couleur. Aujourd'hui, la plupart le font. Notre environnement visuel influence même la texture de nos rêves." }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p4",
+      "title": "Et le rêve lucide ?",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Parfois, on se rend compte **qu'on rêve**, tout en restant endormi : c'est le **rêve lucide**. Une zone du cerveau liée à la logique et à l'auto-réflexion, le **cortex préfrontal**, se rallume alors un peu." },
+        { "type": "paragraph", "text": "Certains peuvent alors influencer le décor ou transformer un cauchemar. Des chercheurs étudient même ce phénomène pour aider des sportifs à répéter mentalement des gestes, ou pour soigner des cauchemars répétitifs." },
+        { "type": "takeaway", "text": "On rêve surtout pendant le [[sommeil paradoxal]], une phase où le cerveau est actif et le corps paralysé. Le rêve aide probablement à gérer la mémoire et les émotions, même si on en oublie presque tout au réveil." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee",
+  "title": "Pourquoi l'eau de mer est-elle salée ?",
+  "subtitle": "Océans",
+  "subject": "sciences",
+  "subcategory": "Notre quotidien expliqué",
+  "description": "Un litre d'eau de mer contient environ 35 grammes de sel. Ce sel s'est accumulé pendant des milliards d'années. Voici d'où il vient.",
+  "hero": {
+    "image": "pourquoi_l_eau_de_mer_est_salee",
+    "ratio": "16:9",
+    "hook": "Les fleuves sont doux. Les océans sont salés. Le secret, c'est le temps et l'évaporation."
+  },
+  "sections": [
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Les océans couvrent plus de **70 %** de la planète. En moyenne, un litre d'eau de mer contient environ **35 grammes de sel**. Ce n'est pas un hasard : c'est le résultat d'un très long processus." },
+        { "type": "paragraph", "text": "Le sel ne « tombe » pas du ciel tout fait. Il voyage depuis les continents, puis reste piégé dans l'océan." }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p1",
+      "title": "Le sel vient d'abord de la terre",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "La pluie, en traversant l'air, se charge un peu de gaz carbonique. Elle devient légèrement acide. En tombant sur les roches, elle les attaque doucement : c'est l'**érosion chimique**." },
+        { "type": "paragraph", "text": "Les rivières emportent alors des minéraux dissous, surtout du **sodium** et du **chlore**, les deux ingrédients du sel de table. Elles les déversent dans la mer." },
+        { "type": "funFact", "text": "Les volcans sous-marins et les sources chaudes au fond des océans ajoutent aussi des sels. Mais l'essentiel vient encore des continents." }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p2",
+      "title": "Pourquoi les fleuves ne sont pas salés",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Bonne question : si les fleuves apportent du sel, pourquoi l'eau du Rhône ou de la Seine n'est-elle pas salée ? Parce que le sel y est très dilué, et parce que l'eau des fleuves est constamment renouvelée." },
+        { "type": "paragraph", "text": "Dans l'océan, c'est différent. Sous le Soleil, l'eau s'**évapore** et repart dans le ciel. Le sel, lui, **reste**. Année après année, siècle après siècle, il s'accumule. On appelle cela le [[cycle hydrologique et de l'accumulation des sels]]." }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p3",
+      "title": "Le sel fait aussi circuler les océans",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "L'eau salée est plus **dense** (plus « lourde » pour le même volume) que l'eau douce. Aux pôles, quand l'eau de surface gèle, le sel est en partie rejeté dans l'eau liquide autour. Cette eau devient encore plus dense et plonge vers le fond." },
+        { "type": "paragraph", "text": "Ce mouvement aide à entraîner de grands courants océaniques. Ces courants transportent chaleur et nutriments autour du globe. Le sel n'est pas qu'une affaire de goût : il fait partie du moteur climatique de la planète." }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p4",
+      "title": "Pas partout le même sel",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "La salinité n'est pas la même partout. Près de l'équateur, l'évaporation forte peut concentrer le sel. Près des grands fleuves ou des banquises qui fondent, l'eau est plus douce. La mer Morte, elle, est un cas extrême : très peu d'eau part, beaucoup de sel reste." },
+        { "type": "takeaway", "text": "L'eau de mer est salée parce que les fleuves apportent des minéraux depuis les continents, et que l'évaporation laisse le sel dans l'océan. Cette accumulation dure depuis des milliards d'années." }
+      ]
+    }
+  ]
+}

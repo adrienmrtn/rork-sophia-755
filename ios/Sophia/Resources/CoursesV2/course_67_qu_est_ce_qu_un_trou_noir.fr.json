@@ -1,0 +1,66 @@
+{
+  "id": "course_67_qu_est_ce_qu_un_trou_noir",
+  "title": "Qu'est-ce qu'un trou noir ?",
+  "subtitle": "Gravité extrême",
+  "subject": "sciences",
+  "subcategory": "La Terre et l'Univers",
+  "description": "Un trou noir n'est pas un aspirateur cosmique. C'est une région où la gravité est si forte que même la lumière ne peut s'en échapper.",
+  "hero": {
+    "image": "qu_est_ce_qu_un_trou_noir",
+    "ratio": "16:9",
+    "hook": "Rien n'en sort, pas même la lumière. Pourtant, on a fini par en photographier l'ombre."
+  },
+  "sections": [
+    {
+      "id": "course_67_qu_est_ce_qu_un_trou_noir_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Un trou noir est une région de l'**espace-temps** (le tissu qui unit l'espace et le temps) où la gravité est si intense que la vitesse nécessaire pour s'échapper dépasse celle de la lumière. Rien n'en sort : ni matière, ni signal lumineux." },
+        { "type": "paragraph", "text": "Ce n'est pas un « trou » au sens d'un tunnel. C'est une concentration extrême de matière qui courbe très fort ce tissu. Longtemps pure théorie issue des équations d'Einstein, les trous noirs sont aujourd'hui observés de plusieurs façons." }
+      ]
+    },
+    {
+      "id": "course_67_qu_est_ce_qu_un_trou_noir_p1",
+      "title": "Quand une étoile s'effondre",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Un trou noir stellaire naît souvent de la mort d'une étoile très massive, au moins **20 à 25 fois** la masse du Soleil. Pendant sa vie, l'étoile tient grâce à un équilibre : la gravité tire vers le centre, la pression de la fusion nucléaire pousse vers l'extérieur." },
+        { "type": "paragraph", "text": "Quand le combustible est épuisé, la pression s'effondre. Le cœur de l'étoile s'écrase. Une explosion de **supernova** peut alors illuminer la galaxie. Si le cœur restant est assez massif, plus rien ne stoppe la compression." },
+        { "type": "paragraph", "text": "Au centre, la théorie décrit une [[La singularité gravitationnelle]] : un point où densité et courbure deviennent extrêmes, et où nos équations actuelles cessent de bien fonctionner. Autour, on trouve l'[[horizon des événements]] : une frontière invisible. Une fois franchie, plus de retour possible vers le reste de l'univers." },
+        { "type": "funFact", "text": "Si vous tombiez vers un trou noir, la gravité tirerait bien plus fort sur vos pieds que sur votre tête. On appelle cet étirement la « spaghettification »." }
+      ]
+    },
+    {
+      "id": "course_67_qu_est_ce_qu_un_trou_noir_p2",
+      "title": "Pas un aspirateur cosmique",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Contrairement à l'idée reçue, un trou noir n'aspire pas tout ce qui passe au loin. Sa gravité dépend de sa masse et de la distance, comme pour n'importe quel objet. Si le Soleil était remplacé par un trou noir de même masse, la Terre continuerait à orbiter. Mais sans lumière ni chaleur, nous gèlerions." },
+        { "type": "paragraph", "text": "Il existe aussi des **trous noirs supermassifs**, de millions à milliards de masses solaires, au cœur de presque toutes les galaxies. Dans la Voie lactée, c'est **Sagittarius A***, environ **4 millions** de masses solaires." },
+        { "type": "paragraph", "text": "On les repère souvent grâce au [[disque d'accrétion]] : un anneau de gaz et de poussière qui tourne très vite autour d'eux. Les frottements chauffent cette matière jusqu'à la rendre extrêmement brillante en rayons X ou en ondes radio. On voit alors l'ombre du trou noir sur ce fond lumineux." }
+      ]
+    },
+    {
+      "id": "course_67_qu_est_ce_qu_un_trou_noir_p3",
+      "title": "2019 : la première image",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "En **avril 2019**, le projet Event Horizon Telescope publie la première image d'un trou noir. En combinant huit radiotélescopes grâce à l'[[interférométrie]], les chercheurs créent un télescope virtuel de la taille de la Terre." },
+        { "type": "paragraph", "text": "La cible est **M87***, le trou noir supermassif de la galaxie Messier 87, à **55 millions** d'années-lumière. On y voit un anneau lumineux autour d'une zone sombre : la silhouette de l'horizon des événements. En **2022**, une image de notre voisin Sagittarius A* suit." },
+        { "type": "funFact", "text": "Depuis **2015**, les observatoires LIGO et Virgo détectent aussi des **ondes gravitationnelles** : de petites vibrations de l'espace-temps produites, par exemple, quand deux trous noirs fusionnent." }
+      ]
+    },
+    {
+      "id": "course_67_qu_est_ce_qu_un_trou_noir_p4",
+      "title": "Hawking et l'évaporation lente",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "En **1974**, le physicien britannique **Stephen Hawking** montre qu'un trou noir ne serait pas totalement noir. À cause d'effets quantiques près de l'horizon, il émettrait un rayonnement très faible : la [[radiation de Hawking]]." },
+        { "type": "paragraph", "text": "Résultat : un trou noir isolé perdrait lentement de la masse et finirait par s'évaporer. Pour un trou noir stellaire, cela prendrait des durées fantastiquement plus longues que l'âge actuel de l'univers. Cette idée soulève aussi le paradoxe de l'information : que devient l'information de ce qui est tombé dedans si le trou noir disparaît ?" },
+        { "type": "paragraph", "text": "Près d'un trou noir, le temps s'écoule aussi plus lentement pour un observateur lointain. Ces objets restent parmi les meilleurs laboratoires pour tester les limites de la physique." },
+        { "type": "takeaway", "text": "Un trou noir se forme souvent par l'effondrement d'une étoile massive. Il est délimité par l'horizon des événements, frontière photographiée pour la première fois en **2019** autour de M87*." }
+      ]
+    }
+  ]
+}

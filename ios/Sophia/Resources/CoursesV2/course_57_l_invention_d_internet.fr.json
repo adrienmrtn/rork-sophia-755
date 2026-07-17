@@ -1,0 +1,62 @@
+{
+  "id": "course_57_l_invention_d_internet",
+  "title": "L'invention d'Internet",
+  "subtitle": "Réseaux",
+  "subject": "sciences",
+  "subcategory": "Découvertes qui ont changé le monde",
+  "description": "Internet n'a pas un seul inventeur. C'est une longue chaîne : un réseau militaire, un langage commun, puis le Web pour les humains.",
+  "hero": {
+    "image": "l_invention_d_internet",
+    "ratio": "16:9",
+    "hook": "D'abord un réseau pour résister à la guerre. Puis le monde entier s'y branche."
+  },
+  "sections": [
+    {
+      "id": "course_57_l_invention_d_internet_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Internet n'est pas né d'un seul génie dans un garage. C'est une construction collective sur plusieurs décennies." },
+        { "type": "paragraph", "text": "Trois étapes simples à retenir : un premier réseau (ARPANET), un langage commun (TCP/IP), puis une interface facile (le Web)." }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p1",
+      "title": "ARPANET, le premier réseau",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "À la fin des années **1960**, en pleine Guerre froide, l'armée américaine finance un projet : relier des ordinateurs pour qu'ils continuent à communiquer même si une partie du réseau est détruite." },
+        { "type": "image", "asset": "arpanet_1969_computer_ucla", "ratio": "4:3", "caption": "ARPANET relie d'abord quelques universités américaines." },
+        { "type": "paragraph", "text": "Ce réseau s'appelle **ARPANET**. Les messages sont découpés en petits paquets qui empruntent des chemins différents. Si une route tombe, une autre prend le relais." }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p2",
+      "title": "TCP/IP : parler la même langue",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Pour que des réseaux différents se comprennent, il faut des règles communes. **Vint Cerf** et **Bob Kahn** mettent au point le protocole **TCP/IP** : un langage qui dit comment découper, adresser et recomposer les données." },
+        { "type": "image", "asset": "vint_cerf_bob_kahn_internet", "ratio": "4:3", "caption": "Cerf et Kahn : les architectes du langage d'Internet." },
+        { "type": "funFact", "text": "Le 1er janvier **1983**, ARPANET passe officiellement à TCP/IP. Beaucoup considèrent cette date comme la « naissance » technique d'Internet." }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p3",
+      "title": "Le Web rend le réseau humain",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Internet, c'est le réseau. Le **World Wide Web**, inventé par **Tim Berners-Lee** au CERN au début des années **1990**, c'est la couche facile : pages, liens, navigateurs." },
+        { "type": "paragraph", "text": "Sans le Web, Internet resterait surtout un outil d'experts. Avec lui, tout le monde peut cliquer." }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p4",
+      "title": "Le système nerveux du monde",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Aujourd'hui, Internet porte mails, vidéos, banques, hôpitaux, GPS. Il a aussi créé de nouveaux problèmes : désinformation, surveillance, fracture numérique." },
+        { "type": "takeaway", "text": "Internet naît d'ARPANET, devient universel grâce à TCP/IP, et accessible grâce au Web. Ce n'est pas une invention unique, c'est une architecture partagée." }
+      ]
+    }
+  ]
+}

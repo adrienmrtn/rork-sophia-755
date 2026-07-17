@@ -1,0 +1,65 @@
+{
+  "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup",
+  "title": "Pourquoi les volcans entrent-ils en éruption ?",
+  "subtitle": "Magma & plaques",
+  "subject": "sciences",
+  "subcategory": "La Terre et l'Univers",
+  "description": "Un volcan est une ouverture dans la croûte terrestre. Du magma sous pression y remonte et devient de la lave. Voici pourquoi la Terre « crache ».",
+  "hero": {
+    "image": "pourquoi_les_volcans_entrent_en_eruption",
+    "ratio": "16:9",
+    "hook": "Sous nos pieds, la Terre n'est pas figée. Parfois, elle ouvre une fenêtre de feu."
+  },
+  "sections": [
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Un volcan n'est pas seulement une montagne qui crache du feu. C'est une ouverture dans l'enveloppe externe de la Terre. Par là remonte le **magma** : un mélange de roches fondues et de gaz sous forte pression. Une fois à l'air libre, ce magma devient de la **lave**." },
+        { "type": "paragraph", "text": "Pour comprendre une éruption, il faut regarder sous la surface : la chaleur intérieure de la planète, le mouvement des plaques, et la façon dont les gaz font monter la pression, un peu comme dans une bouteille de soda qu'on agite." }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p1",
+      "title": "Sous nos pieds, rien n'est immobile",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "La Terre est faite de couches. À la surface, la **croûte** est une enveloppe rigide, épaisse de **5 à 70 km**. En dessous s'étend le **manteau**, jusqu'à environ **2 900 km** de profondeur. Le manteau est surtout solide, mais sur de très longues durées il peut couler très lentement, comme un miel ultra-épais." },
+        { "type": "paragraph", "text": "Cette chaleur interne fait monter et redescendre de la matière : ce sont des **courants de convection**. Ils poussent les grands morceaux de croûte qu'on appelle les plaques. C'est la [[La tectonique des plaques]] : la surface terrestre est découpée en plaques qui s'écartent, se percutent ou glissent les unes contre les autres." },
+        { "type": "funFact", "text": "Certaines remontées très rapides ramènent des diamants formés à plus de **150 km** de profondeur. Ils n'ont pas le temps de se transformer en route." },
+        { "type": "paragraph", "text": "Aux [[dorsales]], les plaques s'écartent et le magma remonte facilement. Dans une zone de [[subduction]], une plaque plonge sous une autre et entraîne de l'eau avec elle. Cette eau abaisse le point de fusion des roches : du magma se forme, puis remonte." }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p2",
+      "title": "Du magma à l'éruption",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "La roche ne fond pas seulement « parce qu'il fait chaud ». Trois déclencheurs comptent : une hausse de température, une baisse de pression, ou l'ajout d'eau. Une fois formé, le magma est moins dense que la roche autour. Il tente donc de remonter, un peu comme une bulle d'air dans l'eau." },
+        { "type": "paragraph", "text": "Souvent, il s'arrête d'abord dans une **chambre magmatique**, un réservoir à quelques kilomètres sous la surface. Là, les gaz dissous forment des bulles quand la pression diminue. Si le « bouchon » de roche au-dessus ne tient plus, l'éruption commence." },
+        { "type": "funFact", "text": "L'éruption du **Tambora** en **1815**, en Indonésie, fut si puissante qu'elle refroidit le climat mondial. **1816** fut surnommée « l'année sans été », avec des récoltes désastreuses en Europe et en Amérique du Nord." }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p3",
+      "title": "Fluide ou explosif ?",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Toutes les éruptions ne se ressemblent pas. Tout dépend de la **viscosité** du magma, c'est-à-dire s'il est plutôt liquide ou collant. Un magma fluide, comme à **Hawaï** ou au Piton de la Fournaise (île de La Réunion), laisse les gaz s'échapper. La lave coule : éruption **effusive**." },
+        { "type": "paragraph", "text": "Un magma collant emprisonne les gaz. La pression monte, puis tout explose. Cendres, blocs et [[nuées ardentes]] (nuages brûlants de gaz et de cendres qui dévalent les pentes) peuvent alors ravager les environs. C'est le style de volcans comme le mont **Saint Helens** (États-Unis) ou le **Pinatubo** (Philippines)." },
+        { "type": "paragraph", "text": "Un volcan peut aussi rester calme pendant des siècles. En **79** apr. J.-C., le **Vésuve**, près de Naples, ensevelit Pompéi sous les cendres. Environ **80 %** de l'activité volcanique mondiale se passe sous les océans, loin de nos yeux." }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p4",
+      "title": "Danger, fertilité, vie abyssale",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Les volcans ont façonné l'atmosphère primitive de la Terre en rejetant des gaz. Leurs cendres enrichissent aussi les sols : beaucoup de régions agricoles fertiles vivent au pied de volcans actifs. Mais une très grande éruption peut envoyer des particules de soufre haut dans l'atmosphère et refroidir le climat pendant des mois." },
+        { "type": "paragraph", "text": "Certains sites, comme le [[supervolcan]] de Yellowstone aux États-Unis, sont surveillés de près. Sous la mer, près des dorsales, les [[fumeurs noirs]] crachent des fluides brûlants riches en minéraux. Des écosystèmes y vivent sans lumière du Soleil, nourris par la chimie des sources chaudes." },
+        { "type": "takeaway", "text": "Les volcans expulsent du magma sous pression, surtout aux frontières des plaques tectoniques. La viscosité du magma décide si l'éruption coule tranquillement ou explose." }
+      ]
+    }
+  ]
+}
