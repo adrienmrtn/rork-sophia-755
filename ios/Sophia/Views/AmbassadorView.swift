@@ -497,7 +497,7 @@ struct AmbassadorView: View {
                                 .foregroundStyle(ink)
                                 .frame(width: 54, height: 54)
                         }
-                        .buttonStyle(BrutalIconButtonStyle())
+                        .buttonStyle(BrutalRaisedIconButtonStyle())
 
                         Button(action: submit) {
                             HStack(spacing: 10) {
@@ -867,7 +867,7 @@ private struct BrutalAmbassadorButtonStyle: ButtonStyle {
     }
 }
 
-private struct BrutalIconButtonStyle: ButtonStyle {
+private struct BrutalRaisedIconButtonStyle: ButtonStyle {
     var depth: CGFloat = 3
 
     func makeBody(configuration: Configuration) -> some View {

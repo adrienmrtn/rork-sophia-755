@@ -209,8 +209,20 @@ struct CourseView: View {
         }
     }
 
-    private func unlockedLessonView(lesson: LessonPage, lessonIndex: Int) -> some View {
-        ScrollView {
+    /// Renders a lesson with the structured v2 block engine when content exists for it,
+    /// otherwise falls back to the legacy `RichContentView` string renderer.
+    @ViewBuilder
+    private func lessonBody(lesson: LessonPage) -> some View {
+        if let resolved = CourseContentStore.section(courseId: course.id, sectionId: lesson.id) {
+            BlockContentView(
+                content: resolved.content,
+                section: resolved.section,
+                isFirst: resolved.isFirst,
+                accent: course.subject.color,
+                courseId: course.id,
+                courseTitle: course.title
+            )
+        } else {
             VStack(alignment: .leading, spacing: 24) {
                 Text(lesson.title)
                     .font(.system(.largeTitle, design: .rounded, weight: .heavy))
@@ -224,9 +236,15 @@ struct CourseView: View {
                     courseTitle: course.title
                 )
             }
-            .padding(.horizontal, 24)
-            .padding(.top, 24)
-            .padding(.bottom, 120)
+        }
+    }
+
+    private func unlockedLessonView(lesson: LessonPage, lessonIndex: Int) -> some View {
+        ScrollView {
+            lessonBody(lesson: lesson)
+                .padding(.horizontal, 24)
+                .padding(.top, 24)
+                .padding(.bottom, 120)
         }
         .scrollIndicators(.hidden)
         .onScrollGeometryChange(for: CGFloat.self) { geometry in
@@ -243,26 +261,14 @@ struct CourseView: View {
         GeometryReader { geo in
             ZStack {
                 ScrollView {
-                    VStack(alignment: .leading, spacing: 20) {
-                        Text(lesson.title)
-                            .font(.system(.largeTitle, design: .rounded, weight: .heavy))
-                            .foregroundStyle(ink)
-                            .fixedSize(horizontal: false, vertical: true)
-
-                        RichContentView(
-                            content: lesson.content,
-                            accent: course.subject.color,
-                            courseId: course.id,
-                            courseTitle: course.title
-                        )
+                    lessonBody(lesson: lesson)
                         .compositingGroup()
                         .blur(radius: 5)
                         .allowsHitTesting(false)
-                    }
-                    .padding(.horizontal, 24)
-                    .padding(.top, 24)
-                    .padding(.bottom, max(geo.size.height * 0.34, 180))
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.horizontal, 24)
+                        .padding(.top, 24)
+                        .padding(.bottom, max(geo.size.height * 0.34, 180))
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .scrollIndicators(.hidden)
 

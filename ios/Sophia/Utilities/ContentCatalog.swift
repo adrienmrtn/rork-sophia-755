@@ -79,4 +79,22 @@ enum ContentCatalog {
         let language = language ?? AppLanguage.currentPersisted()
         return courses(for: language).first { $0.id == id }
     }
+
+    // MARK: - Structured (v2) content
+
+    /// Whether a course has structured block content bundled for the active language.
+    /// When true, `CourseView` renders it with `BlockContentView` instead of the legacy renderer.
+    static func hasStructuredContent(courseId: String, language: AppLanguage? = nil) -> Bool {
+        CourseContentStore.hasContent(
+            courseId: courseId,
+            language: language ?? AppLanguage.currentPersisted()
+        )
+    }
+
+    static func structuredContent(courseId: String, language: AppLanguage? = nil) -> CourseContentV2? {
+        CourseContentStore.content(
+            courseId: courseId,
+            language: language ?? AppLanguage.currentPersisted()
+        )
+    }
 }
