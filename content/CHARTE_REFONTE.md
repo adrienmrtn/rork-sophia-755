@@ -26,7 +26,7 @@ Objectif : des cours **courts, vivants, séduisants**, à l'opposé du texte « 
 ### Règles de placement (strictes)
 
 - **Hero** : uniquement en tête de la section d'introduction.
-- **Le saviez-vous (funFact)** : placé de façon **logique**, au plus près du passage qu'il enrichit. **Règle stricte : ce n'est JAMAIS le dernier bloc d'une section.** Il est toujours **suivi d'au moins un contenu** (paragraphe, image ou frise) : on lit un passage, on découvre l'anecdote liée, puis le récit **continue**. On ne le colle jamais en fin d'écran ni après la conclusion. Idéalement 0 ou 1 par section. Les enchaînements de blocs doivent rester **fluides et logiques** (pas de bloc « posé » sans lien avec ce qui l'entoure).
+- **Le saviez-vous (funFact)** : son placement est **régi par la logique du récit**, pas par une règle mécanique. On le met **là où il éclaire ce qu'on vient de lire** et où il s'enchaîne naturellement avec la suite. En pratique il tombe souvent au milieu d'une section (on lit un passage, on découvre l'anecdote liée, le récit continue), mais s'il est vraiment pertinent en fin de section, c'est acceptable. Ce qu'on évite : le poser mécaniquement en bout d'écran sans lien avec ce qui l'entoure, ou après la conclusion « À retenir ». Idéalement 0 ou 1 par section.
 - **À retenir (takeaway)** : toujours en toute fin de la dernière section, jamais ailleurs.
 - **Frise chronologique** : là où elle éclaire le récit (souvent en fin de section historique). **Plus de tableau « Repères / dates clés » en introduction** (retiré : rendu jugé peu esthétique). Les dates importantes sont soit dans le texte, soit dans la frise.
 
@@ -175,5 +175,5 @@ Un fichier JSON par cours : `content/courses/fr/<course_id>.json`.
 
 ### Itération 3 (retours)
 - **Tap glossaire** : plus aucun **décalage du paragraphe** au tap (on ne réécrit plus l'`attributedText` de l'`UITextView` quand le contenu n'a pas changé, ce qui évitait un re-calcul de hauteur au moment de l'ouverture de la fiche).
-- **Le saviez-vous ?** : repositionné **au milieu** des sections dans « Pourquoi le ciel est-il bleu ? » et « La Renaissance italienne » (jamais dernier bloc). Charte clarifiée sur les enchaînements logiques.
+- **Le saviez-vous ?** : repositionné **au milieu** des sections dans « Pourquoi le ciel est-il bleu ? » et « La Renaissance italienne », là où il éclaire le passage lu (placement guidé par la logique, pas par une règle stricte).
 - **Navigation** : le **retour en arrière conserve la position de lecture** (repositionnement en haut réservé à l'avancée).
