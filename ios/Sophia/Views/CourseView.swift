@@ -258,9 +258,10 @@ struct CourseView: View {
                 guard lessonIndex == 0, offset > 120 else { return }
                 sessionTracker?.scrolledOnFirstLesson = true
             }
-            .onChange(of: currentIndex) { _, newIndex in
-                // Arriving on this page (via Continue or swipe) always starts at the top.
-                guard newIndex == lessonIndex else { return }
+            .onChange(of: currentIndex) { oldIndex, newIndex in
+                // Only reset to the top when moving forward (Continue / swipe next).
+                // Going back keeps the previous reading position.
+                guard newIndex == lessonIndex, newIndex > oldIndex else { return }
                 proxy.scrollTo(Self.lessonTopID, anchor: .top)
             }
         }
@@ -284,8 +285,8 @@ struct CourseView: View {
                             .frame(maxWidth: .infinity, alignment: .leading)
                     }
                     .scrollIndicators(.hidden)
-                    .onChange(of: currentIndex) { _, newIndex in
-                        guard newIndex == lessonIndex else { return }
+                    .onChange(of: currentIndex) { oldIndex, newIndex in
+                        guard newIndex == lessonIndex, newIndex > oldIndex else { return }
                         proxy.scrollTo(Self.lessonTopID, anchor: .top)
                     }
 

@@ -20,12 +20,13 @@ Objectif : des cours **courts, vivants, séduisants**, à l'opposé du texte « 
 
 ### Navigation & lecture
 - **Bouton « Continuer »** : passe à l'écran suivant avec l'**animation de swipe** (pagination), et toujours **positionné en haut** du nouvel écran (jamais au milieu ni en bas d'un contenu déjà scrollé).
+- **Repositionnement en haut uniquement vers l'avant.** Quand on **revient en arrière** (swipe retour), on **conserve la position de lecture** de la page (on ne la remet PAS en haut), sinon la navigation « beugue ».
 - L'**animation de swipe doit fonctionner pour toutes les transitions**, y compris entre l'avant-dernier et le dernier écran (pas de saut sec).
 
 ### Règles de placement (strictes)
 
 - **Hero** : uniquement en tête de la section d'introduction.
-- **Le saviez-vous (funFact)** : placé de façon **logique**, au plus près du passage qu'il enrichit (au fil du contenu), **jamais systématiquement collé en fin d'écran** et jamais après la conclusion. Idéalement 0 ou 1 par section, là où il apporte un vrai « bonus » à ce qui vient d'être lu.
+- **Le saviez-vous (funFact)** : placé de façon **logique**, au plus près du passage qu'il enrichit. **Règle stricte : ce n'est JAMAIS le dernier bloc d'une section.** Il est toujours **suivi d'au moins un contenu** (paragraphe, image ou frise) : on lit un passage, on découvre l'anecdote liée, puis le récit **continue**. On ne le colle jamais en fin d'écran ni après la conclusion. Idéalement 0 ou 1 par section. Les enchaînements de blocs doivent rester **fluides et logiques** (pas de bloc « posé » sans lien avec ce qui l'entoure).
 - **À retenir (takeaway)** : toujours en toute fin de la dernière section, jamais ailleurs.
 - **Frise chronologique** : là où elle éclaire le récit (souvent en fin de section historique). **Plus de tableau « Repères / dates clés » en introduction** (retiré : rendu jugé peu esthétique). Les dates importantes sont soit dans le texte, soit dans la frise.
 
@@ -171,3 +172,8 @@ Un fichier JSON par cours : `content/courses/fr/<course_id>.json`.
 - **Terme de glossaire** : couleur du texte = encre normale (**plus de bleu**), seul le soulignement est coloré ; **plus de décalage du mot au tap** (attribut custom au lieu de `.link`).
 - **« Le saviez-vous ? »** : le contenu apparaît **en fondu sur place**, sans glissement depuis le haut.
 - **Navigation** : « Continuer » amène en **haut** de l'écran suivant, en **swipe** ; correction du **saut sans animation** entre l'avant-dernier et le dernier écran.
+
+### Itération 3 (retours)
+- **Tap glossaire** : plus aucun **décalage du paragraphe** au tap (on ne réécrit plus l'`attributedText` de l'`UITextView` quand le contenu n'a pas changé, ce qui évitait un re-calcul de hauteur au moment de l'ouverture de la fiche).
+- **Le saviez-vous ?** : repositionné **au milieu** des sections dans « Pourquoi le ciel est-il bleu ? » et « La Renaissance italienne » (jamais dernier bloc). Charte clarifiée sur les enchaînements logiques.
+- **Navigation** : le **retour en arrière conserve la position de lecture** (repositionnement en haut réservé à l'avancée).

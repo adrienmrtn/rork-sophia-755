@@ -322,8 +322,13 @@ struct ProseTextView: UIViewRepresentable {
 
     func updateUIView(_ uiView: UITextView, context: Context) {
         context.coordinator.onGlossaryTap = onGlossaryTap
-        uiView.attributedText = attributed
-        uiView.invalidateIntrinsicContentSize()
+        // Only rewrite the text when it actually changed. Re-assigning an identical
+        // NSAttributedString forces a re-layout that visually nudges the paragraph when
+        // unrelated state changes (e.g. presenting the glossary sheet on tap).
+        if uiView.attributedText != attributed {
+            uiView.attributedText = attributed
+            uiView.invalidateIntrinsicContentSize()
+        }
     }
 
     func sizeThatFits(_ proposal: ProposedViewSize, uiView: UITextView, context: Context) -> CGSize? {

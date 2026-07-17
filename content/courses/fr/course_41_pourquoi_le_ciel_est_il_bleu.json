@@ -26,8 +26,8 @@
       "free": false,
       "blocks": [
         { "type": "paragraph", "text": "La lumière du Soleil nous paraît blanche, mais elle contient en réalité toutes les couleurs de l'arc-en-ciel : c'est le [[spectre visible de la lumière]]. Chaque couleur correspond à une **longueur d'onde**, c'est-à-dire la taille de sa « vague ». Le bleu et le violet ont des ondes courtes et serrées ; le rouge a des ondes longues et étirées." },
-        { "type": "paragraph", "text": "Entre le Soleil et nos yeux, l'air n'est pas vide : il est rempli de minuscules **molécules de gaz**, surtout de l'azote et de l'oxygène. Elles sont bien plus petites que les ondes de lumière. Quand un rayon les percute, il ne file plus tout droit : il est renvoyé dans toutes les directions. Ce petit rebond est le point de départ de la couleur du ciel." },
-        { "type": "funFact", "text": "Sur la Lune, il n'y a pas d'air pour disperser la lumière. Résultat : là-bas, le ciel reste **noir en plein jour**, même quand le Soleil brille." }
+        { "type": "funFact", "text": "Sur la Lune, il n'y a pas d'air pour disperser la lumière. Résultat : là-bas, le ciel reste **noir en plein jour**, même quand le Soleil brille. La preuve que la couleur du ciel vient de l'air, pas du Soleil." },
+        { "type": "paragraph", "text": "Car entre le Soleil et nos yeux, l'air n'est pas vide : il est rempli de minuscules **molécules de gaz**, surtout de l'azote et de l'oxygène. Elles sont bien plus petites que les ondes de lumière. Quand un rayon les percute, il ne file plus tout droit : il est renvoyé dans toutes les directions. Ce petit rebond est le point de départ de la couleur du ciel." }
       ]
     },
     {
@@ -36,9 +36,9 @@
       "free": false,
       "blocks": [
         { "type": "paragraph", "text": "En **1871**, le physicien britannique **Lord Rayleigh** met ce phénomène en équation. Il découvre que plus une couleur a une onde courte, plus elle est renvoyée dans tous les sens par les molécules d'air. C'est la [[diffusion de Rayleigh]]." },
+        { "type": "funFact", "text": "Le ciel de Mars fait l'inverse du nôtre : sa poussière riche en fer le rend rosé en journée, mais ses couchers de soleil, eux, sont **bleus**. Tout dépend de ce que contient l'air." },
         { "type": "image", "asset": "blue_sky_sunlight_scattering_atmosphere", "ratio": "4:3", "caption": "La lumière bleue est dispersée dans toutes les directions par l'air." },
-        { "type": "paragraph", "text": "Concrètement, la lumière bleue est dispersée environ **9 fois plus** que la rouge. Le rouge traverse l'air presque en ligne droite, alors que le bleu ricoche partout. Voilà pourquoi, où que vous regardiez dans le ciel, du bleu finit toujours par arriver à vos yeux : le ciel entier semble « briller » de ce bleu éparpillé." },
-        { "type": "funFact", "text": "Le ciel de Mars fait l'inverse du nôtre : sa poussière riche en fer le rend rosé en journée, mais ses couchers de soleil, eux, sont **bleus**." }
+        { "type": "paragraph", "text": "Concrètement, la lumière bleue est dispersée environ **9 fois plus** que la rouge. Le rouge traverse l'air presque en ligne droite, alors que le bleu ricoche partout. Voilà pourquoi, où que vous regardiez dans le ciel, du bleu finit toujours par arriver à vos yeux : le ciel entier semble « briller » de ce bleu éparpillé." }
       ]
     },
     {
