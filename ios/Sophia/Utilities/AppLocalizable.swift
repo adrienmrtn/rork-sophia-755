@@ -182,6 +182,7 @@ enum AppLocalizable {
         "discount.gift.almost": "Presque !",
         "home.locked": "Verrouillé",
         "home.start": "Commencer",
+        "home.feed.swipeHint": "Swipe ← → pour découvrir",
 
         "library.empty.title": "Aucun résultat",
         "library.empty.subtitle": "Essaie un autre mot-clé.",
@@ -710,6 +711,7 @@ enum AppLocalizable {
         "discount.gift.almost": "Almost there!",
         "home.locked": "Locked",
         "home.start": "Start",
+        "home.feed.swipeHint": "Swipe ← → to explore",
 
         "library.empty.title": "No results",
         "library.empty.subtitle": "Try another keyword.",
@@ -1233,6 +1235,7 @@ enum AppLocalizable {
         "discount.gift.almost": "¡Casi!",
         "home.locked": "Bloqueado",
         "home.start": "Empezar",
+        "home.feed.swipeHint": "Desliza ← → para explorar",
 
         "library.empty.title": "Sin resultados",
         "library.empty.subtitle": "Prueba con otra palabra clave.",
@@ -1759,6 +1762,7 @@ enum AppLocalizable {
         "discount.gift.almost": "Fast geschafft!",
         "home.locked": "Gesperrt",
         "home.start": "Starten",
+        "home.feed.swipeHint": "Wischen ← → zum Entdecken",
 
         "library.empty.title": "Keine Ergebnisse",
         "library.empty.subtitle": "Versuche ein anderes Stichwort.",
@@ -2285,6 +2289,7 @@ enum AppLocalizable {
         "discount.gift.almost": "Quase!",
         "home.locked": "Bloqueado",
         "home.start": "Começar",
+        "home.feed.swipeHint": "Desliza ← → para explorar",
 
         "library.empty.title": "Sem resultados",
         "library.empty.subtitle": "Experimenta outra palavra-chave.",
@@ -2805,6 +2810,7 @@ enum AppLocalizable {
         "discount.gift.almost": "Ci siamo quasi!",
         "home.locked": "Bloccato",
         "home.start": "Inizio",
+        "home.feed.swipeHint": "Scorri ← → per esplorare",
         "library.empty.title": "Nessun risultato",
         "library.empty.subtitle": "Prova un'altra parola chiave.",
         "library.seeMore": "Vedi di più",

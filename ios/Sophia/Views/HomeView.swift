@@ -28,6 +28,15 @@ struct HomeView: View {
                 autoSwipeCourseId: $autoSwipeCourseId,
                 onShowDiscountPaywall: onShowDiscountPaywall
             )
+        case .feed:
+            HomeViewFeed(
+                progressManager: progressManager,
+                discountManager: discountManager,
+                isPremium: isPremium,
+                selectedCourse: $selectedCourse,
+                autoSwipeCourseId: $autoSwipeCourseId,
+                onShowDiscountPaywall: onShowDiscountPaywall
+            )
         }
     }
 }
