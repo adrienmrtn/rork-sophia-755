@@ -126,6 +126,11 @@ struct ProseParagraph: View {
 /// Builds an `NSAttributedString` from Sophia inline markup:
 /// `**bold**`, `==highlight==` (marker), `[[Term]]` (tappable glossary).
 enum InlineAttributedBuilder {
+    /// Custom attribute carrying a glossary URL. We deliberately avoid `.link` so
+    /// UITextView doesn't force a blue tint or a tap-time selection shift; the tap
+    /// gesture reads this key directly instead.
+    static let glossaryURLKey = NSAttributedString.Key("SophiaGlossaryURL")
+
     static func build(
         raw: String,
         courseId: String,
@@ -225,7 +230,7 @@ enum InlineAttributedBuilder {
 
         if GlossaryStore.entry(courseId: courseId, courseTitle: courseTitle, displayTerm: term) != nil,
            let url = GlossaryStore.linkURL(courseId: courseId, courseTitle: courseTitle, displayTerm: term) {
-            attributes[.link] = url
+            attributes[glossaryURLKey] = url
             attributes[.underlineStyle] = NSUnderlineStyle.thick.rawValue
             attributes[.underlineColor] = accent
             attributes[.foregroundColor] = UIColor.label
@@ -357,8 +362,9 @@ struct ProseTextView: UIViewRepresentable {
             let charIndex = layoutManager.characterIndexForGlyph(at: glyphIndex)
             guard charIndex < textView.textStorage.length else { return }
 
-            if let url = textView.textStorage.attribute(.link, at: charIndex, effectiveRange: nil) as? URL,
-               let entry = GlossaryStore.entry(from: url) {
+            if let url = textView.textStorage.attribute(
+                InlineAttributedBuilder.glossaryURLKey, at: charIndex, effectiveRange: nil
+            ) as? URL, let entry = GlossaryStore.entry(from: url) {
                 UIImpactFeedbackGenerator(style: .light).impactOccurred()
                 onGlossaryTap(entry)
             }
@@ -733,10 +739,7 @@ struct FunFactCardV2: View {
                     onGlossaryTap: onGlossaryTap
                 )
                 .padding(.top, 14)
-                .transition(.asymmetric(
-                    insertion: .opacity.combined(with: .move(edge: .top)),
-                    removal: .opacity
-                ))
+                .transition(.opacity)
             }
         }
         .padding(18)

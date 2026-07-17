@@ -18,6 +18,10 @@ Objectif : des cours **courts, vivants, séduisants**, à l'opposé du texte « 
 - **Ton.** Direct, curieux, un brin complice. On tutoie l'intérêt du lecteur sans être infantilisant.
 - **Ponctuation.** **Pas de tirets cadratins (`—`)** dans le texte. On utilise des virgules, des deux-points, des parenthèses ou on refait la phrase.
 
+### Navigation & lecture
+- **Bouton « Continuer »** : passe à l'écran suivant avec l'**animation de swipe** (pagination), et toujours **positionné en haut** du nouvel écran (jamais au milieu ni en bas d'un contenu déjà scrollé).
+- L'**animation de swipe doit fonctionner pour toutes les transitions**, y compris entre l'avant-dernier et le dernier écran (pas de saut sec).
+
 ### Règles de placement (strictes)
 
 - **Hero** : uniquement en tête de la section d'introduction.
@@ -58,7 +62,7 @@ Le quiz existant est **conservé tel quel** (hors périmètre de cette refonte).
 
 ### Le saviez-vous ? (funFact) — refonte DA + interaction
 - **Direction artistique harmonisée** avec le reste du cours (carte néobrutaliste blanche, contour noir, coins arrondis), au lieu de l'ancien encart trop « à part ». Pastille badge sobre à l'accent du sujet, sans emoji criard.
-- **Interactif** : la carte s'affiche d'abord **repliée** (titre « Le saviez-vous ? » + invite « toucher pour révéler »). Un tap la **déplie** avec une animation ressort douce et satisfaisante (chevron qui pivote, contenu qui apparaît en fondu + glissement) et un retour haptique. Cela crée un mini-moment de découverte.
+- **Interactif** : la carte s'affiche d'abord **repliée** (titre « Le saviez-vous ? » + invite « toucher pour révéler »). Un tap la **déplie** avec une animation ressort douce et satisfaisante (chevron qui pivote, retour haptique). Le contenu apparaît **en fondu sur place** (la carte grandit vers le bas) : **pas de glissement depuis le haut** (l'effet « le texte descend de plus haut » est proscrit).
 
 ### Typographie et texte
 - Police arrondie existante (`.rounded`).
@@ -68,6 +72,8 @@ Le quiz existant est **conservé tel quel** (hors périmètre de cette refonte).
 ### Emphase & glossaire (refonte)
 - **Plus de surlignage marqueur.** Le fond coloré type surligneur (`==texte==`) est **supprimé** (jugé peu esthétique). Le balisage `==...==` éventuellement présent est ignoré au rendu.
 - **Terme de glossaire** (`[[Terme]]`) : **conservé** — soulignement coloré épais (style « lien savant »), **cliquable**, ouvre la fiche glossaire existante. C'est le seul mécanisme de « surlignage » retenu.
+  - **Couleur du texte identique au reste** (couleur d'encre normale), **jamais bleu** : seul le soulignement porte la couleur d'accent. On n'utilise pas l'attribut `.link` d'`UITextView` (qui force le bleu et un léger décalage au tap) ; l'URL du glossaire est portée par un attribut custom lu par la gestuelle de tap.
+  - **Aucun décalage / effet de sélection** du mot au moment du tap.
 - **Gras** (`**texte**`) : emphase simple, pour les mots-clés et les chiffres marquants.
 - **Réactivité du glossaire** : l'ouverture de la fiche au tap sur un terme doit être **instantanée** (gestuelle native custom, sans le délai de sélection d'`UITextView`).
 
@@ -160,3 +166,8 @@ Un fichier JSON par cours : `content/courses/fr/<course_id>.json`.
 - **Latence du tap glossaire corrigée** (gestuelle native custom).
 - **Interdiction des tirets cadratins (`—`)** dans les textes.
 - Cours mis à jour : « La naissance de l'islam (622) », « Pourquoi le ciel est-il bleu ? », « La Renaissance italienne ».
+
+### Itération 2 (retours sur les 3 cours V2)
+- **Terme de glossaire** : couleur du texte = encre normale (**plus de bleu**), seul le soulignement est coloré ; **plus de décalage du mot au tap** (attribut custom au lieu de `.link`).
+- **« Le saviez-vous ? »** : le contenu apparaît **en fondu sur place**, sans glissement depuis le haut.
+- **Navigation** : « Continuer » amène en **haut** de l'écran suivant, en **swipe** ; correction du **saut sans animation** entre l'avant-dernier et le dernier écran.

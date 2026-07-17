@@ -49,6 +49,9 @@ struct CourseView: View {
     private let ink = Color.black
     private let pink = Color(red: 1.0, green: 0.553, blue: 0.706)
 
+    /// Anchor id used to snap each lesson page back to the top on arrival.
+    private static let lessonTopID = "lessonTopAnchor"
+
     var body: some View {
         ZStack {
             cream.ignoresSafeArea()
@@ -203,7 +206,7 @@ struct CourseView: View {
     @ViewBuilder
     private func lessonContent(lesson: LessonPage, lessonIndex: Int) -> some View {
         if FreemiumGate.isLessonContentLocked(lessonIndex: lessonIndex, isPremium: isPremium) {
-            lockedLessonView(lesson: lesson)
+            lockedLessonView(lesson: lesson, lessonIndex: lessonIndex)
         } else {
             unlockedLessonView(lesson: lesson, lessonIndex: lessonIndex)
         }
@@ -240,40 +243,55 @@ struct CourseView: View {
     }
 
     private func unlockedLessonView(lesson: LessonPage, lessonIndex: Int) -> some View {
-        ScrollView {
-            lessonBody(lesson: lesson)
-                .padding(.horizontal, 24)
-                .padding(.top, 24)
-                .padding(.bottom, 120)
-        }
-        .scrollIndicators(.hidden)
-        .onScrollGeometryChange(for: CGFloat.self) { geometry in
-            geometry.contentOffset.y
-        } action: { _, offset in
-            guard lessonIndex == 0, offset > 120 else { return }
-            sessionTracker?.scrolledOnFirstLesson = true
+        ScrollViewReader { proxy in
+            ScrollView {
+                Color.clear.frame(height: 0).id(Self.lessonTopID)
+                lessonBody(lesson: lesson)
+                    .padding(.horizontal, 24)
+                    .padding(.top, 24)
+                    .padding(.bottom, 120)
+            }
+            .scrollIndicators(.hidden)
+            .onScrollGeometryChange(for: CGFloat.self) { geometry in
+                geometry.contentOffset.y
+            } action: { _, offset in
+                guard lessonIndex == 0, offset > 120 else { return }
+                sessionTracker?.scrolledOnFirstLesson = true
+            }
+            .onChange(of: currentIndex) { _, newIndex in
+                // Arriving on this page (via Continue or swipe) always starts at the top.
+                guard newIndex == lessonIndex else { return }
+                proxy.scrollTo(Self.lessonTopID, anchor: .top)
+            }
         }
     }
 
     /// Locked pages stay vertically scrollable: title stays crisp, the body
     /// quickly blurs, and the unlock card remains centered on the visible screen.
-    private func lockedLessonView(lesson: LessonPage) -> some View {
+    private func lockedLessonView(lesson: LessonPage, lessonIndex: Int) -> some View {
         GeometryReader { geo in
-            ZStack {
-                ScrollView {
-                    lessonBody(lesson: lesson)
-                        .compositingGroup()
-                        .blur(radius: 5)
-                        .allowsHitTesting(false)
-                        .padding(.horizontal, 24)
-                        .padding(.top, 24)
-                        .padding(.bottom, max(geo.size.height * 0.34, 180))
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                }
-                .scrollIndicators(.hidden)
+            ScrollViewReader { proxy in
+                ZStack {
+                    ScrollView {
+                        Color.clear.frame(height: 0).id(Self.lessonTopID)
+                        lessonBody(lesson: lesson)
+                            .compositingGroup()
+                            .blur(radius: 5)
+                            .allowsHitTesting(false)
+                            .padding(.horizontal, 24)
+                            .padding(.top, 24)
+                            .padding(.bottom, max(geo.size.height * 0.34, 180))
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+                    .scrollIndicators(.hidden)
+                    .onChange(of: currentIndex) { _, newIndex in
+                        guard newIndex == lessonIndex else { return }
+                        proxy.scrollTo(Self.lessonTopID, anchor: .top)
+                    }
 
-                CourseLessonLockOverlay {
-                    presentDebloquerPaywall()
+                    CourseLessonLockOverlay {
+                        presentDebloquerPaywall()
+                    }
                 }
             }
         }
@@ -290,7 +308,6 @@ struct CourseView: View {
                 }
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
-            .animation(.spring(response: 0.4), value: currentIndex)
 
             bottomButton
         }
