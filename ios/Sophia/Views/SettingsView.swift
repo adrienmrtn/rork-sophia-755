@@ -14,10 +14,9 @@ struct SettingsView: View {
     @State private var showFeedback: Bool = false
     @State private var showAmbassador: Bool = false
     @State private var hapticTrigger: Int = 0
-    @State private var ambassadorShimmer = false
 
-    private let ink = BrutalPalette.ink
-    private let cream = BrutalPalette.cream
+    private static let destructive = Color(red: 0.80, green: 0.31, blue: 0.31)
+    private static let destructiveTint = Color(red: 0.965, green: 0.925, blue: 0.925)
 
     private var appVersionString: String {
         let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0.0"
@@ -28,209 +27,51 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                cream.ignoresSafeArea()
+                DS.canvas.ignoresSafeArea()
 
                 ScrollView {
-                    VStack(alignment: .leading, spacing: 24) {
-                        // Title + optional close
-                        HStack {
-                            Text(languageManager.text("settings.title"))
-                                .font(.system(.largeTitle, design: .rounded, weight: .heavy))
-                                .foregroundStyle(ink)
-                            Spacer()
-                            if let onDismiss {
-                                Button(action: onDismiss) {
-                                    Image(systemName: "xmark")
-                                        .font(.system(size: 15, weight: .heavy))
-                                        .foregroundStyle(ink)
-                                        .frame(width: 38, height: 38)
-                                        .background(Color.white)
-                                        .clipShape(Circle())
-                                        .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
-                                }
-                            }
-                        }
-                        .padding(.horizontal, 20)
-                        .padding(.top, 4)
-
-                        sectionHeader(languageManager.text("language.section"))
-                        HStack {
-                            LanguagePickerControl()
-                            Spacer(minLength: 0)
-                        }
-                        .padding(.horizontal, 20)
-
-                        // Progression
-                        sectionHeader(languageManager.text("settings.section.progress"))
-                        VStack(spacing: 0) {
-                            statRow(
-                                icon: "trophy.fill",
-                                iconBg: BrutalPalette.pastel(for: .histoire),
-                                title: String(format: languageManager.text("settings.courses.completed"), progressManager.completedCount),
-                                subtitle: String(format: languageManager.text("settings.courses.available"), ContentCatalog.activeCourses.count)
-                            )
-                            if progressManager.streak > 0 {
-                                divider
-                                statRow(
-                                    icon: "flame.fill",
-                                    iconBg: BrutalPalette.pink,
-                                    title: String(format: languageManager.text("settings.streak.title"), progressManager.streak),
-                                    subtitle: languageManager.text("settings.streak.subtitle")
-                                )
-                            }
-                        }
-                        .brutalCard()
-                        .padding(.horizontal, 20)
-
-                        // Premium
-                        if !store.isPremium {
-                            sectionHeader(languageManager.text("settings.section.premium"))
-                            Button {
-                                hapticTrigger += 1
-                                onShowPaywall?()
-                            } label: {
-                                HStack(spacing: 14) {
-                                    iconBadge(name: "crown.fill", bg: Color(red: 1.0, green: 0.86, blue: 0.4))
-                                    VStack(alignment: .leading, spacing: 2) {
-                                        Text(languageManager.text("settings.premium.title"))
-                                            .font(.system(.headline, design: .rounded, weight: .heavy))
-                                            .foregroundStyle(ink)
-                                        Text(languageManager.text("settings.premium.subtitle"))
-                                            .font(.system(.caption, design: .rounded, weight: .semibold))
-                                            .foregroundStyle(ink.opacity(0.55))
-                                    }
-                                    Spacer()
-                                    Image(systemName: "arrow.right")
-                                        .font(.system(size: 14, weight: .heavy))
-                                        .foregroundStyle(ink)
-                                }
-                                .padding(.horizontal, 14)
-                                .padding(.vertical, 14)
-                            }
-                            .buttonStyle(BrutalCardButtonStyle(depth: 2))
-                            .brutalCard()
+                    VStack(alignment: .leading, spacing: 22) {
+                        titleBar
                             .padding(.horizontal, 20)
-                        }
+                            .padding(.top, 4)
 
-                        // Data
-                        sectionHeader(languageManager.text("settings.section.data"))
-                        VStack(spacing: 0) {
-                            actionRow(
-                                icon: "arrow.counterclockwise",
-                                iconBg: Color(red: 1.0, green: 0.78, blue: 0.78),
-                                title: languageManager.text("settings.reset.title"),
-                                destructive: true
-                            ) {
-                                hapticTrigger += 1
-                                showResetAlert = true
+                        section(languageManager.text("language.section")) {
+                            HStack {
+                                LanguagePickerControl()
+                                Spacer(minLength: 0)
                             }
                         }
-                        .brutalCard()
-                        .padding(.horizontal, 20)
 
-                        // Ambassador CTA
+                        progressionSection
+
+                        if !store.isPremium {
+                            premiumSection
+                        }
+
+                        dataSection
+
                         ambassadorBanner
                             .padding(.horizontal, 20)
 
-                        // Help & feedback
-                        sectionHeader(languageManager.text("settings.section.help"))
-                        VStack(spacing: 0) {
-                            actionRow(
-                                icon: "bubble.left.and.bubble.right.fill",
-                                iconBg: BrutalPalette.pastel(for: .litterature),
-                                title: languageManager.text("settings.feedback.title"),
-                                subtitle: languageManager.text("settings.feedback.subtitle")
-                            ) {
-                                hapticTrigger += 1
-                                showFeedback = true
-                            }
-                        }
-                        .brutalCard()
-                        .padding(.horizontal, 20)
+                        helpSection
 
-                        // Legal
-                        sectionHeader(languageManager.text("settings.section.legal"))
-                        VStack(spacing: 0) {
-                            actionRow(
-                                icon: "doc.text.fill",
-                                iconBg: BrutalPalette.pastel(for: .art),
-                                title: languageManager.text("settings.terms.title")
-                            ) {
-                                hapticTrigger += 1
-                                showTerms = true
-                            }
-                            divider
-                            actionRow(
-                                icon: "hand.raised.fill",
-                                iconBg: BrutalPalette.pastel(for: .mythologie),
-                                title: languageManager.text("settings.privacy.title")
-                            ) {
-                                hapticTrigger += 1
-                                showPrivacy = true
-                            }
-                            if !store.isPremium {
-                                divider
-                                actionRow(
-                                    icon: "arrow.clockwise",
-                                    iconBg: BrutalPalette.pastel(for: .sciences),
-                                    title: languageManager.text("settings.restore.title")
-                                ) {
-                                    hapticTrigger += 1
-                                    Task { await store.restore() }
-                                }
-                            }
-                        }
-                        .brutalCard()
-                        .padding(.horizontal, 20)
+                        legalSection
 
-                        // About
-                        sectionHeader(languageManager.text("settings.section.about"))
-                        VStack(spacing: 0) {
-                            infoRow(label: languageManager.text("settings.about.version"), value: appVersionString)
-                            divider
-                            infoRow(label: languageManager.text("settings.about.courses"), value: "\(ContentCatalog.activeCourses.count)")
-                        }
-                        .brutalCard()
-                        .padding(.horizontal, 20)
+                        aboutSection
 
                         #if DEBUG
-                        sectionHeader(languageManager.text("settings.section.developer"))
-                        VStack(spacing: 0) {
-                            if onResetOnboarding != nil {
-                                actionRow(
-                                    icon: "arrow.triangle.2.circlepath",
-                                    iconBg: Color(red: 1.0, green: 0.78, blue: 0.78),
-                                    title: languageManager.text("settings.debug.resetOnboarding")
-                                ) {
-                                    hapticTrigger += 1
-                                    showResetOnboardingAlert = true
-                                }
-                                divider
-                            }
-                            actionRow(
-                                icon: "calendar.badge.minus",
-                                iconBg: Color(red: 1.0, green: 0.86, blue: 0.55),
-                                title: languageManager.text("settings.debug.resetDaily"),
-                                subtitle: progressManager.hasCompletedCourseToday
-                                    ? languageManager.text("settings.debug.daily.done")
-                                    : languageManager.text("settings.debug.daily.pending")
-                            ) {
-                                hapticTrigger += 1
-                                progressManager.resetDailyCourseFlag()
-                            }
-                        }
-                        .brutalCard()
-                        .padding(.horizontal, 20)
+                        developerSection
                         #endif
 
                         Text(languageManager.text("settings.footer"))
-                            .font(.system(.caption, design: .rounded, weight: .heavy))
-                            .foregroundStyle(ink.opacity(0.4))
+                            .font(DS.sans(.caption, .medium))
+                            .foregroundStyle(DS.inkTertiary)
                             .frame(maxWidth: .infinity, alignment: .center)
                             .padding(.top, 8)
                             .padding(.bottom, 32)
                     }
                 }
+                .scrollIndicators(.hidden)
             }
             .navigationBarHidden(true)
             .sensoryFeedback(.impact(weight: .light), trigger: hapticTrigger)
@@ -250,173 +91,278 @@ struct SettingsView: View {
             } message: {
                 Text(languageManager.text("settings.onboarding.alert.message"))
             }
-            .sheet(isPresented: $showTerms) {
-                TermsView()
-            }
-            .sheet(isPresented: $showPrivacy) {
-                PrivacyPolicyView()
-            }
-            .sheet(isPresented: $showFeedback) {
-                FeedbackView(isPremium: store.isPremium)
-            }
-            .sheet(isPresented: $showAmbassador) {
-                AmbassadorView()
-            }
-            .onAppear {
-                ambassadorShimmer = true
+            .sheet(isPresented: $showTerms) { TermsView() }
+            .sheet(isPresented: $showPrivacy) { PrivacyPolicyView() }
+            .sheet(isPresented: $showFeedback) { FeedbackView(isPremium: store.isPremium) }
+            .sheet(isPresented: $showAmbassador) { AmbassadorView() }
+        }
+    }
+
+    // MARK: - Title
+
+    private var titleBar: some View {
+        HStack {
+            Text(languageManager.text("settings.title"))
+                .font(DS.title(.largeTitle, .semibold))
+                .foregroundStyle(DS.ink)
+            Spacer()
+            if let onDismiss {
+                Button(action: onDismiss) {
+                    Image(systemName: "xmark")
+                        .font(.system(size: 15, weight: .medium))
+                        .foregroundStyle(DS.inkSecondary)
+                        .frame(width: 40, height: 40)
+                        .background(DS.surface, in: Circle())
+                        .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
+                }
+                .buttonStyle(SoftPressButtonStyle())
             }
         }
     }
+
+    // MARK: - Sections
+
+    private var progressionSection: some View {
+        section(languageManager.text("settings.section.progress")) {
+            groupedCard {
+                statRow(
+                    icon: "checkmark.circle",
+                    title: String(format: languageManager.text("settings.courses.completed"), progressManager.completedCount),
+                    subtitle: String(format: languageManager.text("settings.courses.available"), ContentCatalog.activeCourses.count)
+                )
+                if progressManager.streak > 0 {
+                    rowDivider
+                    statRow(
+                        icon: "flame",
+                        title: String(format: languageManager.text("settings.streak.title"), progressManager.streak),
+                        subtitle: languageManager.text("settings.streak.subtitle")
+                    )
+                }
+            }
+        }
+    }
+
+    private var premiumSection: some View {
+        section(languageManager.text("settings.section.premium")) {
+            Button {
+                hapticTrigger += 1
+                onShowPaywall?()
+            } label: {
+                HStack(spacing: 14) {
+                    Image(systemName: "crown.fill")
+                        .font(.system(size: 17, weight: .medium))
+                        .foregroundStyle(.white)
+                        .frame(width: 42, height: 42)
+                        .background(.white.opacity(0.18), in: Circle())
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(languageManager.text("settings.premium.title"))
+                            .font(DS.title(.headline, .semibold))
+                            .foregroundStyle(.white)
+                        Text(languageManager.text("settings.premium.subtitle"))
+                            .font(DS.sans(.caption, .medium))
+                            .foregroundStyle(.white.opacity(0.8))
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                    Spacer(minLength: 8)
+                    Image(systemName: "arrow.right")
+                        .font(.system(size: 14, weight: .semibold))
+                        .foregroundStyle(.white.opacity(0.9))
+                }
+                .padding(16)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(DS.accent, in: RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+                .padding(.horizontal, 20)
+            }
+            .buttonStyle(SoftPressButtonStyle())
+        }
+    }
+
+    private var dataSection: some View {
+        section(languageManager.text("settings.section.data")) {
+            groupedCard {
+                actionRow(
+                    icon: "arrow.counterclockwise",
+                    title: languageManager.text("settings.reset.title"),
+                    destructive: true
+                ) {
+                    hapticTrigger += 1
+                    showResetAlert = true
+                }
+            }
+        }
+    }
+
+    private var helpSection: some View {
+        section(languageManager.text("settings.section.help")) {
+            groupedCard {
+                actionRow(
+                    icon: "bubble.left.and.bubble.right",
+                    title: languageManager.text("settings.feedback.title"),
+                    subtitle: languageManager.text("settings.feedback.subtitle")
+                ) {
+                    hapticTrigger += 1
+                    showFeedback = true
+                }
+            }
+        }
+    }
+
+    private var legalSection: some View {
+        section(languageManager.text("settings.section.legal")) {
+            groupedCard {
+                actionRow(icon: "doc.text", title: languageManager.text("settings.terms.title")) {
+                    hapticTrigger += 1
+                    showTerms = true
+                }
+                rowDivider
+                actionRow(icon: "hand.raised", title: languageManager.text("settings.privacy.title")) {
+                    hapticTrigger += 1
+                    showPrivacy = true
+                }
+                if !store.isPremium {
+                    rowDivider
+                    actionRow(icon: "arrow.clockwise", title: languageManager.text("settings.restore.title")) {
+                        hapticTrigger += 1
+                        Task { await store.restore() }
+                    }
+                }
+            }
+        }
+    }
+
+    private var aboutSection: some View {
+        section(languageManager.text("settings.section.about")) {
+            groupedCard {
+                infoRow(label: languageManager.text("settings.about.version"), value: appVersionString)
+                rowDivider
+                infoRow(label: languageManager.text("settings.about.courses"), value: "\(ContentCatalog.activeCourses.count)")
+            }
+        }
+    }
+
+    #if DEBUG
+    private var developerSection: some View {
+        section(languageManager.text("settings.section.developer")) {
+            groupedCard {
+                if onResetOnboarding != nil {
+                    actionRow(
+                        icon: "arrow.triangle.2.circlepath",
+                        title: languageManager.text("settings.debug.resetOnboarding"),
+                        destructive: true
+                    ) {
+                        hapticTrigger += 1
+                        showResetOnboardingAlert = true
+                    }
+                    rowDivider
+                }
+                actionRow(
+                    icon: "calendar.badge.minus",
+                    title: languageManager.text("settings.debug.resetDaily"),
+                    subtitle: progressManager.hasCompletedCourseToday
+                        ? languageManager.text("settings.debug.daily.done")
+                        : languageManager.text("settings.debug.daily.pending")
+                ) {
+                    hapticTrigger += 1
+                    progressManager.resetDailyCourseFlag()
+                }
+            }
+        }
+    }
+    #endif
 
     // MARK: - Ambassador banner
 
     private var ambassadorBanner: some View {
-        let depth: CGFloat = 4
-        let radius: CGFloat = 20
-
-        return Button {
+        Button {
             hapticTrigger += 1
             showAmbassador = true
         } label: {
-            ZStack(alignment: .top) {
-                // Solid brutal shadow (same pattern as other settings cards)
-                RoundedRectangle(cornerRadius: radius, style: .continuous)
-                    .fill(ink)
-                    .offset(y: depth)
-
-                ZStack {
-                    RoundedRectangle(cornerRadius: radius, style: .continuous)
-                        .fill(
-                            LinearGradient(
-                                colors: [
-                                    Color(red: 1.0, green: 0.86, blue: 0.35),
-                                    Color(red: 1.0, green: 0.55, blue: 0.72),
-                                    Color(red: 0.78, green: 0.62, blue: 1.0),
-                                ],
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
-                            )
-                        )
-
-                    // Shimmer sweep
-                    RoundedRectangle(cornerRadius: radius, style: .continuous)
-                        .fill(
-                            LinearGradient(
-                                colors: [
-                                    .white.opacity(0),
-                                    .white.opacity(0.45),
-                                    .white.opacity(0),
-                                ],
-                                startPoint: .leading,
-                                endPoint: .trailing
-                            )
-                        )
-                        .frame(width: 90)
-                        .offset(x: ambassadorShimmer ? 160 : -160)
-                        .animation(
-                            .easeInOut(duration: 1.8).repeatForever(autoreverses: false),
-                            value: ambassadorShimmer
-                        )
-
-                    HStack(spacing: 14) {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 12, style: .continuous)
-                                .fill(Color.white.opacity(0.85))
-                                .overlay {
-                                    RoundedRectangle(cornerRadius: 12, style: .continuous)
-                                        .strokeBorder(ink, lineWidth: 2)
-                                }
-                            Image(systemName: "sparkles")
-                                .font(.system(size: 18, weight: .heavy))
-                                .foregroundStyle(ink)
-                        }
-                        .frame(width: 44, height: 44)
-
-                        VStack(alignment: .leading, spacing: 4) {
-                            Text(languageManager.text("settings.ambassador.banner.badge"))
-                                .font(.system(.caption2, design: .rounded, weight: .heavy))
-                                .foregroundStyle(ink)
-                                .padding(.horizontal, 8)
-                                .padding(.vertical, 3)
-                                .background(Color.white.opacity(0.9))
-                                .clipShape(Capsule())
-                                .overlay { Capsule().strokeBorder(ink, lineWidth: 1.5) }
-
-                            Text(languageManager.text("settings.ambassador.banner.title"))
-                                .font(.system(.title3, design: .rounded, weight: .heavy))
-                                .foregroundStyle(ink)
-
-                            Text(languageManager.text("settings.ambassador.banner.subtitle"))
-                                .font(.system(.caption, design: .rounded, weight: .semibold))
-                                .foregroundStyle(ink.opacity(0.72))
-                                .fixedSize(horizontal: false, vertical: true)
-                        }
-
-                        Spacer(minLength: 0)
-
-                        Image(systemName: "arrow.right")
-                            .font(.system(size: 16, weight: .heavy))
-                            .foregroundStyle(ink)
-                            .frame(width: 34, height: 34)
-                            .background(Color.white.opacity(0.9))
-                            .clipShape(Circle())
-                            .overlay { Circle().strokeBorder(ink, lineWidth: 2) }
+            HStack(spacing: 14) {
+                Image(systemName: "sparkles")
+                    .font(.system(size: 18, weight: .medium))
+                    .foregroundStyle(DS.accentSoft)
+                    .frame(width: 44, height: 44)
+                    .background(DS.surface, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 12, style: .continuous)
+                            .strokeBorder(DS.hairline, lineWidth: 1)
                     }
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 16)
+
+                VStack(alignment: .leading, spacing: 3) {
+                    Text(languageManager.text("settings.ambassador.banner.badge").uppercased())
+                        .font(DS.sans(.caption2, .semibold))
+                        .foregroundStyle(DS.accentSoft)
+                        .tracking(1.0)
+                    Text(languageManager.text("settings.ambassador.banner.title"))
+                        .font(DS.title(.headline, .semibold))
+                        .foregroundStyle(DS.ink)
+                    Text(languageManager.text("settings.ambassador.banner.subtitle"))
+                        .font(DS.sans(.caption, .medium))
+                        .foregroundStyle(DS.inkSecondary)
+                        .fixedSize(horizontal: false, vertical: true)
                 }
-                .clipShape(RoundedRectangle(cornerRadius: radius, style: .continuous))
-                .overlay {
-                    RoundedRectangle(cornerRadius: radius, style: .continuous)
-                        .strokeBorder(ink, lineWidth: 3)
-                }
+
+                Spacer(minLength: 0)
+
+                Image(systemName: "chevron.right")
+                    .font(.system(size: 13, weight: .semibold))
+                    .foregroundStyle(DS.inkTertiary)
             }
-            .padding(.bottom, depth)
+            .padding(16)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(DS.accentTint, in: RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
         }
-        .buttonStyle(BrutalCardButtonStyle(depth: depth))
+        .buttonStyle(SoftPressButtonStyle())
     }
 
     // MARK: - Building blocks
 
-    private func sectionHeader(_ title: String) -> some View {
-        Text(title.uppercased())
-            .font(.system(.caption, design: .rounded, weight: .heavy))
-            .foregroundStyle(ink.opacity(0.55))
-            .tracking(1.2)
-            .padding(.horizontal, 28)
-    }
-
-    private var divider: some View {
-        Rectangle()
-            .fill(ink)
-            .frame(height: 2)
-    }
-
-    private func iconBadge(name: String, bg: Color) -> some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 10, style: .continuous)
-                .fill(bg)
-                .overlay {
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .strokeBorder(ink, lineWidth: 2)
-                }
-            Image(systemName: name)
-                .font(.system(size: 16, weight: .heavy))
-                .foregroundStyle(ink)
+    @ViewBuilder
+    private func section<Content: View>(_ title: String, @ViewBuilder content: () -> Content) -> some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text(title.uppercased())
+                .font(DS.sans(.caption2, .semibold))
+                .foregroundStyle(DS.inkTertiary)
+                .tracking(1.2)
+                .padding(.horizontal, 24)
+            content()
         }
-        .frame(width: 40, height: 40)
     }
 
-    private func statRow(icon: String, iconBg: Color, title: String, subtitle: String) -> some View {
+    @ViewBuilder
+    private func groupedCard<Content: View>(@ViewBuilder content: () -> Content) -> some View {
+        VStack(spacing: 0) {
+            content()
+        }
+        .dsCard(padding: 0)
+        .padding(.horizontal, 20)
+    }
+
+    private var rowDivider: some View {
+        Rectangle()
+            .fill(DS.hairline)
+            .frame(height: 1)
+            .padding(.leading, 66)
+    }
+
+    private func iconBadge(name: String, tint: Color = DS.accentSoft, bg: Color = DS.accentTint) -> some View {
+        Image(systemName: name)
+            .font(.system(size: 16, weight: .medium))
+            .foregroundStyle(tint)
+            .frame(width: 38, height: 38)
+            .background(bg, in: Circle())
+    }
+
+    private func statRow(icon: String, title: String, subtitle: String) -> some View {
         HStack(spacing: 14) {
-            iconBadge(name: icon, bg: iconBg)
+            iconBadge(name: icon)
             VStack(alignment: .leading, spacing: 2) {
                 Text(title)
-                    .font(.system(.headline, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink)
+                    .font(DS.title(.subheadline, .semibold))
+                    .foregroundStyle(DS.ink)
                 Text(subtitle)
-                    .font(.system(.caption, design: .rounded, weight: .semibold))
-                    .foregroundStyle(ink.opacity(0.55))
+                    .font(DS.sans(.caption, .medium))
+                    .foregroundStyle(DS.inkSecondary)
             }
             Spacer()
         }
@@ -426,7 +372,6 @@ struct SettingsView: View {
 
     private func actionRow(
         icon: String,
-        iconBg: Color,
         title: String,
         subtitle: String? = nil,
         destructive: Bool = false,
@@ -434,42 +379,44 @@ struct SettingsView: View {
     ) -> some View {
         Button(action: action) {
             HStack(spacing: 14) {
-                iconBadge(name: icon, bg: iconBg)
+                iconBadge(
+                    name: icon,
+                    tint: destructive ? Self.destructive : DS.accentSoft,
+                    bg: destructive ? Self.destructiveTint : DS.accentTint
+                )
                 VStack(alignment: .leading, spacing: 2) {
                     Text(title)
-                        .font(.system(.body, design: .rounded, weight: .semibold))
-                        .foregroundStyle(destructive ? Color(red: 0.85, green: 0.1, blue: 0.2) : ink)
+                        .font(DS.sans(.body, .medium))
+                        .foregroundStyle(destructive ? Self.destructive : DS.ink)
                     if let subtitle {
                         Text(subtitle)
-                            .font(.system(.caption, design: .rounded, weight: .semibold))
-                            .foregroundStyle(ink.opacity(0.5))
+                            .font(DS.sans(.caption, .medium))
+                            .foregroundStyle(DS.inkSecondary)
                     }
                 }
                 Spacer()
                 Image(systemName: "chevron.right")
-                    .font(.system(size: 13, weight: .heavy))
-                    .foregroundStyle(ink.opacity(0.4))
+                    .font(.system(size: 12, weight: .semibold))
+                    .foregroundStyle(DS.inkTertiary)
             }
             .padding(.horizontal, 14)
             .padding(.vertical, 12)
             .contentShape(Rectangle())
         }
-        .buttonStyle(.plain)
+        .buttonStyle(SoftPressButtonStyle())
     }
 
     private func infoRow(label: String, value: String) -> some View {
         HStack {
             Text(label)
-                .font(.system(.body, design: .rounded, weight: .semibold))
-                .foregroundStyle(ink)
+                .font(DS.sans(.body, .medium))
+                .foregroundStyle(DS.ink)
             Spacer()
             Text(value)
-                .font(.system(.body, design: .rounded, weight: .heavy))
-                .foregroundStyle(ink.opacity(0.55))
+                .font(DS.sans(.body, .medium))
+                .foregroundStyle(DS.inkSecondary)
         }
         .padding(.horizontal, 14)
         .padding(.vertical, 14)
     }
 }
-
-// brutalCard() modifier is shared from ProfileView.swift
