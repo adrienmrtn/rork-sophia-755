@@ -17,16 +17,13 @@ struct ProfileView: View {
     @State private var appeared: Bool = false
     @State private var showSubjectDetails: Bool = false
 
-    private let ink = BrutalPalette.ink
-    private let cream = BrutalPalette.cream
-
     var body: some View {
         NavigationStack {
             ZStack {
-                cream.ignoresSafeArea()
+                DS.canvas.ignoresSafeArea()
 
                 ScrollView {
-                    VStack(alignment: .leading, spacing: 22) {
+                    VStack(alignment: .leading, spacing: 26) {
                         titleBar
                             .padding(.horizontal, 20)
                             .padding(.top, 4)
@@ -34,7 +31,7 @@ struct ProfileView: View {
                         identityHeader
                             .padding(.horizontal, 20)
 
-                        bentoStats
+                        statsSection
                             .padding(.horizontal, 20)
 
                         radarSection
@@ -50,6 +47,7 @@ struct ProfileView: View {
                     .opacity(appeared ? 1 : 0)
                     .offset(y: appeared ? 0 : 12)
                 }
+                .scrollIndicators(.hidden)
             }
             .navigationBarHidden(true)
             .sensoryFeedback(.impact(weight: .light), trigger: hapticTrigger)
@@ -110,13 +108,13 @@ struct ProfileView: View {
         }
     }
 
-    // MARK: - Title bar (custom title + gear)
+    // MARK: - Title bar
 
     private var titleBar: some View {
         HStack(alignment: .center) {
             Text(languageManager.text("profile.title"))
-                .font(.system(.largeTitle, design: .rounded, weight: .heavy))
-                .foregroundStyle(ink)
+                .font(DS.title(.largeTitle, .semibold))
+                .foregroundStyle(DS.ink)
 
             Spacer()
 
@@ -124,19 +122,18 @@ struct ProfileView: View {
                 hapticTrigger += 1
                 showSettings = true
             } label: {
-                Image(systemName: "gearshape.fill")
-                    .font(.system(size: 18, weight: .heavy))
-                    .foregroundStyle(ink)
-                    .frame(width: 46, height: 46)
-                    .background(Color.white)
-                    .clipShape(Circle())
-                    .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
+                Image(systemName: "gearshape")
+                    .font(.system(size: 17, weight: .medium))
+                    .foregroundStyle(DS.inkSecondary)
+                    .frame(width: 44, height: 44)
+                    .background(DS.surface, in: Circle())
+                    .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
             }
-            .buttonStyle(BrutalIconButtonStyle())
+            .buttonStyle(ProfileCardPress())
         }
     }
 
-    // MARK: - Identity header (rank ring + nickname + streak inline)
+    // MARK: - Identity header
 
     private var nickname: String {
         let interests = OnboardingViewModel.userInterestKeys()
@@ -150,79 +147,72 @@ struct ProfileView: View {
     private var identityHeader: some View {
         let p = progressManager.globalLevelProgress
 
-        return ZStack(alignment: .top) {
-            RoundedRectangle(cornerRadius: 26, style: .continuous)
-                .fill(ink)
-                .offset(y: 7)
-
+        return VStack(spacing: 16) {
             HStack(alignment: .center, spacing: 16) {
-                GlobalRankRing(progress: p, size: 104)
+                GlobalRankRing(progress: p, size: 96)
 
-                VStack(alignment: .leading, spacing: 8) {
-                    HStack(spacing: 8) {
-                        Text(String(format: languageManager.text("common.levelShort"), p.level))
-                            .font(.system(.caption2, design: .rounded, weight: .black))
-                            .foregroundStyle(.white)
-                            .tracking(0.6)
-                            .padding(.horizontal, 9)
-                            .padding(.vertical, 4)
-                            .background(ink, in: Capsule())
-                        Text(p.rank.localizedName(language: languageManager.current))
-                            .font(.system(.caption, design: .rounded, weight: .black))
-                            .foregroundStyle(ink.opacity(0.55))
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.7)
-                    }
+                VStack(alignment: .leading, spacing: 6) {
+                    Text(p.rank.localizedName(language: languageManager.current).uppercased())
+                        .font(DS.sans(.caption2, .semibold))
+                        .foregroundStyle(DS.accentSoft)
+                        .tracking(1.2)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.7)
 
                     Text(nickname)
-                        .font(.system(size: 25, weight: .heavy, design: .rounded))
-                        .foregroundStyle(ink)
+                        .font(DS.title(.title2, .semibold))
+                        .foregroundStyle(DS.ink)
                         .lineLimit(2)
                         .minimumScaleFactor(0.8)
                         .fixedSize(horizontal: false, vertical: true)
 
-                    Text(languageManager.text("globalRank.title"))
-                        .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                        .foregroundStyle(ink.opacity(0.5))
+                    Text(String(format: languageManager.text("common.levelShort"), p.level))
+                        .font(DS.sans(.subheadline, .medium))
+                        .foregroundStyle(DS.inkSecondary)
                 }
 
                 Spacer(minLength: 0)
             }
-            .padding(18)
-            .background(Color.white)
-            .clipShape(.rect(cornerRadius: 26))
-            .overlay {
-                RoundedRectangle(cornerRadius: 26, style: .continuous)
-                    .strokeBorder(ink, lineWidth: 3)
+
+            VStack(spacing: 6) {
+                CalmProgressBar(fraction: p.progressToNextRank)
+                HStack {
+                    Text(languageManager.text("globalRank.title"))
+                        .font(DS.sans(.caption2, .medium))
+                        .foregroundStyle(DS.inkTertiary)
+                    Spacer()
+                    Text("\(Int(p.progressToNextRank * 100))%")
+                        .font(DS.sans(.caption2, .semibold))
+                        .foregroundStyle(DS.inkSecondary)
+                        .monospacedDigit()
+                }
             }
         }
-        .padding(.bottom, 7)
+        .dsCard()
     }
 
-    // MARK: - Bento stats
+    // MARK: - Stats
 
     private var completedCoursesCount: Int {
         ContentCatalog.activeCourses.filter { progressManager.courseStatus(for: $0.id) == .completed }.count
     }
 
-    private var bentoStats: some View {
+    private var statsSection: some View {
         let stats = progressManager.quizStatsSummary
         let cardsUnlocked = progressManager.unlockedCards.count
         let cardsTotal = ContentCatalog.activeCards.count
 
         return VStack(spacing: 14) {
-            streakTile
+            streakCard
 
             HStack(spacing: 14) {
-                bentoTile(
-                    icon: "checkmark.seal.fill",
-                    iconFill: BrutalPalette.pastel(for: .sciences),
+                statTile(
+                    icon: "checkmark.circle",
                     value: "\(completedCoursesCount)",
                     label: languageManager.text("profile.stats.coursesDone")
                 )
-                bentoTile(
+                statTile(
                     icon: "target",
-                    iconFill: BrutalPalette.pink,
                     value: "\(stats.successPercent)%",
                     label: languageManager.text("cards.successRate")
                 )
@@ -232,60 +222,45 @@ struct ProfileView: View {
         }
     }
 
-    private var streakTile: some View {
-        ZStack(alignment: .top) {
-            RoundedRectangle(cornerRadius: 22, style: .continuous).fill(ink).offset(y: 5)
-            VStack(alignment: .leading, spacing: 14) {
-                HStack(alignment: .center, spacing: 10) {
-                    AnimatedFlameBadge(size: 34, showGlow: false)
-                    HStack(alignment: .firstTextBaseline, spacing: 6) {
-                        Text("\(progressManager.streak)")
-                            .font(.system(size: 40, weight: .heavy, design: .rounded))
-                            .foregroundStyle(ink)
-                            .contentTransition(.numericText())
-                        Text(progressManager.streak <= 1 ? languageManager.text("common.streak.day") : languageManager.text("common.streak.days"))
-                            .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                            .foregroundStyle(ink.opacity(0.7))
-                    }
-                    Spacer()
-                }
-                weekStrip
+    private var streakCard: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            HStack(alignment: .firstTextBaseline, spacing: 8) {
+                Image(systemName: "flame.fill")
+                    .font(.system(size: 22, weight: .medium))
+                    .foregroundStyle(DS.accentSoft)
+                Text("\(progressManager.streak)")
+                    .font(DS.title(.largeTitle, .semibold))
+                    .foregroundStyle(DS.ink)
+                    .contentTransition(.numericText())
+                    .monospacedDigit()
+                Text(progressManager.streak <= 1 ? languageManager.text("common.streak.day") : languageManager.text("common.streak.days"))
+                    .font(DS.sans(.subheadline, .medium))
+                    .foregroundStyle(DS.inkSecondary)
+                Spacer()
             }
-            .padding(18)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .background(BrutalPalette.pastel(for: .histoire))
-            .clipShape(.rect(cornerRadius: 22))
-            .overlay { RoundedRectangle(cornerRadius: 22, style: .continuous).strokeBorder(ink, lineWidth: 3) }
+            weekStrip
         }
-        .padding(.bottom, 5)
+        .dsCard()
     }
 
-    private func bentoTile(icon: String, iconFill: Color, value: String, label: String) -> some View {
-        ZStack(alignment: .top) {
-            RoundedRectangle(cornerRadius: 20, style: .continuous).fill(ink).offset(y: 5)
-            VStack(alignment: .leading, spacing: 10) {
-                Image(systemName: icon)
-                    .font(.system(size: 16, weight: .black))
-                    .foregroundStyle(ink)
-                    .frame(width: 40, height: 40)
-                    .background(iconFill, in: Circle())
-                    .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
-                Text(value)
-                    .font(.system(size: 32, weight: .black, design: .rounded))
-                    .foregroundStyle(ink)
-                    .monospacedDigit()
-                Text(label)
-                    .font(.system(.caption, design: .rounded, weight: .black))
-                    .foregroundStyle(ink.opacity(0.55))
-                    .fixedSize(horizontal: false, vertical: true)
-            }
-            .frame(maxWidth: .infinity, minHeight: 120, alignment: .topLeading)
-            .padding(14)
-            .background(Color.white)
-            .clipShape(.rect(cornerRadius: 20))
-            .overlay { RoundedRectangle(cornerRadius: 20, style: .continuous).strokeBorder(ink, lineWidth: 2.5) }
+    private func statTile(icon: String, value: String, label: String) -> some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Image(systemName: icon)
+                .font(.system(size: 16, weight: .medium))
+                .foregroundStyle(DS.accentSoft)
+                .frame(width: 38, height: 38)
+                .background(DS.accentTint, in: Circle())
+            Text(value)
+                .font(DS.title(.title, .semibold))
+                .foregroundStyle(DS.ink)
+                .monospacedDigit()
+            Text(label)
+                .font(DS.sans(.caption, .medium))
+                .foregroundStyle(DS.inkSecondary)
+                .fixedSize(horizontal: false, vertical: true)
         }
-        .padding(.bottom, 5)
+        .frame(maxWidth: .infinity, minHeight: 120, alignment: .topLeading)
+        .dsCard(padding: 16)
     }
 
     private func cardsTile(unlocked: Int, total: Int) -> some View {
@@ -294,64 +269,46 @@ struct ProfileView: View {
             hapticTrigger += 1
             showAllCards = true
         } label: {
-            ZStack(alignment: .top) {
-                RoundedRectangle(cornerRadius: 20, style: .continuous).fill(ink).offset(y: 5)
-                VStack(alignment: .leading, spacing: 12) {
-                    HStack(spacing: 12) {
-                        Image(systemName: "rectangle.stack.fill")
-                            .font(.system(size: 16, weight: .black))
-                            .foregroundStyle(ink)
-                            .frame(width: 40, height: 40)
-                            .background(BrutalPalette.yellow, in: Circle())
-                            .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
+            VStack(alignment: .leading, spacing: 12) {
+                HStack(spacing: 12) {
+                    Image(systemName: "rectangle.stack")
+                        .font(.system(size: 16, weight: .medium))
+                        .foregroundStyle(DS.accentSoft)
+                        .frame(width: 38, height: 38)
+                        .background(DS.accentTint, in: Circle())
 
-                        HStack(alignment: .firstTextBaseline, spacing: 4) {
-                            Text("\(unlocked)")
-                                .font(.system(size: 30, weight: .black, design: .rounded))
-                                .foregroundStyle(ink)
-                                .monospacedDigit()
-                            Text("/ \(total)")
-                                .font(.system(.subheadline, design: .rounded, weight: .black))
-                                .foregroundStyle(ink.opacity(0.45))
-                        }
-
-                        Spacer()
-
-                        Text(languageManager.text("profile.stats.cards"))
-                            .font(.system(.caption, design: .rounded, weight: .black))
-                            .foregroundStyle(ink.opacity(0.55))
-                        Image(systemName: "arrow.right")
-                            .font(.system(size: 13, weight: .black))
-                            .foregroundStyle(ink)
+                    HStack(alignment: .firstTextBaseline, spacing: 4) {
+                        Text("\(unlocked)")
+                            .font(DS.title(.title2, .semibold))
+                            .foregroundStyle(DS.ink)
+                            .monospacedDigit()
+                        Text("/ \(total)")
+                            .font(DS.sans(.subheadline, .medium))
+                            .foregroundStyle(DS.inkTertiary)
                     }
 
-                    GeometryReader { geo in
-                        ZStack(alignment: .leading) {
-                            Capsule().fill(Color.white).overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
-                            Capsule()
-                                .fill(LinearGradient(colors: [BrutalPalette.pink, BrutalPalette.yellow], startPoint: .leading, endPoint: .trailing))
-                                .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
-                                .frame(width: max(14, geo.size.width * CGFloat(fraction)))
-                        }
-                    }
-                    .frame(height: 14)
+                    Spacer()
+
+                    Text(languageManager.text("profile.stats.cards"))
+                        .font(DS.sans(.caption, .medium))
+                        .foregroundStyle(DS.inkSecondary)
+                    Image(systemName: "chevron.right")
+                        .font(.system(size: 12, weight: .semibold))
+                        .foregroundStyle(DS.inkTertiary)
                 }
-                .padding(16)
-                .background(Color.white)
-                .clipShape(.rect(cornerRadius: 20))
-                .overlay { RoundedRectangle(cornerRadius: 20, style: .continuous).strokeBorder(ink, lineWidth: 2.5) }
+
+                CalmProgressBar(fraction: fraction)
             }
-            .padding(.bottom, 5)
+            .dsCard(padding: 16)
         }
-        .buttonStyle(BrutalCardButtonStyle(depth: 3))
+        .buttonStyle(ProfileCardPress())
     }
 
     private var weekStrip: some View {
         let calendar = Calendar.current
         let today = calendar.startOfDay(for: Date())
         let dayLetters = ["L", "M", "M", "J", "V", "S", "D"]
-        // Build last 7 days ending today; Monday-first.
-        let weekday = calendar.component(.weekday, from: today) // 1 = Sunday
+        let weekday = calendar.component(.weekday, from: today)
         let mondayOffset = ((weekday + 5) % 7)
         let monday = calendar.date(byAdding: .day, value: -mondayOffset, to: today) ?? today
 
@@ -367,7 +324,6 @@ struct ProfileView: View {
                 let isFuture = date > today
                 let dateStr = fmt.string(from: date)
 
-                // A day is "done" if it's within the current streak window ending on lastActive.
                 let isDone: Bool = {
                     guard let last = lastActive,
                           let lastDate = fmt.date(from: last) else { return false }
@@ -378,22 +334,23 @@ struct ProfileView: View {
 
                 VStack(spacing: 6) {
                     Text(dayLetters[i])
-                        .font(.system(.caption2, design: .rounded, weight: .heavy))
-                        .foregroundStyle(ink.opacity(isFuture ? 0.25 : 0.55))
+                        .font(DS.sans(.caption2, .medium))
+                        .foregroundStyle(DS.inkTertiary)
                     ZStack {
-                        Circle()
-                            .fill(isDone ? ink : Color.white)
-                            .overlay { Circle().strokeBorder(ink, lineWidth: 2) }
                         if isDone {
-                            Image(systemName: "flame.fill")
-                                .font(.system(size: 12, weight: .heavy))
+                            Circle().fill(DS.accent)
+                            Image(systemName: "checkmark")
+                                .font(.system(size: 11, weight: .bold))
                                 .foregroundStyle(.white)
                         } else if isToday {
-                            Circle().fill(ink).frame(width: 6, height: 6)
+                            Circle().fill(DS.surface)
+                            Circle().strokeBorder(DS.accentSoft, lineWidth: 2)
+                        } else {
+                            Circle().fill(DS.surfaceMuted)
                         }
                     }
                     .frame(width: 30, height: 30)
-                    .opacity(isFuture ? 0.4 : 1)
+                    .opacity(isFuture ? 0.5 : 1)
                 }
                 .frame(maxWidth: .infinity)
             }
@@ -408,37 +365,28 @@ struct ProfileView: View {
             showFavorites = true
         } label: {
             HStack(spacing: 14) {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .fill(BrutalPalette.pink)
-                        .overlay {
-                            RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                .strokeBorder(ink, lineWidth: 2)
-                        }
-                    Image(systemName: "heart.fill")
-                        .font(.system(size: 16, weight: .heavy))
-                        .foregroundStyle(ink)
-                }
-                .frame(width: 40, height: 40)
+                Image(systemName: "bookmark.fill")
+                    .font(.system(size: 16, weight: .medium))
+                    .foregroundStyle(DS.accentSoft)
+                    .frame(width: 40, height: 40)
+                    .background(DS.accentTint, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
 
                 VStack(alignment: .leading, spacing: 2) {
                     Text(languageManager.text("profile.favorites"))
-                        .font(.system(.headline, design: .rounded, weight: .heavy))
-                        .foregroundStyle(ink)
+                        .font(DS.title(.headline, .semibold))
+                        .foregroundStyle(DS.ink)
                     Text(String(format: languageManager.text("profile.favorites.count"), progressManager.favoriteCourses.count))
-                        .font(.system(.caption, design: .rounded, weight: .semibold))
-                        .foregroundStyle(ink.opacity(0.55))
+                        .font(DS.sans(.caption, .medium))
+                        .foregroundStyle(DS.inkSecondary)
                 }
                 Spacer()
-                Image(systemName: "arrow.right")
-                    .font(.system(size: 14, weight: .heavy))
-                    .foregroundStyle(ink)
+                Image(systemName: "chevron.right")
+                    .font(.system(size: 13, weight: .semibold))
+                    .foregroundStyle(DS.inkTertiary)
             }
-            .padding(.horizontal, 14)
-            .padding(.vertical, 14)
+            .dsCard(padding: 14)
         }
-        .buttonStyle(BrutalCardButtonStyle(depth: 4))
-        .brutalCard()
+        .buttonStyle(ProfileCardPress())
     }
 
     // MARK: - Quiz section
@@ -446,9 +394,9 @@ struct ProfileView: View {
     private var quizSection: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack {
-                Text(languageManager.text("profile.quiz.recent"))
-                    .font(.system(.caption, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink.opacity(0.55))
+                Text(languageManager.text("profile.quiz.recent").uppercased())
+                    .font(DS.sans(.caption2, .semibold))
+                    .foregroundStyle(DS.inkTertiary)
                     .tracking(1.2)
                 Spacer()
                 if store.isPremium && !progressManager.recentQuizzes.isEmpty {
@@ -457,12 +405,12 @@ struct ProfileView: View {
                         showAllQuizzes = true
                     } label: {
                         Text(languageManager.text("common.seeMoreArrow"))
-                            .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                            .foregroundStyle(ink)
+                            .font(DS.sans(.subheadline, .medium))
+                            .foregroundStyle(DS.accentSoft)
                     }
                 }
             }
-            .padding(.horizontal, 8)
+            .padding(.horizontal, 4)
 
             if progressManager.recentQuizzes.isEmpty {
                 emptyQuizzesCard
@@ -479,11 +427,11 @@ struct ProfileView: View {
                             }
                         )
                         if idx < min(2, progressManager.recentQuizzes.count - 1) {
-                            Rectangle().fill(ink).frame(height: 2)
+                            Rectangle().fill(DS.hairline).frame(height: 1)
                         }
                     }
                 }
-                .brutalCard()
+                .dsCard(padding: 0)
             } else {
                 emptyQuizzesCard
             }
@@ -492,32 +440,24 @@ struct ProfileView: View {
 
     private var emptyQuizzesCard: some View {
         HStack(spacing: 14) {
-            ZStack {
-                RoundedRectangle(cornerRadius: 10, style: .continuous)
-                    .fill(BrutalPalette.pastel(for: .sciences))
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 10, style: .continuous)
-                            .strokeBorder(ink, lineWidth: 2)
-                    }
-                Image(systemName: "questionmark.bubble.fill")
-                    .font(.system(size: 16, weight: .heavy))
-                    .foregroundStyle(ink)
-            }
-            .frame(width: 40, height: 40)
+            Image(systemName: "questionmark.circle")
+                .font(.system(size: 16, weight: .medium))
+                .foregroundStyle(DS.accentSoft)
+                .frame(width: 40, height: 40)
+                .background(DS.accentTint, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
 
             VStack(alignment: .leading, spacing: 2) {
                 Text(languageManager.text("profile.quiz.emptyTitle"))
-                    .font(.system(.headline, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink)
+                    .font(DS.title(.headline, .semibold))
+                    .foregroundStyle(DS.ink)
                 Text(languageManager.text("profile.quiz.emptySubtitle"))
-                    .font(.system(.caption, design: .rounded, weight: .semibold))
-                    .foregroundStyle(ink.opacity(0.55))
+                    .font(DS.sans(.caption, .medium))
+                    .foregroundStyle(DS.inkSecondary)
                     .fixedSize(horizontal: false, vertical: true)
             }
             Spacer(minLength: 0)
         }
-        .padding(14)
-        .brutalCard()
+        .dsCard(padding: 14)
     }
 
     // MARK: - Subject mastery radar
@@ -530,14 +470,11 @@ struct ProfileView: View {
 
     private var radarSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            HStack {
-                Text(languageManager.text("profile.mastery.title"))
-                    .font(.system(.caption, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink.opacity(0.55))
-                    .tracking(1.2)
-                Spacer()
-            }
-            .padding(.horizontal, 8)
+            Text(languageManager.text("profile.mastery.title").uppercased())
+                .font(DS.sans(.caption2, .semibold))
+                .foregroundStyle(DS.inkTertiary)
+                .tracking(1.2)
+                .padding(.horizontal, 4)
 
             Button {
                 hapticTrigger += 1
@@ -545,30 +482,22 @@ struct ProfileView: View {
                     showSubjectDetails.toggle()
                 }
             } label: {
-                ZStack(alignment: .top) {
-                    RoundedRectangle(cornerRadius: 22, style: .continuous).fill(ink).offset(y: 5)
-                    VStack(spacing: 10) {
-                        SubjectRadarChart(values: radarValues)
-                            .frame(height: 250)
+                VStack(spacing: 10) {
+                    SubjectRadarChart(values: radarValues)
+                        .frame(height: 250)
 
-                        HStack(spacing: 6) {
-                            Text(languageManager.text(showSubjectDetails ? "profile.mastery.hide" : "profile.mastery.details"))
-                                .font(.system(.caption, design: .rounded, weight: .black))
-                                .foregroundStyle(ink.opacity(0.6))
-                            Image(systemName: showSubjectDetails ? "chevron.up" : "chevron.down")
-                                .font(.system(size: 11, weight: .black))
-                                .foregroundStyle(ink.opacity(0.6))
-                        }
+                    HStack(spacing: 6) {
+                        Text(languageManager.text(showSubjectDetails ? "profile.mastery.hide" : "profile.mastery.details"))
+                            .font(DS.sans(.caption, .medium))
+                            .foregroundStyle(DS.accentSoft)
+                        Image(systemName: showSubjectDetails ? "chevron.up" : "chevron.down")
+                            .font(.system(size: 11, weight: .semibold))
+                            .foregroundStyle(DS.accentSoft)
                     }
-                    .padding(16)
-                    .frame(maxWidth: .infinity)
-                    .background(Color.white)
-                    .clipShape(.rect(cornerRadius: 22))
-                    .overlay { RoundedRectangle(cornerRadius: 22, style: .continuous).strokeBorder(ink, lineWidth: 3) }
                 }
-                .padding(.bottom, 5)
+                .dsCard(padding: 16)
             }
-            .buttonStyle(BrutalCardButtonStyle(depth: 3))
+            .buttonStyle(ProfileCardPress())
 
             if showSubjectDetails {
                 LazyVGrid(columns: [GridItem(.flexible(), spacing: 14), GridItem(.flexible(), spacing: 14)], spacing: 14) {
@@ -585,6 +514,36 @@ struct ProfileView: View {
     }
 }
 
+// MARK: - Calm progress bar
+
+struct CalmProgressBar: View {
+    let fraction: Double
+    var height: CGFloat = 6
+
+    var body: some View {
+        GeometryReader { geo in
+            ZStack(alignment: .leading) {
+                Capsule().fill(DS.hairline)
+                Capsule()
+                    .fill(DS.accent)
+                    .frame(width: max(fraction > 0 ? height : 0, geo.size.width * CGFloat(fraction)))
+            }
+        }
+        .frame(height: height)
+    }
+}
+
+// MARK: - Profile press feedback
+
+private struct ProfileCardPress: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .scaleEffect(configuration.isPressed ? 0.98 : 1)
+            .opacity(configuration.isPressed ? 0.92 : 1)
+            .animation(.spring(response: 0.2, dampingFraction: 0.8), value: configuration.isPressed)
+    }
+}
+
 // MARK: - Subject progress card
 
 private struct SubjectProgressCard: View {
@@ -592,9 +551,6 @@ private struct SubjectProgressCard: View {
     let subject: Subject
     let xp: Int
 
-    private let ink = BrutalPalette.ink
-
-    /// XP-based tiers. NIV 1: 0-49, 2: 50-149, 3: 150-349, 4: 350-699, 5: 700+.
     private static let tiers: [(level: Int, lower: Int, upper: Int)] = ProgressManager.subjectXPTiers
 
     private var currentTier: (level: Int, lower: Int, upper: Int) {
@@ -610,60 +566,39 @@ private struct SubjectProgressCard: View {
     }
 
     var body: some View {
-        ZStack(alignment: .top) {
-            RoundedRectangle(cornerRadius: 18, style: .continuous)
-                .fill(ink)
-                .offset(y: 4)
-
-            VStack(alignment: .leading, spacing: 10) {
-                SubjectBadgeView(subject: subject, unlocked: true, emojiSize: 36, cornerRadius: 14)
-                    .frame(width: 56, height: 56)
-
-                Text(subject.localizedShortName(language: languageManager.current))
-                    .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink)
-                    .lineLimit(2)
-                    .minimumScaleFactor(0.85)
-
+        VStack(alignment: .leading, spacing: 10) {
+            HStack(spacing: 10) {
+                Image(systemName: subject.icon)
+                    .font(.system(size: 18, weight: .medium))
+                    .foregroundStyle(DS.accentSoft)
+                    .frame(width: 44, height: 44)
+                    .background(DS.accentTint, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+                Spacer(minLength: 0)
                 Text(String(format: languageManager.text("common.levelShort"), currentTier.level))
-                    .font(.system(.caption2, design: .rounded, weight: .heavy))
-                    .foregroundStyle(.white)
-                    .tracking(0.6)
+                    .font(DS.sans(.caption2, .semibold))
+                    .foregroundStyle(DS.accentSoft)
                     .padding(.horizontal, 8)
                     .padding(.vertical, 3)
-                    .background(ink, in: Capsule())
-
-                GeometryReader { geo in
-                    ZStack(alignment: .leading) {
-                        Capsule()
-                            .fill(Color(white: 0.94))
-                            .overlay { Capsule().strokeBorder(ink, lineWidth: 1.5) }
-                        Capsule()
-                            .fill(BrutalPalette.pastel(for: subject))
-                            .overlay { Capsule().strokeBorder(ink, lineWidth: 1.5) }
-                            .frame(width: max(8, geo.size.width * progressInLevel))
-                    }
-                }
-                .frame(height: 8)
-
-                Text(progressLabel)
-                    .font(.system(.caption2, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink.opacity(0.55))
-                    .lineLimit(2)
-
-                Spacer(minLength: 0)
+                    .background(DS.accentTint, in: Capsule())
             }
-            .padding(14)
-            .frame(maxWidth: .infinity, minHeight: 168, alignment: .topLeading)
-            .background(Color.white)
-            .clipShape(.rect(cornerRadius: 18))
-            .overlay {
-                RoundedRectangle(cornerRadius: 18, style: .continuous)
-                    .strokeBorder(ink, lineWidth: 2.5)
-            }
+
+            Text(subject.localizedShortName(language: languageManager.current))
+                .font(DS.title(.subheadline, .semibold))
+                .foregroundStyle(DS.ink)
+                .lineLimit(2)
+                .minimumScaleFactor(0.85)
+
+            CalmProgressBar(fraction: progressInLevel, height: 6)
+
+            Text(progressLabel)
+                .font(DS.sans(.caption2, .medium))
+                .foregroundStyle(DS.inkSecondary)
+                .lineLimit(2)
+
+            Spacer(minLength: 0)
         }
-        .padding(.bottom, 4)
-        .frame(maxWidth: .infinity, minHeight: 176, maxHeight: 176)
+        .frame(maxWidth: .infinity, minHeight: 168, alignment: .topLeading)
+        .dsCard(padding: 14)
     }
 
     private var progressLabel: String {
@@ -680,17 +615,16 @@ private struct SubjectProgressCard: View {
 
 private struct GlobalRankRing: View {
     let progress: GlobalLevelProgress
-    var size: CGFloat = 104
+    var size: CGFloat = 96
 
     @State private var appeared = false
-    private let ink = BrutalPalette.ink
 
-    private var inner: CGFloat { size * 0.66 }
+    private var inner: CGFloat { size * 0.7 }
 
     var body: some View {
         ZStack {
             Circle()
-                .stroke(ink.opacity(0.1), lineWidth: size * 0.085)
+                .stroke(DS.hairline, lineWidth: size * 0.07)
                 .frame(width: size, height: size)
 
             Circle()
@@ -701,31 +635,19 @@ private struct GlobalRankRing: View {
                         startPoint: .topLeading,
                         endPoint: .bottomTrailing
                     ),
-                    style: StrokeStyle(lineWidth: size * 0.085, lineCap: .round)
+                    style: StrokeStyle(lineWidth: size * 0.07, lineCap: .round)
                 )
                 .rotationEffect(.degrees(-90))
                 .frame(width: size, height: size)
                 .animation(.easeOut(duration: 0.9), value: appeared)
 
-            // Calm static rank medallion (no perpetual animation).
             ZStack {
                 Circle()
-                    .fill(ink)
+                    .fill(progress.rank.primaryColor.opacity(0.16))
                     .frame(width: inner, height: inner)
-                    .offset(y: 3)
-                Circle()
-                    .fill(
-                        LinearGradient(
-                            colors: [progress.rank.primaryColor, progress.rank.secondaryColor],
-                            startPoint: .topLeading,
-                            endPoint: .bottomTrailing
-                        )
-                    )
-                    .frame(width: inner, height: inner)
-                    .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
                 Image(systemName: progress.rank.symbolName)
-                    .font(.system(size: inner * 0.44, weight: .black))
-                    .foregroundStyle(ink)
+                    .font(.system(size: inner * 0.42, weight: .semibold))
+                    .foregroundStyle(progress.rank.primaryColor)
             }
             .scaleEffect(appeared ? 1 : 0.8)
         }
@@ -744,7 +666,6 @@ private struct SubjectRadarChart: View {
     let values: [(subject: Subject, value: Double)]
 
     @State private var appeared = false
-    private let ink = BrutalPalette.ink
 
     private func angle(_ i: Int) -> Double { -.pi / 2 + Double(i) * (.pi / 3) }
 
@@ -783,7 +704,7 @@ private struct SubjectRadarChart: View {
             ZStack {
                 ForEach(1...3, id: \.self) { ring in
                     hexPath(center, maxR * CGFloat(ring) / 3)
-                        .stroke(ink.opacity(0.12), lineWidth: 1.5)
+                        .stroke(DS.hairline, lineWidth: 1)
                 }
 
                 Path { p in
@@ -792,32 +713,26 @@ private struct SubjectRadarChart: View {
                         p.addLine(to: point(center, maxR, i))
                     }
                 }
-                .stroke(ink.opacity(0.12), lineWidth: 1.5)
+                .stroke(DS.hairline, lineWidth: 1)
 
                 dataPath(center, maxR, scale)
-                    .fill(
-                        LinearGradient(
-                            colors: [BrutalPalette.pink.opacity(0.4), BrutalPalette.yellow.opacity(0.4)],
-                            startPoint: .top,
-                            endPoint: .bottom
-                        )
-                    )
+                    .fill(DS.accentSoft.opacity(0.16))
 
                 dataPath(center, maxR, scale)
-                    .stroke(ink, lineWidth: 2.5)
+                    .stroke(DS.accentSoft, lineWidth: 2)
 
                 ForEach(0..<6, id: \.self) { i in
                     Circle()
-                        .fill(BrutalPalette.pink)
-                        .frame(width: 9, height: 9)
-                        .overlay { Circle().strokeBorder(ink, lineWidth: 1.8) }
+                        .fill(DS.accentSoft)
+                        .frame(width: 8, height: 8)
                         .position(point(center, max(2, maxR * CGFloat(values[i].value) * scale), i))
                 }
 
                 ForEach(0..<6, id: \.self) { i in
-                    Text(values[i].subject.emoji)
-                        .font(.system(size: 22))
-                        .position(point(center, maxR + 20, i))
+                    Image(systemName: values[i].subject.icon)
+                        .font(.system(size: 16, weight: .medium))
+                        .foregroundStyle(DS.inkSecondary)
+                        .position(point(center, maxR + 22, i))
                 }
             }
             .onAppear {
@@ -839,8 +754,6 @@ private struct QuizRowView: View {
     let total: Int
     let onRetry: () -> Void
 
-    private let ink = BrutalPalette.ink
-
     /// Score on /5 scale.
     private var fiveScore: Int {
         guard total > 0 else { return 0 }
@@ -851,20 +764,20 @@ private struct QuizRowView: View {
         HStack(spacing: 12) {
             VStack(alignment: .leading, spacing: 6) {
                 Text(course.title)
-                    .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink)
+                    .font(DS.title(.subheadline, .semibold))
+                    .foregroundStyle(DS.ink)
                     .lineLimit(2)
                     .multilineTextAlignment(.leading)
 
                 HStack(spacing: 4) {
                     ForEach(0..<5, id: \.self) { i in
                         Image(systemName: i < fiveScore ? "star.fill" : "star")
-                            .font(.system(size: 11, weight: .heavy))
-                            .foregroundStyle(i < fiveScore ? ink : ink.opacity(0.3))
+                            .font(.system(size: 11, weight: .medium))
+                            .foregroundStyle(i < fiveScore ? DS.accentSoft : DS.inkTertiary)
                     }
                     Text("\(fiveScore)/5")
-                        .font(.system(.caption2, design: .rounded, weight: .heavy))
-                        .foregroundStyle(ink.opacity(0.55))
+                        .font(DS.sans(.caption2, .medium))
+                        .foregroundStyle(DS.inkSecondary)
                         .padding(.leading, 4)
                 }
             }
@@ -874,17 +787,16 @@ private struct QuizRowView: View {
             Button(action: onRetry) {
                 HStack(spacing: 4) {
                     Image(systemName: "arrow.clockwise")
-                        .font(.system(size: 11, weight: .heavy))
+                        .font(.system(size: 11, weight: .semibold))
                     Text(languageManager.text("profile.quiz.retry"))
-                        .font(.system(.caption, design: .rounded, weight: .heavy))
+                        .font(DS.sans(.caption, .semibold))
                 }
-                .foregroundStyle(ink)
+                .foregroundStyle(DS.accent)
                 .padding(.horizontal, 12)
                 .padding(.vertical, 8)
-                .background(BrutalPalette.pastel(for: course.subject), in: Capsule())
-                .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
+                .background(DS.accentTint, in: Capsule())
             }
-            .buttonStyle(BrutalIconButtonStyle(depth: 2))
+            .buttonStyle(ProfileCardPress())
         }
         .padding(.horizontal, 14)
         .padding(.vertical, 12)
@@ -900,27 +812,23 @@ struct AllQuizzesView: View {
     var onDismiss: () -> Void
     @State private var hapticTrigger: Int = 0
 
-    private let ink = BrutalPalette.ink
-    private let cream = BrutalPalette.cream
-
     var body: some View {
         ZStack {
-            cream.ignoresSafeArea()
+            DS.canvas.ignoresSafeArea()
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
                     HStack {
                         Text(languageManager.text("profile.quiz.all"))
-                            .font(.system(.largeTitle, design: .rounded, weight: .heavy))
-                            .foregroundStyle(ink)
+                            .font(DS.title(.largeTitle, .semibold))
+                            .foregroundStyle(DS.ink)
                         Spacer()
                         Button(action: onDismiss) {
                             Image(systemName: "xmark")
-                                .font(.system(size: 15, weight: .heavy))
-                                .foregroundStyle(ink)
-                                .frame(width: 38, height: 38)
-                                .background(Color.white)
-                                .clipShape(Circle())
-                                .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
+                                .font(.system(size: 15, weight: .medium))
+                                .foregroundStyle(DS.inkSecondary)
+                                .frame(width: 40, height: 40)
+                                .background(DS.surface, in: Circle())
+                                .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
                         }
                     }
                     .padding(.horizontal, 20)
@@ -930,8 +838,8 @@ struct AllQuizzesView: View {
 
                     if progressManager.recentQuizzes.isEmpty {
                         Text(languageManager.text("profile.quiz.none"))
-                            .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                            .foregroundStyle(ink.opacity(0.55))
+                            .font(DS.sans(.subheadline))
+                            .foregroundStyle(DS.inkSecondary)
                             .padding(.horizontal, 20)
                     } else {
                         VStack(spacing: 0) {
@@ -946,17 +854,18 @@ struct AllQuizzesView: View {
                                     }
                                 )
                                 if idx < progressManager.recentQuizzes.count - 1 {
-                                    Rectangle().fill(ink).frame(height: 2)
+                                    Rectangle().fill(DS.hairline).frame(height: 1)
                                 }
                             }
                         }
-                        .brutalCard()
+                        .dsCard(padding: 0)
                         .padding(.horizontal, 20)
                         .padding(.bottom, 40)
                     }
                     }
                 }
             }
+            .scrollIndicators(.hidden)
         }
         .sensoryFeedback(.impact(weight: .light), trigger: hapticTrigger)
     }
@@ -977,12 +886,11 @@ private struct FavoritesSheet: View {
             )
             Button(action: onDismiss) {
                 Image(systemName: "xmark")
-                    .font(.system(size: 15, weight: .heavy))
-                    .foregroundStyle(BrutalPalette.ink)
-                    .frame(width: 38, height: 38)
-                    .background(Color.white)
-                    .clipShape(Circle())
-                    .overlay { Circle().strokeBorder(BrutalPalette.ink, lineWidth: 2.5) }
+                    .font(.system(size: 15, weight: .medium))
+                    .foregroundStyle(DS.inkSecondary)
+                    .frame(width: 40, height: 40)
+                    .background(DS.surface, in: Circle())
+                    .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
             }
             .padding(.trailing, 20)
             .padding(.top, 10)
@@ -994,6 +902,9 @@ private struct FavoritesSheet: View {
 }
 
 // MARK: - Shared button styles & card modifier
+//
+// These are used by other screens (Settings, SubjectCourses, CardViews) that still use the
+// legacy neo-brutalist chrome, so they are kept intact and unchanged.
 
 struct BrutalIconButtonStyle: ButtonStyle {
     var depth: CGFloat = 2
@@ -1051,7 +962,7 @@ struct BrutalProfileCardModifier: ViewModifier {
 }
 
 extension View {
-    /// Brutalist card used across the Profile screen.
+    /// Brutalist card used across the Settings / SubjectCourses / Cards screens.
     func brutalCard() -> some View {
         modifier(BrutalProfileCardModifier())
     }
