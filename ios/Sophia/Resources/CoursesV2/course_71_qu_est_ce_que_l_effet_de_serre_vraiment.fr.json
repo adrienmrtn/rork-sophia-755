@@ -16,8 +16,14 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "Imaginez une voiture fermée au soleil : les vitres laissent entrer la lumière, mais la chaleur a du mal à ressortir. L'habitacle se réchauffe. L'[[effet de serre]] de la Terre marche un peu comme ça, avec l'air à la place du verre." },
-        { "type": "paragraph", "text": "Ce phénomène est **naturel** et vital. Sans lui, la température moyenne du globe chuterait vers **-18 °C**. Avec lui, on est autour de **+15 °C**. Le problème actuel n'est pas son existence : c'est son **amplification** rapide par nos activités." }
+        {
+          "type": "paragraph",
+          "text": "Imaginez une voiture fermée au soleil : les vitres laissent entrer la lumière, mais la chaleur a du mal à ressortir. L'habitacle se réchauffe. L'[[effet de serre]] de la Terre marche un peu comme ça, avec l'air à la place du verre."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce phénomène est **naturel** et vital. Sans lui, la température moyenne du globe chuterait vers **-18 °C**. Avec lui, on est autour de **+15 °C**. Le problème actuel n'est pas son existence : c'est son **amplification** rapide par nos activités."
+        }
       ]
     },
     {
@@ -25,9 +31,24 @@
       "title": "Comment la planète garde sa chaleur",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Le Soleil envoie surtout de la lumière visible. L'atmosphère la laisse passer. Le sol et les océans se réchauffent, puis renvoient cette énergie sous forme de **chaleur infrarouge**, des ondes plus « longues » que la lumière visible." },
-        { "type": "paragraph", "text": "Certains gaz, les [[gaz à effet de serre]], absorbent cette chaleur et la renvoient dans toutes les directions, y compris vers le sol. L'azote et l'oxygène, majoritaires dans l'air, ne font presque pas ce travail. La vapeur d'eau, le **CO₂** et le **méthane** le font très bien." },
-        { "type": "funFact", "text": "Le nom « effet de serre » est un peu trompeur. Une vraie serre chauffe surtout en bloquant l'air chaud qui monte. L'atmosphère, elle, piège la chaleur par absorption des rayons infrarouges." }
+        {
+          "type": "paragraph",
+          "text": "Le Soleil envoie surtout de la lumière visible. L'atmosphère la laisse passer. Le sol et les océans se réchauffent, puis renvoient cette énergie sous forme de **chaleur infrarouge**, des ondes plus « longues » que la lumière visible."
+        },
+        {
+          "type": "image",
+          "asset": "factory_chimneys_greenhouse_gas_emissions",
+          "ratio": "auto",
+          "caption": "Les émissions industrielles renforcent l'effet de serre."
+        },
+        {
+          "type": "paragraph",
+          "text": "Certains gaz, les [[gaz à effet de serre]], absorbent cette chaleur et la renvoient dans toutes les directions, y compris vers le sol. L'azote et l'oxygène, majoritaires dans l'air, ne font presque pas ce travail. La vapeur d'eau, le **CO₂** et le **méthane** le font très bien."
+        },
+        {
+          "type": "funFact",
+          "text": "Le nom « effet de serre » est un peu trompeur. Une vraie serre chauffe surtout en bloquant l'air chaud qui monte. L'atmosphère, elle, piège la chaleur par absorption des rayons infrarouges."
+        }
       ]
     },
     {
@@ -35,8 +56,14 @@
       "title": "Quand l'humain épaissit la couverture",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Depuis la révolution industrielle, on brûle du charbon, du pétrole et du gaz. Ce carbone, enfoui sous terre depuis des millions d'années, repart dans l'air. La déforestation réduit aussi les forêts qui absorbaient du CO₂. L'élevage et la culture du riz ajoutent du méthane, environ **80 fois** plus « chauffant » que le CO₂ sur 20 ans." },
-        { "type": "paragraph", "text": "Résultat : la concentration de CO₂ est passée d'environ **280** à plus de **420** parties par million. Un tel niveau n'avait pas été vu depuis le [[Pliocène]], il y a environ **3 millions d'années**, quand les mers étaient plus hautes." }
+        {
+          "type": "paragraph",
+          "text": "Depuis la révolution industrielle, on brûle du charbon, du pétrole et du gaz. Ce carbone, enfoui sous terre depuis des millions d'années, repart dans l'air. La déforestation réduit aussi les forêts qui absorbaient du CO₂. L'élevage et la culture du riz ajoutent du méthane, environ **80 fois** plus « chauffant » que le CO₂ sur 20 ans."
+        },
+        {
+          "type": "paragraph",
+          "text": "Résultat : la concentration de CO₂ est passée d'environ **280** à plus de **420** parties par million. Un tel niveau n'avait pas été vu depuis le [[Pliocène]], il y a environ **3 millions d'années**, quand les mers étaient plus hautes."
+        }
       ]
     },
     {
@@ -44,9 +71,18 @@
       "title": "Ce que change un climat plus énergique",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Le [[GIEC]], qui synthétise le travail de milliers de climatologues, est clair : le réchauffement depuis 1950 est sans précédent sur des millénaires, et son origine humaine est établie." },
-        { "type": "paragraph", "text": "Plus d'énergie dans l'air et les océans, c'est des extrêmes plus marqués : sécheresses plus sèches, pluies plus violentes, glaciers et calottes qui fondent, niveau des mers qui monte. Et un accélérateur : quand la glace blanche disparaît, le sol et l'eau sombres absorbent plus de soleil. C'est l'[[albédo terrestre]] qui baisse, et la planète se réchauffe encore plus vite." },
-        { "type": "funFact", "text": "Vénus montre l'effet de serre « emballé » : une atmosphère à 96 % de CO₂, et environ **460 °C** au sol, assez pour faire fondre le plomb." }
+        {
+          "type": "paragraph",
+          "text": "Le [[GIEC]], qui synthétise le travail de milliers de climatologues, est clair : le réchauffement depuis 1950 est sans précédent sur des millénaires, et son origine humaine est établie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Plus d'énergie dans l'air et les océans, c'est des extrêmes plus marqués : sécheresses plus sèches, pluies plus violentes, glaciers et calottes qui fondent, niveau des mers qui monte. Et un accélérateur : quand la glace blanche disparaît, le sol et l'eau sombres absorbent plus de soleil. C'est l'[[albédo terrestre]] qui baisse, et la planète se réchauffe encore plus vite."
+        },
+        {
+          "type": "funFact",
+          "text": "Vénus montre l'effet de serre « emballé » : une atmosphère à 96 % de CO₂, et environ **460 °C** au sol, assez pour faire fondre le plomb."
+        }
       ]
     },
     {
@@ -54,9 +90,18 @@
       "title": "Limiter la hausse, s'adapter au reste",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "L'objectif international vise à rester sous **+1,5 °C** ou **+2 °C** par rapport à l'ère préindustrielle, pour éviter des seuils dangereux comme le dégel du [[pergélisol]], qui libérerait encore plus de méthane." },
-        { "type": "paragraph", "text": "Deux leviers : **réduire** les émissions (énergies propres, sobriété, forêts) et **s'adapter** à ce qui est déjà engagé. Le CO₂ reste des siècles dans l'air : ce qu'on émet aujourd'hui pèse longtemps." },
-        { "type": "takeaway", "text": "Sans effet de serre naturel, la Terre gèlerait vers **-18 °C**. Son amplification par les énergies fossiles pousse le CO₂ à des niveaux inédits depuis **3 millions d'années**." }
+        {
+          "type": "paragraph",
+          "text": "L'objectif international vise à rester sous **+1,5 °C** ou **+2 °C** par rapport à l'ère préindustrielle, pour éviter des seuils dangereux comme le dégel du [[pergélisol]], qui libérerait encore plus de méthane."
+        },
+        {
+          "type": "paragraph",
+          "text": "Deux leviers : **réduire** les émissions (énergies propres, sobriété, forêts) et **s'adapter** à ce qui est déjà engagé. Le CO₂ reste des siècles dans l'air : ce qu'on émet aujourd'hui pèse longtemps."
+        },
+        {
+          "type": "takeaway",
+          "text": "Sans effet de serre naturel, la Terre gèlerait vers **-18 °C**. Son amplification par les énergies fossiles pousse le CO₂ à des niveaux inédits depuis **3 millions d'années**."
+        }
       ]
     }
   ]

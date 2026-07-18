@@ -16,8 +16,14 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "Vous sentez le vent sans le voir : les branches bougent, les cheveux volent. La **matière noire**, c'est un peu ça à l'échelle du cosmos. Elle ne brille pas, ne reflète pas la lumière, ne bloque aucun rayon. On ne la « voit » que par ce qu'elle fait bouger." },
-        { "type": "paragraph", "text": "Elle représenterait environ **27 %** de l'Univers, cinq fois plus que toute la matière ordinaire : étoiles, planètes, gaz. Sans elle, les galaxies tourneraient trop vite pour tenir ensemble." }
+        {
+          "type": "paragraph",
+          "text": "Vous sentez le vent sans le voir : les branches bougent, les cheveux volent. La **matière noire**, c'est un peu ça à l'échelle du cosmos. Elle ne brille pas, ne reflète pas la lumière, ne bloque aucun rayon. On ne la « voit » que par ce qu'elle fait bouger."
+        },
+        {
+          "type": "paragraph",
+          "text": "Elle représenterait environ **27 %** de l'Univers, cinq fois plus que toute la matière ordinaire : étoiles, planètes, gaz. Sans elle, les galaxies tourneraient trop vite pour tenir ensemble."
+        }
       ]
     },
     {
@@ -25,9 +31,24 @@
       "title": "Des étoiles trop rapides en périphérie",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Dans les années **1970**, l'astronome américaine **Vera Rubin** mesure la vitesse des étoiles dans les galaxies spirales. Dans le Système solaire, plus on s'éloigne du Soleil, plus on tourne lentement. Elle s'attendait au même schéma." },
-        { "type": "paragraph", "text": "Or les étoiles du bord tournaient **aussi vite** que celles du centre. Avec la seule masse visible, elles auraient dû s'envoler. Il fallait donc une masse invisible, un **halo** autour de la galaxie, pour les retenir. La [[Courbe de rotation des galaxies]] est devenue la preuve phare de la matière noire." },
-        { "type": "funFact", "text": "Vera Rubin a longtemps dû se battre pour être prise au sérieux. Princeton lui a longtemps refusé un doctorat en astronomie… parce qu'elle était une femme (jusqu'en 1975)." }
+        {
+          "type": "paragraph",
+          "text": "Dans les années **1970**, l'astronome américaine **Vera Rubin** mesure la vitesse des étoiles dans les galaxies spirales. Dans le Système solaire, plus on s'éloigne du Soleil, plus on tourne lentement. Elle s'attendait au même schéma."
+        },
+        {
+          "type": "image",
+          "asset": "dark_matter_galaxy_cluster",
+          "ratio": "auto",
+          "caption": "La matière noire trahit sa présence par son effet gravitationnel sur les amas de galaxies."
+        },
+        {
+          "type": "paragraph",
+          "text": "Or les étoiles du bord tournaient **aussi vite** que celles du centre. Avec la seule masse visible, elles auraient dû s'envoler. Il fallait donc une masse invisible, un **halo** autour de la galaxie, pour les retenir. La [[Courbe de rotation des galaxies]] est devenue la preuve phare de la matière noire."
+        },
+        {
+          "type": "funFact",
+          "text": "Vera Rubin a longtemps dû se battre pour être prise au sérieux. Princeton lui a longtemps refusé un doctorat en astronomie… parce qu'elle était une femme (jusqu'en 1975)."
+        }
       ]
     },
     {
@@ -35,8 +56,14 @@
       "title": "De quoi est-elle faite ? On cherche encore",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Ce n'est pas de la matière ordinaire (dite baryonique) : elle n'interagit pas avec la lumière. Elle traverse la Terre et nous sans laisser de trace visible." },
-        { "type": "paragraph", "text": "La piste longtemps favorite, le **WIMP**, serait une particule lourde hors du [[Modèle standard de la physique]]. Des détecteurs de xénon liquide, enfouis sous terre, espèrent un choc rare. Sans succès net pour l'instant. D'autres misent sur l'**axion**, particule ultra-légère, ou sur une gravité à revoir. En attendant, la matière noire courbe l'espace et crée des [[lentilles gravitationnelles]] : elle déforme l'image des galaxies derrière elle." }
+        {
+          "type": "paragraph",
+          "text": "Ce n'est pas de la matière ordinaire (dite baryonique) : elle n'interagit pas avec la lumière. Elle traverse la Terre et nous sans laisser de trace visible."
+        },
+        {
+          "type": "paragraph",
+          "text": "La piste longtemps favorite, le **WIMP**, serait une particule lourde hors du [[Modèle standard de la physique]]. Des détecteurs de xénon liquide, enfouis sous terre, espèrent un choc rare. Sans succès net pour l'instant. D'autres misent sur l'**axion**, particule ultra-légère, ou sur une gravité à revoir. En attendant, la matière noire courbe l'espace et crée des [[lentilles gravitationnelles]] : elle déforme l'image des galaxies derrière elle."
+        }
       ]
     },
     {
@@ -44,9 +71,18 @@
       "title": "Et l'énergie sombre, l'autre mystère",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "La matière noire attire. L'[[Énergie sombre]], découverte en **1998**, fait l'inverse : elle accélère l'expansion de l'Univers. Les galaxies s'éloignent de plus en plus vite, alors que la gravité devrait freiner le mouvement." },
-        { "type": "paragraph", "text": "Elle pèserait environ **68 %** du cosmos. Avec la matière noire, cela fait **95 %** d'Univers invisible. Tout ce que nous voyons, atomes et lumière, n'est qu'une écume de **5 %**." },
-        { "type": "funFact", "text": "Dans un futur très lointain, l'énergie sombre pourrait éloigner les autres galaxies jusqu'à les rendre invisibles depuis la Voie lactée : un ciel presque vide." }
+        {
+          "type": "paragraph",
+          "text": "La matière noire attire. L'[[Énergie sombre]], découverte en **1998**, fait l'inverse : elle accélère l'expansion de l'Univers. Les galaxies s'éloignent de plus en plus vite, alors que la gravité devrait freiner le mouvement."
+        },
+        {
+          "type": "paragraph",
+          "text": "Elle pèserait environ **68 %** du cosmos. Avec la matière noire, cela fait **95 %** d'Univers invisible. Tout ce que nous voyons, atomes et lumière, n'est qu'une écume de **5 %**."
+        },
+        {
+          "type": "funFact",
+          "text": "Dans un futur très lointain, l'énergie sombre pourrait éloigner les autres galaxies jusqu'à les rendre invisibles depuis la Voie lactée : un ciel presque vide."
+        }
       ]
     },
     {
@@ -54,9 +90,18 @@
       "title": "Preuves massives, particule introuvable",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "D'un côté, les preuves indirectes s'accumulent : rotations galactiques, fond diffus cosmologique, structure en filaments de l'Univers. De l'autre, aucune détection directe de particule." },
-        { "type": "paragraph", "text": "Le XXIe siècle devra trancher : nouvelle famille de particules, ou nouvelle façon de penser la gravité. La matière noire n'est pas qu'un détail du ciel. C'est le laboratoire où s'invente la physique de demain." },
-        { "type": "takeaway", "text": "La matière noire forme **27 %** de l'Univers. On la prouve par sa gravité sur les étoiles et la lumière, même si on ne l'a jamais vue directement." }
+        {
+          "type": "paragraph",
+          "text": "D'un côté, les preuves indirectes s'accumulent : rotations galactiques, fond diffus cosmologique, structure en filaments de l'Univers. De l'autre, aucune détection directe de particule."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le XXIe siècle devra trancher : nouvelle famille de particules, ou nouvelle façon de penser la gravité. La matière noire n'est pas qu'un détail du ciel. C'est le laboratoire où s'invente la physique de demain."
+        },
+        {
+          "type": "takeaway",
+          "text": "La matière noire forme **27 %** de l'Univers. On la prouve par sa gravité sur les étoiles et la lumière, même si on ne l'a jamais vue directement."
+        }
       ]
     }
   ]

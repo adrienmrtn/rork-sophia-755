@@ -1,4 +1,4 @@
-﻿{
+{
   "id": "course_191_enee_et_la_fondation_de_rome_virgile",
   "title": "Énée et la fondation de Rome (Virgile)",
   "subtitle": "L'Énéide",
@@ -16,8 +16,14 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "L'**Énéide** est le grand poème de **Virgile**. Elle raconte l'odyssée d'**Énée**, prince troyen rescapé de la chute de Troie. Guidé par les dieux, il traverse la Méditerranée pour fonder, en Italie, la lignée qui mènera à Rome." },
-        { "type": "paragraph", "text": "Ce n'est pas seulement une aventure. C'est le mythe de naissance de la puissance romaine, écrit pour donner à Rome un passé digne d'Homère." }
+        {
+          "type": "paragraph",
+          "text": "L'**Énéide** est le grand poème de **Virgile**. Elle raconte l'odyssée d'**Énée**, prince troyen rescapé de la chute de Troie. Guidé par les dieux, il traverse la Méditerranée pour fonder, en Italie, la lignée qui mènera à Rome."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce n'est pas seulement une aventure. C'est le mythe de naissance de la puissance romaine, écrit pour donner à Rome un passé digne d'Homère."
+        }
       ]
     },
     {
@@ -25,10 +31,24 @@
       "title": "Virgile écrit pour Auguste",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "À la fin du Ier siècle avant J.-C., après des guerres civiles, l'empereur **Auguste** veut stabiliser son pouvoir. Il commande à Virgile une épopée digne d'Homère. L'œuvre sert aussi [[La propagande augustéenne]] : relier le prince à un héros divin." },
-        { "type": "image", "asset": "enee_et_la_fondation_de_rome", "ratio": "4:3", "caption": "Virgile, poète de l'Énéide, chantre d'une Rome voulue par le destin." },
-        { "type": "paragraph", "text": "Virgile y travaille onze ans (29-19 av. J.-C.). Les six premiers chants suivent l'errance en mer. Les six suivants racontent la guerre en Italie. Il écrit en [[hexamètres dactyliques]], le vers des grandes épopées antiques." },
-        { "type": "funFact", "text": "Virgile meurt en **19** avant J.-C. et demande qu'on brûle le manuscrit, jugé inachevé. Auguste interdit d'obéir. L'épopée nationale de Rome paraît contre la volonté de son auteur." }
+        {
+          "type": "paragraph",
+          "text": "À la fin du Ier siècle avant J.-C., après des guerres civiles, l'empereur **Auguste** veut stabiliser son pouvoir. Il commande à Virgile une épopée digne d'Homère. L'œuvre sert aussi [[La propagande augustéenne]] : relier le prince à un héros divin."
+        },
+        {
+          "type": "image",
+          "asset": "dido_aeneas_carthage_painting",
+          "ratio": "4:3",
+          "caption": "Virgile, poète de l'Énéide, chantre d'une Rome voulue par le destin."
+        },
+        {
+          "type": "paragraph",
+          "text": "Virgile y travaille onze ans (29-19 av. J.-C.). Les six premiers chants suivent l'errance en mer. Les six suivants racontent la guerre en Italie. Il écrit en [[hexamètres dactyliques]], le vers des grandes épopées antiques."
+        },
+        {
+          "type": "funFact",
+          "text": "Virgile meurt en **19** avant J.-C. et demande qu'on brûle le manuscrit, jugé inachevé. Auguste interdit d'obéir. L'épopée nationale de Rome paraît contre la volonté de son auteur."
+        }
       ]
     },
     {
@@ -36,10 +56,24 @@
       "title": "Fuite de Troie et amour à Carthage",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Alors que Troie brûle, à la fin de la [[Guerre de Troie]], Énée, fils de la déesse **Vénus** et du mortel Anchise, reçoit l'ordre de fuir. Il part en portant son père sur les épaules, son fils Ascagne à la main, et emporte les [[Pénates]], dieux du foyer. Ce geste définit la [[Pietas romaine]] : le devoir envers famille, dieux et destin." },
-        { "type": "image", "asset": "enee_et_la_fondation_de_rome", "ratio": "4:3", "caption": "Énée fuit Troie en flammes, père et fils avec lui." },
-        { "type": "paragraph", "text": "À Carthage, il aime la reine **Didon**. Mais [[Jupiter]], roi des dieux romains, le rappelle à sa mission. Énée repart. Didon se suicide et maudit sa lignée : le mythe explique ainsi la haine future entre Rome et Carthage, avant les [[Guerres puniques]]." },
-        { "type": "funFact", "text": "Le fils d'Énée, Ascagne, s'appelle aussi Iule. La famille des [[Julii]], dont Jules César et Auguste, revendique cette origine divine via Vénus." }
+        {
+          "type": "paragraph",
+          "text": "Alors que Troie brûle, à la fin de la [[Guerre de Troie]], Énée, fils de la déesse **Vénus** et du mortel Anchise, reçoit l'ordre de fuir. Il part en portant son père sur les épaules, son fils Ascagne à la main, et emporte les [[Pénates]], dieux du foyer. Ce geste définit la [[Pietas romaine]] : le devoir envers famille, dieux et destin."
+        },
+        {
+          "type": "image",
+          "asset": "aeneas_fleeing_burning_troy_anchises_painting",
+          "ratio": "4:3",
+          "caption": "Énée fuit Troie en flammes, père et fils avec lui."
+        },
+        {
+          "type": "paragraph",
+          "text": "À Carthage, il aime la reine **Didon**. Mais [[Jupiter]], roi des dieux romains, le rappelle à sa mission. Énée repart. Didon se suicide et maudit sa lignée : le mythe explique ainsi la haine future entre Rome et Carthage, avant les [[Guerres puniques]]."
+        },
+        {
+          "type": "funFact",
+          "text": "Le fils d'Énée, Ascagne, s'appelle aussi Iule. La famille des [[Julii]], dont Jules César et Auguste, revendique cette origine divine via Vénus."
+        }
       ]
     },
     {
@@ -47,13 +81,34 @@
       "title": "La guerre dans le Latium",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Après une descente aux Enfers, Énée débarque dans le **Latium**, en Italie centrale. Le roi **Latinus** lui promet sa fille **Lavinia**. Mais le prince **Turnus**, soutenu par [[Junon]], déesse hostile aux Troyens, déclenche la guerre." },
-        { "type": "paragraph", "text": "Énée vainc Turnus et fonde **Lavinium**. Plus tard, son fils fondera [[Albe la Longue]], d'où naîtront Romulus et Rémus. Le mythe relie ainsi Troie à Rome en une seule chaîne." },
-        { "type": "timeline", "events": [
-          { "date": "Troie", "title": "Fuite d'Énée", "detail": "Il sauve père, fils et dieux du foyer." },
-          { "date": "Carthage", "title": "Didon", "detail": "Amour brisé, malédiction contre Rome." },
-          { "date": "Latium", "title": "Victoire sur Turnus", "detail": "Fondation de Lavinium, amorce de Rome." }
-        ] }
+        {
+          "type": "paragraph",
+          "text": "Après une descente aux Enfers, Énée débarque dans le **Latium**, en Italie centrale. Le roi **Latinus** lui promet sa fille **Lavinia**. Mais le prince **Turnus**, soutenu par [[Junon]], déesse hostile aux Troyens, déclenche la guerre."
+        },
+        {
+          "type": "paragraph",
+          "text": "Énée vainc Turnus et fonde **Lavinium**. Plus tard, son fils fondera [[Albe la Longue]], d'où naîtront Romulus et Rémus. Le mythe relie ainsi Troie à Rome en une seule chaîne."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Troie",
+              "title": "Fuite d'Énée",
+              "detail": "Il sauve père, fils et dieux du foyer."
+            },
+            {
+              "date": "Carthage",
+              "title": "Didon",
+              "detail": "Amour brisé, malédiction contre Rome."
+            },
+            {
+              "date": "Latium",
+              "title": "Victoire sur Turnus",
+              "detail": "Fondation de Lavinium, amorce de Rome."
+            }
+          ]
+        }
       ]
     },
     {
@@ -61,8 +116,14 @@
       "title": "Un héros du devoir",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Au Moyen Âge, Virgile devient un sage presque prophétique. Dante en fait son guide dans la [[Divine Comédie]]. Mais Énée n'est pas un héros joyeux : il porte le poids du destin. Rome naît d'un exil, d'un amour sacrifié et d'une guerre." },
-        { "type": "takeaway", "text": "Dans l'**Énéide**, Virgile fait d'**Énée**, rescapé de Troie, l'ancêtre mythique de Rome. Le héros incarne la **pietas** : devoir avant désir, destin avant bonheur personnel." }
+        {
+          "type": "paragraph",
+          "text": "Au Moyen Âge, Virgile devient un sage presque prophétique. Dante en fait son guide dans la [[Divine Comédie]]. Mais Énée n'est pas un héros joyeux : il porte le poids du destin. Rome naît d'un exil, d'un amour sacrifié et d'une guerre."
+        },
+        {
+          "type": "takeaway",
+          "text": "Dans l'**Énéide**, Virgile fait d'**Énée**, rescapé de Troie, l'ancêtre mythique de Rome. Le héros incarne la **pietas** : devoir avant désir, destin avant bonheur personnel."
+        }
       ]
     }
   ]

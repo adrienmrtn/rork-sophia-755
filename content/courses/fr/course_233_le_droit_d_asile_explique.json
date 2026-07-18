@@ -16,7 +16,10 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "Partout dans le monde, des personnes fuient leur pays parce que leur vie ou leur liberté y est menacée. Depuis des siècles, une règle non écrite veut qu'on leur ouvre une porte : c'est le **droit d'asile**. Encadrée par des lois précises depuis le XXe siècle, cette porte est aujourd'hui de plus en plus disputée." }
+        {
+          "type": "paragraph",
+          "text": "Partout dans le monde, des personnes fuient leur pays parce que leur vie ou leur liberté y est menacée. Depuis des siècles, une règle non écrite veut qu'on leur ouvre une porte : c'est le **droit d'asile**. Encadrée par des lois précises depuis le XXe siècle, cette porte est aujourd'hui de plus en plus disputée."
+        }
       ]
     },
     {
@@ -24,10 +27,22 @@
       "title": "Les fondations posées après 1951",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Le cadre juridique moderne du droit d'asile repose sur la **[[Convention de Genève]]** de 1951, écrite après la Seconde Guerre mondiale, alors que des millions de personnes erraient encore en Europe. À l'origine limitée à l'Europe, elle est devenue universelle en 1967, grâce à un protocole additionnel." },
-        { "type": "paragraph", "text": "La Convention donne une définition précise du mot **réfugié** : une personne hors de son pays qui ne peut y retourner par crainte d'être persécutée pour sa race, sa religion, sa nationalité, son appartenance à un groupe social, ou ses opinions politiques. Cette définition exclut, de façon troublante, les victimes de catastrophes naturelles ou de famines." },
-        { "type": "paragraph", "text": "Le cœur de cette protection s'appelle le principe de **[[non-refoulement]]** : il interdit de renvoyer une personne vers un endroit où elle risquerait la torture ou la mort. Les Nations unies s'appuient sur le **[[HCR]]**, une agence spécialisée dans la protection des personnes déracinées, pour veiller à son application." },
-        { "type": "funFact", "text": "On imagine souvent l'accueil des réfugiés comme un fardeau des pays riches. Pourtant, environ 75 % des réfugiés dans le monde sont accueillis par des pays à revenu faible ou intermédiaire, situés près des zones de conflit." }
+        {
+          "type": "paragraph",
+          "text": "Le cadre juridique moderne du droit d'asile repose sur la **[[Convention de Genève]]** de 1951, écrite après la Seconde Guerre mondiale, alors que des millions de personnes erraient encore en Europe. À l'origine limitée à l'Europe, elle est devenue universelle en 1967, grâce à un protocole additionnel."
+        },
+        {
+          "type": "paragraph",
+          "text": "La Convention donne une définition précise du mot **réfugié** : une personne hors de son pays qui ne peut y retourner par crainte d'être persécutée pour sa race, sa religion, sa nationalité, son appartenance à un groupe social, ou ses opinions politiques. Cette définition exclut, de façon troublante, les victimes de catastrophes naturelles ou de famines."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le cœur de cette protection s'appelle le principe de **[[non-refoulement]]** : il interdit de renvoyer une personne vers un endroit où elle risquerait la torture ou la mort. Les Nations unies s'appuient sur le **[[HCR]]**, une agence spécialisée dans la protection des personnes déracinées, pour veiller à son application."
+        },
+        {
+          "type": "funFact",
+          "text": "On imagine souvent l'accueil des réfugiés comme un fardeau des pays riches. Pourtant, environ 75 % des réfugiés dans le monde sont accueillis par des pays à revenu faible ou intermédiaire, situés près des zones de conflit."
+        }
       ]
     },
     {
@@ -35,8 +50,14 @@
       "title": "Réfugié, demandeur d'asile, migrant : des mots différents",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Dans les débats publics, les mots migrant et réfugié sont souvent confondus, mais ils désignent des situations juridiques différentes. Un **demandeur d'asile** a déposé une demande de protection et attend qu'une autorité l'examine. S'il obtient une réponse positive, il devient officiellement **réfugié**, avec le droit de rester durablement et de travailler." },
-        { "type": "paragraph", "text": "À l'inverse, un **migrant économique** quitte son pays volontairement pour chercher une vie meilleure, et la Convention de Genève ne s'applique pas à lui. Cette distinction est source de tensions politiques, car les parcours réels sont souvent mixtes, et l'examen d'une demande peut prendre plusieurs années, durant lesquelles les demandeurs n'ont souvent pas le droit de travailler." }
+        {
+          "type": "paragraph",
+          "text": "Dans les débats publics, les mots migrant et réfugié sont souvent confondus, mais ils désignent des situations juridiques différentes. Un **demandeur d'asile** a déposé une demande de protection et attend qu'une autorité l'examine. S'il obtient une réponse positive, il devient officiellement **réfugié**, avec le droit de rester durablement et de travailler."
+        },
+        {
+          "type": "paragraph",
+          "text": "À l'inverse, un **migrant économique** quitte son pays volontairement pour chercher une vie meilleure, et la Convention de Genève ne s'applique pas à lui. Cette distinction est source de tensions politiques, car les parcours réels sont souvent mixtes, et l'examen d'une demande peut prendre plusieurs années, durant lesquelles les demandeurs n'ont souvent pas le droit de travailler."
+        }
       ]
     },
     {
@@ -44,10 +65,24 @@
       "title": "2015 : le choc de la crise migratoire européenne",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "L'année **2015** a marqué un tournant pour l'Europe : plus d'un million de personnes ont traversé la mer Méditerranée, fuyant surtout la guerre civile en Syrie. Cet afflux a révélé les failles du **[[Règlement de Dublin]]**, qui impose au premier pays d'arrivée de traiter chaque demande, surchargeant la Grèce et l'Italie." },
-        { "type": "image", "asset": "le_droit_d_asile_explique", "ratio": "16:9", "caption": "En 2015, plus d'un million de personnes ont traversé la Méditerranée pour rejoindre l'Europe." },
-        { "type": "paragraph", "text": "Face à cette crise, l'Europe a réagi de façon dispersée. En 2016, un accord entre l'UE et la Turquie propose un compromis : en échange d'une aide financière, la Turquie s'engage à bloquer les départs vers l'Europe, une stratégie critiquée pour son mépris possible du non-refoulement. En 2024, l'UE adopte un nouveau pacte sur la migration, cherchant un équilibre entre solidarité et surveillance des frontières." },
-        { "type": "funFact", "text": "L'un des réfugiés les plus célèbres de l'histoire est Albert Einstein. En 1933, menacé par les nazis à cause de ses origines juives, il a renoncé à sa nationalité allemande et obtenu l'asile aux États-Unis." }
+        {
+          "type": "paragraph",
+          "text": "L'année **2015** a marqué un tournant pour l'Europe : plus d'un million de personnes ont traversé la mer Méditerranée, fuyant surtout la guerre civile en Syrie. Cet afflux a révélé les failles du **[[Règlement de Dublin]]**, qui impose au premier pays d'arrivée de traiter chaque demande, surchargeant la Grèce et l'Italie."
+        },
+        {
+          "type": "image",
+          "asset": "mediterranean_migrant_boat_rescue_refugees",
+          "ratio": "16:9",
+          "caption": "En 2015, plus d'un million de personnes ont traversé la Méditerranée pour rejoindre l'Europe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Face à cette crise, l'Europe a réagi de façon dispersée. En 2016, un accord entre l'UE et la Turquie propose un compromis : en échange d'une aide financière, la Turquie s'engage à bloquer les départs vers l'Europe, une stratégie critiquée pour son mépris possible du non-refoulement. En 2024, l'UE adopte un nouveau pacte sur la migration, cherchant un équilibre entre solidarité et surveillance des frontières."
+        },
+        {
+          "type": "funFact",
+          "text": "L'un des réfugiés les plus célèbres de l'histoire est Albert Einstein. En 1933, menacé par les nazis à cause de ses origines juives, il a renoncé à sa nationalité allemande et obtenu l'asile aux États-Unis."
+        }
       ]
     },
     {
@@ -55,9 +90,18 @@
       "title": "Le nouveau défi : climat et politisation",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "L'avenir du droit d'asile se heurte à une réalité que les rédacteurs de 1951 n'avaient pas prévue : la crise climatique. D'ici 2050, des centaines de millions de personnes pourraient être déplacées par la montée des eaux ou la désertification, mais le statut de réfugié climatique n'existe toujours pas, car ces personnes ne peuvent pas prouver de « persécution » au sens de la Convention." },
-        { "type": "paragraph", "text": "En parallèle, l'asile devient un sujet de plus en plus politisé dans les démocraties occidentales : les procédures se durcissent, et l'idée d'une protection seulement temporaire gagne du terrain face à celle d'une intégration durable." },
-        { "type": "takeaway", "text": "La Convention de Genève de 1951 protège les personnes persécutées pour des raisons politiques, religieuses ou sociales, grâce au principe de non-refoulement. Mais elle reste inadaptée face aux nouveaux flux de réfugiés climatiques et aux crises migratoires mixtes d'aujourd'hui." }
+        {
+          "type": "paragraph",
+          "text": "L'avenir du droit d'asile se heurte à une réalité que les rédacteurs de 1951 n'avaient pas prévue : la crise climatique. D'ici 2050, des centaines de millions de personnes pourraient être déplacées par la montée des eaux ou la désertification, mais le statut de réfugié climatique n'existe toujours pas, car ces personnes ne peuvent pas prouver de « persécution » au sens de la Convention."
+        },
+        {
+          "type": "paragraph",
+          "text": "En parallèle, l'asile devient un sujet de plus en plus politisé dans les démocraties occidentales : les procédures se durcissent, et l'idée d'une protection seulement temporaire gagne du terrain face à celle d'une intégration durable."
+        },
+        {
+          "type": "takeaway",
+          "text": "La Convention de Genève de 1951 protège les personnes persécutées pour des raisons politiques, religieuses ou sociales, grâce au principe de non-refoulement. Mais elle reste inadaptée face aux nouveaux flux de réfugiés climatiques et aux crises migratoires mixtes d'aujourd'hui."
+        }
       ]
     }
   ]

@@ -1,4 +1,4 @@
-﻿{
+{
   "id": "course_181_ragnarok_la_fin_du_monde_nordique",
   "title": "Ragnarök : la fin du monde nordique",
   "subtitle": "Mythologie nordique",
@@ -16,9 +16,18 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "Le **Ragnarök** est la fin du monde dans la mythologie nordique. On traduit souvent par « crépuscule des dieux », mais le sens exact est plutôt « destin des puissances ». Ce n'est pas une punition tombée du ciel, ni un néant définitif." },
-        { "type": "paragraph", "text": "C'est une tragédie **inévitable** : l'ordre d'**Asgard** s'effondre dans une bataille finale contre le chaos. Et pourtant, ce chaos prépare une renaissance. La fin n'est qu'une étape du cycle." },
-        { "type": "funFact", "text": "L'expression « crépuscule des dieux » vient d'une confusion entre les mots vieux-norrois « rök » (destin) et « rökr » (crépuscule), popularisée par Wagner." }
+        {
+          "type": "paragraph",
+          "text": "Le **Ragnarök** est la fin du monde dans la mythologie nordique. On traduit souvent par « crépuscule des dieux », mais le sens exact est plutôt « destin des puissances ». Ce n'est pas une punition tombée du ciel, ni un néant définitif."
+        },
+        {
+          "type": "paragraph",
+          "text": "C'est une tragédie **inévitable** : l'ordre d'**Asgard** s'effondre dans une bataille finale contre le chaos. Et pourtant, ce chaos prépare une renaissance. La fin n'est qu'une étape du cycle."
+        },
+        {
+          "type": "funFact",
+          "text": "L'expression « crépuscule des dieux » vient d'une confusion entre les mots vieux-norrois « rök » (destin) et « rökr » (crépuscule), popularisée par Wagner."
+        }
       ]
     },
     {
@@ -26,9 +35,20 @@
       "title": "Les signes avant la bataille",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Tout commence par le **Fimbulwinter** : un Grand Hiver de trois années sans été. Le froid brise les familles. La violence se généralise. Puis les verrous magiques cèdent. Le loup **Fenrir** brise ses chaînes. Sa gueule touche ciel et terre." },
-        { "type": "image", "asset": "ragnarok_la_fin_du_monde_nordique", "ratio": "4:3", "caption": "Fenrir enchaîné : le jour où il se libère, le monde bascule." },
-        { "type": "paragraph", "text": "Le serpent **Jörmungandr**, qui encercle les continents, se débat dans l'océan : raz-de-marée et poisons. Les loups cosmiques dévorent le Soleil et la Lune. **Loki**, évadé, commande le [[Naglfar]], navire fait d'ongles de morts, chargé de géants vers le dernier champ de bataille." }
+        {
+          "type": "paragraph",
+          "text": "Tout commence par le **Fimbulwinter** : un Grand Hiver de trois années sans été. Le froid brise les familles. La violence se généralise. Puis les verrous magiques cèdent. Le loup **Fenrir** brise ses chaînes. Sa gueule touche ciel et terre."
+        },
+        {
+          "type": "image",
+          "asset": "fenrir_wolf_norse_mythology_chained",
+          "ratio": "4:3",
+          "caption": "Fenrir enchaîné : le jour où il se libère, le monde bascule."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le serpent **Jörmungandr**, qui encercle les continents, se débat dans l'océan : raz-de-marée et poisons. Les loups cosmiques dévorent le Soleil et la Lune. **Loki**, évadé, commande le [[Naglfar]], navire fait d'ongles de morts, chargé de géants vers le dernier champ de bataille."
+        }
       ]
     },
     {
@@ -36,10 +56,24 @@
       "title": "La plaine où les dieux tombent",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "L'affrontement a lieu sur la plaine de **Vígríðr**. [[Heimdall]], le guetteur des dieux, sonne du cor. Les dieux d'Asgard y vont en sachant qu'ils vont perdre. Chacun affronte son ennemi." },
-        { "type": "image", "asset": "ragnarok_la_fin_du_monde_nordique", "ratio": "4:3", "caption": "Le Ragnarök : dieux, monstres et feu sur une même plaine." },
-        { "type": "paragraph", "text": "**Odin**, père des dieux, est dévoré par Fenrir. Son fils Víðarr venge son père. **Thor** écrase Jörmungandr avec [[Mjölnir]], mais meurt de son venin après neuf pas. Puis **Surtr**, géant de feu venu de [[Muspellheim]], embrase les neuf mondes. La terre s'enfonce sous l'océan." },
-        { "type": "funFact", "text": "Le dieu Freyr meurt sans son épée magique : il l'avait offerte par amour pour obtenir la main de la géante Gerd. Même l'amour a un prix, dans ces mythes." }
+        {
+          "type": "paragraph",
+          "text": "L'affrontement a lieu sur la plaine de **Vígríðr**. [[Heimdall]], le guetteur des dieux, sonne du cor. Les dieux d'Asgard y vont en sachant qu'ils vont perdre. Chacun affronte son ennemi."
+        },
+        {
+          "type": "image",
+          "asset": "ragnarok_norse_end_world_battle_painting",
+          "ratio": "4:3",
+          "caption": "Le Ragnarök : dieux, monstres et feu sur une même plaine."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Odin**, père des dieux, est dévoré par Fenrir. Son fils Víðarr venge son père. **Thor** écrase Jörmungandr avec [[Mjölnir]], mais meurt de son venin après neuf pas. Puis **Surtr**, géant de feu venu de [[Muspellheim]], embrase les neuf mondes. La terre s'enfonce sous l'océan."
+        },
+        {
+          "type": "funFact",
+          "text": "Le dieu Freyr meurt sans son épée magique : il l'avait offerte par amour pour obtenir la main de la géante Gerd. Même l'amour a un prix, dans ces mythes."
+        }
       ]
     },
     {
@@ -47,9 +81,20 @@
       "title": "Après le feu, la terre reverdit",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Ce qui distingue le Ragnarök des apocalypses linéaires, c'est le retour. Une fois les flammes éteintes, la terre émerge des flots, plus verte et plus fertile. Les champs donnent sans qu'on les sème." },
-        { "type": "image", "asset": "ragnarok_la_fin_du_monde_nordique", "ratio": "4:3", "caption": "Yggdrasil, l'arbre du monde : abri des survivants et promesse de suite." },
-        { "type": "paragraph", "text": "Une nouvelle génération de dieux survit : **Baldr** revient des morts ; les fils de Thor, Magni et Móði, héritent du marteau. Deux humains, **Líf** et **Lífþrasir**, se sont cachés dans [[Yggdrasil]] et se sont nourris de rosée. Leurs noms signifient « Vie » et « Foisonnement de vie ». L'humanité recommence." }
+        {
+          "type": "paragraph",
+          "text": "Ce qui distingue le Ragnarök des apocalypses linéaires, c'est le retour. Une fois les flammes éteintes, la terre émerge des flots, plus verte et plus fertile. Les champs donnent sans qu'on les sème."
+        },
+        {
+          "type": "image",
+          "asset": "yggdrasil_world_tree_norse_mythology",
+          "ratio": "4:3",
+          "caption": "Yggdrasil, l'arbre du monde : abri des survivants et promesse de suite."
+        },
+        {
+          "type": "paragraph",
+          "text": "Une nouvelle génération de dieux survit : **Baldr** revient des morts ; les fils de Thor, Magni et Móði, héritent du marteau. Deux humains, **Líf** et **Lífþrasir**, se sont cachés dans [[Yggdrasil]] et se sont nourris de rosée. Leurs noms signifient « Vie » et « Foisonnement de vie ». L'humanité recommence."
+        }
       ]
     },
     {
@@ -57,9 +102,18 @@
       "title": "Un mythe qui parle encore",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Au XIXe siècle, **Richard Wagner** popularise sa [[Götterdämmerung]], le « Crépuscule des dieux » : la fin d'un ordre fondé sur des serments brisés. Pour les Anciens Scandinaves, le message était plus simple et plus dur : si la fin est certaine, il reste le choix du courage." },
-        { "type": "paragraph", "text": "[[L'apocalyptisme comparé]] rapproche ce récit d'autres fins du monde : hiver long, combat céleste, déluge, renaissance. Comme l'hiver précède le printemps, le Ragnarök n'est pas seulement une mort. C'est une métamorphose." },
-        { "type": "takeaway", "text": "Le **Ragnarök** n'est pas un néant : c'est le destin accepté des dieux, une bataille où Asgard tombe, suivie d'une terre qui renaît. La leçon nordique : agir avec courage, même sans espoir de victoire." }
+        {
+          "type": "paragraph",
+          "text": "Au XIXe siècle, **Richard Wagner** popularise sa [[Götterdämmerung]], le « Crépuscule des dieux » : la fin d'un ordre fondé sur des serments brisés. Pour les Anciens Scandinaves, le message était plus simple et plus dur : si la fin est certaine, il reste le choix du courage."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[L'apocalyptisme comparé]] rapproche ce récit d'autres fins du monde : hiver long, combat céleste, déluge, renaissance. Comme l'hiver précède le printemps, le Ragnarök n'est pas seulement une mort. C'est une métamorphose."
+        },
+        {
+          "type": "takeaway",
+          "text": "Le **Ragnarök** n'est pas un néant : c'est le destin accepté des dieux, une bataille où Asgard tombe, suivie d'une terre qui renaît. La leçon nordique : agir avec courage, même sans espoir de victoire."
+        }
       ]
     }
   ]

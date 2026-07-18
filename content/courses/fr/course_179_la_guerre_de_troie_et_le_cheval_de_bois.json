@@ -1,4 +1,4 @@
-﻿{
+{
   "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois",
   "title": "La guerre de Troie et le cheval de bois",
   "subtitle": "Mythologie grecque",
@@ -16,8 +16,14 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "La **guerre de Troie** est le grand récit de la Grèce antique, immortalisé par Homère dans l'Iliade. Une coalition de cités grecques assiège [[Ilion]], autre nom de Troie, pendant **dix ans**. Des dieux prennent parti. Des héros meurent pour l'honneur." },
-        { "type": "paragraph", "text": "La ville ne cède pas à la force. Elle tombe par un stratagème : le **cheval de bois**. Cette ruse est devenue un symbole universel, du champ de bataille jusqu'aux virus informatiques d'aujourd'hui." }
+        {
+          "type": "paragraph",
+          "text": "La **guerre de Troie** est le grand récit de la Grèce antique, immortalisé par Homère dans l'Iliade. Une coalition de cités grecques assiège [[Ilion]], autre nom de Troie, pendant **dix ans**. Des dieux prennent parti. Des héros meurent pour l'honneur."
+        },
+        {
+          "type": "paragraph",
+          "text": "La ville ne cède pas à la force. Elle tombe par un stratagème : le **cheval de bois**. Cette ruse est devenue un symbole universel, du champ de bataille jusqu'aux virus informatiques d'aujourd'hui."
+        }
       ]
     },
     {
@@ -25,10 +31,18 @@
       "title": "Une pomme d'or déclenche tout",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Tout commence aux noces de Pélée et de la nymphe Thétis. **Éris**, déesse de la Discorde, n'est pas invitée. Furieuse, elle jette une pomme d'or gravée « À la plus belle ». Trois déesses la réclament : **Héra**, **Athéna** et **Aphrodite**." },
-        { "type": "image", "asset": "la_guerre_de_troie_et_le_cheval_de_bois", "ratio": "4:3", "caption": "Le jugement de Pâris : trois déesses, une pomme, un choix fatal." },
-        { "type": "paragraph", "text": "Zeus demande l'avis d'un mortel : **Pâris**, prince de Troie. Héra lui promet le pouvoir, Athéna la victoire au combat, Aphrodite l'amour de la plus belle femme. Il choisit Aphrodite. Elle lui offre **Hélène**, épouse de **Ménélas**, roi de Sparte. Pâris l'emmène à Troie. La Grèce se lève pour la récupérer." },
-        { "type": "funFact", "text": "À Hisarlik, en Turquie, les archéologues ont trouvé une cité brûlée vers **1184 av. J.-C.** : le site possible de la Troie historique, derrière le mythe." }
+        {
+          "type": "paragraph",
+          "text": "Tout commence aux noces de Pélée et de la nymphe Thétis. **Éris**, déesse de la Discorde, n'est pas invitée. Furieuse, elle jette une pomme d'or gravée « À la plus belle ». Trois déesses la réclament : **Héra**, **Athéna** et **Aphrodite**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zeus demande l'avis d'un mortel : **Pâris**, prince de Troie. Héra lui promet le pouvoir, Athéna la victoire au combat, Aphrodite l'amour de la plus belle femme. Il choisit Aphrodite. Elle lui offre **Hélène**, épouse de **Ménélas**, roi de Sparte. Pâris l'emmène à Troie. La Grèce se lève pour la récupérer."
+        },
+        {
+          "type": "funFact",
+          "text": "À Hisarlik, en Turquie, les archéologues ont trouvé une cité brûlée vers **1184 av. J.-C.** : le site possible de la Troie historique, derrière le mythe."
+        }
       ]
     },
     {
@@ -36,9 +50,20 @@
       "title": "Dix ans de siège sans vainqueur",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "**Agamemnon**, frère de Ménélas et roi de Mycènes, prend le commandement. Une flotte immense part : Achille, Ajax, le sage Nestor, le rusé **Ulysse**. Les Grecs, ou Achéens, débarquent en [[Troade]], la région de Troie, et le siège commence." },
-        { "type": "image", "asset": "la_guerre_de_troie_et_le_cheval_de_bois", "ratio": "4:3", "caption": "La flotte grecque : la légende parle de mille navires." },
-        { "type": "paragraph", "text": "Les remparts de Troie sont réputés indestructibles, bâtis avec l'aide de Poséidon et d'Apollon. Pendant dix ans, on se bat dans la plaine du [[Scamandre]] sans décision. Sur terre, les hommes meurent. Sur l'Olympe, Héra et Athéna aident les Grecs ; Aphrodite et Apollon protègent les fils de [[Priam]], le vieux roi de Troie." }
+        {
+          "type": "paragraph",
+          "text": "**Agamemnon**, frère de Ménélas et roi de Mycènes, prend le commandement. Une flotte immense part : Achille, Ajax, le sage Nestor, le rusé **Ulysse**. Les Grecs, ou Achéens, débarquent en [[Troade]], la région de Troie, et le siège commence."
+        },
+        {
+          "type": "image",
+          "asset": "greek_fleet_trojan_war_thousand_ships_painting",
+          "ratio": "4:3",
+          "caption": "La flotte grecque : la légende parle de mille navires."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les remparts de Troie sont réputés indestructibles, bâtis avec l'aide de Poséidon et d'Apollon. Pendant dix ans, on se bat dans la plaine du [[Scamandre]] sans décision. Sur terre, les hommes meurent. Sur l'Olympe, Héra et Athéna aident les Grecs ; Aphrodite et Apollon protègent les fils de [[Priam]], le vieux roi de Troie."
+        }
       ]
     },
     {
@@ -46,10 +71,24 @@
       "title": "Le cheval de bois",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "La force ne suffit pas. **Ulysse**, roi d'Ithaque et maître de la [[Métis]] (la ruse intelligente), invente le piège. Les Grecs brûlent leur camp, font mine de partir et se cachent près de l'île de [[Ténédos]]. Sur la plage, ils laissent un immense **cheval de bois** creux, rempli de soldats." },
-        { "type": "image", "asset": "la_guerre_de_troie_et_le_cheval_de_bois", "ratio": "4:3", "caption": "Le cheval de Troie : offrande trompeuse, soldats à l'intérieur." },
-        { "type": "paragraph", "text": "L'espion grec **Sinon** convainc les Troyens que le cheval est une offrande pour Athéna. Le prêtre **Laocoon** crie au piège : on l'ignore. On démolit une partie des remparts pour faire entrer le cheval. La nuit, les Grecs sortent, ouvrent les portes, et l'armée revenue achève la ville." },
-        { "type": "funFact", "text": "L'expression « le visage qui lança mille navires », pour Hélène, vient du poète Christopher Marlowe. On a même inventé en plaisantant le « hélène », unité de beauté égale à mille navires." }
+        {
+          "type": "paragraph",
+          "text": "La force ne suffit pas. **Ulysse**, roi d'Ithaque et maître de la [[Métis]] (la ruse intelligente), invente le piège. Les Grecs brûlent leur camp, font mine de partir et se cachent près de l'île de [[Ténédos]]. Sur la plage, ils laissent un immense **cheval de bois** creux, rempli de soldats."
+        },
+        {
+          "type": "image",
+          "asset": "trojan_horse_wooden_troy_ancient_painting",
+          "ratio": "4:3",
+          "caption": "Le cheval de Troie : offrande trompeuse, soldats à l'intérieur."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'espion grec **Sinon** convainc les Troyens que le cheval est une offrande pour Athéna. Le prêtre **Laocoon** crie au piège : on l'ignore. On démolit une partie des remparts pour faire entrer le cheval. La nuit, les Grecs sortent, ouvrent les portes, et l'armée revenue achève la ville."
+        },
+        {
+          "type": "funFact",
+          "text": "L'expression « le visage qui lança mille navires », pour Hélène, vient du poète Christopher Marlowe. On a même inventé en plaisantant le « hélène », unité de beauté égale à mille navires."
+        }
       ]
     },
     {
@@ -57,14 +96,39 @@
       "title": "La chute et l'héritage",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Troie brûle. Priam est tué. Les survivants deviennent esclaves. Seul le prince **Énée** s'enfuit avec son père et ses dieux [[Lares]] ; plus tard, la légende romaine en fera l'ancêtre de Rome. Les vainqueurs, eux, ne sont pas épargnés : leurs retours périlleux ([[Le retour des héros (Nostoi)]]) sont souvent tragiques. Agamemnon est assassiné. Ulysse erre encore dix ans." },
-        { "type": "timeline", "events": [
-          { "date": "Mythe", "title": "Jugement de Pâris", "detail": "Une pomme d'or, Hélène enlevée, la guerre commence." },
-          { "date": "10 ans", "title": "Siège de Troie", "detail": "Les remparts tiennent ; dieux et héros s'entrechoquent." },
-          { "date": "Nuit fatale", "title": "Cheval de bois", "detail": "La ruse d'Ulysse ouvre la ville imprenable." },
-          { "date": "Après", "title": "Nostoi", "detail": "Les retours des vainqueurs tournent souvent au malheur." }
-        ] },
-        { "type": "takeaway", "text": "Née d'une querelle divine pour une pomme d'or, la guerre de Troie ne s'achève qu'après **dix ans** : non par la force, mais par la ruse d'Ulysse et un cheval de bois qui détruit la cité en une nuit." }
+        {
+          "type": "paragraph",
+          "text": "Troie brûle. Priam est tué. Les survivants deviennent esclaves. Seul le prince **Énée** s'enfuit avec son père et ses dieux [[Lares]] ; plus tard, la légende romaine en fera l'ancêtre de Rome. Les vainqueurs, eux, ne sont pas épargnés : leurs retours périlleux ([[Le retour des héros (Nostoi)]]) sont souvent tragiques. Agamemnon est assassiné. Ulysse erre encore dix ans."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Mythe",
+              "title": "Jugement de Pâris",
+              "detail": "Une pomme d'or, Hélène enlevée, la guerre commence."
+            },
+            {
+              "date": "10 ans",
+              "title": "Siège de Troie",
+              "detail": "Les remparts tiennent ; dieux et héros s'entrechoquent."
+            },
+            {
+              "date": "Nuit fatale",
+              "title": "Cheval de bois",
+              "detail": "La ruse d'Ulysse ouvre la ville imprenable."
+            },
+            {
+              "date": "Après",
+              "title": "Nostoi",
+              "detail": "Les retours des vainqueurs tournent souvent au malheur."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Née d'une querelle divine pour une pomme d'or, la guerre de Troie ne s'achève qu'après **dix ans** : non par la force, mais par la ruse d'Ulysse et un cheval de bois qui détruit la cité en une nuit."
+        }
       ]
     }
   ]

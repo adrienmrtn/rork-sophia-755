@@ -16,8 +16,14 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "Depuis son arrivée au sommet de l'État en 1999, **Vladimir Poutine** a profondément transformé la Russie. En un quart de siècle, il a fait d'un pays affaibli par l'effondrement de l'URSS une puissance centralisée et belliqueuse, qui défie ouvertement l'ordre international." },
-        { "type": "paragraph", "text": "Son règne suit une trajectoire singulière : d'abord perçu comme un stabilisateur pragmatique, il devient le bâtisseur d'un régime autoritaire, fondé sur le contrôle des ressources énergétiques, la répression de toute opposition et une vision nostalgique de la grandeur impériale russe." }
+        {
+          "type": "paragraph",
+          "text": "Depuis son arrivée au sommet de l'État en 1999, **Vladimir Poutine** a profondément transformé la Russie. En un quart de siècle, il a fait d'un pays affaibli par l'effondrement de l'URSS une puissance centralisée et belliqueuse, qui défie ouvertement l'ordre international."
+        },
+        {
+          "type": "paragraph",
+          "text": "Son règne suit une trajectoire singulière : d'abord perçu comme un stabilisateur pragmatique, il devient le bâtisseur d'un régime autoritaire, fondé sur le contrôle des ressources énergétiques, la répression de toute opposition et une vision nostalgique de la grandeur impériale russe."
+        }
       ]
     },
     {
@@ -25,9 +31,18 @@
       "title": "L'ascension fulgurante des années 2000",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "L'ascension de Vladimir Poutine est indissociable du chaos des années 1990. Ancien officier du **[[KGB et FSB]]**, les services secrets soviétiques puis russes, il fait ses armes à Saint-Pétersbourg avant de rejoindre l'entourage du président Boris Eltsine à Moscou." },
-        { "type": "funFact", "text": "Vladimir Poutine était pratiquement inconnu du grand public russe jusqu'en août 1999, avec 2 % de popularité. Des attentats terroristes et la guerre en Tchétchénie l'ont propulsé à 80 % en quelques mois." },
-        { "type": "paragraph", "text": "Élu président en mars 2000, il fonde son mandat sur un contrat tacite : le retour de l'ordre et l'amélioration du niveau de vie, en échange d'un abandon progressif des libertés politiques. Porté par l'envolée des prix du pétrole, le PIB russe est multiplié par huit entre 1999 et 2008." }
+        {
+          "type": "paragraph",
+          "text": "L'ascension de Vladimir Poutine est indissociable du chaos des années 1990. Ancien officier du **[[KGB et FSB]]**, les services secrets soviétiques puis russes, il fait ses armes à Saint-Pétersbourg avant de rejoindre l'entourage du président Boris Eltsine à Moscou."
+        },
+        {
+          "type": "funFact",
+          "text": "Vladimir Poutine était pratiquement inconnu du grand public russe jusqu'en août 1999, avec 2 % de popularité. Des attentats terroristes et la guerre en Tchétchénie l'ont propulsé à 80 % en quelques mois."
+        },
+        {
+          "type": "paragraph",
+          "text": "Élu président en mars 2000, il fonde son mandat sur un contrat tacite : le retour de l'ordre et l'amélioration du niveau de vie, en échange d'un abandon progressif des libertés politiques. Porté par l'envolée des prix du pétrole, le PIB russe est multiplié par huit entre 1999 et 2008."
+        }
       ]
     },
     {
@@ -35,10 +50,22 @@
       "title": "La mise au pas de la société",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Une fois la stabilité acquise, Poutine neutralise tous les centres de pouvoir autonomes. Il commence par domestiquer les **[[Oligarques]]**, ces hommes d'affaires enrichis pendant les privatisations chaotiques de l'ère Eltsine. Le signal est donné en 2003 avec l'arrestation de Mikhaïl Khodorkovski, patron d'une grande compagnie pétrolière." },
-        { "type": "paragraph", "text": "Le régime s'attaque aussi à la liberté de la presse : les chaînes de télévision passent sous le contrôle d'entreprises publiques comme Gazprom, transformant l'information en propagande. L'opposant Alexeï Navalny incarne le défi intérieur : après un empoisonnement en 2020, il est emprisonné à son retour, et meurt en colonie pénitentiaire en février 2024." },
-        { "type": "funFact", "text": "Bien que son salaire officiel soit modeste, Vladimir Poutine est souvent aperçu avec des montres de luxe dont la valeur dépasse largement ses revenus déclarés." },
-        { "type": "paragraph", "text": "La structure même de l'État évolue vers un système dominé par les **[[Siloviki]]**, les représentants des structures de force comme l'armée ou les services secrets. Ils occupent les postes clés de l'administration et des grandes entreprises publiques, fusionnant intérêts sécuritaires et financiers autour du clan Poutine." }
+        {
+          "type": "paragraph",
+          "text": "Une fois la stabilité acquise, Poutine neutralise tous les centres de pouvoir autonomes. Il commence par domestiquer les **[[Oligarques]]**, ces hommes d'affaires enrichis pendant les privatisations chaotiques de l'ère Eltsine. Le signal est donné en 2003 avec l'arrestation de Mikhaïl Khodorkovski, patron d'une grande compagnie pétrolière."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le régime s'attaque aussi à la liberté de la presse : les chaînes de télévision passent sous le contrôle d'entreprises publiques comme Gazprom, transformant l'information en propagande. L'opposant Alexeï Navalny incarne le défi intérieur : après un empoisonnement en 2020, il est emprisonné à son retour, et meurt en colonie pénitentiaire en février 2024."
+        },
+        {
+          "type": "funFact",
+          "text": "Bien que son salaire officiel soit modeste, Vladimir Poutine est souvent aperçu avec des montres de luxe dont la valeur dépasse largement ses revenus déclarés."
+        },
+        {
+          "type": "paragraph",
+          "text": "La structure même de l'État évolue vers un système dominé par les **[[Siloviki]]**, les représentants des structures de force comme l'armée ou les services secrets. Ils occupent les postes clés de l'administration et des grandes entreprises publiques, fusionnant intérêts sécuritaires et financiers autour du clan Poutine."
+        }
       ]
     },
     {
@@ -46,10 +73,24 @@
       "title": "Vers la rupture avec l'Occident",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "La vision géopolitique de Poutine repose sur un traumatisme : la disparition de l'URSS, qu'il qualifie de « plus grande catastrophe géopolitique du XXe siècle ». Sa politique étrangère vise à restaurer une zone d'influence autour de la Russie, en s'opposant à l'expansion de l'OTAN, perçue comme une agression." },
-        { "type": "paragraph", "text": "L'escalade se concrétise par l'usage de la force : en 2008 en Géorgie, puis en 2014 quand la Russie annexe illégalement la Crimée et soutient une insurrection armée dans l'est de l'Ukraine, le Donbass. Ces actes marquent le retour de la guerre territoriale en Europe." },
-        { "type": "image", "asset": "la_russie_de_poutine", "ratio": "16:9", "caption": "Vladimir Poutine dirige la Russie depuis 1999, d'abord comme président, puis comme Premier ministre, puis à nouveau comme président." },
-        { "type": "paragraph", "text": "L'invasion totale de l'Ukraine, lancée le 24 février 2022, fait basculer la Russie dans une rupture totale avec l'Occident. Elle déclenche les sanctions économiques les plus massives de l'histoire moderne, et ressoude paradoxalement l'unité européenne et transatlantique face à la menace russe." }
+        {
+          "type": "paragraph",
+          "text": "La vision géopolitique de Poutine repose sur un traumatisme : la disparition de l'URSS, qu'il qualifie de « plus grande catastrophe géopolitique du XXe siècle ». Sa politique étrangère vise à restaurer une zone d'influence autour de la Russie, en s'opposant à l'expansion de l'OTAN, perçue comme une agression."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'escalade se concrétise par l'usage de la force : en 2008 en Géorgie, puis en 2014 quand la Russie annexe illégalement la Crimée et soutient une insurrection armée dans l'est de l'Ukraine, le Donbass. Ces actes marquent le retour de la guerre territoriale en Europe."
+        },
+        {
+          "type": "image",
+          "asset": "vladimir_putin_portrait_kremlin",
+          "ratio": "16:9",
+          "caption": "Vladimir Poutine dirige la Russie depuis 1999, d'abord comme président, puis comme Premier ministre, puis à nouveau comme président."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'invasion totale de l'Ukraine, lancée le 24 février 2022, fait basculer la Russie dans une rupture totale avec l'Occident. Elle déclenche les sanctions économiques les plus massives de l'histoire moderne, et ressoude paradoxalement l'unité européenne et transatlantique face à la menace russe."
+        }
       ]
     },
     {
@@ -57,9 +98,18 @@
       "title": "L'idéologie du régime et la pérennisation du pouvoir",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Pour légitimer cette confrontation, le Kremlin élabore une doctrine appelée [[La «démocratie souveraine»]] : une voie russe spécifique, fondée sur des valeurs conservatrices, en opposition à un Occident jugé décadent. Le régime réécrit l'histoire, glorifiant la victoire de 1945 et minimisant les crimes staliniens." },
-        { "type": "paragraph", "text": "Poutine a verrouillé son maintien au pouvoir par une réforme constitutionnelle en 2020, qui lui permet théoriquement de rester président jusqu'en 2036, tandis que des lois sur les « agents de l'étranger » servent à liquider les dernières organisations de **société civile**." },
-        { "type": "takeaway", "text": "Poutine arrive au pouvoir en 1999 en promettant la stabilité. En vingt-cinq ans, il reconstruit un État fort, musèle l'opposition et transforme la Russie en un régime autoritaire belliqueux, engagé dans une remise en cause violente de l'ordre mondial." }
+        {
+          "type": "paragraph",
+          "text": "Pour légitimer cette confrontation, le Kremlin élabore une doctrine appelée [[La «démocratie souveraine»]] : une voie russe spécifique, fondée sur des valeurs conservatrices, en opposition à un Occident jugé décadent. Le régime réécrit l'histoire, glorifiant la victoire de 1945 et minimisant les crimes staliniens."
+        },
+        {
+          "type": "paragraph",
+          "text": "Poutine a verrouillé son maintien au pouvoir par une réforme constitutionnelle en 2020, qui lui permet théoriquement de rester président jusqu'en 2036, tandis que des lois sur les « agents de l'étranger » servent à liquider les dernières organisations de **société civile**."
+        },
+        {
+          "type": "takeaway",
+          "text": "Poutine arrive au pouvoir en 1999 en promettant la stabilité. En vingt-cinq ans, il reconstruit un État fort, musèle l'opposition et transforme la Russie en un régime autoritaire belliqueux, engagé dans une remise en cause violente de l'ordre mondial."
+        }
       ]
     }
   ]

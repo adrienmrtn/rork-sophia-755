@@ -16,8 +16,14 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "L'eau douce est la ressource la plus essentielle à la vie humaine. Elle est aussi, aujourd'hui, de plus en plus rare : la démographie augmente, le climat se dérègle, et certains experts prédisent déjà les premières « guerres de l'eau » du XXIe siècle." },
-        { "type": "paragraph", "text": "Ce cours explore pourquoi une ressource aussi vitale devient un enjeu stratégique majeur, capable de rapprocher des pays voisins, ou de les opposer." }
+        {
+          "type": "paragraph",
+          "text": "L'eau douce est la ressource la plus essentielle à la vie humaine. Elle est aussi, aujourd'hui, de plus en plus rare : la démographie augmente, le climat se dérègle, et certains experts prédisent déjà les premières « guerres de l'eau » du XXIe siècle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce cours explore pourquoi une ressource aussi vitale devient un enjeu stratégique majeur, capable de rapprocher des pays voisins, ou de les opposer."
+        }
       ]
     },
     {
@@ -25,10 +31,24 @@
       "title": "Une ressource rare, mal répartie",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "La Terre est recouverte à 70 % d'eau, ce qui lui vaut le surnom de « planète bleue ». Mais cette eau est presque toute salée. L'eau douce ne représente qu'environ 3 % du total, et les deux tiers de cette eau douce sont emprisonnés sous forme de glace, dans les calottes polaires et les glaciers. Au bout du compte, l'eau douce liquide et accessible (lacs, rivières, nappes peu profondes) représente moins de 1 % de toute l'eau de la planète." },
-        { "type": "image", "asset": "l_eau_prochaine_source_de_conflits", "ratio": "16:9", "caption": "L'eau douce accessible représente moins de 1 % de toute l'eau présente sur Terre." },
-        { "type": "paragraph", "text": "Cette rareté n'est pas répartie de façon égale. Certains pays, comme le Brésil, le Canada ou la Russie, disposent de réserves immenses. D'autres, comme le Moyen-Orient ou l'Afrique du Nord, connaissent un **[[stress hydrique]]** durable : leur demande en eau dépasse ce que le territoire peut fournir. En 2024, environ 4 milliards de personnes vivent au moins un mois par an dans cette situation." },
-        { "type": "funFact", "text": "Au XXe siècle, la population mondiale a triplé, mais la consommation d'eau a été multipliée par six, notamment à cause de l'industrialisation et des régimes alimentaires plus riches en viande." }
+        {
+          "type": "paragraph",
+          "text": "La Terre est recouverte à 70 % d'eau, ce qui lui vaut le surnom de « planète bleue ». Mais cette eau est presque toute salée. L'eau douce ne représente qu'environ 3 % du total, et les deux tiers de cette eau douce sont emprisonnés sous forme de glace, dans les calottes polaires et les glaciers. Au bout du compte, l'eau douce liquide et accessible (lacs, rivières, nappes peu profondes) représente moins de 1 % de toute l'eau de la planète."
+        },
+        {
+          "type": "image",
+          "asset": "dried_riverbed_water_scarcity_drought",
+          "ratio": "16:9",
+          "caption": "L'eau douce accessible représente moins de 1 % de toute l'eau présente sur Terre."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cette rareté n'est pas répartie de façon égale. Certains pays, comme le Brésil, le Canada ou la Russie, disposent de réserves immenses. D'autres, comme le Moyen-Orient ou l'Afrique du Nord, connaissent un **[[stress hydrique]]** durable : leur demande en eau dépasse ce que le territoire peut fournir. En 2024, environ 4 milliards de personnes vivent au moins un mois par an dans cette situation."
+        },
+        {
+          "type": "funFact",
+          "text": "Au XXe siècle, la population mondiale a triplé, mais la consommation d'eau a été multipliée par six, notamment à cause de l'industrialisation et des régimes alimentaires plus riches en viande."
+        }
       ]
     },
     {
@@ -36,9 +56,18 @@
       "title": "Géopolitique des fleuves partagés",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Les tensions naissent surtout quand une ressource est partagée. Plus de 260 fleuves dans le monde sont **transfrontaliers** : ils traversent plusieurs pays, créant une dépendance forcée entre ceux situés en amont, qui contrôlent la source, et ceux situés en aval, qui reçoivent ce qu'il en reste." },
-        { "type": "paragraph", "text": "Le Nil illustre bien cette tension. L'Éthiopie a construit le **[[GERD]]**, un immense barrage sur le Nil Bleu, pour produire de l'électricité et devenir plus autonome. Mais l'Égypte, qui dépend du Nil à 95 % pour son eau, perçoit chaque mètre cube retenu en amont comme une menace directe pour sa sécurité." },
-        { "type": "funFact", "text": "Le traité sur le fleuve Indus, signé en 1960 entre l'Inde et le Pakistan, a survécu à trois guerres entre les deux pays sans jamais être rompu : la preuve que l'eau peut aussi être un puissant outil de paix." }
+        {
+          "type": "paragraph",
+          "text": "Les tensions naissent surtout quand une ressource est partagée. Plus de 260 fleuves dans le monde sont **transfrontaliers** : ils traversent plusieurs pays, créant une dépendance forcée entre ceux situés en amont, qui contrôlent la source, et ceux situés en aval, qui reçoivent ce qu'il en reste."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le Nil illustre bien cette tension. L'Éthiopie a construit le **[[GERD]]**, un immense barrage sur le Nil Bleu, pour produire de l'électricité et devenir plus autonome. Mais l'Égypte, qui dépend du Nil à 95 % pour son eau, perçoit chaque mètre cube retenu en amont comme une menace directe pour sa sécurité."
+        },
+        {
+          "type": "funFact",
+          "text": "Le traité sur le fleuve Indus, signé en 1960 entre l'Inde et le Pakistan, a survécu à trois guerres entre les deux pays sans jamais être rompu : la preuve que l'eau peut aussi être un puissant outil de paix."
+        }
       ]
     },
     {
@@ -46,9 +75,18 @@
       "title": "La technologie contre la pénurie",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Face à la raréfaction de l'eau, certains pays misent sur la technologie. La **désalinisation**, qui transforme l'eau de mer en eau potable, s'est imposée dans les pays du Golfe et au Proche-Orient. Israël produit ainsi plus de 80 % de son eau potable grâce à des usines de dessalement. Le procédé reste toutefois coûteux et énergivore, et il rejette de la **saumure**, une eau très salée qui peut abîmer les écosystèmes marins." },
-        { "type": "paragraph", "text": "D'autres solutions jouent sur la sobriété. L'irrigation au goutte-à-goutte, qui amène l'eau directement aux racines des plantes, réduit la consommation agricole de 30 à 70 %." },
-        { "type": "funFact", "text": "À **[[Singapour]]**, un territoire minuscule et sans grande réserve d'eau, les eaux usées sont traitées par des techniques si poussées qu'elles deviennent plus pures que l'eau de source, avant d'être recyclées sous le nom de « NEWater »." }
+        {
+          "type": "paragraph",
+          "text": "Face à la raréfaction de l'eau, certains pays misent sur la technologie. La **désalinisation**, qui transforme l'eau de mer en eau potable, s'est imposée dans les pays du Golfe et au Proche-Orient. Israël produit ainsi plus de 80 % de son eau potable grâce à des usines de dessalement. Le procédé reste toutefois coûteux et énergivore, et il rejette de la **saumure**, une eau très salée qui peut abîmer les écosystèmes marins."
+        },
+        {
+          "type": "paragraph",
+          "text": "D'autres solutions jouent sur la sobriété. L'irrigation au goutte-à-goutte, qui amène l'eau directement aux racines des plantes, réduit la consommation agricole de 30 à 70 %."
+        },
+        {
+          "type": "funFact",
+          "text": "À **[[Singapour]]**, un territoire minuscule et sans grande réserve d'eau, les eaux usées sont traitées par des techniques si poussées qu'elles deviennent plus pures que l'eau de source, avant d'être recyclées sous le nom de « NEWater »."
+        }
       ]
     },
     {
@@ -56,9 +94,18 @@
       "title": "Vers une gouvernance partagée de l'or bleu",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Malgré les prédictions de « guerres de l'eau », l'histoire montre que cette ressource a plus souvent servi à la coopération qu'au conflit ouvert. Créer des commissions de bassin et des traités entre pays voisins reste le meilleur moyen d'éviter les crises." },
-        { "type": "paragraph", "text": "Un concept aide à comprendre l'ampleur du problème : l'**[[eau virtuelle]]**, c'est-à-dire la quantité d'eau nécessaire pour fabriquer un produit. En important du blé, un pays en stress hydrique importe en réalité l'eau utilisée pour le cultiver ailleurs. Il faut par exemple environ 15 000 litres d'eau pour produire un seul kilogramme de bœuf, contre 1 500 litres pour un kilogramme de blé." },
-        { "type": "takeaway", "text": "L'eau douce accessible représente moins de 1 % de l'eau terrestre, et des centaines de millions de personnes vivent dans des bassins partagés entre pays aux intérêts opposés. La technologie et la coopération internationale restent les meilleures armes contre les crises de l'eau à venir." }
+        {
+          "type": "paragraph",
+          "text": "Malgré les prédictions de « guerres de l'eau », l'histoire montre que cette ressource a plus souvent servi à la coopération qu'au conflit ouvert. Créer des commissions de bassin et des traités entre pays voisins reste le meilleur moyen d'éviter les crises."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un concept aide à comprendre l'ampleur du problème : l'**[[eau virtuelle]]**, c'est-à-dire la quantité d'eau nécessaire pour fabriquer un produit. En important du blé, un pays en stress hydrique importe en réalité l'eau utilisée pour le cultiver ailleurs. Il faut par exemple environ 15 000 litres d'eau pour produire un seul kilogramme de bœuf, contre 1 500 litres pour un kilogramme de blé."
+        },
+        {
+          "type": "takeaway",
+          "text": "L'eau douce accessible représente moins de 1 % de l'eau terrestre, et des centaines de millions de personnes vivent dans des bassins partagés entre pays aux intérêts opposés. La technologie et la coopération internationale restent les meilleures armes contre les crises de l'eau à venir."
+        }
       ]
     }
   ]

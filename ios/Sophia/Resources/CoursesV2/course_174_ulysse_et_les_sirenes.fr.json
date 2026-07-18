@@ -1,4 +1,4 @@
-﻿{
+{
   "id": "course_174_ulysse_et_les_sirenes",
   "title": "Ulysse et les Sirènes",
   "subtitle": "Écouter sans périr",
@@ -16,8 +16,14 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "Dans le douzième chant de l'**Odyssée**, Ulysse doit passer près des **[[Sirènes]]**. Leur voix est si belle qu'elle annule la volonté. Les marins qui s'approchent s'échouent et meurent." },
-        { "type": "paragraph", "text": "Ce n'est pas seulement une aventure en mer. C'est le duel entre la soif de savoir et le danger de céder. Grâce à sa [[Métis]], son intelligence rusée, Ulysse devient le seul mortel à goûter ce plaisir interdit sans y laisser sa vie." }
+        {
+          "type": "paragraph",
+          "text": "Dans le douzième chant de l'**Odyssée**, Ulysse doit passer près des **[[Sirènes]]**. Leur voix est si belle qu'elle annule la volonté. Les marins qui s'approchent s'échouent et meurent."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce n'est pas seulement une aventure en mer. C'est le duel entre la soif de savoir et le danger de céder. Grâce à sa [[Métis]], son intelligence rusée, Ulysse devient le seul mortel à goûter ce plaisir interdit sans y laisser sa vie."
+        }
       ]
     },
     {
@@ -25,10 +31,24 @@
       "title": "Des femmes-oiseaux, pas des sirènes à queue",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Chez **Homère**, les Sirènes ne sont pas des femmes-poissons. Ce sont des créatures mi-femmes, mi-oiseaux. Leur île est jonchée d'os de marins. La beauté du chant contraste avec l'horreur du rivage." },
-        { "type": "image", "asset": "ulysse_et_les_sirenes", "ratio": "4:3", "caption": "L'île des Sirènes : mélodie irrésistible, rivage mortel." },
-        { "type": "funFact", "text": "Dans les cités grecques, on sculptait souvent des Sirènes sur les tombeaux. On les voyait comme des muses de l'au-delà, accompagnant l'âme des morts." },
-        { "type": "paragraph", "text": "Leur piège n'est pas seulement sensuel. Elles promettent la **connaissance absolue** : tout ce qui s'est passé à la [[Guerre de Troie]], tout ce qui arrive sur terre. Pour Ulysse, curieux avant tout, c'est la tentation suprême, plus dangereuse qu'un monstre à vaincre." }
+        {
+          "type": "paragraph",
+          "text": "Chez **Homère**, les Sirènes ne sont pas des femmes-poissons. Ce sont des créatures mi-femmes, mi-oiseaux. Leur île est jonchée d'os de marins. La beauté du chant contraste avec l'horreur du rivage."
+        },
+        {
+          "type": "image",
+          "asset": "sirens_island_greek_mythology_bones_shore",
+          "ratio": "4:3",
+          "caption": "L'île des Sirènes : mélodie irrésistible, rivage mortel."
+        },
+        {
+          "type": "funFact",
+          "text": "Dans les cités grecques, on sculptait souvent des Sirènes sur les tombeaux. On les voyait comme des muses de l'au-delà, accompagnant l'âme des morts."
+        },
+        {
+          "type": "paragraph",
+          "text": "Leur piège n'est pas seulement sensuel. Elles promettent la **connaissance absolue** : tout ce qui s'est passé à la [[Guerre de Troie]], tout ce qui arrive sur terre. Pour Ulysse, curieux avant tout, c'est la tentation suprême, plus dangereuse qu'un monstre à vaincre."
+        }
       ]
     },
     {
@@ -36,9 +56,20 @@
       "title": "La cire, le mât et le plan",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "La magicienne **Circé** l'a prévenu. Ulysse prépare une stratégie précise. Il bouche les oreilles de ses compagnons avec de la **cire d'abeille**. Eux ne doivent rien entendre. Lui veut écouter." },
-        { "type": "image", "asset": "ulysse_et_les_sirenes", "ratio": "4:3", "caption": "Ulysse attaché au mât, seul à entendre le chant des Sirènes." },
-        { "type": "paragraph", "text": "Il se fait **attacher au mât**. Ordre clair : s'il demande à être libéré, on doit au contraire resserrer les liens. Quand le chant s'élève, Ulysse perd son calme et crie qu'on le détache. Ses hommes, sourds et fidèles au plan, n'obéissent qu'à l'Ulysse rationnel d'avant, pas à l'Ulysse captivé du moment. Le navire passe." }
+        {
+          "type": "paragraph",
+          "text": "La magicienne **Circé** l'a prévenu. Ulysse prépare une stratégie précise. Il bouche les oreilles de ses compagnons avec de la **cire d'abeille**. Eux ne doivent rien entendre. Lui veut écouter."
+        },
+        {
+          "type": "image",
+          "asset": "ulysses_tied_mast_sirens_waterhouse_painting",
+          "ratio": "4:3",
+          "caption": "Ulysse attaché au mât, seul à entendre le chant des Sirènes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il se fait **attacher au mât**. Ordre clair : s'il demande à être libéré, on doit au contraire resserrer les liens. Quand le chant s'élève, Ulysse perd son calme et crie qu'on le détache. Ses hommes, sourds et fidèles au plan, n'obéissent qu'à l'Ulysse rationnel d'avant, pas à l'Ulysse captivé du moment. Le navire passe."
+        }
       ]
     },
     {
@@ -46,9 +77,18 @@
       "title": "S'attacher à l'avance pour ne pas céder",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Cette scène illustre ce que les sciences sociales appellent l'[[Engagement préalable (precommitment)]]. On sait qu'on sera faible face à une tentation. Alors on limite soi-même ses options avant d'y arriver." },
-        { "type": "funFact", "text": "En 1990, la NASA et l'ESA nomment une sonde **Ulysses**. Comme le héros, elle quitte les routes connues pour explorer les pôles du Soleil." },
-        { "type": "paragraph", "text": "L'économiste **Richard Thaler**, prix Nobel, s'appuie sur cette image. L'humain n'est pas toujours rationnel. Il a besoin d'un [[Nudge]], un « coup de pouce », ou de règles qui le protègent de lui-même : virement automatique vers l'épargne, applications qui bloquent les réseaux. Comme Ulysse, on s'attache au mât face aux sirènes modernes." }
+        {
+          "type": "paragraph",
+          "text": "Cette scène illustre ce que les sciences sociales appellent l'[[Engagement préalable (precommitment)]]. On sait qu'on sera faible face à une tentation. Alors on limite soi-même ses options avant d'y arriver."
+        },
+        {
+          "type": "funFact",
+          "text": "En 1990, la NASA et l'ESA nomment une sonde **Ulysses**. Comme le héros, elle quitte les routes connues pour explorer les pôles du Soleil."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'économiste **Richard Thaler**, prix Nobel, s'appuie sur cette image. L'humain n'est pas toujours rationnel. Il a besoin d'un [[Nudge]], un « coup de pouce », ou de règles qui le protègent de lui-même : virement automatique vers l'épargne, applications qui bloquent les réseaux. Comme Ulysse, on s'attache au mât face aux sirènes modernes."
+        }
       ]
     },
     {
@@ -56,9 +96,18 @@
       "title": "De la connaissance au péché",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Au **Moyen Âge**, l'image change. La femme-oiseau devient femme-poisson. L'Église lit les Sirènes comme symboles de luxure. Le mât d'Ulysse est parfois comparé à la croix : rempart contre la tentation." },
-        { "type": "paragraph", "text": "Chez Homère, pourtant, l'enjeu n'était pas le désir charnel, mais le savoir. Ulysse n'est ni un saint ni un simple aventurier. C'est un homme qui utilise l'intelligence pour naviguer entre le désir d'absolu et la nécessité de survivre." },
-        { "type": "takeaway", "text": "Ulysse survit au chant des [[Sirènes]] par l'[[Engagement préalable (precommitment)]] : attaché au mât, il écoute ; ses hommes, oreilles bouchées à la cire, gardent le cap." }
+        {
+          "type": "paragraph",
+          "text": "Au **Moyen Âge**, l'image change. La femme-oiseau devient femme-poisson. L'Église lit les Sirènes comme symboles de luxure. Le mât d'Ulysse est parfois comparé à la croix : rempart contre la tentation."
+        },
+        {
+          "type": "paragraph",
+          "text": "Chez Homère, pourtant, l'enjeu n'était pas le désir charnel, mais le savoir. Ulysse n'est ni un saint ni un simple aventurier. C'est un homme qui utilise l'intelligence pour naviguer entre le désir d'absolu et la nécessité de survivre."
+        },
+        {
+          "type": "takeaway",
+          "text": "Ulysse survit au chant des [[Sirènes]] par l'[[Engagement préalable (precommitment)]] : attaché au mât, il écoute ; ses hommes, oreilles bouchées à la cire, gardent le cap."
+        }
       ]
     }
   ]

@@ -1,4 +1,4 @@
-﻿{
+{
   "id": "course_184_romulus_et_remus_la_fondation_de_rome",
   "title": "Romulus et Rémus : la fondation de Rome",
   "subtitle": "Mythologie romaine",
@@ -16,8 +16,14 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "Le récit de **Romulus** et **Rémus** est le mythe fondateur de Rome. Ce n'est pas un conte pour enfants. C'est l'histoire d'une double rupture : une [[vestale]] qui brise son vœu de chasteté, puis un **fratricide** qui place la loi avant le sang." },
-        { "type": "paragraph", "text": "La tradition romaine ne cache pas ce crime. Elle en fait le socle d'une cité bâtie sur la frontière sacrée et la survie de l'État, plus que sur la famille." }
+        {
+          "type": "paragraph",
+          "text": "Le récit de **Romulus** et **Rémus** est le mythe fondateur de Rome. Ce n'est pas un conte pour enfants. C'est l'histoire d'une double rupture : une [[vestale]] qui brise son vœu de chasteté, puis un **fratricide** qui place la loi avant le sang."
+        },
+        {
+          "type": "paragraph",
+          "text": "La tradition romaine ne cache pas ce crime. Elle en fait le socle d'une cité bâtie sur la frontière sacrée et la survie de l'État, plus que sur la famille."
+        }
       ]
     },
     {
@@ -25,11 +31,30 @@
       "title": "La louve du Tibre",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "À Albe la Longue, cité des descendants d'Énée, l'usurpateur **Amulius** chasse son frère Numitor. Pour éteindre la lignée, il force sa nièce **Rhéa Silvia** à devenir vestale. Mais **Mars**, dieu de la guerre, s'unit à elle. Naissent des jumeaux." },
-        { "type": "image", "asset": "romulus_et_remus_la_fondation_de_rome", "ratio": "4:3", "caption": "Mars et Rhéa Silvia : la naissance divine des jumeaux." },
-        { "type": "paragraph", "text": "Amulius ordonne de les noyer dans le Tibre. Le fleuve en crue dépose le berceau près du **Palatin**, sous le figuier [[Ficus Ruminalis]]. Une **louve** les allaite ; un pivert, oiseau de Mars, les nourrit. Le berger Faustulus et sa femme Acca Larentia les élèvent." },
-        { "type": "image", "asset": "romulus_et_remus_la_fondation_de_rome", "ratio": "1:1", "caption": "La louve capitoline, image de Rome orpheline et prédatrice." },
-        { "type": "funFact", "text": "En latin, « lupa » signifie louve… et prostituée. Des auteurs anciens suggéraient déjà qu'Acca Larentia, surnommée ainsi, était la vraie « louve » de la légende." }
+        {
+          "type": "paragraph",
+          "text": "À Albe la Longue, cité des descendants d'Énée, l'usurpateur **Amulius** chasse son frère Numitor. Pour éteindre la lignée, il force sa nièce **Rhéa Silvia** à devenir vestale. Mais **Mars**, dieu de la guerre, s'unit à elle. Naissent des jumeaux."
+        },
+        {
+          "type": "image",
+          "asset": "mars_rhea_silvia_roman_mythology_painting",
+          "ratio": "4:3",
+          "caption": "Mars et Rhéa Silvia : la naissance divine des jumeaux."
+        },
+        {
+          "type": "paragraph",
+          "text": "Amulius ordonne de les noyer dans le Tibre. Le fleuve en crue dépose le berceau près du **Palatin**, sous le figuier [[Ficus Ruminalis]]. Une **louve** les allaite ; un pivert, oiseau de Mars, les nourrit. Le berger Faustulus et sa femme Acca Larentia les élèvent."
+        },
+        {
+          "type": "image",
+          "asset": "capitoline_wolf_romulus_remus_bronze_sculpture",
+          "ratio": "1:1",
+          "caption": "La louve capitoline, image de Rome orpheline et prédatrice."
+        },
+        {
+          "type": "funFact",
+          "text": "En latin, « lupa » signifie louve… et prostituée. Des auteurs anciens suggéraient déjà qu'Acca Larentia, surnommée ainsi, était la vraie « louve » de la légende."
+        }
       ]
     },
     {
@@ -37,10 +62,24 @@
       "title": "Le sillon et le meurtre",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Adultes, les jumeaux renversent Amulius et rétablissent Numitor. Puis ils veulent fonder leur propre cité. Romulus choisit le **Palatin** ; Rémus, l'Aventin. Pour trancher, ils prennent les [[augures]] : Rémus voit six vautours le premier ; Romulus en voit douze ensuite." },
-        { "type": "image", "asset": "romulus_et_remus_la_fondation_de_rome", "ratio": "4:3", "caption": "Le Palatin : la colline où Romulus trace Rome." },
-        { "type": "paragraph", "text": "Romulus trace le [[pomoerium]], sillon sacré de l'enceinte, et promet la mort à qui le franchira. Rémus saute par-dessus, par défi. Romulus (ou son lieutenant Celer) le tue. Rome est fondée le **21 avril 753 av. J.-C.**, an I du calendrier [[Ab Urbe Condita (753 av. J.-C.)]]." },
-        { "type": "funFact", "text": "Le 21 avril reste le « Natale di Roma ». À midi, le soleil frappe l'entrée du Panthéon : un effet que les architectes antiques auraient conçu pour magnifier le pouvoir." }
+        {
+          "type": "paragraph",
+          "text": "Adultes, les jumeaux renversent Amulius et rétablissent Numitor. Puis ils veulent fonder leur propre cité. Romulus choisit le **Palatin** ; Rémus, l'Aventin. Pour trancher, ils prennent les [[augures]] : Rémus voit six vautours le premier ; Romulus en voit douze ensuite."
+        },
+        {
+          "type": "image",
+          "asset": "palatine_hill_rome_founding_myth",
+          "ratio": "4:3",
+          "caption": "Le Palatin : la colline où Romulus trace Rome."
+        },
+        {
+          "type": "paragraph",
+          "text": "Romulus trace le [[pomoerium]], sillon sacré de l'enceinte, et promet la mort à qui le franchira. Rémus saute par-dessus, par défi. Romulus (ou son lieutenant Celer) le tue. Rome est fondée le **21 avril 753 av. J.-C.**, an I du calendrier [[Ab Urbe Condita (753 av. J.-C.)]]."
+        },
+        {
+          "type": "funFact",
+          "text": "Le 21 avril reste le « Natale di Roma ». À midi, le soleil frappe l'entrée du Panthéon : un effet que les architectes antiques auraient conçu pour magnifier le pouvoir."
+        }
       ]
     },
     {
@@ -48,8 +87,14 @@
       "title": "Le rapt des Sabines",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Premier problème : la cité manque de femmes. Romulus organise des jeux et invite les voisins. Au milieu de la fête, les Romains enlèvent les jeunes filles : le **Rapt des Sabines**. Les **Sabins**, menés par Titus Tatius, déclarent la guerre." },
-        { "type": "paragraph", "text": "Sur le champ de bataille, les femmes sabines, déjà mères d'enfants romains, s'interposent entre pères et maris. La guerre s'arrête. Les deux peuples fusionnent. Romulus et Titus Tatius règnent ensemble. Les Romains prennent le nom de [[Quirites]]. Rome devient une société qui intègre l'ennemi." }
+        {
+          "type": "paragraph",
+          "text": "Premier problème : la cité manque de femmes. Romulus organise des jeux et invite les voisins. Au milieu de la fête, les Romains enlèvent les jeunes filles : le **Rapt des Sabines**. Les **Sabins**, menés par Titus Tatius, déclarent la guerre."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sur le champ de bataille, les femmes sabines, déjà mères d'enfants romains, s'interposent entre pères et maris. La guerre s'arrête. Les deux peuples fusionnent. Romulus et Titus Tatius règnent ensemble. Les Romains prennent le nom de [[Quirites]]. Rome devient une société qui intègre l'ennemi."
+        }
       ]
     },
     {
@@ -57,15 +102,43 @@
       "title": "Romulus devient Quirinus",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Après trente-sept ans de règne et la création d'un Sénat de cent « pères », Romulus disparaît lors d'une tempête au Champ de Mars. La version officielle dit que Mars l'enlève au ciel : il devient le dieu **Quirinus**. Une autre version murmure que les sénateurs l'ont assassiné." },
-        { "type": "paragraph", "text": "Reste l'image de [[La louve capitoline]] : une cité orpheline, nourrie par la sauvagerie, capable de transformer des marginaux en maîtres du monde." },
-        { "type": "timeline", "events": [
-          { "date": "Mythe", "title": "Naissance des jumeaux", "detail": "Mars et Rhéa Silvia ; la louve du Tibre." },
-          { "date": "753 av. J.-C.", "title": "Fondation de Rome", "detail": "Romulus tue Rémus et trace le pomoerium." },
-          { "date": "Suite", "title": "Rapt des Sabines", "detail": "Guerre, puis fusion des peuples." },
-          { "date": "+37 ans", "title": "Apothéose", "detail": "Romulus disparaît et devient Quirinus." }
-        ] },
-        { "type": "takeaway", "text": "Fondée sur un fratricide et un enlèvement, Rome tire de son mythe une idée claire : la survie de l'État et le respect de la frontière sacrée passent avant les liens du sang." }
+        {
+          "type": "paragraph",
+          "text": "Après trente-sept ans de règne et la création d'un Sénat de cent « pères », Romulus disparaît lors d'une tempête au Champ de Mars. La version officielle dit que Mars l'enlève au ciel : il devient le dieu **Quirinus**. Une autre version murmure que les sénateurs l'ont assassiné."
+        },
+        {
+          "type": "paragraph",
+          "text": "Reste l'image de [[La louve capitoline]] : une cité orpheline, nourrie par la sauvagerie, capable de transformer des marginaux en maîtres du monde."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Mythe",
+              "title": "Naissance des jumeaux",
+              "detail": "Mars et Rhéa Silvia ; la louve du Tibre."
+            },
+            {
+              "date": "753 av. J.-C.",
+              "title": "Fondation de Rome",
+              "detail": "Romulus tue Rémus et trace le pomoerium."
+            },
+            {
+              "date": "Suite",
+              "title": "Rapt des Sabines",
+              "detail": "Guerre, puis fusion des peuples."
+            },
+            {
+              "date": "+37 ans",
+              "title": "Apothéose",
+              "detail": "Romulus disparaît et devient Quirinus."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Fondée sur un fratricide et un enlèvement, Rome tire de son mythe une idée claire : la survie de l'État et le respect de la frontière sacrée passent avant les liens du sang."
+        }
       ]
     }
   ]

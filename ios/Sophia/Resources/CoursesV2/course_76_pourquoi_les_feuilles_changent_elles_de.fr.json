@@ -16,8 +16,14 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "Chaque automne, les forêts passent du vert à l'or, au cuivre, au pourpre. Ce n'est pas un caprice esthétique. C'est une stratégie : l'arbre récupère ce qu'il peut avant de laisser tomber ses feuilles pour l'hiver." },
-        { "type": "paragraph", "text": "Les couleurs chaudes n'apparaissent pas de nulle part. Souvent, elles étaient déjà là, cachées sous le vert. Comprendre l'automne, c'est comprendre un grand ménage biochimique." }
+        {
+          "type": "paragraph",
+          "text": "Chaque automne, les forêts passent du vert à l'or, au cuivre, au pourpre. Ce n'est pas un caprice esthétique. C'est une stratégie : l'arbre récupère ce qu'il peut avant de laisser tomber ses feuilles pour l'hiver."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les couleurs chaudes n'apparaissent pas de nulle part. Souvent, elles étaient déjà là, cachées sous le vert. Comprendre l'automne, c'est comprendre un grand ménage biochimique."
+        }
       ]
     },
     {
@@ -25,9 +31,24 @@
       "title": "Le vert qui masque tout",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Du printemps à la fin de l'été, les feuilles regorgent de **chlorophylle**, le pigment qui alimente la photosynthèse. Elle se dégrade sous la lumière, mais l'arbre la remplace sans cesse. Tant qu'elle domine, la feuille reste verte." },
-        { "type": "paragraph", "text": "Or la feuille contient aussi des **caroténoïdes**, pigments jaunes et orangés (comme dans la carotte). En été, ils sont là, mais invisibles sous le vert. À l'automne, la production de chlorophylle s'arrête. Le vert s'efface, le jaune et l'orange se révèlent." },
-        { "type": "funFact", "text": "« Chlorophylle » vient du grec *chloros* (vert) et *phyllon* (feuille). « Caroténoïde » partage la racine de… la carotte, où ce pigment a d'abord été identifié." }
+        {
+          "type": "paragraph",
+          "text": "Du printemps à la fin de l'été, les feuilles regorgent de **chlorophylle**, le pigment qui alimente la photosynthèse. Elle se dégrade sous la lumière, mais l'arbre la remplace sans cesse. Tant qu'elle domine, la feuille reste verte."
+        },
+        {
+          "type": "image",
+          "asset": "leaf_color_change_autumn_chlorophyll",
+          "ratio": "auto",
+          "caption": "En automne, la chlorophylle disparaît et révèle les couleurs des feuilles."
+        },
+        {
+          "type": "paragraph",
+          "text": "Or la feuille contient aussi des **caroténoïdes**, pigments jaunes et orangés (comme dans la carotte). En été, ils sont là, mais invisibles sous le vert. À l'automne, la production de chlorophylle s'arrête. Le vert s'efface, le jaune et l'orange se révèlent."
+        },
+        {
+          "type": "funFact",
+          "text": "« Chlorophylle » vient du grec *chloros* (vert) et *phyllon* (feuille). « Caroténoïde » partage la racine de… la carotte, où ce pigment a d'abord été identifié."
+        }
       ]
     },
     {
@@ -35,8 +56,14 @@
       "title": "Le vrai déclencheur : les nuits qui allongent",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Ce n'est pas surtout le froid qui lance l'automne, mais la durée des nuits. Les arbres la mesurent grâce à des capteurs de lumière, les [[phytochromes]]. Quand les nuits s'allongent, un signal hormonal part vers chaque feuille." },
-        { "type": "paragraph", "text": "À la base du pétiole se forme une [[zone de séparation]], une sorte de bouchon. La sève monte moins, les sucres redescendent mal. Isolée, la feuille dégrade sa chlorophylle plus vite. Les jaunes plus stables restent quelques semaines, puis la feuille tombe." }
+        {
+          "type": "paragraph",
+          "text": "Ce n'est pas surtout le froid qui lance l'automne, mais la durée des nuits. Les arbres la mesurent grâce à des capteurs de lumière, les [[phytochromes]]. Quand les nuits s'allongent, un signal hormonal part vers chaque feuille."
+        },
+        {
+          "type": "paragraph",
+          "text": "À la base du pétiole se forme une [[zone de séparation]], une sorte de bouchon. La sève monte moins, les sucres redescendent mal. Isolée, la feuille dégrade sa chlorophylle plus vite. Les jaunes plus stables restent quelques semaines, puis la feuille tombe."
+        }
       ]
     },
     {
@@ -44,8 +71,14 @@
       "title": "D'où viennent les rouges éclatants",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Le jaune était déjà là. Le rouge et le violet, eux, sont souvent **fabriqués** à la fin de la saison. Ce sont les [[anthocyanes]], produites quand des sucres restent piégés dans la feuille." },
-        { "type": "paragraph", "text": "Pourquoi investir de l'énergie juste avant de jeter la feuille ? Probablement pour la **protéger** pendant le recyclage. L'arbre récupère l'**azote** et d'autres nutriments précieux. Sans chlorophylle, le soleil peut abîmer les tissus encore actifs. Les anthocyanes agissent comme un filtre solaire le temps du grand déménagement vers les racines." }
+        {
+          "type": "paragraph",
+          "text": "Le jaune était déjà là. Le rouge et le violet, eux, sont souvent **fabriqués** à la fin de la saison. Ce sont les [[anthocyanes]], produites quand des sucres restent piégés dans la feuille."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pourquoi investir de l'énergie juste avant de jeter la feuille ? Probablement pour la **protéger** pendant le recyclage. L'arbre récupère l'**azote** et d'autres nutriments précieux. Sans chlorophylle, le soleil peut abîmer les tissus encore actifs. Les anthocyanes agissent comme un filtre solaire le temps du grand déménagement vers les racines."
+        }
       ]
     },
     {
@@ -53,9 +86,18 @@
       "title": "Pourquoi certains automnes flambent plus",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Les plus beaux rouges naissent souvent de journées ensoleillées et de nuits fraîches sans gel. Beaucoup de sucre, transformation en anthocyanes. Un automne gris et pluvieux donne des teintes plus ternes. Un gel précoce tue les feuilles avant le spectacle." },
-        { "type": "paragraph", "text": "À la fin, il ne reste guère que les [[tannins]], substances brunes du tapis forestier. Certaines études pensent aussi que les couleurs vives avertissent les [[pucerons]] : arbre en forme, défenses fortes, mieux vaut aller ailleurs." },
-        { "type": "takeaway", "text": "L'automne révèle les jaunes déjà présents quand la chlorophylle disparaît, et fabrique parfois du rouge pour protéger le recyclage des nutriments avant la chute des feuilles." }
+        {
+          "type": "paragraph",
+          "text": "Les plus beaux rouges naissent souvent de journées ensoleillées et de nuits fraîches sans gel. Beaucoup de sucre, transformation en anthocyanes. Un automne gris et pluvieux donne des teintes plus ternes. Un gel précoce tue les feuilles avant le spectacle."
+        },
+        {
+          "type": "paragraph",
+          "text": "À la fin, il ne reste guère que les [[tannins]], substances brunes du tapis forestier. Certaines études pensent aussi que les couleurs vives avertissent les [[pucerons]] : arbre en forme, défenses fortes, mieux vaut aller ailleurs."
+        },
+        {
+          "type": "takeaway",
+          "text": "L'automne révèle les jaunes déjà présents quand la chlorophylle disparaît, et fabrique parfois du rouge pour protéger le recyclage des nutriments avant la chute des feuilles."
+        }
       ]
     }
   ]

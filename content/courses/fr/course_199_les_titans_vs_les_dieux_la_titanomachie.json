@@ -1,4 +1,4 @@
-﻿{
+{
   "id": "course_199_les_titans_vs_les_dieux_la_titanomachie",
   "title": "Les Titans vs les Dieux : la Titanomachie complète",
   "subtitle": "Après la guerre",
@@ -16,8 +16,14 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "La **Titanomachie** oppose pendant dix ans les **Titans**, ancienne génération divine menée par **Cronos**, aux **Olympiens** de **Zeus**. Ce cours ne s'attarde pas sur le récit de la guerre elle-même. Il suit ce qui vient après : le partage des peines, puis la dernière tempête du chaos." },
-        { "type": "paragraph", "text": "Car vaincre ne suffit pas. Zeus doit stabiliser le cosmos : assigner des châtiments, transformer des ennemis en piliers du monde, puis affronter les **Géants** que [[Gaïa]], la Terre-mère, engendre pour le punir. Voici comment l'ordre olympien se consolide vraiment." }
+        {
+          "type": "paragraph",
+          "text": "La **Titanomachie** oppose pendant dix ans les **Titans**, ancienne génération divine menée par **Cronos**, aux **Olympiens** de **Zeus**. Ce cours ne s'attarde pas sur le récit de la guerre elle-même. Il suit ce qui vient après : le partage des peines, puis la dernière tempête du chaos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Car vaincre ne suffit pas. Zeus doit stabiliser le cosmos : assigner des châtiments, transformer des ennemis en piliers du monde, puis affronter les **Géants** que [[Gaïa]], la Terre-mère, engendre pour le punir. Voici comment l'ordre olympien se consolide vraiment."
+        }
       ]
     },
     {
@@ -25,10 +31,24 @@
       "title": "Le basculement des forces et l'alliance des abîmes",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Pendant dix ans, mont **Othrys** contre mont **Olympe**, aucun camp ne l'emporte. Sur le conseil de Gaïa, Zeus libère des alliés que Cronos avait enchaînés : les **Cyclopes**, qui forgent la foudre, le trident et la [[Kunée]] (le casque d'invisibilité d'Hadès), et les **Hécatonchires**, géants aux cent bras." },
-        { "type": "image", "asset": "les_titans_vs_les_dieux_titanomachie", "ratio": "4:3", "caption": "Les Hécatonchires, alliés décisifs de Zeus contre les Titans." },
-        { "type": "funFact", "text": "Selon Hésiode, « titan » viendrait du verbe *titaino*, « tendre » : les Titans auraient étendu leur force au-delà de toute mesure." },
-        { "type": "paragraph", "text": "Sous les rochers des Hécatonchires et les éclairs de Zeus, les Titans plient. Les vaincus sont jetés dans le **Tartare**, prison sous les Enfers. Les Hécatonchires en deviennent les geôliers. L'ère de la force brute se ferme. Reste à gouverner les survivants." }
+        {
+          "type": "paragraph",
+          "text": "Pendant dix ans, mont **Othrys** contre mont **Olympe**, aucun camp ne l'emporte. Sur le conseil de Gaïa, Zeus libère des alliés que Cronos avait enchaînés : les **Cyclopes**, qui forgent la foudre, le trident et la [[Kunée]] (le casque d'invisibilité d'Hadès), et les **Hécatonchires**, géants aux cent bras."
+        },
+        {
+          "type": "image",
+          "asset": "hecatoncheires_hundred_handed_giants_greek_myth",
+          "ratio": "4:3",
+          "caption": "Les Hécatonchires, alliés décisifs de Zeus contre les Titans."
+        },
+        {
+          "type": "funFact",
+          "text": "Selon Hésiode, « titan » viendrait du verbe *titaino*, « tendre » : les Titans auraient étendu leur force au-delà de toute mesure."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sous les rochers des Hécatonchires et les éclairs de Zeus, les Titans plient. Les vaincus sont jetés dans le **Tartare**, prison sous les Enfers. Les Hécatonchires en deviennent les geôliers. L'ère de la force brute se ferme. Reste à gouverner les survivants."
+        }
       ]
     },
     {
@@ -36,9 +56,20 @@
       "title": "La géopolitique du châtiment : Atlas et Prométhée",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Zeus ne punit pas tous les Titans de la même façon. **Atlas**, fils du Titan [[Japet]] et général des armées de Cronos, reçoit une peine solitaire : porter sur ses épaules la voûte céleste, pour que le Ciel et la Terre ne se rejoignent plus dans le chaos." },
-        { "type": "image", "asset": "les_titans_vs_les_dieux_titanomachie", "ratio": "4:3", "caption": "Atlas condamné à porter le ciel : le châtiment devient architecture du monde." },
-        { "type": "paragraph", "text": "**Prométhée**, cousin de Zeus issu de la même lignée, choisit une autre voie. Voyant que la force des Titans ne vaincra pas la ruse olympienne, il reste [[Prométhée non-combattant]]. Ce choix lui évite le Tartare et le laisse libre : plus tard, il façonne et protège les humains, au prix d'une tension permanente avec l'Olympe. Le châtiment, ici, n'est pas destruction : c'est une redistribution des rôles qui structure l'univers." }
+        {
+          "type": "paragraph",
+          "text": "Zeus ne punit pas tous les Titans de la même façon. **Atlas**, fils du Titan [[Japet]] et général des armées de Cronos, reçoit une peine solitaire : porter sur ses épaules la voûte céleste, pour que le Ciel et la Terre ne se rejoignent plus dans le chaos."
+        },
+        {
+          "type": "image",
+          "asset": "atlas_holding_sky_greek_mythology_sculpture",
+          "ratio": "4:3",
+          "caption": "Atlas condamné à porter le ciel : le châtiment devient architecture du monde."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Prométhée**, cousin de Zeus issu de la même lignée, choisit une autre voie. Voyant que la force des Titans ne vaincra pas la ruse olympienne, il reste [[Prométhée non-combattant]]. Ce choix lui évite le Tartare et le laisse libre : plus tard, il façonne et protège les humains, au prix d'une tension permanente avec l'Olympe. Le châtiment, ici, n'est pas destruction : c'est une redistribution des rôles qui structure l'univers."
+        }
       ]
     },
     {
@@ -46,10 +77,24 @@
       "title": "La consolidation par la Gigantomachie",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Gaïa, furieuse du sort de ses fils Titans, engendre les [[Géants]] pour renverser Zeus. Commence alors [[La Gigantomachie (suite de la Titanomachie)]]. Une prophétie change tout : les dieux ne peuvent vaincre sans l'aide d'un mortel." },
-        { "type": "image", "asset": "les_titans_vs_les_dieux_titanomachie", "ratio": "4:3", "caption": "La Gigantomachie : dieux et mortels unis contre le chaos." },
-        { "type": "funFact", "text": "Sur le grand autel de Pergame (IIe siècle av. J.-C.), la Gigantomachie est sculptée sur des dizaines de mètres : la politique hellénistique se mettait en scène comme une victoire cosmique." },
-        { "type": "paragraph", "text": "Intervient [[Héraclès]], le héros aux travaux. Ses flèches empoisonnées achèvent les Géants terrassés par la foudre. Les immortels ont désormais besoin du courage humain. Zeus règne sur le ciel, **Poséidon** sur les eaux, **Hadès** sur les ombres : l'édifice olympien tient enfin." }
+        {
+          "type": "paragraph",
+          "text": "Gaïa, furieuse du sort de ses fils Titans, engendre les [[Géants]] pour renverser Zeus. Commence alors [[La Gigantomachie (suite de la Titanomachie)]]. Une prophétie change tout : les dieux ne peuvent vaincre sans l'aide d'un mortel."
+        },
+        {
+          "type": "image",
+          "asset": "gigantomachy_giants_greek_gods_pergamon_frieze",
+          "ratio": "4:3",
+          "caption": "La Gigantomachie : dieux et mortels unis contre le chaos."
+        },
+        {
+          "type": "funFact",
+          "text": "Sur le grand autel de Pergame (IIe siècle av. J.-C.), la Gigantomachie est sculptée sur des dizaines de mètres : la politique hellénistique se mettait en scène comme une victoire cosmique."
+        },
+        {
+          "type": "paragraph",
+          "text": "Intervient [[Héraclès]], le héros aux travaux. Ses flèches empoisonnées achèvent les Géants terrassés par la foudre. Les immortels ont désormais besoin du courage humain. Zeus règne sur le ciel, **Poséidon** sur les eaux, **Hadès** sur les ombres : l'édifice olympien tient enfin."
+        }
       ]
     },
     {
@@ -57,9 +102,18 @@
       "title": "Héritage et métamorphoses du mythe",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Le mot « titan » est passé dans la langue pour dire la démesure. Certaines traditions orphiques imaginent même Cronos libéré, régnant sur les Îles des Bienheureux : la force destructrice devient un âge d'or lointain." },
-        { "type": "paragraph", "text": "Philosophiquement, la victoire de Zeus célèbre la justice contre l'hybris. Les Titans ne disparaissent pas : ils sont contenus sous la civilisation. En astronomie, les lunes de Saturne (Cronos) portent encore leurs noms : Titan, Rhéa, Japet." },
-        { "type": "takeaway", "text": "Après la Titanomachie, Zeus stabilise le monde : **Atlas** porte le ciel, **Prométhée** reste libre par sa neutralité, et la **Gigantomachie**, gagnée avec **Héraclès**, scelle l'ordre olympien." }
+        {
+          "type": "paragraph",
+          "text": "Le mot « titan » est passé dans la langue pour dire la démesure. Certaines traditions orphiques imaginent même Cronos libéré, régnant sur les Îles des Bienheureux : la force destructrice devient un âge d'or lointain."
+        },
+        {
+          "type": "paragraph",
+          "text": "Philosophiquement, la victoire de Zeus célèbre la justice contre l'hybris. Les Titans ne disparaissent pas : ils sont contenus sous la civilisation. En astronomie, les lunes de Saturne (Cronos) portent encore leurs noms : Titan, Rhéa, Japet."
+        },
+        {
+          "type": "takeaway",
+          "text": "Après la Titanomachie, Zeus stabilise le monde : **Atlas** porte le ciel, **Prométhée** reste libre par sa neutralité, et la **Gigantomachie**, gagnée avec **Héraclès**, scelle l'ordre olympien."
+        }
       ]
     }
   ]

@@ -1,4 +1,4 @@
-﻿{
+{
   "id": "course_200_re_et_la_creation_du_monde_egypte",
   "title": "Rê et la création du monde (Égypte)",
   "subtitle": "Le soleil créateur",
@@ -16,8 +16,14 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "**Rê** (ou Râ) n'est pas seulement le soleil. Pour les Égyptiens d'**Héliopolis**, cité du culte solaire près du Caire actuel, il est le principe même de l'existence : créer le monde, puis le défendre chaque nuit contre le néant." },
-        { "type": "paragraph", "text": "Pendant trois millénaires, sa figure traverse la religion d'État. Comprendre Rê, c'est comprendre comment l'Égypte pensait la naissance de l'univers, la fragilité de l'ordre, et pourquoi chaque aube est une victoire à reconquérir." }
+        {
+          "type": "paragraph",
+          "text": "**Rê** (ou Râ) n'est pas seulement le soleil. Pour les Égyptiens d'**Héliopolis**, cité du culte solaire près du Caire actuel, il est le principe même de l'existence : créer le monde, puis le défendre chaque nuit contre le néant."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pendant trois millénaires, sa figure traverse la religion d'État. Comprendre Rê, c'est comprendre comment l'Égypte pensait la naissance de l'univers, la fragilité de l'ordre, et pourquoi chaque aube est une victoire à reconquérir."
+        }
       ]
     },
     {
@@ -25,10 +31,24 @@
       "title": "L'émergence du monde : le tumulus primordial",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Avant le temps, il y a le **Noun** : une eau obscure, infinie, pleine de germes. La [[cosmogonie héliopolitaine]] décrit l'apparition d'**Atoum**, « celui qui est achevé ». Il s'engendre lui-même et émerge sur la **Pierre Benben**, premier point solide." },
-        { "type": "image", "asset": "re_et_la_creation_du_monde_egypte", "ratio": "4:3", "caption": "Atoum émerge du Noun sur la Pierre Benben." },
-        { "type": "funFact", "text": "À Héliopolis, les prêtres entretenaient un oiseau sacré, le **Bénou** (ancêtre du phénix), censé être l'âme de Rê et se poser sur la Benben pour annoncer un nouveau cycle." },
-        { "type": "paragraph", "text": "Seul, Atoum crée **Chou** (l'air) et **Tefnout** (l'humidité), puis **Geb** (la Terre) et **Nout** (le Ciel), séparés pour laisser un espace de vie. Naissent **Osiris**, **Isis**, **Seth** et **Nephtys** : avec Atoum, la **grande Ennéade** (les neuf). Le [[syncrétisme divin égyptien]] fusionnera plus tard Atoum et Rê en une seule figure créatrice." }
+        {
+          "type": "paragraph",
+          "text": "Avant le temps, il y a le **Noun** : une eau obscure, infinie, pleine de germes. La [[cosmogonie héliopolitaine]] décrit l'apparition d'**Atoum**, « celui qui est achevé ». Il s'engendre lui-même et émerge sur la **Pierre Benben**, premier point solide."
+        },
+        {
+          "type": "image",
+          "asset": "atum_primordial_egyptian_creation_benben",
+          "ratio": "4:3",
+          "caption": "Atoum émerge du Noun sur la Pierre Benben."
+        },
+        {
+          "type": "funFact",
+          "text": "À Héliopolis, les prêtres entretenaient un oiseau sacré, le **Bénou** (ancêtre du phénix), censé être l'âme de Rê et se poser sur la Benben pour annoncer un nouveau cycle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seul, Atoum crée **Chou** (l'air) et **Tefnout** (l'humidité), puis **Geb** (la Terre) et **Nout** (le Ciel), séparés pour laisser un espace de vie. Naissent **Osiris**, **Isis**, **Seth** et **Nephtys** : avec Atoum, la **grande Ennéade** (les neuf). Le [[syncrétisme divin égyptien]] fusionnera plus tard Atoum et Rê en une seule figure créatrice."
+        }
       ]
     },
     {
@@ -36,10 +56,24 @@
       "title": "Le Maât contre l’Isfet : le périlleux voyage de la barque",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Le jour, Rê navigue sur la barque **Mandjet**. Au crépuscule, il passe sur la **Mesektet** et traverse les douze heures de la [[Douât]], le monde des morts. Ce n'est pas un repos : c'est une guerre contre l'**Isfet**, le désordre." },
-        { "type": "image", "asset": "re_et_la_creation_du_monde_egypte", "ratio": "4:3", "caption": "La barque solaire de Rê, moteur quotidien du temps." },
-        { "type": "funFact", "text": "À partir de la IVe dynastie, presque tous les pharaons portent « Rê » dans leur nom : ils se disent « fils de Rê », garants du cycle solaire." },
-        { "type": "paragraph", "text": "Le serpent **Apopis** cherche à renverser la barque ou à boire les eaux du Nil céleste. **Seth** lui-même défend parfois la proue. Quand Rê renaît à l'aube sous les traits de **Khépri**, le scarabée, c'est le **Maât** (l'équilibre) qui l'emporte une fois de plus. Une éclipse ? Apopis a presque gagné." }
+        {
+          "type": "paragraph",
+          "text": "Le jour, Rê navigue sur la barque **Mandjet**. Au crépuscule, il passe sur la **Mesektet** et traverse les douze heures de la [[Douât]], le monde des morts. Ce n'est pas un repos : c'est une guerre contre l'**Isfet**, le désordre."
+        },
+        {
+          "type": "image",
+          "asset": "ra_solar_barque_egyptian_hieroglyphics",
+          "ratio": "4:3",
+          "caption": "La barque solaire de Rê, moteur quotidien du temps."
+        },
+        {
+          "type": "funFact",
+          "text": "À partir de la IVe dynastie, presque tous les pharaons portent « Rê » dans leur nom : ils se disent « fils de Rê », garants du cycle solaire."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le serpent **Apopis** cherche à renverser la barque ou à boire les eaux du Nil céleste. **Seth** lui-même défend parfois la proue. Quand Rê renaît à l'aube sous les traits de **Khépri**, le scarabée, c'est le **Maât** (l'équilibre) qui l'emporte une fois de plus. Une éclipse ? Apopis a presque gagné."
+        }
       ]
     },
     {
@@ -47,9 +81,20 @@
       "title": "La révolte des hommes et l'œil destructeur",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Même Rê vieillit. Dans le récit de « La Destruction des hommes », ses os deviennent argent et l'humanité conspire contre lui. Offensé, il déchaîne son Œil ardent : la déesse [[Sekhmet]], lionne sanguinaire." },
-        { "type": "image", "asset": "re_et_la_creation_du_monde_egypte", "ratio": "4:3", "caption": "Sekhmet, l'Œil de Rê, avant de redevenir Hathor." },
-        { "type": "paragraph", "text": "Le massacre menace d'éteindre la création. Rê fait brasser des milliers de jarres de bière teintée d'ocre rouge, versées sur les champs. Sekhmet, croyant boire du sang, s'enivre et s'apaise : elle devient la douce **Hathor**. Le mythe explique le mal, et justifie la fête de l'ivresse, où l'on buvait pour célébrer le salut des hommes." }
+        {
+          "type": "paragraph",
+          "text": "Même Rê vieillit. Dans le récit de « La Destruction des hommes », ses os deviennent argent et l'humanité conspire contre lui. Offensé, il déchaîne son Œil ardent : la déesse [[Sekhmet]], lionne sanguinaire."
+        },
+        {
+          "type": "image",
+          "asset": "sekhmet_hathor_lioness_egyptian_goddess",
+          "ratio": "4:3",
+          "caption": "Sekhmet, l'Œil de Rê, avant de redevenir Hathor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le massacre menace d'éteindre la création. Rê fait brasser des milliers de jarres de bière teintée d'ocre rouge, versées sur les champs. Sekhmet, croyant boire du sang, s'enivre et s'apaise : elle devient la douce **Hathor**. Le mythe explique le mal, et justifie la fête de l'ivresse, où l'on buvait pour célébrer le salut des hommes."
+        }
       ]
     },
     {
@@ -57,9 +102,18 @@
       "title": "Postérité et fusion : l'avatar Amon-Rê",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Au Nouvel Empire, le dieu thébain **Amon** fusionne avec Rê : naît **Amon-Rê**, « Roi des Dieux », créateur invisible et soleil visible. Pour lui s'élèvent les plus vastes sanctuaires, comme le [[temple de Karnak]]." },
-        { "type": "paragraph", "text": "Pyramides et obélisques pétrifient les rayons du soleil pour élever le pharaon vers son père céleste. Même la réforme d'**Akhenaton**, qui imposa le culte d'**Aton** (le disque), radicalisait une idée déjà solaire. Rê reste le symbole indépassable de la stabilité égyptienne." },
-        { "type": "takeaway", "text": "**Rê** crée le monde depuis Héliopolis, le défend chaque nuit dans sa barque contre **Apopis**, et punit puis sauve l'humanité par l'Œil **Sekhmet**. Devenu **Amon-Rê**, il règne au sommet de l'Égypte des pharaons." }
+        {
+          "type": "paragraph",
+          "text": "Au Nouvel Empire, le dieu thébain **Amon** fusionne avec Rê : naît **Amon-Rê**, « Roi des Dieux », créateur invisible et soleil visible. Pour lui s'élèvent les plus vastes sanctuaires, comme le [[temple de Karnak]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pyramides et obélisques pétrifient les rayons du soleil pour élever le pharaon vers son père céleste. Même la réforme d'**Akhenaton**, qui imposa le culte d'**Aton** (le disque), radicalisait une idée déjà solaire. Rê reste le symbole indépassable de la stabilité égyptienne."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Rê** crée le monde depuis Héliopolis, le défend chaque nuit dans sa barque contre **Apopis**, et punit puis sauve l'humanité par l'Œil **Sekhmet**. Devenu **Amon-Rê**, il règne au sommet de l'Égypte des pharaons."
+        }
       ]
     }
   ]
