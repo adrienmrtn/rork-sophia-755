@@ -11,47 +11,19 @@ struct SwipeTutorialOverlay: View {
 
     var body: some View {
         ZStack {
-            Color.black.opacity(appeared ? 0.62 : 0)
+            Color.black.opacity(appeared ? 0.5 : 0)
                 .ignoresSafeArea()
                 .onTapGesture(perform: dismiss)
 
-            VStack(spacing: 28) {
-                Spacer()
-
-                swipeGestureDemo
-
-                VStack(spacing: 12) {
-                    Text(languageManager.text("home.swipe.title"))
-                        .font(.system(.title2, design: .rounded, weight: .heavy))
-                        .foregroundStyle(.white)
-                        .multilineTextAlignment(.center)
-
-                    Text(languageManager.text("home.swipe.subtitle"))
-                        .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                        .foregroundStyle(.white.opacity(0.72))
-                        .multilineTextAlignment(.center)
-                        .lineSpacing(2)
-                }
+            card
                 .padding(.horizontal, 32)
-
-                Button(action: dismiss) {
-                    Text(languageManager.text("common.letsGo"))
-                        .font(.system(.headline, design: .rounded, weight: .heavy))
-                        .foregroundStyle(BrutalPalette.ink)
-                        .padding(.horizontal, 40)
-                        .padding(.vertical, 16)
-                }
-                .buttonStyle(SwipeTutorialButtonStyle())
-
-                Spacer()
-                    .frame(height: 120)
-            }
-            .opacity(appeared ? 1 : 0)
-            .offset(y: appeared ? 0 : 20)
+                .scaleEffect(appeared ? 1 : 0.92)
+                .opacity(appeared ? 1 : 0)
+                .offset(y: appeared ? 0 : 16)
         }
         .sensoryFeedback(.impact(weight: .light), trigger: tapCount)
         .onAppear {
-            withAnimation(.spring(response: 0.5, dampingFraction: 0.8).delay(0.15)) {
+            withAnimation(.spring(response: 0.5, dampingFraction: 0.82).delay(0.1)) {
                 appeared = true
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
@@ -61,23 +33,58 @@ struct SwipeTutorialOverlay: View {
         }
     }
 
-    private var swipeGestureDemo: some View {
-        HStack(spacing: 28) {
-            Image(systemName: "chevron.left")
-                .font(.system(size: 22, weight: .heavy, design: .rounded))
-                .foregroundStyle(.white.opacity(handOffset < -8 ? 0.95 : 0.35))
+    private var card: some View {
+        VStack(spacing: 24) {
+            swipeGestureDemo
 
-            Image(systemName: "hand.draw.fill")
-                .font(.system(size: 52))
-                .foregroundStyle(.white)
-                .offset(x: handOffset)
-                .shadow(color: .black.opacity(0.2), radius: 8, y: 4)
+            VStack(spacing: 8) {
+                Text(languageManager.text("home.swipe.title"))
+                    .font(DS.title(.title2, .semibold))
+                    .foregroundStyle(DS.ink)
+                    .multilineTextAlignment(.center)
+
+                Text(languageManager.text("home.swipe.subtitle"))
+                    .font(DS.sans(.subheadline))
+                    .foregroundStyle(DS.inkSecondary)
+                    .multilineTextAlignment(.center)
+            }
+
+            Button(action: dismiss) {
+                Text(languageManager.text("common.letsGo"))
+            }
+            .buttonStyle(DSPrimaryButtonStyle())
+        }
+        .padding(.vertical, 28)
+        .padding(.horizontal, 24)
+        .background(DS.surface)
+        .clipShape(.rect(cornerRadius: DS.Radius.card))
+        .overlay {
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .strokeBorder(DS.hairline, lineWidth: 1)
+        }
+        .dsSoftShadow()
+    }
+
+    private var swipeGestureDemo: some View {
+        HStack(spacing: 24) {
+            Image(systemName: "chevron.left")
+                .font(.system(size: 18, weight: .semibold))
+                .foregroundStyle(handOffset < -8 ? DS.accent : DS.hairline)
+
+            ZStack {
+                Circle().fill(DS.accentTint)
+                Image(systemName: "hand.draw.fill")
+                    .font(.system(size: 34, weight: .regular))
+                    .foregroundStyle(DS.accent)
+                    .offset(x: handOffset * 0.35)
+            }
+            .frame(width: 72, height: 72)
 
             Image(systemName: "chevron.right")
-                .font(.system(size: 22, weight: .heavy, design: .rounded))
-                .foregroundStyle(.white.opacity(handOffset > 8 ? 0.95 : 0.35))
+                .font(.system(size: 18, weight: .semibold))
+                .foregroundStyle(handOffset > 8 ? DS.accent : DS.hairline)
         }
-        .frame(height: 64)
+        .frame(height: 72)
     }
 
     private func dismiss() {
@@ -103,30 +110,5 @@ struct SwipeTutorialOverlay: View {
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.2) {
             startHandAnimation()
         }
-    }
-}
-
-private struct SwipeTutorialButtonStyle: ButtonStyle {
-    private let depth: CGFloat = 5
-
-    func makeBody(configuration: Configuration) -> some View {
-        let pressed = configuration.isPressed
-        configuration.label
-            .offset(y: pressed ? depth : 0)
-            .background(
-                ZStack(alignment: .top) {
-                    Capsule()
-                        .fill(BrutalPalette.ink)
-                        .offset(y: depth)
-                    Capsule()
-                        .fill(BrutalPalette.pink)
-                        .overlay {
-                            Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 2.5)
-                        }
-                        .offset(y: pressed ? depth : 0)
-                }
-            )
-            .padding(.bottom, depth)
-            .animation(.spring(response: 0.18, dampingFraction: 0.7), value: pressed)
     }
 }

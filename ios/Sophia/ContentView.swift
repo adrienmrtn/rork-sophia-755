@@ -62,8 +62,8 @@ struct ContentView: View {
                     )
                 }
             }
-            .tint(BrutalPalette.ink)
-            .toolbarBackground(BrutalPalette.cream, for: .tabBar)
+            .tint(DS.accent)
+            .toolbarBackground(DS.canvas, for: .tabBar)
             .toolbarBackground(.visible, for: .tabBar)
             .preferredColorScheme(.light)
             .sensoryFeedback(.selection, trigger: selectedTab)
