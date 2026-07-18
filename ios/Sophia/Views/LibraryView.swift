@@ -29,8 +29,7 @@ struct LibraryView: View {
     @FocusState private var searchFocused: Bool
 
     private let previewCount = 4
-    private let ink = BrutalPalette.ink
-    private let cream = BrutalPalette.cream
+    private let cream = DS.canvas
 
     private var filteredCourses: [Course] {
         if searchText.isEmpty { return ContentCatalog.activeCourses }
@@ -75,8 +74,8 @@ struct LibraryView: View {
                     VStack(alignment: .leading, spacing: 28) {
                         HStack {
                             Text(languageManager.text("library.title"))
-                                .font(.system(.largeTitle, design: .rounded, weight: .heavy))
-                                .foregroundStyle(ink)
+                                .font(DS.title(.largeTitle, .semibold))
+                                .foregroundStyle(DS.ink)
                             Spacer()
                         }
                         .padding(.horizontal, 20)
@@ -143,20 +142,20 @@ struct LibraryView: View {
     private var searchBar: some View {
         HStack(spacing: 10) {
             Image(systemName: "magnifyingglass")
-                .font(.system(size: 16, weight: .heavy))
-                .foregroundStyle(ink)
+                .font(.system(size: 16, weight: .regular))
+                .foregroundStyle(DS.inkTertiary)
 
             ZStack(alignment: .leading) {
                 if searchText.isEmpty {
                     Text(languageManager.text("library.search.placeholder"))
-                        .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                        .foregroundStyle(ink.opacity(0.38))
+                        .font(DS.sans(.subheadline))
+                        .foregroundStyle(DS.inkTertiary)
                         .allowsHitTesting(false)
                 }
                 TextField("", text: $searchText)
-                    .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink)
-                    .tint(ink)
+                    .font(DS.sans(.subheadline))
+                    .foregroundStyle(DS.ink)
+                    .tint(DS.accentSoft)
                     .focused($searchFocused)
                     .autocorrectionDisabled()
                     .textInputAutocapitalization(.never)
@@ -169,32 +168,32 @@ struct LibraryView: View {
                     g.impactOccurred()
                 } label: {
                     Image(systemName: "xmark.circle.fill")
-                        .font(.system(size: 16, weight: .bold))
-                        .foregroundStyle(ink.opacity(0.4))
+                        .font(.system(size: 16, weight: .regular))
+                        .foregroundStyle(DS.inkTertiary)
                 }
             }
         }
         .padding(.horizontal, 16)
-        .padding(.vertical, 14)
-        .background(Color.white)
-        .clipShape(.rect(cornerRadius: 16))
+        .padding(.vertical, 13)
+        .background(DS.surface)
+        .clipShape(.rect(cornerRadius: DS.Radius.control))
         .overlay {
-            RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .strokeBorder(ink, lineWidth: 2.5)
+            RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                .strokeBorder(DS.hairline, lineWidth: 1)
         }
     }
 
     private var emptyResults: some View {
         VStack(spacing: 12) {
             Image(systemName: "magnifyingglass")
-                .font(.system(size: 40, weight: .light))
-                .foregroundStyle(ink.opacity(0.3))
+                .font(.system(size: 38, weight: .light))
+                .foregroundStyle(DS.inkTertiary)
             Text(languageManager.text("library.empty.title"))
-                .font(.system(.title3, design: .rounded, weight: .heavy))
-                .foregroundStyle(ink)
+                .font(DS.title(.title3, .semibold))
+                .foregroundStyle(DS.ink)
             Text(languageManager.text("library.empty.subtitle"))
-                .font(.system(.subheadline, design: .rounded, weight: .medium))
-                .foregroundStyle(ink.opacity(0.5))
+                .font(DS.sans(.subheadline))
+                .foregroundStyle(DS.inkSecondary)
         }
         .frame(maxWidth: .infinity)
     }
@@ -202,11 +201,11 @@ struct LibraryView: View {
     // MARK: - Featured swipeable carousel
 
     private var featuredCarousel: some View {
-        VStack(alignment: .leading, spacing: 12) {
+        VStack(alignment: .leading, spacing: 14) {
             HStack(spacing: 8) {
                 Text(languageManager.text("library.section.featured"))
-                    .font(.system(.title3, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink)
+                    .font(DS.title(.title3, .semibold))
+                    .foregroundStyle(DS.ink)
                 Spacer()
             }
             .padding(.horizontal, 20)
@@ -222,12 +221,12 @@ struct LibraryView: View {
                         }
                     )
                     .padding(.horizontal, 20)
-                    .padding(.bottom, 8)
+                    .padding(.vertical, 8)
                     .tag(index)
                 }
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
-            .frame(height: 344)
+            .frame(height: 350)
             .onAppear {
                 CourseImageMap.preloadImages(for: featuredCourses.map(\.id))
             }
@@ -235,8 +234,8 @@ struct LibraryView: View {
             HStack(spacing: 6) {
                 ForEach(featuredCourses.indices, id: \.self) { i in
                     Capsule()
-                        .fill(i == featuredIndex ? ink : ink.opacity(0.2))
-                        .frame(width: i == featuredIndex ? 24 : 8, height: 8)
+                        .fill(i == featuredIndex ? DS.accentSoft : DS.hairline)
+                        .frame(width: i == featuredIndex ? 22 : 7, height: 7)
                         .animation(.spring(response: 0.3), value: featuredIndex)
                 }
             }
@@ -250,8 +249,8 @@ struct LibraryView: View {
         VStack(alignment: .leading, spacing: 14) {
             HStack {
                 Text(title)
-                    .font(.system(.title3, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink)
+                    .font(DS.title(.title3, .semibold))
+                    .foregroundStyle(DS.ink)
                 Spacer()
             }
             .padding(.horizontal, 20)
@@ -312,26 +311,23 @@ struct LibraryView: View {
     private func sectionHeaderContent(subject: Subject) -> some View {
         HStack(spacing: 10) {
             HStack(spacing: 8) {
-                Text(subject.emoji)
-                    .font(.system(size: 16))
-                Text(subject.localizedShortName(language: languageManager.current).uppercased())
-                    .font(.system(.caption, design: .rounded, weight: .heavy))
-                    .foregroundStyle(.white)
-                    .tracking(0.5)
+                Image(systemName: subject.icon)
+                    .font(.system(size: 14, weight: .medium))
+                    .foregroundStyle(DS.accentSoft)
+                Text(subject.localizedShortName(language: languageManager.current))
+                    .font(DS.title(.headline, .semibold))
+                    .foregroundStyle(DS.ink)
             }
-            .padding(.horizontal, 12)
-            .padding(.vertical, 7)
-            .background(ink, in: Capsule())
 
             Spacer()
 
             HStack(spacing: 4) {
                 Text(languageManager.text("library.seeMore"))
-                    .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink)
-                Image(systemName: "arrow.right")
-                    .font(.system(size: 13, weight: .heavy))
-                    .foregroundStyle(ink)
+                    .font(DS.sans(.subheadline, .medium))
+                    .foregroundStyle(DS.accentSoft)
+                Image(systemName: "chevron.right")
+                    .font(.system(size: 12, weight: .semibold))
+                    .foregroundStyle(DS.accentSoft)
             }
         }
     }
@@ -340,22 +336,19 @@ struct LibraryView: View {
         VStack(alignment: .leading, spacing: 14) {
             HStack(spacing: 10) {
                 HStack(spacing: 8) {
-                    Text(subject.emoji)
-                        .font(.system(size: 16))
-                    Text(subject.localizedShortName(language: languageManager.current).uppercased())
-                        .font(.system(.caption, design: .rounded, weight: .heavy))
-                        .foregroundStyle(.white)
-                        .tracking(0.5)
+                    Image(systemName: subject.icon)
+                        .font(.system(size: 14, weight: .medium))
+                        .foregroundStyle(DS.accentSoft)
+                    Text(subject.localizedShortName(language: languageManager.current))
+                        .font(DS.title(.headline, .semibold))
+                        .foregroundStyle(DS.ink)
                 }
-                .padding(.horizontal, 12)
-                .padding(.vertical, 7)
-                .background(ink, in: Capsule())
 
                 Spacer()
 
                 Text("\(courses.count)")
-                    .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink.opacity(0.5))
+                    .font(DS.sans(.subheadline, .medium))
+                    .foregroundStyle(DS.inkTertiary)
             }
             .padding(.horizontal, 20)
 
@@ -398,138 +391,94 @@ struct LibraryFeaturedCard: View {
 
     @State private var image: UIImage?
 
-    private let ink = BrutalPalette.ink
-    private let depth: CGFloat = 6
-    private var pastel: Color { BrutalPalette.pastel(for: course.subject) }
-
     var body: some View {
         Button(action: onTap) {
             VStack(alignment: .leading, spacing: 0) {
                 cover
                 infoPanel
             }
-            .background(Color.white)
-            .clipShape(.rect(cornerRadius: 24))
+            .background(DS.surface)
+            .clipShape(.rect(cornerRadius: DS.Radius.card))
             .overlay {
-                RoundedRectangle(cornerRadius: 24, style: .continuous)
-                    .strokeBorder(ink, lineWidth: 3)
+                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                    .strokeBorder(DS.hairline, lineWidth: 1)
             }
-            .background(alignment: .top) {
-                RoundedRectangle(cornerRadius: 24, style: .continuous)
-                    .fill(ink)
-                    .offset(y: depth)
-            }
-            .padding(.bottom, depth)
+            .dsSoftShadow()
         }
-        .buttonStyle(BrutalCardButtonStyle(depth: 3))
+        .buttonStyle(BrutalCardButtonStyle(depth: 2))
         .onAppear {
             if image == nil { image = CourseImageMap.loadImage(for: course.id) }
         }
     }
 
     private var cover: some View {
-        ZStack(alignment: .topLeading) {
-            Color(.secondarySystemBackground)
-                .overlay {
-                    if let image {
-                        Image(uiImage: image)
-                            .resizable()
-                            .scaledToFill()
-                            .allowsHitTesting(false)
-                    } else {
-                        ZStack {
-                            pastel
-                            Text(course.subject.emoji).font(.system(size: 52))
-                        }
-                    }
+        DS.surfaceMuted
+            .overlay {
+                if let image {
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFill()
+                        .allowsHitTesting(false)
+                } else {
+                    Image(systemName: course.subject.icon)
+                        .font(.system(size: 40, weight: .light))
+                        .foregroundStyle(DS.accentSoft.opacity(0.5))
                 }
-                .frame(height: 150)
-                .frame(maxWidth: .infinity)
-                .clipped()
-
-            LinearGradient(colors: [.clear, .black.opacity(0.35)], startPoint: .center, endPoint: .bottom)
-                .frame(height: 150)
-                .allowsHitTesting(false)
-
-            HStack(spacing: 6) {
-                Image(systemName: "sparkles").font(.system(size: 10, weight: .black))
-                Text(languageManager.text("library.featured.badge"))
-                    .font(.system(.caption2, design: .rounded, weight: .black))
-                    .tracking(0.6)
             }
-            .foregroundStyle(ink)
-            .padding(.horizontal, 10)
-            .padding(.vertical, 6)
-            .background(BrutalPalette.yellow, in: Capsule())
-            .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
-            .padding(12)
-        }
-        .frame(height: 150)
-        .overlay(alignment: .bottomLeading) {
-            HStack(spacing: 6) {
-                Text(course.subject.emoji).font(.system(size: 13))
-                Text(course.subject.localizedShortName(language: languageManager.current).uppercased())
-                    .font(.system(.caption2, design: .rounded, weight: .heavy))
-                    .foregroundStyle(.white)
-                    .tracking(0.5)
-            }
-            .padding(.horizontal, 10)
-            .padding(.vertical, 6)
-            .background(ink, in: Capsule())
-            .padding(12)
-        }
-        .overlay(alignment: .bottom) {
-            Rectangle().fill(ink).frame(height: 3)
-        }
+            .frame(height: 160)
+            .frame(maxWidth: .infinity)
+            .clipped()
     }
 
     private var infoPanel: some View {
         VStack(alignment: .leading, spacing: 8) {
+            Text(course.subject.localizedShortName(language: languageManager.current).uppercased())
+                .font(DS.sans(.caption2, .semibold))
+                .foregroundStyle(DS.accentSoft)
+                .tracking(1.2)
+
             Text(course.title)
-                .font(.system(.title3, design: .rounded, weight: .black))
-                .foregroundStyle(ink)
+                .font(DS.title(.title3, .semibold))
+                .foregroundStyle(DS.ink)
                 .lineLimit(2, reservesSpace: true)
                 .multilineTextAlignment(.leading)
 
             Text(course.description)
-                .font(.system(.caption, design: .rounded, weight: .semibold))
-                .foregroundStyle(ink.opacity(0.6))
+                .font(DS.sans(.caption))
+                .foregroundStyle(DS.inkSecondary)
                 .lineLimit(2, reservesSpace: true)
                 .multilineTextAlignment(.leading)
 
             HStack(spacing: 8) {
-                metaChip(icon: "rectangle.stack.fill", text: String(format: languageManager.text("onboarding.showcase.courses.lessons"), course.lessons.count), fill: pastel)
-                metaChip(icon: "checkmark.circle.fill", text: String(format: languageManager.text("onboarding.showcase.courses.quizCount"), course.quiz.count), fill: BrutalPalette.yellow)
+                metaChip(icon: "rectangle.stack", text: String(format: languageManager.text("onboarding.showcase.courses.lessons"), course.lessons.count))
+                metaChip(icon: "checkmark.circle", text: String(format: languageManager.text("onboarding.showcase.courses.quizCount"), course.quiz.count))
 
                 Spacer(minLength: 0)
 
-                Image(systemName: status == .completed ? "checkmark.circle.fill" : "arrow.right")
-                    .font(.system(size: 15, weight: .black))
-                    .foregroundStyle(ink)
+                Image(systemName: status == .completed ? "checkmark" : "arrow.right")
+                    .font(.system(size: 14, weight: .semibold))
+                    .foregroundStyle(status == .completed ? DS.accentSoft : Color.white)
                     .frame(width: 34, height: 34)
-                    .background(status == .completed ? BrutalPalette.yellow : BrutalPalette.pink, in: Circle())
-                    .overlay { Circle().strokeBorder(ink, lineWidth: 2) }
+                    .background(status == .completed ? DS.accentTint : DS.accent, in: Circle())
             }
         }
         .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
     }
 
-    private func metaChip(icon: String, text: String, fill: Color) -> some View {
+    private func metaChip(icon: String, text: String) -> some View {
         HStack(spacing: 5) {
-            Image(systemName: icon).font(.system(size: 10, weight: .black))
-            Text(text).font(.system(.caption2, design: .rounded, weight: .black))
+            Image(systemName: icon).font(.system(size: 10, weight: .medium))
+            Text(text).font(DS.sans(.caption2, .medium))
         }
-        .foregroundStyle(ink)
+        .foregroundStyle(DS.inkSecondary)
         .padding(.horizontal, 9)
         .padding(.vertical, 6)
-        .background(fill, in: Capsule())
-        .overlay { Capsule().strokeBorder(ink, lineWidth: 1.6) }
+        .background(DS.accentTint, in: Capsule())
     }
 }
 
-/// Neo-brutalist library card — white body, black border, solid black offset shadow,
-/// pastel bottom panel matching the Home FlashCard style.
+/// Calm library card — white surface, hairline border, soft diffuse shadow.
 struct LibraryCardView: View {
     @Environment(LanguageManager.self) private var languageManager
     let course: Course
@@ -538,37 +487,26 @@ struct LibraryCardView: View {
     var progressManager: ProgressManager? = nil
     @State private var favTrigger: Int = 0
 
-    private let ink = BrutalPalette.ink
-    private let depth: CGFloat = 4
-
-    private var pastel: Color { BrutalPalette.pastel(for: course.subject) }
-
     var body: some View {
         Button(action: onTap) {
-            ZStack(alignment: .top) {
-                RoundedRectangle(cornerRadius: 18, style: .continuous)
-                    .fill(ink)
-                    .offset(y: depth)
-
-                VStack(spacing: 0) {
-                    illustration
-                    bottomPanel
-                }
-                .background(Color.white)
-                .clipShape(.rect(cornerRadius: 18))
-                .overlay {
-                    RoundedRectangle(cornerRadius: 18, style: .continuous)
-                        .strokeBorder(ink, lineWidth: 2.5)
-                }
+            VStack(spacing: 0) {
+                illustration
+                bottomPanel
             }
-            .opacity(status == .completed ? 0.78 : 1.0)
-            .padding(.bottom, depth)
+            .background(DS.surface)
+            .clipShape(.rect(cornerRadius: DS.Radius.control))
+            .overlay {
+                RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                    .strokeBorder(DS.hairline, lineWidth: 1)
+            }
+            .dsSoftShadow()
+            .opacity(status == .completed ? 0.82 : 1.0)
         }
         .buttonStyle(BrutalCardButtonStyle(depth: 2))
     }
 
     private var illustration: some View {
-        Color(.secondarySystemBackground)
+        DS.surfaceMuted
             .frame(height: 110)
             .overlay {
                 if let uiImage = CourseImageMap.loadImage(for: course.id) {
@@ -581,17 +519,10 @@ struct LibraryCardView: View {
                         .clipped()
                         .allowsHitTesting(false)
                 } else {
-                    ZStack {
-                        pastel
-                        Text(course.subject.emoji)
-                            .font(.system(size: 36))
-                    }
+                    Image(systemName: course.subject.icon)
+                        .font(.system(size: 30, weight: .light))
+                        .foregroundStyle(DS.accentSoft.opacity(0.5))
                 }
-            }
-            .overlay(alignment: .bottom) {
-                Rectangle()
-                    .fill(ink)
-                    .frame(height: 2.5)
             }
             .overlay(alignment: .topLeading) {
                 statusBadge
@@ -605,12 +536,12 @@ struct LibraryCardView: View {
                         favTrigger += 1
                         pm.toggleFavorite(course.id)
                     } label: {
-                        Image(systemName: pm.isFavorite(course.id) ? "heart.fill" : "heart")
-                            .font(.system(size: 13, weight: .heavy))
-                            .foregroundStyle(pm.isFavorite(course.id) ? BrutalPalette.pink : ink)
+                        Image(systemName: pm.isFavorite(course.id) ? "bookmark.fill" : "bookmark")
+                            .font(.system(size: 13, weight: .medium))
+                            .foregroundStyle(pm.isFavorite(course.id) ? DS.accent : DS.inkSecondary)
                             .frame(width: 30, height: 30)
-                            .background(Color.white, in: Circle())
-                            .overlay { Circle().strokeBorder(ink, lineWidth: 2) }
+                            .background(.ultraThinMaterial, in: Circle())
+                            .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
                     }
                     .buttonStyle(.plain)
                     .sensoryFeedback(.impact(weight: .light), trigger: favTrigger)
@@ -622,13 +553,13 @@ struct LibraryCardView: View {
     private var bottomPanel: some View {
         VStack(alignment: .leading, spacing: 6) {
             Text(course.subject.localizedShortName(language: languageManager.current).uppercased())
-                .font(.system(.caption2, design: .rounded, weight: .heavy))
-                .foregroundStyle(ink.opacity(0.55))
-                .tracking(0.5)
+                .font(DS.sans(.caption2, .semibold))
+                .foregroundStyle(DS.accentSoft)
+                .tracking(1.0)
 
             Text(course.title)
-                .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                .foregroundStyle(ink)
+                .font(DS.title(.subheadline, .semibold))
+                .foregroundStyle(DS.ink)
                 .multilineTextAlignment(.leading)
                 .lineLimit(2, reservesSpace: true)
         }
@@ -636,7 +567,7 @@ struct LibraryCardView: View {
         .padding(.horizontal, 12)
         .padding(.vertical, 12)
         .frame(maxWidth: .infinity)
-        .background(pastel)
+        .background(DS.surface)
     }
 
     @ViewBuilder
@@ -645,28 +576,28 @@ struct LibraryCardView: View {
         case .completed:
             HStack(spacing: 4) {
                 Image(systemName: "checkmark")
-                    .font(.system(size: 10, weight: .heavy))
+                    .font(.system(size: 9, weight: .semibold))
                 Text(languageManager.text("library.status.done"))
-                    .font(.system(.caption2, design: .rounded, weight: .heavy))
-                    .tracking(0.5)
+                    .font(DS.sans(.caption2, .semibold))
+                    .tracking(0.3)
             }
             .foregroundStyle(.white)
             .padding(.horizontal, 8)
             .padding(.vertical, 5)
-            .background(ink, in: Capsule())
+            .background(DS.accent, in: Capsule())
         case .inProgress:
             HStack(spacing: 4) {
                 Image(systemName: "play.fill")
-                    .font(.system(size: 9, weight: .heavy))
+                    .font(.system(size: 8, weight: .semibold))
                 Text(languageManager.text("library.status.inProgress"))
-                    .font(.system(.caption2, design: .rounded, weight: .heavy))
-                    .tracking(0.5)
+                    .font(DS.sans(.caption2, .semibold))
+                    .tracking(0.3)
             }
-            .foregroundStyle(ink)
+            .foregroundStyle(DS.accentSoft)
             .padding(.horizontal, 8)
             .padding(.vertical, 5)
-            .background(Color.white, in: Capsule())
-            .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
+            .background(.ultraThinMaterial, in: Capsule())
+            .overlay { Capsule().strokeBorder(DS.hairline, lineWidth: 1) }
         case .notStarted:
             EmptyView()
         }
