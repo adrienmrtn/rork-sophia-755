@@ -8,102 +8,90 @@ struct LevelUpCelebrationView: View {
     let onContinue: () -> Void
 
     @State private var appeared: Bool = false
-    @State private var badgeScale: CGFloat = 0.4
-    @State private var levelScale: CGFloat = 0.5
+    @State private var badgeScale: CGFloat = 0.5
+    @State private var levelScale: CGFloat = 0.6
     @State private var showNewLevel: Bool = false
-    @State private var confettiTrigger: Int = 0
-
-    private let ink = BrutalPalette.ink
-    private let cream = BrutalPalette.cream
-    private let pink = BrutalPalette.pink
-    private let yellow = Color(red: 1.0, green: 0.84, blue: 0.35)
 
     var body: some View {
         ZStack {
-            cream.ignoresSafeArea()
+            DS.canvas.ignoresSafeArea()
 
-            ConfettiView(trigger: confettiTrigger)
-                .ignoresSafeArea()
-                .allowsHitTesting(false)
+            ScrollView {
+                VStack(spacing: 0) {
+                    Spacer(minLength: 28)
 
-            VStack(spacing: 0) {
-                Spacer(minLength: 24)
+                    SubjectBadgeView(subject: subject, iconSize: 56, cornerRadius: DS.Radius.card)
+                        .frame(width: 116, height: 116)
+                        .scaleEffect(badgeScale)
+                        .opacity(appeared ? 1 : 0)
 
-                SubjectBadgeView(subject: subject, emojiSize: 56, cornerRadius: 22)
-                    .frame(width: 120, height: 120)
-                    .scaleEffect(badgeScale)
-                    .opacity(appeared ? 1 : 0)
+                    Spacer(minLength: 28)
 
-                Spacer(minLength: 28)
+                    Text(languageManager.text("levelUp.title"))
+                        .font(DS.title(.largeTitle, .semibold))
+                        .foregroundStyle(DS.ink)
+                        .multilineTextAlignment(.center)
+                        .opacity(appeared ? 1 : 0)
+                        .offset(y: appeared ? 0 : 14)
 
-                Text(languageManager.text("levelUp.title"))
-                    .font(.system(.largeTitle, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink)
-                    .multilineTextAlignment(.center)
-                    .opacity(appeared ? 1 : 0)
-                    .offset(y: appeared ? 0 : 16)
+                    Text(subject.localizedShortName(language: languageManager.current))
+                        .font(DS.sans(.subheadline))
+                        .foregroundStyle(DS.inkSecondary)
+                        .padding(.top, 6)
+                        .opacity(appeared ? 1 : 0)
 
-                Text(subject.localizedShortName(language: languageManager.current))
-                    .font(.system(.title3, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink.opacity(0.55))
-                    .padding(.top, 8)
-                    .opacity(appeared ? 1 : 0)
+                    HStack(alignment: .firstTextBaseline, spacing: 16) {
+                        Text(String(format: languageManager.text("common.levelShort"), previousLevel))
+                            .font(DS.title(.title2, .medium))
+                            .foregroundStyle(DS.inkTertiary.opacity(showNewLevel ? 0.6 : 1))
+                            .scaleEffect(showNewLevel ? 0.9 : 1)
 
-                HStack(alignment: .firstTextBaseline, spacing: 16) {
-                    Text(String(format: languageManager.text("common.levelShort"), previousLevel))
-                        .font(.system(.title, design: .rounded, weight: .heavy))
-                        .foregroundStyle(ink.opacity(showNewLevel ? 0.35 : 1))
-                        .scaleEffect(showNewLevel ? 0.85 : 1)
+                        Image(systemName: "arrow.right")
+                            .font(.system(size: 18, weight: .medium))
+                            .foregroundStyle(DS.accentSoft)
+                            .opacity(showNewLevel ? 1 : 0.3)
 
-                    Image(systemName: "arrow.right")
-                        .font(.system(size: 22, weight: .heavy))
-                        .foregroundStyle(pink)
-                        .opacity(showNewLevel ? 1 : 0.3)
+                        Text(String(format: languageManager.text("common.levelShort"), newLevel))
+                            .font(.system(size: 44, weight: .semibold))
+                            .foregroundStyle(DS.ink)
+                            .scaleEffect(levelScale)
+                            .opacity(showNewLevel ? 1 : 0)
+                    }
+                    .padding(.top, 24)
 
-                    Text(String(format: languageManager.text("common.levelShort"), newLevel))
-                        .font(.system(size: 52, weight: .heavy, design: .rounded))
-                        .foregroundStyle(ink)
-                        .scaleEffect(levelScale)
-                        .opacity(showNewLevel ? 1 : 0)
+                    Spacer(minLength: 32)
+
+                    Button {
+                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                        onContinue()
+                    } label: {
+                        Text(languageManager.text("common.continue"))
+                    }
+                    .buttonStyle(DSPrimaryButtonStyle())
+                    .padding(.horizontal, 24)
+                    .padding(.bottom, 32)
+                    .opacity(showNewLevel ? 1 : 0)
+                    .offset(y: showNewLevel ? 0 : 18)
                 }
-                .padding(.top, 24)
-
-                Spacer(minLength: 32)
-
-                Button {
-                    UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-                    onContinue()
-                } label: {
-                    Text(languageManager.text("common.continue"))
-                        .font(.system(.headline, design: .rounded, weight: .heavy))
-                        .foregroundStyle(ink)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 18)
-                }
-                .buttonStyle(DuolingoButtonStyle(fill: yellow, shimmer: nil))
-                .padding(.horizontal, 24)
-                .padding(.bottom, 32)
-                .opacity(showNewLevel ? 1 : 0)
-                .offset(y: showNewLevel ? 0 : 20)
             }
+            .scrollIndicators(.hidden)
         }
         .onAppear { runSequence() }
     }
 
     private func runSequence() {
-        withAnimation(.spring(response: 0.65, dampingFraction: 0.72)) {
+        withAnimation(.spring(response: 0.6, dampingFraction: 0.78)) {
             appeared = true
             badgeScale = 1.0
         }
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.55) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             UINotificationFeedbackGenerator().notificationOccurred(.success)
-            confettiTrigger += 1
-            withAnimation(.spring(response: 0.5, dampingFraction: 0.55)) {
+            withAnimation(.spring(response: 0.5, dampingFraction: 0.65)) {
                 showNewLevel = true
                 levelScale = 1.0
             }
-            UIImpactFeedbackGenerator(style: .heavy).impactOccurred(intensity: 1.0)
+            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
         }
     }
 }

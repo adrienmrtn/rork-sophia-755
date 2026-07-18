@@ -8,11 +8,6 @@ struct CollectionProgressCelebrationView: View {
     @State private var appeared = false
     @State private var displayedCount: Int = 0
     @State private var barFill: CGFloat = 0
-    @State private var shimmerOffset: CGFloat = -120
-    @State private var pulse = false
-
-    private let ink = BrutalPalette.ink
-    private let cream = BrutalPalette.cream
 
     private var previousFraction: CGFloat {
         guard event.totalCount > 0 else { return 0 }
@@ -26,61 +21,60 @@ struct CollectionProgressCelebrationView: View {
 
     var body: some View {
         ZStack {
-            cream.ignoresSafeArea()
+            DS.canvas.ignoresSafeArea()
 
-            VStack(spacing: 0) {
-                Spacer(minLength: 24)
+            ScrollView {
+                VStack(spacing: 0) {
+                    Spacer(minLength: 24)
 
-                Text(languageManager.text("celebration.collectionAdvanced"))
-                    .font(.system(.largeTitle, design: .rounded, weight: .black))
-                    .foregroundStyle(ink)
-                    .multilineTextAlignment(.center)
-                    .opacity(appeared ? 1 : 0)
-                    .offset(y: appeared ? 0 : 16)
+                    Text(languageManager.text("celebration.collectionAdvanced"))
+                        .font(DS.title(.title, .semibold))
+                        .foregroundStyle(DS.ink)
+                        .multilineTextAlignment(.center)
+                        .opacity(appeared ? 1 : 0)
+                        .offset(y: appeared ? 0 : 14)
 
-                Text(event.collection.title)
-                    .font(.system(.headline, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink.opacity(0.58))
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, 28)
-                    .padding(.top, 8)
-                    .opacity(appeared ? 1 : 0)
+                    Text(event.collection.title)
+                        .font(DS.sans(.subheadline))
+                        .foregroundStyle(DS.inkSecondary)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 28)
+                        .padding(.top, 6)
+                        .opacity(appeared ? 1 : 0)
 
-                Spacer(minLength: 22)
+                    Spacer(minLength: 22)
 
-                coverCard
-                    .padding(.horizontal, 22)
-                    .scaleEffect(appeared ? 1 : 0.9)
-                    .opacity(appeared ? 1 : 0)
+                    coverCard
+                        .padding(.horizontal, 22)
+                        .scaleEffect(appeared ? 1 : 0.92)
+                        .opacity(appeared ? 1 : 0)
 
-                Spacer(minLength: 24)
+                    Spacer(minLength: 24)
 
-                progressCard
-                    .padding(.horizontal, 22)
-                    .opacity(appeared ? 1 : 0)
-                    .offset(y: appeared ? 0 : 18)
+                    progressCard
+                        .padding(.horizontal, 22)
+                        .opacity(appeared ? 1 : 0)
+                        .offset(y: appeared ? 0 : 16)
 
-                Spacer(minLength: 24)
+                    Spacer(minLength: 24)
 
-                Button {
-                    UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-                    onContinue()
-                } label: {
-                    HStack(spacing: 8) {
-                        Text(languageManager.text("common.continue"))
-                        Image(systemName: "arrow.right")
+                    Button {
+                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                        onContinue()
+                    } label: {
+                        HStack(spacing: 8) {
+                            Text(languageManager.text("common.continue"))
+                            Image(systemName: "arrow.right")
+                        }
                     }
-                    .font(.system(.headline, design: .rounded, weight: .black))
-                    .foregroundStyle(ink)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 18)
+                    .buttonStyle(DSPrimaryButtonStyle())
+                    .padding(.horizontal, 24)
+                    .padding(.bottom, 24)
+                    .opacity(appeared ? 1 : 0)
+                    .offset(y: appeared ? 0 : 12)
                 }
-                .buttonStyle(DuolingoButtonStyle(fill: BrutalPalette.pink, shimmer: nil))
-                .padding(.horizontal, 24)
-                .padding(.bottom, 32)
-                .opacity(appeared ? 1 : 0)
-                .offset(y: appeared ? 0 : 14)
             }
+            .scrollIndicators(.hidden)
         }
         .onAppear { runSequence() }
     }
@@ -88,109 +82,69 @@ struct CollectionProgressCelebrationView: View {
     private var coverCard: some View {
         CollectionCoverView(collection: event.collection, accentIndex: ContentCatalog.activeCollections.firstIndex(of: event.collection) ?? 0)
             .aspectRatio(16 / 9, contentMode: .fit)
-            .clipShape(.rect(cornerRadius: 30))
+            .clipShape(.rect(cornerRadius: DS.Radius.card))
             .overlay {
-                RoundedRectangle(cornerRadius: 30, style: .continuous)
-                    .strokeBorder(ink, lineWidth: 3.5)
+                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                    .strokeBorder(DS.hairline, lineWidth: 1)
             }
-            .overlay(alignment: .bottomTrailing) {
-                ZStack {
-                    Circle()
-                        .fill(BrutalPalette.yellow)
-                        .overlay { Circle().strokeBorder(ink, lineWidth: 3) }
-                    Image(systemName: "plus")
-                        .font(.system(size: 22, weight: .black))
-                        .foregroundStyle(ink)
-                        .symbolEffect(.bounce, value: pulse)
-                }
-                .frame(width: 58, height: 58)
-                .offset(x: -14, y: 28)
-            }
-            .brutalOffsetPlate(depth: 5, corner: 30)
+            .dsSoftShadow()
     }
 
     private var progressCard: some View {
-        VStack(alignment: .leading, spacing: 18) {
+        VStack(alignment: .leading, spacing: 16) {
             HStack(alignment: .firstTextBaseline, spacing: 8) {
                 Text("\(displayedCount)")
-                    .font(.system(size: 58, weight: .black, design: .rounded))
-                    .foregroundStyle(ink)
+                    .font(.system(size: 46, weight: .semibold))
+                    .foregroundStyle(DS.ink)
                     .contentTransition(.numericText())
                     .monospacedDigit()
                 Text("/ \(event.totalCount)")
-                    .font(.system(.title2, design: .rounded, weight: .black))
-                    .foregroundStyle(ink.opacity(0.45))
+                    .font(DS.title(.title3, .medium))
+                    .foregroundStyle(DS.inkTertiary)
                 Text(languageManager.text("celebration.coursesCompleted"))
-                    .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink.opacity(0.55))
+                    .font(DS.sans(.subheadline))
+                    .foregroundStyle(DS.inkSecondary)
                     .padding(.leading, 2)
                 Spacer()
             }
 
-            GeometryReader { geo in
-                ZStack(alignment: .leading) {
-                    Capsule()
-                        .fill(Color.white)
-                        .overlay { Capsule().strokeBorder(ink, lineWidth: 3) }
-                    Capsule()
-                        .fill(LinearGradient(colors: [BrutalPalette.pink, BrutalPalette.yellow], startPoint: .leading, endPoint: .trailing))
-                        .overlay {
-                            Capsule()
-                                .fill(LinearGradient(colors: [.clear, .white.opacity(0.7), .clear], startPoint: .leading, endPoint: .trailing))
-                                .mask {
-                                    Rectangle()
-                                        .frame(width: 80, height: 24)
-                                        .offset(x: shimmerOffset)
-                                }
-                        }
-                        .overlay { Capsule().strokeBorder(ink, lineWidth: 3) }
-                        .frame(width: max(24, geo.size.width * barFill))
-                }
-            }
-            .frame(height: 24)
+            CalmProgressBar(fraction: Double(barFill), height: 10)
 
             HStack(spacing: 8) {
                 ForEach(0..<event.totalCount, id: \.self) { index in
                     let filled = index < displayedCount
                     Circle()
-                        .fill(filled ? BrutalPalette.yellow : Color.white)
-                        .overlay { Circle().strokeBorder(ink, lineWidth: 2) }
+                        .fill(filled ? DS.accent : DS.surfaceMuted)
                         .overlay {
                             if filled {
                                 Image(systemName: "checkmark")
-                                    .font(.system(size: 10, weight: .black))
-                                    .foregroundStyle(ink)
+                                    .font(.system(size: 9, weight: .semibold))
+                                    .foregroundStyle(.white)
                             }
                         }
-                        .scaleEffect(filled && pulse ? 1.1 : 1)
-                        .frame(width: 26, height: 26)
+                        .frame(width: 22, height: 22)
                     if index < event.totalCount - 1 {
                         Capsule()
-                            .fill(index < displayedCount - 1 ? ink : ink.opacity(0.18))
-                            .frame(height: 3)
+                            .fill(index < displayedCount - 1 ? DS.accent : DS.hairline)
+                            .frame(height: 2)
                     }
                 }
             }
         }
-        .padding(18)
-        .brutalOnboardingCard(depth: 5, corner: 24)
+        .dsCard()
     }
 
     private func runSequence() {
         displayedCount = event.previousCompletedCount
         barFill = previousFraction
-        withAnimation(.spring(response: 0.62, dampingFraction: 0.78)) {
+        withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
             appeared = true
         }
-        withAnimation(.linear(duration: 1.2).repeatForever(autoreverses: false)) {
-            shimmerOffset = 320
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.55) {
-            UIImpactFeedbackGenerator(style: .rigid).impactOccurred(intensity: 0.55)
-            withAnimation(.spring(response: 0.95, dampingFraction: 0.78)) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            UIImpactFeedbackGenerator(style: .light).impactOccurred()
+            withAnimation(.spring(response: 0.9, dampingFraction: 0.8)) {
                 displayedCount = event.newCompletedCount
                 barFill = newFraction
-                pulse = true
             }
         }
     }
@@ -203,73 +157,62 @@ struct CollectionCompletedCelebrationView: View {
     let onContinue: () -> Void
 
     @State private var appeared = false
-    @State private var cardScale: CGFloat = 0.72
-    @State private var confettiTrigger = 0
-    @State private var glow = false
-    @State private var trophyBounce = 0
-
-    private let ink = BrutalPalette.ink
-    private let cream = BrutalPalette.cream
+    @State private var cardScale: CGFloat = 0.85
 
     var body: some View {
         ZStack {
-            cream.ignoresSafeArea()
+            DS.canvas.ignoresSafeArea()
 
-            ConfettiView(trigger: confettiTrigger)
-                .ignoresSafeArea()
-                .allowsHitTesting(false)
+            ScrollView {
+                VStack(spacing: 0) {
+                    Spacer(minLength: 24)
 
-            VStack(spacing: 0) {
-                Spacer(minLength: 24)
+                    Text(languageManager.text("celebration.collectionComplete"))
+                        .font(DS.title(.title, .semibold))
+                        .foregroundStyle(DS.ink)
+                        .multilineTextAlignment(.center)
+                        .opacity(appeared ? 1 : 0)
+                        .offset(y: appeared ? 0 : 14)
 
-                Text(languageManager.text("celebration.collectionComplete"))
-                    .font(.system(size: 40, weight: .black, design: .rounded))
-                    .foregroundStyle(ink)
-                    .multilineTextAlignment(.center)
+                    Text(event.collection.title)
+                        .font(DS.sans(.subheadline))
+                        .foregroundStyle(DS.inkSecondary)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 28)
+                        .padding(.top, 6)
+                        .opacity(appeared ? 1 : 0)
+
+                    Spacer(minLength: 26)
+
+                    completedCard
+                        .padding(.horizontal, 22)
+                        .scaleEffect(cardScale)
+                        .opacity(appeared ? 1 : 0)
+
+                    Spacer(minLength: 26)
+
+                    if awardedXP > 0 {
+                        xpPill
+                            .opacity(appeared ? 1 : 0)
+                            .scaleEffect(appeared ? 1 : 0.8)
+                    }
+
+                    Spacer(minLength: 28)
+
+                    Button {
+                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                        onContinue()
+                    } label: {
+                        Text(languageManager.text("common.continue"))
+                    }
+                    .buttonStyle(DSPrimaryButtonStyle())
+                    .padding(.horizontal, 24)
+                    .padding(.bottom, 24)
                     .opacity(appeared ? 1 : 0)
                     .offset(y: appeared ? 0 : 16)
-
-                Text(event.collection.title)
-                    .font(.system(.headline, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink.opacity(0.58))
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, 28)
-                    .padding(.top, 8)
-                    .opacity(appeared ? 1 : 0)
-
-                Spacer(minLength: 26)
-
-                completedCard
-                    .padding(.horizontal, 22)
-                    .scaleEffect(cardScale)
-                    .opacity(appeared ? 1 : 0)
-
-                Spacer(minLength: 26)
-
-                if awardedXP > 0 {
-                    xpPill
-                        .opacity(appeared ? 1 : 0)
-                        .scaleEffect(appeared ? 1 : 0.75)
                 }
-
-                Spacer(minLength: 28)
-
-                Button {
-                    UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-                    onContinue()
-                } label: {
-                    Text(languageManager.text("common.continue"))
-                        .font(.system(.headline, design: .rounded, weight: .black))
-                        .foregroundStyle(ink)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 18)
-                }
-                .buttonStyle(DuolingoButtonStyle(fill: BrutalPalette.yellow, shimmer: nil))
-                .padding(.horizontal, 24)
-                .padding(.bottom, 32)
-                .opacity(appeared ? 1 : 0)
-                .offset(y: appeared ? 0 : 18)
             }
+            .scrollIndicators(.hidden)
         }
         .onAppear { runSequence() }
     }
@@ -277,75 +220,49 @@ struct CollectionCompletedCelebrationView: View {
     private var completedCard: some View {
         CollectionCoverView(collection: event.collection, accentIndex: ContentCatalog.activeCollections.firstIndex(of: event.collection) ?? 0)
             .aspectRatio(16 / 9, contentMode: .fit)
-            .clipShape(.rect(cornerRadius: 34))
+            .clipShape(.rect(cornerRadius: DS.Radius.card))
             .overlay {
-                RoundedRectangle(cornerRadius: 34, style: .continuous)
-                    .strokeBorder(ink, lineWidth: 4)
-            }
-            .overlay {
-                RadialGradient(
-                    colors: [BrutalPalette.yellow.opacity(glow ? 0.48 : 0.16), .clear],
-                    center: .center,
-                    startRadius: 20,
-                    endRadius: 190
-                )
+                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                    .strokeBorder(DS.hairline, lineWidth: 1)
             }
             .overlay {
                 VStack(spacing: 12) {
-                    ZStack {
-                        Circle()
-                            .fill(BrutalPalette.yellow)
-                            .overlay { Circle().strokeBorder(ink, lineWidth: 4) }
-                        Image(systemName: "checkmark.seal.fill")
-                            .font(.system(size: 54, weight: .black))
-                            .foregroundStyle(ink)
-                            .symbolEffect(.bounce, value: trophyBounce)
-                    }
-                    .frame(width: 112, height: 112)
+                    Image(systemName: "checkmark.seal.fill")
+                        .font(.system(size: 44, weight: .regular))
+                        .foregroundStyle(.white)
 
                     Text(languageManager.text("collections.pathComplete"))
-                        .font(.system(.title2, design: .rounded, weight: .black))
-                        .foregroundStyle(ink)
+                        .font(DS.title(.title3, .semibold))
+                        .foregroundStyle(.white)
                         .padding(.horizontal, 16)
                         .padding(.vertical, 8)
-                        .background(Color.white, in: Capsule())
-                        .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
+                        .background(.black.opacity(0.28), in: Capsule())
                 }
             }
-            .brutalOffsetPlate(depth: 5, corner: 34)
+            .dsSoftShadow()
     }
 
     private var xpPill: some View {
         HStack(spacing: 10) {
             Image(systemName: "star.fill")
-                .font(.system(size: 18, weight: .black))
+                .font(.system(size: 15, weight: .medium))
             Text(String(format: languageManager.text("cards.globalXP"), awardedXP))
-                .font(.system(.title3, design: .rounded, weight: .black))
+                .font(DS.title(.headline, .semibold))
                 .monospacedDigit()
         }
-        .foregroundStyle(ink)
-        .padding(.horizontal, 22)
-        .padding(.vertical, 14)
-        .background(BrutalPalette.yellow, in: Capsule())
-        .overlay { Capsule().strokeBorder(ink, lineWidth: 3) }
-        .background {
-            Capsule().fill(ink).offset(y: 5)
-        }
-        .padding(.bottom, 5)
+        .foregroundStyle(DS.accentSoft)
+        .padding(.horizontal, 20)
+        .padding(.vertical, 12)
+        .background(DS.accentTint, in: Capsule())
     }
 
     private func runSequence() {
-        withAnimation(.spring(response: 0.72, dampingFraction: 0.76)) {
+        withAnimation(.spring(response: 0.65, dampingFraction: 0.78)) {
             appeared = true
             cardScale = 1
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
-            confettiTrigger += 1
-            trophyBounce += 1
             UINotificationFeedbackGenerator().notificationOccurred(.success)
-        }
-        withAnimation(.easeInOut(duration: 1.05).repeatForever(autoreverses: true).delay(0.35)) {
-            glow = true
         }
     }
 }

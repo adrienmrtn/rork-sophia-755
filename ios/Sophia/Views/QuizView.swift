@@ -16,26 +16,19 @@ struct QuizView: View {
     @State private var showFeedback: Bool = false
     @State private var showXPProgress: Bool = false
     @State private var showStreak: Bool = false
-    @State private var confettiTrigger: Int = 0
     @State private var streakBefore: Int = 0
     @State private var completedBefore: Int = 0
     @State private var subjectXPBefore: Int = 0
     @State private var resultAppeared: Bool = false
-    @State private var trophyBounce: Int = 0
     @State private var scoreAnimated: Int = 0
     @State private var starsRevealed: Int = 0
     @State private var ringProgress: CGFloat = 0
     @State private var xpScreenAppeared: Bool = false
-    @State private var xpBarAnimated: Bool = false
     @State private var xpBarFill: CGFloat = 0
     @State private var displayedXP: Int = 0
     @State private var xpButtonAppeared: Bool = false
-    @State private var levelUpBounce: Int = 0
-    @State private var glowPulse: Bool = false
     @State private var showLevelUpCelebration: Bool = false
     @State private var showGlobalRankUpCelebration: Bool = false
-    @State private var xpBarShimmer: CGFloat = -80
-    @State private var xpBarShimmerActive: Bool = false
     @State private var cachedCourseThumb: UIImage?
     @State private var shuffledQuestions: [ShuffledQuestion] = []
     @State private var questionAppeared: Bool = false
@@ -58,26 +51,6 @@ struct QuizView: View {
     /// Fixed XP bonus awarded when the quiz is fully completed.
     private let quizCompletionXPBonus: Int = 10
 
-    // Neo-brutalist palette
-    private let ink = Color.black
-    private let cream = Color(red: 0.984, green: 0.961, blue: 0.918)
-    private let pink = Color(red: 1.0, green: 0.553, blue: 0.706)
-    private let mint = Color(red: 0.70, green: 0.95, blue: 0.80)
-    private let coral = Color(red: 1.0, green: 0.55, blue: 0.55)
-    private let yellow = Color(red: 1.0, green: 0.84, blue: 0.35)
-    private let orange = Color(red: 1.0, green: 0.55, blue: 0.18)
-
-    private var pastel: Color {
-        switch course.subject {
-        case .histoire: return Color(red: 1.0, green: 0.86, blue: 0.62)
-        case .sciences: return Color(red: 0.70, green: 0.95, blue: 0.80)
-        case .litterature: return Color(red: 1.0, green: 0.78, blue: 0.78)
-        case .art: return Color(red: 0.66, green: 0.92, blue: 0.96)
-        case .mythologie: return Color(red: 0.82, green: 0.78, blue: 1.0)
-        case .comprendreLeMonde: return Color(red: 0.74, green: 0.90, blue: 1.0)
-        }
-    }
-
     private var currentQuestion: ShuffledQuestion {
         shuffledQuestions[currentQuestionIndex]
     }
@@ -92,7 +65,7 @@ struct QuizView: View {
 
     var body: some View {
         ZStack {
-            cream.ignoresSafeArea()
+            DS.canvas.ignoresSafeArea()
 
             if showStreak {
                 StreakCelebrationView(
@@ -108,7 +81,7 @@ struct QuizView: View {
             } else if isFinished {
                 resultView
                     .transition(.asymmetric(
-                        insertion: .scale(scale: 0.9).combined(with: .opacity),
+                        insertion: .scale(scale: 0.96).combined(with: .opacity),
                         removal: .opacity
                     ))
             } else if !shuffledQuestions.isEmpty {
@@ -117,7 +90,7 @@ struct QuizView: View {
 
             if showXPPopup {
                 xpPopupView
-                    .transition(.scale.combined(with: .opacity))
+                    .transition(.opacity.combined(with: .offset(y: 6)))
                     .zIndex(20)
             }
 
@@ -245,31 +218,33 @@ struct QuizView: View {
         }
         questionAppeared = false
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            withAnimation(.spring(response: 0.5, dampingFraction: 0.8)) {
+            withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
                 questionAppeared = true
             }
         }
     }
 
+    // MARK: - Question screen
+
     private var questionView: some View {
         VStack(spacing: 0) {
             quizHeader
-            brutalProgressBar
+            progressBar
 
             ScrollView {
-                VStack(alignment: .leading, spacing: 24) {
+                VStack(alignment: .leading, spacing: 20) {
                     questionCard
                         .opacity(questionAppeared ? 1 : 0)
-                        .offset(y: questionAppeared ? 0 : 20)
-                        .padding(.top, 20)
+                        .offset(y: questionAppeared ? 0 : 12)
+                        .padding(.top, 16)
 
-                    VStack(spacing: 14) {
+                    VStack(spacing: 10) {
                         ForEach(Array(currentQuestion.options.enumerated()), id: \.offset) { index, option in
-                            brutalOptionButton(index: index, text: option)
+                            optionRow(index: index, text: option)
                                 .opacity(questionAppeared ? 1 : 0)
-                                .offset(y: questionAppeared ? 0 : CGFloat(20 + index * 8))
+                                .offset(y: questionAppeared ? 0 : CGFloat(12 + index * 4))
                                 .animation(
-                                    .spring(response: 0.5, dampingFraction: 0.8).delay(Double(index) * 0.08),
+                                    .spring(response: 0.45, dampingFraction: 0.85).delay(Double(index) * 0.06),
                                     value: questionAppeared
                                 )
                         }
@@ -277,95 +252,67 @@ struct QuizView: View {
                     .id("options_\(currentQuestionIndex)")
                 }
                 .padding(.horizontal, 20)
-                .padding(.bottom, showFeedback ? 260 : 40)
+                .padding(.bottom, showFeedback ? 240 : 32)
             }
             .scrollIndicators(.hidden)
 
             if showFeedback {
-                brutalFeedbackBar
+                feedbackBar
                     .transition(.move(edge: .bottom).combined(with: .opacity))
             }
         }
     }
 
     private var questionCard: some View {
-        ZStack(alignment: .topLeading) {
-            RoundedRectangle(cornerRadius: 22, style: .continuous)
-                .fill(ink)
-                .offset(y: 6)
-            VStack(alignment: .leading, spacing: 12) {
-                HStack(spacing: 6) {
-                    Text(course.subject.emoji)
-                        .font(.system(size: 14))
-                    Text(course.subject.localizedShortName(language: languageManager.current).uppercased())
-                        .font(.system(.caption, design: .rounded, weight: .heavy))
-                        .foregroundStyle(.white)
-                        .tracking(0.5)
-                }
-                .padding(.horizontal, 12)
-                .padding(.vertical, 6)
-                .background(ink, in: Capsule())
+        VStack(alignment: .leading, spacing: 12) {
+            HStack(spacing: 6) {
+                Image(systemName: course.subject.icon)
+                    .font(.system(size: 11, weight: .medium))
+                Text(course.subject.localizedShortName(language: languageManager.current).uppercased())
+                    .font(DS.sans(.caption2, .semibold))
+                    .tracking(0.8)
+            }
+            .foregroundStyle(DS.accentSoft)
+            .padding(.horizontal, 10)
+            .padding(.vertical, 5)
+            .background(DS.accentTint, in: Capsule())
 
-                Text(currentQuestion.question)
-                    .font(.system(.title3, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .id("question_\(currentQuestionIndex)")
-            }
-            .padding(20)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .background(pastel)
-            .clipShape(.rect(cornerRadius: 22))
-            .overlay {
-                RoundedRectangle(cornerRadius: 22, style: .continuous)
-                    .strokeBorder(ink, lineWidth: 3)
-            }
+            Text(currentQuestion.question)
+                .font(DS.title(.title3, .semibold))
+                .foregroundStyle(DS.ink)
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .id("question_\(currentQuestionIndex)")
         }
+        .dsCard()
     }
 
-    private var brutalProgressBar: some View {
+    private var progressBar: some View {
         HStack(spacing: 12) {
-            ZStack(alignment: .leading) {
-                Capsule()
-                    .fill(ink)
-                    .frame(height: 18)
-                    .offset(y: 4)
-                GeometryReader { geo in
-                    ZStack(alignment: .leading) {
-                        Capsule()
-                            .fill(Color.white)
-                            .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
-                            .frame(height: 18)
-                        Capsule()
-                            .fill(pink)
-                            .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
-                            .frame(width: max(geo.size.width * progressValue, 18), height: 18)
-                            .animation(.spring(response: 0.5, dampingFraction: 0.8), value: progressValue)
-                    }
-                }
-                .frame(height: 18)
-            }
-            .padding(.bottom, 4)
+            CalmProgressBar(fraction: progressValue, height: 6)
+
+            Text("\(currentQuestionIndex + 1)/\(shuffledQuestions.count)")
+                .font(DS.sans(.caption, .medium))
+                .foregroundStyle(DS.inkSecondary)
+                .monospacedDigit()
+                .fixedSize()
 
             if showCombo && comboCount >= 2 {
                 HStack(spacing: 4) {
                     Image(systemName: "flame.fill")
-                        .font(.caption2.weight(.heavy))
-                        .foregroundStyle(ink)
+                        .font(.system(size: 10, weight: .semibold))
                     Text("x\(comboCount)")
-                        .font(.system(.caption2, design: .rounded, weight: .heavy))
-                        .foregroundStyle(ink)
+                        .font(DS.sans(.caption2, .semibold))
                 }
-                .padding(.horizontal, 10)
-                .padding(.vertical, 6)
-                .background(yellow, in: Capsule())
-                .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
+                .foregroundStyle(DS.accentSoft)
+                .padding(.horizontal, 9)
+                .padding(.vertical, 5)
+                .background(DS.accentTint, in: Capsule())
                 .transition(.scale.combined(with: .opacity))
             }
         }
         .padding(.horizontal, 20)
-        .padding(.top, 8)
+        .padding(.top, 6)
         .padding(.bottom, 4)
     }
 
@@ -376,27 +323,21 @@ struct QuizView: View {
                 dismiss()
             } label: {
                 Image(systemName: "xmark")
-                    .font(.system(.subheadline, weight: .heavy))
-                    .foregroundStyle(ink)
+                    .font(.system(size: 15, weight: .medium))
+                    .foregroundStyle(DS.inkSecondary)
                     .frame(width: 40, height: 40)
-                    .background(Color.white, in: Circle())
-                    .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
+                    .background(DS.surface, in: Circle())
+                    .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
             }
+            .buttonStyle(SoftPressButtonStyle())
 
             Spacer()
-
-            Text("\(currentQuestionIndex + 1) / \(shuffledQuestions.count)")
-                .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                .foregroundStyle(.white)
-                .padding(.horizontal, 14)
-                .padding(.vertical, 8)
-                .background(ink, in: Capsule())
         }
         .padding(.horizontal, 20)
-        .padding(.top, 12)
+        .padding(.top, 10)
     }
 
-    private func brutalOptionButton(index: Int, text: String) -> some View {
+    private func optionRow(index: Int, text: String) -> some View {
         Button {
             guard !hasAnswered else { return }
             selectedOptionIndex = index
@@ -421,102 +362,102 @@ struct QuizView: View {
                     showCombo = false
                 }
             }
-            withAnimation(.spring(response: 0.35, dampingFraction: 0.8)) {
+            withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
                 showFeedback = true
             }
         } label: {
-            ZStack {
-                RoundedRectangle(cornerRadius: 18, style: .continuous)
-                    .fill(ink)
-                    .offset(y: 5)
-                HStack(spacing: 14) {
-                    Text("\(Character(UnicodeScalar(65 + index)!))")
-                        .font(.system(.title3, design: .rounded, weight: .black))
-                        .foregroundStyle(optionLetterFg(for: index))
-                        .frame(width: 42, height: 42)
-                        .background(optionLetterBg(for: index))
-                        .clipShape(.rect(cornerRadius: 12))
-                        .overlay {
-                            RoundedRectangle(cornerRadius: 12, style: .continuous)
-                                .strokeBorder(ink, lineWidth: 2.5)
-                        }
+            HStack(spacing: 14) {
+                Text("\(Character(UnicodeScalar(65 + index)!))")
+                    .font(DS.title(.subheadline, .semibold))
+                    .foregroundStyle(optionLetterFg(for: index))
+                    .frame(width: 34, height: 34)
+                    .background(optionLetterBg(for: index), in: Circle())
 
-                    Text(text)
-                        .font(.system(.body, design: .rounded, weight: .heavy))
-                        .foregroundStyle(ink)
-                        .multilineTextAlignment(.leading)
-                        .fixedSize(horizontal: false, vertical: true)
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                Text(text)
+                    .font(DS.sans(.body, .medium))
+                    .foregroundStyle(optionTextColor(for: index))
+                    .multilineTextAlignment(.leading)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .frame(maxWidth: .infinity, alignment: .leading)
 
-                    optionTrailingIcon(for: index)
-                        .frame(width: 32, height: 32)
-                }
-                .padding(.horizontal, 16)
-                .padding(.vertical, 16)
-                .frame(minHeight: 76)
-                .background(optionCardBg(for: index))
-                .clipShape(.rect(cornerRadius: 18))
-                .overlay {
-                    RoundedRectangle(cornerRadius: 18, style: .continuous)
-                        .strokeBorder(ink, lineWidth: 3)
-                }
-                .offset(y: hasAnswered && index == selectedOptionIndex ? 3 : 0)
+                optionTrailingIcon(for: index)
+                    .frame(width: 24, height: 24)
             }
+            .padding(.horizontal, 14)
+            .padding(.vertical, 14)
+            .frame(minHeight: 64)
+            .background(optionRowBg(for: index))
+            .clipShape(.rect(cornerRadius: DS.Radius.control))
+            .overlay {
+                RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                    .strokeBorder(optionRowBorder(for: index), lineWidth: hasAnswered && (index == currentQuestion.correctIndex || index == selectedOptionIndex) ? 1.5 : 1)
+            }
+            .opacity(hasAnswered && index != currentQuestion.correctIndex && index != selectedOptionIndex ? 0.55 : 1)
         }
-        .buttonStyle(.plain)
-        .animation(.spring(response: 0.3, dampingFraction: 0.7), value: hasAnswered)
+        .buttonStyle(SoftPressButtonStyle())
+        .animation(.spring(response: 0.3, dampingFraction: 0.8), value: hasAnswered)
     }
 
-    private func optionCardBg(for index: Int) -> Color {
-        guard hasAnswered else { return Color.white }
-        if index == currentQuestion.correctIndex { return mint }
-        if index == selectedOptionIndex, index != currentQuestion.correctIndex { return coral }
-        return Color.white
+    private func optionRowBg(for index: Int) -> Color {
+        guard hasAnswered else { return DS.surface }
+        if index == currentQuestion.correctIndex { return DS.successTint }
+        if index == selectedOptionIndex, index != currentQuestion.correctIndex { return DS.dangerTint }
+        return DS.surface
+    }
+
+    private func optionRowBorder(for index: Int) -> Color {
+        guard hasAnswered else { return DS.hairline }
+        if index == currentQuestion.correctIndex { return DS.success }
+        if index == selectedOptionIndex, index != currentQuestion.correctIndex { return DS.danger }
+        return DS.hairline
+    }
+
+    private func optionTextColor(for index: Int) -> Color {
+        guard hasAnswered else { return DS.ink }
+        if index == currentQuestion.correctIndex { return DS.success }
+        if index == selectedOptionIndex, index != currentQuestion.correctIndex { return DS.danger }
+        return DS.ink
     }
 
     private func optionLetterFg(for index: Int) -> Color {
-        ink
+        guard hasAnswered,
+              index == currentQuestion.correctIndex || (index == selectedOptionIndex && index != currentQuestion.correctIndex) else {
+            return DS.accentSoft
+        }
+        return .white
     }
 
-    private func optionLetterBg(for index: Int) -> some ShapeStyle {
-        if hasAnswered,
-           index == currentQuestion.correctIndex || (index == selectedOptionIndex && index != currentQuestion.correctIndex) {
-            return AnyShapeStyle(Color.white)
-        }
-        return AnyShapeStyle(yellow)
+    private func optionLetterBg(for index: Int) -> Color {
+        guard hasAnswered else { return DS.accentTint }
+        if index == currentQuestion.correctIndex { return DS.success }
+        if index == selectedOptionIndex, index != currentQuestion.correctIndex { return DS.danger }
+        return DS.accentTint
     }
 
     @ViewBuilder
     private func optionTrailingIcon(for index: Int) -> some View {
         if hasAnswered && index == currentQuestion.correctIndex {
-            Image(systemName: "checkmark")
-                .font(.system(.headline, weight: .black))
-                .foregroundStyle(.white)
-                .frame(width: 32, height: 32)
-                .background(mint, in: Circle())
-                .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
+            Image(systemName: "checkmark.circle.fill")
+                .font(.system(size: 20, weight: .medium))
+                .foregroundStyle(DS.success)
                 .transition(.scale.combined(with: .opacity))
         } else if hasAnswered && index == selectedOptionIndex && !isCorrect {
-            Image(systemName: "xmark")
-                .font(.system(.headline, weight: .black))
-                .foregroundStyle(.white)
-                .frame(width: 32, height: 32)
-                .background(coral, in: Circle())
-                .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
+            Image(systemName: "xmark.circle.fill")
+                .font(.system(size: 20, weight: .medium))
+                .foregroundStyle(DS.danger)
                 .transition(.scale.combined(with: .opacity))
         } else {
             Color.clear
-                .frame(width: 32, height: 32)
         }
     }
 
     private func showXPBubble(xp: Int) {
         popupXPAmount = xp
-        withAnimation(.spring(response: 0.35, dampingFraction: 0.72)) {
+        withAnimation(.easeOut(duration: 0.25)) {
             showXPPopup = true
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            withAnimation(.easeOut(duration: 0.35)) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.6) {
+            withAnimation(.easeOut(duration: 0.3)) {
                 showXPPopup = false
             }
         }
@@ -524,105 +465,77 @@ struct QuizView: View {
 
     private var xpPopupView: some View {
         VStack {
-            Spacer()
-                .frame(height: 100)
+            Spacer().frame(height: 96)
             HStack(spacing: 6) {
                 Image(systemName: "star.fill")
-                    .font(.subheadline.weight(.heavy))
-                    .foregroundStyle(ink)
+                    .font(.system(size: 11, weight: .medium))
                 Text("+\(popupXPAmount) XP")
-                    .font(.system(.headline, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink)
+                    .font(DS.sans(.subheadline, .semibold))
             }
-            .padding(.horizontal, 16)
-            .padding(.vertical, 10)
-            .background(yellow, in: Capsule())
-            .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
-            .background(alignment: .top) {
-                Capsule()
-                    .fill(ink)
-                    .offset(y: 3)
-            }
-            .padding(.bottom, 3)
+            .foregroundStyle(DS.accentSoft)
+            .padding(.horizontal, 14)
+            .padding(.vertical, 9)
+            .background(DS.accentTint, in: Capsule())
             Spacer()
         }
         .allowsHitTesting(false)
     }
 
-    private var brutalFeedbackBar: some View {
+    private var feedbackBar: some View {
         VStack(spacing: 0) {
             Rectangle()
-                .fill(ink)
-                .frame(height: 3)
+                .fill(DS.hairline)
+                .frame(height: 1)
 
             VStack(spacing: 16) {
-                HStack(spacing: 14) {
-                    ZStack {
-                        Circle()
-                            .fill(ink)
-                            .offset(y: 4)
-                            .frame(width: 56, height: 56)
-                        Circle()
-                            .fill(isCorrect ? mint : coral)
-                            .frame(width: 56, height: 56)
-                            .overlay { Circle().strokeBorder(ink, lineWidth: 3) }
-                        Image(systemName: isCorrect ? "checkmark" : "xmark")
-                            .font(.title2.weight(.black))
-                            .foregroundStyle(ink)
-                            .symbolEffect(.bounce, value: showFeedback)
-                    }
-                    .frame(width: 56, height: 60, alignment: .top)
+                HStack(alignment: .top, spacing: 14) {
+                    Image(systemName: isCorrect ? "checkmark.circle.fill" : "xmark.circle.fill")
+                        .font(.system(size: 30, weight: .regular))
+                        .foregroundStyle(isCorrect ? DS.success : DS.danger)
 
                     VStack(alignment: .leading, spacing: 4) {
                         Text(feedbackTitle(isCorrect: isCorrect, comboCount: comboCount))
-                            .font(.system(.title3, design: .rounded, weight: .black))
-                            .foregroundStyle(ink)
+                            .font(DS.title(.headline, .semibold))
+                            .foregroundStyle(DS.ink)
+
                         if isCorrect, comboCount >= 2 {
                             HStack(spacing: 4) {
                                 Image(systemName: "flame.fill")
-                                    .font(.caption.weight(.heavy))
+                                    .font(.system(size: 10, weight: .semibold))
                                 Text("Combo x\(comboCount)")
-                                    .font(.system(.caption, design: .rounded, weight: .heavy))
+                                    .font(DS.sans(.caption, .medium))
                             }
-                            .foregroundStyle(ink)
+                            .foregroundStyle(DS.accentSoft)
                         }
 
                         if !currentQuestion.explanation.isEmpty {
                             Text(currentQuestion.explanation)
-                                .font(.system(.subheadline, design: .rounded, weight: .medium))
-                                .foregroundStyle(ink.opacity(0.85))
+                                .font(DS.sans(.subheadline))
+                                .foregroundStyle(DS.inkSecondary)
                                 .fixedSize(horizontal: false, vertical: true)
-                                .padding(.top, 4)
+                                .padding(.top, 2)
                         }
                     }
 
-                    Spacer()
+                    Spacer(minLength: 0)
                 }
 
                 Button {
-                    UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     nextQuestion()
                 } label: {
                     HStack(spacing: 8) {
                         Text(languageManager.text("common.continue"))
-                            .font(.system(.headline, design: .rounded, weight: .heavy))
                         Image(systemName: "arrow.right")
-                            .font(.subheadline.weight(.heavy))
+                            .font(.subheadline.weight(.semibold))
                     }
-                    .foregroundStyle(ink)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 16)
                 }
-                .buttonStyle(BrutalPillStyle(fill: isCorrect ? mint : pink))
+                .buttonStyle(DSPrimaryButtonStyle())
             }
             .padding(.horizontal, 20)
             .padding(.top, 18)
-            .padding(.bottom, 20)
-            .background(
-                (isCorrect ? mint.opacity(0.35) : coral.opacity(0.35))
-                    .background(cream)
-                    .ignoresSafeArea(edges: .bottom)
-            )
+            .padding(.bottom, 16)
+            .background(DS.surface)
         }
     }
 
@@ -637,7 +550,7 @@ struct QuizView: View {
                 selectedOptionIndex = nil
                 hasAnswered = false
                 currentQuestionIndex += 1
-                withAnimation(.spring(response: 0.5, dampingFraction: 0.8)) {
+                withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
                     questionAppeared = true
                 }
             }
@@ -661,106 +574,90 @@ struct QuizView: View {
                 score: correctCount,
                 total: shuffledQuestions.count
             )
-            withAnimation(.spring(response: 0.5, dampingFraction: 0.8)) {
+            withAnimation(.spring(response: 0.5, dampingFraction: 0.85)) {
                 isFinished = true
             }
         }
     }
 
+    // MARK: - Result screen
 
     private var resultView: some View {
-        ZStack {
+        ScrollView {
             VStack(spacing: 24) {
-                Spacer(minLength: 20)
+                Spacer(minLength: 24)
 
-                // Trophy plate — yellow card with black border + offset
                 ZStack {
-                    RoundedRectangle(cornerRadius: 28, style: .continuous)
-                        .fill(ink)
-                        .frame(width: 200, height: 200)
-                        .offset(y: 8)
+                    Circle()
+                        .stroke(DS.hairline, lineWidth: 8)
+                        .frame(width: 156, height: 156)
+                    Circle()
+                        .trim(from: 0, to: ringProgress)
+                        .stroke(DS.accent, style: StrokeStyle(lineWidth: 8, lineCap: .round))
+                        .frame(width: 156, height: 156)
+                        .rotationEffect(.degrees(-90))
                     ZStack {
-                        Circle()
-                            .fill(yellow)
-                            .frame(width: 200, height: 200)
-                            .overlay { Circle().strokeBorder(ink, lineWidth: 3.5) }
-
-                        Circle()
-                            .trim(from: 0, to: ringProgress)
-                            .stroke(ink, style: StrokeStyle(lineWidth: 8, lineCap: .round))
-                            .frame(width: 170, height: 170)
-                            .rotationEffect(.degrees(-90))
-
+                        Circle().fill(DS.accentTint)
                         Image(systemName: "trophy.fill")
-                            .font(.system(size: 70, weight: .black))
-                            .foregroundStyle(ink)
-                            .symbolEffect(.bounce, value: trophyBounce)
-                            .scaleEffect(glowPulse ? 1.05 : 1.0)
+                            .font(.system(size: 46, weight: .regular))
+                            .foregroundStyle(DS.accent)
                     }
-                    .scaleEffect(resultAppeared ? 1 : 0.3)
-                    .opacity(resultAppeared ? 1 : 0)
+                    .frame(width: 128, height: 128)
                 }
-                .animation(.spring(response: 0.7, dampingFraction: 0.6).delay(0.1), value: resultAppeared)
+                .scaleEffect(resultAppeared ? 1 : 0.7)
+                .opacity(resultAppeared ? 1 : 0)
+                .animation(.spring(response: 0.6, dampingFraction: 0.75).delay(0.1), value: resultAppeared)
 
                 VStack(spacing: 10) {
                     Text(languageManager.text("quiz.completed"))
-                        .font(.system(.title, design: .rounded, weight: .black))
-                        .foregroundStyle(ink)
+                        .font(DS.title(.title, .semibold))
+                        .foregroundStyle(DS.ink)
                         .opacity(resultAppeared ? 1 : 0)
-                        .offset(y: resultAppeared ? 0 : 15)
-                        .animation(.spring(response: 0.5).delay(0.3), value: resultAppeared)
+                        .offset(y: resultAppeared ? 0 : 12)
+                        .animation(.spring(response: 0.5).delay(0.25), value: resultAppeared)
 
                     HStack(alignment: .firstTextBaseline, spacing: 6) {
                         Text("\(scoreAnimated)")
-                            .font(.system(size: 60, weight: .black, design: .rounded))
-                            .foregroundStyle(ink)
+                            .font(.system(size: 48, weight: .semibold, design: .default))
+                            .foregroundStyle(DS.ink)
                             .contentTransition(.numericText(countsDown: false))
                         Text("/ \(shuffledQuestions.count)")
-                            .font(.system(.title2, design: .rounded, weight: .heavy))
-                            .foregroundStyle(ink.opacity(0.5))
-                    }
-                    .padding(.horizontal, 24)
-                    .padding(.vertical, 8)
-                    .background(Color.white, in: .rect(cornerRadius: 18))
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 18, style: .continuous)
-                            .strokeBorder(ink, lineWidth: 3)
+                            .font(DS.title(.title2, .medium))
+                            .foregroundStyle(DS.inkTertiary)
                     }
                     .opacity(resultAppeared ? 1 : 0)
-                    .animation(.spring(response: 0.5).delay(0.5), value: resultAppeared)
+                    .animation(.spring(response: 0.5).delay(0.4), value: resultAppeared)
 
                     Text(languageManager.text("quiz.correctAnswers"))
-                        .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                        .foregroundStyle(ink.opacity(0.65))
+                        .font(DS.sans(.subheadline))
+                        .foregroundStyle(DS.inkSecondary)
                         .opacity(resultAppeared ? 1 : 0)
-                        .animation(.spring(response: 0.5).delay(0.6), value: resultAppeared)
+                        .animation(.spring(response: 0.5).delay(0.5), value: resultAppeared)
 
                     if xpEarned > 0 {
                         HStack(spacing: 6) {
                             Image(systemName: "star.fill")
-                                .font(.caption.weight(.heavy))
-                                .foregroundStyle(ink)
+                                .font(.caption.weight(.medium))
                             Text("+\(xpEarned) XP")
-                                .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                                .foregroundStyle(ink)
+                                .font(DS.sans(.subheadline, .semibold))
                         }
+                        .foregroundStyle(DS.accentSoft)
                         .padding(.horizontal, 14)
                         .padding(.vertical, 8)
-                        .background(yellow, in: Capsule())
-                        .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
-                        .scaleEffect(resultAppeared ? 1 : 0.5)
+                        .background(DS.accentTint, in: Capsule())
+                        .scaleEffect(resultAppeared ? 1 : 0.6)
                         .opacity(resultAppeared ? 1 : 0)
-                        .animation(.spring(response: 0.5, dampingFraction: 0.6).delay(0.8), value: resultAppeared)
+                        .animation(.spring(response: 0.5, dampingFraction: 0.7).delay(0.65), value: resultAppeared)
                     }
                 }
 
                 animatedScoreStars
 
-                Spacer()
+                Spacer(minLength: 12)
 
-                VStack(spacing: 14) {
+                VStack(spacing: 12) {
                     Button {
-                        UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
                         withAnimation(.easeInOut(duration: 0.3)) {
                             showXPProgress = true
                         }
@@ -770,12 +667,8 @@ struct QuizView: View {
                             Image(systemName: "house.fill")
                             Text(languageManager.text("common.backHome"))
                         }
-                        .font(.system(.headline, design: .rounded, weight: .black))
-                        .foregroundStyle(ink)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 18)
                     }
-                    .buttonStyle(BrutalPillStyle(fill: pink))
+                    .buttonStyle(DSPrimaryButtonStyle())
 
                     Button {
                         UIImpactFeedbackGenerator(style: .light).impactOccurred()
@@ -785,20 +678,18 @@ struct QuizView: View {
                             Image(systemName: "arrow.counterclockwise")
                             Text(languageManager.text("common.retryQuiz"))
                         }
-                        .font(.system(.headline, design: .rounded, weight: .heavy))
-                        .foregroundStyle(ink)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 18)
                     }
-                    .buttonStyle(BrutalPillStyle(fill: Color.white))
+                    .buttonStyle(DSSecondaryButtonStyle())
                 }
                 .padding(.horizontal, 24)
-                .padding(.bottom, 32)
+                .padding(.bottom, 24)
                 .opacity(resultAppeared ? 1 : 0)
-                .offset(y: resultAppeared ? 0 : 30)
-                .animation(.spring(response: 0.6).delay(1.2), value: resultAppeared)
+                .offset(y: resultAppeared ? 0 : 20)
+                .animation(.spring(response: 0.6).delay(0.9), value: resultAppeared)
             }
+            .padding(.horizontal, 20)
         }
+        .scrollIndicators(.hidden)
         .onAppear {
             startResultAnimations()
         }
@@ -812,7 +703,6 @@ struct QuizView: View {
         scoreAnimated = 0
         starsRevealed = 0
         ringProgress = 0
-        glowPulse = false
         currentQuestionIndex = 0
         selectedOptionIndex = nil
         hasAnswered = false
@@ -825,22 +715,20 @@ struct QuizView: View {
     }
 
     private func startResultAnimations() {
-        withAnimation(.spring(response: 0.6, dampingFraction: 0.7)) {
+        withAnimation(.spring(response: 0.6, dampingFraction: 0.75)) {
             resultAppeared = true
         }
         UINotificationFeedbackGenerator().notificationOccurred(.success)
 
-        trophyBounce += 1
-
         let targetScore = correctCount
         let totalQ = max(shuffledQuestions.count, 1)
-        withAnimation(.easeOut(duration: 1.0).delay(0.5)) {
+        withAnimation(.easeOut(duration: 0.9).delay(0.35)) {
             ringProgress = CGFloat(targetScore) / CGFloat(totalQ)
         }
 
         let steps = targetScore
         for i in 1...max(steps, 1) {
-            let delay = 0.5 + Double(i) * (0.8 / Double(max(steps, 1)))
+            let delay = 0.35 + Double(i) * (0.7 / Double(max(steps, 1)))
             DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                 if i <= targetScore {
                     withAnimation(.spring(response: 0.2)) {
@@ -854,16 +742,12 @@ struct QuizView: View {
         let percentage = Double(targetScore) / Double(totalQ)
         let starCount = percentage >= 0.8 ? 3 : (percentage >= 0.5 ? 2 : 1)
         for i in 0..<starCount {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5 + Double(i) * 0.25) {
-                withAnimation(.spring(response: 0.4, dampingFraction: 0.5)) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.2 + Double(i) * 0.2) {
+                withAnimation(.spring(response: 0.4, dampingFraction: 0.6)) {
                     starsRevealed = i + 1
                 }
-                UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+                UIImpactFeedbackGenerator(style: .light).impactOccurred()
             }
-        }
-
-        withAnimation(.easeInOut(duration: 1.5).repeatForever(autoreverses: true).delay(0.5)) {
-            glowPulse = true
         }
     }
 
@@ -871,28 +755,15 @@ struct QuizView: View {
         HStack(spacing: 14) {
             ForEach(0..<3, id: \.self) { index in
                 let isFilled = index < starsRevealed
-                ZStack {
-                    if isFilled {
-                        Image(systemName: "star.fill")
-                            .font(.system(size: 38, weight: .black))
-                            .foregroundStyle(yellow)
-                            .shadow(color: ink, radius: 0, x: 0, y: 3)
-                    }
-                    Image(systemName: isFilled ? "star.fill" : "star")
-                        .font(.system(size: 38, weight: .black))
-                        .foregroundStyle(.clear)
-                        .overlay {
-                            Image(systemName: isFilled ? "star.fill" : "star")
-                                .font(.system(size: 38, weight: .black))
-                                .foregroundStyle(isFilled ? yellow : ink.opacity(0.15))
-                        }
-                }
-                .scaleEffect(isFilled ? 1.15 : 0.85)
-                .animation(.spring(response: 0.4, dampingFraction: 0.4), value: starsRevealed)
+                Image(systemName: isFilled ? "star.fill" : "star")
+                    .font(.system(size: 30, weight: .regular))
+                    .foregroundStyle(isFilled ? DS.accentSoft : DS.hairline)
+                    .scaleEffect(isFilled ? 1.05 : 0.85)
+                    .animation(.spring(response: 0.4, dampingFraction: 0.55), value: starsRevealed)
             }
         }
         .opacity(resultAppeared ? 1 : 0)
-        .animation(.spring(response: 0.5).delay(1.4), value: resultAppeared)
+        .animation(.spring(response: 0.5).delay(1.1), value: resultAppeared)
     }
 
     // MARK: - Post-quiz XP progression screen
@@ -903,28 +774,6 @@ struct QuizView: View {
         return ProgressManager.subjectXPTiers.last(where: { xp >= $0.lower }) ?? ProgressManager.subjectXPTiers[0]
     }
 
-    private var subjectTierProgress: Double {
-        let t = subjectTier
-        if t.level == 5 { return 1.0 }
-        let span = max(1, t.upper - t.lower)
-        return min(1.0, max(0.0, Double(displayedXP - t.lower) / Double(span)))
-    }
-
-    private var barFractionBefore: Double {
-        let t = ProgressManager.subjectXPTiers.last(where: { subjectXPBefore >= $0.lower }) ?? ProgressManager.subjectXPTiers[0]
-        if t.level == 5 { return 1.0 }
-        let span = max(1, t.upper - t.lower)
-        return min(1.0, max(0.0, Double(subjectXPBefore - t.lower) / Double(span)))
-    }
-
-    private var targetBarProgress: Double {
-        let xp = progressManager.xp(for: course.subject)
-        let t = ProgressManager.subjectXPTiers.last(where: { xp >= $0.lower }) ?? ProgressManager.subjectXPTiers[0]
-        if t.level == 5 { return 1.0 }
-        let span = max(1, t.upper - t.lower)
-        return min(1.0, max(0.0, Double(xp - t.lower) / Double(span)))
-    }
-
     private var didLevelUp: Bool {
         let before = ProgressManager.subjectXPTiers.last(where: { subjectXPBefore >= $0.lower })?.level ?? 1
         let after = ProgressManager.subjectXPTiers.last(where: { progressManager.xp(for: course.subject) >= $0.lower })?.level ?? 1
@@ -933,25 +782,19 @@ struct QuizView: View {
 
     private func startXPProgressionSequence() {
         xpScreenAppeared = false
-        xpBarAnimated = false
         xpButtonAppeared = false
         displayedXP = subjectXPBefore
         xpBarFill = XPProgressAnimator.barFraction(for: subjectXPBefore)
         cachedCourseThumb = CourseImageMap.loadImage(for: course.id)
-        confettiTrigger += 1
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-            withAnimation(.spring(response: 0.6, dampingFraction: 0.7)) {
+            withAnimation(.spring(response: 0.55, dampingFraction: 0.8)) {
                 xpScreenAppeared = true
             }
             UINotificationFeedbackGenerator().notificationOccurred(.success)
         }
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.65) {
-            xpBarAnimated = true
-            xpBarShimmerActive = true
-            ShimmerAnimation.runLoop(offset: $xpBarShimmer) { xpBarShimmerActive }
-
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
             let endXP = progressManager.xp(for: course.subject)
             XPProgressAnimator.animate(
                 from: subjectXPBefore,
@@ -968,11 +811,9 @@ struct QuizView: View {
                     }
                 },
                 haptic: {
-                    XPProgressAnimator.progressionHaptic(intensity: 0.62)
-                    UIImpactFeedbackGenerator(style: .rigid).impactOccurred(intensity: 0.35)
+                    XPProgressAnimator.progressionHaptic(intensity: 0.5)
                 },
                 completion: {
-                    xpBarShimmerActive = false
                     displayedXP = endXP
                     UINotificationFeedbackGenerator().notificationOccurred(.success)
                     if didLevelUp {
@@ -989,7 +830,7 @@ struct QuizView: View {
 
     private func revealXPContinueButton() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-            withAnimation(.spring(response: 0.5, dampingFraction: 0.8)) {
+            withAnimation(.spring(response: 0.5, dampingFraction: 0.85)) {
                 xpButtonAppeared = true
             }
         }
@@ -1059,164 +900,107 @@ struct QuizView: View {
     }
 
     private var xpProgressionView: some View {
-        ZStack {
-            cream.ignoresSafeArea()
-
-            ConfettiView(trigger: confettiTrigger)
-                .ignoresSafeArea()
-                .allowsHitTesting(false)
-
+        ScrollView {
             VStack(spacing: 22) {
-                Spacer(minLength: 12)
+                Spacer(minLength: 20)
 
-                HStack(spacing: 8) {
-                    Text(course.subject.emoji)
-                        .font(.system(size: 16))
+                HStack(spacing: 6) {
+                    Image(systemName: course.subject.icon)
+                        .font(.system(size: 12, weight: .medium))
                     Text(course.subject.localizedShortName(language: languageManager.current).uppercased())
-                        .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                        .foregroundStyle(.white)
-                        .tracking(0.6)
+                        .font(DS.sans(.caption, .semibold))
+                        .tracking(0.8)
                 }
-                .padding(.horizontal, 16)
-                .padding(.vertical, 10)
-                .background(ink, in: Capsule())
-                .scaleEffect(xpScreenAppeared ? 1 : 0.6)
+                .foregroundStyle(DS.accentSoft)
+                .padding(.horizontal, 14)
+                .padding(.vertical, 8)
+                .background(DS.accentTint, in: Capsule())
+                .scaleEffect(xpScreenAppeared ? 1 : 0.7)
                 .opacity(xpScreenAppeared ? 1 : 0)
 
                 ZStack {
-                    RoundedRectangle(cornerRadius: 32, style: .continuous)
-                        .fill(ink)
-                        .frame(width: 200, height: 200)
-                        .offset(y: 8)
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 28, style: .continuous)
-                            .fill(yellow.opacity(0.35))
-                            .frame(width: 200, height: 200)
-                            .overlay {
-                                RoundedRectangle(cornerRadius: 28, style: .continuous)
-                                    .strokeBorder(ink, lineWidth: 3.5)
-                            }
-                        if let thumb = cachedCourseThumb {
-                            Color.clear
-                                .frame(width: 200, height: 200)
-                                .overlay {
-                                    Image(uiImage: thumb)
-                                        .resizable()
-                                        .scaledToFill()
-                                }
-                                .clipShape(RoundedRectangle(cornerRadius: 28, style: .continuous))
-                        } else {
-                            SubjectBadgeView(subject: course.subject, emojiSize: 72, cornerRadius: 28)
-                                .frame(width: 200, height: 200)
-                        }
+                    DS.accentTint
+                    if let thumb = cachedCourseThumb {
+                        Image(uiImage: thumb)
+                            .resizable()
+                            .scaledToFill()
+                    } else {
+                        SubjectBadgeView(subject: course.subject, iconSize: 60, cornerRadius: 0)
                     }
-                    .scaleEffect(xpScreenAppeared ? 1 : 0.3)
                 }
+                .frame(width: 176, height: 176)
+                .clipShape(.rect(cornerRadius: DS.Radius.card))
+                .overlay {
+                    RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                        .strokeBorder(DS.hairline, lineWidth: 1)
+                }
+                .dsSoftShadow()
+                .scaleEffect(xpScreenAppeared ? 1 : 0.7)
+                .opacity(xpScreenAppeared ? 1 : 0)
 
                 VStack(spacing: 6) {
                     Text(didLevelUp ? languageManager.text("quiz.levelUp") : languageManager.text("quiz.xpProgress"))
-                        .font(.system(.title, design: .rounded, weight: .black))
-                        .foregroundStyle(ink)
+                        .font(DS.title(.title2, .semibold))
+                        .foregroundStyle(DS.ink)
                         .opacity(xpScreenAppeared ? 1 : 0)
 
                     HStack(alignment: .firstTextBaseline, spacing: 6) {
                         Text("\(displayedXP)")
-                            .font(.system(size: 44, weight: .black, design: .rounded))
-                            .foregroundStyle(ink)
+                            .font(.system(size: 38, weight: .semibold))
+                            .foregroundStyle(DS.ink)
                             .monospacedDigit()
                         Text("XP")
-                            .font(.system(.title2, design: .rounded, weight: .heavy))
-                            .foregroundStyle(ink.opacity(0.55))
+                            .font(DS.title(.title3, .medium))
+                            .foregroundStyle(DS.inkTertiary)
                     }
                     .opacity(xpScreenAppeared ? 1 : 0)
                 }
 
-                VStack(alignment: .leading, spacing: 6) {
-                    ZStack(alignment: .leading) {
-                        Capsule()
-                            .fill(ink)
-                            .frame(height: 22)
-                            .offset(y: 5)
-                        GeometryReader { geo in
-                            ZStack(alignment: .leading) {
-                                Capsule()
-                                    .fill(Color.white)
-                                    .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
-                                    .frame(height: 22)
-                                Capsule()
-                                    .fill(pink)
-                                    .overlay {
-                                        Capsule()
-                                            .fill(
-                                                LinearGradient(
-                                                    colors: [.clear, .white.opacity(0.45), .clear],
-                                                    startPoint: .leading,
-                                                    endPoint: .trailing
-                                                )
-                                            )
-                                            .mask {
-                                                Rectangle()
-                                                    .frame(width: 60, height: 22)
-                                                    .offset(x: xpBarShimmer)
-                                            }
-                                            .allowsHitTesting(false)
-                                    }
-                                    .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
-                                    .frame(width: max(geo.size.width * xpBarFill, 22), height: 22)
-                            }
-                        }
-                        .frame(height: 22)
-                    }
-                    .padding(.bottom, 5)
+                VStack(alignment: .leading, spacing: 8) {
+                    CalmProgressBar(fraction: Double(xpBarFill), height: 10)
 
                     Text(xpProgressLabel)
-                        .font(.system(.caption, design: .rounded, weight: .heavy))
-                        .foregroundStyle(ink.opacity(0.6))
+                        .font(DS.sans(.caption, .medium))
+                        .foregroundStyle(DS.inkSecondary)
                 }
                 .padding(.horizontal, 24)
                 .opacity(xpScreenAppeared ? 1 : 0)
 
-                // Breakdown pills
                 VStack(spacing: 10) {
-                    breakdownPill(
-                        icon: "checkmark.circle.fill",
+                    breakdownRow(
+                        icon: "checkmark.circle",
                         label: languageManager.text("quiz.breakdown.correct"),
-                        amount: xpEarned - quizCompletionXPBonus,
-                        fill: mint
+                        amount: xpEarned - quizCompletionXPBonus
                     )
-                    breakdownPill(
-                        icon: "trophy.fill",
+                    breakdownRow(
+                        icon: "trophy",
                         label: languageManager.text("quiz.breakdown.completed"),
-                        amount: quizCompletionXPBonus,
-                        fill: yellow
+                        amount: quizCompletionXPBonus
                     )
                 }
                 .padding(.horizontal, 24)
                 .opacity(xpScreenAppeared ? 1 : 0)
-                .offset(y: xpScreenAppeared ? 0 : 14)
+                .offset(y: xpScreenAppeared ? 0 : 10)
 
-                Spacer(minLength: 8)
+                Spacer(minLength: 12)
 
                 Button {
-                    UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     continueAfterQuizCompletion()
                 } label: {
                     HStack(spacing: 8) {
-                        Image(systemName: "arrow.right")
                         Text(languageManager.text("common.continue"))
+                        Image(systemName: "arrow.right")
                     }
-                    .font(.system(.headline, design: .rounded, weight: .black))
-                    .foregroundStyle(ink)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 18)
                 }
-                .buttonStyle(BrutalPillStyle(fill: pink))
+                .buttonStyle(DSPrimaryButtonStyle())
                 .padding(.horizontal, 24)
-                .padding(.bottom, 32)
-                .scaleEffect(xpButtonAppeared ? 1 : 0.85)
+                .padding(.bottom, 24)
+                .scaleEffect(xpButtonAppeared ? 1 : 0.9)
                 .opacity(xpButtonAppeared ? 1 : 0)
             }
         }
+        .scrollIndicators(.hidden)
     }
 
     private var xpProgressLabel: String {
@@ -1235,140 +1019,31 @@ struct QuizView: View {
         return languageManager.text("quiz.feedback.correct")
     }
 
-    private func breakdownPill(icon: String, label: String, amount: Int, fill: Color) -> some View {
+    private func breakdownRow(icon: String, label: String, amount: Int) -> some View {
         HStack(spacing: 12) {
-            ZStack {
-                Circle()
-                    .fill(fill)
-                    .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
-                Image(systemName: icon)
-                    .font(.system(.subheadline, weight: .heavy))
-                    .foregroundStyle(ink)
-            }
-            .frame(width: 38, height: 38)
+            Image(systemName: icon)
+                .font(.system(size: 15, weight: .medium))
+                .foregroundStyle(DS.accentSoft)
+                .frame(width: 36, height: 36)
+                .background(DS.accentTint, in: Circle())
 
             Text(label)
-                .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                .foregroundStyle(ink)
+                .font(DS.sans(.subheadline, .medium))
+                .foregroundStyle(DS.ink)
 
             Spacer(minLength: 4)
 
             Text("+\(amount) XP")
-                .font(.system(.headline, design: .rounded, weight: .black))
-                .foregroundStyle(ink)
-                .padding(.horizontal, 12)
-                .padding(.vertical, 6)
-                .background(fill, in: Capsule())
-                .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
+                .font(DS.sans(.subheadline, .semibold))
+                .foregroundStyle(DS.accentSoft)
         }
         .padding(.horizontal, 14)
         .padding(.vertical, 12)
-        .background(Color.white)
-        .clipShape(.rect(cornerRadius: 16))
+        .background(DS.surface)
+        .clipShape(.rect(cornerRadius: DS.Radius.control))
         .overlay {
-            RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .strokeBorder(ink, lineWidth: 2.5)
+            RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                .strokeBorder(DS.hairline, lineWidth: 1)
         }
     }
 }
-
-/// Neo-brutalist pill button: solid black offset plate behind a colored capsule.
-private struct BrutalPillStyle: ButtonStyle {
-    let fill: Color
-    private let depth: CGFloat = 5
-
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .background(
-                Capsule().fill(fill)
-                    .overlay { Capsule().strokeBorder(.black, lineWidth: 3) }
-            )
-            .offset(y: configuration.isPressed ? depth : 0)
-            .background(
-                Capsule().fill(Color.black).offset(y: depth)
-            )
-            .animation(.spring(response: 0.18, dampingFraction: 0.7), value: configuration.isPressed)
-            .padding(.bottom, depth)
-    }
-}
-
-struct ConfettiView: View {
-    let trigger: Int
-    @State private var particles: [ConfettiParticle] = []
-
-    var body: some View {
-        TimelineView(.animation) { timeline in
-            Canvas { context, size in
-                let now = timeline.date.timeIntervalSinceReferenceDate
-                for particle in particles {
-                    let elapsed = now - particle.startTime
-                    guard elapsed < 3.0 else { continue }
-                    let progress = elapsed / 3.0
-                    let x = particle.startX + sin(elapsed * particle.wobbleSpeed) * particle.wobbleAmount
-                    let y = particle.startY + elapsed * particle.fallSpeed
-                    let opacity = 1.0 - progress
-                    let rotation = Angle.degrees(elapsed * particle.rotationSpeed)
-
-                    context.opacity = opacity
-                    context.translateBy(x: x, y: y)
-                    context.rotate(by: rotation)
-                    let rect = CGRect(x: -particle.width / 2, y: -particle.height / 2, width: particle.width, height: particle.height)
-                    context.fill(
-                        Path(roundedRect: rect, cornerRadius: 2),
-                        with: .color(particle.color)
-                    )
-                    context.rotate(by: -rotation)
-                    context.translateBy(x: -x, y: -y)
-                    context.opacity = 1
-                }
-            }
-        }
-        .onChange(of: trigger) { _, _ in
-            spawnParticles()
-        }
-    }
-
-    private func spawnParticles() {
-        let colors: [Color] = [
-            Color(red: 1.0, green: 0.553, blue: 0.706),  // pink
-            Color(red: 1.0, green: 0.84, blue: 0.35),    // yellow
-            Color(red: 0.70, green: 0.95, blue: 0.80),   // mint
-            Color(red: 0.66, green: 0.92, blue: 0.96),   // cyan
-            Color(red: 0.82, green: 0.78, blue: 1.0),    // lavender
-            Color(red: 1.0, green: 0.55, blue: 0.18),    // orange
-            .black,
-        ]
-        let now = Date().timeIntervalSinceReferenceDate
-        var newParticles: [ConfettiParticle] = []
-        for _ in 0..<60 {
-            newParticles.append(ConfettiParticle(
-                startX: Double.random(in: 20...380),
-                startY: Double.random(in: -40...0),
-                fallSpeed: Double.random(in: 120...280),
-                wobbleSpeed: Double.random(in: 2...6),
-                wobbleAmount: Double.random(in: 15...40),
-                rotationSpeed: Double.random(in: 60...200),
-                width: Double.random(in: 6...12),
-                height: Double.random(in: 8...16),
-                color: colors.randomElement()!,
-                startTime: now + Double.random(in: 0...0.5)
-            ))
-        }
-        particles = newParticles
-    }
-}
-
-nonisolated struct ConfettiParticle: Sendable {
-    let startX: Double
-    let startY: Double
-    let fallSpeed: Double
-    let wobbleSpeed: Double
-    let wobbleAmount: Double
-    let rotationSpeed: Double
-    let width: Double
-    let height: Double
-    let color: Color
-    let startTime: Double
-}
-
-

@@ -30,7 +30,7 @@ struct PostCompletionRewardFlowView: View {
 
     var body: some View {
         ZStack {
-            BrutalPalette.cream.ignoresSafeArea()
+            DS.canvas.ignoresSafeArea()
 
             if let currentStep {
                 stepView(currentStep)
