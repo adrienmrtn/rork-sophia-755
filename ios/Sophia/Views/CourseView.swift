@@ -223,7 +223,7 @@ struct CourseView: View {
         } else {
             VStack(alignment: .leading, spacing: 24) {
                 Text(lesson.title)
-                    .font(DS.serif(.largeTitle, .semibold))
+                    .font(DS.title(.largeTitle, .semibold))
                     .foregroundStyle(DS.ink)
                     .fixedSize(horizontal: false, vertical: true)
 

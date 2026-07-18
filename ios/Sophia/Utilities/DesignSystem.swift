@@ -43,13 +43,13 @@ enum DS {
 
     // MARK: - Typography
     //
-    // Editorial pairing: a system serif (New York) for titles and headings, a clean
-    // sans (SF) for body copy and UI. Weights stay light — no more heavy / black.
-    // Everything is built on relative text styles so Dynamic Type keeps working.
+    // Full sans-serif (SF) to match the calm Deepstash look: clean, neutral, modern.
+    // Titles lean on semibold weight for hierarchy, body copy stays regular. No serif,
+    // no rounded, no heavy/black. Built on relative text styles so Dynamic Type works.
 
-    /// Serif font for titles / headings (calm, editorial).
-    static func serif(_ style: Font.TextStyle, _ weight: Font.Weight = .semibold) -> Font {
-        .system(style, design: .serif, weight: weight)
+    /// Titles / headings — clean sans with a strong-but-calm weight.
+    static func title(_ style: Font.TextStyle, _ weight: Font.Weight = .semibold) -> Font {
+        .system(style, design: .default, weight: weight)
     }
 
     /// Sans font for body copy and UI chrome.

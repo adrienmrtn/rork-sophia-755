@@ -31,7 +31,7 @@ struct GlossaryTermSheet: View {
                 }
 
                 Text(entry.displayTerm)
-                    .font(DS.serif(.title2, .semibold))
+                    .font(DS.title(.title2, .semibold))
                     .foregroundStyle(DS.ink)
                     .fixedSize(horizontal: false, vertical: true)
 
