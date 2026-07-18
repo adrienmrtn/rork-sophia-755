@@ -17,27 +17,27 @@ struct LanguagePickerControl: View {
             } label: {
                 HStack(spacing: 6) {
                     Text(languageManager.current.flag)
-                        .font(.system(size: 22))
+                        .font(.system(size: 20))
                     Image(systemName: isExpanded ? "chevron.up" : "chevron.down")
-                        .font(.system(size: 11, weight: .heavy))
-                        .foregroundStyle(BrutalPalette.ink)
+                        .font(.system(size: 11, weight: .semibold))
+                        .foregroundStyle(DS.inkSecondary)
                 }
                 .padding(.horizontal, 14)
                 .padding(.vertical, 10)
-                .background(Color.white, in: Capsule())
-                .overlay { Capsule().strokeBorder(BrutalPalette.ink, lineWidth: 2.5) }
+                .background(DS.surface, in: Capsule())
+                .overlay { Capsule().strokeBorder(DS.hairline, lineWidth: 1) }
             }
-            .buttonStyle(.plain)
+            .buttonStyle(SoftPressButtonStyle())
             .accessibilityLabel(languageManager.current.displayName)
 
             if isExpanded {
-                brutalDropdown
+                dropdown
                     .transition(.move(edge: .top).combined(with: .opacity))
             }
         }
     }
 
-    private var brutalDropdown: some View {
+    private var dropdown: some View {
         VStack(spacing: 0) {
             ForEach(AppLanguage.allCases) { language in
                 Button {
@@ -49,43 +49,39 @@ struct LanguagePickerControl: View {
                 } label: {
                     HStack(spacing: 10) {
                         Text(language.flag)
-                            .font(.system(size: 20))
+                            .font(.system(size: 18))
                         Text(language.displayName)
-                            .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                            .foregroundStyle(BrutalPalette.ink)
+                            .font(DS.sans(.subheadline, .medium))
+                            .foregroundStyle(DS.ink)
                             .lineLimit(1)
                         if languageManager.current == language {
+                            Spacer(minLength: 8)
                             Image(systemName: "checkmark")
-                                .font(.system(size: 12, weight: .heavy))
-                                .foregroundStyle(BrutalPalette.ink)
+                                .font(.system(size: 12, weight: .semibold))
+                                .foregroundStyle(DS.accent)
                         }
                     }
                     .padding(.horizontal, 14)
                     .padding(.vertical, 12)
                     .background(
-                        languageManager.current == language ? BrutalPalette.pink.opacity(0.35) : Color.white
+                        languageManager.current == language ? DS.accentTint : DS.surface
                     )
                 }
                 .buttonStyle(.plain)
 
                 if language != AppLanguage.allCases.last {
                     Rectangle()
-                        .fill(BrutalPalette.ink.opacity(0.12))
-                        .frame(height: 2)
+                        .fill(DS.hairline)
+                        .frame(height: 1)
                 }
             }
         }
-        .background(Color.white, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+        .background(DS.surface, in: RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous))
         .overlay {
-            RoundedRectangle(cornerRadius: 14, style: .continuous)
-                .strokeBorder(BrutalPalette.ink, lineWidth: 2.5)
+            RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                .strokeBorder(DS.hairline, lineWidth: 1)
         }
-        .background(alignment: .top) {
-            RoundedRectangle(cornerRadius: 14, style: .continuous)
-                .fill(BrutalPalette.ink)
-                .offset(y: 3)
-        }
-        .padding(.bottom, 3)
+        .dsSoftShadow()
         .fixedSize(horizontal: true, vertical: true)
         .frame(maxWidth: compact ? nil : 220, alignment: .leading)
     }

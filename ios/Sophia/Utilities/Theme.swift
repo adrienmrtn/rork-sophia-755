@@ -1,17 +1,23 @@
 import SwiftUI
 import UIKit
 
+/// Calm tab bar chrome — matches the `DS` design system (soft canvas, navy accent,
+/// muted slate for unselected items), replacing the previous cream/black neo-brutalist look.
 enum SophiaTabBarStyle {
     static func apply() {
-        let cream = UIColor(red: 0.984, green: 0.961, blue: 0.918, alpha: 1)
+        let canvas = UIColor(red: 0.969, green: 0.973, blue: 0.980, alpha: 1)
+        let accent = UIColor(red: 0.102, green: 0.227, blue: 0.420, alpha: 1)
+        let inkTertiary = UIColor(red: 0.604, green: 0.643, blue: 0.698, alpha: 1)
+        let hairline = UIColor(red: 0.894, green: 0.906, blue: 0.925, alpha: 1)
+
         let appearance = UITabBarAppearance()
         appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = cream
-        appearance.shadowColor = UIColor.black.withAlphaComponent(0.08)
+        appearance.backgroundColor = canvas
+        appearance.shadowColor = hairline
         UITabBar.appearance().standardAppearance = appearance
         UITabBar.appearance().scrollEdgeAppearance = appearance
-        UITabBar.appearance().tintColor = .black
-        UITabBar.appearance().unselectedItemTintColor = UIColor.black.withAlphaComponent(0.35)
+        UITabBar.appearance().tintColor = accent
+        UITabBar.appearance().unselectedItemTintColor = inkTertiary
     }
 }
 
