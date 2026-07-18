@@ -368,7 +368,7 @@ struct ProfileView: View {
                         QuizRowView(
                             course: item.course,
                             score: item.score,
-                            total: item.totalQuestions,
+                            total: item.totalPoints,
                             onRetry: {
                                 hapticTrigger += 1
                                 selectedCourse = item.course
@@ -795,7 +795,7 @@ struct AllQuizzesView: View {
                                 QuizRowView(
                                     course: item.course,
                                     score: item.score,
-                                    total: item.totalQuestions,
+                                    total: item.totalPoints,
                                     onRetry: {
                                         hapticTrigger += 1
                                         selectedCourse = item.course

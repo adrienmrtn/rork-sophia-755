@@ -437,16 +437,21 @@ struct OnboardingShowcaseQuizScreen: View {
     /// quiz questions, kept short so the card height stays stable.
     private func buildPrompts() -> [QuizPrompt] {
         var list: [QuizPrompt] = [fallbackPrompt]
+        // This preview only knows how to render a classic 4-option MCQ card, so other
+        // question types (true/false, chronological, sliders) are skipped here.
         let extra = CuratedStarterCourses.ids
             .compactMap { ContentCatalog.course(withId: $0, language: languageManager.current) }
             .flatMap(\.quiz)
-            .filter { q in
-                q.options.count == 4
-                    && q.question.count <= 80
-                    && q.options.allSatisfy { $0.count <= 34 }
+            .filter { $0.type == .mcq }
+            .compactMap { q -> QuizPrompt? in
+                guard let options = q.options, let correctIndex = q.correctIndex,
+                      options.count == 4,
+                      q.question.count <= 80,
+                      options.allSatisfy({ $0.count <= 34 }) else { return nil }
+                return QuizPrompt(question: q.question, options: options, correctIndex: correctIndex)
             }
-        for q in extra {
-            list.append(QuizPrompt(question: q.question, options: q.options, correctIndex: q.correctIndex))
+        for prompt in extra {
+            list.append(prompt)
             if list.count == 3 { break }
         }
         return list

@@ -14,11 +14,47 @@ nonisolated struct CourseProgress: Codable, Sendable {
     }
 }
 
-nonisolated struct ShuffledQuestion: Sendable {
+/// A quiz question with its randomized-for-display state resolved, ready to render.
+/// Built once per question via `QuizShuffler.shuffle(_:)`. Fields not relevant to
+/// `type` are left at harmless defaults (empty array / 0) rather than optional, since
+/// this struct is only ever constructed by the shuffler, which always fills in the
+/// fields the given `type` needs.
+nonisolated struct ShuffledQuestion: Sendable, Identifiable {
+    let id: String
+    let type: QuizQuestionType
     let question: String
+    let explanation: String
+    let maxPoints: Int
+
+    // .mcq / .trueFalse — `options` already shuffled, `correctIndex` updated to match.
     let options: [String]
     let correctIndex: Int
-    let explanation: String
+
+    // .chronological — `items` already shuffled for display. `originalIndices[i]` is
+    // the position (0-based) that the item currently at display slot `i` should end up
+    // in once correctly ordered; i.e. the learner's answer is correct once they arrange
+    // the displayed items so that `originalIndices[userOrder] == [0, 1, 2, ...]`.
+    let items: [String]
+    let originalIndices: [Int]
+
+    // .numericSlider / .percentageSlider
+    let sliderMin: Double
+    let sliderMax: Double
+    let correctValue: Double
+    let tolerance: Double
+    let unit: String
+}
+
+/// The learner's answer to a single question, shaped to match its `QuizQuestionType`.
+nonisolated enum QuizAnswer: Sendable, Equatable {
+    /// `.mcq` / `.trueFalse` — index into `ShuffledQuestion.options`.
+    case singleChoice(Int)
+    /// `.chronological` — the display-slot index chosen for each position, in the
+    /// order the learner placed them (i.e. `order[0]` is the display index the
+    /// learner put first).
+    case order([Int])
+    /// `.numericSlider` / `.percentageSlider` — the value the learner picked on the slider.
+    case value(Double)
 }
 
 nonisolated struct UserProgress: Codable, Sendable {
