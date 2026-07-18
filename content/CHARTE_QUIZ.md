@@ -164,8 +164,11 @@ questions et leur mix de types — ce n'est jamais un simple `nombre de question
   vrai/faux ambigu.
 - Pour le chronologique : 3 à 5 événements maximum (au-delà, l'exercice devient long et
   frustrant sur mobile) ; **jamais de date entre parenthèses dans le libellé** (voir §3).
-  L'interaction est un **glisser-déposer** (drag & drop) des cartes d'événements, pas un
-  simple tap.
+  L'interaction combine tap et glisser-déposer : des cases numérotées vides, et un
+  réservoir de cartes en dessous ; toucher une carte la place dans la première case
+  vide, ou on peut la glisser directement dans une case précise ; une fois placées, on
+  glisse les cartes entre elles (ou on retouche une case remplie pour la remettre dans
+  le réservoir) pour réorganiser.
 - Pour les sliders : la plage (`sliderMin`/`sliderMax`) doit rester resserrée autour
   d'une fourchette plausible — un curseur trop large rend la question trop facile
   (deviner "à peu près au milieu" suffit à approcher le plein de points).
@@ -225,3 +228,14 @@ contenu réel des leçons (V2, FR), pas d'un canevas générique.
 - **Nombre de questions** : les 6 cours étaient tous groupés à 6-7 questions. Relevé à
   8-9 selon la densité (voir §5), en ajoutant des questions sur des faits du cours pas
   encore couverts plutôt qu'en délayant les questions existantes.
+
+### Itération 3 (retour terrain sur l'interaction chronologique)
+
+- Le glisser-déposer pur (cartes déjà toutes affichées, à faire glisser les unes sur les
+  autres) a été jugé peu fluide et peu compréhensible en usage réel.
+- Remplacé par un modèle **cases vides + réservoir** : N cases numérotées vides en haut,
+  les cartes-événements mélangées en dessous. Toucher une carte l'envoie dans la case
+  vide la plus à gauche ; on peut aussi la glisser directement dans une case précise
+  (vide ou déjà occupée, ce qui renvoie l'occupant au réservoir). Une fois deux cases
+  remplies, les glisser l'une sur l'autre échange leur contenu pour réordonner ; toucher
+  une case remplie la vide et renvoie sa carte au réservoir (annulation rapide).
