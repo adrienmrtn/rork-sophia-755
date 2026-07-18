@@ -280,7 +280,7 @@ struct HomeViewTinder: View {
                 .font(.system(size: 52, weight: .light))
                 .foregroundStyle(DS.accentSoft)
             Text(languageManager.text("home.bravo"))
-                .font(DS.serif(.title, .semibold))
+                .font(DS.title(.title, .semibold))
                 .foregroundStyle(DS.ink)
             Text(languageManager.text("home.allCompleted"))
                 .font(DS.sans(.body))
@@ -371,7 +371,7 @@ private struct TinderFlashCard: View {
                 .tracking(1.2)
 
             Text(course.title)
-                .font(DS.serif(.title2, .semibold))
+                .font(DS.title(.title2, .semibold))
                 .foregroundStyle(DS.ink)
                 .lineLimit(3)
                 .fixedSize(horizontal: false, vertical: true)
