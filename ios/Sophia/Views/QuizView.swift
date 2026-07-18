@@ -5,7 +5,6 @@ struct QuizView: View {
     let course: Course
     let progressManager: ProgressManager
     var initialCollectionEvents: [CollectionProgressEvent] = []
-    var initialCardCandidates: [CollectibleCard] = []
     let onReturnHome: () -> Void
     @Environment(\.dismiss) private var dismiss
 
@@ -46,10 +45,6 @@ struct QuizView: View {
     @State private var showXPPopup: Bool = false
     @State private var popupXPAmount: Int = 0
     @State private var globalQuizAwardResult: GlobalXPAwardResult?
-    @State private var pendingCardCandidates: [CollectibleCard] = []
-    @State private var currentCardUnlockEvent: CardUnlockEvent?
-    @State private var showCardUnlock: Bool = false
-    @State private var showCardRankUp: Bool = false
     @State private var courseWasCompletedBeforeQuiz: Bool = false
     @State private var pendingCollectionEvents: [CollectionProgressEvent] = []
     @State private var currentCollectionEvent: CollectionProgressEvent?
@@ -165,33 +160,6 @@ struct QuizView: View {
                 )
             }
         }
-        .fullScreenCover(isPresented: $showCardUnlock) {
-            if let currentCardUnlockEvent {
-                CardUnlockCelebrationView(event: currentCardUnlockEvent) {
-                    showCardUnlock = false
-                    self.currentCardUnlockEvent = nil
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                        continueAfterQuizCompletion()
-                    }
-                }
-            }
-        }
-        .fullScreenCover(isPresented: $showCardRankUp) {
-            if let pending = progressManager.pendingGlobalRankUp() {
-                GlobalRankUpCelebrationView(
-                    previousRank: pending.previous,
-                    newRank: pending.new,
-                    newLevel: pending.newLevel,
-                    onContinue: {
-                        progressManager.clearPendingGlobalRankUp()
-                        showCardRankUp = false
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                            continueAfterQuizCompletion()
-                        }
-                    }
-                )
-            }
-        }
         .fullScreenCover(isPresented: $showCollectionProgress) {
             if let currentCollectionEvent {
                 CollectionProgressCelebrationView(event: currentCollectionEvent) {
@@ -256,7 +224,6 @@ struct QuizView: View {
             subjectXPBefore = progressManager.xp(for: course.subject)
             courseWasCompletedBeforeQuiz = progressManager.courseStatus(for: course.id) == .completed
             pendingCollectionEvents = initialCollectionEvents
-            pendingCardCandidates = initialCardCandidates
             shuffleAllQuestions()
             if !course.quiz.isEmpty {
                 AnalyticsService.trackQuizStarted(course: course)
@@ -685,10 +652,8 @@ struct QuizView: View {
                 reason: .quizCompleted(courseId: course.id),
                 amount: ProgressManager.globalQuizCompletionXP
             )
-            let cardCandidates = courseWasCompletedBeforeQuiz ? [] : progressManager.cardUnlockCandidates(forCompletingCourseId: course.id)
             progressManager.completeCourse(courseId: course.id, quizScore: correctCount, completedQuiz: true)
             if !courseWasCompletedBeforeQuiz {
-                pendingCardCandidates = cardCandidates
                 pendingCollectionEvents = progressManager.collectionProgressEvents(forNewlyCompletedCourseId: course.id)
             }
             AnalyticsService.trackQuizCompleted(
@@ -1050,12 +1015,6 @@ struct QuizView: View {
     private func buildRewardSteps() -> [PostCompletionRewardStep] {
         var steps: [PostCompletionRewardStep] = []
 
-        while !pendingCardCandidates.isEmpty {
-            let card = pendingCardCandidates.removeFirst()
-            if let event = progressManager.unlockCard(card) {
-                steps.append(.card(event))
-            }
-        }
         if progressManager.pendingGlobalRankUp() != nil {
             if let pending = progressManager.pendingGlobalRankUp() {
                 steps.append(.globalRankUp(previous: pending.previous, new: pending.new, newLevel: pending.newLevel))

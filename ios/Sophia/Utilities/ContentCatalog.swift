@@ -36,43 +36,12 @@ enum ContentCatalog {
         }
     }
 
-    static func cards(for language: AppLanguage) -> [CollectibleCard] {
-        switch language {
-        case .french:
-            return CardData.allCards
-        case .english:
-            return LocalizedContentLoader.cards(for: .english)
-        case .spanish:
-            return LocalizedContentLoader.cards(for: .spanish)
-        case .german:
-            return LocalizedContentLoader.cards(for: .german)
-        case .portuguese:
-            return LocalizedContentLoader.cards(for: .portuguese)
-        case .italian:
-            return LocalizedContentLoader.cards(for: .italian)
-        }
-    }
-
     static var activeCourses: [Course] {
         courses(for: AppLanguage.currentPersisted())
     }
 
     static var activeCollections: [LearningCollection] {
         collections(for: AppLanguage.currentPersisted())
-    }
-
-    static var activeCards: [CollectibleCard] {
-        cards(for: AppLanguage.currentPersisted())
-    }
-
-    static var activeCardsByCourseId: [String: [CollectibleCard]] {
-        var map: [String: [CollectibleCard]] = [:]
-        for card in activeCards {
-            for courseId in card.courseIds {
-                map[courseId, default: []].append(card)
-            }
-        }
-        return map
     }
 
     static func course(withId id: String, language: AppLanguage? = nil) -> Course? {

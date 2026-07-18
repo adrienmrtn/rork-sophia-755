@@ -45,19 +45,11 @@ private struct LocaleCollectionDTO: Decodable {
     let courseIds: [String]
 }
 
-private struct LocaleCardDTO: Decodable {
-    let id: String
-    let name: String
-    let rarity: String
-    let courseIds: [String]
-}
-
 enum LocalizedContentLoader {
     private struct Cache {
         var courses: [Course]?
         var glossary: [String: GlossaryEntry]?
         var collections: [LearningCollection]?
-        var cards: [CollectibleCard]?
     }
 
     private static var caches: [AppLanguage: Cache] = [:]
@@ -108,28 +100,6 @@ enum LocalizedContentLoader {
             )
         }
         cache.collections = mapped
-        caches[language] = cache
-        return mapped
-    }
-
-    static func cards(for language: AppLanguage) -> [CollectibleCard] {
-        var cache = caches[language, default: Cache()]
-        if let cachedCards = cache.cards { return cachedCards }
-        let decoded: [LocaleCardDTO] = load("cards", language: language) ?? []
-        let mapped = decoded.compactMap { dto -> CollectibleCard? in
-            guard let base = CardData.allCards.first(where: { $0.id == dto.id }),
-                  let rarity = CollectibleCardRarity(catalogKey: dto.rarity) else {
-                return nil
-            }
-            return CollectibleCard(
-                id: dto.id,
-                name: dto.name,
-                rarity: rarity,
-                imageAssetName: base.imageAssetName,
-                courseIds: dto.courseIds
-            )
-        }
-        cache.cards = mapped
         caches[language] = cache
         return mapped
     }

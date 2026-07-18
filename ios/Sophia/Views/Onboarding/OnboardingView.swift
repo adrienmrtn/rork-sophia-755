@@ -78,12 +78,12 @@ struct OnboardingView: View {
             }
         }
         .onChange(of: displayedScreen) { _, screen in
-            if screen == 13, !useNativeOnboardingPaywall {
+            if screen == 12, !useNativeOnboardingPaywall {
                 prefetchFinOnboardingOffering()
             }
         }
         .onChange(of: incomingScreen) { _, screen in
-            if screen == 13, !useNativeOnboardingPaywall {
+            if screen == 12, !useNativeOnboardingPaywall {
                 prefetchFinOnboardingOffering()
             }
         }
@@ -135,18 +135,16 @@ struct OnboardingView: View {
                 case 10:
                     OnboardingShowcaseQuizScreen(onNext: advance)
                 case 11:
-                    OnboardingShowcaseCardsScreen(onNext: advance)
-                case 12:
                     OnboardingShowcaseCollectionsScreen(onNext: advance)
-                case 13:
+                case 12:
                     OnboardingLoadingScreen(viewModel: viewModel, onNext: loadingScreenCompleted)
-                case 14:
+                case 13:
                     OnboardingProgramScreen(viewModel: viewModel, onNext: advance)
-                case 15:
+                case 14:
                     OnboardingPremiumGiftScreen(onNext: advance)
-                case 16:
+                case 15:
                     OnboardingPremiumTrialTimelineScreen(onUnlockTrial: trialTimelineCompleted)
-                case 17:
+                case 16:
                     nativePaywallScreen
                 default:
                     EmptyView()
@@ -268,7 +266,7 @@ struct OnboardingView: View {
     }
 
     /// Onboarding value screens that show progress dots (excludes intro, language, loading, program, and paywalls).
-    private static let progressQuestionScreens = Array(2...12)
+    private static let progressQuestionScreens = Array(2...11)
 
     private var showsOnboardingProgressDots: Bool {
         let active = incomingScreen ?? displayedScreen
