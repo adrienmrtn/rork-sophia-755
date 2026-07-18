@@ -1,4 +1,4 @@
-﻿{
+{
   "id": "course_195_lancelot_guenievre_et_la_table_ronde",
   "title": "Lancelot, Guenièvre et la Table Ronde",
   "subtitle": "Camelot et sa chute",
@@ -16,8 +16,14 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "La légende du roi **Arthur** et de ses chevaliers de la **Table Ronde** est le grand cycle mythologique du Moyen Âge occidental. On l'appelle la **Matière de Bretagne** : un mélange d'histoire floue, de folklore celte et de morale chrétienne." },
-        { "type": "paragraph", "text": "Au cœur du récit, une tragédie très humaine : l'amour interdit entre **Lancelot**, le meilleur chevalier, et la reine **Guenièvre**, épouse d'Arthur. Cet amour, célébré comme une perfection, devient le poison qui fait tomber **Camelot**." }
+        {
+          "type": "paragraph",
+          "text": "La légende du roi **Arthur** et de ses chevaliers de la **Table Ronde** est le grand cycle mythologique du Moyen Âge occidental. On l'appelle la **Matière de Bretagne** : un mélange d'histoire floue, de folklore celte et de morale chrétienne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Au cœur du récit, une tragédie très humaine : l'amour interdit entre **Lancelot**, le meilleur chevalier, et la reine **Guenièvre**, épouse d'Arthur. Cet amour, célébré comme une perfection, devient le poison qui fait tomber **Camelot**."
+        }
       ]
     },
     {
@@ -25,10 +31,24 @@
       "title": "Aux sources du mythe : entre histoire et folklore celtique",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Pas d'auteur unique. Entre le VIe et le XVe siècle, les récits s'accumulent. Derrière Arthur, on entrevoit un chef de guerre breton, peut-être nommé **Arturus**, qui aurait résisté aux Saxons après le départ des Romains. Autour de lui grandissent **Merlin**, les fées, les épées magiques." },
-        { "type": "image", "asset": "lancelot_guenievre_et_la_table_ronde", "ratio": "4:3", "caption": "Arthur tire l'épée du rocher : le signe du roi légitime." },
-        { "type": "funFact", "text": "Une « Table Ronde » du XIIIe siècle est encore suspendue au château de Winchester, en Angleterre. Henri VIII la fit peindre pour se rattacher à Arthur." },
-        { "type": "paragraph", "text": "Lors de [[l'épreuve de l'épée]], seul le vrai roi peut tirer **Excalibur** du rocher ou de l'enclume. Couronné à Camelot, Arthur fonde la **Table Ronde**. Sa forme circulaire abolit la hiérarchie : autour d'elle, chaque chevalier est l'égal de son voisin, y compris le roi." }
+        {
+          "type": "paragraph",
+          "text": "Pas d'auteur unique. Entre le VIe et le XVe siècle, les récits s'accumulent. Derrière Arthur, on entrevoit un chef de guerre breton, peut-être nommé **Arturus**, qui aurait résisté aux Saxons après le départ des Romains. Autour de lui grandissent **Merlin**, les fées, les épées magiques."
+        },
+        {
+          "type": "image",
+          "asset": "king_arthur_excalibur_sword_stone_medieval",
+          "ratio": "4:3",
+          "caption": "Arthur tire l'épée du rocher : le signe du roi légitime."
+        },
+        {
+          "type": "funFact",
+          "text": "Une « Table Ronde » du XIIIe siècle est encore suspendue au château de Winchester, en Angleterre. Henri VIII la fit peindre pour se rattacher à Arthur."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lors de [[l'épreuve de l'épée]], seul le vrai roi peut tirer **Excalibur** du rocher ou de l'enclume. Couronné à Camelot, Arthur fonde la **Table Ronde**. Sa forme circulaire abolit la hiérarchie : autour d'elle, chaque chevalier est l'égal de son voisin, y compris le roi."
+        }
       ]
     },
     {
@@ -36,10 +56,24 @@
       "title": "La quête du Graal et la mutation spirituelle",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Peu à peu, les combats cèdent la place à une quête spirituelle : le **Saint Graal**. Plat magique dans les vieux textes celtes, il devient au XIIe siècle le calice du Christ. La pureté intérieure compte autant que la force." },
-        { "type": "image", "asset": "lancelot_guenievre_et_la_table_ronde", "ratio": "4:3", "caption": "La quête du Graal transforme la Table Ronde en aventure spirituelle." },
-        { "type": "funFact", "text": "Le mot « graal » venait de l'ancien français et désignait d'abord un plat large pour servir les viandes, pas une coupe précieuse." },
-        { "type": "paragraph", "text": "À la table, le [[Siège périlleux]] attend le chevalier prédestiné. Seuls **Galaad**, **Perceval** et **Bohort** atteignent le Graal. **Lancelot du Lac**, « meilleur chevalier du monde », échoue : son amour pour Guenièvre le rend indigne de la vision divine." }
+        {
+          "type": "paragraph",
+          "text": "Peu à peu, les combats cèdent la place à une quête spirituelle : le **Saint Graal**. Plat magique dans les vieux textes celtes, il devient au XIIe siècle le calice du Christ. La pureté intérieure compte autant que la force."
+        },
+        {
+          "type": "image",
+          "asset": "holy_grail_knights_round_table_medieval_painting",
+          "ratio": "4:3",
+          "caption": "La quête du Graal transforme la Table Ronde en aventure spirituelle."
+        },
+        {
+          "type": "funFact",
+          "text": "Le mot « graal » venait de l'ancien français et désignait d'abord un plat large pour servir les viandes, pas une coupe précieuse."
+        },
+        {
+          "type": "paragraph",
+          "text": "À la table, le [[Siège périlleux]] attend le chevalier prédestiné. Seuls **Galaad**, **Perceval** et **Bohort** atteignent le Graal. **Lancelot du Lac**, « meilleur chevalier du monde », échoue : son amour pour Guenièvre le rend indigne de la vision divine."
+        }
       ]
     },
     {
@@ -47,9 +81,20 @@
       "title": "La trahison de Guenièvre et la déchirure de l'ordre",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "L'amour de Lancelot et Guenièvre incarne [[l'amour courtois médiéval (fin'amor)]] : le chevalier se met au service de sa dame. Mais Guenièvre est l'épouse du suzerain. La trahison n'est pas seulement conjugale : elle est féodale." },
-        { "type": "image", "asset": "lancelot_guenievre_et_la_table_ronde", "ratio": "4:3", "caption": "Lancelot et Guenièvre : l'amour qui brise Camelot." },
-        { "type": "paragraph", "text": "**Mordred**, neveu ou fils incestueux d'Arthur selon les versions, révèle la liaison. Arthur condamne Guenièvre au bûcher. Lancelot la sauve, mais tue dans la mêlée les frères de **Gauvain**. La Table Ronde se déchire : guerre civile, fin de l'utopie." }
+        {
+          "type": "paragraph",
+          "text": "L'amour de Lancelot et Guenièvre incarne [[l'amour courtois médiéval (fin'amor)]] : le chevalier se met au service de sa dame. Mais Guenièvre est l'épouse du suzerain. La trahison n'est pas seulement conjugale : elle est féodale."
+        },
+        {
+          "type": "image",
+          "asset": "lancelot_guinevere_medieval_romance_painting",
+          "ratio": "4:3",
+          "caption": "Lancelot et Guenièvre : l'amour qui brise Camelot."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Mordred**, neveu ou fils incestueux d'Arthur selon les versions, révèle la liaison. Arthur condamne Guenièvre au bûcher. Lancelot la sauve, mais tue dans la mêlée les frères de **Gauvain**. La Table Ronde se déchire : guerre civile, fin de l'utopie."
+        }
       ]
     },
     {
@@ -57,9 +102,18 @@
       "title": "La fin d'un monde et le mythe du roi dormant",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "À **Camlann**, Arthur tue Mordred et reçoit une blessure mortelle. Excalibur est rendue à la Dame du Lac. Guenièvre finit au couvent, Lancelot en ermite. Arthur, dit-on, part vers l'île d'**Avalon**." },
-        { "type": "paragraph", "text": "Il devient le [[Rex Quondam Rexque Futurus]], « roi jadis, roi futur » : le roi dormant qui reviendra au pire moment. Camelot meurt en légende, et c'est ainsi qu'elle survit." },
-        { "type": "takeaway", "text": "L'amour de **Lancelot** pour **Guenièvre** détruit Camelot. La quête du **Graal** n'aboutit que pour les purs : Lancelot, meilleur chevalier, reste hors du seuil sacré." }
+        {
+          "type": "paragraph",
+          "text": "À **Camlann**, Arthur tue Mordred et reçoit une blessure mortelle. Excalibur est rendue à la Dame du Lac. Guenièvre finit au couvent, Lancelot en ermite. Arthur, dit-on, part vers l'île d'**Avalon**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il devient le [[Rex Quondam Rexque Futurus]], « roi jadis, roi futur » : le roi dormant qui reviendra au pire moment. Camelot meurt en légende, et c'est ainsi qu'elle survit."
+        },
+        {
+          "type": "takeaway",
+          "text": "L'amour de **Lancelot** pour **Guenièvre** détruit Camelot. La quête du **Graal** n'aboutit que pour les purs : Lancelot, meilleur chevalier, reste hors du seuil sacré."
+        }
       ]
     }
   ]

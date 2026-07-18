@@ -16,8 +16,14 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "Beaucoup de gens pensent que l'été arrive quand la Terre est plus **proche** du Soleil, et l'hiver quand elle est plus **loin**. C'est faux. Et on le voit tout de suite : quand c'est l'été en France, c'est l'hiver en Australie." },
-        { "type": "paragraph", "text": "La vraie explication tient à une chose : l'axe de rotation de la Terre est **incliné**." }
+        {
+          "type": "paragraph",
+          "text": "Beaucoup de gens pensent que l'été arrive quand la Terre est plus **proche** du Soleil, et l'hiver quand elle est plus **loin**. C'est faux. Et on le voit tout de suite : quand c'est l'été en France, c'est l'hiver en Australie."
+        },
+        {
+          "type": "paragraph",
+          "text": "La vraie explication tient à une chose : l'axe de rotation de la Terre est **incliné**."
+        }
       ]
     },
     {
@@ -25,8 +31,20 @@
       "title": "La Terre penche",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "La Terre tourne sur elle-même en **24 heures** (c'est le jour et la nuit). Elle tourne aussi autour du Soleil en **un an**. Mais son axe, la ligne imaginaire du pôle Nord au pôle Sud, n'est pas droit par rapport à son orbite. Il penche d'environ **23,5 degrés**." },
-        { "type": "paragraph", "text": "Cette inclinaison reste à peu près dans la même direction toute l'année. Résultat : selon où la Terre se trouve sur son orbite, un hémisphère « regarde » plus le Soleil, l'autre moins." }
+        {
+          "type": "paragraph",
+          "text": "La Terre tourne sur elle-même en **24 heures** (c'est le jour et la nuit). Elle tourne aussi autour du Soleil en **un an**. Mais son axe, la ligne imaginaire du pôle Nord au pôle Sud, n'est pas droit par rapport à son orbite. Il penche d'environ **23,5 degrés**."
+        },
+        {
+          "type": "image",
+          "asset": "earth_summer_winter_seasons_illustration",
+          "ratio": "auto",
+          "caption": "L'inclinaison de l'axe de la Terre explique le cycle des saisons."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cette inclinaison reste à peu près dans la même direction toute l'année. Résultat : selon où la Terre se trouve sur son orbite, un hémisphère « regarde » plus le Soleil, l'autre moins."
+        }
       ]
     },
     {
@@ -34,9 +52,18 @@
       "title": "Plus de lumière, plus de chaleur",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "En été dans l'hémisphère nord, le pôle Nord penche vers le Soleil. Les journées sont plus longues. Les rayons arrivent aussi plus « droit » sur le sol : l'énergie se concentre sur une plus petite surface. Il fait donc plus chaud." },
-        { "type": "funFact", "text": "En janvier, la Terre est même un peu **plus proche** du Soleil qu'en juillet. Et pourtant, c'est l'hiver chez nous. Preuve que la distance n'explique pas les saisons." },
-        { "type": "paragraph", "text": "En hiver, c'est l'inverse : jours courts, rayons plus obliques, énergie étalée. Moins de chaleur reçue." }
+        {
+          "type": "paragraph",
+          "text": "En été dans l'hémisphère nord, le pôle Nord penche vers le Soleil. Les journées sont plus longues. Les rayons arrivent aussi plus « droit » sur le sol : l'énergie se concentre sur une plus petite surface. Il fait donc plus chaud."
+        },
+        {
+          "type": "funFact",
+          "text": "En janvier, la Terre est même un peu **plus proche** du Soleil qu'en juillet. Et pourtant, c'est l'hiver chez nous. Preuve que la distance n'explique pas les saisons."
+        },
+        {
+          "type": "paragraph",
+          "text": "En hiver, c'est l'inverse : jours courts, rayons plus obliques, énergie étalée. Moins de chaleur reçue."
+        }
       ]
     },
     {
@@ -44,8 +71,14 @@
       "title": "Et près de l'équateur ?",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Près de l'équateur, l'inclinaison change peu la durée du jour. Il n'y a pas vraiment quatre saisons comme en Europe, mais plutôt des périodes plus sèches et plus humides." },
-        { "type": "paragraph", "text": "Aux pôles, l'effet est extrême : plusieurs mois de jour continu en été, plusieurs mois de nuit en hiver." }
+        {
+          "type": "paragraph",
+          "text": "Près de l'équateur, l'inclinaison change peu la durée du jour. Il n'y a pas vraiment quatre saisons comme en Europe, mais plutôt des périodes plus sèches et plus humides."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aux pôles, l'effet est extrême : plusieurs mois de jour continu en été, plusieurs mois de nuit en hiver."
+        }
       ]
     },
     {
@@ -53,8 +86,14 @@
       "title": "Une planète sans inclinaison",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Si l'axe de la Terre était parfaitement droit, chaque lieu recevrait à peu près la même quantité de soleil toute l'année. Plus de vrai été, plus de vrai hiver. Le climat, les cultures, les migrations d'animaux : tout serait différent." },
-        { "type": "takeaway", "text": "Les saisons viennent de l'**inclinaison** de l'axe de la Terre (environ 23,5°), pas de la distance au Soleil. Un hémisphère penche vers le Soleil : c'est l'été. L'autre penche à l'opposé : c'est l'hiver." }
+        {
+          "type": "paragraph",
+          "text": "Si l'axe de la Terre était parfaitement droit, chaque lieu recevrait à peu près la même quantité de soleil toute l'année. Plus de vrai été, plus de vrai hiver. Le climat, les cultures, les migrations d'animaux : tout serait différent."
+        },
+        {
+          "type": "takeaway",
+          "text": "Les saisons viennent de l'**inclinaison** de l'axe de la Terre (environ 23,5°), pas de la distance au Soleil. Un hémisphère penche vers le Soleil : c'est l'été. L'autre penche à l'opposé : c'est l'hiver."
+        }
       ]
     }
   ]

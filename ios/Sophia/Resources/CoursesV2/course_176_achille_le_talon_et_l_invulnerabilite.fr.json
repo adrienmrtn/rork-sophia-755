@@ -1,4 +1,4 @@
-﻿{
+{
   "id": "course_176_achille_le_talon_et_l_invulnerabilite",
   "title": "Achille : le talon et l'invulnérabilité",
   "subtitle": "La gloire et le point faible",
@@ -16,8 +16,14 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "**Achille** est le héros central de l'**Iliade**, le poème d'Homère sur la guerre de Troie. Fils de la nymphe **Thétis** et du mortel **Pélée**, il incarne le guerrier parfait : rapide, féroce, obsédé par le [[Kléos]], la gloire qui survit après la mort." },
-        { "type": "paragraph", "text": "Son histoire mêle puissance quasi divine et mortalité certaine. Un détail du corps, le talon, est devenu le symbole universel de la faille cachée au cœur de la force." }
+        {
+          "type": "paragraph",
+          "text": "**Achille** est le héros central de l'**Iliade**, le poème d'Homère sur la guerre de Troie. Fils de la nymphe **Thétis** et du mortel **Pélée**, il incarne le guerrier parfait : rapide, féroce, obsédé par le [[Kléos]], la gloire qui survit après la mort."
+        },
+        {
+          "type": "paragraph",
+          "text": "Son histoire mêle puissance quasi divine et mortalité certaine. Un détail du corps, le talon, est devenu le symbole universel de la faille cachée au cœur de la force."
+        }
       ]
     },
     {
@@ -25,10 +31,24 @@
       "title": "Plongé dans le Styx",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Une prophétie annonce qu'Achille sera plus puissant que son père. **Zeus** et **Poséidon** renoncent donc à Thétis et la marient à Pélée. Pour protéger l'enfant, Thétis le plonge dans le **Styx**, fleuve des Enfers dont l'eau rendrait la peau impénétrable." },
-        { "type": "image", "asset": "achille_le_talon_et_l_invulnerabilite", "ratio": "4:3", "caption": "Thétis plonge Achille dans le Styx, en le tenant par le talon." },
-        { "type": "funFact", "text": "Cette version magique de l'invulnérabilité apparaît tard, chez le poète [[Stace]] (Ier siècle). Chez Homère, Achille n'est pas protégé par un sort : il est simplement le meilleur combattant, et donc toujours mortel." },
-        { "type": "paragraph", "text": "Elle le tient par le **talon**. Cette zone reste sèche, donc vulnérable. Le détail technique devient le cœur du mythe." }
+        {
+          "type": "paragraph",
+          "text": "Une prophétie annonce qu'Achille sera plus puissant que son père. **Zeus** et **Poséidon** renoncent donc à Thétis et la marient à Pélée. Pour protéger l'enfant, Thétis le plonge dans le **Styx**, fleuve des Enfers dont l'eau rendrait la peau impénétrable."
+        },
+        {
+          "type": "image",
+          "asset": "thetis_dipping_achilles_styx_baby_painting",
+          "ratio": "4:3",
+          "caption": "Thétis plonge Achille dans le Styx, en le tenant par le talon."
+        },
+        {
+          "type": "funFact",
+          "text": "Cette version magique de l'invulnérabilité apparaît tard, chez le poète [[Stace]] (Ier siècle). Chez Homère, Achille n'est pas protégé par un sort : il est simplement le meilleur combattant, et donc toujours mortel."
+        },
+        {
+          "type": "paragraph",
+          "text": "Elle le tient par le **talon**. Cette zone reste sèche, donc vulnérable. Le détail technique devient le cœur du mythe."
+        }
       ]
     },
     {
@@ -36,10 +56,24 @@
       "title": "Colère, Patrocle, Hector",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Devant Troie, Achille se retire du combat après un affront d'**Agamemnon**, chef des Grecs, qui lui prend sa captive [[Briséis]]. Sans lui, l'armée achéenne s'effondre. C'est la mort de **Patrocle**, son compagnon le plus cher, qui le ramène au front." },
-        { "type": "image", "asset": "achille_le_talon_et_l_invulnerabilite", "ratio": "4:3", "caption": "Achille face à Hector, duel décisif sous les murs de Troie." },
-        { "type": "paragraph", "text": "Il revêt une armure forgée par [[Héphaïstos]], dieu forgeron, et lance une [[aristie]], une suite d'exploits guerriers hors norme. Il tue **Hector**, prince de Troie, puis traîne son corps derrière son char. Cet [[hubris]], cet excès orgueilleux, choque. Seule la visite nocturne du vieux roi **Priam** ramène Achille à l'humanité : il rend enfin le corps pour les funérailles." },
-        { "type": "funFact", "text": "Achille aurait eu le choix : une vie longue et oubliée, ou une vie courte et célèbre à jamais. Il choisit la gloire. Ce choix définit l'héroïsme tragique grec." }
+        {
+          "type": "paragraph",
+          "text": "Devant Troie, Achille se retire du combat après un affront d'**Agamemnon**, chef des Grecs, qui lui prend sa captive [[Briséis]]. Sans lui, l'armée achéenne s'effondre. C'est la mort de **Patrocle**, son compagnon le plus cher, qui le ramène au front."
+        },
+        {
+          "type": "image",
+          "asset": "achilles_hector_battle_troy_ancient_vase",
+          "ratio": "4:3",
+          "caption": "Achille face à Hector, duel décisif sous les murs de Troie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il revêt une armure forgée par [[Héphaïstos]], dieu forgeron, et lance une [[aristie]], une suite d'exploits guerriers hors norme. Il tue **Hector**, prince de Troie, puis traîne son corps derrière son char. Cet [[hubris]], cet excès orgueilleux, choque. Seule la visite nocturne du vieux roi **Priam** ramène Achille à l'humanité : il rend enfin le corps pour les funérailles."
+        },
+        {
+          "type": "funFact",
+          "text": "Achille aurait eu le choix : une vie longue et oubliée, ou une vie courte et célèbre à jamais. Il choisit la gloire. Ce choix définit l'héroïsme tragique grec."
+        }
       ]
     },
     {
@@ -47,9 +81,20 @@
       "title": "La flèche au talon",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Sous les murs de Troie, **Pâris**, prince archer peu estimé pour sa bravoure, décoche une flèche. Guidé par **Apollon**, le projectile atteint le talon d'Achille. Le plus grand guerrier tombe par le moins vaillant des combattants." },
-        { "type": "image", "asset": "achille_le_talon_et_l_invulnerabilite", "ratio": "4:3", "caption": "La mort d'Achille : la flèche de Pâris atteint le talon." },
-        { "type": "paragraph", "text": "Ses cendres sont mêlées à celles de Patrocle. Même mort, Achille reste un enjeu : on se dispute ses armes. L'ère des héros commence à se fermer." }
+        {
+          "type": "paragraph",
+          "text": "Sous les murs de Troie, **Pâris**, prince archer peu estimé pour sa bravoure, décoche une flèche. Guidé par **Apollon**, le projectile atteint le talon d'Achille. Le plus grand guerrier tombe par le moins vaillant des combattants."
+        },
+        {
+          "type": "image",
+          "asset": "achilles_death_heel_arrow_paris_ancient_art",
+          "ratio": "4:3",
+          "caption": "La mort d'Achille : la flèche de Pâris atteint le talon."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ses cendres sont mêlées à celles de Patrocle. Même mort, Achille reste un enjeu : on se dispute ses armes. L'ère des héros commence à se fermer."
+        }
       ]
     },
     {
@@ -57,9 +102,18 @@
       "title": "Un talon dans notre langue",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "L'expression « **talon d'Achille** » désigne encore aujourd'hui la faille d'un système apparemment solide. En anatomie, le [[tendon d'Achille]] rappelle le même mythe. En politique, en informatique ou en stratégie, l'idée reste la même : rien n'est plus fort que son maillon le plus faible." },
-        { "type": "paragraph", "text": "Au-delà de la métaphore, Achille incarne le dilemme grec : vivre longtemps dans l'ombre, ou briller peu et rester immortel dans les récits. En choisissant le combat, il a gagné l'immortalité littéraire." },
-        { "type": "takeaway", "text": "Presque invulnérable grâce au Styx, Achille meurt à Troie d'une flèche au talon. Le mythe laisse à la postérité le [[tendon d'Achille]] et l'image universelle du point faible fatal." }
+        {
+          "type": "paragraph",
+          "text": "L'expression « **talon d'Achille** » désigne encore aujourd'hui la faille d'un système apparemment solide. En anatomie, le [[tendon d'Achille]] rappelle le même mythe. En politique, en informatique ou en stratégie, l'idée reste la même : rien n'est plus fort que son maillon le plus faible."
+        },
+        {
+          "type": "paragraph",
+          "text": "Au-delà de la métaphore, Achille incarne le dilemme grec : vivre longtemps dans l'ombre, ou briller peu et rester immortel dans les récits. En choisissant le combat, il a gagné l'immortalité littéraire."
+        },
+        {
+          "type": "takeaway",
+          "text": "Presque invulnérable grâce au Styx, Achille meurt à Troie d'une flèche au talon. Le mythe laisse à la postérité le [[tendon d'Achille]] et l'image universelle du point faible fatal."
+        }
       ]
     }
   ]

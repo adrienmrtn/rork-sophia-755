@@ -1,4 +1,4 @@
-﻿{
+{
   "id": "course_185_vishnou_et_shiva_mythologie_hindoue",
   "title": "Vishnou et Shiva (mythologie hindoue)",
   "subtitle": "Mythologie hindoue",
@@ -16,8 +16,14 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "Dans la mythologie hindoue, le temps n'est pas une ligne droite. C'est une suite de cycles. Au sommet se trouve la [[Trimurti]] : trois fonctions pour un même principe. **Brahma** crée. **Vishnou** préserve. **Shiva** détruit pour permettre le renouveau." },
-        { "type": "paragraph", "text": "Ce cours suit Vishnou et Shiva, les deux piliers les plus vivants de cette trinité. Leurs attributs, leurs incarnations et leur symbolisme montrent comment l'hindouisme concilie vie et mort, ordre et transformation." }
+        {
+          "type": "paragraph",
+          "text": "Dans la mythologie hindoue, le temps n'est pas une ligne droite. C'est une suite de cycles. Au sommet se trouve la [[Trimurti]] : trois fonctions pour un même principe. **Brahma** crée. **Vishnou** préserve. **Shiva** détruit pour permettre le renouveau."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce cours suit Vishnou et Shiva, les deux piliers les plus vivants de cette trinité. Leurs attributs, leurs incarnations et leur symbolisme montrent comment l'hindouisme concilie vie et mort, ordre et transformation."
+        }
       ]
     },
     {
@@ -25,10 +31,24 @@
       "title": "La Trimurti, trois visages d'un même principe",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Les dieux multiples sont des faces d'une réalité ultime appelée [[Brahman]]. La Trimurti en donne trois formes utiles. **Brahma** engendre l'univers au début de chaque cycle ; son rôle s'arrête ensuite, ce qui explique qu'il soit peu vénéré aujourd'hui en Inde." },
-        { "type": "image", "asset": "vishnou_et_shiva_mythologie_hindoue", "ratio": "4:3", "caption": "Brahma, Vishnou, Shiva : créer, préserver, transformer." },
-        { "type": "paragraph", "text": "**Vishnou** veille à ce que l'ordre tienne. **Shiva** détruit ce qui est usé ou corrompu. Cette destruction n'est pas un mal absolu : elle fait place nette pour un nouveau cycle. Un « jour de Brahma » dure des milliards d'années. Rien ne se perd vraiment ; tout recommence." },
-        { "type": "funFact", "text": "Un seul « jour de Brahma » (un Kalpa) dure **4,32 milliards** d'années, une durée étrangement proche de l'âge de la Terre estimé par la science moderne." }
+        {
+          "type": "paragraph",
+          "text": "Les dieux multiples sont des faces d'une réalité ultime appelée [[Brahman]]. La Trimurti en donne trois formes utiles. **Brahma** engendre l'univers au début de chaque cycle ; son rôle s'arrête ensuite, ce qui explique qu'il soit peu vénéré aujourd'hui en Inde."
+        },
+        {
+          "type": "image",
+          "asset": "brahma_vishnu_shiva_trimurti_hindu_gods",
+          "ratio": "4:3",
+          "caption": "Brahma, Vishnou, Shiva : créer, préserver, transformer."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Vishnou** veille à ce que l'ordre tienne. **Shiva** détruit ce qui est usé ou corrompu. Cette destruction n'est pas un mal absolu : elle fait place nette pour un nouveau cycle. Un « jour de Brahma » dure des milliards d'années. Rien ne se perd vraiment ; tout recommence."
+        },
+        {
+          "type": "funFact",
+          "text": "Un seul « jour de Brahma » (un Kalpa) dure **4,32 milliards** d'années, une durée étrangement proche de l'âge de la Terre estimé par la science moderne."
+        }
       ]
     },
     {
@@ -36,10 +56,24 @@
       "title": "Vishnou et ses avatars",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "**Vishnou** protège le [[Dharma]], la loi morale et cosmique. Quand le mal menace de l'emporter, il descend sur Terre sous forme d'**avatar**. La tradition du [[Dashavatar]] en compte dix, d'abord animales, puis humaines." },
-        { "type": "image", "asset": "vishnou_et_shiva_mythologie_hindoue", "ratio": "4:3", "caption": "Krishna, avatar de Vishnou : sagesse, amour et guerre juste." },
-        { "type": "paragraph", "text": "Parmi eux, le roi **Rama** incarne la vertu ; **Krishna**, la sagesse et l'amour divin. L'hindouisme a même intégré le **Bouddha** comme neuvième avatar. Le dixième, **Kalki**, viendra à cheval blanc pour clore l'âge sombre du [[Kali Yuga]]." },
-        { "type": "funFact", "text": "Dès les années 1980, les pionniers du numérique empruntent le mot « avatar » pour désigner la représentation d'un utilisateur dans un monde virtuel." }
+        {
+          "type": "paragraph",
+          "text": "**Vishnou** protège le [[Dharma]], la loi morale et cosmique. Quand le mal menace de l'emporter, il descend sur Terre sous forme d'**avatar**. La tradition du [[Dashavatar]] en compte dix, d'abord animales, puis humaines."
+        },
+        {
+          "type": "image",
+          "asset": "krishna_avatar_vishnu_hindu_god_painting",
+          "ratio": "4:3",
+          "caption": "Krishna, avatar de Vishnou : sagesse, amour et guerre juste."
+        },
+        {
+          "type": "paragraph",
+          "text": "Parmi eux, le roi **Rama** incarne la vertu ; **Krishna**, la sagesse et l'amour divin. L'hindouisme a même intégré le **Bouddha** comme neuvième avatar. Le dixième, **Kalki**, viendra à cheval blanc pour clore l'âge sombre du [[Kali Yuga]]."
+        },
+        {
+          "type": "funFact",
+          "text": "Dès les années 1980, les pionniers du numérique empruntent le mot « avatar » pour désigner la représentation d'un utilisateur dans un monde virtuel."
+        }
       ]
     },
     {
@@ -47,10 +81,24 @@
       "title": "Shiva, le danseur cosmique",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "**Shiva** est le dieu des paradoxes : ascète couvert de cendres sur le mont [[Kailash]], et pourtant époux de **Parvati**, père de **Ganesh**. Il incarne l'énergie qui transforme, surtout par la danse." },
-        { "type": "image", "asset": "vishnou_et_shiva_mythologie_hindoue", "ratio": "4:3", "caption": "Nataraja : Shiva danse entre création et destruction." },
-        { "type": "paragraph", "text": "Sous la forme de **Nataraja**, « roi de la danse », il exécute le **Tandava**. Dans une main, le [[damaru]] marque le rythme de la création ; dans l'autre, le feu de la destruction. Un pied écrase l'ignorance ; l'autre, levé, offre la libération. Le changement est la seule constante." },
-        { "type": "funFact", "text": "Au CERN, à Genève, une statue de Nataraja offerte par l'Inde rappelle aux physiciens des particules cette danse : création et destruction perpétuelles de l'univers." }
+        {
+          "type": "paragraph",
+          "text": "**Shiva** est le dieu des paradoxes : ascète couvert de cendres sur le mont [[Kailash]], et pourtant époux de **Parvati**, père de **Ganesh**. Il incarne l'énergie qui transforme, surtout par la danse."
+        },
+        {
+          "type": "image",
+          "asset": "shiva_nataraja_dancing_cosmic_bronze_sculpture",
+          "ratio": "4:3",
+          "caption": "Nataraja : Shiva danse entre création et destruction."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sous la forme de **Nataraja**, « roi de la danse », il exécute le **Tandava**. Dans une main, le [[damaru]] marque le rythme de la création ; dans l'autre, le feu de la destruction. Un pied écrase l'ignorance ; l'autre, levé, offre la libération. Le changement est la seule constante."
+        },
+        {
+          "type": "funFact",
+          "text": "Au CERN, à Genève, une statue de Nataraja offerte par l'Inde rappelle aux physiciens des particules cette danse : création et destruction perpétuelles de l'univers."
+        }
       ]
     },
     {
@@ -58,9 +106,18 @@
       "title": "Deux chemins, un même cycle",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Vishnou structure et guide par ses incarnations. Shiva libère en brisant les illusions et les attachements. Ensemble, ils font du [[Samsara et karma]] non une prison, mais un chemin : renaître, agir, progresser." },
-        { "type": "paragraph", "text": "De cette dualité naissent le **vishnouisme** et le **shivaïsme**, courants qui s'enrichissent plutôt qu'ils ne s'affrontent, notamment autour de [[La Bhagavad-Gita]]. Dans cette vision, chaque fin prépare un départ." },
-        { "type": "takeaway", "text": "La **Trimurti** harmonise l'univers : Brahma crée, Vishnou préserve par ses avatars, Shiva détruit pour renaître. Vision cyclique où karma et samsara font de chaque destruction le prélude d'un nouveau cycle." }
+        {
+          "type": "paragraph",
+          "text": "Vishnou structure et guide par ses incarnations. Shiva libère en brisant les illusions et les attachements. Ensemble, ils font du [[Samsara et karma]] non une prison, mais un chemin : renaître, agir, progresser."
+        },
+        {
+          "type": "paragraph",
+          "text": "De cette dualité naissent le **vishnouisme** et le **shivaïsme**, courants qui s'enrichissent plutôt qu'ils ne s'affrontent, notamment autour de [[La Bhagavad-Gita]]. Dans cette vision, chaque fin prépare un départ."
+        },
+        {
+          "type": "takeaway",
+          "text": "La **Trimurti** harmonise l'univers : Brahma crée, Vishnou préserve par ses avatars, Shiva détruit pour renaître. Vision cyclique où karma et samsara font de chaque destruction le prélude d'un nouveau cycle."
+        }
       ]
     }
   ]

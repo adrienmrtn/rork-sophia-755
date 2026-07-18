@@ -1,4 +1,4 @@
-﻿{
+{
   "id": "course_170_meduse_et_persee",
   "title": "Méduse et Persée",
   "subtitle": "Le regard qui pétrifie",
@@ -16,8 +16,14 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "Le mythe de **Persée** et **Méduse** est l'une des grandes aventures grecques. Ce n'est pas seulement un combat contre un monstre. C'est aussi l'histoire d'une beauté transformée en horreur, et d'un héros qui gagne par la ruse." },
-        { "type": "paragraph", "text": "Méduse, une [[Gorgone]], pétrifie quiconque croise son regard. Persée, pour survivre, accepte de ne voir le danger qu'à travers un miroir." }
+        {
+          "type": "paragraph",
+          "text": "Le mythe de **Persée** et **Méduse** est l'une des grandes aventures grecques. Ce n'est pas seulement un combat contre un monstre. C'est aussi l'histoire d'une beauté transformée en horreur, et d'un héros qui gagne par la ruse."
+        },
+        {
+          "type": "paragraph",
+          "text": "Méduse, une [[Gorgone]], pétrifie quiconque croise son regard. Persée, pour survivre, accepte de ne voir le danger qu'à travers un miroir."
+        }
       ]
     },
     {
@@ -25,10 +31,24 @@
       "title": "De prêtresse à monstre",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Selon les [[Métamorphoses]] d'Ovide, Méduse n'est d'abord pas un monstre. C'est une jeune femme à la chevelure éclatante, prêtresse dans le temple d'**Athéna**, déesse de la sagesse. Sa beauté attire **Poséidon**, dieu des mers, qui la viole dans le sanctuaire." },
-        { "type": "paragraph", "text": "Dans une logique tragique antique, Athéna punit la victime. Les cheveux de Méduse deviennent des serpents. Son regard **pétrifie**. Bannies aux confins du monde avec ses sœurs Sthéno et Euryale, elle vit dans une caverne entourée de statues : les malheureux qui l'ont vue." },
-        { "type": "image", "asset": "meduse_et_persee", "ratio": "4:3", "caption": "Méduse, Gorgone au regard mortel." },
-        { "type": "funFact", "text": "Le sang du côté gauche de Méduse était un poison mortel. Celui du côté droit pouvait ressusciter les morts : un secret qu'Athéna confia plus tard à **Asclépios**, dieu de la médecine." }
+        {
+          "type": "paragraph",
+          "text": "Selon les [[Métamorphoses]] d'Ovide, Méduse n'est d'abord pas un monstre. C'est une jeune femme à la chevelure éclatante, prêtresse dans le temple d'**Athéna**, déesse de la sagesse. Sa beauté attire **Poséidon**, dieu des mers, qui la viole dans le sanctuaire."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dans une logique tragique antique, Athéna punit la victime. Les cheveux de Méduse deviennent des serpents. Son regard **pétrifie**. Bannies aux confins du monde avec ses sœurs Sthéno et Euryale, elle vit dans une caverne entourée de statues : les malheureux qui l'ont vue."
+        },
+        {
+          "type": "image",
+          "asset": "medusa_gorgon_snakes_hair_caravaggio_painting",
+          "ratio": "4:3",
+          "caption": "Méduse, Gorgone au regard mortel."
+        },
+        {
+          "type": "funFact",
+          "text": "Le sang du côté gauche de Méduse était un poison mortel. Celui du côté droit pouvait ressusciter les morts : un secret qu'Athéna confia plus tard à **Asclépios**, dieu de la médecine."
+        }
       ]
     },
     {
@@ -36,10 +56,24 @@
       "title": "Persée s'arme contre l'impossible",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Le roi **Polydectès** veut éloigner Persée pour séduire sa mère **Danaé**. Il lui impose un défi suicidaire : rapporter la tête de Méduse. Persée est fils de **Zeus**. Les dieux l'aident." },
-        { "type": "paragraph", "text": "**Hermès** lui donne des sandales ailées et une [[harpe]], épée courbe ultra tranchante. **Hadès** lui prête le [[Kunée]], casque d'invisibilité. Athéna offre le conseil décisif : son bouclier de bronze poli, à utiliser comme **miroir**." },
-        { "type": "image", "asset": "meduse_et_persee", "ratio": "4:3", "caption": "Persée approche Méduse en ne regardant que son reflet." },
-        { "type": "paragraph", "text": "Persée surprend Méduse endormie. Guidé par le reflet, il tranche sa tête. De l'encolure jaillissent [[Pégase, né du sang de Méduse]] et le géant [[Chrysaor]]. Méduse était encore enceinte de Poséidon." }
+        {
+          "type": "paragraph",
+          "text": "Le roi **Polydectès** veut éloigner Persée pour séduire sa mère **Danaé**. Il lui impose un défi suicidaire : rapporter la tête de Méduse. Persée est fils de **Zeus**. Les dieux l'aident."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Hermès** lui donne des sandales ailées et une [[harpe]], épée courbe ultra tranchante. **Hadès** lui prête le [[Kunée]], casque d'invisibilité. Athéna offre le conseil décisif : son bouclier de bronze poli, à utiliser comme **miroir**."
+        },
+        {
+          "type": "image",
+          "asset": "perseus_mirror_shield_medusa_painting",
+          "ratio": "4:3",
+          "caption": "Persée approche Méduse en ne regardant que son reflet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Persée surprend Méduse endormie. Guidé par le reflet, il tranche sa tête. De l'encolure jaillissent [[Pégase, né du sang de Méduse]] et le géant [[Chrysaor]]. Méduse était encore enceinte de Poséidon."
+        }
       ]
     },
     {
@@ -47,10 +81,24 @@
       "title": "Andromède et le retour",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "La tête garde son pouvoir. Persée la range dans la [[Kibisis]], une besace magique. En survolant l'Éthiopie, il voit la princesse **Andromède** enchaînée à un rocher. Elle est offerte à **Cétos**, monstre marin envoyé par Poséidon pour punir l'orgueil de sa mère Cassiopée." },
-        { "type": "image", "asset": "meduse_et_persee", "ratio": "4:3", "caption": "Persée délivre Andromède grâce à la tête de Méduse." },
-        { "type": "funFact", "text": "Certaines légendes disent que Persée a créé le corail rouge en posant la tête de Méduse sur des algues : le sang aurait durci les végétaux." },
-        { "type": "paragraph", "text": "Persée pétrifie le monstre, épouse Andromède, puis rentre à Sériphos. Face à Polydectès et sa cour, il sort la tête. Ses ennemis deviennent statues. La tyrannie s'arrête." }
+        {
+          "type": "paragraph",
+          "text": "La tête garde son pouvoir. Persée la range dans la [[Kibisis]], une besace magique. En survolant l'Éthiopie, il voit la princesse **Andromède** enchaînée à un rocher. Elle est offerte à **Cétos**, monstre marin envoyé par Poséidon pour punir l'orgueil de sa mère Cassiopée."
+        },
+        {
+          "type": "image",
+          "asset": "perseus_rescue_andromeda_sea_monster_painting",
+          "ratio": "4:3",
+          "caption": "Persée délivre Andromède grâce à la tête de Méduse."
+        },
+        {
+          "type": "funFact",
+          "text": "Certaines légendes disent que Persée a créé le corail rouge en posant la tête de Méduse sur des algues : le sang aurait durci les végétaux."
+        },
+        {
+          "type": "paragraph",
+          "text": "Persée pétrifie le monstre, épouse Andromède, puis rentre à Sériphos. Face à Polydectès et sa cour, il sort la tête. Ses ennemis deviennent statues. La tyrannie s'arrête."
+        }
       ]
     },
     {
@@ -58,9 +106,18 @@
       "title": "Le Gorgoneion, visage protecteur",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Persée remet la tête à Athéna. Elle la fixe sur son **égide**, son bouclier divin. Méduse passe du monstre à abattre à une puissance protectrice. Cette effigie, le [[Gorgoneion]], orne temples, monnaies et boucliers grecs." },
-        { "type": "paragraph", "text": "Sa fonction est [[Apotropaïque]] : détourner le mal par l'horreur même du visage. Au fil des siècles, Méduse devient aussi une figure tragique, puis une icône moderne : traumatisme, pouvoir, fascination. Même la maison Versace a choisi sa tête pour « pétrifier » le regard." },
-        { "type": "takeaway", "text": "**Persée** vainc **Méduse** grâce au reflet d'un bouclier. La tête, remise à **Athéna**, devient le **Gorgoneion**, symbole protecteur de la Grèce antique." }
+        {
+          "type": "paragraph",
+          "text": "Persée remet la tête à Athéna. Elle la fixe sur son **égide**, son bouclier divin. Méduse passe du monstre à abattre à une puissance protectrice. Cette effigie, le [[Gorgoneion]], orne temples, monnaies et boucliers grecs."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sa fonction est [[Apotropaïque]] : détourner le mal par l'horreur même du visage. Au fil des siècles, Méduse devient aussi une figure tragique, puis une icône moderne : traumatisme, pouvoir, fascination. Même la maison Versace a choisi sa tête pour « pétrifier » le regard."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Persée** vainc **Méduse** grâce au reflet d'un bouclier. La tête, remise à **Athéna**, devient le **Gorgoneion**, symbole protecteur de la Grèce antique."
+        }
       ]
     }
   ]

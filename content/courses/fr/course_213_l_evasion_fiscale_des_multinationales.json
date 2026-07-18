@@ -16,8 +16,14 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "Les GAFAM, c'est-à-dire Google, Apple, Facebook (Meta), Amazon et Microsoft, comptent parmi les entreprises les plus riches du monde. Pourtant, en proportion de leurs profits, elles paient souvent bien moins d'impôts qu'une PME classique." },
-        { "type": "paragraph", "text": "Ce n'est pas de la fraude au sens strict : c'est de l'**optimisation fiscale**, c'est-à-dire l'exploitation habile des failles du droit international. Ce mécanisme prive les États de centaines de milliards de dollars chaque année. Voici comment il fonctionne, et comment le monde tente d'y répondre." }
+        {
+          "type": "paragraph",
+          "text": "Les GAFAM, c'est-à-dire Google, Apple, Facebook (Meta), Amazon et Microsoft, comptent parmi les entreprises les plus riches du monde. Pourtant, en proportion de leurs profits, elles paient souvent bien moins d'impôts qu'une PME classique."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce n'est pas de la fraude au sens strict : c'est de l'**optimisation fiscale**, c'est-à-dire l'exploitation habile des failles du droit international. Ce mécanisme prive les États de centaines de milliards de dollars chaque année. Voici comment il fonctionne, et comment le monde tente d'y répondre."
+        }
       ]
     },
     {
@@ -25,9 +31,18 @@
       "title": "Un impôt pensé pour les usines, pas pour le numérique",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Le système fiscal international a été conçu au début du XXe siècle pour une économie industrielle : une entreprise devait posséder des usines ou des bureaux dans un pays, ce qu'on appelle un [[établissement stable]], pour y être imposée." },
-        { "type": "paragraph", "text": "Le numérique a brisé ce lien avec le territoire. Une entreprise peut aujourd'hui dominer un marché, capter les données de millions d'utilisateurs et gagner énormément d'argent dans un pays, sans y posséder le moindre bâtiment. Elle peut alors séparer le lieu où elle gagne son argent du lieu où elle le déclare." },
-        { "type": "funFact", "text": "En 2014, le fisc américain a découvert que Microsoft avait transféré 39 milliards de dollars de bénéfices vers Porto Rico grâce à des droits de propriété intellectuelle, économisant plus de 6,5 milliards de dollars d'impôts." }
+        {
+          "type": "paragraph",
+          "text": "Le système fiscal international a été conçu au début du XXe siècle pour une économie industrielle : une entreprise devait posséder des usines ou des bureaux dans un pays, ce qu'on appelle un [[établissement stable]], pour y être imposée."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le numérique a brisé ce lien avec le territoire. Une entreprise peut aujourd'hui dominer un marché, capter les données de millions d'utilisateurs et gagner énormément d'argent dans un pays, sans y posséder le moindre bâtiment. Elle peut alors séparer le lieu où elle gagne son argent du lieu où elle le déclare."
+        },
+        {
+          "type": "funFact",
+          "text": "En 2014, le fisc américain a découvert que Microsoft avait transféré 39 milliards de dollars de bénéfices vers Porto Rico grâce à des droits de propriété intellectuelle, économisant plus de 6,5 milliards de dollars d'impôts."
+        }
       ]
     },
     {
@@ -35,9 +50,20 @@
       "title": "Un manque à gagner de centaines de milliards",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Selon l'OCDE, ces pratiques coûtent entre 100 et 240 milliards de dollars par an aux budgets publics du monde entier, soit 4 à 10% de tous les impôts sur les sociétés collectés sur la planète." },
-        { "type": "image", "asset": "l_evasion_fiscale_des_multinationales", "ratio": "16:9", "caption": "Les sièges européens des géants du numérique sont souvent installés dans les pays où l'impôt est le plus faible." },
-        { "type": "paragraph", "text": "Ce manque à gagner force les États à choisir entre augmenter les impôts des ménages et des PME, ou réduire les dépenses publiques comme la santé ou l'éducation. Une entreprise locale paie en moyenne un taux d'imposition bien plus élevé qu'une multinationale, ce qui crée une concurrence injuste." }
+        {
+          "type": "paragraph",
+          "text": "Selon l'OCDE, ces pratiques coûtent entre 100 et 240 milliards de dollars par an aux budgets publics du monde entier, soit 4 à 10% de tous les impôts sur les sociétés collectés sur la planète."
+        },
+        {
+          "type": "image",
+          "asset": "multinational_corporate_tax_avoidance_structure",
+          "ratio": "16:9",
+          "caption": "Les sièges européens des géants du numérique sont souvent installés dans les pays où l'impôt est le plus faible."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce manque à gagner force les États à choisir entre augmenter les impôts des ménages et des PME, ou réduire les dépenses publiques comme la santé ou l'éducation. Une entreprise locale paie en moyenne un taux d'imposition bien plus élevé qu'une multinationale, ce qui crée une concurrence injuste."
+        }
       ]
     },
     {
@@ -45,8 +71,14 @@
       "title": "La riposte : un impôt minimum mondial",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "En 2021, sous l'égide de l'OCDE et du G20, un accord historique a instauré un [[impôt minimum mondial de 15%]]. Il vise les entreprises dont le chiffre d'affaires dépasse 750 millions d'euros : si elles ne paient que 5% d'impôts dans un pays, leur pays d'origine peut désormais réclamer les 10% manquants." },
-        { "type": "paragraph", "text": "Certains pays, comme la France, ont aussi créé une taxe nationale ciblant directement le chiffre d'affaires des géants du numérique. En parallèle, les multinationales doivent désormais publier, pays par pays, où se trouvent leurs employés, leurs bénéfices et leurs impôts : une transparence qui permet de repérer les décalages les plus flagrants." }
+        {
+          "type": "paragraph",
+          "text": "En 2021, sous l'égide de l'OCDE et du G20, un accord historique a instauré un [[impôt minimum mondial de 15%]]. Il vise les entreprises dont le chiffre d'affaires dépasse 750 millions d'euros : si elles ne paient que 5% d'impôts dans un pays, leur pays d'origine peut désormais réclamer les 10% manquants."
+        },
+        {
+          "type": "paragraph",
+          "text": "Certains pays, comme la France, ont aussi créé une taxe nationale ciblant directement le chiffre d'affaires des géants du numérique. En parallèle, les multinationales doivent désormais publier, pays par pays, où se trouvent leurs employés, leurs bénéfices et leurs impôts : une transparence qui permet de repérer les décalages les plus flagrants."
+        }
       ]
     },
     {
@@ -54,9 +86,18 @@
       "title": "L'Irlande, capitale européenne de l'optimisation",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "L'Irlande, avec son taux d'imposition officiel de 12,5% et ses accords secrets appelés [[tax rulings]], est devenue le pivot européen de l'optimisation fiscale. Grâce à une structure complexe, Apple a payé un taux d'impôt effectif proche de 0,005% en 2014." },
-        { "type": "paragraph", "text": "La Commission européenne a réclamé à l'Irlande 13 milliards d'euros d'impôts impayés par Apple, mais le pays a longtemps refusé de les percevoir : il craint que des règles trop strictes ne fassent fuir les sièges sociaux vers d'autres régions du monde. Les défenseurs de la justice fiscale rappellent aussi que ce taux de 15% reste plus bas que la moyenne des pays développés, et que les pays les plus pauvres, souvent les plus touchés par l'évasion fiscale, n'en récupéreront qu'une infime part." },
-        { "type": "takeaway", "text": "Les GAFAM ont longtemps profité de failles du droit international pour payer des impôts dérisoires, coûtant jusqu'à 240 milliards de dollars par an aux budgets publics. Depuis 2021, un impôt minimum mondial de 15% tente de corriger ce déséquilibre, mais la bataille pour une fiscalité plus juste continue." }
+        {
+          "type": "paragraph",
+          "text": "L'Irlande, avec son taux d'imposition officiel de 12,5% et ses accords secrets appelés [[tax rulings]], est devenue le pivot européen de l'optimisation fiscale. Grâce à une structure complexe, Apple a payé un taux d'impôt effectif proche de 0,005% en 2014."
+        },
+        {
+          "type": "paragraph",
+          "text": "La Commission européenne a réclamé à l'Irlande 13 milliards d'euros d'impôts impayés par Apple, mais le pays a longtemps refusé de les percevoir : il craint que des règles trop strictes ne fassent fuir les sièges sociaux vers d'autres régions du monde. Les défenseurs de la justice fiscale rappellent aussi que ce taux de 15% reste plus bas que la moyenne des pays développés, et que les pays les plus pauvres, souvent les plus touchés par l'évasion fiscale, n'en récupéreront qu'une infime part."
+        },
+        {
+          "type": "takeaway",
+          "text": "Les GAFAM ont longtemps profité de failles du droit international pour payer des impôts dérisoires, coûtant jusqu'à 240 milliards de dollars par an aux budgets publics. Depuis 2021, un impôt minimum mondial de 15% tente de corriger ce déséquilibre, mais la bataille pour une fiscalité plus juste continue."
+        }
       ]
     }
   ]

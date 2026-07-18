@@ -1,4 +1,4 @@
-﻿{
+{
   "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum",
   "title": "Les dieux aztèques et les sacrifices humains",
   "subtitle": "Sang pour le soleil",
@@ -16,8 +16,14 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "Les **Aztèques**, ou Mexica, croient que l'univers est fragile. Les dieux ont besoin de sang pour que le soleil continue sa course. Sans offrandes, le chaos reviendrait." },
-        { "type": "paragraph", "text": "Ce qui a horrifié les Espagnols repose sur une idée claire : la vie des dieux et celle des hommes sont liées. Voici comment cette cosmologie fonctionne." }
+        {
+          "type": "paragraph",
+          "text": "Les **Aztèques**, ou Mexica, croient que l'univers est fragile. Les dieux ont besoin de sang pour que le soleil continue sa course. Sans offrandes, le chaos reviendrait."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce qui a horrifié les Espagnols repose sur une idée claire : la vie des dieux et celle des hommes sont liées. Voici comment cette cosmologie fonctionne."
+        }
       ]
     },
     {
@@ -25,10 +31,24 @@
       "title": "Les Cinq Soleils : un monde déjà mort quatre fois",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Selon le mythe des [[Cinq Soleils]], quatre ères ont déjà disparu dans des catastrophes. Nous vivons le cinquième soleil, [[Nahui Ollin]] (« 4-Mouvement »), promis à finir par des tremblements de terre." },
-        { "type": "image", "asset": "les_dieux_azteques_et_les_sacrifices_humains", "ratio": "4:3", "caption": "Pierre du Soleil : le temps aztèque tourne en ères successives." },
-        { "type": "paragraph", "text": "À **Teotihuacán**, cité sacrée du plateau central, les dieux se jettent dans un brasier pour devenir soleil et lune. Mais le soleil reste immobile. Les autres dieux offrent alors leur propre sang pour le mettre en marche. Les hommes héritent de cette dette." },
-        { "type": "funFact", "text": "Pour les Aztèques, le sacrifice n'est pas une cruauté gratuite : c'est le remboursement d'une dette divine, la [[Cosmologie des Cinq Soleils et dette cosmique]]." }
+        {
+          "type": "paragraph",
+          "text": "Selon le mythe des [[Cinq Soleils]], quatre ères ont déjà disparu dans des catastrophes. Nous vivons le cinquième soleil, [[Nahui Ollin]] (« 4-Mouvement »), promis à finir par des tremblements de terre."
+        },
+        {
+          "type": "image",
+          "asset": "aztec_five_suns_teotihuacan_pyramid_sun_stone",
+          "ratio": "4:3",
+          "caption": "Pierre du Soleil : le temps aztèque tourne en ères successives."
+        },
+        {
+          "type": "paragraph",
+          "text": "À **Teotihuacán**, cité sacrée du plateau central, les dieux se jettent dans un brasier pour devenir soleil et lune. Mais le soleil reste immobile. Les autres dieux offrent alors leur propre sang pour le mettre en marche. Les hommes héritent de cette dette."
+        },
+        {
+          "type": "funFact",
+          "text": "Pour les Aztèques, le sacrifice n'est pas une cruauté gratuite : c'est le remboursement d'une dette divine, la [[Cosmologie des Cinq Soleils et dette cosmique]]."
+        }
       ]
     },
     {
@@ -36,10 +56,24 @@
       "title": "Un panthéon de dualités",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Le dieu central est [[Huitzilopochtli]], dieu de la guerre et du soleil de midi. Chaque nuit, il combat les ténèbres pour renaître au matin. À ses côtés, [[Tlaloc]] donne la pluie, donc les récoltes, ou la famine." },
-        { "type": "image", "asset": "les_dieux_azteques_et_les_sacrifices_humains", "ratio": "4:3", "caption": "Huitzilopochtli, soleil guerrier qui exige d'être nourri." },
-        { "type": "paragraph", "text": "[[Quetzalcoatl]], le Serpent à plumes, incarne le savoir et la civilisation. Son rival [[Tezcatlipoca]], le Miroir fumant, règne sur la nuit, le destin et la magie. La terre elle-même a un visage terrible : [[Coatlicue]], déesse mère dévorante." },
-        { "type": "funFact", "text": "Le sang précieux offert aux dieux s'appelle [[chalchihuatl]], « l'eau précieuse ». Le cœur extrait est pensé comme une étincelle solaire rendue au ciel." }
+        {
+          "type": "paragraph",
+          "text": "Le dieu central est [[Huitzilopochtli]], dieu de la guerre et du soleil de midi. Chaque nuit, il combat les ténèbres pour renaître au matin. À ses côtés, [[Tlaloc]] donne la pluie, donc les récoltes, ou la famine."
+        },
+        {
+          "type": "image",
+          "asset": "huitzilopochtli_aztec_sun_god_codex",
+          "ratio": "4:3",
+          "caption": "Huitzilopochtli, soleil guerrier qui exige d'être nourri."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Quetzalcoatl]], le Serpent à plumes, incarne le savoir et la civilisation. Son rival [[Tezcatlipoca]], le Miroir fumant, règne sur la nuit, le destin et la magie. La terre elle-même a un visage terrible : [[Coatlicue]], déesse mère dévorante."
+        },
+        {
+          "type": "funFact",
+          "text": "Le sang précieux offert aux dieux s'appelle [[chalchihuatl]], « l'eau précieuse ». Le cœur extrait est pensé comme une étincelle solaire rendue au ciel."
+        }
       ]
     },
     {
@@ -47,14 +81,40 @@
       "title": "Les guerres fleuries",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Pour obtenir des victimes, les Aztèques organisent les [[Xochiyaoyotl]], les « guerres fleuries » : des combats rituels dont le but n'est pas de tuer, mais de capturer des guerriers vivants dignes d'être offerts." },
-        { "type": "image", "asset": "les_dieux_azteques_et_les_sacrifices_humains", "ratio": "4:3", "caption": "Sacrifice au sommet du temple : le cœur présenté au soleil." },
-        { "type": "paragraph", "text": "Au sommet du **Templo Mayor** de Tenochtitlán, capitale lacustre, un prêtre extrait le cœur avec un couteau d'**obsidienne**, pierre volcanique tranchante. Le geste est public, solennel, pensé comme un service rendu au soleil." },
-        { "type": "timeline", "events": [
-          { "date": "Mythe", "title": "Sacrifice des dieux", "detail": "Le soleil reçoit le sang divin pour avancer." },
-          { "date": "Empire", "title": "Guerres fleuries", "detail": "Capturer des guerriers pour les offrandes." },
-          { "date": "1519", "title": "Choc espagnol", "detail": "Cortés arrive ; le système s'effondre." }
-        ] }
+        {
+          "type": "paragraph",
+          "text": "Pour obtenir des victimes, les Aztèques organisent les [[Xochiyaoyotl]], les « guerres fleuries » : des combats rituels dont le but n'est pas de tuer, mais de capturer des guerriers vivants dignes d'être offerts."
+        },
+        {
+          "type": "image",
+          "asset": "aztec_sacrifice_pyramid_templo_mayor_codex",
+          "ratio": "4:3",
+          "caption": "Sacrifice au sommet du temple : le cœur présenté au soleil."
+        },
+        {
+          "type": "paragraph",
+          "text": "Au sommet du **Templo Mayor** de Tenochtitlán, capitale lacustre, un prêtre extrait le cœur avec un couteau d'**obsidienne**, pierre volcanique tranchante. Le geste est public, solennel, pensé comme un service rendu au soleil."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Mythe",
+              "title": "Sacrifice des dieux",
+              "detail": "Le soleil reçoit le sang divin pour avancer."
+            },
+            {
+              "date": "Empire",
+              "title": "Guerres fleuries",
+              "detail": "Capturer des guerriers pour les offrandes."
+            },
+            {
+              "date": "1519",
+              "title": "Choc espagnol",
+              "detail": "Cortés arrive ; le système s'effondre."
+            }
+          ]
+        }
       ]
     },
     {
@@ -62,9 +122,18 @@
       "title": "Fin d'un monde, traces durables",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Les chroniques espagnoles gonflent parfois les chiffres pour justifier la conquête. Mais le système sacrificiel est bien réel. En **1519**, l'arrivée d'**Hernán Cortés** précipite la fin de cet univers rituel." },
-        { "type": "paragraph", "text": "Pourtant, des figures aztèques survivent dans le syncrétisme : la Vierge de Guadalupe apparaît sur un site jadis lié à une déesse mère. Comprendre ces sacrifices, c'est comprendre une culture qui place la survie du cosmos au-dessus de l'individu." },
-        { "type": "takeaway", "text": "Chez les Aztèques, le sang humain nourrit le soleil. Les dieux ont déjà payé de leur vie : les hommes remboursent cette dette par le sacrifice, notamment via les **guerres fleuries**." }
+        {
+          "type": "paragraph",
+          "text": "Les chroniques espagnoles gonflent parfois les chiffres pour justifier la conquête. Mais le système sacrificiel est bien réel. En **1519**, l'arrivée d'**Hernán Cortés** précipite la fin de cet univers rituel."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pourtant, des figures aztèques survivent dans le syncrétisme : la Vierge de Guadalupe apparaît sur un site jadis lié à une déesse mère. Comprendre ces sacrifices, c'est comprendre une culture qui place la survie du cosmos au-dessus de l'individu."
+        },
+        {
+          "type": "takeaway",
+          "text": "Chez les Aztèques, le sang humain nourrit le soleil. Les dieux ont déjà payé de leur vie : les hommes remboursent cette dette par le sacrifice, notamment via les **guerres fleuries**."
+        }
       ]
     }
   ]

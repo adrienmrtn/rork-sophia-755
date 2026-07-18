@@ -1,4 +1,4 @@
-﻿{
+{
   "id": "course_169_tantale_et_son_supplice",
   "title": "Tantale et son supplice",
   "subtitle": "Tout près, jamais assez",
@@ -16,8 +16,14 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "**Tantale** incarne la démesure punie. Invité à la table des dieux, ce roi privilégié ose les défier. Son châtiment est raffiné : avoir sous les yeux ce qu'il désire, sans jamais pouvoir le saisir." },
-        { "type": "paragraph", "text": "Le mythe a traversé la langue, la psychologie et même la chimie. « Subir le supplice de Tantale », c'est encore aujourd'hui le nom de la frustration absolue." }
+        {
+          "type": "paragraph",
+          "text": "**Tantale** incarne la démesure punie. Invité à la table des dieux, ce roi privilégié ose les défier. Son châtiment est raffiné : avoir sous les yeux ce qu'il désire, sans jamais pouvoir le saisir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le mythe a traversé la langue, la psychologie et même la chimie. « Subir le supplice de Tantale », c'est encore aujourd'hui le nom de la frustration absolue."
+        }
       ]
     },
     {
@@ -25,10 +31,24 @@
       "title": "Un roi trop près des dieux",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Tantale est roi de Lydie, en Asie Mineure. Fils de **Zeus** et d'une nymphe, il partage parfois le nectar et l'ambroisie sur l'Olympe. Cette familiarité le rend arrogant. Il vole d'abord des mets divins pour les offrir à d'autres mortels." },
-        { "type": "paragraph", "text": "Puis vient l'horreur. Pour tester si les dieux voient vraiment tout, il invite le panthéon à un banquet. Il tue son propre fils, **Pélops**, le découpe et le sert comme plat. Les dieux reculent. Seule **Déméter**, déesse des moissons, distraite par le chagrin de sa fille [[Perséphone]], mord un morceau d'épaule." },
-        { "type": "image", "asset": "tantale_et_son_supplice", "ratio": "4:3", "caption": "Le banquet maudit de Tantale." },
-        { "type": "funFact", "text": "Zeus ressuscite Pélops. L'épaule mangée est remplacée par une pièce d'[[ivoire]]. La lignée de Tantale, les **Atrides**, restera maudite : Agamemnon et Oreste en hériteront." }
+        {
+          "type": "paragraph",
+          "text": "Tantale est roi de Lydie, en Asie Mineure. Fils de **Zeus** et d'une nymphe, il partage parfois le nectar et l'ambroisie sur l'Olympe. Cette familiarité le rend arrogant. Il vole d'abord des mets divins pour les offrir à d'autres mortels."
+        },
+        {
+          "type": "paragraph",
+          "text": "Puis vient l'horreur. Pour tester si les dieux voient vraiment tout, il invite le panthéon à un banquet. Il tue son propre fils, **Pélops**, le découpe et le sert comme plat. Les dieux reculent. Seule **Déméter**, déesse des moissons, distraite par le chagrin de sa fille [[Perséphone]], mord un morceau d'épaule."
+        },
+        {
+          "type": "image",
+          "asset": "tantalus_feast_gods_punishment_myth",
+          "ratio": "4:3",
+          "caption": "Le banquet maudit de Tantale."
+        },
+        {
+          "type": "funFact",
+          "text": "Zeus ressuscite Pélops. L'épaule mangée est remplacée par une pièce d'[[ivoire]]. La lignée de Tantale, les **Atrides**, restera maudite : Agamemnon et Oreste en hériteront."
+        }
       ]
     },
     {
@@ -36,10 +56,24 @@
       "title": "L'eau qui fuit, les fruits qui s'envolent",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Dans le [[Tartare]], prison profonde sous le monde, le châtiment de Tantale renverse son crime. Il a insulté le banquet sacré : il ne se nourrira plus jamais. Plongé jusqu'au menton dans un lac, il meurt de soif." },
-        { "type": "image", "asset": "tantale_et_son_supplice", "ratio": "4:3", "caption": "Tantale, entouré d'eau et de fruits inaccessibles." },
-        { "type": "paragraph", "text": "Dès qu'il incline la tête, l'eau s'enfonce dans le sol. Au-dessus, des branches ploient sous figues, poires, grenades. Dès qu'il tend la main, un vent les éloigne. Ce n'est pas l'absence qui torture : c'est la proximité trompeuse." },
-        { "type": "funFact", "text": "Une variante ajoute un troisième danger : un énorme rocher suspendu au-dessus de sa tête, prêt à s'écrouler. Pas de repos, même sans faim." }
+        {
+          "type": "paragraph",
+          "text": "Dans le [[Tartare]], prison profonde sous le monde, le châtiment de Tantale renverse son crime. Il a insulté le banquet sacré : il ne se nourrira plus jamais. Plongé jusqu'au menton dans un lac, il meurt de soif."
+        },
+        {
+          "type": "image",
+          "asset": "tantalus_lake_fruits_unreachable_painting",
+          "ratio": "4:3",
+          "caption": "Tantale, entouré d'eau et de fruits inaccessibles."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dès qu'il incline la tête, l'eau s'enfonce dans le sol. Au-dessus, des branches ploient sous figues, poires, grenades. Dès qu'il tend la main, un vent les éloigne. Ce n'est pas l'absence qui torture : c'est la proximité trompeuse."
+        },
+        {
+          "type": "funFact",
+          "text": "Une variante ajoute un troisième danger : un énorme rocher suspendu au-dessus de sa tête, prêt à s'écrouler. Pas de repos, même sans faim."
+        }
       ]
     },
     {
@@ -47,10 +81,24 @@
       "title": "Du mythe au tableau périodique",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "En **1802**, le chimiste suédois **Anders Ekeberg** découvre un métal. Il le nomme **tantale** (numéro atomique **73**) : immergé dans les acides, ce métal n'en absorbe presque rien. Comme le roi assoiffé au milieu du lac." },
-        { "type": "image", "asset": "tantale_et_son_supplice", "ratio": "4:3", "caption": "Le tantale, élément 73, nommé d'après le mythe." },
-        { "type": "paragraph", "text": "Aujourd'hui, l'[[élément chimique tantale (Ta, 73)]] est stratégique : condensateurs de smartphones, prothèses résistantes à la corrosion. En anglais, *to tantalize* signifie exciter le désir en gardant l'objet hors de portée. En français, « le supplice de Tantale » reste l'expression de référence." },
-        { "type": "funFact", "text": "[[Le «supplice de Tantale» comme archétype]] désigne toute situation où l'objectif semble à portée de main, puis s'éloigne au dernier moment." }
+        {
+          "type": "paragraph",
+          "text": "En **1802**, le chimiste suédois **Anders Ekeberg** découvre un métal. Il le nomme **tantale** (numéro atomique **73**) : immergé dans les acides, ce métal n'en absorbe presque rien. Comme le roi assoiffé au milieu du lac."
+        },
+        {
+          "type": "image",
+          "asset": "tantalum_element_periodic_table_73",
+          "ratio": "4:3",
+          "caption": "Le tantale, élément 73, nommé d'après le mythe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aujourd'hui, l'[[élément chimique tantale (Ta, 73)]] est stratégique : condensateurs de smartphones, prothèses résistantes à la corrosion. En anglais, *to tantalize* signifie exciter le désir en gardant l'objet hors de portée. En français, « le supplice de Tantale » reste l'expression de référence."
+        },
+        {
+          "type": "funFact",
+          "text": "[[Le «supplice de Tantale» comme archétype]] désigne toute situation où l'objectif semble à portée de main, puis s'éloigne au dernier moment."
+        }
       ]
     },
     {
@@ -58,9 +106,18 @@
       "title": "La frustration devenue symbole",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "En psychologie, Tantale illustre un désir qui ne s'éteint jamais : plus l'objet est proche, plus l'échec brûle. En politique, l'image sert pour les promesses qui s'éloignent dès qu'on s'en approche." },
-        { "type": "paragraph", "text": "Son crime n'était pas seulement un meurtre. C'était une tentative de tromper les dieux. En retour, ce sont ses propres sens qui le trompent pour l'éternité : voir l'eau, voir les fruits, et ne rien avoir." },
-        { "type": "takeaway", "text": "**Tantale**, roi de Lydie, sert son fils **Pélops** aux dieux. Condamné au Tartare, il a eau et fruits sous les yeux sans jamais les atteindre. Son nom vit encore dans la langue et dans l'élément **73**." }
+        {
+          "type": "paragraph",
+          "text": "En psychologie, Tantale illustre un désir qui ne s'éteint jamais : plus l'objet est proche, plus l'échec brûle. En politique, l'image sert pour les promesses qui s'éloignent dès qu'on s'en approche."
+        },
+        {
+          "type": "paragraph",
+          "text": "Son crime n'était pas seulement un meurtre. C'était une tentative de tromper les dieux. En retour, ce sont ses propres sens qui le trompent pour l'éternité : voir l'eau, voir les fruits, et ne rien avoir."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Tantale**, roi de Lydie, sert son fils **Pélops** aux dieux. Condamné au Tartare, il a eau et fruits sous les yeux sans jamais les atteindre. Son nom vit encore dans la langue et dans l'élément **73**."
+        }
       ]
     }
   ]

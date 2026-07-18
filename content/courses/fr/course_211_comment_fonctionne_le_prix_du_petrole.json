@@ -16,8 +16,14 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "Le pétrole est parfois appelé le « sang de l'économie ». Son prix influence l'inflation, le prix de l'essence, et même la stabilité de certains pays. Pourtant, personne ne fixe ce prix d'un coup de tampon." },
-        { "type": "paragraph", "text": "Il naît d'une rencontre entre trois forces : les pays qui extraient le pétrole, les marchés financiers qui l'échangent avant même qu'il ne sorte du sol, et les crises qui font paniquer tout le monde. Direction les déserts d'Arabie, les plaines du Texas, et les écrans de Chicago." }
+        {
+          "type": "paragraph",
+          "text": "Le pétrole est parfois appelé le « sang de l'économie ». Son prix influence l'inflation, le prix de l'essence, et même la stabilité de certains pays. Pourtant, personne ne fixe ce prix d'un coup de tampon."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il naît d'une rencontre entre trois forces : les pays qui extraient le pétrole, les marchés financiers qui l'échangent avant même qu'il ne sorte du sol, et les crises qui font paniquer tout le monde. Direction les déserts d'Arabie, les plaines du Texas, et les écrans de Chicago."
+        }
       ]
     },
     {
@@ -25,10 +31,22 @@
       "title": "OPEP contre schiste américain : la bataille de l'offre",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Le marché du pétrole a une particularité : à court terme, la demande ne baisse presque pas quand les prix montent. Les voitures, les usines et les avions ne peuvent pas changer d'énergie du jour au lendemain. Les économistes appellent cela l'**inélasticité** de la demande." },
-        { "type": "paragraph", "text": "Depuis 1960, un groupe de pays producteurs s'est organisé pour peser sur ce marché : l'[[OPEP]]. En se mettant d'accord sur des quotas de production, ses membres cherchent à maintenir des prix élevés. Depuis 2016, la Russie s'est jointe à l'alliance, formant l'OPEP+. Ensemble, ces pays contrôlent environ 40% du pétrole mondial." },
-        { "type": "funFact", "text": "Un seul baril de pétrole, 159 litres, contient autant d'énergie que le travail manuel d'une personne pendant environ un an." },
-        { "type": "paragraph", "text": "Mais ce pouvoir a été bousculé. Grâce à une technique appelée fracturation hydraulique, les États-Unis sont devenus en dix ans le premier producteur mondial de pétrole, dépassant l'Arabie saoudite. Cette nouvelle offre, plus rapide à ajuster, a rendu le marché plus concurrentiel et plus difficile à contrôler pour l'OPEP+." }
+        {
+          "type": "paragraph",
+          "text": "Le marché du pétrole a une particularité : à court terme, la demande ne baisse presque pas quand les prix montent. Les voitures, les usines et les avions ne peuvent pas changer d'énergie du jour au lendemain. Les économistes appellent cela l'**inélasticité** de la demande."
+        },
+        {
+          "type": "paragraph",
+          "text": "Depuis 1960, un groupe de pays producteurs s'est organisé pour peser sur ce marché : l'[[OPEP]]. En se mettant d'accord sur des quotas de production, ses membres cherchent à maintenir des prix élevés. Depuis 2016, la Russie s'est jointe à l'alliance, formant l'OPEP+. Ensemble, ces pays contrôlent environ 40% du pétrole mondial."
+        },
+        {
+          "type": "funFact",
+          "text": "Un seul baril de pétrole, 159 litres, contient autant d'énergie que le travail manuel d'une personne pendant environ un an."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mais ce pouvoir a été bousculé. Grâce à une technique appelée fracturation hydraulique, les États-Unis sont devenus en dix ans le premier producteur mondial de pétrole, dépassant l'Arabie saoudite. Cette nouvelle offre, plus rapide à ajuster, a rendu le marché plus concurrentiel et plus difficile à contrôler pour l'OPEP+."
+        }
       ]
     },
     {
@@ -36,9 +54,20 @@
       "title": "Le pétrole « papier » : quand la finance s'en mêle",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Au-delà des barils réels livrés par bateau ou pipeline, le pétrole s'échange aussi sur les marchés financiers. La plupart des transactions passent par un marché à terme : on y achète aujourd'hui un baril qui ne sera livré que dans un, trois ou six mois." },
-        { "type": "image", "asset": "comment_fonctionne_le_prix_du_petrole", "ratio": "16:9", "caption": "Le pétrole s'échange sur les marchés financiers bien avant d'être livré." },
-        { "type": "paragraph", "text": "Des banques et des fonds spéculatifs achètent et vendent ces contrats sans jamais vouloir toucher le moindre baril : ils parient simplement sur la hausse ou la baisse des prix. Cela apporte de l'argent au marché, mais rend aussi les prix plus nerveux. Deux prix servent de référence dans le monde : le [[Brent]], pétrole de la mer du Nord, et le WTI, pétrole du Texas. L'écart entre les deux reflète des différences de qualité et de transport." }
+        {
+          "type": "paragraph",
+          "text": "Au-delà des barils réels livrés par bateau ou pipeline, le pétrole s'échange aussi sur les marchés financiers. La plupart des transactions passent par un marché à terme : on y achète aujourd'hui un baril qui ne sera livré que dans un, trois ou six mois."
+        },
+        {
+          "type": "image",
+          "asset": "oil_futures_trading_floor_markets",
+          "ratio": "16:9",
+          "caption": "Le pétrole s'échange sur les marchés financiers bien avant d'être livré."
+        },
+        {
+          "type": "paragraph",
+          "text": "Des banques et des fonds spéculatifs achètent et vendent ces contrats sans jamais vouloir toucher le moindre baril : ils parient simplement sur la hausse ou la baisse des prix. Cela apporte de l'argent au marché, mais rend aussi les prix plus nerveux. Deux prix servent de référence dans le monde : le [[Brent]], pétrole de la mer du Nord, et le WTI, pétrole du Texas. L'écart entre les deux reflète des différences de qualité et de transport."
+        }
       ]
     },
     {
@@ -46,10 +75,22 @@
       "title": "Des prix qui s'effondrent... ou explosent",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Le marché du pétrole fonctionne par cycles brutaux. Quand les prix montent longtemps, les producteurs investissent dans des gisements coûteux, ce qui crée à terme un trop-plein d'offre. Quand les prix restent bas, l'inverse se produit : on explore moins, ce qui prépare la prochaine pénurie." },
-        { "type": "paragraph", "text": "La crise du COVID-19 l'a montré de façon spectaculaire. En avril 2020, l'économie mondiale s'est arrêtée d'un coup : plus personne ne prenait l'avion ni la voiture, mais les puits continuaient de produire. Les cuves de stockage se sont remplies jusqu'au bord. Le prix du WTI est alors tombé à moins 37 dollars : des vendeurs payaient leurs acheteurs pour qu'ils débarrassent leurs stocks." },
-        { "type": "paragraph", "text": "À l'inverse, en 2022, l'invasion de l'Ukraine par la Russie a fait craindre une pénurie : la Russie étant le deuxième exportateur mondial, le Brent a dépassé 130 dollars en quelques semaines. Le pétrole reste donc un baromètre nerveux des tensions du monde." },
-        { "type": "funFact", "text": "Il faut environ 7 litres de pétrole pour fabriquer un seul smartphone, entre l'extraction des matériaux, les pièces en plastique et le transport." }
+        {
+          "type": "paragraph",
+          "text": "Le marché du pétrole fonctionne par cycles brutaux. Quand les prix montent longtemps, les producteurs investissent dans des gisements coûteux, ce qui crée à terme un trop-plein d'offre. Quand les prix restent bas, l'inverse se produit : on explore moins, ce qui prépare la prochaine pénurie."
+        },
+        {
+          "type": "paragraph",
+          "text": "La crise du COVID-19 l'a montré de façon spectaculaire. En avril 2020, l'économie mondiale s'est arrêtée d'un coup : plus personne ne prenait l'avion ni la voiture, mais les puits continuaient de produire. Les cuves de stockage se sont remplies jusqu'au bord. Le prix du WTI est alors tombé à moins 37 dollars : des vendeurs payaient leurs acheteurs pour qu'ils débarrassent leurs stocks."
+        },
+        {
+          "type": "paragraph",
+          "text": "À l'inverse, en 2022, l'invasion de l'Ukraine par la Russie a fait craindre une pénurie : la Russie étant le deuxième exportateur mondial, le Brent a dépassé 130 dollars en quelques semaines. Le pétrole reste donc un baromètre nerveux des tensions du monde."
+        },
+        {
+          "type": "funFact",
+          "text": "Il faut environ 7 litres de pétrole pour fabriquer un seul smartphone, entre l'extraction des matériaux, les pièces en plastique et le transport."
+        }
       ]
     },
     {
@@ -57,9 +98,18 @@
       "title": "Le pétrole a-t-il un avenir ?",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "À long terme, le pétrole affronte un défi nouveau : la transition vers les énergies propres. Si les voitures électriques réduisent la demande mondiale, les pays producteurs pourraient se lancer dans une guerre des prix pour vendre leurs réserves avant qu'elles ne perdent de leur valeur." },
-        { "type": "paragraph", "text": "Un paradoxe menace pourtant le marché : comme les investisseurs délaissent les nouveaux projets pétroliers pour des raisons climatiques, l'offre pourrait baisser plus vite que la demande, provoquant de nouvelles flambées de prix. Le pétrole ne disparaîtra pas d'un coup : il reste indispensable aux plastiques, aux engrais, et au transport lourd comme l'aviation." },
-        { "type": "takeaway", "text": "Le prix du pétrole résulte d'un bras de fer entre l'OPEP+, la production américaine de schiste et les marchés financiers spéculatifs. Résultat : des cours capables de s'effondrer ou d'exploser au moindre choc géopolitique." }
+        {
+          "type": "paragraph",
+          "text": "À long terme, le pétrole affronte un défi nouveau : la transition vers les énergies propres. Si les voitures électriques réduisent la demande mondiale, les pays producteurs pourraient se lancer dans une guerre des prix pour vendre leurs réserves avant qu'elles ne perdent de leur valeur."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un paradoxe menace pourtant le marché : comme les investisseurs délaissent les nouveaux projets pétroliers pour des raisons climatiques, l'offre pourrait baisser plus vite que la demande, provoquant de nouvelles flambées de prix. Le pétrole ne disparaîtra pas d'un coup : il reste indispensable aux plastiques, aux engrais, et au transport lourd comme l'aviation."
+        },
+        {
+          "type": "takeaway",
+          "text": "Le prix du pétrole résulte d'un bras de fer entre l'OPEP+, la production américaine de schiste et les marchés financiers spéculatifs. Résultat : des cours capables de s'effondrer ou d'exploser au moindre choc géopolitique."
+        }
       ]
     }
   ]

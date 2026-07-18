@@ -16,8 +16,14 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "Imaginez une usine miniature dans chaque feuille. Elle prend trois ingrédients banals : la **lumière du Soleil**, l'**eau** des racines et le **CO₂** de l'air. Elle en sort du **sucre** pour grandir, et rejette de l'**oxygène**." },
-        { "type": "paragraph", "text": "Ce tour de force s'appelle la **photosynthèse**. Sans lui, pas de forêts, pas d'oxygène respirable, presque pas de vie complexe sur Terre." }
+        {
+          "type": "paragraph",
+          "text": "Imaginez une usine miniature dans chaque feuille. Elle prend trois ingrédients banals : la **lumière du Soleil**, l'**eau** des racines et le **CO₂** de l'air. Elle en sort du **sucre** pour grandir, et rejette de l'**oxygène**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce tour de force s'appelle la **photosynthèse**. Sans lui, pas de forêts, pas d'oxygène respirable, presque pas de vie complexe sur Terre."
+        }
       ]
     },
     {
@@ -25,9 +31,24 @@
       "title": "Où ça se passe dans la feuille",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Dans la cellule végétale, des organites verts, les **chloroplastes**, abritent la [[chlorophylle]]. Ce pigment capte surtout le bleu et le rouge de la lumière. Le vert, lui, est renvoyé : voilà pourquoi les feuilles nous paraissent vertes." },
-        { "type": "paragraph", "text": "L'équation simple : CO₂ + eau + lumière → sucre + oxygène. Le gaz entre par de minuscules pores, les [[stomates]]. L'eau monte des racines. Le sucre devient bois, fruits, racines ; l'oxygène part dans l'air." },
-        { "type": "funFact", "text": "La chlorophylle « refuse » le vert. Elle préfère le bleu et le rouge, plus efficaces pour exciter ses électrons et lancer la machine énergétique." }
+        {
+          "type": "paragraph",
+          "text": "Dans la cellule végétale, des organites verts, les **chloroplastes**, abritent la [[chlorophylle]]. Ce pigment capte surtout le bleu et le rouge de la lumière. Le vert, lui, est renvoyé : voilà pourquoi les feuilles nous paraissent vertes."
+        },
+        {
+          "type": "image",
+          "asset": "leaf_photosynthesis_sunlight_chloroplasts",
+          "ratio": "auto",
+          "caption": "Les feuilles captent la lumière du Soleil pour la photosynthèse."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'équation simple : CO₂ + eau + lumière → sucre + oxygène. Le gaz entre par de minuscules pores, les [[stomates]]. L'eau monte des racines. Le sucre devient bois, fruits, racines ; l'oxygène part dans l'air."
+        },
+        {
+          "type": "funFact",
+          "text": "La chlorophylle « refuse » le vert. Elle préfère le bleu et le rouge, plus efficaces pour exciter ses électrons et lancer la machine énergétique."
+        }
       ]
     },
     {
@@ -35,9 +56,18 @@
       "title": "Deux temps : capturer, puis fabriquer",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "D'abord, la **phase lumineuse**. La lumière casse des molécules d'eau. L'oxygène s'échappe. L'énergie est stockée dans deux « piles » chimiques, l'**ATP** et le **NADPH**." },
-        { "type": "paragraph", "text": "Ensuite, la **phase de fabrication**, le [[cycle de Calvin]], nommé d'après le chimiste **Melvin Calvin**. Avec l'énergie des piles, la plante assemble le carbone du CO₂ en glucose. Pas besoin de soleil direct à cette étape, mais elle dépend entièrement de ce que la lumière a produit avant." },
-        { "type": "funFact", "text": "Pour suivre le trajet du carbone dans la feuille, Calvin a utilisé des isotopes radioactifs issus des recherches sur la bombe atomique. Prix Nobel en **1961**." }
+        {
+          "type": "paragraph",
+          "text": "D'abord, la **phase lumineuse**. La lumière casse des molécules d'eau. L'oxygène s'échappe. L'énergie est stockée dans deux « piles » chimiques, l'**ATP** et le **NADPH**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ensuite, la **phase de fabrication**, le [[cycle de Calvin]], nommé d'après le chimiste **Melvin Calvin**. Avec l'énergie des piles, la plante assemble le carbone du CO₂ en glucose. Pas besoin de soleil direct à cette étape, mais elle dépend entièrement de ce que la lumière a produit avant."
+        },
+        {
+          "type": "funFact",
+          "text": "Pour suivre le trajet du carbone dans la feuille, Calvin a utilisé des isotopes radioactifs issus des recherches sur la bombe atomique. Prix Nobel en **1961**."
+        }
       ]
     },
     {
@@ -45,9 +75,18 @@
       "title": "Quand l'oxygène a changé la planète",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Il y a environ **2,4 milliards d'années**, des bactéries photosynthétiques, les **cyanobactéries**, se mettent à rejeter massivement de l'oxygène. C'est la **Grande Oxydation**. Pour beaucoup d'organismes de l'époque, c'était un poison." },
-        { "type": "paragraph", "text": "Puis l'oxygène a permis la couche d'ozone et une respiration bien plus efficace. L'air que nous respirons est, en gros, le « déchet » de milliards d'années de photosynthèse." },
-        { "type": "funFact", "text": "Environ **la moitié** de l'oxygène terrestre vient du phytoplancton des océans, pas seulement des forêts." }
+        {
+          "type": "paragraph",
+          "text": "Il y a environ **2,4 milliards d'années**, des bactéries photosynthétiques, les **cyanobactéries**, se mettent à rejeter massivement de l'oxygène. C'est la **Grande Oxydation**. Pour beaucoup d'organismes de l'époque, c'était un poison."
+        },
+        {
+          "type": "paragraph",
+          "text": "Puis l'oxygène a permis la couche d'ozone et une respiration bien plus efficace. L'air que nous respirons est, en gros, le « déchet » de milliards d'années de photosynthèse."
+        },
+        {
+          "type": "funFact",
+          "text": "Environ **la moitié** de l'oxygène terrestre vient du phytoplancton des océans, pas seulement des forêts."
+        }
       ]
     },
     {
@@ -55,9 +94,18 @@
       "title": "Un rendement modeste, un rôle immense",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Une feuille ne convertit que **1 à 3 %** de l'énergie solaire reçue en biomasse. À l'échelle de la planète, cela suffit pourtant à nourrir les chaînes alimentaires et à absorber d'énormes quantités de CO₂." },
-        { "type": "paragraph", "text": "D'où l'intérêt des forêts, des océans… et même de la photosynthèse artificielle pour le climat. Une limace de mer, *Elysia chlorotica*, va jusqu'à « voler » des chloroplastes aux algues pour vivre un peu à l'énergie solaire." },
-        { "type": "takeaway", "text": "La photosynthèse transforme lumière, eau et CO₂ en sucre, et régénère l'oxygène. C'est la cuisine solaire à la base de presque toute la vie." }
+        {
+          "type": "paragraph",
+          "text": "Une feuille ne convertit que **1 à 3 %** de l'énergie solaire reçue en biomasse. À l'échelle de la planète, cela suffit pourtant à nourrir les chaînes alimentaires et à absorber d'énormes quantités de CO₂."
+        },
+        {
+          "type": "paragraph",
+          "text": "D'où l'intérêt des forêts, des océans… et même de la photosynthèse artificielle pour le climat. Une limace de mer, *Elysia chlorotica*, va jusqu'à « voler » des chloroplastes aux algues pour vivre un peu à l'énergie solaire."
+        },
+        {
+          "type": "takeaway",
+          "text": "La photosynthèse transforme lumière, eau et CO₂ en sucre, et régénère l'oxygène. C'est la cuisine solaire à la base de presque toute la vie."
+        }
       ]
     }
   ]

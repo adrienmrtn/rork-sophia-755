@@ -1,4 +1,4 @@
-﻿{
+{
   "id": "course_167_icare_et_dedale",
   "title": "Icare et Dédale",
   "subtitle": "Le vol trop près du soleil",
@@ -16,8 +16,14 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "**Icare** et son père **Dédale** forment l'un des mythes grecs les plus connus. Au-delà de l'image de l'adolescent qui chute dans la mer, le récit parle d'ingéniosité, de limites et de la tentation d'aller trop loin." },
-        { "type": "paragraph", "text": "C'est l'histoire d'une évasion impossible qui devient une leçon sur la [[Hybris (et la démesure)]] : vouloir égaler les dieux, c'est risquer de se brûler." }
+        {
+          "type": "paragraph",
+          "text": "**Icare** et son père **Dédale** forment l'un des mythes grecs les plus connus. Au-delà de l'image de l'adolescent qui chute dans la mer, le récit parle d'ingéniosité, de limites et de la tentation d'aller trop loin."
+        },
+        {
+          "type": "paragraph",
+          "text": "C'est l'histoire d'une évasion impossible qui devient une leçon sur la [[Hybris (et la démesure)]] : vouloir égaler les dieux, c'est risquer de se brûler."
+        }
       ]
     },
     {
@@ -25,11 +31,28 @@
       "title": "Dédale, prisonnier de son propre labyrinthe",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "**Dédale** est un inventeur légendaire, incarnation de la [[Métis]], cette intelligence rusée des Grecs. Exilé à la cour du roi **Minos**, en Crète, il bâtit le **Labyrinthe**, une prison si complexe que nul n'en sort. Elle cache le **Minotaure**, monstre né des amours interdites de la reine [[Pasiphaé]]." },
-        { "type": "image", "asset": "icare_et_dedale", "ratio": "4:3", "caption": "Dédale, architecte du Labyrinthe crétois." },
-        { "type": "paragraph", "text": "Quand Minos apprend que Dédale a aidé le héros **Thésée** à s'échapper grâce au fil d'Ariane, il enferme l'inventeur et son jeune fils **Icare** dans leur propre ouvrage. Les terres et les mers sont verrouillées. Reste le ciel." },
-        { "type": "funFact", "text": "Le mot français **« dédale »** vient de ce personnage : un lieu où l'on s'égare, comme le Labyrinthe qu'il a conçu." },
-        { "type": "paragraph", "text": "En observant les oiseaux, Dédale fabrique deux paires d'ailes : bois, plumes et **cire** d'abeille. La technique devient une porte de sortie." }
+        {
+          "type": "paragraph",
+          "text": "**Dédale** est un inventeur légendaire, incarnation de la [[Métis]], cette intelligence rusée des Grecs. Exilé à la cour du roi **Minos**, en Crète, il bâtit le **Labyrinthe**, une prison si complexe que nul n'en sort. Elle cache le **Minotaure**, monstre né des amours interdites de la reine [[Pasiphaé]]."
+        },
+        {
+          "type": "image",
+          "asset": "daedalus_labyrinth_crete_minotaur_myth",
+          "ratio": "4:3",
+          "caption": "Dédale, architecte du Labyrinthe crétois."
+        },
+        {
+          "type": "paragraph",
+          "text": "Quand Minos apprend que Dédale a aidé le héros **Thésée** à s'échapper grâce au fil d'Ariane, il enferme l'inventeur et son jeune fils **Icare** dans leur propre ouvrage. Les terres et les mers sont verrouillées. Reste le ciel."
+        },
+        {
+          "type": "funFact",
+          "text": "Le mot français **« dédale »** vient de ce personnage : un lieu où l'on s'égare, comme le Labyrinthe qu'il a conçu."
+        },
+        {
+          "type": "paragraph",
+          "text": "En observant les oiseaux, Dédale fabrique deux paires d'ailes : bois, plumes et **cire** d'abeille. La technique devient une porte de sortie."
+        }
       ]
     },
     {
@@ -37,10 +60,24 @@
       "title": "Voler trop haut, ou trop bas",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Avant le départ, Dédale donne à Icare une règle simple : suivre la voie du milieu. Trop bas, l'humidité alourdit les plumes. Trop haut, le soleil fond la cire. Cette prudence rappelle la [[Sophia]], la sagesse de connaître sa place." },
-        { "type": "paragraph", "text": "Au début, tout va bien. Père et fils survolent les îles de la mer Égée. Les bergers au sol croient voir des dieux. Puis l'ivresse saisit Icare. Il s'élève, fasciné par le ciel. La cire ramollit. Les plumes tombent. Il bat des bras nus et plonge dans la mer." },
-        { "type": "image", "asset": "icare_et_dedale", "ratio": "4:3", "caption": "La chute d'Icare, sujet de peinture depuis la Renaissance." },
-        { "type": "funFact", "text": "Le mythe est scientifiquement paradoxal : plus on monte, plus il fait froid. Icare aurait dû geler plutôt que de voir sa cire fondre." }
+        {
+          "type": "paragraph",
+          "text": "Avant le départ, Dédale donne à Icare une règle simple : suivre la voie du milieu. Trop bas, l'humidité alourdit les plumes. Trop haut, le soleil fond la cire. Cette prudence rappelle la [[Sophia]], la sagesse de connaître sa place."
+        },
+        {
+          "type": "paragraph",
+          "text": "Au début, tout va bien. Père et fils survolent les îles de la mer Égée. Les bergers au sol croient voir des dieux. Puis l'ivresse saisit Icare. Il s'élève, fasciné par le ciel. La cire ramollit. Les plumes tombent. Il bat des bras nus et plonge dans la mer."
+        },
+        {
+          "type": "image",
+          "asset": "icarus_falling_sun_bruegel_painting",
+          "ratio": "4:3",
+          "caption": "La chute d'Icare, sujet de peinture depuis la Renaissance."
+        },
+        {
+          "type": "funFact",
+          "text": "Le mythe est scientifiquement paradoxal : plus on monte, plus il fait froid. Icare aurait dû geler plutôt que de voir sa cire fondre."
+        }
       ]
     },
     {
@@ -48,9 +85,18 @@
       "title": "Orgueil, idéal ou détail oublié ?",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Les Anciens voient surtout un châtiment de l'orgueil : Icare paie d'avoir voulu trop. Mais les romantiques, comme **Baudelaire**, en font un héros de l'idéal : mieux vaut mourir en regardant le soleil qu'une vie prudente au sol." },
-        { "type": "paragraph", "text": "Le peintre **Pieter Bruegel l'Ancien** propose une autre lecture. Dans son tableau, la chute n'est qu'un détail : le laboureur continue sa tâche, le monde n'arrête pas pour un héros. L'exploit individuel devient presque invisible." },
-        { "type": "funFact", "text": "Certaines versions ajoutent que Dédale voit aussi dans la mort de son fils une punition : jadis, par jalousie, il aurait tué son neveu **Perdix**, inventeur trop doué." }
+        {
+          "type": "paragraph",
+          "text": "Les Anciens voient surtout un châtiment de l'orgueil : Icare paie d'avoir voulu trop. Mais les romantiques, comme **Baudelaire**, en font un héros de l'idéal : mieux vaut mourir en regardant le soleil qu'une vie prudente au sol."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le peintre **Pieter Bruegel l'Ancien** propose une autre lecture. Dans son tableau, la chute n'est qu'un détail : le laboureur continue sa tâche, le monde n'arrête pas pour un héros. L'exploit individuel devient presque invisible."
+        },
+        {
+          "type": "funFact",
+          "text": "Certaines versions ajoutent que Dédale voit aussi dans la mort de son fils une punition : jadis, par jalousie, il aurait tué son neveu **Perdix**, inventeur trop doué."
+        }
       ]
     },
     {
@@ -58,9 +104,18 @@
       "title": "Une mer, une île, une leçon",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Les courants portent le corps d'Icare vers une île que le héros **Héraclès** nomme [[Ikaria]]. La mer alentour devient la **mer Icarienne**. Dédale, seul, gagne la Sicile et offre ses ailes au dieu **Apollon**, jurant de ne plus voler." },
-        { "type": "paragraph", "text": "Le mythe survit partout : en aéronautique comme rêve et risque, en psychologie comme « complexe d'Icare », désir de réussir trop vite. Dédale reste l'inventeur ambigu, capable du meilleur (les ailes) comme du pire. [[Le labyrinthe comme symbole]] rappelle que la technique peut aussi enfermer." },
-        { "type": "takeaway", "text": "**Dédale** fuit la Crète avec des ailes de cire. **Icare** ignore l'avertissement, vole trop près du soleil et se noie. La technique libère, mais sans mesure elle tue." }
+        {
+          "type": "paragraph",
+          "text": "Les courants portent le corps d'Icare vers une île que le héros **Héraclès** nomme [[Ikaria]]. La mer alentour devient la **mer Icarienne**. Dédale, seul, gagne la Sicile et offre ses ailes au dieu **Apollon**, jurant de ne plus voler."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le mythe survit partout : en aéronautique comme rêve et risque, en psychologie comme « complexe d'Icare », désir de réussir trop vite. Dédale reste l'inventeur ambigu, capable du meilleur (les ailes) comme du pire. [[Le labyrinthe comme symbole]] rappelle que la technique peut aussi enfermer."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Dédale** fuit la Crète avec des ailes de cire. **Icare** ignore l'avertissement, vole trop près du soleil et se noie. La technique libère, mais sans mesure elle tue."
+        }
       ]
     }
   ]

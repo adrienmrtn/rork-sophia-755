@@ -16,8 +16,14 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "La dette mondiale, celle des États, des entreprises et des ménages réunis, dépasse aujourd'hui **300% du PIB mondial**, un record absolu dans l'histoire économique." },
-        { "type": "paragraph", "text": "Ce chiffre impressionnant cache une réalité plus nuancée : la dette permet de financer la croissance, de répondre aux crises sanitaires ou de préparer la transition écologique. Mais elle porte aussi en elle le risque d'un effondrement de confiance." }
+        {
+          "type": "paragraph",
+          "text": "La dette mondiale, celle des États, des entreprises et des ménages réunis, dépasse aujourd'hui **300% du PIB mondial**, un record absolu dans l'histoire économique."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce chiffre impressionnant cache une réalité plus nuancée : la dette permet de financer la croissance, de répondre aux crises sanitaires ou de préparer la transition écologique. Mais elle porte aussi en elle le risque d'un effondrement de confiance."
+        }
       ]
     },
     {
@@ -25,9 +31,18 @@
       "title": "Comment un État s'endette",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Un État s'endette quand ses dépenses dépassent structurellement ses recettes fiscales. Ce déficit budgétaire est comblé en empruntant sur les marchés financiers. Selon la [[théorie keynésienne]], emprunter pour stimuler l'économie en période de crise est légitime, à condition de rembourser une fois la croissance revenue." },
-        { "type": "paragraph", "text": "Dans la pratique, les gouvernements empruntent facilement en période difficile, mais remboursent rarement en période faste. La dette s'accumule alors durablement. Le cas du Japon est fascinant : avec une dette proche de 260% de son PIB, le pays devrait logiquement être en crise. Pourtant, il ne l'est pas, car l'essentiel de sa dette est détenue par ses propres banques et épargnants, à l'abri des marchés étrangers." },
-        { "type": "funFact", "text": "Le Royaume-Uni a fini de rembourser, seulement en 2015, des dettes datant des guerres napoléoniennes et d'une bulle financière de 1720." }
+        {
+          "type": "paragraph",
+          "text": "Un État s'endette quand ses dépenses dépassent structurellement ses recettes fiscales. Ce déficit budgétaire est comblé en empruntant sur les marchés financiers. Selon la [[théorie keynésienne]], emprunter pour stimuler l'économie en période de crise est légitime, à condition de rembourser une fois la croissance revenue."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dans la pratique, les gouvernements empruntent facilement en période difficile, mais remboursent rarement en période faste. La dette s'accumule alors durablement. Le cas du Japon est fascinant : avec une dette proche de 260% de son PIB, le pays devrait logiquement être en crise. Pourtant, il ne l'est pas, car l'essentiel de sa dette est détenue par ses propres banques et épargnants, à l'abri des marchés étrangers."
+        },
+        {
+          "type": "funFact",
+          "text": "Le Royaume-Uni a fini de rembourser, seulement en 2015, des dettes datant des guerres napoléoniennes et d'une bulle financière de 1720."
+        }
       ]
     },
     {
@@ -35,9 +50,20 @@
       "title": "Toutes les dettes ne se valent pas",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Le vrai danger d'une dette ne dépend pas seulement de son montant, mais de la monnaie dans laquelle elle est empruntée. Les pays riches empruntent dans leur propre monnaie, ce qui rassure les investisseurs." },
-        { "type": "image", "asset": "la_dette_mondiale", "ratio": "16:9", "caption": "La dette publique mondiale dépasse aujourd'hui 300% du PIB de la planète." },
-        { "type": "paragraph", "text": "Les pays en développement, eux, doivent souvent emprunter en dollars, faute de monnaie jugée assez stable. Si leur monnaie nationale perd de la valeur face au dollar, la somme à rembourser explose du jour au lendemain. Dans ces crises, le [[FMI]] intervient souvent, mais impose en général des politiques d'économies strictes qui pèsent lourdement sur les populations." }
+        {
+          "type": "paragraph",
+          "text": "Le vrai danger d'une dette ne dépend pas seulement de son montant, mais de la monnaie dans laquelle elle est empruntée. Les pays riches empruntent dans leur propre monnaie, ce qui rassure les investisseurs."
+        },
+        {
+          "type": "image",
+          "asset": "japan_government_debt_statistics_chart",
+          "ratio": "16:9",
+          "caption": "La dette publique mondiale dépasse aujourd'hui 300% du PIB de la planète."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les pays en développement, eux, doivent souvent emprunter en dollars, faute de monnaie jugée assez stable. Si leur monnaie nationale perd de la valeur face au dollar, la somme à rembourser explose du jour au lendemain. Dans ces crises, le [[FMI]] intervient souvent, mais impose en général des politiques d'économies strictes qui pèsent lourdement sur les populations."
+        }
       ]
     },
     {
@@ -45,8 +71,14 @@
       "title": "La dette peut-elle être infinie ?",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Un débat oppose deux visions de l'économie. La [[théorie monétaire moderne]] affirme qu'un État ne peut pas faire faillite tant qu'il emprunte dans sa propre monnaie : la vraie limite n'est pas un chiffre arbitraire, comme les 60% imposés par le traité de Maastricht en Europe, mais le niveau d'inflation." },
-        { "type": "paragraph", "text": "D'autres économistes, plus prudents, craignent que trop de dette ne fasse fuir la confiance des marchés, entraînant une hausse brutale des taux d'intérêt. La crise de la zone euro, entre 2010 et 2012, a illustré ce risque : des pays comme la Grèce, privés de leur propre banque centrale, ont vu leurs taux d'emprunt s'envoler jusqu'à menacer l'existence même de la monnaie européenne." }
+        {
+          "type": "paragraph",
+          "text": "Un débat oppose deux visions de l'économie. La [[théorie monétaire moderne]] affirme qu'un État ne peut pas faire faillite tant qu'il emprunte dans sa propre monnaie : la vraie limite n'est pas un chiffre arbitraire, comme les 60% imposés par le traité de Maastricht en Europe, mais le niveau d'inflation."
+        },
+        {
+          "type": "paragraph",
+          "text": "D'autres économistes, plus prudents, craignent que trop de dette ne fasse fuir la confiance des marchés, entraînant une hausse brutale des taux d'intérêt. La crise de la zone euro, entre 2010 et 2012, a illustré ce risque : des pays comme la Grèce, privés de leur propre banque centrale, ont vu leurs taux d'emprunt s'envoler jusqu'à menacer l'existence même de la monnaie européenne."
+        }
       ]
     },
     {
@@ -54,9 +86,18 @@
       "title": "Les nouveaux visages de la dette",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "La dette mondiale ne concerne pas que les États : les entreprises et les ménages en portent aussi une part croissante, parfois via des acteurs financiers peu régulés. Un nouveau débat émerge aussi autour de la dette climatique : faut-il traiter différemment la dette qui finance la transition énergétique de celle qui finance la simple consommation ?" },
-        { "type": "paragraph", "text": "La question de la justice entre générations reste centrale : s'endetter aujourd'hui revient à prélever sur les impôts de demain. Mais si cet argent finance des infrastructures durables ou une bonne éducation, il peut aussi être vu comme un cadeau transmis aux générations futures plutôt qu'un fardeau." },
-        { "type": "takeaway", "text": "La dette mondiale dépasse 300% du PIB de la planète, un record historique. Sa dangerosité dépend moins de son montant que de la monnaie dans laquelle elle est empruntée : le Japon prouve qu'une dette de 260% peut rester stable si elle est détenue localement." }
+        {
+          "type": "paragraph",
+          "text": "La dette mondiale ne concerne pas que les États : les entreprises et les ménages en portent aussi une part croissante, parfois via des acteurs financiers peu régulés. Un nouveau débat émerge aussi autour de la dette climatique : faut-il traiter différemment la dette qui finance la transition énergétique de celle qui finance la simple consommation ?"
+        },
+        {
+          "type": "paragraph",
+          "text": "La question de la justice entre générations reste centrale : s'endetter aujourd'hui revient à prélever sur les impôts de demain. Mais si cet argent finance des infrastructures durables ou une bonne éducation, il peut aussi être vu comme un cadeau transmis aux générations futures plutôt qu'un fardeau."
+        },
+        {
+          "type": "takeaway",
+          "text": "La dette mondiale dépasse 300% du PIB de la planète, un record historique. Sa dangerosité dépend moins de son montant que de la monnaie dans laquelle elle est empruntée : le Japon prouve qu'une dette de 260% peut rester stable si elle est détenue localement."
+        }
       ]
     }
   ]
