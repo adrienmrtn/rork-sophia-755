@@ -234,11 +234,14 @@ struct QuizView: View {
     /// Clears the answer state for whichever question is now `currentQuestionIndex`.
     private func resetAnswerState() {
         selectedOptionIndex = nil
-        chronoOrder = []
         if shuffledQuestions.indices.contains(currentQuestionIndex) {
             let q = shuffledQuestions[currentQuestionIndex]
+            // The drag & drop cards start in the (already shuffled) display order —
+            // the learner rearranges them from there.
+            chronoOrder = Array(q.items.indices)
             sliderValue = ((q.sliderMin + q.sliderMax) / 2).rounded()
         } else {
+            chronoOrder = []
             sliderValue = 0
         }
         hasAnswered = false
@@ -284,22 +287,6 @@ struct QuizView: View {
         guard !hasAnswered else { return }
         selectedOptionIndex = index
         submitAnswer(.singleChoice(index))
-    }
-
-    private func tapChronoItem(displaySlot: Int) {
-        guard !hasAnswered, !chronoOrder.contains(displaySlot) else { return }
-        UIImpactFeedbackGenerator(style: .light).impactOccurred()
-        withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) {
-            chronoOrder.append(displaySlot)
-        }
-    }
-
-    private func removeChronoItem(at position: Int) {
-        guard !hasAnswered, chronoOrder.indices.contains(position) else { return }
-        UIImpactFeedbackGenerator(style: .light).impactOccurred()
-        withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) {
-            chronoOrder.remove(at: position)
-        }
     }
 
     private func submitChronoOrder() {
@@ -566,7 +553,7 @@ struct QuizView: View {
         }
     }
 
-    // MARK: - Chronological ordering answer
+    // MARK: - Chronological ordering answer (drag & drop)
 
     private var chronologicalAnswerBody: some View {
         VStack(alignment: .leading, spacing: 14) {
@@ -574,27 +561,9 @@ struct QuizView: View {
                 .font(DS.sans(.subheadline))
                 .foregroundStyle(DS.inkSecondary)
 
-            if !chronoOrder.isEmpty {
-                VStack(alignment: .leading, spacing: 8) {
-                    Text(languageManager.text("quiz.chronological.yourOrder").uppercased())
-                        .font(DS.sans(.caption2, .semibold))
-                        .foregroundStyle(DS.inkTertiary)
-                        .tracking(1.0)
-
-                    VStack(spacing: 8) {
-                        ForEach(Array(chronoOrder.enumerated()), id: \.offset) { position, slot in
-                            chronoOrderRow(position: position, slot: slot)
-                        }
-                    }
-                }
-            }
-
-            let remaining = currentQuestion.items.indices.filter { !chronoOrder.contains($0) }
-            if !remaining.isEmpty {
-                VStack(spacing: 8) {
-                    ForEach(remaining, id: \.self) { slot in
-                        chronoPoolRow(slot: slot)
-                    }
+            VStack(spacing: 8) {
+                ForEach(Array(chronoOrder.enumerated()), id: \.element) { position, slot in
+                    chronoDraggableRow(position: position, slot: slot)
                 }
             }
 
@@ -603,7 +572,7 @@ struct QuizView: View {
                     .font(DS.sans(.caption, .medium))
                     .foregroundStyle(DS.inkSecondary)
                     .fixedSize(horizontal: false, vertical: true)
-            } else if chronoOrder.count == currentQuestion.items.count {
+            } else {
                 Button {
                     UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     submitChronoOrder()
@@ -616,70 +585,68 @@ struct QuizView: View {
         }
     }
 
-    private func chronoOrderRow(position: Int, slot: Int) -> some View {
+    /// A single event card. Draggable and a drop target for the others while unanswered
+    /// (swaps places with whichever card it's dropped onto); becomes a static,
+    /// colored result row once answered.
+    @ViewBuilder
+    private func chronoDraggableRow(position: Int, slot: Int) -> some View {
+        let row = chronoRowContent(position: position, slot: slot)
+        if hasAnswered {
+            row
+        } else {
+            row
+                .draggable(String(slot))
+                .dropDestination(for: String.self) { droppedSlots, _ in
+                    guard let raw = droppedSlots.first, let draggedSlot = Int(raw) else { return false }
+                    moveChronoItem(draggedSlot: draggedSlot, targetPosition: position)
+                    return true
+                }
+        }
+    }
+
+    private func chronoRowContent(position: Int, slot: Int) -> some View {
         let isCorrectSlot = hasAnswered && currentQuestion.originalIndices.indices.contains(slot) && currentQuestion.originalIndices[slot] == position
         let isWrongSlot = hasAnswered && !isCorrectSlot
 
-        return Button {
-            removeChronoItem(at: position)
-        } label: {
-            HStack(spacing: 12) {
-                Text("\(position + 1)")
-                    .font(DS.sans(.subheadline, .semibold))
-                    .foregroundStyle((isCorrectSlot || isWrongSlot) ? .white : DS.accentSoft)
-                    .frame(width: 30, height: 30)
-                    .background(chronoBadgeBg(isCorrect: isCorrectSlot, isWrong: isWrongSlot), in: Circle())
+        return HStack(spacing: 12) {
+            Text("\(position + 1)")
+                .font(DS.sans(.subheadline, .semibold))
+                .foregroundStyle((isCorrectSlot || isWrongSlot) ? .white : DS.accentSoft)
+                .frame(width: 30, height: 30)
+                .background(chronoBadgeBg(isCorrect: isCorrectSlot, isWrong: isWrongSlot), in: Circle())
 
-                Text(currentQuestion.items[slot])
-                    .font(DS.sans(.body, .medium))
-                    .foregroundStyle(DS.ink)
-                    .multilineTextAlignment(.leading)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+            Text(currentQuestion.items[slot])
+                .font(DS.sans(.body, .medium))
+                .foregroundStyle(DS.ink)
+                .multilineTextAlignment(.leading)
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(maxWidth: .infinity, alignment: .leading)
 
-                Image(systemName: hasAnswered ? (isCorrectSlot ? "checkmark.circle.fill" : "xmark.circle.fill") : "xmark")
-                    .font(.system(size: hasAnswered ? 18 : 12, weight: .medium))
-                    .foregroundStyle(hasAnswered ? (isCorrectSlot ? DS.success : DS.danger) : DS.inkTertiary)
-            }
-            .padding(.horizontal, 14)
-            .padding(.vertical, 12)
-            .background(chronoRowBg(isCorrect: isCorrectSlot, isWrong: isWrongSlot))
-            .clipShape(.rect(cornerRadius: DS.Radius.control))
-            .overlay {
-                RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                    .strokeBorder(chronoRowBorder(isCorrect: isCorrectSlot, isWrong: isWrongSlot), lineWidth: 1)
-            }
+            Image(systemName: hasAnswered ? (isCorrectSlot ? "checkmark.circle.fill" : "xmark.circle.fill") : "line.3.horizontal")
+                .font(.system(size: hasAnswered ? 18 : 14, weight: .medium))
+                .foregroundStyle(hasAnswered ? (isCorrectSlot ? DS.success : DS.danger) : DS.inkTertiary)
         }
-        .buttonStyle(SoftPressButtonStyle())
-        .disabled(hasAnswered)
+        .padding(.horizontal, 14)
+        .padding(.vertical, 14)
+        .background(chronoRowBg(isCorrect: isCorrectSlot, isWrong: isWrongSlot))
+        .clipShape(.rect(cornerRadius: DS.Radius.control))
+        .overlay {
+            RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                .strokeBorder(chronoRowBorder(isCorrect: isCorrectSlot, isWrong: isWrongSlot), lineWidth: 1)
+        }
     }
 
-    private func chronoPoolRow(slot: Int) -> some View {
-        Button {
-            tapChronoItem(displaySlot: slot)
-        } label: {
-            HStack(spacing: 12) {
-                Image(systemName: "plus.circle")
-                    .font(.system(size: 18, weight: .regular))
-                    .foregroundStyle(DS.accentSoft)
-                Text(currentQuestion.items[slot])
-                    .font(DS.sans(.body, .medium))
-                    .foregroundStyle(DS.ink)
-                    .multilineTextAlignment(.leading)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-            }
-            .padding(.horizontal, 14)
-            .padding(.vertical, 12)
-            .background(DS.surface)
-            .clipShape(.rect(cornerRadius: DS.Radius.control))
-            .overlay {
-                RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                    .strokeBorder(DS.hairline, lineWidth: 1)
-            }
+    /// Dragging one card onto another swaps their positions — simpler and safer than
+    /// precise "insert at index" semantics for a short list of 3-5 cards.
+    private func moveChronoItem(draggedSlot: Int, targetPosition: Int) {
+        guard !hasAnswered,
+              let fromPosition = chronoOrder.firstIndex(of: draggedSlot),
+              chronoOrder.indices.contains(targetPosition),
+              fromPosition != targetPosition else { return }
+        withAnimation(.spring(response: 0.35, dampingFraction: 0.8)) {
+            chronoOrder.swapAt(fromPosition, targetPosition)
         }
-        .buttonStyle(SoftPressButtonStyle())
-        .disabled(hasAnswered)
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
     }
 
     private func chronoRowBg(isCorrect: Bool, isWrong: Bool) -> Color {
