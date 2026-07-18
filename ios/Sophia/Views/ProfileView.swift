@@ -11,7 +11,6 @@ struct ProfileView: View {
     @State private var showSettings: Bool = false
     @State private var showFavorites: Bool = false
     @State private var showAllQuizzes: Bool = false
-    @State private var showAllCards: Bool = false
     @State private var showPendingGlobalRankUp: Bool = false
     @State private var hapticTrigger: Int = 0
     @State private var appeared: Bool = false
@@ -74,12 +73,6 @@ struct ProfileView: View {
                     onDismiss: { showAllQuizzes = false }
                 )
             }
-            .fullScreenCover(isPresented: $showAllCards) {
-                AllCardsView(
-                    progressManager: progressManager,
-                    onDismiss: { showAllCards = false }
-                )
-            }
             .fullScreenCover(isPresented: $showPendingGlobalRankUp) {
                 if let pending = progressManager.pendingGlobalRankUp() {
                     GlobalRankUpCelebrationView(
@@ -100,7 +93,7 @@ struct ProfileView: View {
             }
             if progressManager.pendingGlobalRankUp() != nil {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
-                    if !showSettings && !showFavorites && !showAllQuizzes && !showAllCards {
+                    if !showSettings && !showFavorites && !showAllQuizzes {
                         showPendingGlobalRankUp = true
                     }
                 }
@@ -199,8 +192,6 @@ struct ProfileView: View {
 
     private var statsSection: some View {
         let stats = progressManager.quizStatsSummary
-        let cardsUnlocked = progressManager.unlockedCards.count
-        let cardsTotal = ContentCatalog.activeCards.count
 
         return VStack(spacing: 14) {
             streakCard
@@ -217,8 +208,6 @@ struct ProfileView: View {
                     label: languageManager.text("cards.successRate")
                 )
             }
-
-            cardsTile(unlocked: cardsUnlocked, total: cardsTotal)
         }
     }
 
@@ -261,47 +250,6 @@ struct ProfileView: View {
         }
         .frame(maxWidth: .infinity, minHeight: 120, alignment: .topLeading)
         .dsCard(padding: 16)
-    }
-
-    private func cardsTile(unlocked: Int, total: Int) -> some View {
-        let fraction = total == 0 ? 0 : Double(unlocked) / Double(total)
-        return Button {
-            hapticTrigger += 1
-            showAllCards = true
-        } label: {
-            VStack(alignment: .leading, spacing: 12) {
-                HStack(spacing: 12) {
-                    Image(systemName: "rectangle.stack")
-                        .font(.system(size: 16, weight: .medium))
-                        .foregroundStyle(DS.accentSoft)
-                        .frame(width: 38, height: 38)
-                        .background(DS.accentTint, in: Circle())
-
-                    HStack(alignment: .firstTextBaseline, spacing: 4) {
-                        Text("\(unlocked)")
-                            .font(DS.title(.title2, .semibold))
-                            .foregroundStyle(DS.ink)
-                            .monospacedDigit()
-                        Text("/ \(total)")
-                            .font(DS.sans(.subheadline, .medium))
-                            .foregroundStyle(DS.inkTertiary)
-                    }
-
-                    Spacer()
-
-                    Text(languageManager.text("profile.stats.cards"))
-                        .font(DS.sans(.caption, .medium))
-                        .foregroundStyle(DS.inkSecondary)
-                    Image(systemName: "chevron.right")
-                        .font(.system(size: 12, weight: .semibold))
-                        .foregroundStyle(DS.inkTertiary)
-                }
-
-                CalmProgressBar(fraction: fraction)
-            }
-            .dsCard(padding: 16)
-        }
-        .buttonStyle(ProfileCardPress())
     }
 
     private var weekStrip: some View {

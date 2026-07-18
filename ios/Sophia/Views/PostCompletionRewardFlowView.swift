@@ -1,7 +1,6 @@
 import SwiftUI
 
 nonisolated enum PostCompletionRewardStep: Identifiable, Sendable {
-    case card(CardUnlockEvent)
     case globalRankUp(previous: GlobalRank, new: GlobalRank, newLevel: Int)
     case collectionProgress(CollectionProgressEvent)
     case collectionCompleted(CollectionProgressEvent, awardedXP: Int)
@@ -9,7 +8,6 @@ nonisolated enum PostCompletionRewardStep: Identifiable, Sendable {
 
     var id: String {
         switch self {
-        case .card(let event): "card-\(event.card.id)"
         case .globalRankUp(_, let new, let newLevel): "rank-\(new.rawValue)-\(newLevel)"
         case .collectionProgress(let event): "collection-progress-\(event.collection.id)-\(event.newCompletedCount)"
         case .collectionCompleted(let event, let awardedXP): "collection-completed-\(event.collection.id)-\(awardedXP)"
@@ -45,8 +43,6 @@ struct PostCompletionRewardFlowView: View {
     @ViewBuilder
     private func stepView(_ step: PostCompletionRewardStep) -> some View {
         switch step {
-        case .card(let event):
-            CardUnlockCelebrationView(event: event, onContinue: advance)
         case .globalRankUp(let previous, let new, let newLevel):
             GlobalRankUpCelebrationView(
                 previousRank: previous,

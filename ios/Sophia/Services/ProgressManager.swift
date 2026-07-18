@@ -91,7 +91,6 @@ nonisolated enum GlobalXPReason: Sendable {
     case courseCompleted(courseId: String)
     case quizCompleted(courseId: String)
     case collectionCompleted(id: String)
-    case cardUnlocked(id: String)
 }
 
 nonisolated struct GlobalLevelProgress: Sendable {
@@ -135,12 +134,6 @@ nonisolated struct CollectionProgressEvent: Identifiable, Sendable {
     var didCompleteCollection: Bool {
         previousCompletedCount < totalCount && newCompletedCount == totalCount
     }
-}
-
-nonisolated struct CardUnlockEvent: Identifiable, Sendable {
-    var id: String { card.id }
-    let card: CollectibleCard
-    let awardResult: GlobalXPAwardResult
 }
 
 nonisolated struct QuizStatsSummary: Sendable {
@@ -298,11 +291,6 @@ class ProgressManager {
                 return noGlobalXPAwardResult()
             }
             progress.globalCollectionXPAwardedIds.append(id)
-        case .cardUnlocked(let id):
-            guard !progress.globalCardXPAwardedIds.contains(id) else {
-                return noGlobalXPAwardResult()
-            }
-            progress.globalCardXPAwardedIds.append(id)
         }
 
         let previousXP = progress.globalXP
@@ -413,40 +401,6 @@ class ProgressManager {
             correctAnswerCount: correct,
             totalQuestionCount: total
         )
-    }
-
-    func isCardUnlocked(_ card: CollectibleCard) -> Bool {
-        if progress.unlockedCardIds.contains(card.id) { return true }
-        return card.courseIds.contains { courseId in
-            progress.courseProgress[courseId]?.isCompleted == true
-        }
-    }
-
-    var unlockedCards: [CollectibleCard] {
-        ContentCatalog.activeCards.filter { isCardUnlocked($0) }
-    }
-
-    var recentlyUnlockedCards: [CollectibleCard] {
-        let explicit = progress.unlockedCardIds.reversed().compactMap { cardId in
-            ContentCatalog.activeCards.first { $0.id == cardId }
-        }
-        if !explicit.isEmpty { return Array(explicit.prefix(6)) }
-        return Array(unlockedCards.prefix(6))
-    }
-
-    func cardUnlockCandidates(forCompletingCourseId courseId: String) -> [CollectibleCard] {
-        guard progress.courseProgress[courseId]?.isCompleted != true else { return [] }
-        return (ContentCatalog.activeCardsByCourseId[courseId] ?? []).filter { card in
-            !isCardUnlocked(card)
-        }
-    }
-
-    func unlockCard(_ card: CollectibleCard) -> CardUnlockEvent? {
-        guard !progress.unlockedCardIds.contains(card.id) else { return nil }
-        progress.unlockedCardIds.append(card.id)
-        save()
-        let award = awardGlobalXP(reason: .cardUnlocked(id: card.id), amount: card.rarity.xpReward)
-        return CardUnlockEvent(card: card, awardResult: award)
     }
 
     /// Recent quizzes (courses completed with a quiz score), most recent first.

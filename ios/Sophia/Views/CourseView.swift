@@ -20,7 +20,6 @@ struct CourseView: View {
     @State private var previousSubjectCount: Int = 0
     @State private var previousSubjectXP: Int = 0
     @State private var globalCourseAwardResult: GlobalXPAwardResult?
-    @State private var pendingCardCandidates: [CollectibleCard] = []
     @State private var pendingCollectionEvents: [CollectionProgressEvent] = []
     @State private var rewardSteps: [PostCompletionRewardStep] = []
     @State private var showRewardFlow: Bool = false
@@ -121,7 +120,6 @@ struct CourseView: View {
                 course: course,
                 progressManager: progressManager,
                 initialCollectionEvents: pendingCollectionEvents,
-                initialCardCandidates: pendingCardCandidates,
                 onReturnHome: {
                     showQuiz = false
                     onDismissToHome()
@@ -325,7 +323,6 @@ struct CourseView: View {
                 sessionTracker?.markCompleted()
                 progressManager.updateLessonProgress(courseId: course.id, lessonIndex: currentIndex)
                 let wasCompletedBefore = progressManager.courseStatus(for: course.id) == .completed
-                let cardCandidates = progressManager.cardUnlockCandidates(forCompletingCourseId: course.id)
                 previousSubjectCount = progressManager.completedCount(for: course.subject)
                 previousSubjectXP = progressManager.xp(for: course.subject)
                 progressManager.completeCourse(courseId: course.id, quizScore: 0)
@@ -334,7 +331,6 @@ struct CourseView: View {
                     reason: .courseCompleted(courseId: course.id),
                     amount: ProgressManager.globalCourseCompletionXP
                 )
-                pendingCardCandidates = wasCompletedBefore ? [] : cardCandidates
                 pendingCollectionEvents = wasCompletedBefore ? [] : progressManager.collectionProgressEvents(forNewlyCompletedCourseId: course.id)
                 AnalyticsService.trackCourseCompleted(course: course)
                 withAnimation(.spring(response: 0.5, dampingFraction: 0.85)) {
@@ -395,12 +391,6 @@ struct CourseView: View {
     private func buildRewardSteps() -> [PostCompletionRewardStep] {
         var steps: [PostCompletionRewardStep] = []
 
-        while !pendingCardCandidates.isEmpty {
-            let card = pendingCardCandidates.removeFirst()
-            if let event = progressManager.unlockCard(card) {
-                steps.append(.card(event))
-            }
-        }
         if progressManager.pendingGlobalRankUp() != nil {
             if let pending = progressManager.pendingGlobalRankUp() {
                 steps.append(.globalRankUp(previous: pending.previous, new: pending.new, newLevel: pending.newLevel))
