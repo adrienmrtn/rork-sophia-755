@@ -22,36 +22,13 @@ struct BlockContentView: View {
         VStack(alignment: .leading, spacing: 24) {
             header
 
-            ForEach(Array(visibleBlocks.enumerated()), id: \.offset) { _, block in
+            ForEach(Array(section.blocks.enumerated()), id: \.offset) { _, block in
                 blockView(block)
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .sheet(item: $selectedGlossaryEntry) { entry in
             GlossaryTermSheet(entry: entry)
-        }
-    }
-
-    /// Slug of the course cover / hero image, if any.
-    private var heroSlug: String? {
-        guard let image = content.hero?.image else { return nil }
-        return CourseInlineImage.slug(image)
-    }
-
-    /// Section blocks with redundant inline images removed.
-    ///
-    /// Some courses were authored (or auto-filled) with inline `image` blocks that all
-    /// point at the course cover, which made every illustration in the course show the
-    /// same cover picture. We drop inline images that merely duplicate the hero cover so
-    /// the cover appears only once (in the intro hero) instead of being repeated as a
-    /// fake illustration. Data is untouched; this is a pure rendering guard.
-    private var visibleBlocks: [ContentBlockV2] {
-        guard let heroSlug else { return section.blocks }
-        return section.blocks.filter { block in
-            if case .image(let image) = block {
-                return CourseInlineImage.slug(image.asset) != heroSlug
-            }
-            return true
         }
     }
 
