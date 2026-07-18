@@ -138,12 +138,15 @@ nonisolated struct CollectionProgressEvent: Identifiable, Sendable {
 
 nonisolated struct QuizStatsSummary: Sendable {
     let completedQuizCount: Int
-    let correctAnswerCount: Int
-    let totalQuestionCount: Int
+    /// Points earned (best attempt per course), not a raw count of correct answers —
+    /// question types other than mcq/trueFalse can award partial credit.
+    let earnedPoints: Int
+    /// Sum of `course.quiz.maxPoints` across every completed-quiz course.
+    let totalPoints: Int
 
     var successPercent: Int {
-        guard totalQuestionCount > 0 else { return 0 }
-        return Int((Double(correctAnswerCount) / Double(totalQuestionCount) * 100).rounded())
+        guard totalPoints > 0 else { return 0 }
+        return Int((Double(earnedPoints) / Double(totalPoints) * 100).rounded())
     }
 }
 
@@ -392,19 +395,20 @@ class ProgressManager {
     var quizStatsSummary: QuizStatsSummary {
         let quizCourseIds = Set(progress.completedQuizCourseIds)
         let quizCourses = ContentCatalog.activeCourses.filter { quizCourseIds.contains($0.id) && !$0.quiz.isEmpty }
-        let correct = quizCourses.reduce(0) { partial, course in
+        let earned = quizCourses.reduce(0) { partial, course in
             partial + (progress.courseProgress[course.id]?.bestQuizScore ?? 0)
         }
-        let total = quizCourses.reduce(0) { $0 + $1.quiz.count }
+        let total = quizCourses.reduce(0) { $0 + $1.quiz.maxPoints }
         return QuizStatsSummary(
             completedQuizCount: quizCourses.count,
-            correctAnswerCount: correct,
-            totalQuestionCount: total
+            earnedPoints: earned,
+            totalPoints: total
         )
     }
 
     /// Recent quizzes (courses completed with a quiz score), most recent first.
-    var recentQuizzes: [(course: Course, score: Int, totalQuestions: Int, date: Date)] {
+    /// `score`/`totalPoints` are in points, not a raw correct-answer count.
+    var recentQuizzes: [(course: Course, score: Int, totalPoints: Int, date: Date)] {
         let entries: [(String, CourseProgress, Date)] = progress.courseProgress.compactMap { id, cp in
             guard cp.isCompleted, progress.completedQuizCourseIds.contains(id), let dateStr = cp.lastQuizDate,
                   let date = ISO8601DateFormatter().date(from: dateStr) else { return nil }
@@ -413,7 +417,7 @@ class ProgressManager {
         let sorted = entries.sorted { $0.2 > $1.2 }
         return sorted.compactMap { id, cp, date in
             guard let course = ContentCatalog.activeCourses.first(where: { $0.id == id }) else { return nil }
-            return (course, cp.bestQuizScore, course.quiz.count, date)
+            return (course, cp.bestQuizScore, course.quiz.maxPoints, date)
         }
     }
 

@@ -9,9 +9,16 @@ struct QuizView: View {
     @Environment(\.dismiss) private var dismiss
 
     @State private var currentQuestionIndex: Int = 0
-    @State private var selectedOptionIndex: Int? = nil
+
+    // Per-question answer state — only the fields relevant to the current question's
+    // type are meaningful at any given time; the rest sit at their default.
+    @State private var selectedOptionIndex: Int? = nil          // .mcq / .trueFalse
+    @State private var chronoOrder: [Int] = []                   // .chronological — display-slot indices, in the order tapped
+    @State private var sliderValue: Double = 0                   // .numericSlider / .percentageSlider
     @State private var hasAnswered: Bool = false
-    @State private var correctCount: Int = 0
+    @State private var currentQuestionPoints: Int = 0
+
+    @State private var totalPointsEarned: Int = 0
     @State private var isFinished: Bool = false
     @State private var showFeedback: Bool = false
     @State private var showXPProgress: Bool = false
@@ -55,12 +62,21 @@ struct QuizView: View {
         shuffledQuestions[currentQuestionIndex]
     }
 
+    /// Valid only for `.mcq` / `.trueFalse` — whether the tapped option is the correct one.
     private var isCorrect: Bool {
         selectedOptionIndex == currentQuestion.correctIndex
     }
 
+    private var isFullyCorrect: Bool {
+        currentQuestionPoints == currentQuestion.maxPoints
+    }
+
     private var progressValue: Double {
         Double(currentQuestionIndex + 1) / Double(shuffledQuestions.count)
+    }
+
+    private var maxPossiblePoints: Int {
+        shuffledQuestions.reduce(0) { $0 + $1.maxPoints }
     }
 
     var body: some View {
@@ -205,23 +221,94 @@ struct QuizView: View {
     }
 
     private func shuffleAllQuestions() {
-        shuffledQuestions = course.quiz.map { q in
-            var indexedOptions = q.options.enumerated().map { ($0.offset, $0.element) }
-            indexedOptions.shuffle()
-            let newCorrectIndex = indexedOptions.firstIndex(where: { $0.0 == q.correctIndex }) ?? 0
-            return ShuffledQuestion(
-                question: q.question,
-                options: indexedOptions.map(\.1),
-                correctIndex: newCorrectIndex,
-                explanation: q.explanation
-            )
-        }
+        shuffledQuestions = course.quiz.map { QuizShuffler.shuffle($0) }
         questionAppeared = false
+        resetAnswerState()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
                 questionAppeared = true
             }
         }
+    }
+
+    /// Clears the answer state for whichever question is now `currentQuestionIndex`.
+    private func resetAnswerState() {
+        selectedOptionIndex = nil
+        chronoOrder = []
+        if shuffledQuestions.indices.contains(currentQuestionIndex) {
+            let q = shuffledQuestions[currentQuestionIndex]
+            sliderValue = ((q.sliderMin + q.sliderMax) / 2).rounded()
+        } else {
+            sliderValue = 0
+        }
+        hasAnswered = false
+        currentQuestionPoints = 0
+    }
+
+    // MARK: - Answer submission
+
+    private func submitAnswer(_ answer: QuizAnswer) {
+        guard !hasAnswered else { return }
+        let question = currentQuestion
+        let earned = QuizScoring.points(for: question, answer: answer)
+        let fullyCorrect = QuizScoring.isFullyCorrect(for: question, answer: answer)
+
+        hasAnswered = true
+        currentQuestionPoints = earned
+        totalPointsEarned += earned
+
+        if fullyCorrect {
+            UINotificationFeedbackGenerator().notificationOccurred(.success)
+            comboCount += 1
+            if comboCount >= 2 {
+                withAnimation(.spring(response: 0.3)) { showCombo = true }
+            }
+        } else {
+            UINotificationFeedbackGenerator().notificationOccurred(earned > 0 ? .warning : .error)
+            comboCount = 0
+            withAnimation(.spring(response: 0.3)) { showCombo = false }
+        }
+
+        if earned > 0 {
+            xpEarned += earned
+            progressManager.addXP(subject: course.subject, amount: earned)
+            showXPBubble(xp: earned)
+        }
+
+        withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
+            showFeedback = true
+        }
+    }
+
+    private func selectOption(_ index: Int) {
+        guard !hasAnswered else { return }
+        selectedOptionIndex = index
+        submitAnswer(.singleChoice(index))
+    }
+
+    private func tapChronoItem(displaySlot: Int) {
+        guard !hasAnswered, !chronoOrder.contains(displaySlot) else { return }
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+        withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) {
+            chronoOrder.append(displaySlot)
+        }
+    }
+
+    private func removeChronoItem(at position: Int) {
+        guard !hasAnswered, chronoOrder.indices.contains(position) else { return }
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+        withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) {
+            chronoOrder.remove(at: position)
+        }
+    }
+
+    private func submitChronoOrder() {
+        guard chronoOrder.count == currentQuestion.items.count else { return }
+        submitAnswer(.order(chronoOrder))
+    }
+
+    private func submitSlider() {
+        submitAnswer(.value(sliderValue))
     }
 
     // MARK: - Question screen
@@ -238,21 +325,22 @@ struct QuizView: View {
                         .offset(y: questionAppeared ? 0 : 12)
                         .padding(.top, 16)
 
-                    VStack(spacing: 10) {
-                        ForEach(Array(currentQuestion.options.enumerated()), id: \.offset) { index, option in
-                            optionRow(index: index, text: option)
-                                .opacity(questionAppeared ? 1 : 0)
-                                .offset(y: questionAppeared ? 0 : CGFloat(12 + index * 4))
-                                .animation(
-                                    .spring(response: 0.45, dampingFraction: 0.85).delay(Double(index) * 0.06),
-                                    value: questionAppeared
-                                )
+                    Group {
+                        switch currentQuestion.type {
+                        case .mcq, .trueFalse:
+                            choiceAnswerBody
+                        case .chronological:
+                            chronologicalAnswerBody
+                        case .numericSlider, .percentageSlider:
+                            sliderAnswerBody
                         }
                     }
-                    .id("options_\(currentQuestionIndex)")
+                    .opacity(questionAppeared ? 1 : 0)
+                    .offset(y: questionAppeared ? 0 : 12)
+                    .id("answer_\(currentQuestionIndex)")
                 }
                 .padding(.horizontal, 20)
-                .padding(.bottom, showFeedback ? 240 : 32)
+                .padding(.bottom, showFeedback ? 260 : 32)
             }
             .scrollIndicators(.hidden)
 
@@ -337,34 +425,28 @@ struct QuizView: View {
         .padding(.top, 10)
     }
 
+    // MARK: - Choice answer (.mcq / .trueFalse)
+
+    @ViewBuilder
+    private var choiceAnswerBody: some View {
+        if currentQuestion.type == .trueFalse {
+            HStack(spacing: 12) {
+                ForEach(Array(currentQuestion.options.enumerated()), id: \.offset) { index, option in
+                    trueFalseButton(index: index, text: option)
+                }
+            }
+        } else {
+            VStack(spacing: 10) {
+                ForEach(Array(currentQuestion.options.enumerated()), id: \.offset) { index, option in
+                    optionRow(index: index, text: option)
+                }
+            }
+        }
+    }
+
     private func optionRow(index: Int, text: String) -> some View {
         Button {
-            guard !hasAnswered else { return }
-            selectedOptionIndex = index
-            hasAnswered = true
-            if index == currentQuestion.correctIndex {
-                UINotificationFeedbackGenerator().notificationOccurred(.success)
-                correctCount += 1
-                comboCount += 1
-                let xp = comboCount >= 3 ? 3 : (comboCount >= 2 ? 2 : 1)
-                xpEarned += xp
-                progressManager.addXP(subject: course.subject, amount: xp)
-                showXPBubble(xp: xp)
-                if comboCount >= 2 {
-                    withAnimation(.spring(response: 0.3)) {
-                        showCombo = true
-                    }
-                }
-            } else {
-                UINotificationFeedbackGenerator().notificationOccurred(.error)
-                comboCount = 0
-                withAnimation(.spring(response: 0.3)) {
-                    showCombo = false
-                }
-            }
-            withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
-                showFeedback = true
-            }
+            selectOption(index)
         } label: {
             HStack(spacing: 14) {
                 Text("\(Character(UnicodeScalar(65 + index)!))")
@@ -396,6 +478,39 @@ struct QuizView: View {
         }
         .buttonStyle(SoftPressButtonStyle())
         .animation(.spring(response: 0.3, dampingFraction: 0.8), value: hasAnswered)
+    }
+
+    private func trueFalseButton(index: Int, text: String) -> some View {
+        Button {
+            selectOption(index)
+        } label: {
+            VStack(spacing: 10) {
+                Image(systemName: index == 0 ? "checkmark.circle.fill" : "xmark.circle.fill")
+                    .font(.system(size: 26, weight: .regular))
+                    .foregroundStyle(trueFalseIconColor(for: index))
+                Text(text)
+                    .font(DS.title(.headline, .semibold))
+                    .foregroundStyle(optionTextColor(for: index))
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 22)
+            .background(optionRowBg(for: index))
+            .clipShape(.rect(cornerRadius: DS.Radius.control))
+            .overlay {
+                RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                    .strokeBorder(optionRowBorder(for: index), lineWidth: hasAnswered && (index == currentQuestion.correctIndex || index == selectedOptionIndex) ? 1.5 : 1)
+            }
+            .opacity(hasAnswered && index != currentQuestion.correctIndex && index != selectedOptionIndex ? 0.55 : 1)
+        }
+        .buttonStyle(SoftPressButtonStyle())
+        .animation(.spring(response: 0.3, dampingFraction: 0.8), value: hasAnswered)
+    }
+
+    private func trueFalseIconColor(for index: Int) -> Color {
+        guard hasAnswered else { return DS.accentSoft }
+        if index == currentQuestion.correctIndex { return DS.success }
+        if index == selectedOptionIndex { return DS.danger }
+        return DS.accentSoft
     }
 
     private func optionRowBg(for index: Int) -> Color {
@@ -451,7 +566,245 @@ struct QuizView: View {
         }
     }
 
+    // MARK: - Chronological ordering answer
+
+    private var chronologicalAnswerBody: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            Text(languageManager.text("quiz.chronological.instruction"))
+                .font(DS.sans(.subheadline))
+                .foregroundStyle(DS.inkSecondary)
+
+            if !chronoOrder.isEmpty {
+                VStack(alignment: .leading, spacing: 8) {
+                    Text(languageManager.text("quiz.chronological.yourOrder").uppercased())
+                        .font(DS.sans(.caption2, .semibold))
+                        .foregroundStyle(DS.inkTertiary)
+                        .tracking(1.0)
+
+                    VStack(spacing: 8) {
+                        ForEach(Array(chronoOrder.enumerated()), id: \.offset) { position, slot in
+                            chronoOrderRow(position: position, slot: slot)
+                        }
+                    }
+                }
+            }
+
+            let remaining = currentQuestion.items.indices.filter { !chronoOrder.contains($0) }
+            if !remaining.isEmpty {
+                VStack(spacing: 8) {
+                    ForEach(remaining, id: \.self) { slot in
+                        chronoPoolRow(slot: slot)
+                    }
+                }
+            }
+
+            if hasAnswered {
+                Text("\(languageManager.text("quiz.chronological.correctOrder")) : \(correctChronologicalOrderText)")
+                    .font(DS.sans(.caption, .medium))
+                    .foregroundStyle(DS.inkSecondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            } else if chronoOrder.count == currentQuestion.items.count {
+                Button {
+                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                    submitChronoOrder()
+                } label: {
+                    Text(languageManager.text("quiz.chronological.validate"))
+                }
+                .buttonStyle(DSPrimaryButtonStyle())
+                .padding(.top, 4)
+            }
+        }
+    }
+
+    private func chronoOrderRow(position: Int, slot: Int) -> some View {
+        let isCorrectSlot = hasAnswered && currentQuestion.originalIndices.indices.contains(slot) && currentQuestion.originalIndices[slot] == position
+        let isWrongSlot = hasAnswered && !isCorrectSlot
+
+        return Button {
+            removeChronoItem(at: position)
+        } label: {
+            HStack(spacing: 12) {
+                Text("\(position + 1)")
+                    .font(DS.sans(.subheadline, .semibold))
+                    .foregroundStyle((isCorrectSlot || isWrongSlot) ? .white : DS.accentSoft)
+                    .frame(width: 30, height: 30)
+                    .background(chronoBadgeBg(isCorrect: isCorrectSlot, isWrong: isWrongSlot), in: Circle())
+
+                Text(currentQuestion.items[slot])
+                    .font(DS.sans(.body, .medium))
+                    .foregroundStyle(DS.ink)
+                    .multilineTextAlignment(.leading)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+
+                Image(systemName: hasAnswered ? (isCorrectSlot ? "checkmark.circle.fill" : "xmark.circle.fill") : "xmark")
+                    .font(.system(size: hasAnswered ? 18 : 12, weight: .medium))
+                    .foregroundStyle(hasAnswered ? (isCorrectSlot ? DS.success : DS.danger) : DS.inkTertiary)
+            }
+            .padding(.horizontal, 14)
+            .padding(.vertical, 12)
+            .background(chronoRowBg(isCorrect: isCorrectSlot, isWrong: isWrongSlot))
+            .clipShape(.rect(cornerRadius: DS.Radius.control))
+            .overlay {
+                RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                    .strokeBorder(chronoRowBorder(isCorrect: isCorrectSlot, isWrong: isWrongSlot), lineWidth: 1)
+            }
+        }
+        .buttonStyle(SoftPressButtonStyle())
+        .disabled(hasAnswered)
+    }
+
+    private func chronoPoolRow(slot: Int) -> some View {
+        Button {
+            tapChronoItem(displaySlot: slot)
+        } label: {
+            HStack(spacing: 12) {
+                Image(systemName: "plus.circle")
+                    .font(.system(size: 18, weight: .regular))
+                    .foregroundStyle(DS.accentSoft)
+                Text(currentQuestion.items[slot])
+                    .font(DS.sans(.body, .medium))
+                    .foregroundStyle(DS.ink)
+                    .multilineTextAlignment(.leading)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
+            .padding(.horizontal, 14)
+            .padding(.vertical, 12)
+            .background(DS.surface)
+            .clipShape(.rect(cornerRadius: DS.Radius.control))
+            .overlay {
+                RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                    .strokeBorder(DS.hairline, lineWidth: 1)
+            }
+        }
+        .buttonStyle(SoftPressButtonStyle())
+        .disabled(hasAnswered)
+    }
+
+    private func chronoRowBg(isCorrect: Bool, isWrong: Bool) -> Color {
+        if isCorrect { return DS.successTint }
+        if isWrong { return DS.dangerTint }
+        return DS.surface
+    }
+
+    private func chronoRowBorder(isCorrect: Bool, isWrong: Bool) -> Color {
+        if isCorrect { return DS.success }
+        if isWrong { return DS.danger }
+        return DS.hairline
+    }
+
+    private func chronoBadgeBg(isCorrect: Bool, isWrong: Bool) -> Color {
+        if isCorrect { return DS.success }
+        if isWrong { return DS.danger }
+        return DS.accentTint
+    }
+
+    private var correctChronologicalOrderText: String {
+        let items = currentQuestion.items
+        let originalIndices = currentQuestion.originalIndices
+        guard !items.isEmpty, items.count == originalIndices.count else { return "" }
+        let orderedSlots = items.indices.sorted { originalIndices[$0] < originalIndices[$1] }
+        return orderedSlots.map { items[$0] }.joined(separator: " → ")
+    }
+
+    // MARK: - Slider answer (.numericSlider / .percentageSlider)
+
+    private var sliderAnswerBody: some View {
+        VStack(spacing: 20) {
+            Text(sliderValueLabel(sliderValue))
+                .font(.system(size: 42, weight: .semibold))
+                .foregroundStyle(DS.ink)
+                .monospacedDigit()
+                .contentTransition(.numericText())
+                .frame(maxWidth: .infinity)
+
+            VStack(spacing: 6) {
+                Slider(value: $sliderValue, in: sliderBounds, step: 1)
+                    .tint(DS.accent)
+                    .disabled(hasAnswered)
+
+                HStack {
+                    Text(sliderValueLabel(currentQuestion.sliderMin))
+                    Spacer()
+                    Text(sliderValueLabel(currentQuestion.sliderMax))
+                }
+                .font(DS.sans(.caption2, .medium))
+                .foregroundStyle(DS.inkTertiary)
+            }
+
+            if hasAnswered {
+                HStack(spacing: 10) {
+                    sliderResultPill(
+                        label: languageManager.text("quiz.slider.yourGuess"),
+                        value: sliderValueLabel(sliderValue),
+                        tint: sliderGuessTint
+                    )
+                    sliderResultPill(
+                        label: languageManager.text("quiz.slider.correctAnswer"),
+                        value: sliderValueLabel(currentQuestion.correctValue),
+                        tint: DS.success
+                    )
+                }
+            } else {
+                Button {
+                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                    submitSlider()
+                } label: {
+                    Text(languageManager.text("quiz.slider.validate"))
+                }
+                .buttonStyle(DSPrimaryButtonStyle())
+            }
+        }
+        .padding(.vertical, 20)
+        .padding(.horizontal, 20)
+        .background(DS.surface)
+        .clipShape(.rect(cornerRadius: DS.Radius.card))
+        .overlay {
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .strokeBorder(DS.hairline, lineWidth: 1)
+        }
+        .dsSoftShadow()
+    }
+
+    private func sliderResultPill(label: String, value: String, tint: Color) -> some View {
+        VStack(spacing: 4) {
+            Text(label.uppercased())
+                .font(DS.sans(.caption2, .semibold))
+                .foregroundStyle(DS.inkTertiary)
+                .tracking(0.5)
+            Text(value)
+                .font(DS.sans(.subheadline, .semibold))
+                .foregroundStyle(tint)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 10)
+        .background(DS.surfaceMuted)
+        .clipShape(.rect(cornerRadius: DS.Radius.small))
+    }
+
+    private var sliderGuessTint: Color {
+        if currentQuestionPoints == currentQuestion.maxPoints { return DS.success }
+        if currentQuestionPoints > 0 { return DS.accentSoft }
+        return DS.danger
+    }
+
+    private var sliderBounds: ClosedRange<Double> {
+        let lo = currentQuestion.sliderMin
+        let hi = currentQuestion.sliderMax
+        return lo < hi ? lo...hi : 0...100
+    }
+
+    private func sliderValueLabel(_ value: Double) -> String {
+        let rounded = Int(value.rounded())
+        let unit = currentQuestion.unit
+        return unit.isEmpty ? "\(rounded)" : "\(rounded) \(unit)"
+    }
+
+    // MARK: - XP popup
+
     private func showXPBubble(xp: Int) {
+        guard xp > 0 else { return }
         popupXPAmount = xp
         withAnimation(.easeOut(duration: 0.25)) {
             showXPPopup = true
@@ -481,6 +834,8 @@ struct QuizView: View {
         .allowsHitTesting(false)
     }
 
+    // MARK: - Feedback bar
+
     private var feedbackBar: some View {
         VStack(spacing: 0) {
             Rectangle()
@@ -489,16 +844,16 @@ struct QuizView: View {
 
             VStack(spacing: 16) {
                 HStack(alignment: .top, spacing: 14) {
-                    Image(systemName: isCorrect ? "checkmark.circle.fill" : "xmark.circle.fill")
+                    Image(systemName: feedbackIconName)
                         .font(.system(size: 30, weight: .regular))
-                        .foregroundStyle(isCorrect ? DS.success : DS.danger)
+                        .foregroundStyle(feedbackColor)
 
                     VStack(alignment: .leading, spacing: 4) {
-                        Text(feedbackTitle(isCorrect: isCorrect, comboCount: comboCount))
+                        Text(feedbackTitle)
                             .font(DS.title(.headline, .semibold))
                             .foregroundStyle(DS.ink)
 
-                        if isCorrect, comboCount >= 2 {
+                        if isFullyCorrect, comboCount >= 2 {
                             HStack(spacing: 4) {
                                 Image(systemName: "flame.fill")
                                     .font(.system(size: 10, weight: .semibold))
@@ -506,6 +861,12 @@ struct QuizView: View {
                                     .font(DS.sans(.caption, .medium))
                             }
                             .foregroundStyle(DS.accentSoft)
+                        }
+
+                        if currentQuestion.maxPoints > 2 {
+                            Text("+\(currentQuestionPoints)/\(currentQuestion.maxPoints) \(languageManager.text("quiz.pointsEarned"))")
+                                .font(DS.sans(.caption, .medium))
+                                .foregroundStyle(DS.inkTertiary)
                         }
 
                         if !currentQuestion.explanation.isEmpty {
@@ -539,6 +900,35 @@ struct QuizView: View {
         }
     }
 
+    private var feedbackIconName: String {
+        if isFullyCorrect { return "checkmark.circle.fill" }
+        if currentQuestionPoints > 0 { return "circle.lefthalf.filled" }
+        return "xmark.circle.fill"
+    }
+
+    private var feedbackColor: Color {
+        if isFullyCorrect { return DS.success }
+        if currentQuestionPoints > 0 { return DS.accentSoft }
+        return DS.danger
+    }
+
+    private var feedbackTitle: String {
+        switch currentQuestion.type {
+        case .mcq, .trueFalse:
+            guard isFullyCorrect else { return languageManager.text("quiz.feedback.wrong") }
+            if comboCount >= 3 { return languageManager.text("quiz.feedback.amazing") }
+            if comboCount >= 2 { return languageManager.text("quiz.feedback.excellent") }
+            return languageManager.text("quiz.feedback.correct")
+        case .chronological, .numericSlider, .percentageSlider:
+            switch currentQuestionPoints {
+            case 3: return languageManager.text("quiz.feedback.correct")
+            case 2: return languageManager.text("quiz.feedback.close")
+            case 1: return languageManager.text("quiz.feedback.far")
+            default: return languageManager.text("quiz.feedback.wrong")
+            }
+        }
+    }
+
     private func nextQuestion() {
         if currentQuestionIndex < shuffledQuestions.count - 1 {
             withAnimation(.easeOut(duration: 0.2)) {
@@ -547,9 +937,8 @@ struct QuizView: View {
             }
             Task {
                 try? await Task.sleep(for: .milliseconds(200))
-                selectedOptionIndex = nil
-                hasAnswered = false
                 currentQuestionIndex += 1
+                resetAnswerState()
                 withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
                     questionAppeared = true
                 }
@@ -565,14 +954,14 @@ struct QuizView: View {
                 reason: .quizCompleted(courseId: course.id),
                 amount: ProgressManager.globalQuizCompletionXP
             )
-            progressManager.completeCourse(courseId: course.id, quizScore: correctCount, completedQuiz: true)
+            progressManager.completeCourse(courseId: course.id, quizScore: totalPointsEarned, completedQuiz: true)
             if !courseWasCompletedBeforeQuiz {
                 pendingCollectionEvents = progressManager.collectionProgressEvents(forNewlyCompletedCourseId: course.id)
             }
             AnalyticsService.trackQuizCompleted(
                 course: course,
-                score: correctCount,
-                total: shuffledQuestions.count
+                score: totalPointsEarned,
+                total: maxPossiblePoints
             )
             withAnimation(.spring(response: 0.5, dampingFraction: 0.85)) {
                 isFinished = true
@@ -621,14 +1010,14 @@ struct QuizView: View {
                             .font(.system(size: 48, weight: .semibold, design: .default))
                             .foregroundStyle(DS.ink)
                             .contentTransition(.numericText(countsDown: false))
-                        Text("/ \(shuffledQuestions.count)")
+                        Text("/ \(maxPossiblePoints)")
                             .font(DS.title(.title2, .medium))
                             .foregroundStyle(DS.inkTertiary)
                     }
                     .opacity(resultAppeared ? 1 : 0)
                     .animation(.spring(response: 0.5).delay(0.4), value: resultAppeared)
 
-                    Text(languageManager.text("quiz.correctAnswers"))
+                    Text(languageManager.text("quiz.pointsEarned"))
                         .font(DS.sans(.subheadline))
                         .foregroundStyle(DS.inkSecondary)
                         .opacity(resultAppeared ? 1 : 0)
@@ -704,12 +1093,10 @@ struct QuizView: View {
         starsRevealed = 0
         ringProgress = 0
         currentQuestionIndex = 0
-        selectedOptionIndex = nil
-        hasAnswered = false
-        correctCount = 0
         showFeedback = false
         comboCount = 0
         showCombo = false
+        totalPointsEarned = 0
         xpEarned = 0
         shuffleAllQuestions()
     }
@@ -720,15 +1107,15 @@ struct QuizView: View {
         }
         UINotificationFeedbackGenerator().notificationOccurred(.success)
 
-        let targetScore = correctCount
-        let totalQ = max(shuffledQuestions.count, 1)
+        let targetScore = totalPointsEarned
+        let totalPoints = max(maxPossiblePoints, 1)
         withAnimation(.easeOut(duration: 0.9).delay(0.35)) {
-            ringProgress = CGFloat(targetScore) / CGFloat(totalQ)
+            ringProgress = CGFloat(targetScore) / CGFloat(totalPoints)
         }
 
-        let steps = targetScore
-        for i in 1...max(steps, 1) {
-            let delay = 0.35 + Double(i) * (0.7 / Double(max(steps, 1)))
+        let steps = max(targetScore, 1)
+        for i in 1...steps {
+            let delay = 0.35 + Double(i) * (0.7 / Double(steps))
             DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                 if i <= targetScore {
                     withAnimation(.spring(response: 0.2)) {
@@ -739,7 +1126,7 @@ struct QuizView: View {
             }
         }
 
-        let percentage = Double(targetScore) / Double(totalQ)
+        let percentage = Double(targetScore) / Double(totalPoints)
         let starCount = percentage >= 0.8 ? 3 : (percentage >= 0.5 ? 2 : 1)
         for i in 0..<starCount {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.2 + Double(i) * 0.2) {
@@ -1010,13 +1397,6 @@ struct QuizView: View {
         }
         let toNext = max(0, t.upper - displayedXP)
         return String(format: languageManager.text("quiz.xpProgress.toNext"), toNext, t.level + 1)
-    }
-
-    private func feedbackTitle(isCorrect: Bool, comboCount: Int) -> String {
-        guard isCorrect else { return languageManager.text("quiz.feedback.wrong") }
-        if comboCount >= 3 { return languageManager.text("quiz.feedback.amazing") }
-        if comboCount >= 2 { return languageManager.text("quiz.feedback.excellent") }
-        return languageManager.text("quiz.feedback.correct")
     }
 
     private func breakdownRow(icon: String, label: String, amount: Int) -> some View {
