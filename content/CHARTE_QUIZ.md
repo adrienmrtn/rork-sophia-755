@@ -4,9 +4,10 @@ Document de référence pour la refonte du contenu des quiz (1195 questions, 239
 Décrit le schéma technique (déjà implémenté côté app) et les règles d'écriture pour la
 réécriture complète du contenu, qui suit cette infrastructure.
 
-**Statut : infrastructure technique livrée (types de question, notation, UI). Le
-contenu existant (1195 questions, toutes en `.mcq`) n'a pas encore été réécrit — c'est
-la prochaine étape.**
+**Statut : infrastructure technique livrée (types de question, notation, UI). Un pilote
+de 6 cours (le premier de chaque matière) a été réécrit selon cette charte — voir §6.
+Les 233 cours restants sont encore en `.mcq` d'origine, en attente de la généralisation
+du pilote.**
 
 ---
 
@@ -180,4 +181,36 @@ une question ajoutée seulement pour « faire le nombre ».
 
 ## 6. Journal des itérations
 
-*(à compléter au fil de la réécriture du contenu, comme pour `CHARTE_REFONTE.md`)*
+### Itération 1 (pilote — un cours par matière)
+
+Réécriture complète du quiz des 6 premiers cours de chaque matière, pour valider le
+mélange de types avant de généraliser :
+
+- **Histoire** — *La naissance de l'islam* (`course_1`) : 6 questions — 3 QCM, 1
+  vrai/faux, 1 curseur de date (mort de Muhammad, 632), 1 remise en ordre
+  chronologique (Hégire → Badr → prise de La Mecque → mort de Muhammad).
+- **Sciences** — *Pourquoi le ciel est-il bleu ?* (`course_41`) : 6 questions — 3 QCM,
+  2 vrai/faux, 1 curseur numérique (« combien de fois plus » la diffusion du bleu).
+  Pas de remise en ordre chronologique : le cours n'a pas de séquence d'événements à
+  ordonner, conformément à la règle « le type doit avoir du sens ».
+- **Littérature** — *L'Odyssée, Homère* (`course_81`) : 6 questions — 4 QCM, 2
+  vrai/faux. Ni curseur ni chronologie : les repères temporels du cours (VIIIe siècle
+  av. J.-C., 1922) ne se prêtaient pas à un exercice fiable.
+- **Art** — *La Renaissance italienne* (`course_121`) : 6 questions — 3 QCM, 1
+  vrai/faux, 1 curseur de date (fin de la Chapelle Sixtine, 1512), 1 remise en ordre
+  chronologique (perspective linéaire → chute de Constantinople → David → Chapelle
+  Sixtine).
+- **Mythologie** — *La naissance des dieux grecs* (`course_161`) : 6 questions — 4
+  QCM, 1 vrai/faux, 1 remise en ordre chronologique (Chaos → Titans → règne de Cronos
+  → victoire de Zeus). Pas de curseur numérique : aucune date réelle dans un récit
+  mythologique.
+- **Comprendre le monde actuel** — *La naissance du conflit israélo-palestinien*
+  (`course_201`) : 7 questions (cours dense, beaucoup de repères) — 3 QCM, 1 curseur
+  de date (Déclaration Balfour, 1917), 1 curseur de pourcentage (part de la
+  population juive de Palestine en 1918, 8 %), 1 vrai/faux, 1 remise en ordre
+  chronologique (congrès de Bâle → Déclaration Balfour → plan de partage de l'ONU →
+  indépendance/Nakba).
+
+Chaque question a été construite à partir du contenu réel des leçons (V2, FR), pas
+d'un canevas générique. Les 233 cours restants suivront le même principe, matière par
+matière.
