@@ -4,12 +4,9 @@ struct TermsView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(LanguageManager.self) private var languageManager
 
-    private let ink = BrutalPalette.ink
-    private let cream = BrutalPalette.cream
-
     var body: some View {
         ZStack {
-            cream.ignoresSafeArea()
+            DS.canvas.ignoresSafeArea()
 
             VStack(spacing: 0) {
                 LegalHeader(title: languageManager.text("legal.terms.title"), onClose: { dismiss() })
@@ -25,6 +22,7 @@ struct TermsView: View {
                     .padding(.top, 4)
                     .padding(.bottom, 48)
                 }
+                .scrollIndicators(.hidden)
             }
         }
         .presentationDragIndicator(.visible)
@@ -32,14 +30,14 @@ struct TermsView: View {
 
     private func sectionTitle(_ text: String) -> some View {
         Text(text)
-            .font(.system(.title3, design: .rounded, weight: .heavy))
-            .foregroundStyle(ink)
+            .font(DS.title(.title3, .semibold))
+            .foregroundStyle(DS.ink)
     }
 
     private func sectionBody(_ text: String) -> some View {
         Text(text)
-            .font(.system(.subheadline, design: .rounded, weight: .medium))
-            .foregroundStyle(ink.opacity(0.75))
+            .font(DS.sans(.subheadline))
+            .foregroundStyle(DS.inkSecondary)
             .lineSpacing(4)
             .frame(maxWidth: .infinity, alignment: .leading)
             .multilineTextAlignment(.leading)

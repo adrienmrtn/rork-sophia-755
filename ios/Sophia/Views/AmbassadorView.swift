@@ -27,9 +27,6 @@ struct AmbassadorView: View {
         case presentation
     }
 
-    private let ink = BrutalPalette.ink
-    private let cream = BrutalPalette.cream
-    private let green = Color(red: 0.12, green: 0.55, blue: 0.32)
     private let presentationLimit = 1_500
     private let presentationMin = 10
 
@@ -69,7 +66,7 @@ struct AmbassadorView: View {
 
     var body: some View {
         ZStack {
-            cream.ignoresSafeArea()
+            DS.canvas.ignoresSafeArea()
 
             VStack(spacing: 0) {
                 header
@@ -130,26 +127,23 @@ struct AmbassadorView: View {
     private func stepPill(index: Int, label: String, active: Bool) -> some View {
         HStack(spacing: 8) {
             ZStack {
-                Circle()
-                    .fill(active ? ink : Color.white)
-                    .overlay { Circle().strokeBorder(ink, lineWidth: 2) }
+                Circle().fill(active ? DS.accent : DS.surface)
+                Circle().strokeBorder(active ? DS.accent : DS.hairline, lineWidth: 1)
                 Text("\(index)")
-                    .font(.system(size: 13, weight: .heavy, design: .rounded))
-                    .foregroundStyle(active ? cream : ink.opacity(0.55))
+                    .font(DS.sans(.caption, .semibold))
+                    .foregroundStyle(active ? .white : DS.inkTertiary)
             }
-            .frame(width: 26, height: 26)
+            .frame(width: 24, height: 24)
 
             Text(label)
-                .font(.system(.caption, design: .rounded, weight: .heavy))
-                .foregroundStyle(active ? ink : ink.opacity(0.45))
+                .font(DS.sans(.caption, .semibold))
+                .foregroundStyle(active ? DS.ink : DS.inkTertiary)
                 .lineLimit(1)
                 .minimumScaleFactor(0.8)
         }
         .frame(maxWidth: .infinity)
         .padding(.vertical, 8)
-        .background(active ? BrutalPalette.yellow.opacity(0.35) : Color.white.opacity(0.6))
-        .clipShape(Capsule())
-        .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
+        .background(active ? DS.accentTint : DS.surfaceMuted, in: Capsule())
     }
 
     // MARK: - Step 1 — Program
@@ -159,13 +153,13 @@ struct AmbassadorView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 18) {
                     Text(languageManager.text("ambassador.program.heading"))
-                        .font(.system(.title, design: .rounded, weight: .heavy))
-                        .foregroundStyle(ink)
+                        .font(DS.title(.title, .semibold))
+                        .foregroundStyle(DS.ink)
                         .fixedSize(horizontal: false, vertical: true)
 
                     Text(languageManager.text("ambassador.intro"))
-                        .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                        .foregroundStyle(ink.opacity(0.72))
+                        .font(DS.sans(.subheadline))
+                        .foregroundStyle(DS.inkSecondary)
                         .fixedSize(horizontal: false, vertical: true)
 
                     highlightChips
@@ -179,8 +173,7 @@ struct AmbassadorView: View {
                         title: languageManager.text("ambassador.role.slideshow.title"),
                         income: languageManager.text("ambassador.role.slideshow.income"),
                         time: languageManager.text("ambassador.role.slideshow.time"),
-                        body: languageManager.text("ambassador.role.slideshow.body"),
-                        accent: BrutalPalette.yellow
+                        body: languageManager.text("ambassador.role.slideshow.body")
                     )
 
                     roleCard(
@@ -188,8 +181,7 @@ struct AmbassadorView: View {
                         title: languageManager.text("ambassador.role.ugc.title"),
                         income: languageManager.text("ambassador.role.ugc.income"),
                         time: languageManager.text("ambassador.role.ugc.time"),
-                        body: languageManager.text("ambassador.role.ugc.body"),
-                        accent: BrutalPalette.pink
+                        body: languageManager.text("ambassador.role.ugc.body")
                     )
 
                     sectionTitle(languageManager.text("ambassador.conditions.title"))
@@ -199,6 +191,7 @@ struct AmbassadorView: View {
                 .padding(.top, 12)
                 .padding(.bottom, 16)
             }
+            .scrollIndicators(.hidden)
 
             bottomBar {
                 Button {
@@ -209,107 +202,68 @@ struct AmbassadorView: View {
                 } label: {
                     HStack(spacing: 8) {
                         Text(languageManager.text("ambassador.discover.cta"))
-                            .font(.system(.headline, design: .rounded, weight: .heavy))
-                            .foregroundStyle(ink)
                         Image(systemName: "arrow.right")
-                            .font(.system(size: 15, weight: .heavy))
-                            .foregroundStyle(ink)
+                            .font(.system(size: 15, weight: .semibold))
                     }
                 }
-                .buttonStyle(BrutalAmbassadorButtonStyle(isEnabled: true))
+                .buttonStyle(DSPrimaryButtonStyle())
             }
         }
     }
 
     private var highlightChips: some View {
         VStack(spacing: 10) {
-            highlightRow(
-                icon: "crown.fill",
-                text: languageManager.text("ambassador.bonus"),
-                gradient: [
-                    Color(red: 1.0, green: 0.92, blue: 0.45),
-                    Color(red: 1.0, green: 0.78, blue: 0.55),
-                ]
-            )
-            highlightRow(
-                icon: "bolt.fill",
-                text: languageManager.text("ambassador.cta48h"),
-                gradient: [
-                    BrutalPalette.pastel(for: .sciences),
-                    BrutalPalette.pastel(for: .sciences),
-                ]
-            )
+            highlightRow(icon: "crown.fill", text: languageManager.text("ambassador.bonus"))
+            highlightRow(icon: "bolt.fill", text: languageManager.text("ambassador.cta48h"))
         }
     }
 
-    private func highlightRow(icon: String, text: String, gradient: [Color]) -> some View {
+    private func highlightRow(icon: String, text: String) -> some View {
         HStack(spacing: 12) {
-            ZStack {
-                Circle()
-                    .fill(Color.white.opacity(0.9))
-                    .overlay { Circle().strokeBorder(ink, lineWidth: 2) }
-                Image(systemName: icon)
-                    .font(.system(size: 15, weight: .heavy))
-                    .foregroundStyle(ink)
-            }
-            .frame(width: 36, height: 36)
+            Image(systemName: icon)
+                .font(.system(size: 15, weight: .medium))
+                .foregroundStyle(DS.accentSoft)
+                .frame(width: 36, height: 36)
+                .background(DS.surface, in: Circle())
 
             Text(text)
-                .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                .foregroundStyle(ink)
+                .font(DS.sans(.subheadline, .semibold))
+                .foregroundStyle(DS.ink)
                 .fixedSize(horizontal: false, vertical: true)
             Spacer(minLength: 0)
         }
         .padding(.horizontal, 14)
         .padding(.vertical, 12)
-        .background(
-            LinearGradient(colors: gradient, startPoint: .leading, endPoint: .trailing)
-        )
-        .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
-        .overlay {
-            RoundedRectangle(cornerRadius: 14, style: .continuous)
-                .strokeBorder(ink, lineWidth: 2.5)
-        }
+        .background(DS.accentTint)
+        .clipShape(RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous))
     }
 
     private var howItWorksCard: some View {
         VStack(alignment: .leading, spacing: 14) {
             Text(languageManager.text("ambassador.how.title"))
-                .font(.system(.headline, design: .rounded, weight: .heavy))
-                .foregroundStyle(ink)
+                .font(DS.title(.headline, .semibold))
+                .foregroundStyle(DS.ink)
 
             howStep(1, languageManager.text("ambassador.how.step1"))
             howStep(2, languageManager.text("ambassador.how.step2"))
             howStep(3, languageManager.text("ambassador.how.step3"))
         }
-        .padding(16)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color.white)
-        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
-        .overlay {
-            RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .strokeBorder(ink, lineWidth: 2.5)
-        }
+        .dsCard()
     }
 
     private func howStep(_ index: Int, _ text: String) -> some View {
         HStack(alignment: .top, spacing: 12) {
             ZStack {
-                RoundedRectangle(cornerRadius: 8, style: .continuous)
-                    .fill(BrutalPalette.yellow)
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 8, style: .continuous)
-                            .strokeBorder(ink, lineWidth: 2)
-                    }
+                Circle().fill(DS.accentTint)
                 Text("\(index)")
-                    .font(.system(size: 14, weight: .heavy, design: .rounded))
-                    .foregroundStyle(ink)
+                    .font(DS.sans(.subheadline, .semibold))
+                    .foregroundStyle(DS.accentSoft)
             }
             .frame(width: 28, height: 28)
 
             Text(text)
-                .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                .foregroundStyle(ink.opacity(0.8))
+                .font(DS.sans(.subheadline))
+                .foregroundStyle(DS.inkSecondary)
                 .fixedSize(horizontal: false, vertical: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
@@ -320,79 +274,52 @@ struct AmbassadorView: View {
         title: String,
         income: String,
         time: String,
-        body: String,
-        accent: Color
+        body: String
     ) -> some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(spacing: 10) {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .fill(accent)
-                        .overlay {
-                            RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                .strokeBorder(ink, lineWidth: 2)
-                        }
-                    Image(systemName: icon)
-                        .font(.system(size: 16, weight: .heavy))
-                        .foregroundStyle(ink)
-                }
-                .frame(width: 40, height: 40)
+                Image(systemName: icon)
+                    .font(.system(size: 16, weight: .medium))
+                    .foregroundStyle(DS.accentSoft)
+                    .frame(width: 40, height: 40)
+                    .background(DS.accentTint, in: RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous))
 
                 Text(title)
-                    .font(.system(.headline, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink)
+                    .font(DS.title(.headline, .semibold))
+                    .foregroundStyle(DS.ink)
                 Spacer(minLength: 0)
             }
 
             HStack(spacing: 10) {
-                statBlock(
-                    value: income,
-                    label: languageManager.text("ambassador.stat.income"),
-                    bg: accent.opacity(0.35)
-                )
-                statBlock(
-                    value: time,
-                    label: languageManager.text("ambassador.stat.time"),
-                    bg: Color.white
-                )
+                statBlock(value: income, label: languageManager.text("ambassador.stat.income"))
+                statBlock(value: time, label: languageManager.text("ambassador.stat.time"))
             }
 
             Text(body)
-                .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                .foregroundStyle(ink.opacity(0.72))
+                .font(DS.sans(.subheadline))
+                .foregroundStyle(DS.inkSecondary)
                 .fixedSize(horizontal: false, vertical: true)
         }
-        .padding(16)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color.white)
-        .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
-        .overlay {
-            RoundedRectangle(cornerRadius: 18, style: .continuous)
-                .strokeBorder(ink, lineWidth: 2.5)
-        }
+        .dsCard()
     }
 
-    private func statBlock(value: String, label: String, bg: Color) -> some View {
+    private func statBlock(value: String, label: String) -> some View {
         VStack(alignment: .leading, spacing: 2) {
             Text(value)
-                .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                .foregroundStyle(ink)
+                .font(DS.sans(.subheadline, .semibold))
+                .foregroundStyle(DS.ink)
                 .lineLimit(1)
                 .minimumScaleFactor(0.7)
             Text(label.uppercased())
-                .font(.system(size: 9, weight: .heavy, design: .rounded))
-                .foregroundStyle(ink.opacity(0.5))
+                .font(DS.sans(.caption2, .semibold))
+                .foregroundStyle(DS.inkTertiary)
                 .tracking(0.8)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.horizontal, 12)
         .padding(.vertical, 10)
-        .background(bg)
-        .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
-        .overlay {
-            RoundedRectangle(cornerRadius: 12, style: .continuous)
-                .strokeBorder(ink, lineWidth: 2)
-        }
+        .background(DS.surfaceMuted)
+        .clipShape(RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous))
     }
 
     private var conditionsCard: some View {
@@ -400,24 +327,17 @@ struct AmbassadorView: View {
             conditionRow(languageManager.text("ambassador.conditions.countries"))
             conditionRow(languageManager.text("ambassador.conditions.age"))
         }
-        .padding(16)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color.white)
-        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
-        .overlay {
-            RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .strokeBorder(ink, lineWidth: 2.5)
-        }
+        .dsCard()
     }
 
     private func conditionRow(_ text: String) -> some View {
         HStack(alignment: .top, spacing: 10) {
             Image(systemName: "checkmark.circle.fill")
-                .font(.system(size: 16, weight: .heavy))
-                .foregroundStyle(green)
+                .font(.system(size: 16, weight: .medium))
+                .foregroundStyle(DS.success)
             Text(text)
-                .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                .foregroundStyle(ink.opacity(0.8))
+                .font(DS.sans(.subheadline))
+                .foregroundStyle(DS.inkSecondary)
                 .fixedSize(horizontal: false, vertical: true)
         }
     }
@@ -463,8 +383,8 @@ struct AmbassadorView: View {
 
                     if let errorMessage {
                         Text(errorMessage)
-                            .font(.system(.caption, design: .rounded, weight: .heavy))
-                            .foregroundStyle(Color(red: 0.85, green: 0.1, blue: 0.2))
+                            .font(DS.sans(.caption, .semibold))
+                            .foregroundStyle(DS.danger)
                             .frame(maxWidth: .infinity, alignment: .leading)
                     }
                 }
@@ -472,14 +392,15 @@ struct AmbassadorView: View {
                 .padding(.top, 12)
                 .padding(.bottom, 16)
             }
+            .scrollIndicators(.hidden)
             .scrollDismissesKeyboard(.interactively)
 
             bottomBar {
                 VStack(spacing: 8) {
                     if !canSubmit && errorMessage == nil {
                         Text(languageManager.text("ambassador.form.hint"))
-                            .font(.system(.caption, design: .rounded, weight: .semibold))
-                            .foregroundStyle(ink.opacity(0.55))
+                            .font(DS.sans(.caption))
+                            .foregroundStyle(DS.inkSecondary)
                             .multilineTextAlignment(.center)
                             .frame(maxWidth: .infinity)
                     }
@@ -493,24 +414,25 @@ struct AmbassadorView: View {
                             }
                         } label: {
                             Image(systemName: "chevron.left")
-                                .font(.system(size: 16, weight: .heavy))
-                                .foregroundStyle(ink)
+                                .font(.system(size: 16, weight: .medium))
+                                .foregroundStyle(DS.inkSecondary)
                                 .frame(width: 54, height: 54)
+                                .background(DS.surface, in: Circle())
+                                .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
                         }
-                        .buttonStyle(BrutalRaisedIconButtonStyle())
+                        .buttonStyle(SoftPressButtonStyle())
 
                         Button(action: submit) {
                             HStack(spacing: 10) {
                                 if isSubmitting {
-                                    ProgressView().tint(ink)
+                                    ProgressView().tint(.white)
                                 }
                                 Text(languageManager.text("ambassador.form.submit"))
-                                    .font(.system(.headline, design: .rounded, weight: .heavy))
-                                    .foregroundStyle(ink)
                             }
                         }
-                        .buttonStyle(BrutalAmbassadorButtonStyle(isEnabled: canSubmit))
+                        .buttonStyle(DSPrimaryButtonStyle())
                         .disabled(!canSubmit)
+                        .opacity(canSubmit ? 1 : 0.55)
                     }
                 }
             }
@@ -525,13 +447,13 @@ struct AmbassadorView: View {
         VStack(alignment: .leading, spacing: 8) {
             HStack(spacing: 6) {
                 Text(label.uppercased())
-                    .font(.system(.caption, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink.opacity(0.55))
+                    .font(DS.sans(.caption, .semibold))
+                    .foregroundStyle(DS.inkTertiary)
                     .tracking(1.1)
                 if valid {
                     Image(systemName: "checkmark.circle.fill")
-                        .font(.system(size: 12, weight: .heavy))
-                        .foregroundStyle(green)
+                        .font(.system(size: 12, weight: .medium))
+                        .foregroundStyle(DS.success)
                 }
             }
             content()
@@ -558,25 +480,25 @@ struct AmbassadorView: View {
         } label: {
             HStack(spacing: 12) {
                 Image(systemName: isOn.wrappedValue ? "checkmark.square.fill" : "square")
-                    .font(.system(size: 22, weight: .heavy))
-                    .foregroundStyle(ink)
+                    .font(.system(size: 20, weight: .medium))
+                    .foregroundStyle(isOn.wrappedValue ? DS.accent : DS.inkTertiary)
                 Text(title)
-                    .font(.system(.body, design: .rounded, weight: .semibold))
-                    .foregroundStyle(ink)
+                    .font(DS.sans(.body))
+                    .foregroundStyle(DS.ink)
                     .multilineTextAlignment(.leading)
                 Spacer(minLength: 0)
             }
             .padding(.horizontal, 14)
             .padding(.vertical, 14)
-            .background(isOn.wrappedValue ? BrutalPalette.yellow.opacity(0.35) : Color.white)
-            .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+            .background(isOn.wrappedValue ? DS.accentTint : DS.surface)
+            .clipShape(RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous))
             .overlay {
-                RoundedRectangle(cornerRadius: 14, style: .continuous)
-                    .strokeBorder(ink, lineWidth: 2.5)
+                RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                    .strokeBorder(isOn.wrappedValue ? DS.accentSoft.opacity(0.4) : DS.hairline, lineWidth: 1)
             }
             .contentShape(Rectangle())
         }
-        .buttonStyle(.plain)
+        .buttonStyle(SoftPressButtonStyle())
     }
 
     private var countryConfirmToggle: some View {
@@ -586,25 +508,25 @@ struct AmbassadorView: View {
         } label: {
             HStack(alignment: .top, spacing: 12) {
                 Image(systemName: countryConfirmed ? "checkmark.square.fill" : "square")
-                    .font(.system(size: 22, weight: .heavy))
-                    .foregroundStyle(ink)
+                    .font(.system(size: 20, weight: .medium))
+                    .foregroundStyle(countryConfirmed ? DS.accent : DS.inkTertiary)
                 Text(languageManager.text("ambassador.form.country.confirm"))
-                    .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                    .foregroundStyle(ink)
+                    .font(DS.sans(.subheadline))
+                    .foregroundStyle(DS.ink)
                     .multilineTextAlignment(.leading)
                 Spacer(minLength: 0)
             }
             .padding(.horizontal, 14)
             .padding(.vertical, 14)
-            .background(countryConfirmed ? BrutalPalette.pastel(for: .sciences).opacity(0.45) : Color.white)
-            .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+            .background(countryConfirmed ? DS.accentTint : DS.surface)
+            .clipShape(RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous))
             .overlay {
-                RoundedRectangle(cornerRadius: 14, style: .continuous)
-                    .strokeBorder(ink, lineWidth: 2.5)
+                RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                    .strokeBorder(countryConfirmed ? DS.accentSoft.opacity(0.4) : DS.hairline, lineWidth: 1)
             }
             .contentShape(Rectangle())
         }
-        .buttonStyle(.plain)
+        .buttonStyle(SoftPressButtonStyle())
     }
 
     private var emailField: some View {
@@ -612,22 +534,22 @@ struct AmbassadorView: View {
             "",
             text: $email,
             prompt: Text(languageManager.text("ambassador.form.email.placeholder"))
-                .font(.system(.body, design: .rounded, weight: .semibold))
-                .foregroundStyle(ink.opacity(0.35))
+                .font(DS.sans(.body))
+                .foregroundStyle(DS.inkTertiary)
         )
-        .font(.system(.body, design: .rounded, weight: .semibold))
-        .foregroundStyle(ink)
+        .font(DS.sans(.body))
+        .foregroundStyle(DS.ink)
         .keyboardType(.emailAddress)
         .textInputAutocapitalization(.never)
         .autocorrectionDisabled()
         .focused($focusedField, equals: .email)
         .padding(.horizontal, 14)
         .padding(.vertical, 14)
-        .background(Color.white)
-        .clipShape(.rect(cornerRadius: 16))
+        .background(DS.surface)
+        .clipShape(.rect(cornerRadius: DS.Radius.control))
         .overlay {
-            RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .strokeBorder(ink, lineWidth: 2.5)
+            RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                .strokeBorder(DS.hairline, lineWidth: 1)
         }
     }
 
@@ -636,11 +558,11 @@ struct AmbassadorView: View {
             "",
             text: $ageText,
             prompt: Text(languageManager.text("ambassador.form.age.placeholder"))
-                .font(.system(.body, design: .rounded, weight: .semibold))
-                .foregroundStyle(ink.opacity(0.35))
+                .font(DS.sans(.body))
+                .foregroundStyle(DS.inkTertiary)
         )
-        .font(.system(.body, design: .rounded, weight: .semibold))
-        .foregroundStyle(ink)
+        .font(DS.sans(.body))
+        .foregroundStyle(DS.ink)
         .keyboardType(.numberPad)
         .focused($focusedField, equals: .age)
         .onChange(of: ageText) { _, newValue in
@@ -651,11 +573,11 @@ struct AmbassadorView: View {
         }
         .padding(.horizontal, 14)
         .padding(.vertical, 14)
-        .background(Color.white)
-        .clipShape(.rect(cornerRadius: 16))
+        .background(DS.surface)
+        .clipShape(.rect(cornerRadius: DS.Radius.control))
         .overlay {
-            RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .strokeBorder(ink, lineWidth: 2.5)
+            RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                .strokeBorder(DS.hairline, lineWidth: 1)
         }
     }
 
@@ -663,16 +585,16 @@ struct AmbassadorView: View {
         ZStack(alignment: .topLeading) {
             if presentation.isEmpty {
                 Text(languageManager.text("ambassador.form.presentation.placeholder"))
-                    .font(.system(.body, design: .rounded, weight: .semibold))
-                    .foregroundStyle(ink.opacity(0.35))
+                    .font(DS.sans(.body))
+                    .foregroundStyle(DS.inkTertiary)
                     .padding(.horizontal, 14)
                     .padding(.vertical, 14)
                     .allowsHitTesting(false)
             }
 
             TextEditor(text: $presentation)
-                .font(.system(.body, design: .rounded, weight: .semibold))
-                .foregroundStyle(ink)
+                .font(DS.sans(.body))
+                .foregroundStyle(DS.ink)
                 .scrollContentBackground(.hidden)
                 .padding(.horizontal, 10)
                 .padding(.vertical, 8)
@@ -684,11 +606,11 @@ struct AmbassadorView: View {
                     }
                 }
         }
-        .background(Color.white)
-        .clipShape(.rect(cornerRadius: 16))
+        .background(DS.surface)
+        .clipShape(.rect(cornerRadius: DS.Radius.control))
         .overlay {
-            RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .strokeBorder(ink, lineWidth: 2.5)
+            RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                .strokeBorder(DS.hairline, lineWidth: 1)
         }
     }
 
@@ -700,8 +622,8 @@ struct AmbassadorView: View {
                 presentationMin
             )
         )
-        .font(.system(.caption, design: .rounded, weight: .semibold))
-        .foregroundStyle(presentationCount >= presentationMin ? green : ink.opacity(0.5))
+        .font(DS.sans(.caption))
+        .foregroundStyle(presentationCount >= presentationMin ? DS.success : DS.inkTertiary)
         .frame(maxWidth: .infinity, alignment: .trailing)
     }
 
@@ -712,54 +634,46 @@ struct AmbassadorView: View {
             Spacer()
 
             ZStack {
-                Circle()
-                    .fill(BrutalPalette.yellow)
-                    .overlay { Circle().strokeBorder(ink, lineWidth: 3) }
+                Circle().fill(DS.accentTint)
                 Image(systemName: "checkmark")
-                    .font(.system(size: 44, weight: .heavy))
-                    .foregroundStyle(ink)
+                    .font(.system(size: 38, weight: .medium))
+                    .foregroundStyle(DS.accent)
             }
             .frame(width: 96, height: 96)
             .symbolEffect(.bounce, value: stage == .success)
 
             Text(languageManager.text("ambassador.success.title"))
-                .font(.system(.title2, design: .rounded, weight: .heavy))
-                .foregroundStyle(ink)
+                .font(DS.title(.title2, .semibold))
+                .foregroundStyle(DS.ink)
                 .multilineTextAlignment(.center)
 
             Text(languageManager.text("ambassador.success.body"))
-                .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                .foregroundStyle(ink.opacity(0.65))
+                .font(DS.sans(.subheadline))
+                .foregroundStyle(DS.inkSecondary)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 24)
 
             HStack(spacing: 10) {
                 Image(systemName: "bolt.fill")
-                    .font(.system(size: 15, weight: .heavy))
-                    .foregroundStyle(ink)
+                    .font(.system(size: 15, weight: .medium))
+                    .foregroundStyle(DS.accentSoft)
                 Text(languageManager.text("ambassador.cta48h"))
-                    .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink)
+                    .font(DS.sans(.subheadline, .semibold))
+                    .foregroundStyle(DS.ink)
                     .fixedSize(horizontal: false, vertical: true)
             }
             .padding(.horizontal, 16)
             .padding(.vertical, 14)
-            .background(BrutalPalette.pastel(for: .sciences))
-            .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
-            .overlay {
-                RoundedRectangle(cornerRadius: 14, style: .continuous)
-                    .strokeBorder(ink, lineWidth: 2.5)
-            }
+            .background(DS.accentTint)
+            .clipShape(RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous))
             .padding(.horizontal, 20)
 
             Spacer()
 
             Button(action: { dismiss() }) {
                 Text(languageManager.text("ambassador.success.close"))
-                    .font(.system(.headline, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink)
             }
-            .buttonStyle(BrutalAmbassadorButtonStyle())
+            .buttonStyle(DSPrimaryButtonStyle())
             .padding(.horizontal, 20)
             .padding(.bottom, 32)
         }
@@ -769,8 +683,8 @@ struct AmbassadorView: View {
 
     private func sectionTitle(_ text: String) -> some View {
         Text(text.uppercased())
-            .font(.system(.caption, design: .rounded, weight: .heavy))
-            .foregroundStyle(ink.opacity(0.5))
+            .font(DS.sans(.caption, .semibold))
+            .foregroundStyle(DS.inkTertiary)
             .tracking(1.2)
     }
 
@@ -780,9 +694,9 @@ struct AmbassadorView: View {
             .padding(.top, 10)
             .padding(.bottom, 28)
             .background(
-                cream
+                DS.surface
                     .overlay(alignment: .top) {
-                        Rectangle().fill(ink.opacity(0.12)).frame(height: 2)
+                        Rectangle().fill(DS.hairline).frame(height: 1)
                     }
                     .ignoresSafeArea(edges: .bottom)
             )
@@ -832,65 +746,5 @@ struct AmbassadorView: View {
                 }
             }
         }
-    }
-}
-
-private struct BrutalAmbassadorButtonStyle: ButtonStyle {
-    var depth: CGFloat = 3
-    var isEnabled: Bool = true
-
-    func makeBody(configuration: Configuration) -> some View {
-        let pressed = configuration.isPressed && isEnabled
-
-        configuration.label
-            .frame(maxWidth: .infinity)
-            .padding(.vertical, 16)
-            .background(
-                ZStack(alignment: .top) {
-                    RoundedRectangle(cornerRadius: 18, style: .continuous)
-                        .fill(BrutalPalette.ink)
-                        .offset(y: depth)
-
-                    RoundedRectangle(cornerRadius: 18, style: .continuous)
-                        .fill(Color.white)
-                        .overlay {
-                            RoundedRectangle(cornerRadius: 18, style: .continuous)
-                                .strokeBorder(BrutalPalette.ink, lineWidth: 2.5)
-                        }
-                        .offset(y: pressed ? depth : 0)
-                }
-            )
-            .padding(.bottom, depth)
-            .opacity(isEnabled ? 1 : 0.55)
-            .contentShape(Rectangle())
-            .animation(.spring(response: 0.18, dampingFraction: 0.7), value: pressed)
-    }
-}
-
-private struct BrutalRaisedIconButtonStyle: ButtonStyle {
-    var depth: CGFloat = 3
-
-    func makeBody(configuration: Configuration) -> some View {
-        let pressed = configuration.isPressed
-
-        configuration.label
-            .background(
-                ZStack(alignment: .top) {
-                    RoundedRectangle(cornerRadius: 18, style: .continuous)
-                        .fill(BrutalPalette.ink)
-                        .offset(y: depth)
-
-                    RoundedRectangle(cornerRadius: 18, style: .continuous)
-                        .fill(Color.white)
-                        .overlay {
-                            RoundedRectangle(cornerRadius: 18, style: .continuous)
-                                .strokeBorder(BrutalPalette.ink, lineWidth: 2.5)
-                        }
-                        .offset(y: pressed ? depth : 0)
-                }
-            )
-            .padding(.bottom, depth)
-            .contentShape(Rectangle())
-            .animation(.spring(response: 0.18, dampingFraction: 0.7), value: pressed)
     }
 }

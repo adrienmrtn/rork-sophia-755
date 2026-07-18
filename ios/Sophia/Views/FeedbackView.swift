@@ -19,8 +19,6 @@ struct FeedbackView: View {
         case email
     }
 
-    private let ink = BrutalPalette.ink
-    private let cream = BrutalPalette.cream
     private let messageLimit = 2_000
 
     private var trimmedMessage: String {
@@ -33,7 +31,7 @@ struct FeedbackView: View {
 
     var body: some View {
         ZStack {
-            cream.ignoresSafeArea()
+            DS.canvas.ignoresSafeArea()
 
             VStack(spacing: 0) {
                 LegalHeader(
@@ -59,8 +57,8 @@ struct FeedbackView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
                     Text(languageManager.text("feedback.subtitle"))
-                        .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                        .foregroundStyle(ink.opacity(0.7))
+                        .font(DS.sans(.subheadline))
+                        .foregroundStyle(DS.inkSecondary)
                         .frame(maxWidth: .infinity, alignment: .leading)
 
                     fieldLabel(languageManager.text("feedback.category.label"))
@@ -73,14 +71,14 @@ struct FeedbackView: View {
                     emailField
 
                     Text(languageManager.text("feedback.technicalNote"))
-                        .font(.system(.caption, design: .rounded, weight: .semibold))
-                        .foregroundStyle(ink.opacity(0.45))
+                        .font(DS.sans(.caption))
+                        .foregroundStyle(DS.inkTertiary)
                         .frame(maxWidth: .infinity, alignment: .leading)
 
                     if let errorMessage {
                         Text(errorMessage)
-                            .font(.system(.caption, design: .rounded, weight: .heavy))
-                            .foregroundStyle(Color(red: 0.85, green: 0.1, blue: 0.2))
+                            .font(DS.sans(.caption, .semibold))
+                            .foregroundStyle(DS.danger)
                             .frame(maxWidth: .infinity, alignment: .leading)
                     }
                 }
@@ -88,48 +86,47 @@ struct FeedbackView: View {
                 .padding(.top, 8)
                 .padding(.bottom, 16)
             }
+            .scrollIndicators(.hidden)
             .scrollDismissesKeyboard(.interactively)
 
-            submitButton
-                .padding(.horizontal, 20)
-                .padding(.top, 8)
-                .padding(.bottom, 32)
-        }
-    }
-
-    private var submitButton: some View {
-        Button(action: submit) {
-            HStack(spacing: 10) {
-                if isSubmitting {
-                    ProgressView()
-                        .tint(ink)
+            Button(action: submit) {
+                HStack(spacing: 10) {
+                    if isSubmitting {
+                        ProgressView().tint(.white)
+                    }
+                    Text(languageManager.text("feedback.submit"))
                 }
-                Text(languageManager.text("feedback.submit"))
-                    .font(.system(.headline, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink)
             }
+            .buttonStyle(DSPrimaryButtonStyle())
+            .disabled(!canSubmit)
+            .opacity(canSubmit ? 1 : 0.55)
+            .padding(.horizontal, 20)
+            .padding(.top, 8)
+            .padding(.bottom, 32)
         }
-        .buttonStyle(BrutalFeedbackButtonStyle(isEnabled: canSubmit))
-        .disabled(!canSubmit)
     }
 
     private var successView: some View {
         VStack(spacing: 16) {
             Spacer()
 
-            Image(systemName: "checkmark.circle.fill")
-                .font(.system(size: 56, weight: .heavy))
-                .foregroundStyle(BrutalPalette.pastel(for: .sciences))
-                .symbolEffect(.bounce, value: didSucceed)
+            ZStack {
+                Circle().fill(DS.accentTint)
+                Image(systemName: "checkmark")
+                    .font(.system(size: 34, weight: .medium))
+                    .foregroundStyle(DS.accent)
+            }
+            .frame(width: 88, height: 88)
+            .symbolEffect(.bounce, value: didSucceed)
 
             Text(languageManager.text("feedback.success.title"))
-                .font(.system(.title2, design: .rounded, weight: .heavy))
-                .foregroundStyle(ink)
+                .font(DS.title(.title2, .semibold))
+                .foregroundStyle(DS.ink)
                 .multilineTextAlignment(.center)
 
             Text(languageManager.text("feedback.success.body"))
-                .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                .foregroundStyle(ink.opacity(0.65))
+                .font(DS.sans(.subheadline))
+                .foregroundStyle(DS.inkSecondary)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 24)
 
@@ -137,10 +134,8 @@ struct FeedbackView: View {
 
             Button(action: { dismiss() }) {
                 Text(languageManager.text("feedback.success.close"))
-                    .font(.system(.headline, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink)
             }
-            .buttonStyle(BrutalFeedbackButtonStyle())
+            .buttonStyle(DSPrimaryButtonStyle())
             .padding(.horizontal, 20)
             .padding(.bottom, 32)
         }
@@ -155,18 +150,18 @@ struct FeedbackView: View {
                         UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     } label: {
                         Text(item.label(language: languageManager.current))
-                            .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                            .foregroundStyle(category == item ? cream : ink)
+                            .font(DS.sans(.subheadline, .semibold))
+                            .foregroundStyle(category == item ? .white : DS.ink)
                             .padding(.horizontal, 14)
                             .padding(.vertical, 10)
-                            .background(category == item ? ink : Color.white)
-                            .clipShape(Capsule())
+                            .background(category == item ? DS.accent : DS.surface, in: Capsule())
                             .overlay {
-                                Capsule().strokeBorder(ink, lineWidth: 2)
+                                if category != item {
+                                    Capsule().strokeBorder(DS.hairline, lineWidth: 1)
+                                }
                             }
-                            .contentShape(Capsule())
                     }
-                    .buttonStyle(.plain)
+                    .buttonStyle(SoftPressButtonStyle())
                 }
             }
         }
@@ -176,16 +171,16 @@ struct FeedbackView: View {
         ZStack(alignment: .topLeading) {
             if message.isEmpty {
                 Text(languageManager.text("feedback.message.placeholder"))
-                    .font(.system(.body, design: .rounded, weight: .semibold))
-                    .foregroundStyle(ink.opacity(0.35))
+                    .font(DS.sans(.body))
+                    .foregroundStyle(DS.inkTertiary)
                     .padding(.horizontal, 14)
                     .padding(.vertical, 14)
                     .allowsHitTesting(false)
             }
 
             TextEditor(text: $message)
-                .font(.system(.body, design: .rounded, weight: .semibold))
-                .foregroundStyle(ink)
+                .font(DS.sans(.body))
+                .foregroundStyle(DS.ink)
                 .scrollContentBackground(.hidden)
                 .padding(.horizontal, 10)
                 .padding(.vertical, 8)
@@ -197,11 +192,11 @@ struct FeedbackView: View {
                     }
                 }
         }
-        .background(Color.white)
-        .clipShape(.rect(cornerRadius: 16))
+        .background(DS.surface)
+        .clipShape(.rect(cornerRadius: DS.Radius.control))
         .overlay {
-            RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .strokeBorder(ink, lineWidth: 2.5)
+            RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                .strokeBorder(DS.hairline, lineWidth: 1)
         }
     }
 
@@ -210,29 +205,29 @@ struct FeedbackView: View {
             "",
             text: $email,
             prompt: Text(languageManager.text("feedback.email.placeholder"))
-                .font(.system(.body, design: .rounded, weight: .semibold))
-                .foregroundStyle(ink.opacity(0.35))
+                .font(DS.sans(.body))
+                .foregroundStyle(DS.inkTertiary)
         )
-        .font(.system(.body, design: .rounded, weight: .semibold))
-        .foregroundStyle(ink)
+        .font(DS.sans(.body))
+        .foregroundStyle(DS.ink)
         .keyboardType(.emailAddress)
         .textInputAutocapitalization(.never)
         .autocorrectionDisabled()
         .focused($focusedField, equals: .email)
         .padding(.horizontal, 14)
         .padding(.vertical, 14)
-        .background(Color.white)
-        .clipShape(.rect(cornerRadius: 16))
+        .background(DS.surface)
+        .clipShape(.rect(cornerRadius: DS.Radius.control))
         .overlay {
-            RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .strokeBorder(ink, lineWidth: 2.5)
+            RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                .strokeBorder(DS.hairline, lineWidth: 1)
         }
     }
 
     private func fieldLabel(_ text: String) -> some View {
         Text(text.uppercased())
-            .font(.system(.caption, design: .rounded, weight: .heavy))
-            .foregroundStyle(ink.opacity(0.55))
+            .font(DS.sans(.caption, .semibold))
+            .foregroundStyle(DS.inkTertiary)
             .tracking(1.1)
     }
 
@@ -267,38 +262,5 @@ struct FeedbackView: View {
                 }
             }
         }
-    }
-}
-
-/// Brutalist feedback button — shadow and label move together on press.
-private struct BrutalFeedbackButtonStyle: ButtonStyle {
-    var depth: CGFloat = 3
-    var isEnabled: Bool = true
-
-    func makeBody(configuration: Configuration) -> some View {
-        let pressed = configuration.isPressed && isEnabled
-
-        configuration.label
-            .frame(maxWidth: .infinity)
-            .padding(.vertical, 16)
-            .background(
-                ZStack(alignment: .top) {
-                    RoundedRectangle(cornerRadius: 18, style: .continuous)
-                        .fill(BrutalPalette.ink)
-                        .offset(y: depth)
-
-                    RoundedRectangle(cornerRadius: 18, style: .continuous)
-                        .fill(Color.white)
-                        .overlay {
-                            RoundedRectangle(cornerRadius: 18, style: .continuous)
-                                .strokeBorder(BrutalPalette.ink, lineWidth: 2.5)
-                        }
-                        .offset(y: pressed ? depth : 0)
-                }
-            )
-            .padding(.bottom, depth)
-            .opacity(isEnabled ? 1 : 0.55)
-            .contentShape(Rectangle())
-            .animation(.spring(response: 0.18, dampingFraction: 0.7), value: pressed)
     }
 }
