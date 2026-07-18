@@ -23,7 +23,7 @@ PLAN = {
     "course_61_le_big_bang": (1, "big_bang_universe_expansion_galaxies", "L'expansion de l'Univers depuis le Big Bang."),
     "course_62_pourquoi_les_volcans_entrent_ils_en_erup": (1, "volcano_eruption_lava", "Une éruption : la remontée du magma jusqu'à la surface."),
     "course_63_comment_se_forment_les_tremblements_de_t": (1, "earthquake_collapsed_buildings_urban", "Les séismes libèrent d'un coup l'énergie accumulée le long des failles."),
-    "course_64_la_catastrophe_de_tchernobyl_1986": (1, "chernobyl_nuclear_plant_1986_explosion", "La centrale de Tchernobyl après l'explosion du réacteur n°4, en 1986."),
+    "course_64_la_catastrophe_de_tchernobyl_1986": (1, "pripyat_abandoned_city_chernobyl", "Le dôme de confinement du réacteur n°4, entouré par les immeubles abandonnés de Pripyat."),
     "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive": (1, "radio_telescope_seti", "Les radiotélescopes scrutent le ciel, à l'écoute d'un éventuel signal."),
     "course_67_qu_est_ce_qu_un_trou_noir": (1, "black_hole_accretion_disk_galaxy", "Un trou noir entouré de son disque d'accrétion incandescent."),
     "course_68_la_theorie_de_la_relativite_pour_tous": (1, "albert_einstein_portrait_princeton", "Albert Einstein, auteur de la théorie de la relativité."),
@@ -35,7 +35,21 @@ PLAN = {
     "course_77_qu_est_ce_que_la_matiere_noire": (1, "dark_matter_galaxy_cluster", "La matière noire trahit sa présence par son effet gravitationnel sur les amas de galaxies."),
     "course_78_comment_fonctionne_l_electricite_dans_no": (1, "neuron_electrical_signal_brain", "Les neurones communiquent par de brèves impulsions électriques."),
     "course_234_la_securite_alimentaire_mondiale": (1, "famine_sub_saharan_africa_malnutrition_child", "La faim touche encore des centaines de millions de personnes, surtout en Afrique subsaharienne."),
+    "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur": (1, "newton_cannonball_orbit_thought_experiment", "L'expérience de pensée du boulet de canon de Newton : la clé pour comprendre l'orbite."),
+    "course_74_pourquoi_certaines_especes_sont_elles_im": (1, "chromosome_dna_telomere_aging_cell", "Les télomères, aux extrémités des chromosomes, raccourcissent à chaque division cellulaire."),
+    "course_80_pourquoi_les_saisons_existent_sur_d_autr": (1, "uranus_planet_nasa", "Uranus, inclinée à environ 98°, connaît des saisons extrêmes de 42 ans."),
 }
+
+# Courses that still have no inline image at all: no existing bundled asset was found to be
+# both thematically accurate AND visually correct (see the Chernobyl fix above for what
+# happens when a "close enough" filename match doesn't actually depict the right thing).
+# Left as cover-only until better source images are curated.
+STILL_MISSING_NO_GOOD_MATCH = [
+    "course_4_le_couronnement_de_charlemagne_800",       # no image of Leo III's coronation / Aachen available
+    "course_34_la_decolonisation_panorama_1945_1975",    # no decolonization-specific image available
+    "course_70_comment_fonctionne_un_vaccin",            # no syringe/immunization photo available
+    "course_79_pourquoi_certains_sons_nous_donnent_ils", # no strong "musical frisson" match available
+]
 
 
 def load(path):

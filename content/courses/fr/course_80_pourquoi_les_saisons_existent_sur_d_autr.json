@@ -16,8 +16,14 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "Sur Terre, l'été et l'hiver naissent surtout de l'**inclinaison** de l'axe : environ **23,5°**. Le Soleil tape plus fort sur un hémisphère, puis sur l'autre. Ce modèle paraît évident. Dans le Système solaire, c'est plutôt une version modérée." },
-        { "type": "paragraph", "text": "Chaque planète combine son inclinaison et la forme de son orbite. Résultat : des mondes sans saisons, d'autres aux contrastes extrêmes, et des hivers qui durent des décennies." }
+        {
+          "type": "paragraph",
+          "text": "Sur Terre, l'été et l'hiver naissent surtout de l'**inclinaison** de l'axe : environ **23,5°**. Le Soleil tape plus fort sur un hémisphère, puis sur l'autre. Ce modèle paraît évident. Dans le Système solaire, c'est plutôt une version modérée."
+        },
+        {
+          "type": "paragraph",
+          "text": "Chaque planète combine son inclinaison et la forme de son orbite. Résultat : des mondes sans saisons, d'autres aux contrastes extrêmes, et des hivers qui durent des décennies."
+        }
       ]
     },
     {
@@ -25,9 +31,24 @@
       "title": "L'inclinaison, moteur des contrastes",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "L'[[Obliquité]], c'est l'angle entre l'axe de rotation d'une planète et la perpendiculaire à son orbite. Plus il est grand, plus les saisons sont marquées." },
-        { "type": "paragraph", "text": "**Uranus** est le cas extrême : inclinaison d'environ **98°**, presque couchée. Elle met **84 ans** à faire le tour du Soleil. Chaque pôle reçoit alors près de **42 ans** de jour continu, puis **42 ans** de nuit totale. **Mars**, à **25,2°**, ressemble à la Terre, mais son année dure **687 jours** terrestres : printemps et automnes de six mois. **Jupiter** et **Mercure**, presque droits, n'ont quasi pas de saisons." },
-        { "type": "funFact", "text": "Sur Uranus et Neptune, les pressions extrêmes pourraient faire « pleuvoir » des diamants formés à partir du carbone atmosphérique." }
+        {
+          "type": "paragraph",
+          "text": "L'[[Obliquité]], c'est l'angle entre l'axe de rotation d'une planète et la perpendiculaire à son orbite. Plus il est grand, plus les saisons sont marquées."
+        },
+        {
+          "type": "image",
+          "asset": "uranus_planet_nasa",
+          "ratio": "auto",
+          "caption": "Uranus, inclinée à environ 98°, connaît des saisons extrêmes de 42 ans."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Uranus** est le cas extrême : inclinaison d'environ **98°**, presque couchée. Elle met **84 ans** à faire le tour du Soleil. Chaque pôle reçoit alors près de **42 ans** de jour continu, puis **42 ans** de nuit totale. **Mars**, à **25,2°**, ressemble à la Terre, mais son année dure **687 jours** terrestres : printemps et automnes de six mois. **Jupiter** et **Mercure**, presque droits, n'ont quasi pas de saisons."
+        },
+        {
+          "type": "funFact",
+          "text": "Sur Uranus et Neptune, les pressions extrêmes pourraient faire « pleuvoir » des diamants formés à partir du carbone atmosphérique."
+        }
       ]
     },
     {
@@ -35,9 +56,18 @@
       "title": "Quand la distance au Soleil compte aussi",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Sur Terre, l'orbite est presque circulaire : la distance au Soleil varie peu. Ce n'est donc pas elle qui fait l'été ou l'hiver, mais l'angle des rayons." },
-        { "type": "paragraph", "text": "Sur **Mars**, l'orbite est bien plus ovale : de **207 à 249 millions de km**. Dans l'hémisphère sud, l'été tombe près du [[périhélie]], le point le plus proche du Soleil. Étés plus courts, mais plus chauds. Ce choc thermique déclenche parfois des **tempêtes de poussière** planétaires qui occultent le ciel." },
-        { "type": "funFact", "text": "En **2018**, une tempête saisonnière martienne a définitivement arrêté le rover Opportunity en lui masquant le Soleil." }
+        {
+          "type": "paragraph",
+          "text": "Sur Terre, l'orbite est presque circulaire : la distance au Soleil varie peu. Ce n'est donc pas elle qui fait l'été ou l'hiver, mais l'angle des rayons."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sur **Mars**, l'orbite est bien plus ovale : de **207 à 249 millions de km**. Dans l'hémisphère sud, l'été tombe près du [[périhélie]], le point le plus proche du Soleil. Étés plus courts, mais plus chauds. Ce choc thermique déclenche parfois des **tempêtes de poussière** planétaires qui occultent le ciel."
+        },
+        {
+          "type": "funFact",
+          "text": "En **2018**, une tempête saisonnière martienne a définitivement arrêté le rover Opportunity en lui masquant le Soleil."
+        }
       ]
     },
     {
@@ -45,9 +75,18 @@
       "title": "Vénus, Mercure, Saturne : d'autres règles",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "**Mercure**, sans vraie atmosphère ni inclinaison, vit surtout des extrêmes **quotidiens** : **430 °C** au Soleil, **-180 °C** la nuit. **Vénus** tourne en sens inverse ([[Rotation rétrograde]]) avec une inclinaison extrême, mais son effet de serre monstrueux égalise la température vers **460 °C** partout, tout le temps." },
-        { "type": "paragraph", "text": "**Saturne**, inclinée comme la Terre, a des saisons d'environ **7 ans**. L'angle des [[anneaux de Saturne]] change la lumière reçue par chaque hémisphère et modifie même la couleur des nuages." },
-        { "type": "funFact", "text": "Sur Vénus, un jour (rotation) dure plus longtemps qu'une année (révolution) : **243** jours terrestres contre **225**." }
+        {
+          "type": "paragraph",
+          "text": "**Mercure**, sans vraie atmosphère ni inclinaison, vit surtout des extrêmes **quotidiens** : **430 °C** au Soleil, **-180 °C** la nuit. **Vénus** tourne en sens inverse ([[Rotation rétrograde]]) avec une inclinaison extrême, mais son effet de serre monstrueux égalise la température vers **460 °C** partout, tout le temps."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Saturne**, inclinée comme la Terre, a des saisons d'environ **7 ans**. L'angle des [[anneaux de Saturne]] change la lumière reçue par chaque hémisphère et modifie même la couleur des nuages."
+        },
+        {
+          "type": "funFact",
+          "text": "Sur Vénus, un jour (rotation) dure plus longtemps qu'une année (révolution) : **243** jours terrestres contre **225**."
+        }
       ]
     },
     {
@@ -55,9 +94,18 @@
       "title": "Pourquoi la Terre a des saisons stables",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Sans la **Lune**, l'inclinaison terrestre oscillerait de façon chaotique entre 0° et plus de 80° sur des millions d'années. Des saisons type Uranus rendraient le climat presque inhabitable. La Lune agit comme un stabilisateur gravitationnel." },
-        { "type": "paragraph", "text": "En cherchant des [[exoplanètes]] habitables, les astronomes regardent donc aussi la stabilité de l'axe. Des saisons douces et régulières ne sont pas un détail : elles font partie des conditions d'une vie durable." },
-        { "type": "takeaway", "text": "Les saisons naissent surtout de l'inclinaison de l'axe. Sur Uranus, elles durent des décennies ; sur Mars, l'orbite ovale les rend asymétriques. La Lune protège celles de la Terre." }
+        {
+          "type": "paragraph",
+          "text": "Sans la **Lune**, l'inclinaison terrestre oscillerait de façon chaotique entre 0° et plus de 80° sur des millions d'années. Des saisons type Uranus rendraient le climat presque inhabitable. La Lune agit comme un stabilisateur gravitationnel."
+        },
+        {
+          "type": "paragraph",
+          "text": "En cherchant des [[exoplanètes]] habitables, les astronomes regardent donc aussi la stabilité de l'axe. Des saisons douces et régulières ne sont pas un détail : elles font partie des conditions d'une vie durable."
+        },
+        {
+          "type": "takeaway",
+          "text": "Les saisons naissent surtout de l'inclinaison de l'axe. Sur Uranus, elles durent des décennies ; sur Mars, l'orbite ovale les rend asymétriques. La Lune protège celles de la Terre."
+        }
       ]
     }
   ]
