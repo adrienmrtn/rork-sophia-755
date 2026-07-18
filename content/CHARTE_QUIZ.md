@@ -83,12 +83,15 @@ QuizQuestion(
 )
 
 // .chronological — `items` DANS L'ORDRE CORRECT (mélangés à l'affichage).
+// IMPORTANT : ne jamais mettre la date entre parenthèses dans le libellé d'un item —
+// cela révèle la réponse et vide l'exercice de son sens. Le libellé décrit l'événement,
+// sans aucune indication temporelle.
 QuizQuestion(
     id: "course_X_qN",
     type: .chronological,
     question: "Remets ces étapes de la Révolution française dans l'ordre.",
-    items: ["Prise de la Bastille (1789)", "Exécution de Louis XVI (1793)", "Coup d'État de Napoléon (1799)"],
-    explanation: "Trois jalons majeurs de la décennie révolutionnaire, dans l'ordre."
+    items: ["Prise de la Bastille", "Exécution de Louis XVI", "Coup d'État de Napoléon"],
+    explanation: "Trois jalons majeurs de la décennie révolutionnaire, dans l'ordre : 1789, 1793, 1799."
 )
 
 // .numericSlider — deviner une valeur, avec tolérance pour le plein de points.
@@ -151,12 +154,18 @@ questions et leur mix de types — ce n'est jamais un simple `nombre de question
 - **Une question doit être répondable avec ce que le cours a réellement enseigné.**
   Pas de détail qui n'a jamais été mentionné dans la leçon.
 - **Français courant**, pas de piège de vocabulaire.
+- **Pas de point final sur les options courtes** (`options` des `.mcq`/`.trueFalse`,
+  `items` des `.chronological`) — ce sont des libellés courts, pas des phrases ; un point
+  final y fait bizarre. `explanation`, elle, reste une phrase complète normalement
+  ponctuée.
 - Pour les QCM : les 3 leurres doivent être **plausibles** (pas absurdes), sinon la
   question devient trop facile et perd son intérêt pédagogique.
 - Pour le vrai/faux : éviter les questions à trous ("environ", "parfois") qui rendent le
   vrai/faux ambigu.
 - Pour le chronologique : 3 à 5 événements maximum (au-delà, l'exercice devient long et
-  frustrant sur mobile).
+  frustrant sur mobile) ; **jamais de date entre parenthèses dans le libellé** (voir §3).
+  L'interaction est un **glisser-déposer** (drag & drop) des cartes d'événements, pas un
+  simple tap.
 - Pour les sliders : la plage (`sliderMin`/`sliderMax`) doit rester resserrée autour
   d'une fourchette plausible — un curseur trop large rend la question trop facile
   (deviner "à peu près au milieu" suffit à approcher le plein de points).
@@ -166,16 +175,19 @@ questions et leur mix de types — ce n'est jamais un simple `nombre de question
 
 ## 5. Nombre de questions par cours
 
-**Pas de nombre fixe.** Le nombre de questions (et le mix de types) suit la densité et
-la richesse factuelle du cours, pas un quota :
+**Entre 6 et 10 questions par cours**, selon sa densité et sa richesse factuelle — pas
+un nombre fixe, mais pas un minimum symbolique non plus :
 
-- Un cours court et simple (ex. une notion scientifique en 4 écrans) peut n'avoir que
-  3-4 questions.
-- Un cours dense (ex. une bataille avec plusieurs dates, acteurs, conséquences) peut en
-  avoir 7-8, avec un mélange de types pertinents.
+- Un cours plus court ou plus simple reste autour de **6-7** questions.
+- Un cours dense (beaucoup de dates, d'acteurs, de mécanismes) va vers **8-10**
+  questions.
 
-L'objectif : chaque question a du sens et teste un point réellement enseigné — jamais
-une question ajoutée seulement pour « faire le nombre ».
+Le mix de types suit la même logique que le nombre : on choisit le type qui a du sens
+pour chaque fait à tester, on ne cherche jamais à caser un type "pour la forme". Un
+cours peut légitimement n'avoir aucun `.numericSlider`/`.chronological` si rien ne s'y
+prête (ex. un texte littéraire sans repères temporels fiables) — mais il ne doit pas
+non plus rester bloqué à 6 questions par facilité : si le cours contient assez de
+matière factuelle pour aller plus loin, on y va.
 
 ---
 
@@ -184,33 +196,32 @@ une question ajoutée seulement pour « faire le nombre ».
 ### Itération 1 (pilote — un cours par matière)
 
 Réécriture complète du quiz des 6 premiers cours de chaque matière, pour valider le
-mélange de types avant de généraliser :
+mélange de types avant de généraliser. Chaque question a été construite à partir du
+contenu réel des leçons (V2, FR), pas d'un canevas générique.
 
-- **Histoire** — *La naissance de l'islam* (`course_1`) : 6 questions — 3 QCM, 1
-  vrai/faux, 1 curseur de date (mort de Muhammad, 632), 1 remise en ordre
-  chronologique (Hégire → Badr → prise de La Mecque → mort de Muhammad).
-- **Sciences** — *Pourquoi le ciel est-il bleu ?* (`course_41`) : 6 questions — 3 QCM,
-  2 vrai/faux, 1 curseur numérique (« combien de fois plus » la diffusion du bleu).
-  Pas de remise en ordre chronologique : le cours n'a pas de séquence d'événements à
-  ordonner, conformément à la règle « le type doit avoir du sens ».
-- **Littérature** — *L'Odyssée, Homère* (`course_81`) : 6 questions — 4 QCM, 2
-  vrai/faux. Ni curseur ni chronologie : les repères temporels du cours (VIIIe siècle
-  av. J.-C., 1922) ne se prêtaient pas à un exercice fiable.
-- **Art** — *La Renaissance italienne* (`course_121`) : 6 questions — 3 QCM, 1
-  vrai/faux, 1 curseur de date (fin de la Chapelle Sixtine, 1512), 1 remise en ordre
-  chronologique (perspective linéaire → chute de Constantinople → David → Chapelle
-  Sixtine).
-- **Mythologie** — *La naissance des dieux grecs* (`course_161`) : 6 questions — 4
-  QCM, 1 vrai/faux, 1 remise en ordre chronologique (Chaos → Titans → règne de Cronos
-  → victoire de Zeus). Pas de curseur numérique : aucune date réelle dans un récit
-  mythologique.
+- **Histoire** — *La naissance de l'islam* (`course_1`) : 8 questions.
+- **Sciences** — *Pourquoi le ciel est-il bleu ?* (`course_41`) : 8 questions. Pas de
+  remise en ordre chronologique : le cours n'a pas de séquence d'événements à ordonner,
+  conformément à la règle « le type doit avoir du sens ».
+- **Littérature** — *L'Odyssée, Homère* (`course_81`) : 8 questions. Pas de remise en
+  ordre chronologique : les repères temporels du cours (VIIIe siècle av. J.-C., 1922)
+  ne se prêtaient pas à un exercice fiable.
+- **Art** — *La Renaissance italienne* (`course_121`) : 9 questions (cours dense).
+- **Mythologie** — *La naissance des dieux grecs* (`course_161`) : 8 questions. Pas de
+  curseur numérique : aucune date réelle dans un récit mythologique.
 - **Comprendre le monde actuel** — *La naissance du conflit israélo-palestinien*
-  (`course_201`) : 7 questions (cours dense, beaucoup de repères) — 3 QCM, 1 curseur
-  de date (Déclaration Balfour, 1917), 1 curseur de pourcentage (part de la
-  population juive de Palestine en 1918, 8 %), 1 vrai/faux, 1 remise en ordre
-  chronologique (congrès de Bâle → Déclaration Balfour → plan de partage de l'ONU →
-  indépendance/Nakba).
+  (`course_201`) : 9 questions (cours dense, beaucoup de repères).
 
-Chaque question a été construite à partir du contenu réel des leçons (V2, FR), pas
-d'un canevas générique. Les 233 cours restants suivront le même principe, matière par
-matière.
+### Itération 2 (corrections après relecture)
+
+- **Dates révélées dans les items chronologiques** : les libellés (ex. « La bataille de
+  Badr (624) ») indiquaient la date entre parenthèses, ce qui donnait la réponse et
+  videait l'exercice de son sens. Corrigé : les items ne portent plus aucune date ; les
+  dates apparaissent uniquement dans `explanation`, une fois la question validée.
+- **Interaction chronologique** : passage du tap-to-order à un vrai **glisser-déposer**
+  (drag & drop). Faire glisser une carte sur une autre échange leurs positions.
+- **Points finaux sur les options courtes** : supprimés (voir §4) — ils ne doivent
+  apparaître que dans `explanation`, jamais dans `options`/`items`.
+- **Nombre de questions** : les 6 cours étaient tous groupés à 6-7 questions. Relevé à
+  8-9 selon la densité (voir §5), en ajoutant des questions sur des faits du cours pas
+  encore couverts plutôt qu'en délayant les questions existantes.
