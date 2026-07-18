@@ -33,38 +33,19 @@ struct CourseCompletedView: View {
     @State private var showButtons: Bool = false
     @State private var showLevelUp: Bool = false
     @State private var showGlobalRankUp: Bool = false
-    @State private var thumbScale: CGFloat = 0.55
+    @State private var thumbScale: CGFloat = 0.6
     @State private var displayedXP: Int = 0
     @State private var displayedLevel: Int = 1
     @State private var barFill: CGFloat = 0
-    @State private var barShimmer: CGFloat = -80
     @State private var cachedThumb: UIImage?
-    @State private var quizButtonShimmer: CGFloat = -100
-    @State private var shimmerActive: Bool = false
-    @State private var barShimmerActive: Bool = false
     @State private var barFillStarted: Bool = false
 
     private enum EndFlowPhaseStep {
         case celebration, progression, actions
     }
 
-    private let ink = Color.black
-    private let cream = Color(red: 0.984, green: 0.961, blue: 0.918)
-    private let pink = Color(red: 1.0, green: 0.553, blue: 0.706)
-
     private var currentSubjectXP: Int {
         progressManager.xp(for: course.subject)
-    }
-
-    private var pastel: Color {
-        switch course.subject {
-        case .histoire: return Color(red: 1.0, green: 0.86, blue: 0.62)
-        case .sciences: return Color(red: 0.70, green: 0.95, blue: 0.80)
-        case .litterature: return Color(red: 1.0, green: 0.78, blue: 0.78)
-        case .art: return Color(red: 0.66, green: 0.92, blue: 0.96)
-        case .mythologie: return Color(red: 0.82, green: 0.78, blue: 1.0)
-        case .comprendreLeMonde: return Color(red: 0.74, green: 0.90, blue: 1.0)
-        }
     }
 
     private func tier(for xp: Int) -> (level: Int, lower: Int, upper: Int) {
@@ -103,55 +84,56 @@ struct CourseCompletedView: View {
 
     var body: some View {
         ZStack {
-            cream.ignoresSafeArea()
+            DS.canvas.ignoresSafeArea()
 
-            VStack(spacing: 0) {
-                Spacer(minLength: 12)
+            ScrollView {
+                VStack(spacing: 0) {
+                    Spacer(minLength: 20)
 
-                thumbnail
-                    .scaleEffect(thumbScale)
-                    .opacity(appeared ? 1 : 0)
+                    thumbnail
+                        .scaleEffect(thumbScale)
+                        .opacity(appeared ? 1 : 0)
 
-                Spacer(minLength: 18)
+                    Spacer(minLength: 18)
 
-                VStack(spacing: 8) {
                     Text(languageManager.text("course.completed"))
-                        .font(.system(.largeTitle, design: .rounded, weight: .heavy))
-                        .foregroundStyle(ink)
+                        .font(DS.title(.largeTitle, .semibold))
+                        .foregroundStyle(DS.ink)
                         .multilineTextAlignment(.center)
-                }
-                .padding(.horizontal, 24)
-                .opacity(showTitle ? 1 : 0)
-                .offset(y: showTitle ? 0 : 14)
+                        .padding(.horizontal, 24)
+                        .opacity(showTitle ? 1 : 0)
+                        .offset(y: showTitle ? 0 : 12)
 
-                Spacer(minLength: 20)
+                    Spacer(minLength: 20)
 
-                if phase != .celebration {
-                    progressionCard
-                        .padding(.horizontal, 20)
-                        .opacity(showCard ? 1 : 0)
-                        .offset(y: showCard ? 0 : 18)
-                        .transition(.opacity.combined(with: .offset(y: 18)))
-                }
+                    if phase != .celebration {
+                        progressionCard
+                            .padding(.horizontal, 20)
+                            .opacity(showCard ? 1 : 0)
+                            .offset(y: showCard ? 0 : 16)
+                            .transition(.opacity.combined(with: .offset(y: 16)))
+                    }
 
-                if showFreemiumGate && phase == .actions {
-                    freemiumNote
-                        .padding(.horizontal, 20)
-                        .padding(.top, 14)
-                        .opacity(showNote ? 1 : 0)
-                        .offset(y: showNote ? 0 : 10)
-                }
+                    if showFreemiumGate && phase == .actions {
+                        freemiumNote
+                            .padding(.horizontal, 20)
+                            .padding(.top, 14)
+                            .opacity(showNote ? 1 : 0)
+                            .offset(y: showNote ? 0 : 8)
+                    }
 
-                Spacer(minLength: 20)
+                    Spacer(minLength: 20)
 
-                if phase == .actions {
-                    actionButtons
-                        .padding(.horizontal, 20)
-                        .padding(.bottom, 24)
-                        .opacity(showButtons ? 1 : 0)
-                        .offset(y: showButtons ? 0 : 14)
+                    if phase == .actions {
+                        actionButtons
+                            .padding(.horizontal, 20)
+                            .padding(.bottom, 20)
+                            .opacity(showButtons ? 1 : 0)
+                            .offset(y: showButtons ? 0 : 12)
+                    }
                 }
             }
+            .scrollIndicators(.hidden)
         }
         .fullScreenCover(isPresented: $showLevelUp) {
             LevelUpCelebrationView(
@@ -183,31 +165,24 @@ struct CourseCompletedView: View {
             displayedXP = previousSubjectXP
             displayedLevel = startLevel
             barFill = barFraction(for: previousSubjectXP)
-            shimmerActive = true
-            ShimmerAnimation.runLoop(offset: $quizButtonShimmer) { shimmerActive }
             runOpeningSequence()
-        }
-        .onDisappear {
-            shimmerActive = false
-            barShimmerActive = false
         }
     }
 
     private func runOpeningSequence() {
         // Phase 1 — celebration
-        withAnimation(.spring(response: 0.85, dampingFraction: 0.78)) {
+        withAnimation(.spring(response: 0.7, dampingFraction: 0.8)) {
             appeared = true
             thumbScale = 1.0
             showTitle = true
         }
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.85) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
             phase = .progression
-            withAnimation(.spring(response: 0.85, dampingFraction: 0.82)) {
+            withAnimation(.spring(response: 0.7, dampingFraction: 0.85)) {
                 showCard = true
             }
-            // Bar fill starts 0.5s after card appears
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
                 animateProgression()
             }
         }
@@ -216,8 +191,6 @@ struct CourseCompletedView: View {
     private func animateProgression() {
         guard !barFillStarted else { return }
         barFillStarted = true
-        barShimmerActive = true
-        ShimmerAnimation.runLoop(offset: $barShimmer) { barShimmerActive }
 
         XPProgressAnimator.animate(
             from: previousSubjectXP,
@@ -234,11 +207,9 @@ struct CourseCompletedView: View {
                 }
             },
             haptic: {
-                XPProgressAnimator.progressionHaptic(intensity: 0.62)
-                UIImpactFeedbackGenerator(style: .rigid).impactOccurred(intensity: 0.35)
+                XPProgressAnimator.progressionHaptic(intensity: 0.5)
             },
             completion: {
-                barShimmerActive = false
                 UINotificationFeedbackGenerator().notificationOccurred(.success)
                 if didLevelUp {
                     showLevelUp = true
@@ -262,12 +233,12 @@ struct CourseCompletedView: View {
     private func revealActions() {
         phase = .actions
         if showFreemiumGate {
-            withAnimation(.easeOut(duration: 0.55)) {
+            withAnimation(.easeOut(duration: 0.5)) {
                 showNote = true
             }
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            withAnimation(.spring(response: 0.75, dampingFraction: 0.82)) {
+            withAnimation(.spring(response: 0.7, dampingFraction: 0.85)) {
                 showButtons = true
             }
         }
@@ -277,47 +248,30 @@ struct CourseCompletedView: View {
 
     private var thumbnail: some View {
         ZStack {
-            ZStack {
-                pastel
-                if let img = cachedThumb {
-                    Color.clear
-                        .overlay {
-                            Image(uiImage: img)
-                                .resizable()
-                                .scaledToFill()
-                        }
-                        .clipped()
-                        .allowsHitTesting(false)
-                } else {
-                    SubjectBadgeView(subject: course.subject, emojiSize: 56, cornerRadius: 0)
-                }
-            }
-            .frame(width: 160, height: 160)
-            .clipShape(.rect(cornerRadius: 22))
-            .overlay {
-                RoundedRectangle(cornerRadius: 22, style: .continuous)
-                    .strokeBorder(ink, lineWidth: 3)
-            }
-            .overlay(alignment: .bottomTrailing) {
-                ZStack {
-                    Circle().fill(pink)
-                        .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
-                    Image(systemName: "checkmark")
-                        .font(.system(size: 18, weight: .heavy))
-                        .foregroundStyle(ink)
-                }
-                .frame(width: 44, height: 44)
-                .offset(x: 10, y: 10)
+            DS.accentTint
+            if let img = cachedThumb {
+                Image(uiImage: img)
+                    .resizable()
+                    .scaledToFill()
+                    .allowsHitTesting(false)
+            } else {
+                SubjectBadgeView(subject: course.subject, iconSize: 56, cornerRadius: 0)
             }
         }
-        .frame(width: 160, height: 160)
-        .background(alignment: .top) {
-            RoundedRectangle(cornerRadius: 22, style: .continuous)
-                .fill(ink)
-                .frame(width: 160, height: 160)
-                .offset(y: 6)
+        .frame(width: 152, height: 152)
+        .clipShape(.rect(cornerRadius: DS.Radius.card))
+        .overlay {
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .strokeBorder(DS.hairline, lineWidth: 1)
         }
-        .padding(.bottom, 6)
+        .dsSoftShadow()
+        .overlay(alignment: .bottomTrailing) {
+            Image(systemName: "checkmark.circle.fill")
+                .font(.system(size: 26, weight: .regular))
+                .foregroundStyle(DS.accent)
+                .background(Circle().fill(.white).frame(width: 26, height: 26))
+                .offset(x: 6, y: 6)
+        }
     }
 
     // MARK: Progression card
@@ -328,82 +282,48 @@ struct CourseCompletedView: View {
 
         return VStack(alignment: .leading, spacing: 12) {
             HStack(spacing: 10) {
-                SubjectBadgeView(subject: course.subject, emojiSize: 22, cornerRadius: 10)
+                SubjectBadgeView(subject: course.subject, iconSize: 22, cornerRadius: 10)
                     .frame(width: 38, height: 38)
 
                 VStack(alignment: .leading, spacing: 2) {
                     Text(course.subject.localizedShortName(language: languageManager.current))
-                        .font(.system(.headline, design: .rounded, weight: .heavy))
-                        .foregroundStyle(ink)
+                        .font(DS.title(.headline, .semibold))
+                        .foregroundStyle(DS.ink)
                     HStack(spacing: 4) {
-                        Image(systemName: "star.fill")
-                            .font(.system(size: 10, weight: .heavy))
-                            .foregroundStyle(ink.opacity(0.7))
                         Text("\(displayedXP) XP")
-                            .font(.system(.caption, design: .rounded, weight: .heavy))
-                            .foregroundStyle(ink.opacity(0.55))
+                            .font(DS.sans(.caption, .medium))
+                            .foregroundStyle(DS.inkSecondary)
                             .monospacedDigit()
                         if tierNow.level < 5 {
                             Text(String(format: languageManager.text("common.xpBeforeNext"), xpToNext, tierNow.level + 1))
-                                .font(.system(.caption, design: .rounded, weight: .heavy))
-                                .foregroundStyle(ink.opacity(0.4))
+                                .font(DS.sans(.caption, .medium))
+                                .foregroundStyle(DS.inkTertiary)
                         }
                     }
                 }
                 Spacer()
                 Text(String(format: languageManager.text("common.levelShort"), displayedLevel))
-                    .font(.system(.caption2, design: .rounded, weight: .heavy))
-                    .foregroundStyle(.white)
-                    .tracking(0.6)
+                    .font(DS.sans(.caption2, .semibold))
+                    .foregroundStyle(DS.accentSoft)
                     .padding(.horizontal, 10)
                     .padding(.vertical, 5)
-                    .background(ink, in: Capsule())
+                    .background(DS.accentTint, in: Capsule())
             }
 
-            GeometryReader { geo in
-                ZStack(alignment: .leading) {
-                    Capsule()
-                        .fill(Color(white: 0.94))
-                        .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
-                    Capsule()
-                        .fill(pastel)
-                        .overlay {
-                            Capsule()
-                                .fill(
-                                    LinearGradient(
-                                        colors: [.clear, .white.opacity(0.45), .clear],
-                                        startPoint: .leading,
-                                        endPoint: .trailing
-                                    )
-                                )
-                                .mask {
-                                    Rectangle()
-                                        .frame(width: 60, height: 20)
-                                        .offset(x: barShimmer)
-                                }
-                                .allowsHitTesting(false)
-                        }
-                        .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
-                        .frame(width: geo.size.width * barFill)
-                }
-            }
-            .frame(height: 16)
+            CalmProgressBar(fraction: Double(barFill), height: 8)
 
             HStack(spacing: 6) {
                 Image(systemName: "star.fill")
-                    .font(.system(size: 11, weight: .heavy))
-                    .foregroundStyle(ink)
+                    .font(.system(size: 10, weight: .medium))
                 Text(String(format: languageManager.text("common.xpEarned"), earnedXP))
-                    .font(.system(.caption, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink)
+                    .font(DS.sans(.caption, .semibold))
             }
+            .foregroundStyle(DS.accentSoft)
             .padding(.horizontal, 10)
             .padding(.vertical, 6)
-            .background(pastel, in: Capsule())
-            .overlay { Capsule().strokeBorder(ink, lineWidth: 2) }
+            .background(DS.accentTint, in: Capsule())
         }
-        .padding(16)
-        .brutalOnboardingCard(depth: 4, corner: 20)
+        .dsCard()
     }
 
     // MARK: Freemium note
@@ -411,18 +331,16 @@ struct CourseCompletedView: View {
     private var freemiumNote: some View {
         HStack(spacing: 8) {
             Image(systemName: "checkmark.seal.fill")
-                .font(.system(size: 14, weight: .heavy))
-                .foregroundStyle(ink)
+                .font(.system(size: 13, weight: .medium))
             Text(languageManager.text("course.dailyFreeDone"))
-                .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                .foregroundStyle(ink)
+                .font(DS.sans(.subheadline, .medium))
                 .lineLimit(1)
                 .minimumScaleFactor(0.8)
         }
+        .foregroundStyle(DS.accentSoft)
         .padding(.horizontal, 14)
         .padding(.vertical, 10)
-        .background(Color.white, in: Capsule())
-        .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
+        .background(DS.accentTint, in: Capsule())
     }
 
     // MARK: Action buttons (X close · Mini Quiz)
@@ -431,41 +349,36 @@ struct CourseCompletedView: View {
         HStack(spacing: 14) {
             // X close
             Button {
-                let g = UIImpactFeedbackGenerator(style: .medium)
-                g.impactOccurred()
+                UIImpactFeedbackGenerator(style: .light).impactOccurred()
                 onClose()
             } label: {
                 Image(systemName: "xmark")
-                    .font(.system(size: 18, weight: .heavy))
-                    .foregroundStyle(ink)
-                    .frame(width: 64, height: 60)
+                    .font(.system(size: 16, weight: .medium))
+                    .foregroundStyle(DS.inkSecondary)
+                    .frame(width: 56, height: 56)
+                    .background(DS.surface, in: Circle())
+                    .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
             }
-            .buttonStyle(EndFlowCircleButtonStyle(fill: .white))
+            .buttonStyle(SoftPressButtonStyle())
 
             // Mini Quiz
             Button {
-                let g = UIImpactFeedbackGenerator(style: .medium)
-                g.impactOccurred()
+                UIImpactFeedbackGenerator(style: .light).impactOccurred()
                 onQuizTapped()
             } label: {
                 HStack(spacing: 8) {
                     if showFreemiumGate {
                         Image(systemName: "lock.fill")
-                            .font(.system(size: 14, weight: .heavy))
+                            .font(.system(size: 13, weight: .medium))
                     }
                     Text(languageManager.text("common.miniQuiz"))
-                        .font(.system(.headline, design: .rounded, weight: .heavy))
                     Image(systemName: "arrow.right")
-                        .font(.system(size: 14, weight: .heavy))
+                        .font(.system(size: 13, weight: .medium))
                 }
-                .foregroundStyle(ink)
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 18)
             }
-            .buttonStyle(DuolingoButtonStyle(fill: pink, shimmer: quizButtonShimmer))
+            .buttonStyle(DSPrimaryButtonStyle())
         }
     }
-
 }
 
 // MARK: - Streak Celebration screen
@@ -478,139 +391,110 @@ struct StreakCelebrationView: View {
     let onReturnHome: () -> Void
 
     @State private var appeared: Bool = false
-    @State private var flameScale: CGFloat = 0.4
-    @State private var flameRotation: Double = -8
+    @State private var flameScale: CGFloat = 0.5
     @State private var numberAppeared: Bool = false
     @State private var displayedStreak: Int = 0
 
-    private let ink = Color.black
-    private let cream = Color(red: 0.984, green: 0.961, blue: 0.918)
-    private let pink = Color(red: 1.0, green: 0.553, blue: 0.706)
-    private let orange = Color(red: 1.0, green: 0.55, blue: 0.18)
-    private let yellow = Color(red: 1.0, green: 0.84, blue: 0.35)
-
     var body: some View {
         ZStack {
-            cream.ignoresSafeArea()
+            DS.canvas.ignoresSafeArea()
 
-            VStack(spacing: 0) {
-                Spacer(minLength: 16)
+            ScrollView {
+                VStack(spacing: 0) {
+                    Spacer(minLength: 16)
 
-                flameView
-                    .scaleEffect(flameScale)
-                    .rotationEffect(.degrees(flameRotation))
+                    flameView
+                        .scaleEffect(flameScale)
 
-                Spacer(minLength: 8)
+                    Spacer(minLength: 8)
 
-                VStack(spacing: 4) {
-                    Text("\(displayedStreak)")
-                        .font(.system(size: 96, weight: .heavy, design: .rounded))
-                        .foregroundStyle(ink)
-                        .contentTransition(.numericText())
-                        .scaleEffect(numberAppeared ? 1 : 0.5)
-                        .opacity(numberAppeared ? 1 : 0)
+                    VStack(spacing: 4) {
+                        Text("\(displayedStreak)")
+                            .font(.system(size: 72, weight: .semibold))
+                            .foregroundStyle(DS.ink)
+                            .contentTransition(.numericText())
+                            .scaleEffect(numberAppeared ? 1 : 0.6)
+                            .opacity(numberAppeared ? 1 : 0)
 
-                    Text(streak <= 1 ? languageManager.text("course.streak.day") : languageManager.text("course.streak.days"))
-                        .font(.system(.title3, design: .rounded, weight: .heavy))
-                        .foregroundStyle(ink)
-                        .opacity(numberAppeared ? 1 : 0)
-                }
-
-                Text(String(format: languageManager.text("course.streak.message"), subject.localizedShortName(language: languageManager.current)))
-                    .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink.opacity(0.6))
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, 28)
-                    .padding(.top, 14)
-                    .opacity(appeared ? 1 : 0)
-
-                Spacer(minLength: 22)
-
-                weekStrip
-                    .padding(.horizontal, 22)
-                    .opacity(appeared ? 1 : 0)
-                    .offset(y: appeared ? 0 : 12)
-
-                Spacer(minLength: 18)
-
-                Text(languageManager.text("course.streak.onTrack"))
-                    .font(.system(.headline, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink)
-                    .opacity(appeared ? 1 : 0)
-
-                Spacer(minLength: 20)
-
-                Button {
-                    let g = UIImpactFeedbackGenerator(style: .medium)
-                    g.impactOccurred()
-                    onReturnHome()
-                } label: {
-                    HStack(spacing: 8) {
-                        Text(languageManager.text("common.backHome"))
-                            .font(.system(.headline, design: .rounded, weight: .heavy))
-                        Image(systemName: "house.fill")
-                            .font(.system(size: 14, weight: .heavy))
+                        Text(streak <= 1 ? languageManager.text("course.streak.day") : languageManager.text("course.streak.days"))
+                            .font(DS.title(.title3, .semibold))
+                            .foregroundStyle(DS.ink)
+                            .opacity(numberAppeared ? 1 : 0)
                     }
-                    .foregroundStyle(ink)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 18)
+
+                    Text(String(format: languageManager.text("course.streak.message"), subject.localizedShortName(language: languageManager.current)))
+                        .font(DS.sans(.subheadline))
+                        .foregroundStyle(DS.inkSecondary)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 32)
+                        .padding(.top, 12)
+                        .opacity(appeared ? 1 : 0)
+
+                    Spacer(minLength: 22)
+
+                    weekStrip
+                        .padding(.horizontal, 22)
+                        .opacity(appeared ? 1 : 0)
+                        .offset(y: appeared ? 0 : 10)
+
+                    Spacer(minLength: 18)
+
+                    Text(languageManager.text("course.streak.onTrack"))
+                        .font(DS.title(.headline, .semibold))
+                        .foregroundStyle(DS.ink)
+                        .opacity(appeared ? 1 : 0)
+
+                    Spacer(minLength: 20)
+
+                    Button {
+                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                        onReturnHome()
+                    } label: {
+                        HStack(spacing: 8) {
+                            Text(languageManager.text("common.backHome"))
+                            Image(systemName: "house.fill")
+                                .font(.system(size: 13, weight: .medium))
+                        }
+                    }
+                    .buttonStyle(DSPrimaryButtonStyle())
+                    .padding(.horizontal, 24)
+                    .padding(.bottom, 24)
+                    .opacity(appeared ? 1 : 0)
+                    .offset(y: appeared ? 0 : 10)
                 }
-                .buttonStyle(EndFlowPillButtonStyle(fill: pink))
-                .padding(.horizontal, 20)
-                .padding(.bottom, 28)
-                .opacity(appeared ? 1 : 0)
-                .offset(y: appeared ? 0 : 12)
             }
+            .scrollIndicators(.hidden)
         }
         .onAppear {
             displayedStreak = max(0, streak - 1)
 
-            withAnimation(.spring(response: 0.55, dampingFraction: 0.7).delay(0.05)) {
+            withAnimation(.spring(response: 0.55, dampingFraction: 0.75).delay(0.05)) {
                 flameScale = 1.0
-                flameRotation = 0
             }
-            withAnimation(.spring(response: 0.5, dampingFraction: 0.7).delay(0.3)) {
+            withAnimation(.spring(response: 0.5, dampingFraction: 0.75).delay(0.3)) {
                 numberAppeared = true
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
                 withAnimation(.snappy) { displayedStreak = streak }
-                let g = UINotificationFeedbackGenerator()
-                g.notificationOccurred(.success)
+                UINotificationFeedbackGenerator().notificationOccurred(.success)
             }
             withAnimation(.easeOut(duration: 0.45).delay(0.55)) {
                 appeared = true
-            }
-            // Idle flicker
-            withAnimation(.easeInOut(duration: 1.4).repeatForever(autoreverses: true).delay(0.6)) {
-                flameScale = 1.06
-            }
-            withAnimation(.easeInOut(duration: 1.1).repeatForever(autoreverses: true).delay(0.6)) {
-                flameRotation = 4
             }
         }
     }
 
     private var flameView: some View {
         ZStack {
-            // Outer glow plate (peach circle for brutalist depth)
             Circle()
-                .fill(yellow.opacity(0.5))
-                .frame(width: 200, height: 200)
-                .blur(radius: 30)
+                .fill(DS.accentTint)
+                .frame(width: 128, height: 128)
 
             Image(systemName: "flame.fill")
-                .font(.system(size: 140, weight: .heavy))
-                .foregroundStyle(
-                    LinearGradient(
-                        colors: [orange, yellow],
-                        startPoint: .bottom,
-                        endPoint: .top
-                    )
-                )
-                .symbolEffect(.variableColor.iterative.reversing)
-                .shadow(color: orange.opacity(0.45), radius: 18, y: 8)
+                .font(.system(size: 60, weight: .regular))
+                .foregroundStyle(DS.accent)
         }
-        .frame(height: 200)
+        .frame(height: 128)
     }
 
     private var weekStrip: some View {
@@ -641,65 +525,26 @@ struct StreakCelebrationView: View {
 
                 VStack(spacing: 6) {
                     Text(dayLetters[i])
-                        .font(.system(.caption2, design: .rounded, weight: .heavy))
-                        .foregroundStyle(ink.opacity(isFuture ? 0.25 : 0.55))
+                        .font(DS.sans(.caption2, .medium))
+                        .foregroundStyle(DS.inkTertiary)
                     ZStack {
-                        Circle()
-                            .fill(isDone ? ink : Color.white)
-                            .overlay { Circle().strokeBorder(ink, lineWidth: 2) }
                         if isDone {
-                            Image(systemName: "flame.fill")
-                                .font(.system(size: 14, weight: .heavy))
+                            Circle().fill(DS.accent)
+                            Image(systemName: "checkmark")
+                                .font(.system(size: 11, weight: .semibold))
                                 .foregroundStyle(.white)
                         } else if isToday {
-                            Circle().fill(ink).frame(width: 7, height: 7)
+                            Circle().fill(DS.surface)
+                            Circle().strokeBorder(DS.accentSoft, lineWidth: 2)
+                        } else {
+                            Circle().fill(DS.surfaceMuted)
                         }
                     }
-                    .frame(width: 36, height: 36)
-                    .opacity(isFuture ? 0.4 : 1)
+                    .frame(width: 32, height: 32)
+                    .opacity(isFuture ? 0.5 : 1)
                 }
                 .frame(maxWidth: .infinity)
             }
         }
-    }
-}
-
-// MARK: - Local button styles for the end-of-course flow
-
-private struct EndFlowPillButtonStyle: ButtonStyle {
-    let fill: Color
-    private let depth: CGFloat = 5
-
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .background(
-                Capsule().fill(fill)
-                    .overlay { Capsule().strokeBorder(.black, lineWidth: 3) }
-            )
-            .offset(y: configuration.isPressed ? depth : 0)
-            .background(
-                Capsule().fill(Color.black).offset(y: depth)
-            )
-            .animation(.spring(response: 0.18, dampingFraction: 0.7), value: configuration.isPressed)
-            .padding(.bottom, depth)
-    }
-}
-
-private struct EndFlowCircleButtonStyle: ButtonStyle {
-    let fill: Color
-    private let depth: CGFloat = 5
-
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .background(
-                Capsule().fill(fill)
-                    .overlay { Capsule().strokeBorder(.black, lineWidth: 3) }
-            )
-            .offset(y: configuration.isPressed ? depth : 0)
-            .background(
-                Capsule().fill(Color.black).offset(y: depth)
-            )
-            .animation(.spring(response: 0.18, dampingFraction: 0.7), value: configuration.isPressed)
-            .padding(.bottom, depth)
     }
 }

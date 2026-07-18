@@ -36,6 +36,16 @@ enum DS {
     /// Hairline separators & subtle borders.
     static let hairline = Color(red: 0.894, green: 0.906, blue: 0.925)
 
+    /// Muted sage green — success / correct-answer semantics (quiz, completions).
+    static let success = Color(red: 0.220, green: 0.490, blue: 0.353)
+    /// Very light green tint for success surfaces.
+    static let successTint = Color(red: 0.878, green: 0.929, blue: 0.898)
+
+    /// Muted terracotta — error / incorrect-answer semantics.
+    static let danger = Color(red: 0.694, green: 0.310, blue: 0.259)
+    /// Very light warm tint for error surfaces.
+    static let dangerTint = Color(red: 0.965, green: 0.906, blue: 0.894)
+
     // MARK: - UIKit colors (for UITextView-based prose)
 
     static let uiInk = UIColor(red: 0.086, green: 0.149, blue: 0.239, alpha: 1)

@@ -6,9 +6,6 @@ struct FavoritesView: View {
     @Binding var selectedCourse: Course?
     @State private var hapticTrigger: Int = 0
 
-    private let ink = BrutalPalette.ink
-    private let cream = BrutalPalette.cream
-
     private var favorites: [Course] {
         progressManager.favoriteCourses
     }
@@ -16,7 +13,7 @@ struct FavoritesView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                cream.ignoresSafeArea()
+                DS.canvas.ignoresSafeArea()
 
                 if favorites.isEmpty {
                     emptyState
@@ -52,6 +49,7 @@ struct FavoritesView: View {
                             .padding(.bottom, 40)
                         }
                     }
+                    .scrollIndicators(.hidden)
                 }
             }
             .navigationBarHidden(true)
@@ -62,21 +60,19 @@ struct FavoritesView: View {
     private var header: some View {
         VStack(alignment: .leading, spacing: 6) {
             Text(languageManager.text("library.filter.favorites"))
-                .font(.system(.largeTitle, design: .rounded, weight: .heavy))
-                .foregroundStyle(ink)
+                .font(DS.title(.largeTitle, .semibold))
+                .foregroundStyle(DS.ink)
 
-            HStack(spacing: 8) {
-                Image(systemName: "heart.fill")
-                    .font(.system(size: 11, weight: .heavy))
-                    .foregroundStyle(.white)
+            HStack(spacing: 6) {
+                Image(systemName: "bookmark.fill")
+                    .font(.system(size: 10, weight: .semibold))
                 Text(String(format: languageManager.text("favorites.badge.count"), favorites.count))
-                    .font(.system(.caption, design: .rounded, weight: .heavy))
-                    .foregroundStyle(.white)
-                    .tracking(0.5)
+                    .font(DS.sans(.caption, .medium))
             }
+            .foregroundStyle(DS.accentSoft)
             .padding(.horizontal, 12)
             .padding(.vertical, 6)
-            .background(ink, in: Capsule())
+            .background(DS.accentTint, in: Capsule())
         }
     }
 
@@ -84,34 +80,22 @@ struct FavoritesView: View {
         VStack(spacing: 0) {
             Spacer()
 
-            // Big brutalist heart card
             ZStack {
-                RoundedRectangle(cornerRadius: 28, style: .continuous)
-                    .fill(ink)
-                    .offset(y: 6)
-
-                RoundedRectangle(cornerRadius: 28, style: .continuous)
-                    .fill(BrutalPalette.pink)
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 28, style: .continuous)
-                            .strokeBorder(ink, lineWidth: 3)
-                    }
-                    .overlay {
-                        Image(systemName: "heart.fill")
-                            .font(.system(size: 72, weight: .heavy))
-                            .foregroundStyle(ink)
-                    }
+                Circle().fill(DS.accentTint)
+                Image(systemName: "bookmark.fill")
+                    .font(.system(size: 44, weight: .regular))
+                    .foregroundStyle(DS.accentSoft)
             }
-            .frame(width: 160, height: 160)
+            .frame(width: 136, height: 136)
             .padding(.bottom, 28)
 
             Text(languageManager.text("favorites.empty.title"))
-                .font(.system(.title, design: .rounded, weight: .heavy))
-                .foregroundStyle(ink)
+                .font(DS.title(.title2, .semibold))
+                .foregroundStyle(DS.ink)
 
             Text(languageManager.text("favorites.empty.subtitle"))
-                .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                .foregroundStyle(ink.opacity(0.55))
+                .font(DS.sans(.subheadline))
+                .foregroundStyle(DS.inkSecondary)
                 .multilineTextAlignment(.center)
                 .padding(.top, 8)
                 .padding(.horizontal, 40)

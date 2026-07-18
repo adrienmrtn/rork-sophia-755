@@ -11,9 +11,6 @@ struct SubjectCoursesView: View {
     @State private var filter: CourseFilter = .all
     @State private var appeared = false
 
-    private let ink = BrutalPalette.ink
-    private let cream = BrutalPalette.cream
-
     private enum CourseFilter: CaseIterable, Hashable {
         case all, todo, inProgress, done, favorites
 
@@ -71,11 +68,11 @@ struct SubjectCoursesView: View {
 
     var body: some View {
         ZStack {
-            cream.ignoresSafeArea()
+            DS.canvas.ignoresSafeArea()
 
             ScrollView {
-                VStack(alignment: .leading, spacing: 24) {
-                    topBar
+                VStack(alignment: .leading, spacing: 22) {
+                    backButton
                         .padding(.horizontal, 20)
                         .padding(.top, 8)
 
@@ -102,6 +99,7 @@ struct SubjectCoursesView: View {
                 .opacity(appeared ? 1 : 0)
                 .offset(y: appeared ? 0 : 12)
             }
+            .scrollIndicators(.hidden)
         }
         .navigationBarHidden(true)
         .sensoryFeedback(.impact(weight: .light), trigger: hapticTrigger)
@@ -110,102 +108,69 @@ struct SubjectCoursesView: View {
         }
     }
 
-    // MARK: - Top bar (back button on its own row)
+    // MARK: - Back button
 
-    private var topBar: some View {
+    private var backButton: some View {
         HStack {
-            backButton
+            Button {
+                hapticTrigger += 1
+                dismiss()
+            } label: {
+                Image(systemName: "chevron.left")
+                    .font(.system(size: 15, weight: .semibold))
+                    .foregroundStyle(DS.inkSecondary)
+                    .frame(width: 40, height: 40)
+                    .background(DS.surface, in: Circle())
+                    .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
+            }
+            .buttonStyle(SoftPressButtonStyle())
             Spacer()
         }
     }
 
-    // MARK: - Immersive header
+    // MARK: - Header
 
     private var header: some View {
-        ZStack(alignment: .topLeading) {
-            ZStack(alignment: .top) {
-                RoundedRectangle(cornerRadius: 24, style: .continuous)
-                    .fill(ink)
-                    .offset(y: 6)
+        VStack(alignment: .leading, spacing: 16) {
+            HStack(spacing: 14) {
+                Image(systemName: subject.icon)
+                    .font(.system(size: 26, weight: .medium))
+                    .foregroundStyle(DS.accentSoft)
+                    .frame(width: 60, height: 60)
+                    .background(DS.accentTint, in: RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous))
 
-                VStack(alignment: .leading, spacing: 16) {
-                    HStack(spacing: 14) {
-                        ZStack {
-                            Circle()
-                                .fill(.white)
-                                .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
-                            Text(subject.emoji)
-                                .font(.system(size: 34))
-                        }
-                        .frame(width: 64, height: 64)
-
-                        VStack(alignment: .leading, spacing: 2) {
-                            Text(subject.localizedName(language: languageManager.current))
-                                .font(.system(size: 28, weight: .heavy, design: .rounded))
-                                .foregroundStyle(ink)
-                                .lineLimit(2)
-                                .minimumScaleFactor(0.8)
-                                .fixedSize(horizontal: false, vertical: true)
-                        }
-
-                        Spacer(minLength: 0)
-                    }
-
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text(String(format: languageManager.text("subject.level"), currentTier.level))
-                            .font(.system(.caption, design: .rounded, weight: .black))
-                            .foregroundStyle(.white)
-                            .tracking(0.8)
-                            .padding(.horizontal, 10)
-                            .padding(.vertical, 5)
-                            .background(ink, in: Capsule())
-
-                        GeometryReader { geo in
-                            ZStack(alignment: .leading) {
-                                Capsule()
-                                    .fill(.white)
-                                    .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
-                                Capsule()
-                                    .fill(LinearGradient(colors: [BrutalPalette.pink, BrutalPalette.yellow], startPoint: .leading, endPoint: .trailing))
-                                    .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
-                                    .frame(width: max(16, geo.size.width * progressInLevel))
-                                    .animation(.spring(response: 0.6, dampingFraction: 0.82), value: progressInLevel)
-                            }
-                        }
-                        .frame(height: 18)
-
-                        Text(String(format: languageManager.text("subject.progress.stats"), subjectXP, completedCount, courses.count))
-                            .font(.system(.caption, design: .rounded, weight: .heavy))
-                            .foregroundStyle(ink.opacity(0.6))
-                            .monospacedDigit()
-                    }
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(subject.localizedName(language: languageManager.current))
+                        .font(DS.title(.title, .semibold))
+                        .foregroundStyle(DS.ink)
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.8)
+                        .fixedSize(horizontal: false, vertical: true)
                 }
-                .padding(18)
-                .padding(.top, 8)
-                .background(BrutalPalette.pastel(for: subject))
-                .clipShape(.rect(cornerRadius: 24))
-                .overlay {
-                    RoundedRectangle(cornerRadius: 24, style: .continuous)
-                        .strokeBorder(ink, lineWidth: 3)
-                }
+
+                Spacer(minLength: 0)
             }
-            .padding(.bottom, 6)
-        }
-    }
 
-    private var backButton: some View {
-        Button {
-            hapticTrigger += 1
-            dismiss()
-        } label: {
-            Image(systemName: "chevron.left")
-                .font(.system(size: 16, weight: .black))
-                .foregroundStyle(ink)
-                .frame(width: 40, height: 40)
-                .background(Color.white, in: Circle())
-                .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
+            VStack(alignment: .leading, spacing: 8) {
+                HStack {
+                    Text(String(format: languageManager.text("subject.level"), currentTier.level))
+                        .font(DS.sans(.caption, .semibold))
+                        .foregroundStyle(DS.accentSoft)
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 5)
+                        .background(DS.accentTint, in: Capsule())
+                    Spacer()
+                }
+
+                CalmProgressBar(fraction: progressInLevel, height: 8)
+
+                Text(String(format: languageManager.text("subject.progress.stats"), subjectXP, completedCount, courses.count))
+                    .font(DS.sans(.caption, .medium))
+                    .foregroundStyle(DS.inkSecondary)
+                    .monospacedDigit()
+            }
         }
-        .buttonStyle(BrutalIconButtonStyle())
+        .dsCard()
     }
 
     // MARK: - Filter chips
@@ -217,19 +182,23 @@ struct SubjectCoursesView: View {
                     let isSelected = filter == chip
                     Button {
                         hapticTrigger += 1
-                        withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) {
+                        withAnimation(.spring(response: 0.3, dampingFraction: 0.85)) {
                             filter = chip
                         }
                     } label: {
                         Text(languageManager.text(chip.labelKey))
-                            .font(.system(.subheadline, design: .rounded, weight: .black))
-                            .foregroundStyle(isSelected ? .white : ink)
+                            .font(DS.sans(.subheadline, .semibold))
+                            .foregroundStyle(isSelected ? .white : DS.ink)
                             .padding(.horizontal, 16)
                             .padding(.vertical, 10)
-                            .background(isSelected ? ink : Color.white, in: Capsule())
-                            .overlay { Capsule().strokeBorder(ink, lineWidth: 2.5) }
+                            .background(isSelected ? DS.accent : DS.surface, in: Capsule())
+                            .overlay {
+                                if !isSelected {
+                                    Capsule().strokeBorder(DS.hairline, lineWidth: 1)
+                                }
+                            }
                     }
-                    .buttonStyle(BrutalIconButtonStyle(depth: 1))
+                    .buttonStyle(SoftPressButtonStyle())
                 }
             }
             .padding(.horizontal, 20)
@@ -240,9 +209,9 @@ struct SubjectCoursesView: View {
 
     private func nextUpSection(course: Course) -> some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text(languageManager.text("subject.next"))
-                .font(.system(.caption, design: .rounded, weight: .black))
-                .foregroundStyle(ink.opacity(0.55))
+            Text(languageManager.text("subject.next").uppercased())
+                .font(DS.sans(.caption2, .semibold))
+                .foregroundStyle(DS.inkTertiary)
                 .tracking(1.2)
 
             Button {
@@ -254,12 +223,12 @@ struct SubjectCoursesView: View {
 
                     VStack(alignment: .leading, spacing: 4) {
                         Text(course.subject.localizedShortName(language: languageManager.current).uppercased())
-                            .font(.system(size: 10, weight: .black, design: .rounded))
-                            .foregroundStyle(ink.opacity(0.5))
-                            .tracking(0.5)
+                            .font(DS.sans(.caption2, .semibold))
+                            .foregroundStyle(DS.accentSoft)
+                            .tracking(1.0)
                         Text(course.title)
-                            .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                            .foregroundStyle(ink)
+                            .font(DS.title(.subheadline, .semibold))
+                            .foregroundStyle(DS.ink)
                             .lineLimit(2)
                             .multilineTextAlignment(.leading)
                     }
@@ -267,17 +236,15 @@ struct SubjectCoursesView: View {
                     Spacer(minLength: 8)
 
                     Image(systemName: progressManager.courseStatus(for: course.id) == .inProgress ? "arrow.right" : "play.fill")
-                        .font(.system(size: 15, weight: .black))
-                        .foregroundStyle(ink)
-                        .frame(width: 40, height: 40)
-                        .background(BrutalPalette.pink, in: Circle())
-                        .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
+                        .font(.system(size: 14, weight: .semibold))
+                        .foregroundStyle(.white)
+                        .frame(width: 38, height: 38)
+                        .background(DS.accent, in: Circle())
                 }
                 .padding(12)
-                .background(Color.white)
             }
-            .buttonStyle(BrutalCardButtonStyle(depth: 4))
-            .brutalCard()
+            .buttonStyle(SoftPressButtonStyle())
+            .dsCard(padding: 0)
         }
     }
 
@@ -287,16 +254,13 @@ struct SubjectCoursesView: View {
         let subCourses = visibleCourses.filter { $0.subcategory == subcategory }
         return VStack(alignment: .leading, spacing: 14) {
             HStack(spacing: 8) {
-                Rectangle()
-                    .fill(ink)
-                    .frame(width: 4, height: 18)
                 Text(subcategory)
-                    .font(.system(.headline, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink)
+                    .font(DS.title(.headline, .semibold))
+                    .foregroundStyle(DS.ink)
                 Spacer()
                 Text("\(subCourses.count)")
-                    .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                    .foregroundStyle(ink.opacity(0.45))
+                    .font(DS.sans(.subheadline, .medium))
+                    .foregroundStyle(DS.inkTertiary)
             }
             .padding(.horizontal, 20)
 
@@ -320,11 +284,11 @@ struct SubjectCoursesView: View {
     private var emptyState: some View {
         VStack(spacing: 12) {
             Image(systemName: "tray")
-                .font(.system(size: 40, weight: .light))
-                .foregroundStyle(ink.opacity(0.3))
+                .font(.system(size: 36, weight: .light))
+                .foregroundStyle(DS.inkTertiary)
             Text(languageManager.text("subject.filter.empty"))
-                .font(.system(.subheadline, design: .rounded, weight: .heavy))
-                .foregroundStyle(ink.opacity(0.55))
+                .font(DS.sans(.subheadline, .medium))
+                .foregroundStyle(DS.inkSecondary)
                 .multilineTextAlignment(.center)
         }
         .frame(maxWidth: .infinity)
@@ -335,23 +299,19 @@ private struct NextCourseThumb: View {
     let course: Course
     @State private var image: UIImage?
 
-    private let ink = BrutalPalette.ink
-
     var body: some View {
         ZStack {
-            BrutalPalette.pastel(for: course.subject)
+            DS.surfaceMuted
             if let image {
                 Image(uiImage: image).resizable().scaledToFill()
             } else {
-                Text(course.subject.emoji).font(.system(size: 24))
+                Image(systemName: course.subject.icon)
+                    .font(.system(size: 20, weight: .light))
+                    .foregroundStyle(DS.accentSoft.opacity(0.5))
             }
         }
-        .frame(width: 58, height: 58)
-        .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
-        .overlay {
-            RoundedRectangle(cornerRadius: 14, style: .continuous)
-                .strokeBorder(ink, lineWidth: 2.5)
-        }
+        .frame(width: 56, height: 56)
+        .clipShape(RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous))
         .onAppear { image = CourseImageMap.loadImage(for: course.id) }
     }
 }
