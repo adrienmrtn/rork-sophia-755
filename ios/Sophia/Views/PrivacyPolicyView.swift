@@ -4,12 +4,9 @@ struct PrivacyPolicyView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(LanguageManager.self) private var languageManager
 
-    private let ink = BrutalPalette.ink
-    private let cream = BrutalPalette.cream
-
     var body: some View {
         ZStack {
-            cream.ignoresSafeArea()
+            DS.canvas.ignoresSafeArea()
 
             VStack(spacing: 0) {
                 LegalHeader(title: languageManager.text("legal.privacy.title"), onClose: { dismiss() })
@@ -25,6 +22,7 @@ struct PrivacyPolicyView: View {
                     .padding(.top, 4)
                     .padding(.bottom, 48)
                 }
+                .scrollIndicators(.hidden)
             }
         }
         .presentationDragIndicator(.visible)
@@ -32,51 +30,50 @@ struct PrivacyPolicyView: View {
 
     private func sectionTitle(_ text: String) -> some View {
         Text(text)
-            .font(.system(.title3, design: .rounded, weight: .heavy))
-            .foregroundStyle(ink)
+            .font(DS.title(.title3, .semibold))
+            .foregroundStyle(DS.ink)
     }
 
     private func sectionBody(_ text: String) -> some View {
         Text(text)
-            .font(.system(.subheadline, design: .rounded, weight: .medium))
-            .foregroundStyle(ink.opacity(0.75))
+            .font(DS.sans(.subheadline))
+            .foregroundStyle(DS.inkSecondary)
             .lineSpacing(4)
             .frame(maxWidth: .infinity, alignment: .leading)
             .multilineTextAlignment(.leading)
     }
 }
 
-/// Shared neo-brutalist header for legal sheets.
+/// Shared calm header for legal / support sheets (Terms, Privacy, Feedback, Ambassador).
 struct LegalHeader: View {
     let title: String
     let onClose: () -> Void
-    private let ink = BrutalPalette.ink
 
     var body: some View {
         HStack(alignment: .center) {
             Text(title)
-                .font(.system(.largeTitle, design: .rounded, weight: .heavy))
-                .foregroundStyle(ink)
+                .font(DS.title(.largeTitle, .semibold))
+                .foregroundStyle(DS.ink)
 
             Spacer()
 
             Button(action: onClose) {
                 Image(systemName: "xmark")
-                    .font(.system(size: 14, weight: .heavy))
-                    .foregroundStyle(ink)
+                    .font(.system(size: 14, weight: .medium))
+                    .foregroundStyle(DS.inkSecondary)
                     .frame(width: 38, height: 38)
-                    .background(Color.white, in: Circle())
-                    .overlay { Circle().strokeBorder(ink, lineWidth: 2.5) }
+                    .background(DS.surface, in: Circle())
+                    .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
             }
-            .buttonStyle(.plain)
+            .buttonStyle(SoftPressButtonStyle())
         }
         .padding(.horizontal, 20)
         .padding(.top, 24)
         .padding(.bottom, 14)
         .overlay(alignment: .bottom) {
             Rectangle()
-                .fill(ink)
-                .frame(height: 2.5)
+                .fill(DS.hairline)
+                .frame(height: 1)
         }
     }
 }
