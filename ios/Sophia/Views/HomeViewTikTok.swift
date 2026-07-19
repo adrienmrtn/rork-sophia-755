@@ -1,10 +1,10 @@
 import SwiftUI
 
-/// Full-bleed horizontal pager for the home course feed — TikTok-style browsing: swiping
-/// left/right only moves between courses (native `.page` `TabView`, no custom drag math),
-/// it never opens anything. Opening a course always goes through the explicit "Commencer"
-/// CTA on the card. Kept alongside `HomeViewLegacy`/`HomeViewTinder` for one-flag rollback
-/// via `HomeCardPresentation.style`.
+/// Full-bleed VERTICAL pager for the home course feed — true TikTok/Deepstash-style
+/// browsing: swipe up/down to move between courses (native scroll-snap paging, no custom
+/// drag math), it never opens anything on its own. Opening a course always goes through
+/// the explicit "Commencer" CTA on the card. Kept alongside `HomeViewLegacy`/
+/// `HomeViewTinder` for one-flag rollback via `HomeCardPresentation.style`.
 struct HomeViewTikTok: View {
     @Environment(LanguageManager.self) private var languageManager
     let progressManager: ProgressManager
@@ -15,7 +15,7 @@ struct HomeViewTikTok: View {
     var onShowDiscountPaywall: (() -> Void)? = nil
 
     @State private var cards: [Course] = []
-    @State private var selectedCardId: String = ""
+    @State private var scrolledCardId: String?
     @State private var cardAppeared = false
     /// Set right before a *programmatic* page change (auto-advance after a course was
     /// opened/dismissed), so it doesn't get counted as a genuine browsing swipe.
@@ -37,34 +37,42 @@ struct HomeViewTikTok: View {
                 }
                 .background(DS.canvas.ignoresSafeArea())
             } else {
-                TabView(selection: $selectedCardId) {
-                    ForEach(cards) { course in
-                        TikTokCourseCard(
-                            course: course,
-                            language: languageManager.current,
-                            isFavorite: progressManager.isFavorite(course.id),
-                            onToggleFavorite: {
-                                progressManager.toggleFavorite(course.id)
-                            },
-                            onStart: {
-                                startCourse(course)
+                GeometryReader { geo in
+                    ScrollView(.vertical, showsIndicators: false) {
+                        LazyVStack(spacing: 0) {
+                            ForEach(cards) { course in
+                                TikTokCourseCard(
+                                    course: course,
+                                    language: languageManager.current,
+                                    isFavorite: progressManager.isFavorite(course.id),
+                                    onToggleFavorite: {
+                                        progressManager.toggleFavorite(course.id)
+                                    },
+                                    onStart: {
+                                        startCourse(course)
+                                    }
+                                )
+                                .frame(width: geo.size.width, height: geo.size.height)
+                                .id(course.id)
                             }
-                        )
-                        .tag(course.id)
+                        }
+                        .scrollTargetLayout()
+                    }
+                    .scrollTargetBehavior(.paging)
+                    .scrollPosition(id: $scrolledCardId)
+                    .scrollDisabled(cards.count <= 1)
+                    .onChange(of: scrolledCardId) { oldValue, newValue in
+                        guard oldValue != nil, newValue != nil else { return }
+                        if suppressNextSwipeCount {
+                            suppressNextSwipeCount = false
+                            return
+                        }
+                        registerDiscountSwipe()
                     }
                 }
-                .tabViewStyle(.page(indexDisplayMode: .never))
                 .ignoresSafeArea()
                 .opacity(cardAppeared ? 1 : 0)
                 .scaleEffect(cardAppeared ? 1 : 0.97)
-                .onChange(of: selectedCardId) { oldValue, _ in
-                    guard !oldValue.isEmpty else { return }
-                    if suppressNextSwipeCount {
-                        suppressNextSwipeCount = false
-                        return
-                    }
-                    registerDiscountSwipe()
-                }
 
                 VStack(spacing: 0) {
                     headerSection
@@ -148,16 +156,16 @@ struct HomeViewTikTok: View {
 
     /// Called when a course is dismissed after being opened from the feed: cycles it to the
     /// end of the deck (same "come back to it later" semantics as the Tinder/legacy skip)
-    /// and pages to whichever course now takes its place, without counting it as a swipe.
+    /// and scrolls to whichever course now takes its place, without counting it as a swipe.
     private func advancePast(courseId: String) {
         guard let index = cards.firstIndex(where: { $0.id == courseId }) else { return }
         let finished = cards.remove(at: index)
         cards.append(finished)
-        let nextId = cards.indices.contains(index) ? cards[index].id : (cards.first?.id ?? "")
-        guard nextId != selectedCardId else { return }
+        let nextId = cards.indices.contains(index) ? cards[index].id : cards.first?.id
+        guard nextId != scrolledCardId else { return }
         suppressNextSwipeCount = true
         withAnimation(.easeInOut(duration: 0.3)) {
-            selectedCardId = nextId
+            scrolledCardId = nextId
         }
     }
 
@@ -166,7 +174,7 @@ struct HomeViewTikTok: View {
             from: ContentCatalog.activeCourses,
             isCompleted: { progressManager.courseStatus(for: $0) == .completed }
         )
-        selectedCardId = cards.first?.id ?? ""
+        scrolledCardId = cards.first?.id
         let preloadIds = cards.prefix(5).map(\.id)
         CourseImageMap.preloadImages(for: preloadIds)
     }
