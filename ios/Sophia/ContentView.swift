@@ -183,7 +183,11 @@ struct ContentView: View {
     private func courseSourceForCurrentTab() -> String {
         switch selectedTab {
         case 0:
-            return HomeCardPresentation.style == .legacy ? "home_legacy" : "home_tinder"
+            switch HomeCardPresentation.style {
+            case .legacy: return "home_legacy"
+            case .tinder: return "home_tinder"
+            case .tiktok: return "home_tiktok"
+            }
         case 1:
             return "library"
         case 2:
