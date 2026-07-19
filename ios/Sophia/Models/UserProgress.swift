@@ -83,10 +83,13 @@ nonisolated struct UserProgress: Codable, Sendable {
     var completedQuizCourseIds: [String]
     /// Highest global rank animation waiting to be shown.
     var pendingGlobalRankUp: PendingGlobalRankUp?
+    /// Spaced-repetition review state for the "Entraînement" tab, keyed by `QuizQuestion.id`.
+    /// Populated as courses' quizzes are completed; independent of XP/streak (see `ProgressManager`).
+    var trainingQuestionStates: [String: TrainingQuestionState]
 
-    static let empty = UserProgress(courseProgress: [:], streak: 0, lastActiveDate: nil, favoriteCourseIds: [], freeCoursesOpened: 0, hasSeenSwipeTutorial: false, hasSeenSpecialOffer: false, lastCourseCompletedDate: nil, lastStreakShownDate: nil, subjectXP: [:], globalXP: 0, globalCourseXPAwardedIds: [], globalQuizXPAwardedIds: [], globalCollectionXPAwardedIds: [], completedQuizCourseIds: [], pendingGlobalRankUp: nil)
+    static let empty = UserProgress(courseProgress: [:], streak: 0, lastActiveDate: nil, favoriteCourseIds: [], freeCoursesOpened: 0, hasSeenSwipeTutorial: false, hasSeenSpecialOffer: false, lastCourseCompletedDate: nil, lastStreakShownDate: nil, subjectXP: [:], globalXP: 0, globalCourseXPAwardedIds: [], globalQuizXPAwardedIds: [], globalCollectionXPAwardedIds: [], completedQuizCourseIds: [], pendingGlobalRankUp: nil, trainingQuestionStates: [:])
 
-    init(courseProgress: [String: CourseProgress], streak: Int, lastActiveDate: String?, favoriteCourseIds: [String] = [], freeCoursesOpened: Int = 0, hasSeenSwipeTutorial: Bool = false, hasSeenSpecialOffer: Bool = false, lastCourseCompletedDate: String? = nil, lastStreakShownDate: String? = nil, subjectXP: [String: Int] = [:], globalXP: Int = 0, globalCourseXPAwardedIds: [String] = [], globalQuizXPAwardedIds: [String] = [], globalCollectionXPAwardedIds: [String] = [], completedQuizCourseIds: [String] = [], pendingGlobalRankUp: PendingGlobalRankUp? = nil) {
+    init(courseProgress: [String: CourseProgress], streak: Int, lastActiveDate: String?, favoriteCourseIds: [String] = [], freeCoursesOpened: Int = 0, hasSeenSwipeTutorial: Bool = false, hasSeenSpecialOffer: Bool = false, lastCourseCompletedDate: String? = nil, lastStreakShownDate: String? = nil, subjectXP: [String: Int] = [:], globalXP: Int = 0, globalCourseXPAwardedIds: [String] = [], globalQuizXPAwardedIds: [String] = [], globalCollectionXPAwardedIds: [String] = [], completedQuizCourseIds: [String] = [], pendingGlobalRankUp: PendingGlobalRankUp? = nil, trainingQuestionStates: [String: TrainingQuestionState] = [:]) {
         self.courseProgress = courseProgress
         self.streak = streak
         self.lastActiveDate = lastActiveDate
@@ -103,12 +106,14 @@ nonisolated struct UserProgress: Codable, Sendable {
         self.globalCollectionXPAwardedIds = globalCollectionXPAwardedIds
         self.completedQuizCourseIds = completedQuizCourseIds
         self.pendingGlobalRankUp = pendingGlobalRankUp
+        self.trainingQuestionStates = trainingQuestionStates
     }
 
     enum CodingKeys: String, CodingKey {
         case courseProgress, streak, lastActiveDate, favoriteCourseIds, freeCoursesOpened
         case hasSeenSwipeTutorial, hasSeenSpecialOffer, lastCourseCompletedDate, lastStreakShownDate, subjectXP
         case globalXP, globalCourseXPAwardedIds, globalQuizXPAwardedIds, globalCollectionXPAwardedIds, completedQuizCourseIds, pendingGlobalRankUp
+        case trainingQuestionStates
     }
 
     init(from decoder: Decoder) throws {
@@ -129,6 +134,7 @@ nonisolated struct UserProgress: Codable, Sendable {
         self.globalCollectionXPAwardedIds = try c.decodeIfPresent([String].self, forKey: .globalCollectionXPAwardedIds) ?? []
         self.completedQuizCourseIds = try c.decodeIfPresent([String].self, forKey: .completedQuizCourseIds) ?? []
         self.pendingGlobalRankUp = try c.decodeIfPresent(PendingGlobalRankUp.self, forKey: .pendingGlobalRankUp)
+        self.trainingQuestionStates = try c.decodeIfPresent([String: TrainingQuestionState].self, forKey: .trainingQuestionStates) ?? [:]
     }
 }
 
@@ -136,4 +142,20 @@ nonisolated struct PendingGlobalRankUp: Codable, Sendable, Equatable {
     var previousRankRawValue: String
     var newRankRawValue: String
     var newLevel: Int
+}
+
+/// Spaced-repetition state for a single quiz question in the "Entraînement" review pool.
+/// `intervalIndex` is the position in `ProgressManager.trainingIntervalDays` to apply the
+/// *next* time this question is answered correctly; `nextReviewDate` is `nil` while the
+/// question is due right now (never reviewed yet, or reset after a wrong answer).
+nonisolated struct TrainingQuestionState: Codable, Sendable {
+    var courseId: String
+    var intervalIndex: Int
+    var nextReviewDate: String?
+
+    init(courseId: String, intervalIndex: Int = 0, nextReviewDate: String? = nil) {
+        self.courseId = courseId
+        self.intervalIndex = intervalIndex
+        self.nextReviewDate = nextReviewDate
+    }
 }

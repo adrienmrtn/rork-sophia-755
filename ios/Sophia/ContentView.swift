@@ -50,7 +50,11 @@ struct ContentView: View {
                     )
                 }
 
-                Tab(languageManager.text("tab.profile"), systemImage: "person.fill", value: 3) {
+                Tab(languageManager.text("tab.training"), systemImage: "arrow.triangle.2.circlepath", value: 3) {
+                    TrainingView(progressManager: progressManager)
+                }
+
+                Tab(languageManager.text("tab.profile"), systemImage: "person.fill", value: 4) {
                     ProfileView(
                         progressManager: progressManager,
                         store: storeVM,
@@ -189,6 +193,8 @@ struct ContentView: View {
         case 2:
             return "collections"
         case 3:
+            return "training"
+        case 4:
             return "profile"
         default:
             return "unknown"

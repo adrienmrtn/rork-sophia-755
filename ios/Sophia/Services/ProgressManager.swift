@@ -421,6 +421,66 @@ class ProgressManager {
         }
     }
 
+    // MARK: - Training (spaced-repetition review of already-answered quiz questions)
+
+    /// Days until the next review after a correct answer, indexed by how many times in a
+    /// row the question has already been answered correctly (capped at the last value).
+    /// A wrong answer at any point resets the question to due-immediately (index 0, no date).
+    static let trainingIntervalDays: [Int] = [1, 3, 7, 14, 30]
+
+    /// Adds any of these question ids to the review pool that aren't already tracked, due
+    /// immediately. Called once a course's quiz has been completed — safe to call again on
+    /// a retry, existing question states are left untouched.
+    func registerTrainingQuestions(courseId: String, questionIds: [String]) {
+        var didChange = false
+        for questionId in questionIds where progress.trainingQuestionStates[questionId] == nil {
+            progress.trainingQuestionStates[questionId] = TrainingQuestionState(courseId: courseId)
+            didChange = true
+        }
+        if didChange { save() }
+    }
+
+    /// Questions whose scheduled review date has arrived (or that have never been reviewed
+    /// yet), each paired with the course it belongs to. Looked up against the catalog in the
+    /// currently active language, so a question removed from the content bundle simply
+    /// drops out of the pool rather than erroring.
+    var dueTrainingQuestions: [(course: Course, question: QuizQuestion)] {
+        let now = Date()
+        let formatter = ISO8601DateFormatter()
+        let dueIds = progress.trainingQuestionStates.keys.filter { questionId in
+            guard let dateStr = progress.trainingQuestionStates[questionId]?.nextReviewDate,
+                  let date = formatter.date(from: dateStr) else { return true }
+            return date <= now
+        }
+        let courses = ContentCatalog.activeCourses
+        return dueIds.compactMap { questionId in
+            for course in courses {
+                if let question = course.quiz.first(where: { $0.id == questionId }) {
+                    return (course, question)
+                }
+            }
+            return nil
+        }
+    }
+
+    /// Records the outcome of one training review. A correct answer pushes the question
+    /// further out along `trainingIntervalDays`; a wrong answer resets it to due-immediately,
+    /// as if it had never been reviewed — purely a memorization aid, no XP/streak impact.
+    func recordTrainingAnswer(questionId: String, courseId: String, correct: Bool) {
+        var state = progress.trainingQuestionStates[questionId] ?? TrainingQuestionState(courseId: courseId)
+        if correct {
+            let days = Self.trainingIntervalDays[min(state.intervalIndex, Self.trainingIntervalDays.count - 1)]
+            let nextDate = Calendar.current.date(byAdding: .day, value: days, to: Date()) ?? Date()
+            state.nextReviewDate = ISO8601DateFormatter().string(from: nextDate)
+            state.intervalIndex = min(state.intervalIndex + 1, Self.trainingIntervalDays.count - 1)
+        } else {
+            state.intervalIndex = 0
+            state.nextReviewDate = nil
+        }
+        progress.trainingQuestionStates[questionId] = state
+        save()
+    }
+
     func resetProgress() {
         progress = .empty
         save()
