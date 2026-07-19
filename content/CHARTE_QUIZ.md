@@ -4,10 +4,10 @@ Document de référence pour la refonte du contenu des quiz (1195 questions, 239
 Décrit le schéma technique (déjà implémenté côté app) et les règles d'écriture pour la
 réécriture complète du contenu, qui suit cette infrastructure.
 
-**Statut : infrastructure technique livrée (types de question, notation, UI). Un pilote
-de 6 cours (le premier de chaque matière) a été réécrit selon cette charte — voir §6.
-Les 233 cours restants sont encore en `.mcq` d'origine, en attente de la généralisation
-du pilote.**
+**Statut : infrastructure technique livrée (types de question, notation, UI). Les 239
+cours (FR, `CourseData.swift`) ont été réécrits selon cette charte — voir §6. Les
+catalogues localisés non-FR (`Resources/Locales/courses.<lang>.json`) restent en
+`.mcq` d'origine (5 questions), non encore synchronisés avec la refonte FR.**
 
 ---
 
@@ -239,3 +239,28 @@ contenu réel des leçons (V2, FR), pas d'un canevas générique.
   (vide ou déjà occupée, ce qui renvoie l'occupant au réservoir). Une fois deux cases
   remplies, les glisser l'une sur l'autre échange leur contenu pour réordonner ; toucher
   une case remplie la vide et renvoie sa carte au réservoir (annulation rapide).
+
+### Itération 4 (généralisation aux 233 cours restants)
+
+Réécriture complète du quiz des 233 cours restants (tous sauf les 6 pilotes de
+l'itération 1), en appliquant strictement les règles ci-dessus. Chaque question a été
+construite à partir du contenu réel des leçons V2 FR (`content/courses/fr/*.json`), en
+lisant systématiquement le fichier source de chaque cours plutôt qu'en généralisant un
+canevas.
+
+- Les 239 cours (6 pilotes + 233 nouveaux) sont désormais dans la fourchette **8-10
+  questions**, avec un mix de types choisi au cas par cas (aucun cours n'a de type
+  « forcé » sans pertinence — ex. pas de `.chronological` pour un texte sans séquence
+  fiable, pas de `.numericSlider` pour un récit mythologique sans date réelle).
+- `percentageSlider` : plage normalisée à 0-100 sur tout le corpus, conformément à la
+  convention du §3 (certaines questions avaient été rédigées avec une plage resserrée,
+  ex. 0-50 — la tolérance et la valeur cible restent inchangées, seule la plage
+  d'affichage du curseur a été élargie pour rester cohérente d'un cours à l'autre).
+- Validation automatisée sur l'ensemble du fichier après fusion : bornes de
+  `correctIndex`, options `trueFalse` strictement `["Vrai", "Faux"]`, absence de dates
+  entre parenthèses dans les `items` chronologiques, absence de point final sur les
+  `options`/`items`, unicité des identifiants de question sur les 2122 questions du
+  fichier, équilibre des parenthèses/crochets/guillemets.
+- Portée : uniquement le catalogue FR (`CourseData.swift`), comme pour le pilote. Les
+  catalogues localisés non-FR n'ont pas été touchés (voir note de statut en tête de
+  document) et restent à synchroniser dans une passe ultérieure dédiée.
