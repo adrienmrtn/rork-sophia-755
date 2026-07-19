@@ -2,13 +2,13 @@ import Foundation
 
 /// Home tab card stack presentation.
 ///
-/// Set `style` to `.legacy` to restore the previous home cards UI instantly
-/// (compact stack, symmetric swipe, start button, swipe tutorial).
+/// Set `style` to `.legacy` or `.tinder` for one-flag rollback.
 enum HomeCardPresentation {
-    static let style: Style = .tinder
+    static let style: Style = .feed
 
     enum Style {
         case legacy
         case tinder
+        case feed
     }
 }

@@ -16,7 +16,7 @@ struct ContentView: View {
     @State private var showSwipeTutorial: Bool = false
     @State private var pendingCourse: Course? = nil
     @State private var autoSwipeCourseId: String? = nil
-    @State private var pendingCourseSource = "home_tinder"
+    @State private var pendingCourseSource = "home_feed"
 
     var body: some View {
         ZStack {
@@ -183,7 +183,11 @@ struct ContentView: View {
     private func courseSourceForCurrentTab() -> String {
         switch selectedTab {
         case 0:
-            return HomeCardPresentation.style == .legacy ? "home_legacy" : "home_tinder"
+            switch HomeCardPresentation.style {
+            case .legacy: return "home_legacy"
+            case .tinder: return "home_tinder"
+            case .feed: return "home_feed"
+            }
         case 1:
             return "library"
         case 2:
