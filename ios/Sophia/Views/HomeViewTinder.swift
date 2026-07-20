@@ -84,7 +84,7 @@ struct HomeViewTinder: View {
     private var streakBadge: some View {
         HStack(spacing: 6) {
             Image(systemName: "flame")
-                .font(.system(size: 14, weight: .medium))
+                .font(.jakarta(size: 14, weight: .medium))
                 .foregroundStyle(DS.inkSecondary)
             Text("\(progressManager.streak)")
                 .font(DS.sans(.subheadline, .semibold))
@@ -277,7 +277,7 @@ struct HomeViewTinder: View {
     private var allCompletedView: some View {
         VStack(spacing: 16) {
             Image(systemName: "checkmark.circle")
-                .font(.system(size: 52, weight: .light))
+                .font(.jakarta(size: 52, weight: .light))
                 .foregroundStyle(DS.accentSoft)
             Text(languageManager.text("home.bravo"))
                 .font(DS.title(.title, .semibold))
@@ -342,7 +342,7 @@ private struct TinderFlashCard: View {
                     ZStack {
                         DS.surfaceMuted
                         Image(systemName: course.subject.icon)
-                            .font(.system(size: 44, weight: .light))
+                            .font(.jakarta(size: 44, weight: .light))
                             .foregroundStyle(DS.accentSoft.opacity(0.5))
                     }
                 }
@@ -353,7 +353,7 @@ private struct TinderFlashCard: View {
                     onToggleFavorite?()
                 } label: {
                     Image(systemName: isFavorite ? "bookmark.fill" : "bookmark")
-                        .font(.system(size: 15, weight: .medium))
+                        .font(.jakarta(size: 15, weight: .medium))
                         .foregroundStyle(isFavorite ? DS.accent : DS.inkSecondary)
                         .frame(width: 38, height: 38)
                         .background(.ultraThinMaterial, in: Circle())
@@ -429,7 +429,7 @@ private struct SwipeActionButton: View {
                 }
                 .overlay {
                     Image(systemName: kind == .accept ? "arrow.right" : "xmark")
-                        .font(.system(size: 20, weight: .semibold))
+                        .font(.jakarta(size: 20, weight: .semibold))
                         .foregroundStyle(kind == .accept ? Color.white : DS.inkSecondary)
                 }
                 .dsSoftShadow()

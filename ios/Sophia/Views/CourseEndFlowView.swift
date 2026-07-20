@@ -267,7 +267,7 @@ struct CourseCompletedView: View {
         .dsSoftShadow()
         .overlay(alignment: .bottomTrailing) {
             Image(systemName: "checkmark.circle.fill")
-                .font(.system(size: 26, weight: .regular))
+                .font(.jakarta(size: 26, weight: .regular))
                 .foregroundStyle(DS.accent)
                 .background(Circle().fill(.white).frame(width: 26, height: 26))
                 .offset(x: 6, y: 6)
@@ -314,7 +314,7 @@ struct CourseCompletedView: View {
 
             HStack(spacing: 6) {
                 Image(systemName: "star.fill")
-                    .font(.system(size: 10, weight: .medium))
+                    .font(.jakarta(size: 10, weight: .medium))
                 Text(String(format: languageManager.text("common.xpEarned"), earnedXP))
                     .font(DS.sans(.caption, .semibold))
             }
@@ -331,7 +331,7 @@ struct CourseCompletedView: View {
     private var freemiumNote: some View {
         HStack(spacing: 8) {
             Image(systemName: "checkmark.seal.fill")
-                .font(.system(size: 13, weight: .medium))
+                .font(.jakarta(size: 13, weight: .medium))
             Text(languageManager.text("course.dailyFreeDone"))
                 .font(DS.sans(.subheadline, .medium))
                 .lineLimit(1)
@@ -353,7 +353,7 @@ struct CourseCompletedView: View {
                 onClose()
             } label: {
                 Image(systemName: "xmark")
-                    .font(.system(size: 16, weight: .medium))
+                    .font(.jakarta(size: 16, weight: .medium))
                     .foregroundStyle(DS.inkSecondary)
                     .frame(width: 56, height: 56)
                     .background(DS.surface, in: Circle())
@@ -369,11 +369,11 @@ struct CourseCompletedView: View {
                 HStack(spacing: 8) {
                     if showFreemiumGate {
                         Image(systemName: "lock.fill")
-                            .font(.system(size: 13, weight: .medium))
+                            .font(.jakarta(size: 13, weight: .medium))
                     }
                     Text(languageManager.text("common.miniQuiz"))
                     Image(systemName: "arrow.right")
-                        .font(.system(size: 13, weight: .medium))
+                        .font(.jakarta(size: 13, weight: .medium))
                 }
             }
             .buttonStyle(DSPrimaryButtonStyle())
@@ -410,7 +410,7 @@ struct StreakCelebrationView: View {
 
                     VStack(spacing: 4) {
                         Text("\(displayedStreak)")
-                            .font(.system(size: 72, weight: .semibold))
+                            .font(.jakarta(size: 72, weight: .semibold))
                             .foregroundStyle(DS.ink)
                             .contentTransition(.numericText())
                             .scaleEffect(numberAppeared ? 1 : 0.6)
@@ -453,7 +453,7 @@ struct StreakCelebrationView: View {
                         HStack(spacing: 8) {
                             Text(languageManager.text("common.backHome"))
                             Image(systemName: "house.fill")
-                                .font(.system(size: 13, weight: .medium))
+                                .font(.jakarta(size: 13, weight: .medium))
                         }
                     }
                     .buttonStyle(DSPrimaryButtonStyle())
@@ -491,7 +491,7 @@ struct StreakCelebrationView: View {
                 .frame(width: 128, height: 128)
 
             Image(systemName: "flame.fill")
-                .font(.system(size: 60, weight: .regular))
+                .font(.jakarta(size: 60, weight: .regular))
                 .foregroundStyle(DS.accent)
         }
         .frame(height: 128)
@@ -531,7 +531,7 @@ struct StreakCelebrationView: View {
                         if isDone {
                             Circle().fill(DS.accent)
                             Image(systemName: "checkmark")
-                                .font(.system(size: 11, weight: .semibold))
+                                .font(.jakarta(size: 11, weight: .semibold))
                                 .foregroundStyle(.white)
                         } else if isToday {
                             Circle().fill(DS.surface)

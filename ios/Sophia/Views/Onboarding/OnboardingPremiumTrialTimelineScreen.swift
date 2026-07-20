@@ -35,7 +35,7 @@ struct OnboardingPremiumTrialTimelineScreen: View {
                 .scaleEffect(iconAppeared ? 1 : 0.82)
 
             Text(languageManager.text("onboarding.trial.notifyTitle"))
-                .font(.system(.title2, design: .rounded, weight: .heavy))
+                .font(.jakarta(.title2, design: .rounded, weight: .heavy))
                 .foregroundStyle(ink)
                 .multilineTextAlignment(.center)
                 .lineSpacing(2)
@@ -45,7 +45,7 @@ struct OnboardingPremiumTrialTimelineScreen: View {
                 .offset(y: titleAppeared ? 0 : 16)
 
             Text(languageManager.text("onboarding.premiumTrial.cancelAnytime"))
-                .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                .font(.jakarta(.subheadline, design: .rounded, weight: .heavy))
                 .foregroundStyle(ink.opacity(0.5))
                 .tracking(0.3)
                 .opacity(footerAppeared ? 1 : 0)
@@ -113,7 +113,7 @@ struct OnboardingPremiumTrialTimelineScreen: View {
                     .frame(width: 100, height: 100)
 
                 Image(systemName: "bell.fill")
-                    .font(.system(size: 44, weight: .heavy))
+                    .font(.jakarta(size: 44, weight: .heavy))
                     .foregroundStyle(ink)
                     .rotationEffect(.degrees(bellSwing ? 11 : -11), anchor: .top)
                     .animation(

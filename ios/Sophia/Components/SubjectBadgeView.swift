@@ -13,7 +13,7 @@ struct SubjectBadgeView: View {
                 .fill(unlocked ? DS.accentTint : DS.surfaceMuted)
 
             Image(systemName: unlocked ? subject.icon : "lock.fill")
-                .font(.system(size: iconSize * 0.5, weight: .medium))
+                .font(.jakarta(size: iconSize * 0.5, weight: .medium))
                 .foregroundStyle(unlocked ? DS.accentSoft : DS.inkTertiary)
         }
     }

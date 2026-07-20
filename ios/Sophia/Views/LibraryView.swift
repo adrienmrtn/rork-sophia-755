@@ -142,7 +142,7 @@ struct LibraryView: View {
     private var searchBar: some View {
         HStack(spacing: 10) {
             Image(systemName: "magnifyingglass")
-                .font(.system(size: 16, weight: .regular))
+                .font(.jakarta(size: 16, weight: .regular))
                 .foregroundStyle(DS.inkTertiary)
 
             ZStack(alignment: .leading) {
@@ -168,7 +168,7 @@ struct LibraryView: View {
                     g.impactOccurred()
                 } label: {
                     Image(systemName: "xmark.circle.fill")
-                        .font(.system(size: 16, weight: .regular))
+                        .font(.jakarta(size: 16, weight: .regular))
                         .foregroundStyle(DS.inkTertiary)
                 }
             }
@@ -186,7 +186,7 @@ struct LibraryView: View {
     private var emptyResults: some View {
         VStack(spacing: 12) {
             Image(systemName: "magnifyingglass")
-                .font(.system(size: 38, weight: .light))
+                .font(.jakarta(size: 38, weight: .light))
                 .foregroundStyle(DS.inkTertiary)
             Text(languageManager.text("library.empty.title"))
                 .font(DS.title(.title3, .semibold))
@@ -312,7 +312,7 @@ struct LibraryView: View {
         HStack(spacing: 10) {
             HStack(spacing: 8) {
                 Image(systemName: subject.icon)
-                    .font(.system(size: 14, weight: .medium))
+                    .font(.jakarta(size: 14, weight: .medium))
                     .foregroundStyle(DS.accentSoft)
                 Text(subject.localizedShortName(language: languageManager.current))
                     .font(DS.title(.headline, .semibold))
@@ -326,7 +326,7 @@ struct LibraryView: View {
                     .font(DS.sans(.subheadline, .medium))
                     .foregroundStyle(DS.accentSoft)
                 Image(systemName: "chevron.right")
-                    .font(.system(size: 12, weight: .semibold))
+                    .font(.jakarta(size: 12, weight: .semibold))
                     .foregroundStyle(DS.accentSoft)
             }
         }
@@ -337,7 +337,7 @@ struct LibraryView: View {
             HStack(spacing: 10) {
                 HStack(spacing: 8) {
                     Image(systemName: subject.icon)
-                        .font(.system(size: 14, weight: .medium))
+                        .font(.jakarta(size: 14, weight: .medium))
                         .foregroundStyle(DS.accentSoft)
                     Text(subject.localizedShortName(language: languageManager.current))
                         .font(DS.title(.headline, .semibold))
@@ -421,7 +421,7 @@ struct LibraryFeaturedCard: View {
                         .allowsHitTesting(false)
                 } else {
                     Image(systemName: course.subject.icon)
-                        .font(.system(size: 40, weight: .light))
+                        .font(.jakarta(size: 40, weight: .light))
                         .foregroundStyle(DS.accentSoft.opacity(0.5))
                 }
             }
@@ -456,7 +456,7 @@ struct LibraryFeaturedCard: View {
                 Spacer(minLength: 0)
 
                 Image(systemName: status == .completed ? "checkmark" : "arrow.right")
-                    .font(.system(size: 14, weight: .semibold))
+                    .font(.jakarta(size: 14, weight: .semibold))
                     .foregroundStyle(status == .completed ? DS.accentSoft : Color.white)
                     .frame(width: 34, height: 34)
                     .background(status == .completed ? DS.accentTint : DS.accent, in: Circle())
@@ -468,7 +468,7 @@ struct LibraryFeaturedCard: View {
 
     private func metaChip(icon: String, text: String) -> some View {
         HStack(spacing: 5) {
-            Image(systemName: icon).font(.system(size: 10, weight: .medium))
+            Image(systemName: icon).font(.jakarta(size: 10, weight: .medium))
             Text(text).font(DS.sans(.caption2, .medium))
         }
         .foregroundStyle(DS.inkSecondary)
@@ -520,7 +520,7 @@ struct LibraryCardView: View {
                         .allowsHitTesting(false)
                 } else {
                     Image(systemName: course.subject.icon)
-                        .font(.system(size: 30, weight: .light))
+                        .font(.jakarta(size: 30, weight: .light))
                         .foregroundStyle(DS.accentSoft.opacity(0.5))
                 }
             }
@@ -537,7 +537,7 @@ struct LibraryCardView: View {
                         pm.toggleFavorite(course.id)
                     } label: {
                         Image(systemName: pm.isFavorite(course.id) ? "bookmark.fill" : "bookmark")
-                            .font(.system(size: 13, weight: .medium))
+                            .font(.jakarta(size: 13, weight: .medium))
                             .foregroundStyle(pm.isFavorite(course.id) ? DS.accent : DS.inkSecondary)
                             .frame(width: 30, height: 30)
                             .background(.ultraThinMaterial, in: Circle())
@@ -576,7 +576,7 @@ struct LibraryCardView: View {
         case .completed:
             HStack(spacing: 4) {
                 Image(systemName: "checkmark")
-                    .font(.system(size: 9, weight: .semibold))
+                    .font(.jakarta(size: 9, weight: .semibold))
                 Text(languageManager.text("library.status.done"))
                     .font(DS.sans(.caption2, .semibold))
                     .tracking(0.3)
@@ -588,7 +588,7 @@ struct LibraryCardView: View {
         case .inProgress:
             HStack(spacing: 4) {
                 Image(systemName: "play.fill")
-                    .font(.system(size: 8, weight: .semibold))
+                    .font(.jakarta(size: 8, weight: .semibold))
                 Text(languageManager.text("library.status.inProgress"))
                     .font(DS.sans(.caption2, .semibold))
                     .tracking(0.3)

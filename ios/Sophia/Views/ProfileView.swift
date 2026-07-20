@@ -116,7 +116,7 @@ struct ProfileView: View {
                 showSettings = true
             } label: {
                 Image(systemName: "gearshape")
-                    .font(.system(size: 17, weight: .medium))
+                    .font(.jakarta(size: 17, weight: .medium))
                     .foregroundStyle(DS.inkSecondary)
                     .frame(width: 44, height: 44)
                     .background(DS.surface, in: Circle())
@@ -215,7 +215,7 @@ struct ProfileView: View {
         VStack(alignment: .leading, spacing: 16) {
             HStack(alignment: .firstTextBaseline, spacing: 8) {
                 Image(systemName: "flame.fill")
-                    .font(.system(size: 22, weight: .medium))
+                    .font(.jakarta(size: 22, weight: .medium))
                     .foregroundStyle(DS.accentSoft)
                 Text("\(progressManager.streak)")
                     .font(DS.title(.largeTitle, .semibold))
@@ -235,7 +235,7 @@ struct ProfileView: View {
     private func statTile(icon: String, value: String, label: String) -> some View {
         VStack(alignment: .leading, spacing: 10) {
             Image(systemName: icon)
-                .font(.system(size: 16, weight: .medium))
+                .font(.jakarta(size: 16, weight: .medium))
                 .foregroundStyle(DS.accentSoft)
                 .frame(width: 38, height: 38)
                 .background(DS.accentTint, in: Circle())
@@ -288,7 +288,7 @@ struct ProfileView: View {
                         if isDone {
                             Circle().fill(DS.accent)
                             Image(systemName: "checkmark")
-                                .font(.system(size: 11, weight: .bold))
+                                .font(.jakarta(size: 11, weight: .bold))
                                 .foregroundStyle(.white)
                         } else if isToday {
                             Circle().fill(DS.surface)
@@ -314,7 +314,7 @@ struct ProfileView: View {
         } label: {
             HStack(spacing: 14) {
                 Image(systemName: "bookmark.fill")
-                    .font(.system(size: 16, weight: .medium))
+                    .font(.jakarta(size: 16, weight: .medium))
                     .foregroundStyle(DS.accentSoft)
                     .frame(width: 40, height: 40)
                     .background(DS.accentTint, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
@@ -329,7 +329,7 @@ struct ProfileView: View {
                 }
                 Spacer()
                 Image(systemName: "chevron.right")
-                    .font(.system(size: 13, weight: .semibold))
+                    .font(.jakarta(size: 13, weight: .semibold))
                     .foregroundStyle(DS.inkTertiary)
             }
             .dsCard(padding: 14)
@@ -389,7 +389,7 @@ struct ProfileView: View {
     private var emptyQuizzesCard: some View {
         HStack(spacing: 14) {
             Image(systemName: "questionmark.circle")
-                .font(.system(size: 16, weight: .medium))
+                .font(.jakarta(size: 16, weight: .medium))
                 .foregroundStyle(DS.accentSoft)
                 .frame(width: 40, height: 40)
                 .background(DS.accentTint, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
@@ -439,7 +439,7 @@ struct ProfileView: View {
                             .font(DS.sans(.caption, .medium))
                             .foregroundStyle(DS.accentSoft)
                         Image(systemName: showSubjectDetails ? "chevron.up" : "chevron.down")
-                            .font(.system(size: 11, weight: .semibold))
+                            .font(.jakarta(size: 11, weight: .semibold))
                             .foregroundStyle(DS.accentSoft)
                     }
                 }
@@ -517,7 +517,7 @@ private struct SubjectProgressCard: View {
         VStack(alignment: .leading, spacing: 10) {
             HStack(spacing: 10) {
                 Image(systemName: subject.icon)
-                    .font(.system(size: 18, weight: .medium))
+                    .font(.jakarta(size: 18, weight: .medium))
                     .foregroundStyle(DS.accentSoft)
                     .frame(width: 44, height: 44)
                     .background(DS.accentTint, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
@@ -594,7 +594,7 @@ private struct GlobalRankRing: View {
                     .fill(progress.rank.primaryColor.opacity(0.16))
                     .frame(width: inner, height: inner)
                 Image(systemName: progress.rank.symbolName)
-                    .font(.system(size: inner * 0.42, weight: .semibold))
+                    .font(.jakarta(size: inner * 0.42, weight: .semibold))
                     .foregroundStyle(progress.rank.primaryColor)
             }
             .scaleEffect(appeared ? 1 : 0.8)
@@ -678,7 +678,7 @@ private struct SubjectRadarChart: View {
 
                 ForEach(0..<6, id: \.self) { i in
                     Image(systemName: values[i].subject.icon)
-                        .font(.system(size: 16, weight: .medium))
+                        .font(.jakarta(size: 16, weight: .medium))
                         .foregroundStyle(DS.inkSecondary)
                         .position(point(center, maxR + 22, i))
                 }
@@ -720,7 +720,7 @@ private struct QuizRowView: View {
                 HStack(spacing: 4) {
                     ForEach(0..<5, id: \.self) { i in
                         Image(systemName: i < fiveScore ? "star.fill" : "star")
-                            .font(.system(size: 11, weight: .medium))
+                            .font(.jakarta(size: 11, weight: .medium))
                             .foregroundStyle(i < fiveScore ? DS.accentSoft : DS.inkTertiary)
                     }
                     Text("\(fiveScore)/5")
@@ -735,7 +735,7 @@ private struct QuizRowView: View {
             Button(action: onRetry) {
                 HStack(spacing: 4) {
                     Image(systemName: "arrow.clockwise")
-                        .font(.system(size: 11, weight: .semibold))
+                        .font(.jakarta(size: 11, weight: .semibold))
                     Text(languageManager.text("profile.quiz.retry"))
                         .font(DS.sans(.caption, .semibold))
                 }
@@ -772,7 +772,7 @@ struct AllQuizzesView: View {
                         Spacer()
                         Button(action: onDismiss) {
                             Image(systemName: "xmark")
-                                .font(.system(size: 15, weight: .medium))
+                                .font(.jakarta(size: 15, weight: .medium))
                                 .foregroundStyle(DS.inkSecondary)
                                 .frame(width: 40, height: 40)
                                 .background(DS.surface, in: Circle())
@@ -834,7 +834,7 @@ private struct FavoritesSheet: View {
             )
             Button(action: onDismiss) {
                 Image(systemName: "xmark")
-                    .font(.system(size: 15, weight: .medium))
+                    .font(.jakarta(size: 15, weight: .medium))
                     .foregroundStyle(DS.inkSecondary)
                     .frame(width: 40, height: 40)
                     .background(DS.surface, in: Circle())

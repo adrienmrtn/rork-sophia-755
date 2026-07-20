@@ -577,7 +577,7 @@ private struct PaywallTrialTimelineSheet: View {
                 .padding(.bottom, 18)
 
             Text(fr("paywall.trialSheet.title"))
-                .font(.system(size: 28, weight: .black, design: .rounded))
+                .font(.jakarta(size: 28, weight: .black, design: .rounded))
                 .foregroundStyle(BrutalPalette.ink)
                 .multilineTextAlignment(.center)
                 .lineSpacing(2)
@@ -599,13 +599,13 @@ private struct PaywallTrialTimelineSheet: View {
 
                         VStack(alignment: .leading, spacing: 4) {
                             Text(step.title)
-                                .font(.system(.headline, design: .rounded, weight: .heavy))
+                                .font(.jakarta(.headline, design: .rounded, weight: .heavy))
                                 .foregroundStyle(BrutalPalette.ink)
                             Text(step.subtitle)
-                                .font(.system(.subheadline, design: .rounded, weight: .semibold))
+                                .font(.jakarta(.subheadline, design: .rounded, weight: .semibold))
                                 .foregroundStyle(BrutalPalette.ink.opacity(0.55))
                             Text(step.detail)
-                                .font(.system(.subheadline, design: .rounded, weight: .medium))
+                                .font(.jakarta(.subheadline, design: .rounded, weight: .medium))
                                 .foregroundStyle(BrutalPalette.ink.opacity(0.65))
                                 .fixedSize(horizontal: false, vertical: true)
                         }
@@ -618,7 +618,7 @@ private struct PaywallTrialTimelineSheet: View {
             .padding(.bottom, 12)
 
             Text(fr("paywall.cancelAnytime"))
-                .font(.system(.caption, design: .rounded, weight: .semibold))
+                .font(.jakarta(.caption, design: .rounded, weight: .semibold))
                 .foregroundStyle(BrutalPalette.ink.opacity(0.5))
                 .padding(.horizontal, 28)
                 .padding(.bottom, 8)
@@ -643,7 +643,7 @@ private struct PaywallTrialTimelineSheet: View {
                         .strokeBorder(BrutalPalette.ink, lineWidth: 2)
                 }
             Image(systemName: icon)
-                .font(.system(size: 17, weight: .heavy))
+                .font(.jakarta(size: 17, weight: .heavy))
                 .foregroundStyle(.white)
         }
     }

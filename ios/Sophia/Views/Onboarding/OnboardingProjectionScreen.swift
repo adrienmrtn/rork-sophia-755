@@ -6,9 +6,9 @@ struct OnboardingProjectionScreen: View {
     let onNext: () -> Void
 
     private let ink = BrutalPalette.ink
-    private let lineFont = Font.system(size: 34, weight: .regular, design: .rounded)
-    private let lineFontBold = Font.system(size: 34, weight: .heavy, design: .rounded)
-    private let numberFont = Font.system(size: 68, weight: .heavy, design: .rounded)
+    private let lineFont = Font.jakarta(size: 34, weight: .regular, design: .rounded)
+    private let lineFontBold = Font.jakarta(size: 34, weight: .heavy, design: .rounded)
+    private let numberFont = Font.jakarta(size: 68, weight: .heavy, design: .rounded)
 
     @State private var counterValue: Int = 0
     @State private var isRaining: Bool = false

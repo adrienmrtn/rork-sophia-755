@@ -117,7 +117,7 @@ struct SubjectCoursesView: View {
                 dismiss()
             } label: {
                 Image(systemName: "chevron.left")
-                    .font(.system(size: 15, weight: .semibold))
+                    .font(.jakarta(size: 15, weight: .semibold))
                     .foregroundStyle(DS.inkSecondary)
                     .frame(width: 40, height: 40)
                     .background(DS.surface, in: Circle())
@@ -134,7 +134,7 @@ struct SubjectCoursesView: View {
         VStack(alignment: .leading, spacing: 16) {
             HStack(spacing: 14) {
                 Image(systemName: subject.icon)
-                    .font(.system(size: 26, weight: .medium))
+                    .font(.jakarta(size: 26, weight: .medium))
                     .foregroundStyle(DS.accentSoft)
                     .frame(width: 60, height: 60)
                     .background(DS.accentTint, in: RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous))
@@ -236,7 +236,7 @@ struct SubjectCoursesView: View {
                     Spacer(minLength: 8)
 
                     Image(systemName: progressManager.courseStatus(for: course.id) == .inProgress ? "arrow.right" : "play.fill")
-                        .font(.system(size: 14, weight: .semibold))
+                        .font(.jakarta(size: 14, weight: .semibold))
                         .foregroundStyle(.white)
                         .frame(width: 38, height: 38)
                         .background(DS.accent, in: Circle())
@@ -284,7 +284,7 @@ struct SubjectCoursesView: View {
     private var emptyState: some View {
         VStack(spacing: 12) {
             Image(systemName: "tray")
-                .font(.system(size: 36, weight: .light))
+                .font(.jakarta(size: 36, weight: .light))
                 .foregroundStyle(DS.inkTertiary)
             Text(languageManager.text("subject.filter.empty"))
                 .font(DS.sans(.subheadline, .medium))
@@ -306,7 +306,7 @@ private struct NextCourseThumb: View {
                 Image(uiImage: image).resizable().scaledToFill()
             } else {
                 Image(systemName: course.subject.icon)
-                    .font(.system(size: 20, weight: .light))
+                    .font(.jakarta(size: 20, weight: .light))
                     .foregroundStyle(DS.accentSoft.opacity(0.5))
             }
         }

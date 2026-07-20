@@ -21,7 +21,7 @@ struct AnimatedFlameBadge: View {
             }
 
             Image(systemName: "flame.fill")
-                .font(.system(size: size, weight: .heavy))
+                .font(.jakarta(size: size, weight: .heavy))
                 .foregroundStyle(
                     LinearGradient(
                         colors: [orange, yellow],

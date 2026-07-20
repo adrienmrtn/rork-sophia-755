@@ -203,7 +203,7 @@ struct AmbassadorView: View {
                     HStack(spacing: 8) {
                         Text(languageManager.text("ambassador.discover.cta"))
                         Image(systemName: "arrow.right")
-                            .font(.system(size: 15, weight: .semibold))
+                            .font(.jakarta(size: 15, weight: .semibold))
                     }
                 }
                 .buttonStyle(DSPrimaryButtonStyle())
@@ -221,7 +221,7 @@ struct AmbassadorView: View {
     private func highlightRow(icon: String, text: String) -> some View {
         HStack(spacing: 12) {
             Image(systemName: icon)
-                .font(.system(size: 15, weight: .medium))
+                .font(.jakarta(size: 15, weight: .medium))
                 .foregroundStyle(DS.accentSoft)
                 .frame(width: 36, height: 36)
                 .background(DS.surface, in: Circle())
@@ -279,7 +279,7 @@ struct AmbassadorView: View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(spacing: 10) {
                 Image(systemName: icon)
-                    .font(.system(size: 16, weight: .medium))
+                    .font(.jakarta(size: 16, weight: .medium))
                     .foregroundStyle(DS.accentSoft)
                     .frame(width: 40, height: 40)
                     .background(DS.accentTint, in: RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous))
@@ -333,7 +333,7 @@ struct AmbassadorView: View {
     private func conditionRow(_ text: String) -> some View {
         HStack(alignment: .top, spacing: 10) {
             Image(systemName: "checkmark.circle.fill")
-                .font(.system(size: 16, weight: .medium))
+                .font(.jakarta(size: 16, weight: .medium))
                 .foregroundStyle(DS.success)
             Text(text)
                 .font(DS.sans(.subheadline))
@@ -414,7 +414,7 @@ struct AmbassadorView: View {
                             }
                         } label: {
                             Image(systemName: "chevron.left")
-                                .font(.system(size: 16, weight: .medium))
+                                .font(.jakarta(size: 16, weight: .medium))
                                 .foregroundStyle(DS.inkSecondary)
                                 .frame(width: 54, height: 54)
                                 .background(DS.surface, in: Circle())
@@ -452,7 +452,7 @@ struct AmbassadorView: View {
                     .tracking(1.1)
                 if valid {
                     Image(systemName: "checkmark.circle.fill")
-                        .font(.system(size: 12, weight: .medium))
+                        .font(.jakarta(size: 12, weight: .medium))
                         .foregroundStyle(DS.success)
                 }
             }
@@ -480,7 +480,7 @@ struct AmbassadorView: View {
         } label: {
             HStack(spacing: 12) {
                 Image(systemName: isOn.wrappedValue ? "checkmark.square.fill" : "square")
-                    .font(.system(size: 20, weight: .medium))
+                    .font(.jakarta(size: 20, weight: .medium))
                     .foregroundStyle(isOn.wrappedValue ? DS.accent : DS.inkTertiary)
                 Text(title)
                     .font(DS.sans(.body))
@@ -508,7 +508,7 @@ struct AmbassadorView: View {
         } label: {
             HStack(alignment: .top, spacing: 12) {
                 Image(systemName: countryConfirmed ? "checkmark.square.fill" : "square")
-                    .font(.system(size: 20, weight: .medium))
+                    .font(.jakarta(size: 20, weight: .medium))
                     .foregroundStyle(countryConfirmed ? DS.accent : DS.inkTertiary)
                 Text(languageManager.text("ambassador.form.country.confirm"))
                     .font(DS.sans(.subheadline))
@@ -636,7 +636,7 @@ struct AmbassadorView: View {
             ZStack {
                 Circle().fill(DS.accentTint)
                 Image(systemName: "checkmark")
-                    .font(.system(size: 38, weight: .medium))
+                    .font(.jakarta(size: 38, weight: .medium))
                     .foregroundStyle(DS.accent)
             }
             .frame(width: 96, height: 96)
@@ -655,7 +655,7 @@ struct AmbassadorView: View {
 
             HStack(spacing: 10) {
                 Image(systemName: "bolt.fill")
-                    .font(.system(size: 15, weight: .medium))
+                    .font(.jakarta(size: 15, weight: .medium))
                     .foregroundStyle(DS.accentSoft)
                 Text(languageManager.text("ambassador.cta48h"))
                     .font(DS.sans(.subheadline, .semibold))

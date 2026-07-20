@@ -113,7 +113,7 @@ struct FeedbackView: View {
             ZStack {
                 Circle().fill(DS.accentTint)
                 Image(systemName: "checkmark")
-                    .font(.system(size: 34, weight: .medium))
+                    .font(.jakarta(size: 34, weight: .medium))
                     .foregroundStyle(DS.accent)
             }
             .frame(width: 88, height: 88)

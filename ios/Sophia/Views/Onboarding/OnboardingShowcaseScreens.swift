@@ -20,7 +20,7 @@ private struct OnboardingShowcaseLayout<Hero: View>: View {
             Spacer(minLength: 38)
 
             Text(languageManager.text(titleKey))
-                .font(.system(size: 34, weight: .heavy, design: .rounded))
+                .font(.jakarta(size: 34, weight: .heavy, design: .rounded))
                 .lineSpacing(-2)
                 .foregroundStyle(BrutalPalette.ink)
                 .multilineTextAlignment(.center)
@@ -98,7 +98,7 @@ struct OnboardingShowcaseCoursesScreen: View {
                 }
 
                 Text(languageManager.text("onboarding.showcase.courses.swipe"))
-                    .font(.system(.caption, design: .rounded, weight: .black))
+                    .font(.jakarta(.caption, design: .rounded, weight: .black))
                     .foregroundStyle(BrutalPalette.ink.opacity(0.55))
                     .tracking(0.7)
             }
@@ -182,13 +182,13 @@ private struct OnboardingCourseExampleCard: View {
 
             VStack(alignment: .leading, spacing: 8) {
                 Text(course.title)
-                    .font(.system(.title3, design: .rounded, weight: .black))
+                    .font(.jakarta(.title3, design: .rounded, weight: .black))
                     .foregroundStyle(BrutalPalette.ink)
                     .lineLimit(2)
                     .fixedSize(horizontal: false, vertical: true)
 
                 Text(course.description)
-                    .font(.system(.caption, design: .rounded, weight: .heavy))
+                    .font(.jakarta(.caption, design: .rounded, weight: .heavy))
                     .foregroundStyle(BrutalPalette.ink.opacity(0.58))
                     .lineLimit(2)
                     .fixedSize(horizontal: false, vertical: true)
@@ -258,12 +258,12 @@ private struct OnboardingInlineCourseImage: View {
                     .scaledToFill()
             } else {
                 Image(systemName: "photo")
-                    .font(.system(size: 18, weight: .black))
+                    .font(.jakarta(size: 18, weight: .black))
                     .foregroundStyle(BrutalPalette.ink.opacity(0.45))
             }
 
             Text(rawName)
-                .font(.system(size: 9, weight: .black, design: .rounded))
+                .font(.jakarta(size: 9, weight: .black, design: .rounded))
                 .foregroundStyle(.white)
                 .lineLimit(2)
                 .shadow(color: .black.opacity(0.45), radius: 2, y: 1)
@@ -290,9 +290,9 @@ private struct OnboardingCourseStatChip: View {
     var body: some View {
         HStack(spacing: 5) {
             Image(systemName: icon)
-                .font(.system(size: 10, weight: .black))
+                .font(.jakarta(size: 10, weight: .black))
             Text(text)
-                .font(.system(.caption2, design: .rounded, weight: .black))
+                .font(.jakarta(.caption2, design: .rounded, weight: .black))
         }
         .foregroundStyle(BrutalPalette.ink)
         .padding(.horizontal, 9)
@@ -344,7 +344,7 @@ struct OnboardingShowcaseQuizScreen: View {
 
                 VStack(alignment: .leading, spacing: 16) {
                     Text(current.question)
-                        .font(.system(.title3, design: .rounded, weight: .heavy))
+                        .font(.jakarta(.title3, design: .rounded, weight: .heavy))
                         .foregroundStyle(ink)
                         .multilineTextAlignment(.leading)
                         .fixedSize(horizontal: false, vertical: true)
@@ -364,7 +364,7 @@ struct OnboardingShowcaseQuizScreen: View {
             .overlay(alignment: .topTrailing) {
                 if showXPBadge {
                     Text("+10 XP")
-                        .font(.system(.caption, design: .rounded, weight: .black))
+                        .font(.jakarta(.caption, design: .rounded, weight: .black))
                         .foregroundStyle(ink)
                         .padding(.horizontal, 10)
                         .padding(.vertical, 6)
@@ -409,14 +409,14 @@ struct OnboardingShowcaseQuizScreen: View {
 
                 if isRevealed && showCheck {
                     Image(systemName: "checkmark")
-                        .font(.system(size: 11, weight: .black))
+                        .font(.jakarta(size: 11, weight: .black))
                         .foregroundStyle(.white)
                         .transition(.scale)
                 }
             }
 
             Text(option)
-                .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                .font(.jakarta(.subheadline, design: .rounded, weight: .heavy))
                 .foregroundStyle(ink)
                 .multilineTextAlignment(.leading)
                 .fixedSize(horizontal: false, vertical: true)
@@ -544,7 +544,7 @@ struct OnboardingShowcaseCollectionsScreen: View {
 
             VStack(alignment: .leading, spacing: 16) {
                 Text(collection.title)
-                    .font(.system(.title3, design: .rounded, weight: .black))
+                    .font(.jakarta(.title3, design: .rounded, weight: .black))
                     .foregroundStyle(ink)
                     .lineLimit(2)
                     .fixedSize(horizontal: false, vertical: true)
@@ -565,19 +565,19 @@ struct OnboardingShowcaseCollectionsScreen: View {
 
                 HStack(spacing: 8) {
                     Image(systemName: isComplete ? "checkmark.seal.fill" : "square.stack.3d.up.fill")
-                        .font(.system(size: 13, weight: .black))
+                        .font(.jakarta(size: 13, weight: .black))
                         .foregroundStyle(ink.opacity(0.75))
                         .contentTransition(.symbolEffect(.replace))
 
                     Text("\(filledCount) / \(total)")
-                        .font(.system(.caption, design: .rounded, weight: .black))
+                        .font(.jakarta(.caption, design: .rounded, weight: .black))
                         .monospacedDigit()
                         .foregroundStyle(ink.opacity(0.75))
 
                     Spacer()
 
                     Text("+\(total * ProgressManager.globalCollectionXPPerCourse) XP")
-                        .font(.system(.caption2, design: .rounded, weight: .black))
+                        .font(.jakarta(.caption2, design: .rounded, weight: .black))
                         .foregroundStyle(ink)
                         .padding(.horizontal, 9)
                         .padding(.vertical, 5)

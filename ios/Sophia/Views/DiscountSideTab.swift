@@ -55,17 +55,17 @@ struct DiscountSideTab: View {
     private var content: some View {
         VStack(spacing: 5) {
             Image(systemName: "bolt.fill")
-                .font(.system(size: 20, weight: .black))
+                .font(.jakarta(size: 20, weight: .black))
                 .foregroundStyle(gold)
                 .shadow(color: .black.opacity(0.25), radius: 1, y: 1)
 
             Text(languageManager.text("discount.sideTab.label"))
-                .font(.system(size: 9, weight: .black, design: .rounded))
+                .font(.jakarta(size: 9, weight: .black, design: .rounded))
                 .foregroundStyle(.white)
                 .tracking(0.6)
 
             Text(discountManager.formattedRemaining)
-                .font(.system(size: 14, weight: .heavy, design: .rounded))
+                .font(.jakarta(size: 14, weight: .heavy, design: .rounded))
                 .foregroundStyle(.white)
                 .monospacedDigit()
                 .contentTransition(.numericText(countsDown: true))

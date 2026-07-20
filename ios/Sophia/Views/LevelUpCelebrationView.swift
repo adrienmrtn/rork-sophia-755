@@ -47,12 +47,12 @@ struct LevelUpCelebrationView: View {
                             .scaleEffect(showNewLevel ? 0.9 : 1)
 
                         Image(systemName: "arrow.right")
-                            .font(.system(size: 18, weight: .medium))
+                            .font(.jakarta(size: 18, weight: .medium))
                             .foregroundStyle(DS.accentSoft)
                             .opacity(showNewLevel ? 1 : 0.3)
 
                         Text(String(format: languageManager.text("common.levelShort"), newLevel))
-                            .font(.system(size: 44, weight: .semibold))
+                            .font(.jakarta(size: 44, weight: .semibold))
                             .foregroundStyle(DS.ink)
                             .scaleEffect(levelScale)
                             .opacity(showNewLevel ? 1 : 0)

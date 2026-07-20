@@ -32,7 +32,7 @@ struct OnboardingPremiumGiftScreen: View {
             Spacer().frame(height: 32)
 
             Text(languageManager.text("onboarding.premiumGift.title"))
-                .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                .font(.jakarta(.largeTitle, design: .rounded, weight: .heavy))
                 .foregroundStyle(BrutalPalette.ink)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
@@ -84,7 +84,7 @@ struct OnboardingPremiumGiftScreen: View {
                 .frame(width: 148, height: 148)
 
             Image(systemName: "gift.fill")
-                .font(.system(size: 64, weight: .heavy))
+                .font(.jakarta(size: 64, weight: .heavy))
                 .foregroundStyle(BrutalPalette.ink)
                 .symbolEffect(.bounce, value: giftBounce)
         }

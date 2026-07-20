@@ -102,7 +102,7 @@ struct HomeViewLegacy: View {
         HStack(spacing: 6) {
             AnimatedFlameBadge(size: 16, showGlow: false)
             Text("\(progressManager.streak)")
-                .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                .font(.jakarta(.subheadline, design: .rounded, weight: .heavy))
                 .foregroundStyle(ink)
                 .monospacedDigit()
                 .fixedSize(horizontal: true, vertical: true)
@@ -110,7 +110,7 @@ struct HomeViewLegacy: View {
             Text(progressManager.streak <= 1
                 ? languageManager.text("common.streak.day")
                 : languageManager.text("common.streak.days"))
-                .font(.system(.caption, design: .rounded, weight: .heavy))
+                .font(.jakarta(.caption, design: .rounded, weight: .heavy))
                 .foregroundStyle(ink)
                 .tracking(0.5)
                 .fixedSize(horizontal: true, vertical: true)
@@ -195,7 +195,7 @@ struct HomeViewLegacy: View {
     private var swipeHint: some View {
         HStack(spacing: 24) {
             Text(languageManager.text("home.swipe.left"))
-                .font(.system(.caption, design: .rounded, weight: .heavy))
+                .font(.jakarta(.caption, design: .rounded, weight: .heavy))
                 .foregroundStyle(ink.opacity(0.35))
 
             Circle()
@@ -203,7 +203,7 @@ struct HomeViewLegacy: View {
                 .frame(width: 6, height: 6)
 
             Text(languageManager.text("home.swipe.right"))
-                .font(.system(.caption, design: .rounded, weight: .heavy))
+                .font(.jakarta(.caption, design: .rounded, weight: .heavy))
                 .foregroundStyle(ink.opacity(0.55))
         }
     }
@@ -212,13 +212,13 @@ struct HomeViewLegacy: View {
     private var allCompletedView: some View {
         VStack(spacing: 20) {
             Image(systemName: "checkmark.seal.fill")
-                .font(.system(size: 64))
+                .font(.jakarta(size: 64))
                 .foregroundStyle(ink)
             Text(languageManager.text("home.bravo"))
-                .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                .font(.jakarta(.largeTitle, design: .rounded, weight: .heavy))
                 .foregroundStyle(ink)
             Text(languageManager.text("home.allCompleted"))
-                .font(.system(.body, design: .rounded, weight: .medium))
+                .font(.jakarta(.body, design: .rounded, weight: .medium))
                 .foregroundStyle(ink.opacity(0.6))
                 .multilineTextAlignment(.center)
         }
@@ -300,7 +300,7 @@ struct FlashCard: View {
                     ZStack {
                         pastel
                         Text(course.subject.emoji)
-                            .font(.system(size: 64))
+                            .font(.jakarta(size: 64))
                     }
                 }
             }
@@ -316,7 +316,7 @@ struct FlashCard: View {
                     onToggleFavorite?()
                 } label: {
                     Image(systemName: isFavorite ? "bookmark.fill" : "bookmark")
-                        .font(.system(size: 16, weight: .bold))
+                        .font(.jakarta(size: 16, weight: .bold))
                         .foregroundStyle(ink)
                         .frame(width: 40, height: 40)
                         .background(Color.white, in: Circle())
@@ -331,9 +331,9 @@ struct FlashCard: View {
             // Subject pill — black with icon + uppercase name
             HStack(spacing: 6) {
                 Text(course.subject.emoji)
-                    .font(.system(size: 16))
+                    .font(.jakarta(size: 16))
                 Text(course.subject.localizedShortName(language: language).uppercased())
-                    .font(.system(.caption, design: .rounded, weight: .heavy))
+                    .font(.jakarta(.caption, design: .rounded, weight: .heavy))
                     .foregroundStyle(.white)
                     .tracking(0.5)
             }
@@ -342,13 +342,13 @@ struct FlashCard: View {
             .background(ink, in: Capsule())
 
             Text(course.title)
-                .font(.system(.title2, design: .rounded, weight: .heavy))
+                .font(.jakarta(.title2, design: .rounded, weight: .heavy))
                 .foregroundStyle(ink)
                 .lineLimit(2, reservesSpace: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
 
             boldText(course.description)
-                .font(.system(.subheadline, design: .rounded, weight: .semibold))
+                .font(.jakarta(.subheadline, design: .rounded, weight: .semibold))
                 .foregroundStyle(ink.opacity(0.85))
                 .lineLimit(3, reservesSpace: true)
                 .multilineTextAlignment(.leading)
@@ -360,7 +360,7 @@ struct FlashCard: View {
             } label: {
                 HStack(spacing: 8) {
                     Text(AppLocalizable.string("home.start", language: language))
-                        .font(.system(.headline, design: .rounded, weight: .heavy))
+                        .font(.jakarta(.headline, design: .rounded, weight: .heavy))
                     Image(systemName: "play.fill")
                         .font(.subheadline.weight(.bold))
                 }

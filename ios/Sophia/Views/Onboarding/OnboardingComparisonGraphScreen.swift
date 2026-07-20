@@ -18,13 +18,13 @@ struct OnboardingComparisonGraphScreen: View {
                 VStack(spacing: 28) {
                     VStack(spacing: 10) {
                         Text(languageManager.text("onboarding.graph.title"))
-                            .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                            .font(.jakarta(.largeTitle, design: .rounded, weight: .heavy))
                             .foregroundStyle(BrutalPalette.ink)
                             .multilineTextAlignment(.center)
                             .opacity(appeared ? 1 : 0)
 
                         Text(languageManager.text("onboarding.graph.subtitle"))
-                            .font(.system(.subheadline, design: .rounded, weight: .semibold))
+                            .font(.jakarta(.subheadline, design: .rounded, weight: .semibold))
                             .foregroundStyle(BrutalPalette.ink.opacity(0.55))
                             .opacity(appeared ? 1 : 0)
                     }
@@ -33,7 +33,7 @@ struct OnboardingComparisonGraphScreen: View {
                         VStack(spacing: 0) {
                             HStack {
                                 Text(languageManager.text("onboarding.graph.culture"))
-                                    .font(.system(.caption2, design: .rounded, weight: .heavy))
+                                    .font(.jakarta(.caption2, design: .rounded, weight: .heavy))
                                     .tracking(1.0)
                                     .foregroundStyle(BrutalPalette.ink.opacity(0.5))
                                 Spacer()
@@ -95,11 +95,11 @@ struct OnboardingComparisonGraphScreen: View {
 
                             HStack {
                                 Text(languageManager.text("onboarding.graph.today"))
-                                    .font(.system(.caption2, design: .rounded, weight: .heavy))
+                                    .font(.jakarta(.caption2, design: .rounded, weight: .heavy))
                                     .foregroundStyle(BrutalPalette.ink.opacity(0.5))
                                 Spacer()
                                 Text(languageManager.text("onboarding.graph.oneYear"))
-                                    .font(.system(.caption2, design: .rounded, weight: .heavy))
+                                    .font(.jakarta(.caption2, design: .rounded, weight: .heavy))
                                     .foregroundStyle(BrutalPalette.ink.opacity(0.5))
                             }
                             .padding(.horizontal, 18)
@@ -112,7 +112,7 @@ struct OnboardingComparisonGraphScreen: View {
                     .opacity(appeared ? 1 : 0)
 
                     Text(languageManager.text("onboarding.graph.tagline"))
-                        .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                        .font(.jakarta(.subheadline, design: .rounded, weight: .heavy))
                         .foregroundStyle(BrutalPalette.ink.opacity(0.7))
                         .multilineTextAlignment(.center)
                         .opacity(showLabels ? 1 : 0)

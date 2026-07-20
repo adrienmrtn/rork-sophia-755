@@ -328,7 +328,7 @@ struct PaywallGreyStarBadge: View {
                         .strokeBorder(BrutalPalette.ink, lineWidth: 3)
                 }
             Image(systemName: "star.fill")
-                .font(.system(size: 16, weight: .black))
+                .font(.jakarta(size: 16, weight: .black))
                 .foregroundStyle(BrutalPalette.ink.opacity(0.35))
         }
     }
@@ -375,7 +375,7 @@ struct PaywallSpeechPill: View {
 
     var body: some View {
         Text(title)
-            .font(.system(size: 15.5, weight: .heavy, design: .rounded))
+            .font(.jakarta(size: 15.5, weight: .heavy, design: .rounded))
             .foregroundStyle(BrutalPalette.ink)
             .padding(.horizontal, 20)
             .padding(.vertical, 12)
@@ -396,7 +396,7 @@ struct PaywallDiscountBadge: View {
                         .stroke(BrutalPalette.ink, lineWidth: 2.5)
                 }
             Text(text)
-                .font(.system(size: 12, weight: .heavy, design: .rounded))
+                .font(.jakarta(size: 12, weight: .heavy, design: .rounded))
                 .foregroundStyle(BrutalPalette.ink)
                 .rotationEffect(.degrees(7))
         }
@@ -433,7 +433,7 @@ struct PaywallFeatureMark: View {
                 .fill(fill)
                 .overlay { Circle().strokeBorder(BrutalPalette.ink, lineWidth: 2) }
             Image(systemName: "checkmark")
-                .font(.system(size: 9, weight: .heavy))
+                .font(.jakarta(size: 9, weight: .heavy))
                 .foregroundStyle(BrutalPalette.ink)
         }
     }
@@ -444,7 +444,7 @@ struct PaywallFeatureMark: View {
                 .fill(PaywallDesign.deniedFill.opacity(0.5))
                 .overlay { Circle().strokeBorder(BrutalPalette.ink, lineWidth: 2) }
             Image(systemName: "xmark")
-                .font(.system(size: 8, weight: .heavy))
+                .font(.jakarta(size: 8, weight: .heavy))
                 .foregroundStyle(BrutalPalette.ink)
         }
     }
@@ -460,7 +460,7 @@ struct PaywallPlanRadio: View {
                 .overlay { Circle().strokeBorder(BrutalPalette.ink, lineWidth: 2.75) }
             if isSelected {
                 Image(systemName: "checkmark")
-                    .font(.system(size: 13, weight: .heavy))
+                    .font(.jakarta(size: 13, weight: .heavy))
                     .foregroundStyle(BrutalPalette.ink)
             }
         }
@@ -487,7 +487,7 @@ struct PaywallSquareCheckbox: View {
                 }
             if isSelected {
                 Image(systemName: "checkmark")
-                    .font(.system(size: PaywallDesign.s(14, width: layoutWidth), weight: .heavy))
+                    .font(.jakarta(size: PaywallDesign.s(14, width: layoutWidth), weight: .heavy))
                     .foregroundStyle(BrutalPalette.ink)
             }
         }

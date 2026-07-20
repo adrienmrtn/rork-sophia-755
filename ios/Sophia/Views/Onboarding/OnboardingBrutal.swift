@@ -86,7 +86,7 @@ struct OnboardingPrimaryButton: View {
         } label: {
             HStack(spacing: 10) {
                 Text(title)
-                    .font(.system(.headline, design: .rounded, weight: .heavy))
+                    .font(.jakarta(.headline, design: .rounded, weight: .heavy))
                 Image(systemName: "arrow.right")
                     .font(.subheadline.weight(.heavy))
             }
@@ -121,13 +121,13 @@ struct BrutalSelectableRow: View {
                                     .strokeBorder(BrutalPalette.ink, lineWidth: 2)
                             }
                         Image(systemName: icon)
-                            .font(.system(size: 16, weight: .heavy))
+                            .font(.jakarta(size: 16, weight: .heavy))
                             .foregroundStyle(BrutalPalette.ink)
                     }
                     .frame(width: 38, height: 38)
                 }
                 Text(label)
-                    .font(.system(.body, design: .rounded, weight: .heavy))
+                    .font(.jakarta(.body, design: .rounded, weight: .heavy))
                     .foregroundStyle(BrutalPalette.ink)
                     .multilineTextAlignment(.leading)
                     .fixedSize(horizontal: false, vertical: true)
@@ -142,7 +142,7 @@ struct BrutalSelectableRow: View {
                             .frame(width: 24, height: 24)
                             .overlay {
                                 Image(systemName: "checkmark")
-                                    .font(.system(size: 12, weight: .heavy))
+                                    .font(.jakarta(size: 12, weight: .heavy))
                                     .foregroundStyle(.white)
                             }
                             .transition(.scale.combined(with: .opacity))
@@ -216,10 +216,10 @@ struct BrutalPill: View {
         HStack(spacing: 6) {
             if let icon {
                 Image(systemName: icon)
-                    .font(.system(size: 11, weight: .heavy))
+                    .font(.jakarta(size: 11, weight: .heavy))
             }
             Text(text.uppercased())
-                .font(.system(.caption, design: .rounded, weight: .heavy))
+                .font(.jakarta(.caption, design: .rounded, weight: .heavy))
                 .tracking(0.8)
         }
         .foregroundStyle(foreground)
@@ -242,7 +242,7 @@ struct OnboardingHeader: View {
     var body: some View {
         VStack(spacing: 10) {
             Text(title)
-                .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                .font(.jakarta(.largeTitle, design: .rounded, weight: .heavy))
                 .foregroundStyle(BrutalPalette.ink)
                 .multilineTextAlignment(.center)
                 .opacity(appeared ? 1 : 0)
@@ -250,7 +250,7 @@ struct OnboardingHeader: View {
 
             if let subtitle {
                 Text(subtitle)
-                    .font(.system(.subheadline, design: .rounded, weight: .semibold))
+                    .font(.jakarta(.subheadline, design: .rounded, weight: .semibold))
                     .foregroundStyle(BrutalPalette.ink.opacity(0.55))
                     .multilineTextAlignment(.center)
                     .opacity(appeared ? 1 : 0)

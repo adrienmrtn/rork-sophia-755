@@ -43,7 +43,7 @@ struct GlobalRankUpCelebrationView: View {
                     HStack(spacing: 10) {
                         rankChip(previousRank, faded: true)
                         Image(systemName: "arrow.right")
-                            .font(.system(size: 15, weight: .medium))
+                            .font(.jakarta(size: 15, weight: .medium))
                             .foregroundStyle(DS.inkTertiary)
                         rankChip(newRank, faded: false)
                     }
@@ -100,7 +100,7 @@ struct GlobalRankUpCelebrationView: View {
     private func rankChip(_ rank: GlobalRank, faded: Bool) -> some View {
         HStack(spacing: 7) {
             Image(systemName: rank.symbolName)
-                .font(.system(size: 12, weight: .medium))
+                .font(.jakarta(size: 12, weight: .medium))
             Text(rank.localizedName(language: languageManager.current))
                 .font(DS.sans(.caption, .medium))
         }
@@ -150,7 +150,7 @@ struct GlobalRankAnimatedIcon: View {
                 .frame(width: size, height: size)
 
             Image(systemName: rank.symbolName)
-                .font(.system(size: size * 0.4, weight: .medium))
+                .font(.jakarta(size: size * 0.4, weight: .medium))
                 .foregroundStyle(.white)
         }
         .frame(width: size, height: size)

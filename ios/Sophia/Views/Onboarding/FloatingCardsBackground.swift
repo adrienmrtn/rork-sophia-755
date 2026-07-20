@@ -89,7 +89,7 @@ private struct FloatingCardItem: View {
                     }
 
                 Text(title)
-                    .font(.system(cardScale > 1.1 ? .caption : .caption2, design: .rounded, weight: .heavy))
+                    .font(.jakarta(cardScale > 1.1 ? .caption : .caption2, design: .rounded, weight: .heavy))
                     .foregroundStyle(BrutalPalette.ink)
                     .lineLimit(2)
                     .frame(width: w, alignment: .leading)

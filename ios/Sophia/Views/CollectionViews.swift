@@ -201,7 +201,7 @@ private struct CollectionFeaturedCard: View {
                         Text(isComplete
                             ? languageManager.text("collections.pathComplete")
                             : (started ? languageManager.text("library.section.continue") : languageManager.text("home.start")))
-                        Image(systemName: "arrow.right").font(.system(size: 11, weight: .semibold))
+                        Image(systemName: "arrow.right").font(.jakarta(size: 11, weight: .semibold))
                     }
                     .font(DS.sans(.caption, .semibold))
                     .foregroundStyle(DS.accent)
@@ -256,7 +256,7 @@ private struct CollectionRowCard: View {
                 HStack(spacing: 5) {
                     if isComplete {
                         Image(systemName: "checkmark.circle.fill")
-                            .font(.system(size: 11, weight: .medium))
+                            .font(.jakarta(size: 11, weight: .medium))
                             .foregroundStyle(DS.accentSoft)
                     }
                     Text(isComplete
@@ -269,7 +269,7 @@ private struct CollectionRowCard: View {
             }
 
             Image(systemName: "chevron.right")
-                .font(.system(size: 13, weight: .semibold))
+                .font(.jakarta(size: 13, weight: .semibold))
                 .foregroundStyle(DS.inkTertiary)
         }
         .padding(12)
@@ -336,7 +336,7 @@ struct CollectionDetailView: View {
                 dismiss()
             } label: {
                 Image(systemName: "chevron.left")
-                    .font(.system(size: 15, weight: .semibold))
+                    .font(.jakarta(size: 15, weight: .semibold))
                     .foregroundStyle(DS.inkSecondary)
                     .frame(width: 40, height: 40)
                     .background(DS.surface, in: Circle())
@@ -412,7 +412,7 @@ struct CollectionDetailView: View {
     private var completionFooter: some View {
         HStack(spacing: 10) {
             Image(systemName: "checkmark.seal.fill")
-                .font(.system(size: 18, weight: .medium))
+                .font(.jakarta(size: 18, weight: .medium))
                 .foregroundStyle(DS.accentSoft)
             Text(languageManager.text("collections.pathComplete"))
                 .font(DS.sans(.subheadline, .semibold))
@@ -491,7 +491,7 @@ private struct CollectionCourseRow: View {
                 Spacer(minLength: 8)
 
                 Image(systemName: "chevron.right")
-                    .font(.system(size: 12, weight: .semibold))
+                    .font(.jakarta(size: 12, weight: .semibold))
                     .foregroundStyle(DS.inkTertiary)
                     .padding(.top, 10)
             }
@@ -520,13 +520,13 @@ private struct CollectionCourseRow: View {
             case .completed:
                 Circle().fill(DS.accent)
                 Image(systemName: "checkmark")
-                    .font(.system(size: nodeSize * 0.4, weight: .bold))
+                    .font(.jakarta(size: nodeSize * 0.4, weight: .bold))
                     .foregroundStyle(.white)
             case .inProgress:
                 Circle().fill(DS.surface)
                 Circle().strokeBorder(DS.accent, lineWidth: 2)
                 Image(systemName: "play.fill")
-                    .font(.system(size: nodeSize * 0.34, weight: .semibold))
+                    .font(.jakarta(size: nodeSize * 0.34, weight: .semibold))
                     .foregroundStyle(DS.accent)
             case .notStarted:
                 if isCurrent {
@@ -585,7 +585,7 @@ struct CollectionCoverView: View {
             LinearGradient(colors: [palette.0, palette.1], startPoint: .topLeading, endPoint: .bottomTrailing)
 
             Image(systemName: "square.stack.3d.up")
-                .font(.system(size: 40, weight: .light))
+                .font(.jakarta(size: 40, weight: .light))
                 .foregroundStyle(DS.accentSoft.opacity(0.55))
         }
     }

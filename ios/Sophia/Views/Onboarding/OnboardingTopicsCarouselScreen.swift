@@ -15,7 +15,7 @@ struct OnboardingTopicsCarouselScreen: View {
             VStack(spacing: 0) {
                 VStack(spacing: 8) {
                     Text(title)
-                        .font(.system(size: 28, weight: .heavy, design: .rounded))
+                        .font(.jakarta(size: 28, weight: .heavy, design: .rounded))
                         .lineSpacing(-2)
                         .foregroundStyle(BrutalPalette.ink)
                         .multilineTextAlignment(.center)
@@ -25,7 +25,7 @@ struct OnboardingTopicsCarouselScreen: View {
                         .offset(y: appeared ? 0 : 12)
 
                     Text(subtitle)
-                        .font(.system(size: 14, weight: .semibold, design: .rounded))
+                        .font(.jakarta(size: 14, weight: .semibold, design: .rounded))
                         .lineSpacing(1)
                         .foregroundStyle(BrutalPalette.ink.opacity(0.58))
                         .multilineTextAlignment(.center)
@@ -202,7 +202,7 @@ struct OnboardingMiniCard: View {
                     }
 
                 Text(title)
-                    .font(.system(.caption2, design: .rounded, weight: .heavy))
+                    .font(.jakarta(.caption2, design: .rounded, weight: .heavy))
                     .foregroundStyle(BrutalPalette.ink)
                     .lineLimit(2)
                     .multilineTextAlignment(.leading)

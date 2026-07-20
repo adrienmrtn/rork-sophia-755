@@ -209,16 +209,27 @@ private enum InlineTextMetrics {
         UIFont.preferredFont(forTextStyle: .body).pointSize
     }
 
+    /// Plus Jakarta Sans equivalent of `UIFont.systemFont(ofSize:weight:)` — uses a
+    /// weight-variation font descriptor so the variable font file resolves the matching
+    /// cut, keeping these width estimates aligned with the real (SwiftUI) text they measure.
+    private static func jakartaFont(size: CGFloat, weight: UIFont.Weight) -> UIFont {
+        let descriptor = UIFontDescriptor(fontAttributes: [
+            .family: "Plus Jakarta Sans",
+            .traits: [UIFontDescriptor.TraitKey.weight: weight],
+        ])
+        return UIFont(descriptor: descriptor, size: size)
+    }
+
     static func proseWidth(_ text: String, bold: Bool) -> CGFloat {
         guard !text.isEmpty else { return 0 }
         let weight: UIFont.Weight = bold ? .semibold : .regular
-        let font = UIFont.systemFont(ofSize: bodyPointSize, weight: weight)
+        let font = jakartaFont(size: bodyPointSize, weight: weight)
         return (text as NSString).size(withAttributes: [.font: font]).width
     }
 
     static func pillWidth(_ text: String, bold: Bool) -> CGFloat {
         let weight: UIFont.Weight = bold ? .semibold : .medium
-        let font = UIFont.systemFont(ofSize: bodyPointSize, weight: weight)
+        let font = jakartaFont(size: bodyPointSize, weight: weight)
         let textWidth = (text as NSString).size(withAttributes: [.font: font]).width
         return textWidth + 16
     }
@@ -783,7 +794,7 @@ private struct LegacyCalloutCard<Content: View>: View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(spacing: 8) {
                 Image(systemName: icon)
-                    .font(.system(size: 12, weight: .semibold))
+                    .font(.jakarta(size: 12, weight: .semibold))
                     .foregroundStyle(DS.accentSoft)
                 Text(title.uppercased())
                     .font(DS.sans(.caption2, .semibold))

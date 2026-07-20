@@ -13,14 +13,14 @@ struct OnboardingDailyGoalScreen: View {
 
                 VStack(spacing: 10) {
                     Text(languageManager.text("onboarding.dailyGoal.title"))
-                        .font(.system(size: 30, weight: .heavy, design: .rounded))
+                        .font(.jakarta(size: 30, weight: .heavy, design: .rounded))
                         .foregroundStyle(BrutalPalette.ink)
                         .multilineTextAlignment(.center)
                         .opacity(appeared ? 1 : 0)
                         .offset(y: appeared ? 0 : 14)
 
                     Text(languageManager.text("onboarding.dailyGoal.subtitle"))
-                        .font(.system(.subheadline, design: .rounded, weight: .semibold))
+                        .font(.jakarta(.subheadline, design: .rounded, weight: .semibold))
                         .foregroundStyle(BrutalPalette.ink.opacity(0.58))
                         .multilineTextAlignment(.center)
                         .opacity(appeared ? 1 : 0)
@@ -37,7 +37,7 @@ struct OnboardingDailyGoalScreen: View {
                         }
 
                         Text("\(viewModel.dailyLearningGoal)")
-                            .font(.system(size: 72, weight: .heavy, design: .rounded))
+                            .font(.jakarta(size: 72, weight: .heavy, design: .rounded))
                             .foregroundStyle(BrutalPalette.ink)
                             .contentTransition(.numericText())
                             .frame(width: 100, height: 96)
@@ -58,7 +58,7 @@ struct OnboardingDailyGoalScreen: View {
                         format: languageManager.text("onboarding.dailyGoal.perDay"),
                         "\(viewModel.dailyLearningGoal) \(viewModel.dailyLearningGoalLabel(language: languageManager.current))"
                     ))
-                        .font(.system(.title3, design: .rounded, weight: .heavy))
+                        .font(.jakarta(.title3, design: .rounded, weight: .heavy))
                         .foregroundStyle(BrutalPalette.ink)
                         .padding(.horizontal, 18)
                         .padding(.vertical, 10)
@@ -105,7 +105,7 @@ private struct GoalStepperButton: View {
     var body: some View {
         Button(action: action) {
             Image(systemName: symbol)
-                .font(.system(size: 22, weight: .heavy))
+                .font(.jakarta(size: 22, weight: .heavy))
                 .foregroundStyle(isEnabled ? BrutalPalette.ink : BrutalPalette.ink.opacity(0.32))
                 .frame(width: 58, height: 58)
                 .background(isEnabled ? BrutalPalette.pink : Color(red: 0.93, green: 0.89, blue: 0.86), in: .circle)

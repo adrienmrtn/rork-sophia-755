@@ -68,20 +68,20 @@ struct SwipeTutorialOverlay: View {
     private var swipeGestureDemo: some View {
         HStack(spacing: 24) {
             Image(systemName: "chevron.left")
-                .font(.system(size: 18, weight: .semibold))
+                .font(.jakarta(size: 18, weight: .semibold))
                 .foregroundStyle(handOffset < -8 ? DS.accent : DS.hairline)
 
             ZStack {
                 Circle().fill(DS.accentTint)
                 Image(systemName: "hand.draw.fill")
-                    .font(.system(size: 34, weight: .regular))
+                    .font(.jakarta(size: 34, weight: .regular))
                     .foregroundStyle(DS.accent)
                     .offset(x: handOffset * 0.35)
             }
             .frame(width: 72, height: 72)
 
             Image(systemName: "chevron.right")
-                .font(.system(size: 18, weight: .semibold))
+                .font(.jakarta(size: 18, weight: .semibold))
                 .foregroundStyle(handOffset > 8 ? DS.accent : DS.hairline)
         }
         .frame(height: 72)

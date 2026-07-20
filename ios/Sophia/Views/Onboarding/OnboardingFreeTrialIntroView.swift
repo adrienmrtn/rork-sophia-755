@@ -23,7 +23,7 @@ struct OnboardingFreeTrialIntroView: View {
 
                 // Title
                 Text(languageManager.text("onboarding.trial.title"))
-                    .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                    .font(.jakarta(.largeTitle, design: .rounded, weight: .heavy))
                     .foregroundStyle(BrutalPalette.ink)
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
@@ -128,10 +128,10 @@ private struct BrutalFeaturePill: View {
     var body: some View {
         HStack(spacing: 8) {
             Image(systemName: icon)
-                .font(.system(size: 13, weight: .heavy))
+                .font(.jakarta(size: 13, weight: .heavy))
                 .foregroundStyle(BrutalPalette.ink)
             Text(text)
-                .font(.system(.footnote, design: .rounded, weight: .heavy))
+                .font(.jakarta(.footnote, design: .rounded, weight: .heavy))
                 .foregroundStyle(BrutalPalette.ink)
         }
         .padding(.horizontal, 14)

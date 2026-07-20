@@ -690,7 +690,7 @@ struct FunFactCardV2: View {
                     ZStack {
                         Circle().fill(DS.accentTint)
                         Image(systemName: "lightbulb")
-                            .font(.system(size: 15, weight: .medium))
+                            .font(.jakarta(size: 15, weight: .medium))
                             .foregroundStyle(DS.accentSoft)
                     }
                     .frame(width: 36, height: 36)
@@ -709,7 +709,7 @@ struct FunFactCardV2: View {
                     Spacer(minLength: 8)
 
                     Image(systemName: "chevron.down")
-                        .font(.system(size: 13, weight: .semibold))
+                        .font(.jakarta(size: 13, weight: .semibold))
                         .foregroundStyle(DS.inkTertiary)
                         .rotationEffect(.degrees(revealed ? 180 : 0))
                 }
@@ -788,7 +788,7 @@ private struct CalloutCard<Content: View>: View {
             HStack(spacing: 8) {
                 if let badgeIcon {
                     Image(systemName: badgeIcon)
-                        .font(.system(size: 12, weight: .semibold))
+                        .font(.jakarta(size: 12, weight: .semibold))
                         .foregroundStyle(DS.accentSoft)
                 }
                 Text(badgeText.uppercased())

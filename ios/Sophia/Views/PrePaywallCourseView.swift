@@ -53,7 +53,7 @@ struct PrePaywallCourseView: View {
 
                 VStack(spacing: 20) {
                     Text(languageManager.text("prepaywall.course.subtitle"))
-                        .font(.system(.body, design: .rounded))
+                        .font(.jakarta(.body, design: .rounded))
                         .foregroundStyle(.white.opacity(0.6))
                         .multilineTextAlignment(.center)
                         .opacity(appeared ? 1 : 0)
@@ -71,7 +71,7 @@ struct PrePaywallCourseView: View {
                             Image(systemName: "sparkles")
                                 .font(.subheadline.weight(.semibold))
                             Text(languageManager.text("prepaywall.course.access"))
-                                .font(.system(.headline, design: .rounded, weight: .bold))
+                                .font(.jakarta(.headline, design: .rounded, weight: .bold))
                         }
                         .foregroundStyle(.white)
                         .frame(maxWidth: .infinity)

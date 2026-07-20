@@ -12,7 +12,7 @@ struct OnboardingWastedTimeScreen: View {
 
     private let ink = BrutalPalette.ink
     private let accentNumber = Color.white
-    private let bodyFont = Font.system(size: 30, weight: .semibold, design: .rounded)
+    private let bodyFont = Font.jakarta(size: 30, weight: .semibold, design: .rounded)
 
     private var targetValue: Int {
         guard let sel = viewModel.phoneTimeSelection else { return 0 }
@@ -46,7 +46,7 @@ struct OnboardingWastedTimeScreen: View {
                 if showCounter {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("\(counterValue)")
-                            .font(.system(size: 96, weight: .heavy, design: .rounded))
+                            .font(.jakarta(size: 96, weight: .heavy, design: .rounded))
                             .foregroundStyle(accentNumber)
                             .contentTransition(.numericText(countsDown: false))
 

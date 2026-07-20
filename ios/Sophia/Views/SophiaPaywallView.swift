@@ -64,7 +64,7 @@ struct SophiaPaywallView: View {
                     Color.black.ignoresSafeArea()
                     VStack(spacing: 16) {
                         Text(AppLocalizable.string("paywall.error.unavailable", language: AppLanguage.currentPersisted()))
-                            .font(.headline)
+                            .font(DS.sans(.headline, .semibold))
                             .foregroundStyle(.white)
                         Button(AppLocalizable.string("paywall.error.retry", language: AppLanguage.currentPersisted())) {
                             loaded = false

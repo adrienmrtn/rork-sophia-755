@@ -105,7 +105,7 @@ struct DiscountGiftOverlay: View {
                 .frame(width: 100, height: 100)
 
             Image(systemName: opened ? "gift.fill" : "gift")
-                .font(.system(size: 42, weight: .regular))
+                .font(.jakarta(size: 42, weight: .regular))
                 .foregroundStyle(DS.accent)
                 .symbolEffect(.bounce, value: bounce)
                 .scaleEffect(iconPulse ? 1.08 : 1.0)

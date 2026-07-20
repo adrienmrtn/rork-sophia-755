@@ -64,8 +64,10 @@ enum DS {
 
     /// Apple's default point size for each Dynamic Type text style at the base content
     /// size — used as the anchor for `Font.custom(..., relativeTo:)` so our custom font
-    /// still scales correctly with the user's preferred text size.
-    private static func baseSize(for style: Font.TextStyle) -> CGFloat {
+    /// still scales correctly with the user's preferred text size. Shared with the
+    /// `Font.jakarta` shims below so every call site (not just `DS.title`/`DS.sans`) can
+    /// reuse the exact same sizing table.
+    static func baseSize(for style: Font.TextStyle) -> CGFloat {
         switch style {
         case .largeTitle: 34
         case .title: 28
@@ -114,6 +116,25 @@ enum DS {
         static let color = Color.black.opacity(0.06)
         static let radius: CGFloat = 18
         static let y: CGFloat = 10
+    }
+}
+
+// MARK: - Font.jakarta — drop-in Plus Jakarta Sans replacement for Font.system
+
+/// Mirrors `Font.system`'s two call shapes exactly (down to the now-unused `design:`
+/// parameter, accepted but ignored) so every existing call site across the app only
+/// needed `.system` swapped for `.jakarta` — the whole app now renders in a single
+/// family, not just the screens that already went through `DS.title`/`DS.sans`.
+extension Font {
+    /// Drop-in replacement for `Font.system(size:weight:design:)`.
+    static func jakarta(size: CGFloat, weight: Font.Weight = .regular, design: Font.Design = .default) -> Font {
+        .custom("Plus Jakarta Sans", size: size).weight(weight)
+    }
+
+    /// Drop-in replacement for `Font.system(_:design:weight:)` — keeps Dynamic-Type-aware
+    /// relative sizing.
+    static func jakarta(_ style: Font.TextStyle, design: Font.Design = .default, weight: Font.Weight = .regular) -> Font {
+        .custom("Plus Jakarta Sans", size: DS.baseSize(for: style), relativeTo: style).weight(weight)
     }
 }
 
