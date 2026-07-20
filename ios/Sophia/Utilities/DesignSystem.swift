@@ -53,18 +53,44 @@ enum DS {
 
     // MARK: - Typography
     //
-    // Full sans-serif (SF) to match the calm Deepstash look: clean, neutral, modern.
-    // Titles lean on semibold weight for hierarchy, body copy stays regular. No serif,
-    // no rounded, no heavy/black. Built on relative text styles so Dynamic Type works.
+    // Plus Jakarta Sans (Google Fonts) throughout — a single variable font file
+    // (`Resources/Fonts/PlusJakartaSans.ttf`, registered via `UIAppFonts` in Info.plist)
+    // spanning weights 200–800, so `.weight(_:)` picks the matching cut on the fly:
+    // .regular=400, .medium=500, .semibold=600, .bold=700, .heavy=800. Titles default to
+    // ExtraBold (800) for strong hierarchy; body copy stays Regular (400), with SemiBold
+    // (600) reserved for emphasis. Built on relative text styles so Dynamic Type still works.
 
-    /// Titles / headings — clean sans with a strong-but-calm weight.
-    static func title(_ style: Font.TextStyle, _ weight: Font.Weight = .semibold) -> Font {
-        .system(style, design: .default, weight: weight)
+    private static let fontFamily = "Plus Jakarta Sans"
+
+    /// Apple's default point size for each Dynamic Type text style at the base content
+    /// size — used as the anchor for `Font.custom(..., relativeTo:)` so our custom font
+    /// still scales correctly with the user's preferred text size.
+    private static func baseSize(for style: Font.TextStyle) -> CGFloat {
+        switch style {
+        case .largeTitle: 34
+        case .title: 28
+        case .title2: 22
+        case .title3: 20
+        case .headline, .body: 17
+        case .callout: 16
+        case .subheadline: 15
+        case .footnote: 13
+        case .caption: 12
+        case .caption2: 11
+        default: 17
+        }
     }
 
-    /// Sans font for body copy and UI chrome.
+    /// Titles / headings — Plus Jakarta Sans, ExtraBold (800) by default for strong
+    /// hierarchy; pass an explicit lighter weight where a quieter title is needed.
+    static func title(_ style: Font.TextStyle, _ weight: Font.Weight = .heavy) -> Font {
+        .custom(fontFamily, size: baseSize(for: style), relativeTo: style).weight(weight)
+    }
+
+    /// Sans font for body copy and UI chrome — Plus Jakarta Sans, Regular (400) by
+    /// default; pass `.semibold` (600) for emphasis within body text.
     static func sans(_ style: Font.TextStyle, _ weight: Font.Weight = .regular) -> Font {
-        .system(style, design: .default, weight: weight)
+        .custom(fontFamily, size: baseSize(for: style), relativeTo: style).weight(weight)
     }
 
     // MARK: - Metrics
