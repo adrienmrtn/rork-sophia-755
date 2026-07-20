@@ -37,7 +37,7 @@ final class OnboardingV2ViewModel {
     }
 
     /// Pourcentage « social proof » affiché page 4 (marketing, par objectif).
-    static func objectiveStatPercent(_ key: String) -> Int {
+    static func objectiveStatPercent(_ key: String?) -> Int {
         switch key {
         case "cultivate": 92
         case "reduceScreen": 88
