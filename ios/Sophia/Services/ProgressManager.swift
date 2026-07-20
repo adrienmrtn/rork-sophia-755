@@ -165,6 +165,14 @@ class ProgressManager {
     init() {
         load()
         updateStreak()
+        ProgressSyncService.shared.attach(self)
+    }
+
+    /// Remplace la progression locale par celle venant du cloud (sync). Persiste sans
+    /// re-déclencher d'envoi vers le cloud (les données viennent déjà de là).
+    func applyRemoteProgress(_ remote: UserProgress) {
+        progress = remote
+        persistLocally()
     }
 
     var streak: Int { progress.streak }
@@ -604,6 +612,11 @@ class ProgressManager {
     }
 
     private func save() {
+        persistLocally()
+        ProgressSyncService.shared.schedulePush(progress)
+    }
+
+    private func persistLocally() {
         guard let data = try? JSONEncoder().encode(progress) else { return }
         UserDefaults.standard.set(data, forKey: key)
     }
