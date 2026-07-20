@@ -138,6 +138,34 @@ nonisolated struct UserProgress: Codable, Sendable {
     }
 }
 
+extension UserProgress {
+    /// `true` si la progression ne contient rien de significatif (équivalent à `.empty`,
+    /// ou à une ligne cloud fraîchement créée `{}`). Sert à éviter d'écraser des données
+    /// réelles avec une progression vide lors de la synchronisation.
+    var isEssentiallyEmpty: Bool {
+        courseProgress.isEmpty
+            && favoriteCourseIds.isEmpty
+            && subjectXP.isEmpty
+            && completedQuizCourseIds.isEmpty
+            && trainingQuestionStates.isEmpty
+            && globalXP == 0
+            && streak == 0
+    }
+
+    /// Score grossier « quantité de progression » utilisé pour arbitrer local vs cloud
+    /// sans horodatage fiable : plus il est élevé, plus la progression est avancée.
+    var syncSignalScore: Int {
+        let completed = courseProgress.values.filter(\.isCompleted).count
+        return completed * 100
+            + globalXP
+            + favoriteCourseIds.count
+            + subjectXP.values.reduce(0, +)
+            + completedQuizCourseIds.count
+            + trainingQuestionStates.count
+            + streak
+    }
+}
+
 nonisolated struct PendingGlobalRankUp: Codable, Sendable, Equatable {
     var previousRankRawValue: String
     var newRankRawValue: String

@@ -2,11 +2,13 @@ import SwiftUI
 
 struct SettingsView: View {
     @Environment(LanguageManager.self) private var languageManager
+    @Environment(AuthService.self) private var auth
     let progressManager: ProgressManager
     let store: StoreViewModel
     var onShowPaywall: (() -> Void)? = nil
     var onResetOnboarding: (() -> Void)? = nil
     var onDismiss: (() -> Void)? = nil
+    @State private var showAccount: Bool = false
     @State private var showResetAlert: Bool = false
     @State private var showResetOnboardingAlert: Bool = false
     @State private var showTerms: Bool = false
@@ -34,6 +36,8 @@ struct SettingsView: View {
                         titleBar
                             .padding(.horizontal, 20)
                             .padding(.top, 4)
+
+                        accountSection
 
                         section(languageManager.text("language.section")) {
                             HStack {
@@ -91,6 +95,7 @@ struct SettingsView: View {
             } message: {
                 Text(languageManager.text("settings.onboarding.alert.message"))
             }
+            .sheet(isPresented: $showAccount) { AccountView() }
             .sheet(isPresented: $showTerms) { TermsView() }
             .sheet(isPresented: $showPrivacy) { PrivacyPolicyView() }
             .sheet(isPresented: $showFeedback) { FeedbackView(isPremium: store.isPremium) }
@@ -121,6 +126,32 @@ struct SettingsView: View {
     }
 
     // MARK: - Sections
+
+    private var accountSection: some View {
+        section(languageManager.text("account.title")) {
+            groupedCard {
+                if auth.isSignedIn {
+                    actionRow(
+                        icon: "person.crop.circle.fill",
+                        title: auth.currentUser?.email ?? languageManager.text("account.signedIn.title"),
+                        subtitle: languageManager.text("account.manage.subtitle")
+                    ) {
+                        hapticTrigger += 1
+                        showAccount = true
+                    }
+                } else {
+                    actionRow(
+                        icon: "person.crop.circle.badge.plus",
+                        title: languageManager.text("account.create.title"),
+                        subtitle: languageManager.text("account.create.subtitle")
+                    ) {
+                        hapticTrigger += 1
+                        showAccount = true
+                    }
+                }
+            }
+        }
+    }
 
     private var progressionSection: some View {
         section(languageManager.text("settings.section.progress")) {
