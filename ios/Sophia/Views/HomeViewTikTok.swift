@@ -52,15 +52,18 @@ struct HomeViewTikTok: View {
                                             startCourse(course)
                                         }
                                     )
-                                    .padding(.horizontal, DS.Space.m)
-                                    .padding(.vertical, DS.Space.s)
+                                    // Each row is exactly one viewport tall so `.viewAligned`
+                                    // snaps one whole card per swipe; the card insets itself.
                                     .frame(width: geo.size.width, height: geo.size.height)
                                     .id(course.id)
                                 }
                             }
                             .scrollTargetLayout()
                         }
-                        .scrollTargetBehavior(.paging)
+                        // `.viewAligned` anchors to each card's real edges (one card per
+                        // swipe, no overshoot), unlike `.paging` which advances by fixed
+                        // viewport-sized steps and could drift past the intended card.
+                        .scrollTargetBehavior(.viewAligned(limitBehavior: .always))
                         .scrollPosition(id: $scrolledCardId)
                         .scrollDisabled(cards.count <= 1)
                         .onChange(of: scrolledCardId) { oldValue, newValue in
@@ -188,7 +191,7 @@ struct HomeViewTikTok: View {
     }
 }
 
-// MARK: - Inset, contained course card (Deepstash-style)
+// MARK: - Course card (contained image + panel, per the home mockup)
 
 private struct TikTokCourseCard: View {
     let course: Course
@@ -202,22 +205,63 @@ private struct TikTokCourseCard: View {
 
     var body: some View {
         GeometryReader { geo in
-            VStack(spacing: 0) {
-                courseIllustration
-                    .frame(height: max(geo.size.height * 0.52, 200))
+            // Visible card = the row (one viewport) minus outer margins, centered — so the
+            // whole card fits without overflowing the snap area.
+            let cardHeight = max(geo.size.height - DS.Space.s * 2, 260)
 
-                bottomPanel
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            VStack(alignment: .leading, spacing: 16) {
+                courseIllustration
+                    .frame(height: max(cardHeight * 0.44, 180))
+                    .clipShape(.rect(cornerRadius: DS.Radius.control))
+                    .overlay {
+                        RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                            .strokeBorder(DS.hairline, lineWidth: 1)
+                    }
+                    .overlay(alignment: .topTrailing) { favoriteButton }
+
+                subjectPill
+
+                Text(course.title)
+                    .font(DS.title(.title3))
+                    .foregroundStyle(DS.ink)
+                    .lineLimit(2)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+
+                boldText(course.description)
+                    .font(DS.sans(.subheadline))
+                    .foregroundStyle(DS.inkTertiary)
+                    .lineSpacing(3)
+                    .lineLimit(3)
+                    .multilineTextAlignment(.leading)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+
+                Spacer(minLength: 8)
+
+                Button {
+                    startTrigger += 1
+                    onStart()
+                } label: {
+                    HStack(spacing: 8) {
+                        Text(AppLocalizable.string("home.start", language: language))
+                        Image(systemName: "play.fill")
+                            .font(.jakarta(size: 13, weight: .semibold))
+                    }
+                }
+                .buttonStyle(DSPrimaryButtonStyle())
+                .sensoryFeedback(.impact(weight: .medium), trigger: startTrigger)
             }
-            .frame(width: geo.size.width, height: geo.size.height)
+            .padding(DS.Space.l)
+            .frame(width: geo.size.width - DS.Space.m * 2, height: cardHeight, alignment: .top)
             .background(DS.surface)
+            .clipShape(.rect(cornerRadius: DS.Radius.card))
+            .overlay {
+                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                    .strokeBorder(DS.hairline, lineWidth: 1)
+            }
+            .dsSoftShadow()
+            .frame(width: geo.size.width, height: geo.size.height)
         }
-        .clipShape(.rect(cornerRadius: DS.Radius.card))
-        .overlay {
-            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                .strokeBorder(DS.hairline, lineWidth: 1)
-        }
-        .dsSoftShadow()
         .onAppear {
             if cachedImage == nil {
                 cachedImage = CourseImageMap.loadImage(for: course.id)
@@ -246,61 +290,36 @@ private struct TikTokCourseCard: View {
                     }
                 }
             }
-            .overlay(alignment: .topTrailing) {
-                Button {
-                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                    onToggleFavorite?()
-                } label: {
-                    Image(systemName: isFavorite ? "bookmark.fill" : "bookmark")
-                        .font(.jakarta(size: 15, weight: .medium))
-                        .foregroundStyle(isFavorite ? DS.accent : DS.inkSecondary)
-                        .frame(width: 38, height: 38)
-                        .background(.ultraThinMaterial, in: Circle())
-                        .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
-                }
-                .padding(14)
-            }
     }
 
-    private var bottomPanel: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Text(course.subject.localizedShortName(language: language).uppercased())
-                .font(DS.sans(.caption, .semibold))
-                .foregroundStyle(DS.accentSoft)
-                .tracking(1.2)
-
-            Text(course.title)
-                .font(DS.title(.title2, .semibold))
-                .foregroundStyle(DS.ink)
-                .lineLimit(3)
-                .fixedSize(horizontal: false, vertical: true)
-                .frame(maxWidth: .infinity, alignment: .leading)
-
-            boldText(course.description)
-                .font(DS.sans(.subheadline))
-                .foregroundStyle(DS.inkSecondary)
-                .lineSpacing(3)
-                .lineLimit(3)
-                .multilineTextAlignment(.leading)
-                .frame(maxWidth: .infinity, alignment: .leading)
-
-            Spacer(minLength: 4)
-
-            Button {
-                startTrigger += 1
-                onStart()
-            } label: {
-                HStack(spacing: 8) {
-                    Text(AppLocalizable.string("home.start", language: language))
-                    Image(systemName: "play.fill")
-                        .font(.subheadline.weight(.semibold))
-                }
-            }
-            .buttonStyle(DSPrimaryButtonStyle())
-            .sensoryFeedback(.impact(weight: .medium), trigger: startTrigger)
+    private var favoriteButton: some View {
+        Button {
+            UIImpactFeedbackGenerator(style: .light).impactOccurred()
+            onToggleFavorite?()
+        } label: {
+            Image(systemName: isFavorite ? "bookmark.fill" : "bookmark")
+                .font(.jakarta(size: 15, weight: .semibold))
+                .foregroundStyle(isFavorite ? DS.accent : DS.inkSecondary)
+                .frame(width: 38, height: 38)
+                .background(.ultraThinMaterial, in: Circle())
+                .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
         }
-        .padding(DS.Space.l)
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+        .padding(12)
+    }
+
+    private var subjectPill: some View {
+        HStack(spacing: 6) {
+            Image(systemName: course.subject.icon)
+                .font(.jakarta(size: 10, weight: .semibold))
+            Text(course.subject.localizedShortName(language: language).uppercased())
+                .font(DS.sans(.caption2, .bold))
+                .tracking(1.0)
+        }
+        .foregroundStyle(DS.accentSoft)
+        .padding(.horizontal, 10)
+        .padding(.vertical, 5)
+        .background(DS.accentTint, in: Capsule())
+        .overlay { Capsule().strokeBorder(DS.accentSoft.opacity(0.2), lineWidth: 1) }
     }
 
     private func boldText(_ input: String) -> Text {
@@ -308,7 +327,7 @@ private struct TikTokCourseCard: View {
         var result = Text("")
         for (index, part) in parts.enumerated() {
             if index % 2 == 1 {
-                result = result + Text(part).fontWeight(.semibold).foregroundColor(DS.ink)
+                result = result + Text(part).fontWeight(.semibold).foregroundColor(DS.inkSecondary)
             } else {
                 result = result + Text(part)
             }
