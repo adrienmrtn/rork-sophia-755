@@ -70,7 +70,10 @@ struct AuthProvidersView: View {
             if let authError = error as? ASAuthorizationError, authError.code == .canceled {
                 return // annulation : on laisse réessayer sans message
             }
-            errorMessage = languageManager.text("auth.error.generic")
+            // Détail remonté volontairement (diagnostic Apple) : le code ASAuthorizationError
+            // distingue un souci de provisioning / compte Apple d'une vraie erreur réseau.
+            let nsError = error as NSError
+            errorMessage = "Apple: \(nsError.domain) \(nsError.code) — \(nsError.localizedDescription)"
         case .success(let authorization):
             guard let rawNonce = currentNonce else {
                 errorMessage = languageManager.text("auth.error.generic")
@@ -114,8 +117,9 @@ struct AuthProvidersView: View {
             return ""
         case .missingIdentityToken:
             return languageManager.text("auth.error.token")
-        case .underlying:
-            return languageManager.text("auth.error.generic")
+        case .underlying(let message):
+            // Message serveur remonté pour diagnostic (ex. config provider Supabase).
+            return message
         }
     }
 }
