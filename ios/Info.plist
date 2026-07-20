@@ -19,7 +19,17 @@
 				<string>fb2056318204963651</string>
 			</array>
 		</dict>
+		<!-- Callback Google Sign-In : reversed iOS client ID (REVERSED_CLIENT_ID). -->
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.716867958674-pkkmuij2frvfv1313k1jgp3p5ldqor2o</string>
+			</array>
+		</dict>
 	</array>
+	<!-- Client ID iOS Google (lu automatiquement par GoogleSignIn au lancement). -->
+	<key>GIDClientID</key>
+	<string>716867958674-pkkmuij2frvfv1313k1jgp3p5ldqor2o.apps.googleusercontent.com</string>
 	<!-- Identifiant numérique de l'app Meta (lu automatiquement par FacebookCore). -->
 	<key>FacebookAppID</key>
 	<string>2056318204963651</string>
