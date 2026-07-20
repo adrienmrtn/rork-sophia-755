@@ -67,11 +67,9 @@ struct AuthProvidersView: View {
     private func handleAppleCompletion(_ result: Result<ASAuthorization, Error>) {
         switch result {
         case .failure(let error):
-            if let authError = error as? ASAuthorizationError, authError.code == .canceled {
-                return // annulation : on laisse réessayer sans message
-            }
-            // Détail remonté volontairement (diagnostic Apple) : le code ASAuthorizationError
-            // distingue un souci de provisioning / compte Apple d'une vraie erreur réseau.
+            // DIAGNOSTIC (temporaire) : on affiche TOUT, y compris le cas « annulation »
+            // (code 1001), car Apple renvoie souvent « Sign Up Not Completed » sous ce code
+            // quand le provisioning / l'entitlement / le compte Apple pose problème.
             let nsError = error as NSError
             errorMessage = "Apple: \(nsError.domain) \(nsError.code) — \(nsError.localizedDescription)"
         case .success(let authorization):
