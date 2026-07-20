@@ -29,7 +29,7 @@ struct OnboardingWelcomeScreen: View {
 
                 VStack(spacing: 24) {
                     Text(languageManager.text("onboarding.welcome.title"))
-                        .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                        .font(.jakarta(.largeTitle, design: .rounded, weight: .heavy))
                         .foregroundStyle(BrutalPalette.ink)
                         .multilineTextAlignment(.center)
                         .fixedSize(horizontal: false, vertical: true)
@@ -71,7 +71,7 @@ struct OnboardingWelcomeScreen: View {
     private var rotatingSubjectPill: some View {
         let subject = subjects[subjectIndex]
         return Text(languageManager.text("onboarding.welcome.rotating.\(subject.storageKey)"))
-            .font(.system(.title2, design: .rounded, weight: .heavy))
+            .font(.jakarta(.title2, design: .rounded, weight: .heavy))
             .foregroundStyle(BrutalPalette.ink)
             .padding(.horizontal, 20)
             .padding(.vertical, 12)

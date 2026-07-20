@@ -59,7 +59,7 @@ struct CourseLessonLockOverlay: View {
                         }
 
                     Image(systemName: "lock.fill")
-                        .font(.system(size: 38, weight: .heavy))
+                        .font(.jakarta(size: 38, weight: .heavy))
                         .foregroundStyle(ink)
                         .scaleEffect(pulse ? 1.06 : 1.0)
                 }

@@ -18,6 +18,12 @@ struct SophiaApp: App {
         Purchases.configure(withAPIKey: AppConfig.EXPO_PUBLIC_REVENUECAT_IOS_API_KEY)
         #endif
         AnalyticsService.configure()
+        // Belt-and-suspenders: `PlusJakartaSans.ttf` is already declared in `UIAppFonts`
+        // (Info.plist), which the system loads automatically at launch, but registering it
+        // explicitly here too guarantees it's available before the very first screen draws
+        // — the whole design system (`DS.title`/`DS.sans`) now renders in it, not just the
+        // paywall this was originally added for.
+        PaywallFonts.registerIfNeeded()
     }
 
     var body: some Scene {

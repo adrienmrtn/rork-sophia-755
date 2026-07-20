@@ -65,7 +65,7 @@ struct FavoritesView: View {
 
             HStack(spacing: 6) {
                 Image(systemName: "bookmark.fill")
-                    .font(.system(size: 10, weight: .semibold))
+                    .font(.jakarta(size: 10, weight: .semibold))
                 Text(String(format: languageManager.text("favorites.badge.count"), favorites.count))
                     .font(DS.sans(.caption, .medium))
             }
@@ -83,7 +83,7 @@ struct FavoritesView: View {
             ZStack {
                 Circle().fill(DS.accentTint)
                 Image(systemName: "bookmark.fill")
-                    .font(.system(size: 44, weight: .regular))
+                    .font(.jakarta(size: 44, weight: .regular))
                     .foregroundStyle(DS.accentSoft)
             }
             .frame(width: 136, height: 136)

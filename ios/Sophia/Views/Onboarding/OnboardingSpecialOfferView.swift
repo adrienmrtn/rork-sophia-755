@@ -43,7 +43,7 @@ struct OnboardingSpecialOfferView: View {
                         onSkip()
                     } label: {
                         Image(systemName: "xmark")
-                            .font(.system(size: 14, weight: .bold))
+                            .font(.jakarta(size: 14, weight: .bold))
                             .foregroundStyle(.white.opacity(0.4))
                             .frame(width: 32, height: 32)
                             .background(.white.opacity(0.08), in: .circle)
@@ -56,13 +56,13 @@ struct OnboardingSpecialOfferView: View {
                     VStack(spacing: 28) {
                         VStack(spacing: 12) {
                             Text(languageManager.text("offer.unique"))
-                                .font(.system(.title2, design: .rounded, weight: .bold))
+                                .font(.jakarta(.title2, design: .rounded, weight: .bold))
                                 .foregroundStyle(.white)
                                 .opacity(appeared ? 1 : 0)
                                 .offset(y: appeared ? 0 : 15)
 
                             Text(languageManager.text("offer.discount"))
-                                .font(.system(.title, design: .rounded, weight: .black))
+                                .font(.jakarta(.title, design: .rounded, weight: .black))
                                 .foregroundStyle(
                                     LinearGradient(
                                         colors: [SophiaTheme.streakOrange, .yellow],
@@ -77,22 +77,22 @@ struct OnboardingSpecialOfferView: View {
 
                         VStack(spacing: 8) {
                             Text("1,67 \u{20AC}")
-                                .font(.system(size: 52, weight: .heavy, design: .rounded))
+                                .font(.jakarta(size: 52, weight: .heavy, design: .rounded))
                                 .foregroundStyle(.white)
                             + Text(" \(languageManager.text("offer.perMonth"))")
-                                .font(.system(.title3, design: .rounded, weight: .medium))
+                                .font(.jakarta(.title3, design: .rounded, weight: .medium))
                                 .foregroundStyle(.white.opacity(0.6))
 
                             HStack(spacing: 8) {
                                 Text(languageManager.text("offer.billed"))
-                                    .font(.system(.subheadline, design: .rounded))
+                                    .font(.jakarta(.subheadline, design: .rounded))
                                     .foregroundStyle(.white.opacity(0.5))
                                 Text("69,99 \u{20AC}")
-                                    .font(.system(.subheadline, design: .rounded, weight: .medium))
+                                    .font(.jakarta(.subheadline, design: .rounded, weight: .medium))
                                     .foregroundStyle(.white.opacity(0.35))
                                     .strikethrough(color: .white.opacity(0.35))
                                 Text("19,99 \u{20AC}/an")
-                                    .font(.system(.subheadline, design: .rounded, weight: .bold))
+                                    .font(.jakarta(.subheadline, design: .rounded, weight: .bold))
                                     .foregroundStyle(.white)
                             }
                         }
@@ -116,13 +116,13 @@ struct OnboardingSpecialOfferView: View {
 
                         HStack(spacing: 10) {
                             Image(systemName: "clock.fill")
-                                .font(.system(size: 18))
+                                .font(.jakarta(size: 18))
                                 .foregroundStyle(SophiaTheme.streakOrange)
                             Text(languageManager.text("offer.expiresIn"))
-                                .font(.system(.subheadline, design: .rounded, weight: .medium))
+                                .font(.jakarta(.subheadline, design: .rounded, weight: .medium))
                                 .foregroundStyle(.white.opacity(0.7))
                             Text("\(String(format: "%02d", countdownMinutes)):\(String(format: "%02d", countdownSeconds))")
-                                .font(.system(.title3, design: .monospaced, weight: .bold))
+                                .font(.jakarta(.title3, design: .monospaced, weight: .bold))
                                 .foregroundStyle(SophiaTheme.streakOrange)
                                 .contentTransition(.numericText())
                         }
@@ -169,7 +169,7 @@ struct OnboardingSpecialOfferView: View {
                             Image(systemName: "bolt.fill")
                                 .font(.subheadline.weight(.bold))
                             Text(languageManager.text("offer.unlock"))
-                                .font(.system(.headline, design: .rounded, weight: .bold))
+                                .font(.jakarta(.headline, design: .rounded, weight: .bold))
                         }
                         .foregroundStyle(.white)
                         .frame(maxWidth: .infinity)
@@ -192,7 +192,7 @@ struct OnboardingSpecialOfferView: View {
                         Task { await store.restore() }
                     } label: {
                         Text(languageManager.text("offer.restore"))
-                            .font(.system(.caption, design: .rounded))
+                            .font(.jakarta(.caption, design: .rounded))
                             .foregroundStyle(.white.opacity(0.35))
                     }
                 }
@@ -251,10 +251,10 @@ private struct SpecialOfferFeature: View {
     var body: some View {
         HStack(spacing: 12) {
             Image(systemName: "checkmark.circle.fill")
-                .font(.system(size: 16))
+                .font(.jakarta(size: 16))
                 .foregroundStyle(SophiaTheme.emerald)
             Text(text)
-                .font(.system(.subheadline, design: .rounded))
+                .font(.jakarta(.subheadline, design: .rounded))
                 .foregroundStyle(.white.opacity(0.8))
             Spacer()
         }

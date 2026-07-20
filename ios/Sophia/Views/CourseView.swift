@@ -163,7 +163,7 @@ struct CourseView: View {
                 dismiss()
             } label: {
                 Image(systemName: "xmark")
-                    .font(.system(size: 15, weight: .medium))
+                    .font(.jakarta(size: 15, weight: .medium))
                     .foregroundStyle(DS.inkSecondary)
                     .frame(width: 40, height: 40)
                     .background(DS.surface, in: Circle())

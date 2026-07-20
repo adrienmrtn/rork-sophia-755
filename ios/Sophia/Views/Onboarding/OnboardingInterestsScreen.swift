@@ -26,7 +26,7 @@ struct OnboardingInterestsScreen: View {
 
                 VStack(spacing: 8) {
                     Text(languageManager.text("onboarding.interests.title"))
-                        .font(.system(size: 30, weight: .heavy, design: .rounded))
+                        .font(.jakarta(size: 30, weight: .heavy, design: .rounded))
                         .lineSpacing(-2)
                         .foregroundStyle(BrutalPalette.ink)
                         .multilineTextAlignment(.center)
@@ -34,7 +34,7 @@ struct OnboardingInterestsScreen: View {
                         .offset(y: appeared ? 0 : 14)
 
                     Text(languageManager.text("onboarding.interests.subtitle"))
-                        .font(.system(size: 14, weight: .semibold, design: .rounded))
+                        .font(.jakarta(size: 14, weight: .semibold, design: .rounded))
                         .foregroundStyle(BrutalPalette.ink.opacity(0.58))
                         .multilineTextAlignment(.center)
                         .opacity(appeared ? 1 : 0)
@@ -115,7 +115,7 @@ private struct InterestCard: View {
                             ZStack {
                                 Color.black.opacity(0.35)
                                 Image(systemName: "checkmark")
-                                    .font(.system(size: 28, weight: .heavy))
+                                    .font(.jakarta(size: 28, weight: .heavy))
                                     .foregroundStyle(.white)
                                     .padding(10)
                                     .background(Circle().fill(BrutalPalette.ink))
@@ -131,10 +131,10 @@ private struct InterestCard: View {
 
                 HStack(spacing: 6) {
                     Image(systemName: icon)
-                        .font(.system(size: 13, weight: .heavy))
+                        .font(.jakarta(size: 13, weight: .heavy))
                         .foregroundStyle(BrutalPalette.ink)
                     Text(label)
-                        .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                        .font(.jakarta(.subheadline, design: .rounded, weight: .heavy))
                         .foregroundStyle(BrutalPalette.ink)
                 }
                 .frame(maxWidth: .infinity)

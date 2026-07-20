@@ -30,7 +30,7 @@ struct CourseImageFullscreenView: View {
                         dismiss()
                     } label: {
                         Image(systemName: "xmark")
-                            .font(.system(size: 16, weight: .bold))
+                            .font(.jakarta(size: 16, weight: .bold))
                             .foregroundStyle(.white)
                             .frame(width: 40, height: 40)
                             .background(.white.opacity(0.15), in: Circle())
@@ -43,7 +43,7 @@ struct CourseImageFullscreenView: View {
 
                 if let credit, !credit.isEmpty {
                     Text(credit)
-                        .font(.system(.caption, design: .rounded))
+                        .font(.jakarta(.caption, design: .rounded))
                         .foregroundStyle(.white.opacity(0.65))
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 24)

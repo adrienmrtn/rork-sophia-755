@@ -28,7 +28,7 @@ struct OnboardingFreeTrialTimelineView: View {
                     .offset(y: appeared ? 0 : -10)
 
                 Text(languageManager.text("onboarding.trial.notifyTitle"))
-                    .font(.system(.title, design: .rounded, weight: .heavy))
+                    .font(.jakarta(.title, design: .rounded, weight: .heavy))
                     .foregroundStyle(BrutalPalette.ink)
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
@@ -42,7 +42,7 @@ struct OnboardingFreeTrialTimelineView: View {
                     .scaleEffect(cardAppeared ? 1 : 0.94)
 
                 Text(languageManager.text("onboarding.trial.cancelAnytime"))
-                    .font(.system(.subheadline, design: .rounded, weight: .semibold))
+                    .font(.jakarta(.subheadline, design: .rounded, weight: .semibold))
                     .foregroundStyle(BrutalPalette.ink.opacity(0.6))
                     .opacity(cardAppeared ? 1 : 0)
 
@@ -87,7 +87,7 @@ struct OnboardingFreeTrialTimelineView: View {
                     }
                     .frame(width: 96, height: 96)
                 Image(systemName: "bell.badge.fill")
-                    .font(.system(size: 42, weight: .heavy))
+                    .font(.jakarta(size: 42, weight: .heavy))
                     .foregroundStyle(BrutalPalette.ink)
                     .symbolEffect(.bounce, value: iconBounce)
             }
@@ -150,7 +150,7 @@ private struct TimelineRow: View {
 
             HStack(spacing: 12) {
                 Text(day)
-                    .font(.system(.caption, design: .rounded, weight: .heavy))
+                    .font(.jakarta(.caption, design: .rounded, weight: .heavy))
                     .tracking(0.8)
                     .foregroundStyle(BrutalPalette.ink)
                     .padding(.horizontal, 10)
@@ -162,13 +162,13 @@ private struct TimelineRow: View {
                     .frame(width: 92, alignment: .leading)
 
                 Text(title)
-                    .font(.system(.subheadline, design: .rounded, weight: isHighlighted ? .heavy : .semibold))
+                    .font(.jakarta(.subheadline, design: .rounded, weight: isHighlighted ? .heavy : .semibold))
                     .foregroundStyle(BrutalPalette.ink)
                     .frame(maxWidth: .infinity, alignment: .leading)
 
                 if isHighlighted {
                     Image(systemName: "bell.fill")
-                        .font(.system(size: 14, weight: .heavy))
+                        .font(.jakarta(size: 14, weight: .heavy))
                         .foregroundStyle(BrutalPalette.ink)
                 }
             }

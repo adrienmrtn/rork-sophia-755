@@ -64,7 +64,7 @@ struct OnboardingIntroScreen: View {
                 }
 
                 Text(languageManager.text("onboarding.intro.title"))
-                    .font(.system(.title, design: .rounded, weight: .heavy))
+                    .font(.jakarta(.title, design: .rounded, weight: .heavy))
                     .foregroundStyle(BrutalPalette.ink)
                     .multilineTextAlignment(.center)
                     .padding(.top, 8)
@@ -81,7 +81,7 @@ struct OnboardingIntroScreen: View {
                 } label: {
                     HStack(spacing: 10) {
                         Text(languageManager.text("common.continue"))
-                            .font(.system(.headline, design: .rounded, weight: .heavy))
+                            .font(.jakarta(.headline, design: .rounded, weight: .heavy))
                         Image(systemName: "arrow.right")
                             .font(.subheadline.weight(.heavy))
                     }

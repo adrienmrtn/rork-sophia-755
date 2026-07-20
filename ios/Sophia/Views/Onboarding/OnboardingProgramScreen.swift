@@ -91,7 +91,7 @@ struct OnboardingProgramScreen: View {
             )
 
             Text(languageManager.text("onboarding.program.title"))
-                .font(.system(size: 36, weight: .heavy, design: .rounded))
+                .font(.jakarta(size: 36, weight: .heavy, design: .rounded))
                 .lineSpacing(-3)
                 .foregroundStyle(ink)
                 .fixedSize(horizontal: false, vertical: true)
@@ -112,7 +112,7 @@ struct OnboardingProgramScreen: View {
                     .frame(width: 66, height: 66)
                     .overlay { Circle().strokeBorder(ink, lineWidth: 3) }
                 Text(primarySubject?.emoji ?? "✨")
-                    .font(.system(size: 32))
+                    .font(.jakarta(size: 32))
             }
             .background(alignment: .center) {
                 Circle().fill(ink).frame(width: 66, height: 66).offset(x: 3, y: 4)
@@ -120,12 +120,12 @@ struct OnboardingProgramScreen: View {
 
             VStack(alignment: .leading, spacing: 6) {
                 Text(languageManager.text("onboarding.program.profileLabel"))
-                    .font(.system(size: 11, weight: .black, design: .rounded))
+                    .font(.jakarta(size: 11, weight: .black, design: .rounded))
                     .foregroundStyle(ink.opacity(0.45))
                     .tracking(1.0)
 
                 Text(nicknames.first ?? "")
-                    .font(.system(size: 22, weight: .heavy, design: .rounded))
+                    .font(.jakarta(size: 22, weight: .heavy, design: .rounded))
                     .foregroundStyle(ink)
                     .fixedSize(horizontal: false, vertical: true)
 
@@ -133,7 +133,7 @@ struct OnboardingProgramScreen: View {
                     FlowLayout(spacing: 6) {
                         ForEach(Array(nicknames.dropFirst().enumerated()), id: \.offset) { index, nickname in
                             Text(nickname)
-                                .font(.system(.caption, design: .rounded, weight: .heavy))
+                                .font(.jakarta(.caption, design: .rounded, weight: .heavy))
                                 .foregroundStyle(ink)
                                 .padding(.horizontal, 10)
                                 .padding(.vertical, 5)
@@ -192,21 +192,21 @@ struct OnboardingProgramScreen: View {
     private func statTile(emoji: String, fill: Color, value: String, unit: String, caption: String) -> some View {
         VStack(alignment: .leading, spacing: 8) {
             Text(emoji)
-                .font(.system(size: 24))
+                .font(.jakarta(size: 24))
 
             HStack(alignment: .firstTextBaseline, spacing: 3) {
                 Text(value)
-                    .font(.system(size: 30, weight: .heavy, design: .rounded))
+                    .font(.jakarta(size: 30, weight: .heavy, design: .rounded))
                     .foregroundStyle(ink)
                 Text(unit)
-                    .font(.system(.caption, design: .rounded, weight: .heavy))
+                    .font(.jakarta(.caption, design: .rounded, weight: .heavy))
                     .foregroundStyle(ink.opacity(0.6))
                     .lineLimit(1)
                     .minimumScaleFactor(0.7)
             }
 
             Text(caption)
-                .font(.system(.caption2, design: .rounded, weight: .heavy))
+                .font(.jakarta(.caption2, design: .rounded, weight: .heavy))
                 .foregroundStyle(ink.opacity(0.5))
                 .fixedSize(horizontal: false, vertical: true)
         }
@@ -225,7 +225,7 @@ struct OnboardingProgramScreen: View {
     private var coursesSection: some View {
         VStack(alignment: .leading, spacing: 14) {
             Text(languageManager.text("onboarding.program.coursesTitle"))
-                .font(.system(size: 22, weight: .heavy, design: .rounded))
+                .font(.jakarta(size: 22, weight: .heavy, design: .rounded))
                 .foregroundStyle(ink)
                 .fixedSize(horizontal: false, vertical: true)
                 .opacity(coursesTitleIn ? 1 : 0)
@@ -276,9 +276,9 @@ private struct FeaturedCourseCard: View {
 
                 HStack(spacing: 6) {
                     Image(systemName: "star.fill")
-                        .font(.system(size: 10, weight: .black))
+                        .font(.jakarta(size: 10, weight: .black))
                     Text(languageManager.text("onboarding.program.topPick").uppercased())
-                        .font(.system(.caption2, design: .rounded, weight: .black))
+                        .font(.jakarta(.caption2, design: .rounded, weight: .black))
                         .tracking(0.6)
                 }
                 .foregroundStyle(ink)
@@ -302,7 +302,7 @@ private struct FeaturedCourseCard: View {
                 )
 
                 Text(course.title)
-                    .font(.system(.title3, design: .rounded, weight: .heavy))
+                    .font(.jakarta(.title3, design: .rounded, weight: .heavy))
                     .foregroundStyle(ink)
                     .lineLimit(2)
                     .fixedSize(horizontal: false, vertical: true)
@@ -327,8 +327,8 @@ private struct FeaturedCourseCard: View {
 
     private func statChip(icon: String, text: String) -> some View {
         HStack(spacing: 5) {
-            Image(systemName: icon).font(.system(size: 10, weight: .black))
-            Text(text).font(.system(.caption2, design: .rounded, weight: .black))
+            Image(systemName: icon).font(.jakarta(size: 10, weight: .black))
+            Text(text).font(.jakarta(.caption2, design: .rounded, weight: .black))
         }
         .foregroundStyle(ink)
         .padding(.horizontal, 9)
@@ -367,11 +367,11 @@ private struct CompactCourseRow: View {
 
             VStack(alignment: .leading, spacing: 3) {
                 Text(course.subject.localizedShortName(language: languageManager.current).uppercased())
-                    .font(.system(size: 10, weight: .black, design: .rounded))
+                    .font(.jakarta(size: 10, weight: .black, design: .rounded))
                     .foregroundStyle(ink.opacity(0.5))
                     .tracking(0.5)
                 Text(course.title)
-                    .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                    .font(.jakarta(.subheadline, design: .rounded, weight: .heavy))
                     .foregroundStyle(ink)
                     .lineLimit(2)
                     .fixedSize(horizontal: false, vertical: true)

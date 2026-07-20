@@ -41,12 +41,12 @@ struct OnboardingLoadingScreen: View {
 
                 VStack(spacing: 8) {
                     Text(languageManager.text("onboarding.loading.title"))
-                        .font(.system(size: 26, weight: .heavy, design: .rounded))
+                        .font(.jakarta(size: 26, weight: .heavy, design: .rounded))
                         .foregroundStyle(ink)
                         .multilineTextAlignment(.center)
 
                     Text(languageManager.text("onboarding.loading.subtitle"))
-                        .font(.system(.subheadline, design: .rounded, weight: .semibold))
+                        .font(.jakarta(.subheadline, design: .rounded, weight: .semibold))
                         .foregroundStyle(ink.opacity(0.5))
                         .multilineTextAlignment(.center)
                 }
@@ -152,7 +152,7 @@ struct OnboardingLoadingScreen: View {
 
             // Rotating sparkle orbiting the ring.
             Image(systemName: "sparkle")
-                .font(.system(size: 16, weight: .black))
+                .font(.jakarta(size: 16, weight: .black))
                 .foregroundStyle(gold)
                 .offset(y: -84)
                 .rotationEffect(.degrees(ringSpin ? 360 : 0))
@@ -178,7 +178,7 @@ struct OnboardingLoadingScreen: View {
 
             // Live percentage pill.
             Text("\(displayedPercent)%")
-                .font(.system(size: 13, weight: .black, design: .rounded))
+                .font(.jakarta(size: 13, weight: .black, design: .rounded))
                 .foregroundStyle(ink)
                 .monospacedDigit()
                 .padding(.horizontal, 12)
@@ -208,12 +208,12 @@ struct OnboardingLoadingScreen: View {
 
                     if complete {
                         Image(systemName: "checkmark")
-                            .font(.system(size: 15, weight: .black))
+                            .font(.jakarta(size: 15, weight: .black))
                             .foregroundStyle(ink)
                             .transition(.scale.combined(with: .opacity))
                     } else if active {
                         Text("\(Int(progress * 100))")
-                            .font(.system(size: 11, weight: .black, design: .rounded))
+                            .font(.jakarta(size: 11, weight: .black, design: .rounded))
                             .foregroundStyle(ink.opacity(0.75))
                             .monospacedDigit()
                     } else {
@@ -227,7 +227,7 @@ struct OnboardingLoadingScreen: View {
 
                 VStack(alignment: .leading, spacing: 7) {
                     Text(label)
-                        .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                        .font(.jakarta(.subheadline, design: .rounded, weight: .heavy))
                         .foregroundStyle(ink.opacity(complete ? 1 : (active ? 0.85 : 0.45)))
 
                     GeometryReader { geo in

@@ -17,9 +17,9 @@ struct LanguagePickerControl: View {
             } label: {
                 HStack(spacing: 6) {
                     Text(languageManager.current.flag)
-                        .font(.system(size: 20))
+                        .font(.jakarta(size: 20))
                     Image(systemName: isExpanded ? "chevron.up" : "chevron.down")
-                        .font(.system(size: 11, weight: .semibold))
+                        .font(.jakarta(size: 11, weight: .semibold))
                         .foregroundStyle(DS.inkSecondary)
                 }
                 .padding(.horizontal, 14)
@@ -49,7 +49,7 @@ struct LanguagePickerControl: View {
                 } label: {
                     HStack(spacing: 10) {
                         Text(language.flag)
-                            .font(.system(size: 18))
+                            .font(.jakarta(size: 18))
                         Text(language.displayName)
                             .font(DS.sans(.subheadline, .medium))
                             .foregroundStyle(DS.ink)
@@ -57,7 +57,7 @@ struct LanguagePickerControl: View {
                         if languageManager.current == language {
                             Spacer(minLength: 8)
                             Image(systemName: "checkmark")
-                                .font(.system(size: 12, weight: .semibold))
+                                .font(.jakarta(size: 12, weight: .semibold))
                                 .foregroundStyle(DS.accent)
                         }
                     }

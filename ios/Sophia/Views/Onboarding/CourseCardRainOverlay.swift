@@ -179,7 +179,7 @@ struct OnboardingRainCard: View {
                 .clipped()
 
                 Text(title)
-                    .font(.system(size: 11, weight: .heavy, design: .rounded))
+                    .font(.jakarta(size: 11, weight: .heavy, design: .rounded))
                     .foregroundStyle(BrutalPalette.ink)
                     .lineLimit(2)
                     .minimumScaleFactor(0.85)

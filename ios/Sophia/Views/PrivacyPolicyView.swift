@@ -59,7 +59,7 @@ struct LegalHeader: View {
 
             Button(action: onClose) {
                 Image(systemName: "xmark")
-                    .font(.system(size: 14, weight: .medium))
+                    .font(.jakarta(size: 14, weight: .medium))
                     .foregroundStyle(DS.inkSecondary)
                     .frame(width: 38, height: 38)
                     .background(DS.surface, in: Circle())

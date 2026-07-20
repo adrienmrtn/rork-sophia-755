@@ -54,7 +54,7 @@ struct OnboardingPhoneTimeScreen: View {
                 HStack {
                     ForEach([0, 2, 4, 6, 8], id: \.self) { tick in
                         Text("\(tick)h")
-                            .font(.system(.caption2, design: .rounded, weight: .heavy))
+                            .font(.jakarta(.caption2, design: .rounded, weight: .heavy))
                             .foregroundStyle(ink.opacity(0.4))
                             .frame(maxWidth: .infinity)
                     }
@@ -79,18 +79,18 @@ struct OnboardingPhoneTimeScreen: View {
         VStack(spacing: 14) {
             HStack(alignment: .firstTextBaseline, spacing: 1) {
                 Text("\(wholeHours)")
-                    .font(.system(size: 88, weight: .heavy, design: .rounded))
+                    .font(.jakarta(size: 88, weight: .heavy, design: .rounded))
                     .foregroundStyle(ink)
                     .monospacedDigit()
                     .contentTransition(.numericText())
 
                 Text("h")
-                    .font(.system(size: 52, weight: .heavy, design: .rounded))
+                    .font(.jakarta(size: 52, weight: .heavy, design: .rounded))
                     .foregroundStyle(ink.opacity(0.7))
 
                 if hasHalf {
                     Text("30")
-                        .font(.system(size: 44, weight: .heavy, design: .rounded))
+                        .font(.jakarta(size: 44, weight: .heavy, design: .rounded))
                         .foregroundStyle(ink.opacity(0.7))
                         .monospacedDigit()
                         .transition(.opacity)
@@ -105,7 +105,7 @@ struct OnboardingPhoneTimeScreen: View {
                     .frame(width: 9, height: 9)
                     .overlay { Circle().strokeBorder(ink, lineWidth: 1.5) }
                 Text(languageManager.text(intensity.labelKey))
-                    .font(.system(.subheadline, design: .rounded, weight: .black))
+                    .font(.jakarta(.subheadline, design: .rounded, weight: .black))
                     .foregroundStyle(ink)
             }
             .padding(.horizontal, 14)
@@ -155,7 +155,7 @@ private struct SmoothHoursSlider: View {
                         .frame(width: thumb, height: thumb)
                         .overlay { Circle().strokeBorder(ink, lineWidth: 3) }
                     Image(systemName: "iphone")
-                        .font(.system(size: 15, weight: .black))
+                        .font(.jakarta(size: 15, weight: .black))
                         .foregroundStyle(ink)
                 }
                 .scaleEffect(dragging ? 1.16 : 1.0)

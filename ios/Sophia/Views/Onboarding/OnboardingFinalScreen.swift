@@ -57,7 +57,7 @@ struct OnboardingFinalScreen: View {
                             .overlay { Circle().strokeBorder(BrutalPalette.ink, lineWidth: 3) }
 
                         Image(systemName: "checkmark")
-                            .font(.system(size: 56, weight: .heavy))
+                            .font(.jakarta(size: 56, weight: .heavy))
                             .foregroundStyle(BrutalPalette.ink)
                             .symbolEffect(.bounce, value: confettiTrigger)
                     }
@@ -66,12 +66,12 @@ struct OnboardingFinalScreen: View {
 
                     VStack(spacing: 12) {
                         Text(languageManager.text("onboarding.final.title"))
-                            .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                            .font(.jakarta(.largeTitle, design: .rounded, weight: .heavy))
                             .foregroundStyle(BrutalPalette.ink)
                             .opacity(appeared ? 1 : 0)
 
                         Text(languageManager.text("onboarding.final.subtitle"))
-                            .font(.system(.body, design: .rounded, weight: .semibold))
+                            .font(.jakarta(.body, design: .rounded, weight: .semibold))
                             .foregroundStyle(BrutalPalette.ink.opacity(0.6))
                             .multilineTextAlignment(.center)
                             .opacity(appeared ? 1 : 0)
@@ -80,7 +80,7 @@ struct OnboardingFinalScreen: View {
                     if !selectedInterests.isEmpty {
                         VStack(spacing: 10) {
                             Text(languageManager.text("onboarding.final.subjects"))
-                                .font(.system(size: 11, weight: .heavy, design: .rounded))
+                                .font(.jakarta(size: 11, weight: .heavy, design: .rounded))
                                 .tracking(1.2)
                                 .foregroundStyle(BrutalPalette.ink.opacity(0.5))
 
@@ -88,10 +88,10 @@ struct OnboardingFinalScreen: View {
                                 ForEach(Array(selectedInterests.enumerated()), id: \.offset) { idx, interest in
                                     HStack(spacing: 6) {
                                         Image(systemName: interest.icon)
-                                            .font(.system(size: 12, weight: .heavy))
+                                            .font(.jakarta(size: 12, weight: .heavy))
                                             .foregroundStyle(BrutalPalette.ink)
                                         Text(interest.label)
-                                            .font(.system(size: 13, weight: .heavy, design: .rounded))
+                                            .font(.jakarta(size: 13, weight: .heavy, design: .rounded))
                                             .foregroundStyle(BrutalPalette.ink)
                                             .lineLimit(1)
                                     }

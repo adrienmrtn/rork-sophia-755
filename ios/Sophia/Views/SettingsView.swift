@@ -109,7 +109,7 @@ struct SettingsView: View {
             if let onDismiss {
                 Button(action: onDismiss) {
                     Image(systemName: "xmark")
-                        .font(.system(size: 15, weight: .medium))
+                        .font(.jakarta(size: 15, weight: .medium))
                         .foregroundStyle(DS.inkSecondary)
                         .frame(width: 40, height: 40)
                         .background(DS.surface, in: Circle())
@@ -150,7 +150,7 @@ struct SettingsView: View {
             } label: {
                 HStack(spacing: 14) {
                     Image(systemName: "crown.fill")
-                        .font(.system(size: 17, weight: .medium))
+                        .font(.jakarta(size: 17, weight: .medium))
                         .foregroundStyle(.white)
                         .frame(width: 42, height: 42)
                         .background(.white.opacity(0.18), in: Circle())
@@ -165,7 +165,7 @@ struct SettingsView: View {
                     }
                     Spacer(minLength: 8)
                     Image(systemName: "arrow.right")
-                        .font(.system(size: 14, weight: .semibold))
+                        .font(.jakarta(size: 14, weight: .semibold))
                         .foregroundStyle(.white.opacity(0.9))
                 }
                 .padding(16)
@@ -279,7 +279,7 @@ struct SettingsView: View {
         } label: {
             HStack(spacing: 14) {
                 Image(systemName: "sparkles")
-                    .font(.system(size: 18, weight: .medium))
+                    .font(.jakarta(size: 18, weight: .medium))
                     .foregroundStyle(DS.accentSoft)
                     .frame(width: 44, height: 44)
                     .background(DS.surface, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
@@ -305,7 +305,7 @@ struct SettingsView: View {
                 Spacer(minLength: 0)
 
                 Image(systemName: "chevron.right")
-                    .font(.system(size: 13, weight: .semibold))
+                    .font(.jakarta(size: 13, weight: .semibold))
                     .foregroundStyle(DS.inkTertiary)
             }
             .padding(16)
@@ -347,7 +347,7 @@ struct SettingsView: View {
 
     private func iconBadge(name: String, tint: Color = DS.accentSoft, bg: Color = DS.accentTint) -> some View {
         Image(systemName: name)
-            .font(.system(size: 16, weight: .medium))
+            .font(.jakarta(size: 16, weight: .medium))
             .foregroundStyle(tint)
             .frame(width: 38, height: 38)
             .background(bg, in: Circle())
@@ -396,7 +396,7 @@ struct SettingsView: View {
                 }
                 Spacer()
                 Image(systemName: "chevron.right")
-                    .font(.system(size: 12, weight: .semibold))
+                    .font(.jakarta(size: 12, weight: .semibold))
                     .foregroundStyle(DS.inkTertiary)
             }
             .padding(.horizontal, 14)

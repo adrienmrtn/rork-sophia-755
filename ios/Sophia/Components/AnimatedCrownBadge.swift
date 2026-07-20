@@ -18,7 +18,7 @@ struct AnimatedCrownBadge: View {
                 .blur(radius: size * 0.15)
 
             Image(systemName: "crown.fill")
-                .font(.system(size: size, weight: .heavy))
+                .font(.jakarta(size: size, weight: .heavy))
                 .foregroundStyle(
                     LinearGradient(
                         colors: [amber, gold, .white.opacity(0.95)],

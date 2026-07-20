@@ -22,13 +22,13 @@ struct OnboardingLanguageScreen: View {
 
             VStack(spacing: 10) {
                 Text(languageManager.text("onboarding.language.title"))
-                    .font(.system(size: 30, weight: .heavy, design: .rounded))
+                    .font(.jakarta(size: 30, weight: .heavy, design: .rounded))
                     .lineSpacing(-2)
                     .foregroundStyle(ink)
                     .multilineTextAlignment(.center)
 
                 Text(languageManager.text("onboarding.language.subtitle"))
-                    .font(.system(size: 14, weight: .semibold, design: .rounded))
+                    .font(.jakarta(size: 14, weight: .semibold, design: .rounded))
                     .foregroundStyle(ink.opacity(0.55))
                     .multilineTextAlignment(.center)
             }
@@ -85,10 +85,10 @@ private struct LanguageCard: View {
         Button(action: action) {
             HStack(spacing: 10) {
                 Text(language.flag)
-                    .font(.system(size: 28))
+                    .font(.jakarta(size: 28))
 
                 Text(language.displayName)
-                    .font(.system(.subheadline, design: .rounded, weight: .heavy))
+                    .font(.jakarta(.subheadline, design: .rounded, weight: .heavy))
                     .foregroundStyle(ink)
                     .lineLimit(1)
                     .minimumScaleFactor(0.6)
@@ -104,7 +104,7 @@ private struct LanguageCard: View {
                             .frame(width: 20, height: 20)
                             .overlay {
                                 Image(systemName: "checkmark")
-                                    .font(.system(size: 10, weight: .heavy))
+                                    .font(.jakarta(size: 10, weight: .heavy))
                                     .foregroundStyle(.white)
                             }
                             .transition(.scale.combined(with: .opacity))

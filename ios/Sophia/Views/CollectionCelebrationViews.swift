@@ -94,7 +94,7 @@ struct CollectionProgressCelebrationView: View {
         VStack(alignment: .leading, spacing: 16) {
             HStack(alignment: .firstTextBaseline, spacing: 8) {
                 Text("\(displayedCount)")
-                    .font(.system(size: 46, weight: .semibold))
+                    .font(.jakarta(size: 46, weight: .semibold))
                     .foregroundStyle(DS.ink)
                     .contentTransition(.numericText())
                     .monospacedDigit()
@@ -118,7 +118,7 @@ struct CollectionProgressCelebrationView: View {
                         .overlay {
                             if filled {
                                 Image(systemName: "checkmark")
-                                    .font(.system(size: 9, weight: .semibold))
+                                    .font(.jakarta(size: 9, weight: .semibold))
                                     .foregroundStyle(.white)
                             }
                         }
@@ -228,7 +228,7 @@ struct CollectionCompletedCelebrationView: View {
             .overlay {
                 VStack(spacing: 12) {
                     Image(systemName: "checkmark.seal.fill")
-                        .font(.system(size: 44, weight: .regular))
+                        .font(.jakarta(size: 44, weight: .regular))
                         .foregroundStyle(.white)
 
                     Text(languageManager.text("collections.pathComplete"))
@@ -245,7 +245,7 @@ struct CollectionCompletedCelebrationView: View {
     private var xpPill: some View {
         HStack(spacing: 10) {
             Image(systemName: "star.fill")
-                .font(.system(size: 15, weight: .medium))
+                .font(.jakarta(size: 15, weight: .medium))
             Text(String(format: languageManager.text("cards.globalXP"), awardedXP))
                 .font(DS.title(.headline, .semibold))
                 .monospacedDigit()

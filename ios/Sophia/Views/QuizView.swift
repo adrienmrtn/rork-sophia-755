@@ -345,7 +345,7 @@ struct QuizView: View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(spacing: 6) {
                 Image(systemName: course.subject.icon)
-                    .font(.system(size: 11, weight: .medium))
+                    .font(.jakarta(size: 11, weight: .medium))
                 Text(course.subject.localizedShortName(language: languageManager.current).uppercased())
                     .font(DS.sans(.caption2, .semibold))
                     .tracking(0.8)
@@ -378,7 +378,7 @@ struct QuizView: View {
             if showCombo && comboCount >= 2 {
                 HStack(spacing: 4) {
                     Image(systemName: "flame.fill")
-                        .font(.system(size: 10, weight: .semibold))
+                        .font(.jakarta(size: 10, weight: .semibold))
                     Text("x\(comboCount)")
                         .font(DS.sans(.caption2, .semibold))
                 }
@@ -401,7 +401,7 @@ struct QuizView: View {
                 dismiss()
             } label: {
                 Image(systemName: "xmark")
-                    .font(.system(size: 15, weight: .medium))
+                    .font(.jakarta(size: 15, weight: .medium))
                     .foregroundStyle(DS.inkSecondary)
                     .frame(width: 40, height: 40)
                     .background(DS.surface, in: Circle())
@@ -476,7 +476,7 @@ struct QuizView: View {
         } label: {
             VStack(spacing: 10) {
                 Image(systemName: index == 0 ? "checkmark.circle.fill" : "xmark.circle.fill")
-                    .font(.system(size: 26, weight: .regular))
+                    .font(.jakarta(size: 26, weight: .regular))
                     .foregroundStyle(trueFalseIconColor(for: index))
                 Text(text)
                     .font(DS.title(.headline, .semibold))
@@ -543,12 +543,12 @@ struct QuizView: View {
     private func optionTrailingIcon(for index: Int) -> some View {
         if hasAnswered && index == currentQuestion.correctIndex {
             Image(systemName: "checkmark.circle.fill")
-                .font(.system(size: 20, weight: .medium))
+                .font(.jakarta(size: 20, weight: .medium))
                 .foregroundStyle(DS.success)
                 .transition(.scale.combined(with: .opacity))
         } else if hasAnswered && index == selectedOptionIndex && !isCorrect {
             Image(systemName: "xmark.circle.fill")
-                .font(.system(size: 20, weight: .medium))
+                .font(.jakarta(size: 20, weight: .medium))
                 .foregroundStyle(DS.danger)
                 .transition(.scale.combined(with: .opacity))
         } else {
@@ -682,11 +682,11 @@ struct QuizView: View {
     private func chronoSlotTrailingIcon(isCorrect: Bool, isWrong: Bool, filled: Bool) -> some View {
         if hasAnswered && filled {
             Image(systemName: isCorrect ? "checkmark.circle.fill" : "xmark.circle.fill")
-                .font(.system(size: 18, weight: .regular))
+                .font(.jakarta(size: 18, weight: .regular))
                 .foregroundStyle(isCorrect ? DS.success : DS.danger)
         } else if filled {
             Image(systemName: "line.3.horizontal")
-                .font(.system(size: 13, weight: .medium))
+                .font(.jakarta(size: 13, weight: .medium))
                 .foregroundStyle(DS.inkTertiary)
         } else {
             Color.clear
@@ -696,7 +696,7 @@ struct QuizView: View {
     private func chronoPoolChip(slot: Int) -> some View {
         HStack(spacing: 12) {
             Image(systemName: "plus.circle")
-                .font(.system(size: 16, weight: .regular))
+                .font(.jakarta(size: 16, weight: .regular))
                 .foregroundStyle(DS.accentSoft)
             Text(currentQuestion.items[slot])
                 .font(DS.sans(.body, .medium))
@@ -796,7 +796,7 @@ struct QuizView: View {
     private var sliderAnswerBody: some View {
         VStack(spacing: 20) {
             Text(sliderValueLabel(sliderValue))
-                .font(.system(size: 42, weight: .semibold))
+                .font(.jakarta(size: 42, weight: .semibold))
                 .foregroundStyle(DS.ink)
                 .monospacedDigit()
                 .contentTransition(.numericText())
@@ -904,7 +904,7 @@ struct QuizView: View {
             Spacer().frame(height: 96)
             HStack(spacing: 6) {
                 Image(systemName: "star.fill")
-                    .font(.system(size: 11, weight: .medium))
+                    .font(.jakarta(size: 11, weight: .medium))
                 Text("+\(popupXPAmount) XP")
                     .font(DS.sans(.subheadline, .semibold))
             }
@@ -928,7 +928,7 @@ struct QuizView: View {
             VStack(spacing: 16) {
                 HStack(alignment: .top, spacing: 14) {
                     Image(systemName: feedbackIconName)
-                        .font(.system(size: 30, weight: .regular))
+                        .font(.jakarta(size: 30, weight: .regular))
                         .foregroundStyle(feedbackColor)
 
                     VStack(alignment: .leading, spacing: 4) {
@@ -939,7 +939,7 @@ struct QuizView: View {
                         if isFullyCorrect, comboCount >= 2 {
                             HStack(spacing: 4) {
                                 Image(systemName: "flame.fill")
-                                    .font(.system(size: 10, weight: .semibold))
+                                    .font(.jakarta(size: 10, weight: .semibold))
                                 Text("Combo x\(comboCount)")
                                     .font(DS.sans(.caption, .medium))
                             }
@@ -1072,7 +1072,7 @@ struct QuizView: View {
                     ZStack {
                         Circle().fill(DS.accentTint)
                         Image(systemName: "trophy.fill")
-                            .font(.system(size: 46, weight: .regular))
+                            .font(.jakarta(size: 46, weight: .regular))
                             .foregroundStyle(DS.accent)
                     }
                     .frame(width: 128, height: 128)
@@ -1091,7 +1091,7 @@ struct QuizView: View {
 
                     HStack(alignment: .firstTextBaseline, spacing: 6) {
                         Text("\(scoreAnimated)")
-                            .font(.system(size: 48, weight: .semibold, design: .default))
+                            .font(.jakarta(size: 48, weight: .semibold, design: .default))
                             .foregroundStyle(DS.ink)
                             .contentTransition(.numericText(countsDown: false))
                         Text("/ \(maxPossiblePoints)")
@@ -1227,7 +1227,7 @@ struct QuizView: View {
             ForEach(0..<3, id: \.self) { index in
                 let isFilled = index < starsRevealed
                 Image(systemName: isFilled ? "star.fill" : "star")
-                    .font(.system(size: 30, weight: .regular))
+                    .font(.jakarta(size: 30, weight: .regular))
                     .foregroundStyle(isFilled ? DS.accentSoft : DS.hairline)
                     .scaleEffect(isFilled ? 1.05 : 0.85)
                     .animation(.spring(response: 0.4, dampingFraction: 0.55), value: starsRevealed)
@@ -1377,7 +1377,7 @@ struct QuizView: View {
 
                 HStack(spacing: 6) {
                     Image(systemName: course.subject.icon)
-                        .font(.system(size: 12, weight: .medium))
+                        .font(.jakarta(size: 12, weight: .medium))
                     Text(course.subject.localizedShortName(language: languageManager.current).uppercased())
                         .font(DS.sans(.caption, .semibold))
                         .tracking(0.8)
@@ -1417,7 +1417,7 @@ struct QuizView: View {
 
                     HStack(alignment: .firstTextBaseline, spacing: 6) {
                         Text("\(displayedXP)")
-                            .font(.system(size: 38, weight: .semibold))
+                            .font(.jakarta(size: 38, weight: .semibold))
                             .foregroundStyle(DS.ink)
                             .monospacedDigit()
                         Text("XP")
@@ -1486,7 +1486,7 @@ struct QuizView: View {
     private func breakdownRow(icon: String, label: String, amount: Int) -> some View {
         HStack(spacing: 12) {
             Image(systemName: icon)
-                .font(.system(size: 15, weight: .medium))
+                .font(.jakarta(size: 15, weight: .medium))
                 .foregroundStyle(DS.accentSoft)
                 .frame(width: 36, height: 36)
                 .background(DS.accentTint, in: Circle())
