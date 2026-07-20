@@ -32,7 +32,7 @@ struct SophiaApp: App {
         WindowGroup {
             Group {
                 if showOnboarding {
-                    OnboardingView(onComplete: {
+                    OnboardingV2View(onComplete: {
                         withAnimation(.spring(response: 0.5)) {
                             showOnboarding = false
                         }
