@@ -1,4 +1,5 @@
 import SwiftUI
+import Supabase
 
 /// Gestion de compte pour les utilisateurs déjà installés (création optionnelle) :
 /// - déconnecté → proposition de créer un compte / se connecter (Apple ou Google),

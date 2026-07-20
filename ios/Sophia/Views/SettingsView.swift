@@ -1,4 +1,5 @@
 import SwiftUI
+import Supabase
 
 struct SettingsView: View {
     @Environment(LanguageManager.self) private var languageManager
