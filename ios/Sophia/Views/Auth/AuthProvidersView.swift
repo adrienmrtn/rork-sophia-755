@@ -14,6 +14,7 @@ struct AuthProvidersView: View {
     @State private var isWorking = false
     @State private var currentNonce: String?
     @State private var errorMessage: String?
+    @State private var entitlementSummary: String = ""
 
     var body: some View {
         VStack(spacing: 12) {
@@ -57,9 +58,22 @@ struct AuthProvidersView: View {
                 ProgressView()
                     .padding(.top, 4)
             }
+
+            // DIAGNOSTIC (temporaire) : présence réelle de l'entitlement Sign in with Apple
+            // dans le build installé.
+            Text(entitlementSummary)
+                .font(.jakarta(.caption2, weight: .medium))
+                .foregroundStyle(DS.inkTertiary)
+                .multilineTextAlignment(.center)
+                .padding(.top, 6)
         }
         .animation(.easeInOut(duration: 0.2), value: errorMessage)
         .animation(.easeInOut(duration: 0.2), value: isWorking)
+        .onAppear {
+            if entitlementSummary.isEmpty {
+                entitlementSummary = EntitlementDiagnostics.appleSignInSummary()
+            }
+        }
     }
 
     // MARK: - Actions
