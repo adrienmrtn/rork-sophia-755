@@ -6,6 +6,7 @@ struct OnboardingView: View {
     private let useNativeOnboardingPaywall = false
 
     @Environment(LanguageManager.self) private var languageManager
+    @Environment(AuthService.self) private var auth
 
     @State private var viewModel = OnboardingViewModel()
     @State private var storeVM = StoreViewModel()
@@ -22,6 +23,19 @@ struct OnboardingView: View {
     @State private var sawOnboardingPaywall = false
 
     var body: some View {
+        Group {
+            if auth.isSignedIn {
+                onboardingFunnel
+            } else {
+                // 1re page : connexion obligatoire pour les nouveaux utilisateurs.
+                OnboardingAuthScreen(onSignedIn: {})
+                    .transition(.opacity)
+            }
+        }
+        .animation(.easeInOut(duration: 0.3), value: auth.isSignedIn)
+    }
+
+    private var onboardingFunnel: some View {
         GeometryReader { geo in
             ZStack {
                 screenView(for: displayedScreen, in: geo.size)

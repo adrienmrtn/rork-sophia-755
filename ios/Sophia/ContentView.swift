@@ -3,10 +3,12 @@ import RevenueCatUI
 
 struct ContentView: View {
     @Environment(LanguageManager.self) private var languageManager
+    @Environment(AuthService.self) private var auth
     var onResetOnboarding: (() -> Void)? = nil
     @Binding var deepLinkCourseId: String?
 
     @State private var progressManager = ProgressManager()
+    @State private var syncService = ProgressSyncService.shared
     @State private var storeVM = StoreViewModel()
     @State private var discountManager = DiscountOfferManager()
     @State private var selectedTab: Int = 0
@@ -153,6 +155,24 @@ struct ContentView: View {
                 onRestored: { paywallContext = nil },
                 onDismissed: { paywallContext = nil }
             )
+        }
+        .sheet(item: Binding(
+            get: { syncService.pendingConflict },
+            set: { if $0 == nil { syncService.pendingConflict = nil } }
+        )) { conflict in
+            ProgressConflictView(conflict: conflict) { keepLocal in
+                Task { await syncService.resolveConflict(keepLocal: keepLocal) }
+            }
+        }
+        .task {
+            if auth.isSignedIn {
+                await syncService.syncAtLaunch()
+            }
+        }
+        .onChange(of: auth.isSignedIn) { _, signedIn in
+            if signedIn {
+                Task { await syncService.syncAfterSignIn() }
+            }
         }
         .onAppear {
             AnalyticsService.updateUserContext(
