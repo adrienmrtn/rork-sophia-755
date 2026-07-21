@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ProfileView: View {
     @Environment(LanguageManager.self) private var languageManager
+    @Environment(AuthService.self) private var auth
     let progressManager: ProgressManager
     let store: StoreViewModel
     @Binding var selectedCourse: Course?
@@ -12,9 +13,11 @@ struct ProfileView: View {
     @State private var showFavorites: Bool = false
     @State private var showAllQuizzes: Bool = false
     @State private var showPendingGlobalRankUp: Bool = false
+    @State private var showEditHandle: Bool = false
     @State private var hapticTrigger: Int = 0
     @State private var appeared: Bool = false
     @State private var showSubjectDetails: Bool = false
+    @Bindable private var social = SocialService.shared
 
     var body: some View {
         NavigationStack {
@@ -31,6 +34,9 @@ struct ProfileView: View {
                             .padding(.horizontal, 20)
 
                         statsSection
+                            .padding(.horizontal, 20)
+
+                        FriendsLeaderboardSection(social: social)
                             .padding(.horizontal, 20)
 
                         radarSection
@@ -85,6 +91,21 @@ struct ProfileView: View {
                         }
                     )
                 }
+            }
+            .sheet(isPresented: $showEditHandle) {
+                if let handle = social.myHandle {
+                    EditHandleSheet(currentHandle: handle) { _ in
+                        Task { await social.refreshAll() }
+                    }
+                    .presentationDetents([.medium])
+                }
+            }
+        }
+        .task(id: auth.isSignedIn) {
+            if auth.isSignedIn {
+                await social.refreshAll()
+            } else {
+                social.clearLocalState()
             }
         }
         .onAppear {
@@ -158,6 +179,23 @@ struct ProfileView: View {
                         .lineLimit(2)
                         .minimumScaleFactor(0.8)
                         .fixedSize(horizontal: false, vertical: true)
+
+                    if auth.isSignedIn, let handle = social.myHandle {
+                        Button {
+                            hapticTrigger += 1
+                            showEditHandle = true
+                        } label: {
+                            HStack(spacing: 4) {
+                                Text("@\(handle)")
+                                    .font(DS.sans(.subheadline, .semibold))
+                                    .foregroundStyle(DS.accentSoft)
+                                Image(systemName: "pencil")
+                                    .font(.jakarta(size: 11, weight: .semibold))
+                                    .foregroundStyle(DS.inkTertiary)
+                            }
+                        }
+                        .buttonStyle(.plain)
+                    }
 
                     Text(String(format: languageManager.text("common.levelShort"), p.level))
                         .font(DS.sans(.subheadline, .medium))
@@ -483,7 +521,7 @@ struct CalmProgressBar: View {
 
 // MARK: - Profile press feedback
 
-private struct ProfileCardPress: ButtonStyle {
+struct ProfileCardPress: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .scaleEffect(configuration.isPressed ? 0.98 : 1)
@@ -561,7 +599,7 @@ private struct SubjectProgressCard: View {
 
 // MARK: - Global rank progress ring
 
-private struct GlobalRankRing: View {
+struct GlobalRankRing: View {
     let progress: GlobalLevelProgress
     var size: CGFloat = 96
 

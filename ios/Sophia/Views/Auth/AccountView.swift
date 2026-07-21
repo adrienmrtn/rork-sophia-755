@@ -100,6 +100,13 @@ struct AccountView: View {
                     label: languageManager.text("account.email"),
                     value: auth.currentUser?.email ?? "—"
                 )
+                if let handle = SocialService.shared.myHandle {
+                    Rectangle().fill(DS.hairline).frame(height: 1)
+                    infoRow(
+                        label: "@",
+                        value: "@\(handle)"
+                    )
+                }
                 Rectangle().fill(DS.hairline).frame(height: 1)
                 infoRow(
                     label: languageManager.text("account.provider"),
@@ -107,6 +114,9 @@ struct AccountView: View {
                 )
             }
             .dsCard()
+            .task {
+                await SocialService.shared.refreshMyHandle()
+            }
 
             if let deleteError {
                 Text(deleteError)
