@@ -8,13 +8,26 @@ enum SophiaPaywallContext: String, Identifiable {
     case offreDiscount = "offre_discount"
     case debloquerCours = "debloquer_cours"
     case quizz = "quizz"
+    /// Training-tab unlock. Its own analytics funnel, but purchases still attribute to the
+    /// `quizz` RevenueCat offering (see `offeringIdentifier`).
+    case entrainement = "entrainement"
 
     var id: String { rawValue }
+
+    /// RevenueCat offering identifier used for purchase attribution. Usually the raw value,
+    /// but `.entrainement` reuses the shared `quizz` offering.
+    var offeringIdentifier: String {
+        switch self {
+        case .entrainement: return SophiaPaywallContext.quizz.rawValue
+        default: return rawValue
+        }
+    }
 }
 
 /// Dispatcher that renders the appropriate native paywall for a given context.
 ///
 /// - `.offreDiscount` → `SophiaDiscountPaywall` (flash sale, `special_promo`, 19,99 €/an).
+/// - `.entrainement` → `SophiaTrainingPaywall` (sells the spaced-repetition training method).
 /// - everything else → `SophiaStandardPaywall` (single annual plan, 39,99 €/an, 3-day trial).
 struct SophiaPaywallView: View {
     let context: SophiaPaywallContext
@@ -33,6 +46,13 @@ struct SophiaPaywallView: View {
             SophiaDiscountPaywall(
                 store: store,
                 discountManager: discountManager,
+                onPurchased: onPurchased,
+                onRestored: onRestored,
+                onDismissed: onDismissed
+            )
+        case .entrainement:
+            SophiaTrainingPaywall(
+                store: store,
                 onPurchased: onPurchased,
                 onRestored: onRestored,
                 onDismissed: onDismissed

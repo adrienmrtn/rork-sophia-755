@@ -142,15 +142,19 @@ struct TrainingView: View {
             }
             .padding(.horizontal, 32)
 
-            Button {
-                UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                startSession(due: due)
-            } label: {
-                Text(languageManager.text("training.start"))
+            // Freemium : pas de bouton « Commencer » — l'entraînement est premium et se
+            // débloque via le bouton « Débloquer » (voir `freemiumUnlockButton`).
+            if isPremium {
+                Button {
+                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                    startSession(due: due)
+                } label: {
+                    Text(languageManager.text("training.start"))
+                }
+                .buttonStyle(DSPrimaryButtonStyle())
+                .padding(.horizontal, 40)
+                .padding(.top, 8)
             }
-            .buttonStyle(DSPrimaryButtonStyle())
-            .padding(.horizontal, 40)
-            .padding(.top, 8)
         }
     }
 
@@ -205,7 +209,7 @@ struct TrainingView: View {
             HStack(spacing: 8) {
                 Image(systemName: "lock.open.fill")
                     .font(.jakarta(size: 14, weight: .semibold))
-                Text(languageManager.text("profile.quiz.unlock"))
+                Text(languageManager.text("training.unlock"))
             }
         }
         .buttonStyle(DSPrimaryButtonStyle())

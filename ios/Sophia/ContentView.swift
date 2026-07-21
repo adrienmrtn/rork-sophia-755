@@ -59,7 +59,7 @@ struct ContentView: View {
                         isPremium: storeVM.isPremium,
                         onShowQuizPaywall: {
                             if storeVM.isPremium { return }
-                            paywallContext = .quizz
+                            paywallContext = .entrainement
                         }
                     )
                 }

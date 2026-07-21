@@ -339,6 +339,292 @@ struct SophiaStandardPaywall: View {
     }
 }
 
+// MARK: - Training paywall (quizz offering)
+
+/// Dedicated native paywall for the `quizz` context, opened from the training tab's
+/// "Débloquer" CTA. Rather than a generic feature list, it *sells the training method*:
+/// it explains what training is, shows spaced-repetition statistics, and frames spaced
+/// repetition as the most proven way to anchor lasting knowledge. Purchases still attribute
+/// to the `quizz` RevenueCat offering (single annual plan, 3-day trial).
+struct SophiaTrainingPaywall: View {
+    @Environment(LanguageManager.self) private var languageManager
+    @Environment(\.dismiss) private var dismiss
+
+    let store: StoreViewModel
+    var onPurchased: () -> Void = {}
+    var onRestored: () -> Void = {}
+    var onDismissed: (() -> Void)? = nil
+
+    @State private var purchasing = false
+    @State private var appeared = false
+    @State private var presentedAt: Date?
+    @State private var didTrackDismiss = false
+
+    private let context = SophiaPaywallContext.entrainement
+
+    private var prices: StoreViewModel.PaywallPriceDisplay {
+        store.paywallPriceDisplay(language: languageManager.current)
+    }
+
+    var body: some View {
+        ZStack {
+            DS.canvas.ignoresSafeArea()
+
+            VStack(spacing: 0) {
+                HStack {
+                    closeButton
+                    Spacer()
+                }
+                .padding(.horizontal, 20)
+                .padding(.top, 12)
+
+                ScrollView {
+                    VStack(spacing: 22) {
+                        hero
+                        headline.padding(.horizontal, 28)
+                        stats.padding(.horizontal, 24)
+                        howItWorks.padding(.horizontal, 24)
+                        footnote.padding(.horizontal, 32)
+                    }
+                    .padding(.top, 8)
+                    .padding(.bottom, 24)
+                    .opacity(appeared ? 1 : 0)
+                    .offset(y: appeared ? 0 : 16)
+                }
+                .scrollIndicators(.hidden)
+
+                bottomBar
+                    .opacity(appeared ? 1 : 0)
+                    .offset(y: appeared ? 0 : 20)
+            }
+        }
+        .onAppear {
+            presentedAt = Date()
+            didTrackDismiss = false
+            AnalyticsService.trackPaywallViewed(context: context.rawValue)
+            withAnimation(.spring(response: 0.55, dampingFraction: 0.85).delay(0.05)) {
+                appeared = true
+            }
+        }
+        .task {
+            if store.offerings == nil { await store.fetchOfferings() }
+        }
+        .onDisappear { trackDismissIfNeeded() }
+    }
+
+    // MARK: Hero
+
+    private var hero: some View {
+        Image(systemName: "arrow.triangle.2.circlepath")
+            .font(.system(size: 42, weight: .semibold))
+            .foregroundStyle(DS.accent)
+            .frame(width: 92, height: 92)
+            .background(DS.accentTint, in: Circle())
+    }
+
+    // MARK: Headline
+
+    private var headline: some View {
+        VStack(spacing: 10) {
+            Text(languageManager.text("paywall.training.title"))
+                .font(DS.title(.title, .heavy))
+                .foregroundStyle(DS.ink)
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
+
+            Text(languageManager.text("paywall.training.subtitle"))
+                .font(DS.sans(.subheadline))
+                .foregroundStyle(DS.inkSecondary)
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+    }
+
+    // MARK: Stats
+
+    private var stats: some View {
+        HStack(spacing: 12) {
+            statCard(
+                value: languageManager.text("paywall.training.stat1.value"),
+                label: languageManager.text("paywall.training.stat1.label"),
+                tint: DS.success
+            )
+            statCard(
+                value: languageManager.text("paywall.training.stat2.value"),
+                label: languageManager.text("paywall.training.stat2.label"),
+                tint: DS.danger
+            )
+        }
+    }
+
+    private func statCard(value: String, label: String, tint: Color) -> some View {
+        VStack(spacing: 8) {
+            Text(value)
+                .font(.jakarta(size: 30, weight: .bold))
+                .foregroundStyle(tint)
+                .monospacedDigit()
+            Text(label)
+                .font(DS.sans(.caption, .medium))
+                .foregroundStyle(DS.inkSecondary)
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 18)
+        .padding(.horizontal, 12)
+        .background(DS.surface)
+        .clipShape(.rect(cornerRadius: DS.Radius.card))
+        .overlay {
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .strokeBorder(DS.hairline, lineWidth: 1)
+        }
+    }
+
+    // MARK: How it works
+
+    private var howItWorks: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            Text(languageManager.text("paywall.training.how.title"))
+                .font(DS.sans(.caption2, .semibold))
+                .foregroundStyle(DS.inkTertiary)
+                .tracking(1.2)
+
+            howStep(1, languageManager.text("paywall.training.how.step1"))
+            howStep(2, languageManager.text("paywall.training.how.step2"))
+            howStep(3, languageManager.text("paywall.training.how.step3"))
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(18)
+        .background(DS.surface)
+        .clipShape(.rect(cornerRadius: DS.Radius.card))
+        .overlay {
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .strokeBorder(DS.hairline, lineWidth: 1)
+        }
+    }
+
+    private func howStep(_ number: Int, _ text: String) -> some View {
+        HStack(alignment: .top, spacing: 12) {
+            Text("\(number)")
+                .font(DS.sans(.subheadline, .bold))
+                .foregroundStyle(.white)
+                .frame(width: 26, height: 26)
+                .background(DS.accent, in: Circle())
+            Text(text)
+                .font(DS.sans(.subheadline, .medium))
+                .foregroundStyle(DS.ink)
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(maxWidth: .infinity, alignment: .leading)
+        }
+    }
+
+    // MARK: Footnote
+
+    private var footnote: some View {
+        HStack(alignment: .top, spacing: 8) {
+            Image(systemName: "sparkles")
+                .font(.jakarta(size: 13, weight: .semibold))
+                .foregroundStyle(DS.accentSoft)
+            Text(languageManager.text("paywall.training.footnote"))
+                .font(DS.sans(.caption, .medium))
+                .foregroundStyle(DS.inkTertiary)
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(maxWidth: .infinity, alignment: .leading)
+        }
+    }
+
+    // MARK: Bottom bar
+
+    private var bottomBar: some View {
+        VStack(spacing: 10) {
+            Text(priceLine)
+                .font(DS.sans(.footnote, .medium))
+                .foregroundStyle(DS.inkTertiary)
+                .multilineTextAlignment(.center)
+
+            Button(action: purchase) {
+                HStack(spacing: 8) {
+                    if purchasing {
+                        ProgressView().tint(.white)
+                    } else {
+                        Image(systemName: "lock.open.fill")
+                            .font(.jakarta(size: 15, weight: .bold))
+                        Text(languageManager.text("paywall.cta.unlockFree"))
+                    }
+                }
+            }
+            .buttonStyle(DSPrimaryButtonStyle())
+            .disabled(purchasing)
+            .padding(.horizontal, 24)
+
+            PaywallLegalRow(onRestore: restore)
+                .padding(.bottom, 14)
+        }
+    }
+
+    /// e.g. "Essai gratuit de 3 jours, puis 39,99 €/an (3,33 €/mois)."
+    private var priceLine: String {
+        String(
+            format: languageManager.text("paywall.price.trialThenYearly"),
+            prices.yearlyPrice, prices.yearlyPerMonth
+        )
+    }
+
+    private var closeButton: some View {
+        Button {
+            UIImpactFeedbackGenerator(style: .light).impactOccurred()
+            trackDismissIfNeeded()
+            dismiss()
+            onDismissed?()
+        } label: {
+            Image(systemName: "xmark")
+                .font(.system(size: 15, weight: .semibold))
+                .foregroundStyle(DS.inkSecondary)
+                .frame(width: 40, height: 40)
+                .background(DS.surface, in: Circle())
+                .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
+        }
+    }
+
+    // MARK: Actions
+
+    private func purchase() {
+        guard !purchasing else { return }
+        guard let package = store.annualPackage(forOfferingIdentifier: context.offeringIdentifier) else {
+            Task { await store.fetchOfferings() }
+            return
+        }
+        UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+        purchasing = true
+        Task {
+            let ok = await store.purchase(package: package)
+            purchasing = false
+            if ok {
+                AnalyticsService.trackPurchaseCompleted(
+                    context: context.rawValue,
+                    offeringId: store.offering(identifier: context.offeringIdentifier)?.identifier,
+                    packageId: package.identifier
+                )
+                onPurchased()
+            }
+        }
+    }
+
+    private func restore() {
+        Task {
+            await store.restore()
+            if store.isPremium { onRestored() }
+        }
+    }
+
+    private func trackDismissIfNeeded() {
+        guard !didTrackDismiss else { return }
+        didTrackDismiss = true
+        let duration = Int(Date().timeIntervalSince(presentedAt ?? Date()))
+        AnalyticsService.trackPaywallDismissed(context: context.rawValue, durationSeconds: max(0, duration))
+    }
+}
+
 // MARK: - Discount paywall (offre_discount)
 
 /// Ultra-aggressive native flash-sale paywall for the `offre_discount` context.

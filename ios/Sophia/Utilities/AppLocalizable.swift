@@ -33,6 +33,7 @@ enum AppLocalizable {
         "training.emptyMessage": "Reviens demain pour continuer tes révisions.",
         "training.locked.title": "Débloque l'entraînement",
         "training.locked.message": "Termine le quiz d'un cours pour ajouter ses questions ici, puis révise-les au bon moment pour bien les mémoriser.",
+        "training.unlock": "Débloquer l'entraînement",
         "training.how.title": "COMMENT ÇA MARCHE",
         "training.how.step1": "Termine un cours et son quiz",
         "training.how.step2": "Ses questions rejoignent ton entraînement",
@@ -153,6 +154,8 @@ enum AppLocalizable {
         "onboardingV2.review.appStore": "sur l'App Store",
         "onboardingV2.review.quote": "« Avant, je passais 7 h par jour sur mon téléphone. Aujourd'hui 40 minutes avec Sophia, et je me sens plus intelligent chaque semaine. »",
         "onboardingV2.review.author": "Léa, 24 ans",
+        "onboardingV2.personalize.text": "Personnalisons ton contenu",
+        "onboardingV2.personalize.tapHint": "Appuie pour continuer",
         "onboardingV2.loading.title": "On prépare ton profil",
         "onboardingV2.loading.step1": "Analyse de ton objectif",
         "onboardingV2.loading.step2": "Sélection de tes cours",
@@ -595,6 +598,19 @@ enum AppLocalizable {
         "paywall.cta.unlockFree": "Débloquer gratuitement",
         "paywall.price.trialThenYearly": "Essai gratuit de 3 jours, puis %@ / an (%@)",
 
+        // Native training paywall (quizz offering)
+        "paywall.training.title": "Ancre ce que tu apprends, pour de bon",
+        "paywall.training.subtitle": "L'entraînement te fait réviser tes quiz au moment idéal — juste avant que ton cerveau n'oublie.",
+        "paywall.training.stat1.value": "+200 %",
+        "paywall.training.stat1.label": "de rétention grâce à la répétition espacée, vs. une simple relecture",
+        "paywall.training.stat2.value": "90 %",
+        "paywall.training.stat2.label": "de ce qu'on apprend est oublié en une semaine… sans révision",
+        "paywall.training.how.title": "COMMENT ÇA MARCHE",
+        "paywall.training.how.step1": "Termine un cours et son quiz",
+        "paywall.training.how.step2": "Ses questions rejoignent ton entraînement",
+        "paywall.training.how.step3": "Révise au moment idéal pour ne plus jamais oublier",
+        "paywall.training.footnote": "La répétition espacée est la méthode la mieux prouvée pour ancrer des connaissances durables.",
+
         // Native discount paywall (flash sale)
         "paywall.discount.endsIn": "Se termine dans",
         "paywall.discount.title": "Offre flash, aujourd'hui seulement",
@@ -783,6 +799,7 @@ enum AppLocalizable {
         "training.emptyMessage": "Come back tomorrow to keep reviewing.",
         "training.locked.title": "Unlock training",
         "training.locked.message": "Finish a course's quiz to add its questions here, then review them at the right time to remember them for good.",
+        "training.unlock": "Unlock training",
         "training.how.title": "HOW IT WORKS",
         "training.how.step1": "Finish a course and its quiz",
         "training.how.step2": "Its questions join your training",
@@ -903,6 +920,8 @@ enum AppLocalizable {
         "onboardingV2.review.appStore": "on the App Store",
         "onboardingV2.review.quote": "\"I used to spend 7 hours a day on my phone. Now just 40 minutes with Sophia, and I feel smarter every week.\"",
         "onboardingV2.review.author": "Léa, 24",
+        "onboardingV2.personalize.text": "Let's personalize your content",
+        "onboardingV2.personalize.tapHint": "Tap to continue",
         "onboardingV2.loading.title": "Preparing your profile",
         "onboardingV2.loading.step1": "Analyzing your objective",
         "onboardingV2.loading.step2": "Selecting your courses",
@@ -1343,6 +1362,19 @@ enum AppLocalizable {
         "paywall.benefit.allSubjects": "All subjects, ad-free",
         "paywall.cta.unlockFree": "Unlock for free",
         "paywall.price.trialThenYearly": "3-day free trial, then %@ / year (%@)",
+
+        // Native training paywall (quizz offering)
+        "paywall.training.title": "Lock in what you learn, for good",
+        "paywall.training.subtitle": "Training brings your quiz questions back at the perfect moment — right before your brain forgets them.",
+        "paywall.training.stat1.value": "+200%",
+        "paywall.training.stat1.label": "retention with spaced repetition, vs. simply re-reading",
+        "paywall.training.stat2.value": "90%",
+        "paywall.training.stat2.label": "of what we learn is forgotten within a week… without review",
+        "paywall.training.how.title": "HOW IT WORKS",
+        "paywall.training.how.step1": "Finish a course and its quiz",
+        "paywall.training.how.step2": "Its questions join your training",
+        "paywall.training.how.step3": "Review at the perfect moment so you never forget",
+        "paywall.training.footnote": "Spaced repetition is the most proven method to anchor knowledge that lasts.",
 
         // Native discount paywall (flash sale)
         "paywall.discount.endsIn": "Ends in",
