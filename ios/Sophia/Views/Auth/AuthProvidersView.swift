@@ -14,7 +14,6 @@ struct AuthProvidersView: View {
     @State private var isWorking = false
     @State private var currentNonce: String?
     @State private var errorMessage: String?
-    @State private var entitlementSummary: String = ""
 
     var body: some View {
         VStack(spacing: 12) {
@@ -58,22 +57,9 @@ struct AuthProvidersView: View {
                 ProgressView()
                     .padding(.top, 4)
             }
-
-            // DIAGNOSTIC (temporaire) : présence réelle de l'entitlement Sign in with Apple
-            // dans le build installé.
-            Text(entitlementSummary)
-                .font(.jakarta(.caption2, weight: .medium))
-                .foregroundStyle(DS.inkTertiary)
-                .multilineTextAlignment(.center)
-                .padding(.top, 6)
         }
         .animation(.easeInOut(duration: 0.2), value: errorMessage)
         .animation(.easeInOut(duration: 0.2), value: isWorking)
-        .onAppear {
-            if entitlementSummary.isEmpty {
-                entitlementSummary = EntitlementDiagnostics.appleSignInSummary()
-            }
-        }
     }
 
     // MARK: - Actions
@@ -81,11 +67,10 @@ struct AuthProvidersView: View {
     private func handleAppleCompletion(_ result: Result<ASAuthorization, Error>) {
         switch result {
         case .failure(let error):
-            // DIAGNOSTIC (temporaire) : on affiche TOUT, y compris le cas « annulation »
-            // (code 1001), car Apple renvoie souvent « Sign Up Not Completed » sous ce code
-            // quand le provisioning / l'entitlement / le compte Apple pose problème.
-            let nsError = error as NSError
-            errorMessage = "Apple: \(nsError.domain) \(nsError.code) — \(nsError.localizedDescription)"
+            if let authError = error as? ASAuthorizationError, authError.code == .canceled {
+                return // annulation : on laisse réessayer sans message
+            }
+            errorMessage = languageManager.text("auth.error.generic")
         case .success(let authorization):
             guard let rawNonce = currentNonce else {
                 errorMessage = languageManager.text("auth.error.generic")
