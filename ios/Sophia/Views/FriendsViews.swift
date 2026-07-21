@@ -122,7 +122,7 @@ struct AddFriendSheet: View {
             ZStack {
                 DS.canvas.ignoresSafeArea()
                 VStack(alignment: .leading, spacing: 18) {
-                    Text(languageManager.text("friends.add.subtitle"))
+                    Text(languageManager.text("friends.add.requestSubtitle"))
                         .font(DS.sans(.subheadline, .medium))
                         .foregroundStyle(DS.inkSecondary)
                         .fixedSize(horizontal: false, vertical: true)
@@ -163,7 +163,7 @@ struct AddFriendSheet: View {
                     Button { add() } label: {
                         HStack(spacing: 8) {
                             if isSaving { ProgressView().tint(.white) }
-                            Text(languageManager.text("friends.add.action"))
+                            Text(languageManager.text("friends.request.send"))
                         }
                     }
                     .buttonStyle(DSPrimaryButtonStyle())
@@ -194,10 +194,15 @@ struct AddFriendSheet: View {
         successMessage = nil
         Task {
             do {
-                try await SocialService.shared.addFriend(handle: sanitized)
-                successMessage = languageManager.text("friends.add.success")
+                let outcome = try await SocialService.shared.sendFriendRequest(handle: sanitized)
+                switch outcome {
+                case .sent:
+                    successMessage = languageManager.text("friends.request.sent")
+                case .accepted:
+                    successMessage = languageManager.text("friends.request.autoAccepted")
+                }
                 onAdded()
-                try? await Task.sleep(nanoseconds: 600_000_000)
+                try? await Task.sleep(nanoseconds: 900_000_000)
                 dismiss()
             } catch let error as SocialError {
                 errorMessage = error.localizedMessage(languageManager: languageManager)
@@ -415,6 +420,7 @@ struct FriendsLeaderboardSection: View {
     @State private var showEditHandle = false
     @State private var selectedFriend: FriendLeaderboardEntry?
     @State private var hapticTrigger = 0
+    @State private var respondingIds: Set<UUID> = []
 
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
@@ -439,14 +445,25 @@ struct FriendsLeaderboardSection: View {
             if !auth.isSignedIn {
                 signedOutCard
             } else {
+                if !social.pendingRequests.isEmpty {
+                    requestsCard
+                }
                 periodPicker
                 leaderboardCard
             }
         }
         .sensoryFeedback(.impact(weight: .light), trigger: hapticTrigger)
+        .task(id: auth.isSignedIn) {
+            if auth.isSignedIn {
+                await social.refreshPendingRequests()
+            }
+        }
         .sheet(isPresented: $showAddFriend) {
             AddFriendSheet {
-                Task { await social.refreshLeaderboard() }
+                Task {
+                    await social.refreshLeaderboard()
+                    await social.refreshPendingRequests()
+                }
             }
             .presentationDetents([.medium])
         }
@@ -475,6 +492,88 @@ struct FriendsLeaderboardSection: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .dsCard()
+    }
+
+    private var requestsCard: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            HStack {
+                Text(languageManager.text("friends.requests.title"))
+                    .font(DS.sans(.caption, .semibold))
+                    .foregroundStyle(DS.inkTertiary)
+                    .tracking(1.0)
+                Spacer()
+                Text("\(social.pendingRequests.count)")
+                    .font(DS.sans(.caption2, .bold))
+                    .foregroundStyle(.white)
+                    .padding(.horizontal, 7)
+                    .padding(.vertical, 2)
+                    .background(DS.accent, in: Capsule())
+            }
+            .padding(.horizontal, 16)
+            .padding(.top, 14)
+            .padding(.bottom, 8)
+
+            ForEach(Array(social.pendingRequests.enumerated()), id: \.element.id) { index, request in
+                if index > 0 {
+                    Rectangle().fill(DS.hairline).frame(height: 1)
+                }
+                requestRow(request)
+            }
+            .padding(.bottom, 6)
+        }
+        .dsCard(padding: 0)
+    }
+
+    private func requestRow(_ request: FriendRequest) -> some View {
+        HStack(spacing: 12) {
+            Image(systemName: "person.crop.circle")
+                .font(.jakarta(size: 26, weight: .regular))
+                .foregroundStyle(DS.inkTertiary)
+
+            Text("@\(request.handle)")
+                .font(DS.sans(.body, .semibold))
+                .foregroundStyle(DS.ink)
+                .lineLimit(1)
+
+            Spacer(minLength: 8)
+
+            Button {
+                respond(request, accept: false)
+            } label: {
+                Image(systemName: "xmark")
+                    .font(.jakarta(size: 14, weight: .bold))
+                    .foregroundStyle(DS.inkSecondary)
+                    .frame(width: 38, height: 38)
+                    .background(DS.surface, in: Circle())
+                    .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
+            }
+            .buttonStyle(.plain)
+            .disabled(respondingIds.contains(request.requestId))
+
+            Button {
+                respond(request, accept: true)
+            } label: {
+                Image(systemName: "checkmark")
+                    .font(.jakarta(size: 14, weight: .bold))
+                    .foregroundStyle(.white)
+                    .frame(width: 38, height: 38)
+                    .background(DS.accent, in: Circle())
+            }
+            .buttonStyle(.plain)
+            .disabled(respondingIds.contains(request.requestId))
+        }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 10)
+    }
+
+    private func respond(_ request: FriendRequest, accept: Bool) {
+        guard !respondingIds.contains(request.requestId) else { return }
+        hapticTrigger += 1
+        respondingIds.insert(request.requestId)
+        Task {
+            try? await social.respondToRequest(requestId: request.requestId, accept: accept)
+            respondingIds.remove(request.requestId)
+        }
     }
 
     private var periodPicker: some View {
@@ -605,6 +704,12 @@ extension SocialError {
             return languageManager.text("friends.error.cannotAddSelf")
         case .notFriends:
             return languageManager.text("friends.error.notFriends")
+        case .alreadyFriends:
+            return languageManager.text("friends.error.alreadyFriends")
+        case .requestAlreadySent:
+            return languageManager.text("friends.error.requestAlreadySent")
+        case .requestNotFound:
+            return languageManager.text("friends.error.requestNotFound")
         case .underlying:
             return languageManager.text("friends.error.generic")
         }
