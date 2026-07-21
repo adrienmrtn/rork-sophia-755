@@ -625,6 +625,567 @@ struct SophiaTrainingPaywall: View {
     }
 }
 
+// MARK: - Quiz paywall (quizz offering)
+
+/// Rich native paywall for the `quizz` context (course-end "Débloque le quiz"). It sells the
+/// quiz feature with social proof: an App Store rating, an auto-playing demo cycling through
+/// the four question types (MCQ, true/false, estimate slider, timeline), and a carousel of
+/// user reviews. The close button only appears after 2s so the value is seen first. The
+/// second-chance comparison paywall is stacked on top by the presenter (see `CourseView`),
+/// so this view never dismisses itself — all exits go through the callbacks.
+struct SophiaQuizPaywall: View {
+    @Environment(LanguageManager.self) private var languageManager
+
+    let store: StoreViewModel
+    var onPurchased: () -> Void = {}
+    var onRestored: () -> Void = {}
+    var onDismissed: (() -> Void)? = nil
+
+    @State private var purchasing = false
+    @State private var appeared = false
+    @State private var showClose = false
+    @State private var presentedAt: Date?
+    @State private var didTrackDismiss = false
+
+    private let context = SophiaPaywallContext.quizz
+
+    private var prices: StoreViewModel.PaywallPriceDisplay {
+        store.paywallPriceDisplay(language: languageManager.current)
+    }
+
+    var body: some View {
+        ZStack {
+            DS.canvas.ignoresSafeArea()
+
+            VStack(spacing: 0) {
+                HStack {
+                    closeButton
+                        .opacity(showClose ? 1 : 0)
+                        .allowsHitTesting(showClose)
+                    Spacer()
+                }
+                .padding(.horizontal, 20)
+                .padding(.top, 12)
+
+                ScrollView {
+                    VStack(spacing: 22) {
+                        ratingHeader
+                        headline.padding(.horizontal, 28)
+                        QuizPaywallShowcase().padding(.horizontal, 22)
+                        QuizPaywallReviews().padding(.horizontal, 22)
+                    }
+                    .padding(.top, 6)
+                    .padding(.bottom, 24)
+                    .opacity(appeared ? 1 : 0)
+                    .offset(y: appeared ? 0 : 16)
+                }
+                .scrollIndicators(.hidden)
+
+                bottomBar
+                    .opacity(appeared ? 1 : 0)
+                    .offset(y: appeared ? 0 : 20)
+            }
+        }
+        .onAppear {
+            presentedAt = Date()
+            didTrackDismiss = false
+            AnalyticsService.trackPaywallViewed(context: context.rawValue)
+            withAnimation(.spring(response: 0.55, dampingFraction: 0.85).delay(0.05)) {
+                appeared = true
+            }
+            // La croix n'apparaît qu'au bout de 2 s, le temps de voir la valeur.
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                withAnimation(.easeOut(duration: 0.4)) { showClose = true }
+            }
+        }
+        .task {
+            if store.offerings == nil { await store.fetchOfferings() }
+        }
+        .onDisappear { trackDismissIfNeeded() }
+    }
+
+    // MARK: Rating header
+
+    private var ratingHeader: some View {
+        VStack(spacing: 8) {
+            Text("4.8")
+                .font(.system(size: 46, weight: .heavy, design: .rounded))
+                .foregroundStyle(DS.ink)
+            HStack(spacing: 5) {
+                ForEach(0..<5, id: \.self) { _ in
+                    Image(systemName: "star.fill")
+                        .font(.system(size: 16))
+                        .foregroundStyle(DS.warm)
+                }
+            }
+            Text(languageManager.text("paywall.quiz.rating"))
+                .font(DS.sans(.subheadline, .semibold))
+                .foregroundStyle(DS.inkSecondary)
+        }
+    }
+
+    // MARK: Headline
+
+    private var headline: some View {
+        VStack(spacing: 10) {
+            Text(languageManager.text("paywall.quiz.title"))
+                .font(DS.title(.title, .heavy))
+                .foregroundStyle(DS.ink)
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
+
+            Text(languageManager.text("paywall.quiz.subtitle"))
+                .font(DS.sans(.subheadline))
+                .foregroundStyle(DS.inkSecondary)
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+    }
+
+    // MARK: Bottom bar
+
+    private var bottomBar: some View {
+        VStack(spacing: 10) {
+            Text(priceLine)
+                .font(DS.sans(.footnote, .medium))
+                .foregroundStyle(DS.inkTertiary)
+                .multilineTextAlignment(.center)
+
+            Button(action: purchase) {
+                HStack(spacing: 8) {
+                    if purchasing {
+                        ProgressView().tint(.white)
+                    } else {
+                        Image(systemName: "lock.open.fill")
+                            .font(.jakarta(size: 15, weight: .bold))
+                        Text(languageManager.text("paywall.cta.unlockFree"))
+                    }
+                }
+            }
+            .buttonStyle(DSPrimaryButtonStyle())
+            .disabled(purchasing)
+            .padding(.horizontal, 24)
+
+            PaywallLegalRow(onRestore: restore)
+                .padding(.bottom, 14)
+        }
+    }
+
+    private var priceLine: String {
+        String(
+            format: languageManager.text("paywall.price.trialThenYearly"),
+            prices.yearlyPrice, prices.yearlyPerMonth
+        )
+    }
+
+    private var closeButton: some View {
+        Button {
+            UIImpactFeedbackGenerator(style: .light).impactOccurred()
+            trackDismissIfNeeded()
+            onDismissed?()
+        } label: {
+            Image(systemName: "xmark")
+                .font(.system(size: 15, weight: .semibold))
+                .foregroundStyle(DS.inkSecondary)
+                .frame(width: 40, height: 40)
+                .background(DS.surface, in: Circle())
+                .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
+        }
+    }
+
+    // MARK: Actions
+
+    private func purchase() {
+        guard !purchasing else { return }
+        guard let package = store.annualPackage(forOfferingIdentifier: context.rawValue) else {
+            Task { await store.fetchOfferings() }
+            return
+        }
+        UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+        purchasing = true
+        Task {
+            let ok = await store.purchase(package: package)
+            purchasing = false
+            if ok {
+                AnalyticsService.trackPurchaseCompleted(
+                    context: context.rawValue,
+                    offeringId: store.offering(identifier: context.rawValue)?.identifier,
+                    packageId: package.identifier
+                )
+                onPurchased()
+            }
+        }
+    }
+
+    private func restore() {
+        Task {
+            await store.restore()
+            if store.isPremium { onRestored() }
+        }
+    }
+
+    private func trackDismissIfNeeded() {
+        guard !didTrackDismiss else { return }
+        didTrackDismiss = true
+        let duration = Int(Date().timeIntervalSince(presentedAt ?? Date()))
+        AnalyticsService.trackPaywallDismissed(context: context.rawValue, durationSeconds: max(0, duration))
+    }
+}
+
+// MARK: - Quiz demo showcase (auto-playing, cycles through the 4 question types)
+
+private struct QuizPaywallShowcase: View {
+    @Environment(LanguageManager.self) private var languageManager
+
+    private enum DemoType: Int, CaseIterable { case mcq, trueFalse, slider, chrono }
+
+    @State private var type: DemoType = .mcq
+    @State private var revealed = false
+    @State private var sliderValue: Double = 1745
+    @State private var task: Task<Void, Never>?
+
+    private let sliderMin: Double = 1700
+    private let sliderMax: Double = 1850
+    private let sliderAnswer: Double = 1789
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            HStack {
+                Text(badgeText)
+                    .font(DS.sans(.caption2, .bold))
+                    .tracking(0.5)
+                    .foregroundStyle(DS.accentSoft)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 5)
+                    .background(DS.accentTint, in: Capsule())
+                Spacer()
+                Image(systemName: "sparkles")
+                    .font(.jakarta(size: 13, weight: .semibold))
+                    .foregroundStyle(DS.accentSoft)
+            }
+
+            Text(languageManager.text("paywall.quiz.demo.title"))
+                .font(DS.sans(.caption, .semibold))
+                .foregroundStyle(DS.inkTertiary)
+
+            ZStack(alignment: .topLeading) {
+                demoBody(for: type)
+                    .id(type)
+                    .transition(.asymmetric(
+                        insertion: .move(edge: .trailing).combined(with: .opacity),
+                        removal: .move(edge: .leading).combined(with: .opacity)
+                    ))
+            }
+            .frame(maxWidth: .infinity, minHeight: 200, alignment: .topLeading)
+        }
+        .padding(18)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(DS.surface, in: RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .strokeBorder(DS.hairline, lineWidth: 1)
+        }
+        .dsSoftShadow()
+        .onAppear { start() }
+        .onDisappear { task?.cancel() }
+    }
+
+    private var badgeText: String {
+        switch type {
+        case .mcq: return languageManager.text("paywall.quiz.demo.badge.mcq")
+        case .trueFalse: return languageManager.text("paywall.quiz.demo.badge.trueFalse")
+        case .slider: return languageManager.text("paywall.quiz.demo.badge.slider")
+        case .chrono: return languageManager.text("paywall.quiz.demo.badge.chrono")
+        }
+    }
+
+    @ViewBuilder
+    private func demoBody(for type: DemoType) -> some View {
+        switch type {
+        case .mcq: mcqDemo
+        case .trueFalse: trueFalseDemo
+        case .slider: sliderDemo
+        case .chrono: chronoDemo
+        }
+    }
+
+    // MARK: MCQ
+
+    private var mcqDemo: some View {
+        let options = [
+            languageManager.text("paywall.quiz.demo.mcq.o1"),
+            languageManager.text("paywall.quiz.demo.mcq.o2"),
+            languageManager.text("paywall.quiz.demo.mcq.o3"),
+        ]
+        return VStack(alignment: .leading, spacing: 10) {
+            demoQuestion(languageManager.text("paywall.quiz.demo.mcq.q"))
+            VStack(spacing: 8) {
+                ForEach(Array(options.enumerated()), id: \.offset) { i, opt in
+                    let correct = i == 0
+                    HStack(spacing: 10) {
+                        Text("\(Character(UnicodeScalar(65 + i)!))")
+                            .font(DS.title(.caption, .semibold))
+                            .foregroundStyle(revealed && correct ? .white : DS.accentSoft)
+                            .frame(width: 26, height: 26)
+                            .background(revealed && correct ? DS.success : DS.accentTint, in: Circle())
+                        Text(opt)
+                            .font(DS.sans(.subheadline, .medium))
+                            .foregroundStyle(revealed && correct ? DS.success : DS.ink)
+                        Spacer()
+                        if revealed && correct {
+                            Image(systemName: "checkmark.circle.fill")
+                                .foregroundStyle(DS.success)
+                        }
+                    }
+                    .padding(.horizontal, 12)
+                    .padding(.vertical, 10)
+                    .background(demoRowBg(correct: correct), in: RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous))
+                    .overlay {
+                        RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                            .strokeBorder(revealed && correct ? DS.success : DS.hairline, lineWidth: 1)
+                    }
+                }
+            }
+        }
+    }
+
+    // MARK: True / False
+
+    private var trueFalseDemo: some View {
+        // « visible depuis la Lune » → Faux (index 1) est la bonne réponse.
+        let labels = [
+            languageManager.text("paywall.quiz.demo.tf.true"),
+            languageManager.text("paywall.quiz.demo.tf.false"),
+        ]
+        return VStack(alignment: .leading, spacing: 12) {
+            demoQuestion(languageManager.text("paywall.quiz.demo.tf.q"))
+            HStack(spacing: 10) {
+                ForEach(Array(labels.enumerated()), id: \.offset) { i, label in
+                    let correct = i == 1
+                    VStack(spacing: 8) {
+                        Image(systemName: i == 0 ? "checkmark.circle.fill" : "xmark.circle.fill")
+                            .font(.jakarta(size: 22, weight: .regular))
+                            .foregroundStyle(revealed && correct ? DS.success : DS.accentSoft)
+                        Text(label)
+                            .font(DS.title(.subheadline, .semibold))
+                            .foregroundStyle(revealed && correct ? DS.success : DS.ink)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 16)
+                    .background(demoRowBg(correct: correct), in: RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous))
+                    .overlay {
+                        RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                            .strokeBorder(revealed && correct ? DS.success : DS.hairline, lineWidth: 1)
+                    }
+                }
+            }
+        }
+    }
+
+    // MARK: Slider (estimate)
+
+    private var sliderDemo: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            demoQuestion(languageManager.text("paywall.quiz.demo.slider.q"))
+            Text("\(Int(sliderValue))")
+                .font(.jakarta(size: 34, weight: .semibold))
+                .foregroundStyle(revealed ? DS.success : DS.ink)
+                .monospacedDigit()
+                .contentTransition(.numericText())
+                .frame(maxWidth: .infinity)
+            ZStack(alignment: .leading) {
+                Capsule().fill(DS.hairline).frame(height: 6)
+                GeometryReader { geo in
+                    let frac = CGFloat((sliderValue - sliderMin) / (sliderMax - sliderMin))
+                    Capsule()
+                        .fill(revealed ? DS.success : DS.accent)
+                        .frame(width: max(10, geo.size.width * frac), height: 6)
+                }
+                .frame(height: 6)
+                GeometryReader { geo in
+                    let frac = CGFloat((sliderValue - sliderMin) / (sliderMax - sliderMin))
+                    Circle()
+                        .fill(.white)
+                        .frame(width: 20, height: 20)
+                        .overlay { Circle().strokeBorder(revealed ? DS.success : DS.accent, lineWidth: 3) }
+                        .offset(x: max(0, geo.size.width * frac - 10))
+                        .dsSoftShadow()
+                }
+                .frame(height: 20)
+            }
+            .frame(height: 20)
+        }
+    }
+
+    // MARK: Chronological
+
+    private var chronoDemo: some View {
+        let items = [
+            languageManager.text("paywall.quiz.demo.chrono.i1"),
+            languageManager.text("paywall.quiz.demo.chrono.i2"),
+            languageManager.text("paywall.quiz.demo.chrono.i3"),
+        ]
+        return VStack(alignment: .leading, spacing: 10) {
+            demoQuestion(languageManager.text("paywall.quiz.demo.chrono.q"))
+            VStack(spacing: 8) {
+                ForEach(Array(items.enumerated()), id: \.offset) { i, item in
+                    HStack(spacing: 12) {
+                        Text("\(i + 1)")
+                            .font(DS.sans(.subheadline, .semibold))
+                            .foregroundStyle(revealed ? .white : DS.accentSoft)
+                            .frame(width: 26, height: 26)
+                            .background(revealed ? DS.success : DS.accentTint, in: Circle())
+                        Text(item)
+                            .font(DS.sans(.subheadline, .medium))
+                            .foregroundStyle(DS.ink)
+                        Spacer()
+                        if revealed {
+                            Image(systemName: "checkmark.circle.fill")
+                                .foregroundStyle(DS.success)
+                        }
+                    }
+                    .padding(.horizontal, 12)
+                    .padding(.vertical, 10)
+                    .background(revealed ? DS.successTint : DS.surfaceMuted, in: RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous))
+                    .overlay {
+                        RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                            .strokeBorder(revealed ? DS.success : DS.hairline, lineWidth: 1)
+                    }
+                }
+            }
+        }
+    }
+
+    private func demoQuestion(_ text: String) -> some View {
+        Text(text)
+            .font(DS.title(.subheadline, .semibold))
+            .foregroundStyle(DS.ink)
+            .fixedSize(horizontal: false, vertical: true)
+            .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    private func demoRowBg(correct: Bool) -> Color {
+        revealed && correct ? DS.successTint : DS.surfaceMuted
+    }
+
+    // MARK: Auto-play loop
+
+    private func start() {
+        guard task == nil else { return }
+        task = Task { @MainActor in
+            while !Task.isCancelled {
+                // Question posée…
+                revealed = false
+                if type == .slider {
+                    sliderValue = sliderMin + 45
+                }
+                try? await Task.sleep(nanoseconds: 1_000_000_000)
+                if Task.isCancelled { return }
+
+                // …puis révélation de la bonne réponse.
+                if type == .slider {
+                    withAnimation(.spring(response: 0.7, dampingFraction: 0.85)) {
+                        sliderValue = sliderAnswer
+                        revealed = true
+                    }
+                } else {
+                    withAnimation(.spring(response: 0.35, dampingFraction: 0.8)) { revealed = true }
+                }
+                UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                try? await Task.sleep(nanoseconds: 2_100_000_000)
+                if Task.isCancelled { return }
+
+                // Type suivant, avec slide.
+                let next = DemoType(rawValue: (type.rawValue + 1) % DemoType.allCases.count) ?? .mcq
+                withAnimation(.spring(response: 0.5, dampingFraction: 0.85)) { type = next }
+                try? await Task.sleep(nanoseconds: 500_000_000)
+            }
+        }
+    }
+}
+
+// MARK: - Quiz reviews carousel (auto-advancing)
+
+private struct QuizPaywallReviews: View {
+    @Environment(LanguageManager.self) private var languageManager
+
+    @State private var index = 0
+    @State private var task: Task<Void, Never>?
+
+    private var reviews: [(quote: String, author: String)] {
+        [
+            (languageManager.text("paywall.quiz.review1.quote"), languageManager.text("paywall.quiz.review1.author")),
+            (languageManager.text("paywall.quiz.review2.quote"), languageManager.text("paywall.quiz.review2.author")),
+            (languageManager.text("paywall.quiz.review3.quote"), languageManager.text("paywall.quiz.review3.author")),
+        ]
+    }
+
+    var body: some View {
+        VStack(spacing: 10) {
+            TabView(selection: $index) {
+                ForEach(Array(reviews.enumerated()), id: \.offset) { i, review in
+                    reviewCard(review)
+                        .padding(.horizontal, 2)
+                        .tag(i)
+                }
+            }
+            .tabViewStyle(.page(indexDisplayMode: .never))
+            .animation(.spring(response: 0.5, dampingFraction: 0.9), value: index)
+            .frame(height: 150)
+
+            HStack(spacing: 6) {
+                ForEach(0..<reviews.count, id: \.self) { i in
+                    Circle()
+                        .fill(i == index ? DS.accent : DS.hairline)
+                        .frame(width: i == index ? 8 : 6, height: i == index ? 8 : 6)
+                }
+            }
+        }
+        .onAppear { start() }
+        .onDisappear { task?.cancel() }
+    }
+
+    private func reviewCard(_ review: (quote: String, author: String)) -> some View {
+        VStack(alignment: .leading, spacing: 10) {
+            HStack(spacing: 3) {
+                ForEach(0..<5, id: \.self) { _ in
+                    Image(systemName: "star.fill")
+                        .font(.system(size: 12))
+                        .foregroundStyle(DS.warm)
+                }
+            }
+            Text(review.quote)
+                .font(DS.sans(.subheadline, .medium))
+                .foregroundStyle(DS.ink)
+                .fixedSize(horizontal: false, vertical: true)
+            Spacer(minLength: 0)
+            Text(review.author)
+                .font(DS.sans(.caption, .semibold))
+                .foregroundStyle(DS.inkSecondary)
+        }
+        .padding(16)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(DS.surface, in: RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .strokeBorder(DS.hairline, lineWidth: 1)
+        }
+    }
+
+    private func start() {
+        guard task == nil else { return }
+        task = Task { @MainActor in
+            while !Task.isCancelled {
+                try? await Task.sleep(nanoseconds: 3_200_000_000)
+                if Task.isCancelled { return }
+                withAnimation(.spring(response: 0.5, dampingFraction: 0.9)) {
+                    index = (index + 1) % max(1, reviews.count)
+                }
+            }
+        }
+    }
+}
+
 // MARK: - Discount paywall (offre_discount)
 
 /// Ultra-aggressive native flash-sale paywall for the `offre_discount` context.
