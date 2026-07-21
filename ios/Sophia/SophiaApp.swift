@@ -54,6 +54,10 @@ struct SophiaApp: App {
             .environment(languageManager)
             .environment(AuthService.shared)
             .environment(\.locale, languageManager.locale)
+            .onAppear {
+                // ATT dès l'ouverture de l'app (avant/pendant l'onboarding), pas après.
+                MetaAdsService.requestTrackingAuthorizationAtLaunch()
+            }
             .onOpenURL { url in
                 // Callback Google Sign-In (reversed client ID) en priorité.
                 if GIDSignIn.sharedInstance.handle(url) {

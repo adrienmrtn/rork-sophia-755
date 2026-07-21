@@ -451,7 +451,7 @@ struct LibraryFeaturedCard: View {
 
             HStack(spacing: 8) {
                 metaChip(icon: "rectangle.stack", text: String(format: languageManager.text("onboarding.showcase.courses.lessons"), course.lessons.count))
-                metaChip(icon: "checkmark.circle", text: String(format: languageManager.text("onboarding.showcase.courses.quizCount"), course.quiz.count))
+                metaChip(icon: "book.pages", text: String(format: languageManager.text("course.reads"), course.readsCountShort))
 
                 Spacer(minLength: 0)
 

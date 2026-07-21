@@ -21,6 +21,7 @@ struct HomeViewTikTok: View {
     /// Set right before a *programmatic* page change (auto-advance after a course was
     /// opened/dismissed), so it doesn't get counted as a genuine browsing swipe.
     @State private var suppressNextSwipeCount = false
+    @State private var showSwipeExplain = false
 
     var body: some View {
         ZStack {
@@ -72,6 +73,8 @@ struct HomeViewTikTok: View {
                                 suppressNextSwipeCount = false
                                 return
                             }
+                            // Légère vibration à chaque scroll (swipe utilisateur).
+                            UIImpactFeedbackGenerator(style: .light).impactOccurred()
                             registerDiscountSwipe()
                         }
                     }
@@ -79,12 +82,27 @@ struct HomeViewTikTok: View {
                     .scaleEffect(cardAppeared ? 1 : 0.97)
                 }
             }
+
+            if showSwipeExplain {
+                FirstOpenExplanation(
+                    icon: "hand.point.up.left",
+                    title: languageManager.text("explain.home.title"),
+                    message: languageManager.text("explain.home.body"),
+                    onDismiss: {
+                        showSwipeExplain = false
+                        TutorialFlags.markSeen(.homeSwipe)
+                    }
+                )
+                .transition(.opacity)
+                .zIndex(20)
+            }
         }
         .onAppear {
             loadCards()
             withAnimation(.spring(response: 0.6, dampingFraction: 0.8).delay(0.15)) {
                 cardAppeared = true
             }
+            maybeShowSwipeExplain()
         }
         .onChange(of: autoSwipeCourseId) { _, newId in
             guard let courseId = newId else { return }
@@ -147,6 +165,18 @@ struct HomeViewTikTok: View {
     private func registerDiscountSwipe() {
         guard !isPremium else { return }
         discountManager.registerSwipe()
+    }
+
+    private func maybeShowSwipeExplain() {
+        guard HomeCardPresentation.style == .tiktok else { return }
+        guard !TutorialFlags.seen(.homeSwipe) else { return }
+        guard cards.count > 1 else { return }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+            guard !TutorialFlags.seen(.homeSwipe) else { return }
+            withAnimation(.easeIn(duration: 0.3)) {
+                showSwipeExplain = true
+            }
+        }
     }
 
     /// Called when a course is dismissed after being opened from the feed: cycles it to the
@@ -219,7 +249,11 @@ private struct TikTokCourseCard: View {
                     }
                     .overlay(alignment: .topTrailing) { favoriteButton }
 
-                subjectPill
+                HStack(spacing: 8) {
+                    subjectPill
+                    Spacer(minLength: 0)
+                    readsPill
+                }
 
                 Text(course.title)
                     .font(DS.title(.title3))
@@ -320,6 +354,17 @@ private struct TikTokCourseCard: View {
         .padding(.vertical, 5)
         .background(DS.accentTint, in: Capsule())
         .overlay { Capsule().strokeBorder(DS.accentSoft.opacity(0.2), lineWidth: 1) }
+    }
+
+    private var readsPill: some View {
+        HStack(spacing: 5) {
+            Image(systemName: "book.pages")
+                .font(.jakarta(size: 10, weight: .medium))
+            Text(String(format: AppLocalizable.string("course.reads", language: language), course.readsCountShort))
+                .font(DS.sans(.caption2, .semibold))
+        }
+        .foregroundStyle(DS.inkTertiary)
+        .fixedSize(horizontal: true, vertical: false)
     }
 
     private func boldText(_ input: String) -> Text {

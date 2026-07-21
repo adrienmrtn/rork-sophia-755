@@ -24,6 +24,7 @@ struct CourseView: View {
     @State private var rewardSteps: [PostCompletionRewardStep] = []
     @State private var showRewardFlow: Bool = false
     @State private var sessionTracker: CourseSessionTracker?
+    @State private var showTermsExplain: Bool = false
 
     /// Fixed XP awarded for finishing a course (reaching the completion screen). Always granted.
     private let courseCompletionXP: Int = 10
@@ -92,6 +93,20 @@ struct CourseView: View {
                 .transition(.opacity.combined(with: .scale(scale: 0.985)))
                 .zIndex(50)
             }
+
+            if showTermsExplain {
+                FirstOpenExplanation(
+                    icon: "hand.tap",
+                    title: languageManager.text("explain.course.title"),
+                    message: languageManager.text("explain.course.body"),
+                    onDismiss: {
+                        showTermsExplain = false
+                        TutorialFlags.markSeen(.courseTerms)
+                    }
+                )
+                .transition(.opacity)
+                .zIndex(60)
+            }
         }
         .navigationBarBackButtonHidden()
         .onAppear {
@@ -105,6 +120,7 @@ struct CourseView: View {
                 source: openSource,
                 isFreeUser: !isPremium
             )
+            maybeShowTermsExplain()
         }
         .onDisappear {
             let reason = sessionTracker?.completed == true ? "completed" : "dismiss"
@@ -376,6 +392,18 @@ struct CourseView: View {
             guard let scene = UIApplication.shared.connectedScenes
                 .first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene else { return }
             SKStoreReviewController.requestReview(in: scene)
+        }
+    }
+
+    /// Explication « appuie sur les termes » à la toute première ouverture d'un cours.
+    private func maybeShowTermsExplain() {
+        guard !TutorialFlags.seen(.courseTerms) else { return }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+            guard !TutorialFlags.seen(.courseTerms) else { return }
+            guard endPhase == .none, !showQuiz, !showRewardFlow else { return }
+            withAnimation(.easeIn(duration: 0.3)) {
+                showTermsExplain = true
+            }
         }
     }
 

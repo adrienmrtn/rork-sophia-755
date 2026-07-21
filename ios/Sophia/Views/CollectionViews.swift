@@ -10,6 +10,8 @@ struct CollectionsView: View {
     let progressManager: ProgressManager
     @Binding var selectedCourse: Course?
 
+    @State private var showExplain = false
+
     var body: some View {
         NavigationStack {
             ZStack {
@@ -37,6 +39,20 @@ struct CollectionsView: View {
                     .padding(.bottom, 40)
                 }
                 .scrollIndicators(.hidden)
+
+                if showExplain {
+                    FirstOpenExplanation(
+                        icon: "square.stack.3d.up",
+                        title: languageManager.text("explain.collections.title"),
+                        message: languageManager.text("explain.collections.body"),
+                        onDismiss: {
+                            showExplain = false
+                            TutorialFlags.markSeen(.collections)
+                        }
+                    )
+                    .transition(.opacity)
+                    .zIndex(20)
+                }
             }
             .toolbar(.hidden, for: .navigationBar)
             .navigationDestination(for: LearningCollection.self) { collection in
@@ -45,6 +61,13 @@ struct CollectionsView: View {
                     progressManager: progressManager,
                     selectedCourse: $selectedCourse
                 )
+            }
+        }
+        .onAppear {
+            guard !TutorialFlags.seen(.collections) else { return }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                guard !TutorialFlags.seen(.collections) else { return }
+                withAnimation(.easeIn(duration: 0.3)) { showExplain = true }
             }
         }
     }
