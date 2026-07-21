@@ -1,88 +1,52 @@
 import SwiftUI
 
+/// Language selector rendered as a native `Menu` dropdown. Using `Menu` (instead of a custom
+/// inline expanding panel) gives a stable, system-standard popover that doesn't push the
+/// surrounding layout around or glitch inside a `ScrollView`, and shows the current language
+/// clearly (flag + name) on the trigger.
 struct LanguagePickerControl: View {
     @Environment(LanguageManager.self) private var languageManager
-    @State private var isExpanded: Bool = false
 
-    /// Compact dropdown width for onboarding overlays.
+    /// Compact trigger (flag only) for tight onboarding overlays.
     var compact: Bool = false
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Button {
-                UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                withAnimation(.spring(response: 0.32, dampingFraction: 0.82)) {
-                    isExpanded.toggle()
-                }
-            } label: {
-                HStack(spacing: 6) {
-                    Text(languageManager.current.flag)
-                        .font(.jakarta(size: 20))
-                    Image(systemName: isExpanded ? "chevron.up" : "chevron.down")
-                        .font(.jakarta(size: 11, weight: .semibold))
-                        .foregroundStyle(DS.inkSecondary)
-                }
-                .padding(.horizontal, 14)
-                .padding(.vertical, 10)
-                .background(DS.surface, in: Capsule())
-                .overlay { Capsule().strokeBorder(DS.hairline, lineWidth: 1) }
-            }
-            .buttonStyle(SoftPressButtonStyle())
-            .accessibilityLabel(languageManager.current.displayName)
-
-            if isExpanded {
-                dropdown
-                    .transition(.move(edge: .top).combined(with: .opacity))
-            }
-        }
-    }
-
-    private var dropdown: some View {
-        VStack(spacing: 0) {
+        Menu {
             ForEach(AppLanguage.allCases) { language in
                 Button {
                     UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                    withAnimation(.spring(response: 0.32, dampingFraction: 0.82)) {
-                        languageManager.setLanguage(language)
-                        isExpanded = false
-                    }
+                    languageManager.setLanguage(language)
                 } label: {
-                    HStack(spacing: 10) {
-                        Text(language.flag)
-                            .font(.jakarta(size: 18))
-                        Text(language.displayName)
-                            .font(DS.sans(.subheadline, .medium))
-                            .foregroundStyle(DS.ink)
-                            .lineLimit(1)
-                        if languageManager.current == language {
-                            Spacer(minLength: 8)
-                            Image(systemName: "checkmark")
-                                .font(.jakarta(size: 12, weight: .semibold))
-                                .foregroundStyle(DS.accent)
-                        }
+                    if languageManager.current == language {
+                        Label("\(language.flag)  \(language.displayName)", systemImage: "checkmark")
+                    } else {
+                        Text("\(language.flag)  \(language.displayName)")
                     }
-                    .padding(.horizontal, 14)
-                    .padding(.vertical, 12)
-                    .background(
-                        languageManager.current == language ? DS.accentTint : DS.surface
-                    )
-                }
-                .buttonStyle(.plain)
-
-                if language != AppLanguage.allCases.last {
-                    Rectangle()
-                        .fill(DS.hairline)
-                        .frame(height: 1)
                 }
             }
+        } label: {
+            trigger
         }
-        .background(DS.surface, in: RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous))
-        .overlay {
-            RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                .strokeBorder(DS.hairline, lineWidth: 1)
+        .accessibilityLabel(languageManager.current.displayName)
+    }
+
+    private var trigger: some View {
+        HStack(spacing: 8) {
+            Text(languageManager.current.flag)
+                .font(.jakarta(size: 20))
+            if !compact {
+                Text(languageManager.current.displayName)
+                    .font(DS.sans(.subheadline, .semibold))
+                    .foregroundStyle(DS.ink)
+                    .lineLimit(1)
+            }
+            Image(systemName: "chevron.up.chevron.down")
+                .font(.jakarta(size: 11, weight: .semibold))
+                .foregroundStyle(DS.inkSecondary)
         }
-        .dsSoftShadow()
-        .fixedSize(horizontal: true, vertical: true)
-        .frame(maxWidth: compact ? nil : 220, alignment: .leading)
+        .padding(.horizontal, 14)
+        .padding(.vertical, 10)
+        .background(DS.surface, in: Capsule())
+        .overlay { Capsule().strokeBorder(DS.hairline, lineWidth: 1) }
     }
 }
