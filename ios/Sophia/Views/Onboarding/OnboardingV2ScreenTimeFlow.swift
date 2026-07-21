@@ -120,7 +120,7 @@ struct OnboardingV2YearsGrid: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            Spacer().frame(height: 84)
+            Spacer(minLength: 72)
 
             Text(languageManager.text("onboardingV2.yearsGrid.title"))
                 .font(DS.title(.title, .heavy))
@@ -130,7 +130,7 @@ struct OnboardingV2YearsGrid: View {
                 .opacity(showTitle ? 1 : 0)
                 .offset(y: showTitle ? 0 : 14)
 
-            Spacer()
+            Spacer().frame(height: 36)
 
             LazyVGrid(columns: gridColumns, spacing: 8) {
                 ForEach(0..<totalYears, id: \.self) { i in
@@ -158,7 +158,7 @@ struct OnboardingV2YearsGrid: View {
             .opacity(showCaption ? 1 : 0)
             .offset(y: showCaption ? 0 : 12)
 
-            Spacer()
+            Spacer(minLength: 72)
 
             OnboardingV2Button(title: languageManager.text("common.continue"), action: onNext)
                 .opacity(showButton ? 1 : 0)

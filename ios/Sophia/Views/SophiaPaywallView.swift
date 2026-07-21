@@ -8,13 +8,27 @@ enum SophiaPaywallContext: String, Identifiable {
     case offreDiscount = "offre_discount"
     case debloquerCours = "debloquer_cours"
     case quizz = "quizz"
+    /// Training-tab unlock. Its own analytics funnel, but purchases still attribute to the
+    /// `quizz` RevenueCat offering (see `offeringIdentifier`).
+    case entrainement = "entrainement"
 
     var id: String { rawValue }
+
+    /// RevenueCat offering identifier used for purchase attribution. Usually the raw value,
+    /// but `.entrainement` reuses the shared `quizz` offering.
+    var offeringIdentifier: String {
+        switch self {
+        case .entrainement: return SophiaPaywallContext.quizz.rawValue
+        default: return rawValue
+        }
+    }
 }
 
 /// Dispatcher that renders the appropriate native paywall for a given context.
 ///
 /// - `.offreDiscount` → `SophiaDiscountPaywall` (flash sale, `special_promo`, 19,99 €/an).
+/// - `.entrainement` → `SophiaTrainingPaywall` (sells the spaced-repetition training method).
+/// - `.quizz` → `SophiaQuizPaywall` (App Store rating, auto-playing quiz demo, reviews carousel).
 /// - everything else → `SophiaStandardPaywall` (single annual plan, 39,99 €/an, 3-day trial).
 struct SophiaPaywallView: View {
     let context: SophiaPaywallContext
@@ -37,7 +51,21 @@ struct SophiaPaywallView: View {
                 onRestored: onRestored,
                 onDismissed: onDismissed
             )
-        case .quizz, .debloquerCours, .finOnboarding:
+        case .entrainement:
+            SophiaTrainingPaywall(
+                store: store,
+                onPurchased: onPurchased,
+                onRestored: onRestored,
+                onDismissed: onDismissed
+            )
+        case .quizz:
+            SophiaQuizPaywall(
+                store: store,
+                onPurchased: onPurchased,
+                onRestored: onRestored,
+                onDismissed: onDismissed
+            )
+        case .debloquerCours, .finOnboarding:
             SophiaStandardPaywall(
                 context: context,
                 store: store,

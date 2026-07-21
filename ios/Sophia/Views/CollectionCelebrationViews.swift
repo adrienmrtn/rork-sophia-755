@@ -23,58 +23,65 @@ struct CollectionProgressCelebrationView: View {
         ZStack {
             DS.canvas.ignoresSafeArea()
 
-            ScrollView {
-                VStack(spacing: 0) {
-                    Spacer(minLength: 24)
+            VStack(spacing: 0) {
+                GeometryReader { geo in
+                    ScrollView {
+                        VStack(spacing: 0) {
+                            // Blocs équilibrés entre le haut de l'écran et le bouton ancré en bas.
+                            Spacer(minLength: 24)
 
-                    Text(languageManager.text("celebration.collectionAdvanced"))
-                        .font(DS.title(.title, .semibold))
-                        .foregroundStyle(DS.ink)
-                        .multilineTextAlignment(.center)
-                        .opacity(appeared ? 1 : 0)
-                        .offset(y: appeared ? 0 : 14)
+                            Text(languageManager.text("celebration.collectionAdvanced"))
+                                .font(DS.title(.title, .semibold))
+                                .foregroundStyle(DS.ink)
+                                .multilineTextAlignment(.center)
+                                .opacity(appeared ? 1 : 0)
+                                .offset(y: appeared ? 0 : 14)
 
-                    Text(event.collection.title)
-                        .font(DS.sans(.subheadline))
-                        .foregroundStyle(DS.inkSecondary)
-                        .multilineTextAlignment(.center)
-                        .padding(.horizontal, 28)
-                        .padding(.top, 6)
-                        .opacity(appeared ? 1 : 0)
+                            Text(event.collection.title)
+                                .font(DS.sans(.subheadline))
+                                .foregroundStyle(DS.inkSecondary)
+                                .multilineTextAlignment(.center)
+                                .padding(.horizontal, 28)
+                                .padding(.top, 6)
+                                .opacity(appeared ? 1 : 0)
 
-                    Spacer(minLength: 22)
+                            Spacer(minLength: 22)
 
-                    coverCard
-                        .padding(.horizontal, 22)
-                        .scaleEffect(appeared ? 1 : 0.92)
-                        .opacity(appeared ? 1 : 0)
+                            coverCard
+                                .padding(.horizontal, 22)
+                                .scaleEffect(appeared ? 1 : 0.92)
+                                .opacity(appeared ? 1 : 0)
 
-                    Spacer(minLength: 24)
+                            Spacer(minLength: 24)
 
-                    progressCard
-                        .padding(.horizontal, 22)
-                        .opacity(appeared ? 1 : 0)
-                        .offset(y: appeared ? 0 : 16)
+                            progressCard
+                                .padding(.horizontal, 22)
+                                .opacity(appeared ? 1 : 0)
+                                .offset(y: appeared ? 0 : 16)
 
-                    Spacer(minLength: 24)
-
-                    Button {
-                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                        onContinue()
-                    } label: {
-                        HStack(spacing: 8) {
-                            Text(languageManager.text("common.continue"))
-                            Image(systemName: "arrow.right")
+                            Spacer(minLength: 24)
                         }
+                        .frame(maxWidth: .infinity)
+                        .frame(minHeight: geo.size.height)
                     }
-                    .buttonStyle(DSPrimaryButtonStyle())
-                    .padding(.horizontal, 24)
-                    .padding(.bottom, 24)
-                    .opacity(appeared ? 1 : 0)
-                    .offset(y: appeared ? 0 : 12)
+                    .scrollIndicators(.hidden)
                 }
+
+                Button {
+                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                    onContinue()
+                } label: {
+                    HStack(spacing: 8) {
+                        Text(languageManager.text("common.continue"))
+                        Image(systemName: "arrow.right")
+                    }
+                }
+                .buttonStyle(DSPrimaryButtonStyle())
+                .padding(.horizontal, 24)
+                .padding(.bottom, 24)
+                .opacity(appeared ? 1 : 0)
+                .offset(y: appeared ? 0 : 12)
             }
-            .scrollIndicators(.hidden)
         }
         .onAppear { runSequence() }
     }
@@ -163,56 +170,63 @@ struct CollectionCompletedCelebrationView: View {
         ZStack {
             DS.canvas.ignoresSafeArea()
 
-            ScrollView {
-                VStack(spacing: 0) {
-                    Spacer(minLength: 24)
+            VStack(spacing: 0) {
+                GeometryReader { geo in
+                    ScrollView {
+                        VStack(spacing: 0) {
+                            // Blocs équilibrés entre le haut de l'écran et le bouton ancré en bas.
+                            Spacer(minLength: 24)
 
-                    Text(languageManager.text("celebration.collectionComplete"))
-                        .font(DS.title(.title, .semibold))
-                        .foregroundStyle(DS.ink)
-                        .multilineTextAlignment(.center)
-                        .opacity(appeared ? 1 : 0)
-                        .offset(y: appeared ? 0 : 14)
+                            Text(languageManager.text("celebration.collectionComplete"))
+                                .font(DS.title(.title, .semibold))
+                                .foregroundStyle(DS.ink)
+                                .multilineTextAlignment(.center)
+                                .opacity(appeared ? 1 : 0)
+                                .offset(y: appeared ? 0 : 14)
 
-                    Text(event.collection.title)
-                        .font(DS.sans(.subheadline))
-                        .foregroundStyle(DS.inkSecondary)
-                        .multilineTextAlignment(.center)
-                        .padding(.horizontal, 28)
-                        .padding(.top, 6)
-                        .opacity(appeared ? 1 : 0)
+                            Text(event.collection.title)
+                                .font(DS.sans(.subheadline))
+                                .foregroundStyle(DS.inkSecondary)
+                                .multilineTextAlignment(.center)
+                                .padding(.horizontal, 28)
+                                .padding(.top, 6)
+                                .opacity(appeared ? 1 : 0)
 
-                    Spacer(minLength: 26)
+                            Spacer(minLength: 26)
 
-                    completedCard
-                        .padding(.horizontal, 22)
-                        .scaleEffect(cardScale)
-                        .opacity(appeared ? 1 : 0)
+                            completedCard
+                                .padding(.horizontal, 22)
+                                .scaleEffect(cardScale)
+                                .opacity(appeared ? 1 : 0)
 
-                    Spacer(minLength: 26)
+                            Spacer(minLength: 26)
 
-                    if awardedXP > 0 {
-                        xpPill
-                            .opacity(appeared ? 1 : 0)
-                            .scaleEffect(appeared ? 1 : 0.8)
+                            if awardedXP > 0 {
+                                xpPill
+                                    .opacity(appeared ? 1 : 0)
+                                    .scaleEffect(appeared ? 1 : 0.8)
+                            }
+
+                            Spacer(minLength: 28)
+                        }
+                        .frame(maxWidth: .infinity)
+                        .frame(minHeight: geo.size.height)
                     }
-
-                    Spacer(minLength: 28)
-
-                    Button {
-                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                        onContinue()
-                    } label: {
-                        Text(languageManager.text("common.continue"))
-                    }
-                    .buttonStyle(DSPrimaryButtonStyle())
-                    .padding(.horizontal, 24)
-                    .padding(.bottom, 24)
-                    .opacity(appeared ? 1 : 0)
-                    .offset(y: appeared ? 0 : 16)
+                    .scrollIndicators(.hidden)
                 }
+
+                Button {
+                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                    onContinue()
+                } label: {
+                    Text(languageManager.text("common.continue"))
+                }
+                .buttonStyle(DSPrimaryButtonStyle())
+                .padding(.horizontal, 24)
+                .padding(.bottom, 24)
+                .opacity(appeared ? 1 : 0)
+                .offset(y: appeared ? 0 : 16)
             }
-            .scrollIndicators(.hidden)
         }
         .onAppear { runSequence() }
     }

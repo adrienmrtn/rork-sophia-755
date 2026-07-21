@@ -16,65 +16,72 @@ struct LevelUpCelebrationView: View {
         ZStack {
             DS.canvas.ignoresSafeArea()
 
-            ScrollView {
-                VStack(spacing: 0) {
-                    Spacer(minLength: 28)
+            VStack(spacing: 0) {
+                GeometryReader { geo in
+                    ScrollView {
+                        VStack(spacing: 0) {
+                            // Blocs équilibrés entre le haut de l'écran et le bouton ancré en bas.
+                            Spacer(minLength: 28)
 
-                    SubjectBadgeView(subject: subject, iconSize: 56, cornerRadius: DS.Radius.card)
-                        .frame(width: 116, height: 116)
-                        .scaleEffect(badgeScale)
-                        .opacity(appeared ? 1 : 0)
+                            SubjectBadgeView(subject: subject, iconSize: 56, cornerRadius: DS.Radius.card)
+                                .frame(width: 116, height: 116)
+                                .scaleEffect(badgeScale)
+                                .opacity(appeared ? 1 : 0)
 
-                    Spacer(minLength: 28)
+                            Spacer(minLength: 28)
 
-                    Text(languageManager.text("levelUp.title"))
-                        .font(DS.title(.largeTitle, .semibold))
-                        .foregroundStyle(DS.ink)
-                        .multilineTextAlignment(.center)
-                        .opacity(appeared ? 1 : 0)
-                        .offset(y: appeared ? 0 : 14)
+                            Text(languageManager.text("levelUp.title"))
+                                .font(DS.title(.largeTitle, .semibold))
+                                .foregroundStyle(DS.ink)
+                                .multilineTextAlignment(.center)
+                                .opacity(appeared ? 1 : 0)
+                                .offset(y: appeared ? 0 : 14)
 
-                    Text(subject.localizedShortName(language: languageManager.current))
-                        .font(DS.sans(.subheadline))
-                        .foregroundStyle(DS.inkSecondary)
-                        .padding(.top, 6)
-                        .opacity(appeared ? 1 : 0)
+                            Text(subject.localizedShortName(language: languageManager.current))
+                                .font(DS.sans(.subheadline))
+                                .foregroundStyle(DS.inkSecondary)
+                                .padding(.top, 6)
+                                .opacity(appeared ? 1 : 0)
 
-                    HStack(alignment: .firstTextBaseline, spacing: 16) {
-                        Text(String(format: languageManager.text("common.levelShort"), previousLevel))
-                            .font(DS.title(.title2, .medium))
-                            .foregroundStyle(DS.inkTertiary.opacity(showNewLevel ? 0.6 : 1))
-                            .scaleEffect(showNewLevel ? 0.9 : 1)
+                            HStack(alignment: .firstTextBaseline, spacing: 16) {
+                                Text(String(format: languageManager.text("common.levelShort"), previousLevel))
+                                    .font(DS.title(.title2, .medium))
+                                    .foregroundStyle(DS.inkTertiary.opacity(showNewLevel ? 0.6 : 1))
+                                    .scaleEffect(showNewLevel ? 0.9 : 1)
 
-                        Image(systemName: "arrow.right")
-                            .font(.jakarta(size: 18, weight: .medium))
-                            .foregroundStyle(DS.accentSoft)
-                            .opacity(showNewLevel ? 1 : 0.3)
+                                Image(systemName: "arrow.right")
+                                    .font(.jakarta(size: 18, weight: .medium))
+                                    .foregroundStyle(DS.accentSoft)
+                                    .opacity(showNewLevel ? 1 : 0.3)
 
-                        Text(String(format: languageManager.text("common.levelShort"), newLevel))
-                            .font(.jakarta(size: 44, weight: .semibold))
-                            .foregroundStyle(DS.ink)
-                            .scaleEffect(levelScale)
-                            .opacity(showNewLevel ? 1 : 0)
+                                Text(String(format: languageManager.text("common.levelShort"), newLevel))
+                                    .font(.jakarta(size: 44, weight: .semibold))
+                                    .foregroundStyle(DS.ink)
+                                    .scaleEffect(levelScale)
+                                    .opacity(showNewLevel ? 1 : 0)
+                            }
+                            .padding(.top, 24)
+
+                            Spacer(minLength: 32)
+                        }
+                        .frame(maxWidth: .infinity)
+                        .frame(minHeight: geo.size.height)
                     }
-                    .padding(.top, 24)
-
-                    Spacer(minLength: 32)
-
-                    Button {
-                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                        onContinue()
-                    } label: {
-                        Text(languageManager.text("common.continue"))
-                    }
-                    .buttonStyle(DSPrimaryButtonStyle())
-                    .padding(.horizontal, 24)
-                    .padding(.bottom, 32)
-                    .opacity(showNewLevel ? 1 : 0)
-                    .offset(y: showNewLevel ? 0 : 18)
+                    .scrollIndicators(.hidden)
                 }
+
+                Button {
+                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                    onContinue()
+                } label: {
+                    Text(languageManager.text("common.continue"))
+                }
+                .buttonStyle(DSPrimaryButtonStyle())
+                .padding(.horizontal, 24)
+                .padding(.bottom, 32)
+                .opacity(showNewLevel ? 1 : 0)
+                .offset(y: showNewLevel ? 0 : 18)
             }
-            .scrollIndicators(.hidden)
         }
         .onAppear { runSequence() }
     }

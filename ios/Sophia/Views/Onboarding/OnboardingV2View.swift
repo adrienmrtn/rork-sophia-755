@@ -21,7 +21,7 @@ struct OnboardingV2View: View {
 
     private enum Screen: Hashable {
         case welcome, language, objectives, objectiveIntro
-        case questions, phoneTime, yearsGrid, transform, review
+        case questions, phoneTime, yearsGrid, transform, review, personalize
         case swipe, loading, login, trialSteps, reminder, paywallAnnual, paywallComparison
     }
 
@@ -29,7 +29,7 @@ struct OnboardingV2View: View {
     /// désormais montrées quel que soit l'objectif choisi.
     private var screens: [Screen] {
         [.welcome, .language, .objectives, .objectiveIntro,
-         .questions, .phoneTime, .yearsGrid, .transform, .review,
+         .questions, .phoneTime, .yearsGrid, .transform, .review, .personalize,
          .swipe, .loading, .login, .trialSteps, .reminder, .paywallAnnual, .paywallComparison]
     }
 
@@ -91,6 +91,8 @@ struct OnboardingV2View: View {
             OnboardingV2Transform(onNext: advance)
         case .review:
             OnboardingV2Review(onNext: advance)
+        case .personalize:
+            OnboardingV2Personalize(onNext: advance)
         case .swipe:
             OnboardingV2SwipeCourses(vm: vm, onNext: advance)
         case .loading:

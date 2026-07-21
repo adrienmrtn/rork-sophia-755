@@ -46,6 +46,9 @@ enum DS {
     /// Very light warm tint for error surfaces.
     static let dangerTint = Color(red: 0.965, green: 0.906, blue: 0.894)
 
+    /// Warm amber — App Store star ratings.
+    static let warm = Color(red: 0.90, green: 0.70, blue: 0.20)
+
     // MARK: - UIKit colors (for UITextView-based prose)
 
     static let uiInk = UIColor(red: 0.086, green: 0.149, blue: 0.239, alpha: 1)

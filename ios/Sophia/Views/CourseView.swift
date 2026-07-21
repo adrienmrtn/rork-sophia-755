@@ -19,6 +19,8 @@ struct CourseView: View {
     /// Second-chance comparison paywall (both offers, like the end of onboarding), shown after
     /// the user closes the quiz / course-unlock paywall without subscribing.
     @State private var showComparisonPaywall: Bool = false
+    /// Comparison paywall stacked *on top* of the quiz paywall (second-chance, quiz flow only).
+    @State private var showComparisonOverQuiz: Bool = false
     @State private var chainComparisonAfterPaywall: Bool = false
     @State private var endPhase: CourseEndPhase = .none
     @State private var previousSubjectCount: Int = 0
@@ -175,15 +177,27 @@ struct CourseView: View {
                 onDismissed: { chainComparisonAfterPaywall = true; showDebloquerPaywall = false }
             )
         }
-        .fullScreenCover(isPresented: $showQuizPaywall, onDismiss: { presentComparisonIfChained() }) {
+        .fullScreenCover(isPresented: $showQuizPaywall) {
             SophiaPaywallView(
                 context: .quizz,
                 store: store,
                 course: course,
-                onPurchased: { chainComparisonAfterPaywall = false; showQuizPaywall = false },
-                onRestored: { chainComparisonAfterPaywall = false; showQuizPaywall = false },
-                onDismissed: { chainComparisonAfterPaywall = true; showQuizPaywall = false }
+                onPurchased: { showComparisonOverQuiz = false; showQuizPaywall = false },
+                onRestored: { showComparisonOverQuiz = false; showQuizPaywall = false },
+                // Fermer le paywall quiz présente le paywall comparatif PAR-DESSUS (empilé),
+                // sans que le premier ne se ferme — sauf si l'utilisateur est déjà premium.
+                onDismissed: {
+                    if store.isPremium { showQuizPaywall = false }
+                    else { showComparisonOverQuiz = true }
+                }
             )
+            .fullScreenCover(isPresented: $showComparisonOverQuiz) {
+                OnboardingV2PaywallComparison(
+                    store: store,
+                    onSubscribed: { showComparisonOverQuiz = false; showQuizPaywall = false },
+                    onClose: { showComparisonOverQuiz = false; showQuizPaywall = false }
+                )
+            }
         }
         .fullScreenCover(isPresented: $showComparisonPaywall) {
             OnboardingV2PaywallComparison(
@@ -346,6 +360,10 @@ struct CourseView: View {
                 }
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
+            // Restaure le slide entre les pages : sur un TabView `.page`, seul ce modifieur
+            // anime un changement *programmatique* de sélection (bouton « Continuer »).
+            // `withAnimation` seul n'anime pas le slide sur iOS 17/18.
+            .animation(.spring(response: 0.4), value: currentIndex)
 
             bottomButton
         }
@@ -384,9 +402,8 @@ struct CourseView: View {
                 }
             } else {
                 sessionTracker?.recordContinueTap()
-                withAnimation(.spring(response: 0.4)) {
-                    currentIndex += 1
-                }
+                // Le slide est animé par `.animation(_:value: currentIndex)` sur le TabView.
+                currentIndex += 1
                 progressManager.updateLessonProgress(courseId: course.id, lessonIndex: currentIndex)
             }
         } label: {
