@@ -64,6 +64,19 @@ enum OnboardingHaptics {
         impact(.rigid, intensity: 0.9)
     }
 
+    /// Léger « clic » quand une carte franchit le seuil de swipe (like / nope).
+    static func swipeThresholdReached() {
+        impact(.soft, intensity: 0.85)
+    }
+
+    /// Retour marqué au moment où la carte est réellement validée (swipe ou bouton).
+    static func swipeCommit() {
+        impact(.medium, intensity: 0.95)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+            impact(.rigid, intensity: 0.85)
+        }
+    }
+
     private static func impact(_ style: UIImpactFeedbackGenerator.FeedbackStyle, intensity: CGFloat) {
         let g = UIImpactFeedbackGenerator(style: style)
         g.impactOccurred(intensity: intensity)

@@ -13,6 +13,8 @@ struct OnboardingV2SwipeCourses: View {
     @State private var drag: CGSize = .zero
     @State private var done = false
     @State private var checkIn = false
+    @State private var enter = false
+    @State private var crossedThreshold = false
 
     var body: some View {
         VStack(spacing: 0) {
@@ -37,6 +39,10 @@ struct OnboardingV2SwipeCourses: View {
                 completionView
             } else {
                 cardStack
+                    .scaleEffect(enter ? 1 : 0.86)
+                    .opacity(enter ? 1 : 0)
+                    .offset(y: enter ? 0 : 64)
+                    .rotationEffect(.degrees(enter ? 0 : -4))
             }
 
             Spacer()
@@ -56,6 +62,10 @@ struct OnboardingV2SwipeCourses: View {
         .onAppear {
             if courses.isEmpty {
                 courses = vm.recommendedCourses(language: languageManager.current)
+            }
+            // Entrée dédiée à cette page : les cartes montent et se posent en douceur.
+            withAnimation(.spring(response: 0.62, dampingFraction: 0.74).delay(0.15)) {
+                enter = true
             }
         }
     }
@@ -178,8 +188,18 @@ struct OnboardingV2SwipeCourses: View {
 
     private var dragGesture: some Gesture {
         DragGesture()
-            .onChanged { drag = $0.translation }
+            .onChanged { value in
+                drag = value.translation
+                let crossed = abs(value.translation.width) > 100
+                if crossed, !crossedThreshold {
+                    crossedThreshold = true
+                    OnboardingHaptics.swipeThresholdReached()
+                } else if !crossed, crossedThreshold {
+                    crossedThreshold = false
+                }
+            }
             .onEnded { value in
+                crossedThreshold = false
                 if abs(value.translation.width) > 100 {
                     swipeTop(like: value.translation.width > 0)
                 } else {
@@ -192,7 +212,7 @@ struct OnboardingV2SwipeCourses: View {
         guard index < courses.count else { return }
         let course = courses[index]
         vm.toggleLiked(course.id, liked: like)
-        OnboardingHaptics.selection()
+        OnboardingHaptics.swipeCommit()
         withAnimation(.easeOut(duration: 0.28)) {
             drag = CGSize(width: like ? 600 : -600, height: 0)
         }

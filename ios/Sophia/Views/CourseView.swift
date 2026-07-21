@@ -31,12 +31,23 @@ struct CourseView: View {
 
     private var isPremium: Bool { store.isPremium }
 
-    private var isLastLesson: Bool {
-        currentIndex == course.lessons.count - 1
+    /// The one course a free user can fully read today (claimed on open in `ContentView`).
+    private var isDailyFreeCourse: Bool {
+        progressManager.isDailyFreeCourse(course.id)
     }
 
-    private var showsUnlockInsteadOfComplete: Bool {
-        isLastLesson && !isPremium
+    /// Full read + completion access: premium, or this is the free course of the day.
+    private var hasFullAccess: Bool {
+        isPremium || isDailyFreeCourse
+    }
+
+    /// A free user's 2nd+ course of the day: only the intro is readable, the rest is locked.
+    private var isCourseLocked: Bool {
+        !hasFullAccess
+    }
+
+    private var isLastLesson: Bool {
+        currentIndex == course.lessons.count - 1
     }
 
     private var progressValue: Double {
@@ -62,12 +73,16 @@ struct CourseView: View {
                     previousSubjectXP: previousSubjectXP,
                     earnedXP: courseCompletionXP,
                     globalAwardResult: globalCourseAwardResult,
-                    showFreemiumGate: false,
+                    showFreemiumGate: !isPremium,
                     onClose: {
                         continueAfterCourseCompletion()
                     },
                     onQuizTapped: {
-                        showQuiz = true
+                        if isPremium {
+                            showQuiz = true
+                        } else {
+                            showQuizPaywall = true
+                        }
                     }
                 )
                 .transition(.opacity.combined(with: .scale(scale: 0.98)))
@@ -146,23 +161,26 @@ struct CourseView: View {
             let g = UIImpactFeedbackGenerator(style: .light)
             g.impactOccurred()
         }
-        .sheet(isPresented: $showDebloquerPaywall) {
+        .fullScreenCover(isPresented: $showDebloquerPaywall) {
             SophiaPaywallView(
                 context: .debloquerCours,
+                store: store,
+                course: course,
+                secondsUntilReset: progressManager.secondsUntilDailyReset(),
                 onPurchased: { showDebloquerPaywall = false },
                 onRestored: { showDebloquerPaywall = false },
                 onDismissed: { showDebloquerPaywall = false }
             )
-            .presentationDragIndicator(.visible)
         }
-        .sheet(isPresented: $showQuizPaywall) {
+        .fullScreenCover(isPresented: $showQuizPaywall) {
             SophiaPaywallView(
                 context: .quizz,
+                store: store,
+                course: course,
                 onPurchased: { showQuizPaywall = false },
                 onRestored: { showQuizPaywall = false },
                 onDismissed: { showQuizPaywall = false }
             )
-            .presentationDragIndicator(.visible)
         }
         .onAppear {
             withAnimation(.spring(response: 0.5, dampingFraction: 0.8).delay(0.1)) {
@@ -214,7 +232,7 @@ struct CourseView: View {
 
     @ViewBuilder
     private func lessonContent(lesson: LessonPage, lessonIndex: Int) -> some View {
-        if FreemiumGate.isLessonContentLocked(lessonIndex: lessonIndex, isPremium: isPremium) {
+        if FreemiumGate.isLessonContentLocked(lessonIndex: lessonIndex, isPremium: isPremium, isDailyFreeCourse: isDailyFreeCourse) {
             lockedLessonView(lesson: lesson, lessonIndex: lessonIndex)
         } else {
             unlockedLessonView(lesson: lesson, lessonIndex: lessonIndex)
@@ -329,12 +347,14 @@ struct CourseView: View {
         Button {
             let g = UIImpactFeedbackGenerator(style: .medium)
             g.impactOccurred()
-            if showsUnlockInsteadOfComplete {
-                showQuizPaywall = true
+            if isCourseLocked {
+                // Free user's 2nd+ course of the day: only the intro is readable; the CTA
+                // opens the course-unlock paywall (framed as "your free course is used up").
+                presentDebloquerPaywall()
                 return
             }
             if isLastLesson {
-                guard FreemiumGate.canCompleteCourse(isPremium: isPremium) else { return }
+                guard FreemiumGate.canCompleteCourse(isPremium: isPremium, isDailyFreeCourse: isDailyFreeCourse) else { return }
                 sessionTracker?.recordContinueTap()
                 sessionTracker?.markCompleted()
                 progressManager.updateLessonProgress(courseId: course.id, lessonIndex: currentIndex)
@@ -361,10 +381,10 @@ struct CourseView: View {
             }
         } label: {
             HStack(spacing: 8) {
-                if showsUnlockInsteadOfComplete {
-                    Text(languageManager.text("course.quiz.access"))
-                    Image(systemName: "arrow.right")
+                if isCourseLocked {
+                    Image(systemName: "lock.open.fill")
                         .font(.subheadline.weight(.semibold))
+                    Text(languageManager.text("course.unlock.cta"))
                 } else {
                     Text(isLastLesson ? "Terminer le cours" : "Continuer")
                     Image(systemName: isLastLesson ? "checkmark" : "arrow.right")

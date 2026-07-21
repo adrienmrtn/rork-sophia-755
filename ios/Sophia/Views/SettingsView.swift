@@ -290,7 +290,7 @@ struct SettingsView: View {
                 actionRow(
                     icon: "calendar.badge.minus",
                     title: languageManager.text("settings.debug.resetDaily"),
-                    subtitle: progressManager.hasCompletedCourseToday
+                    subtitle: progressManager.hasClaimedDailyFreeCourse
                         ? languageManager.text("settings.debug.daily.done")
                         : languageManager.text("settings.debug.daily.pending")
                 ) {

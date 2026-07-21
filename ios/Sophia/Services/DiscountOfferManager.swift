@@ -101,6 +101,16 @@ class DiscountOfferManager {
         startTickerIfNeeded()
     }
 
+    /// Re-arms the 60-minute clock from now and clears any expiry, so the flash offer looks
+    /// fresh each time it re-pops on app open. The timer is purely psychological here — it no
+    /// longer gates whether the discount paywall can be shown again.
+    func restart() {
+        startDate = Date()
+        isExpiredForever = false
+        save()
+        startTickerIfNeeded()
+    }
+
     /// Permanently expires the offer. Used after a successful purchase.
     func markExpired() {
         isExpiredForever = true
