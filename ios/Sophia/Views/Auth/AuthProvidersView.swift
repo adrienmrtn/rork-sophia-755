@@ -1,6 +1,5 @@
 import SwiftUI
 import AuthenticationServices
-import GoogleSignInSwift
 
 /// Boutons de connexion Apple + Google réutilisables (onboarding & réglages).
 ///
@@ -30,17 +29,24 @@ struct AuthProvidersView: View {
             .clipShape(Capsule(style: .continuous))
             .disabled(isWorking)
 
-            GoogleSignInButton(
-                viewModel: GoogleSignInButtonViewModel(scheme: .light, style: .wide, state: .normal)
-            ) {
+            Button {
                 handleGoogle()
+            } label: {
+                HStack(spacing: 10) {
+                    GoogleGLogo(size: 18)
+                    Text(languageManager.text("auth.continueWithGoogle"))
+                        .font(.jakarta(.body, weight: .semibold))
+                        .foregroundStyle(.black.opacity(0.85))
+                }
+                .frame(maxWidth: .infinity)
+                .frame(height: 52)
+                .background(Color.white, in: Capsule(style: .continuous))
+                .overlay {
+                    Capsule(style: .continuous)
+                        .strokeBorder(Color.black.opacity(0.15), lineWidth: 1)
+                }
             }
-            .frame(height: 52)
-            .clipShape(Capsule(style: .continuous))
-            .overlay {
-                Capsule(style: .continuous)
-                    .strokeBorder(Color.black.opacity(0.12), lineWidth: 1)
-            }
+            .buttonStyle(SoftPressButtonStyle())
             .opacity(isWorking ? 0.6 : 1)
             .disabled(isWorking)
 
@@ -114,9 +120,38 @@ struct AuthProvidersView: View {
             return ""
         case .missingIdentityToken:
             return languageManager.text("auth.error.token")
-        case .underlying(let message):
-            // Message serveur remonté pour diagnostic (ex. config provider Supabase).
-            return message
+        case .underlying:
+            return languageManager.text("auth.error.generic")
         }
+    }
+}
+
+/// Logo « G » Google multicolore, dessiné en vectoriel (pas d'asset binaire requis).
+struct GoogleGLogo: View {
+    var size: CGFloat = 18
+
+    private let blue = Color(red: 0.26, green: 0.52, blue: 0.96)
+    private let red = Color(red: 0.92, green: 0.26, blue: 0.21)
+    private let yellow = Color(red: 0.98, green: 0.74, blue: 0.02)
+    private let green = Color(red: 0.20, green: 0.66, blue: 0.33)
+
+    var body: some View {
+        let lw = size * 0.26
+        ZStack {
+            Circle().trim(from: 0.0, to: 0.25)
+                .stroke(green, style: StrokeStyle(lineWidth: lw))
+            Circle().trim(from: 0.25, to: 0.5)
+                .stroke(yellow, style: StrokeStyle(lineWidth: lw))
+            Circle().trim(from: 0.5, to: 0.75)
+                .stroke(red, style: StrokeStyle(lineWidth: lw))
+            Circle().trim(from: 0.75, to: 1.0)
+                .stroke(blue, style: StrokeStyle(lineWidth: lw))
+            // Barre horizontale bleue caractéristique (moitié droite).
+            Rectangle()
+                .fill(blue)
+                .frame(width: size * 0.5, height: lw)
+                .offset(x: size * 0.25)
+        }
+        .frame(width: size, height: size)
     }
 }

@@ -1,37 +1,48 @@
 import SwiftUI
 
-/// Page 3 — objectif principal. Choix unique, avance automatiquement au clic (pas de CTA).
+/// Page objectifs — sélection **multiple**, puis CTA « Continuer ».
 struct OnboardingV2Objective: View {
     @Environment(LanguageManager.self) private var languageManager
     let vm: OnboardingV2ViewModel
     let onNext: () -> Void
 
     @State private var revealed = 0
-    @State private var picked: String?
 
     var body: some View {
         VStack(spacing: 0) {
             Spacer().frame(height: 72)
 
-            Text(languageManager.text("onboardingV2.objective.title"))
-                .font(DS.title(.title, .heavy))
-                .foregroundStyle(OV2.ink)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal, 28)
-                .ov2Reveal(delay: 0.1)
-
-            Spacer().frame(height: 28)
-
-            VStack(spacing: 12) {
-                ForEach(Array(OnboardingV2ViewModel.objectiveKeys.enumerated()), id: \.element) { index, key in
-                    objectiveRow(key)
-                        .opacity(index < revealed ? 1 : 0)
-                        .offset(y: index < revealed ? 0 : 18)
-                }
+            VStack(spacing: 8) {
+                Text(languageManager.text("onboardingV2.objective.title"))
+                    .font(DS.title(.title, .heavy))
+                    .foregroundStyle(OV2.ink)
+                    .multilineTextAlignment(.center)
+                Text(languageManager.text("onboardingV2.objective.subtitle"))
+                    .font(DS.sans(.subheadline, .medium))
+                    .foregroundStyle(OV2.inkSecondary)
+                    .multilineTextAlignment(.center)
             }
-            .padding(.horizontal, 24)
+            .padding(.horizontal, 28)
+            .ov2Reveal(delay: 0.1)
 
-            Spacer()
+            Spacer().frame(height: 24)
+
+            ScrollView(showsIndicators: false) {
+                VStack(spacing: 12) {
+                    ForEach(Array(OnboardingV2ViewModel.objectiveKeys.enumerated()), id: \.element) { index, key in
+                        objectiveRow(key)
+                            .opacity(index < revealed ? 1 : 0)
+                            .offset(y: index < revealed ? 0 : 18)
+                    }
+                }
+                .padding(.horizontal, 24)
+            }
+
+            OnboardingV2Button(
+                title: languageManager.text("common.continue"),
+                enabled: !vm.objectiveKeys.isEmpty,
+                action: onNext
+            )
         }
         .ov2Background()
         .onAppear {
@@ -46,41 +57,55 @@ struct OnboardingV2Objective: View {
     }
 
     private func objectiveRow(_ key: String) -> some View {
-        let isPicked = picked == key
+        let isSelected = vm.isSelected(key)
         return Button {
-            guard picked == nil else { return }
-            picked = key
-            vm.objectiveKey = key
             OnboardingHaptics.selection()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.28) {
-                onNext()
+            withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) {
+                vm.toggleObjective(key)
             }
         } label: {
             HStack(spacing: 14) {
                 Text(OnboardingV2ViewModel.objectiveEmoji(key))
                     .font(.system(size: 24))
                     .frame(width: 44, height: 44)
-                    .background(OV2.accentSoft.opacity(0.12), in: Circle())
+                    .background((isSelected ? OV2.accent : OV2.accentSoft).opacity(isSelected ? 0.16 : 0.12), in: Circle())
                 Text(OnboardingV2ViewModel.objectiveLabel(key, language: languageManager.current))
                     .font(DS.sans(.body, .semibold))
                     .foregroundStyle(OV2.ink)
                     .multilineTextAlignment(.leading)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                Image(systemName: "chevron.right")
-                    .font(.system(size: 13, weight: .semibold))
-                    .foregroundStyle(OV2.inkTertiary)
+                checkbox(isSelected)
             }
             .padding(.horizontal, 16)
             .padding(.vertical, 14)
             .background(
                 RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                    .fill(OV2.surface)
+                    .fill(isSelected ? OV2.accentSoft.opacity(0.06) : OV2.surface)
             )
             .overlay(
                 RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                    .strokeBorder(isPicked ? OV2.accent : OV2.hairline, lineWidth: isPicked ? 2 : 1)
+                    .strokeBorder(isSelected ? OV2.accent : OV2.hairline, lineWidth: isSelected ? 2 : 1)
             )
         }
         .buttonStyle(SoftPressButtonStyle())
+    }
+
+    private func checkbox(_ isSelected: Bool) -> some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 7, style: .continuous)
+                .strokeBorder(isSelected ? OV2.accent : OV2.hairline, lineWidth: 2)
+                .frame(width: 24, height: 24)
+            if isSelected {
+                RoundedRectangle(cornerRadius: 7, style: .continuous)
+                    .fill(OV2.accent)
+                    .frame(width: 24, height: 24)
+                    .overlay {
+                        Image(systemName: "checkmark")
+                            .font(.system(size: 12, weight: .bold))
+                            .foregroundStyle(.white)
+                    }
+                    .transition(.scale.combined(with: .opacity))
+            }
+        }
     }
 }

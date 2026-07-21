@@ -1,11 +1,11 @@
 import SwiftUI
 import RevenueCat
 
-/// Nouveau coordinateur d'onboarding (V2) — 14 pages, transition douce fondu + glissement.
+/// Coordinateur d'onboarding V2 — séquence **dynamique** selon les objectifs sélectionnés.
 ///
-/// Flow : 0 Welcome · 1 Langue · 2 Objectif · 3 « Right place » · 4 Swipe cours ·
-/// 5 Temps d'écran · 6 Semaines perdues · 7 Avis · 8 Loading · 9 **Login obligatoire** ·
-/// 10 Fonctionnement de l'essai · 11 Rappel · 12 Paywall annuel · 13 Paywall comparatif.
+/// Fixe : Welcome · Langue · Objectifs (multi) · « Sophia va t'aider » · [pages objectifs] ·
+/// Swipe · Avis · Loading · **Login** · Essai · Rappel · Paywall annuel · Paywall comparatif.
+/// Les pages objectifs dépendent de la sélection (dédupliquées).
 struct OnboardingV2View: View {
     @Environment(LanguageManager.self) private var languageManager
     @Environment(AuthService.self) private var auth
@@ -14,109 +14,119 @@ struct OnboardingV2View: View {
 
     @State private var vm = OnboardingV2ViewModel()
     @State private var store = StoreViewModel()
-    // Persiste favoris/intérêts dans UserDefaults ; le `ProgressManager` de `ContentView`
-    // les relira ensuite au lancement de l'app.
     @State private var progressManager = ProgressManager()
-    @State private var step: Int = 0
+    @State private var stepIndex: Int = 0
     @State private var didFinish = false
 
-    private let loginStep = 9
-    private let paywallAnnualStep = 12
-    private let paywallComparisonStep = 13
-    private let lastStep = 13
+    private enum Screen: Hashable {
+        case welcome, language, objectives, objectiveIntro
+        case questions, screenTime, exams
+        case swipe, review, loading, login, trialSteps, reminder, paywallAnnual, paywallComparison
+    }
 
-    /// Étapes affichant les points de progression (objectif → loading).
-    private static let dotSteps = Array(2...8)
+    /// Séquence complète, recalculée à partir des objectifs (stable une fois passés les objectifs).
+    private var screens: [Screen] {
+        var s: [Screen] = [.welcome, .language, .objectives, .objectiveIntro]
+        for page in vm.objectivePages {
+            switch page {
+            case .questions: s.append(.questions)
+            case .screenTime: s.append(.screenTime)
+            case .exams: s.append(.exams)
+            }
+        }
+        s += [.swipe, .review, .loading, .login, .trialSteps, .reminder, .paywallAnnual, .paywallComparison]
+        return s
+    }
+
+    private static let dotScreens: Set<Screen> = [
+        .objectives, .objectiveIntro, .questions, .screenTime, .exams, .swipe, .review, .loading,
+    ]
+
+    private var current: Screen {
+        let list = screens
+        return list.indices.contains(stepIndex) ? list[stepIndex] : .paywallComparison
+    }
 
     var body: some View {
         ZStack {
             OV2.bg.ignoresSafeArea()
 
-            page(for: step)
-                .id(step)
+            page(for: current)
+                .id(current)
                 .transition(.ov2)
         }
         .overlay(alignment: .top) {
-            if Self.dotSteps.contains(step) {
-                OnboardingV2ProgressDots(
-                    current: (Self.dotSteps.firstIndex(of: step) ?? 0),
-                    total: Self.dotSteps.count
-                )
-                .padding(.top, 14)
-                .allowsHitTesting(false)
+            if Self.dotScreens.contains(current) {
+                OnboardingV2ProgressDots(current: dotIndex, total: dotTotal)
+                    .padding(.top, 14)
+                    .allowsHitTesting(false)
             }
         }
         .preferredColorScheme(.light)
-        .animation(.spring(response: 0.55, dampingFraction: 0.9), value: step)
+        .animation(.spring(response: 0.55, dampingFraction: 0.9), value: stepIndex)
         .onChange(of: auth.isSignedIn) { _, signedIn in
-            if signedIn, step == loginStep {
-                advance()
-            }
+            if signedIn, current == .login { advance() }
         }
         .onAppear {
             AnalyticsService.trackOnboardingStarted()
-            trackStep(0)
+            AnalyticsService.trackOnboardingStepViewed(stepIndex: 0)
         }
     }
 
     // MARK: - Pages
 
     @ViewBuilder
-    private func page(for step: Int) -> some View {
-        switch step {
-        case 0:
+    private func page(for screen: Screen) -> some View {
+        switch screen {
+        case .welcome:
             OnboardingV2Welcome(onNext: advance)
-        case 1:
+        case .language:
             OnboardingV2Language(onNext: advance)
-        case 2:
+        case .objectives:
             OnboardingV2Objective(vm: vm, onNext: advance)
-        case 3:
-            OnboardingV2RightPlace(vm: vm, onNext: advance)
-        case 4:
+        case .objectiveIntro:
+            OnboardingV2ObjectiveIntro(onNext: advance)
+        case .questions:
+            OnboardingV2QuestionsScreen(onNext: advance)
+        case .screenTime:
+            OnboardingV2ScreenTimeGraph(onNext: advance)
+        case .exams:
+            OnboardingV2ExamsReviews(onNext: advance)
+        case .swipe:
             OnboardingV2SwipeCourses(vm: vm, onNext: advance)
-        case 5:
-            OnboardingV2PhoneTime(vm: vm, onNext: advance)
-        case 6:
-            OnboardingV2WeeksLost(vm: vm, onNext: advance)
-        case 7:
+        case .review:
             OnboardingV2Review(onNext: advance)
-        case 8:
+        case .loading:
             OnboardingV2Loading(onNext: advance)
-        case 9:
+        case .login:
             OnboardingV2Login(onSignedIn: advance)
-        case 10:
+        case .trialSteps:
             OnboardingV2TrialSteps(onNext: advance)
-        case 11:
+        case .reminder:
             OnboardingV2Reminder(onNext: advance)
-        case 12:
-            OnboardingV2PaywallAnnual(
-                store: store,
-                onSubscribed: finish,
-                onClose: advance
-            )
-        case 13:
-            OnboardingV2PaywallComparison(
-                store: store,
-                onSubscribed: finish,
-                onClose: finish
-            )
-        default:
-            Color.clear
+        case .paywallAnnual:
+            OnboardingV2PaywallAnnual(store: store, onSubscribed: finish, onClose: advance)
+        case .paywallComparison:
+            OnboardingV2PaywallComparison(store: store, onSubscribed: finish, onClose: finish)
         }
     }
 
     // MARK: - Navigation
 
     private func advance() {
+        let list = screens
+        let next = stepIndex + 1
+        guard next < list.count else { finish(); return }
+
         // Skip les paywalls si déjà premium.
-        if step == paywallAnnualStep - 1, store.isPremium {
+        if list[next] == .paywallAnnual, store.isPremium {
             finish()
             return
         }
-        guard step < lastStep else { finish(); return }
+
         OnboardingHaptics.selection()
-        step += 1
-        trackStep(step)
+        stepIndex = next
+        AnalyticsService.trackOnboardingStepViewed(stepIndex: next)
     }
 
     private func finish() {
@@ -124,13 +134,20 @@ struct OnboardingV2View: View {
         didFinish = true
         vm.persistAndComplete(progressManager: progressManager)
         AnalyticsService.trackOnboardingCompleted(
-            sawPaywall: step >= paywallAnnualStep,
+            sawPaywall: current == .paywallAnnual || current == .paywallComparison,
             isPremiumAtExit: store.isPremium
         )
         onComplete()
     }
 
-    private func trackStep(_ step: Int) {
-        AnalyticsService.trackOnboardingStepViewed(stepIndex: step)
+    // MARK: - Progress dots
+
+    private var dotTotal: Int {
+        screens.filter { Self.dotScreens.contains($0) }.count
+    }
+
+    private var dotIndex: Int {
+        let dots = screens.filter { Self.dotScreens.contains($0) }
+        return dots.firstIndex(of: current) ?? 0
     }
 }

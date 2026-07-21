@@ -10,11 +10,9 @@ import Observation
 @Observable
 @MainActor
 final class OnboardingV2ViewModel {
-    /// Objectif principal (page 3), clé stable.
-    var objectiveKey: String?
-    /// Temps d'écran quotidien en heures (page 6), slider 0…8 par pas de 0,5.
-    var phoneDailyHours: Double = 3.0
-    /// Cours « aimés » lors du swipe (page 5) — utilisés pour préremplir les favoris.
+    /// Objectifs sélectionnés (multi-sélection), dans l'ordre de sélection.
+    var objectiveKeys: [String] = []
+    /// Cours « aimés » lors du swipe — utilisés pour préremplir les favoris.
     var likedCourseIds: [String] = []
 
     // MARK: - Objectifs
@@ -36,16 +34,43 @@ final class OnboardingV2ViewModel {
         }
     }
 
-    /// Pourcentage « social proof » affiché page 4 (marketing, par objectif).
-    static func objectiveStatPercent(_ key: String?) -> Int {
-        switch key {
-        case "cultivate": 92
-        case "reduceScreen": 88
-        case "exams": 90
-        case "impress": 87
-        case "curiosity": 94
-        default: 89
+    func toggleObjective(_ key: String) {
+        if let idx = objectiveKeys.firstIndex(of: key) {
+            objectiveKeys.remove(at: idx)
+        } else {
+            objectiveKeys.append(key)
         }
+    }
+
+    func isSelected(_ key: String) -> Bool {
+        objectiveKeys.contains(key)
+    }
+
+    /// Écrans « valeur » spécifiques déclenchés par les objectifs, dans l'ordre de sélection,
+    /// dédupliqués (les objectifs cultivate/impress/curiosity partagent le même écran « questions »,
+    /// qui n'apparaît donc qu'une seule fois).
+    enum ObjectivePage: Hashable {
+        case questions   // cultivate / impress / curiosity
+        case screenTime  // reduceScreen
+        case exams       // exams
+    }
+
+    var objectivePages: [ObjectivePage] {
+        var pages: [ObjectivePage] = []
+        var addedQuestions = false
+        for key in objectiveKeys {
+            switch key {
+            case "cultivate", "impress", "curiosity":
+                if !addedQuestions { pages.append(.questions); addedQuestions = true }
+            case "reduceScreen":
+                pages.append(.screenTime)
+            case "exams":
+                pages.append(.exams)
+            default:
+                break
+            }
+        }
+        return pages
     }
 
     /// Matières associées à chaque objectif (source des recommandations + swipe).
@@ -64,11 +89,17 @@ final class OnboardingV2ViewModel {
         }
     }
 
-    // MARK: - Recommandations (page 5)
+    /// Union (ordonnée selon `Subject.allCases`) des matières de tous les objectifs sélectionnés.
+    var selectedSubjects: [String] {
+        let all = Set(objectiveKeys.flatMap { Self.subjects(for: $0) })
+        return Subject.allCases.map(\.storageKey).filter { all.contains($0) }
+    }
 
-    /// 8 cours à swiper, dérivés des matières de l'objectif (fallback : starters curatés).
+    // MARK: - Recommandations (swipe)
+
+    /// 8 cours à swiper, dérivés des matières des objectifs (fallback : starters curatés).
     func recommendedCourses(language: AppLanguage) -> [Course] {
-        let interests = Set(Self.subjects(for: objectiveKey))
+        let interests = Set(selectedSubjects)
         return OnboardingCourseRecommender.recommendedCourses(
             interests: interests,
             language: language,
@@ -84,34 +115,19 @@ final class OnboardingV2ViewModel {
         }
     }
 
-    // MARK: - Temps d'écran (pages 6-7)
-
-    func phoneHoursLabel() -> String {
-        let whole = Int(phoneDailyHours)
-        let hasHalf = (phoneDailyHours - Double(whole)) >= 0.25
-        return hasHalf ? "\(whole)h30" : "\(whole)h"
-    }
-
-    /// Nombre de semaines « perdues » par an à ce rythme (page 7).
-    /// heures/jour × 365 ÷ 168 (168 h dans une semaine), borné à 52.
-    var weeksLostPerYear: Int {
-        let weeks = Int((phoneDailyHours * 365.0 / 168.0).rounded())
-        return min(52, max(1, weeks))
-    }
-
     // MARK: - Persistance
 
-    /// Persiste les intérêts dérivés + les favoris aimés, puis marque l'onboarding terminé.
+    /// Persiste les intérêts dérivés (union des objectifs) + les favoris aimés, puis marque
+    /// l'onboarding terminé.
     func persistAndComplete(progressManager: ProgressManager) {
-        let subjects = Self.subjects(for: objectiveKey)
-        UserDefaults.standard.set(subjects.sorted(), forKey: OnboardingViewModel.interestsKey)
+        UserDefaults.standard.set(selectedSubjects.sorted(), forKey: OnboardingViewModel.interestsKey)
 
         for id in likedCourseIds where !progressManager.isFavorite(id) {
             progressManager.toggleFavorite(id)
         }
 
-        if let objectiveKey {
-            UserDefaults.standard.set(objectiveKey, forKey: "sophia_onboarding_objective")
+        if !objectiveKeys.isEmpty {
+            UserDefaults.standard.set(objectiveKeys, forKey: "sophia_onboarding_objectives")
         }
 
         OnboardingViewModel().completeOnboarding()
