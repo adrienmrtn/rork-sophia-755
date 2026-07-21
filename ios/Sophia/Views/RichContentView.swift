@@ -284,21 +284,7 @@ private struct CourseInlineText: View {
                     ForEach(Array(paragraph.lines.enumerated()), id: \.offset) { _, line in
                         FlowInlineLayout(spacing: 0, rowSpacing: 7) {
                             ForEach(Array(line.enumerated()), id: \.offset) { _, token in
-                                switch token {
-                                case .prose(let text, let bold, let italic):
-                                    Text(verbatim: text)
-                                        .font(RichContentView.bodyFont)
-                                        .fontWeight(bold ? .semibold : .regular)
-                                        .italic(italic)
-                                        .foregroundStyle(DS.ink)
-                                        .flowProseToken()
-                                case .glossary(let term, let bold, _, let entry, let forceWrap):
-                                    ShinyGlossaryPill(term: term, bold: bold, pastel: entry.classification.pastel) {
-                                        onGlossaryTap(entry)
-                                    }
-                                    .flowGlossaryToken()
-                                    .flowForceWrapBefore(forceWrap)
-                                }
+                                tokenView(token)
                             }
                         }
                     }
@@ -314,6 +300,27 @@ private struct CourseInlineText: View {
         .onPreferenceChange(CourseTextWidthKey.self) { width in
             guard width > 0, abs(width - contentWidth) > 0.5 else { return }
             contentWidth = width
+        }
+    }
+
+    /// Rendu d'un token isolé — extrait du corps pour éviter que le compilateur ne mette trop
+    /// de temps à typer l'expression imbriquée (ForEach + FlowInlineLayout + switch).
+    @ViewBuilder
+    private func tokenView(_ token: FlowToken) -> some View {
+        switch token {
+        case let .prose(text, bold, italic):
+            Text(verbatim: text)
+                .font(RichContentView.bodyFont)
+                .fontWeight(bold ? .semibold : .regular)
+                .italic(italic)
+                .foregroundStyle(DS.ink)
+                .flowProseToken()
+        case let .glossary(term, bold, entry, forceWrap):
+            ShinyGlossaryPill(term: term, bold: bold, pastel: entry.classification.pastel) {
+                onGlossaryTap(entry)
+            }
+            .flowGlossaryToken()
+            .flowForceWrapBefore(forceWrap)
         }
     }
 
