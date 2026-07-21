@@ -180,8 +180,7 @@ struct ContentView: View {
                 isPremium: storeVM.isPremium,
                 onboardingCompleted: true
             )
-            // Utilisateurs hors onboarding : ATT une fois le premier écran home visible.
-            MetaAdsService.requestTrackingAuthorizationAfterFirstScreen()
+            // ATT est demandée dès l'ouverture de l'app (voir SophiaApp), plus ici.
             guard HomeCardPresentation.style == .legacy else { return }
             if !progressManager.hasSeenSwipeTutorial {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {

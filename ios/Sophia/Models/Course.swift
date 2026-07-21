@@ -220,6 +220,36 @@ nonisolated struct Course: Codable, Identifiable, Sendable, Equatable {
     var hasQuiz: Bool { !quiz.isEmpty }
 }
 
+extension Course {
+    /// Nombre de lectures « social proof » (fictif mais stable) affiché sur chaque cours.
+    /// Dérivé d'un hash déterministe de `id` (FNV-1a) — indépendant du seed de hachage du
+    /// process, donc identique à chaque lancement et sur tous les appareils. Borné à
+    /// [7 000 ; 250 000], arrondi à la centaine pour rester crédible.
+    var readsCount: Int {
+        var hash: UInt64 = 0xcbf29ce484222325
+        for byte in id.utf8 {
+            hash ^= UInt64(byte)
+            hash = hash &* 0x100000001b3
+        }
+        let lower = 7_000
+        let upper = 250_000
+        let span = UInt64(upper - lower)
+        let value = lower + Int(hash % span)
+        return (value / 100) * 100
+    }
+
+    /// Version compacte pour l'affichage : « 7,2 k », « 48 k », « 132 k ».
+    var readsCountShort: String {
+        let count = readsCount
+        if count < 10_000 {
+            let thousands = Double(count) / 1_000.0
+            let text = String(format: "%.1f", thousands).replacingOccurrences(of: ".", with: ",")
+            return "\(text) k"
+        }
+        return "\(count / 1_000) k"
+    }
+}
+
 extension Array where Element == QuizQuestion {
     /// Total points obtainable across every question — varies with question count
     /// and the mix of types, so this is always computed rather than assumed to be

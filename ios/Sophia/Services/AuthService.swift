@@ -143,6 +143,7 @@ final class AuthService {
         try? await client.auth.signOut()
         GIDSignIn.sharedInstance.signOut()
         currentUser = nil
+        SocialService.shared.clearLocalState()
     }
 
     /// Supprime définitivement le compte via l'Edge Function `delete-user` (service role côté serveur),

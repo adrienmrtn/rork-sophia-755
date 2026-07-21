@@ -78,18 +78,21 @@ struct OnboardingV2QuestionsScreen: View {
     }
 }
 
-// MARK: - Réduire le temps d'écran (graphe 2,2×)
+// MARK: - Réduire le temps d'écran (graphe décroissant 3h47 → 39 min)
 
-/// Graphe animé (non linéaire) : courbe qui monte, et « 2,2× moins de temps d'écran ».
+/// Graphe animé : courbe qui descend, et un compteur de temps d'écran qui chute de
+/// 3h47 à 39 minutes.
 struct OnboardingV2ScreenTimeGraph: View {
     @Environment(LanguageManager.self) private var languageManager
     let onNext: () -> Void
 
     @State private var progress: CGFloat = 0
-    @State private var shown: Double = 0
+    @State private var shownMinutes: Double = Double(startMinutes)
     @State private var titleIn = false
 
-    private let target = 2.2
+    /// 3h47 = 227 min au départ, 39 min à l'arrivée.
+    private static let startMinutes = 227
+    private static let endMinutes = 39
 
     var body: some View {
         VStack(spacing: 0) {
@@ -112,13 +115,13 @@ struct OnboardingV2ScreenTimeGraph: View {
                 GeometryReader { geo in
                     let w = geo.size.width
                     let h = geo.size.height
-                    RisingCurve()
+                    FallingCurve()
                         .trim(from: 0, to: progress)
                         .stroke(
                             LinearGradient(colors: [OV2.accentSoft, OV2.accent], startPoint: .leading, endPoint: .trailing),
                             style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round)
                         )
-                        .overlay(alignment: .topTrailing) {
+                        .overlay(alignment: .topLeading) {
                             Circle()
                                 .fill(OV2.accent)
                                 .frame(width: 14, height: 14)
@@ -128,7 +131,7 @@ struct OnboardingV2ScreenTimeGraph: View {
                 }
 
                 VStack(alignment: .trailing, spacing: 0) {
-                    Text(String(format: "%.1f×", shown).replacingOccurrences(of: ".", with: ","))
+                    Text(timeLabel(minutes: Int(shownMinutes.rounded())))
                         .font(.system(size: 52, weight: .heavy, design: .rounded))
                         .foregroundStyle(OV2.accent)
                         .contentTransition(.numericText())
@@ -162,18 +165,31 @@ struct OnboardingV2ScreenTimeGraph: View {
         }
     }
 
+    /// Format « 3h47 » / « 39 min » selon la valeur.
+    private func timeLabel(minutes: Int) -> String {
+        if minutes >= 60 {
+            let h = minutes / 60
+            let m = minutes % 60
+            return String(format: "%dh%02d", h, m)
+        }
+        return String(format: languageManager.text("onboardingV2.screenTime.minutes"), minutes)
+    }
+
+    /// Profil de la courbe descendante (décélération), pour positionner le point mobile.
     private func curveY(_ t: CGFloat) -> CGFloat {
-        // même profil que RisingCurve (accélération), pour positionner le point.
-        CGFloat(pow(Double(t), 1.9))
+        1.0 - CGFloat(pow(Double(t), 1.9))
     }
 
     private func animateNumber() {
         let steps = 44
+        let start = Double(Self.startMinutes)
+        let end = Double(Self.endMinutes)
         for i in 0...steps {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3 + Double(i) * (1.6 / Double(steps))) {
                 let t = Double(i) / Double(steps)
                 withAnimation(.easeOut(duration: 0.08)) {
-                    shown = target * pow(t, 1.9)
+                    // Descente non linéaire (même profil que la courbe).
+                    shownMinutes = start - (start - end) * pow(t, 1.9)
                 }
                 if i % 10 == 0 { OnboardingHaptics.selection() }
                 if i == steps { OnboardingHaptics.counterComplete() }
@@ -182,16 +198,16 @@ struct OnboardingV2ScreenTimeGraph: View {
     }
 }
 
-/// Courbe montante non linéaire (accélération vers la droite).
-private struct RisingCurve: Shape {
+/// Courbe descendante non linéaire (décélération vers la droite).
+private struct FallingCurve: Shape {
     func path(in rect: CGRect) -> Path {
         var p = Path()
-        p.move(to: CGPoint(x: 0, y: rect.height))
+        p.move(to: CGPoint(x: 0, y: 0))
         let steps = 40
         for i in 0...steps {
             let t = Double(i) / Double(steps)
             let x = rect.width * CGFloat(t)
-            let y = rect.height - rect.height * CGFloat(pow(t, 1.9))
+            let y = rect.height * CGFloat(pow(t, 1.9))
             p.addLine(to: CGPoint(x: x, y: y))
         }
         return p

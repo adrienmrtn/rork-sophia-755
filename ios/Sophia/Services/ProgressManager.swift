@@ -91,6 +91,14 @@ nonisolated enum GlobalXPReason: Sendable {
     case courseCompleted(courseId: String)
     case quizCompleted(courseId: String)
     case collectionCompleted(id: String)
+
+    var analyticsKey: String {
+        switch self {
+        case .courseCompleted: "course_completed"
+        case .quizCompleted: "quiz_completed"
+        case .collectionCompleted: "collection_completed"
+        }
+    }
 }
 
 nonisolated struct GlobalLevelProgress: Sendable {
@@ -316,6 +324,8 @@ class ProgressManager {
             )
         }
         save()
+        // Weekly friends leaderboard: mirror global XP awards into Supabase xp_events.
+        SocialService.shared.logXPEvent(amount: amount, reason: reason.analyticsKey)
         return GlobalXPAwardResult(awardedXP: amount, previousXP: previousXP, newXP: progress.globalXP, previousLevel: previous.level, newLevel: new.level, previousRank: previous.rank, newRank: new.rank)
     }
 

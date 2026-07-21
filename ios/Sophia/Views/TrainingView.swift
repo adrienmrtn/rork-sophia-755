@@ -34,6 +34,7 @@ struct TrainingView: View {
     @State private var wasFullyCorrect = false
     @State private var questionAppeared = false
     @State private var showFeedback = false
+    @State private var showExplain = false
 
     private var currentQuestion: ShuffledQuestion { sessionQuestions[currentIndex].question }
     private var currentCourse: Course { sessionQuestions[currentIndex].course }
@@ -52,6 +53,29 @@ struct TrainingView: View {
                 sessionView
             } else {
                 entryView
+            }
+
+            if showExplain {
+                FirstOpenExplanation(
+                    icon: "arrow.triangle.2.circlepath",
+                    title: languageManager.text("explain.training.title"),
+                    message: languageManager.text("explain.training.body"),
+                    onDismiss: {
+                        showExplain = false
+                        TutorialFlags.markSeen(.training)
+                    }
+                )
+                .transition(.opacity)
+                .zIndex(20)
+            }
+        }
+        .onAppear {
+            guard !TutorialFlags.seen(.training) else { return }
+            guard !isSessionActive, !isSessionComplete else { return }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                guard !TutorialFlags.seen(.training) else { return }
+                guard !isSessionActive, !isSessionComplete else { return }
+                withAnimation(.easeIn(duration: 0.3)) { showExplain = true }
             }
         }
     }

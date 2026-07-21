@@ -44,14 +44,15 @@ enum MetaAdsService {
 
     // MARK: - App Tracking Transparency
 
-    /// Demande l'autorisation ATT après le premier écran (pas au cold start),
-    /// puis active AdvertisingTrackingEnabled et les flags Meta associés.
-    static func requestTrackingAuthorizationAfterFirstScreen() {
+    /// Demande l'autorisation ATT dès l'ouverture de l'app (premier écran affiché, y compris
+    /// pendant l'onboarding), puis active AdvertisingTrackingEnabled et les flags Meta associés.
+    static func requestTrackingAuthorizationAtLaunch() {
         guard !didRequestTrackingThisSession else { return }
         didRequestTrackingThisSession = true
 
-        // Léger délai pour que le nouvel écran soit visible avant la modale système.
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+        // Léger délai pour que l'app soit à l'état « active » avant la modale système ATT
+        // (iOS n'affiche la modale que si l'app est au premier plan et active).
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             promptTrackingAuthorizationIfNeeded()
         }
     }
