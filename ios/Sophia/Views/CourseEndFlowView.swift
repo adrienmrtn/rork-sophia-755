@@ -408,71 +408,78 @@ struct StreakCelebrationView: View {
         ZStack {
             DS.canvas.ignoresSafeArea()
 
-            ScrollView {
-                VStack(spacing: 0) {
-                    Spacer(minLength: 16)
+            VStack(spacing: 0) {
+                GeometryReader { geo in
+                    ScrollView {
+                        VStack(spacing: 0) {
+                            // Blocs équilibrés entre le haut de l'écran et le bouton ancré en bas.
+                            Spacer(minLength: 16)
 
-                    flameView
-                        .scaleEffect(flameScale)
+                            flameView
+                                .scaleEffect(flameScale)
 
-                    Spacer(minLength: 8)
+                            Spacer(minLength: 8)
 
-                    VStack(spacing: 4) {
-                        Text("\(displayedStreak)")
-                            .font(.jakarta(size: 72, weight: .semibold))
-                            .foregroundStyle(DS.ink)
-                            .contentTransition(.numericText())
-                            .scaleEffect(numberAppeared ? 1 : 0.6)
-                            .opacity(numberAppeared ? 1 : 0)
+                            VStack(spacing: 4) {
+                                Text("\(displayedStreak)")
+                                    .font(.jakarta(size: 72, weight: .semibold))
+                                    .foregroundStyle(DS.ink)
+                                    .contentTransition(.numericText())
+                                    .scaleEffect(numberAppeared ? 1 : 0.6)
+                                    .opacity(numberAppeared ? 1 : 0)
 
-                        Text(streak <= 1 ? languageManager.text("course.streak.day") : languageManager.text("course.streak.days"))
-                            .font(DS.title(.title3, .semibold))
-                            .foregroundStyle(DS.ink)
-                            .opacity(numberAppeared ? 1 : 0)
-                    }
+                                Text(streak <= 1 ? languageManager.text("course.streak.day") : languageManager.text("course.streak.days"))
+                                    .font(DS.title(.title3, .semibold))
+                                    .foregroundStyle(DS.ink)
+                                    .opacity(numberAppeared ? 1 : 0)
+                            }
 
-                    Text(String(format: languageManager.text("course.streak.message"), subject.localizedShortName(language: languageManager.current)))
-                        .font(DS.sans(.subheadline))
-                        .foregroundStyle(DS.inkSecondary)
-                        .multilineTextAlignment(.center)
-                        .padding(.horizontal, 32)
-                        .padding(.top, 12)
-                        .opacity(appeared ? 1 : 0)
+                            Text(String(format: languageManager.text("course.streak.message"), subject.localizedShortName(language: languageManager.current)))
+                                .font(DS.sans(.subheadline))
+                                .foregroundStyle(DS.inkSecondary)
+                                .multilineTextAlignment(.center)
+                                .padding(.horizontal, 32)
+                                .padding(.top, 12)
+                                .opacity(appeared ? 1 : 0)
 
-                    Spacer(minLength: 22)
+                            Spacer(minLength: 22)
 
-                    weekStrip
-                        .padding(.horizontal, 22)
-                        .opacity(appeared ? 1 : 0)
-                        .offset(y: appeared ? 0 : 10)
+                            weekStrip
+                                .padding(.horizontal, 22)
+                                .opacity(appeared ? 1 : 0)
+                                .offset(y: appeared ? 0 : 10)
 
-                    Spacer(minLength: 18)
+                            Spacer(minLength: 18)
 
-                    Text(languageManager.text("course.streak.onTrack"))
-                        .font(DS.title(.headline, .semibold))
-                        .foregroundStyle(DS.ink)
-                        .opacity(appeared ? 1 : 0)
+                            Text(languageManager.text("course.streak.onTrack"))
+                                .font(DS.title(.headline, .semibold))
+                                .foregroundStyle(DS.ink)
+                                .opacity(appeared ? 1 : 0)
 
-                    Spacer(minLength: 20)
-
-                    Button {
-                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                        onReturnHome()
-                    } label: {
-                        HStack(spacing: 8) {
-                            Text(languageManager.text("common.backHome"))
-                            Image(systemName: "house.fill")
-                                .font(.jakarta(size: 13, weight: .medium))
+                            Spacer(minLength: 20)
                         }
+                        .frame(maxWidth: .infinity)
+                        .frame(minHeight: geo.size.height)
                     }
-                    .buttonStyle(DSPrimaryButtonStyle())
-                    .padding(.horizontal, 24)
-                    .padding(.bottom, 24)
-                    .opacity(appeared ? 1 : 0)
-                    .offset(y: appeared ? 0 : 10)
+                    .scrollIndicators(.hidden)
                 }
+
+                Button {
+                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                    onReturnHome()
+                } label: {
+                    HStack(spacing: 8) {
+                        Text(languageManager.text("common.backHome"))
+                        Image(systemName: "house.fill")
+                            .font(.jakarta(size: 13, weight: .medium))
+                    }
+                }
+                .buttonStyle(DSPrimaryButtonStyle())
+                .padding(.horizontal, 24)
+                .padding(.bottom, 24)
+                .opacity(appeared ? 1 : 0)
+                .offset(y: appeared ? 0 : 10)
             }
-            .scrollIndicators(.hidden)
         }
         .onAppear {
             displayedStreak = max(0, streak - 1)
