@@ -118,16 +118,12 @@ struct RichContentView: View {
         var runs: [InlineRun] = []
         var index = normalized.startIndex
         var bold = false
+        var emphasis = false
         var textBuffer = ""
 
         func flushTextBuffer() {
             guard !textBuffer.isEmpty else { return }
-            let cleaned = textBuffer.replacingOccurrences(of: "**", with: "")
-            guard !cleaned.isEmpty else {
-                textBuffer = ""
-                return
-            }
-            runs.append(InlineRun(kind: .text, content: cleaned, bold: bold))
+            runs.append(InlineRun(kind: .text, content: textBuffer, bold: bold, italic: emphasis))
             textBuffer = ""
         }
 
@@ -139,13 +135,20 @@ struct RichContentView: View {
                 continue
             }
 
+            if normalized[index] == "*" {
+                flushTextBuffer()
+                emphasis.toggle()
+                index = normalized.index(after: index)
+                continue
+            }
+
             if normalized[index] == "<" {
                 if let close = normalized[index...].firstIndex(of: ">") {
                     flushTextBuffer()
                     let start = normalized.index(after: index)
                     let term = String(normalized[start..<close]).trimmingCharacters(in: .whitespacesAndNewlines)
                     if !term.isEmpty {
-                        runs.append(InlineRun(kind: .glossary, content: term, bold: bold))
+                        runs.append(InlineRun(kind: .glossary, content: term, bold: bold, italic: emphasis))
                     }
                     index = normalized.index(after: close)
                     continue
@@ -189,6 +192,7 @@ struct InlineRun: Hashable {
     let kind: Kind
     let content: String
     let bold: Bool
+    let italic: Bool
 }
 
 private struct FlowGlossaryTokenKey: LayoutValueKey {
@@ -281,13 +285,14 @@ private struct CourseInlineText: View {
                         FlowInlineLayout(spacing: 0, rowSpacing: 7) {
                             ForEach(Array(line.enumerated()), id: \.offset) { _, token in
                                 switch token {
-                                case .prose(let text, let bold):
+                                case .prose(let text, let bold, let italic):
                                     Text(verbatim: text)
                                         .font(RichContentView.bodyFont)
                                         .fontWeight(bold ? .semibold : .regular)
+                                        .italic(italic)
                                         .foregroundStyle(DS.ink)
                                         .flowProseToken()
-                                case .glossary(let term, let bold, let entry, let forceWrap):
+                                case .glossary(let term, let bold, _, let entry, let forceWrap):
                                     ShinyGlossaryPill(term: term, bold: bold, pastel: entry.classification.pastel) {
                                         onGlossaryTap(entry)
                                     }
@@ -317,7 +322,7 @@ private struct CourseInlineText: View {
     }
 
     private enum FlowToken {
-        case prose(String, bold: Bool)
+        case prose(String, bold: Bool, italic: Bool)
         case glossary(String, bold: Bool, entry: GlossaryEntry, forceWrapBefore: Bool)
     }
 
@@ -373,12 +378,12 @@ private struct CourseInlineText: View {
                     )
                 } else {
                     for piece in proseTokens(from: run.content) {
-                        appendProse(piece, bold: run.bold, maxWidth: limit, tokens: &tokens, x: &x)
+                        appendProse(piece, bold: run.bold, italic: run.italic, maxWidth: limit, tokens: &tokens, x: &x)
                     }
                 }
             case .text:
                 for piece in proseTokens(from: run.content) {
-                    appendProse(piece, bold: run.bold, maxWidth: limit, tokens: &tokens, x: &x)
+                    appendProse(piece, bold: run.bold, italic: run.italic, maxWidth: limit, tokens: &tokens, x: &x)
                 }
             }
         }
@@ -474,6 +479,7 @@ private struct CourseInlineText: View {
     private static func appendProse(
         _ text: String,
         bold: Bool,
+        italic: Bool,
         maxWidth: CGFloat,
         tokens: inout [FlowToken],
         x: inout CGFloat
@@ -482,7 +488,7 @@ private struct CourseInlineText: View {
         if !text.isEmpty, x > 0.5, x + width > maxWidth + 0.5 {
             x = 0
         }
-        tokens.append(.prose(text, bold: bold))
+        tokens.append(.prose(text, bold: bold, italic: italic))
         x += width
     }
 
@@ -712,6 +718,13 @@ struct CourseInlineImage: View {
     }
 
     static func loadImage(named name: String) -> UIImage? {
+        let resolved = CourseImageAliases.map[name] ?? name
+        if let ui = loadImageFromBundle(resolved) { return ui }
+        if resolved != name, let ui = loadImageFromBundle(name) { return ui }
+        return nil
+    }
+
+    private static func loadImageFromBundle(_ name: String) -> UIImage? {
         if let ui = UIImage(named: name) { return ui }
         let bundle = Bundle.main
         for ext in ["jpg", "jpeg", "png", "JPG", "PNG"] {
@@ -845,7 +858,7 @@ private struct SimpleBoldText: View {
     private func textSegment(for run: InlineRun) -> Text {
         Text(verbatim: run.content)
             .fontWeight(run.bold ? .semibold : baseWeight)
-            .italic(italic)
+            .italic(italic || run.italic)
             .foregroundColor(DS.ink)
     }
 }

@@ -108,23 +108,34 @@ struct ProseParagraph: View {
     let courseTitle: String
     let onGlossaryTap: (GlossaryEntry) -> Void
 
+    @State private var cachedAttributed: NSAttributedString?
+
+    private var builtAttributed: NSAttributedString {
+        InlineAttributedBuilder.build(
+            raw: raw,
+            courseId: courseId,
+            courseTitle: courseTitle,
+            accent: UIColor(accent)
+        )
+    }
+
     var body: some View {
         ProseTextView(
-            attributed: InlineAttributedBuilder.build(
-                raw: raw,
-                courseId: courseId,
-                courseTitle: courseTitle,
-                accent: UIColor(accent)
-            ),
+            attributed: cachedAttributed ?? builtAttributed,
             linkUnderlineColor: UIColor(accent),
             onGlossaryTap: onGlossaryTap
         )
         .frame(maxWidth: .infinity, alignment: .leading)
+        .onAppear {
+            if cachedAttributed == nil {
+                cachedAttributed = builtAttributed
+            }
+        }
     }
 }
 
 /// Builds an `NSAttributedString` from Sophia inline markup:
-/// `**bold**`, `==highlight==` (marker), `[[Term]]` (tappable glossary).
+/// `**bold**`, `*italic*`, `==highlight==` (marker), `[[Term]]` (tappable glossary).
 enum InlineAttributedBuilder {
     /// Custom attribute carrying a glossary URL. We deliberately avoid `.link` so
     /// UITextView doesn't force a blue tint or a tap-time selection shift; the tap
@@ -136,7 +147,7 @@ enum InlineAttributedBuilder {
         courseId: String,
         courseTitle: String,
         accent: UIColor,
-        italic: Bool = false,
+        baseItalic: Bool = false,
         baseBold: Bool = false,
         alignment: NSTextAlignment = .justified
     ) -> NSAttributedString {
@@ -151,6 +162,7 @@ enum InlineAttributedBuilder {
         paragraphStyle.lineBreakMode = .byWordWrapping
 
         var bold = baseBold
+        var emphasis = false
         var highlight = false
         var buffer = ""
 
@@ -162,7 +174,7 @@ enum InlineAttributedBuilder {
                     attributes: textAttributes(
                         bold: bold,
                         highlight: highlight,
-                        italic: italic,
+                        italic: baseItalic || emphasis,
                         paragraphStyle: paragraphStyle
                     )
                 )
@@ -176,6 +188,12 @@ enum InlineAttributedBuilder {
                 flush()
                 bold.toggle()
                 i += 2
+                continue
+            }
+            if chars[i] == "*" {
+                flush()
+                emphasis.toggle()
+                i += 1
                 continue
             }
             if matches(chars, at: i, token: "==") {
@@ -192,7 +210,7 @@ enum InlineAttributedBuilder {
                         term: term,
                         into: result,
                         bold: bold,
-                        italic: italic,
+                        italic: baseItalic || emphasis,
                         accent: accent,
                         paragraphStyle: paragraphStyle,
                         courseId: courseId,
@@ -312,17 +330,20 @@ struct ProseTextView: UIViewRepresentable {
 
         textView.setContentCompressionResistancePriority(.required, for: .vertical)
         textView.setContentHuggingPriority(.required, for: .vertical)
+        context.coordinator.lastRenderedPlainText = attributed.string
+        textView.attributedText = attributed
         return textView
     }
 
     func updateUIView(_ uiView: UITextView, context: Context) {
         context.coordinator.onGlossaryTap = onGlossaryTap
-        // Only rewrite the text when it actually changed. Re-assigning an identical
-        // NSAttributedString forces a re-layout that visually nudges the paragraph when
-        // unrelated state changes (e.g. presenting the glossary sheet on tap).
-        if uiView.attributedText != attributed {
+        // Only rewrite when the plain string changes. Re-assigning an equivalent
+        // NSAttributedString (e.g. after opening the glossary sheet) forces a re-layout
+        // that visually nudges the paragraph.
+        let plain = attributed.string
+        if context.coordinator.lastRenderedPlainText != plain {
+            context.coordinator.lastRenderedPlainText = plain
             uiView.attributedText = attributed
-            uiView.invalidateIntrinsicContentSize()
         }
     }
 
@@ -339,6 +360,7 @@ struct ProseTextView: UIViewRepresentable {
 
     final class Coordinator: NSObject, UIGestureRecognizerDelegate {
         var onGlossaryTap: (GlossaryEntry) -> Void
+        var lastRenderedPlainText: String?
 
         init(onGlossaryTap: @escaping (GlossaryEntry) -> Void) {
             self.onGlossaryTap = onGlossaryTap
