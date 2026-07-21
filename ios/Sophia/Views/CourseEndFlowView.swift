@@ -86,54 +86,58 @@ struct CourseCompletedView: View {
         ZStack {
             DS.canvas.ignoresSafeArea()
 
-            ScrollView {
-                VStack(spacing: 0) {
-                    Spacer(minLength: 20)
+            VStack(spacing: 0) {
+                ScrollView {
+                    VStack(spacing: 0) {
+                        Spacer(minLength: 20)
 
-                    thumbnail
-                        .scaleEffect(thumbScale)
-                        .opacity(appeared ? 1 : 0)
+                        thumbnail
+                            .scaleEffect(thumbScale)
+                            .opacity(appeared ? 1 : 0)
 
-                    Spacer(minLength: 18)
+                        Spacer(minLength: 18)
 
-                    Text(languageManager.text("course.completed"))
-                        .font(DS.title(.largeTitle, .semibold))
-                        .foregroundStyle(DS.ink)
-                        .multilineTextAlignment(.center)
-                        .padding(.horizontal, 24)
-                        .opacity(showTitle ? 1 : 0)
-                        .offset(y: showTitle ? 0 : 12)
+                        Text(languageManager.text("course.completed"))
+                            .font(DS.title(.largeTitle, .semibold))
+                            .foregroundStyle(DS.ink)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal, 24)
+                            .opacity(showTitle ? 1 : 0)
+                            .offset(y: showTitle ? 0 : 12)
 
-                    Spacer(minLength: 20)
+                        Spacer(minLength: 20)
 
-                    if phase != .celebration {
-                        progressionCard
-                            .padding(.horizontal, 20)
-                            .opacity(showCard ? 1 : 0)
-                            .offset(y: showCard ? 0 : 16)
-                            .transition(.opacity.combined(with: .offset(y: 16)))
+                        if phase != .celebration {
+                            progressionCard
+                                .padding(.horizontal, 20)
+                                .opacity(showCard ? 1 : 0)
+                                .offset(y: showCard ? 0 : 16)
+                                .transition(.opacity.combined(with: .offset(y: 16)))
+                        }
+
+                        if showFreemiumGate && phase == .actions {
+                            freemiumNote
+                                .padding(.horizontal, 20)
+                                .padding(.top, 14)
+                                .opacity(showNote ? 1 : 0)
+                                .offset(y: showNote ? 0 : 8)
+                        }
+
+                        Spacer(minLength: 20)
                     }
+                    .frame(maxWidth: .infinity)
+                }
+                .scrollIndicators(.hidden)
 
-                    if showFreemiumGate && phase == .actions {
-                        freemiumNote
-                            .padding(.horizontal, 20)
-                            .padding(.top, 14)
-                            .opacity(showNote ? 1 : 0)
-                            .offset(y: showNote ? 0 : 8)
-                    }
-
-                    Spacer(minLength: 20)
-
-                    if phase == .actions {
-                        actionButtons
-                            .padding(.horizontal, 20)
-                            .padding(.bottom, 20)
-                            .opacity(showButtons ? 1 : 0)
-                            .offset(y: showButtons ? 0 : 12)
-                    }
+                // Actions ancrées en bas de l'écran (plus de vide entre le CTA et le bas).
+                if phase == .actions {
+                    actionButtons
+                        .padding(.horizontal, 20)
+                        .padding(.bottom, 20)
+                        .opacity(showButtons ? 1 : 0)
+                        .offset(y: showButtons ? 0 : 12)
                 }
             }
-            .scrollIndicators(.hidden)
         }
         .fullScreenCover(isPresented: $showLevelUp) {
             LevelUpCelebrationView(
