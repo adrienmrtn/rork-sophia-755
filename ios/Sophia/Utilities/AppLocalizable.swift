@@ -1071,7 +1071,7 @@ enum AppLocalizable {
         "explain.home.body": "Swipe up to discover the next course, swipe down to go back to the previous one.",
         "explain.course.title": "Tap the words",
         "explain.course.body": "Highlighted terms hide a definition: tap them to understand everything.",
-        "explain.course.termBody": "Like \u201c%@\u201d, underlined words hide a definition. Tap it to reveal it.",
+        "explain.course.termBody": "Like \u{201C}%@\u{201D}, underlined words hide a definition. Tap it to reveal it.",
         "explain.collections.title": "Collections",
         "explain.collections.body": "Each collection gathers courses on the same theme so you progress step by step.",
         "explain.training.title": "Training",
