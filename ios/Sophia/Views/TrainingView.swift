@@ -84,6 +84,7 @@ struct TrainingView: View {
 
     private var entryView: some View {
         let due = progressManager.dueTrainingQuestions
+        let hasAnyQuestions = !progressManager.progress.trainingQuestionStates.isEmpty
         return VStack(spacing: 0) {
             HStack {
                 Text(languageManager.text("training.title"))
@@ -97,47 +98,133 @@ struct TrainingView: View {
 
             ScrollView {
                 VStack(spacing: 24) {
-                    Spacer(minLength: 60)
-
-                    ZStack {
-                        Circle().fill(DS.accentTint).frame(width: 128, height: 128)
-                        Image(systemName: due.isEmpty ? "checkmark.seal.fill" : "arrow.triangle.2.circlepath")
-                            .font(.jakarta(size: 50, weight: .regular))
-                            .foregroundStyle(DS.accent)
-                    }
-
-                    VStack(spacing: 10) {
-                        Text(due.isEmpty ? languageManager.text("training.emptyTitle") : languageManager.text("training.readyTitle"))
-                            .font(DS.title(.title2, .semibold))
-                            .foregroundStyle(DS.ink)
-                            .multilineTextAlignment(.center)
-
-                        Text(due.isEmpty ? languageManager.text("training.emptyMessage") : String(format: languageManager.text("training.dueCount"), due.count))
-                            .font(DS.sans(.subheadline))
-                            .foregroundStyle(DS.inkSecondary)
-                            .multilineTextAlignment(.center)
-                            .fixedSize(horizontal: false, vertical: true)
-                    }
-                    .padding(.horizontal, 32)
+                    Spacer(minLength: 40)
 
                     if !due.isEmpty {
-                        Button {
-                            UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                            startSession(due: due)
-                        } label: {
-                            Text(languageManager.text("training.start"))
-                        }
-                        .buttonStyle(DSPrimaryButtonStyle())
-                        .padding(.horizontal, 40)
-                        .padding(.top, 8)
+                        readyContent(due: due)
+                    } else if hasAnyQuestions {
+                        allReviewedContent
+                    } else {
+                        lockedContent
                     }
 
-                    Spacer(minLength: 60)
+                    Spacer(minLength: 40)
                 }
                 .padding(.horizontal, 20)
-                .frame(minHeight: 480)
+                .frame(minHeight: 520)
             }
             .scrollIndicators(.hidden)
+        }
+    }
+
+    // Des questions sont à réviser maintenant.
+    private func readyContent(due: [(course: Course, question: QuizQuestion)]) -> some View {
+        VStack(spacing: 24) {
+            trainingIcon("arrow.triangle.2.circlepath")
+
+            VStack(spacing: 10) {
+                Text(languageManager.text("training.readyTitle"))
+                    .font(DS.title(.title2, .semibold))
+                    .foregroundStyle(DS.ink)
+                    .multilineTextAlignment(.center)
+                Text(String(format: languageManager.text("training.dueCount"), due.count))
+                    .font(DS.sans(.subheadline))
+                    .foregroundStyle(DS.inkSecondary)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            .padding(.horizontal, 32)
+
+            Button {
+                UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                startSession(due: due)
+            } label: {
+                Text(languageManager.text("training.start"))
+            }
+            .buttonStyle(DSPrimaryButtonStyle())
+            .padding(.horizontal, 40)
+            .padding(.top, 8)
+        }
+    }
+
+    // Tout est révisé pour l'instant (mais l'utilisateur a déjà des questions).
+    private var allReviewedContent: some View {
+        VStack(spacing: 24) {
+            trainingIcon("checkmark.seal.fill")
+
+            VStack(spacing: 10) {
+                Text(languageManager.text("training.emptyTitle"))
+                    .font(DS.title(.title2, .semibold))
+                    .foregroundStyle(DS.ink)
+                    .multilineTextAlignment(.center)
+                Text(languageManager.text("training.emptyMessage"))
+                    .font(DS.sans(.subheadline))
+                    .foregroundStyle(DS.inkSecondary)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            .padding(.horizontal, 32)
+        }
+    }
+
+    // Aucun quiz terminé encore : on explique clairement comment l'entraînement se remplit.
+    private var lockedContent: some View {
+        VStack(spacing: 22) {
+            trainingIcon("brain.head.profile")
+
+            VStack(spacing: 10) {
+                Text(languageManager.text("training.locked.title"))
+                    .font(DS.title(.title2, .semibold))
+                    .foregroundStyle(DS.ink)
+                    .multilineTextAlignment(.center)
+                Text(languageManager.text("training.locked.message"))
+                    .font(DS.sans(.subheadline))
+                    .foregroundStyle(DS.inkSecondary)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            .padding(.horizontal, 24)
+
+            howItWorksCard
+        }
+    }
+
+    private func trainingIcon(_ systemName: String) -> some View {
+        ZStack {
+            Circle().fill(DS.accentTint).frame(width: 128, height: 128)
+            Image(systemName: systemName)
+                .font(.jakarta(size: 50, weight: .regular))
+                .foregroundStyle(DS.accent)
+        }
+    }
+
+    private var howItWorksCard: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            Text(languageManager.text("training.how.title"))
+                .font(DS.sans(.caption2, .semibold))
+                .foregroundStyle(DS.inkTertiary)
+                .tracking(1.2)
+
+            howStep(1, languageManager.text("training.how.step1"))
+            howStep(2, languageManager.text("training.how.step2"))
+            howStep(3, languageManager.text("training.how.step3"))
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .dsCard()
+    }
+
+    private func howStep(_ number: Int, _ text: String) -> some View {
+        HStack(alignment: .top, spacing: 12) {
+            Text("\(number)")
+                .font(DS.sans(.subheadline, .bold))
+                .foregroundStyle(.white)
+                .frame(width: 26, height: 26)
+                .background(DS.accent, in: Circle())
+            Text(text)
+                .font(DS.sans(.subheadline, .medium))
+                .foregroundStyle(DS.ink)
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
 
