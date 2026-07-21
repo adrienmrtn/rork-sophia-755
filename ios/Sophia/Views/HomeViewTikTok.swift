@@ -1,5 +1,31 @@
 import SwiftUI
 
+/// Walks up from an invisible probe view to the enclosing `UIScrollView` and disables
+/// `delaysContentTouches`, so buttons inside the feed (the "Commencer" CTA) fire on the first
+/// tap even while the scroll is still settling after a swipe — instead of the first tap being
+/// swallowed to stop the scroll. Also keeps `canCancelContentTouches` so vertical swiping that
+/// starts on the card still scrolls.
+private struct ImmediateTouchScrollFixer: UIViewRepresentable {
+    func makeUIView(context: Context) -> UIView {
+        let probe = UIView(frame: .zero)
+        probe.isUserInteractionEnabled = false
+        DispatchQueue.main.async { [weak probe] in
+            var view: UIView? = probe
+            while let current = view {
+                if let scroll = current as? UIScrollView {
+                    scroll.delaysContentTouches = false
+                    scroll.canCancelContentTouches = true
+                    break
+                }
+                view = current.superview
+            }
+        }
+        return probe
+    }
+
+    func updateUIView(_ uiView: UIView, context: Context) {}
+}
+
 /// Home course feed: a calm, inset card (Deepstash-style — rounded corners, contained
 /// image + text, explicit CTA) paged one at a time with a vertical scroll-snap gesture
 /// (the "meta" of a TikTok/Reels feed: swipe up/down to move between courses), rather than
@@ -60,6 +86,11 @@ struct HomeViewTikTok: View {
                                 }
                             }
                             .scrollTargetLayout()
+                            // Le tap sur « Commencer » ne doit plus nécessiter deux essais après
+                            // un swipe : on force `delaysContentTouches = false` directement sur
+                            // le vrai UIScrollView (le proxy global d'apparence n'est pas
+                            // fiablement appliqué au ScrollView SwiftUI).
+                            .background(ImmediateTouchScrollFixer())
                         }
                         // `.viewAligned` anchors to each card's real edges (one card per
                         // swipe, no overshoot), unlike `.paging` which advances by fixed

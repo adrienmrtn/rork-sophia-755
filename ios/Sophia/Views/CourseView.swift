@@ -18,10 +18,10 @@ struct CourseView: View {
     @State private var showQuizPaywall: Bool = false
     /// Second-chance comparison paywall (both offers, like the end of onboarding), shown after
     /// the user closes the quiz / course-unlock paywall without subscribing.
-    @State private var showComparisonPaywall: Bool = false
     /// Comparison paywall stacked *on top* of the quiz paywall (second-chance, quiz flow only).
     @State private var showComparisonOverQuiz: Bool = false
-    @State private var chainComparisonAfterPaywall: Bool = false
+    /// Comparison paywall stacked *on top* of the course-unlock paywall (second-chance).
+    @State private var showComparisonOverDebloquer: Bool = false
     @State private var endPhase: CourseEndPhase = .none
     @State private var previousSubjectCount: Int = 0
     @State private var previousSubjectXP: Int = 0
@@ -166,16 +166,28 @@ struct CourseView: View {
             let g = UIImpactFeedbackGenerator(style: .light)
             g.impactOccurred()
         }
-        .fullScreenCover(isPresented: $showDebloquerPaywall, onDismiss: { presentComparisonIfChained() }) {
+        .fullScreenCover(isPresented: $showDebloquerPaywall) {
             SophiaPaywallView(
                 context: .debloquerCours,
                 store: store,
                 course: course,
                 secondsUntilReset: progressManager.secondsUntilDailyReset(),
-                onPurchased: { chainComparisonAfterPaywall = false; showDebloquerPaywall = false },
-                onRestored: { chainComparisonAfterPaywall = false; showDebloquerPaywall = false },
-                onDismissed: { chainComparisonAfterPaywall = true; showDebloquerPaywall = false }
+                onPurchased: { showComparisonOverDebloquer = false; showDebloquerPaywall = false },
+                onRestored: { showComparisonOverDebloquer = false; showDebloquerPaywall = false },
+                // Fermer présente le paywall comparatif PAR-DESSUS (empilé), sans fermer le
+                // premier — sauf si l'utilisateur est déjà premium.
+                onDismissed: {
+                    if store.isPremium { showDebloquerPaywall = false }
+                    else { showComparisonOverDebloquer = true }
+                }
             )
+            .fullScreenCover(isPresented: $showComparisonOverDebloquer) {
+                OnboardingV2PaywallComparison(
+                    store: store,
+                    onSubscribed: { showComparisonOverDebloquer = false; showDebloquerPaywall = false },
+                    onClose: { showComparisonOverDebloquer = false; showDebloquerPaywall = false }
+                )
+            }
         }
         .fullScreenCover(isPresented: $showQuizPaywall) {
             SophiaPaywallView(
@@ -198,13 +210,6 @@ struct CourseView: View {
                     onClose: { showComparisonOverQuiz = false; showQuizPaywall = false }
                 )
             }
-        }
-        .fullScreenCover(isPresented: $showComparisonPaywall) {
-            OnboardingV2PaywallComparison(
-                store: store,
-                onSubscribed: { showComparisonPaywall = false },
-                onClose: { showComparisonPaywall = false }
-            )
         }
         .onAppear {
             withAnimation(.spring(response: 0.5, dampingFraction: 0.8).delay(0.1)) {
@@ -427,18 +432,6 @@ struct CourseView: View {
     private func presentDebloquerPaywall() {
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
         showDebloquerPaywall = true
-    }
-
-    /// After the user closes the quiz / course-unlock paywall without subscribing, present the
-    /// comparison paywall (both offers, like the end of onboarding) as a second chance.
-    private func presentComparisonIfChained() {
-        guard chainComparisonAfterPaywall else { return }
-        chainComparisonAfterPaywall = false
-        guard !store.isPremium else { return }
-        // Small delay so the first cover finishes dismissing before presenting the next.
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
-            showComparisonPaywall = true
-        }
     }
 
     /// Third lesson (index 2) of the first course ever opened — once per install.

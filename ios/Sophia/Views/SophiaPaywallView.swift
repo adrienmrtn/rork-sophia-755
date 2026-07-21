@@ -29,7 +29,8 @@ enum SophiaPaywallContext: String, Identifiable {
 /// - `.offreDiscount` → `SophiaDiscountPaywall` (flash sale, `special_promo`, 19,99 €/an).
 /// - `.entrainement` → `SophiaTrainingPaywall` (sells the spaced-repetition training method).
 /// - `.quizz` → `SophiaQuizPaywall` (App Store rating, auto-playing quiz demo, reviews carousel).
-/// - everything else → `SophiaStandardPaywall` (single annual plan, 39,99 €/an, 3-day trial).
+/// - `.debloquerCours` → `SophiaCourseUnlockPaywall` (rating, 6-courses/day stat, reviews, countdown).
+/// - `.finOnboarding` → `SophiaStandardPaywall` (single annual plan, 39,99 €/an, 3-day trial).
 struct SophiaPaywallView: View {
     let context: SophiaPaywallContext
     let store: StoreViewModel
@@ -65,7 +66,16 @@ struct SophiaPaywallView: View {
                 onRestored: onRestored,
                 onDismissed: onDismissed
             )
-        case .debloquerCours, .finOnboarding:
+        case .debloquerCours:
+            SophiaCourseUnlockPaywall(
+                store: store,
+                course: course,
+                secondsUntilReset: secondsUntilReset,
+                onPurchased: onPurchased,
+                onRestored: onRestored,
+                onDismissed: onDismissed
+            )
+        case .finOnboarding:
             SophiaStandardPaywall(
                 context: context,
                 store: store,
