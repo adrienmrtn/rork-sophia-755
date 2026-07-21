@@ -14,6 +14,14 @@ final class OnboardingV2ViewModel {
     var objectiveKeys: [String] = []
     /// Cours « aimés » lors du swipe — utilisés pour préremplir les favoris.
     var likedCourseIds: [String] = []
+    /// Temps d'écran quotidien déclaré (en minutes, par blocs de 30) — écran « temps téléphone ».
+    /// Sert à l'écran « ta vie en années » (remplissage rouge).
+    var phoneDailyMinutes: Int = 180
+
+    /// Nombre d'années (sur une vie de 80 ans) équivalent au temps passé sur le téléphone.
+    var phoneYearsOverLife: Double {
+        80.0 * Double(phoneDailyMinutes) / (24.0 * 60.0)
+    }
 
     // MARK: - Objectifs
 
@@ -46,33 +54,6 @@ final class OnboardingV2ViewModel {
         objectiveKeys.contains(key)
     }
 
-    /// Écrans « valeur » spécifiques déclenchés par les objectifs, dans l'ordre de sélection,
-    /// dédupliqués (les objectifs cultivate/impress/curiosity partagent le même écran « questions »,
-    /// qui n'apparaît donc qu'une seule fois).
-    enum ObjectivePage: Hashable {
-        case questions   // cultivate / impress / curiosity
-        case screenTime  // reduceScreen
-        case exams       // exams
-    }
-
-    var objectivePages: [ObjectivePage] {
-        var pages: [ObjectivePage] = []
-        var addedQuestions = false
-        for key in objectiveKeys {
-            switch key {
-            case "cultivate", "impress", "curiosity":
-                if !addedQuestions { pages.append(.questions); addedQuestions = true }
-            case "reduceScreen":
-                pages.append(.screenTime)
-            case "exams":
-                pages.append(.exams)
-            default:
-                break
-            }
-        }
-        return pages
-    }
-
     /// Matières associées à chaque objectif (source des recommandations + swipe).
     static func subjects(for objectiveKey: String?) -> [String] {
         switch objectiveKey {
@@ -97,13 +78,13 @@ final class OnboardingV2ViewModel {
 
     // MARK: - Recommandations (swipe)
 
-    /// 8 cours à swiper, dérivés des matières des objectifs (fallback : starters curatés).
+    /// 5 cours à swiper, dérivés des matières des objectifs (fallback : starters curatés).
     func recommendedCourses(language: AppLanguage) -> [Course] {
         let interests = Set(selectedSubjects)
         return OnboardingCourseRecommender.recommendedCourses(
             interests: interests,
             language: language,
-            limit: 8
+            limit: 5
         )
     }
 

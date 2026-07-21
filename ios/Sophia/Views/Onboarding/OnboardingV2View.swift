@@ -1,11 +1,12 @@
 import SwiftUI
 import RevenueCat
 
-/// Coordinateur d'onboarding V2 — séquence **dynamique** selon les objectifs sélectionnés.
+/// Coordinateur d'onboarding V2 — séquence **fixe** (les pages valeur ne dépendent plus des
+/// objectifs sélectionnés).
 ///
-/// Fixe : Welcome · Langue · Objectifs (multi) · « Sophia va t'aider » · [pages objectifs] ·
-/// Swipe · Avis · Loading · **Login** · Essai · Rappel · Paywall annuel · Paywall comparatif.
-/// Les pages objectifs dépendent de la sélection (dédupliquées).
+/// Welcome · Langue · Objectifs (multi) · « Sophia va t'aider » · « Me cultiver » (questions) ·
+/// Temps d'écran (slider) · Ta vie en années · « Transforme ce temps » · « Fais bon usage » ·
+/// Swipe · Loading · **Login** · Essai · Rappel · Paywall annuel · Paywall comparatif.
 struct OnboardingV2View: View {
     @Environment(LanguageManager.self) private var languageManager
     @Environment(AuthService.self) private var auth
@@ -20,26 +21,20 @@ struct OnboardingV2View: View {
 
     private enum Screen: Hashable {
         case welcome, language, objectives, objectiveIntro
-        case questions, screenTime, exams
-        case swipe, review, loading, login, trialSteps, reminder, paywallAnnual, paywallComparison
+        case questions, phoneTime, yearsGrid, transform, review
+        case swipe, loading, login, trialSteps, reminder, paywallAnnual, paywallComparison
     }
 
-    /// Séquence complète, recalculée à partir des objectifs (stable une fois passés les objectifs).
+    /// Séquence complète et fixe. Les pages « valeur » (me cultiver → temps d'écran) sont
+    /// désormais montrées quel que soit l'objectif choisi.
     private var screens: [Screen] {
-        var s: [Screen] = [.welcome, .language, .objectives, .objectiveIntro]
-        for page in vm.objectivePages {
-            switch page {
-            case .questions: s.append(.questions)
-            case .screenTime: s.append(.screenTime)
-            case .exams: s.append(.exams)
-            }
-        }
-        s += [.swipe, .review, .loading, .login, .trialSteps, .reminder, .paywallAnnual, .paywallComparison]
-        return s
+        [.welcome, .language, .objectives, .objectiveIntro,
+         .questions, .phoneTime, .yearsGrid, .transform, .review,
+         .swipe, .loading, .login, .trialSteps, .reminder, .paywallAnnual, .paywallComparison]
     }
 
     private static let dotScreens: Set<Screen> = [
-        .objectives, .objectiveIntro, .questions, .screenTime, .exams, .swipe, .review, .loading,
+        .objectives, .objectiveIntro, .questions, .phoneTime, .yearsGrid, .review, .swipe, .loading,
     ]
 
     private var current: Screen {
@@ -88,14 +83,16 @@ struct OnboardingV2View: View {
             OnboardingV2ObjectiveIntro(onNext: advance)
         case .questions:
             OnboardingV2QuestionsScreen(onNext: advance)
-        case .screenTime:
-            OnboardingV2ScreenTimeGraph(onNext: advance)
-        case .exams:
-            OnboardingV2ExamsReviews(onNext: advance)
-        case .swipe:
-            OnboardingV2SwipeCourses(vm: vm, onNext: advance)
+        case .phoneTime:
+            OnboardingV2PhoneTime(vm: vm, onNext: advance)
+        case .yearsGrid:
+            OnboardingV2YearsGrid(vm: vm, onNext: advance)
+        case .transform:
+            OnboardingV2Transform(onNext: advance)
         case .review:
             OnboardingV2Review(onNext: advance)
+        case .swipe:
+            OnboardingV2SwipeCourses(vm: vm, onNext: advance)
         case .loading:
             OnboardingV2Loading(onNext: advance)
         case .login:
