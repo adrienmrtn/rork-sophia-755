@@ -346,6 +346,10 @@ struct CourseView: View {
                 }
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
+            // Restaure le slide entre les pages : sur un TabView `.page`, seul ce modifieur
+            // anime un changement *programmatique* de sélection (bouton « Continuer »).
+            // `withAnimation` seul n'anime pas le slide sur iOS 17/18.
+            .animation(.spring(response: 0.4), value: currentIndex)
 
             bottomButton
         }
@@ -384,9 +388,8 @@ struct CourseView: View {
                 }
             } else {
                 sessionTracker?.recordContinueTap()
-                withAnimation(.spring(response: 0.4)) {
-                    currentIndex += 1
-                }
+                // Le slide est animé par `.animation(_:value: currentIndex)` sur le TabView.
+                currentIndex += 1
                 progressManager.updateLessonProgress(courseId: course.id, lessonIndex: currentIndex)
             }
         } label: {

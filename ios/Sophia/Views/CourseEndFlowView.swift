@@ -87,47 +87,52 @@ struct CourseCompletedView: View {
             DS.canvas.ignoresSafeArea()
 
             VStack(spacing: 0) {
-                ScrollView {
-                    VStack(spacing: 0) {
-                        Spacer(minLength: 20)
+                GeometryReader { geo in
+                    ScrollView {
+                        VStack(spacing: 0) {
+                            // Spacers extensibles en haut et en bas : le groupe (vignette,
+                            // titre, carte) est centré verticalement dans l'espace au-dessus
+                            // des boutons, pour un équilibre haut / bas.
+                            Spacer(minLength: 28)
 
-                        thumbnail
-                            .scaleEffect(thumbScale)
-                            .opacity(appeared ? 1 : 0)
+                            thumbnail
+                                .scaleEffect(thumbScale)
+                                .opacity(appeared ? 1 : 0)
 
-                        Spacer(minLength: 18)
+                            Spacer().frame(height: 18)
 
-                        Text(languageManager.text("course.completed"))
-                            .font(DS.title(.largeTitle, .semibold))
-                            .foregroundStyle(DS.ink)
-                            .multilineTextAlignment(.center)
-                            .padding(.horizontal, 24)
-                            .opacity(showTitle ? 1 : 0)
-                            .offset(y: showTitle ? 0 : 12)
+                            Text(languageManager.text("course.completed"))
+                                .font(DS.title(.largeTitle, .semibold))
+                                .foregroundStyle(DS.ink)
+                                .multilineTextAlignment(.center)
+                                .padding(.horizontal, 24)
+                                .opacity(showTitle ? 1 : 0)
+                                .offset(y: showTitle ? 0 : 12)
 
-                        Spacer(minLength: 20)
+                            if phase != .celebration {
+                                progressionCard
+                                    .padding(.horizontal, 20)
+                                    .padding(.top, 22)
+                                    .opacity(showCard ? 1 : 0)
+                                    .offset(y: showCard ? 0 : 16)
+                                    .transition(.opacity.combined(with: .offset(y: 16)))
+                            }
 
-                        if phase != .celebration {
-                            progressionCard
-                                .padding(.horizontal, 20)
-                                .opacity(showCard ? 1 : 0)
-                                .offset(y: showCard ? 0 : 16)
-                                .transition(.opacity.combined(with: .offset(y: 16)))
+                            if showFreemiumGate && phase == .actions {
+                                freemiumNote
+                                    .padding(.horizontal, 20)
+                                    .padding(.top, 14)
+                                    .opacity(showNote ? 1 : 0)
+                                    .offset(y: showNote ? 0 : 8)
+                            }
+
+                            Spacer(minLength: 28)
                         }
-
-                        if showFreemiumGate && phase == .actions {
-                            freemiumNote
-                                .padding(.horizontal, 20)
-                                .padding(.top, 14)
-                                .opacity(showNote ? 1 : 0)
-                                .offset(y: showNote ? 0 : 8)
-                        }
-
-                        Spacer(minLength: 20)
+                        .frame(maxWidth: .infinity)
+                        .frame(minHeight: geo.size.height)
                     }
-                    .frame(maxWidth: .infinity)
+                    .scrollIndicators(.hidden)
                 }
-                .scrollIndicators(.hidden)
 
                 // Actions ancrées en bas de l'écran (plus de vide entre le CTA et le bas).
                 if phase == .actions {
