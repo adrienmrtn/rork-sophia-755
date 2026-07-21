@@ -553,7 +553,7 @@ private struct SubjectProgressCard: View {
 
             Spacer(minLength: 0)
         }
-        .frame(maxWidth: .infinity, minHeight: 168, alignment: .topLeading)
+        .frame(maxWidth: .infinity, minHeight: 138, alignment: .topLeading)
         .dsCard(padding: 14)
     }
 

@@ -20,6 +20,10 @@ struct SophiaApp: App {
         #endif
         AnalyticsService.configure()
         AuthService.shared.start()
+        // Les boutons dans un `ScrollView` (ex. « Commencer » sur les cartes accueil) répondent
+        // au tap immédiatement, sans le délai UIKit qui obligeait à attendre la fin du
+        // défilement/snap avant que le tap ne soit pris en compte.
+        UIScrollView.appearance().delaysContentTouches = false
         // Belt-and-suspenders: `PlusJakartaSans.ttf` is already declared in `UIAppFonts`
         // (Info.plist), which the system loads automatically at launch, but registering it
         // explicitly here too guarantees it's available before the very first screen draws

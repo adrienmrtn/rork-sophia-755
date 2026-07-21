@@ -16,6 +16,10 @@ struct CourseView: View {
     @State private var appeared: Bool = false
     @State private var showDebloquerPaywall: Bool = false
     @State private var showQuizPaywall: Bool = false
+    /// Second-chance comparison paywall (both offers, like the end of onboarding), shown after
+    /// the user closes the quiz / course-unlock paywall without subscribing.
+    @State private var showComparisonPaywall: Bool = false
+    @State private var chainComparisonAfterPaywall: Bool = false
     @State private var endPhase: CourseEndPhase = .none
     @State private var previousSubjectCount: Int = 0
     @State private var previousSubjectXP: Int = 0
@@ -160,25 +164,32 @@ struct CourseView: View {
             let g = UIImpactFeedbackGenerator(style: .light)
             g.impactOccurred()
         }
-        .fullScreenCover(isPresented: $showDebloquerPaywall) {
+        .fullScreenCover(isPresented: $showDebloquerPaywall, onDismiss: { presentComparisonIfChained() }) {
             SophiaPaywallView(
                 context: .debloquerCours,
                 store: store,
                 course: course,
                 secondsUntilReset: progressManager.secondsUntilDailyReset(),
-                onPurchased: { showDebloquerPaywall = false },
-                onRestored: { showDebloquerPaywall = false },
-                onDismissed: { showDebloquerPaywall = false }
+                onPurchased: { chainComparisonAfterPaywall = false; showDebloquerPaywall = false },
+                onRestored: { chainComparisonAfterPaywall = false; showDebloquerPaywall = false },
+                onDismissed: { chainComparisonAfterPaywall = true; showDebloquerPaywall = false }
             )
         }
-        .fullScreenCover(isPresented: $showQuizPaywall) {
+        .fullScreenCover(isPresented: $showQuizPaywall, onDismiss: { presentComparisonIfChained() }) {
             SophiaPaywallView(
                 context: .quizz,
                 store: store,
                 course: course,
-                onPurchased: { showQuizPaywall = false },
-                onRestored: { showQuizPaywall = false },
-                onDismissed: { showQuizPaywall = false }
+                onPurchased: { chainComparisonAfterPaywall = false; showQuizPaywall = false },
+                onRestored: { chainComparisonAfterPaywall = false; showQuizPaywall = false },
+                onDismissed: { chainComparisonAfterPaywall = true; showQuizPaywall = false }
+            )
+        }
+        .fullScreenCover(isPresented: $showComparisonPaywall) {
+            OnboardingV2PaywallComparison(
+                store: store,
+                onSubscribed: { showComparisonPaywall = false },
+                onClose: { showComparisonPaywall = false }
             )
         }
         .onAppear {
@@ -399,6 +410,18 @@ struct CourseView: View {
     private func presentDebloquerPaywall() {
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
         showDebloquerPaywall = true
+    }
+
+    /// After the user closes the quiz / course-unlock paywall without subscribing, present the
+    /// comparison paywall (both offers, like the end of onboarding) as a second chance.
+    private func presentComparisonIfChained() {
+        guard chainComparisonAfterPaywall else { return }
+        chainComparisonAfterPaywall = false
+        guard !store.isPremium else { return }
+        // Small delay so the first cover finishes dismissing before presenting the next.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+            showComparisonPaywall = true
+        }
     }
 
     /// Third lesson (index 2) of the first course ever opened — once per install.

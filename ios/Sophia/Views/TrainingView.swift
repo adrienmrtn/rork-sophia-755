@@ -12,6 +12,9 @@ import SwiftUI
 struct TrainingView: View {
     @Environment(LanguageManager.self) private var languageManager
     let progressManager: ProgressManager
+    var isPremium: Bool = false
+    /// Ouvre le paywall « quizz » (freemium : l'entraînement se remplit via les quiz, premium).
+    var onShowQuizPaywall: (() -> Void)? = nil
 
     private struct SessionItem: Identifiable {
         let course: Course
@@ -108,6 +111,10 @@ struct TrainingView: View {
                         lockedContent
                     }
 
+                    if !isPremium {
+                        freemiumUnlockButton
+                    }
+
                     Spacer(minLength: 40)
                 }
                 .padding(.horizontal, 20)
@@ -187,6 +194,22 @@ struct TrainingView: View {
 
             howItWorksCard
         }
+    }
+
+    // CTA freemium : l'entraînement se remplit avec les questions des quiz (premium).
+    private var freemiumUnlockButton: some View {
+        Button {
+            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+            onShowQuizPaywall?()
+        } label: {
+            HStack(spacing: 8) {
+                Image(systemName: "lock.open.fill")
+                    .font(.jakarta(size: 14, weight: .semibold))
+                Text(languageManager.text("profile.quiz.unlock"))
+            }
+        }
+        .buttonStyle(DSPrimaryButtonStyle())
+        .padding(.horizontal, 40)
     }
 
     private func trainingIcon(_ systemName: String) -> some View {

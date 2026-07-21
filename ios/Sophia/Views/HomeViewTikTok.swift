@@ -78,8 +78,9 @@ struct HomeViewTikTok: View {
                             registerDiscountSwipe()
                         }
                     }
+                    // Fondu d'entrée sans `scaleEffect` : la mise à l'échelle du conteneur
+                    // perturbait le hit-testing du bouton « Commencer » pendant l'animation.
                     .opacity(cardAppeared ? 1 : 0)
-                    .scaleEffect(cardAppeared ? 1 : 0.97)
                 }
             }
 

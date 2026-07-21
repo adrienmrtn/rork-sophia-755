@@ -19,6 +19,11 @@ class DiscountOfferManager {
     private let expiredKey: String = "sophia_discount_offer_expired"
     private let swipeCountKey: String = "sophia_discount_swipe_count"
     private let giftPendingKey: String = "sophia_discount_gift_pending"
+    /// Jour (yyyy-MM-dd) où l'offre a été montrée pour la dernière fois — l'offre n'apparaît
+    /// qu'une seule fois par jour.
+    private let lastShownDayKey: String = "sophia_discount_last_shown_day"
+    /// Jour auquel se rapporte `swipeCount` — remis à zéro à chaque nouveau jour.
+    private let swipeDayKey: String = "sophia_discount_swipe_day"
 
     /// Total promo duration: 60 minutes.
     static let duration: TimeInterval = 60 * 60
@@ -35,6 +40,27 @@ class DiscountOfferManager {
     /// True once the surprise gift is on screen waiting to be opened. Persisted so it
     /// survives the user leaving and coming back before tapping it open.
     private(set) var isGiftPending: Bool = false
+
+    /// Day (yyyy-MM-dd) the offer was last shown, and the day `swipeCount` belongs to.
+    private var lastShownDay: String?
+    private var swipeDay: String?
+
+    /// Today as a stable `yyyy-MM-dd` string (device calendar).
+    private static func dayString(_ date: Date = Date()) -> String {
+        let comps = Calendar.current.dateComponents([.year, .month, .day], from: date)
+        return String(format: "%04d-%02d-%02d", comps.year ?? 0, comps.month ?? 0, comps.day ?? 0)
+    }
+
+    /// True if the discount offer has already been shown today (once-per-day cap).
+    var wasShownToday: Bool {
+        lastShownDay == Self.dayString()
+    }
+
+    /// Records that the discount paywall was shown today (called at each presentation).
+    func markShownToday() {
+        lastShownDay = Self.dayString()
+        save()
+    }
 
     /// Bumped every second while the offer is active so SwiftUI views observing this
     /// `@Observable` instance re-render the countdown.
@@ -77,11 +103,28 @@ class DiscountOfferManager {
     /// the surprise gift becomes pending (shown over the app) — but the discount clock
     /// only starts when the user actually opens the gift (`triggerIfNeeded`).
     func registerSwipe() {
+        // Once-per-day: if the offer already appeared today, don't build toward it again.
+        if wasShownToday { return }
+        resetForNewDayIfNeeded()
         guard !isExpiredForever, startDate == nil, !isGiftPending else { return }
         swipeCount += 1
         if swipeCount >= Self.swipesBeforeGift {
             isGiftPending = true
         }
+        save()
+    }
+
+    /// Fresh day → reset the swipe counter and any prior offer state so the discount can be
+    /// re-earned (via the 3rd swipe) exactly once on the new day.
+    private func resetForNewDayIfNeeded() {
+        let today = Self.dayString()
+        guard swipeDay != today else { return }
+        swipeDay = today
+        swipeCount = 0
+        isGiftPending = false
+        startDate = nil
+        isExpiredForever = false
+        stopTicker()
         save()
     }
 
@@ -154,6 +197,8 @@ class DiscountOfferManager {
         isExpiredForever = defaults.bool(forKey: expiredKey)
         swipeCount = defaults.integer(forKey: swipeCountKey)
         isGiftPending = defaults.bool(forKey: giftPendingKey)
+        lastShownDay = defaults.string(forKey: lastShownDayKey)
+        swipeDay = defaults.string(forKey: swipeDayKey)
     }
 
     private func save() {
@@ -164,5 +209,7 @@ class DiscountOfferManager {
         defaults.set(isExpiredForever, forKey: expiredKey)
         defaults.set(swipeCount, forKey: swipeCountKey)
         defaults.set(isGiftPending, forKey: giftPendingKey)
+        defaults.set(lastShownDay, forKey: lastShownDayKey)
+        defaults.set(swipeDay, forKey: swipeDayKey)
     }
 }
