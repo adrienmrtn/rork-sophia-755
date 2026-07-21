@@ -4,7 +4,6 @@ import RevenueCatUI
 struct ContentView: View {
     @Environment(LanguageManager.self) private var languageManager
     @Environment(AuthService.self) private var auth
-    @Environment(\.scenePhase) private var scenePhase
     var onResetOnboarding: (() -> Void)? = nil
     @Binding var deepLinkCourseId: String?
 
@@ -34,6 +33,7 @@ struct ContentView: View {
                         onShowDiscountPaywall: {
                             if storeVM.isPremium { return }
                             AnalyticsService.trackDiscountOfferViewed(source: "home_banner")
+                            discountManager.markShownToday()
                             paywallContext = .offreDiscount
                         }
                     )
@@ -54,7 +54,14 @@ struct ContentView: View {
                 }
 
                 Tab(languageManager.text("tab.training"), systemImage: "arrow.triangle.2.circlepath", value: 3) {
-                    TrainingView(progressManager: progressManager)
+                    TrainingView(
+                        progressManager: progressManager,
+                        isPremium: storeVM.isPremium,
+                        onShowQuizPaywall: {
+                            if storeVM.isPremium { return }
+                            paywallContext = .quizz
+                        }
+                    )
                 }
 
                 Tab(languageManager.text("tab.profile"), systemImage: "person.fill", value: 4) {
@@ -127,6 +134,7 @@ struct ContentView: View {
                 DiscountGiftOverlay(onOpened: {
                     discountManager.consumeGift()
                     discountManager.triggerIfNeeded()
+                    discountManager.markShownToday()
                     AnalyticsService.trackDiscountOfferViewed(source: "gift")
                     paywallContext = .offreDiscount
                 })
@@ -141,6 +149,7 @@ struct ContentView: View {
                paywallContext == nil {
                 DiscountSideTab(discountManager: discountManager) {
                     AnalyticsService.trackDiscountOfferViewed(source: "side_tab")
+                    discountManager.markShownToday()
                     paywallContext = .offreDiscount
                 }
                 .transition(.move(edge: .trailing).combined(with: .opacity))
@@ -209,30 +218,6 @@ struct ContentView: View {
             openDeepLinkedCourse(courseId)
         }
         .trackAnalyticsLifecycle(isPremium: storeVM.isPremium)
-        .onAppear { maybeRepopDiscountOnOpen() }
-        .onChange(of: scenePhase) { oldPhase, newPhase in
-            guard newPhase == .active, oldPhase != .active else { return }
-            maybeRepopDiscountOnOpen()
-        }
-    }
-
-    /// Re-shows the flash discount paywall on every app open for freemium users, once the
-    /// offer has been triggered at least once (via the surprise gift). The 1-hour timer is
-    /// re-armed each time purely for psychological urgency — expiry no longer blocks the
-    /// re-pop. Skipped while a course, the gift, or another paywall is already on screen.
-    private func maybeRepopDiscountOnOpen() {
-        // Small delay so the async premium/offerings state has a chance to resolve at launch.
-        Task { @MainActor in
-            try? await Task.sleep(nanoseconds: 800_000_000)
-            guard !storeVM.isPremium,
-                  discountManager.hasBeenTriggered,
-                  !discountManager.isGiftPending,
-                  pendingCourse == nil,
-                  paywallContext == nil else { return }
-            discountManager.restart()
-            AnalyticsService.trackDiscountOfferViewed(source: "app_open")
-            paywallContext = .offreDiscount
-        }
     }
 
     private func courseSourceForCurrentTab() -> String {
