@@ -1,17 +1,27 @@
 import Foundation
 
-/// Centralized freemium rules for V7.
+/// Centralized freemium rules.
 ///
-/// Free users can open any course and read lesson 1 (intro). Lessons 2+ show a
-/// blurred teaser with an in-course unlock CTA. Course completion and quizzes
-/// require premium.
+/// Free users get **one free course per day** (the first course they open on a given local
+/// day). That course is fully readable and can be completed. Every *other* course opened the
+/// same day is intro-only (lesson 1): lessons 2+ show a blurred teaser with an in-course
+/// unlock CTA that opens the `debloquer_cours` paywall.
+///
+/// The quiz is always premium — even on the daily free course — and opens the `quizz` paywall.
 enum FreemiumGate {
-    /// Lesson index 0 is the free intro; pages 2+ are teaser-only for free users.
-    static func isLessonContentLocked(lessonIndex: Int, isPremium: Bool) -> Bool {
-        !isPremium && lessonIndex >= 1
+    /// Whether a lesson page must be hidden behind the blur + lock overlay.
+    ///
+    /// - Premium: nothing locked.
+    /// - Daily free course: nothing locked (full read + completion).
+    /// - Any other course that day: lesson index 0 (intro) is free, pages 2+ are locked.
+    static func isLessonContentLocked(lessonIndex: Int, isPremium: Bool, isDailyFreeCourse: Bool) -> Bool {
+        if isPremium || isDailyFreeCourse { return false }
+        return lessonIndex >= 1
     }
 
-    static func canCompleteCourse(isPremium: Bool) -> Bool {
-        isPremium
+    /// Whether the user may reach the course-completion screen (finish all pages).
+    /// Allowed for premium users and for the daily free course.
+    static func canCompleteCourse(isPremium: Bool, isDailyFreeCourse: Bool) -> Bool {
+        isPremium || isDailyFreeCourse
     }
 }

@@ -81,6 +81,52 @@ class StoreViewModel {
         offerings?.offering(identifier: "special_promo")?.package(identifier: "$rc_annual")
     }
 
+    /// Offering matching a context identifier (e.g. `quizz`, `debloquer_cours`), if loaded.
+    func offering(identifier: String) -> Offering? {
+        guard let offerings else { return nil }
+        return offerings.all[identifier] ?? offerings.offering(identifier: identifier)
+    }
+
+    /// Annual package for a specific offering identifier, falling back to the current
+    /// offering's annual package. All Sophia offerings mirror the same underlying products,
+    /// so pricing is identical — this mainly keeps analytics attribution on the right offering.
+    func annualPackage(forOfferingIdentifier identifier: String) -> Package? {
+        offering(identifier: identifier)?.package(identifier: "$rc_annual") ?? annualPackage
+    }
+
+    // MARK: - Discount (special_promo) pricing
+
+    struct DiscountPriceDisplay {
+        /// Promo price for the annual plan (e.g. "19,99 €").
+        let promoYearly: String
+        /// Regular annual price shown struck-through (e.g. "39,99 €"), when available.
+        let regularYearly: String?
+        /// Savings badge like "-50%", when computable.
+        let discountBadge: String?
+    }
+
+    func discountPriceDisplay(language: AppLanguage) -> DiscountPriceDisplay {
+        guard let promo = promoPackage?.storeProduct else {
+            return DiscountPriceDisplay(
+                promoYearly: AppLocalizable.string("paywall.discount.fallbackPrice", language: language),
+                regularYearly: annualPackage?.storeProduct.localizedPriceString,
+                discountBadge: nil
+            )
+        }
+        let regular = annualPackage?.storeProduct
+        var badge: String? = nil
+        if let regular, regular.price > 0, regular.price > promo.price {
+            let ratio = (regular.price - promo.price) / regular.price
+            let percent = Int((ratio as NSDecimalNumber).doubleValue * 100)
+            if percent > 0 { badge = "-\(percent)%" }
+        }
+        return DiscountPriceDisplay(
+            promoYearly: promo.localizedPriceString,
+            regularYearly: regular?.localizedPriceString,
+            discountBadge: badge
+        )
+    }
+
     /// Logs current offering packages and whether StoreKit reports an intro offer (for trial diagnostics).
     func logOnboardingPurchaseDiagnostics() {
         guard let offerings else {

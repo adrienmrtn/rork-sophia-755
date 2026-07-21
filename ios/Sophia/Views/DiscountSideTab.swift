@@ -1,7 +1,9 @@
 import SwiftUI
 
-/// Flash-discount pull tab that pokes in from the right edge of the screen while the
-/// 60-minute offer is active. Bobs and glows to draw attention; tapping opens the paywall.
+/// Flash-discount pull tab that pokes in from the right edge while the offer clock is live.
+/// Redesigned in the app's calm design system (`DS`): a clean navy pill with a hairline
+/// edge and a soft shadow, a small flame glyph and the live countdown. Gently bobs to draw
+/// attention without the previous cartoon pink/gold look. Tapping opens the discount paywall.
 struct DiscountSideTab: View {
     @Environment(LanguageManager.self) private var languageManager
     let discountManager: DiscountOfferManager
@@ -9,14 +11,9 @@ struct DiscountSideTab: View {
 
     @State private var appeared = false
     @State private var bob = false
-    @State private var glow = false
     @State private var pressed = false
 
-    private let ink = Color.black
-    private let pink = Color(red: 1.0, green: 0.553, blue: 0.706)
-    private let gold = Color(red: 1.0, green: 0.84, blue: 0.35)
-
-    private let corner: CGFloat = 20
+    private let corner: CGFloat = 18
 
     var body: some View {
         // Observe the per-second tick so the countdown refreshes live.
@@ -24,7 +21,7 @@ struct DiscountSideTab: View {
         return HStack(spacing: 0) {
             Spacer(minLength: 0)
             Button {
-                UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+                UIImpactFeedbackGenerator(style: .light).impactOccurred()
                 withAnimation(.spring(response: 0.2, dampingFraction: 0.5)) { pressed = true }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                     withAnimation(.spring(response: 0.3, dampingFraction: 0.6)) { pressed = false }
@@ -34,52 +31,48 @@ struct DiscountSideTab: View {
                 content
             }
             .buttonStyle(.plain)
-            .offset(x: appeared ? (bob ? 0 : 8) : 120)
+            .offset(x: appeared ? (bob ? 0 : 6) : 120)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .trailing)
         .offset(y: -30)
         .allowsHitTesting(true)
         .onAppear {
-            withAnimation(.spring(response: 0.6, dampingFraction: 0.72).delay(0.2)) {
+            withAnimation(.spring(response: 0.6, dampingFraction: 0.75).delay(0.2)) {
                 appeared = true
             }
-            withAnimation(.easeInOut(duration: 1.1).repeatForever(autoreverses: true)) {
+            withAnimation(.easeInOut(duration: 1.4).repeatForever(autoreverses: true)) {
                 bob = true
-            }
-            withAnimation(.easeInOut(duration: 1.3).repeatForever(autoreverses: true)) {
-                glow = true
             }
         }
     }
 
     private var content: some View {
         VStack(spacing: 5) {
-            Image(systemName: "bolt.fill")
-                .font(.jakarta(size: 20, weight: .black))
-                .foregroundStyle(gold)
-                .shadow(color: .black.opacity(0.25), radius: 1, y: 1)
+            Image(systemName: "flame.fill")
+                .font(.jakarta(size: 17, weight: .bold))
+                .foregroundStyle(.white)
 
             Text(languageManager.text("discount.sideTab.label"))
-                .font(.jakarta(size: 9, weight: .black, design: .rounded))
-                .foregroundStyle(.white)
+                .font(.jakarta(size: 9, weight: .bold, design: .rounded))
+                .foregroundStyle(.white.opacity(0.85))
                 .tracking(0.6)
 
             Text(discountManager.formattedRemaining)
-                .font(.jakarta(size: 14, weight: .heavy, design: .rounded))
+                .font(.jakarta(size: 13, weight: .heavy, design: .rounded))
                 .foregroundStyle(.white)
                 .monospacedDigit()
                 .contentTransition(.numericText(countsDown: true))
         }
         .padding(.horizontal, 12)
         .padding(.vertical, 12)
-        .frame(width: 74)
+        .frame(width: 66)
         .background(
             UnevenRoundedRectangle(
                 topLeadingRadius: corner,
                 bottomLeadingRadius: corner,
                 style: .continuous
             )
-            .fill(pink)
+            .fill(DS.accent)
         )
         .overlay(
             UnevenRoundedRectangle(
@@ -87,24 +80,18 @@ struct DiscountSideTab: View {
                 bottomLeadingRadius: corner,
                 style: .continuous
             )
-            .strokeBorder(ink, lineWidth: 3)
+            .strokeBorder(.white.opacity(0.15), lineWidth: 1)
         )
         .overlay(alignment: .leading) {
             // Little grip dots hinting it's pull-able.
             VStack(spacing: 4) {
                 ForEach(0..<3, id: \.self) { _ in
-                    Circle().fill(ink.opacity(0.35)).frame(width: 4, height: 4)
+                    Circle().fill(.white.opacity(0.4)).frame(width: 3, height: 3)
                 }
             }
             .padding(.leading, 6)
         }
-        .background(alignment: .center) {
-            // Glow halo behind the tab.
-            RoundedRectangle(cornerRadius: corner, style: .continuous)
-                .fill(gold.opacity(glow ? 0.5 : 0.25))
-                .blur(radius: 14)
-                .scaleEffect(glow ? 1.15 : 0.95)
-        }
+        .shadow(color: DS.accent.opacity(0.3), radius: 12, x: -2, y: 6)
         .scaleEffect(pressed ? 0.92 : 1)
     }
 }

@@ -567,6 +567,28 @@ enum AppLocalizable {
         "paywall.trialBadge": "Essai gratuit 3 jours",
         "paywall.restoreRow": "Restaurer · Conditions · Confidentialité",
         "paywall.restore": "Restaurer",
+
+        // Native paywalls (quiz / course unlock)
+        "paywall.quiz.title": "Débloque le quiz",
+        "paywall.quiz.subtitle": "Teste tes connaissances et ancre ce que tu viens d'apprendre avec le quiz de ce cours.",
+        "paywall.course.title": "Ton cours gratuit du jour est terminé",
+        "paywall.course.subtitle": "Tu as profité de ton cours gratuit du jour. Reviens demain, ou débloque tout dès maintenant.",
+        "paywall.course.subtitle.named": "Tu as profité de ton cours gratuit du jour. Débloque « %@ » et tous les cours dès maintenant, ou reviens demain.",
+        "paywall.course.comeBack": "Prochain cours gratuit dans",
+        "paywall.benefit.unlimited": "Cours en illimité, chaque jour",
+        "paywall.benefit.quiz": "Tous les quiz pour mémoriser",
+        "paywall.benefit.allSubjects": "Tous les sujets, sans pub",
+        "paywall.cta.unlockFree": "Débloquer gratuitement",
+        "paywall.price.trialThenYearly": "Essai gratuit de 3 jours, puis %@ / an (%@)",
+
+        // Native discount paywall (flash sale)
+        "paywall.discount.endsIn": "Se termine dans",
+        "paywall.discount.title": "Offre flash, aujourd'hui seulement",
+        "paywall.discount.subtitle": "Un accès Premium à vie de savoir, au prix le plus bas jamais proposé.",
+        "paywall.discount.perYear": "par an, sans engagement",
+        "paywall.discount.cta": "J'en profite maintenant",
+        "paywall.discount.noTrial": "Sans essai gratuit · Annulable à tout moment",
+        "paywall.discount.fallbackPrice": "19,99 €",
         "paywall.terms": "Conditions",
         "paywall.privacy": "Confidentialité",
         "paywall.trialSheet.title": "Commence ton essai\ngratuit de 3 jours",
@@ -689,6 +711,7 @@ enum AppLocalizable {
         "course.dailyFreeDone": "Tu as terminé ton cours gratuit du jour",
         "course.unlock.free": "Débloquez gratuitement",
         "course.quiz.access": "Accéder au quiz",
+        "course.unlock.cta": "Débloquer le cours",
         "course.streak.day": "Jour de suite",
         "course.streak.days": "Jours de suite",
         "course.streak.message": "Tu deviens vraiment cultivé, tu deviens incollable en %@ !",
@@ -722,6 +745,7 @@ enum AppLocalizable {
     private static let english: [String: String] = [
         "course.unlock.free": "Unlock for free",
         "course.quiz.access": "Access the quiz",
+        "course.unlock.cta": "Unlock the course",
 
         "tab.home": "Home",
         "tab.library": "Library",
@@ -1268,6 +1292,28 @@ enum AppLocalizable {
         "paywall.trialBadge": "3-day free trial",
         "paywall.restoreRow": "Restore · Terms · Privacy",
         "paywall.restore": "Restore",
+
+        // Native paywalls (quiz / course unlock)
+        "paywall.quiz.title": "Unlock the quiz",
+        "paywall.quiz.subtitle": "Test yourself and lock in what you just learned with this course's quiz.",
+        "paywall.course.title": "Your free course for today is done",
+        "paywall.course.subtitle": "You've used your free course for today. Come back tomorrow, or unlock everything right now.",
+        "paywall.course.subtitle.named": "You've used your free course for today. Unlock \"%@\" and every course right now, or come back tomorrow.",
+        "paywall.course.comeBack": "Next free course in",
+        "paywall.benefit.unlimited": "Unlimited courses, every day",
+        "paywall.benefit.quiz": "Every quiz to remember more",
+        "paywall.benefit.allSubjects": "All subjects, ad-free",
+        "paywall.cta.unlockFree": "Unlock for free",
+        "paywall.price.trialThenYearly": "3-day free trial, then %@ / year (%@)",
+
+        // Native discount paywall (flash sale)
+        "paywall.discount.endsIn": "Ends in",
+        "paywall.discount.title": "Flash offer, today only",
+        "paywall.discount.subtitle": "A lifetime of Premium knowledge, at the lowest price we've ever offered.",
+        "paywall.discount.perYear": "per year, no commitment",
+        "paywall.discount.cta": "Get it now",
+        "paywall.discount.noTrial": "No free trial · Cancel anytime",
+        "paywall.discount.fallbackPrice": "$19.99",
         "paywall.terms": "Terms",
         "paywall.privacy": "Privacy",
         "paywall.trialSheet.title": "Start your\n3-day free trial",

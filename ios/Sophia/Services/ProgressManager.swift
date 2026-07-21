@@ -551,7 +551,54 @@ class ProgressManager {
     /// DEBUG helper: clears the daily course flag so the user can read another free course immediately.
     func resetDailyCourseFlag() {
         progress.lastCourseCompletedDate = nil
+        progress.dailyFreeCourseId = nil
+        progress.dailyFreeCourseDate = nil
         save()
+    }
+
+    // MARK: - Daily free course (freemium gate)
+
+    /// The course a free user "claimed" as their free course for today, or `nil` if none was
+    /// claimed today (new day / never). Only meaningful for free users.
+    var dailyFreeCourseId: String? {
+        guard progress.dailyFreeCourseDate == dateFormatter.string(from: Date()) else { return nil }
+        return progress.dailyFreeCourseId
+    }
+
+    /// `true` once the free user has already claimed a (different) free course today, meaning
+    /// any *other* course opened today is intro-only + locked.
+    var hasClaimedDailyFreeCourse: Bool {
+        dailyFreeCourseId != nil
+    }
+
+    /// Claims `courseId` as the free course of the day if none has been claimed today yet.
+    /// The claim is "consumed on open": the very first course a free user opens on a given
+    /// local day becomes their free course and stays fully readable / revisitable all day.
+    /// No-op if a course was already claimed today (even a different one).
+    func claimDailyFreeCourseIfNeeded(_ courseId: String) {
+        let today = dateFormatter.string(from: Date())
+        guard progress.dailyFreeCourseDate != today else { return }
+        progress.dailyFreeCourseDate = today
+        progress.dailyFreeCourseId = courseId
+        save()
+    }
+
+    /// `true` when `courseId` is the free course the user can fully read today.
+    func isDailyFreeCourse(_ courseId: String) -> Bool {
+        dailyFreeCourseId == courseId
+    }
+
+    /// Seconds remaining until the next local midnight — when the daily free course resets.
+    /// Drives the "reviens demain" countdown on the course-unlock paywall.
+    func secondsUntilDailyReset() -> Int {
+        let calendar = Calendar.current
+        let now = Date()
+        guard let nextMidnight = calendar.nextDate(
+            after: now,
+            matching: DateComponents(hour: 0, minute: 0, second: 0),
+            matchingPolicy: .nextTime
+        ) else { return 0 }
+        return max(0, Int(nextMidnight.timeIntervalSince(now)))
     }
 
     var freeCoursesOpened: Int { progress.freeCoursesOpened }
