@@ -66,11 +66,11 @@ struct OnboardingV2QuestionsScreen: View {
             withAnimation(.easeOut(duration: 0.4)) { appeared = true }
         }
         .task {
-            // Rotation douce des questions tant que l'écran est visible.
+            // Rotation des questions tant que l'écran est visible (transition rapide).
             while !Task.isCancelled {
-                try? await Task.sleep(nanoseconds: 2_000_000_000)
+                try? await Task.sleep(nanoseconds: 1_150_000_000)
                 if Task.isCancelled { break }
-                withAnimation(.spring(response: 0.55, dampingFraction: 0.85)) {
+                withAnimation(.spring(response: 0.38, dampingFraction: 0.82)) {
                     index = (index + 1) % questions.count
                 }
                 OnboardingHaptics.selection()
