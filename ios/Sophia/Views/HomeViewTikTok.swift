@@ -235,65 +235,18 @@ private struct TikTokCourseCard: View {
 
     var body: some View {
         GeometryReader { geo in
-            // Visible card = the row (one viewport) minus outer margins, centered — so the
-            // whole card fits without overflowing the snap area.
-            let cardHeight = max(geo.size.height - DS.Space.s * 2, 260)
+            // The card hugs its content and is centered in the one-viewport row, so there is
+            // no empty space between the end of the text and the bottom of the card.
+            let cardWidth = geo.size.width - DS.Space.m * 2
+            let maxCardHeight = geo.size.height - DS.Space.s * 2
+            // Illustration scales down a little on short screens so the whole card fits.
+            let imageHeight = min(max(geo.size.height * 0.30, 170), 240)
 
-            VStack(alignment: .leading, spacing: 16) {
-                courseIllustration
-                    .frame(height: max(cardHeight * 0.44, 180))
-                    .clipShape(.rect(cornerRadius: DS.Radius.control))
-                    .overlay {
-                        RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                            .strokeBorder(DS.hairline, lineWidth: 1)
-                    }
-                    .overlay(alignment: .topTrailing) { favoriteButton }
-
-                HStack(spacing: 8) {
-                    subjectPill
-                    Spacer(minLength: 0)
-                    readsPill
-                }
-
-                Text(course.title)
-                    .font(DS.title(.title3))
-                    .foregroundStyle(DS.ink)
-                    .lineLimit(2)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-
-                boldText(course.description)
-                    .font(DS.sans(.subheadline))
-                    .foregroundStyle(DS.inkTertiary)
-                    .lineSpacing(3)
-                    .lineLimit(3)
-                    .multilineTextAlignment(.leading)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-
-                Spacer(minLength: 8)
-
-                Button {
-                    startTrigger += 1
-                    onStart()
-                } label: {
-                    HStack(spacing: 8) {
-                        Text(AppLocalizable.string("home.start", language: language))
-                        Image(systemName: "play.fill")
-                            .font(.jakarta(size: 13, weight: .semibold))
-                    }
-                }
-                .buttonStyle(DSPrimaryButtonStyle())
-                .sensoryFeedback(.impact(weight: .medium), trigger: startTrigger)
+            ZStack {
+                cardContent(imageHeight: imageHeight)
+                    .frame(width: cardWidth)
+                    .frame(maxHeight: maxCardHeight)
             }
-            .padding(DS.Space.l)
-            .frame(width: geo.size.width - DS.Space.m * 2, height: cardHeight, alignment: .top)
-            .background(DS.surface)
-            .clipShape(.rect(cornerRadius: DS.Radius.card))
-            .overlay {
-                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                    .strokeBorder(DS.hairline, lineWidth: 1)
-            }
-            .dsSoftShadow()
             .frame(width: geo.size.width, height: geo.size.height)
         }
         .onAppear {
@@ -301,6 +254,75 @@ private struct TikTokCourseCard: View {
                 cachedImage = CourseImageMap.loadImage(for: course.id)
             }
         }
+    }
+
+    private func cardContent(imageHeight: CGFloat) -> some View {
+        VStack(alignment: .leading, spacing: 14) {
+            courseIllustration
+                .frame(height: imageHeight)
+                .frame(maxWidth: .infinity)
+                .clipShape(.rect(cornerRadius: DS.Radius.control))
+                .overlay {
+                    RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                        .strokeBorder(DS.hairline, lineWidth: 1)
+                }
+                .overlay(alignment: .topTrailing) { favoriteButton }
+
+            HStack(spacing: 8) {
+                subjectPill
+                Spacer(minLength: 0)
+                readsPill
+            }
+
+            Text(course.title)
+                .font(DS.title(.title3))
+                .foregroundStyle(DS.ink)
+                .lineLimit(2)
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(maxWidth: .infinity, alignment: .leading)
+
+            boldText(accroche)
+                .font(DS.sans(.subheadline))
+                .foregroundStyle(DS.inkSecondary)
+                .lineSpacing(4)
+                .lineLimit(6)
+                .multilineTextAlignment(.leading)
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(maxWidth: .infinity, alignment: .leading)
+
+            Button {
+                startTrigger += 1
+                onStart()
+            } label: {
+                HStack(spacing: 8) {
+                    Text(AppLocalizable.string("home.start", language: language))
+                    Image(systemName: "play.fill")
+                        .font(.jakarta(size: 13, weight: .semibold))
+                }
+            }
+            .buttonStyle(DSPrimaryButtonStyle())
+            .sensoryFeedback(.impact(weight: .medium), trigger: startTrigger)
+            .padding(.top, 2)
+        }
+        .padding(DS.Space.l)
+        .background(DS.surface)
+        .clipShape(.rect(cornerRadius: DS.Radius.card))
+        .overlay {
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .strokeBorder(DS.hairline, lineWidth: 1)
+        }
+        .dsSoftShadow()
+    }
+
+    /// Phrase d'accroche affichée sous le titre. En français, on privilégie le « hook » de
+    /// la première page du cours (contenu v2) ; sinon on retombe sur la description.
+    private var accroche: String {
+        if language == .french,
+           let hook = CourseContentStore.content(courseId: course.id, language: .french)?.hero?.hook,
+           !hook.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            return hook
+        }
+        return course.description
     }
 
     private var courseIllustration: some View {

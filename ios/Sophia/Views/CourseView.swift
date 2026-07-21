@@ -24,7 +24,7 @@ struct CourseView: View {
     @State private var rewardSteps: [PostCompletionRewardStep] = []
     @State private var showRewardFlow: Bool = false
     @State private var sessionTracker: CourseSessionTracker?
-    @State private var showTermsExplain: Bool = false
+    @State private var coachmarkTerm: String? = nil
 
     /// Fixed XP awarded for finishing a course (reaching the completion screen). Always granted.
     private let courseCompletionXP: Int = 10
@@ -109,14 +109,12 @@ struct CourseView: View {
                 .zIndex(50)
             }
 
-            if showTermsExplain {
-                FirstOpenExplanation(
-                    icon: "hand.tap",
-                    title: languageManager.text("explain.course.title"),
-                    message: languageManager.text("explain.course.body"),
+            if let coachmarkTerm {
+                GlossaryCoachmark(
+                    term: coachmarkTerm,
                     onDismiss: {
-                        showTermsExplain = false
                         TutorialFlags.markSeen(.courseTerms)
+                        withAnimation(.easeOut(duration: 0.25)) { self.coachmarkTerm = nil }
                     }
                 )
                 .transition(.opacity)
@@ -135,7 +133,7 @@ struct CourseView: View {
                 source: openSource,
                 isFreeUser: !isPremium
             )
-            maybeShowTermsExplain()
+            maybeShowTermCoachmark(lessonIndex: currentIndex)
         }
         .onDisappear {
             let reason = sessionTracker?.completed == true ? "completed" : "dismiss"
@@ -145,6 +143,7 @@ struct CourseView: View {
         .onChange(of: currentIndex) { _, newIndex in
             requestAppStoreReviewIfEligible(lessonIndex: newIndex)
             sessionTracker?.recordLessonIndex(newIndex)
+            maybeShowTermCoachmark(lessonIndex: newIndex)
         }
         .fullScreenCover(isPresented: $showQuiz) {
             QuizView(
@@ -415,16 +414,69 @@ struct CourseView: View {
         }
     }
 
-    /// Explication « appuie sur les termes » à la toute première ouverture d'un cours.
-    private func maybeShowTermsExplain() {
+    /// Coachmark « appuie sur ce mot » affiché quand l'utilisateur voit son premier mot
+    /// surligné : déclenché sur la première page (visible) qui contient un terme du glossaire,
+    /// et met en avant CE mot précis. Une seule fois par installation.
+    private func maybeShowTermCoachmark(lessonIndex: Int) {
         guard !TutorialFlags.seen(.courseTerms) else { return }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-            guard !TutorialFlags.seen(.courseTerms) else { return }
+        guard coachmarkTerm == nil else { return }
+        guard course.lessons.indices.contains(lessonIndex) else { return }
+        // Le contenu (et donc les mots surlignés) doit être visible.
+        guard !FreemiumGate.isLessonContentLocked(
+            lessonIndex: lessonIndex,
+            isPremium: isPremium,
+            isDailyFreeCourse: isDailyFreeCourse
+        ) else { return }
+        guard let term = firstGlossaryTerm(lessonIndex: lessonIndex) else { return }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
+            guard !TutorialFlags.seen(.courseTerms), coachmarkTerm == nil else { return }
             guard endPhase == .none, !showQuiz, !showRewardFlow else { return }
+            guard currentIndex == lessonIndex else { return }
             withAnimation(.easeIn(duration: 0.3)) {
-                showTermsExplain = true
+                coachmarkTerm = term
             }
         }
+    }
+
+    /// Premier terme du glossaire réellement résoluble dans la leçon (v2 `[[…]]`, sinon legacy `<…>`).
+    private func firstGlossaryTerm(lessonIndex: Int) -> String? {
+        let lesson = course.lessons[lessonIndex]
+        if let resolved = CourseContentStore.section(courseId: course.id, sectionId: lesson.id) {
+            for block in resolved.section.blocks {
+                if let term = firstResolvableTerm(in: Self.blockText(block), open: "[[", close: "]]") {
+                    return term
+                }
+            }
+            return nil
+        }
+        return firstResolvableTerm(in: lesson.content, open: "<", close: ">")
+    }
+
+    private static func blockText(_ block: ContentBlockV2) -> String {
+        switch block {
+        case .heading(let t), .paragraph(let t), .funFact(let t), .takeaway(let t):
+            return t
+        case .quote(let t, _):
+            return t
+        case .image, .timeline:
+            return ""
+        }
+    }
+
+    private func firstResolvableTerm(in text: String, open: String, close: String) -> String? {
+        var searchStart = text.startIndex
+        while let openRange = text.range(of: open, range: searchStart..<text.endIndex) {
+            guard let closeRange = text.range(of: close, range: openRange.upperBound..<text.endIndex) else { break }
+            let term = String(text[openRange.upperBound..<closeRange.lowerBound])
+                .trimmingCharacters(in: .whitespacesAndNewlines)
+            if !term.isEmpty,
+               GlossaryStore.entry(courseId: course.id, courseTitle: course.title, displayTerm: term) != nil {
+                return term
+            }
+            searchStart = closeRange.upperBound
+        }
+        return nil
     }
 
     private func continueAfterCourseCompletion() {

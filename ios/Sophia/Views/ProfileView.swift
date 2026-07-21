@@ -16,7 +16,6 @@ struct ProfileView: View {
     @State private var showEditHandle: Bool = false
     @State private var hapticTrigger: Int = 0
     @State private var appeared: Bool = false
-    @State private var showSubjectDetails: Bool = false
     @Bindable private var social = SocialService.shared
 
     var body: some View {
@@ -39,7 +38,7 @@ struct ProfileView: View {
                         FriendsLeaderboardSection(social: social)
                             .padding(.horizontal, 20)
 
-                        radarSection
+                        subjectLevelsSection
                             .padding(.horizontal, 20)
 
                         favoritesShortcut
@@ -446,15 +445,9 @@ struct ProfileView: View {
         .dsCard(padding: 14)
     }
 
-    // MARK: - Subject mastery radar
+    // MARK: - Subject levels (par matière, sans graphe)
 
-    private var radarValues: [(subject: Subject, value: Double)] {
-        Subject.allCases.map { subject in
-            (subject, max(0.06, min(1.0, Double(progressManager.xp(for: subject)) / 700.0)))
-        }
-    }
-
-    private var radarSection: some View {
+    private var subjectLevelsSection: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text(languageManager.text("profile.mastery.title").uppercased())
                 .font(DS.sans(.caption2, .semibold))
@@ -462,39 +455,16 @@ struct ProfileView: View {
                 .tracking(1.2)
                 .padding(.horizontal, 4)
 
-            Button {
-                hapticTrigger += 1
-                withAnimation(.spring(response: 0.45, dampingFraction: 0.82)) {
-                    showSubjectDetails.toggle()
+            LazyVGrid(
+                columns: [GridItem(.flexible(), spacing: 14), GridItem(.flexible(), spacing: 14)],
+                spacing: 14
+            ) {
+                ForEach(Subject.allCases, id: \.self) { subject in
+                    SubjectProgressCard(
+                        subject: subject,
+                        xp: progressManager.xp(for: subject)
+                    )
                 }
-            } label: {
-                VStack(spacing: 10) {
-                    SubjectRadarChart(values: radarValues)
-                        .frame(height: 250)
-
-                    HStack(spacing: 6) {
-                        Text(languageManager.text(showSubjectDetails ? "profile.mastery.hide" : "profile.mastery.details"))
-                            .font(DS.sans(.caption, .medium))
-                            .foregroundStyle(DS.accentSoft)
-                        Image(systemName: showSubjectDetails ? "chevron.up" : "chevron.down")
-                            .font(.jakarta(size: 11, weight: .semibold))
-                            .foregroundStyle(DS.accentSoft)
-                    }
-                }
-                .dsCard(padding: 16)
-            }
-            .buttonStyle(ProfileCardPress())
-
-            if showSubjectDetails {
-                LazyVGrid(columns: [GridItem(.flexible(), spacing: 14), GridItem(.flexible(), spacing: 14)], spacing: 14) {
-                    ForEach(Subject.allCases, id: \.self) { subject in
-                        SubjectProgressCard(
-                            subject: subject,
-                            xp: progressManager.xp(for: subject)
-                        )
-                    }
-                }
-                .transition(.opacity.combined(with: .move(edge: .top)))
             }
         }
     }
