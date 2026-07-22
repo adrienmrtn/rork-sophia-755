@@ -669,7 +669,6 @@ struct SophiaQuizPaywall: View {
 
                 ScrollView {
                     VStack(spacing: 22) {
-                        ratingHeader
                         headline.padding(.horizontal, 28)
                         QuizPaywallShowcase().padding(.horizontal, 22)
                         PaywallReviewsCarousel(reviews: [
@@ -677,6 +676,8 @@ struct SophiaQuizPaywall: View {
                             (languageManager.text("paywall.quiz.review2.quote"), languageManager.text("paywall.quiz.review2.author")),
                             (languageManager.text("paywall.quiz.review3.quote"), languageManager.text("paywall.quiz.review3.author")),
                         ]).padding(.horizontal, 22)
+
+                        ratingFootnote
                     }
                     .padding(.top, 6)
                     .padding(.bottom, 24)
@@ -697,8 +698,8 @@ struct SophiaQuizPaywall: View {
             withAnimation(.spring(response: 0.55, dampingFraction: 0.85).delay(0.05)) {
                 appeared = true
             }
-            // La croix n'apparaît qu'au bout de 2 s, le temps de voir la valeur.
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            // La croix n'apparaît qu'au bout de 4 s, le temps de voir la valeur.
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
                 withAnimation(.easeOut(duration: 0.4)) { showClose = true }
             }
         }
@@ -708,23 +709,20 @@ struct SophiaQuizPaywall: View {
         .onDisappear { trackDismissIfNeeded() }
     }
 
-    // MARK: Rating header
+    // MARK: Rating (discreet, at the bottom)
 
-    private var ratingHeader: some View {
-        VStack(spacing: 8) {
-            Text("4.8")
-                .font(.system(size: 46, weight: .heavy, design: .rounded))
-                .foregroundStyle(DS.ink)
-            HStack(spacing: 5) {
+    private var ratingFootnote: some View {
+        HStack(spacing: 5) {
+            HStack(spacing: 2) {
                 ForEach(0..<5, id: \.self) { _ in
                     Image(systemName: "star.fill")
-                        .font(.system(size: 16))
+                        .font(.system(size: 9))
                         .foregroundStyle(DS.warm)
                 }
             }
-            Text(languageManager.text("paywall.quiz.rating"))
-                .font(DS.sans(.subheadline, .semibold))
-                .foregroundStyle(DS.inkSecondary)
+            Text("4,8 · \(languageManager.text("paywall.quiz.rating"))")
+                .font(DS.sans(.caption2, .medium))
+                .foregroundStyle(DS.inkTertiary)
         }
     }
 
@@ -853,9 +851,32 @@ private struct QuizPaywallShowcase: View {
     private let sliderAnswer: Double = 1789
 
     var body: some View {
+        // Tout le bloc question (badge + intitulé + corps) porte son propre fond et glisse
+        // d'un seul tenant : le « fond se déplace avec le bloc ». Le cadre (bord + ombre)
+        // reste fixe et découpe le glissement pour une transition propre.
+        ZStack {
+            questionBlock(for: type)
+                .id(type)
+                .transition(.asymmetric(
+                    insertion: .move(edge: .trailing).combined(with: .opacity),
+                    removal: .move(edge: .leading).combined(with: .opacity)
+                ))
+        }
+        .frame(maxWidth: .infinity, minHeight: 268, alignment: .top)
+        .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .strokeBorder(DS.hairline, lineWidth: 1)
+        }
+        .dsSoftShadow()
+        .onAppear { start() }
+        .onDisappear { task?.cancel() }
+    }
+
+    private func questionBlock(for type: DemoType) -> some View {
         VStack(alignment: .leading, spacing: 14) {
             HStack {
-                Text(badgeText)
+                Text(badgeText(for: type))
                     .font(DS.sans(.caption2, .bold))
                     .tracking(0.5)
                     .foregroundStyle(DS.accentSoft)
@@ -872,29 +893,16 @@ private struct QuizPaywallShowcase: View {
                 .font(DS.sans(.caption, .semibold))
                 .foregroundStyle(DS.inkTertiary)
 
-            ZStack(alignment: .topLeading) {
-                demoBody(for: type)
-                    .id(type)
-                    .transition(.asymmetric(
-                        insertion: .move(edge: .trailing).combined(with: .opacity),
-                        removal: .move(edge: .leading).combined(with: .opacity)
-                    ))
-            }
-            .frame(maxWidth: .infinity, minHeight: 200, alignment: .topLeading)
+            demoBody(for: type)
+
+            Spacer(minLength: 0)
         }
         .padding(18)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(DS.surface, in: RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
-        .overlay {
-            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                .strokeBorder(DS.hairline, lineWidth: 1)
-        }
-        .dsSoftShadow()
-        .onAppear { start() }
-        .onDisappear { task?.cancel() }
+        .frame(maxWidth: .infinity, minHeight: 268, alignment: .topLeading)
+        .background(DS.surface)
     }
 
-    private var badgeText: String {
+    private func badgeText(for type: DemoType) -> String {
         switch type {
         case .mcq: return languageManager.text("paywall.quiz.demo.badge.mcq")
         case .trueFalse: return languageManager.text("paywall.quiz.demo.badge.trueFalse")
@@ -1099,9 +1107,12 @@ private struct QuizPaywallShowcase: View {
                 try? await Task.sleep(nanoseconds: 2_100_000_000)
                 if Task.isCancelled { return }
 
-                // Type suivant, avec slide.
+                // On réinitialise l'état AVANT de changer de type, sinon la question qui
+                // arrive s'affiche un instant avec sa bonne réponse déjà révélée.
                 let next = DemoType(rawValue: (type.rawValue + 1) % DemoType.allCases.count) ?? .mcq
-                withAnimation(.spring(response: 0.5, dampingFraction: 0.85)) { type = next }
+                revealed = false
+                if next == .slider { sliderValue = sliderMin + 45 }
+                withAnimation(.spring(response: 0.55, dampingFraction: 0.85)) { type = next }
                 try? await Task.sleep(nanoseconds: 500_000_000)
             }
         }
