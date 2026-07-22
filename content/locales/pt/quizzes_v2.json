@@ -1,0 +1,2350 @@
+[
+  {
+    "courseId": "course_100_les_fleurs_du_mal_baudelaire",
+    "quiz": [
+      {
+        "id": "course_100_les_fleurs_du_mal_baudelaire_q1",
+        "type": "mcq",
+        "question": "Quem é o autor de Les Fleurs du Mal?",
+        "explanation": "Charles Baudelaire publicou Les Fleurs du Mal em 1857, a certidão de nascimento da poesia moderna.",
+        "options": [
+          "Carlos Baudelaire",
+          "Paulo Verlaine",
+          "Stéphane Mallarmé",
+          "Artur Rimbaud"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_100_les_fleurs_du_mal_baudelaire_q2",
+        "type": "mcq",
+        "question": "Por que Les Fleurs du Mal foram condenados em 1857?",
+        "explanation": "A coleção foi condenada por “ultraje à moral pública”, escândalo que só seria oficialmente levantado em 1949.",
+        "options": [
+          "Por “indignação à moral pública”",
+          "Por plágio",
+          "Por incitar a violência política",
+          "Por colocar em risco a segurança do Estado"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_100_les_fleurs_du_mal_baudelaire_q3",
+        "type": "numericSlider",
+        "question": "Em que ano os seis poemas condenados de Les Fleurs du Mal foram oficialmente reabilitados?",
+        "explanation": "Os seis poemas condenados em 1857 só foram oficialmente reabilitados em 1949, 92 anos depois.",
+        "correctValue": 1949.0,
+        "sliderMin": 1920.0,
+        "sliderMax": 1970.0,
+        "tolerance": 5.0,
+        "unit": ""
+      },
+      {
+        "id": "course_100_les_fleurs_du_mal_baudelaire_q4",
+        "type": "mcq",
+        "question": "O que o albatroz representa na seção “Baço e Ideal”?",
+        "explanation": "O albatroz, majestoso em voo, mas ridículo quando colocado no chão, representa o poeta num mundo que não o compreende.",
+        "options": [
+          "O poeta, majestoso em vôo, mas ridículo no chão",
+          "Liberdade total do artista",
+          "A morte inevitável",
+          "Beleza inatingível"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_100_les_fleurs_du_mal_baudelaire_q5",
+        "type": "mcq",
+        "question": "Qual seção da coleção faz de Paris uma paisagem psicológica?",
+        "explanation": "“Pinturas Parisienses” transforma a cidade numa paisagem psicológica. O poeta vagueia por lá como um caminhante, um observador da vida parisiense sob Haussmann.",
+        "options": [
+          "“Pinturas parisienses”",
+          "“Baço e Ideal”",
+          "“O Vinho”",
+          "\"Morte\""
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_100_les_fleurs_du_mal_baudelaire_q6",
+        "type": "mcq",
+        "question": "Qual poema descreve a natureza como um “templo” de signos que ligam aromas, cores e sons?",
+        "explanation": "“Correspondências” descreve a natureza como um templo de sinais. Os sentidos ali se misturam: perfumes, cores e sons respondem uns aos outros.",
+        "options": [
+          "\"Correspondência\"",
+          "“O Albatroz”",
+          "\"Baço\"",
+          "\"Coleção\""
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_100_les_fleurs_du_mal_baudelaire_q7",
+        "type": "trueFalse",
+        "question": "Verdadeiro ou falso: Baudelaire rejeita inteiramente formas poéticas clássicas como o soneto.",
+        "explanation": "Baudelaire, pelo contrário, liga a forma clássica, como o soneto e o alexandrino, a uma visão poética radicalmente nova.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": "course_100_les_fleurs_du_mal_baudelaire_q8",
+        "type": "mcq",
+        "question": "Que movimento poético encontrou a poética da correspondência de Baudelaire, posteriormente levada a cabo por Verlaine e Mallarmé?",
+        "explanation": "Essa poética das correspondências fundou o simbolismo, posteriormente levado a cabo por Verlaine e Mallarmé.",
+        "options": [
+          "O simbolismo",
+          "Romantismo",
+          "Naturalismo",
+          "Classicismo"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_100_les_fleurs_du_mal_baudelaire_q9",
+        "type": "mcq",
+        "question": "Que escritor americano, descrito como “irmão de alma”, Baudelaire traduziu?",
+        "explanation": "Baudelaire traduziu Edgar Poe, a quem considerava um “irmão de alma” que partilhava do gosto pelo macabro.",
+        "options": [
+          "Edgar Allan Poe",
+          "Herman Melville",
+          "Nathaniel Hawthorne",
+          "Walt Whitman"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_100_les_fleurs_du_mal_baudelaire_q10",
+        "type": "mcq",
+        "question": "Como Baudelaire resume sua alquimia poética de extrair beleza da lama?",
+        "explanation": "Baudelaire resume seu projeto com esta fórmula: “Você me deu sua lama e com ela fiz ouro”.",
+        "options": [
+          "“Você me deu sua lama e eu fiz ouro com ela”",
+          "“A beleza é eterna”",
+          "“O mal gera o mal”",
+          "“Arte pela arte”"
+        ],
+        "correctIndex": 0
+      }
+    ]
+  },
+  {
+    "courseId": "course_101_1984_george_orwell",
+    "quiz": [
+      {
+        "id": "course_101_1984_george_orwell_q1",
+        "type": "mcq",
+        "question": "Qual é o verdadeiro nome de George Orwell?",
+        "explanation": "George Orwell é o pseudônimo de Eric Arthur Blair.",
+        "options": [
+          "Eric Arthur Blair",
+          "George Bernard Shaw",
+          "Aldous Huxley",
+          "Herbert George Wells"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_101_1984_george_orwell_q2",
+        "type": "mcq",
+        "question": "Que conflito Orwell lutou antes de escrever 1984?",
+        "explanation": "Orwell lutou em 1936-1937 nas milícias do POUM durante a Guerra Civil Espanhola, onde foi ferido.",
+        "options": [
+          "A Guerra Civil Espanhola",
+          "A Primeira Guerra Mundial",
+          "A Guerra dos Bôeres",
+          "A Guerra da Argélia"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_101_1984_george_orwell_q3",
+        "type": "mcq",
+        "question": "O que mais impressionou Orwell durante esta experiência, além da violência?",
+        "explanation": "O que mais impressiona Orwell é ver os jornais reescreverem o passado e apagarem os combatentes, uma obsessão pelas mentiras do Estado que alimenta o romance.",
+        "options": [
+          "A falsificação dos fatos e do passado através da propaganda",
+          "Falta de comida",
+          "A traição de seus camaradas",
+          "Censura da imprensa estrangeira"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_101_1984_george_orwell_q4",
+        "type": "mcq",
+        "question": "Que verdadeiro regime totalitário inspira o sistema da Oceânia?",
+        "explanation": "O sistema da Oceânia é particularmente inspirado no totalitarismo soviético como modelo.",
+        "options": [
+          "Totalitarismo soviético",
+          "Fascismo italiano",
+          "O regime de Vichy",
+          "O Império Britânico"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_101_1984_george_orwell_q5",
+        "type": "mcq",
+        "question": "Qual é o nome do partido único que governa a Oceania?",
+        "explanation": "A Oceania é dirigida pelo Ingsoc, que se baseia em quatro ministérios paradoxais: Paz, Abundância, Amor e Verdade.",
+        "options": [
+          "Ingsoc",
+          "O Partido Popular",
+          "A Liga Vermelha",
+          "O Bloco Central"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_101_1984_george_orwell_q6",
+        "type": "mcq",
+        "question": "O que Winston Smith faz para trabalhar no Ministério da Verdade?",
+        "explanation": "Winston Smith trabalha no Ministério da Verdade, onde apaga o passado para se adequar ao presente definido pelo Partido.",
+        "options": [
+          "Ele apaga e reescreve o passado para se adequar ao presente do Partido",
+          "Ele monitora os cidadãos através de teletelas",
+          "Ele escreve os discursos do Big Brother",
+          "Ele treina novos membros do Partido"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_101_1984_george_orwell_q7",
+        "type": "mcq",
+        "question": "Como você chama a capacidade de aceitar duas verdades contraditórias ao mesmo tempo, em 1984?",
+        "explanation": "Duplipensar refere-se à capacidade de aceitar duas verdades contraditórias ao mesmo tempo, um pilar do controle mental do Partido.",
+        "options": [
+          "Duplicar",
+          "Novilíngua",
+          "A teletela",
+          "Ingsoc"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_101_1984_george_orwell_q8",
+        "type": "mcq",
+        "question": "Porque é que o Partido está a reduzir o vocabulário através da Novilíngua?",
+        "explanation": "Novilíngua reduz o vocabulário disponível para tornar impossível a formulação do próprio pensamento crítico.",
+        "options": [
+          "Para tornar o pensamento crítico impossível",
+          "Para simplificar a administração",
+          "Para facilitar o comércio internacional",
+          "Para unificar dialetos regionais"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_101_1984_george_orwell_q9",
+        "type": "chronological",
+        "question": "Coloque em ordem essas etapas da vida e da obra de Orwell.",
+        "explanation": "Estas quatro fases marcam a carreira de Orwell: a Guerra Civil Espanhola (1936-1937), Animal Farm (1945), 1984 (1949), depois a sua morte em 1950.",
+        "items": [
+          "Orwell lutou nas milícias do POUM durante a Guerra Civil Espanhola",
+          "Ele publica Animal Farm",
+          "Ele publicou 1984",
+          "Ele morreu na Escócia logo após a publicação de seu romance."
+        ]
+      },
+      {
+        "id": "course_101_1984_george_orwell_q10",
+        "type": "trueFalse",
+        "question": "Verdadeiro ou falso: no final do romance, Winston Smith acaba amando o Big Brother.",
+        "explanation": "O totalitarismo vence no nível psicológico: Winston não apenas obedece, ele passa a amar o Big Brother.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correctIndex": 0
+      }
+    ]
+  },
+  {
+    "courseId": "course_102_la_ferme_des_animaux_george_orwell",
+    "quiz": [
+      {
+        "id": "course_102_la_ferme_des_animaux_george_orwell_q1",
+        "type": "mcq",
+        "question": "Que evento histórico Animal Farm retrata em forma de alegoria?",
+        "explanation": "Orwell transpõe as principais etapas da Revolução Russa e da traição estalinista numa fábula animal.",
+        "options": [
+          "A Revolução Russa",
+          "A Revolução Francesa",
+          "A Guerra Civil Espanhola",
+          "A Revolução Industrial Inglesa"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_102_la_ferme_des_animaux_george_orwell_q2",
+        "type": "mcq",
+        "question": "Que animal Stalin representa na alegoria de Orwell?",
+        "explanation": "Napoleão, o porco que toma o poder pela força após perseguir Bola de Neve, modela a figura de Stalin.",
+        "options": [
+          "Napoleão",
+          "O Velho Major",
+          "Bola de neve",
+          "Malabar"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_102_la_ferme_des_animaux_george_orwell_q3",
+        "type": "trueFalse",
+        "question": "Verdadeiro ou falso: Editor T.S. Eliot recusou-se a publicar o manuscrito de Orwell, temendo que porcos espertos ofendessem os estadistas.",
+        "explanation": "T.S. Eliot, então editor, rejeitou o manuscrito por esse motivo.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_102_la_ferme_des_animaux_george_orwell_q4",
+        "type": "mcq",
+        "question": "O que os cães de Napoleão representam na alegoria?",
+        "explanation": "Os cães treinados por Napoleão para perseguir Snowball e aterrorizar a fazenda representam a polícia secreta soviética.",
+        "options": [
+          "A polícia secreta",
+          "O exército regular do czar",
+          "Os camponeses revoltados",
+          "Jornalistas oficiais"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_102_la_ferme_des_animaux_george_orwell_q5",
+        "type": "mcq",
+        "question": "Qual animal representa o proletariado explorado até a exaustão?",
+        "explanation": "Malabar, um burro de carga dedicado e incansável, simboliza um proletariado que trabalha sem nunca questionar a autoridade.",
+        "options": [
+          "Malabar, o cavalo trabalhador",
+          "Brille-Babil, o propagandista",
+          "O Velho Major",
+          "Bola de neve"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_102_la_ferme_des_animaux_george_orwell_q6",
+        "type": "chronological",
+        "question": "Coloque essas etapas do Animal Farm em ordem.",
+        "explanation": "Esta sequência mostra a mudança gradual da revolução igualitária para a ditadura dos porcos.",
+        "items": [
+          "Os animais perseguem o fazendeiro Jones",
+          "Napoleão persegue Bola de Neve com seus cães",
+          "Porcos mudam secretamente os Sete Mandamentos",
+          "Porcos começam a andar sobre duas pernas"
+        ]
+      },
+      {
+        "id": "course_102_la_ferme_des_animaux_george_orwell_q7",
+        "type": "mcq",
+        "question": "Que fórmula final resume, no final do romance, a traição ao ideal igualitário?",
+        "explanation": "Esta fórmula paradoxal, inscrita na parede do celeiro, revela que a proclamada igualdade foi esvaziada de sentido.",
+        "options": [
+          "“Todos os animais são iguais, mas alguns animais são mais iguais que outros”",
+          "“Os porcos devem servir outros animais”",
+          "“Napoleão tem sempre razão”",
+          "“O moinho será a nossa salvação”"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_102_la_ferme_des_animaux_george_orwell_q8",
+        "type": "trueFalse",
+        "question": "Verdadeiro ou falso: no final do romance, os outros animais não conseguem mais distinguir os porcos dos humanos.",
+        "explanation": "Os porcos andam sobre duas pernas, vestem-se e festejam com os agricultores, confundindo completamente a linha entre eles.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_102_la_ferme_des_animaux_george_orwell_q9",
+        "type": "numericSlider",
+        "question": "Aproximadamente quantas palavras Animal Farm tem, um texto deliberadamente muito curto?",
+        "explanation": "Orwell apresenta sua alegoria em apenas 30 mil palavras, o que reforça a eficácia da fábula.",
+        "correctValue": 30000.0,
+        "sliderMin": 15000.0,
+        "sliderMax": 50000.0,
+        "tolerance": 5000.0,
+        "unit": "palavras"
+      }
+    ]
+  },
+  {
+    "courseId": "course_103_hamlet_shakespeare",
+    "quiz": [
+      {
+        "id": "course_103_hamlet_shakespeare_q1",
+        "type": "mcq",
+        "question": "Quem assassina o rei da Dinamarca, pai de Hamlet?",
+        "explanation": "Cláudio mata seu irmão, o rei, depois se casa com a rainha Gertrudes e assume o trono.",
+        "options": [
+          "Cláudio",
+          "Polônio",
+          "Laerte",
+          "Fortinbrás"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_103_hamlet_shakespeare_q2",
+        "type": "mcq",
+        "question": "Quem conta a Hamlet sobre o assassinato de seu pai?",
+        "explanation": "O fantasma do falecido rei aparece a Hamlet para revelar o crime de Cláudio.",
+        "options": [
+          "O fantasma de seu pai",
+          "Sua mãe Gertrudes",
+          "Ofélia",
+          "Horácio"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_103_hamlet_shakespeare_q3",
+        "type": "mcq",
+        "question": "Que estratégia Hamlet adota para investigar o crime sem se revelar?",
+        "explanation": "Hamlet finge loucura para observar o tribunal sem levantar suspeitas, estratégia que acaba falhando.",
+        "options": [
+          "Ele simula loucura",
+          "Ele vai para o exílio em Wittenberg",
+          "Ele acusa publicamente Cláudio",
+          "Ele se junta a um grupo de teatro"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_103_hamlet_shakespeare_q4",
+        "type": "trueFalse",
+        "question": "Verdadeiro ou falso: durante o reinado de Elizabeth I, papéis femininos como Ofélia eram interpretados por mulheres no palco.",
+        "explanation": "As mulheres foram banidas do palco: os papéis femininos eram desempenhados por homens, muitas vezes adolescentes.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": "course_103_hamlet_shakespeare_q5",
+        "type": "mcq",
+        "question": "O que Hamlet faz para prender Cláudio e confirmar sua culpa?",
+        "explanation": "Hamlet encena uma peça que reencena o assassinato de seu pai para observar a reação de Cláudio.",
+        "options": [
+          "Uma sala dentro de uma sala, a “Ratoeira”",
+          "Um duelo público",
+          "Um julgamento em tribunal",
+          "Uma carta anônima"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_103_hamlet_shakespeare_q6",
+        "type": "mcq",
+        "question": "Quem Hamlet mata por engano, precipitando a espiral trágica?",
+        "explanation": "Hamlet mata Polônio, conselheiro do rei, acreditando que está atingindo um espião escondido atrás de uma cortina.",
+        "options": [
+          "Polônio",
+          "Laerte",
+          "Cláudio",
+          "Horácio"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_103_hamlet_shakespeare_q7",
+        "type": "mcq",
+        "question": "Segundo a medicina da época, o que explica a melancolia de Hamlet?",
+        "explanation": "A medicina elisabetana atribuiu a melancolia ao excesso de bile negra, tornando o sujeito brilhante, mas paralisado.",
+        "options": [
+          "Excesso de bile negra",
+          "Possessão demoníaca",
+          "Um desequilíbrio de sangue quente",
+          "Uma maldição familiar"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_103_hamlet_shakespeare_q8",
+        "type": "mcq",
+        "question": "Que leitura Freud propõe de Hamlet, vários séculos depois de Shakespeare?",
+        "explanation": "Freud interpreta a hesitação de Hamlet através do complexo de Édipo, popularizando uma leitura psicanalítica da peça.",
+        "options": [
+          "Ele vê isso como uma expressão do complexo de Édipo",
+          "Ele vê isso como uma crítica ao capitalismo emergente",
+          "Ele vê isso como uma alegoria religiosa",
+          "Ele vê isso como um apelo à monarquia"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_103_hamlet_shakespeare_q9",
+        "type": "trueFalse",
+        "question": "Verdadeiro ou falso: o monólogo “Ser ou não ser” continua sendo a questão existencial mais famosa do teatro ocidental.",
+        "explanation": "Este monólogo tornou-se emblemático da questão existencial no teatro, opondo ação e sofrimento.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correctIndex": 0
+      }
+    ]
+  },
+  {
+    "courseId": "course_104_romeo_et_juliette_shakespeare",
+    "quiz": [
+      {
+        "id": "course_104_romeo_et_juliette_shakespeare_q1",
+        "type": "mcq",
+        "question": "Em que fonte Shakespeare se baseou principalmente para escrever Romeu e Julieta?",
+        "explanation": "Shakespeare se inspira no contador de histórias italiano Matteo Bandello, mas comprime a ação ao longo de cinco dias para intensificar a tragédia.",
+        "options": [
+          "Um conto de Matteo Bandello",
+          "Um antigo mito grego",
+          "Uma peça de Christopher Marlowe",
+          "Uma notícia contemporânea de Londres"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_104_romeo_et_juliette_shakespeare_q2",
+        "type": "numericSlider",
+        "question": "Durante quantos dias Shakespeare condensa toda a ação da peça?",
+        "explanation": "Shakespeare prolonga a trama ao longo de cinco dias, tornando a catástrofe final ainda mais inevitável.",
+        "correctValue": 5.0,
+        "sliderMin": 1.0,
+        "sliderMax": 14.0,
+        "tolerance": 1.0,
+        "unit": "dias"
+      },
+      {
+        "id": "course_104_romeo_et_juliette_shakespeare_q3",
+        "type": "mcq",
+        "question": "Que evento muda o tom da peça da comédia para a tragédia?",
+        "explanation": "A morte de Mercutio, morto por Tybalt, afasta o descuido e transforma definitivamente a peça em tragédia.",
+        "options": [
+          "A morte de Mercúcio",
+          "O baile de máscaras dos Capuletos",
+          "O casamento secreto dos amantes",
+          "Banimento de Romeu"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_104_romeo_et_juliette_shakespeare_q4",
+        "type": "mcq",
+        "question": "Quem celebra o casamento secreto de Romeu e Julieta, na esperança de reconciliar as duas famílias?",
+        "explanation": "O irmão Laurent casa-se secretamente com os amantes, na esperança de que a união deles apazigue o ódio entre os clãs.",
+        "options": [
+          "Irmão Laurent",
+          "O Príncipe de Verona",
+          "Mercúcio",
+          "A enfermeira de Juliette"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_104_romeo_et_juliette_shakespeare_q5",
+        "type": "mcq",
+        "question": "O que impede que a mensagem do irmão Lawrence chegue a Romeu a tempo?",
+        "explanation": "Uma epidemia de peste atrasa o mensageiro responsável por alertar Romeu, precipitando o duplo suicídio final.",
+        "options": [
+          "Uma epidemia de peste que atrasa o mensageiro",
+          "Uma tempestade no mar",
+          "A prisão do mensageiro pelo Príncipe",
+          "Um erro de endereço"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_104_romeo_et_juliette_shakespeare_q6",
+        "type": "trueFalse",
+        "question": "Verdadeiro ou falso: em Bandello, fonte italiana de Shakespeare, Julieta acorda antes de Romeu morrer, ao contrário da peça.",
+        "explanation": "Shakespeare apaga esse presente de despedida em Bandello para tornar o final da peça mais cruel.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_104_romeo_et_juliette_shakespeare_q7",
+        "type": "mcq",
+        "question": "Quem mata Tybalt, fazendo com que Romeu seja banido de Verona?",
+        "explanation": "Romeu mata Tybalt para vingar Mercutio, o que resulta em sua expulsão da cidade.",
+        "options": [
+          "O próprio Romeu",
+          "Mercúcio",
+          "Conde Paris",
+          "O Príncipe de Verona"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_104_romeo_et_juliette_shakespeare_q8",
+        "type": "mcq",
+        "question": "Qual obra do século XX transpõe o conflito dos clãs de Verona para as ruas de Nova Iorque?",
+        "explanation": "West Side Story substitui os Montagues e Capuletos pelas gangues Sharks e Jets.",
+        "options": [
+          "História do lado oeste",
+          "Graxa",
+          "O padrinho",
+          "A Fúria de Viver"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_104_romeo_et_juliette_shakespeare_q9",
+        "type": "trueFalse",
+        "question": "Verdadeiro ou falso: Dante já falava das famílias Montecchi e Cappelletti dois séculos antes de Shakespeare.",
+        "explanation": "Dante menciona essas duas famílias veronesas em sua obra, muito antes de Shakespeare transformá-las em uma tragédia universal.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correctIndex": 0
+      }
+    ]
+  },
+  {
+    "courseId": "course_105_le_meilleur_des_mondes_aldous_huxley",
+    "quiz": [
+      {
+        "id": "course_105_le_meilleur_des_mondes_aldous_huxley_q1",
+        "type": "mcq",
+        "question": "Em que difere a dominação imaginada por Huxley daquela de Orwell em 1984?",
+        "explanation": "Enquanto Orwell descreve o terror policial, Huxley imagina a submissão voluntária obtida através do prazer e do conforto.",
+        "options": [
+          "Baseia-se no prazer e no conforto, e não no terror",
+          "É baseado na fome organizada",
+          "É baseado em uma guerra permanente",
+          "Depende de vigilância policial constante"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_105_le_meilleur_des_mondes_aldous_huxley_q2",
+        "type": "mcq",
+        "question": "Que modelo industrial Huxley inspirou para organizar sua sociedade futura?",
+        "explanation": "Huxley transpõe a lógica das linhas de montagem e da padronização industrial para a própria reprodução humana.",
+        "options": [
+          "Fordismo e Taylorismo",
+          "Colonialismo britânico",
+          "Militarismo prussiano",
+          "Artesanato tradicional"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_105_le_meilleur_des_mondes_aldous_huxley_q3",
+        "type": "trueFalse",
+        "question": "Verdadeiro ou falso: o título original, Admirável Mundo Novo, cita ironicamente uma peça de Shakespeare.",
+        "explanation": "O título cita A Tempestade, de Shakespeare, cuja maravilha ingênua aqui mascara um futuro desumanizado.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_105_le_meilleur_des_mondes_aldous_huxley_q4",
+        "type": "mcq",
+        "question": "Como as castas sociais, de Alfas a Épsilons, são determinadas no romance?",
+        "explanation": "O processo Bokanovsky permite que cada casta seja produzida e condicionada desde a concepção, para que goste da sua condição.",
+        "options": [
+          "Desde o design, graças ao processo Bokanovsky",
+          "Por um exame feito quando adulto",
+          "Por hereditariedade familiar",
+          "Por empate no nascimento"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_105_le_meilleur_des_mondes_aldous_huxley_q5",
+        "type": "mcq",
+        "question": "Qual o papel do soma nesta sociedade?",
+        "explanation": "Soma é um medicamento sem efeitos colaterais que dissolve instantaneamente qualquer frustração ou dor.",
+        "options": [
+          "É uma droga reconfortante que elimina toda frustração",
+          "É um combustível reservado à indústria",
+          "É uma vacina obrigatória para todos",
+          "É um alimento básico racionado"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_105_le_meilleur_des_mondes_aldous_huxley_q6",
+        "type": "mcq",
+        "question": "Quem é John Selvagem?",
+        "explanation": "John, nascido fora do sistema numa Reserva, encarna o humanista capaz de dor e êxtase, treinado pela leitura de Shakespeare.",
+        "options": [
+          "Um homem nascido naturalmente numa reserva, que leu Shakespeare",
+          "O Controlador Global do Sistema",
+          "Um alfa rebelde criado na capital",
+          "Um cientista que criou o soma"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_105_le_meilleur_des_mondes_aldous_huxley_q7",
+        "type": "mcq",
+        "question": "O que John afirma contra Mustapha Mond, o Controlador Mundial?",
+        "explanation": "João recusa o conforto artificial e reivindica o direito de sofrer, de criar e de amar verdadeiramente.",
+        "options": [
+          "O direito de ser infeliz",
+          "O direito de possuir mais soma",
+          "O direito de governar o mundo",
+          "O direito de morar na capital"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_105_le_meilleur_des_mondes_aldous_huxley_q8",
+        "type": "trueFalse",
+        "question": "Verdadeiro ou falso: no final do romance, John concorda em viver com conforto no Admirável Mundo Novo.",
+        "explanation": "João recusa o soma e o paraíso artificial proposto por Mond: mata-se, sem possibilidade de reconciliação.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": "course_105_le_meilleur_des_mondes_aldous_huxley_q9",
+        "type": "numericSlider",
+        "question": "Em que ano Aldous Huxley publicou Admirável Mundo Novo?",
+        "explanation": "Huxley publicou este romance em 1932, tendo-o escrito no ano anterior.",
+        "correctValue": 1932.0,
+        "sliderMin": 1900.0,
+        "sliderMax": 1960.0,
+        "tolerance": 3.0,
+        "unit": ""
+      }
+    ]
+  },
+  {
+    "courseId": "course_106_frankenstein_mary_shelley",
+    "quiz": [
+      {
+        "id": "course_106_frankenstein_mary_shelley_q1",
+        "type": "mcq",
+        "question": "Que evento climático forçou Mary Shelley e seus amigos a permanecerem trancados na Villa Diodati em 1816?",
+        "explanation": "A erupção do Tambora mergulhou a Europa num ano sem verão em 1816, forçando o grupo a permanecer confinado nas margens do Lago Genebra.",
+        "options": [
+          "A erupção do vulcão Tambora, causando um ano sem verão",
+          "Uma epidemia de cólera na Europa",
+          "Uma guerra napoleônica",
+          "Um inverno rigoroso, mas habitual"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_106_frankenstein_mary_shelley_q2",
+        "type": "mcq",
+        "question": "Quem está realizando o Concurso de Histórias Assustadoras de Frankenstein?",
+        "explanation": "Foi Lord Byron quem propôs esta competição para aliviar o tédio durante o mau tempo de 1816.",
+        "options": [
+          "Senhor Byron",
+          "Percy Shelley",
+          "João Polidori",
+          "A própria Mary Shelley"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_106_frankenstein_mary_shelley_q3",
+        "type": "numericSlider",
+        "question": "Quantos anos tinha Mary Shelley quando escreveu Frankenstein?",
+        "explanation": "Mary Shelley tinha apenas 18 anos quando escreveu este romance, na encruzilhada do romantismo sombrio e dos debates científicos de sua época.",
+        "correctValue": 18.0,
+        "sliderMin": 10.0,
+        "sliderMax": 30.0,
+        "tolerance": 2.0,
+        "unit": "anos"
+      },
+      {
+        "id": "course_106_frankenstein_mary_shelley_q4",
+        "type": "mcq",
+        "question": "Em que campo científico Mary Shelley se inspira para o despertar da criatura?",
+        "explanation": "O galvanismo, que parecia animar a matéria morta com eletricidade, inspira diretamente a cena de criação da criatura.",
+        "options": [
+          "Galvanismo, esses experimentos elétricos com matéria morta",
+          "Química industrial emergente",
+          "Astronomia newtoniana",
+          "Medicina tropical"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_106_frankenstein_mary_shelley_q5",
+        "type": "mcq",
+        "question": "Por que Victor Frankenstein procura o segredo da vida em Ingolstadt?",
+        "explanation": "Victor é movido pela ambição de desafiar a ordem natural e tornar-se um criador, um “Prometheus moderno”.",
+        "options": [
+          "Para se tornar um Prometeu moderno, não para ficar rico",
+          "Para curar uma doença familiar",
+          "Para obter reconhecimento financeiro",
+          "Para vingar a morte de seu pai"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_106_frankenstein_mary_shelley_q6",
+        "type": "mcq",
+        "question": "Como a criatura aprende a linguagem e os sentimentos humanos?",
+        "explanation": "A criatura aprende sozinha, em segredo, observando uma família camponesa e lendo Paraíso Perdido.",
+        "options": [
+          "Observando uma família camponesa e lendo Paraíso Perdido, de Milton",
+          "Fazendo cursos na Universidade de Ingolstadt",
+          "Lendo os diários de Victor",
+          "Ouvindo sacerdotes viajantes"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_106_frankenstein_mary_shelley_q7",
+        "type": "mcq",
+        "question": "O que a criatura pede a Victor, que recusa?",
+        "explanation": "A criatura pede um companheiro para não ficar mais sozinha; A recusa de Victor desencadeia sua vingança destrutiva.",
+        "options": [
+          "Uma companheira de sua condição",
+          "Dinheiro para viajar",
+          "Um nome para existir socialmente",
+          "Um perdão público por seus crimes"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_106_frankenstein_mary_shelley_q8",
+        "type": "trueFalse",
+        "question": "Verdadeiro ou falso: no romance, o nome “Frankenstein” refere-se ao criador, enquanto a própria criatura não tem nome.",
+        "explanation": "A criatura nunca tem nome próprio, sinal da negação da paternidade de Victor: chamar o monstro de \"Frankenstein\" é, portanto, um equívoco de interpretação.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_106_frankenstein_mary_shelley_q9",
+        "type": "mcq",
+        "question": "Onde termina o romance, entre a morte de Victor e o desaparecimento da criatura?",
+        "explanation": "O romance termina no gelo do Ártico, onde Victor morre e a criatura desaparece nas brumas.",
+        "options": [
+          "No Ártico",
+          "Em Genebra",
+          "Em Ingolstadt",
+          "No mar Mediterrâneo aberto"
+        ],
+        "correctIndex": 0
+      }
+    ]
+  },
+  {
+    "courseId": "course_10_la_decouverte_de_l_amerique_1492",
+    "quiz": [
+      {
+        "id": "course_10_la_decouverte_de_l_amerique_1492_q1",
+        "type": "numericSlider",
+        "question": "Em que ano Cristóvão Colombo chegou às Bahamas?",
+        "explanation": "Colombo desembarcou em 12 de outubro de 1492 em uma ilha das Bahamas que chamou de San Salvador.",
+        "correctValue": 1492.0,
+        "sliderMin": 1450.0,
+        "sliderMax": 1520.0,
+        "tolerance": 3.0,
+        "unit": ""
+      },
+      {
+        "id": "course_10_la_decouverte_de_l_amerique_1492_q2",
+        "type": "mcq",
+        "question": "Qual foi o verdadeiro propósito econômico da expedição de Colombo para o oeste?",
+        "explanation": "Colombo procura uma rota ocidental para a Ásia para contornar os otomanos, que controlam as rotas comerciais do Oriente.",
+        "options": [
+          "Alcance especiarias e seda sem passar pelas rotas controladas pelos otomanos",
+          "Prove que a Terra é redonda",
+          "Colonizar a África Ocidental",
+          "Encontrar ouro para financiar uma cruzada"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_10_la_decouverte_de_l_amerique_1492_q3",
+        "type": "trueFalse",
+        "question": "Verdadeiro ou falso: Cristóvão Colombo procurou acima de tudo provar que a Terra era redonda, ideia desconhecida antes dele.",
+        "explanation": "A esfericidade da Terra já foi calculada pelo estudioso grego Eratóstenes no século III aC. ANÚNCIO; O objetivo de Colombo era econômico.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": "course_10_la_decouverte_de_l_amerique_1492_q4",
+        "type": "mcq",
+        "question": "Quais são os três navios da expedição de 1492?",
+        "explanation": "Esses três navios partiram de Palos, na Espanha, em 3 de agosto de 1492, com uma tripulação de aproximadamente 90 homens.",
+        "options": [
+          "La Pinta, la Niña e la Santa Maria",
+          "A Santa Fé, a Reina e a Isabela",
+          "Victoria, Trinidad e Concepción",
+          "Santa Clara, Gallega e Aztlán"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_10_la_decouverte_de_l_amerique_1492_q5",
+        "type": "numericSlider",
+        "question": "Quantos dias leva para cruzar o Atlântico até San Salvador?",
+        "explanation": "A travessia dura aproximadamente 70 dias, do início de agosto a meados de outubro de 1492.",
+        "correctValue": 70.0,
+        "sliderMin": 30.0,
+        "sliderMax": 120.0,
+        "tolerance": 7.0,
+        "unit": "dias"
+      },
+      {
+        "id": "course_10_la_decouverte_de_l_amerique_1492_q6",
+        "type": "mcq",
+        "question": "Como Colombo chamou os habitantes indígenas que encontrou, convencido de que estavam na Ásia?",
+        "explanation": "Convencido de ter chegado às Índias, Colombo chama os Tainos que conhece de “índios”.",
+        "options": [
+          "índios",
+          "Astecas",
+          "Bárbaros",
+          "Sarracenos"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_10_la_decouverte_de_l_amerique_1492_q7",
+        "type": "mcq",
+        "question": "O que é o Câmbio Colombiano?",
+        "explanation": "Esta transferência traz batatas e tomates para a Europa, e trigo, cavalos ou gado para a América, mudando ambos os mundos para sempre.",
+        "options": [
+          "Uma transferência massiva de plantas, animais e doenças entre a Europa e a América",
+          "Um tratado de paz entre Espanha e Portugal",
+          "O comércio de escravos entre a África e as Índias Ocidentais",
+          "A troca de prisioneiros de guerra entre Colombo e os Tainos"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_10_la_decouverte_de_l_amerique_1492_q8",
+        "type": "percentageSlider",
+        "question": "Que percentagem de populações indígenas morre de doenças importadas da Europa num século?",
+        "explanation": "A varíola, o sarampo e a gripe matam entre 50 e 90% das populações indígenas num século, dependendo da região.",
+        "correctValue": 70.0,
+        "sliderMin": 0.0,
+        "sliderMax": 100.0,
+        "tolerance": 20.0,
+        "unit": "%"
+      },
+      {
+        "id": "course_10_la_decouverte_de_l_amerique_1492_q9",
+        "type": "mcq",
+        "question": "Em 1507, qual cartógrafo deu ao continente o nome de América?",
+        "explanation": "Em 1507, o cartógrafo Waldseemüller batizou o continente de América, em homenagem ao navegador Américo Vespúcio.",
+        "options": [
+          "Waldseemüller",
+          "Vespúcio",
+          "Magalhães",
+          "Colombo"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_10_la_decouverte_de_l_amerique_1492_q10",
+        "type": "chronological",
+        "question": "Coloque essas etapas da expedição de Colombo em ordem cronológica.",
+        "explanation": "Essas quatro etapas vão de agosto de 1492 a 1507: partida, chegada às Bahamas, Tratado de Tordesilhas, depois o nome dado ao continente.",
+        "items": [
+          "A saída dos três navios de Palos",
+          "Chegada a uma ilha nas Bahamas",
+          "Partilhar o mundo entre Espanha e Portugal",
+          "O batismo do continente americano por Waldseemüller"
+        ]
+      }
+    ]
+  },
+  {
+    "courseId": "course_115_cent_ans_de_solitude_garcia_marquez",
+    "quiz": [
+      {
+        "id": "course_115_cent_ans_de_solitude_garcia_marquez_q1",
+        "type": "mcq",
+        "question": "Quantas gerações da família Buendía o romance abrange em Macondo?",
+        "explanation": "O romance traça sete gerações da família Buendía em Macondo, desde o fundador da aldeia até aos seus últimos descendentes.",
+        "options": [
+          "Sete gerações",
+          "Três gerações",
+          "Doze gerações",
+          "Uma única geração"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_115_cent_ans_de_solitude_garcia_marquez_q2",
+        "type": "mcq",
+        "question": "Que movimento literário global deu origem a Cem Anos de Solidão?",
+        "explanation": "Cem Anos de Solidão é a certidão de nascimento global do realismo mágico, onde o maravilhoso é contado como um fato comum.",
+        "options": [
+          "Realismo mágico",
+          "O novo romance",
+          "Naturalismo",
+          "Surrealismo"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_115_cent_ans_de_solitude_garcia_marquez_q3",
+        "type": "mcq",
+        "question": "Quem fundou a aldeia de Macondo na selva?",
+        "explanation": "José Arcadio Buendía fundou na selva o povoado de Macondo, berço de toda a saga familiar.",
+        "options": [
+          "José Arcádio Buendía",
+          "Coronel Aureliano Buendía",
+          "Melquíades, o cigano",
+          "O próprio Garcia Márquez"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_115_cent_ans_de_solitude_garcia_marquez_q4",
+        "type": "mcq",
+        "question": "O que acontece com o Coronel Aureliano Buendía depois de seus trinta e dois levantes armados?",
+        "explanation": "O Coronel Aureliano Buendía lidera trinta e dois levantes armados e perde todos, sem nunca derrubar o poder vigente.",
+        "options": [
+          "Ele perde todos eles",
+          "Ele acaba assumindo o poder",
+          "Ele morreu durante a primeira revolta",
+          "Ele deixa a Colômbia para o exílio"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_115_cent_ans_de_solitude_garcia_marquez_q5",
+        "type": "mcq",
+        "question": "Que acontecimento histórico real o massacre dos trabalhadores no romance transpõe?",
+        "explanation": "O episódio do massacre dos trabalhadores transpõe o massacre real das plantações de banana colombianas de 1928, posteriormente apagado da memória coletiva.",
+        "options": [
+          "O massacre da plantação de banana na Colômbia em 1928",
+          "A Guerra Civil Colombiana do século XIX",
+          "Independência colombiana",
+          "A Revolução Cubana"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_115_cent_ans_de_solitude_garcia_marquez_q6",
+        "type": "trueFalse",
+        "question": "Verdadeiro ou falso: quando Remedios sobe ao céu dobrando lençóis, o narrador enfatiza o caráter extraordinário do acontecimento.",
+        "explanation": "O narrador não demonstra surpresa: o mágico é contado como uma extensão orgânica da realidade, sem o elemento surpresa.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": "course_115_cent_ans_de_solitude_garcia_marquez_q7",
+        "type": "mcq",
+        "question": "O que revela o manuscrito de Melquíades, escrito em sânscrito?",
+        "explanation": "O manuscrito de Melquíades conta antecipadamente, em sânscrito, cem anos de história da família Buendía.",
+        "options": [
+          "A história completa da família Buendía, cem anos antes de acontecer",
+          "As receitas alquímicas da aldeia",
+          "O mapa das minas de ouro da região",
+          "Um tratado de paz entre famílias rivais"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_115_cent_ans_de_solitude_garcia_marquez_q8",
+        "type": "mcq",
+        "question": "O que García Márquez faz logo após ter sua iluminação criativa enquanto dirigia para Acapulco?",
+        "explanation": "García Márquez deu meia-volta e isolou-se durante dezoito meses para escrever o romance, enquanto sua esposa penhorava seus bens.",
+        "options": [
+          "Ele se virou e se isolou por dezoito meses para escrever o romance",
+          "Ele abandona definitivamente o projeto",
+          "Ele sai imediatamente para apresentar sua ideia a um editor",
+          "Ele começa a escrever o romance em inglês"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_115_cent_ans_de_solitude_garcia_marquez_q9",
+        "type": "trueFalse",
+        "question": "Verdadeiro ou falso: o tempo em Macondo é circular, com os Buendías repetindo os erros dos seus antepassados.",
+        "explanation": "O tempo em Macondo é circular: os membros da família Buendía repetem, geração após geração, os erros dos seus antepassados.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_115_cent_ans_de_solitude_garcia_marquez_q10",
+        "type": "numericSlider",
+        "question": "Em que ano García Márquez recebeu o Prêmio Nobel de Literatura?",
+        "explanation": "García Márquez recebeu o Prêmio Nobel de Literatura em 1982, quinze anos após a publicação do romance.",
+        "correctValue": 1982.0,
+        "sliderMin": 1960.0,
+        "sliderMax": 2000.0,
+        "tolerance": 3.0,
+        "unit": ""
+      }
+    ]
+  },
+  {
+    "courseId": "course_116_la_metamorphose_kafka",
+    "quiz": [
+      {
+        "id": "course_116_la_metamorphose_kafka_q1",
+        "type": "mcq",
+        "question": "Como começa A Metamorfose, num dos incipits mais famosos da literatura?",
+        "explanation": "A novela abre com Gregor Samsa acordando transformado em um inseto monstruoso, sem qualquer explicação do fenômeno.",
+        "options": [
+          "Gregor Samsa acorda transformado em um inseto monstruoso",
+          "Gregor Samsa vai trabalhar como todas as manhãs",
+          "A família Samsa fica sabendo da morte de Gregor",
+          "Gregor Samsa deixa a casa da família"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_116_la_metamorphose_kafka_q2",
+        "type": "mcq",
+        "question": "Qual era a profissão de Gregor Samsa antes de sua transformação?",
+        "explanation": "Antes de sua transformação, Gregor era caixeiro-viajante e único sustento financeiro de sua família.",
+        "options": [
+          "Caixeiro-viajante, único sustento financeiro de sua família",
+          "Médico do campo",
+          "Funcionário do banco em Praga",
+          "Professor de Filologia"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_116_la_metamorphose_kafka_q3",
+        "type": "trueFalse",
+        "question": "Verdadeiro ou falso: Kafka explica detalhadamente, na história, como e por que Gregor se transforma em inseto.",
+        "explanation": "Kafka trata a transformação com realismo clínico, sem nunca explicar o fenômeno; o foco está em suas consequências.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": "course_116_la_metamorphose_kafka_q4",
+        "type": "mcq",
+        "question": "Por que Kafka proíbe seu editor de retratar o inseto na capa do livro?",
+        "explanation": "Kafka preferia que o leitor imaginasse o horror da transformação por si mesmo, em vez de vê-lo fixado por uma ilustração.",
+        "options": [
+          "Para que cada leitor imagine sua própria versão de terror",
+          "Porque o design custou muito caro para ser feito",
+          "Porque a censura teria proibido",
+          "Porque ele queria manter o autor anônimo"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_116_la_metamorphose_kafka_q5",
+        "type": "mcq",
+        "question": "Quem desobedeceu aos últimos desejos de Kafka ao publicar seus manuscritos em vez de destruí-los?",
+        "explanation": "Max Brod, amigo de Kafka, desobedeceu aos seus últimos desejos ao publicar seus manuscritos em vez de destruí-los.",
+        "options": [
+          "Seu amigo Max Brod",
+          "Sua irmã Grete",
+          "Sua editora de Praga",
+          "Sua noiva"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_116_la_metamorphose_kafka_q6",
+        "type": "mcq",
+        "question": "Quem na família Samsa alimenta e limpa o quarto de Gregor no início de sua metamorfose?",
+        "explanation": "No início, é sua irmã Grete quem alimenta Gregor e limpa seu quarto, antes que sua devoção diminua com o tempo.",
+        "options": [
+          "Sua irmã Grete",
+          "Sua mãe",
+          "Seu pai",
+          "Um pensionista alugado"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_116_la_metamorphose_kafka_q7",
+        "type": "mcq",
+        "question": "O que os Samsa fazem para se sustentar após a transformação de Gregor?",
+        "explanation": "Para sobreviver, cada membro da família volta a trabalhar e aluga quartos para hóspedes.",
+        "options": [
+          "Todos voltam a trabalhar e alugam quartos para pensionistas",
+          "Eles vendem a casa da família",
+          "Eles se mudam para o campo",
+          "Eles pedem ajuda ao município"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_116_la_metamorphose_kafka_q8",
+        "type": "mcq",
+        "question": "Como termina a vida de Gregor, quando Grete declara que eles devem se livrar dele?",
+        "explanation": "Percebendo que não tem mais seu lugar, Gregor morre de fome em seu quarto.",
+        "options": [
+          "Ele se deixa morrer de fome",
+          "Ele escapa pela janela",
+          "De repente ele se torna humano novamente",
+          "Ele é expulso à força por seu pai"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_116_la_metamorphose_kafka_q9",
+        "type": "trueFalse",
+        "question": "Verdadeiro ou falso: a morte de Gregor é vivida por sua família como uma tragédia dolorosa.",
+        "explanation": "A morte de Gregor é, ao contrário, um livramento para sua família, que sai para passear já pensando no casamento de Grete.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": "course_116_la_metamorphose_kafka_q10",
+        "type": "numericSlider",
+        "question": "Em que ano Kafka escreveu A Metamorfose?",
+        "explanation": "Kafka escreveu A Metamorfose em 1912, num período de grande criatividade, antes da sua publicação em 1915.",
+        "correctValue": 1912.0,
+        "sliderMin": 1880.0,
+        "sliderMax": 1940.0,
+        "tolerance": 3.0,
+        "unit": ""
+      }
+    ]
+  },
+  {
+    "courseId": "course_117_le_maitre_et_marguerite_boulgakov",
+    "quiz": [
+      {
+        "id": "course_117_le_maitre_et_marguerite_boulgakov_q1",
+        "type": "mcq",
+        "question": "Quais são os três mundos que o romance O Mestre e Margarita entrelaça?",
+        "explanation": "O romance tece três mundos: a Moscou soviética na década de 1930, a antiga Jerusalém e um espaço fantástico governado pelo diabo.",
+        "options": [
+          "Moscou soviética, a antiga Jerusalém e um mundo de fantasia governado pelo diabo",
+          "Moscou, São Petersburgo e Kyiv",
+          "O passado czarista, o presente stalinista e um futuro comunista ideal",
+          "Berlim, Paris e Moscou"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_117_le_maitre_et_marguerite_boulgakov_q2",
+        "type": "mcq",
+        "question": "Por que Bulgakov queimou o primeiro manuscrito do romance em 1930?",
+        "explanation": "Por medo de buscas por parte da polícia política soviética, o NKVD, Bulgakov queimou seu primeiro manuscrito e começou a escrever novamente de memória.",
+        "options": [
+          "Por medo das buscas do NKVD",
+          "Porque ele considerou o texto inacabado",
+          "Por ordem direta de Stalin",
+          "Porque um incêndio acidental eclodiu"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_117_le_maitre_et_marguerite_boulgakov_q3",
+        "type": "trueFalse",
+        "question": "Verdadeiro ou falso: Bulgakov teve seu romance publicado na íntegra durante sua vida.",
+        "explanation": "Bulgakov morreu em 1940 sem ver seu trabalho publicado; o romance não apareceria na íntegra até 1967.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": "course_117_le_maitre_et_marguerite_boulgakov_q4",
+        "type": "mcq",
+        "question": "Quem chega a Moscou com seu gato preto Behemoth e semeia o pânico na casta literária?",
+        "explanation": "Woland, que não é outro senão Satanás, chega a Moscou com seu gato preto Behemoth e semeia o pânico entre a casta literária corrupta.",
+        "options": [
+          "Woland, ou seja, Satanás",
+          "O Mestre, o escritor perseguido",
+          "Pôncio Pilatos",
+          "Capitão do serviço secreto soviético"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_117_le_maitre_et_marguerite_boulgakov_q5",
+        "type": "mcq",
+        "question": "O que o Mestre diz no romance que escreve dentro do romance?",
+        "explanation": "O Mestre escreve a história de Pôncio Pilatos e Yeshua Ha-Nozri em Jerusalém, paralelamente à intriga moscovita.",
+        "options": [
+          "A história de Pôncio Pilatos e Yeshua Ha-Nozri",
+          "A vida cotidiana em Moscou sob Stalin",
+          "As Guerras Napoleônicas",
+          "Uma biografia imaginária de Woland"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_117_le_maitre_et_marguerite_boulgakov_q6",
+        "type": "mcq",
+        "question": "O que Marguerite faz para salvar o Mestre, internado após a destruição de seu manuscrito?",
+        "explanation": "Marguerite concorda em se tornar uma bruxa e presidir o baile do diabo para salvar o Mestre, em um sacrifício total e amoroso.",
+        "options": [
+          "Ela se torna uma bruxa e preside o baile do diabo",
+          "Ela denuncia Woland às autoridades",
+          "Ela mesma reescreveu o manuscrito perdido",
+          "Ela vai para o exílio em Leningrado"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_117_le_maitre_et_marguerite_boulgakov_q7",
+        "type": "mcq",
+        "question": "Qual vício Woland apresenta como o mais terrível de todos?",
+        "explanation": "Woland revela que a covardia é o mais terrível dos vícios, tanto o de Pôncio Pilatos como o dos críticos soviéticos.",
+        "options": [
+          "Covardia",
+          "Orgulho",
+          "Ambição",
+          "Crueldade"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_117_le_maitre_et_marguerite_boulgakov_q8",
+        "type": "mcq",
+        "question": "O que significa a famosa frase “Manuscritos não queimam”?",
+        "explanation": "Esta frase afirma que a verdade da arte acaba sempre por triunfar sobre a repressão e a censura política.",
+        "options": [
+          "Que as ideias verdadeiras sobrevivam à censura",
+          "Que o papel usado por Bulgakov não era inflamável",
+          "Que Stalin proibiu a destruição de livros",
+          "Que as bibliotecas soviéticas eram à prova de fogo"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_117_le_maitre_et_marguerite_boulgakov_q9",
+        "type": "mcq",
+        "question": "Como o romance circulou clandestinamente na URSS antes de sua publicação oficial?",
+        "explanation": "Na URSS, o romance circulou em samizdat, cópias datilografadas clandestinas trocadas entre leitores.",
+        "options": [
+          "Na forma de samizdat, cópias datilografadas clandestinas",
+          "Por leituras públicas secretas",
+          "Graças a uma edição impressa no exterior e importada ilegalmente",
+          "Por transmissão oral entre escritores"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_117_le_maitre_et_marguerite_boulgakov_q10",
+        "type": "trueFalse",
+        "question": "Verdadeiro ou falso: O Mestre e Margarita inspiraram a música “Sympathy for the Devil” dos Rolling Stones.",
+        "explanation": "O romance inspirou Mick Jagger a escrever \"Sympathy for the Devil\", depois que Marianne Faithfull lhe ofereceu uma tradução para o inglês em 1967.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correctIndex": 0
+      }
+    ]
+  },
+  {
+    "courseId": "course_151_guernica_picasso",
+    "quiz": [
+      {
+        "id": "course_151_guernica_picasso_q1",
+        "type": "mcq",
+        "question": "Que acontecimento em 1937 levou Picasso a pintar Guernica?",
+        "explanation": "Em 26 de abril de 1937, a cidade basca de Guernica foi bombardeada durante a Guerra Civil Espanhola, o que levou Picasso a reagir com uma enorme tela.",
+        "options": [
+          "O bombardeio da cidade basca de Guernica",
+          "A queda de Madri",
+          "O início da Segunda Guerra Mundial",
+          "Execução de Franco"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_151_guernica_picasso_q2",
+        "type": "mcq",
+        "question": "Por que Picasso renunciou à cor para esta pintura?",
+        "explanation": "Picasso abandona a cor para se ater à urgência do testemunho, como se pintasse a preto e branco a primeira página de um jornal.",
+        "options": [
+          "Manter a urgência do testemunho, como a primeira página de um jornal",
+          "Porque ele ficou sem tinta colorida",
+          "Para cumprir uma ordem do governo espanhol",
+          "Por imitação do cubismo analítico"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_151_guernica_picasso_q3",
+        "type": "trueFalse",
+        "question": "Verdadeiro ou falso: Guernica retrata uma batalha heróica com soldados vitoriosos.",
+        "explanation": "Guernica mostra uma gramática de terror civil, cavalo estripado e mãe com filho, e não uma batalha heróica.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": "course_151_guernica_picasso_q4",
+        "type": "mcq",
+        "question": "Qual lado apoiou o bombardeio de Guernica durante a Guerra Civil Espanhola?",
+        "explanation": "O bombardeamento de saturação de Guernica é levado a cabo pelos nacionalistas de Franco, apoiados pela Legião Condor Alemã.",
+        "options": [
+          "Os nacionalistas de Franco, auxiliados pela Legião Condor Alemã",
+          "A Segunda República Espanhola sozinha",
+          "As Brigadas Internacionais",
+          "O governo francês"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_151_guernica_picasso_q5",
+        "type": "trueFalse",
+        "question": "Verdadeiro ou falso: Picasso recusou-se a permitir que Guernica fosse enviado para Espanha enquanto Franco permanecesse no poder.",
+        "explanation": "Na verdade, Picasso recusou-se a permitir que a pintura chegasse à Espanha enquanto Franco permanecesse no poder.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_151_guernica_picasso_q6",
+        "type": "numericSlider",
+        "question": "Em que ano Guernica regressou a Espanha após a morte de Franco?",
+        "explanation": "A pintura regressou a Madrid em 1981, após o fim da ditadura franquista.",
+        "correctValue": 1981.0,
+        "sliderMin": 1960.0,
+        "sliderMax": 2000.0,
+        "tolerance": 3.0,
+        "unit": ""
+      },
+      {
+        "id": "course_151_guernica_picasso_q7",
+        "type": "mcq",
+        "question": "Onde a pintura permaneceu protegida durante grande parte da ditadura de Franco?",
+        "explanation": "Após a Exposição Universal de Paris, a pintura permaneceu por muito tempo no MoMA de Nova York, protegida durante a ditadura de Franco.",
+        "options": [
+          "No MoMA em Nova York",
+          "No Louvre em Paris",
+          "No Prado em Madri",
+          "Na National Gallery de Londres"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_151_guernica_picasso_q8",
+        "type": "chronological",
+        "question": "Coloque estas etapas da história de Guernica em ordem cronológica.",
+        "explanation": "A pintura foi pintada após o atentado de abril de 1937, exibida na Exposição Universal de Paris no mesmo ano, depois exilada no MoMA antes de retornar a Madrid em 1981.",
+        "items": [
+          "O bombardeio da cidade basca de Guernica",
+          "A Exposição Universal de Paris apresenta a pintura",
+          "A obra está guardada no MoMA de Nova York",
+          "A pintura retorna a Madrid após a morte de Franco"
+        ]
+      }
+    ]
+  },
+  {
+    "courseId": "course_154_impression_soleil_levant_monet",
+    "quiz": [
+      {
+        "id": "course_154_impression_soleil_levant_monet_q1",
+        "type": "mcq",
+        "question": "Onde Monet pintou a cena retratada em Impressão, Soleil Levant?",
+        "explanation": "Monet pintou o porto de Le Havre no início da manhã por volta de 1872.",
+        "options": [
+          "O porto de Le Havre",
+          "O porto de Marselha",
+          "O Sena em Paris",
+          "A Baía de Nápoles"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_154_impression_soleil_levant_monet_q2",
+        "type": "mcq",
+        "question": "Quem, ao zombar da pintura em 1874, involuntariamente deu nome ao Impressionismo?",
+        "explanation": "O crítico Louis Leroy zombou da pintura em 1874 e, apesar de tudo, batizou-a de Impressionismo.",
+        "options": [
+          "O crítico Louis Leroy",
+          "O pintor Édouard Manet",
+          "O comerciante Paul Durand-Ruel",
+          "Fotógrafo Nadar"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_154_impression_soleil_levant_monet_q3",
+        "type": "trueFalse",
+        "question": "Verdadeiro ou falso: a pintura foi apresentada no Salão Oficial de Pintura em 1874.",
+        "explanation": "A pintura foi exposta em Nadar em 1874, fora do Salão oficial.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": "course_154_impression_soleil_levant_monet_q4",
+        "type": "mcq",
+        "question": "O que Monet está acima de tudo tentando capturar nesta pintura?",
+        "explanation": "O principal não é o Documentary Haven, mas a vibração laranja na névoa cinzenta.",
+        "options": [
+          "A vibração luminosa de um momento, mais que o detalhe documental do porto",
+          "Uma reconstrução histórica precisa do porto",
+          "Um retrato dos trabalhadores do estaleiro",
+          "Um cartão postal turístico de Le Havre"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_154_impression_soleil_levant_monet_q5",
+        "type": "numericSlider",
+        "question": "Em que ano a pintura foi exposta no Nadar's, causando o escândalo que deu nome ao movimento?",
+        "explanation": "A pintura foi exibida em Nadar em 1874, onde Louis Leroy foi irônico quanto ao título.",
+        "correctValue": 1874.0,
+        "sliderMin": 1850.0,
+        "sliderMax": 1900.0,
+        "tolerance": 3.0,
+        "unit": ""
+      },
+      {
+        "id": "course_154_impression_soleil_levant_monet_q6",
+        "type": "mcq",
+        "question": "Quem apoia Monet financeiramente quando o público francês ainda está hesitante em relação à sua pintura?",
+        "explanation": "O negociante Paul Durand-Ruel apoiou Monet quando o público francês ainda estava hesitante.",
+        "options": [
+          "O comerciante Paul Durand-Ruel",
+          "Papa Pio IX",
+          "O estado francês",
+          "O Rei da Inglaterra"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_154_impression_soleil_levant_monet_q7",
+        "type": "trueFalse",
+        "question": "Verdadeiro ou falso: em 2014, um astrofísico conseguiu datar com precisão a cena da pintura usando as marés e a posição do sol.",
+        "explanation": "Em 2014, um astrofísico datou a cena em 13 de novembro de 1872, por volta das 7h35, graças às marés e ao sol.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_154_impression_soleil_levant_monet_q8",
+        "type": "mcq",
+        "question": "O que Monet pintou em plena industrialização do porto, longe de uma marinha idealizada?",
+        "explanation": "Monet pintou chaminés, navios e neblina do porto de Le Havre em plena industrialização.",
+        "options": [
+          "Chaminés, navios e neblina",
+          "Pescadores em trajes tradicionais",
+          "Penhascos desertos",
+          "Veleiros antigos"
+        ],
+        "correctIndex": 0
+      }
+    ]
+  },
+  {
+    "courseId": "course_155_nighthawks_hopper",
+    "quiz": [
+      {
+        "id": "course_155_nighthawks_hopper_q1",
+        "type": "mcq",
+        "question": "Que evento histórico precedeu logo a conclusão dos Nighthawks em 1942?",
+        "explanation": "A pintura foi concluída logo após o ataque a Pearl Harbor, quando o país entrou na guerra.",
+        "options": [
+          "O ataque a Pearl Harbor",
+          "Os desembarques na Normandia",
+          "O fim da Primeira Guerra Mundial",
+          "A crise de 1929"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_155_nighthawks_hopper_q2",
+        "type": "mcq",
+        "question": "O que Hopper mostra da América em guerra, em vez de cenas de batalha?",
+        "explanation": "Hopper mostra o contexto emocional: insones, café quente, silêncio.",
+        "options": [
+          "A retaguarda emocional, feita de insônia e silêncio",
+          "Soldados em batalha",
+          "Fábricas de armas em pleno funcionamento",
+          "Desfiles patrióticos"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_155_nighthawks_hopper_q3",
+        "type": "trueFalse",
+        "question": "Verdadeiro ou falso: A lanchonete pintada por Hopper tem uma porta bem visível que dá para a rua.",
+        "explanation": "A lanchonete não possui porta visível, tornando o espaço iluminado, exposto e isolado ao mesmo tempo.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": "course_155_nighthawks_hopper_q4",
+        "type": "mcq",
+        "question": "De quem Hopper foi aluno antes de desenvolver seu estilo pessoal?",
+        "explanation": "Hopper foi aluno de Robert Henri antes de pintar motéis, postos de gasolina e janelas com sua clareza fria.",
+        "options": [
+          "Roberto Henrique",
+          "Pablo Picasso",
+          "Claude Monet",
+          "Salvador Dali"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_155_nighthawks_hopper_q5",
+        "type": "mcq",
+        "question": "Como Hopper compõe suas cenas, de acordo com o curso?",
+        "explanation": "Hopper constrói cenas como cenários de filmes, com ângulos nítidos e personagens separados uns dos outros.",
+        "options": [
+          "Como cenários de filmes, com ângulos agudos e personagens separados uns dos outros",
+          "Como afrescos religiosos sobrecarregados",
+          "Como colagens abstratas sem figuração",
+          "Como cartoons políticos"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_155_nighthawks_hopper_q6",
+        "type": "trueFalse",
+        "question": "Verdadeiro ou falso: Hopper se inspirou em um restaurante real de Greenwich Village para pintar este restaurante.",
+        "explanation": "Hopper disse que se inspirou em um restaurante de Greenwich Village, simplificado ao essencial.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_155_nighthawks_hopper_q7",
+        "type": "mcq",
+        "question": "Quais diretores reciclaram posteriormente a luz e a solidão de Nighthawks?",
+        "explanation": "Ridley Scott e Wim Wenders, entre outros, reciclaram a luz neon e a solidão da pintura.",
+        "options": [
+          "Ridley Scott e Wim Wenders",
+          "Alfred Hitchcock e Charlie Chaplin",
+          "Steven Spielberg e George Lucas",
+          "Federico Fellini e Ingmar Bergman"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_155_nighthawks_hopper_q8",
+        "type": "numericSlider",
+        "question": "Em que ano Hopper completou Nighthawks?",
+        "explanation": "Edward Hopper completou Nighthawks em 1942, logo após a entrada dos Estados Unidos na guerra.",
+        "correctValue": 1942.0,
+        "sliderMin": 1900.0,
+        "sliderMax": 1970.0,
+        "tolerance": 3.0,
+        "unit": ""
+      }
+    ]
+  },
+  {
+    "courseId": "course_157_la_persistance_de_la_memoire_dali",
+    "quiz": [
+      {
+        "id": "course_157_la_persistance_de_la_memoire_dali_q1",
+        "type": "mcq",
+        "question": "Onde fica o cenário da pintura, inspirado em um lugar real onde Dalí viveu?",
+        "explanation": "O cenário lembra Cap de Creus e Port Lligat, na Catalunha, onde Dalí mora com Gala.",
+        "options": [
+          "Cabo de Creus, Catalunha",
+          "O Deserto do Saara",
+          "Os Alpes Suíços",
+          "Provença Francesa"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_157_la_persistance_de_la_memoire_dali_q2",
+        "type": "mcq",
+        "question": "O que simbolizam os relógios macios da pintura?",
+        "explanation": "Os relógios ilustram o tempo lento: o tempo vivido não é o dos relógios.",
+        "options": [
+          "Tempo interior, experienciado, diferente do tempo medido pelos relógios",
+          "A precisão científica do tempo",
+          "A riqueza material de Dalí",
+          "A passagem das estações"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_157_la_persistance_de_la_memoire_dali_q3",
+        "type": "trueFalse",
+        "question": "Verdadeiro ou falso: Dalí pinta essas cenas impossíveis com uma técnica deliberadamente grosseira e desleixada.",
+        "explanation": "Dalí pinta o impossível com um acabamento renascentista, tornando a imagem crível e perturbadora.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": "course_157_la_persistance_de_la_memoire_dali_q4",
+        "type": "mcq",
+        "question": "Como o próprio Dalí descreve o que pinta?",
+        "explanation": "Dalí afirma pintar “fotografias oníricas”, misturando decoração real e inconsciente.",
+        "options": [
+          "“Fotografias de sonho”",
+          "“Pesadelos sem cabeça nem cauda”",
+          "“Estudos científicos do tempo”",
+          "“Homenagens ao Renascimento Italiano”"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_157_la_persistance_de_la_memoire_dali_q5",
+        "type": "trueFalse",
+        "question": "Verdadeiro ou falso: Dalí afirmou ter se inspirado em um Camembert feito demais para imaginar relógios macios.",
+        "explanation": "Dalí afirmou ter se inspirado em um Camembert exageradamente feito, algo entre uma piada e um método.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_157_la_persistance_de_la_memoire_dali_q6",
+        "type": "mcq",
+        "question": "Qual instituição americana adquiriu a pintura, contribuindo para a sua fama mundial?",
+        "explanation": "A obra foi adquirida pelo MoMA, o que a ajudou a ingressar na cultura popular.",
+        "options": [
+          "O MoMA",
+          "O Museu Metropolitano",
+          "A Galeria Nacional",
+          "O Guggenheim"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_157_la_persistance_de_la_memoire_dali_q7",
+        "type": "mcq",
+        "question": "Com quem Dalí morava em Port Lligat, na Catalunha, na época da pintura?",
+        "explanation": "Dalí morou então com Gala em Port Lligat, na Catalunha.",
+        "options": [
+          "Gala",
+          "Frida Kahlo",
+          "Amanda Lear",
+          "Coco Chanel"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_157_la_persistance_de_la_memoire_dali_q8",
+        "type": "numericSlider",
+        "question": "Em que ano Dalí pintou A Persistência da Memória?",
+        "explanation": "Dalí pintou a pintura em 1931.",
+        "correctValue": 1931.0,
+        "sliderMin": 1900.0,
+        "sliderMax": 1960.0,
+        "tolerance": 3.0,
+        "unit": ""
+      }
+    ]
+  },
+  {
+    "courseId": "course_18_la_grande_depression_1929",
+    "quiz": [
+      {
+        "id": "course_18_la_grande_depression_1929_q1",
+        "type": "mcq",
+        "question": "Em que dia de 1929 ocorreu a quebra da Bolsa de Valores de Nova Iorque, desencadeando a Grande Depressão?",
+        "explanation": "Em 24 de outubro de 1929, apelidada de Quinta-feira Negra, a Bolsa de Valores de Nova York entrou em colapso e desencadeou a Grande Depressão.",
+        "options": [
+          "24 de outubro, “Quinta-feira Negra”",
+          "1º de janeiro, dia de ano novo",
+          "14 de julho, feriado nacional francês",
+          "11 de novembro, armistício de 1918"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_18_la_grande_depression_1929_q2",
+        "type": "percentageSlider",
+        "question": "Que percentagem de americanos estava desempregada no auge da Grande Depressão?",
+        "explanation": "Cerca de 25% dos americanos ficaram desempregados durante a crise.",
+        "correctValue": 25.0,
+        "sliderMin": 0.0,
+        "sliderMax": 100.0,
+        "tolerance": 5.0,
+        "unit": "%"
+      },
+      {
+        "id": "course_18_la_grande_depression_1929_q3",
+        "type": "mcq",
+        "question": "Que mecanismo alimentou a bolha especulativa dos loucos anos 20 antes do crash?",
+        "explanation": "Pedimos empréstimos para comprar ações apostando na sua subida: este sistema de compra à margem multiplica as perdas quando o mercado entra em colapso.",
+        "options": [
+          "Comprar ações com margem, pedir empréstimos para comprar títulos",
+          "Impressão em massa de dinheiro pelo estado",
+          "A queda contínua dos preços agrícolas",
+          "A proibição do crédito ao consumo"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_18_la_grande_depression_1929_q4",
+        "type": "trueFalse",
+        "question": "Verdadeiro ou falso: entre 1929 e 1932, o mercado de ações americano perdeu quase 90% do seu valor.",
+        "explanation": "O mercado de ações americano perdeu aproximadamente 89% do seu valor entre 1929 e 1932.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_18_la_grande_depression_1929_q5",
+        "type": "mcq",
+        "question": "Quais são as “corridas aos bancos” que atingiram os bancos americanos após a crise?",
+        "explanation": "Os clientes em pânico correm para levantar o seu dinheiro, causando a falência de cerca de 9.000 bancos norte-americanos.",
+        "options": [
+          "Ondas de clientes retirando seu dinheiro em pânico",
+          "Roubos organizados por gangues",
+          "Auditorias obrigatórias impostas pelo Estado",
+          "Fusões forçadas entre grandes bancos"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_18_la_grande_depression_1929_q6",
+        "type": "chronological",
+        "question": "Coloque esses eventos da Grande Depressão em ordem cronológica.",
+        "explanation": "A crise de Outubro de 1929 levou a uma cadeia de falências bancárias, depois a crise abriu o caminho para Hitler e para a resposta do New Deal, ambas no início de 1933.",
+        "items": [
+          "Quinta-feira negra em Wall Street",
+          "Uma onda de falências bancárias nos Estados Unidos",
+          "A ascensão de Hitler ao poder na Alemanha",
+          "O lançamento do New Deal por Roosevelt"
+        ]
+      },
+      {
+        "id": "course_18_la_grande_depression_1929_q7",
+        "type": "mcq",
+        "question": "Que sistema monetário está a propagar a crise económica americana à Europa?",
+        "explanation": "Para manter as suas reservas de ouro, os bancos centrais europeus aumentam as suas taxas de juro, o que agrava ainda mais a recessão.",
+        "options": [
+          "O padrão-ouro, que leva os bancos centrais a aumentarem as suas taxas de juro",
+          "O franco-ouro, a moeda única europeia",
+          "O sistema de Bretton Woods",
+          "A União Aduaneira Europeia"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_18_la_grande_depression_1929_q8",
+        "type": "mcq",
+        "question": "Quem aproveitou o desemprego massivo na Alemanha para chegar ao poder em Janeiro de 1933?",
+        "explanation": "Com uma taxa de desemprego de 30% na Alemanha, Hitler explorou o desespero popular contra a frágil República de Weimar.",
+        "options": [
+          "Adolf Hitler",
+          "Franklin D. Roosevelt",
+          "Herbert Hoover",
+          "Winston Churchill"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_18_la_grande_depression_1929_q9",
+        "type": "mcq",
+        "question": "Que política Franklin D. Roosevelt lançou para responder à crise?",
+        "explanation": "Eleito em 1932, Roosevelt lançou o New Deal: grandes obras, regulação bancária e início da proteção social, para reanimar a economia.",
+        "options": [
+          "O New Deal, que põe fim ao laissez-faire e reaviva a economia através do Estado",
+          "Coletivização de terras agrícolas",
+          "Restauração do padrão ouro",
+          "Uma aliança militar com a Alemanha"
+        ],
+        "correctIndex": 0
+      }
+    ]
+  },
+  {
+    "courseId": "course_201_la_naissance_du_conflit_israelo_palestin",
+    "quiz": [
+      {
+        "id": "course_201_la_naissance_du_conflit_israelo_palestin_q1",
+        "type": "mcq",
+        "question": "Quem teorizou o sionismo político moderno em 1897?",
+        "explanation": "Theodor Herzl teorizou o sionismo político durante o Congresso de Basileia em 1897, em resposta à ascensão do anti-semitismo na Europa.",
+        "options": [
+          "Theodor Herzl",
+          "David Ben-Gurion",
+          "Chaim Weizmann",
+          "Artur Balfour"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_201_la_naissance_du_conflit_israelo_palestin_q2",
+        "type": "numericSlider",
+        "question": "Em que ano o governo britânico emitiu a Declaração Balfour?",
+        "explanation": "A Declaração Balfour, emitida em 1917, prometia um “lar nacional para o povo judeu” na Palestina.",
+        "correctValue": 1917.0,
+        "sliderMin": 1880.0,
+        "sliderMax": 1950.0,
+        "tolerance": 2.0,
+        "unit": ""
+      },
+      {
+        "id": "course_201_la_naissance_du_conflit_israelo_palestin_q3",
+        "type": "percentageSlider",
+        "question": "Que percentagem da população da Palestina era judia em 1918, antes da grande onda de imigração na década de 1930?",
+        "explanation": "A população judaica da Palestina era de aproximadamente 8% do total em 1918, antes de ultrapassar 30% no final da década de 1930.",
+        "correctValue": 8.0,
+        "sliderMin": 0.0,
+        "sliderMax": 100.0,
+        "tolerance": 5.0,
+        "unit": "%"
+      },
+      {
+        "id": "course_201_la_naissance_du_conflit_israelo_palestin_q4",
+        "type": "trueFalse",
+        "question": "Verdadeiro ou falso: em 1947, os líderes sionistas e os líderes árabes aceitaram o plano de partição da ONU.",
+        "explanation": "Os líderes sionistas aceitam o plano de partilha da ONU, mas os árabes rejeitam-no: uma guerra civil irrompe quase imediatamente.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": "course_201_la_naissance_du_conflit_israelo_palestin_q5",
+        "type": "chronological",
+        "question": "Coloque esses eventos em ordem cronológica.",
+        "explanation": "Estas quatro datas (1897, 1917, 1947, 1948) marcam meio século, desde o nascimento do sionismo político até à criação do Estado de Israel e ao êxodo palestiniano.",
+        "items": [
+          "Congresso de Basileia",
+          "Declaração Balfour",
+          "Plano de Partilha da ONU",
+          "Independência de Israel e a Nakba"
+        ]
+      },
+      {
+        "id": "course_201_la_naissance_du_conflit_israelo_palestin_q6",
+        "type": "mcq",
+        "question": "Como os palestinos chamam o êxodo de 1948?",
+        "explanation": "Nakba significa “catástrofe” em árabe: o termo refere-se ao êxodo de centenas de milhares de palestinos em 1948.",
+        "options": [
+          "A Nakba",
+          "Aliá",
+          "A Intifada",
+          "O mandato"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_201_la_naissance_du_conflit_israelo_palestin_q7",
+        "type": "mcq",
+        "question": "Que organização a ONU criou em 1949 para ajudar os refugiados palestinos?",
+        "explanation": "A UNRWA foi criada em 1949 para cuidar dos refugiados palestinos, numa situação supostamente temporária.",
+        "options": [
+          "UNRWA",
+          "UNESCO",
+          "ACNUR",
+          "A Liga Árabe"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_201_la_naissance_du_conflit_israelo_palestin_q8",
+        "type": "numericSlider",
+        "question": "Aproximadamente quantos milhares de palestinos fugiram ou foram expulsos de suas casas durante a Nakba de 1948?",
+        "explanation": "Entre 700 mil e 750 mil palestinos fugiram ou foram expulsos de suas casas durante a guerra de 1948.",
+        "correctValue": 725.0,
+        "sliderMin": 200.0,
+        "sliderMax": 1200.0,
+        "tolerance": 100.0,
+        "unit": "milhares"
+      },
+      {
+        "id": "course_201_la_naissance_du_conflit_israelo_palestin_q9",
+        "type": "mcq",
+        "question": "Quem aceita o plano de partilha da ONU de 1947, ao contrário dos líderes árabes?",
+        "explanation": "Os líderes sionistas aceitaram o plano de partição da ONU em 1947, enquanto os líderes árabes o rejeitaram.",
+        "options": [
+          "Líderes sionistas",
+          "Os britânicos",
+          "As próprias Nações Unidas",
+          "Refugiados palestinos"
+        ],
+        "correctIndex": 0
+      }
+    ]
+  },
+  {
+    "courseId": "course_203_les_tensions_autour_de_taiwan",
+    "quiz": [
+      {
+        "id": "course_203_les_tensions_autour_de_taiwan_q1",
+        "type": "mcq",
+        "question": "Quem liderou os nacionalistas do Kuomintang que se refugiaram em Taiwan em 1949?",
+        "explanation": "Chiang Kai-shek liderou os nacionalistas do Kuomintang, esmagados pela vitória comunista, que se refugiaram na ilha de Taiwan em 1949.",
+        "options": [
+          "Chiang Kai-shek",
+          "Mao Tsé-tung",
+          "Deng Xiaoping",
+          "Sun Yat-sen"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_203_les_tensions_autour_de_taiwan_q2",
+        "type": "numericSlider",
+        "question": "Aproximadamente quantos milhões de pessoas tem Taiwan?",
+        "explanation": "Taiwan tem cerca de 23 milhões de habitantes, uma população que tem de lidar com o isolamento diplomático da ilha.",
+        "correctValue": 23.0,
+        "sliderMin": 5.0,
+        "sliderMax": 60.0,
+        "tolerance": 5.0,
+        "unit": "milhão de habitantes"
+      },
+      {
+        "id": "course_203_les_tensions_autour_de_taiwan_q3",
+        "type": "mcq",
+        "question": "O que Taiwan perdeu em 1971 para Pequim?",
+        "explanation": "Em 1971, a ONU retirou de Taipei o seu assento como representante legítimo da China e deu-o a Pequim, isolando diplomaticamente a ilha.",
+        "options": [
+          "Sua sede na ONU",
+          "Seu apoio militar americano",
+          "Seu reconhecimento diplomático pelos Estados Unidos",
+          "Sua independência oficial"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_203_les_tensions_autour_de_taiwan_q4",
+        "type": "numericSlider",
+        "question": "Em que ano foi fundada a TSMC em Taiwan?",
+        "explanation": "A TSMC nasceu em 1987 e se tornou o coração da indústria global de semicondutores.",
+        "correctValue": 1987.0,
+        "sliderMin": 1970.0,
+        "sliderMax": 2010.0,
+        "tolerance": 3.0,
+        "unit": ""
+      },
+      {
+        "id": "course_203_les_tensions_autour_de_taiwan_q5",
+        "type": "percentageSlider",
+        "question": "Quanto dos chips eletrônicos mais avançados do mundo a TSMC fabrica?",
+        "explanation": "A TSMC fabrica mais de 90% dos chips eletrônicos mais avançados do mundo, criando um verdadeiro “escudo de silício”.",
+        "correctValue": 90.0,
+        "sliderMin": 0.0,
+        "sliderMax": 100.0,
+        "tolerance": 8.0,
+        "unit": "%"
+      },
+      {
+        "id": "course_203_les_tensions_autour_de_taiwan_q6",
+        "type": "mcq",
+        "question": "O que aconteceu em Taiwan em 1996, marcando uma ruptura com o modelo autoritário chinês?",
+        "explanation": "Em 1996, Taiwan realizou as suas primeiras eleições por sufrágio universal direto, tornando-se uma das democracias mais liberais da Ásia.",
+        "options": [
+          "As primeiras eleições por sufrágio universal direto",
+          "A declaração oficial de independência",
+          "A fundação da TSMC",
+          "Perda de assento na ONU"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_203_les_tensions_autour_de_taiwan_q7",
+        "type": "trueFalse",
+        "question": "Verdadeiro ou falso: os Estados Unidos reconhecem oficialmente Taiwan como um estado independente.",
+        "explanation": "Os Estados Unidos reconhecem oficialmente Pequim, mas praticam uma ambiguidade estratégica que, no entanto, lhes permite armar Taiwan.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": "course_203_les_tensions_autour_de_taiwan_q8",
+        "type": "mcq",
+        "question": "Como você chama a política americana que nunca especifica se os Estados Unidos defenderiam militarmente Taiwan no caso de um ataque?",
+        "explanation": "Desde 1979, os Estados Unidos têm praticado a ambiguidade estratégica: têm armado Taiwan sem nunca confirmarem uma intervenção militar direta.",
+        "options": [
+          "Ambiguidade estratégica",
+          "A Doutrina Monroe",
+          "A contenção",
+          "Diplomacia panda"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_203_les_tensions_autour_de_taiwan_q9",
+        "type": "chronological",
+        "question": "Coloque esses eventos na história de Taiwan em ordem cronológica.",
+        "explanation": "Desde a derrota do Kuomintang até às suas primeiras eleições democráticas, Taiwan construiu uma identidade distinta da China continental em meio século.",
+        "items": [
+          "Retirada dos nacionalistas do Kuomintang da ilha de Taiwan",
+          "Sede chinesa na ONU transferida para Pequim",
+          "Fundação da TSMC",
+          "Primeiras eleições em Taiwan por sufrágio universal direto"
+        ]
+      }
+    ]
+  },
+  {
+    "courseId": "course_206_le_canal_de_suez_pourquoi_il_est_strateg",
+    "quiz": [
+      {
+        "id": "course_206_le_canal_de_suez_pourquoi_il_est_strateg_q1",
+        "type": "numericSlider",
+        "question": "Qual é a extensão do Canal de Suez, em quilômetros?",
+        "explanation": "O Canal de Suez se estende por 193 quilômetros, ligando o Mar Mediterrâneo ao Mar Vermelho.",
+        "correctValue": 193.0,
+        "sliderMin": 100.0,
+        "sliderMax": 300.0,
+        "tolerance": 20.0,
+        "unit": "km"
+      },
+      {
+        "id": "course_206_le_canal_de_suez_pourquoi_il_est_strateg_q2",
+        "type": "numericSlider",
+        "question": "Em que ano foi inaugurado o Canal de Suez?",
+        "explanation": "O Canal de Suez foi inaugurado em 1869, após dez anos de obras sob a direção de Ferdinand de Lesseps.",
+        "correctValue": 1869.0,
+        "sliderMin": 1800.0,
+        "sliderMax": 1900.0,
+        "tolerance": 5.0,
+        "unit": ""
+      },
+      {
+        "id": "course_206_le_canal_de_suez_pourquoi_il_est_strateg_q3",
+        "type": "mcq",
+        "question": "Quem lidera a perfuração do Canal de Suez?",
+        "explanation": "O engenheiro francês Ferdinand de Lesseps liderou a perfuração do Istmo de Suez entre 1859 e 1869.",
+        "options": [
+          "Fernando de Lesseps",
+          "Gamal Abdel Nasser",
+          "Maomé Ali",
+          "Thomas Cook"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_206_le_canal_de_suez_pourquoi_il_est_strateg_q4",
+        "type": "numericSlider",
+        "question": "Em que ano o presidente egípcio Nasser nacionalizou o Canal de Suez?",
+        "explanation": "Nasser nacionalizou a empresa do canal em 26 de julho de 1956, desencadeando a Crise de Suez.",
+        "correctValue": 1956.0,
+        "sliderMin": 1930.0,
+        "sliderMax": 1980.0,
+        "tolerance": 3.0,
+        "unit": ""
+      },
+      {
+        "id": "course_206_le_canal_de_suez_pourquoi_il_est_strateg_q5",
+        "type": "trueFalse",
+        "question": "Verdadeiro ou falso: a Crise de Suez de 1956 terminou com uma retirada humilhante da França e do Reino Unido, sob pressão dos Estados Unidos.",
+        "explanation": "Sob pressão do presidente americano Eisenhower, a França e o Reino Unido foram forçados a uma retirada humilhante, consagrando o triunfo de Nasser.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_206_le_canal_de_suez_pourquoi_il_est_strateg_q6",
+        "type": "percentageSlider",
+        "question": "Quanto do comércio mundial passa hoje pelo Canal de Suez?",
+        "explanation": "Cerca de 12% do comércio global passa pelo Canal de Suez todos os anos.",
+        "correctValue": 12.0,
+        "sliderMin": 0.0,
+        "sliderMax": 100.0,
+        "tolerance": 5.0,
+        "unit": "%"
+      },
+      {
+        "id": "course_206_le_canal_de_suez_pourquoi_il_est_strateg_q7",
+        "type": "mcq",
+        "question": "Qual navio porta-contêineres gigante está bloqueando o Canal de Suez em março de 2021?",
+        "explanation": "O gigante navio porta-contêineres Ever Given encalhou no canal em março de 2021, bloqueando todo o tráfego.",
+        "options": [
+          "O sempre dado",
+          "O Titânico",
+          "O Costa Concórdia",
+          "A Rainha Maria"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_206_le_canal_de_suez_pourquoi_il_est_strateg_q8",
+        "type": "numericSlider",
+        "question": "Quantos dias o Ever Given bloqueará o Canal de Suez em 2021?",
+        "explanation": "O Ever Given bloqueou o canal durante seis dias, causando um engarrafamento de mais de 400 navios.",
+        "correctValue": 6.0,
+        "sliderMin": 1.0,
+        "sliderMax": 20.0,
+        "tolerance": 2.0,
+        "unit": "dias"
+      },
+      {
+        "id": "course_206_le_canal_de_suez_pourquoi_il_est_strateg_q9",
+        "type": "mcq",
+        "question": "Que grupo ataca a navegação comercial no Mar Vermelho a partir do Iémen entre 2023 e 2024, forçando desvios através da África Austral?",
+        "explanation": "Os ataques de mísseis Houthi do Iémen estão a forçar muitos armadores a desviar as suas frotas através da África Austral.",
+        "options": [
+          "Os Houthis",
+          "Al Qaeda",
+          "A Irmandade Muçulmana",
+          "Hezbolá"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_206_le_canal_de_suez_pourquoi_il_est_strateg_q10",
+        "type": "chronological",
+        "question": "Coloque esses eventos na história do Canal de Suez em ordem cronológica.",
+        "explanation": "Desde a sua inauguração colonial até aos ataques Houthi, o Canal de Suez continua a ser um barómetro do equilíbrio de poder global.",
+        "items": [
+          "Inauguração do Canal de Suez",
+          "Nacionalização do canal por Nasser",
+          "Bloqueio do canal pelo navio porta-contêineres Ever Given",
+          "Ataques Houthi a navios no Mar Vermelho"
+        ]
+      }
+    ]
+  },
+  {
+    "courseId": "course_210_la_guerre_en_ukraine_expliquee",
+    "quiz": [
+      {
+        "id": "course_210_la_guerre_en_ukraine_expliquee_q1",
+        "type": "numericSlider",
+        "question": "Em que ano a Ucrânia se tornou independente, quando a URSS se desfez?",
+        "explanation": "A Ucrânia tornou-se um Estado soberano em 1991, após a dissolução da URSS.",
+        "correctValue": 1991.0,
+        "sliderMin": 1970.0,
+        "sliderMax": 2010.0,
+        "tolerance": 3.0,
+        "unit": ""
+      },
+      {
+        "id": "course_210_la_guerre_en_ukraine_expliquee_q2",
+        "type": "numericSlider",
+        "question": "Em que ano a Ucrânia assinou o Memorando de Budapeste, trocando o seu arsenal nuclear por garantias de integridade territorial?",
+        "explanation": "Pelo Memorando de Budapeste de 1994, a Ucrânia desarmou-se em troca de garantias de integridade territorial.",
+        "correctValue": 1994.0,
+        "sliderMin": 1985.0,
+        "sliderMax": 2005.0,
+        "tolerance": 2.0,
+        "unit": ""
+      },
+      {
+        "id": "course_210_la_guerre_en_ukraine_expliquee_q3",
+        "type": "mcq",
+        "question": "Que acontecimento de 2014 derrubou um presidente pró-Rússia e desencadeou a anexação da Crimeia pela Rússia?",
+        "explanation": "A revolução Maidan depôs o presidente pró-Rússia em 2014; em resposta, a Rússia anexa ilegalmente a Crimeia.",
+        "options": [
+          "A Revolução Maidan",
+          "O Memorando de Budapeste",
+          "A queda da URSS",
+          "A guerra do Donbass"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_210_la_guerre_en_ukraine_expliquee_q4",
+        "type": "numericSlider",
+        "question": "Em que ano a Rússia lançou a sua invasão em grande escala da Ucrânia?",
+        "explanation": "A Rússia lança a sua invasão em grande escala em 24 de fevereiro de 2022, desencadeando o maior conflito na Europa desde 1945.",
+        "correctValue": 2022.0,
+        "sliderMin": 2010.0,
+        "sliderMax": 2024.0,
+        "tolerance": 1.0,
+        "unit": ""
+      },
+      {
+        "id": "course_210_la_guerre_en_ukraine_expliquee_q5",
+        "type": "trueFalse",
+        "question": "Verdadeiro ou falso: o exército russo consegue tomar Kiev e derrubar o governo ucraniano nas primeiras semanas da invasão.",
+        "explanation": "A Batalha de Kiev terminou num fracasso esmagador da Rússia na primavera de 2022, forçando Moscovo a retirar as suas tropas do norte.",
+        "options": [
+          "Verdadeiro",
+          "Falso"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "id": "course_210_la_guerre_en_ukraine_expliquee_q6",
+        "type": "mcq",
+        "question": "O que Volodymyr Zelensky respondeu quando os Estados Unidos lhe ofereceram uma evacuação no início da invasão?",
+        "explanation": "Zelensky recusa a evacuação, declarando “Preciso de munições, não de um táxi”, tornando-se o símbolo de uma nação que se recusa a ceder.",
+        "options": [
+          "“Preciso de munição, não de táxi”",
+          "“Tenho que proteger minha família”",
+          "“A Ucrânia se renderá em breve”",
+          "“Obrigado, aceito o exílio”"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_210_la_guerre_en_ukraine_expliquee_q7",
+        "type": "mcq",
+        "question": "De qual sistema bancário internacional os bancos russos serão excluídos em 2022?",
+        "explanation": "A exclusão dos bancos russos do sistema SWIFT e o congelamento das reservas do banco central marcam uma ruptura histórica nas sanções ocidentais.",
+        "options": [
+          "Rápido",
+          "O FMI",
+          "O Banco Mundial",
+          "A OMC"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "id": "course_210_la_guerre_en_ukraine_expliquee_q8",
+        "type": "percentageSlider",
+        "question": "De que percentagem do gás russo a Europa dependia antes da guerra?",
+        "explanation": "A Europa dependia 40% do gás russo antes da guerra, o que a forçou a iniciar uma rápida transição energética.",
+        "correctValue": 40.0,
+        "sliderMin": 0.0,
+        "sliderMax": 100.0,
+        "tolerance": 8.0,
+        "unit": "%"
+      },
+      {
+        "id": "course_210_la_guerre_en_ukraine_expliquee_q9",
+        "type": "chronological",
+        "question": "Coloque estes acontecimentos da guerra na Ucrânia em ordem cronológica.",
+        "explanation": "Desde a independência em 1991 até ao alargamento da NATO, estes marcos traçam três décadas de tensões entre a Ucrânia e a Rússia.",
+        "items": [
+          "Independência da Ucrânia",
+          "Revolução Maidan e anexação da Crimeia",
+          "Invasão russa em grande escala",
+          "Adesão da Finlândia e da Suécia à OTAN"
+        ]
+      }
+    ]
+  }
+]
