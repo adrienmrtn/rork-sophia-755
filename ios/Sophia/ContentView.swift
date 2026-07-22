@@ -56,6 +56,7 @@ struct ContentView: View {
                 Tab(languageManager.text("tab.training"), systemImage: "arrow.triangle.2.circlepath", value: 3) {
                     TrainingView(
                         progressManager: progressManager,
+                        store: storeVM,
                         isPremium: storeVM.isPremium,
                         onShowQuizPaywall: {
                             if storeVM.isPremium { return }

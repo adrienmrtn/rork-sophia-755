@@ -16,8 +16,14 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "On imagine souvent la mémoire comme un disque dur : on enregistre, on range, on relit. Le cerveau ne marche pas comme ça. À chaque fois que tu te souviens, tu **reconstruis** une scène." },
-        { "type": "paragraph", "text": "C'est puissant… et faillible. Comprendre cela, c'est comprendre pourquoi on oublie, pourquoi on se trompe, et pourquoi on apprend." }
+        {
+          "type": "paragraph",
+          "text": "On imagine souvent la mémoire comme un disque dur : on enregistre, on range, on relit. Le cerveau ne marche pas comme ça. À chaque fois que tu te souviens, tu **reconstruis** une scène à partir de fragments."
+        },
+        {
+          "type": "paragraph",
+          "text": "C'est puissant… et faillible. Comprendre cela, c'est comprendre pourquoi on oublie, pourquoi on se trompe, et pourquoi on apprend."
+        }
       ]
     },
     {
@@ -25,9 +31,20 @@
       "title": "Plusieurs mémoires, pas une seule",
       "free": false,
       "blocks": [
-        { "type": "image", "asset": "human_brain_anatomy", "ratio": "4:3", "caption": "Différentes zones du cerveau gèrent différentes formes de mémoire." },
-        { "type": "paragraph", "text": "Il y a d'abord la [[mémoire de travail]] : ce que tu tiens « en tête » quelques secondes, comme un numéro de téléphone. Elle est limitée. Ensuite, la mémoire à long terme : faits, souvenirs d'événements, savoir-faire (faire du vélo)." },
-        { "type": "paragraph", "text": "Ces systèmes n'habitent pas tous au même endroit du cerveau. Le cortex préfrontal (derrière le front) aide beaucoup à la mémoire de travail. D'autres régions stockent le long terme." }
+        {
+          "type": "image",
+          "asset": "human_brain_anatomy",
+          "ratio": "4:3",
+          "caption": "Différentes zones du cerveau gèrent différentes formes de mémoire."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il y a d'abord la [[mémoire de travail]] : ce que tu tiens « en tête » quelques secondes, comme un numéro de téléphone. Elle est limitée, environ **7 éléments** en moyenne. Ensuite, la **mémoire à long terme** : faits, souvenirs d'événements, savoir-faire comme faire du vélo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ces systèmes n'habitent pas tous au même endroit du cerveau. Le **cortex préfrontal**, la partie avant du cerveau derrière le front, aide beaucoup à la mémoire de travail. D'autres régions, comme le **néocortex**, la couche externe du cerveau, stockent le long terme."
+        }
       ]
     },
     {
@@ -35,10 +52,24 @@
       "title": "Comment un souvenir se fixe",
       "free": false,
       "blocks": [
-        { "type": "image", "asset": "hippocampus_brain_anatomy_scan", "ratio": "4:3", "caption": "L'hippocampe, une structure profonde, aide à former de nouveaux souvenirs." },
-        { "type": "paragraph", "text": "Pour qu'une info passe du fragile au durable, le cerveau doit renforcer des connexions entre neurones. On parle de **consolidation**. Une petite structure appelée **hippocampe** joue un rôle clé pour les souvenirs d'événements." },
-        { "type": "funFact", "text": "Le sommeil, surtout certaines phases, aide à consolider ce qu'on a appris dans la journée. Réviser puis dormir marche souvent mieux que réviser jusqu'à 3 h du matin." },
-        { "type": "paragraph", "text": "Une règle célèbre, liée au chercheur Donald Hebb : les neurones qui s'activent ensemble tendent à se connecter plus fort. En résumé : « ce qui s'allume ensemble se lie ensemble »." }
+        {
+          "type": "image",
+          "asset": "hippocampus_brain_anatomy_scan",
+          "ratio": "4:3",
+          "caption": "L'hippocampe, une structure profonde, aide à former de nouveaux souvenirs."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour qu'une info passe du fragile au durable, le cerveau doit renforcer des connexions entre **neurones**, les cellules nerveuses. On parle de **consolidation**, la transformation d'un souvenir récent en trace durable. Une petite structure appelée **hippocampe**, en forme de cheval de mer dans le lobe temporal, joue un rôle clé pour les souvenirs d'événements."
+        },
+        {
+          "type": "funFact",
+          "text": "Le sommeil, surtout certaines phases, aide à consolider ce qu'on a appris dans la journée. Réviser puis dormir marche souvent mieux que réviser jusqu'à 3 h du matin."
+        },
+        {
+          "type": "paragraph",
+          "text": "Une règle célèbre, liée au chercheur **Donald Hebb** : les neurones qui s'activent ensemble tendent à se connecter plus fort. En résumé : « ce qui s'allume ensemble se lie ensemble ». C'est le principe de la **neuroplasticité**, la capacité du cerveau à modifier ses connexions."
+        }
       ]
     },
     {
@@ -46,8 +77,14 @@
       "title": "Se souvenir, c'est modifier",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Quand tu rappelles un souvenir, il devient temporairement malléable. Des détails du présent peuvent s'y glisser. Puis le cerveau le stocke à nouveau. C'est pour ça que deux témoins d'un même accident peuvent raconter des versions différentes." },
-        { "type": "paragraph", "text": "On peut même créer de **faux souvenirs** : des scènes que l'on croit vraies, mais qui n'ont jamais eu lieu, ou pas comme ça." }
+        {
+          "type": "paragraph",
+          "text": "Quand tu rappelles un souvenir, il devient temporairement **malléable**, modifiable. Des détails du présent peuvent s'y glisser. Puis le cerveau le stocke à nouveau. C'est pour ça que deux témoins d'un même accident peuvent raconter des versions différentes."
+        },
+        {
+          "type": "paragraph",
+          "text": "On peut même créer de **faux souvenirs** : des scènes que l'on croit vraies, mais qui n'ont jamais eu lieu, ou pas comme ça. Le cerveau comble les trous avec ce qu'il connaît déjà."
+        }
       ]
     },
     {
@@ -55,8 +92,14 @@
       "title": "Oublier, ce n'est pas toujours un échec",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Si tu te souvenais de chaque détail inutile, tu serais saturé. L'oubli aide à généraliser, à décider, à garder l'essentiel. Une bonne mémoire trie autant qu'elle conserve." },
-        { "type": "takeaway", "text": "La mémoire est une reconstruction active, pas un enregistrement parfait. Elle s'appuie sur plusieurs systèmes, se consolide (notamment pendant le sommeil), et peut se déformer à chaque rappel." }
+        {
+          "type": "paragraph",
+          "text": "Si tu te souvenais de chaque détail inutile, tu serais saturé. L'oubli aide à généraliser, à décider, à garder l'essentiel. Une bonne mémoire trie autant qu'elle conserve."
+        },
+        {
+          "type": "takeaway",
+          "text": "La mémoire est une reconstruction active, pas un enregistrement parfait. Elle s'appuie sur plusieurs systèmes, se consolide surtout pendant le sommeil, et peut se déformer à chaque rappel."
+        }
       ]
     }
   ]

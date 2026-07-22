@@ -92,10 +92,16 @@ nonisolated struct UserProgress: Codable, Sendable {
     /// Spaced-repetition review state for the "Entraînement" tab, keyed by `QuizQuestion.id`.
     /// Populated as courses' quizzes are completed; independent of XP/streak (see `ProgressManager`).
     var trainingQuestionStates: [String: TrainingQuestionState]
+    /// Course IDs the user has unlocked by *spending* XP. Scaffolding for the upcoming
+    /// "unlock courses with XP" feature (see `ProgressManager`); empty until it ships.
+    var xpUnlockedCourseIds: [String]
+    /// Total global XP already spent on XP-based course unlocks. Available-to-spend XP is
+    /// `globalXP - spentGlobalXP`. Scaffolding for the upcoming unlock feature.
+    var spentGlobalXP: Int
 
     static let empty = UserProgress(courseProgress: [:], streak: 0, lastActiveDate: nil, favoriteCourseIds: [], freeCoursesOpened: 0, hasSeenSwipeTutorial: false, hasSeenSpecialOffer: false, lastCourseCompletedDate: nil, lastStreakShownDate: nil, subjectXP: [:], globalXP: 0, globalCourseXPAwardedIds: [], globalQuizXPAwardedIds: [], globalCollectionXPAwardedIds: [], completedQuizCourseIds: [], pendingGlobalRankUp: nil, trainingQuestionStates: [:])
 
-    init(courseProgress: [String: CourseProgress], streak: Int, lastActiveDate: String?, favoriteCourseIds: [String] = [], freeCoursesOpened: Int = 0, hasSeenSwipeTutorial: Bool = false, hasSeenSpecialOffer: Bool = false, lastCourseCompletedDate: String? = nil, lastStreakShownDate: String? = nil, subjectXP: [String: Int] = [:], globalXP: Int = 0, globalCourseXPAwardedIds: [String] = [], globalQuizXPAwardedIds: [String] = [], globalCollectionXPAwardedIds: [String] = [], completedQuizCourseIds: [String] = [], pendingGlobalRankUp: PendingGlobalRankUp? = nil, trainingQuestionStates: [String: TrainingQuestionState] = [:], dailyFreeCourseId: String? = nil, dailyFreeCourseDate: String? = nil) {
+    init(courseProgress: [String: CourseProgress], streak: Int, lastActiveDate: String?, favoriteCourseIds: [String] = [], freeCoursesOpened: Int = 0, hasSeenSwipeTutorial: Bool = false, hasSeenSpecialOffer: Bool = false, lastCourseCompletedDate: String? = nil, lastStreakShownDate: String? = nil, subjectXP: [String: Int] = [:], globalXP: Int = 0, globalCourseXPAwardedIds: [String] = [], globalQuizXPAwardedIds: [String] = [], globalCollectionXPAwardedIds: [String] = [], completedQuizCourseIds: [String] = [], pendingGlobalRankUp: PendingGlobalRankUp? = nil, trainingQuestionStates: [String: TrainingQuestionState] = [:], dailyFreeCourseId: String? = nil, dailyFreeCourseDate: String? = nil, xpUnlockedCourseIds: [String] = [], spentGlobalXP: Int = 0) {
         self.courseProgress = courseProgress
         self.streak = streak
         self.lastActiveDate = lastActiveDate
@@ -115,6 +121,8 @@ nonisolated struct UserProgress: Codable, Sendable {
         self.completedQuizCourseIds = completedQuizCourseIds
         self.pendingGlobalRankUp = pendingGlobalRankUp
         self.trainingQuestionStates = trainingQuestionStates
+        self.xpUnlockedCourseIds = xpUnlockedCourseIds
+        self.spentGlobalXP = spentGlobalXP
     }
 
     enum CodingKeys: String, CodingKey {
@@ -123,6 +131,7 @@ nonisolated struct UserProgress: Codable, Sendable {
         case dailyFreeCourseId, dailyFreeCourseDate
         case globalXP, globalCourseXPAwardedIds, globalQuizXPAwardedIds, globalCollectionXPAwardedIds, completedQuizCourseIds, pendingGlobalRankUp
         case trainingQuestionStates
+        case xpUnlockedCourseIds, spentGlobalXP
     }
 
     init(from decoder: Decoder) throws {
@@ -146,6 +155,8 @@ nonisolated struct UserProgress: Codable, Sendable {
         self.completedQuizCourseIds = try c.decodeIfPresent([String].self, forKey: .completedQuizCourseIds) ?? []
         self.pendingGlobalRankUp = try c.decodeIfPresent(PendingGlobalRankUp.self, forKey: .pendingGlobalRankUp)
         self.trainingQuestionStates = try c.decodeIfPresent([String: TrainingQuestionState].self, forKey: .trainingQuestionStates) ?? [:]
+        self.xpUnlockedCourseIds = try c.decodeIfPresent([String].self, forKey: .xpUnlockedCourseIds) ?? []
+        self.spentGlobalXP = try c.decodeIfPresent(Int.self, forKey: .spentGlobalXP) ?? 0
     }
 }
 

@@ -22,15 +22,16 @@ struct OnboardingV2View: View {
     private enum Screen: Hashable {
         case welcome, language, objectives, objectiveIntro
         case questions, phoneTime, yearsGrid, transform, review, personalize
-        case swipe, loading, login, trialSteps, reminder, paywallAnnual, paywallComparison
+        case swipe, loading, profile, login, trialSteps, reminder, paywallAnnual, paywallComparison
     }
 
     /// Séquence complète et fixe. Les pages « valeur » (me cultiver → temps d'écran) sont
-    /// désormais montrées quel que soit l'objectif choisi.
+    /// désormais montrées quel que soit l'objectif choisi. `profile` est l'écran de
+    /// récompense « Voici ton profil » inséré juste avant la création de compte.
     private var screens: [Screen] {
         [.welcome, .language, .objectives, .objectiveIntro,
          .questions, .phoneTime, .yearsGrid, .transform, .review, .personalize,
-         .swipe, .loading, .login, .trialSteps, .reminder, .paywallAnnual, .paywallComparison]
+         .swipe, .loading, .profile, .login, .trialSteps, .reminder, .paywallAnnual, .paywallComparison]
     }
 
     private static let dotScreens: Set<Screen> = [
@@ -97,6 +98,8 @@ struct OnboardingV2View: View {
             OnboardingV2SwipeCourses(vm: vm, onNext: advance)
         case .loading:
             OnboardingV2Loading(onNext: advance)
+        case .profile:
+            OnboardingV2Profile(vm: vm, onNext: advance)
         case .login:
             OnboardingV2Login(onSignedIn: advance)
         case .trialSteps:

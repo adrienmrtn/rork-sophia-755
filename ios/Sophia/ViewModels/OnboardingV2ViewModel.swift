@@ -88,6 +88,34 @@ final class OnboardingV2ViewModel {
         )
     }
 
+    // MARK: - Profil (écran récompense « Voici ton profil », avant la création de compte)
+
+    /// Archétype dérivé des réponses (objectif principal) — sert à attribuer un surnom.
+    /// On prend le premier objectif sélectionné ; fallback « cultivate » si aucun.
+    var profileArchetypeKey: String {
+        objectiveKeys.first ?? "cultivate"
+    }
+
+    /// Surnom attribué à l'utilisateur en fonction de ses réponses.
+    func profileNickname(language: AppLanguage) -> String {
+        AppLocalizable.string("onboardingV2.profile.nickname.\(profileArchetypeKey)", language: language)
+    }
+
+    /// Phrase courte qui décrit l'archétype (« qui tu es »).
+    func profileTagline(language: AppLanguage) -> String {
+        AppLocalizable.string("onboardingV2.profile.tagline.\(profileArchetypeKey)", language: language)
+    }
+
+    /// Emoji illustrant l'archétype.
+    var profileEmoji: String {
+        Self.objectiveEmoji(profileArchetypeKey)
+    }
+
+    /// Cours recommandés qui « attendent » l'utilisateur sur l'écran profil.
+    func awaitingCourses(language: AppLanguage) -> [Course] {
+        recommendedCourses(language: language)
+    }
+
     func toggleLiked(_ courseId: String, liked: Bool) {
         if liked {
             if !likedCourseIds.contains(courseId) { likedCourseIds.append(courseId) }

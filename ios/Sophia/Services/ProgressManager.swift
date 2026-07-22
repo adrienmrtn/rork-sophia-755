@@ -346,14 +346,65 @@ class ProgressManager {
         return GlobalXPAwardResult(awardedXP: 0, previousXP: progress.globalXP, newXP: progress.globalXP, previousLevel: current.level, newLevel: current.level, previousRank: current.rank, newRank: current.rank)
     }
 
-    /// XP thresholds for subject levels: NIV 1: 0-9, 2: 10-149, 3: 150-349, 4: 350-699, 5: 700+.
+    /// XP thresholds for the per-subject levels.
+    ///
+    /// Rebalanced so progression stays gratifying well past level 2: the old curve jumped
+    /// from 10 XP (niv. 2) straight to 150 XP (niv. 3), which felt like a wall. Level 1 is
+    /// deliberately left untouched (0–10). The curve now grows gently and adds two extra
+    /// levels (6–7) so there's more to climb before hitting the cap. Use `maxSubjectLevel`
+    /// rather than hard-coding the last level anywhere.
     static let subjectXPTiers: [(level: Int, lower: Int, upper: Int)] = [
         (1, 0, 10),
-        (2, 10, 150),
-        (3, 150, 350),
-        (4, 350, 700),
-        (5, 700, 1400),
+        (2, 10, 40),
+        (3, 40, 90),
+        (4, 90, 160),
+        (5, 160, 260),
+        (6, 260, 400),
+        (7, 400, 600),
     ]
+
+    /// Highest reachable per-subject level (the last tier). Derived from `subjectXPTiers`
+    /// so the bar-fill / "max" logic keeps working if the curve gains or loses tiers.
+    /// Stored `static let` (like `subjectXPTiers`) so it stays reachable from nonisolated
+    /// contexts such as `XPProgressAnimator`.
+    static let maxSubjectLevel: Int = subjectXPTiers.last?.level ?? subjectXPTiers.count
+
+    // MARK: - Déblocage de cours avec l'XP (structure, activation à venir)
+
+    /// Coût par défaut, en XP global, pour débloquer un cours avec de l'XP. Centralisé ici
+    /// pour pouvoir, à terme, le faire varier par cours / matière.
+    static let courseXPUnlockCost = 150
+
+    /// Coût en XP pour débloquer un cours donné. Constant pour l'instant.
+    func xpUnlockCost(for course: Course) -> Int {
+        Self.courseXPUnlockCost
+    }
+
+    /// XP global encore disponible pour débloquer des cours (gagné moins déjà dépensé).
+    var availableXPToSpend: Int {
+        max(0, progress.globalXP - progress.spentGlobalXP)
+    }
+
+    /// `true` si le cours a déjà été débloqué en dépensant de l'XP.
+    func isCourseUnlockedWithXP(_ courseId: String) -> Bool {
+        progress.xpUnlockedCourseIds.contains(courseId)
+    }
+
+    /// `true` si l'utilisateur a assez d'XP disponible pour débloquer ce cours.
+    func canUnlockCourseWithXP(_ course: Course) -> Bool {
+        !isCourseUnlockedWithXP(course.id) && availableXPToSpend >= xpUnlockCost(for: course)
+    }
+
+    /// Débloque un cours en dépensant de l'XP. No-op (retourne `false`) si déjà débloqué ou
+    /// si l'XP disponible est insuffisante. Persiste la dépense et le déblocage.
+    @discardableResult
+    func unlockCourseWithXP(_ course: Course) -> Bool {
+        guard canUnlockCourseWithXP(course) else { return false }
+        progress.spentGlobalXP += xpUnlockCost(for: course)
+        progress.xpUnlockedCourseIds.append(course.id)
+        save()
+        return true
+    }
 
     /// Returns the persisted XP for a given subject.
     func xp(for subject: Subject) -> Int {

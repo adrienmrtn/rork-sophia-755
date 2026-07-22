@@ -14,7 +14,7 @@ enum XPProgressAnimator {
 
     static func barFraction(for xp: Int) -> CGFloat {
         let t = tier(for: xp)
-        if t.level == 5 { return 1.0 }
+        if t.level == ProgressManager.maxSubjectLevel { return 1.0 }
         let span = max(1, t.upper - t.lower)
         return CGFloat(min(1.0, max(0.0, Double(xp - t.lower) / Double(span))))
     }

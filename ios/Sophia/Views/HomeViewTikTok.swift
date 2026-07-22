@@ -49,6 +49,11 @@ struct HomeViewTikTok: View {
     @State private var suppressNextSwipeCount = false
     @State private var showSwipeExplain = false
 
+    /// Hauteur laissée visible en bas de chaque carte pour laisser **entrapercevoir** la
+    /// carte suivante (« il y en a d'autres en dessous »). Chaque rangée fait donc un peu
+    /// moins qu'un plein écran, tout en gardant le snap une-carte-par-swipe (`.viewAligned`).
+    private let peekHeight: CGFloat = 64
+
     var body: some View {
         ZStack {
             DS.canvas.ignoresSafeArea()
@@ -79,9 +84,11 @@ struct HomeViewTikTok: View {
                                             startCourse(course)
                                         }
                                     )
-                                    // Each row is exactly one viewport tall so `.viewAligned`
-                                    // snaps one whole card per swipe; the card insets itself.
-                                    .frame(width: geo.size.width, height: geo.size.height)
+                                    // Chaque rangée fait presque un plein écran (moins
+                                    // `peekHeight`) : `.viewAligned` snappe toujours une carte
+                                    // par swipe, mais le haut de la carte suivante dépasse en
+                                    // bas de l'écran pour signaler qu'il y a d'autres cours.
+                                    .frame(width: geo.size.width, height: geo.size.height - peekHeight)
                                     .id(course.id)
                                 }
                             }
@@ -91,6 +98,11 @@ struct HomeViewTikTok: View {
                             // le vrai UIScrollView (le proxy global d'apparence n'est pas
                             // fiablement appliqué au ScrollView SwiftUI).
                             .background(ImmediateTouchScrollFixer())
+
+                            // Espace de fin (hors cibles de snap) pour que la dernière carte
+                            // puisse tout de même s'aligner en haut malgré des rangées un peu
+                            // plus courtes qu'un plein écran.
+                            Color.clear.frame(height: peekHeight)
                         }
                         // `.viewAligned` anchors to each card's real edges (one card per
                         // swipe, no overshoot), unlike `.paging` which advances by fixed
