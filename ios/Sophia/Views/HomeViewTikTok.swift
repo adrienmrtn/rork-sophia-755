@@ -54,7 +54,7 @@ struct HomeViewTikTok: View {
     /// moins qu'un plein écran, tout en gardant le snap une-carte-par-swipe (`.viewAligned`).
     /// La carte est alignée en haut de sa rangée (voir `TikTokCourseCard`) pour que ce «peek»
     /// montre bien le **début** de la carte suivante, et non du vide au-dessus d'elle.
-    private let peekHeight: CGFloat = 104
+    private let peekHeight: CGFloat = 120
 
     var body: some View {
         ZStack {
