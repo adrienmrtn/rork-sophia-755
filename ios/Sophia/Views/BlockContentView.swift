@@ -307,7 +307,13 @@ struct ProseTextView: UIViewRepresentable {
     let onGlossaryTap: (GlossaryEntry) -> Void
 
     func makeUIView(context: Context) -> UITextView {
-        let textView = UITextView()
+        // TextKit 1, dès la création. Sur iOS 16+, UITextView démarre en TextKit 2 ; or le
+        // handler de tap lit `textView.layoutManager` pour localiser le glyphe touché, et ce
+        // simple accès force la bascule (irréversible) TextKit 2 → TextKit 1, qui RE-MET EN
+        // PAGE tout le texte avec un moteur aux césures légèrement différentes : le paragraphe
+        // justifié « sautait » au premier tap. En créant la vue directement en TextKit 1, la
+        // mise en page ne change jamais entre l'affichage et le tap.
+        let textView = UITextView(usingTextLayoutManager: false)
         textView.isEditable = false
         textView.isScrollEnabled = false
         // Disable text selection so glossary taps fire instantly, without waiting on

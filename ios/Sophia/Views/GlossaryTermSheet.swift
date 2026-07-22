@@ -84,33 +84,53 @@ struct GlossaryTermOverlay: View {
     let onDismiss: () -> Void
 
     @State private var dragOffset: CGFloat = 0
+    /// Pilote l'animation d'entrée/sortie (fond en fondu, carte qui monte du bas comme un
+    /// sheet). L'overlay anime lui-même sa présentation : la vue appelante n'a rien à faire.
+    @State private var presented = false
+    @State private var leaving = false
 
     private let ink = DS.ink
     private let cream = DS.canvas
 
     var body: some View {
         ZStack(alignment: .bottom) {
-            Color.black.opacity(0.28)
+            Color.black.opacity(presented ? 0.28 : 0)
                 .ignoresSafeArea()
                 .contentShape(Rectangle())
-                .onTapGesture { onDismiss() }
+                .onTapGesture { dismiss() }
 
-            card
-                .offset(y: max(0, dragOffset))
-                .gesture(
-                    DragGesture()
-                        .onChanged { value in dragOffset = value.translation.height }
-                        .onEnded { value in
-                            if value.translation.height > 90 {
-                                onDismiss()
-                            } else {
-                                withAnimation(.spring(response: 0.3, dampingFraction: 0.85)) {
-                                    dragOffset = 0
+            GeometryReader { geo in
+                VStack {
+                    Spacer(minLength: 0)
+                    card
+                        .offset(y: presented ? max(0, dragOffset) : geo.size.height)
+                        .gesture(
+                            DragGesture()
+                                .onChanged { value in dragOffset = value.translation.height }
+                                .onEnded { value in
+                                    if value.translation.height > 90 {
+                                        dismiss()
+                                    } else {
+                                        withAnimation(.spring(response: 0.3, dampingFraction: 0.85)) {
+                                            dragOffset = 0
+                                        }
+                                    }
                                 }
-                            }
-                        }
-                )
+                        )
+                }
+            }
         }
+        .onAppear {
+            withAnimation(.spring(response: 0.38, dampingFraction: 0.86)) { presented = true }
+        }
+    }
+
+    /// Anime la fermeture (carte qui redescend + fond qui s'efface) avant de retirer l'overlay.
+    private func dismiss() {
+        guard !leaving else { return }
+        leaving = true
+        withAnimation(.easeIn(duration: 0.22)) { presented = false }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.24) { onDismiss() }
     }
 
     private var card: some View {
