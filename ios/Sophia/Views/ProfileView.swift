@@ -515,7 +515,7 @@ private struct SubjectProgressCard: View {
 
     private var progressInLevel: Double {
         let tier = currentTier
-        if tier.level == 5 { return 1.0 }
+        if tier.level == ProgressManager.maxSubjectLevel { return 1.0 }
         let span = max(1, tier.upper - tier.lower)
         let inLevel = max(0, xp - tier.lower)
         return min(1.0, Double(inLevel) / Double(span))
@@ -559,7 +559,7 @@ private struct SubjectProgressCard: View {
 
     private var progressLabel: String {
         let tier = currentTier
-        if tier.level == 5 {
+        if tier.level == ProgressManager.maxSubjectLevel {
             return String(format: languageManager.text("profile.progress.max"), xp)
         }
         let toNext = max(0, tier.upper - xp)

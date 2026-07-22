@@ -1476,7 +1476,7 @@ struct QuizView: View {
 
     private var xpProgressLabel: String {
         let t = subjectTier
-        if t.level == 5 {
+        if t.level == ProgressManager.maxSubjectLevel {
             return String(format: languageManager.text("quiz.xpProgress.max"), displayedXP)
         }
         let toNext = max(0, t.upper - displayedXP)
