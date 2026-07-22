@@ -1,0 +1,116 @@
+{
+  "id": "course_211_comment_fonctionne_le_prix_du_petrole",
+  "title": "How does the price of oil work?",
+  "subtitle": "The nerve of the world economy",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "The price of oil is not set by a single seller. It is born from a **tug of war** between producing countries, financial markets and sudden crises, sometimes to the point of absurdity.",
+  "hero": {
+    "image": "comment_fonctionne_le_prix_du_petrole",
+    "ratio": "16:9",
+    "hook": "In 2020, oil sellers paid their buyers to get rid of it. Here's why."
+  },
+  "sections": [
+    {
+      "id": "course_211_comment_fonctionne_le_prix_du_petrole_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Oil is sometimes called the “blood of the economy.” Its price influences inflation, the price of gasoline, and even the stability of certain countries. However, no one sets this price with a stamp."
+        },
+        {
+          "type": "paragraph",
+          "text": "It is born from a meeting between three forces: the countries that extract the oil, the financial markets that trade it before it even leaves the ground, and the crises that make everyone panic. Head to the deserts of Arabia, the plains of Texas, and the screens of Chicago."
+        }
+      ]
+    },
+    {
+      "id": "course_211_comment_fonctionne_le_prix_du_petrole_p1",
+      "title": "OPEC versus American shale: the battle of supply",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The oil market has a particularity: in the short term, demand hardly falls when prices rise. Cars, factories and planes cannot change energy overnight. Economists call this the **inelasticity** of demand."
+        },
+        {
+          "type": "paragraph",
+          "text": "Since 1960, a group of producing countries has organized itself to influence this market: the . By agreeing on production quotas, its members seek to maintain high prices. Since 2016, Russia has joined the alliance, forming [[OPEC]]+. Together, these countries control around 40% of the world's oil."
+        },
+        {
+          "type": "funFact",
+          "text": "A single barrel of oil, 159 liters, contains as much energy as one person's manual labor for about a year."
+        },
+        {
+          "type": "paragraph",
+          "text": "But this power has been shaken up. Thanks to a technique called hydraulic fracturing, the United States became the world's largest oil producer in ten years, overtaking Saudi Arabia. This new offer, which is quicker to adjust, has made the market more competitive and more difficult for OPEC+ to control."
+        }
+      ]
+    },
+    {
+      "id": "course_211_comment_fonctionne_le_prix_du_petrole_p2",
+      "title": "“Paper” oil: when finance gets involved",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Beyond the actual barrels delivered by ship or pipeline, oil is also traded on financial markets. Most transactions go through a futures market: we buy a barrel today which will only be delivered in one, three or six months."
+        },
+        {
+          "type": "image",
+          "asset": "oil_futures_trading_floor_markets",
+          "ratio": "16:9",
+          "caption": "Oil trades on financial markets long before it is delivered."
+        },
+        {
+          "type": "paragraph",
+          "text": "Banks and hedge funds buy and sell these contracts without ever wanting to touch a single barrel: they simply bet on whether prices will rise or fall. This brings money to the market, but also makes prices more nervous. Two prices serve as a reference in the world: , oil from the North Sea, and WTI, oil from Texas. The gap between the two reflects differences in quality and transportation. [[Brent]]"
+        }
+      ]
+    },
+    {
+      "id": "course_211_comment_fonctionne_le_prix_du_petrole_p3",
+      "title": "Prices collapsing... or exploding",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The oil market operates in brutal cycles. When prices rise for a long time, producers invest in expensive deposits, which ultimately creates an oversupply. When prices remain low, the opposite happens: we explore less, which prepares for the next shortage."
+        },
+        {
+          "type": "paragraph",
+          "text": "The COVID-19 crisis has shown this spectacularly. In April 2020, the global economy came to a sudden halt: no one was flying or driving, but the wells continued to produce. The storage tanks were filled to the brim. The price of WTI then fell to minus $37: sellers were paying their buyers to clear their stocks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Conversely, in 2022, Russia's invasion of Ukraine raised fears of a shortage: Russia being the second largest exporter in the world, Brent exceeded $130 in a few weeks. Oil therefore remains a nervous barometer of world tensions."
+        },
+        {
+          "type": "funFact",
+          "text": "It takes around 7 liters of oil to make a single smartphone, between the extraction of materials, plastic parts and transport."
+        }
+      ]
+    },
+    {
+      "id": "course_211_comment_fonctionne_le_prix_du_petrole_p4",
+      "title": "Does oil have a future?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In the long term, oil faces a new challenge: the transition to clean energy. If electric cars reduce global demand, producing countries could engage in a price war to sell their reserves before they lose their value."
+        },
+        {
+          "type": "paragraph",
+          "text": "However, a paradox threatens the market: as investors abandon new oil projects for climate reasons, supply could fall faster than demand, causing new price surges. Oil will not disappear suddenly: it remains essential for plastics, fertilizers, and heavy transport such as aviation."
+        },
+        {
+          "type": "takeaway",
+          "text": "The price of oil is the result of a standoff between OPEC+, American shale production and speculative financial markets. Result: prices capable of collapsing or exploding at the slightest geopolitical shock."
+        }
+      ]
+    }
+  ]
+}

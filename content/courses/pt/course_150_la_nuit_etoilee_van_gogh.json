@@ -1,0 +1,126 @@
+{
+  "id": "course_150_la_nuit_etoilee_van_gogh",
+  "title": "Noite Estrelada, Van Gogh",
+  "subtitle": "1889",
+  "subject": "art",
+  "subcategory": "Obras icônicas",
+  "description": "Em **1889**, do asilo de Saint-Rémy-de-Provence, **Vicente Van Gogh** pintou *A Noite Estrelada*. O céu gira: a arte deixa de copiar a realidade para expressar uma emoção.",
+  "hero": {
+    "image": "la_nuit_etoilee_van_gogh",
+    "ratio": "16:9",
+    "hook": "De um quarto de asilo, Van Gogh pinta um céu que se recusa a permanecer sábio."
+  },
+  "sections": [
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "*A Noite Estrelada* (**1889**) é a pintura mais famosa de **Vicente Van Gogh**, pintor nascido em . Pintado no asilo de Saint-Rémy-de-Provence, marca uma viragem: já não pintamos apenas o que vemos. Pintamos o que sentimos. [[Holanda]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Céu rodopiante, cipreste como chama negra, aldeia inventada: a obra abre caminho para a arte expressiva do século XX."
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p1",
+      "title": "Saint-Rémy: criando a partir do asilo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Em **Maio de 1889**, após a  (a crise que lhe custou parte da orelha), Van Gogh foi internado em **Saint-Paul-de-Mausole**, perto de Saint-Rémy. Ele consegue um quarto para pintar. A visão noturna nasce primeiro atrás das grades do seu quarto. [[O drama de Arles com Gauguin]]"
+        },
+        {
+          "type": "image",
+          "asset": "van_gogh_saint_paul_asylum_saint_remy_provence",
+          "ratio": "4:3",
+          "caption": "O asilo de Saint-Rémy: quadro de constrangimento e de criação intensa."
+        },
+        {
+          "type": "paragraph",
+          "text": "A tela mistura observação e invenção. Reconhecemos as colinas dos Alpilles e um grande **cipreste**. Mas a aldeia não é uma cópia exata. Van Gogh reconstrói a paisagem para servir à emoção."
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p2",
+      "title": "Esculpindo o céu com um pincel",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tecnicamente, Van Gogh usa **Impasto**: a tinta é espessa, quase esculpida. Onze estrelas giram como nebulosas. A lua laranja irradia. O céu se torna o verdadeiro personagem."
+        },
+        {
+          "type": "image",
+          "asset": "starry_night_cypress_tree_van_gogh_painting",
+          "ratio": "4:3",
+          "caption": "O cipreste conecta a terra ao céu como uma chama escura."
+        },
+        {
+          "type": "funFact",
+          "text": "As grandes volutas do céu lembram a dinâmica de , uma gravura japonesa que Van Gogh admirava. Ele transforma essa energia em cosmos. [[A Grande Onda de Kanagawa]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Este gesto anuncia o : a tela diz um estado de espírito, não um boletim meteorológico. [[Arte como expressão interior]]"
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p3",
+      "title": "O gênio que ninguém comprou",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Van Gogh pintou quase **900 pinturas** em dez anos, mas morreu em **Julho de 1890** em Auvers-sur-Oise, aos **37 anos**, quase desconhecido. Foi sua cunhada, **Johanna van Gogh-Bonger**, quem salvou a obra: exposições, vendas, publicação de cartas ao irmão Théo."
+        },
+        {
+          "type": "paragraph",
+          "text": "*A noite estrelada* mudou de mãos diversas vezes por pouco dinheiro, antes de entrar no **MoMA** em Nova York. A pintura desprezada torna-se um ícone. Os , pintores de cores violentas do início do século XX, reconhecerão nele um ancestral. [[Fauves]]"
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p4",
+      "title": "Um cipreste rumo ao infinito",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O cipreste conecta o solo ao céu: um elo entre a vida terrena e outros lugares. Van Gogh escreveu que olhar para as estrelas o fazia sonhar com a morte como se fosse uma viagem. Estudos modernos sugerem até que a estrela brilhante perto do cipreste poderia ser Vênus, observada ao amanhecer."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1888",
+              "title": "Crise de Arles",
+              "detail": "O rompimento com Gauguin precede o internamento."
+            },
+            {
+              "date": "1889",
+              "title": "Noite estrelada",
+              "detail": "Van Gogh pinta o céu de Saint-Rémy."
+            },
+            {
+              "date": "1890",
+              "title": "Morte em Auvers",
+              "detail": "O artista faleceu aos 37 anos, ainda pouco conhecido."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "*Noite estrelada* transforma o sofrimento em linguagem visual. Van Gogh não copia a noite: inventa um céu interior e abre a porta à arte expressiva moderna."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "id": "course_138_bach_et_la_musique_baroque",
+  "title": "Bach e música barroca",
+  "subtitle": "1685-1750",
+  "subject": "art",
+  "subcategory": "Música",
+  "description": "Johann Sebastian Bach, cantor em Leipzig, levou a fuga e o contraponto ao auge e tornou-se o arquiteto do Barroco.",
+  "hero": {
+    "image": "bach_et_la_musique_baroque",
+    "ratio": "16:9",
+    "hook": "Um cantor de Leipzig constrói a catedral sonora do Ocidente."
+  },
+  "sections": [
+    {
+      "id": "course_138_bach_et_la_musique_baroque_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**João Sebastião Bach** (**1685**-**1750**) é frequentemente considerado o auge da música ocidental. Arquiteto de sons, leva à perfeição a arte de **fuga** e : diversas linhas melódicas independentes que se entrelaçam. [[Contraponto e fuga]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sua vida não é a de uma estrela da corte. É a de um artesão genial, ao serviço da Igreja e dos príncipes, cuja obra só seria plenamente redescoberta no século XIX."
+        }
+      ]
+    },
+    {
+      "id": "course_138_bach_et_la_musique_baroque_p1",
+      "title": "Barroco: igreja, pátio e palco",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A era **barroco** vai de aproximadamente **1600** até a morte de Bach. Ela gosta de contraste, movimento, ornamento. **Vivaldi** na Itália, **Handel** na Alemanha e depois na Inglaterra, dominam a paisagem. A música cumpre três missões: a igreja (órgão e canto sagrado), o quarto dos príncipes e o palco (ópera)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bach não escreveu uma ópera, mas injetou drama lírico em suas Paixões e oratórios. Sintetiza o compasso francês, o lirismo italiano e o rigor alemão. Para ele, a música reflete uma ordem divina, não apenas um prazer."
+        },
+        {
+          "type": "funFact",
+          "text": "Em 1717, em Weimar, Bach passou um mês na prisão por ter insistido demais em renunciar: o duque recusou-se a deixá-lo partir para Köthen."
+        }
+      ]
+    },
+    {
+      "id": "course_138_bach_et_la_musique_baroque_p2",
+      "title": "Leipzig: o cantor e suas cantatas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nascido em **Eisenach** em **1685** em uma dinastia de músicos, Bach estabeleceu-se em **1723** em **Lípsia** como  da Igreja de São Tomás. Carga avassaladora: um novo  quase toda semana, além de ensinar . [[cantor]] [[cantata]] [[Thomasschule]]"
+        },
+        {
+          "type": "image",
+          "asset": "bach_eisenach_birthplace_portrait",
+          "ratio": "4:3",
+          "caption": "Bach, herdeiro de uma linhagem de músicos alemães."
+        },
+        {
+          "type": "image",
+          "asset": "leipzig_st_thomas_church_bach_cantor",
+          "ratio": "4:3",
+          "caption": "São Tomás de Leipzig: o cotidiano do cantor Bach."
+        },
+        {
+          "type": "paragraph",
+          "text": "Estima-se que tenham sido compostas aproximadamente cantatas **300**, das quais algumas **200** chegaram até nós. Tem filhos **20** de dois casamentos; **Carlos Filipe Emanuel** e **João Cristiano** tornaram-se eles próprios grandes compositores. À noite dirige o , conjunto para o qual escreve concertos e suites seculares. [[Collegium Musicum]]"
+        },
+        {
+          "type": "funFact",
+          "text": "No final da vida, submetido a uma cirurgia ocular pelo cirurgião viajante John Taylor, Bach ficou cego pouco antes de morrer."
+        }
+      ]
+    },
+    {
+      "id": "course_138_bach_et_la_musique_baroque_p3",
+      "title": "O Cravo Bem Temperado e a redescoberta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Com o , sistema de afinação que unifica intervalos, Bach prova que um teclado pode tocar em todas as tonalidades. *O Cravo Bem Temperado* (48 prelúdios e fugas) abre caminho para a música moderna. A sua fuga sobrepõe um tema retomado por diversas vozes: a arquitetura matemática. [[O temperamento igual]]"
+        },
+        {
+          "type": "image",
+          "asset": "bach_well_tempered_clavier_manuscript_fugue",
+          "ratio": "4:3",
+          "caption": "O teclado bem temperado: todos os tons em um único teclado."
+        },
+        {
+          "type": "paragraph",
+          "text": "Quando ele morreu, a moda preferiu o mais leve . Bach parece “gótico”. Em **1829**, o jovem **Felix Mendelssohn** conduziu o *Paixão de São Mateus* em Berlim: início da “Renascença de Bach”. Sem ele, centenas de dezenas poderiam ter desaparecido. [[estilo galante]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Mendelssohn brincou: era preciso que um judeu convertido e um ator (seu amigo Devrient) devolvessem ao mundo a maior obra-prima da música cristã."
+        }
+      ]
+    },
+    {
+      "id": "course_138_bach_et_la_musique_baroque_p4",
+      "title": "ODS, Viagens e património universal",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Luterano fervoroso, Bach frequentemente assinava **ODS** (*Soli Deo Gloria*: somente a Deus a glória). Ele brinca com o  e codifica seu nome (B-A-C-H) em notas. Em **1977**, a NASA colocou vários de seus trabalhos no  das sondas Voyager: a embaixada sonora da humanidade no espaço. [[numerologia]] [[Golden Record]]"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1685",
+              "title": "Nascimento em Eisenach",
+              "detail": "Uma dinastia de músicos dá Bach ao mundo."
+            },
+            {
+              "date": "1723",
+              "title": "Cantor em Leipzig",
+              "detail": "Cantatas semanais e imenso trabalho sagrado."
+            },
+            {
+              "date": "1722-1742",
+              "title": "Teclado bem temperado",
+              "detail": "Todos os tons, a fuga como uma catedral."
+            },
+            {
+              "date": "1829",
+              "title": "Mendelssohn",
+              "detail": "A Paixão de São Mateus volta à luz."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Cantor de Leipzig, Bach levou o contraponto e a fuga ao auge; esquecido e depois ressuscitado por Mendelssohn, ele continua sendo o arquiteto do Barroco."
+        }
+      ]
+    }
+  ]
+}

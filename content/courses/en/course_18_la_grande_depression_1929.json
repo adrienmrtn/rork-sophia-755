@@ -1,0 +1,135 @@
+{
+  "id": "course_18_la_grande_depression_1929",
+  "title": "The Great Depression",
+  "subtitle": "1929",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "**October 24, 1929**, Wall Street collapses. In three years, unemployment has affected **25%** of Americans and the crisis opens the way to extremes in Europe.",
+  "hero": {
+    "image": "la_grande_depression_1929",
+    "ratio": "16:9",
+    "hook": "A Thursday on Wall Street, and the world falls into a decade of misery."
+  },
+  "sections": [
+    {
+      "id": "course_18_la_grande_depression_1929_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**October 24, 1929**, **Black Thursday**, the New York Stock Exchange collapses. It's not just a financial accident. It is the beginning of the **Great Depression**, a global economic paralysis."
+        },
+        {
+          "type": "paragraph",
+          "text": "In three years, the wealth produced in the world falls by approximately **15%**. Unemployment affects **25%** of Americans. European democracies are faltering. This is how a bubble took everything away."
+        }
+      ]
+    },
+    {
+      "id": "course_18_la_grande_depression_1929_p1",
+      "title": "The Roaring Twenties and the bubble",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In the **Roaring Twenties** (the 1920s), America consumed on credit: cars, radios, household appliances. Between 1920 and 1929, the **Dow Jones**, the index that measures the price of major American stocks, multiplied by six. The engine of the bubble: the . We borrow to buy securities, betting on their rise. [[Buying stocks on margin]]"
+        },
+        {
+          "type": "image",
+          "asset": "roaring_twenties_jazz_1920s",
+          "ratio": "4:3",
+          "caption": "The Roaring Twenties: euphoria, credit and speculation."
+        },
+        {
+          "type": "funFact",
+          "text": "On the day of the crash, on the Chicago Stock Exchange, brokers allegedly hung a virtual stork... accused of having brought misfortune instead of prosperity."
+        },
+        {
+          "type": "paragraph",
+          "text": "From 1928, production stagnated and agricultural prices fell. Factories make more than people can buy: it's . The market is , too expensive compared to reality. When doubt prevails, everyone sells at the same time. [[overproduction]] [[overvalued]]"
+        }
+      ]
+    },
+    {
+      "id": "course_18_la_grande_depression_1929_p2",
+      "title": "From the crash to the bankruptcy of banks",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "On **October 24**, eleven million sell orders. On **29**, “Black Tuesday”, the fall accelerates. Between 1929 and 1932, the market lost **89%** of its value. Then come the : waves of customers who withdraw their money in panic. About **9,000** US banks are going bankrupt. [[bank runs]]"
+        },
+        {
+          "type": "image",
+          "asset": "unemployed_queue_great_depression",
+          "ratio": "4:3",
+          "caption": "Queues of the unemployed: the social face of the crisis."
+        },
+        {
+          "type": "funFact",
+          "text": "Broke Americans hitched horses to their cars to save gas. They were called the “Hoover Cars”, after the name of President , considered too passive in the face of the crisis. [[Herbert Hoover]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Without credit, factories close. Production drops by approximately **46%**. Without social protection worthy of the name, millions of people depend on soup kitchens."
+        }
+      ]
+    },
+    {
+      "id": "course_18_la_grande_depression_1929_p3",
+      "title": "The crisis reaches Europe",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The United States repatriates its loans. Europe is asphyxiating. The , a system where currencies are linked to gold, propagates the crisis: to keep gold, central banks raise interest rates, which further slows down the economy. [[Gold Standard]]"
+        },
+        {
+          "type": "paragraph",
+          "text": " policies (lowering prices and wages to “clean up”) are failing. In Germany, unemployment reaches **30%**. Adolf Hitler exploits desperation against , the fragile German republic. In **January 1933**, he came to power. The economic crisis opens the door to political catastrophe. [[deflation]] [[Weimar]]"
+        }
+      ]
+    },
+    {
+      "id": "course_18_la_grande_depression_1929_p4",
+      "title": "Roosevelt and the New Deal",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Elected in **1932**, **Franklin D. Roosevelt** launches the . End of pure , the idea that the State should not touch the market. The State is banking on the : major works, regulation of banks, start of social protection. The recovery remained fragile... until the mobilization of 1941. [[Roosevelt's New Deal (1933)]] [[laissez-faire]] [[RELAUNCH]]"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Oct. 24, 1929",
+              "title": "Black Thursday",
+              "detail": "Wall Street collapse."
+            },
+            {
+              "date": "1929-1933",
+              "title": "Bank failures",
+              "detail": "About 9,000 American banks are disappearing."
+            },
+            {
+              "date": "1933",
+              "title": "New Deal",
+              "detail": "Roosevelt imposes state intervention."
+            },
+            {
+              "date": "Jan. 1933",
+              "title": "Hitler in power",
+              "detail": "The German crisis fuels Nazism."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "After the crash of **1929**, the Dow Jones lost **89%** of its value, **25%** of Americans were unemployed, and the crisis favored the arrival of Hitler to power in **1933**."
+        }
+      ]
+    }
+  ]
+}

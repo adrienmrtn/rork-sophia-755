@@ -1,0 +1,149 @@
+{
+  "id": "course_132_bob_dylan_et_la_folk_protest",
+  "title": "Bob Dylan e la protesta popolare",
+  "subtitle": "1961-2016",
+  "subject": "art",
+  "subcategory": "Musica",
+  "description": "Dal Greenwich Village al Nobel, Bob Dylan trasforma la canzone popolare in poesia politica, poi in rock elettrico.",
+  "hero": {
+    "image": "bob_dylan_et_la_folk_protest",
+    "ratio": "16:9",
+    "hook": "Una chitarra, un'armonica e una canzone americana diventano letteratura."
+  },
+  "sections": [
+    {
+      "id": "course_132_bob_dylan_et_la_folk_protest_intro",
+      "title": "Introduzione",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Bob Dylan**, nato Robert Zimmerman a **1941** nel Minnesota, è una delle figure più influenti della canzone del XX secolo. Profeta della protesta, poi poeta elettrico, rifiuta di restare in una scatola unica."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nel **2016**, l'Accademia svedese gli ha assegnato il **Premio Nobel per la letteratura**. Per la prima volta un cantautore rock viene riconosciuto come un grande scrittore in lingua inglese."
+        }
+      ]
+    },
+    {
+      "id": "course_132_bob_dylan_et_la_folk_protest_p1",
+      "title": "Greenwich Village e l'eredità di Woody Guthrie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nel gennaio **1961**, all'età di 19 anni, Zimmerman lasciò il freddo del Midwest per **New York**. Ha già scelto il nome Bob Dylan. Il suo idolo: il cantante folk **Woody Guthrie**, voce dei lavoratori e degli oppressi, poi ricoverato in ospedale. Dylan vuole incontrare questa autenticità americana."
+        },
+        {
+          "type": "paragraph",
+          "text": "Si stabilì nello **Greenwich Village**, un quartiere bohémien di Manhattan. Questo è il cuore degli , questo movimento che riscopre i canti tradizionali per farne una leva di critica sociale. Dylan perlustra i caffè, assorbe il blues, il country e il gospel e scopre anche la poesia e gli . [[rinascita popolare]] [[Beat Generation]]"
+        },
+        {
+          "type": "image",
+          "asset": "greenwich_village_folk_scene_1960s",
+          "ratio": "4:3",
+          "caption": "Greenwich Village negli anni '60: caffè, chitarre e proteste."
+        },
+        {
+          "type": "paragraph",
+          "text": "Notato per il suo fraseggio e la sua armonica grezza, firmò con gli  alla fine di **1961**. La leggenda ha inizio. [[Columbia Records]]"
+        },
+        {
+          "type": "funFact",
+          "text": "All'inizio, Dylan inventò la sua biografia: affermò di essere fuggito da un circo o di aver viaggiato con i carnevali, per forgiarsi un'aura di outsider."
+        }
+      ]
+    },
+    {
+      "id": "course_132_bob_dylan_et_la_folk_protest_p2",
+      "title": "La canzone di protesta e la marcia su Washington",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In **1963**, l'album *Il Bob Dylan a ruota libera* ha cambiato tutto. *Soffiando nel vento* diventa un inno. Dylan usa : melodie semplici, messaggi sul razzismo, sulla guerra e sulla paura nucleare. [[La musica come strumento politico]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Nell'agosto **1963**, ha cantato alla **marcia su Washington** per i diritti civili, davanti a **250.000**, poco prima del discorso di **Martin Luther King**. Ma già comincia a rifiutare il ruolo di “portavoce di una generazione”. I suoi testi diventano più surreali, più personali."
+        },
+        {
+          "type": "image",
+          "asset": "march_on_washington_1963_civil_rights",
+          "ratio": "4:3",
+          "caption": "Agosto 1963: la marcia su Washington, momento chiave per i diritti civili."
+        },
+        {
+          "type": "funFact",
+          "text": "Lo stesso anno, i produttori televisivi lo bocciarono a un'audizione: scoprirono che cantava troppo stonato."
+        }
+      ]
+    },
+    {
+      "id": "course_132_bob_dylan_et_la_folk_protest_p3",
+      "title": "Newport 1965: la chitarra elettrica",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nel luglio **1965**, al Newport Folk Festival, Dylan salì sul palco con uno  elettrico. Parte dell'opinione pubblica purista lo fischia: l'elettricità sarebbe un tradimento commerciale. In realtà fu la nascita del folk-rock. [[Fender Stratocaster]]"
+        },
+        {
+          "type": "image",
+          "asset": "bob_dylan_electric_newport_folk_festival_1965",
+          "ratio": "4:3",
+          "caption": "Newport 1965: Dylan accende l'elettricità e un'era cambia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Segue una trilogia fondatrice: *Riportare tutto a casa*, *Highway 61 rivisitata*, *Bionda su bionda*. *Come un Rolling Stone* sconvolge i formati radiofonici. Dylan non si limita più ad accusare la società: esplora la disillusione e la psiche, con una verve verbale senza precedenti ai vertici delle classifiche."
+        },
+        {
+          "type": "funFact",
+          "text": "La Stratocaster di Newport è andata perduta per 47 anni, dimenticata su un aereo, poi venduta all'asta per quasi 1 milione di dollari nel 2013."
+        }
+      ]
+    },
+    {
+      "id": "course_132_bob_dylan_et_la_folk_protest_p4",
+      "title": "Dal Never Ending Tour al Nobel",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dopo un incidente in moto nel **1966**, Dylan si è costantemente reinventato: country, gospel, standard. La sua influenza tocca **John Lenon**, **Jimi Hendrix** e generazioni di autori. Il Premio Nobel per **2016** chiude il dibattito: i testi delle canzoni possono essere grande letteratura."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1961",
+              "title": "Arrivo a New York",
+              "detail": "Dylan scopre il Greenwich Village e firma con la Columbia."
+            },
+            {
+              "date": "1963",
+              "title": "Marcia su Washington",
+              "detail": "La canzone di protesta diventa la voce di una generazione."
+            },
+            {
+              "date": "1965",
+              "title": "Newport elettrico",
+              "detail": "La Stratocaster inventa il folk-rock."
+            },
+            {
+              "date": "2016",
+              "title": "Premio Nobel",
+              "detail": "La canzone popolare entra nel pantheon letterario."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Legato a Newport nel 1965, fischiato dai puristi, Dylan divenne la figura più influente della canzone americana, fino al Premio Nobel."
+        }
+      ]
+    }
+  ]
+}

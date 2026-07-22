@@ -1,0 +1,104 @@
+{
+  "id": "course_219_la_fracture_numerique_mondiale",
+  "title": "A exclusão digital global",
+  "subtitle": "Um terço da humanidade offline",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economia & sociedade",
+  "description": "2,7 mil milhões de pessoas ainda não têm acesso à Internet. Num mundo cada vez mais digital, esta falta de ligação torna-se uma nova forma de exclusão.",
+  "hero": {
+    "image": "la_fracture_numerique_mondiale",
+    "ratio": "16:9",
+    "hook": "O Quénia inventou o pagamento por telefone dez anos antes da Europa, devido à falta de agências bancárias."
+  },
+  "sections": [
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Embora as sociedades desenvolvidas vivam uma revolução impulsionada pela inteligência artificial, uma realidade brutal persiste: **2,7 mil mil pessoas**, ou cerca de um terço da humanidade, ainda não têm acesso à Internet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esta **divisão digital** não é apenas um atraso técnico: tornou-se uma verdadeira barreira, que mantém milhões de pessoas afastadas da educação, da saúde e da economia global. Eis por que persiste e como alguns países estão tentando preenchê-lo."
+        }
+      ]
+    },
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_p1",
+      "title": "Um mapa mundial de duas velocidades",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Até 2024, cerca de 5,4 mil milhões de pessoas estarão ligadas à Internet em todo o mundo, mas o progresso está estagnado nas regiões mais pobres. A Europa e a América do Norte ultrapassam os 90% de ligação, enquanto a África Subsariana permanece apenas nos 37%."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esta exclusão deve-se a diversas causas. Primeiro, a falta de infraestrutura: a instalação de fibra óptica em determinadas regiões isoladas é considerada muito onerosa pelas operadoras. Depois, o preço: em alguns países, um simples  representa vários meses de salário. Por último, a barreira linguística (cerca de 70% do conteúdo da web está em inglês) e a falta de formação digital limitam a utilização mesmo quando existe uma ligação. [[smartphone]]"
+        }
+      ]
+    },
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_p2",
+      "title": "Quando a falta de infraestrutura força a inovação",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Essa divisão atua como um multiplicador de desigualdades. Num mundo onde o trabalho remoto, o comércio eletrónico e a educação online (o ) estão a tornar-se a norma, não estar conectado significa tornar-se invisível para a economia global. [[MOOC]]"
+        },
+        {
+          "type": "image",
+          "asset": "digital_divide_africa_rural_village_smartphone",
+          "ratio": "16:9",
+          "caption": "Em muitas zonas rurais, o telemóvel continua a ser o único ponto de acesso à Internet."
+        },
+        {
+          "type": "paragraph",
+          "text": "O Quénia ilustra outro caminho: devido à falta de sucursais bancárias suficientes, o país adoptou massivamente um sistema simples de pagamento por SMS em 2007, , dez anos à frente da Europa. Este sistema permitiu que milhões de pessoas sem contas bancárias fizessem transações seguras com um simples telefone. [[O M-Pesa queniano]]"
+        },
+        {
+          "type": "funFact",
+          "text": "O Quénia apelidou esta estratégia de salto tecnológico: em vez de instalar infra-estruturas caras e obsoletas, o país mudou directamente para uma solução mais moderna e mais barata."
+        }
+      ]
+    },
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_p3",
+      "title": "Internet via satélite: uma solução condicional",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Para conectar as aldeias mais isoladas, novos jogadores apostam no espaço. O projeto  envia milhares de satélites para órbita baixa, permitindo conexão rápida mesmo em desertos ou altas montanhas, sem a necessidade de instalação de um único cabo. [[Starlink (SpaceX)]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Mas o custo da assinatura e do equipamento permanece alinhado com os padrões ocidentais, o que torna estas soluções inacessíveis às populações rurais mais pobres sem assistência externa. A resolução da exclusão digital não pode, portanto, ser alcançada apenas através da tecnologia: requer também vontade política para tornar a Internet algo acessível a todos."
+        }
+      ]
+    },
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_p4",
+      "title": "Inteligência artificial, uma nova lacuna",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A rápida ascensão da inteligência artificial ameaça ampliar ainda mais esta divisão. Requer imenso poder computacional e de dados, recursos concentrados nas mãos de alguns países e empresas. As populações desconectadas correm o risco de se tornarem dependentes de ferramentas concebidas sem ter em conta a sua cultura ou língua."
+        },
+        {
+          "type": "paragraph",
+          "text": "A lacuna de competências entre estudantes conectados e não conectados também poderá aumentar muito rapidamente. O desafio para os próximos anos não será, portanto, apenas fornecer uma ligação, mas garantir um acesso justo à criação de valor digital, combinando custos mais baixos, conteúdo local e formação."
+        },
+        {
+          "type": "takeaway",
+          "text": "2,7 mil milhões de pessoas continuam hoje excluídas da Internet, uma divisão que corre o risco de piorar com a inteligência artificial. Reduzir esta lacuna exige transformar a conectividade num bem real acessível a todos, e não apenas num produto para vender."
+        }
+      ]
+    }
+  ]
+}

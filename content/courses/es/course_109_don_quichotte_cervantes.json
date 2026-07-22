@@ -1,0 +1,115 @@
+{
+  "id": "course_109_don_quichotte_cervantes",
+  "title": "Don Quijote, Cervantes",
+  "subtitle": "1605-1615",
+  "subject": "litterature",
+  "subcategory": "Anglosajones y literatura mundial",
+  "description": "Don Quijote ataca molinos de viento creyendo que está luchando contra gigantes. Cervantes inventa la novela moderna, entre la locura generosa, la ironía y la metaficción.",
+  "hero": {
+    "image": "don_quichotte_cervantes",
+    "ratio": "16:9",
+    "hook": "Un caballero lee demasiadas novelas de caballerías y se propone salvar el mundo."
+  },
+  "sections": [
+    {
+      "id": "course_109_don_quichotte_cervantes_intro",
+      "title": "Introducción",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Publicada en **1605** y luego **1615**, **Don Quixote** de **Miguel de Cervantes** a menudo se considera la primera novela moderna de Occidente. **Alonso Quijano**, un pequeño hidalgo manchego, se cree un caballero andante y parte a luchar contra unos molinos que cree gigantes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mucho más que una parodia de las novelas de caballerías, el libro inventa una nueva manera de contar historias: personajes cambiantes, duda permanente, humor y profundidad mezclados. Cervantes sienta las bases de la novela psicológica y de la ficción que se comenta a sí misma."
+        }
+      ]
+    },
+    {
+      "id": "course_109_don_quichotte_cervantes_p1",
+      "title": "Cervantes: una vida de aventuras y el nacimiento de la novela",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cervantes lleva una vida de aventuras extraordinarias: herido en , donde perdió el uso de su mano izquierda, cautivo durante cinco años en **Argel** tras ser capturado por piratas. De regreso a España, en relativa pobreza, publicó la primera parte en **1605** con éxito inmediato. **[[Batalla de Lepanto (1571) y cautiverio de Cervantes]]**"
+        },
+        {
+          "type": "image",
+          "asset": "miguel_de_cervantes_portrait_painting",
+          "ratio": "4:3",
+          "caption": "Miguel de Cervantes, soldado, cautivo e inventor de la novela moderna."
+        },
+        {
+          "type": "funFact",
+          "text": "En 1614, un autor publicó una secuela falsa. Furioso, Cervantes escribió la verdadera segunda parte en 1615, donde los héroes descubrieron que eran famosos gracias al primer volumen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cervantes critica las obsoletas novelas de caballerías, pero sobre todo inventa la **polifonía narrativa**: cada personaje tiene su propia voz, su perspectiva, su propia ironía."
+        }
+      ]
+    },
+    {
+      "id": "course_109_don_quichotte_cervantes_p2",
+      "title": "El antagonismo fundacional: el caballero y el escudero",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Don Quixote** y **Sancho Panza** forman un dúo inmortal. Uno sueña con la caballerosidad y la justicia ideal, el otro piensa en el vientre, el vino y el gobierno de una isla prometida. Sancho intenta corregir a su amo, sobre todo cuando ataca molinos de viento que toma por gigantes amenazadores."
+        },
+        {
+          "type": "image",
+          "asset": "don_quixote_windmills_gustave_dore_illustration",
+          "ratio": "4:3",
+          "caption": "Don Quijote y los molinos de viento: el ideal choca con la realidad."
+        },
+        {
+          "type": "paragraph",
+          "text": "A lo largo del viaje, Sancho se deja seducir por el sueño caballeresco mientras Quijote duda ante las repetidas humillaciones. Esta mutua “quijotización” y “sanchificación” transforma una farsa inicial en una profunda meditación sobre la amistad, el ideal y la lucidez."
+        }
+      ]
+    },
+    {
+      "id": "course_109_don_quichotte_cervantes_p3",
+      "title": "La metaficción y el juego de las realidades",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cervantes practica : dice traducir un manuscrito árabe encontrado en un mercado. Se duda del narrador y del lector también. En la segunda parte, los nobles que han leído el libro organizan escenas para engañar al caballero. **[[Metaficción y reflexividad narrativa]]**"
+        },
+        {
+          "type": "quote",
+          "text": "La pluma es el lenguaje del alma; los pensamientos que expresa son las palabras que pronuncia.",
+          "attribution": "Miguel de Cervantes, Don Quijote"
+        },
+        {
+          "type": "paragraph",
+          "text": "La locura ya no está sólo en la cabeza de Quijote: también la sociedad la crea manipulándolo. La identidad se convierte en una historia que nos contamos a nosotros mismos y que se nos impone. Cervantes sienta las bases de la novela psicológica moderna, varios siglos antes del posmodernismo."
+        }
+      ]
+    },
+    {
+      "id": "course_109_don_quichotte_cervantes_p4",
+      "title": "Posteridad: del quijotismo al patrimonio universal",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "El “quijotismo” designa un idealismo generoso, a veces ingenuo, que persiste a pesar de los fracasos. **Flaubert**, **Dostoievski** y  están inspirados en él. La novela acepta la ambigüedad: ya no una única Verdad impuesta, sino verdades contradictorias llevadas por individuos. **[[James Joyce]]**"
+        },
+        {
+          "type": "paragraph",
+          "text": "Derrotado por el **Caballero de la Luna Blanca**, Don Quijote recupera la cordura y muere en **Alonso Quijano el Bueno**. Paradoja final: la razón es necesaria para vivir en sociedad, pero la imaginación da un significado heroico a la existencia ordinaria."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Don Quixote** inventa la novela moderna jugando entre la ilusión y la realidad. Cervantes demuestra que se puede estar loco y lúcido al mismo tiempo, y que el ideal transforma el mundo, incluso cuando fracasa."
+        }
+      ]
+    }
+  ]
+}

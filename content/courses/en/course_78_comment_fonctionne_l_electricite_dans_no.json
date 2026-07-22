@@ -1,0 +1,112 @@
+{
+  "id": "course_78_comment_fonctionne_l_electricite_dans_no",
+  "title": "How does electricity work in our body?",
+  "subtitle": "Nerves & ions",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Thinking, beating of the heart, raising an arm: all this circulates first of all like living electricity, carried not by electrons, but by ions.",
+  "hero": {
+    "image": "comment_fonctionne_l_electricite_dans_notre_corps",
+    "ratio": "16:9",
+    "hook": "Your body is an electrical network. But here, the current is ions, not electrons."
+  },
+  "sections": [
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In a wall socket, the current is **electrons** which circulate. In your body, it's different: they are **ions**, charged atoms, which enter and leave the cells. This flow creates the signals that make the heart think, the heart beat, and the muscle contract."
+        },
+        {
+          "type": "paragraph",
+          "text": "Without this living electricity, no thought, no gesture, no pulse. Understanding the body also means understanding this language of charges."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p1",
+      "title": "The electric click of the neuron",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A **neuron** at rest does not send a message, but it “charges”. Its membrane separates the inside and outside of the cell. Thanks to the , it maintains a  of approximately **-70 millivolts**: the inside is more negative than the outside. [[sodium-potassium pumps]] [[resting potential]]"
+        },
+        {
+          "type": "image",
+          "asset": "neuron_electrical_signal_brain",
+          "ratio": "auto",
+          "caption": "Neurons communicate through brief electrical impulses."
+        },
+        {
+          "type": "paragraph",
+          "text": "When a stimulus arrives, channels open. The sodium comes in all at once. The polarity is reversed: it is the , an all-or-nothing signal which runs along the axon, sometimes over a meter. Like an electric wave. [[The neuronal action potential]]"
+        },
+        {
+          "type": "funFact",
+          "text": "The waking brain produces about **20 watts**, enough for a small LED. However, it consumes almost **20%** of the body's calories."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p2",
+      "title": "At the synapse, electricity becomes chemistry",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The neurons don't really touch each other. Between them, a tiny gap: the **synapse**. The electrical signal cannot skip it. Then the end of the axon releases , messenger molecules such as acetylcholine or . [[Neurotransmitters]] [[glutamate]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "These messengers attach themselves to the next neuron like a key in a lock. Depending on the message, they excite or inhibit. Thousands of these simultaneous decisions form thought."
+        },
+        {
+          "type": "funFact",
+          "text": "Some nerve signals travel at **120 m/s** (more than **430 km/h**). Enough to react to a burn on the toe in a split second."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p3",
+      "title": "The heart has its own pacemaker",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The heart does not wait for a command from the brain for each beat. In the right atrium, the **sinus node** generates its own impulses, approximately **60 to 100** times per minute at rest. The signal propagates, first contracts the atria, then the ventricles."
+        },
+        {
+          "type": "paragraph",
+          "text": "This activity is strong enough to be read on the skin: it is the **electrocardiogram (ECG)**. If the rhythm becomes disturbed, we speak of **arrhythmia**. The heart then beats disorderly and pumps poorly."
+        },
+        {
+          "type": "funFact",
+          "text": "The electric eel uses the same principle of excitable cells, but in series: up to **600 volts**, enough to paralyze prey."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p4",
+      "title": "From voluntary gesture to defibrillator",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "To raise the arm, an action potential travels down to the muscle. Acetylcholine triggers a local electrical wave, then a release of calcium. The muscle proteins slide over each other: contraction."
+        },
+        {
+          "type": "paragraph",
+          "text": "**defibrillation** uses the same principle in reverse: an external shock resets all the cells “to zero” so that the sinus node resumes tempo. Bionic prosthetics also capture these weak signals to control an artificial hand."
+        },
+        {
+          "type": "takeaway",
+          "text": "Living things speak in ion flows and action potentials. Thought, heart and muscles share the same electrical language."
+        }
+      ]
+    }
+  ]
+}

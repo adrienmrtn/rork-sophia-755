@@ -1,0 +1,100 @@
+{
+  "id": "course_56_la_decouverte_de_la_radioactivite_marie",
+  "title": "El descubrimiento de la radiactividad.",
+  "subtitle": "María Curie",
+  "subject": "sciences",
+  "subcategory": "Descubrimientos que cambiaron el mundo",
+  "description": "Marie Curie, con Pierre Curie y Henri Becquerel, abre el capítulo de la radiactividad. Dos premios Nobel, un trabajo abrumador y un legado inmenso.",
+  "hero": {
+    "image": "la_decouverte_de_la_radioactivite_marie_curie",
+    "ratio": "16:9",
+    "hook": "Pesó toneladas de mineral para aislar unos gramos de un elemento invisible."
+  },
+  "sections": [
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_intro",
+      "title": "Introducción",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**María Curie** (nacida Maria Skłodowska) es la primera mujer en recibir un Premio Nobel. Sigue siendo la única persona que ha recibido **dos** en dos ciencias diferentes: física y luego química."
+        },
+        {
+          "type": "paragraph",
+          "text": "Su tema: **radioactividad**, es decir el hecho de que ciertos átomos envían espontáneamente energía y partículas."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p1",
+      "title": "Una puerta estrecha a la ciencia",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nacida en Polonia, se fue a estudiar a París porque las universidades locales cerraban muchas puertas a las mujeres. Trabaja duro, a menudo en condiciones precarias."
+        },
+        {
+          "type": "paragraph",
+          "text": "Se casó con **Pierre Curie**, físico. Juntos formaron un dúo de laboratorio poco común en aquella época."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p2",
+      "title": "Nombra lo invisible",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **1896**, **Henri Becquerel** observó que el uranio vela las placas fotográficas sin luz. Marie Curie decide estudiar este fenómeno en detalle. Ella inventó la palabra **radioactividad**."
+        },
+        {
+          "type": "image",
+          "asset": "marie_curie_pitchblende_radioactivity",
+          "ratio": "4:3",
+          "caption": "Toneladas de pechblenda para aislar el radio y el polonio."
+        },
+        {
+          "type": "paragraph",
+          "text": "Con Pierre, descubre dos nuevos elementos: **polonio** (llamado así por Polonia) y **radio**. Para aislarlos es necesario procesar enormes cantidades de mineral, la pechblenda."
+        },
+        {
+          "type": "funFact",
+          "text": "El radio brilla débilmente en la oscuridad. Al principio nos sorprendimos... antes de comprender lo peligroso que era."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p3",
+      "title": "Gloria y precio a pagar",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **1903**, Marie, Pierre y Becquerel recibieron el Premio Nobel de Física. En **1911**, Marie recibió sola el Premio Nobel de Química. Pierre murió accidentalmente en 1906. Continúa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Durante la Primera Guerra Mundial organizó unidades móviles de rayos X para tratar a los heridos. Expone su cuerpo a dosis que hoy sabríamos que son inaceptables."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p4",
+      "title": "Un legado de doble cara",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La radiactividad ha permitido la radioterapia contra determinados cánceres… y también las armas nucleares. El conocimiento es neutral; sus usos no lo son."
+        },
+        {
+          "type": "takeaway",
+          "text": "Marie Curie transformó una extraña observación en una nueva ciencia: la radiactividad. Su trabajo abrió la física moderna... a costa de riesgos entonces poco comprendidos."
+        }
+      ]
+    }
+  ]
+}

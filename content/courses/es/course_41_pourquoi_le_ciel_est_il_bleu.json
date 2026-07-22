@@ -1,0 +1,114 @@
+{
+  "id": "course_41_pourquoi_le_ciel_est_il_bleu",
+  "title": "¿Por qué el cielo es azul?",
+  "subtitle": "Luz y atmósfera",
+  "subject": "sciences",
+  "subcategory": "Nuestro día a día explicado",
+  "description": "Mirar el cielo azul es tan común que nos olvidamos de preguntar por qué. La respuesta está en la luz del Sol y el aire que atravesamos para verlo.",
+  "hero": {
+    "image": "pourquoi_le_ciel_est_il_bleu",
+    "ratio": "16:9",
+    "hook": "El cielo no está pintado de azul: es un truco de magia de la luz y el aire."
+  },
+  "sections": [
+    {
+      "id": "course_41_pourquoi_le_ciel_est_il_bleu_intro",
+      "title": "Introducción",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mirar el cielo azul es tan común que nos olvidamos de preguntar por qué. Sin embargo, la **atmósfera**, la capa de gas que rodea la Tierra, no tiene color propio. Este color proviene de un encuentro muy preciso entre la luz del Sol y las moléculas de gas que flotan a nuestro alrededor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Entender este azul significa entender cómo la luz viaja y se dispersa, es decir, regresa en todas direcciones en lugar de ir recta. Y agradable sorpresa: es exactamente el mismo fenómeno que tiñe el cielo de rojo y naranja al atardecer."
+        }
+      ]
+    },
+    {
+      "id": "course_41_pourquoi_le_ciel_est_il_bleu_p1",
+      "title": "La luz blanca oculta todos los colores.",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La luz del sol nos parece blanca, pero en realidad contiene todos los colores del arco iris: es [[espectro visible de luz]]. Cada color corresponde a una **longitud de onda**, el tamaño de su “onda” luminosa. El azul y el violeta tienen ondas cortas; el rojo tiene ondas largas."
+        },
+        {
+          "type": "funFact",
+          "text": "En la Luna no hay aire que disperse la luz. Resultado: allí, el cielo permanece **El negro tiene plena luz del día.**, incluso cuando brilla el sol. Prueba de que el color del cielo proviene del aire, no del Sol."
+        },
+        {
+          "type": "paragraph",
+          "text": "Porque entre el Sol y nuestros ojos, el aire no está vacío: está lleno de minúsculas **moléculas de gas, especialmente nitrógeno, aproximadamente 78%** del aire, y oxígeno, aproximadamente **21%**. Son mucho más pequeños que las ondas luminosas. Cuando un rayo incide en ellos, ya no va recto: se devuelve en todas direcciones. Este pequeño rebote es el punto de partida del color del cielo."
+        }
+      ]
+    },
+    {
+      "id": "course_41_pourquoi_le_ciel_est_il_bleu_p2",
+      "title": "Difusión: por qué gana el azul",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **1871**, el físico británico **Señor Rayleigh** puso este fenómeno en una ecuación. Descubrió que cuanto más corto es un color, más se refleja en todas las direcciones por las moléculas de aire. Es el [[La dispersión de Rayleigh]]."
+        },
+        {
+          "type": "funFact",
+          "text": "El cielo de Marte es todo lo contrario al nuestro: su polvo rico en hierro lo hace rosado durante el día, pero sus atardeceres son **azul**. Todo depende de lo que contenga el aire."
+        },
+        {
+          "type": "image",
+          "asset": "blue_sky_sunlight_scattering_atmosphere",
+          "ratio": "4:3",
+          "caption": "La luz azul se dispersa en todas direcciones por el aire."
+        },
+        {
+          "type": "paragraph",
+          "text": "En concreto, la luz azul se dispersa aproximadamente **9 dias mas** que la roja. El rojo viaja por el aire casi en línea recta, mientras que el azul rebota por todas partes. Por eso, mires donde mires el cielo, el azul siempre acaba llegando a tus ojos: todo el cielo parece “resplandecer” con este azul disperso."
+        }
+      ]
+    },
+    {
+      "id": "course_41_pourquoi_le_ciel_est_il_bleu_p3",
+      "title": "Entonces, ¿por qué no morado?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Surge una pregunta lógica: si las ondas más cortas son las más dispersas, el violeta debería ganar, porque su onda es incluso más corta que la del azul. El cielo también contiene una gran cantidad de color púrpura disperso."
+        },
+        {
+          "type": "paragraph",
+          "text": "La respuesta no está en el cielo, sino en nuestros ojos. Capturamos colores utilizando sensores llamados **conos**, células de la retina que son sensibles a la luz. Son mucho más sensibles al azul que al morado. Además, el Sol emite más luz azul que violeta. Nuestro cerebro entonces hace una especie de promedio y ve un hermoso azul. Un animal sensible a otros colores sin duda vería un cielo completamente diferente."
+        }
+      ]
+    },
+    {
+      "id": "course_41_pourquoi_le_ciel_est_il_bleu_p4",
+      "title": "¿Y el rojo de la tarde?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "El atardecer sigue las mismas reglas, pero cambia una cosa: la distancia. Al mediodía, la luz atraviesa una fina capa de aire. Por la tarde, cuando el Sol está bajo, sus rayos deben atravesar **mucha más área** antes de llegar a nosotros."
+        },
+        {
+          "type": "image",
+          "asset": "sunset_red_orange_sky_atmosphere",
+          "ratio": "16:9",
+          "caption": "Al nivel del horizonte, la luz atraviesa una densidad de aire mucho mayor."
+        },
+        {
+          "type": "paragraph",
+          "text": "En este largo viaje, todo el azul se dispersa mucho antes de llegar a nosotros: es filtrado por la densidad del aire. Sólo quedan los colores más resistentes, rojos y naranjas. Si hay polvo o contaminación, entra en juego [[Mie difusión]]: partículas más grandes que las moléculas del aire hacen que el cielo sea lechoso o realzan estos tonos anaranjados."
+        },
+        {
+          "type": "takeaway",
+          "text": "El cielo es azul porque las ondas cortas están aproximadamente 9 veces más dispersas por el aire que las ondas largas. Al atardecer, la luz atraviesa tanto aire que todavía sólo nos llega el rojo."
+        }
+      ]
+    }
+  ]
+}

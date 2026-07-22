@@ -1,0 +1,102 @@
+{
+  "id": "course_58_la_structure_de_l_adn_watson_crick_1953",
+  "title": "The structure of DNA",
+  "subtitle": "1953",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "In 1953, Watson and Crick described the DNA double helix. Behind this glory, the crucial work of Rosalind Franklin.",
+  "hero": {
+    "image": "la_structure_de_l_adn",
+    "ratio": "16:9",
+    "hook": "The shape of a molecule… and the secret of heredity."
+  },
+  "sections": [
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We knew that traits pass from parents to children. But what chemical object carries this information? In the middle of the 20th century, the answer became clearer: **DNA**."
+        },
+        {
+          "type": "paragraph",
+          "text": "In **1953**, **James Watson** and **Francis Crick** published a famous model: the **double propeller**. This form explains how DNA can copy itself."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p1",
+      "title": "Finding support for heredity",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "DNA (deoxyribonucleic acid) is a long molecule found in our cells. It contains chemical “letters” that form a code. But in the 1940s and 1950s, we did not yet know its 3D form."
+        },
+        {
+          "type": "paragraph",
+          "text": "Without the form, it is difficult to understand how this code can duplicate itself with each cell division."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p2",
+      "title": "The photo that changes everything",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "rosalind_franklin_photo_51_x_ray",
+          "ratio": "4:3",
+          "caption": "Photo 51 of Rosalind Franklin reveals a helical structure."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Rosalind Franklin**, physicist and chemist, obtains X-ray images of DNA. Her famous **Picture 51** shows clear evidence of a helix."
+        },
+        {
+          "type": "paragraph",
+          "text": "Watson and Crick see this data (under conditions now considered unfair to Franklin) and build their model. Franklin died in 1958; the 1962 Nobel will go to Watson, Crick and Wilkins, not her."
+        },
+        {
+          "type": "funFact",
+          "text": "Franklin also did major work on viruses. Its role in DNA has long been underestimated in popular accounts."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p3",
+      "title": "Why the double helix matters",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "dna_double_helix_model_watson_crick",
+          "ratio": "4:3",
+          "caption": "Two complementary strands: the copy becomes imaginable."
+        },
+        {
+          "type": "paragraph",
+          "text": "Two strands wrap around each other. The letters face each other in pairs. When the strands separate, each can serve as a model to reconstruct the other. Heredity becomes an understandable chemical mechanism."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p4",
+      "title": "Modern biology starts here",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "From this discovery are born modern genetics, sequencing, DNA tests, gene therapies. And also ethical debates: what to do with this power?"
+        },
+        {
+          "type": "takeaway",
+          "text": "In **1953**, the double helix model explains how DNA stores and copies information from living things. Franklin provided decisive evidence too long erased from the narrative."
+        }
+      ]
+    }
+  ]
+}

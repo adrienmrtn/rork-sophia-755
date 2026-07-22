@@ -1,0 +1,122 @@
+{
+  "id": "course_159_le_theatre_de_shakespeare",
+  "title": "Teatro de Shakespeare",
+  "subtitle": "1564-1616",
+  "subject": "art",
+  "subcategory": "Cinema, foto & arquitetura + obras icônicas",
+  "description": "Em Londres, Shakespeare escreveu para o Globe. Hamlet, Macbeth, Romeo: teatro popular que se tornou o auge da língua inglesa.",
+  "hero": {
+    "image": "le_theatre_de_shakespeare",
+    "ratio": "16:9",
+    "hook": "Um dramaturgo de ator, um teatro sem cenários... e falas eternas."
+  },
+  "sections": [
+    {
+      "id": "course_159_le_theatre_de_shakespeare_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Willian Shakespeare** (1564-1616) escreveu para os palcos de Londres, não para a escola. Suas peças misturam reis, palhaços, amantes e assassinos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Quatro séculos depois, ainda é tocado em todos os lugares."
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p1",
+      "title": "O Globo e os terráqueos",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Com a trupe , ele toca , uma roda ao ar livre. Os  pagam pouco e ficam parados perto do palco. O teatro é popular, barulhento e animado. [[Lord Chamberlain's Men]] [[Teatro Globo]] [[Groundlings]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "A Londres elisabetana adora espetáculo. Os teatros competem com sermões e lutas de ursos. Shakespeare escreve neste mercado barulhento, não numa torre de marfim."
+        },
+        {
+          "type": "image",
+          "asset": "globe_theatre_london_reconstruction",
+          "ratio": "4:3",
+          "caption": "The Globe: a cena empurrada para a multidão."
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p2",
+      "title": "Uma nova linguagem",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ele costuma escrever em versos brancos de Shakespeare: pentâmetro iâmbico sem rima. Insultos, poemas, monólogos: inventa palavras e estabelece personagens (Hamlet, Lady Macbeth) que se tornaram mitos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ele recicla crônicas, notícias italianas, peças antigas. A originalidade está na linguagem e nos personagens, não na pura invenção da trama."
+        },
+        {
+          "type": "funFact",
+          "text": "Várias das suas peças só chegaram até nós graças ao  de 1623, publicado após a sua morte. [[First Folio]]"
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p3",
+      "title": "Tragédias, comédias, histórias",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ele vai do riso ao sangue. *Romeu e Julieta*, *Otelo*, *Rei Lear*: famílias, poder, ciúme. As “peças históricas” reconstituem a Inglaterra para um público que gosta de se ver em forma épica."
+        },
+        {
+          "type": "paragraph",
+          "text": "Comédias e tragédias respondem umas às outras. O louco fala a verdade; o rei enlouquece. Esta porosidade de tons explica porque ainda pode ser montado de mil maneiras."
+        },
+        {
+          "type": "image",
+          "asset": "shakespeare_first_folio_1623",
+          "ratio": "4:3",
+          "caption": "O Primeiro Fólio: salvando textos do esquecimento."
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p4",
+      "title": "Legado",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Traduzido, adaptado, sampleado pelo cinema e pelo rap, Shakespeare continua sendo uma caixa de ferramentas para expressar ambição e desejo. Seu segredo: escrever para atores, diante de uma multidão."
+        },
+        {
+          "type": "paragraph",
+          "text": "Para compreender completamente o teatro de Shakespeare, é preciso ter uma coisa em mente: cada detalhe técnico serve a uma emoção ou a uma ideia. O trabalho nunca é apenas decorativo."
+        },
+        {
+          "type": "paragraph",
+          "text": "O contexto é tão importante quanto o estilo. Datas, locais, patrocinadores, público: tudo isso explica porque um formulário aparece num determinado momento e não antes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Finalmente, o legado é medido no longo prazo. O que vemos hoje nos museus, nos filmes ou na música popular ainda guarda os vestígios dessas invenções."
+        },
+        {
+          "type": "paragraph",
+          "text": "Traduzido no século XVIII na França e em outros lugares, tornou-se um clássico mundial. Cada época encontra nele o seu espelho: romântica, política, pós-colonial, feminista."
+        },
+        {
+          "type": "takeaway",
+          "text": "No Globe, Shakespeare inventou um teatro popular cujos personagens e linguagem conquistaram o mundo."
+        }
+      ]
+    }
+  ]
+}

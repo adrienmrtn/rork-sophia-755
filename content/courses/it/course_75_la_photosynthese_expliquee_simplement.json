@@ -1,0 +1,112 @@
+{
+  "id": "course_75_la_photosynthese_expliquee_simplement",
+  "title": "La fotosintesi spiegata in modo semplice",
+  "subtitle": "Piante ed energia",
+  "subject": "sciences",
+  "subcategory": "La Terra e l'Universo",
+  "description": "Le piante fanno qualcosa di straordinario: cuociono lo zucchero con luce, acqua e aria. E ci regalano ossigeno.",
+  "hero": {
+    "image": "la_photosynthese_expliquee_simplement",
+    "ratio": "16:9",
+    "hook": "Una foglia è una cucina solare: luce, acqua, aria... ed ecco lo zucchero."
+  },
+  "sections": [
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_intro",
+      "title": "Introduzione",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Immagina una pianta in miniatura in ogni foglia. Ci vogliono tre ingredienti banali: **luce della suola**, **acquisito** dalle radici e **CO₂** dall'aria. Esce con **zucchero** per crescere e rilascia **ossigeno**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Questa impresa si chiama **fotosintesi**. Senza di essa, niente foreste, niente ossigeno respirabile, quasi nessuna vita complessa sulla Terra."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p1",
+      "title": "Dove succede nel foglio?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nella cellula vegetale, gli organelli verdi, gli **cloroplasti**, ospitano gli . Questo pigmento cattura principalmente il blu e il rosso della luce. Viene restituito il verde: ecco perché le foglie ci appaiono verdi. [[La clorofilla]]"
+        },
+        {
+          "type": "image",
+          "asset": "leaf_photosynthesis_sunlight_chloroplasts",
+          "ratio": "auto",
+          "caption": "Le foglie catturano la luce solare per la fotosintesi."
+        },
+        {
+          "type": "paragraph",
+          "text": "La semplice equazione: CO₂ + acqua + luce → zucchero + ossigeno. Il gas entra attraverso piccoli pori, gli . L'acqua sale dalle radici. Lo zucchero diventa legno, frutto, radici; l'ossigeno va nell'aria. [[stomi]]"
+        },
+        {
+          "type": "funFact",
+          "text": "La clorofilla “rifiuta” il verde. Preferisce il blu e il rosso, più efficaci per eccitare i suoi elettroni e lanciare la macchina energetica."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p2",
+      "title": "Due passaggi: cattura e poi crea",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Innanzitutto la fase luminosa ****. La luce scompone le molecole d’acqua. L'ossigeno fuoriesce. L'energia viene immagazzinata in due \"batterie\" chimiche, le**ATP**e il**NADPH**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Successivamente, la **fase di produzione**, la , che prende il nome dal chimico **Melvin Calvino**. Con l’energia delle batterie, la pianta assembla il carbonio della CO₂ in glucosio. Non c'è bisogno della luce solare diretta in questa fase, ma dipende interamente da ciò che la luce ha prodotto prima. [[Ciclo di Calvino]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Per seguire il percorso del carbonio nella foglia, Calvin utilizzò gli isotopi radioattivi provenienti dalla ricerca sulla bomba atomica. Premio Nobel a **1961**."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p3",
+      "title": "Quando l'ossigeno cambiò il pianeta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Intorno a **2,4 miliardi di anni fa**, i batteri fotosintetici, **cianobatteri**, iniziarono a rilasciare ossigeno in modo massiccio. Questa è la **Grande Ossidazione**. Per molte organizzazioni dell’epoca era un veleno."
+        },
+        {
+          "type": "paragraph",
+          "text": "Quindi l'ossigeno ha consentito lo strato di ozono e una respirazione molto più efficiente. L’aria che respiriamo è, in sostanza, il “prodotto di scarto” di miliardi di anni di fotosintesi."
+        },
+        {
+          "type": "funFact",
+          "text": "Circa **metà** dell'ossigeno terrestre proviene dal fitoplancton negli oceani, non solo dalle foreste."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p4",
+      "title": "Una produzione modesta, un ruolo immenso",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Una foglia converte in biomassa solo **dall'1 al 3%** dell'energia solare ricevuta. Su scala globale, ciò è sufficiente ad alimentare le catene alimentari e ad assorbire enormi quantità di CO₂."
+        },
+        {
+          "type": "paragraph",
+          "text": "Da qui l’interesse per le foreste, gli oceani… e persino la fotosintesi artificiale per il clima. Una lumaca di mare, *Elysia cronotica*, arriva addirittura a “rubare” i cloroplasti alle alghe per vivere un po’ di energia solare."
+        },
+        {
+          "type": "takeaway",
+          "text": "La fotosintesi trasforma luce, acqua e CO₂ in zucchero e rigenera l'ossigeno. È la cucina solare alla base di quasi tutta la vita."
+        }
+      ]
+    }
+  ]
+}

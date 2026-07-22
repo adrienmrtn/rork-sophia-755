@@ -1,0 +1,112 @@
+{
+  "id": "course_69_comment_se_forment_les_eclairs",
+  "title": "Come si formano i fulmini?",
+  "subtitle": "Temporali",
+  "subject": "sciences",
+  "subcategory": "La Terra e l'Universo",
+  "description": "Il fulmine non è magico: è un'enorme scarica elettrica in una nuvola temporalesca. Ecco come si prepara e come colpisce.",
+  "hero": {
+    "image": "comment_se_forment_les_eclairs",
+    "ratio": "16:9",
+    "hook": "In una frazione di secondo l'aria sale a 30.000°C. Cinque volte più caldo della superficie del Sole."
+  },
+  "sections": [
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_intro",
+      "title": "Introduzione",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un fulmine rilascia un'energia colossale in un batter d'occhio. L'aria nel canale del fulmine sale a circa **30.000 °C**. Il tuono è solo il suono di questo caldo brutale."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per comprendere i fulmini, devi seguire tre passaggi: come si carica la nuvola, come l'elettricità trova un percorso e perché dopo si sente il tuono."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p1",
+      "title": "Nel cloud i costi sono separati",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I fulmini si verificano soprattutto nelle ore : nubi temporalesche molto grandi, che possono arrivare fino a circa **15 km**. All'interno l'aria sale e scende molto forte. [[cumulonimbus]]"
+        },
+        {
+          "type": "image",
+          "asset": "cumulonimbus_thunderstorm_cloud",
+          "ratio": "4:3",
+          "caption": "Il cumulonembo: la fabbrica delle tempeste."
+        },
+        {
+          "type": "paragraph",
+          "text": "In questo caos, piccoli **cristalli di ghiaccio** si alzano e i granelli di ghiaccio più pesanti () scendono. Quando si scontrano, si scambiano cariche elettriche. A poco a poco, la parte superiore della nuvola diventa piuttosto positiva, la base piuttosto negativa. [[nevischio]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Il lago di Maracaibo, in Venezuela, è uno dei luoghi più colpiti dai fulmini del pianeta: lì si osservano temporali quasi quotidiani per gran parte dell'anno."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p2",
+      "title": "Quando l'aria lascia andare: lo scarico",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L'aria è un cattivo conduttore. Ma se la differenza di carica diventa troppo grande (spesso **i centesimi di milioni di volt**), l'aria finisce per cedere. Le molecole perdono elettroni: diventano conduttrici. È lo . [[ionizzazione dell'aria]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un canale invisibile lascia la nuvola a piccoli balzi. Da terra le reti elettriche si innalzano soprattutto in punti (alberi, parafulmini, edifici). Quando i due si incontrano, il circuito si chiude."
+        },
+        {
+          "type": "paragraph",
+          "text": "La grande luce che vediamo, l'**arco indietro**, sale principalmente dal suolo verso la nuvola. La corrente può raggiungere decine di migliaia di ampere. Nello stesso canale possono susseguirsi più scariche: da qui l'effetto tremolante."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p3",
+      "title": "Perché il tuono arriva dopo?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Il fulmine riscalda l'aria così rapidamente che si espande improvvisamente. Quest'onda d'urto diventa **tuono**. La luce arriva quasi subito; il suono avanza a circa **340 m/sec**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Consiglio semplice: conta i secondi tra un fulmine e un tuono, poi dividi per **3**. Ottieni una stima della distanza in chilometri."
+        },
+        {
+          "type": "funFact",
+          "text": "La Terra viene colpita in media da circa **100 fulmini al secondo**. In Francia si registrano circa **un milione** di impatti sul territorio all'anno."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p4",
+      "title": "Pericolo, fertilità e curiosità",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I fulmini rimangono pericolosi, soprattutto all'aperto, vicino ad alberi isolati o all'acqua. Inoltre provoca incendi. Ma ha un effetto meno conosciuto: aiuta a produrre composti azotati che fertilizzano il terreno con la pioggia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Al di sopra dei temporali, le telecamere hanno catturato anche fenomeni bizzarri, come : brevi bagliori nell'alta atmosfera, invisibili ad occhio nudo da terra. [[Folletti]]"
+        },
+        {
+          "type": "takeaway",
+          "text": "In un cumulonembo, le collisioni tra ghiaccio e nevischio separano le cariche. Quando la tensione diventa troppo alta, l'aria viene ionizzata: i fulmini si riscaldano fino a ~30.000°C, e questa espansione improvvisa produce il tuono."
+        }
+      ]
+    }
+  ]
+}

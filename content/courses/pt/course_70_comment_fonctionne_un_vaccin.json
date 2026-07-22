@@ -1,0 +1,110 @@
+{
+  "id": "course_70_comment_fonctionne_un_vaccin",
+  "title": "Como funciona uma vacina?",
+  "subtitle": "Imunidade",
+  "subject": "sciences",
+  "subcategory": "O nosso quotidiano explicado",
+  "description": "Uma vacina não injeta a doença para assustar você. Ele treina seu sistema imunológico com uma versão inofensiva, para que ele reaja rapidamente na próxima vez.",
+  "hero": {
+    "image": "comment_fonctionne_un_vaccin",
+    "ratio": "16:9",
+    "hook": "A vacina ensina o seu corpo a reconhecer o perigo... sem fazer com que ele experimente a doença real."
+  },
+  "sections": [
+    {
+      "id": "course_70_comment_fonctionne_un_vaccin_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "As vacinas salvaram mais vidas do que quase qualquer outra invenção médica. A varíola****, que ainda matou centenas de milhões de pessoas no século XX, foi erradicada graças à vacinação."
+        },
+        {
+          "type": "paragraph",
+          "text": "O princípio é simples: mostrar ao corpo um “manequim de treino”, para que ele crie uma **memória imunológica** sem passar pela doença real."
+        }
+      ]
+    },
+    {
+      "id": "course_70_comment_fonctionne_un_vaccin_p1",
+      "title": "A memória do sistema imunológico",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Quando um micróbio (vírus ou bactéria) entra pela primeira vez, muitas vezes o seu corpo leva de 7 a 14 dias para montar uma defesa eficaz. Durante esse período, você pode ficar doente."
+        },
+        {
+          "type": "paragraph",
+          "text": "Certas células, , produzem anticorpos **** (proteínas que podem ser intrusivas). Além disso, essas células já foram infectadas. Quando você perde a memória, suas células ficam armazenadas permanentemente: suas células ficam na memória****. [[Linfócitos B e anticorpos]] [[Os linfócitos T]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Se o mesmo micróbio voltar, a resposta desaparecerá muito mais rapidamente. Muitas vezes você nem fica doente. A vacina cria essa memória… sem risco de infecção real."
+        }
+      ]
+    },
+    {
+      "id": "course_70_comment_fonctionne_un_vaccin_p2",
+      "title": "Várias maneiras de treinar o corpo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**AtenuadaZ**As vacinas contêm um micróbio vivo, mas muito fraco (por exemplo, sarampo). Eles treinam bem, mas não são recomendados se o sistema imunológico estiver muito frágil."
+        },
+        {
+          "type": "paragraph",
+          "text": "**vacinas inativadas** usam um micróbio morto (por exemplo, certas gripes). Mais seguros, muitas vezes exigem retornos de chamada. **vacinas de subunidade** mostram apenas um pedaço do micróbio, por exemplo, uma proteína de superfície."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Z** As vacinas de mRNA fornecem uma breve instrução: suas células produzem temporariamente uma proteína viral inofensiva. Sua imunidade aprende a reconhecê-lo. O mRNA então se degrada; isso não modifica seu DNA."
+        },
+        {
+          "type": "funFact",
+          "text": "Muito antes de Jenner, uma forma de “variolização” já era praticada na China: expor-se voluntariamente a uma forma atenuada de varíola para se proteger."
+        }
+      ]
+    },
+    {
+      "id": "course_70_comment_fonctionne_un_vaccin_p3",
+      "title": "Imunidade coletiva",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Quando um número suficiente de pessoas está protegido, o micróbio circula menos. É o . Protege também aqueles que não podem ser vacinados (recém-nascidos, pessoas imunocomprometidas). [[Imunidade de grupo]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "O limite depende da contagiosidade. Para **sarampo**, geralmente você precisa de cobertura de **92 a 95%**. Para a poliomielite, algo em torno de **80 a 85%**."
+        },
+        {
+          "type": "funFact",
+          "text": "A varíola foi declarada erradicada em **1980**. O último caso natural conhecido data de **1977**, na Somália."
+        }
+      ]
+    },
+    {
+      "id": "course_70_comment_fonctionne_un_vaccin_p4",
+      "title": "Segurança e vigilância",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Uma vacina passa por testes rigorosos antes de ser autorizada. Alguns contêm : substâncias que ajudam o sistema imunológico a “perceber” melhor a vacina. [[Adjuvantes]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Paradoxalmente, quando as doenças desaparecem da vida quotidiana, esquecemos o seu perigo. Os surtos de sarampo lembram-nos que a protecção colectiva permanece frágil se a cobertura diminuir."
+        },
+        {
+          "type": "takeaway",
+          "text": "Uma vacina treina o sistema imunológico com uma versão inofensiva do perigo. Cria memória celular, protege o indivíduo e, em escala populacional, retarda ou interrompe epidemias."
+        }
+      ]
+    }
+  ]
+}

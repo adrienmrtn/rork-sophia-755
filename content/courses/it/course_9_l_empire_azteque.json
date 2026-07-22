@@ -1,0 +1,133 @@
+{
+  "id": "course_9_l_empire_azteque",
+  "title": "L'impero azteco",
+  "subtitle": "1325-1521",
+  "subject": "histoire",
+  "subcategory": "Antichità & Medioevo",
+  "description": "In meno di due secoli gli Aztechi costruirono su un lago una capitale di 200.000 abitanti. Il loro impero, fondato sul tributo e sul sacrificio, crollò in due anni contro gli spagnoli.",
+  "hero": {
+    "image": "l_empire_azteque",
+    "ratio": "16:9",
+    "hook": "Una città sull'acqua, più popolata di Londra. Poi, in due anni, niente."
+  },
+  "sections": [
+    {
+      "id": "course_9_l_empire_azteque_intro",
+      "title": "Introduzione",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nel cuore dell'attuale Messico, gli Aztechi costruirono in meno di due secoli una capitale su un lago, popolata da **200.000 abitanti**. Più grande di Londra o Roma allo stesso tempo. Il loro potere combina ingegneria idraulica, religione esigente e guerra permanente."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tra **1519** e **1521**, questo impero è crollato. Non solo sotto i cannoni di Cortés, il conquistatore spagnolo, ma sotto l'odio dei suoi sudditi e sotto un'arma invisibile: la malattia."
+        }
+      ]
+    },
+    {
+      "id": "course_9_l_empire_azteque_p1",
+      "title": "Dalle paludi a una capitale sull'acqua",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gli **Messico**, il popolo che chiameremo Aztechi, provengono dal mitico , luogo di origine a nord. Arrivarono nel XIII secolo nella Valle del Messico. Disprezzati, cercano un segno dal loro dio , dio del sole e della guerra: un'aquila che divora un serpente su un cactus. In **1325**, lo trovano su un isolotto nel lago **Texcoco**. Nasce , la loro futura capitale. [[Aztlán]] [[Huitzilopochtli]] [[Tenochtitlán e Città del Messico]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Per nutrire la città stanno mettendo a punto le , isole artificiali ultrafertili fatte di fango e piante. Tre strade rialzate, dighe, canali: la città diventa una fortezza lacustre e un gigantesco mercato. [[I chinampa]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Gli Aztechi non usavano la ruota per il trasporto e non avevano animali da soma. Eppure hanno spostato milioni di tonnellate di pietra per le loro piramidi."
+        }
+      ]
+    },
+    {
+      "id": "course_9_l_empire_azteque_p2",
+      "title": "La Triplice Alleanza e il tributo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nel **1428**, Tenochtitlán si alleò con due città vicine, Texcoco e Tlacopan: la **Triplice Alleanza**. Ben presto i Mexica dominano da soli. Il loro impero non si assimila: richiede un regolare **omaggio**, mais, cacao, piume, metalli. La ricchezza della capitale alimenta l'odio dei popoli sottomessi, come gli , feroci nemici degli Aztechi. [[Tlaxcaltecs]]"
+        },
+        {
+          "type": "image",
+          "asset": "tenochtitlan_aztec_city_illustration",
+          "ratio": "4:3",
+          "caption": "Tenochtitlán, metropoli lacustre nel cuore dell'impero azteco."
+        },
+        {
+          "type": "paragraph",
+          "text": "È una macchina da guerra che necessita di continue conquiste. Quando arriveranno gli spagnoli non dovranno far altro che unire questi risentimenti."
+        },
+        {
+          "type": "funFact",
+          "text": "I semi di cacao erano usati come valuta. A Tenochtitlán un coniglio valeva dieci fagioli; uno schiavo di buona costituzione, circa un centinaio."
+        }
+      ]
+    },
+    {
+      "id": "course_9_l_empire_azteque_p3",
+      "title": "Dei, Cortés e il vaiolo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Secondo lo , mito azteco, il sole sopravvive solo se è nutrito dal sangue umano. Alla , la grande piramide al centro, i sacrifici non sono una crudeltà gratuita: sono, per gli Aztechi, una necessità affinché il mondo possa continuare. [[La cosmogonia dei Cinque Soli]] [[Templo Mayor]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "In **1519**, **Hernán Cortés** è arrivato con poche centinaia di spagnoli. , l'imperatore azteco, esita. L'acciaio, le armi da fuoco e i cavalli fanno paura. Ma il killer principale è la , una malattia europea contro la quale le popolazioni non hanno difese immunitarie. Cortés assedia la capitale con migliaia di alleati indigeni. [[Montezuma II]] [[Vaiolo]]"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1325",
+              "title": "Fondazione di Tenochtitlán",
+              "detail": "I Mexica si stabiliscono sul lago Texcoco."
+            },
+            {
+              "date": "1428",
+              "title": "Triplice Alleanza",
+              "detail": "Inizio dell'espansione imperiale azteca."
+            },
+            {
+              "date": "1519",
+              "title": "Arrivo di Cortés",
+              "detail": "Gli spagnoli arrivano in Messico."
+            },
+            {
+              "date": "1521",
+              "title": "Caduta di Tenochtitlán",
+              "detail": "Fine dell'impero dopo 80 giorni di assedio."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_9_l_empire_azteque_p4",
+      "title": "Sulle rovine, Messico",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nel **1521**, dopo **80 giorni** di assedio, Tenochtitlán cadde. Affamati, privati ​​dell’acqua, devastati dalle malattie. Le sue pietre furono utilizzate per costruire Città del Messico, capitale della , la colonia spagnola. [[Nuova Spagna]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Non tutto scompare. Gli  esistono ancora. , la lingua degli Aztechi, è parlata da più di un milione di persone. L'aquila e il serpente rimangono l'emblema del Messico. Una civiltà brillante sopravvive nella memoria e nel paesaggio. [[Le chinampas]] [[Nahuatl]]"
+        },
+        {
+          "type": "takeaway",
+          "text": "Gli Aztechi costruirono una metropoli di **200.000** su un lago. Il loro sistema di tributi e lo  permisero a poche centinaia di spagnoli, aiutati da alleati locali, di distruggere l'impero in due anni. [[Vaiolo]]"
+        }
+      ]
+    }
+  ]
+}

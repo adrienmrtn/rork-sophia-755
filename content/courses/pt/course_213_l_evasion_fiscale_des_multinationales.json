@@ -1,0 +1,104 @@
+{
+  "id": "course_213_l_evasion_fiscale_des_multinationales",
+  "title": "Evasão fiscal por multinacionais",
+  "subtitle": "Como o GAFAM paga tão poucos impostos?",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economia & sociedade",
+  "description": "Os gigantes digitais pagam frequentemente impostos irrisórios em comparação com os seus lucros. Isto nem sempre é ilegal: é o resultado de lacunas no direito internacional.",
+  "hero": {
+    "image": "l_evasion_fiscale_des_multinationales",
+    "ratio": "16:9",
+    "hook": "Em 2014, a Apple pagou uma taxa efetiva de imposto próxima de 0,005% na Irlanda. Como isso é possível?"
+  },
+  "sections": [
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A GAFAM, ou seja, Google, Apple, Facebook (Meta), Amazon e Microsoft, estão entre as empresas mais ricas do mundo. No entanto, em proporção aos seus lucros, pagam frequentemente muito menos impostos do que uma PME tradicional."
+        },
+        {
+          "type": "paragraph",
+          "text": "Isto não é fraude em sentido estrito: é **otimização fiscal**, ou seja, a exploração hábil de lacunas no direito internacional. Este mecanismo priva os Estados de centenas de milhares de milhões de dólares todos os anos. Veja como funciona e como o mundo está tentando responder a isso."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p1",
+      "title": "Um imposto projetado para fábricas, não para digital",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O sistema fiscal internacional foi concebido no início do século XX para uma economia industrial: uma empresa tinha de possuir fábricas ou escritórios num país, o que se chama , para aí ser tributada. [[estabelecimento permanente]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "A tecnologia digital rompeu esta ligação com o território. Hoje, uma empresa pode dominar um mercado, capturar os dados de milhões de utilizadores e ganhar muito dinheiro num país, sem possuir um único edifício nesse país. Ela pode então separar o local onde ganha seu dinheiro do local onde o declara."
+        },
+        {
+          "type": "funFact",
+          "text": "Em 2014, o IRS dos EUA descobriu que a Microsoft tinha transferido 39 mil milhões de dólares em lucros para Porto Rico através de direitos de propriedade intelectual, poupando mais de 6,5 mil milhões de dólares em impostos."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p2",
+      "title": "Um déficit de centenas de bilhões",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "De acordo com a OCDE, estas práticas custam aos orçamentos públicos em todo o mundo entre 100 e 240 mil milhões de dólares por ano, ou 4 a 10% de todos os impostos corporativos cobrados no planeta."
+        },
+        {
+          "type": "image",
+          "asset": "multinational_corporate_tax_avoidance_structure",
+          "ratio": "16:9",
+          "caption": "As sedes europeias dos gigantes digitais estão frequentemente localizadas em países onde os impostos são mais baixos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Este défice obriga os Estados a escolher entre aumentar os impostos sobre as famílias e as PME ou reduzir as despesas públicas, como a saúde ou a educação. Uma empresa local paga, em média, uma taxa de imposto muito mais elevada do que uma multinacional, o que cria uma concorrência desleal."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p3",
+      "title": "A resposta: um imposto mínimo global",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Em 2021, sob a égide da OCDE e do G20, um acordo histórico estabeleceu um . Destina-se a empresas cujo volume de negócios ultrapassa os 750 milhões de euros: se pagarem apenas 5% de impostos num país, o seu país de origem pode agora reclamar os 10% que faltam. [[Imposto mínimo global de 15% (OCDE, 2021)]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Alguns países, como a França, também criaram um imposto nacional que visa diretamente o volume de negócios dos gigantes digitais. Ao mesmo tempo, as multinacionais devem agora publicar, país por país, a localização dos seus empregados, os seus lucros e os seus impostos: transparência que permite identificar as discrepâncias mais gritantes."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p4",
+      "title": "Irlanda, capital europeia da otimização",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A Irlanda, com a sua taxa oficial de imposto de 12,5% e os seus acordos secretos denominados , tornou-se o pivô europeu da otimização fiscal. Graças a uma estrutura complexa, a Apple pagou uma taxa efetiva de imposto próxima de 0,005% em 2014. [[tax rulings]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "A Comissão Europeia exigiu da Irlanda 13 mil milhões de euros em impostos não pagos à Apple, mas o país há muito que se recusa a cobrá-los: teme que regras demasiado rígidas façam com que as sedes fujam para outras regiões do mundo. Os defensores da justiça fiscal salientam também que esta taxa de 15% permanece inferior à média dos países desenvolvidos e que os países mais pobres, muitas vezes os mais afetados pela evasão fiscal, recuperarão apenas uma pequena parte."
+        },
+        {
+          "type": "takeaway",
+          "text": "A GAFAM há muito que aproveita as lacunas do direito internacional para pagar impostos irrisórios, custando aos orçamentos públicos até 240 mil milhões de dólares por ano. Desde 2021, um imposto mínimo global de 15% tentou corrigir este desequilíbrio, mas a batalha por uma tributação mais justa continua."
+        }
+      ]
+    }
+  ]
+}

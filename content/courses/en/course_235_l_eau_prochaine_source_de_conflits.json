@@ -1,0 +1,112 @@
+{
+  "id": "course_235_l_eau_prochaine_source_de_conflits",
+  "title": "Water: next source of conflict?",
+  "subtitle": "Blue gold of the 21st century",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Less than 1% of Earth's water is fresh and easily accessible. Some experts already see this as the next big source of conflict.",
+  "hero": {
+    "image": "l_eau_prochaine_source_de_conflits",
+    "ratio": "16:9",
+    "hook": "Less than 1% of Earth's water is fresh and accessible. The rest is arguing."
+  },
+  "sections": [
+    {
+      "id": "course_235_l_eau_prochaine_source_de_conflits_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fresh water is the most essential resource for human life. It is also, today, increasingly rare: demographics are increasing, the climate is changing, and some experts are already predicting the first “water wars” of the 21st century."
+        },
+        {
+          "type": "paragraph",
+          "text": "This course explores why such a vital resource becomes a major strategic issue, capable of bringing neighboring countries together, or of opposing them."
+        }
+      ]
+    },
+    {
+      "id": "course_235_l_eau_prochaine_source_de_conflits_p1",
+      "title": "A rare resource, poorly distributed",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The Earth is 70% covered in water, earning it the nickname “blue planet”. But this water is almost all salty. Fresh water only makes up about 3% of the total, and two-thirds of that fresh water is trapped as ice, in polar ice caps and glaciers. Ultimately, liquid and accessible fresh water (lakes, rivers, shallow aquifers) represents less than 1% of all water on the planet."
+        },
+        {
+          "type": "image",
+          "asset": "dried_riverbed_water_scarcity_drought",
+          "ratio": "16:9",
+          "caption": "Accessible fresh water represents less than 1% of all water on Earth."
+        },
+        {
+          "type": "paragraph",
+          "text": "This scarcity is not distributed equally. Some countries, such as Brazil, Canada or Russia, have immense reserves. Others, like the Middle East or North Africa, are experiencing a lasting : their demand for water exceeds what the territory can provide. In 2024, around 4 billion people live at least one month per year in this situation. **[[Water stress]]**"
+        },
+        {
+          "type": "funFact",
+          "text": "In the 20th century, the world's population tripled, but water consumption increased sixfold, in part because of industrialization and diets richer in meat."
+        }
+      ]
+    },
+    {
+      "id": "course_235_l_eau_prochaine_source_de_conflits_p2",
+      "title": "Geopolitics of shared rivers",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tensions arise especially when a resource is shared. More than 260 rivers in the world are **transboundary**: they cross several countries, creating a forced dependency between those located upstream, who control the source, and those located downstream, who receive what is left of it."
+        },
+        {
+          "type": "paragraph",
+          "text": "The Nile illustrates this tension well. Ethiopia built the , a huge dam on the Blue Nile, to produce electricity and become more self-sufficient. But Egypt, which depends on the Nile for 95% of its water, perceives each cubic meter held upstream as a direct threat to its security. **[[GERD]]**"
+        },
+        {
+          "type": "funFact",
+          "text": "The Indus River Treaty, signed in 1960 between India and Pakistan, has survived three wars between the two countries without ever being broken: proof that water can also be a powerful tool for peace."
+        }
+      ]
+    },
+    {
+      "id": "course_235_l_eau_prochaine_source_de_conflits_p3",
+      "title": "Technology against shortage",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Faced with the scarcity of water, some countries are relying on technology. **desalination**, which transforms sea water into drinking water, has established itself in the Gulf countries and the Middle East. Israel produces more than 80% of its drinking water using desalination plants. However, the process remains expensive and energy-intensive, and it releases **brine**, very salty water which can damage marine ecosystems."
+        },
+        {
+          "type": "paragraph",
+          "text": "Other solutions play on sobriety. Drip irrigation, which delivers water directly to plant roots, reduces agricultural consumption by 30 to 70 percent."
+        },
+        {
+          "type": "funFact",
+          "text": "In , a tiny territory with no large water reserves, wastewater is treated using such advanced techniques that it becomes purer than spring water, before being recycled under the name \"NEWater\". **[[Singapore]]**"
+        }
+      ]
+    },
+    {
+      "id": "course_235_l_eau_prochaine_source_de_conflits_p4",
+      "title": "Towards shared governance of blue gold",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Despite predictions of “water wars,” history shows that this resource has more often been used for cooperation than open conflict. Creating basin commissions and treaties between neighboring countries remains the best way to avoid crises."
+        },
+        {
+          "type": "paragraph",
+          "text": "A concept helps to understand the scale of the problem: , that is to say the quantity of water necessary to manufacture a product. By importing wheat, a water-stressed country is actually importing the water used to grow it elsewhere. For example, it takes around 15,000 liters of water to produce a single kilogram of beef, compared to 1,500 liters for one kilogram of wheat. **[[virtual water]]**"
+        },
+        {
+          "type": "takeaway",
+          "text": "Accessible fresh water represents less than 1% of Earth's water, and hundreds of millions of people live in basins shared between countries with opposing interests. Technology and international cooperation remain the best weapons against future water crises."
+        }
+      ]
+    }
+  ]
+}

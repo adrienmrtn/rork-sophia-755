@@ -1,0 +1,116 @@
+{
+  "id": "course_175_jason_et_la_toison_d_or",
+  "title": "Jason and the Golden Fleece",
+  "subtitle": "The Quest of the Argonauts",
+  "subject": "mythologie",
+  "subcategory": "Greece: the heroes",
+  "description": "Jason and the Argonauts go to Colchis to search for the Golden Fleece. Behind the adventure, a story of love and betrayal with the magician Medea.",
+  "hero": {
+    "image": "jason_et_la_toison_d_or",
+    "ratio": "16:9",
+    "hook": "Fifty heroes, a magical ship, a fleece guarded by a dragon. And a magician without whom nothing would have succeeded."
+  },
+  "sections": [
+    {
+      "id": "course_175_jason_et_la_toison_d_or_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Jason** gathers the , an elite group of Greek heroes, to fetch the **Golden Fleece**: the fleece of a divine ram, suspended in , a region which roughly corresponds to present-day Georgia. **[[Argo]]** [[Colchis]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "This voyage is one of the oldest navigational stories in the West. He speaks of royal legitimacy, divine aid... and above all the destructive passion between Jason and **Medea**, a magician who will make victory possible, then terrible."
+        }
+      ]
+    },
+    {
+      "id": "course_175_jason_et_la_toison_d_or_p1",
+      "title": "A sandal, a throne, a trap",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jason is the son of Aeson, king of Iolcos in Thessaly. His uncle  usurped the throne. Raised by the centaur , Jason returns to claim his inheritance. Along the way, he helps an old woman cross a stream. It's  in disguise. He loses a sandal in the mud. [[Pelias]] [[Chiron]] [[Hera]]"
+        },
+        {
+          "type": "funFact",
+          "text": "In Colchis, sheep skins were sometimes placed at the bottom of rivers to trap the gold flakes. The “golden fleece” may have an actual mining root."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pelias is afraid: an oracle had warned him of the man with the single sandal. He promises the throne if Jason brings back the Fleece, guarded by a dragon. Jason has the , a ship with a talking prow, built using a sacred wood of . On board: **Heracles**, **Orpheus**, **Castor and Pollux**, and many others. [[Argo]] [[Dodona]]"
+        },
+        {
+          "type": "image",
+          "asset": "argonauts_ship_argo_jason_greek_myth",
+          "ratio": "4:3",
+          "caption": "The Argo, the first great ship in Greek legend."
+        }
+      ]
+    },
+    {
+      "id": "course_175_jason_et_la_toison_d_or_p2",
+      "title": "Clashing rocks",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En route, the Argonauts save King Phineus from the **Harpies**, monsters who were stealing his food. In exchange, Phinée reveals how to cross the **Symplegades Rocks**, cliffs that crash into any ship at the entrance to the Black Sea."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jason releases a dove. The rocks close on its feathers, then open. The Argo barely passes. In Colchis, king **Aeétès** imposes impossible tasks: harnessing fiery bulls, plowing the field of , sowing dragon teeth from which warriors are born. Without help, Jason would die. [[Ares]]"
+        }
+      ]
+    },
+    {
+      "id": "course_175_jason_et_la_toison_d_or_p3",
+      "title": "Medea, architect of victory",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": ", goddess of love, makes **Medea**, daughter of Aeetes and priestess of , fall in love with Jason. She gives him an ointment against the fire of the bulls. For warriors born from teeth, she advises him to throw a stone among them: they kill each other. [[Aphrodite]] [[Hecate]]"
+        },
+        {
+          "type": "image",
+          "asset": "medea_jason_greek_myth_waterhouse_painting",
+          "ratio": "4:3",
+          "caption": "Medea and Jason: magic at the service of the quest."
+        },
+        {
+          "type": "paragraph",
+          "text": "She finally puts the dragon to sleep. Jason takes down the Fleece. To flee, Medea kills her brother **Absyrtos** and scatters his remains at sea. Aeetes stops to collect the body. The couple is united… and already cursed."
+        }
+      ]
+    },
+    {
+      "id": "course_175_jason_et_la_toison_d_or_p4",
+      "title": "Betrayal and fall",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "At Iolcos, Pelias refuses to give in. Medea deceives her daughters: they “rejuvenate” their father by cutting him up. The couple, chased away, took refuge in Corinth. Years later, Jason wants to marry King Creon's daughter. Medea takes revenge: poisoned dress for the rival, then murder of their own children."
+        },
+        {
+          "type": "image",
+          "asset": "medea_vengeance_delacroix_painting",
+          "ratio": "4:3",
+          "caption": "Medea's revenge, after Jason's betrayal."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jason is growing old alone. He dies miserably, crushed by a rotten piece of the Argo under which he was resting. The hero who had gained everything with the help of others ends up destroyed for having denied the one who had saved him."
+        },
+        {
+          "type": "takeaway",
+          "text": "Jason conquers the Fleece thanks to Medea and the . His betrayal breaks their pact and leads to ruin: the myth shows that a hero who denies his allies ends up losing everything. [[Argo]]"
+        }
+      ]
+    }
+  ]
+}

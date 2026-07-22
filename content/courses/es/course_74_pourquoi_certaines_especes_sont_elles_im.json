@@ -1,0 +1,108 @@
+{
+  "id": "course_74_pourquoi_certaines_especes_sont_elles_im",
+  "title": "¿Por qué algunas especies son inmortales?",
+  "subtitle": "Biología y longevidad",
+  "subject": "sciences",
+  "subcategory": "La Tierra y el Universo",
+  "description": "Algunas especies parecen desafiar la muerte. Medusas que rejuvenecen, hidras sin envejecer: el secreto está en la reparación celular.",
+  "hero": {
+    "image": "pourquoi_certaines_especes_sont_immortelles",
+    "ratio": "16:9",
+    "hook": "El envejecimiento no es una ley absoluta de la vida. Algunas especies han encontrado la falla."
+  },
+  "sections": [
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_intro",
+      "title": "Introducción",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Envejecemos y luego morimos. Sin embargo, la medusa  puede volver a una etapa juvenil y empezar de nuevo. La almeja **Ming** vivió **507 años**. Por tanto, el envejecimiento no es una regla universal: es un proceso que ciertas especies eluden. [[Turritopsis dohrnii]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Al estudiar estas excepciones, los investigadores buscan menos una inmortalidad de ciencia ficción que trucos de la vida para reparar mejor las células."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p1",
+      "title": "Por qué nuestras células se desgastan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Envejecer no se trata sólo de “desgastarse” como una máquina. Es un desequilibrio: los daños se acumulan más rápido que las reparaciones."
+        },
+        {
+          "type": "image",
+          "asset": "chromosome_dna_telomere_aging_cell",
+          "ratio": "auto",
+          "caption": "Los telómeros, en los extremos de los cromosomas, se acortan con cada división celular."
+        },
+        {
+          "type": "paragraph",
+          "text": "En los extremos de nuestros cromosomas,  actúan como puntas de cordones de zapatos. Con cada división celular, se acortan. Demasiado corto, la célula deja de dividirse. Al mismo tiempo, el metabolismo produce moléculas agresivas que dañan las proteínas y el ADN. Luego, las células “zombis” se acumulan e inflaman los tejidos que las rodean. [[Los telómeros]]"
+        },
+        {
+          "type": "funFact",
+          "text": "El tardígrado, un pequeño “oso de agua”, casi puede dejar de vivir al secarse. Su metabolismo cae a **99.99%** y sobrevive al vacío del espacio o a la radiación extrema sin envejecer realmente."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p2",
+      "title": "Campeones que evitan la muerte",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "El  herido o hambriento transforma sus células adultas en células “en blanco” y luego vuelve a convertirse en un pólipo, la etapa inicial. Este paso atrás, llamado transdiferenciación, le da una forma de inmortalidad biológica. [[Turritopsis dohrnii]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "El **hidra**, un pequeño pólipo de agua dulce, renueva todo su cuerpo gracias a un suministro casi ilimitado de . No muestra signos mensurables de envejecimiento. La ballena de Groenlandia puede superar los **200 años** gracias a una reparación ultraeficiente del ADN y una fuerte resistencia al cáncer. [[células madre]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Las langostas producen telomerasa en todas partes de su cuerpo: sus telómeros no se acortan. Crecen a lo largo de su vida y mueren, especialmente cuando la muda se vuelve demasiado costosa."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p3",
+      "title": "¿Qué aprende la medicina de ello?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La idea ya no es sólo tratar el Alzheimer o la artrosis uno a uno, sino atacar el propio envejecimiento. **senolíticos** tienen como objetivo eliminar las células zombies. En los animales, esto ya ha rejuvenecido determinadas funciones."
+        },
+        {
+          "type": "paragraph",
+          "text": "Limitar las calorías sin desnutrir también activa vías de reparación, en particular al ralentizar , una proteína que acelera el crecimiento... y, a veces, el declive. Otros laboratorios están tratando de \"dar cuerda al reloj\" de células, como las medusas, sin transformarlas en tumores. [[mTOR]]"
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p4",
+      "title": "Inmortal, pero no invencible",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Incluso una especie biológicamente inmortal muere a causa de depredadores, enfermedades o desastres. La muerte sigue siendo una fuerza impulsora de la evolución: da paso a nuevas generaciones mejor adaptadas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Para los humanos, el desafío realista no es vivir para siempre, sino prolongar los años **con buena salud**. La longevidad convertida en tecnología también plantearía enormes cuestiones de equidad y recursos."
+        },
+        {
+          "type": "takeaway",
+          "text": "La inmortalidad biológica se basa en reparar o restablecer las células. La medusa Turritopsis dohrnii es cada vez más joven; la hidra se renueva constantemente. El envejecimiento no es una fatalidad universal."
+        }
+      ]
+    }
+  ]
+}

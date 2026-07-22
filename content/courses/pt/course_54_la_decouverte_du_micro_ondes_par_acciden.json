@@ -1,0 +1,102 @@
+{
+  "id": "course_54_la_decouverte_du_micro_ondes_par_acciden",
+  "title": "A descoberta do microondas",
+  "subtitle": "Por acidente",
+  "subject": "sciences",
+  "subcategory": "Descobertas que mudaram o mundo",
+  "description": "Em 1945, um engenheiro percebeu que sua barra de chocolate havia derretido perto de um radar. Desta observação nasceu o forno microondas.",
+  "hero": {
+    "image": "la_decouverte_du_micro_ondes",
+    "ratio": "16:9",
+    "hook": "Uma barra de chocolate derretida… e a culinária moderna muda."
+  },
+  "sections": [
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Em **1945**, nos Estados Unidos, o engenheiro **Percy Spencer** trabalha em radares. Um dia ele percebe que a barra de chocolate que tinha no bolso derreteu. Não por causa do calor corporal: por causa das ondas de radar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ele testa com milho: a pipoca estoura. Nasceu a ideia de um forno que aquece de forma diferente."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p1",
+      "title": "Do radar à cozinha",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "percy_spencer_microwave_discovery_radar",
+          "ratio": "4:3",
+          "caption": "Os radares da Segunda Guerra Mundial já usavam microondas."
+        },
+        {
+          "type": "paragraph",
+          "text": "**microondas** são ondas eletromagnéticas, como a luz do rádio, mas mais \"energéticas\" do que muitas ondas de rádio convencionais. Durante a guerra, eles foram usados ​​principalmente como radar para detectar aviões e barcos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Spencer entende que eles também podem agitar a água e as gorduras dos alimentos... e, portanto, aquecê-los."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p2",
+      "title": "O primeiro forno é enorme",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "first_microwave_oven_radarange_1947",
+          "ratio": "4:3",
+          "caption": "O primeiro forno micro-ondas comercial tinha o tamanho de um armário."
+        },
+        {
+          "type": "paragraph",
+          "text": "O primeiro modelo comercial, o **Radarrange**, foi lançado por volta de **1947**. É enorme, caro e destina-se principalmente a restaurantes ou barcos. Levará décadas para miniaturizá-lo e torná-lo acessível para uso doméstico."
+        },
+        {
+          "type": "funFact",
+          "text": "No início, alguns temiam que o forno “tornasse a comida radioativa”. Falso: as microondas aquecem, não o tornam radioativo."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p3",
+      "title": "Como isso realmente esquenta?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "As microondas vibram principalmente moléculas de água (e um pouco de gorduras e açúcares). Essa agitação cria **Z** calor dentro da comida, não apenas na superfície como uma panela."
+        },
+        {
+          "type": "paragraph",
+          "text": "É por isso que um prato pode ser quente por fora e morno por dentro se for grosso: as ondas não penetram infinitamente fundo."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p4",
+      "title": "Um objeto cotidiano",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Entre as décadas de 1970 e 1980, o forno micro-ondas entrou em milhões de cozinhas. Muda hábitos: reaquecimento rápido, refeições prontas, vida mais rápida."
+        },
+        {
+          "type": "takeaway",
+          "text": "O micro-ondas nasceu de uma coincidência observada por Percy Spencer próximo a um radar. As ondas agitam principalmente a água dos alimentos e os aquecem por dentro."
+        }
+      ]
+    }
+  ]
+}

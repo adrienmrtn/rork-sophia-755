@@ -1,0 +1,106 @@
+{
+  "id": "course_88_la_poetique_aristote",
+  "title": "Poetics, Aristotle",
+  "subtitle": "4th century BC AD",
+  "subject": "litterature",
+  "subcategory": "Ancient Greeks & Philosophers",
+  "description": "Aristotle analyzes Greek tragedy and invents words everywhere: mimesis, catharsis, peripeteia. Poetics is the first great instruction manual for narrative.",
+  "hero": {
+    "image": "la_poetique_aristote",
+    "ratio": "16:9",
+    "hook": "Before screenplay manuals, there was Aristotle and Greek tragedy."
+  },
+  "sections": [
+    {
+      "id": "course_88_la_poetique_aristote_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In the **4th century BC**, **Aristotle**, student of Plato then independent thinker, founder of the **High school** in Athens, wrote the **Poetics**. It's not a poem. It is an analysis of poetry, especially **tragedy**, a Greek theatrical genre which depicts the fall of a hero. How does a story cause fear and pity? Why does this make us feel good?"
+        },
+        {
+          "type": "paragraph",
+          "text": "The text that has reached us is partial, sometimes dry, written in the form of notes. Yet he shaped the theater, the novel, then the cinema. Many rules of “good storytelling” find a Greek ancestor there. Aristotle observes what works on stage, then draws principles from it."
+        }
+      ]
+    },
+    {
+      "id": "course_88_la_poetique_aristote_p1",
+      "title": "Imitating is not cheating",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Plato was suspicious of images, which he compared to misleading shadows. Aristotle rehabilitates the . For him, art imitates nature selectively. It shows things not as they are, but as they could be. Representing human actions is not lying. It's learning. The child imitates to understand. Art too. [[Aristotelian mimesis]]"
+        },
+        {
+          "type": "image",
+          "asset": "aristotle_portrait_bust_sculpture",
+          "ratio": "1:1",
+          "caption": "Aristotle: classifying the world, including the stories we tell ourselves."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tragedy imitates serious, complete actions of a certain magnitude. The criterion is not the exact documentary. This is the **likely** and the **necessary**: what had to happen in this story, according to the internal logic of the story. Aristotle also distinguishes epic, a long story in verse, and tragedy, theatrical action in a limited time."
+        }
+      ]
+    },
+    {
+      "id": "course_88_la_poetique_aristote_p2",
+      "title": "Catharsis: fear, pity, relief",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aristotle says that tragedy fulfills the  of the emotions of pity and fear. The exact meaning of the word has been debated for twenty-five centuries: purification, evacuation, clarification? The central idea remains: the violent spectacle not only excites. He **orders** our affects. We cry and tremble in safety, in the theater. [[Catharsis]]"
+        },
+        {
+          "type": "funFact",
+          "text": "In the Middle Ages and the Renaissance, the text passed through Arabic and Latin translations, including those linked to , a 12th century Andalusian philosopher. Aristotle returns to Europe by scholarly detours, not in a direct line. [[Averroes]]"
+        },
+        {
+          "type": "image",
+          "asset": "ancient_greek_theater_epidaurus",
+          "ratio": "16:9",
+          "caption": "The theater of Epidaurus: the space where the Greek city watched its myths."
+        }
+      ]
+    },
+    {
+      "id": "course_88_la_poetique_aristote_p3",
+      "title": "Intrigue, twist, recognition",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "For Aristotle, the heart of drama is the *muthos*, the plot, the sequence of actions. It values ​​the **peripetia**, the sudden turnaround of the situation, and the **recognition**, the *anagnorisis*, the moment when a character goes from ignorance to knowledge. **Oedipus King** by Sophocles is his star example: the hero discovers too late who he is."
+        },
+        {
+          "type": "paragraph",
+          "text": "He prefers a **error**, the *hamartia*, involuntary fault or distorted judgment, to pure wickedness. The hero is neither perfectly good nor monstrous. His fall must seem logical, therefore terrible. It is this mixture that provokes pity: we recognize a human weakness, not just a caricatured villain."
+        }
+      ]
+    },
+    {
+      "id": "course_88_la_poetique_aristote_p4",
+      "title": "A user manual that has survived",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "French classicisms from the 17th century, modern dramaturgies, Hollywood pitches: we find everywhere the unity of action, the knot, the denouement. We can dispute Aristotle. We still quote him. The , a Greek theater remarkable for its acoustics, is no longer the only location in the story, but its questions remain. [[Epidaurus Theater]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Aristotle also recalls that poetry says the general ****, while history says the particular ****. A well-made plot shows what could have happened according to probability. This is why Oedipus remains a model: each revelation seems both surprising and inevitable. Classic theater authors, then modern screenwriters, have taken up this requirement of narrative necessity."
+        },
+        {
+          "type": "takeaway",
+          "text": "Aristotle's **Poetics** gives the West its first great vocabulary of narrative: to imitate, to move, to turn the situation around. Before writing a story, many still think about it with him."
+        }
+      ]
+    }
+  ]
+}

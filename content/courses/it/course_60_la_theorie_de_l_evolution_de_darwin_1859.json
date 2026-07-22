@@ -1,0 +1,102 @@
+{
+  "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859",
+  "title": "La teoria dell'evoluzione di Darwin",
+  "subtitle": "1859",
+  "subject": "sciences",
+  "subcategory": "Scoperte che hanno cambiato il mondo",
+  "description": "Nel 1859 Darwin pubblicò L’origine delle specie. L'idea centrale: gli esseri viventi cambiano nel tempo attraverso la selezione naturale.",
+  "hero": {
+    "image": "la_theorie_de_l_evolution_de_darwin",
+    "ratio": "16:9",
+    "hook": "Le specie non sono fisse. Cambiano. Lentamente. Ma sicuramente."
+  },
+  "sections": [
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_intro",
+      "title": "Introduzione",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In **1859**, **Carlo Darwin** ha pubblicato *sull'origine della specie*. Il libro sconvolge, affascina, divide. La sua idea centrale è, tuttavia, semplice da formulare."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gli esseri viventi variano. Alcune variazioni aiutano a sopravvivere e a riprodursi. Queste variazioni vengono trasmesse. Nel corso delle generazioni, le popolazioni cambiano."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p1",
+      "title": "Il viaggio che apre gli occhi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "charles_darwin_portrait",
+          "ratio": "4:3",
+          "caption": "Darwin, naturalista britannico del XIX secolo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Da ragazzo, Darwin parte sulla nave **Beagle**. Per anni ha osservato piante, fossili, uccelli. Nelle isole Galapagos notò che gli uccelli vicini avevano becchi diversi a seconda del cibo che mangiavano."
+        },
+        {
+          "type": "image",
+          "asset": "darwin_finches_galapagos_beaks",
+          "ratio": "4:3",
+          "caption": "Ugelli adattati alle diverse diete: un indicatore forte."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p2",
+      "title": "Selezione naturale, in parole povere",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Immagina una popolazione di animali. Alcuni corrono un po’ più veloci, digeriscono un po’ meglio, resistono un po’ di più al freddo. Se li aiuta a sopravvivere e ad avere figli, questi tratti diventano più comuni."
+        },
+        {
+          "type": "paragraph",
+          "text": "Non è che gli individui “vogliano” evolversi. È un filtro: l'ambiente mantiene ciò che funziona. Darwin chiama tutto questo **selezione naturale**."
+        },
+        {
+          "type": "funFact",
+          "text": "Darwin ha aspettato molto tempo prima di pubblicare. Temeva lo scandalo. Un altro naturalista, **Alfred Russel Wallace**, ebbe idee simili: questo spinse Darwin a pubblicare il suo libro."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p3",
+      "title": "Lo scontro di idee",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nel 19° secolo molti credevano che le specie fossero state create così come erano. Dire che cambiano e che gli esseri umani condividono una storia con altri animali, scuote la religione e la società."
+        },
+        {
+          "type": "paragraph",
+          "text": "La scienza sta facendo progressi: i fossili, la geografia delle specie, poi la genetica, confermano l'idea generale."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p4",
+      "title": "E oggi?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ora sappiamo che il DNA porta con sé delle variazioni. Osserviamo l'evoluzione in laboratorio (batteri, virus) e in natura. Combattiamo anche i batteri resistenti agli antibiotici: questa è evoluzione viva."
+        },
+        {
+          "type": "takeaway",
+          "text": "Darwin dimostrò che gli esseri viventi si evolvono per selezione naturale: si diffondono tratti utili alla sopravvivenza e alla riproduzione. La genetica moderna ha confermato e chiarito questo quadro."
+        }
+      ]
+    }
+  ]
+}

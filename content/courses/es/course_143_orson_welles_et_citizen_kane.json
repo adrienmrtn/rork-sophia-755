@@ -1,0 +1,126 @@
+{
+  "id": "course_143_orson_welles_et_citizen_kane",
+  "title": "Orson Welles y el ciudadano Kane",
+  "subtitle": "1941",
+  "subject": "art",
+  "subcategory": "Cine, foto y arquitectura",
+  "description": "En **25 años**, **Orson Welles** dirige *Ciudad Kane* (**1941**). La película inventa un nuevo lenguaje: profundidad de campo, flashbacks e investigación de una palabra misteriosa, Rosebud.",
+  "hero": {
+    "image": "orson_welles_et_citizen_kane",
+    "ratio": "16:9",
+    "hook": "Un prodigio de 25 años filma a un magnate de la prensa e inventa el cine moderno."
+  },
+  "sections": [
+    {
+      "id": "course_143_orson_welles_et_citizen_kane_intro",
+      "title": "Introducción",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Durante décadas, los críticos han clasificado a *Ciudadano Kane* (**1941**) entre las mejores películas de la historia. Su director, **Orson Welles**, tiene sólo **25 años**. La película narra la vida del magnate de la prensa Charles Foster Kane y plantea una pregunta sencilla: ¿se puede realmente conocer a un hombre?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Más allá de la trama, Welles inventa un nuevo lenguaje. Mezcla técnicas de silencio y habla para hablar de poder, soledad y memoria."
+        }
+      ]
+    },
+    {
+      "id": "course_143_orson_welles_et_citizen_kane_p1",
+      "title": "El prodigio que se queda con todos los derechos",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**George Orson Welles** se estableció primero en el teatro y luego en la radio. El **30 de octubre de 1938**, adapta *La guerra del mundo*. Imitando un noticiero falso, hace creer en una invasión extraterrestre. Una parte de Estados Unidos está entrando en pánico. De repente, Hollywood lo quiere."
+        },
+        {
+          "type": "image",
+          "asset": "orson_welles_war_of_worlds_radio_1938",
+          "ratio": "4:3",
+          "caption": "1938: Welles aterroriza a Estados Unidos con un informe radiofónico falso."
+        },
+        {
+          "type": "funFact",
+          "text": ", un gran estudio en dificultades, ofrece a Welles un contrato poco común: total libertad de tema y , es decir el derecho a decidir solo sobre el montaje final. [[RKO Pictures]] [[Final Cut]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "En Hollywood, tal poder para un principiante es casi inaudito. Welles aprovechó esto para controlarlo todo: guión, casting, imágenes, sonido."
+        }
+      ]
+    },
+    {
+      "id": "course_143_orson_welles_et_citizen_kane_p2",
+      "title": "La profundidad de campo cambia la apariencia",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Con el director de fotografía de **, Gregg Toland**, Welles rechaza los clásicos fondos difuminados. Imponen : todo permanece nítido, desde el primer plano hasta el fondo. Se pueden jugar varias acciones al mismo tiempo en un mismo fotograma, sin cortes. [[Profundidad de campo (enfoque profundo)]]"
+        },
+        {
+          "type": "image",
+          "asset": "citizen_kane_deep_focus_cinematography",
+          "ratio": "4:3",
+          "caption": "En Citizen Kane, cada plano cuenta varias cosas a la vez."
+        },
+        {
+          "type": "paragraph",
+          "text": "Welles también suele filmar desde un ángulo bajo, con la cámara en una posición baja, para magnificar a los personajes y acentuar su poder. Los techos se hacen visibles. El espacio habla tanto como los diálogos."
+        }
+      ]
+    },
+    {
+      "id": "course_143_orson_welles_et_citizen_kane_p3",
+      "title": "Rosebud, o la investigación imposible",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La película comienza con el final: Kane muere solo en su palacio, . Su última palabra es **\"Capullo de rosa\"**. Un periodista investiga. A través de flashbacks, amigos y enemigos cuentan versiones contradictorias del mismo hombre. [[Xanadu]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Welles rechaza la simple biografía. Para algunos, Kane es un idealista. Para otros, un tirano. El espectador junta las piezas, sin llegar nunca a obtener una sola verdad. El misterio de Rosebud sigue siendo un atractivo elegante: una llave demasiado pequeña para desbloquearla toda la vida."
+        }
+      ]
+    },
+    {
+      "id": "course_143_orson_welles_et_citizen_kane_p4",
+      "title": "Una película maldita, luego un modelo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": ", un auténtico magnate de la prensa, se reconoce en Kane. Intentó reprimir la película: boicot en sus periódicos, presión en las salas. *Ciudadano Kane* fue un fracaso comercial tras su lanzamiento. Más tarde, el francés  lo convirtió en un estándar: el director-autor que lo controla todo. [[William Randolph Hearst]] [[Nouvelle Vague]]"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1938",
+              "title": "Guerra de los mundos",
+              "detail": "El engaño de la radio impulsa a Welles."
+            },
+            {
+              "date": "1941",
+              "title": "Ciudadano Kane",
+              "detail": "Estreno de la película, fracaso comercial inmediato."
+            },
+            {
+              "date": "década de 1950",
+              "title": "Redescubrimiento",
+              "detail": "La crítica europea rehabilitó la película."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "*Ciudad Kane* demostró que una película puede ser una investigación sobre el poder y la memoria. Sus imágenes claras, sus flashbacks y su libertad de edición inventaron una modernidad que el cine aún está explorando."
+        }
+      ]
+    }
+  ]
+}

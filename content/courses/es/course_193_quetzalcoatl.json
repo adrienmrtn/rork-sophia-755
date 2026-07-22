@@ -1,0 +1,140 @@
+{
+  "id": "course_193_quetzalcoatl",
+  "title": "Quetzalcóatl",
+  "subtitle": "La serpiente emplumada",
+  "subject": "mythologie",
+  "subcategory": "Otras mitologías",
+  "description": "Quetzalcóatl, la Serpiente Emplumada, es el dios de la civilización mesoamericana. Su mito combina la creación, el exilio y el encuentro fatal con Cortés.",
+  "hero": {
+    "image": "quetzalcoatl",
+    "ratio": "16:9",
+    "hook": "Dios, rey y profecía: la Serpiente Emplumada recorre dos mil años de historia mexicana."
+  },
+  "sections": [
+    {
+      "id": "course_193_quetzalcoatl_intro",
+      "title": "Introducción",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Quetzalcoatl**, la “Serpiente Emplumada”, es una de las figuras más ricas del México precolombino. Ha sido venerado desde hace más de dos milenios, desde , gran ciudad de la meseta central, hasta los aztecas, y entre los mayas con el nombre de . [[Teotihuacán]] [[Kukulkán]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Une la tierra (la serpiente) y el cielo (la pluma). Dios de la civilización, del conocimiento y del orden moral, su mito acaba cruzándose con la historia real: la conquista española de **1519**."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p1",
+      "title": "El dios que inventó el maíz.",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En , **[[quetzal]]coatl** proviene de , el pájaro de plumas verdes, y *abrigo*, la serpiente. Esta unión lo convierte en el puente entre lo humano y lo divino. [[náhuatl]]"
+        },
+        {
+          "type": "image",
+          "asset": "quetzalcoatl_feathered_serpent_aztec_sculpture",
+          "ratio": "4:3",
+          "caption": "Quetzalcóatl, la Serpiente Emplumada: tierra y cielo entrelazados."
+        },
+        {
+          "type": "paragraph",
+          "text": "En , desciende a , el mundo de los muertos, para recolectar los huesos de humanos del pasado. Los devuelve a la vida con su sangre. Luego les roba a las hormigas **maíz**: el alimento fundacional de México. Como dios del viento, también abre el camino a las lluvias de . [[Cosmogonía de los cinco soles]] [[Mictlán]] [[Tláloc]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Las plumas de la cola del quetzal pueden medir **60 cm**. Entre los mayas y los aztecas, matar al pájaro se castigaba con la muerte: le quitaban algunas plumas y luego las liberaban."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p2",
+      "title": "El rey sacerdote de Tula",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "El mito también tiene un rostro histórico: **Topiltzin Quetzalcóatl**, rey-sacerdote de **Tula** en el siglo X. Habría querido reformar el culto y sustituir los sacrificios humanos por ofrendas de flores y mariposas."
+        },
+        {
+          "type": "image",
+          "asset": "tula_toltec_pyramid_warriors_sculpture_mexico",
+          "ratio": "4:3",
+          "caption": "Tula, ciudad tolteca vinculada al reinado y caída de Quetzalcóatl."
+        },
+        {
+          "type": "paragraph",
+          "text": "Su rival **Tezcatlipoca** lo empuja a beber pulque, una bebida fermentada. Humillado, el rey se exilió hacia el este. Según la leyenda, promete regresar un año “Un Reed”. Esta promesa tendrá peso."
+        },
+        {
+          "type": "funFact",
+          "text": "Después de su partida, Quetzalcóatl se convierte en ocasiones en la Estrella de la Mañana: el planeta Venus. El dios no muere, cambia de forma."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p3",
+      "title": "1519: cuando el mito se encuentra con Cortés",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **1519**, **Hernán Cortés** llega al oriente, el año “A Caña” del calendario azteca, aquel en el que se esperaba el regreso del dios. El emperador **Moctezuma II** duda: ¿deberíamos luchar contra un invasor o acoger a una divinidad?"
+        },
+        {
+          "type": "image",
+          "asset": "herna_u0301n_corte_u0301s_arrival_mexico_1519_moctezuma_painting",
+          "ratio": "4:3",
+          "caption": "1519: la llegada de Cortés cumple la promesa del retorno divino."
+        },
+        {
+          "type": "paragraph",
+          "text": "Envía regalos de oro y plumas. Los  lo ven como una invitación. El mito, verdadero o amplificado después de los hechos, se convierte en un arma psicológica en la caída de , la capital azteca. [[Conquistadores]] [[Tenochtitlán]]"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Mito",
+              "title": "Creador",
+              "detail": "Huesos de muertos, sangre divina, don del maíz."
+            },
+            {
+              "date": "siglo 10",
+              "title": "Exilio de Tula",
+              "detail": "El rey-sacerdote va hacia el este."
+            },
+            {
+              "date": "1519",
+              "title": "Cortés",
+              "detail": "El retorno esperado se convierte en conquista."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p4",
+      "title": "Un símbolo que nunca muere",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tras la conquista, Quetzalcóatl no desapareció. Algunos monjes creen ver allí a un apóstol. Posteriormente, el México independiente lo convirtió en un emblema de la grandeza precolombina. Los muralistas del siglo XX, como Diego Rivera, lo pintan como el alma del país."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aún hoy, la Serpiente Emplumada expresa una identidad: raíces en la tierra, ambición dirigida hacia el cielo."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Quetzalcóatl**, Serpiente Emplumada, es el dios de la civilización mesoamericana. Creador, rey exiliado y luego profecía fatal en **1519**, sigue siendo un símbolo central de México."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "course_146_hitchcock_et_le_suspense",
+  "title": "Hitchcock y el suspenso",
+  "subtitle": "1899-1980",
+  "subject": "art",
+  "subcategory": "Cine, foto y arquitectura",
+  "description": "**Alfred Hitchcock** inventa el suspense moderno: brindando al público información que los personajes no tienen. Con *Psicología*, *Vertigo* o *La ventana trasera*, manipula nuestra mirada.",
+  "hero": {
+    "image": "hitchcock_et_le_suspense",
+    "ratio": "16:9",
+    "hook": "El verdadero suspense no sorprende: deja ver la bomba debajo de la mesa."
+  },
+  "sections": [
+    {
+      "id": "course_146_hitchcock_et_le_suspense_intro",
+      "title": "Introducción",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Alfred Hitchcock** (1899-1980) es apodado el “maestro del suspense”. En más de cincuenta películas transformó el thriller en el arte de la manipulación. *psicópata*, *Vértigo*, *La ventana cruzará*: cada vez, la cámara no se limita a contar una historia. Ella juega con nuestros nervios."
+        },
+        {
+          "type": "paragraph",
+          "text": "Su tema favorito no es el crimen. Es la mirada: culpa, obsesión, voyeurismo. Hitchcock filma tanto al espectador como a los personajes."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p1",
+      "title": "Sorpresa versus suspenso",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **1966**, Hitchcock explica su método a , crítico y luego cineasta francés. La **sorpresa**, dice, es una bomba que explota sin previo aviso: una breve conmoción. El **suspense** muestra al público la bomba mientras los personajes la ignoran. La tensión dura. Nos volvemos cómplices e impotentes. [[François Truffaut]]"
+        },
+        {
+          "type": "image",
+          "asset": "alfred_hitchcock_portrait_director",
+          "ratio": "4:3",
+          "caption": "Hitchcock: un rostro, una silueta, una marca global de emoción."
+        },
+        {
+          "type": "funFact",
+          "text": "Para avanzar en la trama, suele utilizar un : un objeto o secreto que motiva a los personajes, pero cuya naturaleza exacta importa poco. Lo importante es la caza. [[El MacGuffin]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Esta asimetría de información es su gramática. Tan pronto como sabemos más que el héroe, tememos por él."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p2",
+      "title": "Inventos técnicos para filmar la ansiedad",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **1948**, con *La cuerda*, Hitchcock simula un  único: la película parece rodada de una sola vez. Los reels sólo duran diez minutos, por lo que esconde los cortes detrás de un respaldo o de un mueble oscuro. El efecto es asfixiante: seguimos encerrados con los asesinos. [[plano secuencia]]"
+        },
+        {
+          "type": "image",
+          "asset": "hitchcock_vertigo_james_stewart_kim_novak_film",
+          "ratio": "4:3",
+          "caption": "Vértigo: vértigo filmado como una distorsión del espacio."
+        },
+        {
+          "type": "paragraph",
+          "text": "En **1958**, para *Vertigo*, inventó el : la cámara retrocede mientras el zoom avanza (o viceversa). El espacio está distorsionado. Ya no vemos el vértigo. Lo sentimos. [[Dolly Zoom]]"
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p3",
+      "title": "todos somos voyeurs",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En *La ventana cruzará* (**1954**), un fotógrafo con una pierna rota espía a sus vecinos. Es el doble del espectador en la oscuridad. Hitchcock usa : vemos exactamente lo que ve el héroe, nada más. [[La cámara subjetiva (point of view shot)]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Esta identificación es moral además de visual. Buscamos pistas, pero también compartimos la culpa de mirar lo que no nos concierne. Hitchcock mezcla thriller y : miedos enterrados, deseos prohibidos, dobles identidades. [[psicoanálisis]]"
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p4",
+      "title": "Una marca, una música, una herencia.",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hitchcock transformó su nombre en una marca, lo que dio lugar a su serie de televisión *Alfred Hitchcock presenta*. Para *Psicología*, prohíbe la entrada después del inicio de la sesión: el secreto se convierte en acontecimiento. Su colaboración con el compositor  vincula la música y  para acelerar el pulso del público. [[Bernard Herrmann]] [[asamblea]]"
+        },
+        {
+          "type": "takeaway",
+          "text": "Hitchcock codificó el suspense moderno: informar al espectador, dirigir su mirada y transformar el miedo en placer controlado. Décadas después, el thriller todavía le debe su gramática."
+        }
+      ]
+    }
+  ]
+}

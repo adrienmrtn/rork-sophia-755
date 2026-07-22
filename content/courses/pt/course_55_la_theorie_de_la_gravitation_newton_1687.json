@@ -1,0 +1,102 @@
+{
+  "id": "course_55_la_theorie_de_la_gravitation_newton_1687",
+  "title": "A teoria da gravitação",
+  "subtitle": "Newton, 1687",
+  "subject": "sciences",
+  "subcategory": "Descobertas que mudaram o mundo",
+  "description": "Em 1687, Newton publicou uma ideia simples e imensa: a mesma força faz com que uma maçã caia e a Lua gire. Aqui está o que isso muda.",
+  "hero": {
+    "image": "la_theorie_de_la_gravitation_newton",
+    "ratio": "16:9",
+    "hook": "Uma maçã, a Lua, os planetas: uma única força para explicar tudo."
+  },
+  "sections": [
+    {
+      "id": "course_55_la_theorie_de_la_gravitation_newton_1687_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Antes de Newton, já sabíamos muito sobre os planetas graças a **Galileu**, um físico italiano do século XVII, e a , um astrônomo que descreveu órbitas elípticas. Mas faltava uma ligação clara entre o que cai na Terra e o que gira no céu. **[[Johannes Kepler]]**"
+        },
+        {
+          "type": "paragraph",
+          "text": "Em **1687**, **Isaac Newton** publicou o **, ou *Princípios*, é a fundadora da física clássica. Ela afirmou que havia gravitação**universal**: ela atua em todos os lugares, da mesma forma. [[Philosophiae Naturalis Principia Mathematica]]"
+        }
+      ]
+    },
+    {
+      "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p1",
+      "title": "O mundo antes da síntese",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kepler descreveu as órbitas dos planetas com leis precisas: órbitas em **elipse**, áreas varridas iguais em tempos iguais. Galileu estudou a queda dos corpos. Mas por que os planetas permanecem em sua trajetória? O que os “puxa”?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Newton responde: uma **atração gravitacional**, uma força que puxa duas massas uma em direção à outra. A Terra atrai a Lua. O Sol atrai a Terra. E você também atrai um pouquinho da Terra... mesmo que seja minúsculo."
+        }
+      ]
+    },
+    {
+      "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p2",
+      "title": "A lei em uma frase",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "isaac_newton_apple_tree_woolsthorpe",
+          "ratio": "4:3",
+          "caption": "A história da maçã é acima de tudo uma história. A ideia é real."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dois corpos atraem-se com uma força que aumenta com a sua **massa**, a quantidade de matéria, e diminui à medida que se afastam. Mais precisamente: a força enfraquece com o **quadratura de distância**. Dobrar a distância divide a atração por quatro. Quanto mais longe você estiver, mais rápido a atração enfraquece."
+        },
+        {
+          "type": "image",
+          "asset": "planets_orbit_solar_system_gravity",
+          "ratio": "16:9",
+          "caption": "Os planetas estão constantemente “caindo” em direção ao Sol… e errando: esta é a órbita."
+        },
+        {
+          "type": "funFact",
+          "text": "A Lua está constantemente “caindo” em direção à Terra. Como também possui alta velocidade lateral, ele gira em vez de bater."
+        }
+      ]
+    },
+    {
+      "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p3",
+      "title": "As leis do movimento",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Newton também fornece três **leis de movimento**. Resumindo: um objeto mantém sua velocidade se não houver força, princípio de **inércia**; uma força altera a velocidade; toda ação tem uma reação oposta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Com isso, podemos calcular as trajetórias, **marés**, as subidas e descidas dos oceanos sob o efeito da Lua e do Sol, e as órbitas. A física se torna uma ferramenta de previsão."
+        }
+      ]
+    },
+    {
+      "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p4",
+      "title": "Poderoso… mas não a última palavra",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dois séculos depois,  corrigiu Newton para casos extremos, velocidades muito altas e gravidade muito alta, com o . A gravidade torna-se então uma curvatura do espaço-tempo e não mais uma força invisível. Mas para lançar um foguete ou compreender as marés, Newton continua excelente. **[[Albert Einstein]]** [[Gravitação relativística (Einstein)]]"
+        },
+        {
+          "type": "takeaway",
+          "text": "Newton unifica o céu e a Terra: a gravitação atrai massas em todos os lugares. É uma das maiores sínteses científicas da história."
+        }
+      ]
+    }
+  ]
+}

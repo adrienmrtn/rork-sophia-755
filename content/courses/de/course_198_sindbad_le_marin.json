@@ -1,0 +1,116 @@
+{
+  "id": "course_198_sindbad_le_marin",
+  "title": "Sindbad der Seemann",
+  "subtitle": "Sieben Reisen",
+  "subject": "mythologie",
+  "subcategory": "Andere Mythologien",
+  "description": "Sindbad der Seemann: Sieben Reisen, Monster und Schätze. Hinter dem Wunderbaren steht das Porträt des Kaufmanns und Abenteurers des islamischen Goldenen Zeitalters.",
+  "hero": {
+    "image": "sindbad_le_marin",
+    "ratio": "16:9",
+    "hook": "Sieben Mal geht er reich oder neugierig weg. Siebenmal bricht das Meer es. Siebenmal kommt er noch reicher zurück."
+  },
+  "sections": [
+    {
+      "id": "course_198_sindbad_le_marin_intro",
+      "title": "Einführung",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Sindbad der Seemann** gehört zu den **Tausendundeine Nacht**, aber nicht zum altpersischen Kern der Sammlung. Sein Zyklus von sieben Reisen fand später etwa im 15. Jahrhundert in Ägypten statt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Er verkörpert den reisenden Kaufmann des **Islamische Goldene Tagebücher**: Frömmigkeit, Gier, Mut und die Unfähigkeit, still zu sitzen, wenn man einmal reich ist. Hinter den Monstern lesen wir eine Allegorie des steigenden und fallenden Glücks."
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p1",
+      "title": "Die zyklische Struktur des Abenteuers",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Geschichte beginnt in Bagdad. **Sindbad der Seemann**, inzwischen alt und wohlhabend, erzählt einem Träger, der ebenfalls Sindbad (manchmal Hindbad) heißt, seine Leidenswege. Der Klassenkontrast ist unmittelbar."
+        },
+        {
+          "type": "image",
+          "asset": "baghdad_medieval_islamic_golden_age_trade",
+          "ratio": "4:3",
+          "caption": "Bagdad, Ausgangspunkt und Rückkehrpunkt für Sindbads Reisen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jede Reise folgt den gleichen Mechanismen: Müdigkeit des sesshaften Lebens, Abfahrt aus dem Hafen von , Schiffbruch, Überleben in einem unbekannten Land, Rückkehr beladen mit Schätzen. Die bedeutungsvolle Zahl Sieben im  verleiht der Serie eine initiierende Dimension: von der Unvorsichtigkeit zur Weisheit. [[Basra]] [[Islamische Kosmologie]]"
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p2",
+      "title": "Ein fantastisches Bestiarium zwischen Mythos und Realität",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der **Felsen** (oder Rokh), ein Vogel, dessen Flügelspannweite die Sonne verdeckt, hat die Fantasie der Welt geprägt. Wir sehen das Echo der Geschichten arabischer Reisender an den Küsten Ostafrikas."
+        },
+        {
+          "type": "image",
+          "asset": "sinbad_roc_giant_bird_illustration",
+          "ratio": "4:3",
+          "caption": "Der Roch, der Riesenvogel von Sindbads Reisen."
+        },
+        {
+          "type": "funFact",
+          "text": "Der Roch ist wahrscheinlich vom **Aepyornis** inspiriert, einem Elefantenvogel aus Madagaskar, der um das Jahr 1000 verschwand. Seine Eier hatten bis zu 150-mal das Volumen eines Hühnereis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sindbad steht auch dem **Alten Mann des Meeres** gegenüber, der sich an seinen Rücken klammert, und der **Schildkröteninsel**, trügerischem Boden. Das **Tal der Diamanten**, in das Fleisch geworfen wird, um die Edelsteine ​​zu kleben, kursiert bereits unter den Alten. Die wunderbaren Sedimente der Jahrhunderte von . [[mittelalterliche arabische Handelsrouten]]"
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p3",
+      "title": "Der Spiegel des Goldenen Zeitalters des arabischen Handels",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Kulisse ist historisch. Im 8. und 9. Jahrhundert beherrschten Seefahrer aus Basra und Siraf den Indischen Ozean. Sindbads Stationen erinnern an reale Orte:  (Ceylon) für Gewürze, Südostasien für Kampfer, die Küsten für Perlen. [[Serendib]]"
+        },
+        {
+          "type": "image",
+          "asset": "arab_indian_ocean_trade_routes_medieval_ship",
+          "ratio": "4:3",
+          "caption": "Arabische Schiffe auf den Routen im Indischen Ozean."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sindbad ist kein Krieger: Er ist ein Kaufmann und Abenteurer, ein prestigeträchtiger Status in einer Gesellschaft, die den Handel schätzt. Dort finden wir den Monsun, Schiffe, die nicht genagelt, sondern mit Kokosfasern genäht sind. Westliche Parallele: , das Asien in Fakten beschreibt, wo Sindbad es in Wundern malt. [[Marco Polo (westlicher Breitengrad)]]"
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p4",
+      "title": "Universelles Erbe: von Ost nach West",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Im 18. Jahrhundert von **Antoine Galland** übersetzt, nährt das Reisen das europäische , von Defoe bis Jules Verne. Das Kino macht ihn oft zum Freibeuter im Dienste von Prinzessinnen. Fehler: Sindbad ist ursprünglich ein Stadtbewohner aus Bagdad, der durch Glauben und Einfallsreichtum überlebt. [[Abenteuerroman]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Der Name Sindbad würde an den „Prinzen des Sindh-Flusses“, des Indus, am Schnittpunkt der arabischen und indischen Welt erinnern."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Sindbad** verkörpert das islamische goldene Zeitalter der Seefahrt in **Sieben** zyklischen Reisen: Der Felsen und die Diamanten verbergen eine Realität, die der arabischen Kaufleute, die den Indischen Ozean beherrschten."
+        }
+      ]
+    }
+  ]
+}
