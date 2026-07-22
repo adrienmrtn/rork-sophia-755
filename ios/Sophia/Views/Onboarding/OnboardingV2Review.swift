@@ -1,17 +1,25 @@
 import SwiftUI
 
-/// Page 8 — preuve sociale : accroche chiffrée + note App Store + carrousel de 3 témoignages
-/// courts, écrits comme si quelqu'un parlait vraiment.
+/// Page 8 — preuve sociale, épurée : un titre qui s'affiche doucement, puis des avis
+/// d'utilisateurs qui défilent en **roulette floutée** (même effet que « Avec Sophia, tu
+/// sauras répondre à ces questions ») : l'avis centré est net, ses voisins sont atténués et
+/// floutés, et l'ensemble glisse lentement vers le haut.
 struct OnboardingV2Review: View {
     @Environment(LanguageManager.self) private var languageManager
     let onNext: () -> Void
 
-    @State private var starsIn = 0
-    @State private var testimonialIndex = 0
-    @State private var autoAdvance = true
+    /// Position continue de la roulette : +1 à chaque tick, le contenu bouclant via un modulo.
+    @State private var position: Double = 0
+    @State private var titleIn = false
+    @State private var listIn = false
+
+    /// Espacement vertical entre deux avis (cartes plus hautes que les questions).
+    private let slotSpacing: CGFloat = 172
+    private let scrollDuration: Double = 0.95
+    private let tickInterval: UInt64 = 3_000_000_000
 
     private var testimonials: [(quote: String, author: String)] {
-        (1...3).map { i in
+        (1...6).map { i in
             (languageManager.text("onboardingV2.review.t\(i).quote"),
              languageManager.text("onboardingV2.review.t\(i).author"))
         }
@@ -19,39 +27,35 @@ struct OnboardingV2Review: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            Spacer().frame(height: 64)
+            Spacer().frame(height: 84)
 
             Text(languageManager.text("onboardingV2.review.title"))
                 .font(DS.title(.title, .heavy))
                 .foregroundStyle(OV2.ink)
                 .multilineTextAlignment(.center)
-                .padding(.horizontal, 26)
-                .ov2Reveal(delay: 0.1)
+                .padding(.horizontal, 28)
+                .opacity(titleIn ? 1 : 0)
+                .offset(y: titleIn ? 0 : 12)
 
-            Spacer().frame(height: 20)
+            Spacer()
 
-            VStack(spacing: 8) {
-                Text("4.8")
-                    .font(.system(size: 48, weight: .heavy, design: .rounded))
-                    .foregroundStyle(OV2.ink)
-                HStack(spacing: 6) {
-                    ForEach(0..<5, id: \.self) { i in
-                        Image(systemName: "star.fill")
-                            .font(.system(size: 20))
-                            .foregroundStyle(OV2.warm)
-                            .scaleEffect(i < starsIn ? 1 : 0.3)
-                            .opacity(i < starsIn ? 1 : 0)
-                    }
-                }
-                Text(languageManager.text("onboardingV2.review.appStore"))
-                    .font(DS.sans(.subheadline, .semibold))
-                    .foregroundStyle(OV2.inkSecondary)
-            }
-
-            Spacer().frame(height: 26)
-
-            testimonialCarousel
-                .ov2Reveal(delay: 0.45)
+            roulette
+                .frame(height: 380)
+                .frame(maxWidth: .infinity)
+                .padding(.horizontal, 24)
+                .opacity(listIn ? 1 : 0)
+                // Dégradé haut/bas pour l'effet roulette (les voisins s'estompent).
+                .mask(
+                    LinearGradient(
+                        stops: [
+                            .init(color: .clear, location: 0.0),
+                            .init(color: .black, location: 0.26),
+                            .init(color: .black, location: 0.74),
+                            .init(color: .clear, location: 1.0),
+                        ],
+                        startPoint: .top, endPoint: .bottom
+                    )
+                )
 
             Spacer()
 
@@ -59,55 +63,63 @@ struct OnboardingV2Review: View {
         }
         .ov2Background()
         .onAppear {
-            for i in 1...5 {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3 + Double(i) * 0.1) {
-                    withAnimation(.spring(response: 0.4, dampingFraction: 0.6)) { starsIn = i }
-                    OnboardingHaptics.selection()
-                }
-            }
+            // Le titre apparaît doucement, puis les avis, puis la roulette se met en route.
+            withAnimation(.easeOut(duration: 0.9)) { titleIn = true }
+            withAnimation(.easeOut(duration: 0.9).delay(0.7)) { listIn = true }
         }
         .task {
-            // Rotation automatique lente du carrousel (s'arrête si l'utilisateur swipe).
+            // Glissement lent et continu tant que l'écran est visible.
             while !Task.isCancelled {
-                try? await Task.sleep(nanoseconds: 3_800_000_000)
+                try? await Task.sleep(nanoseconds: tickInterval)
                 if Task.isCancelled { break }
-                guard autoAdvance else { continue }
-                withAnimation(.spring(response: 0.55, dampingFraction: 0.9)) {
-                    testimonialIndex = (testimonialIndex + 1) % testimonials.count
+                guard listIn else { continue }
+                withAnimation(.easeInOut(duration: scrollDuration)) {
+                    position += 1
                 }
+                OnboardingHaptics.selection()
             }
         }
     }
 
-    private var testimonialCarousel: some View {
-        VStack(spacing: 14) {
-            TabView(selection: $testimonialIndex) {
-                ForEach(Array(testimonials.enumerated()), id: \.offset) { i, item in
-                    testimonialCard(quote: item.quote, author: item.author)
-                        .padding(.horizontal, 24)
-                        .tag(i)
-                }
-            }
-            .tabViewStyle(.page(indexDisplayMode: .never))
-            .frame(height: 176)
-            // Dès qu'un geste manuel a lieu, on coupe l'auto-avance pour ne pas « lutter »
-            // contre l'utilisateur.
-            .simultaneousGesture(
-                DragGesture().onChanged { _ in autoAdvance = false }
-            )
+    // MARK: - Roulette
 
-            HStack(spacing: 7) {
-                ForEach(0..<testimonials.count, id: \.self) { i in
-                    Capsule()
-                        .fill(i == testimonialIndex ? OV2.accent : OV2.accent.opacity(0.18))
-                        .frame(width: i == testimonialIndex ? 20 : 7, height: 7)
-                        .animation(.spring(response: 0.35, dampingFraction: 0.8), value: testimonialIndex)
-                }
+    private var roulette: some View {
+        let count = max(testimonials.count, 1)
+        let base = Int(position.rounded(.down))
+        let slots = Array((base - 1)...(base + 2))
+        return ZStack {
+            ForEach(slots, id: \.self) { k in
+                let distance = Double(k) - position
+                let ti = ((k % count) + count) % count
+                reviewCard(quote: testimonials[ti].quote, author: testimonials[ti].author, focused: abs(distance) < 0.5)
+                    .scaleEffect(scale(for: distance))
+                    .opacity(opacity(for: distance))
+                    .blur(radius: blur(for: distance))
+                    .offset(y: CGFloat(distance) * slotSpacing)
+                    .zIndex(abs(distance) < 0.5 ? 1 : 0)
+                    .transition(.opacity)
             }
         }
     }
 
-    private func testimonialCard(quote: String, author: String) -> some View {
+    private func scale(for distance: Double) -> CGFloat {
+        let d = min(abs(distance), 1)
+        return 1 - 0.16 * CGFloat(d)
+    }
+
+    private func opacity(for distance: Double) -> Double {
+        let d = abs(distance)
+        if d < 0.5 { return 1 }
+        return max(0, 0.42 - (d - 0.5) * 0.42)
+    }
+
+    private func blur(for distance: Double) -> CGFloat {
+        let d = abs(distance)
+        if d < 0.5 { return 0 }
+        return min(7, CGFloat((d - 0.5) * 9))
+    }
+
+    private func reviewCard(quote: String, author: String, focused: Bool) -> some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(spacing: 2) {
                 ForEach(0..<5, id: \.self) { _ in
@@ -117,6 +129,7 @@ struct OnboardingV2Review: View {
             Text(quote)
                 .font(DS.sans(.body, .medium))
                 .foregroundStyle(OV2.ink)
+                .multilineTextAlignment(.leading)
                 .fixedSize(horizontal: false, vertical: true)
             Spacer(minLength: 0)
             Text(author)
@@ -125,9 +138,9 @@ struct OnboardingV2Review: View {
         }
         .padding(18)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .frame(height: 160)
+        .frame(height: 148)
         .background(OV2.surface, in: RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
         .overlay(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).strokeBorder(OV2.hairline, lineWidth: 1))
-        .shadow(color: .black.opacity(0.05), radius: 12, y: 6)
+        .shadow(color: .black.opacity(focused ? 0.08 : 0.03), radius: focused ? 16 : 8, y: focused ? 8 : 4)
     }
 }
