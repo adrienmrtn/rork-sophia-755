@@ -58,7 +58,7 @@ def parse_block(text: str, name: str) -> dict[str, str]:
                 block = text[start : i + 1]
                 out: dict[str, str] = {}
                 for km in re.finditer(r'"([^"\\]+)"\s*:\s*"((?:\\.|[^"\\])*)"', block):
-                    out[km.group(1)] = km.group(2).encode("utf-8").decode("unicode_escape")
+                    out[km.group(1)] = km.group(2)
                 return out
         i += 1
     return {}
