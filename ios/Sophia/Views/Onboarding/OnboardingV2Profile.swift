@@ -39,17 +39,17 @@ struct OnboardingV2Profile: View {
                 .offset(y: -170)
 
             VStack(spacing: 0) {
-                Spacer().frame(height: 70)
+                Spacer().frame(height: 52)
 
                 header
 
-                Spacer().frame(height: 26)
+                Spacer().frame(height: 22)
 
                 objectiveReminder
                     .opacity(reveal >= 1 ? 1 : 0)
                     .offset(y: reveal >= 1 ? 0 : 16)
 
-                Spacer().frame(height: 26)
+                Spacer().frame(height: 22)
 
                 coursesSection
                     .opacity(reveal >= 2 ? 1 : 0)
@@ -106,8 +106,10 @@ struct OnboardingV2Profile: View {
                     .font(DS.sans(.subheadline, .medium))
                     .foregroundStyle(OV2.inkSecondary)
                     .multilineTextAlignment(.center)
+                    .lineLimit(nil)
                     .fixedSize(horizontal: false, vertical: true)
-                    .padding(.horizontal, 32)
+                    .frame(maxWidth: .infinity)
+                    .padding(.horizontal, 20)
                     .opacity(nameRevealed ? 1 : 0)
             }
         }
