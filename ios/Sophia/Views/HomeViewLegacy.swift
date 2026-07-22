@@ -115,6 +115,7 @@ struct HomeViewLegacy: View {
                 .tracking(0.5)
                 .fixedSize(horizontal: true, vertical: true)
                 .lineLimit(1)
+                .minimumScaleFactor(0.8)
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 8)
