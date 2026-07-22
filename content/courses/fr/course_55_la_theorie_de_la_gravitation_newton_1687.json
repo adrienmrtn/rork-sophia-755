@@ -16,8 +16,14 @@
       "title": "Introduction",
       "free": true,
       "blocks": [
-        { "type": "paragraph", "text": "Avant Newton, on savait déjà beaucoup sur les planètes grâce à **Galilée**, **Kepler** et d'autres. Mais il manquait un lien clair entre ce qui tombe sur Terre et ce qui tourne dans le ciel." },
-        { "type": "paragraph", "text": "En **1687**, **Isaac Newton** publie les *Principia*. Il y affirme que la gravitation est **universelle** : elle agit partout, de la même façon." }
+        {
+          "type": "paragraph",
+          "text": "Avant Newton, on savait déjà beaucoup sur les planètes grâce à **Galilée** (physicien italien du XVIIe siècle), **[[Johannes Kepler]]** (astronome qui décrivit les orbites elliptiques) et d'autres. Mais il manquait un lien clair entre ce qui tombe sur Terre et ce qui tourne dans le ciel."
+        },
+        {
+          "type": "paragraph",
+          "text": "En **1687**, **Isaac Newton** (1643-1727) publie les *[[Philosophiae Naturalis Principia Mathematica]]* (les *Principia*, ouvrage fondateur de la physique classique). Il y affirme que la gravitation est **universelle** : elle agit partout, de la même façon."
+        }
       ]
     },
     {
@@ -25,8 +31,14 @@
       "title": "Le monde avant la synthèse",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Kepler avait décrit les orbites des planètes avec des lois précises. Galilée avait étudié la chute des corps. Mais pourquoi les planètes restent-elles sur leur trajectoire ? Qu'est-ce qui les « tire » ?" },
-        { "type": "paragraph", "text": "Newton répond : une attraction. La Terre attire la Lune. Le Soleil attire la Terre. Et toi, tu attires aussi un peu la Terre… même si c'est minuscule." }
+        {
+          "type": "paragraph",
+          "text": "Kepler avait décrit les orbites des planètes avec des lois précises (orbites en **ellipse**, aires balayées égales en temps égal). Galilée avait étudié la chute des corps. Mais pourquoi les planètes restent-elles sur leur trajectoire ? Qu'est-ce qui les « tire » ?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Newton répond : une **attraction gravitationnelle** (force qui tire deux masses l'une vers l'autre). La Terre attire la Lune. Le Soleil attire la Terre. Et toi, tu attires aussi un peu la Terre… même si c'est minuscule."
+        }
       ]
     },
     {
@@ -34,10 +46,26 @@
       "title": "La loi en une phrase",
       "free": false,
       "blocks": [
-        { "type": "image", "asset": "isaac_newton_apple_tree_woolsthorpe", "ratio": "4:3", "caption": "L'histoire de la pomme est surtout un récit. L'idée, elle, est réelle." },
-        { "type": "paragraph", "text": "Deux corps s'attirent avec une force qui augmente avec leur masse, et diminue quand on les éloigne (plus précisément : avec le carré de la distance). Plus tu es loin, plus l'attraction faiblit vite." },
-        { "type": "image", "asset": "planets_orbit_solar_system_gravity", "ratio": "16:9", "caption": "Les planètes « tombent » sans cesse vers le Soleil… et le ratent : c'est l'orbite." },
-        { "type": "funFact", "text": "La Lune « tombe » vers la Terre en permanence. Comme elle a aussi une grande vitesse latérale, elle tourne autour au lieu de s'écraser." }
+        {
+          "type": "image",
+          "asset": "isaac_newton_apple_tree_woolsthorpe",
+          "ratio": "4:3",
+          "caption": "L'histoire de la pomme est surtout un récit. L'idée, elle, est réelle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Deux corps s'attirent avec une force qui augmente avec leur **masse** (quantité de matière), et diminue quand on les éloigne. Plus précisément : la force faiblit avec le **carré de la distance** (doubler la distance divise l'attraction par quatre). Plus tu es loin, plus l'attraction faiblit vite."
+        },
+        {
+          "type": "image",
+          "asset": "planets_orbit_solar_system_gravity",
+          "ratio": "16:9",
+          "caption": "Les planètes « tombent » sans cesse vers le Soleil… et le ratent : c'est l'orbite."
+        },
+        {
+          "type": "funFact",
+          "text": "La Lune « tombe » vers la Terre en permanence. Comme elle a aussi une grande vitesse latérale, elle tourne autour au lieu de s'écraser."
+        }
       ]
     },
     {
@@ -45,8 +73,14 @@
       "title": "Les lois du mouvement",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Newton donne aussi trois lois du mouvement. En résumé : un objet garde sa vitesse s'il n'y a pas de force ; une force change la vitesse ; toute action a une réaction opposée." },
-        { "type": "paragraph", "text": "Avec cela, on peut calculer trajectoires, marées, orbites. La physique devient un outil de prédiction." }
+        {
+          "type": "paragraph",
+          "text": "Newton donne aussi trois **lois du mouvement**. En résumé : un objet garde sa vitesse s'il n'y a pas de force (principe d'**inertie**) ; une force change la vitesse ; toute action a une réaction opposée."
+        },
+        {
+          "type": "paragraph",
+          "text": "Avec cela, on peut calculer trajectoires, **marées** (montées et descentes des océans sous l'effet de la Lune et du Soleil), orbites. La physique devient un outil de prédiction."
+        }
       ]
     },
     {
@@ -54,8 +88,14 @@
       "title": "Puissant… mais pas le dernier mot",
       "free": false,
       "blocks": [
-        { "type": "paragraph", "text": "Deux siècles plus tard, **Einstein** corrigera Newton pour les cas extrêmes (très grandes vitesses, très fortes gravités). Mais pour lancer une fusée ou comprendre les saisons des marées, Newton reste excellent." },
-        { "type": "takeaway", "text": "Newton unifie ciel et Terre : la gravitation attire les masses partout. C'est l'une des plus grandes synthèses scientifiques de l'histoire." }
+        {
+          "type": "paragraph",
+          "text": "Deux siècles plus tard, **[[Albert Einstein]]** corrigera Newton pour les cas extrêmes (très grandes vitesses, très fortes gravités) avec la [[La gravitation relativiste (Einstein)]] (gravité comprise comme courbure de l'espace-temps, et non comme une force invisible). Mais pour lancer une fusée ou comprendre les marées, Newton reste excellent."
+        },
+        {
+          "type": "takeaway",
+          "text": "Newton unifie ciel et Terre : la gravitation attire les masses partout. C'est l'une des plus grandes synthèses scientifiques de l'histoire."
+        }
       ]
     }
   ]
