@@ -31,6 +31,9 @@ struct CourseView: View {
     @State private var showRewardFlow: Bool = false
     @State private var sessionTracker: CourseSessionTracker?
     @State private var coachmarkTerm: String? = nil
+    /// Glossary term tapped in the lesson body. Shown as an in-app overlay (not a system
+    /// sheet) so the course text stays perfectly still when a term is tapped.
+    @State private var selectedGlossaryEntry: GlossaryEntry? = nil
 
     /// Fixed XP awarded for finishing a course (reaching the completion screen). Always granted.
     private let courseCompletionXP: Int = 10
@@ -125,6 +128,17 @@ struct CourseView: View {
                 )
                 .transition(.opacity)
                 .zIndex(60)
+            }
+
+            // Glossary explanation, drawn INSIDE the course (not a system sheet) so tapping a
+            // term never shifts or animates the course text — it just shows the explanation.
+            if let entry = selectedGlossaryEntry {
+                GlossaryTermOverlay(
+                    entry: entry,
+                    onDismiss: { selectedGlossaryEntry = nil }
+                )
+                .transition(.opacity)
+                .zIndex(70)
             }
         }
         .navigationBarBackButtonHidden()
@@ -279,7 +293,8 @@ struct CourseView: View {
                 isFirst: resolved.isFirst,
                 accent: DS.accentSoft,
                 courseId: course.id,
-                courseTitle: course.title
+                courseTitle: course.title,
+                onGlossaryTap: showGlossary
             )
         } else {
             VStack(alignment: .leading, spacing: 24) {
@@ -292,10 +307,16 @@ struct CourseView: View {
                     content: lesson.content,
                     accent: DS.accentSoft,
                     courseId: course.id,
-                    courseTitle: course.title
+                    courseTitle: course.title,
+                    onGlossaryTap: showGlossary
                 )
             }
         }
+    }
+
+    /// Surface a tapped glossary term as an in-app overlay. No course-text movement.
+    private func showGlossary(_ entry: GlossaryEntry) {
+        selectedGlossaryEntry = entry
     }
 
     private func unlockedLessonView(lesson: LessonPage, lessonIndex: Int) -> some View {

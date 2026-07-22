@@ -52,7 +52,9 @@ struct HomeViewTikTok: View {
     /// Hauteur laissée visible en bas de chaque carte pour laisser **entrapercevoir** la
     /// carte suivante (« il y en a d'autres en dessous »). Chaque rangée fait donc un peu
     /// moins qu'un plein écran, tout en gardant le snap une-carte-par-swipe (`.viewAligned`).
-    private let peekHeight: CGFloat = 64
+    /// La carte est alignée en haut de sa rangée (voir `TikTokCourseCard`) pour que ce «peek»
+    /// montre bien le **début** de la carte suivante, et non du vide au-dessus d'elle.
+    private let peekHeight: CGFloat = 104
 
     var body: some View {
         ZStack {
@@ -279,19 +281,22 @@ private struct TikTokCourseCard: View {
 
     var body: some View {
         GeometryReader { geo in
-            // The card hugs its content and is centered in the one-viewport row, so there is
-            // no empty space between the end of the text and the bottom of the card.
+            // The card sits near the TOP of its one-viewport row (not centered): this lifts
+            // the current card a touch higher and, crucially, makes the bottom "peek" reveal
+            // the START of the next card rather than empty space above it.
             let cardWidth = geo.size.width - DS.Space.m * 2
             let maxCardHeight = geo.size.height - DS.Space.s * 2
             // Illustration scales down a little on short screens so the whole card fits.
             let imageHeight = min(max(geo.size.height * 0.30, 170), 240)
 
-            ZStack {
+            VStack(spacing: 0) {
                 cardContent(imageHeight: imageHeight)
                     .frame(width: cardWidth)
                     .frame(maxHeight: maxCardHeight)
+                    .padding(.top, DS.Space.s)
+                Spacer(minLength: 0)
             }
-            .frame(width: geo.size.width, height: geo.size.height)
+            .frame(width: geo.size.width, height: geo.size.height, alignment: .top)
         }
         .onAppear {
             if cachedImage == nil {

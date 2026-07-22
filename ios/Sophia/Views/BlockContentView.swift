@@ -13,8 +13,9 @@ struct BlockContentView: View {
     let accent: Color
     let courseId: String
     let courseTitle: String
-
-    @State private var selectedGlossaryEntry: GlossaryEntry?
+    /// Glossary taps are surfaced to the enclosing `CourseView`, which shows the explanation
+    /// as an in-app overlay (not a system sheet) so the course text never shifts.
+    let onGlossaryTap: (GlossaryEntry) -> Void
 
     private static let ink = DS.ink
 
@@ -27,9 +28,6 @@ struct BlockContentView: View {
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
-        .sheet(item: $selectedGlossaryEntry) { entry in
-            GlossaryTermSheet(entry: entry)
-        }
     }
 
     @ViewBuilder
@@ -65,7 +63,7 @@ struct BlockContentView: View {
                 accent: accent,
                 courseId: courseId,
                 courseTitle: courseTitle,
-                onGlossaryTap: { selectedGlossaryEntry = $0 }
+                onGlossaryTap: onGlossaryTap
             )
 
         case .image(let image):
@@ -80,7 +78,7 @@ struct BlockContentView: View {
                 courseId: courseId,
                 courseTitle: courseTitle,
                 accent: accent,
-                onGlossaryTap: { selectedGlossaryEntry = $0 }
+                onGlossaryTap: onGlossaryTap
             )
 
         case .takeaway(let text):
@@ -89,7 +87,7 @@ struct BlockContentView: View {
                 courseId: courseId,
                 courseTitle: courseTitle,
                 accent: accent,
-                onGlossaryTap: { selectedGlossaryEntry = $0 }
+                onGlossaryTap: onGlossaryTap
             )
 
         case .quote(let text, let attribution):

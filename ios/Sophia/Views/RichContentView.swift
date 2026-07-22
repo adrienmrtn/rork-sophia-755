@@ -12,8 +12,9 @@ struct RichContentView: View {
     let accent: Color
     let courseId: String
     let courseTitle: String
-
-    @State private var selectedGlossaryEntry: GlossaryEntry?
+    /// Glossary taps are surfaced to the enclosing `CourseView`, which shows the explanation
+    /// as an in-app overlay (not a system sheet) so the course text never shifts.
+    let onGlossaryTap: (GlossaryEntry) -> Void
 
     static let ink = DS.ink
     fileprivate static let bodyFont = DS.sans(.body)
@@ -23,9 +24,6 @@ struct RichContentView: View {
             ForEach(Array(blocks.enumerated()), id: \.offset) { _, block in
                 blockView(block)
             }
-        }
-        .sheet(item: $selectedGlossaryEntry) { entry in
-            GlossaryTermSheet(entry: entry)
         }
     }
 
@@ -37,7 +35,7 @@ struct RichContentView: View {
                 raw: str,
                 courseId: courseId,
                 courseTitle: courseTitle,
-                onGlossaryTap: { selectedGlossaryEntry = $0 }
+                onGlossaryTap: onGlossaryTap
             )
         case .image(let name):
             CourseInlineImage(rawName: name)
