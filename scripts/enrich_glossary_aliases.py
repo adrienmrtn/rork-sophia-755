@@ -108,6 +108,8 @@ def is_junk(term: str) -> bool:
 
 
 def fuzzy_match(term: str, entries: list[dict]) -> dict | None:
+    from difflib import SequenceMatcher
+
     needle = norm_key(term)
     if len(needle) < 3:
         return None
@@ -122,6 +124,17 @@ def fuzzy_match(term: str, entries: list[dict]) -> dict | None:
         score = 0.0
         if len(needle) >= 4 and (needle in hay or hay in needle):
             score = min(len(needle), len(hay)) / max(len(needle), len(hay))
+        # Near-typos / locale spelling drift with small length delta
+        # (e.g. Soviet vs Soviete). Same-length substitutions like
+        # T-lymphocytes vs B-lymphocytes must NOT match.
+        if (
+            len(needle) >= 8
+            and len(hay) >= 8
+            and 1 <= abs(len(needle) - len(hay)) <= 2
+        ):
+            sm = SequenceMatcher(None, needle, hay).ratio()
+            if sm >= 0.9:
+                score = max(score, sm)
         if score > best_score:
             best_score = score
             best = entry
@@ -160,10 +173,54 @@ def short_forms(display: str, lang: str) -> list[str]:
     return unique
 
 
+GLOSSARY_CSV = {
+    "en": CONTENT_LOCALES / "en" / "source" / "Glossaire_culture_generale_modifie_EN_96bc.csv",
+    "es": CONTENT_LOCALES / "es" / "source" / "Glossaire_culture_generale_modifie_ES_5952.csv",
+    "de": CONTENT_LOCALES / "de" / "source" / "Glossaire_culture_generale_modifie_DE_507c.csv",
+    "pt": CONTENT_LOCALES / "pt" / "source" / "Glossaire_culture_generale_modifie_PT_ee5e.csv",
+    "it": CONTENT_LOCALES / "it" / "source" / "Glossaire_culture_generale_modifie_IT_8e63.csv",
+}
+
+COURSES_CSV = {
+    "en": CONTENT_LOCALES / "en" / "source" / "Excel_cours_systeme_modifie_EN_0b72.csv",
+    "es": CONTENT_LOCALES / "es" / "source" / "Excel_cours_systeme_modifie_ES_1e16.csv",
+    "de": CONTENT_LOCALES / "de" / "source" / "Excel_cours_systeme_modifie_DE_ea79.csv",
+    "pt": CONTENT_LOCALES / "pt" / "source" / "Excel_cours_systeme_modifie_PT_4407.csv",
+    "it": CONTENT_LOCALES / "it" / "source" / "Excel_cours_systeme_modifie_IT_626c.csv",
+}
+
+
 def load_bundle(lang: str) -> tuple[list[dict], dict[str, dict]]:
     courses = json.loads((LOCALE_DIR / f"courses.{lang}.json").read_text(encoding="utf-8"))
     glossary = json.loads((LOCALE_DIR / f"glossary.{lang}.json").read_text(encoding="utf-8"))
     return courses, glossary
+
+
+def load_canonical_glossary(lang: str) -> dict[str, dict]:
+    """Rebuild the CSV-only glossary (no tap aliases) — source of truth for enrich."""
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from generate_en_locale_json import load_en_courses_rows, load_en_glossary  # noqa: WPS433
+    from import_content_from_csv import parse_all_courses  # noqa: WPS433
+
+    course_data = (ROOT / "ios/Sophia/Services/CourseData.swift").read_text(encoding="utf-8")
+    app_courses = parse_all_courses(course_data)
+    rows = load_en_courses_rows(COURSES_CSV[lang])
+    glossary_rows = load_en_glossary(GLOSSARY_CSV[lang])
+
+    if lang == "en":
+        from generate_en_locale_json import build_glossary_json  # noqa: WPS433
+    elif lang == "es":
+        from generate_es_locale_json import build_glossary_json  # noqa: WPS433
+    elif lang == "de":
+        from generate_de_locale_json import build_glossary_json  # noqa: WPS433
+    elif lang == "pt":
+        from generate_pt_locale_json import build_glossary_json  # noqa: WPS433
+    elif lang == "it":
+        from generate_it_locale_json import build_glossary_json  # noqa: WPS433
+    else:
+        raise ValueError(lang)
+
+    return build_glossary_json(app_courses, rows, glossary_rows)
 
 
 def write_glossary(lang: str, glossary: dict[str, dict]) -> None:
@@ -189,7 +246,8 @@ def enrich_lang(
 ) -> tuple[dict[str, dict], list[dict], dict]:
     import fnmatch
 
-    courses, glossary = load_bundle(lang)
+    courses, current = load_bundle(lang)
+    canonical = load_canonical_glossary(lang)
     if only:
         patterns = [p.strip() for p in only.split(",") if p.strip()]
         courses = [
@@ -201,7 +259,7 @@ def enrich_lang(
         courses = courses[:limit]
 
     by_course: dict[str, list[dict]] = defaultdict(list)
-    for key, entry in glossary.items():
+    for key, entry in canonical.items():
         if "|" not in key:
             continue
         cid, _ = key.split("|", 1)
@@ -210,7 +268,8 @@ def enrich_lang(
     added_aliases: list[dict] = []
     stats = {
         "courses": len(courses),
-        "before": len(glossary),
+        "before": len(current),
+        "canonical": len(canonical),
         "link_aliases": 0,
         "short_aliases": 0,
         "skipped_existing": 0,
@@ -218,18 +277,20 @@ def enrich_lang(
         "unresolved_links": 0,
     }
 
-    # Work on a copy so --only doesn't drop other courses' keys when writing full file.
-    out = dict(glossary)
+    # Always rebuild from CSV canonical + aliases (idempotent).
+    out = dict(canonical)
 
     for course in courses:
         cid = course["id"]
-        entries = by_course.get(cid, [])
-        if not entries:
+        canonical_entries = list(by_course.get(cid, []))
+        if not canonical_entries:
             continue
+
+        matchable = list(canonical_entries)
 
         # 1) Short-form aliases first — parentheticals/articles become matchable
         #    targets for <> link resolution below (FR-style densification).
-        for entry in list(entries):
+        for entry in canonical_entries:
             display = entry.get("displayTerm") or ""
             for alias in short_forms(display, lang):
                 key = f"{cid}|{alias}"
@@ -241,7 +302,7 @@ def enrich_lang(
                     "explanation": entry["explanation"],
                 }
                 out[key] = alias_entry
-                entries.append(alias_entry)
+                matchable.append(alias_entry)
                 added_aliases.append(
                     {
                         "courseId": cid,
@@ -270,7 +331,7 @@ def enrich_lang(
                 if is_junk(term):
                     stats["skipped_junk"] += 1
                     continue
-                match = fuzzy_match(term, entries)
+                match = fuzzy_match(term, matchable)
                 if not match:
                     stats["unresolved_links"] += 1
                     continue
@@ -356,22 +417,19 @@ def cmd_enrich(args: argparse.Namespace) -> int:
             print(f"Unknown lang {lang}", file=sys.stderr)
             return 1
         before = json.loads((LOCALE_DIR / f"glossary.{lang}.json").read_text(encoding="utf-8"))
+        canonical = load_canonical_glossary(lang)
         cov_before = measure_coverage(lang, before)
         after, aliases, stats = enrich_lang(lang, only=args.only, limit=args.limit)
+        # enrich_lang always starts from CSV canonical, then adds aliases for the
+        # selected courses (all courses when --only/--limit omitted). Idempotent.
 
-        # When scoping --only/--limit, merge aliases into full glossary.
-        if args.only or args.limit:
-            merged = dict(before)
-            merged.update({k: v for k, v in after.items() if k not in before or k in after})
-            # Prefer newly added keys from `after` for courses in scope
-            for key, entry in after.items():
-                merged[key] = entry
-            after = merged
-
-        errs = validate_enrichment(before, after)
+        errs = validate_enrichment(canonical, after)
         cov_after = measure_coverage(lang, after)
         print(f"\n=== {lang} ===")
-        print(f"  keys {stats['before']} → {len(after)} (+{len(after) - len(before)})")
+        print(
+            f"  keys {stats['before']} → {len(after)} "
+            f"(canonical {stats['canonical']}, +{len(after) - stats['canonical']} aliases)"
+        )
         print(
             f"  aliases: link={stats['link_aliases']} short={stats['short_aliases']} "
             f"junk_skipped={stats['skipped_junk']} unresolved={stats['unresolved_links']}"
