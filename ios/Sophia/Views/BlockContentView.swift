@@ -341,15 +341,36 @@ struct ProseTextView: UIViewRepresentable {
         let plain = attributed.string
         if context.coordinator.lastRenderedPlainText != plain {
             context.coordinator.lastRenderedPlainText = plain
+            // Real content change (e.g. a different lesson): drop the cached measurement so
+            // the new text is re-measured once.
+            context.coordinator.measuredPlainText = nil
+            context.coordinator.measuredHeight = -1
             uiView.attributedText = attributed
         }
     }
 
     func sizeThatFits(_ proposal: ProposedViewSize, uiView: UITextView, context: Context) -> CGSize? {
         let width = proposal.width ?? (UIScreen.main.bounds.width - 48)
+        let plain = attributed.string
+        let coord = context.coordinator
+
+        // Cache the measured height per (text, width). Re-measuring a UITextView on every
+        // SwiftUI layout pass (e.g. when an unrelated @State like the glossary overlay
+        // toggles) makes JUSTIFIED text recompute its hyphenation/line breaks slightly
+        // differently each time — the paragraph visibly "jumps". Returning the cached size
+        // for an unchanged (text, width) means the text view is never re-measured and its
+        // layout stays frozen: tapping a term no longer shifts the text.
+        if coord.measuredPlainText == plain, abs(coord.measuredWidth - width) < 0.5, coord.measuredHeight >= 0 {
+            return CGSize(width: width, height: coord.measuredHeight)
+        }
+
         let target = CGSize(width: width, height: .greatestFiniteMagnitude)
         let fitted = uiView.sizeThatFits(target)
-        return CGSize(width: width, height: ceil(fitted.height))
+        let height = ceil(fitted.height)
+        coord.measuredPlainText = plain
+        coord.measuredWidth = width
+        coord.measuredHeight = height
+        return CGSize(width: width, height: height)
     }
 
     func makeCoordinator() -> Coordinator {
@@ -359,6 +380,11 @@ struct ProseTextView: UIViewRepresentable {
     final class Coordinator: NSObject, UIGestureRecognizerDelegate {
         var onGlossaryTap: (GlossaryEntry) -> Void
         var lastRenderedPlainText: String?
+        /// Cached measurement so the justified text view is never re-measured (and thus never
+        /// re-justified) across unrelated SwiftUI layout passes. Invalidated when the text changes.
+        var measuredPlainText: String?
+        var measuredWidth: CGFloat = -1
+        var measuredHeight: CGFloat = -1
 
         init(onGlossaryTap: @escaping (GlossaryEntry) -> Void) {
             self.onGlossaryTap = onGlossaryTap
