@@ -106,7 +106,8 @@ struct OnboardingV2Profile: View {
                     .font(DS.sans(.subheadline, .medium))
                     .foregroundStyle(OV2.inkSecondary)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 40)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(.horizontal, 32)
                     .opacity(nameRevealed ? 1 : 0)
             }
         }
