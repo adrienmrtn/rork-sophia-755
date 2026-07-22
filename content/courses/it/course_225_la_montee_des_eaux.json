@@ -1,0 +1,128 @@
+{
+  "id": "course_225_la_montee_des_eaux",
+  "title": "Acque in aumento",
+  "subtitle": "Il livello del mare sta aumentando",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Ambiente & futuro",
+  "description": "Entro il 2100, il livello degli oceani potrebbe aumentare di **una metropolitana**. Per interi paesi e megalopoli costiere questa non è più un’ipotesi lontana, ma una questione di pianificazione.",
+  "hero": {
+    "image": "la_montee_des_eaux",
+    "ratio": "16:9",
+    "hook": "Ogni anno il mare si alza un po’ di più e alcuni paesi stanno già pianificando il loro spostamento."
+  },
+  "sections": [
+    {
+      "id": "course_225_la_montee_des_eaux_intro",
+      "title": "Introduzione",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Per migliaia di anni, il livello degli oceani è rimasto pressoché stabile. Dall’era industriale è in aumento e la velocità di questo aumento accelera di anno in anno."
+        },
+        {
+          "type": "paragraph",
+          "text": "Entro il 2100, gli oceani potrebbero innalzarsi da 30 centimetri a un metro, a seconda delle nostre scelte in materia di emissioni. Per molte coste questa non è più una minaccia lontana, ma un problema di pianificazione molto concreto."
+        }
+      ]
+    },
+    {
+      "id": "course_225_la_montee_des_eaux_p1",
+      "title": "Due meccanismi, una direzione",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Il livello del mare sta aumentando per due diversi motivi fisici. Il primo è : quando l'acqua si riscalda, le sue molecole si muovono di più e il suo volume aumenta un po', come qualsiasi liquido. Gli oceani hanno assorbito più del 90% del calore in eccesso generato dalle attività umane dal 1970, e questo calore sta aumentando il loro volume. [[Dilatazione termica]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Il secondo motivo è lo scioglimento del ghiaccio posto sulla terraferma. Attenzione a non confonderlo con il lastrone di ghiaccio artico, che già galleggia sull'acqua e il cui scioglimento non provoca l'innalzamento del livello del mare. Sono gli , queste immense calotte glaciali poste sul suolo della Groenlandia e dell'Antartide, che fanno davvero straripare gli oceani aggiungendo acqua dolce. [[Inlandsis]]"
+        },
+        {
+          "type": "image",
+          "asset": "greenland_ice_sheet_melting_glacier",
+          "ratio": "16:9",
+          "caption": "Lo scioglimento della Groenlandia, se fosse completo, innalzerebbe gli oceani di 7 metri."
+        },
+        {
+          "type": "funFact",
+          "text": "La Groenlandia perde circa 280 miliardi di tonnellate di ghiaccio ogni anno, ovvero abbastanza acqua da coprire tutta la Francia con uno strato di 50 centimetri."
+        }
+      ]
+    },
+    {
+      "id": "course_225_la_montee_des_eaux_p2",
+      "title": "Una velocità che preoccupa gli scienziati",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dal 1880, il livello globale del mare è aumentato di circa 20 centimetri. È soprattutto la velocità attuale ad allarmare i ricercatori: nel XX secolo era di circa 1,4 mm all'anno, rispetto ai **3,6 mm tutto l'anno**, un'accelerazione di oltre il 150%."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gli esperti di  stimano che questa tendenza continuerà per decenni, anche se le emissioni venissero drasticamente ridotte adesso, perché gli oceani impiegano tempo per rispondere ai cambiamenti di temperatura. [[IPCC]]"
+        },
+        {
+          "type": "image",
+          "asset": "coastal_flooding_sea_level_rise_city",
+          "ratio": "4:3",
+          "caption": "Un innalzamento di 50 cm può trasformare un’alluvione centenaria in un evento annuale."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il vero pericolo non è solo un mare leggermente più alto in media, ma la moltiplicazione degli : può bastare un innalzamento di 50 centimetri per trasformare un disastro atteso una volta al secolo in un evento quasi annuale. [[Ondate e inondazioni centenarie]]"
+        }
+      ]
+    },
+    {
+      "id": "course_225_la_montee_des_eaux_p3",
+      "title": "Un'ingiustizia geografica",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L’innalzamento del livello delle acque sta colpendo soprattutto le regioni che hanno contribuito meno al riscaldamento globale. In prima linea si trovano i grandi delta dei fiumi, come quelli del Nilo, del Mekong o del Gange. In Bangladesh, dove vivono 170 milioni di abitanti, un aumento di un metro potrebbe causare la perdita del 17% del territorio."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per i piccoli Stati insulari come le Maldive o Kiribati, la scomparsa del tutto sott’acqua non è più un’ipotesi di fantascienza, ma un vero e proprio oggetto di pianificazione politica. Al contrario, le megalopoli ricche come Miami o New York investono miliardi in dighe e pompe."
+        },
+        {
+          "type": "image",
+          "asset": "jakarta_indonesia_sinking_flooding_maldives",
+          "ratio": "16:9",
+          "caption": "Giakarta combina l’innalzamento delle acque e il cedimento del terreno, una doppia minaccia."
+        },
+        {
+          "type": "funFact",
+          "text": "Nel 2009, il governo delle Maldive ha tenuto una riunione di gabinetto subacqueo indossando le mute per allertare il mondo in vista di un’importante conferenza sul clima."
+        },
+        {
+          "type": "paragraph",
+          "text": "A **Giakarta**, in Indonesia, la città sta sprofondando ulteriormente nel terreno a causa dell'eccessivo pompaggio delle acque sotterranee. Di fronte a questa doppia minaccia, il Paese ha preso la decisione radicale di costruire una nuova capitale, Nusantara, sull’isola del Borneo."
+        }
+      ]
+    },
+    {
+      "id": "course_225_la_montee_des_eaux_p4",
+      "title": "Adattarsi o fare un passo indietro",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Due strategie si completano a vicenda di fronte a questa sfida. Il primo è limitare il riscaldamento per rallentare l’aumento oltre il 2100. Il secondo è adattarsi a ciò che è già inevitabile, rafforzando le difese naturali come gli  o le dune, o con soluzioni più pesanti come le grandi opere nei Paesi Bassi. [[Mangrovia]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "In alcuni casi, l’unica soluzione sarà tornare indietro: spostare persone e attività nell’entroterra prima che i disastri si ripetano troppo spesso. Si tratta di un vero e proprio cambiamento di abitudini per le società legate alla costa da secoli."
+        },
+        {
+          "type": "takeaway",
+          "text": "Il livello del mare sta aumentando di 3,6 mm all’anno, sotto l’effetto combinato dell’espansione termica e dello scioglimento del ghiaccio terrestre. Entro il 2100, questo aumento potrebbe raggiungere il metro e costringere allo sfollamento di centinaia di milioni di persone."
+        }
+      ]
+    }
+  ]
+}

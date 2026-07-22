@@ -1,0 +1,122 @@
+{
+  "id": "course_226_l_ia_et_l_emploi",
+  "title": "AI and employment",
+  "subtitle": "Threat or new wave?",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Each technological revolution has created fears for employment. But generative AI is affecting **intellectual** professions for the first time, not just physical strength.",
+  "hero": {
+    "image": "l_ia_et_l_emploi",
+    "ratio": "16:9",
+    "hook": "The machines have already replaced arms. Will they now replace brains?"
+  },
+  "sections": [
+    {
+      "id": "course_226_l_ia_et_l_emploi_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Will artificial intelligence destroy millions of jobs, or create new ones? This question has come up with every major technological advance over the past two centuries."
+        },
+        {
+          "type": "paragraph",
+          "text": "This time, the novelty is elsewhere: AI no longer replaces only physical force, but tasks that we thought were reserved for the human mind, such as writing a text or analyzing a file. This course traces this ancient fear and explores what is really changing today."
+        }
+      ]
+    },
+    {
+      "id": "course_226_l_ia_et_l_emploi_p1",
+      "title": "A fear as old as the machine",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The fear that machines will replace humans is not new. In the early 19th century, the , British textile workers, destroyed power looms that threatened their skills. [[The Luddites (1811-1816)]]"
+        },
+        {
+          "type": "image",
+          "asset": "luddites_industrial_revolution_machine_breaking",
+          "ratio": "4:3",
+          "caption": "In the 19th century, Luddites attacked machines that threatened their profession."
+        },
+        {
+          "type": "paragraph",
+          "text": "Each major technological wave has followed the same logic: it destroys certain jobs, but creates others elsewhere. The shift from agriculture to industry reduced the share of farmers from 40% to 2% of the working population in a century, without causing permanent unemployment, as these workers moved to new sectors."
+        },
+        {
+          "type": "funFact",
+          "text": "The word \"sabotage\" is said to come from French workers who threw their wooden shoes, sabots, into the gears of machines to block them, although the exact origin of the word remains debated."
+        }
+      ]
+    },
+    {
+      "id": "course_226_l_ia_et_l_emploi_p2",
+      "title": "A breakthrough: AI attacks knowledge professions",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": " marks a real change, because it no longer only follows rules set in advance: it creates original content. Classic computing replaced repetitive tasks like data entry. Modern AI can write, analyze a contract, compose music or even help make a medical diagnosis. [[Generative Artificial Intelligence (AI)]]"
+        },
+        {
+          "type": "image",
+          "asset": "AI_generative_writing_artificial_intelligence",
+          "ratio": "4:3",
+          "caption": "Generative AI tackles tasks that were thought to be reserved for the human mind."
+        },
+        {
+          "type": "paragraph",
+          "text": "This versatility especially exposes the , professions in the service sector whose main working tool is analysis. According to recent reports, lawyers, editors and financial analysts are among the professions most exposed to this change. [[white-collar workers]]"
+        },
+        {
+          "type": "funFact",
+          "text": "In 1950, Alan Turing predicted that a machine could one day fool a human by simulating their thinking. Some AIs have since been credited as co-authors of actual scientific patents."
+        }
+      ]
+    },
+    {
+      "id": "course_226_l_ia_et_l_emploi_p3",
+      "title": "A co-pilot rather than a replacement?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A more optimistic view sees AI as an assistant rather than a replacement. By automating the less interesting tasks, such as documentary research or summaries, it would leave professionals more time for the human, ethical or strategic aspect of their work."
+        },
+        {
+          "type": "paragraph",
+          "text": "New professions are already appearing, such as , which knows how to formulate precise instructions to obtain the best from an AI. A doctor aided by AI does not disappear: he can follow more patients with more precision. [[Prompt engineer]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "The point of concern remains the speed of change. Previous industrial revolutions spanned decades, allowing time to adapt. The AI ​​transformation takes place over a few years, which can create a skills gap that is difficult to close for many workers."
+        }
+      ]
+    },
+    {
+      "id": "course_226_l_ia_et_l_emploi_p4",
+      "title": "Rethinking work and its value",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The outcome of this change will depend above all on the political choices that accompany it. Continuing training becomes essential to help workers develop new skills."
+        },
+        {
+          "type": "paragraph",
+          "text": "The debate on the redistribution of wealth created by machines is also resurfacing. If AI makes it possible to produce more with fewer workers, how can we finance our social systems? It is in this context that the idea of ​​a  is gaining ground, not as a utopia, but as a real safety net. [[Universal Basic Income (UBI)]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Some also propose a tax on the use of artificial intelligence to compensate for the reduction in employment-related contributions. AI ultimately pushes us to rethink the place of work itself in our lives."
+        },
+        {
+          "type": "takeaway",
+          "text": "Previous industrial revolutions destroyed jobs while creating others elsewhere. Generative AI is the first to threaten cognitive and creative tasks at the same time, making adaptation more urgent than ever."
+        }
+      ]
+    }
+  ]
+}

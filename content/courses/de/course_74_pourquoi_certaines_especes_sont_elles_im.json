@@ -1,0 +1,108 @@
+{
+  "id": "course_74_pourquoi_certaines_especes_sont_elles_im",
+  "title": "Warum sind manche Arten unsterblich?",
+  "subtitle": "Biologie und Langlebigkeit",
+  "subject": "sciences",
+  "subcategory": "Die Erde und das Universum",
+  "description": "Einige Arten scheinen dem Tod zu trotzen. Quallen, die sich verjüngen, Hydras, ohne zu altern: Das Geheimnis liegt in der Zellreparatur.",
+  "hero": {
+    "image": "pourquoi_certaines_especes_sont_immortelles",
+    "ratio": "16:9",
+    "hook": "Altern ist kein absolutes Lebensgesetz. Einige Arten haben den Fehler gefunden."
+  },
+  "sections": [
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_intro",
+      "title": "Einführung",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wir werden alt, dann sterben wir. Die Qualle  kann jedoch in ein Jugendstadium zurückkehren und von vorne beginnen. Die Muschel **Ming** lebte **507 Jahre**. Altern ist daher keine universelle Regel: Es ist ein Prozess, den bestimmte Arten umgehen. [[Turritopsis dohrnii]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Durch die Untersuchung dieser Ausnahmen suchen Forscher weniger nach Science-Fiction-Unsterblichkeit als vielmehr nach Tricks des Lebens, um Zellen besser zu reparieren."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p1",
+      "title": "Warum unsere Zellen verschleißen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Beim Altern geht es nicht nur darum, sich wie eine Maschine abzunutzen. Es ist ein Ungleichgewicht: Schäden häufen sich schneller als Reparaturen."
+        },
+        {
+          "type": "image",
+          "asset": "chromosome_dna_telomere_aging_cell",
+          "ratio": "auto",
+          "caption": "Telomere an den Enden der Chromosomen verkürzen sich mit jeder Zellteilung."
+        },
+        {
+          "type": "paragraph",
+          "text": "An den Enden unserer Chromosomen wirken  wie Schnürsenkelspitzen. Mit jeder Zellteilung verkürzen sie sich. Zu kurz, die Zelle hört auf, sich zu teilen. Gleichzeitig entstehen im Stoffwechsel aggressive Moleküle, die Proteine ​​und DNA schädigen. „Zombie“-Zellen sammeln sich dann an und entzünden das Gewebe um sie herum. [[Die Telomere]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Das Bärtierchen, ein winziger „Wasserbär“, kann durch Austrocknen fast nicht mehr leben. Sein Stoffwechsel sinkt auf **99,99 %** und er überlebt das Vakuum des Weltraums oder extreme Strahlung, ohne wirklich zu altern."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p2",
+      "title": "Champions, die dem Tod entgehen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der verletzte oder ausgehungerte  verwandelt seine erwachsenen Zellen in „leere“ Zellen und wird dann wieder zum Polypen, dem Anfangsstadium. Dieser Rückschritt, Transdifferenzierung genannt, verleiht ihm eine Form **biologische Unsterblichkeit**. [[Turritopsis dohrnii]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Der **hydra**, ein kleiner Süßwasserpolyp, erneuert seinen gesamten Körper dank einer nahezu unbegrenzten Versorgung mit . Sie zeigt keine messbaren Alterserscheinungen. Der Grönlandwal kann dank hocheffizienter DNA-Reparatur und starker Krebsresistenz über 200 Jahre alt werden. [[Stammzellen]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Hummer produzieren überall in ihrem Körper Telomerase: Ihre Telomere verkürzen sich nicht. Sie wachsen ein Leben lang und sterben, insbesondere wenn die Häutung zu kostspielig wird."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p3",
+      "title": "Was die Medizin daraus lernt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Idee besteht nicht mehr darin, Alzheimer oder Arthrose einzeln zu behandeln, sondern das Altern selbst anzugehen. **Senolytika** zielt darauf ab, Zombiezellen zu eliminieren. Bei Tieren hat dies bereits zu einer Verjüngung bestimmter Funktionen geführt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Begrenzung der Kalorienzufuhr ohne Unterernährung aktiviert auch Reparaturprozesse, insbesondere durch die Verlangsamung von , einem Protein, das das Wachstum beschleunigt – und manchmal auch den Rückgang. Andere Labore versuchen, die Uhr von Zellen wie Quallen aufzuziehen, ohne sie in Tumore umzuwandeln. [[mTOR]]"
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p4",
+      "title": "Unsterblich, aber nicht unbesiegbar",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sogar eine biologisch unsterbliche Spezies stirbt durch Raubtiere, Krankheiten oder Katastrophen. Der Tod bleibt eine treibende Kraft der Evolution: Er macht den Weg für neue, besser angepasste Generationen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Für den Menschen besteht die realistische Herausforderung nicht darin, ewig zu leben, sondern die Jahre **bei guter Gesundheit** zu verlängern. Die Umwandlung von Langlebigkeit in Technologie würde auch große Fragen in Bezug auf Gerechtigkeit und Ressourcen aufwerfen."
+        },
+        {
+          "type": "takeaway",
+          "text": "Biologische Unsterblichkeit beruht auf der Reparatur oder Wiederherstellung von Zellen. Die Qualle Turritopsis dohrnii wird jünger; Die Hydra erneuert sich ständig. Altern ist kein allgemeiner Todesfall."
+        }
+      ]
+    }
+  ]
+}

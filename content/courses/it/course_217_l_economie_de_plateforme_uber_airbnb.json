@@ -1,0 +1,108 @@
+{
+  "id": "course_217_l_economie_de_plateforme_uber_airbnb",
+  "title": "L’economia delle piattaforme (Uber, Airbnb, ecc.)",
+  "subtitle": "Capitalismo senza fabbriche",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economia & società",
+  "description": "Uber, Airbnb, Deliveroo non possiedono quasi nulla: niente auto, niente appartamenti, niente dipendenti. In che modo queste piattaforme sono diventate giganti globali?",
+  "hero": {
+    "image": "l_economie_de_plateforme",
+    "ratio": "16:9",
+    "hook": "Uber non ha mai posseduto una sola auto, eppure ha interrotto i trasporti in tutto il mondo."
+  },
+  "sections": [
+    {
+      "id": "course_217_l_economie_de_plateforme_uber_airbnb_intro",
+      "title": "Introduzione",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Uber, Airbnb, Amazon o Deliveroo appartengono a una nuova categoria di aziende: **piattaforme digitali**. Non si limitano a digitalizzare servizi già esistenti: cambiano il modo stesso di possedere, lavorare ed essere protetti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Questo modello ha inventato una nuova forma di capitalismo, che mette in discussione il nostro contratto sociale. Capiamo come funziona e perché è così dibattuto."
+        }
+      ]
+    },
+    {
+      "id": "course_217_l_economie_de_plateforme_uber_airbnb_p1",
+      "title": "Capitalismo senza fabbriche né dipendenti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un’azienda tradizionale possiede fabbriche, veicoli, inventario e impiega dipendenti. Una piattaforma rompe questo modello: diventa una semplice infrastruttura digitale che collega domanda e offerta, senza produrre nulla in sé."
+        },
+        {
+          "type": "paragraph",
+          "text": "Questo sistema si basa su : più utenti ha una piattaforma, più diventa utile, il che attira ancora più utenti. Per un servizio di trasporto, maggiore è il numero di autisti disponibili, minore è l’attesa, il che attira più clienti, che a loro volta attirano più autisti. Questo circolo porta quasi sempre a situazioni di quasi monopolio. [[Effetto di rete]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Uber ha speso miliardi di dollari nella ricerca sulle auto a guida autonoma, con l’obiettivo finale di eliminare il suo ultimo grande costo: il conducente umano."
+        }
+      ]
+    },
+    {
+      "id": "course_217_l_economie_de_plateforme_uber_airbnb_p2",
+      "title": "Lavorare senza le tutele del lavoro",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A questa innovazione tecnica si accompagna una innovazione giuridica più contestata. Nella , la piattaforma rifiuta lo status di datore di lavoro per presentarsi come un semplice intermediario tecnologico, che evita di pagare i contributi previdenziali, il salario minimo o le ferie retribuite. [[economia dei concerti]]"
+        },
+        {
+          "type": "image",
+          "asset": "gig_economy_workers_strike_protest",
+          "ratio": "16:9",
+          "caption": "Gli autisti e i fattorini sono spesso classificati come lavoratori autonomi, non come dipendenti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il lavoratore diventa un lavoratore autonomo che sopporta da solo tutti i rischi: malattia, infortunio, calo della domanda. Tuttavia, spesso rimane soggetto alle regole dell'applicazione (prezzi imposti, rating, sanzioni), situazione che chiamiamo **subordinazione algoritmica**. Di fronte a ciò, i tribunali di diversi paesi hanno cominciato a imporre gli  di questi contratti come veri e propri lavori salariati. [[Riqualificazione]]"
+        }
+      ]
+    },
+    {
+      "id": "course_217_l_economie_de_plateforme_uber_airbnb_p3",
+      "title": "Le città capovolte",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L’impatto di queste piattaforme va oltre il mondo del lavoro: sta trasformando anche le città. Airbnb, facilitando gli affitti turistici a breve termine, compete con gli hotel tradizionali riducendo al contempo il numero di alloggi disponibili per i residenti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Risultato: gli affitti salgono nei centri urbani e metropoli come Parigi o Barcellona hanno dovuto imporre regole rigide, come quote di giorni di noleggio. Gli stati stanno anche cercando di istituire la **archiviazione digitale** in modo che queste piattaforme paghino la loro quota di tasse dove effettivamente guadagnano i loro soldi."
+        },
+        {
+          "type": "funFact",
+          "text": "A New York, la rigorosa regolamentazione contro Airbnb nel 2023 ha fatto sì che il numero di annunci legali diminuisse dell’80% in pochi mesi."
+        }
+      ]
+    },
+    {
+      "id": "course_217_l_economie_de_plateforme_uber_airbnb_p4",
+      "title": "Verso un nuovo status dei lavoratori?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L’economia delle piattaforme ha portato servizi veloci e spesso meno costosi e ha reso più facile per alcune persone trovare un reddito. Ma questa efficacia si basa su un indebolimento delle protezioni costruite nel XX secolo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il dibattito attuale riguarda la creazione di uno status intermedio, tra lavoratore dipendente e autonomo, con portabilità dei diritti: ogni lavoratore accumulerebbe tutele sociali, indipendentemente dal numero di piattaforme per cui lavora. Il futuro di questo modello dipenderà dalla capacità dei regolatori di regolarlo senza soffocare l’innovazione."
+        },
+        {
+          "type": "takeaway",
+          "text": "L’economia delle piattaforme si basa su un capitalismo senza fabbriche che sfrutta l’effetto rete, trasformando i suoi lavoratori in liberi professionisti, spesso precari. La battaglia per una migliore protezione sociale, senza infrangere questo modello, è appena iniziata."
+        }
+      ]
+    }
+  ]
+}

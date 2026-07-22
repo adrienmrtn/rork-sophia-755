@@ -1,0 +1,96 @@
+{
+  "id": "course_47_pourquoi_baille_t_on",
+  "title": "Warum gähnen wir?",
+  "subtitle": "Körper & Gehirn",
+  "subject": "sciences",
+  "subcategory": "Unser Alltag erklärt",
+  "description": "Alle gähnen: Menschen, Hunde, manchmal sogar Föten. Es liegt wahrscheinlich nicht am „Sauerstoffmangel“. Hier sind die stärksten Hinweise.",
+  "hero": {
+    "image": "pourquoi_baille_t_on",
+    "ratio": "16:9",
+    "hook": "Du gähnst. Dein Nachbar gähnt. Und es ist (fast) kein Zufall, dass es ansteckend ist."
+  },
+  "sections": [
+    {
+      "id": "course_47_pourquoi_baille_t_on_intro",
+      "title": "Einführung",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gähnen scheint alltäglich zu sein. Allerdings handelt es sich um einen komplexen Reflex: Kiefer, Brustkorb, Zwerchfell, der ganze Körper ist beteiligt. Löwen, Hunde, Menschen: Viele Tiere gähnen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wir haben lange gesagt: „Es geht darum, mehr Sauerstoff zu haben“. Mittlerweile ist diese Idee weitgehend aufgegeben worden. Moderne Erklärungen sind interessanter."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p1",
+      "title": "Nicht (besonders) für Sauerstoff",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Experimente haben gezeigt, dass ein erhöhter Sauerstoffgehalt der Luft das Gähnen nicht verhindert. Senken Sie auch den Kohlendioxidgehalt etwas. Gähnen ist also kein einfaches „Luftholen“."
+        },
+        {
+          "type": "paragraph",
+          "text": "Heute ein starker Vorsprung: Gähnen hilft **bei der Regularisierung der Gehirntemperatur**. Durch weites Einatmen und Strecken des Gesichts „belüften“ und kühlen wir den Kopf ein wenig, insbesondere wenn wir müde sind."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p2",
+      "title": "Warum ist es ansteckend?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "contagious_yawning_people_group",
+          "ratio": "4:3",
+          "caption": "Oft reicht es aus, jemanden gähnen zu sehen, um den Reflex auszulösen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Beim Menschen kann das Sehen, Hören oder sogar Lesen des Wortes „Gähnen“ ein Gähnen auslösen. Es ist nicht nur eine dumme Nachahmung: Es beeinflusst auch **Empathie** und Gehirnschaltkreise, die mit  verbunden sind, Neuronen, die aktiviert werden, wenn wir handeln ... oder wenn wir jemanden handeln sehen. [[Spiegelneuronen und Ansteckung]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Kleine Kinder gähnen aufgrund einer Ansteckung kaum. Diese Sensibilität kommt später hinzu, zusammen mit bestimmten sozialen Fähigkeiten."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p3",
+      "title": "Wir gähnen bereits vor unserer Geburt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Föten gähnen etwa ab der 11. Schwangerschaftswoche. In diesem Alter kann die Lunge noch keine Luft atmen. Es geht also auch hier nicht darum, dass „der Sauerstoff ausgeht“."
+        },
+        {
+          "type": "paragraph",
+          "text": "Beim Fötus könnte Gähnen die Entwicklung der Kiefer- und Gesichtsmuskulatur fördern."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p4",
+      "title": "Gähnen, um wachsam zu bleiben?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wir gähnen oft, wenn wir müde sind, aber auch kurz vor einer Prüfung oder wenn uns langweilig ist und wir versuchen, konzentriert zu bleiben. Dehnübungen können das Nervensystem stimulieren und dabei helfen, wachsam zu bleiben."
+        },
+        {
+          "type": "takeaway",
+          "text": "Gähnen ist wahrscheinlich kein Sauerstoffmangel. Es dient eher der Regulierung des Gehirns (Temperatur, Wachsamkeit) und verbreitet sich beim Menschen auch durch soziale Ansteckung."
+        }
+      ]
+    }
+  ]
+}

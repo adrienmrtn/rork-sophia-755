@@ -1,0 +1,106 @@
+{
+  "id": "course_48_comment_fonctionne_la_memoire",
+  "title": "Wie funktioniert das Gedächtnis?",
+  "subtitle": "Gehirn",
+  "subject": "sciences",
+  "subcategory": "Unser Alltag erklärt",
+  "description": "Erinnerung ist keine Kamera. Jede Erinnerung wird rekonstruiert. Auf diese Weise kodiert, speichert und erfindet das Gehirn manchmal.",
+  "hero": {
+    "image": "comment_fonctionne_la_memoire",
+    "ratio": "16:9",
+    "hook": "Erinnern bedeutet nicht, eine Datei erneut zu lesen. Es geht darum, eine Szene zu rekonstruieren."
+  },
+  "sections": [
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_intro",
+      "title": "Einführung",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wir stellen uns den Speicher oft wie eine Festplatte vor: Wir zeichnen auf, wir speichern, wir lesen erneut. Das Gehirn funktioniert so nicht. Jedes Mal, wenn Sie sich erinnern, rekonstruieren Sie eine Szene aus Fragmenten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Es ist mächtig … und fehlbar. Um dies zu verstehen, müssen wir verstehen, warum wir vergessen, warum wir Fehler machen und warum wir lernen."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p1",
+      "title": "Mehrere Erinnerungen, nicht nur eine",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "human_brain_anatomy",
+          "ratio": "4:3",
+          "caption": "Verschiedene Bereiche des Gehirns verarbeiten unterschiedliche Formen des Gedächtnisses."
+        },
+        {
+          "type": "paragraph",
+          "text": "Da ist zunächst das : das, was Sie ein paar Sekunden lang „im Kopf“ haben, wie zum Beispiel eine Telefonnummer. Es ist begrenzt, im Durchschnitt etwa **7 Element**. Dann **Langzeitgedächtnis**: Fakten, Erinnerungen an Ereignisse, Fähigkeiten wie Fahrradfahren. [[Das Arbeitsgedächtnis]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Systeme befinden sich nicht alle am selben Ort im Gehirn. Der **vorderer Kortex**, der vordere Teil des Gehirns hinter der Stirn, hilft sehr beim Arbeitsgedächtnis. Andere Regionen, etwa der **neokortex**, die äußere Schicht des Gehirns, speichern langfristig."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p2",
+      "title": "Wie eine Erinnerung fixiert wird",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "hippocampus_brain_anatomy_scan",
+          "ratio": "4:3",
+          "caption": "Der Hippocampus, eine tiefe Struktur, hilft bei der Bildung neuer Erinnerungen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Damit Informationen von zerbrechlich zu haltbar werden, muss das Gehirn die Verbindungen zwischen **Neuronen**, den Nervenzellen, stärken. Wir sprechen von **Solidarität**, der Umwandlung einer jüngsten Erinnerung in eine bleibende Spur. Eine kleine Struktur namens **Seepferdchen**, die wie ein Seepferdchen im Schläfenlappen geformt ist, spielt eine Schlüsselrolle bei der Erinnerung an Ereignisse."
+        },
+        {
+          "type": "funFact",
+          "text": "Der Schlaf, insbesondere bestimmte Phasen, hilft dabei, das Gelernte des Tages zu festigen. Das Wiederholen und anschließende Schlafen funktioniert oft besser als das Wiederholen bis 3 Uhr morgens."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eine berühmte Regel, die mit dem **-Forscher Donald Hebb** in Verbindung steht: Neuronen, die gemeinsam feuern, neigen dazu, sich stärker zu verbinden. Zusammengefasst: „Was zusammen leuchtet, verbindet.“ Dies ist das Prinzip der **Neuroplastik**, der Fähigkeit des Gehirns, seine Verbindungen zu verändern."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p3",
+      "title": "Erinnern heißt ändern",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wenn Sie eine Erinnerung abrufen, wird sie vorübergehend **Formularleiste**, bearbeitbar. Es können sich Details aus der Gegenwart einschleichen. Dann speichert das Gehirn sie erneut. Deshalb können zwei Zeugen desselben Unfalls unterschiedliche Versionen erzählen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wir können sogar **falsche Erinnerungen** erzeugen: Szenen, die wir für wahr halten, die aber nie oder nicht so stattgefunden haben. Das Gehirn füllt die Lücken mit dem, was es bereits weiß."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p4",
+      "title": "Vergessen ist nicht immer ein Misserfolg",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wenn Sie sich an jedes unnötige Detail erinnern würden, wären Sie gesättigt. Das Vergessen hilft uns, zu verallgemeinern, zu entscheiden, das Wesentliche beizubehalten. Ein gutes Gedächtnis sortiert so viel, wie es behält."
+        },
+        {
+          "type": "takeaway",
+          "text": "Erinnerung ist eine aktive Rekonstruktion, keine perfekte Aufzeichnung. Es ist auf mehrere Systeme angewiesen, wird vor allem im Schlaf gefestigt und kann bei jeder Erinnerung verzerrt werden."
+        }
+      ]
+    }
+  ]
+}

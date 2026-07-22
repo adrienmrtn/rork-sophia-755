@@ -1,0 +1,102 @@
+{
+  "id": "course_49_pourquoi_a_t_on_des_frissons",
+  "title": "Warum bekommen wir Schüttelfrost?",
+  "subtitle": "Körper & Emotionen",
+  "subject": "sciences",
+  "subcategory": "Unser Alltag erklärt",
+  "description": "Kälte, Angst, Musik: Frösteln kann mehrere Ursachen haben. Sie passieren alle das Nervensystem, jedoch nicht aus den gleichen Gründen.",
+  "hero": {
+    "image": "pourquoi_a_t_on_des_frissons",
+    "ratio": "16:9",
+    "hook": "Ein Schauer der Kälte und ein Schauer der Musik erzählen nicht die gleiche Geschichte."
+  },
+  "sections": [
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_intro",
+      "title": "Einführung",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Du zitterst, als du in den Regen gehst. Sie zittern auch, wenn Sie ein Lied hören, das Sie aufregt. Gleiches Wort, unterschiedliche Mechanismen."
+        },
+        {
+          "type": "paragraph",
+          "text": "In beiden Fällen reagiert der Körper schnell. Aber das eine dient hauptsächlich dem Aufwärmen, beim anderen geht es eher um Vergnügen und Emotionen."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p1",
+      "title": "Der Nervenkitzel der Kälte: ein Mini-Boiler",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Körper möchte bei **37 °C** bleiben. Wenn die Haut Kälte erkennt, alarmiert sie einen Bereich des Gehirns, den **Hypothalamus**, der wie ein Thermostat wirkt."
+        },
+        {
+          "type": "image",
+          "asset": "goosebumps_cold_skin",
+          "ratio": "4:3",
+          "caption": "Gänsehaut: ein alter Reflex, der die Nackenhaare sträubt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Muskeln ziehen sich sehr schnell und wiederholt zusammen: Das ist der Schauer. Diese Kontraktionen erzeugen Wärme. „Gänsehaut“ entsteht durch einen alten Reflex: das Aufrichten der Haare zur besseren Isolierung. Zu Hause, mit wenig Fell, dient es hauptsächlich als Überbleibsel."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p2",
+      "title": "Der Nervenkitzel der Angst",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Konfrontiert mit einer Bedrohung wird der  (der „wachsame“ Zweig des Nervensystems) aktiviert. Es setzt **Adrenalin** frei. Die Muskeln spannen sich, das Herz rast, die Haut zittert. [[sympathisches Nervensystem]]"
+        },
+        {
+          "type": "image",
+          "asset": "adrenaline_stress_response_body",
+          "ratio": "4:3",
+          "caption": "Adrenalin bereitet den Körper auf eine schnelle Reaktion vor."
+        },
+        {
+          "type": "funFact",
+          "text": "Dasselbe System erklärt, warum man Gänsehaut bekommen kann, wenn man sich einen Horrorfilm ansieht … während man es sich auf der Couch gemütlich macht."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p3",
+      "title": "Der Nervenkitzel der Musik",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bestimmte Nervenkitzel, manchmal auch „Schüttelfrost“ genannt, gehen mit einer starken Emotion einher: Musik, Sprache, Film. Sie aktivieren den **Belohnungskreislauf des Gehirns mit **Dopamin****, einer Substanz, die mit Vergnügen verbunden ist."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dies ist für das unmittelbare Überleben nicht sinnvoll. Es ist vielmehr der Körper, der auf eine intensive Emotion reagiert, wie eine vorbeiziehende Welle."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p4",
+      "title": "Wann sollte man sich Sorgen machen?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Schüttelfrost mit hohem Fieber kann auf eine Infektion hinweisen. Ständiger Schüttelfrost ohne ersichtlichen Grund erfordert ärztliche Hilfe. Aber meistens ist ein Schauer aufgrund von Kälte, Stress oder Musik einfach darauf zurückzuführen, dass der Körper seine Arbeit erledigt."
+        },
+        {
+          "type": "takeaway",
+          "text": "Kalter Schauer erzeugt Hitze. Wer Angst hat, bereitet sich auf eine Reaktion vor. Die Musik berührt emotionales Vergnügen. Gleiches Gefühl, unterschiedliche Ursachen."
+        }
+      ]
+    }
+  ]
+}

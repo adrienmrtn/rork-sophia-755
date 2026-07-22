@@ -1,0 +1,135 @@
+{
+  "id": "course_38_le_11_septembre_2001",
+  "title": "11 settembre 2001",
+  "subtitle": "2001",
+  "subject": "histoire",
+  "subcategory": "Guerra fredda & mondo contemporaneo",
+  "description": "L'11 settembre 2001 , diciannove terroristi di Al-Qaeda dirottano quattro aerei. L’attacco più mortale nella storia americana inaugura l’era della guerra al terrorismo.",
+  "hero": {
+    "image": "le_11_septembre_2001",
+    "ratio": "16:9",
+    "hook": "Una mattina di settembre che chiude l’era post-Guerra Fredda e apre un secolo di guerre."
+  },
+  "sections": [
+    {
+      "id": "course_38_le_11_septembre_2001_intro",
+      "title": "Introduzione",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Martedì **11 settembre 2001**, diciannove membri di , un'organizzazione terroristica fondata da **Osama Bin Laden**, hanno dirottato quattro aerei. Due hanno colpito il **Centro mondiale del commercio** di New York, un terzo il **Pentagono**, quartier generale della difesa americana. Il quarto si è schiantato in Pennsylvania dopo la rivolta dei passeggeri. **[[Al-Qaida]]**"
+        },
+        {
+          "type": "paragraph",
+          "text": "Risultati: **2 977** morto. Al di là del dramma, l’attacco mette fine alla speranza di un ordine mondiale pacifico e innesca una serie di conflitti che stanno ancora plasmando il 21° secolo."
+        }
+      ]
+    },
+    {
+      "id": "course_38_le_11_septembre_2001_p1",
+      "title": "Da dove viene Al Qaeda?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Osama Bin Laden**, miliardario saudita divenuto leader jihadista, fondò  alla fine degli anni **1980**, sulla scia di . Dopo il ritiro sovietico, denunciò la presenza americana nello  e decise di colpire l'Occidente. **[[Al-Qaida]]** **[[La guerra sovietico-afghana (1979-1989)]]** **[[Arabia Saudita]]**"
+        },
+        {
+          "type": "image",
+          "asset": "osama_bin_laden_portrait",
+          "ratio": "1:1",
+          "caption": "Osama bin Laden, fondatore di Al-Qaeda."
+        },
+        {
+          "type": "paragraph",
+          "text": "I segnali si accumulano: attacco al World Trade Center nel **1993**, ambasciate dell'Africa orientale nel **1998**, cacciatorpediniere USS Cole nel **2000**. Tuttavia, la compartimentazione tra CIA e FBI, i servizi segreti americani, impedisce che i fili vengano collegati in tempo."
+        },
+        {
+          "type": "funFact",
+          "text": "I 19 dirottatori hanno speso circa **400.000** di dollari per un attacco il cui costo economico complessivo supererà i **2 trilioni**."
+        }
+      ]
+    },
+    {
+      "id": "course_38_le_11_septembre_2001_p2",
+      "title": "La cronologia dell'11 settembre",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Alle **8:46**, il volo American 11 colpisce la Torre Nord. Alle **9:03**, lo United 175 colpisce la Torre Sud in diretta TV. Alle **9:37**, l'American 77 colpisce il Pentagono. Alle **10:03**, lo United 93 precipita in Pennsylvania."
+        },
+        {
+          "type": "image",
+          "asset": "world_trade_center_twin_towers_september_11_2001",
+          "ratio": "16:9",
+          "caption": "Le Torri Gemelle del World Trade Center, obiettivi centrali degli attentati."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le torri crollano: sud alle **9:59**, nord alle **10:28**. Lo spazio aereo americano viene chiuso per la prima volta. Queste immagini diventano il trauma fondante di una generazione."
+        }
+      ]
+    },
+    {
+      "id": "course_38_le_11_septembre_2001_p3",
+      "title": "La guerra al terrorismo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nell'ottobre **2001**, operazione  mirata all'Afghanistan: distruggere Al-Qaeda e rovesciare lo , il movimento islamico che dava rifugio a Bin Laden. Kabul cade rapidamente. La guerra dura vent'anni. **[[Enduring Freedom]]** **[[Talebani]]**"
+        },
+        {
+          "type": "paragraph",
+          "text": "Nel marzo **2003**, senza mandato dell'ONU, gli Stati Uniti hanno lanciato , accusando il dittatore  di armi di distruzione di massa. L'accusa è falsa; il paese cade nel caos. Nella , una base americana a Cuba, i detenuti rimangono al di fuori della legge tradizionale. Bin Laden è stato ucciso il **1 maggio 2011** in Pakistan. **[[Saddam Hussein]]** **[[Guantanamo]]** [[La guerra in Iraq (2003)]]"
+        }
+      ]
+    },
+    {
+      "id": "course_38_le_11_septembre_2001_p4",
+      "title": "Un mondo sotto sorveglianza",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Negli Stati Uniti, la **Atto PATRIOTA**, una legge di emergenza, espande massicciamente la sorveglianza. Segue l’Europa. Gli aeroporti cambiano continuamente. Ground Zero, luogo delle torri crollate, diventa memoriale e simbolo di resilienza."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le guerre che seguirono causarono centinaia di migliaia di morti e milioni di sfollati. Il terrorismo globale, più decentralizzato, utilizza gli strumenti della globalizzazione per combatterlo."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "11 settembre 2001",
+              "title": "Attacchi",
+              "detail": "2.977 morti negli Stati Uniti."
+            },
+            {
+              "date": "ottobre 2001",
+              "title": "Afghanistan",
+              "detail": "Operazione Enduring Freedom."
+            },
+            {
+              "date": "2003",
+              "title": "Iraq",
+              "detail": "Invasione senza mandato ONU."
+            },
+            {
+              "date": "2011",
+              "title": "Morte di Bin Laden",
+              "detail": "Raid americano in Pakistan."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "**11 settembre 2001** trasforma una minaccia in una guerra globale: interventi in Afghanistan e Iraq e un cambiamento duraturo della sicurezza nelle democrazie."
+        }
+      ]
+    }
+  ]
+}

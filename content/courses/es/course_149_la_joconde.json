@@ -1,0 +1,137 @@
+{
+  "id": "course_149_la_joconde",
+  "title": "La Mona Lisa",
+  "subtitle": "1503-1519",
+  "subject": "art",
+  "subcategory": "Obras icónicas",
+  "description": "Pintada por **Leonardo da Vinci** entre **1503** y **1519**, *La Mona Lisa* se ha convertido en el icono absoluto del Louvre. Técnica, sonrisa misteriosa… y un vuelo en **1911** que lo cambió todo.",
+  "hero": {
+    "image": "la_joconde",
+    "ratio": "16:9",
+    "hook": "Una sonrisa, un robo, un mito: cómo un retrato se convirtió en la obra más famosa del mundo."
+  },
+  "sections": [
+    {
+      "id": "course_149_la_joconde_intro",
+      "title": "Introducción",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "*La Mona Lisa*, pintada entre **1503** y **1519** por **Leonardo da Vinci**, es el cuadro más visitado del mundo. Expuesto en el **Lumbrera**, fascina tanto por su técnica como por su historia. No es sólo un hermoso retrato. Es un mito hecho por el arte, la ciencia y una noticia."
+        },
+        {
+          "type": "paragraph",
+          "text": "¿Por qué esta cara y no otra? Porque Leonardo concentró allí sus innovaciones y porque un vuelo espectacular lo hizo famoso a escala mundial."
+        }
+      ]
+    },
+    {
+      "id": "course_149_la_joconde_p1",
+      "title": "Leonardo y el sfumato",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "El retrato comienza en Florencia alrededor de **1503**. El patrocinador es el comerciante **Francesco del Giocondo**. La modelo sería su esposa, . Pero Leonard nunca entrega el cuadro. Lo conservó, lo retocó durante años y lo llevó a Francia, donde murió en **1519**. [[Lisa Gherardini]]"
+        },
+        {
+          "type": "image",
+          "asset": "mona_lisa_leonardo_da_vinci_louvre_painting",
+          "ratio": "4:3",
+          "caption": "La Mona Lisa del Louvre: un pequeño panel de álamo que se ha convertido en un icono mundial."
+        },
+        {
+          "type": "paragraph",
+          "text": "Su técnica característica es : veladuras, capas muy finas, que borran los contornos. No más línea dura. El rostro se derrite en el aire. Leonardo añade también el : el paisaje lejano se vuelve azul y se suaviza, como en la visión real. [[sfumato leonardiano]] [[Perspectiva atmosférica]]"
+        }
+      ]
+    },
+    {
+      "id": "course_149_la_joconde_p2",
+      "title": "La sonrisa que juega con los ojos.",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La famosa sonrisa no es sólo una emoción pintada. Juega con nuestro . Cuando miramos fijamente a los ojos de la modelo, los bordes de la retina ven la boca en suaves sombras: la sonrisa parece presente. Cuando miras directamente a la boca, disminuye. [[Visión periférica]]"
+        },
+        {
+          "type": "image",
+          "asset": "mona_lisa_smile_detail_close_up",
+          "ratio": "1:1",
+          "caption": "Cuanto más lo miras, más parece desaparecer la sonrisa."
+        },
+        {
+          "type": "funFact",
+          "text": "Leonardo, pintor y erudito, estudió óptica. El misterio de la sonrisa reside en parte en un conocimiento preciso de cómo el ojo humano procesa las sombras."
+        },
+        {
+          "type": "paragraph",
+          "text": "Resultado: el rostro parece vivo, cambiante, casi consciente de nuestra mirada."
+        }
+      ]
+    },
+    {
+      "id": "course_149_la_joconde_p3",
+      "title": "1911: el vuelo que inventó la fama",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En el siglo XIX, *La Mona Lisa* era admirada, pero aún no era la obra número uno del Louvre. Todo cambió el **El 21 de agosto de 1911.**. , un vidriero italiano del museo, lo roba: es . Lo esconde debajo de la blusa y sale tranquilamente. [[Vincenzo Peruggia]] [[El vuelo de la Mona Lisa (1911)]]"
+        },
+        {
+          "type": "image",
+          "asset": "mona_lisa_stolen_1911_newspaper_headline",
+          "ratio": "4:3",
+          "caption": "1911: la ausencia del cuadro copa los titulares y crea una estrella."
+        },
+        {
+          "type": "paragraph",
+          "text": "La investigación se convierte en un escándalo. El poeta  es encarcelado por un tiempo. Se cuestiona a . Cuando la pintura reaparece en **1913**, ya no es sólo una pintura. Es una celebridad. [[Guillaume Apollinaire]] [[Pablo Picasso]]"
+        }
+      ]
+    },
+    {
+      "id": "course_149_la_joconde_p4",
+      "title": "Un icono bajo un cristal",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hoy, pintado sobre madera de álamo, vive detrás de un , en un escaparate climatizado. Ataques con ácido, lanzamiento de objetos: la protección se ha vuelto necesaria. Y las parodias, desde Duchamp hasta Internet, demuestran que se ha convertido en un lenguaje universal. [[Vidrio a prueba de balas]]"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1503",
+              "title": "Comienzo del retrato",
+              "detail": "Leonardo comienza La Mona Lisa en Florencia."
+            },
+            {
+              "date": "1519",
+              "title": "muerte de leonardo",
+              "detail": "El cuadro permanece en Francia."
+            },
+            {
+              "date": "1911",
+              "title": "el vuelo",
+              "detail": "Peruggia transforma la obra en un mito mediático."
+            },
+            {
+              "date": "1913",
+              "title": "Atrás",
+              "detail": "El cuadro regresa al Louvre como una estrella mundial."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "*La Mona Lisa* debe su gloria tanto al genio de Leonardo (sfumato, sonrisa óptica) como a la historia: un robo en 1911 transformó una obra maestra admirada en un icono mundial."
+        }
+      ]
+    }
+  ]
+}

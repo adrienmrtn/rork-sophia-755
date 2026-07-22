@@ -4,3 +4,6 @@ node_modules
 .rork
 __pycache__/
 *.pyc
+
+# Machine-translation cache for CoursesV2 (regenerable)
+content/locales/_v2_mt_cache/

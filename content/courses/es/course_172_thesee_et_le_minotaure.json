@@ -1,0 +1,120 @@
+{
+  "id": "course_172_thesee_et_le_minotaure",
+  "title": "Teseo y el Minotauro",
+  "subtitle": "El hilo, el monstruo, las velas.",
+  "subject": "mythologie",
+  "subcategory": "Grecia: los héroes",
+  "description": "Teseo mata al Minotauro usando el hilo de Ariadna. Pero se olvida de cambiar las velas: su padre Egeo se arroja al mar, que aún lleva su nombre.",
+  "hero": {
+    "image": "thesee_et_le_minotaure",
+    "ratio": "16:9",
+    "hook": "Un monstruo en un laberinto. Un hilo para salir. Velas olvidadas que bautizan un mar."
+  },
+  "sections": [
+    {
+      "id": "course_172_thesee_et_le_minotaure_intro",
+      "title": "Introducción",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Teseo**, héroe fundador de Atenas, se enfrenta al **Minotauro**, una criatura mitad hombre, mitad toro escondida en el  de Creta. La historia combina coraje, astucia romántica y tragedia familiar. [[Laberinto]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Al matar al monstruo, Teseo libera a Atenas de un sangriento tributo. Pero un detalle olvidado, velas negras en lugar de blancas, le costará la vida a su padre y dará nombre al mar Egeo."
+        }
+      ]
+    },
+    {
+      "id": "course_172_thesee_et_le_minotaure_p1",
+      "title": "El Minotauro y el homenaje de Atenas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "El rey **Minos** de Creta se niega a sacrificar un toro blanco a **Poseidón**, dios de los mares. Para vengarse, Poseidón inspira en la reina **Pasifae** la pasión por el animal. Nace el Minotauro. Minos encarga al inventor  la tarea de construir una prisión sin salida: el [[Laberinto]]."
+        },
+        {
+          "type": "image",
+          "asset": "theseus_minotaur_cretan_labyrinth_painting",
+          "ratio": "4:3",
+          "caption": "El Minotauro, encerrado en el Laberinto de Creta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Creta domina entonces el mar: un . Después de una guerra perdida, Atenas debe entregar cada nueve años **asientos para jóvenes y asientos para niñas** como alimento al monstruo. En la tercera entrega, **Teseo**, hijo del rey **Egeo**, se ofrece como voluntario. [[Talasocracia]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Egeo y Teseo acuerdan una señal: **blanco** zarpa si el héroe regresa vivo, **negro zarpa** si está muerto. Este detalle decidirá un drama."
+        }
+      ]
+    },
+    {
+      "id": "course_172_thesee_et_le_minotaure_p2",
+      "title": "Pan rallado",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En Creta, **Ariane**, hija de Minos, se enamora de Teseo. Ella sabe que la fuerza no es suficiente en el Laberinto. Con la ayuda de Dédalo, le regala un ovillo de lana: . Lo fija a la entrada y desenrolla el hilo a medida que avanza. [[Pan rallado]]"
+        },
+        {
+          "type": "image",
+          "asset": "ariadne_thread_theseus_labyrinth_painting",
+          "ratio": "4:3",
+          "caption": "Ariadna le entrega a Teseo el hilo que le salvará la vida."
+        },
+        {
+          "type": "paragraph",
+          "text": "Teseo mata al Minotauro y luego rebobina el hilo para salir. Huye con los jóvenes atenienses y Ariadna. Pero en la isla de **Naxos**, la deja durmiendo. Algunos dicen que el dios **dionisio** la quería como esposa. Ariadna, desesperada y luego divinizada, recibe una corona de oro convertida en constelación."
+        }
+      ]
+    },
+    {
+      "id": "course_172_thesee_et_le_minotaure_p3",
+      "title": "Las velas negras del Cabo Sounion",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "El regreso debería ser una celebración. Embriagado por la victoria o preocupado por el abandono de Ariadna, Teseo se olvida de izar las velas blancas. El barco se acerca a Atenas con velas negras."
+        },
+        {
+          "type": "image",
+          "asset": "cape_sounion_aegean_sea_cliff_sunset",
+          "ratio": "4:3",
+          "caption": "Cabo Sunión, desde donde Egeo esperaba el regreso de su hijo."
+        },
+        {
+          "type": "paragraph",
+          "text": "En **Cabo Sunión**, el viejo rey Egeo otea el horizonte. Sólo ve la negrura del duelo. Convencido de que su hijo está muerto, se arroja desde el acantilado. Desde entonces, el mar recibió el nombre de **AMar Egeo**. Teseo llega rey... y queda huérfano por su propia negligencia."
+        },
+        {
+          "type": "funFact",
+          "text": "El “barco de Teseo” se ha convertido en una paradoja filosófica: si reemplazamos todas las tablas una por una, ¿sigue siendo el mismo barco?"
+        }
+      ]
+    },
+    {
+      "id": "course_172_thesee_et_le_minotaure_p4",
+      "title": "Teseo, rey de Atenas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Coronado, Teseo se convierte en un rey organizador. Se le atribuye : la unificación de las ciudades del Ática en torno a Atenas. Fundó los , los principales festivales de la ciudad. El poder se combina con el derecho. [[Sinecismo]] [[Panateneas]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Su reinado incluye otras aventuras, como la lucha contra el . Pero el Laberinto sigue siendo su marca: saber desentrañar lo inextricable, sin dejar de ser vulnerable al olvido. Teseo forja la grandeza de Atenas a partir de las cenizas de una tragedia familiar. [[Amazonas]]"
+        },
+        {
+          "type": "takeaway",
+          "text": "**Teseo** mata al **Minotauro** gracias al hilo de **Ariane**. Al olvidarse de cambiar las velas, provoca el suicidio de su padre **Egeo**, que da nombre al mar Egeo."
+        }
+      ]
+    }
+  ]
+}

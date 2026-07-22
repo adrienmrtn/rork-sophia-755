@@ -1,0 +1,114 @@
+{
+  "id": "course_177_dipe_et_le_sphinx",
+  "title": "Edipo y la Esfinge",
+  "subtitle": "El enigma y la ceguera",
+  "subject": "mythologie",
+  "subcategory": "Grecia: los héroes",
+  "description": "Edipo salva a Tebas resolviendo el enigma de la Esfinge. Esta victoria del espíritu, sin embargo, abre la puerta a la tragedia más terrible.",
+  "hero": {
+    "image": "oedipe_et_le_sphinx",
+    "ratio": "16:9",
+    "hook": "Un monstruo plantea un enigma. Edipo responde \"Hombre\". Salva una ciudad... y camina hacia su propia desgracia."
+  },
+  "sections": [
+    {
+      "id": "course_177_dipe_et_le_sphinx_intro",
+      "title": "Introducción",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Antes de ser el héroe trágico que mata a su padre y se casa con su madre, **Edipo** es ante todo un salvador. Frente a **Tebas**, una ciudad de Beocia en el centro de Grecia, se enfrenta a la **Esfinge**, un monstruo que devora a cualquiera que falle su acertijo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gana con la mente, no con la espada. Pero esta victoria le sitúa en un trono donde tendrá que afrontar lo que no sabe de sí mismo. El mito opone el conocimiento del hombre en general... y la trágica ignorancia de uno mismo."
+        }
+      ]
+    },
+    {
+      "id": "course_177_dipe_et_le_sphinx_p1",
+      "title": "Un monstruo en el camino a Tebas.",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La Esfinge es un castigo divino, a menudo vinculado a **Hera**. Cuerpo de león, busto de mujer, alas de pájaro, cola de serpiente: una criatura híbrida. Instalado cerca de la ciudad, corta las carreteras. El rey **Laio** ha desaparecido, asesinado por un desconocido en un cruce de caminos. La ciudad no tiene un líder real."
+        },
+        {
+          "type": "image",
+          "asset": "sphinx_greek_mythology_thebes_monster",
+          "ratio": "4:3",
+          "caption": "La Esfinge de Tebas, guardiana de un enigma mortal."
+        },
+        {
+          "type": "paragraph",
+          "text": "Todo transeúnte debe responder. El fracaso significa muerte. Incluso Regent  falla. El monstruo encarna el triunfo del enigma sobre la razón... hasta la llegada de un extraño llamado Edipo. [[Creonte]]"
+        }
+      ]
+    },
+    {
+      "id": "course_177_dipe_et_le_sphinx_p2",
+      "title": "“¿Qué ser tiene cuatro, dos o tres pies? »",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Edipo huye de Corinto. Un oráculo le predijo que mataría a su padre y se casaría con su madre. Cree que está evitando el destino. En el camino a Tebas, la Esfinge hace su pregunta: ¿qué ser tiene cuatro pies por la mañana, dos al mediodía y tres por la tarde?"
+        },
+        {
+          "type": "image",
+          "asset": "oedipus_answering_sphinx_ingres_painting",
+          "ratio": "4:3",
+          "caption": "Edipo frente a la Esfinge, victoria de la inteligencia."
+        },
+        {
+          "type": "funFact",
+          "text": "La palabra **Esfinge** proviene del griego *esfinge*, “apretar” o “estrangular”. Designa tanto la forma en que el monstruo mata... como la forma en que un enigma paraliza la mente."
+        },
+        {
+          "type": "paragraph",
+          "text": "Edipo responde: **“El Hombre”**. De niño gatea a cuatro patas; de adulto camina sobre dos piernas; viejo, se apoya en un bastón. La Esfinge, derrotada, se arroja desde la roca. Es un  brutal. Tebas es libre. Según lo prometido, Edipo recibe la corona y la mano de la reina viuda, **Yocasta**. [[Giro de vuelta]]"
+        }
+      ]
+    },
+    {
+      "id": "course_177_dipe_et_le_sphinx_p3",
+      "title": "Saberlo todo... excepto quién eres",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Edipo reina. La ciudad prospera. Pero más tarde llega una plaga. **Apolo** revela: el flagelo terminará cuando se encuentre al asesino de Layo. Edipo inicia una investigación con la misma energía que antes frente a la Esfinge."
+        },
+        {
+          "type": "paragraph",
+          "text": "La ironía es cruel. Quien haya definido al “Hombre” no sabe quién es. Ha ganado un  público, un duelo de argumentos, pero sigue ciego a su identidad. En **Sófocles**, en *Edipo Rey*, es el corazón de la tragedia. [[dialéctico]]"
+        }
+      ]
+    },
+    {
+      "id": "course_177_dipe_et_le_sphinx_p4",
+      "title": "La verdad y los ojos cegados.",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La verdad sale a la luz: Edipo mató a Layo, su padre, y se casó con Yocasta, su madre. Yocasta se suicida. Edipo se arranca los ojos. Habiendo quedado ciego, finalmente “ve”. Deambula, apoyado por su hija Antígona, convirtiéndose él mismo en el anciano de tres patas del enigma."
+        },
+        {
+          "type": "funFact",
+          "text": "**Freud** nombró el  en honor a este mito: no para hacer de Edipo un monstruo, sino para hablar de deseos inconscientes que la civilización aprende a reprimir. [[complejo de Edipo]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "La historia se convierte en un pilar de la cultura occidental: inteligencia brillante, destino inevitable y el terrible precio de la verdad sobre uno mismo."
+        },
+        {
+          "type": "takeaway",
+          "text": "Edipo libera a Tebas respondiendo el \"Hombre\" al enigma de la Esfinge. Esta genialidad no le impide realizar, sin saberlo, la profecía: el mito del autoengaño."
+        }
+      ]
+    }
+  ]
+}

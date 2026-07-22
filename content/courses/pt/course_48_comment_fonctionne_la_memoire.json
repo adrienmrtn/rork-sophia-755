@@ -1,0 +1,106 @@
+{
+  "id": "course_48_comment_fonctionne_la_memoire",
+  "title": "Como funciona a memória?",
+  "subtitle": "Cérebro",
+  "subject": "sciences",
+  "subcategory": "O nosso quotidiano explicado",
+  "description": "A memória não é uma câmera. Toda memória é reconstruída. É assim que o cérebro codifica, armazena… e às vezes inventa.",
+  "hero": {
+    "image": "comment_fonctionne_la_memoire",
+    "ratio": "16:9",
+    "hook": "Lembrar não é reler um arquivo. É reconstruir uma cena."
+  },
+  "sections": [
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Muitas vezes imaginamos a memória como um disco rígido: gravamos, armazenamos, relemos. O cérebro não funciona assim. Cada vez que você se lembra, você **reconstruído** uma cena a partir de fragmentos."
+        },
+        {
+          "type": "paragraph",
+          "text": "É poderoso… e falível. Compreender isso significa entender por que esquecemos, por que cometemos erros e por que aprendemos."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p1",
+      "title": "Várias memórias, não apenas uma",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "human_brain_anatomy",
+          "ratio": "4:3",
+          "caption": "Diferentes áreas do cérebro lidam com diferentes formas de memória."
+        },
+        {
+          "type": "paragraph",
+          "text": "Primeiro, há o : aquilo que você mantém “em mente” por alguns segundos, como um número de telefone. É limitado, em média em torno de elementos **7**. Depois, **memória de longo prazo**: fatos, memórias de eventos, habilidades como andar de bicicleta. [[A memória de trabalho]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Nem todos esses sistemas vivem no mesmo lugar do cérebro. O córtex pré-frontal ****, na parte frontal do cérebro na testa, ajuda muito na memória do trabalho. Outras regiões, como onde**neocórtex**, a camada externa do cérebro, armazenam o longo prazo."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p2",
+      "title": "Como uma memória é consertada",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "hippocampus_brain_anatomy_scan",
+          "ratio": "4:3",
+          "caption": "O hipocampo, uma estrutura profunda, ajuda a formar novas memórias."
+        },
+        {
+          "type": "paragraph",
+          "text": "Para que a informação passe de frágil a durável, o cérebro deve fortalecer as conexões entre **neurônios**, as células nervosas. Estamos falando de **consolidação**, a transformação de uma memória recente em um traço duradouro. Uma pequena estrutura chamada **cavalo-marinho**, em forma de cavalo-marinho no lobo temporal, desempenha um papel fundamental nas memórias de eventos."
+        },
+        {
+          "type": "funFact",
+          "text": "O sono, principalmente em certas fases, ajuda a consolidar o que aprendemos durante o dia. Revisar e depois dormir geralmente funciona melhor do que revisar até as 3 da manhã."
+        },
+        {
+          "type": "paragraph",
+          "text": "Uma regra famosa, ligada ao pesquisador do **, Donald Hebb**: neurônios que disparam juntos tendem a se conectar com mais força. Em resumo: “o que acende junto une”. Este é o princípio da **neuroplasticidade**, a capacidade do cérebro de modificar suas conexões."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p3",
+      "title": "Lembrar é modificar",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Quando você recupera uma memória, ela se torna temporariamente **maleável**, editável. Detalhes do presente podem surgir. Então o cérebro os armazena novamente. É por isso que duas testemunhas do mesmo acidente podem contar versões diferentes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Podemos até criar **falsas memórias**: cenas que acreditamos serem verdadeiras, mas que nunca aconteceram, ou não. O cérebro preenche as lacunas com o que já sabe."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p4",
+      "title": "Esquecer nem sempre é um fracasso",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Se você se lembrasse de cada detalhe desnecessário, ficaria saturado. O esquecimento ajuda-nos a generalizar, a decidir, a manter o essencial. Uma boa memória classifica tanto quanto retém."
+        },
+        {
+          "type": "takeaway",
+          "text": "A memória é uma reconstrução ativa, não um registro perfeito. Depende de vários sistemas, consolida-se especialmente durante o sono e pode ficar distorcido a cada lembrete."
+        }
+      ]
+    }
+  ]
+}

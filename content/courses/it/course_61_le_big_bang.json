@@ -1,0 +1,116 @@
+{
+  "id": "course_61_le_big_bang",
+  "title": "Il Big Bang",
+  "subtitle": "13,8 miliardi di anni",
+  "subject": "sciences",
+  "subcategory": "La Terra e l'Universo",
+  "description": "13,8 miliardi di anni fa l’universo cominciò ad espandersi. Non è una bomba nel vuoto: è lo spazio stesso che cresce.",
+  "hero": {
+    "image": "le_big_bang",
+    "ratio": "16:9",
+    "hook": "Il Big Bang non è un’esplosione nello spazio. È lo spazio che comincia a crescere."
+  },
+  "sections": [
+    {
+      "id": "course_61_le_big_bang_intro",
+      "title": "Introduzione",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**13,8 miliardi di anni fa**, tutto ciò che esiste oggi era concentrato in uno stato estremamente denso e caldo. Gli scienziati a volte chiamano questo inizio : un punto in cui densità e temperatura sono così estreme che le nostre leggi abituali non sono più sufficienti a descrivere la situazione. [[singolarità]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Quindi l'universo inizia ad espandersi. Non è una bomba che getta la materia nel vuoto che già c'è. È **spaziotempo**, il tessuto che unisce spazio e tempo, che cresce portando con sé la materia. Questa storia continua oggi."
+        }
+      ]
+    },
+    {
+      "id": "course_61_le_big_bang_p1",
+      "title": "Non un'esplosione nel vuoto",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Il nome **“Big Bang”** crea confusione. Spesso immaginiamo i fuochi d'artificio nel mezzo di una stanza vuota. Ma prima di questo evento non c’è né spazio né fuori. Lo spazio e il tempo come li conosciamo iniziano con lui. Chiedi \"cosa c'era prima?\" » diventa quindi molto delicato: il “prima” non ha più lo stesso significato."
+        },
+        {
+          "type": "image",
+          "asset": "big_bang_universe_expansion_galaxies",
+          "ratio": "auto",
+          "caption": "L'espansione dell'Universo a partire dal Big Bang."
+        },
+        {
+          "type": "funFact",
+          "text": "Il termine \"Big Bang\" è stato coniato nel **1949** dall'astrofisico britannico **Fred Hoyle**, che non ci credeva. Voleva ridere all'idea. Il soprannome rimase."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per immaginare l'espansione, immagina dei punti disegnati su un palloncino. Quando gonfi il palloncino ogni punto si allontana dagli altri. Nessun punto sulla superficie è “il centro”. Nell'universo è un po' la stessa idea: le **galassie**, immensi gruppi di stelle, si allontanano l'una dall'altra perché lo spazio tra loro si sta allungando."
+        }
+      ]
+    },
+    {
+      "id": "course_61_le_big_bang_p2",
+      "title": "Tre grandi prove",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In **1929**, l'astronomo americano **Edwin Hubble** ha osservato che quanto più una galassia è lontana, tanto più velocemente si allontana. L'universo quindi non è fisso: sta crescendo. Questa è **Gamba Hubble**, la relazione tra distanza e velocità di fuga delle galassie."
+        },
+        {
+          "type": "paragraph",
+          "text": "In **1965**, due ingegneri, **Arno Penzias** e **Roberto Wilson**, hanno captato un crepitio radiofonico proveniente da ogni parte. Questo è lo : una sorta di eco termico dell'universo giovane, emesso quando la luce poté circolare liberamente per la prima volta, circa **380.000 anni** dall'inizio. [[sfondo cosmico a microonde]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Una piccola parte della “neve” dei vecchi televisori analogici mal sintonizzati proveniva da questo sfondo cosmico."
+        },
+        {
+          "type": "paragraph",
+          "text": "Terzo pilastro: le proporzioni degli elementi leggeri. I calcoli prevedono che nei primi minuti si formeranno circa **75%** di idrogeno e **25%** di elio. Le osservazioni confermano queste cifre. Questa è la , la fabbrica dei primi nuclei atomici nei minuti successivi al Big Bang. [[nucleosintesi primordiale]]"
+        }
+      ]
+    },
+    {
+      "id": "course_61_le_big_bang_p3",
+      "title": "Una sequenza temporale accelerata",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Subito dopo l'inizio, l'universo attraversa una fase di **inflazione**, un'espansione estremamente rapida in una frazione di secondo. Quindi, circa **3 minuti**, **protoni** e **neutrone**, le particelle che compongono i nuclei atomici, si assemblano nei primi nuclei. Per molto tempo l'universo rimane come una nebbia opaca: la luce non viaggia liberamente."
+        },
+        {
+          "type": "paragraph",
+          "text": "Intorno a **380.000 anni**, gli **elettronica**, particelle leggere che orbitano attorno ai nuclei, si uniscono ai nuclei per formare atomi neutri. Si libera la luce: è l'emissione del fondo diffuso. Le prime stelle nacquero molto più tardi, circa **200 milioni di anni** dopo. Il nostro Sole è apparso solo **4,6 miliardi di anni fa**, da materiale riciclato da antiche stelle."
+        },
+        {
+          "type": "funFact",
+          "text": "Se la storia dell'universo si svolgesse in un anno, il Big Bang avverrebbe il 1° gennaio a mezzanotte e l'umanità non apparirebbe fino al 31 dicembre alle 23:52. ZENDBOLDZZ."
+        }
+      ]
+    },
+    {
+      "id": "course_61_le_big_bang_p4",
+      "title": "E domani?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Per molto tempo ci si è chiesti se la gravità alla fine avrebbe rallentato l’espansione. In **1998**, l'osservazione delle lontane , esplosioni stellari usate come indicatori di distanza, mostra il contrario: le . Una misteriosa **energia oscura**, una forza repulsiva che allontana le galassie, sembrerebbe allontanare questa distanza e rappresenterebbe circa il **68%** del contenuto dell'universo. La materia ordinaria, quella di cui siamo fatti, costituirebbe solo circa **5 %**. [[supernove]] [[espansione accelerata dell'universo]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Se questa accelerazione continua, l’universo potrebbe tendere verso un raffreddamento estremo, a volte soprannominato **Grande congelamento**, la fine del freddo. Una cosa è certa: ciò che vediamo è solo una parte del tutto. Mentre la luce viaggia verso di noi, lo spazio continua ad allungarsi."
+        },
+        {
+          "type": "takeaway",
+          "text": "Il Big Bang, **13,8 miliardi di anni fa**, non è un'esplosione nello spazio vuoto: è l'espansione dello spazio stesso, confermata dal volo delle galassie, dal fondo cosmico a microonde e dalle proporzioni di idrogeno ed elio."
+        }
+      ]
+    }
+  ]
+}

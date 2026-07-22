@@ -1,0 +1,118 @@
+{
+  "id": "course_237_les_gafam_puissance_et_derives",
+  "title": "GAFAM: power and drifts",
+  "subtitle": "Google, Apple, Meta, Amazon, Microsoft",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Five companies weigh more than the GDP of several major European powers combined: welcome to the era of **GAFAM**.",
+  "hero": {
+    "image": "les_gafam_puissance_et_derives",
+    "ratio": "16:9",
+    "hook": "Five companies, a handful of submarine cables, and a good part of the digital world."
+  },
+  "sections": [
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Google, Apple, Meta (the former Facebook), Amazon and Microsoft: five companies grouped under the acronym **GAFAM**, born in the . In less than thirty years, they have changed the way we communicate, consume and inform ourselves, to the point of rivaling the power of certain States. Understanding the mechanisms of their domination, and the attempts to control them, allows us to better understand the balance of power in today's digital world. **[[Silicon Valley]]**"
+        }
+      ]
+    },
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_p1",
+      "title": "A financial power greater than entire countries",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The most striking characteristic of GAFAM is their stock market value. In 2024, these five companies will together be worth more than $10 trillion, an amount comparable to the combined GDP of Germany, France, the United Kingdom and Italy. Apple even became the first company to exceed $3,000 billion in valuation."
+        },
+        {
+          "type": "image",
+          "asset": "gafam_big_tech_companies_logos_apple_google",
+          "ratio": "4:3",
+          "caption": "Google, Apple, Meta, Amazon and Microsoft together weigh more than the GDP of several major European powers combined."
+        },
+        {
+          "type": "funFact",
+          "text": "In 2021, the cash accumulated by GAFAM would have been sufficient, in theory, to buy back all of the French CAC 40 companies while maintaining a margin of financial security."
+        },
+        {
+          "type": "paragraph",
+          "text": "This financial power does not remain abstract: GAFAM spends considerable sums each year to influence laws in Washington and Brussels, and have become strategic partners of States, with Amazon's cloud branch hosting, for example, sensitive data for American government agencies."
+        }
+      ]
+    },
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_p2",
+      "title": "Monopolies almost impossible to compete with",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The domination of GAFAM is based on a precise mechanism: the . The more users a service has, the more essential it becomes to be part of it, which discourages the arrival of competitors and creates quasi-monopolies where the first to arrive almost always maintains the advantage. **[[Network effects and natural monopolies]]**"
+        },
+        {
+          "type": "paragraph",
+          "text": "To lock in this position, digital giants systematically buy up their emerging threats: Facebook bought Instagram for $1 billion in 2012, when the application had only a dozen employees, then WhatsApp in 2014 for $22 billion."
+        },
+        {
+          "type": "funFact",
+          "text": "Google alone owns about 10% of all the world's undersea fiber optic cables, giving it physical control over some of the Internet's routes."
+        },
+        {
+          "type": "paragraph",
+          "text": "On a social level, algorithms designed to maximize  tend to highlight the most sensational content, sometimes locking people into information “bubbles” that reinforce their opinions, and facilitating the spread of fake news. **[[attention span]]**"
+        }
+      ]
+    },
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_p3",
+      "title": "Europe, global digital policeman",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Faced with giants that even American courts struggle to contain, the European Union has established itself as the main global digital regulator: its rules often become standards everywhere else, because it is simpler for a multinational to apply the strictest rule everywhere than to create a different version for each country."
+        },
+        {
+          "type": "image",
+          "asset": "digital_services_tax_gafam_europe",
+          "ratio": "16:9",
+          "caption": "The European Union imposes rules on digital giants that often end up applying worldwide."
+        },
+        {
+          "type": "paragraph",
+          "text": "In 2022, Europe adopted , which requires the largest platforms to be more open, for example by allowing different messaging services to communicate with each other. Fines of several billion euros have already been imposed on Google or Meta for abuse of a dominant position. In 2024, the EU will also become the first organization in the world to legally regulate artificial intelligence. **[[The European Digital Markets Act (DMA) (2022)]]**"
+        }
+      ]
+    },
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_p4",
+      "title": "Digital sovereignty in question",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The final issue is that of **digital sovereignty**. By controlling servers, the operating systems of telephones and computers, and even part of the submarine cables, GAFAM hold infrastructure essential to our societies. For a European country, depending on an American company for its public data poses a real question of independence."
+        },
+        {
+          "type": "funFact",
+          "text": "Google processes more than 90,000 search queries every second: by the time you read this paragraph, more than 3 million searches have already been performed on its servers."
+        },
+        {
+          "type": "paragraph",
+          "text": "The economic model based on the collection of personal data, where the user “pays” with their information, is increasingly criticized, but GAFAM also remains the first investors in the technologies of tomorrow, such as quantum computing."
+        },
+        {
+          "type": "takeaway",
+          "text": "The GAFAMs have a financial power greater than the GDP of the great European powers, which gives them a considerable political and technological role. Faced with this, the European Union has established itself as the main global regulator, thanks to texts such as the Digital Markets Act."
+        }
+      ]
+    }
+  ]
+}

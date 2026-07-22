@@ -1,0 +1,124 @@
+{
+  "id": "course_19_la_bataille_de_stalingrad_1942_1943",
+  "title": "La batalla de Stalingrado",
+  "subtitle": "1942-1943",
+  "subject": "histoire",
+  "subcategory": "Revoluciones y conflictos modernos",
+  "description": "Desde el verano de 1942 hasta febrero de 1943, alemanes y soviéticos se mataron entre sí en las ruinas de una ciudad a orillas del Volga. Stalingrado se convierte en el punto de inflexión de la Segunda Guerra Mundial.",
+  "hero": {
+    "image": "la_bataille_de_stalingrad",
+    "ratio": "16:9",
+    "hook": "En las ruinas de una ciudad, el ejército consideraba invencibles las rupturas para siempre."
+  },
+  "sections": [
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_intro",
+      "title": "Introducción",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Desde el verano **1942** al **2 de febrero de 1943**, el mundo observa una franja de ruinas sobre el **Volga**, un gran río de Rusia. En **Stalingrado** (hoy Volgogrado), el ejército alemán encontró una resistencia soviética dispuesta a hacer cualquier sacrificio."
+        },
+        {
+          "type": "paragraph",
+          "text": "Con más de **un millón** muertos, fue la batalla más mortífera de la historia... y el punto de inflexión de la Segunda Guerra Mundial."
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p1",
+      "title": "Hitler apunta al petróleo del sur",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tras el fracaso ante Moscú en 1941, Hitler lanzó , una ofensiva de verano hacia el sur. El objetivo: petróleo del **Cáucaso**. **Stalingrado**, un cruce ferroviario y fluvial en el Volga, es inicialmente sólo un objetivo secundario. Entonces gana el símbolo: tomar la ciudad que lleva el nombre de **estalin** se convierte en una obsesión. [[Estuche Azul]]"
+        },
+        {
+          "type": "image",
+          "asset": "battle_of_stalingrad_ruins",
+          "ratio": "4:3",
+          "caption": "Stalingrado en ruinas: un campo de batalla urbano despiadado."
+        },
+        {
+          "type": "funFact",
+          "text": "Hitler estaba tan seguro de la victoria que, según se dice, hizo imprimir invitaciones para un banquete de la victoria en el Hotel Lux de Stalingrado."
+        },
+        {
+          "type": "paragraph",
+          "text": "El **6to ejército alemán**, comandado por el general , es desviado a la ciudad. Los bombardeos del , la fuerza aérea alemana, en agosto de 1942 dejaron un paisaje de cráteres... perfecto para la defensa soviética. [[Friedrich Paulus]] [[Luftwaffe]]"
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p2",
+      "title": "Lucha casa por casa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "El general soviético **Wassily Chuikov** impuso una táctica sencilla: permanecer a **30 metros** del enemigo. Por tanto, la artillería y los aviones alemanes no pueden atacar sin matar a sus propios hombres. Los alemanes la llaman **Guerra de Ratten**, la “guerra de las ratas”: luchamos en sótanos, alcantarillas, edificios en ruinas."
+        },
+        {
+          "type": "paragraph",
+          "text": "La Casa **Pavlov**, un edificio regentado por un puñado de soldados, resistió **58 días**. En la fábrica **Dzerzhinsky**, los tanques se fabrican bajo bombas y se llevan directamente al frente. La Orden **de Stalin 227** resume la orden: **“Ni un paso atrás”**."
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p3",
+      "title": "Los alicates que cierran la trampa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mientras Paulus se desgasta entre los escombros, el mariscal soviético **Georgiy Zhukov** prepara . Los flancos alemanes, custodiados por aliados mal equipados (rumanos, italianos, húngaros), cedieron. El **19 de noviembre de 1942**, las tenazas se cerraron: aproximadamente **300.000** hombres fueron rodeados. [[Operación Urano]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Los soviéticos transmitieron por altavoces el tictac de un reloj y luego un mensaje: un soldado alemán moría cada **7 segundos** en la URSS."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hitler prohíbe la salida. , jefe de la Luftwaffe, promete un puente aéreo. Él falla. Hambre, tifus, **-30 °C**: el “caldero” se convierte en una trampa mortal. [[Hermann Göring]]"
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p4",
+      "title": "La rendición que cambia la guerra",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "El 30 de enero de 1943, Hitler nombró a Paulus **mariscal de campo**, el rango más alto, para animarlo a morir en lugar de rendirse. Paulus capituló el **2 de febrero**. De los 300.000 rodeados, **91.000** salen prisioneros. Por primera vez, la propaganda nazi debe admitir una derrota total. El ejército considerado invencible quedó destrozado."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "verano de 1942",
+              "title": "Estuche Azul",
+              "detail": "Ofensiva alemana hacia el Cáucaso y Stalingrado."
+            },
+            {
+              "date": "19 de noviembre de 1942",
+              "title": "Operación Urano",
+              "detail": "Cerco del 6.º Ejército."
+            },
+            {
+              "date": "2 de febrero de 1943",
+              "title": "Capitulación",
+              "detail": "Paulo se rinde; punto de inflexión de la guerra."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "**Stalingrado** (**1942-1943**) aniquila al 6.º ejército alemán y hace añicos el mito de la invencibilidad nazi, en la batalla más mortífera de la historia."
+        }
+      ]
+    }
+  ]
+}

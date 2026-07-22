@@ -1,0 +1,151 @@
+{
+  "id": "course_124_rembrandt_et_l_ecole_flamande",
+  "title": "Rembrandt e a escola flamenga",
+  "subtitle": "1606-1669",
+  "subject": "art",
+  "subcategory": "Pintura & movimentos",
+  "description": "**Rembrandt van Rijn** é o grande pintor da Idade de Ouro Holandesa. Autorretratos, cenas bíblicas e *Turno noturno*: ele pinta a alma humana.",
+  "hero": {
+    "image": "rembrandt_et_l_ecole_flamande",
+    "ratio": "16:9",
+    "hook": "Da glória de Amsterdã à ruína: um pintor que fez da sombra a linguagem da alma."
+  },
+  "sections": [
+    {
+      "id": "course_124_rembrandt_et_l_ecole_flamande_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Rembrandt van Rijn** (1606-1669) é o mestre da escola holandesa do século XVII. No , a Holanda torna-se uma potência comercial e um foco de liberdade de pensamento. [[Idade de Ouro Holandesa]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Seus autorretratos, suas cenas bíblicas e seu famoso *Vigília noturna* fazem do claro-escuro uma linguagem emocional. Coloca o ser humano, esplêndido ou cansado, no centro de tudo."
+        }
+      ]
+    },
+    {
+      "id": "course_124_rembrandt_et_l_ecole_flamande_p1",
+      "title": "Amsterdã: um mercado burguês",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "No século XVII, as **Províncias Unidas** dominaram o comércio mundial. Ao contrário do resto da Europa, onde a Igreja e os reis controlam a arte, o mercado holandês é impulsionado por uma burguesia protestante. Ela quer pinturas para a casa, não afrescos de igreja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Este contexto favorece os gêneros: paisagem, natureza morta, cenas cotidianas. **Vermeer** e  se destacam. Rembrandt mudou-se para Amsterdã em **1631** e se tornou o pintor de retratos mais procurado. [[Hals]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Após sua falência, seu filho Titus e seu sócio Hendrickje criaram uma empresa de arte da qual Rembrandt era oficialmente funcionário, para proteger suas novas pinturas dos credores."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mas seu estilo de vida é muito grande. Em **1656**, o  o atinge. Casa, móveis e acervo vão a leilão. Porém, ele se recusa a suavizar seu estilo para agradar a moda. [[falência pessoal]]"
+        }
+      ]
+    },
+    {
+      "id": "course_124_rembrandt_et_l_ecole_flamande_p2",
+      "title": "Luz interior e pintura espessa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rembrandt reinventa o  herdado do . Em sua obra, a luz não serve apenas para exibição: ela parece filtrar o interior dos personagens. O olhar se concentra nos rostos e nas mãos. [[claro-escuro]] [[Caravaggio]]"
+        },
+        {
+          "type": "image",
+          "asset": "rembrandt_night_watch_painting",
+          "ratio": "4:3",
+          "caption": "A Ronda Noturna: uma milícia em movimento, não um alinhamento fixo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sua outra assinatura: **impasse**, essa tinta aplicada tão espessa que cria um relevo. Numa época que quer superfícies lisas, ele ousa usar materiais. Dizia-se que certos retratos poderiam ter sido levantados pelo nariz. Ele busca o verdadeiro, não o belo ideal."
+        },
+        {
+          "type": "funFact",
+          "text": "A análise química revelou plumbonacrit em seu impasto: um raro composto de chumbo que ajudou suas camadas espessas a secarem mais rapidamente."
+        }
+      ]
+    },
+    {
+      "id": "course_124_rembrandt_et_l_ecole_flamande_p3",
+      "title": "A Ronda Noturna: um retrato que se move",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Em **1642**, Rembrandt entrega *Uma Companhia do Capitão Frans Banning Cocq*, conhecido como **Vigília noturna**. Encomenda para o , quartel-general de uma milícia burguesa em Amsterdã. Normalmente, os milicianos posam em fila, cada um claramente visível porque pagaram. [[Kloveniersdoelen]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Rembrandt os mostra em movimento, saindo da sede. O claro-escuro hierarquiza as figuras: algumas passam para a sombra. Diz a lenda que os milicianos furiosos causaram sua queda. Na verdade, o trabalho foi admirado, mesmo que confuso."
+        },
+        {
+          "type": "funFact",
+          "text": "O título *vigília noturna* é uma interpretação errada: a cena é diurna. Séculos de verniz sujo escureceram tanto a tela que parecia uma patrulha noturna."
+        },
+        {
+          "type": "paragraph",
+          "text": "No século XVIII, para a instalar nos Paços do Concelho, foram cortadas as suas quatro faces. Os personagens desaparecem. A composição original era muito mais espaçosa."
+        }
+      ]
+    },
+    {
+      "id": "course_124_rembrandt_et_l_ecole_flamande_p4",
+      "title": "Pintando a si mesmo, uma vida inteira",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rembrandt pintou aproximadamente **80 a 90 autorretratos** ao longo de quase quarenta anos. Jovem, ele parece arrogante, coberto de peles e joias. Depois da ruína e dos lutos, o tom muda: mais sedução, uma honestidade crua diante do envelhecimento."
+        },
+        {
+          "type": "image",
+          "asset": "rembrandt_self_portrait_old_age",
+          "ratio": "4:3",
+          "caption": "Autorretratos tardios: um olhar sem máscara."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1631",
+              "title": "Chegada em Amsterdã",
+              "detail": "Ele se torna o retratista estrela da cidade."
+            },
+            {
+              "date": "1642",
+              "title": "A Vigília Noturna",
+              "detail": "Retrato de milícia em movimento, revolucionária."
+            },
+            {
+              "date": "1656",
+              "title": "Falência",
+              "detail": "Casa e coleções vendidas em leilão."
+            },
+            {
+              "date": "1669",
+              "title": "Morto",
+              "detail": "Ele morreu em relativo anonimato."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Morto em **1669**, enterrado sem pompa, influenciará Goya como . Ele continua sendo o pintor que transformou o pigmento em luz interior. [[Francis Bacon]]"
+        },
+        {
+          "type": "takeaway",
+          "text": "Rembrandt ampliou a interioridade humana através do claro-escuro e da tinta espessa. Da glória à ruína de Amesterdão, os seus autorretratos continuam a ser um diário de vida único."
+        }
+      ]
+    }
+  ]
+}

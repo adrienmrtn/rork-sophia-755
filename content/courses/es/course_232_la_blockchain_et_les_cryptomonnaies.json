@@ -1,0 +1,112 @@
+{
+  "id": "course_232_la_blockchain_et_les_cryptomonnaies",
+  "title": "Blockchain y criptomonedas",
+  "subtitle": "Desde 2009",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Medio ambiente y futuro",
+  "description": "La cadena de bloques **** inventó un libro de contabilidad que nadie puede manipular por sí solo, allanando el camino para una nueva economía digital.",
+  "hero": {
+    "image": "la_blockchain_et_les_cryptomonnaies",
+    "ratio": "16:9",
+    "hook": "Un libro de cuentas que nadie posee, pero que miles de ordenadores monitorean juntos."
+  },
+  "sections": [
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_intro",
+      "title": "Introducción",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Imaginemos un libro de cuentas que nadie posee, pero que miles de ordenadores actualizan al mismo tiempo, en todo el mundo, y que es casi imposible de falsificar. Esta es la idea inicial de **cadena de bloques**, una tecnología a menudo reducida a su primera aplicación, **Bitcoin**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Al permitir intercambiar valor sin pasar por un banco, este invento dio lugar a toda una economía paralela, entre promesas de libertad financiera y duras críticas a su coste energético."
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p1",
+      "title": "Un registro que nadie controla solo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En el corazón de blockchain hay una idea simple: el libro mayor distribuido ****. A diferencia de un banco, que mantiene sus cuentas en sus propios servidores, la cadena de bloques se basa en una red de , es decir, miles de ordenadores, cada uno de los cuales guarda una copia idéntica de todas las transacciones. [[colegas]]"
+        },
+        {
+          "type": "funFact",
+          "text": "El primer bloque de la cadena de bloques de Bitcoin, llamado “bloque génesis”, contenía un mensaje oculto: la portada de un periódico británico del 3 de enero de 2009, que hablaba del rescate estatal de los bancos. Un guiño político de su creador."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cada transacción es primero verificada por la red y luego agrupada con otras en un **bloquear**. Luego, este bloque se vincula al anterior gracias a un cálculo matemático llamado : una especie de huella digital única. El resultado es una cadena ininterrumpida de bloques, de ahí el nombre blockchain. Para modificar una sola transacción antigua, habría que recalcular toda la cadena y convencer a más de la mitad de la red, lo cual es casi imposible a gran escala. [[picadillo]]"
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p2",
+      "title": "Bitcoin y Ethereum: del pago al programa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "El **Bitcoin**, lanzado en **2009** por una persona (o grupo) anónimo bajo el nombre , demostró que un sistema monetario puede funcionar sin un banco central. Para garantizar su escasez, su creador ha fijado un límite estricto: nunca pueden existir más de **21 millones de bitcoins**, un poco como el oro es limitado en la Tierra. [[Satoshi Nakamoto]]"
+        },
+        {
+          "type": "image",
+          "asset": "blockchain_technology_distributed_ledger_visualization",
+          "ratio": "4:3",
+          "caption": "Cada transacción es verificada por una red de computadoras antes de agregarse a la cadena."
+        },
+        {
+          "type": "paragraph",
+          "text": "En 2015, apareció una segunda generación de blockchain con **Etereum**. Su gran innovación: **contratos inteligentes**. Se trata de programas que se ejecutan automáticamente en cuanto se cumple una condición, por ejemplo el reembolso automático en caso de retraso de un tren, sin necesidad de recurrir a un intermediario."
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p3",
+      "title": "Críticas: energía e inestabilidad.",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "El éxito de las criptomonedas no está exento de problemas. El más discutido se refiere al **consumo de energía** de la red Bitcoin: su gasto anual en electricidad es hoy comparable al de todo un país como Argentina."
+        },
+        {
+          "type": "paragraph",
+          "text": "El mercado también sufre una **volatilidad extrema**: el precio de Bitcoin puede variar entre un 10 y un 20% en unas pocas horas. Esta inestabilidad impide actualmente que se convierta en una verdadera moneda de uso cotidiano."
+        },
+        {
+          "type": "paragraph",
+          "text": "Por último, el relativo anonimato de las transacciones se ha utilizado en ocasiones para actividades ilegales. Pero la cadena de bloques sigue siendo completamente transparente: las autoridades pueden seguir el flujo de dinero, lo que hace que el blanqueo sea más difícil que en el sistema de efectivo clásico."
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p4",
+      "title": "Hacia la integración institucional",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hoy en día, las criptomonedas están saliendo de los márgenes para entrar en las finanzas tradicionales. Los grandes bancos ahora ofrecen mantener activos digitales para sus clientes, y varios estados están considerando crear su propia moneda digital oficial, una  (moneda digital del banco central). **[[MNBC]]**"
+        },
+        {
+          "type": "paragraph",
+          "text": "**monedas estables**, criptomonedas cuyo precio se estabiliza gracias a una reserva de dólares o euros, sirven de puente entre ambos mundos. Más allá de las finanzas, sectores como el lujo (para luchar contra la falsificación), la logística (para rastrear contenedores) o la salud (para proteger los registros médicos) también están adoptando blockchain por su confiabilidad."
+        },
+        {
+          "type": "funFact",
+          "text": "En 2021, El Salvador se convirtió en el primer país del mundo en adoptar Bitcoin como moneda de curso legal, junto con el dólar estadounidense, lo que exige que todos los comerciantes lo acepten si tienen los medios técnicos."
+        },
+        {
+          "type": "takeaway",
+          "text": "Creada en 2009, la cadena de bloques es un libro de contabilidad compartido casi imposible de falsificar, con una oferta máxima de bitcoins fijada en 21 millones de unidades. Sentó las bases de una nueva economía digital hoy en plena integración institucional."
+        }
+      ]
+    }
+  ]
+}

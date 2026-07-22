@@ -1,0 +1,139 @@
+{
+  "id": "course_8_la_chute_de_constantinople_1453",
+  "title": "The fall of Constantinople",
+  "subtitle": "1453",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "On May 29, 1453, after 53 days of siege, the Ottomans forced the walls of Constantinople. New Rome falls, and the Middle Ages change.",
+  "hero": {
+    "image": "la_chute_de_constantinople_1453",
+    "ratio": "16:9",
+    "hook": "A thousand years of ramparts. Fifty-three days of cannons. A city that closes an era."
+  },
+  "sections": [
+    {
+      "id": "course_8_la_chute_de_constantinople_1453_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "On **May 29, 1453**, after **53 days** of siege, the soldiers of the Ottoman sultan entered **Constantinople**, capital of the Byzantine Empire (the Eastern Roman Empire). The city which had resisted for more than a millennium gave way under the blows of new artillery."
+        },
+        {
+          "type": "paragraph",
+          "text": "It's not just the end of Byzantium. By blocking the routes to the East, the fall of “New Rome” pushed Europe to look for other paths. The Middle Ages are closing."
+        }
+      ]
+    },
+    {
+      "id": "course_8_la_chute_de_constantinople_1453_p1",
+      "title": "A capital already almost dead",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Founded in **330** by Emperor Constantine, the city was for a long time the beacon of Europe. In the 15th century, the Byzantine Empire was nothing more than a shadow, weakened above all by : Christian crusaders from the West had plundered the city. There remains the capital and some Greek territories. About **50,000** people live among the ruins, where there were once **500,000** souls. [[The sack of Constantinople by the 4th Crusade (1204)]]"
+        },
+        {
+          "type": "image",
+          "asset": "constantinople_theodosian_walls",
+          "ratio": "4:3",
+          "caption": "The Theodosian walls, long considered impregnable."
+        },
+        {
+          "type": "paragraph",
+          "text": "Its last asset: the , triple line of ramparts from the 5th century. For a thousand years, no one forced them through the earth. Constantinople is a Christian island in an Ottoman sea. [[Theodosian Walls]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Even when surrounded, the Byzantines continued to argue over tiny theological points. The expression “Byzantine discussion” stuck."
+        }
+      ]
+    },
+    {
+      "id": "course_8_la_chute_de_constantinople_1453_p2",
+      "title": "Mehmed II and the cannon",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In **1451**, **Mehmed II**, young sultan of the Ottoman Empire, is **19 years old** and has an obsession: taking the City. He hired the founder **Urban**, who forged the “Basilica”, a **8 meters** cannon firing **600 kg** cannonballs. Medieval fortifications are becoming obsolete."
+        },
+        {
+          "type": "image",
+          "asset": "mehmed_ii_portrait_sultan",
+          "ratio": "4:3",
+          "caption": "Mehmed II, the young sultan who wants Constantinople."
+        },
+        {
+          "type": "paragraph",
+          "text": "The siege begins on **April 2, 1453**. Faced with **80,000 to 200,000** Ottomans, including the  (sultan's elite troops), the last Byzantine emperor  only fielded **7,000** defenders. Every night, they will fill in the gaps with wood and earth. [[Janissaries]] [[Constantine XI Palaiologos]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Urban's cannon was so heavy that it took **60 oxen** and **400 men** to move it. He could only shoot **7 times** per day, otherwise he would explode."
+        }
+      ]
+    },
+    {
+      "id": "course_8_la_chute_de_constantinople_1453_p3",
+      "title": "May 29",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Blocked at , the city's natural port, by a chain stretched across the water, Mehmed had **70 ships** towed by land behind the defense. **29 May**, at dawn, the general assault carried a breach near the Saint-Romain gate. We also talk about a small door, the **Kerkoporta**, left open. [[Golden Horn]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Constantine XI throws himself into the fray; his body will never be formally identified. Mehmed converted **Hagia Sophia**, the great basilica, into a mosque. Constantinople becomes , capital of a conquering empire. [[Istanbul]]"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1204",
+              "title": "Sack of the 4th Crusade",
+              "detail": "Byzantium was permanently weakened by the Latins."
+            },
+            {
+              "date": "1451",
+              "title": "Accession of Mehmed II",
+              "detail": "The young sultan prepares the capture of the City."
+            },
+            {
+              "date": "April 2, 1453",
+              "title": "Start of siege",
+              "detail": "Ottoman artillery hits the walls."
+            },
+            {
+              "date": "May 29, 1453",
+              "title": "Fall of the city",
+              "detail": "Constantinople becomes Ottoman capital."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_8_la_chute_de_constantinople_1453_p4",
+      "title": "Backlash on Europe",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Greek scholars flee to Italy with their manuscripts: . On the commercial level, the Ottomans heavily taxed the routes to the East. Portugal and Spain seek the Atlantic. In **1492**, Columbus stumbles upon America. [[The Greek diaspora and the Renaissance]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "The fall puts an end to the living continuity of the : for a thousand years, Constantinople had transmitted Roman law and Greek culture. Modern Europe was born in part from this mourning: a thousand-year-old empire died out, another world opened up. [[Byzantine law and Roman heritage]]"
+        },
+        {
+          "type": "takeaway",
+          "text": "**May 29, 1453**, Constantinople falls after a thousand years of resistance. End of Byzantium, Ottoman rise, acceleration of the Renaissance and the Great Discoveries: a pivotal date."
+        }
+      ]
+    }
+  ]
+}

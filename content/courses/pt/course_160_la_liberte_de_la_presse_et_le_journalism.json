@@ -1,0 +1,122 @@
+{
+  "id": "course_160_la_liberte_de_la_presse_et_le_journalism",
+  "title": "Liberdade de imprensa e jornalismo fotográfico",
+  "subtitle": "século 20",
+  "subject": "art",
+  "subcategory": "Cinema, foto & arquitetura + obras icônicas",
+  "description": "De Cartier-Bresson a Nick Ut, a foto da imprensa captura a história em uma imagem. Liberdade, ética e poder da mídia no mesmo visor.",
+  "hero": {
+    "image": "la_liberte_de_la_presse_et_le_journalisme_photographique",
+    "ratio": "16:9",
+    "hook": "Uma foto pode parar uma guerra... ou mentir. Ainda precisamos ser capazes de publicá-lo."
+  },
+  "sections": [
+    {
+      "id": "course_160_la_liberte_de_la_presse_et_le_journalism_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O jornalismo fotográfico nasce quando a imagem fixa a notícia com tanta força quanto um artigo. Uma única visão pode resumir uma guerra, uma fome, uma vitória."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mas sem liberdade de imprensa, essas imagens ficam na gaveta."
+        }
+      ]
+    },
+    {
+      "id": "course_160_la_liberte_de_la_presse_et_le_journalism_p1",
+      "title": "O momento decisivo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": " teoriza o “momento decisivo”: estar no lugar certo, na hora certa, com o enquadramento certo. , ao lado de Capa, morreu cobrindo a Guerra Civil Espanhola. O fotojornalismo tem seus mártires. [[Henri Cartier-Bresson]] [[Gerda Taro]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "O surgimento de revistas ilustradas e agências fotográficas profissionalizou a profissão. O repórter sai com um aparelho como outros com notebook. O risco é físico."
+        },
+        {
+          "type": "image",
+          "asset": "cartier_bresson_decisive_moment",
+          "ratio": "4:3",
+          "caption": "A Leica no acostamento: a rua como terreno."
+        }
+      ]
+    },
+    {
+      "id": "course_160_la_liberte_de_la_presse_et_le_journalism_p2",
+      "title": "Imagens que mudam o debate",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "No Vietnã, a foto de  mostrando uma menina queimada por napalm abala a opinião pública. A imagem não “acaba” sozinha com a guerra, mas torna impossível negar o custo humano. [[Nick Ut]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "As grandes democracias teoricamente protegem a imprensa. As ditaduras controlam o visor. A liberdade de publicar uma imagem torna-se um barómetro político."
+        },
+        {
+          "type": "funFact",
+          "text": "Muitas fotos famosas foram censuradas ou discutidas antes de se tornarem evidências históricas."
+        }
+      ]
+    },
+    {
+      "id": "course_160_la_liberte_de_la_presse_et_le_journalism_p3",
+      "title": "Ética e concentração",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": " questiona: podemos enquadrar o sofrimento? Retocar? O  também ameaça o olhar livre. [[A ética do fotojornalismo]] [[Concentração de mídia e independência editorial]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Na era digital, a verificação é essencial: metadados, pesquisa reversa de imagens, contexto. A fotografia continua poderosa, mas pode ser manipulada mais rápido do que nunca."
+        },
+        {
+          "type": "image",
+          "asset": "photojournalism_war_correspondent_camera",
+          "ratio": "4:3",
+          "caption": "O repórter: testemunha armada com uma objetiva."
+        }
+      ]
+    },
+    {
+      "id": "course_160_la_liberte_de_la_presse_et_le_journalism_p4",
+      "title": "Legado",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Na era das redes, todo mundo tira fotos. A necessidade de imagens confiáveis, contextualizadas e protegidas pelo direito à informação nunca foi tão forte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Para compreender plenamente a liberdade de imprensa e o jornalismo fotográfico, é preciso ter uma coisa em mente: cada detalhe técnico serve a uma emoção ou a uma ideia. O trabalho nunca é apenas decorativo."
+        },
+        {
+          "type": "paragraph",
+          "text": "O contexto é tão importante quanto o estilo. Datas, locais, patrocinadores, público: tudo isso explica porque um formulário aparece num determinado momento e não antes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Finalmente, o legado é medido no longo prazo. O que vemos hoje nos museus, nos filmes ou na música popular ainda guarda os vestígios dessas invenções."
+        },
+        {
+          "type": "paragraph",
+          "text": "Treinar o olhar, defender denunciantes, pagar jornalismo de campo: sem isso só resta o fluxo. A herança do século XX é uma exigência e não uma nostalgia."
+        },
+        {
+          "type": "takeaway",
+          "text": "Da Leica de Cartier-Bresson às fotos de guerra, o fotojornalismo provou que uma imagem gratuita pode ter tanto peso quanto um editorial."
+        }
+      ]
+    }
+  ]
+}
