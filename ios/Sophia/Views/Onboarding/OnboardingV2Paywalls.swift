@@ -190,7 +190,7 @@ struct OnboardingV2PaywallComparison: View {
                 Text(languageManager.text("onboardingV2.pw.free"))
                     .font(DS.sans(.caption, .semibold)).foregroundStyle(OV2.inkSecondary)
                     .frame(width: 54)
-                Text("PRO")
+                Text(languageManager.text("onboardingV2.pw.pro"))
                     .font(DS.sans(.caption, .bold)).foregroundStyle(.white)
                     .frame(width: 54, height: 22)
                     .background(OV2.accent, in: Capsule())

@@ -439,7 +439,7 @@ struct CourseView: View {
                         .font(.subheadline.weight(.semibold))
                     Text(languageManager.text("course.unlock.cta"))
                 } else {
-                    Text(isLastLesson ? "Terminer le cours" : "Continuer")
+                    Text(isLastLesson ? languageManager.text("course.finish") : languageManager.text("common.continue"))
                     Image(systemName: isLastLesson ? "checkmark" : "arrow.right")
                         .font(.subheadline.weight(.semibold))
                 }

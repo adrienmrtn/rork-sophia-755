@@ -940,7 +940,7 @@ struct QuizView: View {
                             HStack(spacing: 4) {
                                 Image(systemName: "flame.fill")
                                     .font(.jakarta(size: 10, weight: .semibold))
-                                Text("Combo x\(comboCount)")
+                                Text(String(format: languageManager.text("quiz.combo"), comboCount))
                                     .font(DS.sans(.caption, .medium))
                             }
                             .foregroundStyle(DS.accentSoft)
