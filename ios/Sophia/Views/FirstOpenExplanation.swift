@@ -9,6 +9,9 @@ enum TutorialFlags {
         case courseTerms = "sophia_tut_course_terms"
         case collections = "sophia_tut_collections"
         case training = "sophia_tut_training"
+        /// L'utilisateur a déjà parcouru le mini-onboarding « entraînement » (déclenché par
+        /// « Découvrir ») au moins une fois — après quoi le bouton devient « Débloquer ».
+        case trainingOnboarding = "sophia_tut_training_onboarding"
     }
 
     static func seen(_ id: ID) -> Bool {

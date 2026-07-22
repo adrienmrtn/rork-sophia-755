@@ -12,8 +12,10 @@ import SwiftUI
 struct TrainingView: View {
     @Environment(LanguageManager.self) private var languageManager
     let progressManager: ProgressManager
+    var store: StoreViewModel? = nil
     var isPremium: Bool = false
     /// Ouvre le paywall « quizz » (freemium : l'entraînement se remplit via les quiz, premium).
+    /// Conservé en fallback si le `store` n'est pas fourni.
     var onShowQuizPaywall: (() -> Void)? = nil
 
     private struct SessionItem: Identifiable {
@@ -39,6 +41,11 @@ struct TrainingView: View {
     @State private var showFeedback = false
     @State private var showExplain = false
 
+    /// Flux « Découvrir/Débloquer » : mini-onboarding entraînement puis paywall.
+    @State private var showTrainingFlow = false
+    /// Démarre le flux directement sur le paywall (bouton « Débloquer », OB déjà vu).
+    @State private var flowStartsAtPaywall = false
+
     private var currentQuestion: ShuffledQuestion { sessionQuestions[currentIndex].question }
     private var currentCourse: Course { sessionQuestions[currentIndex].course }
 
@@ -46,9 +53,20 @@ struct TrainingView: View {
         selectedOptionIndex == currentQuestion.correctIndex
     }
 
+    /// Une session active passe dans un « mode révision » visuellement distinct : fond
+    /// dégradé calme et légèrement teinté qui marque clairement l'entrée dans la révision.
+    private var isInRevisionMode: Bool { isSessionActive || isSessionComplete }
+
     var body: some View {
         ZStack {
-            DS.canvas.ignoresSafeArea()
+            Group {
+                if isInRevisionMode {
+                    revisionBackground.ignoresSafeArea()
+                } else {
+                    DS.canvas.ignoresSafeArea()
+                }
+            }
+            .animation(.easeInOut(duration: 0.45), value: isInRevisionMode)
 
             if isSessionComplete {
                 summaryView
@@ -81,6 +99,38 @@ struct TrainingView: View {
                 withAnimation(.easeIn(duration: 0.3)) { showExplain = true }
             }
         }
+        .fullScreenCover(isPresented: $showTrainingFlow) {
+            if let store {
+                TrainingOnboardingView(
+                    store: store,
+                    startAtPaywall: flowStartsAtPaywall,
+                    onCompletedOnboarding: { TutorialFlags.markSeen(.trainingOnboarding) },
+                    onPurchased: { showTrainingFlow = false },
+                    onRestored: { showTrainingFlow = false },
+                    onClose: { showTrainingFlow = false }
+                )
+            }
+        }
+    }
+
+    /// Fond « mode révision » : dégradé calme, légèrement teinté d'accent, pour marquer
+    /// nettement qu'on est entré dans une session de révision (vs. l'accueil de l'onglet).
+    private var revisionBackground: some View {
+        LinearGradient(
+            colors: [DS.accentTint, DS.canvas, DS.surfaceMuted.opacity(0.7)],
+            startPoint: .top,
+            endPoint: .bottom
+        )
+    }
+
+    /// Ouvre le flux « Découvrir » (mini-OB) ou « Débloquer » (paywall direct) selon que
+    /// l'utilisateur a déjà parcouru l'onboarding entraînement.
+    private func openTrainingFlow() {
+        UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+        // Sans `store` (cas improbable), on retombe sur l'ancien paywall via le callback.
+        guard store != nil else { onShowQuizPaywall?(); return }
+        flowStartsAtPaywall = TutorialFlags.seen(.trainingOnboarding)
+        showTrainingFlow = true
     }
 
     // MARK: - Entry screen
@@ -178,7 +228,8 @@ struct TrainingView: View {
         }
     }
 
-    // Aucun quiz terminé encore : on explique clairement comment l'entraînement se remplit.
+    // Aucun quiz terminé encore : on présente l'entraînement sans dérouler les explications
+    // (elles sont désormais dans le mini-onboarding « Découvrir »).
     private var lockedContent: some View {
         VStack(spacing: 22) {
             trainingIcon("brain.head.profile")
@@ -188,28 +239,25 @@ struct TrainingView: View {
                     .font(DS.title(.title2, .semibold))
                     .foregroundStyle(DS.ink)
                     .multilineTextAlignment(.center)
-                Text(languageManager.text("training.locked.message"))
+                Text(languageManager.text("training.locked.tagline"))
                     .font(DS.sans(.subheadline))
                     .foregroundStyle(DS.inkSecondary)
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
             }
             .padding(.horizontal, 24)
-
-            howItWorksCard
         }
     }
 
-    // CTA freemium : l'entraînement se remplit avec les questions des quiz (premium).
+    // CTA freemium : « Découvrir » ouvre le mini-onboarding entraînement (puis le paywall) ;
+    // une fois l'onboarding parcouru, le bouton devient « Débloquer » (paywall direct).
     private var freemiumUnlockButton: some View {
-        Button {
-            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-            onShowQuizPaywall?()
-        } label: {
+        let seenOnboarding = TutorialFlags.seen(.trainingOnboarding)
+        return Button(action: openTrainingFlow) {
             HStack(spacing: 8) {
-                Image(systemName: "lock.open.fill")
+                Image(systemName: seenOnboarding ? "lock.open.fill" : "sparkles")
                     .font(.jakarta(size: 14, weight: .semibold))
-                Text(languageManager.text("training.unlock"))
+                Text(languageManager.text(seenOnboarding ? "training.unlock" : "training.discover"))
             }
         }
         .buttonStyle(DSPrimaryButtonStyle())
@@ -222,36 +270,6 @@ struct TrainingView: View {
             Image(systemName: systemName)
                 .font(.jakarta(size: 50, weight: .regular))
                 .foregroundStyle(DS.accent)
-        }
-    }
-
-    private var howItWorksCard: some View {
-        VStack(alignment: .leading, spacing: 14) {
-            Text(languageManager.text("training.how.title"))
-                .font(DS.sans(.caption2, .semibold))
-                .foregroundStyle(DS.inkTertiary)
-                .tracking(1.2)
-
-            howStep(1, languageManager.text("training.how.step1"))
-            howStep(2, languageManager.text("training.how.step2"))
-            howStep(3, languageManager.text("training.how.step3"))
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .dsCard()
-    }
-
-    private func howStep(_ number: Int, _ text: String) -> some View {
-        HStack(alignment: .top, spacing: 12) {
-            Text("\(number)")
-                .font(DS.sans(.subheadline, .bold))
-                .foregroundStyle(.white)
-                .frame(width: 26, height: 26)
-                .background(DS.accent, in: Circle())
-            Text(text)
-                .font(DS.sans(.subheadline, .medium))
-                .foregroundStyle(DS.ink)
-                .fixedSize(horizontal: false, vertical: true)
-                .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
 
