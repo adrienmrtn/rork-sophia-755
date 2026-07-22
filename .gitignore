@@ -5,5 +5,11 @@ node_modules
 __pycache__/
 *.pyc
 
+<<<<<<< HEAD
 # Machine-translation cache for CoursesV2 (regenerable)
 content/locales/_v2_mt_cache/
+=======
+# Machine-translation caches (regenerable)
+content/locales/_v2_mt_cache/
+content/locales/_quiz_v2_mt_cache/
+>>>>>>> origin/cursor/quiz-v2-i18n-part3-be61
