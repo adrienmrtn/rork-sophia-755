@@ -481,8 +481,13 @@ struct QuizView: View {
                 Text(text)
                     .font(DS.title(.headline, .semibold))
                     .foregroundStyle(optionTextColor(for: index))
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.8)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
             }
             .frame(maxWidth: .infinity)
+            .padding(.horizontal, 8)
             .padding(.vertical, 22)
             .background(optionRowBg(for: index))
             .clipShape(.rect(cornerRadius: DS.Radius.control))

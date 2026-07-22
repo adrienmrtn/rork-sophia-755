@@ -193,6 +193,7 @@ struct HomeViewTikTok: View {
                 .foregroundStyle(DS.inkSecondary)
                 .fixedSize(horizontal: true, vertical: true)
                 .lineLimit(1)
+                .minimumScaleFactor(0.8)
         }
         .padding(.horizontal, 14)
         .padding(.vertical, 8)

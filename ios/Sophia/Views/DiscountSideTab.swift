@@ -56,16 +56,23 @@ struct DiscountSideTab: View {
                 .font(.jakarta(size: 9, weight: .bold, design: .rounded))
                 .foregroundStyle(.white.opacity(0.85))
                 .tracking(0.6)
+                .lineLimit(2)
+                .minimumScaleFactor(0.75)
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: true, vertical: true)
 
             Text(discountManager.formattedRemaining)
                 .font(.jakarta(size: 13, weight: .heavy, design: .rounded))
                 .foregroundStyle(.white)
                 .monospacedDigit()
                 .contentTransition(.numericText(countsDown: true))
+                .fixedSize(horizontal: true, vertical: true)
         }
         .padding(.horizontal, 12)
         .padding(.vertical, 12)
-        .frame(width: 66)
+        // Grow with DE/IT labels (ANGEBOT / OFFERTA) instead of clipping at FR-tuned 66pt.
+        .frame(minWidth: 66)
+        .fixedSize(horizontal: true, vertical: false)
         .background(
             UnevenRoundedRectangle(
                 topLeadingRadius: corner,
