@@ -1,0 +1,104 @@
+{
+  "id": "course_213_l_evasion_fiscale_des_multinationales",
+  "title": "Evasión fiscal por parte de multinacionales",
+  "subtitle": "¿Cómo es posible que GAFAM pague tan pocos impuestos?",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economía y sociedad",
+  "description": "Los gigantes digitales suelen pagar impuestos irrisorios en comparación con sus beneficios. Esto no siempre es ilegal: es el resultado de lagunas en el derecho internacional.",
+  "hero": {
+    "image": "l_evasion_fiscale_des_multinationales",
+    "ratio": "16:9",
+    "hook": "En 2014, Apple pagó un tipo impositivo efectivo cercano al 0,005% en Irlanda. ¿Cómo es esto posible?"
+  },
+  "sections": [
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_intro",
+      "title": "Introducción",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "GAFAM, es decir Google, Apple, Facebook (Meta), Amazon y Microsoft, se encuentran entre las empresas más ricas del mundo. Sin embargo, en proporción a sus beneficios, suelen pagar muchos menos impuestos que una PYME tradicional."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esto no es fraude en sentido estricto: es **optimización fiscal**, es decir, la hábil explotación de las lagunas del derecho internacional. Este mecanismo priva a los Estados de cientos de miles de millones de dólares cada año. Así es como funciona y cómo el mundo está tratando de responder."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p1",
+      "title": "Un impuesto diseñado para las fábricas, no para lo digital",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "El sistema fiscal internacional fue diseñado a principios del siglo XX para una economía industrial: una empresa tenía que poseer fábricas u oficinas en un país, lo que se llama , para poder pagar impuestos allí. [[establecimiento permanente]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "La tecnología digital ha roto este vínculo con el territorio. Hoy en día, una empresa puede dominar un mercado, capturar los datos de millones de usuarios y ganar mucho dinero en un país, sin poseer un solo edificio allí. Luego podrá separar el lugar donde gana su dinero del lugar donde lo declara."
+        },
+        {
+          "type": "funFact",
+          "text": "En 2014, el IRS de Estados Unidos descubrió que Microsoft había transferido $39 mil millones en ganancias a Puerto Rico a través de derechos de propiedad intelectual, ahorrando más de $6,5 mil millones en impuestos."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p2",
+      "title": "Un déficit de cientos de miles de millones",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Según la OCDE, estas prácticas cuestan a los presupuestos públicos de todo el mundo entre 100 y 240 mil millones de dólares al año, o entre el 4 y el 10 por ciento de todos los impuestos corporativos recaudados en el planeta."
+        },
+        {
+          "type": "image",
+          "asset": "multinational_corporate_tax_avoidance_structure",
+          "ratio": "16:9",
+          "caption": "Las sedes europeas de los gigantes digitales suelen estar ubicadas en países donde los impuestos son más bajos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Este déficit obliga a los estados a elegir entre aumentar los impuestos a los hogares y las pymes, o reducir el gasto público como el de salud o educación. Una empresa local paga en promedio una tasa impositiva mucho más alta que una multinacional, lo que genera competencia desleal."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p3",
+      "title": "La respuesta: un impuesto mínimo global",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En 2021, bajo los auspicios de la OCDE y el G20, un acuerdo histórico estableció un . Se dirige a empresas cuyo volumen de negocios supera los 750 millones de euros: si sólo pagan el 5% de impuestos en un país, su país de origen ahora puede reclamar el 10% que les falta. [[Impuesto mínimo global del 15% (OCDE, 2021)]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Algunos países, como Francia, también han creado un impuesto nacional dirigido directamente a la facturación de los gigantes digitales. Al mismo tiempo, las multinacionales ahora deben publicar, país por país, la ubicación de sus empleados, sus beneficios y sus impuestos: transparencia que permite identificar las discrepancias más flagrantes."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p4",
+      "title": "Irlanda, capital europea de la optimización",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Irlanda, con su tipo impositivo oficial del 12,5% y sus acuerdos secretos denominados , se ha convertido en el pivote europeo de la optimización fiscal. Gracias a una estructura compleja, Apple pagó un tipo impositivo efectivo cercano al 0,005% en 2014. [[tax rulings]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "La Comisión Europea ha exigido 13.000 millones de euros en impuestos no pagados a Apple desde Irlanda, pero el país se ha negado durante mucho tiempo a cobrarlos: teme que unas normas demasiado estrictas provoquen que las oficinas centrales huyan a otras regiones del mundo. Los defensores de la justicia fiscal también señalan que esta tasa del 15% sigue siendo inferior a la media de los países desarrollados, y que los países más pobres, a menudo los más afectados por la evasión fiscal, sólo recuperarán una pequeña parte."
+        },
+        {
+          "type": "takeaway",
+          "text": "Los GAFAM llevan mucho tiempo aprovechando las lagunas del derecho internacional para pagar impuestos irrisorios, lo que cuesta a los presupuestos públicos hasta 240.000 millones de dólares al año. Desde 2021, un impuesto mínimo global del 15% ha intentado corregir este desequilibrio, pero la batalla por una fiscalidad más justa continúa."
+        }
+      ]
+    }
+  ]
+}

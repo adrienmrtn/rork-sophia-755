@@ -1,0 +1,145 @@
+{
+  "id": "course_40_la_guerre_de_secession_americaine_1861_1",
+  "title": "A Guerra Civil Americana",
+  "subtitle": "1861-1865",
+  "subject": "histoire",
+  "subcategory": "Guerra Fria & mundo contemporâneo",
+  "description": "De **1861** a **1865**, os Estados Unidos estão dilacerados: mais de **620.000** mortos. No centro do conflito estão a escravatura, a unidade nacional e o nascimento de um Estado federal mais forte.",
+  "hero": {
+    "image": "la_guerre_de_secession_americaine",
+    "ratio": "16:9",
+    "hook": "A guerra mais mortal da história americana, para a União e contra a escravatura."
+  },
+  "sections": [
+    {
+      "id": "course_40_la_guerre_de_secession_americaine_1861_1_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "De **1861** a **1865**, os Estados Unidos vivem a sua crise mais grave: a Guerra Civil. O Norte (a União) versus o Sul (a Confederação). Chega de **620.000** mortos."
+        },
+        {
+          "type": "paragraph",
+          "text": "O conflito transforma uma jovem república numa potência industrial, à custa de um trauma duradouro para a unidade nacional e a escravatura."
+        }
+      ]
+    },
+    {
+      "id": "course_40_la_guerre_de_secession_americaine_1861_1_p1",
+      "title": "Duas Américas frente a frente",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O **Norte** está se industrializando, com salários e protecionismo. O **Sul** continua rural, rico em algodão produzido por **4 milhões de escravos**."
+        },
+        {
+          "type": "image",
+          "asset": "slaves_american_southern_plantation",
+          "ratio": "4:3",
+          "caption": "Plantação do Sul: Escravidão no Coração da Economia Confederada."
+        },
+        {
+          "type": "paragraph",
+          "text": "O debate também diz respeito ao : quem decide sobre a escravatura, o estado local ou Washington? A eleição de **Abraão Lincoln** (**Novembro de 1860**), republicano que se opõe à extensão da escravidão, sem um único voto do Sul, desencadeia a secessão. Sete estados fundaram a Confederação, com  como presidente, e garantiram a escravidão em suas constituições. **[[Direitos dos Estados versus o Governo Federal]]** **[[Jefferson Davis]]**"
+        },
+        {
+          "type": "funFact",
+          "text": "Antes da guerra, costumávamos dizer “os Estados Unidos *é*” no plural. Depois, é imprescindível o uso do singular (“*Leste*”): uma nação indivisível."
+        }
+      ]
+    },
+    {
+      "id": "course_40_la_guerre_de_secession_americaine_1861_1_p2",
+      "title": "Uma guerra total, depois emancipação",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**A 12 de abril de 1861**, Canhões do sul bombardeiam Fort Sumter, Carolina do Sul. A guerra, que pensávamos que seria curta, tornou-se industrial. Em **Antietam** (**17 de setembro de 1862**), **23.000** vítimas em doze horas: o dia mais sangrento da história militar americana."
+        },
+        {
+          "type": "paragraph",
+          "text": "O fracasso de , o principal general confederado, permitiu que Lincoln assinasse  (**1º de janeiro de 1863**), que libertou escravos nos estados rebeldes. A guerra pela União também se tornou uma guerra pela liberdade, o que fechou a porta ao apoio europeu ao Sul. **Gettysburg** (julho **1863**) quebra o ímpeto confederado. **[[Robert E. Lee]]** **[[A Proclamação de Emancipação (1º de janeiro de 1863)]]**"
+        },
+        {
+          "type": "image",
+          "asset": "american_civil_war_battle",
+          "ratio": "4:3",
+          "caption": "Batalha da Guerra Civil: violência industrial sem precedentes."
+        }
+      ]
+    },
+    {
+      "id": "course_40_la_guerre_de_secession_americaine_1861_1_p3",
+      "title": "Vitória do Norte, morte de Lincoln",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": ", general-chefe da União, está travando uma guerra de desgaste. Seu tenente **William Tecumseh Sherman** devastou a Geórgia durante sua “Marcha para o Mar”. Lee se rendeu em **Appomattox** em **9 de abril de 1865**. **[[Ulysses Grant]]**"
+        },
+        {
+          "type": "image",
+          "asset": "abraham_lincoln_portrait",
+          "ratio": "1:1",
+          "caption": "Abraham Lincoln, presidente da União, assassinado cinco dias depois de Appomattox."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cinco dias depois, Lincoln foi assassinado por **John Wilkes Booth**, um ator sulista. O , período de reconstrução do Sul, começa sem ele. Em dezembro **1865**,  aboliu a escravidão em todo o país. **[[A Reconstrução (1865-1877)]]** [[A 13ª Emenda]]"
+        },
+        {
+          "type": "funFact",
+          "text": "A guerra também acelerou a cirurgia: médicos como **Gurdon Buck** realizaram as primeiras reconstruções faciais em soldados desfigurados pelas balas Minié."
+        }
+      ]
+    },
+    {
+      "id": "course_40_la_guerre_de_secession_americaine_1861_1_p4",
+      "title": "Cicatrizes e legado",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sob o  (**1865-1877**), os afro-americanos votaram e foram eleitos. Depois vem a reação: a  (**1865**), organização terrorista branca, a retirada das tropas federais (**1877**), leis de segregação Jim Crow. A segregação legal duraria quase um século. **[[A Reconstrução (1865-1877)]]** **[[Ku Klux Klan]]**"
+        },
+        {
+          "type": "paragraph",
+          "text": "No mapa, uma nação unida sem escravidão legal. Na verdade, uma profunda divisão racial. E as ferramentas de uma futura potência mundial: indústria pesada, caminhos-de-ferro, um Estado federal forte."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1860",
+              "title": "Eleição de Lincoln",
+              "detail": "Início das secessões."
+            },
+            {
+              "date": "1861",
+              "title": "Forte Sumter",
+              "detail": "Início da guerra."
+            },
+            {
+              "date": "1863",
+              "title": "Emancipação",
+              "detail": "Proclamação e ponto de viragem de Gettysburg."
+            },
+            {
+              "date": "1865",
+              "title": "Appomattox e 13ª Emenda",
+              "detail": "Fim dos combates e abolição constitucional."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "A Guerra Civil (**1861-1865**) unificou os Estados Unidos e aboliu a escravatura, ao custo de **620.000** mortes, ao mesmo tempo que deixou uma divisão racial que as leis de Jim Crow prolongariam."
+        }
+      ]
+    }
+  ]
+}

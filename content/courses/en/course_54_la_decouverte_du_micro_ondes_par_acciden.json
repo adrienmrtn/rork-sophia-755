@@ -1,0 +1,102 @@
+{
+  "id": "course_54_la_decouverte_du_micro_ondes_par_acciden",
+  "title": "The discovery of the microwave",
+  "subtitle": "By accident",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "In 1945, an engineer noticed that his candy bar had melted near a radar. From this observation the microwave oven was born.",
+  "hero": {
+    "image": "la_decouverte_du_micro_ondes",
+    "ratio": "16:9",
+    "hook": "A melted chocolate bar… and modern cuisine changes."
+  },
+  "sections": [
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In **1945**, in the United States, engineer **Percy Spencer** works on radars. One day he notices that the candy bar in his pocket has melted. Not because of body heat: because of radar waves."
+        },
+        {
+          "type": "paragraph",
+          "text": "He tests with corn: the popcorn pops. The idea of ​​an oven that heats differently was born."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p1",
+      "title": "From radar to the kitchen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "percy_spencer_microwave_discovery_radar",
+          "ratio": "4:3",
+          "caption": "World War II radars already used microwaves."
+        },
+        {
+          "type": "paragraph",
+          "text": "**microwaves** are electromagnetic waves, like radio light, but more \"energetic\" than many conventional radio waves. During the war, they were mainly used for radar to detect planes and boats."
+        },
+        {
+          "type": "paragraph",
+          "text": "Spencer understands that they can also agitate water and fats in food... and therefore heat it."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p2",
+      "title": "The first oven is huge",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "first_microwave_oven_radarange_1947",
+          "ratio": "4:3",
+          "caption": "The first commercial microwave oven was the size of a cabinet."
+        },
+        {
+          "type": "paragraph",
+          "text": "The first commercial model, the **Radarange**, was released around **1947**. It is huge, expensive, and mainly intended for restaurants or boats. It will take decades to miniaturize it and make it affordable for homes."
+        },
+        {
+          "type": "funFact",
+          "text": "At first, some were afraid that the oven would “make the food radioactive.” False: microwaves heat up, they do not make you radioactive."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p3",
+      "title": "How does it really heat up?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Microwaves mainly vibrate water molecules (and a little fats and sugars). This agitation creates **heat inside** the food, not just on the surface like a pan."
+        },
+        {
+          "type": "paragraph",
+          "text": "This is why a dish can be hot on the outside and lukewarm in the center if it is thick: the waves do not penetrate infinitely deep."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p4",
+      "title": "An everyday object",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "From the 1970s-1980s, the microwave oven entered millions of kitchens. It changes habits: reheat quickly, ready meals, faster life."
+        },
+        {
+          "type": "takeaway",
+          "text": "The microwave was born from a coincidence observed by Percy Spencer near a radar. The waves mainly agitate the water in the food and heat it from the inside."
+        }
+      ]
+    }
+  ]
+}

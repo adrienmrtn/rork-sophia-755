@@ -1,0 +1,141 @@
+{
+  "id": "course_14_la_commune_de_paris_1871",
+  "title": "La Comuna de París",
+  "subtitle": "1871",
+  "subject": "histoire",
+  "subcategory": "Revoluciones y conflictos modernos",
+  "description": "Del 18 de marzo al 28 de mayo de 1871, París se gobernó durante **72 días**. La experiencia termina en la Semana Sangrienta, una represión que deja una huella duradera en la memoria francesa.",
+  "hero": {
+    "image": "la_commune_de_paris_1871",
+    "ratio": "16:9",
+    "hook": "72 días donde París se gobierna a sí mismo… antes de ser aplastado en sangre."
+  },
+  "sections": [
+    {
+      "id": "course_14_la_commune_de_paris_1871_intro",
+      "title": "Introducción",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Del **18 de marzo** al **28 de mayo de 1871**, París vive una experiencia poco común: la Comuna ****. Durante **72 días**, la capital es devorada si misma. No respetar la suciedad instalada en**Versalles** e intenta una democracia más social."
+        },
+        {
+          "type": "paragraph",
+          "text": "Este levantamiento nació de una derrota nacional, un asedio hambriento y una división entre un París radical y una provincia más conservadora. Termina con **Semana Sangrienta**."
+        }
+      ]
+    },
+    {
+      "id": "course_14_la_commune_de_paris_1871_p1",
+      "title": "Después de la derrota y el asedio",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Todo comienza desde el  (**1870-1871**). El emperador francés **Napoleón III** es capturado en **Sedan**. Luego, París soportó un asedio de cuatro meses. Comemos caballos, animales de zoológico y luego ratas. La capitulación parece humillante. [[La guerra franco-prusiana (1870-1871)]]"
+        },
+        {
+          "type": "image",
+          "asset": "paris_commune_barricades_1871",
+          "ratio": "4:3",
+          "caption": "Barricadas parisinas durante la Comuna de 1871."
+        },
+        {
+          "type": "funFact",
+          "text": "En Navidad **1870**, ciertos restaurantes de lujo servían parfait de elefante o estofado de canguro, de la colección de animales Jardin des Plantes."
+        },
+        {
+          "type": "paragraph",
+          "text": "En febrero,  encabezó una Asamblea principalmente monárquica, retirada a Versalles. El **18 de marzo**, quiso apoderarse de los cañones del , una milicia de parisinos armados, almacenados en **Montmartre**. La multitud confraterniza con los soldados. Thiers evacua París. Un Comité Central toma el control de la ciudad. [[Adolphe Thiers]] [[Guardia Nacional]]"
+        }
+      ]
+    },
+    {
+      "id": "course_14_la_commune_de_paris_1871_p2",
+      "title": "Lo que intentó la Comuna",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "El **28 de marzo** se proclamó la Comuna. Trabajadores, artesanos, periodistas, cercanos al  (red de sindicatos y partidos obreros): el consejo legisla con urgencia. Condonación de alquileres. Abolición del trabajo nocturno de los panaderos. Talleres abandonados entregados a cooperativas. [[Internacional del Trabajo]]"
+        },
+        {
+          "type": "image",
+          "asset": "paris_city_hall_commune_1871",
+          "ratio": "4:3",
+          "caption": "El Ayuntamiento, corazón político de la Comuna."
+        },
+        {
+          "type": "paragraph",
+          "text": "También proclamó la separación de la Iglesia y el Estado, las escuelas laicas y libres, e hizo derribar la columna **Vendôme**, símbolo del Imperio. , profesora y activista, encarna el papel central de las mujeres en los clubes y en las barricadas. [[Louise Michel]]"
+        }
+      ]
+    },
+    {
+      "id": "course_14_la_commune_de_paris_1871_p3",
+      "title": "Semana sangrienta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "El **21 de mayo**, las tropas de Versalles entraron en París. Es **Semana Sangrienta**. Barrio a barrio, barricada a barricada, la represión es feroz. Se fusila a los rehenes. Arden las Tullerías y el Hôtel de Ville."
+        },
+        {
+          "type": "image",
+          "asset": "bloody_week_1871_paris",
+          "ratio": "4:3",
+          "caption": "Semana Sangrienta: París recuperada calle por calle."
+        },
+        {
+          "type": "funFact",
+          "text": "Durante la Comuna, la bandera roja se convirtió en el emblema oficial de París, sustituyendo a la tricolor considerada demasiado vinculada a las potencias que habían capitulado."
+        },
+        {
+          "type": "paragraph",
+          "text": "El , nombre dado a los partidarios de la Comuna, se retiró al cementerio **Padre Lachaise**. **147** los últimos combatientes fueron fusilados allí, en el **Muro de los [[Federados]]**. Resultados: entre **10.000 y 30.000** muertes en una semana, luego deportaciones a Nueva Caledonia."
+        }
+      ]
+    },
+    {
+      "id": "course_14_la_commune_de_paris_1871_p4",
+      "title": "Un mito que perdura",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Para el filósofo **Carlos Marx** y la Internacional, la Comuna fue la primera experiencia del poder obrero. Sin embargo, su represión consolida el “orden” **III República**. Las ideas comuneras (laicismo, derechos sociales) volverían más tarde al derecho republicano."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "18 de marzo de 1871",
+              "title": "Montmartre",
+              "detail": "Thiers no logra apoderarse de los cañones; París está rockeando."
+            },
+            {
+              "date": "28 de marzo de 1871",
+              "title": "Proclamación",
+              "detail": "La Comuna se establece oficialmente."
+            },
+            {
+              "date": "21-28 de mayo de 1871",
+              "title": "semana sangrienta",
+              "detail": "Versalles aplasta la insurrección."
+            },
+            {
+              "date": "28 de mayo de 1871",
+              "title": "Muro de los Federados",
+              "detail": "Fin de los combates en Père-Lachaise."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "En **72 días**, la Comuna de París intentó una socialdemocracia radical, antes de ser destruida durante la Semana Sangrienta, a costa de decenas de miles de muertes."
+        }
+      ]
+    }
+  ]
+}

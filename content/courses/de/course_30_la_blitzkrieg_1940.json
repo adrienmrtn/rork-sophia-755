@@ -1,0 +1,135 @@
+{
+  "id": "course_30_la_blitzkrieg_1940",
+  "title": "Der Blitzkrieg",
+  "subtitle": "1940",
+  "subject": "histoire",
+  "subcategory": "Kalter Krieg & zeitgenössische Welt",
+  "description": "In **sechs Wochen**, vom 10. Mai bis **22. Juni 1940**, eroberte die deutsche Armee Frankreich und die Benelux-Länder. „Blitzkrieg“ revolutioniert die Kriegskunst durch Geschwindigkeit.",
+  "hero": {
+    "image": "la_blitzkrieg_1940",
+    "ratio": "16:9",
+    "hook": "Sechs Wochen, um die angeblich erste Armee Europas zu stürzen."
+  },
+  "sections": [
+    {
+      "id": "course_30_la_blitzkrieg_1940_intro",
+      "title": "Einführung",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vom 10. Mai  bis zum 22. Juni 1940 eroberte die deutsche Armee in nur sechs Wochen Frankreich, die Niederlande, Belgien und Luxemburg. Europas führende Militärmacht bricht vor den Augen der Welt zusammen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Der **Blitzkrieg** (Blitzkrieg) ist nicht nur eine Reihe von Siegen. Es ist eine Revolution: Die Geschwindigkeit und Desorganisation des Feindes zählen mehr als seine unmittelbare physische Zerstörung."
+        }
+      ]
+    },
+    {
+      "id": "course_30_la_blitzkrieg_1940_p1",
+      "title": "Hart zuschlagen, schnell zuschlagen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Das Wort Blitzkrieg ist im , der deutschen Armee von 1935 bis 1945, nicht offiziell. Es ist die angelsächsische Presse, die es erfunden hat. Die Deutschen reden vom Bewegungskrieg. Das Prinzip von : Alle Mittel auf einen Engpunkt konzentrieren, um die Front zu durchbrechen. [[Wehrmacht]] [[Schwerpunkt]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Die Sirenen der Stukas, dieser Sturzkampfbomber mit dem Spitznamen „Trompeten von Jericho“, haben keinen wirklichen militärischen Nutzen. Sie dienen nur dazu, Soldaten und Zivilisten zu terrorisieren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Während die Franzosen die Panzer zur Unterstützung der Infanterie zerstreuten, gruppierten die Deutschen sie in autonome Panzerdivisionen, die über Funk verbunden waren. Stukas wirken wie fliegende Artillerie. Unterdessen glaubt Frankreich immer noch an , diese Festungskette entlang der deutschen Grenze. [[Die Maginot-Linie]]"
+        }
+      ]
+    },
+    {
+      "id": "course_30_la_blitzkrieg_1940_p2",
+      "title": "Der Sichelschlag",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Auf Anraten von General **Erich von Manstein** übernahm Hitler den , den „Sichelzug“: Er lockte die Alliierten nach Belgien, während der Großteil der Panzer, die deutschen Panzer, die als unpassierbar geltenden Ardennen überquerten. Am 13. Mai **Suche Allgemein**Heinz** Guderian** die Maas bei **Limousine**. Die Kanalroute ist geöffnet. [[Der Sichelschnitt-Plan]]"
+        },
+        {
+          "type": "image",
+          "asset": "german_tanks_blitzkrieg_1940",
+          "ratio": "4:3",
+          "caption": "Deutsche Panzer während des Feldzugs 1940."
+        },
+        {
+          "type": "paragraph",
+          "text": "Innerhalb einer Woche waren die alliierten Armeen mit dem Rücken zum Meer umzingelt. In Dünkirchen evakuierte  338.000  französisch-britische Soldaten. Großbritannien rettet seine Armee. Frankreich bleibt allein. [[Operation Dynamo (Dünkirchen)]]"
+        },
+        {
+          "type": "image",
+          "asset": "dunkirk_evacuation_beach_1940",
+          "ratio": "4:3",
+          "caption": "Evakuierung von Dünkirchen, Mai-Juni 1940."
+        }
+      ]
+    },
+    {
+      "id": "course_30_la_blitzkrieg_1940_p3",
+      "title": "Der Waffenstillstand und der Appell",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Frankreich wurde seiner besten Divisionen beraubt und brach zusammen. Paris wird am 14. Juni zur offenen Stadt erklärt. Marschall **Philippe Pétain** fordert den Waffenstillstand, unterzeichnet am **22. Juni** in Compiègne, im selben Wagen wie in **1918**: Hitler übt Rache."
+        },
+        {
+          "type": "funFact",
+          "text": "Für die Zeremonie holte Hitler den Wagen aus dem Museum von Compiègne und stellte ihn genau dort ab, wo Deutschland 22 Jahre zuvor kapituliert hatte."
+        },
+        {
+          "type": "paragraph",
+          "text": "**18. Juni**, aus London, **General de Gaulle** appelliert an die BBC: Frankreich hat eine Schlacht verloren, nicht den Krieg. Die unmittelbaren Auswirkungen sind gering. Der Grundstein für das freie Frankreich ist gelegt."
+        }
+      ]
+    },
+    {
+      "id": "course_30_la_blitzkrieg_1940_p4",
+      "title": "Ein zweischneidiger Sieg",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1940 etablierte sich Deutschland als Herr Europas. Aber Blitzkrieg ist eine Kurzkriegsstrategie: begrenzter Treibstoff, fragile Logistik. In **1941** geriet es angesichts der sowjetischen Unermesslichkeit ins Stocken. Der Historiker **Marc Bloch** wird über „Strange Defeat“ sprechen: ein französisches intellektuelles und materielles Versagen."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "10. Mai 1940",
+              "title": "Offensive im Westen",
+              "detail": "Gleichzeitiger Angriff auf die Benelux-Länder und Durchbruch in den Ardennen."
+            },
+            {
+              "date": "13. Mai 1940",
+              "title": "Durchbruch in der Limousine",
+              "detail": "Die Panzer überqueren die Maas."
+            },
+            {
+              "date": "Mai-Juni 1940",
+              "title": "Dünkirchen",
+              "detail": "338.000 Soldaten wurden nach England evakuiert."
+            },
+            {
+              "date": "22. Juni 1940",
+              "title": "Waffenstillstand",
+              "detail": "Frankreich beendet den Kampf bei Compiègne."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "In sechs Wochen kombiniert der Blitzkrieg Panzerung, Luftfahrt und Funk, um eine Verteidigungsdoktrin zu pulverisieren. An der Maginot-Linie herrschten Geschwindigkeit und Konzentration der Kräfte."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "id": "course_46_comment_les_avions_volent_ils",
+  "title": "Como os aviões voam?",
+  "subtitle": "Física de vôo",
+  "subject": "sciences",
+  "subcategory": "O nosso quotidiano explicado",
+  "description": "Um avião pesando várias centenas de toneladas voa. Não é mágica: é uma questão de formato de asa, velocidade e forças que se equilibram.",
+  "hero": {
+    "image": "comment_les_avions_volent",
+    "ratio": "16:9",
+    "hook": "Mais pesado que um caminhão, mas permanece no ar. Veja como."
+  },
+  "sections": [
+    {
+      "id": "course_46_comment_les_avions_volent_ils_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Um grande avião comercial pode pesar **cem toneladas de toneladas**. Como pode algo tão pesado permanecer no ar? A resposta está no formato das asas e na velocidade do avião."
+        },
+        {
+          "type": "paragraph",
+          "text": "Quatro forças principais estão em jogo: **impulso** (para frente), **arrastar** (frenagem a ar), **peso** (para baixo) e **elevador** (para cima)."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p1",
+      "title": "A asa, uma forma inteligente",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vista de lado, a asa de um avião não é plana. A parte superior é mais arredondada que a parte inferior. Quando o avião está se movendo rapidamente, o ar deve contornar essa forma."
+        },
+        {
+          "type": "image",
+          "asset": "airplane_wing_cross_section_flight",
+          "ratio": "auto",
+          "caption": "O perfil da asa cria a sustentação que eleva o avião."
+        },
+        {
+          "type": "paragraph",
+          "text": "O ar que passa acima acelera um pouco. Sua pressão cai. Sob a asa, a pressão continua mais forte. Esta diferença empurra a asa para cima: este é o **elevador**. Muitas vezes é explicado com o princípio de **Bernoulli**, em homenagem a um estudioso do século 18, e com o fato de que a asa também desvia o ar para baixo."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p2",
+      "title": "Você precisa de velocidade",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sem velocidade, não há ar suficiente passando pela asa, não há sustentação suficiente. É por isso que um avião precisa de uma pista longa para decolar: os motores devem acelerá-lo com força suficiente."
+        },
+        {
+          "type": "funFact",
+          "text": "Os pássaros usam a mesma ideia geral: suas asas criam sustentação. Mas eles batem as asas para seguir em frente. O avião avança graças aos seus motores."
+        },
+        {
+          "type": "paragraph",
+          "text": "Em vôo de cruzeiro, a sustentação equilibra o peso. O impulso dos motores equilibra a resistência do ar. O avião então avança a uma velocidade aproximadamente constante."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p3",
+      "title": "Suba, desça, vire",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Para subir, o piloto (ou computador de bordo) inclina um pouco o nariz e ajusta o impulso. Para descer, muitas vezes reduzimos o impulso. Para virar, o avião é inclinado para o lado por meio de partes móveis das asas, os ailerons."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ao pousar, diminuímos a velocidade. Os flaps se estendem da asa para aumentar a sustentação em baixas velocidades. Então as rodas tocam o solo e os freios (às vezes também reversores) param o avião."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p4",
+      "title": "Não é \"mais leve que o ar\"",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Um balão de hélio flutua porque é menos denso que o ar. Avião, não: é muito mais denso. Ele voa porque **força** parece que o carrega, graças à sua velocidade e ao formato de suas asas."
+        },
+        {
+          "type": "takeaway",
+          "text": "Um avião voa graças ao **elevador** criado por suas asas movendo-se no ar. A velocidade é essencial: sem ela, a asa já não “empurra” o suficiente para cima para compensar o peso."
+        }
+      ]
+    }
+  ]
+}

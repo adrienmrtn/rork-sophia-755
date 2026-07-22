@@ -1,0 +1,106 @@
+{
+  "id": "course_86_la_republique_platon",
+  "title": "La República, Platón",
+  "subtitle": "Siglo IV a.C. d.C.",
+  "subject": "litterature",
+  "subcategory": "Griegos y filósofos antiguos",
+  "description": "Para definir la justicia, Platón imagina una ciudad ideal y el mito de la caverna. La República no es un programa electoral: es una investigación sobre el alma y el poder.",
+  "hero": {
+    "image": "la_republique_platon",
+    "ratio": "16:9",
+    "hook": "¿Y si la justicia se entendiera mejor dibujando una ciudad entera?"
+  },
+  "sections": [
+    {
+      "id": "course_86_la_republique_platon_intro",
+      "title": "Introducción",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hacia **380 a.C.**, **Platón**, filósofo griego y fundador de la Academia de Atenas, escribió la **República**. En griego decimos *Politeia*. El diálogo comienza con una simple pregunta: ¿qué es **justicia**? Para responder a esto, **Sócrates**, personaje central de los diálogos de Platón, propone un rodeo sorprendente: construir con palabras una ciudad ideal, la , la “ciudad hermosa”. [[Calípolis]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Esta no es una novela de fantasía. Es una **analogía**: entender la ciudad para entender el alma, y ​​el alma para juzgar el poder. , filósofo y matemático británico, diría más tarde que toda la filosofía occidental es sólo una serie de notas a pie de página de Platón. Este libro explica por qué. [[Alfred North Whitehead]]"
+        }
+      ]
+    },
+    {
+      "id": "course_86_la_republique_platon_p1",
+      "title": "El alma y la ciudad, un mismo plan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Platón divide el alma en tres partes. El deseo, el , está vinculado a los apetitos materiales. El coraje, el , es la sede de la noble ira y la fuerza de carácter. La razón, la , es capaz de acceder a la verdad. La ciudad ideal tiene tres clases: productores, **guardianes**, soldados, líderes. La justicia es que cada parte haga su trabajo sin invadir a los demás. [[Epithumia]] [[Thumos]] [[Logos]]"
+        },
+        {
+          "type": "image",
+          "asset": "plato_academy_athens_painting",
+          "ratio": "4:3",
+          "caption": "La Academia de Platón en Atenas: pensar la ciudad para educar el alma."
+        },
+        {
+          "type": "paragraph",
+          "text": "La idea sigue siendo chocante: vincula la moral privada y la organización política. Para Platón, una ciudad injusta produce almas retorcidas. Y un alma desordenada produce una ciudad corrupta. La justicia no es sólo un decreto. Es un equilibrio interior y colectivo."
+        }
+      ]
+    },
+    {
+      "id": "course_86_la_republique_platon_p2",
+      "title": "¿Quién debería gobernar?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Los líderes ideales son los , aquellos que aman la verdad más que el poder. Viven sin excesiva propiedad privada. Se han formado desde hace mucho tiempo en matemáticas y **dialéctico**, el arte del diálogo que busca la verdad. Platón desconfía de la democracia ateniense, que condenó a Sócrates a beber cicuta en el año 399. [[reyes-filosofos]]"
+        },
+        {
+          "type": "funFact",
+          "text": ", filósofo del siglo XX, acusará a la República de anunciar el totalitarismo. Otros lo ven como una utopía educativa, no un manual policial. El debate ha permanecido abierto durante veinticinco siglos. [[Karl Popper]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Detrás del esquema político está . El mundo sensible, el que vemos y tocamos, es sólo una sombra. Gobernar bien significa ver la **Buena**, la Idea Suprema, no sólo gestionar opiniones fugaces. [[La teoría de las Ideas de Platón]]"
+        }
+      ]
+    },
+    {
+      "id": "course_86_la_republique_platon_p3",
+      "title": "La cueva: saliendo de la ilusión",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "El mito de la cueva **** es el pasaje más famoso del libro. Los prisioneros encadenados sólo ven sombras en una pared, proyectadas por un fuego detrás de ellos. Uno es liberado, sale al sol, vuelve para avisar a los demás. Lo llaman loco. Educar, dice Platón, no es llenar un jarrón. Es volver nuestra mirada hacia la luz."
+        },
+        {
+          "type": "image",
+          "asset": "plato_portrait_bust_sculpture",
+          "ratio": "1:1",
+          "caption": "Platón: pensar es aceptar salir de las sombras familiares."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esta imagen se ha extendido a lo largo de los siglos: medios de comunicación, ideologías, comodidad intelectual. Salir de la cueva cuesta. Quedarse en casa es tranquilizador. Platón sugiere que el filósofo debe volver para iluminar a los demás, aunque se burlen de él. El conocimiento no es un lujo privado. Es una responsabilidad."
+        }
+      ]
+    },
+    {
+      "id": "course_86_la_republique_platon_p4",
+      "title": "Regímenes que se pudren, una obra que permanece",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Platón también describe la decadencia de los regímenes: aristocracia, timocracia, oligarquía, democracia, tiranía. Cada régimen nace de los vicios del anterior. La lección no es el fatalismo. Es vigilancia: las instituciones siguen el carácter de los ciudadanos."
+        },
+        {
+          "type": "takeaway",
+          "text": "La **República** vincula la justicia personal y la justicia política. A través de la ciudad ideal y la cueva, Platón se pregunta: ¿cuál es el valor de un poder que no busca la verdad?"
+        }
+      ]
+    }
+  ]
+}

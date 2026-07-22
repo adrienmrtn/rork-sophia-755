@@ -1,0 +1,139 @@
+{
+  "id": "course_39_la_democratie_athenienne",
+  "title": "Democracia ateniense",
+  "subtitle": "Século V a.C. d.C.",
+  "subject": "histoire",
+  "subcategory": "Guerra Fria & mundo contemporâneo",
+  "description": "No século V a.C., Atenas inventou um sistema onde os cidadãos governavam diretamente. Sorteio na loteria, igualdade de direitos… e exclusão massiva.",
+  "hero": {
+    "image": "la_democratie_athenienne",
+    "ratio": "16:9",
+    "hook": "Como uma cidade grega inventou o poder do povo e os seus limites."
+  },
+  "sections": [
+    {
+      "id": "course_39_la_democratie_athenienne_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "No século V a.C., Atenas inventou algo radical: o  no sentido de que os cidadãos já não eram súbditos de um rei, mas sim actores do seu destino. O poder (*kratos*) pertence ao povo (*demonstrações*). Daí a palavra democracia. **[[Política]]**"
+        },
+        {
+          "type": "paragraph",
+          "text": "Esta democracia direta, nascida de crises e reformas, continua a ser uma referência para o pensamento político ocidental, com os seus pontos fortes e os seus pontos cegos."
+        }
+      ]
+    },
+    {
+      "id": "course_39_la_democratie_athenienne_p1",
+      "title": "Reformas que abrem a cidade",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "No século VII a.C., Atenas estava dividida entre aristocratas e camponeses endividados. , estadista eleito em **594 d.C.**, abole a escravidão por dívida e abre magistraturas de acordo com a fortuna, não apenas com o sangue. **[[Sólon]]**"
+        },
+        {
+          "type": "paragraph",
+          "text": "O verdadeiro ponto de viragem é  (**508-507**). Este reformador criou **10 tribo erros** para desmembrar os clãs, e estabeleceu o , Conselho dos Quinhentos sorteado. Cada cidadão pode servir a cidade. **[[Clístenes]]** **[[Bola]]**"
+        },
+        {
+          "type": "image",
+          "asset": "athens_agora_ancient_ruins",
+          "ratio": "4:3",
+          "caption": "A Ágora de Atenas, coração da vida cívica."
+        },
+        {
+          "type": "funFact",
+          "text": "Para remover um homem demasiado poderoso, os atenienses votaram no  num fragmento de cerâmica: exílio de dez anos, com um quórum de **6.000** eleitores. **[[Ostracismo]]**"
+        }
+      ]
+    },
+    {
+      "id": "course_39_la_democratie_athenienne_p2",
+      "title": "Como funciona sob Péricles",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Em meados do século V, sob **Pericles**, um estratega reeleito quinze vezes e uma figura da idade de ouro ateniense, o sistema tornou-se mais aberto. A **Eclésia**, assembleia de cidadãos, reúne-se aproximadamente **40 vezes** por ano no morro do Pnyx. Ela vota nas leis, na guerra, na paz, no orçamento."
+        },
+        {
+          "type": "image",
+          "asset": "pericles_bust_sculpture",
+          "ratio": "1:1",
+          "caption": "Péricles, estrategista reeleito quinze vezes, figura da época de ouro ateniense."
+        },
+        {
+          "type": "paragraph",
+          "text": "O  garante igualdade de fala. A , diária, permite que os mais pobres se sentem. A justiça passa pelos jurados : **6 000** sorteados. O sorteio limita a monopolização do poder, exceto para estrategistas militares. **[[Isegoria]]** **[[Misthos]]** **[[Helieia]]**"
+        }
+      ]
+    },
+    {
+      "id": "course_39_la_democratie_athenienne_p3",
+      "title": "Uma democracia que exclui muitos",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dos aproximadamente **300.000 residentes de**, apenas **30.000 a 50.000** cidadãos do sexo masculino votam. Excluem-se as mulheres, os escravos e os metecos (estrangeiros residentes). Em **451**, Péricles ainda endurece a regra: são necessários dois pais cidadãos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Paradoxo fundador: a igualdade entre pares é baseada na escravidão e na exclusão. Uma democracia presencial, intensa, mas fechada."
+        },
+        {
+          "type": "funFact",
+          "text": "Qualquer pessoa desinteressada pela vida pública era chamada de *idiotas* (“indivíduo”). A palavra deu “idiota”: desligar-se do bem comum era visto como falta de razão."
+        }
+      ]
+    },
+    {
+      "id": "course_39_la_democratie_athenienne_p4",
+      "title": "Fragilidades e herança",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Um , um palestrante que lisonjeia as paixões, consegue levar a assembléia com emoção. **Platão**, filósofo marcado pela morte de seu mestre **Sócrates** (**399 a.C.**), vê na democracia o reinado da opinião contra a verdade, e o exemplo típico da tirania da maioria. [[Demagogo]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Apesar das suas falhas, Atenas lega ideias duradouras: responsabilidade dos que estão no poder, igualdade perante a lei, debate contraditório. Hoje, o sorteio e a democracia direta surgem até nas discussões contemporâneas."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "594 AC DC",
+              "title": "Solón",
+              "detail": "Fim da escravidão por dívida."
+            },
+            {
+              "date": "508 AC DC",
+              "title": "Clístenes",
+              "detail": "Tribos mistas e Boulé."
+            },
+            {
+              "date": "século 5",
+              "title": "Péricles",
+              "detail": "Misthos e democracia radical."
+            },
+            {
+              "date": "399 AC DC",
+              "title": "Morte de Sócrates",
+              "detail": "Lado negro da soberania popular."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "A democracia ateniense era um governo direto de cidadãos livres do sexo masculino, baseado no sorteio e na igualdade de expressão. Excluiu aproximadamente **85%** da população, mas inventou o debate público ocidental."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "id": "course_230_la_liberte_de_la_presse_dans_le_monde",
+  "title": "Liberdade de imprensa em todo o mundo",
+  "subtitle": "Uma lei sob pressão",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Ambiente & futuro",
+  "description": "Menos de **10% da população mundial** vive num país onde a imprensa é verdadeiramente livre. Entre a censura estatal e a pressão económica, este direito essencial está em declínio em quase todo o lado.",
+  "hero": {
+    "image": "la_liberte_de_la_presse_dans_le_monde",
+    "ratio": "16:9",
+    "hook": "Informar às vezes custa a liberdade, ou mesmo a vida: uma viagem ao coração de um direito frágil."
+  },
+  "sections": [
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**liberdade de imprensa** é um dos melhores indicadores da saúde democrática de um país. Não se limita ao direito de publicar: inclui a capacidade dos cidadãos de acederem a informações verificadas, independentemente dos poderes em vigor. Em todo o mundo, este direito está sob dupla pressão: repressão direta em regimes autoritários e um enfraquecimento mais discreto nas próprias democracias."
+        }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p1",
+      "title": "Uma profissão cada vez mais perigosa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Todos os anos, a organização  publica um relatório de referência sobre os obstáculos à profissão de jornalista em todo o mundo. [[Repórteres Sem Fronteiras (RSF)]]"
+        },
+        {
+          "type": "image",
+          "asset": "press_freedom_world_map_RSF_index",
+          "ratio": "16:9",
+          "caption": "Menos de 10% da população mundial vive num país onde a imprensa é verdadeiramente livre."
+        },
+        {
+          "type": "paragraph",
+          "text": "Os dados de 2024 são alarmantes: menos de **10%** da população mundial vive numa área onde a imprensa trabalha sem impedimentos. Embora países como a Noruega mantenham padrões elevados, grandes regiões como a China, a Rússia e o Irão consideram o jornalismo de investigação uma forma de traição."
+        },
+        {
+          "type": "funFact",
+          "text": "No Turquemenistão, o Estado controla a informação de forma tão rigorosa que proibiu a palavra “coronavírus” nos meios de comunicação social no início da pandemia de 2020."
+        },
+        {
+          "type": "paragraph",
+          "text": "Em 2023, pelo menos 79 jornalistas perderam a vida no exercício da sua profissão, muitas vezes visados ​​para silenciar investigações embaraçosas. Quase 600 jornalistas são presos todos os anos em todo o mundo."
+        }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p2",
+      "title": "As democracias não estão imunes",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Contrariamente à crença popular, a liberdade de imprensa não está garantida para sempre nos países ocidentais. Ali sofreu transformações mais discretas, ligadas ao  e à influência financeira de alguns grandes grupos. [[concentração de mídia]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Na Hungria,  implementou uma estratégia eficaz: em vez de proibir os meios de comunicação social da oposição, favoreceu a sua tomada de poder por pessoas próximas do governo, transformando gradualmente o panorama mediático numa câmara de eco oficial. [[Viktor Orbán]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Em França, o debate diz respeito principalmente à concentração dos meios de comunicação social nas mãos de alguns grandes grupos, o que suscita receios de autocensura por parte da equipa editorial. Noutros lugares, os processos judiciais abusivos, denominados , estão a aumentar para intimidar vozes críticas. [[SLAPP]]"
+        }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p3",
+      "title": "Dinheiro, o novo adversário do jornalismo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Para além das ameaças políticas, o jornalismo enfrenta uma profunda crise económica. O modelo histórico, baseado em vendas e publicidade individuais, entrou em colapso com a tecnologia digital, com as grandes plataformas a capturarem agora a maior parte da publicidade online."
+        },
+        {
+          "type": "image",
+          "asset": "newspaper_crisis_digital_transformation_journalism",
+          "ratio": "4:3",
+          "caption": "O modelo económico histórico da imprensa entrou em colapso com a tecnologia digital."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esta queda de recursos está a fazer com que muitos jornais locais fechem, criando “desertos de informação” onde ninguém monitoriza a acção dos governantes eleitos locais. Perante isto, estão a surgir novos modelos, financiados por doações ou assinaturas diretas, como o Mediapart em França ou o ProPublica nos Estados Unidos, que provam que o jornalismo independente também pode ser lucrativo."
+        },
+        {
+          "type": "funFact",
+          "text": "O primeiro jornal impresso da história, o “Relation”, foi lançado em Estrasburgo em 1605 por Johann Carolus, muito antes da invenção legal da liberdade de imprensa."
+        }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p4",
+      "title": "Verificando a realidade em um mundo saturado de imagens",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A era digital tornou a informação mais rápida, mas também abriu as portas para o . Os algoritmos das redes sociais favorecem o conteúdo emocional em detrimento da análise factual, fragmentando a nossa visão partilhada do mundo. [[desinformação]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "O papel do jornalista evolui, portanto, para o de “verificador” da realidade, num fluxo permanente de imagens e dados. As questões éticas tornam-se mais complexas, como no fotojornalismo em zonas de conflito, onde o respeito pela dignidade humana por vezes entra em conflito com a necessidade de mostrar."
+        },
+        {
+          "type": "paragraph",
+          "text": "A defesa da liberdade de imprensa exige, portanto, uma melhor regulamentação das principais plataformas digitais e uma educação reforçada para os meios de comunicação social. Sem uma imprensa livre capaz de verificar os factos, o debate democrático corre o risco de se dissolver num mundo onde todas as opiniões são iguais, independentemente da sua veracidade."
+        },
+        {
+          "type": "takeaway",
+          "text": "Menos de 10% da população mundial vive num país onde a imprensa é verdadeiramente livre. Entre a repressão direta, as pressões económicas e a desinformação digital, este direito essencial à democracia está em declínio em quase todo o lado."
+        }
+      ]
+    }
+  ]
+}

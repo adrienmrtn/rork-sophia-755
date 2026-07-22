@@ -1,0 +1,100 @@
+{
+  "id": "course_46_comment_les_avions_volent_ils",
+  "title": "¿Cómo vuelan los aviones?",
+  "subtitle": "Física de vuelo",
+  "subject": "sciences",
+  "subcategory": "Nuestro día a día explicado",
+  "description": "Un avión que pesa varios cientos de toneladas vuela. No es magia: es una cuestión de forma del ala, velocidad y fuerzas que se equilibran entre sí.",
+  "hero": {
+    "image": "comment_les_avions_volent",
+    "ratio": "16:9",
+    "hook": "Más pesado que un camión y, aun así, permanece en el aire. Así es como."
+  },
+  "sections": [
+    {
+      "id": "course_46_comment_les_avions_volent_ils_intro",
+      "title": "Introducción",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un avión de pasajeros grande puede pesar **cientos de toneladas**. ¿Cómo puede algo tan pesado permanecer en el aire? La respuesta está en la forma de las alas y la velocidad del avión."
+        },
+        {
+          "type": "paragraph",
+          "text": "Están en juego cuatro fuerzas principales: **empuje** (hacia adelante), **arrastrar** (frenado de aire), **peso** (hacia abajo) y **elevar** (hacia arriba)."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p1",
+      "title": "El ala, una forma inteligente",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Visto de lado, el ala de un avión no es plana. La parte superior es más redondeada que la inferior. Cuando el avión se mueve rápido, el aire debe girar alrededor de esta forma."
+        },
+        {
+          "type": "image",
+          "asset": "airplane_wing_cross_section_flight",
+          "ratio": "auto",
+          "caption": "El perfil del ala crea la sustentación que eleva el avión."
+        },
+        {
+          "type": "paragraph",
+          "text": "El aire que pasa por encima se acelera un poco. Su presión cae. Bajo el ala, la presión sigue siendo mayor. Esta diferencia empuja el ala hacia arriba: este es el **elevar**. A menudo se explica con el principio de **Bernoulli**, que lleva el nombre de un erudito del siglo XVIII, y con el hecho de que el ala también desvía el aire hacia abajo."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p2",
+      "title": "Necesitas velocidad",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sin velocidad, no pasa suficiente aire sobre el ala, no hay suficiente sustentación. Por eso un avión necesita una pista larga para despegar: los motores deben acelerarlo lo suficiente."
+        },
+        {
+          "type": "funFact",
+          "text": "Los pájaros usan la misma idea general: sus alas crean sustentación. Pero baten sus alas para seguir adelante. El avión avanza gracias a sus motores."
+        },
+        {
+          "type": "paragraph",
+          "text": "En vuelo de crucero, la sustentación equilibra el peso. El empuje de los motores equilibra la resistencia del aire. Luego el avión avanza a una velocidad aproximadamente constante."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p3",
+      "title": "Sube, baja, gira",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Para ascender, el piloto (o la computadora de a bordo) inclina un poco el morro hacia arriba y ajusta el empuje. Para descender, muchas veces reducimos el empuje. Para girar, el avión se inclina hacia un lado utilizando partes móviles de las alas, los alerones."
+        },
+        {
+          "type": "paragraph",
+          "text": "Al aterrizar, reducimos la velocidad. Los flaps se extienden desde el ala para aumentar la sustentación a bajas velocidades. Luego las ruedas tocan el suelo y los frenos (a veces también inversores de empuje) detienen el avión."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p4",
+      "title": "No es \"más ligero que el aire\"",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un globo de helio flota porque es menos denso que el aire. Un avión, no: es mucho más denso. Vuela porque **fortaleza** parece que lo lleva, gracias a su velocidad y a la forma de sus alas."
+        },
+        {
+          "type": "takeaway",
+          "text": "Un avión vuela gracias al **elevar** creado por sus alas moviéndose por el aire. La velocidad es fundamental: sin ella, el ala ya no “empuja” lo suficiente hacia arriba para compensar el peso."
+        }
+      ]
+    }
+  ]
+}

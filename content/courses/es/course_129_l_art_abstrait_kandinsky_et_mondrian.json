@@ -1,0 +1,144 @@
+{
+  "id": "course_129_l_art_abstrait_kandinsky_et_mondrian",
+  "title": "Arte abstracto: Kandinsky y Mondrian",
+  "subtitle": "Década de 1910-1920",
+  "subject": "art",
+  "subcategory": "Pintura y movimientos",
+  "description": "Por primera vez, un cuadro ya no representa nada del mundo visible. **Kandinski** libera formas; **Mondrian** reduce todo a la geometría.",
+  "hero": {
+    "image": "l_art_abstrait_kandinsky_et_mondrian",
+    "ratio": "16:9",
+    "hook": "¿Qué pasaría si una pintura ya no necesitara contar la historia del mundo para conmover a la gente?"
+  },
+  "sections": [
+    {
+      "id": "course_129_l_art_abstrait_kandinsky_et_mondrian_intro",
+      "title": "Introducción",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En los años **1910** y **1920**, la abstracción rompió la regla más antigua de la pintura: , la obligación de representar el mundo visible. La mesa ya no es una ventana: es un objeto autónomo. [[mímesis]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Dos búsquedas paralelas: **Wassily Kandinsky** traduce el alma a través de formas libres; **Piet Mondrian** busca las leyes del universo en geometría pura."
+        }
+      ]
+    },
+    {
+      "id": "course_129_l_art_abstrait_kandinsky_et_mondrian_p1",
+      "title": "Kandinsky: pintar como se compone",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Wassily Kandinsky** (1866-1944), abogado ruso devenido en pintor, afincado en Munich. Hacia **1910**, al regresar a casa al anochecer, se ve abrumado por un cuadro cuyo tema no reconoce. Es uno de los suyos, al revés. La semejanza con la realidad le parece entonces un obstáculo."
+        },
+        {
+          "type": "image",
+          "asset": "kandinsky_first_abstract_watercolor_1910",
+          "ratio": "4:3",
+          "caption": "Hacia 1910, Kandinsky dio el paso hacia la abstracción."
+        },
+        {
+          "type": "funFact",
+          "text": "Dotado de sinestesia, dijo que \"escuchaba\" colores y \"veía\" sonidos. De ahí sus títulos: Composiciones, Improvisaciones."
+        },
+        {
+          "type": "paragraph",
+          "text": "En **1911**, publicó *Espiritualidad en el arte* y teorizó sobre el . Cada color tiene una vibración: el azul evoca lo celestial; el amarillo, más agresivo, puede “sonar” como una trompeta. La pintura debe actuar sobre el alma como la música, sin narrativa. [[abstracción lírica]]"
+        }
+      ]
+    },
+    {
+      "id": "course_129_l_art_abstrait_kandinsky_et_mondrian_p2",
+      "title": "Mondrian: equilibrio en rectas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "El holandés **Piet Mondrian** (1872-1944) llega a la abstracción a través de un lento  de la realidad. Entre **1908** y **1912**, su serie de árboles muestra el tronco y las ramas que desaparecen en favor de un entramado de líneas. [[decantación]]"
+        },
+        {
+          "type": "image",
+          "asset": "mondrian_tree_series_abstraction_painting",
+          "ratio": "4:3",
+          "caption": "Del árbol a la red de líneas: Mondrian lo simplifica hasta lo esencial."
+        },
+        {
+          "type": "funFact",
+          "text": "A menudo pedía sentarse de espaldas a la ventana en los restaurantes, para no ver árboles y jardines que consideraba demasiado desordenados."
+        },
+        {
+          "type": "paragraph",
+          "text": "En **1917**, fundó el movimiento **De Stijl** y teorizó el **neoplasticismo**: reducir el arte a los elementos del cosmos. Sólo queda la línea recta y los tres colores primarios. El ángulo recto debe reflejar el equilibrio de fuerzas universales, lejos de las emociones individuales. Incluso prohibió el verde en su estudio, por considerarlo demasiado “natural”."
+        }
+      ]
+    },
+    {
+      "id": "course_129_l_art_abstrait_kandinsky_et_mondrian_p3",
+      "title": "La Bauhaus: la abstracción en la vida",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La abstracción no se queda en el museo. En , una escuela de arquitectura y artes aplicadas fundada por  en **1919**, colaboran pintores, arquitectos y diseñadores. Kandinsky enseña allí; La estética de Mondrian inspira planos y fachadas. [[Bauhaus]] [[Walter Gropius]]"
+        },
+        {
+          "type": "image",
+          "asset": "bauhaus_weimar_gropius_building_1919",
+          "ratio": "4:3",
+          "caption": "La Bauhaus: cuando el arte abstracto se encuentra con el diseño y la arquitectura."
+        },
+        {
+          "type": "funFact",
+          "text": "En la Bauhaus, Kandinsky hizo que sus alumnos asociaran formas y colores. Concluyó: triángulo amarillo, cuadrado rojo, círculo azul."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nace el diseño moderno: “la forma sigue a la función”. La famosa silla Roja y Azul de Gerrit Rietveld parece un Mondrian en 3D. Mondrian descubrió que el objeto real rompía la pureza de la abstracción."
+        }
+      ]
+    },
+    {
+      "id": "course_129_l_art_abstrait_kandinsky_et_mondrian_p4",
+      "title": "Un legado a nuestro alrededor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sin una historia que contar, la pintura invita al espectador a proyectar su propio significado. Esta libertad abre el , donde la idea prima sobre el material. Después de las guerras, la abstracción también dice lo que la figuración ya no puede transmitir. [[Arte conceptual]]"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1910-1911",
+              "title": "Resumen Kandinsky",
+              "detail": "Lo espiritual en el arte teoriza la abstracción lírica."
+            },
+            {
+              "date": "1917",
+              "title": "De Stijl",
+              "detail": "Mondrian reduce el arte a líneas y colores primarios."
+            },
+            {
+              "date": "1919",
+              "title": "Bauhaus",
+              "detail": "La abstracción entra en el diseño y la arquitectura."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Desde las interfaces de nuestros teléfonos inteligentes hasta la señalización urbana, la lección permanece. Los americanos  y  continúan la revolución. [[Expresionismo abstracto]] [[arte minimalista]]"
+        },
+        {
+          "type": "takeaway",
+          "text": "El arte abstracto nace de dos maneras: Kandinsky libera las formas para expresar el alma; Mondrian geometriza el mundo para apuntar a lo universal."
+        }
+      ]
+    }
+  ]
+}

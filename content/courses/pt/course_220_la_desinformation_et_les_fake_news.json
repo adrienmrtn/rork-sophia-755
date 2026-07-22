@@ -1,0 +1,104 @@
+{
+  "id": "course_220_la_desinformation_et_les_fake_news",
+  "title": "Desinformação e notícias falsas",
+  "subtitle": "Deitado na era viral",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economia & sociedade",
+  "description": "Informações falsas se espalham 6 vezes mais rápido que a verdade nas redes sociais. Por que e como se proteger?",
+  "hero": {
+    "image": "la_desinformation_et_les_fake_news",
+    "ratio": "16:9",
+    "hook": "Um estudo do MIT mostrou que notícias falsas viajam 6 vezes mais rápido que a verdade no Twitter. Aqui está o porquê."
+  },
+  "sections": [
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mentir para servir um propósito político não é novidade: vestígios disso foram encontrados desde a Antiguidade. Mas a Internet e as redes sociais mudaram a situação: a informação falsa já não circula apenas de um Estado para a sua população, passa a espalhar-se horizontalmente, entre os cidadãos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esta mudança criou um mundo onde a verdade às vezes parece opcional face à viralidade. Compreender como a **desinformação** se espalha e quem dela beneficia tornou-se essencial para preservar a confiança entre os cidadãos."
+        }
+      ]
+    },
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_p1",
+      "title": "Por que as mentiras viajam mais rápido que a verdade",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Devemos distinguir a desinformação, deliberadamente disseminada para manipulação, dos simples erros honestos. O sucesso destas notícias falsas depende daquilo que os investigadores chamam de economia da atenção: os algoritmos das redes sociais são concebidos para maximizar o tempo de ecrã e os nossos cérebros respondem mais fortemente à emoção e ao choque do que às nuances."
+        },
+        {
+          "type": "funFact",
+          "text": "Um estudo da  publicado em 2018 mostrou que notícias falsas se espalham cerca de 6 vezes mais rápido do que notícias verificadas no Twitter porque parecem mais recentes e emocionalmente mais intensas. [[MIT]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Os algoritmos também prendem os usuários da Internet ao : eles apenas mostram conteúdo que confirma suas opiniões já existentes. Uma pessoa convencida de uma teoria da conspiração vê então cada nova informação falsa como uma prova adicional, o que torna muito difícil qualquer correção posterior. [[As bolhas de filtro (filter bubbles)]]"
+        }
+      ]
+    },
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_p2",
+      "title": "Uma indústria de mentiras, entre Estados e lucro",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A desinformação tornou-se uma verdadeira indústria. Estados como a Rússia, através da Internet Research Agency, criaram milhares de contas automatizadas falsas para agitar tensões nas democracias ocidentais, sem sequer tentarem defender um campo específico: o objectivo é muitas vezes criar o caos e fazer as pessoas acreditarem que “todos estão a mentir”."
+        },
+        {
+          "type": "image",
+          "asset": "fake_news_social_media_manipulation_phone",
+          "ratio": "4:3",
+          "caption": "Informações falsas se espalham em segundos nas redes sociais."
+        },
+        {
+          "type": "paragraph",
+          "text": "Há também uma dimensão puramente lucrativa: na cidade de Veles, na Macedónia do Norte, jovens empresários criaram sites sensacionalistas em 2016 sem qualquer convicção política, apenas para ganhar dinheiro através do tráfego gerado nas redes sociais. A mentira torna-se então uma simples mercadoria lucrativa."
+        }
+      ]
+    },
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_p3",
+      "title": "Como separar fato da ficção",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Diante deste dilúvio, o mundo da informação está se organizando. **verificação factual**, isto é, a verificação de factos, tornou-se uma disciplina jornalística por direito próprio. Agências como  ou redações especializadas utilizam ferramentas de busca de imagens para detectar falsificações e analisar conteúdos suspeitos. [[AFP]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Mas a corrida entre ataque e defesa continua desigual. O aparecimento de , vídeos manipulados por inteligência artificial onde uma pessoa é obrigada a dizer qualquer coisa com um realismo perturbador, torna a distinção entre verdadeiro e falso cada vez mais difícil para um olho destreinado. [[Deepfakes]]"
+        }
+      ]
+    },
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_p4",
+      "title": "Encontrando confiança em um mundo de imagens",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O efeito a longo prazo da desinformação é profundo: estamos agora a falar de uma era **pós-verdade**, onde os factos objectivos por vezes têm menos peso do que as emoções e crenças pessoais. Esta relativização generalizada enfraquece a confiança necessária para enfrentar em conjunto desafios globais como o clima ou a saúde pública."
+        },
+        {
+          "type": "paragraph",
+          "text": "A resposta mais sólida continua a ser a educação mediática: aprender a verificar uma fonte, cruzar várias informações e compreender como funcionam os algoritmos. Alguns também contam com tecnologias de certificação de conteúdo, para garantir a origem de um vídeo desde a sua criação. Entretanto, a vigilância de todos continua a ser a primeira linha de defesa."
+        },
+        {
+          "type": "takeaway",
+          "text": "A informação falsa espalha-se em média 6 vezes mais rápido que a verdade nas redes sociais, porque explora as nossas emoções e a nossa sede de novidades. Confrontada com deepfakes e troll farms, a educação mediática continua a ser a melhor arma para preservar a confiança colectiva."
+        }
+      ]
+    }
+  ]
+}

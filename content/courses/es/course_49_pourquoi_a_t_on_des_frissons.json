@@ -1,0 +1,102 @@
+{
+  "id": "course_49_pourquoi_a_t_on_des_frissons",
+  "title": "¿Por qué tenemos escalofríos?",
+  "subtitle": "Cuerpo y emociones",
+  "subject": "sciences",
+  "subcategory": "Nuestro día a día explicado",
+  "description": "Frío, miedo, música: los escalofríos tienen varias causas. Todos pasan por el sistema nervioso, pero no por los mismos motivos.",
+  "hero": {
+    "image": "pourquoi_a_t_on_des_frissons",
+    "ratio": "16:9",
+    "hook": "Un escalofrío de frío y un escalofrío de música no cuentan la misma historia."
+  },
+  "sections": [
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_intro",
+      "title": "Introducción",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Temblas cuando sales a la lluvia. También tiemblas al escuchar una canción que te molesta. Misma palabra, diferentes mecanismos."
+        },
+        {
+          "type": "paragraph",
+          "text": "En ambos casos, el cuerpo reacciona rápidamente. Pero uno se utiliza principalmente para calentarse, el otro tiene más que ver con el placer y las emociones."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p1",
+      "title": "La emoción del frío: una minicaldera",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "El cuerpo quiere permanecer alrededor de **37ºC**. Cuando la piel detecta frío alerta a una zona del cerebro, el **hipotálamo**, que actúa como un termostato."
+        },
+        {
+          "type": "image",
+          "asset": "goosebumps_cold_skin",
+          "ratio": "4:3",
+          "caption": "La piel de gallina: un viejo reflejo de poner los pelos de punta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Los músculos se contraen muy rápida y repetidamente: este es el escalofrío. Estas contracciones producen calor. La piel de gallina proviene de un viejo reflejo: levantar los pelos para aislar mejor. En casa, con poco pelo, sirve principalmente como vestigio."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p2",
+      "title": "La emoción del miedo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ante una amenaza, se activa el  (la rama de “alerta” del sistema nervioso). Libera **adrenalina**. Los músculos se tensan, el corazón se acelera, la piel puede temblar. [[El sistema nervioso simpático]]"
+        },
+        {
+          "type": "image",
+          "asset": "adrenaline_stress_response_body",
+          "ratio": "4:3",
+          "caption": "La adrenalina prepara al cuerpo para reaccionar rápidamente."
+        },
+        {
+          "type": "funFact",
+          "text": "Este mismo sistema explica por qué se te puede poner la piel de gallina mientras miras una película de terror... mientras estás cómodo en tu sofá."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p3",
+      "title": "La emoción de la música",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ciertas emociones, a veces llamadas “escalofríos”, llegan con una emoción fuerte: música, discurso, película. Activan el circuito **recompensas** del cerebro, con **dopamina**, una sustancia ligada al placer."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esto no es útil para la supervivencia inmediata. Más bien, es el cuerpo el que reacciona ante una emoción intensa, como una ola que pasa."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p4",
+      "title": "¿Cuándo preocuparse?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Los escalofríos con fiebre alta pueden indicar una infección. Los escalofríos constantes sin motivo claro merecen atención médica. Pero la mayoría de las veces, un escalofrío por el frío, el estrés o la música es simplemente el cuerpo haciendo su trabajo."
+        },
+        {
+          "type": "takeaway",
+          "text": "Los escalofríos producen calor. Los que tienen miedo se preparan para reaccionar. Los de la música tocan el placer emocional. Mismo sentimiento, diferentes causas."
+        }
+      ]
+    }
+  ]
+}

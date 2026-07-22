@@ -1,0 +1,126 @@
+{
+  "id": "course_150_la_nuit_etoilee_van_gogh",
+  "title": "Notte stellata, Van Gogh",
+  "subtitle": "1889",
+  "subject": "art",
+  "subcategory": "Opere iconiche",
+  "description": "In **1889**, dal manicomio di Saint-Rémy-de-Provence, **Vincent Van Gogh** ha dipinto *La nota stellare*. Il cielo gira: l'arte smette di copiare la realtà per esprimere un'emozione.",
+  "hero": {
+    "image": "la_nuit_etoilee_van_gogh",
+    "ratio": "16:9",
+    "hook": "Da una stanza di manicomio, Van Gogh dipinge un cielo che rifiuta di rimanere saggio."
+  },
+  "sections": [
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_intro",
+      "title": "Introduzione",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "*La Notte Stellata* (**1889**) è il dipinto più famoso di **Vincent Van Gogh**, pittore nato a . Dipinto al manicomio di Saint-Rémy-de-Provence, segna una svolta: non dipingiamo più solo ciò che vediamo. Dipingiamo ciò che sentiamo. [[Paesi Bassi]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Cielo vorticoso, cipresso come fiamma nera, villaggio inventato: l'opera apre la strada all'arte espressiva del XX secolo."
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p1",
+      "title": "Saint-Rémy: creare dal manicomio",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nel **maggio 1889**, dopo la  (la crisi che gli costò una parte dell'orecchio), Van Gogh fu internato a **Saint-Paul-de-Mausole**, vicino a Saint-Rémy. Gli viene data una stanza per dipingere. La visione notturna nasce innanzitutto dietro le sbarre della sua stanza. [[Il dramma di Arles con Gauguin]]"
+        },
+        {
+          "type": "image",
+          "asset": "van_gogh_saint_paul_asylum_saint_remy_provence",
+          "ratio": "4:3",
+          "caption": "Il manicomio di Saint-Rémy: quadro di costrizione e intensa creazione."
+        },
+        {
+          "type": "paragraph",
+          "text": "La tela mescola osservazione e invenzione. Riconosciamo le colline delle Alpilles e un grande **cipresso**. Ma il villaggio non è una copia esatta. Van Gogh ricostruisce il paesaggio per servire l'emozione."
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p2",
+      "title": "Scolpire il cielo con un pennello",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tecnicamente Van Gogh usa **Impasto**: la pittura è densa, quasi scolpita. Undici stelle ruotano come nebulose. La luna arancione irradia. Il cielo diventa il vero protagonista."
+        },
+        {
+          "type": "image",
+          "asset": "starry_night_cypress_tree_van_gogh_painting",
+          "ratio": "4:3",
+          "caption": "Il cipresso collega la terra al cielo come una fiamma oscura."
+        },
+        {
+          "type": "funFact",
+          "text": "Le grandi volute del cielo ricordano la dinamica di , una stampa giapponese molto ammirata da Van Gogh. Trasforma questa energia in cosmo. [[Grande onda al largo di Kanagawa]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Questo gesto annuncia lo : la tela racconta uno stato d'animo, non le previsioni del tempo. [[L'arte come espressione interiore]]"
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p3",
+      "title": "Il genio che nessuno ha comprato",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Van Gogh dipinse quasi **900 dipinti** in dieci anni, ma morì nel **luglio 1890** ad Auvers-sur-Oise, a **37 anni**, quasi sconosciuto. Fu sua cognata, **Johanna van Gogh-Bonger**, a salvare l'opera: mostre, vendite, pubblicazione di lettere a suo fratello Théo."
+        },
+        {
+          "type": "paragraph",
+          "text": "*La notte stellata* passò di mano più volte per pochi soldi, prima di entrare allo **MoMA** di New York. Il dipinto disprezzato diventa un'icona. Gli , pittori dai colori violenti dell'inizio del XX secolo, riconosceranno in lui un antenato. [[Fauves]]"
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p4",
+      "title": "Un cipresso verso l'infinito",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Il cipresso collega la terra al cielo: collegamento tra la vita terrena e l'altrove. Van Gogh scrisse che guardare le stelle gli faceva sognare la morte come un viaggio. Studi moderni suggeriscono addirittura che la stella luminosa vicino al cipresso potrebbe essere Venere, osservata all'alba."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1888",
+              "title": "Crisi di Arles",
+              "detail": "La rottura con Gauguin precede l'internamento."
+            },
+            {
+              "date": "1889",
+              "title": "Notte stellata",
+              "detail": "Van Gogh dipinge il cielo di Saint-Rémy."
+            },
+            {
+              "date": "1890",
+              "title": "Morte ad Auvers",
+              "detail": "L'artista morì a 37 anni, ancora poco conosciuto."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "*Notte stellata* trasforma la sofferenza in linguaggio visivo. Van Gogh non copia la notte: inventa un cielo interiore e apre le porte all'arte espressiva moderna."
+        }
+      ]
+    }
+  ]
+}

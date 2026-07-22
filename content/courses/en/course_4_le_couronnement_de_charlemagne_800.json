@@ -1,0 +1,132 @@
+{
+  "id": "course_4_le_couronnement_de_charlemagne_800",
+  "title": "The coronation of Charlemagne",
+  "subtitle": "800",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "On Christmas Day 800, in Rome, Pope Leo III places a crown on Charlemagne's head. The West finds an emperor, and Europe a lasting model.",
+  "hero": {
+    "image": "le_couronnement_de_charlemagne",
+    "ratio": "16:9",
+    "hook": "Christmas 800: a Frankish king becomes emperor, and Europe changes century."
+  },
+  "sections": [
+    {
+      "id": "course_4_le_couronnement_de_charlemagne_800_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "On **December 25, 800**, in Saint Peter's Basilica in Rome, Pope **Leo III** places a crown on the head of **Charles**, king of the Franks. This gesture claims to restore the Roman Empire which had disappeared in the West since **476**."
+        },
+        {
+          "type": "paragraph",
+          "text": "It's not just a ceremony. It is the birth of an ambition: a Latin Christian empire, distinct from Byzantium (the Eastern Roman Empire), which lays the administrative and cultural foundations of continental Europe."
+        }
+      ]
+    },
+    {
+      "id": "course_4_le_couronnement_de_charlemagne_800_p1",
+      "title": "Forty years of conquests",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Charlemagne** inherits the Frankish kingdom in **768**. After his brother's death, he conquers relentlessly. Thirty years of wars against the **Saxons**, Germanic peoples of present-day Germany, including forced conversion. In **774**, he overthrew the  kingdom of Northern Italy. He subdued Bavaria, crushed the , nomadic riders of the Danube, and tempted Spain: the ambush of  (**778**), a pass in the Pyrenees, entered the legend. [[Lombard]] [[Avars]] [[Roncesvalles]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "At its peak, the empire covered approximately **1.1 million km²**. Too vast to hold by the sword alone. Charles must invent another way of governing."
+        },
+        {
+          "type": "funFact",
+          "text": "Charlemagne was approximately **1.84 m**, an exceptional height at a time when the male average was around **1.65 m**."
+        }
+      ]
+    },
+    {
+      "id": "course_4_le_couronnement_de_charlemagne_800_p2",
+      "title": "Administer and read",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "To hold the empire, Charlemagne relies on , local governors, and , inspectors sent in pairs to control the provinces. In Aachen, its capital, , an English scholar, directs the palace school. We restore Latin, we train clerics, we invent the **Caroline writing**, readable everywhere. [[Counts]] [[The missi dominici]] [[Alcuin of York]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Monasteries copy ancient texts. Economically,  replaces the too rare gold: a stable currency for daily commerce. It's the **Carolingian Renaissance**: less artistic splendor than order and useful knowledge. [[Silver denarius]]"
+        },
+        {
+          "type": "funFact",
+          "text": "For his laws to be understood, Charlemagne demanded that they be read aloud to the people, on market days or after mass."
+        }
+      ]
+    },
+    {
+      "id": "course_4_le_couronnement_de_charlemagne_800_p3",
+      "title": "Christmas 800: the ambiguous coronation",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In **799**, Leo III, attacked in Rome, took refuge with Charles. The king restored it. On Christmas Day, the Pope crowned him **“Emperor of the Romans”**. According to his biographer Eginhard, Charles would have been embarrassed: by placing the crown himself, the pope suggests that power comes from the Church."
+        },
+        {
+          "type": "paragraph",
+          "text": "In Constantinople, capital of Byzantium, there are cries of usurpation. For them, there is only one Roman emperor. Charlemagne creates a second pole. The Latin West asserts its independence. The idea of ​​ was born, which would last for centuries. [[The Holy Roman Empire]]"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "768",
+              "title": "Advent",
+              "detail": "Charlemagne inherits the Frankish kingdom."
+            },
+            {
+              "date": "774",
+              "title": "Lombard conquest",
+              "detail": "He takes the crown of Northern Italy."
+            },
+            {
+              "date": "800",
+              "title": "Coronation in Rome",
+              "detail": "Leo III made him emperor on Christmas Day."
+            },
+            {
+              "date": "814",
+              "title": "Death of Charlemagne",
+              "detail": "Louis the Pious succeeds him."
+            },
+            {
+              "date": "843",
+              "title": "Treaty of Verdun",
+              "detail": "The empire is divided between his grandsons."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_4_le_couronnement_de_charlemagne_800_p4",
+      "title": "A broken empire, a living idea",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "After **814**, the unit does not hold. In **843**, the Treaty of Verdun divides the empire between the grandsons of Charlemagne: France in the west, Germany in the east, and a disputed territory in the center. The local power of the lords gains ground. But the counties, writing, currency and the imperial dream survive."
+        },
+        {
+          "type": "paragraph",
+          "text": "The Imperial title will last until **1806**. Charlemagne became the “Father of Europe”: not because his empire held, but because he gave the West a first great common framework."
+        },
+        {
+          "type": "takeaway",
+          "text": "On **December 25, 800**, Charlemagne restores the Empire in the West. Divided from **843**, this project nevertheless leaves Europe with its first tools of unity: administration, writing, currency and imperial idea."
+        }
+      ]
+    }
+  ]
+}

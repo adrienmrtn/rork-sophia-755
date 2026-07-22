@@ -1,0 +1,118 @@
+{
+  "id": "course_237_les_gafam_puissance_et_derives",
+  "title": "GAFAM: potência e desvios",
+  "subtitle": "Google, Apple, Meta, Amazon, Microsoft",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Ambiente & futuro",
+  "description": "Cinco empresas pesam mais do que o PIB de várias grandes potências europeias juntas: bem-vindo à era do **GAFAM**.",
+  "hero": {
+    "image": "les_gafam_puissance_et_derives",
+    "ratio": "16:9",
+    "hook": "Cinco empresas, um punhado de cabos submarinos e boa parte do mundo digital."
+  },
+  "sections": [
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Google, Apple, Meta (antigo Facebook), Amazon e Microsoft: cinco empresas agrupadas sob a sigla **GAFAM**, nascidas no . Em menos de trinta anos, mudaram a forma como comunicamos, consumimos e nos informamos, a ponto de rivalizarmos com o poder de certos Estados. Compreender os mecanismos da sua dominação e as tentativas de os controlar permite-nos compreender melhor o equilíbrio de poder no mundo digital de hoje. **[[Silicon Valley]]**"
+        }
+      ]
+    },
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_p1",
+      "title": "Um poder financeiro maior que países inteiros",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A característica mais marcante do GAFAM é o seu valor de mercado. Em 2024, estas cinco empresas valerão juntas mais de 10 biliões de dólares, um montante comparável ao PIB combinado da Alemanha, França, Reino Unido e Itália. A Apple até se tornou a primeira empresa a ultrapassar US$ 3 bilhões em avaliação."
+        },
+        {
+          "type": "image",
+          "asset": "gafam_big_tech_companies_logos_apple_google",
+          "ratio": "4:3",
+          "caption": "Google, Apple, Meta, Amazon e Microsoft juntas pesam mais do que o PIB de várias grandes potências europeias juntas."
+        },
+        {
+          "type": "funFact",
+          "text": "Em 2021, o dinheiro acumulado pela GAFAM teria sido suficiente, em teoria, para recomprar todas as empresas francesas CAC 40, mantendo ao mesmo tempo uma margem de segurança financeira."
+        },
+        {
+          "type": "paragraph",
+          "text": "Este poder financeiro não permanece abstrato: a GAFAM gasta somas consideráveis ​​todos os anos para influenciar as leis em Washington e Bruxelas, e tornou-se parceiro estratégico dos Estados, com a filial cloud da Amazon a alojar, por exemplo, dados sensíveis para agências governamentais americanas."
+        }
+      ]
+    },
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_p2",
+      "title": "Monopólios quase impossíveis de competir",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O domínio da GAFAM baseia-se num mecanismo preciso: o . Quanto mais utilizadores um serviço tem, mais essencial se torna fazer parte dele, o que desencoraja a chegada de concorrentes e cria quase monopólios onde o primeiro a chegar quase sempre mantém a vantagem. **[[Efeitos de rede e monopólios naturais]]**"
+        },
+        {
+          "type": "paragraph",
+          "text": "Para garantir esta posição, os gigantes digitais compram sistematicamente as suas ameaças emergentes: o Facebook comprou o Instagram por mil milhões de dólares em 2012, quando a aplicação tinha apenas uma dúzia de funcionários, depois o WhatsApp em 2014 por 22 mil milhões de dólares."
+        },
+        {
+          "type": "funFact",
+          "text": "Somente o Google possui cerca de 10% de todos os cabos submarinos de fibra óptica do mundo, o que lhe confere controle físico sobre algumas das rotas da Internet."
+        },
+        {
+          "type": "paragraph",
+          "text": "A nível social, os algoritmos concebidos para maximizar  tendem a destacar os conteúdos mais sensacionalistas, por vezes prendendo as pessoas em “bolhas” de informação que reforçam as suas opiniões e facilitando a propagação de notícias falsas. **[[capacidade de atenção]]**"
+        }
+      ]
+    },
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_p3",
+      "title": "Europa, policial digital global",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Confrontada com gigantes que até os tribunais americanos lutam para conter, a União Europeia estabeleceu-se como o principal regulador digital global: as suas regras muitas vezes tornam-se padrões em todos os outros lugares, porque é mais simples para uma multinacional aplicar a regra mais rigorosa em todos os lugares do que criar uma versão diferente para cada país."
+        },
+        {
+          "type": "image",
+          "asset": "digital_services_tax_gafam_europe",
+          "ratio": "16:9",
+          "caption": "A União Europeia impõe regras aos gigantes digitais que muitas vezes acabam por ser aplicadas em todo o mundo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Em 2022, a Europa adoptou o , que exige que as maiores plataformas sejam mais abertas, por exemplo, permitindo que diferentes serviços de mensagens comuniquem entre si. Já foram impostas multas de vários milhares de milhões de euros à Google ou à Meta por abuso de posição dominante. Em 2024, a UE também se tornará a primeira organização do mundo a regular legalmente a inteligência artificial. **[[Lei dos Mercados Digitais]]**"
+        }
+      ]
+    },
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_p4",
+      "title": "Soberania digital em questão",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A questão final é a da soberania digital ****. Ao controlar servidores, sistemas operacionais de telefones e computadores, e até parte dos cabos submarinos, os GAFAM detêm infraestruturas essenciais às nossas sociedades. Para um país europeu, depender de uma empresa americana para obter os seus dados públicos representa uma verdadeira questão de independência."
+        },
+        {
+          "type": "funFact",
+          "text": "O Google processa mais de 90.000 consultas de pesquisa a cada segundo: no momento em que você lê este parágrafo, mais de 3 milhões de pesquisas já foram realizadas em seus servidores."
+        },
+        {
+          "type": "paragraph",
+          "text": "O modelo económico baseado na recolha de dados pessoais, onde o utilizador “paga” com a sua informação, é cada vez mais criticado, mas a GAFAM também continua a ser a primeira investidora nas tecnologias de amanhã, como a computação quântica."
+        },
+        {
+          "type": "takeaway",
+          "text": "Os GAFAM têm um poder financeiro superior ao PIB das grandes potências europeias, o que lhes confere um papel político e tecnológico considerável. Diante disso, a União Europeia se consolidou como o principal regulador global, graças a textos como a Lei dos Mercados Digitais."
+        }
+      ]
+    }
+  ]
+}

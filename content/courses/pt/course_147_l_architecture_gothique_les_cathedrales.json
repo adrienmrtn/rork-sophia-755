@@ -1,0 +1,131 @@
+{
+  "id": "course_147_l_architecture_gothique_les_cathedrales",
+  "title": "Arquitetura gótica: catedrais",
+  "subtitle": "Século 12 a 16",
+  "subject": "art",
+  "subcategory": "Cinema, foto & arquitetura",
+  "description": "Do século XII ao XVI, as catedrais góticas ergueram a pedra em direção ao céu. Arco pontiagudo, arcos nervurados, vitrais: uma revolução técnica ao serviço da luz.",
+  "hero": {
+    "image": "l_architecture_gothique_les_cathedrales",
+    "ratio": "16:9",
+    "hook": "Como a Idade Média fez a pedra voar para deixar Deus entrar na luz."
+  },
+  "sections": [
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Entre os séculos XII e XVI, a Europa foi coberta por **catedrais góticas**. Não são apenas igrejas. Estes são desafios de engenharia: vasos de pedra que parecem desafiar a gravidade para permitir a entrada de luz."
+        },
+        {
+          "type": "paragraph",
+          "text": "A palavra “gótico” surgiria mais tarde como um insulto, “arte dos godos”. Contudo, este estilo combina fé, prosperidade urbana e audácia técnica. Ainda domina os centros das nossas cidades."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p1",
+      "title": "Saint-Denis: a pedra aprende a ficar mais leve",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O gótico nasceu em **Ilha-de-França** por volta de **1140**. O choque fundador é o refrão do , carregado pelo . Diante de igrejas românicas escuras e de paredes grossas, Suger queria um espaço mais unido, mais leve e mais alto. [[basílica de Saint-Denis]] [[abade Suger]]"
+        },
+        {
+          "type": "image",
+          "asset": "saint_denis_basilica_gothic_abbot_suger",
+          "ratio": "4:3",
+          "caption": "Saint-Denis: o laboratório onde o gótico aprende a andar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Três invenções trabalham juntas: o arco pontiagudo ****, mas alto e mas estreito; abóbada canelada****, que concentra o peso em pontos específicos; e o , um arco externo que neutraliza os impulsos. Juntos,  liberta as paredes: grandes janelas podem ser abertas. [[contraforte voador]] [[O contraforte voador e a abóbada nervurada]]"
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p2",
+      "title": "Luz como linguagem divina",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Para Suger a luz não é um detalhe decorativo. Segundo o , os raios coloridos ajudam a alma a subir em direção a Deus. As paredes tornam-se **vitral**. Numa sociedade onde muitos não sabem ler, estas imagens contam a história da Bíblia e da vida da cidade. [[A teologia da luz (abade Suger)]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Em **Chartres**, alguns vitrais do século XIII mantiveram um azul tão intenso que ainda falamos de “azul Chartres”: uma cor que se tornou uma assinatura."
+        },
+        {
+          "type": "paragraph",
+          "text": "A catedral não é mais uma fortaleza de pedra. Torna-se uma gaiola de luz."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p3",
+      "title": "Um projeto que dura séculos",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Construir uma catedral geralmente leva mais de **tem que secular**. Guerras, epidemias, falta de dinheiro: o projeto avança aos trancos e barrancos. **Notre-Dame de Paris** começa em **1163** e encontra sua forma em torno de **1345**, após cerca de 180 anos."
+        },
+        {
+          "type": "image",
+          "asset": "notre_dame_de_paris_cathedral_facade",
+          "ratio": "4:3",
+          "caption": "Notre-Dame de Paris: um canteiro de obras medieval que se tornou um símbolo nacional."
+        },
+        {
+          "type": "paragraph",
+          "text": "A cidade inteira está trabalhando: pedreiros, carpinteiros, vidreiros. Extrair pedra, transportar madeira, alimentar as equipas: a catedral é também uma máquina económica."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p4",
+      "title": "Do gótico extravagante ao neogótico",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O estilo evoluiu: gótico clássico (Chartres, Amiens), depois radiante (Sainte-Chapelle), depois extravagante, mais decorativo. No século XIX, a Europa redescobriu-o com o **neo-gótico**. Projetos inacabados são retomados, como o **Colônia**, concluído em **1880**."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1140",
+              "title": "Saint Denis",
+              "detail": "Suger lança o refrão que abre a era gótica."
+            },
+            {
+              "date": "1163",
+              "title": "Notre Dame de Paris",
+              "detail": "Início de um projeto que dura quase dois séculos."
+            },
+            {
+              "date": "Século XIII.",
+              "title": "Apogeu",
+              "detail": "Chartres, Amiens, Reims impõem o modelo clássico."
+            },
+            {
+              "date": "Século XIX.",
+              "title": "Neogótico",
+              "detail": "A Europa restaura e reinventa o estilo medieval."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "O gótico transformou a catedral num recipiente de luz. Ao libertar as paredes graças ao arco pontiagudo e ao arcobotante, a Idade Média inventou uma arquitetura que ainda fala às nossas cidades."
+        }
+      ]
+    }
+  ]
+}

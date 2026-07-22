@@ -1,0 +1,140 @@
+{
+  "id": "course_193_quetzalcoatl",
+  "title": "Quetzalcoatl",
+  "subtitle": "The Feathered Serpent",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Quetzalcoatl, the Feathered Serpent, is the god of Mesoamerican civilization. Its myth combines creation, exile and the fatal meeting with Cortés.",
+  "hero": {
+    "image": "quetzalcoatl",
+    "ratio": "16:9",
+    "hook": "God, king and prophecy: the Feathered Serpent spans two thousand years of Mexican history."
+  },
+  "sections": [
+    {
+      "id": "course_193_quetzalcoatl_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Quetzalcoatl**, the “Feathered Serpent”, is one of the richest figures in pre-Columbian Mexico. He has been venerated for more than two millennia, from , a large city on the central plateau, to the Aztecs, and among the Mayans under the name . [[Teotihuacán]] [[Kukulkán]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "He unites the earth (the serpent) and the sky (the feather). God of civilization, knowledge and moral order, his myth ends up intersecting with real history: the Spanish conquest of **1519**."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p1",
+      "title": "The god who invented corn",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In , **[[quetzal]]coatl** comes from , the bird with green feathers, and *coatl*, the snake. This union makes it the bridge between the human and the divine. [[Nahuatl]]"
+        },
+        {
+          "type": "image",
+          "asset": "quetzalcoatl_feathered_serpent_aztec_sculpture",
+          "ratio": "4:3",
+          "caption": "Quetzalcoatl, the Feathered Serpent: earth and sky intertwined."
+        },
+        {
+          "type": "paragraph",
+          "text": "In , he descends to , the world of the dead, to collect the bones of past humans. He brings them back to life with his blood. Then he steals **corn** from the ants: the founding food of Mexico. As god of the wind, he also opens the way for the rains of . [[Cosmogony of the five suns]] [[Mictlán]] [[Tlaloc]]"
+        },
+        {
+          "type": "funFact",
+          "text": "The quetzal's tail feathers can measure **60 cm**. Among the Mayans and Aztecs, killing the bird was punishable by death: a few feathers were taken from it, then released."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p2",
+      "title": "The king-priest of Tula",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The myth also has a historical face: **Topiltzin Quetzalcoatl**, king-priest of **Tula** in the 10th century. He would have wanted to reform the cult and replace human sacrifices with offerings of flowers and butterflies."
+        },
+        {
+          "type": "image",
+          "asset": "tula_toltec_pyramid_warriors_sculpture_mexico",
+          "ratio": "4:3",
+          "caption": "Tula, Toltec city linked to the reign and fall of Quetzalcoatl."
+        },
+        {
+          "type": "paragraph",
+          "text": "His rival **Tezcatlipoca** pushes him to drink pulque, a fermented drink. Humiliated, the king exiled to the east. According to legend, he promises to return one year “Un Reed”. This promise will carry weight."
+        },
+        {
+          "type": "funFact",
+          "text": "After his departure, Quetzalcoatl sometimes becomes the Morning Star: the planet Venus. The god does not die, he changes form."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p3",
+      "title": "1519: when myth meets Cortés",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In **1519**, **Hernán Cortés** arrives in the east, the year “A Reed” of the Aztec calendar, the one in which the return of the god was expected. Emperor **Moctezuma II** hesitates: should we fight an invader or welcome a divinity?"
+        },
+        {
+          "type": "image",
+          "asset": "herna_u0301n_corte_u0301s_arrival_mexico_1519_moctezuma_painting",
+          "ratio": "4:3",
+          "caption": "1519: the arrival of Cortés meets the promise of divine return."
+        },
+        {
+          "type": "paragraph",
+          "text": "He sends gifts of gold and feathers. The  see it as an invitation. The myth, true or amplified after the fact, becomes a psychological weapon in the fall of , the Aztec capital. [[Conquistadors]] [[Tenochtitlán]]"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Myth",
+              "title": "Creator",
+              "detail": "Bones of the dead, divine blood, gift of corn."
+            },
+            {
+              "date": "10th century",
+              "title": "Exile from Tula",
+              "detail": "The priest-king goes east."
+            },
+            {
+              "date": "1519",
+              "title": "Cortes",
+              "detail": "The expected return becomes conquest."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p4",
+      "title": "A symbol that never dies",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "After the conquest, Quetzalcoatl did not disappear. Some monks believe they see an apostle there. Later, independent Mexico made it an emblem of pre-Columbian greatness. 20th century muralists, like Diego Rivera, paint it as the soul of the country."
+        },
+        {
+          "type": "paragraph",
+          "text": "Even today, the Feathered Serpent expresses an identity: roots in the earth, ambition turned towards the sky."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Quetzalcoatl**, Feathered Serpent, is the god of Mesoamerican civilization. Creator, exiled king, then fatal prophecy in **1519**, he remains a central symbol of Mexico."
+        }
+      ]
+    }
+  ]
+}

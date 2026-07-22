@@ -1,0 +1,104 @@
+{
+  "id": "course_216_la_dette_mondiale",
+  "title": "Globale Schulden",
+  "subtitle": "Mehr als 300 % des globalen BIP",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Wirtschaft & Gesellschaft",
+  "description": "Die globale Verschuldung war noch nie so hoch. Sollten wir uns darüber Sorgen machen, oder ist es ein normales Instrument zur Finanzierung von Wachstum und zur Bewältigung von Krisen?",
+  "hero": {
+    "image": "la_dette_mondiale",
+    "ratio": "16:9",
+    "hook": "Japan schuldet umgerechnet 260 % ​​seines BIP... und niemand macht sich Sorgen. Hier erfahren Sie, warum."
+  },
+  "sections": [
+    {
+      "id": "course_216_la_dette_mondiale_intro",
+      "title": "Einführung",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die globale Verschuldung von Staaten, Unternehmen und Haushalten zusammen übersteigt heute 300 % des globalen BIP, ein absoluter Rekord in der Wirtschaftsgeschichte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese beeindruckende Zahl verbirgt eine differenziertere Realität: Schulden ermöglichen es, Wachstum zu finanzieren, auf Gesundheitskrisen zu reagieren oder sich auf den ökologischen Wandel vorzubereiten. Es birgt aber auch die Gefahr eines Vertrauensverlusts."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p1",
+      "title": "Wie ein Staat in die Schuldenfalle gerät",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein Staat verschuldet sich, wenn seine Ausgaben strukturell seine Steuereinnahmen übersteigen. Dieses Haushaltsdefizit wird durch die Aufnahme von Krediten auf den Finanzmärkten ausgeglichen. Laut  ist die Aufnahme von Krediten zur Ankurbelung der Wirtschaft in Krisenzeiten legitim, vorausgesetzt, dass sie bei Rückkehr des Wachstums zurückgezahlt werden. [[Keynesianische Theorie]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "In der Praxis nehmen Regierungen in schlechten Zeiten leicht Kredite auf, zahlen sie in guten Zeiten jedoch selten zurück. Die Schulden häufen sich dann langfristig an. Der Fall Japan ist faszinierend: Mit einer Verschuldung von nahezu 260 % ​​seines BIP müsste sich das Land logischerweise in einer Krise befinden. Dies ist jedoch nicht der Fall, da der Großteil der Schulden von den eigenen Banken und Sparern gehalten wird, geschützt vor ausländischen Märkten."
+        },
+        {
+          "type": "funFact",
+          "text": "Erst im Jahr 2015 beendete das Vereinigte Königreich die Rückzahlung seiner Schulden aus den Napoleonischen Kriegen und einer Finanzblase von 1720."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p2",
+      "title": "Nicht alle Schulden sind gleich",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die tatsächliche Gefahr einer Schuld hängt nicht nur von ihrer Höhe ab, sondern auch von der Währung, in der sie geliehen wird. Reiche Länder leihen sich Kredite in ihrer eigenen Währung, was die Anleger beruhigt."
+        },
+        {
+          "type": "image",
+          "asset": "japan_government_debt_statistics_chart",
+          "ratio": "16:9",
+          "caption": "Die weltweite Staatsverschuldung übersteigt heute 300 % des globalen BIP."
+        },
+        {
+          "type": "paragraph",
+          "text": "Entwicklungsländer müssen häufig Kredite in Dollar aufnehmen, weil ihnen eine als stabil genug geltende Währung fehlt. Verliert ihre Landeswährung gegenüber dem Dollar an Wert, explodiert der Rückzahlungsbetrag über Nacht. In diesen Krisen greift der  häufig ein, erlegt jedoch in der Regel eine strenge Sparpolitik auf, die die Bevölkerung schwer belastet. [[IWF]]"
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p3",
+      "title": "Können Schulden unendlich sein?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Eine Debatte stellt zwei Visionen der Wirtschaft gegenüber.  behauptet, dass ein Staat nicht bankrott gehen kann, solange er Kredite in seiner eigenen Währung aufnimmt: Die tatsächliche Grenze ist keine willkürliche Zahl wie die 60 %, die der Maastricht-Vertrag in Europa vorschreibt, sondern die Höhe der Inflation. [[moderne Geldtheorie]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Andere, vorsichtigere Ökonomen befürchten, dass eine zu hohe Verschuldung das Marktvertrauen zerstören und zu einem starken Anstieg der Zinsen führen könnte. Die Krise in der Eurozone zwischen 2010 und 2012 verdeutlichte dieses Risiko: Länder wie Griechenland, die keine eigene Zentralbank mehr hatten, erlebten, wie ihre Kreditzinsen so stark anstiegen, dass sie die Existenz der europäischen Währung bedrohten."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p4",
+      "title": "Die neuen Gesichter der Schulden",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die globale Verschuldung betrifft nicht nur Staaten: Auch Unternehmen und Haushalte tragen einen wachsenden Anteil davon, teilweise über schlecht regulierte Finanzakteure. Auch rund um die Klimaverschuldung entsteht eine neue Debatte: Sollten wir die Schulden, die die Energiewende finanzieren, anders behandeln als die, die den einfachen Konsum finanzieren?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Frage der Gerechtigkeit zwischen den Generationen bleibt zentral: Heute Schulden zu machen bedeutet, Steuern von morgen zu nehmen. Aber wenn mit diesem Geld eine nachhaltige Infrastruktur oder eine gute Bildung finanziert wird, kann es auch als ein Geschenk betrachtet werden, das an künftige Generationen weitergegeben wird, und nicht als Belastung."
+        },
+        {
+          "type": "takeaway",
+          "text": "Die globale Verschuldung übersteigt 300 % des BIP des Planeten, ein historischer Rekord. Seine Gefährlichkeit hängt weniger von der Höhe als vielmehr von der Währung ab, in der er geliehen wird: Japan beweist, dass eine Verschuldung von 260 % ​​stabil bleiben kann, wenn sie vor Ort gehalten wird."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "id": "course_76_pourquoi_les_feuilles_changent_elles_de",
+  "title": "Warum ändern Blätter ihre Farbe?",
+  "subtitle": "Herbst & Pigmente",
+  "subject": "sciences",
+  "subcategory": "Die Erde und das Universum",
+  "description": "Der Herbst erfindet keine Farben: Er entfernt das Grün, das sie verdeckte. Hinter der Show steckt eine Überlebensstrategie, um den Winter zu überstehen.",
+  "hero": {
+    "image": "pourquoi_les_feuilles_changent_de_couleur",
+    "ratio": "16:9",
+    "hook": "Herbstblätter schminken sich nicht: Sie entfernen das Grün."
+  },
+  "sections": [
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_intro",
+      "title": "Einführung",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jeden Herbst verfärben sich die Wälder von Grün zu Gold, zu Kupfer und zu Lila. Das ist keine ästhetische Laune. Es ist eine Strategie: Der Baum erholt sich so weit er kann, bevor er seine Blätter für den Winter abwirft."
+        },
+        {
+          "type": "paragraph",
+          "text": "Warme Farben entstehen nicht aus dem Nichts. Oft waren sie schon da, versteckt unter dem Grün. Den Herbst zu verstehen bedeutet, eine große biochemische Reinigung zu verstehen."
+        }
+      ]
+    },
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p1",
+      "title": "Das Grün, das alles verbirgt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vom Frühling bis zum Spätsommer sind die Blätter voller **Chlorophyll**, dem Pigment, das die Photosynthese antreibt. Es zerfällt unter dem Licht, aber der Baum ersetzt es ständig. Solange es dominiert, bleibt das Blatt grün."
+        },
+        {
+          "type": "image",
+          "asset": "leaf_color_change_autumn_chlorophyll",
+          "ratio": "auto",
+          "caption": "Im Herbst verschwindet das Chlorophyll und bringt die Farben der Blätter zum Vorschein."
+        },
+        {
+          "type": "paragraph",
+          "text": "Allerdings enthält das Blatt auch **Carotinoid**, gelbe und orangefarbene Pigmente (wie in Karotten). Im Sommer sind sie da, aber unsichtbar unter dem Grün. Im Herbst stoppt die Chlorophyllproduktion. Das Grün verblasst, Gelb und Orange kommen zum Vorschein."
+        },
+        {
+          "type": "funFact",
+          "text": "„Chlorophyll“ kommt vom griechischen *chloros* (grün) und *phyllon* (Blatt). „Carotinoid“ stammt aus der Wurzel der Karotte, wo dieses Pigment erstmals identifiziert wurde."
+        }
+      ]
+    },
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p2",
+      "title": "Der eigentliche Auslöser: die länger werdenden Nächte",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Es ist nicht vor allem die Kälte, die den Herbst einläutet, sondern die Länge der Nächte. Bäume messen es mit Lichtsensoren, dem . Wenn die Nächte länger werden, geht ein hormonelles Signal an jedes Blatt. [[Phytochrome]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "An der Basis des Blattstiels bildet sich ein , eine Art Kappe. Der Saft steigt weniger hoch, der Zucker sinkt schlecht ab. Isoliert baut das Blatt sein Chlorophyll schneller ab. Die stabileren Gelbtöne bleiben einige Wochen bestehen, dann fällt das Blatt ab. [[Die Trennzone (Abszission)]]"
+        }
+      ]
+    },
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p3",
+      "title": "Woher kommen die leuchtenden Rottöne?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Das Gelb war schon da. Rot und Lila werden oft am Ende der Saison hergestellt. Dabei handelt es sich um , die entstehen, wenn Zucker im Blatt eingeschlossen bleibt. [[Die Anthocyane]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Warum Energie investieren, bevor man das Papier wegwirft? Vermutlich um **** beim Recycling zu schützen. Der Baum gewinnt **azine** und andere wertvolle Nährstoffe zurück. Ohne Chlorophyll kann die Sonne noch aktives Gewebe schädigen. Anthocyane wirken bei der großen Bewegung in Richtung Wurzeln als Sonnenfilter."
+        }
+      ]
+    },
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p4",
+      "title": "Warum manche Herbste mehr brennen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die schönsten Rotweine entstehen oft an sonnigen Tagen und kühlen, frostfreien Nächten. Viel Zucker, Umwandlung in Anthocyane. Ein grauer und regnerischer Herbst sorgt für trübe Farbtöne. Ein früher Frost tötet die Blätter vor dem Auftauchen ab."
+        },
+        {
+          "type": "paragraph",
+          "text": "Übrig bleiben am Ende nur noch die , braune Stoffe aus dem Waldboden. Einige Studien gehen auch davon aus, dass leuchtende Farben den  warnen: fitter Baum, starke Abwehrkräfte, besser woanders hingehen. [[Tannine]] [[Blattläuse]]"
+        },
+        {
+          "type": "takeaway",
+          "text": "Der Herbst bringt die bereits vorhandenen Gelbtöne zum Vorschein, wenn das Chlorophyll verschwindet, und färbt sich manchmal rot, um die Nährstoffverwertung vor dem Laubfall zu schützen."
+        }
+      ]
+    }
+  ]
+}

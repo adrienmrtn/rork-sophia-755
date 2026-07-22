@@ -1,0 +1,98 @@
+{
+  "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895",
+  "title": "La scoperta dei raggi X",
+  "subtitle": "Roentgen, 1895",
+  "subject": "sciences",
+  "subcategory": "Scoperte che hanno cambiato il mondo",
+  "description": "Nel 1895 Wilhelm Röntgen scoprì la radiazione invisibile capace di attraversare la materia. In pochi mesi la medicina vide una rivoluzione.",
+  "hero": {
+    "image": "la_decouverte_des_rayons_x_rontgen",
+    "ratio": "16:9",
+    "hook": "Una mano, ossa, una foto. La medicina non sarà mai più cieca."
+  },
+  "sections": [
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_intro",
+      "title": "Introduzione",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**8 novembre 1895**, a Würzburg (Germania), il fisico **Wilhelm Röntgen** nota uno schermo che brilla... anche se non viene influenzato dalla luce visibile. Qualcosa di invisibile attraversa la stanza."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lo chiama raggi **X**, la “X” che significa “sconosciuto”. Nel giro di poche settimane fotografò le ossa della mano di sua moglie. È nata la radiologia."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p1",
+      "title": "Un incidente di laboratorio",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Röntgen funziona con un tubo in cui gli elettroni colpiscono un bersaglio. Ha coperto il tubo con cartone nero. Tuttavia, uno schermo fluorescente si illumina da lontano. Capisce che dal tubo esce una radiazione invisibile."
+        },
+        {
+          "type": "image",
+          "asset": "wilhelm_rontgen_x_ray_hand_1895",
+          "ratio": "4:3",
+          "caption": "L'immagine famosa: le ossa della mano e l'anello nuziale."
+        },
+        {
+          "type": "funFact",
+          "text": "Röntgen non ha mai depositato un brevetto sui raggi X. Voleva che tutta la scienza potesse usarli liberamente."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p2",
+      "title": "La medicina si impadronisce dello strumento",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "early_x_ray_medical_radiograph",
+          "ratio": "4:3",
+          "caption": "Molto rapidamente, medici ed eserciti usarono i raggi X."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prima, per “vedere” una frattura o un proiettile, spesso dovevi aprirlo. Con i raggi X otteniamo un'immagine dell'interno senza tagli. Ospedali ed eserciti stanno adottando questa tecnica a una velocità vertiginosa."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p3",
+      "title": "Un pericolo a lungo ignorato",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Inizialmente ignoriamo i rischi. Gli operatori eseguono radiografie per ore. Ustioni, poi compaiono i tumori. Ci vorrà del tempo per capire che i raggi X sono potenti... e pericolosi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Oggi tuteliamo pazienti e caregiver: dosi limitate, grembiuli di piombo, controlli severi."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p4",
+      "title": "L'eredità",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I raggi X hanno aperto la strada a tutta l'imaging moderno: scanner, controlli industriali e persino lo studio della struttura dei cristalli (successivamente utili per il DNA)."
+        },
+        {
+          "type": "takeaway",
+          "text": "In **1895**, Röntgen scoprì i raggi X, una radiazione invisibile che attraversa la materia. La medicina acquisisce una nuova prospettiva... a condizione che i rischi siano controllati."
+        }
+      ]
+    }
+  ]
+}

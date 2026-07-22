@@ -183,34 +183,45 @@ struct OnboardingV2PaywallComparison: View {
         .ov2Background()
     }
 
+    /// Free / PRO column width — wide enough for DE `Kostenlos`, still aligned for icons.
+    private var comparisonColumnWidth: CGFloat { 68 }
+
     private var comparisonTable: some View {
         VStack(spacing: 0) {
-            HStack {
-                Spacer()
+            HStack(spacing: 0) {
+                Spacer(minLength: 0)
                 Text(languageManager.text("onboardingV2.pw.free"))
                     .font(DS.sans(.caption, .semibold)).foregroundStyle(OV2.inkSecondary)
-                    .frame(width: 54)
-                Text("PRO")
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.75)
+                    .multilineTextAlignment(.center)
+                    .frame(width: comparisonColumnWidth)
+                Text(languageManager.text("onboardingV2.pw.pro"))
                     .font(DS.sans(.caption, .bold)).foregroundStyle(.white)
-                    .frame(width: 54, height: 22)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.8)
+                    .padding(.horizontal, 8)
+                    .frame(minWidth: comparisonColumnWidth, minHeight: 22)
                     .background(OV2.accent, in: Capsule())
+                    .frame(width: comparisonColumnWidth)
             }
             .padding(.bottom, 8)
 
             ForEach(ov2PaywallFeatureKeys, id: \.self) { key in
-                HStack {
+                HStack(spacing: 0) {
                     Text(languageManager.text(key))
                         .font(DS.sans(.subheadline, .medium))
                         .foregroundStyle(OV2.ink)
+                        .fixedSize(horizontal: false, vertical: true)
                         .frame(maxWidth: .infinity, alignment: .leading)
                     Image(systemName: "minus")
                         .font(.system(size: 12, weight: .bold))
                         .foregroundStyle(OV2.inkTertiary)
-                        .frame(width: 54)
+                        .frame(width: comparisonColumnWidth)
                     Image(systemName: "checkmark.circle.fill")
                         .font(.system(size: 18))
                         .foregroundStyle(OV2.accent)
-                        .frame(width: 54)
+                        .frame(width: comparisonColumnWidth)
                 }
                 .padding(.vertical, 10)
                 Divider().overlay(OV2.hairline)
@@ -243,6 +254,10 @@ struct OnboardingV2PaywallComparison: View {
                         Text(languageManager.text("onboardingV2.pw.trialBadge"))
                             .font(DS.sans(.caption2, .bold))
                             .foregroundStyle(OV2.success)
+                            .lineLimit(2)
+                            .minimumScaleFactor(0.8)
+                            .multilineTextAlignment(.trailing)
+                            .fixedSize(horizontal: false, vertical: true)
                     }
                 }
             }
@@ -309,16 +324,33 @@ struct OnboardingV2LegalRow: View {
     @State private var showPrivacy = false
 
     var body: some View {
-        HStack(spacing: 6) {
-            Button(languageManager.text("paywall.restore"), action: onRestore)
-            Text("·").foregroundStyle(OV2.inkTertiary)
-            Button(languageManager.text("settings.terms.title")) { showTerms = true }
-            Text("·").foregroundStyle(OV2.inkTertiary)
-            Button(languageManager.text("settings.privacy.title")) { showPrivacy = true }
+        // DE/PT legal strings overflow a single HStack on narrow phones — wrap when needed.
+        ViewThatFits(in: .horizontal) {
+            HStack(spacing: 6) { legalButtons }
+            VStack(spacing: 4) {
+                Button(languageManager.text("paywall.restore"), action: onRestore)
+                HStack(spacing: 6) {
+                    Button(languageManager.text("settings.terms.title")) { showTerms = true }
+                    Text("·").foregroundStyle(OV2.inkTertiary)
+                    Button(languageManager.text("settings.privacy.title")) { showPrivacy = true }
+                }
+            }
         }
         .font(DS.sans(.caption2, .medium))
         .foregroundStyle(OV2.inkTertiary)
+        .multilineTextAlignment(.center)
+        .minimumScaleFactor(0.85)
+        .frame(maxWidth: .infinity)
         .sheet(isPresented: $showTerms) { TermsView() }
         .sheet(isPresented: $showPrivacy) { PrivacyPolicyView() }
+    }
+
+    @ViewBuilder
+    private var legalButtons: some View {
+        Button(languageManager.text("paywall.restore"), action: onRestore)
+        Text("·").foregroundStyle(OV2.inkTertiary)
+        Button(languageManager.text("settings.terms.title")) { showTerms = true }
+        Text("·").foregroundStyle(OV2.inkTertiary)
+        Button(languageManager.text("settings.privacy.title")) { showPrivacy = true }
     }
 }

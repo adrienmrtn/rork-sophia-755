@@ -1,0 +1,129 @@
+{
+  "id": "course_15_la_belle_epoque_1871_1914",
+  "title": "A Belle Époque",
+  "subtitle": "1871-1914",
+  "subject": "histoire",
+  "subcategory": "Revoluções & conflitos modernos",
+  "description": "Entre o fim da guerra de 1870 e agosto de 1914, a Europa acreditou no progresso. Eletricidade, exposições, novas artes… e fraturas que levam à catástrofe.",
+  "hero": {
+    "image": "la_belle_epoque",
+    "ratio": "16:9",
+    "hook": "Quarenta anos de fé no progresso… antes de tudo mudar em 1914."
+  },
+  "sections": [
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O **Belle Époque** designa o período de relativa paz entre o fim do  (**1871**) e o início do  (**1914**). Acreditamos na ciência, no progresso, na razão. [[Guerra franco-prussiana]] [[Primeira Guerra Mundial]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Para as classes ricas da Europa Ocidental, foram quatro décadas de conforto e invenção. Mas por baixo do verniz já brilham fracturas sociais e rivalidades que irão explodir tudo."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p1",
+      "title": "Quando a tecnologia transforma a vida cotidiana",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Uma segunda revolução industrial traz **eletricidade**, **óleo**, química. O eléctrico e o metro (Paris, **1900**) estão a mudar a cidade. Nascem o automóvel e o avião. O telefone encurta distâncias."
+        },
+        {
+          "type": "image",
+          "asset": "paris_universal_exhibition_1900",
+          "ratio": "4:3",
+          "caption": "A Exposição Universal de 1900 em Paris, uma vitrine do progresso."
+        },
+        {
+          "type": "funFact",
+          "text": "O nome “Belle Époque” só aparece depois de **1914**. Os contemporâneos não viveram na “Belle Époque”: foram os sobreviventes das trincheiras que inventaram este paraíso perdido."
+        },
+        {
+          "type": "paragraph",
+          "text": "A Feira Mundial **1900** atrai **50 milhões de visitantes**. O cinema dos irmãos Lumière e o Moulin Rouge fazem de Paris uma capital do entretenimento. , uma filosofia altamente influente, resume o otimismo: a ciência resolverá tudo. [[O positivismo de Auguste Comte]]"
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p2",
+      "title": "Nos bastidores",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Atrás das avenidas, os trabalhadores costumam trabalhar **10 a 12 horas** por dia, sem proteção real. A pobreza urbana alimenta tensões entre classes."
+        },
+        {
+          "type": "image",
+          "asset": "eiffel_tower_1889",
+          "ratio": "4:3",
+          "caption": "A Torre Eiffel (1889), ícone de uma modernidade que não beneficia a todos."
+        },
+        {
+          "type": "paragraph",
+          "text": "À escala global, a Europa partilha África. O  (**1884-1885**) estabelece fronteiras sem consultar os povos envolvidos. Em França, o  destrói a República: um oficial judeu, Alfred Dreyfus, é injustamente condenado por espionagem e o anti-semitismo vem à tona. [[A Conferência de Berlim (1884-1885)]] [[Caso Dreyfus (1894-1906)]]"
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p3",
+      "title": "Novas artes, depois o outono",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "As artes estão explodindo. O  curva as fachadas. O  e o  agitam a pintura. Doutor  explora o inconsciente. Albert Einstein publica  em **1905**: espaço e tempo não são mais o que pensávamos. [[Art nouveau]] [[fauvismo]] [[cubismo]] [[Sigmund Freud]] [[Relatividade]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Em **1913**, o balé *Na Sagração da Primavera* de Igor Stravinsky causou tamanho escândalo em Paris que os espectadores começaram a brigar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Então tudo muda. Em **28 de junho de 1914**, o arquiduque **Francisco Fernando**, herdeiro da Áustria-Hungria, foi assassinado em Sarajevo. As engrenagens das alianças são acionadas. Em **4 de agosto**, o Reino Unido entra na guerra. A fé no progresso morre nas trincheiras."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1871",
+              "title": "Fim da Guerra Franco-Prussiana",
+              "detail": "Nascimento de uma Alemanha unificada, ressentimento francês."
+            },
+            {
+              "date": "1889",
+              "title": "Torre Eiffel",
+              "detail": "Símbolo da modernidade técnica."
+            },
+            {
+              "date": "1894-1906",
+              "title": "Caso Dreyfus",
+              "detail": "A República está se destruindo."
+            },
+            {
+              "date": "1900",
+              "title": "Exposição Universal",
+              "detail": "Paris, vitrine do mundo."
+            },
+            {
+              "date": "Agosto de 1914",
+              "title": "Grande Guerra",
+              "detail": "A Belle Époque termina abruptamente."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "A Belle Époque (**1871-1914**) combina progresso técnico e fraturas profundas, antes de afundar no caos da Grande Guerra."
+        }
+      ]
+    }
+  ]
+}

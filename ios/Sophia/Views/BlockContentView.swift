@@ -720,14 +720,7 @@ struct FunFactCardV2: View {
     }
 
     private var hint: String {
-        switch AppLanguage.currentPersisted() {
-        case .french: return "Toucher pour révéler"
-        case .english: return "Tap to reveal"
-        case .spanish: return "Toca para revelar"
-        case .german: return "Zum Aufdecken tippen"
-        case .portuguese: return "Toque para revelar"
-        case .italian: return "Tocca per scoprire"
-        }
+        AppLocalizable.string("course.funFact.hint", language: AppLanguage.currentPersisted())
     }
 
     var body: some View {

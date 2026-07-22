@@ -1,0 +1,120 @@
+{
+  "id": "course_162_promethee_le_voleur_de_feu",
+  "title": "Prometheus: the fire thief",
+  "subtitle": "The Titan who defies Zeus",
+  "subject": "mythologie",
+  "subcategory": "Greece: the gods",
+  "description": "Prometheus steals fire from the gods for men, then endures endless torment. A myth about progress, cunning and the price of freedom.",
+  "hero": {
+    "image": "promethee_le_voleur_de_feu",
+    "ratio": "16:9",
+    "hook": "A Titan steals the fire from Olympus. Men gain civilization. He gains an eagle and a chain."
+  },
+  "sections": [
+    {
+      "id": "course_162_promethee_le_voleur_de_feu_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Prometheus** is a Titan, a god of the previous generation. Its name evokes one who foresees. In Greek myths, he shapes the first men, protects them against **Zeus**, king of Olympus, and pays for this choice with an atrocious punishment."
+        },
+        {
+          "type": "paragraph",
+          "text": "By stealing fire for mortals, he gives humans technique and knowledge. His torture on the Caucasus becomes the symbol of the genius who dares to challenge power."
+        }
+      ]
+    },
+    {
+      "id": "course_162_promethee_le_voleur_de_feu_p1",
+      "title": "Man is born naked, Prometheus trick",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "It is said that Prometheus modeled the first men with clay and water. His brother [[Epimetheus]] acts too quickly. Responsible for equipping animals, he gives everything: claws, wings, fur, speed. When the man's turn comes, there is nothing left. Humans are born fragile and defenseless."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prometheus decides to compensate. During a sacrifice to [[Mekone]], he cuts an ox into two parts. Under an ugly skin, it hides good meat. Under appetizing fat, it hides the bones. **Zeus** chooses good looks. Since then, men have eaten the flesh and offered the bones to the gods."
+        },
+        {
+          "type": "funFact",
+          "text": "To hide the fire, Prometheus uses a [[Ferule]] rod. Its marrow burns very slowly: Mediterranean shepherds really used it as a portable lighter."
+        },
+        {
+          "type": "paragraph",
+          "text": "Furious at having been deceived, Zeus takes away fire from men. Without heat or light, they fall back into an almost animal life."
+        }
+      ]
+    },
+    {
+      "id": "course_162_promethee_le_voleur_de_feu_p2",
+      "title": "The theft of fire and the torture",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Prometheus enters Olympus. He steals a spark from the chariot of the Sun, or from the forge of **Hephaestus**, god of blacksmiths, depending on the version. He hides it in his hollow stem and brings it back to mortals."
+        },
+        {
+          "type": "image",
+          "asset": "prometheus_steal_fire_ancient_greek_painting",
+          "ratio": "4:3",
+          "caption": "Prometheus brings fire to humans, the founding act of technology."
+        },
+        {
+          "type": "paragraph",
+          "text": "For the Greeks, fire is not just a flame. He embodies **technical** and **reason**, which allows man to transform the world. Zeus retaliates. Against humanity, he will later send Pandora. Against Prometheus, the punishment is direct."
+        },
+        {
+          "type": "funFact",
+          "text": "In ancient medicine, the **liver** was seen as the seat of emotions and vitality. Zeus chose this organ to break the will of the Titan."
+        },
+        {
+          "type": "paragraph",
+          "text": "The Titan is chained to a wall of the **Caucasus**. Every day, an eagle devours his liver. Every night, the organ is reborn. The torture begins again at dawn, without end."
+        }
+      ]
+    },
+    {
+      "id": "course_162_promethee_le_voleur_de_feu_p3",
+      "title": "Heracles breaks the chains",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "For centuries, Prometheus refused to give in. He knows a dangerous secret: which woman will give birth to a son stronger than Zeus. Despite the torture, he remains silent. It becomes the symbol of resistance in the face of tyranny."
+        },
+        {
+          "type": "paragraph",
+          "text": "The hero **Heracles**, son of Zeus, ends up arriving in the Caucasus. He kills the eagle with an arrow and frees the prisoner. Zeus accepts the grace: Prometheus finally reveals the secret about the nymph **Thétis**. The king of the gods thus avoids his own fall."
+        },
+        {
+          "type": "paragraph",
+          "text": "To respect the oath that bound him to the rock, Prometheus wears a ring made from the iron of his chains and a fragment of stone. He remains “linked” to the mountain, but free."
+        }
+      ]
+    },
+    {
+      "id": "course_162_promethee_le_voleur_de_feu_p4",
+      "title": "A myth that never goes out",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In the 5th century BC, the tragedian [[Aeschylus]] staged “Prometheus in Chains”. Later, the myth inspires science and progress. Mary Shelley subtitles “Frankenstein” “The Modern Prometheus”: Creating life without wisdom can also destroy."
+        },
+        {
+          "type": "paragraph",
+          "text": "The philosopher [[Gaston Bachelard]] even speaks of a “Prometheus complex”: this desire to know more than one’s masters. Today, we often compare artificial intelligence or genetics to a new fire: an immense power, still poorly controlled."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Prometheus** offers men civilization through the theft of fire, endures a thousand-year-old torment, then is delivered by **Heracles**. Progress has a price, and so does divine power."
+        }
+      ]
+    }
+  ]
+}

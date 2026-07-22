@@ -1,0 +1,100 @@
+{
+  "id": "course_46_comment_les_avions_volent_ils",
+  "title": "Wie fliegen Flugzeuge?",
+  "subtitle": "Flugphysik",
+  "subject": "sciences",
+  "subcategory": "Unser Alltag erklärt",
+  "description": "Ein mehrere hundert Tonnen schweres Flugzeug fliegt. Es ist keine Zauberei: Es kommt darauf an, dass Flügelform, Geschwindigkeit und Kräfte sich gegenseitig ausgleichen.",
+  "hero": {
+    "image": "comment_les_avions_volent",
+    "ratio": "16:9",
+    "hook": "Schwerer als ein LKW und bleibt dennoch in der Luft. Hier erfahren Sie, wie."
+  },
+  "sections": [
+    {
+      "id": "course_46_comment_les_avions_volent_ils_intro",
+      "title": "Einführung",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein großes Verkehrsflugzeug kann **Hunderte Tonnen** wiegen. Wie kann etwas so Schweres in der Luft bleiben? Die Antwort liegt in der Form der Flügel und der Geschwindigkeit des Flugzeugs."
+        },
+        {
+          "type": "paragraph",
+          "text": "Es spielen vier Hauptkräfte eine Rolle: **Schub** (vorwärts), **ziehen** (Luftbremsung), **Gewicht** (abwärts) und **Aufzug** (aufwärts)."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p1",
+      "title": "Der Flügel, eine intelligente Form",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Von der Seite betrachtet ist ein Flugzeugflügel nicht flach. Die Oberseite ist runder als die Unterseite. Wenn sich das Flugzeug schnell bewegt, muss die Luft diese Form umgehen."
+        },
+        {
+          "type": "image",
+          "asset": "airplane_wing_cross_section_flight",
+          "ratio": "auto",
+          "caption": "Das Profil des Flügels erzeugt den Auftrieb, der das Flugzeug anhebt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die darüber strömende Luft beschleunigt etwas. Sein Druck sinkt. Unter dem Flügel bleibt der Druck stärker. Dieser Unterschied drückt den Flügel nach oben: Das ist der **Aufzug**. Oft wird es mit dem Prinzip **Bernoulli**, benannt nach einem Gelehrten aus dem 18. Jahrhundert, erklärt und damit, dass der Flügel die Luft auch nach unten ablenkt."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p2",
+      "title": "Du brauchst Geschwindigkeit",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ohne Geschwindigkeit strömt nicht genug Luft über den Flügel, nicht genug Auftrieb. Deshalb braucht ein Flugzeug zum Abheben eine lange Landebahn: Die Triebwerke müssen es stark genug beschleunigen."
+        },
+        {
+          "type": "funFact",
+          "text": "Vögel nutzen die gleiche Grundidee: Ihre Flügel erzeugen Auftrieb. Aber sie schlagen mit den Flügeln, um vorwärts zu kommen. Dank seiner Triebwerke bewegt sich das Flugzeug vorwärts."
+        },
+        {
+          "type": "paragraph",
+          "text": "Im Reiseflug gleicht der Auftrieb das Gewicht aus. Der Schub der Triebwerke gleicht den Luftwiderstand aus. Das Flugzeug bewegt sich dann mit annähernd konstanter Geschwindigkeit vorwärts."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p3",
+      "title": "Geh hoch, runter, dreh dich um",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zum Steigflug kippt der Pilot (oder Bordcomputer) die Nase ein wenig nach oben und passt den Schub an. Zum Abstieg reduzieren wir oft den Schub. Zum Wenden wird das Flugzeug mithilfe beweglicher Teile der Flügel, den Querrudern, zur Seite geneigt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bei der Landung werden wir langsamer. Vom Flügel ausfahrende Klappen, um den Auftrieb bei niedrigen Geschwindigkeiten zu erhöhen. Dann berühren die Räder den Boden und die Bremsen (manchmal auch Schubumkehrer) stoppen das Flugzeug."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p4",
+      "title": "Es ist nicht „leichter als Luft“",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ein Heliumballon schwimmt, weil er eine geringere Dichte als Luft hat. Ein Flugzeug, nein: Es ist viel dichter. Es fliegt, weil es dank seiner Geschwindigkeit und der Form seiner Flügel **Stärke** so aussieht, als würde es es tragen."
+        },
+        {
+          "type": "takeaway",
+          "text": "Ein Flugzeug fliegt dank des **Aufzug**, der durch die Bewegung seiner Flügel durch die Luft entsteht. Geschwindigkeit ist entscheidend: Ohne sie „schiebt“ der Flügel nicht mehr genug nach oben, um das Gewicht auszugleichen."
+        }
+      ]
+    }
+  ]
+}

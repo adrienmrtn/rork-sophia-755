@@ -12,17 +12,34 @@ private struct PaywallLegalRow: View {
     @State private var showPrivacy = false
 
     var body: some View {
-        HStack(spacing: 6) {
-            Button(languageManager.text("paywall.restore"), action: onRestore)
-            Text("·").foregroundStyle(DS.inkTertiary)
-            Button(languageManager.text("settings.terms.title")) { showTerms = true }
-            Text("·").foregroundStyle(DS.inkTertiary)
-            Button(languageManager.text("settings.privacy.title")) { showPrivacy = true }
+        // Long DE/PT legal labels overflow one line on SE-class widths — fall back to wrap.
+        ViewThatFits(in: .horizontal) {
+            HStack(spacing: 6) { legalButtons }
+            VStack(spacing: 4) {
+                Button(languageManager.text("paywall.restore"), action: onRestore)
+                HStack(spacing: 6) {
+                    Button(languageManager.text("settings.terms.title")) { showTerms = true }
+                    Text("·").foregroundStyle(DS.inkTertiary)
+                    Button(languageManager.text("settings.privacy.title")) { showPrivacy = true }
+                }
+            }
         }
         .font(DS.sans(.caption2, .medium))
         .foregroundStyle(DS.inkTertiary)
+        .multilineTextAlignment(.center)
+        .minimumScaleFactor(0.85)
+        .frame(maxWidth: .infinity)
         .sheet(isPresented: $showTerms) { TermsView() }
         .sheet(isPresented: $showPrivacy) { PrivacyPolicyView() }
+    }
+
+    @ViewBuilder
+    private var legalButtons: some View {
+        Button(languageManager.text("paywall.restore"), action: onRestore)
+        Text("·").foregroundStyle(DS.inkTertiary)
+        Button(languageManager.text("settings.terms.title")) { showTerms = true }
+        Text("·").foregroundStyle(DS.inkTertiary)
+        Button(languageManager.text("settings.privacy.title")) { showPrivacy = true }
     }
 }
 

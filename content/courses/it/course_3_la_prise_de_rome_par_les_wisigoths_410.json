@@ -1,0 +1,139 @@
+{
+  "id": "course_3_la_prise_de_rome_par_les_wisigoths_410",
+  "title": "La presa di Roma da parte dei Visigoti",
+  "subtitle": "410",
+  "subject": "histoire",
+  "subcategory": "Antichità & Medioevo",
+  "description": "Nell'agosto del 410 i Visigoti di Alarico saccheggiarono Roma per tre giorni. Per la prima volta in otto secoli, un esercito nemico entra nella Città Eterna.",
+  "hero": {
+    "image": "la_prise_de_rome_par_les_wisigoths",
+    "ratio": "16:9",
+    "hook": "Nel 410 Roma cadde. E con essa l’idea di un impero invincibile."
+  },
+  "sections": [
+    {
+      "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_intro",
+      "title": "Introduzione",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nel mese di agosto **410** accade l'inimmaginabile. Guidati dal loro re **Alarico**, gli **Visigoti**, un popolo germanico, forzarono le porte di Roma. Per la prima volta dal sacco gallico di **390 a.C.**, quasi **800 anni fa**, un esercito nemico saccheggiò la Città Eterna."
+        },
+        {
+          "type": "paragraph",
+          "text": "Roma non è più la capitale politica dell’Impero, ma ne resta il cuore simbolico. Questo choc rivela una verità che nessuno voleva vedere: l’Occidente romano stava morendo."
+        }
+      ]
+    },
+    {
+      "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_p1",
+      "title": "Un impero che si svuota",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "All’inizio del V secolo l’Impero Romano d’Occidente mancava di soldi e di soldati. Per mantenere i confini moltiplicò trattati del tipo : popoli cosiddetti “barbari” si stabilirono sul territorio in cambio del servizio militare. La macchina romana regge ancora, ma dipende da coloro che un tempo faticava a contenere. [[Il foedus romano]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "In **402**, l'imperatore d'Occidente  abbandona Roma per , una città italiana protetta dalle sue paludi. Mentre la corte va in clandestinità, l'aristocrazia romana continua a vivere come se nulla fosse cambiato. Il potere reale si spostò verso i generali di origine germanica. [[Onorio]] [[Ravenna]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Quando fu annunciata la caduta di “Roma”, Onorio fu preso dal panico: pensò che si stesse parlando del suo pollo preferito, chiamato così. Sollevati, dicono, nell'apprendere che si trattava \"solo\" della città."
+        }
+      ]
+    },
+    {
+      "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_p2",
+      "title": "Alarico, un romano deluso",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": " non è un selvaggio venuto dal nulla. Ex ufficiale dell'esercito romano, spinto verso ovest dagli , un popolo nomade proveniente dall'Asia, vuole terre e un titolo ufficiale per il suo popolo. Di fronte al disprezzo di Ravenna, usa Roma come ostaggio. Due assedi, i riscatti, poi l'assalto. [[Alarico I]] [[Gli Unni]]"
+        },
+        {
+          "type": "image",
+          "asset": "alaric_king_visigoths",
+          "ratio": "4:3",
+          "caption": "Alarico I, re dei Visigoti ed ex ufficiale romano."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il 24 agosto 410 si apre la Porta Salaria. Il saccheggio dura **tre giorni**. Cristiano di fede  (una corrente che non vedeva Cristo uguale a Dio Padre), Alarico ordina il rispetto dell'asilo delle chiese. Violenza vera, ma non distruzione totale: vuole essere l'erede di Roma, non il becchino. [[Ariano]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Secondo la leggenda, quando morì, i suoi uomini deviarono il fiume Busento per seppellire Alarico e il suo tesoro, per poi riportare le acque nel suo letto."
+        }
+      ]
+    },
+    {
+      "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_p3",
+      "title": "Lo shock e la città di Dio",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dalla Palestina, , un Padre della Chiesa, esclama: «In una sola città è perito l'universo intero». I pagani accusano il cristianesimo di aver indebolito Roma. Per rispondere, **sant'Agostino** scrive : gli imperi terreni passano; la Chiesa resta. [[San Girolamo]] [[La città di Dio]]"
+        },
+        {
+          "type": "image",
+          "asset": "sack_of_rome_410_alaric",
+          "ratio": "4:3",
+          "caption": "Il sacco di Roma del 410, shock per tutto il mondo antico."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per altri popoli germanici, come gli  e gli , il segnale è chiaro: l'Occidente è preda. In **455** i [[Vandali]] saccheggiarono Roma molto più duramente. In **476**, il leader   depose l'ultimo imperatore occidentale, . Le insegne del potere vanno a Costantinopoli. L’Impero d’Occidente svanisce. [[Franchi]] [[Herule]] [[Odoacre]] [[Romolo Augustolo]]"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "402",
+              "title": "Ravenna, nuova capitale",
+              "detail": "Onorio abbandona Roma per una città meglio difesa."
+            },
+            {
+              "date": "410",
+              "title": "Borsa di Roma",
+              "detail": "Alarico e i Visigoti saccheggiano la città per tre giorni."
+            },
+            {
+              "date": "455",
+              "title": "Borsa antivandalismo",
+              "detail": "Roma viene saccheggiata in modo molto più distruttivo."
+            },
+            {
+              "date": "476",
+              "title": "Fine dell'Impero d'Occidente",
+              "detail": "Odoacre depone Romolo Augustolo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_p4",
+      "title": "Lo spostamento verso il Medioevo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I Visigoti infine si stabilirono in Aquitania, poi in Hispania (l'attuale Spagna). Non distrussero tutta la cultura classica: ne divennero i contrabbandieri, mescolando diritto romano, fede cristiana e tradizioni germaniche."
+        },
+        {
+          "type": "paragraph",
+          "text": "La borsa **410** rimane una pausa nei ricordi. Non è ancora la fine amministrativa dell’Impero, ma è la fine dell’illusione. L'Europa medievale inizia tra le macerie di un mito."
+        },
+        {
+          "type": "takeaway",
+          "text": "In **410**, Roma cadde per la prima volta in **800 anni**. I Visigoti addestrati allo stile romano vi saccheggiarono per tre giorni. Lo scontro pone le basi per **476** e l'Europa medievale."
+        }
+      ]
+    }
+  ]
+}

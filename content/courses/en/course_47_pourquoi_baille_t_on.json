@@ -1,0 +1,96 @@
+{
+  "id": "course_47_pourquoi_baille_t_on",
+  "title": "Why do we yawn?",
+  "subtitle": "Body & brain",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Everyone yawns: humans, dogs, sometimes even fetuses. It's probably not for \"lack of oxygen\". Here are the strongest leads.",
+  "hero": {
+    "image": "pourquoi_baille_t_on",
+    "ratio": "16:9",
+    "hook": "You yawn. Your neighbor yawns. And it’s (almost) not contagious by chance."
+  },
+  "sections": [
+    {
+      "id": "course_47_pourquoi_baille_t_on_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Yawning seems commonplace. However, it is a complex reflex: jaw, thorax, diaphragm, the whole body gets involved. Lions, dogs, humans: many animals yawn."
+        },
+        {
+          "type": "paragraph",
+          "text": "For a long time, we said: “it’s to have more oxygen”. This idea is now largely abandoned. Modern explanations are more interesting."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p1",
+      "title": "Not (especially) for oxygen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Experiments have shown that increasing oxygen in the air does not prevent yawning. Lower the carbon dioxide a bit either. So yawning is not a simple “catching up for air”."
+        },
+        {
+          "type": "paragraph",
+          "text": "A strong lead today: yawning helps **regulate brain temperature**. By inhaling widely and stretching the face, we will “ventilate” and cool the head a little, especially when we are tired."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p2",
+      "title": "Why is it contagious?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "contagious_yawning_people_group",
+          "ratio": "4:3",
+          "caption": "Seeing someone yawn is often enough to trigger the reflex."
+        },
+        {
+          "type": "paragraph",
+          "text": "In humans, seeing, hearing, or even reading the word “yawn” can trigger a yawn. It's not just a stupid imitation: it also affects **empathy** and brain circuits linked to , neurons that activate when we act... or when we see someone act. [[Mirror neurons and contagiousness]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Young children yawn little due to contagion. This sensitivity comes later, along with certain social skills."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p3",
+      "title": "We already yawn before we are born",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fetuses yawn from around the **11th week** of pregnancy. At this age, their lungs do not yet breathe air. So, again, it's not about \"running out of oxygen.\""
+        },
+        {
+          "type": "paragraph",
+          "text": "In the fetus, yawning could help the development of jaw and facial muscles."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p4",
+      "title": "Yawn to stay alert?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We often yawn when we are tired... but also just before a test, or when we are bored while trying to stay focused. Stretching may stimulate the nervous system and help **stay alert**."
+        },
+        {
+          "type": "takeaway",
+          "text": "Yawning is probably not a lack of oxygen. It would rather serve to regulate the brain (temperature, vigilance) and, in humans, it also spreads by social contagion."
+        }
+      ]
+    }
+  ]
+}

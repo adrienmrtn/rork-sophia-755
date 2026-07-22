@@ -1,0 +1,98 @@
+{
+  "id": "course_59_la_decouverte_de_l_anesthesie",
+  "title": "A descoberta da anestesia",
+  "subtitle": "Medicamento",
+  "subject": "sciences",
+  "subcategory": "Descobertas que mudaram o mundo",
+  "description": "Antes de 1846, uma operação era frequentemente realizada de forma consciente e com extrema dor. A anestesia transforma a cirurgia em cuidado, não em tortura.",
+  "hero": {
+    "image": "la_decouverte_de_l_anesthesie",
+    "ratio": "16:9",
+    "hook": "Um dia, em 1846, em Boston, a cirurgia deixou de ser uma corrida contra a dor."
+  },
+  "sections": [
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Imagine uma amputação sem adormecer. Antes de meados do século XIX, esta era a norma. Amarramos o paciente, nos movemos rapidamente, oramos."
+        },
+        {
+          "type": "paragraph",
+          "text": "**anestesia** muda tudo: permite operar sem consciência da dor. A cirurgia moderna pode finalmente demorar."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p1",
+      "title": "Antes: velocidade versus sofrimento",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "surgery_without_anesthesia_19th_century",
+          "ratio": "4:3",
+          "caption": "Sem anestesia, o cirurgião teve que ser extremamente rápido."
+        },
+        {
+          "type": "paragraph",
+          "text": "Os cirurgiões foram julgados por sua velocidade. Álcool, ópio ou força bruta foram usados ​​para imobilizar as pessoas. Muitos pacientes morreram de choque, infecção ou hemorragia."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p2",
+      "title": "1846: o dia do éter",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "ether_anesthesia_first_demonstration_1846",
+          "ratio": "4:3",
+          "caption": "Em Boston, uma manifestação pública convenceu o mundo médico."
+        },
+        {
+          "type": "paragraph",
+          "text": "**16 de outubro de 1846**, em Boston, o dentista **William Morton** faz um paciente inalar **ser**. O cirurgião **João Warren** opera um tumor no pescoço. O paciente não está gritando. A sala está atordoada."
+        },
+        {
+          "type": "funFact",
+          "text": "Warren teria dito: “Senhores, isso não é uma farsa”. A frase permaneceu famosa."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p3",
+      "title": "Próximo: clorofórmio e debates",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Seguiram-se outros produtos, como o **clorofórmio**, popularizado principalmente na Grã-Bretanha. Surgem rivalidades sobre quem “inventou” o quê. A patente não importa: a ideia está se espalhando pelo mundo todo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Resta um problema: adormecer sem matar. Tem que dosar, monitorar a respiração e o coração. Nasce uma nova especialidade."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p4",
+      "title": "Anestesia hoje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hoje o anestesista utiliza gases e medicamentos precisos, máquinas que medem tudo. Você pode colocar o corpo inteiro para dormir ou apenas uma área (anestesia local ou locorregional)."
+        },
+        {
+          "type": "takeaway",
+          "text": "Desde a demonstração do éter em **1846**, a anestesia transformou a cirurgia: menos dor, mais tempo, mais precisão... e a segurança tornou-se uma ciência por si só."
+        }
+      ]
+    }
+  ]
+}

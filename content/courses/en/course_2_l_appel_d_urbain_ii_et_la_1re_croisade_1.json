@@ -1,0 +1,144 @@
+{
+  "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1",
+  "title": "The call of Urban II and the 1st Crusade",
+  "subtitle": "1095",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "In November 1095, in Clermont, Pope Urban II launched an appeal which sent tens of thousands of Europeans to Jerusalem. Birth of the Crusades.",
+  "hero": {
+    "image": "l_appel_d_urbain_ii_et_la_1re_croisade",
+    "ratio": "16:9",
+    "hook": "A twenty-minute speech, and the West sets off towards Jerusalem."
+  },
+  "sections": [
+    {
+      "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In November **1095**, in Auvergne, Pope **Urban II** addresses a crowd. His call is simple: go and liberate Jerusalem and help the Christians of the East. In exchange, forgiveness of sins."
+        },
+        {
+          "type": "paragraph",
+          "text": "No one yet imagines what this speech will trigger. Tens of thousands of men will rush towards the East. The papacy invents a sacred war. It will change for a long time the relationships between the Christians of the West (often called Latins), the Byzantine Empire of the East, and the Muslim world."
+        }
+      ]
+    },
+    {
+      "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_p1",
+      "title": "Byzantium calls for help",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Since the 7th century, Jerusalem has been under Muslim domination. Christian pilgrims still pass there. Everything changes with the **Seljuk Turks**, a warlike people from Asia. In **1071**, at , in Asia Minor, they crushed the army of the Byzantine Empire, the Eastern Roman Empire. They thus opened Anatolia, the heart of what is today Turkey. [[Battle of Mantzikert]]"
+        },
+        {
+          "type": "image",
+          "asset": "seljuk_turks_battle_of_manzikert",
+          "ratio": "4:3",
+          "caption": "Mantzikert, 1071: Byzantium loses Anatolia to the Seljuks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cornered, the emperor of Byzantium, , asks Rome for help. However, since the , the Western Catholic Church and the Eastern Orthodox Church have been separated. For Urban II, the opportunity was perfect: to assert the power of the pope, and to divert the violence of the knights towards an external cause. The Church had already attempted to limit these private fights with the , a movement to protect non-combatants. [[Alexios I Komnenos]] [[The Schism of 1054]] [[Peace of God]]"
+        },
+        {
+          "type": "funFact",
+          "text": "In Mantzikert, Sultan Alp Arslan captured the Byzantine emperor. Instead of killing him, he treated him with honors before releasing him."
+        }
+      ]
+    },
+    {
+      "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_p2",
+      "title": "Clermont: “God wills it!” »",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "On **November 27, 1095**, at , a large Church assembly, Urban II promises a  to those who leave: total forgiveness of penalties due to sins. The expedition becomes an armed pilgrimage. The **cry “God wants it!” »** is spreading. The volunteers sew a red cross on their shoulder: we “cross paths”. [[Council of Clermont]] [[Plenary indulgence]]"
+        },
+        {
+          "type": "image",
+          "asset": "council_of_clermont_1095",
+          "ratio": "4:3",
+          "caption": "The Council of Clermont, 1095: the call that launched the First Crusade."
+        },
+        {
+          "type": "paragraph",
+          "text": "The fervor quickly escaped the pope. Before the lords, , a popular preacher, leads a crowd of poor people towards the East. Without discipline or supplies, this “Crusade of the Poor” plundered along the way and was decimated in Anatolia. Fervor alone does not make an army. [[Peter the Hermit]]"
+        }
+      ]
+    },
+    {
+      "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_p3",
+      "title": "From Antioch to Jerusalem",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In **1096**, the Crusade of the barons sets out: **Godfrey of Bouillon**, a lord of Lorraine, , a Norman prince of southern Italy, and other leaders. Alexis demands oaths from them. After the long siege of **Antioch** (1097-1098), a large city in Syria, the survivors reached Jerusalem. On **July 15, 1099**, the city fell. The massacre leaves a lasting mark on Muslim memory. [[Bohemond of Taranto]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Godfrey of Bouillon refuses the title of king. He calls himself , protector of the tomb of Christ: too humble, he says, to wear a golden crown where Christ wore thorns. [[Attorney of the Holy Sepulcher]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "The crusaders founded the , four small Christian states in the Middle East. Later, the , monk-soldiers, protect the pilgrims. In **1187**, , a Muslim sultan, recaptures Jerusalem. Other crusades will follow, until the fall of Saint-Jean-d'Acre, the last Latin bastion, in **1291**. [[Eastern Latin States]] [[Templars]] [[Saladin]]"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1071",
+              "title": "Mantzikert",
+              "detail": "Byzantium loses Anatolia to the Seljuks."
+            },
+            {
+              "date": "1095",
+              "title": "Council of Clermont",
+              "detail": "Urban II launches the call for the crusade."
+            },
+            {
+              "date": "1099",
+              "title": "Capture of Jerusalem",
+              "detail": "The Crusaders founded the Latin States of the East."
+            },
+            {
+              "date": "1187",
+              "title": "Saladin retakes Jerusalem",
+              "detail": "The Muslim reconquest revives the crusades."
+            },
+            {
+              "date": "1291",
+              "title": "Fall of Saint-Jean-d’Acre",
+              "detail": "End of the Latin presence in the Holy Land."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_p4",
+      "title": "A lasting divide",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "On a military level, the adventure ends badly. On a cultural level, however, it brings East and West together: Greek science transmitted by the Arabs, techniques, products, financing of military orders. Europe is learning to mobilize under the same banner."
+        },
+        {
+          "type": "paragraph",
+          "text": "The inheritance remains ambiguous. Urban II's call forged a common Western Christian identity. But it also created lasting distrust between religions. A speech lasting a few minutes opened two centuries of wars and trade."
+        },
+        {
+          "type": "takeaway",
+          "text": "In **1095**, Urban II transformed a Byzantine request for aid into an armed pilgrimage. In **1099**, Jerusalem falls; in **1291**, the Latin presence collapses. The Crusades united the West and lastingly divided memories."
+        }
+      ]
+    }
+  ]
+}

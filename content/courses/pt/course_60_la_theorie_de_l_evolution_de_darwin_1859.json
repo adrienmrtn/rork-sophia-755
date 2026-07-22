@@ -1,0 +1,102 @@
+{
+  "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859",
+  "title": "A teoria da evolução de Darwin",
+  "subtitle": "1859",
+  "subject": "sciences",
+  "subcategory": "Descobertas que mudaram o mundo",
+  "description": "Em 1859, Darwin publicou A Origem das Espécies. A ideia central: os seres vivos mudam ao longo do tempo por seleção natural.",
+  "hero": {
+    "image": "la_theorie_de_l_evolution_de_darwin",
+    "ratio": "16:9",
+    "hook": "As espécies não são fixas. Eles mudam. Devagar. Mas certamente."
+  },
+  "sections": [
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Em **1859**, **Carlos Darwin** publicou *Sobre a Origem das Espécies*. O livro choca, fascina, divide. A sua ideia central é, no entanto, simples de formular."
+        },
+        {
+          "type": "paragraph",
+          "text": "As coisas vivas variam. Algumas variações ajudam a sobreviver e se reproduzir. Essas variações são transmitidas. Ao longo das gerações, as populações mudam."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p1",
+      "title": "A jornada reveladora",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "charles_darwin_portrait",
+          "ratio": "4:3",
+          "caption": "Darwin, naturalista britânico do século XIX."
+        },
+        {
+          "type": "paragraph",
+          "text": "Quando menino, Darwin parte no navio **Beagle**. Durante anos, ele observou plantas, fósseis, pássaros. Nas Ilhas Galápagos, ele notou que os pássaros próximos tinham bicos diferentes dependendo da alimentação."
+        },
+        {
+          "type": "image",
+          "asset": "darwin_finches_galapagos_beaks",
+          "ratio": "4:3",
+          "caption": "Bicos adaptados a diferentes dietas: um forte indicador."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p2",
+      "title": "Seleção natural, em inglês simples",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Imagine uma população de animais. Alguns correm um pouco mais rápido, digerem um pouco melhor, resistem um pouco mais ao frio. Se isso os ajudar a sobreviver e a ter filhos, essas características se tornam mais comuns."
+        },
+        {
+          "type": "paragraph",
+          "text": "Não é que os indivíduos “queiram” evoluir. É um filtro: o ambiente mantém o que funciona. Darwin chama isso de **seleção natural**."
+        },
+        {
+          "type": "funFact",
+          "text": "Darwin esperou muito tempo antes de publicar. Ele temia o escândalo. Outro naturalista, **Alfred Russel Wallace**, teve ideias semelhantes: isso levou Darwin a lançar seu livro."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p3",
+      "title": "O choque de ideias",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "No século 19, muitos acreditavam que as espécies foram criadas como eram. Dizer que eles mudam e que os humanos partilham uma história com outros animais abala a religião e a sociedade."
+        },
+        {
+          "type": "paragraph",
+          "text": "A ciência está a progredir: os fósseis, a geografia das espécies e, mais tarde, a genética, confirmam a ideia geral."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p4",
+      "title": "E hoje?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sabemos agora que o DNA carrega variações. Observamos a evolução no laboratório (bactérias, vírus) e na natureza. Também combatemos bactérias resistentes aos antibióticos: esta é a evolução viva."
+        },
+        {
+          "type": "takeaway",
+          "text": "Darwin mostrou que os seres vivos evoluem por seleção natural: características úteis para a sobrevivência e a reprodução se espalham. A genética moderna confirmou e esclareceu esta estrutura."
+        }
+      ]
+    }
+  ]
+}

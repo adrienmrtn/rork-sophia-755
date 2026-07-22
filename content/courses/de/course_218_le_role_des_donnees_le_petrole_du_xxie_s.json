@@ -1,0 +1,108 @@
+{
+  "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s",
+  "title": "Die Rolle von Daten (das „Öl des 21. Jahrhunderts“)",
+  "subtitle": "Die wertvollste digitale Ressource",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Wirtschaft & Gesellschaft",
+  "description": "Sie sagen, Daten seien das neue Öl. Aber im Gegensatz zu Öl gehen sie nie zur Neige und werden umso wertvoller, je häufiger man ihnen begegnet.",
+  "hero": {
+    "image": "le_role_des_donnees",
+    "ratio": "16:9",
+    "hook": "Facebook kann erkennen, dass jemand heiratet oder umzieht, bevor er es überhaupt merkt."
+  },
+  "sections": [
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_intro",
+      "title": "Einführung",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Seit den 2010er Jahren hat sich eine Phrase eingebürgert: **Daten** wäre „das Öl des 21. Jahrhunderts“. Die Idee ist einfach: Sobald Algorithmen verfeinert werden, werden sie zum Motor für Wachstum und globale Macht."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aber im Gegensatz zu Öl, einer Ressource, die zur Neige geht, werden Daten niemals verbraucht: Sie können unendlich oft kopiert werden und werden wertvoller, wenn sie mit anderen Informationen kombiniert werden. Hier erfahren Sie, warum es die Weltwirtschaft verändert hat."
+        }
+      ]
+    },
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p1",
+      "title": "Unser Verhalten vor uns selbst vorhersagen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der wahre Wert von Daten liegt nicht in einer einfachen Liste von Namen oder Adressen, sondern in ihrer Fähigkeit, unser zukünftiges Verhalten vorherzusagen. Jede Suche, jede Bewegung, jeder Klick hinterlässt Spuren, die Technologieunternehmen sammeln, um ein sehr präzises Porträt jeder Person zu erstellen."
+        },
+        {
+          "type": "funFact",
+          "text": "Facebook kann eine große Veränderung im Leben, wie eine bevorstehende Heirat oder einen Umzug, erkennen, bevor die betroffene Person sich dessen überhaupt bewusst ist, indem es kleine Abweichungen in ihren Online-Gewohnheiten erkennt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese systematische Ausbeutung unseres Verhaltens hat zu dem geführt, was die Forscherin Shoshana Zuboff **Überwachungskapitalismus** nennt: Menschen sind nicht länger nur Kunden, sie werden zum Rohmaterial eines Systems, das Vorhersagen an den Meistbietenden verkauft."
+        }
+      ]
+    },
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p2",
+      "title": "Warum es fast unmöglich ist, mit diesen Giganten zu konkurrieren",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Datenwirtschaft funktioniert in einem positiven Kreislauf: Je mehr Daten ein Unternehmen hat, desto besser ist sein Service, der mehr Nutzer anzieht, die noch mehr Daten generieren. Künstliche Intelligenz hat dieses Phänomen beschleunigt: Ein auf Milliarden von Beispielen trainierter -Algorithmus wird präziser und lässt sich schneller verbessern als ein Wettbewerber mit begrenzten Ressourcen. [[Machine Learning]]"
+        },
+        {
+          "type": "image",
+          "asset": "artificial_intelligence_machine_learning_datacenter",
+          "ratio": "16:9",
+          "caption": "Für die Verarbeitung dieser riesigen Informationsströme verbrauchen Rechenzentren so viel Strom wie ganze Städte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diese Giganten,  in den USA und BATX in China, geben sich nicht mehr damit zufrieden, ihren ursprünglichen Sektor zu dominieren: Sie nutzen ihren Vorsprung bei Daten, um in die Bereiche Gesundheit, Finanzen oder vernetzte Autos zu expandieren, und blockieren so den Zugang zu Innovationen in vielen Bereichen. [[GAFAM]]"
+        }
+      ]
+    },
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p3",
+      "title": "Europa schlägt mit der DSGVO zurück",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Angesichts dieser Macht hat die Europäische Union 2018  eingeführt, eine Verordnung, die den Bürgern theoretisch die Macht über ihre eigenen persönlichen Daten zurückgibt: Transparenz, Recht auf Vergessenwerden, obligatorische Einwilligung. [[DSGVO]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Seine Stärke liegt in seiner Extraterritorialität: Jedes Unternehmen, das mit den Daten europäischer Bürger umgeht, muss sich daran halten und drohen Geldstrafen von bis zu 4 % seines weltweiten Umsatzes. Dies zwang Giganten wie Meta oder Amazon dazu, ihre Praktiken auf der ganzen Welt zu überprüfen, was Europa zu einer unwilligen globalen Regulierungsbehörde machte."
+        },
+        {
+          "type": "funFact",
+          "text": "Bevor die DSGVO Klarheit forderte, hätte ein durchschnittlicher Mensch in einem Jahr etwa 76 Arbeitstage gebraucht, um alle Nutzungsbedingungen für die von ihm genutzten digitalen Dienste zu lesen."
+        }
+      ]
+    },
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p4",
+      "title": "Daten, eine Frage der Souveränität",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Über die Wirtschaft hinaus sind Daten zu einem Machtinstrument für Staaten selbst geworden, die sie zur Überwachung ihrer Bevölkerung oder zur Lenkung der öffentlichen Meinung nutzen können. Länder, die nicht in der Lage sind, die Daten ihrer Bürger zu schützen, riskieren eine Form der technologischen Abhängigkeit, die als -Verletzung bezeichnet wird. [[Digitale Souveränität]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Die große Herausforderung der kommenden Jahrzehnte wird darin bestehen, ein Gleichgewicht zwischen dem Fortschritt, der durch groß angelegte Datenanalysen ermöglicht wird, und der Achtung der Privatsphäre zu finden, einer wesentlichen Voraussetzung für die individuelle Freiheit in einer immer stärker vernetzten Gesellschaft."
+        },
+        {
+          "type": "takeaway",
+          "text": "Daten sind zu einem strategischen Gut geworden, dessen Wert sich aus ihrer Fähigkeit ergibt, unser Verhalten vorherzusagen. Diese Wirtschaft begünstigt Technologiegiganten, mit denen man kaum konkurrieren kann, worauf Europa mit einer strengen Regulierung reagiert: der DSGVO."
+        }
+      ]
+    }
+  ]
+}

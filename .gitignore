@@ -4,3 +4,7 @@ node_modules
 .rork
 __pycache__/
 *.pyc
+
+# Machine-translation caches (regenerable)
+content/locales/_v2_mt_cache/
+content/locales/_quiz_v2_mt_cache/

@@ -1,0 +1,129 @@
+{
+  "id": "course_15_la_belle_epoque_1871_1914",
+  "title": "Die Belle Époque",
+  "subtitle": "1871-1914",
+  "subject": "histoire",
+  "subcategory": "Revolutionen & moderne Konflikte",
+  "description": "Zwischen Kriegsende 1870 und August 1914 glaubte Europa an den Fortschritt. Elektrizität, Ausstellungen, neue Künste … und Brüche, die zur Katastrophe führen.",
+  "hero": {
+    "image": "la_belle_epoque",
+    "ratio": "16:9",
+    "hook": "Vierzig Jahre Glaube an den Fortschritt … bevor sich 1914 alles änderte."
+  },
+  "sections": [
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_intro",
+      "title": "Einführung",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die **Belle Époque** bezeichnet die Zeit des relativen Friedens zwischen dem Ende des  (**1871**) und dem Beginn des  (**1914**). Wir glauben an die Wissenschaft, an den Fortschritt, an die Vernunft. [[Deutsch-Französischer Krieg]] [[Erster Weltkrieg]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Für die wohlhabenden Klassen Westeuropas waren es vier Jahrzehnte voller Komfort und Erfindungen. Aber unter der Fassade leuchten bereits soziale Brüche und Rivalitäten, die alles in die Luft sprengen werden."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p1",
+      "title": "Wenn Technologie den Alltag verändert",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Eine zweite industrielle Revolution bringt **Strom**, **Öl**, Chemie. Die Straßenbahn und die U-Bahn (Paris, **1900**) verändern die Stadt. Das Auto und das Flugzeug sind geboren. Das Telefon verkürzt Distanzen."
+        },
+        {
+          "type": "image",
+          "asset": "paris_universal_exhibition_1900",
+          "ratio": "4:3",
+          "caption": "Die Weltausstellung 1900 in Paris, ein Schaufenster des Fortschritts."
+        },
+        {
+          "type": "funFact",
+          "text": "Der Name „Belle Époque“ erscheint erst nach **1914**. Zeitgenossen lebten nicht in der „Belle Époque“: Es waren die Überlebenden der Schützengräben, die dieses verlorene Paradies erfanden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die **1900-Weltausstellung** zieht **50 Millionen** Besucher an. Das Kino der Gebrüder Lumière und das Moulin Rouge machen Paris zur Hauptstadt der Unterhaltung. , eine äußerst einflussreiche Philosophie, bringt den Optimismus auf den Punkt: Die Wissenschaft wird alles lösen. [[Der Positivismus von Auguste Comte]]"
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p2",
+      "title": "Hinter den Kulissen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hinter den Boulevards arbeiten Arbeiter oft **Z10** bis 12 Stunden **Z** pro Tag, ohne wirklichen Schutz. Städtische Armut schürt Spannungen zwischen den Klassen."
+        },
+        {
+          "type": "image",
+          "asset": "eiffel_tower_1889",
+          "ratio": "4:3",
+          "caption": "Der Eiffelturm (1889), Symbol einer Moderne, die nicht allen zugute kommt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Auf globaler Ebene teilt Europa Afrika. Der  (**1884-1885**) legt Grenzen fest, ohne die betroffenen Völker zu konsultieren. In Frankreich zerreißt der  die Republik: Ein jüdischer Offizier, Alfred Dreyfus, wird zu Unrecht wegen Spionage verurteilt, und Antisemitismus kommt ans Licht. [[Die Berliner Konferenz (1884-1885)]] [[Dreyfus-Affäre (1894–1906)]]"
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p3",
+      "title": "Neue Künste, dann der Herbst",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Künste explodieren. Der  wölbt die Fassaden. Die  und  sorgen für Aufsehen. Doktor  erforscht das Unbewusste. Albert Einstein veröffentlicht  in **1905**: Raum und Zeit sind nicht mehr das, was wir dachten. [[Art Nouveau]] [[Fauvismus]] [[Kubismus]] [[Sigmund Freud]] [[Relativität]]"
+        },
+        {
+          "type": "funFact",
+          "text": "In **1913** sorgte das Ballett *Das Frühlingsritual* von Igor Strawinsky in Paris für einen solchen Skandal, dass es unter den Zuschauern zu Handgreiflichkeiten kam."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dann ändert sich alles. Am 28. Juni 1914 wurde Erzherzog **Franz Ferdinand**, Erbe von Österreich-Ungarn, in Sarajevo ermordet. Die Getriebe der Allianzen werden in Gang gesetzt. Am **4. August** tritt das Vereinigte Königreich in den Krieg ein. Der Glaube an den Fortschritt stirbt in den Schützengräben."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1871",
+              "title": "Ende des Deutsch-Französischen Krieges",
+              "detail": "Geburt eines vereinten Deutschlands, französischer Unmut."
+            },
+            {
+              "date": "1889",
+              "title": "Eiffelturm",
+              "detail": "Symbol der technischen Moderne."
+            },
+            {
+              "date": "1894-1906",
+              "title": "Dreyfus-Affäre",
+              "detail": "Die Republik zerreißt sich selbst."
+            },
+            {
+              "date": "1900",
+              "title": "Weltausstellung",
+              "detail": "Paris, Schaufenster der Welt."
+            },
+            {
+              "date": "August 1914",
+              "title": "Großer Krieg",
+              "detail": "Die Belle Époque endet abrupt."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Die Belle Époque (**1871-1914**) vereint technischen Fortschritt und tiefe Brüche, bevor sie im Chaos des Ersten Weltkriegs versinkt."
+        }
+      ]
+    }
+  ]
+}

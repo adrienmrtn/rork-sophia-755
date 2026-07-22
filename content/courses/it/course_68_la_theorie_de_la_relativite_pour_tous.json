@@ -1,0 +1,124 @@
+{
+  "id": "course_68_la_theorie_de_la_relativite_pour_tous",
+  "title": "La teoria della relatività per tutti",
+  "subtitle": "Einstein 1905 e 1915",
+  "subject": "sciences",
+  "subcategory": "La Terra e l'Universo",
+  "description": "Nel 1905 e nel 1915 Einstein cambiò la nostra idea di spazio, tempo e gravità. E senza i suoi calcoli, il tuo GPS sbaglierebbe di diversi chilometri.",
+  "hero": {
+    "image": "la_theorie_de_la_relativite_pour_tous",
+    "ratio": "16:9",
+    "hook": "Il tempo non è un orologio universale. E la gravità non è una corda invisibile."
+  },
+  "sections": [
+    {
+      "id": "course_68_la_theorie_de_la_relativite_pour_tous_intro",
+      "title": "Introduzione",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In **1905** e **1915**, **Albert Einstein** ha pubblicato due teorie che hanno scosso la fisica. Fino ad allora seguivamo principalmente : il tempo scorreva allo stesso modo per tutti, ovunque. [[Newton]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Einstein dimostra che lo spazio e il tempo sono collegati e che la gravità può essere intesa come una curvatura di questo tessuto. Queste idee spiegano lo  e lo . Correggono anche il GPS del tuo telefono ogni giorno. [[buchi neri]] [[Big Bang]]"
+        }
+      ]
+    },
+    {
+      "id": "course_68_la_theorie_de_la_relativite_pour_tous_p1",
+      "title": "1905: relatività speciale",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**relatività speciale** si basa su due semplici idee. Le leggi della natura sono le stesse per chiunque si muova a velocità costante. E la velocità della luce nel vuoto, **circa 300.000 km/s**, è la stessa per tutti, sia che ci avviciniamo ad essa sia che ci allontaniamo da essa."
+        },
+        {
+          "type": "image",
+          "asset": "albert_einstein_portrait_princeton",
+          "ratio": "auto",
+          "caption": "Albert Einstein, autore della teoria della relatività."
+        },
+        {
+          "type": "paragraph",
+          "text": "Affinché la luce mantenga sempre la stessa velocità, il tempo deve adattarsi. È : più un oggetto va veloce, più lento passa il tempo rispetto a qualcuno fermo. Questa non è un'illusione. Lo misuravano gli **orologia atomica**, strumenti che misurano il tempo con estrema precisione. [[La dilatazione del tempo]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Einstein disegna anche : la massa è una forma di energia molto concentrata. Poiché **c**, la velocità della luce, è enorme, una massa molto piccola può rilasciare un'energia colossale. È un pilastro di , lo studio dei nuclei atomici e delle loro reazioni. [[E=mc²]] [[fisica nucleare]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Nel 1905 Einstein non era un professore universitario. Lavora come esaminatore presso l'ufficio brevetti di Berna, in Svizzera."
+        }
+      ]
+    },
+    {
+      "id": "course_68_la_theorie_de_la_relativite_pour_tous_p2",
+      "title": "1915: gravità come curvatura",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dieci anni dopo, Einstein pubblicò la **relatività generale**. Newton vedeva la gravità come una forza invisibile che attirava le masse l'una verso l'altra. Einstein propone un'altra immagine: **spazio-tempo**, spazio e tempo uniti in un unico tessuto, forma un tessuto flessibile."
+        },
+        {
+          "type": "paragraph",
+          "text": "Una massa pesante, come il Sole, scava questo tessuto. Immagina una palla da bowling su un trampolino. Una palla lanciata accanto non va dritta: segue l'incavo. Allo stesso modo, la Terra orbita perché segue la curvatura creata dal Sole."
+        },
+        {
+          "type": "paragraph",
+          "text": "Anche la luce segue queste curve. In **1919**, l'astronomo britannico **Arthur Eddington** lo ha verificato durante un'eclissi: la posizione apparente delle stelle dietro il Sole è leggermente spostata. Einstein diventa famoso da un giorno all'altro."
+        }
+      ]
+    },
+    {
+      "id": "course_68_la_theorie_de_la_relativite_pour_tous_p3",
+      "title": "GPS, a prova di tasca",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I satelliti GPS ruotano a circa **14.000 chilometri all'ora**, a un'altitudine **20.000 km**. Per localizzarsi al metro più vicino, i loro orologi devono rimanere sincronizzati con quelli a terra. Ma due effetti relativistici operano contemporaneamente."
+        },
+        {
+          "type": "paragraph",
+          "text": "A causa della loro velocità, il tempo scorre un po' più lentamente, un effetto della relatività speciale: circa **7 microsecondi** di ritardo al giorno. A causa della gravità più debole in quota, il tempo lì scorre un po' più velocemente, un effetto della relatività generale: circa **45 microsecondi** in anticipo."
+        },
+        {
+          "type": "funFact",
+          "text": "Senza correzioni relativistiche, l'errore di posizione GPS potrebbe raggiungere circa **11 km** al giorno."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il risultato è un avanzamento netto di circa **38 microsecondi** al giorno. Sembra minuscolo. Alla velocità della luce, questo è già enorme per la navigazione."
+        }
+      ]
+    },
+    {
+      "id": "course_68_la_theorie_de_la_relativite_pour_tous_p4",
+      "title": "Onde, buchi neri, universo in espansione",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La relatività generale prevede i buchi neri: regioni in cui la curvatura è così forte che nemmeno la luce esce più. Einstein dubitava della loro reale esistenza. La , l'osservazione del cielo nelle onde radio, e recenti immagini lo hanno confermato. [[radioastronomia]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "In **1916** predisse anche le **onda gravitazionale**: increspature nello spazio-tempo prodotte da catastrofi cosmiche, come la fusione di due buchi neri. Dobbiamo aspettare che **2015** e l'osservatorio **LIGO**, un rilevatore di terra sensibile alle vibrazioni spaziali, li rilevino."
+        },
+        {
+          "type": "paragraph",
+          "text": "Infine, queste equazioni aprono la strada a un universo in espansione, base del modello del Big Bang. Einstein aveva prima aggiunto una costante cosmologica****, un termine matematico per forzare un universo fisso. Le osservazioni di Hubble in seguito lo convinsero del contrario."
+        },
+        {
+          "type": "takeaway",
+          "text": "**E=mc²** collega massa ed energia. La relatività generale dice che la gravità piega lo spazio-tempo. Senza queste correzioni, il tuo GPS sbaglierebbe diversi chilometri ogni giorno."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup",
+  "title": "Perché i vulcani eruttano?",
+  "subtitle": "Magma e placche",
+  "subject": "sciences",
+  "subcategory": "La Terra e l'Universo",
+  "description": "Un vulcano è un'apertura nella crosta terrestre. Il magma sotto pressione sale lì e diventa lava. Ecco perché la Terra “sputa”.",
+  "hero": {
+    "image": "pourquoi_les_volcans_entrent_en_eruption",
+    "ratio": "16:9",
+    "hook": "Sotto i nostri piedi la Terra non è ghiacciata. A volte apre una finestra di fuoco."
+  },
+  "sections": [
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_intro",
+      "title": "Introduzione",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un vulcano non è solo una montagna che sputa fuoco. È un'apertura nell'involucro esterno della Terra. In questo modo sale lo **magma**: una miscela di rocce fuse e gas ad alta pressione. Una volta all'aria aperta, questo magma diventa **lavato**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per comprendere un'eruzione bisogna guardare sotto la superficie: il calore all'interno del pianeta, il movimento delle placche e il modo in cui i gas aumentano la pressione, un po' come agitare una bottiglia di soda."
+        }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p1",
+      "title": "Sotto i nostri piedi, nulla è fermo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La Terra è fatta di strati. In superficie, la **crosta** è un involucro rigido, spesso **5 fino a 70 km. Sotto si trova il **mantello****, in giro**2 900 km** di profondità. Il mantello è per lo più solido, ma per periodi di tempo molto lunghi può scorrere molto lentamente, come un miele molto denso."
+        },
+        {
+          "type": "image",
+          "asset": "volcano_eruption_lava",
+          "ratio": "auto",
+          "caption": "Un'eruzione: la risalita del magma in superficie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Questo calore interno fa salire e scendere la materia: queste sono **correnti convettive**. Spingono fuori grandi pezzi di crosta chiamati placche. Questo è : la superficie terrestre è tagliata in placche che si allontanano, si scontrano o scivolano l'una contro l'altra. [[La tettonica delle placche]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Alcuni sollevamenti molto rapidi riportano alla luce diamanti formatisi a una profondità superiore a **150 km**. Non hanno tempo per cambiarsi lungo la strada."
+        },
+        {
+          "type": "paragraph",
+          "text": "A  le placche si allontanano e il magma risale facilmente. In una zona di , una placca si tuffa sotto un'altra e porta con sé l'acqua. Quest'acqua abbassa il punto di fusione delle rocce: si forma il magma, poi risale. [[dorsale]] [[La subduzione]]"
+        }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p2",
+      "title": "Dal magma all'eruzione",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La roccia non si scioglie semplicemente \"perché fa caldo\". I fattori scatenanti sono tre: un aumento della temperatura, un calo della pressione o l'aggiunta di acqua. Una volta formato, il magma è meno denso della roccia che lo circonda. Cerca quindi di salire, un po' come una bolla d'aria nell'acqua."
+        },
+        {
+          "type": "paragraph",
+          "text": "Spesso si ferma prima in una **camera magmatica**, un serbatoio a pochi chilometri sotto la superficie. Lì i gas disciolti formano bolle quando la pressione diminuisce. Se il “tappo” di roccia sovrastante non regge più, inizia l’eruzione."
+        },
+        {
+          "type": "funFact",
+          "text": "L'eruzione del **Tambora** nel **1815**, in Indonesia, è stata così potente da raffreddare il clima globale. **1816** è stato soprannominato “l'anno senza estate”, con raccolti disastrosi in Europa e Nord America."
+        }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p3",
+      "title": "Fluido o esplosivo?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Non tutti i breakout sono uguali. Tutto dipende dalla **viscosità** del magma, cioè se è piuttosto liquido o appiccicoso. Un magma fluido, come a **Hawaii** o al Piton de la Fournaise (Isola della Riunione), lascia fuoriuscire i gas. Colate laviche: eruzione **effusivo**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un magma appiccicoso intrappola i gas. La pressione aumenta, poi tutto esplode. Ceneri, blocchi e  (nubi ardenti di gas e cenere che rotolano lungo i pendii) possono quindi devastare l'area circostante. Questo è lo stile dei vulcani come il Monte **Sant'Elena** (Stati Uniti) o **Pinatubo** (Filippine). [[nuvole infuocate]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un vulcano può rimanere calmo anche per secoli. In **79** dopo. aC, **Il Vesuvio**, vicino Napoli, seppellì Pompei sotto la cenere. Circa l'**80%** dell'attività vulcanica mondiale avviene sotto gli oceani, lontano dai nostri occhi."
+        }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p4",
+      "title": "Pericolo, fertilità, vita abissale",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I vulcani hanno modellato l’atmosfera primordiale della Terra emettendo gas. Le loro ceneri arricchiscono anche il suolo: molte fertili regioni agricole vivono ai piedi di vulcani attivi. Ma un’eruzione molto grande può inviare particelle di zolfo nell’atmosfera e raffreddare il clima per mesi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Alcuni siti, come  a Yellowstone negli Stati Uniti, sono attentamente monitorati. Sotto il mare, in prossimità dei crinali, gli  vomitano fluidi brucianti ricchi di minerali. Gli ecosistemi vivono lì senza luce solare, nutriti dalla chimica delle sorgenti termali. [[supervulcano]] [[fumatori neri]]"
+        },
+        {
+          "type": "takeaway",
+          "text": "I vulcani espellono il magma sotto pressione, soprattutto ai confini delle placche tettoniche. La viscosità del magma decide se l'eruzione scorre silenziosamente o esplode."
+        }
+      ]
+    }
+  ]
+}

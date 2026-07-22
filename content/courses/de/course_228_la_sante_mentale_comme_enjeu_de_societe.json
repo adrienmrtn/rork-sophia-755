@@ -1,0 +1,128 @@
+{
+  "id": "course_228_la_sante_mentale_comme_enjeu_de_societe",
+  "title": "Psychische Gesundheit als soziales Thema",
+  "subtitle": "Die stille Epidemie",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Umwelt & Zukunft",
+  "description": "Psychische Gesundheit macht **Z20** % der Krankheiten auf der Welt aus, erhält aber nur 2 % des Gesundheitsbudgets. Aus diesem Grund wird diese längst vergessene Sache zu einem großen gesellschaftlichen Problem.",
+  "hero": {
+    "image": "la_sante_mentale_comme_enjeu_de_societe",
+    "ratio": "16:9",
+    "hook": "Jede fünfte Krankheit auf der Welt beeinträchtigt die Psyche, macht aber kaum 2 % des Gesundheitsbudgets aus."
+  },
+  "sections": [
+    {
+      "id": "course_228_la_sante_mentale_comme_enjeu_de_societe_intro",
+      "title": "Einführung",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die psychische Gesundheit, die von der Medizin lange vernachlässigt wurde, wird zu einer der großen Herausforderungen des 21. Jahrhunderts. Es beschränkt sich nicht nur auf das Fehlen psychiatrischer Störungen: Es ist ein Zustand des Wohlbefindens, der es jedem ermöglicht, sein Potenzial auszuschöpfen und sich den Schwierigkeiten des Lebens zu stellen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Es bleibt jedoch ein auffallendes Paradoxon bestehen: Diese Erkrankungen machen rund 20 % der Krankheiten weltweit aus, fließen aber nur in 2 % des Gesundheitsbudgets ein. In diesem Kurs werden die Wurzeln dieser stillen Krise untersucht."
+        }
+      ]
+    },
+    {
+      "id": "course_228_la_sante_mentale_comme_enjeu_de_societe_p1",
+      "title": "Eine unterschätzte Gesundheitskrise",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Depression** ist heute weltweit die häufigste Ursache für Behinderungen, noch vor Herzerkrankungen und Diabetes. Diese Krankheit, die von anhaltender Traurigkeit und einem Verlust des Interesses an allem geprägt ist, betrifft alle Bevölkerungsgruppen, bleibt jedoch in vielen Regionen der Welt unterdiagnostiziert."
+        },
+        {
+          "type": "image",
+          "asset": "depression_mental_health_person_dark",
+          "ratio": "4:3",
+          "caption": "Depressionen sind heute weltweit die häufigste Ursache für Behinderungen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Weltweit sind etwa 300 Millionen Menschen von generalisierter Angst betroffen. Dieses Leid führt manchmal zu Selbstmord, der jedes Jahr für 700.000 Todesfälle verantwortlich ist, eine Zahl, die höher ist als die Zahl der Opfer von Kriegen und Naturkatastrophen zusammen."
+        },
+        {
+          "type": "funFact",
+          "text": "Das Wort „Melancholie“ stammt aus dem Altgriechischen und bedeutet wörtlich „schwarze Galle“. In der Antike ging man davon aus, dass Depressionen durch einen Überschuss dieser Flüssigkeit im Körper verursacht werden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Im Jahr 2019 unternahm die Weltgesundheitsorganisation einen symbolischen Schritt und erkannte  als arbeitsbedingtes Phänomen an. Diese Anerkennung verlagert die Verantwortung vom Einzelnen allein auf sein Arbeitsumfeld. [[Burn-out (berufliche Erschöpfung)]]"
+        }
+      ]
+    },
+    {
+      "id": "course_228_la_sante_mentale_comme_enjeu_de_societe_p2",
+      "title": "Besonders betroffen sind junge Menschen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Während die gesamte Bevölkerung betroffen ist, sind Jugendliche und junge Erwachsene besonders besorgniserregend. In den Vereinigten Staaten haben sich Angstzustände und Depressionen bei 12- bis 25-Jährigen innerhalb eines Jahrzehnts fast verdoppelt, mit einem deutlichen Wendepunkt um 2012."
+        },
+        {
+          "type": "image",
+          "asset": "teenagers_smartphones_social_media_anxiety",
+          "ratio": "16:9",
+          "caption": "Die Explosion der sozialen Medien geht mit einem deutlichen Anstieg der Ängste junger Menschen einher."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dieses Datum entspricht der Verallgemeinerung des Smartphones und der sozialen Netzwerke. Der Psychologe Jean Twenge glaubt, dass dieser Wandel die Geselligkeit junger Menschen gestört hat: Der , in dem wir uns mit unrealistischen Lebensstandards vergleichen, erzeugt ein tiefes Gefühl der Unzulänglichkeit. [[Sozialer Vergleich nach oben]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Hinzu kommen  und Schlafmangel durch das Licht von Bildschirmen. Soziale Netzwerke funktionieren mit -Schleifen, die süchtig machen und junge Menschen vom Sport oder erholsamem Schlaf ablenken können. [[Cyber-Viktimisierung]] [[Dopaminerge Verstärkung]]"
+        }
+      ]
+    },
+    {
+      "id": "course_228_la_sante_mentale_comme_enjeu_de_societe_p3",
+      "title": "Ein sehr konkreter wirtschaftlicher Kostenfaktor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bei der psychischen Gesundheit geht es nicht nur um Privatsphäre: Sie wirkt sich auch direkt auf die Produktivität aus. Die jährlichen Kosten für Burnout und Leiden am Arbeitsplatz werden allein in den Vereinigten Staaten auf 300 Milliarden US-Dollar pro Jahr geschätzt, verursacht durch Abwesenheiten, wiederholte Abgänge und anwesende, aber unfähig arbeitende Mitarbeiter."
+        },
+        {
+          "type": "image",
+          "asset": "workplace_burnout_stress_mental_health",
+          "ratio": "4:3",
+          "caption": "Die Kosten eines Burnouts belaufen sich jedes Jahr auf Hunderte Milliarden Dollar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Angesichts dieser Kosten entwickeln Unternehmen Präventionsprogramme, doch die Herausforderung bleibt in armen Ländern bestehen, wo die Konsultation eines Psychiaters nahezu unmöglich ist. Einer der stärksten Hebel bleibt die Entstigmatisierung: Wenn eine Persönlichkeit des öffentlichen Lebens wie die Sportlerin Simone Biles offen über ihre Schwierigkeiten spricht, trägt sie dazu bei, eine Quelle der Schande in ein echtes Gesundheitsproblem zu verwandeln."
+        }
+      ]
+    },
+    {
+      "id": "course_228_la_sante_mentale_comme_enjeu_de_societe_p4",
+      "title": "Auf dem Weg zu einem präventiven Ansatz",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Zukunft der psychischen Gesundheit hängt von unserer Fähigkeit ab, von der Medizin, die die Krise behandelt, sobald sie eintrifft, zu einem präventiven Ansatz überzugehen. Dies erfordert ein Überdenken der Stadtplanung, der Schulbildung und des Arbeitstempos, um Stressquellen zu reduzieren, bevor sie Auswirkungen haben."
+        },
+        {
+          "type": "paragraph",
+          "text": "Es entstehen neue Wege wie digitale Therapien oder künstliche Intelligenz, um den Mangel an Ärzten auszugleichen, obwohl diese Instrumente auch Fragen zur Datenvertraulichkeit aufwerfen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Psychische Gesundheit ist auch mit aktuellen großen Krisen verbunden: Das Konzept der Öko-Angst zeigt deutlich, wie globale Bedrohungen wie das Klima sich direkt auf unser psychisches Gleichgewicht auswirken. Die Anerkennung der psychischen Gesundheit als wesentliche Säule unserer Gesellschaft wird zur Voraussetzung für die Bewältigung künftiger Krisen."
+        },
+        {
+          "type": "takeaway",
+          "text": "Psychische Gesundheit macht 20 % der Krankheiten weltweit aus, macht aber nur 2 % des Gesundheitsbudgets aus. Zwischen Depression, Burn-out und den Auswirkungen der digitalen Technologie auf junge Menschen wird es zu einem ebenso drängenden wie wirtschaftlichen gesellschaftlichen Problem."
+        }
+      ]
+    }
+  ]
+}

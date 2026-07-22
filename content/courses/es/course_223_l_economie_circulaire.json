@@ -1,0 +1,132 @@
+{
+  "id": "course_223_l_economie_circulaire",
+  "title": "La economía circular",
+  "subtitle": "Alejarse de todo lo desechable",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Medio ambiente y futuro",
+  "description": "**Extraer, fabricar, extraer**: este modelo está agotando el planeta. La economía circular propone todo lo contrario: mantener los objetos y materiales en circulación el mayor tiempo posible.",
+  "hero": {
+    "image": "l_economie_circulaire",
+    "ratio": "16:9",
+    "hook": "¿Y si los residuos no existieran? Es la apuesta de un modelo económico inspirado en la naturaleza."
+  },
+  "sections": [
+    {
+      "id": "course_223_l_economie_circulaire_intro",
+      "title": "Introducción",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Desde la revolución industrial, nuestra economía ha funcionado en una dirección: extraemos recursos, fabricamos objetos y luego los tiramos. Este modelo supone que los recursos son infinitos. No lo son."
+        },
+        {
+          "type": "paragraph",
+          "text": "La economía circular **** ofrece otra lógica, inspirada en la naturaleza, donde realmente nada se pierde. Su objetivo es mantener el valor de los productos y materiales en circulación el mayor tiempo posible, en lugar de transformarlos en residuos."
+        }
+      ]
+    },
+    {
+      "id": "course_223_l_economie_circulaire_p1",
+      "title": "El modelo lineal llega a sus límites",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La economía moderna se construyó sobre un modelo llamado **lineal**: extraer, fabricar, tirar. Tomamos materias primas de la naturaleza, fabricamos productos a partir de ellas y, una vez desgastados o pasados ​​de moda, estos productos se convierten en residuos."
+        },
+        {
+          "type": "image",
+          "asset": "landfill_waste_garbage_linear_economy",
+          "ratio": "16:9",
+          "caption": "El modelo de “tomar, fabricar y tirar” supone recursos infinitos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Este sistema se basa en la idea de que los recursos son ilimitados y que la naturaleza puede absorber toda la contaminación. Pero hoy en día, la economía global consume el equivalente a 1,7 planetas en recursos cada año. Ciertos metales esenciales para las tecnologías digitales, como , podrían resultar difíciles de encontrar ya en 2040. [[Litio]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Sólo el 9% de todo el plástico producido por la humanidad ha sido reciclado. El resto acaba en la naturaleza o en vertederos, donde puede permanecer durante 450 años."
+        },
+        {
+          "type": "paragraph",
+          "text": "El coste de limpieza y gestión de residuos casi nunca está incluido en el precio de venta de un producto. Es un costo oculto que todos pagan después."
+        }
+      ]
+    },
+    {
+      "id": "course_223_l_economie_circulaire_p2",
+      "title": "Reparar antes del reciclaje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La economía circular ofrece varios bucles, y siempre en el mismo orden de prioridad: el bucle más corto es mejor, porque desperdicia menos energía y material. Todo empieza con **ecodiseño**, es decir pensar en el impacto medioambiental de un producto desde su creación, eligiendo materiales duraderos y fáciles de desmontar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Luego viene **reutilizar** (un objeto cambia de propietario sin ser transformado, como en un mercado de segunda mano), luego **reparar**, que prolonga la vida de un producto. Estas medidas combaten directamente la , esta práctica que reduce deliberadamente la vida útil de un objeto. [[Obsolescencia programada]]"
+        },
+        {
+          "type": "image",
+          "asset": "recycling_sorting_waste_materials",
+          "ratio": "4:3",
+          "caption": "El reciclaje es el último recurso, después de la reutilización y la reparación."
+        },
+        {
+          "type": "paragraph",
+          "text": "**reciclaje** sólo ocurre como último recurso. Sigue siendo útil: reciclar aluminio consume un 95% menos de energía que extraerlo del mineral en bruto, . Pero sigue siendo menos eficiente que simplemente reutilizar un objeto. [[Bauxita]]"
+        }
+      ]
+    },
+    {
+      "id": "course_223_l_economie_circulaire_p3",
+      "title": "¿Por qué sigue siendo difícil hoy?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A pesar de todo su interés, la economía circular se enfrenta a un problema simple: el modelo lineal a menudo sigue siendo menos costoso a corto plazo. A veces, extraer material nuevo cuesta menos que clasificar y reciclar desechos complejos, especialmente cuando las materias primas son baratas."
+        },
+        {
+          "type": "image",
+          "asset": "repair_right_electronics_reuse",
+          "ratio": "4:3",
+          "caption": "El “derecho a reparar” exige que los fabricantes proporcionen repuestos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ante esto, las autoridades públicas intervienen cada vez más. La Unión Europea lanzó un plan en 2020 que impone reglas de sostenibilidad más estrictas. Uno de los grandes ejes es el “derecho a reparar”, que obliga a los fabricantes de dispositivos electrónicos a proporcionar repuestos durante varios años."
+        },
+        {
+          "type": "paragraph",
+          "text": "Otra palanca: el , que hace que los fabricantes paguen por la gestión de residuos de sus productos. Esto les da un incentivo financiero para diseñar objetos que sean menos contaminantes y más fáciles de reparar. [[Responsabilidad extendida del productor]]"
+        }
+      ]
+    },
+    {
+      "id": "course_223_l_economie_circulaire_p4",
+      "title": "Hacia una sociedad de recursos",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La economía circular no es sólo una cuestión de reciclaje: es un proyecto para una sociedad más sobria y más resiliente. Al depender menos de materias primas importadas, un país también gana seguridad en un mundo más inestable."
+        },
+        {
+          "type": "paragraph",
+          "text": "El éxito de esta transformación también depende de nosotros, como consumidores. La regla de las 3R, reducir, reutilizar, reciclar, comienza con el primer paso: reducir, es decir, preguntarse si realmente es necesaria la compra. Es esta primera acción la que tiene el mayor efecto sobre el clima."
+        },
+        {
+          "type": "funFact",
+          "text": "Hoy en día hay más oro en una tonelada de viejas placas electrónicas de teléfonos inteligentes que en una tonelada de mineral extraído de una mina de oro tradicional."
+        },
+        {
+          "type": "takeaway",
+          "text": "La economía circular tiene como objetivo romper el ciclo de “extraer, fabricar y tirar” manteniendo los recursos en circulación a través del ecodiseño, la reparación y el reciclaje, para respetar los límites físicos de nuestro planeta."
+        }
+      ]
+    }
+  ]
+}

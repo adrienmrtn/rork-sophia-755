@@ -1,0 +1,145 @@
+{
+  "id": "course_136_beethoven_genie_et_surdite",
+  "title": "Beethoven: genius and deafness",
+  "subtitle": "1770-1827",
+  "subject": "art",
+  "subcategory": "Music",
+  "description": "Ludwig van Beethoven, from Bonn to Vienna, composed his greatest works while becoming deaf and invented the romantic genius.",
+  "hero": {
+    "image": "beethoven_genie_et_surdite",
+    "ratio": "16:9",
+    "hook": "Deaf, he composes the anthem of joy for all humanity."
+  },
+  "sections": [
+    {
+      "id": "course_136_beethoven_genie_et_surdite_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Ludwig van Beethoven** (**1770**-**1827**) is the archetype of the modern genius: wild hair, iron will, fight against destiny. Beyond the myth, his life marks a rupture: the composer is no longer a court servant, but a sovereign creator."
+        },
+        {
+          "type": "paragraph",
+          "text": "He transforms entertainment music into philosophical language. And he designed his most vast sound architectures, including the Ninth Symphony, in almost total auditory isolation."
+        }
+      ]
+    },
+    {
+      "id": "course_136_beethoven_genie_et_surdite_p1",
+      "title": "From Bonn to Vienna: the equal of princes",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Born in  in **1770**, Ludwig grew up under a brutal father, **John**, who wanted to make him the new . Nightly rehearsals forge an early technique… and an iron character. [[Bonn]] [[Mozart]]"
+        },
+        {
+          "type": "image",
+          "asset": "beethoven_bonn_birthplace_portrait_young",
+          "ratio": "4:3",
+          "caption": "Young Beethoven in Bonn: a childhood under pressure."
+        },
+        {
+          "type": "paragraph",
+          "text": "In **1792**, he moved to , the musical capital. He studied briefly with **Joseph Haydn**. Piano virtuoso, astonishing improviser, he refuses obsequiousness towards patrons: he wants to be the equal of princes. His youthful style, still classic, already announces violent contrasts and larger forms. [[Vienna]]"
+        },
+        {
+          "type": "funFact",
+          "text": "So neglected in his Viennese youth, his friends sometimes replaced his worn clothes with new ones while he slept, without him noticing."
+        }
+      ]
+    },
+    {
+      "id": "course_136_beethoven_genie_et_surdite_p2",
+      "title": "Deafness and the Heiligenstadt Testament",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Between **1798** and **1801**, tinnitus and hearing loss appear. For a star pianist, it's a disaster. In **1802**, in the village of **Heiligenstadt**, he wrote the **Testament of Heiligenstadt**: letter to his brothers, never sent, where he confesses suicidal thoughts... then chooses to live to compose everything he carries within him."
+        },
+        {
+          "type": "image",
+          "asset": "beethoven_heiligenstadt_testament_manuscript",
+          "ratio": "4:3",
+          "caption": "The Testament of Heiligenstadt: despair that becomes a decision to create."
+        },
+        {
+          "type": "paragraph",
+          "text": "Starts the . Symphony No. 3, called *Heroic*, is first dedicated to . When he becomes emperor, Beethoven rages and withdraws the dedication. The work revolutionizes the genre with its length and intensity. [[heroic period]] [[Napoleon Bonaparte]]"
+        },
+        {
+          "type": "funFact",
+          "text": "To better feel the vibrations, he sawed the legs of his pianos so that they rested directly on the floor."
+        }
+      ]
+    },
+    {
+      "id": "course_136_beethoven_genie_et_surdite_p3",
+      "title": "The Ninth: the Ode to Joy",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In the twilight of his life, Beethoven was almost completely deaf. In **1824**, he completed the **Ninth Symphony**: for the first time, soloists and choir enter a symphony. The finale is based on  by **Friedrich von Schiller**, transformed into a message of fraternity. [[Ode to Joy]]"
+        },
+        {
+          "type": "image",
+          "asset": "beethoven_ninth_symphony_ode_joy_manuscript",
+          "ratio": "4:3",
+          "caption": "The Ninth: the human voice enters the symphony."
+        },
+        {
+          "type": "paragraph",
+          "text": "At the creation, unable to hear the ovations, he continues to beat time. The contralto **Caroline Unger** makes him turn around to see the crowd standing. The  later became a European anthem of peace. His last quartets, harsh and modern, would only be understood decades later. [[Ode to Joy]]"
+        },
+        {
+          "type": "funFact",
+          "text": "He would sometimes squeeze a wooden rod between his teeth, the other end on the piano: bone conduction made him “hear” the notes."
+        }
+      ]
+    },
+    {
+      "id": "course_136_beethoven_genie_et_surdite_p4",
+      "title": "From classicism to romanticism",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Beethoven makes the transition from classicism to : subjectivity, passion, excess. The symphony becomes metaphysical drama.  and  will live in its shadow. It also paves the way for the , where the sound is sufficient in itself. At his funeral in **1827**, more than **20,000** people followed the procession to Vienna. [[Romanticism]] [[Brahms]] [[Mahler]] [[absolute music]]"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1792",
+              "title": "Arrival in Vienna",
+              "detail": "Beethoven established himself as a virtuoso and free creator."
+            },
+            {
+              "date": "1802",
+              "title": "Heiligenstadt",
+              "detail": "The testament: choosing creation over despair."
+            },
+            {
+              "date": "1804",
+              "title": "Heroic Symphony",
+              "detail": "Break with Napoleon, new scale of the genre."
+            },
+            {
+              "date": "1824",
+              "title": "Ninth Symphony",
+              "detail": "The Ode to Joy for Humanity."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Deaf, Beethoven invented the romantic genius: from the heroic period to the Ode to Joy, the creative will against silence."
+        }
+      ]
+    }
+  ]
+}

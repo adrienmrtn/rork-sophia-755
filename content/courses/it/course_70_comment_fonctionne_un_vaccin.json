@@ -1,0 +1,110 @@
+{
+  "id": "course_70_comment_fonctionne_un_vaccin",
+  "title": "Come funziona un vaccino?",
+  "subtitle": "Immunità",
+  "subject": "sciences",
+  "subcategory": "La nostra quotidianità spiegata",
+  "description": "Un vaccino non inietta la malattia per spaventarti. Allena il tuo sistema immunitario con una versione innocua, quindi reagirà rapidamente la prossima volta.",
+  "hero": {
+    "image": "comment_fonctionne_un_vaccin",
+    "ratio": "16:9",
+    "hook": "Il vaccino insegna al tuo corpo a riconoscere il pericolo... senza fargli sperimentare la vera malattia."
+  },
+  "sections": [
+    {
+      "id": "course_70_comment_fonctionne_un_vaccin_intro",
+      "title": "Introduzione",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I vaccini hanno salvato più vite di quasi ogni altra invenzione medica. Il vaiolo****, che ancora nel XX secolo uccideva centinaia di milioni di persone, è stato debellato grazie alla vaccinazione."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il principio è semplice: mostrare al corpo un “manichino da allenamento”, in modo che crei una **memoria** immunitaria senza passare attraverso la vera malattia."
+        }
+      ]
+    },
+    {
+      "id": "course_70_comment_fonctionne_un_vaccin_p1",
+      "title": "La memoria del sistema immunitario",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Quando un microbo (virus o batterio) entra per la prima volta, spesso il tuo corpo impiega da **da 7 a 14 giorni** per predisporre una difesa efficace. Durante questo periodo potresti essere malato."
+        },
+        {
+          "type": "paragraph",
+          "text": "Alcune cellule, , producono **anticorpo** (proteine ​​che si attaccano all'intruso). Altri, , distruggono le cellule già infette. Una volta debellata la minaccia, una parte di queste cellule resta dormiente: sono le **cella di memoria**. [[Linfociti B]] [[Linfociti T]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Se lo stesso microbo ritorna, la risposta scompare molto più rapidamente. Spesso non ti ammali nemmeno. Il vaccino crea questa memoria… senza il rischio di una vera infezione."
+        }
+      ]
+    },
+    {
+      "id": "course_70_comment_fonctionne_un_vaccin_p2",
+      "title": "Diversi modi per allenare il corpo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**I vaccini attenuatiZ** contengono un microbo vivo, ma reso molto debole (ad esempio il morbillo). Si allenano bene, ma sono sconsigliati se il sistema immunitario è molto fragile."
+        },
+        {
+          "type": "paragraph",
+          "text": "**vaccini inattivi** utilizzano un microbo ucciso (ad esempio alcune influenze). Più sicuri, spesso richiedono richiamate. **vaccini a subunità** mostrano solo una parte del microbo, ad esempio una proteina di superficie."
+        },
+        {
+          "type": "paragraph",
+          "text": "**ZZ**i vaccini mRNA forniscono una breve istruzione: le tue cellule producono temporaneamente una proteina virale innocua. La tua immunità impara a riconoscerlo. L'mRNA poi si degrada; non modifica il tuo DNA."
+        },
+        {
+          "type": "funFact",
+          "text": "Molto prima di Jenner, in Cina era già praticata una forma di “variolizzazione”: esporsi volontariamente a una forma attenuata di vaiolo per proteggersi."
+        }
+      ]
+    },
+    {
+      "id": "course_70_comment_fonctionne_un_vaccin_p3",
+      "title": "Immunità collettiva",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Quando un numero sufficiente di persone viene protetto, il microbo circola meno. È lo . Protegge anche chi non può essere vaccinato (neonati, persone immunocompromesse). [[Immunità di gruppo]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "La soglia dipende dalla contagiosità. Per **morbillo**, spesso è necessaria una copertura **dal 92 al 95%**. Per la poliomielite, piuttosto tra **80 e 85%**."
+        },
+        {
+          "type": "funFact",
+          "text": "Il vaiolo è stato dichiarato eradicato nel **1980**. L'ultimo caso naturale conosciuto risale a **1977**, in Somalia."
+        }
+      ]
+    },
+    {
+      "id": "course_70_comment_fonctionne_un_vaccin_p4",
+      "title": "Sicurezza e vigilanza",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un vaccino viene sottoposto a severi test prima dell’autorizzazione. Alcuni contengono : sostanze che aiutano il sistema immunitario a “avvisare” meglio il vaccino. [[Coadiuvanti]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Paradossalmente, quando le malattie scompaiono dalla vita quotidiana, dimentichiamo la loro pericolosità. Le epidemie di morbillo ci ricordano che la protezione collettiva rimane fragile se la copertura diminuisce."
+        },
+        {
+          "type": "takeaway",
+          "text": "Un vaccino allena il sistema immunitario con una versione innocua del pericolo. Crea memoria cellulare, protegge l’individuo e, su scala di popolazione, rallenta o ferma le epidemie."
+        }
+      ]
+    }
+  ]
+}

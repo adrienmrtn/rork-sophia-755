@@ -1,0 +1,104 @@
+{
+  "id": "course_76_pourquoi_les_feuilles_changent_elles_de",
+  "title": "Por que as folhas mudam de cor?",
+  "subtitle": "Outono e pigmentos",
+  "subject": "sciences",
+  "subcategory": "A Terra e o Universo",
+  "description": "O outono não inventa as cores: retira o verde que as mascarava. Por trás do espetáculo, uma estratégia de sobrevivência para passar o inverno.",
+  "hero": {
+    "image": "pourquoi_les_feuilles_changent_de_couleur",
+    "ratio": "16:9",
+    "hook": "As folhas de outono não se maquiam: tiram o verde."
+  },
+  "sections": [
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Todo outono, as florestas mudam de verde para dourado, para cobre, para roxo. Este não é um capricho estético. É uma estratégia: a árvore recupera o que pode antes de perder as folhas para o inverno."
+        },
+        {
+          "type": "paragraph",
+          "text": "As cores quentes não aparecem do nada. Muitas vezes, eles já estavam lá, escondidos sob o verde. Compreender o outono significa compreender uma grande limpeza bioquímica."
+        }
+      ]
+    },
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p1",
+      "title": "O verde que esconde tudo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Da primavera ao final do verão, as folhas ficam cheias de **clorofila**, o pigmento que alimenta a fotossíntese. Ele se degrada sob a luz, mas a árvore o substitui constantemente. Enquanto dominar, a folha permanece verde."
+        },
+        {
+          "type": "image",
+          "asset": "leaf_color_change_autumn_chlorophyll",
+          "ratio": "auto",
+          "caption": "No outono, a clorofila desaparece e revela as cores das folhas."
+        },
+        {
+          "type": "paragraph",
+          "text": "No entanto, a folha também contém **carotenoides**, pigmentos amarelos e laranja (como nas cenouras). No verão eles estão lá, mas invisíveis sob o verde. No outono, a produção de clorofila é interrompida. O verde desaparece, o amarelo e o laranja são revelados."
+        },
+        {
+          "type": "funFact",
+          "text": "“Clorofila” vem do grego *cloros* (verde) e *filão* (folha). “Carotenóide” partilha a raiz da… cenoura, onde este pigmento foi identificado pela primeira vez."
+        }
+      ]
+    },
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p2",
+      "title": "O verdadeiro gatilho: as noites que ficam mais longas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Não é principalmente o frio que dá início ao outono, mas a duração das noites. As árvores medem isso usando sensores de luz, o . Quando as noites ficam mais longas, um sinal hormonal vai para cada folha. [[fitocromos]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Na base do pecíolo forma-se um , uma espécie de gorro. A seiva sobe menos, os açúcares descem mal. Isolada, a folha degrada mais rapidamente sua clorofila. Os amarelos mais estáveis ​​permanecem por algumas semanas, depois a folha cai. [[A zona de separação (abscisão)]]"
+        }
+      ]
+    },
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p3",
+      "title": "De onde vêm os vermelhos brilhantes?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O amarelo já estava lá. Vermelho e roxo costumam ser **feito** no final da temporada. São os , produzidos quando os açúcares permanecem presos na folha. [[As antocianinas]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Por que investir energia antes de jogar fora o papel? Provavelmente para proteger **** durante a reciclagem. Uma árvore vai se recuperar**azine** e outros nutrientes valiosos. Sem clorofila, o sol pode danificar tecidos ainda ativos. As antocianinas atuam como filtro solar durante o grande movimento em direção às raízes."
+        }
+      ]
+    },
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p4",
+      "title": "Por que alguns outonos queimam mais",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Os tintos mais bonitos nascem frequentemente de dias ensolarados e noites frescas e sem gelo. Muito açúcar, transformação em antocianinas. Um outono cinzento e chuvoso proporciona tons mais opacos. Uma geada precoce mata as folhas antes do show."
+        },
+        {
+          "type": "paragraph",
+          "text": "No final, tudo o que resta é o , substâncias marrons do solo da floresta. Alguns estudos também acham que cores vivas alertam o : árvore adequada, defesas fortes, melhor ir para outro lugar. [[taninos]] [[pulgões]]"
+        },
+        {
+          "type": "takeaway",
+          "text": "O outono revela os amarelos já presentes quando a clorofila desaparece, e às vezes torna vermelho para proteger a reciclagem de nutrientes antes da queda das folhas."
+        }
+      ]
+    }
+  ]
+}
