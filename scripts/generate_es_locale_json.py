@@ -83,7 +83,9 @@ def lookup_course_id(title: str, title_map: dict[str, str], normalized_map: dict
     normalized = normalize_title(title)
     if course_id := normalized_map.get(normalized):
         return course_id
-    matches = difflib.get_close_matches(normalized, normalized_map.keys(), n=1, cutoff=0.78)
+    # 0.72 catches word-order variants ("¿Por qué son vitales las abejas?" vs
+    # "¿Por qué las abejas son vitales?") without over-matching unrelated titles.
+    matches = difflib.get_close_matches(normalized, normalized_map.keys(), n=1, cutoff=0.72)
     if matches:
         return normalized_map[matches[0]]
     return None
@@ -98,6 +100,7 @@ def resolve_course_titles_es(titles: str, title_map: dict[str, str]) -> list[str
             continue
         course_id = lookup_course_id(title, title_map, normalized_map)
         if course_id is None:
+            print(f"  warn: unresolved ES course title in collection/card: {title!r}")
             return None
         course_ids.append(course_id)
     return course_ids or None
