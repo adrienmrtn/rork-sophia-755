@@ -348,7 +348,7 @@ struct FlashCard: View {
                 .lineLimit(2, reservesSpace: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
 
-            boldText(course.description)
+            boldText(accroche)
                 .font(.jakarta(.subheadline, design: .rounded, weight: .semibold))
                 .foregroundStyle(ink.opacity(0.85))
                 .lineLimit(3, reservesSpace: true)
@@ -376,6 +376,15 @@ struct FlashCard: View {
         .padding(20)
         .frame(maxWidth: .infinity)
         .background(pastel)
+    }
+
+    /// Cliffhanger du cours (hook v2) dans la langue courante ; sinon la description.
+    private var accroche: String {
+        if let hook = CourseContentStore.content(courseId: course.id, language: language)?.hero?.hook,
+           !hook.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            return hook
+        }
+        return course.description
     }
 
     private func boldText(_ input: String) -> Text {

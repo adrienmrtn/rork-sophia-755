@@ -62,6 +62,7 @@ struct OnboardingV2SwipeCourses: View {
         .onAppear {
             if courses.isEmpty {
                 courses = vm.recommendedCourses(language: languageManager.current)
+                vm.rememberSwipedCourses(courses)
             }
             // Entrée dédiée à cette page : les cartes montent et se posent en douceur.
             withAnimation(.spring(response: 0.62, dampingFraction: 0.74).delay(0.15)) {
