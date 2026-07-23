@@ -78,7 +78,7 @@ class StoreViewModel {
     }
 
     var promoPackage: Package? {
-        offerings?.offering(identifier: "special_promo")?.package(identifier: "$rc_annual")
+        offerings?.offering(identifier: "offre_discount")?.package(identifier: "$rc_annual")
     }
 
     /// Offering matching a context identifier (e.g. `quizz`, `debloquer_cours`), if loaded.
@@ -94,7 +94,7 @@ class StoreViewModel {
         offering(identifier: identifier)?.package(identifier: "$rc_annual") ?? annualPackage
     }
 
-    // MARK: - Discount (special_promo) pricing
+    // MARK: - Discount (offre_discount) pricing
 
     struct DiscountPriceDisplay {
         /// Promo price for the annual plan (e.g. "19,99 €").
