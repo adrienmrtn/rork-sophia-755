@@ -41,22 +41,33 @@ enum OnboardingCourseRecommender {
     ],
   ]
 
+  /// Recommends up to `limit` courses for the given interests.
+  ///
+  /// `excluding` lets a caller skip courses already surfaced elsewhere (e.g. the onboarding
+  /// swipe deck) so the profile screen shows *different* courses. Falls back progressively —
+  /// hand-picked pool → curated starters → any course in the interest subjects → any course —
+  /// so the exclusion never leaves the screen short.
   static func recommendedCourses(
     interests: Set<String>,
     language: AppLanguage,
-    limit: Int = 4
+    limit: Int = 4,
+    excluding: Set<String> = []
   ) -> [Course] {
     let orderedKeys = Subject.allCases.map(\.storageKey).filter { interests.contains($0) }
     var ids: [String] = []
     var pickIndex = 0
 
+    func tryAppend(_ id: String) -> Bool {
+      guard !ids.contains(id), !excluding.contains(id) else { return false }
+      ids.append(id)
+      return true
+    }
+
     while ids.count < limit {
       var added = false
       for key in orderedKeys {
         guard let pool = picksBySubject[key], pickIndex < pool.count else { continue }
-        let id = pool[pickIndex]
-        if !ids.contains(id) {
-          ids.append(id)
+        if tryAppend(pool[pickIndex]) {
           added = true
           if ids.count >= limit { break }
         }
@@ -67,7 +78,22 @@ enum OnboardingCourseRecommender {
 
     if ids.count < limit {
       for fallbackId in CuratedStarterCourses.ids where ids.count < limit {
-        if !ids.contains(fallbackId) { ids.append(fallbackId) }
+        _ = tryAppend(fallbackId)
+      }
+    }
+
+    // Broaden to any course in the selected subjects, then to any course at all, so an
+    // exclusion set never shrinks the result below `limit` when the catalog can fill it.
+    if ids.count < limit {
+      let subjects = Set(orderedKeys)
+      let catalog = ContentCatalog.courses(for: language)
+      for course in catalog where ids.count < limit {
+        if subjects.isEmpty || subjects.contains(course.subject.storageKey) {
+          _ = tryAppend(course.id)
+        }
+      }
+      for course in catalog where ids.count < limit {
+        _ = tryAppend(course.id)
       }
     }
 

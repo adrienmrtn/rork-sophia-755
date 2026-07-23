@@ -378,7 +378,7 @@ private struct TinderFlashCard: View {
                 .fixedSize(horizontal: false, vertical: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
 
-            boldText(course.description)
+            boldText(accroche)
                 .font(DS.sans(.subheadline))
                 .foregroundStyle(DS.inkSecondary)
                 .lineSpacing(3)
@@ -388,6 +388,15 @@ private struct TinderFlashCard: View {
         }
         .padding(DS.Space.l)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+    }
+
+    /// Cliffhanger du cours (hook v2) dans la langue courante ; sinon la description.
+    private var accroche: String {
+        if let hook = CourseContentStore.content(courseId: course.id, language: language)?.hero?.hook,
+           !hook.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            return hook
+        }
+        return course.description
     }
 
     private func boldText(_ input: String) -> Text {

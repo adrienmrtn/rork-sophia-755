@@ -364,11 +364,12 @@ private struct TikTokCourseCard: View {
         .dsSoftShadow()
     }
 
-    /// Phrase d'accroche affichée sous le titre. En français, on privilégie le « hook » de
-    /// la première page du cours (contenu v2) ; sinon on retombe sur la description.
+    /// Phrase d'accroche affichée sous le titre. On privilégie le « hook » (cliffhanger) de
+    /// la première page du cours (contenu v2), dans la langue courante ; sinon on retombe sur
+    /// la description. Auparavant réservé au français, ce qui laissait les autres langues sur
+    /// l'ancienne intro tronquée au lieu du cliffhanger.
     private var accroche: String {
-        if language == .french,
-           let hook = CourseContentStore.content(courseId: course.id, language: .french)?.hero?.hook,
+        if let hook = CourseContentStore.content(courseId: course.id, language: language)?.hero?.hook,
            !hook.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
             return hook
         }

@@ -14,6 +14,9 @@ final class OnboardingV2ViewModel {
     var objectiveKeys: [String] = []
     /// Cours « aimés » lors du swipe — utilisés pour préremplir les favoris.
     var likedCourseIds: [String] = []
+    /// Cours présentés dans le swipe — exclus des recommandations de l'écran profil pour ne
+    /// pas remontrer les mêmes cours.
+    var swipedCourseIds: [String] = []
     /// Temps d'écran quotidien déclaré (en minutes, par blocs de 30) — écran « temps téléphone ».
     /// Sert à l'écran « ta vie en années » (remplissage rouge).
     var phoneDailyMinutes: Int = 180
@@ -88,6 +91,11 @@ final class OnboardingV2ViewModel {
         )
     }
 
+    /// Mémorise les cours affichés dans le swipe pour les exclure de l'écran profil.
+    func rememberSwipedCourses(_ courses: [Course]) {
+        swipedCourseIds = courses.map(\.id)
+    }
+
     // MARK: - Profil (écran récompense « Voici ton profil », avant la création de compte)
 
     /// Archétype dérivé des réponses (objectif principal) — sert à attribuer un surnom.
@@ -112,8 +120,15 @@ final class OnboardingV2ViewModel {
     }
 
     /// Cours recommandés qui « attendent » l'utilisateur sur l'écran profil.
+    /// Exclut les cours déjà vus dans le swipe pour en proposer de nouveaux.
     func awaitingCourses(language: AppLanguage) -> [Course] {
-        recommendedCourses(language: language)
+        let interests = Set(selectedSubjects)
+        return OnboardingCourseRecommender.recommendedCourses(
+            interests: interests,
+            language: language,
+            limit: 5,
+            excluding: Set(swipedCourseIds)
+        )
     }
 
     func toggleLiked(_ courseId: String, liked: Bool) {
