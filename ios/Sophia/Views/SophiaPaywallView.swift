@@ -26,7 +26,7 @@ enum SophiaPaywallContext: String, Identifiable {
 
 /// Dispatcher that renders the appropriate native paywall for a given context.
 ///
-/// - `.offreDiscount` → `SophiaDiscountPaywall` (flash sale, `special_promo`, 19,99 €/an).
+/// - `.offreDiscount` → `SophiaDiscountPaywall` (flash sale, `offre_discount`, 19,99 €/an).
 /// - `.entrainement` → `SophiaTrainingPaywall` (sells the spaced-repetition training method).
 /// - `.quizz` → `SophiaQuizPaywall` (App Store rating, auto-playing quiz demo, reviews carousel).
 /// - `.debloquerCours` → `SophiaCourseUnlockPaywall` (rating, 6-courses/day stat, reviews, countdown).

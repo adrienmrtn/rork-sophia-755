@@ -1526,7 +1526,7 @@ struct SophiaCourseUnlockPaywall: View {
 // MARK: - Discount paywall (offre_discount)
 
 /// Ultra-aggressive native flash-sale paywall for the `offre_discount` context.
-/// Single annual plan from the `special_promo` offering (19,99 €/an, **no free trial**),
+/// Single annual plan from the `offre_discount` offering (19,99 €/an, **no free trial**),
 /// a big struck-through regular price, a savings badge, and a prominent 1-hour countdown
 /// driven by `DiscountOfferManager` for urgency.
 struct SophiaDiscountPaywall: View {
@@ -1750,7 +1750,7 @@ struct SophiaDiscountPaywall: View {
 
     private func purchase() {
         guard !purchasing else { return }
-        // Le paquet promo `special_promo` est prioritaire ; si l'offering promo n'est pas
+        // Le paquet promo `offre_discount` est prioritaire ; si l'offering promo n'est pas
         // configurée (paquet nil), on retombe sur le plan annuel standard pour que le bouton
         // « J'en profite maintenant » déclenche toujours l'achat au lieu de ne rien faire.
         guard let package = store.promoPackage ?? store.annualPackage else {
@@ -1765,7 +1765,7 @@ struct SophiaDiscountPaywall: View {
             if ok {
                 AnalyticsService.trackPurchaseCompleted(
                     context: context.rawValue,
-                    offeringId: store.offering(identifier: "special_promo")?.identifier,
+                    offeringId: store.offering(identifier: context.offeringIdentifier)?.identifier,
                     packageId: package.identifier
                 )
                 onPurchased()
