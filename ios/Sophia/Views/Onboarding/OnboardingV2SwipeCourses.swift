@@ -15,6 +15,10 @@ struct OnboardingV2SwipeCourses: View {
     @State private var checkIn = false
     @State private var enter = false
     @State private var crossedThreshold = false
+    /// Locked as soon as the last card is committed, so a double tap / swipe+button
+    /// cannot schedule a second `onNext()` while the fly-off animation is in flight.
+    @State private var isFinishing = false
+    @State private var hasAdvanced = false
 
     var body: some View {
         VStack(spacing: 0) {
@@ -210,7 +214,10 @@ struct OnboardingV2SwipeCourses: View {
     }
 
     private func swipeTop(like: Bool) {
-        guard index < courses.count else { return }
+        guard !isFinishing, !hasAdvanced, index < courses.count else { return }
+        let finishing = index == courses.count - 1
+        if finishing { isFinishing = true }
+
         let course = courses[index]
         vm.toggleLiked(course.id, liked: like)
         OnboardingHaptics.swipeCommit()
@@ -220,13 +227,17 @@ struct OnboardingV2SwipeCourses: View {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.22) {
             drag = .zero
             index += 1
-            if index >= courses.count {
+            if finishing {
                 withAnimation(.spring(response: 0.5, dampingFraction: 0.8)) { done = true }
                 OnboardingHaptics.counterComplete()
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
                     withAnimation(.spring(response: 0.5, dampingFraction: 0.6)) { checkIn = true }
                 }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { onNext() }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                    guard !hasAdvanced else { return }
+                    hasAdvanced = true
+                    onNext()
+                }
             }
         }
     }

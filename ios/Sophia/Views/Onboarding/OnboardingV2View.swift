@@ -18,6 +18,9 @@ struct OnboardingV2View: View {
     @State private var progressManager = ProgressManager()
     @State private var stepIndex: Int = 0
     @State private var didFinish = false
+    /// Blocks a second `advance()` fired within a short window (e.g. racing timers
+    /// after the last swipe card), which would skip the loading screen.
+    @State private var lastAdvanceAt: Date?
 
     private enum Screen: Hashable {
         case welcome, language, objectives, objectiveIntro
@@ -116,6 +119,11 @@ struct OnboardingV2View: View {
     // MARK: - Navigation
 
     private func advance() {
+        let now = Date()
+        if let lastAdvanceAt, now.timeIntervalSince(lastAdvanceAt) < 0.4 {
+            return
+        }
+
         let list = screens
         let next = stepIndex + 1
         guard next < list.count else { finish(); return }
@@ -126,6 +134,7 @@ struct OnboardingV2View: View {
             return
         }
 
+        lastAdvanceAt = now
         OnboardingHaptics.selection()
         stepIndex = next
         AnalyticsService.trackOnboardingStepViewed(stepIndex: next)
