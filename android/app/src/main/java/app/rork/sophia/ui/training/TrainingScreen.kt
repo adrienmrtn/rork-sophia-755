@@ -3,6 +3,7 @@ package app.rork.sophia.ui.training
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -26,9 +27,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import app.rork.sophia.SophiaApplication
+import app.rork.sophia.billing.StoreViewModel
 import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.StringStore
+import app.rork.sophia.data.TutorialFlags
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Course
 import app.rork.sophia.domain.QuizAnswer
@@ -37,6 +41,7 @@ import app.rork.sophia.domain.QuizQuestionType
 import app.rork.sophia.domain.QuizScoring
 import app.rork.sophia.domain.QuizShuffler
 import app.rork.sophia.domain.UserProgress
+import app.rork.sophia.ui.components.FirstOpenExplanation
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
@@ -48,13 +53,36 @@ fun TrainingScreen(
     isPremium: Boolean,
     progress: UserProgress,
     progressManager: ProgressManager,
-    onRequestPaywall: () -> Unit,
+    storeViewModel: StoreViewModel,
+    onPremiumUnlocked: () -> Unit = {},
 ) {
     val context = LocalContext.current
+    val app = context.applicationContext as SophiaApplication
     val due = remember(progress, language) {
         progressManager.resolveDueQuestions(ContentCatalog.courses(context, language))
     }
     var inSession by remember { mutableStateOf(false) }
+    var showTrainingOb by remember { mutableStateOf(false) }
+    var showExplain by remember {
+        mutableStateOf(!app.tutorialFlags.seen(TutorialFlags.Id.TRAINING) && isPremium)
+    }
+
+    if (showTrainingOb) {
+        TrainingOnboardingScreen(
+            language = language,
+            storeViewModel = storeViewModel,
+            startAtPaywall = app.tutorialFlags.seen(TutorialFlags.Id.TRAINING_ONBOARDING),
+            onCompletedOnboarding = {
+                app.tutorialFlags.markSeen(TutorialFlags.Id.TRAINING_ONBOARDING)
+            },
+            onPurchased = {
+                showTrainingOb = false
+                onPremiumUnlocked()
+            },
+            onClose = { showTrainingOb = false },
+        )
+        return
+    }
 
     if (inSession && due.isNotEmpty() && isPremium) {
         TrainingSession(
@@ -66,8 +94,9 @@ fun TrainingScreen(
         return
     }
 
+    Box(modifier = modifier.fillMaxSize()) {
     Column(
-        modifier = modifier
+        modifier = Modifier
             .fillMaxSize()
             .background(DS.canvas)
             .padding(DS.Space.l),
@@ -93,13 +122,21 @@ fun TrainingScreen(
             )
             Spacer(Modifier.height(20.dp))
             Button(
-                onClick = onRequestPaywall,
+                onClick = { showTrainingOb = true },
                 modifier = Modifier.fillMaxWidth().height(52.dp),
                 shape = DS.controlShape,
                 colors = ButtonDefaults.buttonColors(containerColor = DS.accent, contentColor = Color.White),
             ) {
                 Text(
-                    text = StringStore.text(context, "training.unlock", language),
+                    text = StringStore.text(
+                        context,
+                        if (app.tutorialFlags.seen(TutorialFlags.Id.TRAINING_ONBOARDING)) {
+                            "training.unlock"
+                        } else {
+                            "training.discover"
+                        },
+                        language,
+                    ),
                     fontFamily = PlusJakartaSans,
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 16.sp,
@@ -142,6 +179,19 @@ fun TrainingScreen(
                     fontWeight = FontWeight.SemiBold,
                 )
             }
+        }
+    }
+        if (showExplain) {
+            FirstOpenExplanation(
+                language = language,
+                icon = "🎯",
+                titleKey = "explain.training.title",
+                bodyKey = "explain.training.body",
+                onDismiss = {
+                    app.tutorialFlags.markSeen(TutorialFlags.Id.TRAINING)
+                    showExplain = false
+                },
+            )
         }
     }
 }

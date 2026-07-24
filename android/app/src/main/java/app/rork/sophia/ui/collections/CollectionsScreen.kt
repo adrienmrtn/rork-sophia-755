@@ -12,19 +12,26 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Text
+import androidx.compose.foundation.layout.Box
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
+import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.StringStore
+import app.rork.sophia.data.TutorialFlags
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Course
 import app.rork.sophia.domain.LearningCollection
 import app.rork.sophia.domain.UserProgress
+import app.rork.sophia.ui.components.FirstOpenExplanation
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.SophiaTypography
 
@@ -36,32 +43,50 @@ fun CollectionsScreen(
     onOpenCourse: (Course) -> Unit,
 ) {
     val context = LocalContext.current
+    val app = context.applicationContext as SophiaApplication
     val collections = remember(language) { ContentCatalog.collections(context, language) }
     val coursesById = remember(language) {
         ContentCatalog.courses(context, language).associateBy { it.id }
     }
+    var showExplain by remember {
+        mutableStateOf(!app.tutorialFlags.seen(TutorialFlags.Id.COLLECTIONS))
+    }
 
-    Column(modifier = modifier.fillMaxSize().background(DS.canvas)) {
-        Text(
-            text = StringStore.text(context, "tab.collections", language),
-            style = SophiaTypography.titleLarge,
-            modifier = Modifier.padding(horizontal = DS.Space.l, vertical = DS.Space.m),
-        )
-        LazyColumn(
-            contentPadding = PaddingValues(horizontal = DS.Space.l, vertical = 8.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp),
-        ) {
-            items(collections, key = { it.id }) { collection ->
-                CollectionCard(
-                    collection = collection,
-                    progress = progress,
-                    onClick = {
-                        collection.courseIds.firstOrNull()
-                            ?.let { coursesById[it] }
-                            ?.let(onOpenCourse)
-                    },
-                )
+    Box(modifier = modifier.fillMaxSize()) {
+        Column(modifier = Modifier.fillMaxSize().background(DS.canvas)) {
+            Text(
+                text = StringStore.text(context, "tab.collections", language),
+                style = SophiaTypography.titleLarge,
+                modifier = Modifier.padding(horizontal = DS.Space.l, vertical = DS.Space.m),
+            )
+            LazyColumn(
+                contentPadding = PaddingValues(horizontal = DS.Space.l, vertical = 8.dp),
+                verticalArrangement = Arrangement.spacedBy(12.dp),
+            ) {
+                items(collections, key = { it.id }) { collection ->
+                    CollectionCard(
+                        collection = collection,
+                        progress = progress,
+                        onClick = {
+                            collection.courseIds.firstOrNull()
+                                ?.let { coursesById[it] }
+                                ?.let(onOpenCourse)
+                        },
+                    )
+                }
             }
+        }
+        if (showExplain) {
+            FirstOpenExplanation(
+                language = language,
+                icon = "📚",
+                titleKey = "explain.collections.title",
+                bodyKey = "explain.collections.body",
+                onDismiss = {
+                    app.tutorialFlags.markSeen(TutorialFlags.Id.COLLECTIONS)
+                    showExplain = false
+                },
+            )
         }
     }
 }

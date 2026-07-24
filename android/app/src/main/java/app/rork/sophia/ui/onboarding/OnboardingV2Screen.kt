@@ -14,9 +14,15 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import android.Manifest
+import android.os.Build
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.billing.StoreViewModel
 import app.rork.sophia.data.ContentCatalog
+import app.rork.sophia.data.MetaAdsService
+import app.rork.sophia.data.TrialReminderScheduler
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.ui.paywall.OnboardingPaywallFlow
 import app.rork.sophia.ui.theme.DS
@@ -72,11 +78,29 @@ fun OnboardingV2Screen(
         onComplete()
     }
 
-    fun advanceFromReminder() {
+    val notificationPermission = rememberLauncherForActivityResult(
+        ActivityResultContracts.RequestPermission(),
+    ) {
+        TrialReminderScheduler.scheduleTrialEndingReminder(context)
+        MetaAdsService.setTrackingEnabled(true)
         if (isPremium) finish(true)
         else {
             sawPaywall = true
             step = OnboardingStep.Paywall
+        }
+    }
+
+    fun advanceFromReminder() {
+        TrialReminderScheduler.scheduleTrialEndingReminder(context)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            notificationPermission.launch(Manifest.permission.POST_NOTIFICATIONS)
+        } else {
+            MetaAdsService.setTrackingEnabled(true)
+            if (isPremium) finish(true)
+            else {
+                sawPaywall = true
+                step = OnboardingStep.Paywall
+            }
         }
     }
 

@@ -16,6 +16,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
@@ -42,6 +43,7 @@ import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.InAppReviewHelper
 import app.rork.sophia.data.ProgressManager
+import app.rork.sophia.data.ShareHelper
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Course
@@ -144,16 +146,19 @@ fun CourseScreen(
                     .padding(horizontal = 8.dp, vertical = 4.dp),
                 verticalAlignment = Alignment.CenterVertically,
             ) {
-                IconButton(onClick = onDismiss) {
-                    Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back", tint = DS.ink)
-                }
-                Text(
-                    text = course.title,
-                    style = SophiaTypography.titleMedium,
-                    maxLines = 1,
-                    modifier = Modifier.weight(1f),
-                )
+            IconButton(onClick = onDismiss) {
+                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back", tint = DS.ink)
             }
+            Text(
+                text = course.title,
+                style = SophiaTypography.titleMedium,
+                maxLines = 1,
+                modifier = Modifier.weight(1f),
+            )
+            IconButton(onClick = { ShareHelper.shareCourse(context, course) }) {
+                Icon(Icons.Filled.Share, contentDescription = "Share", tint = DS.ink)
+            }
+        }
             LinearProgressIndicator(
                 progress = {
                     if (pages.isEmpty()) 0f

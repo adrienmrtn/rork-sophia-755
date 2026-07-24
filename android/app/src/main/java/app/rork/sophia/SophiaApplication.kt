@@ -5,12 +5,14 @@ import app.rork.sophia.data.AnalyticsService
 import app.rork.sophia.data.AuthService
 import app.rork.sophia.data.DiscountOfferManager
 import app.rork.sophia.data.LanguageManager
+import app.rork.sophia.data.MetaAdsService
 import app.rork.sophia.data.OnboardingStore
 import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.ProgressSyncService
 import app.rork.sophia.data.SocialService
+import app.rork.sophia.data.TrialReminderScheduler
+import app.rork.sophia.data.TutorialFlags
 import com.facebook.FacebookSdk
-import com.facebook.appevents.AppEventsLogger
 
 class SophiaApplication : Application() {
     lateinit var languageManager: LanguageManager
@@ -29,6 +31,8 @@ class SophiaApplication : Application() {
         private set
     lateinit var analytics: AnalyticsService
         private set
+    lateinit var tutorialFlags: TutorialFlags
+        private set
 
     override fun onCreate() {
         super.onCreate()
@@ -42,6 +46,7 @@ class SophiaApplication : Application() {
         socialService = SocialService(authService)
         discountManager = DiscountOfferManager(this)
         analytics = AnalyticsService(this)
+        tutorialFlags = TutorialFlags(this)
         authService.start()
 
         analytics.trackAppOpened()
@@ -49,9 +54,10 @@ class SophiaApplication : Application() {
 
         runCatching {
             FacebookSdk.setClientToken(BuildConfig.META_CLIENT_TOKEN)
-            FacebookSdk.sdkInitialize(applicationContext)
-            AppEventsLogger.activateApp(this)
+            MetaAdsService.configure(this)
+            MetaAdsService.activateApp(this)
         }
+        TrialReminderScheduler.ensureChannel(this)
     }
 
     companion object {

@@ -22,6 +22,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.LocalFireDepartment
+import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -45,11 +46,15 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.ContentCatalog
+import app.rork.sophia.data.ShareHelper
 import app.rork.sophia.data.StringStore
+import app.rork.sophia.data.TutorialFlags
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Course
 import app.rork.sophia.ui.components.CourseImage
+import app.rork.sophia.ui.components.FirstOpenExplanation
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
@@ -66,11 +71,15 @@ fun HomeTikTokScreen(
     onUserSwipe: () -> Unit = {},
 ) {
     val context = LocalContext.current
+    val app = context.applicationContext as SophiaApplication
     val cards = remember(language) {
         ContentCatalog.courses(context, language).shuffled()
     }
     val pagerState = rememberPagerState(pageCount = { cards.size })
     var suppressSwipeCount by remember { mutableStateOf(false) }
+    var showExplain by remember {
+        mutableStateOf(!app.tutorialFlags.seen(TutorialFlags.Id.HOME_SWIPE))
+    }
 
     LaunchedEffect(autoSwipeCourseId, cards) {
         val id = autoSwipeCourseId ?: return@LaunchedEffect
@@ -90,54 +99,69 @@ fun HomeTikTokScreen(
         }
     }
 
-    Column(modifier = modifier.fillMaxSize().background(DS.canvas)) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = DS.Space.l, vertical = DS.Space.s),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            Text(
-                text = "Sophia",
-                style = SophiaTypography.titleLarge,
-                fontWeight = FontWeight.ExtraBold,
-            )
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Icon(
-                    Icons.Filled.LocalFireDepartment,
-                    contentDescription = null,
-                    tint = DS.warm,
-                    modifier = Modifier.size(20.dp),
+    Box(modifier = modifier.fillMaxSize()) {
+        Column(modifier = Modifier.fillMaxSize().background(DS.canvas)) {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = DS.Space.l, vertical = DS.Space.s),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Text(
+                    text = "Sophia",
+                    style = SophiaTypography.titleLarge,
+                    fontWeight = FontWeight.ExtraBold,
                 )
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Icon(
+                        Icons.Filled.LocalFireDepartment,
+                        contentDescription = null,
+                        tint = DS.warm,
+                        modifier = Modifier.size(20.dp),
+                    )
+                }
+            }
+
+            if (cards.isEmpty()) {
+                Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                    Text(
+                        text = StringStore.text(context, "home.allCaughtUp", language)
+                            .takeIf { it != "home.allCaughtUp" }
+                            ?: "Tous les cours sont faits — bravo !",
+                        style = SophiaTypography.bodyLarge,
+                    )
+                }
+            } else {
+                VerticalPager(
+                    state = pagerState,
+                    modifier = Modifier.fillMaxSize(),
+                    contentPadding = PaddingValues(bottom = 96.dp),
+                    pageSpacing = 12.dp,
+                ) { page ->
+                    val course = cards[page]
+                    TikTokCourseCard(
+                        course = course,
+                        language = language,
+                        isFavorite = course.id in favoriteIds,
+                        onToggleFavorite = { onToggleFavorite(course.id) },
+                        onShare = { ShareHelper.shareCourse(context, course) },
+                        onStart = { onStartCourse(course) },
+                    )
+                }
             }
         }
-
-        if (cards.isEmpty()) {
-            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                Text(
-                    text = StringStore.text(context, "home.allCaughtUp", language)
-                        .takeIf { it != "home.allCaughtUp" }
-                        ?: "Tous les cours sont faits — bravo !",
-                    style = SophiaTypography.bodyLarge,
-                )
-            }
-        } else {
-            VerticalPager(
-                state = pagerState,
-                modifier = Modifier.fillMaxSize(),
-                contentPadding = PaddingValues(bottom = 96.dp),
-                pageSpacing = 12.dp,
-            ) { page ->
-                val course = cards[page]
-                TikTokCourseCard(
-                    course = course,
-                    language = language,
-                    isFavorite = course.id in favoriteIds,
-                    onToggleFavorite = { onToggleFavorite(course.id) },
-                    onStart = { onStartCourse(course) },
-                )
-            }
+        if (showExplain) {
+            FirstOpenExplanation(
+                language = language,
+                icon = "👆",
+                titleKey = "explain.home.title",
+                bodyKey = "explain.home.body",
+                onDismiss = {
+                    app.tutorialFlags.markSeen(TutorialFlags.Id.HOME_SWIPE)
+                    showExplain = false
+                },
+            )
         }
     }
 }
@@ -148,6 +172,7 @@ private fun TikTokCourseCard(
     language: AppLanguage,
     isFavorite: Boolean,
     onToggleFavorite: () -> Unit,
+    onShare: () -> Unit,
     onStart: () -> Unit,
 ) {
     val context = LocalContext.current
@@ -158,8 +183,8 @@ private fun TikTokCourseCard(
             .clip(DS.cardShape)
             .background(DS.surface)
     ) {
-        Box(Modifier
-                .fillMaxWidth()
+        Box(
+                modifier = Modifier.fillMaxWidth()
                 .weight(1f)
                 .clip(RoundedCornerShape(topStart = 22.dp, topEnd = 22.dp)),
         ) {
@@ -168,26 +193,36 @@ private fun TikTokCourseCard(
                 modifier = Modifier.fillMaxSize(),
                 contentScale = ContentScale.Crop,
             )
-            Box(Modifier
-                    .fillMaxSize()
+            Box(
+                    modifier = Modifier.fillMaxSize()
                     .background(
                         Brush.verticalGradient(
                             listOf(Color.Transparent, Color.Black.copy(alpha = 0.55f)),
                         ),
                     ),
             )
-            IconButton(
-                onClick = onToggleFavorite,
+            Row(
                 modifier = Modifier
                     .align(Alignment.TopEnd)
-                    .padding(8.dp)
-                    .background(Color.Black.copy(alpha = 0.35f), CircleShape),
+                    .padding(8.dp),
+                horizontalArrangement = Arrangement.spacedBy(4.dp),
             ) {
-                Icon(
-                    if (isFavorite) Icons.Filled.Favorite else Icons.Filled.FavoriteBorder,
-                    contentDescription = null,
-                    tint = if (isFavorite) Color(0xFFFF5A7A) else Color.White,
-                )
+                IconButton(
+                    onClick = onShare,
+                    modifier = Modifier.background(Color.Black.copy(alpha = 0.35f), CircleShape),
+                ) {
+                    Icon(Icons.Filled.Share, contentDescription = null, tint = Color.White)
+                }
+                IconButton(
+                    onClick = onToggleFavorite,
+                    modifier = Modifier.background(Color.Black.copy(alpha = 0.35f), CircleShape),
+                ) {
+                    Icon(
+                        if (isFavorite) Icons.Filled.Favorite else Icons.Filled.FavoriteBorder,
+                        contentDescription = null,
+                        tint = if (isFavorite) Color(0xFFFF5A7A) else Color.White,
+                    )
+                }
             }
             Column(
                 modifier = Modifier

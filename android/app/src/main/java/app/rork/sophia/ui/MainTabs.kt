@@ -303,7 +303,8 @@ fun MainTabs(
                     isPremium = isPremium,
                     progress = progress,
                     progressManager = app.progressManager,
-                    onRequestPaywall = { paywall = PaywallContext.ENTRAINEMENT },
+                    storeViewModel = storeViewModel,
+                    onPremiumUnlocked = { storeViewModel.refresh() },
                 )
                 4 -> ProfileScreen(
                     modifier = Modifier.padding(padding),
