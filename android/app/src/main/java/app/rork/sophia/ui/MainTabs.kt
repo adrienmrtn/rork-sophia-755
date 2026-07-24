@@ -35,6 +35,8 @@ import app.rork.sophia.ui.collections.CollectionsScreen
 import app.rork.sophia.ui.course.CourseScreen
 import app.rork.sophia.ui.home.HomeTikTokScreen
 import app.rork.sophia.ui.library.LibraryScreen
+import app.rork.sophia.ui.paywall.PaywallContext
+import app.rork.sophia.ui.paywall.PaywallScreen
 import app.rork.sophia.ui.profile.ProfileScreen
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
@@ -55,6 +57,7 @@ fun MainTabs(
     var selectedTab by remember { mutableIntStateOf(0) }
     var selectedCourse by remember { mutableStateOf<Course?>(null) }
     var autoSwipeCourseId by remember { mutableStateOf<String?>(null) }
+    var paywall by remember { mutableStateOf<PaywallContext?>(null) }
 
     LaunchedEffect(deepLinkCourseId, language) {
         val id = deepLinkCourseId ?: return@LaunchedEffect
@@ -70,6 +73,17 @@ fun MainTabs(
         selectedCourse = course
     }
 
+    paywall?.let { ctx ->
+        PaywallScreen(
+            context = ctx,
+            language = language,
+            storeViewModel = storeViewModel,
+            onDismiss = { paywall = null },
+            onPurchased = { paywall = null },
+        )
+        return
+    }
+
     if (selectedCourse != null) {
         CourseScreen(
             course = selectedCourse!!,
@@ -82,7 +96,14 @@ fun MainTabs(
                 selectedCourse = null
                 autoSwipeCourseId = id
             },
-            onRequestPaywall = { /* paywalls wired in next iteration */ },
+            onRequestPaywall = { key ->
+                paywall = when (key) {
+                    "quizz" -> PaywallContext.QUIZZ
+                    "offre_discount" -> PaywallContext.OFFRE_DISCOUNT
+                    "fin_onboarding" -> PaywallContext.FIN_ONBOARDING
+                    else -> PaywallContext.DEBLOQUER_COURS
+                }
+            },
         )
         return
     }
@@ -151,6 +172,8 @@ fun MainTabs(
                 language = language,
                 isPremium = isPremium,
                 progress = progress,
+                progressManager = app.progressManager,
+                onRequestPaywall = { paywall = PaywallContext.ENTRAINEMENT },
             )
             4 -> ProfileScreen(
                 modifier = Modifier.padding(padding),
@@ -160,6 +183,10 @@ fun MainTabs(
                 onLanguageChange = { app.languageManager.setLanguage(it) },
                 onResetOnboarding = onResetOnboarding,
                 onOpenCourse = { openCourse(it) },
+                onShowPaywall = { paywall = PaywallContext.DEBLOQUER_COURS },
+                onGoogleSignIn = {
+                    // handled async from profile via coroutine scope there if needed
+                },
             )
         }
     }

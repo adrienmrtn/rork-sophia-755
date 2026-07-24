@@ -1,9 +1,11 @@
 package app.rork.sophia
 
 import android.app.Application
+import app.rork.sophia.data.AuthService
 import app.rork.sophia.data.LanguageManager
 import app.rork.sophia.data.OnboardingStore
 import app.rork.sophia.data.ProgressManager
+import app.rork.sophia.data.ProgressSyncService
 import com.facebook.FacebookSdk
 import com.facebook.appevents.AppEventsLogger
 import com.mixpanel.android.mpmetrics.MixpanelAPI
@@ -15,6 +17,10 @@ class SophiaApplication : Application() {
         private set
     lateinit var onboardingStore: OnboardingStore
         private set
+    lateinit var authService: AuthService
+        private set
+    lateinit var progressSyncService: ProgressSyncService
+        private set
     var mixpanel: MixpanelAPI? = null
         private set
 
@@ -24,6 +30,10 @@ class SophiaApplication : Application() {
         languageManager = LanguageManager(this)
         progressManager = ProgressManager(this)
         onboardingStore = OnboardingStore(this)
+        authService = AuthService(this)
+        progressSyncService = ProgressSyncService(authService)
+        progressSyncService.attach(progressManager)
+        authService.start()
 
         runCatching {
             FacebookSdk.setClientToken(BuildConfig.META_CLIENT_TOKEN)

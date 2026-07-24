@@ -24,8 +24,11 @@ import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -60,11 +63,24 @@ fun CourseScreen(
     onRequestPaywall: (String) -> Unit,
 ) {
     val context = LocalContext.current
+    var showQuiz by remember { mutableStateOf(false) }
     val pages = remember(course.id, language) {
         buildPages(context, course, language)
     }
-    val pagerState = rememberPagerState(pageCount = { pages.size })
+    val pagerState = rememberPagerState(pageCount = { pages.size.coerceAtLeast(1) })
     val scope = rememberCoroutineScope()
+
+    if (showQuiz) {
+        QuizScreen(
+            course = course,
+            language = language,
+            isPremium = isPremium,
+            progressManager = progressManager,
+            onRequestPaywall = { onRequestPaywall("quizz") },
+            onFinished = onDismiss,
+        )
+        return
+    }
 
     LaunchedEffect(pagerState.currentPage) {
         progressManager.updateLessonIndex(course.id, pagerState.currentPage)
@@ -104,7 +120,7 @@ fun CourseScreen(
             userScrollEnabled = true,
         ) { index ->
             val locked = FreemiumGate.isLessonContentLocked(index, isPremium, isDailyFreeCourse)
-            val page = pages[index]
+            val page = pages.getOrNull(index) ?: return@HorizontalPager
             Box(modifier = Modifier.fillMaxSize()) {
                 Column(
                     modifier = Modifier
@@ -163,7 +179,7 @@ fun CourseScreen(
                     if (isLast) {
                         if (FreemiumGate.canCompleteCourse(isPremium, isDailyFreeCourse)) {
                             progressManager.markCourseCompleted(course.id)
-                            onDismiss()
+                            if (course.hasQuiz) showQuiz = true else onDismiss()
                         } else {
                             onRequestPaywall("debloquer_cours")
                         }
@@ -176,12 +192,13 @@ fun CourseScreen(
                 colors = ButtonDefaults.buttonColors(containerColor = DS.accent, contentColor = Color.White),
             ) {
                 Text(
-                    text = if (isLast) {
-                        StringStore.text(context, "course.finish", language)
-                            .takeIf { it != "course.finish" } ?: "Terminer"
-                    } else {
-                        StringStore.text(context, "course.continue", language)
+                    text = when {
+                        !isLast -> StringStore.text(context, "course.continue", language)
                             .takeIf { it != "course.continue" } ?: "Continuer"
+                        course.hasQuiz -> StringStore.text(context, "course.quiz", language)
+                            .takeIf { it != "course.quiz" } ?: "Quiz"
+                        else -> StringStore.text(context, "course.finish", language)
+                            .takeIf { it != "course.finish" } ?: "Terminer"
                     },
                     fontFamily = PlusJakartaSans,
                     fontWeight = FontWeight.SemiBold,

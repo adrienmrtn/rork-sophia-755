@@ -12,20 +12,29 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
+import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.ContentCatalog
+import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Course
 import app.rork.sophia.domain.UserProgress
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.SophiaTypography
+import kotlinx.coroutines.launch
 
 @Composable
 fun ProfileScreen(
@@ -36,11 +45,17 @@ fun ProfileScreen(
     onLanguageChange: (AppLanguage) -> Unit,
     onResetOnboarding: () -> Unit,
     onOpenCourse: (Course) -> Unit,
+    onShowPaywall: () -> Unit = {},
+    onGoogleSignIn: () -> Unit = {},
 ) {
     val context = LocalContext.current
+    val app = context.applicationContext as SophiaApplication
+    val userId by app.authService.userId.collectAsState()
+    val scope = rememberCoroutineScope()
     val favorites = progress.favoriteCourseIds.mapNotNull {
         ContentCatalog.course(context, language, it)
     }
+    val level = ProgressManager.globalLevelProgress(progress.globalXP)
 
     Column(
         modifier = modifier
@@ -55,10 +70,50 @@ fun ProfileScreen(
         )
         Spacer(Modifier.height(16.dp))
         StatCard(
-            title = "XP",
-            value = progress.globalXP.toString(),
-            subtitle = if (isPremium) "Premium" else "Free · streak ${progress.streak}",
+            title = "Niveau ${level.level} · ${level.rank.storageKey}",
+            value = "${progress.globalXP} XP",
+            subtitle = if (isPremium) "Premium · streak ${progress.streak}" else "Free · streak ${progress.streak}",
         )
+        Spacer(Modifier.height(12.dp))
+        if (!isPremium) {
+            Button(
+                onClick = onShowPaywall,
+                modifier = Modifier.fillMaxWidth().height(48.dp),
+                shape = DS.controlShape,
+                colors = ButtonDefaults.buttonColors(containerColor = DS.accent),
+            ) {
+                Text("Sophia Premium", color = Color.White)
+            }
+            Spacer(Modifier.height(12.dp))
+        }
+        if (userId == null) {
+            Button(
+                onClick = {
+                    scope.launch {
+                        runCatching { app.authService.signInWithGoogle(context) }
+                        onGoogleSignIn()
+                        app.progressSyncService.pullOnLogin(app.progressManager.progress.value)
+                    }
+                },
+                modifier = Modifier.fillMaxWidth().height(48.dp),
+                shape = DS.controlShape,
+                colors = ButtonDefaults.buttonColors(containerColor = DS.ink),
+            ) {
+                Text("Continue with Google", color = Color.White)
+            }
+        } else {
+            Text("Connecté · ${userId!!.take(8)}…", style = SophiaTypography.labelMedium)
+            Text(
+                text = "Se déconnecter",
+                style = SophiaTypography.labelLarge,
+                color = DS.danger,
+                modifier = Modifier
+                    .padding(top = 8.dp)
+                    .clickable {
+                        scope.launch { app.authService.signOut() }
+                    },
+            )
+        }
         Spacer(Modifier.height(16.dp))
         Text(text = StringStore.text(context, "language.section", language), style = SophiaTypography.titleMedium)
         Spacer(Modifier.height(8.dp))

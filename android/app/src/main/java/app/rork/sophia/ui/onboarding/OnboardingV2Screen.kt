@@ -10,13 +10,19 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -27,53 +33,106 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
+import app.rork.sophia.ui.paywall.PaywallContext
+import app.rork.sophia.ui.paywall.PaywallScreen
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
+import app.rork.sophia.billing.StoreViewModel
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
-/**
- * Onboarding V2 skeleton — full 18-step flow will be filled screen-by-screen.
- * Current path: welcome → language → value props → login placeholder → enter app.
- */
+private enum class OnboardingStep {
+    Welcome,
+    Language,
+    Objectives,
+    ValueProp,
+    Personalize,
+    SwipeHint,
+    Loading,
+    Login,
+    Trial,
+    Reminder,
+    Paywall,
+}
+
 @Composable
 fun OnboardingV2Screen(
     language: AppLanguage,
+    storeViewModel: StoreViewModel,
     onLanguageSelected: (AppLanguage) -> Unit,
     onComplete: () -> Unit,
 ) {
     val context = LocalContext.current
-    var step by remember { mutableIntStateOf(0) }
+    val app = context.applicationContext as SophiaApplication
+    var step by remember { mutableStateOf(OnboardingStep.Welcome) }
+    var selectedObjective by remember { mutableStateOf<String?>(null) }
+    val scope = rememberCoroutineScope()
 
     Box(modifier = Modifier.fillMaxSize().background(DS.canvas)) {
         when (step) {
-            0 -> WelcomeStep(
-                language = language,
-                onContinue = { step = 1 },
-            )
-            1 -> LanguageStep(
-                language = language,
-                onSelect = {
-                    onLanguageSelected(it)
-                    step = 2
-                },
-            )
-            2 -> SimpleStep(
-                title = StringStore.text(context, "onboarding.intro.title", language),
-                cta = StringStore.text(context, "onboarding.intro.cta", language),
-                onContinue = { step = 3 },
-            )
-            3 -> SimpleStep(
-                title = StringStore.text(context, "training.ob.recall.title", language)
-                    .takeIf { it != "training.ob.recall.title" }
-                    ?: "10 minutes a day to become cultured",
+            OnboardingStep.Welcome -> WelcomeStep(language) { step = OnboardingStep.Language }
+            OnboardingStep.Language -> LanguageStep(language) {
+                onLanguageSelected(it)
+                step = OnboardingStep.Objectives
+            }
+            OnboardingStep.Objectives -> ObjectivesStep(language) {
+                selectedObjective = it
+                step = OnboardingStep.ValueProp
+            }
+            OnboardingStep.ValueProp -> SimpleStep(
+                title = StringStore.text(context, "training.ob.recall.title", language),
+                body = StringStore.text(context, "training.ob.recall.stat.prefix", language) + " " +
+                    StringStore.text(context, "training.ob.recall.stat.highlight", language),
                 cta = StringStore.text(context, "training.ob.cta.last", language),
-                onContinue = { step = 4 },
+                onContinue = { step = OnboardingStep.Personalize },
             )
-            else -> LoginPlaceholderStep(
+            OnboardingStep.Personalize -> SimpleStep(
+                title = StringStore.text(context, "onboarding.intro.title", language),
+                body = selectedObjective ?: "",
+                cta = StringStore.text(context, "onboarding.intro.cta", language),
+                onContinue = { step = OnboardingStep.SwipeHint },
+            )
+            OnboardingStep.SwipeHint -> SimpleStep(
+                title = StringStore.text(context, "home.swipe.title", language),
+                body = StringStore.text(context, "home.swipe.subtitle", language),
+                cta = StringStore.text(context, "training.ob.cta.last", language),
+                onContinue = { step = OnboardingStep.Loading },
+            )
+            OnboardingStep.Loading -> LoadingStep {
+                step = OnboardingStep.Login
+            }
+            OnboardingStep.Login -> LoginStep(
                 language = language,
-                onContinue = onComplete,
+                onGoogle = {
+                    scope.launch {
+                        runCatching { app.authService.signInWithGoogle(context) }
+                        step = OnboardingStep.Trial
+                    }
+                },
+                onSkip = { step = OnboardingStep.Trial },
+            )
+            OnboardingStep.Trial -> SimpleStep(
+                title = "3 jours d'essai",
+                body = "Puis un abonnement annuel. Annule quand tu veux.",
+                cta = StringStore.text(context, "training.ob.cta.last", language),
+                onContinue = { step = OnboardingStep.Reminder },
+            )
+            OnboardingStep.Reminder -> SimpleStep(
+                title = "Un rappel doux",
+                body = "10 minutes par jour suffisent pour progresser.",
+                cta = StringStore.text(context, "training.ob.cta.last", language),
+                onContinue = { step = OnboardingStep.Paywall },
+            )
+            OnboardingStep.Paywall -> PaywallScreen(
+                context = PaywallContext.FIN_ONBOARDING,
+                language = language,
+                storeViewModel = storeViewModel,
+                onDismiss = onComplete,
+                onPurchased = onComplete,
             )
         }
     }
@@ -88,40 +147,30 @@ private fun WelcomeStep(language: AppLanguage, onContinue: () -> Unit) {
     ) {
         Spacer(Modifier.height(40.dp))
         Column {
-            Text(
-                text = "Sophia",
-                style = SophiaTypography.displayLarge,
-                fontSize = 48.sp,
-            )
+            Text(text = "Sophia", style = SophiaTypography.displayLarge, fontSize = 48.sp)
             Spacer(Modifier.height(16.dp))
             Text(
                 text = StringStore.text(context, "onboarding.intro.title", language),
                 style = SophiaTypography.titleLarge,
             )
         }
-        PrimaryCta(
-            text = StringStore.text(context, "onboarding.intro.cta", language),
-            onClick = onContinue,
-        )
+        PrimaryCta(StringStore.text(context, "onboarding.intro.cta", language), onContinue)
     }
 }
 
 @Composable
-private fun LanguageStep(
-    language: AppLanguage,
-    onSelect: (AppLanguage) -> Unit,
-) {
+private fun LanguageStep(language: AppLanguage, onSelect: (AppLanguage) -> Unit) {
     val context = LocalContext.current
     Column(
-        modifier = Modifier.fillMaxSize().padding(DS.Space.l),
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState())
+            .padding(DS.Space.l),
     ) {
         Spacer(Modifier.height(48.dp))
+        Text(StringStore.text(context, "onboarding.language.title", language), style = SophiaTypography.titleLarge)
         Text(
-            text = StringStore.text(context, "onboarding.language.title", language),
-            style = SophiaTypography.titleLarge,
-        )
-        Text(
-            text = StringStore.text(context, "onboarding.language.subtitle", language),
+            StringStore.text(context, "onboarding.language.subtitle", language),
             style = SophiaTypography.bodyMedium,
             modifier = Modifier.padding(top = 8.dp, bottom = 24.dp),
         )
@@ -142,23 +191,80 @@ private fun LanguageStep(
 }
 
 @Composable
-private fun SimpleStep(title: String, cta: String, onContinue: () -> Unit) {
+private fun ObjectivesStep(language: AppLanguage, onSelect: (String) -> Unit) {
+    val context = LocalContext.current
+    val options = listOf(
+        "Devenir plus cultivé",
+        "Briller en société",
+        "Apprendre chaque jour",
+        "Préparer des examens",
+    )
+    Column(modifier = Modifier.fillMaxSize().padding(DS.Space.l)) {
+        Spacer(Modifier.height(48.dp))
+        Text(
+            text = StringStore.text(context, "onboarding.language.title", language)
+                .let { "Ton objectif" },
+            style = SophiaTypography.titleLarge,
+        )
+        Spacer(Modifier.height(16.dp))
+        options.forEach { opt ->
+            Text(
+                text = opt,
+                style = SophiaTypography.bodyLarge,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 6.dp)
+                    .clip(DS.controlShape)
+                    .background(DS.surface)
+                    .clickable { onSelect(opt) }
+                    .padding(16.dp),
+            )
+        }
+    }
+}
+
+@Composable
+private fun SimpleStep(title: String, body: String = "", cta: String, onContinue: () -> Unit) {
     Column(
         modifier = Modifier.fillMaxSize().padding(DS.Space.l),
         verticalArrangement = Arrangement.SpaceBetween,
     ) {
         Spacer(Modifier.height(80.dp))
-        Text(
-            text = title,
-            style = SophiaTypography.titleLarge,
-            textAlign = TextAlign.Start,
-        )
-        PrimaryCta(text = cta, onClick = onContinue)
+        Column {
+            Text(text = title, style = SophiaTypography.titleLarge)
+            if (body.isNotBlank()) {
+                Spacer(Modifier.height(12.dp))
+                Text(text = body, style = SophiaTypography.bodyMedium)
+            }
+        }
+        PrimaryCta(cta, onContinue)
     }
 }
 
 @Composable
-private fun LoginPlaceholderStep(language: AppLanguage, onContinue: () -> Unit) {
+private fun LoadingStep(onDone: () -> Unit) {
+    var progress by remember { mutableIntStateOf(0) }
+    LaunchedEffect(Unit) {
+        while (progress < 100) {
+            delay(18)
+            progress += 2
+        }
+        delay(200)
+        onDone()
+    }
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        CircularProgressIndicator(color = DS.accent)
+        Spacer(Modifier.height(16.dp))
+        Text("Préparation de ton parcours… $progress%", style = SophiaTypography.bodyMedium)
+    }
+}
+
+@Composable
+private fun LoginStep(language: AppLanguage, onGoogle: () -> Unit, onSkip: () -> Unit) {
     val context = LocalContext.current
     Column(
         modifier = Modifier.fillMaxSize().padding(DS.Space.l),
@@ -167,26 +273,23 @@ private fun LoginPlaceholderStep(language: AppLanguage, onContinue: () -> Unit) 
     ) {
         Spacer(Modifier.height(80.dp))
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-            Text(text = "Sophia", style = SophiaTypography.displayLarge)
+            Text("Sophia", style = SophiaTypography.displayLarge)
             Spacer(Modifier.height(12.dp))
             Text(
-                text = "Continue with Google (wired next) — or explore the app now.",
+                text = "Connecte-toi pour sauvegarder ta progression.",
                 style = SophiaTypography.bodyMedium,
                 textAlign = TextAlign.Center,
             )
         }
         Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-            PrimaryCta(
-                text = "Continue with Google",
-                onClick = onContinue,
-            )
+            PrimaryCta("Continue with Google", onGoogle)
             Text(
                 text = StringStore.text(context, "home.skip", language),
                 style = SophiaTypography.labelLarge,
                 color = DS.inkSecondary,
                 modifier = Modifier
                     .align(Alignment.CenterHorizontally)
-                    .clickable(onClick = onContinue)
+                    .clickable(onClick = onSkip)
                     .padding(8.dp),
             )
         }

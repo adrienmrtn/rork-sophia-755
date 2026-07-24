@@ -114,17 +114,33 @@ data class CourseProgress(
 
 @Serializable
 data class TrainingQuestionState(
-    val ease: Double = 2.5,
-    val intervalDays: Int = 1,
-    val dueDate: String = "",
-    val consecutiveCorrect: Int = 0,
+    val courseId: String = "",
+    val intervalIndex: Int = 0,
+    val nextReviewDate: String? = null,
 )
 
 @Serializable
 data class PendingGlobalRankUp(
-    val rankKey: String,
-    val level: Int,
+    val previousRankRawValue: String = "",
+    val newRankRawValue: String = "",
+    val newLevel: Int = 1,
 )
+
+enum class GlobalRank(val storageKey: String, val lowerLevel: Int, val upperLevel: Int) {
+    CURIEUX("curieux", 1, 19),
+    ERUDIT("erudit", 20, 39),
+    SAVANT("savant", 40, 59),
+    MAITRE("maitre", 60, 79),
+    LEGENDE("legende", 80, 100);
+
+    companion object {
+        fun forLevel(level: Int): GlobalRank = entries.firstOrNull {
+            level in it.lowerLevel..it.upperLevel
+        } ?: CURIEUX
+    }
+}
+
+data class GlobalLevelProgress(val level: Int, val rank: GlobalRank, val xpIntoLevel: Int, val xpForLevel: Int)
 
 @Serializable
 data class UserProgress(
