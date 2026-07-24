@@ -182,7 +182,7 @@ fun MainTabs(
             return
         }
         overlay == OverlayScreen.Friends -> {
-            FriendsScreen(onBack = { overlay = null })
+            FriendsScreen(language = language, onBack = { overlay = null })
             return
         }
         overlay == OverlayScreen.Feedback -> {

@@ -15,7 +15,9 @@ object StringStore {
         val template = primary[key] ?: english[key] ?: key
         return if (formatArgs.isEmpty()) template else {
             try {
-                String.format(template, *formatArgs)
+                // iOS-style %@ → Java %s
+                val javaTemplate = template.replace("%@", "%s")
+                String.format(javaTemplate, *formatArgs)
             } catch (_: Exception) {
                 template
             }

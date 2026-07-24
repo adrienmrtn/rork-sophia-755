@@ -17,9 +17,11 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -32,6 +34,8 @@ import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Course
 import app.rork.sophia.domain.UserProgress
+import app.rork.sophia.ui.social.FriendsLeaderboardSection
+import app.rork.sophia.ui.social.GlobalRankRing
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.SophiaTypography
 import kotlinx.coroutines.launch
@@ -54,11 +58,19 @@ fun ProfileScreen(
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
     val userId by app.authService.userId.collectAsState()
+    val handle by app.socialService.myHandle.collectAsState()
+    val leaderboard by app.socialService.leaderboard.collectAsState()
+    val period by app.socialService.period.collectAsState()
     val scope = rememberCoroutineScope()
     val favorites = progress.favoriteCourseIds.mapNotNull {
         ContentCatalog.course(context, language, it)
     }
     val level = ProgressManager.globalLevelProgress(progress.globalXP)
+    val rankProgress = if (level.xpForLevel == 0) 0f else level.xpIntoLevel.toFloat() / level.xpForLevel
+
+    LaunchedEffect(userId) {
+        if (userId != null) app.socialService.refreshAll()
+    }
 
     Column(
         modifier = modifier
@@ -72,11 +84,52 @@ fun ProfileScreen(
             style = SophiaTypography.titleLarge,
         )
         Spacer(Modifier.height(16.dp))
-        StatCard(
-            title = "Niveau ${level.level} · ${level.rank.storageKey}",
-            value = "${progress.globalXP} XP",
-            subtitle = if (isPremium) "Premium · streak ${progress.streak}" else "Free · streak ${progress.streak}",
-        )
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clip(DS.cardShape)
+                .background(DS.surface)
+                .padding(DS.Space.m),
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ) {
+            GlobalRankRing(progress = rankProgress, size = 96.dp)
+            Spacer(Modifier.height(10.dp))
+            Text(
+                level.rank.storageKey.replaceFirstChar { it.titlecase() },
+                style = SophiaTypography.titleMedium,
+            )
+            if (handle != null) {
+                Text("@$handle", style = SophiaTypography.labelLarge, color = DS.accentSoft)
+            }
+            Text(
+                StringStore.text(context, "common.levelShort", language, level.level) +
+                    " · ${progress.globalXP} XP",
+                style = SophiaTypography.bodyMedium,
+            )
+            Text(
+                if (isPremium) "Premium · streak ${progress.streak}" else "Free · streak ${progress.streak}",
+                style = SophiaTypography.labelMedium,
+            )
+        }
+        if (userId != null) {
+            Spacer(Modifier.height(16.dp))
+            Text(
+                StringStore.text(context, "friends.title", language),
+                style = SophiaTypography.titleMedium,
+            )
+            Spacer(Modifier.height(8.dp))
+            FriendsLeaderboardSection(
+                language = language,
+                period = period,
+                leaderboard = leaderboard.take(5),
+                onPeriodChange = {
+                    app.socialService.setPeriod(it)
+                    scope.launch { app.socialService.refreshLeaderboard() }
+                },
+                onOpenFriend = { onOpenFriends() },
+                nestedScroll = true,
+            )
+        }
         Spacer(Modifier.height(12.dp))
         if (!isPremium) {
             Button(
@@ -195,17 +248,3 @@ fun ProfileScreen(
     }
 }
 
-@Composable
-private fun StatCard(title: String, value: String, subtitle: String) {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(DS.cardShape)
-            .background(DS.surface)
-            .padding(DS.Space.m),
-    ) {
-        Text(text = title, style = SophiaTypography.labelMedium)
-        Text(text = value, style = SophiaTypography.displayLarge)
-        Text(text = subtitle, style = SophiaTypography.bodyMedium)
-    }
-}

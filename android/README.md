@@ -22,8 +22,9 @@ Native Kotlin + Jetpack Compose port of the Sophia iOS app.
 - Course reader (v2 blocks) + freemium locks + **glossary `[[terms]]`**
 - Full quiz engine (mcq / trueFalse / chronological / sliders)
 - Training SRS session
-- Onboarding flow (welcome → language → objectives → … → paywall)
-- Native paywall UI + RevenueCat purchase hooks
+- Onboarding V2 funnel (~17 steps: phone time, years grid, swipe courses, trial, dual paywalls)
+- Context paywalls (fin_onboarding annual+comparison, discount flash, quiz/course unlock)
+- RevenueCat purchase hooks
 - Google Sign-In → Supabase + progress sync / conflict dialog
 - **Discount gift** (3 swipes → 3-tap reveal → 60 min offer) + side tab
 - **Friends** (handle, requests, leaderboard week/all)
