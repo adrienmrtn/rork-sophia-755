@@ -16,6 +16,16 @@ Native Kotlin + Jetpack Compose port of the Sophia iOS app.
 4. Create an emulator (Pixel + system image **with Google Play**)
 5. Run the `app` configuration
 
+## Implemented so far
+
+- 5-tab shell + TikTok home + library/collections/profile
+- Course reader (v2 blocks) + freemium locks
+- Full quiz engine (mcq / trueFalse / chronological / sliders)
+- Training SRS session
+- Onboarding flow (welcome → language → objectives → … → paywall)
+- Native paywall UI + RevenueCat purchase hooks
+- Google Sign-In → Supabase + progress sync / conflict dialog
+
 ## What you still need to provide
 
 | Item | Where |
@@ -25,7 +35,7 @@ Native Kotlin + Jetpack Compose port of the Sophia iOS app.
 | Play Billing products | Play Console → linked in RevenueCat |
 | Meta Android key hashes | Meta Developer Console |
 
-Until the RevenueCat key is set, the app runs in free mode (`goog_REPLACE_ME`).
+Until the RevenueCat key is set, the app runs in free mode (`goog_REPLACE_ME`). Debug paywall can simulate premium.
 
 ## Content pipeline
 
