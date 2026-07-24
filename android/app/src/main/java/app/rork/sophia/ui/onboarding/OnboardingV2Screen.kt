@@ -70,10 +70,19 @@ fun OnboardingV2Screen(
     val app = context.applicationContext as SophiaApplication
     var step by remember { mutableStateOf(OnboardingStep.Welcome) }
     LaunchedEffect(Unit) {
-        (context.applicationContext as SophiaApplication).analytics.trackOnboardingStarted()
+        app.analytics.trackOnboardingStarted()
+    }
+    LaunchedEffect(step) {
+        app.analytics.trackOnboardingStep(step.ordinal, step.name)
     }
     var selectedObjective by remember { mutableStateOf<String?>(null) }
+    var sawPaywall by remember { mutableStateOf(false) }
     val scope = rememberCoroutineScope()
+
+    fun finishOnboarding(isPremiumAtExit: Boolean) {
+        app.analytics.trackOnboardingCompleted(sawPaywall = sawPaywall, isPremium = isPremiumAtExit)
+        onComplete()
+    }
 
     Box(modifier = Modifier.fillMaxSize().background(DS.canvas)) {
         when (step) {
@@ -128,15 +137,21 @@ fun OnboardingV2Screen(
                 title = "Un rappel doux",
                 body = "10 minutes par jour suffisent pour progresser.",
                 cta = StringStore.text(context, "training.ob.cta.last", language),
-                onContinue = { step = OnboardingStep.Paywall },
+                onContinue = {
+                    sawPaywall = true
+                    step = OnboardingStep.Paywall
+                },
             )
-            OnboardingStep.Paywall -> PaywallScreen(
-                context = PaywallContext.FIN_ONBOARDING,
-                language = language,
-                storeViewModel = storeViewModel,
-                onDismiss = onComplete,
-                onPurchased = onComplete,
-            )
+            OnboardingStep.Paywall -> {
+                LaunchedEffect(Unit) { sawPaywall = true }
+                PaywallScreen(
+                    context = PaywallContext.FIN_ONBOARDING,
+                    language = language,
+                    storeViewModel = storeViewModel,
+                    onDismiss = { finishOnboarding(isPremiumAtExit = false) },
+                    onPurchased = { finishOnboarding(isPremiumAtExit = true) },
+                )
+            }
         }
     }
 }

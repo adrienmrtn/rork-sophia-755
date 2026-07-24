@@ -49,6 +49,7 @@ fun ProfileScreen(
     onGoogleSignIn: () -> Unit = {},
     onOpenFriends: () -> Unit = {},
     onOpenFeedback: () -> Unit = {},
+    onOpenAmbassador: () -> Unit = {},
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
@@ -114,6 +115,29 @@ fun ProfileScreen(
                     .clickable {
                         scope.launch { app.authService.signOut() }
                     },
+            )
+        }
+        Spacer(Modifier.height(12.dp))
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clip(DS.cardShape)
+                .background(DS.accentTint)
+                .clickable(onClick = onOpenAmbassador)
+                .padding(DS.Space.m),
+        ) {
+            Text(
+                text = StringStore.text(context, "settings.ambassador.banner.badge", language),
+                style = SophiaTypography.labelMedium,
+                color = DS.accentSoft,
+            )
+            Text(
+                text = StringStore.text(context, "settings.ambassador.banner.title", language),
+                style = SophiaTypography.titleMedium,
+            )
+            Text(
+                text = StringStore.text(context, "settings.ambassador.banner.subtitle", language),
+                style = SophiaTypography.bodyMedium,
             )
         }
         Spacer(Modifier.height(12.dp))

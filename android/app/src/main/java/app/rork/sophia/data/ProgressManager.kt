@@ -1,10 +1,12 @@
 package app.rork.sophia.data
 
 import android.content.Context
+import app.rork.sophia.domain.CollectionProgressEvent
 import app.rork.sophia.domain.Course
 import app.rork.sophia.domain.CourseProgress
 import app.rork.sophia.domain.GlobalLevelProgress
 import app.rork.sophia.domain.GlobalRank
+import app.rork.sophia.domain.LearningCollection
 import app.rork.sophia.domain.PendingGlobalRankUp
 import app.rork.sophia.domain.QuizQuestion
 import app.rork.sophia.domain.TrainingQuestionState
@@ -254,6 +256,86 @@ class ProgressManager(context: Context) {
     fun shouldShowStreakCelebration(): Boolean {
         val p = _progress.value
         return p.streak > 0 && p.lastStreakShownDate != today()
+    }
+
+    fun recordFirstCourseOpenedIfNeeded(courseId: String) {
+        _progress.update { current ->
+            if (current.firstCourseOpenedId != null) current
+            else current.copy(firstCourseOpenedId = courseId).also { persist(it) }
+        }
+    }
+
+    val firstCourseOpenedId: String?
+        get() = _progress.value.firstCourseOpenedId
+
+    val hasRequestedAppStoreReview: Boolean
+        get() = _progress.value.hasRequestedAppStoreReview
+
+    fun markAppStoreReviewRequested() {
+        _progress.update { current ->
+            current.copy(hasRequestedAppStoreReview = true).also { persist(it) }
+        }
+    }
+
+    val hasSeenCourseTermsCoachmark: Boolean
+        get() = _progress.value.hasSeenCourseTermsCoachmark
+
+    fun markCourseTermsCoachmarkSeen() {
+        _progress.update { current ->
+            current.copy(hasSeenCourseTermsCoachmark = true).also { persist(it) }
+        }
+    }
+
+    fun completedCount(collection: LearningCollection): Int =
+        collection.courseIds.count { id ->
+            _progress.value.courseProgress[id]?.isCompleted == true
+        }
+
+    fun collectionProgressEvents(
+        newlyCompletedCourseId: String,
+        collections: List<LearningCollection>,
+    ): List<CollectionProgressEvent> {
+        return collections.mapNotNull { collection ->
+            if (newlyCompletedCourseId !in collection.courseIds) return@mapNotNull null
+            val newCount = completedCount(collection)
+            val previousCount = (newCount - 1).coerceAtLeast(0)
+            if (newCount <= previousCount) return@mapNotNull null
+            CollectionProgressEvent(
+                collection = collection,
+                previousCompletedCount = previousCount,
+                newCompletedCount = newCount,
+                totalCount = collection.courseIds.size,
+            )
+        }
+    }
+
+    fun awardCollectionCompletionXpIfNeeded(collection: LearningCollection) {
+        _progress.update { current ->
+            if (collection.id in current.globalCollectionXPAwardedIds) return@update current
+            if (completedCount(collection) < collection.courseIds.size || collection.courseIds.isEmpty()) {
+                return@update current
+            }
+            val awarded = current.globalCollectionXPAwardedIds.toMutableList()
+            awarded.add(collection.id)
+            val xpGain = collection.courseIds.size * 25
+            var globalXP = current.globalXP
+            var pending = current.pendingGlobalRankUp
+            val before = globalLevelProgress(globalXP)
+            globalXP += xpGain
+            val after = globalLevelProgress(globalXP)
+            if (before.rank != after.rank) {
+                pending = PendingGlobalRankUp(
+                    previousRankRawValue = before.rank.storageKey,
+                    newRankRawValue = after.rank.storageKey,
+                    newLevel = after.level,
+                )
+            }
+            current.copy(
+                globalCollectionXPAwardedIds = awarded,
+                globalXP = globalXP,
+                pendingGlobalRankUp = pending,
+            ).also { persist(it) }
+        }
     }
 
     companion object {

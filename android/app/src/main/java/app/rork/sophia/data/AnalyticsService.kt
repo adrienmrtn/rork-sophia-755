@@ -146,6 +146,43 @@ class AnalyticsService(context: Context) {
     fun trackFeedbackFailed(category: String) =
         track("feedback_failed", mapOf("category" to category))
 
+    fun trackCourseSessionEnded(
+        courseId: String,
+        subject: String,
+        lessonIndex: Int,
+        lessonCount: Int,
+        completed: Boolean,
+    ) = track(
+        "course_session_ended",
+        mapOf(
+            "course_id" to courseId,
+            "subject" to subject,
+            "lesson_index" to lessonIndex,
+            "lesson_count" to lessonCount,
+            "completed" to completed,
+        ),
+    )
+
+    fun trackLockedContentTapped(gateType: String, courseId: String?, subject: String?) =
+        track(
+            "locked_content_tapped",
+            mapOf("gate_type" to gateType, "course_id" to courseId, "subject" to subject),
+        )
+
+    fun trackAmbassadorOpened() = track("ambassador_opened")
+    fun trackAmbassadorSubmitted() = track("ambassador_submitted")
+
+    fun trackCollectionProgressed(collectionId: String, completed: Int, total: Int, isComplete: Boolean) =
+        track(
+            "collection_progressed",
+            mapOf(
+                "collection_id" to collectionId,
+                "completed_count" to completed,
+                "total_count" to total,
+                "is_complete" to isComplete,
+            ),
+        )
+
     companion object {
         private const val KEY_LAST_SESSION = "sophia_analytics_last_session"
         private const val KEY_FIRST_OPEN = "sophia_analytics_first_open"

@@ -104,6 +104,22 @@ data class LearningCollection(
     val courseIds: List<String> = emptyList(),
 )
 
+data class CollectionProgressEvent(
+    val collection: LearningCollection,
+    val previousCompletedCount: Int,
+    val newCompletedCount: Int,
+    val totalCount: Int,
+) {
+    val isComplete: Boolean get() = newCompletedCount >= totalCount && totalCount > 0
+}
+
+sealed class PostCompletionRewardStep {
+    data class Streak(val days: Int) : PostCompletionRewardStep()
+    data class RankUp(val rankKey: String, val level: Int) : PostCompletionRewardStep()
+    data class Collection(val event: CollectionProgressEvent) : PostCompletionRewardStep()
+    data class LevelUp(val level: Int) : PostCompletionRewardStep()
+}
+
 @Serializable
 data class CourseProgress(
     val lastLessonIndex: Int = 0,
@@ -165,6 +181,9 @@ data class UserProgress(
     val trainingQuestionStates: Map<String, TrainingQuestionState> = emptyMap(),
     val xpUnlockedCourseIds: List<String> = emptyList(),
     val spentGlobalXP: Int = 0,
+    val firstCourseOpenedId: String? = null,
+    val hasRequestedAppStoreReview: Boolean = false,
+    val hasSeenCourseTermsCoachmark: Boolean = false,
 )
 
 object FreemiumGate {

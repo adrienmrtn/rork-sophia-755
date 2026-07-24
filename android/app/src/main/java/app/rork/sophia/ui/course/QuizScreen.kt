@@ -20,6 +20,7 @@ import androidx.compose.material3.Slider
 import androidx.compose.material3.SliderDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableDoubleStateOf
 import androidx.compose.runtime.mutableIntStateOf
@@ -35,6 +36,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
@@ -57,7 +59,11 @@ fun QuizScreen(
     onFinished: () -> Unit,
 ) {
     val context = LocalContext.current
+    val app = context.applicationContext as SophiaApplication
     if (!isPremium) {
+        LaunchedEffect(Unit) {
+            app.analytics.trackFreemiumGateHit("quizz", subject = course.subjectEnum.storageKey, courseId = course.id)
+        }
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -96,6 +102,13 @@ fun QuizScreen(
     }
 
     val questions = remember(course.id) { course.quiz.map { QuizShuffler.shuffle(it) } }
+    LaunchedEffect(Unit) {
+        app.analytics.trackQuizStarted(
+            courseId = course.id,
+            subject = course.subjectEnum.storageKey,
+            questionCount = questions.size,
+        )
+    }
     var index by remember { mutableIntStateOf(0) }
     var totalPoints by remember { mutableIntStateOf(0) }
     var finished by remember { mutableStateOf(false) }
@@ -151,11 +164,18 @@ fun QuizScreen(
             Spacer(Modifier.height(20.dp))
             Button(
                 onClick = {
+                    val maxPts = questions.sumOf { it.maxPoints }
                     progressManager.completeQuiz(
                         courseId = course.id,
                         score = totalPoints,
                         questionIds = questions.map { it.id },
                         subjectKey = course.subjectEnum.storageKey,
+                    )
+                    app.analytics.trackQuizCompleted(
+                        courseId = course.id,
+                        score = totalPoints,
+                        total = maxPts,
+                        passed = totalPoints >= (maxPts * 0.5).toInt(),
                     )
                     onFinished()
                 },

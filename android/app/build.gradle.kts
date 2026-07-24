@@ -103,6 +103,10 @@ dependencies {
     // Meta / Facebook
     implementation("com.facebook.android:facebook-android-sdk:18.0.0")
 
+    // Play In-App Review
+    implementation("com.google.android.play:review:2.0.2")
+    implementation("com.google.android.play:review-ktx:2.0.2")
+
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
     testImplementation("junit:junit:4.13.2")

@@ -30,12 +30,13 @@ import androidx.compose.ui.unit.sp
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.billing.StoreViewModel
 import app.rork.sophia.data.ContentCatalog
+import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Course
+import app.rork.sophia.domain.PostCompletionRewardStep
 import app.rork.sophia.ui.collections.CollectionsScreen
-import app.rork.sophia.ui.components.RankUpCelebration
-import app.rork.sophia.ui.components.StreakCelebration
+import app.rork.sophia.ui.components.PostCompletionRewardFlow
 import app.rork.sophia.ui.course.CourseScreen
 import app.rork.sophia.ui.home.DiscountGiftOverlay
 import app.rork.sophia.ui.home.DiscountSideTab
@@ -43,6 +44,7 @@ import app.rork.sophia.ui.home.HomeTikTokScreen
 import app.rork.sophia.ui.library.LibraryScreen
 import app.rork.sophia.ui.paywall.PaywallContext
 import app.rork.sophia.ui.paywall.PaywallScreen
+import app.rork.sophia.ui.profile.AmbassadorScreen
 import app.rork.sophia.ui.profile.FeedbackScreen
 import app.rork.sophia.ui.profile.ProfileScreen
 import app.rork.sophia.ui.social.FriendsScreen
@@ -50,7 +52,7 @@ import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.training.TrainingScreen
 
-private enum class OverlayScreen { Friends, Feedback }
+private enum class OverlayScreen { Friends, Feedback, Ambassador }
 
 @Composable
 fun MainTabs(
@@ -70,8 +72,9 @@ fun MainTabs(
     var autoSwipeCourseId by remember { mutableStateOf<String?>(null) }
     var paywall by remember { mutableStateOf<PaywallContext?>(null) }
     var overlay by remember { mutableStateOf<OverlayScreen?>(null) }
-    var showStreak by remember { mutableStateOf(false) }
-    var showRankUp by remember { mutableStateOf(false) }
+    var rewardSteps by remember { mutableStateOf<List<PostCompletionRewardStep>?>(null) }
+    var pendingCompletionCourseId by remember { mutableStateOf<String?>(null) }
+    var levelBeforeCompletion by remember { mutableIntStateOf(1) }
 
     LaunchedEffect(language, isPremium) {
         app.analytics.updateContext(
@@ -90,10 +93,6 @@ fun MainTabs(
         onDeepLinkConsumed()
     }
 
-    LaunchedEffect(progress.pendingGlobalRankUp) {
-        if (progress.pendingGlobalRankUp != null) showRankUp = true
-    }
-
     fun openCourse(course: Course) {
         if (!isPremium) {
             app.progressManager.incrementFreeCoursesOpened()
@@ -105,28 +104,56 @@ fun MainTabs(
             source = "home_tiktok",
             isFreeUser = !isPremium,
         )
+        pendingCompletionCourseId = null
+        levelBeforeCompletion = ProgressManager.globalLevelProgress(app.progressManager.progress.value.globalXP).level
         selectedCourse = course
     }
 
-    when {
-        showRankUp && progress.pendingGlobalRankUp != null -> {
-            val pending = progress.pendingGlobalRankUp!!
-            RankUpCelebration(
-                rankKey = pending.newRankRawValue,
-                level = pending.newLevel,
-                onContinue = {
-                    app.progressManager.clearPendingRankUp()
-                    showRankUp = false
-                },
-            )
-            return
+    fun buildRewardSteps(courseId: String): List<PostCompletionRewardStep> {
+        val p = app.progressManager.progress.value
+        val steps = mutableListOf<PostCompletionRewardStep>()
+        if (app.progressManager.shouldShowStreakCelebration()) {
+            steps += PostCompletionRewardStep.Streak(p.streak)
         }
-        showStreak -> {
-            StreakCelebration(
-                streak = progress.streak,
-                onContinue = {
+        p.pendingGlobalRankUp?.let { pending ->
+            steps += PostCompletionRewardStep.RankUp(pending.newRankRawValue, pending.newLevel)
+        }
+        val collections = ContentCatalog.collections(context, language)
+        val events = app.progressManager.collectionProgressEvents(courseId, collections)
+        events.forEach { event ->
+            if (event.isComplete) {
+                app.progressManager.awardCollectionCompletionXpIfNeeded(event.collection)
+            }
+            app.analytics.trackCollectionProgressed(
+                collectionId = event.collection.id,
+                completed = event.newCompletedCount,
+                total = event.totalCount,
+                isComplete = event.isComplete,
+            )
+            steps += PostCompletionRewardStep.Collection(event)
+        }
+        val levelAfter = ProgressManager.globalLevelProgress(app.progressManager.progress.value.globalXP).level
+        if (levelAfter > levelBeforeCompletion && p.pendingGlobalRankUp == null) {
+            steps += PostCompletionRewardStep.LevelUp(levelAfter)
+        }
+        return steps
+    }
+
+    fun presentRewardsIfNeeded(courseId: String?) {
+        if (courseId == null) return
+        val steps = buildRewardSteps(courseId)
+        if (steps.isNotEmpty()) rewardSteps = steps
+    }
+
+    when {
+        rewardSteps != null -> {
+            PostCompletionRewardFlow(
+                steps = rewardSteps!!,
+                language = language,
+                onFinished = {
                     app.progressManager.markStreakShownToday()
-                    showStreak = false
+                    app.progressManager.clearPendingRankUp()
+                    rewardSteps = null
                 },
             )
             return
@@ -166,6 +193,13 @@ fun MainTabs(
             )
             return
         }
+        overlay == OverlayScreen.Ambassador -> {
+            AmbassadorScreen(
+                language = language,
+                onBack = { overlay = null },
+            )
+            return
+        }
         selectedCourse != null -> {
             CourseScreen(
                 course = selectedCourse!!,
@@ -173,13 +207,16 @@ fun MainTabs(
                 isPremium = isPremium,
                 isDailyFreeCourse = app.progressManager.isDailyFreeCourse(selectedCourse!!.id),
                 progressManager = app.progressManager,
+                onCourseCompleted = {
+                    pendingCompletionCourseId = selectedCourse?.id
+                },
                 onDismiss = {
                     val id = selectedCourse!!.id
+                    val completedId = pendingCompletionCourseId
+                    pendingCompletionCourseId = null
                     selectedCourse = null
                     autoSwipeCourseId = id
-                    if (app.progressManager.shouldShowStreakCelebration()) {
-                        showStreak = true
-                    }
+                    presentRewardsIfNeeded(completedId)
                 },
                 onRequestPaywall = { key ->
                     if (key == "debloquer_cours" || key == "quizz") {
@@ -279,6 +316,7 @@ fun MainTabs(
                     onShowPaywall = { paywall = PaywallContext.DEBLOQUER_COURS },
                     onOpenFriends = { overlay = OverlayScreen.Friends },
                     onOpenFeedback = { overlay = OverlayScreen.Feedback },
+                    onOpenAmbassador = { overlay = OverlayScreen.Ambassador },
                 )
             }
         }
@@ -286,7 +324,8 @@ fun MainTabs(
         if (!isPremium && selectedTab == 0 && selectedCourse == null && paywall == null) {
             if (discount.isGiftPending) {
                 DiscountGiftOverlay(
-                    onOpen = {
+                    language = language,
+                    onOpened = {
                         app.discountManager.consumeGift()
                         app.discountManager.triggerIfNeeded()
                         app.discountManager.markShownToday()
