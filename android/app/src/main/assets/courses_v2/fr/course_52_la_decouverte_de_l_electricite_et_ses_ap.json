@@ -1,0 +1,63 @@
+{
+  "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap",
+  "title": "La découverte de l'électricité",
+  "subtitle": "De Franklin à Tesla",
+  "subject": "sciences",
+  "subcategory": "Découvertes qui ont changé le monde",
+  "description": "L'électricité n'a pas été inventée d'un coup. On l'a d'abord observée, puis comprise, puis domestiquée. Voici les étapes clés.",
+  "hero": {
+    "image": "la_decouverte_de_l_electricite",
+    "ratio": "16:9",
+    "hook": "De la foudre au smartphone : deux siècles pour apprivoiser l'invisible."
+  },
+  "sections": [
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "L'électricité existe dans la nature : foudre, poissons électriques, frottements. Ce qui a changé le monde, c'est d'apprendre à la **produire**, la **transporter** et s'en servir." },
+        { "type": "paragraph", "text": "Cette histoire s'étale sur plus de deux siècles, avec des expériences risquées et de grandes rivalités." }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p1",
+      "title": "Comprendre la foudre",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Au XVIIIe siècle, **Benjamin Franklin** montre que la foudre est un phénomène électrique. Son expérience du cerf-volant (souvent racontée de façon romancée) vise à prouver que le ciel et la machine à frottement jouent avec la même force." },
+        { "type": "image", "asset": "benjamin_franklin_kite_lightning_experiment", "ratio": "4:3", "caption": "Franklin relie foudre et électricité : une idée dangereuse, mais fondatrice." },
+        { "type": "paragraph", "text": "On invente aussi le **paratonnerre**, une tige métallique qui offre à la foudre un chemin sûr vers le sol. L'électricité sort du mystère pour entrer dans l'ingénierie." }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p2",
+      "title": "Faraday : produire du courant",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Au XIXe siècle, **Michael Faraday** montre qu'un aimant en mouvement près d'un fil peut créer un courant électrique. C'est l'**induction**. Sans cette idée, pas de dynamo, pas d'alternateur, pas de centrale électrique moderne." },
+        { "type": "image", "asset": "faraday_electromagnetic_induction_experiment", "ratio": "4:3", "caption": "Faraday transforme le mouvement et le magnétisme en courant." },
+        { "type": "funFact", "text": "Faraday venait d'un milieu modeste et a commencé comme relieur de livres. Il a appris la science en lisant ce qu'il reliaba." }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p3",
+      "title": "Edison contre Tesla",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "À la fin du XIXe siècle, deux camps s'affrontent. **Thomas Edison** pousse le courant continu. **Nikola Tesla** (et la société Westinghouse) défendent le courant alternatif, plus facile à transporter sur de longues distances." },
+        { "type": "image", "asset": "tesla_edison_electric_power_station", "ratio": "4:3", "caption": "Le courant alternatif gagne pour alimenter les villes." },
+        { "type": "paragraph", "text": "Le courant alternatif l'emporte pour les réseaux urbains. Les villes s'allument. Les usines changent de rythme." }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p4",
+      "title": "Un monde branché",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Aujourd'hui, l'électricité fait tourner hôpitaux, trains, internet, frigos. Le défi n'est plus seulement de la produire, mais de le faire proprement et de façon fiable." },
+        { "type": "takeaway", "text": "L'électricité a été comprise puis domestiquée : Franklin pour la foudre, Faraday pour produire le courant, Tesla et le courant alternatif pour l'amener dans les maisons. Notre quotidien en dépend encore." }
+      ]
+    }
+  ]
+}

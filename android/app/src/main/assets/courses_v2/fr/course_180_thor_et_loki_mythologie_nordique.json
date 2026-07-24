@@ -1,0 +1,120 @@
+{
+  "id": "course_180_thor_et_loki_mythologie_nordique",
+  "title": "Thor et Loki (mythologie nordique)",
+  "subtitle": "Mythologie nordique",
+  "subject": "mythologie",
+  "subcategory": "Autres mythologies",
+  "description": "Le dieu de la foudre et le dieu de la ruse : duo d'aventures, puis ennemis au Ragnarök. Deux faces du panthéon scandinave.",
+  "hero": {
+    "image": "thor_et_loki_mythologie_nordique",
+    "ratio": "16:9",
+    "hook": "L'un frappe avec un marteau. L'autre ment pour gagner. Ensemble, ils sauvent Asgard… jusqu'au jour où Loki la trahit."
+  },
+  "sections": [
+    {
+      "id": "course_180_thor_et_loki_mythologie_nordique_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Thor** et **Loki** sont les deux figures les plus populaires de la mythologie nordique. Thor protège les hommes avec la foudre. Loki sème le désordre avec la ruse. On les croise souvent ensemble dans les récits de voyage."
+        },
+        {
+          "type": "paragraph",
+          "text": "Leur lien n'est pas une simple amitié comique. Il montre la tension entre l'ordre des dieux et le chaos. Du compagnonnage farceur à la guerre finale, voici comment cette alliance se construit… puis se brise."
+        }
+      ]
+    },
+    {
+      "id": "course_180_thor_et_loki_mythologie_nordique_p1",
+      "title": "Asgard, Midgard et les sources",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ces mythes viennent des peuples scandinaves du Ve au XIIe siècle. On les connaît surtout grâce à des textes islandais tardifs, écrits alors que la région était déjà christianisée. La source majeure est l'[[Edda en prose]], rédigée vers **1220** par **Snorri Sturluson**, complétée par l'[[Edda poétique]]."
+        },
+        {
+          "type": "image",
+          "asset": "asgard_midgard_bifrost_bridge_norse_mythology",
+          "ratio": "4:3",
+          "caption": "Asgard et Midgard reliés par le Bifröst, le pont arc-en-ciel."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le monde s'organise autour de [[Yggdrasil]], l'arbre cosmique. En haut : **Asgard**, demeure des dieux. Plus bas : **Midgard**, monde des hommes, relié par le **Bifröst**. Les dieux se partagent en deux clans : les **Ases**, menés par **Odin** (guerre et souveraineté), et les **Vanes**, comme Freyr et Freyja (fertilité)."
+        },
+        {
+          "type": "funFact",
+          "text": "Dans les textes anciens, le Bifröst est un pont fragile : au Ragnarök, il tremblera et s'effondrera sous le poids des géants."
+        }
+      ]
+    },
+    {
+      "id": "course_180_thor_et_loki_mythologie_nordique_p2",
+      "title": "Thor, le protecteur au marteau",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Thor** est le fils d'Odin et de la Terre. C'est le dieu le plus vénéré du peuple : il défend l'humanité contre les **géants**, forces déchaînées de la nature. Barbu, cheveux roux, il incarne une force nette et droite."
+        },
+        {
+          "type": "image",
+          "asset": "thor_hammer_mjolnir_norse_god_painting",
+          "ratio": "4:3",
+          "caption": "Mjöllnir, le marteau de Thor : il frappe et revient à la main."
+        },
+        {
+          "type": "paragraph",
+          "text": "Son arme, **Mjöllnir**, forgée par des nains, brise les montagnes et revient toujours à sa main. Une ceinture de force et des gants de fer l'aident à la manier. Son nom a donné le **jeudi** (Thor's day) dans les langues germaniques. Contrairement à Odin, plus aristocratique, Thor est le dieu des paysans libres : pluie, récolte, foyer sûr."
+        },
+        {
+          "type": "funFact",
+          "text": "Le char de Thor est tiré par deux boucs. S'il a faim, il peut les manger le soir et les ressusciter le lendemain avec son marteau… à condition de ne casser aucun os."
+        }
+      ]
+    },
+    {
+      "id": "course_180_thor_et_loki_mythologie_nordique_p3",
+      "title": "Loki, la ruse qui finit mal",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Loki** vit parmi les Ases, mais il est de sang géant. Il a intégré le panthéon par un pacte de sang avec Odin. C'est le **trickster** : ses farces et ses mensonges dérangent, mais ils font aussi avancer l'histoire et offrent parfois aux dieux leurs plus grands trésors."
+        },
+        {
+          "type": "image",
+          "asset": "loki_norse_trickster_god_mythology",
+          "ratio": "4:3",
+          "caption": "Loki, dieu de la ruse : allié utile, traître annoncé."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il change de forme et même de sexe. Sous forme de jument, il devient la mère de [[Sleipnir]], le cheval à huit pattes d'Odin. Avec la géante Angrboda, il engendre trois monstres : le loup **Fenrir**, le serpent **Jörmungandr** et **Hel**, gardienne des morts. Peu à peu, la farce devient trahison : il organise la mort du dieu lumineux **Baldr**. Dès lors, son destin est scellé."
+        }
+      ]
+    },
+    {
+      "id": "course_180_thor_et_loki_mythologie_nordique_p4",
+      "title": "Du duo comique au Ragnarök",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Longtemps, Thor et Loki se complètent. Quand le géant Thrym vole Mjöllnir, Thor se déguise en mariée et Loki en servante pour le récupérer. Là où le marteau échoue, le mensonge réussit, et l'inverse."
+        },
+        {
+          "type": "paragraph",
+          "text": "Puis l'alliance se brise. Au **Ragnarök**, le crépuscule des dieux, Loki mène les ennemis d'Asgard. Thor affronte Jörmungandr, fils de Loki : il tue le serpent, puis meurt de son venin après neuf pas. Force et ruse s'anéantissent ensemble."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Thor** et **Loki** incarnent la tension entre force protectrice et ruse disruptive. Leur lien, de l'amitié comique à la haine du Ragnarök, montre combien l'ordre des dieux reste fragile face au chaos."
+        }
+      ]
+    }
+  ]
+}

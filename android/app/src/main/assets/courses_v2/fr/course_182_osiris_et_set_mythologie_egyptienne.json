@@ -1,0 +1,120 @@
+{
+  "id": "course_182_osiris_et_set_mythologie_egyptienne",
+  "title": "Osiris et Set (mythologie égyptienne)",
+  "subtitle": "Mythologie égyptienne",
+  "subject": "mythologie",
+  "subcategory": "Autres mythologies",
+  "description": "Meurtre, démembrement, momie et vengeance : le cycle d'Osiris et Set fonde la royauté égyptienne et l'espoir d'une vie après la mort.",
+  "hero": {
+    "image": "osiris_et_set_mythologie_egyptienne",
+    "ratio": "16:9",
+    "hook": "Un frère tue le roi, découpe son corps en quatorze morceaux. Une sœur le rassemble. Un fils venge. L'Égypte entière sort de ce crime."
+  },
+  "sections": [
+    {
+      "id": "course_182_osiris_et_set_mythologie_egyptienne_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le cycle d'**Osiris** et de **Set** est le grand récit de l'Égypte ancienne. Ce n'est pas seulement une tragédie familiale. C'est le combat entre l'ordre ([[Ma'at]], l'harmonie) et le chaos stérile."
+        },
+        {
+          "type": "paragraph",
+          "text": "À travers le meurtre, le démembrement et la résurrection d'Osiris, les Égyptiens pensent la royauté, la fertilité du Nil et la vie après la mort. Chaque pharaon vivant est un **Horus**. Chaque roi mort devient un **Osiris**."
+        }
+      ]
+    },
+    {
+      "id": "course_182_osiris_et_set_mythologie_egyptienne_p1",
+      "title": "Set tue Osiris",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Osiris** est un roi civilisateur. Avec son épouse-sœur **Isis**, il enseigne l'agriculture et les lois. Son frère **Set**, dieu du désert et de la violence, le hait. Lors d'un banquet, Set présente un coffre magnifique : il l'offrira à celui qui y tiendra parfaitement."
+        },
+        {
+          "type": "image",
+          "asset": "osiris_egyptian_god_green_skin_painting",
+          "ratio": "4:3",
+          "caption": "Osiris à la peau verte : non la mort, mais la végétation qui renaît."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ayant pris les mesures d'Osiris en secret, Set le fait s'allonger, verrouille le coffre, le scelle au plomb et le jette dans le Nil. Plus tard, quand Isis retrouve le corps, Set le découpe en **14 morceaux** et les disperse dans la vallée. Sans corps intact, pas de paix dans l'au-delà."
+        },
+        {
+          "type": "funFact",
+          "text": "Osiris est souvent peint en vert. Cette couleur ne dit pas la pourriture : elle dit la renaissance, comme les champs après la crue du Nil."
+        }
+      ]
+    },
+    {
+      "id": "course_182_osiris_et_set_mythologie_egyptienne_p2",
+      "title": "Isis invente la momie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Isis**, grande magicienne, part à la recherche des fragments. Aidée de sa sœur Nephtys et du dieu [[Anubis]], elle érige un sanctuaire à chaque endroit où elle retrouve un morceau. Un problème reste : le phallus a été dévoré par le poisson [[Oxyrhynque]]. Isis en façonne un de remplacement."
+        },
+        {
+          "type": "image",
+          "asset": "isis_egyptian_goddess_winged_resurrection_painting",
+          "ratio": "4:3",
+          "caption": "Isis aux ailes déployées : le souffle qui ranime Osiris."
+        },
+        {
+          "type": "paragraph",
+          "text": "En rassemblant les pièces et en les enveloppant de bandelettes, Isis et Anubis créent la **première momie**. D'un battement d'ailes, Isis a insufflé une vie brève à Osiris. C'est alors qu'elle conçoit **Horus**, l'héritier destiné à restaurer l'ordre."
+        },
+        {
+          "type": "funFact",
+          "text": "Selon certains textes, les larmes d'Isis pendant sa quête étaient si abondantes que les Égyptiens y voyaient l'origine mythique de la crue annuelle du Nil."
+        }
+      ]
+    },
+    {
+      "id": "course_182_osiris_et_set_mythologie_egyptienne_p3",
+      "title": "Horus venge son père",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Élevé en secret dans les marais de [[Khemmis]], **Horus** grandit sous la forme du faucon. Adulte, il réclame le trône devant le tribunal des dieux, présidé par [[Rê]]. Le conflit avec Set dure des décennies : duels, ruses, blessures. Horus perd un œil ; Set perd sa fertilité."
+        },
+        {
+          "type": "image",
+          "asset": "eye_of_horus_egyptian_symbol_protection",
+          "ratio": "4:3",
+          "caption": "L'œil d'Horus (Oudjat) : l'intégrité reconquise sur le chaos."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'œil, recomposé par [[Thot]], devient le symbole de la guérison et de la protection. Les dieux tranchent : Set est condamné à servir, notamment en combattant le serpent [[Apophis]] sur la barque solaire. Horus est couronné. Chaque pharaon sera désormais un « Horus vivant »."
+        }
+      ]
+    },
+    {
+      "id": "course_182_osiris_et_set_mythologie_egyptienne_p4",
+      "title": "Osiris, juge des morts",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Momifié, Osiris ne peut plus régner sur terre. Il devient souverain de l'**Amenti**, le royaume des morts. Sous son regard se déroule la **pesée du cœur**, décrite dans [[Le Livre des Morts]]. Le cœur du défunt est mis sur une balance face à la plume de Ma'at."
+        },
+        {
+          "type": "paragraph",
+          "text": "Si le cœur est léger, le défunt est « juste de voix » et entre dans l'éternité d'Osiris. S'il est lourd de fautes, le monstre [[Ammout]] le dévore : l'oubli définitif. Roi et paysan sont jugés selon les mêmes critères. Horus gère le présent ; Osiris assure la suite."
+        },
+        {
+          "type": "takeaway",
+          "text": "Le mythe d'**Osiris** et de **Set** fonde trois piliers de l'Égypte : la royauté (Horus vivant), la momification (corps intact pour l'au-delà) et l'espoir d'une justice après la mort sous le regard d'Osiris."
+        }
+      ]
+    }
+  ]
+}

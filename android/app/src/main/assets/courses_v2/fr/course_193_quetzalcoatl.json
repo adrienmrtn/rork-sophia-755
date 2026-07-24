@@ -1,0 +1,140 @@
+{
+  "id": "course_193_quetzalcoatl",
+  "title": "Quetzalcoatl",
+  "subtitle": "Le Serpent à Plumes",
+  "subject": "mythologie",
+  "subcategory": "Autres mythologies",
+  "description": "Quetzalcoatl, le Serpent à Plumes, est le dieu de la civilisation mésoaméricaine. Son mythe mêle création, exil et la rencontre fatale avec Cortés.",
+  "hero": {
+    "image": "quetzalcoatl",
+    "ratio": "16:9",
+    "hook": "Dieu, roi et prophétie : le Serpent à Plumes traverse deux mille ans d'histoire mexicaine."
+  },
+  "sections": [
+    {
+      "id": "course_193_quetzalcoatl_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Quetzalcoatl**, le « Serpent à Plumes », est l'une des figures les plus riches du Mexique précolombien. On le vénère pendant plus de deux millénaires, de [[Teotihuacán]], grande cité du plateau central, jusqu'aux Aztèques, et chez les Mayas sous le nom de [[Kukulkán]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il unit la terre (le serpent) et le ciel (la plume). Dieu de la civilisation, du savoir et de l'ordre moral, son mythe finit par croiser l'histoire réelle : la conquête espagnole de **1519**."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p1",
+      "title": "Le dieu qui invente le maïs",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En [[nahuatl]], **Quetzalcoatl** vient de [[quetzal]], l'oiseau aux plumes vertes, et de *coatl*, le serpent. Cette union en fait le pont entre l'humain et le divin."
+        },
+        {
+          "type": "image",
+          "asset": "quetzalcoatl_feathered_serpent_aztec_sculpture",
+          "ratio": "4:3",
+          "caption": "Quetzalcoatl, le Serpent à Plumes : terre et ciel entrelacés."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dans la [[Cosmogonie des cinq soleils]], il descend au [[Mictlán]], le monde des morts, pour récupérer les os des humains passés. Il leur redonne vie avec son sang. Puis il vole le **maïs** aux fourmis : la nourriture fondatrice du Mexique. Comme dieu du vent, il ouvre aussi le chemin aux pluies de [[Tlaloc]]."
+        },
+        {
+          "type": "funFact",
+          "text": "Les plumes de queue du quetzal peuvent mesurer **60 cm**. Chez les Mayas et les Aztèques, tuer l'oiseau était passible de mort : on lui prenait quelques plumes, puis on le relâchait."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p2",
+      "title": "Le roi-prêtre de Tula",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le mythe a aussi un visage historique : **Topiltzin Quetzalcoatl**, roi-prêtre de **Tula** au Xe siècle. Il aurait voulu réformer le culte et remplacer les sacrifices humains par des offrandes de fleurs et de papillons."
+        },
+        {
+          "type": "image",
+          "asset": "tula_toltec_pyramid_warriors_sculpture_mexico",
+          "ratio": "4:3",
+          "caption": "Tula, cité toltèque liée au règne et à la chute de Quetzalcoatl."
+        },
+        {
+          "type": "paragraph",
+          "text": "Son rival **Tezcatlipoca** le pousse à boire du pulque, boisson fermentée. Humilié, le roi s'exile vers l'est. Selon la légende, il promet de revenir une année « Un Roseau ». Cette promesse va peser lourd."
+        },
+        {
+          "type": "funFact",
+          "text": "Après son départ, Quetzalcoatl devient parfois l'Étoile du Matin : la planète Vénus. Le dieu ne meurt pas, il change de forme."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p3",
+      "title": "1519 : quand le mythe rencontre Cortés",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **1519**, **Hernán Cortés** débarque à l'est, l'année « Un Roseau » du calendrier aztèque, celle où le retour du dieu était attendu. L'empereur **Moctezuma II** hésite : faut-il combattre un envahisseur ou accueillir une divinité ?"
+        },
+        {
+          "type": "image",
+          "asset": "herna_u0301n_corte_u0301s_arrival_mexico_1519_moctezuma_painting",
+          "ratio": "4:3",
+          "caption": "1519 : l'arrivée de Cortés croise la promesse du retour divin."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il envoie des cadeaux d'or et de plumes. Les [[Conquistadors]] y voient une invitation. Le mythe, vrai ou amplifié après coup, devient une arme psychologique dans la chute de [[Tenochtitlán]], la capitale aztèque."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Mythe",
+              "title": "Créateur",
+              "detail": "Os des morts, sang divin, don du maïs."
+            },
+            {
+              "date": "Xe s.",
+              "title": "Exil de Tula",
+              "detail": "Le roi-prêtre part vers l'est."
+            },
+            {
+              "date": "1519",
+              "title": "Cortés",
+              "detail": "Le retour attendu devient conquête."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p4",
+      "title": "Un symbole qui ne meurt pas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Après la conquête, Quetzalcoatl ne disparaît pas. Certains moines croient y voir un apôtre. Plus tard, le Mexique indépendant en fait un emblème de grandeur précolombienne. Les muralistes du XXe siècle, comme Diego Rivera, le peignent comme âme du pays."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aujourd'hui encore, le Serpent à Plumes dit une identité : racines dans la terre, ambition tournée vers le ciel."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Quetzalcoatl**, Serpent à Plumes, est le dieu de la civilisation mésoaméricaine. Créateur, roi exilé, puis prophétie fatale en **1519**, il reste un symbole central du Mexique."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "course_225_la_montee_des_eaux",
+  "title": "La montée des eaux",
+  "subtitle": "Le niveau des mers grimpe",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environnement & avenir",
+  "description": "D'ici 2100, le niveau des océans pourrait grimper d'**un mètre**. Pour des pays entiers et des mégapoles côtières, ce n'est plus une hypothèse lointaine, mais une question de planification.",
+  "hero": {
+    "image": "la_montee_des_eaux",
+    "ratio": "16:9",
+    "hook": "La mer grimpe chaque année un peu plus, et certains pays planifient déjà leur déménagement."
+  },
+  "sections": [
+    {
+      "id": "course_225_la_montee_des_eaux_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Pendant des milliers d'années, le niveau des océans est resté à peu près stable. Depuis l'ère industrielle, il grimpe, et la vitesse de cette montée s'accélère d'année en année." },
+        { "type": "paragraph", "text": "D'ici 2100, les océans pourraient s'élever de 30 centimètres à un mètre selon nos choix d'émissions. Pour de nombreux littoraux, ce n'est plus une menace lointaine, mais un problème d'aménagement bien concret." }
+      ]
+    },
+    {
+      "id": "course_225_la_montee_des_eaux_p1",
+      "title": "Deux mécanismes, une seule direction",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le niveau des mers monte pour deux raisons physiques différentes. La première est la [[Dilatation thermique]] : quand l'eau se réchauffe, ses molécules s'agitent davantage et son volume augmente un peu, comme n'importe quel liquide. Les océans ont absorbé plus de 90% de la chaleur en trop générée par l'activité humaine depuis 1970, et cette chaleur fait gonfler leur volume." },
+        { "type": "paragraph", "text": "La seconde raison est la fonte des glaces posées sur la terre ferme. Attention à ne pas confondre avec la banquise arctique, qui flotte déjà sur l'eau et dont la fonte ne fait pas monter le niveau des mers. Ce sont les [[Inlandsis]], ces immenses calottes de glace posées sur le sol du Groenland et de l'Antarctique, qui font vraiment déborder les océans en y ajoutant de l'eau douce." },
+        { "type": "image", "asset": "greenland_ice_sheet_melting_glacier", "ratio": "16:9", "caption": "La fonte du Groenland, si elle était totale, élèverait les océans de 7 mètres." },
+        { "type": "funFact", "text": "Le Groenland perd chaque année environ 280 milliards de tonnes de glace, soit assez d'eau pour couvrir la totalité de la France d'une couche de 50 centimètres." }
+      ]
+    },
+    {
+      "id": "course_225_la_montee_des_eaux_p2",
+      "title": "Une vitesse qui inquiète les scientifiques",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Depuis 1880, le niveau mondial des mers a grimpé d'environ 20 centimètres. C'est surtout la vitesse actuelle qui alarme les chercheurs : elle était d'environ 1,4 mm par an au XXe siècle, contre **3,6 mm par an** aujourd'hui, une accélération de plus de 150%." },
+        { "type": "paragraph", "text": "Les experts du [[GIEC]] estiment que cette tendance va se poursuivre pendant des décennies, même si on réduisait drastiquement les émissions dès maintenant, car les océans mettent du temps à réagir aux changements de température." },
+        { "type": "image", "asset": "coastal_flooding_sea_level_rise_city", "ratio": "4:3", "caption": "Une hausse de 50 cm peut transformer une inondation centennale en événement annuel." },
+        { "type": "paragraph", "text": "Le vrai danger n'est pas seulement une mer un peu plus haute en moyenne, mais la multiplication des [[Surcotes et inondations centennales]] : une élévation de 50 centimètres peut suffire à transformer une catastrophe attendue une fois par siècle en un événement presque annuel." }
+      ]
+    },
+    {
+      "id": "course_225_la_montee_des_eaux_p3",
+      "title": "Une injustice géographique",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "La montée des eaux frappe surtout des régions qui ont le moins contribué au réchauffement climatique. Les grands deltas fluviaux, comme ceux du Nil, du Mékong ou du Gange, sont en première ligne. Au Bangladesh, où vivent 170 millions d'habitants, une hausse d'un mètre pourrait faire perdre 17% du territoire." },
+        { "type": "paragraph", "text": "Pour des petits États insulaires comme les Maldives ou les Kiribati, disparaître entièrement sous l'eau n'est plus une hypothèse de science-fiction, mais un vrai sujet de planification politique. À l'inverse, des mégapoles riches comme Miami ou New York investissent des milliards dans des digues et des pompes." },
+        { "type": "image", "asset": "jakarta_indonesia_sinking_flooding_maldives", "ratio": "16:9", "caption": "Jakarta cumule montée des eaux et affaissement du sol, une double menace." },
+        { "type": "funFact", "text": "En 2009, le gouvernement des Maldives a tenu un conseil des ministres sous l'eau, en combinaison de plongée, pour alerter le monde avant une grande conférence sur le climat." },
+        { "type": "paragraph", "text": "À **Jakarta**, en Indonésie, la ville s'enfonce en plus dans le sol à cause du pompage excessif des nappes d'eau souterraines. Face à cette double menace, le pays a pris la décision radicale de construire une toute nouvelle capitale, Nusantara, sur l'île de Bornéo." }
+      ]
+    },
+    {
+      "id": "course_225_la_montee_des_eaux_p4",
+      "title": "S'adapter, ou reculer",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Deux stratégies se complètent face à ce défi. La première est de limiter le réchauffement pour freiner la hausse au-delà de 2100. La seconde est de s'adapter à ce qui est déjà inévitable, en renforçant les défenses naturelles comme les [[Mangrove]]s ou les dunes, ou avec des solutions plus lourdes comme les grands travaux des Pays-Bas." },
+        { "type": "paragraph", "text": "Dans certains cas, la seule solution sera de reculer : déplacer les habitants et les activités vers l'intérieur des terres avant que les catastrophes ne se répètent trop souvent. C'est un vrai changement d'habitude pour des sociétés attachées au littoral depuis des siècles." },
+        { "type": "takeaway", "text": "Le niveau des mers monte de 3,6 mm par an, sous l'effet combiné de la dilatation thermique et de la fonte des glaces terrestres. D'ici 2100, cette hausse pourrait atteindre un mètre et forcer le déplacement de centaines de millions de personnes." }
+      ]
+    }
+  ]
+}

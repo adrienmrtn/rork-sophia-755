@@ -1,0 +1,112 @@
+{
+  "id": "course_234_la_securite_alimentaire_mondiale",
+  "title": "Global food security",
+  "subtitle": "800 million people",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "The Earth produces enough food for everyone. So why do **800 million people** still go hungry?",
+  "hero": {
+    "image": "la_securite_alimentaire_mondiale",
+    "ratio": "16:9",
+    "hook": "The hunger of 800 million humans is not a problem of food, but of sharing."
+  },
+  "sections": [
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Today, around **800 million people** suffer from hunger in the world, or one in ten people. This figure is all the more strange since humanity has never produced so much food: statistically, there is more than enough to eat for everyone."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hunger is therefore not a problem of quantity, but of distribution. Understanding global food security means understanding why abundance and famine can coexist on the same planet."
+        }
+      ]
+    },
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_p1",
+      "title": "The geography of hunger",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "According to , the United Nations food agency, chronic undernourishment still affects around 800 million people in 2024. This global figure hides very different realities. The most affected areas are in sub-Saharan Africa, where more than a quarter of the population regularly lacks food, and in South Asia. **[[FAO]]**"
+        },
+        {
+          "type": "image",
+          "asset": "famine_sub_saharan_africa_malnutrition_child",
+          "ratio": "auto",
+          "caption": "Hunger still affects hundreds of millions of people, especially in sub-Saharan Africa."
+        },
+        {
+          "type": "paragraph",
+          "text": "There are several forms of food distress. **undernutrition** corresponds to a lack of calories. **Micronutrient deficiencies**, often called “hidden hunger,” affect 2 billion people who lack essential vitamins or minerals, with consequences for growth or health. Finally, **malnutrition** also surprisingly includes obesity: in many developing countries, people are gradually replacing fresh produce with processed foods, high in calories but poor in nutrients."
+        },
+        {
+          "type": "funFact",
+          "text": "If we reduced global food waste by just 25%, we could theoretically feed all of the 800 million people who suffer from hunger today."
+        }
+      ]
+    },
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_p2",
+      "title": "The paradox of abundance and waste",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The world currently produces the equivalent of 2,800 kilocalories per person per day, more than enough to eliminate hunger. The real problem is therefore not shortage, but access: the poorest populations simply do not have the means to buy food whose price constantly varies on world markets."
+        },
+        {
+          "type": "paragraph",
+          "text": "The other side of this paradox is **waste**. About a third of global production, or 1.3 billion tonnes of food, is lost each year. In poor countries, losses occur early: lack of storage places, absence of cold rooms, roads in poor condition. In rich countries, waste occurs later, during distribution and consumption."
+        },
+        {
+          "type": "funFact",
+          "text": "Since the 2010s, obesity and obesity-related diseases have killed more people worldwide each year than undernutrition, a historic turning point for global public health."
+        }
+      ]
+    },
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_p3",
+      "title": "When food becomes a geopolitical weapon",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Food security is also a question of geopolitics. Many countries depend on exports from a few major agricultural powers, which makes them very vulnerable to the slightest blockage. Ukraine and Russia together account for nearly 30% of world wheat exports. When this flow stops, prices soar on the Chicago , where future harvests are negotiated, and countries like Egypt or Lebanon fall into a serious social crisis. **[[futures market]]**"
+        },
+        {
+          "type": "paragraph",
+          "text": "This fragility also comes from a choice made in the 1960s: the . This wave of new agricultural techniques has greatly increased yields, but it has also reduced crop diversity and made farmers dependent on chemical fertilizers. As a result, each increase in the price of oil has direct repercussions on the price of bread. **[[The Green Revolution]]**"
+        },
+        {
+          "type": "paragraph",
+          "text": "The concept of **food power** refers precisely to the voluntary use of food exports as a means of diplomatic pressure, or even as a sanction against an opposing country."
+        }
+      ]
+    },
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_p4",
+      "title": "Feed 10 billion humans without depleting the planet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "By 2050, the world's population is expected to reach 10 billion. Climate change is already threatening yields by increasing droughts and floods, displacing arable land. Intensive agriculture also depletes soil and groundwater, which sometimes drains faster than it fills."
+        },
+        {
+          "type": "paragraph",
+          "text": "One of the avenues for the future is called : producing by relying on natural cycles, such as compost or crop rotation, rather than fighting them with chemicals. The challenge is to guarantee, for every human being, permanent access to healthy food, without further depleting the planet. **[[agroecology]]**"
+        },
+        {
+          "type": "takeaway",
+          "text": "The Earth produces enough calories to feed everyone. The hunger of 800 million people therefore comes from a problem of access, waste and geopolitical crises, worsened by climate change."
+        }
+      ]
+    }
+  ]
+}

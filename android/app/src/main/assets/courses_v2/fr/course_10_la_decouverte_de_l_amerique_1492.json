@@ -1,0 +1,71 @@
+{
+  "id": "course_10_la_decouverte_de_l_amerique_1492",
+  "title": "La découverte de l'Amérique",
+  "subtitle": "1492",
+  "subject": "histoire",
+  "subcategory": "Antiquité & Moyen Âge",
+  "description": "Le 12 octobre 1492, Christophe Colomb atteint une île des Bahamas qu'il croit être le Japon. Une erreur de navigation ouvre la mondialisation.",
+  "hero": {
+    "image": "la_decouverte_de_l_amerique_1492",
+    "ratio": "16:9",
+    "hook": "Il cherchait l'Asie. Il a heurté un continent que l'Europe avait oublié."
+  },
+  "sections": [
+    {
+      "id": "course_10_la_decouverte_de_l_amerique_1492_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Le **12 octobre 1492**, après plus de deux mois en Atlantique, un marin de la Pinta crie « Terre ! ». **Christophe Colomb**, Génois au service de l'Espagne, débarque sur une île des Bahamas qu'il baptise San Salvador. Il croit toucher l'Asie." },
+        { "type": "paragraph", "text": "Cette méprise va unir deux hémisphères. Portée par l'élan de la [[Reconquista espagnole (1492)]], la reconquête de Grenade sur les musulmans la même année, l'expédition marque, pour l'Europe, le passage du Moyen Âge à l'époque moderne." }
+      ]
+    },
+    {
+      "id": "course_10_la_decouverte_de_l_amerique_1492_p1",
+      "title": "Une route vers l'ouest, une erreur de taille",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Colomb ne cherche pas à prouver que la Terre est ronde. [[Ératosthène]], savant grec du IIIe siècle av. J.-C., l'avait déjà calculée. Le vrai but est économique : atteindre les épices et la soie par l'ouest, sans passer par les Ottomans qui contrôlent les routes d'Orient." },
+        { "type": "image", "asset": "christopher_columbus_portrait", "ratio": "4:3", "caption": "Christophe Colomb, navigateur génois au service des Rois Catholiques." },
+        { "type": "paragraph", "text": "Son erreur : sous-estimer la circonférence terrestre. Il place le Japon à **4 500 km** des Canaries, contre près de **20 000** en réalité. Le Portugal refuse. Isabelle de Castille, reine d'Espagne, accepte. Par les [[Capitulations de Santa Fe]], un contrat, Colomb devient amiral, vice-roi, et touche **10 %** des bénéfices." },
+        { "type": "funFact", "text": "Colomb écrivit avoir vu des sirènes aux Caraïbes. C'étaient des lamantins. Il nota, déçu, qu'elles étaient bien moins belles que dans les légendes." }
+      ]
+    },
+    {
+      "id": "course_10_la_decouverte_de_l_amerique_1492_p2",
+      "title": "70 jours vers San Salvador",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le **3 août 1492**, trois navires quittent Palos, en Espagne : la **Pinta**, la **Niña** et la **Santa María**. Grâce à la famille [[Pinzón]], riches armateurs locaux, l'équipage de **90 hommes** est expérimenté. La traversée dure **70 jours**. Colomb tient deux journaux : l'un vrai, l'autre falsifié, pour rassurer ses marins." },
+        { "type": "image", "asset": "santa_maria_caravel_ship", "ratio": "4:3", "caption": "La Santa María, navire amiral de l'expédition de 1492." },
+        { "type": "paragraph", "text": "Le **12 octobre**, il rencontre les [[Taïnos]], habitants autochtones des Grandes Antilles. Convaincu d'être aux Indes, il les appelle « Indiens ». Il note leur or et leur docilité apparente. Le regard colonial est déjà là." },
+        { "type": "funFact", "text": "La Niña s'appelait en réalité *Santa Clara*. La Santa María était surnommée *La Gallega*, car construite en Galice." }
+      ]
+    },
+    {
+      "id": "course_10_la_decouverte_de_l_amerique_1492_p3",
+      "title": "L'échange colombien",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "L'arrivée des Européens déclenche l'**échange colombien**, un transfert massif de plantes, d'animaux et de maladies entre les deux mondes. Vers l'Europe : pomme de terre, maïs, tomate, cacao, tabac. Vers l'Amérique : blé, sucre, café, cheval, bétail. Les assiettes et les paysages des deux côtés changent pour toujours." },
+        { "type": "paragraph", "text": "Le prix est terrible. Variole, rougeole, grippe tuent **50 à 90 %** des populations autochtones en un siècle. Diplomatiquement, Espagne et Portugal se partagent le globe par le [[Traité de Tordesillas (1494)]], sans consulter personne." },
+        { "type": "timeline", "events": [
+          { "date": "3 août 1492", "title": "Départ de Palos", "detail": "Trois navires prennent la mer vers l'ouest." },
+          { "date": "12 oct. 1492", "title": "San Salvador", "detail": "Colomb débarque aux Bahamas." },
+          { "date": "1494", "title": "Tordesillas", "detail": "Espagne et Portugal se partagent le monde." },
+          { "date": "1507", "title": "America", "detail": "Waldseemüller baptise le Nouveau Monde." }
+        ] }
+      ]
+    },
+    {
+      "id": "course_10_la_decouverte_de_l_amerique_1492_p4",
+      "title": "Un continent sans son découvreur",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Colomb meurt en **1506** sans admettre sa découverte. C'est [[Amerigo Vespucci]], un navigateur florentin, qui comprend qu'il s'agit d'un « Mundus Novus », un Nouveau Monde. En **1507**, le cartographe Waldseemüller baptise le continent **America**. Le prénom du Florentin entre dans la carte du monde." },
+        { "type": "paragraph", "text": "Administrateur brutal à Hispaniola (Haïti et République dominicaine actuelles), Colomb finit même renvoyé enchaîné. Au-delà de l'homme, **1492** ouvre la mondialisation : l'argent américain afflue, le centre du commerce glisse de la Méditerranée vers l'Atlantique. L'Europe devient le pivot d'un système à quatre continents." },
+        { "type": "takeaway", "text": "Colomb meurt persuadé d'avoir atteint l'Asie. Son erreur a uni deux hémisphères et déclenché un bouleversement biologique, économique et humain irréversible." }
+      ]
+    }
+  ]
+}

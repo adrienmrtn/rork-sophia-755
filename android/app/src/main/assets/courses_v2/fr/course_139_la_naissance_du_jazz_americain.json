@@ -1,0 +1,145 @@
+{
+  "id": "course_139_la_naissance_du_jazz_americain",
+  "title": "La naissance du jazz américain",
+  "subtitle": "1890-1960",
+  "subject": "art",
+  "subcategory": "Musique",
+  "description": "Né à La Nouvelle-Orléans, le jazz mêle rythmes africains, blues et harmonie européenne, puis invente swing, bebop et jazz modal.",
+  "hero": {
+    "image": "la_naissance_du_jazz_americain",
+    "ratio": "16:9",
+    "hook": "Dans une ville portuaire, l'Amérique invente sa musique classique : le jazz."
+  },
+  "sections": [
+    {
+      "id": "course_139_la_naissance_du_jazz_americain_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le jazz naît à [[La Nouvelle-Orléans]] vers la fin du XIXe siècle. Port de Louisiane, carrefour français, espagnol, africain et caribéen, la ville est un laboratoire sonore."
+        },
+        {
+          "type": "paragraph",
+          "text": "Née dans la violence de l'esclavage et de la ségrégation, cette musique devient la « musique classique de l'Amérique ». En un siècle, elle influence rock, funk et hip-hop. Comprendre le jazz, c'est comprendre une liberté inventée sous contrainte."
+        }
+      ]
+    },
+    {
+      "id": "course_139_la_naissance_du_jazz_americain_p1",
+      "title": "La Nouvelle-Orléans et Congo Square",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "À la fin du XIXe siècle, La Nouvelle-Orléans mêle créoles de couleur, descendants d'Africains asservis, immigrants européens. Opéra européen et rythmes caribéens s'y croisent. Au [[Congo Square]], seul lieu du Nord où les populations noires avaient un droit de réunion dominical, tambours et polyrythmies africaines survivent."
+        },
+        {
+          "type": "image",
+          "asset": "congo_square_new_orleans_slaves_music",
+          "ratio": "4:3",
+          "caption": "Congo Square : mémoire rythmique africaine au cœur de la Louisiane."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les **brass bands** (fanfares de cuivres) animent parades et funérailles : marche lente vers le cimetière, explosion de joie au retour. Cette bascule entre deuil et fête est l'âme émotionnelle du jazz naissant."
+        },
+        {
+          "type": "funFact",
+          "text": "Le pionnier **Buddy Bolden**, coiffeur de métier, n'a jamais été enregistré : sa légende repose sur ceux qui entendaient son cornet de l'autre côté du Mississippi."
+        }
+      ]
+    },
+    {
+      "id": "course_139_la_naissance_du_jazz_americain_p2",
+      "title": "Blue notes, improvisation et Jim Crow",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le jazz hérite du blues ses [[blue notes]], notes « fléchies » qui créent une tension expressive. Du gospel et des chants de travail, il tire l'appel-réponse. Ces éléments se placent sur l'harmonie européenne des fanfares."
+        },
+        {
+          "type": "paragraph",
+          "text": "La rupture, c'est [[L'improvisation dans le jazz]] : la partition n'est plus une loi, mais une grille. Le musicien compose en temps réel. Dans une Amérique des [[lois Jim Crow]], cette liberté est aussi politique : affirmer sa singularité quand le système veut l'effacer."
+        },
+        {
+          "type": "funFact",
+          "text": "En 1917, le premier disque de jazz est enregistré par des musiciens blancs (Original Dixieland Jass Band) : les maisons de disques n'osent pas encore parier sur les inventeurs noirs du genre."
+        }
+      ]
+    },
+    {
+      "id": "course_139_la_naissance_du_jazz_americain_p3",
+      "title": "Armstrong, swing, bebop, Kind of Blue",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Avec la [[Grande Migration]] vers Chicago et New York, le jazz quitte le Sud. **Louis Armstrong** place le soliste virtuose au centre. À Harlem, pendant la [[Harlem Renaissance]], le jazz est célébré comme modernité noire. Dans les années 1930, le [[swing]] de **Duke Ellington** fait danser l'Amérique."
+        },
+        {
+          "type": "image",
+          "asset": "louis_armstrong_trumpet_1920s_jazz",
+          "ratio": "4:3",
+          "caption": "Louis Armstrong : le soliste devient le cœur du jazz."
+        },
+        {
+          "type": "paragraph",
+          "text": "Après 1945, **Charlie Parker** invente le [[bebop]] : tempos rapides, harmonies complexes, musique d'écoute. En **1959**, **Miles Davis** publie *Kind of Blue* : le [[jazz modal]] ralentit les changements d'accords pour explorer une couleur. C'est encore le disque de jazz le plus vendu au monde."
+        },
+        {
+          "type": "image",
+          "asset": "miles_davis_kind_of_blue_album_cool_jazz",
+          "ratio": "4:3",
+          "caption": "Kind of Blue (1959) : le jazz modal, calme et révolutionnaire."
+        },
+        {
+          "type": "funFact",
+          "text": "Le club new-yorkais Birdland tire son nom du surnom de Parker, « Bird ». Parker lui-même s'y est fait expulser un soir après une dispute."
+        }
+      ]
+    },
+    {
+      "id": "course_139_la_naissance_du_jazz_americain_p4",
+      "title": "Free jazz, fusion et héritage",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dans les années 1960, le [[free jazz]] casse les cadres, lié aux droits civiques. Puis le [[jazz fusion]] croise rock et funk électriques. Le swing, cette pulsation élastique, irrigue encore rock et hip-hop. Institutionnalisé dans les conservatoires, le jazz reste un langage de l'instant : chaque concert est unique."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "fin XIXe",
+              "title": "Nouvelle-Orléans",
+              "detail": "Congo Square, brass bands, naissance du jazz."
+            },
+            {
+              "date": "1920s",
+              "title": "Armstrong",
+              "detail": "Le soliste virtuose conquiert Chicago et New York."
+            },
+            {
+              "date": "1930s-1940s",
+              "title": "Swing puis bebop",
+              "detail": "De la danse à la musique de chambre moderne."
+            },
+            {
+              "date": "1959",
+              "title": "Kind of Blue",
+              "detail": "Miles Davis invente un jazz modal universel."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Né à La Nouvelle-Orléans de la fusion entre rythmes africains, blues et harmonie européenne, le jazz est un art de l'improvisation et un symbole de liberté."
+        }
+      ]
+    }
+  ]
+}

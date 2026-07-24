@@ -1,0 +1,98 @@
+{
+  "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895",
+  "title": "El descubrimiento de los rayos X.",
+  "subtitle": "Roentgen, 1895",
+  "subject": "sciences",
+  "subcategory": "Descubrimientos que cambiaron el mundo",
+  "description": "En 1895, Wilhelm Röntgen descubrió una radiación invisible capaz de atravesar la materia. En pocos meses, la medicina vivió una revolución.",
+  "hero": {
+    "image": "la_decouverte_des_rayons_x_rontgen",
+    "ratio": "16:9",
+    "hook": "Una mano, huesos, una foto. La medicina nunca más será ciega."
+  },
+  "sections": [
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_intro",
+      "title": "Introducción",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**8 de noviembre de 1895**, en Würzburg (Alemania), el físico **Wilhelm Röntgen** nota una pantalla que brilla… aunque no se ve afectada por la luz visible. Algo invisible cruza la habitación."
+        },
+        {
+          "type": "paragraph",
+          "text": "Él los llama rayos **incógnita**, donde la \"X\" significa \"desconocido\". A las pocas semanas, fotografió los huesos de la mano de su esposa. Nació la radiología."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p1",
+      "title": "Un accidente de laboratorio",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Röntgen trabaja con un tubo donde los electrones golpean un objetivo. Cubrió el tubo con cartón negro. Sin embargo, una pantalla fluorescente brilla desde la distancia. Entiende que del tubo sale radiación invisible."
+        },
+        {
+          "type": "image",
+          "asset": "wilhelm_rontgen_x_ray_hand_1895",
+          "ratio": "4:3",
+          "caption": "La famosa imagen: los huesos de la mano y el anillo de bodas."
+        },
+        {
+          "type": "funFact",
+          "text": "Röntgen nunca presentó una patente sobre rayos X. Quería que toda la ciencia pudiera utilizarlos libremente."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p2",
+      "title": "La medicina se apodera de la herramienta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "early_x_ray_medical_radiograph",
+          "ratio": "4:3",
+          "caption": "Muy rápidamente, los médicos y los ejércitos utilizaron rayos X."
+        },
+        {
+          "type": "paragraph",
+          "text": "Antes, para “ver” una fractura o una bala, muchas veces había que abrirla. Con las radiografías obtenemos una imagen del interior sin cortar. Los hospitales y los ejércitos están adoptando la técnica a una velocidad vertiginosa."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p3",
+      "title": "Un peligro largamente ignorado",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Al principio, ignoramos los riesgos. Los operadores toman radiografías durante horas. Quemaduras, luego aparecen cánceres. Tomará tiempo comprender que los rayos X son poderosos… y peligrosos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hoy protegemos a los pacientes y a sus cuidadores: dosis limitadas, delantales de plomo, controles estrictos."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p4",
+      "title": "el legado",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Los rayos X allanaron el camino para todas las imágenes modernas: escáneres, controles industriales e incluso el estudio de la estructura de los cristales (más tarde útil para el ADN)."
+        },
+        {
+          "type": "takeaway",
+          "text": "En **1895**, Röntgen descubrió los rayos X, una radiación invisible que atraviesa la materia. La medicina está adquiriendo una nueva perspectiva... siempre que se controlen los riesgos."
+        }
+      ]
+    }
+  ]
+}

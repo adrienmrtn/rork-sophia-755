@@ -1,0 +1,122 @@
+{
+  "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu",
+  "title": "La tragédie grecque et le théâtre antique",
+  "subtitle": "Ve siècle av. J.-C.",
+  "subject": "art",
+  "subcategory": "Cinéma, photo & architecture + œuvres iconiques",
+  "description": "À Athènes, Eschyle, Sophocle et Euripide inventent la tragédie. Chœur, hubris, catharsis : un théâtre pour penser la cité.",
+  "hero": {
+    "image": "la_tragedie_grecque_et_le_theatre_antique",
+    "ratio": "16:9",
+    "hook": "Des masques sous le soleil pour soigner la cité par le choc."
+  },
+  "sections": [
+    {
+      "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Au Ve siècle avant notre ère, à Athènes, naît la **tragédie**. Ce n'est pas un divertissement privé : c'est un rite civique, joué devant des milliers de citoyens."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eschyle, Sophocle, Euripide inventent un art qui mêle dieux, politique et passions."
+        }
+      ]
+    },
+    {
+      "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu_p1",
+      "title": "Le chœur et l'orchestre",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le [[chœur dans la tragédie grecque]] chante, danse, commente. Les acteurs, masqués, incarnent héros et dieux. Un citoyen riche finance le spectacle : c'est la [[chorégie]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les Dionysies, fêtes de Dionysos, organisent des concours. La tragédie naît dans ce cadre religieux et civique. Gagner, c'est honorer la cité autant que le dieu."
+        },
+        {
+          "type": "image",
+          "asset": "epidaurus_ancient_theatre",
+          "ratio": "4:3",
+          "caption": "Le théâtre d'Épidaure : l'acoustique comme miracle de pierre."
+        }
+      ]
+    },
+    {
+      "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu_p2",
+      "title": "Hubris et chute",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le héros tragique cède souvent à l'[[hubris]], la démesure qui défie l'ordre. La chute qui suit n'est pas gratuite : elle interroge la justice, le destin, la responsabilité."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eschyle ajoute des acteurs ; Sophocle raffine la psychologie ; Euripide trouble les certitudes. Trois styles pour une même machine : faire penser en émouvant."
+        },
+        {
+          "type": "funFact",
+          "text": "Le [[deus ex machina]] faisait parfois descendre un dieu par une grue pour dénouer l'intrigue… déjà critiqué pour sa commodité."
+        }
+      ]
+    },
+    {
+      "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu_p3",
+      "title": "La catharsis",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Selon Aristote, la tragédie provoque la [[catharsis]] : une purification par la pitié et la terreur. On sort ébranlé, mais apaisé. Le théâtre soigne la cité en mettant en scène ses peurs."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le public connaît souvent le mythe. L'intérêt n'est pas le twist, c'est la manière. Comment Œdipe tombera-t-il ? Comment Antigone dira-t-elle non ?"
+        },
+        {
+          "type": "image",
+          "asset": "greek_theatre_masks_tragedy",
+          "ratio": "4:3",
+          "caption": "Masques : une émotion lisible de loin."
+        }
+      ]
+    },
+    {
+      "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu_p4",
+      "title": "Héritage",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Shakespeare, l'opéra, le cinéma : la tragédie grecque reste la grammaire du destin sur scène. Nos antihéros modernes lui doivent encore leurs chutes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour bien saisir La tragédie grecque et le théâtre antique, il faut garder une chose en tête : chaque détail technique sert une émotion ou une idée. L'œuvre n'est jamais seulement décorative."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le contexte compte autant que le style. Dates, lieux, commanditaires, public : tout cela explique pourquoi une forme apparaît à un moment précis, et pas avant."
+        },
+        {
+          "type": "paragraph",
+          "text": "Enfin, l'héritage se mesure dans le temps long. Ce que nous voyons aujourd'hui dans les musées, les films ou la musique populaire porte encore la trace de ces inventions."
+        },
+        {
+          "type": "paragraph",
+          "text": "De l'opéra wagnérien au cinéma catastrophe, la structure tragique survit. Nous avons changé de dieux ; pas toujours de chutes."
+        },
+        {
+          "type": "takeaway",
+          "text": "À Athènes, la tragédie a inventé un théâtre civique où hubris, chœur et catharsis apprennent à la cité à se regarder."
+        }
+      ]
+    }
+  ]
+}

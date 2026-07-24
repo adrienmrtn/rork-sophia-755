@@ -1,0 +1,106 @@
+{
+  "id": "course_48_comment_fonctionne_la_memoire",
+  "title": "Come funziona la memoria?",
+  "subtitle": "Cervello",
+  "subject": "sciences",
+  "subcategory": "La nostra quotidianità spiegata",
+  "description": "La memoria non è una macchina fotografica. Ogni ricordo viene ricostruito. Questo è il modo in cui il cervello codifica, memorizza... e talvolta inventa.",
+  "hero": {
+    "image": "comment_fonctionne_la_memoire",
+    "ratio": "16:9",
+    "hook": "Ricordare non è rileggere un file. È ricostruire una scena."
+  },
+  "sections": [
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_intro",
+      "title": "Introduzione",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Spesso immaginiamo la memoria come un disco rigido: registriamo, archiviamo, rileggiamo. Il cervello non funziona così. Ogni volta che ricordi, **ricostruisci** una scena partendo da frammenti."
+        },
+        {
+          "type": "paragraph",
+          "text": "È potente... e fallibile. Comprendere questo significa capire perché dimentichiamo, perché commettiamo errori e perché impariamo."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p1",
+      "title": "Diversi ricordi, non uno solo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "human_brain_anatomy",
+          "ratio": "4:3",
+          "caption": "Diverse aree del cervello gestiscono diverse forme di memoria."
+        },
+        {
+          "type": "paragraph",
+          "text": "Innanzitutto c'è lo : quello che tieni “in mente” per qualche secondo, come un numero di telefono. È limitato, in media circa **7 elementi**. Poi, **la memoria a lungo finisce**: fatti, ricordi di eventi, abilità come andare in bicicletta. [[La memoria di lavoro]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Questi sistemi non vivono tutti nello stesso posto nel cervello. La **corteccia prefrontale**, la parte anteriore del cervello dietro la fronte, aiuta molto con la memoria di lavoro. Altre regioni, come la **neocorteccia**, lo strato esterno del cervello, immagazzinano a lungo termine."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p2",
+      "title": "Come si fissa un ricordo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "hippocampus_brain_anatomy_scan",
+          "ratio": "4:3",
+          "caption": "L'ippocampo, una struttura profonda, aiuta a formare nuovi ricordi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Affinché le informazioni passino da fragili a durevoli, il cervello deve rafforzare le connessioni tra i **neuroni**, le cellule nervose. Stiamo parlando di **consolidamento**, la trasformazione di un ricordo recente in una traccia duratura. Una piccola struttura chiamata **ippocampo**, a forma di cavalluccio marino nel lobo temporale, svolge un ruolo chiave nella memoria degli eventi."
+        },
+        {
+          "type": "funFact",
+          "text": "Il sonno, soprattutto in alcune fasi, aiuta a consolidare quanto appreso durante la giornata. Ripassare e poi dormire spesso funziona meglio che ripassare fino alle 3 del mattino."
+        },
+        {
+          "type": "paragraph",
+          "text": "Una regola famosa, legata al ricercatore **Donald Hebb**: i neuroni che si attivano insieme tendono a connettersi più forte. In sintesi: “ciò che illumina insieme lega insieme”. Questo è il principio della **neuroplasticità**, la capacità del cervello di modificare le proprie connessioni."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p3",
+      "title": "Ricordare è modificare",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Quando richiami un ricordo, diventa temporaneamente **malleabile**, modificabile. Possono scivolare dettagli del presente. Poi il cervello li immagazzina di nuovo. Ecco perché due testimoni dello stesso incidente possono raccontare versioni diverse."
+        },
+        {
+          "type": "paragraph",
+          "text": "Possiamo anche creare **falsi ricordi**: scene che crediamo vere, ma che non sono mai accadute, o non così. Il cervello riempie le lacune con ciò che già sa."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p4",
+      "title": "Dimenticare non è sempre un fallimento",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Se ricordassi ogni dettaglio non necessario, saresti saturo. Dimenticare ci aiuta a generalizzare, a decidere, a conservare l'essenziale. Una buona memoria seleziona tanto quanto conserva."
+        },
+        {
+          "type": "takeaway",
+          "text": "La memoria è una ricostruzione attiva, non una registrazione perfetta. Si basa su diversi sistemi, si consolida soprattutto durante il sonno e può deformarsi ad ogni sollecito."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "id": "course_147_l_architecture_gothique_les_cathedrales",
+  "title": "L'architecture gothique : les cathédrales",
+  "subtitle": "XIIe-XVIe siècle",
+  "subject": "art",
+  "subcategory": "Cinéma, photo & architecture",
+  "description": "Du XIIe au XVIe siècle, les cathédrales gothiques font monter la pierre vers le ciel. Arc brisé, ogives, vitraux : une révolution technique au service de la lumière.",
+  "hero": {
+    "image": "l_architecture_gothique_les_cathedrales",
+    "ratio": "16:9",
+    "hook": "Comment le Moyen Âge a fait voler la pierre pour laisser entrer Dieu en lumière."
+  },
+  "sections": [
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Entre le XIIe et le XVIe siècle, l'Europe se couvre de **cathédrales gothiques**. Ce ne sont pas seulement des églises. Ce sont des défis d'ingénierie : des vaisseaux de pierre qui semblent défier la pesanteur pour laisser entrer la lumière." },
+        { "type": "paragraph", "text": "Le mot « gothique » naîtra plus tard comme une insulte, « art des Goths ». Pourtant, ce style marie foi, prospérité urbaine et audace technique. Il domine encore nos centres-villes." }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p1",
+      "title": "Saint-Denis : la pierre apprend à s'alléger",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le gothique naît en **Île-de-France** vers **1140**. Le choc fondateur est le chœur de la [[basilique de Saint-Denis]], porté par l'[[abbé Suger]]. Face aux églises romanes sombres aux murs épais, Suger veut un espace plus uni, plus clair, plus haut." },
+        { "type": "image", "asset": "saint_denis_basilica_gothic_abbot_suger", "ratio": "4:3", "caption": "Saint-Denis : le laboratoire où le gothique apprend à monter." },
+        { "type": "paragraph", "text": "Trois inventions travaillent ensemble : l'**arc brisé**, plus haut et plus étroit ; la **voûte d'ogives**, qui concentre le poids sur des points précis ; et l'[[arc-boutant]], un arc extérieur qui contrebalance les poussées. Ensemble, [[L'arc-boutant et la voûte d'ogives]] libèrent les murs : on peut y ouvrir de vastes fenêtres." }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p2",
+      "title": "La lumière comme langage divin",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Pour Suger, la lumière n'est pas un détail décoratif. Selon la [[La théologie de la lumière (abbé Suger)]], les rayons colorés aident l'âme à s'élever vers Dieu. Les murs deviennent des **vitraux**. Dans une société où beaucoup ne savent pas lire, ces images racontent la Bible et la vie de la cité." },
+        { "type": "funFact", "text": "À **Chartres**, certains vitraux du XIIIe siècle ont gardé un bleu si intense qu'on parle encore du « bleu de Chartres » : une couleur devenue signature." },
+        { "type": "paragraph", "text": "La cathédrale n'est plus une forteresse de pierre. Elle devient une cage de lumière." }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p3",
+      "title": "Un chantier qui dure des siècles",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Construire une cathédrale prend souvent plus de **deux siècles**. Guerres, épidémies, argent qui manque : le chantier avance par à-coups. **Notre-Dame de Paris** commence en **1163** et trouve sa forme vers **1345**, après environ 180 ans." },
+        { "type": "image", "asset": "notre_dame_de_paris_cathedral_facade", "ratio": "4:3", "caption": "Notre-Dame de Paris : un chantier médiéval devenu symbole national." },
+        { "type": "paragraph", "text": "Toute la ville travaille : tailleurs de pierre, charpentiers, verriers. Extraire la pierre, transporter le bois, nourrir les équipes : la cathédrale est aussi une machine économique." }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p4",
+      "title": "Du gothique flamboyant au néo-gothique",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le style évolue : gothique classique (Chartres, Amiens), puis rayonnant (Sainte-Chapelle), puis flamboyant, plus décoratif. Au XIXe siècle, l'Europe le redécouvre avec le **néo-gothique**. Des chantiers inachevés reprennent, comme **Cologne**, terminée en **1880**." },
+        { "type": "timeline", "events": [
+          { "date": "1140", "title": "Saint-Denis", "detail": "Suger lance le chœur qui ouvre l'ère gothique." },
+          { "date": "1163", "title": "Notre-Dame de Paris", "detail": "Début d'un chantier de près de deux siècles." },
+          { "date": "XIIIe s.", "title": "Apogée", "detail": "Chartres, Amiens, Reims imposent le modèle classique." },
+          { "date": "XIXe s.", "title": "Néo-gothique", "detail": "L'Europe restaure et réinvente le style médiéval." }
+        ] },
+        { "type": "takeaway", "text": "Le gothique a transformé la cathédrale en vaisseau de lumière. En libérant les murs grâce à l'ogive et à l'arc-boutant, le Moyen Âge a inventé une architecture qui parle encore à nos villes." }
+      ]
+    }
+  ]
+}

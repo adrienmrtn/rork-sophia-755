@@ -1,0 +1,68 @@
+{
+  "id": "course_203_les_tensions_autour_de_taiwan",
+  "title": "Les tensions autour de Taïwan",
+  "subtitle": "23 millions d'habitants, une planète dépendante",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Conflits & géopolitique",
+  "description": "Une île de 36 000 km² fabrique la plupart des puces électroniques du monde. Voilà pourquoi **Taïwan** est l'un des points les plus dangereux de la planète.",
+  "hero": {
+    "image": "les_tensions_autour_de_taiwan",
+    "ratio": "16:9",
+    "hook": "Une petite île fabrique les puces qui font tourner le monde entier, et Pékin la revendique comme sa province."
+  },
+  "sections": [
+    {
+      "id": "course_203_les_tensions_autour_de_taiwan_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "**Taïwan** est considérée comme l'un des points les plus dangereux du XXIe siècle. Pour la Chine, cette île n'est qu'une province rebelle qui doit un jour « revenir » dans le giron national. Pour ses 23 millions d'habitants, c'est une démocratie souveraine, née d'une guerre civile que le reste du monde a presque oubliée." },
+        { "type": "paragraph", "text": "Au-delà des questions d'identité, Taïwan est devenue le cœur battant de l'économie numérique mondiale. C'est ce qui rend un éventuel conflit armé si effrayant : il ne menacerait pas seulement l'Asie, mais toutes les usines et tous les smartphones de la planète." }
+      ]
+    },
+    {
+      "id": "course_203_les_tensions_autour_de_taiwan_p1",
+      "title": "L'héritage de 1949 : la fracture des deux Chines",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Tout part de la **guerre civile chinoise**, qui oppose les communistes de Mao Zedong aux nationalistes du **[[Kuomintang]]**, menés par Chiang Kai-shek. En 1949, écrasés par la victoire communiste, les nationalistes se réfugient sur l'île de Taïwan, avec les trésors de la Cité interdite et les structures de leur État." },
+        { "type": "image", "asset": "chiang_kai_shek_taiwan_1949_nationalists", "ratio": "4:3", "caption": "En 1949, les nationalistes du Kuomintang se replient sur l'île de Taïwan après leur défaite face aux communistes." },
+        { "type": "paragraph", "text": "Pendant des décennies, deux gouvernements se disputent le titre de seul représentant légitime de la Chine. La bascule se produit en 1971, quand l'ONU retire son siège à Taipei pour le donner à Pékin. Taïwan se retrouve isolée diplomatiquement, tout en conservant sa monnaie, son armée et un gouvernement élu." },
+        { "type": "funFact", "text": "Le Kuomintang a emporté tant d'œuvres d'art en fuyant le continent en 1949 que le musée national du Palais, à Taipei, possède aujourd'hui l'une des plus riches collections d'art chinois au monde." }
+      ]
+    },
+    {
+      "id": "course_203_les_tensions_autour_de_taiwan_p2",
+      "title": "Le bouclier de silicium : TSMC et l'enjeu mondial",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Isolée sur le plan diplomatique, Taïwan opère une métamorphose économique spectaculaire. L'île se spécialise dans la haute technologie, donnant naissance en 1987 à **[[TSMC]]**, devenue le cœur de l'industrie mondiale des semi-conducteurs, avec plus de 90 % des puces les plus avancées." },
+        { "type": "image", "asset": "tsmc_semiconductor_factory_taiwan_chips", "ratio": "4:3", "caption": "TSMC fabrique à Taïwan la grande majorité des puces électroniques les plus avancées du monde." },
+        { "type": "paragraph", "text": "Cette suprématie crée un « bouclier de silicium ». Le monde entier dépend tellement des usines taïwanaises qu'une invasion paralyserait les chaînes de production mondiales, de l'intelligence artificielle à l'automobile." },
+        { "type": "paragraph", "text": "Cette réussite s'accompagne d'une transition politique majeure. Après des décennies de régime autoritaire, Taïwan devient l'une des démocraties les plus libérales d'Asie. En 1996, ses premières élections au **suffrage universel direct** marquent une rupture avec le modèle chinois." }
+      ]
+    },
+    {
+      "id": "course_203_les_tensions_autour_de_taiwan_p3",
+      "title": "L'ambiguïté stratégique américaine",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "La survie de Taïwan repose sur un jeu diplomatique subtil orchestré par Washington. Depuis une loi de 1979, les États-Unis pratiquent l'**[[Ambiguïté stratégique américaine]]** : ils reconnaissent officiellement Pékin, mais fournissent à Taïwan les moyens de sa défense, sans jamais dire clairement s'ils interviendraient militairement en cas d'attaque." },
+        { "type": "paragraph", "text": "Cet équilibre fragile poursuit deux buts : dissuader Pékin d'attaquer par crainte d'une riposte américaine, et dissuader Taipei de déclarer une indépendance officielle qui déclencherait la guerre. Mais cet équilibre est de plus en plus mis à l'épreuve par les incursions répétées d'avions militaires chinois dans la zone de défense aérienne de l'île, la **ZIDA**." },
+        { "type": "image", "asset": "taiwan_china_military_incursions_aircraft", "ratio": "16:9", "caption": "Les incursions d'avions militaires chinois dans l'espace aérien taïwanais se sont multipliées ces dernières années." },
+        { "type": "paragraph", "text": "Les discours de Xi Jinping, affirmant que la question de Taïwan ne peut être transmise indéfiniment aux générations suivantes, inquiètent les observateurs. Les États-Unis, eux, tendent à clarifier peu à peu leur soutien, ce qui augmente le risque d'une confrontation directe entre les deux superpuissances." }
+      ]
+    },
+    {
+      "id": "course_203_les_tensions_autour_de_taiwan_p4",
+      "title": "Défis contemporains et souveraineté",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le conflit ne se limite plus aux missiles : il s'étend au cyberespace et à la désinformation. Taïwan subit chaque jour des millions de cyberattaques destinées à déstabiliser sa démocratie. L'enjeu est aussi symbolique : Taïwan prouve qu'un monde chinois peut prospérer sous un régime démocratique." },
+        { "type": "paragraph", "text": "La situation est compliquée par l'interdépendance économique : la Chine reste le premier partenaire commercial de l'île, ce qui freine l'escalade. Chez la jeune génération, le sentiment d'appartenir à une nation distincte progresse, tandis que Pékin durcit sa diplomatie depuis l'intégration forcée de Hong Kong." },
+        { "type": "funFact", "text": "En 2021, après un embargo chinois sur ses produits, Taïwan a lancé la campagne des « ananas de la liberté » : une consommation massive d'ananas locaux qui a transformé le fruit en symbole de résistance." },
+        { "type": "takeaway", "text": "Taïwan est le plus grand paradoxe géopolitique actuel : un territoire non reconnu par l'ONU, mais devenu indispensable à la survie technologique et économique de toutes les grandes puissances mondiales." }
+      ]
+    }
+  ]
+}

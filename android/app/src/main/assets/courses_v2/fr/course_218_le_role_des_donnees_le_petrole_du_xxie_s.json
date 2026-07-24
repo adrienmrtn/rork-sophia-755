@@ -1,0 +1,108 @@
+{
+  "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s",
+  "title": "Le rôle des données (le « pétrole du XXIe siècle »)",
+  "subtitle": "La ressource la plus précieuse du numérique",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Économie & société",
+  "description": "On dit que les données sont le nouveau pétrole. Mais contrairement au pétrole, elles ne s'épuisent jamais, et deviennent plus précieuses à mesure qu'on les croise.",
+  "hero": {
+    "image": "le_role_des_donnees",
+    "ratio": "16:9",
+    "hook": "Facebook peut deviner qu'une personne va se marier ou déménager avant même qu'elle en soit consciente."
+  },
+  "sections": [
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Une phrase s'est imposée depuis les années 2010 : les **données** seraient « le pétrole du XXIe siècle ». L'idée est simple : une fois raffinées par des algorithmes, elles deviennent le moteur de la croissance et de la puissance mondiale."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mais contrairement au pétrole, une ressource qui s'épuise, la donnée ne se consomme jamais : elle peut être copiée à l'infini, et devient plus précieuse à mesure qu'on la croise avec d'autres informations. Voici pourquoi elle a redessiné l'économie mondiale."
+        }
+      ]
+    },
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p1",
+      "title": "Prédire nos comportements avant nous-mêmes",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La vraie valeur des données ne réside pas dans une simple liste de noms ou d'adresses, mais dans leur capacité à prédire nos comportements futurs. Chaque recherche, chaque déplacement, chaque clic laisse une trace que les entreprises technologiques rassemblent pour dresser un portrait très précis de chaque personne."
+        },
+        {
+          "type": "funFact",
+          "text": "Facebook peut repérer un changement de vie important, comme un mariage ou un déménagement à venir, avant même que la personne concernée n'en soit pleinement consciente, en détectant de petites variations dans ses habitudes en ligne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cette exploitation systématique de nos comportements a donné naissance à ce que la chercheuse Shoshana Zuboff appelle le **capitalisme de surveillance** : l'humain n'est plus seulement un client, il devient la matière première d'un système qui vend des prédictions au plus offrant."
+        }
+      ]
+    },
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p2",
+      "title": "Pourquoi ces géants sont presque impossibles à concurrencer",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L'économie des données fonctionne par cercle vertueux : plus une entreprise possède de données, plus son service s'améliore, ce qui attire davantage d'utilisateurs, qui génèrent encore plus de données. L'intelligence artificielle a accéléré ce phénomène : un algorithme de [[machine learning]] entraîné sur des milliards d'exemples devient plus précis et plus rapide à améliorer qu'un concurrent aux ressources limitées."
+        },
+        {
+          "type": "image",
+          "asset": "artificial_intelligence_machine_learning_datacenter",
+          "ratio": "16:9",
+          "caption": "Les centres de données consomment autant d'électricité que des villes entières pour traiter ces flux massifs d'information."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ces géants, les [[GAFAM]] aux États-Unis et les BATX en Chine, ne se contentent plus de dominer leur secteur d'origine : ils utilisent leur avance dans les données pour s'étendre vers la santé, la finance ou la voiture connectée, verrouillant l'accès à l'innovation dans de nombreux domaines."
+        }
+      ]
+    },
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p3",
+      "title": "L'Europe contre-attaque avec le RGPD",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Face à cette puissance, l'Union européenne a instauré en 2018 le [[RGPD]], un règlement qui redonne en théorie le pouvoir aux citoyens sur leurs propres informations personnelles : transparence, droit à l'oubli, consentement obligatoire."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sa force vient de son extraterritorialité : toute entreprise qui manipule les données de citoyens européens doit s'y conformer, sous peine d'amendes pouvant atteindre 4% de son chiffre d'affaires mondial. Cela a forcé des géants comme Meta ou Amazon à revoir leurs pratiques dans le monde entier, faisant de l'Europe un régulateur mondial malgré elle."
+        },
+        {
+          "type": "funFact",
+          "text": "Avant l'obligation de clarté imposée par le RGPD, il aurait fallu environ 76 jours de travail à une personne ordinaire pour lire toutes les conditions d'utilisation des services numériques qu'elle utilise en une seule année."
+        }
+      ]
+    },
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p4",
+      "title": "Les données, un enjeu de souveraineté",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Au-delà de l'économie, la donnée est devenue un outil de pouvoir pour les États eux-mêmes, qui peuvent s'en servir pour surveiller leur population ou orienter l'opinion publique. Les pays incapables de protéger les données de leurs citoyens risquent une forme de dépendance technologique, ce que l'on appelle une atteinte à la [[souveraineté numérique]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le grand défi des prochaines décennies sera de trouver un équilibre entre le progrès permis par l'analyse des données à grande échelle, et le respect de la vie privée, condition essentielle de la liberté individuelle dans une société toujours plus connectée."
+        },
+        {
+          "type": "takeaway",
+          "text": "Les données sont devenues un actif stratégique dont la valeur vient de leur capacité à prédire nos comportements. Cette économie favorise des géants technologiques quasi impossibles à concurrencer, ce à quoi l'Europe répond par une régulation stricte : le RGPD."
+        }
+      ]
+    }
+  ]
+}

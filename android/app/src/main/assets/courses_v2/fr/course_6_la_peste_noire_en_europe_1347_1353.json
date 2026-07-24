@@ -1,0 +1,71 @@
+{
+  "id": "course_6_la_peste_noire_en_europe_1347_1353",
+  "title": "La Peste noire en Europe",
+  "subtitle": "1347-1353",
+  "subject": "histoire",
+  "subcategory": "Antiquité & Moyen Âge",
+  "description": "Entre 1347 et 1353, la peste bubonique tue 30 à 60 % des Européens. Une catastrophe sanitaire qui ébranle la société médiévale et accélère le basculement vers un monde nouveau.",
+  "hero": {
+    "image": "la_peste_noire_en_europe",
+    "ratio": "16:9",
+    "hook": "En six ans, l'Europe perd jusqu'à la moitié de sa population."
+  },
+  "sections": [
+    {
+      "id": "course_6_la_peste_noire_en_europe_1347_1353_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Entre **1347** et **1353**, l'Europe est frappée par la **Peste noire**. Causée par la bactérie **Yersinia pestis**, elle tue entre **30 et 60 %** de la population, soit **25 à 50 millions** de personnes." },
+        { "type": "paragraph", "text": "Les Européens sont déjà affaiblis par les famines du [[Petit Âge Glaciaire]], un refroidissement du climat qui a gâché les récoltes. Le fléau n'est pas seulement une crise sanitaire. C'est un accélérateur d'histoire : il ébranle l'ordre seigneurial et force la société à se reconstruire autrement." }
+      ]
+    },
+    {
+      "id": "course_6_la_peste_noire_en_europe_1347_1353_p1",
+      "title": "De l'Asie à l'Italie",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "La bactérie circule d'abord chez les rongeurs d'Asie centrale. La [[Pax Mongolica]], période de relative paix sous l'Empire mongol, et la [[Route de la Soie]], réseau commercial reliant l'Asie à l'Europe, lui offrent des voies sûres. Au comptoir génois de [[Caffa]], en Crimée, assiégé par la [[Horde d'Or]] (un empire mongol des steppes), la maladie bascule vers la Méditerranée. Des galères fuient vers l'Italie." },
+        { "type": "image", "asset": "black_death_burial_medieval_plague", "ratio": "4:3", "caption": "Enterrements de peste : l'Europe découvre une mort de masse." },
+        { "type": "paragraph", "text": "En **octobre 1347**, elles accostent à **Messine**, en Sicile. Malgré l'expulsion des navires, le mal est déjà à quai. En **1348**, il gagne Marseille, puis toute l'Europe via les réseaux des marchands italiens." },
+        { "type": "funFact", "text": "Le siège de Caffa est souvent cité comme l'un des premiers exemples de guerre biologique : les Mongols auraient catapulté des cadavres infectés par-dessus les murs." }
+      ]
+    },
+    {
+      "id": "course_6_la_peste_noire_en_europe_1347_1353_p2",
+      "title": "Une médecine impuissante",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Les médecins s'appuient sur [[Galien]], un médecin grec de l'Antiquité, et sur la [[Théorie des miasmes]] : l'idée que les maladies viennent d'un air corrompu. Ils ne voient pas le vrai vecteur, la puce du rat ([[Xenopsylla cheopis]]). Quand les rats meurent, les puces passent à l'homme." },
+        { "type": "image", "asset": "plague_doctor_mask_beak", "ratio": "4:3", "caption": "Le médecin de peste au masque en bec : une protection plus symbolique qu'efficace." },
+        { "type": "paragraph", "text": "La forme bubonique gonfle les ganglions. La septicémique noircit la peau. La pneumonique, elle, se transmet d'homme à homme et tue en **24 à 48 heures**. Dans des villes surpeuplées et sales, la propagation est très rapide." }
+      ]
+    },
+    {
+      "id": "course_6_la_peste_noire_en_europe_1347_1353_p3",
+      "title": "Peur, flagellants, pogroms",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "La société vacille. Les [[Flagellants]] se fouettent en public pour apaiser Dieu. L'art invente les Danses macabres. Faute d'explication, on cherche des coupables : les [[Pogroms de Juifs (1348-1349)]] ensanglantent la vallée du Rhône et l'Empire germanique. Accusés d'empoisonner les puits, des milliers de Juifs sont massacrés. Le pape [[Clément VI]], alors à Avignon, tente de les protéger. Trop peu, trop tard." },
+        { "type": "funFact", "text": "À Avignon, Clément VI restait entre deux grands feux pour « purifier l'air ». La chaleur tenait les puces à distance : il survécut." },
+        { "type": "paragraph", "text": "[[Boccace]], écrivain florentin, décrit des pères abandonnant leurs fils. La charité, le voisinage, la famille : tout craque sous la peur de la contagion." },
+        { "type": "timeline", "events": [
+          { "date": "1346", "title": "Caffa", "detail": "La peste atteint le comptoir génois de Crimée." },
+          { "date": "1347", "title": "Messine", "detail": "Les galères génoises importent le fléau en Europe." },
+          { "date": "1348", "title": "Vague européenne", "detail": "France, Angleterre, Empire : la mort s'étend." },
+          { "date": "1353", "title": "Reflux", "detail": "L'épidémie s'apaise, l'Europe est transformée." }
+        ] }
+      ]
+    },
+    {
+      "id": "course_6_la_peste_noire_en_europe_1347_1353_p4",
+      "title": "Après la mort, le basculement",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Vers **1353**, la pandémie reflue. La main-d'œuvre est devenue rare. Les salaires montent, les corvées baissent, le servage recule en Occident. Les seigneurs doivent négocier. La catastrophe a, paradoxalement, renforcé les survivants." },
+        { "type": "paragraph", "text": "La faillite des autorités face au fléau nourrit aussi l'esprit critique. On observe davantage, on doute des vieux dogmes. En vidant les villages et en redistribuant les héritages, la Peste noire a préparé, malgré elle, le terrain de la Renaissance." },
+        { "type": "takeaway", "text": "Entre **1347** et **1353**, la Peste noire tue jusqu'à la moitié de l'Europe. Ce choc démographique affaiblit l'ordre seigneurial, fait monter le prix du travail et accélère l'entrée dans un monde nouveau." }
+      ]
+    }
+  ]
+}

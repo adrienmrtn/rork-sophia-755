@@ -1,0 +1,112 @@
+{
+  "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr",
+  "title": "¿Por qué existen las estaciones en otros planetas?",
+  "subtitle": "Planetas y órbitas",
+  "subject": "sciences",
+  "subcategory": "La Tierra y el Universo",
+  "description": "En la Tierra, las estaciones provienen de la inclinación del eje. En otros lugares, este mismo principio da inviernos de 42 años... o casi ninguna estación.",
+  "hero": {
+    "image": "pourquoi_les_saisons_existent_sur_d_autres_planetes",
+    "ratio": "16:9",
+    "hook": "Nuestras cuatro estaciones son un caso moderado. En otros lugares, un verano puede durar décadas."
+  },
+  "sections": [
+    {
+      "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_intro",
+      "title": "Introducción",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En la Tierra, el verano y el invierno surgen principalmente de la inclinación **** desde eje: aproximadamente**23,5°**. El Sol incide con más fuerza en un hemisferio que en el otro. Este modelo parece obvio. En el Sistema Solar, es una versión más bien moderada."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cada planeta combina su inclinación y la forma de su órbita. Resultado: mundos sin estaciones, otros con contrastes extremos e inviernos que duran décadas."
+        }
+      ]
+    },
+    {
+      "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p1",
+      "title": "Tilt, motor de contrastes",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "El  es el ángulo entre el eje de rotación de un planeta y la perpendicular a su órbita. Cuanto más grande es, más marcadas son las estaciones. [[Oblicuidad]]"
+        },
+        {
+          "type": "image",
+          "asset": "uranus_planet_nasa",
+          "ratio": "auto",
+          "caption": "Urano, con una inclinación de unos 98°, experimenta estaciones extremas que duran 42 años."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Urano** es el caso extremo: inclinación de aproximadamente **98°**, casi acostado. Se necesitan **84 años** para dar la vuelta al Sol. Cada polo recibe entonces casi **42 años** de día continuo, luego **42 años** de noche total. **Marta**, a **25.2°**, se parece a la Tierra, pero su año dura **687 días terrenales**: primavera y otoño de seis meses. **Júpiter** y **Mercurio**, casi rectos, casi no tienen estaciones."
+        },
+        {
+          "type": "funFact",
+          "text": "En Urano y Neptuno, presiones extremas podrían \"llover\" diamantes formados a partir del carbono atmosférico."
+        }
+      ]
+    },
+    {
+      "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p2",
+      "title": "Cuando la distancia al Sol también importa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En la Tierra, la órbita es casi circular: la distancia al Sol varía poco. Por tanto, no es lo que determina el verano o el invierno, sino el ángulo de los rayos."
+        },
+        {
+          "type": "paragraph",
+          "text": "En **Marta**, la órbita es mucho más ovalada, más **excéntrico**: de **207 a 249 millones de kilómetros**. En el hemisferio sur, el verano cae cerca de , el punto más cercano al Sol. Veranos más cortos, pero más cálidos. Este choque térmico a veces desencadena tormentas de polvo planetarias **** que oscurecen el cielo. [[<perihelio>]]"
+        },
+        {
+          "type": "funFact",
+          "text": "En **2018**, una tormenta marciana estacional detuvo permanentemente al rover Opportunity al bloquear el Sol."
+        }
+      ]
+    },
+    {
+      "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p3",
+      "title": "Venus, Mercurio, Saturno: otras reglas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Mercurio**, sin atmósfera ni inclinación real, vive principalmente en **** extremos diarios: **430 °C**en el suelo,**-180 °C** por la noche. **Venus**soñaba, de este a oeste, con una inclinación extrema, pero por su monstruosa**efecto invernadero atrapa el calor en la atmósfera e iguala la temperatura hacia **Z460** °C** en todas partes, todo el tiempo. [[Rotación retrógrada]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Saturno**, inclinado como la Tierra, tiene estaciones de aproximadamente **7 años**. El ángulo del  cambia la luz que recibe cada hemisferio e incluso cambia el color de las nubes. [[<anillos de Saturno>]]"
+        },
+        {
+          "type": "funFact",
+          "text": "En Venus, un día, su rotación dura más de un año, su revolución: **243** días terrestres contra **225**."
+        }
+      ]
+    },
+    {
+      "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p4",
+      "title": "¿Por qué la Tierra tiene estaciones estables?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sin la **Luna**, la inclinación de la Tierra oscilaría caóticamente entre 0° y más de 80° durante millones de años. Las estaciones tipo Urano harían el clima casi inhabitable. La Luna actúa como **estabilizador gravitacional**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Al buscar  habitables, los astrónomos también se fijan en la estabilidad del eje. Las estaciones templadas y regulares no son un detalle: son parte de las condiciones para una vida sostenible. [[<exoplanetas>]]"
+        },
+        {
+          "type": "takeaway",
+          "text": "Las estaciones surgen principalmente de la inclinación del eje. En Urano duran décadas; en Marte, la órbita ovalada los hace asimétricos. La Luna protege a los que están en la Tierra."
+        }
+      ]
+    }
+  ]
+}

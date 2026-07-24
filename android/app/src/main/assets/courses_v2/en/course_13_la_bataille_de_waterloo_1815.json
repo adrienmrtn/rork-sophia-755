@@ -1,0 +1,134 @@
+{
+  "id": "course_13_la_bataille_de_waterloo_1815",
+  "title": "The Battle of Waterloo",
+  "subtitle": "1815",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "**June 18, 1815**, in one rainy day in Belgium, Napoleon's Empire collapsed. Waterloo closes the Hundred Days and opens a century of monarchical order in Europe.",
+  "hero": {
+    "image": "la_bataille_de_waterloo_1815",
+    "ratio": "16:9",
+    "hook": "One day of mud in Belgium, and the Empire collapses for good."
+  },
+  "sections": [
+    {
+      "id": "course_13_la_bataille_de_waterloo_1815_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**June 18, 1815**, near the village of **Waterloo**, in Belgium, the destiny of Europe is being played out in the rain. **Napoleon** faces two enemies at once: the British **Arthur Wellesley**, Duke of **Wellington**, and the Prussian **Gebhard von Blücher**."
+        },
+        {
+          "type": "paragraph",
+          "text": "It's not just a defeat. It is the end of the First Empire. In one day, the man who had dominated Europe was shattered by mud, mistakes and an alliance that finally held together."
+        }
+      ]
+    },
+    {
+      "id": "course_13_la_bataille_de_waterloo_1815_p1",
+      "title": "The return from the island of Elba",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "After his abdication of **April 1814**, Napoleon was exiled to the island of **Elbe**, off the coast of Italy. The winners redesign Europe at . **March 1, 1815**, he landed near Antibes. It's the beginning of the **Hundred Days**: the troops sent to stop him rally. He retakes Paris without bloodshed. [[The Congress of Vienna (1814-1815)]]"
+        },
+        {
+          "type": "image",
+          "asset": "napoleon_return_from_elba_1815",
+          "ratio": "4:3",
+          "caption": "The return of the island of Elba: Napoleon regains power."
+        },
+        {
+          "type": "funFact",
+          "text": "Napoleon and Wellington had never met before Waterloo. The Belgian battlefield was their only face-to-face encounter."
+        },
+        {
+          "type": "paragraph",
+          "text": "Europe declared him “outlaw”. His plan: use the . The idea is simple. Place yourself between Wellington and Blücher, beat them one after the other, before they come together. [[Central position]]"
+        }
+      ]
+    },
+    {
+      "id": "course_13_la_bataille_de_waterloo_1815_p2",
+      "title": "Two days before: Ligny and Quatre-Bras",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "On **June 16**, Napoleon defeated the Prussians at **Ligny**, a Belgian village. The same day, , one of his bravest generals, held the British at **Quatre-Bras**, a strategic crossroads. But Napoleon believes the Prussians are out of action. He detaches Marshal **Grouchy** with **33,000 men** to pursue them. [[Marshal Ney]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Some historians attribute the delay on the morning of June 18 to an attack of hemorrhoids which would have prevented Napoleon from riding on horseback for his usual reconnaissance."
+        },
+        {
+          "type": "paragraph",
+          "text": "The **18**, after a night of rain, he waits **11:30 a.m.** for the ground to dry. He wants to move his , a massive concentration of cannons. This delay gives Blücher time to walk towards the sound of the cannon. [[Large Battery]]"
+        }
+      ]
+    },
+    {
+      "id": "course_13_la_bataille_de_waterloo_1815_p3",
+      "title": "The day that broke the Empire",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The battle begins around fortified farms: **Hougoumont** and the **Holy Hedge**. Ney's charges broke on the British , infantry formations in a rectangle, bayonets outwards. Around **4:30 p.m.**, the Prussians appear on the French right flank. Grouchy stays too far away. [[Square]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "As a last resort, Napoleon launched the **Imperial Guard**, his elite unit. For the first time, she steps back. The cry “The Guard retreats!” » triggers panic. Retirement becomes rout. Wellington and Blücher join at the **Belle-Alliance**."
+        }
+      ]
+    },
+    {
+      "id": "course_13_la_bataille_de_waterloo_1815_p4",
+      "title": "The final exile and the Europe of kings",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Napoleon abdicated on **June 22, 1815**. Exiled to **Saint Helena**, an isolated island in the South Atlantic, he died in **1821**. The Congress of Vienna imposes the : putting the royal dynasties back on their thrones. Russia, Austria and Prussia border the continent. This “European Concert” maintains relative peace until **1914**. [[Legitimacy]]"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "March 1, 1815",
+              "title": "Return from Elba",
+              "detail": "Beginning of the Hundred Days."
+            },
+            {
+              "date": "June 16, 1815",
+              "title": "Ligny and Quatre-Bras",
+              "detail": "Partial victory, but the Prussians are not crushed."
+            },
+            {
+              "date": "June 18, 1815",
+              "title": "Waterloo",
+              "detail": "Decisive defeat against Wellington and Blücher."
+            },
+            {
+              "date": "June 22, 1815",
+              "title": "Second abdication",
+              "detail": "Final end of the Empire."
+            },
+            {
+              "date": "1821",
+              "title": "Death on Saint Helena",
+              "detail": "Napoleon dies in exile."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "**Waterloo** (**June 18, 1815**) finishes off Napoleon. The delay of the attack, the absence of Grouchy and the junction of Wellington with Blücher caused the fall of the Empire and ushered in a century of monarchical order."
+        }
+      ]
+    }
+  ]
+}

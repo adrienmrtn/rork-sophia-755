@@ -1,0 +1,96 @@
+{
+  "id": "course_47_pourquoi_baille_t_on",
+  "title": "Por que bocejamos?",
+  "subtitle": "Corpo e cérebro",
+  "subject": "sciences",
+  "subcategory": "O nosso quotidiano explicado",
+  "description": "Todo mundo boceja: humanos, cachorros, às vezes até fetos. Provavelmente não é por “falta de oxigênio”. Aqui estão as pistas mais fortes.",
+  "hero": {
+    "image": "pourquoi_baille_t_on",
+    "ratio": "16:9",
+    "hook": "Você boceja. Seu vizinho boceja. E (quase) não é contagioso por acaso."
+  },
+  "sections": [
+    {
+      "id": "course_47_pourquoi_baille_t_on_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bocejar parece comum. Porém, é um reflexo complexo: mandíbula, tórax, diafragma, todo o corpo se envolve. Leões, cães, humanos: muitos animais bocejam."
+        },
+        {
+          "type": "paragraph",
+          "text": "Durante muito tempo, dissemos: “é para ter mais oxigênio”. Esta ideia está agora largamente abandonada. As explicações modernas são mais interessantes."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p1",
+      "title": "Não (especialmente) para oxigênio",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Experimentos mostraram que o aumento do oxigênio no ar não evita o bocejo. Abaixe um pouco o dióxido de carbono também. Portanto, bocejar não é um simples “recuperar o ar”."
+        },
+        {
+          "type": "paragraph",
+          "text": "Uma forte vantagem hoje: bocejar ajuda a **regula a temperatura cerebral**. Ao inspirar profundamente e alongar o rosto, vamos “ventilar” e esfriar um pouco a cabeça, principalmente quando estamos cansados."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p2",
+      "title": "Por que é contagioso?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "contagious_yawning_people_group",
+          "ratio": "4:3",
+          "caption": "Ver alguém bocejar costuma ser suficiente para desencadear o reflexo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nos humanos, ver, ouvir ou mesmo ler a palavra “bocejo” pode desencadear um bocejo. Não é apenas uma imitação estúpida: também afeta o **ter empatia** e os circuitos cerebrais ligados ao , neurônios que são ativados quando agimos... ou quando vemos alguém agir. [[Neurônios-espelho e contagiosidade]]"
+        },
+        {
+          "type": "funFact",
+          "text": "As crianças pequenas bocejam pouco devido ao contágio. Essa sensibilidade vem depois, junto com certas habilidades sociais."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p3",
+      "title": "Já bocejamos antes de nascer",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Os fetos bocejam por volta da **11ª semana** de gravidez. Nessa idade, seus pulmões ainda não respiram ar. Então, novamente, não se trata de “ficar sem oxigênio”."
+        },
+        {
+          "type": "paragraph",
+          "text": "No feto, o bocejo pode ajudar no desenvolvimento da mandíbula e dos músculos faciais."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p4",
+      "title": "Bocejar para ficar alerta?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Muitas vezes bocejamos quando estamos cansados... mas também antes de uma prova, ou quando estamos entediados enquanto tentamos manter o foco. O alongamento pode estimular o sistema nervoso e ajudar **ficar alerta**."
+        },
+        {
+          "type": "takeaway",
+          "text": "Bocejar provavelmente não é falta de oxigênio. Serviria antes para regular o cérebro (temperatura, vigilância) e, nos humanos, também se espalha por contágio social."
+        }
+      ]
+    }
+  ]
+}

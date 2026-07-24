@@ -1,0 +1,115 @@
+{
+  "id": "course_109_don_quichotte_cervantes",
+  "title": "Don Quixote, Cervantes",
+  "subtitle": "1605-1615",
+  "subject": "litterature",
+  "subcategory": "Anglo-Saxons & world literature",
+  "description": "Don Quixote attacks windmills while believing he is fighting giants. Cervantes invents the modern novel, between generous madness, irony and metafiction.",
+  "hero": {
+    "image": "don_quichotte_cervantes",
+    "ratio": "16:9",
+    "hook": "A gentleman reads too many chivalric romances and sets out to save the world."
+  },
+  "sections": [
+    {
+      "id": "course_109_don_quichotte_cervantes_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Published in **1605** then **1615**, **Don Quixote** by **Miguel de Cervantes** is often considered the first modern novel of the West. **Alonso Quijano**, a little nobleman from La Mancha, thinks he is a knight-errant and sets off to fight mills that he believes to be giants."
+        },
+        {
+          "type": "paragraph",
+          "text": "Much more than a parody of chivalry novels, the book invents a new way of telling stories: changing characters, permanent doubt, humor and depth mixed together. Cervantes lays the foundations of the psychological novel and the fiction that comments on itself."
+        }
+      ]
+    },
+    {
+      "id": "course_109_don_quichotte_cervantes_p1",
+      "title": "Cervantes: a life of adventure and the birth of the novel",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cervantes leads a life of extraordinary adventures: injured at , where he lost the use of his left hand, captive for five years at **Algiers** after being taken by pirates. Back in Spain, in relative poverty, he published the first part in **1605** with immediate success. **[[Battle of Lepanto (1571) and captivity of Cervantes]]**"
+        },
+        {
+          "type": "image",
+          "asset": "miguel_de_cervantes_portrait_painting",
+          "ratio": "4:3",
+          "caption": "Miguel de Cervantes, soldier, captive and inventor of the modern novel."
+        },
+        {
+          "type": "funFact",
+          "text": "In 1614, an author published a false sequel. Furious, Cervantes wrote the real second part in 1615, where the heroes discovered that they were famous thanks to the first volume."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cervantes criticizes obsolete novels of chivalry, but above all he invents the **narrative polyphony**: each character has his own voice, his perspective, his own irony."
+        }
+      ]
+    },
+    {
+      "id": "course_109_don_quichotte_cervantes_p2",
+      "title": "The founding antagonism: the Knight and the Squire",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Don Quixote** and **Sancho Panza** form an immortal duo. One dreams of chivalry and ideal justice, the other thinks of the belly, wine and the government of a promised island. Sancho tries to correct his master, especially when he attacks windmills which he takes for threatening giants."
+        },
+        {
+          "type": "image",
+          "asset": "don_quixote_windmills_gustave_dore_illustration",
+          "ratio": "4:3",
+          "caption": "Don Quixote and the windmills: the ideal collides with reality."
+        },
+        {
+          "type": "paragraph",
+          "text": "Throughout the journey, Sancho lets himself be seduced by the chivalrous dream while Quixote doubts in the face of repeated humiliations. This mutual “quixotization” and “sanchification” transforms an initial farce into a profound meditation on friendship, the ideal and lucidity."
+        }
+      ]
+    },
+    {
+      "id": "course_109_don_quichotte_cervantes_p3",
+      "title": "Metafiction and the game of realities",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cervantes practices : he claims to translate an Arabic manuscript found in a market. The narrator is doubted, and so is the reader. In the second part, nobles who have read the book organize scenes to deceive the knight. **[[Metafiction and narrative reflexivity]]**"
+        },
+        {
+          "type": "quote",
+          "text": "The pen is the language of the soul; the thoughts she expresses are the words she speaks.",
+          "attribution": "Miguel de Cervantes, Don Quixote"
+        },
+        {
+          "type": "paragraph",
+          "text": "Madness is no longer only in Quixote's head: society also creates it by manipulating him. Identity becomes a story that we tell ourselves and that is imposed on us. Cervantes lays the foundations of the modern psychological novel, several centuries before postmodernism."
+        }
+      ]
+    },
+    {
+      "id": "course_109_don_quichotte_cervantes_p4",
+      "title": "Posterity: from quixotism to universal heritage",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "“Quixotism” designates a generous, sometimes naive, idealism that persists despite failures. **Flaubert**, **Dostoyevsky** and  are inspired by him. The novel accepts ambiguity: no longer a single imposed Truth, but conflicting truths carried by individuals. **[[James Joyce]]**"
+        },
+        {
+          "type": "paragraph",
+          "text": "Defeated by the **Knight of the White Moon**, Don Quixote regains his sanity and dies in **Alonso Quijano the Good**. Final paradox: reason is necessary to live in society, but imagination gives a heroic meaning to ordinary existence."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Don Quixote** invents the modern novel by playing between illusion and reality. Cervantes shows that one can be mad and lucid at the same time, and that the ideal transforms the world, even when it fails."
+        }
+      ]
+    }
+  ]
+}

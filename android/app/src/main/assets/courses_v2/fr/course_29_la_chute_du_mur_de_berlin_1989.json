@@ -1,0 +1,135 @@
+{
+  "id": "course_29_la_chute_du_mur_de_berlin_1989",
+  "title": "La chute du mur de Berlin",
+  "subtitle": "1989",
+  "subject": "histoire",
+  "subcategory": "Guerre froide & monde contemporain",
+  "description": "Dans la nuit du **9 au 10 novembre 1989**, des Berlinois démontent à mains nues le mur qui divisait leur ville depuis **28 ans**. Un malentendu télévisé accélère la fin de la Guerre froide.",
+  "hero": {
+    "image": "la_chute_du_mur_de_berlin_1989",
+    "ratio": "16:9",
+    "hook": "Le mur le plus surveillé du monde tombe… après une phrase lâchée par erreur à la télévision."
+  },
+  "sections": [
+    {
+      "id": "course_29_la_chute_du_mur_de_berlin_1989_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dans la nuit du **9 au 10 novembre 1989**, des Berlinois de l'Est et de l'Ouest s'attaquent au mur qui fracturait leur ville depuis **28 ans**. Ce moment marque l'effondrement symbolique du [[rideau de fer]], la frontière qui coupait l'Europe en deux."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce n'est pas seulement une fête populaire. C'est le résultat d'une économie socialiste à bout de souffle, d'un nouveau cours soviétique… et d'une conférence de presse ratée qui ouvre les frontières trop tôt."
+        }
+      ]
+    },
+    {
+      "id": "course_29_la_chute_du_mur_de_berlin_1989_p1",
+      "title": "Un mur pour arrêter un peuple",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Après 1945, Berlin est découpé en zones. Entre **1949** et **1961**, plus de **3 millions** d'habitants de la [[RDA]], la République démocratique allemande (Allemagne de l'Est), fuient vers l'Ouest via Berlin. Souvent jeunes et qualifiés. Pour stopper l'hémorragie, des barbelés sont posés dans la nuit du **12 au 13 août 1961**, puis un mur de **155 km**."
+        },
+        {
+          "type": "image",
+          "asset": "fall_of_berlin_wall_1989",
+          "ratio": "4:3",
+          "caption": "La chute du mur de Berlin, novembre 1989."
+        },
+        {
+          "type": "funFact",
+          "text": "Le régime est-allemand appelle officiellement le mur « Rempart de protection antifasciste », prétendant empêcher les espions d'entrer… plutôt que ses citoyens de sortir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Miradors, mines, chiens : **138** personnes sont tuées en tentant de passer. Berlin-Ouest devient une vitrine capitaliste enclavée. Le mur est le visage de béton de la Guerre froide."
+        }
+      ]
+    },
+    {
+      "id": "course_29_la_chute_du_mur_de_berlin_1989_p2",
+      "title": "L'été où tout craque",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Avec **Mikhaïl Gorbatchev**, le dirigeant soviétique, l'URSS refuse d'écraser ses satellites comme en 1968 lors du [[Le Printemps de Prague (août 1968)]]. Les réformes de [[Glasnost et Perestroïka]], transparence et restructuration, déstabilisent le bloc. En mai **1989**, la Hongrie ouvre sa frontière avec l'Autriche : première brèche réelle dans le rideau de fer."
+        },
+        {
+          "type": "paragraph",
+          "text": "À Leipzig, les manifestations du lundi scandent « Wir sind das Volk » (« Nous sommes le peuple »). [[Erich Honecker]], le chef de la RDA, qui avait promis que le mur durerait encore « 50 ou 100 ans », est remplacé en octobre. Trop tard : le mouvement est déjà irrésistible."
+        }
+      ]
+    },
+    {
+      "id": "course_29_la_chute_du_mur_de_berlin_1989_p3",
+      "title": "9 novembre : l'erreur de Schabowski",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le **9 novembre**, le porte-parole **Günter Schabowski** lit en direct une note qu'il n'a pas eue le temps d'étudier. Quand on lui demande quand les nouvelles règles de voyage s'appliquent, il lâche : « Immédiatement, sans délai. » En réalité, c'était prévu pour le lendemain."
+        },
+        {
+          "type": "image",
+          "asset": "crowd_west_berlin_november_9_1989",
+          "ratio": "4:3",
+          "caption": "Foule à Berlin-Ouest, nuit du 9 novembre 1989."
+        },
+        {
+          "type": "funFact",
+          "text": "En **1988**, Bruce Springsteen chante à Berlin-Est devant **300 000** personnes. Beaucoup voient dans ce concert un moment d'éveil pour la jeunesse de l'Est."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les Berlinois se ruent vers les checkpoints, les postes-frontières. Les gardes, sans consignes, finissent par ouvrir. Vers 23 h 30, à Bornholmer Strasse, les barrières cèdent. L'unité allemande se joue dans la rue."
+        }
+      ]
+    },
+    {
+      "id": "course_29_la_chute_du_mur_de_berlin_1989_p4",
+      "title": "De Berlin à la fin d'un monde",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sous l'impulsion d'**Helmut Kohl**, chancelier de l'Allemagne de l'Ouest, l'Allemagne est réunifiée le **3 octobre 1990**. Le choc emporte la Pologne, la Tchécoslovaquie ([[révolution de Velours]]), la Bulgarie, la Roumanie. L'URSS elle-même disparaît en décembre **1991**."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "13 août 1961",
+              "title": "Construction du mur",
+              "detail": "Berlin-Est se verrouille pour stopper l'exode."
+            },
+            {
+              "date": "été 1989",
+              "title": "Brèche hongroise",
+              "detail": "Ouverture de la frontière avec l'Autriche."
+            },
+            {
+              "date": "9 nov. 1989",
+              "title": "Chute du mur",
+              "detail": "Erreur de communication, ouverture des checkpoints."
+            },
+            {
+              "date": "3 oct. 1990",
+              "title": "Réunification",
+              "detail": "L'Allemagne retrouve sa souveraineté entière."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "La chute du mur (**9 novembre 1989**), déclenchée par une erreur de communication, ouvre la réunification allemande et accélère l'effondrement du bloc soviétique."
+        }
+      ]
+    }
+  ]
+}

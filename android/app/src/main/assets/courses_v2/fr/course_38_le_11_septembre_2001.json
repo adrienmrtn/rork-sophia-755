@@ -1,0 +1,135 @@
+{
+  "id": "course_38_le_11_septembre_2001",
+  "title": "Le 11 septembre 2001",
+  "subtitle": "2001",
+  "subject": "histoire",
+  "subcategory": "Guerre froide & monde contemporain",
+  "description": "Le **11 septembre 2001**, dix-neuf terroristes d'Al-Qaïda détournent quatre avions. L'attentat le plus meurtrier de l'histoire américaine ouvre l'ère de la guerre contre le terrorisme.",
+  "hero": {
+    "image": "le_11_septembre_2001",
+    "ratio": "16:9",
+    "hook": "Un matin de septembre qui referme l'après-Guerre froide et ouvre un siècle de guerres."
+  },
+  "sections": [
+    {
+      "id": "course_38_le_11_septembre_2001_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le mardi **11 septembre 2001**, dix-neuf membres d'**[[Al-Qaïda]]**, organisation terroriste fondée par **Oussama Ben Laden**, détournent quatre avions. Deux frappent le **World Trade Center** à New York, un troisième le **Pentagone**, siège de la défense américaine. Le quatrième s'écrase en Pennsylvanie après la révolte des passagers."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bilan : **2 977** morts. Au-delà du drame, l'attentat clôt l'espoir d'un ordre mondial apaisé et déclenche une série de conflits qui façonnent encore le XXIe siècle."
+        }
+      ]
+    },
+    {
+      "id": "course_38_le_11_septembre_2001_p1",
+      "title": "D'où vient Al-Qaïda ?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Oussama Ben Laden**, milliardaire saoudien devenu chef djihadiste, fonde **[[Al-Qaïda]]** à la fin des années **1980**, dans le sillage de la **[[guerre soviéto-afghane (1979-1989)]]**. Après le retrait soviétique, il dénonce la présence américaine en **[[Arabie saoudite]]** et décide de frapper l'Occident."
+        },
+        {
+          "type": "image",
+          "asset": "osama_bin_laden_portrait",
+          "ratio": "1:1",
+          "caption": "Oussama Ben Laden, fondateur d'Al-Qaïda."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les signes s'accumulent : attentat au World Trade Center en **1993**, ambassades d'Afrique de l'Est en **1998**, destroyer USS Cole en **2000**. Le cloisonnement entre la CIA et le FBI, services de renseignement américains, empêche pourtant de relier les fils à temps."
+        },
+        {
+          "type": "funFact",
+          "text": "Les 19 pirates de l'air ont dépensé environ **400 000** dollars pour une attaque dont le coût économique global dépassera les **2 000 milliards**."
+        }
+      ]
+    },
+    {
+      "id": "course_38_le_11_septembre_2001_p2",
+      "title": "La chronologie du 11 septembre",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "À **8 h 46**, le vol American 11 percute la Tour Nord. À **9 h 03**, United 175 frappe la Tour Sud en direct à la télévision. À **9 h 37**, American 77 touche le Pentagone. À **10 h 03**, United 93 s'écrase en Pennsylvanie."
+        },
+        {
+          "type": "image",
+          "asset": "world_trade_center_twin_towers_september_11_2001",
+          "ratio": "16:9",
+          "caption": "Les Twin Towers du World Trade Center, cibles centrales des attentats."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les tours s'effondrent : Sud à **9 h 59**, Nord à **10 h 28**. L'espace aérien américain est fermé pour la première fois. Ces images deviennent le traumatisme fondateur d'une génération."
+        }
+      ]
+    },
+    {
+      "id": "course_38_le_11_septembre_2001_p3",
+      "title": "La guerre contre le terrorisme",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En octobre **2001**, l'opération **[[Enduring Freedom]]** vise l'Afghanistan : détruire Al-Qaïda et renverser les **[[Talibans]]**, mouvement islamiste qui abritait Ben Laden. Kaboul tombe vite. La guerre dure vingt ans."
+        },
+        {
+          "type": "paragraph",
+          "text": "En mars **2003**, sans mandat de l'ONU, les États-Unis lancent [[La guerre d'Irak (2003)]], accusant le dictateur **[[Saddam Hussein]]** d'armes de destruction massive. L'accusation est fausse ; le pays bascule dans le chaos. À **[[Guantanamo]]**, base américaine à Cuba, des détenus restent hors du droit classique. Ben Laden est tué le **1er mai 2011** au Pakistan."
+        }
+      ]
+    },
+    {
+      "id": "course_38_le_11_septembre_2001_p4",
+      "title": "Un monde sous surveillance",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aux États-Unis, le **PATRIOT Act**, loi d'urgence, élargit massivement la surveillance. L'Europe suit. Les aéroports changent pour toujours. Ground Zero, site des tours effondrées, devient mémorial et symbole de résilience."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les guerres qui suivent causent des centaines de milliers de morts et des millions de déplacés. Le terrorisme global, plus décentralisé, utilise les outils de la mondialisation pour la combattre."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "11 sept. 2001",
+              "title": "Attentats",
+              "detail": "2 977 morts aux États-Unis."
+            },
+            {
+              "date": "oct. 2001",
+              "title": "Afghanistan",
+              "detail": "Opération Enduring Freedom."
+            },
+            {
+              "date": "2003",
+              "title": "Irak",
+              "detail": "Invasion sans mandat de l'ONU."
+            },
+            {
+              "date": "2011",
+              "title": "Mort de Ben Laden",
+              "detail": "Raid américain au Pakistan."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Le **11 septembre 2001** transforme une menace en guerre globale : interventions en Afghanistan et en Irak, et un virage sécuritaire durable dans les démocraties."
+        }
+      ]
+    }
+  ]
+}

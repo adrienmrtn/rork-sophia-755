@@ -1,0 +1,100 @@
+{
+  "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee",
+  "title": "Por que a água do mar é salgada?",
+  "subtitle": "Oceanos",
+  "subject": "sciences",
+  "subcategory": "O nosso quotidiano explicado",
+  "description": "Um litro de água do mar contém aproximadamente 35 gramas de sal. Este sal acumulou-se ao longo de bilhões de anos. É daqui que vem.",
+  "hero": {
+    "image": "pourquoi_l_eau_de_mer_est_salee",
+    "ratio": "16:9",
+    "hook": "Os rios são suaves. Os oceanos são salgados. O segredo é o tempo e a evaporação."
+  },
+  "sections": [
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Os oceanos cobrem mais de **70%** do planeta. Em média, um litro de água do mar contém aproximadamente **35 gramas de sal**. Isto não é uma coincidência: é o resultado de um processo muito longo."
+        },
+        {
+          "type": "paragraph",
+          "text": "O sal não “cai” do céu pronto. Ele viaja dos continentes e depois fica preso no oceano."
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p1",
+      "title": "O sal vem primeiro da terra",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A chuva, ao passar pelo ar, capta um pouco de dióxido de carbono. Torna-se ligeiramente ácido. Ao cair nas rochas, ataca-as suavemente: isto é **erosão química**."
+        },
+        {
+          "type": "image",
+          "asset": "ocean_sea_salt_evaporation",
+          "ratio": "auto",
+          "caption": "Salinas: a evaporação concentra o sal dissolvido na água do mar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Os rios então carregam minerais dissolvidos, especialmente **sódio** e **cloro**, os dois ingredientes do sal de cozinha. Eles os jogam no mar."
+        },
+        {
+          "type": "funFact",
+          "text": "Vulcões subaquáticos e fontes termais no fundo do oceano também adicionam sais. Mas a maior parte ainda vem dos continentes."
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p2",
+      "title": "Por que os rios não são salgados?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Boa pergunta: se os rios trazem sal, por que a água do Ródano ou do Sena não é salgada? Porque o sal lá é muito diluído e porque a água dos rios se renova constantemente."
+        },
+        {
+          "type": "paragraph",
+          "text": "No oceano é diferente. Sob o Sol, a água **evaporado** e retorna ao céu. O sal, **permanente**. Ano após ano, século após século, ela se acumula. Nós o chamamos de . [[ciclo hidrológico e acumulação de sal]]"
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p3",
+      "title": "O sal também circula pelos oceanos",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A água salgada é mais **denso** (“mais pesada” para o mesmo volume) do que a água doce. Nos pólos, quando a água superficial congela, o sal é parcialmente liberado na água líquida circundante. Essa água fica ainda mais densa e mergulha no fundo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Este movimento ajuda a impulsionar grandes correntes oceânicas. Essas correntes transportam calor e nutrientes ao redor do globo. O sal não é apenas uma questão de gosto: faz parte do motor climático do planeta."
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p4",
+      "title": "Nem em todos os lugares o mesmo sal",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A salinidade não é a mesma em todos os lugares. Perto do equador, a forte evaporação pode concentrar o sal. Perto de grandes rios ou blocos de gelo derretidos, a água é mais macia. O Mar Morto é um caso extremo: sai muito pouca água, resta muito sal."
+        },
+        {
+          "type": "takeaway",
+          "text": "A água do mar é salgada porque os rios trazem minerais dos continentes e a evaporação deixa o sal no oceano. Essa acumulação vem acontecendo há bilhões de anos."
+        }
+      ]
+    }
+  ]
+}

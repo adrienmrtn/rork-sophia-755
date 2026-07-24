@@ -1,0 +1,68 @@
+{
+  "id": "course_227_le_populisme_pourquoi_ca_monte_partout",
+  "title": "Le populisme : pourquoi ça monte partout ?",
+  "subtitle": "Depuis les années 2010",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environnement & avenir",
+  "description": "Des États-Unis à l'Inde, en passant par l'Europe, des leaders populistes bousculent les partis traditionnels. Pourquoi cette vague touche-t-elle **presque toutes les démocraties** en même temps ?",
+  "hero": {
+    "image": "le_populisme_pourquoi_ca_monte",
+    "ratio": "16:9",
+    "hook": "Le peuple contre les élites : un discours vieux de plus d'un siècle, mais qui n'a jamais autant convaincu."
+  },
+  "sections": [
+    {
+      "id": "course_227_le_populisme_pourquoi_ca_monte_partout_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Depuis les années 2010, le **populisme** n'est plus un phénomène marginal. Des États-Unis à l'Inde, en passant par l'Europe et l'Amérique latine, des leaders bousculent les partis traditionnels au pouvoir depuis des décennies." },
+        { "type": "paragraph", "text": "Ce mouvement ne vient pas de nulle part. Il s'enracine dans des fractures économiques, culturelles et technologiques bien réelles. Ce cours explore la logique de ce discours et les raisons de sa montée." }
+      ]
+    },
+    {
+      "id": "course_227_le_populisme_pourquoi_ca_monte_partout_p1",
+      "title": "Le peuple pur contre l'élite corrompue",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le populisme ne se définit pas par un programme économique précis, mais par une logique politique bien particulière. Selon le politologue Jan-Werner Müller, son idée centrale est le [[monisme]] : il n'existerait qu'un seul « vrai peuple », et le leader populiste serait son unique porte-parole." },
+        { "type": "image", "asset": "populist_political_rally_crowd_flags", "ratio": "16:9", "caption": "Le discours populiste divise la société en deux camps opposés." },
+        { "type": "paragraph", "text": "Cette vision divise la société en deux camps : d'un côté, un « peuple pur », porteur de valeurs authentiques, de l'autre, une « élite corrompue », accusée de trahir l'intérêt général. Ce cadre est très flexible : à droite, le peuple est souvent défini par la nation, opposée à une élite jugée trop mondialiste. À gauche, il est défini par la classe sociale, face à une élite financière." },
+        { "type": "funFact", "text": "Le tout premier grand parti populiste moderne, le People's Party américain en 1892, demandait déjà de nationaliser les chemins de fer, car les agriculteurs pensaient que les tarifs étaient fixés par une élite financière invisible." }
+      ]
+    },
+    {
+      "id": "course_227_le_populisme_pourquoi_ca_monte_partout_p2",
+      "title": "Des colères bien réelles",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Plusieurs crises se rejoignent pour expliquer cette montée. Sur le plan économique, le chercheur Branko Milanović a montré qu'entre 1988 et 2008, les classes moyennes asiatiques et les plus riches du monde ont vu leurs revenus grimper, tandis que les classes moyennes occidentales stagnaient. Ce sentiment de déclassement a nourri une colère durable." },
+        { "type": "image", "asset": "2015_refugee_migration_crisis_Europe_Mediterranean", "ratio": "4:3", "caption": "La crise migratoire de 2015 a nourri un sentiment d'insécurité identitaire en Europe." },
+        { "type": "paragraph", "text": "À cette fracture économique s'ajoute un clivage culturel : l'accélération des changements de société et la crise migratoire de 2015 ont créé une insécurité identitaire chez de nombreux électeurs, qui se sentent plus éloignés des décisions prises par les élites urbaines." },
+        { "type": "paragraph", "text": "Enfin, les réseaux sociaux ont transformé la communication politique. Ils renforcent la polarisation et permettent aux leaders de s'adresser directement à leur public, avec un langage simple et émotionnel, sans passer par les médias traditionnels." }
+      ]
+    },
+    {
+      "id": "course_227_le_populisme_pourquoi_ca_monte_partout_p3",
+      "title": "Des visages très différents, une même méthode",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le paysage politique mondial offre une grande diversité de figures populistes. Donald Trump a transformé le Parti républicain américain autour du protectionnisme et du nationalisme. En Hongrie, Viktor Orbán a construit une [[Les démocraties illibérales (Orbán)]], où le résultat des élections justifie une concentration croissante du pouvoir." },
+        { "type": "image", "asset": "Donald_Trump_Marine_Le_Pen_populist_leaders", "ratio": "16:9", "caption": "Des figures très différentes partagent une même rhétorique de rupture avec les élites." },
+        { "type": "paragraph", "text": "En France, Marine Le Pen a mené une stratégie de [[dédiabolisation]] pour élargir son électorat, tout en gardant un discours centré sur la préférence nationale. Le populisme de gauche, incarné par Jean-Luc Mélenchon en France ou Bernie Sanders aux États-Unis, privilégie plutôt la redistribution des richesses, mais partage la même rhétorique de rupture avec le « système »." }
+      ]
+    },
+    {
+      "id": "course_227_le_populisme_pourquoi_ca_monte_partout_p4",
+      "title": "Le vrai test : l'exercice du pouvoir",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le grand paradoxe du populisme apparaît une fois arrivé au pouvoir. Le leader ne peut plus se contenter d'être l'opposant au système : il devient le système. Pour garder son image de rebelle, il désigne souvent de nouveaux ennemis, comme les juges ou les fonctionnaires, accusés de bloquer sa volonté." },
+        { "type": "paragraph", "text": "C'est là que le risque pour les institutions devient concret. En Hongrie ou en Pologne, des réformes ont visé à réduire l'indépendance de la justice. En cas de défaite électorale, certains leaders contestent même la légitimité du vote, comme lors de l'attaque du Capitole en 2021." },
+        { "type": "funFact", "text": "Un des présidents les plus populaires des États-Unis, Andrew Jackson, était surnommé « King Mob » (le roi de la foule) par ses détracteurs, car il avait ouvert la Maison-Blanche au peuple pour une fête qui a fini en quasi-émeute." },
+        { "type": "paragraph", "text": "Mais cette montée agit aussi comme un signal d'alarme utile : elle force les partis traditionnels à se saisir de sujets délaissés, comme la souveraineté industrielle ou les services publics dans les zones rurales." },
+        { "type": "takeaway", "text": "Le populisme divise le monde en « peuple pur » contre « élite corrompue ». Il monte partout depuis 2010, porté par les inégalités liées à la mondialisation et une insécurité culturelle amplifiée par les réseaux sociaux." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "id": "course_22_la_crise_des_missiles_de_cuba_1962",
+  "title": "The Cuban Missile Crisis",
+  "subtitle": "1962",
+  "subject": "histoire",
+  "subcategory": "Cold War & Contemporary World",
+  "description": "In October **1962**, the world spent **13 days** on the verge of nuclear war. Missiles in Cuba, fleets on alert: the Cold War reaches its peak.",
+  "hero": {
+    "image": "la_crise_des_missiles_de_cuba_1962",
+    "ratio": "16:9",
+    "hook": "Thirteen days where a single “yes” could have triggered the nuclear apocalypse."
+  },
+  "sections": [
+    {
+      "id": "course_22_la_crise_des_missiles_de_cuba_1962_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In October **1962**, humanity comes close to the worst. During **13 days**, the United States and the USSR clash over nuclear missiles installed in Cuba, an island less than 150 km from Florida. The bombers are ready. One mistake, and everything can change."
+        },
+        {
+          "type": "paragraph",
+          "text": "This crisis is the peak of the Cold War. It takes place in the offices of Washington and Moscow... and also in an isolated submarine, where an officer refuses a shot that could have destroyed everything."
+        }
+      ]
+    },
+    {
+      "id": "course_22_la_crise_des_missiles_de_cuba_1962_p1",
+      "title": "Cuba, too close to the United States",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In **1959**, **Fidel Castro** took power in Cuba. For Washington, a Moscow ally so close to the American continent is unacceptable. In April **1961**, the CIA, the American secret service, organized a landing at . It's a disaster. US President **John F. Kennedy** is humiliated. Castro moves even closer to the USSR. [[Bay of Pigs]]"
+        },
+        {
+          "type": "funFact",
+          "text": "To hide Operation , the secret deployment of missiles, the Soviets also took on board agricultural equipment... and Russian winter clothing, as if the destination was elsewhere. [[Anadyr]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Nikita Khrushchev**, the Soviet leader, wants to restore balance. The Americans have already placed  missiles in Italy and , very close to the USSR. He decides to secretly install medium-range missiles on Cuban soil. [[Jupiter missiles in Turkey]] [[Türkiye]]"
+        }
+      ]
+    },
+    {
+      "id": "course_22_la_crise_des_missiles_de_cuba_1962_p2",
+      "title": "October 14: the secret comes out",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**October 14**, an American U-2 spy plane photographs  missile ramps, capable of reaching a large part of the United States. Kennedy brings together a small crisis committee. For six days, we weighed all the options: bombings, invasion, diplomacy. [[SS-4]]"
+        },
+        {
+          "type": "image",
+          "asset": "u_2_spy_plane_aerial_photography",
+          "ratio": "4:3",
+          "caption": "U-2 photos reveal Soviet missiles in Cuba."
+        },
+        {
+          "type": "paragraph",
+          "text": "Generals, like Curtis LeMay, want to strike immediately. Kennedy chose a middle path: a naval blockade. He called it “quarantine” to avoid the word “blockade”, which means war in international law. On **October 22**, on television, he reveals the missiles to the world and demands their removal."
+        }
+      ]
+    },
+    {
+      "id": "course_22_la_crise_des_missiles_de_cuba_1962_p3",
+      "title": "Black Saturday",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "On **October 27**, nicknamed “Black Saturday,” a U-2 is shot down over Cuba. At sea, the Soviet submarine **B-59**, harassed and cut off from Moscow, prepares to launch a nuclear torpedo. The protocol requires the agreement of three officers. Two say yes. **Vasily Arkhipov**, the political officer on board, says no."
+        },
+        {
+          "type": "image",
+          "asset": "cuban_missile_crisis_1962_kennedy",
+          "ratio": "4:3",
+          "caption": "Kennedy facing the crisis, October 1962."
+        },
+        {
+          "type": "funFact",
+          "text": "The famous “red telephone” installed after the crisis is in reality a **teletypewriter**. The red telephone only exists in movies."
+        },
+        {
+          "type": "paragraph",
+          "text": "Behind the scenes, an agreement is being made. The USSR withdraws its missiles from Cuba. The United States agrees not to invade the island. Secret clause: American missiles from Türkiye will be withdrawn later."
+        }
+      ]
+    },
+    {
+      "id": "course_22_la_crise_des_missiles_de_cuba_1962_p4",
+      "title": "After the fear, a little dialogue",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The crisis opens a phase of , a relative appeasement between the two blocs. A direct line will soon connect the Kremlin and the White House. The  doctrine prevails: since no one can win a nuclear war, no one should start it. [[Détente]] [[Mutual Assured Destruction (MAD)]]"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Oct 14, 1962",
+              "title": "Discovery of missiles",
+              "detail": "A U-2 photographs the ramps in Cuba."
+            },
+            {
+              "date": "Oct 22, 1962",
+              "title": "Kennedy's speech",
+              "detail": "Naval quarantine and public ultimatum."
+            },
+            {
+              "date": "Oct 27, 1962",
+              "title": "Black Saturday",
+              "detail": "U-2 shot down; Arkhipov refuses the nuclear shot."
+            },
+            {
+              "date": "Oct 28, 1962",
+              "title": "Agreement",
+              "detail": "Khrushchev announces the withdrawal of missiles."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "In **13 days**, the Cuban crisis shows that the Cold War could destroy the world... and that it sometimes came down to a single refusal, that of Arkhipov."
+        }
+      ]
+    }
+  ]
+}

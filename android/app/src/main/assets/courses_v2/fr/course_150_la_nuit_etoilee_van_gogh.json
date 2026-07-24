@@ -1,0 +1,68 @@
+{
+  "id": "course_150_la_nuit_etoilee_van_gogh",
+  "title": "La Nuit étoilée, Van Gogh",
+  "subtitle": "1889",
+  "subject": "art",
+  "subcategory": "Œuvres iconiques",
+  "description": "En **1889**, depuis l'asile de Saint-Rémy-de-Provence, **Vincent Van Gogh** peint *La Nuit étoilée*. Le ciel tourbillonne : l'art cesse de copier le réel pour dire une émotion.",
+  "hero": {
+    "image": "la_nuit_etoilee_van_gogh",
+    "ratio": "16:9",
+    "hook": "Depuis une chambre d'asile, Van Gogh peint un ciel qui refuse de rester sage."
+  },
+  "sections": [
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "*La Nuit étoilée* (**1889**) est le tableau le plus célèbre de **Vincent Van Gogh**, peintre né aux [[Pays-Bas]]. Peinte à l'asile de Saint-Rémy-de-Provence, elle marque un tournant : on ne peint plus seulement ce que l'on voit. On peint ce que l'on ressent." },
+        { "type": "paragraph", "text": "Ciel en tourbillon, cyprès comme une flamme noire, village inventé : l'œuvre ouvre la voie à l'art expressif du XXe siècle." }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p1",
+      "title": "Saint-Rémy : créer depuis l'asile",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "En **mai 1889**, après le [[Drame d'Arles avec Gauguin]] (la crise qui lui coûte une partie de l'oreille), Van Gogh se fait interner à **Saint-Paul-de-Mausole**, près de Saint-Rémy. Il obtient une pièce pour peindre. La vue nocturne naît d'abord derrière les barreaux de sa chambre." },
+        { "type": "image", "asset": "van_gogh_saint_paul_asylum_saint_remy_provence", "ratio": "4:3", "caption": "L'asile de Saint-Rémy : cadre de contrainte, et de création intense." },
+        { "type": "paragraph", "text": "La toile mélange observation et invention. On reconnaît les collines des Alpilles et un grand **cyprès**. Mais le village n'est pas une copie exacte. Van Gogh reconstruit le paysage pour servir l'émotion." }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p2",
+      "title": "Sculpter le ciel au pinceau",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Techniquement, Van Gogh utilise l'**empâtement** : la peinture est épaisse, presque sculptée. Onze étoiles tournent comme des nébuleuses. La lune orange irradie. Le ciel devient le vrai personnage." },
+        { "type": "image", "asset": "starry_night_cypress_tree_van_gogh_painting", "ratio": "4:3", "caption": "Le cyprès relie la terre au ciel comme une flamme sombre." },
+        { "type": "funFact", "text": "Les grandes volutes du ciel rappellent la dynamique de la [[Grande Vague de Kanagawa]], estampe japonaise que Van Gogh admirait. Il transforme cette énergie en cosmos." },
+        { "type": "paragraph", "text": "Ce geste annonce l'[[Art comme expression intérieure]] : la toile dit un état d'âme, pas un bulletin météo." }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p3",
+      "title": "Le génie que personne n'achetait",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Van Gogh peint près de **900 tableaux** en dix ans, mais meurt en **juillet 1890** à Auvers-sur-Oise, à **37 ans**, presque inconnu. C'est sa belle-sœur, **Johanna van Gogh-Bonger**, qui sauve l'œuvre : expositions, ventes, publication des lettres à son frère Théo." },
+        { "type": "paragraph", "text": "*La Nuit étoilée* change plusieurs fois de mains pour peu d'argent, avant d'entrer au **MoMA** de New York. Le tableau méprisé devient une icône. Les [[Fauves]], peintres aux couleurs violentes du début du XXe siècle, reconnaîtront en lui un ancêtre." }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p4",
+      "title": "Un cyprès vers l'infini",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le cyprès relie le sol au ciel : trait d'union entre la vie terrestre et l'ailleurs. Van Gogh écrivait que regarder les étoiles lui faisait rêver la mort comme un voyage. Des études modernes suggèrent même que l'étoile brillante près du cyprès pourrait être Vénus, observée à l'aube." },
+        { "type": "timeline", "events": [
+          { "date": "1888", "title": "Crise d'Arles", "detail": "La rupture avec Gauguin précède l'internement." },
+          { "date": "1889", "title": "La Nuit étoilée", "detail": "Van Gogh peint le ciel depuis Saint-Rémy." },
+          { "date": "1890", "title": "Mort à Auvers", "detail": "L'artiste meurt à 37 ans, encore méconnu." }
+        ] },
+        { "type": "takeaway", "text": "*La Nuit étoilée* transforme la souffrance en langage visuel. Van Gogh n'y copie pas la nuit : il invente un ciel intérieur, et ouvre la porte à l'art expressif moderne." }
+      ]
+    }
+  ]
+}

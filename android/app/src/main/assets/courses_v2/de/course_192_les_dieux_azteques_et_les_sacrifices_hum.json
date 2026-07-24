@@ -1,0 +1,140 @@
+{
+  "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum",
+  "title": "Aztekische Götter und Menschenopfer",
+  "subtitle": "Blut für die Sonne",
+  "subject": "mythologie",
+  "subcategory": "Andere Mythologien",
+  "description": "Bei den Azteken geht die Sonne nur auf, wenn die Götter Blut empfangen. Eine strenge, aber kohärente Kosmologie im Herzen ihres Imperiums.",
+  "hero": {
+    "image": "les_dieux_azteques_et_les_sacrifices_humains",
+    "ratio": "16:9",
+    "hook": "Ohne Blut würde die Sonne stehen bleiben: Das ist die kosmische Schuld der Azteken."
+  },
+  "sections": [
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_intro",
+      "title": "Einführung",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die **Azteken** oder Mexica glauben, dass das Universum zerbrechlich ist. Die Götter brauchen Blut, damit die Sonne ihren Lauf fortsetzen kann. Ohne Opfergaben würde das Chaos zurückkehren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Was die Spanier entsetzte, beruht auf einer klaren Idee: Das Leben von Göttern und Menschen ist miteinander verbunden. So funktioniert diese Kosmologie."
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p1",
+      "title": "Die fünf Sonnen: eine Welt, die bereits viermal tot ist",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dem -Mythos zufolge sind bereits vier Epochen in Katastrophen untergegangen. Wir erleben die fünfte Sonne,  („4-Bewegung“), deren Ende mit Erdbeben versprochen wurde. [[Fünf Sonnen]] [[Nahui Ollin]]"
+        },
+        {
+          "type": "image",
+          "asset": "aztec_five_suns_teotihuacan_pyramid_sun_stone",
+          "ratio": "4:3",
+          "caption": "Stein der Sonne: Die aztekische Zeit geht in aufeinanderfolgende Epochen über."
+        },
+        {
+          "type": "paragraph",
+          "text": "In **Teotihuacán**, einer heiligen Stadt auf dem Zentralplateau, werfen sich die Götter ins Feuer, um zu Sonne und Mond zu werden. Doch die Sonne bleibt still. Die anderen Götter opfern dann ihr eigenes Blut, um es in Gang zu setzen. Männer erben diese Schulden."
+        },
+        {
+          "type": "funFact",
+          "text": "Für die Azteken ist Opfer keine unnötige Grausamkeit: Es ist die Rückzahlung einer göttlichen Schuld, des . [[Kosmologie der Fünf Sonnen und kosmische Schuld]]"
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p2",
+      "title": "Ein Pantheon der Dualitäten",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der zentrale Gott ist , Gott des Krieges und der Mittagssonne. Jede Nacht kämpft er gegen die Dunkelheit, um am Morgen wiedergeboren zu werden. An seiner Seite gibt  Regen, also Ernten oder Hungersnot. [[Huitzilopochtli, der Sonnengott]] [[Tlaloc]]"
+        },
+        {
+          "type": "image",
+          "asset": "huitzilopochtli_aztec_sun_god_codex",
+          "ratio": "4:3",
+          "caption": "Huitzilopochtli, Kriegersonne, die Nahrung verlangt."
+        },
+        {
+          "type": "paragraph",
+          "text": ", die gefiederte Schlange, verkörpert Wissen und Zivilisation. Sein Rivale , der Rauchende Spiegel, regiert die Nacht, das Schicksal und die Magie. Die Erde selbst hat ein schreckliches Gesicht: , verschlingende Muttergöttin. [[Quetzalcoatl]] [[Tezcatlipoca]] [[Coatlicue]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Das den Göttern geopferte kostbare Blut wird , „kostbares Wasser“, genannt. Man stellt sich das entnommene Herz als einen Sonnenfunken vor, der zum Himmel zurückfließt. [[Chalchihuatl]]"
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p3",
+      "title": "Die Blumenkriege",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Um Opfer zu gewinnen, organisieren die Azteken die , die „Blumenkriege“: rituelle Kämpfe, deren Ziel nicht darin besteht, lebende Krieger zu töten, die es wert sind, dargebracht zu werden, sondern sie zu fangen. [[Xochiyaoyotl]]"
+        },
+        {
+          "type": "image",
+          "asset": "aztec_sacrifice_pyramid_templo_mayor_codex",
+          "ratio": "4:3",
+          "caption": "Opferung oben im Tempel: Das der Sonne präsentierte Herz."
+        },
+        {
+          "type": "paragraph",
+          "text": "Auf dem Gipfel des **Templo-Bürgermeister** in Tenochtitlán, der Hauptstadt am See, extrahiert ein Priester mit einem Messer das Herz aus **Obsidian**, einem scharfen Vulkanstein. Die Geste ist öffentlich, feierlich und wird als Dienst an der Sonne betrachtet."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Mythos",
+              "title": "Opfer der Götter",
+              "detail": "Die Sonne erhält göttliches Blut, um voranzukommen."
+            },
+            {
+              "date": "Reich",
+              "title": "Blumenkriege",
+              "detail": "Krieger für Opfergaben gefangen nehmen."
+            },
+            {
+              "date": "1519",
+              "title": "Spanischer Schock",
+              "detail": "Cortés kommt; das System bricht zusammen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p4",
+      "title": "Untergang einer Welt, bleibende Spuren",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In spanischen Chroniken werden die Zahlen manchmal überhöht, um die Eroberung zu rechtfertigen. Aber das Opfersystem ist sehr real. In **1519** leitet die Ankunft von **Hernán Cortés** das Ende dieses rituellen Universums ein."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aztekische Figuren bleiben jedoch im Synkretismus bestehen: Die Jungfrau von Guadalupe erscheint an einer Stelle, die einst mit einer Muttergöttin in Verbindung gebracht wurde. Um diese Opfer zu verstehen, muss man eine Kultur verstehen, die das Überleben des Kosmos über das Individuum stellt."
+        },
+        {
+          "type": "takeaway",
+          "text": "Bei den Azteken nährte menschliches Blut die Sonne. Die Götter haben bereits mit ihrem Leben bezahlt: Die Menschen begleichen diese Schuld durch Opfer, insbesondere durch **Blumenkriege**."
+        }
+      ]
+    }
+  ]
+}

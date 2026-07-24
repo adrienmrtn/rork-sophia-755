@@ -1,0 +1,120 @@
+{
+  "id": "course_196_merlin_l_enchanteur",
+  "title": "Merlino l'incantatore",
+  "subtitle": "Il Mago di Artù",
+  "subject": "mythologie",
+  "subcategory": "Altre mitologie",
+  "description": "Merlino, consigliere, profeta e mago di Artù: una figura nata da un demone e da un battesimo, artefice di Camelot, prigioniero del proprio amore.",
+  "hero": {
+    "image": "merlin_l_enchanteur",
+    "ratio": "16:9",
+    "hook": "Figlio di un demone, battezzato fin dalla culla: Merlino serve il bene con poteri nati dal male."
+  },
+  "sections": [
+    {
+      "id": "course_196_merlin_l_enchanteur_intro",
+      "title": "Introduzione",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Merlino** è il mago più famoso del Medioevo occidentale. Bardo, profeta, consigliere del re **Artù**: si colloca al confine tra l'antico mondo celtico e la cavalleria cristiana."
+        },
+        {
+          "type": "paragraph",
+          "text": "La sua natura è paradossale. Una parte di lui viene dai demoni, l'altra dal cielo. La sua storia non è quella di uno spettacolo di magia: è la lotta di un essere ibrido che sceglie di servire il bene, finché l'amore non lo allontana dal mondo."
+        }
+      ]
+    },
+    {
+      "id": "course_196_merlin_l_enchanteur_p1",
+      "title": "L'origine ibrida tra demone e battesimo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nel poeta **Roberto di Borone** (XII secolo), i demoni vogliono creare un anticristo. Uno , uno spirito che si unisce ad una donna addormentata, seduce una giovane pia cristiana. Il piano fallisce: la madre confessa e fa battezzare il bambino. [[Demone incubo]]"
+        },
+        {
+          "type": "image",
+          "asset": "merlin_wizard_medieval_manuscript_illumination",
+          "ratio": "4:3",
+          "caption": "Merlino, figura del mago medievale tra bosco e cortile."
+        },
+        {
+          "type": "funFact",
+          "text": "Il nome “Merlino” deriva dal gallese **Myrddin**. Goffredo di Monmouth cambiò la “d” in “l” per evitare un gioco di parole troppo vicino al latino *merda*."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lo  cancella la maledizione, ma lascia i poteri: conoscenza del passato (eredità demoniaca) e dono di . Merlino può cambiare forma. Dietro di lui troviamo **Myrddin Wyllt**, un bardo gallese del VI secolo che, impazzito dopo una battaglia, fuggì nella foresta di . [[Battesimo]] [[La profezia nella cultura medievale]] [[Celyddon]]"
+        }
+      ]
+    },
+    {
+      "id": "course_196_merlin_l_enchanteur_p2",
+      "title": "L'architetto del destino arturiano",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Merlino non è un illusionista. È il garante del regno. Aiuta il re  ad assumere le sembianze del duca di Cornovaglia per unirsi alla duchessa **Igerne**. Da questa notte è nato **Artù**. [[Utherpendragón]]"
+        },
+        {
+          "type": "image",
+          "asset": "merlin_arthur_camelot_medieval_illustration",
+          "ratio": "4:3",
+          "caption": "Merlino guida Artù al trono e a Camelot."
+        },
+        {
+          "type": "paragraph",
+          "text": "Alleva il bambino in segreto, orchestra la spada nell'incudine, quindi conduce Artù dalla Signora del Lago per ottenere , il cui fodero protegge dalle ferite mortali. A **Camelot**, disegna la **Tavola Rotonda** e colloca lo , un posto vacante riservato al cavaliere più puro. Vede arrivare i pericoli. Sa anche che il destino alla fine passa sempre. [[Excalibur]] [[Assedio pericoloso]]"
+        }
+      ]
+    },
+    {
+      "id": "course_196_merlin_l_enchanteur_p3",
+      "title": "La caduta dell'incantatore: amore e oblio",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Merlino incontra la sua fine. Si innamora però di **Viviana**, la Signora del Lago, vicino alla fontana del Barenton. Le insegna i suoi incantesimi più segreti, anche se sa che lei lo perderà."
+        },
+        {
+          "type": "image",
+          "asset": "viviane_lady_of_the_lake_merlin_medieval_art",
+          "ratio": "4:3",
+          "caption": "Viviane rinchiude Merlino: la fine del tempo dei magi."
+        },
+        {
+          "type": "funFact",
+          "text": "A seconda della versione, Viviane lo rinchiude in un cespuglio di biancospino, in una torre di vetro o in una cavità **Brocéliande**. Immortale, Merlino non è morto: dorme fuori dal mondo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Quando i cavalieri partono per il Graal, la magia di Merlino non ha più spazio. Il suo ritiro segna il passaggio dal tempo dei miti al tempo della fede."
+        }
+      ]
+    },
+    {
+      "id": "course_196_merlin_l_enchanteur_p4",
+      "title": "Patrimonio letterario e figura dell'arcimago",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Merlino fissò l'immagine del vecchio saggio: barba, bastone, indovinelli. Da lui discendono **Gandalf** per Tolkien e **Silente** per Rowling. È l'aiutante che sa, ma non può agire al posto dell'eroe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ponte tra la foresta selvaggia e la corte, mantiene un'impronta  mentre consiglia i re. Ancora oggi sussurra che gli imperi sono fragili e che la saggezza non sempre protegge se stessi. [[Druidico]]"
+        },
+        {
+          "type": "takeaway",
+          "text": "**Merlino**, nato da un demone e salvato dal battesimo, costruisce il destino di **Artù** poi scompare, prigioniero di **Viviana**: l'intramontabile modello dell'incantatore western."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "id": "course_131_la_naissance_de_la_musique_electronique",
+  "title": "O nascimento da música eletrônica",
+  "subtitle": "1920-1990",
+  "subject": "art",
+  "subcategory": "Música",
+  "description": "Do Theremin aos clubes de Chicago e Detroit, a música eletrônica inventa sons sem orquestra e transforma a dança mundial.",
+  "hero": {
+    "image": "la_naissance_de_la_musique_electronique",
+    "ratio": "16:9",
+    "hook": "Dos laboratórios às pistas de dança: como as máquinas inventaram novas músicas."
+  },
+  "sections": [
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A música eletrônica não começa nas casas noturnas. Nasce em laboratórios, quando os inventores procuram sons impossíveis de obter num violino ou piano."
+        },
+        {
+          "type": "paragraph",
+          "text": "Do  da década de 1920 ao  e ao , uma ideia atravessa o século: a máquina pode criar, não apenas gravar. Hoje, estrutura grande parte do pop mundial e do . [[O Theremin]] [[Casa de Chicago]] [[Tecnologia de Detroit]] [[gráficos]]"
+        }
+      ]
+    },
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_p1",
+      "title": "Os pioneiros: do Theremin à música concreta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Em **1920**, o inventor russo **Leon Theremin** (Lev Termen) projetou o : um dispositivo tocado sem contato. As mãos se movem perto de antenas em um campo eletromagnético. O som desliza, quase vocal, e logo assombra os filmes de ficção científica. [[O Theremin]]"
+        },
+        {
+          "type": "image",
+          "asset": "theremin_instrument_leon_theremin_1920",
+          "ratio": "4:3",
+          "caption": "O Theremin: instrumento tocado no ar, sem tocar nas cordas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Depois de 1945, a pesquisa mudou de terreno. Em Paris, na rádio pública, **Pedro Schaeffer** e **Pedro Henrique** inventaram a música concreta: gravar ruídos cotidianos, depois cortá-los, invertê-los, enrolá-los em fita magnética. Em Colônia, outros estúdios preferem a síntese pura: sons nascidos de osciladores, sem fonte acústica. Esses dois caminhos ainda sustentam a produção atual: de um lado , de outro a síntese. [[sampling]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Theremin apresentou seu instrumento a Lenin. Fascinado, o líder soviético teria solicitado centenas de exemplares para difundir a modernidade técnica na URSS."
+        }
+      ]
+    },
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_p2",
+      "title": "The Moog, Wendy Carlos e Kraftwerk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Na década de 1960, o engenheiro americano **Roberto Moog** miniaturizou o sintetizador com transistores. Em **1968**, o álbum *Bach ligado* de **Wendy Carlos** prova que a eletrônica pode carregar complexidade clássica. O gadget se torna um instrumento."
+        },
+        {
+          "type": "image",
+          "asset": "moog_synthesizer_robert_moog_1960s",
+          "ratio": "4:3",
+          "caption": "O sintetizador Moog: a máquina sai do laboratório e vai para o estúdio."
+        },
+        {
+          "type": "paragraph",
+          "text": "Em Düsseldorf, o grupo alemão **Kraftwerk**, fundado por **Ralf Hütter** e **Florian Schneider**, impõe um pop frio e repetitivo. Com *Autobahn* (**1974**) e *O homem-máquina* (**1978**), eles cantam sobre a rodovia, o robô, a cidade. Seu ritmo mais tarde alimentaria o hip-hop americano e a dance music europeia."
+        },
+        {
+          "type": "image",
+          "asset": "kraftwerk_band_dusseldorf_1970s",
+          "ratio": "4:3",
+          "caption": "Kraftwerk: o homem-máquina como persona artística."
+        },
+        {
+          "type": "funFact",
+          "text": "Em certas turnês, o Kraftwerk enviava manequins à sua semelhança para coletivas de imprensa, levando o conceito de homem-máquina ao limite."
+        }
+      ]
+    },
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_p3",
+      "title": "Chicago e Detroit: dança eletrônica",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Na década de 1980, máquinas acessíveis como a bateria eletrônica **Roland TR-808** mudaram o jogo. Em Chicago, em clubes frequentados por comunidades negras e gays, o DJ **Frankie Knuckles** refina o : ritmo regular 4/4, calor herdado do disco. [[Casa de Chicago]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Em **Detroit**, cidade marcada pelo declínio das fábricas de automóveis, três amigos universitários (**Juan Atkins**, **Derrick maio**, **Kevin Saunderson**) inventam uma estética mais sombria: o . Exportado para a Europa, encontrou forte eco em Berlim após a queda do Muro. [[Tecnologia de Detroit]]"
+        },
+        {
+          "type": "funFact",
+          "text": "O TR-808 foi um fracasso comercial: os profissionais acharam-no “irrealista”. Vendido em segunda mão, torna-se a arma dos DJs falidos de Chicago."
+        }
+      ]
+    },
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_p4",
+      "title": "O computador, o estúdio de todos",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A partir da década de 1990, a  (música assistida por computador) transformou um simples PC em estúdio. A eletrônica sai do clube para a publicidade, o cinema e quase todo pop.  continuam sendo as raízes de uma linguagem global. [[software de música para computador]] [[House de Chicago e techno de Detroit]]"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1920",
+              "title": "Teremim",
+              "detail": "Leon Theremin inventa um instrumento tocado sem contato."
+            },
+            {
+              "date": "1948-1950",
+              "title": "Música concreta",
+              "detail": "Schaeffer e Henry manipulam os sons gravados em Paris."
+            },
+            {
+              "date": "1968-1978",
+              "title": "Moog e Kraftwerk",
+              "detail": "O sintetizador entra na cultura de massa."
+            },
+            {
+              "date": "década de 1980",
+              "title": "House e techno",
+              "detail": "Chicago e Detroit inventam a dança eletrônica moderna."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Nascida em laboratórios na década de 1950, a música eletrônica hoje estrutura grande parte da produção mundial, da balada à parada de sucessos."
+        }
+      ]
+    }
+  ]
+}

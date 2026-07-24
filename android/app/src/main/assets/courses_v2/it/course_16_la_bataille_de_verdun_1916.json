@@ -1,0 +1,140 @@
+{
+  "id": "course_16_la_bataille_de_verdun_1916",
+  "title": "La battaglia di Verdun",
+  "subtitle": "1916",
+  "subject": "histoire",
+  "subcategory": "Rivoluzioni e conflitti moderni",
+  "description": "Per **299 anni**, francesi e tedeschi si fecero a pezzi attorno a Verdun. **700.000** perdite per un guadagno territoriale quasi nullo: il simbolo dell'orrore delle trincee.",
+  "hero": {
+    "image": "la_bataille_de_verdun_1916",
+    "ratio": "16:9",
+    "hook": "299 giorni per pochi chilometri di fango e 700.000 uomini fuori combattimento."
+  },
+  "sections": [
+    {
+      "id": "course_16_la_bataille_de_verdun_1916_intro",
+      "title": "Introduzione",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nel **1916**, durante **299 anni**, francesi e tedeschi si scontrarono su pochi chilometri quadrati attorno a **Verdun**, una roccaforte nella Francia orientale. Questa non è una svolta brillante. È una battaglia di logoramento, con circa **700.000** morti o feriti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Verdun diventa il simbolo dell'orrore delle trincee. Decenni dopo, divenne anche quello della riconciliazione franco-tedesca."
+        }
+      ]
+    },
+    {
+      "id": "course_16_la_bataille_de_verdun_1916_p1",
+      "title": "Il piano tedesco: dissanguare la Francia",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dal 1914 il fronte occidentale è congelato nella : linee di fossati dal Mare del Nord alla Svizzera. Il generale tedesco **Erich von Falkenhayn** vuole “dissanguare la Francia”. Sceglie Verdun, un luogo che Parigi non può abbandonare senza perdere la faccia. L'operazione si chiama , “il tribunale”. [[La guerra di trincea]] [[Gericht]]"
+        },
+        {
+          "type": "image",
+          "asset": "battle_of_verdun_trenches_1916",
+          "ratio": "4:3",
+          "caption": "Le trincee di Verdun: un paesaggio divorato dall'artiglieria."
+        },
+        {
+          "type": "funFact",
+          "text": "Il bombardamento iniziale di **21 febbraio 1916** fu così violento che lo si udì fino ai Vosgi, a più di **150 km**."
+        },
+        {
+          "type": "paragraph",
+          "text": "**21 febbraio**, **1 200 cannoni** bombardano le linee francesi. Lo **25**, il forte **di Douaumont**, chiave della difesa, è caduto quasi senza combattere. Il Parigi ora deve puntare tutto su Verdun: la trappola di Falkenhayn funziona."
+        }
+      ]
+    },
+    {
+      "id": "course_16_la_bataille_de_verdun_1916_p2",
+      "title": "Pétain, la Via Sacra e la rotazione delle truppe",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Il generale **Filippo Pétain** organizza la sopravvivenza del settore. La **Via Sacra** collega , cittadina dell'entroterra, a Verdun: quasi **6.000 camion** al giorno, un veicolo ogni **14 secondi**. Quando si rompe, spingiamo il camion nel fosso per non bloccare la strada. [[Bar-le-Duc]]"
+        },
+        {
+          "type": "image",
+          "asset": "voie_sacree_verdun_trucks",
+          "ratio": "4:3",
+          "caption": "La Voie Sacrée, arteria vitale dell'approvvigionamento francese."
+        },
+        {
+          "type": "paragraph",
+          "text": "Con lo , Pétain ha ruotato rapidamente le divisioni: siamo rimasti poco tempo davanti, poi ci siamo sollevati. Risultato: circa **70 %** dell'esercito francese combatte prima o poi a Verdun. La battaglia diventa un'esperienza nazionale. [[Noria]]"
+        }
+      ]
+    },
+    {
+      "id": "course_16_la_bataille_de_verdun_1916_p3",
+      "title": "L'inferno dei cannoni, quasi senza guadagno",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In estate, la , un'offensiva franco-britannica più a nord, dà il cambio a Verdun. Sotto il generale **Roberto Nivelle**, i francesi riconquistarono Douaumont e poi Fort Vaux. La battaglia terminò il 18 dicembre 1916. Le linee si sono appena mosse. [[La battaglia della Somme (1916)]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Fleury-devant-Douaumont è stata presa e riconquistata **16 volte** in due mesi, poi cancellata dalla carta geografica. È uno dei “villaggi morti per la Francia”, amministrato ancora senza abitanti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Circa **370.000** francesi e **330.000** tedeschi cadono o vengono mutilati. Lo  uccide più del corpo a corpo. Gli  restano inadatti alla vita civile: troppe munizioni inesplose, troppo terreno avvelenato. [[Artiglieria pesante della Grande Guerra]] [[Zone rosse]]"
+        }
+      ]
+    },
+    {
+      "id": "course_16_la_bataille_de_verdun_1916_p4",
+      "title": "Dall'ossario alla stretta di mano",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Il **ssario di Douaumont** (1932) ospita i resti di **130.000** soldati misti francesi e tedeschi. **22 settembre 1984**, il presidente francese **François Mitterrand** e il cancelliere tedesco **Helmut Kohl** si tengono per mano davanti al monumento. Verdun diventa un simbolo della pace europea."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "21 febbraio 1916",
+              "title": "Ouverture di Gericht",
+              "detail": "Sbarramento di artiglieria senza precedenti."
+            },
+            {
+              "date": "25 febbraio 1916",
+              "title": "Cascate di Douaumont",
+              "detail": "Shock politico a Parigi."
+            },
+            {
+              "date": "estate 1916",
+              "title": "Somma",
+              "detail": "Gli Alleati danno il cambio al fronte di Verdun."
+            },
+            {
+              "date": "18 dicembre 1916",
+              "title": "Fine della battaglia",
+              "detail": "Quasi nessun guadagno territoriale."
+            },
+            {
+              "date": "22 settembre 1984",
+              "title": "Mitterrand-Kohl",
+              "detail": "Gesto di riconciliazione franco-tedesca."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "**Verdun** (**1916**): **299** giorni di guerra industriale, circa **700.000** perdite per guadagno territoriale pari a zero, e in seguito il simbolo della riconciliazione franco-tedesca."
+        }
+      ]
+    }
+  ]
+}

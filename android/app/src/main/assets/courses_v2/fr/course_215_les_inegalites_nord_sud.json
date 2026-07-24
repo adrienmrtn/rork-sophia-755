@@ -1,0 +1,104 @@
+{
+  "id": "course_215_les_inegalites_nord_sud",
+  "title": "Les inégalités Nord-Sud",
+  "subtitle": "Un monde à deux vitesses",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Économie & société",
+  "description": "Les 10% les plus riches de la planète captent plus de la moitié des revenus mondiaux. Pourtant, l'extrême pauvreté a été divisée par quatre en trente ans.",
+  "hero": {
+    "image": "les_inegalites_nord_sud",
+    "ratio": "16:9",
+    "hook": "Un Américain gagne en une heure ce qu'un habitant du Niger gagne en une journée entière de travail."
+  },
+  "sections": [
+    {
+      "id": "course_215_les_inegalites_nord_sud_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le fossé entre pays riches et pays pauvres reste l'un des faits les plus frappants du monde actuel. La mondialisation promettait un rapprochement des niveaux de vie, mais les écarts de richesse restent immenses entre les nations."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pourtant, l'histoire récente n'est pas seulement sombre : l'extrême pauvreté a reculé plus vite que jamais depuis trente ans. Ce cours explore les racines de ces inégalités, et les raisons de cet étrange paradoxe."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p1",
+      "title": "Un monde à deux vitesses",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Les **10% les plus riches** de la population mondiale captent plus de 52% des revenus mondiaux. Les 50% les plus pauvres doivent se partager seulement 8% du gâteau. Cette concentration des richesses n'a jamais été aussi forte dans l'histoire humaine."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cette fracture se voit aussi dans l'espérance de vie : elle atteint 83 ans au Japon, mais tombe à 55 ans en République centrafricaine. Ces écarts ne sont pas dus au hasard : ils viennent d'un accès très inégal à l'eau potable, à la nourriture et aux soins de santé."
+        },
+        {
+          "type": "funFact",
+          "text": "Un habitant des États-Unis gagne en moyenne, en une heure de travail, autant qu'un habitant du Niger en une journée entière."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p2",
+      "title": "Des racines historiques toujours vivantes",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pour comprendre ces écarts, il faut remonter à la colonisation. Les puissances européennes ont organisé de nombreux territoires du Sud comme des fournisseurs de matières premières (café, cacao, coton), freinant leur propre industrialisation pour protéger leurs propres usines."
+        },
+        {
+          "type": "image",
+          "asset": "global_inequality_rich_poor_contrast_photograph",
+          "ratio": "16:9",
+          "caption": "Les écarts de richesse entre le Nord et le Sud restent parmi les plus marqués de la planète."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cette logique se poursuit aujourd'hui à travers les [[termes de l'échange]] : les pays du Sud vendent souvent des matières premières dont le prix varie fortement, tandis qu'ils achètent des produits fabriqués dont le prix ne fait qu'augmenter. À cela s'ajoute le poids de la dette : rembourser les intérêts prend parfois plus de place dans un budget national que l'éducation ou la santé."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p3",
+      "title": "Des progrès réels, mais inégaux",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Les trente dernières années ont pourtant permis un recul spectaculaire de la pauvreté absolue, qui touchait 36% de la population mondiale en 1990, contre moins de 10% avant 2020. Ce progrès vient surtout de la croissance fulgurante de la Chine et de l'Inde."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce progrès a une face cachée : c'est ce que montre la [[courbe de l'éléphant]] de l'économiste Branko Milanovic. Les classes moyennes asiatiques ont vu leurs revenus exploser, mais les classes populaires des pays riches ont stagné, confrontées à la concurrence mondiale. Réduire les inégalités entre pays n'a donc pas empêché de nouvelles tensions à l'intérieur même des pays riches."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p4",
+      "title": "Le climat, nouvelle ligne de fracture",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L'avenir des inégalités Nord-Sud se joue désormais sur le climat. Les pays du Sud, historiquement les moins responsables des émissions de gaz à effet de serre, sont pourtant les plus exposés aux sécheresses, aux inondations et à la montée des eaux."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour réduire ces écarts durablement, la communauté internationale explore de nouvelles pistes : [[aide publique au développement]] ciblée sur la transition énergétique, ou annulation de la dette des pays les plus fragiles. Tant que la richesse des plus riches croîtra plus vite que celle des plus pauvres, les tensions resteront fortes."
+        },
+        {
+          "type": "takeaway",
+          "text": "Les 10% les plus riches du monde captent plus de la moitié des revenus mondiaux, mais l'extrême pauvreté a reculé plus vite que jamais en trente ans grâce à l'essor de la Chine et de l'Inde. Le prochain grand défi de cette fracture Nord-Sud sera climatique."
+        }
+      ]
+    }
+  ]
+}

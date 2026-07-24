@@ -1,0 +1,138 @@
+{
+  "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri",
+  "title": "El agujero de ozono (y su recuperación)",
+  "subtitle": "1985-2065",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Medio ambiente y futuro",
+  "description": "Un agujero gigante descubierto sobre la Antártida, un tratado firmado por 197 países y un planeta que sana. Aquí está **La gran crisis ecológica única** que la humanidad ya ha resuelto.",
+  "hero": {
+    "image": "le_trou_de_la_couche_d_ozone",
+    "ratio": "16:9",
+    "hook": "Un agujero en el cielo, descubierto por casualidad y cerrado por un tratado firmado por el mundo entero."
+  },
+  "sections": [
+    {
+      "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_intro",
+      "title": "Introducción",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En 1985, los científicos británicos destinados en la Antártida no podían creer sus mediciones: parte del cielo parecía haber perdido su protección contra el Sol. No fue un error del dispositivo, sino un auténtico agujero en la capa de ozono, ese escudo invisible que nos protege a todos. Este curso cuenta la historia de cómo el mundo descubrió este peligro y, inusualmente, cómo logró solucionarlo."
+        }
+      ]
+    },
+    {
+      "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_p1",
+      "title": "Un escudo frágil, un veneno útil",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La **tapa de ozono** se encuentra entre 15 y 35 kilómetros sobre el nivel del mar, en el , y absorbe la mayor parte de los **UV-B**, estos rayos del Sol lo suficientemente potentes como para dañar nuestra piel y el ADN de las células vivas. En la década de 1930, la industria inventó los **clorofluorocarbonos**, o : gases considerados perfectos y económicos, que se colocaban en todas partes, en refrigeradores, aires acondicionados y latas de aerosol. [[Estratosfera]] [[Los clorofluorocarbonos (CFC)]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "El problema es que estos gases son demasiado estables: en lugar de degradarse cerca del suelo, ascienden a la estratosfera. En 1974, los químicos Mario Molina y Frank Sherwood Rowland advirtieron: bajo la influencia del sol, los CFC liberan cloro, que destruye el ozono. Recibieron el Premio Nobel en 1995, pero entonces casi nadie los escuchó."
+        }
+      ]
+    },
+    {
+      "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_p2",
+      "title": "1985: el shock, luego el acuerdo global",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En 1985, el British Antártida Survey confirmó la noticia: cada primavera se abre un espectacular agujero en la capa de ozono sobre . Los satélites de la NASA ya tenían estos datos, pero su software los había descartado por considerarlos demasiado extremos para ser verdad. [[antártico]]"
+        },
+        {
+          "type": "image",
+          "asset": "ozone_hole_antarctica_satellite_image_nasa",
+          "ratio": "16:9",
+          "caption": "El agujero de ozono sobre la Antártida, visto por satélite."
+        },
+        {
+          "type": "paragraph",
+          "text": "La amenaza a la salud humana se toma muy en serio y el mundo está respondiendo rápidamente. En 1987, los países firmaron el , un tratado que organizó la eliminación gradual de los CFC. Al principio sólo tiene 24 países; hoy reúne a **197**, todos los miembros de las Naciones Unidas. [[El Protocolo de Montreal (1987)]]"
+        },
+        {
+          "type": "funFact",
+          "text": "El Protocolo de Montreal es el único tratado en la historia de las Naciones Unidas ratificado por todos los países del mundo, sin excepción."
+        },
+        {
+          "type": "paragraph",
+          "text": "Este éxito se debe a una norma clara para todos y a un fondo común que ayuda a los países pobres a cambiar sus máquinas. Incluso los fabricantes, que inicialmente estaban en contra, acabaron haciendo lo mismo y encontrando productos de sustitución rentables."
+        }
+      ]
+    },
+    {
+      "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_p3",
+      "title": "¿Por qué el clima es más duro?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A menudo se cita este éxito para decir que podríamos resolver el cambio climático de la misma manera. Pero los dos problemas difieren: el agujero de la capa de ozono provino de una pequeña cantidad de gases producidos por un pequeño número de fábricas, que eran fáciles de atacar.  surge de casi todo lo que hace nuestra sociedad moderna: mover, calentar, cultivar, construir: reducir el CO₂ requiere cambiar toda la economía global, no solo un puñado de fábricas químicas. [[Dióxido de carbono (CO₂)]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Por cierto, buenas noticias: los CFC también eran potentes gases de efecto invernadero. Al prohibirlos, el Protocolo de Montreal también frenó el calentamiento global, sin que ese sea su objetivo principal."
+        },
+        {
+          "type": "funFact",
+          "text": "Sin este tratado, los CFC podrían haber añadido aproximadamente 1°C de calentamiento adicional a la Tierra para 2050, simplemente por su efecto invernadero."
+        }
+      ]
+    },
+    {
+      "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_p4",
+      "title": "Una recuperación lenta pero muy real",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "El cloro que ya está aumentando en la atmósfera tarda en desaparecer: no fue hasta mediados de los años 1990 que los niveles de gases nocivos se estabilizaron. Desde principios de la década de 2000, la curación ha sido clara y mensurable."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1974",
+              "title": "La alerta científica",
+              "detail": "Molina y Rowland descubren el vínculo entre los CFC y el ozono."
+            },
+            {
+              "date": "1985",
+              "title": "El agujero está confirmado.",
+              "detail": "El British Antártida Survey publica sus datos."
+            },
+            {
+              "date": "1987",
+              "title": "Protocolo de Montreal",
+              "detail": "Firma del tratado, ratificado ahora por 197 países."
+            },
+            {
+              "date": "2000",
+              "title": "Inicio de la curación",
+              "detail": "Los niveles de gases nocivos finalmente se están estabilizando."
+            },
+            {
+              "date": "2065",
+              "title": "Regreso a la normalidad (planeado)",
+              "detail": "La capa de ozono debería volver a su nivel de 1980."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Si se sigue respetando el tratado, la capa de ozono debería volver a su estado de 1980 para **2065-2070**, previniendo millones de cánceres de piel y cataratas. Debemos permanecer alerta: hace unos años se detectaron emisiones clandestinas de CFC en el este de Asia, prueba de que un acuerdo global sólo funciona si se lo controla constantemente."
+        },
+        {
+          "type": "takeaway",
+          "text": "El agujero de la capa de ozono sigue siendo la única crisis ambiental importante resuelta enteramente mediante la cooperación global: un tratado firmado en 1987 por 197 países, con resultados científicamente mensurables."
+        }
+      ]
+    }
+  ]
+}

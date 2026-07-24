@@ -1,0 +1,116 @@
+{
+  "id": "course_238_la_transition_energetique",
+  "title": "La transición energética",
+  "subtitle": "Hacia la neutralidad de carbono",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Medio ambiente y futuro",
+  "description": "El mundo está intentando sustituir los combustibles fósiles por fuentes más limpias. Un cambio tan necesario como difícil.",
+  "hero": {
+    "image": "la_transition_energetique",
+    "ratio": "16:9",
+    "hook": "La energía solar se ha convertido en la energía más barata de la historia. Ya sólo queda guardarlo."
+  },
+  "sections": [
+    {
+      "id": "course_238_la_transition_energetique_intro",
+      "title": "Introducción",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Durante mucho tiempo, la humanidad cambió las fuentes de energía por elección de eficiencia: de la madera al carbón, luego del carbón al petróleo. La actual transición energética **** es diferente: por primera vez, está impuesta por una limitación de supervivencia: el cambio climático."
+        },
+        {
+          "type": "paragraph",
+          "text": "Este curso explora cómo el mundo está tratando de reemplazar los combustibles fósiles con fuentes más limpias y por qué este cambio es tan difícil como necesario."
+        }
+      ]
+    },
+    {
+      "id": "course_238_la_transition_energetique_p1",
+      "title": "1,5°C: el objetivo que lo impulsa todo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "El marco que guía hoy todas las políticas energéticas se llama , firmado en 2015. Este tratado compromete a los países del mundo a limitar el calentamiento global, con un objetivo específico: mantenerse, si es posible, por debajo de 1,5°C con respecto a los niveles anteriores a la era industrial. Cada décima de grado adicional empeora los fenómenos meteorológicos extremos. **[[Acuerdo de París (2015) y los objetivos climáticos]]**"
+        },
+        {
+          "type": "image",
+          "asset": "solar_panel_farm_photovoltaic_field",
+          "ratio": "16:9",
+          "caption": "Los paneles solares y las turbinas eólicas simbolizan el cambio mundial hacia fuentes de energía bajas en carbono."
+        },
+        {
+          "type": "paragraph",
+          "text": "Para cumplir con este objetivo, los Estados aspiran a : un equilibrio entre los gases de efecto invernadero emitidos por las actividades humanas y su absorción por los bosques, los suelos, los océanos o las tecnologías de captura. Esto supone que las emisiones globales dejen de aumentar antes de 2025 y luego caigan drásticamente en los años siguientes. **[[neutralidad de carbono]]**"
+        },
+        {
+          "type": "funFact",
+          "text": "El costo de la energía solar cayó un 90% entre 2010 y 2020, una caída más rápida que la de casi cualquier otra tecnología en la historia económica. En 2023, la energía solar se convertirá incluso en la fuente de electricidad más barata jamás producida en muchas partes del mundo."
+        }
+      ]
+    },
+    {
+      "id": "course_238_la_transition_energetique_p2",
+      "title": "La espectacular caída de los precios",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "El principal motor de la transición es económico. La energía solar fotovoltaica ****, anteriormente reservado a los satélites, ha visto su precio dividido desde hace cinco años, gracias al progreso técnico y a las economías de escalada.****, especialmente instalado en el mar, donde los vientos son más fuertes y regulares, también ha alcanzado una verdadera madurez industrial. En 2023, casi el 90% de la nueva capacidad eléctrica instalada en todo el mundo ya procederá de energías renovables."
+        },
+        {
+          "type": "paragraph",
+          "text": "Queda un gran desafío: la energía solar y la eólica sufren **intermitente**, es decir, no producen electricidad de forma continua. De ahí la importancia de las baterías de gran capacidad, cuyo precio ha seguido la misma caída espectacular que el de las solares, haciendo que los coches eléctricos sean cada vez más competitivos."
+        },
+        {
+          "type": "funFact",
+          "text": "China ahora fabrica más del 80% de los paneles solares del mundo y más del 70% de las baterías de iones de litio para vehículos eléctricos. Por tanto, la transición energética de Occidente depende en gran medida de una cadena manufacturera china."
+        }
+      ]
+    },
+    {
+      "id": "course_238_la_transition_energetique_p3",
+      "title": "Nuevos obstáculos: almacenamiento y metales raros",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A pesar de este entusiasmo, la transición enfrenta límites muy reales. A diferencia del gas o el carbón, que pueden quemarse a voluntad, las energías renovables requieren redes eléctricas más flexibles, con fuentes de almacenamiento o respaldo como el hidrógeno o la energía nuclear."
+        },
+        {
+          "type": "paragraph",
+          "text": "Otro obstáculo es el paso de una dependencia del petróleo a una dependencia del  y otros metales, como el litio o el cobalto, necesarios para fabricar baterías y turbinas eólicas. China controla una enorme proporción del refinado mundial de estos materiales, lo que crea nuevas vulnerabilidades para Europa y Estados Unidos. **[[tierras raras]]**"
+        },
+        {
+          "type": "paragraph",
+          "text": "Finalmente, la transición encuentra resistencia social: las industrias de combustibles fósiles todavía emplean a millones de personas, y transformar estos empleos sin destruirlos es una condición esencial para que la transición sea aceptada por todos."
+        }
+      ]
+    },
+    {
+      "id": "course_238_la_transition_energetique_p4",
+      "title": "Hacia una nueva combinación energética",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sin duda, el futuro energético no se basa en una única solución, sino en una mezcla de varias. El  parece ser una pieza clave para descarbonizar los sectores más difíciles, como la producción de acero o la aviación, donde la electricidad por sí sola no es suficiente. **[[Hidrógeno verde]]**"
+        },
+        {
+          "type": "paragraph",
+          "text": "La transición también requiere **sobriedad**: consumir menos y mejor, aislando los edificios o reduciendo los residuos industriales, sigue siendo a menudo la palanca más eficaz y menos costosa."
+        },
+        {
+          "type": "funFact",
+          "text": "Algunas baterías experimentales funcionan por gravedad: levantan pesados ​​bloques de hormigón con el exceso de electricidad solar del día y luego los dejan bajar por la noche para producir electricidad mediante una turbina."
+        },
+        {
+          "type": "takeaway",
+          "text": "El coste de la energía solar ha caído un 90% en quince años, convirtiéndose en la fuente de electricidad más barata de la historia. Pero el almacenamiento de energía y el suministro de metales raros siguen siendo los principales desafíos de la transición energética."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "id": "course_37_la_shoah_mecanismes_d_un_genocide",
+  "title": "La Shoah : mécanismes d'un génocide",
+  "subtitle": "1933-1945",
+  "subject": "histoire",
+  "subcategory": "Guerre froide & monde contemporain",
+  "description": "Entre **1941** et **1945**, le régime nazi organise l'assassinat de six millions de Juifs. La Shoah n'est pas une explosion de haine spontanée, mais un processus d'État.",
+  "hero": {
+    "image": "la_shoah_mecanismes_d_un_genocide",
+    "ratio": "16:9",
+    "hook": "Comprendre comment un État moderne a transformé la persécution en extermination."
+  },
+  "sections": [
+    {
+      "id": "course_37_la_shoah_mecanismes_d_un_genocide_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Entre **1941** et **1945**, le régime nazi orchestre l'assassinat de **6 millions de Juifs**, soit les deux tiers des Juifs d'Europe. En hébreu, **Shoah** signifie « catastrophe »."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce génocide n'est pas une violence désordonnée. C'est un processus d'État, organisé étape par étape : de l'exclusion légale à une mise à mort industrielle."
+        }
+      ]
+    },
+    {
+      "id": "course_37_la_shoah_mecanismes_d_un_genocide_p1",
+      "title": "De la discrimination à l'exclusion (1933-1939)",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dès **janvier 1933**, quand **Adolf Hitler** arrive au pouvoir, l'État nazi met l'antisémitisme en loi. Les lois de Nuremberg (**1935**) privent les Juifs de citoyenneté et interdisent les unions mixtes. En novembre **1938**, la « Nuit de Cristal », un **[[pogrom]]** organisé (attaque violente contre une communauté juive), voit synagogues incendiées et **30 000** hommes internés."
+        },
+        {
+          "type": "paragraph",
+          "text": "Après l'invasion de la Pologne (**1939**), les nazis imposent la **[[ghettoïsation]]** : les Juifs sont enfermés dans des quartiers fermés, notamment à Varsovie et à Łódź. Famine, épidémies, isolement : une destruction déjà massive, encore indirecte."
+        },
+        {
+          "type": "image",
+          "asset": "auschwitz_birkenau_entrance_gate",
+          "ratio": "16:9",
+          "caption": "Auschwitz-Birkenau, devenu le symbole du système d'extermination."
+        }
+      ]
+    },
+    {
+      "id": "course_37_la_shoah_mecanismes_d_un_genocide_p2",
+      "title": "L'invasion de l'URSS et les fusillades",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le **22 juin 1941**, l'Allemagne nazie lance l'opération Barbarossa contre l'URSS. Dans le sillage de la Wehrmacht (l'armée allemande), les **[[Einsatzgruppen]]**, unités mobiles de la SS, assassinent communistes et populations juives."
+        },
+        {
+          "type": "paragraph",
+          "text": "En environ **18 mois**, ces commandos tuent près de **1,5 million** de personnes. À Babi Yar, près de Kiev, en septembre **1941**, **33 771** Juifs sont fusillés en deux jours. La méthode est jugée trop lente, trop visible, trop éprouvante pour les exécutants. Le régime cherche un système plus anonyme."
+        }
+      ]
+    },
+    {
+      "id": "course_37_la_shoah_mecanismes_d_un_genocide_p3",
+      "title": "Wannsee : organiser le meurtre à l'échelle de l'Europe",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le **20 janvier 1942**, [[La conférence de Wannsee (janvier 1942)]] réunit **15** hauts fonctionnaires nazis près de Berlin. Il ne s'agit plus de décider le principe de l'extermination, déjà acté, mais d'organiser la déportation de tous les Juifs d'Europe : trains, administrations, logistique."
+        },
+        {
+          "type": "image",
+          "asset": "wannsee_conference_1942",
+          "ratio": "4:3",
+          "caption": "Villa de Wannsee, où fut coordonnée la « Solution finale »."
+        },
+        {
+          "type": "paragraph",
+          "text": "Belzec, Sobibor, Treblinka, Auschwitz-Birkenau deviennent des centres de mise à mort. Sur la rampe, une « sélection » sépare une minorité destinée au travail forcé de la majorité conduite immédiatement aux chambres à gaz. La philosophe **Hannah Arendt** parlera plus tard de la **[[banalité du mal]]** : l'extermination gérée comme un problème administratif."
+        },
+        {
+          "type": "funFact",
+          "text": "La conférence de Wannsee, qui coordonne l'échelle continentale du crime, dure environ **90 minutes**."
+        }
+      ]
+    },
+    {
+      "id": "course_37_la_shoah_mecanismes_d_un_genocide_p4",
+      "title": "Bilan et devoir de mémoire",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sur **9 millions** de Juifs européens d'avant-guerre, deux tiers disparaissent. La Pologne perd environ **90 %** de sa population juive. Le régime persécute aussi les **[[Tziganes]]** (Roms et Sintés), les personnes handicapées, les homosexuels, les opposants politiques. La Shoah reste unique par sa volonté de destruction totale et systématique d'un peuple."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le procès de Nuremberg tente ensuite de nommer juridiquement ce crime. Des lieux comme **[[Yad Vashem]]**, institut de mémoire à Jérusalem, entretiennent le souvenir pour que ce mécanisme d'État ne soit ni oublié ni banalisé."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1935",
+              "title": "Lois de Nuremberg",
+              "detail": "Exclusion juridique des Juifs allemands."
+            },
+            {
+              "date": "1941",
+              "title": "Shoah par balles",
+              "detail": "Einsatzgruppen à l'Est."
+            },
+            {
+              "date": "1942",
+              "title": "Wannsee",
+              "detail": "Coordination administrative de la Solution finale."
+            },
+            {
+              "date": "1945",
+              "title": "Libération des camps",
+              "detail": "Découverte de l'ampleur du crime."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "La Shoah fut l'assassinat de **6 millions** de Juifs par un système d'État : exclusion légale, ghettos, fusillades, puis centres de mise à mort. Un génocide organisé, pas une explosion spontanée."
+        }
+      ]
+    }
+  ]
+}

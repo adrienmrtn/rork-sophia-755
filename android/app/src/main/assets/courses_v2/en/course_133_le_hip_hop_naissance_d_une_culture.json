@@ -1,0 +1,145 @@
+{
+  "id": "course_133_le_hip_hop_naissance_d_une_culture",
+  "title": "Hip-hop: birth of a culture",
+  "subtitle": "1973",
+  "subject": "art",
+  "subcategory": "Music",
+  "description": "Born in the Bronx in 1973, hip-hop invented DJ, rap, breakdance and graffiti, then conquered the planet.",
+  "hero": {
+    "image": "le_hip_hop_naissance_d_une_culture",
+    "ratio": "16:9",
+    "hook": "A block party in the Bronx, and a global culture was born."
+  },
+  "sections": [
+    {
+      "id": "course_133_le_hip_hop_naissance_d_une_culture_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hip-hop is not just a musical genre. It's a culture born out of adversity, in the **Bronx** of New York in the early **1970**."
+        },
+        {
+          "type": "paragraph",
+          "text": "In fifty years, this movement invented by young African-Americans and Puerto Ricans has transformed music, fashion and language. Here's how a block party became the common language of the world's youth."
+        }
+      ]
+    },
+    {
+      "id": "course_133_le_hip_hop_naissance_d_une_culture_p1",
+      "title": "The Bronx in Ruins and Kool Herc's Party",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The context is brutal. Between 1950 and 1972, [[Robert Moses's highway policy]] crossed the neighborhood: the [[Cross-Bronx Expressway]], led by urban planner [[Robert Moses]], destroyed tens of thousands of homes. [[Real estate speculation]] even pushes some owners to burn down their buildings for insurance. We then say: “the Bronx is burning”."
+        },
+        {
+          "type": "paragraph",
+          "text": "**August 11, 1973**, at 1520 Sedgwick Avenue, Jamaican immigrant **Clive Campbell**, known as **Kool DJ Herc**, is organizing a party in the common room of his building. He invented the *breakbeat*: with two turntables, he isolated and extended the most danceable rhythmic part of a record. The DJ becomes a creator, not just a broadcaster."
+        },
+        {
+          "type": "image",
+          "asset": "dj_kool_herc_bronx_1973_breakbeat",
+          "ratio": "4:3",
+          "caption": "Kool Herc: two turntables, a break, and the hip-hop begins."
+        },
+        {
+          "type": "funFact",
+          "text": "His “Herculords” system was so powerful that he sometimes illegally plugged it into street lamps."
+        }
+      ]
+    },
+    {
+      "id": "course_133_le_hip_hop_naissance_d_une_culture_p2",
+      "title": "Four pillars: DJ, MC, dance, graffiti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hip-hop is structured around four disciplines. The **DJing** is refined with **Grandmaster Flash**, which treats the turntable like an instrument. The **MCing** (Master of Ceremonies) transformed calls to the public into rhythmic poetry: this was the birth of rap."
+        },
+        {
+          "type": "image",
+          "asset": "breakdancing_graffiti_new_york_1980s",
+          "ratio": "4:3",
+          "caption": "Breakdance and graffiti: the body and the wall as scenes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Added to this are **breakdancing** (B-Boying), an athletic dance, and **graffiti**, which transforms metro trains into mobile galleries. **Afrika Bambaataa**, former gang member, founded the **Universal Zulu Nation** to replace violence with artistic competition: peace, love, unity, pleasure."
+        },
+        {
+          "type": "funFact",
+          "text": "[[Scratching]] was born by accident in 1975: **Great Wizzard Theodore**, 12 years old, jams a record in his hand to hear his mother calling him."
+        }
+      ]
+    },
+    {
+      "id": "course_133_le_hip_hop_naissance_d_une_culture_p3",
+      "title": "From the Bronx to the charts: the commercial explosion",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In **1979**, *Rapper's Delight* from the **Sugarhill Gang** proves that rap can be a worldwide hit, even if the pioneers consider it too \"studio\". In **1982**, *The Message* by **Grandmaster Flash and the Furious Five** imposes the social chronicle of the ghetto."
+        },
+        {
+          "type": "image",
+          "asset": "sugarhill_gang_rappers_delight_1979_record",
+          "ratio": "4:3",
+          "caption": "Rapper's Delight (1979): rap hits the charts."
+        },
+        {
+          "type": "paragraph",
+          "text": "In the 1990s, East/West rivalry structured the industry. In New York, [[The Notorious B.I.G.]] focuses on lyrical virtuosity. In Los Angeles, **N.W.A** and [[Tupac Shakur]] developed gangsta rap, which denounced police violence. The rapper also becomes an entrepreneur: labels, clothes, brands."
+        },
+        {
+          "type": "funFact",
+          "text": "The loop of *Rapper's Delight* is not a sample: it is a studio re-recording of *Good Times* by Chic, for fear of lawsuits."
+        }
+      ]
+    },
+    {
+      "id": "course_133_le_hip_hop_naissance_d_une_culture_p4",
+      "title": "A culture that has become a global language",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In the 21st century, **Eminem**, **Kanye West** or **Kendrick Lamar** elevate the genre. In **2018**, Lamar won a Pulitzer Prize for music: unprecedented institutional recognition. [[Musical sampling]] has become a universal technique. France is the second largest rap market in the world."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1973",
+              "title": "Sedgwick Avenue Party",
+              "detail": "Kool Herc invents breakbeat in the Bronx."
+            },
+            {
+              "date": "1979",
+              "title": "Rapper's Delight",
+              "detail": "Rap becomes an export product."
+            },
+            {
+              "date": "1982",
+              "title": "The Message",
+              "detail": "Rap becomes a social chronicle."
+            },
+            {
+              "date": "2018",
+              "title": "Pulitzer for Lamar",
+              "detail": "Hip-hop enters the official pantheon."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Born on August 11, 1973 in the Bronx with Kool Herc, hip-hop went from local outlet to the most influential culture of the contemporary era."
+        }
+      ]
+    }
+  ]
+}

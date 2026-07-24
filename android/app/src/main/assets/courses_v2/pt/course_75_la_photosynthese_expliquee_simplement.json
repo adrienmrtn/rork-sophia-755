@@ -1,0 +1,112 @@
+{
+  "id": "course_75_la_photosynthese_expliquee_simplement",
+  "title": "Fotossíntese explicada de forma simples",
+  "subtitle": "Plantas e energia",
+  "subject": "sciences",
+  "subcategory": "A Terra e o Universo",
+  "description": "As plantas fazem algo extraordinário: cozinham o açúcar com luz, água e ar. E eles nos dão oxigênio de presente.",
+  "hero": {
+    "image": "la_photosynthese_expliquee_simplement",
+    "ratio": "16:9",
+    "hook": "Uma folha é uma cozinha solar: luz, água, ar... e aqui está o açúcar."
+  },
+  "sections": [
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Imagine uma planta em miniatura em cada folha. São necessários três ingredientes mundanos: **luz do Sol**, **água** das raízes e **CO₂** do ar. Sai com **açúcar** para crescer e libera **oxigênio**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esse feito é chamado de **sessão de fotos**. Sem ele, não há florestas, não há oxigênio respirável, quase não há vida complexa na Terra."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p1",
+      "title": "Onde isso acontece na folha?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Na célula vegetal, organelas verdes, os **cloroplastos**, abrigam o . Este pigmento captura principalmente o azul e o vermelho da luz. O verde volta: é por isso que as folhas nos parecem verdes. [[A clorofila]]"
+        },
+        {
+          "type": "image",
+          "asset": "leaf_photosynthesis_sunlight_chloroplasts",
+          "ratio": "auto",
+          "caption": "As folhas capturam a luz solar para a fotossíntese."
+        },
+        {
+          "type": "paragraph",
+          "text": "A equação simples: CO₂ + água + luz → açúcar + oxigênio. O gás entra por minúsculos poros, o . A água sobe das raízes. O açúcar vira madeira, fruta, raízes; o oxigênio vai para o ar. [[estômatos]]"
+        },
+        {
+          "type": "funFact",
+          "text": "A clorofila “recusa” o verde. Ela prefere o azul e o vermelho, mais eficazes para excitar seus elétrons e lançar a máquina de energia."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p2",
+      "title": "Duas etapas: capturar e depois criar",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Primeiro, a fase **luz**. A luz quebra as moléculas de água. O oxigênio escapa. A energia é armazenada em duas “baterias” químicas, a **ATP** e a **NADPH**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Em seguida, vem a fase de fabricação do ****, o, em homenagem ao címico**Melvin Calvin**. Com a energia das baterias, a planta transforma carbono do CO₂ em glicose. Não há necessidade de luz solar direta nesta fase, mas depende inteiramente do que a luz produziu antes. [[O ciclo de Calvin]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Para seguir o caminho do carbono na folha, Calvin usou isótopos radioativos provenientes de pesquisas sobre a bomba atômica. Prêmio Nobel em **1961**."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p3",
+      "title": "Quando o oxigênio mudou o planeta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cerca de **2,4 bilhões de anos atrás**, bactérias fotossintéticas, **cianobactérias**, começaram a liberar oxigênio em massa. Este é o **Ótima oxidação**. Para muitas organizações da época, era um veneno."
+        },
+        {
+          "type": "paragraph",
+          "text": "Então o oxigênio permitiu a camada de ozônio e uma respiração muito mais eficiente. O ar que respiramos é, basicamente, o “resíduo” de bilhões de anos de fotossíntese."
+        },
+        {
+          "type": "funFact",
+          "text": "Cerca de **metade** do oxigênio da Terra vem do fitoplâncton nos oceanos, não apenas das florestas."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p4",
+      "title": "Uma produção modesta, um papel imenso",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Uma folha converte apenas **1 em 3%** da energia solar recebida em biomassa. À escala global, isto é suficiente para alimentar as cadeias alimentares e absorver enormes quantidades de CO₂."
+        },
+        {
+          "type": "paragraph",
+          "text": "Daí o interesse pelas florestas, oceanos… e até pela fotossíntese artificial para o clima. Uma lesma do mar, *Elysia clorótica*, chega a “roubar” cloroplastos de algas para viver um pouco de energia solar."
+        },
+        {
+          "type": "takeaway",
+          "text": "A fotossíntese transforma luz, água e CO₂ em açúcar e regenera oxigênio. É a cozinha solar que está na base de quase toda a vida."
+        }
+      ]
+    }
+  ]
+}

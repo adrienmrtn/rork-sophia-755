@@ -1,0 +1,126 @@
+{
+  "id": "course_148_le_bauhaus",
+  "title": "Il Bauhaus",
+  "subtitle": "1919-1933",
+  "subject": "art",
+  "subcategory": "Cinema, fotografia & architettura",
+  "description": "Tra **1919** e **1933**, la scuola **Bauhaus** unisce arte, artigianato e industria in Germania. Chiuso dai nazisti, diffonde tuttavia il design moderno in tutto il mondo.",
+  "hero": {
+    "image": "le_bauhaus",
+    "ratio": "16:9",
+    "hook": "Una scuola tedesca di 14 anni ha progettato il mondo moderno, dalle sedie agli smartphone."
+  },
+  "sections": [
+    {
+      "id": "course_148_le_bauhaus_intro",
+      "title": "Introduzione",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La **Bauhaus** (1919-1933) è la scuola di arte e design più influente del XX secolo. Fondata in Germania subito dopo la Prima Guerra Mondiale, rifiuta l'inutile arredamento ottocentesco. Il suo obiettivo: inventare un linguaggio semplice, adatto all'era industriale."
+        },
+        {
+          "type": "paragraph",
+          "text": "Unendo arte, artigianato e tecnica, getta le basi del moderno . La sua vita è breve. La sua eredità è ovunque. [[Il funzionalismo nel design]]"
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p1",
+      "title": "Weimar 1919: abolizione della gerarchia delle arti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nel **1919** l'architetto **Walter Gropius** fondò il Bauhaus a **Weimar**. Il suo manifesto è chiaro: lo scopo finale di tutta la creazione è l'architettura. Non più confini tra “belle arti” nobili e “arti applicate” secondarie. L'artigianato diventa la base di tutto."
+        },
+        {
+          "type": "image",
+          "asset": "bauhaus_weimar_1919_walter_gropius_building",
+          "ratio": "4:3",
+          "caption": "Il Bauhaus: una scuola dove si impara facendo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ogni bottega ha due maestri: un artista e un artigiano. Qui insegnano personaggi come , un pittore astratto russo. La scuola dialoga anche con , movimento olandese ossessionato dal rettangolo e dai colori puri. [[Vassily Kandinsky]] [[De Stijl]]"
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p2",
+      "title": "La forma segue la funzione",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Successivamente installata a **Dessau**, la scuola si è dedicata alla produzione di massa. Famoso slogan: **“la forma segue la funzione”**. L'ornamento è considerato non necessario. Cerchiamo oggetti semplici e belli che possano essere fabbricati in fabbrica."
+        },
+        {
+          "type": "funFact",
+          "text": "**Marcel Breuer**, insegnante al Bauhaus, ricicla l'acciaio tubolare delle biciclette per inventare sedie leggere. Il materiale di fabbrica diventa mobile per il soggiorno."
+        },
+        {
+          "type": "paragraph",
+          "text": "I laboratori testano metallo, vetro, tessuti e tipografia. L’obiettivo non è più il singolo oggetto di lusso. È l'oggetto tipico, accessibile al maggior numero di persone."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p3",
+      "title": "Chiusa dai nazisti, salvata dall'esilio",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La scuola è fastidiosa. È accusato di essere troppo moderno, troppo internazionale, troppo di sinistra. Dopo un periodo a Berlino sotto la guida di **Mies van der Rohe**, arriva . Il regime vede questo come “bolscevismo culturale”. [[La chiusura da parte dei nazisti (1933)]]"
+        },
+        {
+          "type": "image",
+          "asset": "mies_van_der_rohe_modernist_architecture",
+          "ratio": "4:3",
+          "caption": "Mies van der Rohe: ultima dirigenza del Bauhaus, poi esule americano."
+        },
+        {
+          "type": "paragraph",
+          "text": "La chiusura diventa diffusione. I maestri vanno negli Stati Uniti, in Gran Bretagna, in Palestina. A Tel Aviv, le loro idee alimentano lo , un vasto insieme di architettura moderna bianca. [[Città Bianca di Tel Aviv]]"
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p4",
+      "title": "Un design divenuto invisibile attraverso l'ovvietà",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Oggi, l’eredità Bauhaus è ovunque: mobili componibili, edifici semplici, interfacce chiare, tipografie [[sans-serif]] . IKEA, gli aeroporti, i nostri telefoni: la chiarezza geometrica del Bauhaus è diventata l'arredamento ordinario del mondo."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1919",
+              "title": "Fondazione a Weimar",
+              "detail": "Gropius avvia la scuola d'arte-artigianato-industria."
+            },
+            {
+              "date": "1925",
+              "title": "Dessau",
+              "detail": "Passaggio alla produzione di massa."
+            },
+            {
+              "date": "1933",
+              "title": "Chiusura nazista",
+              "detail": "L’esilio diffonde il Bauhaus in tutto il mondo."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "In soli 14 anni il Bauhaus ha inventato l’idea moderna di design: meno ornamento, più funzione, oggetti belli perché utili. La sua chiusura politica non ha fatto altro che accelerare la sua conquista della vita quotidiana."
+        }
+      ]
+    }
+  ]
+}

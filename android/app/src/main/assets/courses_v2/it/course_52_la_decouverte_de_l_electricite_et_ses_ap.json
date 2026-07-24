@@ -1,0 +1,108 @@
+{
+  "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap",
+  "title": "La scoperta dell'elettricità",
+  "subtitle": "Da Franklin a Tesla",
+  "subject": "sciences",
+  "subcategory": "Scoperte che hanno cambiato il mondo",
+  "description": "L’elettricità non è stata inventata all’improvviso. È stato prima osservato, poi compreso, poi addomesticato. Ecco i passaggi chiave.",
+  "hero": {
+    "image": "la_decouverte_de_l_electricite",
+    "ratio": "16:9",
+    "hook": "Dal fulmine allo smartphone: due secoli per domare l'invisibile."
+  },
+  "sections": [
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_intro",
+      "title": "Introduzione",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L'elettricità esiste in natura: fulmini, pesci elettrici, attrito. Ciò che ha cambiato il mondo è stato imparare a **produrre**, **trasporto** e usarlo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Questa storia abbraccia più di due secoli, con esperimenti rischiosi e grandi rivalità."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p1",
+      "title": "Comprendere i fulmini",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nel XVIII secolo **Benjamin Franklin** dimostrò che il fulmine è un fenomeno elettrico. Il suo esperimento di volo con gli aquiloni (spesso raccontato in modo romanzato) mira a dimostrare che il cielo e la macchina di attrito giocano con la stessa forza."
+        },
+        {
+          "type": "image",
+          "asset": "benjamin_franklin_kite_lightning_experiment",
+          "ratio": "4:3",
+          "caption": "Franklin collega fulmini ed elettricità: un’idea pericolosa, ma fondamentale."
+        },
+        {
+          "type": "paragraph",
+          "text": "Abbiamo anche inventato lo **tuono**, un'asta metallica che offre ai fulmini un percorso sicuro verso terra. L'elettricità lascia il mistero per entrare nell'ingegneria."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p2",
+      "title": "Faraday: produrre corrente",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nel 19° secolo, **Michael Faraday** dimostrò che un magnete che si muove vicino a un filo può creare una corrente elettrica. Questa è l'induzione****. Senza questa idea, nessuna dinamo, nessun alternatore, nessuna centrale elettrica moderna."
+        },
+        {
+          "type": "image",
+          "asset": "faraday_electromagnetic_induction_experiment",
+          "ratio": "4:3",
+          "caption": "Faraday trasforma il movimento e il magnetismo in corrente."
+        },
+        {
+          "type": "funFact",
+          "text": "Faraday proveniva da un ambiente umile e iniziò come rilegatore di libri. Ha imparato la scienza leggendo ciò di cui si fidava."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p3",
+      "title": "Edison contro Tesla",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Alla fine del XIX secolo si scontrarono due campi. **Tommaso Edison** spinge la corrente continua. **Nicola Tesla** (e l'azienda Westinghouse) difendono la corrente alternata, che è più facile da trasportare su lunghe distanze."
+        },
+        {
+          "type": "image",
+          "asset": "tesla_edison_electric_power_station",
+          "ratio": "4:3",
+          "caption": "La corrente alternata sta guadagnando energia nelle città."
+        },
+        {
+          "type": "paragraph",
+          "text": "La corrente alternata vince per le reti urbane. Le città si illuminano. Le fabbriche stanno cambiando ritmo."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p4",
+      "title": "Un mondo connesso",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Oggi l’elettricità alimenta ospedali, treni, Internet, frigoriferi. La sfida non è più solo produrlo, ma farlo in modo pulito e affidabile."
+        },
+        {
+          "type": "takeaway",
+          "text": "L’elettricità fu compresa e poi addomesticata: Franklin per i fulmini, Faraday per produrre corrente, Tesla e la corrente alternata per portarla nelle case. La nostra vita quotidiana dipende ancora da questo."
+        }
+      ]
+    }
+  ]
+}

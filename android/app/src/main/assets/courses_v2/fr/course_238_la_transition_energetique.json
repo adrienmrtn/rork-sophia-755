@@ -1,0 +1,116 @@
+{
+  "id": "course_238_la_transition_energetique",
+  "title": "La transition énergétique",
+  "subtitle": "Vers la neutralité carbone",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environnement & avenir",
+  "description": "Le monde tente de remplacer les énergies fossiles par des sources plus propres. Une mutation aussi nécessaire que difficile.",
+  "hero": {
+    "image": "la_transition_energetique",
+    "ratio": "16:9",
+    "hook": "Le solaire est devenu l'énergie la moins chère de l'histoire. Reste à la stocker."
+  },
+  "sections": [
+    {
+      "id": "course_238_la_transition_energetique_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pendant longtemps, l'humanité a changé de source d'énergie par choix d'efficacité : du bois au charbon, puis du charbon au pétrole. La **transition énergétique** actuelle est différente : pour la première fois, elle est imposée par une contrainte de survie, le dérèglement climatique."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce cours explore comment le monde tente de remplacer les énergies fossiles par des sources plus propres, et pourquoi cette mutation est aussi difficile que nécessaire."
+        }
+      ]
+    },
+    {
+      "id": "course_238_la_transition_energetique_p1",
+      "title": "1,5°C : l'objectif qui pilote tout",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le cadre qui oriente aujourd'hui toutes les politiques énergétiques s'appelle l'**[[Accord de Paris]]**, signé en 2015. Ce traité engage les pays du monde à limiter le réchauffement climatique, avec un objectif précis : rester si possible sous 1,5°C au-dessus des niveaux d'avant l'ère industrielle. Chaque dixième de degré supplémentaire aggrave les phénomènes météo extrêmes."
+        },
+        {
+          "type": "image",
+          "asset": "solar_panel_farm_photovoltaic_field",
+          "ratio": "16:9",
+          "caption": "Panneaux solaires et éoliennes symbolisent le basculement du monde vers des sources d'énergie bas-carbone."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour respecter cet objectif, les États visent la **[[neutralité carbone]]** : un équilibre entre les gaz à effet de serre émis par les activités humaines et leur absorption par les forêts, les sols, les océans, ou des technologies de captage. Cela suppose que les émissions mondiales cessent d'augmenter avant 2025, puis chutent nettement dans les années suivantes."
+        },
+        {
+          "type": "funFact",
+          "text": "Le coût de l'énergie solaire a chuté de 90 % entre 2010 et 2020, une baisse plus rapide que presque n'importe quelle autre technologie dans l'histoire économique. En 2023, le solaire est même devenu la source d'électricité la moins chère jamais produite dans de nombreuses régions du monde."
+        }
+      ]
+    },
+    {
+      "id": "course_238_la_transition_energetique_p2",
+      "title": "La chute spectaculaire des prix",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le principal moteur de la transition est économique. Le **solaire photovoltaïque**, autrefois réservé aux satellites, a vu son prix divisé par dix en quinze ans, grâce aux progrès techniques et aux économies d'échelle. L'**éolien**, notamment installé en mer où les vents sont plus forts et réguliers, a lui aussi atteint une vraie maturité industrielle. En 2023, près de 90 % des nouvelles capacités électriques installées dans le monde provenaient déjà d'énergies renouvelables."
+        },
+        {
+          "type": "paragraph",
+          "text": "Reste un défi de taille : le solaire et l'éolien souffrent d'**intermittence**, c'est-à-dire qu'ils ne produisent pas d'électricité en continu. D'où l'importance des batteries de grande capacité, dont le prix a suivi la même chute spectaculaire que celui du solaire, rendant les voitures électriques de plus en plus compétitives."
+        },
+        {
+          "type": "funFact",
+          "text": "La Chine fabrique aujourd'hui plus de 80 % des panneaux solaires du monde et plus de 70 % des batteries lithium-ion pour véhicules électriques. La transition énergétique de l'Occident dépend donc largement d'une chaîne de fabrication chinoise."
+        }
+      ]
+    },
+    {
+      "id": "course_238_la_transition_energetique_p3",
+      "title": "Les nouveaux obstacles : stockage et métaux rares",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Malgré cet enthousiasme, la transition se heurte à des limites bien réelles. Contrairement au gaz ou au charbon, que l'on peut brûler à volonté, les énergies renouvelables demandent des réseaux électriques plus flexibles, avec du stockage ou des sources de secours comme l'hydrogène ou le nucléaire."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un autre obstacle est le passage d'une dépendance au pétrole à une dépendance aux **[[terres rares]]** et à d'autres métaux, comme le lithium ou le cobalt, nécessaires pour fabriquer batteries et éoliennes. La Chine contrôle une part énorme du raffinage mondial de ces matériaux, ce qui crée de nouvelles vulnérabilités pour l'Europe et les États-Unis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Enfin, la transition rencontre une résistance sociale : les industries fossiles emploient encore des millions de personnes, et transformer ces emplois sans les détruire est une condition essentielle pour que la transition soit acceptée par tous."
+        }
+      ]
+    },
+    {
+      "id": "course_238_la_transition_energetique_p4",
+      "title": "Vers un nouveau mix énergétique",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L'avenir énergétique ne repose sans doute pas sur une seule solution, mais sur un mélange de plusieurs. L'**[[Hydrogène vert]]** apparaît comme une pièce clé pour décarboner les secteurs les plus difficiles, comme la production d'acier ou l'aviation, là où l'électricité seule ne suffit pas."
+        },
+        {
+          "type": "paragraph",
+          "text": "La transition demande aussi de la **sobriété** : consommer moins et mieux, en isolant les bâtiments ou en réduisant le gaspillage industriel, reste souvent le levier le plus efficace et le moins coûteux."
+        },
+        {
+          "type": "funFact",
+          "text": "Certaines batteries expérimentales fonctionnent grâce à la gravité : elles font monter de lourds blocs de béton avec le surplus d'électricité solaire de la journée, puis les laissent redescendre le soir pour produire de l'électricité via une turbine."
+        },
+        {
+          "type": "takeaway",
+          "text": "Le coût du solaire a chuté de 90 % en quinze ans, devenant la source d'électricité la moins chère de l'histoire. Mais le stockage de l'énergie et l'approvisionnement en métaux rares restent les grands défis de la transition énergétique."
+        }
+      ]
+    }
+  ]
+}

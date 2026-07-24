@@ -1,0 +1,62 @@
+{
+  "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859",
+  "title": "La théorie de l'évolution de Darwin",
+  "subtitle": "1859",
+  "subject": "sciences",
+  "subcategory": "Découvertes qui ont changé le monde",
+  "description": "En 1859, Darwin publie L'Origine des espèces. L'idée centrale : le vivant change au fil du temps par sélection naturelle.",
+  "hero": {
+    "image": "la_theorie_de_l_evolution_de_darwin",
+    "ratio": "16:9",
+    "hook": "Les espèces ne sont pas figées. Elles changent. Lentement. Mais sûrement."
+  },
+  "sections": [
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "En **1859**, **Charles Darwin** publie *De l'origine des espèces*. Le livre choque, passionne, divise. Son idée centrale est pourtant simple à formuler." },
+        { "type": "paragraph", "text": "Les êtres vivants varient. Certaines variations aident à survivre et à se reproduire. Ces variations se transmettent. Au fil des générations, les populations changent." }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p1",
+      "title": "Le voyage qui ouvre les yeux",
+      "free": false,
+      "blocks": [
+        { "type": "image", "asset": "charles_darwin_portrait", "ratio": "4:3", "caption": "Darwin, naturaliste britannique du XIXe siècle." },
+        { "type": "paragraph", "text": "Jeune, Darwin part sur le navire **Beagle**. Pendant des années, il observe plantes, fossiles, oiseaux. Aux îles Galápagos, il remarque que des oiseaux proches ont des becs différents selon leur nourriture." },
+        { "type": "image", "asset": "darwin_finches_galapagos_beaks", "ratio": "4:3", "caption": "Des becs adaptés à des régimes différents : un indice fort." }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p2",
+      "title": "La sélection naturelle, en clair",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Imagine une population d'animaux. Certains courent un peu plus vite, digèrent un peu mieux, résistent un peu plus au froid. Si cela aide à survivre et à avoir des petits, ces traits deviennent plus fréquents." },
+        { "type": "paragraph", "text": "Ce n'est pas que les individus « veulent » évoluer. C'est un filtre : le milieu garde plutôt ce qui marche. Darwin appelle cela la **sélection naturelle**." },
+        { "type": "funFact", "text": "Darwin a attendu longtemps avant de publier. Il craignait le scandale. Un autre naturaliste, **Alfred Russel Wallace**, arrive à des idées proches : cela pousse Darwin à sortir son livre." }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p3",
+      "title": "Le choc des idées",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Au XIXe siècle, beaucoup croient que les espèces ont été créées telles quelles. Dire qu'elles changent, et que l'humain partage une histoire avec d'autres animaux, bouscule la religion et la société." },
+        { "type": "paragraph", "text": "La science, elle, progresse : les fossiles, la géographie des espèces, puis plus tard la génétique, confirment l'idée générale." }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p4",
+      "title": "Et aujourd'hui ?",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "On sait maintenant que l'ADN porte les variations. On observe l'évolution en labo (bactéries, virus) et dans la nature. On combat aussi les bactéries résistantes aux antibiotiques : c'est de l'évolution en direct." },
+        { "type": "takeaway", "text": "Darwin a montré que le vivant évolue par sélection naturelle : les traits utiles à la survie et à la reproduction se répandent. La génétique moderne a confirmé et précisé ce cadre." }
+      ]
+    }
+  ]
+}

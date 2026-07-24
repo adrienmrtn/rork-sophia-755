@@ -1,0 +1,126 @@
+{
+  "id": "course_148_le_bauhaus",
+  "title": "The Bauhaus",
+  "subtitle": "1919-1933",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "Between **1919** and **1933**, the **Bauhaus** school merges art, craftsmanship and industry in Germany. Closed by the Nazis, it nevertheless spread modern design throughout the world.",
+  "hero": {
+    "image": "le_bauhaus",
+    "ratio": "16:9",
+    "hook": "A 14-year-old German school has designed the modern world, from chairs to smartphones."
+  },
+  "sections": [
+    {
+      "id": "course_148_le_bauhaus_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The **Bauhaus** (1919-1933) is the most influential art and design school of the 20th century. Founded in Germany just after the First World War, it rejects the unnecessary 19th century decor. His goal: to invent a simple language, adapted to the industrial age."
+        },
+        {
+          "type": "paragraph",
+          "text": "By merging art, craftsmanship and technique, it lays the foundations of the modern . His life is brief. His legacy is everywhere. [[Functionalism in design]]"
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p1",
+      "title": "Weimar 1919: abolishing the hierarchy of the arts",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In **1919**, the architect **Walter Gropius** founded the Bauhaus in **Weimar**. His manifesto is clear: the final goal of all creation is architecture. No more boundaries between noble “fine arts” and secondary “applied arts”. Craft becomes the basis of everything."
+        },
+        {
+          "type": "image",
+          "asset": "bauhaus_weimar_1919_walter_gropius_building",
+          "ratio": "4:3",
+          "caption": "The Bauhaus: a school where you learn by making."
+        },
+        {
+          "type": "paragraph",
+          "text": "Each workshop has two masters: an artist and a craftsman. Figures like , a Russian abstract painter, teach there. The school also dialogues with , a Dutch movement obsessed with the rectangle and pure colors. [[Wassily Kandinsky]] [[De Stijl]]"
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p2",
+      "title": "Form follows function",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Then installed at **Dessau**, the school turned to mass production. Famous slogan: **“form follows function”**. The ornament is considered unnecessary. We are looking for simple, beautiful objects that can be manufactured in a factory."
+        },
+        {
+          "type": "funFact",
+          "text": "**Marcel Breuer**, teacher at the Bauhaus, recycles tubular steel from bicycles to invent lightweight chairs. Factory material becomes living room furniture."
+        },
+        {
+          "type": "paragraph",
+          "text": "The workshops test metal, glass, textiles and typography. The goal is no longer the single luxury object. It is the typical object, accessible to the greatest number of people."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p3",
+      "title": "Closed by the Nazis, saved by exile",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "School is annoying. He is accused of being too modern, too international, too left-wing. After a stint in Berlin under **Mies van der Rohe**, comes . The regime sees this as “cultural Bolshevism”. [[Closure by the Nazis (1933)]]"
+        },
+        {
+          "type": "image",
+          "asset": "mies_van_der_rohe_modernist_architecture",
+          "ratio": "4:3",
+          "caption": "Mies van der Rohe: last leadership of the Bauhaus, then American exile."
+        },
+        {
+          "type": "paragraph",
+          "text": "Closure becomes diffusion. The masters go to the United States, Great Britain, Palestine. In Tel Aviv, their ideas nourish the , a vast ensemble of white modern architecture. [[White City of Tel Aviv]]"
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p4",
+      "title": "A design that has become invisible through obviousness",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Today, the Bauhaus heritage is everywhere: flat-pack furniture, simple buildings, clear interfaces, [[sans-serif]]  typographies. IKEA, airports, our telephones: the geometric clarity of the Bauhaus has become the ordinary decor of the world."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1919",
+              "title": "Foundation in Weimar",
+              "detail": "Gropius launches the art-craft-industry school."
+            },
+            {
+              "date": "1925",
+              "title": "Dessau",
+              "detail": "Shift towards mass production."
+            },
+            {
+              "date": "1933",
+              "title": "Nazi closure",
+              "detail": "Exile spreads Bauhaus throughout the world."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "In just 14 years, the Bauhaus invented the modern idea of ​​design: less ornament, more function, objects that are beautiful because they are useful. Its political closure has only accelerated its conquest of everyday life."
+        }
+      ]
+    }
+  ]
+}

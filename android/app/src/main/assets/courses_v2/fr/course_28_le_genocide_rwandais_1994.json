@@ -1,0 +1,131 @@
+{
+  "id": "course_28_le_genocide_rwandais_1994",
+  "title": "Le génocide rwandais",
+  "subtitle": "1994",
+  "subject": "histoire",
+  "subcategory": "Guerre froide & monde contemporain",
+  "description": "En **100 jours**, entre avril et juillet **1994**, des centaines de milliers de Tutsis et de Hutus modérés sont massacrés au Rwanda. Le génocide le plus rapide du siècle se déroule sous les yeux du monde.",
+  "hero": {
+    "image": "le_genocide_rwandais_1994",
+    "ratio": "16:9",
+    "hook": "Cent jours. Des centaines de milliers de morts. Et un monde qui a choisi de ne pas intervenir."
+  },
+  "sections": [
+    {
+      "id": "course_28_le_genocide_rwandais_1994_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Entre avril et juillet **1994**, en seulement **100 jours**, le Rwanda vit une tragédie d'une densité rare dans l'histoire. Entre **500 000** et **800 000** Tutsis, ainsi que des Hutus modérés, sont systématiquement assassinés."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce génocide se distingue par sa rapidité et par l'inaction de la communauté internationale. Comprendre 1994, c'est comprendre des racines coloniales, une planification politique, et un silence diplomatique."
+        }
+      ]
+    },
+    {
+      "id": "course_28_le_genocide_rwandais_1994_p1",
+      "title": "Quand l'identité devient une carte",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Au Rwanda, Hutus (environ **85 %**) et Tutsis (environ **14 %**) ne formaient pas, avant la colonisation, des « races » figées. La distinction était surtout sociale et économique : un Hutu enrichi en bétail pouvait devenir Tutsi, et inversement."
+        },
+        {
+          "type": "funFact",
+          "text": "En **1933**, l'administration belge fige l'appartenance sur la **carte d'identité ethnique**. On classe parfois selon la forme du nez… ou le nombre de vaches : au-delà de dix, on est Tutsi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les colons belges, influencés par des théories raciales, s'appuient d'abord sur les Tutsis, puis se tournent vers la majorité hutue à l'approche de l'indépendance (**1962**). Des pogroms poussent des milliers de Tutsis à l'exil. La haine devient héritage."
+        }
+      ]
+    },
+    {
+      "id": "course_28_le_genocide_rwandais_1994_p2",
+      "title": "Une extermination planifiée",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dans les années 1990, le président **Juvénal Habyarimana** dirige le pays. Son régime est en guerre contre le [[Front Patriotique Rwandais]], formé d'exilés tutsis. Les extrémistes du [[Hutu Power]] forment les milices Interahamwe. La [[Radio des Mille Collines]] diffuse chaque jour la haine et déshumanise les Tutsis."
+        },
+        {
+          "type": "image",
+          "asset": "rwandan_genocide_1994",
+          "ratio": "4:3",
+          "caption": "Le Rwanda en 1994, théâtre d'un génocide planifié."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le **6 avril 1994**, l'avion présidentiel est abattu. Dans l'heure, les barrages se ferment. Environ **8 000** personnes sont tuées chaque jour. Le massacre est de proximité : voisins, collègues, autorités locales. Ce n'est pas une explosion spontanée. C'est une opération organisée."
+        }
+      ]
+    },
+    {
+      "id": "course_28_le_genocide_rwandais_1994_p3",
+      "title": "Le silence du monde",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sur place, [[La MINUAR et le général Dallaire]], la mission de l'ONU commandée par le Canadien Roméo Dallaire, n'a qu'un mandat d'observation. Traumatisés par l'échec en [[Somalie]], les États-Unis freinent toute intervention. On évite même le mot « génocide », qui obligerait à agir selon la Convention de 1948."
+        },
+        {
+          "type": "image",
+          "asset": "paul_kagame_rpf_rwanda",
+          "ratio": "4:3",
+          "caption": "Paul Kagame et le FPR, dont l'offensive met fin aux massacres."
+        },
+        {
+          "type": "paragraph",
+          "text": "La France lance tardivement l'opération [[Turquoise]], officiellement humanitaire, mais controversée pour avoir facilité la fuite de génocidaires vers le [[Zaïre]], l'actuelle République démocratique du Congo. Ce n'est pas l'ONU qui arrête les tueries : c'est l'offensive du FPR, menée par **Paul Kagame**, qui prend Kigali, la capitale, le **4 juillet 1994**."
+        }
+      ]
+    },
+    {
+      "id": "course_28_le_genocide_rwandais_1994_p4",
+      "title": "Justice et mémoire",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Après juillet 1994, le pays doit juger l'injugeable. Les tribunaux [[Gacaca]], des juridictions de quartier, traitent près de deux millions de dossiers. Le [[Tribunal pénal international pour le Rwanda]] juge les grands planificateurs. Le mémorial de Kigali abrite plus de **250 000** victimes."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1933",
+              "title": "Cartes ethniques",
+              "detail": "La colonisation belge fige Hutu et Tutsi."
+            },
+            {
+              "date": "6 avril 1994",
+              "title": "Attentat et bascule",
+              "detail": "L'avion présidentiel est abattu ; le génocide commence."
+            },
+            {
+              "date": "avril-juil. 1994",
+              "title": "100 jours",
+              "detail": "500 000 à 800 000 morts ; inaction internationale."
+            },
+            {
+              "date": "4 juil. 1994",
+              "title": "Prise de Kigali",
+              "detail": "Le FPR met fin aux massacres."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "En **100 jours** (1994), des centaines de milliers de Tutsis sont assassinés au Rwanda. Malgré les alertes, le monde n'intervient pas ; seule l'offensive du FPR arrête le génocide."
+        }
+      ]
+    }
+  ]
+}

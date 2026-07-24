@@ -1,0 +1,120 @@
+{
+  "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive",
+  "title": "Y a-t-il de la vie ailleurs dans l'Univers ?",
+  "subtitle": "Exobiologie",
+  "subject": "sciences",
+  "subcategory": "La Terre et l'Univers",
+  "description": "Des milliers de milliards de planètes, et pourtant un silence radio. La science cherche la vie ailleurs sans promettre de petits hommes verts.",
+  "hero": {
+    "image": "y_a_t_il_de_la_vie_ailleurs_dans_l_univers",
+    "ratio": "16:9",
+    "hook": "L'univers est immense. Alors pourquoi personne ne répond ?"
+  },
+  "sections": [
+    {
+      "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L'univers observable contient environ **2 000 milliards** de galaxies, immenses ensembles d'étoiles, chacune avec des centaines de milliards d'étoiles. Statistiques aidant, les planètes potentiellement habitables devraient être innombrables. Pourtant, depuis le début de l'astronomie moderne, nous n'avons aucun contact confirmé."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cette contradiction porte un nom : le **paradoxe de Fermi**, d'après le physicien **Enrico Fermi**. La question n'est plus seulement de la science-fiction. Elle relève de l'[[Exobiologie]] : la science qui étudie les conditions d'apparition de la vie ailleurs, et les moyens de la détecter."
+        }
+      ]
+    },
+    {
+      "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_p1",
+      "title": "Ce que la vie semble demander",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pour chercher ailleurs, on part du seul exemple connu : la vie terrestre. Elle repose surtout sur la chimie du **carbone**, atome qui forme des molécules complexes, et sur l'**eau liquide**, qui permet aux réactions chimiques de bien se dérouler."
+        },
+        {
+          "type": "image",
+          "asset": "radio_telescope_seti",
+          "ratio": "auto",
+          "caption": "Les radiotélescopes scrutent le ciel, à l'écoute d'un éventuel signal."
+        },
+        {
+          "type": "paragraph",
+          "text": "Une planète candidate doit souvent se trouver dans la [[zone habitable]] de son étoile : ni trop près, sinon l'eau s'évapore, ni trop loin, sinon l'eau gèle. Depuis les années 1990, on a découvert plus de **5 500 exoplanètes**, planètes autour d'autres étoiles que le Soleil. Presque chaque étoile de notre galaxie en aurait au moins une."
+        },
+        {
+          "type": "funFact",
+          "text": "Il y a plus d'étoiles dans l'univers observable que de grains de sable sur toutes les plages de la Terre."
+        },
+        {
+          "type": "paragraph",
+          "text": "En **1961**, l'astronome **Frank Drake** propose l'[[équation de Drake]] : une formule qui multiplie des facteurs — étoiles, planètes habitables, durée des civilisations — pour estimer le nombre de civilisations capables de communiquer dans la Voie lactée. Les chiffres restent très incertains. La formule sert surtout à structurer le débat."
+        }
+      ]
+    },
+    {
+      "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_p2",
+      "title": "Des oasis dans le système solaire",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pas besoin d'aller tout de suite vers d'autres étoiles. Dans notre système solaire, plusieurs mondes intriguent. **Europa**, une lune de Jupiter, abrite probablement un océan d'eau liquide sous une croûte de glace. Cet océan resterait liquide grâce aux [[Forces de marée]] : l'énorme attraction de Jupiter déforme Europa et chauffe son intérieur par frottement."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Encelade**, une petite lune de Saturne, éjecte des **geysers**, des jets de vapeur et de matière. La sonde **Cassini** y a trouvé des indices d'activité **hydrothermale**, un chauffage par réactions chimiques au fond de l'océan, capable en principe de nourrir des microbes sans soleil."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sur **Mars**, de l'eau liquide a autrefois coulé en surface. Les robots y cherchent des [[Biosignatures]] : traces fossiles ou chimiques d'une vie passée, avant que la planète ne perde une grande partie de son atmosphère et de son eau."
+        }
+      ]
+    },
+    {
+      "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_p3",
+      "title": "Le grand silence",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **1950**, Fermi demande : si des civilisations avancées existent par milliers, pourquoi n'en voyons-nous aucune trace ? L'univers est vieux. Une civilisation avec seulement un million d'années d'avance aurait eu le temps de se faire remarquer, même sans voyager à la vitesse de la lumière."
+        },
+        {
+          "type": "paragraph",
+          "text": "Une hypothèse est celle du [[Grand Filtre]] : une étape presque impossible à franchir dans l'évolution, par exemple le passage à une vie complexe, ou l'autodestruction technologique. Soit nous l'avons déjà passée, soit elle est devant nous."
+        },
+        {
+          "type": "paragraph",
+          "text": "D'autres pistes : nous n'écoutons peut-être pas les bons signaux. Le programme **SETI**, Search for Extraterrestrial Intelligence, scrute surtout les ondes radio. Ou les civilisations sont trop brèves et trop éloignées pour se croiser. Ou encore l'[[hypothèse du zoo]] : la Terre serait volontairement laissée à l'écart, comme une réserve."
+        }
+      ]
+    },
+    {
+      "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_p4",
+      "title": "Comment on cherche aujourd'hui",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le télescope spatial **James Webb** analyse la lumière qui traverse l'atmosphère de planètes lointaines grâce à la [[spectroscopie]], le découpage de la lumière pour identifier les gaz présents. On y cherche des gaz comme l'oxygène ou le méthane en quantités étranges, possibles indices de vie."
+        },
+        {
+          "type": "funFact",
+          "text": "Si quelqu'un dans la galaxie d'Andromède nous observait « maintenant », il verrait la Terre telle qu'elle était il y a **2,5 millions d'années** : la lumière met ce temps à faire le trajet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Même une vie microbienne changerait tout : elle prouverait que le vivant n'est pas un accident unique. En attendant, les sondes **Voyager** emportent depuis **1977** des disques d'or avec des sons et images de la Terre. Probabilité d'interception : quasi nulle. Besoin de ne pas se sentir seuls : intact."
+        },
+        {
+          "type": "takeaway",
+          "text": "Les planètes sont innombrables et la vie paraît statistiquement plausible. Mais l'absence de contact, le paradoxe de Fermi, rappelle que l'intelligence technologique pourrait être très rare, ou très brève."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "course_78_comment_fonctionne_l_electricite_dans_no",
+  "title": "Come funziona l'elettricità nel nostro corpo?",
+  "subtitle": "Nervi e ioni",
+  "subject": "sciences",
+  "subcategory": "La Terra e l'Universo",
+  "description": "Pensare, battere il cuore, alzare un braccio: tutto questo circola innanzitutto come elettricità viva, trasportata non da elettroni, ma da ioni.",
+  "hero": {
+    "image": "comment_fonctionne_l_electricite_dans_notre_corps",
+    "ratio": "16:9",
+    "hook": "Il tuo corpo è una rete elettrica. Ma qui la corrente è costituita da ioni, non da elettroni."
+  },
+  "sections": [
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_intro",
+      "title": "Introduzione",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In una presa a muro la corrente è **elettronica** che circolano. Nel tuo corpo è diverso: sono **ioni**, atomi carichi, che entrano ed escono dalle cellule. Questo flusso crea i segnali che fanno pensare al cuore, battere il cuore e contrarre i muscoli."
+        },
+        {
+          "type": "paragraph",
+          "text": "Senza questa elettricità viva, nessun pensiero, nessun gesto, nessuna pulsazione. Comprendere il corpo significa comprendere anche questo linguaggio di cariche."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p1",
+      "title": "Il clic elettrico del neurone",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un **neurone** a riposo non invia un messaggio, ma si “carica”. La sua membrana separa l'interno e l'esterno della cellula. Grazie allo  mantiene uno  di circa **-70 millivolt**: l'interno è più negativo dell'esterno. [[pompe sodio-potassio]] [[potenziale di riposo]]"
+        },
+        {
+          "type": "image",
+          "asset": "neuron_electrical_signal_brain",
+          "ratio": "auto",
+          "caption": "I neuroni comunicano attraverso brevi impulsi elettrici."
+        },
+        {
+          "type": "paragraph",
+          "text": "Quando arriva uno stimolo, i canali si aprono. Il sodio entra tutto in una volta. La polarità è invertita: è lo , un segnale tutto o niente che corre lungo l'assone, a volte oltre un metro. Come un'onda elettrica. [[Il potenziale d'azione neuronale]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Il cervello in stato di veglia produce circa **20 watt**, sufficienti per un piccolo LED. Tuttavia, consuma quasi il **20%** delle calorie del corpo."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p2",
+      "title": "Nella sinapsi l'elettricità diventa chimica",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I neuroni non si toccano realmente. Tra di loro, un minuscolo divario: la **sinapsi**. Il segnale elettrico non può saltarlo. Quindi l'estremità dell'assone rilascia , molecole messaggere come l'acetilcolina o . [[I neurotrasmettitori]] [[glutammato]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Questi messaggeri si attaccano al neurone successivo come una chiave nella serratura. A seconda del messaggio, eccitano o inibiscono. Migliaia di queste decisioni simultanee formano il pensiero."
+        },
+        {
+          "type": "funFact",
+          "text": "Alcuni segnali nervosi viaggiano a **120 m/s** (più di **430 chilometri all'ora**). Abbastanza per reagire in una frazione di secondo a un'ustione sulla punta."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p3",
+      "title": "Il cuore ha il suo pacemaker",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Il cuore non aspetta un comando dal cervello per ogni battito. Nell'atrio destro, il **nodo del seno** genera i propri impulsi, circa **da 60 a 100** volte al minuto a riposo. Il segnale si propaga, contraendo prima gli atri, poi i ventricoli."
+        },
+        {
+          "type": "paragraph",
+          "text": "Questa attività è abbastanza forte da poter essere letta sulla pelle: è l'**elettrocardiogramma (ECG)**. Se il ritmo viene disturbato si parla di **aritmia**. Il cuore quindi batte in modo disordinato e pompa male."
+        },
+        {
+          "type": "funFact",
+          "text": "L'anguilla elettrica utilizza lo stesso principio delle cellule eccitabili, ma in serie: fino a **600 volt**, sufficienti a paralizzare la preda."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p4",
+      "title": "Dal gesto volontario al defibrillatore",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Per sollevare il braccio, un potenziale d'azione scende fino al muscolo. L'acetilcolina innesca un'onda elettrica locale, quindi un rilascio di calcio. Le proteine ​​muscolari scivolano le une sulle altre: contrazione."
+        },
+        {
+          "type": "paragraph",
+          "text": "**defibrillazione** utilizza lo stesso principio al contrario: uno shock esterno riporta tutte le cellule “a zero” in modo che il nodo senoatriale riprenda il ritmo. Le protesi bioniche catturano anche questi segnali deboli per controllare una mano artificiale."
+        },
+        {
+          "type": "takeaway",
+          "text": "Gli esseri viventi parlano tramite flussi ionici e potenziali d'azione. Pensiero, cuore e muscoli condividono lo stesso linguaggio elettrico."
+        }
+      ]
+    }
+  ]
+}

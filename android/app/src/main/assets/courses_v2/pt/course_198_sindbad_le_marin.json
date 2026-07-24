@@ -1,0 +1,116 @@
+{
+  "id": "course_198_sindbad_le_marin",
+  "title": "Sindbad, o marinheiro",
+  "subtitle": "Sete viagens",
+  "subject": "mythologie",
+  "subcategory": "Outras mitologias",
+  "description": "Sinbad, o Marinheiro: Sete Viagens, Monstros e Tesouros. Por trás do maravilhoso, o retrato do comerciante-aventureiro da época de ouro islâmica.",
+  "hero": {
+    "image": "sindbad_le_marin",
+    "ratio": "16:9",
+    "hook": "Sete vezes ele sai rico ou curioso. Sete vezes o mar quebra. Sete vezes ele volta ainda mais rico."
+  },
+  "sections": [
+    {
+      "id": "course_198_sindbad_le_marin_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Sindbad o marinheiro** pertence às **Noites Árabes**, mas não ao antigo núcleo persa da coleção. O seu ciclo de sete viagens ocorreu mais tarde, no Egito, por volta do século XV."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ele personifica o comerciante-viajante da **Idade do Ouro Islâmico**: piedade, ganância, coragem e a incapacidade de ficar parado depois de rico. Por trás dos monstros, lemos uma alegoria da fortuna subindo e descendo."
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p1",
+      "title": "A estrutura cíclica da aventura",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A história começa em Bagdá. **Sindbad, o Marinheiro**, agora velho e rico, conta suas provações a um carregador também chamado Sindbad (às vezes Hindbad). O contraste de classe é imediato."
+        },
+        {
+          "type": "image",
+          "asset": "baghdad_medieval_islamic_golden_age_trade",
+          "ratio": "4:3",
+          "caption": "Bagdá, ponto de partida e retorno das viagens de Sindbad."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cada viagem segue a mesma mecânica: cansaço do sedentarismo, saída do porto de , naufrágio, sobrevivência em terra desconhecida, regresso carregado de tesouros. O número sete, carregado de significado em , confere à série uma dimensão iniciática: da imprudência à sabedoria. [[Baçorá]] [[Cosmologia islâmica]]"
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p2",
+      "title": "Um bestiário fantástico entre mito e realidade",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O **Pedra** (ou Rokh), um pássaro cuja envergadura obscurece o sol, deixou sua marca no imaginário mundial. Vemos o eco de histórias de viajantes árabes nas costas da África Oriental."
+        },
+        {
+          "type": "image",
+          "asset": "sinbad_roc_giant_bird_illustration",
+          "ratio": "4:3",
+          "caption": "O Roc, pássaro gigante das viagens de Sindbad."
+        },
+        {
+          "type": "funFact",
+          "text": "O Roc é provavelmente inspirado no **Aepyornis**, um pássaro elefante de Madagascar que desapareceu por volta do ano 1000. Seus ovos tinham até 150 vezes o volume de um ovo de galinha."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sindbad também enfrenta o **Velho do Mar**, que se agarra às suas costas, e a **ilha da tartaruga**, terreno enganoso. O **vale de diamantes**, onde se joga carne para espetar as gemas, já circula entre os Antigos. Os maravilhosos sedimentos dos séculos de . [[As rotas comerciais árabes medievais]]"
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p3",
+      "title": "O espelho da Era de Ouro do comércio árabe",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O cenário é histórico. Nos séculos VIII e IX, marinheiros de Basra e Siraf dominaram o Oceano Índico. As paradas de Sindbad evocam lugares reais:  (Ceilão) para as especiarias, o Sudeste Asiático para a cânfora, as costas para as pérolas. [[Serendib]]"
+        },
+        {
+          "type": "image",
+          "asset": "arab_indian_ocean_trade_routes_medieval_ship",
+          "ratio": "4:3",
+          "caption": "Navios árabes nas rotas do Oceano Índico."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sindbad não é um guerreiro: é um comerciante-aventureiro, status de prestígio em uma sociedade que valoriza o comércio. Lá encontramos as monções, navios costurados com fibras de coco em vez de pregados. Paralelo ocidental: , que descreve a Ásia em fatos, onde Sindbad a pinta em maravilhas. [[Marco Polo (paralelo oeste)]]"
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p4",
+      "title": "Património universal: do Oriente ao Ocidente",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Traduzido no século XVIII por **Antoine Galland**, a viagem nutre o  europeu, de Defoe a Júlio Verne. O cinema muitas vezes faz dele um corsário a serviço das princesas. Erro: Sindbad é inicialmente um morador da cidade de Bagdá, sobrevivendo através da fé e da engenhosidade. [[Romance de aventuras]]"
+        },
+        {
+          "type": "funFact",
+          "text": "O nome Sindbad evocaria o “príncipe do rio Sindh”, o Indo, na encruzilhada dos mundos árabe e indiano."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Sinbad** encarna a idade de ouro marítima islâmica nas viagens cíclicas de **Sete**: a rocha e os diamantes mascaram uma realidade, a dos mercadores árabes senhores do Oceano Índico."
+        }
+      ]
+    }
+  ]
+}

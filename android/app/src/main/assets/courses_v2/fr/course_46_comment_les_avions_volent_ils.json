@@ -1,0 +1,100 @@
+{
+  "id": "course_46_comment_les_avions_volent_ils",
+  "title": "Comment les avions volent-ils ?",
+  "subtitle": "Physique du vol",
+  "subject": "sciences",
+  "subcategory": "Notre quotidien expliqué",
+  "description": "Un avion de plusieurs centaines de tonnes vole. Ce n'est pas de la magie : c'est une affaire de forme d'aile, de vitesse et de forces qui s'équilibrent.",
+  "hero": {
+    "image": "comment_les_avions_volent",
+    "ratio": "16:9",
+    "hook": "Plus lourd qu'un camion, et pourtant il reste en l'air. Voici comment."
+  },
+  "sections": [
+    {
+      "id": "course_46_comment_les_avions_volent_ils_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un gros avion de ligne peut peser des **centaines de tonnes**. Comment quelque chose d'aussi lourd peut-il rester en l'air ? La réponse tient à la forme des ailes et à la vitesse de l'avion."
+        },
+        {
+          "type": "paragraph",
+          "text": "Quatre forces principales sont en jeu : la **poussée** (vers l'avant), la **traînée** (le freinage de l'air), le **poids** (vers le bas) et la **portance** (vers le haut)."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p1",
+      "title": "L'aile, une forme intelligente",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vue de côté, une aile d'avion n'est pas plate. Le dessus est plus bombé que le dessous. Quand l'avion avance vite, l'air doit contourner cette forme."
+        },
+        {
+          "type": "image",
+          "asset": "airplane_wing_cross_section_flight",
+          "ratio": "auto",
+          "caption": "Le profil de l'aile crée la portance qui soulève l'avion."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'air qui passe au-dessus accélère un peu. Sa pression baisse. Sous l'aile, la pression reste plus forte. Cette différence pousse l'aile vers le haut : c'est la **portance**. On l'explique souvent avec le principe de **Bernoulli**, du nom d'un savant du XVIIIe siècle, et avec le fait que l'aile dévie aussi l'air vers le bas."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p2",
+      "title": "Il faut de la vitesse",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sans vitesse, pas assez d'air qui passe sur l'aile, pas assez de portance. C'est pour ça qu'un avion a besoin d'une longue piste pour décoller : les moteurs doivent l'accélérer assez fort."
+        },
+        {
+          "type": "funFact",
+          "text": "Les oiseaux utilisent la même idée générale : leurs ailes créent de la portance. Mais eux battent des ailes pour avancer. L'avion, lui, avance grâce à ses moteurs."
+        },
+        {
+          "type": "paragraph",
+          "text": "En vol de croisière, la portance équilibre le poids. La poussée des moteurs équilibre la traînée de l'air. L'avion avance alors à une vitesse à peu près constante."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p3",
+      "title": "Monter, descendre, tourner",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pour monter, le pilote (ou l'ordinateur de bord) incline un peu le nez vers le haut et ajuste la poussée. Pour descendre, on réduit souvent la poussée. Pour tourner, on incline l'avion sur le côté grâce à des parties mobiles des ailes, les ailerons."
+        },
+        {
+          "type": "paragraph",
+          "text": "À l'atterrissage, on ralentit. Des volets sortent de l'aile pour augmenter la portance à basse vitesse. Puis les roues touchent le sol, et les freins (parfois aussi des inverseurs de poussée) arrêtent l'avion."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p4",
+      "title": "Ce n'est pas « plus léger que l'air »",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un ballon à hélium flotte parce qu'il est moins dense que l'air. Un avion, non : il est bien plus dense. Il vole parce qu'il **force** l'air à le porter, grâce à sa vitesse et à la forme de ses ailes."
+        },
+        {
+          "type": "takeaway",
+          "text": "Un avion vole grâce à la **portance** créée par ses ailes en mouvement dans l'air. La vitesse est indispensable : sans elle, l'aile ne « pousse » plus assez vers le haut pour compenser le poids."
+        }
+      ]
+    }
+  ]
+}

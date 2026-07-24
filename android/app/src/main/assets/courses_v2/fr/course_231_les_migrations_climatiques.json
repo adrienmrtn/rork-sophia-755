@@ -1,0 +1,62 @@
+{
+  "id": "course_231_les_migrations_climatiques",
+  "title": "Les migrations climatiques",
+  "subtitle": "216 millions de déplacés d'ici 2050 ?",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environnement & avenir",
+  "description": "Le climat va forcer des centaines de millions de personnes à quitter leur foyer, mais aucune loi internationale ne les protège encore.",
+  "hero": {
+    "image": "les_migrations_climatiques",
+    "ratio": "16:9",
+    "hook": "Le climat chasse déjà plus de monde que la guerre, mais aucune loi ne sait comment les appeler."
+  },
+  "sections": [
+    {
+      "id": "course_231_les_migrations_climatiques_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Une montée des eaux ne s'annonce pas toujours par une vague spectaculaire : elle grignote d'abord un champ, puis un puits, puis un village entier. Ailleurs, une chaleur extrême rend l'air presque impossible à respirer. Dans les deux cas, des familles entières doivent partir, non à cause d'une guerre, mais du climat. Ces départs forcés portent un nom : les **migrations climatiques**. Le problème, c'est qu'aucune loi internationale ne les reconnaît vraiment." }
+      ]
+    },
+    {
+      "id": "course_231_les_migrations_climatiques_p1",
+      "title": "Un exode déjà plus grand que la guerre",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "En **2022**, un chiffre a marqué un tournant : les catastrophes climatiques ont provoqué **60 millions de déplacements internes**, des départs forcés à l'intérieur même d'un pays. Pour la première fois, ce nombre a dépassé celui des personnes fuyant les guerres." },
+        { "type": "funFact", "text": "En **2009**, le gouvernement des [[Maldives]] a tenu un conseil des ministres sous l'eau, en bouteilles d'oxygène et combinaison de plongée, pour alerter le monde sur la disparition possible de cet archipel." },
+        { "type": "image", "asset": "2015_refugee_migration_crisis_europe_mediterranean", "ratio": "16:9", "caption": "Des migrants traversent la Méditerranée : la crise climatique s'ajoute désormais aux crises politiques comme moteur des départs." },
+        { "type": "paragraph", "text": "La suite s'annonce plus inquiétante : la **Banque mondiale** estime que sans effort massif, le changement climatique pourrait forcer **216 millions de personnes** à migrer d'ici **2050**. Au Bangladesh, l'océan grignote les terres agricoles ; en Afrique subsaharienne, c'est l'eau qui manque ; dans le Pacifique, certains États insulaires risquent la disparition totale de leur territoire." }
+      ]
+    },
+    {
+      "id": "course_231_les_migrations_climatiques_p2",
+      "title": "Deux vitesses de rupture : le choc et l'usure",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Il existe deux façons pour le climat de chasser les populations. Les **catastrophes soudaines**, comme les tempêtes, provoquent des départs brutaux mais souvent provisoires, avant que la capacité des habitants à rebondir ne s'épuise à force de répétition. Les **dégradations lentes**, elles, transforment un territoire pour toujours : la montée des eaux rend les sols salés, tuant les cultures avant même que l'eau n'atteigne les maisons, tandis que la désertification change peu à peu des pâturages en terres stériles, poussant des communautés nomades vers une [[sédentarisation forcée]] ou l'exil en ville." },
+        { "type": "paragraph", "text": "Une nouvelle menace inquiète les scientifiques : la **chaleur humide**. Quand température et humidité dépassent un certain seuil, le corps ne peut plus se refroidir en transpirant. D'ici 2050, certaines régions du Golfe Persique ou d'Asie du Sud pourraient devenir mortelles pour quiconque reste à l'extérieur plus de quelques heures." }
+      ]
+    },
+    {
+      "id": "course_231_les_migrations_climatiques_p3",
+      "title": "Un vide juridique face à une crise mondiale",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Malgré l'évidence de la crise, les personnes déplacées par le climat tombent dans un [[vide juridique]]. Le terme de « réfugié climatique », très employé dans les médias, n'a aucune valeur en droit international : la Convention de Genève de 1951 protège les personnes persécutées par leur propre État, mais le changement climatique n'est la faute d'aucun persécuteur précis, c'est un phénomène global." },
+        { "type": "paragraph", "text": "Sans statut officiel, ces personnes ne bénéficient pas du principe de **[[non-refoulement]]**, qui interdit de renvoyer quelqu'un vers un endroit où sa vie serait en danger. Cette absence de protection crée une injustice : les pays les plus touchés ont historiquement le moins pollué, tandis que les pays riches ferment souvent leurs frontières. D'où l'idée d'une **dette climatique** : la responsabilité morale des pays industrialisés envers les populations rendues vulnérables par leur propre développement." }
+      ]
+    },
+    {
+      "id": "course_231_les_migrations_climatiques_p4",
+      "title": "Vers une reconnaissance et une adaptation locale",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Certains pays cherchent déjà des solutions inédites. Les petits États insulaires réfléchissent à rester une nation reconnue par l'ONU même si leur île a disparu sous l'eau. Le Kiribati a par exemple acheté des terres aux Fidji pour préparer, si besoin, la relocalisation de toute sa population." },
+        { "type": "paragraph", "text": "En 2018, le **Pacte mondial sur les migrations** a commencé à évoquer les causes environnementales des départs. Mais la priorité reste l'**adaptation locale** : digues, cultures résistantes au sel, systèmes d'alerte, pour permettre aux gens de rester chez eux le plus longtemps possible. Car la migration subie reste toujours vécue comme un échec, et des flux massifs et désordonnés risquent d'alimenter des tensions autour de l'eau et des terres habitables." },
+        { "type": "takeaway", "text": "En 2022, les catastrophes climatiques ont provoqué 60 millions de déplacements internes, dépassant pour la première fois les réfugiés de guerre. Faute de statut juridique reconnu, ces populations restent sans protection face à une crise qui pourrait toucher 216 millions de personnes d'ici 2050." }
+      ]
+    }
+  ]
+}

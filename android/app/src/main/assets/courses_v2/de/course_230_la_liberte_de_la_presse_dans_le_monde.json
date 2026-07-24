@@ -1,0 +1,122 @@
+{
+  "id": "course_230_la_liberte_de_la_presse_dans_le_monde",
+  "title": "Pressefreiheit auf der ganzen Welt",
+  "subtitle": "Ein Gesetz unter Druck",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Umwelt & Zukunft",
+  "description": "Weniger als **10 % der Weltbevölkerung** leben in einem Land, in dem die Presse wirklich frei ist. Zwischen staatlicher Zensur und wirtschaftlichem Druck ist dieses Grundrecht fast überall im Niedergang begriffen.",
+  "hero": {
+    "image": "la_liberte_de_la_presse_dans_le_monde",
+    "ratio": "16:9",
+    "hook": "Informieren kostet manchmal Freiheit oder sogar Leben: eine Reise ins Herz einer fragilen Rechten."
+  },
+  "sections": [
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_intro",
+      "title": "Einführung",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Pressefrei** ist einer der besten Indikatoren für die demokratische Gesundheit eines Landes. Es beschränkt sich nicht nur auf das Recht zur Veröffentlichung, sondern umfasst auch die Möglichkeit der Bürger, unabhängig von den bestehenden Befugnissen auf verifizierte Informationen zuzugreifen. Überall auf der Welt steht dieses Recht unter doppeltem Druck: direkter Unterdrückung in autoritären Regimen und einer eher diskreten Schwächung in den Demokratien selbst."
+        }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p1",
+      "title": "Ein zunehmend gefährlicher Beruf",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jedes Jahr veröffentlicht die Organisation  einen Referenzbericht über die Hindernisse für den Beruf des Journalisten weltweit. [[Reporter ohne Grenzen (RSF)]]"
+        },
+        {
+          "type": "image",
+          "asset": "press_freedom_world_map_RSF_index",
+          "ratio": "16:9",
+          "caption": "Weniger als 10 % der Weltbevölkerung leben in einem Land, in dem die Presse wirklich frei ist."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Daten für 2024 sind alarmierend: Weniger als **10%** der Weltbevölkerung leben in einem Gebiet, in dem die Presse ungehindert arbeitet. Während Länder wie Norwegen hohe Standards beibehalten, betrachten große Regionen wie China, Russland und der Iran investigativen Journalismus als eine Form des Verrats."
+        },
+        {
+          "type": "funFact",
+          "text": "In Turkmenistan kontrolliert der Staat Informationen so streng, dass er zu Beginn der Pandemie 2020 das Wort „Coronavirus“ in den Medien verbannte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Im Jahr 2023 haben mindestens 79 Journalisten bei der Ausübung ihres Berufs ihr Leben verloren, oft mit dem Ziel, peinliche Ermittlungen zum Schweigen zu bringen. Jedes Jahr werden weltweit fast 600 Journalisten inhaftiert."
+        }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p2",
+      "title": "Demokratien sind nicht immun",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Entgegen der landläufigen Meinung ist die Pressefreiheit in westlichen Ländern nicht für immer garantiert. Es erfuhr dort diskretere Veränderungen, verbunden mit dem  und dem finanziellen Einfluss einiger großer Gruppen. [[Medienkonzentration]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "In Ungarn setzte  eine wirksame Strategie um: Anstatt oppositionelle Medien zu verbieten, befürwortete er deren Übernahme durch regierungsnahe Personen und verwandelte die Medienlandschaft nach und nach in eine offizielle Echokammer. [[Viktor Orbán]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "In Frankreich geht es in der Debatte vor allem um die Konzentration der Medien in den Händen einiger weniger großer Konzerne, die eine Selbstzensur der Redaktionen befürchten lässt. Andernorts häufen sich missbräuchliche Gerichtsverfahren namens , um kritische Stimmen einzuschüchtern. [[SLAPP]]"
+        }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p3",
+      "title": "Geld, der neue Gegner des Journalismus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Abgesehen von politischen Bedrohungen steht der Journalismus vor einer tiefen Wirtschaftskrise. Das historische Modell, das auf individuellen Verkäufen und Werbung basierte, ist mit der digitalen Technologie zusammengebrochen, und die großen Plattformen erfassen nun den Großteil der Online-Werbung."
+        },
+        {
+          "type": "image",
+          "asset": "newspaper_crisis_digital_transformation_journalism",
+          "ratio": "4:3",
+          "caption": "Das historische Wirtschaftsmodell der Presse ist mit der digitalen Technologie zusammengebrochen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dieser Ressourcenrückgang führt dazu, dass viele lokale Zeitungen schließen, wodurch „Informationswüsten“ entstehen, in denen niemand die Maßnahmen der gewählten Kommunalvertreter überwacht. Vor diesem Hintergrund entstehen neue, durch Spenden oder Direktabonnements finanzierte Modelle wie Mediapart in Frankreich oder ProPublica in den USA, die beweisen, dass auch unabhängiger Journalismus profitabel sein kann."
+        },
+        {
+          "type": "funFact",
+          "text": "Die erste gedruckte Zeitung der Geschichte, die „Relation“, wurde 1605 von Johann Carolus in Straßburg herausgebracht, lange vor der gesetzlichen Erfindung der Pressefreiheit."
+        }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p4",
+      "title": "Überprüfung der Realität in einer mit Bildern gesättigten Welt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Das digitale Zeitalter hat Informationen schneller gemacht, aber es hat auch die Tür zu  geöffnet. Social-Media-Algorithmen bevorzugen emotionale Inhalte gegenüber sachlicher Analyse und fragmentieren so unsere gemeinsame Sicht auf die Welt. [[Desinformation]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Rolle des Journalisten entwickelt sich damit hin zu der eines „Prüfers“ der Realität im permanenten Fluss von Bildern und Daten. Ethische Fragen werden komplexer, etwa im Fotojournalismus in Konfliktgebieten, wo die Achtung der Menschenwürde manchmal mit dem Bedürfnis, etwas zu zeigen, kollidiert."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Verteidigung der Pressefreiheit erfordert daher eine bessere Regulierung der großen digitalen Plattformen und eine verstärkte Medienerziehung. Ohne eine freie Presse, die in der Lage ist, Fakten zu überprüfen, besteht die Gefahr, dass sich die demokratische Debatte in einer Welt auflöst, in der alle Meinungen unabhängig von ihrem Wahrheitsgehalt gleich sind."
+        },
+        {
+          "type": "takeaway",
+          "text": "Weniger als 10 % der Weltbevölkerung leben in einem Land, in dem die Presse wirklich frei ist. Zwischen direkter Unterdrückung, wirtschaftlichem Druck und digitaler Desinformation ist dieses wesentliche Recht auf Demokratie fast überall im Niedergang begriffen."
+        }
+      ]
+    }
+  ]
+}

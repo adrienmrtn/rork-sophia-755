@@ -1,0 +1,106 @@
+{
+  "id": "course_43_pourquoi_la_glace_flotte_t_elle",
+  "title": "Pourquoi la glace flotte-t-elle ?",
+  "subtitle": "Eau & molécules",
+  "subject": "sciences",
+  "subcategory": "Notre quotidien expliqué",
+  "description": "La glace flotte sur l'eau. Cela paraît normal, mais c'est en réalité très rare. Et heureusement pour la vie sur Terre.",
+  "hero": {
+    "image": "pourquoi_la_glace_flotte",
+    "ratio": "16:9",
+    "hook": "Si la glace coulait, les lacs gèleraient jusqu'au fond. Et la vie dans l'eau aurait du mal à survivre."
+  },
+  "sections": [
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un glaçon dans un verre, un iceberg dans l'océan : la glace **flotte**. On trouve ça banal. Pourtant, pour la plupart des substances, le solide est plus **dense**, donc plus lourd pour un même volume : il coule."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'eau fait l'inverse. Cette exception vient de la forme de sa molécule. Et elle a sauvé bien des lacs, l'hiver."
+        }
+      ]
+    },
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_p1",
+      "title": "Une molécule en forme de V",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Une molécule d'eau, c'est un atome d'**oxygène** relié à deux atomes d'**hydrogène**. Elle n'est pas droite : elle forme un **V**. À cause de cette forme, les charges électriques ne sont pas réparties également : la molécule est **polaire**, avec un bout légèrement négatif et l'autre légèrement positif."
+        },
+        {
+          "type": "image",
+          "asset": "water_molecule_model_crystal",
+          "ratio": "4:3",
+          "caption": "La molécule d'eau : un V qui attire et repousse ses voisines."
+        },
+        {
+          "type": "paragraph",
+          "text": "Résultat : les molécules d'eau s'attirent entre elles par des [[liaisons hydrogène]], comme de petits aimants. Dans le liquide, elles restent proches mais bougent encore. Dans la glace, elles se figent autrement."
+        }
+      ]
+    },
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_p2",
+      "title": "Quand l'eau se fige, elle prend de la place",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vers **0 °C**, l'eau se solidifie. Pour former la glace, les molécules s'organisent en un réseau **hexagonal**, une sorte de nids d'abeilles à six côtés. Elles laissent alors plus de **vide** entre elles qu'à l'état liquide."
+        },
+        {
+          "type": "funFact",
+          "text": "C'est pour ça qu'une bouteille d'eau pleine peut **éclater** au congélateur : la glace occupe plus de volume que l'eau liquide."
+        },
+        {
+          "type": "paragraph",
+          "text": "Moins de matière dans le même volume, cela veut dire : **moins dense**. Or un objet moins dense que le liquide autour remonte. La glace flotte donc sur l'eau. C'est ce qu'on appelle l'**anomalie de dilatation de l'eau** : contrairement à presque toutes les substances, l'eau se dilate en refroidissant sous **4 °C**."
+        },
+        {
+          "type": "image",
+          "asset": "iceberg_floating_arctic_ocean",
+          "ratio": "16:9",
+          "caption": "Un iceberg flotte parce que la glace est moins dense que l'eau liquide."
+        }
+      ]
+    },
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_p3",
+      "title": "Pourquoi c'est vital pour les lacs",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Imagine si la glace coulait. Elle se formerait en surface, puis tomberait au fond. Le lac gèlerait couche après couche, jusqu'en bas. L'été ne suffirait souvent pas à tout faire fondre."
+        },
+        {
+          "type": "paragraph",
+          "text": "Heureusement, la glace reste en haut. Elle forme un **couvercle isolant**. Sous la surface gelée, l'eau liquide peut rester autour de **4 °C**, température où l'eau liquide est la plus dense, assez pour que poissons et plantes aquatiques survivent."
+        }
+      ]
+    },
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_p4",
+      "title": "Et pour le climat aussi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La banquise blanche renvoie une grande partie de la lumière du Soleil vers l'espace grâce à son **albédo** élevé, son pouvoir réfléchissant. Si elle disparaît, l'océan sombre absorbe plus de chaleur. Cela accélère le réchauffement : un cercle vicieux."
+        },
+        {
+          "type": "takeaway",
+          "text": "La glace flotte parce que, en se solidifiant, l'eau forme un réseau plus « aéré » : elle devient moins dense que l'eau liquide. Cette exception protège la vie aquatique l'hiver."
+        }
+      ]
+    }
+  ]
+}

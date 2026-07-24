@@ -1,0 +1,145 @@
+{
+  "id": "course_136_beethoven_genie_et_surdite",
+  "title": "Beethoven : génie et surdité",
+  "subtitle": "1770-1827",
+  "subject": "art",
+  "subcategory": "Musique",
+  "description": "Ludwig van Beethoven, de Bonn à Vienne, compose ses plus grandes œuvres en devenant sourd et invente le génie romantique.",
+  "hero": {
+    "image": "beethoven_genie_et_surdite",
+    "ratio": "16:9",
+    "hook": "Sourd, il compose l'hymne de la joie pour toute l'humanité."
+  },
+  "sections": [
+    {
+      "id": "course_136_beethoven_genie_et_surdite_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Ludwig van Beethoven** (**1770**-**1827**) est l'archétype du génie moderne : chevelure sauvage, volonté de fer, lutte contre le destin. Au-delà du mythe, sa vie marque une rupture : le compositeur n'est plus un domestique de cour, mais un créateur souverain."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il transforme la musique de divertissement en langage philosophique. Et il conçoit ses plus vastes architectures sonores, dont la Neuvième Symphonie, dans un isolement auditif presque total."
+        }
+      ]
+    },
+    {
+      "id": "course_136_beethoven_genie_et_surdite_p1",
+      "title": "De Bonn à Vienne : l'égal des princes",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Né à [[Bonn]] en **1770**, Ludwig grandit sous un père brutal, **Johann**, qui veut faire de lui le nouveau [[Mozart]]. Les répétitions nocturnes forgent une technique précoce… et un caractère de fer."
+        },
+        {
+          "type": "image",
+          "asset": "beethoven_bonn_birthplace_portrait_young",
+          "ratio": "4:3",
+          "caption": "Le jeune Beethoven à Bonn : une enfance sous pression."
+        },
+        {
+          "type": "paragraph",
+          "text": "En **1792**, il s'installe à [[Vienne]], capitale musicale. Il étudie brièvement avec **Joseph Haydn**. Virtuose du piano, improvisateur sidérant, il refuse l'obséquiosité envers les mécènes : il se veut l'égal des princes. Son style de jeunesse, encore classique, annonce déjà des contrastes violents et des formes plus vastes."
+        },
+        {
+          "type": "funFact",
+          "text": "Si négligé dans sa jeunesse viennoise, ses amis remplaçaient parfois ses habits usés par des neufs pendant qu'il dormait, sans qu'il s'en aperçoive."
+        }
+      ]
+    },
+    {
+      "id": "course_136_beethoven_genie_et_surdite_p2",
+      "title": "La surdité et le Testament de Heiligenstadt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Entre **1798** et **1801**, apparaissent acouphènes et perte d'audition. Pour un pianiste star, c'est une catastrophe. En **1802**, au village de **Heiligenstadt**, il rédige le **Testament de Heiligenstadt** : lettre à ses frères, jamais envoyée, où il confesse des pensées suicidaires… puis choisit de vivre pour composer tout ce qu'il porte en lui."
+        },
+        {
+          "type": "image",
+          "asset": "beethoven_heiligenstadt_testament_manuscript",
+          "ratio": "4:3",
+          "caption": "Le Testament de Heiligenstadt : le désespoir qui devient décision de créer."
+        },
+        {
+          "type": "paragraph",
+          "text": "Commence la [[période héroïque]]. La Symphonie n°3, dite *Héroïque*, est d'abord dédiée à [[Napoléon Bonaparte]]. Quand celui-ci se fait empereur, Beethoven rage et retire la dédicace. L'œuvre révolutionne le genre par sa longueur et son intensité."
+        },
+        {
+          "type": "funFact",
+          "text": "Pour mieux sentir les vibrations, il fait scier les pieds de ses pianos afin qu'ils reposent directement sur le plancher."
+        }
+      ]
+    },
+    {
+      "id": "course_136_beethoven_genie_et_surdite_p3",
+      "title": "La Neuvième : l'Ode à la joie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Au crépuscule de sa vie, Beethoven est presque totalement sourd. En **1824**, il achève la **Neuvième Symphonie** : pour la première fois, solistes et chœur entrent dans une symphonie. Le finale s'appuie sur l'[[Ode à la joie]] de **Friedrich von Schiller**, transformée en message de fraternité."
+        },
+        {
+          "type": "image",
+          "asset": "beethoven_ninth_symphony_ode_joy_manuscript",
+          "ratio": "4:3",
+          "caption": "La Neuvième : la voix humaine entre dans la symphonie."
+        },
+        {
+          "type": "paragraph",
+          "text": "À la création, incapable d'entendre les ovations, il continue de battre la mesure. La contralto **Caroline Unger** le fait se retourner pour voir la foule debout. L'[[Ode à la joie]] devient plus tard un hymne européen de paix. Ses derniers quatuors, rudes et modernes, ne seront compris que des décennies plus tard."
+        },
+        {
+          "type": "funFact",
+          "text": "Il serrait parfois une tige de bois entre ses dents, l'autre bout sur le piano : la conduction osseuse lui faisait « entendre » les notes."
+        }
+      ]
+    },
+    {
+      "id": "course_136_beethoven_genie_et_surdite_p4",
+      "title": "Du classicisme au romantisme",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Beethoven opère le passage du classicisme au [[romantisme]] : subjectivité, passion, démesure. La symphonie devient drame métaphysique. [[Brahms]] et [[Mahler]] vivront dans son ombre. Il ouvre aussi la voie à la [[musique absolue]], où le son se suffit à lui-même. À son enterrement en **1827**, plus de **20 000** personnes suivent le cortège à Vienne."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1792",
+              "title": "Arrivée à Vienne",
+              "detail": "Beethoven s'impose comme virtuose et créateur libre."
+            },
+            {
+              "date": "1802",
+              "title": "Heiligenstadt",
+              "detail": "Le testament : choisir la création contre le désespoir."
+            },
+            {
+              "date": "1804",
+              "title": "Symphonie Héroïque",
+              "detail": "Rupture avec Napoléon, nouvelle échelle du genre."
+            },
+            {
+              "date": "1824",
+              "title": "Neuvième Symphonie",
+              "detail": "L'Ode à la joie pour l'humanité."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Sourd, Beethoven a inventé le génie romantique : de la période héroïque à l'Ode à la joie, la volonté créatrice contre le silence."
+        }
+      ]
+    }
+  ]
+}

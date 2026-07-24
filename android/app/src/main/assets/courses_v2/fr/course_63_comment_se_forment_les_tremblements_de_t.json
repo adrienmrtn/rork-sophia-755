@@ -1,0 +1,116 @@
+{
+  "id": "course_63_comment_se_forment_les_tremblements_de_t",
+  "title": "Comment se forment les tremblements de terre ?",
+  "subtitle": "Failles & ondes",
+  "subject": "sciences",
+  "subcategory": "La Terre et l'Univers",
+  "description": "Chaque année, la Terre enregistre des centaines de milliers de séismes. La plupart sont invisibles. Quelques-uns changent des villes entières.",
+  "hero": {
+    "image": "comment_se_forment_les_tremblements_de_terre",
+    "ratio": "16:9",
+    "hook": "Un séisme n'est pas un caprice du sol. C'est une énergie qui a trop longtemps attendu."
+  },
+  "sections": [
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Chaque année, la Terre enregistre environ **500 000 séismes** détectables. Seule une petite partie cause de gros dégâts. Un tremblement de terre n'est pas un hasard : c'est la fin brutale d'une longue accumulation d'énergie dans les roches."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour le comprendre, il faut voir la surface de la planète comme un puzzle de plaques en mouvement. Là où ces plaques se frottent, la tension monte… jusqu'à ce que ça casse."
+        }
+      ]
+    },
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_p1",
+      "title": "Des plaques qui bougent sans cesse",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La surface terrestre est découpée en une dizaine de grandes **plaques tectoniques**. Elles glissent sur une couche plus souple du manteau, l'[[Asthénosphère]]. Leur vitesse ? Environ **1 à 10 cm par an**, à peu près comme la pousse d'un ongle."
+        },
+        {
+          "type": "image",
+          "asset": "earthquake_collapsed_buildings_urban",
+          "ratio": "auto",
+          "caption": "Les séismes libèrent d'un coup l'énergie accumulée le long des failles."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aux frontières, trois scénarios dominent. Les plaques s'écartent (dorsales océaniques). Elles se percutent : parfois une plonge sous l'autre, c'est la [[La subduction]]. Ou elles coulissent côte à côte, comme le long de la [[La faille de San Andreas]] en Californie, longue d'environ **1 300 km**."
+        },
+        {
+          "type": "funFact",
+          "text": "Le long de San Andreas, Los Angeles se rapproche de San Francisco d'environ **6 cm** par an. Dans **15 millions d'années**, les deux villes seraient voisines."
+        },
+        {
+          "type": "paragraph",
+          "text": "C'est surtout à ces frontières que naissent les séismes. Le mouvement des plaques est entravé par le frottement des roches. L'énergie s'accumule en silence."
+        }
+      ]
+    },
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_p2",
+      "title": "Quand la faille lâche",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un séisme se produit le long d'une **faille** : une fracture entre deux blocs de roche. En théorie, les plaques devraient glisser sans arrêt. En pratique, le frottement bloque souvent ce glissement."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pendant ce temps, les plaques continuent de pousser. La roche se déforme un peu, comme un arc qu'on bande. On parle de contraintes élastiques. Cela peut durer des décennies, parfois des siècles."
+        },
+        {
+          "type": "paragraph",
+          "text": "Quand la limite de résistance est dépassée, les blocs glissent d'un coup. L'énergie part sous forme d'**ondes sismiques**. Le point de rupture en profondeur s'appelle le **foyer**. À la surface, le point situé juste au-dessus est l'**épicentre**, là où les effets sont souvent les plus forts."
+        }
+      ]
+    },
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_p3",
+      "title": "Mesurer la puissance, craindre le tsunami",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pour mesurer l'énergie d'un séisme, les sismologues utilisent surtout l'[[échelle de magnitude]] de moment. C'est une échelle logarithmique : chaque degré multiplie l'énergie par environ **32**. Un séisme de magnitude **8** libère donc environ **1 000 fois** plus d'énergie qu'un séisme de magnitude **6**."
+        },
+        {
+          "type": "funFact",
+          "text": "Il existe aussi des séismes de magnitude **0** ou négative. Ce sont de tout petits événements, visibles seulement avec des capteurs très sensibles."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le plus fort jamais mesuré avec des instruments modernes est celui de **Valdivia**, au Chili, en **1960** : magnitude **9,5**. Si le foyer est sous l'océan et soulève le fond marin, la colonne d'eau déplacée peut créer un **tsunami**. En **2004**, un séisme de magnitude **9,1** près de Sumatra a déclenché un tsunami qui a frappé 14 pays et fait environ **227 000** victimes."
+        }
+      ]
+    },
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_p4",
+      "title": "Ondes, alerte et bâtiments qui résistent",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Après la rupture, plusieurs types d'ondes partent. Les **ondes P** (primaires) arrivent d'abord : elles compriment la roche comme un accordéon. Puis viennent les **ondes S** (secondaires), plus lentes et souvent plus destructrices. Les ondes de surface font ensuite osciller le sol de façon très visible."
+        },
+        {
+          "type": "paragraph",
+          "text": "On ne sait pas encore prédire le jour exact d'un grand séisme. En revanche, on cartographie les zones à risque. L'[[Ingénierie parasismique]] conçoit des bâtiments capables d'encaisser les secousses : fondations mobiles, amortisseurs géants, structures qui absorbent l'énergie. Au Japon, des alertes précoces détectent les ondes P et peuvent couper le gaz ou ralentir les trains avant l'arrivée des ondes les plus dangereuses."
+        },
+        {
+          "type": "takeaway",
+          "text": "Un séisme naît quand des roches bloquées le long d'une faille libèrent d'un coup des décennies de tension. L'énergie voyage en ondes, et chaque degré de magnitude multiplie cette énergie par environ **32**."
+        }
+      ]
+    }
+  ]
+}

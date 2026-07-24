@@ -1,0 +1,114 @@
+{
+  "id": "course_42_pourquoi_reve_t_on",
+  "title": "Por que sonhamos?",
+  "subtitle": "Cérebro e sono",
+  "subject": "sciences",
+  "subcategory": "O nosso quotidiano explicado",
+  "description": "Todas as noites você sonha por cerca de duas horas. A maioria dos sonhos desaparece quando você acorda. Aqui está o que a ciência entende hoje sobre esse mistério.",
+  "hero": {
+    "image": "pourquoi_reve_t_on",
+    "ratio": "16:9",
+    "hook": "Você sonha com seis anos de sua vida. E você esquece quase tudo."
+  },
+  "sections": [
+    {
+      "id": "course_42_pourquoi_reve_t_on_intro",
+      "title": "Introdução",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Todas as noites você passa cerca de **duas horas** sonhando. Ao longo da vida, são quase **seis anos**. No entanto, quando você acorda, a maioria dessas histórias desaparece em segundos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nem todos os cientistas concordam sobre o “porquê”. Mas eles sabem cada vez melhor **quando** sonhamos, e o que o cérebro faz durante esse tempo: reorganiza memórias, testa cenários e digere emoções."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p1",
+      "title": "O sono não está “desligado”",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O sono não é um desligamento completo. Avança por **ciclistas** de aproximadamente **90 minutos**, várias vezes por noite. Em cada ciclo, o cérebro passa por diferentes fases: sono leve, sono profundo útil para a recuperação do corpo, depois uma fase muito particular."
+        },
+        {
+          "type": "image",
+          "asset": "sleeping_person_rem_dream",
+          "ratio": "4:3",
+          "caption": "Durante o sono REM, os olhos se movem sob as pálpebras."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esta fase é chamada [[O sono paradoxal (REM)]]. O cérebro está quase tão ativo quanto acordado, mas o corpo fica paralisado pelo [[Atonia muscular]]. É especialmente aqui que nascem sonhos longos e narrativos. Essa paralisia nos impede de “brincar” fisicamente o que sonhamos."
+        },
+        {
+          "type": "funFact",
+          "text": "Sonhamos **4 a 6 vezes** por noite. Esquecemos **95%** dez minutos depois de acordar. Se você se lembra de um sonho, muitas vezes é porque acordou logo durante ou logo depois."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p2",
+      "title": "Qual é o sentido de sonhar?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Freud** pensava que os sonhos revelavam principalmente desejos ocultos. Hoje, os pesquisadores preferem explicações mais concretas, baseadas em imagens cerebrais, técnicas que visualizam a atividade cerebral. Sonhar ativa especialmente o **sistema limbo**, o conjunto de estruturas profundas ligadas às emoções."
+        },
+        {
+          "type": "image",
+          "asset": "brain_activity_dreaming_scan",
+          "ratio": "4:3",
+          "caption": "Durante os sonhos, o cérebro funciona: emoções, imagens, memórias."
+        },
+        {
+          "type": "paragraph",
+          "text": "Três faixas principais dominam. Primeiro: **clássico para a memória**, mantenha o útil, deixe o resto de lado. Segundo: **treinando para o perigo** em um mundo sem riscos reais. Terceiro: **digerindo emoções**: durante os sonhos, o cérebro revisita momentos fortes com menos **norepinefrina**, um neurotransmissor ligado ao estresse e à vigília."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p3",
+      "title": "Por que esquecemos nossos sonhos",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Para armazenar uma memória permanentemente, o cérebro precisa de certas substâncias químicas. No entanto, durante o sono paradoxal, o nível de norepinefrina cai. Resultado: o sonho fica numa memória muito frágil."
+        },
+        {
+          "type": "paragraph",
+          "text": "Assim que você abre os olhos, a luz, os sons e os pensamentos do dia esmagam essa frágil memória. A melhor maneira de mantê-lo? Anote o sonho **imediatamente**, antes mesmo de se mudar."
+        },
+        {
+          "type": "funFact",
+          "text": "Antes da televisão em cores, poucas pessoas diziam que sonhavam em cores. Hoje, a maioria faz. Nosso ambiente visual influencia até mesmo a textura dos nossos sonhos."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p4",
+      "title": "E quanto aos sonhos lúcidos?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Às vezes, percebemos **o que estamos em nossas mãos**, enquanto continuamos dormindo: isso é **sonho lúcido**. Uma área do cérebro ligada à lógica e à autorreflexão, o **córtex pré-frontal**, então se ilumina um pouco."
+        },
+        {
+          "type": "paragraph",
+          "text": "Alguns podem então influenciar o cenário ou transformar um pesadelo. Os pesquisadores estão até estudando esse fenômeno para ajudar os atletas a repetir gestos mentalmente ou para tratar pesadelos repetitivos."
+        },
+        {
+          "type": "takeaway",
+          "text": "Sonhamos principalmente durante o [[O sono paradoxal (REM)]], fase em que o cérebro está ativo e o corpo paralisado. Sonhar provavelmente ajuda a administrar a memória e as emoções, mesmo que esqueçamos quase tudo ao acordar."
+        }
+      ]
+    }
+  ]
+}

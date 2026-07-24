@@ -1,0 +1,65 @@
+{
+  "id": "course_232_la_blockchain_et_les_cryptomonnaies",
+  "title": "La blockchain et les cryptomonnaies",
+  "subtitle": "Depuis 2009",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environnement & avenir",
+  "description": "La **blockchain** a inventé un registre que personne ne peut falsifier seul, ouvrant la voie à une nouvelle économie numérique.",
+  "hero": {
+    "image": "la_blockchain_et_les_cryptomonnaies",
+    "ratio": "16:9",
+    "hook": "Un cahier de comptes que personne ne possède, mais que des milliers d'ordinateurs surveillent ensemble."
+  },
+  "sections": [
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Imaginez un cahier de comptes que personne ne possède seul, mais que des milliers d'ordinateurs tiennent à jour en même temps, partout dans le monde, et qu'il est presque impossible de falsifier. C'est l'idée de départ de la **blockchain**, une technologie souvent réduite à sa première application, le **Bitcoin**." },
+        { "type": "paragraph", "text": "En permettant d'échanger de la valeur sans passer par une banque, cette invention a fait naître toute une économie parallèle, entre promesses de liberté financière et critiques sévères sur son coût énergétique." }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p1",
+      "title": "Un registre que personne ne contrôle seul",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Au cœur de la blockchain se trouve une idée simple : le **registre distribué**. Contrairement à une banque, qui garde ses comptes sur ses propres serveurs, la blockchain s'appuie sur un réseau de [[pairs]], c'est-à-dire des milliers d'ordinateurs qui conservent chacun une copie identique de toutes les transactions." },
+        { "type": "funFact", "text": "Le tout premier bloc de la blockchain Bitcoin, appelé « bloc de genèse », contenait un message caché : la une d'un journal britannique du 3 janvier 2009, qui parlait du sauvetage des banques par l'État. Un clin d'œil politique de son créateur." },
+        { "type": "paragraph", "text": "Chaque transaction est d'abord vérifiée par le réseau, puis regroupée avec d'autres dans un **bloc**. Ce bloc est ensuite relié au précédent grâce à un calcul mathématique appelé [[hachage]] : une sorte d'empreinte numérique unique. Résultat, une chaîne ininterrompue de blocs, d'où le nom blockchain. Pour modifier une seule transaction ancienne, il faudrait recalculer toute la chaîne et convaincre plus de la moitié du réseau, ce qui est quasiment impossible à grande échelle." }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p2",
+      "title": "Bitcoin et Ethereum : du paiement au programme",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le **Bitcoin**, lancé en **2009** par une personne (ou un groupe) resté anonyme sous le nom de [[Satoshi Nakamoto]], a prouvé qu'un système monétaire pouvait fonctionner sans banque centrale. Pour garantir sa rareté, son créateur a fixé un plafond strict : jamais plus de **21 millions de bitcoins** ne pourront exister, un peu comme l'or est limité sur Terre." },
+        { "type": "image", "asset": "blockchain_technology_distributed_ledger_visualization", "ratio": "4:3", "caption": "Chaque transaction est vérifiée par un réseau d'ordinateurs avant d'être ajoutée à la chaîne." },
+        { "type": "paragraph", "text": "En 2015, une seconde génération de blockchain est apparue avec l'**Ethereum**. Sa grande innovation : les **contrats intelligents**. Ce sont des programmes qui s'exécutent automatiquement dès qu'une condition est remplie, par exemple un remboursement automatique en cas de retard de train, sans besoin de passer par un intermédiaire." }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p3",
+      "title": "Les critiques : énergie et instabilité",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le succès des cryptomonnaies ne va pas sans problèmes. Le plus discuté concerne la **consommation d'énergie** du réseau Bitcoin : sa dépense électrique annuelle est aujourd'hui comparable à celle d'un pays entier comme l'Argentine." },
+        { "type": "paragraph", "text": "Le marché souffre aussi d'une **volatilité** extrême : le prix du Bitcoin peut varier de 10 ou 20 % en quelques heures. Cette instabilité l'empêche pour l'instant de devenir une vraie monnaie du quotidien." },
+        { "type": "paragraph", "text": "Enfin, l'anonymat relatif des transactions a parfois servi à des activités illégales. Mais la blockchain reste en réalité totalement transparente : les autorités peuvent suivre les flux d'argent, ce qui rend le blanchiment plus difficile que dans le système classique de la monnaie en liquide." }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p4",
+      "title": "Vers une intégration institutionnelle",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Aujourd'hui, les cryptomonnaies quittent la marge pour entrer dans la finance traditionnelle. De grandes banques proposent désormais de garder des actifs numériques pour leurs clients, et plusieurs États réfléchissent à créer leur propre monnaie numérique officielle, une **[[MNBC]]** (monnaie numérique de banque centrale)." },
+        { "type": "paragraph", "text": "Les **stablecoins**, des cryptomonnaies dont le prix est stabilisé grâce à une réserve de dollars ou d'euros, servent de pont entre les deux mondes. Au-delà de la finance, des secteurs comme le luxe (pour lutter contre la contrefaçon), la logistique (pour suivre des conteneurs) ou la santé (pour sécuriser des dossiers médicaux) adoptent aussi la blockchain pour sa fiabilité." },
+        { "type": "funFact", "text": "En 2021, le Salvador est devenu le premier pays au monde à adopter le Bitcoin comme monnaie légale, au côté du dollar américain, obligeant chaque commerçant à l'accepter s'il en a les moyens techniques." },
+        { "type": "takeaway", "text": "Créée en 2009, la blockchain est un registre partagé et quasi impossible à falsifier, dont l'offre maximale de bitcoins est fixée à 21 millions d'unités. Elle a posé les bases d'une nouvelle économie numérique aujourd'hui en pleine intégration institutionnelle." }
+      ]
+    }
+  ]
+}
