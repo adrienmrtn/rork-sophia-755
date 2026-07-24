@@ -1,14 +1,16 @@
 package app.rork.sophia
 
 import android.app.Application
+import app.rork.sophia.data.AnalyticsService
 import app.rork.sophia.data.AuthService
+import app.rork.sophia.data.DiscountOfferManager
 import app.rork.sophia.data.LanguageManager
 import app.rork.sophia.data.OnboardingStore
 import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.ProgressSyncService
+import app.rork.sophia.data.SocialService
 import com.facebook.FacebookSdk
 import com.facebook.appevents.AppEventsLogger
-import com.mixpanel.android.mpmetrics.MixpanelAPI
 
 class SophiaApplication : Application() {
     lateinit var languageManager: LanguageManager
@@ -21,7 +23,11 @@ class SophiaApplication : Application() {
         private set
     lateinit var progressSyncService: ProgressSyncService
         private set
-    var mixpanel: MixpanelAPI? = null
+    lateinit var socialService: SocialService
+        private set
+    lateinit var discountManager: DiscountOfferManager
+        private set
+    lateinit var analytics: AnalyticsService
         private set
 
     override fun onCreate() {
@@ -33,19 +39,18 @@ class SophiaApplication : Application() {
         authService = AuthService(this)
         progressSyncService = ProgressSyncService(authService)
         progressSyncService.attach(progressManager)
+        socialService = SocialService(authService)
+        discountManager = DiscountOfferManager(this)
+        analytics = AnalyticsService(this)
         authService.start()
+
+        analytics.trackAppOpened()
+        analytics.trackSessionIfNeeded(isPremium = false)
 
         runCatching {
             FacebookSdk.setClientToken(BuildConfig.META_CLIENT_TOKEN)
             FacebookSdk.sdkInitialize(applicationContext)
             AppEventsLogger.activateApp(this)
-        }
-
-        runCatching {
-            mixpanel = MixpanelAPI.getInstance(this, AppConfig.MIXPANEL_TOKEN, true).also {
-                it.setServerURL("https://api-eu.mixpanel.com")
-                it.track("app_opened")
-            }
         }
     }
 

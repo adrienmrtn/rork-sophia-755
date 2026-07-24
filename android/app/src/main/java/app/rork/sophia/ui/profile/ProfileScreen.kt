@@ -47,6 +47,8 @@ fun ProfileScreen(
     onOpenCourse: (Course) -> Unit,
     onShowPaywall: () -> Unit = {},
     onGoogleSignIn: () -> Unit = {},
+    onOpenFriends: () -> Unit = {},
+    onOpenFeedback: () -> Unit = {},
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
@@ -114,6 +116,20 @@ fun ProfileScreen(
                     },
             )
         }
+        Spacer(Modifier.height(12.dp))
+        Button(
+            onClick = onOpenFriends,
+            modifier = Modifier.fillMaxWidth().height(48.dp),
+            shape = DS.controlShape,
+            colors = ButtonDefaults.buttonColors(containerColor = DS.surfaceMuted, contentColor = DS.ink),
+        ) { Text("Amis & classement") }
+        Spacer(Modifier.height(8.dp))
+        Button(
+            onClick = onOpenFeedback,
+            modifier = Modifier.fillMaxWidth().height(48.dp),
+            shape = DS.controlShape,
+            colors = ButtonDefaults.buttonColors(containerColor = DS.surfaceMuted, contentColor = DS.ink),
+        ) { Text("Envoyer un feedback") }
         Spacer(Modifier.height(16.dp))
         Text(text = StringStore.text(context, "language.section", language), style = SophiaTypography.titleMedium)
         Spacer(Modifier.height(8.dp))

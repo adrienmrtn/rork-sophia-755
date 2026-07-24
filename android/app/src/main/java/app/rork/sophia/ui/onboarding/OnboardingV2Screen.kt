@@ -69,6 +69,9 @@ fun OnboardingV2Screen(
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
     var step by remember { mutableStateOf(OnboardingStep.Welcome) }
+    LaunchedEffect(Unit) {
+        (context.applicationContext as SophiaApplication).analytics.trackOnboardingStarted()
+    }
     var selectedObjective by remember { mutableStateOf<String?>(null) }
     val scope = rememberCoroutineScope()
 

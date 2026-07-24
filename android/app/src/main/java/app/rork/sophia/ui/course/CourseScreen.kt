@@ -130,9 +130,11 @@ fun CourseScreen(
                 ) {
                     Text(text = page.title, style = SophiaTypography.titleLarge)
                     Spacer(Modifier.height(16.dp))
-                    Text(
-                        text = page.body,
-                        style = SophiaTypography.bodyLarge,
+                    app.rork.sophia.ui.components.RichTextWithGlossary(
+                        raw = page.body,
+                        language = language,
+                        courseId = course.id,
+                        courseTitle = course.title,
                         color = if (locked) DS.inkTertiary else DS.ink,
                     )
                 }

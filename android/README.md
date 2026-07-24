@@ -19,12 +19,16 @@ Native Kotlin + Jetpack Compose port of the Sophia iOS app.
 ## Implemented so far
 
 - 5-tab shell + TikTok home + library/collections/profile
-- Course reader (v2 blocks) + freemium locks
+- Course reader (v2 blocks) + freemium locks + **glossary `[[terms]]`**
 - Full quiz engine (mcq / trueFalse / chronological / sliders)
 - Training SRS session
 - Onboarding flow (welcome → language → objectives → … → paywall)
 - Native paywall UI + RevenueCat purchase hooks
 - Google Sign-In → Supabase + progress sync / conflict dialog
+- **Discount gift** (3 swipes → 60 min offer) + side tab
+- **Friends** (handle, requests, leaderboard week/all)
+- **Streak / rank-up celebrations**
+- **Mixpanel EU** events + **Formspree** feedback
 
 ## What you still need to provide
 

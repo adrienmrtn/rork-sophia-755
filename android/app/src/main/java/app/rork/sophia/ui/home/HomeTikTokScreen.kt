@@ -30,7 +30,10 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -60,20 +63,31 @@ fun HomeTikTokScreen(
     onAutoSwipeConsumed: () -> Unit,
     onToggleFavorite: (String) -> Unit,
     onStartCourse: (Course) -> Unit,
+    onUserSwipe: () -> Unit = {},
 ) {
     val context = LocalContext.current
     val cards = remember(language) {
         ContentCatalog.courses(context, language).shuffled()
     }
     val pagerState = rememberPagerState(pageCount = { cards.size })
+    var suppressSwipeCount by remember { mutableStateOf(false) }
 
     LaunchedEffect(autoSwipeCourseId, cards) {
         val id = autoSwipeCourseId ?: return@LaunchedEffect
         val index = cards.indexOfFirst { it.id == id }
         if (index >= 0 && index + 1 < cards.size) {
+            suppressSwipeCount = true
             pagerState.animateScrollToPage(index + 1)
         }
         onAutoSwipeConsumed()
+    }
+
+    LaunchedEffect(pagerState.settledPage) {
+        if (suppressSwipeCount) {
+            suppressSwipeCount = false
+        } else if (pagerState.settledPage > 0) {
+            onUserSwipe()
+        }
     }
 
     Column(modifier = modifier.fillMaxSize().background(DS.canvas)) {

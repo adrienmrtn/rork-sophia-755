@@ -239,6 +239,23 @@ class ProgressManager(context: Context) {
         persist(UserProgress())
     }
 
+    fun clearPendingRankUp() {
+        _progress.update { current ->
+            current.copy(pendingGlobalRankUp = null).also { persist(it) }
+        }
+    }
+
+    fun markStreakShownToday() {
+        _progress.update { current ->
+            current.copy(lastStreakShownDate = today()).also { persist(it) }
+        }
+    }
+
+    fun shouldShowStreakCelebration(): Boolean {
+        val p = _progress.value
+        return p.streak > 0 && p.lastStreakShownDate != today()
+    }
+
     companion object {
         private const val KEY = "sophia_user_progress"
         val TRAINING_INTERVALS = listOf(1, 3, 7, 14, 30)
