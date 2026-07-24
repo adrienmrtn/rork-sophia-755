@@ -25,11 +25,16 @@ Native Kotlin + Jetpack Compose port of the Sophia iOS app.
 - Onboarding V2 funnel (~17 steps: phone time, years grid, swipe courses, trial, dual paywalls)
 - Context paywalls (fin_onboarding annual+comparison, discount flash, quiz/course unlock)
 - RevenueCat purchase hooks
-- Google Sign-In → Supabase + progress sync / conflict dialog
+- Google Sign-In → Supabase + progress sync / conflict dialog (with summaries)
 - **Discount gift** (3 swipes → 3-tap reveal → 60 min offer) + side tab
-- **Friends** (handle, requests, leaderboard week/all)
+- **Friends** (handle, requests, leaderboard, friend profile, rank ring)
 - **Post-completion rewards** (streak → rank-up → collection → level-up)
 - **Glossary** `[[terms]]` + first-term coachmark
+- **First-open tutorials** (home / collections / training)
+- **Training mini-onboarding** (Discover → 3 screens → fin_onboarding paywalls)
+- **Trial reminder** local notifications + POST_NOTIFICATIONS
+- **Course share** (`sophia://course/{id}`)
+- **Meta Ads** service (consent-gated auto-log)
 - **Ambassador** Formspree candidature from profile
 - **Play In-App Review** (3rd lesson of first course)
 - **Mixpanel EU** funnel events (onboarding, course, quiz, locks, discount)
