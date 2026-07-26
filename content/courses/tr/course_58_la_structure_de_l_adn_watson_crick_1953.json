@@ -1,0 +1,102 @@
+{
+  "id": "course_58_la_structure_de_l_adn_watson_crick_1953",
+  "title": "DNA'nın yapısı",
+  "subtitle": "1953",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "1953'te Watson ve Crick DNA çift sarmalını tanımladılar. Bu görkemin arkasında Rosalind Franklin'in hayati eseri var.",
+  "hero": {
+    "image": "la_structure_de_l_adn",
+    "ratio": "16:9",
+    "hook": "Bir molekülün şekli... ve kalıtımın sırrı."
+  },
+  "sections": [
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Özelliklerin ebeveynlerden çocuklara geçtiğini biliyorduk. Peki bu bilgiyi hangi kimyasal nesne taşıyor? 20. yüzyılın ortalarında cevap daha da netleşti: **DNA**."
+        },
+        {
+          "type": "paragraph",
+          "text": "**1953**, **James Watson** ve **Francis Crick**'de ünlü bir model yayınladı: **çift pervane**. Bu form DNA'nın kendisini nasıl kopyalayabildiğini açıklamaktadır."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p1",
+      "title": "Kalıtım için destek bulma",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "DNA (deoksiribonükleik asit) hücrelerimizde bulunan uzun bir moleküldür. Bir kod oluşturan kimyasal “harfler” içerir. Ancak 1940'lı ve 1950'li yıllarda henüz 3 boyutlu formunu bilmiyorduk."
+        },
+        {
+          "type": "paragraph",
+          "text": "Form olmadan bu kodun her hücre bölünmesinde nasıl kendini kopyalayabildiğini anlamak zordur."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p2",
+      "title": "Her şeyi değiştiren fotoğraf",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "rosalind_franklin_photo_51_x_ray",
+          "ratio": "4:3",
+          "caption": "Rosalind Franklin'in 51 numaralı fotoğrafı sarmal bir yapıyı ortaya çıkarıyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Rosalind Franklin**, fizikçi ve kimyager, DNA'nın X-ışını görüntülerini elde ediyor. Ünlü **Fotoğraf 51**, bir sarmalın açık kanıtını gösteriyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Watson ve Crick bu verileri görüyor (artık Franklin için adil olmayan koşullar altında) ve modellerini oluşturuyorlar. Franklin 1958'de öldü; 1962 Nobel'i Watson, Crick ve Wilkins'e gidecek, ona değil."
+        },
+        {
+          "type": "funFact",
+          "text": "Franklin ayrıca virüsler üzerinde de büyük çalışmalar yaptı. Popüler açıklamalarda DNA'daki rolü uzun süredir hafife alınmıştır."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p3",
+      "title": "Çift sarmal neden önemlidir?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "dna_double_helix_model_watson_crick",
+          "ratio": "4:3",
+          "caption": "Birbirini tamamlayan iki unsur: kopya hayal edilebilir hale gelir."
+        },
+        {
+          "type": "paragraph",
+          "text": "İki iplik birbirine sarılır. Harfler çiftler halinde birbirine bakar. İplikler ayrıldığında her biri diğerinin yeniden inşası için bir model görevi görebilir. Kalıtım anlaşılabilir bir kimyasal mekanizma haline gelir."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p4",
+      "title": "Modern biyoloji burada başlıyor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bu keşiften modern genetik, dizileme, DNA testleri ve gen tedavileri doğmuştur. Ve ayrıca etik tartışmalar: Bu güçle ne yapmalı?"
+        },
+        {
+          "type": "takeaway",
+          "text": "**1953**'de çift sarmal modeli, DNA'nın canlılardan bilgiyi nasıl depoladığını ve kopyaladığını açıklıyor. Franklin, anlatıdan çok uzun süre önce silinmiş olan belirleyici kanıtları sundu."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "course_78_comment_fonctionne_l_electricite_dans_no",
+  "title": "Cum funcționează electricitatea în corpul nostru?",
+  "subtitle": "Nervi și ioni",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Gândirea, bătaia inimii, ridicarea unui braț: toate acestea circulă mai întâi ca electricitatea vie, purtată nu de electroni, ci de ioni.",
+  "hero": {
+    "image": "comment_fonctionne_l_electricite_dans_notre_corps",
+    "ratio": "16:9",
+    "hook": "Corpul tău este o rețea electrică. Dar aici, curentul este ioni, nu electroni."
+  },
+  "sections": [
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Într-o priză de perete, curentul este **electronic** care circulă. În corpul tău, este diferit: sunt **ionii**, atomi încărcați, care intră și ies din celule. Acest flux creează semnalele care fac inima să gândească, inima să bată și mușchii să se contracte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fără această electricitate vie, nici gând, nici gest, nici puls. Înțelegerea corpului înseamnă și înțelegerea acestui limbaj al acuzațiilor."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p1",
+      "title": "Clicul electric al neuronului",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un **neuron** în repaus nu trimite un mesaj, dar se „încarcă”. Membrana sa separă interiorul și exteriorul celulei. Datorită pompei [[pompe de sodiu-potasiu]] menține un potențial [[potenţial de odihnă]] de aproximativ **-70 milivolți**: interiorul este mai negativ decât exteriorul."
+        },
+        {
+          "type": "image",
+          "asset": "neuron_electrical_signal_brain",
+          "ratio": "auto",
+          "caption": "Neuronii comunică prin impulsuri electrice scurte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Când sosește un stimul, canalele se deschid. Sodiul vine dintr-o dată. Polaritatea este inversată: este potențialul de acțiune [[potenţial de acţiune]], un semnal „totul sau nimic” care trece de-a lungul axonului, uneori peste un metru. Ca un val electric."
+        },
+        {
+          "type": "funFact",
+          "text": "Creierul treaz produce aproximativ **20 wați**, suficient pentru un LED mic. Cu toate acestea, consumă aproape **20%** din caloriile organismului."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p2",
+      "title": "La sinapsă, electricitatea devine chimie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Neuronii nu prea se ating între ei. Între ele, un mic decalaj: **sinapsia**. Semnalul electric nu îl poate sări. Apoi capătul axonului eliberează [[Neurotransmițători]], molecule mesager precum acetilcolina sau [[glutamat]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Acești mesageri se atașează la următorul neuron ca o cheie într-o broască. În funcție de mesaj, ele excită sau inhibă. Mii de aceste decizii simultane formează gândirea."
+        },
+        {
+          "type": "funFact",
+          "text": "Unele semnale nervoase circulă la **120 m/s** (mai mult de **430 km/h**). Suficient pentru a reacționa la o arsură la degetul de la picioare într-o fracțiune de secundă."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p3",
+      "title": "Inima are propriul stimulator cardiac",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Inima nu așteaptă o comandă de la creier pentru fiecare bătaie. În atriul drept, **nodul sinusal** generează propriile impulsuri, de aproximativ **60 de tigaie pentru 100** ori pe minut în repaus. Semnalul se propaga, mai intai contracteaza atriile, apoi ventriculii."
+        },
+        {
+          "type": "paragraph",
+          "text": "Această activitate este suficient de puternică pentru a fi citită pe piele: este **electrocardiograma (ECG)**. Dacă ritmul devine perturbat, vorbim de **aritmia**. Inima bate apoi dezordonat și pompează prost."
+        },
+        {
+          "type": "funFact",
+          "text": "Anghila electrică folosește același principiu al celulelor excitabile, dar în serie: până la **600 volți**, suficient pentru a paraliza prada."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p4",
+      "title": "De la gest voluntar la defibrilator",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pentru a ridica brațul, un potențial de acțiune se deplasează în jos spre mușchi. Acetilcolina declanșează o undă electrică locală, apoi o eliberare de calciu. Proteinele musculare alunecă unele peste altele: contracție."
+        },
+        {
+          "type": "paragraph",
+          "text": "**defibrilare** folosește același principiu invers: un șoc extern resetează toate celulele „la zero”, astfel încât nodul sinusal reia tempo-ul. Protezele bionice captează și aceste semnale slabe pentru a controla o mână artificială."
+        },
+        {
+          "type": "takeaway",
+          "text": "Ființele vii vorbesc în fluxuri ionice și potențiale de acțiune. Gândul, inima și mușchii au același limbaj electric."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "id": "course_167_icare_et_dedale",
+  "title": "Ikaros a Daedalus",
+  "subtitle": "Létání příliš blízko slunci",
+  "subject": "mythologie",
+  "subcategory": "Greece: the gods",
+  "description": "Daedalus vyrábí vosková křídla, aby utekl z Kréty. Jeho syn Ikaros letí příliš vysoko, padá a dává své jméno moři. Mýtus o míře a nadbytku.",
+  "hero": {
+    "image": "icare_et_dedale",
+    "ratio": "16:9",
+    "hook": "Otec vynalezl křídla. Syn varování ignoruje. Moře si drží své jméno."
+  },
+  "sections": [
+    {
+      "id": "course_167_icare_et_dedale_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Ikar** a jeho otec **Daedalus** tvoří jeden z nejznámějších řeckých mýtů. Kromě obrazu teenagera, který spadne do moře, příběh hovoří o vynalézavosti, limitech a pokušení zajít příliš daleko."
+        },
+        {
+          "type": "paragraph",
+          "text": "Je to příběh o nemožném útěku, který se v [[Hybris a přebytek]] stává lekcí: chtít se rovnat bohům znamená riskovat popálení."
+        }
+      ]
+    },
+    {
+      "id": "course_167_icare_et_dedale_p1",
+      "title": "Daedalus, vězeň svého vlastního labyrintu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Daedalus** je legendární vynálezce, inkarnace [[Metis]], této mazané inteligence Řeků. Byl vyhoštěn na dvůr krále **Minos** na Krétě a vybudoval **Labyrint**, vězení tak složité, že nikdo neuteče. Ukrývá **Minotaura**, monstrum zrozené ze zakázaných lásek královny [[Pasiphae]]."
+        },
+        {
+          "type": "image",
+          "asset": "daedalus_labyrinth_crete_minotaur_myth",
+          "ratio": "4:3",
+          "caption": "Daedalus, architekt krétského labyrintu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Když se Minos dozví, že Daedalus pomohl hrdinovi **Theseus** uniknout díky Ariadnině vláknu, uzamkne vynálezce a jeho malého syna **Ikar** v jejich vlastní práci. Země a moře jsou uzamčeny. Zůstává nebe."
+        },
+        {
+          "type": "funFact",
+          "text": "Francouzské slovo **„bludiště“** pochází z této postavy: místo, kde se člověk ztratí, jako je Labyrint, který navrhl."
+        },
+        {
+          "type": "paragraph",
+          "text": "Při pozorování ptáků vyrábí Daedalus dva páry křídel: dřevo, peří a včelí **vosk**. Technologie se stává východiskem."
+        }
+      ]
+    },
+    {
+      "id": "course_167_icare_et_dedale_p2",
+      "title": "Letět příliš vysoko nebo příliš nízko",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Před odjezdem dá Daedalus Ikarovi jednoduché pravidlo: jděte střední cestou. Příliš nízká vlhkost zatěžuje peří. Příliš vysoko, slunce roztaví vosk. Tato opatrnost připomíná [[Sophia]], moudrost znát své místo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zpočátku je vše v pořádku. Otec a syn létají nad ostrovy v Egejském moři. Pastýři na zemi věří, že vidí bohy. Pak se Ikara zmocní opilost. Vstává, fascinován oblohou. Vosk změkne. Peří padá. Mává holýma rukama a vrhá se do moře."
+        },
+        {
+          "type": "image",
+          "asset": "icarus_falling_sun_bruegel_painting",
+          "ratio": "4:3",
+          "caption": "Pád Ikara, námět malby od renesance."
+        },
+        {
+          "type": "funFact",
+          "text": "Mýtus je vědecky paradoxní: čím výš se dostanete, tím chladněji. Ikaros měl raději zmrznout, než vidět, jak se jeho vosk rozpouští."
+        }
+      ]
+    },
+    {
+      "id": "course_167_icare_et_dedale_p3",
+      "title": "Pýcha, ideál nebo zapomenutý detail?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Starší vidí především trest za pýchu: Ikaros platí za to, že chtěl příliš mnoho. Ale romantici jako **Baudelaire** z něj dělají hrdinu ideálu: je lepší zemřít při pohledu do slunce než opatrný život na zemi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Malíř **Hvězdy Pietera Bruegela** nabízí další čtení. V jeho obraze je pád jen detailem: oráč pokračuje ve svém úkolu, svět se pro hrdinu nezastaví. Jednotlivý výkon se stává téměř neviditelným."
+        },
+        {
+          "type": "funFact",
+          "text": "Některé verze dodávají, že Daedalus také vidí smrt svého syna jako trest: jednou by ze žárlivosti zabil svého synovce **Perdix**, příliš nadaného vynálezce."
+        }
+      ]
+    },
+    {
+      "id": "course_167_icare_et_dedale_p4",
+      "title": "Moře, ostrov, lekce",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Proudy nesou Ikarovo tělo směrem k ostrovu, který hrdina **Herakles** pojmenuje [[Ikaria]]. Okolní moře se stává **Ikarijské více**. Daedalus se sám dostává na Sicílii a nabízí svá křídla bohu **Apollo** a přísahá, že už nikdy nebude létat."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mýtus přežívá všude: v letectví jako sen a riziko, v psychologii jako „Ikarův komplex“, touha uspět příliš rychle. Daedalus zůstává nejednoznačným vynálezcem, schopným toho nejlepšího (křídla) i toho nejhoršího. [[Labyrint jako symbol]] nám připomíná, že techniku ​​lze také uzavřít."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Daedalus** prchá z Kréty s voskovými křídly. **Ikar** ignoruje varování, letí příliš blízko slunci a utopí se. Technologie osvobozuje, ale bez míry zabíjí."
+        }
+      ]
+    }
+  ]
+}

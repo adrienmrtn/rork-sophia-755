@@ -1,0 +1,112 @@
+{
+  "id": "course_232_la_blockchain_et_les_cryptomonnaies",
+  "title": "Blockchain ve kripto para birimleri",
+  "subtitle": "2009'dan beri",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "**blok zinciri**, kimsenin tek başına kurcalayamayacağı bir defter icat ederek yeni bir dijital ekonominin yolunu açtı.",
+  "hero": {
+    "image": "la_blockchain_et_les_cryptomonnaies",
+    "ratio": "16:9",
+    "hook": "Kimsenin sahip olmadığı ama binlerce bilgisayarın birlikte izlediği bir hesap defteri."
+  },
+  "sections": [
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hiç kimsenin sahip olmadığı, dünyanın her yerinde binlerce bilgisayarın aynı anda güncellendiği ve tahrif edilmesinin neredeyse imkansız olduğu bir hesap defteri düşünün. Bu, genellikle ilk uygulaması olan **Bitcoin**'ye indirgenen bir teknoloji olan **blok zinciri**'nin ilk fikridir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu buluş, bir bankaya başvurmadan değer alışverişini mümkün kılan, finansal özgürlük vaatleri ile enerji maliyetine yönelik sert eleştiriler arasında tamamen paralel bir ekonominin ortaya çıkmasına neden oldu."
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p1",
+      "title": "Kimsenin tek başına kontrol edemeyeceği bir kayıt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Blockchain'in kalbinde basit bir fikir var: **dağıtılmış defter**. Hesaplarını kendi sunucularında tutan bir bankanın aksine, blockchain [[akranlar]] ağına, yani her biri tüm işlemlerin aynı kopyasını saklayan binlerce bilgisayara dayanır."
+        },
+        {
+          "type": "funFact",
+          "text": "Bitcoin blok zincirinin \"genesis bloğu\" olarak adlandırılan ilk bloğu gizli bir mesaj içeriyordu: 3 Ocak 2009 tarihli bir İngiliz gazetesinin, bankaların devlet tarafından kurtarılmasından bahseden ön sayfası. Yaratıcısından politik bir selam."
+        },
+        {
+          "type": "paragraph",
+          "text": "Her işlem önce ağ tarafından doğrulanır ve daha sonra diğerleriyle birlikte bir **engellemek** halinde gruplandırılır. Bu blok daha sonra [[Graeae]] adı verilen matematiksel bir hesaplama sayesinde bir öncekine bağlanır: bir tür benzersiz dijital parmak izi. Sonuç kesintisiz bir blok zinciridir, dolayısıyla blockchain adı da buradan gelir. Tek bir eski işlemi değiştirmek için tüm zinciri yeniden hesaplamanız ve ağın yarısından fazlasını ikna etmeniz gerekir ki bu büyük ölçekte neredeyse imkansızdır."
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p2",
+      "title": "Bitcoin ve Ethereum: ödemeden programa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**2009**'de [[Satoshi Nakamoto]] adı altında anonim bir kişi (veya grup) tarafından başlatılan **Bitcoin**, bir para sisteminin merkez bankası olmadan da işleyebileceğini kanıtladı. Kıtlığını garanti altına almak için, yaratıcısı katı bir tavan belirledi: **21 milyondan fazla bitcoin** asla var olamaz, tıpkı Dünya'da altının sınırlı olduğu gibi."
+        },
+        {
+          "type": "image",
+          "asset": "blockchain_technology_distributed_ledger_visualization",
+          "ratio": "4:3",
+          "caption": "Her işlem, zincire eklenmeden önce bir bilgisayar ağı tarafından doğrulanır."
+        },
+        {
+          "type": "paragraph",
+          "text": "2015 yılında **Ethereum** ile ikinci nesil blockchain ortaya çıktı. Harika yeniliği: **akıllı sözleşmeler**. Bunlar, bir koşul karşılandığı anda otomatik olarak çalışan, örneğin trenin gecikmesi durumunda herhangi bir aracıya ihtiyaç duymadan otomatik geri ödeme yapan programlardır."
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p3",
+      "title": "Eleştirmenler: enerji ve istikrarsızlık",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kripto para birimlerinin başarısı sorunsuz değildir. En çok tartışılan konu Bitcoin ağının **enerji tüketimi** ile ilgilidir: yıllık elektrik harcaması bugün Arjantin gibi bir ülkenin tamamıyla karşılaştırılabilir düzeydedir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Piyasa aynı zamanda aşırı **oynaklık** sorunu yaşıyor: Bitcoin'in fiyatı birkaç saat içinde %10 veya %20 oranında değişebilir. Bu istikrarsızlık şu anda onun gerçek bir günlük para birimi olmasını engelliyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Son olarak, işlemlerin göreceli anonimliği bazen yasa dışı faaliyetler için kullanılmaktadır. Ancak blockchain aslında tamamen şeffaf kalıyor: Yetkililer para akışını takip edebiliyor, bu da aklamayı klasik nakit sistemine göre daha zor hale getiriyor."
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p4",
+      "title": "Kurumsal entegrasyona doğru",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Günümüzde kripto para birimleri geleneksel finansa girmek için marjları terk ediyor. Büyük bankalar artık müşterileri için dijital varlık tutmayı teklif ediyor ve birçok eyalet kendi resmi dijital para birimi olan **[[MNBC]]** (merkez bankası dijital para birimi) oluşturmayı düşünüyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "**kararlı paralar**, fiyatı dolar veya euro rezervi sayesinde sabitlenen kripto para birimleri, iki dünya arasında köprü görevi görüyor. Finansın ötesinde, lüks (sahtecilikle mücadele için), lojistik (konteynerleri takip etmek için) veya sağlık (tıbbi kayıtları güvence altına almak için) gibi sektörler de güvenilirliği nedeniyle blockchain'i benimsiyor."
+        },
+        {
+          "type": "funFact",
+          "text": "2021 yılında El Salvador, Bitcoin'i ABD dolarının yanı sıra yasal ödeme aracı olarak benimseyen dünyadaki ilk ülke oldu ve teknik imkanlara sahip her tüccarın bunu kabul etmesini zorunlu kıldı."
+        },
+        {
+          "type": "takeaway",
+          "text": "2009 yılında oluşturulan blockchain, maksimum bitcoin arzının 21 milyon birime ayarlandığı, tahrif edilmesi neredeyse imkansız olan ortak bir defterdir. Bugün tam kurumsal entegrasyonla yeni bir dijital ekonominin temellerini attı."
+        }
+      ]
+    }
+  ]
+}

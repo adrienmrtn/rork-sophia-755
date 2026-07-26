@@ -1,0 +1,116 @@
+{
+  "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup",
+  "title": "Volkanlar neden patlıyor?",
+  "subtitle": "Magma ve levhalar",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Volkan yer kabuğundaki bir açıklıktır. Basınç altındaki magma burada yükselir ve lav haline gelir. Dünyanın “tükürmesinin” nedeni budur.",
+  "hero": {
+    "image": "pourquoi_les_volcans_entrent_en_eruption",
+    "ratio": "16:9",
+    "hook": "Ayaklarımızın altındaki Dünya donmuş değil. Bazen bir yangın penceresi açar."
+  },
+  "sections": [
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bir yanardağ yalnızca ateş püskürten bir dağ değildir. Dünyanın dış kabuğundaki bir açıklıktır. Bu şekilde **magma** yükselir: yüksek basınç altındaki erimiş kaya ve gaz karışımı. Bu magma açık havaya çıktığında **yıkanmış** haline gelir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bir patlamayı anlamak için yüzeyin altına bakmanız gerekir: Gezegenin içindeki ısı, plakaların hareketi ve gazların basınç oluşturma şekli, tıpkı bir şişe sodayı sallamaya benziyor."
+        }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p1",
+      "title": "Ayaklarımızın altında hiçbir şey hala yok",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dünya katmanlardan oluşmuştur. Yüzeyde **kabuk**, **5 ila 70 km'lik bir zarftır. Aşağıda yaklaşık**Z2**900 kilometre** derinliğe kadar **manto** yatıyor. Kaplama çoğunlukla katıdır, ancak çok uzun süreler boyunca ultra kalın bal gibi çok yavaş akabilir."
+        },
+        {
+          "type": "image",
+          "asset": "volcano_eruption_lava",
+          "ratio": "auto",
+          "caption": "Patlama: Magmanın yüzeye çıkması."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu iç ısı maddenin yükselmesine ve düşmesine neden olur: bunlar **konveksiyon akımlarıdır**. Plak adı verilen büyük kabuk parçalarını dışarı iterler. Bu [[Plaka tektoniği]]'dir: Dünyanın yüzeyi birbirinden ayrılan, çarpışan veya birbirine doğru kayan plakalara bölünmüştür."
+        },
+        {
+          "type": "funFact",
+          "text": "Bazı çok hızlı yükselişler, **150 kilometre** derinlikten daha fazla derinlikte oluşan elmasları geri getiriyor. Yolda üstlerini değiştirecek zamanları yok."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[sırtlar]]'de plakalar birbirinden ayrılır ve magma kolaylıkla yükselir. [[dalma]] bölgesinde bir plaka diğerinin altına dalıyor ve beraberinde su taşıyor. Bu su kayaların erime noktasını düşürür: magma oluşur, sonra yükselir."
+        }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p2",
+      "title": "Magmadan patlamaya",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kaya sadece \"sıcak olduğu için\" erimez. Üç tetikleyici vardır: sıcaklığın artması, basıncın düşmesi veya su eklenmesi. Magma bir kez oluştuğunda etrafındaki kayadan daha az yoğundur. Bu nedenle sudaki hava kabarcığı gibi yükselmeye çalışır."
+        },
+        {
+          "type": "paragraph",
+          "text": "Çoğu zaman ilk önce yüzeyin birkaç kilometre altındaki bir rezervuar olan **magma odasında** durur. Burada çözünmüş gazlar, basınç azaldığında kabarcıklar oluşturur. Yukarıdaki kayanın \"tapası\" artık dayanamazsa patlama başlar."
+        },
+        {
+          "type": "funFact",
+          "text": "**Tambora**'nin Endonezya'nın **1815** kentindeki patlaması o kadar güçlüydü ki küresel iklimi soğuttu. **1816**, Avrupa ve Kuzey Amerika'daki feci hasatlarla \"yazsız yıl\" olarak adlandırıldı."
+        }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p3",
+      "title": "Sıvı mı yoksa patlayıcı mı?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tüm kırılmalar aynı değildir. Her şey magmanın **viskozitesin**, yani sıvı mı yoksa yapışkan mı olduğuna bağlıdır. **Hawaii** veya Piton de la Fournaise'deki (Reunion Adası) olduğu gibi akışkan bir magma, gazların kaçmasına izin verir. Lav akıntıları: patlama **coşkun**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Yapışkan bir magma gazları hapseder. Baskı artıyor, sonra her şey patlıyor. Küller, bloklar ve [[ateşli bulutlar]] (yamaçlardan aşağı yuvarlanan yanan gaz ve kül bulutları) çevredeki alanı tahrip edebilir. Bu, **Aziz Helens** Dağı (Amerika Birleşik Devletleri) veya **Pinatubo** (Filipinler) gibi volkanların tarzıdır."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bir yanardağ da yüzyıllarca sakin kalabilir. **79**'den sonra. BC, **Vezüv**, Napoli yakınlarında Pompeii'yi küllerin altına gömdü. Dünyadaki volkanik faaliyetlerin yaklaşık %80'i **Z** okyanusların altında, gözlerimizden uzakta gerçekleşiyor."
+        }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p4",
+      "title": "Tehlike, doğurganlık, dipsiz yaşam",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Volkanlar, gaz yayarak Dünya'nın ilk atmosferini şekillendirdi. Külleri de toprağı zenginleştiriyor: Birçok verimli tarım bölgesi aktif yanardağların eteklerinde yaşıyor. Ancak çok büyük bir patlama kükürt parçacıklarını atmosferin yükseklerine gönderebilir ve iklimi aylarca soğutabilir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Amerika Birleşik Devletleri'ndeki Yellowstone'daki [[süper yanardağ]] gibi bazı siteler yakından izlenmektedir. Denizin altında, sırtların yakınında, [[siyah sigara içenler]] mineraller açısından zengin yanan sıvılar kusuyor. Ekosistemler güneş ışığı olmadan, kaplıcaların kimyasıyla beslenen orada yaşıyor."
+        },
+        {
+          "type": "takeaway",
+          "text": "Volkanlar, özellikle tektonik plaka sınırlarında, basınç altında magmayı dışarı atar. Magmanın viskozitesi, patlamanın sessizce akıp akmayacağına veya patlayacağına karar verir."
+        }
+      ]
+    }
+  ]
+}

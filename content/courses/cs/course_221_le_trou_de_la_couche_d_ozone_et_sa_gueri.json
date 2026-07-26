@@ -1,0 +1,138 @@
+{
+  "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri",
+  "title": "Ozonová díra (a její obnova)",
+  "subtitle": "1985-2065",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Obří díra spatřená nad Antarktidou, smlouva podepsaná 197 zeměmi a planeta, která léčí. Zde je **jediná velká ekologická krize**, kterou lidstvo již vyřešilo.",
+  "hero": {
+    "image": "le_trou_de_la_couche_d_ozone",
+    "ratio": "16:9",
+    "hook": "Díra v nebi, objevená náhodou a uzavřená smlouvou podepsanou celým světem."
+  },
+  "sections": [
+    {
+      "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V roce 1985 britští vědci umístění v Antarktidě nemohli uvěřit svým měřením: zdálo se, že část oblohy ztratila ochranu před Sluncem. Nebyla to chyba zařízení, ale skutečná díra v ozónové vrstvě, tento neviditelný štít, který nás všechny chrání. Tento kurz vypráví příběh o tom, jak svět objevil toto nebezpečí a nezvykle, jak ho dokázal napravit."
+        }
+      ]
+    },
+    {
+      "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_p1",
+      "title": "Křehký štít, šikovný jed",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vrstva **ozon** se nachází mezi 15 a 35 kilometry nad mořem v [[Stratosféra]] a pohlcuje většinu **UV-B**, těchto paprsků ze Slunce dostatečně silných na to, aby poškodily naši pokožku a DNA živých buněk. Ve 30. letech 20. století průmysl vynalezl **chlorfluoruhlovodíky** neboli [[Chlorfluoruhlovodíky (CFC)]]: plyny považované za dokonalé, levné, které se dávaly všude, do ledniček, klimatizací a aerosolových nádob."
+        },
+        {
+          "type": "paragraph",
+          "text": "Problém je v tom, že tyto plyny jsou příliš stabilní: místo toho, aby se degradovaly v blízkosti země, stoupají do stratosféry. V roce 1974 varovali chemici Mario Molina a Frank Sherwood Rowland: pod vlivem Slunce freony uvolňují chlór, který ničí ozón. V roce 1995 dostali Nobelovu cenu, ale tehdy je skoro nikdo neposlouchal."
+        }
+      ]
+    },
+    {
+      "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_p2",
+      "title": "1985: šok, pak globální dohoda",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V roce 1985 British Antarctic Survey potvrdil zprávu: každé jaro se v ozonové vrstvě nad [[Antarktida]] otevře velkolepá díra. Satelity NASA tato data již měly, ale jejich software je odmítl jako příliš extrémní, než aby to byla pravda."
+        },
+        {
+          "type": "image",
+          "asset": "ozone_hole_antarctica_satellite_image_nasa",
+          "ratio": "16:9",
+          "caption": "Ozonová díra nad Antarktidou, viděná satelitem."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hrozba pro lidské zdraví je brána velmi vážně a svět na ni rychle reaguje. V roce 1987 země podepsaly [[Montrealský protokol (1987)]], smlouvu, která organizovala postupné vyřazení freonů. Na začátku má pouze 24 zemí; dnes sdružuje **197**, všechny členy Organizace spojených národů."
+        },
+        {
+          "type": "funFact",
+          "text": "Montrealský protokol je jedinou smlouvou v historii Organizace spojených národů, kterou ratifikovaly všechny země světa bez výjimky."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tento úspěch je způsoben jasným pravidlem pro všechny a společným fondem, který pomáhá chudým zemím měnit jejich stroje. Dokonce i výrobci, kteří byli zpočátku proti, nakonec následovali a našli ziskové náhradní produkty."
+        }
+      ]
+    },
+    {
+      "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_p3",
+      "title": "Proč je klima těžší?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tento úspěch se často uvádí, že bychom mohli vyřešit změnu klimatu stejným způsobem. Tyto dva problémy se však liší: ozónová díra pochází z malého počtu plynů produkovaných malým počtem továren, které bylo snadné zaměřit. [[oxid uhličitý (CO₂)]] pochází téměř ze všeho, co naše moderní společnost dělá, stěhování, vytápění, kultivace, stavby: snižování CO₂ vyžaduje změnu celé globální ekonomiky, nejen hrstky chemických továren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dobrá zpráva mimochodem: CFC byly také silné skleníkové plyny. Jejich zákazem Montrealský protokol také zpomalil globální oteplování, aniž by to bylo jeho primárním cílem."
+        },
+        {
+          "type": "funFact",
+          "text": "Bez této smlouvy by CFC mohly do roku 2050 přidat asi 1 °C dodatečnému oteplení Země, jen kvůli jejich skleníkovému efektu."
+        }
+      ]
+    },
+    {
+      "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_p4",
+      "title": "Pomalé, ale velmi reálné zotavení",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Chloru, který již stoupá v atmosféře, chvíli trvá, než zmizí: hladiny škodlivých plynů se stabilizovaly až v polovině 90. let. Od počátku roku 2000 bylo uzdravení jasné a měřitelné."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1974",
+              "title": "Vědecká výstraha",
+              "detail": "Molina a Rowland objevují spojení mezi CFC a ozonem."
+            },
+            {
+              "date": "1985",
+              "title": "Díra je potvrzena",
+              "detail": "Svá data zveřejnil British Antarctic Survey."
+            },
+            {
+              "date": "1987",
+              "title": "Montrealský protokol",
+              "detail": "Podpis smlouvy, kterou nyní ratifikovalo 197 zemí."
+            },
+            {
+              "date": "2000",
+              "title": "Začátek hojení",
+              "detail": "Hladiny škodlivých plynů se konečně stabilizují."
+            },
+            {
+              "date": "2065",
+              "title": "Návrat k normálu (plánováno)",
+              "detail": "Ozonová vrstva by se měla vrátit na úroveň z roku 1980."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Pokud bude smlouva nadále dodržována, ozónová vrstva by se měla vrátit do stavu z roku 1980 do **2065-2070**, což zabrání milionům rakoviny kůže a šedého zákalu. Musíme zůstat ostražití: před několika lety byly ve východní Asii spatřeny tajné emise freonů, což je důkaz, že globální dohoda funguje pouze tehdy, je-li neustále monitorována."
+        },
+        {
+          "type": "takeaway",
+          "text": "Ozonová díra zůstává jedinou velkou ekologickou krizí, kterou zcela vyřešila globální spolupráce: smlouva podepsaná v roce 1987 197 zeměmi s vědecky měřitelnými výsledky."
+        }
+      ]
+    }
+  ]
+}

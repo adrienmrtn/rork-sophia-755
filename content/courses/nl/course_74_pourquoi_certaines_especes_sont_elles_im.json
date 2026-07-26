@@ -1,0 +1,108 @@
+{
+  "id": "course_74_pourquoi_certaines_especes_sont_elles_im",
+  "title": "Waarom zijn sommige soorten onsterfelijk?",
+  "subtitle": "Biologie & levensduur",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Sommige soorten lijken de dood te trotseren. Kwallen die verjongen, hydra's zonder veroudering: het geheim zit in cellulair herstel.",
+  "hero": {
+    "image": "pourquoi_certaines_especes_sont_immortelles",
+    "ratio": "16:9",
+    "hook": "Veroudering is geen absolute levenswet. Sommige soorten hebben de fout gevonden."
+  },
+  "sections": [
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_intro",
+      "title": "Inleiding",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We worden oud, en dan sterven we. De kwal [[Turritopsis dohrnii]] kan echter terugkeren naar een juveniel stadium en opnieuw beginnen. De mossel **Ming** leefde **507 jaar**. Veroudering is dus geen universele regel: het is een proces dat door bepaalde soorten wordt omzeild."
+        },
+        {
+          "type": "paragraph",
+          "text": "Door deze uitzonderingen te bestuderen, zijn onderzoekers minder op zoek naar onsterfelijkheid in sciencefiction dan naar levenstrucs om cellen beter te repareren."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p1",
+      "title": "Waarom onze cellen verslijten",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Veroudering gaat niet alleen over ‘verslijten’ als een machine. Er is sprake van een onbalans: schade stapelt zich sneller op dan reparaties."
+        },
+        {
+          "type": "image",
+          "asset": "chromosome_dna_telomere_aging_cell",
+          "ratio": "auto",
+          "caption": "Telomeren, aan de uiteinden van chromosomen, worden bij elke celdeling korter."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aan de uiteinden van onze chromosomen fungeren de [[Telomeren]] als de punten van schoenveters. Bij elke celdeling worden ze korter. Te kort, de cel stopt met delen. Tegelijkertijd produceert de stofwisseling agressieve moleculen die eiwitten en DNA beschadigen. ‘Zombiecellen’ hopen zich vervolgens op en ontsteken de weefsels eromheen."
+        },
+        {
+          "type": "funFact",
+          "text": "De tardigrade, een kleine ‘waterbeer’, kan bijna niet meer leven door uit te drogen. Zijn metabolisme daalt tot **99,99%**, en hij overleeft het vacuüm van de ruimte of extreme straling zonder echt te verouderen."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p2",
+      "title": "Kampioenen die de dood vermijden",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "De gewonde of uitgehongerde [[Turritopsis dohrnii]] transformeert zijn volwassen cellen in ‘lege’ cellen en wordt dan weer een poliep, het startstadium. Deze stap terug, transdifferentiatie genoemd, geeft het een vorm van **biologische onsterfelijkheid**."
+        },
+        {
+          "type": "paragraph",
+          "text": "De **hydra**, een kleine zoetwaterpoliep, vernieuwt zijn hele lichaam dankzij een vrijwel onbeperkte aanvoer van [[stamcellen]]. Ze vertoont geen meetbare tekenen van veroudering. De Groenlandse walvis kan de **200 jaar** overschrijden dankzij ultra-efficiënt DNA-herstel en sterke weerstand tegen kanker."
+        },
+        {
+          "type": "funFact",
+          "text": "Kreeften maken overal in hun lichaam telomerase aan: hun telomeren worden niet korter. Ze groeien hun hele leven door en sterven vooral als het vervellen te duur wordt."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p3",
+      "title": "Wat de geneeskunde ervan leert",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Het idee is niet langer alleen om de ziekte van Alzheimer of artrose één voor één te behandelen, maar om het ouder worden zelf aan te pakken. **senolytica** hebben tot doel zombiecellen te elimineren. Bij dieren heeft dit bepaalde functies al verjongd."
+        },
+        {
+          "type": "paragraph",
+          "text": "Het beperken van calorieën zonder ondervoeding activeert ook hersteltrajecten, met name door het vertragen van [[mTOR]], een eiwit dat de groei versnelt... en soms ook achteruitgaat. Andere laboratoria proberen de klok van cellen, zoals kwallen, ‘op te winden’ zonder ze in tumoren te veranderen."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p4",
+      "title": "Onsterfelijk, maar niet onoverwinnelijk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zelfs een biologisch onsterfelijke soort sterft door roofdieren, ziekten of rampen. De dood blijft een drijvende kracht achter de evolutie: hij maakt plaats voor nieuwe, beter aangepaste generaties."
+        },
+        {
+          "type": "paragraph",
+          "text": "Voor mensen is de realistische uitdaging niet om eeuwig te leven, maar om de jaren **op welke manier je het zult zien**. Een lang leven dat technologie wordt, zou ook enorme vragen opwerpen over gelijkheid en hulpbronnen."
+        },
+        {
+          "type": "takeaway",
+          "text": "Biologische onsterfelijkheid is afhankelijk van het repareren of resetten van cellen. De Turritopsis dohrnii-kwal wordt jonger; de hydra vernieuwt zichzelf voortdurend. Veroudering is geen universele fataliteit."
+        }
+      ]
+    }
+  ]
+}

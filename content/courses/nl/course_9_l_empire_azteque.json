@@ -1,0 +1,133 @@
+{
+  "id": "course_9_l_empire_azteque",
+  "title": "Het Azteekse rijk",
+  "subtitle": "1325-1521",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "In minder dan twee eeuwen bouwden de Azteken een hoofdstad van 200.000 inwoners aan een meer. Hun rijk, gebaseerd op eerbetoon en opoffering, stortte in twee jaar tijd in tegen de Spanjaarden.",
+  "hero": {
+    "image": "l_empire_azteque",
+    "ratio": "16:9",
+    "hook": "Een stad aan het water, dichter bevolkt dan Londen. En dan, over twee jaar, niets."
+  },
+  "sections": [
+    {
+      "id": "course_9_l_empire_azteque_intro",
+      "title": "Inleiding",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In het hart van het huidige Mexico bouwden de Azteken in minder dan twee eeuwen een hoofdstad aan een meer, bevolkt door **200.000 inwoners**. Groter dan Londen of Rome tegelijk. Hun macht combineert waterbouwkunde, veeleisende religie en permanente oorlog."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tussen **1519** en **1521** stortte dit rijk in. Niet alleen onder de kanonnen van Cortés, de Spaanse conquistador, maar onder de haat van zijn onderdanen en onder een onzichtbaar wapen: ziekte."
+        }
+      ]
+    },
+    {
+      "id": "course_9_l_empire_azteque_p1",
+      "title": "Van moerassen naar een hoofdstad op water",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "De **Mexico**, de mensen die we Azteken zullen noemen, komen uit het mythische [[Aztlan]], een plaats van herkomst in het noorden. Ze arriveerden in de 13e eeuw in de Vallei van Mexico. Veracht zoeken ze een teken van hun god [[Huitzilopochtli]], de god van de zon en de oorlog: een adelaar die een slang op een cactus verslindt. In **1325** vinden ze het op een eilandje in het meer **Texcoco**. [[Tenochtitlan]] was geboren, hun toekomstige hoofdstad."
+        },
+        {
+          "type": "paragraph",
+          "text": "Om de stad te voeden perfectioneren ze [[De chinampa's]], ultravruchtbare kunstmatige eilanden gemaakt van modder en planten. Drie verhoogde wegen, dijken, kanalen: de stad wordt een fort aan het meer en een gigantische markt."
+        },
+        {
+          "type": "funFact",
+          "text": "De Azteken gebruikten het wiel niet voor transport en hadden geen lastdieren. Toch verplaatsten ze miljoenen tonnen steen voor hun piramides."
+        }
+      ]
+    },
+    {
+      "id": "course_9_l_empire_azteque_p2",
+      "title": "De Triple Alliance en het eerbetoon",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In **1428** sloot Tenochtitlán zich aan bij twee naburige steden, Texcoco en Tlacopan: de **Drievoudige Alliantie**. Al snel domineren de Mexica alleen. Hun imperium assimileert niet: het vereist een regelmatige **eerbetoon**, maïs, cacao, veren, metalen. De rijkdom van het kapitaal voedt de haat tegen onderworpen volkeren, zoals de [[Tlaxcaltecs]], felle vijanden van de Azteken."
+        },
+        {
+          "type": "image",
+          "asset": "tenochtitlan_aztec_city_illustration",
+          "ratio": "4:3",
+          "caption": "Tenochtitlán, metropool aan het meer in het hart van het Azteekse rijk."
+        },
+        {
+          "type": "paragraph",
+          "text": "Het is een oorlogsmachine die voortdurende veroveringen nodig heeft. Als de Spanjaarden arriveren, hoeven ze deze wrok alleen maar te verenigen."
+        },
+        {
+          "type": "funFact",
+          "text": "Cacaobonen werden gebruikt als betaalmiddel. In Tenochtitlán was een konijn tien bonen waard; een slaaf met een goede constitutie, ongeveer honderd."
+        }
+      ]
+    },
+    {
+      "id": "course_9_l_empire_azteque_p3",
+      "title": "Goden, Cortés en pokken",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Volgens [[kosmogonie van de vijf zonnen]], een Azteekse mythe, overleeft de zon alleen als hij gevoed wordt door menselijk bloed. Bij [[Burgemeester van Templo]], de grote piramide in het midden, zijn offers geen onnodige wreedheid: ze zijn voor de Azteken een noodzaak voor het voortbestaan ​​van de wereld."
+        },
+        {
+          "type": "paragraph",
+          "text": "In **1519** arriveerde **Hernán Cortés** met een paar honderd Spanjaarden. [[Moctezuma II]], de Azteekse keizer, aarzelt. Staal, geweren en paarden zijn eng. Maar de belangrijkste doodsoorzaak is [[Pokken]], een Europese ziekte waartegen bevolkingsgroepen geen immuniteit hebben. Cortés belegert de hoofdstad met duizenden inheemse bondgenoten."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1325",
+              "title": "Oprichting van Tenochtitlán",
+              "detail": "De Mexica vestigen zich aan het Texcocomeer."
+            },
+            {
+              "date": "1428",
+              "title": "Drievoudige Alliantie",
+              "detail": "Begin van de Azteekse imperiale expansie."
+            },
+            {
+              "date": "1519",
+              "title": "Aankomst van Cortés",
+              "detail": "De Spanjaarden arriveren in Mexico."
+            },
+            {
+              "date": "1521",
+              "title": "Val van Tenochtitlán",
+              "detail": "Einde van het rijk na 80 dagen belegering."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_9_l_empire_azteque_p4",
+      "title": "Op de ruïnes, Mexico",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In **1521**, na **80 dagen** belegering, viel Tenochtitlán. Hongerig, verstoken van water, geteisterd door ziekte. De stenen werden gebruikt bij de bouw van Mexico-Stad, hoofdstad van de [[Nieuw Spanje]], de Spaanse kolonie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Niet alles verdwijnt. [[chinampa's]] bestaan ​​nog steeds. [[Nahuatl]], de taal van de Azteken, wordt door meer dan een miljoen mensen gesproken. De adelaar en de slang blijven het embleem van Mexico. Een briljante beschaving overleeft in herinnering en landschap."
+        },
+        {
+          "type": "takeaway",
+          "text": "De Azteken bouwden aan een meer een metropool met 200.000 -inwoners. Hun eerbetoonsysteem en de [[Pokken]] zorgden ervoor dat een paar honderd Spanjaarden, geholpen door lokale bondgenoten, het rijk in twee jaar tijd konden vernietigen."
+        }
+      ]
+    }
+  ]
+}

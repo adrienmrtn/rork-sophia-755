@@ -1,0 +1,135 @@
+{
+  "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois",
+  "title": "Trojská válka a dřevěný kůň",
+  "subtitle": "Řecká mytologie",
+  "subject": "mythologie",
+  "subcategory": "Greece: the heroes",
+  "description": "Deset let obležení, bohové na obou stranách, pak dřevěný kůň. Největší epický příběh starověkého Řecka a archetyp vojenské lsti.",
+  "hero": {
+    "image": "la_guerre_de_troie_et_le_cheval_de_bois",
+    "ratio": "16:9",
+    "hook": "Zlaté jablko, unesená žena, pak deset let války: Trója nepadá pod zbraně, ale dřevěný kůň."
+  },
+  "sections": [
+    {
+      "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Trojská válka** je velký příběh starověkého Řecka, zvěčněný Homérem v Iliadě. Koalice řeckých měst obléhala [[Ilium]], což je jiný název pro Tróju, na **deset let**. Bohové se postaví na stranu. Hrdinové umírají pro čest."
+        },
+        {
+          "type": "paragraph",
+          "text": "Město neustupuje násilí. Padla lstí: **dřevěný kůň**. Tato lest se stala univerzálním symbolem, od bojiště až po dnešní počítačové viry."
+        }
+      ]
+    },
+    {
+      "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_p1",
+      "title": "Všechno začíná zlatým jablkem",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vše začíná svatbou Pelea a nymfy Thetis. **Eris**, bohyně sváru, není pozvána. Zuřivě hodí zlaté jablko s vyrytým nápisem „To the fairest“. Prohlašují ji tři bohyně: **Hera**, **Athena** a **Afrodita**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zeus se ptá na názor smrtelníka: **Paříž**, princ z Troje. Héra mu slibuje moc, Athéna vítězství v boji, Afrodita lásku té nejkrásnější ženy. Vybere si Afroditu. Nabízí mu **Hélène**, manželku **Menelause**, krále Sparty. Paris ho vezme do Tróje. Řecko se postaví, aby to získalo zpět."
+        },
+        {
+          "type": "funFact",
+          "text": "V tureckém Hisarliku našli archeologové spálené město kolem **1184 před naším letopočtem.**: možné místo historické Tróje, za mýtem."
+        }
+      ]
+    },
+    {
+      "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_p2",
+      "title": "Deset let obléhání bez vítěze",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Agamemnon**, bratr Menelaa a král Mykén, přebírá velení. Odchází obrovská flotila: Achilles, Ajax, moudrý Nestor, mazaný **Ulysses**. Řekové neboli Achájci se vylodí v [[Trasa]], oblasti Tróje, a začíná obléhání."
+        },
+        {
+          "type": "image",
+          "asset": "greek_fleet_trojan_war_thousand_ships_painting",
+          "ratio": "4:3",
+          "caption": "Řecká flotila: legenda hovoří o tisíci lodích."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hradby Tróje jsou prý nezničitelné, postavené s pomocí Poseidona a Apollóna. Deset let jsme bez rozhodnutí bojovali v rovině [[Scamander]]. Na zemi lidé umírají. Na Olympu Héra a Athéna pomáhají Řekům; Afrodita a Apollo chrání syny [[Priam]], starého krále Tróje."
+        }
+      ]
+    },
+    {
+      "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_p3",
+      "title": "Dřevěný kůň",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Síla nestačí. **Ulysses**, král Ithaky a mistr [[Metis]] (inteligentní lest), vynalezne past. Řekové vypalují svůj tábor, předstírají, že odcházejí a skrývají se poblíž ostrova [[Tenedos]]. Na pláži zanechávají obrovskou dutinu **dřevěného koně**, plnou vojáků."
+        },
+        {
+          "type": "image",
+          "asset": "trojan_horse_wooden_troy_ancient_painting",
+          "ratio": "4:3",
+          "caption": "Trojský kůň: klamná nabídka, vojáci uvnitř."
+        },
+        {
+          "type": "paragraph",
+          "text": "Řecký špión **Jinak** přesvědčí Trojany, že kůň je obětí pro Athénu. Kněz **Laocoon** křičí past: ignorujeme ho. Část valů byla zbořena, aby umožnila vjezd koně. V noci Řekové vyšli, otevřeli brány a vracející se armáda dokončila město."
+        },
+        {
+          "type": "funFact",
+          "text": "Výraz „tvář, která spustila tisíc lodí“ pro Helen pochází od básníka Christophera Marlowa. Dokonce jsme ze srandy vymysleli „helenu“, jednotku krásy rovnající se tisíci lodí."
+        }
+      ]
+    },
+    {
+      "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_p4",
+      "title": "Pád a dědictví",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Trója hoří. Priam je zabit. Z přeživších se stávají otroci. Jen princ **Aeneas** uprchl se svým otcem a svými bohy [[Lares]]; později z něj římská legenda učinila předchůdce Říma. Vítězové nejsou ušetřeni: jejich nebezpečné návraty ([[Návrat hrdinů (Nostoi)]]) jsou často tragické. Agamemnon je zavražděn. Odysseus putuje ještě deset let."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Mýtus",
+              "title": "Soud z Paříže",
+              "detail": "Zlaté jablko, Helene unesená, válka začíná."
+            },
+            {
+              "date": "10 let",
+              "title": "Obléhání Tróje",
+              "detail": "Hradby drží; bohové a hrdinové se střetnou."
+            },
+            {
+              "date": "Osudná noc",
+              "title": "dřevěný kůň",
+              "detail": "Odysseova lest otevírá nedobytné město."
+            },
+            {
+              "date": "Po",
+              "title": "Nostoi",
+              "detail": "Návraty vítězů se často mění v neštěstí."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Trojská válka, zrozená z božské hádky o zlaté jablko, skončila až po deseti letech: ne násilím, ale lstí Odyssea a dřevěného koně, který zničil město během jediné noci."
+        }
+      ]
+    }
+  ]
+}

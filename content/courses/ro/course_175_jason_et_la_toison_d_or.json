@@ -1,0 +1,116 @@
+{
+  "id": "course_175_jason_et_la_toison_d_or",
+  "title": "Jason și Lâna de Aur",
+  "subtitle": "Căutarea Argonauților",
+  "subject": "mythologie",
+  "subcategory": "Greece: the heroes",
+  "description": "Jason și argonauții merg la Colchis pentru a căuta Lâna de Aur. În spatele aventurii, o poveste de dragoste și trădare cu magicianul Medea.",
+  "hero": {
+    "image": "jason_et_la_toison_d_or",
+    "ratio": "16:9",
+    "hook": "Cincizeci de eroi, o navă magică, o lână păzită de un dragon. Și un magician fără de care nimic nu ar fi reușit."
+  },
+  "sections": [
+    {
+      "id": "course_175_jason_et_la_toison_d_or_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Jason** îi adună pe **[[Argonauții]]**, o elită a eroilor greci, pentru a aduce **Lâna de aur**: lâna unui berbec divin, suspendată în [[Colhida]], o regiune care corespunde aproximativ cu Georgia actuală."
+        },
+        {
+          "type": "paragraph",
+          "text": "Această călătorie este una dintre cele mai vechi povești de navigație din Occident. Vorbește despre legitimitatea regală, ajutorul divin... și mai ales despre pasiunea distructivă dintre Jason și **Medeea**, un magician care va face posibilă victoria, apoi teribilă."
+        }
+      ]
+    },
+    {
+      "id": "course_175_jason_et_la_toison_d_or_p1",
+      "title": "O sandală, un tron, o capcană",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Iason este fiul lui Aeson, regele lui Iolcos din Tesalia. Unchiul său [[Pelias]] a uzurpat tronul. Crescut de centaurul [[Chiron]], Jason se întoarce pentru a-și revendica moștenirea. Pe drum, el ajută o bătrână să treacă un pârâu. Este [[Hera]] deghizat. Pierde o sandală în noroi."
+        },
+        {
+          "type": "funFact",
+          "text": "În Colchis, pieile de oaie erau uneori plasate pe fundul râurilor pentru a prinde fulgii de aur. „Lâna de aur” poate avea o rădăcină minieră reală."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pelias se teme: un oracol îl prevenise despre bărbatul cu sandalul unic. El promite tronul dacă Jason aduce înapoi Lâna, păzită de un dragon. Jason a construit [[Argo]], o navă cu proa vorbitoare, folosind un lemn sacru de la [[Dodona]]. La bord: **Heracles**, **Orfeu**, **Castor și Pollux** și mulți alții."
+        },
+        {
+          "type": "image",
+          "asset": "argonauts_ship_argo_jason_greek_myth",
+          "ratio": "4:3",
+          "caption": "Argo, prima mare navă din legenda greacă."
+        }
+      ]
+    },
+    {
+      "id": "course_175_jason_et_la_toison_d_or_p2",
+      "title": "Ciocnirea stâncilor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pe drum, argonauții îl salvează pe regele Phineus de **Harpii**, monștri care îi furau mâncarea. În schimb, Phinée dezvăluie cum să traverseze **Stâncile Symplegades**, stânci care se lovesc de orice navă la intrarea în Marea Neagră."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jason eliberează un porumbel. Stâncile se închid pe pene, apoi se deschid. Argo abia trece. În Colchis, regele **Aeétès** impune sarcini imposibile: înhămarea taurilor de foc, arătura câmpului de [[Ares]], însămânțarea dinților de dragon din care se nasc războinicii. Fără ajutor, Jason ar muri."
+        }
+      ]
+    },
+    {
+      "id": "course_175_jason_et_la_toison_d_or_p3",
+      "title": "Medeea, arhitectul victoriei",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Afrodita]], zeița iubirii, o face pe **Medeea**, fiica lui Aeetes și preoteasa lui [[Hecate]], să se îndrăgostească de Jason. Ea îi dă un unguent împotriva focului taurilor. Pentru războinicii născuți din dinți, ea îl sfătuiește să arunce o piatră printre ei: se ucid între ei."
+        },
+        {
+          "type": "image",
+          "asset": "medea_jason_greek_myth_waterhouse_painting",
+          "ratio": "4:3",
+          "caption": "Medea și Jason: magia în slujba căutării."
+        },
+        {
+          "type": "paragraph",
+          "text": "În cele din urmă, adoarme dragonul. Jason dă jos Lâna. Pentru a fugi, Medea își ucide fratele **Absyrtos** și îi împrăștie rămășițele pe mare. Aeetes se oprește pentru a colecta corpul. Cuplul este unit... și deja blestemat."
+        }
+      ]
+    },
+    {
+      "id": "course_175_jason_et_la_toison_d_or_p4",
+      "title": "Trădare și cădere",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La Iolcos, Pelias refuză să cedeze. Medea își înșală fiicele: își „întineresc” tatăl tăindu-l. Cuplul, alungat, s-a refugiat la Corint. Ani mai târziu, Jason vrea să se căsătorească cu fiica regelui Creon. Medea se răzbună: rochie otrăvită pentru rival, apoi uciderea propriilor copii."
+        },
+        {
+          "type": "image",
+          "asset": "medea_vengeance_delacroix_painting",
+          "ratio": "4:3",
+          "caption": "Răzbunarea Medeei, după trădarea lui Jason."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jason îmbătrânește singur. Moare lamentabil, zdrobit de o bucată putredă de Argo sub care se odihnea. Eroul care câștigase totul cu ajutorul altora ajunge distrus pentru că l-a negat pe cel care l-a salvat."
+        },
+        {
+          "type": "takeaway",
+          "text": "Jason cucerește Fleece datorită Medeei și [[Argo]]. Trădarea lui rupe pactul lor și duce la ruină: mitul arată că un erou care își neagă aliații ajunge să piardă totul."
+        }
+      ]
+    }
+  ]
+}

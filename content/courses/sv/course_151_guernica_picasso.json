@@ -1,0 +1,130 @@
+{
+  "id": "course_151_guernica_picasso",
+  "title": "Guernica, Picasso",
+  "subtitle": "1937",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture + iconic works",
+  "description": "Efter bombningen av Guernica målade Picasso ett svartvitt rop mot kriget. Arbetet reser och återvänder sedan till Spanien efter Franco.",
+  "hero": {
+    "image": "guernica_picasso",
+    "ratio": "16:9",
+    "hook": "En bränd baskisk by, en duk som vägrar att glömma."
+  },
+  "sections": [
+    {
+      "id": "course_151_guernica_picasso_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den **26 april 1937**, bombades den baskiska staden Guernica under [[Spanska inbördeskriget]]. Picasso, i Paris, svarade med en enorm duk, i svart och vitt."
+        },
+        {
+          "type": "paragraph",
+          "text": "*Guernica* blev en av 1900-talets mäktigaste antikrigsbilder."
+        }
+      ]
+    },
+    {
+      "id": "course_151_guernica_picasso_p1",
+      "title": "Spanska kriget",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sedan **1936** har Spanien slitits mellan [[Andra spanska republiken]] och Francos nationalister, med stöd av den tyska [[Condor Legion]]. Guernicas [[mättnadsbombning]] syftar till att terrorisera."
+        },
+        {
+          "type": "paragraph",
+          "text": "Picasso arbetar snabbt, på stora studier. Han överger färg för att hålla fast vid vittnesbördets brådska. Det monumentala formatet förbjuder bekväm kontemplation."
+        },
+        {
+          "type": "image",
+          "asset": "guernica_bombing_aftermath_1937",
+          "ratio": "4:3",
+          "caption": "Guernica i ruiner: nyheten blir en symbol."
+        }
+      ]
+    },
+    {
+      "id": "course_151_guernica_picasso_p2",
+      "title": "En skrikmålning",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Picasso komponerar ett kaos av kroppar, häst, tjur, glödlampa. Ingen färg: som en tidningsframsida. Monumentaliteten tvingar betraktaren att konfrontera."
+        },
+        {
+          "type": "paragraph",
+          "text": "Häst utan tarm, mamma med barn, höjda armar: varje motiv är läsbart utan bildtext. Detta är en grammatik för civil terror, inte en heroisk kamp."
+        },
+        {
+          "type": "funFact",
+          "text": "Han vägrade låta tavlan gå till Spanien så länge Franco var kvar vid makten."
+        }
+      ]
+    },
+    {
+      "id": "course_151_guernica_picasso_p3",
+      "title": "Exil vid MoMA",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Efter världsutställningen i Paris reste *Guernica* och stannade sedan länge på [[MoMA]] i New York, skyddad under Francos [[Kalla kriget]]. Han återvände till Madrid i **1981**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Under diktaturen blev målningen en politisk exil. Hans återkomst till Spanien efter Franco är lika mycket en nationell som en estetisk händelse."
+        },
+        {
+          "type": "image",
+          "asset": "guernica_picasso_painting_detail",
+          "ratio": "4:3",
+          "caption": "Svart, vitt, grått: krig utan hjältemod."
+        }
+      ]
+    },
+    {
+      "id": "course_151_guernica_picasso_p4",
+      "title": "Arv",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Reproducerat framför [[FN]] som en varning, förblir verket ett universellt språk mot massakern på civila."
+        },
+        {
+          "type": "paragraph",
+          "text": "För att helt förstå Guernica, Picasso, måste du ha en sak i åtanke: varje teknisk detalj tjänar en känsla eller en idé. Verket är aldrig bara dekorativt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kontexten spelar lika stor roll som stilen. Datum, platser, sponsorer, offentliga: allt detta förklarar varför ett formulär visas vid ett visst tillfälle, och inte tidigare."
+        },
+        {
+          "type": "paragraph",
+          "text": "Slutligen mäts arv på lång sikt. Det vi idag ser på museer, filmer eller populärmusik bär fortfarande spåren av dessa uppfinningar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Varje nytt krig ger sorgliga nyheter till *Guernica*. Verket fungerar som en varning om att vi aldrig kan lyssna tillräckligt."
+        },
+        {
+          "type": "paragraph",
+          "text": "För att helt förstå Guernica, Picasso, måste du ha en sak i åtanke: varje teknisk detalj tjänar en känsla eller en idé. Verket är aldrig bara dekorativt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kontexten spelar lika stor roll som stilen. Datum, platser, sponsorer, offentliga: allt detta förklarar varför ett formulär visas vid ett visst tillfälle, och inte tidigare."
+        },
+        {
+          "type": "takeaway",
+          "text": "Med Guernica förvandlade Picasso en bombning från 1937 till ett globalt visuellt minne av totalt krig."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "id": "course_170_meduse_et_persee",
+  "title": "Medúza a Perseus",
+  "subtitle": "Pohled, který ztuhne",
+  "subject": "mythologie",
+  "subcategory": "Greece: the gods",
+  "description": "Medúza zkamení pohledem. Perseus ji porazí pomocí zrcadlového štítu a poté zachrání Andromedu. Hlava Gorgony se stává ochranným symbolem.",
+  "hero": {
+    "image": "meduse_et_persee",
+    "ratio": "16:9",
+    "hook": "Pohled, který změní život v kámen. Hrdina, který se odváží pouze podívat na odraz."
+  },
+  "sections": [
+    {
+      "id": "course_170_meduse_et_persee_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mýtus o **Perseus** a **Medúza** je jedním z velkých řeckých dobrodružství. Není to jen boj proti monstru. Je to také příběh o kráse proměněné v horor a o hrdinovi, který zvítězí díky mazanosti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Medusa, [[Gorgon]], zkamení každého, kdo se setká s jejím pohledem. Perseus, aby přežil, souhlasí s tím, že uvidí nebezpečí pouze přes zrcadlo."
+        }
+      ]
+    },
+    {
+      "id": "course_170_meduse_et_persee_p1",
+      "title": "Od kněžky po monstrum",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "According to Ovid's [[Metamorfózy]], Medusa is not, first of all, a monster. Je to mladá žena se světlými vlasy, kněžka v chrámu **Athena**, bohyně moudrosti. Její krása přitahuje **Poseidon**, boha moří, který ji znásilní ve svatyni."
+        },
+        {
+          "type": "paragraph",
+          "text": "Podle starověké tragické logiky Athéna potrestá oběť. Medusiny vlasy se stávají hady. Jeho pohled **petrizuje**. Vyhnána na konec světa se svými sestrami Stheno a Euryale žije v jeskyni obklopená sochami: nešťastnými lidmi, kteří ji viděli."
+        },
+        {
+          "type": "image",
+          "asset": "medusa_gorgon_snakes_hair_caravaggio_painting",
+          "ratio": "4:3",
+          "caption": "Medúza, Gorgon se smrtícím pohledem."
+        },
+        {
+          "type": "funFact",
+          "text": "Krev z levého boku Medúzy byla smrtelným jedem. Ten na pravé straně mohl vzkřísit mrtvé: tajemství, které Athéna později svěřila **Asklépius**, bohu medicíny."
+        }
+      ]
+    },
+    {
+      "id": "course_170_meduse_et_persee_p2",
+      "title": "Perseus se ozbrojil proti nemožnému",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Král **Polydectès** chce odvést Persea, aby svedl jeho matku **Danaé**. Uloží jí sebevražednou výzvu: přiveď zpět hlavu Medúzy. Perseus je synem **Zeuse**. Bohové mu pomáhají."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Hermès** mu dává okřídlené sandály a [[harfa]], ultra ostrý zakřivený meč. **Hades** mu půjčuje neviditelnou helmu [[Kynee]]. Athéna nabízí rozhodující radu: svůj leštěný bronzový štít, použít jako **zrcadlo**."
+        },
+        {
+          "type": "image",
+          "asset": "perseus_mirror_shield_medusa_painting",
+          "ratio": "4:3",
+          "caption": "Perseus přistupuje k Medúze a dívá se pouze na svůj odraz."
+        },
+        {
+          "type": "paragraph",
+          "text": "Perseus překvapí spící Medúzu. Veden odrazem mu usekne hlavu. Z výstřihu pružina [[Pegas, narozený z krve Medúzy]] a obří [[Chrysaor]]. Medusa byla stále těhotná s Poseidonem."
+        }
+      ]
+    },
+    {
+      "id": "course_170_meduse_et_persee_p3",
+      "title": "Andromeda a návrat",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hlava si zachovává svou sílu. Perseus to vloží do [[Kibisis]], kouzelného sáčku. Při letu nad Etiopií vidí princeznu **Andromeda** připoutanou ke skále. Nabízí se **Ketos**, mořské příšeře, kterou poslal Poseidon, aby potrestala pýchu jeho matky Cassiopeie."
+        },
+        {
+          "type": "image",
+          "asset": "perseus_rescue_andromeda_sea_monster_painting",
+          "ratio": "4:3",
+          "caption": "Perseus osvobodí Andromedu pomocí Medusiny hlavy."
+        },
+        {
+          "type": "funFact",
+          "text": "Některé legendy říkají, že Perseus vytvořil červený korál tím, že položil hlavu Medúzy na mořské řasy: krev by rostliny ztvrdla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Perseus nestvůru zkamení, ožení se s Andromedou a poté se vrátí na Seriphos. Tváří v tvář Polydectesovi a jeho soudu vystrčí hlavu. Jeho nepřátelé se stávají sochami. Tyranie se zastaví."
+        }
+      ]
+    },
+    {
+      "id": "course_170_meduse_et_persee_p4",
+      "title": "Gorgoneion, ochranná tvář",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Perseus předává hlavu Athéně. Upevnila si to na svůj **egid**, svůj božský štít. Medúza se z netvora, který byl zabit, stala ochrannou silou. Tato podobizna, [[Gorgoneion]], zdobí řecké chrámy, mince a štíty."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jeho funkce je [[Apotropaický]]: odvrátit zlo skrze samotnou hrůzu tváře. Medúza se v průběhu staletí stala také tragickou postavou, poté moderní ikonou: trauma, síla, fascinace. Dokonce i dům Versace si vybral svou hlavu, aby „zkameněla“ vzhled."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Perseus** poráží **Medúza** díky odrazu štítu. Hlava předaná **Athena** se stává **Gorgoneion**, ochranným symbolem starověkého Řecka."
+        }
+      ]
+    }
+  ]
+}

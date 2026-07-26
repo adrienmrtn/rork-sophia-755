@@ -1,0 +1,104 @@
+{
+  "id": "course_76_pourquoi_les_feuilles_changent_elles_de",
+  "title": "Miért változtatják meg a levelek színét?",
+  "subtitle": "Ősz és pigmentek",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Az ősz nem találja fel a színeket: eltávolítja a zöldet, amely elfedte őket. A műsor mögött egy túlélési stratégia a tél átvészeléséhez.",
+  "hero": {
+    "image": "pourquoi_les_feuilles_changent_de_couleur",
+    "ratio": "16:9",
+    "hook": "Az őszi levelek nem sminkelnek: leveszik a zöldet."
+  },
+  "sections": [
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Minden ősszel az erdők zöldről aranyra, rézre vagy lilára változnak. Ez nem esztétikai szeszély. Ez egy stratégia: a fa visszaszerzi, amit tud, mielőtt lehullatja a leveleit télre."
+        },
+        {
+          "type": "paragraph",
+          "text": "A meleg színek nem a semmiből jelennek meg. Gyakran már ott voltak, elrejtve a zöld alatt. Az ősz megértése egy nagy biokémiai tisztítás megértését jelenti."
+        }
+      ]
+    },
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p1",
+      "title": "A zöld, ami mindent elrejt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tavasztól nyár végéig a levelek tele vannak **klorofilal**-vel, a fotoszintézist elősegítő pigmenttel. Fény alatt lebomlik, de a fa folyamatosan pótolja. Amíg dominál, a levél zöld marad."
+        },
+        {
+          "type": "image",
+          "asset": "leaf_color_change_autumn_chlorophyll",
+          "ratio": "auto",
+          "caption": "Ősszel a klorofill eltűnik, és felfedi a levelek színét."
+        },
+        {
+          "type": "paragraph",
+          "text": "A levél azonban tartalmaz **karotinidokat**, sárga és narancssárga pigmenteket is (mint a sárgarépában). Nyáron ott vannak, de láthatatlanok a zöld alatt. Ősszel leáll a klorofill termelés. A zöld elhalványul, a sárga és a narancssárga feltárul."
+        },
+        {
+          "type": "funFact",
+          "text": "A „klorofill” a görög *klóros* (zöld) és *phyllon* (levél) szavakból származik. A „karotinoid” megosztja a… a sárgarépa gyökerét, ahol ezt a pigmentet először azonosították."
+        }
+      ]
+    },
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p2",
+      "title": "Az igazi kiváltó ok: a hosszabbodó éjszakák",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nem a hideg indítja be az őszt, hanem az éjszakák hossza. A fák fényérzékelőkkel mérik, [[fitokrómok]]. Amikor az éjszakák hosszabbak, minden levélhez hormonális jel érkezik."
+        },
+        {
+          "type": "paragraph",
+          "text": "A levélnyél tövében [[elválasztó zóna]] képződik, egyfajta sapka. A nedv kevésbé emelkedik, a cukrok rosszul ereszkednek le. Izoláltan a levél gyorsabban lebontja a klorofilt. A stabilabb sárgák néhány hétig megmaradnak, majd a levél lehull."
+        }
+      ]
+    },
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p3",
+      "title": "Honnan származnak az élénk vörösek?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A sárga már ott volt. A piros és a lila gyakran **készült** a szezon végén. Ezek a [[Antocianinok]], amelyek akkor keletkeznek, amikor a cukrok a levélben maradnak."
+        },
+        {
+          "type": "paragraph",
+          "text": "Miért fektessen be energiát közvetlenül a papír kidobása előtt? Valószínűleg a **** védelme érdekében az újrahasznosítás során. A fa visszanyeri **azinét** és más értékes tápanyagokat. Klorofil nélkül a nap károsíthatja a még aktív szöveteket. Az antocianinok napszűrőként működnek a gyökerek felé történő nagy mozgás során."
+        }
+      ]
+    },
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p4",
+      "title": "Miért éget egyes ősz jobban",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A legszebb vörösek gyakran napsütéses napokon és hűvös, fagymentes éjszakákon születnek. Sok cukor, átalakulás antocianinná. A szürke és esős ősz tompább árnyalatokat ad. A korai fagy megöli a leveleket a bemutató előtt."
+        },
+        {
+          "type": "paragraph",
+          "text": "A végén már csak a [[tanninok]], barna anyagok maradnak az erdő talajából. Egyes tanulmányok azt is gondolják, hogy az élénk színek figyelmeztetik [[levéltetvek]]: fa alakú, erős védelem, jobb máshová menni."
+        },
+        {
+          "type": "takeaway",
+          "text": "Az ősz felfedi a már jelenlévő sárgákat, amikor a klorofill eltűnik, és néha vörössé válik, hogy megvédje a tápanyagok újrahasznosítását a lombhullás előtt."
+        }
+      ]
+    }
+  ]
+}

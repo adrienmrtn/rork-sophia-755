@@ -1,0 +1,106 @@
+{
+  "id": "course_146_hitchcock_et_le_suspense",
+  "title": "Hitchcock a napětí",
+  "subtitle": "1899-1980",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "**Alfred Hitchcock** vynalézá moderní napětí: dává publiku informace, které postavy nemají. Pomocí *Psychologie*, *Závrať* nebo *Zadní okno* manipuluje s naším pohledem.",
+  "hero": {
+    "image": "hitchcock_et_le_suspense",
+    "ratio": "16:9",
+    "hook": "Skutečné napětí nepřekvapí: umožní vám vidět bombu pod stolem."
+  },
+  "sections": [
+    {
+      "id": "course_146_hitchcock_et_le_suspense_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Alfred Hitchcock** (1899-1980) je přezdíván „mistr napětí“. Ve více než padesáti filmech proměnil thriller v umění manipulace. *Psychologie*, *Závrať*, *Zadní okno*: kamera pokaždé nevypráví jen příběh. Hraje si s našimi nervy."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jeho oblíbeným tématem není zločin. Je to pohled: vina, posedlost, voyeurismus. Hitchcock filmuje diváka stejně jako postavy."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p1",
+      "title": "Překvapení versus napětí",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V **1966** Hitchcock vysvětluje svou metodu [[François Truffaut]], francouzskému kritikovi a poté filmaři. Říká, že **překvapení** je bomba, která exploduje bez varování: krátký šok. **napětí** ukazuje publiku bombu, zatímco postavy ji ignorují. Napětí trvá. Stáváme se spoluviníky a bezmocnými."
+        },
+        {
+          "type": "image",
+          "asset": "alfred_hitchcock_portrait_director",
+          "ratio": "4:3",
+          "caption": "Hitchcock: tvář, silueta, globální značka vzrušení."
+        },
+        {
+          "type": "funFact",
+          "text": "K pokroku v zápletce často používá [[MacGuffin]]: předmět nebo tajemství, které motivuje postavy, ale na jehož přesné povaze nezáleží. Důležitý je lov."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tato informační asymetrie je její gramatika. Jakmile víme víc než hrdina, bojíme se o něj."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p2",
+      "title": "Technické vynálezy pro natáčení úzkosti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V **1948**, s *Provaz*, Hitchcock simuluje jedinečný [[sekvenční záběr]]: film se zdá být natočen na jeden zátah. Kotouče trvají jen deset minut, takže řezy schovává za záda nebo tmavý kus nábytku. Efekt je dusivý: zůstaneme zavření s vrahy."
+        },
+        {
+          "type": "image",
+          "asset": "hitchcock_vertigo_james_stewart_kim_novak_film",
+          "ratio": "4:3",
+          "caption": "Vertigo: závratě natočené jako zkreslení prostoru."
+        },
+        {
+          "type": "paragraph",
+          "text": "V **1958**, pro *Závrať*, vynalezl [[Dolly Zoom]]: kamera se pohybuje zpět, zatímco zoom postupuje (nebo naopak). Prostor je zkreslený. Už nevidíme závratě. Cítíme to."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p3",
+      "title": "Všichni jsme voyeři",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V *Zadní okno* (**1954**) fotograf se zlomenou nohou špehuje své sousedy. Je to divácký dvojník ve tmě. Hitchcock používá [[Subjektivní kamera]]: vidíme přesně to, co vidí hrdina, nic víc."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tato identifikace je morální i vizuální. Hledáme stopy, ale sdílíme i vinu, že se díváme na to, co se nás netýká. Hitchcock míchá thriller a [[psychoanalýza]]: pohřbené strachy, zakázané touhy, dvojí identity."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p4",
+      "title": "Značka, hudba, dědictví",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hitchcock přeměnil své jméno na značku, dokud jeho televizní seriál *Alfred Hitchcock nový*. Pro *Psychologie* zakazuje vstup po začátku sezení: tajemství se stává událostí. Jeho spolupráce se skladatelem [[Bernard Herrmann]] propojuje hudbu a [[shromáždění]] ke zrychlení tepu publika."
+        },
+        {
+          "type": "takeaway",
+          "text": "Hitchcock kodifikoval moderní napětí: informovat diváka, nasměrovat jeho pohled a proměnit strach v kontrolovanou rozkoš. O desítky let později mu thriller stále vděčí za gramatiku."
+        }
+      ]
+    }
+  ]
+}

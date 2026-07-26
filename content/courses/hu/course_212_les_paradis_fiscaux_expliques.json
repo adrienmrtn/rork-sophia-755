@@ -1,0 +1,108 @@
+{
+  "id": "course_212_les_paradis_fiscaux_expliques",
+  "title": "Adóparadicsomok magyarázták",
+  "subtitle": "10 000 milliárd elrejtve",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "A globális vagyon körülbelül 10%-a elkerüli az adót az átláthatatlan területeken. Hogyan működik ez a rendszer, és miért olyan rugalmas?",
+  "hero": {
+    "image": "les_paradis_fiscaux_expliques",
+    "ratio": "16:9",
+    "hook": "A Kajmán-szigeteken 65 000 lakos és több mint 100 000 vállalkozás működik. Üdvözöljük az adóparadicsomok világában."
+  },
+  "sections": [
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bizonyos, gyakran apró területek lehetővé teszik a vállalatok és a nagy vagyonok számára, hogy szinte teljesen megmeneküljenek származási országuk adója alól. Ezeket **adóparadicsomoknak**-nek hívjuk. Becslések szerint körülbelül 10 billió dollár, vagyis a világ vagyonának 8-10%-a található ott."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ez nem csak a könyvelők problémája: évente 600 milliárd dollártól fosztja meg az államokat, amiből kórházakat vagy iskolákat lehetett volna finanszírozni. Íme, hogyan működik ez a diszkrét rendszer, és miért ellenáll olyan jól a szabályozási kísérleteknek."
+        }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p1",
+      "title": "Hogyan van elrejtve a pénz",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az adóparadicsom három pilléren nyugszik: a nullához közeli adókon, nagy átláthatatlanságon és kevés együttműködésen más országokkal. Ezek a területek tehát a világ minden tájáról vonzzák a tőkét, amit [[Offshore]] gazdaságnak nevezünk."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sok ilyen területen lehetőség van egy héjcég létrehozására: egy iroda vagy alkalmazottak nélküli vállalkozás, amely csak papíron létezik. Ennek egyetlen célja gyakran az, hogy elrejtse a pénz valódi tulajdonosának, az úgynevezett haszonélvezőnek kilétét."
+        },
+        {
+          "type": "image",
+          "asset": "cayman_islands_offshore_banking_paradise",
+          "ratio": "4:3",
+          "caption": "A Kajmán-szigetek, kis méretük ellenére a világ egyik legnagyobb pénzügyi központja."
+        },
+        {
+          "type": "funFact",
+          "text": "A Kajmán-szigeteknek mindössze 65 ezer lakosa van, de több mint 100 ezer céget tartanak nyilván: a világ ötödik bankbetéti pénzügyi központja, Párizsnál kisebb területen."
+        }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p2",
+      "title": "A profitszerzés művészete eltűnik",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A nagyvállalatoknál a cél nem feltétlenül illegális: **adóoptimalizálásról** beszélünk, vagyis az egyes országok szabályainak ügyes felhasználásáról, hogy kevesebb adót fizessenek. A fő eszköz a [[Transzferár]]: a vállalat maga határozza meg a saját leányvállalatai közötti cserék árát, hogy ott mutassa nyereségét, ahol a legalacsonyabb az adó."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gyakori módszer a márka vagy szabadalom átruházása egy adóparadicsomban található leányvállalatra. A többi leányvállalatnak, például Franciaországban, óriási összegeket kell fizetnie a márka használati jogáért. Ezek a kifizetések csökkentik az adóköteles nyereségüket helyben, miközben növelik az adóparadicsomban."
+        },
+        {
+          "type": "funFact",
+          "text": "A francia „tax haven” szó fordítási hibából származik: az angol azt mondja, hogy „tax haven”, a safe harbor for money (menedék), nem a paradicsom (mennyország). A hangok összetévesztése megváltoztatta a szó jelentését."
+        }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p3",
+      "title": "A világ reagál (kicsit)",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A 2008-as pénzügyi válság, majd a [[Panama papírok]] 2016-os megjelenése felháborodási hullámot váltott ki. Az OECD és a G20 nyomására a bankoknak mostantól automatikusan továbbítaniuk kell a külföldi ügyfeleikre vonatkozó információkat az adóhatóságoknak."
+        },
+        {
+          "type": "paragraph",
+          "text": "A legjelentősebb előrelépés 2021-ben történt, egy nemzetközi megállapodás 15%-os minimális adókulcsot ír elő a multinacionális vállalatok számára. Az ötlet: megakadályozni az országokat abban, hogy versenyezzenek egymással azáltal, hogy végtelenül csökkentik az adóikat, hogy vonzzák a vállalkozásokat. Ha egy cég csak 5%-ot fizet egy adóparadicsomban, akkor a hazája immár igényelheti a fennmaradó 10%-ot."
+        }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p4",
+      "title": "Az adó igazságszolgáltatása még mindig törékeny",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Amikor a legnagyobb vagyonok elkerülik az adót, a középosztály és a helyi kisvállalkozások viselik az adóteher nagyobb részét. Ez forráshiány miatt gyengíti az olyan közszolgáltatásokat is, mint az egészségügy vagy az oktatás."
+        },
+        {
+          "type": "paragraph",
+          "text": "A csata most a digitális felé halad: az online platformoknak már nincs szükségük irodákra, hogy pénzt keressenek egy országban, ami az adóhatárokat egyre porózusabbá teszi. Az adminisztrációk most big data segítségével észlelik az anomáliákat, és nyilvános nyilvántartásokat követelnek, amelyek felfedik a cégek valódi tulajdonosainak kilétét."
+        },
+        {
+          "type": "takeaway",
+          "text": "Az adóparadicsomok a világ vagyonának körülbelül 10%-át biztosítják a banktitok és a szinte nulla adózás miatt. 2021 óta a 15%-os globális minimális adókulcs megpróbálja korlátozni ezt a kijátszást, de a csata még mindig messze van a nyeréstől."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "course_48_comment_fonctionne_la_memoire",
+  "title": "Hur fungerar minnet?",
+  "subtitle": "Hjärna",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Minnet är inte en kamera. Varje minne rekonstrueras. Det är så hjärnan kodar, lagrar... och ibland uppfinner.",
+  "hero": {
+    "image": "comment_fonctionne_la_memoire",
+    "ratio": "16:9",
+    "hook": "Att komma ihåg är inte att läsa om en fil. Det är att rekonstruera en scen."
+  },
+  "sections": [
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vi föreställer oss ofta minnet som en hårddisk: vi spelar in, vi lagrar, vi läser om. Hjärnan fungerar inte så. Varje gång du kommer ihåg, **återuppbygga** en scen från fragment."
+        },
+        {
+          "type": "paragraph",
+          "text": "Det är kraftfullt ... och fallbart. Att förstå detta innebär att förstå varför vi glömmer, varför vi gör misstag och varför vi lär oss."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p1",
+      "title": "Flera minnen, inte bara ett",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "human_brain_anatomy",
+          "ratio": "4:3",
+          "caption": "Olika områden i hjärnan hanterar olika former av minne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Först är det [[Arbetsminne]]: vad du har \"i åtanke\" i några sekunder, som ett telefonnummer. Den är begränsad, runt **7 element** i genomsnitt. Sedan, **långtidsminne**: fakta, minnen av händelser, färdigheter som att cykla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dessa system lever inte alla på samma plats i hjärnan. **prefrontal cortex**, den främre delen av hjärnan bakom pannan, hjälper mycket med arbetsminnet. Andra regioner, såsom **neocortex**, det yttre lagret av hjärnan, lagrar långsiktigt."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p2",
+      "title": "Hur ett minne fixeras",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "hippocampus_brain_anatomy_scan",
+          "ratio": "4:3",
+          "caption": "Hippocampus, en djup struktur, hjälper till att skapa nya minnen."
+        },
+        {
+          "type": "paragraph",
+          "text": "För att information ska gå från ömtålig till hållbar måste hjärnan stärka kopplingarna mellan **neuroner**, nervcellerna. Vi pratar om **konsolidering**, omvandlingen av ett färskt minne till ett bestående spår. En liten struktur som kallas **sjöhäst**, formad som en sjöhäst i tinningloben, spelar en nyckelroll i minnen av händelser."
+        },
+        {
+          "type": "funFact",
+          "text": "Sömn, särskilt vissa faser, hjälper till att befästa det vi lärt oss under dagen. Att revidera och sedan sova fungerar ofta bättre än att revidera till 03.00."
+        },
+        {
+          "type": "paragraph",
+          "text": "En berömd regel, kopplad till **-forskaren Donald Hebb**: neuroner som eldar tillsammans tenderar att ansluta starkare. Sammanfattningsvis: \"det som ljus samman binder samman\". Detta är principen för **neuroplasticitet**, hjärnans förmåga att modifiera sina kopplingar."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p3",
+      "title": "Att komma ihåg är att modifiera",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "När du återkallar ett minne blir det tillfälligt **formbar**, redigerbart. Detaljer från nuet kan slinka in. Sedan lagrar hjärnan det igen. Det är därför två vittnen till samma olycka kan berätta olika versioner."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vi kan till och med skapa **falska minnen**: scener som vi tror är sanna, men som aldrig ägde rum, eller inte så. Hjärnan fyller i luckorna med vad den redan vet."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p4",
+      "title": "Att glömma är inte alltid ett misslyckande",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Om du kom ihåg alla onödiga detaljer skulle du bli mättad. Att glömma hjälper oss att generalisera, att besluta, att behålla det väsentliga. Ett bra minne sorterar lika mycket som det behåller."
+        },
+        {
+          "type": "takeaway",
+          "text": "Minnet är en aktiv rekonstruktion, inte en perfekt inspelning. Den förlitar sig på flera system, konsolideras speciellt under sömnen och kan bli förvrängd med varje påminnelse."
+        }
+      ]
+    }
+  ]
+}

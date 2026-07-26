@@ -1,0 +1,114 @@
+{
+  "id": "course_42_pourquoi_reve_t_on",
+  "title": "Proč sníme?",
+  "subtitle": "Mozek a spánek",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Každou noc sníte asi dvě hodiny. Většina snů se rozplyne, když se probudíte. Zde je to, co věda dnes o této záhadě chápe.",
+  "hero": {
+    "image": "pourquoi_reve_t_on",
+    "ratio": "16:9",
+    "hook": "Sníte o šesti letech svého života. A zapomeneš skoro na všechno."
+  },
+  "sections": [
+    {
+      "id": "course_42_pourquoi_reve_t_on_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Každou noc strávíte asi **dvě hodiny** sněním. Za celý život to je téměř **šest let**. Když se však probudíte, většina těchto příběhů během několika sekund zmizí."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ne všichni vědci se shodnou na „proč“. Ale vědí stále lépe **když** sníme a co mozek během této doby dělá: reorganizuje vzpomínky, testuje scénáře a tráví emoce."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p1",
+      "title": "Spánek není „vypnutý“",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Spánek není úplné vypnutí. Postupuje o **cykly** přibližně **90 minut**, několikrát za noc. V každém cyklu mozek prochází různými fázemi: lehkým spánkem, hlubokým spánkem užitečným pro zotavení těla, pak velmi konkrétní fází."
+        },
+        {
+          "type": "image",
+          "asset": "sleeping_person_rem_dream",
+          "ratio": "4:3",
+          "caption": "Během REM spánku se oči pohybují pod víčky."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tato fáze se nazývá [[REM spánek]]. Mozek je téměř stejně aktivní jako bdělý, ale tělo je paralyzováno [[Svalová atonie]]. Zde se rodí především dlouhé, narativní sny. Tato paralýza nám brání fyzicky „hrát“ to, co sníme."
+        },
+        {
+          "type": "funFact",
+          "text": "Sníme **4 až 6krát** za noc. Zapomeneme na **95%** do deseti minut po probuzení. Pokud si pamatujete sen, je to často proto, že jste se probudili přímo během něj nebo těsně po něm."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p2",
+      "title": "Jaký má smysl snění?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Freud** si myslel, že sny odhalují hlavně skryté touhy. Dnes vědci preferují konkrétnější vysvětlení, založená na zobrazování mozku, technikách vizualizujících mozkovou aktivitu. Snění aktivuje zejména **limbický systém**, soubor hlubokých struktur spojených s emocemi."
+        },
+        {
+          "type": "image",
+          "asset": "brain_activity_dreaming_scan",
+          "ratio": "4:3",
+          "caption": "Během snů mozek pracuje: emoce, obrazy, vzpomínky."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dominují tři hlavní tratě. Za prvé: **Roztřiďte paměť**, ponechte si užitečné, zbytek pusťte. Za druhé: **výcvik na nebezpečí** ve světě bez skutečného rizika. Za třetí: **trápení emocí**: mozek během snů znovu navštěvuje silné okamžiky s menším množstvím **noradrenalinu**, neurotransmiteru spojeného se stresem a bděním."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p3",
+      "title": "Proč zapomínáme na své sny",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "K trvalému uložení paměti potřebuje mozek určité chemikálie. Během paradoxního spánku však hladina norepinefrinu klesá. Výsledek: sen zůstává ve velmi křehké paměti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jakmile otevřete oči, světlo, zvuky a myšlenky dne rozdrtí tuto křehkou vzpomínku. Nejlepší způsob, jak to udržet? Zapište si sen **hned**, než se vůbec pohnete."
+        },
+        {
+          "type": "funFact",
+          "text": "Před barevnou televizí málokdo říkal, že sní barevně. Dnes většina ano. Naše vizuální prostředí dokonce ovlivňuje strukturu našich snů."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p4",
+      "title": "A co lucidní snění?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Někdy si uvědomujeme **, že jsme**, zatímco zůstáváme ve spánku: to je **lucidní snění**. Oblast mozku spojená s logikou a sebereflexí, **prefrontální kůra**, se poté trochu rozsvítí."
+        },
+        {
+          "type": "paragraph",
+          "text": "Někteří pak mohou ovlivnit prostředí nebo proměnit noční můru. Vědci tento fenomén dokonce studují, aby pomohli sportovcům mentálně opakovat gesta nebo aby léčili opakující se noční můry."
+        },
+        {
+          "type": "takeaway",
+          "text": "Sníme zejména během [[REM spánek]], ve fázi, kdy je mozek aktivní a tělo ochrnuté. Snění pravděpodobně pomáhá zvládat paměť a emoce, i když po probuzení zapomeneme téměř vše."
+        }
+      ]
+    }
+  ]
+}

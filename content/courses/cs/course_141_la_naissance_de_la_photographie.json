@@ -1,0 +1,131 @@
+{
+  "id": "course_141_la_naissance_de_la_photographie",
+  "title": "Zrození fotografie",
+  "subtitle": "1839",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "V **1839** několik vynálezců konečně našlo, jak připojit obrázek k desce. Za méně než sto let změnila fotografie způsob, jakým vidíme, pamatujeme a věříme.",
+  "hero": {
+    "image": "la_naissance_de_la_photographie",
+    "ratio": "16:9",
+    "hook": "Jak chemický vynález ukradl malířství monopol na realitu."
+  },
+  "sections": [
+    {
+      "id": "course_141_la_naissance_de_la_photographie_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Po staletí umělci používali [[temná komora]]: temnou skříňku, která promítá vnější svět na zeď. Problém zůstává stejný: obraz zmizí, jakmile zhasnete světlo. V **1839** se oficiálně zrodila fotografie. Není to dílo jediného génia, ale závod mezi francouzskými a britskými vynálezci."
+        },
+        {
+          "type": "paragraph",
+          "text": "Za necelé století tento proces osvobodil malbu od role dokumentu a stal se prvním masmédiem. Mění náš vztah k času, paměti a vizuální pravdě."
+        }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p1",
+      "title": "Od Niépce k daguerrotypii",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Všechno to začíná **Nicéphorem Niépce**, francouzským vynálezcem. Kolem **1826-1827** opraví první trvalý obrázek: *Zobrazení z okna Gras*. Cínový plech potahuje [[Bitumen z Judeje]], dehtem, který tvrdne na světle. Expozice trvá přibližně **8 hodin**: Slunce má čas osvětlit obě strany budov."
+        },
+        {
+          "type": "image",
+          "asset": "niepce_first_photograph_view_from_window_gras",
+          "ratio": "4:3",
+          "caption": "Nejstarší známá fotografie, kterou pořídil Niépce ze svého okna."
+        },
+        {
+          "type": "funFact",
+          "text": "Na tomto snímku jsou zároveň vidět stíny dvou fasád: natáčení trvalo tak dlouho, že slunce kroužilo po obloze."
+        },
+        {
+          "type": "paragraph",
+          "text": "Po Niépceho smrti objevil jeho společník **Louis Daguerre** vliv par jódu a rtuti na stříbro. Vyvinul **daguerrotyp**, předložený Akademii věd v **1839**. V Anglii **William Fox Talbot** současně vyvinul [[Kalotyp Williama Foxe Talbota]], který umožňuje vytvořit několik kopií z negativu."
+        }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p2",
+      "title": "Portrét pro všechny, důkaz pro všechny",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Od let **1840** opouštěla ​​fotografie laboratoře. Do té doby bylo mít svůj portrét luxus vyhrazený pro ty, kteří si mohli zaplatit malíře. S ateliéry a [[vizitka]], malým, levným formátem, získala buržoazie a poté i dělnická třída přístup k obrazu sebe sama."
+        },
+        {
+          "type": "image",
+          "asset": "louis_daguerre_daguerreotype_silver_plate",
+          "ratio": "4:3",
+          "caption": "Daguerrotypie: jedinečný obraz s výraznými detaily na stříbrném plechu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Důkazem se stává i fotografie. Během krymské války (**1855**), **Roger Fenton** hlásí snímky z fronty. Během americké občanské války fotografoval **Matthew Brady** vojáky a bojiště. Událost se již neříká: je zobrazena."
+        }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p3",
+      "title": "Když se malba musí znovu objevit",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pokud stroj kopíruje obličej lépe než malíř, k čemu je pak barva? It’s [[Vliv fotografie na figurativní malbu]]: figurative art loses its monopoly on reality. Umělci, osvobozeni od této povinnosti, zkoumají něco jiného: světelný pocit s [[Impresionismus]], pak deformaci tvarů s [[Kubismus]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fotografie si postupně žádá svůj vlastní jazyk: rámování, světlo, moment. Už to není jednoduchá kopie světa. Stává se uměním samo o sobě."
+        }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p4",
+      "title": "Kodak a obrazová kultura",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Na konci 19. století nahradil George Eastman, zakladatel společnosti Kodak, těžké skleněné desky ohebnou fólií. Zařízení se stane přenosným. Slogan „Vy stisknete tlačítko, my uděláme zbytek“ označuje zrod amatéra. Rodinné album a globální zpráva se rodí společně."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1826",
+              "title": "První fotka Niépce",
+              "detail": "Pohled z okna Gras po hodinách expozice."
+            },
+            {
+              "date": "1839",
+              "title": "Daguerrotypie",
+              "detail": "Daguerre představuje svůj proces v Paříži."
+            },
+            {
+              "date": "1841",
+              "title": "Kalotyp",
+              "detail": "Talbot umožňuje tisk několika kopií."
+            },
+            {
+              "date": "1888",
+              "title": "Kodak pro každého",
+              "detail": "Eastman demokratizuje amatérskou kameru."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Narozen v **1839**, fotografie nejprve zafixovala realitu lépe než malba, pak vynalezla naši moderní [[Vizuální kultura]]: tam, kde poprvé uvěříme tomu, co vidíme."
+        }
+      ]
+    }
+  ]
+}

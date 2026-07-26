@@ -1,0 +1,102 @@
+{
+  "id": "course_57_l_invention_d_internet",
+  "title": "Uppfinningen av Internet",
+  "subtitle": "Nätverk",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Internet har inte en enda uppfinnare. Det är en lång kedja: ett militärt nätverk, ett gemensamt språk, sedan webben för människor.",
+  "hero": {
+    "image": "l_invention_d_internet",
+    "ratio": "16:9",
+    "hook": "Först ett nätverk för att stå emot kriget. Då stämmer hela världen in."
+  },
+  "sections": [
+    {
+      "id": "course_57_l_invention_d_internet_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Internet föddes inte från ett enda geni i ett garage. Det är en kollektiv konstruktion under flera decennier."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tre enkla steg att komma ihåg: ett första nätverk (ARPANET), ett gemensamt språk (TCP/IP), sedan ett enkelt gränssnitt (webben)."
+        }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p1",
+      "title": "ARPANET, det första nätverket",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I slutet av **1960**-åren, mitt under det kalla kriget, finansierade den amerikanska armén ett projekt: att koppla ihop datorer så att de fortsatte att kommunicera även om en del av nätverket förstördes."
+        },
+        {
+          "type": "image",
+          "asset": "arpanet_1969_computer_ucla",
+          "ratio": "4:3",
+          "caption": "ARPANET kopplar först samman några amerikanska universitet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Detta nätverk kallas **ARPANET**. Meddelanden delas upp i små paket som tar olika vägar. Om en väg faller tar en annan över."
+        }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p2",
+      "title": "TCP/IP: talar samma språk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "För att olika nätverk ska förstå varandra behövs gemensamma regler. **Vint Cerf** och **Bob Kahn** utvecklar protokollet **TCP/IP**: ett språk som talar om hur man klipper, adresserar och komponerar data."
+        },
+        {
+          "type": "image",
+          "asset": "vint_cerf_bob_kahn_internet",
+          "ratio": "4:3",
+          "caption": "Cerf och Kahn: arkitekterna bakom språket på Internet."
+        },
+        {
+          "type": "funFact",
+          "text": "Den 1 januari **1983** bytte ARPANET officiellt till TCP/IP. Många anser att detta datum är Internets tekniska \"födelse\"."
+        }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p3",
+      "title": "Webben gör nätverket mänskligt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Internet är nätverket. **World Wide Web**, uppfann av **Tim Berners-Lee** vid CERN i början av åren **1990**, är det enkla lagret: sidor, länkar, webbläsare."
+        },
+        {
+          "type": "paragraph",
+          "text": "Utan webben skulle Internet i första hand förbli ett verktyg för experter. Med den kan alla klicka."
+        }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p4",
+      "title": "Världens nervsystem",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Idag bär Internet e-post, videor, banker, sjukhus, GPS. Det har också skapat nya problem: desinformation, övervakning, digital klyfta."
+        },
+        {
+          "type": "takeaway",
+          "text": "Internet föddes från ARPANET, blev universellt tack vare TCP/IP och tillgängligt tack vare webben. Detta är ingen unik uppfinning, det är en delad arkitektur."
+        }
+      ]
+    }
+  ]
+}

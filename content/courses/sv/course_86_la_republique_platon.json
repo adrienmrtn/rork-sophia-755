@@ -1,0 +1,106 @@
+{
+  "id": "course_86_la_republique_platon",
+  "title": "Republiken, Platon",
+  "subtitle": "4:e århundradet f.Kr",
+  "subject": "litterature",
+  "subcategory": "Ancient Greeks & Philosophers",
+  "description": "För att definiera rättvisa föreställer Platon sig en ideal stad och myten om grottan. Republiken är inte ett valprogram: det är en undersökning av själen och makten.",
+  "hero": {
+    "image": "la_republique_platon",
+    "ratio": "16:9",
+    "hook": "Tänk om rättvisa kunde förstås bättre genom att rita en hel stad?"
+  },
+  "sections": [
+    {
+      "id": "course_86_la_republique_platon_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Runt **380 f.Kr**, **Platon**, grekisk filosof och grundare av akademin i Aten, skrev **Republik**. På grekiska säger vi *Politeia*. Dialogen börjar med en enkel fråga: vad är **rättvisa**? För att svara på detta föreslår **Sokrates**, central karaktär i Platons dialoger, en häpnadsväckande omväg: att i ord konstruera en ideal stad, [[Kallipolis]], den \"vackra staden\"."
+        },
+        {
+          "type": "paragraph",
+          "text": "Det här är ingen fantasyroman. Det är en **analogi**: att förstå staden för att förstå själen och själen för att bedöma makt. [[Alfred North Whitehead]], en brittisk filosof och matematiker, skulle senare säga att all västerländsk filosofi bara är en serie fotnoter till Platon. Den här boken förklarar varför."
+        }
+      ]
+    },
+    {
+      "id": "course_86_la_republique_platon_p1",
+      "title": "Själen och staden, samma plan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Platon delar in själen i tre delar. Desire, [[Epithumia]], är kopplad till materiell aptit. Courage, [[Thumos]], är sätet för ädel ilska och karaktärsstyrka. Anledningen, [[Logotyper]], kan komma åt sanningen. Den ideala staden har tre klasser: producenter, **vårdnadshavare** soldater, ledare. Rättvisa är att varje part gör sitt jobb utan att inkräkta på de andra."
+        },
+        {
+          "type": "image",
+          "asset": "plato_academy_athens_painting",
+          "ratio": "4:3",
+          "caption": "Platons akademi i Aten: tänker på staden för att utbilda själen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Idén är fortfarande chockerande: den kopplar samman privat moral och politisk organisation. För Platon producerar en orättvis stad förvrängda själar. Och en oordnad själ producerar en korrupt stad. Rättvisa är inte bara ett dekret. Det är en inre och kollektiv balans."
+        }
+      ]
+    },
+    {
+      "id": "course_86_la_republique_platon_p2",
+      "title": "Vem ska styra?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ideala ledare är [[filosof-kungar]], de som älskar sanning mer än makt. De lever utan alltför stor privat egendom. De har under lång tid tränats i matematik och **dialektik**, dialogens konst som söker sanningen. Platon misstror atensk demokrati, som dömde Sokrates till att dricka hemlock 399."
+        },
+        {
+          "type": "funFact",
+          "text": "[[Karl Popper]], 1900-talsfilosof, kommer att anklaga republiken för att tillkännage totalitarism. Andra ser det som en pedagogisk utopi, inte en polismanual. Debatten har varit öppen i tjugofem århundraden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bakom det politiska schemat finns [[Platons formteori]]. Den förnuftiga världen, den vi ser och berör, är bara en skugga. Att styra väl innebär att se **Bra**, den högsta idén, inte bara hantera flyktiga åsikter."
+        }
+      ]
+    },
+    {
+      "id": "course_86_la_republique_platon_p3",
+      "title": "Grottan: kommer ur illusionen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**grotta-myten** är det mest kända avsnittet i boken. Fastkedjade fångar ser bara skuggor på en vägg, kastade av en eld bakom dem. En släpps, går ut i solen, återvänder för att varna de andra. De kallar honom galen. Utbildning, säger Platon, är inte att fylla en vas. Det vänder vår blick mot ljuset."
+        },
+        {
+          "type": "image",
+          "asset": "plato_portrait_bust_sculpture",
+          "ratio": "1:1",
+          "caption": "Platon: att tänka är att gå med på att lämna de välbekanta skuggorna."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denna bild har sträckt sig över århundraden: media, ideologier, intellektuell komfort. Att ta sig ut ur grottan kostar. Att stanna inne är betryggande. Platon föreslår att filosofen måste återvända för att upplysa andra, även om han blir hånad. Kunskap är ingen privat lyx. Det är ett ansvar."
+        }
+      ]
+    },
+    {
+      "id": "course_86_la_republique_platon_p4",
+      "title": "Regimer som ruttnar, ett verk som finns kvar",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Platon beskriver också regimernas förfall: aristokrati, timokrati, oligarki, demokrati, tyranni. Varje regim är född ur lasterna från den föregående. Lärdomen är inte fatalism. Det är vaksamhet: institutioner följer medborgarnas karaktär."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Republik** kopplar samman personlig rättvisa och politisk rättvisa. Genom den ideala staden och grottan frågar Platon: vad är värdet av en makt som inte söker sanning?"
+        }
+      ]
+    }
+  ]
+}

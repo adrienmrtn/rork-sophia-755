@@ -1,0 +1,104 @@
+{
+  "id": "course_76_pourquoi_les_feuilles_changent_elles_de",
+  "title": "Waarom veranderen bladeren van kleur?",
+  "subtitle": "Herfst & pigmenten",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "De herfst bedenkt geen kleuren: het verwijdert het groen dat ze maskeerde. Achter de show schuilt een overlevingsstrategie om de winter door te komen.",
+  "hero": {
+    "image": "pourquoi_les_feuilles_changent_de_couleur",
+    "ratio": "16:9",
+    "hook": "Herfstbladeren brengen geen make-up aan: ze verwijderen het groen."
+  },
+  "sections": [
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_intro",
+      "title": "Inleiding",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Elke herfst veranderen de bossen van groen in goud, in koper en in paars. Dit is geen esthetische gril. Het is een strategie: de boom herstelt wat hij kan voordat hij zijn bladeren laat vallen voor de winter."
+        },
+        {
+          "type": "paragraph",
+          "text": "Warme kleuren komen niet uit het niets tevoorschijn. Vaak waren ze er al, verscholen onder het groen. Het begrijpen van de herfst betekent het begrijpen van een grote biochemische schoonmaak."
+        }
+      ]
+    },
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p1",
+      "title": "Het groen dat alles verbergt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Van de lente tot de late zomer zitten de bladeren vol met **chlorofyl**, het pigment dat de fotosynthese stimuleert. Het wordt afgebroken onder het licht, maar de boom vervangt het voortdurend. Zolang deze domineert, blijft het blad groen."
+        },
+        {
+          "type": "image",
+          "asset": "leaf_color_change_autumn_chlorophyll",
+          "ratio": "auto",
+          "caption": "In de herfst verdwijnt het chlorofyl en onthult de kleuren van de bladeren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Het blad bevat echter ook **carotenoïde**, gele en oranje pigmenten (zoals in wortels). In de zomer zijn ze er wel, maar onzichtbaar onder het groen. In de herfst stopt de productie van chlorofyl. Het groen vervaagt, het geel en oranje komen tevoorschijn."
+        },
+        {
+          "type": "funFact",
+          "text": "“Chlorofyl” komt van het Griekse *chloor* (groen) en *phyllon* (blad). “Carotenoïde” deelt de wortel van… de wortel, waar dit pigment voor het eerst werd geïdentificeerd."
+        }
+      ]
+    },
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p2",
+      "title": "De echte trigger: de nachten die langer worden",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Het is niet zozeer de kou die de herfst inluidt, maar de lengte van de nachten. De bomen meten het met behulp van lichtsensoren, de [[fytochromen]]. Als de nachten langer worden, gaat er een hormonaal signaal naar elk blad."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aan de basis van de bladsteel vormt zich een [[scheidingszone]], een soort kapje. Het sap stijgt minder, de suikers dalen slecht. Geïsoleerd breekt het blad zijn chlorofyl sneller af. De stabielere geeltinten blijven een paar weken aanwezig, daarna valt het blad."
+        }
+      ]
+    },
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p3",
+      "title": "Waar komen de felle rode tinten vandaan?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Het geel was er al. Rood en paars worden aan het einde van het seizoen vaak **gemaakt**. Dit zijn [[Anthocyanen]], geproduceerd wanneer suikers in het blad blijven zitten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Waarom energie steken vlak voordat je het papier weggooit? Waarschijnlijk om **** je kunt recycling gebruiken. Van boom herstelt**azine** en andere waardevolle voedingsstoffen. Zonder chlorofyl kan de zon nog actieve weefsels beschadigen. Anthocyanen fungeren als zonnefilter tijdens de grote beweging richting de wortels."
+        }
+      ]
+    },
+    {
+      "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p4",
+      "title": "Waarom sommige herfsten meer branden",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "De mooiste rode tinten worden vaak geboren op zonnige dagen en koele, vorstvrije nachten. Veel suiker, omzetting in anthocyanen. Een grijze en regenachtige herfst geeft doffere tinten. Een vroege vorst doodt de bladeren vóór de show."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wat uiteindelijk overblijft zijn [[tannines]], bruine stoffen uit de bosbodem. Sommige onderzoeken denken ook dat felle kleuren de [[bladluizen]] waarschuwen: fitte boom, sterke verdediging, beter om ergens anders heen te gaan."
+        },
+        {
+          "type": "takeaway",
+          "text": "De herfst onthult de gele tinten die al aanwezig zijn wanneer het chlorofyl verdwijnt, en maakt soms rood om de recycling van voedingsstoffen te beschermen voordat de bladeren vallen."
+        }
+      ]
+    }
+  ]
+}

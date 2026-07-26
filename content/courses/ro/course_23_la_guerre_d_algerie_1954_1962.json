@@ -1,0 +1,137 @@
+{
+  "id": "course_23_la_guerre_d_algerie_1954_1962",
+  "title": "Războiul din Algeria",
+  "subtitle": "1954-1962",
+  "subject": "histoire",
+  "subcategory": "Cold War & Contemporary World",
+  "description": "Timp de **opt ani**, Franța a luptat cu o insurecție pentru independență pe un teritoriu pe care îl considera al său. Războiul din Algeria a doborât Republica a Patra și a lăsat urme de durată.",
+  "hero": {
+    "image": "la_guerre_d_algerie",
+    "ratio": "16:9",
+    "hook": "Opt ani de război pe care Franța a refuzat de mult să-i numească război."
+  },
+  "sections": [
+    {
+      "id": "course_23_la_guerre_d_algerie_1954_1962_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Războiul Algerian (**1954-1962**) este unul dintre cele mai dureroase capitole din istoria Franței secolului XX. Nu este doar decolonizare. Pentru Paris, Algeria nu este o colonie îndepărtată: este o parte a Franței."
+        },
+        {
+          "type": "paragraph",
+          "text": "Timp de opt ani, statul s-a confruntat cu **FLN**, Frontul de Eliberare Nationala, care dorea independenta. Criza a doborât Republica a patra și a dat naștere celei de-a cincea. Numit mult timp „evenimente” sau „menținerea ordinii”, acest război lasă amintiri sfâșiate de ambele maluri ale Mediteranei."
+        }
+      ]
+    },
+    {
+      "id": "course_23_la_guerre_d_algerie_1954_1962_p1",
+      "title": "O Algerie franceză... pe hârtie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cucerită din **1830**, Algeria a fost împărțită din **1848** în [[departamente franceze]]. Părăsirea Algeriei, pentru mulți, înseamnă amputarea teritoriului național. În **1954**, erau aproximativ **9 milioane** musulmani și **1 milion** europeni, [[Piciorul Negru]]."
+        },
+        {
+          "type": "funFact",
+          "text": "Până la **1999**, statul francez a refuzat legal cuvântul „război”. Vorbim de operațiuni „de menținere a ordinii”, pentru a nu recunoaște combatanții FLN drept prizonieri de război."
+        },
+        {
+          "type": "image",
+          "asset": "algerian_war_fln_fighters",
+          "ratio": "4:3",
+          "caption": "Luptători FLN în timpul războiului din Algeria."
+        },
+        {
+          "type": "paragraph",
+          "text": "**8 mai 1945**, în timp ce Europa sărbătorește victoria, reprimarea demonstrațiilor de la Sétif și Guelma, în estul Algeriei, provoacă mii de morți. **1 noiembrie 1954**, „Ziua Roșii a Tuturor Sfinților”: FLN lansează aproximativ șaizeci de atacuri. **François Mitterrand**, pe atunci ministru de Interne, a rezumat linia oficială: „Algeria este Franța. »"
+        }
+      ]
+    },
+    {
+      "id": "course_23_la_guerre_d_algerie_1954_1962_p2",
+      "title": "Bătălia de la Alger",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În 1956, Parlamentul a votat [[puteri speciale]]: armata a primit puteri de poliție. Aproape **400.000** soldați, mulți dintre ei recruți, traversează țara în fața [[război de gherilă]] al FLN, un război de ambuscade și atacuri."
+        },
+        {
+          "type": "image",
+          "asset": "battle_of_algiers_1957",
+          "ratio": "4:3",
+          "caption": "Alger, 1957: război urban în inima capitalei."
+        },
+        {
+          "type": "paragraph",
+          "text": "În **1957**, în timpul **clădiri din Alger**, parașutiștii generalului **Jacques Massu** au demontat rețelele de bombardiere. Victorie militară, înfrângere morală: tortura devine un instrument comun de obținere a informațiilor. În Franța continentală, scandalul a crescut. Franța este sfâșiată din cauza legitimității propriului război."
+        }
+      ]
+    },
+    {
+      "id": "course_23_la_guerre_d_algerie_1954_1962_p3",
+      "title": "De Gaulle și punctul de cotitură",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**13 mai 1958**, Algerul se revoltă pentru a păstra „Algeria franceză”. **Charles de Gaulle** revine la putere și fondează a cincea Republică. Văzut mai întâi ca un salvator al suveranității franceze, el a înțeles rapid că menținerea acesteia era insuportabilă. Îndreaptă țara către autodeterminare: lăsați algerienii să-și aleagă viitorul."
+        },
+        {
+          "type": "image",
+          "asset": "de_gaulle_speech_algeria",
+          "ratio": "4:3",
+          "caption": "De Gaulle se confruntă cu problema algeriană."
+        },
+        {
+          "type": "paragraph",
+          "text": "În aprilie **1961**, [[Putchul generalilor (aprilie 1961)]] a încercat să-l răstoarne. După eșec, [[OAS]], Organizația Secretă a Armatei, multiplică atacurile pentru a bloca orice negocieri."
+        }
+      ]
+    },
+    {
+      "id": "course_23_la_guerre_d_algerie_1954_1962_p4",
+      "title": "Évian, independență, amintiri",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Acordurile **Eviene** din 18 martie 1962 fixează [[încetarea focului]]. La 1 iulie a fost aclamată independența. Violența nu se oprește. [[harkis]], musulmanii angajați de partea Franței, au fost abandonați și masacrați cu mii de oameni. Aproape un milion de pied-noirs au fugit în metropolă."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1 noiembrie 1954",
+              "title": "Ziua Tuturor Sfinților roșu",
+              "detail": "FLN-ul începe insurecția."
+            },
+            {
+              "date": "1957",
+              "title": "Bătălia de la Alger",
+              "detail": "Victoria militară franceză, scandal de tortură."
+            },
+            {
+              "date": "13 mai 1958",
+              "title": "Criza de la Alger",
+              "detail": "Întoarcerea lui De Gaulle și nașterea Republicii a cincea."
+            },
+            {
+              "date": "18 martie 1962",
+              "title": "Acordurile Evian",
+              "detail": "Încetarea focului apoi independența în iulie."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Războiul Algerian (**1954-1962**) pune capăt imperiului colonial francez. Ea lasă o moștenire dureroasă: tortură, exodul pieds-noirs, abandonul harkis."
+        }
+      ]
+    }
+  ]
+}

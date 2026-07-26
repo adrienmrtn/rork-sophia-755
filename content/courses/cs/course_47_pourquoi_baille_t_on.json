@@ -1,0 +1,96 @@
+{
+  "id": "course_47_pourquoi_baille_t_on",
+  "title": "Proč zíváme?",
+  "subtitle": "Tělo a mozek",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Všichni zívají: lidé, psi, někdy i plody. Na \"nedostatek kyslíku\" to asi není. Zde jsou nejsilnější vodítka.",
+  "hero": {
+    "image": "pourquoi_baille_t_on",
+    "ratio": "16:9",
+    "hook": "Zíváš. Váš soused zívá. A není to (téměř) nakažlivé náhodou."
+  },
+  "sections": [
+    {
+      "id": "course_47_pourquoi_baille_t_on_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zívání se zdá být běžné. Jde však o komplexní reflex: zapojí se čelist, hrudník, bránice, celé tělo. Lvi, psi, lidé: mnoho zvířat zívá."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dlouho jsme říkali: „Je to mít více kyslíku“. Tato myšlenka je nyní z velké části opuštěna. Zajímavější jsou moderní vysvětlení."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p1",
+      "title": "Ne (zejména) pro kyslík",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Experimenty ukázaly, že zvýšení kyslíku ve vzduchu nezabrání zívání. Snižte také trochu oxid uhličitý. Zívání tedy není jednoduché „dohánění vzduchu“."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dnes silný náskok: zívání pomáhá **regulovat teplotu mozku**. Širokým nádechem a protažením obličeje „provětráme“ a trochu zchladíme hlavu, zvláště když jsme unavení."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p2",
+      "title": "Proč je to nakažlivé?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "contagious_yawning_people_group",
+          "ratio": "4:3",
+          "caption": "Ke spuštění reflexu často stačí vidět někoho zívat."
+        },
+        {
+          "type": "paragraph",
+          "text": "U lidí může zívání vyvolat vidění, slyšení nebo dokonce čtení slova „zívnutí“. Není to jen hloupá imitace: ovlivňuje také **empatie** a mozkové okruhy spojené se [[Zrcadlové neurony a nakažlivost]], neurony, které se aktivují, když jednáme... nebo když vidíme někoho jednat."
+        },
+        {
+          "type": "funFact",
+          "text": "Malé děti zívají kvůli nákaze málo. Tato citlivost přichází později spolu s určitými sociálními dovednostmi."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p3",
+      "title": "Už před narozením zíváme",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Plody zívají přibližně od **11. týdne** těhotenství. V tomto věku jejich plíce ještě nedýchají vzduch. Opět to tedy není o tom, že by „došel kyslík“."
+        },
+        {
+          "type": "paragraph",
+          "text": "U plodu by zívání mohlo pomoci rozvoji čelistních a obličejových svalů."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p4",
+      "title": "Zívněte, abyste zůstali ve střehu?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Často zíváme, když jsme unavení... ale také těsně před testem, nebo když se nudíme a snažíme se udržet koncentraci. Protahování může stimulovat nervový systém a pomoci **udržet pozornost**."
+        },
+        {
+          "type": "takeaway",
+          "text": "Zívání pravděpodobně není nedostatek kyslíku. Slouží spíše k regulaci mozku (teplota, bdělost) a u lidí se šíří i sociální nákazou."
+        }
+      ]
+    }
+  ]
+}

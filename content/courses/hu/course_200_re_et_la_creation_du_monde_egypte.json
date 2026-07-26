@@ -1,0 +1,120 @@
+{
+  "id": "course_200_re_et_la_creation_du_monde_egypte",
+  "title": "Ra és a világ teremtése (Egyiptom)",
+  "subtitle": "A kreatív nap",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Re, Egyiptom napistene: teremti a világot, minden nap átkel az égen, éjszaka harcol a káosszal, és Szemével bünteti az embereket.",
+  "hero": {
+    "image": "re_et_la_creation_du_monde_egypte",
+    "ratio": "16:9",
+    "hook": "Minden hajnal győzelem. Ra hajója nélkül a világ a semmibe zuhanna."
+  },
+  "sections": [
+    {
+      "id": "course_200_re_et_la_creation_du_monde_egypte_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A **D** (vagy Râ) nem csak a nap. **Heliopolis** egyiptomiak számára, a mai Kairóhoz közeli szoláris imádat városa számára ez a létezés alapelve: megteremteni a világot, majd minden éjjel megvédeni a semmitől."
+        },
+        {
+          "type": "paragraph",
+          "text": "Alakja három évezreden át keresztezte az államvallást. A Re megértése azt jelenti, hogy megértjük, hogyan gondolkodott Egyiptom az univerzum születéséről, a rend törékenységéről, és arról, hogy miért minden hajnal egy újra meghódítandó győzelem."
+        }
+      ]
+    },
+    {
+      "id": "course_200_re_et_la_creation_du_monde_egypte_p1",
+      "title": "A világ kialakulása: az ősgörcs",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Idő előtt van **Főnév**: sötét, végtelen víz, csupa baktérium. A [[Héliopolita kozmogónia]] **Atum**, „aki elkészült” megjelenését írja le. Létrehozza magát, és a **Pierre Benben** első szilárd pontján jelenik meg."
+        },
+        {
+          "type": "image",
+          "asset": "atum_primordial_egyptian_creation_benben",
+          "ratio": "4:3",
+          "caption": "Az Atum a Benben-kő főnévből ered."
+        },
+        {
+          "type": "funFact",
+          "text": "Héliopoliszban a papok egy szent madarat tartottak fenn, a **Bénou**-t (a főnix ősét), amely Ra lelke volt, és a Benbenen landolt, hogy új ciklust jelentsen be."
+        },
+        {
+          "type": "paragraph",
+          "text": "Az Atoum egyedül létrehozza a **Káposzta**-t (levegő) és a **Tefnut**-t (páratartalom), majd a **Geb**-t (Föld) és a **Dió**-t (Ég), amelyeket szétválasztva hagy életteret. **Ozirisz**, **Isis**, **Seth** és **Nephthys** születik: Atum mellett a **nagy Enneád** (a kilenc). A [[Egyiptomi isteni szinkretizmus]] később Atumot és Re-t egyetlen alkotó figurává egyesíti."
+        }
+      ]
+    },
+    {
+      "id": "course_200_re_et_la_creation_du_monde_egypte_p2",
+      "title": "A Maat az Isfet ellen: a hajó veszedelmes utazása",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Napközben Re a **Mandjet** hajón vitorlázik. Alkonyatkor áthalad a **Mesektet** felett, és átlépi a [[Duat]] tizenkét óráját, a holtak világát. Ez nem pihenés: ez háború a **Isfet**, a rendetlenség ellen."
+        },
+        {
+          "type": "image",
+          "asset": "ra_solar_barque_egyptian_hieroglyphics",
+          "ratio": "4:3",
+          "caption": "Re napelemes hajója, az idő napi motorja."
+        },
+        {
+          "type": "funFact",
+          "text": "A 4. dinasztia korától kezdve szinte minden fáraó nevében szerepelt a „Re” név: „Re fiainak”, a napciklus garanciáinak nevezték magukat."
+        },
+        {
+          "type": "paragraph",
+          "text": "A kígyó **Apopis** arra törekszik, hogy felborítsa a csónakot, vagy megigya az égi Nílus vizét. **Seth** néha maga is védi az íjat. Amikor Ra hajnalban újjászületik **Khépri**, a szkarabeusz képében, ismét a **Maât** (egyenleg) nyer. Napfogyatkozás? Apopis majdnem nyert."
+        }
+      ]
+    },
+    {
+      "id": "course_200_re_et_la_creation_du_monde_egypte_p3",
+      "title": "Az emberek lázadása és a pusztító szem",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Még Ra is öregszik. A \"The Destruction of Man\" történetében a csontjai ezüstössé válnak, és az emberiség összeesküszik ellene. Sértődötten szabadjára engedi tüzes Szemét: [[Sekhmet]] istennő, vérszomjas oroszlán."
+        },
+        {
+          "type": "image",
+          "asset": "sekhmet_hathor_lioness_egyptian_goddess",
+          "ratio": "4:3",
+          "caption": "Sekhmet, a Re szeme, mielőtt újra Hathor lett volna."
+        },
+        {
+          "type": "paragraph",
+          "text": "A mészárlás a teremtés kioltásával fenyeget. A Rê több ezer korsó vörös okker színű sört főz, amelyeket a mezőkre öntenek. Sekhmet, aki azt hiszi, hogy vért iszik, részeg lesz és megnyugszik: ő lesz az édes **Hathor**. A mítosz megmagyarázza a rosszat, és igazolja a részegség ünnepét, ahol az emberek ittak, hogy megünnepeljék az emberek üdvösségét."
+        }
+      ]
+    },
+    {
+      "id": "course_200_re_et_la_creation_du_monde_egypte_p4",
+      "title": "Az utókor és a fúzió: Amon-Re avatar",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az Új Királyságban a thébai isten, **Amon** egyesült Re: **Amon-Rê** született, „az istenek királya”, láthatatlan teremtő és látható nap. Számára emelkednek a legnagyobb szentélyek, mint a [[karnaki templom]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Piramisok és obeliszkek megkövesítik a napsugarakat, hogy a fáraót mennyei atyja felé emeljék. Még a **Ehnaton** reformja is, amely a **Aten** (a korong) kultuszát kényszerítette ki, radikalizált egy már szoláris eszmét. Ra továbbra is az egyiptomi stabilitás leküzdhetetlen szimbóluma."
+        },
+        {
+          "type": "takeaway",
+          "text": "**D** megteremti a világot Heliopolisból, minden este megvédi azt a csónakjában **Apopis** ellen, és megbünteti, majd megmenti az emberiséget a Szemen keresztül **Sekhmet**. **Amon-Rê** néven a fáraók Egyiptomának csúcsán uralkodik."
+        }
+      ]
+    }
+  ]
+}

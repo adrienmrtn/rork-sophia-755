@@ -1,0 +1,108 @@
+{
+  "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve",
+  "title": "Cum stochează creierul amintirile?",
+  "subtitle": "Memorie și neuroni",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Memoria nu este o bibliotecă de sertare. Este o rețea vie de neuroni care se întăresc reciproc, se reconstruiesc și uneori fac greșeli.",
+  "hero": {
+    "image": "comment_le_cerveau_stocke_les_souvenirs",
+    "ratio": "16:9",
+    "hook": "O amintire nu este un fișier: este o cale pe care creierul a învățat să o refacă."
+  },
+  "sections": [
+    {
+      "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Adesea ne imaginăm memoria ca pe un hard disk. În realitate, este o rețea vie. Miliarde de **neuroni**, celule nervoase, se reconectează, se întăresc sau slăbesc în funcție de ceea ce trăim."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nimic nu este depozitat într-un singur loc. O amintire este o urmă distribuită, fragilă la început, mai solidă după somn și mereu puțin reconstruită când ne amintim de ea."
+        }
+      ]
+    },
+    {
+      "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p1",
+      "title": "Legături care se întăresc",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Între doi neuroni, punctul de contact se numește **sinapsa**, joncțiunea pe unde trece semnalul nervos. Creierul uman are aproximativ **86 miliarde** neuroni și mai mult de **100.000 de miliarde** sinapse."
+        },
+        {
+          "type": "image",
+          "asset": "hippocampus_memory_brain",
+          "ratio": "auto",
+          "caption": "Hipocampul joacă un rol central în formarea amintirilor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Când informațiile sunt repetate sau legate de o emoție puternică, aceiași neuroni se activează împreună. Legătura lor devine mai ușor de declanșat: este [[Potentare pe termen lung]], întărirea de durată a sinapselor. Cu cât un circuit este folosit mai mult, cu atât calea devine mai „largă”. Prin urmare, o memorie nu este un obiect stocat, ci o **urmă** în rețea."
+        },
+        {
+          "type": "funFact",
+          "text": "Capacitatea de stocare a creierului este estimată la aproximativ **2,5 petaocteți**, echivalentul a milioane de ore de video. Dar nu este un disc: este un țesut viu care se reorganizează."
+        }
+      ]
+    },
+    {
+      "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p2",
+      "title": "Căluțul de mare, șef al amintirilor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**hipocampus**, o structură mică în lobul [[lobul temporal]], regiunea din spatele templelor, nu păstrează amintiri pentru totdeauna. Le primește, **codifica**, le transformă în urme de memorie, apoi le redistribuie către **cortexul**, stratul exterior al creierului. Acest transfer se numește **consolida**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Se face în principal în timpul **dormi**. Fără un hipocamp funcțional, putem trăi în momentul prezent, dar nu mai păstrăm noi amintiri conștiente. Rămânem blocați într-un prezent fără trecut recent."
+        },
+        {
+          "type": "funFact",
+          "text": "Pacientul **H.M.**, operat în 1953, nu a mai format noi amintiri. Cu toate acestea, a progresat în fiecare zi la desenul în oglindă, fără să-și amintească că a încercat deja: amintirea gesturilor îi era intactă."
+        }
+      ]
+    },
+    {
+      "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p3",
+      "title": "A-ți aminti înseamnă a reconstrui",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Apelarea unei amintiri nu înseamnă redarea unui videoclip. De fiecare dată când îl scoateți, acesta devine **maleabil**, modificabil. Emoțiile noastre actuale, noile noastre cunoștințe sau o sugestie le pot modifica înainte de a fi „reînregistrată”."
+        },
+        {
+          "type": "paragraph",
+          "text": "Psihologul **Elizabeth Loftus** a arătat că puteți implanta **amintiri false** cu întrebări simple. De aici și precauția de astăzi în fața mărturiei martorilor oculari: cu bună credință, creierul umple golurile."
+        }
+      ]
+    },
+    {
+      "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p4",
+      "title": "Amintiri multiple într-un singur creier",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Memoria faptelor și a episoadelor de viață, ceea ce putem spune, trece în principal prin hipocamp. [[memorie procedurală]], cea a ciclismului sau a înotului, depinde în schimb de **cerebelul**, o structură din spatele creierului, și de alte structuri mai vechi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Acesta este motivul pentru care unii pacienți cu amnezie uită propriul nume, dar totuși cântă la pian. Memoria nu este un singur sertar: este un mozaic de sisteme."
+        },
+        {
+          "type": "takeaway",
+          "text": "O amintire este o urmă dinamică: sinapsele întărite, consolidate mai ales noaptea și reconstruite cu fiecare memento. Nu este niciodată un fișier fix."
+        }
+      ]
+    }
+  ]
+}

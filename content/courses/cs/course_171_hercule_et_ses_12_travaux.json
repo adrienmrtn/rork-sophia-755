@@ -1,0 +1,118 @@
+{
+  "id": "course_171_hercule_et_ses_12_travaux",
+  "title": "Herkules a jeho 12 prací",
+  "subtitle": "Od chaosu k Olympu",
+  "subject": "mythologie",
+  "subcategory": "Greece: the heroes",
+  "description": "Herakles, syn Dia, zabije svou rodinu v záchvatu šílenství. Jeho Dvanáct prací je pokání: zabíjet monstra a pak porazit samotnou smrt.",
+  "hero": {
+    "image": "hercule_et_ses_12_travaux",
+    "ratio": "16:9",
+    "hook": "Dvanáct testů k objasnění zločinu. Polobůh, který skončí mezi bohy."
+  },
+  "sections": [
+    {
+      "id": "course_171_hercule_et_ses_12_travaux_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Herakles**, Římany nazývaný **Herkules**, je největší řecký hrdina. Syn [[Zeus]], krále bohů, a smrtelníka **Alkména**, není jen kolos. Ztělesňuje sílu, ale také násilí a vykoupení."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jeho **Dvanáct děl** nejsou dobrovolnou snahou o slávu. Je to pokání za hrozný zločin. Očištěním světa od monster Hérakles otevírá cestu k civilizaci... a získává vzácnou výsadu, nesmrtelnost."
+        }
+      ]
+    },
+    {
+      "id": "course_171_hercule_et_ses_12_travaux_p1",
+      "title": "Héřino šílenství, zločin, pokání",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Hera]], legitimní manželka Dia, nenávidí dítě zrozené z nevěry. Z kolébky posílá dva hady. Kojenec je dusí holýma rukama. Později se Hérakles oženil se **Mégara**, dcerou thébského krále. Héra ho pak přivádí k šílenství: zmasakruje svou ženu a děti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tento krevní zločin, [[Miasma]], ho staví mimo společnost. Orákulum z Delf mu přikazuje, aby sloužil svému bratranci, králi **Eurystheus**. Tento strašný panovník, vedený Hérou, na něj uvalí deset prací, pak dvanáct, protože některé z nich odmítá počítat."
+        },
+        {
+          "type": "funFact",
+          "text": "Podle legendy Héřino mléko, které vystříklo z jejího prsu, když lstivě kojila Hérakla, vytvořilo na obloze **Mléčnou dráhu**."
+        }
+      ]
+    },
+    {
+      "id": "course_171_hercule_et_ses_12_travaux_p2",
+      "title": "Lvi, hydry a stáje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "První výzvou je **Nemejský lev** s neproniknutelnou kůží. Héraklés ho uškrtí a pak z něj stáhne kůži vlastními drápy. Tato kůže, [[Leonte]], se stane jeho brněním. Následuje **Lern Hydra**, had s mnoha hlavami: za každou useknutou hlavu narostou dvě. Se svým synovcem Iolaosem kauterizuje krky ohněm."
+        },
+        {
+          "type": "image",
+          "asset": "hercules_nemean_lion_hydra_labours_painting",
+          "ratio": "4:3",
+          "caption": "Héraklés čelí Nemejskému lvu a Hydře."
+        },
+        {
+          "type": "funFact",
+          "text": "Antikové říkali, že Zeus umístil Nemejského lva mezi hvězdy: souhvězdí **Lev**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Registr změn **Augeovské stáje**. Tisíce volů nebyly vyčištěny třicet let. Eurystheus chce hrdinu ponížit. Héraklés odvádí řeky [[Alpheus]] a Peneus: během jednoho dne proud unáší hnůj. Inteligence je stejně dobrá jako sval."
+        }
+      ]
+    },
+    {
+      "id": "course_171_hercule_et_ses_12_travaux_p3",
+      "title": "Až na konec světa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Práce ho odvádí z Řecka: Krétský býk, lidožravé klisny, pás **Hippolyte**, královny Amazonek. Pro stádo obra **Geryone** na dalekém západě otevřel Herakles průchod mezi Středozemním mořem a Atlantikem: [[Herkulovy sloupy]], dnes Gibraltarský průliv."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hesperidkám ukradne **zlatá jablka** podvedením titána [[Atlas]], který nese nebe. Poslední práce je nejstrašnější: jít dolů do podsvětí a přivést zpět **Cerberus**, mnohohlavého psa. Vyjít živý znamená symbolicky porazit smrt."
+        },
+        {
+          "type": "funFact",
+          "text": "Průzkumník Orellana by řeku pojmenoval **Amazonka** poté, co uvěřil, že na jejích březích vidí válečnice, které jsou ozvěnou Amazonek z mýtu."
+        }
+      ]
+    },
+    {
+      "id": "course_171_hercule_et_ses_12_travaux_p4",
+      "title": "Apoteóza: hrdina se stává bohem",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Díla končí, ale ne tragédie. Jeho žena **Déjanire** ho nutí nosit tuniku nasáklou jedovatou krví [[Kentaur]] Nessus. Zaživa upálený Heracles vyleze na hranici na hoře Oeta. Jeho smrtelná část hoří. Jeho božská podstata stoupá směrem k Olympu: je to **apoteóza**."
+        },
+        {
+          "type": "image",
+          "asset": "hercules_olympus_divinization_rubens_painting",
+          "ratio": "4:3",
+          "caption": "Apoteóza Hérakla: hrdina se připojí k bohům."
+        },
+        {
+          "type": "paragraph",
+          "text": "Usmířen s Hérou se ožení se **Hebé**, věčné mládí. Římané přijali jeho postavu pod názvem **Herkules**. „Herkulovská práce“ stále znamená nesmírný úkol. Héraklés není jen zabiják monster: je architektem řádu."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Herakles** (Hercules) vykoná dvanáct prací, aby odčinil vraždu své rodiny. Od nemejského lva po Cerbera jde od chaosu k civilizaci... a získává nesmrtelnost."
+        }
+      ]
+    }
+  ]
+}

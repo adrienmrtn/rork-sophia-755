@@ -1,0 +1,104 @@
+{
+  "id": "course_215_les_inegalites_nord_sud",
+  "title": "Inegalitățile Nord-Sud",
+  "subtitle": "O lume cu două viteze",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Cei mai bogați 10% de pe planetă captează mai mult de jumătate din venitul global. Cu toate acestea, sărăcia extremă a fost împărțită la patru în treizeci de ani.",
+  "hero": {
+    "image": "les_inegalites_nord_sud",
+    "ratio": "16:9",
+    "hook": "Un american câștigă într-o oră cât câștigă un locuitor din Niger într-o zi întreagă de muncă."
+  },
+  "sections": [
+    {
+      "id": "course_215_les_inegalites_nord_sud_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Diferența dintre țările bogate și cele sărace rămâne astăzi unul dintre cele mai izbitoare fapte din lume. Globalizarea promitea o apropiere a standardelor de trai, dar diferențele de bogăție rămân imense între națiuni."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cu toate acestea, istoria recentă nu este doar sumbră: sărăcia extremă a scăzut mai repede ca niciodată în treizeci de ani. Acest curs explorează rădăcinile acestor inegalități și motivele acestui paradox ciudat."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p1",
+      "title": "O lume cu două viteze",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cei mai bogati 10% din populația lumii captează mai mult de 52% din venitul global. Cei mai săraci 50% trebuie să împartă doar 8% din plăcintă. Această concentrare a bogăției nu a fost niciodată mai mare în istoria omenirii."
+        },
+        {
+          "type": "paragraph",
+          "text": "Această diviziune se vede și în speranța de viață: ajunge la 83 de ani în Japonia, dar scade la 55 de ani în Republica Centrafricană. Aceste lacune nu se datorează întâmplării: ele provin din accesul foarte inegal la apă potabilă, hrană și îngrijire medicală."
+        },
+        {
+          "type": "funFact",
+          "text": "Un locuitor al Statelor Unite câștigă în medie, într-o oră de muncă, cât un locuitor al Nigerului într-o zi întreagă."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p2",
+      "title": "Rădăcini istorice încă vii",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pentru a înțelege aceste diferențe, trebuie să ne întoarcem la colonizare. Puterile europene au organizat multe teritorii sudice ca furnizori de materii prime (cafea, cacao, bumbac), încetinind propria industrializare pentru a-și proteja propriile fabrici."
+        },
+        {
+          "type": "image",
+          "asset": "global_inequality_rich_poor_contrast_photograph",
+          "ratio": "16:9",
+          "caption": "Decalajele de bogăție dintre Nord și Sud rămân printre cele mai mari de pe planetă."
+        },
+        {
+          "type": "paragraph",
+          "text": "Această logică continuă și astăzi prin [[termenii de schimb]]: țările din Sud vând adesea materii prime al căror preț variază foarte mult, în timp ce cumpără produse manufacturate al căror preț doar crește. La aceasta se adaugă și ponderea datoriei: rambursarea dobânzilor ocupă uneori mai mult spațiu într-un buget național decât educația sau sănătatea."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p3",
+      "title": "Progres real, dar inegal",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cu toate acestea, în ultimii treizeci de ani s-a înregistrat o scădere spectaculoasă a sărăciei absolute, care a afectat 36% din populația lumii în 1990, față de mai puțin de 10% înainte de 2020. Acest progres vine în principal din creșterea fulgerătoare a Chinei și Indiei."
+        },
+        {
+          "type": "paragraph",
+          "text": "Acest progres are o latură ascunsă: așa arată [[„curba elefantului”]] al economistului Branko Milanovic. Clasele de mijloc asiatice și-au văzut veniturile explodând, dar clasele muncitoare din țările bogate au stagnat, în fața concurenței globale. Prin urmare, reducerea inegalităților dintre țări nu a prevenit noi tensiuni chiar și în interiorul țărilor bogate."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p4",
+      "title": "Clima, o nouă linie de demarcație",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Viitorul inegalităților Nord-Sud depinde acum de climă. Țările din Sud, din punct de vedere istoric cele mai puțin responsabile pentru emisiile de gaze cu efect de seră, sunt totuși cele mai expuse la secete, inundații și creșterea nivelului apei."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pentru a reduce aceste decalaje în mod durabil, comunitatea internațională explorează noi căi: [[asistență oficială pentru dezvoltare]] care vizează tranziția energetică sau anularea datoriilor celor mai fragile țări. Atâta timp cât bogăția celor mai bogați crește mai repede decât cea a celor mai săraci, tensiunile vor rămâne mari."
+        },
+        {
+          "type": "takeaway",
+          "text": "Cei mai bogați 10% din lume captează mai mult de jumătate din venitul global, dar sărăcia extremă a scăzut mai repede ca niciodată în treizeci de ani, datorită ascensiunii Chinei și Indiei. Următoarea mare provocare în această diviziune nord-sud va fi clima."
+        }
+      ]
+    }
+  ]
+}

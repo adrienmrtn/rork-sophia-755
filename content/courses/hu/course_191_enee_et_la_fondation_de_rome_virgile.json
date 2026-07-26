@@ -1,0 +1,130 @@
+{
+  "id": "course_191_enee_et_la_fondation_de_rome_virgile",
+  "title": "Aeneas és Róma alapítása (Vergilius)",
+  "subtitle": "Az Aeneis",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Az Aeneisben Vergilius elmeséli, hogy Aeneas, a Trójából megszökött herceg hogyan kelt át a Földközi-tengeren, hogy megalapítsa Róma vonalát.",
+  "hero": {
+    "image": "enee_et_la_fondation_de_rome",
+    "ratio": "16:9",
+    "hook": "Egy menekülő trójai a vállán viszi apját: Róma ebből a száműzetésből születik."
+  },
+  "sections": [
+    {
+      "id": "course_191_enee_et_la_fondation_de_rome_virgile_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A **Aeneid** **Virgil** nagyszerű verse. **Aeneas**, a Trója bukását túlélő trójai herceg odüsszeáját meséli el. Az istenek vezetésével átkelt a Földközi-tengeren, hogy Olaszországban megtalálja a Rómába vezető leszármazást."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ez nem csak egy kaland. Ez a római hatalom születésének mítosza, amely azért íródott, hogy Rómának Homéroszhoz méltó múltat ​​adjon."
+        }
+      ]
+    },
+    {
+      "id": "course_191_enee_et_la_fondation_de_rome_virgile_p1",
+      "title": "Vergilius Augustusnak ír",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A Kr.e. I. század végén, a polgárháborúk után **augusztus** császár stabilizálni akarta hatalmát. Megbízza Vergiliust, hogy írjon egy Homéroszhoz méltó eposzt. A mű a [[augusztusi propaganda]]: a herceget egy isteni hőshöz kötni."
+        },
+        {
+          "type": "image",
+          "asset": "dido_aeneas_carthage_painting",
+          "ratio": "4:3",
+          "caption": "Vergilius, az Aeneis költője, a sors által akart Róma bajnoka."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vergilius tizenegy évig (Kr. e. 29-19) dolgozott ott. Az első hat dal a tengeri vándorlást követi. A következő hat az olaszországi háborúról szól. A [[Daktilis hexaméterek]]-ben, a nagy antik eposz versében írja."
+        },
+        {
+          "type": "funFact",
+          "text": "Virgil Kr.e. **19**-ben halt meg, és azt kérte, hogy a kéziratot égessék el, befejezetlennek tekintve. Augustus megtiltja az engedelmességet. A római nemzeti eposz szerzője akarata ellenére jelenik meg."
+        }
+      ]
+    },
+    {
+      "id": "course_191_enee_et_la_fondation_de_rome_virgile_p2",
+      "title": "Repülés Trójából és szerelem Karthágóban",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ahogy Trója ég, a [[Trójai háború]] végén Aeneas, **Vénusz** istennő és a halandó Anchises fia menekülni kap. Elmegy, vállán viszi apját, kezében fiát Ascaniust, és magával viszi a [[római házi istenek]], a kandalló isteneit. Ez a gesztus határozza meg a [[római pietas]]: a család, az istenek és a sors iránti kötelességet."
+        },
+        {
+          "type": "image",
+          "asset": "aeneas_fleeing_burning_troy_anchises_painting",
+          "ratio": "4:3",
+          "caption": "Aeneas elmenekül az égő Trójából, vele apa és fia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Karthágóban szereti a királynőt, **Móka**. De [[Jupiter]], a római istenek királya visszahívja küldetésére. Aeneas elhagyja. Dido öngyilkosságot követ el, és megátkozza leszármazását: a mítosz így magyarázza a jövőbeli gyűlöletet Róma és Karthágó között a [[pun háborúk]] előtt."
+        },
+        {
+          "type": "funFact",
+          "text": "Aeneas fiát, Ascaniust Iulének is hívják. [[Julii]] családja, köztük Julius Caesar és Augustus, a Vénuszon keresztül állítja ezt az isteni eredetet."
+        }
+      ]
+    },
+    {
+      "id": "course_191_enee_et_la_fondation_de_rome_virgile_p3",
+      "title": "A háború Lazióban",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A pokolba ereszkedés után Aeneas megérkezik a közép-olaszországi **Latiumba**. **Latinus** király megígéri neki lányát **Laviniát**. De **Turnus** herceg, akit a trójaiakkal ellenséges istennő, [[Juno]] támogat, elindítja a háborút."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aeneas legyőzi Turnuszt, és megalapítja a **Lavinium**-t. Később a fia megtalálta a [[Hosszú Alba]]-t, amelyből Romulus és Remus születik. A mítosz tehát egyetlen láncban köti össze Tróját Rómával."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Trója",
+              "title": "Aeneas repülése",
+              "detail": "Megmenti az apát, a fiút és a házi isteneket."
+            },
+            {
+              "date": "Karthágó",
+              "title": "Móka",
+              "detail": "Megtört szerelem, átok Róma ellen."
+            },
+            {
+              "date": "Lazio",
+              "title": "Győzelem Turnus felett",
+              "detail": "Lavinium alapítása, Róma kezdete."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_191_enee_et_la_fondation_de_rome_virgile_p4",
+      "title": "A kötelesség hőse",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A középkorban Vergilius szinte prófétai bölcs lett. Dante útmutatójává teszi a [[Isteni vígjáték]]-ben. Ám Aeneas nem egy boldog hős: ő viseli a sors súlyát. Róma száműzetésből, feláldozott szerelemből és háborúból született."
+        },
+        {
+          "type": "takeaway",
+          "text": "A **Aeneid**-ben Vergilius elkészíti **Aeneas**-t, Trója túlélőjét, Róma mitikus ősét. A hős megtestesíti **pietas**: a kötelesség a vágy előtt, a sors a személyes boldogság előtt."
+        }
+      ]
+    }
+  ]
+}

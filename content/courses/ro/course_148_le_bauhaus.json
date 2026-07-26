@@ -1,0 +1,126 @@
+{
+  "id": "course_148_le_bauhaus",
+  "title": "Bauhausul",
+  "subtitle": "1919-1933",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "Între **1919** și **1933**, școala **Bauhaus** îmbină arta, măiestria și industria din Germania. Închisă de naziști, a răspândit totuși designul modern în întreaga lume.",
+  "hero": {
+    "image": "le_bauhaus",
+    "ratio": "16:9",
+    "hook": "O școală germană de 14 ani a proiectat lumea modernă, de la scaune la smartphone-uri."
+  },
+  "sections": [
+    {
+      "id": "course_148_le_bauhaus_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Bauhaus** (1919-1933) este cea mai influentă școală de artă și design a secolului al XX-lea. Fondată în Germania imediat după Primul Război Mondial, respinge decorul inutil din secolul al XIX-lea. Scopul lui: inventarea unui limbaj simplu, adaptat epocii industriale."
+        },
+        {
+          "type": "paragraph",
+          "text": "Îmbinând arta, meșteșugul și tehnica, pune bazele [[Functionalism in design]]. Viața lui este scurtă. Moștenirea lui este peste tot."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p1",
+      "title": "Weimar 1919: desființarea ierarhiei artelor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În **1919**, arhitectul **Walter Gropius** a fondat Bauhaus în **Weimar**. Manifestul său este clar: scopul final al întregii creații este arhitectura. Nu mai există granițe între „artele plastice” nobile și „artele aplicate” secundare. Meșteșugul devine baza a tot."
+        },
+        {
+          "type": "image",
+          "asset": "bauhaus_weimar_1919_walter_gropius_building",
+          "ratio": "4:3",
+          "caption": "Bauhaus: o școală în care înveți făcând."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fiecare atelier are doi maeștri: un artist și un meșter. Acolo predau figuri precum [[Vasili Kandinsky]], pictor abstract rus. Școala dialoghează și cu [[De Stijl]], o mișcare olandeză obsedată de dreptunghi și culori pure."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p2",
+      "title": "Forma urmează funcției",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Instalată apoi la **Dessau**, școala s-a orientat către producția de masă. Slogan celebru: **„forma funcțională”**. Ornamentul este considerat inutil. Cautam obiecte simple, frumoase care pot fi fabricate intr-o fabrica."
+        },
+        {
+          "type": "funFact",
+          "text": "**Marcel Breuer**, profesor la Bauhaus, reciclează oțelul tubular din biciclete pentru a inventa scaune ușoare. Materialul din fabrică devine mobilier de sufragerie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Atelierele testează metal, sticlă, textile și tipografie. Scopul nu mai este singurul obiect de lux. Este obiectul tipic, accesibil celui mai mare număr de oameni."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p3",
+      "title": "Închis de naziști, salvat de exil",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Scoala este enervanta. Este acuzat că este prea modern, prea internațional, prea de stânga. După un pasaj la Berlin sub **Mies van der Rohe**, a venit [[Închidere de către naziști (1933)]]. Regimul vede acest lucru drept „bolșevism cultural”."
+        },
+        {
+          "type": "image",
+          "asset": "mies_van_der_rohe_modernist_architecture",
+          "ratio": "4:3",
+          "caption": "Mies van der Rohe: ultima conducere a Bauhaus, apoi exilul american."
+        },
+        {
+          "type": "paragraph",
+          "text": "Închiderea devine difuzie. Maeștrii merg în Statele Unite, Marea Britanie, Palestina. În Tel Aviv, ideile lor hrănesc [[Orașul Alb Tel Aviv]], un vast ansamblu de arhitectură modernă albă."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p4",
+      "title": "Un design care a devenit invizibil prin evidentitate",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Astăzi, moștenirea Bauhaus este peste tot: mobilă în pachet, clădiri simple, interfețe clare, tipografii sans-serif [[sans-serif]]. IKEA, aeroporturi, telefoanele noastre: claritatea geometrică a Bauhaus a devenit decorul obișnuit al lumii."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1919",
+              "title": "Fundația din Weimar",
+              "detail": "Gropius lansează școala de artă-meșteșuguri-industrie."
+            },
+            {
+              "date": "1925",
+              "title": "Dessau",
+              "detail": "Trecerea către producția de masă."
+            },
+            {
+              "date": "1933",
+              "title": "Închiderea nazistă",
+              "detail": "Exilul răspândește Bauhaus în întreaga lume."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "În doar 14 ani, Bauhaus a inventat ideea modernă de design: mai puțin ornament, mai multă funcție, obiecte care sunt frumoase pentru că sunt utile. Închiderea sa politică nu a făcut decât să accelereze cucerirea vieții de zi cu zi."
+        }
+      ]
+    }
+  ]
+}

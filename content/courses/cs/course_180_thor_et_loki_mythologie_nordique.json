@@ -1,0 +1,120 @@
+{
+  "id": "course_180_thor_et_loki_mythologie_nordique",
+  "title": "Thor a Loki (severská mytologie)",
+  "subtitle": "Severská mytologie",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Bůh blesku a bůh lstí: dobrodružné duo, poté nepřátelé na Ragnaröku. Dvě tváře skandinávského panteonu.",
+  "hero": {
+    "image": "thor_et_loki_mythologie_nordique",
+    "ratio": "16:9",
+    "hook": "Jeden udeří kladivem. Druhý lže, aby vyhrál. Společně zachraňují Asgard... až do dne, kdy ji Loki zradí."
+  },
+  "sections": [
+    {
+      "id": "course_180_thor_et_loki_mythologie_nordique_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Thor** a **Loki** jsou dvě nejoblíbenější postavy severské mytologie. Thor chrání muže bleskem. Loki rozsévá nepořádek lstí. Často na ně společně narážíme v cestovatelských příbězích."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jejich pouto není obyčejné komické přátelství. Ukazuje napětí mezi řádem bohů a chaosem. Od žertovného společenství až po finální válku, zde je návod, jak se tato aliance buduje... a pak se rozbije."
+        }
+      ]
+    },
+    {
+      "id": "course_180_thor_et_loki_mythologie_nordique_p1",
+      "title": "Asgard, Midgard a prameny",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tyto mýty pocházejí od skandinávských národů z 5. až 12. století. Známe je především díky pozdním islandským textům, napsaným v době, kdy byl region již christianizován. Hlavním zdrojem je [[Edda v próze]], napsaný kolem **1220** **Snorri Sturluson**, doplněný o [[Poetická Edda]]."
+        },
+        {
+          "type": "image",
+          "asset": "asgard_midgard_bifrost_bridge_norse_mythology",
+          "ratio": "4:3",
+          "caption": "Asgard a Midgard spojené duhovým mostem Bifröst."
+        },
+        {
+          "type": "paragraph",
+          "text": "Svět je organizován kolem [[Yggdrasil]], kosmického stromu. Nahoře: **Asgard**, domov bohů. Dolní: **Midgard**, svět mužů, propojený **Bifröst**. Bohové jsou rozděleni do dvou klanů: **Aesir**, vedených **Odin** (válka a suverenita), a **Vanes**, jako jsou Freyr a Freyja (plodnost)."
+        },
+        {
+          "type": "funFact",
+          "text": "Ve starověkých textech je Bifröst křehkým mostem: u Ragnaröku se otřese a zhroutí se pod tíhou obrů."
+        }
+      ]
+    },
+    {
+      "id": "course_180_thor_et_loki_mythologie_nordique_p2",
+      "title": "Thor, ochránce kladiva",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Thor** je synem Odina a Země. Je nejuctívanějším bohem lidu: brání lidstvo před **obři**, rozpoutanými přírodními silami. Vousatý a zrzavé vlasy ztělesňují jasnou a rovnou sílu."
+        },
+        {
+          "type": "image",
+          "asset": "thor_hammer_mjolnir_norse_god_painting",
+          "ratio": "4:3",
+          "caption": "Mjöllnir, Thorovo kladivo: udeří a vrátí se do ruky."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jeho zbraň, **Mjöllnir**, ukovaná trpaslíky, rozbíjí hory a vždy se vrací do jeho ruky. Pevný pás a železné rukavice mu pomáhají ovládat ho. Jeho jméno dalo **čtvrtek** (Thorův den) v germánských jazycích. Na rozdíl od aristokratičtějšího Odina je Thor bohem svobodných rolníků: déšť, úroda, bezpečný domov."
+        },
+        {
+          "type": "funFact",
+          "text": "Thorův vůz táhnou dvě kozy. Pokud má hlad, může je sníst večer a druhý den je vzkřísit svým kladivem... pokud si nezlomí kosti."
+        }
+      ]
+    },
+    {
+      "id": "course_180_thor_et_loki_mythologie_nordique_p3",
+      "title": "Loki, lest, která končí špatně",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Loki** žije mezi Aesir, ale má obří krev. Vstoupil do panteonu prostřednictvím krevní smlouvy s Odinem. Je to **podvodník**: jeho žerty a lži jsou znepokojivé, ale také posouvají příběh kupředu a někdy nabízejí bohům jejich největší poklady."
+        },
+        {
+          "type": "image",
+          "asset": "loki_norse_trickster_god_mythology",
+          "ratio": "4:3",
+          "caption": "Loki, bůh lstí: užitečný spojenec, oznámený zrádce."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mění tvar a dokonce i pohlaví. Ve formě klisny se stává matkou [[Sleipnir]], Odinova osminohého koně. S obryní Angrbodou generuje tři monstra: vlka **Fenrir**, hada **Jörmungandr** a **Hel**, strážce mrtvých. Kousek po kousku se z žertu stává zrada: zorganizuje smrt zářivého boha **Baldr**. Od té doby byl jeho osud zpečetěn."
+        }
+      ]
+    },
+    {
+      "id": "course_180_thor_et_loki_mythologie_nordique_p4",
+      "title": "Od komického dua po Ragnarök",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Thor a Loki se dlouhou dobu doplňovali. Když obr Thrym ukradne Mjöllnir, Thor se přestrojí za nevěstu a Loki za sluhu, aby ho získal. Kde selže kladivo, tam uspěje lež a naopak."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pak se aliance rozpadne. V **Ragnarök**, soumraku bohů, vede Loki nepřátele Asgardu. Thor se postaví Jörmungandrovi, synovi Lokiho: zabije hada a po devíti krocích zemře na jeho jed. Síla a mazanost jsou zničeny společně."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Thor** a **Loki** ztělesňují napětí mezi ochrannou silou a rušivou mazaností. Jejich pouto, od komického přátelství až po nenávist k Ragnaröku, ukazuje, jak křehký zůstává řád bohů tváří v tvář chaosu."
+        }
+      ]
+    }
+  ]
+}

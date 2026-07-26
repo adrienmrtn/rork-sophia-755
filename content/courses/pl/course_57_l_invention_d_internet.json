@@ -1,0 +1,102 @@
+{
+  "id": "course_57_l_invention_d_internet",
+  "title": "Wynalazek Internetu",
+  "subtitle": "Sieci",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Internet nie ma jednego wynalazcy. To długi łańcuch: sieć wojskowa, wspólny język, a potem internetowa sieć dla ludzi.",
+  "hero": {
+    "image": "l_invention_d_internet",
+    "ratio": "16:9",
+    "hook": "Najpierw sieć przeciwstawiająca się wojnie. Wtedy cały świat się dostraja."
+  },
+  "sections": [
+    {
+      "id": "course_57_l_invention_d_internet_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Internet nie narodził się z inicjatywy jednego geniusza w garażu. To zbiorowa budowa na przestrzeni kilkudziesięciu lat."
+        },
+        {
+          "type": "paragraph",
+          "text": "Trzy proste kroki do zapamiętania: pierwsza sieć (ARPANET), wspólny język (TCP/IP), a następnie łatwy interfejs (sieć)."
+        }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p1",
+      "title": "ARPANET, pierwsza sieć",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pod koniec lat **1960**, w środku zimnej wojny, armia amerykańska sfinansowała projekt: połączenie komputerów tak, aby nadal mogły się komunikować, nawet jeśli część sieci została zniszczona."
+        },
+        {
+          "type": "image",
+          "asset": "arpanet_1969_computer_ucla",
+          "ratio": "4:3",
+          "caption": "ARPANET najpierw łączy kilka amerykańskich uniwersytetów."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ta sieć nazywa się **ARPANET**. Wiadomości są dzielone na małe pakiety, które podążają różnymi ścieżkami. Jeśli jedna droga upadnie, inna ją przejmuje."
+        }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p2",
+      "title": "TCP/IP: mówienie tym samym językiem",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aby różne sieci mogły się wzajemnie rozumieć, potrzebne są wspólne zasady. **Vint Cerf** i **Boba Kahna** opracowują protokół **TCP/IP**: język, który mówi, jak wycinać, adresować i ponownie składać dane."
+        },
+        {
+          "type": "image",
+          "asset": "vint_cerf_bob_kahn_internet",
+          "ratio": "4:3",
+          "caption": "Cerf i Kahn: architekci języka Internetu."
+        },
+        {
+          "type": "funFact",
+          "text": "1 stycznia **1983** ARPANET oficjalnie przeszedł na protokół TCP/IP. Wielu uważa tę datę za techniczne „narodziny” Internetu."
+        }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p3",
+      "title": "Sieć czyni sieć człowiekiem",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Internet to sieć. **ogólnoświatowa sieć WWW**, wynaleziona przez **Tima Bernersa-Lee** w CERN na początku lat **1990**, to łatwa warstwa: strony, linki, przeglądarki."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bez sieci Internet pozostałby przede wszystkim narzędziem ekspertów. Dzięki niemu każdy może kliknąć."
+        }
+      ]
+    },
+    {
+      "id": "course_57_l_invention_d_internet_p4",
+      "title": "Układ nerwowy świata",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dziś Internet przenosi e-maile, filmy, banki, szpitale, GPS. Stworzyło także nowe problemy: dezinformację, inwigilację, przepaść cyfrową."
+        },
+        {
+          "type": "takeaway",
+          "text": "Internet narodził się z ARPANET, stał się uniwersalny dzięki protokołowi TCP/IP i dostępny dzięki sieci WWW. To nie jest unikalny wynalazek, to wspólna architektura."
+        }
+      ]
+    }
+  ]
+}

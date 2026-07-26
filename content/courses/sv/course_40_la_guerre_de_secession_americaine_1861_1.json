@@ -1,0 +1,145 @@
+{
+  "id": "course_40_la_guerre_de_secession_americaine_1861_1",
+  "title": "Det amerikanska inbördeskriget",
+  "subtitle": "1861-1865",
+  "subject": "histoire",
+  "subcategory": "Cold War & Contemporary World",
+  "description": "Från **1861** till **1865** har USA slitits isär: mer än **620 000** döda. I hjärtat av konflikten, slaveri, nationell enhet och födelsen av en starkare federal stat.",
+  "hero": {
+    "image": "la_guerre_de_secession_americaine",
+    "ratio": "16:9",
+    "hook": "Det dödligaste kriget i amerikansk historia, för unionen och mot slaveri."
+  },
+  "sections": [
+    {
+      "id": "course_40_la_guerre_de_secession_americaine_1861_1_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Från **1861** till **1865** upplever USA sin allvarligaste kris: inbördeskriget. Norden (unionen) kontra södern (konfederationen). Inga fler **620,000** döda."
+        },
+        {
+          "type": "paragraph",
+          "text": "Konflikten förvandlar en ung republik till en industrimakt, på bekostnad av bestående trauma mot nationell enhet och slaveri."
+        }
+      ]
+    },
+    {
+      "id": "course_40_la_guerre_de_secession_americaine_1861_1_p1",
+      "title": "Två Amerika ansikte mot ansikte",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Norr** industrialiseras, med löner och protektionism. **Söder** förblir lantligt, rikt på bomull producerad av **4 millennium** slavar."
+        },
+        {
+          "type": "image",
+          "asset": "slaves_american_southern_plantation",
+          "ratio": "4:3",
+          "caption": "Southern Plantation: Slaveri i hjärtat av den konfedererade ekonomin."
+        },
+        {
+          "type": "paragraph",
+          "text": "Debatten rör också **[[Staters rättigheter kontra den federala regeringen]]**: vem bestämmer om slaveri, den lokala staten eller Washington? Valet av **Abraham Lincoln** (**November 1860**), republikan som är motståndare till utvidgningen av slaveriet, utan en enda röst från söder, utlöser utträde. Sju stater grundade konfederationen, med **[[Jefferson Davis]]** som president, och garanterade slaveri i sina konstitutioner."
+        },
+        {
+          "type": "funFact",
+          "text": "Före kriget sa vi ofta \"USA *är*\" i plural. Efteråt är användningen av singular (\"*Öst*\") väsentlig: en odelbar nation."
+        }
+      ]
+    },
+    {
+      "id": "course_40_la_guerre_de_secession_americaine_1861_1_p2",
+      "title": "Ett totalt krig, sedan emancipation",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**12 april 1861**, södra kanoner bombarderar Fort Sumter, South Carolina. Kriget, som vi trodde skulle bli kort, blev industriellt. I **Antietam** (**17 september 1862**), **23 000** offer på tolv timmar: den blodigaste dagen i amerikansk militärhistoria."
+        },
+        {
+          "type": "paragraph",
+          "text": "Misslyckandet av **[[Robert E. Lee]]**, ledande konfederationsgeneral, gjorde att Lincoln kunde underteckna **[[Emancipationsförkunnelse]]** (**1 januari 1863**), som befriade slavar i rebellstater. Kriget för unionen blev också ett krig för frihet, vilket stängde dörren för europeiskt stöd till södern. **Gettysburg** (juli **1863**) bryter konfederationens fart."
+        },
+        {
+          "type": "image",
+          "asset": "american_civil_war_battle",
+          "ratio": "4:3",
+          "caption": "Slaget om inbördeskriget: industrivåld utan motstycke."
+        }
+      ]
+    },
+    {
+      "id": "course_40_la_guerre_de_secession_americaine_1861_1_p3",
+      "title": "Nordlig seger, Lincolns död",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**[[Ulysses Grant]]**, Unionens general-in-chief, för ett utmattningskrig. Hans löjtnant **William Tecumseh Sherman** härjade Georgien under sin \"marsch till havet\". Lee gav upp vid **Appomattox** den **9 april 1865**."
+        },
+        {
+          "type": "image",
+          "asset": "abraham_lincoln_portrait",
+          "ratio": "1:1",
+          "caption": "Abraham Lincoln, unionens president, mördades fem dagar efter Appomattox."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fem dagar senare mördades Lincoln av **John Wilkes Booth**, en skådespelare från sydstaten. **[[Rekonstruktion]]**, perioden för återuppbyggnaden av Syd, börjar utan honom. I december avskaffade **1865**, [[Det 13:e tillägget]] slaveriet i hela landet."
+        },
+        {
+          "type": "funFact",
+          "text": "Kriget påskyndade också operationen: läkare som **Gurdon Buck** utförde de första ansiktsrekonstruktionerna på soldater som vanställts av Minié-kulor."
+        }
+      ]
+    },
+    {
+      "id": "course_40_la_guerre_de_secession_americaine_1861_1_p4",
+      "title": "Ärr och arv",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Under **[[Rekonstruktion]]** (**1865-1877**) röstade och valdes afroamerikaner. Sedan kommer reaktionen: **[[Ku Klux Klan]]** (**1865**), vit terroristorganisation, tillbakadragandet av federala trupper (**1877**), segregationslagar för Jim Crow. Den juridiska segregationen skulle pågå i nästan ett sekel."
+        },
+        {
+          "type": "paragraph",
+          "text": "På kartan, en enad nation utan lagligt slaveri. I själva verket en djup rasklyfta. Och verktygen för en framtida världsmakt: tung industri, järnvägar, en stark federal stat."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1860",
+              "title": "Lincoln val",
+              "detail": "Start av secessioner."
+            },
+            {
+              "date": "1861",
+              "title": "Fort Sumter",
+              "detail": "Början av kriget."
+            },
+            {
+              "date": "1863",
+              "title": "Frigörelse",
+              "detail": "Gettysburg proklamation och vändpunkt."
+            },
+            {
+              "date": "1865",
+              "title": "Appomattox och 13:e tillägget",
+              "detail": "Slut på striderna och konstitutionellt avskaffande."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Inbördeskriget (**1861-1865**) enade USA och avskaffade slaveriet, på bekostnad av **620 000** dödsfall, samtidigt som det lämnade en rasklyfta som Jim Crow-lagarna skulle förlänga."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "id": "course_139_la_naissance_du_jazz_americain",
+  "title": "Az amerikai jazz születése",
+  "subtitle": "1890-1960",
+  "subject": "art",
+  "subcategory": "Music",
+  "description": "A New Orleans-i születésű jazz afrikai ritmusokat, bluest és európai harmóniát kevert, majd feltalálta a swinget, a bebop-ot és a modális jazzt.",
+  "hero": {
+    "image": "la_naissance_du_jazz_americain",
+    "ratio": "16:9",
+    "hook": "Egy kikötővárosban Amerika feltalálja klasszikus zenéjét: a jazzt."
+  },
+  "sections": [
+    {
+      "id": "course_139_la_naissance_du_jazz_americain_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A jazz a 19. század vége felé született [[New Orleans]]. Louisiana kikötője, francia, spanyol, afrikai és karibi kereszteződés, a város egy hanglaboratórium."
+        },
+        {
+          "type": "paragraph",
+          "text": "A rabszolgaság és a szegregáció erőszakában született ez a zene „Amerika klasszikus zenéjévé”. Egy évszázad során hatással volt a rockra, a funkra és a hip-hopra. A jazzt megérteni annyi, mint megérteni a korlátok között feltalált szabadságot."
+        }
+      ]
+    },
+    {
+      "id": "course_139_la_naissance_du_jazz_americain_p1",
+      "title": "New Orleans és a Kongó tér",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A 19. század végén New Orleansban keveredtek a színes kreolok, a rabszolgasorba vetett afrikaiak leszármazottai és az európai bevándorlók. Az európai opera és a karibi ritmusok ott keresztezik egymást. A [[Kongó tér]]-nél, az egyetlen helyen Északon, ahol a feketéknek joguk volt vasárnaponként találkozni, a dobok és az afrikai poliritmusok megmaradtak."
+        },
+        {
+          "type": "image",
+          "asset": "congo_square_new_orleans_slaves_music",
+          "ratio": "4:3",
+          "caption": "Kongó tér: Afrikai ritmikus memória Louisiana szívében."
+        },
+        {
+          "type": "paragraph",
+          "text": "A **fúvószenekarok** (fúvószenekarok) felpezsdítik a felvonulásokat és temetéseket: lassú menetelés a temető felé, örömrobbanás a visszatéréskor. A gyász és az ünneplés közötti váltás a feltörekvő jazz érzelmi lelke."
+        },
+        {
+          "type": "funFact",
+          "text": "Az úttörőt, **Buddy Bolden**-t, a szakmáját tekintve borbélyt, soha nem jegyeztek fel: legendája azoké, akik a Mississippi túloldaláról hallották a kornetét."
+        }
+      ]
+    },
+    {
+      "id": "course_139_la_naissance_du_jazz_americain_p2",
+      "title": "Kék jegyek, improvizáció és Jim Crow",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A jazz a bluestól ​​örökli a [[kék jegyzetek]], „hajlított” jegyeit, amelyek kifejező feszültséget keltenek. Evangéliumból és munkadalokból meríti a hívást és a választ. Ezek az elemek a fúvószenekarok európai harmóniájára helyezkednek el."
+        },
+        {
+          "type": "paragraph",
+          "text": "A szünet [[Improvizáció a jazzben]]: a kotta már nem törvény, hanem rács. A zenész valós időben komponál. A [[Jim Crow törvényei]] Amerikájában ez a szabadság egyben politikai is: kijelenteni az egyén egyediségét, amikor a rendszer el akarja törölni azt."
+        },
+        {
+          "type": "funFact",
+          "text": "1917-ben az első jazzlemezt fehér zenészek (Original Dixieland Jass Band) vették fel: a lemezcégek még nem mertek fogadni a műfaj fekete feltalálóira."
+        }
+      ]
+    },
+    {
+      "id": "course_139_la_naissance_du_jazz_americain_p3",
+      "title": "Armstrong, swing, bebop, Kind of Blue",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A [[Nagy Migráció]]-vel Chicago és New York felé a jazz elhagyta a délieket. **Louis Armstrong** a virtuóz szólistát helyezi a középpontba. Harlemben a [[Harlem reneszánsz]] idején a jazzt fekete modernitásként ünneplik. Az 1930-as években a **Duke Ellington** [[hinta]] című filmje táncoltatta Amerikát."
+        },
+        {
+          "type": "image",
+          "asset": "louis_armstrong_trumpet_1920s_jazz",
+          "ratio": "4:3",
+          "caption": "Louis Armstrong: a szólista a jazz szívévé válik."
+        },
+        {
+          "type": "paragraph",
+          "text": "1945 után **Charlie Parker** feltalálta a [[bebop]]-t: gyors tempók, összetett harmóniák, zenehallgatás. A **1959**-ben **Miles Davis** közzétette a *Kék fajta*-t: a [[modális jazz]] lelassítja az akkordváltásokat egy szín felfedezéséhez. Még mindig ez a legkelendőbb jazzlemez a világon."
+        },
+        {
+          "type": "image",
+          "asset": "miles_davis_kind_of_blue_album_cool_jazz",
+          "ratio": "4:3",
+          "caption": "Kind of Blue (1959): modális, nyugodt és forradalmi jazz."
+        },
+        {
+          "type": "funFact",
+          "text": "A New York-i Birdland klub nevét Parker „Madár” becenevéről kapta. Parkert magát egy vita után egy éjszaka kirúgták."
+        }
+      ]
+    },
+    {
+      "id": "course_139_la_naissance_du_jazz_americain_p4",
+      "title": "Ingyenes jazz, fúzió és örökség",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az 1960-as években a [[free jazz]] megtörte az állampolgári jogokhoz kötődő keretet. Aztán a [[jazz fúzió]] keresztezi az elektromos rockot és a funkot. A swing, ez a rugalmas lüktetés még mindig öntözi a rockot és a hip-hopot. A télikertekben intézményesült jazz a pillanat nyelve marad: minden koncert egyedi."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "század vége",
+              "title": "New Orleans",
+              "detail": "Kongó tér, fúvószenekarok, a jazz születése."
+            },
+            {
+              "date": "1920-as évek",
+              "title": "Armstrong",
+              "detail": "A virtuóz szólista meghódítja Chicagót és New Yorkot."
+            },
+            {
+              "date": "1930-1940-es évek",
+              "title": "Swing, majd bebop",
+              "detail": "A tánctól a modern kamarazenéig."
+            },
+            {
+              "date": "1959",
+              "title": "Kék fajta",
+              "detail": "Miles Davis feltalál egy univerzális modális jazzt."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Az afrikai ritmusok, blues és európai harmónia fúziójából New Orleansban született jazz az improvizáció művészete és a szabadság szimbóluma."
+        }
+      ]
+    }
+  ]
+}

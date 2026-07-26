@@ -1,0 +1,120 @@
+{
+  "id": "course_180_thor_et_loki_mythologie_nordique",
+  "title": "Thor ve Loki (İskandinav mitolojisi)",
+  "subtitle": "İskandinav mitolojisi",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Şimşek tanrısı ve hile tanrısı: Macera ikilisi, ardından Ragnarök'te düşmanlar. İskandinav panteonunun iki yüzü.",
+  "hero": {
+    "image": "thor_et_loki_mythologie_nordique",
+    "ratio": "16:9",
+    "hook": "Biri çekiçle vuruyor. Diğeri kazanmak için yalan söyler. Birlikte Asgard'ı kurtarırlar… ta ki Loki'nin ona ihanet ettiği güne kadar."
+  },
+  "sections": [
+    {
+      "id": "course_180_thor_et_loki_mythologie_nordique_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Thor** ve **Loki**, İskandinav mitolojisindeki en popüler iki figürdür. Thor, insanları yıldırımla korur. Loki hile yaparak düzensizlik ekiyor. Seyahat hikayelerinde onlara sıklıkla rastlıyoruz."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aralarındaki bağ basit, komik bir dostluk değil. Tanrıların düzeni ile kaos arasındaki gerilimi gösterir. Şakacı arkadaşlıktan son savaşa kadar bu ittifak nasıl kurulur... sonra bozulur."
+        }
+      ]
+    },
+    {
+      "id": "course_180_thor_et_loki_mythologie_nordique_p1",
+      "title": "Asgard, Midgard ve yaylar",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bu efsaneler 5. yüzyıldan 12. yüzyıla kadar İskandinav halklarından gelmektedir. Bunları esas olarak bölgenin Hıristiyanlaştığı dönemde yazılan geç dönem İzlandaca metinler sayesinde biliyoruz. Ana kaynak, **Z1220** etrafında **Snorri Sturluson** tarafından yazılan ve [[Şiirsel Edda]] tarafından desteklenen [[Düzyazı Edda]]'dir."
+        },
+        {
+          "type": "image",
+          "asset": "asgard_midgard_bifrost_bridge_norse_mythology",
+          "ratio": "4:3",
+          "caption": "Asgard ve Midgard gökkuşağı köprüsü Bifröst ile birbirine bağlanıyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dünya kozmik ağaç [[Yggdrasil]] etrafında düzenlenmiştir. Üstte: **Asgard**, tanrıların evi. Alt kısım: **Midgard**, erkeklerin dünyası, **Bifröst** ile birbirine bağlı. Tanrılar iki klana ayrılmıştır: **Odin** (savaş ve egemenlik) liderliğindeki **Aesir** ve Freyr ve Freyja (doğurganlık) gibi **Kanatlar**."
+        },
+        {
+          "type": "funFact",
+          "text": "Antik metinlerde Bifröst kırılgan bir köprüdür: Ragnarök'te devlerin ağırlığı altında titreyecek ve çökecektir."
+        }
+      ]
+    },
+    {
+      "id": "course_180_thor_et_loki_mythologie_nordique_p2",
+      "title": "Thor, çekiç koruyucusu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Thor**, Odin ve Earth'ün oğludur. O, insanların en çok saygı duyduğu tanrıdır: insanlığı, doğanın serbest bırakılmış güçleri olan **devlere** karşı savunur. Sakallı ve kızıl saçlı, açık ve net bir gücü temsil ediyor."
+        },
+        {
+          "type": "image",
+          "asset": "thor_hammer_mjolnir_norse_god_painting",
+          "ratio": "4:3",
+          "caption": "Mjöllnir, Thor'un çekici: vurur ve ele geri döner."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cüceler tarafından dövülen silahı **Mjöllnir**, dağları paramparça eder ve her zaman eline geri döner. Güç kemeri ve demir eldivenler onu kullanmasına yardımcı oluyor. Adı Germen dillerinde **Perşembe** (Thor'un günü) anlamına geliyordu. Daha aristokrat Odin'in aksine Thor, özgür köylülerin tanrısıdır: yağmur, hasat, güvenli ev."
+        },
+        {
+          "type": "funFact",
+          "text": "Thor'un arabasını iki keçi çekiyor. Eğer açsa, akşamları onları yiyebilir ve ertesi gün çekiciyle diriltebilir... yeter ki kemikleri kırılmasın."
+        }
+      ]
+    },
+    {
+      "id": "course_180_thor_et_loki_mythologie_nordique_p3",
+      "title": "Loki, sonu kötü biten hile",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Loki**, Aesir'ler arasında yaşıyor ama dev kanından geliyor. Odin'le yaptığı kan anlaşmasıyla panteona katıldı. O bir **Hilebaz**: Şakaları ve yalanları rahatsız edici ama aynı zamanda hikayeyi ileriye taşıyor ve bazen tanrılara en büyük hazinelerini sunuyorlar."
+        },
+        {
+          "type": "image",
+          "asset": "loki_norse_trickster_god_mythology",
+          "ratio": "4:3",
+          "caption": "Loki, hile tanrısı: yararlı müttefik, hain ilan edildi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Şekil ve hatta cinsiyet değiştirir. Kısrak formunda Odin'in sekiz bacaklı atı [[Sleipnir]]'nin annesi olur. Dev Angrboda ile üç canavar yaratır: kurt **Fenrir**, yılan **Jörmungandr** ve ölülerin koruyucusu **Merhaba**. Şaka yavaş yavaş ihanete dönüşür: Işık saçan tanrı **Kel**'nin ölümünü organize eder. O andan itibaren kaderi mühürlendi."
+        }
+      ]
+    },
+    {
+      "id": "course_180_thor_et_loki_mythologie_nordique_p4",
+      "title": "Komik ikiliden Ragnarök'e",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Uzun bir süre Thor ve Loki birbirini tamamladı. Dev Thrym, Mjöllnir'i çaldığında Thor kendisini bir gelin kılığına sokar ve Loki onu geri almak için bir hizmetçi kılığına girer. Çekicin başarısız olduğu yerde yalan başarılı olur ve bunun tersi de geçerlidir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Daha sonra ittifak dağılır. Tanrıların alacakaranlığı **Ragnarök**'de Loki, Asgard'ın düşmanlarına liderlik ediyor. Thor, Loki'nin oğlu Jörmungandr'la yüzleşir: Yılanı öldürür ve dokuz adım sonra zehrinden ölür. Güç ve kurnazlık birlikte yok edilir."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Thor** ve **Loki**, koruyucu güç ile yıkıcı kurnazlık arasındaki gerilimi temsil ediyor. Komik dostluktan Ragnarök'e olan nefrete kadar uzanan bağları, tanrıların düzeninin kaos karşısında ne kadar kırılgan kaldığını gösteriyor."
+        }
+      ]
+    }
+  ]
+}

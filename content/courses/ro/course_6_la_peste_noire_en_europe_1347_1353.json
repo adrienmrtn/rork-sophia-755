@@ -1,0 +1,139 @@
+{
+  "id": "course_6_la_peste_noire_en_europe_1347_1353",
+  "title": "Moartea Neagră în Europa",
+  "subtitle": "1347-1353",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "Între 1347 și 1353, ciuma bubonică a ucis 30 până la 60% dintre europeni. Un dezastru de sănătate care zguduie societatea medievală și accelerează trecerea către o lume nouă.",
+  "hero": {
+    "image": "la_peste_noire_en_europe",
+    "ratio": "16:9",
+    "hook": "În șase ani, Europa pierde până la jumătate din populație."
+  },
+  "sections": [
+    {
+      "id": "course_6_la_peste_noire_en_europe_1347_1353_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Între **1347** și **1353**, Europa este lovită de **Moartea Neagră**. Cauzată de bacteria **Yersinia pestis**, ucide între **30 până la 60%** din populație sau **25 până la 50 de milioane** persoane."
+        },
+        {
+          "type": "paragraph",
+          "text": "Europenii erau deja slăbiți de foametea [[Mica epocă de gheață]], o răcire a climei care a stricat recoltele. Flagelul nu este doar o criză de sănătate. Este un accelerator istoric: zdruncina ordinea domnitoare și obligă societatea să se reconstruiască altfel."
+        }
+      ]
+    },
+    {
+      "id": "course_6_la_peste_noire_en_europe_1347_1353_p1",
+      "title": "Din Asia până în Italia",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bacteria circulă pentru prima dată printre rozătoare în Asia Centrală. [[Pax Mongolica]], o perioadă de relativă pace sub Imperiul Mongol, și [[Drumul Mătăsii]], o rețea comercială care leagă Asia de Europa, i-au oferit rute sigure. La ghişeul genovez al lui [[Caffa]], în Crimeea, asediată de [[Hoarda de Aur]] (un imperiu mongol al stepelor), boala se îndreaptă spre Mediterana. Galerele fug în Italia."
+        },
+        {
+          "type": "image",
+          "asset": "black_death_burial_medieval_plague",
+          "ratio": "4:3",
+          "caption": "Înmormântări de ciume: Europa descoperă moartea în masă."
+        },
+        {
+          "type": "paragraph",
+          "text": "În **octombrie 1347**, au acostat la **Messina**, în Sicilia. În ciuda expulzării navelor, răul este deja la doc. În **1348**, a ajuns la Marsilia, apoi în toată Europa prin intermediul rețelelor de comercianți italieni."
+        },
+        {
+          "type": "funFact",
+          "text": "Asediul lui Caffa este adesea citat ca unul dintre primele exemple de război biologic: se spune că mongolii au catapultat cadavre infectate peste ziduri."
+        }
+      ]
+    },
+    {
+      "id": "course_6_la_peste_noire_en_europe_1347_1353_p2",
+      "title": "Medicină neputincioasă",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Medicii se bazează pe [[Galen]], un medic antic grec, și pe [[Teoria miasmei]]: ideea că bolile vin din aer corupt. Ei nu văd vectorul real, puricele de șobolan ([[Xenopsylla cheopis]]). Când șobolanii mor, puricii trec la oameni."
+        },
+        {
+          "type": "image",
+          "asset": "plague_doctor_mask_beak",
+          "ratio": "4:3",
+          "caption": "Doctorul ciumei cu masca cu cioc: o protectie mai mult simbolica decat eficienta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Forma bubonică umflă ganglionii limfatici. Sepsisul face pielea neagră. Pneumonia se transmite de la om la om și ucide în **24 până la 48 de ore**. În orașele aglomerate și murdare, răspândirea este foarte rapidă."
+        }
+      ]
+    },
+    {
+      "id": "course_6_la_peste_noire_en_europe_1347_1353_p3",
+      "title": "Frica, flagelante, pogromuri",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Societatea se clătina. [[Flagelanti]] se biciuiesc în public pentru a-L potoli pe Dumnezeu. Arta inventează Dansele Macabre. În lipsa unei explicații, căutăm vinovați: [[Pogromurile evreiești (1348-1349)]] au însângerat valea Ronului și Imperiul Germanic. Acuzați că au otrăvit fântânile, mii de evrei au fost masacrați. Papa [[Clement al VI-lea]], pe atunci la Avignon, a încercat să-i protejeze. Prea puțin, prea târziu."
+        },
+        {
+          "type": "funFact",
+          "text": "La Avignon, Clement al VI-lea a rămas între două incendii mari pentru a „purifica aerul”. Căldura a ținut puricii la distanță: a supraviețuit."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Boccaccio]], un scriitor florentin, descrie tații care își abandonează fiii. Caritatea, cartierul, familia: totul se prăbușește de frica de contagiune."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1346",
+              "title": "Caffa",
+              "detail": "Ciuma ajunge la postul comercial genovez din Crimeea."
+            },
+            {
+              "date": "1347",
+              "title": "Messina",
+              "detail": "Galerele genoveze importă flagelul în Europa."
+            },
+            {
+              "date": "1348",
+              "title": "val european",
+              "detail": "Franța, Anglia, Imperiul: moartea se răspândește."
+            },
+            {
+              "date": "1353",
+              "title": "Reflux",
+              "detail": "Epidemia se calmează, Europa se transformă."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_6_la_peste_noire_en_europe_1347_1353_p4",
+      "title": "După moarte, schimbarea",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Spre **1353**, pandemia scade. Forța de muncă a devenit rară. Salariile cresc, corvées scad, iobăgie scade în Occident. Domnii trebuie să negocieze. Dezastrul i-a întărit, în mod paradoxal, pe supraviețuitori."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eșecul autorităților în fața flagelului hrănește și gândirea critică. Observăm mai mult, ne îndoim de vechile dogme. Golind satele și redistribuind moștenirile, Moartea Neagră a pregătit, în ciuda ei, terenul Renașterii."
+        },
+        {
+          "type": "takeaway",
+          "text": "Între **1347** și **1353**, Moartea Neagră a ucis până la jumătate din Europa. Acest șoc demografic slăbește ordinea domnișoară, crește prețul muncii și accelerează intrarea într-o lume nouă."
+        }
+      ]
+    }
+  ]
+}

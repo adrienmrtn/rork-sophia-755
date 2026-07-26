@@ -1,0 +1,116 @@
+{
+  "id": "course_211_comment_fonctionne_le_prix_du_petrole",
+  "title": "Petrol fiyatı nasıl işliyor?",
+  "subtitle": "Dünya ekonomisinin siniri",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Petrolün fiyatı tek bir satıcı tarafından belirlenmiyor. Üretici ülkeler, mali piyasalar ve ani krizler arasındaki **çekişmeden**, bazen saçmalık noktasına kadar doğar.",
+  "hero": {
+    "image": "comment_fonctionne_le_prix_du_petrole",
+    "ratio": "16:9",
+    "hook": "2020 yılında petrol satıcıları bundan kurtulmak için alıcılarına para ödedi. İşte nedeni."
+  },
+  "sections": [
+    {
+      "id": "course_211_comment_fonctionne_le_prix_du_petrole_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Petrol bazen “ekonominin kanı” olarak da adlandırılır. Fiyatı enflasyonu, benzin fiyatını ve hatta bazı ülkelerin istikrarını bile etkiliyor. Ancak kimse bu fiyatı damgayla belirlemez."
+        },
+        {
+          "type": "paragraph",
+          "text": "Üç gücün buluşmasından kaynaklanıyor: Petrolü çıkaran ülkeler, petrol daha topraktan çıkmadan ticaretini yapan finansal piyasalar ve herkesi paniğe sevk eden krizler. Arabistan çöllerine, Teksas ovalarına ve Chicago ekranlarına gidin."
+        }
+      ]
+    },
+    {
+      "id": "course_211_comment_fonctionne_le_prix_du_petrole_p1",
+      "title": "OPEC ve Amerikan kaya petrolü: arz savaşı",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Petrol piyasasının bir özelliği var: Kısa vadede fiyatlar yükseldiğinde talep neredeyse hiç düşmüyor. Arabalar, fabrikalar ve uçaklar enerjiyi bir gecede değiştiremez. Ekonomistler buna talebin **gelin** adını veriyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "1960 yılından bu yana, bir grup üretici ülke bu pazarı etkilemek için organize oldu: [[OPEC]]. Üyeleri üretim kotaları üzerinde anlaşarak fiyatları yüksek tutmaya çalışıyor. Rusya 2016'dan bu yana ittifaka katılarak OPEC+'ı oluşturuyor. Bu ülkeler toplamda dünya petrolünün yaklaşık %40'ını kontrol ediyor."
+        },
+        {
+          "type": "funFact",
+          "text": "159 litrelik tek bir varil petrol, bir kişinin yaklaşık bir yıllık el emeğine eşdeğer enerji içermektedir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ancak bu güç sarsıldı. Hidrolik kırma adı verilen bir teknik sayesinde Amerika Birleşik Devletleri, Suudi Arabistan'ı geride bırakarak on yıl içinde dünyanın en büyük petrol üreticisi haline geldi. Ayarlanması daha hızlı olan bu yeni teklif, piyasayı daha rekabetçi hale getirdi ve OPEC+'nın kontrol etmesi daha zor hale geldi."
+        }
+      ]
+    },
+    {
+      "id": "course_211_comment_fonctionne_le_prix_du_petrole_p2",
+      "title": "“Kağıt” yağı: finans işin içine girdiğinde",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Petrol, gemi veya boru hattıyla teslim edilen varillerin ötesinde, finansal piyasalarda da işlem görmektedir. İşlemlerin çoğu vadeli işlem piyasasından geçiyor: Bugün yalnızca bir, üç veya altı ay içinde teslim edilecek bir varil satın alıyoruz."
+        },
+        {
+          "type": "image",
+          "asset": "oil_futures_trading_floor_markets",
+          "ratio": "16:9",
+          "caption": "Petrol, teslim edilmeden çok önce finansal piyasalarda işlem görmektedir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bankalar ve hedge fonları tek bir varile bile dokunmak istemeden bu sözleşmeleri alıp satıyorlar: sadece fiyatların yükselip düşmeyeceğine dair bahse giriyorlar. Bu piyasaya para kazandırıyor ama aynı zamanda fiyatları da tedirgin ediyor. Dünyada iki fiyat referans olarak hizmet ediyor: [[Brent]], Kuzey Denizi'nden gelen petrol ve WTI, Teksas'tan gelen petrol. İkisi arasındaki boşluk kalite ve ulaşımdaki farklılıkları yansıtıyor."
+        }
+      ]
+    },
+    {
+      "id": "course_211_comment_fonctionne_le_prix_du_petrole_p3",
+      "title": "Fiyatlar çöküyor... veya patlıyor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Petrol piyasası acımasız döngülerde işliyor. Fiyatlar uzun süre yükseldiğinde üreticiler pahalı mevduatlara yatırım yapar ve bu da sonuçta arz fazlası yaratır. Fiyatlar düşük kaldığında ise tam tersi olur: Daha az araştırırız, bu da bir sonraki kıtlığa hazırlık yapar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kovid-19 krizi bunu çarpıcı bir şekilde gösterdi. Nisan 2020'de küresel ekonomi aniden durma noktasına geldi: kimse uçmuyordu veya araba kullanmıyordu ama kuyular üretime devam ediyordu. Depolar ağzına kadar dolduruldu. WTI'ın fiyatı daha sonra eksi 37 dolara düştü: satıcılar alıcılarına stoklarını boşaltmak için para ödüyorlardı."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tersine, 2022'de Rusya'nın Ukrayna'yı işgali kıtlık korkusunu artırdı: Rusya dünyanın en büyük ikinci ihracatçısı olan Brent petrolü birkaç hafta içinde 130 doları aştı. Petrol bu nedenle dünya gerilimlerinin gergin bir barometresi olmaya devam ediyor."
+        },
+        {
+          "type": "funFact",
+          "text": "Malzemelerin çıkarılması, plastik parçalar ve nakliye arasında tek bir akıllı telefon yapmak için yaklaşık 7 litre yağ gerekiyor."
+        }
+      ]
+    },
+    {
+      "id": "course_211_comment_fonctionne_le_prix_du_petrole_p4",
+      "title": "Petrolün geleceği var mı?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Uzun vadede petrol yeni bir zorlukla karşı karşıya: temiz enerjiye geçiş. Elektrikli otomobiller küresel talebi azaltırsa, üretici ülkeler rezervlerini değerlerini kaybetmeden satmak için fiyat savaşına girebilirler."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ancak bir paradoks piyasayı tehdit ediyor: Yatırımcılar iklim nedenleriyle yeni petrol projelerinden vazgeçtikçe, arz talepten daha hızlı düşerek yeni fiyat artışlarına neden olabilir. Petrol aniden yok olmayacak; plastikler, gübreler ve havacılık gibi ağır taşımacılık için vazgeçilmez olmaya devam ediyor."
+        },
+        {
+          "type": "takeaway",
+          "text": "Petrol fiyatı OPEC+, Amerikan kaya petrolü üretimi ve spekülatif finans piyasaları arasındaki anlaşmazlığın bir sonucudur. Sonuç: Fiyatlar en ufak bir jeopolitik şokta çökebilir veya patlayabilir."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "id": "course_54_la_decouverte_du_micro_ondes_par_acciden",
+  "title": "Upptäckten av mikrovågsugnen",
+  "subtitle": "Av en slump",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "1945 märkte en ingenjör att hans godisbit hade smält nära en radar. Ur denna observation föddes mikrovågsugnen.",
+  "hero": {
+    "image": "la_decouverte_du_micro_ondes",
+    "ratio": "16:9",
+    "hook": "En smält chokladkaka... och moderna rätter förändras."
+  },
+  "sections": [
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1945**, i USA, arbetar ingenjör **Percy Spencer** med radar. En dag märker han att godisbiten i fickan har smält. Inte på grund av kroppsvärme: på grund av radarvågor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Han testar med majs: popcornen poppar. Idén om en ugn som värmer annorlunda föddes."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p1",
+      "title": "Från radar till kök",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "percy_spencer_microwave_discovery_radar",
+          "ratio": "4:3",
+          "caption": "Andra världskrigets radar använde redan mikrovågor."
+        },
+        {
+          "type": "paragraph",
+          "text": "**mikrovågor** är elektromagnetiska vågor, som radioljus, men mer \"energiska\" än många konventionella radiovågor. Under kriget användes de främst till radar för att upptäcka flygplan och båtar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Spencer förstår att de också kan agitera vatten och fetter i mat... och därför värma upp den."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p2",
+      "title": "Den första ugnen är enorm",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "first_microwave_oven_radarange_1947",
+          "ratio": "4:3",
+          "caption": "Den första kommersiella mikrovågsugnen var storleken på ett skåp."
+        },
+        {
+          "type": "paragraph",
+          "text": "Den första kommersiella modellen, **Radarområde**, släpptes runt **1947**. Den är enorm, dyr och främst avsedd för restauranger eller båtar. Det kommer att ta årtionden att miniatyrisera det och göra det överkomligt för hem."
+        },
+        {
+          "type": "funFact",
+          "text": "Till en början var vissa rädda för att ugnen skulle \"göra maten radioaktiv\". Falskt: mikrovågor värms upp, de gör dig inte radioaktiv."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p3",
+      "title": "Hur värmer det egentligen?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mikrovågor vibrerar främst vattenmolekyler (och lite fett och socker). Denna omröring skapar **inuti värme** maten, inte bara på ytan som en panna."
+        },
+        {
+          "type": "paragraph",
+          "text": "Det är därför en maträtt kan vara varm på utsidan och ljummen i mitten om den är tjock: vågorna tränger inte in oändligt djupt."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p4",
+      "title": "Ett vardagsföremål",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Från 1970-1980-talet kom mikrovågsugnen in i miljontals kök. Det ändrar vanor: värm snabbt upp, färdigrätter, snabbare liv."
+        },
+        {
+          "type": "takeaway",
+          "text": "Mikrovågsugnen föddes från en slump observerad av Percy Spencer nära en radar. Vågorna agiterar huvudsakligen vattnet i maten och värmer det från insidan."
+        }
+      ]
+    }
+  ]
+}

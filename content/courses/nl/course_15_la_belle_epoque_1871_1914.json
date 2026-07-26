@@ -1,0 +1,129 @@
+{
+  "id": "course_15_la_belle_epoque_1871_1914",
+  "title": "De Belle Époque",
+  "subtitle": "1871-1914",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "Tussen het einde van de oorlog van 1870 en augustus 1914 geloofde Europa in vooruitgang. Elektriciteit, tentoonstellingen, nieuwe kunst... en breuken die tot catastrofes leiden.",
+  "hero": {
+    "image": "la_belle_epoque",
+    "ratio": "16:9",
+    "hook": "Veertig jaar geloof in de vooruitgang… voordat alles veranderde in 1914."
+  },
+  "sections": [
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_intro",
+      "title": "Inleiding",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "De **Belle Époque** duidt de periode van relatieve vrede aan tussen het einde van de [[Frans-Pruisische oorlog]] (**1871**) en het uitbreken van de [[Eerste Wereldoorlog]] (**1914**). Wij geloven in wetenschap, in vooruitgang, in rede."
+        },
+        {
+          "type": "paragraph",
+          "text": "Voor de rijke klassen van West-Europa waren het vier decennia van comfort en vindingrijkheid. Maar onder het vernisje schuilen al sociale breuklijnen en rivaliteit die alles zullen opblazen."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p1",
+      "title": "Wanneer technologie het dagelijks leven transformeert",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Een tweede industriële revolutie brengt **elektriciteit**, **olie**, chemie. De tram en de metro (Parijs, **1900**) veranderen de stad. De auto en het vliegtuig zijn geboren. De telefoon verkort de afstanden."
+        },
+        {
+          "type": "image",
+          "asset": "paris_universal_exhibition_1900",
+          "ratio": "4:3",
+          "caption": "De Wereldtentoonstelling van 1900 in Parijs, een toonbeeld van vooruitgang."
+        },
+        {
+          "type": "funFact",
+          "text": "De naam “Belle Époque” verschijnt pas na **1914**. Tijdgenoten leefden niet in ‘de Belle Époque’: het waren de overlevenden van de loopgraven die dit verloren paradijs hebben uitgevonden."
+        },
+        {
+          "type": "paragraph",
+          "text": "De Wereldtentoonstelling **1900** trekt **50 duizend**-bezoekers. De bioscoop van de gebroeders Lumière en de Moulin Rouge maken Parijs tot een entertainmenthoofdstad. [[Het positivisme van Auguste Comte]], een zeer invloedrijke filosofie, vat het optimisme samen: wetenschap zal alles oplossen."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p2",
+      "title": "Achter de schermen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Achter de boulevards werken arbeiders vaak **10 tot 12 uur** per dag, zonder echte bescherming. Stedelijke armoede voedt de spanningen tussen klassen."
+        },
+        {
+          "type": "image",
+          "asset": "eiffel_tower_1889",
+          "ratio": "4:3",
+          "caption": "De Eiffeltoren (1889), icoon van een moderniteit waar niet iedereen van profiteert."
+        },
+        {
+          "type": "paragraph",
+          "text": "Op wereldschaal deelt Europa Afrika. De [[Conferentie van Berlijn]] (**1884-1885**) stelt grenzen zonder overleg met de betrokken volkeren. In Frankrijk verscheurt de [[Dreyfus-affaire]] de Republiek: een joodse officier, Alfred Dreyfus, wordt ten onrechte veroordeeld voor spionage en antisemitisme komt aan het licht."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p3",
+      "title": "Nieuwe kunsten, dan de herfst",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "De kunsten exploderen. De [[Art Nouveau]] rondt de gevels af. [[Fauvisme]] en [[Kubisme]] schudden de schilderkunst op. De dokter [[Sigmund Freud]] onderzoekt het onbewuste. Albert Einstein publiceert [[Relativiteit]] in **1905**: ruimte en tijd zijn niet meer wat we dachten."
+        },
+        {
+          "type": "funFact",
+          "text": "In **1913** veroorzaakte het ballet *Het lenteritueel* van Igor Stravinsky in Parijs zo'n schandaal dat toeschouwers op de vuist gingen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dan verandert alles. Op 28 juni 1914 werd aartshertog **Franz Ferdinand**, erfgenaam van Oostenrijk-Hongarije, in Sarajevo vermoord. De tandwielen van allianties worden in beweging gezet. Op **4 augustus** mengt Groot-Brittannië zich in de oorlog. Het geloof in de vooruitgang sterft in de loopgraven."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1871",
+              "title": "Einde van de Frans-Pruisische oorlog",
+              "detail": "Geboorte van een verenigd Duitsland, Franse wrok."
+            },
+            {
+              "date": "1889",
+              "title": "Eiffeltoren",
+              "detail": "Symbool van technische moderniteit."
+            },
+            {
+              "date": "1894-1906",
+              "title": "Dreyfus-affaire",
+              "detail": "De Republiek scheurt zichzelf uiteen."
+            },
+            {
+              "date": "1900",
+              "title": "Universele tentoonstelling",
+              "detail": "Parijs, showcase van de wereld."
+            },
+            {
+              "date": "Augustus 1914",
+              "title": "Grote Oorlog",
+              "detail": "De Belle Époque eindigt abrupt."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "De Belle Époque (**1871-1914**) combineert technische vooruitgang en diepe breuken, alvorens weg te zinken in de chaos van de Grote Oorlog."
+        }
+      ]
+    }
+  ]
+}

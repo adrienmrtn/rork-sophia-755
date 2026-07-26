@@ -1,0 +1,96 @@
+{
+  "id": "course_47_pourquoi_baille_t_on",
+  "title": "Waarom gapen we?",
+  "subtitle": "Lichaam & hersenen",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Iedereen gaapt: mensen, honden, soms zelfs foetussen. Het is waarschijnlijk niet vanwege \"gebrek aan zuurstof\". Dit zijn de sterkste leads.",
+  "hero": {
+    "image": "pourquoi_baille_t_on",
+    "ratio": "16:9",
+    "hook": "Jij geeuwt. Je buurman gaapt. En het is (bijna) niet toevallig besmettelijk."
+  },
+  "sections": [
+    {
+      "id": "course_47_pourquoi_baille_t_on_intro",
+      "title": "Inleiding",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Geeuwen lijkt heel gewoon. Het is echter een complexe reflex: kaak, borstkas, middenrif, het hele lichaam is erbij betrokken. Leeuwen, honden, mensen: veel dieren gapen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lange tijd hebben we gezegd: “het is om meer zuurstof te hebben”. Dit idee wordt nu grotendeels verlaten. Moderne verklaringen zijn interessanter."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p1",
+      "title": "Niet (vooral) voor zuurstof",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Experimenten hebben aangetoond dat het verhogen van de zuurstof in de lucht het geeuwen niet verhindert. Verlaag ook de kooldioxide iets. Geeuwen is dus geen simpel ‘luchtje inhalen’."
+        },
+        {
+          "type": "paragraph",
+          "text": "Een sterke voorsprong vandaag: geeuwen helpt **om uw temperatuur te regelen**. Door breed in te ademen en het gezicht te strekken, zullen we het hoofd “ventileren” en een beetje afkoelen, vooral als we moe zijn."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p2",
+      "title": "Waarom is het besmettelijk?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "contagious_yawning_people_group",
+          "ratio": "4:3",
+          "caption": "Iemand zien gapen is vaak genoeg om de reflex te activeren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bij mensen kan het zien, horen of zelfs lezen van het woord ‘geeuw’ een geeuw veroorzaken. Het is niet zomaar een stomme imitatie: het beïnvloedt ook **empathie** en hersencircuits die gekoppeld zijn aan [[Spiegelneuronen en besmettelijkheid]], neuronen die activeren wanneer we handelen... of wanneer we iemand zien handelen."
+        },
+        {
+          "type": "funFact",
+          "text": "Jonge kinderen gapen weinig vanwege besmetting. Deze gevoeligheid komt later, samen met bepaalde sociale vaardigheden."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p3",
+      "title": "We gapen al voordat we geboren worden",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Foetussen gapen vanaf ongeveer de **11e week** van de zwangerschap. Op deze leeftijd ademen hun longen nog geen lucht in. Dus nogmaals, het gaat niet om 'een tekort aan zuurstof'."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bij de foetus kan geeuwen de ontwikkeling van kaak- en gezichtsspieren bevorderen."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p4",
+      "title": "Geeuwen om alert te blijven?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We gapen vaak als we moe zijn... maar ook vlak voor een toets, of als we ons vervelen terwijl we geconcentreerd proberen te blijven. Rekken kan het zenuwstelsel stimuleren en **helpen u waarschuwen**."
+        },
+        {
+          "type": "takeaway",
+          "text": "Geeuwen is waarschijnlijk geen gebrek aan zuurstof. Het zou eerder dienen om de hersenen te reguleren (temperatuur, waakzaamheid) en bij mensen verspreidt het zich ook via sociale besmetting."
+        }
+      ]
+    }
+  ]
+}

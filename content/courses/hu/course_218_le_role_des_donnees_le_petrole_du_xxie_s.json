@@ -1,0 +1,108 @@
+{
+  "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s",
+  "title": "Az adatok szerepe („a XXI. század olaja”)",
+  "subtitle": "A legértékesebb digitális forrás",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Azt mondják, az adatok az új olaj. De az olajjal ellentétben ezek soha nem fogynak ki, és annál értékesebbek lesznek, minél többször találkoznak velük.",
+  "hero": {
+    "image": "le_role_des_donnees",
+    "ratio": "16:9",
+    "hook": "A Facebook már azelőtt sejtheti, hogy valaki férjhez megy vagy elköltözik, mielőtt észrevenné."
+  },
+  "sections": [
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A 2010-es évek óta elterjedt egy kifejezés: a **adat** „a 21. század olaja” lenne. Az ötlet egyszerű: miután algoritmusok finomítják, a növekedés és a globális hatalom motorjává válnak."
+        },
+        {
+          "type": "paragraph",
+          "text": "De ellentétben az olajjal, a kifogyó erőforrással, az adatok soha nem fogyasztanak el: végtelenségig másolhatók, és más információkkal kombinálva értékesebbé válnak. Íme, miért alakította át a globális gazdaságot."
+        }
+      ]
+    },
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p1",
+      "title": "Viselkedésünk előrejelzése önmagunk előtt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az adatok valódi értéke nem egy egyszerű név- vagy címlistában rejlik, hanem abban, hogy képesek előre jelezni jövőbeli viselkedésünket. Minden keresés, minden mozdulat, minden kattintás nyomot hagy, amit a technológiai cégek összeállítanak, hogy minden egyes személyről nagyon pontos portrét készítsenek."
+        },
+        {
+          "type": "funFact",
+          "text": "A Facebook észrevesz egy jelentős változást az életében, például egy közelgő házasságot vagy költözést, még azelőtt, hogy az érintett személy teljesen tisztában lenne vele, azáltal, hogy kis eltéréseket észlel online szokásaiban."
+        },
+        {
+          "type": "paragraph",
+          "text": "Viselkedésünk szisztematikus kiaknázása eredményezte azt, amit Shoshana Zuboff kutató **felügyeleti** kapitalizmusnak nevez: az emberek többé nem csak vásárlók, hanem egy olyan rendszer nyersanyagává válnak, amely a legtöbbet licitálónak ad el jóslatokat."
+        }
+      ]
+    },
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p2",
+      "title": "Miért szinte lehetetlen ezekkel az óriásokkal versenyezni",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az adatgazdaság egy jó körforgásban működik: minél több adattal rendelkezik egy cég, annál jobb a szolgáltatása, ami több felhasználót vonz, akik még több adatot generálnak. A mesterséges intelligencia felgyorsította ezt a jelenséget: a több milliárd példán betanított [[gépi tanulás]] algoritmus pontosabbá és gyorsabban fejlődik, mint egy korlátozott erőforrásokkal rendelkező versenytárs."
+        },
+        {
+          "type": "image",
+          "asset": "artificial_intelligence_machine_learning_datacenter",
+          "ratio": "16:9",
+          "caption": "Az adatközpontok annyi áramot fogyasztanak, mint az egész városok e hatalmas információáramlás feldolgozásához."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ezek az óriások, az egyesült államokbeli [[GAFAM]] és a kínai BATX már nem elégszik meg eredeti szektoruk uralásával: adatszolgáltatási előnyüket arra használják fel, hogy egészségügyi, pénzügyi vagy csatlakoztatott autók piacán terjeszkedjenek, így számos területen akadályozzák az innovációhoz való hozzáférést."
+        }
+      ]
+    },
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p3",
+      "title": "Európa visszavág a GDPR-ral",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ezzel a jogkörrel szembesülve az Európai Unió 2018-ban létrehozta a [[GDPR]] szabályozást, amely elméletileg visszaadja a polgároknak a saját személyes adataik feletti hatalmat: átláthatóság, elfelejtéshez való jog, kötelező hozzájárulás."
+        },
+        {
+          "type": "paragraph",
+          "text": "Erőssége az extraterritorialitásból adódik: minden európai polgárok adatait kezelő cégnek eleget kell tennie, globális forgalmának 4 százalékáig terjedő pénzbírsággal. Ez arra kényszerítette az olyan óriásokat, mint a Meta vagy az Amazon, hogy világszerte felülvizsgálják gyakorlataikat, és Európát nem akaró globális szabályozóvá tették."
+        },
+        {
+          "type": "funFact",
+          "text": "Az egyértelműség érdekében a GDPR követelménye előtt egy átlagos embernek körülbelül 76 munkanapba telt volna, hogy egy év alatt elolvassa az általa használt digitális szolgáltatások összes szolgáltatási feltételeit."
+        }
+      ]
+    },
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p4",
+      "title": "Adatok, szuverenitási kérdés",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A gazdaságon túl az adatok maguk az államok hatalmi eszközeivé váltak, amelyek felhasználhatják őket lakosságuk nyomon követésére vagy a közvélemény irányítására. Azok az országok, amelyek nem tudják megvédeni állampolgáraik adatait, a technológiai függőség egy formáját kockáztatják, amelyet [[digitális szuverenitás]] megsértésnek neveznek."
+        },
+        {
+          "type": "paragraph",
+          "text": "Az elkövetkező évtizedek nagy kihívása az lesz, hogy megtaláljuk az egyensúlyt a nagyszabású adatelemzés által lehetővé tett haladás és a magánélet tiszteletben tartása között, amely az egyéni szabadság elengedhetetlen feltétele egy egyre inkább összekapcsolt társadalomban."
+        },
+        {
+          "type": "takeaway",
+          "text": "Az adatok stratégiai eszközzé váltak, amelynek értéke abból fakad, hogy képesek előre jelezni viselkedésünket. Ez a gazdaság azoknak a technológiai óriásoknak kedvez, amelyekkel szinte lehetetlen felvenni a versenyt, amire Európa szigorú szabályozással válaszol: a GDPR-ral."
+        }
+      ]
+    }
+  ]
+}

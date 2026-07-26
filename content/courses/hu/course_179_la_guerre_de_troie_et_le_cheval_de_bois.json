@@ -1,0 +1,135 @@
+{
+  "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois",
+  "title": "A trójai háború és a fából készült ló",
+  "subtitle": "görög mitológia",
+  "subject": "mythologie",
+  "subcategory": "Greece: the heroes",
+  "description": "Tíz év ostrom, istenek mindkét oldalon, aztán faló. Az ókori Görögország legnagyobb epikus meséje és a katonai csalás archetípusa.",
+  "hero": {
+    "image": "la_guerre_de_troie_et_le_cheval_de_bois",
+    "ratio": "16:9",
+    "hook": "Egy aranyalma, egy elrabolt nő, majd tíz év háború: Trója nem karok alá esik, hanem egy faló mellé."
+  },
+  "sections": [
+    {
+      "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A **Trójai háború** az ókori Görögország nagyszerű története, amelyet Homérosz örökített meg az Iliászban. A görög városok koalíciója ostromolta [[Ilium]]-t, Trója másik elnevezését, **tíz évig**. Az istenek oldalra állnak. A hősök a becsületért halnak meg."
+        },
+        {
+          "type": "paragraph",
+          "text": "A város nem enged az erőszaknak. A lány egy cselből esik: a **fa ló**. Ez a csel univerzális szimbólummá vált, a csatatértől a mai számítógépes vírusokig."
+        }
+      ]
+    },
+    {
+      "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_p1",
+      "title": "Egy aranyalma kezdi az egészet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Minden Peleusz és Thetis nimfa esküvőjén kezdődik. **Eris**, a viszály istennője nincs meghívva. Dühösen dob egy aranyalmát, amelyen „A legszebbnek” van vésve. Három istennő követeli őt: **Hera**, **Athéné** és **Afrodité**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zeusz egy halandó véleményét kéri: **Párizs**, Trója hercege. Héra hatalmat ígér neki, Athéné győzelmet a csatában, Aphrodité a legszebb nő szerelmét. Aphroditét választja. Felajánlja neki **Hélène**-t, **Menelaus**, Spárta királyának feleségét. Paris elviszi Trójába. Görögország feláll, hogy visszaszerezze."
+        },
+        {
+          "type": "funFact",
+          "text": "A törökországi Hisarlikban a régészek egy leégett várost találtak Kr.e. **1184 körül.**: a történelmi Trója lehetséges helyszíne a mítosz mögött."
+        }
+      ]
+    },
+    {
+      "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_p2",
+      "title": "Tíz év ostrom győztes nélkül",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Agamemnon**, Menelaosz testvére és Mükéné királya veszi át a parancsnokságot. Hatalmas flotta távozik: Achilles, Ajax, a bölcs Nestor, a ravasz **Ulysses**. A görögök vagy akhájok Trója vidékén, [[Troad]]-ben partraszállnak, és megkezdődik az ostrom."
+        },
+        {
+          "type": "image",
+          "asset": "greek_fleet_trojan_war_thousand_ships_painting",
+          "ratio": "4:3",
+          "caption": "A görög flotta: a legenda ezer hajóról beszél."
+        },
+        {
+          "type": "paragraph",
+          "text": "Trója falai állítólag lerombolhatatlanok, Poszeidón és Apollo segítségével épültek. Tíz évig harcoltunk a [[Scamander]] síkságon döntés nélkül. A földön emberek halnak meg. Az Olümposzon Héra és Athéné segíti a görögöket; Aphrodité és Apollón védik [[Priam]], Trója öreg királyának fiait."
+        }
+      ]
+    },
+    {
+      "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_p3",
+      "title": "A fa ló",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az erő nem elég. **Ulysses**, Ithaka királya és a [[Nyolcad vér]] (intelligens csel) mestere feltalálja a csapdát. A görögök felgyújtják a táborukat, úgy tesznek, mintha elmennének, és elrejtőznek [[Tenedos]] sziget közelében. A parton hagynak egy hatalmas üreges **fa lovat**, tele katonákkal."
+        },
+        {
+          "type": "image",
+          "asset": "trojan_horse_wooden_troy_ancient_painting",
+          "ratio": "4:3",
+          "caption": "A trójai faló: megtévesztő felajánlás, katonák bent."
+        },
+        {
+          "type": "paragraph",
+          "text": "A görög kém **Egyébként** meggyőzi a trójaiakat, hogy a ló felajánlás Athénének. A pap **Laocoon** csapdát kiált: figyelmen kívül hagyjuk őt. A sáncok egy részét lebontották, hogy a ló bejusson. Éjszaka a görögök kijöttek, kinyitották a kapukat, és a hazatérő sereg befejezte a várost."
+        },
+        {
+          "type": "funFact",
+          "text": "Az „az arc, amely ezer hajót vízre bocsátott” kifejezés Helen esetében Christopher Marlowe költőtől származik. Még viccből feltaláltuk a „helen”-t is, egy ezer hajónak megfelelő szépségegységet."
+        }
+      ]
+    },
+    {
+      "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_p4",
+      "title": "A bukás és az örökség",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Troy ég. Priamost megölik. A túlélők rabszolgákká válnak. Csak a herceg **Aeneas** menekült apjával és isteneivel [[Lárész]]; később a római legenda Róma ősapjává tette. A nyerteseket sem kímélik: veszedelmes visszatéréseik gyakran tragikusak. Agamemnont meggyilkolják. Odüsszeusz még tíz évig vándorol. [[A hősök visszatérése (Nostoi)]]"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Mítosz",
+              "title": "Párizs ítélete",
+              "detail": "Egy aranyalma, Helene-t elrabolták, a háború elkezdődik."
+            },
+            {
+              "date": "10 év",
+              "title": "Trója ostroma",
+              "detail": "A sáncok tartanak; istenek és hősök ütköznek."
+            },
+            {
+              "date": "Végzetes éjszaka",
+              "title": "fa ló",
+              "detail": "Odüsszeusz trükkje megnyitja a bevehetetlen várost."
+            },
+            {
+              "date": "Után",
+              "title": "Nostoi",
+              "detail": "A győztesek visszatérése gyakran szerencsétlenségbe torkollik."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Az aranyalma miatti isteni veszekedésből született trójai háború csak tíz év után ért véget: nem erőszakkal, hanem Ulysses ravaszságával és egy falóval, amely egy éjszaka alatt elpusztította a várost."
+        }
+      ]
+    }
+  ]
+}

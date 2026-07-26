@@ -1,0 +1,139 @@
+{
+  "id": "course_39_la_democratie_athenienne",
+  "title": "az athéni demokrácia",
+  "subtitle": "Kr. e. 5. század",
+  "subject": "histoire",
+  "subcategory": "Cold War & Contemporary World",
+  "description": "Az ie 5. században Athén feltalált egy olyan rendszert, amelyben a polgárok közvetlenül kormányoztak. Lottóhúzás, egyenlő vélemény… és hatalmas kizárás.",
+  "hero": {
+    "image": "la_democratie_athenienne",
+    "ratio": "16:9",
+    "hook": "Hogyan találta fel egy görög város az emberek hatalmát és annak határait."
+  },
+  "sections": [
+    {
+      "id": "course_39_la_democratie_athenienne_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az ie 5. században Athén feltalált valami radikálisat: **[[Politika]]** abban az értelemben, hogy a polgárok már nem a király alattvalói, hanem sorsuk szereplői. A hatalom (*kratos*) a népé (*demók*). Innen a demokrácia szó."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ez a válságokból és reformokból született közvetlen demokrácia a nyugati politikai gondolkodás referenciapontja marad erősségeivel és vak foltjaival."
+        }
+      ]
+    },
+    {
+      "id": "course_39_la_democratie_athenienne_p1",
+      "title": "Reformok, amelyek megnyitják a várost",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az ie 7. században Athén az arisztokraták és az eladósodott parasztok között szakadt. **[[Solon]]**, megválasztott államférfi a Kr.e. **594-ben.**, eltörli az adósrabszolgaságot, és a vagyon szerint nyit bíróságokat, nem csak a vér szerint."
+        },
+        {
+          "type": "paragraph",
+          "text": "Az igazi fordulópont a **[[Cleisthenes]]** (**508-507**). Ez a reformátor létrehozza a **10 zöldség torzset** a klánok feloszlatására, és létrehozza a **[[Boule]]**, sorshúzással kihúzott Ötszázak Tanácsát. Minden polgár szolgálhatja a várost."
+        },
+        {
+          "type": "image",
+          "asset": "athens_agora_ancient_ruins",
+          "ratio": "4:3",
+          "caption": "Az athéni agora, a polgári élet szíve."
+        },
+        {
+          "type": "funFact",
+          "text": "Egy túl erős ember eltávolítására az athéniak megszavazták a **[[Cserépszavazás]]** kerámiaszilánkot: tíz év száműzetés, határozatképes **6000** szavazó."
+        }
+      ]
+    },
+    {
+      "id": "course_39_la_democratie_athenienne_p2",
+      "title": "Hogyan működik Periklész alatt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az 5. század közepén a tizenötször újraválasztott stratéga, az athéni aranykor figurája, **Periklész** vezetésével a rendszer nyitottabbá vált. A **Ecclesia**, a polgári gyűlés évente körülbelül **40 alkalommal** ülésezik a Pnyx hegyén. Szavazik a törvényekről, a háborúról, a békéről és a költségvetésről."
+        },
+        {
+          "type": "image",
+          "asset": "pericles_bust_sculpture",
+          "ratio": "1:1",
+          "caption": "Periklész, tizenötször újraválasztott stratéga, az athéni aranykor alakja."
+        },
+        {
+          "type": "paragraph",
+          "text": "A **[[Isegoria]]** garantálja a beszéd egyenlőségét. A **[[Misthos]]**, napidíj, lehetővé teszi a legszegényebbek ülését. Az igazságszolgáltatás a **[[Heliaia]]**: **6 000** esküdtek sorsolás útján történik. A sorshúzás korlátozza a hatalom monopolizálását, kivéve a katonai stratégákat."
+        }
+      ]
+    },
+    {
+      "id": "course_39_la_democratie_athenienne_p3",
+      "title": "Sokakat kizáró demokrácia",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Körülbelül **300 000** lakos közül csak **30 000–50 000** férfi állampolgár szavaz. A nők, a rabszolgák és a metikusok (rezidens külföldiek) nem tartoznak ide. A **451**-ben Periklész még szigorítja a szabályt: két állampolgár szülő szükséges."
+        },
+        {
+          "type": "paragraph",
+          "text": "Alapvető paradoxon: a társak közötti egyenlőség a rabszolgaságon és a kirekesztésen alapul. Szemtől szembeni demokrácia, intenzív, de zárt."
+        },
+        {
+          "type": "funFact",
+          "text": "Akit nem érdekelt a közélet, azt *idiótának*-nak (\"egyén\") hívták. A szó „idiótát” adott: a közjótól való elszakadást az ész hiányának tekintették."
+        }
+      ]
+    },
+    {
+      "id": "course_39_la_democratie_athenienne_p4",
+      "title": "Törékenységek és öröklődés",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Egy [[Demagóg]], a szenvedélyeknek hízelgő hangszóró, meghatottan tudja vinni a szerelvényt. **Plato**, mestere halála által fémjelzett filozófus, **Szókratész** (**Kr.e. 399**), a demokráciában az igazsággal szembeni vélemény uralmát látja, és a többség zsarnokságának tipikus példáját."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hibái ellenére Athén maradandó eszméket hagy örökül: a hatalmon lévők felelőssége, a törvény előtti egyenlőség, az ellentmondásos vita. Ma még a sorsolás és a közvetlen demokrácia is szóba kerül a kortárs vitákban."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Kr. e. 594",
+              "title": "Solón",
+              "detail": "Vége az adósrabszolgaságnak."
+            },
+            {
+              "date": "Kr. e. 508",
+              "title": "Cleisthenes",
+              "detail": "Vegyes törzsek és Boulé."
+            },
+            {
+              "date": "5. század",
+              "title": "Periklész",
+              "detail": "Misthos és radikális demokrácia."
+            },
+            {
+              "date": "Kr. e. 399",
+              "title": "Szókratész halála",
+              "detail": "A népszuverenitás sötét oldala."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Az athéni demokrácia a szabad férfipolgárok közvetlen kormánya volt, amely a sorsoláson és a beszédegyenlőségen alapult. Kizárta a lakosság körülbelül **85%-át**, de kitalálta a nyugati nyilvános vitát."
+        }
+      ]
+    }
+  ]
+}

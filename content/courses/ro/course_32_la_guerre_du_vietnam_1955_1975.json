@@ -1,0 +1,134 @@
+{
+  "id": "course_32_la_guerre_du_vietnam_1955_1975",
+  "title": "Războiul din Vietnam",
+  "subtitle": "1955-1975",
+  "subject": "histoire",
+  "subcategory": "Cold War & Contemporary World",
+  "description": "Timp de douăzeci de ani, Statele Unite au angajat o forță imensă în Vietnam pentru a reduce comunismul. Se blochează, se împart și pleacă fără să fi câștigat.",
+  "hero": {
+    "image": "la_guerre_du_vietnam",
+    "ratio": "16:9",
+    "hook": "Cea mai mare putere mondială se confruntă cu un război pe care nu-l poate câștiga."
+  },
+  "sections": [
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În inima Războiului Rece, Vietnamul a fost împărțit în două. În Nord, un regim comunist. În Sud, un stat susținut de Occident. Statele Unite trimit resurse enorme acolo. Cu toate acestea, se blochează."
+        },
+        {
+          "type": "paragraph",
+          "text": "Acest conflict nu este doar militar. Împarte America, arată limitele forței brute și lasă traume de durată de ambele părți."
+        }
+      ]
+    },
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_p1",
+      "title": "O țară divizată, apoi un război în creștere",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "După înfrângerea Franței în **[[Războiul Indochinei]]**, Acordurile de la Geneva (**1954**) au împărțit Vietnamul la paralela **17**. În Nord conduce **[[Ho Chi Minh]]**, lider naționalist și comunist. În Sud, un regim autoritar susținut de Washington."
+        },
+        {
+          "type": "paragraph",
+          "text": "Președinții americani **John F. Kennedy** apoi **Lyndon B. Johnson** se tem de **[[teoria domino]]**: dacă o țară cade în comunism, vecinii ar urma. În **august 1964**, un incident naval în Golful Tonkin servește drept pretext pentru extinderea războiului. Din **1965**, operațiunea **[[Tunetul rulant]]** bombardează nordul, iar pușcașii marini aterizează în Da Nang."
+        },
+        {
+          "type": "image",
+          "asset": "vietnam_war_american_soldiers",
+          "ratio": "4:3",
+          "caption": "Soldații americani în Vietnam: un război de uzură în junglă."
+        },
+        {
+          "type": "funFact",
+          "text": "Johnson a spus în privat după Tonkin: „Din câte știu eu, marina noastră a împușcat balenele în acea seară.”"
+        }
+      ]
+    },
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_p2",
+      "title": "De ce puterea nu este suficientă",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În **1969**, aproximativ **543.000** soldați americani erau la fața locului. Strategia **[[cauta si distruge]]** (cauta inamicul pentru a-l distruge) si superioritatea aeriana nu au perturbat aprovizionarea nord-vietnamezei prin traseul Ho Chi Minh. Generalul **Vo Nguyen Giap**, liderul militar al Nordului, miză pe hărțuirea și sprijinul unei părți a populației."
+        },
+        {
+          "type": "paragraph",
+          "text": "De asemenea, americanii folosesc defolianți precum Agentul Orange pentru a curăța jungla. Costul uman și politic explodează. Intră sicriele. **[[Pentagon]]**, sediul apărării americane, descoperă că voința politică locală poate rezista în fața tehnologiei."
+        },
+        {
+          "type": "funFact",
+          "text": "Au fost eliberați peste **80 de milioane** litri de erbicide, distrugând aproximativ **20%** pădurile din Vietnam de Sud."
+        }
+      ]
+    },
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_p3",
+      "title": "Șocul ofensivei Tet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pe **30 ianuarie 1968**, în timpul Anului Nou vietnamez, **[[Ofensiva Tet]]** lovește mai mult de **100** orașe. Pe teren, este un eșec pentru Nord. La televiziunea americană, a fost un șoc: „aproape victorie” anunțată de Washington părea falsă."
+        },
+        {
+          "type": "paragraph",
+          "text": "Președintele **Richard Nixon** a lansat apoi „Vietnamizarea”: retragerea trupelor americane în timp ce înarma Sudul. Acordurile de la Paris (**1973**) au marcat plecarea americană. Fără un protector, Saigon, capitala Sudului, s-a prăbușit în doi ani."
+        }
+      ]
+    },
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_p4",
+      "title": "Sfârșitul războiului și ceea ce lasă",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**30 aprilie 1975**, caderea Saigonului. Aproximativ **58.000** americani au murit. Pierderile vietnameze au fost de milioane. Primul război cu adevărat televizat, conflictul a scos la iveală și crime precum masacrul meu, în care soldații americani au ucis civili în 1968. America devine mai suspicioasă față de intervențiile îndepărtate. **[[Laiul meu]]**"
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1954",
+              "title": "Acordurile de la Geneva",
+              "detail": "Despărțire provizorie la paralela 17."
+            },
+            {
+              "date": "1965",
+              "title": "alpinism american",
+              "detail": "Bombardele și debarcarea pușcașilor marini."
+            },
+            {
+              "date": "1968",
+              "title": "Ofensiva Tet",
+              "detail": "Soc de televiziune și schimbare de opinie."
+            },
+            {
+              "date": "1973",
+              "title": "Acordurile de la Paris",
+              "detail": "Retragerea forțelor americane."
+            },
+            {
+              "date": "1975",
+              "title": "Căderea Saigonului",
+              "detail": "Reunificarea sub comunism."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "După **acum 20 de ani** de conflict, Statele Unite au părăsit Vietnamul fără victorie: puterea militară învinsă politic, țara reunificată sub comunism, societatea americană divizată pe termen lung."
+        }
+      ]
+    }
+  ]
+}

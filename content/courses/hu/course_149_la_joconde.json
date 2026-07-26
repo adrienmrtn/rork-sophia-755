@@ -1,0 +1,137 @@
+{
+  "id": "course_149_la_joconde",
+  "title": "A Mona Lisa",
+  "subtitle": "1503-1519",
+  "subject": "art",
+  "subcategory": "Iconic works",
+  "description": "**Leonardo da Vinci** festette **1503** és **1519** között, *Mona Lisának* a Louvre abszolút ikonjává vált. Technika, titokzatos mosoly… és egy repülés a **1911**-ben, ami mindent megváltoztatott.",
+  "hero": {
+    "image": "la_joconde",
+    "ratio": "16:9",
+    "hook": "Mosoly, lopás, mítosz: hogyan lett egy portré a világ leghíresebb alkotása."
+  },
+  "sections": [
+    {
+      "id": "course_149_la_joconde_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "*Mona Lisának*, amelyet **1503** és **1519** között festett **Leonardo da Vinci**, a világ leglátogatottabb festménye. A **Louvre** kiállításon éppúgy lenyűgözi a technikája, mint a története. Ez nem csak egy gyönyörű portré. Ez egy mítosz, amelyet a művészet, a tudomány alkotott és egy hír."
+        },
+        {
+          "type": "paragraph",
+          "text": "Miért inkább ez az arc, mint egy másik? Mert Leonardo oda koncentrálta az innovációkat, és mert egy látványos repülés tette híressé a világban."
+        }
+      ]
+    },
+    {
+      "id": "course_149_la_joconde_p1",
+      "title": "Leonardo és a sfumato",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A portré Firenzében kezdődik, **1503** környékén. A szponzor a **Francesco del Giocondo** kereskedő. A modell a felesége, [[Lisa Gherardini]] lenne. De Leonard soha nem szállítja át a festményt. Őrizte, évekig retusálta, majd Franciaországba vitte, ahol **1519**-ben halt meg."
+        },
+        {
+          "type": "image",
+          "asset": "mona_lisa_leonardo_da_vinci_louvre_painting",
+          "ratio": "4:3",
+          "caption": "Mona Lisa a Louvre-ban: egy kis nyárfa tábla, amely globális ikonná vált."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jellegzetes technikája a [[Leonardi sfumato]]: mázak, nagyon vékony rétegek, amelyek kitörlik a kontúrokat. Nincs több kemény vonal. Az arc elolvad a levegőben. Leonardo is hozzáteszi a [[Légi perspektíva]]: a távoli táj elkékül és meglágyul, mint az igazi látásban."
+        }
+      ]
+    },
+    {
+      "id": "course_149_la_joconde_p2",
+      "title": "A szemmel játszó mosoly",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A híres mosoly nem csak egy festett érzelem. [[Perifériás látás]]. Amikor a modell szemébe bámulunk, a retina szélei lágy árnyékban látják a szájat: a mosoly jelenlevőnek tűnik. Ha közvetlenül a szájba néz, csökken."
+        },
+        {
+          "type": "image",
+          "asset": "mona_lisa_smile_detail_close_up",
+          "ratio": "1:1",
+          "caption": "Minél többet bámulod, annál inkább eltűnni látszik a mosoly."
+        },
+        {
+          "type": "funFact",
+          "text": "Leonardo, festő és tudós is, optikát tanult. A mosoly rejtélye részben azon a pontos tudáson nyugszik, hogy az emberi szem hogyan dolgozza fel az árnyékokat."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eredmény: az arc élőnek, változónak tűnik, szinte tudatában van a tekintetünknek."
+        }
+      ]
+    },
+    {
+      "id": "course_149_la_joconde_p3",
+      "title": "1911: a repülés, amely feltalálta a hírnevet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A 19. században *Mona Lisának*-t csodálták, de még nem a Louvre első számú alkotása. Minden megváltozott 1911. évi **Augusztus 21-én**. [[Vincenzo Peruggia]], egy olasz üveges a múzeumból ellopja: ez a [[A Mona Lisa ellopása (1911)]]. A blúza alá rejti, és csendesen kimegy."
+        },
+        {
+          "type": "image",
+          "asset": "mona_lisa_stolen_1911_newspaper_headline",
+          "ratio": "4:3",
+          "caption": "1911: a festmény hiánya hírt ad és sztárt alkot."
+        },
+        {
+          "type": "paragraph",
+          "text": "A nyomozás botránnyá fajul. A költő [[Guillaume Apollinaire]] egy időre bebörtönözték. [[Pablo Picasso]] interjút készít. Amikor a festmény újra megjelenik a **1913**-ben, az már nem csak egy festmény. Ő egy híresség."
+        }
+      ]
+    },
+    {
+      "id": "course_149_la_joconde_p4",
+      "title": "Egy ikon az üveg alatt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ma nyárfára festve [[Golyóálló üveg]] mögött lakik, klimatizált vitrinben. Savas támadások, tárgyak kidobása: szükségessé vált a védekezés. A paródiák pedig Duchamptól az Internetig azt bizonyítják, hogy egyetemes nyelvvé vált."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1503",
+              "title": "A portré eleje",
+              "detail": "Leonardo elkezdi a Mona Lisát Firenzében."
+            },
+            {
+              "date": "1519",
+              "title": "Leonardo halála",
+              "detail": "A festmény Franciaországban maradt."
+            },
+            {
+              "date": "1911",
+              "title": "A repülés",
+              "detail": "Peruggia a művet médiamítosszá alakítja."
+            },
+            {
+              "date": "1913",
+              "title": "Vissza",
+              "detail": "A festmény világsztárként tér vissza a Louvre-ba."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "*Mona Lisának* éppúgy Leonardo zsenialitásának (sfumato, optikai mosoly), mint a történelemnek köszönheti dicsőségét: egy 1911-es lopás egy csodált remekművet globális ikonná változtatott."
+        }
+      ]
+    }
+  ]
+}

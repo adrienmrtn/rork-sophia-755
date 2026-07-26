@@ -1,0 +1,104 @@
+{
+  "id": "course_219_la_fracture_numerique_mondiale",
+  "title": "Globální digitální propast",
+  "subtitle": "Třetina lidstva offline",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "2,7 miliardy lidí stále nemá přístup k internetu. Ve stále digitálnějším světě se tento nedostatek spojení stává novou formou vyloučení.",
+  "hero": {
+    "image": "la_fracture_numerique_mondiale",
+    "ratio": "16:9",
+    "hook": "Keňa vynalezla platbu po telefonu deset let před Evropou, kvůli nedostatku bankovních poboček."
+  },
+  "sections": [
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zatímco rozvinuté společnosti zažívají revoluci řízenou umělou inteligencí, brutální realita přetrvává: **2,7 miliardy lidí**, tedy přibližně třetina lidstva, stále nemá přístup k internetu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Toto **digitální rozdělení** není jen technickým zpožděním: stalo se skutečnou bariérou, která drží miliony lidí daleko od vzdělání, zdraví a globální ekonomiky. Zde je důvod, proč přetrvává a jak se jej některé země snaží naplnit."
+        }
+      ]
+    },
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_p1",
+      "title": "Dvourychlostní mapa světa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Do roku 2024 bude celosvětově připojeno k internetu asi 5,4 miliardy lidí, ale pokrok v nejchudších regionech stagnuje. Evropa a Severní Amerika překračují 90% spojení, zatímco subsaharská Afrika zůstává pouze na 37%."
+        },
+        {
+          "type": "paragraph",
+          "text": "Toto vyloučení je způsobeno několika příčinami. Za prvé, nedostatečná infrastruktura: Operátoři považují instalaci optických vláken v určitých izolovaných regionech za příliš nákladnou. Pak cena: v některých zemích představuje jednoduchý základní telefon [[smartphone]] několik měsíců platu. A konečně jazyková bariéra (přibližně 70 % webového obsahu je v angličtině) a nedostatek digitálního školení omezují používání, i když existuje připojení."
+        }
+      ]
+    },
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_p2",
+      "title": "Když nedostatek infrastruktury nutí inovace",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tento předěl funguje jako násobitel nerovností. Ve světě, kde se práce na dálku, elektronický obchod a online vzdělávání ([[MOOC]]) stávají normou, nebýt připojen znamená stát se pro globální ekonomiku neviditelným."
+        },
+        {
+          "type": "image",
+          "asset": "digital_divide_africa_rural_village_smartphone",
+          "ratio": "16:9",
+          "caption": "V mnoha venkovských oblastech zůstává mobilní telefon jediným přístupovým bodem k internetu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Keňa ilustruje další cestu: kvůli nedostatku dostatečných bankovních poboček země v roce 2007 masivně přijala jednoduchý SMS platební systém [[Keňský M-Pesa]], který porazil Evropu o deset let. Tento systém umožnil milionům lidí bez bankovních účtů provádět bezpečné transakce pouze pomocí telefonu."
+        },
+        {
+          "type": "funFact",
+          "text": "Keňa tuto strategii nazvala technologickým skokem: místo instalace drahé a zastaralé infrastruktury se země přesunula přímo k modernějšímu a levnějšímu řešení."
+        }
+      ]
+    },
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_p3",
+      "title": "Satelitní internet: řešení podléhající podmínkám",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aby propojili ty nejizolovanější vesnice, noví hráči spoléhají na prostor. Projekt [[Starlink]] vysílá tisíce satelitů na nízkou oběžnou dráhu, což umožňuje rychlé spojení i v pouštích nebo vysokých horách, aniž by bylo nutné pokládat jediný kabel."
+        },
+        {
+          "type": "paragraph",
+          "text": "Náklady na předplatné a vybavení však zůstávají v souladu se západními standardy, což činí tato řešení nedostupná pro nejchudší venkovské obyvatelstvo bez vnější pomoci. Řešení digitální propasti proto nelze dosáhnout pouze technologií: vyžaduje to také politickou vůli, aby byl internet něčím dostupným pro všechny."
+        }
+      ]
+    },
+    {
+      "id": "course_219_la_fracture_numerique_mondiale_p4",
+      "title": "Umělá inteligence, nová mezera",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rychlý vzestup umělé inteligence hrozí, že tuto propast ještě rozšíří. Vyžaduje to obrovský výpočetní a datový výkon, zdroje soustředěné v rukou několika zemí a společností. Odpojené populace pak riskují, že se stanou závislými na nástrojích navržených bez ohledu na jejich kulturu nebo jazyk."
+        },
+        {
+          "type": "paragraph",
+          "text": "Propast v dovednostech mezi připojenými a nepřipojenými studenty by se také mohla velmi rychle rozšířit. Výzvou pro nadcházející roky tedy již nebude jen poskytovat připojení, ale zaručit spravedlivý přístup k vytváření digitální hodnoty, a to kombinací nižších nákladů, místního obsahu a školení."
+        },
+        {
+          "type": "takeaway",
+          "text": "Z internetu je dnes vyloučeno 2,7 miliardy lidí, což je propast, která se s umělou inteligencí může ještě zhoršit. Snížení této mezery vyžaduje přeměnu konektivity ve skutečné zboží dostupné všem, a ne pouze v produkt k prodeji."
+        }
+      ]
+    }
+  ]
+}

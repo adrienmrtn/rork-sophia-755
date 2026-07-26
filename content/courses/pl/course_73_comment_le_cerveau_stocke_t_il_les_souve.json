@@ -1,0 +1,108 @@
+{
+  "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve",
+  "title": "Jak mózg przechowuje wspomnienia?",
+  "subtitle": "Pamięć i neurony",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Pamięć nie jest biblioteką szuflad. To żywa sieć neuronów, które wzmacniają się nawzajem, odbudowują i czasami popełniają błędy.",
+  "hero": {
+    "image": "comment_le_cerveau_stocke_les_souvenirs",
+    "ratio": "16:9",
+    "hook": "Wspomnienie to nie plik: to ścieżka, którą mózg nauczył się powtarzać."
+  },
+  "sections": [
+    {
+      "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Często wyobrażamy sobie pamięć jako dysk twardy. W rzeczywistości jest to żywa sieć. Miliardy **neuronów**, komórek nerwowych, ponownie łączą się, wzmacniają lub osłabiają, w zależności od tego, czego doświadczamy."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nic nie jest przechowywane w jednym miejscu. Pamięć jest rozproszonym śladem, na początku kruchym, po śnie trwalszym i zawsze nieco zrekonstruowanym, gdy o tym pamiętamy."
+        }
+      ]
+    },
+    {
+      "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p1",
+      "title": "Połączenia, które wzmacniają",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Punkt styku między dwoma neuronami nazywa się **synapsą** i jest to połączenie, przez które przechodzi sygnał nerwowy. Ludzki mózg ma około **86 miliardów** neuronów i ponad **100 000 miliardów** synaps."
+        },
+        {
+          "type": "image",
+          "asset": "hippocampus_memory_brain",
+          "ratio": "auto",
+          "caption": "Hipokamp odgrywa kluczową rolę w tworzeniu wspomnień."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kiedy informacja się powtarza lub jest powiązana z silną emocją, te same neurony aktywują się razem. Ich połączenie staje się łatwiejsze do uruchomienia: jest to [[Długotrwałe wzmocnienie]], czyli trwałe wzmocnienie synaps. Im częściej obwód jest używany, tym „szersza” staje się ścieżka. Pamięć nie jest zatem przechowywanym obiektem, ale **namierzać** w sieci."
+        },
+        {
+          "type": "funFact",
+          "text": "Pojemność mózgu szacowana jest na około **2,5 petabajty**, co odpowiada milionom godzin nagrań wideo. Ale to nie jest dysk: to żywa tkanka, która się reorganizuje."
+        }
+      ]
+    },
+    {
+      "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p2",
+      "title": "Konik morski, zawiadowca stacji wspomnień",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**konik morski**, niewielka budowla w regionie [[płat skroniowy]] za świątyniami, nie przechowuje wspomnień na zawsze. Otrzymuje je, **kodować**, przekształca je w ślady pamięci, a następnie redystrybuuje je do **korytko**, zewnętrznej warstwy mózgu. Przeniesienie to nosi nazwę **konsolidacja**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Odbywa się to głównie podczas **snu**. Bez funkcjonującego hipokampu możemy żyć chwilą obecną, ale nie mamy już nowych świadomych wspomnień. Pozostajemy uwięzieni w teraźniejszości bez niedawnej przeszłości."
+        },
+        {
+          "type": "funFact",
+          "text": "Pacjent **H.M.**, operowany w 1953 r., nie tworzył już nowych wspomnień. Jednak z każdym dniem robił postępy w rysowaniu w lustrze, nie pamiętając, że już próbował: jego pamięć gestów była nienaruszona."
+        }
+      ]
+    },
+    {
+      "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p3",
+      "title": "Pamiętać to znaczy odbudowywać",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Przywołanie wspomnienia nie jest równoznaczne z odtworzeniem wideo. Za każdym razem, gdy go wyjmiesz, staje się **ciągliwy**, który można modyfikować. Nasze obecne emocje, nowa wiedza lub sugestia mogą je zmodyfikować, zanim zostaną „nagrane na nowo”."
+        },
+        {
+          "type": "paragraph",
+          "text": "Psycholog **Elżbieta Loftus** pokazała, że ​​za pomocą prostych pytań można wszczepić **pamiętaj wspomnienia**. Stąd dzisiaj ostrożność w obliczu zeznań naocznych świadków: w dobrej wierze mózg uzupełnia luki."
+        }
+      ]
+    },
+    {
+      "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p4",
+      "title": "Wiele wspomnień w jednym mózgu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pamięć faktów i epizodów życiowych, jak możemy stwierdzić, przechodzi głównie przez hipokamp. [[Pamięć proceduralna]], czyli jazda na rowerze lub pływanie, zależy zamiast tego od **móżdżek**, struktury z tyłu mózgu i innych starszych struktur."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dlatego niektórzy pacjenci z amnezją zapominają swoje imię, a mimo to grają na pianinie. Pamięć to nie pojedyncza szuflada: to mozaika systemów."
+        },
+        {
+          "type": "takeaway",
+          "text": "Pamięć jest dynamicznym śladem: synapsy wzmacniane, konsolidowane zwłaszcza w nocy i odbudowywane przy każdym przypomnieniu. Nigdy nie jest to plik stały."
+        }
+      ]
+    }
+  ]
+}

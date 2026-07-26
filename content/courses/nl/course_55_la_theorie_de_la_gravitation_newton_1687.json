@@ -1,0 +1,102 @@
+{
+  "id": "course_55_la_theorie_de_la_gravitation_newton_1687",
+  "title": "De theorie van de zwaartekracht",
+  "subtitle": "Newton, 1687",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "In 1687 publiceerde Newton een eenvoudig en immens idee: dezelfde kracht zorgt ervoor dat een appel valt en de maan draait. Dit is wat dat verandert.",
+  "hero": {
+    "image": "la_theorie_de_la_gravitation_newton",
+    "ratio": "16:9",
+    "hook": "Een appel, de maan, de planeten: één enkele kracht die alles verklaart."
+  },
+  "sections": [
+    {
+      "id": "course_55_la_theorie_de_la_gravitation_newton_1687_intro",
+      "title": "Inleiding",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vóór Newton wisten we al veel over de planeten dankzij **Galileo**, een Italiaanse natuurkundige uit de 17e eeuw, en **[[Johannes Kepler]]**, een astronoom die elliptische banen beschreef. Maar er ontbrak een duidelijk verband tussen wat op aarde valt en wat in de lucht draait."
+        },
+        {
+          "type": "paragraph",
+          "text": "In **1687** publiceerde **Isaak Newton** de *[[Philosophiae Naturalis Principia Mathematica]]*, de *Principia*, het grondwerk van de klassieke natuurkunde. Hij beweert dat de zwaartekracht **universeel** is: ze werkt overal op dezelfde manier."
+        }
+      ]
+    },
+    {
+      "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p1",
+      "title": "De wereld vóór de synthese",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kepler had de banen van de planeten met nauwkeurige wetten beschreven: banen in **ellips**, gelijke gebieden in gelijke tijd. Galileo had de val van lichamen bestudeerd. Maar waarom blijven de planeten op hun baan? Wat ‘trekt’ hen?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Newton antwoordt: een **zwaartekracht**, een kracht die twee massa's naar elkaar toe trekt. De aarde trekt de maan aan. De zon trekt de aarde aan. En je trekt ook een klein stukje van de aarde aan... ook al is die klein."
+        }
+      ]
+    },
+    {
+      "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p2",
+      "title": "De wet in één zin",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "isaac_newton_apple_tree_woolsthorpe",
+          "ratio": "4:3",
+          "caption": "Het verhaal van de appel is vooral een verhaal. Het idee is echt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Twee lichamen trekken elkaar aan met een kracht die toeneemt met hun **massa**, de hoeveelheid materie, en afneemt naarmate ze uit elkaar worden bewogen. Preciezer gezegd: de kracht verzwakt met het **vierkant van de afstand**. Een verdubbeling van de afstand deelt de attractie door vier. Hoe verder je weg bent, hoe sneller de aantrekkingskracht afneemt."
+        },
+        {
+          "type": "image",
+          "asset": "planets_orbit_solar_system_gravity",
+          "ratio": "16:9",
+          "caption": "De planeten “vallen” voortdurend richting de zon… en missen het: dit is de baan."
+        },
+        {
+          "type": "funFact",
+          "text": "De maan ‘valt’ voortdurend richting de aarde. Omdat hij ook een hoge laterale snelheid heeft, draait hij rond in plaats van te crashen."
+        }
+      ]
+    },
+    {
+      "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p3",
+      "title": "De wetten van beweging",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Newton geeft ook drie **bewegingswetten**. Samenvattend: een object behoudt zijn snelheid als er geen kracht is, het principe van **luiheid**; een kracht verandert de snelheid; elke actie heeft een tegenovergestelde reactie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hiermee kunnen we trajecten berekenen, **getijden**, de stijgingen en dalingen van de oceanen onder invloed van de maan en de zon, en de banen. Natuurkunde wordt een voorspellingsinstrument."
+        }
+      ]
+    },
+    {
+      "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p4",
+      "title": "Krachtig…maar niet het laatste woord",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Twee eeuwen later zou **[[Albert Einstein]]** Newton corrigeren voor extreme gevallen, zeer hoge snelheden en zeer sterke zwaartekrachten, met de [[Relativistische zwaartekracht (Einstein)]]. De zwaartekracht wordt dan een kromming van de ruimte-tijd, en niet langer een onzichtbare kracht. Maar voor het lanceren van een raket of het begrijpen van de getijden blijft Newton uitstekend."
+        },
+        {
+          "type": "takeaway",
+          "text": "Newton verenigt hemel en aarde: de zwaartekracht trekt overal massa's aan. Het is een van de grootste wetenschappelijke syntheses uit de geschiedenis."
+        }
+      ]
+    }
+  ]
+}

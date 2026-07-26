@@ -1,0 +1,116 @@
+{
+  "id": "course_238_la_transition_energetique",
+  "title": "Enerji geçişi",
+  "subtitle": "Karbon nötrlüğüne doğru",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Dünya fosil yakıtları daha temiz kaynaklarla değiştirmeye çalışıyor. Zor olduğu kadar gerekli bir değişim.",
+  "hero": {
+    "image": "la_transition_energetique",
+    "ratio": "16:9",
+    "hook": "Güneş enerjisi tarihin en ucuz enerjisi haline geldi. Geriye kalan tek şey onu depolamak."
+  },
+  "sections": [
+    {
+      "id": "course_238_la_transition_energetique_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Uzun bir süre boyunca insanlık enerji kaynaklarını verimlilik tercihine göre değiştirdi: odundan kömüre, sonra kömürden petrole. Mevcut **Enerji üretilir** farklıdır: İlk kez bir hayatta kalma kısıtlaması, yani iklim değişikliği tarafından empoze edilmektedir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu ders dünyanın fosil yakıtları daha temiz kaynaklarla değiştirmeye nasıl çalıştığını ve bu değişimin neden gerekli olduğu kadar zor olduğunu araştırıyor."
+        }
+      ]
+    },
+    {
+      "id": "course_238_la_transition_energetique_p1",
+      "title": "1,5°C: her şeyi yönlendiren hedef",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Günümüzün tüm enerji politikalarına rehberlik eden çerçeveye, 2015 yılında imzalanan **[[Paris Anlaşması]]** adı verilmektedir. Bu anlaşma, dünya ülkelerine, belirli bir hedefle, küresel ısınmayı sınırlandırma taahhüdünde bulunmaktadır: Mümkünse, endüstriyel çağ öncesindeki seviyelerin 1,5°C üzerindeki sıcaklığın altında kalmak. Derecenin her onda biri aşırı hava olaylarını daha da kötüleştiriyor."
+        },
+        {
+          "type": "image",
+          "asset": "solar_panel_farm_photovoltaic_field",
+          "ratio": "16:9",
+          "caption": "Güneş panelleri ve rüzgar türbinleri dünyanın düşük karbonlu enerji kaynaklarına geçişini simgeliyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu hedefe ulaşmak için Devletler, **[[karbon nötrlüğü]]**'yi amaçlamaktadır: insan faaliyetlerinden kaynaklanan sera gazları ile bunların ormanlar, topraklar, okyanuslar veya yakalama teknolojileri tarafından emilmesi arasında bir denge. Bu, küresel emisyonlardaki artışın 2025'ten önce duracağını, ardından sonraki yıllarda keskin bir şekilde düşeceğini varsayıyor."
+        },
+        {
+          "type": "funFact",
+          "text": "Güneş enerjisinin maliyeti 2010 ile 2020 arasında %90 düştü; bu, ekonomi tarihindeki hemen hemen tüm diğer teknolojilerden daha hızlı bir düşüş. Hatta 2023 yılında güneş enerjisi dünyanın birçok yerinde şimdiye kadar üretilen en ucuz elektrik kaynağı haline gelecek."
+        }
+      ]
+    },
+    {
+      "id": "course_238_la_transition_energetique_p2",
+      "title": "Fiyatlarda muhteşem düşüş",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Geçişin ana itici gücü ekonomiktir. Daha önce uydulara ayrılan fotovoltaik güneş enerjisi ****'nin fiyatı, teknik ilerleme ve ölçek ekonomileri sayesinde beş yılda bir gelişme çıktı. Özellikle rüzgarların daha güçlü ve düzenli olduğu denizde curulan**Z** aynı zamanda gerçek endüstriyel olgunluğa da ulaştı. 2023 yılında dünya çapında kurulu yeni elektrik kapasitesinin neredeyse %90'ı yenilenebilir enerjilerden gelecek."
+        },
+        {
+          "type": "paragraph",
+          "text": "Büyük bir zorluk devam ediyor: Güneş ve rüzgar enerjisi **aralıklardan** sıkıntı çekiyor, yani sürekli elektrik üretmiyorlar. Fiyatı güneş enerjisiyle aynı çarpıcı düşüşü takip eden ve elektrikli arabaları giderek daha rekabetçi hale getiren büyük kapasiteli pillerin önemi buradan kaynaklanıyor."
+        },
+        {
+          "type": "funFact",
+          "text": "Çin şu anda dünyadaki güneş panellerinin %80'inden fazlasını ve elektrikli araçlar için lityum iyon pillerin %70'inden fazlasını üretiyor. Bu nedenle Batı'nın enerji dönüşümü büyük ölçüde Çin imalat zincirine bağlıdır."
+        }
+      ]
+    },
+    {
+      "id": "course_238_la_transition_energetique_p3",
+      "title": "Yeni engeller: depolama ve nadir metaller",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bu coşkuya rağmen geçiş oldukça gerçek sınırlarla karşı karşıyadır. İstenildiği zaman yakılabilen gaz veya kömürden farklı olarak yenilenebilir enerjiler, hidrojen veya nükleer enerji gibi depolama veya yedek kaynaklara sahip daha esnek elektrik ağlarına ihtiyaç duyar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diğer bir engel ise petrole bağımlılıktan **[[nadir toprak elementleri]]**'ye ve piller ve rüzgar türbinleri yapmak için gerekli olan lityum veya kobalt gibi diğer metallere bağımlılığa geçiştir. Çin, bu malzemelerin küresel olarak rafine edilmesinde büyük bir payı kontrol ediyor ve bu da Avrupa ve ABD için yeni kırılganlıklar yaratıyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Son olarak geçiş toplumsal direnişle karşılaşıyor: Fosil yakıt endüstrileri hâlâ milyonlarca insanı istihdam ediyor ve bu işleri yok etmeden dönüştürmek, geçişin herkes tarafından kabul edilmesinin temel koşulu."
+        }
+      ]
+    },
+    {
+      "id": "course_238_la_transition_energetique_p4",
+      "title": "Yeni bir enerji karışımına doğru",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Enerjinin geleceği şüphesiz tek bir çözüme değil, birçok çözümün karışımına dayanmaktadır. **[[Yeşil hidrojen]]**, elektriğin tek başına yeterli olmadığı çelik üretimi veya havacılık gibi en zor sektörlerin karbondan arındırılmasında önemli bir parça gibi görünüyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Geçiş aynı zamanda **ayıklık** gerektirir: binaları yalıtarak veya endüstriyel atıkları azaltarak daha az ve daha iyi tüketmek çoğu zaman en etkili ve en ucuz araç olmaya devam etmektedir."
+        },
+        {
+          "type": "funFact",
+          "text": "Bazı deneysel piller yer çekimini kullanarak çalışıyor: Ağır beton blokları günün fazla güneş enerjisiyle kaldırıyorlar, sonra akşamları aşağıya inip bir türbin aracılığıyla elektrik üretmelerine izin veriyorlar."
+        },
+        {
+          "type": "takeaway",
+          "text": "Güneş enerjisinin maliyeti on beş yılda %90 oranında düşerek tarihin en ucuz elektrik kaynağı haline geldi. Ancak enerji depolama ve nadir metallerin temini, enerji geçişindeki en büyük zorluklar olmaya devam ediyor."
+        }
+      ]
+    }
+  ]
+}

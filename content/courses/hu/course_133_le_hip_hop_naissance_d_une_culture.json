@@ -1,0 +1,145 @@
+{
+  "id": "course_133_le_hip_hop_naissance_d_une_culture",
+  "title": "Hip-hop: egy kultúra születése",
+  "subtitle": "1973",
+  "subject": "art",
+  "subcategory": "Music",
+  "description": "Az 1973-ban Bronxban született hip-hop feltalálta a DJ-t, a rap-t, a breakdance-t és a graffitit, majd meghódította a bolygót.",
+  "hero": {
+    "image": "le_hip_hop_naissance_d_une_culture",
+    "ratio": "16:9",
+    "hook": "Egy blokkparti Bronxban, és egy globális kultúra született."
+  },
+  "sections": [
+    {
+      "id": "course_133_le_hip_hop_naissance_d_une_culture_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A hip-hop nem csak egy zenei műfaj. Ez egy csapásokból született kultúra a New York-i **Bronx** korai **1970**-ben."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ötven év alatt ez a fiatal afro-amerikaiak és Puerto Ricó-iak által kitalált mozgalom átalakította a zenét, a divatot és a nyelvet. Így vált a blokkparti a világ ifjúságának közös nyelvévé."
+        }
+      ]
+    },
+    {
+      "id": "course_133_le_hip_hop_naissance_d_une_culture_p1",
+      "title": "A Bronx a romokban és a Kool Herc partija",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A kontextus brutális. 1950 és 1972 között [[Robert Moses autópálya-politikája]] átszelte a környéket: a [[Cross-Bronx gyorsforgalmi út]] [[Robert Moses]] várostervező vezetésével tízezres lakást romboltak le. A [[Ingatlanspekuláció]] még arra is rákényszerít néhány tulajdonost, hogy biztosítási célból égessék le az épületeiket. Ekkor azt mondjuk: „Bronx ég”."
+        },
+        {
+          "type": "paragraph",
+          "text": "**1973. augusztus 11**, 1520 Sedgwick Avenue, Jamaicai bevándorló, **Clive Campbell**, aki **Klassz DJ Herc** néven ismert, bulit szervez épülete közös helyiségében. Ő találta fel a *breakbeat*-t: két lemezjátszóval izolálta és meghosszabbította a lemez legtáncosabb ritmikus részét. A DJ alkotóvá válik, nem csak műsorszolgáltatóvá."
+        },
+        {
+          "type": "image",
+          "asset": "dj_kool_herc_bronx_1973_breakbeat",
+          "ratio": "4:3",
+          "caption": "Kool Herc: két lemezjátszó, szünet, és kezdődik a hip-hop."
+        },
+        {
+          "type": "funFact",
+          "text": "„Herculords” rendszere olyan erős volt, hogy néha illegálisan utcai lámpákhoz csatlakoztatta."
+        }
+      ]
+    },
+    {
+      "id": "course_133_le_hip_hop_naissance_d_une_culture_p2",
+      "title": "Négy pillér: DJ, MC, tánc, graffiti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A hip-hop négy tudományág köré épül fel. A **DJ-zés**-t a **Nagymester Flash** finomította, amely hangszerként kezeli a lemezjátszót. A **MCing** (ceremóniamester) ritmikus költészetté változtatta a nyilvánossághoz szóló felhívásokat: ez volt a rap születése."
+        },
+        {
+          "type": "image",
+          "asset": "breakdancing_graffiti_new_york_1980s",
+          "ratio": "4:3",
+          "caption": "Breakdance és graffiti: a test és a fal mint színpad."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ehhez jön még a **breaktánc** (B-Boying), egy atlétikai tánc, valamint a **falfirkálás**, amely a metrószerelvényeket mobilgalériává alakítja. **Afrika Bambaataa**, egykori bandatag, megalapította a **Univerzális Zulu Nemzet**-t, hogy az erőszakot művészi versengéssel váltsa fel: béke, szeretet, egység, öröm."
+        },
+        {
+          "type": "funFact",
+          "text": "[[Karcolás]] véletlenül született 1975-ben: **Nagy varázsló Theodore**, 12 éves, egy lemezt dörömböl a kezében, hogy meghallja az anyja hívását."
+        }
+      ]
+    },
+    {
+      "id": "course_133_le_hip_hop_naissance_d_une_culture_p3",
+      "title": "Bronxtól a slágerlistákig: a kereskedelmi robbanás",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A **1979**-ben a *Rapper's Delight* a **Sugarhill banda**-ből bebizonyítja, hogy a rap lehet világméretű sláger, még akkor is, ha az úttörők túlságosan „stúdió”-nak tartják. A **1982**-ben *A **Flash Nagymester egy Furious Five** üzenete* a gettó társadalmi krónikáját kényszeríti ki."
+        },
+        {
+          "type": "image",
+          "asset": "sugarhill_gang_rappers_delight_1979_record",
+          "ratio": "4:3",
+          "caption": "Rapper's Delight (1979): a rap felkerül a slágerlistákra."
+        },
+        {
+          "type": "paragraph",
+          "text": "Az 1990-es években a kelet-nyugati rivalizálás strukturálta az ipart. New Yorkban a [[A Notorious B.I.G.]] a lírai virtuozitásra helyezi a hangsúlyt. Los Angelesben **N.W.A** és [[Tupac Shakur]] gangsta rapet fejlesztett ki, amely elítélte a rendőri erőszakot. A rapper is vállalkozóvá válik: címkék, ruhák, márkák."
+        },
+        {
+          "type": "funFact",
+          "text": "A *Rapper's Delight* hurok nem minta: ez egy stúdió-újrafelvétel a *Jó idők* Chictől, a perektől való félelem miatt."
+        }
+      ]
+    },
+    {
+      "id": "course_133_le_hip_hop_naissance_d_une_culture_p4",
+      "title": "Egy olyan kultúra, amely globális nyelvvé vált",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A 21. században a **Eminem**, **Kanye West** vagy **Kendrick Lamar** emeli a műfajt. A **2018**-ben Lamar elnyerte a Pulitzer-díjat a zenéért: példátlan intézményi elismerés. A [[Zenei mintavétel]] univerzális technika lett. Franciaország a világ második legnagyobb rappiaca."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1973",
+              "title": "Sedgwick Avenue Party",
+              "detail": "Kool Herc feltalálja a breakbeat-et Bronxban."
+            },
+            {
+              "date": "1979",
+              "title": "Rapper's Delight",
+              "detail": "A rap exporttermékké válik."
+            },
+            {
+              "date": "1982",
+              "title": "Az Üzenet",
+              "detail": "A rap társadalmi krónikává válik."
+            },
+            {
+              "date": "2018",
+              "title": "Pulitzer Lamarnak",
+              "detail": "A hip-hop belép a hivatalos panteonba."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "1973. augusztus 11-én született Bronxban a Kool Herc társaságában. A hip-hop a helyi piacról a kortárs korszak legbefolyásosabb kultúrájává vált."
+        }
+      ]
+    }
+  ]
+}

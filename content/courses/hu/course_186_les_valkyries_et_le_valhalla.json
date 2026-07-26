@@ -1,0 +1,120 @@
+{
+  "id": "course_186_les_valkyries_et_le_valhalla",
+  "title": "Valkűrök és Valhalla",
+  "subtitle": "skandináv mitológia",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Az északi égbolton a harcosok a halottakat választják, hogy benépesítsék Valhallát. Seregüknek szembe kell néznie az istenek alkonyával.",
+  "hero": {
+    "image": "les_valkyries_et_le_valhalla",
+    "ratio": "16:9",
+    "hook": "Karddal a kezedben meghalni nem ér véget: ez egy válogatás a világ utolsó háborújára."
+  },
+  "sections": [
+    {
+      "id": "course_186_les_valkyries_et_le_valhalla_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A skandináv mitológiában a csatában bekövetkezett halál nem ér véget. Ez egy **kiválasztás**. A **Valkűrök**, akiknek a neve azt jelenti, hogy „azok, akik az ölést választják”, Odin, a szuverén isten csataterén járnak."
+        },
+        {
+          "type": "paragraph",
+          "text": "Küldetésük: a legbátrabbakat elvinni a **Valhallába**, a „gyilkos szobába”. Ez a palota nem a pihenés paradicsoma. Ez egy égi laktanya. Mert Odin sereget készít a [[Ragnarök]]-re, a végső csatára, amelynek el kell pusztítania a világot és meg kell ölnie az isteneket."
+        }
+      ]
+    },
+    {
+      "id": "course_186_les_valkyries_et_le_valhalla_p1",
+      "title": "Odin toboroz Ragnarökhöz",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Odin** ismeri a próféciát. A [[Ragnarök]]-ben óriások és szörnyek szállnak le a [[Asgard]]-re, az istenek otthonára. Az elkerülhetetlen késleltetéséhez elitkatonákra van szüksége: a **Einherjar**-re, „azokra, akik egyedül harcolnak”."
+        },
+        {
+          "type": "image",
+          "asset": "odin_norse_god_ravens_throne_painting",
+          "ratio": "4:3",
+          "caption": "Odin, az istenek mestere, akit a világ vége kísért."
+        },
+        {
+          "type": "funFact",
+          "text": "Valhalla csak a csatában elesett harcosok **fél**-jét látta vendégül. A másik fele csatlakozott a Fólkvangrhoz, **Freyja** istennő birodalmához. Még a hősi halál után is megosztottak a hősök."
+        },
+        {
+          "type": "paragraph",
+          "text": "Az asgardi Valhallában **540 capuk** vannak. Mindegyik elég nagy ahhoz, hogy nyolcszáz harcos haladjon egymás mellett. Csak annak van joga, aki bátran, karddal a kézben elesett. A valkűrök rendezik a dolgokat az égből."
+        }
+      ]
+    },
+    {
+      "id": "course_186_les_valkyries_et_le_valhalla_p2",
+      "title": "A harcosok sötétebbek, mint gondolnánk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A Valkűr modern képe gyakran a 19. századi romantikából származik: szelíd szüzek lóháton. Az ókori szövegek, mint például a [[Költői Edda]], sokkal keményebb figurákat festenek. Varjakhoz, holttestmadarakhoz kötődnek. Egyes versek hátborzongató pörgetőkként mutatják be őket: szálaik zsigerek, súlyuk fejek."
+        },
+        {
+          "type": "image",
+          "asset": "valkyrie_riding_winged_horse_norse_art",
+          "ratio": "4:3",
+          "caption": "Valkűr repülés közben: Odin hírnöke és hősök szolgáltatója."
+        },
+        {
+          "type": "paragraph",
+          "text": "Az olyan figuráknak, mint a **Brynhildr** vagy a [[Sigrun]], szintén emberi arcuk van: tétováznak Odin parancsai és a halandók iránti érzelmeik között. Valhallában megváltozik a szerepük. Meghagyják a páncélt, hogy mézsört szolgáljanak fel a hősöknek. A gesztus a felismerésről beszél: a bátor halottak Asgard elitjévé váltak."
+        }
+      ]
+    },
+    {
+      "id": "course_186_les_valkyries_et_le_valhalla_p3",
+      "title": "Minden nap harcolni, este ünnepelni",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Valhallában nincs békés visszavonulás. A [[Gullinkambi]] kakaskukorékolásakor az Einherjar felfegyverkezik és megölik egymást a [[Idavoll]] síkságon. Estére a sebek bezáródnak. A halottak újra feltámadnak. Aztán jön az ünnep."
+        },
+        {
+          "type": "image",
+          "asset": "valhalla_feast_norse_warriors_einherjar_painting",
+          "ratio": "4:3",
+          "caption": "Az Einherjar lakoma: nappal harc, éjszaka bankettek."
+        },
+        {
+          "type": "funFact",
+          "text": "A **Sæhrímnir** vaddisznót [[Andhrímnir]] szakács minden nap megfőzi, majd újjászületik. A mézsör folyik a kecske tőgyéből [[Heidrun]]. A Viking Paradise állandó edzőterem."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ez az erőszak és az élvezet körforgása egyesíti Odin hadseregét. Több évszázados baráti csaták az igazi ellenség előtt."
+        }
+      ]
+    },
+    {
+      "id": "course_186_les_valkyries_et_le_valhalla_p4",
+      "title": "Inkább méltóságteljes halál, mint „szalmahalál”",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ez a túlvilági látomás a Viking Skandináviát jelölte meg. A fizikai bátorságot értékelték. Az öregség vagy betegség miatti haldoklás, a \"szalmahalál\" vezetett a **Hel**, egy unalmas királysághoz. Jobb volt fegyverrel a kézben elesni."
+        },
+        {
+          "type": "paragraph",
+          "text": "A Valkűr évszázadokon át ível. Richard Wagner a [[A Valkűr lovaglása]]-vel rögzítette az európai emlékezetben. Mára egy hatalmas nő archetípusa lett, gyakran távol áll elsődleges funkciójától: holttesteket szállít egy isten számára, aki a saját célját tervezi."
+        },
+        {
+          "type": "takeaway",
+          "text": "A **Valkűrök** a legjobb halottakat toborozza a **Valhalla** számára. Ott az Einherjar végtelenül harcol és lakomázik, készülve a [[Ragnarök]]-re. Az északi paradicsom egy laktanya, nem menedék."
+        }
+      ]
+    }
+  ]
+}

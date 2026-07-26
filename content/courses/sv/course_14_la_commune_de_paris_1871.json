@@ -1,0 +1,141 @@
+{
+  "id": "course_14_la_commune_de_paris_1871",
+  "title": "Pariskommunen",
+  "subtitle": "1871",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "Från 18 mars till 28 maj 1871 regerade Paris sig själv i **72 dagar**. Upplevelsen slutar i Bloody Week, ett förtryck som sätter en bestående prägel på det franska minnet.",
+  "hero": {
+    "image": "la_commune_de_paris_1871",
+    "ratio": "16:9",
+    "hook": "72 dagar där Paris styr sig själv... innan de krossas i blod."
+  },
+  "sections": [
+    {
+      "id": "course_14_la_commune_de_paris_1871_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Från **18 mars** till **28 maj 1871** upplever Paris en sällsynt upplevelse: **Kommun**. För **72 dagar** styr huvudstaden sig själv. Hon vägrar att lyda regeringen som installerats i **Versailles** och försöker en mer socialdemokrati."
+        },
+        {
+          "type": "paragraph",
+          "text": "Detta uppror föddes ur ett nationellt nederlag, en hungrig belägring och en klyfta mellan ett radikalt Paris och en mer konservativ provins. Det slutar med **Blodig vecka**."
+        }
+      ]
+    },
+    {
+      "id": "course_14_la_commune_de_paris_1871_p1",
+      "title": "Efter nederlaget och belägringen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Allt utgår från [[Fransk-preussiska kriget]] (**1870-1871**). Franske kejsaren **Napoleon III** fångas vid **Sedan**. Paris fick sedan utstå en fyra månader lång belägring. Vi äter hästar, djurparker och sedan råttor. Kapitulationen verkar förödmjukande."
+        },
+        {
+          "type": "image",
+          "asset": "paris_commune_barricades_1871",
+          "ratio": "4:3",
+          "caption": "Parisiska barrikader under kommunen 1871."
+        },
+        {
+          "type": "funFact",
+          "text": "På julen **1870** serverade vissa lyxrestauranger elefantparfait eller kängurugryta, från Jardin des Plantes menageri."
+        },
+        {
+          "type": "paragraph",
+          "text": "I februari ledde [[Adolphe Thiers]] en huvudsakligen monarkistisk församling som drogs tillbaka till Versailles. Den **18 mars** ville han beslagta kanonerna från [[Nationalgardet]], en milis av beväpnade parisare, lagrade i **Montmartre**. Publiken umgås med soldaterna. Thiers evakuerar Paris. En centralkommitté tar kontroll över staden."
+        }
+      ]
+    },
+    {
+      "id": "course_14_la_commune_de_paris_1871_p2",
+      "title": "Vad kommunen försökte",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den **28 mars** utropades kommunen. Arbetare, hantverkare, journalister, nära [[First International]] (ett nätverk av fackföreningar och arbetarpartier): rådet stiftar brådskande lagar. Eftergift av hyror. Avskaffande av nattarbete för bagare. Övergivna verkstäder överlämnade till kooperativ."
+        },
+        {
+          "type": "image",
+          "asset": "paris_city_hall_commune_1871",
+          "ratio": "4:3",
+          "caption": "Rådhuset, kommunens politiska hjärta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hon proklamerade också separationen av kyrka och stat, sekulära och friskolor, och lät riva **Vendôme-kolumnen**, symbol för imperiet. [[Louise Michel]], lärare och aktivist, förkroppsligar kvinnors centrala roll i klubbar och på barrikaderna."
+        }
+      ]
+    },
+    {
+      "id": "course_14_la_commune_de_paris_1871_p3",
+      "title": "Blodig vecka",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den **21:a** gick Versailles trupper in i Paris. Det är **Blodig vecka**. Stadsdel för grannskap, barrikad för barrikad, förtrycket är hårt. Gisslan skjuts. Tuilerierna och Hôtel de Ville brinner."
+        },
+        {
+          "type": "image",
+          "asset": "bloody_week_1871_paris",
+          "ratio": "4:3",
+          "caption": "Bloody Week: Paris tagit tillbaka gata för gata."
+        },
+        {
+          "type": "funFact",
+          "text": "Under kommunen blev den röda flaggan Paris officiella emblem och ersatte den trikolor som ansågs vara alltför kopplad till makterna som hade kapitulerat."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Fédérés]], namnet till anhängare av kommunen, drog sig tillbaka till kyrkogården **Père-Lachaise**. **147** senaste jaktplan sköts där vid **Federationens mur**. Resultat: mellan **10 000 eller 30 000** dödsfall på en vecka, sedan utvisningar till Nya Kaledonien."
+        }
+      ]
+    },
+    {
+      "id": "course_14_la_commune_de_paris_1871_p4",
+      "title": "En myt som består",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "För filosofen **Karl Marx** och Internationalen var Kommunen den första erfarenheten av arbetarmakt. Dess förtryck konsoliderar emellertid \"ordningen\" **Tredje republiken**. Kommunardiska idéer (sekularism, sociala rättigheter) skulle senare återgå till republikansk lag."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "18 mars 1871",
+              "title": "Montmartre",
+              "detail": "Thiers misslyckas med att gripa kanonerna; Paris gungar."
+            },
+            {
+              "date": "28 mars 1871",
+              "title": "Tillkännagivande",
+              "detail": "Kommunen är officiellt etablerad."
+            },
+            {
+              "date": "21-28 maj 1871",
+              "title": "En jävla vecka",
+              "detail": "Versailles krossar upproret."
+            },
+            {
+              "date": "28 maj 1871",
+              "title": "Federationens mur",
+              "detail": "Slut på striderna vid Père-Lachaise."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "I **72 dagar** försökte Pariskommunen radikal socialdemokrati, innan den förstördes under Bloody Week, till priset av tiotusentals dödsfall."
+        }
+      ]
+    }
+  ]
+}

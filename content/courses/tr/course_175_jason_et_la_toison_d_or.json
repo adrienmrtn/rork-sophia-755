@@ -1,0 +1,116 @@
+{
+  "id": "course_175_jason_et_la_toison_d_or",
+  "title": "Jason ve Altın Post",
+  "subtitle": "Argonotların Arayışı",
+  "subject": "mythologie",
+  "subcategory": "Greece: the heroes",
+  "description": "Jason ve Argonautlar Altın Postu aramak için Colchis'e giderler. Maceranın arkasında sihirbaz Medea ile yaşanan bir aşk ve ihanet hikayesi var.",
+  "hero": {
+    "image": "jason_et_la_toison_d_or",
+    "ratio": "16:9",
+    "hook": "Elli kahraman, büyülü bir gemi, bir ejderhanın koruduğu bir post. Ve onsuz hiçbir şeyin başarılı olamayacağı bir sihirbaz."
+  },
+  "sections": [
+    {
+      "id": "course_175_jason_et_la_toison_d_or_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Jason**, seçkin Yunan kahramanlarından **[[Argonotlar]]**'yi **Altın Postası**'yi getirmek için bir araya getiriyor: [[Kolhis]]'de, kabaca günümüz Gürcistan'ına tekabül eden bir bölge olan [[Kolhis]]'de asılı duran ilahi koçun postu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu yolculuk Batı'nın en eski denizcilik hikayelerinden biridir. Kraliyet meşruiyetinden, ilahi yardımdan... ve hepsinden önemlisi Jason ile **Medea** arasındaki, zaferi önce mümkün, sonra da korkunç hale getirecek bir sihirbaz arasındaki yıkıcı tutkudan bahsediyor."
+        }
+      ]
+    },
+    {
+      "id": "course_175_jason_et_la_toison_d_or_p1",
+      "title": "Bir sandalet, bir taht, bir tuzak",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jason, Teselya'daki Iolcos kralı Aeson'un oğludur. Amcası [[Pelias]] tahtı gasp etti. Centaur [[Chiron]] tarafından büyütülen Jason, mirasını almak için geri döner. Yolda yaşlı bir kadının dereyi geçmesine yardım eder. Kılık değiştirmiş [[Hera]]. Çamurda bir sandaletini kaybeder."
+        },
+        {
+          "type": "funFact",
+          "text": "Kolhis'te bazen altın pullarını hapsetmek için koyun derileri nehirlerin dibine yerleştirilirdi. “Altın yapağının” gerçek bir madencilik kökü olabilir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pelias korkuyor: Bir kahin onu tek sandaletli adam konusunda uyarmıştı. Jason bir ejderha tarafından korunan Post'u geri getirirse tahtı vaat ediyor. Jason, [[Dodona]]'den kutsal bir ağaç kullanarak konuşan pruvaya sahip bir gemi olan [[Argo]]'yi inşa etti. Gemide: **Herakles**, **Orpheus**, **Castor ve Pollux** ve diğerleri."
+        },
+        {
+          "type": "image",
+          "asset": "argonauts_ship_argo_jason_greek_myth",
+          "ratio": "4:3",
+          "caption": "Argo, Yunan efsanesindeki ilk büyük gemi."
+        }
+      ]
+    },
+    {
+      "id": "course_175_jason_et_la_toison_d_or_p2",
+      "title": "Çatışan kayalar",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Yolda Argonautlar, Kral Phineus'u, yiyeceklerini çalan canavarlar **Harpiler**'den kurtarır. Buna karşılık Phinée, Karadeniz'in girişinde herhangi bir gemiye çarpan uçurumlar olan **Symplegades Kayalıkları**'yi nasıl geçeceğinizi açıklıyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jason bir güvercini serbest bırakır. Kayalar tüylerinin üzerine kapanıyor, sonra açılıyor. Argo zorlukla geçiyor. Colchis'te kral **Aeétès** imkansız görevler yüklüyor: ateşli boğaları dizginlemek, [[Ares]] tarlasını sürmek, içinden savaşçıların doğduğu ejderha dişlerini ekmek. Yardım olmazsa Jason ölecekti."
+        }
+      ]
+    },
+    {
+      "id": "course_175_jason_et_la_toison_d_or_p3",
+      "title": "Medea, zaferin mimarı",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aşk tanrıçası [[Afrodit]], Aeetes'in kızı ve [[Hekate]] rahibesi **Medea**'nin Jason'a aşık olmasını sağlar. Boğaların ateşine karşı ona bir merhem verir. Dişlerden doğan savaşçılara aralarına bir taş atmasını öğütler: birbirlerini öldürürler."
+        },
+        {
+          "type": "image",
+          "asset": "medea_jason_greek_myth_waterhouse_painting",
+          "ratio": "4:3",
+          "caption": "Medea ve Jason: arayışın hizmetinde sihir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sonunda ejderhayı uyutur. Jason Post'u indirir. Medea kaçmak için kardeşi **Absyrtos**'u öldürür ve kalıntılarını denize dağıtır. Aeetes cesedi almak için durur. Çift birleşmiş durumda... ve şimdiden lanetlenmiş durumda."
+        }
+      ]
+    },
+    {
+      "id": "course_175_jason_et_la_toison_d_or_p4",
+      "title": "İhanet ve düşüş",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Iolcos'ta Pelias teslim olmayı reddeder. Medea kızlarını kandırır: Babalarını keserek \"gençleştirirler\". Kovalanan çift Korint'e sığındı. Yıllar sonra Jason, Kral Creon'un kızıyla evlenmek ister. Medea intikam alır: Rakibinin elbisesini zehirliyor, ardından kendi çocuklarını öldürüyor."
+        },
+        {
+          "type": "image",
+          "asset": "medea_vengeance_delacroix_painting",
+          "ratio": "4:3",
+          "caption": "Jason'ın ihanetinden sonra Medea'nın intikamı."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jason yalnız başına yaşlanıyor. Altında dinlendiği Argo'nun çürümüş bir parçası tarafından ezilerek sefil bir şekilde ölür. Her şeyi başkalarının yardımıyla kazanan kahraman, kendisini kurtaranı inkar ettiği için yok olur."
+        },
+        {
+          "type": "takeaway",
+          "text": "Jason, Medea ve [[Argo]] sayesinde Post'u fethediyor. İhaneti anlaşmayı bozar ve yıkıma yol açar: Efsane, müttefiklerini inkar eden bir kahramanın sonunda her şeyi kaybettiğini gösterir."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "id": "course_39_la_democratie_athenienne",
+  "title": "Democrația ateniană",
+  "subtitle": "al V-lea î.Hr",
+  "subject": "histoire",
+  "subcategory": "Cold War & Contemporary World",
+  "description": "În secolul al V-lea î.Hr., Atena a inventat un sistem în care cetățenii guvernau direct. Tragere la loterie, egalitate de spus... și excludere masivă.",
+  "hero": {
+    "image": "la_democratie_athenienne",
+    "ratio": "16:9",
+    "hook": "Cum a inventat un oraș grecesc puterea oamenilor și limitele acesteia."
+  },
+  "sections": [
+    {
+      "id": "course_39_la_democratie_athenienne_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În secolul al V-lea î.Hr., Atena a inventat ceva radical: **[[Politică]]** în sensul că cetăţenii nu mai erau supuşi ai unui rege, ci actori ai destinului lor. Puterea (*kratos*) aparține poporului (*demonstrații*). De aici și cuvântul democrație."
+        },
+        {
+          "type": "paragraph",
+          "text": "Această democrație directă, născută din crize și reforme, rămâne o referință pentru gândirea politică occidentală, cu atuurile și punctele sale oarbe."
+        }
+      ]
+    },
+    {
+      "id": "course_39_la_democratie_athenienne_p1",
+      "title": "Reforme care deschid orașul",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În secolul al VII-lea î.Hr., Atena era sfâșiată între aristocrați și țărani îndatoați. **[[Solon]]**, ales om de stat în **594 î.Hr.**, desființează sclavia datoriei și deschide magistraturi în funcție de avere, nu doar de sânge."
+        },
+        {
+          "type": "paragraph",
+          "text": "Adevăratul punct de cotitură este **[[Clisthenes]]** (**508-507**). Acest reformator creează **10 triburi mixte** pentru a destrăma clanurile și înființează **[[Boule]]**, Consiliul celor Cinci Sute extras la sorți. Fiecare cetățean poate deservi orașul."
+        },
+        {
+          "type": "image",
+          "asset": "athens_agora_ancient_ruins",
+          "ratio": "4:3",
+          "caption": "Agora Atenei, inima vieții civice."
+        },
+        {
+          "type": "funFact",
+          "text": "Pentru a înlătura un om prea puternic, atenienii au votat **[[Ostracizare]]** pe un ciob de ceramică: exil pentru zece ani, cu un cvorum de **6.000** alegători."
+        }
+      ]
+    },
+    {
+      "id": "course_39_la_democratie_athenienne_p2",
+      "title": "Cum funcționează sub Pericle",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La mijlocul secolului al V-lea, sub **Pericle**, un strateg reales de cincisprezece ori și o figură a epocii de aur ateniene, sistemul a devenit mai deschis. **Ecclesia**, adunarea cetățenilor, se întrunește de aproximativ **de 40 de ori** pe an pe dealul Pnyx. Ea votează legi, război, pace, buget."
+        },
+        {
+          "type": "image",
+          "asset": "pericles_bust_sculpture",
+          "ratio": "1:1",
+          "caption": "Pericle, strateg reales de cincisprezece ori, figură a epocii de aur ateniene."
+        },
+        {
+          "type": "paragraph",
+          "text": "**[[Isegoria]]** garantează egalitatea vorbirii. **[[Misthos]]**, diurna, permite celor mai săraci să stea. Dreptatea trece prin **[[Heliaia]]**: **6 000** jurații trași la sorți. Tragerea la sorți limitează monopolizarea puterii, cu excepția strategilor militari."
+        }
+      ]
+    },
+    {
+      "id": "course_39_la_democratie_athenienne_p3",
+      "title": "O democrație care îi exclude pe mulți",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Din aproximativ **300.000** rezidenți, votează doar **30.000 până la 50.000** cetățeni de sex masculin. Sunt excluse femeile, sclavii și meticii (străini rezidenți). În **451**, Pericle chiar înăsprește regula: sunt necesari doi părinți cetățeni."
+        },
+        {
+          "type": "paragraph",
+          "text": "Paradoxul fondator: egalitatea între semeni se bazează pe sclavie și excludere. O democrație față în față, intensă, dar închisă."
+        },
+        {
+          "type": "funFact",
+          "text": "Oricine era dezinteresat de viața publică era numit *idioti* („individ”). Cuvântul a dat „idiot”: a te desprinde de binele comun a fost văzută ca o lipsă de rațiune."
+        }
+      ]
+    },
+    {
+      "id": "course_39_la_democratie_athenienne_p4",
+      "title": "Fragilități și moștenire",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un [[Demagog]], un difuzor care flatează pasiunile, poate duce cu emoție ansamblul. **Platon**, filozof marcat de moartea maestrului său **Socrate** (**399 î.Hr**), vede în democrație domnia opiniei împotriva adevărului, și exemplul tipic al tiraniei majorității."
+        },
+        {
+          "type": "paragraph",
+          "text": "În ciuda defectelor sale, Atena lasă moștenire idei durabile: responsabilitatea celor de la putere, egalitate în fața legii, dezbatere contradictorie. Astăzi, tragerea la sorți și democrația directă apar chiar și în discuțiile contemporane."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "594 î.Hr",
+              "title": "Solón",
+              "detail": "Sfârșitul sclaviei datoriilor."
+            },
+            {
+              "date": "508 î.Hr",
+              "title": "Clisthenes",
+              "detail": "Triburi mixte și Boulé."
+            },
+            {
+              "date": "secolul al V-lea",
+              "title": "Pericle",
+              "detail": "Misthos și democrație radicală."
+            },
+            {
+              "date": "399 î.Hr",
+              "title": "Moartea lui Socrate",
+              "detail": "Partea întunecată a suveranității populare."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Democrația ateniană era un guvern direct al cetățenilor de sex masculin liber, bazat pe tragere la sorți și pe egalitatea de vorbire. A exclus aproximativ **85%** din populație, dar a inventat dezbaterea publică occidentală."
+        }
+      ]
+    }
+  ]
+}

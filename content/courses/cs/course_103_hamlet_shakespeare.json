@@ -1,0 +1,121 @@
+{
+  "id": "course_103_hamlet_shakespeare",
+  "title": "Hamlet, Shakespeare",
+  "subtitle": "kolem roku 1601",
+  "subject": "litterature",
+  "subcategory": "Anglo-Saxons & world literature",
+  "description": "Kolem roku 1601 Shakespeare napsal Hamleta, prince váhajícího tváří v tvář vraždě svého otce. Mezi pomstou, simulovaným šílenstvím a „Být či nebýt“ se rodí moderní hrdina vědomí.",
+  "hero": {
+    "image": "hamlet_shakespeare",
+    "ratio": "16:9",
+    "hook": "Duch, váhavý princ a nejslavnější existenciální otázka v divadle."
+  },
+  "sections": [
+    {
+      "id": "course_103_hamlet_shakespeare_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Do **1601**, **William Shakespeare** píše **[[Hamlet, princ dánský]]**. Není to jen tragédie pomsty: je to portrét moderního svědomí, rozděleného mezi čin a pochybnosti. Monolog „**Být či nebýt**“ se stal základní existenční otázkou západního divadla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Duchové, simulované šílenství, závěrečný souboj: ve hře se mísí nadpřirozeno a psychologie před časem. Hamlet není jako klasičtí impulzivní hrdinové, kteří okamžitě začnou jednat. Přemýšlí příliš mnoho na to, aby jednal rychle, a to je přesně to, co ho činí nesmrtelným. Shakespeare si zde vymyslí postavu, která pochybuje o všem, včetně sebe sama."
+        }
+      ]
+    },
+    {
+      "id": "course_103_hamlet_shakespeare_p1",
+      "title": "Alžbětinský kontext: divadlo světa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Shakespeare psal na vrcholu anglického divadla pod **Alžběta I**. Hry se hrají v divadle **Divadlo Globe**, kruhovém dřevěném divadle otevřeném do nebe, kde se bohatí i chudí ohánějí ve stoje nebo vsedě podle svého rozpočtu. Všichni herci jsou muži: ženské role hrají v souladu s tehdejšími zákony dospívající."
+        },
+        {
+          "type": "image",
+          "asset": "william_shakespeare_portrait",
+          "ratio": "4:3",
+          "caption": "William Shakespeare, autor nejdiskutovanější tragédie na světě."
+        },
+        {
+          "type": "funFact",
+          "text": "Roli Ophélie vytvořila teenagerka, jejíž hlas se v souladu s tehdejšími zvyklostmi ještě nezměnil."
+        },
+        {
+          "type": "image",
+          "asset": "globe_theatre_london_elizabethan",
+          "ratio": "16:9",
+          "caption": "The Globe Theatre: Alžbětinská divadelní scéna, kde si Hamlet získal publikum."
+        },
+        {
+          "type": "paragraph",
+          "text": "Shakespeare hledá pravdu srdce více než plochý realismus. Hamlet se vrací ze studií v **[[Wittenberg]]**, kolébce německého univerzitního města **Protestantské reformace**. Ve hře Shakespeare inscenuje hru ve hře, „past na myši“, aby chytil **Claudius** a ověřil královu vinu. Divadlo se stává zrcadlem světa a nástrojem pravdy."
+        }
+      ]
+    },
+    {
+      "id": "course_103_hamlet_shakespeare_p2",
+      "title": "Spirála pomsty a tíha váhání",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dánský král je zavražděn svým bratrem **Claudius**, který se ožení s královnou **Gertruda** a převezme trůn. Duch zesnulého krále odhalí zločin **Osada**. Povinnost se zdá jasná: pomstít otce. Hamlet však pochybuje: je tento přízrak skutečně jeho otcem, nebo klamným démonem? Je pomsta jen v očích křesťanské morálky?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Rozpolcen mezi **[[Zákon odplaty]]** a křesťanským svědomím, které odsuzuje vraždu, předstírá šílenství, aby vyšetřoval, aniž by vzbudil podezření. Tato strategie selže: zlomí srdce **Ofélie**, dceři poradce **Polonius**, a omylem zabije samotného Polonia, který se schovává za kobercem. Spirála vede k závěrečnému masakru na dánském dvoře, kde téměř všichni hlavní hrdinové zahynou."
+        }
+      ]
+    },
+    {
+      "id": "course_103_hamlet_shakespeare_p3",
+      "title": "Melancholie a korupce Dánska",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "\"V Dánském království je něco shnilého.\" Hra dýchá morálním rozkladem. Hamletův jazyk je prosycen obrazy nemocí, rozkladu a mrtvol. Jeho **[[Melancholie v 16. století]]** z něj činí brilantní, ale paralyzovaný: v Shakespearově době byla považována za lékařskou náladu spojenou s akční kreativitou."
+        },
+        {
+          "type": "image",
+          "asset": "hamlet_skull_yorick_delacroix_painting",
+          "ratio": "4:3",
+          "caption": "Lebka Hamleta a Yoricka: smrt nám připomíná marnivost všech ambicí."
+        },
+        {
+          "type": "quote",
+          "text": "Být či nebýt, toť otázka.",
+          "attribution": "William Shakespeare, Hamlet, dějství III, scéna 1"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tento slavný monolog zpochybňuje samotnou existenci: je lepší snášet utrpení života, nebo zemřít, abychom jim unikli? Jednat znamená ušpinit se ve zkaženém světě; nejednat znamená nechat zlo zvítězit. Hamlet se stává prvním moderním hrdinou, neschopným sladit myšlenky a činy. **[[Alžbětinská pomsta a čest]]** částečně vysvětluje její zablokování: čestný muž musel pomstít provinění spáchané na své rodině, ale tato povinnost se dostala do napětí se zákonem a morálkou."
+        }
+      ]
+    },
+    {
+      "id": "course_103_hamlet_shakespeare_p4",
+      "title": "Dědictví a potomstvo univerzálního mýtu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Po čtyři staletí byl Hamlet donekonečna reinterpretován. **Romantici** 19. století tam viděl mučeného umělce; **Freud** tam přečetl **[[Oidipův komplex]]**. Hra vypráví o ztrátě rodiče, temnotě světa a bolestném přechodu do dospělosti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jeho vliv přesahuje divadlo: kino, opera, komiks, populární psychologie. Shakespeare proměňuje středověký duchářský příběh v metafyzické zkoumání lidského vědomí. Hamlet zůstává tragédií nerozhodnosti, kde se myšlení již stává formou utrpení."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Osada** ukazuje, že hrdina může být nesmrtelný ne proto, že jedná rychle, ale proto, že hluboce pochybuje. Zde Shakespeare vynalézá modernitu divadla: myslet už znamená trpět."
+        }
+      ]
+    }
+  ]
+}

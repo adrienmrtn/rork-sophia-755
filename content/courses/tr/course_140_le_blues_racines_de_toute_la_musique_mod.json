@@ -1,0 +1,145 @@
+{
+  "id": "course_140_le_blues_racines_de_toute_la_musique_mod",
+  "title": "Blues: tüm modern müziğin kökleri",
+  "subtitle": "1870-1960",
+  "subject": "art",
+  "subcategory": "Music",
+  "description": "Mississippi'nin pamuk tarlalarında doğan blues, 12 ölçülü ızgarayı icat etti ve caz, rock, soul ve hip-hop'u besledi.",
+  "hero": {
+    "image": "le_blues_racines_de_toute_la_musique_moderne",
+    "ratio": "16:9",
+    "hook": "Pamuk tarlalarındaki bir çığlık ve tüm modern müziğin bir kökü vardır."
+  },
+  "sections": [
+    {
+      "id": "course_140_le_blues_racines_de_toute_la_musique_mod_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Blues sadece bir tür değil. 20. yüzyılın Batı popüler müziğinin çoğunun matrisidir. **Mississippi** pamuk tarlalarının yokluğunda, 19. yüzyılın sonlarında Afrika kökenli Amerikalıların direnişi ve ifadesi olarak doğdu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cazdan rock'n'roll'a, soul'dan hip-hop'a kadar yapıları ve duyguları hâlâ kulaklarımızı çınlatıyor. Blues'u anlamak, sanata dönüşmüş bir çığlığın kaynağına dönmek demektir."
+        }
+      ]
+    },
+    {
+      "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p1",
+      "title": "Pamuk tarlaları, bağırışlar ve 12 ölçü",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1870** ve **1890** arasında, ayrımcılığın ve ortakçıların sefaletinin damgasını vurduğu [[Derin Güney]]'de blues, Afrika'nın sözlü geleneklerini sentezliyor. [[Saha bağıranları]] (yalnız iş çığlıkları) ve [[İş şarkıları]] (çabayı senkronize etmek için zamanlanmış şarkılar) [[ruhaniler]] ile buluşuyor, bazen özgürlük mesajları taşıyan dini şarkılar."
+        },
+        {
+          "type": "paragraph",
+          "text": "En büyük yenilik: [[12 barlı yapı]], doğaçlama için bir tuval görevi gören üç akordan oluşan bir ızgara. [[Mavi notlar]], çekimli notalar, sesin acısını taklit eder. Çoğunlukla [[şişe boynu]] (tellerin üzerinden geçirilen cam veya metal tüp) olan gitar, şarkıcıyla diyalog kurar."
+        },
+        {
+          "type": "funFact",
+          "text": "Şarkı sözlerinde \"binici\" kelimesi genellikle bir sevgiliyi kodlayarak bilgisiz bir izleyici kitlesinin önünde tabu temaları ele alıyor."
+        }
+      ]
+    },
+    {
+      "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p2",
+      "title": "Robert Johnson ve Delta efsanesi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Memphis ve Vicksburg arasındaki **Mississippi** Deltası, türün ham bir formu olan **Delta blues**'nin beşiğidir. **Robert Johnson** (**1911**-**1938**) gezgin müzisyeni canlandırıyor: yalnızca **29** kayıtları, muazzam bir etki. [[Parmak toplama]], gitarı minyatür bir orkestra gibi ele alıyor."
+        },
+        {
+          "type": "image",
+          "asset": "mississippi_delta_blues_cotton_fields",
+          "ratio": "4:3",
+          "caption": "Mississippi Deltası: Kırsal hüzünlerin beşiği."
+        },
+        {
+          "type": "image",
+          "asset": "robert_johnson_blues_guitarist_crossroads",
+          "ratio": "4:3",
+          "caption": "Robert Johnson: 29 şampiyonluk, ebedi bir efsane."
+        },
+        {
+          "type": "paragraph",
+          "text": "Efsaneye göre ustalığı karşılığında ruhunu bir [[Kavşak]] (yol ayrımında) şeytana satmıştır. O zamanlar blues, kilise şarkılarıyla karşılaştırıldığında genellikle \"şeytanın müziği\" olarak adlandırılıyordu. Johnson genç yaşta zehirlenmeden öldü. *Çapraz Yol Blues* ve *Tatlı Evim Chicago* standart haline geliyor."
+        },
+        {
+          "type": "funFact",
+          "text": "Utangaçlıktan değil, odanın akustiğinden yararlanmak için San Antonio'daki bir otel odasında duvara dönük olarak kayıt yaptı."
+        }
+      ]
+    },
+    {
+      "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p3",
+      "title": "Chicago: Blues elektrikleniyor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1940** yıllarında, Büyük Göç milyonlarca Afrikalı Amerikalıyı endüstriyel Kuzey'e götürdü. **Chicago**'da blues, fabrikaların gürültüsünü bastıracak şekilde elektrikleniyor. **Çamurlu Sular** ve **Uluyan Kurt** elektro gitar, bas ve davulları empoze ediyor."
+        },
+        {
+          "type": "image",
+          "asset": "muddy_waters_chicago_electric_blues",
+          "ratio": "4:3",
+          "caption": "Chicago'daki Çamurlu Sular: akıntıya bağlı blues."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu elektrifikasyon rock'n'roll'a yol açıyor. **Chuck Berry** ve **Bo Diddley** tempoyu artırıyor. 1960'larda, **Yuvarlanan Taşlar** (adı bir Muddy Waters şarkısından alınmıştır) ve **Led Zeplin**, çoğu zaman orijinal yaratıcıların bir servet kazanmasına gerek kalmadan bu kökleri beyaz izleyicilere yeniden ihraç etti."
+        },
+        {
+          "type": "funFact",
+          "text": "Muddy Waters, müzikolog Alan Lomax tarafından bir pamuk tarlasında hâlâ traktör kullanırken \"keşfedildi\"."
+        }
+      ]
+    },
+    {
+      "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p4",
+      "title": "B.B. King'den örneklemeye",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Caz ondan yapılar ve doğaçlama ödünç alıyor. Soul ve R&B sesini içten tutuyor. Hip-hop, eski vinil plakların [[Örnekleme]]'si aracılığıyla mirasını geri dönüştürüyor. **BB Kral** melodik gitar solosunu popüler hale getirdi. Blues, tarihsel bir üslubun ötesinde, kaybedilen aşk, adaletsizlik ve umut hakkında bir dil olmaya devam ediyor."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1870-1890",
+              "title": "Derin Güney'de Doğum",
+              "detail": "12 ölçüde bağırışlar, maneviyatlar ve ızgara."
+            },
+            {
+              "date": "1930'lar",
+              "title": "Robert Johnson",
+              "detail": "Delta ve kavşak efsanesi."
+            },
+            {
+              "date": "1940'lar-1950'ler",
+              "title": "Elektrik Chicago",
+              "detail": "Çamurlu Sular rock'ın önünü açıyor."
+            },
+            {
+              "date": "1960'lar",
+              "title": "İngiliz Rönesansı",
+              "detail": "Stones ve Zeppelin blues'u küreselleştiriyor."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Mississippi'deki siyahi toplulukların acılarından doğan blues, dünyaya 12 barlık listeyi ve Chicago aracılığıyla rock'ı ve çok daha fazlasını verdi."
+        }
+      ]
+    }
+  ]
+}

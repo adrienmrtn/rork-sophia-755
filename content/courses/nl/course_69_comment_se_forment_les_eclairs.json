@@ -1,0 +1,112 @@
+{
+  "id": "course_69_comment_se_forment_les_eclairs",
+  "title": "Hoe ontstaat bliksem?",
+  "subtitle": "Onweersbuien",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Bliksem is geen magie: het is een enorme elektrische ontlading in een onweerswolk. Hier ziet u hoe ze zich voorbereidt en vervolgens hoe ze toeslaat.",
+  "hero": {
+    "image": "comment_se_forment_les_eclairs",
+    "ratio": "16:9",
+    "hook": "In een fractie van een seconde stijgt de lucht tot 30.000°C. Vijf keer heter dan het oppervlak van de zon."
+  },
+  "sections": [
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_intro",
+      "title": "Inleiding",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Een bliksemschicht geeft in een oogwenk enorme energie vrij. De lucht in het bliksemkanaal stijgt tot ongeveer **30.000 °C**. Donder is slechts het geluid van deze brute hitte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Om bliksem te begrijpen, moet je drie stappen volgen: hoe de wolk wordt opgeladen, hoe de elektriciteit een pad vindt en waarom je daarna de donder hoort."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p1",
+      "title": "In de cloud worden de kosten gescheiden",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bliksem komt vooral voor in [[cumulonimbus]]: zeer grote onweerswolken, die kunnen opstijgen tot ongeveer **15 km**. Binnen stijgt en daalt de lucht zeer sterk."
+        },
+        {
+          "type": "image",
+          "asset": "cumulonimbus_thunderstorm_cloud",
+          "ratio": "4:3",
+          "caption": "De cumulonimbus: de stormfabriek."
+        },
+        {
+          "type": "paragraph",
+          "text": "In deze chaos stijgen kleine **ijskristallen** op, en zwaardere ijskorrels (van [[natte sneeuw]]) dalen af. Wanneer ze botsen, worden er elektrische ladingen uitgewisseld. Beetje bij beetje wordt de bovenkant van de wolk tamelijk positief, de basis tamelijk negatief."
+        },
+        {
+          "type": "funFact",
+          "text": "Het Maracaibomeer, in Venezuela, is een van de zwaarst getroffen plekken op aarde: daar worden een groot deel van het jaar bijna dagelijks stormen waargenomen."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p2",
+      "title": "Als de lucht loslaat: de ontlading",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lucht is een slechte geleider. Maar als het verschil in lading te groot wordt (vaak **hondeden miljoenen volt**), bezwijkt de lucht uiteindelijk. Moleculen verliezen elektronen: ze worden geleidend. Dit is de [[Luchtionisatie]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Een onzichtbaar kanaal verlaat de wolk met kleine sprongen. Uit de grond stijgen elektrische netten vooral uit punten (bomen, bliksemafleiders, gebouwen). Wanneer de twee samenkomen, wordt het circuit gesloten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Het grote licht dat we zien, de **boog terug**, stijgt voornamelijk op van de grond naar de wolk. De stroom kan tienduizenden ampère bereiken. In hetzelfde kanaal kunnen meerdere ontladingen elkaar opvolgen: vandaar het flikkereffect."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p3",
+      "title": "Waarom komt het onweer later?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "De bliksem verwarmt de lucht zo snel dat deze plotseling uitzet. Deze schokgolf wordt **donder**. Het licht komt vrijwel onmiddellijk; het geluid beweegt zich voort met ongeveer **340 m/sec**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Simpele tip: tel de seconden tussen bliksem en donder en deel deze vervolgens door **3**. Je krijgt een schatting van de afstand in kilometers."
+        },
+        {
+          "type": "funFact",
+          "text": "De aarde wordt gemiddeld getroffen door ongeveer **100 pulsen per seconde**. In Frankrijk zijn er per jaar ongeveer **een miljoen**-impact op het terrein."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p4",
+      "title": "Gevaar, vruchtbaarheid en curiosa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bliksem blijft gevaarlijk, vooral buitenshuis, in de buurt van geïsoleerde bomen of water. Het veroorzaakt ook branden. Maar het heeft een minder bekend effect: het helpt bij de productie van stikstofverbindingen die de grond bemesten bij regen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Boven de stormen legden camera's ook bizarre verschijnselen vast, zoals [[Kabouters]]: korte gloedjes in de bovenste atmosfeer, onzichtbaar voor het blote oog vanaf de grond."
+        },
+        {
+          "type": "takeaway",
+          "text": "In een cumulonimbus scheiden botsingen tussen ijs en natte sneeuw de ladingen. Wanneer de spanning te hoog wordt, wordt de lucht geïoniseerd: de bliksem warmt op tot ~30.000 °C, en deze plotselinge uitzetting veroorzaakt donder."
+        }
+      ]
+    }
+  ]
+}

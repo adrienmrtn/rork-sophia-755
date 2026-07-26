@@ -1,0 +1,110 @@
+{
+  "id": "course_70_comment_fonctionne_un_vaccin",
+  "title": "Cum funcționează un vaccin?",
+  "subtitle": "Imunitate",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Un vaccin nu injectează boala pentru a te speria. Îți antrenează sistemul imunitar cu o versiune inofensivă, astfel încât reacționează rapid data viitoare.",
+  "hero": {
+    "image": "comment_fonctionne_un_vaccin",
+    "ratio": "16:9",
+    "hook": "Vaccinul vă învață corpul să recunoască pericolul... fără a-l determina să experimenteze adevărata boală."
+  },
+  "sections": [
+    {
+      "id": "course_70_comment_fonctionne_un_vaccin_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vaccinurile au salvat mai multe vieți decât aproape orice altă invenție medicală. **variola**, care a ucis încă sute de milioane de oameni în secolul al XX-lea, a fost eradicată datorită vaccinării."
+        },
+        {
+          "type": "paragraph",
+          "text": "Principiul este simplu: arată-i corpului un „manechin de antrenament”, astfel încât să creeze o **memorie imună** fără a trece prin boala reală."
+        }
+      ]
+    },
+    {
+      "id": "course_70_comment_fonctionne_un_vaccin_p1",
+      "title": "Memoria sistemului imunitar",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Când un microb (virus sau bacterii) intră pentru prima dată, corpul tău durează adesea **7 până la 14 zile** pentru a crea o apărare eficientă. În acest timp, este posibil să fiți bolnav."
+        },
+        {
+          "type": "paragraph",
+          "text": "Anumite celule, [[limfocitele B]], produc **anticorp** (proteine ​​care se lipesc de intrus). Altele, [[limfocitele B]], distrug celulele deja infectate. Odată ce amenințarea a fost învinsă, o parte din aceste celule rămân latente: sunt **celula de memorie**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dacă același microb revine, răspunsul dispare mult mai repede. Adesea nici măcar nu te îmbolnăvești. Vaccinul creează această memorie... fără riscul unei infecții reale."
+        }
+      ]
+    },
+    {
+      "id": "course_70_comment_fonctionne_un_vaccin_p2",
+      "title": "Mai multe moduri de a antrena corpul",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**AtenuatZ**vaccinurile conțin un microb viu, dar foarte slab (de exemplu, rujeolă). Se antrenează bine, dar nu sunt recomandate dacă sistemul imunitar este foarte fragil."
+        },
+        {
+          "type": "paragraph",
+          "text": "**vaccinuril inactivat** folosesc un microb ucis (de exemplu, anumite gripe). Mai sigure, acestea necesită adesea apeluri inverse. **Vaccinuril sau subunități** arată doar o bucată de microb, de exemplu o proteină de suprafață."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Z**Vaccinurile cu ARNm oferă o scurtă instrucțiune: celulele dvs. produc temporar o proteină virală inofensivă. Imunitatea ta învață să o recunoască. Apoi ARNm se degradează; nu iti modifica ADN-ul."
+        },
+        {
+          "type": "funFact",
+          "text": "Cu mult înainte de Jenner, în China se practica deja o formă de „variolizare”: expunerea voluntară la o formă mai ușoară de variolă pentru a te proteja."
+        }
+      ]
+    },
+    {
+      "id": "course_70_comment_fonctionne_un_vaccin_p3",
+      "title": "Imunitatea colectivă",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Când destui oameni sunt protejați, microbul circulă mai puțin. Aceasta este [[Imunitate de turmă]]. De asemenea, îi protejează pe cei care nu pot fi vaccinați (nou-născuți, persoane imunodeprimate)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pragul depinde de contagiozitate. Pentru **rujeolă**, aveți adesea nevoie de o acoperire de la **92 pan la 95%**. Pentru poliomielita, mai degrabă în jur de **80 pan la 85%**."
+        },
+        {
+          "type": "funFact",
+          "text": "Variola a fost declarată eradicată în **1980**. Ultimul caz natural cunoscut datează din **1977**, în Somalia."
+        }
+      ]
+    },
+    {
+      "id": "course_70_comment_fonctionne_un_vaccin_p4",
+      "title": "Securitate și vigilență",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un vaccin trece prin teste stricte înainte de autorizare. Unele conțin [[Adjuvanți]]: substanțe care ajută sistemul imunitar să „observe” mai bine vaccinul."
+        },
+        {
+          "type": "paragraph",
+          "text": "Paradoxal, atunci când bolile dispar din viața de zi cu zi, uităm de pericolul lor. Focarele de rujeolă ne amintesc că protecția colectivă rămâne fragilă dacă acoperirea scade."
+        },
+        {
+          "type": "takeaway",
+          "text": "Un vaccin antrenează sistemul imunitar cu o versiune inofensivă a pericolului. Creează memorie celulară, protejează individul și, la scară populației, încetinește sau oprește epidemiile."
+        }
+      ]
+    }
+  ]
+}

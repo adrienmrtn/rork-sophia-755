@@ -1,0 +1,116 @@
+{
+  "id": "course_238_la_transition_energetique",
+  "title": "Energetický přechod",
+  "subtitle": "Směrem k uhlíkové neutralitě",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Svět se snaží nahradit fosilní paliva čistšími zdroji. Změna nezbytná i obtížná.",
+  "hero": {
+    "image": "la_transition_energetique",
+    "ratio": "16:9",
+    "hook": "Solární energie se stala nejlevnější energií v historii. Zbývá jen uložit."
+  },
+  "sections": [
+    {
+      "id": "course_238_la_transition_energetique_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Po dlouhou dobu lidstvo měnilo zdroje energie volbou účinnosti: ze dřeva na uhlí, poté z uhlí na ropu. Současný přechod **Energie** je jiný: poprvé je vynucený omezením přežití, změnou klimatu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tento kurz zkoumá, jak se svět snaží nahradit fosilní paliva čistšími zdroji a proč je tento posun tak obtížný, jak je nezbytný."
+        }
+      ]
+    },
+    {
+      "id": "course_238_la_transition_energetique_p1",
+      "title": "1,5 °C: cíl, který řídí všechno",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rámec, kterým se dnes řídí všechny energetické politiky, se nazývá **[[Pařížská dohoda]]**, podepsaná v roce 2015. Tato smlouva zavazuje země světa omezit globální oteplování s konkrétním cílem: zůstat pokud možno pod 1,5 °C nad úrovněmi před průmyslovou érou. Každá další desetina stupně zhoršuje extrémní jevy počasí."
+        },
+        {
+          "type": "image",
+          "asset": "solar_panel_farm_photovoltaic_field",
+          "ratio": "16:9",
+          "caption": "Solární panely a větrné turbíny symbolizují světový posun směrem k nízkouhlíkovým zdrojům energie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ke splnění tohoto cíle si státy kladou za cíl **[[uhlíková neutralita]]**: rovnováha mezi skleníkovými plyny emitovanými lidskou činností a jejich absorpcí lesy, půdou, oceány nebo technologiemi zachycování. To předpokládá, že globální emise se přestanou zvyšovat před rokem 2025 a poté v následujících letech prudce klesnou."
+        },
+        {
+          "type": "funFact",
+          "text": "Náklady na solární energii klesly mezi lety 2010 a 2020 o 90 %, což je rychlejší pokles než u jakékoli jiné technologie v ekonomické historii. V roce 2023 se solární energie dokonce stane nejlevnějším zdrojem elektřiny, jaký byl kdy vyroben v mnoha částech světa."
+        }
+      ]
+    },
+    {
+      "id": "course_238_la_transition_energetique_p2",
+      "title": "Velkolepý pokles cen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hlavním motorem přechodu je ekonomický. Fotovoltaická solární ****, pokud pojedete satelitem, budete jej moci použít později a budete jej moci použít později.**Z**, instalovaný zejména na moři, kde jsou silnější a pravidelnější větry, také dosáhl skutečné průmyslové vyspělosti. V roce 2023 bude již téměř 90 % nové elektrické kapacity instalované na celém světě pocházet z obnovitelných energií."
+        },
+        {
+          "type": "paragraph",
+          "text": "Velkým problémem zůstává: solární a větrná energie trpí **přerušovanost**, to znamená, že nevyrábějí elektřinu nepřetržitě. Z toho plyne význam velkokapacitních baterií, jejichž cena následovala stejně úžasný pokles jako u solárních, díky čemuž jsou elektromobily stále konkurenceschopnější."
+        },
+        {
+          "type": "funFact",
+          "text": "Čína nyní vyrábí více než 80 % světových solárních panelů a více než 70 % lithium-iontových baterií pro elektromobily. Energetická transformace Západu proto do značné míry závisí na čínském výrobním řetězci."
+        }
+      ]
+    },
+    {
+      "id": "course_238_la_transition_energetique_p3",
+      "title": "Nové překážky: skladování a vzácné kovy",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Přes toto nadšení naráží přechod na velmi reálné limity. Na rozdíl od plynu nebo uhlí, které lze libovolně spalovat, obnovitelné energie vyžadují flexibilnější elektrické sítě s akumulačními nebo záložními zdroji, jako je vodík nebo jaderná energie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Další překážkou je posun od závislosti na ropě k závislosti na **[[prvky vzácných zemin]]** a dalších kovech, jako je lithium nebo kobalt, potřebných k výrobě baterií a větrných turbín. Čína kontroluje obrovský podíl celosvětové rafinace těchto materiálů, což vytváří nové zranitelnosti pro Evropu a Spojené státy."
+        },
+        {
+          "type": "paragraph",
+          "text": "A konečně, přechod naráží na sociální odpor: průmysl fosilních paliv stále zaměstnává miliony lidí a transformace těchto pracovních míst bez jejich zničení je základní podmínkou pro to, aby přechod přijali všichni."
+        }
+      ]
+    },
+    {
+      "id": "course_238_la_transition_energetique_p4",
+      "title": "Směrem k novému energetickému mixu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Energetická budoucnost nepochybně není založena na jediném řešení, ale na směsi několika. Zdá se, že **[[Zelený vodík]]** je klíčovou součástí pro dekarbonizaci nejobtížnějších odvětví, jako je výroba oceli nebo letectví, kde samotná elektřina nestačí."
+        },
+        {
+          "type": "paragraph",
+          "text": "Přechod také vyžaduje **střízlivost**: spotřebovávat méně a lépe, izolací budov nebo snížením průmyslového odpadu, často zůstává nejúčinnější a nejlevnější pákou."
+        },
+        {
+          "type": "funFact",
+          "text": "Některé experimentální baterie fungují pomocí gravitace: zvedají těžké betonové bloky s denním přebytkem solární elektřiny, pak je večer nechají sestoupit, aby vyrobily elektřinu pomocí turbíny."
+        },
+        {
+          "type": "takeaway",
+          "text": "Cena solární energie klesla za patnáct let o 90 % a stala se nejlevnějším zdrojem elektřiny v historii. Hlavními výzvami energetického přechodu však zůstávají skladování energie a dodávky vzácných kovů."
+        }
+      ]
+    }
+  ]
+}

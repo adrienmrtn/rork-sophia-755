@@ -1,0 +1,134 @@
+{
+  "id": "course_32_la_guerre_du_vietnam_1955_1975",
+  "title": "Vietnamkriget",
+  "subtitle": "1955-1975",
+  "subject": "histoire",
+  "subcategory": "Cold War & Contemporary World",
+  "description": "Under tjugo år åtog sig USA en enorm kraft till Vietnam för att stävja kommunismen. De fastnar, delar sig och lämnar utan att ha vunnit.",
+  "hero": {
+    "image": "la_guerre_du_vietnam",
+    "ratio": "16:9",
+    "hook": "Den ledande världsmakten står inför ett krig som den inte kan vinna."
+  },
+  "sections": [
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I hjärtat av det kalla kriget delades Vietnam i två delar. I norr en kommunistisk regim. I söder, en stat som stöds av väst. USA skickar enorma resurser dit. Ändå fastnar de."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denna konflikt är inte bara militär. Den delar Amerika, visar gränserna för brute force och lämnar bestående trauma på båda sidor."
+        }
+      ]
+    },
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_p1",
+      "title": "Ett delat land, sedan ett växande krig",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Efter det franska nederlaget i **[[Indokina krig]]** delar Genèveavtalet (**1954**) upp Vietnam vid **17:e breddgraden**. I norr leder **[[Ho Chi Minh]]**, nationalistisk och kommunistisk ledare. I söder en auktoritär regim med stöd av Washington."
+        },
+        {
+          "type": "paragraph",
+          "text": "Amerikanska presidenter **John F. Kennedy** sedan **Lyndon B. Johnson** fruktar **[[domino teori]]**: om ett land faller för kommunismen, skulle grannarna följa efter. I **augusti 1964** tjänar en sjöincident i Tonkinbukten som en förevändning för att utöka kriget. Från **1965** bombar operation **[[Rullande åska]]** norr, och marinsoldaterna landar i Da Nang."
+        },
+        {
+          "type": "image",
+          "asset": "vietnam_war_american_soldiers",
+          "ratio": "4:3",
+          "caption": "Amerikanska soldater i Vietnam: ett utmattningskrig i djungeln."
+        },
+        {
+          "type": "funFact",
+          "text": "Johnson sa enligt uppgift privat efter Tonkin: \"Såvitt jag vet sköt vår flotta valar den kvällen.\""
+        }
+      ]
+    },
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_p2",
+      "title": "Varför styrka inte räcker",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1969** fanns cirka **543 000** amerikanska soldater på plats. Strategin med **[[söka och förstöra]]** (sök fienden för att förgöra honom) och luftöverlägsenhet störde inte nordvietnamesiska försörjningar via Ho Chi Minh-leden. General **Vo Nguyen Giap**, militärledare i norr, satsar på trakasserier och stöd från en del av befolkningen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Amerikanerna använder också avlövande medel som Agent Orange för att rensa djungeln. De mänskliga och politiska kostnaderna exploderar. Kistorna kommer in. **[[Pentagon]]**, högkvarter för amerikanskt försvar, upptäcker att lokal politisk vilja kan hålla i sig inför tekniken."
+        },
+        {
+          "type": "funFact",
+          "text": "Mer än **80 miljoner** liter herbicider släpptes, vilket förstörde ungefär **20%** av Sydvietnams skogar."
+        }
+      ]
+    },
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_p3",
+      "title": "Chocken från Tet-offensiven",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den **30 januari 1968**, under det vietnamesiska nyåret, slog **[[Tet offensiv]]** till fler än **100** städer. På marken är det ett misslyckande för norr. På amerikansk tv var det en chock: den \"nära segern\" som Washington tillkännagav verkade falsk."
+        },
+        {
+          "type": "paragraph",
+          "text": "President **Richard Nixon** lanserade sedan \"Vietnamisering\": att dra tillbaka amerikanska trupper samtidigt som de beväpnade södern. Parisavtalet (**1973**) markerade den amerikanska avgången. Utan en beskyddare kollapsade Saigon, söderns huvudstad, på två år."
+        }
+      ]
+    },
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_p4",
+      "title": "Slutet på kriget och vad det lämnar",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Den 30 april 1975**, Saigonfallen. Cirka **58 000** amerikaner dog. Vietnamesiska förluster uppgick till miljoner. Det första verkligt tv-sända kriget, konflikten avslöjade också brott som **[[Min Lai]]**-massakern, där amerikanska soldater dödade civila i **1968**. Amerika blir mer misstänksam mot avlägsna ingripanden."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1954",
+              "title": "Genèveavtalet",
+              "detail": "Provisorisk skiljevägg vid 17:e breddgraden."
+            },
+            {
+              "date": "1965",
+              "title": "Amerikansk klättring",
+              "detail": "Bombningar och landning av marinsoldaterna."
+            },
+            {
+              "date": "1968",
+              "title": "Tet offensiv",
+              "detail": "TV-chock och ändrad åsikt."
+            },
+            {
+              "date": "1973",
+              "title": "Parisavtal",
+              "detail": "Tillbakadragande av amerikanska styrkor."
+            },
+            {
+              "date": "1975",
+              "title": "Saigons fall",
+              "detail": "Återförening under kommunismen."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Efter **20 år** av konflikt lämnade USA Vietnam utan seger: militär makt politiskt besegrad, land återförenat under kommunismen, det amerikanska samhället varaktigt splittrat."
+        }
+      ]
+    }
+  ]
+}

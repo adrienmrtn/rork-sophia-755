@@ -1,0 +1,98 @@
+{
+  "id": "course_59_la_decouverte_de_l_anesthesie",
+  "title": "Az érzéstelenítés felfedezése",
+  "subtitle": "Gyógyszer",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "1846 előtt gyakran tudatosan és rendkívül fájdalmasan hajtottak végre műtétet. Az érzéstelenítés a műtétet ápolássá, nem kínzássá alakítja.",
+  "hero": {
+    "image": "la_decouverte_de_l_anesthesie",
+    "ratio": "16:9",
+    "hook": "1846-ban egy napon Bostonban a műtét már nem versenyfutás a fájdalommal."
+  },
+  "sections": [
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Képzeljen el egy amputációt elalvás nélkül. A 19. század közepe előtt ez volt a norma. Szíjazzuk a beteget, gyorsan haladunk, imádkozunk."
+        },
+        {
+          "type": "paragraph",
+          "text": "A **anesztézia** mindent megváltoztat: lehetővé teszi, hogy a fájdalom tudata nélkül működjön. A modern sebészet végre időt vehet igénybe."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p1",
+      "title": "Előtte: sebesség versus szenvedés",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "surgery_without_anesthesia_19th_century",
+          "ratio": "4:3",
+          "caption": "Érzéstelenítés nélkül a sebésznek rendkívül gyorsnak kellett lennie."
+        },
+        {
+          "type": "paragraph",
+          "text": "A sebészeket sebességük alapján ítélték meg. Alkoholt, ópiumot vagy nyers erőszakot használtak az emberek mozgásképtelenné tételére. Sok beteg halt meg sokk, fertőzés vagy vérzés következtében."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p2",
+      "title": "1846: az éter napja",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "ether_anesthesia_first_demonstration_1846",
+          "ratio": "4:3",
+          "caption": "Bostonban egy nyilvános tüntetés meggyőzte az orvosvilágot."
+        },
+        {
+          "type": "paragraph",
+          "text": "**1846. október 16.** Bostonban a fogorvos **William Morton** belélegzi a pácienst **éter**. **John Warren** sebész egy nyaki daganatot operál. A beteg nem sikoltoz. A szoba elképedt."
+        },
+        {
+          "type": "funFact",
+          "text": "Warren állítólag azt mondta: \"Uraim, ez nem humbug.\" A kifejezés híres maradt."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p3",
+      "title": "Következő: kloroform és viták",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Más termékek következtek, mint például a **kloroform**, amely különösen Nagy-Britanniában népszerűvé vált. Rivalizálás támad afelől, hogy ki mit „talált fel”. A szabadalom nem számít: az ötlet az egész világon terjed."
+        },
+        {
+          "type": "paragraph",
+          "text": "Marad egy probléma: elaltatni ölés nélkül. Adagolnia kell, figyelnie kell a légzését és a szívét. Új szakterület születik."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p4",
+      "title": "Érzéstelenítés ma",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az aneszteziológus ma precíz gázokat és gyógyszereket használ, olyan gépeket, amelyek mindent mérnek. Elaltathatja az egész testet vagy csak egy területet (helyi vagy lokoregionális érzéstelenítés)."
+        },
+        {
+          "type": "takeaway",
+          "text": "A **1846** éter bemutatása óta az érzéstelenítés átalakította a műtétet: kevesebb fájdalom, több idő, nagyobb precizitás... és a biztonság már önmagában is tudomány lett."
+        }
+      ]
+    }
+  ]
+}

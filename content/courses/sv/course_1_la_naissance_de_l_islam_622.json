@@ -1,0 +1,152 @@
+{
+  "id": "course_1_la_naissance_de_l_islam_622",
+  "title": "Islams födelse",
+  "subtitle": "622",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "År 622 flydde en köpman från Mecka vid namn Muhammed från sin stad till Medina. Denna avgång, Hegira, markerar år 1 av islam och början på en världscivilisation.",
+  "hero": {
+    "image": "la_naissance_de_l_islam_622",
+    "ratio": "16:9",
+    "hook": "Hur en landsförvisad köpman födde, på tjugo år, en världscivilisation."
+  },
+  "sections": [
+    {
+      "id": "course_1_la_naissance_de_l_islam_622_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **622** måste en köpman från Mecka, i dagens Saudiarabien, fly från sin stad. Vi vill döda honom. Den här mannen heter **Muhammed**. Hans avresa mot oasen Medina har ett namn: **Hegira**. Senare blev detta datum år 1 i den muslimska kalendern."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ingen ser det än. Men på mindre än ett sekel skulle budskapet som föddes i denna öken fälla stora imperier och föda en stat som sträcker sig från Spanien till Indiens portar. Så här började det hela."
+        }
+      ]
+    },
+    {
+      "id": "course_1_la_naissance_de_l_islam_622_p1",
+      "title": "Ett Arabien som världen glömt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "På 700-talet intresserade Arabien nästan ingen. Vi bor där i stammar. [[beduiner]], ökennomader, bor tillsammans med några handelsstäder som Mecka. Religionen där är polyteistisk: många idoler bers till. Hjärtat i kulten är en kubisk fristad, **Kaaba**. Pilgrimer flockas dit, och med dem pengarna. Den kraftfulla [[Quraysh]]-stammen kontrollerar denna handel."
+        },
+        {
+          "type": "funFact",
+          "text": "Kaaban inhyste ungefär **360 idolisera**, eller ungefär en för varje dag i den arabiska månkalendern. Muhammed lät ta bort dem alla på en enda dag."
+        },
+        {
+          "type": "image",
+          "asset": "mecca_7th_century",
+          "ratio": "4:3",
+          "caption": "Mecka, ett vägskäl för handel och pilgrimsfärdscentrum på 700-talet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Runt omkring håller två jättar på att utmatta sig själva i ändlösa krig: [[Det bysantinska och sassanidiska riket]], det vill säga det östromerska riket och det persiska riket. Det är i detta tomrum som **Muhammed**, född runt **570**, sägs få uppenbarelser från **610**, i en grotta på berget Hira. Hans idé om en **En Gud** hotar handeln i Mecka, som lever på idoler."
+        }
+      ]
+    },
+    {
+      "id": "course_1_la_naissance_de_l_islam_622_p2",
+      "title": "622: Hegira, allt förändras",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hotad av döden accepterar Muhammed inbjudan till en oas som heter Yathrib. Dess invånare letar efter en skiljedomare för att lugna sina konflikter. Denna avgång är **Hegira**. Där är han inte längre bara en profet: han blir en ledare. Han utarbetade [[Medinas konstitution]], en pakt mellan klanerna, och grundade [[Ummah]], den gemenskap av troende som går utöver blodsband."
+        },
+        {
+          "type": "funFact",
+          "text": "Före Hegira kallades Medina **Yathrib**. Omdöpt till \"Profetens stad\" (Madinat al-Nabi), har den behållit namnet fram till idag."
+        },
+        {
+          "type": "image",
+          "asset": "medina_prophet_s_mosque",
+          "ratio": "4:3",
+          "caption": "Medina, \"profetens stad\", islams första huvudstad."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kriget med Mecka börjar. Muhammed lanserar [[räder]], snabba räder, för att skära av fiendens karavaner. Ändå i underläge vann hans trogna i **Badr** i **624**. Denna seger upplevs som ett mirakel. Trots ett misslyckande vid Uhud, gjorde de motstånd mot **belägring av Medina** i **627**. Hans auktoritet hävdas."
+        }
+      ]
+    },
+    {
+      "id": "course_1_la_naissance_de_l_islam_622_p3",
+      "title": "630: den triumferande återkomsten",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **630** är situationen den omvända. Muhammed marscherar mot Mecka med **10 000 man**. Staden kapitulerar utan kamp. Istället för att ta hämnd, ger han en **allmän benådning**. Denna gest driver stammarna att gå med honom."
+        },
+        {
+          "type": "paragraph",
+          "text": "Han går in i **Kaaba**, bryter sönder dess idoler och helgar den åt den ende Guden. Efter hans död i **632** förenades nästan hela Arabien för första gången. Kraften går sedan över till [[Kalif]]s, hans efterträdare. Abu Bakr, då Umar, inledde en snabb expansion mot Syrien, Irak och Egypten."
+        },
+        {
+          "type": "funFact",
+          "text": "Islams första **böneutropare**, den som kallar till bön, var Bilal, en före detta slav från Etiopien: en symbol för jämlikheten mellan troende som försvaras av budskapet."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "622",
+              "title": "Hegira",
+              "detail": "Avresa till Medina, början av den muslimska eran."
+            },
+            {
+              "date": "624",
+              "title": "Slaget vid Badr",
+              "detail": "Första stora segern, i underläge."
+            },
+            {
+              "date": "627",
+              "title": "Belägring av Medina",
+              "detail": "Samhället gör motstånd och påtvingar sin auktoritet."
+            },
+            {
+              "date": "630",
+              "title": "Infångande av Mecka",
+              "detail": "Ge upp utan kamp och allmän benådning."
+            },
+            {
+              "date": "632",
+              "title": "Muhammeds död",
+              "detail": "Arabien är enat under en enda myndighet."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_1_la_naissance_de_l_islam_622_p4",
+      "title": "Rötterna till en civilisation",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Expansionen är inte bara militär. Hon är också organiserad. Erövrarna satte upp [[Dhimma]]: Kristna och judar behöll sin religion i utbyte mot en skatt, [[jizya]]. Denna kontrollerade tolerans underlättar installationen av den nya kraften i trötta regioner i Bysans."
+        },
+        {
+          "type": "funFact",
+          "text": "Förundrade av Alexandria under erövringen av Egypten föredrog araberna att grunda en ny huvudstad, **Fostat** (det framtida Kairo), snarare än att skada den antika staden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Det arabiska språket blir imperiets cement: förvaltningsspråk och heligt språk. Också driven av idealet om [[Jihad]], både egenansträngning och försvar av samhället, blir den islamiska civilisationen en korsväg mellan grekisk, persisk och indisk kunskap. Så småningom närmar sig antiken."
+        },
+        {
+          "type": "takeaway",
+          "text": "På bara **22 år** (610-632) förvandlade Muhammed ett andligt budskap till verklig politisk makt. Han lade grunden till ett imperium som skulle dominera en del av världen i århundraden."
+        }
+      ]
+    }
+  ]
+}

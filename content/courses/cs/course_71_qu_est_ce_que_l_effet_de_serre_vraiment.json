@@ -1,0 +1,108 @@
+{
+  "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment",
+  "title": "Co je to skleníkový efekt (ve skutečnosti)?",
+  "subtitle": "Klima a atmosféra",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Skleníkový efekt není primárně problém: je to neviditelný plášť, který brání Zemi zamrznout. Skutečný problém je, když ho zahustíte příliš rychle.",
+  "hero": {
+    "image": "qu_est_ce_que_l_effet_de_serre",
+    "ratio": "16:9",
+    "hook": "Bez skleníkového efektu by Země byla ledovou pouští. Při příliš velkém množství se přehřívá."
+  },
+  "sections": [
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Představte si auto zavřené na slunci: okny propouštějí světlo dovnitř, ale teplo se jen obtížně dostává ven. Prostor pro cestující se zahřívá. Trochu takto funguje pozemský [[skleníkový efekt]] se vzduchem místo skla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tento jev je **přirozený** a životně důležitý. Bez něj by průměrná teplota na zeměkouli klesla směrem k **-18 °C**. S ním jsme kolem **+15 °C**. Současným problémem není jeho existence, ale jeho rychlé **amplifikace** našimi aktivitami."
+        }
+      ]
+    },
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p1",
+      "title": "Jak si planeta udržuje teplo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Slunce vysílá hlavně viditelné světlo. Atmosféra to nechává plynout. Země a oceány se zahřívají a poté tuto energii vyzařují zpět ve formě **infračerveného tepla**, vln, které jsou „delší“ než viditelné světlo."
+        },
+        {
+          "type": "image",
+          "asset": "factory_chimneys_greenhouse_gas_emissions",
+          "ratio": "auto",
+          "caption": "Průmyslové emise zesilují skleníkový efekt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Určité plyny, [[skleníkových plynů]], toto teplo pohlcují a vyzařují do všech směrů, tedy i směrem k zemi. Dusík a kyslík, většina ve vzduchu, tuto práci stěží plní. Vodní pára, **CO₂** a **metanu** to dělají velmi dobře."
+        },
+        {
+          "type": "funFact",
+          "text": "Název „skleníkový efekt“ je trochu zavádějící. Skutečný skleník topí hlavně tím, že blokuje stoupající horký vzduch. Atmosféra zachycuje teplo pohlcováním infračervených paprsků."
+        }
+      ]
+    },
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p2",
+      "title": "Když lidé zahustí přikrývku",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Od průmyslové revoluce se spaluje uhlí, ropa a plyn. Tento uhlík, pohřbený po miliony let pod zemí, se vrací do vzduchu. Odlesňování také snižuje lesy, které absorbovaly CO₂. Pěstování dobytka a rýže přidává metan, přibližně **80krát** více „zahřívání“ než CO₂ za 20 let."
+        },
+        {
+          "type": "paragraph",
+          "text": "Výsledek: Koncentrace CO₂ se zvýšila z přibližně **280** na více než **420** dílů na milion. Taková hladina nebyla vidět od [[pliocén]], asi před **3 miliony let**, kdy byla moře výše."
+        }
+      ]
+    },
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p3",
+      "title": "Jaké energetičtější změny klimatu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[IPCC]], která syntetizuje práci tisíců klimatologů, je jasná: oteplování od roku 1950 je za tisíciletí bezprecedentní a jeho lidský původ je prokázán."
+        },
+        {
+          "type": "paragraph",
+          "text": "Více energie ve vzduchu a oceánech znamená více extrémů: sušší sucha, prudší deště, tající ledovce a ledové čepice, stoupající hladina moří. A urychlovač: když bílý led zmizí, tmavá půda a voda absorbují více slunečního světla. [[Pozemské albedo]] padá a planeta se otepluje ještě rychleji."
+        },
+        {
+          "type": "funFact",
+          "text": "Venuše ukazuje „nacpaný“ skleníkový efekt: atmosféra s 96 % CO₂ a asi **460 °C** na zemi, dost na roztavení olova."
+        }
+      ]
+    },
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p4",
+      "title": "Omezte nárůst, přizpůsobte se zbytku",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mezinárodní cíl si klade za cíl zůstat pod **+1,5°C** nebo **+2°C** ve srovnání s předindustriální érou, aby se zabránilo nebezpečným prahovým hodnotám, jako je rozmrazování [[permafrost]], které by uvolnilo ještě více metanu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dvě páky: **redukovat** emise (čistá energie, střízlivost, lesy) a **přizpůsobený** k tomu, co je již zavázáno. CO₂ zůstává ve vzduchu po staletí: to, co dnes vypouštíme, vydrží dlouho."
+        },
+        {
+          "type": "takeaway",
+          "text": "Bez přirozeného skleníkového efektu by Země zamrzla kolem **-18 °C**. Jeho zesílení fosilními palivy tlačí CO₂ na úrovně, které nebyly zaznamenány **3 miliony let**."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "id": "course_56_la_decouverte_de_la_radioactivite_marie",
+  "title": "A radioaktivitás felfedezése",
+  "subtitle": "Marie Curie",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Marie Curie Pierre Curie-vel és Henri Becquerel-lel nyitja meg a radioaktivitás fejezetét. Két Nobel-díj, elsöprő munka és hatalmas örökség.",
+  "hero": {
+    "image": "la_decouverte_de_la_radioactivite_marie_curie",
+    "ratio": "16:9",
+    "hook": "Több tonna ércet mért, hogy izoláljon néhány gramm láthatatlan elemet."
+  },
+  "sections": [
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Marie Curie** (született Maria Skłodowska) az első nő, aki Nobel-díjat kapott. Ő az egyetlen ember, aki két különböző tudományban kapott **két**-t: a fizikában, majd a kémiában."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tárgya: **radioaktivitás**, vagyis az a tény, hogy bizonyos atomok spontán energiát és részecskéket küldenek."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p1",
+      "title": "Szűk ajtó a tudományhoz",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lengyelországban született, Párizsba ment tanulni, mert a helyi egyetemek sok ajtót bezártak a nők előtt. Keményen dolgozik, gyakran bizonytalan körülmények között."
+        },
+        {
+          "type": "paragraph",
+          "text": "Férjhez ment **Pierre Curie** fizikushoz. Együtt egy akkoriban ritka laboratóriumi párost alkottak."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p2",
+      "title": "Nevezze meg a láthatatlant",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A **1896**-ben **Henri Becquerel** észrevette, hogy az urán fény nélkül takarja el a fényképészeti lemezeket. Marie Curie úgy dönt, hogy részletesen tanulmányozza ezt a jelenséget. Ő találta ki a **radioaktivitás** szót."
+        },
+        {
+          "type": "image",
+          "asset": "marie_curie_pitchblende_radioactivity",
+          "ratio": "4:3",
+          "caption": "Rengeteg szurokkeverék a rádium és a polónium izolálására."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pierre-rel két új elemet fedez fel: a **polonium** (Lengyelországról elnevezett) és a **radium**. Elszigetelésükhöz óriási mennyiségű ércet, szurokkeveréket kell feldolgozni."
+        },
+        {
+          "type": "funFact",
+          "text": "A rádium halványan világít a sötétben. Először meglepődtünk… mielőtt megértettük, milyen veszélyes."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p3",
+      "title": "Dicsőség és árat kell fizetni",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A **1903**-ben Marie, Pierre és Becquerel megkapta a fizikai Nobel-díjat. A **1911**-ben Marie egyedül kapott kémiai Nobel-díjat. Pierre véletlenül meghalt 1906-ban. Folytatja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Az első világháború alatt mobil röntgen egységeket szervezett a sebesültek ellátására. Olyan adagoknak teszi ki testét, amelyekről ma már tudjuk, hogy elfogadhatatlanok."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p4",
+      "title": "Kétoldalas örökség",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A radioaktivitás lehetővé tette a sugárkezelést bizonyos rákos megbetegedések ellen… és a nukleáris fegyvereket is. A tudás semleges; felhasználása nem."
+        },
+        {
+          "type": "takeaway",
+          "text": "Marie Curie egy furcsa megfigyelést alakított át új tudománnyá: a radioaktivitássá. Munkája megnyitotta a modern fizikát… akkor még rosszul értett kockázatok árán."
+        }
+      ]
+    }
+  ]
+}

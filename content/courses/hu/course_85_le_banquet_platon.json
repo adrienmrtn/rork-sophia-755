@@ -1,0 +1,106 @@
+{
+  "id": "course_85_le_banquet_platon",
+  "title": "A szimpózium, Platón",
+  "subtitle": "Kr. e. 4. század",
+  "subject": "litterature",
+  "subcategory": "Ancient Greeks & Philosophers",
+  "description": "Egy athéni étkezés körül a vendégek határozzák meg a szerelmet. Arisztophanész az androgünekről mesél, Szókratész a szépség felé emeli a vágyat. Platón az ünneplést filozófiává alakítja.",
+  "hero": {
+    "image": "le_banquet_platon",
+    "ratio": "16:9",
+    "hook": "Nagyon részeg este. És hirtelen a szerelem legszebb definíciója."
+  },
+  "sections": [
+    {
+      "id": "course_85_le_banquet_platon_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Athénban, a **4. században Kr. e** **Plato**, Szókratész görög filozófus és tanítványa írta a **Bankett**-t. Görögül azt mondjuk: *Szimpózium*. A helyszín egy [[Athéni szimpozion]], egy férfias vacsora utáni étkezés, ahol a híg bor és az intellektuális beszélgetések keverednek. Azon az estén az erőltetett téma a **[[Eros]]**, az az erő, amely a lelket a szépség felé löki."
+        },
+        {
+          "type": "paragraph",
+          "text": "Minden vendég felkínálja a szerelem elméletét. A párbeszéd mászássá válik: a testtől a szépségig, a szépségtől a **Ötletek** tökéletes és örök formákig Platón szerint. És **Szókratész**, Platón mestere, akit 399-ben halálra ítéltek, ahogy a platóni párbeszédekben gyakran előfordul, az utolsó szót mondja."
+        }
+      ]
+    },
+    {
+      "id": "course_85_le_banquet_platon_p1",
+      "title": "Igyál, beszélgess, versenyezzen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A bankett a tragikus szerző, az est házigazdája, **Agathon** költő győzelmét ünnepli. A másnaposság még mindig ott van, de úgy döntünk, inkább megdicsérjük Erost, minthogy túl sokat iszunk. Egymást követik a beszédek: orvosok, költők, politikusok. Mindenki kivetíti a vágyról alkotott elképzelését. **Phaedra** a szerelemről, mint a bátorság mozgatórugójáról beszél. A **Pausanias** megkülönbözteti a nemes és a durva szeretetet."
+        },
+        {
+          "type": "image",
+          "asset": "ancient_greek_symposium_banquet_painting",
+          "ratio": "4:3",
+          "caption": "A görög szimpóz: bor, koronák és beszéd, mint társasági sport."
+        },
+        {
+          "type": "paragraph",
+          "text": "Platón arra használja a fesztivált, hogy előadások nélkül filozófiát csináljon. Nevetjük, provokáljuk, kijavítjuk egymást. Az ötlet a borral halad előre, de a játékszabályoknak is köszönhetően: Erost mindenkinek meg kell védenie a többiek előtt. Az ékesszólási verseny, a görög *agon* gondolati iskolává válik."
+        }
+      ]
+    },
+    {
+      "id": "course_85_le_banquet_platon_p2",
+      "title": "Az androgének mítosza",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A leghíresebb beszéde **Arisztophanész**, a szatíráiról ismert athéni képregényíróé. Elmondása szerint a múltban az emberek kettős gondolkodásúak voltak. A [[kétnemű]] férfias és nőies karaktereket kevert. Más párok egyesültek. **Zeusz**, az istenek királya, vágja ketté őket, hogy megbüntesse őket. Azóta mindenki keresi elveszett felét."
+        },
+        {
+          "type": "funFact",
+          "text": "Ez a történet adta a francia „lelkitárs” kifejezést. Platón a humorista szájába adja, aztán túllép rajta: a szerelem nem áll meg az elveszett test megtalálásában."
+        },
+        {
+          "type": "paragraph",
+          "text": "A mítosz gyönyörű, gyengéd, kissé szomorú. Ez magyarázza a **hiánya**-t, a befejezetlenség érzését, amely arra késztet bennünket, hogy a másikat keressük. De Szókratész máshova megy: szeretni nem csak a két felét összeragasztani. Arról szól, hogy valami nagyobb felé emelkedj, mint önmagad."
+        }
+      ]
+    },
+    {
+      "id": "course_85_le_banquet_platon_p3",
+      "title": "Diotima és a szerelem skálája",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Szókratész beszámol **Diotima**, külföldi papnő és a párbeszédben a bölcsesség alakja tanításáról. Eros nem teljes isten és nem szegény halandó: ő egy [[daimon]], közvetítő lény istenek és emberek között. Azt akarja, ami hiányzik neki. A szerető a gyönyörű testből indul ki, továbblép a szép lelkek felé, majd a szép tettek felé, mígnem **Gyönyörű önmagában**, a szépség tökéletes ötlete."
+        },
+        {
+          "type": "image",
+          "asset": "socrates_alcibiades_banquet_painting",
+          "ratio": "4:3",
+          "caption": "Szókratész és Alkibiádész: a vágy a lélek iskolája is lehet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ez a [[Plátói Erosz]], a vágy, ami nevel. Később [[Alkibiadész]], egy fiatal athéni politikus, jóképű és instabil, részeg, beront, és zavaró szatírként dicséri Szókratészt. A filozófiai szeretet nem szünteti meg a testi zavart. Az igazság keresésévé alakítja át."
+        }
+      ]
+    },
+    {
+      "id": "course_85_le_banquet_platon_p4",
+      "title": "Mit jelentett a „plátói”.",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A köznyelvben a „plátói” szerelem azt jelenti, hogy testi kapcsolatok nélkül. Platónnál gazdagabb: a test kiindulópont, nem szégyen. A bankett rányomta bélyegét a keresztény teológiára, Petrarch vagy Ronsard szerelmi költészetére és a vágy pszichológiájára. Ez azt mutatja, hogy szeretni azt jelenti, hogy megtanulunk látni."
+        },
+        {
+          "type": "takeaway",
+          "text": "A **Bankett**-ben Platón egy athéni estét skálává varázsol: érzékeny vágyból indulunk ki, hogy egy szélesebb szépségre törekedjünk. Itt szeretni annyi, mint megtanulni önmagadon túlra látni."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "course_146_hitchcock_et_le_suspense",
+  "title": "Hitchcock och spänning",
+  "subtitle": "1899-1980",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "**Alfred Hitchcock** uppfinner modern spänning: ger publiken information som karaktärerna inte har. Med *Psykologi*, *Vertigo* eller *Bakrutan* manipulerar han vår blick.",
+  "hero": {
+    "image": "hitchcock_et_le_suspense",
+    "ratio": "16:9",
+    "hook": "Den verkliga spänningen förvånar inte: den låter dig se bomben under bordet."
+  },
+  "sections": [
+    {
+      "id": "course_146_hitchcock_et_le_suspense_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Alfred Hitchcock** (1899-1980) har fått smeknamnet \"spänningens mästare\". I mer än femtio filmer förvandlade han thrillern till konsten att manipulera. *Psykologi*, *Vertigo*, *Bakrutan*: varje gång berättar kameran inte bara en historia. Hon leker med våra nerver."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hans favoritämne är inte brott. Det är utseendet: skuld, besatthet, voyeurism. Hitchcock filmar tittaren lika mycket som karaktärerna."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p1",
+      "title": "Överraskning kontra spänning",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1966** förklarar Hitchcock sin metod för [[François Truffaut]], fransk kritiker och sedan filmskapare. **överraskning**, säger han, är en bomb som exploderar utan förvarning: en kort chock. **spänning** visar publiken bomben medan karaktärerna ignorerar den. Spänningen håller i sig. Vi blir delaktiga och maktlösa."
+        },
+        {
+          "type": "image",
+          "asset": "alfred_hitchcock_portrait_director",
+          "ratio": "4:3",
+          "caption": "Hitchcock: ett ansikte, en siluett, ett globalt varumärke av spänning."
+        },
+        {
+          "type": "funFact",
+          "text": "För att föra fram handlingen använder han ofta en [[MacGuffin]]: ett föremål eller en hemlighet som motiverar karaktärerna, men vars exakta natur spelar liten roll. Det viktiga är jakten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denna informationsasymmetri är dess grammatik. Så fort vi vet mer än hjälten fruktar vi för honom."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p2",
+      "title": "Tekniska uppfinningar för att filma ångest",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1948**, med *Repet*, simulerar Hitchcock en unik [[sekvensbild]]: filmen verkar vara inspelad i ett svep. Rullarna håller bara tio minuter, så han gömmer skären bakom en rygg eller en mörk möbel. Effekten är kvävande: vi förblir inlåsta med mördarna."
+        },
+        {
+          "type": "image",
+          "asset": "hitchcock_vertigo_james_stewart_kim_novak_film",
+          "ratio": "4:3",
+          "caption": "Vertigo: Vertigo filmad som en förvrängning av rymden."
+        },
+        {
+          "type": "paragraph",
+          "text": "I **1958**, för *Vertigo*, uppfann han [[Dolly Zoom]]: kameran rör sig bakåt medan zoomen går framåt (eller vice versa). Utrymmet är förvrängt. Vi ser inte yrseln längre. Vi känner det."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p3",
+      "title": "Vi är alla voyörer",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I *Bakrutan* (**1954**), en fotograf med brutet ben spionerar på sina grannar. Han är åskådarens dubbelgångare i mörkret. Hitchcock använder [[Subjektiv kamera]]: vi ser exakt vad hjälten ser, inget mer."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denna identifiering är moralisk såväl som visuell. Vi letar efter ledtrådar, men vi delar också skulden att titta på det som inte angår oss. Hitchcock blandar thriller och [[psykoanalys]]: begravda rädslor, förbjudna begär, dubbla identiteter."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p4",
+      "title": "Ett varumärke, en musik, ett arv",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hitchcock förvandlade sitt namn till ett varumärke, tills hans tv-serie *Aalfred Hitchcock presentatör*. För *Psykologi* förbjuder han inträde efter sessionens början: hemligheten blir en händelse. Hans samarbete med kompositören [[Bernard Herrmann]] länkar samman musik och [[montering]] för att få upp publikens puls."
+        },
+        {
+          "type": "takeaway",
+          "text": "Hitchcock kodifierade modern spänning: informera betraktaren, rikta blicken och förvandla rädsla till kontrollerad njutning. Decennier senare har thrillern fortfarande sin grammatik att tacka honom."
+        }
+      ]
+    }
+  ]
+}

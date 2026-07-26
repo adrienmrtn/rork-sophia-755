@@ -1,0 +1,120 @@
+{
+  "id": "course_197_les_mille_et_une_nuits_sheherazade",
+  "title": "Az arab éjszakák (Shéherazade)",
+  "subtitle": "Mondd, hogy éld túl",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Scheherazade 1001 éjszakát túlél történetek mesélésével. Perzsia, Bagdad és Egyiptom között született gyűjtemény, amely világmítosszá vált.",
+  "hero": {
+    "image": "les_mille_et_une_nuits_sheherazade",
+    "ratio": "16:9",
+    "hook": "Minden este egy nő elmesél egy történetet, hogy ne haljon meg hajnalban."
+  },
+  "sections": [
+    {
+      "id": "course_197_les_mille_et_une_nuits_sheherazade_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A **Arab éjszakák** (*Alf Layla wa-Layla*) nem egyetlen szerző könyve. Ez egy palimpszeszt: több évszázados szóbeli és írott mesék, indiai, perzsa, arab, egyiptomi."
+        },
+        {
+          "type": "paragraph",
+          "text": "A középpontban egy szédítő ötlet: egy nő, **Scheherazade** pajzssá alakítja a történetet. Amíg beszél, a királynak, aki meg akarta ölni, várnia kell. Így válik a beszéd a túlélés fegyverévé."
+        }
+      ]
+    },
+    {
+      "id": "course_197_les_mille_et_une_nuits_sheherazade_p1",
+      "title": "A papír architektúrája: egy világszöveg keletkezése",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A mag egy perzsa forrásból származik, a [[Hazār Afsāna]] („Ezer mese”), amelyet maguk is indiai hagyományok táplálnak. Bagdadban, a [[Abbászidák]] kalifák alatt (8-13. század) a gyűjtemény arabizálódott: városi legendák, udvari anekdoták, olykor szatirikus hangvétel."
+        },
+        {
+          "type": "image",
+          "asset": "one_thousand_and_one_nights_arabic_manuscript",
+          "ratio": "4:3",
+          "caption": "Az Ezeregyéjszaka kézirata: formálódó világszöveg."
+        },
+        {
+          "type": "funFact",
+          "text": "Az „ezer és egy” nem jelent pontos számot. Arabul ez a szám a bőséget, szinte a végtelenséget sugallja. Egyes írástudók még a gonosz szem elleni talizmánnak is tekintették."
+        },
+        {
+          "type": "paragraph",
+          "text": "Egyiptomban a [[Mameluk]] idején új ciklusokat adtak hozzá. Meglepetés a Nyugat számára: **Aladdin** és **Ali Baba** hiányzik a középkori arab kéziratokból. Ezek „árva mesék”, amelyek később Európán keresztül kerültek be."
+        }
+      ]
+    },
+    {
+      "id": "course_197_les_mille_et_une_nuits_sheherazade_p2",
+      "title": "Seherezádé hegemóniája: a narráció, mint pajzs",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Shahryar** király, akit első felesége elárult, minden este feleségül vesz egy fiatal nőt, akit hajnalban megölnek. **Scheherazade**, a vezír lánya felajánlja magát. Elmondja… és a legfeszültebb pillanatban megáll."
+        },
+        {
+          "type": "image",
+          "asset": "scheherazade_shahryar_king_storyteller_painting",
+          "ratio": "4:3",
+          "caption": "Scheherazade Shahryarral szemben: narráció, mint pajzs."
+        },
+        {
+          "type": "paragraph",
+          "text": "Felhalmoz [[Beágyazott történetek (keretes narratíva)]]: egyik szereplő mesél a másiknak, ki a harmadiknak. A király, akit foglyul ejt a vágy, hogy hallja, mi történik ezután, elhalasztja a kivégzést. A **Ezeregyéjszakán** után a hallgatás megváltoztatta Shahryart: újra megtalálta az empátiát. Scheherazade nem csak szórakozott. Kijavított egy zsarnokot."
+        }
+      ]
+    },
+    {
+      "id": "course_197_les_mille_et_une_nuits_sheherazade_p3",
+      "title": "Nyugat felé való elmozdulás és egy mítosz feltalálása",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A **1704** és **1717** között a francia orientalista, **Antoine Galland** közli fordítását. A szöveget **Lajos XIV** udvarának ízléséhez igazítja, és hozzáfűzi a [[Hanna Diyab]], egy átutazó szíriai meséket. Aladdin így belép a korpuszba."
+        },
+        {
+          "type": "image",
+          "asset": "antoine_galland_thousand_nights_french_translation",
+          "ratio": "4:3",
+          "caption": "Galland megnyitja az éjszakát a 18. századi Európa felé."
+        },
+        {
+          "type": "funFact",
+          "text": "A fiatalok néha azzal ébresztették fel Gallandot éjszaka, hogy kiabáltak az ablaka alatt: „Mr. Galland, ha nem tud aludni, mesélje el nekünk az egyik történetét!” »"
+        },
+        {
+          "type": "paragraph",
+          "text": "A siker feltalál egy [[Európai orientalizmus]]: repülő szőnyegek, dzsinnek, álcázott kalifák. Fantáziakép, gyakran reduktív, de hatalmas hatású, **Proust**-től **Borges**-ig, aki ezekben a narratív hurkokban az irodalmi végtelenség képét látta."
+        }
+      ]
+    },
+    {
+      "id": "course_197_les_mille_et_une_nuits_sheherazade_p4",
+      "title": "A történet modernsége és filozófiai terjedelme",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Miért mondod? Az éjszakák válasza: távol tartani a halált. Amíg Scheherazade hangja visszhangzik, a végzetes hajnal felfüggesztődik. A fikció formát ad a káosznak."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ez a mechanizmus máig táplálja sorozatunkat: a [[filmsorozat]], ez a szakadék szélén lévő vágás, a narrátor közvetlen örököse. A végtelenségig nyitott könyv, amely nem hajlandó bezárni."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Scheherazade** túléli a **1001** éjszakákat a beágyazott történeteknek köszönhetően: feltalálja a feszültséget, mint túlélési eszközt, és a beszédet politikai hatalommá alakítja."
+        }
+      ]
+    }
+  ]
+}

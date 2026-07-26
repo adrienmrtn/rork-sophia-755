@@ -1,0 +1,140 @@
+{
+  "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum",
+  "title": "Azteccy bogowie i ofiary z ludzi",
+  "subtitle": "Krew za słońce",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "U Azteków słońce wschodzi tylko wtedy, gdy bogowie otrzymują krew. Surowa, ale spójna kosmologia w sercu ich imperium.",
+  "hero": {
+    "image": "les_dieux_azteques_et_les_sacrifices_humains",
+    "ratio": "16:9",
+    "hook": "Bez krwi słońce by się zatrzymało: taki jest kosmiczny dług Azteków."
+  },
+  "sections": [
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**AZtekowie**, czyli Meksyk, wierzą, że wszechświat jest kruchy. Bogowie potrzebują krwi, aby słońce mogło kontynuować swój bieg. Bez ofiar chaos powróci."
+        },
+        {
+          "type": "paragraph",
+          "text": "To, co przeraziło Hiszpanów, opiera się na jasnym założeniu: życie bogów i ludzi jest ze sobą powiązane. Oto jak działa ta kosmologia."
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p1",
+      "title": "Pięć słońc: świat już cztery razy martwy",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Według mitu [[Pięć słońc]] w katastrofach zniknęły już cztery epoki. Doświadczamy piątego słońca, [[Nahui Ollina]] („4-Ruch”), które ma zakończyć się trzęsieniami ziemi."
+        },
+        {
+          "type": "image",
+          "asset": "aztec_five_suns_teotihuacan_pyramid_sun_stone",
+          "ratio": "4:3",
+          "caption": "Kamień Słońca: Czas Azteków zamienia się w kolejne epoki."
+        },
+        {
+          "type": "paragraph",
+          "text": "W **Teotihuacán**, świętym mieście na centralnym płaskowyżu, bogowie rzucają się w ogień, by stać się słońcem i księżycem. Ale słońce pozostaje nieruchome. Następnie pozostali bogowie ofiarowują swoją własną krew, aby wprawić ją w ruch. Mężczyźni dziedziczą ten dług."
+        },
+        {
+          "type": "funFact",
+          "text": "Dla Azteków ofiara nie jest nieuzasadnionym okrucieństwem: jest spłatą boskiego długu, [[Kosmologia Pięciu Słońc i kosmiczny dług]]."
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p2",
+      "title": "Panteon dualności",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Centralnym bogiem jest [[Huitzilopochtli]], bóg wojny i południowego słońca. Każdej nocy walczy z ciemnością, aby odrodzić się rano. U jego boku [[Tlaloc]] daje deszcz, a więc urodzaje, czyli głód."
+        },
+        {
+          "type": "image",
+          "asset": "huitzilopochtli_aztec_sun_god_codex",
+          "ratio": "4:3",
+          "caption": "Huitzilopochtli, wojownicze słońce, które domaga się pożywienia."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Quetzalcoatla]], Pierzasty Wąż, ucieleśnia wiedzę i cywilizację. Jego rywal [[Tezcatlipoca]], Smoking Mirror, rządzi nocą, przeznaczeniem i magią. Sama ziemia ma straszliwą twarz: [[Coatlicue]], pożerająca boginię matkę."
+        },
+        {
+          "type": "funFact",
+          "text": "Cenna krew ofiarowana bogom nazywana jest [[chałchihuatl]], czyli „drogocenna woda”. Wydobyte serce uważa się za iskrę słoneczną, która powróciła do nieba."
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p3",
+      "title": "Wojny kwiatowe",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aby zdobyć ofiary, Aztekowie organizują [[Xochiyaoyotl]], „wojny kwiatowe”: rytualne walki, których celem nie jest zabijanie, ale pojmanie żywych wojowników godnych zaoferowania."
+        },
+        {
+          "type": "image",
+          "asset": "aztec_sacrifice_pyramid_templo_mayor_codex",
+          "ratio": "4:3",
+          "caption": "Ofiara na szczycie świątyni: serce złożone słońcu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na szczycie **Burmistrz Templo** w Tenochtitlán, stolicy nad jeziorem, ksiądz wycina serce nożem z **Obsydian**, ostrego kamienia wulkanicznego. Gest ten jest publiczny, uroczysty i traktowany jako służba oddana słońcu."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Mit",
+              "title": "Ofiara bogów",
+              "detail": "Słońce otrzymuje boską krew, aby iść naprzód."
+            },
+            {
+              "date": "Imperium",
+              "title": "Wojny kwiatowe",
+              "detail": "Pojmanie wojowników na ofiary."
+            },
+            {
+              "date": "1519",
+              "title": "Hiszpański szok",
+              "detail": "Cortés przybywa; system się załamuje."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p4",
+      "title": "Koniec świata, trwałe ślady",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hiszpańskie kroniki czasami zawyżają liczby, aby uzasadnić podbój. Ale system ofiarny jest bardzo realny. W **1519** przybycie **Hernána Cortés** przyspiesza koniec tego rytualnego wszechświata."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jednak postacie Azteków przetrwały w synkretyzmie: Dziewica z Guadalupe pojawia się w miejscu niegdyś łączonym z boginią matką. Zrozumienie tych poświęceń oznacza zrozumienie kultury, która przedkłada przetrwanie kosmosu ponad jednostkę."
+        },
+        {
+          "type": "takeaway",
+          "text": "Wśród Azteków ludzka krew karmiła słońce. Bogowie zapłacili już życiem: ludzie spłacają ten dług ofiarą, zwłaszcza poprzez **wojny kwiatowe**."
+        }
+      ]
+    }
+  ]
+}

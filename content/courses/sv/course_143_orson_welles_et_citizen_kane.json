@@ -1,0 +1,126 @@
+{
+  "id": "course_143_orson_welles_et_citizen_kane",
+  "title": "Orson Welles och Citizen Kane",
+  "subtitle": "1941",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "På **25 år** regisserar **Orson Welles** *Medborgare Kane* (**1941**). Filmen uppfinner ett nytt språk: skärpedjup, tillbakablickar och undersökning av ett mystiskt ord, Rosebud.",
+  "hero": {
+    "image": "orson_welles_et_citizen_kane",
+    "ratio": "16:9",
+    "hook": "Ett 25-årigt underbarn filmar en pressmogul och uppfinner modern film."
+  },
+  "sections": [
+    {
+      "id": "course_143_orson_welles_et_citizen_kane_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I decennier har kritiker rankat *Medborgare Kane* (**1941**) bland de största filmerna i historien. Dess direktör, **Orson Welles**, är bara **25 år gammal**. Filmen skildrar tidningsmogulen Charles Foster Kanes liv och ställer en enkel fråga: kan man verkligen känna en man?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Bortom handlingen uppfinner Welles ett nytt språk. Han blandar tysta och taltekniker för att prata om makt, ensamhet och minne."
+        }
+      ]
+    },
+    {
+      "id": "course_143_orson_welles_et_citizen_kane_p1",
+      "title": "Underbarnet som får alla rättigheter",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**George Orson Welles** etablerade sig först på teatern, sedan på radion. Den **30 oktober 1938**, anpassar han *Världarnas krig*. Genom att imitera en falsk nyhetssändning får han människor att tro på en utomjordisk invasion. En del av Amerika har panik. Plötsligt vill Hollywood ha det."
+        },
+        {
+          "type": "image",
+          "asset": "orson_welles_war_of_worlds_radio_1938",
+          "ratio": "4:3",
+          "caption": "1938: Welles terroriserar Amerika med en falsk radiorapport."
+        },
+        {
+          "type": "funFact",
+          "text": "[[RKO bilder]], en stor studio i svårigheter, erbjuder Welles ett sällsynt kontrakt: total frihet för ämnet och [[Final Cut]], det vill säga rätten att ensam bestämma över final cut."
+        },
+        {
+          "type": "paragraph",
+          "text": "I Hollywood är sådan kraft för en nybörjare nästan ovanlig. Welles utnyttjade detta för att kontrollera allt: manus, casting, bilder, ljud."
+        }
+      ]
+    },
+    {
+      "id": "course_143_orson_welles_et_citizen_kane_p2",
+      "title": "Skärpedjup ändrar utseendet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Med **-filmad av Gregg Toland** vägrar Welles klassiska suddiga bakgrunder. De påtvingar [[Skärpedjup (djup fokus)]]: allt förblir skarpt, från förgrunden till bakgrunden. Flera åtgärder kan spelas samtidigt i samma bildruta, utan att skära."
+        },
+        {
+          "type": "image",
+          "asset": "citizen_kane_deep_focus_cinematography",
+          "ratio": "4:3",
+          "caption": "I Citizen Kane berättar varje skott flera saker samtidigt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Welles filmar också ofta från en låg vinkel, med kameran lågt placerad, för att förstora karaktärerna och accentuera deras kraft. Taken blir synliga. Utrymmet talar lika mycket som dialogerna."
+        }
+      ]
+    },
+    {
+      "id": "course_143_orson_welles_et_citizen_kane_p3",
+      "title": "Rosebud, eller den omöjliga undersökningen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Filmen börjar med slutet: Kane dör ensam i sitt palats, [[Xanadu]]. Dess sista ord är **\"Rosbud\"**. En journalist undersöker. Genom tillbakablickar berättar vänner och fiender motstridiga versioner av samma man."
+        },
+        {
+          "type": "paragraph",
+          "text": "Welles avvisar enkel biografi. För vissa är Kane en idealist. För andra en tyrann. Betraktaren sätter ihop bitarna, utan att någonsin få fram en enda sanning. Mysteriet med Rosebud förblir ett elegant lockbete: en nyckel för liten för att låsa upp en livstid."
+        }
+      ]
+    },
+    {
+      "id": "course_143_orson_welles_et_citizen_kane_p4",
+      "title": "En förbannad film, sedan en modell",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[William Randolph Hearst]], en sann pressmogul, känner igen sig i Kane. Han försökte kväva filmen: bojkott i hans tidningar, tryck på teatrar. *Medborgare Kane* var ett kommersiellt misslyckande när det släpptes. Senare gjorde franska [[Fransk nyvåg]] det till en standard: regissören-författaren som kontrollerar allt."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1938",
+              "title": "Världarnas krig",
+              "detail": "Radiobluff driver Welles."
+            },
+            {
+              "date": "1941",
+              "title": "Medborgare Kane",
+              "detail": "Release av filmen, omedelbart kommersiellt misslyckande."
+            },
+            {
+              "date": "1950-talet",
+              "title": "Återupptäckt",
+              "detail": "Europeisk kritik rehabiliterade filmen."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "*Medborgare Kane* bevisade att en film kunde vara en undersökning av makt och minne. Dess tydliga bilder, dess tillbakablickar och dess frihet att klippa uppfann en modernitet som biografen fortfarande utforskar."
+        }
+      ]
+    }
+  ]
+}

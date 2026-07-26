@@ -1,0 +1,108 @@
+{
+  "id": "course_72_pourquoi_dort_on",
+  "title": "De ce dormim?",
+  "subtitle": "Corp și creier",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Ne petrecem o treime din viață dormind. Nu e timpul pierdut: somnul curăță creierul, repară corpul și gravează amintirile.",
+  "hero": {
+    "image": "pourquoi_dort_on",
+    "ratio": "16:9",
+    "hook": "Somnul nu înseamnă oprire: este marea muncă nocturnă a corpului."
+  },
+  "sections": [
+    {
+      "id": "course_72_pourquoi_dort_on_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pe parcursul unei vieți de 75 de ani, dormim aproape de **acum 25 de ani**. Multă vreme, am crezut că somnul este doar o pauză. În realitate, este o muncă activă, la fel de vitală precum băutul sau mâncatul."
+        },
+        {
+          "type": "paragraph",
+          "text": "Știința nu are încă toate răspunsurile la „de ce” dormim. Dar ea știe foarte bine ce se întâmplă când nu dormim și ce repara noaptea în tăcere."
+        }
+      ]
+    },
+    {
+      "id": "course_72_pourquoi_dort_on_p1",
+      "title": "Ce dezvăluie lipsa de somn",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În **1964**, studentul american **Randy Gardner** a rămas **11 zile** fără să doarmă. Halucinații, paranoia, colapsul minții: dovada că creierul nu poate supraviețui fără odihnă."
+        },
+        {
+          "type": "image",
+          "asset": "sleeping_person_bedroom_night",
+          "ratio": "auto",
+          "caption": "Somnul, esențial pentru refacerea creierului și a corpului."
+        },
+        {
+          "type": "paragraph",
+          "text": "La șobolani, absența totală a somnului ucide în **2 cele 3 săptămâni**, precum foametea. La om, o boală genetică rară, **Insomnie familială fatală**, duce, de asemenea, la moarte. Zilnic, 17 ore de veghe este echivalent cu o alcoolemie de **0,5 g/l**. Creierul forțează apoi [[Microsomnuri]], scurte pauze involuntare de conștiență."
+        },
+        {
+          "type": "funFact",
+          "text": "După recordul său, Randy Gardner a dormit **14 aur** drept. S-a trezit capabil să funcționeze, dar i-au trebuit săptămâni pentru ca somnul să revină la un tipar normal."
+        }
+      ]
+    },
+    {
+      "id": "course_72_pourquoi_dort_on_p2",
+      "title": "Noaptea, creierul se curăță",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În timpul somnului, creierul nu se oprește: schimbă moduri. **hipocampus**, o structură de memorie cheie în formă de cal de mare, „reluează” ziua și trimite informațiile către [[Neocortex]], stratul exterior al creierului, pentru o stocare de durată. Rezultat: deseori învățăm **20 de tigaie pentru 40%** mai bine după un somn bun."
+        },
+        {
+          "type": "paragraph",
+          "text": "Somnul profund declanșează, de asemenea, **hormon de creștere**, care repară mușchii și țesuturile și stimulează [[Citokine]], moleculele de semnalizare ale sistemului imunitar. O altă descoperire majoră: [[Sistemul glimfatic]], o rețea de drenaj cerebral **de zece ori** mai activă noaptea. Îndepărtează deșeurile, inclusiv proteinele legate de riscul de Alzheimer."
+        },
+        {
+          "type": "funFact",
+          "text": "În timpul somnului adânc, celulele creierului se micșorează cu aproximativ **60%**. Spatiul astfel creat permite lichidului de curatare sa circule mai bine."
+        }
+      ]
+    },
+    {
+      "id": "course_72_pourquoi_dort_on_p3",
+      "title": "Cine doarme cât și cum",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pisicile dorm **12 până la 4 p.m.**: pradători în siguranță. Girafele se mulțumesc uneori cu **Tava de 30 de minute pentru 2 minereuri**, în somn scurt, gata să fugă. Delfinii dorm cu **o singură emisferă**, câte o jumătate a creierului, la un moment dat, pentru a continua să se ridice să respire."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bebelușii dorm până la **ora 18.00**, cu mult [[somn paradoxal]], faza viselor cu mișcări rapide ale ochilor. Această fază ajută [[Sinaptogeneza]], fabricarea conexiunilor între neuroni."
+        }
+      ]
+    },
+    {
+      "id": "course_72_pourquoi_dort_on_p4",
+      "title": "Ceasul intern și lumina albastră",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Două forțe ne împing la culcare: oboseala care se acumulează în timpul zilei și circadianul [[Ritmuri circadiene și melatonină]], ceasul intern setat la **24 de minereu**. Când lumina scade, creierul eliberează **melatonina**, un hormon care pregătește corpul pentru somn fără a-l impune."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ecranele seara păcălesc acest ceas și întârzie adormirea. Nu prea „compensăm” o datorie de somn în weekend: oboseala scade, dar nu toate daunele. Orele regulate, o cameră întunecată și răcoroasă rămân cei mai buni aliați."
+        },
+        {
+          "type": "takeaway",
+          "text": "Somnul curăță creierul, repară corpul și întărește memoria. Deprivarea totală ucide în câteva săptămâni: dormitul nu este un lux, este o întreținere vitală."
+        }
+      ]
+    }
+  ]
+}

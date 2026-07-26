@@ -1,0 +1,112 @@
+{
+  "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr",
+  "title": "Waarom bestaan ​​er seizoenen op andere planeten?",
+  "subtitle": "Planeten en banen",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Op aarde komen de seizoenen voort uit de kanteling van de as. Elders geeft ditzelfde principe winters van 42 jaar… of bijna helemaal geen seizoen.",
+  "hero": {
+    "image": "pourquoi_les_saisons_existent_sur_d_autres_planetes",
+    "ratio": "16:9",
+    "hook": "Onze vier seizoenen zijn een gematigd geval. Elders kan een zomer tientallen jaren duren."
+  },
+  "sections": [
+    {
+      "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_intro",
+      "title": "Inleiding",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Op aarde komen zomer en winter voornamelijk voort uit de **-heling** van de as: ongeveer **23,5°**. De zon raakt harder op het ene halfrond dan op het andere. Dit model lijkt voor de hand liggend. In het zonnestelsel is het een tamelijk gematigde versie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Elke planeet combineert zijn helling en de vorm van zijn baan. Resultaat: werelden zonder seizoenen, andere met extreme contrasten en winters die tientallen jaren duren."
+        }
+      ]
+    },
+    {
+      "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p1",
+      "title": "Tilt, motor van contrasten",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "De [[Obliquiteit]] is de hoek tussen de rotatie-as van een planeet en de loodlijn op zijn baan. Hoe groter het is, hoe duidelijker de seizoenen."
+        },
+        {
+          "type": "image",
+          "asset": "uranus_planet_nasa",
+          "ratio": "auto",
+          "caption": "Uranus, gekanteld op ongeveer 98°, ervaart extreme seizoenen die 42 jaar duren."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Uranus** is het extreme geval: een helling van ongeveer **98°**, bijna liggend. Het duurt **84 jaar** om rond de zon te draaien. Elke pool krijgt dan bijna **42 jaar** van een aaneengesloten dag, en vervolgens **42 jaar** van de totale nacht. **Maart**, op **25,2°**, lijkt op de aarde, maar het jaar duurt **687 aardse dagen**: lente en herfst van zes maanden. **Jupiter** en **Kwik**, bijna hetero, hebben bijna geen seizoenen."
+        },
+        {
+          "type": "funFact",
+          "text": "Op Uranus en Neptunus kunnen door extreme druk diamanten, gevormd uit koolstof uit de atmosfeer, ‘regenen’."
+        }
+      ]
+    },
+    {
+      "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p2",
+      "title": "Wanneer de afstand tot de zon er ook toe doet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Op aarde is de baan bijna cirkelvormig: de afstand tot de zon varieert weinig. Het is dus niet wat zomer of winter maakt, maar de hoek van de stralen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Op **Maart** is de baan veel ovaler, meer **excentriek**: van **207 tot 249 duizend km**. Op het zuidelijk halfrond valt de zomer nabij [[perihelium]], het dichtstbijzijnde punt bij de zon. Kortere, maar warmere zomers. Deze thermische schok veroorzaakt soms planetaire ****-stofstormen die de hemel verduisteren."
+        },
+        {
+          "type": "funFact",
+          "text": "In **2018** stopte een seizoensgebonden storm op Mars de Opportunity-rover permanent door de zon te blokkeren."
+        }
+      ]
+    },
+    {
+      "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p3",
+      "title": "Venus, Mercurius, Saturnus: andere regels",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Mercurius**, zonder echte atmosfeer of inclinatie, leeft voornamelijk in dagelijkse ****extreem:**430 °C**in het gebied,**-180 °C**'s nachten.**Venus** roteert in omgekeerde richting, [[Retrograde rotatie]] van oost naar west, met extreme kanteling, maar het monsterlijke **broeikaseffect houdt warmte in de atmosfeer vast en egaliseert de temperatuur overal en altijd tot **Z460** °C**."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Saturnus**, gekanteld als de aarde, heeft seizoenen van ongeveer **7 jaar**. De hoek van de [[ringen van Saturnus]] verandert het licht dat door elk halfrond wordt ontvangen en verandert zelfs de kleur van de wolken."
+        },
+        {
+          "type": "funFact",
+          "text": "Op Venus duurt de rotatie op een dag langer dan een jaar, zijn revolutie: **243** aardse dagen tegen **225**."
+        }
+      ]
+    },
+    {
+      "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p4",
+      "title": "Waarom heeft de aarde stabiele seizoenen?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zonder de **Maan** zou de helling van de aarde gedurende miljoenen jaren chaotisch schommelen tussen 0° en meer dan 80°. Uranus-achtige seizoenen zouden het klimaat bijna onbewoonbaar maken. De maan fungeert als een **zwaartekrachtstabilisator**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bij het zoeken naar bewoonbare [[exoplaneten]] kijken astronomen ook naar de stabiliteit van de as. Milde en regelmatige seizoenen zijn geen detail: ze maken deel uit van de voorwaarden voor duurzaam leven."
+        },
+        {
+          "type": "takeaway",
+          "text": "De seizoenen komen voornamelijk voort uit de helling van de as. Op Uranus duren ze tientallen jaren; op Mars maakt de ovale baan ze asymmetrisch. De maan beschermt degenen op aarde."
+        }
+      ]
+    }
+  ]
+}

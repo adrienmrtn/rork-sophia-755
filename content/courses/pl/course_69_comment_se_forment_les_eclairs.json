@@ -1,0 +1,112 @@
+{
+  "id": "course_69_comment_se_forment_les_eclairs",
+  "title": "Jak powstają błyskawice?",
+  "subtitle": "Burze",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Błyskawica to nie magia: to ogromne wyładowanie elektryczne w chmurze burzowej. Oto jak się przygotowuje i jak uderza.",
+  "hero": {
+    "image": "comment_se_forment_les_eclairs",
+    "ratio": "16:9",
+    "hook": "W ułamku sekundy temperatura powietrza wzrasta do 30 000°C. Pięć razy gorętsza niż powierzchnia Słońca."
+  },
+  "sections": [
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Błyskawica uwalnia kolosalną energię w mgnieniu oka. Powietrze w kanale pioruna wzrasta do około **30 000 °C**. Grzmot to tylko dźwięk tego brutalnego upału."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aby zrozumieć błyskawicę, musisz wykonać trzy kroki: w jaki sposób chmura jest ładowana, w jaki sposób prąd znajduje drogę i dlaczego po niej słychać grzmot."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p1",
+      "title": "W chmurze opłaty są oddzielne",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pioruny występują głównie w [[cumulonimbus]]: bardzo duże chmury burzowe, które mogą wznieść się do około **15 km**. Wewnątrz powietrze unosi się i opada bardzo mocno."
+        },
+        {
+          "type": "image",
+          "asset": "cumulonimbus_thunderstorm_cloud",
+          "ratio": "4:3",
+          "caption": "Cumulonimbus: fabryka burz."
+        },
+        {
+          "type": "paragraph",
+          "text": "W tym chaosie powstają małe **kryształy** lodu, a cięższe ziarna lodu (du [[deszcz ze śniegiem]]) opadają. Kiedy się zderzają, następuje wymiana ładunków elektrycznych. Stopniowo góra chmury staje się raczej dodatnia, a podstawa raczej ujemna."
+        },
+        {
+          "type": "funFact",
+          "text": "Jezioro Maracaibo w Wenezueli to jedno z miejsc na świecie najbardziej dotkniętych piorunami: przez większą część roku obserwuje się tam niemal codziennie burze."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p2",
+      "title": "Kiedy powietrze puszcza: wydzielina",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Powietrze jest złym przewodnikiem. Jeśli jednak różnica ładunków stanie się zbyt duża (często **setki milionów woltów**), powietrze w końcu ustąpi. Cząsteczki tracą elektrony: stają się przewodzące. To jest [[Jonizacja powietrza]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Niewidzialny kanał opuszcza chmurę małymi skokami. Z ziemi sieci elektryczne wznoszą się zwłaszcza punktowo (drzewa, piorunochrony, budynki). Kiedy jedno i drugie spotyka się, obwód się zamyka."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wielkie światło, które widzimy, **łuk z powrotem**, wznosi się głównie z ziemi w kierunku chmury. Prąd może osiągnąć dziesiątki tysięcy amperów. Kilka wyładowań może następować po sobie w tym samym kanale: stąd efekt migotania."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p3",
+      "title": "Dlaczego grzmot przychodzi później?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Piorun nagrzewa powietrze tak szybko, że nagle się rozszerza. Ta fala uderzeniowa zmienia się w **grzmot**. Światło pojawia się niemal natychmiast; dźwięk narasta z prędkością około **340 m/s**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prosta wskazówka: policz sekundy między błyskawicą a grzmotem, a następnie podziel przez **3**. Otrzymasz szacunkową odległość w kilometrach."
+        },
+        {
+          "type": "funFact",
+          "text": "W Ziemię uderza średnio około **Sprzedano 100 monet**. We Francji rocznie dochodzi do około miliona stref **ENDBOLDZZ** na ziemię."
+        }
+      ]
+    },
+    {
+      "id": "course_69_comment_se_forment_les_eclairs_p4",
+      "title": "Niebezpieczeństwo, płodność i ciekawostki",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pioruny pozostają niebezpieczne, szczególnie na zewnątrz, w pobliżu izolowanych drzew lub wody. Rozpala także pożary. Ma jednak mniej znane działanie: pomaga wytwarzać związki azotu, które użyźniają glebę deszczem."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nad burzami kamery uchwyciły także dziwaczne zjawiska, takie jak [[Krasnoludki]]: krótkie poświaty w górnych warstwach atmosfery, niewidoczne gołym okiem z ziemi."
+        },
+        {
+          "type": "takeaway",
+          "text": "W cumulonimbusie zderzenia lodu ze śniegiem oddzielają ładunki. Kiedy napięcie staje się zbyt wysokie, powietrze ulega jonizacji: błyskawica nagrzewa się do ~30 000°C, a ta nagła ekspansja powoduje powstanie grzmotu."
+        }
+      ]
+    }
+  ]
+}

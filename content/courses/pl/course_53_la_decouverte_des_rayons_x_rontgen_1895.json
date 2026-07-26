@@ -1,0 +1,98 @@
+{
+  "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895",
+  "title": "Odkrycie promieni rentgenowskich",
+  "subtitle": "Roentgena, 1895",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "W 1895 roku Wilhelm Röntgen odkrył niewidzialne promieniowanie zdolne przenikać przez materię. W ciągu kilku miesięcy w medycynie nastąpiła rewolucja.",
+  "hero": {
+    "image": "la_decouverte_des_rayons_x_rontgen",
+    "ratio": "16:9",
+    "hook": "Ręka, kości, zdjęcie. Medycyna już nigdy nie będzie ślepa."
+  },
+  "sections": [
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**8 listopada 1895** w Würzburgu (Niemcy) fizyk **Wilhelma Röntgena** zauważa ekran, który świeci... mimo że nie ma na niego wpływu światło widzialne. Coś niewidzialnego przechodzi przez pokój."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nazywa to promieniami **X**, gdzie „X” oznacza „nieznane”. W ciągu kilku tygodni sfotografował kości dłoni swojej żony. Narodziła się radiologia."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p1",
+      "title": "Wypadek w laboratorium",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Röntgen pracuje z lampą, w której elektrony uderzają w cel. Przykrył tubę czarnym kartonem. Jednakże ekran fluorescencyjny świeci z daleka. Rozumie, że z tuby wydobywa się niewidzialne promieniowanie."
+        },
+        {
+          "type": "image",
+          "asset": "wilhelm_rontgen_x_ray_hand_1895",
+          "ratio": "4:3",
+          "caption": "Słynny obraz: kości dłoni i obrączka."
+        },
+        {
+          "type": "funFact",
+          "text": "Röntgen nigdy nie złożył patentu na promienie rentgenowskie. Chciał, aby cała nauka mogła swobodnie z nich korzystać."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p2",
+      "title": "Medycyna chwyta narzędzie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "early_x_ray_medical_radiograph",
+          "ratio": "4:3",
+          "caption": "Bardzo szybko lekarze i wojsko zastosowali promienie rentgenowskie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wcześniej, aby „zobaczyć” pęknięcie lub kulę, często trzeba było ją otworzyć. Za pomocą promieni rentgenowskich uzyskujemy obraz wnętrza bez cięcia. Szpitale i armie wdrażają tę technikę w zawrotnym tempie."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p3",
+      "title": "Długo ignorowane niebezpieczeństwo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Na początku ignorujemy ryzyko. Operatorzy godzinami wykonują zdjęcia rentgenowskie. Oparzenia, następnie pojawiają się nowotwory. Zrozumienie, że promienie rentgenowskie są potężne… i niebezpieczne, zajmie trochę czasu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dziś chronimy pacjentów i opiekunów: ograniczone dawki, ołowiane fartuchy, rygorystyczne kontrole."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p4",
+      "title": "Dziedzictwo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Promienie rentgenowskie utorowały drogę całemu współczesnemu obrazowaniu: skanerom, kontroli przemysłowej, a nawet badaniu struktury kryształów (później przydatnemu do DNA)."
+        },
+        {
+          "type": "takeaway",
+          "text": "W **1895** Röntgen odkrył promienie rentgenowskie, niewidzialne promieniowanie przechodzące przez materię. Medycyna zyskuje nową perspektywę... pod warunkiem kontroli ryzyka."
+        }
+      ]
+    }
+  ]
+}

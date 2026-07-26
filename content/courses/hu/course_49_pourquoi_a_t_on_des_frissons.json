@@ -1,0 +1,102 @@
+{
+  "id": "course_49_pourquoi_a_t_on_des_frissons",
+  "title": "Miért hidegrázunk?",
+  "subtitle": "Test és érzelmek",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Hideg, félelem, zene: a borzongásnak több oka is lehet. Mindegyik átjut az idegrendszeren, de nem ugyanazon okokból.",
+  "hero": {
+    "image": "pourquoi_a_t_on_des_frissons",
+    "ratio": "16:9",
+    "hook": "A hideg borzongása és a zene borzongása nem ugyanazt a történetet meséli el."
+  },
+  "sections": [
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Megborzongsz, ahogy kimész az esőbe. Akkor is megborzongsz, ha olyan dalt hallasz, ami felzaklat. Ugyanaz a szó, különböző mechanizmusok."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mindkét esetben a szervezet gyorsan reagál. De az egyik főként bemelegítésre szolgál, a másik inkább az élvezetről és az érzelmekről szól."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p1",
+      "title": "A hideg izgalma: egy minibojler",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A test **37 °C** körül akar maradni. Amikor a bőr hideget észlel, figyelmezteti az agy egy területét, a **hipotalamusz**-t, amely termosztátként működik."
+        },
+        {
+          "type": "image",
+          "asset": "goosebumps_cold_skin",
+          "ratio": "4:3",
+          "caption": "Libabőr: egy régi reflex, hogy megemelje a bütyköket."
+        },
+        {
+          "type": "paragraph",
+          "text": "Az izmok nagyon gyorsan és többször összehúzódnak: ez a borzongás. Ezek az összehúzódások hőt termelnek. A „libabőr” egy régi reflexből származik: a szőrszálak felemelése a jobb szigetelés érdekében. Otthon, kevés bundával, főleg maradványként szolgál."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p2",
+      "title": "A félelem izgalma",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A fenyegetéssel szemben a [[szimpatikus idegrendszer]] (az idegrendszer „riadó” ága) aktiválódik. Kiadja a **adrenalin**-t. Az izmok megfeszülnek, a szív összeszorul, a bőr megborzonghat."
+        },
+        {
+          "type": "image",
+          "asset": "adrenaline_stress_response_body",
+          "ratio": "4:3",
+          "caption": "Az adrenalin felkészíti a szervezetet a gyors reakcióra."
+        },
+        {
+          "type": "funFact",
+          "text": "Ugyanez a rendszer megmagyarázza, hogy miért kaphat libabőröst egy horrorfilm nézése közben... miközben kényelmesen fekszik a kanapén."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p3",
+      "title": "A zene izgalma",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bizonyos izgalmak, amelyeket néha „hideregnek” neveznek, erős érzelmekkel érkeznek: zene, beszéd, film. Aktiválják az agy **jutalmakat** áramkörét a **dopamin**-vel, az örömhöz kapcsolódó anyaggal."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ez nem hasznos az azonnali túlélés szempontjából. Inkább a test az, amely egy heves érzelemre reagál, mint egy elhaladó hullám."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p4",
+      "title": "Mikor kell aggódni?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A magas lázzal járó hidegrázás fertőzést jelezhet. Az egyértelmű ok nélküli állandó hidegrázás orvosi ellátást érdemel. De legtöbbször a hideg, a stressz vagy a zene miatti borzongás egyszerűen a test végzi a munkáját."
+        },
+        {
+          "type": "takeaway",
+          "text": "A hideg borzongás hőt termel. A félelemben élők felkészülnek a reagálásra. A zenéké az érzelmi élvezetet érinti. Ugyanaz az érzés, más okok."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "id": "course_16_la_bataille_de_verdun_1916",
+  "title": "Bătălia de la Verdun",
+  "subtitle": "1916",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "Timp de **299 de zile**, francezii și germanii s-au sfâșiat reciproc în jurul Verdunului. **700.000** pierderi pentru un câștig teritorial aproape nul: simbolul ororii tranșeelor.",
+  "hero": {
+    "image": "la_bataille_de_verdun_1916",
+    "ratio": "16:9",
+    "hook": "299 de zile pentru câțiva kilometri de noroi și 700.000 de oameni ieșiți din acțiune."
+  },
+  "sections": [
+    {
+      "id": "course_16_la_bataille_de_verdun_1916_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În **1916**, în **299 de zile**, francezii și germanii s-au ciocnit pe câțiva kilometri pătrați în jurul **Verdun**, o fortăreață din estul Franței. Aceasta nu este o descoperire genială. Este o bătălie de uzură, cu aproximativ **700.000** morți sau răniți."
+        },
+        {
+          "type": "paragraph",
+          "text": "Verdun devine simbolul ororii tranșeelor. Decenii mai târziu, a devenit și cel al reconcilierii franco-germane."
+        }
+      ]
+    },
+    {
+      "id": "course_16_la_bataille_de_verdun_1916_p1",
+      "title": "Planul german: sângerează Franța",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Din 1914, Frontul de Vest este înghețat în [[Război de tranșee]]: linii de șanțuri de la Marea Nordului până în Elveția. Generalul german **Erich von Falkenhayn** vrea să „sângereze Franța”. El alege Verdun, un loc pe care Parisul nu-l poate abandona fără să-și piardă fața. Operația se numește [[Gericht]], „curtea”."
+        },
+        {
+          "type": "image",
+          "asset": "battle_of_verdun_trenches_1916",
+          "ratio": "4:3",
+          "caption": "Transeele de la Verdun: un peisaj devorat de artilerie."
+        },
+        {
+          "type": "funFact",
+          "text": "Primul bombardament din **21 februarie 1916** a fost atât de violent încât se putea auzi până la Vosgi, la mai mult de **150 km**."
+        },
+        {
+          "type": "paragraph",
+          "text": "**21 februarie**, **1.200 tunuri** bombardează liniile franceze. **25**, **binelui lui Douaumont**, cheia apărării, a căzut aproape fără luptă. Parisul trebuie să parieze acum totul pe Verdun: capcana lui Falkenhayn funcționează."
+        }
+      ]
+    },
+    {
+      "id": "course_16_la_bataille_de_verdun_1916_p2",
+      "title": "Pétain, Calea Sacră și rotația trupelor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Generalul **Philippe Pétain** organizează supraviețuirea sectorului. **Calea Sacră** leagă [[Bar-le-Duc]], un oraș din spate, de Verdun: aproape **6.000 de camion** pe zi, un vehicul la fiecare **14 secunde**. Când se defectează, împingem camionul în șanț pentru a nu bloca drumul."
+        },
+        {
+          "type": "image",
+          "asset": "voie_sacree_verdun_trucks",
+          "ratio": "4:3",
+          "caption": "Voie Sacrée, o arteră vitală a aprovizionării franceze."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cu [[Noria]], Pétain a rotit rapid diviziile: am stat puțin pe front, apoi am fost uşuraţi. Rezultat: aproximativ **70 %** din armata franceză luptă la Verdun la un moment dat sau altul. Bătălia devine o experiență națională."
+        }
+      ]
+    },
+    {
+      "id": "course_16_la_bataille_de_verdun_1916_p3",
+      "title": "Iadul tunurilor, aproape fără câștig",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vara, [[Bătălia de la Somme (1916)]], o ofensivă franco-britanica mai la nord, l-a eliberat pe Verdun. Sub generalul **Robert Nivelle**, francezii au recucerit Douaumont apoi Fort Vaux. Bătălia s-a încheiat la 18 decembrie 1916. Liniile abia s-au mișcat."
+        },
+        {
+          "type": "funFact",
+          "text": "Fleury-devant-Douaumont a fost luat și reluat de **de 16 ori** în două luni, apoi a fost șters de pe hartă. Este unul dintre „satele moarte pentru Franța”, administrat încă fără locuitori."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aproximativ **370.000** francezi și **330.000** germanii cad sau sunt mutilați. [[Artileria grea a Marelui Război]] ucide mai mult decât corp la corp. [[Zonele Roșii]] rămân improprii pentru orice viață civilă: prea multe muniții neexplodate, prea mult pământ otrăvit."
+        }
+      ]
+    },
+    {
+      "id": "course_16_la_bataille_de_verdun_1916_p4",
+      "title": "De la osuar la strângere de mână",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Ozuarul din Douaumont** (1932) adăpostește rămășițele **130.000** soldați mixți francezi și germani. **22 septembrie 1984**, președintele Franței **François Mitterrand** și cancelarul german **Helmut Kohl** se țin de mână în fața monumentului. Verdun devine un simbol al păcii europene."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "21 februarie 1916",
+              "title": "Uvertura Gericht",
+              "detail": "Baraj de artilerie fără precedent."
+            },
+            {
+              "date": "25 februarie 1916",
+              "title": "Cascada Douaumont",
+              "detail": "Soc politic la Paris."
+            },
+            {
+              "date": "vara 1916",
+              "title": "Sumă",
+              "detail": "Aliații eliberează frontul de la Verdun."
+            },
+            {
+              "date": "18 decembrie 1916",
+              "title": "Sfârșitul bătăliei",
+              "detail": "Aproape niciun câștig teritorial."
+            },
+            {
+              "date": "22 septembrie 1984",
+              "title": "Mitterrand-Kohl",
+              "detail": "Gestul reconcilierii franco-germane."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "**Verdun** (**1916**): **299** zile de război industrial, aproximativ **700.000** pierderi pentru un câștig teritorial zero, iar mai târziu simbolul reconcilierii franco-germane."
+        }
+      ]
+    }
+  ]
+}

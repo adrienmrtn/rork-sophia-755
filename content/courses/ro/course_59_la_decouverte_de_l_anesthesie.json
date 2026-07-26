@@ -1,0 +1,98 @@
+{
+  "id": "course_59_la_decouverte_de_l_anesthesie",
+  "title": "Descoperirea anesteziei",
+  "subtitle": "Medicament",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Înainte de 1846, o operație era adesea efectuată în mod conștient și cu dureri extreme. Anestezia transformă intervenția chirurgicală în îngrijire, nu în tortură.",
+  "hero": {
+    "image": "la_decouverte_de_l_anesthesie",
+    "ratio": "16:9",
+    "hook": "Într-o zi din 1846, la Boston, intervenția chirurgicală a încetat să mai fie o cursă împotriva durerii."
+  },
+  "sections": [
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Imaginați-vă o amputare fără a adormi. Înainte de mijlocul secolului al XIX-lea, aceasta era norma. Legăm pacientul, ne mișcăm repede, ne rugăm."
+        },
+        {
+          "type": "paragraph",
+          "text": "**anestezie** schimbă totul: vă permite să operați fără a fi conștient de durere. Chirurgia modernă își poate lua în sfârșit timpul."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p1",
+      "title": "Înainte: viteză versus suferință",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "surgery_without_anesthesia_19th_century",
+          "ratio": "4:3",
+          "caption": "Fără anestezie, chirurgul trebuia să fie extrem de rapid."
+        },
+        {
+          "type": "paragraph",
+          "text": "Chirurgii au fost judecați după viteza lor. Alcoolul, opiumul sau forța brută au fost folosite pentru a imobiliza oamenii. Mulți pacienți au murit din cauza șocului, infecției sau hemoragiei."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p2",
+      "title": "1846: ziua eterului",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "ether_anesthesia_first_demonstration_1846",
+          "ratio": "4:3",
+          "caption": "La Boston, o demonstrație publică a convins lumea medicală."
+        },
+        {
+          "type": "paragraph",
+          "text": "**16 octombrie 1846**, în Boston, dentistul **William Morton** face ca un pacient să inspire **eter**. Chirurgul **John Warren** operează o tumoare la gât. Pacientul nu țipă. Camera este uluită."
+        },
+        {
+          "type": "funFact",
+          "text": "Warren a spus: „Domnilor, aceasta nu este o farsă”. Fraza a rămas celebră."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p3",
+      "title": "În continuare: cloroform și dezbateri",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Au urmat și alte produse, precum **cloroform**, popularizate în special în Marea Britanie. Rivalitățile apar în privința cine a „inventat” ce. Brevetul nu contează: ideea se răspândește în toată lumea."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rămâne o problemă: să adormi fără a ucide. Trebuie să-l dozezi, să-ți monitorizezi respirația și inima. Se naște o nouă specialitate."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p4",
+      "title": "Anestezie azi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Astăzi, medicul anestezist folosește gaze și medicamente precise, mașini care măsoară totul. Puteți adormi întregul corp sau doar o zonă (anestezie locală sau locoregională)."
+        },
+        {
+          "type": "takeaway",
+          "text": "De la demonstrarea eterului în **1846**, anestezia a transformat intervenția chirurgicală: mai puțină durere, mai mult timp, mai multă precizie... iar siguranța a devenit o știință în sine."
+        }
+      ]
+    }
+  ]
+}

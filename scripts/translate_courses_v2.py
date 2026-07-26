@@ -186,6 +186,15 @@ FIXED = {
         "de": "Einführung",
         "pt": "Introdução",
         "it": "Introduzione",
+        "tr": "Giriş",
+        "pl": "Wprowadzenie",
+        "ro": "Introducere",
+        "nl": "Inleiding",
+        "el": "Εισαγωγή",
+        "sv": "Introduktion",
+        "hu": "Bevezetés",
+        "bg": "Въведение",
+        "cs": "Úvod",
     },
     "Héritage": {
         "en": "Legacy",
@@ -193,6 +202,15 @@ FIXED = {
         "de": "Vermächtnis",
         "pt": "Legado",
         "it": "Eredità",
+        "tr": "Miras",
+        "pl": "Dziedzictwo",
+        "ro": "Moștenire",
+        "nl": "Erfenis",
+        "el": "Κληρονομιά",
+        "sv": "Arv",
+        "hu": "Örökség",
+        "bg": "Наследство",
+        "cs": "Dědictví",
     },
     "À retenir": {
         "en": "Key takeaway",
@@ -200,6 +218,15 @@ FIXED = {
         "de": "Zum Mitnehmen",
         "pt": "A reter",
         "it": "Da ricordare",
+        "tr": "Akılda tut",
+        "pl": "Do zapamiętania",
+        "ro": "De reținut",
+        "nl": "Onthouden",
+        "el": "Να θυμάσαι",
+        "sv": "Att komma ihåg",
+        "hu": "Megjegyzendő",
+        "bg": "За запомняне",
+        "cs": "K zapamatování",
     },
 }
 
@@ -412,7 +439,7 @@ class Translator:
 
     def _apply_mt(self, text: str) -> str:
         """Translate one FR string using cache; network only on miss."""
-        if text in FIXED:
+        if text in FIXED and self.lang in FIXED[text]:
             return FIXED[text][self.lang]
         if is_passthrough(text):
             return text
@@ -444,7 +471,7 @@ class Translator:
 
         pending = []
         for text in texts:
-            if text in FIXED or is_passthrough(text) or text in self.cache:
+            if (text in FIXED and self.lang in FIXED[text]) or is_passthrough(text) or text in self.cache:
                 continue
             pending.append(text)
         if not pending:

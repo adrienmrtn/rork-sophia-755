@@ -1,0 +1,140 @@
+{
+  "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum",
+  "title": "Zei azteci și sacrificii umane",
+  "subtitle": "Sânge pentru soare",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "La azteci, soarele răsare doar dacă zeii primesc sânge. O cosmologie aspră, dar coerentă, în inima imperiului lor.",
+  "hero": {
+    "image": "les_dieux_azteques_et_les_sacrifices_humains",
+    "ratio": "16:9",
+    "hook": "Fără sânge, soarele s-ar opri: aceasta este datoria cosmică a aztecilor."
+  },
+  "sections": [
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Aztecii**, sau Mexica, cred că universul este fragil. Zeii au nevoie de sânge pentru ca soarele să-și continue cursul. Fără ofrande, haosul ar reveni."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ceea ce i-a îngrozit pe spanioli se baza pe o idee clară: viețile zeilor și ale oamenilor sunt legate. Iată cum funcționează această cosmologie."
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p1",
+      "title": "Cei cinci sori: o lume deja moartă de patru ori",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Conform mitului lui [[Cinci Sori]], patru ere au dispărut deja în catastrofe. Ne confruntăm cu cel de-al cincilea soare, [[Nahui Ollin]] („Mișcarea 4”), promis că se va termina cu cutremure."
+        },
+        {
+          "type": "image",
+          "asset": "aztec_five_suns_teotihuacan_pyramid_sun_stone",
+          "ratio": "4:3",
+          "caption": "Piatra Soarelui: timpul aztec se transformă în ere succesive."
+        },
+        {
+          "type": "paragraph",
+          "text": "În **Teotihuacán**, un oraș sacru de pe platoul central, zeii se aruncă în foc pentru a deveni soare și lună. Dar soarele rămâne nemișcat. Ceilalți zei își oferă apoi propriul sânge pentru a-l pune în mișcare. Bărbații moștenesc această datorie."
+        },
+        {
+          "type": "funFact",
+          "text": "Pentru azteci, sacrificiul nu este cruzime gratuită: este rambursarea unei datorii divine, [[Cosmologia celor Cinci Sori și datoria cosmică]]."
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p2",
+      "title": "Un panteon al dualităților",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zeul central este [[Huitzilopochtli]], zeul războiului și al soarelui de amiază. În fiecare noapte, se luptă cu întunericul pentru a renaște dimineața. Alături de el, [[Tlaloc]] dă ploaie, deci culturi, sau foamete."
+        },
+        {
+          "type": "image",
+          "asset": "huitzilopochtli_aztec_sun_god_codex",
+          "ratio": "4:3",
+          "caption": "Huitzilopochtli, soare războinic care cere să fie hrănit."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Quetzalcoatl]], Șarpele cu pene, întruchipează cunoașterea și civilizația. Rivalul său [[Tezcatlipoca]], Oglinda Fumătoare, stăpânește noaptea, destinul și magia. Pământul însuși are o față teribilă: [[Coatlicue]], zeiță-mamă devoratoare."
+        },
+        {
+          "type": "funFact",
+          "text": "Sângele prețios oferit zeilor se numește [[chalchihuatl]], „apă prețioasă”. Inima extrasă este gândită ca o scânteie solară returnată pe cer."
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p3",
+      "title": "Războaiele florilor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pentru a obține victime, aztecii organizează [[Xochiyaoyotl]], „războaiele florilor”: lupte rituale al căror scop nu este să omoare, ci să captureze războinici vii demni de a fi oferiti."
+        },
+        {
+          "type": "image",
+          "asset": "aztec_sacrifice_pyramid_templo_mayor_codex",
+          "ratio": "4:3",
+          "caption": "Jertfa din vârful templului: inima prezentată soarelui."
+        },
+        {
+          "type": "paragraph",
+          "text": "În vârful **Templo Mayor** din Tenochtitlán, capitala de pe malul lacului, un preot extrage inima cu un cuțit din **Obsidian**, o piatră vulcanică ascuțită. Gestul este public, solemn, gândit ca un serviciu adus soarelui."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Mit",
+              "title": "Sacrificiul zeilor",
+              "detail": "Soarele primește sânge divin pentru a merge înainte."
+            },
+            {
+              "date": "Imperiu",
+              "title": "Războaiele florilor",
+              "detail": "Capturarea războinicilor pentru ofrande."
+            },
+            {
+              "date": "1519",
+              "title": "șoc spaniol",
+              "detail": "Cortés sosește; sistemul se prăbușește."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p4",
+      "title": "Sfârșitul unei lumi, urme durabile",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cronicile spaniole umfla uneori cifrele pentru a justifica cucerirea. Dar sistemul sacrificial este foarte real. În **1519**, sosirea lui **Hernán Cortés** precipită sfârșitul acestui univers ritual."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cu toate acestea, figurile aztece supraviețuiesc în sincretism: Fecioara din Guadalupe apare pe un site cândva legat de o zeiță-mamă. A înțelege aceste sacrificii înseamnă a înțelege o cultură care plasează supraviețuirea cosmosului deasupra individului."
+        },
+        {
+          "type": "takeaway",
+          "text": "La azteci, sângele uman hrănea soarele. Zeii au plătit deja cu viața lor: bărbații plătesc această datorie prin sacrificii, în special prin **războaie de flori**."
+        }
+      ]
+    }
+  ]
+}

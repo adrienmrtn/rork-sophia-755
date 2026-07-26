@@ -1,0 +1,118 @@
+{
+  "id": "course_237_les_gafam_puissance_et_derives",
+  "title": "GAFAM: teljesítmény és sodródás",
+  "subtitle": "Google, Apple, Meta, Amazon, Microsoft",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Öt vállalat súlya nagyobb, mint több európai nagyhatalom GDP-je együttvéve: üdvözöljük a **GAFAM** korszakában.",
+  "hero": {
+    "image": "les_gafam_puissance_et_derives",
+    "ratio": "16:9",
+    "hook": "Öt cég, egy maroknyi tenger alatti kábel és a digitális világ egy jó része."
+  },
+  "sections": [
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Google, Apple, Meta (a korábbi Facebook), Amazon és Microsoft: öt **GAFAM** mozaikszó alatt csoportosult cég, amelyek a **[[Szilícium-völgy]]**-ben születtek. Kevesebb, mint harminc év alatt megváltoztatták kommunikációnk, fogyasztásunk és önmagunk tájékoztatásának módját, olyan mértékben, hogy versenyre keltek bizonyos államok erejével. Uralkodásuk mechanizmusainak megértése és az ellenőrzésükre tett kísérletek lehetővé teszik számunkra, hogy jobban megértsük az erőviszonyokat a mai digitális világban."
+        }
+      ]
+    },
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_p1",
+      "title": "Egy egész országoknál nagyobb pénzügyi hatalom",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A GAFAM legszembetűnőbb jellemzője a tőzsdei értékük. 2024-ben ez az öt vállalat együttesen több mint 10 billió dollárt ér majd, ami Németország, Franciaország, az Egyesült Királyság és Olaszország együttes GDP-jéhez hasonlítható. Az Apple lett az első olyan vállalat, amelynek értéke meghaladja a 3000 milliárd dollárt."
+        },
+        {
+          "type": "image",
+          "asset": "gafam_big_tech_companies_logos_apple_google",
+          "ratio": "4:3",
+          "caption": "A Google, az Apple, a Meta, az Amazon és a Microsoft együttesen többet nyomnak, mint több európai nagyhatalom GDP-je együttvéve."
+        },
+        {
+          "type": "funFact",
+          "text": "2021-ben a GAFAM által felhalmozott készpénz elméletileg elegendő lett volna az összes francia CAC 40 vállalat visszavásárlására, miközben fenntartott egy pénzügyi biztonságot."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ez a pénzügyi hatalom nem marad elvont: a GAFAM minden évben jelentős összegeket költ a washingtoni és a brüsszeli törvények befolyásolására, és az államok stratégiai partnereivé váltak, az Amazon felhő ága például érzékeny adatokat tárol amerikai kormányzati szervek számára."
+        }
+      ]
+    },
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_p2",
+      "title": "A monopóliumokkal szinte lehetetlen felvenni a versenyt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A GAFAM uralma egy pontos mechanizmuson alapul: a **[[hálózati hatások]]**. Minél több felhasználója van egy szolgáltatásnak, annál fontosabbá válik, hogy részese legyen, ami elriasztja a versenytársak érkezését, és kvázi monopóliumokat hoz létre, ahol az elsőként érkező szinte mindig megtartja előnyét."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hogy ezt a pozíciót bezárják, a digitális óriások szisztematikusan felvásárolják a felmerülő fenyegetéseiket: a Facebook 2012-ben egymilliárd dollárért vásárolta meg az Instagramot, amikor az alkalmazásnak csak egy tucat alkalmazottja volt, majd 2014-ben a WhatsApp-ot 22 milliárd dollárért."
+        },
+        {
+          "type": "funFact",
+          "text": "Egyedül a Google birtokolja a világ tenger alatti száloptikai kábeleinek körülbelül 10%-át, így fizikai ellenőrzést biztosít az internet egyes útvonalai felett."
+        },
+        {
+          "type": "paragraph",
+          "text": "Társadalmi szinten a **[[figyelmesség]]** maximalizálását célzó algoritmusok általában a legszenzációsabb tartalmat emelik ki, olykor az embereket a véleményüket megerősítő információs „buborékokba” zárva, és elősegítve az álhírek terjedését."
+        }
+      ]
+    },
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_p3",
+      "title": "Európa, globális digitális rendőr",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az óriásokkal szemben, amelyeket még az amerikai bíróságok is nehezen tudnak megfékezni, az Európai Unió a fő globális digitális szabályozóvá nőtte ki magát: szabályai gyakran mindenhol szabványokká válnak, mert egy multinacionális cégnek egyszerűbb mindenhol a legszigorúbb szabályt alkalmazni, mint minden ország számára más változatot létrehozni."
+        },
+        {
+          "type": "image",
+          "asset": "digital_services_tax_gafam_europe",
+          "ratio": "16:9",
+          "caption": "Az Európai Unió szabályokat ír elő a digitális óriáscégekre, amelyek gyakran világszerte érvényesek."
+        },
+        {
+          "type": "paragraph",
+          "text": "2022-ben Európa elfogadta a **[[A digitális piacokról szóló törvény]]** törvényt, amely megköveteli, hogy a legnagyobb platformok nyitottabbak legyenek, például lehetővé téve a különböző üzenetküldő szolgáltatások egymás közötti kommunikációját. Már több milliárd eurós bírságot szabtak ki a Google-ra vagy a Metára erőfölénnyel való visszaélés miatt. 2024-ben az EU lesz az első olyan szervezet a világon, amely jogilag szabályozza a mesterséges intelligenciát."
+        }
+      ]
+    },
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_p4",
+      "title": "A digitális szuverenitás kérdése",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az utolsó probléma a **digitális szuverenitás**. Szerverek, telefon- és számítógépes operációs rendszerek, sőt a tengeralattjáró kábelek egy részének vezérlésével a GAFAM társadalmunk számára alapvető infrastruktúrát biztosít. Egy európai ország számára az, hogy egy amerikai cégtől függ a nyilvános adatai, a függetlenség valódi kérdése."
+        },
+        {
+          "type": "funFact",
+          "text": "A Google másodpercenként több mint 90 000 keresési lekérdezést dolgoz fel: mire elolvassa ezt a bekezdést, már több mint 3 millió keresést hajtottak végre a szerverein."
+        },
+        {
+          "type": "paragraph",
+          "text": "Egyre több kritika éri a személyes adatok gyűjtésén alapuló gazdasági modellt, ahol a felhasználó „fizet” az információival, de a GAFAM továbbra is az első befektető a holnap technológiáiban, például a kvantumszámításban."
+        },
+        {
+          "type": "takeaway",
+          "text": "A GAFAM-ok pénzügyi ereje nagyobb, mint az európai nagyhatalmak GDP-je, ami jelentős politikai és technológiai szerepet biztosít számukra. Ezzel szemben az Európai Unió a fő globális szabályozó hatósággá nőtte ki magát, köszönhetően az olyan szövegeknek, mint a digitális piacokról szóló törvény."
+        }
+      ]
+    }
+  ]
+}

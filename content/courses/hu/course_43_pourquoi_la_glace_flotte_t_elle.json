@@ -1,0 +1,106 @@
+{
+  "id": "course_43_pourquoi_la_glace_flotte_t_elle",
+  "title": "Miért úszik a jég?",
+  "subtitle": "Víz és molekulák",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "A jég úszik a vízen. Ez normálisnak tűnik, de valójában nagyon ritka. És szerencsére a földi élet számára.",
+  "hero": {
+    "image": "pourquoi_la_glace_flotte",
+    "ratio": "16:9",
+    "hook": "Ha a jég folyna, a tavak fenékig fagynának. A vízben élő életet pedig nehezen élné túl."
+  },
+  "sections": [
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jégkocka a pohárban, jéghegy az óceánban: a jég **lebeg**. Banálisnak találjuk. A legtöbb anyag esetében azonban a szilárd anyag **sűrűbb**, ezért ugyanazon térfogat mellett nehezebb: elsüllyed."
+        },
+        {
+          "type": "paragraph",
+          "text": "A víz az ellenkezőjét teszi. Ez a kivétel a molekula alakjából adódik. És sok tavat mentett meg télen."
+        }
+      ]
+    },
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_p1",
+      "title": "V alakú molekula",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A vízmolekula egy **oxigénezett** atom, amely a **hidrogén** két atomjához kapcsolódik. Nem egyenes: **V**-t alkot. Emiatt az alak miatt az elektromos töltések nem egyenlően oszlanak el: a molekula **poláris**, egyik vége enyhén negatív, a másik enyhén pozitív."
+        },
+        {
+          "type": "image",
+          "asset": "water_molecule_model_crystal",
+          "ratio": "4:3",
+          "caption": "A vízmolekula: V, amely vonzza és taszítja szomszédait."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eredmény: a vízmolekulák vonzzák egymást a [[Hidrogén kötések]] révén, mint a kis mágnesek. A folyadékban közel maradnak, de mozognak. Jégben másképp fagynak meg."
+        }
+      ]
+    },
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_p2",
+      "title": "Amikor a víz megfagy, helyet foglal",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**0 °C** körül a víz megszilárdul. A jégképződéshez a molekulák **Hatszögletű** hálózatba szerveződnek, egyfajta hatoldalú méhsejtté. Ezután több **üres** marad közöttük, mint folyékony állapotban."
+        },
+        {
+          "type": "funFact",
+          "text": "Ezért van az, hogy egy teli palack vizeskanna **robbanás** a fagyasztóban: a jég nagyobb térfogatot foglal el, mint a folyékony víz."
+        },
+        {
+          "type": "paragraph",
+          "text": "A kevesebb anyag ugyanabban a kötetben azt jelenti: **kevesebb sűrű**. A körülötte lévő folyadéknál kevésbé sűrű tárgy azonban felemelkedik. A jég tehát lebeg a vízen. Ezt **víz-tágulási anomáliának hívják**: szinte minden anyaggal ellentétben a víz kitágul, ahogy lehűl **4 °C** alatt."
+        },
+        {
+          "type": "image",
+          "asset": "iceberg_floating_arctic_ocean",
+          "ratio": "16:9",
+          "caption": "A jéghegy lebeg, mert a jég kevésbé sűrű, mint a folyékony víz."
+        }
+      ]
+    },
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_p3",
+      "title": "Miért létfontosságú a tavak számára",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Képzeld el, ha a fagylalt folyna. A felszínen képződik, majd lesüllyed az aljára. A tó rétegről rétegre fagyna be, egészen a fenékig. A nyár gyakran nem lenne elég ahhoz, hogy mindent elolvadjon."
+        },
+        {
+          "type": "paragraph",
+          "text": "Szerencsére a jég a tetején marad. **szigetelő burkolatot** alkot. A fagyott felszín alatt folyékony víz maradhat **4 °C** körül, ez az a hőmérséklet, ahol a folyékony víz a legsűrűbb, és elegendő ahhoz, hogy a halak és a vízi növények túléljék."
+        }
+      ]
+    },
+    {
+      "id": "course_43_pourquoi_la_glace_flotte_t_elle_p4",
+      "title": "És az éghajlat miatt is",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A fehér jégtábla a Nap fényének nagy részét visszaveri az űrbe a magas **albedo** fényvisszaverő erejének köszönhetően. Ha eltűnik, a sötét óceán több hőt nyel el. Ez felgyorsítja a felmelegedést: egy ördögi kör."
+        },
+        {
+          "type": "takeaway",
+          "text": "A jég azért úszik, mert a megszilárdulása során a víz „levegőztetettebb” hálózatot alkot: kevésbé lesz sűrű, mint a folyékony víz. Ez a kivétel a vízi élőlényeket védi télen."
+        }
+      ]
+    }
+  ]
+}

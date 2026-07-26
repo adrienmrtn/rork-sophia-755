@@ -1,0 +1,108 @@
+{
+  "id": "course_217_l_economie_de_plateforme_uber_airbnb",
+  "title": "Ekonomia platform (Uber, Airbnb itp.)",
+  "subtitle": "Kapitalizm bez fabryk",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Uber, Airbnb, Deliveroo prawie nic nie posiadają: żadnych samochodów, żadnych mieszkań, żadnych pracowników. W jaki sposób platformy te stały się światowymi gigantami?",
+  "hero": {
+    "image": "l_economie_de_plateforme",
+    "ratio": "16:9",
+    "hook": "Uber nigdy nie posiadał ani jednego samochodu, a mimo to zakłócał transport na całym świecie."
+  },
+  "sections": [
+    {
+      "id": "course_217_l_economie_de_plateforme_uber_airbnb_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Uber, Airbnb, Amazon czy Deliveroo należą do nowej kategorii firm: **platforma cyfrowa**. Nie tylko digitalizują usługi, które już istniały: zmieniają sam sposób posiadania, pracy i ochrony."
+        },
+        {
+          "type": "paragraph",
+          "text": "Model ten wynalazł nową formę kapitalizmu, która kwestionuje naszą umowę społeczną. Rozumiemy, jak to działa i dlaczego jest tak dyskutowane."
+        }
+      ]
+    },
+    {
+      "id": "course_217_l_economie_de_plateforme_uber_airbnb_p1",
+      "title": "Kapitalizm bez fabryk i pracowników",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tradycyjna firma jest właścicielem fabryk, pojazdów, zapasów i zatrudnia pracowników. Platforma przełamuje ten model: staje się prostą infrastrukturą cyfrową, która łączy podaż i popyt, sama niczego nie produkując."
+        },
+        {
+          "type": "paragraph",
+          "text": "System ten opiera się na [[Efekt sieciowy]]: im więcej użytkowników ma platforma, tym bardziej staje się użyteczna, co przyciąga jeszcze więcej użytkowników. W przypadku usług transportowych im więcej dostępnych kierowców, tym krótszy czas oczekiwania, co przyciąga więcej klientów, którzy z kolei przyciągają więcej kierowców. To koło prawie zawsze prowadzi do sytuacji quasi-monopolowych."
+        },
+        {
+          "type": "funFact",
+          "text": "Uber wydał miliardy dolarów na badania nad samochodami autonomicznymi, ostatecznie mając na celu pozbycie się ostatniego dużego kosztu: ludzkiego kierowcy."
+        }
+      ]
+    },
+    {
+      "id": "course_217_l_economie_de_plateforme_uber_airbnb_p2",
+      "title": "Pracuj bez ochrony zatrudnienia",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tej innowacji technicznej towarzyszy bardziej kwestionowana innowacja prawna. W [[Ekonomia gigu i uberizacja]] platforma odmawia statusu pracodawcy, by zaprezentować się jako prosty pośrednik technologiczny, który unika płacenia składek ZUS, płacy minimalnej czy płatnego urlopu."
+        },
+        {
+          "type": "image",
+          "asset": "gig_economy_workers_strike_protest",
+          "ratio": "16:9",
+          "caption": "Kierowców i dostawców często klasyfikuje się jako osoby samozatrudnione, a nie pracowników."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pracownik staje się niezależnym pracownikiem, który sam ponosi całe ryzyko: chorobę, wypadek, spadek popytu. Często jednak podlega ona zasadom stosowania (narzucone ceny, rating, sankcje), co nazywamy **algorytmicznym algorytmem**. W obliczu tej sytuacji sądy w kilku krajach zaczęły narzucać [[Dopasowanie]] tych umów na realne zatrudnienie zarobkowe."
+        }
+      ]
+    },
+    {
+      "id": "course_217_l_economie_de_plateforme_uber_airbnb_p3",
+      "title": "Miasta wywrócone do góry nogami",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wpływ tych platform wykracza poza świat pracy: przekształcają także miasta. Airbnb ułatwiając krótkoterminowy wynajem turystyczny, konkuruje z tradycyjnymi hotelami, ograniczając jednocześnie liczbę dostępnych dla mieszkańców miejsc noclegowych."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rezultat: czynsze w centrach miast rosną, a metropolie takie jak Paryż czy Barcelona musiały narzucić rygorystyczne zasady, takie jak limity dni wynajmu. Państwa dążą również do wprowadzenia **zabezpieczenie cyfrowe**, aby platformy te płaciły swoją część podatków tam, gdzie faktycznie zarabiają."
+        },
+        {
+          "type": "funFact",
+          "text": "W Nowym Jorku rygorystyczne regulacje wobec Airbnb w 2023 r. spowodowały, że liczba legalnych ofert spadła o 80% w ciągu kilku miesięcy."
+        }
+      ]
+    },
+    {
+      "id": "course_217_l_economie_de_plateforme_uber_airbnb_p4",
+      "title": "W stronę nowego statusu pracowników?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gospodarka platformowa zapewniła szybkie i często tańsze usługi oraz ułatwiła niektórym osobom znalezienie dochodu. Jednak skuteczność ta opiera się na osłabieniu zabezpieczeń zbudowanych w XX wieku."
+        },
+        {
+          "type": "paragraph",
+          "text": "Obecna debata dotyczy stworzenia statusu pośredniego między pracownikiem a osobą samozatrudnioną, z możliwością przenoszenia praw: każdy pracownik gromadziłby ochronę socjalną, niezależnie od liczby platform, dla których pracuje. Przyszłość tego modelu będzie zależała od zdolności organów regulacyjnych do regulowania go bez tłumienia innowacji."
+        },
+        {
+          "type": "takeaway",
+          "text": "Gospodarka platformowa opiera się na kapitalizmie wolnym od fabryk, który wykorzystuje efekt sieciowy, przekształcając swoich pracowników w często niepewnych freelancerów. Walka o lepszą ochronę socjalną, bez burzenia tego modelu, dopiero się rozpoczęła."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "id": "course_148_le_bauhaus",
+  "title": "Het Bauhaus",
+  "subtitle": "1919-1933",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "Tussen **1919** en **1933** combineert de **Bauhaus**-school kunst, vakmanschap en industrie in Duitsland. Gesloten door de nazi's, verspreidde het niettemin modern design over de hele wereld.",
+  "hero": {
+    "image": "le_bauhaus",
+    "ratio": "16:9",
+    "hook": "Een 14-jarige Duitse school heeft de moderne wereld ontworpen, van stoelen tot smartphones."
+  },
+  "sections": [
+    {
+      "id": "course_148_le_bauhaus_intro",
+      "title": "Inleiding",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Het **Bauhaus** (1919-1933) is de meest invloedrijke kunst- en designschool van de 20e eeuw. Het werd net na de Eerste Wereldoorlog in Duitsland opgericht en verwerpt het overbodige 19e-eeuwse decor. Zijn doel: een eenvoudige taal uitvinden, aangepast aan het industriële tijdperk."
+        },
+        {
+          "type": "paragraph",
+          "text": "Door kunst, ambacht en techniek samen te voegen, legt het de basis voor het moderne [[Functionalisme in ontwerp]]. Zijn leven is kort. Zijn nalatenschap is overal."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p1",
+      "title": "Weimar 1919: afschaffing van de hiërarchie van de kunsten",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In **1919** richtte de architect **Walter Gropius** het Bauhaus op in **Weimar**. Zijn manifest is duidelijk: het uiteindelijke doel van de hele schepping is architectuur. Geen grenzen meer tussen nobele ‘schone kunsten’ en secundaire ‘toegepaste kunsten’. Ambacht wordt de basis van alles."
+        },
+        {
+          "type": "image",
+          "asset": "bauhaus_weimar_1919_walter_gropius_building",
+          "ratio": "4:3",
+          "caption": "Het Bauhaus: een school waar je leert door te maken."
+        },
+        {
+          "type": "paragraph",
+          "text": "Elke werkplaats heeft twee meesters: een kunstenaar en een vakman. Figuren als [[Wassily Kandinsky]], Russische abstracte schilder, geven daar les. De school gaat ook in dialoog met [[De Stijl]], een Nederlandse beweging die geobsedeerd is door de rechthoek en pure kleuren."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p2",
+      "title": "Vorm volgt functie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vervolgens geïnstalleerd bij **Dessau**, richtte de school zich op massaproductie. Bekende slogan: **“huidige functies”**. Het ornament wordt als onnodig beschouwd. We zijn op zoek naar eenvoudige, mooie voorwerpen die in een fabriek kunnen worden vervaardigd."
+        },
+        {
+          "type": "funFact",
+          "text": "**Marcel Breuer**, leraar aan het Bauhaus, recycleert stalen buizen van fietsen om lichtgewicht stoelen uit te vinden. Fabrieksmateriaal wordt woonkamermeubilair."
+        },
+        {
+          "type": "paragraph",
+          "text": "De workshops testen metaal, glas, textiel en typografie. Het doel is niet langer het enige luxeobject. Het is het typische object, toegankelijk voor het grootste aantal mensen."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p3",
+      "title": "Gesloten door de nazi's, gered door ballingschap",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "School is vervelend. Hij wordt ervan beschuldigd te modern, te internationaal en te links te zijn. Na een periode in Berlijn onder **Mies van der Rohe**, komt [[Sluiting door de nazi's (1933)]]. Het regime beschouwt dit als ‘cultureel bolsjewisme’."
+        },
+        {
+          "type": "image",
+          "asset": "mies_van_der_rohe_modernist_architecture",
+          "ratio": "4:3",
+          "caption": "Mies van der Rohe: laatste leiderschap van het Bauhaus, daarna Amerikaanse ballingschap."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sluiting wordt diffusie. De meesters gaan naar de Verenigde Staten, Groot-Brittannië, Palestina. In Tel Aviv voeden hun ideeën de [[Witte stad Tel Aviv]], een enorm ensemble van witte moderne architectuur."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p4",
+      "title": "Een ontwerp dat door vanzelfsprekendheid onzichtbaar is geworden",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tegenwoordig is het Bauhaus-erfgoed overal aanwezig: plat meubilair, eenvoudige gebouwen, duidelijke interfaces, schreefloze [[schreefloos]]-typografieën. IKEA, luchthavens, onze telefoons: de geometrische helderheid van het Bauhaus is het gewone decor van de wereld geworden."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1919",
+              "title": "Stichting in Weimar",
+              "detail": "Gropius lanceert de school voor kunstnijverheid."
+            },
+            {
+              "date": "1925",
+              "title": "Dessau",
+              "detail": "Verschuiving naar massaproductie."
+            },
+            {
+              "date": "1933",
+              "title": "Nazi-sluiting",
+              "detail": "Ballingschap verspreidt Bauhaus over de hele wereld."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "In slechts 14 jaar vond het Bauhaus het moderne idee van design uit: minder ornament, meer functie, objecten die mooi zijn omdat ze nuttig zijn. De politieke sluiting ervan heeft de verovering van het dagelijks leven alleen maar versneld."
+        }
+      ]
+    }
+  ]
+}

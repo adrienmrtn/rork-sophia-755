@@ -1,0 +1,108 @@
+{
+  "id": "course_72_pourquoi_dort_on",
+  "title": "Miért alszunk?",
+  "subtitle": "Test és agy",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Életünk egyharmadát alvással töltjük. Nem elvesztegetett idő: az alvás megtisztítja az agyat, helyreállítja a testet és emlékeket vés.",
+  "hero": {
+    "image": "pourquoi_dort_on",
+    "ratio": "16:9",
+    "hook": "Az alvás nem a kikapcsolódásról szól: ez a test nagy éjszakai munkája."
+  },
+  "sections": [
+    {
+      "id": "course_72_pourquoi_dort_on_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "75 éves életünk során közel **25 évet** alszunk. Sokáig azt hittük, hogy az alvás csak szünet. Valójában ez aktív munka, olyan létfontosságú, mint az ivás vagy az evés."
+        },
+        {
+          "type": "paragraph",
+          "text": "A tudomány még nem tudja meg a választ arra, hogy „miért” alszunk. De nagyon jól tudja, mi történik, ha nem alszunk, és mit javít az éjszaka csendben."
+        }
+      ]
+    },
+    {
+      "id": "course_72_pourquoi_dort_on_p1",
+      "title": "Miről árulkodik az alváshiány",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1964**-ben az amerikai diák, **Randy Gardner** **11 szalvéta** alvás nélkül maradt. Hallucinációk, paranoia, elme összeomlás: bizonyíték arra, hogy az agy nem tud túlélni pihenés nélkül."
+        },
+        {
+          "type": "image",
+          "asset": "sleeping_person_bedroom_night",
+          "ratio": "auto",
+          "caption": "Alvás, elengedhetetlen az agy és a test helyreállításához."
+        },
+        {
+          "type": "paragraph",
+          "text": "Patkányoknál a teljes alváshiány a **2-ben halált okoz 3 szállodának**, akárcsak az éhezés. Embereknél egy ritka genetikai betegség, a **Fatal családi álmatlanság** szintén halálhoz vezet. Napi szinten 17 óra ébrenlét **0,5 g/l** véralkoholszintnek felel meg. Az agy ekkor [[Mikroalvás]], rövid önkéntelen tudattörésekre kényszerít."
+        },
+        {
+          "type": "funFact",
+          "text": "A rekordja után Randy Gardner **14 óra** egyenesen aludt. Működőképesen ébredt fel, de hetekbe telt, mire az alvása visszatért a normális kerékvágásba."
+        }
+      ]
+    },
+    {
+      "id": "course_72_pourquoi_dort_on_p2",
+      "title": "Éjszaka az agy megtisztul",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Alvás közben az agy nem áll le: módot vált. A **csikóhal**, egy tengeri ló formájú kulcsfontosságú memóriastruktúra „visszajátssza” a napot, és elküldi az információkat a [[Neocortex]]-be, az agy külső rétegébe, hogy tartós tárolást végezzen. Eredmény: gyakran jobban megtanuljuk a **20–40%** értéket egy jó éjszakai alvás után."
+        },
+        {
+          "type": "paragraph",
+          "text": "A mély alvás a **új hormon** is beindítja, amely helyreállítja az izmokat és a szöveteket, valamint stimulálja az immunrendszer jelzőmolekuláit, a [[Citokinek]]-t. Egy másik jelentős felfedezés: a [[Glymphaticus rendszer]], egy agyi vízelvezető hálózat **tízszer** éjszaka aktívabbá teszi. Eltávolítja a hulladékot, beleértve az Alzheimer-kór kockázatához kapcsolódó fehérjéket is."
+        },
+        {
+          "type": "funFact",
+          "text": "Mélyalvás során az agysejtek körülbelül **60%-kal** zsugorodnak. Az így kialakított tér lehetővé teszi a tisztítófolyadék jobb keringését."
+        }
+      ]
+    },
+    {
+      "id": "course_72_pourquoi_dort_on_p3",
+      "title": "Ki mennyit alszik és hogyan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A macskák 16 órakor alszanak **12.**: a ragadozók biztonságban vannak. A zsiráfok néha megelégszenek azzal, hogy **30 perctől 2 óráig** rövid szunyókálnak, menekülésre készen. A delfinek egyszerre **at egyetlen féltekével**, az agy egyik felével alszanak, hogy folyamatosan feljönnek lélegezni."
+        },
+        {
+          "type": "paragraph",
+          "text": "A babák **6 óráig alszanak.**, sok-sok [[Mikroalvás]], a gyors szemmozgással járó álmok fázisa. Ez a fázis segíti a [[Szinaptogenezis]]-t, a neuronok közötti kapcsolatok létrehozását."
+        }
+      ]
+    },
+    {
+      "id": "course_72_pourquoi_dort_on_p4",
+      "title": "A belső óra és a kék fény",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Két erő taszít lefekvésben: a napközben felgyülemlő fáradtság, illetve a [[A cirkadián ritmusok és a melatonin]], a belső óra **24 órára**. Amikor a fény elhalványul, az agy **melatonint**-t bocsát ki, egy hormont, amely felkészíti a testet az alvásra anélkül, hogy rákényszerítené."
+        },
+        {
+          "type": "paragraph",
+          "text": "Az esti képernyők megbolondítják ezt az órát, és késleltetik az elalvást. Hétvégén nem igazán \"bepótolunk\" alvástartozást: csökken a fáradtság, de nem minden kár. A rendes órák, a sötét és hűvös szoba továbbra is a legjobb szövetségesek maradnak."
+        },
+        {
+          "type": "takeaway",
+          "text": "Az alvás megtisztítja az agyat, javítja a testet és erősíti a memóriát. A teljes nélkülözés néhány hét alatt megöl: az alvás nem luxus, hanem létfontosságú karbantartás."
+        }
+      ]
+    }
+  ]
+}

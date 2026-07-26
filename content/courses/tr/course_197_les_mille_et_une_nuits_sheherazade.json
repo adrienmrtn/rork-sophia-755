@@ -1,0 +1,120 @@
+{
+  "id": "course_197_les_mille_et_une_nuits_sheherazade",
+  "title": "Binbir Gece Masalları (Şehrazade)",
+  "subtitle": "Hayatta kalmayı söyle",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Şehrazat 1001 geceyi hikâye anlatarak atlatır. İran, Bağdat ve Mısır arasında doğmuş, dünya efsanesi haline gelmiş bir koleksiyon.",
+  "hero": {
+    "image": "les_mille_et_une_nuits_sheherazade",
+    "ratio": "16:9",
+    "hook": "Her gece bir kadın, şafakta ölmemek için bir hikaye anlatır."
+  },
+  "sections": [
+    {
+      "id": "course_197_les_mille_et_une_nuits_sheherazade_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Arap Geceleri** (*Alf Leyla wa-Leyla*) tek yazarlı bir kitap değildir. Bu bir palimpsest: yüzyıllarca süren sözlü ve yazılı hikayeler, Hint, Fars, Arap, Mısır."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ortada baş döndürücü bir fikir var: **Şehrazat** adlı bir kadın hikayeyi bir kalkana dönüştürüyor. O konuştuğu sürece onu öldürmek isteyen kralın beklemesi gerekir. Konuşma bu şekilde bir hayatta kalma silahı haline gelir."
+        }
+      ]
+    },
+    {
+      "id": "course_197_les_mille_et_une_nuits_sheherazade_p1",
+      "title": "Kağıttan bir mimari: bir dünya metninin doğuşu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Çekirdek, Hint geleneklerinden beslenen [[Hazar Afsana]] (\"Bin Masal\") adlı İran fonundan geliyor. Bağdat'ta [[Abbasiler]] halifeleri (8.-13. yüzyıllar) yönetimi altında koleksiyon Araplaştırıldı: şehir efsaneleri, saray anekdotları, bazen hiciv tonu."
+        },
+        {
+          "type": "image",
+          "asset": "one_thousand_and_one_nights_arabic_manuscript",
+          "ratio": "4:3",
+          "caption": "Binbir Gece Masallarının El Yazması: Oluşmakta olan bir dünya metni."
+        },
+        {
+          "type": "funFact",
+          "text": "“Binbir” kesin bir sayı anlamına gelmez. Arapçada bu sayı bolluğu, neredeyse sonsuzluğu çağrıştırır. Hatta bazı yazıcılar bunu nazara karşı bir tılsım olarak görmüşlerdir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mısır'da [[Memlükler]] zamanında yeni çevrimler eklendi. Batı için Sürpriz: **Alaaddin** ve **Ali Baba**, ortaçağ Arapça el yazmalarında eksik. Bunlar daha sonra Avrupa üzerinden giren “yetim masalları”dır."
+        }
+      ]
+    },
+    {
+      "id": "course_197_les_mille_et_une_nuits_sheherazade_p2",
+      "title": "Şehrazat'ın Hegemonyası: Kalkan Olarak Anlatım",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "İlk karısı tarafından ihanete uğrayan Kral **Şehriyar**, her akşam genç bir kadınla evlenir ve onu şafak vakti öldürür. Vezirin kızı **Şehrazat** kendini teklif ediyor. Anlatıyor… ve en gergin anda duruyor."
+        },
+        {
+          "type": "image",
+          "asset": "scheherazade_shahryar_king_storyteller_painting",
+          "ratio": "4:3",
+          "caption": "Şehrazat Şehriyar'la karşı karşıya: kalkan olarak anlatım."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[iç içe hikayeler (çerçeve anlatı)]] yığıyor: bir karakter diğerine anlatıyor, o da üçüncüsünü anlatıyor. Bundan sonra ne olacağını duyma arzusuna kapılan kral, idamı erteler. **Bir Binbir Gece**'den sonra dinlemek Şehriyar'ı değiştirdi: yeniden empati kurmayı başardı. Şehrazat sadece eğlendirmiyordu. Bir tiranı tamir etti."
+        }
+      ]
+    },
+    {
+      "id": "course_197_les_mille_et_une_nuits_sheherazade_p3",
+      "title": "Batı'ya geçiş ve bir efsanenin icadı",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1704** ve **1717** arasında Fransız oryantalist **Antoine Galland** çevirisini yayınlıyor. Metni **Louis XIV**'nin zevkine göre uyarlıyor ve oradan geçen bir Suriyeli olan [[Hanna Diyab]]'den duyulan hikayeleri ekliyor. Aladdin böylece külliyata girer."
+        },
+        {
+          "type": "image",
+          "asset": "antoine_galland_thousand_nights_french_translation",
+          "ratio": "4:3",
+          "caption": "Galland, Geceleri 18. yüzyıl Avrupa'sına açıyor."
+        },
+        {
+          "type": "funFact",
+          "text": "Gençler bazen Galland'ı geceleri penceresinin altından bağırarak uyandırıyordu: \"Bay Galland, uyuyamıyorsanız bize hikayelerinizden birini anlatın!\" »"
+        },
+        {
+          "type": "paragraph",
+          "text": "Başarı bir [[Avrupa Oryantalizmi]] yaratır: uçan halılar, cinler, kılık değiştirmiş halifeler. **Proust'un**'den bu anlatı döngülerinde edebi sonsuzluk imajını gören **Borges**'ye kadar çoğu zaman indirgemeci ama muazzam etkiye sahip fantazi vizyonu."
+        }
+      ]
+    },
+    {
+      "id": "course_197_les_mille_et_une_nuits_sheherazade_p4",
+      "title": "Hikayenin modernliği ve felsefi kapsamı",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Neden söyleyelim? Gecelerin cevabı: Ölümü uzakta tutmak. Şehrazat'ın sesi yankılandığı sürece ölümcül şafak ertelenir. Kurgu kaosa şekil verir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu mekanizma hala serimizi besliyor: [[çekişme]], uçurumun kenarındaki bu kesim, anlatıcının doğrudan mirasçısıdır. Kapanmayı reddeden, sonsuza açık bir kitap."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Şehrazat**, gömülü hikayeler sayesinde **1001** gecelerinde hayatta kalıyor: bir hayatta kalma aracı olarak gerilimi icat ediyor ve konuşmayı politik güce dönüştürüyor."
+        }
+      ]
+    }
+  ]
+}

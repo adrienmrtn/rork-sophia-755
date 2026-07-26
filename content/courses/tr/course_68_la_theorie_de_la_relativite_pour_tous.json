@@ -1,0 +1,124 @@
+{
+  "id": "course_68_la_theorie_de_la_relativite_pour_tous",
+  "title": "Herkes için görelilik teorisi",
+  "subtitle": "Einstein 1905 ve 1915",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "1905 ve 1915'te Einstein uzay, zaman ve yerçekimi fikrimizi değiştirdi. Ve hesaplamaları olmasaydı GPS'iniz birkaç kilometre hatalı olurdu.",
+  "hero": {
+    "image": "la_theorie_de_la_relativite_pour_tous",
+    "ratio": "16:9",
+    "hook": "Zaman evrensel bir saat değildir. Ve yerçekimi görünmez bir ip değildir."
+  },
+  "sections": [
+    {
+      "id": "course_68_la_theorie_de_la_relativite_pour_tous_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Albert Einstein**, **1905** ve **1915**'de fiziği sarsacak iki teori yayınladı. O zamana kadar çoğunlukla [[Newton]]'yi takip ediyorduk: Zaman herkes için, her yerde aynı şekilde akıyordu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Einstein, uzay ve zamanın bağlantılı olduğunu ve yerçekiminin bu dokunun eğriliği olarak anlaşılabileceğini gösteriyor. Bu fikirler [[kara delikler]] ve [[Büyük patlama]]'yi açıklamaktadır. Ayrıca telefonunuzun GPS'ini de her gün düzeltirler."
+        }
+      ]
+    },
+    {
+      "id": "course_68_la_theorie_de_la_relativite_pour_tous_p1",
+      "title": "1905: özel görelilik",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**özel görelilik** iki basit fikre dayanmaktadır. Doğa kanunları sabit hızla hareket eden herkes için aynıdır. Ve ışığın boşluktaki hızı **Hız 300.000 km/s**, ona yaklaşsak da ondan uzaklaşsak da herkes için aynıdır."
+        },
+        {
+          "type": "image",
+          "asset": "albert_einstein_portrait_princeton",
+          "ratio": "auto",
+          "caption": "Görelilik teorisinin yazarı Albert Einstein."
+        },
+        {
+          "type": "paragraph",
+          "text": "Işığın her zaman aynı hızda kalması için zamanın ayarlanması gerekir. Bu [[Zaman genişlemesi]]'dir: Bir nesne ne kadar hızlı giderse, duran birine kıyasla onun için zaman o kadar yavaş geçer. Bu bir yanılsama değil. **atomik izle**, zamanı son derece hassas bir şekilde ölçen aletler onu ölçtü."
+        },
+        {
+          "type": "paragraph",
+          "text": "Einstein ayrıca [[E=mc²]]'yi de çiziyor: kütle, enerjinin çok yoğun bir şeklidir. Işığın hızı **c** çok büyük olduğundan, çok küçük bir kütle devasa bir enerji açığa çıkarabilir. [[nükleer fizik]]'nin, yani atom çekirdeklerinin ve bunların reaksiyonlarının incelenmesinin bir temel direğidir."
+        },
+        {
+          "type": "funFact",
+          "text": "1905'te Einstein üniversite profesörü değildi. İsviçre'nin Bern kentindeki patent ofisinde denetçi olarak çalışıyor."
+        }
+      ]
+    },
+    {
+      "id": "course_68_la_theorie_de_la_relativite_pour_tous_p2",
+      "title": "1915: eğrilik olarak yerçekimi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "On yıl sonra Einstein **genel göreliliği** yayınladı. Newton, yerçekimini kütleleri birbirine doğru çeken görünmez bir kuvvet olarak gördü. Einstein başka bir görüntü sunuyor: **uzay-zaman**, uzay ve zamanın tek bir dokuda birleşmesi, esnek bir doku oluşturur."
+        },
+        {
+          "type": "paragraph",
+          "text": "Güneş gibi ağır bir kütle bu dokuyu oyuyor. Trambolin üzerinde bir bowling topu hayal edin. Yanına atılan top düz gitmez; çukuru takip eder. Aynı şekilde Dünya da Güneş'in yarattığı eğriliği takip ettiği için yörüngede döner."
+        },
+        {
+          "type": "paragraph",
+          "text": "Işık bile bu eğrileri takip eder. İngiliz gökbilimci **Arthur Eddington**, **1919**'de bunu bir tutulma sırasında doğruladı: Güneş'in arkasındaki yıldızların görünen konumu hafifçe kaymıştır. Einstein bir gecede ünlü oldu."
+        }
+      ]
+    },
+    {
+      "id": "course_68_la_theorie_de_la_relativite_pour_tous_p3",
+      "title": "GPS, cepte kanıt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "GPS uyduları **20.000 kilometre** yükseklikte yaklaşık **14.000 km/s** hızla döner. Kendinizi en yakın ölçüm cihazına konumlandırmak için onların saatlerinin yerdeki saatlerle senkronize kalması gerekir. Ancak iki göreli etki aynı anda işliyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hızları nedeniyle, özel göreliliğin bir etkisi olarak zaman biraz daha yavaş geçiyor: günde yaklaşık **7 mikrosaniye** gecikme. İrtifalarda yerçekiminin daha zayıf olması nedeniyle, genel göreliliğin bir etkisi olarak burada zaman biraz daha hızlı geçiyor: yaklaşık **45 mikrosaniye** ileri."
+        },
+        {
+          "type": "funFact",
+          "text": "Göreli düzeltmeler olmadan, GPS konumu hatası günde yaklaşık **11 km** değerine ulaşabilir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sonuç olarak günde yaklaşık **38 mikrosaniye** net ilerleme elde edildi. Küçük görünüyor. Işık hızında bu, navigasyon için zaten çok büyük."
+        }
+      ]
+    },
+    {
+      "id": "course_68_la_theorie_de_la_relativite_pour_tous_p4",
+      "title": "Dalgalar, kara delikler, genişleyen evren",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Genel görelilik kara delikleri öngörüyor: Eğrinin o kadar güçlü olduğu ve artık ışığın bile dışarı çıkmadığı bölgeler. Einstein onların gerçek varlığından şüphe ediyordu. [[radyo astronomisi]], gökyüzünün radyo dalgalarıyla gözlemlenmesi ve son görüntüler bunları doğruladı."
+        },
+        {
+          "type": "paragraph",
+          "text": "**1916**'de aynı zamanda **parçaların dalgalarını** de tahmin etmişti: iki kara deliğin birleşmesi gibi kozmik felaketlerin uzay-zamanda yarattığı dalgalanmalar. **2015** ve uzay titreşimlerine duyarlı bir yer dedektörü olan **LIGO** gözlemevinin bunları tespit etmesini beklemeliyiz."
+        },
+        {
+          "type": "paragraph",
+          "text": "Son olarak bu denklemler Büyük Patlama modelinin temeli olan genişleyen bir evrenin yolunu açmaktadır. Einstein ilk olarak sabit bir evreni zorlamak için kullanılan matematiksel bir terim olan **** kozmolojik sabitini eklemişti. Hubble'ın gözlemleri daha sonra onu aksi yönde ikna etti."
+        },
+        {
+          "type": "takeaway",
+          "text": "**E=mc²** kütle ve enerjiyi birbirine bağlar. Genel görelilik, yerçekiminin uzay-zamanı büktüğünü söylüyor. Bu düzeltmeler olmasaydı GPS'iniz her gün birkaç kilometre hatalı olurdu."
+        }
+      ]
+    }
+  ]
+}

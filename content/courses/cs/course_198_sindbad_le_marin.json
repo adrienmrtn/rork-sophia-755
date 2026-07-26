@@ -1,0 +1,116 @@
+{
+  "id": "course_198_sindbad_le_marin",
+  "title": "Sindibád námořník",
+  "subtitle": "Sedm cest",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Sindibád námořník: Sedm cest, příšery a poklady. Za podivuhodným je portrét obchodníka-dobrodruha islámského zlatého věku.",
+  "hero": {
+    "image": "sindbad_le_marin",
+    "ratio": "16:9",
+    "hook": "Sedmkrát odchází bohatý nebo zvědavý. Sedmkrát ji moře prolomí. Sedmkrát se vrací ještě bohatší."
+  },
+  "sections": [
+    {
+      "id": "course_198_sindbad_le_marin_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Sindibád námořník** patří do **Arabské noci**, ale ne do starého perského jádra sbírky. Jeho cyklus sedmi cest se odehrál později, v Egyptě, kolem 15. století."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ztělesňuje cestovatele-obchodníka **Islamského zlatého věku**: zbožnost, chamtivost, odvahu a neschopnost sedět na místě, kdysi bohatý. Za příšerami čteme alegorii štěstí stoupajícího a klesajícího."
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p1",
+      "title": "Cyklická struktura dobrodružství",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Příběh začíná v Bagdádu. **Sindibád námořník**, nyní starý a bohatý, vypráví své utrpení vrátnému také jménem Sindibád (někdy Hindbad). Třídní kontrast je okamžitý."
+        },
+        {
+          "type": "image",
+          "asset": "baghdad_medieval_islamic_golden_age_trade",
+          "ratio": "4:3",
+          "caption": "Bagdád, výchozí a návratový bod Sindibádových cest."
+        },
+        {
+          "type": "paragraph",
+          "text": "Každá cesta se řídí stejnou mechanikou: únava ze sedavého života, vyplutí z přístavu [[Basra]], ztroskotání, přežití v neznámé zemi, návrat naložený poklady. Číslo sedm, nabité významem v [[Islámská kosmologie]], dává sérii iniciační rozměr: od nerozvážnosti k moudrosti."
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p2",
+      "title": "Fantastický bestiář mezi mýtem a realitou",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Rock** (neboli Rokh), pták, jehož rozpětí křídel zakrývá slunce, zanechal svou stopu ve světové představivosti. Vidíme ozvěnu příběhů arabských cestovatelů na pobřeží východní Afriky."
+        },
+        {
+          "type": "image",
+          "asset": "sinbad_roc_giant_bird_illustration",
+          "ratio": "4:3",
+          "caption": "Roc, obří pták Sindibádových cest."
+        },
+        {
+          "type": "funFact",
+          "text": "Roc je pravděpodobně inspirován **Aepyornis**, sloním ptákem z Madagaskaru, který zmizel kolem roku 1000. Jeho vejce byla až 150krát větší než objem slepičího vejce."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sindibád také čelí **Ostarci z více**, který se drží na zádech, a **Želvímu ostrově**, klamné zemi. Údolí diamantů ****, kam se hází maso k nalepení drahokamů, už koluje mezi Antiky. Nádherné sedimenty staletí [[Středověké arabské obchodní cesty]]."
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p3",
+      "title": "Zrcadlo zlatého věku arabského obchodu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Prostředí je historické. V 8. a 9. století ovládli Indický oceán námořníci z Basry a Sirafu. Sindibadovy zastávky evokují skutečná místa: [[Serendib]] (Cejlon) pro koření, jihovýchodní Asie pro kafr, pobřeží pro perly."
+        },
+        {
+          "type": "image",
+          "asset": "arab_indian_ocean_trade_routes_medieval_ship",
+          "ratio": "4:3",
+          "caption": "Arabské lodě na trasách Indického oceánu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sindibád není válečník: je to obchodník-dobrodruh, prestižní postavení ve společnosti, která si cení obchodu. Tam najdeme monzun, lodě šité kokosovými vlákny spíše než přibité. Západní rovnoběžka: [[Marco Polo (západní rovnoběžka)]], která popisuje Asii ve faktech, kde ji Sindibád maluje v divech."
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p4",
+      "title": "Univerzální dědictví: od východu na západ",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cestování, které v 18. století přeložil **Antoine Galland**, vyživuje evropský [[Dobrodružný román]], od Defoea po Julese Verna. Kino z něj často dělá soukromníka ve službách princezen. Chyba: Sindibád je původně obyvatelem města z Bagdádu, který přežil díky víře a vynalézavosti."
+        },
+        {
+          "type": "funFact",
+          "text": "Jméno Sindibád by evokovalo „knížete řeky Sindhu“, Indu, na křižovatce arabského a indického světa."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Sindibád** ztělesňuje islámský námořní zlatý věk v **sedmi** cyklických plavbách: Skála a diamanty maskují realitu, realitu arabských obchodníků, pánů Indického oceánu."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "id": "course_5_la_magna_carta_1215",
+  "title": "Magna Carta",
+  "subtitle": "1215",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "Haziran 1215'te John Lackland, baronları tarafından dayatılan bir tüzüğe mührünü bastı. Feodal metin, yüzyıllar boyunca kralın üzerindeki hukukun sembolü haline geldi.",
+  "hero": {
+    "image": "la_magna_carta_1215",
+    "ratio": "16:9",
+    "hook": "Köşeye sıkışan bir kral imza atıyor. Sekiz yüzyıl sonra tüm dünya hâlâ bu konuyu konuşuyor."
+  },
+  "sections": [
+    {
+      "id": "course_5_la_magna_carta_1215_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Haziran ayında **1215**, Londra yakınlarındaki **Runnymede** çayırında, İngiltere Kralı **John Lackland**, **Magna Karta**, yani “Büyük Sözleşme”ye mührünü iliştirdi. Bu bir cömertlik jesti değil. Bu bir açmaz: Baronlar, krallığın büyük lordları, kraliyetin keyfiliğini kırmak istiyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Metin bir iç savaşı önlemek için doğdu. Hemen uygulanması başarısız olur. Ancak yavaş yavaş patlayıcı bir fikrin sembolü haline gelir: Kral bile kanunlara tabidir."
+        }
+      ]
+    },
+    {
+      "id": "course_5_la_magna_carta_1215_p1",
+      "title": "John Lackland uçurumun eşiğinde",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1199**'den bu yana kral olan Jean, birbiri ardına felaketler yaşıyor. Fransa kralı [[Philip II Augustus]] ile karşı karşıya gelirken, [[Normandiya'nın kaybı (1204)]]. Topraklarını yeniden ele geçirmek için [[Feodal sistem]] baskı yapıyor: Kral sadakat ve askerlik hizmeti karşılığında toprak veriyor, ancak John vergileri, rehineleri ve keyfi para cezalarını katlıyor. Onu tebaasına bağlayan gelenekler paramparça oldu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Papa [[Masum III]] ile olan çatışma onu daha da yalnızlaştırıyor. Philip Augustus'un İngiltere'nin de dahil olduğu bir koalisyonu mağlup ettiği [[Bouvinler]] (**1214**) yenilgisinin ardından baronlar isyan etti ve Londra'yı ele geçirdi. Jean'in artık başka seçeneği yok: müzakere etmek ya da tacı kaybetmek."
+        },
+        {
+          "type": "funFact",
+          "text": "\"Sans Terre\" lakabı Fransa'daki yenilgilerinden gelmiyor. Henry II'nin son oğlu, doğduğunda hiçbir ayrıcalığa sahip olmamıştı."
+        }
+      ]
+    },
+    {
+      "id": "course_5_la_magna_carta_1215_p2",
+      "title": "Runnymede, 63 madde",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**15 Haziran 1215**'de taraflar Runnymede'de buluştu. [[Stephen Langton]]'den etkilenen belgede **63 deli** bulunmaktadır. İkisi her şeyi değiştirir. **deli 39**: Hiçbir özgür insan, akranlarının kararı olmadan tutuklanamaz. **deli 40**: Kral adaleti satamaz veya geciktiremez."
+        },
+        {
+          "type": "image",
+          "asset": "magna_carta_1215_manuscript",
+          "ratio": "4:3",
+          "caption": "1215 tarihli Magna Carta, siyasi bir efsaneye dönüşen parşömen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Henüz demokrasi değil. Şart, serflere, yani toprağa bağlı köylülere değil, esas olarak “özgür insanlara” hitap ediyor. Bu her şeyden önce kral ve baronları arasında yapılan bir barış anlaşmasıdır. Ancak fikir ifade ediliyor: Gücün yazılı sınırları vardır."
+        }
+      ]
+    },
+    {
+      "id": "course_5_la_magna_carta_1215_p3",
+      "title": "Başarısızlıktan efsaneye",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ağustos gibi erken bir tarihte, John metni papa tarafından iptal ettirdi. İç savaş yeniden başlıyor. Tüzük, kralın **1216**'deki ölümü sayesinde hayatta kaldı: genç **Henry III**, krallığı yatıştırmak için onu yeniden yayınladı. Tekrar tekrar onaylanarak İngiliz hukukuna giriyor."
+        },
+        {
+          "type": "funFact",
+          "text": "1215'e ait tek bir orijinal yoktur, ancak ilçelere gönderilen birkaç kopya vardır. Sadece dört kişi hayatta kaldı."
+        },
+        {
+          "type": "paragraph",
+          "text": "17. yüzyılda [[Edward Kola]] gibi hukukçular, sınırsız yönetmek isteyen krallar olan Stuart'ların mutlakiyetçiliğine karşı çıktılar. Bir ortaçağ parşömeni parlamenter özgürlüklerin atası olduğu iddia ediliyor."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1204",
+              "title": "Normandiya'nın Kaybı",
+              "detail": "John Lackland kıtasal gelirini kaybediyor."
+            },
+            {
+              "date": "1214",
+              "title": "Bouvinler",
+              "detail": "Yenilgi kralı kesin olarak izole eder."
+            },
+            {
+              "date": "1215",
+              "title": "Magna Karta",
+              "detail": "Baronların baskısı altında Runnymede'ye mühür yapıştırıldı."
+            },
+            {
+              "date": "1216",
+              "title": "Yeniden yayınlama",
+              "detail": "Henry III, tahtı sağlamlaştırmak için metni kaydeder."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_5_la_magna_carta_1215_p4",
+      "title": "Küresel bir miras",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "İngiliz sömürgeciler tüzüğü Amerika'ya götürüyor. Kurucu Babalar, Amerikan Anayasasının ilk değişiklikleri olan [[Haklar Bildirgesi]] için bundan ilham aldılar. Keyfi tutuklamaları yasaklayan [[Habeas külliyatı]] ilkesi, 39. maddeyi genişletiyor. **1948**'de, [[Eleanor Roosevelt]] bunu tüm insanlık için bir “Büyük Sözleşme” olarak görüyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bugün İngiltere'de yalnızca üç madde yürürlükte kalıyor. Boş ver. Magna Carta yaşayan bir yasadan çok bir semboldür: Hiç kimse hukukun üstünde değildir."
+        },
+        {
+          "type": "takeaway",
+          "text": "**1215**'de John Lackland'den alınan Magna Carta, kralın da yasalara tabi olduğunu doğruluyor. Baronlarla kral arasındaki bir anlaşmadan modern özgürlüklerin kurucu mitlerinden biri doğdu."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "id": "course_9_l_empire_azteque",
+  "title": "Det aztekiska riket",
+  "subtitle": "1325-1521",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "På mindre än två århundraden byggde aztekerna en huvudstad med 200 000 invånare på en sjö. Deras imperium, grundat på hyllning och uppoffring, kollapsade på två år mot spanjorerna.",
+  "hero": {
+    "image": "l_empire_azteque",
+    "ratio": "16:9",
+    "hook": "En stad vid vattnet, mer befolkad än London. Sedan, om två år, ingenting."
+  },
+  "sections": [
+    {
+      "id": "course_9_l_empire_azteque_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I hjärtat av dagens Mexiko byggde aztekerna en huvudstad på en sjö på mindre än två århundraden, befolkad av **200 000 invånare**. Större än London eller Rom samtidigt. Deras kraft kombinerar vattenteknik, krävande religion och permanent krig."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mellan **1519** och **1521** kollapsade detta imperium. Inte bara under Cortés, den spanske conquistadorens kanoner, utan under sina undersåtars hat och under ett osynligt vapen: sjukdom."
+        }
+      ]
+    },
+    {
+      "id": "course_9_l_empire_azteque_p1",
+      "title": "Från träsk till en huvudstad på vattnet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Mexiko**, folket vi kommer att kalla aztekerna, kommer från den mytomspunna [[Aztlán]], en ursprungsplats i norr. De anlände på 1200-talet till Mexikos dal. Föraktade söker de ett tecken från sin gud [[Huitzilopochtli]], solens och krigets gud: en örn som slukar en orm på en kaktus. I **1325** hittar de den på en holme i sjön **Texcoco**. [[Tenochtitlán]] föddes, deras framtida huvudstad."
+        },
+        {
+          "type": "paragraph",
+          "text": "För att föda staden fulländar de [[Chinamporna]], ultrafertila konstgjorda öar gjorda av lera och växter. Tre gångvägar, vallar, kanaler: staden blir en sjöfästning och en gigantisk marknad."
+        },
+        {
+          "type": "funFact",
+          "text": "Aztekerna använde inte hjulet för transport och hade inga lastdjur. Ändå flyttade de miljontals ton sten för sina pyramider."
+        }
+      ]
+    },
+    {
+      "id": "course_9_l_empire_azteque_p2",
+      "title": "Trippelalliansen och hyllningen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1428** allierade Tenochtitlán sig med två närliggande städer, Texcoco och Tlacopan: **Trippelallians**. Snart dominerar Mexiko ensamt. Deras imperium assimilerar sig inte: det kräver en vanlig **hyllning**, majs, kakao, fjädrar, metaller. Huvudstadens rikedom underblåser hatet från underkuvade folk, såsom [[Tlaxcaltecs]], aztekernas hårda fiender."
+        },
+        {
+          "type": "image",
+          "asset": "tenochtitlan_aztec_city_illustration",
+          "ratio": "4:3",
+          "caption": "Tenochtitlán, sjömetropol i hjärtat av det aztekiska imperiet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Det är en krigsmaskin som behöver eviga erövringar. När spanjorerna anländer kommer de bara att behöva förena dessa förbittringar."
+        },
+        {
+          "type": "funFact",
+          "text": "Kakaobönor användes som valuta. I Tenochtitlán var en kanin värd tio bönor; en slav av god konstitution, ett hundratal."
+        }
+      ]
+    },
+    {
+      "id": "course_9_l_empire_azteque_p3",
+      "title": "Gudar, Cortés och smittkoppor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Enligt [[De fem solarnas kosmogoni]], en aztekisk myt, överlever solen bara om den får näring av mänskligt blod. På [[Templo borgmästare]], den stora pyramiden i centrum, är uppoffringar inte omotiverad grymhet: de är, för aztekerna, en nödvändighet för att världen ska fortsätta."
+        },
+        {
+          "type": "paragraph",
+          "text": "I **1519** anlände **Hernán Cortés** med några hundra spanjorer. [[Moctezuma II]], den aztekiske kejsaren, tvekar. Stål, vapen och hästar är skrämmande. Men den främsta mördaren är [[Smittkoppor]], en europeisk sjukdom mot vilken populationer inte har någon immunitet. Cortés belägrar huvudstaden med tusentals inhemska allierade."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1325",
+              "title": "Stiftelsen av Tenochtitlán",
+              "detail": "Mexikan bosätter sig vid Lake Texcoco."
+            },
+            {
+              "date": "1428",
+              "title": "Trippelallians",
+              "detail": "Början av den aztekiska imperiets expansion."
+            },
+            {
+              "date": "1519",
+              "title": "Cortés ankomst",
+              "detail": "Spanjorerna anländer till Mexiko."
+            },
+            {
+              "date": "1521",
+              "title": "Tenochtitláns fall",
+              "detail": "Slutet på imperiet efter 80 dagars belägring."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_9_l_empire_azteque_p4",
+      "title": "På ruinerna, Mexiko",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1521**, efter **80 dagar** av belägring, föll Tenochtitlán. Hungrig, berövad vatten, härjad av sjukdomar. Dess stenar användes för att bygga Mexico City, huvudstad i [[Nya Spanien]], den spanska kolonin."
+        },
+        {
+          "type": "paragraph",
+          "text": "Allt försvinner inte. [[chinampas]] existerar fortfarande. [[Nahuatl]], aztekernas språk, talas av mer än en miljon människor. Örnen och ormen förblir Mexikos emblem. En lysande civilisation överlever i minne och landskap."
+        },
+        {
+          "type": "takeaway",
+          "text": "Aztekerna byggde en metropol med **200 000** invånare på en sjö. Deras hyllningssystem och [[Smittkoppor]] tillät några hundra spanjorer, med hjälp av lokala allierade, att förstöra imperiet på två år."
+        }
+      ]
+    }
+  ]
+}

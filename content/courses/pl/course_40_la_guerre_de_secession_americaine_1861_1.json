@@ -1,0 +1,145 @@
+{
+  "id": "course_40_la_guerre_de_secession_americaine_1861_1",
+  "title": "Wojna secesyjna",
+  "subtitle": "1861-1865",
+  "subject": "histoire",
+  "subcategory": "Cold War & Contemporary World",
+  "description": "Od **1861** do **1865** Stany Zjednoczone są rozdarte: ponad **620 000** nie żyje. W sercu konfliktu niewolnictwo, jedność narodowa i narodziny silniejszego państwa federalnego.",
+  "hero": {
+    "image": "la_guerre_de_secession_americaine",
+    "ratio": "16:9",
+    "hook": "Najbardziej śmiercionośna wojna w historii Ameryki, o Unię i przeciwko niewolnictwu."
+  },
+  "sections": [
+    {
+      "id": "course_40_la_guerre_de_secession_americaine_1861_1_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Od **1861** do **1865** Stany Zjednoczone przeżywają swój najpoważniejszy kryzys: wojnę secesyjną. Północ (Unia) kontra Południe (Konfederacja). Nigdy więcej **620,000** martwych."
+        },
+        {
+          "type": "paragraph",
+          "text": "Konflikt przekształca młodą republikę w potęgę przemysłową, kosztem trwałej traumy dla jedności narodowej i niewolnictwa."
+        }
+      ]
+    },
+    {
+      "id": "course_40_la_guerre_de_secession_americaine_1861_1_p1",
+      "title": "Dwie Ameryki twarzą w twarz",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Północ** industrializuje się, stosując płace i protekcjonizm. **Polska** pozostaje obszarem wiejskim, bogatym w bawełnę produkowaną przez **4 miliony** niewolników."
+        },
+        {
+          "type": "image",
+          "asset": "slaves_american_southern_plantation",
+          "ratio": "4:3",
+          "caption": "Plantacja południowa: niewolnictwo w sercu gospodarki Konfederacji."
+        },
+        {
+          "type": "paragraph",
+          "text": "Debata dotyczy także **[[Prawa stanów a rząd federalny]]**: kto decyduje o niewolnictwie, stan lokalny czy Waszyngton? Wybór **Abrahama Lincolna** (**listopad 1860**), republikanina sprzeciwiającego się przedłużeniu niewolnictwa, bez ani jednego głosu z Południa, powoduje secesję. Siedem stanów utworzyło Konfederację z **[[Jeffersona Davisa]]** na stanowisku prezydenta i gwarantowało niewolnictwo w swoich konstytucjach."
+        },
+        {
+          "type": "funFact",
+          "text": "Przed wojną często mówiliśmy w liczbie mnogiej „Stany Zjednoczone *Jest*”. Następnie konieczne jest użycie liczby pojedynczej („*Wschód*”): niepodzielny naród."
+        }
+      ]
+    },
+    {
+      "id": "course_40_la_guerre_de_secession_americaine_1861_1_p2",
+      "title": "Wojna totalna, potem emancypacja",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**A12 kwietnia 1861**, armaty południa bombardują Fort Sumter w Południowej Karolinie. Wojna, o której myśleliśmy, że będzie krótka, stała się przemysłowa. W **Antyetam** (**17 września 1862**), **23 000** ofiar w ciągu dwunastu godzin: najkrwawszy dzień w historii amerykańskiej armii."
+        },
+        {
+          "type": "paragraph",
+          "text": "Porażka **[[Roberta E. Lee]]**, czołowego generała Konfederacji, pozwoliła Lincolnowi podpisać **[[Proklamacja emancypacji]]** (**1 stycznia 1863**), która uwolniła niewolników w stanach rebeliantów. Wojna o Unię stała się także wojną o wolność, co zamknęło drzwi europejskiemu wsparciu dla Południa. **Gettysburgu** (lipiec **1863**) przełamuje impet Konfederacji."
+        },
+        {
+          "type": "image",
+          "asset": "american_civil_war_battle",
+          "ratio": "4:3",
+          "caption": "Bitwa wojny domowej: bezprecedensowa przemoc przemysłowa."
+        }
+      ]
+    },
+    {
+      "id": "course_40_la_guerre_de_secession_americaine_1861_1_p3",
+      "title": "Zwycięstwo Północy, śmierć Lincolna",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**[[Ulissesa Granta]]**, naczelny generał Unii, toczy wojnę na wyniszczenie. Jego porucznik **Williama Tecumseha Shermana** spustoszył Gruzję podczas swojego „Marszu do morza”. Lee poddał się pod **Appomattox** w dniu **O 9 kwietnia 1865 r**."
+        },
+        {
+          "type": "image",
+          "asset": "abraham_lincoln_portrait",
+          "ratio": "1:1",
+          "caption": "Abraham Lincoln, Prezydent Unii, zamordowany pięć dni po Appomattox."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pięć dni później Lincoln został zamordowany przez **Johna Wilkesa Bootha**, aktora z Południa. Bez niego rozpoczyna się **[[Rekonstrukcja]]**, okres odbudowy Południa. W grudniu **1865**, [[Poprawka 13]] zniosły niewolnictwo w całym kraju."
+        },
+        {
+          "type": "funFact",
+          "text": "Wojna przyspieszyła także chirurgię: lekarze tacy jak **Gurdona Bucka** przeprowadzili pierwsze rekonstrukcje twarzy żołnierzy zniekształconych kulami Minié."
+        }
+      ]
+    },
+    {
+      "id": "course_40_la_guerre_de_secession_americaine_1861_1_p4",
+      "title": "Blizny i dziedzictwo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W ramach **[[Rekonstrukcja]]** (**1865-1877**) Afroamerykanie głosowali i zostali wybrani. Potem następuje reakcja: **[[Ku Klux Klanu]]** (**1865**), biała organizacja terrorystyczna, wycofanie wojsk federalnych (**1877**), przepisy dotyczące segregacji Jim Crow. Segregacja prawna miała trwać prawie sto lat."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na mapie zjednoczony naród bez legalnego niewolnictwa. W rzeczywistości głęboki podział rasowy. I narzędzia przyszłej potęgi światowej: przemysł ciężki, koleje, silne państwo federalne."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1860",
+              "title": "Wybory Lincolna",
+              "detail": "Początek secesji."
+            },
+            {
+              "date": "1861",
+              "title": "Fort Sumtera",
+              "detail": "Początek wojny."
+            },
+            {
+              "date": "1863",
+              "title": "Emancypacja",
+              "detail": "Proklamacja Gettysburga i punkt zwrotny."
+            },
+            {
+              "date": "1865",
+              "title": "Appomattox i poprawka 13",
+              "detail": "Koniec walk i zniesienie konstytucji."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Wojna domowa (**1861-1865**) zjednoczyła Stany Zjednoczone i zniosła niewolnictwo kosztem **620 000** zgonów, pozostawiając jednocześnie podział rasowy, który przedłużyłyby prawa Jima Crowa."
+        }
+      ]
+    }
+  ]
+}

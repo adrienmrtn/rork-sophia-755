@@ -1,0 +1,122 @@
+{
+  "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu",
+  "title": "Görög tragédia és ókori színház",
+  "subtitle": "Kr. e. 5. század",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture + iconic works",
+  "description": "Athénben Aiszkhülosz, Szophoklész és Euripidész találta ki a tragédiát. Kórus, hübrisz, katarzis: a városról való gondolkodás színháza.",
+  "hero": {
+    "image": "la_tragedie_grecque_et_le_theatre_antique",
+    "ratio": "16:9",
+    "hook": "Maszkok a nap alatt, hogy meggyógyítsák a várost a sokkból."
+  },
+  "sections": [
+    {
+      "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az ie 5. században, Athénban született meg a **tragédia**. Ez nem magánszórakozás: ez egy polgári szertartás, amelyet több ezer polgár előtt hajtanak végre."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aiszkhülosz, Szophoklész és Euripidész olyan művészetet találtak ki, amely keverte az isteneket, a politikát és a szenvedélyeket."
+        }
+      ]
+    },
+    {
+      "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu_p1",
+      "title": "A kórus és a zenekar",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A [[kórus a görög tragédiában]] énekel, táncol, kommentál. Az álarcos színészek hősöket és isteneket testesítenek meg. Egy gazdag polgár finanszírozza a műsort: ez a [[koregia]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "A Dionüszia, Dionüszosz fesztiválja versenyeket szervez. A tragédia ebben a vallási és polgári keretben keletkezik. A győzelem annyit jelent, hogy a várost éppúgy tiszteljük, mint az istent."
+        },
+        {
+          "type": "image",
+          "asset": "epidaurus_ancient_theatre",
+          "ratio": "4:3",
+          "caption": "Epidaurosz színháza: az akusztika mint kőcsoda."
+        }
+      ]
+    },
+    {
+      "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu_p2",
+      "title": "Hubris és bukás",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A tragikus hős gyakran enged [[önhittség]], a renddel dacoló többletnek. Az ezt követő bukás nem ingyenes: megkérdőjelezi az igazságosságot, a sorsot, a felelősséget."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aiszkhülosz színészeket ad hozzá; Szophoklész finomítja a pszichológiát; Euripidész megzavarja a bizonyosságot. Három stílus ugyanarra a gépre: gondolkodásra készteti az embereket mozgás közben."
+        },
+        {
+          "type": "funFact",
+          "text": "A [[deus ex machina]]-nél időnként egy daru eresztette le az istent, hogy megoldja a cselekményt... már kritizálták a kényelem miatt."
+        }
+      ]
+    },
+    {
+      "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu_p3",
+      "title": "Katarzis",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Arisztotelész szerint a tragédia okozza a [[katarzis]]: megtisztulás a szánalom és a rémület által. Megrendülten, de békésen távozunk. A színház úgy gyógyítja meg a várost, hogy színpadra állítja félelmeit."
+        },
+        {
+          "type": "paragraph",
+          "text": "A közvélemény gyakran ismeri a mítoszt. Az érdeklődés nem a csavar, hanem a modor. Hogyan fog Oidipusz elesni? Hogyan fog Antigoné nemet mondani?"
+        },
+        {
+          "type": "image",
+          "asset": "greek_theatre_masks_tragedy",
+          "ratio": "4:3",
+          "caption": "Maszkok: messziről leolvasható érzelem."
+        }
+      ]
+    },
+    {
+      "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu_p4",
+      "title": "Örökség",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Shakespeare, opera, mozi: a görög tragédia a sors grammatikája marad a színpadon. Modern antihőseink még mindig neki köszönhetik bukásukat."
+        },
+        {
+          "type": "paragraph",
+          "text": "A görög tragédiák és az ókori színház teljes megértéséhez egy dolgot kell szem előtt tartania: minden technikai részlet egy érzelmet vagy egy ötletet szolgál. Az alkotás soha nem csak dekoratív."
+        },
+        {
+          "type": "paragraph",
+          "text": "A kontextus legalább annyira számít, mint a stílus. Dátumok, helyek, szponzorok, nyilvánosság: mindez megmagyarázza, hogy egy űrlap miért egy adott pillanatban jelenik meg, és miért nem korábban."
+        },
+        {
+          "type": "paragraph",
+          "text": "Végül az örökséget hosszú távon mérik. Amit ma múzeumokban, filmekben vagy populáris zenében látunk, az ma is magán viseli e találmányok nyomait."
+        },
+        {
+          "type": "paragraph",
+          "text": "A Wagner-operától a katasztrófa moziig a tragikus szerkezet fennmarad. Istent váltottunk; nem mindig esik."
+        },
+        {
+          "type": "takeaway",
+          "text": "Athénban a tragédia feltalált egy polgári színházat, ahol a hübrisz, a kórus és a katarzis arra tanítja a várost, hogy önmagába nézzen."
+        }
+      ]
+    }
+  ]
+}

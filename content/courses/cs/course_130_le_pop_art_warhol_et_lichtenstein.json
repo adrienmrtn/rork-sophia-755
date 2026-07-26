@@ -1,0 +1,138 @@
+{
+  "id": "course_130_le_pop_art_warhol_et_lichtenstein",
+  "title": "Pop Art: Warhol a Lichtenstein",
+  "subtitle": "50.–70. léta 20. století",
+  "subject": "art",
+  "subcategory": "Painting & Movements",
+  "description": "Pop Art reaguje na konzumní společnost. **Warhol** a **Lichtenštejnsko** dělají z reklamy, komiksů a hvězd skvělé umění.",
+  "hero": {
+    "image": "le_pop_art_warhol_et_lichtenstein",
+    "ratio": "16:9",
+    "hook": "Plechovka polévky, krabice komiksů: co když banál byl ikonou století?"
+  },
+  "sections": [
+    {
+      "id": "course_130_le_pop_art_warhol_et_lichtenstein_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Pop Art**, od poloviny **1950** do **1970**, odpovídá [[Americká konzumní společnost 50.–60. let 20. století]] a masová kultura. Reklama, komiksy, hollywoodské hvězdy: vše se stává materiálem pro umění."
+        },
+        {
+          "type": "paragraph",
+          "text": "S **Andy Warhol** a **Roy Lichtenstein** se hranice mezi muzeem a supermarketem stírá. Z každodenního předmětu se stává ikona. Hodnota díla a role umělce jsou narušeny."
+        }
+      ]
+    },
+    {
+      "id": "course_130_le_pop_art_warhol_et_lichtenstein_p1",
+      "title": "Od běžného života až po muzeum",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pop Art se zrodil ve **Velké Británii** se [[Nezávislá skupina]], ale explodoval až ve **Spojené státy** v letech **1960**. Poválečná prosperita, supermarkety, loga všude: vizuální krajina Američanů se změnila."
+        },
+        {
+          "type": "funFact",
+          "text": "V roce 1957 Richard Hamilton definoval pop art přídavnými jmény: „pomíjivý“, „levný“, „sexy“. Umění konzumovat rychle jako časopis."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pop umělci se postavili proti [[Abstraktní expresionismus]], tyto introspektivní obrazy tehdy dominovaly. Když Warhol maluje polévky, ukazuje, že jedinec je definován tím, co kupuje. Opakování vyčerpává obraz jeho emocí a ponechává pouze jeho komerční účinnost."
+        }
+      ]
+    },
+    {
+      "id": "course_130_le_pop_art_warhol_et_lichtenstein_p2",
+      "title": "Warhol: dílna jako továrna",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Andy Warhol** (1928-1987), bývalý reklamní grafik, aplikuje průmyslové metody na umění. Jeho **Továrna** v New Yorku už není osamělým útočištěm: asistenti a přátelé vyrábějí společně."
+        },
+        {
+          "type": "image",
+          "asset": "andy_warhol_factory_silkscreen_marilyn",
+          "ratio": "4:3",
+          "caption": "Marilyn v sérii: hvězda jako reprodukovatelný produkt."
+        },
+        {
+          "type": "funFact",
+          "text": "Warhol nashromáždil více než 600 „časových kapslí“: krabic, kam házel dopisy, účty a dokonce i zbytky jídla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jeho královna technika: [[Sítotisk]], která umožňuje obraz reprodukovat desítkykrát. Vynásobením Marilyn Monroe ilustruje myšlenku [[Aura a mechanizovaná reprodukce (Walter Benjamin)]]: čím více obraz koluje, tím méně je „posvátný“, tím více se stává ikonou. Sláva sama o sobě je produkt."
+        }
+      ]
+    },
+    {
+      "id": "course_130_le_pop_art_warhol_et_lichtenstein_p3",
+      "title": "Lichtenstein: rozšířený komiks",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Roy Lichtenstein** (1923-1997) útočí na jazyk **komiks**. Izoluje panel nabitý emocionálním klišé a maluje jej v monumentálním formátu."
+        },
+        {
+          "type": "image",
+          "asset": "roy_lichtenstein_comic_ben_day_dots_painting",
+          "ratio": "4:3",
+          "caption": "Ručně malované Ben-Day tečky: továrna napodobená gestem."
+        },
+        {
+          "type": "funFact",
+          "text": "Pro posouzení kompozice se Lichtenstein podíval na své obrazy obráceně v zrcadle, aby zjistil, zda obstojí čistě abstraktním způsobem."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jeho podpis: bod [[Ben-Day]], tyto malé průmyslové tiskové tečky, které vytvářejí nuance. Maluje je ručně pomocí šablon: hodiny, aby napodobil, co stroj dělá během několika sekund. *Whaam!* přeměňuje krabičku na rozptýlení v obraz moderní historie."
+        }
+      ]
+    },
+    {
+      "id": "course_130_le_pop_art_warhol_et_lichtenstein_p4",
+      "title": "Legacy: od trhu k sítím",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pop Art mění trh a instituce. Na umělcově znamení záleží stejně jako na gestu. V **2022** portrét Marilyn od Warhola dosáhl **195 milionů** dolarů: masový obraz, sakralizovaný, se stává nejvzácnější komoditou."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1957",
+              "title": "Definice pop",
+              "detail": "Hamilton shrnuje pohyb: pomíjivý, levný, sexy."
+            },
+            {
+              "date": "60. léta 20. století",
+              "title": "Továrna a komiks",
+              "detail": "Warhol a Lichtenstein vnucují v USA popovou estetiku."
+            },
+            {
+              "date": "2022",
+              "title": "Marilyn za 195 milionů dolarů",
+              "detail": "Masová ikona se stává absolutní trofejí trhu."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Warholova předpověď „15 minut slávy“ se stala naším digitálním každodenním životem. Memy a recyklace obrázků jsou přímým výsledkem této revoluce."
+        },
+        {
+          "type": "takeaway",
+          "text": "Pop Art prolomil bariéru mezi vysokým uměním a masovou kulturou. Prostřednictvím sítotisku a Ben-Day teček proměnili Warhol a Lichtenstein každodenní předměty a hvězdy v trvalé ikony."
+        }
+      ]
+    }
+  ]
+}

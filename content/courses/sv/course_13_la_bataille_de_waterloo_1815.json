@@ -1,0 +1,134 @@
+{
+  "id": "course_13_la_bataille_de_waterloo_1815",
+  "title": "Slaget vid Waterloo",
+  "subtitle": "1815",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "**18 juni 1815**, en regnig dag i Belgien, kollapsade Napoleons rike. Waterloo avslutar Hundradagarna och öppnar ett sekel av monarkisk ordning i Europa.",
+  "hero": {
+    "image": "la_bataille_de_waterloo_1815",
+    "ratio": "16:9",
+    "hook": "En dag av lera i Belgien, och imperiet kollapsar för gott."
+  },
+  "sections": [
+    {
+      "id": "course_13_la_bataille_de_waterloo_1815_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**18 juni 1815**, nära byn **Waterloo**, i Belgien, utspelas Europas öde i regnet. **Napoleon** möter två fiender samtidigt: britten **Arthur Wellesley**, hertigen av **Wellington** och preussiske **Gebhard von Blücher**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Det är inte bara ett nederlag. Det är slutet på det första imperiet. På en dag krossades mannen som hade dominerat Europa av lera, misstag och en allians som äntligen höll ihop."
+        }
+      ]
+    },
+    {
+      "id": "course_13_la_bataille_de_waterloo_1815_p1",
+      "title": "Återkomsten från ön Elba",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Efter sin abdikering av **April 1814** förvisades Napoleon till ön **Elbe**, utanför Italiens kust. Vinnarna designar om Europa på [[Wienkongressen]]. **1 mars 1815** landade han nära Antibes. Det är början på **Hundra dagar**: trupperna som skickades för att stoppa honom samlas. Han återtar Paris utan blodsutgjutelse."
+        },
+        {
+          "type": "image",
+          "asset": "napoleon_return_from_elba_1815",
+          "ratio": "4:3",
+          "caption": "Återkomsten av ön Elba: Napoleon återtar makten."
+        },
+        {
+          "type": "funFact",
+          "text": "Napoleon och Wellington hade aldrig träffats innan Waterloo. Det belgiska slagfältet var deras enda möte ansikte mot ansikte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Europa förklarade honom \"förbjuden\". Hans plan: använd [[Centralt läge]]. Tanken är enkel. Placera dig mellan Wellington och Blücher, slå dem en efter en, innan de möts."
+        }
+      ]
+    },
+    {
+      "id": "course_13_la_bataille_de_waterloo_1815_p2",
+      "title": "Två dagar innan: Ligny och Quatre-Bras",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den 16 juni besegrade Napoleon preussarna vid **Ligny**, en belgisk by. Samma dag höll [[Marskalk Ney]], en av hans modigaste generaler, britterna vid **Quatre-Bras**, ett strategiskt vägskäl. Men Napoleon tror att preussarna är ur spel. Han lösgör marskalk **Vresig** med **33 000 personer** för att förfölja dem."
+        },
+        {
+          "type": "funFact",
+          "text": "Vissa historiker tillskriver förseningen på morgonen den 18 juni till en attack av hemorrojder som skulle ha hindrat Napoleon från att rida på hästryggen för sin vanliga spaning."
+        },
+        {
+          "type": "paragraph",
+          "text": "**18**, efter en natt med regn, väntar han **11:30** på att marken ska torka. Han vill flytta sitt [[Stort batteri]], en enorm koncentration av kanoner. Denna fördröjning ger Blücher tid att gå mot ljudet av kanonen."
+        }
+      ]
+    },
+    {
+      "id": "course_13_la_bataille_de_waterloo_1815_p3",
+      "title": "Dagen som krossade imperiet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Slaget börjar kring befästa gårdar: **Hougoumont** och **Helig Hedge**. Neys laddningar bröt mot den brittiska [[Fyrkant]], infanteriformationer i en rektangel, bajonetter utåt. Runt **16:30** dyker preussarna upp på den franska högra flanken. Grouchy håller sig för långt borta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Som en sista utväg lanserade Napoleon **kejserliga gardet**, hans elitenhet. För första gången går hon tillbaka. Ropet \"Vaktet retirerar!\" » utlöser panik. Pensionering blir rutin. Wellington och Blücher går med på **Belle-Alliance**."
+        }
+      ]
+    },
+    {
+      "id": "course_13_la_bataille_de_waterloo_1815_p4",
+      "title": "Den slutliga exilen och kungarnas Europa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Napoleon abdikerade den **22 juni 1815**. Förvisad till **Sankt Helena**, en isolerad ö i södra Atlanten, dog han i **1821**. Wienkongressen ålägger [[Legitimitet]]: att återställa de kungliga dynastierna på sina troner. Ryssland, Österrike och Preussen gränsar till kontinenten. Denna \"Europeiska konsert\" upprätthåller relativ fred fram till **1914**."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1 mars 1815",
+              "title": "Tillbaka från Elba",
+              "detail": "Början av de hundra dagarna."
+            },
+            {
+              "date": "16 juni 1815",
+              "title": "Ligny och Quatre-Bras",
+              "detail": "Delseger, men preussarna är inte krossade."
+            },
+            {
+              "date": "18 juni 1815",
+              "title": "Waterloo",
+              "detail": "Avgörande nederlag mot Wellington och Blücher."
+            },
+            {
+              "date": "22 juni 1815",
+              "title": "Andra abdikationen",
+              "detail": "Imperiets sista slut."
+            },
+            {
+              "date": "1821",
+              "title": "Döden på Saint Helena",
+              "detail": "Napoleon dör i exil."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "**Waterloo** (**18 juni 1815**) avslutar Napoleon. Förseningen av attacken, frånvaron av Grouchy och korsningen mellan Wellington och Blücher orsakade imperiets fall och inledde ett sekel av monarkisk ordning."
+        }
+      ]
+    }
+  ]
+}

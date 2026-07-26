@@ -1,0 +1,100 @@
+{
+  "id": "course_46_comment_les_avions_volent_ils",
+  "title": "Jak létají letadla?",
+  "subtitle": "Fyzika letu",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Letí letadlo o hmotnosti několika set tun. Není to magie: jde o tvar křídla, rychlost a síly, které se navzájem vyvažují.",
+  "hero": {
+    "image": "comment_les_avions_volent",
+    "ratio": "16:9",
+    "hook": "Těžší než náklaďák, a přesto se drží ve vzduchu. Zde je návod."
+  },
+  "sections": [
+    {
+      "id": "course_46_comment_les_avions_volent_ils_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Velké dopravní letadlo může vážit **stovky tun**. Jak může něco tak těžkého zůstat ve vzduchu? Odpověď spočívá ve tvaru křídel a rychlosti letadla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ve hře jsou čtyři hlavní síly: **tah** (dopředu), **táhnout** (brzdění vzduchem), **hmotnost** (dolů) a **výtah** (nahoru)."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p1",
+      "title": "Křídlo, inteligentní tvar",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Při pohledu ze strany není křídlo letadla ploché. Horní část je více zaoblená než spodní. Když se letadlo rychle pohybuje, vzduch musí tento tvar obcházet."
+        },
+        {
+          "type": "image",
+          "asset": "airplane_wing_cross_section_flight",
+          "ratio": "auto",
+          "caption": "Profil křídla vytváří vztlak, který zvedá letadlo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vzduch procházející nahoře se trochu zrychlí. Jeho tlak klesá. Pod křídlem zůstává tlak silnější. Tento rozdíl tlačí křídlo nahoru: toto je **výtah**. Často se to vysvětluje principem **Bernoulli**, pojmenovaným po učenci z 18. století, a tím, že křídlo také odklání vzduch dolů."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p2",
+      "title": "Potřebujete rychlost",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bez rychlosti, málo vzduchu procházejícího přes křídlo, málo vztlaku. To je důvod, proč letadlo potřebuje ke vzletu dlouhou dráhu: motory jej musí dostatečně zrychlit."
+        },
+        {
+          "type": "funFact",
+          "text": "Ptáci používají stejnou obecnou myšlenku: jejich křídla vytvářejí vztlak. Ale zamávali křídly, aby se posunuli vpřed. Letadlo se pohybuje vpřed díky svým motorům."
+        },
+        {
+          "type": "paragraph",
+          "text": "Při cestovním letu vyrovnává hmotnost zdvih. Tah motorů vyrovnává odpor vzduchu. Letadlo se poté pohybuje vpřed přibližně konstantní rychlostí."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p3",
+      "title": "Jděte nahoru, dolů, otočte se",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pro stoupání pilot (nebo palubní počítač) trochu nakloní nos nahoru a upraví tah. Pro sestup často snižujeme tah. Pro zatáčení se letadlo naklání na stranu pomocí pohyblivých částí křídel, křidélek."
+        },
+        {
+          "type": "paragraph",
+          "text": "Při přistání zpomalujeme. Vztlakové klapky se vysouvají z křídla pro zvýšení vztlaku při nízkých rychlostech. Poté se kola dotknou země a brzdy (někdy také obraceče tahu) letadlo zastaví."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p4",
+      "title": "Není \"lehčí než vzduch\"",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Balón s heliem se vznáší, protože je méně hustý než vzduch. Letadlo, ne: je mnohem hustší. Létá, protože **pevnost** vypadá, jako by ho nesl, díky své rychlosti a tvaru křídel."
+        },
+        {
+          "type": "takeaway",
+          "text": "Letadlo letí díky **výtah** vytvořenému jeho křídly pohybujícími se vzduchem. Rychlost je zásadní: bez ní už křídlo „netlačí“ nahoru natolik, aby kompenzovalo hmotnost."
+        }
+      ]
+    }
+  ]
+}

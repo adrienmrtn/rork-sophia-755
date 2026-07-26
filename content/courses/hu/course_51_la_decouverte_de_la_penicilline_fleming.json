@@ -1,0 +1,106 @@
+{
+  "id": "course_51_la_decouverte_de_la_penicilline_fleming",
+  "title": "A penicillin felfedezése",
+  "subtitle": "Fleming, 1928",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "1928-ban Alexander Fleming észrevette, hogy egy penészgomba elpusztította a baktériumokat egy kultúrtálcán. Ebből a lehetőségből született meg az első nagyszerű antibiotikum.",
+  "hero": {
+    "image": "la_decouverte_de_la_penicilline",
+    "ratio": "16:9",
+    "hook": "Egy elfelejtett doboz, egy penész, és a gyógyszer felborul."
+  },
+  "sections": [
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az antibiotikumok előtt egy egyszerű fertőzés halálos lehet. Vágás, tüdőgyulladás, háborús seb: a test gyakran egyedül harcolt."
+        },
+        {
+          "type": "paragraph",
+          "text": "**1928**-ben a skót orvos, **Alexander Fleming** véletlenül felfedezett egy olyan anyagot, amely képes elpusztítani a baktériumokat. A neve **penicillin**. De még évekbe telhet, mire valódi gyógyszerré válik."
+        }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p1",
+      "title": "Egy elfelejtett doboz",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fleming baktériumokat tanulmányoz Londonban. Nyaralásból hazatérve régi kultúrládákat nézeget. Az egyiken egy **forma** nőtt. Körülötte a baktériumok elpusztultak."
+        },
+        {
+          "type": "image",
+          "asset": "alexander_fleming_penicillin_petri_dish",
+          "ratio": "4:3",
+          "caption": "Fleming és a kulcsötlet: valami a penészben megállítja a baktériumokat."
+        },
+        {
+          "type": "paragraph",
+          "text": "A penész a **Penicillium** nemzetségbe tartozik. Fleming tudja, hogy antibakteriális anyagot termel. Penicillinnek hívja. De nem tudja eléggé megtisztítani ahhoz, hogy kezelje a betegeket."
+        },
+        {
+          "type": "funFact",
+          "text": "Fleming később azt mondta, hogy ha rendesebb lett volna, kidobta volna a dobozt. A laboratóriumi rendetlenség segítette a felfedezést."
+        }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p2",
+      "title": "Oxford az ötletet gyógyítássá változtatja",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A **1940** évek elején Oxfordban **Howard Florey** és **Ernst Lánc** visszatért a munkahelyére. Csapatukkal izolálták, koncentrálták és állatokon, majd embereken tesztelték a penicillint."
+        },
+        {
+          "type": "paragraph",
+          "text": "A második világháború sürgőssé tette a dolgokat: el kellett látni a fertőzött katonákat. A penicillin a laboratóriumból stratégiai kérdéssé válik."
+        }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p3",
+      "title": "Tömegtermék",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "penicillin_antibiotic_production_laboratory",
+          "ratio": "4:3",
+          "caption": "Ipari módszereket kellett feltalálni a penészgombák termesztésére."
+        },
+        {
+          "type": "paragraph",
+          "text": "Emberek millióinak kezeléséhez óriási mennyiségekre van szükség. Az Egyesült Államok a háború alatt iparosította a termelést. Az óriási kádak úgy hiányoznak a penészből, mint a sörből."
+        },
+        {
+          "type": "paragraph",
+          "text": "A **1945**-ben Fleming, Florey és Chain Nobel-díjat kapott. Az orvostudomány az antibiotikumok korába lép."
+        }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p4",
+      "title": "Az ellenállás árnyéka",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Manapság a túl sok helytelenül használt antibiotikum miatt bizonyos baktériumok **rezisztensek** lettek: a gyógyszerek már nem pusztítják el őket. Fleming már figyelmeztetett erre a veszélyre."
+        },
+        {
+          "type": "takeaway",
+          "text": "A penicillin egy véletlen egybeesésből született, amelyet Fleming figyelt meg a **1928**-ben, majd Floreynek, Chainnek és a hadiiparnak köszönhetően gyógyszerré vált. Életmilliókat mentett meg... mindaddig, amíg nem koptatja ki."
+        }
+      ]
+    }
+  ]
+}

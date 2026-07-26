@@ -1,0 +1,118 @@
+{
+  "id": "course_237_les_gafam_puissance_et_derives",
+  "title": "GAFAM: putere și derive",
+  "subtitle": "Google, Apple, Meta, Amazon, Microsoft",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Cinci companii cântăresc mai mult decât PIB-ul mai multor mari puteri europene combinate: bun venit în era **GAFAM**.",
+  "hero": {
+    "image": "les_gafam_puissance_et_derives",
+    "ratio": "16:9",
+    "hook": "Cinci companii, o mână de cabluri submarine și o bună parte din lumea digitală."
+  },
+  "sections": [
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Google, Apple, Meta (fostul Facebook), Amazon și Microsoft: cinci companii grupate sub acronimul **GAFAM**, născute în **[[Silicon Valley]]**. În mai puțin de treizeci de ani, au schimbat modul în care comunicăm, consumăm și ne informăm, până la punctul de a rivaliza cu puterea anumitor State. Înțelegerea mecanismelor dominației lor și a încercărilor de a le controla ne permite să înțelegem mai bine echilibrul de putere în lumea digitală de astăzi."
+        }
+      ]
+    },
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_p1",
+      "title": "O putere financiară mai mare decât țări întregi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cea mai frapantă caracteristică a GAFAM este valoarea lor bursieră. În 2024, aceste cinci companii vor avea împreună peste 10 trilioane de dolari, o sumă comparabilă cu PIB-ul combinat al Germaniei, Franței, Regatului Unit și Italiei. Apple a devenit chiar prima companie care a depășit o valoare de 3.000 de miliarde de dolari."
+        },
+        {
+          "type": "image",
+          "asset": "gafam_big_tech_companies_logos_apple_google",
+          "ratio": "4:3",
+          "caption": "Google, Apple, Meta, Amazon și Microsoft cântăresc împreună mai mult decât PIB-ul mai multor mari puteri europene combinate."
+        },
+        {
+          "type": "funFact",
+          "text": "În 2021, numerarul acumulat de GAFAM ar fi fost suficient, teoretic, pentru a răscumpăra toate companiile franceze CAC 40, menținând în același timp o marjă de securitate financiară."
+        },
+        {
+          "type": "paragraph",
+          "text": "Această putere financiară nu rămâne abstractă: GAFAM cheltuiește sume considerabile în fiecare an pentru a influența legile din Washington și Bruxelles și au devenit parteneri strategici ai statelor, filiala cloud a Amazon găzduind, de exemplu, date sensibile pentru agențiile guvernamentale americane."
+        }
+      ]
+    },
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_p2",
+      "title": "Monopoluri aproape imposibil de concurat",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dominarea GAFAM se bazează pe un mecanism precis: **[[Efecte de rețea și monopoluri naturale]]**. Cu cât un serviciu are mai mulți utilizatori, cu atât devine mai esențial să faci parte din el, ceea ce descurajează sosirea concurenților și creează cvasimonopoluri în care primul care ajunge aproape întotdeauna păstrează avantajul."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pentru a se menține în această poziție, giganții digitali își cumpără sistematic amenințările emergente: Facebook a cumpărat Instagram pentru 1 miliard de dolari în 2012, când aplicația avea doar o duzină de angajați, apoi WhatsApp în 2014 pentru 22 de miliarde de dolari."
+        },
+        {
+          "type": "funFact",
+          "text": "Numai Google deține aproximativ 10% din toate cablurile subacvatice de fibră optică din lume, oferindu-i control fizic asupra unora dintre rutele Internetului."
+        },
+        {
+          "type": "paragraph",
+          "text": "La nivel social, algoritmii menționați să maximizeze atenție tind să evidențieze conținutul cel mai senzațional, blocând uneori oamenii în „bule” de informații care le întăresc opiniile și facilitând răspândirea știrilor false. **[[durata de atenție]]**"
+        }
+      ]
+    },
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_p3",
+      "title": "Europa, polițist digital global",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În fața unor giganți pe care chiar și instanțele americane se chinuie să îi stăpânească, Uniunea Europeană s-a impus ca principalul reglementator digital global: regulile sale devin adesea standarde peste tot, pentru că este mai simplu pentru o multinațională să aplice peste tot cea mai strictă regulă decât să creeze o versiune diferită pentru fiecare țară."
+        },
+        {
+          "type": "image",
+          "asset": "digital_services_tax_gafam_europe",
+          "ratio": "16:9",
+          "caption": "Uniunea Europeană impune giganților digitali reguli care ajung adesea să se aplice în întreaga lume."
+        },
+        {
+          "type": "paragraph",
+          "text": "În 2022, Europa a adoptat **[[Legea piețelor digitale]]**, care impune ca cele mai mari platforme să fie mai deschise, de exemplu, permițând diferitelor servicii de mesagerie să comunice între ele. Google sau Meta au fost deja aplicate amenzi de câteva miliarde de euro pentru abuz de poziție dominantă. În 2024, UE va deveni, de asemenea, prima organizație din lume care reglementează legal inteligența artificială."
+        }
+      ]
+    },
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_p4",
+      "title": "Suveranitatea digitală în discuție",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Problema finală este cea a **suveranitatea digitală**. Controlând serverele, sistemele de operare pentru telefon și computere și chiar și o parte din cablurile submarine, GAFAM deține infrastructura esențială pentru societățile noastre. Pentru o țară europeană, dependența de o companie americană pentru datele sale publice pune o adevărată problemă de independență."
+        },
+        {
+          "type": "funFact",
+          "text": "Google procesează peste 90.000 de interogări de căutare în fiecare secundă: până când citiți acest paragraf, peste 3 milioane de căutări au fost deja efectuate pe serverele sale."
+        },
+        {
+          "type": "paragraph",
+          "text": "Modelul economic bazat pe colectarea datelor personale, în care utilizatorul „plătește” cu informațiile sale, este tot mai criticat, dar GAFAM rămâne și primii investitori în tehnologiile de mâine, precum calculul cuantic."
+        },
+        {
+          "type": "takeaway",
+          "text": "GAFAM-urile au o putere financiară mai mare decât PIB-ul marilor puteri europene, ceea ce le conferă un rol politic și tehnologic considerabil. Față de aceasta, Uniunea Europeană s-a impus ca principalul organism de reglementare global, grație unor texte precum Digital Markets Act."
+        }
+      ]
+    }
+  ]
+}

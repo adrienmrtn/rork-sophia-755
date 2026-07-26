@@ -1,0 +1,126 @@
+{
+  "id": "course_150_la_nuit_etoilee_van_gogh",
+  "title": "Gwiaździsta noc, Van Gogh",
+  "subtitle": "1889",
+  "subject": "art",
+  "subcategory": "Iconic works",
+  "description": "W **1889**, z azylu w Saint-Rémy-de-Provence, **Vincenta Van Gogha** namalował *Gwiaździsta noc*. Niebo wiruje: sztuka przestaje kopiować rzeczywistość, aby wyrazić emocje.",
+  "hero": {
+    "image": "la_nuit_etoilee_van_gogh",
+    "ratio": "16:9",
+    "hook": "Z pokoju dla azylantów Van Gogh maluje niebo, które nie chce pozostać mądrym."
+  },
+  "sections": [
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "*Gwiaździsta noc* (**1889**) to najsłynniejszy obraz **Vincenta Van Gogha**, malarza urodzonego w [[Holandia]]. Namalowany w szpitalu psychiatrycznym w Saint-Rémy-de-Provence, wyznacza punkt zwrotny: nie malujemy już tylko tego, co widzimy. Malujemy to, co czujemy."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wirujące niebo, cyprys jak czarny płomień, wynalazła wioskę: dzieło otwiera drogę do ekspresyjnej sztuki XX wieku."
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p1",
+      "title": "Saint-Rémy: tworzenie z azylu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W **maju 1889**, po [[Dramat Arles z Gauguinem]] (kryzys, który kosztował go część ucha), Van Gogh został internowany w **Saint-Paul-de-Mausole** niedaleko Saint-Rémy. Dostaje pokój do malowania. Nocny widok rodzi się najpierw za kratami jego pokoju."
+        },
+        {
+          "type": "image",
+          "asset": "van_gogh_saint_paul_asylum_saint_remy_provence",
+          "ratio": "4:3",
+          "caption": "Azyl Saint-Rémy: ramy przymusu i intensywnej twórczości."
+        },
+        {
+          "type": "paragraph",
+          "text": "Płótno łączy w sobie obserwację i inwencję. Rozpoznajemy wzgórza Alpilles i duży **Cypr**. Ale wioska nie jest dokładną kopią. Van Gogh rekonstruuje krajobraz, aby służyć emocjom."
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p2",
+      "title": "Rzeźbienie nieba pędzlem",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Technicznie rzecz biorąc, Van Gogh używa **Impastowy**: farba jest gruba, prawie wyrzeźbiona. Jedenaście gwiazd obraca się jak mgławice. Pomarańczowy księżyc promieniuje. Niebo staje się prawdziwą postacią."
+        },
+        {
+          "type": "image",
+          "asset": "starry_night_cypress_tree_van_gogh_painting",
+          "ratio": "4:3",
+          "caption": "Cyprys łączy ziemię z niebem niczym ciemny płomień."
+        },
+        {
+          "type": "funFact",
+          "text": "Duże wiry nieba przywodzą na myśl dynamikę japońskiej grafiki [[Wielka fala u wybrzeży Kanagawy]], którą podziwiał Van Gogh. Przekształca tę energię w kosmos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gest ten zapowiada [[Sztuka jako wyraz wewnętrzny]]: płótno wyraża stan ducha, a nie prognozę pogody."
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p3",
+      "title": "Geniusz, którego nikt nie kupił",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Van Gogh namalował prawie **900 obrazów** w ciągu dziesięciu lat, ale zmarł w **w lipcu 1890** w Auvers-sur-Oise, w **37 łatów**, prawie nieznany. To jego szwagierka, **Johanny van Gogh-Bonger**, uratowała dzieło: wystawy, sprzedaż, publikację listów do brata Théo."
+        },
+        {
+          "type": "paragraph",
+          "text": "*Gwiaździsta noc* kilkakrotnie przechodziło z rąk do rąk za niewielkie pieniądze, zanim weszło do **MoMA** w Nowym Jorku. Pogardzany obraz staje się ikoną. [[Dzikie zwierzęta]], malarze o brutalnych barwach z początku XX wieku, rozpoznają w nim przodka."
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p4",
+      "title": "Cyprys w stronę nieskończoności",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cyprys łączy ziemię z niebem: jest ogniwem łączącym życie ziemskie z życiem poza nim. Van Gogh napisał, że patrzenie w gwiazdy śniło mu się o śmierci jak o podróży. Współczesne badania sugerują nawet, że jasną gwiazdą w pobliżu cyprysu może być Wenus, obserwowana o świcie."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1888",
+              "title": "Kryzys w Arles",
+              "detail": "Zerwanie z Gauguinem poprzedza internowanie."
+            },
+            {
+              "date": "1889",
+              "title": "Gwiaździsta noc",
+              "detail": "Van Gogh maluje niebo z Saint-Rémy."
+            },
+            {
+              "date": "1890",
+              "title": "Śmierć w Auvers",
+              "detail": "Artysta zmarł w wieku 37 lat, wciąż mało znany."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "*Gwiaździsta Noc* przekształca cierpienie w język wizualny. Van Gogh nie kopiuje nocy: wymyśla wewnętrzne niebo i otwiera drzwi współczesnej sztuce ekspresyjnej."
+        }
+      ]
+    }
+  ]
+}

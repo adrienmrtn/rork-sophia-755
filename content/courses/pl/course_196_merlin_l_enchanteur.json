@@ -1,0 +1,120 @@
+{
+  "id": "course_196_merlin_l_enchanteur",
+  "title": "Merlin Zaklinacz",
+  "subtitle": "Mag Artura",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Merlin, doradca Artura, prorok i mag: postać zrodzona z demona i chrztu, architekt Camelotu, więzień własnej miłości.",
+  "hero": {
+    "image": "merlin_l_enchanteur",
+    "ratio": "16:9",
+    "hook": "Syn demona, ochrzczony od kołyski: Merlin służy dobru mocami zrodzonymi ze zła."
+  },
+  "sections": [
+    {
+      "id": "course_196_merlin_l_enchanteur_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Merlinie** to najsłynniejszy magik zachodniego średniowiecza. Bard, prorok, doradca króla **Artur**: stoi na pograniczu starożytnego świata celtyckiego i rycerstwa chrześcijańskiego."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jego natura jest paradoksalna. Część jego pochodzi od demonów, druga z nieba. Jego historia to nie spektakl magiczny: to walka hybrydowej istoty, która postanawia służyć dobru, dopóki miłość nie usunie jej ze świata."
+        }
+      ]
+    },
+    {
+      "id": "course_196_merlin_l_enchanteur_p1",
+      "title": "Hybrydowe pochodzenie demona i chrztu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "U poety **Roberta de Borona** (XII w.) demony chcą stworzyć antychrysta. Demon [[Inkub demon]], duch jednoczący się ze śpiącą kobietą, uwodzi młodą pobożną chrześcijankę. Plan się nie udaje: matka spowiada się i daje ochrzcić dziecko."
+        },
+        {
+          "type": "image",
+          "asset": "merlin_wizard_medieval_manuscript_illumination",
+          "ratio": "4:3",
+          "caption": "Merlin, postać średniowiecznego maga między lasem a dziedzińcem."
+        },
+        {
+          "type": "funFact",
+          "text": "Nazwa „Merlin” pochodzi od walijskiego **Myrddin**. Geoffrey z Monmouth zmienił „d” na „l”, aby uniknąć gry słów zbyt bliskiej łacińskiemu *gówno*."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Chrzest]] usuwa klątwę, ale pozostawia moce: wiedzę o przeszłości (demoniczne dziedzictwo) i dar [[Proroctwo w kulturze średniowiecznej]]. Merlin potrafi zmieniać kształt. Za nim znajdziemy **Myrddina Wyllta**, walijskiego barda z VI wieku, który oszalały po bitwie uciekł do lasu [[Celyddon]]."
+        }
+      ]
+    },
+    {
+      "id": "course_196_merlin_l_enchanteur_p2",
+      "title": "Architekt przeznaczenia arturiańskiego",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Merlin nie jest iluzjonistą. On jest gwarantem królestwa. Pomaga królowi [[Utherpendragon]] przybrać cechy księcia Kornwalii, aby dołączyć do księżnej **Igerna**. Tej nocy narodził się **Artur**."
+        },
+        {
+          "type": "image",
+          "asset": "merlin_arthur_camelot_medieval_illustration",
+          "ratio": "4:3",
+          "caption": "Merlin prowadzi Artura do tronu i Camelotu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wychowuje dziecko w tajemnicy, ustawia miecz w kowadle, a następnie prowadzi Artura do Pani Jeziora, aby zdobyć [[Excalibur]], którego powłoka chroni przed śmiertelnymi ranami. W **Camelot** projektuje **Okrągły Stół** i umieszcza [[Oblężenie niebezpieczne]], wolne miejsce zarezerwowane dla najczystszego rycerza. Widzi nadchodzące niebezpieczeństwa. Wie też, że przeznaczenie zawsze w końcu przemija."
+        }
+      ]
+    },
+    {
+      "id": "course_196_merlin_l_enchanteur_p3",
+      "title": "Upadek zaklinacza: miłość i zapomnienie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Merlin spotyka swój koniec. Jednak zakochuje się w **Viviana**, Pani Jeziora, niedaleko fontanny Barenton. Uczy ją swoich najtajniejszych zaklęć, choć wie, że je straci."
+        },
+        {
+          "type": "image",
+          "asset": "viviane_lady_of_the_lake_merlin_medieval_art",
+          "ratio": "4:3",
+          "caption": "Viviana zamyka Merlina: koniec czasów magów."
+        },
+        {
+          "type": "funFact",
+          "text": "W zależności od wersji Viviana zamyka go w krzaku głogu, szklanej wieży lub **Brocéliande**. Nieśmiertelny Merlin nie umarł: śpi poza światem."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kiedy rycerze wyruszają po Graala, na magię Merlina nie ma już miejsca. Jej wycofanie oznacza przejście od czasów mitów do czasów wiary."
+        }
+      ]
+    },
+    {
+      "id": "course_196_merlin_l_enchanteur_p4",
+      "title": "Dziedzictwo literackie i postać arcymaga",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Merlin wpatrywał się w wizerunek starego mędrca: brodę, laskę, zagadki. Od niego pochodzą **Gandalf** dla Tolkiena i **Chrabąszcz** dla Rowling. Jest adiuwantem, który wie, ale nie może działać zamiast bohatera."
+        },
+        {
+          "type": "paragraph",
+          "text": "Most pomiędzy dzikim lasem a dworem, trzyma odcisk [[Druid]] doradzając królom. Nawet dzisiaj szepcze, że imperia są kruche i że mądrość nie zawsze się chroni."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Merlinie**, zrodzony z demona i ocalony przez chrzest, buduje los **Artur**, po czym znika, więzień **Viviana**: trwały model zachodniego czarodzieja."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "id": "course_164_demeter_et_persephone_les_saisons",
+  "title": "Demeter ve Persephone",
+  "subtitle": "Mevsimler neden var?",
+  "subject": "mythologie",
+  "subcategory": "Greece: the gods",
+  "description": "Hades, Persephone'yi kaçırır. Hasat tanrıçası annesi Demeter dünyayı açlığa terk eder. Mevsimleri açıklayan bir efsane.",
+  "hero": {
+    "image": "demeter_et_persephone",
+    "ratio": "16:9",
+    "hook": "Bir kız yeraltında kaybolduğunda annesi hasadı durdurur. Dünya kışı keşfediyor."
+  },
+  "sections": [
+    {
+      "id": "course_164_demeter_et_persephone_les_saisons_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Demeter**, Yunan hasat ve bereket tanrıçasıdır. Kızı **Perséphone** baharı temsil ediyor. Hikayeleri [[Yunan dininde tarım döngüsü]] açıklıyor: Dünya neden kışın ölüyor ve yazın yeniden doğuyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu aynı zamanda yaşayanların dünyası ile ölülerin dünyası arasındaki bir anne ve kızın dramasıdır. Bu hikayeden, inisiyelere ölüm karşısında umut vaat eden gizli ayinler olan [[Eleusis Gizemleri]] doğdu."
+        }
+      ]
+    },
+    {
+      "id": "course_164_demeter_et_persephone_les_saisons_p1",
+      "title": "Hades kızı kaçırır",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "İlk önce Persephone'ye **Korah**, \"genç kız\" diyoruz. Bir gün çayırda bir nergis topluyor. Yer açılıyor. **Hades**, yeraltı dünyasının kralı, arabasında belirir. Genç kızın babası **Zeus**'un gizli anlaşmasıyla onu kraliçesi yapmak için Yeraltı Dünyası'na götürür."
+        },
+        {
+          "type": "image",
+          "asset": "hades_abduction_persephone_bernini_sculpture",
+          "ratio": "4:3",
+          "caption": "Persephone'nin kaçırılması: Bahar yeraltında kaybolur."
+        },
+        {
+          "type": "funFact",
+          "text": "Efsaneye göre **Gaïa**, yani Dünya, bu nergisi Zeus'un emriyle yaratmıştır. Kokusu Persephone'yi tuzağa düşürmüş olmalı."
+        },
+        {
+          "type": "paragraph",
+          "text": "Teselli edilemeyen Demeter, Olympus'u terk eder. Toprağın çimlenmesini engeller. Tarlalar çorak kalıyor. Bir **kitlik** insanları ve dolayısıyla tanrılara sunulan kurbanları tehdit ediyor. Zeus'un tepki vermesi gerekiyor."
+        }
+      ]
+    },
+    {
+      "id": "course_164_demeter_et_persephone_les_saisons_p2",
+      "title": "Nar taneleri kaderi belirliyor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zeus, Persephone'nin geri dönmesini talep etmek için tanrıların habercisi **Hermes**'yi gönderir. Hades itaat ediyormuş gibi davranır. Ayrılmadan önce ona biraz **nar taneleri** veriyor. Ölüler diyarında kim yemek yerse o onundur. Tuzak kuruldu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bir uzlaşma gereklidir. Persephone yılın bir kısmını Hades'in yanında, geri kalanını da annesinin yanında geçirecek. Demeter yukarıya çıktığında doğayı yeniden yeşertir: İlkbahar ve yazdır. Geri döndüğünde hasat tanrıçası lütfunu geri çeker: sonbahar ve kıştır."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1",
+              "title": "Kaçırma",
+              "detail": "Hades, Persephone'yi yeraltına alır."
+            },
+            {
+              "date": "2",
+              "title": "Kıtlık",
+              "detail": "Demeter bitki büyümesini durdurur."
+            },
+            {
+              "date": "3",
+              "title": "Nar",
+              "detail": "Persephone Yeraltı Dünyasında tohum yer."
+            },
+            {
+              "date": "4",
+              "title": "Paylaşma",
+              "detail": "Bir yılı anne ve kocası arasında paylaştırıyor."
+            },
+            {
+              "date": "5",
+              "title": "Mevsimler",
+              "detail": "Mahsul döngüsünün ileri geri ritmini sağlar."
+            }
+          ]
+        },
+        {
+          "type": "funFact",
+          "text": "Bazı versiyonlar Persephone'nin bu tohumları kazara yemediğini söylüyor. Merak veya gelişen bağlılık: Hikaye aynı zamanda yetişkinliğe giriş haline gelir."
+        }
+      ]
+    },
+    {
+      "id": "course_164_demeter_et_persephone_les_saisons_p3",
+      "title": "Eleusis'te geceden sonra umut",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Demeter, gezintileri sırasında yaşlı bir kadın kılığına girerek Atina yakınlarındaki **Eleusis**'de durur. Kraliyet ailesi tarafından memnuniyetle karşılanır ve sonunda ilahi doğasını açığa çıkarır ve bir tapınağın inşasını emreder. [[Eleusis Gizemleri]] doğdu."
+        },
+        {
+          "type": "paragraph",
+          "text": "İnisiyeler dokuz gün yürürler, oruç tutarlar, arpa ve nane içeceği olan **kykeon** içerler. Büyük bir inisiyasyon odası olan [[Telesterion]]'de karanlıktan sonra ışık parlıyor. Kutsal nesneler orada büyük bir gizlilik içinde ortaya çıkar."
+        },
+        {
+          "type": "funFact",
+          "text": "Bazı modern araştırmacılar, kykeon'un halüsinojenik bir mantar olan ergot içerdiğine inanıyor. Bu, inisiyelerin bildirdiği vizyonları açıklayabilir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tören tanrıçanın yolculuğunu taklit ediyor. Demeter ile doğanın ölümünü deneyimlemek, ardından Persephone ile yeniden doğmak: Katılımcılar öbür dünyada daha iyi bir kadere sahip olacaklarına inanıyorlardı."
+        }
+      ]
+    },
+    {
+      "id": "course_164_demeter_et_persephone_les_saisons_p4",
+      "title": "Yeniden doğmak için ölen tahıl",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Yunanlılara göre toprağa gömülen buğday tanesi de Persephone ile aynı kaderi paylaşmıştır. Kök olarak geri dönmek için yeraltında kaybolur. Efsane tarımı, ölümü ve yeniden doğuşu birbirine bağlar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aynı zamanda genellikle acı verici bir ayrılık olarak yaşanan eski evlilikten de bahsediyor: Genç kız annesini terk edip başka bir eve gidiyor. Hades ve Demeter arasındaki son anlaşma zıtlıkları bir arada tutuyor: gölge ve ışık, ölüm ve yaşam."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Persephone**'nin Yeraltı Dünyasında kalışı mevsimleri noktalıyor: onun yokluğu **Démeter**'nin (sonbahar-kış) yasını tutmasına neden oluyor, geri dönüşü bitkilerin yeniden doğmasına (ilkbahar-yaz) neden oluyor."
+        }
+      ]
+    }
+  ]
+}

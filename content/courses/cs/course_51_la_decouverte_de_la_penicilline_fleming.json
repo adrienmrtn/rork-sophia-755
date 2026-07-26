@@ -1,0 +1,106 @@
+{
+  "id": "course_51_la_decouverte_de_la_penicilline_fleming",
+  "title": "Objev penicilinu",
+  "subtitle": "Fleming, 1928",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "V roce 1928 si Alexander Fleming všiml, že plíseň zabila bakterie na kultivační misce. Z této příležitosti se zrodilo první velké antibiotikum.",
+  "hero": {
+    "image": "la_decouverte_de_la_penicilline",
+    "ratio": "16:9",
+    "hook": "Zapomenutá krabička, plíseň a lék se obrátí vzhůru nohama."
+  },
+  "sections": [
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Před antibiotiky mohla zabít obyčejná infekce. Řez, zápal plic, válečná rána: tělo často bojovalo samo."
+        },
+        {
+          "type": "paragraph",
+          "text": "V **1928** objevil skotský lékař **Alexander Fleming** náhodou látku schopnou zabíjet bakterie. Bude se jmenovat **penicilin**. Ale ještě bude trvat roky, než se z toho stane skutečný lék."
+        }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p1",
+      "title": "Zapomenutá krabice",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fleming studuje bakterie v Londýně. Když se vrací z dovolené, prohlíží si staré kulturní krabice. Na jednom z nich vyrostl **plíseň**. Kolem ní jsou bakterie mrtvé."
+        },
+        {
+          "type": "image",
+          "asset": "alexander_fleming_penicillin_petri_dish",
+          "ratio": "4:3",
+          "caption": "Fleming a klíčová myšlenka: něco v plísni zastaví bakterie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Forma patří do rodu **Penicillium**. Fleming chápe, že produkuje antibakteriální látku. Říká tomu penicilin. Ale nedokáže ji dostatečně očistit, aby léčil nemocné."
+        },
+        {
+          "type": "funFact",
+          "text": "Fleming později řekl, že kdyby byl spořádanější, krabici by zahodil. K objevu pomohl nepořádek v laboratoři."
+        }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p2",
+      "title": "Oxford proměňuje myšlenku v lék",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Na začátku let **1940** se v Oxfordu vrátili **Howard Florey** a **Ernst Chain** do práce. Se svým týmem izolovali, koncentrovali a testovali penicilin na zvířatech, poté na lidech."
+        },
+        {
+          "type": "paragraph",
+          "text": "Druhá světová válka učinila věci naléhavými: infikovaní vojáci museli být léčeni. Penicilin se z laboratoře přesouvá do strategické záležitosti."
+        }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p3",
+      "title": "Hromadná výroba",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "penicillin_antibiotic_production_laboratory",
+          "ratio": "4:3",
+          "caption": "Bylo nutné vymyslet průmyslové způsoby pěstování plísní."
+        },
+        {
+          "type": "paragraph",
+          "text": "K léčbě milionů lidí je zapotřebí obrovské množství. Spojené státy během války industrializovaly výrobu. Z obřích kádí plíseň mizí jako pivo."
+        },
+        {
+          "type": "paragraph",
+          "text": "V roce **1945** obdrželi Fleming, Florey a Chain Nobelovu cenu. Medicína vstupuje do věku antibiotik."
+        }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p4",
+      "title": "Stín odporu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dnes příliš mnoho nesprávně užívaných antibiotik umožnilo, aby se určité bakterie staly **odolnými**: léky je již nezabíjejí. Fleming už před tímto rizikem varoval."
+        },
+        {
+          "type": "takeaway",
+          "text": "Penicilin se zrodil shodou okolností, kterou Fleming pozoroval v **1928**, poté se stal lékem díky Florey, Chain a válečnému průmyslu. Zachránil miliony životů... pokud to neopotřebujete."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "id": "course_237_les_gafam_puissance_et_derives",
+  "title": "GAFAM: Güç ve sürüklenmeler",
+  "subtitle": "Google, Apple, Meta, Amazon, Microsoft",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Beş şirket, birçok büyük Avrupa gücünün toplam GSYİH'sından daha ağırdır: **GAFAM** çağına hoş geldiniz.",
+  "hero": {
+    "image": "les_gafam_puissance_et_derives",
+    "ratio": "16:9",
+    "hook": "Beş şirket, bir avuç denizaltı kablosu ve dijital dünyanın büyük bir kısmı."
+  },
+  "sections": [
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Google, Apple, Meta (eski Facebook), Amazon ve Microsoft: **GAFAM** kısaltması altında gruplandırılmış beş şirket, **[[Silikon Vadisi]]**'de doğmuştur. Otuz yıldan kısa bir süre içinde iletişim kurma, tüketme ve bilgi edinme biçimimizi bazı Devletlerin gücüyle rekabet edebilecek noktaya kadar değiştirdiler. Hakimiyet mekanizmalarını ve onları kontrol etme çabalarını anlamak, günümüz dijital dünyasındaki güç dengesini daha iyi anlamamızı sağlıyor."
+        }
+      ]
+    },
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_p1",
+      "title": "Tüm ülkelerden daha büyük bir mali güç",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "GAFAM'ın en dikkat çekici özelliği borsa değeridir. 2024 yılında bu beş şirketin değeri 10 trilyon dolardan fazla olacak; bu miktar, Almanya, Fransa, Birleşik Krallık ve İtalya'nın toplam GSYİH'sıyla karşılaştırılabilecek bir miktar. Hatta Apple, değerlemesi 3.000 milyar doları aşan ilk şirket oldu."
+        },
+        {
+          "type": "image",
+          "asset": "gafam_big_tech_companies_logos_apple_google",
+          "ratio": "4:3",
+          "caption": "Google, Apple, Meta, Amazon ve Microsoft'un ağırlığı, Avrupa'nın birçok büyük gücünün toplamından daha fazla."
+        },
+        {
+          "type": "funFact",
+          "text": "2021 yılında, GAFAM'ın biriktirdiği nakit, teorik olarak, finansal güvenlik marjını korurken Fransız CAC 40 şirketlerinin tamamını geri satın almaya yeterli olacaktı."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu mali güç soyut kalmıyor: GAFAM, Washington ve Brüksel'deki yasaları etkilemek için her yıl hatırı sayılır meblağlar harcıyor ve Amazon'un bulut şubesi örneğin Amerikan devlet kurumlarının hassas verilerini barındırarak Devletlerin stratejik ortağı haline geldi."
+        }
+      ]
+    },
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_p2",
+      "title": "Rekabet edilmesi neredeyse imkansız olan tekeller",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "GAFAM'ın hakimiyeti kesin bir mekanizmaya dayanmaktadır: **[[ağ efektleri]]**. Bir hizmetin kullanıcısı ne kadar çoksa, onun parçası olmak da o kadar gerekli hale gelir; bu da rakiplerin gelmesini engeller ve ilk gelenin neredeyse her zaman avantajı koruduğu yarı tekeller yaratır."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu duruma kilitlenmek için dijital devler ortaya çıkan tehditleri sistematik olarak satın aldılar: Facebook, Instagram'ı 2012'de, uygulamanın yalnızca bir düzine çalışanı varken 1 milyar dolara, ardından 2014'te WhatsApp'ı 22 milyar dolara satın aldı."
+        },
+        {
+          "type": "funFact",
+          "text": "Google tek başına dünyadaki deniz altı fiber optik kablolarının yaklaşık %10'una sahiptir ve bu da ona bazı İnternet rotaları üzerinde fiziksel kontrol sağlamaktadır."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sosyal düzeyde, **[[dikkat süresi]]** en üst düzeye çıkarmak için tasarlanan algoritmalar, en sansasyonel içeriği öne çıkarma eğilimindedir; bazen insanları fikirlerini güçlendiren bilgi \"balonlarına\" kilitler ve sahte haberlerin yayılmasını kolaylaştırır."
+        }
+      ]
+    },
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_p3",
+      "title": "Avrupa, küresel dijital polis",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Amerikan mahkemelerinin bile kontrol altına almakta zorlandığı devlerle karşı karşıya kalan Avrupa Birliği, kendisini ana küresel dijital düzenleyici olarak kabul ettirdi: Kuralları genellikle her yerde standart haline geliyor çünkü çok uluslu bir şirket için en katı kuralı her yerde uygulamak, her ülke için farklı bir versiyon oluşturmaktan daha kolaydır."
+        },
+        {
+          "type": "image",
+          "asset": "digital_services_tax_gafam_europe",
+          "ratio": "16:9",
+          "caption": "Avrupa Birliği, dijital devlere genellikle dünya çapında uygulanan kurallar dayatıyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "2022'de Avrupa, en büyük platformların daha açık olmasını gerektiren, örneğin farklı mesajlaşma hizmetlerinin birbirleriyle iletişim kurmasına izin veren **[[Dijital Piyasalar Yasası]]**'yi kabul etti. Hakim durumun kötüye kullanılması nedeniyle Google veya Meta'ya halihazırda birkaç milyar avroluk para cezaları uygulandı. AB aynı zamanda 2024 yılında dünyada yapay zekayı yasal olarak düzenleyen ilk kuruluş olacak."
+        }
+      ]
+    },
+    {
+      "id": "course_237_les_gafam_puissance_et_derives_p4",
+      "title": "Dijital egemenlik söz konusu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Son mesele **dijital eleman** meselesidir. GAFAM, sunucuları, telefon ve bilgisayar işletim sistemlerini ve hatta denizaltı kablolarının bir kısmını kontrol ederek toplumlarımız için önemli bir altyapıya sahiptir. Bir Avrupa ülkesi için, kamuya açık verileri konusunda bir Amerikan şirketine bağımlı olmak gerçek bir bağımsızlık sorunu teşkil ediyor."
+        },
+        {
+          "type": "funFact",
+          "text": "Google, her saniye 90.000'den fazla arama sorgusunu işler: siz bu paragrafı okuduğunuz sırada, Google'ın sunucularında 3 milyondan fazla arama zaten gerçekleştirilmiştir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kullanıcının kendi bilgileriyle \"ödeme yaptığı\" kişisel verilerin toplanmasına dayanan ekonomik model giderek daha fazla eleştiriliyor, ancak GAFAM aynı zamanda kuantum hesaplama gibi yarının teknolojilerinin ilk yatırımcıları olmaya devam ediyor."
+        },
+        {
+          "type": "takeaway",
+          "text": "GAFAM'lar, Avrupa'nın büyük güçlerinin GSYİH'sından daha büyük bir mali güce sahiptir ve bu da onlara önemli bir siyasi ve teknolojik rol vermektedir. Bununla karşı karşıya kalan Avrupa Birliği, Dijital Piyasalar Yasası gibi metinler sayesinde kendisini ana küresel düzenleyici olarak kabul ettirdi."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "course_146_hitchcock_et_le_suspense",
+  "title": "Hitchcock i napięcie",
+  "subtitle": "1899-1980",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "**Alfreda Hitchcocka** wymyśla nowoczesne napięcie: przekazuje widzowi informacje, których nie mają bohaterowie. Dzięki *Psychologia*, *Zawrót głowy* czy *Tylne okno* manipuluje naszym spojrzeniem.",
+  "hero": {
+    "image": "hitchcock_et_le_suspense",
+    "ratio": "16:9",
+    "hook": "Prawdziwe napięcie nie zaskakuje: pozwala zobaczyć bombę pod stołem."
+  },
+  "sections": [
+    {
+      "id": "course_146_hitchcock_et_le_suspense_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Alfreda Hitchcocka** (1899-1980) nazywany jest „mistrzem napięcia”. W ponad pięćdziesięciu filmach przekształcił thriller w sztukę manipulacji. *Psychologia*, *Zawrót głowy*, *Okno na tył*: za każdym razem kamera nie tylko opowiada historię. Ona igra z naszymi nerwami."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jego ulubionym tematem nie jest kryminał. To spojrzenie: poczucie winy, obsesja, podglądactwo. Hitchcock filmuje widza tak samo jak bohaterów."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p1",
+      "title": "Zaskoczenie kontra napięcie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W **1966** Hitchcock wyjaśnia swoją metodę [[François Truffauta]], francuskiemu krytykowi, a następnie filmowcowi. **niespodzianka**, jak mówi, to bomba, która wybucha bez ostrzeżenia: krótki szok. **niepewność** pokazuje widzom bombę, podczas gdy bohaterowie ją ignorują. Napięcie trwa. Stajemy się współwinni i bezsilni."
+        },
+        {
+          "type": "image",
+          "asset": "alfred_hitchcock_portrait_director",
+          "ratio": "4:3",
+          "caption": "Hitchcock: twarz, sylwetka, globalna marka dreszczyku emocji."
+        },
+        {
+          "type": "funFact",
+          "text": "Aby przyspieszyć fabułę, często używa [[MacGuffina]]: przedmiotu lub sekretu, który motywuje bohaterów, ale którego dokładny charakter nie ma większego znaczenia. Najważniejsze jest polowanie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ta asymetria informacji jest jej gramatyką. Gdy tylko dowiemy się więcej niż bohater, zaczynamy się o niego bać."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p2",
+      "title": "Wynalazki techniczne do filmowania niepokoju",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W **1948**, za pomocą *Lina*, Hitchcock symuluje unikalne [[ujęcie sekwencyjne]]: film wydaje się być kręcony za jednym razem. Rolki trwają tylko dziesięć minut, więc chowa cięcia za plecami lub ciemnym meblem. Efekt jest przytłaczający: pozostajemy zamknięci z mordercami."
+        },
+        {
+          "type": "image",
+          "asset": "hitchcock_vertigo_james_stewart_kim_novak_film",
+          "ratio": "4:3",
+          "caption": "Zawrót głowy: zawrót głowy sfilmowany jako zniekształcenie przestrzeni."
+        },
+        {
+          "type": "paragraph",
+          "text": "W **1958** dla *Zawrót głowy* wynalazł [[Dolly Zoom]]: kamera cofa się wraz ze wzrostem zoomu (lub odwrotnie). Przestrzeń jest zniekształcona. Nie widzimy już zawrotów głowy. Czujemy to."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p3",
+      "title": "Wszyscy jesteśmy podglądaczami",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W *Okno na tydzie* (**1954**) fotograf ze złamaną nogą szpieguje swoich sąsiadów. Jest sobowtórem widza w ciemności. Hitchcock posługuje się aparatem [[Subiektywny aparat]]: widzimy dokładnie to, co widzi bohater, nic więcej."
+        },
+        {
+          "type": "paragraph",
+          "text": "Identyfikacja ta ma charakter zarówno moralny, jak i wizualny. Szukamy wskazówek, ale mamy też poczucie winy, że patrzymy na to, co nas nie dotyczy. Hitchcock miesza thriller z [[psychoanaliza]]: pogrzebane lęki, zakazane pragnienia, podwójna tożsamość."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p4",
+      "title": "Marka, muzyka, dziedzictwo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hitchcock przekształcił swoje nazwisko w markę, aż do czasu, gdy jego serial telewizyjny *Alfred Hitchcock przedstawia*. Dla *Psychologia* zabrania wejścia po rozpoczęciu sesji: tajemnica staje się wydarzeniem. Jego współpraca z kompozytorką [[Bernarda Herrmanna]] łączy muzykę i [[montaż]], aby przyspieszyć puls publiczności."
+        },
+        {
+          "type": "takeaway",
+          "text": "Hitchcock skodyfikował współczesne napięcie: informowanie widza, kierowanie jego spojrzeniem i przekształcanie strachu w kontrolowaną przyjemność. Dziesiątki lat później thriller nadal zawdzięcza mu swoją gramatykę."
+        }
+      ]
+    }
+  ]
+}

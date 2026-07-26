@@ -1,0 +1,102 @@
+{
+  "id": "course_49_pourquoi_a_t_on_des_frissons",
+  "title": "Neden üşüyoruz?",
+  "subtitle": "Beden ve duygular",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Soğuk, korku, müzik: titremenin birçok nedeni vardır. Hepsi sinir sisteminden geçer ama aynı sebeplerden dolayı değil.",
+  "hero": {
+    "image": "pourquoi_a_t_on_des_frissons",
+    "ratio": "16:9",
+    "hook": "Bir soğuk ürpertisi ile bir müzik ürpertisi aynı hikayeyi anlatmıyor."
+  },
+  "sections": [
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Yağmura çıkarken titriyorsun. Sizi üzen bir şarkıyı duyduğunuzda da ürperirsiniz. Aynı kelime, farklı mekanizmalar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Her iki durumda da vücut hızla tepki verir. Ancak biri esas olarak ısınmak için kullanılır, diğeri ise daha çok zevk ve duygularla ilgilidir."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p1",
+      "title": "Soğuğun heyecanı: mini kazan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vücut **37 °C** civarında kalmak istiyor. Cilt soğuğu algıladığında beynin bir termostat gibi davranan **hipotalamus** bölgesini uyarır."
+        },
+        {
+          "type": "image",
+          "asset": "goosebumps_cold_skin",
+          "ratio": "4:3",
+          "caption": "Tüylerim diken diken oldu: Tüyleri diken diken eden eski bir refleks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kaslar çok hızlı ve tekrar tekrar kasılır: bu titremedir. Bu kasılmalar ısı üretir. “Tüylerim diken diken oldu” eski bir refleksten geliyor: daha iyi yalıtım sağlamak için tüyleri kaldırmak. Evde, az kürklü olduğundan esas olarak bir kalıntı görevi görür."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p2",
+      "title": "Korkunun heyecanı",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bir tehditle karşı karşıya kalan [[Sempatik sinir sistemi]] (sinir sisteminin “uyarı” dalı) devreye girer. **adrenalin**'yi serbest bırakır. Kaslar gerilir, kalp atışları hızlanır, cilt titreyebilir."
+        },
+        {
+          "type": "image",
+          "asset": "adrenaline_stress_response_body",
+          "ratio": "4:3",
+          "caption": "Adrenalin vücudu hızlı tepki vermeye hazırlar."
+        },
+        {
+          "type": "funFact",
+          "text": "Aynı sistem, kanepenizde rahatken bir korku filmi izlerken neden tüylerinizin diken diken olabileceğini de açıklıyor."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p3",
+      "title": "Müziğin heyecanı",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bazen \"ürperme\" olarak adlandırılan bazı heyecanlar güçlü bir duyguyla birlikte gelir: müzik, konuşma, film. Beynin **ödül** devresini zevkle bağlantılı bir madde olan **dopamin** ile aktive ederler."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu hemen hayatta kalmak için yararlı değildir. Aksine, yoğun bir duyguya, geçen bir dalga gibi tepki veren vücuttur."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p4",
+      "title": "Ne zaman endişelenmeli?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Yüksek ateşli titreme bir enfeksiyona işaret edebilir. Açık bir neden olmaksızın sürekli üşümeler tıbbi müdahaleyi hak eder. Ancak çoğu zaman soğuktan, stresten ya da müzikten kaynaklanan bir ürperti, vücudun işini yapmasından kaynaklanır."
+        },
+        {
+          "type": "takeaway",
+          "text": "Soğuk titremeler ısı üretir. Korkanlar tepki vermeye hazırlanıyor. Müziğinkiler duygusal zevke dokunuyor. Aynı duygu, farklı sebepler."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "id": "course_185_vishnou_et_shiva_mythologie_hindoue",
+  "title": "Višnu a Šiva (hinduistická mytologie)",
+  "subtitle": "Hinduistická mytologie",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Vytvořte, zachovejte, zničte, abyste se znovuzrodili: Višnu a Šiva, pilíře Trimurti, obracejí cyklický čas hinduismu.",
+  "hero": {
+    "image": "vishnou_et_shiva_mythologie_hindoue",
+    "ratio": "16:9",
+    "hook": "Jeden sestoupí na Zemi, aby zachránil řád. Druhý tančí, aby vše spálil a začal znovu. Společně dělají vesmír trvalý."
+  },
+  "sections": [
+    {
+      "id": "course_185_vishnou_et_shiva_mythologie_hindoue_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V hinduistické mytologii není čas přímkou. Je to řada cyklů. Nahoře je [[Trimurti]]: tři funkce pro stejný princip. **Brahma** vytvoří. **Višnu** zachovává. **Shiva** zničena, aby bylo možné obnovit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tento kurz sleduje Višnua a Šivu, dva nejživější pilíře této trojice. Jejich atributy, jejich inkarnace a jejich symbolika ukazují, jak hinduismus uvádí do souladu život a smrt, řád a transformaci."
+        }
+      ]
+    },
+    {
+      "id": "course_185_vishnou_et_shiva_mythologie_hindoue_p1",
+      "title": "Trimurti, tři tváře stejného principu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mnohonásobné bohy jsou tvářemi konečné reality zvané [[Brahman]]. Trimurti dává tři užitečné formy. **Brahma** generuje vesmír na začátku každého cyklu; jeho role pak končí, což vysvětluje, proč je dnes v Indii málo uctíván."
+        },
+        {
+          "type": "image",
+          "asset": "brahma_vishnu_shiva_trimurti_hindu_gods",
+          "ratio": "4:3",
+          "caption": "Brahma, Višnu, Šiva: vytvořit, zachovat, transformovat."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Višnu** zajišťuje, že objednávka platí. **Shiva** ničí to, co je opotřebované nebo poškozené. Tato destrukce není absolutní zlo: uvolňuje cestu novému cyklu. „Den Brahmy“ trvá miliardy let. Nic není skutečně ztraceno; vše začíná znovu."
+        },
+        {
+          "type": "funFact",
+          "text": "Jediný „den Brahmy“ (Kalpa) trvá **4,32 miliardy** let, což je doba, která se děsivě blíží stáří Země odhadovaném moderní vědou."
+        }
+      ]
+    },
+    {
+      "id": "course_185_vishnou_et_shiva_mythologie_hindoue_p2",
+      "title": "Višnu a jeho avatary",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Višnu** chrání [[Dharma]], morální a kosmický zákon. Když zlo hrozí, že převezme vládu, sestoupí na Zemi v podobě **avatar**. Tradice [[dašavatar]] má deset, nejprve zvíře, pak člověk."
+        },
+        {
+          "type": "image",
+          "asset": "krishna_avatar_vishnu_hindu_god_painting",
+          "ratio": "4:3",
+          "caption": "Krišna, avatar Višnua: moudrost, láska a spravedlivá válka."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mezi nimi král **Rama** ztělesňuje ctnost; **Krišna**, božská moudrost a láska. Hinduismus dokonce integroval **Buddha** jako devátého avatara. Desátý, **Kalki**, přijede na bílém koni, aby uzavřel temný věk [[Kali Yuga]]."
+        },
+        {
+          "type": "funFact",
+          "text": "Od 80. let si digitální průkopníci vypůjčili slovo „avatar“ k označení reprezentace uživatele ve virtuálním světě."
+        }
+      ]
+    },
+    {
+      "id": "course_185_vishnou_et_shiva_mythologie_hindoue_p3",
+      "title": "Shiva, kosmický tanečník",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Shiva** je bůh paradoxů: asketa pokrytý popelem na hoře [[Kailash]], a přesto manžel **Parvati**, otce **Ganéša**. Ztělesňuje energii, která se proměňuje zejména prostřednictvím tance."
+        },
+        {
+          "type": "image",
+          "asset": "shiva_nataraja_dancing_cosmic_bronze_sculpture",
+          "ratio": "4:3",
+          "caption": "Nataraja: Šiva tančí mezi stvořením a zničením."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ve formě **Nataraja**, „krále tance“, předvádí **Tandava**. V jedné ruce [[Damaru]] označuje rytmus tvorby; v druhém oheň zkázy. Jedna noha drtí nevědomost; druhý, vyvýšený, nabízí vysvobození. Změna je jediná konstanta."
+        },
+        {
+          "type": "funFact",
+          "text": "V CERNu v Ženevě socha Nataraji nabízená Indií připomíná částicovým fyzikům tento tanec: věčné tvoření a ničení vesmíru."
+        }
+      ]
+    },
+    {
+      "id": "course_185_vishnou_et_shiva_mythologie_hindoue_p4",
+      "title": "Dvě cesty, stejný cyklus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Višnu strukturuje a vede jeho inkarnacemi. Šiva osvobozuje tím, že rozbíjí iluze a připoutanosti. Společně dělají [[Samsára a karma]] ne vězení, ale cestu: znovuzrození, jednání, pokrok."
+        },
+        {
+          "type": "paragraph",
+          "text": "Z této duality se rodí **višnuismus** a **šiivismus**, proudy, které se navzájem spíše obohacují, než aby se střetávaly, zejména kolem [[Bhagavadgíta]]. V této vizi každý konec připravuje odchod."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Trimurti** harmonizuje vesmír: Brahma tvoří, Višnu uchovává prostřednictvím svých avatarů, Šiva ničí, aby se znovuzrodil. Cyklická vize, kde karma a samsára dělají z každé destrukce předehru k novému cyklu."
+        }
+      ]
+    }
+  ]
+}

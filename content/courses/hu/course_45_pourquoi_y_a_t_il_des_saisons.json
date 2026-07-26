@@ -1,0 +1,100 @@
+{
+  "id": "course_45_pourquoi_y_a_t_il_des_saisons",
+  "title": "Miért vannak évszakok?",
+  "subtitle": "Föld és Nap",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Az évszakok nem abból származnak, hogy a Föld közelebb vagy távolabb van a Naphoz. A valódi ok a Föld tengelyének dőlése.",
+  "hero": {
+    "image": "pourquoi_y_a_t_il_des_saisons",
+    "ratio": "16:9",
+    "hook": "Nem, nem jön a nyár, mert a Föld egyre közelebb kerül a Naphoz."
+  },
+  "sections": [
+    {
+      "id": "course_45_pourquoi_y_a_t_il_des_saisons_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sokan azt hiszik, hogy akkor jön a nyár, amikor a Föld **közelebb** a Naphoz, és akkor jön a tél, amikor **messze**. Ez hamis. És rögtön látjuk: ha Franciaországban nyár van, Ausztráliában tél van."
+        },
+        {
+          "type": "paragraph",
+          "text": "Az igazi magyarázat egy dologban rejlik: a Föld forgástengelye **döntve**, a Nap körüli keringési síkjához képest megdöntve."
+        }
+      ]
+    },
+    {
+      "id": "course_45_pourquoi_y_a_t_il_des_saisons_p1",
+      "title": "A Föld megdől",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A Föld **24 óra alatt** forog a tengelye körül: nappal és éjszaka van. Ezenkívül **év** körben kering a Nap körül egy **ellipszis** alakú pályán, amely egy kissé lapított kör. De a tengelye, az Északi-sarktól a Déli-sarkig húzódó képzeletbeli vonal nem egyenes a pályájához képest. Körülbelül **23,5 fokban dől.**: ez a [[A Föld tengelyirányú dőlése (23,5°)]]."
+        },
+        {
+          "type": "image",
+          "asset": "earth_summer_winter_seasons_illustration",
+          "ratio": "auto",
+          "caption": "A Föld tengelyének dőlése magyarázza az évszakok ciklusát."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ez a dőlés nagyjából ugyanabban az irányban marad egész évben. Mindig ugyanarra az égbolt területére mutat, a Sarkcsillag közelében. Eredmény: attól függően, hogy a Föld hol kering, az egyik félteke többet „néz” a Napra, a másik kevésbé."
+        }
+      ]
+    },
+    {
+      "id": "course_45_pourquoi_y_a_t_il_des_saisons_p2",
+      "title": "Több fény, több hő",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nyáron az északi féltekén az Északi-sark a Nap felé billen. A nappalok hosszabbak: a **fotoperiódus**, a nappal és az éjszaka hossza közötti arány nő. A sugarak a talajra is „egyenesebben” érkeznek: az energia kisebb felületre koncentrálódik. Szóval melegebb van."
+        },
+        {
+          "type": "funFact",
+          "text": "Januárban a Föld még egy kicsit **közelebb** van a Naphoz, mint júliusban: ez a **perihélium**, a pálya legközelebbi pontja. És mégis, itt tél van. Bizonyíték arra, hogy a távolság nem magyarázza meg az évszakokat."
+        },
+        {
+          "type": "paragraph",
+          "text": "Télen ennek az ellenkezője: rövid nappalok, ferdeebb sugarak, nagyobb felületen szétszóródó energia. Kevesebb hőt kapott. A **napfordulók**, amikor a Nap eléri a legészakibb vagy legdélibb helyzetét, a nyár vagy a tél kezdetét jelzi."
+        }
+      ]
+    },
+    {
+      "id": "course_45_pourquoi_y_a_t_il_des_saisons_p3",
+      "title": "És az Egyenlítő közelében?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A **Egyenlítő** közelében, a képzeletbeli vonal, amely a Földet két féltekére osztja, dőlésszöge alig változtatja meg a nap hosszát. Nem igazán négy évszak van, mint Európában, hanem szárazabb és nedvesebb időszakok."
+        },
+        {
+          "type": "paragraph",
+          "text": "A **pólusok**-nél a hatás extrém: nyáron több hónap folyamatos nappal, télen több hónap éjszaka. Ott sokkal erősebb a kontraszt, mint Franciaországban."
+        }
+      ]
+    },
+    {
+      "id": "course_45_pourquoi_y_a_t_il_des_saisons_p4",
+      "title": "Egy bolygó dőlésszög nélkül",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ha a Föld tengelye tökéletesen egyenes lenne, akkor minden helyre nagyjából ugyanannyi napfény jutna egész évben. Nincs többé igazi nyár, nincs több igazi tél. Az éghajlat, a kultúrák, az állatok vándorlása: minden más lenne."
+        },
+        {
+          "type": "takeaway",
+          "text": "Az évszakok a Föld tengelyének dőlésszögéből, körülbelül **23,5°**, nem a Naptól való távolságból származnak. Az egyik félteke a Nap felé hajlik: nyár van. A másik az ellenkezőjére hajlik: tél van."
+        }
+      ]
+    }
+  ]
+}

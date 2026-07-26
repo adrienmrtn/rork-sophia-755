@@ -1,0 +1,120 @@
+{
+  "id": "course_67_qu_est_ce_qu_un_trou_noir",
+  "title": "Mi az a fekete lyuk?",
+  "subtitle": "Extrém súlyosság",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "A fekete lyuk nem kozmikus porszívó. Ez egy olyan régió, ahol a gravitáció olyan erős, hogy még a fény sem tud elszabadulni.",
+  "hero": {
+    "image": "qu_est_ce_qu_un_trou_noir",
+    "ratio": "16:9",
+    "hook": "Semmi sem jön ki, még fény sem. Végül azonban lefotóztuk az árnyékát."
+  },
+  "sections": [
+    {
+      "id": "course_67_qu_est_ce_qu_un_trou_noir_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A fekete lyuk a **tér-idő** régió, a teret és az időt egyesítő szövet, ahol a gravitáció olyan erős, hogy a kilépéshez szükséges sebesség meghaladja a fényét. Nem jön ki semmi: sebaj, nincs fényjelzés."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ez nem „lyuk” alagút értelmében. Rendkívüli koncentrációjú anyag, amely nagyon erősen hajlítja ezt a szövetet. Az Einstein-egyenletekből származó tiszta elmélet sokáig a fekete lyukakat ma többféleképpen figyelik meg."
+        }
+      ]
+    },
+    {
+      "id": "course_67_qu_est_ce_qu_un_trou_noir_p1",
+      "title": "Amikor egy csillag összeomlik",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Csillagos fekete lyuk gyakran születik egy nagyon nagy tömegű csillag halálából, amely legalább **20-25-szöröse a Nap tömegének. Élete során a csillag az egyensúlynak tartja magát: a gravitáció a középpont felé húzódik, a**Atommagfúzió**** nyomása kifelé nyomul. A csillag szívében a hidrogén héliummá alakul."
+        },
+        {
+          "type": "image",
+          "asset": "black_hole_accretion_disk_galaxy",
+          "ratio": "auto",
+          "caption": "Egy fekete lyuk, amelyet izzó akkréciós korongja vesz körül."
+        },
+        {
+          "type": "paragraph",
+          "text": "Amikor az üzemanyag kifogy, a nyomás csökken. A csillag szíve összetört. A **szupernóva** robbanása ekkor bevilágíthatja a galaxist. Ha a maradék mag elég masszív, akkor semmi sem akadályozza meg a tömörítést."
+        },
+        {
+          "type": "paragraph",
+          "text": "A középpontban az elmélet egy [[A gravitációs szingularitás]]: egy pontot, ahol a sűrűség és a görbület szélsőségessé válik, és ahol a jelenlegi egyenletünk nem működik jól. Körülötte a [[Eseményhorizont]]: egy láthatatlan szegély található. Ha egyszer átkelt, nem lehetséges a visszatérés az univerzum többi részébe."
+        },
+        {
+          "type": "funFact",
+          "text": "Ha egy fekete lyuk felé esne, a gravitáció sokkal erősebben húzná a lábát, mint a fejét. Ezt a nyújtást „spagettiképzésnek” nevezik."
+        }
+      ]
+    },
+    {
+      "id": "course_67_qu_est_ce_qu_un_trou_noir_p2",
+      "title": "Nem kozmikus porszívó",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A közhiedelemmel ellentétben a fekete lyuk nem szív be mindent, ami a távolban elhalad. Gravitációja a tömegétől és távolságától függ, mint minden tárgyé. Ha a Nap helyébe egy azonos tömegű fekete lyuk kerülne, a Föld továbbra is keringene. De fény és hő nélkül megfagynánk."
+        },
+        {
+          "type": "paragraph",
+          "text": "Szinte minden galaxis szívében **szupermasszív fekete lyukak** is találhatók, amelyek több milliótól milliárdig terjedő naptömegűek. A Tejútrendszerben ez a **Nyilas A***, körülbelül **4 millió** naptömeg."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gyakran észreveszik őket a [[akkréciós korong]]: egy gáz- és porgyűrűnek köszönhetően, amely nagyon gyorsan forog körülöttük. A súrlódás addig melegíti ezt az anyagot, amíg az röntgen- vagy rádióhullámok hatására rendkívül fényes lesz. Ezután a fekete lyuk árnyékát látjuk ezen a világító háttéren."
+        }
+      ]
+    },
+    {
+      "id": "course_67_qu_est_ce_qu_un_trou_noir_p3",
+      "title": "2019: az első kép",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "2019. **Aprilben** az Event Horizon Telescope projekt kiadja az első képet egy fekete lyukról. Nyolc rádióteleszkóp kombinálásával a [[Interferometria]] segítségével a kutatók egy Föld méretű virtuális teleszkópot hoznak létre."
+        },
+        {
+          "type": "paragraph",
+          "text": "A cél a **M87***, a szupermasszív fekete lyuk a Messier 87 galaxisban, **55 millió** fényévnyire. Világos gyűrűt látunk egy sötét terület körül: az eseményhorizont sziluettje. A **2022**-ben szomszédunk Nyilas A* képe következik."
+        },
+        {
+          "type": "funFact",
+          "text": "A **2015** óta a LIGO és a Virgo obszervatóriumok is észleltek **gravitációs hullámokat**: a téridő kis rezgéseit, amelyek két fekete lyuk összeolvadásakor keletkeznek."
+        }
+      ]
+    },
+    {
+      "id": "course_67_qu_est_ce_qu_un_trou_noir_p4",
+      "title": "Hawking és lassú párolgás",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A **1974**-ben a brit fizikus, **Stephen Hawking** megmutatta, hogy a fekete lyuk nem lesz teljesen fekete. A horizonthoz közeli kvantumhatások miatt nagyon gyenge sugárzást bocsátana ki: [[Hawking-sugárzás]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eredmény: egy elszigetelt fekete lyuk lassan veszít tömegéből és végül elpárolog. Egy csillagos fekete lyuk esetében ez fantasztikusan tovább tart, mint az univerzum jelenlegi kora. Ez az elképzelés felveti az információs paradoxont ​​is: mi történik azzal az információval, hogy mi esett bele, ha a fekete lyuk eltűnik?"
+        },
+        {
+          "type": "paragraph",
+          "text": "A fekete lyuk közelében az idő is lassabban telik egy távoli szemlélő számára, ez a **idődilatáció** relativisztikus hatása. Ezek az objektumok továbbra is a fizika határait vizsgáló legjobb laboratóriumok közé tartoznak."
+        },
+        {
+          "type": "takeaway",
+          "text": "A fekete lyuk gyakran egy hatalmas csillag összeomlásakor keletkezik. Határozza az eseményhorizont, a **2019**-ben először fényképezett határ az M87* körül."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "id": "course_45_pourquoi_y_a_t_il_des_saisons",
+  "title": "Neden mevsimler var?",
+  "subtitle": "Dünya ve Güneş",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Mevsimler Dünya'nın Güneş'e yakın veya uzak olmasından kaynaklanmaz. Gerçek sebep Dünya ekseninin eğikliğidir.",
+  "hero": {
+    "image": "pourquoi_y_a_t_il_des_saisons",
+    "ratio": "16:9",
+    "hook": "Hayır, yaz gelmiyor çünkü Dünya Güneş'e yaklaşıyor."
+  },
+  "sections": [
+    {
+      "id": "course_45_pourquoi_y_a_t_il_des_saisons_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Birçok kişi, Dünya Güneş'e **uzak** olduğunda yazın geldiğini ve **uzak** olduğunda kışın geldiğini düşünüyor. Bu yanlış. Ve bunu hemen görüyoruz: Fransa'da yaz iken, Avustralya'da kıştır."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gerçek açıklama tek bir şeyde yatıyor: Dünyanın dönme ekseni **eğik**, Güneş çevresindeki yörüngesinin düzlemine göre eğiktir."
+        }
+      ]
+    },
+    {
+      "id": "course_45_pourquoi_y_a_t_il_des_saisons_p1",
+      "title": "Dünya eğiliyor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dünya kendi ekseni etrafında **24 saat** içinde döner: gündüz ve gecedir. Aynı zamanda **5. yıl**'de, hafifçe düzleştirilmiş bir daire olan **elipsler** şeklindeki bir yörüngede Güneş'in yörüngesinde döner. Ancak Kuzey Kutbu'ndan Güney Kutbu'na uzanan hayali çizgi olan ekseni, yörüngesine göre düz değildir. Yaklaşık **23,5 derece** eğimlidir: [[Dünyanın eksen eğikliği (23,5°)]]'dir."
+        },
+        {
+          "type": "image",
+          "asset": "earth_summer_winter_seasons_illustration",
+          "ratio": "auto",
+          "caption": "Dünya ekseninin eğikliği mevsimlerin döngüsünü açıklar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu eğim tüm yıl boyunca hemen hemen aynı yönde kalır. Her zaman gökyüzünün Kuzey Yıldızı yakınındaki aynı bölgesine işaret eder. Sonuç: Dünyanın yörüngesinde nerede olduğuna bağlı olarak, bir yarım küre Güneş'e daha çok, diğeri daha az “bakar”."
+        }
+      ]
+    },
+    {
+      "id": "course_45_pourquoi_y_a_t_il_des_saisons_p2",
+      "title": "Daha fazla ışık, daha fazla ısı",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kuzey yarımkürede yaz aylarında Kuzey Kutbu Güneş'e doğru eğilir. Günler uzar: **fotoperiyod**, yani gündüz ve gece uzunluğu arasındaki oran artar. Işınlar ayrıca yere daha \"düz\" olarak ulaşır: enerji daha küçük bir yüzey üzerinde yoğunlaşır. Yani daha sıcak."
+        },
+        {
+          "type": "funFact",
+          "text": "Ocak ayında, Dünya Güneş'e temmuz ayına göre biraz daha **** daha yakın:**perihelion**, yörüngedeki en yakın noktadır. Ama yine de burada kış geldi. Mesafelerin mevsimleri açıklamadığının kanıtı."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kışın ise durum tam tersi: günler kısa, daha eğik ışınlar, enerji daha geniş bir yüzeye yayılıyor. Daha az ısı alındı. Güneş'in en kuzey veya en güney konumuna ulaştığı **silahlar**, yazın veya kışın başlangıcını işaret eder."
+        }
+      ]
+    },
+    {
+      "id": "course_45_pourquoi_y_a_t_il_des_saisons_p3",
+      "title": "Peki ekvatora yakın mı?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dünyayı iki yarımküreye ayıran hayali çizgi olan **ekvator** yakınında, eğim günün uzunluğunu çok az değiştirir. Aslında Avrupa'daki gibi dört mevsim değil, daha kurak ve yağışlı dönemler var."
+        },
+        {
+          "type": "paragraph",
+          "text": "**direkler**'de etki son derece büyüktür: yazın birkaç ay kesintisiz gündüz, kışın birkaç ay gece. Buradaki zıtlık Fransa'dakinden çok daha güçlü."
+        }
+      ]
+    },
+    {
+      "id": "course_45_pourquoi_y_a_t_il_des_saisons_p4",
+      "title": "Eğimi olmayan bir gezegen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Eğer Dünya'nın ekseni tamamen düz olsaydı, her yer tüm yıl boyunca hemen hemen aynı miktarda güneş ışığı alırdı. Artık gerçek yaz yok, artık gerçek kış yok. İklim, kültürler, hayvan göçleri; her şey farklı olurdu."
+        },
+        {
+          "type": "takeaway",
+          "text": "Mevsimler, Güneş'ten değil, Dünya ekseninin yaklaşık **23,5°** eğiminden  gelir. Bir yarımküre Güneş'e doğru eğiliyor: yaz mevsimi. Diğeri ise tam tersine eğiliyor: Kış."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "id": "course_147_l_architecture_gothique_les_cathedrales",
+  "title": "Arhitectura gotică: catedrale",
+  "subtitle": "12-16 secol",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "Din secolul al XII-lea până în secolul al XVI-lea, catedralele gotice au ridicat piatra spre cer. Arc ascuțit, arcuri nervurate, vitralii: o revoluție tehnică în slujba luminii.",
+  "hero": {
+    "image": "l_architecture_gothique_les_cathedrales",
+    "ratio": "16:9",
+    "hook": "Cum a făcut Evul Mediu să zboare piatra pentru a-L lăsa pe Dumnezeu să intre în lumină."
+  },
+  "sections": [
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Între secolele al XII-lea și al XVI-lea, Europa a fost acoperită cu **catedrala gotica**. Nu sunt doar biserici. Acestea sunt provocări de inginerie: vase de piatră care par să sfideze gravitația pentru a lăsa lumină."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cuvântul „gotic” avea să apară mai târziu ca o insultă, „arta goților”. Cu toate acestea, acest stil combină credința, prosperitatea urbană și îndrăzneala tehnică. Încă domină centrele noastre orașe."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p1",
+      "title": "Saint-Denis: piatra învață să devină mai ușoară",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gothic s-a născut în **Île-de-France** în jurul **1140**. Şocul fondator este corul [[Bazilica Saint-Denis]], purtat de [[stareţul Suger]]. În fața unor biserici romanice întunecate cu ziduri groase, Suger și-a dorit un spațiu mai unit, mai ușor, mai înalt."
+        },
+        {
+          "type": "image",
+          "asset": "saint_denis_basilica_gothic_abbot_suger",
+          "ratio": "4:3",
+          "caption": "Saint-Denis: laboratorul în care goticul învață să călărească."
+        },
+        {
+          "type": "paragraph",
+          "text": "Trei invenții lucrează împreună: arcul ascuțit ****, mai înalt și mai îngust; **bolta cu nervuri**, care concentrează greutatea pe anumite puncte; și [[contrafort zburător]], un arc exterior care contracarează împingerile. Împreună, [[contrafort zburător și boltă cu nervuri]] eliberează pereții: pot fi deschise ferestre mari."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p2",
+      "title": "Lumina ca limbaj divin",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pentru Suger, lumina nu este un detaliu decorativ. Potrivit [[Teologia luminii (Abatele Suger)]], razele colorate ajută sufletul să se ridice spre Dumnezeu. Pereții devin **vitralii**. Într-o societate în care mulți nu știu să citească, aceste imagini spun povestea Bibliei și viața orașului."
+        },
+        {
+          "type": "funFact",
+          "text": "În **Chartres**, anumite vitralii din secolul al XIII-lea au păstrat un albastru atât de intens încât vorbim încă de „albastru Chartres”: o culoare devenită o semnătură."
+        },
+        {
+          "type": "paragraph",
+          "text": "Catedrala nu mai este o cetate de piatră. Devine o cușcă de lumină."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p3",
+      "title": "Un proiect care durează secole",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Construirea unei catedrale durează adesea mai mult de **două secole**. Războaie, epidemii, lipsă de bani: proiectul progresează cu repeziciune. **Notre-Dame din Paris** începe în **1163** și își găsește forma în jurul **1345**, după aproximativ 180 de ani."
+        },
+        {
+          "type": "image",
+          "asset": "notre_dame_de_paris_cathedral_facade",
+          "ratio": "4:3",
+          "caption": "Notre-Dame de Paris: un șantier medieval care a devenit un simbol național."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tot orașul lucrează: pietreri, dulgheri, sticlari. Extragerea pietrei, transportul lemnului, hrănirea echipelor: catedrala este și o mașinărie economică."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p4",
+      "title": "De la gotic flamboyant la neogotic",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stilul a evoluat: gotic clasic (Chartres, Amiens), apoi radiant (Sainte-Chapelle), apoi flamboyant, mai decorativ. În secolul al XIX-lea, Europa l-a redescoperit cu **neo-gotic**. Se reiau proiecte neterminate, cum ar fi **Colonia**, finalizate în **1880**."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1140",
+              "title": "Saint-Denis",
+              "detail": "Suger lansează corul care deschide epoca gotică."
+            },
+            {
+              "date": "1163",
+              "title": "Notre-Dame din Paris",
+              "detail": "Începutul unui proiect care durează aproape două secole."
+            },
+            {
+              "date": "secolul al XIII-lea.",
+              "title": "Apogeu",
+              "detail": "Chartres, Amiens, Reims impun modelul clasic."
+            },
+            {
+              "date": "secolul al XIX-lea.",
+              "title": "neogotic",
+              "detail": "Europa restaurează și reinventează stilul medieval."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Goticul a transformat catedrala într-un vas de lumină. Prin eliberarea zidurilor gratie arcului ascutit si contrafortului zburator, Evul Mediu a inventat o arhitectura care inca vorbeste oraselor noastre."
+        }
+      ]
+    }
+  ]
+}

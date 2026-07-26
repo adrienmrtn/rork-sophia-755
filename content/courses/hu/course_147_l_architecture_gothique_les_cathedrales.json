@@ -1,0 +1,131 @@
+{
+  "id": "course_147_l_architecture_gothique_les_cathedrales",
+  "title": "Gótikus építészet: katedrálisok",
+  "subtitle": "12-16. század",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "A 12-16. században a gótikus katedrálisok emelték az ég felé a követ. Hegyes ív, bordás ívek, ólomüveg ablakok: technikai forradalom a fény szolgálatában.",
+  "hero": {
+    "image": "l_architecture_gothique_les_cathedrales",
+    "ratio": "16:9",
+    "hook": "Hogyan repítette a középkor a követ, hogy beengedje Istent a fénybe."
+  },
+  "sections": [
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A 12. és 16. század között Európát **gótikus katedrálisok** borították. Nem csak a templomokról van szó. Ezek mérnöki kihívások: kőedények, amelyek látszólag dacolnak a gravitációval, hogy beengedjék a fényt."
+        },
+        {
+          "type": "paragraph",
+          "text": "A „gótika” szó később sértésként, „a gótok művészeteként” merült fel. Ez a stílus azonban egyesíti a hitet, a városi jólétet és a technikai merészséget. Még mindig uralja városainkat."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p1",
+      "title": "Saint-Denis: a kő megtanul könnyebbé válni",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A Gothic **Île-de-France**-ben született **1140** környékén. Az alapító sokk a [[Saint-Denis-bazilika]] kórusa, melyet a [[Suger apát]] visz. A sötét, vastag falú, román stílusú templomokkal szemben Suger egységesebb, világosabb, magasabb teret akart."
+        },
+        {
+          "type": "image",
+          "asset": "saint_denis_basilica_gothic_abbot_suger",
+          "ratio": "4:3",
+          "caption": "Saint-Denis: a laboratórium, ahol a gótikusok megtanulnak lovagolni."
+        },
+        {
+          "type": "paragraph",
+          "text": "Három találmány működik együtt: a **** hegyes ív, magasabb és keskenyebb; rendelkezik**ribbed vault**, amely meghatározott pontokra koncentrálja a súlyt; és a [[repülő támpillér]] külső ív, amely ellensúlyozza a lökéseket. Együtt [[A repülő támpillér és a bordaboltozat]] szabaddá teszi a falakat: nagy ablakok nyithatók."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p2",
+      "title": "A fény, mint isteni nyelv",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Suger számára a fény nem dekoratív részlet. A [[A fény teológiája (Suger apát)]] szerint a színes sugarak segítik a lelket Isten felé emelkedni. A falak **Ólomüveg** lesz. Egy olyan társadalomban, ahol sokan nem tudnak olvasni, ezek a képek a Bibliáról és a város életéről mesélnek."
+        },
+        {
+          "type": "funFact",
+          "text": "A **Chartres**-ben bizonyos 13. századi ólomüveg ablakok olyan intenzív kéket őriztek meg, hogy még mindig „Chartres-kékről” beszélünk: ez a szín mára jellegzetessé vált."
+        },
+        {
+          "type": "paragraph",
+          "text": "A katedrális már nem kőerőd. Fényketrecsé válik."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p3",
+      "title": "Évszázadokig tartó projekt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Egy katedrális felépítése gyakran több mint **két évszázadot**. Háborúk, járványok, pénzhiány: a projekt rohamokban halad. A **Párizsi Notre-Dame** a **1163**-ben kezdődik, és körülbelül 180 év után a **1345** környékén találja meg formáját."
+        },
+        {
+          "type": "image",
+          "asset": "notre_dame_de_paris_cathedral_facade",
+          "ratio": "4:3",
+          "caption": "Notre-Dame de Paris: középkori építkezés, amely nemzeti szimbólummá vált."
+        },
+        {
+          "type": "paragraph",
+          "text": "Az egész város dolgozik: kőfaragók, asztalosok, üvegesek. Kőkitermelés, faszállítás, csapatok élelmezése: a katedrális egyben gazdasági gépezet is."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p4",
+      "title": "A rikító gótikától a neogótikáig",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A stílus alakult ki: klasszikus gótika (Chartres, Amiens), majd ragyogó (Sainte-Chapelle), majd rikító, dekoratívabb. A 19. században Európa újra felfedezte a **neogótikus**-vel. A befejezetlen projektek folytatódnak, például a **Köln**, befejeződött **1880**."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1140",
+              "title": "Saint-Denis",
+              "detail": "Suger elindítja a gótikus korszakot nyitó refrént."
+            },
+            {
+              "date": "1163",
+              "title": "Párizsi Notre-Dame",
+              "detail": "Egy közel két évszázados projekt kezdete."
+            },
+            {
+              "date": "13. század.",
+              "title": "Tetőpont",
+              "detail": "Chartres, Amiens, Reims a klasszikus modellt kényszerítik."
+            },
+            {
+              "date": "19. század.",
+              "title": "Neogótikus",
+              "detail": "Európa helyreállítja és újra feltalálja a középkori stílust."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "A gótika a katedrálist fényedénysé változtatta. A hegyes ívnek és a repülő támpillérnek köszönhetően a falak felszabadításával a középkor feltalált egy olyan építészetet, amely máig beszél városainkról."
+        }
+      ]
+    }
+  ]
+}
