@@ -415,25 +415,51 @@ def validate_catalog(
 # Translation
 # ---------------------------------------------------------------------------
 
-_FR_FUNCTION = re.compile(
-    r"\b(le|la|les|un|une|des|du|de|et|est|sont|dans|pour|avec|qui|que|sur|"
-    r"par|plus|aussi|comme|cette|ces|aux|dont|entre|être|avoir|fait|peut|"
-    r"deux|trois|c'est|n'est|qu'est|d'un|d'une|à)\b",
+# Sentence-level French markers (exclude particles common in proper names: de/le/la/du).
+_FR_SENTENCE = re.compile(
+    r"\b(les|des|une|est|sont|dans|pour|avec|qui|que|sur|par|plus|aussi|"
+    r"comme|cette|ces|aux|dont|entre|être|avoir|fait|peut|deux|trois|"
+    r"c'est|n'est|qu'est|d'un|d'une|lors|après|avant|très|même|mais|"
+    r"nous|vous|ils|elles|était|étaient|ont|avait)\b",
     re.I,
 )
+
+
+def _looks_like_proper_name(text: str) -> bool:
+    """Heuristic for names / titles MT often leaves unchanged (De Stijl, Le Corbusier…)."""
+    words = re.findall(r"[A-Za-zÀ-ÿ']+", text)
+    if not words or len(words) > 8:
+        return False
+    if len(text) > 60:
+        return False
+    if _FR_SENTENCE.search(text):
+        return False
+    # Mostly Capitalized tokens (allow lowercase particles de/van/von/di…).
+    particles = {"de", "du", "des", "la", "le", "van", "von", "di", "da", "del", "der", "den", "of", "y"}
+    caps = 0
+    for word in words:
+        low = word.lower()
+        if low in particles:
+            continue
+        if word[:1].isupper():
+            caps += 1
+        else:
+            return False
+    return caps >= 1
 
 
 def _looks_translatable_french(text: str) -> bool:
     """True when unchanged MT output would indicate a real failure (not a proper name)."""
     if not text or not re.search(r"[A-Za-zÀ-ÿ]", text):
         return False
-    # Short title-case / name-like tokens are often kept identical by MT.
+    if _looks_like_proper_name(text):
+        return False
     words = re.findall(r"[A-Za-zÀ-ÿ']+", text)
-    if len(words) <= 3 and not _FR_FUNCTION.search(text):
+    if len(words) <= 3 and not _FR_SENTENCE.search(text):
         return False
-    if len(text) <= 24 and text[:1].isupper() and not _FR_FUNCTION.search(text):
+    if len(text) <= 24 and text[:1].isupper() and not _FR_SENTENCE.search(text):
         return False
-    return bool(_FR_FUNCTION.search(text)) or len(words) >= 6
+    return bool(_FR_SENTENCE.search(text)) or len(words) >= 6
 
 
 # Sticky: once Google rate-limits us, skip it for the rest of the process.
