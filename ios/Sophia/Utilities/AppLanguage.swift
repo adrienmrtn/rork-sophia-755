@@ -7,6 +7,15 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
     case german = "de"
     case portuguese = "pt"
     case italian = "it"
+    case turkish = "tr"
+    case polish = "pl"
+    case romanian = "ro"
+    case dutch = "nl"
+    case greek = "el"
+    case swedish = "sv"
+    case hungarian = "hu"
+    case bulgarian = "bg"
+    case czech = "cs"
 
     var id: String { rawValue }
 
@@ -18,6 +27,15 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
         case .german: "de_DE"
         case .portuguese: "pt_PT"
         case .italian: "it_IT"
+        case .turkish: "tr_TR"
+        case .polish: "pl_PL"
+        case .romanian: "ro_RO"
+        case .dutch: "nl_NL"
+        case .greek: "el_GR"
+        case .swedish: "sv_SE"
+        case .hungarian: "hu_HU"
+        case .bulgarian: "bg_BG"
+        case .czech: "cs_CZ"
         }
     }
 
@@ -29,6 +47,15 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
         case .german: "🇩🇪"
         case .portuguese: "🇵🇹"
         case .italian: "🇮🇹"
+        case .turkish: "🇹🇷"
+        case .polish: "🇵🇱"
+        case .romanian: "🇷🇴"
+        case .dutch: "🇳🇱"
+        case .greek: "🇬🇷"
+        case .swedish: "🇸🇪"
+        case .hungarian: "🇭🇺"
+        case .bulgarian: "🇧🇬"
+        case .czech: "🇨🇿"
         }
     }
 
@@ -40,6 +67,15 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
         case .german: "Deutsch"
         case .portuguese: "Português"
         case .italian: "Italiano"
+        case .turkish: "Türkçe"
+        case .polish: "Polski"
+        case .romanian: "Română"
+        case .dutch: "Nederlands"
+        case .greek: "Ελληνικά"
+        case .swedish: "Svenska"
+        case .hungarian: "Magyar"
+        case .bulgarian: "Български"
+        case .czech: "Čeština"
         }
     }
 

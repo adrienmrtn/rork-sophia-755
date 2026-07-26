@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Translate French CoursesV2 sources into en/es/de/pt/it.
+"""Translate French CoursesV2 sources into every non-FR app language.
 
 Reads ``content/courses/fr/*.json``, writes ``content/courses/<lang>/<id>.json``.
 Does NOT modify French sources. Preserves structure, assets, ids, and inline
@@ -22,14 +22,15 @@ import time
 import unicodedata
 from pathlib import Path
 
+from i18n_languages import GT_TARGETS, NON_FR_LANGS
+
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_FR = ROOT / "content" / "courses" / "fr"
 OUT_ROOT = ROOT / "content" / "courses"
 CACHE_DIR = ROOT / "content" / "locales" / "_v2_mt_cache"
 GLOSSARY_DIR = ROOT / "ios" / "Sophia" / "Resources" / "Locales"
 
-LANGS = ["en", "es", "de", "pt", "it"]
-GT_TARGETS = {"en": "en", "es": "es", "de": "de", "pt": "pt", "it": "it"}
+LANGS = NON_FR_LANGS
 
 SKIP_KEYS = {"id", "type", "asset", "ratio", "credit", "free", "subject", "image"}
 
@@ -610,7 +611,8 @@ def map_value(value, translator: Translator, course_id: str, key: str | None = N
             if k in SKIP_KEYS:
                 out[k] = v
             elif k == "subcategory" and isinstance(v, str) and v in SUBCATEGORY:
-                out[k] = SUBCATEGORY[v][translator.lang]
+                labels = SUBCATEGORY[v]
+                out[k] = labels.get(translator.lang) or labels.get("en") or v
             else:
                 out[k] = map_value(v, translator, course_id, k)
         return out

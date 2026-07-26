@@ -33,10 +33,13 @@ import unicodedata
 from collections import defaultdict
 from pathlib import Path
 
+from i18n_languages import NON_FR_LANGS
+
 ROOT = Path(__file__).resolve().parents[1]
 LOCALE_DIR = ROOT / "ios" / "Sophia" / "Resources" / "Locales"
 CONTENT_LOCALES = ROOT / "content" / "locales"
-LANGS = ["en", "es", "de", "pt", "it"]
+
+LANGS = NON_FR_LANGS
 
 LINK_RE = re.compile(r"<([^<>]+)>")
 PAREN_RE = re.compile(r"\(([^)]+)\)")

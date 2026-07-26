@@ -3,37 +3,17 @@ import Foundation
 /// Locale-aware access to bundled learning content.
 enum ContentCatalog {
     static func courses(for language: AppLanguage) -> [Course] {
-        switch language {
-        case .french:
+        if language == .french {
             return CourseData.allCourses
-        case .english:
-            return LocalizedContentLoader.courses(for: .english)
-        case .spanish:
-            return LocalizedContentLoader.courses(for: .spanish)
-        case .german:
-            return LocalizedContentLoader.courses(for: .german)
-        case .portuguese:
-            return LocalizedContentLoader.courses(for: .portuguese)
-        case .italian:
-            return LocalizedContentLoader.courses(for: .italian)
         }
+        return LocalizedContentLoader.courses(for: language)
     }
 
     static func collections(for language: AppLanguage) -> [LearningCollection] {
-        switch language {
-        case .french:
+        if language == .french {
             return CollectionData.allCollections
-        case .english:
-            return LocalizedContentLoader.collections(for: .english)
-        case .spanish:
-            return LocalizedContentLoader.collections(for: .spanish)
-        case .german:
-            return LocalizedContentLoader.collections(for: .german)
-        case .portuguese:
-            return LocalizedContentLoader.collections(for: .portuguese)
-        case .italian:
-            return LocalizedContentLoader.collections(for: .italian)
         }
+        return LocalizedContentLoader.collections(for: language)
     }
 
     static var activeCourses: [Course] {
