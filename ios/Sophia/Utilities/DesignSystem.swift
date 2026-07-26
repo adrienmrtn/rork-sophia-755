@@ -205,8 +205,12 @@ struct DSPrimaryButtonStyle: ButtonStyle {
         configuration.label
             .font(DS.sans(.headline, .semibold))
             .foregroundStyle(foreground)
+            .lineLimit(2)
+            .minimumScaleFactor(0.8)
+            .multilineTextAlignment(.center)
             .frame(maxWidth: .infinity)
             .padding(.vertical, 17)
+            .padding(.horizontal, 12)
             .background(
                 Capsule(style: .continuous).fill(fill)
             )
