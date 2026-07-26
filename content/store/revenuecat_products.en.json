@@ -1,0 +1,34 @@
+{
+  "notes": "Draft localized titles/descriptions for RevenueCat / App Store products. Apply in RC dashboard or App Store Connect. Native paywall UI copy already lives in AppLocalizable.",
+  "products": [
+    {
+      "store_identifier": "Sophia_monthly",
+      "display_name": "Sophia Premium Monthly",
+      "description": "Unlimited courses and quizzes. Billed monthly."
+    },
+    {
+      "store_identifier": "Sophia_yearly",
+      "display_name": "Sophia Premium Yearly",
+      "description": "Unlimited courses and quizzes. Billed annually. Best value."
+    }
+  ],
+  "paywall_overrides": {
+    "debloquer_cours.title": {
+      "en_US": "Unlock this course for free",
+      "fr_FR": "Débloquez gratuitement ce cours",
+      "es_ES": "Desbloquea este curso gratis",
+      "de_DE": "Schalte diesen Kurs kostenlos frei",
+      "pt_PT": "Desbloqueia este curso grátis",
+      "it_IT": "Sblocca questo corso gratis",
+      "tr_TR": "Bu dersi ücretsiz aç",
+      "pl_PL": "Odblokuj ten kurs za darmo",
+      "ro_RO": "Deblochează acest curs gratuit",
+      "nl_NL": "Ontgrendel deze cursus gratis",
+      "el_GR": "Ξεκλείδωσε αυτό το μάθημα δωρεάν",
+      "sv_SE": "Lås upp den här kursen gratis",
+      "hu_HU": "Oldd fel ingyen ezt a tanfolyamot",
+      "bg_BG": "Отключи този курс безплатно",
+      "cs_CZ": "Odemkni tento kurz zdarma"
+    }
+  }
+}

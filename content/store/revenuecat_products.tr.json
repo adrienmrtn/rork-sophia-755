@@ -1,0 +1,16 @@
+{
+  "locale": "tr_TR",
+  "notes": "Draft localized titles/descriptions for RevenueCat / App Store products. Apply in RC dashboard or App Store Connect. Native paywall UI copy already lives in AppLocalizable.",
+  "products": [
+    {
+      "store_identifier": "Sophia_monthly",
+      "display_name": "Sophia Premium Aylık",
+      "description": "Sınırsız kurs ve sınav. Aylık faturalandırılır."
+    },
+    {
+      "store_identifier": "Sophia_yearly",
+      "display_name": "Sophia Premium Yıllık",
+      "description": "Sınırsız kurs ve test. Yıllık fatura edilir. En iyi değer."
+    }
+  ]
+}
