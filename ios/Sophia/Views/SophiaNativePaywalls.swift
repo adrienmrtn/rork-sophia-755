@@ -897,6 +897,8 @@ private struct QuizPaywallShowcase: View {
                     .font(DS.sans(.caption2, .bold))
                     .tracking(0.5)
                     .foregroundStyle(DS.accentSoft)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.75)
                     .padding(.horizontal, 10)
                     .padding(.vertical, 5)
                     .background(DS.accentTint, in: Capsule())

@@ -183,8 +183,8 @@ struct OnboardingV2PaywallComparison: View {
         .ov2Background()
     }
 
-    /// Free / PRO column width — wide enough for DE `Kostenlos`, still aligned for icons.
-    private var comparisonColumnWidth: CGFloat { 68 }
+    /// Free / PRO column width — room for TR/HU/BG free labels with scale, still aligned for icons.
+    private var comparisonColumnWidth: CGFloat { 72 }
 
     private var comparisonTable: some View {
         VStack(spacing: 0) {

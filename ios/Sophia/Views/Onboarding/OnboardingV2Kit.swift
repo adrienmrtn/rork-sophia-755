@@ -66,8 +66,12 @@ struct OnboardingV2Button: View {
             Text(title)
                 .font(DS.sans(.headline, .semibold))
                 .foregroundStyle(.white)
+                .lineLimit(2)
+                .minimumScaleFactor(0.8)
+                .multilineTextAlignment(.center)
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 17)
+                .padding(.horizontal, 12)
                 .background(
                     Capsule(style: .continuous)
                         .fill(enabled ? OV2.accent : OV2.accent.opacity(0.35))

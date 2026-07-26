@@ -1,8 +1,14 @@
 #!/usr/bin/env python3
-"""Soft QA: flag UI strings much longer than FR in layout-sensitive keys."""
+"""Soft QA: flag UI strings much longer than FR in layout-sensitive keys.
+
+Step 6 gate for the 9-language rollout (and existing non-FR packs).
+Hard fail = missing keys vs FR. Soft = long chrome labels (informational,
+guide copy overrides / Swift flex).
+"""
 
 from __future__ import annotations
 
+import argparse
 import re
 import sys
 from pathlib import Path
@@ -19,6 +25,7 @@ LANG_BLOCKS = {
     if code in SWIFT_CASE_BY_CODE
 }
 
+# Tight chrome — tabs, CTAs, badges, legal, streak, TF.
 SENSITIVE = [
     "discount.sideTab.label",
     "onboardingV2.pw.free",
@@ -26,17 +33,49 @@ SENSITIVE = [
     "onboardingV2.pw.trialBadge",
     "onboardingV2.pw.startTrial",
     "paywall.restore",
+    "paywall.cta.unlockFree",
+    "paywall.trialBadge",
+    "paywall.quiz.demo.badge.mcq",
+    "paywall.quiz.demo.badge.trueFalse",
+    "paywall.quiz.demo.badge.slider",
+    "paywall.quiz.demo.badge.chrono",
+    "paywall.error.retry",
     "settings.terms.title",
     "settings.privacy.title",
-    "paywall.cta.unlockFree",
     "common.streak.day",
     "common.streak.days",
+    "common.processing",
+    "common.continue",
+    "common.next",
+    "common.backHome",
     "quiz.trueFalse.true",
     "quiz.trueFalse.false",
+    "tab.home",
     "tab.library",
     "tab.training",
-    "common.processing",
+    "tab.collections",
+    "tab.profile",
+    "home.start",
+    "home.skip",
+    "training.title",
 ]
+
+# Prefer ≤ this many characters for ultra-tight chrome (tabs / side tab / TF).
+HARD_MAX = {
+    "tab.home": 10,
+    "tab.library": 10,
+    "tab.training": 12,
+    "tab.collections": 12,
+    "tab.profile": 10,
+    "discount.sideTab.label": 10,
+    "quiz.trueFalse.true": 10,
+    "quiz.trueFalse.false": 10,
+    "onboardingV2.pw.pro": 4,
+    "onboardingV2.pw.free": 10,
+    "paywall.quiz.demo.badge.mcq": 14,
+    "common.streak.day": 6,
+    "common.streak.days": 6,
+}
 
 
 def parse_block(text: str, name: str) -> dict[str, str]:
@@ -65,16 +104,25 @@ def parse_block(text: str, name: str) -> dict[str, str]:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--langs",
+        default="",
+        help="Comma-separated lang codes (default: all non-FR with a UI pack)",
+    )
+    args = parser.parse_args()
+
     text = LOCALIZABLE.read_text(encoding="utf-8")
     maps = {code: parse_block(text, name) for code, name in LANG_BLOCKS.items()}
     fr = maps["fr"]
     print(f"Parsed FR keys: {len(fr)}")
-    # Skip locales that are wired in AppLanguage but do not have a UI pack yet
-    # (empty dictionary → English runtime fallback). Those are filled in later steps.
-    qa_langs = [lang for lang in LANGS if maps.get(lang)]
-    pending = [lang for lang in LANGS if not maps.get(lang)]
+
+    wanted = [c.strip() for c in args.langs.split(",") if c.strip()] or list(LANGS)
+    qa_langs = [lang for lang in wanted if maps.get(lang)]
+    pending = [lang for lang in wanted if not maps.get(lang)]
     if pending:
         print(f"  skip (no UI pack yet): {', '.join(pending)}")
+
     hard = 0
     soft = 0
     for lang in qa_langs:
@@ -85,29 +133,42 @@ def main() -> int:
         extra = sorted(set(maps[lang]) - set(fr))
         if extra:
             print(f"  note {lang}: {len(extra)} extra keys vs FR")
+
     for key in SENSITIVE:
         fr_val = fr.get(key)
         if fr_val is None:
             print(f"  soft missing FR: {key}")
             soft += 1
             continue
+        hard_max = HARD_MAX.get(key)
         for lang in qa_langs:
             val = maps[lang].get(key)
             if val is None:
                 print(f"  HARD missing {lang}: {key}")
                 hard += 1
                 continue
-            if len(val) > max(len(fr_val) + 6, int(len(fr_val) * 1.6)):
+            # Decode swift escapes for length checks
+            decoded = val.replace("\\n", "\n").replace('\\"', '"').replace("\\\\", "\\")
+            fr_decoded = fr_val.replace("\\n", "\n").replace('\\"', '"').replace("\\\\", "\\")
+            too_long_vs_fr = len(decoded) > max(len(fr_decoded) + 6, int(len(fr_decoded) * 1.6))
+            too_long_abs = hard_max is not None and len(decoded) > hard_max
+            if too_long_vs_fr or too_long_abs:
+                why = []
+                if too_long_vs_fr:
+                    why.append("vsFR")
+                if too_long_abs:
+                    why.append(f">max{hard_max}")
                 print(
-                    f"  LONG {lang} {key}: FR({len(fr_val)})={fr_val!r} "
-                    f"→ ({len(val)})={val!r}"
+                    f"  LONG {lang} {key} [{'+'.join(why)}]: "
+                    f"FR({len(fr_decoded)})={fr_decoded!r} → ({len(decoded)})={decoded!r}"
                 )
                 soft += 1
+
     print(f"\nHard: {hard}  Soft long-string: {soft}")
     if hard:
-        print("GATE5 FAIL — key parity")
+        print("GATE6 FAIL — key parity")
         return 1
-    print("GATE5 PASS — key parity OK; long-string warnings are informational")
+    print("GATE6 PASS — key parity OK; long-string warnings are informational")
     return 0
 
 
