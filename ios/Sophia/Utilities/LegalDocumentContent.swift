@@ -15,6 +15,10 @@ enum LegalDocumentContent {
         case .german: termsGerman
         case .portuguese: termsPortuguese
         case .italian: termsItalian
+        // New locales: English legal copy until dedicated translations land.
+        case .turkish, .polish, .romanian, .dutch, .greek,
+             .swedish, .hungarian, .bulgarian, .czech:
+            termsEnglish
         }
     }
 
@@ -26,6 +30,9 @@ enum LegalDocumentContent {
         case .german: privacyGerman
         case .portuguese: privacyPortuguese
         case .italian: privacyItalian
+        case .turkish, .polish, .romanian, .dutch, .greek,
+             .swedish, .hungarian, .bulgarian, .czech:
+            privacyEnglish
         }
     }
 

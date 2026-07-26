@@ -109,10 +109,10 @@ enum GlossaryStore {
 
     static func entry(courseId: String, courseTitle: String, displayTerm: String) -> GlossaryEntry? {
         switch AppLanguage.currentPersisted() {
-        case .english, .spanish, .german, .portuguese, .italian:
-            return localizedEntry(courseId: courseId, displayTerm: displayTerm)
         case .french:
             return frenchEntry(courseTitle: courseTitle, displayTerm: displayTerm)
+        default:
+            return localizedEntry(courseId: courseId, displayTerm: displayTerm)
         }
     }
 

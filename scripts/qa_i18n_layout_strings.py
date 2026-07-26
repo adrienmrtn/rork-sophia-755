@@ -7,16 +7,16 @@ import re
 import sys
 from pathlib import Path
 
+from i18n_languages import NON_FR_LANGS, SWIFT_CASE_BY_CODE
+
 ROOT = Path(__file__).resolve().parents[1]
 LOCALIZABLE = ROOT / "ios/Sophia/Utilities/AppLocalizable.swift"
-LANGS = ["en", "es", "de", "pt", "it"]
+
+LANGS = NON_FR_LANGS
 LANG_BLOCKS = {
-    "fr": "french",
-    "en": "english",
-    "es": "spanish",
-    "de": "german",
-    "pt": "portuguese",
-    "it": "italian",
+    code: SWIFT_CASE_BY_CODE[code]
+    for code in ["fr", *NON_FR_LANGS]
+    if code in SWIFT_CASE_BY_CODE
 }
 
 SENSITIVE = [
@@ -69,9 +69,15 @@ def main() -> int:
     maps = {code: parse_block(text, name) for code, name in LANG_BLOCKS.items()}
     fr = maps["fr"]
     print(f"Parsed FR keys: {len(fr)}")
+    # Skip locales that are wired in AppLanguage but do not have a UI pack yet
+    # (empty dictionary → English runtime fallback). Those are filled in later steps.
+    qa_langs = [lang for lang in LANGS if maps.get(lang)]
+    pending = [lang for lang in LANGS if not maps.get(lang)]
+    if pending:
+        print(f"  skip (no UI pack yet): {', '.join(pending)}")
     hard = 0
     soft = 0
-    for lang in LANGS:
+    for lang in qa_langs:
         missing = sorted(set(fr) - set(maps[lang]))
         if missing:
             print(f"  HARD {lang}: missing {len(missing)} keys vs FR (e.g. {missing[:3]})")
@@ -85,7 +91,7 @@ def main() -> int:
             print(f"  soft missing FR: {key}")
             soft += 1
             continue
-        for lang in LANGS:
+        for lang in qa_langs:
             val = maps[lang].get(key)
             if val is None:
                 print(f"  HARD missing {lang}: {key}")

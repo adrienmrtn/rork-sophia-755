@@ -2,19 +2,28 @@ import Foundation
 
 enum AppLocalizable {
     static func string(_ key: String, language: AppLanguage) -> String {
+        if let value = table(for: language)[key] {
+            return value
+        }
+        if language != .english, let value = english[key] {
+            return value
+        }
+        return key
+    }
+
+    /// Per-language UI tables. Languages without a dedicated dictionary yet
+    /// (new locales before their UI pack lands) resolve via English fallback.
+    private static func table(for language: AppLanguage) -> [String: String] {
         switch language {
-        case .french:
-            return french[key] ?? english[key] ?? key
-        case .english:
-            return english[key] ?? key
-        case .spanish:
-            return spanish[key] ?? english[key] ?? key
-        case .german:
-            return german[key] ?? english[key] ?? key
-        case .portuguese:
-            return portuguese[key] ?? english[key] ?? key
-        case .italian:
-            return italian[key] ?? english[key] ?? key
+        case .french: french
+        case .english: english
+        case .spanish: spanish
+        case .german: german
+        case .portuguese: portuguese
+        case .italian: italian
+        case .turkish, .polish, .romanian, .dutch, .greek,
+             .swedish, .hungarian, .bulgarian, .czech:
+            [:]
         }
     }
 
@@ -72,6 +81,15 @@ enum AppLocalizable {
         "language.german": "Deutsch",
         "language.portuguese": "Português",
         "language.italian": "Italiano",
+        "language.turkish": "Türkçe",
+        "language.polish": "Polski",
+        "language.romanian": "Română",
+        "language.dutch": "Nederlands",
+        "language.greek": "Ελληνικά",
+        "language.swedish": "Svenska",
+        "language.hungarian": "Magyar",
+        "language.bulgarian": "Български",
+        "language.czech": "Čeština",
 
         "onboarding.intro.title": "Deviens cultivé\nen 10 minutes\npar jour",
         "onboarding.intro.cta": "Commencer",
@@ -923,6 +941,15 @@ enum AppLocalizable {
         "language.german": "Deutsch",
         "language.portuguese": "Português",
         "language.italian": "Italiano",
+        "language.turkish": "Türkçe",
+        "language.polish": "Polski",
+        "language.romanian": "Română",
+        "language.dutch": "Nederlands",
+        "language.greek": "Ελληνικά",
+        "language.swedish": "Svenska",
+        "language.hungarian": "Magyar",
+        "language.bulgarian": "Български",
+        "language.czech": "Čeština",
 
         "onboarding.intro.title": "Become cultured\nin 10 minutes\na day",
         "onboarding.intro.cta": "Get started",
@@ -1749,6 +1776,15 @@ enum AppLocalizable {
         "language.german": "Alemán",
         "language.portuguese": "Portugués",
         "language.italian": "Italiano",
+        "language.turkish": "Türkçe",
+        "language.polish": "Polski",
+        "language.romanian": "Română",
+        "language.dutch": "Nederlands",
+        "language.greek": "Ελληνικά",
+        "language.swedish": "Svenska",
+        "language.hungarian": "Magyar",
+        "language.bulgarian": "Български",
+        "language.czech": "Čeština",
         "language.spanish": "Español",
 
         "onboarding.intro.title": "Cultívate\nen 10 minutos\nal día",
@@ -2586,6 +2622,15 @@ enum AppLocalizable {
         "language.spanish": "Spanisch",
         "language.portuguese": "Portugiesisch",
         "language.italian": "Italienisch",
+        "language.turkish": "Türkçe",
+        "language.polish": "Polski",
+        "language.romanian": "Română",
+        "language.dutch": "Nederlands",
+        "language.greek": "Ελληνικά",
+        "language.swedish": "Svenska",
+        "language.hungarian": "Magyar",
+        "language.bulgarian": "Български",
+        "language.czech": "Čeština",
         "language.german": "Deutsch",
 
         "onboarding.intro.title": "Bilde dich\nin 10 Minuten\npro Tag weiter",
@@ -3423,6 +3468,15 @@ enum AppLocalizable {
         "language.spanish": "Espanhol",
         "language.german": "Alemão",
         "language.italian": "Italiano",
+        "language.turkish": "Türkçe",
+        "language.polish": "Polski",
+        "language.romanian": "Română",
+        "language.dutch": "Nederlands",
+        "language.greek": "Ελληνικά",
+        "language.swedish": "Svenska",
+        "language.hungarian": "Magyar",
+        "language.bulgarian": "Български",
+        "language.czech": "Čeština",
         "language.portuguese": "Português",
 
         "onboarding.intro.title": "Cultiva-te\nem 10 minutos\npor dia",
@@ -4259,6 +4313,15 @@ enum AppLocalizable {
         "language.german": "Tedesco",
         "language.portuguese": "Portoghese",
         "language.italian": "Italiano",
+        "language.turkish": "Türkçe",
+        "language.polish": "Polski",
+        "language.romanian": "Română",
+        "language.dutch": "Nederlands",
+        "language.greek": "Ελληνικά",
+        "language.swedish": "Svenska",
+        "language.hungarian": "Magyar",
+        "language.bulgarian": "Български",
+        "language.czech": "Čeština",
         "onboarding.intro.title": "Coltiva te stesso\nin 10 minuti\nal giorno",
         "onboarding.intro.cta": "Inizia",
         "onboarding.language.title": "Scegli la tua lingua",

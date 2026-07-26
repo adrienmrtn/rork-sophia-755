@@ -28,11 +28,13 @@ import json
 import sys
 from pathlib import Path
 
+from i18n_languages import ALL_CONTENT_LANGS
+
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_ROOT = ROOT / "content" / "courses"
 BUNDLE_DIR = ROOT / "ios" / "Sophia" / "Resources" / "CoursesV2"
 
-LANGUAGES = ["fr", "en", "es", "de", "it", "pt"]
+LANGUAGES = ALL_CONTENT_LANGS
 BLOCK_TYPES = {"heading", "paragraph", "image", "timeline", "funFact", "takeaway", "quote"}
 
 

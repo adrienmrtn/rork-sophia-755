@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Port rich FR quizzes (CourseData.swift) → en/es/de/pt/it locale catalogs.
+"""Port rich FR quizzes (CourseData.swift) → non-FR locale catalogs.
 
 French source of truth: ``ios/Sophia/Services/CourseData.swift`` (8–10 Q/course,
 types mcq / trueFalse / chronological / numericSlider / percentageSlider).
@@ -34,14 +34,15 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
+from i18n_languages import GT_TARGETS, NON_FR_LANGS
+
 ROOT = Path(__file__).resolve().parents[1]
 COURSE_DATA = ROOT / "ios" / "Sophia" / "Services" / "CourseData.swift"
 LOCALE_DIR = ROOT / "ios" / "Sophia" / "Resources" / "Locales"
 CONTENT_LOCALES = ROOT / "content" / "locales"
 CACHE_DIR = CONTENT_LOCALES / "_quiz_v2_mt_cache"
 
-LANGS = ["en", "es", "de", "pt", "it"]
-GT_TARGETS = {"en": "en", "es": "es", "de": "de", "pt": "pt", "it": "it"}
+LANGS = NON_FR_LANGS
 
 TRUE_FALSE = {
     "en": ["True", "False"],
@@ -49,6 +50,15 @@ TRUE_FALSE = {
     "de": ["Wahr", "Falsch"],
     "pt": ["Verdadeiro", "Falso"],
     "it": ["Vero", "Falso"],
+    "tr": ["Doğru", "Yanlış"],
+    "pl": ["Prawda", "Fałsz"],
+    "ro": ["Adevărat", "Fals"],
+    "nl": ["Waar", "Onwaar"],
+    "el": ["Σωστό", "Λάθος"],
+    "sv": ["Sant", "Falskt"],
+    "hu": ["Igaz", "Hamis"],
+    "bg": ["Вярно", "Грешно"],
+    "cs": ["Pravda", "Nepravda"],
 }
 
 # Common slider units — keep symbols; translate word units.
