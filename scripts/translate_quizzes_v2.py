@@ -62,6 +62,7 @@ TRUE_FALSE = {
 }
 
 # Common slider units — keep symbols; translate word units.
+# Every NON_FR lang must have a key here (translate_unit indexes by self.lang).
 UNIT_FIXED = {
     "": {lang: "" for lang in LANGS},
     "%": {lang: "%" for lang in LANGS},
@@ -69,31 +70,45 @@ UNIT_FIXED = {
     "°": {lang: "°" for lang in LANGS},
     "km": {lang: "km" for lang in LANGS},
     "cm": {lang: "cm" for lang in LANGS},
-    "ans": {"en": "years", "es": "años", "de": "Jahre", "pt": "anos", "it": "anni"},
-    "jours": {"en": "days", "es": "días", "de": "Tage", "pt": "dias", "it": "giorni"},
-    "heures": {"en": "hours", "es": "horas", "de": "Stunden", "pt": "horas", "it": "ore"},
-    "semaines": {"en": "weeks", "es": "semanas", "de": "Wochen", "pt": "semanas", "it": "settimane"},
-    "fois": {"en": "times", "es": "veces", "de": "Mal", "pt": "vezes", "it": "volte"},
+    "ans": {
+        "en": "years", "es": "años", "de": "Jahre", "pt": "anos", "it": "anni",
+        "tr": "yıl", "pl": "lat", "ro": "ani", "nl": "jaar", "el": "έτη",
+        "sv": "år", "hu": "év", "bg": "години", "cs": "let",
+    },
+    "jours": {
+        "en": "days", "es": "días", "de": "Tage", "pt": "dias", "it": "giorni",
+        "tr": "gün", "pl": "dni", "ro": "zile", "nl": "dagen", "el": "ημέρες",
+        "sv": "dagar", "hu": "nap", "bg": "дни", "cs": "dny",
+    },
+    "heures": {
+        "en": "hours", "es": "horas", "de": "Stunden", "pt": "horas", "it": "ore",
+        "tr": "saat", "pl": "godzin", "ro": "ore", "nl": "uur", "el": "ώρες",
+        "sv": "timmar", "hu": "óra", "bg": "часа", "cs": "hodin",
+    },
+    "semaines": {
+        "en": "weeks", "es": "semanas", "de": "Wochen", "pt": "semanas", "it": "settimane",
+        "tr": "hafta", "pl": "tygodni", "ro": "săptămâni", "nl": "weken", "el": "εβδομάδες",
+        "sv": "veckor", "hu": "hét", "bg": "седмици", "cs": "týdnů",
+    },
+    "fois": {
+        "en": "times", "es": "veces", "de": "Mal", "pt": "vezes", "it": "volte",
+        "tr": "kez", "pl": "razy", "ro": "ori", "nl": "keer", "el": "φορές",
+        "sv": "gånger", "hu": "alkalom", "bg": "пъти", "cs": "krát",
+    },
     "millions": {
-        "en": "million",
-        "es": "millones",
-        "de": "Millionen",
-        "pt": "milhões",
-        "it": "milioni",
+        "en": "million", "es": "millones", "de": "Millionen", "pt": "milhões", "it": "milioni",
+        "tr": "milyon", "pl": "milionów", "ro": "milioane", "nl": "miljoen", "el": "εκατομμύρια",
+        "sv": "miljoner", "hu": "millió", "bg": "милиони", "cs": "milionů",
     },
     "milliards": {
-        "en": "billion",
-        "es": "miles de millones",
-        "de": "Milliarden",
-        "pt": "bilhões",
-        "it": "miliardi",
+        "en": "billion", "es": "miles de millones", "de": "Milliarden", "pt": "bilhões", "it": "miliardi",
+        "tr": "milyar", "pl": "miliardów", "ro": "miliarde", "nl": "miljard", "el": "δισεκατομμύρια",
+        "sv": "miljarder", "hu": "milliárd", "bg": "милиарди", "cs": "miliard",
     },
     "milliers": {
-        "en": "thousands",
-        "es": "miles",
-        "de": "Tausende",
-        "pt": "milhares",
-        "it": "migliaia",
+        "en": "thousands", "es": "miles", "de": "Tausende", "pt": "milhares", "it": "migliaia",
+        "tr": "binler", "pl": "tysiące", "ro": "mii", "nl": "duizenden", "el": "χιλιάδες",
+        "sv": "tusentals", "hu": "ezrek", "bg": "хиляди", "cs": "tisíce",
     },
 }
 
@@ -400,27 +415,87 @@ def validate_catalog(
 # Translation
 # ---------------------------------------------------------------------------
 
+_FR_FUNCTION = re.compile(
+    r"\b(le|la|les|un|une|des|du|de|et|est|sont|dans|pour|avec|qui|que|sur|"
+    r"par|plus|aussi|comme|cette|ces|aux|dont|entre|être|avoir|fait|peut|"
+    r"deux|trois|c'est|n'est|qu'est|d'un|d'une|à)\b",
+    re.I,
+)
+
+
+def _looks_translatable_french(text: str) -> bool:
+    """True when unchanged MT output would indicate a real failure (not a proper name)."""
+    if not text or not re.search(r"[A-Za-zÀ-ÿ]", text):
+        return False
+    # Short title-case / name-like tokens are often kept identical by MT.
+    words = re.findall(r"[A-Za-zÀ-ÿ']+", text)
+    if len(words) <= 3 and not _FR_FUNCTION.search(text):
+        return False
+    if len(text) <= 24 and text[:1].isupper() and not _FR_FUNCTION.search(text):
+        return False
+    return bool(_FR_FUNCTION.search(text)) or len(words) >= 6
+
+
+# Sticky: once Google rate-limits us, skip it for the rest of the process.
+_GOOGLE_BLOCKED = False
+
+
+def _translate_via_bing(target: str, text: str) -> str:
+    """Fallback when Google rate-limits (past runs stalled mid-batch)."""
+    import translators as ts
+
+    time.sleep(0.22)
+    result = ts.translate_text(
+        text,
+        translator="bing",
+        from_language="fr",
+        to_language=target,
+    )
+    if result is None or not str(result).strip():
+        raise RuntimeError("empty bing translation")
+    return str(result)
+
+
 def _translate_one(target: str, text: str) -> str:
+    """Translate one FR string. Raises on persistent failure — do not cache FR."""
+    global _GOOGLE_BLOCKED
     from deep_translator import GoogleTranslator
+    from deep_translator.exceptions import TooManyRequests
 
     if not text or not text.strip():
         return text
     if not re.search(r"[A-Za-zÀ-ÿ]", text):
         return text
-    client = GoogleTranslator(source="fr", target=target)
-    for attempt in range(6):
+
+    last_error: Exception | None = None
+    if not _GOOGLE_BLOCKED:
+        client = GoogleTranslator(source="fr", target=target)
+        for attempt in range(4):
+            try:
+                # Stay under Google's ~5 req/s soft limit when many workers run.
+                time.sleep(0.18)
+                result = client.translate(text)
+                if result is None:
+                    raise RuntimeError("empty translation")
+                return result
+            except TooManyRequests as error:
+                last_error = error
+                _GOOGLE_BLOCKED = True
+                print("  Google rate-limited — switching to Bing fallback", flush=True)
+                break
+            except Exception as error:  # noqa: BLE001
+                last_error = error
+                time.sleep(min(2 * (2**attempt), 30))
+                client = GoogleTranslator(source="fr", target=target)
+
+    # Google daily/burst limit — finish the pack via Bing rather than writing FR.
+    for attempt in range(5):
         try:
-            result = client.translate(text)
-            if result is None:
-                raise RuntimeError("empty translation")
-            return result
+            return _translate_via_bing(target, text)
         except Exception as error:  # noqa: BLE001
-            time.sleep(min(2**attempt, 20))
-            client = GoogleTranslator(source="fr", target=target)
-            if attempt == 5:
-                print(f"    warn: MT failed, keeping source: {text[:60]!r} ({error})", file=sys.stderr)
-                return text
-    return text
+            last_error = error
+            time.sleep(min(2 * (2**attempt), 30))
+    raise RuntimeError(f"MT failed after retries: {text[:60]!r} ({last_error})")
 
 
 class QuizTranslator:
@@ -431,7 +506,20 @@ class QuizTranslator:
         CACHE_DIR.mkdir(parents=True, exist_ok=True)
         self.cache: dict[str, str] = {}
         if self.cache_path.exists():
-            self.cache = json.loads(self.cache_path.read_text(encoding="utf-8"))
+            raw = json.loads(self.cache_path.read_text(encoding="utf-8"))
+            # Drop identity entries left by older soft-fail caching (FR bleed),
+            # but keep legitimate proper-name identities.
+            kept: dict[str, str] = {}
+            scrubbed = 0
+            for key, value in raw.items():
+                if value == key and _looks_translatable_french(key):
+                    scrubbed += 1
+                    continue
+                kept[key] = value
+            self.cache = kept
+            if scrubbed:
+                print(f"  scrubbed {scrubbed} FR-identity cache entries", flush=True)
+                self.save()
 
     def save(self) -> None:
         self.cache_path.write_text(
@@ -443,6 +531,9 @@ class QuizTranslator:
         if text in self.cache:
             return self.cache[text]
         translated = _translate_one(self.target, text)
+        if translated == text and _looks_translatable_french(text):
+            # Avoid poisoning the cache with untranslated FR sentences.
+            raise RuntimeError(f"MT returned source unchanged: {text[:60]!r}")
         self.cache[text] = translated
         return translated
 
@@ -453,20 +544,59 @@ class QuizTranslator:
             return
         print(f"  warming cache: {len(pending)} new strings (workers={workers})…")
         done = 0
-        with ThreadPoolExecutor(max_workers=workers) as pool:
+        failures = 0
+        with ThreadPoolExecutor(max_workers=max(1, workers)) as pool:
             futs = {pool.submit(_translate_one, self.target, t): t for t in pending}
             for fut in as_completed(futs):
                 src = futs[fut]
-                self.cache[src] = fut.result()
+                try:
+                    translated = fut.result()
+                    if translated == src and _looks_translatable_french(src):
+                        failures += 1
+                        print(f"    warn: unchanged FR, not cached: {src[:50]!r}", flush=True)
+                    else:
+                        self.cache[src] = translated
+                except Exception as error:  # noqa: BLE001
+                    failures += 1
+                    print(f"    warn: {error}", flush=True)
                 done += 1
                 if done % 100 == 0 or done == len(pending):
-                    print(f"    cached {done}/{len(pending)}", flush=True)
+                    print(
+                        f"    cached {done}/{len(pending)} (failures={failures})",
+                        flush=True,
+                    )
                     self.save()
         self.save()
+        if failures:
+            # Sequential slow retry — past runs wrote FR when this was soft-failed.
+            retry = [t for t in pending if t not in self.cache]
+            print(f"  sequential retry: {len(retry)} strings…", flush=True)
+            still = 0
+            for index, src in enumerate(retry, 1):
+                try:
+                    translated = _translate_one(self.target, src)
+                    if translated == src and _looks_translatable_french(src):
+                        still += 1
+                    else:
+                        self.cache[src] = translated
+                except Exception as error:  # noqa: BLE001
+                    still += 1
+                    print(f"    retry fail: {error}", flush=True)
+                if index % 50 == 0 or index == len(retry):
+                    self.save()
+                    print(f"    retry {index}/{len(retry)} still_fail={still}", flush=True)
+            self.save()
+            if still:
+                raise RuntimeError(
+                    f"warmup still has {still} failures for {self.lang} — "
+                    "aborting to avoid FR bleed (wait for rate-limit cooldown)"
+                )
 
     def translate_unit(self, unit: str) -> str:
         if unit in UNIT_FIXED:
-            return UNIT_FIXED[unit][self.lang]
+            mapped = UNIT_FIXED[unit].get(self.lang)
+            if mapped is not None:
+                return mapped
         return self.mt(unit)
 
     def translate_question(self, fr_q: dict) -> dict:
@@ -691,17 +821,27 @@ def cmd_translate(args: argparse.Namespace) -> int:
         skipped = len(subset) - len(to_do)
         translator = QuizTranslator(lang)
         strings = collect_strings(to_do)
-        translator.warmup(strings, workers=args.workers)
+        try:
+            translator.warmup(strings, workers=args.workers)
+        except RuntimeError as error:
+            print(f"ABORT {lang}: {error}", flush=True)
+            return 1
 
         done = 0
-        for index, (cid, fr_qs) in enumerate(sorted(to_do.items()), 1):
-            if index == 1 or index % 25 == 0 or index == len(to_do):
-                print(f"  [{index}/{len(to_do)}] {cid}", flush=True)
-            existing[cid] = [translator.translate_question(q) for q in fr_qs]
-            done += 1
-            if done % 20 == 0:
-                translator.save()
-        translator.save()
+        try:
+            for index, (cid, fr_qs) in enumerate(sorted(to_do.items()), 1):
+                if index == 1 or index % 25 == 0 or index == len(to_do):
+                    print(f"  [{index}/{len(to_do)}] {cid}", flush=True)
+                existing[cid] = [translator.translate_question(q) for q in fr_qs]
+                done += 1
+                if done % 20 == 0:
+                    translator.save()
+            translator.save()
+        except Exception as error:  # noqa: BLE001
+            translator.save()
+            print(f"ABORT {lang} during apply after {done} courses: {error}", flush=True)
+            # Never write a partial full-catalog pack (past merge QA failures).
+            return 1
 
         # Persist only courses we care about this run, but keep prior translations.
         # If --only/--limit, merge into full file when present.
@@ -719,6 +859,13 @@ def cmd_translate(args: argparse.Namespace) -> int:
         # If force full translate, out should be complete
         if not args.only and not args.limit and args.force:
             out = {cid: existing[cid] for cid in sorted(fr_all)}
+
+        if not args.only and not args.limit and len(out) != len(fr_all):
+            print(
+                f"ABORT {lang}: incomplete pack {len(out)}/{len(fr_all)} — not writing",
+                flush=True,
+            )
+            return 1
 
         save_quizzes(lang, out)
         write_csv(lang, out)
@@ -805,7 +952,12 @@ def main() -> int:
     p_tr.add_argument("--only", default="", help="Comma-separated course id globs")
     p_tr.add_argument("--limit", type=int, default=0)
     p_tr.add_argument("--force", action="store_true")
-    p_tr.add_argument("--workers", type=int, default=10)
+    p_tr.add_argument(
+        "--workers",
+        type=int,
+        default=3,
+        help="Parallel MT workers (keep ≤3; Google ~5 req/s). One lang at a time.",
+    )
     p_tr.set_defaults(func=cmd_translate)
 
     p_mg = sub.add_parser("merge", help="Merge quizzes_v2.json into courses.<lang>.json")
