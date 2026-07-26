@@ -1,0 +1,112 @@
+{
+  "id": "course_234_la_securite_alimentaire_mondiale",
+  "title": "Globalne bezpieczeństwo żywnościowe",
+  "subtitle": "800 milionów ludzi",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Ziemia produkuje wystarczającą ilość żywności dla każdego. Dlaczego więc **800 milionów ludzi** nadal głoduje?",
+  "hero": {
+    "image": "la_securite_alimentaire_mondiale",
+    "ratio": "16:9",
+    "hook": "Głód 800 milionów ludzi nie jest problemem żywności, ale problemu dzielenia się."
+  },
+  "sections": [
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Obecnie około **800 milionów ludzi** cierpi głód na świecie, czyli co dziesiąta osoba. Liczba ta jest tym bardziej dziwna, że ​​ludzkość nigdy nie wyprodukowała tak dużej ilości żywności: statystycznie rzecz biorąc, jedzenia wystarczy dla wszystkich."
+        },
+        {
+          "type": "paragraph",
+          "text": "Głód nie jest zatem problemem ilościowym, ale dystrybucyjnym. Zrozumienie globalnego bezpieczeństwa żywnościowego oznacza zrozumienie, dlaczego obfitość i głód mogą współistnieć na tej samej planecie."
+        }
+      ]
+    },
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_p1",
+      "title": "Geografia głodu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Według **[[FAO]]**, Agencji Narodów Zjednoczonych ds. Żywności, w 2024 r. chroniczne niedożywienie nadal dotykało około 800 milionów ludzi. Za tą globalną liczbą kryje się zupełnie inna rzeczywistość. Najbardziej dotknięte obszary znajdują się w Afryce Subsaharyjskiej, gdzie ponad jednej czwartej populacji regularnie brakuje żywności, oraz w Azji Południowej."
+        },
+        {
+          "type": "image",
+          "asset": "famine_sub_saharan_africa_malnutrition_child",
+          "ratio": "auto",
+          "caption": "Głód w dalszym ciągu dotyka setki milionów ludzi, szczególnie w Afryce Subsaharyjskiej."
+        },
+        {
+          "type": "paragraph",
+          "text": "Istnieje kilka form zaburzeń pokarmowych. **niedożywienie** odpowiada brakowi kalorii. **Niedobory mikroelementów**, często nazywane „ukrytym głodem”, dotykają 2 miliardy ludzi, którym brakuje niezbędnych witamin i minerałów, co ma konsekwencje dla wzrostu i zdrowia. Wreszcie **niedożywienie** obejmuje także, co zaskakujące, otyłość: w wielu krajach rozwijających się ludzie stopniowo zastępują świeże produkty żywnością przetworzoną, bogatą w kalorie, ale ubogą w składniki odżywcze."
+        },
+        {
+          "type": "funFact",
+          "text": "Gdybyśmy ograniczyli globalne marnotrawienie żywności zaledwie o 25%, teoretycznie moglibyśmy nakarmić wszystkich z 800 milionów ludzi cierpiących obecnie głód."
+        }
+      ]
+    },
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_p2",
+      "title": "Paradoks obfitości i marnotrawstwa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Świat produkuje obecnie równowartość 2800 kilokalorii na osobę dziennie, co stanowi więcej niż ilość wystarczającą do wyeliminowania głodu. Prawdziwym problemem nie jest zatem niedobór, ale dostęp: najuboższa populacja po prostu nie ma środków na zakup żywności, której ceny stale zmieniają się na rynkach światowych."
+        },
+        {
+          "type": "paragraph",
+          "text": "Drugą stroną tego paradoksu jest **marnować**. Każdego roku traci się około jednej trzeciej światowej produkcji, czyli 1,3 miliarda ton żywności. W biednych krajach straty pojawiają się wcześnie: brak miejsc do składowania, brak chłodni, zły stan dróg. W krajach bogatych marnotrawstwo pojawia się później, podczas dystrybucji i konsumpcji."
+        },
+        {
+          "type": "funFact",
+          "text": "Od 2010 roku otyłość i choroby związane z otyłością powodują co roku śmierć na całym świecie więcej ludzi niż niedożywienie, co stanowi historyczny punkt zwrotny dla globalnego zdrowia publicznego."
+        }
+      ]
+    },
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_p3",
+      "title": "Kiedy żywność staje się bronią geopolityczną",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bezpieczeństwo żywnościowe to także kwestia geopolityki. Wiele krajów jest uzależnionych od eksportu kilku głównych potęg rolniczych, co czyni je bardzo podatnymi na najdrobniejszą blokadę. Ukraina i Rosja odpowiadają łącznie za prawie 30% światowego eksportu pszenicy. Kiedy ten przepływ ustanie, ceny **[[rynek kontraktów terminowych]]** w Chicago gwałtownie rosną, gdzie negocjuje się przyszłe zbiory, a kraje takie jak Egipt czy Liban popadają w poważny kryzys społeczny."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ta kruchość wynika również z wyboru dokonanego w latach 60. XX wieku: **[[Zielona rewolucja]]**. Ta fala nowych technik rolniczych znacznie zwiększyła plony, ale zmniejszyła także różnorodność upraw i uzależniła rolników od nawozów chemicznych. W rezultacie każda podwyżka ceny ropy naftowej ma bezpośredni wpływ na cenę chleba."
+        },
+        {
+          "type": "paragraph",
+          "text": "Koncepcja **potęgi żywnościowej** odnosi się właśnie do dobrowolnego wykorzystania eksportu żywności jako środka nacisku dyplomatycznego, a nawet sankcji wobec przeciwnego kraju."
+        }
+      ]
+    },
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_p4",
+      "title": "Nakarm 10 miliardów ludzi, nie niszcząc planety",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Oczekuje się, że do roku 2050 liczba ludności na świecie osiągnie 10 miliardów. Zmiany klimatyczne już zagrażają plonom, nasilając susze i powodzie, powodując wypieranie gruntów ornych. Intensywne rolnictwo wyczerpuje również glebę i wody gruntowe, które czasami drenują szybciej niż się napełniają."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jedna z dróg na przyszłość nazywa się **[[agroekologia]]**: produkcja w oparciu o naturalne cykle, takie jak kompost czy płodozmian, zamiast walczyć z nimi chemikaliami. Wyzwanie polega na zapewnieniu każdemu człowiekowi stałego dostępu do zdrowej żywności, bez dalszego uszczuplania planety."
+        },
+        {
+          "type": "takeaway",
+          "text": "Ziemia produkuje wystarczającą ilość kalorii, aby wyżywić wszystkich. Zatem głód 800 milionów ludzi wynika z problemu dostępu, odpadów i kryzysów geopolitycznych, które pogłębiają zmiany klimatyczne."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "id": "course_19_la_bataille_de_stalingrad_1942_1943",
+  "title": "Bitwa pod Stalingradem",
+  "subtitle": "1942-1943",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "Od lata 1942 r. do lutego 1943 r. Niemcy i Sowieci mordowali się nawzajem w ruinach miasta nad Wołgą. Stalingrad staje się punktem zwrotnym II wojny światowej.",
+  "hero": {
+    "image": "la_bataille_de_stalingrad",
+    "ratio": "16:9",
+    "hook": "W ruinach miasta armia uznana za niepokonaną rozbija się na dobre."
+  },
+  "sections": [
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Od lata **1942** do **2 lutego 1943** świat obserwuje pas ruin nad **Wołgą**, wielką rzeką Rosji. Pod **Stalingrad** (dzisiejszy Wołgograd) armia niemiecka napotkała opór sowiecki, gotowa do wszelkich poświęceń."
+        },
+        {
+          "type": "paragraph",
+          "text": "Śmierć poniosło ponad milion **ENDBOLDZZ**. Była to najbardziej śmiercionośna bitwa w historii… i punkt zwrotny II wojny światowej."
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p1",
+      "title": "Hitler celuje w południową ropę naftową",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Po porażce pod Moskwą w 1941 roku Hitler rozpoczął [[Sprawa niebieska]], letnią ofensywę na południe. Cel: ropa z **Kaukaz**. **Stalingrad**, węzeł kolejowy i rzeczny na Wołdze, jest początkowo celem jedynie drugorzędnym. Wtedy zwycięża symbol: zajęcie miasta noszącego imię **Stalina** staje się obsesją."
+        },
+        {
+          "type": "image",
+          "asset": "battle_of_stalingrad_ruins",
+          "ratio": "4:3",
+          "caption": "Stalingrad w ruinie: bezlitosne miejskie pole bitwy."
+        },
+        {
+          "type": "funFact",
+          "text": "Hitler był tak pewien zwycięstwa, że ​​podobno wydrukował zaproszenia na bankiet zwycięski w hotelu Lux w Stalingradzie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Niemiecka **6. Armia** dowodzona przez generała [[Fryderyk Paulus]] zostaje skierowana do miasta. Bombardowania [[Luftwaffe]], niemieckich sił powietrznych, w sierpniu 1942 r. pozostawiły po sobie krajobraz kraterów... idealny dla sowieckiej obrony."
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p2",
+      "title": "Walcz dom po domu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Radziecki generał **Wasilij Czuïkov** narzucił prostą taktykę: pozostawać w odległości **30 metrów** od wroga. Zatem niemiecka artyleria i samoloty nie mogą uderzyć bez zabicia własnych ludzi. Niemcy nazywają to **Rattenkriega**, czyli „wojną szczurów”: walczymy w piwnicach, kanałach, zrujnowanych budynkach."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Dom Pawłowa**, budynek prowadzony przez garstkę żołnierzy, stawiał opór **58 dni**. W fabryce **Dzierżyński** czołgi produkowane są pod bombami i wywożone bezpośrednio na front. Stalinowski **Rozkazu 227** podsumowuje rozkaz: **„Ani kroku wstecz”**."
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p3",
+      "title": "Szczypce zamykające pułapkę",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Podczas gdy Paulus męczy się w gruzach, radziecki marszałek **Georgij Żukow** przygotowuje [[Operacja Uran]]. Niemieckie flanki, strzeżone przez słabo wyposażonych sojuszników (Rumunów, Włochów, Węgrów), ustąpiły. W dniu **19 listopada 1942 r.** szczypce się zamknęły: otoczono około **300 000** mężczyzn."
+        },
+        {
+          "type": "funFact",
+          "text": "Sowieci nadawali przez głośniki tykanie zegara, a potem komunikat: co **Z7** sekund w ZSRR ginął żołnierz niemiecki."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hitler zabrania wyjścia. [[Hermanna Göringa]], szefowa Luftwaffe, obiecuje transport powietrzny. Nie udaje mu się. Głód, tyfus, **-30 °C**: „kocioł” staje się śmiertelną pułapką."
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p4",
+      "title": "Kapitulacja, która zmienia wojnę",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**30 stycznia 1943** Hitler mianował Paulusa **marszałkiem polowym**, najwyższym stopniem, aby zachęcić go raczej do śmierci niż do poddania się. Paulus skapitulował 2 lutego ****. Z 300.000 posiadanych**91 000** wychodzi jako więźniowie. Po raz pierwszy nazistowska propaganda musi przyznać się do całkowitej porażki. Armia uważana za niezwyciężoną została rozbita."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "lato 1942",
+              "title": "Sprawa niebieska",
+              "detail": "Niemiecka ofensywa na Kaukaz i Stalingrad."
+            },
+            {
+              "date": "19 listopada 1942",
+              "title": "Operacja Uran",
+              "detail": "Okrążenie 6 Armii."
+            },
+            {
+              "date": "2 lutego 1943",
+              "title": "Kapitulacja",
+              "detail": "Paulus poddaje się; punkt zwrotny wojny."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "**Stalingrad** (**1942-1943**) unicestwia niemiecką 6 Armię i burzy mit o niezwyciężoności nazistów w najbardziej śmiercionośnej bitwie w historii."
+        }
+      ]
+    }
+  ]
+}

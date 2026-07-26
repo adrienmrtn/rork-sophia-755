@@ -1,0 +1,130 @@
+{
+  "id": "course_155_nighthawks_hopper",
+  "title": "Nighthawks, Hopper",
+  "subtitle": "1942",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture + iconic works",
+  "description": "Egy New York-i étteremben Hopper amerikai városi magányt fest. Nighthawks a felvilágosult és elszigetelt Amerika ikonjává válik.",
+  "hero": {
+    "image": "nighthawks_hopper",
+    "ratio": "16:9",
+    "hook": "Négy ember, egy pult, és senki sem beszél igazán egymással."
+  },
+  "sections": [
+    {
+      "id": "course_155_nighthawks_hopper_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A **1942**-ben az amerikai **Edward Hopper** *Nighthawks*: egy [[vacsora]] éjszaka, néma vásárlók, üres utcák."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ez az amerikai városi elidegenedés képe."
+        }
+      ]
+    },
+    {
+      "id": "course_155_nighthawks_hopper_p1",
+      "title": "Hopper és az amerikai valóság",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Robert Henri]] tanítványa, Hopper festett moteleket, benzinkutakat, ablakokat. Nincs kubista botrány: hideg tisztaság, hosszú árnyékok, amerikaiak egyedül."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hopper olyan jeleneteket épít, mint a filmdíszlet. Éles szögek, lapos színek, egymástól elvágott karakterek. Úgy néznek ki, mint a színészek a sor után."
+        },
+        {
+          "type": "image",
+          "asset": "hopper_nighthawks_painting",
+          "ratio": "4:3",
+          "caption": "Az ablak, mint egy akvárium."
+        }
+      ]
+    },
+    {
+      "id": "course_155_nighthawks_hopper_p2",
+      "title": "1942, Amerika háborúban",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A festmény röviddel [[Pearl Harbor]] után készült el. A nemzet háborúban áll, de Hopper megmutatja az érzelmi hátországot: álmatlanok, forró kávé, csend."
+        },
+        {
+          "type": "paragraph",
+          "text": "Az étkezőnek nincs látható ajtaja. A tér puha csapdává válik: megvilágosodunk, kiszolgáltatottak, elszigeteltek vagyunk. A modern város fényt kínál emberi melegség nélkül."
+        },
+        {
+          "type": "funFact",
+          "text": "Hopper elmondta, hogy egy Greenwich Village-i étteremből merített ihletet, leegyszerűsítve a lényegre."
+        }
+      ]
+    },
+    {
+      "id": "course_155_nighthawks_hopper_p3",
+      "title": "Mozi és utókor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Többek között [[Ridley Scott]] és [[Wim Wenders]] újrahasznosította ezt a neonfényt és a magányt. A *Nighthawks* a 20. század mentális helyszínévé vált."
+        },
+        {
+          "type": "paragraph",
+          "text": "A második világháború alatt festett festmény figyelmen kívül hagyja a zászlókat. Egy másik fáradtságról beszél: a hétköznapi amerikai éjszakákról."
+        },
+        {
+          "type": "image",
+          "asset": "american_diner_night_neon",
+          "ratio": "4:3",
+          "caption": "Neon: mesterséges hő, emberi hidegség."
+        }
+      ]
+    },
+    {
+      "id": "course_155_nighthawks_hopper_p4",
+      "title": "Örökség",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A mű még ma is mond valamit a városokról: körülvesznek anélkül, hogy összekapcsolódnának. Egyszerű festmény, maradandó érzelem."
+        },
+        {
+          "type": "paragraph",
+          "text": "A Nighthawks, Hopper teljes megértéséhez egy dolgot kell szem előtt tartania: minden technikai részlet egy érzelmet vagy egy ötletet szolgál. Az alkotás soha nem csak dekoratív."
+        },
+        {
+          "type": "paragraph",
+          "text": "A kontextus legalább annyira számít, mint a stílus. Dátumok, helyek, szponzorok, nyilvánosság: mindez megmagyarázza, hogy egy űrlap miért egy adott pillanatban jelenik meg, és miért nem korábban."
+        },
+        {
+          "type": "paragraph",
+          "text": "Végül az örökséget hosszú távon mérik. Amit ma múzeumokban, filmekben vagy populáris zenében látunk, az ma is magán viseli e találmányok nyomait."
+        },
+        {
+          "type": "paragraph",
+          "text": "Plakátok, pasticsok, tévésorozatok: *Nighthawks* szellemi dekorációvá vált. Az ereje abban rejlik, hogy szinte semmit sem mond el… és minden rá van vetítve."
+        },
+        {
+          "type": "paragraph",
+          "text": "A Nighthawks, Hopper teljes megértéséhez egy dolgot kell szem előtt tartania: minden technikai részlet egy érzelmet vagy egy ötletet szolgál. Az alkotás soha nem csak dekoratív."
+        },
+        {
+          "type": "paragraph",
+          "text": "A kontextus legalább annyira számít, mint a stílus. Dátumok, helyek, szponzorok, nyilvánosság: mindez megmagyarázza, hogy egy űrlap miért egy adott pillanatban jelenik meg, és miért nem korábban."
+        },
+        {
+          "type": "takeaway",
+          "text": "A Nighthawks-szal Hopper egy 1942-es étkezdét a modern magány meghatározó portréjává tette."
+        }
+      ]
+    }
+  ]
+}

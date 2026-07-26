@@ -1,0 +1,108 @@
+{
+  "id": "course_77_qu_est_ce_que_la_matiere_noire",
+  "title": "Czym jest ciemna materia?",
+  "subtitle": "Niewidzialny kosmos",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Nigdy jej nie widzieliśmy. Jednak bez niego galaktyki rozpadłyby się. Ciemna materia jest niewidzialnym spoiwem Wszechświata.",
+  "hero": {
+    "image": "qu_est_ce_que_la_matiere_noire",
+    "ratio": "16:9",
+    "hook": "Wyobraź sobie niewidzialny klej spajający galaktyki. Nie widzimy jej, ale widzimy, co ukrywa."
+  },
+  "sections": [
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Czujesz wiatr, choć go nie widzisz: gałęzie się poruszają, włosy lecą. **ciemna materia** jest trochę podobna do tej w skali kosmosu. Nie świeci, nie odbija światła, nie blokuje promieni. „Widzimy” go jedynie poprzez to, co powoduje ruch."
+        },
+        {
+          "type": "paragraph",
+          "text": "Reprezentowałoby to w przybliżeniu **27%** Wszechświata, pięć razy więcej niż cała zwykła materia: gwiazdy, planety, gaz. Bez niego galaktyki wirowałyby zbyt szybko, aby mogły się utrzymać."
+        }
+      ]
+    },
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_p1",
+      "title": "Gwiazdy za szybko na obrzeżach",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W latach **1970** amerykański astronom **Wiera Rubin** zmierzył prędkość gwiazd w galaktykach spiralnych. W Układzie Słonecznym im dalej od Słońca, tym wolniej się obracamy. Spodziewała się tego samego wzoru."
+        },
+        {
+          "type": "image",
+          "asset": "dark_matter_galaxy_cluster",
+          "ratio": "auto",
+          "caption": "Ciemna materia zdradza swoją obecność poprzez wpływ grawitacyjny na gromady galaktyk."
+        },
+        {
+          "type": "paragraph",
+          "text": "Teraz gwiazdy na krawędzi obracały się **tak szybko** jak te w centrum. Przy zaledwie widocznej masie powinny odlecieć. Dlatego konieczne było posiadanie niewidzialnej masy, **aureola**, niewidzialnej sferycznej otoczki wokół galaktyki, aby je powstrzymać. [[Krzywa rotacji galaktyki]] stała się sztandarowym dowodem na istnienie ciemnej materii."
+        },
+        {
+          "type": "funFact",
+          "text": "Vera Rubin od dawna musiała walczyć, aby traktować ją poważnie. Princeton przez długi czas odmawiał jej doktoratu z astronomii… ponieważ była kobietą, aż do 1975 roku."
+        }
+      ]
+    },
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_p2",
+      "title": "Z czego jest zrobiony? Nadal szukamy",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nie jest to zwykła materia, zwana **barionowej**, złożona z protonów i neutronów: nie oddziałuje ze światłem. Przemierza Ziemię i nas, nie pozostawiając widocznego śladu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Od dawna preferowany ołów, **WIMP**, słabo oddziałująca cząstka masywna, byłaby ciężką cząstką poza [[Standardowy model fizyki]], teorią opisującą znane cząstki elementarne. Detektory **płynny xeon**, zakopane pod ziemią, oczekują rzadkiego szoku. Na razie bez wyraźnego sukcesu. Inni polegają na **osi**, ultralekkiej cząsteczce, lub na grawitacji, którą należy sprawdzić. Tymczasem ciemna materia zagina przestrzeń i tworzy [[Soczewkowanie grawitacyjne]], które zniekształca światło masywnego obiektu."
+        }
+      ]
+    },
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_p3",
+      "title": "I ciemna energia, kolejna tajemnica",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ciemna materia przyciąga. [[Ciemna energia]], odkryta w **1998**, działa odwrotnie: przyspiesza **rozszerzę Wszechświata**, czyli zwiększającą się odległość galaktyk. Galaktyki oddalają się coraz szybciej, a grawitacja powinna spowalniać ten ruch."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ważyłby około **68%** kosmosu. W przypadku ciemnej materii stanowi to **95%** niewidzialnego Wszechświata. Wszystko, co widzimy, atomy i światło, to tylko szumowina **5 %**."
+        },
+        {
+          "type": "funFact",
+          "text": "W bardzo odległej przyszłości ciemna energia może odepchnąć inne galaktyki do tego stopnia, że ​​staną się niewidoczne z Drogi Mlecznej: prawie puste niebo."
+        }
+      ]
+    },
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_p4",
+      "title": "Ogromne dowody, cząstki nie znaleziono",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Z jednej strony gromadzą się dowody pośrednie: rotacje galaktyczne, **jest tłok mikrofalowy**, promieniowanie kopalne z młodego Wszechświata, włóknista struktura Wszechświata. Z drugiej strony brak bezpośredniego wykrywania cząstek."
+        },
+        {
+          "type": "paragraph",
+          "text": "XXI wiek będzie musiał zdecydować: nowa rodzina cząstek czy nowy sposób myślenia o grawitacji. Ciemna materia to nie tylko szczegół nieba. To laboratorium, w którym wynaleziono fizykę jutra."
+        },
+        {
+          "type": "takeaway",
+          "text": "Ciemna materia tworzy **27 %** Wszechświata. Dowodem na to jest grawitacja, jaką wywiera na gwiazdy i światło, nawet jeśli nigdy nie widzieliśmy tego bezpośrednio."
+        }
+      ]
+    }
+  ]
+}

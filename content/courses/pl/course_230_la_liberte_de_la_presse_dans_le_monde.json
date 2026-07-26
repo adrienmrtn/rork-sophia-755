@@ -1,0 +1,122 @@
+{
+  "id": "course_230_la_liberte_de_la_presse_dans_le_monde",
+  "title": "Wolność prasy na całym świecie",
+  "subtitle": "Prawo pod presją",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Mniej niż **10% zużycia** żyje w kraju, w którym prasa jest naprawdę wolna. Pomiędzy cenzurą państwową a presją ekonomiczną to podstawowe prawo niemal wszędzie zanika.",
+  "hero": {
+    "image": "la_liberte_de_la_presse_dans_le_monde",
+    "ratio": "16:9",
+    "hook": "Informowanie czasami kosztuje wolność, a nawet życie: podróż do sedna kruchego prawa."
+  },
+  "sections": [
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**szeroka prasa** jest jednym z najlepszych wskaźników zdrowia demokratycznego kraju. Nie ogranicza się ono do prawa do publikacji: obejmuje ono możliwość dostępu obywateli do zweryfikowanych informacji niezależnie od posiadanych uprawnień. Na całym świecie prawo to znajduje się pod podwójną presją: bezpośrednimi represjami w reżimach autorytarnych i bardziej dyskretnym osłabieniem samych demokracji."
+        }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p1",
+      "title": "Coraz bardziej niebezpieczny zawód",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Organizacja [[Reporterzy bez Granic (RSF)]] publikuje co roku raport referencyjny na temat przeszkód w zawodzie dziennikarza na świecie."
+        },
+        {
+          "type": "image",
+          "asset": "press_freedom_world_map_RSF_index",
+          "ratio": "16:9",
+          "caption": "Mniej niż 10% światowej populacji żyje w kraju, w którym prasa jest naprawdę wolna."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dane za 2024 r. są alarmujące: mniej niż **10%** światowej populacji żyje na obszarach, gdzie prasa pracuje bez przeszkód. Podczas gdy kraje takie jak Norwegia utrzymują wysokie standardy, duże regiony, takie jak Chiny, Rosja i Iran, uważają dziennikarstwo śledcze za formę zdrady."
+        },
+        {
+          "type": "funFact",
+          "text": "W Turkmenistanie państwo tak rygorystycznie kontroluje informacje, że na początku pandemii w 2020 roku zakazało używania w mediach słowa „koronawirus”."
+        },
+        {
+          "type": "paragraph",
+          "text": "W 2023 r. co najmniej 79 dziennikarzy straciło życie podczas wykonywania swojego zawodu, którego celem często było uciszanie kłopotliwych dochodzeń. Co roku na całym świecie w więzieniach przebywa prawie 600 dziennikarzy."
+        }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p2",
+      "title": "Demokracje nie są odporne",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wbrew powszechnemu przekonaniu wolność prasy w krajach zachodnich nie jest gwarantowana na zawsze. Przeszedł bardziej dyskretne przekształcenia, powiązane z [[koncentracja mediów]] i wpływami finansowymi kilku dużych grup."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na Węgrzech [[Wiktor Orbán]] zastosował skuteczną strategię: zamiast zakazywać mediom opozycyjnym, sprzyjał ich przejmowaniu przez osoby bliskie rządowi, stopniowo przekształcając krajobraz medialny w oficjalną komorę echa."
+        },
+        {
+          "type": "paragraph",
+          "text": "We Francji debata dotyczy głównie koncentracji mediów w rękach kilku dużych grup, co budzi obawy przed autocenzurą ze strony redakcji. W innych przypadkach nadużycia prawne, zwane [[SLAPP]], coraz częściej zastraszają krytyczne głosy."
+        }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p3",
+      "title": "Pieniądze nowym przeciwnikiem dziennikarstwa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Oprócz zagrożeń politycznych dziennikarstwo stoi w obliczu głębokiego kryzysu gospodarczego. Historyczny model, oparty na indywidualnej sprzedaży i reklamie, upadł wraz z pojawieniem się technologii cyfrowej, a duże platformy przejmują obecnie większość reklam online."
+        },
+        {
+          "type": "image",
+          "asset": "newspaper_crisis_digital_transformation_journalism",
+          "ratio": "4:3",
+          "caption": "Historyczny model ekonomiczny prasy upadł wraz z technologią cyfrową."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ten spadek zasobów powoduje zamknięcie wielu lokalnych gazet, tworząc „pustynię informacyjną”, na której nikt nie monitoruje działań wybieranych na szczeblu lokalnym urzędników. W obliczu tego pojawiają się nowe modele, finansowane z darowizn lub bezpośrednich subskrypcji, takie jak Mediapart we Francji czy ProPublica w Stanach Zjednoczonych, które udowadniają, że niezależne dziennikarstwo też może być opłacalne."
+        },
+        {
+          "type": "funFact",
+          "text": "Pierwsza drukowana gazeta w historii, „Relacja”, została wypuszczona w Strasburgu w 1605 roku przez Johanna Carolusa, na długo przed prawnym wynalezieniem wolności prasy."
+        }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p4",
+      "title": "Sprawdzanie rzeczywistości w świecie nasyconym obrazami",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Era cyfrowa przyspieszyła przepływ informacji, ale otworzyła także drzwi do [[dezinformacja]]. Algorytmy mediów społecznościowych przedkładają treści emocjonalne nad analizę faktów, fragmentaryzując nasz wspólny pogląd na świat."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rola dziennikarza ewoluuje zatem w stronę „kontrolera” rzeczywistości, w ciągłym przepływie obrazów i danych. Kwestie etyczne stają się bardziej złożone, jak w przypadku fotoreportażu w strefach konfliktów, gdzie szacunek dla godności ludzkiej czasami koliduje z potrzebą pokazu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Obrona wolności prasy wymaga zatem lepszego uregulowania głównych platform cyfrowych i wzmocnionej edukacji medialnej. Bez wolnej prasy zdolnej do weryfikowania faktów istnieje ryzyko, że debata demokratyczna rozpłynie się w świecie, w którym wszystkie opinie są równe, niezależnie od ich prawdziwości."
+        },
+        {
+          "type": "takeaway",
+          "text": "Mniej niż 10% światowej populacji żyje w kraju, w którym prasa jest naprawdę wolna. Pomiędzy bezpośrednimi represjami, presją gospodarczą i cyfrową dezinformacją niemal wszędzie zanika to podstawowe prawo do demokracji."
+        }
+      ]
+    }
+  ]
+}

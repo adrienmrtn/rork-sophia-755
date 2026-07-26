@@ -1,0 +1,116 @@
+{
+  "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup",
+  "title": "Dlaczego wybuchają wulkany?",
+  "subtitle": "Magma i płyty",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Wulkan to otwór w skorupie ziemskiej. Magma pod ciśnieniem unosi się tam i zamienia się w lawę. Dlatego Ziemia „pluje”.",
+  "hero": {
+    "image": "pourquoi_les_volcans_entrent_en_eruption",
+    "ratio": "16:9",
+    "hook": "Pod naszymi stopami Ziemia nie jest zamarznięta. Czasami otwiera okno ognia."
+  },
+  "sections": [
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wulkan to nie tylko góra ziejąca ogniem. Jest to otwór w zewnętrznej powłoce Ziemi. W ten sposób unosi się **magma**: mieszanina stopionych skał i gazu pod wysokim ciśnieniem. Kiedy ta magma znajdzie się na świeżym powietrzu, staje się **umyty**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aby zrozumieć erupcję, trzeba zajrzeć pod powierzchnię: ciepło wewnątrz planety, ruch płyt i sposób, w jaki gazy zwiększają ciśnienie, trochę jak potrząsanie butelką napoju gazowanego."
+        }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p1",
+      "title": "Pod naszymi stopami nic nie stoi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ziemia składa się z warstw. Na powierzchni **skorupa** jest sztywną powłoką o grubości **5 do 70 km. głębiej się znajduje**płaszcz****, wykonaj głębokość około**2 900 km**. Sierść jest w większości stała, ale przez bardzo długi czas może spływać bardzo powoli, jak bardzo gęsty miód."
+        },
+        {
+          "type": "image",
+          "asset": "volcano_eruption_lava",
+          "ratio": "auto",
+          "caption": "Erupcja: wypłynięcie magmy na powierzchnię."
+        },
+        {
+          "type": "paragraph",
+          "text": "To wewnętrzne ciepło powoduje unoszenie się i opadanie materii: są to **prądowo-konwekcyjne**. Wypychają duże kawałki skorupy zwane blaszkami. Oto [[Tektonika płyt]]: powierzchnia ziemi jest pocięta na płyty, które rozsuwają się, zderzają lub ślizgają po sobie."
+        },
+        {
+          "type": "funFact",
+          "text": "Pewne bardzo gwałtowne wzniesienia przywracają diamenty powstałe na głębokości większej niż **150 km**. Nie mają czasu na przebieranie się po drodze."
+        },
+        {
+          "type": "paragraph",
+          "text": "W [[grzbiety]] płyty oddalają się od siebie i magma łatwo się unosi. Na obszarze [[Subdukcja]] jedna płyta zanurza się pod drugą i niesie ze sobą wodę. Woda ta obniża temperaturę topnienia skał: tworzy się magma, która następnie się podnosi."
+        }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p2",
+      "title": "Od magmy do erupcji",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Skała nie topi się tylko dlatego, że jest gorąca. Istnieją trzy czynniki wyzwalające: wzrost temperatury, spadek ciśnienia lub dodanie wody. Po utworzeniu magma jest mniej gęsta niż otaczająca ją skała. Dlatego próbuje się unieść, trochę jak pęcherzyk powietrza w wodzie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Często zatrzymuje się najpierw w **komorze magmowej**, zbiorniku położonym kilka kilometrów pod powierzchnią. Tam rozpuszczone gazy tworzą pęcherzyki, gdy ciśnienie spada. Jeśli „korek” skały powyżej nie będzie się już trzymał, rozpocznie się erupcja."
+        },
+        {
+          "type": "funFact",
+          "text": "Erupcja **Tambora** w **1815** w Indonezji była tak potężna, że ​​ochłodziła globalny klimat. **1816** przezywano „rokiem bez lata”, z katastrofalnymi zbiorami w Europie i Ameryce Północnej."
+        }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p3",
+      "title": "Płynny czy wybuchowy?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nie wszystkie wypryski są takie same. Wszystko zależy od **lepkości** magmy, czyli czy jest ona raczej płynna czy lepka. Płynna magma, taka jak w **Hawaje** lub w Piton de la Fournaise (wyspa Reunion), umożliwia ucieczkę gazów. Wypływy lawy: erupcja **wylewny**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lepka magma zatrzymuje gazy. Ciśnienie rośnie, a potem wszystko eksploduje. Popiół, bloki i [[ogniste chmury]] (płonące chmury gazu i popiołu staczające się po zboczach) mogą następnie zdewastować otaczający teren. To jest styl wulkanów takich jak Góra **Święta Helena** (Stany Zjednoczone) czy **Pinatubo** (Filipiny)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wulkan może również pozostać spokojny przez stulecia. W **79** po. BC, **Wezuwiusz**, niedaleko Neapolu, pochowano Pompeje pod popiołem. Około **80%** światowej aktywności wulkanicznej dzieje się pod oceanami, z dala od naszych oczu."
+        }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p4",
+      "title": "Niebezpieczeństwo, płodność, życie otchłani",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wulkany ukształtowały wczesną atmosferę Ziemi poprzez emisję gazów. Ich popioły wzbogacają również glebę: wiele żyznych regionów rolniczych żyje u podnóża aktywnych wulkanów. Jednak bardzo duża erupcja może wyrzucić cząstki siarki wysoko do atmosfery i ochłodzić klimat na miesiące."
+        },
+        {
+          "type": "paragraph",
+          "text": "Niektóre miejsca, takie jak [[superwulkan]] w Yellowstone w Stanach Zjednoczonych, są ściśle monitorowane. Pod morzem, w pobliżu grzbietów, [[czarni palacze]] wypluwają płonące płyny bogate w minerały. Ekosystemy żyją tam bez światła słonecznego, odżywiane chemią gorących źródeł."
+        },
+        {
+          "type": "takeaway",
+          "text": "Wulkany wyrzucają magmę pod ciśnieniem, szczególnie na granicach płyt tektonicznych. Lepkość magmy decyduje o tym, czy erupcja będzie przebiegać spokojnie, czy eksploduje."
+        }
+      ]
+    }
+  ]
+}

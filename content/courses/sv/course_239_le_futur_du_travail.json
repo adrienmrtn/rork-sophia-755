@@ -1,0 +1,112 @@
+{
+  "id": "course_239_le_futur_du_travail",
+  "title": "Arbetets framtid",
+  "subtitle": "Automation & artificiell intelligens",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Artificiell intelligens och nya anställningsformer skakar om en arbetsmodell som är ärvd från industriepoken.",
+  "hero": {
+    "image": "le_futur_du_travail",
+    "ratio": "16:9",
+    "hook": "Maskiner fungerar snabbare än någonsin. Det återstår att se vad som återstår att göra mot människor."
+  },
+  "sections": [
+    {
+      "id": "course_239_le_futur_du_travail_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Arbete definierar inte bara vår inkomst: det formar också vår sociala identitet och den mening vi ger våra dagar. Men artificiell intelligens, robotik och nya arbetssätt skakar idag om denna modell som är ärvd från den industriella eran."
+        },
+        {
+          "type": "paragraph",
+          "text": "Den här kursen utforskar hur arbetet ändrar form och de stora frågorna som denna omvandling väcker: färre timmar, fler maskiner och en ny delning av välstånd."
+        }
+      ]
+    },
+    {
+      "id": "course_239_le_futur_du_travail_p1",
+      "title": "Slutet på modellen född med Henry Ford",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Modernt arbete har länge organiserats kring en idé som populariserats av **[[Henry Ford]]**, som etablerade 40-timmarsveckan 1926. Detta val var inte en gest av generositet: arbetare med ledig tid blir också kunder, kapabla att köpa de produkter de själva producerar."
+        },
+        {
+          "type": "funFact",
+          "text": "År 1930 förutspådde ekonomen John Maynard Keynes att hans barnbarn bara skulle arbeta 15 timmar i veckan, tack vare tekniska framsteg. Nästan ett sekel senare har vi den här tekniken, men vi jobbar fortfarande lika hårt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denna modell faller sönder idag till förmån för **gig-ekonomin**, \"gig\"-ekonomin: mer än 57 miljoner arbetare i USA säljer nu sina tjänster via digitala plattformar, utanför traditionell anställning. Automatisering tar också över allt mer komplexa uppgifter, samtidigt som distansarbete, som accelererats av pandemin 2020, omformar arbetets geografi."
+        }
+      ]
+    },
+    {
+      "id": "course_239_le_futur_du_travail_p2",
+      "title": "AI och utmaningen med kreativ förstörelse",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Debatten om framtidens arbete bygger ofta på en idé från filosofen och ekonomen **[[Joseph Schumpeter]]**: **[[Kreativ förstörelse]]**. Enligt honom förstör varje teknisk revolution gamla yrken, men skapar nya, ofta mer kvalificerade. Generativ artificiell intelligens introducerar dock något nytt: den hotar, för första gången, kontorsjobb och yrken som anses vara intellektuella."
+        },
+        {
+          "type": "funFact",
+          "text": "År 2023 visade en studie att artificiell intelligens presterade bättre än 99 % av människor på ett kreativitetstest, vilket utmanar idén att kreativitet är vår sista fördel gentemot maskiner."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tre scenarier dyker upp. Optimisten föreställer sig en ökning av produktiviteten som skulle befria människor från repetitiva uppgifter. Pessimisten fruktar att AI kommer att utvecklas snabbare än vår förmåga att omskola, vilket skapar massiv arbetslöshet. Hybriden, slutligen, förlitar sig på ett samarbete mellan människor och maskiner, där nyckelfärdigheten skulle bli förmågan att styra verktygen snarare än att bemästra fast kunskap."
+        }
+      ]
+    },
+    {
+      "id": "course_239_le_futur_du_travail_p3",
+      "title": "Omfördela tid och pengar",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Inför risken för ett tvåhastighetssamhälle studeras nya verktyg. Den **universalla basinkomsten** föreslår att man betalar ett fast belopp till varje medborgare, utan villkor, för att säkra livsförlopp i en ekonomi där arbetet blir mer intermittent."
+        },
+        {
+          "type": "image",
+          "asset": "ai_generative_writing_artificial_intelligence",
+          "ratio": "16:9",
+          "caption": "Automatisering, artificiell intelligens och nya anställningsformer omformar arbetslivet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dessutom vinner idén om en **[[4-dagars vecka]]** mark: om maskiner producerar mer på kortare tid verkar det logiskt att mänsklig arbetstid ska minska i gengäld, för att behålla sysselsättningen och bevara arbetarnas hälsa. Det återstår en fråga om finansiering: om värde skapas i allt större utsträckning av mjukvara, kommer skatter utan tvekan att behöva flyttas från arbetsinkomst till kapitalinkomst."
+        }
+      ]
+    },
+    {
+      "id": "course_239_le_futur_du_travail_p4",
+      "title": "Vilken mening att ge morgondagens arbete",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "När den ekonomiska ekvationen väl är löst återstår en djupare fråga: vad blir det av meningen med våra dagar i en värld där arbetet är mindre centralt? Historiskt sett har arbetet strukturerat vardagen och självkänslan. Dess partiella försvinnande kan leda antingen till tristess eller till ett återupplivande av frivilliga, konstnärliga eller medborgerliga aktiviteter."
+        },
+        {
+          "type": "funFact",
+          "text": "Ordet \"arbete\" kommer från latinets tripalium, ett tortyrinstrument med tre steg. Ett ursprung som påminner oss om att det länge uppfattades som lidande innan det blev en identitet."
+        },
+        {
+          "type": "paragraph",
+          "text": "I detta sammanhang blir att lära sig att lära en väsentlig färdighet. Den verkliga frågan är inte bara teknisk, utan politisk: kommer vi att använda artificiell intelligens för att öka vår kapacitet, eller bara för att minska affärskostnaderna? Svaret kommer att avgöra om morgondagens arbete blir en befrielse eller en ny begränsning."
+        },
+        {
+          "type": "takeaway",
+          "text": "Arbetets framtid präglas av slutet för ensamanställda, till förmån för spelningsekonomin, och av utmaningen med artificiell intelligens, som hotar intellektuella jobb för första gången. Vår sociala modell kommer utan tvekan att behöva omfördela produktivitetsvinster, genom en universell inkomst eller en kortare arbetsvecka."
+        }
+      ]
+    }
+  ]
+}

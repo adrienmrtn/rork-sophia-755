@@ -1,0 +1,140 @@
+{
+  "id": "course_16_la_bataille_de_verdun_1916",
+  "title": "Bitwa pod Verdun",
+  "subtitle": "1916",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "Przez **299 dni** Francuzi i Niemcy rozdzierali się wokół Verdun. **700 000** straty przy prawie zerowym zdobyciu terytorialnym: symbol grozy okopów.",
+  "hero": {
+    "image": "la_bataille_de_verdun_1916",
+    "ratio": "16:9",
+    "hook": "299 dni na kilka kilometrów błota i 700 000 ludzi wyłączonych z akcji."
+  },
+  "sections": [
+    {
+      "id": "course_16_la_bataille_de_verdun_1916_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W **1916**, podczas **299 dni**, Francuzi i Niemcy starli się na obszarze kilku kilometrów kwadratowych wokół **Verdun**, twierdzy we wschodniej Francji. Nie jest to spektakularny przełom. To walka na wyniszczenie, w której zginęło lub zostało rannych około **700 000**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Verdun staje się symbolem grozy okopów. Kilkadziesiąt lat później doszło do pojednania francusko-niemieckiego."
+        }
+      ]
+    },
+    {
+      "id": "course_16_la_bataille_de_verdun_1916_p1",
+      "title": "Niemiecki plan: wykrwawić Francję",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Od 1914 roku front zachodni został zamrożony w [[Wojna okopowa]]: linie rowów od Morza Północnego do Szwajcarii. Niemiecki generał **Ericha von Falkenhayna** chce „wykrwawić Francję do sucha”. Wybiera Verdun, miejsce, którego Paryż nie może opuścić bez utraty twarzy. Operacja nosi nazwę [[Gerichta]], czyli „sąd”."
+        },
+        {
+          "type": "image",
+          "asset": "battle_of_verdun_trenches_1916",
+          "ratio": "4:3",
+          "caption": "Okopy Verdun: krajobraz pożarty przez artylerię."
+        },
+        {
+          "type": "funFact",
+          "text": "Początkowe bombardowanie **21 lutego 1916 r.** było tak gwałtowne, że można je było usłyszeć aż w Wogezach, ponad **150 km**."
+        },
+        {
+          "type": "paragraph",
+          "text": "**21 lutego**, **1 200 armat** ostrzeliwuje linie francuskie. **25**, **fort Douaumont**, kluczowy dla obrony, upadł niemal bez walki. Paryż musi teraz postawić wszystko na Verdun: pułapka Falkenhayna działa."
+        }
+      ]
+    },
+    {
+      "id": "course_16_la_bataille_de_verdun_1916_p2",
+      "title": "Pétain, Święta Droga i rotacja wojsk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Generał **Philippe'a Petaina** organizuje przetrwanie sektora. **Święta Droga** łączy [[Bar-le-Duc]], miasto na tyłach, z Verdun: prawie **6000 ciężarówek** dziennie, jeden pojazd co **14 sekund**. Gdy się zepsuje, spychamy ciężarówkę do rowu, aby nie blokować drogi."
+        },
+        {
+          "type": "image",
+          "asset": "voie_sacree_verdun_trucks",
+          "ratio": "4:3",
+          "caption": "Voie Sacrée, ważna arteria zaopatrzenia Francji."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dzięki [[Norii]] Pétain szybko zmienił podziały: przez krótki czas pozostaliśmy na froncie, po czym odetchnęliśmy z ulgą. Wynik: około **70%** armii francuskiej walczy od czasu do czasu w Verdun. Bitwa staje się doświadczeniem narodowym."
+        }
+      ]
+    },
+    {
+      "id": "course_16_la_bataille_de_verdun_1916_p3",
+      "title": "Piekło armat, prawie bez zysku",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Latem [[Bitwa nad Sommą (1916)]], francusko-brytyjska ofensywa dalej na północ, odciążyła Verdun. Pod dowództwem generała **Roberta Nivelle** Francuzi odbili Douaumont, a następnie Fort Vaux. Bitwa zakończyła się 18 grudnia 1916. Linie ledwo się poruszyły."
+        },
+        {
+          "type": "funFact",
+          "text": "Fleury-devant-Douaumont został zabrany i powtórzony **16 razy** w ciągu dwóch miesięcy, a następnie wymazany z mapy. Jest to jedna z „martwych wiosek Francji”, wciąż administrowana bez mieszkańców."
+        },
+        {
+          "type": "paragraph",
+          "text": "Około **370 000** Francuzów i **330 000** Niemców pada lub zostaje okaleczonych. [[Ciężka artyleria Wielkiej Wojny]] zabija więcej niż w walce wręcz. [[Czerwone strefy]] nie nadają się do życia cywilnego: za dużo niewybuchów, za dużo zatrutej gleby."
+        }
+      ]
+    },
+    {
+      "id": "course_16_la_bataille_de_verdun_1916_p4",
+      "title": "Od ossuarium do uścisku dłoni",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W **Ossuarium w Douaumont** (1932) znajdują się szczątki **130 000** mieszanych żołnierzy francuskich i niemieckich. **22 sierpnia 1984**, prezydent Francji **François Mitterranda** i kanclerz Niemiec **Helmuta Kohla** trzymają się za ręce przed pomnikiem. Verdun staje się symbolem europejskiego pokoju."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "21 lutego 1916",
+              "title": "Uwertura Gerichta",
+              "detail": "Bezprecedensowy ostrzał artyleryjski."
+            },
+            {
+              "date": "25 lutego 1916",
+              "title": "Wodospad Douaumont",
+              "detail": "Szok polityczny w Paryżu."
+            },
+            {
+              "date": "lato 1916",
+              "title": "Suma",
+              "detail": "Alianci odciążają front Verdun."
+            },
+            {
+              "date": "18 grudnia 1916",
+              "title": "Koniec bitwy",
+              "detail": "Prawie żadnych korzyści terytorialnych."
+            },
+            {
+              "date": "22 września 1984",
+              "title": "Mitterranda-Kohla",
+              "detail": "Gest pojednania francusko-niemieckiego."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "**Verdun** (**1916**): **299** dni wojny przemysłowej, około **700 000** strat za zerowy zysk terytorialny, a później symbol pojednania francusko-niemieckiego."
+        }
+      ]
+    }
+  ]
+}

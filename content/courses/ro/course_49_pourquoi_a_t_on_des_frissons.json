@@ -1,0 +1,102 @@
+{
+  "id": "course_49_pourquoi_a_t_on_des_frissons",
+  "title": "De ce avem frisoane?",
+  "subtitle": "Corpul și emoțiile",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Frig, frică, muzică: fiorii au mai multe cauze. Toate trec prin sistemul nervos, dar nu din aceleași motive.",
+  "hero": {
+    "image": "pourquoi_a_t_on_des_frissons",
+    "ratio": "16:9",
+    "hook": "Un fior de frig și un fior de muzică nu spun aceeași poveste."
+  },
+  "sections": [
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tresori când ieși în ploaie. De asemenea, tremurați când auziți un cântec care vă supără. Același cuvânt, mecanisme diferite."
+        },
+        {
+          "type": "paragraph",
+          "text": "În ambele cazuri, organismul reacţionează rapid. Dar unul este folosit în principal pentru încălzire, celălalt este mai mult despre plăcere și emoții."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p1",
+      "title": "Fiorul frigului: un mini-cazan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Corpul vrea să rămână în jurul valorii de **37 °C**. Când pielea detectează frigul, alertează o zonă a creierului, **hipotalamus**, care acționează ca un termostat."
+        },
+        {
+          "type": "image",
+          "asset": "goosebumps_cold_skin",
+          "ratio": "4:3",
+          "caption": "Pielea de găină: un reflex vechi de a ridica hackles."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mușchii se contractă foarte repede și în mod repetat: acesta este fiorul. Aceste contracții produc căldură. „Buptea de găină” provine dintr-un reflex vechi: ridicarea firelor de păr pentru a izola mai bine. Acasă, cu blană puțină, servește în principal drept vestigiu."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p2",
+      "title": "Fiorul fricii",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Confruntat cu o amenințare, se activează [[Sistemul nervos simpatic]] (ramura „alerta” a sistemului nervos). Eliberează **adrenalina**. Mușchii se încordează, inima se grăbește, pielea poate tremura."
+        },
+        {
+          "type": "image",
+          "asset": "adrenaline_stress_response_body",
+          "ratio": "4:3",
+          "caption": "Adrenalina pregătește organismul să reacționeze rapid."
+        },
+        {
+          "type": "funFact",
+          "text": "Același sistem explică de ce ți se poate face pielea de găină în timp ce vizionezi un film de groază... în timp ce ești confortabil pe canapea."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p3",
+      "title": "Fiorul muzicii",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Anumite senzații tari, numite uneori „fiori”, ajung cu o emoție puternică: muzică, vorbire, film. Aceștia activează circuitul **răsplătit** al creierului, cu **dopamină**, o substanță legată de plăcere."
+        },
+        {
+          "type": "paragraph",
+          "text": "Acest lucru nu este util pentru supraviețuirea imediată. Mai degrabă, corpul este cel care reacționează la o emoție intensă, ca un val care trece."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p4",
+      "title": "Când să-ți faci griji?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Frisoanele cu febră mare pot semnala o infecție. Frisoanele constante fără un motiv clar merită îngrijiri medicale. Dar de cele mai multe ori, un fior de frig, stres sau muzică este pur și simplu corpul care își face treaba."
+        },
+        {
+          "type": "takeaway",
+          "text": "Fiorele reci produc căldură. Cei cu frică se pregătesc să reacționeze. Cele ale muzicii ating plăcerea emoțională. Același sentiment, cauze diferite."
+        }
+      ]
+    }
+  ]
+}

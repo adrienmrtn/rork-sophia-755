@@ -1,0 +1,131 @@
+{
+  "id": "course_147_l_architecture_gothique_les_cathedrales",
+  "title": "Gotik mimari: katedraller",
+  "subtitle": "12.-16. yüzyıl",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "12. yüzyıldan 16. yüzyıla kadar Gotik katedraller taşı gökyüzüne doğru kaldırdı. Sivri kemer, nervürlü kemerler, vitray pencereler: ışığın hizmetinde teknik bir devrim.",
+  "hero": {
+    "image": "l_architecture_gothique_les_cathedrales",
+    "ratio": "16:9",
+    "hook": "Orta Çağ, Tanrı'nın ışığa girmesi için taşı nasıl uçurdu?"
+  },
+  "sections": [
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "12. ve 16. yüzyıllar arasında Avrupa **Gotik katedrallerle** kaplıydı. Sadece kiliseler değil. Bunlar mühendislik zorluklarıdır: ışığı içeri almak için yer çekimine meydan okuyan taş kaplar."
+        },
+        {
+          "type": "paragraph",
+          "text": "“Gotik” kelimesi daha sonra bir hakaret, “Gotiklerin sanatı” olarak ortaya çıkacaktı. Ancak bu tarz inanç, kentsel refah ve teknik cesareti birleştirir. Halen şehir merkezlerimize hakimdir."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p1",
+      "title": "Saint-Denis: Taş hafiflemeyi öğreniyor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gotik, **Île-de-France**'de **1140** civarında doğdu. Kurucu şok, [[Başrahip Suger]] tarafından taşınan [[Saint-Denis Bazilikası]]'nin korosudur. Kalın duvarlı karanlık Romanesk kiliselerle karşı karşıya kalan Suger, daha birleşik, daha hafif, daha yüksek bir alan istiyordu."
+        },
+        {
+          "type": "image",
+          "asset": "saint_denis_basilica_gothic_abbot_suger",
+          "ratio": "4:3",
+          "caption": "Saint-Denis: Gotiklerin ata binmeyi öğrendiği laboratuvar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Üç icat birlikte çalışır: **** sivri kemer, daha uzun ve daha dar; ağırlığı belirli noktalara yoğunlaştıran **nervürlü tonoz**; ve itme kuvvetlerine karşı koyan harici bir yay olan [[uçan payanda]]. [[Uçan payanda ve kaburga tonozu]] birlikte duvarları serbest bırakır: büyük pencereler açılabilir."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p2",
+      "title": "İlahi dil olarak ışık",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Suger için ışık dekoratif bir detay değil. [[Işığın teolojisi (Abbot Suger)]]'ye göre renkli ışınlar ruhun Tanrı'ya doğru yükselmesine yardımcı olur. Duvarlar **vitray olur**. Pek çok kişinin okuma bilmediği bir toplumda bu görüntüler İncil'in ve şehrin yaşamının hikayesini anlatıyor."
+        },
+        {
+          "type": "funFact",
+          "text": "**Chartres**'de, 13. yüzyıldan kalma bazı vitray pencereler o kadar yoğun bir maviyi korumuştur ki, hâlâ bir imza haline gelen bir renk olan \"Chartres mavisi\"nden söz ediyoruz."
+        },
+        {
+          "type": "paragraph",
+          "text": "Katedral artık taştan bir kale değil. Bir ışık kafesine dönüşür."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p3",
+      "title": "Asırlardır süren bir proje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bir katedral inşa etmek genellikle **iki yüzyıldan fazla** daha fazla zaman alır. Savaşlar, salgın hastalıklar, parasızlık: Proje kesintilerle ilerliyor. **Paris'in Notre-Dame'ı**, **1163**'de başlar ve yaklaşık 180 yıl sonra **1345** civarında formunu bulur."
+        },
+        {
+          "type": "image",
+          "asset": "notre_dame_de_paris_cathedral_facade",
+          "ratio": "4:3",
+          "caption": "Notre-Dame de Paris: Ulusal bir sembol haline gelmiş bir Orta Çağ inşaat alanı."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bütün kasaba çalışıyor: taş ustaları, marangozlar, cam ustaları. Taş çıkarmak, odun taşımak, ekipleri beslemek: Katedral aynı zamanda ekonomik bir makinedir."
+        }
+      ]
+    },
+    {
+      "id": "course_147_l_architecture_gothique_les_cathedrales_p4",
+      "title": "Gösterişli Gotik'ten neo-Gotik'e",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stil gelişti: klasik Gotik (Chartres, Amiens), sonra ışıltılı (Sainte-Chapelle), sonra gösterişli, daha dekoratif. 19. yüzyılda Avrupa onu **neo-Gotik** ile yeniden keşfetti. **1880**'de tamamlanan **Köln** gibi tamamlanmamış projeler devam ediyor."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1140",
+              "title": "Saint-Denis",
+              "detail": "Suger, Gotik çağını başlatan koroyu başlatır."
+            },
+            {
+              "date": "1163",
+              "title": "Paris'in Notre-Dame'ı",
+              "detail": "Neredeyse iki asır sürecek bir projenin başlangıcı."
+            },
+            {
+              "date": "13. yüzyıl.",
+              "title": "Apogee",
+              "detail": "Chartres, Amiens, Reims klasik modeli empoze ediyor."
+            },
+            {
+              "date": "19. yüzyıl.",
+              "title": "Neo-Gotik",
+              "detail": "Avrupa, ortaçağ tarzını restore ediyor ve yeniden keşfediyor."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Gotik, katedrali bir ışık kabına dönüştürdü. Orta Çağ, sivri kemer ve uçan payanda sayesinde duvarları serbest bırakarak, hâlâ şehirlerimizi anlatan bir mimari icat etti."
+        }
+      ]
+    }
+  ]
+}

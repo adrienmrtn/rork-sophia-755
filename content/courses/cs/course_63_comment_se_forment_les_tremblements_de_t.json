@@ -1,0 +1,116 @@
+{
+  "id": "course_63_comment_se_forment_les_tremblements_de_t",
+  "title": "Jak vznikají zemětřesení?",
+  "subtitle": "Chyby a vlny",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Každý rok zažije Země statisíce zemětřesení. Většina je neviditelná. Několik jich změní celá města.",
+  "hero": {
+    "image": "comment_se_forment_les_tremblements_de_terre",
+    "ratio": "16:9",
+    "hook": "Zemětřesení není rozmar země. To je energie, která čekala příliš dlouho."
+  },
+  "sections": [
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Každý rok Země zaznamená přibližně **500 000 zjištěnítelných zemětřesení**. Jen malá část způsobuje velké škody. Zemětřesení není náhoda: je to náhlý konec dlouhého hromadění energie v horninách."
+        },
+        {
+          "type": "paragraph",
+          "text": "Abychom to pochopili, musíme vidět povrch planety jako skládačku pohyblivých desek. Tam, kde se tyto desky třou o sebe, narůstá napětí...až se zlomí."
+        }
+      ]
+    },
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_p1",
+      "title": "Desky, které se neustále pohybují",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zemský povrch je rozdělen na přibližně deset velkých **tektonický stůl**. Kloužou po měkčí vrstvě kabátu, [[Astenosféra]]. Jejich rychlost? Přibližně **1 až 10 cm za rok**, přibližně stejně jako růst nehtu."
+        },
+        {
+          "type": "image",
+          "asset": "earthquake_collapsed_buildings_urban",
+          "ratio": "auto",
+          "caption": "Zemětřesení náhle uvolní energii nahromaděnou podél zlomů."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na hranicích dominují tři scénáře. Desky se od sebe vzdalují (oceánské hřbety). Srazí se: někdy se jeden ponoří pod druhého, je to [[Subdukce]]. Nebo kloužou vedle sebe, jako po [[Zlom San Andreas]] v Kalifornii, dlouhé přibližně **1 300 km**."
+        },
+        {
+          "type": "funFact",
+          "text": "Podél San Andreas se Los Angeles přibližuje San Franciscu přibližně o **6 cm** ročně. Za **15 milionů let** by tato dvě města sousedila."
+        },
+        {
+          "type": "paragraph",
+          "text": "Právě na těchto hranicích dochází k zemětřesení. Pohybu desek brání tření hornin. Energie se tiše hromadí."
+        }
+      ]
+    },
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_p2",
+      "title": "Když závada povolí",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "K zemětřesení dochází podél **poruchy**: zlomu mezi dvěma bloky horniny. Teoreticky by desky měly klouzat nepřetržitě. V praxi toto skluzování často blokuje tření."
+        },
+        {
+          "type": "paragraph",
+          "text": "Během této doby plaky dále rostou. Skála se trochu deformuje, jako když se natahuje luk. Mluvíme o elastických omezeních. To může trvat desetiletí, někdy i staletí."
+        },
+        {
+          "type": "paragraph",
+          "text": "Při překročení meze odporu bloky náhle sklouznou. Energie odchází ve formě **eismických vln**. Bod zlomu hloubky se nazývá **soustředit**. Na povrchu je bod těsně nad **epicentrum**, kde jsou účinky často nejsilnější."
+        }
+      ]
+    },
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_p3",
+      "title": "Měření síly, strach z tsunami",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "K měření energie zemětřesení využívají seismologové především moment [[Stupnice velikosti]]. Je to logaritmická stupnice: každý stupeň násobí energii přibližně **32**. Zemětřesení o velikosti **8** proto uvolní přibližně **1000krát** více energie než při zemětřesení o velikosti **6**."
+        },
+        {
+          "type": "funFact",
+          "text": "Dochází také k zemětřesení **0** nebo záporné magnitudy. Jedná se o velmi malé události, viditelné pouze velmi citlivými senzory."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nejsilnější, jaká kdy byla naměřena moderními přístroji, je **Valdivia** v Chile v **1960**: velikost **9,5**. Pokud je ohnisko pod oceánem a zvedá mořské dno, může posunutý vodní sloupec vytvořit **tsunami**. V **2004** vyvolalo zemětřesení o síle **9.1** poblíž Sumatry vlnu tsunami, která zasáhla 14 zemí a vyžádala si přibližně **227 000** obětí."
+        }
+      ]
+    },
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_p4",
+      "title": "Vlny, pohotovost a budovy, které odolávají",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Po rozchodu odchází několik typů vln. **P vlny** (primární) přicházejí jako první: stlačují skálu jako harmoniku. Pak přijdou **ZZ** (sekundární) vlny, pomalejší a často ničivější. Povrchové vlny pak způsobí, že se země velmi viditelně rozkmitá."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zatím nevíme, jak přesně předpovědět den velkého zemětřesení. Na druhou stranu mapujeme rizikové oblasti. [[Zemětřesné inženýrství]] navrhuje budovy schopné odolat otřesům: mobilní základy, obří tlumiče, konstrukce pohlcující energii. V Japonsku včasné varování detekuje vlny P a může zastavit plyn nebo zpomalit vlaky dříve, než dorazí nejnebezpečnější vlny."
+        },
+        {
+          "type": "takeaway",
+          "text": "Zemětřesení nastane, když kameny přilepené podél zlomu náhle uvolní desítky let napětí. Energie se šíří ve vlnách a každý stupeň magnitudy tuto energii násobí přibližně **32**."
+        }
+      ]
+    }
+  ]
+}

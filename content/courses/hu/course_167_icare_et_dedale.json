@@ -1,0 +1,122 @@
+{
+  "id": "course_167_icare_et_dedale",
+  "title": "Ikarosz és Daidalosz",
+  "subtitle": "Túl közel repül a naphoz",
+  "subject": "mythologie",
+  "subcategory": "Greece: the gods",
+  "description": "Daedalus viaszszárnyakat készít, hogy elmeneküljön Krétáról. Fia, Ikarusz túl magasra repül, elesik, és a nevét adja egy tengernek. Mítosz a mértékről és a túlzásról.",
+  "hero": {
+    "image": "icare_et_dedale",
+    "ratio": "16:9",
+    "hook": "Egy apa szárnyakat talál ki. Egy fiú figyelmen kívül hagyja a figyelmeztetést. A tenger őrzi nevét."
+  },
+  "sections": [
+    {
+      "id": "course_167_icare_et_dedale_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A **Icarus** és apja, **Daedalus** az egyik legismertebb görög mítosz. A tengerbe zuhanó tinédzser képén túl a történet találékonyságról, korlátokról és a túl messzire menés kísértéséről beszél."
+        },
+        {
+          "type": "paragraph",
+          "text": "Egy lehetetlen menekülés története a [[Hibrisz és többlet]] tanulságává válik: az istenekkel egyenlővé akarni tenni azt jelenti, hogy megkockáztatjuk az égést."
+        }
+      ]
+    },
+    {
+      "id": "course_167_icare_et_dedale_p1",
+      "title": "Daedalus, saját labirintusának foglya",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Daedalus** egy legendás feltaláló, a [[Nyolcad vér]], a görögök ravasz intelligenciájának inkarnációja. **Minos** király udvarába száműzve Krétán felépítette a **Labirint**-t, egy olyan bonyolult börtönt, hogy senki sem menekül meg. Elrejti a **Minotaurusz**, a [[Pasiphae]] királynő tiltott szerelmeiből született szörnyeteget."
+        },
+        {
+          "type": "image",
+          "asset": "daedalus_labyrinth_crete_minotaur_myth",
+          "ratio": "4:3",
+          "caption": "Daedalus, a krétai labirintus építésze."
+        },
+        {
+          "type": "paragraph",
+          "text": "Amikor Minos megtudja, hogy Daedalus segített a hősnek, **Thészeusz** megszökni Ariadné fonalának köszönhetően, saját munkájukba zárja a feltalálót és kisfiát, **Icarus**. A szárazföldek és a tengerek zárva vannak. Ott marad az ég."
+        },
+        {
+          "type": "funFact",
+          "text": "A francia **„labirintus”** szó ettől a karaktertől származik: egy hely, ahol az ember eltéved, például az általa tervezett labirintus."
+        },
+        {
+          "type": "paragraph",
+          "text": "A madarak megfigyelése közben Daedalus két pár szárnyat készít: fát, tollat ​​és **viasz** méhecskét. A technológia kiúttá válik."
+        }
+      ]
+    },
+    {
+      "id": "course_167_icare_et_dedale_p2",
+      "title": "Repüljön túl magasan vagy túl alacsonyan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Indulás előtt Daedalus egy egyszerű szabályt ad Ikarusznak: kövesse a középső utat. Túl alacsony, a páratartalom elnehezíti a tollakat. Túl magasan a nap megolvasztja a viaszt. Ez az óvatosság [[Sophia]]-re emlékeztet, a helyismeret bölcsességére."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eleinte minden rendben van. Apa és fia az Égei-tenger szigetei felett repülnek. A földön élő pásztorok azt hiszik, hogy isteneket látnak. Aztán a részegség elfogja Ikaroszt. Felemelkedik, lenyűgözi az ég. A viasz meglágyul. A tollak lehullanak. Összecsapja csupasz karját, és belemerül a tengerbe."
+        },
+        {
+          "type": "image",
+          "asset": "icarus_falling_sun_bruegel_painting",
+          "ratio": "4:3",
+          "caption": "Ikarosz bukása, a festészet témája a reneszánsz óta."
+        },
+        {
+          "type": "funFact",
+          "text": "A mítosz tudományosan paradox: minél magasabbra mész, annál hidegebb lesz. Ikarosznak inkább meg kellett volna fagynia, mintsem látnia, hogy a viasz elolvad."
+        }
+      ]
+    },
+    {
+      "id": "course_167_icare_et_dedale_p3",
+      "title": "Büszkeség, ideális vagy elfeledett részlet?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az öregek mindenekelőtt a büszkeség büntetését látják: Ikarusz azért fizet, mert túl sokat akart. De a romantikusok, mint **Baudelaire**, az ideál hősévé teszik: jobb a napba nézve meghalni, mint óvatosan a földön élni."
+        },
+        {
+          "type": "paragraph",
+          "text": "Az idősebb **Pieter Bruegel festő** újabb olvasnivalót kínál. Festményén a bukás csak egy részlet: a szántó folytatja feladatát, a világ egy hősért sem áll meg. Az egyéni bravúr szinte láthatatlanná válik."
+        },
+        {
+          "type": "funFact",
+          "text": "Egyes verziók hozzáteszik, hogy Daedalus fia halálát is büntetésnek tekinti: egyszer féltékenységből megölte volna unokaöccsét, **Perdix** túlságosan tehetséges feltalálót."
+        }
+      ]
+    },
+    {
+      "id": "course_167_icare_et_dedale_p4",
+      "title": "Egy tenger, egy sziget, egy lecke",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az áramlatok Ikarusz testét egy sziget felé viszik, amelyet a hős **Héraklész** [[Ikaria]]-nek nevez. A környező tenger a **Ikarian-tenger** néven alakul. Daedalus egyedül éri el Szicíliát, és felajánlja szárnyait **Apollo** istennek, megesküdve, hogy soha többé nem repül."
+        },
+        {
+          "type": "paragraph",
+          "text": "A mítosz mindenhol fennmarad: a repülésben mint álom és kockázat, a pszichológiában mint „Ikarusz-komplexus” a túl gyors siker vágya. Daedalus továbbra is a kétértelmű feltaláló, aki a legjobbra (a szárnyakra) és a legrosszabbra is képes. [[A labirintus, mint szimbólum]] emlékeztet arra, hogy a technika is korlátozhat."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Daedalus** viaszszárnyakkal menekül Krétáról. **Icarus** figyelmen kívül hagyja a figyelmeztetést, túl közel repül a naphoz és megfullad. A technológia felszabadít, de mérték nélkül megöl."
+        }
+      ]
+    }
+  ]
+}

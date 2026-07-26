@@ -1,0 +1,122 @@
+{
+  "id": "course_160_la_liberte_de_la_presse_et_le_journalism",
+  "title": "Wolność prasy i dziennikarstwo fotograficzne",
+  "subtitle": "XX wiek",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture + iconic works",
+  "description": "Od Cartier-Bressona po Nicka Uta – zdjęcie prasowe ukazuje historię na jednym obrazie. Wolność, etyka i władza mediów w tym samym spojrzeniu.",
+  "hero": {
+    "image": "la_liberte_de_la_presse_et_le_journalisme_photographique",
+    "ratio": "16:9",
+    "hook": "Zdjęcie może zatrzymać wojnę… lub skłamać. Musimy jeszcze móc to opublikować."
+  },
+  "sections": [
+    {
+      "id": "course_160_la_liberte_de_la_presse_et_le_journalism_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dziennikarstwo fotograficzne rodzi się, gdy obraz utrwala wiadomości równie mocno jak artykuł. Pojedynczy pogląd może podsumować wojnę, głód i zwycięstwo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ale bez wolności prasy te obrazy pozostają w szufladzie."
+        }
+      ]
+    },
+    {
+      "id": "course_160_la_liberte_de_la_presse_et_le_journalism_p1",
+      "title": "Decydujący moment",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Henri Cartier-Bresson]] teoretyzuje „decydujący moment”: bycie we właściwym miejscu, we właściwym czasie i we właściwej oprawie. [[Gerda Taro]] wraz z Capą zginęli, pisząc o hiszpańskiej wojnie domowej. Fotoreportaż ma swoich męczenników."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pojawienie się ilustrowanych magazynów i agencji fotograficznych sprofesjonalizowało ten zawód. Reporter wychodzi z urządzeniem jak inni z notatnikiem. Ryzyko jest fizyczne."
+        },
+        {
+          "type": "image",
+          "asset": "cartier_bresson_decisive_moment",
+          "ratio": "4:3",
+          "caption": "Leica na ramieniu: ulica jako teren."
+        }
+      ]
+    },
+    {
+      "id": "course_160_la_liberte_de_la_presse_et_le_journalism_p2",
+      "title": "Obrazy, które zmieniają debatę",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W Wietnamie zdjęcie [[Nick Ut]] przedstawiające małą dziewczynkę spaloną napalmem szokuje opinię publiczną. Obraz nie sam „kończy” wojnę, ale sprawia, że ​​nie da się zaprzeczyć kosztom ludzkim."
+        },
+        {
+          "type": "paragraph",
+          "text": "Duże demokracje teoretycznie chronią prasę. Dyktatury kontrolują wizjer. Swoboda publikowania wizerunku staje się barometrem politycznym."
+        },
+        {
+          "type": "funFact",
+          "text": "Wiele słynnych zdjęć zostało najpierw ocenzurowanych lub poddanych dyskusji, zanim stały się dowodem historycznym."
+        }
+      ]
+    },
+    {
+      "id": "course_160_la_liberte_de_la_presse_et_le_journalism_p3",
+      "title": "Etyka i koncentracja",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Etyka fotoreportażu]] zadaje pytania: czy możemy ująć cierpienie? Retusz? [[Koncentracja mediów i niezależność redakcyjna]] zagraża także swobodnemu spojrzeniu."
+        },
+        {
+          "type": "paragraph",
+          "text": "W erze cyfrowej niezbędna jest weryfikacja: metadanych, wyszukiwania wstecznego obrazu, kontekstu. Fotografia pozostaje potężna, ale można nią manipulować szybciej niż kiedykolwiek."
+        },
+        {
+          "type": "image",
+          "asset": "photojournalism_war_correspondent_camera",
+          "ratio": "4:3",
+          "caption": "Reporter: świadek uzbrojony w cel."
+        }
+      ]
+    },
+    {
+      "id": "course_160_la_liberte_de_la_presse_et_le_journalism_p4",
+      "title": "Dziedzictwo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W dobie sieci każdy robi zdjęcia. Zapotrzebowanie na wiarygodne, kontekstualne obrazy, chronione prawem do informacji, nigdy nie było tak silne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aby w pełni zrozumieć wolność prasy i dziennikarstwo fotograficzne, należy pamiętać o jednym: każdy szczegół techniczny służy emocji lub idei. Praca nigdy nie ma wyłącznie charakteru dekoracyjnego."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kontekst jest tak samo ważny jak styl. Daty, miejsca, sponsorzy, publiczność: to wszystko wyjaśnia, dlaczego formularz pojawia się w konkretnym momencie, a nie wcześniej."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wreszcie dziedzictwo mierzy się w perspektywie długoterminowej. To, co dziś widzimy w muzeach, filmach czy muzyce popularnej, wciąż nosi ślady tych wynalazków."
+        },
+        {
+          "type": "paragraph",
+          "text": "Trenuj oko, broń sygnalistów, płać za dziennikarstwo terenowe: bez tego pozostanie jedynie przepływ. Dziedzictwo XX wieku jest wymogiem, a nie nostalgią."
+        },
+        {
+          "type": "takeaway",
+          "text": "Od Leiki Cartiera-Bressona po zdjęcia wojenne – fotoreportaż udowodnił, że darmowe zdjęcie może mieć taką samą wagę jak artykuł redakcyjny."
+        }
+      ]
+    }
+  ]
+}

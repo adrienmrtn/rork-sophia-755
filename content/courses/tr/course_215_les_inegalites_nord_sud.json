@@ -1,0 +1,104 @@
+{
+  "id": "course_215_les_inegalites_nord_sud",
+  "title": "Kuzey-Güney eşitsizlikleri",
+  "subtitle": "İki hızlı bir dünya",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Gezegendeki en zengin yüzde 10, küresel gelirin yarısından fazlasını elinde tutuyor. Ancak otuz yılda aşırı yoksulluk dörde bölündü.",
+  "hero": {
+    "image": "les_inegalites_nord_sud",
+    "ratio": "16:9",
+    "hook": "Bir Nijer sakininin bir gün çalışarak kazandığı parayı bir Amerikalı bir saatte kazanıyor."
+  },
+  "sections": [
+    {
+      "id": "course_215_les_inegalites_nord_sud_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zengin ve fakir ülkeler arasındaki uçurum bugün dünyanın en çarpıcı gerçeklerinden biri olmaya devam ediyor. Küreselleşme, yaşam standartlarında bir yakınlaşma vaat ediyordu, ancak ülkeler arasındaki servet uçurumu hâlâ çok büyük."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ancak yakın tarih sadece kasvetli değil: aşırı yoksulluk son otuz yılda hiç olmadığı kadar hızlı azaldı. Bu ders bu eşitsizliklerin kökenlerini ve bu garip paradoksun nedenlerini araştırıyor."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p1",
+      "title": "İki hızlı bir dünya",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**** dünya nüfusunun en zengin %10'u, küresel gelirin %52'sinden fazlasını elinde tutuyor. En yoksul yüzde 50'nin pastanın yalnızca yüzde 8'ini paylaşması gerekiyor. Bu zenginlik yoğunlaşması insanlık tarihinde hiç bu kadar büyük olmamıştı."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu ayrım yaşam beklentisinde de görülüyor: Japonya'da 83 yıla ulaşıyor, Orta Afrika Cumhuriyeti'nde ise 55 yıla düşüyor. Bu boşluklar şans eseri değil; içme suyuna, gıdaya ve sağlık hizmetlerine erişimdeki eşitsizliklerden kaynaklanıyor."
+        },
+        {
+          "type": "funFact",
+          "text": "Amerika Birleşik Devletleri'nde yaşayan bir kişi ortalama olarak bir saatlik çalışmadan, Nijer'de yaşayan bir kişinin tüm gün kazandığı kadar kazanıyor."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p2",
+      "title": "Tarihsel kökler hala hayatta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bu farklılıkları anlamak için sömürgeleştirmeye geri dönmeliyiz. Avrupalı ​​güçler birçok güney bölgesini hammadde (kahve, kakao, pamuk) tedarikçisi olarak örgütlediler ve kendi fabrikalarını korumak için kendi sanayileşmelerini yavaşlattılar."
+        },
+        {
+          "type": "image",
+          "asset": "global_inequality_rich_poor_contrast_photograph",
+          "ratio": "16:9",
+          "caption": "Kuzey ve Güney arasındaki zenginlik uçurumu gezegendeki en büyük uçurumlar arasında olmayı sürdürüyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu mantık bugün de [[ticaret şartları]] aracılığıyla devam etmektedir: Güney ülkeleri genellikle fiyatı büyük ölçüde değişen hammaddeler satarken, fiyatı yalnızca artan işlenmiş ürünleri satın alırlar. Buna borcun ağırlığı da ekleniyor: Faizin geri ödenmesi bazen ulusal bütçede eğitim veya sağlıktan daha fazla yer kaplıyor."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p3",
+      "title": "Gerçek ilerleme, ancak düzensiz",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ancak son otuz yılda mutlak yoksullukta olağanüstü bir düşüş görüldü; bu düşüş, 2020 öncesindeki %10'a kıyasla 1990'da dünya nüfusunun %36'sını etkiledi. Bu ilerleme esas olarak Çin ve Hindistan'ın hızlı büyümesinden kaynaklanıyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu ilerlemenin gizli bir yanı var: İktisatçı Branko Milanoviç'in [[“fil eğrisi”]] bunu gösteriyor. Asyalı orta sınıfların gelirlerinde patlama yaşandı, ancak zengin ülkelerdeki işçi sınıfları küresel rekabetle karşı karşıya kaldıklarından durgunlaştı. Dolayısıyla ülkeler arasındaki eşitsizliklerin azaltılması, zengin ülkeler içinde bile yeni gerginliklerin yaşanmasını engelleyemedi."
+        }
+      ]
+    },
+    {
+      "id": "course_215_les_inegalites_nord_sud_p4",
+      "title": "İklim, yeni bir ayrım çizgisi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kuzey-Güney eşitsizliklerinin geleceği artık iklime bağlı. Tarihsel olarak sera gazı emisyonlarından en az sorumlu olan Güney ülkeleri, yine de kuraklığa, sellere ve artan su seviyelerine en fazla maruz kalan ülkelerdir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu açıkları sürdürülebilir bir şekilde azaltmak için uluslararası toplum yeni yollar araştırıyor: [[resmi kalkınma yardımı]], enerji geçişini veya en kırılgan ülkelerin borçlarının iptalini hedefliyor. En zenginlerin zenginliği en yoksullardan daha hızlı arttığı sürece gerilim yüksek olmaya devam edecek."
+        },
+        {
+          "type": "takeaway",
+          "text": "Dünyanın en zengin yüzde 10'u küresel gelirin yarısından fazlasını elde ediyor, ancak Çin ve Hindistan'ın yükselişi sayesinde aşırı yoksulluk son otuz yılda her zamankinden daha hızlı azaldı. Bu Kuzey-Güney ayrımında bir sonraki büyük zorluk iklim olacak."
+        }
+      ]
+    }
+  ]
+}

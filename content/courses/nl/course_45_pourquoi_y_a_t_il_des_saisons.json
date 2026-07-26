@@ -1,0 +1,100 @@
+{
+  "id": "course_45_pourquoi_y_a_t_il_des_saisons",
+  "title": "Waarom zijn er seizoenen?",
+  "subtitle": "Aarde & Zon",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "De seizoenen komen niet doordat de aarde dichter of verder van de zon staat. De echte oorzaak is de kanteling van de aardas.",
+  "hero": {
+    "image": "pourquoi_y_a_t_il_des_saisons",
+    "ratio": "16:9",
+    "hook": "Nee, de zomer komt niet omdat de aarde dichter bij de zon komt."
+  },
+  "sections": [
+    {
+      "id": "course_45_pourquoi_y_a_t_il_des_saisons_intro",
+      "title": "Inleiding",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Veel mensen denken dat de zomer komt wanneer de aarde **dichter** bij de zon is, en de winter wanneer het **worm** is. Dit is niet waar. En we zien het meteen: als het zomer is in Frankrijk, is het winter in Australië."
+        },
+        {
+          "type": "paragraph",
+          "text": "De echte verklaring ligt in één ding: de rotatie-as van de aarde is **gekanteld**, gekanteld ten opzichte van het vlak van haar baan rond de zon."
+        }
+      ]
+    },
+    {
+      "id": "course_45_pourquoi_y_a_t_il_des_saisons_p1",
+      "title": "De aarde kantelt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "De aarde draait om haar as in **24 uur**: het is dag en nacht. Het draait ook rond de zon in **jaar jaar** in een baan in de vorm van een **ellipsen**, een enigszins afgeplatte cirkel. Maar zijn as, de denkbeeldige lijn van de Noordpool naar de Zuidpool, is niet recht ten opzichte van zijn baan. Hij helt ongeveer **23,5 cijfers**: dit is de [[Axiale kanteling van de aarde (23,5°)]]."
+        },
+        {
+          "type": "image",
+          "asset": "earth_summer_winter_seasons_illustration",
+          "ratio": "auto",
+          "caption": "De kanteling van de aardas verklaart de cyclus van de seizoenen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Deze kanteling blijft het hele jaar door ongeveer in dezelfde richting. Het wijst altijd naar hetzelfde deel van de hemel, vlakbij de Poolster. Resultaat: afhankelijk van waar de aarde zich in haar baan bevindt, ‘kijkt’ het ene halfrond meer naar de zon, het andere halfrond minder."
+        }
+      ]
+    },
+    {
+      "id": "course_45_pourquoi_y_a_t_il_des_saisons_p2",
+      "title": "Meer licht, meer warmte",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In de zomer kantelt de Noordpool op het noordelijk halfrond naar de zon. De dagen worden langer: de **fotoperiode**, de verhouding tussen de lengte van dag en nacht, neemt toe. Ook komen de stralen ‘rechtstreeks’ op de grond terecht: de energie wordt geconcentreerd op een kleiner oppervlak. Het is dus warmer."
+        },
+        {
+          "type": "funFact",
+          "text": "In januari is de aarde zelfs iets **dichter** bij de zon dan in juli: het is het **perihelium**, het dichtstbijzijnde punt in de baan. En toch is het hier winter. Bewijs dat afstand de seizoenen niet verklaart."
+        },
+        {
+          "type": "paragraph",
+          "text": "In de winter is het het tegenovergestelde: korte dagen, meer schuine stralen, energie verspreid over een groter oppervlak. Minder warmte ontvangen. De **zonenieuwende**, tijden waarop de zon haar noordelijkste of zuidelijkste positie bereikt, markeren het begin van de zomer of de winter."
+        }
+      ]
+    },
+    {
+      "id": "course_45_pourquoi_y_a_t_il_des_saisons_p3",
+      "title": "En dichtbij de evenaar?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In de buurt van de **evenaar**, de denkbeeldige lijn die de aarde in twee hemisferen verdeelt, verandert de kanteling weinig over de lengte van de dag. Er zijn niet echt vier seizoenen zoals in Europa, maar eerder drogere en nattere periodes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bij **palen** is het effect extreem: meerdere maanden aaneengesloten dag in de zomer, meerdere maanden nacht in de winter. Het contrast is daar veel sterker dan in Frankrijk."
+        }
+      ]
+    },
+    {
+      "id": "course_45_pourquoi_y_a_t_il_des_saisons_p4",
+      "title": "Een planeet zonder kanteling",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Als de aardas perfect recht zou zijn, zou elke plaats het hele jaar door ongeveer dezelfde hoeveelheid zonlicht ontvangen. Geen echte zomer meer, geen echte winter meer. Het klimaat, de culturen, de migraties van dieren: alles zou anders zijn."
+        },
+        {
+          "type": "takeaway",
+          "text": "De seizoenen komen voort uit de helling van de aardas, ongeveer **23,5°**, en niet uit de afstand tot de zon. Eén halfrond leunt naar de zon: het is zomer. De ander neigt naar het tegenovergestelde: het is winter."
+        }
+      ]
+    }
+  ]
+}

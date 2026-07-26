@@ -1,0 +1,120 @@
+{
+  "id": "course_67_qu_est_ce_qu_un_trou_noir",
+  "title": "Co to jest czarna dziura?",
+  "subtitle": "Ekstremalna dotkliwość",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Czarna dziura nie jest kosmicznym odkurzaczem. Jest to region, w którym grawitacja jest tak silna, że ​​nawet światło nie może uciec.",
+  "hero": {
+    "image": "qu_est_ce_qu_un_trou_noir",
+    "ratio": "16:9",
+    "hook": "Nic nie wychodzi, nawet światło. Skończyło się jednak na sfotografowaniu jego cienia."
+  },
+  "sections": [
+    {
+      "id": "course_67_qu_est_ce_qu_un_trou_noir_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Czarna dziura to obszar **przestrzeń i czasoprzestrzeni**, tkanki łączącej przestrzeń i czas, gdzie grawitacja jest tak intensywna, że ​​prędkość potrzebna do ucieczki przekracza prędkość światła. Nic nie wychodzi: nieważne, brak sygnału świetlnego."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nie jest to „dziura” w sensie tunelu. Jest to ekstremalne stężenie materiału, które bardzo mocno zagina tę tkaninę. Od dawna czysta teoria wynikająca z równań Einsteina, czarne dziury są dziś obserwowane na kilka sposobów."
+        }
+      ]
+    },
+    {
+      "id": "course_67_qu_est_ce_qu_un_trou_noir_p1",
+      "title": "Kiedy gwiazda upada",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gwiezdna czarna dziura często rodzi się w wyniku śmierci bardzo masywnej gwiazdy, o masie co najmniej **20 do 25 mas Słońca. Tutaj możesz zobaczyć czego szukasz jeśli szukasz:**synteza** jądrowa** wypycha na zewnątrz. W sercu gwiazdy wodór przekształca się w hel."
+        },
+        {
+          "type": "image",
+          "asset": "black_hole_accretion_disk_galaxy",
+          "ratio": "auto",
+          "caption": "Czarna dziura otoczona żarzącym się dyskiem akrecyjnym."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gdy skończy się paliwo, ciśnienie spada. Serce gwiazdy zostaje zmiażdżone. Eksplozja **supernowej** może następnie rozświetlić galaktykę. Jeśli pozostały rdzeń jest wystarczająco masywny, nic nie powstrzyma kompresji."
+        },
+        {
+          "type": "paragraph",
+          "text": "W centrum teoria opisuje [[Osobliwość grawitacyjna]]: punkt, w którym gęstość i krzywizna stają się ekstremalne i w którym nasze obecne równania przestają działać dobrze. Wokół niego znajduje się [[Horyzont zdarzeń]]: niewidzialna granica. Po przekroczeniu nie ma możliwości powrotu do reszty wszechświata."
+        },
+        {
+          "type": "funFact",
+          "text": "Jeśli spadniesz w stronę czarnej dziury, grawitacja będzie działać na Twoje stopy znacznie mocniej niż na głowę. To rozciąganie nazywa się „spaghettyfikacją”."
+        }
+      ]
+    },
+    {
+      "id": "course_67_qu_est_ce_qu_un_trou_noir_p2",
+      "title": "Nie kosmiczny odkurzacz",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wbrew powszechnemu przekonaniu czarna dziura nie zasysa wszystkiego, co przechodzi w oddali. Jego grawitacja zależy od masy i odległości, jak w przypadku każdego obiektu. Gdyby Słońce zostało zastąpione czarną dziurą o tej samej masie, Ziemia nadal krążyłaby po orbicie. Ale bez światła i ciepła zamarzlibyśmy."
+        },
+        {
+          "type": "paragraph",
+          "text": "W sercach prawie wszystkich galaktyk znajdują się także **supermasywne czarne dziury** o masach od milionów do miliardów Słońc. W Drodze Mlecznej jest to **Strzelec A***, około **4 miliony** mas Słońca."
+        },
+        {
+          "type": "paragraph",
+          "text": "Często można je dostrzec dzięki [[Dysk akrecyjny]]: pierścieniowi gazu i pyłu, który obraca się wokół nich bardzo szybko. Tarcie nagrzewa ten materiał, aż stanie się niezwykle jasny w promieniach rentgenowskich lub falach radiowych. Następnie widzimy cień czarnej dziury na tym jasnym tle."
+        }
+      ]
+    },
+    {
+      "id": "course_67_qu_est_ce_qu_un_trou_noir_p3",
+      "title": "2019: pierwsze zdjęcie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W **Akwitnia 2019** projekt Event Horizon Telescope publikuje pierwszy obraz czarnej dziury. Łącząc osiem radioteleskopów za pomocą [[Interferometria]], badacze tworzą wirtualny teleskop wielkości Ziemi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Celem jest **M87***, supermasywna czarna dziura w galaktyce Messier 87, **55 milionów** lat świetlnych stąd. Widzimy jasny pierścień wokół ciemnego obszaru: sylwetkę horyzontu zdarzeń. W **2022** następuje zdjęcie naszego sąsiada Strzelca A*."
+        },
+        {
+          "type": "funFact",
+          "text": "Od czasu **2015** obserwatoria LIGO i Virgo wykryły również **fale grawitacyjne**: małe wibracje czasoprzestrzeni powstające podczas łączenia się dwóch czarnych dziur."
+        }
+      ]
+    },
+    {
+      "id": "course_67_qu_est_ce_qu_un_trou_noir_p4",
+      "title": "Hawkinga i powolne parowanie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W **1974** brytyjski fizyk **Stephena Hawkinga** wykazał, że czarna dziura nie będzie całkowicie czarna. Ze względu na efekty kwantowe w pobliżu horyzontu emitowałby bardzo słabe promieniowanie: [[Promieniowanie Hawkinga]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wynik: izolowana czarna dziura powoli traciłaby masę i ostatecznie wyparowała. W przypadku gwiezdnej czarnej dziury zajęłoby to fantastycznie więcej czasu niż obecny wiek Wszechświata. Pomysł ten nasuwa także paradoks informacyjny: co stanie się z informacją o tym, co wpadło do środka, jeśli czarna dziura zniknie?"
+        },
+        {
+          "type": "paragraph",
+          "text": "W pobliżu czarnej dziury czas płynie także wolniej dla odległego obserwatora, co jest relatywistycznym efektem **dylatacji czasu**. Obiekty te pozostają jednymi z najlepszych laboratoriów do badania granic fizyki."
+        },
+        {
+          "type": "takeaway",
+          "text": "Czarna dziura często powstaje w wyniku zapadnięcia się masywnej gwiazdy. Jest ograniczony przez horyzont zdarzeń, granicę sfotografowaną po raz pierwszy w **2019** wokół M87*."
+        }
+      ]
+    }
+  ]
+}

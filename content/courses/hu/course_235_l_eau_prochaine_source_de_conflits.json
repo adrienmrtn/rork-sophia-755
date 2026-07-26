@@ -1,0 +1,112 @@
+{
+  "id": "course_235_l_eau_prochaine_source_de_conflits",
+  "title": "Víz: a következő konfliktusforrás?",
+  "subtitle": "A 21. század kék aranya",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "A Föld vizének kevesebb mint 1%-a friss és könnyen hozzáférhető. Egyes szakértők már ebben látják a következő nagy konfliktusforrást.",
+  "hero": {
+    "image": "l_eau_prochaine_source_de_conflits",
+    "ratio": "16:9",
+    "hook": "A Föld vizének kevesebb mint 1%-a friss és hozzáférhető. A többi vitatkozik."
+  },
+  "sections": [
+    {
+      "id": "course_235_l_eau_prochaine_source_de_conflits_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az édesvíz az emberi élet legfontosabb erőforrása. Manapság ez is egyre ritkább: a demográfiai adatok növekszik, az éghajlat változik, és egyes szakértők már a 21. század első „vízháborúit” jósolják."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ez a kurzus azt vizsgálja, hogy egy ilyen létfontosságú erőforrás miért válik fontos stratégiai kérdéssé, amely képes a szomszédos országokat közelebb hozni egymáshoz, vagy szembeszállni velük."
+        }
+      ]
+    },
+    {
+      "id": "course_235_l_eau_prochaine_source_de_conflits_p1",
+      "title": "Ritka, rosszul elosztott forrás",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A Földet 70%-ban víz borítja, ezért a „kék bolygó” becenevet kapta. De ez a víz szinte mind sós. Az édesvíz a teljes mennyiségnek csak körülbelül 3%-át teszi ki, és ennek kétharmada jégként, sarki jégsapkákban és gleccserekben rekedt. Végső soron a folyékony és hozzáférhető édesvíz (tavak, folyók, sekély víztartó rétegek) a bolygó összes vízének kevesebb mint 1%-át teszi ki."
+        },
+        {
+          "type": "image",
+          "asset": "dried_riverbed_water_scarcity_drought",
+          "ratio": "16:9",
+          "caption": "A hozzáférhető édesvíz a Föld teljes vízmennyiségének kevesebb mint 1%-át teszi ki."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ez a hiány nem egyenlően oszlik meg. Egyes országok, mint például Brazília, Kanada vagy Oroszország, óriási tartalékokkal rendelkeznek. Mások, például a Közel-Kelet vagy Észak-Afrika tartós **[[Víz stressz]]**: vízigényük meghaladja a terület által biztosítani tudó mennyiséget. 2024-ben körülbelül 4 milliárd ember él évente legalább egy hónapot ebben a helyzetben."
+        },
+        {
+          "type": "funFact",
+          "text": "A 20. században a világ népessége megháromszorozódott, de a vízfogyasztás hatszorosára nőtt, részben az iparosodás és a húsban gazdagabb étrend miatt."
+        }
+      ]
+    },
+    {
+      "id": "course_235_l_eau_prochaine_source_de_conflits_p2",
+      "title": "A közös folyók geopolitikája",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A feszültségek különösen akkor keletkeznek, ha egy erőforrást megosztanak. A világon több mint 260 folyó **határon átnyúló**: több országon áthalad, kényszerfüggőséget hozva létre a folyásiránnyal feljebb lévők között, akik a forrást irányítják, és a folyásirányban lefelé találhatók között, akik megkapják, ami belőle marad."
+        },
+        {
+          "type": "paragraph",
+          "text": "A Nílus jól szemlélteti ezt a feszültséget. Etiópia megépítette a **[[GERD]]**-t, egy hatalmas gátat a Kék-Níluson, hogy áramot termeljen és önellátóbbá váljon. Ám Egyiptom, amelynek vizének 95%-a a Nílustól függ, minden egyes köbmétert a vízfolyással szemben közvetlen veszélyként érzékel a biztonságára nézve."
+        },
+        {
+          "type": "funFact",
+          "text": "Az India és Pakisztán között 1960-ban aláírt Indus folyó szerződés három háborút vészelt át a két ország között anélkül, hogy megtört volna: bizonyíték arra, hogy a víz a béke hatékony eszköze is lehet."
+        }
+      ]
+    },
+    {
+      "id": "course_235_l_eau_prochaine_source_de_conflits_p3",
+      "title": "Technológia a hiány ellen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A vízhiány miatt egyes országok a technológiára támaszkodnak. A tengervizet ivóvízzé alakító **szótalanítás** az Öböl-menti országokban és a Közel-Keleten meghonosodott. Izrael ivóvizének több mint 80%-át sótalanító üzemekkel állítja elő. A folyamat azonban továbbra is drága és energiaigényes, és **sóoldat**, nagyon sós víz szabadul fel, amely károsíthatja a tengeri ökoszisztémákat."
+        },
+        {
+          "type": "paragraph",
+          "text": "Más megoldások a józanságon alapulnak. A csepegtető öntözés, amely közvetlenül a növények gyökereihez juttatja a vizet, 30-70 százalékkal csökkenti a mezőgazdasági fogyasztást."
+        },
+        {
+          "type": "funFact",
+          "text": "**[[Szingapúr]]**-ben, egy kis területen, ahol nincsenek nagy vízkészletek, a szennyvizet olyan fejlett technikákkal tisztítják, hogy az tisztábbá válik, mint a forrásvíz, mielőtt „NEWater” néven újrahasznosítanák."
+        }
+      ]
+    },
+    {
+      "id": "course_235_l_eau_prochaine_source_de_conflits_p4",
+      "title": "A kék arany megosztott kormányzása felé",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A „vízháborúk” előrejelzései ellenére a történelem azt mutatja, hogy ezt az erőforrást gyakrabban használták együttműködésre, mint nyílt konfliktusra. A válságok elkerülésének legjobb módja továbbra is a vízgyűjtő bizottságok és a szomszédos országok közötti szerződések létrehozása."
+        },
+        {
+          "type": "paragraph",
+          "text": "Egy fogalom segít megérteni a probléma mértékét: a **[[virtuális víz]]**, vagyis a termék előállításához szükséges vízmennyiség. A búza importjával egy vízhiányos ország valójában azt a vizet importálja, amelyet máshol termeltek. Például egy kilogramm marhahús előállításához körülbelül 15 000 liter vízre van szükség, míg egy kilogramm búzához 1500 liter."
+        },
+        {
+          "type": "takeaway",
+          "text": "A hozzáférhető édesvíz a Föld vizének kevesebb mint 1%-át teszi ki, és emberek százmilliói élnek ellentétes érdekű országok által megosztott medencékben. A technológia és a nemzetközi együttműködés továbbra is a legjobb fegyver a jövőbeli vízválságokkal szemben."
+        }
+      ]
+    }
+  ]
+}

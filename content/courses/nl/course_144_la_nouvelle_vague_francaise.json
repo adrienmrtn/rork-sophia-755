@@ -1,0 +1,126 @@
+{
+  "id": "course_144_la_nouvelle_vague_francaise",
+  "title": "De Franse Nieuwe Golf",
+  "subtitle": "1959-1968",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "Jonge critici van *Bioscoopnotitieboekjes* gaan achter de camera. Tussen **1959** en **1968** heeft de New Wave de film uit de studio bevrijd en de moderne auteurscinema uitgevonden.",
+  "hero": {
+    "image": "la_nouvelle_vague_francaise",
+    "ratio": "16:9",
+    "hook": "Filmcritici stelen camera's en vinden de zevende kunst opnieuw uit."
+  },
+  "sections": [
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_intro",
+      "title": "Inleiding",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "De **Nieuwe golf** (1959-1968) is geen eenvoudige stijl. Het is een machtsgreep. Jonge Franse filmliefhebbers vinden studiocinema te strak, te gepolijst en te vooraf geschreven. Ze willen filmen zoals je een roman schrijft: vrijelijk, in de ik-persoon."
+        },
+        {
+          "type": "paragraph",
+          "text": "Door van kritiek naar productie te gaan, maken ze van de regisseur de echte auteur van de film. En ze veranderen de wereldcinema."
+        }
+      ]
+    },
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_p1",
+      "title": "Eerst een revolutie van ideeën",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vóór de sets ligt er een tijdschrift: de **Bioscoopnotitieboekjes**, opgericht in **1951** door [[André Bazin]]. Om hem heen jonge critici: **Jean-Luc Godard**, **François Truffaut**, **Claude Chabrol**, **Jacques Rivette**, **Erik Rommer**. Hun centrale idee heet de [[Auteur theorie]]."
+        },
+        {
+          "type": "image",
+          "asset": "cahiers_du_cinema_magazine_1950s",
+          "ratio": "4:3",
+          "caption": "Les Cahiers du cinéma: de school waar de New Wave leerde nadenken over film."
+        },
+        {
+          "type": "paragraph",
+          "text": "Voor hen is de echte maker niet de scenarioschrijver, maar degene die regisseert. De kadrering, het ritme, de bezuinigingen: dit zijn de handtekening van een auteur, zoals de stijl van een romanschrijver."
+        }
+      ]
+    },
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_p2",
+      "title": "1959: Truffaut en Godard verschijnen op het toneel",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In **1959** zegevierde *De vierhonderd slagen* van **François Truffaut** in Cannes. De film volgt **Antoine Doinel**, een tiener die uit elkaar gaat, gespeeld door [[Jean-Pierre Leaud]]. De camera volgt het leven in plaats van een strikt scenario. De laatste blik naar ons gaat over de [[vierde muur]]: de held kijkt het publiek aan, zonder happy end."
+        },
+        {
+          "type": "image",
+          "asset": "truffaut_400_coups_antoine_doinel_film",
+          "ratio": "4:3",
+          "caption": "Antoine Doinel met uitzicht op zee: een jongere die een duidelijk omschreven lot weigert."
+        },
+        {
+          "type": "funFact",
+          "text": "Het jaar daarop schokte *Buiten adem* van Godard, met [[Jean Paul Belmondo]], door zijn abrupte onderbrekingen. Godard knipt midden in de gebaren, alsof hij met een schaar schrijft."
+        },
+        {
+          "type": "paragraph",
+          "text": "Deze twee films bewijzen dat we verhalen anders kunnen vertellen: sneller, vrijer, dichter op de straat."
+        }
+      ]
+    },
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_p3",
+      "title": "Verlaat de studio, film Parijs",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "De pauze is ook technisch. [[Eclair Caméflex]] camera's en gevoeligere films maken [[Filmen op locatie en lichtgewicht camera]] mogelijk. Geen zware studio’s meer: ​​we filmen in cafés, appartementen en de straten van Parijs, vaak in natuurlijk licht."
+        },
+        {
+          "type": "paragraph",
+          "text": "De acteurs improviseren. Spraak wordt vertrouwd, soms stotterend. Cinema ademt als leven. Deze vrijheid inspireert vervolgens de [[Bioscoop Novo]] in Brazilië, vervolgens ultrastrenge regels zoals de [[Dogma 95]] in Denemarken, verre erfgenamen van dezelfde honger naar authenticiteit."
+        }
+      ]
+    },
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_p4",
+      "title": "Een mondiaal erfgoed",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In de jaren **1970** werd de **Nieuw Hollywood** erdoor geïnspireerd: **Martin Scorsese**, **Francis Ford Coppola**, **Steven Spielberg** mix Amerikaanse efficiëntie en Franse vrijheid. De New Wave heeft een blijvend idee opgelegd: een film kan de stem van één persoon overbrengen."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1951",
+              "title": "Bioscoopnotitieboekjes",
+              "detail": "Het tijdschrift wordt het laboratorium van ideeën."
+            },
+            {
+              "date": "1959",
+              "title": "De vierhonderd slagen",
+              "detail": "Truffau legt auteurscinema op in Cannes."
+            },
+            {
+              "date": "1960",
+              "title": "Buiten adem",
+              "detail": "Godard doorbreekt de klassieke montage."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "De New Wave bracht de cinema uit de studio en de straat op. Het maakte van de regisseur een auteur, en dit idee blijft de onafhankelijke cinema over de hele wereld vormgeven."
+        }
+      ]
+    }
+  ]
+}

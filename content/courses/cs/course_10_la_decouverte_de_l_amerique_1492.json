@@ -1,0 +1,139 @@
+{
+  "id": "course_10_la_decouverte_de_l_amerique_1492",
+  "title": "Objevení Ameriky",
+  "subtitle": "1492",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "12. října 1492 dosáhl Kryštof Kolumbus ostrova na Bahamách, o kterém se domníval, že je Japonskem. Chyba navigace otevírá globalizaci.",
+  "hero": {
+    "image": "la_decouverte_de_l_amerique_1492",
+    "ratio": "16:9",
+    "hook": "Hledal Asii. Zasáhla kontinent, na který Evropa zapomněla."
+  },
+  "sections": [
+    {
+      "id": "course_10_la_decouverte_de_l_amerique_1492_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**O 12. října 1492**, po více než dvou měsících v Atlantiku námořník z Pinty křičí „Země!“ **Kryštof Kolumbus**, Janov ve službách Španělska, přistává na ostrově na Bahamách, který pojmenoval San Salvador. Věří, že se dostává do Asie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tato chyba spojí dvě hemisféry. Povznesena hybností [[Španělská reconquista (1492)]], znovudobytí Granady od muslimů v témže roce, expedice znamenala pro Evropu přechod ze středověku do novověku."
+        }
+      ]
+    },
+    {
+      "id": "course_10_la_decouverte_de_l_amerique_1492_p1",
+      "title": "Cesta na západ, velká chyba",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kolumbus se nesnaží dokázat, že Země je kulatá. [[Eratosthenes]], řecký učenec 3. století před naším letopočtem. př. n. l., už to vypočítal. Skutečný cíl je ekonomický: dostat se ke koření a hedvábí ze západu, aniž byste museli procházet Osmany, kteří ovládají východní cesty."
+        },
+        {
+          "type": "image",
+          "asset": "christopher_columbus_portrait",
+          "ratio": "4:3",
+          "caption": "Kryštof Kolumbus, janovský mořeplavec ve službách katolických panovníků."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jeho chyba: podcenění obvodu země. Japonsko umisťuje **4500 km** od Kanárských ostrovů ve srovnání s téměř **20 000** ve skutečnosti. Portugalsko odmítá. Isabella Kastilská, královna Španělska, přijímá. Na základě smlouvy [[Santa Fe se vzdává]] se Columbus stává admirálem, místokrálem a dostává **10 %** ze zisku."
+        },
+        {
+          "type": "funFact",
+          "text": "Columbus psal, že viděl mořské panny v Karibiku. Byli to kapustňáci. Zklamaně poznamenal, že jsou mnohem méně krásné než v legendách."
+        }
+      ]
+    },
+    {
+      "id": "course_10_la_decouverte_de_l_amerique_1492_p2",
+      "title": "70 dní do San Salvadoru",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dne **A 3. srpna 1492** opustily Palos ve Španělsku tři lodě: **Pinta**, **Niña** a **Santa María**. Díky rodině [[Pinzón]], bohatým místním rejdařům, je posádka **90 mužů** zkušená. Přeplavba trvá **70 dní**. Columbus si vede dva deníky: jeden skutečný, druhý zfalšovaný, aby uklidnil své námořníky."
+        },
+        {
+          "type": "image",
+          "asset": "santa_maria_caravel_ship",
+          "ratio": "4:3",
+          "caption": "Santa María, vlajková loď expedice z roku 1492."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dne **Oříjna 12** se setkal se [[Taínos]], domorodými obyvateli Velkých Antil. Přesvědčen, že je v Indii, jim říká „Indiáni“. Všímá si jejich zlata a zjevné poslušnosti. Koloniální pohled už je tam."
+        },
+        {
+          "type": "funFact",
+          "text": "La Niña se ve skutečnosti jmenovala *Santa Clara*. Santa María dostala přezdívku *La Gallega*, protože byla postavena v Galicii."
+        }
+      ]
+    },
+    {
+      "id": "course_10_la_decouverte_de_l_amerique_1492_p3",
+      "title": "Kolumbijská burza",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Příchod Evropanů spustil **Kolumbijskou výměnu**, hromadný přesun rostlin, zvířat a nemocí mezi dvěma světy. Směrem do Evropy: brambory, kukuřice, rajčata, kakao, tabák. Směrem k Americe: pšenice, cukr, káva, koně, dobytek. Desky a krajiny na obou stranách se navždy změní."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cena je hrozná. Pravé neštovice, spalničky a chřipka zabijí za století **50 až 90 %** původních populací. Diplomaticky se Španělsko a Portugalsko dělí o zeměkouli podle [[Tordesillaská smlouva (1494)]], aniž by se s kýmkoli radily."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "3. srpna 1492",
+              "title": "Odjezd z Palosu",
+              "detail": "Tři lodě vyplouvají na západ."
+            },
+            {
+              "date": "12. října 1492",
+              "title": "San Salvador",
+              "detail": "Kolumbus přistane na Bahamách."
+            },
+            {
+              "date": "1494",
+              "title": "Tordesillas",
+              "detail": "Španělsko a Portugalsko se dělí o svět."
+            },
+            {
+              "date": "1507",
+              "title": "Amerika",
+              "detail": "Waldseemüller křtí Nový svět."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_10_la_decouverte_de_l_amerique_1492_p4",
+      "title": "Kontinent bez svého objevitele",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Columbus zemřel v **1506**, aniž by svůj objev přiznal. Je to [[Amerigo Vespucci]], florentský navigátor, který chápe, že je to „Mundus Novus“, Nový svět. V **1507** pojmenoval kartograf Waldseemüller kontinent **Amerika**. Florenťanovo křestní jméno vstupuje na mapu světa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Brutální správce v Hispaniole (dnešní Haiti a Dominikánská republika), Columbus skončil dokonce poslán zpět v řetězech. Kromě člověka, **1492** otevírá globalizaci: americké peníze proudí dovnitř, centrum obchodu se přesouvá ze Středomoří do Atlantiku. Evropa se stává středobodem systému čtyř kontinentů."
+        },
+        {
+          "type": "takeaway",
+          "text": "Kolumbus umírá přesvědčen, že dosáhl Asie. Jeho chyba sjednotila dvě hemisféry a spustila nevratný biologický, ekonomický a lidský otřes."
+        }
+      ]
+    }
+  ]
+}

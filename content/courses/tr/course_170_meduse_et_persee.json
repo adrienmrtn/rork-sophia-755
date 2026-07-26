@@ -1,0 +1,124 @@
+{
+  "id": "course_170_meduse_et_persee",
+  "title": "Medusa ve Perseus",
+  "subtitle": "Taşlaştıran görünüm",
+  "subject": "mythologie",
+  "subcategory": "Greece: the gods",
+  "description": "Medusa bir bakışla taşlaşır. Perseus bir ayna kalkanı kullanarak onu yener ve ardından Andromeda'yı kurtarır. Gorgon'un başı koruyucu bir sembol haline gelir.",
+  "hero": {
+    "image": "meduse_et_persee",
+    "ratio": "16:9",
+    "hook": "Hayatı taşa dönüştüren bir görünüm. Yalnızca yansımaya bakmaya cesaret eden bir kahraman."
+  },
+  "sections": [
+    {
+      "id": "course_170_meduse_et_persee_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Perseus** ve **Medusa** efsanesi en büyük Yunan maceralarından biridir. Bu sadece bir canavara karşı mücadele değil. Aynı zamanda dehşete dönüşen güzelliğin ve kurnazlıkla kazanan bir kahramanın hikayesidir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bir [[Gorgon]] olan Medusa, bakışlarıyla karşılaşan herkesi taşa çevirir. Perseus hayatta kalabilmek için tehlikeyi yalnızca aynadan görmeyi kabul eder."
+        }
+      ]
+    },
+    {
+      "id": "course_170_meduse_et_persee_p1",
+      "title": "Rahibeden canavara",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ovid'in [[Metamorfozlar]] adlı eserine göre Medusa her şeyden önce bir canavar değildir. Parlak saçlı, bilgelik tanrıçası **Athena** tapınağının rahibesi olan genç bir kadındır. Güzelliği, ona kutsal alanda tecavüz eden denizler tanrısı **Poseidon**'nin ilgisini çeker."
+        },
+        {
+          "type": "paragraph",
+          "text": "Antik trajik mantıkta Athena kurbanı cezalandırır. Medusa'nın saçları yılana dönüşür. Görünüşü **taşlaştırıyor**. Kız kardeşleri Stheno ve Euryale ile birlikte dünyanın öbür ucuna sürgün edilen o, etrafı heykellerle çevrili bir mağarada yaşıyor: Onu gören talihsiz insanlar."
+        },
+        {
+          "type": "image",
+          "asset": "medusa_gorgon_snakes_hair_caravaggio_painting",
+          "ratio": "4:3",
+          "caption": "Ölümcül bakışlarıyla Medusa, Gorgon."
+        },
+        {
+          "type": "funFact",
+          "text": "Medusa'nın sol tarafındaki kan ölümcül zehirdi. Sağ taraftaki ölüleri diriltebilirdi: Athena'nın daha sonra tıp tanrısı **Asklepios**'ye emanet ettiği bir sır."
+        }
+      ]
+    },
+    {
+      "id": "course_170_meduse_et_persee_p2",
+      "title": "Perseus imkansıza karşı silahlanıyor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kral **Polidektes**, annesini **Danaé** baştan çıkarmak için Perseus'u alıp götürmek istiyor. Ona intihara meyilli bir meydan okuma dayatıyor: Medusa'nın kafasını geri getir. Perseus, **Zeus**'nin oğludur. Tanrılar ona yardım eder."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Hermes** ona kanatlı sandaletler ve ultra keskin kavisli bir kılıç olan [[Harp]]'yi verir. **Hades** ona [[Kynee]] görünmezlik kaskını ödünç veriyor. Athena kesin bir tavsiye veriyor: **ayna** olarak kullanılacak cilalı bronz kalkanı."
+        },
+        {
+          "type": "image",
+          "asset": "perseus_mirror_shield_medusa_painting",
+          "ratio": "4:3",
+          "caption": "Perseus sadece kendi yansımasına bakarak Medusa'ya yaklaşır."
+        },
+        {
+          "type": "paragraph",
+          "text": "Perseus Medusa'yı uyurken şaşırtır. Yansımanın rehberliğinde kafasını keser. Yaka yayı [[Medusa'nın kanından doğan Pegasus]] ve dev [[Chrysaor]]. Medusa hâlâ Poseidon'a hamileydi."
+        }
+      ]
+    },
+    {
+      "id": "course_170_meduse_et_persee_p3",
+      "title": "Andromeda ve Dönüş",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kafa gücünü korur. Perseus onu sihirli bir çanta olan [[Kibisis]]'ye koyar. Etiyopya üzerinde uçarken Prenses **Andromeda**'nin bir kayaya zincirlenmiş olduğunu görür. Annesi Cassiopeia'nın gururunu cezalandırmak için Poseidon tarafından gönderilen deniz canavarı **Ketolar**'ye sunulur."
+        },
+        {
+          "type": "image",
+          "asset": "perseus_rescue_andromeda_sea_monster_painting",
+          "ratio": "4:3",
+          "caption": "Perseus, Medusa'nın kafasını kullanarak Andromeda'yı serbest bırakır."
+        },
+        {
+          "type": "funFact",
+          "text": "Bazı efsaneler Perseus'un kırmızı mercanı Medusa'nın kafasını deniz yosununun üzerine yerleştirerek yarattığını söyler: Kan bitkileri sertleştirirdi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Perseus canavarı taşa çevirir, Andromeda ile evlenir ve Seriphos'a döner. Polydectes ve sarayının karşısında başını dışarı çıkarır. Düşmanları heykele dönüşüyor. Zulüm durur."
+        }
+      ]
+    },
+    {
+      "id": "course_170_meduse_et_persee_p4",
+      "title": "Gorgoneion, koruyucu yüz",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Perseus başını Athena'ya teslim eder. Bunu ilahi kalkanı olan **fena**'sine sabitler. Medusa öldürülecek bir canavar olmaktan çıkıp koruyucu bir güce dönüşür. Bu heykel, [[Gorgoneion]], Yunan tapınaklarını, madeni paraları ve kalkanları süslüyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "İşlevi [[Apotropaik]]'dir: yüzün dehşetiyle kötülüğü saptırmak. Yüzyıllar boyunca Medusa da trajik bir figür, ardından modern bir simge haline geldi: travma, güç, büyülenme. Versace'nin evi bile görünümü \"taşlaştırmak\" için kafasını seçti."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Perseus**, bir kalkanın yansıması sayesinde **Medusa**'yi yener. **Athena**'ye verilen kafa, antik Yunanistan'ın koruyucu sembolü olan **Gorgoneion** olur."
+        }
+      ]
+    }
+  ]
+}

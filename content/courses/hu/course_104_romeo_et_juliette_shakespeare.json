@@ -1,0 +1,111 @@
+{
+  "id": "course_104_romeo_et_juliette_shakespeare",
+  "title": "Rómeó és Júlia, Shakespeare",
+  "subtitle": "1595 körül",
+  "subject": "litterature",
+  "subcategory": "Anglo-Saxons & world literature",
+  "description": "1595 körül két veronai szerető halt meg kevesebb mint öt nap alatt. Shakespeare egy románcot társadalmi tragédiává sűrít: a klángyűlölet elpusztítja a fiatalságot.",
+  "hero": {
+    "image": "romeo_et_juliette_shakespeare",
+    "ratio": "16:9",
+    "hook": "Öt nap a szerelem első látásra és a halál között: a világ leghíresebb szerelmi tragédiája."
+  },
+  "sections": [
+    {
+      "id": "course_104_romeo_et_juliette_shakespeare_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1595**-hez **William Shakespeare** **[[Rómeó és Júlia]]**. A színház legnagyobb szerelmi történeteként ismert. Valójában ez a rivális családok között örökölt gyűlölet heves bírálata is. A két szerelmes nem csak a balszerencse miatt hal meg: fizetnek egy város kudarcáért, amely nem képes megvédeni fiataljait a klánok erőszakától."
+        },
+        {
+          "type": "image",
+          "asset": "romeo_juliet_balcony_painting",
+          "ratio": "4:3",
+          "caption": "Az erkélyjelenet: abszolút szerelem Verona klánjaival szemben."
+        }
+      ]
+    },
+    {
+      "id": "course_104_romeo_et_juliette_shakespeare_p1",
+      "title": "Shakespeare alkímia: a novellától a drámáig",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Shakespeare nem találja fel a történelmet. Főleg **Matteo Bandello** ihlette, egy 16. századi olasz mesemondó, aki régebbi történetek örököse. Zseniális a **biztonságos**: ahol a források hónapokra terjesztik az eseményeket, Shakespeare csak **öt napra** szűkíti le. Minden perc számít, a katasztrófa elkerülhetetlenné válik."
+        },
+        {
+          "type": "funFact",
+          "text": "Bandellóban Júlia Rómeó halála előtt felébred. Shakespeare törli ezt a búcsút, hogy kegyetlenebb legyen a vége."
+        },
+        {
+          "type": "paragraph",
+          "text": "A darab szinte komédiaként kezdődik, szójátékokkal és élénk utcai jelenetekkel. Aztán **Mercutio**, a ragyogó elme és a **[[Cinizmus]]** hordozója a történet kellős közepén meghal. Ezzel eltűnik a figyelmetlenség: a hangnem végérvényesen tragédiába csap át. Romeo először játszotta a **[[Középkori udvari szerelem]]**-t, szerelmes Rosalindba, majd felfedezett egy sokkal mélyebb és veszélyesebb szerelmet."
+        }
+      ]
+    },
+    {
+      "id": "course_104_romeo_et_juliette_shakespeare_p2",
+      "title": "Tragikus mechanizmus: a véletlen és a szükség között",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Romeo Montague** és **Juliet Capulet** egy álarcos bálban egymásba szeretnek, először figyelmen kívül hagyva egymás nevét. Az erkélyes jelenet a szerelmet ünnepli, de a családnév megtagadását is: „Mondd le apádat, és mondj le a nevedről.” **Laurent** testvér titkos házassága a két klán közötti **[[Vérbosszú]]** megnyugtatása volt."
+        },
+        {
+          "type": "image",
+          "asset": "romeo_juliet_frank_dicksee_painting",
+          "ratio": "4:3",
+          "caption": "Rómeó és Júlia: kamaszkori szenvedély, amelyet a klán erőszaka fog el."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Tybalt** órákon belül megöli Mercutiót, Rómeó megtorlásul Tybaltot, és száműzi Veronából. A **pestis** járvány késlelteti a hírnököt, aki figyelmeztette Rómeót, hogy Júlia nem halt meg, csak elaltatja egy ital. Ez nem önmagában az isteni sors: ezek triviális véletlenek, amelyek hozzáadódnak egy amúgy is mérgező társadalomhoz. A végső öngyilkosságok megerősítik az abszolút szabadságot ott, ahol a világ már nem hagy teret számukra."
+        },
+        {
+          "type": "quote",
+          "text": "Add fel a nevedet, és e név helyett, amely már nem te vagy, vigyél el engem.",
+          "attribution": "William Shakespeare, Rómeó és Júlia, II. felvonás, 2. jelenet"
+        }
+      ]
+    },
+    {
+      "id": "course_104_romeo_et_juliette_shakespeare_p3",
+      "title": "Társadalmi felelősségvállalás és a fiatalok feláldozása",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A darab a vendettát a pusztítás motorjaként elemzi. Montague és Capulet utálják egymást anélkül, hogy emlékeznének rá, miért. A prológus „régi gyűlöletről” beszél, amely „új vért” szül. Juliette, alig **13 Éva**, hozzá kell mennie **Párizs** grófhoz; Rómeó melankóliában bolyong, amit a barátai félreértenek."
+        },
+        {
+          "type": "paragraph",
+          "text": "A **Veronai Herceg** egy olyan törvényt képvisel, amely tehetetlen a két család privát milíciáival szemben. A végén a fiatalok holtteste előtt vádolja a szülőket: „Mindenki meg van büntetve. » A szerelmesek annak a rendszernek az áldozatai, amelyben a klán becsülete az egyéni boldogság felett áll. Dante már említette a **Montecchi** és a **Cappelletti**, Shakes két százada előtti két 14. században."
+        }
+      ]
+    },
+    {
+      "id": "course_104_romeo_et_juliette_shakespeare_p4",
+      "title": "Univerzális utókor: a lírától a modern bandákig",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A darab hatása óriási. Shakespeare keveri a vallásos odaadást és a testi szenvedélyt, új romantikus szókincset találva ki az angol színház számára. A Shakespeare-féle **[[Peripateticizmus]]** továbbra is a világ télikerteiben tanulmányozott dramaturgiai modell."
+        },
+        {
+          "type": "paragraph",
+          "text": "A 20. században a **[[West Side Story]]** átülteti a konfliktust New Yorkba: a **Cápák** és a **Fúvókák** váltja fel Verona klánjait. A minta továbbra is érvényes: mások szeretete ütközik a csoport gyűlöletével. Vallási, faji vagy társadalmi konfliktusok állandóan felveszik a Shakespeare-féle mátrixot."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Rómeó és Júlia** öt napba sűríti a kamaszkori idillt és az öröklött erőszak feljelentését. Shakespeare megmutatja, hogy az abszolút szerelem nem marad fenn ott, ahol a társadalom a haragot részesíti előnyben az élet helyett."
+        }
+      ]
+    }
+  ]
+}

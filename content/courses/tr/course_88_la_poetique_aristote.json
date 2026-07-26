@@ -1,0 +1,106 @@
+{
+  "id": "course_88_la_poetique_aristote",
+  "title": "Poetika, Aristoteles",
+  "subtitle": "MS 4. yüzyıl",
+  "subject": "litterature",
+  "subcategory": "Ancient Greeks & Philosophers",
+  "description": "Aristoteles Yunan trajedisini analiz eder ve her yerde sözcükler icat eder: mimesis, katarsis, peripeteia. Poetika, anlatının ilk büyük kullanım kılavuzudur.",
+  "hero": {
+    "image": "la_poetique_aristote",
+    "ratio": "16:9",
+    "hook": "Senaryo kılavuzlarından önce Aristoteles ve Yunan tragedyası vardı."
+  },
+  "sections": [
+    {
+      "id": "course_88_la_poetique_aristote_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**MÖ 4. yüzyılda **Aristotelle****, Platon'un öğrencisi, o zamanlar bağımsız davranırlar, Atina'daki**Lycée**'nin kurucusu **Poetics**'yi yazdı. Bu bir şiir değil. Şiirin, özellikle de bir kahramanın düşüşünü tasvir eden bir Yunan tiyatro türü olan **trajedi**'nin bir analizidir. Bir hikaye nasıl korku ve acıma duygusu uyandırır? Bu neden kendimizi iyi hissetmemizi sağlıyor?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Bize ulaşan metin kısmi, bazen kuru, not şeklinde yazılmış. Ama tiyatroyu, romanı, sonra da sinemayı şekillendirdi. “İyi hikaye anlatımının” pek çok kuralının bir Yunan atası vardır. Aristoteles sahnede neyin işe yaradığını gözlemler, sonra ondan ilkeler çıkarır."
+        }
+      ]
+    },
+    {
+      "id": "course_88_la_poetique_aristote_p1",
+      "title": "Taklit etmek aldatmak değildir",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Platon, yanıltıcı gölgelerle karşılaştırdığı görüntülerden şüpheleniyordu. Aristoteles, [[Aristotelesçi taklit]]'yi rehabilite eder. Ona göre sanat, doğayı seçici bir şekilde taklit eder. Olayları olduğu gibi değil, olabileceği gibi gösterir. İnsan eylemlerini temsil etmek yalan söylemek değildir. Öğreniyor. Çocuk anlamak için taklit eder. Sanat da."
+        },
+        {
+          "type": "image",
+          "asset": "aristotle_portrait_bust_sculpture",
+          "ratio": "1:1",
+          "caption": "Aristoteles: Kendimize anlattığımız hikayeler de dahil olmak üzere dünyayı sınıflandırmak."
+        },
+        {
+          "type": "paragraph",
+          "text": "Trajedi, belirli bir büyüklükteki ciddi, eksiksiz eylemleri taklit eder. Kriter tam olarak belgesel değil. Bu **olası** ve **gerekli**'dir: hikayenin iç mantığına göre bu hikayede olması gereken şey. Aristoteles ayrıca destanı, şiirde uzun bir hikayeyi ve trajediyi, yani sınırlı bir zamandaki teatral eylemi birbirinden ayırır."
+        }
+      ]
+    },
+    {
+      "id": "course_88_la_poetique_aristote_p2",
+      "title": "Katarsis: korku, acıma, rahatlama",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aristoteles trajedinin acıma ve korku duygularının [[Katarsis]]'sini yerine getirdiğini söylüyor. Kelimenin tam anlamı yirmi beş yüzyıldır tartışılıyor: Arınma mı, tahliye mi, aydınlanma mı? Ana fikir hâlâ geçerliliğini koruyor: Şiddet içeren gösteri yalnızca heyecanlandırmakla kalmıyor. O **etkilerimizi** sipariş ediyor. Tiyatroda güvenlik içinde ağlıyor ve titriyoruz."
+        },
+        {
+          "type": "funFact",
+          "text": "Orta Çağ ve Rönesans'ta metin, 12. yüzyıl Endülüslü filozof [[İbn Rüşd]] ile bağlantılı olanlar da dahil olmak üzere Arapça ve Latince çevirilerden geçmiştir. Aristoteles Avrupa'ya doğrudan bir çizgide değil, bilimsel dolambaçlı yollardan döner."
+        },
+        {
+          "type": "image",
+          "asset": "ancient_greek_theater_epidaurus",
+          "ratio": "16:9",
+          "caption": "Epidaurus Tiyatrosu: Yunan şehrinin mitlerini izlediği alan."
+        }
+      ]
+    },
+    {
+      "id": "course_88_la_poetique_aristote_p3",
+      "title": "Entrika, bükülme, tanınma",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aristoteles'e göre dramanın kalbi *mutos*, olay örgüsü ve aksiyon dizisidir. Durumun ani dönüşü olan **peripetia**'ye ve bir karakterin cehaletten bilgiye geçtiği **tanımaya**, *anagnorisis*'ye değer verir. **Sofokles'in yazdığı Oedipus Kralı** onun yıldız örneğidir: Kahraman kim olduğunu çok geç keşfeder."
+        },
+        {
+          "type": "paragraph",
+          "text": "O, saf kötülüğe **muhteşem**, *hamartia*'yi, istem dışı hatayı veya çarpık yargıyı tercih eder. Kahraman ne tamamen iyi ne de canavardır. Düşüşü mantıklı, dolayısıyla korkunç görünüyor olmalı. Acımayı kışkırtan da bu karışımdır: Biz sadece karikatürize edilmiş bir kötü adamın değil, insani bir zayıflığın farkına varırız."
+        }
+      ]
+    },
+    {
+      "id": "course_88_la_poetique_aristote_p4",
+      "title": "Hayatta kalan bir kullanım kılavuzu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "17. yüzyılın Fransız klasisizmleri, modern dramaturjiler, Hollywood sahneleri: Her yerde eylem birliğini, düğümü, sonucu buluyoruz. Aristoteles'e itiraz edebiliriz. Hala ondan alıntı yapıyoruz. Akustiğiyle dikkat çeken bir Yunan tiyatrosu olan [[Epidaurus Tiyatrosu]] artık hikayedeki tek yer değil ama soruları hala devam ediyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aristoteles ayrıca şiirin genel **** söylediğini, tarihin ise özel **** söylediğini hatırlatır. İyi kurgulanmış bir olay örgüsü olasılığa göre ne olabileceğini gösterir. Oedipus'un bir model olarak kalmasının nedeni budur: Her vahiy hem şaşırtıcı hem de kaçınılmaz görünür. Klasik tiyatro yazarları, ardından modern senaristler anlatı zorunluluğunun bu gerekliliğini üstlendiler."
+        },
+        {
+          "type": "takeaway",
+          "text": "Aristoteles'in **Poetika**'si Batı'ya ilk büyük anlatı kelime dağarcığını veriyor: taklit et, hareket ettir, durumu tersine çevir. Bir hikaye yazmadan önce birçok kişi hala onunla birlikte düşünüyor."
+        }
+      ]
+    }
+  ]
+}

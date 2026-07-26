@@ -1,0 +1,130 @@
+{
+  "id": "course_151_guernica_picasso",
+  "title": "Guernica, Picasso",
+  "subtitle": "1937",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture + iconic works",
+  "description": "După bombardarea orașului Guernica, Picasso a pictat un strigăt alb-negru împotriva războiului. Lucrarea călătorește, apoi se întoarce în Spania după Franco.",
+  "hero": {
+    "image": "guernica_picasso",
+    "ratio": "16:9",
+    "hook": "Un sat basc ars, o pânză care refuză să uite."
+  },
+  "sections": [
+    {
+      "id": "course_151_guernica_picasso_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La **26 aprilie 1937**, orașul basc Guernica a fost bombardat în timpul [[Războiul civil spaniol]]. Picasso, la Paris, a răspuns cu o pânză imensă, în alb-negru."
+        },
+        {
+          "type": "paragraph",
+          "text": "*Guernica* a devenit una dintre cele mai puternice imagini anti-război ale secolului al XX-lea."
+        }
+      ]
+    },
+    {
+      "id": "course_151_guernica_picasso_p1",
+      "title": "Războiul spaniol",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "De la **1936**, Spania este sfâșiată între [[A doua Republică Spaniolă]] și naționaliștii lui Franco, susținuți de [[Legiunea Condor]] germană. Atentatul cu saturație [[bombardament de saturație]] are ca scop terorizarea."
+        },
+        {
+          "type": "paragraph",
+          "text": "Picasso lucrează rapid, la studii mari. Renunță la culoare pentru a rămâne la urgența mărturiei. Formatul monumental interzice contemplarea confortabilă."
+        },
+        {
+          "type": "image",
+          "asset": "guernica_bombing_aftermath_1937",
+          "ratio": "4:3",
+          "caption": "Guernica în ruine: știrea devine simbol."
+        }
+      ]
+    },
+    {
+      "id": "course_151_guernica_picasso_p2",
+      "title": "O pictură cu țipete",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Picasso compune un haos de corpuri, cal, taur, bec. Fără culoare: ca prima pagină a unui ziar. Monumentalitatea obligă privitorul să se confrunte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cal evidențiat, mamă cu copil, brațele ridicate: fiecare motiv poate fi citit fără legende. Aceasta este o gramatică a terorii civile, nu o bătălie eroică."
+        },
+        {
+          "type": "funFact",
+          "text": "A refuzat să permită picturii să meargă în Spania atâta timp cât Franco rămânea la putere."
+        }
+      ]
+    },
+    {
+      "id": "course_151_guernica_picasso_p3",
+      "title": "Exil la MoMA",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "După Expoziția Universală de la Paris, *Guernica* a călătorit și apoi a stat multă vreme la [[MoMA]] din New York, protejat în timpul [[Războiul Rece]] al lui Franco. S-a întors la Madrid în **1981**."
+        },
+        {
+          "type": "paragraph",
+          "text": "În timpul dictaturii, tabloul a devenit un exil politic. Întoarcerea sa în Spania după Franco este în egală măsură un eveniment național, cât și estetic."
+        },
+        {
+          "type": "image",
+          "asset": "guernica_picasso_painting_detail",
+          "ratio": "4:3",
+          "caption": "Negru, alb, gri: război fără eroism."
+        }
+      ]
+    },
+    {
+      "id": "course_151_guernica_picasso_p4",
+      "title": "Moștenire",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Redată în fața [[ONU]] ca avertisment, lucrarea rămâne un limbaj universal împotriva masacrului civililor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pentru a înțelege pe deplin Guernica, Picasso, trebuie să țineți cont de un lucru: fiecare detaliu tehnic servește unei emoții sau unei idei. Lucrarea nu este niciodată doar decorativă."
+        },
+        {
+          "type": "paragraph",
+          "text": "Contextul contează la fel de mult ca și stilul. Date, locuri, sponsori, public: toate acestea explică de ce un formular apare la un moment dat, și nu înainte."
+        },
+        {
+          "type": "paragraph",
+          "text": "În cele din urmă, moștenirea este măsurată pe termen lung. Ceea ce vedem astăzi în muzee, filme sau muzica populară poartă și acum urmele acestor invenții."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fiecare nou război aduce vești triste la *Guernica*. Lucrarea funcționează ca un avertisment că nu putem asculta niciodată suficient."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pentru a înțelege pe deplin Guernica, Picasso, trebuie să țineți cont de un lucru: fiecare detaliu tehnic servește unei emoții sau unei idei. Lucrarea nu este niciodată doar decorativă."
+        },
+        {
+          "type": "paragraph",
+          "text": "Contextul contează la fel de mult ca și stilul. Date, locuri, sponsori, public: toate acestea explică de ce un formular apare la un moment dat, și nu înainte."
+        },
+        {
+          "type": "takeaway",
+          "text": "Cu Guernica, Picasso a transformat un bombardament din 1937 într-o memorie vizuală globală a războiului total."
+        }
+      ]
+    }
+  ]
+}

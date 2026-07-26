@@ -1,0 +1,122 @@
+{
+  "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu",
+  "title": "Řecká tragédie a antické divadlo",
+  "subtitle": "5. století před naším letopočtem",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture + iconic works",
+  "description": "V Athénách Aischylos, Sofokles a Euripides vymysleli tragédii. Sbor, arogance, katarze: divadlo pro přemýšlení o městě.",
+  "hero": {
+    "image": "la_tragedie_grecque_et_le_theatre_antique",
+    "ratio": "16:9",
+    "hook": "Masky pod sluncem, které vyléčí město šokem."
+  },
+  "sections": [
+    {
+      "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V 5. století před naším letopočtem se v Athénách zrodila **tragédie**. Není to soukromá zábava: je to občanský obřad, který se provádí před tisíci občanů."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aischylos, Sofokles, Euripides vynalezli umění, které mísilo bohy, politiku a vášně."
+        }
+      ]
+    },
+    {
+      "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu_p1",
+      "title": "Sbor a orchestr",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The [[Sbor v řecké tragédii]] zpívá, tančí, komentuje. Herci, maskovaní, ztělesňují hrdiny a bohy. Bohatý občan financuje show: je to [[choregie]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dionysia, festivaly Dionýsa, pořádají soutěže. Tragédie vzniká v tomto náboženském a občanském rámci. Vyhrát znamená ctít město stejně jako boha."
+        },
+        {
+          "type": "image",
+          "asset": "epidaurus_ancient_theatre",
+          "ratio": "4:3",
+          "caption": "Divadlo Epidaurus: akustika jako zázrak kamene."
+        }
+      ]
+    },
+    {
+      "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu_p2",
+      "title": "Arogance a pád",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tragický hrdina se často poddá [[arogance]], excesu, který se vzpírá řádu. Pád, který následuje, není bezdůvodný: zpochybňuje spravedlnost, osud, odpovědnost."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aischylos přidává herce; Sofokles zušlechťuje psychologii; Euripides narušuje jistoty. Tři styly pro stejný stroj: přimět lidi přemýšlet za pohybu."
+        },
+        {
+          "type": "funFact",
+          "text": "[[deus ex machina]] měl někdy boha spuštěného jeřábem, aby vyřešil spiknutí... již kritizován pro jeho pohodlí."
+        }
+      ]
+    },
+    {
+      "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu_p3",
+      "title": "Katarze",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Podle Aristotela tragédie způsobuje [[katarze]]: očistu skrze lítost a hrůzu. Odcházíme otřesení, ale klidní. Divadlo léčí město inscenováním jeho obav."
+        },
+        {
+          "type": "paragraph",
+          "text": "Veřejnost často zná mýtus. Zájem není zvrat, ale způsob. Jak padne Oidipus? Jak Antigona řekne ne?"
+        },
+        {
+          "type": "image",
+          "asset": "greek_theatre_masks_tragedy",
+          "ratio": "4:3",
+          "caption": "Masky: emoce čitelná z dálky."
+        }
+      ]
+    },
+    {
+      "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu_p4",
+      "title": "Dědictví",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Shakespeare, opera, kino: Řecká tragédie zůstává gramatikou osudu na jevišti. Naši novodobí antihrdinové mu stále vděčí za své pády."
+        },
+        {
+          "type": "paragraph",
+          "text": "Abyste plně porozuměli řecké tragédii a antickému divadlu, musíte mít na paměti jednu věc: každý technický detail slouží emoci nebo nápadu. Práce není nikdy pouze dekorativní."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na kontextu záleží stejně jako na stylu. Termíny, místa, sponzoři, veřejnost: to vše vysvětluje, proč se formulář objeví v určitou chvíli a ne dříve."
+        },
+        {
+          "type": "paragraph",
+          "text": "A konečně, dědictví se měří v dlouhodobém horizontu. To, co dnes vidíme v muzeích, filmech nebo populární hudbě, stále nese stopy těchto vynálezů."
+        },
+        {
+          "type": "paragraph",
+          "text": "Od Wagnerovy opery až po kinematografii katastrof, tragická struktura přežívá. Změnili jsme bohy; ne vždy padá."
+        },
+        {
+          "type": "takeaway",
+          "text": "V Athénách tragédie vymyslela občanské divadlo, kde arogance, sbor a katarze učí město dívat se samo na sebe."
+        }
+      ]
+    }
+  ]
+}

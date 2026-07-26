@@ -1,0 +1,144 @@
+{
+  "id": "course_11_la_prise_de_la_bastille_1789",
+  "title": "A Bastille megrohanása",
+  "subtitle": "1789",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "1789. július 14-én a párizsiak megrohamoztak egy erődöt, amelyben csak **7 fogoly** volt. Ez a gesztus a francia forradalom szimbólumává vált.",
+  "hero": {
+    "image": "la_prise_de_la_bastille_1789",
+    "ratio": "16:9",
+    "hook": "1789. július 14-én Párizs megrohant egy erődöt... puskaporért."
+  },
+  "sections": [
+    {
+      "id": "course_11_la_prise_de_la_bastille_1789_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1789. **július 14-én** párizsiak tömege vonult fel a **Bastille**-re, egy Párizstól keletre fekvő régi erődre. Nem azért jönnek, hogy több ezer foglyot kiszabadítsanak. Különösen azt akarják, hogy a **por** megvédje magát."
+        },
+        {
+          "type": "paragraph",
+          "text": "Azon a napon **XVI. LajosENDBOLDZZ király látta, hogy a fővárosa elcsúszik tőle. A fegyverekért folytatott lázadás lesz a **francia** forradalom** alapító aktusa. Íme, hogyan."
+        }
+      ]
+    },
+    {
+      "id": "course_11_la_prise_de_la_bastille_1789_p1",
+      "title": "Franciaország a csőd szélén áll",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1789-ben a királyság tönkrement. Az amerikai gyarmatok segítése a [[Amerikai függetlenségi háború]] nagyon költséges volt. Az új adók emelése érdekében XVI. Lajos májusban összehívta a **Államok tábornokait**: a papság, a nemesség és a többi nép gyűlését."
+        },
+        {
+          "type": "image",
+          "asset": "estates_general_1789_france",
+          "ratio": "4:3",
+          "caption": "Az 1789-es államok tábornoka: a harmadik birtok a papsággal és a nemességgel szemben."
+        },
+        {
+          "type": "paragraph",
+          "text": "A [[Ancien Régime és a három birtok]] alatt a társadalom három részre szakadt. A papság és a nemesség megtartja kiváltságait. A **Harmadik birtok** szinte mindenkinek csak egy szavazata van. Leblokkolva kikiáltotta magát **Nemzetgyűlésnek** **június 17-én**. Három nappal később, a Jeu de PaumeZ **esküvőjén** a képviselők megesküsznek, hogy nem válnak szét az alkotmány megírása előtt."
+        },
+        {
+          "type": "paragraph",
+          "text": "A király úgy tűnt, megadta magát, de körülbelül **30 000 katonát** helyezett el Párizs környékén. **július 11-én** menesztette **Jacques Necker**-t, nagyon népszerű pénzügyminiszterét. A pánik a fővárosra is átterjed."
+        }
+      ]
+    },
+    {
+      "id": "course_11_la_prise_de_la_bastille_1789_p2",
+      "title": "Fegyverek, majd por",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A párizsi **12** és **július 13.** lázad. A támogatási korlátokat (adók a város bejáratánál) elégetik. Kifosztjuk a fegyvertárakat. **14** reggelén a tömeg hozzávetőleg **32 000 puskát** foglalt le a **Érvénytelenek**-től. A por hiányzik."
+        },
+        {
+          "type": "image",
+          "asset": "storming_of_the_bastille_1789",
+          "ratio": "4:3",
+          "caption": "A Bastille megrohanása, 1789. július 14."
+        },
+        {
+          "type": "funFact",
+          "text": "Azon a napon a Bastille-ban csak **7 volt**: 4 hamisító, 2 őrültnek ítélt férfi és egy arisztokrata. Ereje mindenekelőtt abban volt, amit képviselt."
+        },
+        {
+          "type": "paragraph",
+          "text": "A pletykák szerint a puskapor a Bastille-ban van. Sokak számára ez a börtön a király önkényét testesíti meg, különösen a [[lettre de cachet]], a tárgyalás nélküli elzárás elrendelése miatt. **Launaytól** kormányzó nem hajlandó megnyitni. **13:30** lövések dördültek: **98 halott** a támadók között. A nép mellett elhaladó katonák ágyúkat hoznak. A délután végén az erőd eldőlt. De Launayt meglincselték az utcán."
+        }
+      ]
+    },
+    {
+      "id": "course_11_la_prise_de_la_bastille_1789_p3",
+      "title": "Amikor a lázadásból forradalom lesz",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**július 15-én** XVI. Lajost felébresztik. „Ez egy lázadás?” – kérdezi, és azt válaszolták: „Nem, uram, ez egy forradalom. » A naptár iróniája: a király 14-én a „Semmit” feljegyezte a vadásznaplójában."
+        },
+        {
+          "type": "funFact",
+          "text": "A Bastille lerombolásáért felelős vállalkozó **Palloy** dominót vágott ki a kövekből, és felajánlott belőlük egy készletet a király fiának, \"hogy az játsszon a despotizmus maradványaival\"."
+        },
+        {
+          "type": "paragraph",
+          "text": "A király visszahívja Neckert, kivonja csapatait, és elfogadja a **háromszínű kokárdát**. Vidéken [[A nagy félelem]] fűtött a hír: a nemesek bosszújától tartva a parasztok elégették az uralkodói jogok papírjait. 1789. **Augusztus** 4-én éjszaka a közgyűlés eltörölte a kiváltságokat."
+        }
+      ]
+    },
+    {
+      "id": "course_11_la_prise_de_la_bastille_1789_p4",
+      "title": "Július 14-től a nemzeti ünnepig",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Másnap a Bastille-t lerombolták. Egy évvel később a **Föderáció napja** az egységet ünnepli. Július 14-e azonban csak **1880**-ig vált nemzeti ünneppé, a Harmadik Köztársaság alatt."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1789. május 5",
+              "title": "Birtok tábornok",
+              "detail": "XVI. Lajos felszólítja a királyságot, hogy emelkedjen ki a csődből."
+            },
+            {
+              "date": "1789. június 20",
+              "title": "A Pálmajáték esküje",
+              "detail": "A képviselők esküdnek, hogy alkotmányt adnak Franciaországnak."
+            },
+            {
+              "date": "1789. július 14",
+              "title": "A Bastille megtámadása",
+              "detail": "Párizs lefoglalja a puskaport és a királyi szimbólumot."
+            },
+            {
+              "date": "1789. augusztus 4",
+              "title": "A privilégiumok eltörlése",
+              "detail": "A Nagy Félelem cselekvésre készteti a Közgyűlést."
+            },
+            {
+              "date": "1789. augusztus 26",
+              "title": "Bill of Rights",
+              "detail": "Az alanyok a törvény előtt polgárokká válnak."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "**1789. július 14.**, Párizs beveszi a Bastille-t puskaporért. Ez a gesztus a pénzügyi válságot forradalommá változtatja, és a kiváltságok rendjének végét idézi elő."
+        }
+      ]
+    }
+  ]
+}

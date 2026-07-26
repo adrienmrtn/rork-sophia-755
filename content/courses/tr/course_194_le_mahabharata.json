@@ -1,0 +1,120 @@
+{
+  "id": "course_194_le_mahabharata",
+  "title": "Mahabharata",
+  "subtitle": "Bharata destanı",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "1,8 milyon kelimeyle Mahabharata dünyanın en uzun şiiridir. Kuzenler arasındaki bir savaş, arabacı bir tanrı ve bir görev dersi.",
+  "hero": {
+    "image": "le_mahabharata",
+    "ratio": "16:9",
+    "hook": "On kez Homer, kuzenlerin savaşı ve savaş arabası kullanan bir tanrı."
+  },
+  "sections": [
+    {
+      "id": "course_194_le_mahabharata_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Mahabharata** bir roman değil. Bu şimdiye kadar bestelenmiş en uzun destansı şiirdir: yaklaşık **1,8 milyon kilo**, İlyada ve Odysseia'nın toplamının on katı. Sanskritçe başlığı, eski Hindistan'ın kraliyet soyu olan \"Bharataların büyük hikayesi\" anlamına geliyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ortada: Kuzey'in efsanevi başkenti [[Hastinapura]]'nin tahtı için kardeş katili savaşı. Aynı ailenin iki kolu birbirini parçalıyor. Kaosun ortasında kutsal bir diyalog her şeyi değiştirir: Hinduizm'de en çok okunan metinlerden biri olan [[Bhagavad Gita]]."
+        }
+      ]
+    },
+    {
+      "id": "course_194_le_mahabharata_p1",
+      "title": "Bir ruh ansiklopedisinin doğuşu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mahabharata, hikayenin hem yazarı hem de karakteri olan bilge **Vyasa**'ye atfedilir. Gerçekte metin, MÖ **400 yıl arasında yaklaşık sekiz yüzyıl boyunca uzunluk.** ve **MS 400**, uzun bir sözlü gelenekten geliyor."
+        },
+        {
+          "type": "image",
+          "asset": "vyasa_sage_writing_mahabharata_hindu_art",
+          "ratio": "4:3",
+          "caption": "Mahabharata'ya atfedilen efsanevi bilge Vyasa."
+        },
+        {
+          "type": "funFact",
+          "text": "Efsaneye göre, Vyasa o kadar hızlı yazdırdı ki tanrı **Ganeşa**, onu kalem olarak kullanmak ve hiçbir şey kaybetmemek için dişlerinden birini kırdı."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eserde **18 parva** (kitaplar) ve yaklaşık **100.000** beyit bulunmaktadır. Bu sadece bir savaş değil: Hint bilgisinin, politikasının, ahlakının, kozmolojisinin ve gömülü mitlerin bir [[Toplam]]'si. Bir deyiş vardır: “Mahabharata'da olmayan hiçbir yerde değildir.” Antik Vedik dinden klasik [[Brahmanizm]]'ye geçişi de görüyoruz."
+        }
+      ]
+    },
+    {
+      "id": "course_194_le_mahabharata_p2",
+      "title": "Kurukshetra Savaşının Dişlileri",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bir yanda, erdemin örnekleri olan Kral Pandu'nun oğulları **Pandava** beş kardeş. Diğer tarafta, hırslı **Duryodhana** liderliğindeki kör kral **Dhritarashtra**'nin oğulları olan yüz **Kaurava**. Hileli bir zar oyunu Pandava'ları mahveder: Krallıklarını kaybederler ve on üç yıllığına sürgüne giderler."
+        },
+        {
+          "type": "image",
+          "asset": "kurukshetra_battle_pandava_kaurava_hindu_painting",
+          "ratio": "4:3",
+          "caption": "Mahabharata'nın savaşçı kalbi Kurukshetra savaşı."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dönüşlerinde Yadava'ların prensi ve Pandava'ların müttefiki **Krişna** arabuluculuk yapmaya çalışır. Kaurava'lar reddediyor. Savaş **Kurukşetra** ovasında başlıyor ve **18 dolar** sürüyor. Ustalar öğrencilere karşı, kuzenler kuzenlere karşı: kanla çatışan şey [[Dharma]], ahlaki görevdir. Pandava'lar kazanır ama savaşçı sınıfı neredeyse yok olur."
+        }
+      ]
+    },
+    {
+      "id": "course_194_le_mahabharata_p3",
+      "title": "Bhagavad-Gita'nın kutsal diyalogu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "İlk şoktan hemen önce, Pandava'ların en zorlusu olan okçu **Arjuna**, düşman saflarındaki amcalarını, arkadaşlarını, efendilerini görür. Yayını düşürür. Arabacısı **Krişna** (tanrı Vişnu'nun avatarı), daha sonra **Bhagavad-Gita**'de ona yanıt verir: görev ve eylem hakkında yaklaşık **700** ayetler."
+        },
+        {
+          "type": "image",
+          "asset": "krishna_arjuna_chariot_bhagavad_gita_painting",
+          "ratio": "4:3",
+          "caption": "Krishna, Arjuna'yı savaş arabasının üzerinde savaşın eşiğine kadar yönlendirir."
+        },
+        {
+          "type": "funFact",
+          "text": "1945 yılında, Sanskritçe öğrenmiş olan fizikçi **Robert Oppenheimer**, ilk atom testinden sonra Krishna'dan şu alıntıyı yaptı: “Artık dünyaların yok edicisi Ölüm oldum. »"
+        },
+        {
+          "type": "paragraph",
+          "text": "Krishna, **Karma Yoga**'yi öğretir: eylemin meyvelerine bağlı kalmadan, kişinin görevine göre hareket etmesi. Kurukshetra daha sonra içsel bir mücadelenin aynası haline gelir. Savaş alanı aynı zamanda bilinçten de söz eder."
+        }
+      ]
+    },
+    {
+      "id": "course_194_le_mahabharata_p4",
+      "title": "Evrensel bir entelektüel miras",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mahabharata Güneydoğu Asya'nın ahlâkını şekillendirdi. 20. yüzyılda **Gandi**, Bhagavad-Gita'yı bir \"davranış sözlüğü\" olarak okudu ve savaşı iç mücadelenin bir alegorisi haline getirdi. **Peter Brook** tiyatrosu ve devasa Hint dizileri destanı yüz milyonlarca izleyiciye ulaştırdı."
+        },
+        {
+          "type": "paragraph",
+          "text": "Metin neden sürüyor? Çünkü basit cevapları reddediyor. Herkesi imkansız seçimlerle karşı karşıya bırakıyor ve savaş alanını vicdanın aynası haline getiriyor."
+        },
+        {
+          "type": "takeaway",
+          "text": "Dünyanın en uzun şiiri olan **Mahabharata**, Pandava ile Kaurava arasındaki **Kurukşetra** savaşını anlatır ve Krishna'nın özverili eylemi ve **Dharma**'yi öğrettiği **Bhagavad-Gita**'yi barındırır."
+        }
+      ]
+    }
+  ]
+}

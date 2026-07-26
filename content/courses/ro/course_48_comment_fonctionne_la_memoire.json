@@ -1,0 +1,106 @@
+{
+  "id": "course_48_comment_fonctionne_la_memoire",
+  "title": "Cum funcționează memoria?",
+  "subtitle": "Creier",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Memoria nu este o cameră. Fiecare amintire este reconstruită. Așa creierul codifică, stochează... și uneori inventează.",
+  "hero": {
+    "image": "comment_fonctionne_la_memoire",
+    "ratio": "16:9",
+    "hook": "A reaminti nu înseamnă recitirea unui fișier. Reconstituie o scenă."
+  },
+  "sections": [
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "De multe ori ne imaginăm memoria ca pe un hard disk: înregistrăm, stocăm, recitim. Creierul nu funcționează așa. De fiecare dată când vă amintiți, **reconstruit** o scenă din fragmente."
+        },
+        {
+          "type": "paragraph",
+          "text": "Este puternic... și falibil. A înțelege acest lucru înseamnă a înțelege de ce uităm, de ce facem greșeli și de ce învățăm."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p1",
+      "title": "Mai multe amintiri, nu doar una",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "human_brain_anatomy",
+          "ratio": "4:3",
+          "caption": "Diferite zone ale creierului gestionează diferite forme de memorie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mai întâi este [[memorie de lucru]]: ceea ce ai „în minte” pentru câteva secunde, ca un număr de telefon. Este limitat, în jur de **7 element** în medie. Apoi, **memoria pe termn lung**: fapte, amintiri despre evenimente, abilități precum mersul pe bicicletă."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aceste sisteme nu trăiesc toate în același loc în creier. **cortexul prefrontal**, partea din față a creierului din spatele frunții, ajută foarte mult la memoria de lucru. Alte regiuni, cum ar fi **neocortexul**, stratul exterior al creierului, stochează pe termen lung."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p2",
+      "title": "Cum se fixează o memorie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "hippocampus_brain_anatomy_scan",
+          "ratio": "4:3",
+          "caption": "Hipocampul, o structură profundă, ajută la formarea de noi amintiri."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pentru ca informațiile să treacă de la fragile la durabile, creierul trebuie să întărească conexiunile dintre **neuronii**, celulele nervoase. Vorbim despre **consolida**, transformarea unei amintiri recente într-o urmă de durată. O structură mică numită **hipocampus**, în formă de cal de mare în lobul temporal, joacă un rol cheie în amintirile evenimentelor."
+        },
+        {
+          "type": "funFact",
+          "text": "Somnul, mai ales anumite faze, ajută la consolidarea a ceea ce am învățat în timpul zilei. Revizuirea apoi somnul funcționează adesea mai bine decât revizuirea până la 3 a.m."
+        },
+        {
+          "type": "paragraph",
+          "text": "O regulă celebră, legată de cercetătorul **Donald Hebb**: neuronii care se declanșează împreună tind să se conecteze mai puternic. Pe scurt: „ceea ce lumini se leagă împreună”. Acesta este principiul **neuroplasticitatea**, capacitatea creierului de a-și modifica conexiunile."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p3",
+      "title": "A aminti înseamnă a modifica",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Când îți amintești o memorie, aceasta devine temporar **maleabil**, editabilă. Detaliile din prezent se pot strecura. Apoi creierul le stochează din nou. Acesta este motivul pentru care doi martori la același accident pot spune versiuni diferite."
+        },
+        {
+          "type": "paragraph",
+          "text": "Putem chiar să creăm **amintiri false**: scene pe care le credem adevărate, dar care nu au avut loc niciodată, sau nu așa. Creierul umple golurile cu ceea ce știe deja."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p4",
+      "title": "Uitarea nu este întotdeauna un eșec",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dacă ți-ai aminti fiecare detaliu inutil, ai fi saturat. Uitarea ne ajută să generalizăm, să decidem, să păstrăm esențialul. O memorie bună sortează atât cât păstrează."
+        },
+        {
+          "type": "takeaway",
+          "text": "Memoria este o reconstrucție activă, nu o înregistrare perfectă. Se bazează pe mai multe sisteme, se consolidează mai ales în timpul somnului și poate deveni distorsionat cu fiecare memento."
+        }
+      ]
+    }
+  ]
+}

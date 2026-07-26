@@ -1,0 +1,104 @@
+{
+  "id": "course_220_la_desinformation_et_les_fake_news",
+  "title": "Dezinformare și știri false",
+  "subtitle": "Minciuna in era virala",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Informațiile false se răspândesc de 6 ori mai repede decât adevărul pe rețelele sociale. De ce și cum să te protejezi?",
+  "hero": {
+    "image": "la_desinformation_et_les_fake_news",
+    "ratio": "16:9",
+    "hook": "Un studiu MIT a arătat că știrile false circulă de 6 ori mai repede decât adevărul pe Twitter. Iată de ce."
+  },
+  "sections": [
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Minciuna pentru a servi unui scop politic nu este nimic nou: au fost găsite urme ale acesteia încă din Antichitate. Dar internetul și rețelele de socializare au schimbat situația: informațiile false nu mai circulă doar dintr-un stat către populația sa, ci se răspândesc acum pe orizontală, între cetățeni."
+        },
+        {
+          "type": "paragraph",
+          "text": "Această schimbare a creat o lume în care adevărul pare uneori opțional în fața viralității. Înțelegerea modului în care se răspândește **dezinformarea** și cine beneficiază de pe urma ei a devenit esențială pentru păstrarea încrederii între cetățeni."
+        }
+      ]
+    },
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_p1",
+      "title": "De ce minciunile călătoresc mai repede decât adevărul",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Trebuie să distingem dezinformarea, răspândită în mod deliberat pentru a manipula, de simplele erori sincere. Succesul acestei știri false se bazează pe ceea ce cercetătorii numesc economia atenției: algoritmii rețelelor sociale sunt proiectați pentru a maximiza timpul petrecut pe ecran, iar creierul nostru răspunde mai puternic la emoție și șoc decât la nuanță."
+        },
+        {
+          "type": "funFact",
+          "text": "Un studiu realizat de [[MIT]] publicat în 2018 a arătat că știrile false se răspândesc de aproximativ 6 ori mai repede decât știrile verificate pe Twitter, deoarece par mai noi și mai intense din punct de vedere emoțional."
+        },
+        {
+          "type": "paragraph",
+          "text": "Algoritmii blochează, de asemenea, utilizatorii de internet în bule [[bule de filtrare]]: le afișează doar conținut care confirmă opiniile lor deja existente. O persoană convinsă de o teorie a conspirației vede apoi fiecare nouă informație falsă ca o dovadă suplimentară, ceea ce face ca orice corectare ulterioară să fie foarte dificilă."
+        }
+      ]
+    },
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_p2",
+      "title": "O industrie a minciunilor, între state și profit",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dezinformarea a devenit o adevărată industrie. State precum Rusia, prin intermediul Agenției de Cercetare pe Internet, au creat mii de conturi automate false pentru a stârni tensiunile în interiorul democrațiilor occidentale, fără să încerce măcar să apere o anumită tabără: scopul este adesea să creeze haos și să-i facă pe oameni să creadă că „toată lumea minte”."
+        },
+        {
+          "type": "image",
+          "asset": "fake_news_social_media_manipulation_phone",
+          "ratio": "4:3",
+          "caption": "Informațiile false se răspândesc în câteva secunde pe rețelele sociale."
+        },
+        {
+          "type": "paragraph",
+          "text": "Există și o dimensiune pur lucrativă: în orașul Veles, din Macedonia de Nord, tineri antreprenori au creat site-uri senzaționaliste în 2016 fără nicio convingere politică, doar pentru a câștiga bani prin traficul generat pe rețelele de socializare. Minciuna devine atunci o simplă marfă profitabilă."
+        }
+      ]
+    },
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_p3",
+      "title": "Cum să separăm realitatea de ficțiune",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În fața acestui potop, lumea informației se organizează. **verificarea faptelor**, adică verificarea faptelor, a devenit o disciplină jurnalistică în sine. Agenții precum [[AFP]] sau redacția specializată folosesc instrumente de căutare de imagini pentru a detecta falsurile și pentru a analiza conținutul suspect."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dar cursa dintre atac și apărare rămâne inegală. Apariția [[Deepfakes]], videoclipuri falsificate de inteligența artificială în care o persoană este pusă să spună orice cu un realism tulburător, face distincția dintre adevărat și fals din ce în ce mai dificilă pentru un ochi neantrenat."
+        }
+      ]
+    },
+    {
+      "id": "course_220_la_desinformation_et_les_fake_news_p4",
+      "title": "Găsirea încrederii într-o lume a imaginilor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Efectul pe termen lung al dezinformării este profund: acum vorbim despre o eră **post-adevăr**, în care faptele obiective au uneori mai puțină greutate decât emoțiile și convingerile personale. Această relativizare generalizată slăbește încrederea necesară pentru a aborda împreună provocările globale precum clima sau sănătatea publică."
+        },
+        {
+          "type": "paragraph",
+          "text": "Răspunsul cel mai solid rămâne educația media: învățarea să verifice o sursă, trimiterea încrucișată a mai multor informații și înțelegerea modului în care funcționează algoritmii. Unii se bazează și pe tehnologii de certificare a conținutului, pentru a garanta originea unui videoclip încă de la crearea acestuia. Între timp, vigilența tuturor rămâne prima linie de apărare."
+        },
+        {
+          "type": "takeaway",
+          "text": "Informațiile false se răspândesc în medie de 6 ori mai repede decât adevărul pe rețelele de socializare, pentru că ne exploatează emoțiile și setea de noutate. În fața deepfake-urilor și a fermelor de troll, educația media rămâne cea mai bună armă pentru a păstra încrederea colectivă."
+        }
+      ]
+    }
+  ]
+}

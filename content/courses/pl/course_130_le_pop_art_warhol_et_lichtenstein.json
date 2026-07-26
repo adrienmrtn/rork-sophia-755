@@ -1,0 +1,138 @@
+{
+  "id": "course_130_le_pop_art_warhol_et_lichtenstein",
+  "title": "Pop-art: Warhol i Lichtenstein",
+  "subtitle": "Lata 50. i 70. XX wieku",
+  "subject": "art",
+  "subcategory": "Painting & Movements",
+  "description": "Pop Art odpowiada na społeczeństwo konsumpcyjne. **Warhola** i **Lichtensteina** sprawiają, że reklama, komiksy i gwiazdy są wielką sztuką.",
+  "hero": {
+    "image": "le_pop_art_warhol_et_lichtenstein",
+    "ratio": "16:9",
+    "hook": "Puszka zupy, pudełko komiksów: co by było, gdyby banalność była ikoną stulecia?"
+  },
+  "sections": [
+    {
+      "id": "course_130_le_pop_art_warhol_et_lichtenstein_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Pop Art**, od połowy lat **1950** do lat **1970**, odpowiada na [[Amerykańskie społeczeństwo konsumenckie lat 50. i 60. XX wieku]] i kulturę masową. Reklama, komiks, gwiazdy Hollywood: wszystko staje się materiałem dla sztuki."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dzięki **Andy’ego Warhola** i **Roya Lichtensteina** granica między muzeum a supermarketem się zaciera. Przedmiot codziennego użytku staje się ikoną. Wartość dzieła i rola artysty zostają zakłócone."
+        }
+      ]
+    },
+    {
+      "id": "course_130_le_pop_art_warhol_et_lichtenstein_p1",
+      "title": "Od życia codziennego do muzeum",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pop Art narodził się w **Wielka Brytania** wraz z [[Niezależna Grupa]], ale to właśnie w **UStany Zjednoczone**, w latach **1960**, eksplodował. Okres powojenny, dobrobyt, supermarkety, wszędzie logo: wizualny krajobraz Amerykanów się zmienił."
+        },
+        {
+          "type": "funFact",
+          "text": "W 1957 roku Richard Hamilton zdefiniował pop-art przymiotnikami: „efemeryczny”, „tani”, „seksowny”. Sztuka, którą można pochłonąć tak szybko, jak magazyn."
+        },
+        {
+          "type": "paragraph",
+          "text": "Artyści popowi przeciwstawili się [[Abstrakcyjny ekspresjonizm]], dominowały wówczas te introspektywne płótna. Kiedy Warhol maluje zupy, pokazuje, że jednostkę definiuje to, co kupuje. Powtórzenia osuszają obraz emocji, pozostawiając jedynie komercyjną skuteczność."
+        }
+      ]
+    },
+    {
+      "id": "course_130_le_pop_art_warhol_et_lichtenstein_p2",
+      "title": "Warhol: warsztat jako fabryka",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Andy’ego Warhola** (1928-1987), były grafik reklamowy, stosuje w sztuce metody branżowe. Jego **Fabryka** w Nowym Jorku nie jest już samotnym sanktuarium: asystenci i przyjaciele produkują razem."
+        },
+        {
+          "type": "image",
+          "asset": "andy_warhol_factory_silkscreen_marilyn",
+          "ratio": "4:3",
+          "caption": "Marilyn w serii: gwiazda jako produkt powtarzalny."
+        },
+        {
+          "type": "funFact",
+          "text": "Warhol zgromadził ponad 600 „kapsuł czasu”: pudełek, do których wrzucał listy, rachunki, a nawet resztki jedzenia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jego technika królowa: [[Sitodruk]], która pozwala na wielokrotne reprodukowanie obrazu. Mnożąc Marilyn Monroe, ilustruje ideę [[Aura i reprodukcja zmechanizowana (Walter Benjamin)]]: im bardziej obraz krąży, tym mniej jest „święty”, tym bardziej staje się ikoną. Sława sama w sobie jest produktem."
+        }
+      ]
+    },
+    {
+      "id": "course_130_le_pop_art_warhol_et_lichtenstein_p3",
+      "title": "Lichtenstein: powiększony komiks",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Roya Lichtensteina** (1923-1997) atakuje język **komiks**. Wyodrębnia panel naładowany emocjonalnymi kliszami i maluje go w monumentalnej formie."
+        },
+        {
+          "type": "image",
+          "asset": "roy_lichtenstein_comic_ben_day_dots_painting",
+          "ratio": "4:3",
+          "caption": "Ręcznie malowane kropki Ben-Day: fabryka imitowana gestem."
+        },
+        {
+          "type": "funFact",
+          "text": "Aby ocenić kompozycję, Lichtenstein oglądał swoje obrazy w lustrze do góry nogami, aby sprawdzić, czy trzymają się w sposób czysto abstrakcyjny."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jego sygnatura: punkt [[Ben-Day]], te małe przemysłowe kropki drukarskie, które tworzą niuanse. Maluje je ręcznie za pomocą szablonów: godziny naśladowania tego, co robi maszyna w ciągu kilku sekund. *Brawo!* przekształca skrzynkę informacyjną w obraz historii współczesnej."
+        }
+      ]
+    },
+    {
+      "id": "course_130_le_pop_art_warhol_et_lichtenstein_p4",
+      "title": "Dziedzictwo: od rynku do sieci",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pop Art zmienia rynek i instytucje. Znak artysty jest równie ważny jak gest. W **2022** portret Marilyn pędzla Warhola osiągnął **195 milionów** dolarów: obraz masowy, sakralny, staje się najcenniejszym towarem."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1957",
+              "title": "Definicja popu",
+              "detail": "Hamilton podsumowuje ten ruch: efemeryczny, tani, seksowny."
+            },
+            {
+              "date": "Lata 60",
+              "title": "Fabryka i komiksy",
+              "detail": "Warhol i Lichtenstein narzucają w USA estetykę popu."
+            },
+            {
+              "date": "2022",
+              "title": "Marilyn za 195 milionów dolarów",
+              "detail": "Ikona masowa staje się absolutnym trofeum rynku."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Przepowiednia Warhola dotycząca „15 minut sławy” stała się naszą cyfrową codziennością. Memy i recykling obrazów są bezpośrednim skutkiem tej rewolucji."
+        },
+        {
+          "type": "takeaway",
+          "text": "Pop Art przełamał barierę pomiędzy sztuką wysoką a kulturą masową. Dzięki sitodrukowi i kropkom Ben-Day'a Warhol i Lichtenstein zamienili przedmioty codziennego użytku i gwiazdy w trwałe ikony."
+        }
+      ]
+    }
+  ]
+}

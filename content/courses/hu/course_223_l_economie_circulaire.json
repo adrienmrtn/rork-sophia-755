@@ -1,0 +1,132 @@
+{
+  "id": "course_223_l_economie_circulaire",
+  "title": "A körkörös gazdaság",
+  "subtitle": "Távolodik minden eldobhatótól",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "**Kivonat, gyártás, kidobás**: ez a modell kimeríti a bolygót. A körkörös gazdaság ennek az ellenkezőjét javasolja: a tárgyak és anyagok ameddig csak lehetséges, forgalomban tartása.",
+  "hero": {
+    "image": "l_economie_circulaire",
+    "ratio": "16:9",
+    "hook": "Mi van, ha nem létezne hulladék? Ez a természet által ihletett gazdasági modell tétje."
+  },
+  "sections": [
+    {
+      "id": "course_223_l_economie_circulaire_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az ipari forradalom óta gazdaságunk egy irányban működik: erőforrásokat nyerünk ki, tárgyakat gyártunk, majd kidobjuk őket. Ez a modell azt feltételezi, hogy az erőforrások végtelenek. Nem azok."
+        },
+        {
+          "type": "paragraph",
+          "text": "A **körkörös gazdaság** egy másik, a természet által inspirált logikát kínál, ahol valójában semmi sem vész el. Célja, hogy a termékek és anyagok értékét a lehető legtovább forgalomban tartsa, ahelyett, hogy hulladékká alakítaná azokat."
+        }
+      ]
+    },
+    {
+      "id": "course_223_l_economie_circulaire_p1",
+      "title": "A lineáris modell eléri határait",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A modern gazdaság a **lineáris** nevű modellre épült: kivonat, gyártás, kidobás. A természetből veszünk nyersanyagokat, készítünk belőlük termékeket, amelyek elhasználódva vagy kimentek a divatból, hulladékká válnak."
+        },
+        {
+          "type": "image",
+          "asset": "landfill_waste_garbage_linear_economy",
+          "ratio": "16:9",
+          "caption": "A „vesz, készít, dobja el” modell végtelen erőforrásokat feltételez."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ez a rendszer azon az elgondoláson alapul, hogy az erőforrások korlátlanok, és a természet képes elnyelni minden szennyezést. De ma a globális gazdaság évente 1,7 bolygónak megfelelő erőforrást fogyaszt el. Bizonyos, a digitális technológiákhoz nélkülözhetetlen fémeket, például a [[Lítium]]-t, már 2040-től nehéz lehet megtalálni."
+        },
+        {
+          "type": "funFact",
+          "text": "Az emberiség által valaha gyártott műanyagok mindössze 9%-át hasznosították újra. A többi a természetbe vagy a szemétlerakóba kerül, ahol 450 évig megmarad."
+        },
+        {
+          "type": "paragraph",
+          "text": "A takarítás és a hulladékkezelés költsége szinte soha nem szerepel egy termék eladási árában. Ez egy rejtett költség, amelyet mindenki később fizet."
+        }
+      ]
+    },
+    {
+      "id": "course_223_l_economie_circulaire_p2",
+      "title": "Újrahasznosítás előtt javítsa meg",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A körkörös gazdaság több hurkot kínál, és mindig ugyanabban a prioritási sorrendben: a legrövidebb hurok jobb, mert kevesebb energiát és anyagot pazarol. Minden a **környezetbarát tervezés**-vel kezdődik, vagyis a termék megalkotásától kezdődően a környezetre gyakorolt ​​hatásra kell gondolni, a tartós és könnyen szétszedhető anyagok kiválasztásával."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ezután jön a **újrafelhasználás** (egy objektum átalakítás nélkül megváltoztatja a tulajdonost, mint a használt piacon), majd a **javítás**, amely meghosszabbítja a termék élettartamát. Ezek a lépések közvetlenül küzdenek a [[Tervezett elavulás]] ellen, ezzel a gyakorlattal, amely önként csökkenti egy tárgy élettartamát."
+        },
+        {
+          "type": "image",
+          "asset": "recycling_sorting_waste_materials",
+          "ratio": "4:3",
+          "caption": "Az újrahasznosítás az utolsó lehetőség, újrahasználat és javítás után."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Újrahasznosítás** csak végső esetben fordul elő. Hasznos marad: az alumínium újrahasznosítása 95%-kal kevesebb energiát fogyaszt, mint a nyers ércből való kitermelés, [[Bauxit]]. De még mindig kevésbé hatékony, mint egy objektum egyszerű újrafelhasználása."
+        }
+      ]
+    },
+    {
+      "id": "course_223_l_economie_circulaire_p3",
+      "title": "Miért nehéz ma is",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Minden érdeklődése ellenére a körkörös gazdaság egy egyszerű problémával néz szembe: a lineáris modell gyakran **kevesebb draga marad rövid távon**. Az új anyagok kitermelése néha kevesebbe kerül, mint a komplex hulladékok válogatása és újrahasznosítása, különösen, ha az alapanyagok olcsók."
+        },
+        {
+          "type": "image",
+          "asset": "repair_right_electronics_reuse",
+          "ratio": "4:3",
+          "caption": "A „javításhoz való jog” megköveteli a gyártóktól, hogy pótalkatrészeket biztosítsanak."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ezzel szemben a hatóságok egyre inkább beavatkoznak. Az Európai Unió 2020-ban elindított egy tervet, amely szigorúbb fenntarthatósági szabályokat ír elő. Az egyik fő tengely a „javításhoz való jog”, amely több évre kötelezi az elektronikai készülékek gyártóit a pótalkatrészek biztosítására."
+        },
+        {
+          "type": "paragraph",
+          "text": "Egy másik kar: a [[Kiterjesztett gyártói felelősség]], amely arra készteti a gyártókat, hogy fizessenek termékeik hulladékkezeléséért. Ez pénzügyi ösztönzést ad számukra kevésbé szennyező és könnyebben javítható tárgyak tervezésére."
+        }
+      ]
+    },
+    {
+      "id": "course_223_l_economie_circulaire_p4",
+      "title": "Az erőforrás-társadalom felé",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A körkörös gazdaság nem csupán az újrahasznosítás kérdése: ez egy józanabb és ellenállóbb társadalom projektje. Azáltal, hogy kevésbé függ az importált nyersanyagoktól, egy ország biztonságot is szerez egy instabilabb világban."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ennek az átalakulásnak a sikere rajtunk, fogyasztókon is múlik. A 3R szabály, csökkentsd, használd újra, használd újra, az első lépéssel kezdődik: csökkentsd, vagyis tedd fel magadnak a kérdést, hogy valóban szükséges-e a vásárlás. Ez az első intézkedés, amely a legnagyobb hatással van az éghajlatra."
+        },
+        {
+          "type": "funFact",
+          "text": "Ma több arany van egy tonna régi okostelefon elektronikus táblájában, mint egy tonna hagyományos aranybányából kitermelt ércben."
+        },
+        {
+          "type": "takeaway",
+          "text": "A körkörös gazdaság célja, hogy megtörje a „kivonat, készíts, dobd el” ciklust azáltal, hogy az erőforrásokat környezetbarát tervezéssel, javítással és újrahasznosítással forgalomban tartja, tiszteletben tartva bolygónk fizikai korlátait."
+        }
+      ]
+    }
+  ]
+}

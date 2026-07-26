@@ -1,0 +1,102 @@
+{
+  "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859",
+  "title": "Darwins evolutietheorie",
+  "subtitle": "1859",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "In 1859 publiceerde Darwin The Origin of Species. Het centrale idee: levende wezens veranderen in de loop van de tijd door natuurlijke selectie.",
+  "hero": {
+    "image": "la_theorie_de_l_evolution_de_darwin",
+    "ratio": "16:9",
+    "hook": "Soorten staan ​​niet vast. Ze veranderen. Langzaam. Maar zeker."
+  },
+  "sections": [
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_intro",
+      "title": "Inleiding",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In **1859** publiceerde **Charles Darwin** *Over de oorsprong van soorten*. Het boek shockeert, fascineert, verdeelt. Het centrale idee is echter eenvoudig te formuleren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Levende wezens variëren. Sommige variaties helpen overleven en reproduceren. Deze variaties worden doorgegeven. Over generaties heen veranderen populaties."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p1",
+      "title": "De eye-openende reis",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "charles_darwin_portrait",
+          "ratio": "4:3",
+          "caption": "Darwin, Britse natuuronderzoeker uit de 19e eeuw."
+        },
+        {
+          "type": "paragraph",
+          "text": "Als jonge jongen vertrekt Darwin op het schip **Brak**. Jarenlang observeerde hij planten, fossielen, vogels. Op de Galapagoseilanden merkte hij dat vogels in de buurt verschillende snavels hadden, afhankelijk van hun voedsel."
+        },
+        {
+          "type": "image",
+          "asset": "darwin_finches_galapagos_beaks",
+          "ratio": "4:3",
+          "caption": "Mondstukken aangepast aan verschillende diëten: een sterke indicator."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p2",
+      "title": "Natuurlijke selectie, in gewoon Engels",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stel je een populatie dieren voor. Sommigen rennen wat sneller, verteren wat beter, zijn wat beter bestand tegen de kou. Als het hen helpt te overleven en jongen te krijgen, komen deze eigenschappen vaker voor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Het is niet zo dat individuen ‘willen’ evolueren. Het is een filter: de omgeving houdt wat werkt. Darwin noemt dit **natuurlijke selectie**."
+        },
+        {
+          "type": "funFact",
+          "text": "Darwin heeft lang gewacht met publiceren. Hij vreesde een schandaal. Een andere natuuronderzoeker, **Alfred Russel Wallace**, kwam tot soortgelijke ideeën: dit zette Darwin ertoe aan zijn boek uit te brengen."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p3",
+      "title": "De botsing van ideeën",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In de 19e eeuw geloofden velen dat soorten werden geschapen zoals ze waren. Zeggen dat ze veranderen en dat mensen een geschiedenis delen met andere dieren, schudt religie en samenleving wakker."
+        },
+        {
+          "type": "paragraph",
+          "text": "De wetenschap gaat vooruit: fossielen, de geografie van de soorten en later de genetica bevestigen het algemene idee."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p4",
+      "title": "En vandaag?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We weten nu dat DNA variaties met zich meebrengt. We observeren de evolutie in het laboratorium (bacteriën, virussen) en in de natuur. We bestrijden ook bacteriën die resistent zijn tegen antibiotica: dit is live evolutie."
+        },
+        {
+          "type": "takeaway",
+          "text": "Darwin liet zien dat levende wezens evolueren door natuurlijke selectie: eigenschappen die nuttig zijn voor overleving en voortplanting verspreiden zich. De moderne genetica heeft dit raamwerk bevestigd en verduidelijkt."
+        }
+      ]
+    }
+  ]
+}

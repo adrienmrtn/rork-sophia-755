@@ -1,0 +1,108 @@
+{
+  "id": "course_74_pourquoi_certaines_especes_sont_elles_im",
+  "title": "Miért halhatatlanok egyes fajok?",
+  "subtitle": "Biológia és hosszú élettartam",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Úgy tűnik, hogy egyes fajok dacolnak a halállal. Megfiatalító medúzák, öregedés nélküli hidrák: a titok a sejtjavításban rejlik.",
+  "hero": {
+    "image": "pourquoi_certaines_especes_sont_immortelles",
+    "ratio": "16:9",
+    "hook": "Az öregedés nem az élet abszolút törvénye. Néhány faj megtalálta a hibát."
+  },
+  "sections": [
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Megöregedünk, aztán meghalunk. A [[Turritopsis dohrnii]] medúza azonban visszatérhet fiatalkori állapotába, és újrakezdheti. A **Ming** kagyló **507 évig élt**. Az öregedés tehát nem általános szabály: ez egy folyamat, amelyet bizonyos fajok megkerülnek."
+        },
+        {
+          "type": "paragraph",
+          "text": "E kivételek tanulmányozásával a kutatók kevésbé keresik a sci-fi halhatatlanságát, mint az élet trükkjeit a sejtek jobb javítására."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p1",
+      "title": "Miért kopnak sejtjeink",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az öregedés nem csak a gépszerű „elhasználódásról” szól. Ez egy egyensúlyhiány: a kár gyorsabban halmozódik fel, mint a javítás."
+        },
+        {
+          "type": "image",
+          "asset": "chromosome_dna_telomere_aging_cell",
+          "ratio": "auto",
+          "caption": "A kromoszómák végén található telomerek minden sejtosztódáskor lerövidülnek."
+        },
+        {
+          "type": "paragraph",
+          "text": "A kromoszómáink végén a [[Telomerek]] úgy viselkedik, mint a cipőfűző hegye. Minden sejtosztódással lerövidülnek. Túl rövid, a sejt abbahagyja az osztódást. Ugyanakkor az anyagcsere agresszív molekulákat termel, amelyek károsítják a fehérjéket és a DNS-t. A „zombi” sejtek felhalmozódnak és felgyulladnak a körülöttük lévő szövetekben."
+        },
+        {
+          "type": "funFact",
+          "text": "A tardigrád, egy apró „vízi medve”, kiszáradva szinte abbahagyhatja az életet. Anyagcseréje **99,99%-ra**-re esik, és túléli az űrvákuumot vagy a szélsőséges sugárzást anélkül, hogy valóban öregedne."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p2",
+      "title": "Bajnokok, akik elkerülik a halált",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A sérült vagy éhezett [[Turritopsis dohrnii]] felnőtt sejtjeit „üres” sejtekké alakítja, majd újra polippá válik, a kiindulási stádium. Ez a visszalépés, amit transzdifferenciálásnak neveznek, a **biológiai halhatatlanság** formáját adja."
+        },
+        {
+          "type": "paragraph",
+          "text": "A **hidra**, egy kis édesvízi polip, a szinte korlátlan [[őssejtek]] készletnek köszönhetően egész testét megújítja. Nem mutatja az öregedés mérhető jeleit. Az ultrahatékony DNS-javításnak és a rákkal szembeni erős rezisztenciának köszönhetően a bálna meghaladhatja a **200 évet**."
+        },
+        {
+          "type": "funFact",
+          "text": "A homárok testükben mindenhol telomerázt termelnek: telomerjeik nem rövidülnek meg. Egész életükben nőnek, és elpusztulnak, különösen akkor, ha a vedlés túl költségessé válik."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p3",
+      "title": "Mit tanul belőle az orvostudomány",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az ötlet már nemcsak az Alzheimer-kór vagy az osteoarthritis egyenkénti kezelése, hanem magát az öregedést is megtámadják. A **szenolitikumok** célja a zombisejtek eltüntetése. Az állatoknál ez már bizonyos funkciókat megfiatalított."
+        },
+        {
+          "type": "paragraph",
+          "text": "A kalóriák alultápláltság nélküli korlátozása a helyreállítási utakat is aktiválja, nevezetesen azáltal, hogy lelassítja a [[mTOR]] fehérjét, amely felgyorsítja a növekedést… és néha hanyatlást. Más laboratóriumok a sejtek, például a medúzák „óráját” próbálják felforgatni anélkül, hogy daganatokká alakítanák át őket."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p4",
+      "title": "Halhatatlan, de nem legyőzhetetlen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Még egy biológiailag halhatatlan faj is elpusztul ragadozók, betegségek vagy katasztrófák következtében. A halál továbbra is az evolúció hajtóereje: új, jobban alkalmazkodó nemzedékeknek ad helyet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Az emberek számára nem az a reális kihívás, hogy örökké éljenek, hanem az, hogy meghosszabbítsák az éveket **jó egészségben**. A hosszú élettartamú technológia a méltányosság és az erőforrások hatalmas kérdéseit is felvetné."
+        },
+        {
+          "type": "takeaway",
+          "text": "A biológiai halhatatlanság a sejtek helyreállításán vagy visszaállításán alapul. A Turritopsis dohrnii medúza egyre fiatalabb; a hidra folyamatosan megújul. Az öregedés nem egyetemes haláleset."
+        }
+      ]
+    }
+  ]
+}

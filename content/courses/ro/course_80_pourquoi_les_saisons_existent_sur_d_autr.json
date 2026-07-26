@@ -1,0 +1,112 @@
+{
+  "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr",
+  "title": "De ce există anotimpuri pe alte planete?",
+  "subtitle": "Planete și orbite",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Pe Pământ, anotimpurile provin din înclinarea axei. În altă parte, același principiu oferă ierni de 42 de ani... sau aproape deloc anotimp.",
+  "hero": {
+    "image": "pourquoi_les_saisons_existent_sur_d_autres_planetes",
+    "ratio": "16:9",
+    "hook": "Cele patru sezoane ale noastre sunt un caz moderat. În altă parte, o vară poate dura zeci de ani."
+  },
+  "sections": [
+    {
+      "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pe Pământ, vara și iarna provin în principal din înclinația **** o axă: aproximativă**23,5°**. Soarele lovește mai puternic pe o emisferă, apoi pe cealaltă. Acest model pare evident. În Sistemul Solar, este mai degrabă o versiune moderată."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fiecare planetă își combină înclinația și forma orbitei sale. Rezultat: lumi fără anotimpuri, altele cu contraste extreme și ierni care durează decenii."
+        }
+      ]
+    },
+    {
+      "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p1",
+      "title": "Înclinare, motor al contrastelor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Oblicitate]] este unghiul dintre axa de rotație a unei planete și perpendiculara pe orbita acesteia. Cu cât este mai mare, cu atât anotimpurile sunt mai marcate."
+        },
+        {
+          "type": "image",
+          "asset": "uranus_planet_nasa",
+          "ratio": "auto",
+          "caption": "Uranus, înclinat la aproximativ 98°, se confruntă cu anotimpuri extreme care durează 42 de ani."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Uranus** este cazul extrem: înclinare de aproximativ **98°**, aproape întins. Este nevoie de **84 de ani** pentru a ocoli Soarele. Fiecare stâlp primește apoi aproape **42 de ani** de zi continuă, apoi **42 de ani** de noapte totală. **Jder**, la **25,2°**, seamănă cu Pământul, dar anul său durează **687 de zile terestre**: primăvara și toamna de șase luni. **Jupiter** și **Mercur**, aproape drepte, aproape că nu au anotimpuri."
+        },
+        {
+          "type": "funFact",
+          "text": "Pe Uranus și Neptun, presiuni extreme ar putea „ploua” diamante formate din carbonul atmosferic."
+        }
+      ]
+    },
+    {
+      "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p2",
+      "title": "Când contează și distanța față de Soare",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pe Pământ, orbita este aproape circulară: distanța de la Soare variază puțin. Prin urmare, nu este ceea ce face vara sau iarna, ci unghiul razelor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pe **martie**, orbita este mult mai ovală, mai **excentric**: de la **207 până la 249 milioane km**. În emisfera sudică, vara cade în apropierea [[periheliu]], cel mai apropiat punct de Soare. Veri mai scurte, dar mai calde. Acest șoc termic declanșează uneori furtuni de praf planetare **** care ascund cerul."
+        },
+        {
+          "type": "funFact",
+          "text": "În **2018**, o furtună marțiană sezonieră a oprit definitiv roverul Opportunity blocând Soarele."
+        }
+      ]
+    },
+    {
+      "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p3",
+      "title": "Venus, Mercur, Saturn: alte reguli",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Mercurul**, fără atmosferă sau înclinație reală, trăiește în principal în **** extreme zilnice: **430 °C**Soare,**-180 °C** noaptea. **Venus** se rotește în sens invers, într-o [[Rotație retrogradă]] retrogradă de la est la vest, cu o înclinare extremă, dar efectul său de seră monstruos captează căldura în atmosferă și egalizează temperatura la **460 °C** peste tot, tot timpul."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Saturn**, înclinat ca Pământul, are anotimpuri de aproximativ **7 ani**. Unghiul lui [[inelele lui Saturn]] modifică lumina primită de fiecare emisferă și chiar modifică culoarea norilor."
+        },
+        {
+          "type": "funFact",
+          "text": "Pe Venus, într-o zi, rotația sa durează mai mult de un an, revoluția sa: **243** zile terestre față de **225**."
+        }
+      ]
+    },
+    {
+      "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p4",
+      "title": "De ce Pământul are anotimpuri stabile?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fără **Luna**, înclinația Pământului ar oscila haotic între 0° și mai mult de 80° de-a lungul a milioane de ani. Anotimpurile de tip Uranus ar face clima aproape nelocuabilă. Luna acționează ca un **stabilizator gravitațional**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Când caută [[exoplanete]] locuibilă, astronomii se uită și la stabilitatea axei. Anotimpurile blânde și regulate nu sunt un detaliu: fac parte din condițiile unui trai durabil."
+        },
+        {
+          "type": "takeaway",
+          "text": "Anotimpurile apar în principal din înclinarea axei. Pe Uranus, ele durează decenii; pe Marte, orbita ovală le face asimetrice. Luna îi protejează pe cei de pe Pământ."
+        }
+      ]
+    }
+  ]
+}

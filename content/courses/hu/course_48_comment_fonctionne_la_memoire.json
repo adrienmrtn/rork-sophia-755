@@ -1,0 +1,106 @@
+{
+  "id": "course_48_comment_fonctionne_la_memoire",
+  "title": "Hogyan működik a memória?",
+  "subtitle": "Agy",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "A memória nem kamera. Minden emlék rekonstruálva van. Így kódol, tárol… és néha feltalál az agy.",
+  "hero": {
+    "image": "comment_fonctionne_la_memoire",
+    "ratio": "16:9",
+    "hook": "Az emlékezés nem egy fájl újraolvasása. Ez egy jelenet rekonstrukciója."
+  },
+  "sections": [
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A memóriát gyakran merevlemezként képzeljük el: rögzítünk, tárolunk, újraolvasunk. Az agy nem így működik. Valahányszor eszedbe jut, **rekonstruál** egy jelenetet töredékekből."
+        },
+        {
+          "type": "paragraph",
+          "text": "Erőteljes… és esendő. Ennek megértése azt jelenti, hogy megértjük, miért felejtünk, miért hibázunk és miért tanulunk."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p1",
+      "title": "Több emlék, nem csak egy",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "human_brain_anatomy",
+          "ratio": "4:3",
+          "caption": "Az agy különböző területei a memória különböző formáit kezelik."
+        },
+        {
+          "type": "paragraph",
+          "text": "Először is a [[munkamemória]]: amit néhány másodpercig „észben tartasz”, például egy telefonszámot. Korlátozott, átlagosan körülbelül **7 elem**. Aztán **hosszú távú memória**: tények, események emlékei, olyan készségek, mint a biciklizés."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ezek a rendszerek nem mind egy helyen élnek az agyban. A **prefrontális kéreg**, az agy elülső része a homlok mögött, sokat segít a munkamemóriában. Más régiók, mint például a **neocortex**, az agy külső rétege, hosszú távon tárolják."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p2",
+      "title": "Hogyan rögzítik a memóriát",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "hippocampus_brain_anatomy_scan",
+          "ratio": "4:3",
+          "caption": "A hippocampus, egy mély szerkezet, segít új emlékek kialakításában."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ahhoz, hogy az információ törékenyből tartóssá váljon, az agynak meg kell erősítenie a kapcsolatokat a **neuronok**, azaz az idegsejtek között. A **konszolidációról**-ről beszélünk, egy közelmúltbeli emlék maradandó nyomokká alakításáról. A halántéklebenyben tengeri ló formájú, **csikóhal** nevű kis szerkezet kulcsszerepet játszik az események emlékeiben."
+        },
+        {
+          "type": "funFact",
+          "text": "Az alvás, különösen bizonyos fázisok, segít megszilárdítani a nap folyamán tanultakat. A felülvizsgálat, majd az alvás gyakran jobban működik, mint a hajnali 3-ig tartó felülvizsgálat."
+        },
+        {
+          "type": "paragraph",
+          "text": "Egy híres szabály, amely a **kutatójához, Donald Hebb**-hez kapcsolódik: az együtt tüzelõ neuronok általában erősebben kapcsolódnak egymáshoz. Összefoglalva: „ami a fények együtt, az összetart”. Ez a **neuroplaszticitás** elve, az agy azon képessége, hogy módosítsa kapcsolatait."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p3",
+      "title": "Emlékezni annyi, mint módosítani",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Amikor előhív egy emléket, az ideiglenesen **formátum** lesz, szerkeszthetővé válik. Részletek a jelenből csúszhatnak be. Aztán az agy újra elraktározza. Éppen ezért ugyanannak a balesetnek két szemtanúja különböző verziókat tud mondani."
+        },
+        {
+          "type": "paragraph",
+          "text": "Létrehozhatunk még **hamis emlékeket**: olyan jeleneteket, amelyeket igaznak hiszünk, de amelyek soha nem történtek meg, vagy nem úgy. Az agy kitölti a hiányokat azzal, amit már tud."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p4",
+      "title": "A felejtés nem mindig kudarc",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ha minden felesleges részletre emlékezne, telített lennél. A felejtés segít az általánosításban, a döntésben, a lényegesek megtartásában. A jó memória annyit rendez, amennyit megtart."
+        },
+        {
+          "type": "takeaway",
+          "text": "A memória aktív rekonstrukció, nem tökéletes felvétel. Több rendszerre támaszkodik, különösen alvás közben konszolidálódik, és minden emlékeztető hatására eltorzulhat."
+        }
+      ]
+    }
+  ]
+}

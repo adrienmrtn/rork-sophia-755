@@ -1,0 +1,145 @@
+{
+  "id": "course_139_la_naissance_du_jazz_americain",
+  "title": "Nașterea jazz-ului american",
+  "subtitle": "1890-1960",
+  "subject": "art",
+  "subcategory": "Music",
+  "description": "Născut la New Orleans, jazzul a amestecat ritmuri africane, blues și armonie europeană, apoi a inventat swing-ul, bebop-ul și jazz-ul modal.",
+  "hero": {
+    "image": "la_naissance_du_jazz_americain",
+    "ratio": "16:9",
+    "hook": "Într-un oraș-port, America își inventează muzica clasică: jazz-ul."
+  },
+  "sections": [
+    {
+      "id": "course_139_la_naissance_du_jazz_americain_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jazz s-a născut în [[New Orleans]] spre sfârșitul secolului al XIX-lea. Port Louisiana, răscruce de drumuri franceze, spaniole, africane și caraibiene, orașul este un laborator de sunet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Născută în violența sclaviei și a segregării, această muzică a devenit „muzica clasică a Americii”. De-a lungul unui secol, a influențat rock, funk și hip-hop. A înțelege jazzul înseamnă a înțelege o libertate inventată sub constrângere."
+        }
+      ]
+    },
+    {
+      "id": "course_139_la_naissance_du_jazz_americain_p1",
+      "title": "New Orleans și Piața Congo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La sfârșitul secolului al XIX-lea, New Orleans a amestecat creoli de culoare, descendenți ai africanilor înrobiți și imigranți europeni. Opera europeană și ritmurile caraibiene se intersectează acolo. La [[Piața Congo]], singurul loc din Nord unde populațiile negre aveau dreptul să se întâlnească duminica, supraviețuiesc tobe și poliritmuri africane."
+        },
+        {
+          "type": "image",
+          "asset": "congo_square_new_orleans_slaves_music",
+          "ratio": "4:3",
+          "caption": "Piața Congo: memorie ritmică africană în inima Louisianei."
+        },
+        {
+          "type": "paragraph",
+          "text": "**fanfară** (fanfarele) anima parade si inmormantari: mars lent spre cimitir, explozie de bucurie la intoarcere. Această schimbare între doliu și sărbătoare este sufletul emoțional al jazz-ului emergent."
+        },
+        {
+          "type": "funFact",
+          "text": "Pionierul **Buddy Bolden**, un frizer de meserie, nu a fost niciodată înregistrat: legenda sa îi aparține celor care i-au auzit cornetul de peste Mississippi."
+        }
+      ]
+    },
+    {
+      "id": "course_139_la_naissance_du_jazz_americain_p2",
+      "title": "Note albastre, improvizație și Jim Crow",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jazz-ul moștenește din blues [[note albastre]], note „inflexate” care creează tensiune expresivă. Din cântecele Evanghelie și de lucru, el trage chemarea și răspunsul. Aceste elemente sunt plasate pe armonia europeană a fanfarelor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pauza este [[Improvizația în jazz]]: partitura nu mai este o lege, ci o grilă. Muzicianul compune în timp real. Într-o America a [[legile lui Jim Crow]], această libertate este și politică: a-și afirma singularitatea atunci când sistemul dorește să o ștergă."
+        },
+        {
+          "type": "funFact",
+          "text": "În 1917, primul disc de jazz a fost înregistrat de muzicieni albi (Original Dixieland Jass Band): casele de discuri nu au îndrăznit încă să parieze pe inventatorii negri ai genului."
+        }
+      ]
+    },
+    {
+      "id": "course_139_la_naissance_du_jazz_americain_p3",
+      "title": "Armstrong, leagăn, bebop, Kind of Blue",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cu [[Mare Migrație]] spre Chicago și New York, jazzul a părăsit Sudul. **Louis Armstrong** îl plasează pe virtuozul solistul în centru. În Harlem, în timpul [[Renașterea Harlem]], jazz-ul este sărbătorit ca modernitate neagră. În anii 1930, [[leagăn]] de **Ducele Ellington** a făcut America să danseze."
+        },
+        {
+          "type": "image",
+          "asset": "louis_armstrong_trumpet_1920s_jazz",
+          "ratio": "4:3",
+          "caption": "Louis Armstrong: solistul devine inima jazz-ului."
+        },
+        {
+          "type": "paragraph",
+          "text": "După 1945, **Charlie Parker** a inventat [[bebop]]: tempo-uri rapide, armonii complexe, muzică ascultată. În **1959**, **Miles Davis** a publicat *Un fel de albastru*: [[jazz modal]] încetinește modificările acordurilor pentru a explora o culoare. Este încă cel mai bine vândut disc de jazz din lume."
+        },
+        {
+          "type": "image",
+          "asset": "miles_davis_kind_of_blue_album_cool_jazz",
+          "ratio": "4:3",
+          "caption": "Kind of Blue (1959): jazz modal, calm și revoluționar."
+        },
+        {
+          "type": "funFact",
+          "text": "Clubul din New York Birdland își ia numele de la porecla lui Parker, „Bird”. Parker însuși a fost dat afară într-o noapte după o ceartă."
+        }
+      ]
+    },
+    {
+      "id": "course_139_la_naissance_du_jazz_americain_p4",
+      "title": "Free jazz, fuziune și patrimoniu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În anii 1960, [[jazz liber]] a spart cadrul, legat de drepturile civile. Apoi [[jazz fusion]] încrucișează rock electric și funk. Swing, această pulsație elastică, încă irigă rock și hip-hop. Instituționalizat în conservatoare, jazz-ul rămâne un limbaj al momentului: fiecare concert este unic."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "sfârşitul secolului al XIX-lea",
+              "title": "New Orleans",
+              "detail": "Piața Congo, fanfare, nașterea jazz-ului."
+            },
+            {
+              "date": "anii 1920",
+              "title": "Armstrong",
+              "detail": "Solistul virtuoz cucerește Chicago și New York."
+            },
+            {
+              "date": "anii 1930-1940",
+              "title": "Swing apoi bebop",
+              "detail": "De la dans la muzică de cameră modernă."
+            },
+            {
+              "date": "1959",
+              "title": "Un fel de albastru",
+              "detail": "Miles Davis inventează un jazz modal universal."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Născut la New Orleans din fuziunea dintre ritmurile africane, blues și armonia europeană, jazzul este o artă a improvizației și un simbol al libertății."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap",
+  "title": "De ontdekking van elektriciteit",
+  "subtitle": "Van Franklin tot Tesla",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Elektriciteit is niet plotseling uitgevonden. Het werd eerst waargenomen, vervolgens begrepen en vervolgens gedomesticeerd. Dit zijn de belangrijkste stappen.",
+  "hero": {
+    "image": "la_decouverte_de_l_electricite",
+    "ratio": "16:9",
+    "hook": "Van bliksem tot smartphone: twee eeuwen om het onzichtbare te temmen."
+  },
+  "sections": [
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_intro",
+      "title": "Inleiding",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Elektriciteit bestaat in de natuur: bliksem, elektrische vissen, wrijving. Wat de wereld veranderde was het leren **producent**, **vervoer** en het gebruiken ervan."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dit verhaal omspant meer dan twee eeuwen, met risicovolle experimenten en grote rivaliteit."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p1",
+      "title": "Bliksem begrijpen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In de 18e eeuw toonde **Benjamin Franklin** aan dat bliksem een ​​elektrisch fenomeen is. Zijn vliegerexperiment (vaak op fictieve wijze verteld) heeft tot doel te bewijzen dat de lucht en de wrijvingsmachine met dezelfde kracht spelen."
+        },
+        {
+          "type": "image",
+          "asset": "benjamin_franklin_kite_lightning_experiment",
+          "ratio": "4:3",
+          "caption": "Franklin koppelt bliksem aan elektriciteit: een gevaarlijk, maar fundamenteel idee."
+        },
+        {
+          "type": "paragraph",
+          "text": "We hebben ook de **donder** uitgevonden, een metalen staaf die bliksem een ​​veilig pad naar de grond biedt. Elektriciteit laat een mysterie achter om de techniek in te gaan."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p2",
+      "title": "Faraday: stroom produceren",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In de 19e eeuw toonde **Michael Faraday** aan dat een magneet die in de buurt van een draad beweegt een elektrische stroom kan opwekken. Dit is de **inductie**. Zonder dit idee geen dynamo, geen dynamo, geen moderne energiecentrale."
+        },
+        {
+          "type": "image",
+          "asset": "faraday_electromagnetic_induction_experiment",
+          "ratio": "4:3",
+          "caption": "Faraday transformeert beweging en magnetisme in stroom."
+        },
+        {
+          "type": "funFact",
+          "text": "Faraday kwam uit een bescheiden achtergrond en begon als boekbinder. Hij leerde wetenschap door te lezen wat hij vertrouwde."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p3",
+      "title": "Edison versus Tesla",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aan het einde van de 19e eeuw kwamen twee kampen met elkaar in botsing. **Thomas Edison** duwt gelijkstroom. **Nikola Tesla** (en het bedrijf Westinghouse) verdedigen wisselstroom, die gemakkelijker over lange afstanden kan worden getransporteerd."
+        },
+        {
+          "type": "image",
+          "asset": "tesla_edison_electric_power_station",
+          "ratio": "4:3",
+          "caption": "Wisselstroom wint aan kracht in steden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wisselstroom wint voor stedelijke netwerken. De steden lichten op. Fabrieken veranderen van tempo."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p4",
+      "title": "Een verbonden wereld",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tegenwoordig worden ziekenhuizen, treinen, internet en koelkasten van elektriciteit voorzien. De uitdaging is niet langer alleen om het te produceren, maar om dit schoon en betrouwbaar te doen."
+        },
+        {
+          "type": "takeaway",
+          "text": "Elektriciteit werd begrepen en vervolgens gedomesticeerd: Franklin voor bliksem, Faraday om stroom te produceren, Tesla en wisselstroom om het in huizen te brengen. Ons dagelijks leven is er nog steeds van afhankelijk."
+        }
+      ]
+    }
+  ]
+}

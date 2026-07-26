@@ -1,0 +1,100 @@
+{
+  "id": "course_46_comment_les_avions_volent_ils",
+  "title": "Hoe vliegen vliegtuigen?",
+  "subtitle": "Vluchtfysica",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Een vliegtuig van enkele honderden tonnen vliegt. Het is geen magie: het is een kwestie van vleugelvorm, snelheid en krachten die elkaar in evenwicht houden.",
+  "hero": {
+    "image": "comment_les_avions_volent",
+    "ratio": "16:9",
+    "hook": "Zwaarder dan een vrachtwagen en toch blijft hij in de lucht. Hier is hoe."
+  },
+  "sections": [
+    {
+      "id": "course_46_comment_les_avions_volent_ils_intro",
+      "title": "Inleiding",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Een groot vliegtuig kan **honderden vat** wegen. Hoe kan zoiets zwaars in de lucht blijven hangen? Het antwoord ligt in de vorm van de vleugels en de snelheid van het vliegtuig."
+        },
+        {
+          "type": "paragraph",
+          "text": "Er spelen vier belangrijke krachten: **stuwkracht** (vooruit), **slaap** (luchtremmen), **gewicht** (naar beneden) en **tillen** (naar boven)."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p1",
+      "title": "De vleugel, een intelligente vorm",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Van de zijkant gezien is een vliegtuigvleugel niet vlak. De bovenkant is meer afgerond dan de onderkant. Wanneer het vliegtuig snel beweegt, moet de lucht rond deze vorm gaan."
+        },
+        {
+          "type": "image",
+          "asset": "airplane_wing_cross_section_flight",
+          "ratio": "auto",
+          "caption": "Het profiel van de vleugel creëert de lift die het vliegtuig optilt."
+        },
+        {
+          "type": "paragraph",
+          "text": "De lucht die erboven passeert, versnelt een beetje. Zijn druk daalt. Onder de vleugel blijft de druk sterker. Dit verschil duwt de vleugel omhoog: dit is de **tillen**. Het wordt vaak verklaard met het principe van **Bernoulli**, genoemd naar een 18e-eeuwse geleerde, en met het feit dat de vleugel ook de lucht naar beneden afbuigt."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p2",
+      "title": "Je hebt snelheid nodig",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zonder snelheid gaat er niet genoeg lucht over de vleugel en is er niet genoeg lift. Dit is de reden waarom een ​​vliegtuig een lange startbaan nodig heeft om op te stijgen: de motoren moeten het hard genoeg accelereren."
+        },
+        {
+          "type": "funFact",
+          "text": "Vogels gebruiken hetzelfde algemene idee: hun vleugels creëren lift. Maar ze klappen met hun vleugels om vooruit te komen. Het vliegtuig beweegt vooruit dankzij zijn motoren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tijdens een kruisvlucht tilt u het gewicht op. De stuwkracht van de motoren balanceert de luchtweerstand. Het vliegtuig beweegt zich vervolgens met een vrijwel constante snelheid voort."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p3",
+      "title": "Ga omhoog, omlaag, draai",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Om te klimmen kantelt de piloot (of boordcomputer) de neus iets omhoog en past hij de stuwkracht aan. Om af te dalen verminderen we vaak de stuwkracht. Om te draaien wordt het vliegtuig naar de zijkant gekanteld met behulp van beweegbare delen van de vleugels, de rolroeren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bij de landing vertragen we. Flappen strekken zich uit vanaf de vleugel om de lift bij lage snelheden te vergroten. Dan raken de wielen de grond en stoppen de remmen (soms ook stuwkrachtomkeerders) het vliegtuig."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p4",
+      "title": "Het is niet \"lichter dan lucht\"",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Een heliumballon zweeft omdat hij minder dicht is dan lucht. Een vliegtuig, nee: het is veel dichter. Hij vliegt omdat hij eruit ziet alsof hij hem draagt, dankzij zijn snelheid en de vorm van zijn vleugels."
+        },
+        {
+          "type": "takeaway",
+          "text": "Een vliegtuig vliegt dankzij de **tillen**, gecreëerd door zijn vleugels die door de lucht bewegen. Snelheid is essentieel: zonder snelheid ‘duwt’ de vleugel niet meer voldoende omhoog om het gewicht te compenseren."
+        }
+      ]
+    }
+  ]
+}

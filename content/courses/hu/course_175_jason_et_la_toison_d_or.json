@@ -1,0 +1,116 @@
+{
+  "id": "course_175_jason_et_la_toison_d_or",
+  "title": "Jason és az aranygyapjú",
+  "subtitle": "Az argonauták küldetése",
+  "subject": "mythologie",
+  "subcategory": "Greece: the heroes",
+  "description": "Jason és az Argonauták Colchisba mennek, hogy megkeressék az Aranygyapjút. A kaland mögött a szerelem és az árulás története a mágus Médeával.",
+  "hero": {
+    "image": "jason_et_la_toison_d_or",
+    "ratio": "16:9",
+    "hook": "Ötven hős, egy varázslatos hajó, egy gyapjú, akit egy sárkány őriz. És egy bűvész, aki nélkül semmi sem sikerült volna."
+  },
+  "sections": [
+    {
+      "id": "course_175_jason_et_la_toison_d_or_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A **Jason** összegyűjti a **[[Argonauták]]** görög hősök elit csoportját, hogy elhozzák a **Aranygyapjút**: egy isteni kos gyapjúját, amelyet [[Colchis]]ZZX-ben függesztenek fel, amely a mai régiónak felel meg."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ez az utazás az egyik legrégebbi navigációs történet Nyugaton. Királyi legitimációról, isteni segítségről beszél... és mindenekelőtt Jason és **Medea** pusztító szenvedélyéről, egy varázslóról, aki lehetővé teszi a győzelmet, de szörnyűséget."
+        }
+      ]
+    },
+    {
+      "id": "course_175_jason_et_la_toison_d_or_p1",
+      "title": "Szandál, trón, csapda",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jason fia Aesonnak, Iolcos királyának Thesszáliában. Nagybátyja [[Pelias]] bitorolta a trónt. A [[Chiron]] kentaur felnevelte, Jason visszatér, hogy megszerezze az örökségét. Útközben segít egy idős nőnek átkelni a patakon. [[Héra]] álruhában. Elveszíti a szandált a sárban."
+        },
+        {
+          "type": "funFact",
+          "text": "Colchisban időnként báránybőrt helyeztek a folyók fenekére, hogy csapdába ejtsék az aranypelyheket. Az „arany gyapjúnak” lehet valódi bányászati ​​gyökere."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pelias fél: egy orákulum figyelmeztette az egyszandálos férfira. Megígéri a trónt, ha Jason visszahozza a gyapjút, akit egy sárkány őriz. Jason megépítette a [[Argo]]-t, egy beszélő orrú hajót a [[Dodona]] szent fából. A fedélzeten: **Héraklész**, **Orfeusz**, **Castor és Pollux** és még sokan mások."
+        },
+        {
+          "type": "image",
+          "asset": "argonauts_ship_argo_jason_greek_myth",
+          "ratio": "4:3",
+          "caption": "Az Argo, a görög legenda első nagy hajója."
+        }
+      ]
+    },
+    {
+      "id": "course_175_jason_et_la_toison_d_or_p2",
+      "title": "Összecsapódó kövek",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Útközben az argonauták megmentik Phineusz királyt a **Hárpiák** szörnyektől, akik az ételét lopták. Cserébe Phinée elárulja, hogyan lehet átkelni a **Symplegades Rocks** sziklákon, amelyek a Fekete-tenger bejáratánál bármilyen hajóba ütköznek."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jason elenged egy galambot. A sziklák a tollaira záródnak, majd kinyílnak. Az Argo alig múlik el. Colchisban **Aeétès** király lehetetlen feladatokat szab ki: tüzes bikák behajtása, [[Ares]] mező felszántása, sárkányfogak vetése, amelyekből harcosok születnek. Segítség nélkül Jason meghalna."
+        }
+      ]
+    },
+    {
+      "id": "course_175_jason_et_la_toison_d_or_p3",
+      "title": "Médeia, a győzelem építésze",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Afrodité]], a szerelem istennője, **Medea**, Aeetes lánya és [[Hecate]] papnő, beleszeret Jasonba. Kenőcsöt ad neki a bikák tüze ellen. A fogakból született harcosoknak azt tanácsolja, hogy dobjanak közéjük egy követ: megölik egymást."
+        },
+        {
+          "type": "image",
+          "asset": "medea_jason_greek_myth_waterhouse_painting",
+          "ratio": "4:3",
+          "caption": "Medea és Jason: varázslat a küldetés szolgálatában."
+        },
+        {
+          "type": "paragraph",
+          "text": "Végül elaltatja a sárkányt. Jason leveszi a Fleece-t. Medea, hogy meneküljön, megöli testvérét, **Absyrtost**-t, és a maradványait a tengerbe szórja. Aeetes megáll, hogy összeszedje a testet. A pár egyesült… és már átkozott."
+        }
+      ]
+    },
+    {
+      "id": "course_175_jason_et_la_toison_d_or_p4",
+      "title": "Árulás és bukás",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Iolcosban Pelias nem hajlandó megadni magát. Médea becsapja lányait: „megfiatalítják” apjukat azzal, hogy feldarabolják. Az elüldözött pár Korinthusban keresett menedéket. Évekkel később Jason feleségül akarja venni Kreón király lányát. Medea bosszút áll: mérgezett ruhát a riválisnak, majd meggyilkolják saját gyermekeiket."
+        },
+        {
+          "type": "image",
+          "asset": "medea_vengeance_delacroix_painting",
+          "ratio": "4:3",
+          "caption": "Medea bosszúja, Jason árulása után."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jason egyedül öregszik. Nyomorultan hal meg, összezúzta az Argo egy korhadt darabja, amely alatt pihent. A hős, aki mindent megnyert mások segítségével, megsemmisül, mert megtagadta azt, aki megmentette."
+        },
+        {
+          "type": "takeaway",
+          "text": "Jason meghódítja a gyapjút Medeának és a [[Argo]]-nek köszönhetően. Árulása megszegi egyezményüket, és pusztuláshoz vezet: a mítosz azt mutatja, hogy egy hős, aki megtagadja szövetségeseit, mindent elveszít."
+        }
+      ]
+    }
+  ]
+}

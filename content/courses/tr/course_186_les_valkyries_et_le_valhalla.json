@@ -1,0 +1,120 @@
+{
+  "id": "course_186_les_valkyries_et_le_valhalla",
+  "title": "Valkyrieler ve Valhalla",
+  "subtitle": "İskandinav mitolojisi",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Kuzey gökyüzünde savaşçılar Valhalla'ya yerleşmek için ölüleri seçiyor. Orduları tanrıların alacakaranlığıyla yüzleşmek zorundadır.",
+  "hero": {
+    "image": "les_valkyries_et_le_valhalla",
+    "ratio": "16:9",
+    "hook": "Elinde kılıçla ölmek bir son değil; dünyanın son savaşı için bir seçimdir."
+  },
+  "sections": [
+    {
+      "id": "course_186_les_valkyries_et_le_valhalla_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "İskandinav mitolojisinde savaşta ölüm bir son değildir. Bu bir **seçim**. Adı \"öldürmeyi seçenler\" anlamına gelen **Valkyrieler**, egemen tanrı Odin için savaş alanlarında dolaşıyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Görevleri: En cesurları “ölüm odası” olan **Valhalla**'ye götürmek. Bu saray bir dinlenme cenneti değil. Burası göksel bir kışladır. Çünkü Odin, dünyayı yok edecek ve tanrıları öldürecek son savaş olan [[Ragnarök]] için bir ordu hazırlıyor."
+        }
+      ]
+    },
+    {
+      "id": "course_186_les_valkyries_et_le_valhalla_p1",
+      "title": "Odin, Ragnarök'e eleman alıyor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Odin** kehaneti biliyor. [[Ragnarök]]'de devler ve canavarlar tanrıların evi [[Asgard]]'ye akın edecek. Kaçınılmaz olanı geciktirmek için elit askerlere ihtiyacı var: **Einherjar**, \"tek başına savaşanlar\"."
+        },
+        {
+          "type": "image",
+          "asset": "odin_norse_god_ravens_throne_painting",
+          "ratio": "4:3",
+          "caption": "Tanrıların efendisi Odin, dünyanın sonu tarafından perili."
+        },
+        {
+          "type": "funFact",
+          "text": "Valhalla savaşta ölen savaşçıların yalnızca **bir süre**'sine ev sahipliği yaptı. Diğer yarısı tanrıça **Freyja**'nin bölgesi olan Fólkvangr'a katıldı. Kahramanca bir ölümün ardından bile kahramanlar bölündü."
+        },
+        {
+          "type": "paragraph",
+          "text": "Asgard'daki Valhalla'nın **540 büyük harf** vardır. Her biri sekiz yüz savaşçının yan yana geçebileceği kadar büyüktür. Sadece elinde kılıçla cesurca düşenler buna hak kazanır. Valkyrieler işleri gökten hallediyor."
+        }
+      ]
+    },
+    {
+      "id": "course_186_les_valkyries_et_le_valhalla_p2",
+      "title": "Savaşçılar düşündüğümüzden daha karanlık",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Valkyrielerin modern imajı genellikle 19. yüzyıl romantizminden gelir: at sırtındaki nazik bakireler. [[Şiirsel Edda]] gibi eski metinler çok daha sert rakamlar çiziyor. Kargalarla ve ceset kuşlarıyla bağlantılıdırlar. Bazı şiirler onları korkunç eğiriciler olarak gösterir: İplikleri yürektir, ağırlıkları ise kafadır."
+        },
+        {
+          "type": "image",
+          "asset": "valkyrie_riding_winged_horse_norse_art",
+          "ratio": "4:3",
+          "caption": "Uçan Valkyrie: Odin'in elçisi ve kahramanların sağlayıcısı."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Brynhildr** veya [[Sigrun]] gibi figürlerin de bir insan yüzü vardır: Odin'in emirleri ile ölümlülere karşı hisleri arasında tereddüt ederler. Valhalla'da rolleri değişiyor. Kahramanlara bal likörü ikram etmek için zırhı bırakıyorlar. Bu jest tanınmayı anlatıyor: Cesur ölüler Asgard'ın seçkinleri haline geldi."
+        }
+      ]
+    },
+    {
+      "id": "course_186_les_valkyries_et_le_valhalla_p3",
+      "title": "Her gün savaşmak için, her akşam kutlamak için",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Valhalla'da barışçıl bir geri çekilme yoktur. Horoz [[Gulinkambi]] öttüğünde, Einherjar silahlanır ve [[İdavoll]] ovasında birbirlerini öldürür. Akşam yaralar kapanır. Ölüler yeniden diriliyor. Sonra bayram geliyor."
+        },
+        {
+          "type": "image",
+          "asset": "valhalla_feast_norse_warriors_einherjar_painting",
+          "ratio": "4:3",
+          "caption": "Einherjar şöleni: gündüzleri savaş, geceleri ziyafetler."
+        },
+        {
+          "type": "funFact",
+          "text": "Yaban domuzu **Sahrímnir**, aşçı [[Andhrimnir]] tarafından her gün haşlanır ve sonra yeniden doğar. [[Heidrun]] keçisinin memelerinden bal likörü akıyor. Viking Paradise kalıcı bir eğitim odasıdır."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu şiddet ve zevk döngüsü Odin'in ordusunu birleştirir. Gerçek düşman karşısında yüzyıllarca süren dostane savaşlar."
+        }
+      ]
+    },
+    {
+      "id": "course_186_les_valkyries_et_le_valhalla_p4",
+      "title": "“Samandan ölüm” yerine onurlu bir ölüm",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ölümden sonraki hayata dair bu vizyon Viking İskandinavya'ya damgasını vurdu. Fiziksel cesarete değer veriliyordu. Yaşlılıktan veya hastalıktan ölmek, \"saman ölümü\", sıkıcı bir krallık olan **Merhaba**'ye yol açtı. Elinde silahlarla düşmek daha iyiydi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Valkyrie yüzyıllara yayılmıştır. Richard Wagner bunu [[Valkyrielerin Yolculuğu]] ile Avrupa hafızasına sabitledi. Bugün, güçlü bir kadının arketipi haline geldi; çoğu zaman birincil işlevinden uzaktı: Kendi sonunu planlayan bir tanrının cesetlerini sağlamak."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Valkyrieler**, **Valhalla** için en iyi ölüleri topluyor. Orada, Einherjar, [[Ragnarök]]'ye hazırlık olarak sonsuz bir şekilde savaşır ve ziyafet çeker. İskandinav cenneti bir sığınak değil, bir kışladır."
+        }
+      ]
+    }
+  ]
+}

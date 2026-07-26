@@ -1,0 +1,114 @@
+{
+  "id": "course_42_pourquoi_reve_t_on",
+  "title": "Varför drömmer vi?",
+  "subtitle": "Hjärna & sömn",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Varje natt drömmer du i ungefär två timmar. De flesta drömmar bleknar när du vaknar. Här är vad vetenskapen idag förstår om detta mysterium.",
+  "hero": {
+    "image": "pourquoi_reve_t_on",
+    "ratio": "16:9",
+    "hook": "Du drömmer om sex år av ditt liv. Och du glömmer nästan allt."
+  },
+  "sections": [
+    {
+      "id": "course_42_pourquoi_reve_t_on_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Varje natt tillbringar du cirka **två timmar** med att drömma. Under en livstid är det nästan **sex år**. Men när du vaknar försvinner de flesta av dessa berättelser inom några sekunder."
+        },
+        {
+          "type": "paragraph",
+          "text": "Alla forskare är inte överens om \"varför\". Men de vet bättre och bättre **när** vi drömmer, och vad hjärnan gör under denna tid: den omorganiserar minnen, testar scenarier och smälter känslor."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p1",
+      "title": "Sömn är inte \"avstängd\"",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sömn är inte en fullständig avstängning. Den avancerar med **cykler** på cirka **90 minuter**, flera gånger per natt. I varje cykel går hjärnan igenom olika faser: lätt sömn, djup sömn användbar för att återhämta kroppen, sedan en mycket speciell fas."
+        },
+        {
+          "type": "image",
+          "asset": "sleeping_person_rem_dream",
+          "ratio": "4:3",
+          "caption": "Under REM-sömn rör sig ögonen under ögonlocken."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denna fas kallas den [[paradoxal sömn]]. Hjärnan är nästan lika aktiv som den är vaken, men kroppen är förlamad av [[Muskelatoni]]. Det är särskilt där långa, berättande drömmar föds. Denna förlamning hindrar oss från att fysiskt \"spela\" vad vi drömmer."
+        },
+        {
+          "type": "funFact",
+          "text": "Vi drömmer **4 till 6 gäng** per natt. Vi glömmer **95%** inom tio minuter efter att vi vaknat. Om du kommer ihåg en dröm beror det ofta på att du vaknade direkt under den eller direkt efter den."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p2",
+      "title": "Vad är poängen med att drömma?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Freud** trodde att drömmar främst avslöjade dolda begär. Idag föredrar forskarna mer konkreta förklaringar, baserade på hjärnavbildning, tekniker som visualiserar hjärnans aktivitet. Att drömma aktiverar speciellt det **limbiska systemet**, uppsättningen av djupa strukturer kopplade till känslor."
+        },
+        {
+          "type": "image",
+          "asset": "brain_activity_dreaming_scan",
+          "ratio": "4:3",
+          "caption": "Under drömmar arbetar hjärnan: känslor, bilder, minnen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tre huvudspår dominerar. Först: **minnet**, behåll det användbara, släpp resten. För det andra: **träning för fara** i en värld utan verklig risk. För det tredje: **smälter känslor**: under drömmar återvänder hjärnan starka ögonblick med mindre **noradrenalin**, en signalsubstans kopplad till stress och vakenhet."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p3",
+      "title": "Varför glömmer vi våra drömmar",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "För att lagra ett minne permanent behöver hjärnan vissa kemikalier. Men under paradoxal sömn sjunker nivån av noradrenalin. Resultat: drömmen finns kvar i ett mycket bräckligt minne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Så fort du öppnar ögonen krossar dagens ljus, ljud och tankar detta ömtåliga minne. Bästa sättet att behålla det? Skriv ner drömmen **direkt**, innan du ens flyttar."
+        },
+        {
+          "type": "funFact",
+          "text": "Innan färg-tv var det få som sa att de drömde i färg. Idag gör de flesta det. Vår visuella miljö påverkar till och med strukturen på våra drömmar."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p4",
+      "title": "Hur är det med klara drömmar?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ibland inser vi **att vi drömmer** medan vi sover: det här är **klara drömmar**. Ett område i hjärnan kopplat till logik och självreflektion, **prefrontal cortex**, lyser sedan upp lite."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vissa kan då påverka miljön eller förvandla en mardröm. Forskare studerar till och med detta fenomen för att hjälpa idrottare att mentalt upprepa gester eller för att behandla upprepade mardrömmar."
+        },
+        {
+          "type": "takeaway",
+          "text": "Vi drömmer speciellt under [[paradoxal sömn]], en fas då hjärnan är aktiv och kroppen förlamad. Att drömma hjälper nog att hantera minne och känslor, även om vi glömmer nästan allt när vi vaknar."
+        }
+      ]
+    }
+  ]
+}

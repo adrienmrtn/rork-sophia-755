@@ -1,0 +1,102 @@
+{
+  "id": "course_54_la_decouverte_du_micro_ondes_par_acciden",
+  "title": "Odkrycie kuchenki mikrofalowej",
+  "subtitle": "Przez przypadek",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "W 1945 roku inżynier zauważył, że jego batonik stopił się w pobliżu radaru. Z tej obserwacji narodziła się kuchenka mikrofalowa.",
+  "hero": {
+    "image": "la_decouverte_du_micro_ondes",
+    "ratio": "16:9",
+    "hook": "Roztopiona tabliczka czekolady… i zmiany w nowoczesnej kuchni."
+  },
+  "sections": [
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W **1945** w Stanach Zjednoczonych inżynier **Percy'ego Spencera** pracuje nad radarami. Pewnego dnia zauważa, że ​​batonik w jego kieszeni się stopił. Nie z powodu ciepła ciała: z powodu fal radarowych."
+        },
+        {
+          "type": "paragraph",
+          "text": "Testuje z kukurydzą: popcorn wyskakuje. Narodził się pomysł piekarnika, który grzeje inaczej."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p1",
+      "title": "Od radaru do kuchni",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "percy_spencer_microwave_discovery_radar",
+          "ratio": "4:3",
+          "caption": "Radary z II wojny światowej wykorzystywały już mikrofale."
+        },
+        {
+          "type": "paragraph",
+          "text": "**mikrofale** to fale elektromagnetyczne, podobne do światła radiowego, ale bardziej „energetyczne” niż wiele konwencjonalnych fal radiowych. W czasie wojny wykorzystywano je głównie w radarach do wykrywania samolotów i łodzi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Spencer rozumie, że mogą również mieszać wodę i tłuszcze w żywności... i w ten sposób ją podgrzewać."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p2",
+      "title": "Pierwszy piekarnik jest ogromny",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "first_microwave_oven_radarange_1947",
+          "ratio": "4:3",
+          "caption": "Pierwsza komercyjna kuchenka mikrofalowa miała wielkość szafki."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pierwszy model komercyjny, **Radar**, został wypuszczony około **1947**. Jest ogromny, drogi i przeznaczony głównie dla restauracji lub łodzi. Miniaturyzacja go i uczynienie go dostępnym dla domów zajmie dziesięciolecia."
+        },
+        {
+          "type": "funFact",
+          "text": "Początkowo niektórzy obawiali się, że piekarnik „sprawi, że żywność będzie radioaktywna”. Fałsz: mikrofale nagrzewają się, ale nie powodują radioaktywności."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p3",
+      "title": "Jak to się naprawdę nagrzewa?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mikrofale wibrują głównie cząsteczki wody (oraz trochę tłuszczów i cukrów). To mieszanie wytwarza **ciepło wewnątrz** żywności, a nie tylko na powierzchni, np. na patelni."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dlatego też danie może być gorące na zewnątrz i letnie w środku, jeśli jest grube: fale nie wnikają w nieskończoną głębokość."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p4",
+      "title": "Przedmiot codziennego użytku",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Od lat 70. i 80. XX wieku kuchenka mikrofalowa wkroczyła do milionów kuchni. Zmienia nawyki: szybkie odgrzewanie, gotowe posiłki, szybsze życie."
+        },
+        {
+          "type": "takeaway",
+          "text": "Kuchenka mikrofalowa narodziła się w wyniku zbiegu okoliczności zaobserwowanego przez Percy'ego Spencera w pobliżu radaru. Fale głównie mieszają wodę w żywności i podgrzewają ją od środka."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "id": "course_130_le_pop_art_warhol_et_lichtenstein",
+  "title": "Pop Art: Warhol és Lichtenstein",
+  "subtitle": "1950-1970-es évek",
+  "subject": "art",
+  "subcategory": "Painting & Movements",
+  "description": "A pop art a fogyasztói társadalomra reagál. A **Warhol** és a **Lichtenstein** nagyszerű művészetté tesz a reklámokat, a képregényeket és a sztárokat.",
+  "hero": {
+    "image": "le_pop_art_warhol_et_lichtenstein",
+    "ratio": "16:9",
+    "hook": "Egy doboz leves, egy doboz képregény: mi lenne, ha a banális lenne az évszázad ikonja?"
+  },
+  "sections": [
+    {
+      "id": "course_130_le_pop_art_warhol_et_lichtenstein_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Pop Art**, from the mid-years **1950** to the years **1970**, responses to [[Az 1950-60-as évek amerikai fogyasztói társadalma]] and mass culture. Reklámok, képregények, hollywoodi sztárok: minden a művészet anyagává válik."
+        },
+        {
+          "type": "paragraph",
+          "text": "A **Andy Warhol** és **Roy Lichtenstein** segítségével elmosódik a határ a múzeum és a szupermarket között. A mindennapi tárgy ikonná válik. A mű értéke és a művész szerepe felborul."
+        }
+      ]
+    },
+    {
+      "id": "course_130_le_pop_art_warhol_et_lichtenstein_p1",
+      "title": "A hétköznapoktól a múzeumig",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A Pop Art **Nagy-Britanniában** született a [[Független Csoport]]-vel, de a **Egyesült Államokban**, a **1960** években robbant fel. Háború után, jólét, szupermarketek, logók mindenhol: megváltozott az amerikaiak látványvilága."
+        },
+        {
+          "type": "funFact",
+          "text": "1957-ben Richard Hamilton a pop artot a következő jelzőkkel határozta meg: „tüntető”, „olcsó”, „szexi”. Olyan művészet, amely olyan gyorsan fogyasztható, mint egy folyóirat."
+        },
+        {
+          "type": "paragraph",
+          "text": "A popművészek ellenezték a [[Absztrakt expresszionizmus]], ezek az introspektív vásznak akkor domináltak. Amikor Warhol leveseket fest, megmutatja, hogy az egyént az határozza meg, amit vásárol. Az ismétlés kimeríti az érzelem képét, csak a kereskedelmi hatékonyságát hagyja meg."
+        }
+      ]
+    },
+    {
+      "id": "course_130_le_pop_art_warhol_et_lichtenstein_p2",
+      "title": "Warhol: a műhely mint gyár",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Andy Warhol** (1928-1987), egykori reklámgrafikus, ipari módszereket alkalmaz a művészetben. A New York-i **Gyár** már nem egy magányos szentély: asszisztensek és barátok együtt termelnek."
+        },
+        {
+          "type": "image",
+          "asset": "andy_warhol_factory_silkscreen_marilyn",
+          "ratio": "4:3",
+          "caption": "Marilyn sorozatban: a sztár mint reprodukálható termék."
+        },
+        {
+          "type": "funFact",
+          "text": "Warhol több mint 600 „időkapszulát” halmozott fel: dobozokat, ahová leveleket, számlákat és még ételmaradékot is dobott."
+        },
+        {
+          "type": "paragraph",
+          "text": "Királynő technikája: [[Szitanyomás]], amivel egy kép több tucatszor reprodukálható. Marilyn Monroe megszorzásával illusztrálja a [[Aura és gépesített szaporodás (Walter Benjamin)]] gondolatát: minél jobban kering a kép, annál kevésbé „szent”, annál inkább válik ikonná. A hírnév maga egy termék."
+        }
+      ]
+    },
+    {
+      "id": "course_130_le_pop_art_warhol_et_lichtenstein_p3",
+      "title": "Lichtenstein: a kinagyított képregény",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Roy Lichtenstein** (1923-1997) a **képregények** nyelvezetét támadja. Egy érzelmi klisével megrakott tablót izolál és monumentális formátumban fest meg."
+        },
+        {
+          "type": "image",
+          "asset": "roy_lichtenstein_comic_ben_day_dots_painting",
+          "ratio": "4:3",
+          "caption": "Kézzel festett Ben-Day pöttyök: gesztussal utánzott gyár."
+        },
+        {
+          "type": "funFact",
+          "text": "Egy kompozíció megítéléséhez Lichtenstein fejjel lefelé nézte a festményeit a tükörben, hogy megnézze, tisztán absztrakt módon megállják-e a helyüket."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jelzése: a [[Ben-Day]] pont, ezek a kis ipari nyomtatási pontok, amelyek árnyalatokat teremtenek. Kézzel, stencilekkel festi meg őket: órákon keresztül utánozza, mit csinál egy gép másodpercek alatt. A *Whaam!* egy elterelő dobozt modern történelmi festményré alakít."
+        }
+      ]
+    },
+    {
+      "id": "course_130_le_pop_art_warhol_et_lichtenstein_p4",
+      "title": "Örökség: a piacról a hálózatokra",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A pop art megváltoztatja a piacot és az intézményeket. A művész jegye legalább annyira számít, mint a gesztus. A **2022**-ben Warhol Marilyn-portréja elérte a **195 millió** dollárt: a tömegkép szakralizálva válik a legértékesebb árucikké."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1957",
+              "title": "A pop definíciója",
+              "detail": "Hamilton így foglalja össze a mozgalmat: mulandó, olcsó, szexi."
+            },
+            {
+              "date": "1960-as évek",
+              "title": "Gyári és képregények",
+              "detail": "Warhol és Lichtenstein ráerőltetik a popesztétikát az USA-ban."
+            },
+            {
+              "date": "2022",
+              "title": "Marilyn 195 millió dollárral",
+              "detail": "A tömegikon a piac abszolút trófeájává válik."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Warhol „15 perc hírnév” jóslata digitális mindennapi életünkké vált. A mémek és a képek újrahasznosítása ennek a forradalomnak a közvetlen eredménye."
+        },
+        {
+          "type": "takeaway",
+          "text": "A pop art áttörte a gátat a magas művészet és a tömegkultúra között. A szitanyomás és a Ben-Day-pontok segítségével Warhol és Lichtenstein a mindennapi tárgyakat és a csillagokat tartós ikonokká változtatta."
+        }
+      ]
+    }
+  ]
+}

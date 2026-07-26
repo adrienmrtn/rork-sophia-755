@@ -1,0 +1,140 @@
+{
+  "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum",
+  "title": "Aztek Tanrıları ve İnsan Kurbanları",
+  "subtitle": "Güneş için kan",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Azteklerde güneş ancak tanrılar kan aldığında doğar. İmparatorluklarının kalbinde sert ama tutarlı bir kozmoloji var.",
+  "hero": {
+    "image": "les_dieux_azteques_et_les_sacrifices_humains",
+    "ratio": "16:9",
+    "hook": "Kan olmasaydı güneş dururdu: Azteklerin kozmik borcu budur."
+  },
+  "sections": [
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Aztekler** veya Meksika, evrenin kırılgan olduğuna inanıyor. Güneşin yoluna devam edebilmesi için tanrıların kana ihtiyacı var. Teklifler olmasaydı kaos geri dönerdi."
+        },
+        {
+          "type": "paragraph",
+          "text": "İspanyolları dehşete düşüren şey açık bir fikre dayanıyordu: Tanrıların ve insanların hayatları birbirine bağlıydı. Bu kozmoloji şu şekilde işliyor."
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p1",
+      "title": "Beş Güneş: Zaten dört kez ölmüş bir dünya",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Beş Güneş]] efsanesine göre dört çağ çoktan felaketlerle yok olmuştur. Depremle sonuçlanacağı vaat edilen beşinci güneşi, [[Nahui Ollin]] (“4-Hareket”) yaşıyoruz."
+        },
+        {
+          "type": "image",
+          "asset": "aztec_five_suns_teotihuacan_pyramid_sun_stone",
+          "ratio": "4:3",
+          "caption": "Güneş Taşı: Aztek zamanı birbirini takip eden dönemlere dönüşür."
+        },
+        {
+          "type": "paragraph",
+          "text": "Merkezi platodaki kutsal bir şehir olan **Teotihuacán**'de tanrılar güneş ve ay olmak için kendilerini ateşe atarlar. Ama güneş hala duruyor. Diğer tanrılar daha sonra bunu harekete geçirmek için kendi kanlarını sunarlar. Erkekler bu borcu devralır."
+        },
+        {
+          "type": "funFact",
+          "text": "Aztekler için fedakarlık karşılıksız bir zulüm değildir: İlahi bir borcun geri ödenmesidir, [[Beş Güneş'in kozmolojisi ve kozmik borç]]."
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p2",
+      "title": "Bir ikilikler panteonu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Merkezi tanrı [[Huitzilopochtli]], savaş tanrısı ve öğle güneşidir. Her gece, sabaha yeniden doğmak için karanlıkla savaşır. Onun yanında [[Tlaloc]] yağmur, dolayısıyla mahsul veya kıtlık verir."
+        },
+        {
+          "type": "image",
+          "asset": "huitzilopochtli_aztec_sun_god_codex",
+          "ratio": "4:3",
+          "caption": "Huitzilopochtli, beslenmeyi talep eden savaşçı güneş."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Quetzalcoatl]], Tüylü Yılan, bilgiyi ve medeniyeti bünyesinde barındırır. Rakibi [[Tezcatlipoca]], Dumanlı Ayna geceyi, kaderi ve büyüyü yönetiyor. Dünyanın kendisinin de korkunç bir yüzü var: [[Kaplama]], yiyip bitiren ana tanrıça."
+        },
+        {
+          "type": "funFact",
+          "text": "Tanrılara sunulan değerli kana [[chalchihuatl]], yani “değerli su” denir. Çıkarılan kalbin gökyüzüne dönen bir güneş kıvılcımı olduğu düşünülüyor."
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p3",
+      "title": "Çiçek savaşları",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aztekler kurban elde etmek için [[Xochiyaoyotl]], yani \"çiçek savaşları\" düzenlerler: amacı öldürmek değil, teklif edilmeye değer yaşayan savaşçıları yakalamak olan ritüel dövüşler."
+        },
+        {
+          "type": "image",
+          "asset": "aztec_sacrifice_pyramid_templo_mayor_codex",
+          "ratio": "4:3",
+          "caption": "Tapınağın tepesinde kurban: Güneşe sunulan kalp."
+        },
+        {
+          "type": "paragraph",
+          "text": "Göl kıyısındaki başkent Tenochtitlán'daki **Templo Belediye Başkanı**'nin tepesinde bir rahip, keskin bir volkanik taş olan **Obsidyen**'den bir bıçakla kalbi çıkarıyor. Bu jest halka açıktır, ciddidir ve güneşe sunulan bir hizmet olarak düşünülür."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "efsane",
+              "title": "Tanrıların kurbanı",
+              "detail": "Güneş ilerlemek için ilahi kanı alır."
+            },
+            {
+              "date": "İmparatorluk",
+              "title": "Çiçek savaşları",
+              "detail": "Teklifler için savaşçıları yakalamak."
+            },
+            {
+              "date": "1519",
+              "title": "İspanyol şoku",
+              "detail": "Cortes gelir; sistem çöker."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p4",
+      "title": "Dünyanın sonu, kalıcı izler",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "İspanyol kronikleri bazen fethi haklı çıkarmak için rakamları şişiriyor. Ancak kurban sistemi oldukça gerçektir. **1519**'de **Hernán Cortés**'nin gelişi bu ritüel evrenin sonunu hızlandırıyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bununla birlikte, Aztek figürleri senkretizm içinde varlığını sürdürüyor: Guadalupe Bakiresi, bir zamanlar bir ana tanrıçayla bağlantılı olan bir sitede görünüyor. Bu fedakarlıkları anlamak, evrenin hayatta kalmasını bireyin üstüne koyan bir kültürü anlamaktır."
+        },
+        {
+          "type": "takeaway",
+          "text": "Azteklerde insan kanı güneşi besliyordu. Tanrılar zaten hayatlarıyla ödediler: İnsanlar bu borcu fedakarlık yoluyla, özellikle de **çiçek savaşları** aracılığıyla ödüyorlar."
+        }
+      ]
+    }
+  ]
+}

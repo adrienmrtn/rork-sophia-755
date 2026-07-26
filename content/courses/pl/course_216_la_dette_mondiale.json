@@ -1,0 +1,104 @@
+{
+  "id": "course_216_la_dette_mondiale",
+  "title": "Globalny dług",
+  "subtitle": "Ponad 300% światowego PKB",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Globalne zadłużenie nigdy nie było wyższe. Czy powinniśmy się tym martwić, czy jest to normalne narzędzie finansowania wzrostu i stawiania czoła kryzysom?",
+  "hero": {
+    "image": "la_dette_mondiale",
+    "ratio": "16:9",
+    "hook": "Japonia jest winna równowartość 260% swojego PKB... i nikt się tym nie martwi. Oto dlaczego."
+  },
+  "sections": [
+    {
+      "id": "course_216_la_dette_mondiale_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Globalny dług, łącznie państw, przedsiębiorstw i gospodarstw domowych, przekracza dziś **300% światowego PKB**, co stanowi absolutny rekord w historii gospodarki."
+        },
+        {
+          "type": "paragraph",
+          "text": "Za tą imponującą liczbą kryje się bardziej zniuansowana rzeczywistość: zadłużenie umożliwia finansowanie wzrostu gospodarczego, reagowanie na kryzysy zdrowotne lub przygotowanie się do transformacji ekologicznej. Ale niesie to ze sobą także ryzyko załamania zaufania."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p1",
+      "title": "Jak państwo popada w długi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Państwo popada w dług, gdy jego wydatki strukturalnie przewyższają dochody podatkowe. Deficyt budżetowy uzupełniany jest pożyczkami na rynkach finansowych. Według [[Keynesowska teoria]] zaciąganie pożyczek na pobudzenie gospodarki w czasach kryzysu jest uzasadnione, pod warunkiem, że zostaną spłacone po powrocie wzrostu gospodarczego."
+        },
+        {
+          "type": "paragraph",
+          "text": "W praktyce rządy łatwo pożyczają w złych czasach, ale rzadko spłacają w dobrych czasach. Dług następnie kumuluje się w dłuższej perspektywie. Przypadek Japonii jest fascynujący: przy zadłużeniu bliskim 260% PKB kraj, logicznie rzecz biorąc, powinien znajdować się w kryzysie. Tak jednak nie jest, bo większość zadłużenia ma własne banki i oszczędzających, osłoniętych przed rynkami zagranicznymi."
+        },
+        {
+          "type": "funFact",
+          "text": "Wielka Brytania zakończyła spłatę długów powstałych podczas wojen napoleońskich i bańki finansowej z 1720 r. w 2015 r."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p2",
+      "title": "Nie wszystkie długi są sobie równe",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Prawdziwe niebezpieczeństwo długu zależy nie tylko od jego kwoty, ale od waluty, w której jest pożyczony. Bogate kraje zaciągają pożyczki we własnych walutach, co uspokaja inwestorów."
+        },
+        {
+          "type": "image",
+          "asset": "japan_government_debt_statistics_chart",
+          "ratio": "16:9",
+          "caption": "Globalny dług publiczny przekracza obecnie 300% PKB planety."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kraje rozwijające się często muszą zaciągać pożyczki w dolarach, ze względu na brak waluty uważanej za wystarczająco stabilną. Jeśli ich waluta krajowa straci na wartości w stosunku do dolara, kwota do spłaty eksploduje z dnia na dzień. W przypadku tych kryzysów [[MFW]] często interweniuje, ale generalnie narzuca rygorystyczne zasady oszczędzania, które mocno obciążają populację."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p3",
+      "title": "Czy dług może być nieskończony?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W debacie ścierają się dwie wizje gospodarki. [[Nowoczesna teoria monetarna]] stwierdza, że ​​państwo nie może zbankrutować, jeśli zaciąga pożyczki we własnej walucie: realnym limitem nie jest arbitralna wielkość, jak 60% narzucone w Europie przez Traktat z Maastricht, ale poziom inflacji."
+        },
+        {
+          "type": "paragraph",
+          "text": "Inni, bardziej ostrożni ekonomiści obawiają się, że zbyt duże zadłużenie odstraszy zaufanie rynku, co doprowadzi do gwałtownej podwyżki stóp procentowych. Kryzys w strefie euro w latach 2010–2012 ilustruje to ryzyko: w krajach takich jak Grecja, pozbawionych własnego banku centralnego, stopy procentowe wzrosły do ​​tego stopnia, że ​​zagroziły samemu istnieniu europejskiej waluty."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p4",
+      "title": "Nowe twarze zadłużenia",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Globalny dług nie dotyczy tylko państw: przedsiębiorstwa i gospodarstwa domowe również ponoszą jego coraz większą część, czasami za pośrednictwem słabo regulowanych podmiotów finansowych. Wokół długu klimatycznego pojawia się także nowa debata: czy inaczej powinniśmy traktować dług finansujący transformację energetyczną od tego, który finansuje zwykłą konsumpcję?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kwestia sprawiedliwości międzypokoleniowej pozostaje kluczowa: zadłużenie się dzisiaj oznacza pobranie podatków od jutra. Jeśli jednak te pieniądze finansują zrównoważoną infrastrukturę lub dobrą edukację, można je również postrzegać jako dar przekazywany przyszłym pokoleniom, a nie obciążenie."
+        },
+        {
+          "type": "takeaway",
+          "text": "Globalny dług przekracza 300% PKB planety, co jest historycznym rekordem. Jego niebezpieczeństwo zależy nie tyle od kwoty, ile od waluty, w której jest pożyczony: Japonia udowadnia, że ​​dług w wysokości 260% może pozostać stabilny, jeśli jest utrzymywany lokalnie."
+        }
+      ]
+    }
+  ]
+}

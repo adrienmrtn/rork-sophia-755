@@ -1,0 +1,100 @@
+{
+  "id": "course_56_la_decouverte_de_la_radioactivite_marie",
+  "title": "Descoperirea radioactivității",
+  "subtitle": "Marie Curie",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Marie Curie, cu Pierre Curie și Henri Becquerel, deschide capitolul radioactivitate. Două premii Nobel, o muncă copleșitoare și o moștenire imensă.",
+  "hero": {
+    "image": "la_decouverte_de_la_radioactivite_marie_curie",
+    "ratio": "16:9",
+    "hook": "Ea a cântărit tone de minereu pentru a izola câteva grame dintr-un element invizibil."
+  },
+  "sections": [
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Marie Curie** (născută Maria Skłodowska) este prima femeie care a primit un Premiu Nobel. Ea rămâne singura persoană care a primit **două** în două științe diferite: fizică, apoi chimie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Subiectul său: **radioactiva**, adică faptul că anumiți atomi trimit în mod spontan energie și particule."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p1",
+      "title": "O ușă îngustă către știință",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Născută în Polonia, a plecat să studieze la Paris pentru că universitățile locale au închis multe uși femeilor. Ea muncește din greu, adesea în condiții precare."
+        },
+        {
+          "type": "paragraph",
+          "text": "S-a căsătorit cu **Pierre Curie**, fizician. Împreună, au format un duo rar de laborator pentru acea vreme."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p2",
+      "title": "Numiți invizibilul",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În **1896**, **Henri Becquerel** a observat că uraniul acoperă plăci fotografice fără lumină. Marie Curie decide să studieze acest fenomen în detaliu. Ea a inventat cuvântul **radioactiva**."
+        },
+        {
+          "type": "image",
+          "asset": "marie_curie_pitchblende_radioactivity",
+          "ratio": "4:3",
+          "caption": "Tone de pitchblendă pentru a izola radiul și poloniul."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cu Pierre, ea descoperă două elemente noi: **poloniu** (numit după Polonia) și **radiu**. Pentru a le izola, trebuie prelucrate cantități enorme de minereu, pitchblendă."
+        },
+        {
+          "type": "funFact",
+          "text": "Radiul strălucește slab în întuneric. Am fost uimiți la început... înainte de a înțelege cât de periculos era."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p3",
+      "title": "Glorie și preț de plătit",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În **1903**, Marie, Pierre și Becquerel au primit Premiul Nobel pentru fizică. În **1911**, Marie a primit singură Premiul Nobel pentru Chimie. Pierre a murit accidental în 1906. Ea continuă."
+        },
+        {
+          "type": "paragraph",
+          "text": "În timpul Primului Război Mondial, ea a organizat unități mobile de radiografie pentru a trata răniții. Ea își expune corpul la doze pe care astăzi le-am ști că sunt inacceptabile."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p4",
+      "title": "O moștenire cu două fețe",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Radioactivitatea a permis radioterapia împotriva anumitor tipuri de cancer... și, de asemenea, a armelor nucleare. Cunoașterea este neutră; utilizările sale nu sunt."
+        },
+        {
+          "type": "takeaway",
+          "text": "Marie Curie a transformat o observație ciudată într-o nouă știință: radioactivitatea. Munca lui a deschis fizica modernă... cu prețul unor riscuri atunci prost înțelese."
+        }
+      ]
+    }
+  ]
+}

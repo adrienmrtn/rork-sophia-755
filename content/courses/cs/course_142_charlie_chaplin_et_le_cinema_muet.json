@@ -1,0 +1,131 @@
+{
+  "id": "course_142_charlie_chaplin_et_le_cinema_muet",
+  "title": "Charlie Chaplin a němé kino",
+  "subtitle": "1889-1977",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "**Charlie Chaplin** vynalezl Charlota, tuláka v buřince, a stal se první hvězdou světového kina. Od ticha k mluvení proměňuje smích v umění.",
+  "hero": {
+    "image": "charlie_chaplin_et_le_cinema_muet",
+    "ratio": "16:9",
+    "hook": "Před rozhlasem a televizí němý poutník rozesmál celou planetu."
+  },
+  "sections": [
+    {
+      "id": "course_142_charlie_chaplin_et_le_cinema_muet_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Charlie Chaplin** (1889-1977) je první skutečnou globální celebritou. V době průmyslové chudoby nabízí jeho postava **Charlotte**, důstojného a nemotorného tuláka, tvář lidskosti. Bez řečí rozesmívá a rozpláče lidi v Tokiu, Paříži nebo New Yorku."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tento kurz sleduje jeho trajektorii: od počátků kinematografie k tichým mistrovským dílům a poté k nucenému exilu. Chaplin není jen klaun. Je totální autor."
+        }
+      ]
+    },
+    {
+      "id": "course_142_charlie_chaplin_et_le_cinema_muet_p1",
+      "title": "Od kinematografie po Hollywood",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kino se zrodilo z francouzského vynálezu: [[Kinematograf]] [[Bratři Lumière a raná kinematografie]], patentovaný v **1895**. **28. prosince 1895** se v Grand Café de Paris uskutečnilo první placené veřejné promítání. První filmy jsou krátké dokumenty: výjezd z továrny, vlak na nádraží."
+        },
+        {
+          "type": "image",
+          "asset": "lumiere_brothers_first_cinema_projection_paris_1895",
+          "ratio": "4:3",
+          "caption": "1895: kino se v Paříži stává kolektivní podívanou."
+        },
+        {
+          "type": "paragraph",
+          "text": "Velmi rychle vynalezl [[Georges Méliès]], francouzský iluzionista, fikci a triky. Poté je průmysl strukturován ve Spojených státech. **Hollywood** se stává hlavním městem snů a jeho studia produkují filmy na montážní lince. Právě v této továrně se Chaplin prosadí."
+        }
+      ]
+    },
+    {
+      "id": "course_142_charlie_chaplin_et_le_cinema_muet_p2",
+      "title": "Charlot, univerzální outsider",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Charles Spencer Chaplin se narodil v chudobě v Londýně v roce **1889** a vyrůstal mezi kabarety a domovy pro chudé. Trénoval v [[hudební sál]] a dorazil do Hollywoodu. V **1914** téměř náhodou vynalezl kostým **Charlotte**: buřinka příliš malá, kalhoty příliš široké, hůl a knír."
+        },
+        {
+          "type": "image",
+          "asset": "charlie_chaplin_tramp_bowler_hat_cane",
+          "ratio": "4:3",
+          "caption": "Charlot: gentleman bez peněz, rozpoznatelný podle siluety."
+        },
+        {
+          "type": "funFact",
+          "text": "Chaplin dal dohromady kostým za pár minut ve studiové šatně a od ostatních herců si půjčil příliš velké a příliš malé oblečení."
+        },
+        {
+          "type": "paragraph",
+          "text": "Charlot není jen vtipná. Symbolizuje muže, který navzdory chudobě lpí na své důstojnosti. Chaplin používá [[Ta groteska]], komedii pádů a úderů, ale přidává vzácnou emoci: něhu."
+        }
+      ]
+    },
+    {
+      "id": "course_142_charlie_chaplin_et_le_cinema_muet_p3",
+      "title": "Odolejte mluvení, postavte se diktátorům",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V **1927** přichází zvukové kino s *Jazzový zpěvák*. Chaplin, spoluzakladatel [[United Artists]], odolává. Dát Charlotovi hlas znamená zlomit jeho univerzálnost. Pokračuje proto v tichosti se *Městská světla* (**1931**)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pak ho historie dožene. V **1940** režíroval *Diktátor*, satiru **Adolfa Hitlera**. Je to jeho první plně mluvící film, natočený v době, kdy byly Spojené státy ještě obezřetné před nacismem. Z klauna se stává angažovaný umělec."
+        }
+      ]
+    },
+    {
+      "id": "course_142_charlie_chaplin_et_le_cinema_muet_p4",
+      "title": "Exil a odkaz autora",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Po roce 1945 vznikly [[Studená válka]] a [[McCarthyismus]]. Chaplin je podezřelý z levicových myšlenek a je sledován. V **1952**, když odešel do Evropy, mu Spojené státy zakázaly návrat. Po zbytek života se usadil v [[Vevey]] ve Švýcarsku."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1895",
+              "title": "Zrození kinematografie",
+              "detail": "První veřejné promítání bratří Lumièrů."
+            },
+            {
+              "date": "1914",
+              "title": "Narození Charlot",
+              "detail": "Chaplin vymýšlí svůj legendární kostým."
+            },
+            {
+              "date": "1940",
+              "title": "Diktátor",
+              "detail": "Chaplinův první mluvící film, satira na Hitlera."
+            },
+            {
+              "date": "1952",
+              "title": "Nucený exil",
+              "detail": "Dostal zákaz pobytu ve Spojených státech a odešel do Švýcarska."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Chaplin vynalezl univerzální tichý jazyk. Kompletní autor (herec, režisér, skladatel) dokázal, že populární kinematografie může být i politickým a emocionálním uměním."
+        }
+      ]
+    }
+  ]
+}

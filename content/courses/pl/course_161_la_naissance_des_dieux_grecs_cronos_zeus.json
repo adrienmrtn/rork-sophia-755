@@ -1,0 +1,154 @@
+{
+  "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus",
+  "title": "Narodziny bogów greckich",
+  "subtitle": "Kronos, Zeus, Olimp",
+  "subject": "mythologie",
+  "subcategory": "Greece: the gods",
+  "description": "Przed Zeusem jego ojciec Kronos pożerał swoje dzieci. W ten sposób próżnia zrodziła bogów Olimpu.",
+  "hero": {
+    "image": "la_naissance_des_dieux_grecs",
+    "ratio": "16:9",
+    "hook": "Przed Olimpem świat rodzi się w pustce, przemocy i rodzinnych zamachach stanu."
+  },
+  "sections": [
+    {
+      "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zanim panowali bogowie **Olimp**, mitologia grecka wyobraża sobie pierwotną pustkę: **Chaos**. To nie jest hałaśliwy bałagan. To luka, otchłań, z której wyłania się życie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Narodziny bogów nie są słodkie. To seria kryzysów i przejęć władzy. Poeta **Hezjod** w VIII wieku p.n.e. relacjonuje to w [[Teogonia Hezjoda]]. Tak świat przenosi się z pustki na dwór **Zeusa**."
+        }
+      ]
+    },
+    {
+      "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus_p1",
+      "title": "Z Chaosu rodzą się Ziemia i Niebo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Z **Chaos** siły rodzą się najpierw bez ludzkiej twarzy. **Gaja**, Ziemia, zapewnia solidny grunt. **Tatar** to więzienie głęboko pod światem. **Eros**, pragnienie, pozwala istotom zjednoczyć się."
+        },
+        {
+          "type": "image",
+          "asset": "gaia_primordial_goddess_greek_mythology",
+          "ratio": "4:3",
+          "caption": "Gaia, Ziemia, pierwsza potęga greckiego świata."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sama Gaia generuje **Uran**, Gwiaździste Niebo. Z ich pary rodzą się **Tytani**, bogowie brutalnej siły i potwory: **Cyklopi** i **Hekatonchires**, giganci o stu ramionach."
+        },
+        {
+          "type": "funFact",
+          "text": "Dla Greków świat nie powstaje z niczego. Rodzi się z separacji: przestrzeń między Niebem a Ziemią w końcu ustępuje miejsca życiu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ouranos nienawidzi swoich dzieci. Zamyka je w łonie Gai. Ziemia się dusi. Szykuje się pierwsza rewolucja kosmosu."
+        }
+      ]
+    },
+    {
+      "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus_p2",
+      "title": "Kronos obala swojego ojca",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gaia wykuwa sierp z [[nieugięty]], legendarnego metalu o absolutnej twardości. Tylko najmłodszy Tytan, przebiegły **Kronos**, zgadza się działać. Ukryty w boku matki, kastruje Ouranos i na zawsze oddziela Niebo od Ziemi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kronos zostaje królem. Ale krew Ouranos nadal zapładnia świat: **Erynie**, boginie zemsty rodzinnej, i **Afrodyta**, bogini miłości, wyłoniły się z morskiej piany."
+        },
+        {
+          "type": "funFact",
+          "text": "Nazwa **Afrodyta** pochodzi od greckiego „afros”, „piana”. Jego narodziny przypominają zbrodnię, która rozpoczęła panowanie Kronosa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Przepowiednia grozi Kronosowi: jeden z jego synów go zdetronizuje. Aby tego uniknąć, pożera swoje dzieci zaraz po urodzeniu, **Hestii**, **Demeter**, **Hera**, **Hades**, **Posejdon**. Greccy bogowie mają bardzo ludzkie lęki: jest to [[Grecki boski antropomorfizm]]."
+        }
+      ]
+    },
+    {
+      "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus_p3",
+      "title": "Zeus uwalnia swoich braci i siostry",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Rea**, żona Kronosa, nie zgadza się na utratę ostatniego dziecka. Podaje mu owinięty kamień. Prawdziwe dziecko, **Zeus**, dorasta w tajemnicy w jaskini [[Dyktuj]] na Krecie. [[Kurety]], święci wojownicy, zakrywają jego krzyki swoimi krzykami. Koza **Amaltea** go karmi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jako dorosły Zeus zmusza Kronosa do wyplucia swojego rodzeństwa. Dzieci wychodzą gotowe do walki. Rozpoczyna się **Tytanomachia**, dziesięcioletnia wojna pomiędzy Tytanami a przyszłymi olimpijczykami. Cyklop oferuje Zeusowi decydującą broń: **Błyskawica**."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1",
+              "title": "Chaos",
+              "detail": "Pierwotna pustka otwiera przestrzeń świata."
+            },
+            {
+              "date": "2",
+              "title": "Gaia i Uranos",
+              "detail": "Ziemia i Niebo generują Tytanów."
+            },
+            {
+              "date": "3",
+              "title": "Król Kronos",
+              "detail": "Kastruje ojca, a potem pożera jego dzieci."
+            },
+            {
+              "date": "4",
+              "title": "Zwycięstwo Zeusa",
+              "detail": "Błyskawica decyduje o Titanomachy."
+            },
+            {
+              "date": "5",
+              "title": "Olimp",
+              "detail": "Zeus, Posejdon i Hades dzielą świat."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Tytani zostają wrzuceni do Tartaru. **Zeus** zdobywa niebo, **Posejdon** morza, **Hades** świat umarłych. **Olimp** staje się boskim dworem, bardziej uporządkowanym niż siła Tytanów."
+        }
+      ]
+    },
+    {
+      "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus_p4",
+      "title": "Porządek kruchy, bardzo ludzki",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nawet zwycięski Zeus pozostaje zmartwiony. Poślubia **Metys**, Mądrość, a następnie połyka ją w obawie przed silniejszym synem. Z tego aktu rodzi się **Atena**, wyłaniająca się w pełni uzbrojona z czaszki ojca: strategia staje się filarem mocy."
+        },
+        {
+          "type": "funFact",
+          "text": "Słowo **panika** pochodzi od boga **Huk**. Podczas wojny z Gigantami jego krzyk wywołałby nagły i irracjonalny strach."
+        },
+        {
+          "type": "paragraph",
+          "text": "Te mity nie czynią bogów wzorami cnót. Robią z tego lustra: zazdrość, strach przed sukcesją, pragnienie panowania. Od Chaosu po Olimp, Grecy opowiadają historię o tym, jak cywilizacja próbuje opanować surową przemoc."
+        },
+        {
+          "type": "takeaway",
+          "text": "Mitologia grecka przechodzi od **Chaos** do porządku **Olimp** poprzez kolejne uderzenia siły. Bogowie podzielają nasze namiętności, ale nie naszą śmiertelność."
+        }
+      ]
+    }
+  ]
+}

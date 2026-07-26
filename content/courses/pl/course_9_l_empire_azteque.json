@@ -1,0 +1,133 @@
+{
+  "id": "course_9_l_empire_azteque",
+  "title": "Imperium Azteków",
+  "subtitle": "1325-1521",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "W niecałe dwa stulecia Aztekowie zbudowali na jeziorze stolicę liczącą 200 000 mieszkańców. Ich imperium, oparte na daninie i poświęceniu, upadło w ciągu dwóch lat przeciwko Hiszpanom.",
+  "hero": {
+    "image": "l_empire_azteque",
+    "ratio": "16:9",
+    "hook": "Miasto na wodzie, bardziej zaludnione niż Londyn. Potem za dwa lata nic."
+  },
+  "sections": [
+    {
+      "id": "course_9_l_empire_azteque_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W sercu dzisiejszego Meksyku Aztekowie w niecałe dwa stulecia zbudowali stolicę na jeziorze, którą zamieszkiwało **mieszkańców**. Większy niż Londyn czy Rzym jednocześnie. Ich siła łączy inżynierię wodną, ​​wymagającą religię i permanentną wojnę."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pomiędzy **1519** a **1521** imperium to upadło. Nie tylko pod armatami Cortésa, hiszpańskiego konkwistadora, ale pod nienawiścią swoich poddanych i pod niewidzialną bronią: chorobą."
+        }
+      ]
+    },
+    {
+      "id": "course_9_l_empire_azteque_p1",
+      "title": "Od bagien po stolicę na wodzie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Meksyk**, ludzie, których nazwiemy Aztekami, pochodzą z mitycznego [[Aztlan]], miejsca pochodzenia na północy. Przybyli w XIII wieku do Doliny Meksyku. Pogardzani szukają znaku u swego boga [[Huitzilopochtli]], boga słońca i wojny: orzeł pożerający węża na kaktusie. W **1325** znajdują go na wysepce na jeziorze **Texcoco**. Narodził się [[Tenochtitlan]], ich przyszły kapitał."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aby wyżywić miasto, udoskonalają [[Chinampy]], ultrażyzne sztuczne wyspy wykonane z błota i roślin. Trzy groble, groble, kanały: miasto staje się fortecą na jeziorze i gigantycznym rynkiem."
+        },
+        {
+          "type": "funFact",
+          "text": "Aztekowie nie używali koła do transportu i nie mieli zwierząt pociągowych. A jednak przewieźli miliony ton kamienia do swoich piramid."
+        }
+      ]
+    },
+    {
+      "id": "course_9_l_empire_azteque_p2",
+      "title": "Trójprzymierze i hołd",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W **1428** Tenochtitlán sprzymierzył się z dwoma sąsiednimi miastami, Texcoco i Tlacopan: **Trójprzymierze**. Wkrótce Meksyk będzie dominował sam. Ich imperium się nie asymiluje: żąda regularnego **hołd**, kukurydzy, kakao, piór, metali. Bogactwo stolicy podsyca nienawiść do podbitych ludów, takich jak [[Tlaxcaltec]], zaciekłych wrogów Azteków."
+        },
+        {
+          "type": "image",
+          "asset": "tenochtitlan_aztec_city_illustration",
+          "ratio": "4:3",
+          "caption": "Tenochtitlán, metropolia nad jeziorem w sercu imperium Azteków."
+        },
+        {
+          "type": "paragraph",
+          "text": "To machina wojenna, która potrzebuje ciągłych podbojów. Kiedy Hiszpanie przybędą, będą musieli jedynie zjednoczyć te urazy."
+        },
+        {
+          "type": "funFact",
+          "text": "Ziarna kakaowe były używane jako waluta. W Tenochtitlán królik był wart dziesięć fasoli; niewolnik dobrej kondycji, około stu."
+        }
+      ]
+    },
+    {
+      "id": "course_9_l_empire_azteque_p3",
+      "title": "Bogowie, Cortés i ospa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Według azteckiego mitu [[Kosmogonia Pięciu Słońc]], słońce przetrwa tylko wtedy, gdy odżywia się ludzką krwią. W [[Burmistrz Templo]], wielkiej piramidzie pośrodku, ofiary nie są nieuzasadnionym okrucieństwem: są one dla Azteków koniecznością, aby świat mógł trwać."
+        },
+        {
+          "type": "paragraph",
+          "text": "W **1519** przybył **Hernána Cortésa** z kilkoma setkami Hiszpanów. [[Montezumy II]], cesarz Azteków, waha się. Stal, broń i konie są przerażające. Jednak głównym zabójcą jest [[Ospa]], europejska choroba, na którą populacje nie są odporne. Cortés oblega stolicę z tysiącami rdzennych sojuszników."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1325",
+              "title": "Założenie Tenochtitlán",
+              "detail": "Meksykanie osiedlają się nad jeziorem Texcoco."
+            },
+            {
+              "date": "1428",
+              "title": "Trójprzymierze",
+              "detail": "Początek imperialnej ekspansji Azteków."
+            },
+            {
+              "date": "1519",
+              "title": "Przybycie Cortésa",
+              "detail": "Hiszpanie przybywają do Meksyku."
+            },
+            {
+              "date": "1521",
+              "title": "Upadek Tenochtitlán",
+              "detail": "Koniec imperium po 80 dniach oblężenia."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_9_l_empire_azteque_p4",
+      "title": "Na ruinach, Meksyk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W **1521**, po **80 dni** oblężenia, Tenochtitlán upadł. Głodni, pozbawieni wody, nękani chorobami. Z jego kamieni zbudowano miasto Meksyk, stolicę hiszpańskiej kolonii [[Nowa Hiszpania]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nie wszystko znika. [[Chinampy]] nadal istnieje. [[nahuatl]], językiem Azteków, posługuje się ponad milionem ludzi. Orzeł i wąż pozostają emblematami Meksyku. Genialna cywilizacja przetrwała w pamięci i krajobrazie."
+        },
+        {
+          "type": "takeaway",
+          "text": "Aztekowie zbudowali na jeziorze metropolię liczącą **200 000**. Ich system trybutów i [[Ospa]] pozwoliły kilkuset Hiszpanom, przy wsparciu lokalnych sojuszników, zniszczyć imperium w ciągu dwóch lat."
+        }
+      ]
+    }
+  ]
+}

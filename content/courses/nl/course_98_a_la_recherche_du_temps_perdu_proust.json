@@ -1,0 +1,135 @@
+{
+  "id": "course_98_a_la_recherche_du_temps_perdu_proust",
+  "title": "Op zoek naar verloren tijd, Proust",
+  "subtitle": "1913-1927",
+  "subject": "litterature",
+  "subcategory": "French & European Classics",
+  "description": "Zeven delen, 1,5 miljoen woorden: Proust onderzoekt het onvrijwillige geheugen en maakt tijd tot het hoofdpersonage van de roman.",
+  "hero": {
+    "image": "a_la_recherche_du_temps_perdu_proust",
+    "ratio": "16:9",
+    "hook": "Een madeleine gedoopt in thee. En plotseling komt een hele kindertijd terug."
+  },
+  "sections": [
+    {
+      "id": "course_98_a_la_recherche_du_temps_perdu_proust_intro",
+      "title": "Inleiding",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Nu zie je niet wat je zoekt**, van **1913** tot **1927**, telt **7 delen**, **3 200 pagina's** en **1,5 duizend stukken hout**. **Marcel Proust** beweegt de roman naar innerlijkheid, de innerlijke wereld van gedachten en sensaties. Hij plaatst de **[[Onvrijwillige herinnering]]**, een herinnering opgeroepen door een sensatie als smaak of geur, centraal in het verhaal."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tijd is niet langer een eenvoudige setting: het wordt de hoofdpersoon van een metafysisch avontuur, een reflectie op de aard van tijd en herinnering. Proust laat zien hoe het verleden in ons overleeft, verborgen in sensaties. Lezen Onderzoek betekent het accepteren van een langzaam tempo, opgebouwd uit kleine details die plotseling hele werelden openen."
+        }
+      ]
+    },
+    {
+      "id": "course_98_a_la_recherche_du_temps_perdu_proust_p1",
+      "title": "Proust en de kurkkamer",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Marcel Proust** bezoekt de **[[Salons]]**, bijeenkomsten van de Parijse high society rond kunst en politiek, en isoleert zichzelf vervolgens na de dood van zijn moeder in **1905**. Hij bekleedt zijn kamer met kurk om zichzelf te beschermen tegen lawaai en stuifmeel, en schrijft daar 's nachts."
+        },
+        {
+          "type": "image",
+          "asset": "marcel_proust_portrait_photograph",
+          "ratio": "4:3",
+          "caption": "Marcel Proust: teruggetrokken schrijver in dienst van de herinnering."
+        },
+        {
+          "type": "funFact",
+          "text": "Proust stierf terwijl hij zijn drukproeven corrigeerde en zijn dienaar Céleste vroeg om ‘paperoles’ aan de kantlijn toe te voegen om zijn teksten langer te maken."
+        },
+        {
+          "type": "paragraph",
+          "text": "Het eerste deel, **Van Swann**, gepubliceerd in **1913**, werd door uitgevers afgewezen. **[[André Gide]]**, schrijver en figuur van de **NRF**, een literair tijdschrift, zou later toegeven een ernstige fout te hebben gemaakt door het manuscript te minachten."
+        }
+      ]
+    },
+    {
+      "id": "course_98_a_la_recherche_du_temps_perdu_proust_p2",
+      "title": "De madeleine en de levende herinnering",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Proust maakt een onderscheid tussen de vrijwillige herinnering, een ‘koude’ herinnering die door inspanning wordt gereconstrueerd, en de **[[Onvrijwillige herinnering]]**, opgeroepen door een sensatie. De in thee gedrenkte **madeleine** doet **Combray**, het kinderdorp, in zijn emotionele geheel herleven."
+        },
+        {
+          "type": "image",
+          "asset": "madeleine_tea_cup_proust_memory",
+          "ratio": "4:3",
+          "caption": "De madeleine: de bekendste trigger van onvrijwillige herinnering."
+        },
+        {
+          "type": "quote",
+          "text": "En plotseling kwam de herinnering bij mij op.",
+          "attribution": "Marcel Proust, aan de Swann-kant"
+        },
+        {
+          "type": "paragraph",
+          "text": "Het verleden is niet dood: het is in ons vastgelegd in objecten of sensaties. De schrijver moet deze indrukken in taal vertalen. Proust was geobsedeerd door geuren en parfumeerde soms zijn post om zijn brieven voor de tijd te bewaren. Deze zintuiglijke aandacht transformeert de roman in een verkenning van het bewustzijn."
+        }
+      ]
+    },
+    {
+      "id": "course_98_a_la_recherche_du_temps_perdu_proust_p3",
+      "title": "Liefde, jaloezie en snobisme",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The Research analyseert het verval, de neergang van de aristocratie en het snobisme. De verteller, vaak **Marcel** genoemd, navigeert tussen de kant van **Zwaan**, de bourgeoisie, en die van de **Guermantes**, de grote adel."
+        },
+        {
+          "type": "paragraph",
+          "text": "Liefde is een ziekte van de verbeelding, onlosmakelijk verbonden met jaloezie. **[[Mijnheer de Charlus]]**, een complexe aristocraat, introduceert voorheen taboe-thema's. Proust beschrijft een samenleving van geheimen en maskers, waarin iedereen een rol speelt die wordt gedicteerd door zijn verlangens en zijn sociale rang. Lange sociale avonden worden laboratoria van menselijke ijdelheid."
+        }
+      ]
+    },
+    {
+      "id": "course_98_a_la_recherche_du_temps_perdu_proust_p4",
+      "title": "De tijd herontdekt door kunst",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Het zevende deel, **[[Tijd herwonnen door kunst]]**, geeft het definitieve antwoord. Nieuwe onvrijwillige herinneringen onthullen aan de verteller zijn roeping: het schrijven van het werk dat we zojuist hebben gelezen. Alleen kunst kan geleefde momenten redden van de vernietiging van de tijd."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1913",
+              "title": "In de buurt van Swann",
+              "detail": "Eerste deel in eigen beheer uitgegeven."
+            },
+            {
+              "date": "1919",
+              "title": "Goncourt-prijs",
+              "detail": "Erkenning voor In de schaduw van jonge meisjes in bloemen."
+            },
+            {
+              "date": "1927",
+              "title": "Einde van het werk",
+              "detail": "Time Regained verscheen na de dood van Proust."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Bij Proust is verloren tijd niet alleen het verleden. Het is ook tijd die slecht wordt besteed, versnipperd in gewoonten. Door een ware sensatie in een tekst vast te leggen, maakt kunst deze uiteindelijk leesbaar en blijvend. The Search beïnvloedt de roman van de hele 20e eeuw: **Virginia Woolf**, **Jorge Luis Borges** en vele anderen nemen het idee over van een diepe herinnering, begraven in het lichaam."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Nu zie je niet wat je zoekt**: **1,5 duizend stukken hout** om te laten zien dat alleen kunst, via **[[Onvrijwillige herinnering]]**, het verleden kan behoeden voor vernietiging door de tijd."
+        }
+      ]
+    }
+  ]
+}

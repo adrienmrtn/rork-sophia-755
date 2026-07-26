@@ -1,0 +1,128 @@
+{
+  "id": "course_225_la_montee_des_eaux",
+  "title": "Apele în creștere",
+  "subtitle": "Nivelul mării este în creștere",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Până în 2100, nivelul oceanelor ar putea crește cu **a metru**. Pentru țări întregi și megaorașe de coastă, aceasta nu mai este o ipoteză îndepărtată, ci o chestiune de planificare.",
+  "hero": {
+    "image": "la_montee_des_eaux",
+    "ratio": "16:9",
+    "hook": "Marea crește puțin mai mult în fiecare an, iar unele țări își planifică deja mutarea."
+  },
+  "sections": [
+    {
+      "id": "course_225_la_montee_des_eaux_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Timp de mii de ani, nivelul oceanelor a rămas aproximativ stabil. Încă din epoca industrială, ea a urcat, iar viteza acestei creșteri se accelerează de la an la an."
+        },
+        {
+          "type": "paragraph",
+          "text": "Până în 2100, oceanele ar putea crește cu 30 de centimetri până la un metru, în funcție de alegerile noastre privind emisiile. Pentru multe linii de coastă, aceasta nu mai este o amenințare îndepărtată, ci o problemă de planificare foarte concretă."
+        }
+      ]
+    },
+    {
+      "id": "course_225_la_montee_des_eaux_p1",
+      "title": "Două mecanisme, o singură direcție",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nivelul mării crește din două motive fizice diferite. Primul este [[Dilatare termică]]: când apa se încălzește, moleculele ei se mișcă mai mult, iar volumul ei crește puțin, ca orice lichid. Oceanele au absorbit mai mult de 90% din excesul de căldură generat de activitatea umană din 1970, iar această căldură le crește volumul."
+        },
+        {
+          "type": "paragraph",
+          "text": "Al doilea motiv este topirea gheții plasate pe uscat. Aveți grijă să nu-l confundați cu banchiza arctică, care deja plutește pe apă și a cărei topire nu provoacă creșterea nivelului mării. Acestea sunt [[Calota de gheață]], aceste calote glaciare imense așezate pe pământul Groenlandei și Antarcticii, care chiar fac oceanele să se reverse prin adăugarea de apă dulce."
+        },
+        {
+          "type": "image",
+          "asset": "greenland_ice_sheet_melting_glacier",
+          "ratio": "16:9",
+          "caption": "Topirea Groenlandei, dacă ar fi completă, ar ridica oceanele cu 7 metri."
+        },
+        {
+          "type": "funFact",
+          "text": "Groenlanda pierde în jur de 280 de miliarde de tone de gheață în fiecare an, adică suficientă apă pentru a acoperi întreaga Franță cu un strat de 50 de centimetri."
+        }
+      ]
+    },
+    {
+      "id": "course_225_la_montee_des_eaux_p2",
+      "title": "O viteză care îi îngrijorează pe oamenii de știință",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Din 1880, nivelul mării la nivel global a crescut cu aproximativ 20 de centimetri. Mai presus de toate viteza actuală îi alarmează pe cercetători: era în jur de 1,4 mm pe an în secolul al XX-lea, față de **3,6 mm pe an** astăzi, o accelerație de peste 150%."
+        },
+        {
+          "type": "paragraph",
+          "text": "Experții [[IPCC]] estimează că această tendință va continua timp de zeci de ani, chiar dacă emisiile au fost reduse drastic acum, deoarece oceanele au nevoie de timp pentru a răspunde la schimbările de temperatură."
+        },
+        {
+          "type": "image",
+          "asset": "coastal_flooding_sea_level_rise_city",
+          "ratio": "4:3",
+          "caption": "O creștere de 50 cm poate transforma o inundație de 100 de ani într-un eveniment anual."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pericolul real nu este doar o mare puțin mai ridicată în medie, ci și multiplicarea [[Furtuni și inundații de o sută de ani]]: o creștere de 50 de centimetri poate fi suficientă pentru a transforma o catastrofă așteptată de o dată pe secol într-un eveniment aproape anual."
+        }
+      ]
+    },
+    {
+      "id": "course_225_la_montee_des_eaux_p3",
+      "title": "O nedreptate geografică",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Creșterea nivelului apei afectează în principal regiunile care au contribuit cel mai puțin la încălzirea globală. Marile delte fluviale, precum cele ale Nilului, Mekongului sau Gangelui, se află pe prima linie. În Bangladesh, unde locuiesc 170 de milioane de locuitori, o creștere de un metru ar putea cauza pierderea a 17% din teritoriu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pentru statele insulare mici precum Maldive sau Kiribati, dispariția completă sub apă nu mai este o ipoteză științifico-fantastică, ci un adevărat subiect de planificare politică. Dimpotrivă, mega-orase bogate precum Miami sau New York investesc miliarde în diguri și pompe."
+        },
+        {
+          "type": "image",
+          "asset": "jakarta_indonesia_sinking_flooding_maldives",
+          "ratio": "16:9",
+          "caption": "Jakarta combină creșterea apelor și tasarea solului, o dublă amenințare."
+        },
+        {
+          "type": "funFact",
+          "text": "În 2009, guvernul Maldivelor a organizat o reuniune subacvatică a cabinetului în costume de neopină pentru a alerta lumea înaintea unei conferințe majore privind clima."
+        },
+        {
+          "type": "paragraph",
+          "text": "În **Jakarta**, Indonezia, orașul se scufundă și mai mult în pământ din cauza pompării excesive a apei subterane. În fața acestei duble amenințări, țara a luat decizia radicală de a construi o capitală nou-nouță, Nusantara, pe insula Borneo."
+        }
+      ]
+    },
+    {
+      "id": "course_225_la_montee_des_eaux_p4",
+      "title": "Adaptați-vă sau faceți un pas înapoi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Două strategii se completează reciproc în fața acestei provocări. Primul este de a limita încălzirea pentru a încetini creșterea dincolo de 2100. Al doilea este de a adapta la ceea ce este deja inevitabil, prin întărirea apărărilor naturale precum [[Mangrove]]-uri sau dune, sau cu soluții mai grele precum lucrările majore din Țările de Jos."
+        },
+        {
+          "type": "paragraph",
+          "text": "În unele cazuri, singura soluție va fi deplasarea înapoi: mutarea oamenilor și a activităților în interior înainte ca dezastrele să se repete prea des. Aceasta este o adevărată schimbare de obicei pentru societățile care au fost atașate de coastă de secole."
+        },
+        {
+          "type": "takeaway",
+          "text": "Nivelul mării crește cu 3,6 mm pe an, sub efectul combinat al expansiunii termice și al topirii gheții de uscat. Până în 2100, această creștere ar putea ajunge la un metru și ar putea forța deplasarea a sute de milioane de oameni."
+        }
+      ]
+    }
+  ]
+}

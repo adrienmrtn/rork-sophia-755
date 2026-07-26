@@ -1,0 +1,146 @@
+{
+  "id": "course_164_demeter_et_persephone_les_saisons",
+  "title": "Demeter och Persephone",
+  "subtitle": "Varför finns årstider?",
+  "subject": "mythologie",
+  "subcategory": "Greece: the gods",
+  "description": "Hades kidnappar Persephone. Hans mamma Demeter, skördens gudinna, lämnar jorden för att svälta. En myt för att förklara årstiderna.",
+  "hero": {
+    "image": "demeter_et_persephone",
+    "ratio": "16:9",
+    "hook": "När en flicka försvinner under jorden stoppar hennes mamma skörden. Världen upptäcker vintern."
+  },
+  "sections": [
+    {
+      "id": "course_164_demeter_et_persephone_les_saisons_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Demeter** är den grekiska gudinnan för skörd och fertilitet. Hennes dotter **Perséphone** förkroppsligar våren. Deras historia förklarar [[jordbrukscykel i grekisk religion]]: varför jorden dör på vintern och återföds på sommaren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Det är också ett drama om mor och dotter, mellan de levandes och de dödas värld. Ur denna berättelse föddes [[Eleusinska mysterier]], hemliga riter som lovade de invigda hopp inför döden."
+        }
+      ]
+    },
+    {
+      "id": "course_164_demeter_et_persephone_les_saisons_p1",
+      "title": "Hades kidnappar flickan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vi kallar först Persephone **Korah**, \"den unga flickan\". En dag, på en äng, plockar hon en påsklilja. Jorden öppnar sig. **Hades**, kungen av underjorden, dyker upp på sin vagn. Med ett hemligt avtal från **Zeus**, far till den unga flickan, tar han henne till Underjorden för att göra henne till sin drottning."
+        },
+        {
+          "type": "image",
+          "asset": "hades_abduction_persephone_bernini_sculpture",
+          "ratio": "4:3",
+          "caption": "Kidnappningen av Persefone: våren försvinner under jorden."
+        },
+        {
+          "type": "funFact",
+          "text": "Enligt myten hade **Gaïa**, jorden, skapat denna narcissus på order av Zeus. Dess doft måste ha fångat Persephone."
+        },
+        {
+          "type": "paragraph",
+          "text": "Demeter, otröstlig, lämnar Olympen. Det hindrar jorden från att gro. Åkrarna förblir karga. En **svält** hotar människor, och därför de offer som offrades till gudarna. Zeus måste reagera."
+        }
+      ]
+    },
+    {
+      "id": "course_164_demeter_et_persephone_les_saisons_p2",
+      "title": "Granatäpplekärnor avgör ödet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zeus skickar **Hermes**, gudarnas budbärare, för att kräva att Persefone ska återvända. Hades låtsas lyda. Innan hon går ger han henne några **granatäpplefrön**. Den som äter i dödsriket tillhör honom. Fällan är satt."
+        },
+        {
+          "type": "paragraph",
+          "text": "En kompromiss är nödvändig. Persephone kommer att tillbringa en del av året med Hades, resten med sin mamma. När hon går upp igen gör Demeter naturen grön igen: det är vår och sommar. När hon kommer ner igen drar skördegudinnan tillbaka sin nåd: det är höst och vinter."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1",
+              "title": "Kidnappningen",
+              "detail": "Hades tar Persephone under jorden."
+            },
+            {
+              "date": "2",
+              "title": "Svälten",
+              "detail": "Demeter stoppar växternas tillväxt."
+            },
+            {
+              "date": "3",
+              "title": "Granatäpplet",
+              "detail": "Persephone äter frön i underjorden."
+            },
+            {
+              "date": "4",
+              "title": "Delning",
+              "detail": "Hon delar året mellan mamma och man."
+            },
+            {
+              "date": "5",
+              "title": "Årstiderna",
+              "detail": "Dess fram och tillbaka rytmer skördecykeln."
+            }
+          ]
+        },
+        {
+          "type": "funFact",
+          "text": "Vissa versioner säger att Persephone inte äter dessa frön av misstag. Nyfikenhet eller spirande fäste: berättelsen blir också en ingång till vuxenlivet."
+        }
+      ]
+    },
+    {
+      "id": "course_164_demeter_et_persephone_les_saisons_p3",
+      "title": "I Eleusis, hopp efter natten",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Under sina vandringar stannar Demeter till vid **Eleusis**, nära Aten, förklädd till en gammal kvinna. Välkommen av kungafamiljen, slutar hon med att avslöja sin gudomliga natur och beordrar byggandet av ett tempel. [[Eleusinska mysterier]] är födda."
+        },
+        {
+          "type": "paragraph",
+          "text": "De invigda går nio dagar, fastar, drick **seon**, en drink av korn och mynta. I [[Telesterion]], ett enormt initieringsrum, lyser ljus efter mörkret. Där avslöjas heliga föremål, i största hemlighet."
+        },
+        {
+          "type": "funFact",
+          "text": "Vissa moderna forskare tror att kykeon innehöll ergot, en hallucinogen svamp. Detta skulle förklara de visioner som rapporterats av initierade."
+        },
+        {
+          "type": "paragraph",
+          "text": "Riten imiterar gudinnans resa. Att gå igenom naturens död med Demeter och sedan återfödas med Persephone: deltagarna trodde att de skulle få ett bättre öde i livet efter detta."
+        }
+      ]
+    },
+    {
+      "id": "course_164_demeter_et_persephone_les_saisons_p4",
+      "title": "Spannmålet som dör för att återfödas",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "För grekerna led vetekornet som begravdes i marken samma öde som Persefone. Den försvinner under jorden för att återvända som en stam. Myten kopplar samman jordbruk, död och återfödelse."
+        },
+        {
+          "type": "paragraph",
+          "text": "Han talar också om uråldriga äktenskap, som ofta upplevs som en smärtsam avgång: den unga flickan lämnar sin mamma för att ansluta sig till ett annat hem. Mellan Hades och Demeter håller den slutliga överenskommelsen motsatserna samman: skugga och ljus, död och liv."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Persephone**s vistelse i underjorden präglar årstiderna: hennes frånvaro orsakar sorgen för **Démeter** (höst-vinter), hennes återkomst gör att växterna föds på nytt (vår-sommar)."
+        }
+      ]
+    }
+  ]
+}

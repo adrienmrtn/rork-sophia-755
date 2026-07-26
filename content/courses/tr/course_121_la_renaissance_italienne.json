@@ -1,0 +1,154 @@
+{
+  "id": "course_121_la_renaissance_italienne",
+  "title": "İtalyan Rönesansı",
+  "subtitle": "14.-16. yüzyıl",
+  "subject": "art",
+  "subcategory": "Painting & Movements",
+  "description": "İtalya iki yüzyıl içinde resim, heykel ve mimariyi yeniden icat etti ve dünyaya bakışımızı değiştirdi.",
+  "hero": {
+    "image": "la_renaissance_italienne",
+    "ratio": "16:9",
+    "hook": "İtalya, iki yüzyıl içinde sanatı ve dünyaya bakış açımızı yeniden icat etti."
+  },
+  "sections": [
+    {
+      "id": "course_121_la_renaissance_italienne_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "İtalyan Rönesansı (14.-16. yüzyıl) yalnızca tarzda bir değişiklik değildir. Bu, dünyayı görmenin yeni bir yolu. İtalya iki yüzyıl boyunca gözlemi, aklı ve bireyi her şeyin merkezine yerleştirdi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Yarımadanın zengin şehirlerinde doğan bu devrim, resim, heykel ve mimariyi yeniden keşfediyor. Bunu yönlendiren iki itici güç var: Antik Yunan ve Roma döneminin yeniden keşfi ve cesur teknik icatlar."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p1",
+      "title": "Fitili ateşleyen şehir Floransa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Her şey tekstil ve bankacılık sayesinde 14. yüzyılda Avrupa ekonomisine hakim olan **Floransa**'da başlıyor. **Medici** ailesi orada iktidarı ele geçirdi. Bu bankacılar sanatçı finansmanı olan [[himaye]]'yi prestij aracı olarak kullanıyor."
+        },
+        {
+          "type": "funFact",
+          "text": "Medici, faizli borç verme yasağını aşmak için bankacılık hileleri icat etti. Kilise, şapelleri finanse ettiği sürece buna göz yumuyor."
+        },
+        {
+          "type": "image",
+          "asset": "lorenzo_de_medici_portrait_florence",
+          "ratio": "4:3",
+          "caption": "“Muhteşem” olarak bilinen Laurent de Medici, sanatçıların büyük koruyucusu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aynı zamanda **hümanizm** insanın yerini değiştirir. [[Mirandola Zirvesi]] gibi düşünürler, insanın doğayı akıl yoluyla anlayabildiğini ileri sürmektedir. **1453**'de Konstantinopolis'in düşüşü bilim adamlarını unutulmuş Yunanca el yazmalarıyla İtalya'ya itiyor."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p2",
+      "title": "Gerçeği boyamak: perspektif ve vücut",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "15. yüzyılda mimar **Brunelleschi**, **1420** etrafında [[doğrusal perspektif]]'yi icat etti. Daha önemli olanın daha büyük resmedildiği Orta Çağ geride kaldı: Uzay artık gerçekliğe açılan bir pencere gibi matematiksel kurallara uyuyor."
+        },
+        {
+          "type": "image",
+          "asset": "brunelleschi_linear_perspective_florence",
+          "ratio": "4:3",
+          "caption": "Perspektif düz bir yüzeyde derinlik yanılsaması verir."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Leonardo da Vinci** daha da ileri gidiyor: kasları ve sinirleri anlamak için bedenleri parçalara ayırıyor ve aynı zamanda duyguları da resmediyor. Flanders'tan gelen yağlı boya yavaş yavaş [[Tempera]]'nin yerini alıyor ve [[ışık gölge]]'ye izin veriyor: bu gölge ve ışık kontrastları rahatlama sağlıyor."
+        },
+        {
+          "type": "funFact",
+          "text": "Leonardo'nun en çok incelediği vücut, yüz yaşındaki bir adamın vücuduydu. Bunu inceleyerek, yaşa bağlı olarak tıkanan arterin bilinen ilk vakalarından birini tanımladı."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p3",
+      "title": "Leonardo, Michelangelo, Raphael",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "16. yüzyılın başında Floransa'nın yerini, **Julius II** gibi inşacı papaların taşıdığı Roma aldı. Bu “eksiksiz insan” çağıdır. **Leonardo da Vinci** modeldir: ressam, mühendis, anatomist."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Michelangelo** gücü temsil eder. Onun **Davut**'si Floransa'nın sembolü haline geldi. **1508** ve **1512** arasında **Sistina Şapeli**: Genesis'te 500 metrekare tavanını boyadı."
+        },
+        {
+          "type": "image",
+          "asset": "michelangelo_david_sistine_chapel_ceiling",
+          "ratio": "4:3",
+          "caption": "Michelangelo, Davut'tan Sistine Şapeli'nin tavanına kadar."
+        },
+        {
+          "type": "funFact",
+          "text": "*Oğlu Yargı*'da Michelangelo, derisi yüzülmüş deri üzerine kendi yüzünü boyadı; bu, bu çalışmanın onu ne kadar yorduğunu ifade etmenin bir yoluydu."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Raphaël** zarafeti temsil eder. *Atina Okulu* freski, Antik Çağ'ın büyük düşünürlerini yüzyıllarca örnek teşkil edecek bir uyum içinde bir araya getiriyor."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p4",
+      "title": "Avrupa'yı aşan bir miras",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1520**'de Raphaël'in ölümünden sonra denge bozulur. Sanatçılar bedenleri uzatıp renkleri zorluyor: [[yapmacıklık]], daha huzursuz bir sanat. Fransa Kralı **Francis I** Leonardo'yu davet ediyor ve Loire kaleleriyle **Fransız Rönesansını** başlatıyor."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1420",
+              "title": "Doğrusal perspektif",
+              "detail": "Brunelleschi, Floransa'da denklemlere uzay koyuyor."
+            },
+            {
+              "date": "1453",
+              "title": "Konstantinopolis'in Düşüşü",
+              "detail": "Akademisyenler Yunanca el yazmalarıyla İtalya'ya kaçıyor."
+            },
+            {
+              "date": "1504",
+              "title": "Michelangelo'nun Davut'u",
+              "detail": "Floransa sivil gururun bir sembolünü seçiyor."
+            },
+            {
+              "date": "1508-1512",
+              "title": "Sistine Şapeli",
+              "detail": "Michelangelo Yaratılış tavanını boyadı."
+            },
+            {
+              "date": "1520",
+              "title": "Raphael'in ölümü",
+              "detail": "Yüksek Rönesans biter, Maniyerizm başlar."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Medici sayesinde Floransa'da doğan İtalyan Rönesansı, Leonardo, Michelangelo ve Raphael ile Roma'da zirveye ulaşmadan önce, perspektif (1420 civarında) ve vücut çalışmaları ile sanatta devrim yarattı."
+        }
+      ]
+    }
+  ]
+}

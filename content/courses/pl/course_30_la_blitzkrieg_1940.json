@@ -1,0 +1,135 @@
+{
+  "id": "course_30_la_blitzkrieg_1940",
+  "title": "Blitzkrieg",
+  "subtitle": "1940",
+  "subject": "histoire",
+  "subcategory": "Cold War & Contemporary World",
+  "description": "W ciągu **sześć tygodni**, od **10 dni** do **22 czerwca 1940**, armia niemiecka podbiła Francję i kraje Beneluksu. „Blitzkrieg” rewolucjonizuje sztukę wojenną poprzez szybkość.",
+  "hero": {
+    "image": "la_blitzkrieg_1940",
+    "ratio": "16:9",
+    "hook": "Sześć tygodni na zniszczenie rzekomo pierwszej armii w Europie."
+  },
+  "sections": [
+    {
+      "id": "course_30_la_blitzkrieg_1940_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Od **10 dni** do **22 czerwca 1940** w ciągu zaledwie sześciu tygodni armia niemiecka podbiła Francję, Holandię, Belgię i Luksemburg. Wiodąca potęga militarna Europy upada na oczach świata."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Wojna błyskawiczna** (blitzkrieg) to nie tylko seria zwycięstw. To rewolucja: szybkość i dezorganizacja wroga liczą się bardziej niż jego natychmiastowe fizyczne zniszczenie."
+        }
+      ]
+    },
+    {
+      "id": "course_30_la_blitzkrieg_1940_p1",
+      "title": "Uderzaj mocno, uderzaj szybko",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Słowo Blitzkrieg nie jest oficjalne w [[Wehrmacht]], armii niemieckiej od 1935 do 1945. Wymyśliła je prasa anglosaska. Niemcy mówią o wojnie ruchowej. Zasada [[Schwerpunkta]]: skoncentruj wszystkie środki na wąskim punkcie, aby przełamać przód."
+        },
+        {
+          "type": "funFact",
+          "text": "Syreny Stuków, tych bombowców nurkujących nazywanych „trąbami Jerycha”, nie mają żadnego zastosowania wojskowego. Służą jedynie do terroryzowania żołnierzy i cywilów."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tam, gdzie Francuzi rozproszyli czołgi, aby wesprzeć piechotę, Niemcy zgrupowali je w autonomiczne dywizje pancerne, połączone drogą radiową. Stuki zachowują się jak latająca artyleria. Tymczasem Francja nadal wierzy w [[Linia Maginota]], czyli łańcuch fortów wzdłuż niemieckiej granicy."
+        }
+      ]
+    },
+    {
+      "id": "course_30_la_blitzkrieg_1940_p2",
+      "title": "Uderzenie sierpa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Za radą generała **Eryka von Mansteina** Hitler przyjął [[Sichelschnitt]], „posunięcie sierpowe”: wciągając aliantów do Belgii, podczas gdy większość czołgów pancernych, czyli niemieckich czołgów, przekroczyła **Ardeny**, uważaną za nieprzejezdną. W dniu **13 dni** generał **Heinza Guderiana** przekroczył Mozę w **Sedan**. Trasa przez kanał La Manche jest otwarta."
+        },
+        {
+          "type": "image",
+          "asset": "german_tanks_blitzkrieg_1940",
+          "ratio": "4:3",
+          "caption": "Niemieckie czołgi podczas kampanii 1940 r."
+        },
+        {
+          "type": "paragraph",
+          "text": "W ciągu tygodnia armie alianckie zostały otoczone, tyłem do morza. W Dunkierce [[Operacja Dynamo (Dunkierka)]] ewakuowała **338 000** żołnierzy francusko-brytyjskich. Wielka Brytania ratuje swoją armię. Francja pozostaje sama."
+        },
+        {
+          "type": "image",
+          "asset": "dunkirk_evacuation_beach_1940",
+          "ratio": "4:3",
+          "caption": "Ewakuacja Dunkierki, maj-czerwiec 1940 r."
+        }
+      ]
+    },
+    {
+      "id": "course_30_la_blitzkrieg_1940_p3",
+      "title": "Zawieszenie broni i apelacja",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pozbawiona najlepszych podziałów Francja upadła. 14 czerwca Paryż zostaje ogłoszony miastem otwartym. Marszałek **Philippe'a Petaina** żąda zawieszenia broni, podpisanego **22 czerwca** w Compiègne, w tym samym wozie co w **1918**: Hitler organizuje zemstę."
+        },
+        {
+          "type": "funFact",
+          "text": "Na ceremonię Hitler wyprowadził wóz z muzeum w Compiègne i umieścił go dokładnie w miejscu, w którym Niemcy skapitulowały 22 lata wcześniej."
+        },
+        {
+          "type": "paragraph",
+          "text": "**18 czerwca** z Londynu **Generał de Gaulle** kieruje swój apel do BBC: Francja przegrała bitwę, a nie wojnę. Bezpośredni wpływ jest niewielki. Położono podwaliny pod Wolną Francję."
+        }
+      ]
+    },
+    {
+      "id": "course_30_la_blitzkrieg_1940_p4",
+      "title": "Podwójne zwycięstwo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rok 1940 ustanowił Niemcy panem Europy. Ale Blitzkrieg to krótka strategia wojenna: ograniczone paliwo, krucha logistyka. W **1941**, w obliczu sowieckiego ogromu, ugrzęzło. Historyk **Marka Blocha** będzie mówił o „dziwnej porażce”: francuskiej porażce intelektualnej i materialnej."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "10 maja 1940 r",
+              "title": "Ofensywa na Zachodzie",
+              "detail": "Jednoczesny atak na kraje Beneluksu i przełom w Ardenach."
+            },
+            {
+              "date": "13 maja 1940 r",
+              "title": "Przełom w sedanie",
+              "detail": "Pancerne przekraczają Mozę."
+            },
+            {
+              "date": "Maj-czerwiec 1940",
+              "title": "Dunkierka",
+              "detail": "Do Anglii ewakuowano 338 000 żołnierzy."
+            },
+            {
+              "date": "22 czerwca 1940",
+              "title": "Zawieszenie broni",
+              "detail": "Francja przerywa walkę pod Compiègne."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "W ciągu sześciu tygodni Blitzkrieg połączy siły pancerne, lotnicze i radiowe, aby zniszczyć doktrynę obronną w proch. Na Linii Maginota panowała prędkość i koncentracja sił."
+        }
+      ]
+    }
+  ]
+}

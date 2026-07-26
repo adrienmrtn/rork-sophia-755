@@ -1,0 +1,102 @@
+{
+  "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859",
+  "title": "Teoria ewolucji Darwina",
+  "subtitle": "1859",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "W 1859 roku Darwin opublikował O powstawaniu gatunków. Główna idea: istoty żywe zmieniają się z biegiem czasu w wyniku doboru naturalnego.",
+  "hero": {
+    "image": "la_theorie_de_l_evolution_de_darwin",
+    "ratio": "16:9",
+    "hook": "Gatunki nie są ustalone. Zmieniają się. Powoli. Ale na pewno."
+  },
+  "sections": [
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W **1859** **Karola Darwina** opublikował *O pożywieniu gatunków*. Książka szokuje, fascynuje, dzieli. Jej główna idea jest jednak prosta do sformułowania."
+        },
+        {
+          "type": "paragraph",
+          "text": "Żywe istoty są różne. Niektóre odmiany pomagają przetrwać i rozmnażać się. Te różnice są przekazywane. Z biegiem pokoleń populacje się zmieniają."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p1",
+      "title": "Podróż otwierająca oczy",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "charles_darwin_portrait",
+          "ratio": "4:3",
+          "caption": "Darwin, XIX-wieczny brytyjski przyrodnik."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jako młody chłopiec Darwin wypływa na statek **Pies gończy**. Przez lata obserwował rośliny, skamieniałości, ptaki. Na Wyspach Galapagos zauważył, że pobliskie ptaki miały różne dzioby w zależności od pożywienia."
+        },
+        {
+          "type": "image",
+          "asset": "darwin_finches_galapagos_beaks",
+          "ratio": "4:3",
+          "caption": "Dysze dostosowane do różnych diet: mocny wskaźnik."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p2",
+      "title": "Dobór naturalny, prosto po angielsku",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wyobraź sobie populację zwierząt. Niektórzy biegają trochę szybciej, trawią trochę lepiej, są trochę bardziej wytrzymali na zimno. Jeśli pomoże im to przetrwać i mieć młode, cechy te staną się bardziej powszechne."
+        },
+        {
+          "type": "paragraph",
+          "text": "To nie jest tak, że jednostki „chcą” ewoluować. To filtr: środowisko zatrzymuje to, co działa. Darwin nazywa to **doborem wskazanym**."
+        },
+        {
+          "type": "funFact",
+          "text": "Darwin czekał długo z publikacją. Obawiał się skandalu. Inny przyrodnik, **Alfreda Russella Wallace’a**, wpadł na podobny pomysł: to skłoniło Darwina do wydania swojej książki."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p3",
+      "title": "Zderzenie idei",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W XIX wieku wielu wierzyło, że gatunki zostały stworzone takimi, jakie są. Twierdzenie, że się zmieniają i że ludzie dzielą wspólną historię z innymi zwierzętami, wstrząsa religią i społeczeństwem."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nauka postępuje: skamieniałości, geografia gatunków, a później genetyka potwierdzają ogólną tezę."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p4",
+      "title": "A dzisiaj?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Teraz wiemy, że DNA niesie ze sobą zmiany. Obserwujemy ewolucję w laboratorium (bakterie, wirusy) i w przyrodzie. Zwalczamy także bakterie oporne na antybiotyki: to jest żywa ewolucja."
+        },
+        {
+          "type": "takeaway",
+          "text": "Darwin wykazał, że istoty żywe ewoluują w drodze doboru naturalnego: rozprzestrzeniają się cechy przydatne do przetrwania i reprodukcji. Współczesna genetyka potwierdziła i wyjaśniła te ramy."
+        }
+      ]
+    }
+  ]
+}

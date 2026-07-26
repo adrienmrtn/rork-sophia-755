@@ -1,0 +1,124 @@
+{
+  "id": "course_19_la_bataille_de_stalingrad_1942_1943",
+  "title": "A sztálingrádi csata",
+  "subtitle": "1942-1943",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "1942 nyarától 1943 februárjáig németek és szovjetek gyilkolták egymást egy Volga-parti város romjain. Sztálingrád a második világháború fordulópontja.",
+  "hero": {
+    "image": "la_bataille_de_stalingrad",
+    "ratio": "16:9",
+    "hook": "Egy város romjain a hadsereg végleg legyőzhetetlennek ítélte."
+  },
+  "sections": [
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1942** nyártól 1943. **február 2-ig** a világ a **Volga**, Oroszország egyik nagy folyójának romjaira figyel. **Sztalingrádnál** (ma Volgograd) a német hadsereg minden áldozatra kész szovjet ellenállásba ütközött."
+        },
+        {
+          "type": "paragraph",
+          "text": "A több mint **egy millió** halottjával ez volt a történelem leghalálosabb csatája...és a második világháború fordulópontja."
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p1",
+      "title": "Hitler a déli olajat veszi célba",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az 1941-es Moszkva előtti kudarc után Hitler elindította a [[Kék tok]] nyári offenzívát dél felé. A cél: olaj a **Kaukázusból**. **Sztálingrád**, a Volga vasúti és folyami csomópontja, kezdetben csak másodlagos cél. Ekkor a szimbólum nyer: a **Sztálin** nevet viselő város elfoglalása megszállottsággá válik."
+        },
+        {
+          "type": "image",
+          "asset": "battle_of_stalingrad_ruins",
+          "ratio": "4:3",
+          "caption": "Sztálingrád romokban: irgalmatlan városi csatatér."
+        },
+        {
+          "type": "funFact",
+          "text": "Hitler annyira biztos volt a győzelemben, hogy állítólag meghívókat nyomtatott egy győzelmi bankettre a sztálingrádi Lux Hotelben."
+        },
+        {
+          "type": "paragraph",
+          "text": "A német **6. hadsereg**, amelynek parancsnoka [[Friedrich Paulus]] tábornok, a városba kerül. A német légierő, a [[Luftwaffe]] bombázásai 1942 augusztusában kráteres tájat hagytak hátra... tökéletes a szovjet védelem számára."
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p2",
+      "title": "Küzdj házról házra",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Vaszilij Csujkov** szovjet tábornok egyszerű taktikát vetett be: maradjon **30 méter** az ellenségtől. Így a német tüzérség és repülőgép nem tud csapást mérni anélkül, hogy megölné saját embereit. A németek **Rattenkrieg**-nek, „patkányháborúnak” hívják: pincékben, csatornákban, romos épületekben harcolunk."
+        },
+        {
+          "type": "paragraph",
+          "text": "A **Pavlov-ház**, egy maroknyi katona által vezetett épület, **58 napig** ellenállt. A **Dzerzsinszkij** gyárban a tankokat bombák alatt gyártják és egyenesen a frontra viszik. Sztálin **Rendelése 227** összefoglalja a sorrendet: **„Egy lépést sem hátra”**."
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p3",
+      "title": "A fogó, amely bezárja a csapdát",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Míg Paulus a romok között sínylődik, **Georgij Zsukov** szovjet marsall a [[Uránusz hadművelet]] készíti elő. A gyengén felszerelt szövetségesek (románok, olaszok, magyarok) által őrzött német szárnyak megadták magukat. 1942. **november 19-én** a fogók bezártak: körülbelül **300 000** férfit vettek körül."
+        },
+        {
+          "type": "funFact",
+          "text": "A szovjetek hangszórókon egy óra ketyegését sugározták, majd egy üzenetet: minden **7 másodpercben** meghalt egy német katona a Szovjetunióban."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hitler megtiltja a kilépést. [[Hermann Göring]], a Luftwaffe vezetője légi szállítást ígér. Elbukik. Éhség, tífusz, **-30 °C**: az „üst” halálcsapdává válik."
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p4",
+      "title": "A megadás, amely megváltoztatja a háborút",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1943. **január 30. év** Hitler kinevezte Paulus **mezőmarsallt** a legmagasabb rangra, hogy inkább meghaljon, mint megadja magát. Paulus **február 2 év** kapitulált. A 300 000 körülvett közül **91 000** fogolyként távozik. A náci propagandának most először kell elismernie a teljes vereséget. A legyőzhetetlennek ítélt hadsereg megtört."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1942 nyara",
+              "title": "Kék tok",
+              "detail": "Német offenzíva a Kaukázus és Sztálingrád felé."
+            },
+            {
+              "date": "1942. november 19",
+              "title": "Uránusz hadművelet",
+              "detail": "A 6. hadsereg bekerítése."
+            },
+            {
+              "date": "1943. február 2",
+              "title": "Fegyverletétel",
+              "detail": "Paulus megadja magát; a háború fordulópontja."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "**Sztálingrád** (**1942-1943**) a történelem leghalálosabb csatájában megsemmisíti a német 6. hadsereget, és megtöri a náci legyőzhetetlenség mítoszát."
+        }
+      ]
+    }
+  ]
+}

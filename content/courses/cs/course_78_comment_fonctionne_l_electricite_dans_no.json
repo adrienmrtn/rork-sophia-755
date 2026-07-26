@@ -1,0 +1,112 @@
+{
+  "id": "course_78_comment_fonctionne_l_electricite_dans_no",
+  "title": "Jak funguje elektřina v našem těle?",
+  "subtitle": "Nervy a ionty",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Myšlení, tlukot srdce, zvednutí paže: to vše nejprve cirkuluje jako živá elektřina, nesená elektrony, ale ionty.",
+  "hero": {
+    "image": "comment_fonctionne_l_electricite_dans_notre_corps",
+    "ratio": "16:9",
+    "hook": "Vaše tělo je elektrická síť. Ale tady jsou proudem ionty, ne elektrony."
+  },
+  "sections": [
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V zásuvce je proud **elektronika**, které cirkulují. Ve vašem těle je to jiné: jsou to **iontový**, nabité atomy, které vstupují do buněk a opouštějí je. Tento tok vytváří signály, které nutí srdce přemýšlet, bušit srdce a stahovat svaly."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bez této živé elektřiny, žádná myšlenka, žádné gesto, žádný puls. Porozumět tělu také znamená porozumět tomuto jazyku poplatků."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p1",
+      "title": "Elektrické cvaknutí neuronu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**neuron** v klidu neodesílá zprávu, ale „nabíjí“. Jeho membrána odděluje vnitřek a vnějšek buňky. Díky [[sodíkovo-draselné pumpy]] si udržuje [[odpočinkový potenciál]] přibližně **-70 milivoltů**: vnitřek je negativnější než vnější."
+        },
+        {
+          "type": "image",
+          "asset": "neuron_electrical_signal_brain",
+          "ratio": "auto",
+          "caption": "Neurony komunikují prostřednictvím krátkých elektrických impulsů."
+        },
+        {
+          "type": "paragraph",
+          "text": "Když přijde podnět, kanály se otevřou. Sodík přichází najednou. Polarita je obrácená: je to [[akční potenciál]], signál všechno nebo nic, který běží podél axonu, někdy i přes metr. Jako elektrická vlna."
+        },
+        {
+          "type": "funFact",
+          "text": "Bdělý mozek produkuje asi **20 wattů**, což je dost pro malou LED. Spotřebuje však téměř **20%** tělesných kalorií."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p2",
+      "title": "Na synapsi se elektřina stává chemií",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Neurony se ve skutečnosti navzájem nedotýkají. Mezi nimi je malá mezera: **synapse**. Elektrický signál jej nemůže přeskočit. Poté konec axonu uvolní [[Neurotransmitery]], molekuly posly jako acetylcholin nebo [[glutamát]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tito poslové se připojí k dalšímu neuronu jako klíč v zámku. V závislosti na sdělení vzrušují nebo potlačují. Tisíce těchto současných rozhodnutí tvoří myšlenky."
+        },
+        {
+          "type": "funFact",
+          "text": "Některé nervové signály se šíří rychlostí **120 m/s** (více než **430 km/h**). Dost na to, aby během zlomku sekundy zareagoval na popáleninu na palci."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p3",
+      "title": "Srdce má svůj vlastní kardiostimulátor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Srdce nečeká na příkaz z mozku pro každý úder. V pravé síni generuje **sinusový uzel** své vlastní impulsy, přibližně **60 až 100** krát za minutu v klidu. Signál se šíří, nejprve stahuje síně, pak komory."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tato aktivita je dostatečně silná, aby ji bylo možné odečíst na kůži: je to **Elektrokardiogram (EKG)**. Pokud dojde k narušení rytmu, mluvíme o **aarytmii**. Srdce pak nepravidelně bije a špatně pumpuje."
+        },
+        {
+          "type": "funFact",
+          "text": "Elektrický úhoř využívá stejný princip excitovatelných článků, ale v sérii: až **600 voltů**, což stačí k paralyzaci kořisti."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p4",
+      "title": "Od dobrovolného gesta k defibrilátoru",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pro zvednutí paže putuje akční potenciál dolů do svalu. Acetylcholin spouští místní elektrické vlnění a následně uvolňování vápníku. Svalové proteiny po sobě kloužou: kontrakce."
+        },
+        {
+          "type": "paragraph",
+          "text": "**defibrilace** využívá stejný princip v obráceném pořadí: externí výboj resetuje všechny buňky „na nulu“, takže sinusový uzel obnoví tempo. Bionická protetika také zachycuje tyto slabé signály pro ovládání umělé ruky."
+        },
+        {
+          "type": "takeaway",
+          "text": "Živé věci mluví v iontových tocích a akčních potenciálech. Myšlenka, srdce a svaly sdílejí stejný elektrický jazyk."
+        }
+      ]
+    }
+  ]
+}

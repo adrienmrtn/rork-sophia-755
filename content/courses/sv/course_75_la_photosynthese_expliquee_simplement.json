@@ -1,0 +1,112 @@
+{
+  "id": "course_75_la_photosynthese_expliquee_simplement",
+  "title": "Fotosyntes förklaras enkelt",
+  "subtitle": "Växter & energi",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Växter gör något extraordinärt: de kokar socker med ljus, vatten och luft. Och de ger oss syre i gåva.",
+  "hero": {
+    "image": "la_photosynthese_expliquee_simplement",
+    "ratio": "16:9",
+    "hook": "Ett löv är ett solkök: ljus, vatten, luft... och här är socker."
+  },
+  "sections": [
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Föreställ dig en miniatyrväxt i varje blad. Det tar tre vardagliga ingredienser: **lätt engelska Sun**, **vatten** från rötterna och **CO₂** från luften. Den kommer ut med **socker** för att växa och släpper **syre**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denna bedrift kallas **fotosyntes**. Utan det, inga skogar, inget syre som kan andas, nästan inget komplext liv på jorden."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p1",
+      "title": "Var händer det i arket?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I växtcellen finns gröna organeller, **kloroplaster**, [[Klorofyll]]. Detta pigment fångar huvudsakligen det blåa och röda ljuset. Grönt kommer tillbaka: det är därför bladen ser gröna ut för oss."
+        },
+        {
+          "type": "image",
+          "asset": "leaf_photosynthesis_sunlight_chloroplasts",
+          "ratio": "auto",
+          "caption": "Blad fångar solljus för fotosyntes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Den enkla ekvationen: CO₂ + vatten + ljus → socker + syre. Gasen kommer in genom små porer, [[stomata]]. Vatten stiger från rötterna. Socker blir trä, frukt, rötter; syret går ut i luften."
+        },
+        {
+          "type": "funFact",
+          "text": "Klorofyll \"vägrar\" grönt. Hon föredrar blått och rött, mer effektivt för att excitera sina elektroner och starta energimaskinen."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p2",
+      "title": "Två steg: fånga och sedan skapa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Först, **lätt fas**. Ljus bryter upp vattenmolekyler. Syre rinner ut. Energi lagras i två kemiska \"batterier\", **ATP** och **NADPH**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Därefter **tillverkningsfasen**, [[Calvin cykel]], uppkallad efter kemisten **Melvin Calvin**. Med energin från batterierna sätter anläggningen ihop kol från CO₂ till glukos. Inget behov av direkt solljus i detta skede, utan det beror helt på vad ljuset har producerat tidigare."
+        },
+        {
+          "type": "funFact",
+          "text": "För att följa kolets väg i bladet använde Calvin radioaktiva isotoper från forskning om atombomben. Nobelpriset i **1961**."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p3",
+      "title": "När syre förändrade planeten",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "För ungefär **2,4 miljoner för sedanen** började fotosyntetiska bakterier, **cyanobakterier**, massivt frigöra syre. Detta är **Bra oxidation**. För många av den tidens organisationer var det gift."
+        },
+        {
+          "type": "paragraph",
+          "text": "Då tillät syre ozonskiktet och mycket effektivare andning. Luften vi andas är i grunden \"avfallsprodukten\" från miljarder år av fotosyntes."
+        },
+        {
+          "type": "funFact",
+          "text": "Om **halv** av jordens syre kommer från växtplankton i haven, inte bara skogarna."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p4",
+      "title": "En blygsam produktion, en enorm roll",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ett löv omvandlar endast **1 till 3%** av solenergin som tas emot till biomassa. På en global skala är detta tillräckligt för att mata näringskedjor och absorbera enorma mängder CO₂."
+        },
+        {
+          "type": "paragraph",
+          "text": "Därav intresset för skogar, hav... och till och med artificiell fotosyntes för klimatet. En havssnigel, *Elysia chlorotica*, går så långt att den \"stjäl\" kloroplaster från alger för att leva lite på solenergi."
+        },
+        {
+          "type": "takeaway",
+          "text": "Fotosyntes omvandlar ljus, vatten och CO₂ till socker och regenererar syre. Det är solmatlagning som ligger till grund för nästan allt liv."
+        }
+      ]
+    }
+  ]
+}

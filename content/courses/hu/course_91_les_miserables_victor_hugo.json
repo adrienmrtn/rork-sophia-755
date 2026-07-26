@@ -1,0 +1,142 @@
+{
+  "id": "course_91_les_miserables_victor_hugo",
+  "title": "Les Miserables, Victor Hugo",
+  "subtitle": "1862",
+  "subject": "litterature",
+  "subcategory": "French & European Classics",
+  "description": "Jean Valjean megváltást keres egy olyan Franciaországban, amely nem hajlandó megbocsátani neki. Hugo keveri a romantikus regényt, a történelmi krónikát és a kirekesztettek érdekképviseletét.",
+  "hero": {
+    "image": "les_miserables_victor_hugo",
+    "ratio": "16:9",
+    "hook": "Egy darab ellopott kenyér, tizenkilenc év börtön, majd egy egész élet, hogy bebizonyítsd, újra férfivá válhatsz."
+  },
+  "sections": [
+    {
+      "id": "course_91_les_miserables_victor_hugo_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A **1862** számban megjelent **Les Miserables** a világ egyik legolvasottabb regénye. **Victor Hugo** elkötelezett költő és regényíró a **19. századi Franciaország történetét meséli el** **Jean Valjean**, a **[[Javert felügyelő]]** egykori elítélten keresztül. Javert megvesztegethetetlen rendőr. A könyörtelen törvényt testesíti meg."
+        },
+        {
+          "type": "paragraph",
+          "text": "A könyv ötvözi a detektív cselszövést, a szerelmi történetet, a történelmi krónikát és a társadalmi feljelentést. Hugo egy „világművet” akar, egy regényt, amely egy egész korszakot ölel fel. Reméli, hogy mindenkihez szólhat, határokon túl. A nyomorúságról, a kegyelemről és a megváltás lehetőségéről is remek szöveg."
+        }
+      ]
+    },
+    {
+      "id": "course_91_les_miserables_victor_hugo_p1",
+      "title": "Hugo és egy száműzetésben született mű",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Victor Hugo** a regényt a **1845** nyelven kezdi, „Les Misères” címmel. **1851** **Napoléon III**, Bonaparte Napóleon unokaöccse, **1851** puccsa után Hugo száműzetésbe vonult a Csatorna-szigetekre, Guernsey-be. Új lelkesedéssel veszi kéziratát. A száműzetés táplálja haragját az igazságtalanság ellen."
+        },
+        {
+          "type": "image",
+          "asset": "victor_hugo_portrait_photograph",
+          "ratio": "4:3",
+          "caption": "Victor Hugo: költő, regényíró és a társadalmi szegénység hangja."
+        },
+        {
+          "type": "funFact",
+          "text": "A jelenet csatornába írásához Hugo információkat szerzett a párizsi közúti szolgálattól, és maga fedezte fel a földalatti galériákat."
+        },
+        {
+          "type": "paragraph",
+          "text": "A regény tizenhét évnyi munka után jelent meg a brüsszeli **1862** számban. Hugo hosszú **[[Kitérések]]** szúr be, olyan oldalakat, ahol a szerző megszakítja a történetet, hogy történelemről vagy filozófiáról beszéljen. Különös figyelmet szentel a **Waterloo**-nek, a Napóleoni Birodalom végét jelentő 1815-ös csatának, a zárdáknak vagy a **[[Párizs csatornái]]**, a főváros pincéjének és a társadalmi tudattalan metaforájának. Ezek az oldalak az anyagi valóságban rögzítik a szereplőket, és a könyvet a társadalomfilozófiáról szóló értekezéssé teszik."
+        }
+      ]
+    },
+    {
+      "id": "course_91_les_miserables_victor_hugo_p2",
+      "title": "Jean Valjean: a börtönből a kegyelembe",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Egy darab kenyérlopásért elítélt Valjean **19 évet** **[[A büntetés-végrehajtási telepek és a büntetési rendszer a XIX]]**, kényszermunkás börtönben, különösen Toulonban tölt. Amikor kiengedték, a **Sárga útlevél** egykori elítéltként jelölte meg. Kivetetté válik. A „Monseigneur Bienvenu” becenévre hallgató **Myriel** püspök egy második esélyt kínál neki. Elhiteti vele, hogy ajándékba kapta az ezüstöt, amikor Valjean éppen ellopta."
+        },
+        {
+          "type": "image",
+          "asset": "french_convict_galley_19th_century",
+          "ratio": "4:3",
+          "caption": "Börtön: egy élmény, amely megtöri Valjeant erkölcsi átalakulása előtt."
+        },
+        {
+          "type": "quote",
+          "text": "Jean Valjean, testvérem, te már nem a gonoszhoz tartozol, hanem a jóhoz.",
+          "attribution": "Victor Hugo, Les Misérables – Monseigneur Bienvenu"
+        },
+        {
+          "type": "paragraph",
+          "text": "**Madeleine úr** identitása alatt Valjean egy iparváros emberbaráti polgármestere lesz. Hugo számára a jótékonyság legyőzheti a társadalmi elkerülhetetlenséget. De **Javert**, a könyörtelen igazságszolgáltatás megtestesítője továbbra is üldözi őt. Nem tudja elképzelni, hogy egy bűnözőből jó ember válhat."
+        }
+      ]
+    },
+    {
+      "id": "course_91_les_miserables_victor_hugo_p3",
+      "title": "Fantine, Cosette és a barikádok",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Fantine**, a munkás, akit az őt elcsábító szerető elhagyott, szegénységbe süllyed, hogy kifizesse lánya nyugdíját. **Cosette**. A gyereket a **Thénardier** kapzsi fogadósokra bízzák. Valjean megmenti, és a gyermek védelmezője lesz. A történet Párizsba tolódik, ahol a **1832. júniusi** felkelés, a hadsereg által levert köztársasági felkelés összehozza a fiatalokat a **[[ABC]]** titkos társaságban. Ez a név „a alantasokat”, az embereket idézi."
+        },
+        {
+          "type": "image",
+          "asset": "paris_barricades_1832_painting",
+          "ratio": "4:3",
+          "caption": "1832 barikádjai: A történelem belép a regénybe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ezeken a barikádokon hal meg **Gavroche**, utcagyerek, aki a feláldozott ártatlanság szimbólumává vált. **Enjolras**, a lázadók vezetője az idealista fiatalokat testesíti meg. Valjean teljes önfeláldozással megmenti **Marius**-t, a Cosette-be szerelmes fiatal burzsoát. Beleegyezik, hogy kockára tegye szabadságát annak boldogságáért, akit lányának tekint."
+        }
+      ]
+    },
+    {
+      "id": "course_91_les_miserables_victor_hugo_p4",
+      "title": "Egy regény, amely megváltoztatja a tudatot",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Javert**, akit Valjean mentett meg a felkelés idején, nem tudja összeegyeztetni a törvényt és a kegyelmet: öngyilkosságot követ el, és beleveti magát a Szajnába. Valjean békében hal meg, betartva Myrielnek tett ígéretét. A regény a **[[Elkötelezett irodalom]]**, a társadalmi vagy politikai ügy szolgálatában álló irodalom oszlopa. Hugo elítéli a tankötelezettség hiányát, a nők elnyomását és a börtönök embertelenségét."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1845",
+              "title": "A projekt kezdete",
+              "detail": "Hugo a Les Misères-t kezdi."
+            },
+            {
+              "date": "1851",
+              "title": "Száműzetés",
+              "detail": "A puccs megszakítja, majd újrakezdi az írást."
+            },
+            {
+              "date": "1862",
+              "title": "Kiadvány",
+              "detail": "A regény Brüsszelben jelenik meg."
+            },
+            {
+              "date": "1832",
+              "title": "Barikádok",
+              "detail": "A felkelés strukturálja a párizsi csúcspontot."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "A **Les Misérables**, amely a **1862**-ben jelent meg, beszámol **Jean Valjean** megváltásáról a jótékonyság és a kérlelhetetlen törvény között. Hugo a **1832** barikádokat az emberi méltóságért folytatott küzdelem szimbólumává teszi."
+        }
+      ]
+    }
+  ]
+}

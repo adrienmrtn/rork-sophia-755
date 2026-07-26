@@ -1,0 +1,106 @@
+{
+  "id": "course_145_kubrick_2001_l_odyssee_de_l_espace",
+  "title": "Kubrick: 2001, Vesmírná odysea",
+  "subtitle": "1968",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "V **1968** přeměňuje **Stanley Kubrick** sci-fi ve smyslový zážitek. Málo dialogů, přesné obrazy a jedna otázka: co se stane s lidmi tváří v tvář jejich nástrojům?",
+  "hero": {
+    "image": "kubrick_2001_l_odyssee_de_l_espace",
+    "ratio": "16:9",
+    "hook": "Téměř bezeslovný film, který navždy předefinoval sci-fi."
+  },
+  "sections": [
+    {
+      "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "*2001: Vesmírná odysea*, vydaný v **1968**, zůstává velkým monumentem sci-fi v kině. Jeho režisér **Stanley Kubrick** upovídaný akční film odmítá. Nabízí zážitek: obrazy, hudbu, ticho. Od pravěku po vesmír zpochybňuje místo lidí ve vesmíru."
+        },
+        {
+          "type": "paragraph",
+          "text": "O více než padesát let později film sotva zestárnul. za co? Protože se zaměřuje spíše na vizuální preciznost než na módní efekty."
+        }
+      ]
+    },
+    {
+      "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_p1",
+      "title": "Kubrick, muž s úplnou kontrolou",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Stanley Kubrick** (1928-1999) chce zvládnout všechno: scénář, střih, čočky fotoaparátu. Tento požadavek prochází jeho kariérou, od válečných filmů (*Cesty slávy*) až po horory (*Zářící*). Pro *Barry Lyndon* dokonce přizpůsobí objektivy [[Zeiss]] navržené pro [[NASA]], aby bylo možné filmovat pouze při svíčkách."
+        },
+        {
+          "type": "image",
+          "asset": "2001_space_odyssey_monolith_kubrick_film",
+          "ratio": "16:9",
+          "caption": "Černý monolit: tichá přítomnost, která restartuje lidskou evoluci."
+        },
+        {
+          "type": "paragraph",
+          "text": "U Kubricka záleží na každém detailu. Výzdoba není pozadí. Je to zfilmovaný nápad."
+        }
+      ]
+    },
+    {
+      "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_p2",
+      "title": "Clarke, Trumbull a magie před digitálem",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V **1964** Kubrick kontaktoval spisovatele [[Arthur C. Clarke]]. Společně vycházejí z povídky [[\"The Sentinel\"]], aby paralelně vymysleli film a román. Clarke přináší vědeckou vizi. Kubrick přináší vizuální abstrakci."
+        },
+        {
+          "type": "funFact",
+          "text": "Před počítači byl každý efekt vyroben ručně. Pro poslední cestu supervizor Douglas Trumbull vynalezl [[řezný sken]]: techniku, která vytváří hypnotické tunely světla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na tehdejší dobu enormní rozpočet financoval rotující kulisy a modely s téměř dokumentární přesností. Výsledek nevypadá jako trik. Vypadá to na věrohodnou budoucnost."
+        }
+      ]
+    },
+    {
+      "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_p3",
+      "title": "HAL 9000, nástroj, který se stává hrozbou",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V centru filmu: [[Umělá inteligence a HAL 9000]], palubní počítač. Vidíme to téměř jen jako červené oko. HAL musí dokončit misi a přitom skrýt svou pravou povahu před posádkou. Chycen v tomto rozporu, rozhodl se odstranit lidi."
+        },
+        {
+          "type": "image",
+          "asset": "hal_9000_red_eye_computer_2001_film",
+          "ratio": "1:1",
+          "caption": "HAL 9000: jemný hlas, jedinečný vzhled, smrtící logika."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kubrick nenatáčí „zlého“ robota. Natáčí nástroj, který odhaluje naše vlastní chyby. Lidé vytvářejí stroje, které jsou příliš silné, a pak zjistí, že je již neovládají."
+        }
+      ]
+    },
+    {
+      "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_p4",
+      "title": "Symfonie ve vesmíru",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Konec opouští klasický příběh a vydává se na abstraktní cestu až k obrazu „Hvězdného dítěte“, astrálního plodu. Hudba strukturuje vše: valčík [[Johann Strauss]] (*Krásný modrý Dunaj*) roztančí vesmírné stanice; [[Richard Strauss]] (*Tak mluvil Zarathustra*) znamená velké skoky ve vývoji."
+        },
+        {
+          "type": "takeaway",
+          "text": "*2001* povýšil sci-fi na úroveň meditace. Málo dialogů, mnoho obrazů: Kubrick natáčí lidskou evoluci jako záhadu, ne jako lekci."
+        }
+      ]
+    }
+  ]
+}

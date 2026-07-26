@@ -1,0 +1,100 @@
+{
+  "id": "course_56_la_decouverte_de_la_radioactivite_marie",
+  "title": "Odkrycie promieniotwórczości",
+  "subtitle": "Maria Curie",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Marie Curie wraz z Pierrem Curie i Henrim Becquerelem otwierają rozdział o promieniotwórczości. Dwie Nagrody Nobla, przytłaczająca praca i ogromne dziedzictwo.",
+  "hero": {
+    "image": "la_decouverte_de_la_radioactivite_marie_curie",
+    "ratio": "16:9",
+    "hook": "Zważyła tony rudy, aby wyizolować kilka gramów niewidzialnego pierwiastka."
+  },
+  "sections": [
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Maria Curie** (ur. Maria Skłodowska) jest pierwszą kobietą, która otrzymała Nagrodę Nobla. Pozostaje jedyną osobą, która otrzymała **dwa** z dwóch różnych nauk: fizyki, a następnie chemii."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jej temat: **radioaktywny**, czyli fakt, że pewne atomy spontanicznie przesyłają energię i cząstki."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p1",
+      "title": "Wąskie drzwi do nauki",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Urodzona w Polsce, wyjechała na studia do Paryża, ponieważ tamtejsze uniwersytety zamknęły przed kobietami wiele drzwi. Ciężko pracuje, często w niepewnych warunkach."
+        },
+        {
+          "type": "paragraph",
+          "text": "Poślubiła **Pierre’a Curie**, fizyka. Razem utworzyli rzadki jak na tamte czasy duet laboratoryjny."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p2",
+      "title": "Nazwij niewidzialne",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W **1896** **Henryk Becquerel** zauważył, że uran zasłania płyty fotograficzne bez światła. Marie Curie postanawia szczegółowo zbadać to zjawisko. Wymyśliła słowo **radioaktywny**."
+        },
+        {
+          "type": "image",
+          "asset": "marie_curie_pitchblende_radioactivity",
+          "ratio": "4:3",
+          "caption": "Tony blendy smolistej do izolacji radu i polonu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wraz z Pierrem odkrywa dwa nowe pierwiastki: **polon** (nazwany na cześć Polski) i **rad**. Aby je wyizolować, należy przetworzyć ogromne ilości rudy, blendy smołowej."
+        },
+        {
+          "type": "funFact",
+          "text": "Rad świeci słabo w ciemności. Na początku byliśmy zdumieni… zanim zrozumieliśmy, jakie to niebezpieczne."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p3",
+      "title": "Chwała i cena do zapłacenia",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W **1903** Marie, Pierre i Becquerel otrzymali Nagrodę Nobla w dziedzinie fizyki. W **1911** sama Marie otrzymała Nagrodę Nobla w dziedzinie chemii. Pierre zmarł przypadkowo w 1906 roku. Kontynuuje."
+        },
+        {
+          "type": "paragraph",
+          "text": "W czasie I wojny światowej organizowała mobilne pracownie rentgenowskie do leczenia rannych. Naraża swoje ciało na dawki, które dziś uznalibyśmy za niedopuszczalne."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p4",
+      "title": "Dwustronne dziedzictwo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Radioaktywność umożliwiła radioterapię przeciwko niektórym nowotworom… a także broni nuklearnej. Wiedza jest neutralna; jego zastosowania nie są."
+        },
+        {
+          "type": "takeaway",
+          "text": "Marie Curie przekształciła dziwną obserwację w nową naukę: radioaktywność. Jego prace otworzyły drogę do współczesnej fizyki… kosztem ryzyka, które wówczas było słabo rozumiane."
+        }
+      ]
+    }
+  ]
+}

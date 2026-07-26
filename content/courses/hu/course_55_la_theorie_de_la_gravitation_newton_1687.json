@@ -1,0 +1,102 @@
+{
+  "id": "course_55_la_theorie_de_la_gravitation_newton_1687",
+  "title": "A gravitáció elmélete",
+  "subtitle": "Newton, 1687",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "1687-ben Newton egy egyszerű és hatalmas ötletet tett közzé: ugyanaz az erő okozza az alma leesését és a Hold forgását. Íme, mi változik.",
+  "hero": {
+    "image": "la_theorie_de_la_gravitation_newton",
+    "ratio": "16:9",
+    "hook": "Egy alma, a Hold, a bolygók: egyetlen erő, amely mindent megmagyaráz."
+  },
+  "sections": [
+    {
+      "id": "course_55_la_theorie_de_la_gravitation_newton_1687_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Már Newton előtt sokat tudtunk a bolygókról **Galileo** 17. századi olasz fizikusnak és **[[Johannes Kepler]]** csillagásznak köszönhetően, aki elliptikus pályákat írt le. De hiányzott az egyértelmű kapcsolat aközött, ami a Földre esik, és ami az égen forog."
+        },
+        {
+          "type": "paragraph",
+          "text": "A **1687**-ben **Isaac Newton** közzétette a *[[Philosophiae Naturalis Principia Mathematica]]*-t, a *Principia* klasszikus fizikai alapművét. Azt állítja, hogy a gravitáció **egyetemes**: mindenhol ugyanúgy hat."
+        }
+      ]
+    },
+    {
+      "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p1",
+      "title": "A szintézis előtti világ",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kepler pontos törvényekkel írta le a bolygók keringését: **ellipszis** pályák, egyenlő idő alatt egyenlő söpört területek. Galilei a testek lezuhanását tanulmányozta. De miért maradnak a bolygók a saját pályájukon? Mi „húzza” őket?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Newton válaszol: **gravitációs vonzás**, egy olyan erő, amely két tömeget húz egymás felé. A Föld vonzza a Holdat. A Nap vonzza a Földet. És te is vonz egy kicsit a Földből... még ha kicsi is."
+        }
+      ]
+    },
+    {
+      "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p2",
+      "title": "A törvény egy mondatban",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "isaac_newton_apple_tree_woolsthorpe",
+          "ratio": "4:3",
+          "caption": "Az alma története mindenekelőtt történet. Az ötlet valós."
+        },
+        {
+          "type": "paragraph",
+          "text": "Két test olyan erővel vonzza egymást, amely a **tömegükkel**, az anyag mennyiségével növekszik, és csökken, ahogy eltávolodnak egymástól. Pontosabban: az erő gyengül a **tabolság** négyzetével. A távolság megkétszerezése a vonzerőt néggyel osztja. Minél távolabb vagy, annál gyorsabban gyengül a vonzalom."
+        },
+        {
+          "type": "image",
+          "asset": "planets_orbit_solar_system_gravity",
+          "ratio": "16:9",
+          "caption": "A bolygók folyamatosan „zuhannak” a Nap felé… és hiányzik: ez a pálya."
+        },
+        {
+          "type": "funFact",
+          "text": "A Hold folyamatosan „zuhan” a Föld felé. Mivel oldalsó sebessége is nagy, ahelyett, hogy ütközne, körbe-körbe forog."
+        }
+      ]
+    },
+    {
+      "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p3",
+      "title": "A mozgás törvényei",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Newton három **mozgástörvényt is megad**. Összefoglalva: egy objektum megtartja sebességét, ha nincs erő, a **tehetetlenség** elve; egy erő megváltoztatja a sebességet; minden cselekvésnek van ellentétes reakciója."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ezzel kiszámíthatjuk a pályákat, **dagályokat**, az óceánok emelkedéseit és süllyedéseit a Hold és a Nap hatására, valamint a pályákat. A fizika előrejelző eszközzé válik."
+        }
+      ]
+    },
+    {
+      "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p4",
+      "title": "Erőteljes… de nem az utolsó szó",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Két évszázaddal később **[[Albert Einstein]]** a [[Relativisztikus gravitáció (Einstein)]] segítségével kijavította Newtont extrém esetekre, nagyon nagy sebességekre és nagyon erős gravitációkra. A gravitáció ekkor a téridő görbületévé válik, nem pedig láthatatlan erővé. De egy rakéta kilövésére vagy az árapály megértésére Newton továbbra is kiváló."
+        },
+        {
+          "type": "takeaway",
+          "text": "Newton egyesíti az eget és a Földet: a gravitáció mindenhol tömegeket vonz. Ez a történelem egyik legnagyobb tudományos szintézise."
+        }
+      ]
+    }
+  ]
+}

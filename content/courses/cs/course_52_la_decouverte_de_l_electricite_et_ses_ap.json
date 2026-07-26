@@ -1,0 +1,108 @@
+{
+  "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap",
+  "title": "Objev elektřiny",
+  "subtitle": "Od Franklina po Teslu",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Elektřina nebyla vynalezena náhle. Nejprve bylo pozorováno, pak pochopeno a poté domestikováno. Zde jsou klíčové kroky.",
+  "hero": {
+    "image": "la_decouverte_de_l_electricite",
+    "ratio": "16:9",
+    "hook": "Od blesku k chytrému telefonu: dvě století na zkrocení neviditelného."
+  },
+  "sections": [
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Elektřina existuje v přírodě: blesk, elektrická ryba, tření. To, co změnilo svět, bylo naučit se **produkt**, **přeprava** a používat je."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tento příběh trvá více než dvě století, s riskantními experimenty a velkým soupeřením."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p1",
+      "title": "Pochopení blesku",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V 18. století **Benjamin Franklin** ukázal, že blesk je elektrický jev. Jeho experiment s pouštěním draka (často vyprávěný beletrizovaným způsobem) má za cíl dokázat, že nebe a třecí stroj hrají stejnou silou."
+        },
+        {
+          "type": "image",
+          "asset": "benjamin_franklin_kite_lightning_experiment",
+          "ratio": "4:3",
+          "caption": "Franklin spojuje blesk a elektřinu: nebezpečná, ale základní myšlenka."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vynalezli jsme také **hrom**, kovovou tyč, která blesku nabízí bezpečnou cestu k zemi. Elektřina zanechává tajemství, aby vstoupila do strojírenství."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p2",
+      "title": "Faraday: vyrábí proud",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V 19. století **Michael Faraday** ukázal, že magnet pohybující se v blízkosti drátu může vytvořit elektrický proud. Toto je **indukce**. Bez této myšlenky žádné dynamo, žádný alternátor, žádná moderní elektrárna."
+        },
+        {
+          "type": "image",
+          "asset": "faraday_electromagnetic_induction_experiment",
+          "ratio": "4:3",
+          "caption": "Faraday transformuje pohyb a magnetismus na proud."
+        },
+        {
+          "type": "funFact",
+          "text": "Faraday pocházel ze skromných poměrů a začínal jako knihař. Naučil se vědě tím, že četl, co spoléhal."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p3",
+      "title": "Edison versus Tesla",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Na konci 19. století se střetly dva tábory. **Thomas Edison** tlačí stejnosměrný proud. **Nikola Tesla** (a společnost Westinghouse) hájí střídavý proud, který se snadněji přepravuje na velké vzdálenosti."
+        },
+        {
+          "type": "image",
+          "asset": "tesla_edison_electric_power_station",
+          "ratio": "4:3",
+          "caption": "Ve městech sílí střídavý proud."
+        },
+        {
+          "type": "paragraph",
+          "text": "U městských sítí vítězí střídavý proud. Města svítí. Továrny mění tempo."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p4",
+      "title": "Propojený svět",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Elektřina dnes pohání nemocnice, vlaky, internet, ledničky. Výzvou už není jen to vyrobit, ale udělat to čistě a spolehlivě."
+        },
+        {
+          "type": "takeaway",
+          "text": "Elektřina byla pochopena a následně domestikována: Franklin pro blesk, Faraday pro výrobu proudu, Tesla a střídavý proud pro jeho přivedení do domácností. Náš každodenní život na tom stále závisí."
+        }
+      ]
+    }
+  ]
+}

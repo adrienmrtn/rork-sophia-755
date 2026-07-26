@@ -1,0 +1,140 @@
+{
+  "id": "course_16_la_bataille_de_verdun_1916",
+  "title": "A verduni csata",
+  "subtitle": "1916",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "**299 napig** a franciák és a németek széttépték egymást Verdun környékén. **700 000** veszteség szinte nulla területi haszonért: a lövészárkok rémének szimbóluma.",
+  "hero": {
+    "image": "la_bataille_de_verdun_1916",
+    "ratio": "16:9",
+    "hook": "299 nap néhány kilométernyi sárért és 700 000 ember hadjáraton kívül."
+  },
+  "sections": [
+    {
+      "id": "course_16_la_bataille_de_verdun_1916_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1916**-ben **299 nap** alatt franciák és németek ütköztek össze néhány négyzetkilométeren **Verdun**, egy kelet-franciaországi fellegvár környékén. Ez nem egy zseniális áttörés. Ez egy lemorzsolódási csata, körülbelül **700 000** halottja vagy sebesültje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Verdun a lövészárkok rémének szimbólumává válik. Évtizedekkel később ez is a francia-német megbékélésé lett."
+        }
+      ]
+    },
+    {
+      "id": "course_16_la_bataille_de_verdun_1916_p1",
+      "title": "A német terv: kivéreztetni Franciaországot",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1914 óta a nyugati front befagyott a [[Árokharc]]: ároksorok az Északi-tengertől Svájcig. **Erich von Falkenhayn** német tábornok „szárazra akarja vérezni Franciaországot”. Verdunt választja, egy olyan helyet, amelyet Párizs nem hagyhat el arcvesztés nélkül. A művelet neve [[Gericht]], „bíróság”."
+        },
+        {
+          "type": "image",
+          "asset": "battle_of_verdun_trenches_1916",
+          "ratio": "4:3",
+          "caption": "A verduni lövészárkok: tüzérség által felemésztett táj."
+        },
+        {
+          "type": "funFact",
+          "text": "A **1916. február 21-i nyitóbombázás** olyan heves volt, hogy egészen a Vogézekig lehetett hallani, több mint **150 km**."
+        },
+        {
+          "type": "paragraph",
+          "text": "**február 21.**, **1 200 ágyú** a francia vonalakat. A **25**, a **Douaumont erődje**, a védelem kulcsa, szinte harc nélkül elesett. Parisnak most mindent Verdunra kell fogadnia: Falkenhayn csapdája működik."
+        }
+      ]
+    },
+    {
+      "id": "course_16_la_bataille_de_verdun_1916_p2",
+      "title": "Pétain, a Szent Út és a csapatok forgása",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Philippe Pétain** tábornok szervezi az ágazat fennmaradását. A **Szent út** a hátsó [[Bar-le-Duc]] várost köti össze Verdunnal: közel **6000 teherautó** naponta, egy jármű **14 hónap**. Amikor elromlik, az árokba toljuk a kamiont, hogy ne zárja el az utat."
+        },
+        {
+          "type": "image",
+          "asset": "voie_sacree_verdun_trucks",
+          "ratio": "4:3",
+          "caption": "A Voie Sacrée, a francia ellátás létfontosságú artériája."
+        },
+        {
+          "type": "paragraph",
+          "text": "A [[Nória]]-vel Pétain gyorsan forgatta a hadosztályokat: rövid ideig maradtunk az élen, aztán megkönnyebbültünk. Eredmény: a francia hadsereg körülbelül **70 %-a** harcol Verdunban valamikor. A csata nemzeti élménnyé válik."
+        }
+      ]
+    },
+    {
+      "id": "course_16_la_bataille_de_verdun_1916_p3",
+      "title": "Az ágyúk pokla, szinte haszon nélkül",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nyáron a [[Somme-i csata (1916)]], egy francia-brit offenzíva északabbra, felmentette Verdunt. **Robert Nivelle** tábornok alatt a franciák visszafoglalták Douaumontot, majd Fort Vaux-t. A csata 1916. december 18-án ért véget.. A vonalak alig mozdultak el."
+        },
+        {
+          "type": "funFact",
+          "text": "Fleury-devant-Douaumont-t két hónap alatt **16-szor** vették újra, majd törölték a térképről. Ez az egyik „Franciaország halott falvai”, még mindig lakosok nélkül igazgatják."
+        },
+        {
+          "type": "paragraph",
+          "text": "Körülbelül **370 000** francia és **330 000** németek esnek el vagy megcsonkítják őket. [[A nagy háború nehéztüzérsége]] kills more than közelharci. [[Vörös zónák]] civil életre alkalmatlan marad: túl sok fel nem robbant lőszer, túl sok mérgezett talaj."
+        }
+      ]
+    },
+    {
+      "id": "course_16_la_bataille_de_verdun_1916_p4",
+      "title": "Az osszáriumtól a kézfogásig",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A Douaumont-i **Oszuárium** (1932) **130 000** vegyes francia és német katona maradványainak ad otthont. **1984. szeptember 22.**, **François Mitterrand** francia elnök és **Helmut Kohl** német kancellár egymás kezét fogja az emlékmű előtt. Verdun az európai béke szimbólumává válik."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1916. február 21",
+              "title": "Gericht nyitány",
+              "detail": "Példátlan tüzérségi lövedék."
+            },
+            {
+              "date": "1916. február 25",
+              "title": "Douaumont-vízesés",
+              "detail": "Politikai sokk Párizsban."
+            },
+            {
+              "date": "1916 nyara",
+              "title": "Összeg",
+              "detail": "A szövetségesek tehermentesítik a verduni frontot."
+            },
+            {
+              "date": "1916. december 18",
+              "title": "A csata vége",
+              "detail": "Szinte semmi területi nyereség."
+            },
+            {
+              "date": "1984. szeptember 22",
+              "title": "Mitterrand-Kohl",
+              "detail": "A francia-német megbékélés gesztusa."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "**Verdun** (**1916**): **299** napos ipari háború, körülbelül **700 000** veszteség nulla területi haszonért, később pedig a francia-német megbékélés szimbóluma."
+        }
+      ]
+    }
+  ]
+}

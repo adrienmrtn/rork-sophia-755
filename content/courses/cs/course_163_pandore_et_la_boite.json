@@ -1,0 +1,116 @@
+{
+  "id": "course_163_pandore_et_la_boite",
+  "title": "Pandora a skříňka",
+  "subtitle": "Nádoba zla",
+  "subject": "mythologie",
+  "subcategory": "Greece: the gods",
+  "description": "Pandora, první žena stvořená bohy, otevírá nádobu plnou morů. Hluboko dole zůstává naděje. Mýtus o zvědavosti a neštěstí.",
+  "hero": {
+    "image": "pandore_et_la_boite",
+    "ratio": "16:9",
+    "hook": "Nebyla to krabice. Byla to sklenice. A to, co obsahoval, změnilo osudy lidí."
+  },
+  "sections": [
+    {
+      "id": "course_163_pandore_et_la_boite_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V řecké mytologii **Pandora** není jen postava. Je to první žena, kterou bohové vytvořili jako past. **Zeus** chce potrestat muže, které zastřelil [[Prometheus]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pandora přichází se sklenicí. Jeho otevřením uvolní zlo, které ukončilo lidskou bezstarostnost. Hluboko dole zůstává záhadná věc: **naděje**. Tak se rodí výraz „otevírání Pandořiny skříňky“."
+        }
+      ]
+    },
+    {
+      "id": "course_163_pandore_et_la_boite_p1",
+      "title": "Bohové vytvářejí „krásné zlo“",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Po krádeži ohně Zeus nařídí **Héfaistos**, bohu kování, aby vymodeloval ženu z hlíny a vody, krásnou jako bohyně. Každý olympionik přidá dar. **Athena** ho učí tkaní. **Afrodita** tomu dodává kouzlo. **Hermes**, posel bohů, triky a lži do něj."
+        },
+        {
+          "type": "image",
+          "asset": "pandora_opening_jar_pithos_painting",
+          "ratio": "4:3",
+          "caption": "Pandora, „ta, která dostala všechny dary“, stvořená, aby oklamala muže."
+        },
+        {
+          "type": "paragraph",
+          "text": "Říká se jí **Pandora**: „ta, která dostala všechny dary“. Prométheus varoval svého bratra **Epimethea**, aby nepřijímal žádné dary od Dia. Příliš pozdě. Epimetheus, ten, kdo přemýšlí poté, propadne kouzlu a přivítá ho."
+        },
+        {
+          "type": "funFact",
+          "text": "Mezi Řeky nebyla Pandora stvořena jako společnice. Je navržen jako trest, „krásné zlo“ určené k zasažení lidstva."
+        }
+      ]
+    },
+    {
+      "id": "course_163_pandore_et_la_boite_p2",
+      "title": "Sklenice se otevře, mory odletí",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pandora nese „pithos“, velkou skladovací nádobu. Latinské texty a moderní překlady z něj udělají „škatulku“. Uvnitř bohové uzamkli stáří, nemoci, hladomor, šílenství, války."
+        },
+        {
+          "type": "funFact",
+          "text": "Chyba \"krabice\" pochází od [[Erasmus Rotterdamský]], v 16. století. Při překladu Hésioda si plete „pithos“ (džbán) a „pyxis“ (malá krabička)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pandora, poháněna zvědavostí, kterou do ní bohové vložili, zvedne víko. Mory utečou okamžitě. V panice zavře sklenici. Příliš pozdě. Zůstává pouze [[Elpis]], naděje, držící se dna."
+        }
+      ]
+    },
+    {
+      "id": "course_163_pandore_et_la_boite_p3",
+      "title": "Naděje: lék nebo past?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Proč naděje zůstává ve sklenici? Od starověku se vedou diskuse. Pokud nádoba obsahovala pouze zlo, máme věřit, že naděje je jen jedna?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pro některé, jako je filozof **Nietzsche**, naděje prodlužuje muka: brání nám přijmout realitu. Pro ostatní to Zeus nechal záměrně, jako jediný lék na zoufalství."
+        },
+        {
+          "type": "paragraph",
+          "text": "V řečtině [[Elpis]] není pouze pozitivní. Slovo se vztahuje k očekávání toho, co přijde, dobrého nebo špatného. Neutrální síla, schopná zachránit nebo mučit."
+        }
+      ]
+    },
+    {
+      "id": "course_163_pandore_et_la_boite_p4",
+      "title": "Co po sobě zanechal mýtus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V **Hésiodos**, autorovi Theogonie, příběh Pandory nese silnou [[Misogynie]]: žena se tam objevuje jako břemeno pro muže. Tento mýtus byl často přirovnáván k Evě a biblickému pádu."
+        },
+        {
+          "type": "funFact",
+          "text": "V jiných verzích nádoba obsahovala výhody. Letět směrem k Olympu by se staly pro smrtelníky nedostupnými."
+        },
+        {
+          "type": "paragraph",
+          "text": "Později se Pandora stává také postavou zvědavosti. Jeho neposlušnost přináší neštěstí, ale také tlačí lidstvo k práci, vymýšlení, přežívání. Dnes „otevření Pandořiny skříňky“ znamená akci s nekontrolovatelnými následky."
+        },
+        {
+          "type": "takeaway",
+          "text": "Sklenice **Pandora** ukončuje lidskou nedbalost. Zlo se šíří a **naděje** zůstává na dně: jediný kontrapunkt, nejednoznačný, tváří v tvář neštěstí."
+        }
+      ]
+    }
+  ]
+}

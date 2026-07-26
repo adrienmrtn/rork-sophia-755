@@ -1,0 +1,120 @@
+{
+  "id": "course_182_osiris_et_set_mythologie_egyptienne",
+  "title": "Osiris och uppsättning (egyptisk mytologi)",
+  "subtitle": "Egyptisk mytologi",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Mord, styckning, mumie och hämnd: Osiris och Sets cykel grundade egyptiska kungligheter och hoppet om ett liv efter döden.",
+  "hero": {
+    "image": "osiris_et_set_mythologie_egyptienne",
+    "ratio": "16:9",
+    "hook": "En bror dödar kungen, skär hans kropp i fjorton bitar. En syster för honom samman. En son hämnas. Hela Egypten håller på att ta sig ur detta brott."
+  },
+  "sections": [
+    {
+      "id": "course_182_osiris_et_set_mythologie_egyptienne_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cykeln av **Osiris** och **Uppsättning** är den stora historien om det forntida Egypten. Det här är inte bara en familjetragedi. Det är kampen mellan ordning ([[Ma'at]], harmoni) och sterilt kaos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Genom mordet, styckningen och återuppståndelsen av Osiris tänker egyptierna på kungadömet, Nilens fertilitet och livet efter döden. Varje levande farao är en **Horus**. Varje död kung blir en **Osiris**."
+        }
+      ]
+    },
+    {
+      "id": "course_182_osiris_et_set_mythologie_egyptienne_p1",
+      "title": "Set dödar Osiris",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Osiris** är en civiliserande kung. Tillsammans med sin syster-fru **Isis** undervisar han i jordbruk och lagar. Hans bror **Uppsättning**, öknen och våldets gud, hatar honom. På en bankett presenterar Set en magnifik kista: han kommer att erbjuda den till den som passar den perfekt."
+        },
+        {
+          "type": "image",
+          "asset": "osiris_egyptian_god_green_skin_painting",
+          "ratio": "4:3",
+          "caption": "Osiris med grön hud: inte död, men växtlighet återföds."
+        },
+        {
+          "type": "paragraph",
+          "text": "Efter att ha tagit Osiris mått i hemlighet, får Set honom att lägga sig ner, låser kistan, förseglar den med bly och kastar honom i Nilen. Senare, när Isis hittar kroppen, skär Set den i **14 bitar** och sprider dem i hela dalen. Utan en intakt kropp finns det ingen fred i livet efter detta."
+        },
+        {
+          "type": "funFact",
+          "text": "Osiris målas ofta grönt. Den här färgen säger inte röta: den säger återfödelse, som fälten efter Nilens översvämningar."
+        }
+      ]
+    },
+    {
+      "id": "course_182_osiris_et_set_mythologie_egyptienne_p2",
+      "title": "Isis uppfinner mumien",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Isis**, stor trollkarl, letar efter fragmenten. Med hjälp av sin syster Nephthys och guden [[Anubis]] reser hon en fristad på varje plats där hon hittar en bit. Ett problem kvarstår: fallosen slukades av fisken [[Oxyrhynchus]]. Isis skapar en ersättare."
+        },
+        {
+          "type": "image",
+          "asset": "isis_egyptian_goddess_winged_resurrection_painting",
+          "ratio": "4:3",
+          "caption": "Isis med utsträckta vingar: andedräkten som återupplivar Osiris."
+        },
+        {
+          "type": "paragraph",
+          "text": "Genom att samla ihop bitarna och slå in dem i remsor skapar Isis och Anubis den första **mumin**. Med ett slag av vingarna blåste Isis kort liv i Osiris. Det var då hon födde **Horus**, arvtagaren som skulle återställa ordningen."
+        },
+        {
+          "type": "funFact",
+          "text": "Enligt vissa texter var Isis tårar under hennes sökande så rikliga att egyptierna i dem såg det mytiska ursprunget till den årliga floden av Nilen."
+        }
+      ]
+    },
+    {
+      "id": "course_182_osiris_et_set_mythologie_egyptienne_p3",
+      "title": "Horus hämnas sin far",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Uppvuxen i hemlighet i träsken i [[Khemmis]] växer **Horus** till hökens form. Som vuxen gör han anspråk på tronen inför gudarnas tribunal, som leds av [[D]]. Konflikten med Set varar i decennier: dueller, trick, skador. Horus tappar ett öga; Set förlorar sin fertilitet."
+        },
+        {
+          "type": "image",
+          "asset": "eye_of_horus_egyptian_symbol_protection",
+          "ratio": "4:3",
+          "caption": "The Eye of Horus (Oudjat): integritet återvunnen från kaos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ögat, omkomponerat av [[Thoth]], blir symbolen för helande och skydd. Gudarna bestämmer: Set är dömd att tjäna, särskilt genom att slåss mot ormen [[Apophis]] på solbåten. Horus kröns. Varje farao kommer hädanefter att vara en \"levande Horus\"."
+        }
+      ]
+    },
+    {
+      "id": "course_182_osiris_et_set_mythologie_egyptienne_p4",
+      "title": "Osiris, domare över de döda",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mumifierad kan Osiris inte längre regera på jorden. Han blir härskare över **Amenti**, de dödas rike. Under hans blick äger **vägningen av hjärtat**, beskriven i [[De dödas bok]], rum. Den avlidnes hjärta placeras på en våg som är vänd mot Ma'ats fjäder."
+        },
+        {
+          "type": "paragraph",
+          "text": "Om hjärtat är lätt, är den avlidne \"rätt i rösten\" och går in i Osiris evighet. Om det är fullt av misstag, slukar monstret [[Ammit]] det: definitiv glömska. Kung och bonde bedöms enligt samma kriterier. Horus förvaltar nuet; Osiris tar hand om resten."
+        },
+        {
+          "type": "takeaway",
+          "text": "Myten om **Osiris** och **Uppsättning** etablerar tre pelare i Egypten: kungligheter (levande Horus), mumifiering (intakt kropp för livet efter detta) och hoppet om rättvisa efter döden under Osiris blick."
+        }
+      ]
+    }
+  ]
+}

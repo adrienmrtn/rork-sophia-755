@@ -1,0 +1,126 @@
+{
+  "id": "course_148_le_bauhaus",
+  "title": "Bauhaus",
+  "subtitle": "1919-1933",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "**1919** ve **1933** arasındaki **Bauhaus** okulu, Almanya'da sanat, zanaatkarlık ve endüstriyi birleştiriyor. Naziler tarafından kapatılmış olmasına rağmen modern tasarımı tüm dünyaya yaydı.",
+  "hero": {
+    "image": "le_bauhaus",
+    "ratio": "16:9",
+    "hook": "14 yıllık bir Alman okulu, sandalyelerden akıllı telefonlara kadar modern dünyayı tasarladı."
+  },
+  "sections": [
+    {
+      "id": "course_148_le_bauhaus_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Bauhaus** (1919-1933), 20. yüzyılın en etkili sanat ve tasarım okuludur. Birinci Dünya Savaşı'nın hemen ardından Almanya'da kurulan tesis, 19. yüzyılın gereksiz dekorunu reddediyor. Amacı: Sanayi çağına uyarlanmış basit bir dil icat etmek."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sanat, zanaat ve tekniği birleştirerek modern [[Tasarımda işlevselcilik]] temellerini atıyor. Hayatı kısadır. Onun mirası her yerdedir."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p1",
+      "title": "Weimar 1919: Sanat hiyerarşisinin ortadan kaldırılması",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1919**'de mimar **Walter Gropius**, **Weimar'ın**'de Bauhaus'u kurdu. Onun manifestosu açık: Tüm yaratılışın nihai hedefi mimaridir. Asil “güzel sanatlar” ile ikincil “uygulamalı sanatlar” arasında artık sınır yok. Zanaat her şeyin temeli haline gelir."
+        },
+        {
+          "type": "image",
+          "asset": "bauhaus_weimar_1919_walter_gropius_building",
+          "ratio": "4:3",
+          "caption": "Bauhaus: Yaparak öğrendiğiniz bir okul."
+        },
+        {
+          "type": "paragraph",
+          "text": "Her atölyenin iki ustası vardır: bir sanatçı ve bir zanaatkar. Rus soyut ressam [[Vasiliy Kandinsky]] gibi figürler burada eğitim veriyor. Okul aynı zamanda dikdörtgene ve saf renklere takıntılı bir Hollanda hareketi olan [[De Stijl]] ile de diyalog halindedir."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p2",
+      "title": "Biçim işlevi takip eder",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Daha sonra **Dessau**'ye kurulan okul, seri üretime geçti. Ünlü slogan: **“biçim fonksiyonunu takip eder”**. Süslemenin gereksiz olduğu düşünülüyor. Bir fabrikada üretilebilecek basit, güzel nesneler arıyoruz."
+        },
+        {
+          "type": "funFact",
+          "text": "**Marcel Breuer**, Bauhaus öğretmeni, hafif sandalyeler icat etmek için bisikletlerdeki çelik boruları geri dönüştürüyor. Fabrika malzemesi oturma odası mobilyasına dönüşüyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Atölyelerde metal, cam, tekstil ve tipografi test ediliyor. Hedef artık tek lüks nesne değil. En fazla sayıda insanın erişebileceği tipik bir nesnedir."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p3",
+      "title": "Naziler tarafından kapatıldı, sürgünle kurtarıldı",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Okul sinir bozucu. Fazla modern, fazla enternasyonal ve fazla solcu olmakla suçlanıyor. Berlin'de **Mies van der Rohe** yönetimindeki bir görevden sonra, [[Naziler tarafından kapatılması (1933)]] geldi. Rejim bunu “kültürel Bolşevizm” olarak görüyor."
+        },
+        {
+          "type": "image",
+          "asset": "mies_van_der_rohe_modernist_architecture",
+          "ratio": "4:3",
+          "caption": "Mies van der Rohe: Bauhaus'un son liderliği, ardından Amerika'da sürgün."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kapanış yayılmaya dönüşür. Ustalar Amerika Birleşik Devletleri'ne, İngiltere'ye, Filistin'e gidiyor. Tel Aviv'de onların fikirleri, beyaz modern mimarinin geniş bir topluluğu olan [[Beyaz Şehir Tel Aviv]]'yi besliyor."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p4",
+      "title": "Açıkça görünmez hale gelen bir tasarım",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bugün Bauhaus mirası her yerde: düz paket mobilyalar, basit binalar, net arayüzler, [[sans-serif]] sans-serif tipografiler. IKEA, havaalanları, telefonlarımız: Bauhaus'un geometrik netliği dünyanın sıradan dekoru haline geldi."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1919",
+              "title": "Weimar'daki kuruluş",
+              "detail": "Gropius sanat-zanaat-endüstri okulunu açar."
+            },
+            {
+              "date": "1925",
+              "title": "Dessau",
+              "detail": "Seri üretime geçiş."
+            },
+            {
+              "date": "1933",
+              "title": "Nazi kapatma",
+              "detail": "Sürgün Bauhaus'u dünyaya yayar."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Bauhaus sadece 14 yıl içinde modern tasarım fikrini icat etti: daha az süs, daha fazla işlev, kullanışlı oldukları için güzel olan nesneler. Siyasi olarak kapanması, yalnızca gündelik yaşamın fethini hızlandırdı."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "id": "course_123_le_caravage_et_le_clair_obscur",
+  "title": "Caravaggio és chiaroscuro",
+  "subtitle": "1571-1610",
+  "subject": "art",
+  "subcategory": "Painting & Movements",
+  "description": "**Michelangelo Merisi**, Caravaggio néven ismert, forradalmasította a festészetet brutális realizmussal és extrém fény-árnyék kontraszttal: chiaroscuro.",
+  "hero": {
+    "image": "le_caravage_et_le_clair_obscur",
+    "ratio": "16:9",
+    "hook": "Piszkos lábú szentek, reflektorfény: a művészet soha többé nem lesz a régi."
+  },
+  "sections": [
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A **Michelangelo Merisi**, a **Caravaggio** (1571-1610) néven ismert, megtöri az ideális szépség reneszánszból örökölt kódjait. Szembeszáll a szenttel és a mindennapokkal: koldusokkal, kocsmákkal, fáradt testekkel."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fegyvere: radikális chiaroscuro. Testek bukkannak elő a sötétből, mintha reflektorfényben lennének. Ez a törés a [[Barokk a festészetben]] szellemiségét hirdeti, és drámai tanúvá varázsolja a nézőt."
+        },
+        {
+          "type": "image",
+          "asset": "caravaggio_self_portrait",
+          "ratio": "4:3",
+          "caption": "Caravaggio, a zseniális festő és a viharos római élet alakja."
+        }
+      ]
+    },
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_p1",
+      "title": "Zseni, erőszak és száműzetés",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A Milánó közelében született Caravaggio **1593** környékén érkezett Rómába. Pályája megváltozott **1600**-ben a Contarelli-kápolna festményeivel, a Saint-Louis-des-Français templomban. *Szent Máté hivatása* ámulatba ejti Rómát: a szentnek az utca arca van."
+        },
+        {
+          "type": "funFact",
+          "text": "Máltán a Rend lovagjává tették, majd börtönbe vetették, mert megtámadta egy felettesét. Kenderkötéllel megszökik egy bevehetetlennek ítélt erődből."
+        },
+        {
+          "type": "paragraph",
+          "text": "Élete éppoly erőszakos, mint a festményei. **1606**-ben egy verekedés során megölte **Ranuccio Tomassonit**-t. Halálra ítélve Nápolyba, Máltára, majd Szicíliába menekült. Levadászták és megsebesültek, **38 Éva**-ben halt meg [[Porto Ercole]]-ben, néhány nappal a pápai kegyelem előtt."
+        }
+      ]
+    },
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_p2",
+      "title": "Tenebrizmus: olyan fény, amely megüt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Caravaggio feltalálta a **tenebrizmus**-t, a chiaroscuro egy extrém formáját. Nincs több lágy fény, amely simogatja a formákat: átlátszatlan sötétség, és testek, amelyek szoborszerű erővel törnek elő belőle. A fény mesterséges, akár egy színpadi reflektor."
+        },
+        {
+          "type": "image",
+          "asset": "caravaggio_tenebrism_chiaroscuro_painting",
+          "ratio": "4:3",
+          "caption": "Tenebrizmusban a fekete a drámára összpontosítja a tekintetet."
+        },
+        {
+          "type": "funFact",
+          "text": "Ahhoz, hogy ezt a világítást megszerezze, egy fekete falú műhelyben dolgozott, amelyet egyetlen kis tetőablakkal fúrt át a magasban."
+        },
+        {
+          "type": "paragraph",
+          "text": "A díszítések és tájképek eltávolításával az arcok és a gesztusok felé kényszeríti a tekintetet. Ez a fény is szolgálja [[Ellenreformáció]]: a katolikus egyház meg akarja mozgatni a híveket. Nála a fény az a kegyelem, amely figyelmeztetés nélkül lecsap a lélekre."
+        }
+      ]
+    },
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_p3",
+      "title": "Szentek, akik úgy néznek ki, mint az utca",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ami a legjobban botrányos, az az idealizálás elutasítása. Modelljeit az utcán választja ki: munkásokat, koldusokat, udvarhölgyeket. A Szűznek és az apostoloknak ráncai, piszkos lábai, fáradt testei vannak."
+        },
+        {
+          "type": "image",
+          "asset": "caravaggio_madonna_dei_pellegrini_painting",
+          "ratio": "4:3",
+          "caption": "A Zarándok Madonnája: mezítláb, piszkos az előtérben."
+        },
+        {
+          "type": "paragraph",
+          "text": "*In Szűzanya halálát* elutasítják: állítólag egy vízbe fulladt nőt vett modellnek. *A Zarándokok Madonnája* a térdelő szegények koszos lábával sokkol. Elutasítja a [[Modorosság]] mesterkéltségeit, ezt a kecses és torz stílust, ami ezt megelőzően volt. Számára az üdvösség először az alázatosoknak szól."
+        },
+        {
+          "type": "funFact",
+          "text": "A *Szent Máté és az angyal első változata* egy piszkos lábú evangélistát mutatott be, aki tanulatlannak látszott. A szponzorok követelték, hogy festse át."
+        }
+      ]
+    },
+    {
+      "id": "course_123_le_caravage_et_le_clair_obscur_p4",
+      "title": "Caravaggio: befolyás alatt álló Európa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Iskolát nem alapított, de stílusa egyre terjed: **karavagizmus**. [[Artemisia Gentileschi]] Olaszországban, Georges de La Tour Franciaországban, Zurbarán Spanyolországban, Rubens Flandriában. Később **Rembrandt** árnyékköltészetét, **Velazquez** az emberek méltóságát örökli."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1600",
+              "title": "Contarelli kápolna",
+              "detail": "Róma felfedezi Szent Máté hivatását."
+            },
+            {
+              "date": "1606",
+              "title": "Gyilkosság és száműzetés",
+              "detail": "Caravaggio halálra ítélve elmenekült Rómából."
+            },
+            {
+              "date": "1610",
+              "title": "Halál Porto Ercole-ban",
+              "detail": "38 évesen halt meg, közvetlenül a kegyelem előtt."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Két évszázadra feledésbe merült, a 20. században fedezték fel újra. Szoros keretezése és megvilágítása továbbra is hatással van a mozira és a fényképezésre."
+        },
+        {
+          "type": "takeaway",
+          "text": "Caravaggio (1571-1610) a tenebrizmust és a radikális szocreálizmust kényszerítette ki. A szentséget utcai modellekkel megfestve a barokk festészet szellemi atyja lett."
+        }
+      ]
+    }
+  ]
+}

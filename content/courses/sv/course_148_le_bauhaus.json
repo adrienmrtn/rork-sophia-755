@@ -1,0 +1,126 @@
+{
+  "id": "course_148_le_bauhaus",
+  "title": "Bauhaus",
+  "subtitle": "1919-1933",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "Mellan **1919** och **1933** förenar skolan **Bauhaus** konst, hantverk och industri i Tyskland. Stängd av nazisterna spred den ändå modern design över hela världen.",
+  "hero": {
+    "image": "le_bauhaus",
+    "ratio": "16:9",
+    "hook": "En 14-årig tysk skola har designat den moderna världen, från stolar till smartphones."
+  },
+  "sections": [
+    {
+      "id": "course_148_le_bauhaus_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Bauhaus** (1919-1933) är 1900-talets mest inflytelserika konst- och designskola. Grundades i Tyskland strax efter första världskriget, och avvisar den onödiga 1800-talsdekoren. Hans mål: att uppfinna ett enkelt språk, anpassat till den industriella tidsåldern."
+        },
+        {
+          "type": "paragraph",
+          "text": "Genom att slå samman konst, hantverk och teknik, lägger den grunden till modern [[Funktionalism i design]]. Hans liv är kort. Hans arv finns överallt."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p1",
+      "title": "Weimar 1919: avskaffande av konstens hierarki",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1919** grundade arkitekten **Walter Gropius** Bauhaus i **Weimar**. Hans manifest är tydligt: ​​det slutliga målet för all skapelse är arkitektur. Inga fler gränser mellan ädel \"konst\" och sekundär \"tillämpad konst\". Hantverket blir grunden till allt."
+        },
+        {
+          "type": "image",
+          "asset": "bauhaus_weimar_1919_walter_gropius_building",
+          "ratio": "4:3",
+          "caption": "Bauhaus: en skola där du lär dig genom att göra."
+        },
+        {
+          "type": "paragraph",
+          "text": "Varje verkstad har två mästare: en konstnär och en hantverkare. Figurer som [[Wassily Kandinsky]], rysk abstrakt målare, undervisar där. Skolan för också dialog med [[De Stijl]], en holländsk rörelse som är besatt av rektangeln och rena färger."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p2",
+      "title": "Form följer funktion",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sedan installerad på **Dessau**, övergick skolan till massproduktion. Berömd slogan: **\"följer funktionsformulär\"**. Prydnaden anses onödig. Vi letar efter enkla, vackra föremål som kan tillverkas i fabrik."
+        },
+        {
+          "type": "funFact",
+          "text": "**Marcel Breuer**, lärare på Bauhaus, återvinner stålrör från cyklar för att uppfinna lätta stolar. Fabriksmaterial blir vardagsrumsmöbler."
+        },
+        {
+          "type": "paragraph",
+          "text": "Verkstäderna testar metall, glas, textilier och typografi. Målet är inte längre det enda lyxobjektet. Det är det typiska föremålet, tillgängligt för det största antalet människor."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p3",
+      "title": "Stängd av nazisterna, räddad av exil",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Skolan är irriterande. Han anklagas för att vara för modern, för internationell, för vänsterorienterad. Efter en tid i Berlin under **Mies van der Rohe** kom [[Avstängning av nazisterna (1933)]]. Regimen ser detta som \"kulturell bolsjevism\"."
+        },
+        {
+          "type": "image",
+          "asset": "mies_van_der_rohe_modernist_architecture",
+          "ratio": "4:3",
+          "caption": "Mies van der Rohe: sista ledningen för Bauhaus, sedan amerikansk exil."
+        },
+        {
+          "type": "paragraph",
+          "text": "Förslutning blir diffusion. Mästarna åker till USA, Storbritannien, Palestina. I Tel Aviv ger deras idéer näring till [[Vita staden Tel Aviv]], en stor ensemble av vit modern arkitektur."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p4",
+      "title": "En design som blivit osynlig genom självklarhet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Idag finns Bauhaus-arvet överallt: plattpackade möbler, enkla byggnader, tydliga gränssnitt, [[sans-serif]] sans-serif typografier. IKEA, flygplatser, våra telefoner: den geometriska klarheten i Bauhaus har blivit världens vanliga inredning."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1919",
+              "title": "Stiftelsen i Weimar",
+              "detail": "Gropius lanserar konst-hantverk-industriskolan."
+            },
+            {
+              "date": "1925",
+              "title": "Dessau",
+              "detail": "Växla mot massproduktion."
+            },
+            {
+              "date": "1933",
+              "title": "Nazistisk stängning",
+              "detail": "Exil sprider Bauhaus över hela världen."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "På bara 14 år uppfann Bauhaus den moderna idén om design: mindre prydnad, mer funktion, föremål som är vackra eftersom de är användbara. Dess politiska stängning har bara påskyndat dess erövring av vardagen."
+        }
+      ]
+    }
+  ]
+}

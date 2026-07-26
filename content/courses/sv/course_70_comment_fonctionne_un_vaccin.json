@@ -1,0 +1,110 @@
+{
+  "id": "course_70_comment_fonctionne_un_vaccin",
+  "title": "Hur fungerar ett vaccin?",
+  "subtitle": "Immunitet",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Ett vaccin injicerar inte sjukdomen för att skrämma dig. Den tränar ditt immunförsvar med en ofarlig version, så den reagerar snabbt nästa gång.",
+  "hero": {
+    "image": "comment_fonctionne_un_vaccin",
+    "ratio": "16:9",
+    "hook": "Vaccinet lär din kropp att känna igen fara... utan att få den att uppleva den verkliga sjukdomen."
+  },
+  "sections": [
+    {
+      "id": "course_70_comment_fonctionne_un_vaccin_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vacciner har räddat fler liv än nästan alla andra medicinska uppfinningar. **malpox**, som fortfarande dödade hundratals miljoner människor på 1900-talet, utrotades tack vare vaccination."
+        },
+        {
+          "type": "paragraph",
+          "text": "Principen är enkel: visa kroppen en \"träningsdocka\", så att den skapar ett **immun** utan att gå igenom den verkliga sjukdomen."
+        }
+      ]
+    },
+    {
+      "id": "course_70_comment_fonctionne_un_vaccin_p1",
+      "title": "Minnet av immunförsvaret",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "När en mikrob (virus eller bakterie) kommer in för första gången, tar det ofta din kropp **7 till 14 dagar** att skapa ett effektivt försvar. Under denna tid kan du vara sjuk."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vissa celler, [[B-lymfocyter]], producerar **antikroppar** (proteiner som fastnar på inkräktaren). Andra, [[B-lymfocyter]], förstör redan infekterade celler. När hotet har besegrats förblir en del av dessa celler vilande: de är **minneseal**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Om samma mikrob kommer tillbaka försvinner svaret mycket snabbare. Ofta blir man inte ens sjuk. Vaccinet skapar detta minne... utan risk för verklig infektion."
+        }
+      ]
+    },
+    {
+      "id": "course_70_comment_fonctionne_un_vaccin_p2",
+      "title": "Flera sätt att träna kroppen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**AattenuatedZ**vacciner innehåller en levande mikrob, men är mycket svag (t.ex. mässling). De tränar bra, men rekommenderas inte om immunförsvaret är väldigt skört."
+        },
+        {
+          "type": "paragraph",
+          "text": "**inaktivera vaccinera** använder en dödad mikrob (t.ex. viss influensa). Säkrare kräver de ofta återuppringningar. **subenhetsvaccinera** visar bara en bit av mikroben, till exempel ett ytprotein."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Z**mRNA-vaccin ger en kort instruktion: dina celler gör tillfälligt ett ofarligt virusprotein. Din immunitet lär sig känna igen den. mRNA bryts sedan ned; det ändrar inte ditt DNA."
+        },
+        {
+          "type": "funFact",
+          "text": "Långt före Jenner praktiserades redan en form av \"variolisering\" i Kina: att frivilligt utsätta sig för en mildare form av smittkoppor för att skydda sig själv."
+        }
+      ]
+    },
+    {
+      "id": "course_70_comment_fonctionne_un_vaccin_p3",
+      "title": "Kollektiv immunitet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "När tillräckligt många människor är skyddade cirkulerar mikroben mindre. Det är [[Flockimmunitet]]. Det skyddar också de som inte kan vaccineras (nyfödda, immunförsvagade personer)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tröskeln beror på smittsamhet. För **mässling** behöver du ofta **92 till 95 %** täckning. För polio, snarare runt **80 till 85%**."
+        },
+        {
+          "type": "funFact",
+          "text": "Smittkoppor förklarades utrotade i **1980**. Det senaste kända naturfallet är från **1977** i Somalia."
+        }
+      ]
+    },
+    {
+      "id": "course_70_comment_fonctionne_un_vaccin_p4",
+      "title": "Säkerhet och vaksamhet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ett vaccin går igenom strikta prövningar innan det godkänns. Vissa innehåller [[Adjuvanser]]: ämnen som hjälper immunsystemet att bättre \"märka\" vaccinet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Paradoxalt nog, när sjukdomar försvinner från det dagliga livet, glömmer vi deras fara. Mässlingsutbrott påminner oss om att det kollektiva skyddet förblir bräckligt om täckningen minskar."
+        },
+        {
+          "type": "takeaway",
+          "text": "Ett vaccin tränar immunförsvaret med en ofarlig version av fara. Det skapar cellulärt minne, skyddar individen och, på en befolkningsskala, bromsar eller stoppar epidemier."
+        }
+      ]
+    }
+  ]
+}

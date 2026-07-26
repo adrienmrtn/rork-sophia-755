@@ -1,0 +1,120 @@
+{
+  "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur",
+  "title": "Miért nem esik le a Hold a Földre?",
+  "subtitle": "Pálya és gravitáció",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "A Hold folyamatosan a Föld felé esik. Minden alkalommal hiányzik neki. Pontosan ez a pálya.",
+  "hero": {
+    "image": "pourquoi_la_lune_ne_tombe_pas",
+    "ratio": "16:9",
+    "hook": "A Hold felénk zuhan. Csak hiányzik neki a Föld minden körben."
+  },
+  "sections": [
+    {
+      "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ha a Föld gravitációja húzza a Holdat, miért nem csapódik be hozzánk? A válasz bizarrnak tűnik: a Hold **valóban** zuhan a Föld felé. Egyszerűen hiányzik neki minden pillanat."
+        },
+        {
+          "type": "paragraph",
+          "text": "Az esés és az oldalsó sebesség közötti egyensúly **orbitális**, egy csillag körüli görbe pálya. **Isaac Newton** angol fizikus volt az első, aki ugyanazzal az ötlettel egyesítette az alma esését és a csillagok mozgását."
+        },
+        {
+          "type": "funFact",
+          "text": "Ha **60 kg** lenne a Földön, akkor a Holdon csak körülbelül **10** lenne: gravitációja hatszor gyengébb."
+        }
+      ]
+    },
+    {
+      "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p1",
+      "title": "Newton képzeletbeli kánonja",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Newton egy ágyút képzel el egy olyan magas hegy tetején, hogy kiemelkedik a légkörből. Vízszintesen lövünk labdát. Kis erővel gyorsan leesik. Több erővel tovább megy."
+        },
+        {
+          "type": "image",
+          "asset": "newton_cannonball_orbit_thought_experiment",
+          "ratio": "auto",
+          "caption": "Newton ágyúgolyós gondolatkísérlete: a pálya megértésének kulcsa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Egy adott sebességnél, az úgynevezett [[Egyensúlyi sebesség]], valami figyelemre méltó történik. Ahogy a labda leesik, a Föld, amely kerek, ugyanolyan ütemben görbül alá. A lövedék leesik… anélkül, hogy a földet érintené. **Állandó szabadesésben** van, a gravitáció húzza anélkül, hogy összeomlik."
+        },
+        {
+          "type": "paragraph",
+          "text": "A Hold ugyanezt teszi. Elég oldalsebessége van ahhoz, hogy egy esést hurokká alakítson. E sebesség nélkül egyenesen felénk merülne."
+        }
+      ]
+    },
+    {
+      "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p2",
+      "title": "Két erő, egy egyensúly",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A Hold körülbelül **384 000 km** távolságban kering. Oldalsebessége hozzávetőlegesen **1 km/s**. Ha hirtelen leállna, napokon belül lezuhanna. Ha hirtelen eltűnne a gravitáció, akkor egyenes vonalban haladna a térben, a [[Tehetetlenség]] elve szerint: a test megtartja a sebességét, ha nem lassítják."
+        },
+        {
+          "type": "paragraph",
+          "text": "A [[Newton egyetemes gravitáció törvénye]] azt mondja, hogy minden tömeg vonz minden más tömeget, és a vonzás a távolsággal, pontosabban a távolság négyzetével csökken. Minél közelebb van egy műhold, annál gyorsabban kell mennie, hogy elkerülje a leesést."
+        },
+        {
+          "type": "funFact",
+          "text": "A mindössze **400 km** magasságban lévő Nemzetközi Űrállomás körülbelül **28 000 km/h** sebességgel halad. **90 perc alatt** megkerüli a Földet. A távolabbi Hold **27,3 napig**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tehát a pálya nem varázslat. Ez egy állandó kompromisszum a \"zuhanok\" és a \"túl gyorsan haladok ahhoz, hogy eltaláljak\" között."
+        }
+      ]
+    },
+    {
+      "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p3",
+      "title": "Az árapály eltaszítja a Holdat",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A pálya nem rögzített. A [[Árapály-erők]] kerül játékba. A Hold gravitációja erősebben húzza a Föld felé eső oldalát, mint a középpontját. Eldeformálja az óceánokat, és vízdudort hoz létre."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mivel a Föld gyorsabban forog a tengelye körül, mint a Hold körül, ez a gerinc egy kicsit a Hold elé kerül. A súrlódás nagyon enyhén lassítja a Föld forgását: napjaink körülbelül **1,4 ezredmásodperctel** évszázadonként hosszabbodnak meg. Cserébe a Hold körülbelül **3,8 cm**-t távolodik évente."
+        },
+        {
+          "type": "paragraph",
+          "text": "Évmilliárdokkal ezelőtt a Hold sokkal közelebb volt. Az árapály hatalmas volt. A víz és a kémia ilyen keveredése segíthette a korai életformákat. A dinoszauruszok pedig egy olyan Földön éltek, ahol a nappalok csak **22 vagy 23 óráig** tartottak."
+        }
+      ]
+    },
+    {
+      "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p4",
+      "title": "Napfogyatkozások… egyelőre",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ma, geometriai véletlenek folytán, a Nap körülbelül **400-szor** nagyobb, mint a Hold, de **400-szor** távolabb is. Ezért a kettőnek ugyanaz a **látszóló méret**, vagyis az a szög, amelyben látjuk őket az égen. Teljes napfogyatkozás lehetséges."
+        },
+        {
+          "type": "paragraph",
+          "text": "Körülbelül **600 millió év múlva** a Hold túl messze lesz ahhoz, hogy teljesen eltakarja a Napot. Csak a gyűrű alakú fogyatkozások maradnak meg: egy fénygyűrű a holdkorong körül. Nagyon hosszú távon a Föld és a Hold szinkronizálódhat: mindegyik test mindig ugyanazt az arcát mutatná a másiknak. De a Nap azáltal, hogy **piros óriássá** lesz, egy olyan csillag végső fázisaként, mint a miénk, sokkal korábban átalakítja a rendszert."
+        },
+        {
+          "type": "takeaway",
+          "text": "A Hold nem zuhan le, mert oldalsebessége egyensúlyba hozza a Föld vonzerejét: állandó szabadesésben van. És még mindig körülbelül **3,8 cm**-vel távolodik évente."
+        }
+      ]
+    }
+  ]
+}

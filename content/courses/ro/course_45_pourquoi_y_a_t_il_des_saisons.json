@@ -1,0 +1,100 @@
+{
+  "id": "course_45_pourquoi_y_a_t_il_des_saisons",
+  "title": "De ce sunt anotimpuri?",
+  "subtitle": "Pământ și Soare",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Anotimpurile nu provin de la Pământ fiind mai aproape sau mai departe de Soare. Cauza reală este înclinarea axei Pământului.",
+  "hero": {
+    "image": "pourquoi_y_a_t_il_des_saisons",
+    "ratio": "16:9",
+    "hook": "Nu, vara nu vine pentru că Pământul se apropie de Soare."
+  },
+  "sections": [
+    {
+      "id": "course_45_pourquoi_y_a_t_il_des_saisons_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mulți oameni cred că vara vine atunci când Pământul este **mai aproape** de Soare, iar iarna vine când este **departe**. Acest lucru este fals. Și o vedem imediat: când e vară în Franța, e iarnă în Australia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Adevărata explicație constă într-un singur lucru: axa de rotație a Pământului este **înclinată**, înclinată față de planul orbitei sale în jurul Soarelui."
+        }
+      ]
+    },
+    {
+      "id": "course_45_pourquoi_y_a_t_il_des_saisons_p1",
+      "title": "Pământul se înclină",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pământul se rotește pe axa sa în **24 de aur**: este zi și noapte. De asemenea, orbitează în jurul Soarelui în **an an** într-o orbită în formă de **elipsa**, un cerc ușor aplatizat. Dar axa sa, linia imaginară de la Polul Nord la Polul Sud, nu este dreaptă în raport cu orbita sa. Se înclină aproximativ **nota 23,5**: este [[Înclinarea axială a Pământului (23,5°)]]."
+        },
+        {
+          "type": "image",
+          "asset": "earth_summer_winter_seasons_illustration",
+          "ratio": "auto",
+          "caption": "Înclinarea axei Pământului explică ciclul anotimpurilor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Această înclinare rămâne aproximativ în aceeași direcție pe tot parcursul anului. Indică întotdeauna aceeași regiune a cerului, lângă Steaua Polară. Rezultat: în funcție de locul în care se află Pământul pe orbita sa, o emisferă „se uită” mai mult la Soare, cealaltă mai puțin."
+        }
+      ]
+    },
+    {
+      "id": "course_45_pourquoi_y_a_t_il_des_saisons_p2",
+      "title": "Mai multa lumina, mai multa caldura",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vara, în emisfera nordică, Polul Nord se înclină spre Soare. Zilele sunt mai lungi: **fotoperioada**, raportul dintre durata zilei și a nopții, crește. De asemenea, razele ajung mai „dreapte” pe sol: energia este concentrată pe o suprafață mai mică. Deci e mai cald."
+        },
+        {
+          "type": "funFact",
+          "text": "În ianuarie, Pământul este chiar puțin **mai aproape** de Soare decât în ​​iulie: este **periheliul**, cel mai apropiat punct de pe orbită. Și totuși, aici este iarnă. Dovada că distanța nu explică anotimpurile."
+        },
+        {
+          "type": "paragraph",
+          "text": "Iarna este invers: zile scurte, raze mai oblice, energie răspândită pe o suprafață mai mare. Mai puțină căldură primită. **solstițiu**, momentele în care Soarele atinge poziția cea mai nordică sau cea mai suică, marchează începutul verii sau al iernii."
+        }
+      ]
+    },
+    {
+      "id": "course_45_pourquoi_y_a_t_il_des_saisons_p3",
+      "title": "Și lângă ecuator?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aproape de **ecuator**, linia imaginară care împarte Pământul în două emisfere, înclinarea modifică puțin pe durata zilei. Nu sunt chiar patru sezoane ca în Europa, ci mai degrabă perioade mai uscate și mai umede."
+        },
+        {
+          "type": "paragraph",
+          "text": "La **stâlpi**, efectul este extrem: câteva luni de zi continuă vara, câteva luni de noapte iarna. Contrastul este mult mai puternic acolo decât în ​​Franța."
+        }
+      ]
+    },
+    {
+      "id": "course_45_pourquoi_y_a_t_il_des_saisons_p4",
+      "title": "O planetă fără înclinare",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dacă axa Pământului ar fi perfect dreaptă, fiecare loc ar primi aproximativ aceeași cantitate de lumină solară pe tot parcursul anului. Gata cu vara adevarata, cu iarna adevarata. Clima, culturile, migrațiile animalelor: totul ar fi diferit."
+        },
+        {
+          "type": "takeaway",
+          "text": "Anotimpurile provin din înclinarea  a axei Pământului, aproximativ **23,5°**, nu de la distanța de la Soare. O emisferă se înclină spre Soare: este vară. Celălalt se înclină spre opus: e iarnă."
+        }
+      ]
+    }
+  ]
+}

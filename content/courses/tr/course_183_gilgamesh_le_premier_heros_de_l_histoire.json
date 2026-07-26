@@ -1,0 +1,120 @@
+{
+  "id": "course_183_gilgamesh_le_premier_heros_de_l_histoire",
+  "title": "Gılgamış: tarihin ilk kahramanı",
+  "subtitle": "Mezopotamya",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Uruk Kralı, Enkidu'nun dostu, ölümsüzlüğün arayıcısı: 4000 yıl önce yazılan Gılgamış Destanı, insanlığın en eski büyük öyküsüdür.",
+  "hero": {
+    "image": "gilgamesh_le_premier_heros",
+    "ratio": "16:9",
+    "hook": "Homer'dan önce, İncil'den önce: Ölümden korkan bir kral, dünyanın öbür ucuna doğru yola çıkar... ve bir ders getirir, sonsuzluğu değil."
+  },
+  "sections": [
+    {
+      "id": "course_183_gilgamesh_le_premier_heros_de_l_histoire_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Gılgamış**, Mezopotamya'daki **Uruk** şehrinin kralı, **EGılgamış** resminin kahramanıdır. **4.000 harf daha uzun bir süre önce kil tabletlere kazınmış** bu çalışma, Homer'dan ve İncil'deki hikayelerden öncesine dayanıyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu sadece bir macera değil. Dostluğu, sonra ölüm korkusunu, sonra da sert bir bilgeliği keşfeden bir zorbanın hikayesi: Ölümsüzlük bedende değil, geride bıraktıklarımızdadır."
+        }
+      ]
+    },
+    {
+      "id": "course_183_gilgamesh_le_premier_heros_de_l_histoire_p1",
+      "title": "Kumdan çıkan bir destan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Metin eski Sümer hikayelerini bir araya getiriyor. Akkad dilindeki klasik versiyonu, yazar [[Sîn-leqi-unninni]]'ye (MÖ 12. yüzyıl civarında) atfedilir. Kumların altında unutulmuş olan bu eser, 19. yüzyılda kral [[Asurbanipal]]'nin **Ninova**'deki kütüphanesinde yeniden ortaya çıktı."
+        },
+        {
+          "type": "image",
+          "asset": "gilgamesh_tablet_cuneiform_nineveh_british_museum",
+          "ratio": "4:3",
+          "caption": "British Museum'daki destandan çivi yazılı tablet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Asurolog **George Smith**, **1872**'de British Museum'da Yaratılış'tan yaklaşık bin yıl öncesine ait bir tufan, gemi ve hayatta kalma hikayesini deşifre etti. Kilin üzerine bastırılan **çivi yazısı** yazısı, metni papirüsün kaybolacağı yerden kurtardı."
+        },
+        {
+          "type": "funFact",
+          "text": "Tufan Tabletini okuyan George Smith'in o kadar heyecanlandığı ve British Museum'daki şaşkın meslektaşlarının önünde soyunmaya başladığı söyleniyor."
+        }
+      ]
+    },
+    {
+      "id": "course_183_gilgamesh_le_premier_heros_de_l_histoire_p2",
+      "title": "Gılgamış ve Enkidu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Başlangıçta **Gılgamış** çekilmez bir kraldır: üçte ikisi ilahi, üçte biri insan ama Uruk için zalim. Tanrıça [[Aruru]], onu kanalize etmek için ceylanlar arasında yaşayan vahşi bir adam olan **Enkidu**'yi şekillendirir."
+        },
+        {
+          "type": "image",
+          "asset": "gilgamesh_enkidu_ancient_sumerian_art",
+          "ratio": "4:3",
+          "caption": "Gılgamış ve Enkidu: Kavgadan kardeşçe dostluğa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kavga ederler, kimse kazanamaz ve rekabet dostluğa dönüşür. Birlikte, Sedir Ormanı'ndaki canavar **Humbaba**'yi, ardından tanrıça **İştar** tarafından gönderilen **Göksel Boğa**'yi öldürürler. Sinirlenen tanrılar Enkidu'yu hastalıktan ölmeye mahkum eder. Arkadaşın ölümü her şeyi değiştirir."
+        }
+      ]
+    },
+    {
+      "id": "course_183_gilgamesh_le_premier_heros_de_l_histoire_p3",
+      "title": "Ölümsüzlük arayışı",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Enkidu'nun cesedinin önünde Gılgamış kendisinin de öleceğini anlar. Tacını bırakır, kendini hayvan derileriyle örter ve [[Destandaki Tufan anlatısı]]'den sonra ölümsüzleşen tek adam olan **Ut-napişti**'yi aramaya gider. Yolculuk onu [[Maşu]] dağlarının ve Ölüm Sularının ötesine götürür."
+        },
+        {
+          "type": "image",
+          "asset": "gilgamesh_flood_tablet_utnapishtim_myth",
+          "ratio": "4:3",
+          "caption": "Tufan'ın hikayesi: Nuh'tan bin yıl önce, zaten toprak üzerindeydi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ut-napişti ona bir sınav verir: Altı gün yedi gece uyanık kalmak. Gılgamış hemen uykuya dalar. Uykuyu yenemeyen, ölümü yenemez. Ona bir gençlik bitkisi gösteriliyor; Banyo yaparken bir yılan onu ondan çalar. Yılan eriyor. Kral eli boş ayrılır."
+        },
+        {
+          "type": "funFact",
+          "text": "Bu [[Destandaki Tufan anlatısı]], Nuh'un İncil'deki öyküsünden yaklaşık **1.000 yıl kadar önce gelir**: aynı Mezopotamya kültürel geçmişi, daha eski versiyon."
+        }
+      ]
+    },
+    {
+      "id": "course_183_gilgamesh_le_premier_heros_de_l_histoire_p4",
+      "title": "Uruk surlarının sonsuzluğu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Uruk**'ye döndüğünde Gılgamış, şehrinin surlarına bakıyor. Ders açıktır: Biyolojik ölümsüzlük tanrılara aittir. İnsan, eserleriyle ve yaşayanların hatırasıyla ayakta kalır."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dört bin yıl sonra bu hikaye, İncil'deki Nuh'tan [[Joseph Campbell]]'nin monomit teorilerine kadar dünya kültürünü beslemeye devam ediyor. Gılgamış'ı okumak, ölüm karşısında insanın ilk büyük sorularını duymaktır."
+        },
+        {
+          "type": "takeaway",
+          "text": "**E Gılgamış resmi**, **4.000 yaşında**, İncil'den önce zaten bir tufan içeriyor. Kahramanı ölümsüzlüğün biyolojik olmadığını, ördüğümüz duvarlarda ve arkamızda bıraktığımız anılarda olduğunu öğrenir."
+        }
+      ]
+    }
+  ]
+}

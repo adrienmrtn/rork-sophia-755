@@ -1,0 +1,145 @@
+{
+  "id": "course_138_bach_et_la_musique_baroque",
+  "title": "Bach ve barok müzik",
+  "subtitle": "1685-1750",
+  "subject": "art",
+  "subcategory": "Music",
+  "description": "Leipzig'in kantoru Johann Sebastian Bach, füg ve kontrpuanı zirveye taşıdı ve Barok'un mimarı oldu.",
+  "hero": {
+    "image": "bach_et_la_musique_baroque",
+    "ratio": "16:9",
+    "hook": "Bir Leipzig kantoru Batı'nın sağlam katedralini inşa ediyor."
+  },
+  "sections": [
+    {
+      "id": "course_138_bach_et_la_musique_baroque_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Johann Sebastian Bach** (**1685**-**1750**) genellikle Batı müziğinin zirvesi olarak kabul edilir. Seslerin mimarı olarak **füg** ve [[Kontrpuan]] sanatını mükemmelliğe taşıyor: iç içe geçen birkaç bağımsız melodik çizgi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hayatı bir saray yıldızınınki gibi değil. Bu, kilisenin ve prenslerin hizmetinde olan, çalışmaları ancak 19. yüzyılda tamamen yeniden keşfedilecek dahi bir zanaatkarın eseridir."
+        }
+      ]
+    },
+    {
+      "id": "course_138_bach_et_la_musique_baroque_p1",
+      "title": "Barok: kilise, avlu ve sahne",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**barok** dönemi yaklaşık **1600**'den Bach'ın ölümüne kadar uzanır. Kontrastı, hareketi, süslemeyi seviyor. İtalya'da **Vivaldi**, Almanya'da **Handel**, ardından İngiltere'de manzaraya hakim. Müziğin üç görevi vardır: kilise (org ve kutsal şarkı), prenslerin yatak odası ve sahne (opera)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bach opera yazmadı ama Tutkularına ve oratoryolarına lirik drama kattı. Fransız ölçüsünü, İtalyan lirizmini ve Alman titizliğini sentezler. Ona göre müzik sadece hazzı değil, ilahi bir düzeni de yansıtır."
+        },
+        {
+          "type": "funFact",
+          "text": "1717'de Weimar'da Bach, istifa etmekte çok ısrar ettiği için bir ay hapiste kaldı: Dük onun Köthen'e gitmesine izin vermedi."
+        }
+      ]
+    },
+    {
+      "id": "course_138_bach_et_la_musique_baroque_p2",
+      "title": "Leipzig: Hazan ve kantatları",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Eisenach**'de **1685**'de bir müzisyen hanedanının çocuğu olarak doğan Bach, **Leipzig**'deki **1723**'ye St. Thomas Kilisesi'nin [[hazan]]'si olarak yerleşti. Ezici yük: neredeyse her hafta yeni bir [[kantat]] ve ayrıca [[Thomasschule]]'de ders vermek."
+        },
+        {
+          "type": "image",
+          "asset": "bach_eisenach_birthplace_portrait",
+          "ratio": "4:3",
+          "caption": "Bach, bir grup Alman müzisyenin varisi."
+        },
+        {
+          "type": "image",
+          "asset": "leipzig_st_thomas_church_bach_cantor",
+          "ratio": "4:3",
+          "caption": "Leipzigli Aziz Thomas: Hazan Bach'ın günlük hayatı."
+        },
+        {
+          "type": "paragraph",
+          "text": "Yaklaşık **300** kantatının bestelendiği tahmin edilmektedir ve bunlardan bir kısmı **200** bize ulaşmıştır. İki evliliğinden **20** çocuğu var; **Carl Philipp Emanuel** ve **Johann Hıristiyan** kendileri de önemli besteciler oldular. Akşamları, konçertolar ve laik süitler yazdığı [[Collegium Müzikum]] adlı topluluğu yönetiyor."
+        },
+        {
+          "type": "funFact",
+          "text": "Hayatının sonunda gezici cerrah John Taylor tarafından göz ameliyatı geçiren Bach, ölmeden kısa bir süre önce kör oldu."
+        }
+      ]
+    },
+    {
+      "id": "course_138_bach_et_la_musique_baroque_p3",
+      "title": "İyi Düzenlenmiş Klavye ve yeniden keşif",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bach, aralıkları birleştiren akort sistemi [[Eşit mizaç]] ile bir klavyenin tüm tuşlarda çalabileceğini kanıtlıyor. *İyi Temperli Klavye* (48 prelüd ve füg) modern müziğin yolunu açıyor. Onun fügü, çeşitli seslerin ele aldığı bir temayı üst üste getiriyor: matematiksel mimari."
+        },
+        {
+          "type": "image",
+          "asset": "bach_well_tempered_clavier_manuscript_fugue",
+          "ratio": "4:3",
+          "caption": "İyi Temperlenmiş Klavye: tüm tonlar tek bir klavyede."
+        },
+        {
+          "type": "paragraph",
+          "text": "Öldüğünde moda daha hafif olan [[Cesur stil]]'yi tercih etti. Bach “gotik” görünüyor. **1829**'de genç **Felix Mendelssohn**, *Aziz Matthew Tutkusu* Berlin'de: “Bach Rönesansı”nın başlangıcı. O olmasaydı yüzlerce puan kaybolabilirdi."
+        },
+        {
+          "type": "funFact",
+          "text": "Mendelssohn şaka yaptı: Din değiştirmiş bir Yahudi ve bir aktörün (arkadaşı Devrient) Hıristiyan müziğinin en büyük başyapıtını dünyaya geri getirmesi gerekiyordu."
+        }
+      ]
+    },
+    {
+      "id": "course_138_bach_et_la_musique_baroque_p4",
+      "title": "SDG, Seyahat ve evrensel miras",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ateşli bir Lutherci olan Bach, sık sık **SDG** (*Soli Deo Gloria*: yücelik yalnızca Tanrı'ya) imzasını atar. [[numeroloji]] ile oynuyor ve notalara adını (B-A-C-H) kodluyor. **1977**'de NASA, çalışmalarından birkaçını Voyager sondalarının [[Altın Rekor]]'sine yerleştirdi: insanlığın uzaydaki ses elçiliği."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1685",
+              "title": "Eisenach'ta Doğum",
+              "detail": "Bir müzisyen hanedanı Bach'ı dünyaya kazandırıyor."
+            },
+            {
+              "date": "1723",
+              "title": "Cantor Leipzig'de",
+              "detail": "Haftalık kantatlar ve muazzam kutsal çalışmalar."
+            },
+            {
+              "date": "1722-1742",
+              "title": "İyi huylu klavye",
+              "detail": "Tüm tonlar, füg bir katedral gibi."
+            },
+            {
+              "date": "1829",
+              "title": "Mendelssohn",
+              "detail": "Aziz Matthew Tutkusu ışığa geri dönüyor."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Leipzig'in Kantoru Bach, kontrpuan ve füg'ü zirveye taşıdı; Unutulan ve Mendelssohn tarafından yeniden dirilen Barok'un mimarı olmaya devam ediyor."
+        }
+      ]
+    }
+  ]
+}

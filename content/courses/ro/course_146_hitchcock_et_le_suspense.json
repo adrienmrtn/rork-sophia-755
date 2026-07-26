@@ -1,0 +1,106 @@
+{
+  "id": "course_146_hitchcock_et_le_suspense",
+  "title": "Hitchcock și suspans",
+  "subtitle": "1899-1980",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "**Alfred Hitchcock** inventează suspansul modern: oferind publicului informații pe care personajele nu le au. Cu *Psihologie*, *Vertij* sau *Geamul din spate*, el ne manipulează privirea.",
+  "hero": {
+    "image": "hitchcock_et_le_suspense",
+    "ratio": "16:9",
+    "hook": "Adevăratul suspans nu surprinde: te lasă să vezi bomba de sub masă."
+  },
+  "sections": [
+    {
+      "id": "course_146_hitchcock_et_le_suspense_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Alfred Hitchcock** (1899-1980) este supranumit „maestrul suspansului”. În peste cincizeci de filme, el a transformat thrillerul în arta manipulării. *Psihologie*, *Vertij*, *Luneta din spate*: de fiecare dată, camera nu spune doar o poveste. She plays with our nerves."
+        },
+        {
+          "type": "paragraph",
+          "text": "His favorite subject is not crime. It’s the look: guilt, obsession, voyeurism. Hitchcock filmează spectatorul la fel de mult ca și personajele."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p1",
+      "title": "Surpriză versus suspans",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În **1966**, Hitchcock îi explică metoda lui [[François Truffaut]], critic francez și apoi realizator de film. **surprinde**, spune el, este o bombă care explodează fără avertisment: un șoc scurt. **suspans** arată publicului bomba, în timp ce personajele o ignoră. Tensiunea durează. Devenim complici și neputincioși."
+        },
+        {
+          "type": "image",
+          "asset": "alfred_hitchcock_portrait_director",
+          "ratio": "4:3",
+          "caption": "Hitchcock: o față, o siluetă, un brand global de fior."
+        },
+        {
+          "type": "funFact",
+          "text": "Pentru a avansa intriga, el folosește adesea un [[MacGuffin]]: un obiect sau un secret care motivează personajele, dar a cărui natură exactă contează puțin. Important este vânătoarea."
+        },
+        {
+          "type": "paragraph",
+          "text": "Această asimetrie informațională este gramatica sa. De îndată ce știm mai mult decât erou, ne temem pentru el."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p2",
+      "title": "Invenții tehnice pentru filmarea anxietății",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În **1948**, cu *Coarda*, Hitchcock simulează o secvenţă [[împuşcat secvenţă]]: filmul pare a fi filmat dintr-o singură mişcare. Roletele durează doar zece minute, așa că ascunde tăieturile în spatele unui spate sau a unei piese de mobilier întunecate. Efectul este sufocant: rămânem închiși cu criminalii."
+        },
+        {
+          "type": "image",
+          "asset": "hitchcock_vertigo_james_stewart_kim_novak_film",
+          "ratio": "4:3",
+          "caption": "Vertij: vertij filmat ca o distorsiune a spațiului."
+        },
+        {
+          "type": "paragraph",
+          "text": "În **1958**, pentru *Vertij*, el a inventat [[Dolly Zoom]]: camera se mișcă înapoi în timp ce zoom-ul avansează (sau invers). Spațiul este distorsionat. Nu mai vedem vertijul. O simțim."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p3",
+      "title": "Cu toții suntem voyeri",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În *Geamul din spate* (**1954**), un fotograf cu un picior rupt își spionează vecinii. El este dublul spectatorului în întuneric. Hitchcock folosește [[Cameră subiectivă]]: vedem exact ce vede eroul, nimic mai mult."
+        },
+        {
+          "type": "paragraph",
+          "text": "Această identificare este atât morală, cât și vizuală. Căutăm indicii, dar împărtășim și vinovăția de a privi ceea ce nu ne privește. Hitchcock amestecă thriller-ul și [[psihanaliză]]: temeri îngropate, dorințe interzise, ​​identități duble."
+        }
+      ]
+    },
+    {
+      "id": "course_146_hitchcock_et_le_suspense_p4",
+      "title": "Un brand, o muzică, o moștenire",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hitchcock și-a transformat numele într-un brand, până când serialul său de televiziune *Alfred Hitchcock prezintă*. Pentru *Psihologie*, el interzice intrarea după începerea sesiunii: secretul devine un eveniment. Colaborarea sa cu compozitorul [[Bernard Herrmann]] leagă muzica și [[asamblare]] pentru a accelera pulsul publicului."
+        },
+        {
+          "type": "takeaway",
+          "text": "Hitchcock a codificat suspansul modern: informarea privitorului, direcționarea privirii și transformarea fricii în plăcere controlată. Decenii mai târziu, thrillerul îi datorează încă gramatica."
+        }
+      ]
+    }
+  ]
+}

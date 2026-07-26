@@ -1,0 +1,108 @@
+{
+  "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap",
+  "title": "Odkrycie elektryczności",
+  "subtitle": "Od Franklina do Tesli",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Energia elektryczna nie została wynaleziona nagle. Najpierw go zaobserwowano, potem zrozumiano, a następnie udomowiono. Oto kluczowe kroki.",
+  "hero": {
+    "image": "la_decouverte_de_l_electricite",
+    "ratio": "16:9",
+    "hook": "Od błyskawicy do smartfona: dwa stulecia, aby ujarzmić niewidzialne."
+  },
+  "sections": [
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Elektryczność istnieje w przyrodzie: błyskawica, elektryczna ryba, tarcie. To, co zmieniło świat, to nauczenie się **produkt**, **transport** i korzystać z tego."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ta historia obejmuje ponad dwa stulecia, pełne ryzykownych eksperymentów i wielkich rywalizacji."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p1",
+      "title": "Zrozumienie błyskawicy",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W XVIII wieku **Benjamina Franklina** wykazał, że błyskawica jest zjawiskiem elektrycznym. Jego eksperyment z latawcem (często opowiadany w formie fabularyzowanej) ma na celu udowodnienie, że niebo i maszyna cierna grają z tą samą siłą."
+        },
+        {
+          "type": "image",
+          "asset": "benjamin_franklin_kite_lightning_experiment",
+          "ratio": "4:3",
+          "caption": "Franklin łączy błyskawicę i elektryczność: niebezpieczny, ale fundamentalny pomysł."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wynaleźliśmy także **grzmot**, metalowy pręt, który zapewnia piorunowi bezpieczną ścieżkę do ziemi. Energia elektryczna pozostawia tajemnicę przed wejściem do inżynierii."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p2",
+      "title": "Faradaya: wytwarzanie prądu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W XIX wieku **Michaela Faradaya** wykazał, że magnes poruszający się w pobliżu drutu może wytworzyć prąd elektryczny. To jest **indukcja**. Bez tego pomysłu nie ma dynama, nie ma alternatora, nie ma nowoczesnej elektrowni."
+        },
+        {
+          "type": "image",
+          "asset": "faraday_electromagnetic_induction_experiment",
+          "ratio": "4:3",
+          "caption": "Faradaya przekształca ruch i magnetyzm w prąd."
+        },
+        {
+          "type": "funFact",
+          "text": "Faraday pochodził ze skromnego środowiska i zaczynał jako introligator. Nauki uczył się, czytając to, na czym mu zależało."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p3",
+      "title": "Edison kontra Tesla",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pod koniec XIX wieku doszło do starcia dwóch obozów. **Thomasa Edisona** przewodzi prąd stały. **Nikola Tesla** (i firma Westinghouse) bronią prądu przemiennego, który łatwiej jest transportować na duże odległości."
+        },
+        {
+          "type": "image",
+          "asset": "tesla_edison_electric_power_station",
+          "ratio": "4:3",
+          "caption": "Prąd przemienny zyskuje na popularności w miastach."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prąd przemienny wygrywa w sieciach miejskich. Miasta rozświetlają się. Fabryki zmieniają tempo."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p4",
+      "title": "Połączony świat",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dziś prąd zasila szpitale, pociągi, internet i lodówki. Wyzwaniem nie jest już sama produkcja, ale robienie tego w sposób czysty i niezawodny."
+        },
+        {
+          "type": "takeaway",
+          "text": "Elektryczność została zrozumiana, a następnie udomowiona: Franklin jako błyskawica, Faradaya do wytwarzania prądu, Tesla i prąd przemienny do dostarczania jej do domów. Od tego nadal zależy nasze codzienne życie."
+        }
+      ]
+    }
+  ]
+}

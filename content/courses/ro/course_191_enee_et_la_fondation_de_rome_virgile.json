@@ -1,0 +1,130 @@
+{
+  "id": "course_191_enee_et_la_fondation_de_rome_virgile",
+  "title": "Enea și întemeierea Romei (Virgil)",
+  "subtitle": "Eneida",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "În Eneida, Vergiliu povestește cum Eneas, un prinț care a scăpat din Troia, a traversat Mediterana pentru a fonda linia Romei.",
+  "hero": {
+    "image": "enee_et_la_fondation_de_rome",
+    "ratio": "16:9",
+    "hook": "Un troian fugar îl poartă pe tatăl său pe umeri: Roma se naște din acest exil."
+  },
+  "sections": [
+    {
+      "id": "course_191_enee_et_la_fondation_de_rome_virgile_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Eneida** este marea poezie a lui **Virgil**. Povestește odiseea lui **Enea**, prinț troian care a supraviețuit căderii Troiei. Călăuzit de zei, a traversat Mediterana pentru a fonda, în Italia, descendența care avea să ducă la Roma."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nu este doar o aventură. Este mitul nașterii puterii romane, scris pentru a oferi Romei un trecut demn de Homer."
+        }
+      ]
+    },
+    {
+      "id": "course_191_enee_et_la_fondation_de_rome_virgile_p1",
+      "title": "Virgil scrie pentru Augustus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La sfârșitul secolului I î.Hr., după războaie civile, împăratul **august** dorea să-și stabilizeze puterea. Îl încredințează pe Virgil să scrie o epopee demnă de Homer. Lucrarea servește și [[propaganda augustană]]: legarea prințului de un erou divin."
+        },
+        {
+          "type": "image",
+          "asset": "dido_aeneas_carthage_painting",
+          "ratio": "4:3",
+          "caption": "Virgiliu, poet al Eneidei, campion al unei Rome voite de destin."
+        },
+        {
+          "type": "paragraph",
+          "text": "Virgil a lucrat acolo timp de unsprezece ani (29-19 î.Hr.). Primele șase cântece urmează rătăcirea pe mare. Următoarele șase vorbesc despre războiul din Italia. El scrie în [[Hexametre dactilice]], versul marilor epopee antice."
+        },
+        {
+          "type": "funFact",
+          "text": "Virgil a murit în **19** î.Hr. și a cerut ca manuscrisul să fie ars, considerat neterminat. Augustus interzice ascultarea. Epopeea națională a Romei apare împotriva voinței autorului său."
+        }
+      ]
+    },
+    {
+      "id": "course_191_enee_et_la_fondation_de_rome_virgile_p2",
+      "title": "Zbor din Troia și dragoste în Cartagina",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În timp ce Troia arde, la sfârşitul lui [[Războiul Troian]], i se ordonă să fugă Enea, fiul zeiţei **Venus** şi muritorul Anchises. Pleacă, purtând pe umeri pe tatăl său, pe fiul său Ascanius în mână, și ia cu el pe [[Penates]], zeii vetrei. Acest gest definește romanicul [[pietas romane]]: datoria față de familie, zei și destin."
+        },
+        {
+          "type": "image",
+          "asset": "aeneas_fleeing_burning_troy_anchises_painting",
+          "ratio": "4:3",
+          "caption": "Eneas fuge Troia care arde, tată și fiu cu el."
+        },
+        {
+          "type": "paragraph",
+          "text": "În Cartagina, o iubește pe regina **Dido**. Dar [[Jupiter]], regele zeilor romani, îl cheamă înapoi la misiunea sa. Aeneas pleacă. Dido se sinucide și își blestemă descendența: mitul explică astfel viitoarea ura dintre Roma și Cartagina, înaintea [[Războaiele punice]]."
+        },
+        {
+          "type": "funFact",
+          "text": "Fiul lui Eneas, Ascanius, i se mai spune Iule. Familia lui [[Julii]], inclusiv Iulius Caesar și Augustus, revendică această origine divină prin Venus."
+        }
+      ]
+    },
+    {
+      "id": "course_191_enee_et_la_fondation_de_rome_virgile_p3",
+      "title": "Războiul din Lazio",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "După o coborâre în Iad, Aeneas ajunge în **Lazio**, în centrul Italiei. Regele **Latinus** îi promite fiica sa **Lavinia**. Dar prințul **Turnus**, susținut de [[Juno]], o zeiță ostilă troienilor, începe războiul."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aeneas îl învinge pe Turnus și fondează **Lavinium**. Mai târziu, fiul său va fonda [[Alba Longa]], din care aveau să se nască Romulus și Remus. Mitul leagă astfel Troia de Roma într-un singur lanț."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Troia",
+              "title": "Zborul lui Enea",
+              "detail": "El salvează tatăl, fiul și zeii casei."
+            },
+            {
+              "date": "Cartagina",
+              "title": "Dido",
+              "detail": "Iubire ruptă, blestem împotriva Romei."
+            },
+            {
+              "date": "Lazio",
+              "title": "Victorie asupra lui Turnus",
+              "detail": "Întemeierea Lavinium, începutul Romei."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_191_enee_et_la_fondation_de_rome_virgile_p4",
+      "title": "Un erou al datoriei",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În Evul Mediu, Vergiliu a devenit un înțelept aproape profetic. Dante îl face ghidul său în [[Divina Comedie]]. Dar Eneas nu este un erou fericit: poartă greutatea destinului. Roma s-a născut din exil, din dragoste sacrificată și din război."
+        },
+        {
+          "type": "takeaway",
+          "text": "În **Eneida**, Virgil îl face pe **Enea**, un supraviețuitor al Troiei, strămoșul mitic al Romei. Eroul întruchipează **pietas**: datoria înaintea dorinței, destinul înaintea fericirii personale."
+        }
+      ]
+    }
+  ]
+}

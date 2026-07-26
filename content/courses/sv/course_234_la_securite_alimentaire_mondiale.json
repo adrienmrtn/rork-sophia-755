@@ -1,0 +1,112 @@
+{
+  "id": "course_234_la_securite_alimentaire_mondiale",
+  "title": "Global livsmedelssäkerhet",
+  "subtitle": "800 miljoner människor",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Jorden producerar tillräckligt med mat för alla. Så varför svälter **800 miljoner människor** fortfarande?",
+  "hero": {
+    "image": "la_securite_alimentaire_mondiale",
+    "ratio": "16:9",
+    "hook": "Hungern hos 800 miljoner människor är inte ett problem med mat, utan av att dela."
+  },
+  "sections": [
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Idag lider cirka **800 miljoner människor** av hunger i världen, eller en av tio personer. Denna siffra är desto konstigare eftersom mänskligheten aldrig har producerat så mycket mat: statistiskt sett finns det mer än tillräckligt att äta för alla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hunger är därför inte ett problem av kvantitet, utan av distribution. Att förstå global livsmedelssäkerhet innebär att förstå varför överflöd och svält kan samexistera på samma planet."
+        }
+      ]
+    },
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_p1",
+      "title": "Hungerns geografi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Enligt **[[FAO]]**, FN:s livsmedelsorgan, drabbade kronisk undernäring fortfarande cirka 800 miljoner människor år 2024. Denna globala siffra döljer mycket olika verkligheter. De mest drabbade områdena finns i Afrika söder om Sahara, där mer än en fjärdedel av befolkningen regelbundet saknar mat, och i Sydasien."
+        },
+        {
+          "type": "image",
+          "asset": "famine_sub_saharan_africa_malnutrition_child",
+          "ratio": "auto",
+          "caption": "Hunger drabbar fortfarande hundratals miljoner människor, särskilt i Afrika söder om Sahara."
+        },
+        {
+          "type": "paragraph",
+          "text": "Det finns flera former av matnöd. **undernäring** motsvarar en brist på kalorier. **Mikronäringsbrist**, ofta kallad \"dold hunger\", påverkar 2 miljarder människor som saknar viktiga vitaminer eller mineraler, med konsekvenser för tillväxt eller hälsa. Slutligen inkluderar **undernäring**, överraskande nog, fetma: i många utvecklingsländer ersätter människor gradvis färskvaror med processade livsmedel, höga i kalorier men fattiga på näringsämnen."
+        },
+        {
+          "type": "funFact",
+          "text": "Om vi ​​minskade det globala matsvinnet med bara 25 % skulle vi teoretiskt kunna föda alla de 800 miljoner människor som lider av hunger idag."
+        }
+      ]
+    },
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_p2",
+      "title": "Paradoxen med överflöd och slöseri",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Världen producerar för närvarande motsvarande 2 800 kilokalorier per person och dag, mer än tillräckligt för att eliminera hunger. Det verkliga problemet är därför inte brist, utan tillgång : de fattigaste befolkningarna har helt enkelt inte möjlighet att köpa mat vars pris ständigt varierar på världsmarknaderna."
+        },
+        {
+          "type": "paragraph",
+          "text": "Den andra sidan av denna paradox är **avfall**. Ungefär en tredjedel av den globala produktionen, eller 1,3 miljarder ton mat, går förlorad varje år. I fattiga länder uppstår förluster tidigt: brist på lagringsplatser, frånvaro av kylrum, vägar i dåligt skick. I rika länder uppstår avfall senare, under distribution och konsumtion."
+        },
+        {
+          "type": "funFact",
+          "text": "Sedan 2010-talet har fetma och fetmarelaterade sjukdomar dödat fler människor världen över varje år än undernäring, en historisk vändpunkt för den globala folkhälsan."
+        }
+      ]
+    },
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_p3",
+      "title": "När mat blir ett geopolitiskt vapen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Livsmedelssäkerhet är också en fråga om geopolitik. Många länder är beroende av export från några få stora jordbruksmakter, vilket gör dem mycket sårbara för minsta blockering. Ukraina och Ryssland står tillsammans för nästan 30 % av världens veteexport. När detta flöde upphör stiger priserna på **[[terminsmarknaden]]** i Chicago, där framtida skördar förhandlas, och länder som Egypten eller Libanon hamnar i en allvarlig social kris."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denna bräcklighet kommer också från ett val som gjordes på 1960-talet: **[[Grön revolution]]**. Denna våg av nya jordbrukstekniker har ökat avkastningen avsevärt, men den har också minskat mångfalden av grödor och gjort bönder beroende av kemiska gödningsmedel. Som ett resultat har varje ökning av oljepriset en direkt inverkan på brödpriset."
+        },
+        {
+          "type": "paragraph",
+          "text": "Begreppet **matkraft** hänvisar just till frivillig användning av livsmedelsexport som ett medel för diplomatiskt påtryckning, eller till och med som en sanktion mot ett motsatt land."
+        }
+      ]
+    },
+    {
+      "id": "course_234_la_securite_alimentaire_mondiale_p4",
+      "title": "Mata 10 miljarder människor utan att utarma planeten",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "År 2050 förväntas jordens befolkning uppgå till 10 miljarder. Klimatförändringarna hotar redan skörden genom ökande torka och översvämningar, vilket förskjuter åkermark. Intensivt jordbruk tömmer också mark och grundvatten, som ibland rinner ut snabbare än det fylls."
+        },
+        {
+          "type": "paragraph",
+          "text": "En av vägarna för framtiden kallas **[[agroekologi]]**: producera genom att förlita sig på naturliga kretslopp, som kompost eller växtföljd, snarare än att bekämpa dem med kemikalier. Utmaningen är att garantera, för varje människa, permanent tillgång till hälsosam mat, utan att utarma planeten ytterligare."
+        },
+        {
+          "type": "takeaway",
+          "text": "Jorden producerar tillräckligt med kalorier för att mata alla. Hungern hos 800 miljoner människor kommer därför från ett problem med tillgång, avfall och geopolitiska kriser, förvärrade av klimatförändringarna."
+        }
+      ]
+    }
+  ]
+}

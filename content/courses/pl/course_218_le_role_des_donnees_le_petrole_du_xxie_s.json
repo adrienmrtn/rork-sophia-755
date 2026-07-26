@@ -1,0 +1,108 @@
+{
+  "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s",
+  "title": "Rola danych („ropa XXI wieku”)",
+  "subtitle": "Najcenniejszy zasób cyfrowy",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Mówią, że dane to nowa ropa. Jednak w przeciwieństwie do ropy, nigdy się nie wyczerpują i stają się tym cenniejsze, im częściej się je spotyka.",
+  "hero": {
+    "image": "le_role_des_donnees",
+    "ratio": "16:9",
+    "hook": "Facebook może odgadnąć, że ktoś bierze ślub lub przeprowadza się, zanim w ogóle się o tym dowie."
+  },
+  "sections": [
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Od 2010 roku utrwaliło się sformułowanie: **dane** oznaczałoby „ropę XXI wieku”. Pomysł jest prosty: po udoskonaleniu za pomocą algorytmów stają się motorem wzrostu i globalnej potęgi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jednak w przeciwieństwie do ropy, która jest zasobem, który się wyczerpie, dane nigdy się nie zużywają: można je kopiować w nieskończoność, a w połączeniu z innymi informacjami zyskują na wartości. Oto dlaczego odmieniło to światową gospodarkę."
+        }
+      ]
+    },
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p1",
+      "title": "Przewidywanie naszego zachowania przed samymi sobą",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Prawdziwa wartość danych nie leży w zwykłej liście nazwisk czy adresów, ale w ich zdolności do przewidywania naszych przyszłych zachowań. Każde wyszukiwanie, każdy ruch, każde kliknięcie pozostawia ślad, który firmy technologiczne łączą w całość, aby stworzyć bardzo dokładny portret każdej osoby."
+        },
+        {
+          "type": "funFact",
+          "text": "Facebook może wykryć poważną zmianę w życiu, taką jak zbliżające się małżeństwo lub przeprowadzka, zanim dana osoba w pełni ją zauważy, wykrywając niewielkie różnice w jej nawykach online."
+        },
+        {
+          "type": "paragraph",
+          "text": "To systematyczne wykorzystywanie naszych zachowań dało początek temu, co badaczka Shoshana Zuboff nazywa **kapitalizm nadzoru**: ludzie nie są już tylko klientem, lecz stają się surowcem systemu, który sprzedaje prognozy oferentowi, który zaoferuje najwyższą cenę."
+        }
+      ]
+    },
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p2",
+      "title": "Dlaczego z tymi gigantami prawie nie da się konkurować",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gospodarka oparta na danych działa w sposób pozytywny: im więcej danych ma firma, tym lepsza jest jej obsługa, co przyciąga więcej użytkowników, którzy generują jeszcze więcej danych. Sztuczna inteligencja przyspieszyła to zjawisko: algorytm [[uczenie maszynowe]] wytrenowany na miliardach przykładów staje się bardziej precyzyjny i szybszy w udoskonalaniu niż konkurent dysponujący ograniczonymi zasobami."
+        },
+        {
+          "type": "image",
+          "asset": "artificial_intelligence_machine_learning_datacenter",
+          "ratio": "16:9",
+          "caption": "Centra danych zużywają tyle samo energii elektrycznej, co całe miasta, aby przetwarzać tak ogromne przepływy informacji."
+        },
+        {
+          "type": "paragraph",
+          "text": "Giganci ci, [[GAFAM]] w Stanach Zjednoczonych i BATX w Chinach, nie zadowalają się już dominacją w swoim pierwotnym sektorze: wykorzystują swoją wiodącą pozycję w zakresie danych do ekspansji na zdrowie, finanse lub samochody połączone z siecią, blokując dostęp do innowacji w wielu obszarach."
+        }
+      ]
+    },
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p3",
+      "title": "Europa kontratakuje, wprowadzając RODO",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stojąc przed taką kompetencją, w 2018 roku Unia Europejska ustanowiła [[RODO]], czyli rozporządzenie, które w teorii przywraca obywatelom władzę nad ich własnymi danymi osobowymi: przejrzystość, prawo do bycia zapomnianym, obowiązkową zgodę."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jej siła wynika z eksterytorialności: każda firma przetwarzająca dane obywateli europejskich musi się do tego zastosować pod karą grzywny w wysokości do 4% jej światowego obrotu. Zmusiło to gigantów takich jak Meta czy Amazon do przeglądu swoich praktyk na całym świecie, czyniąc z Europy niechętnego globalnego regulatora."
+        },
+        {
+          "type": "funFact",
+          "text": "Przed wprowadzeniem wymogu przejrzystości w ramach RODO przeciętna osoba potrzebowałaby około 76 dni roboczych na przeczytanie w ciągu jednego roku wszystkich warunków świadczenia usług cyfrowych, z których korzysta."
+        }
+      ]
+    },
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p4",
+      "title": "Dane, kwestia suwerenności",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Poza gospodarką dane stały się narzędziem władzy samych państw, które mogą je wykorzystywać do monitorowania swojej populacji lub kierowania opinią publiczną. Kraje, które nie są w stanie chronić danych swoich obywateli, narażają się na ryzyko uzależnienia technologicznego, zwanego naruszeniem danych. [[suwerenność cyfrowa]]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Wielkim wyzwaniem nadchodzących dziesięcioleci będzie znalezienie równowagi między postępem, jaki umożliwi analiza danych na dużą skalę, a poszanowaniem prywatności, niezbędnym warunkiem wolności jednostki w coraz bardziej połączonym społeczeństwie."
+        },
+        {
+          "type": "takeaway",
+          "text": "Dane stały się strategicznym aktywem, którego wartość wynika z ich zdolności do przewidywania naszych zachowań. Gospodarka ta faworyzuje gigantów technologicznych, z którymi prawie nie da się konkurować, na co Europa odpowiada rygorystycznymi regulacjami: RODO."
+        }
+      ]
+    }
+  ]
+}

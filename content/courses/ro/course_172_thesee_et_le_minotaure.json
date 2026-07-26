@@ -1,0 +1,120 @@
+{
+  "id": "course_172_thesee_et_le_minotaure",
+  "title": "Tezeu și Minotaurul",
+  "subtitle": "Firul, monstrul, pânzele",
+  "subject": "mythologie",
+  "subcategory": "Greece: the heroes",
+  "description": "Tezeu ucide Minotaurul folosind firul Ariadnei. Dar uită să schimbe pânzele: tatăl său Egeu se aruncă în mare, care încă îi poartă numele.",
+  "hero": {
+    "image": "thesee_et_le_minotaure",
+    "ratio": "16:9",
+    "hook": "Un monstru într-un labirint. Un fir de iesit. Pânze uitate care botez o mare."
+  },
+  "sections": [
+    {
+      "id": "course_172_thesee_et_le_minotaure_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Tezeu**, erou fondator al Atenei, se confruntă cu **Minotaur**, o creatură jumătate om, jumătate taur ascunsă în [[Labirint]] din Creta. Povestea îmbină curajul, viclenia romantică și tragedia de familie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prin uciderea monstrului, Tezeu eliberează Atena de un tribut sângeros. Dar un detaliu uitat, pânze negre în loc de albe, îl va costa pe tatăl său și va da numele Mării Egee."
+        }
+      ]
+    },
+    {
+      "id": "course_172_thesee_et_le_minotaure_p1",
+      "title": "Minotaurul și tributul Atenei",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Regele **Minos** al Cretei refuză să sacrifice un taur alb lui **Poseidon**, zeul mărilor. Pentru a se răzbuna, Poseidon inspiră reginei **Pasiphaé** o pasiune pentru animal. Se naște Minotaurul. Minos îi încredințează inventatorului [[Labirint]] să construiască o închisoare fără scăpare: Labirintul."
+        },
+        {
+          "type": "image",
+          "asset": "theseus_minotaur_cretan_labyrinth_painting",
+          "ratio": "4:3",
+          "caption": "Minotaurul, închis în Labirintul Cretan."
+        },
+        {
+          "type": "paragraph",
+          "text": "Creta domină apoi marea: a [[Talasocrația]]. După un război pierdut, Atena trebuie să predea la fiecare nouă ani **șapte tineri și șapte fete tinere** ca hrană monstrului. La a treia livrare, **Tezeu**, fiul regelui **Égée**, se oferă voluntari."
+        },
+        {
+          "type": "funFact",
+          "text": "Egeu și Tezeu convin asupra unui semnal: **alb** navighează dacă eroul se întoarce în viață, **negru navigează** dacă este mort. Acest detaliu va decide o dramă."
+        }
+      ]
+    },
+    {
+      "id": "course_172_thesee_et_le_minotaure_p2",
+      "title": "Pesmet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În Creta, **Ariane**, fiica lui Minos, se îndrăgostește de Tezeu. Ea știe că puterea nu este suficientă în Labirint. Cu ajutorul lui Daedalus, ea îi dă un ghem de lână: [[Pesmet]]. Îl atașează la intrare și desfășoară firul în timp ce înaintează."
+        },
+        {
+          "type": "image",
+          "asset": "ariadne_thread_theseus_labyrinth_painting",
+          "ratio": "4:3",
+          "caption": "Ariadna îi dă lui Tezeu firul care îi va salva viața."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tezeu ucide Minotaurul, apoi derulează firul pentru a ieși. Fuge cu tinerii atenieni și cu Ariadna. Dar pe insula **Naxos**, o lasă adormită. Unii spun că zeul **Dionysos** a vrut-o ca soție. Ariadna, disperată și apoi zeificată, primește o coroană de aur devenită o constelație."
+        }
+      ]
+    },
+    {
+      "id": "course_172_thesee_et_le_minotaure_p3",
+      "title": "Pânzele negre ale Capului Sounion",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Întoarcerea ar trebui să fie o sărbătoare. Intoxicat de victorie sau tulburat de abandonul Ariadnei, Tezeu uită să ridice pânzele albe. Nava se apropie de Atena sub pânze negre."
+        },
+        {
+          "type": "image",
+          "asset": "cape_sounion_aegean_sea_cliff_sunset",
+          "ratio": "4:3",
+          "caption": "Capul Sounion, de unde Aegeus a urmărit întoarcerea fiului său."
+        },
+        {
+          "type": "paragraph",
+          "text": "La **Capul Sunion**, bătrânul rege Egeu scanează orizontul. El vede doar întunericul doliului. Convins că fiul său este mort, se aruncă de pe stâncă. De atunci, marea a fost numită: **Marea Egee**. Tezeu ajunge rege... și a rămas orfan din propria sa neglijență."
+        },
+        {
+          "type": "funFact",
+          "text": "„Nava lui Tezeu” a devenit un paradox filosofic: dacă înlocuim toate scândurile una câte una, mai este aceeași barcă?"
+        }
+      ]
+    },
+    {
+      "id": "course_172_thesee_et_le_minotaure_p4",
+      "title": "Tezeu, regele Atenei",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Încoronat, Tezeu devine un rege organizator. Lui i se atribuie [[Sinoecismul]]: unificarea orașelor Attica din jurul Atenei. El a înființat [[Panathenaia]], festivaluri majore ale orașului. Might se combină cu dreptul."
+        },
+        {
+          "type": "paragraph",
+          "text": "Domnia lui include și alte aventuri, precum lupta împotriva [[Amazonele]]. Dar Labirintul rămâne semnul său: a ști cum să dezlege inextricabilul, rămânând în același timp vulnerabil la uitare. Tezeu creează măreția Atenei din cenușa unei tragedii de familie."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Aceștia** ucide **Minotaur** datorită firului lui **Ariane**. Uitând să schimbe pânzele, el provoacă sinuciderea tatălui său **Égée**, care își dă numele Mării Egee."
+        }
+      ]
+    }
+  ]
+}

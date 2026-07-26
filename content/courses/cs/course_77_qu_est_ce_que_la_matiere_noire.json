@@ -1,0 +1,108 @@
+{
+  "id": "course_77_qu_est_ce_que_la_matiere_noire",
+  "title": "Co je temná hmota?",
+  "subtitle": "Neviditelný vesmír",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Nikdy jsme ji neviděli. Bez něj by se však galaxie rozpadly. Temná hmota je neviditelným lepidlem vesmíru.",
+  "hero": {
+    "image": "qu_est_ce_que_la_matiere_noire",
+    "ratio": "16:9",
+    "hook": "Představte si neviditelné lepidlo, které drží galaxie pohromadě. Nevidíme ji, ale vidíme, co zadržuje."
+  },
+  "sections": [
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cítíte vítr, aniž byste ho viděli: větve se pohybují, vlasy létají. **Temná hmota** je trochu podobná té v měřítku vesmíru. Nesvítí, neodráží světlo, neblokuje žádné paprsky. „Vidíme“ to pouze podle toho, čím se pohybuje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Představovalo by to přibližně **27%** vesmíru, pětkrát více než veškerá běžná hmota: hvězdy, planety, plyn. Bez něj by se galaxie otáčely příliš rychle na to, aby držely pohromadě."
+        }
+      ]
+    },
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_p1",
+      "title": "Hvězdy na kraji příliš rychle",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V letech **1970** měřil americký astronom **Věra Rubinová** rychlost hvězd ve spirálních galaxiích. Ve Sluneční soustavě platí, že čím dále se od Slunce vzdálíme, tím pomaleji rotujeme. Očekávala stejný vzorec."
+        },
+        {
+          "type": "image",
+          "asset": "dark_matter_galaxy_cluster",
+          "ratio": "auto",
+          "caption": "Temná hmota prozrazuje svou přítomnost prostřednictvím svého gravitačního účinku na kupy galaxií."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nyní se hvězdy na okraji otáčely **jako rychle** jako hvězdy uprostřed. Už jen s viditelnou hmotou měli odletět. Bylo proto nutné mít neviditelnou hmotu, **svatozář**, neviditelný sférický obal kolem galaxie, který je zadržuje. Galaxie [[rotační křivka galaxie]] se stala vlajkovou lodí důkazů temné hmoty."
+        },
+        {
+          "type": "funFact",
+          "text": "Vera Rubin musela dlouho bojovat, aby byla brána vážně. Princeton jí dlouho odmítal doktorát z astronomie... protože byla až do roku 1975 žena."
+        }
+      ]
+    },
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_p2",
+      "title": "Z čeho je vyroben? Stále hledáme",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Není to obyčejná hmota, nazývaná **baryonický**, složená z protonů a neutronů: neinteraguje se světlem. Křižuje Zemi i nás, aniž by zanechal viditelnou stopu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dlouhodobě oblíbené olovo, **WIMP**, slabě interagující masivní částice, by byla těžká částice mimo [[Standardní model fyziky]], teorie, která popisuje známé elementární částice. Detektory **liquidxeon** uložené pod zemí doufají ve vzácný šok. V tuto chvíli bez jasného úspěchu. Jiní spoléhají na ultralehkou částici **axion** nebo na gravitaci, kterou je třeba zkontrolovat. Mezitím temná hmota ohýbá prostor a vytváří [[Gravitační čočky]], která deformuje světlo z masivního objektu."
+        }
+      ]
+    },
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_p3",
+      "title": "A temná energie, další záhada",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Temná hmota přitahuje. [[Temná energie]], objevená v **1998**, dělá pravý opak: urychluje **rozpínání vesmíru**, zvětšující se vzdálenost galaxií. Galaxie se vzdalují stále rychleji, zatímco gravitace by měla pohyb zpomalit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vážil by přibližně **68%** vesmíru. S temnou hmotou to dělá **95%** neviditelného vesmíru. Vše, co vidíme, atomy a světlo, je jen odpad **5 %**."
+        },
+        {
+          "type": "funFact",
+          "text": "Ve velmi vzdálené budoucnosti by temná energie mohla odtlačit jiné galaxie do té míry, že by byly z Mléčné dráhy neviditelné: téměř prázdná obloha."
+        }
+      ]
+    },
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_p4",
+      "title": "Masivní důkazy, částice nenalezena",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Na jedné straně se hromadí nepřímé důkazy: galaktické rotace, **kosmické mikrovlnné pozadí**, fosilní záření z mladého vesmíru, vláknitá struktura vesmíru. Na druhou stranu žádná přímá detekce částic."
+        },
+        {
+          "type": "paragraph",
+          "text": "21. století se bude muset rozhodnout: nová rodina částic nebo nový způsob uvažování o gravitaci. Temná hmota není jen detail oblohy. Je to laboratoř, kde je vynalezena fyzika zítřka."
+        },
+        {
+          "type": "takeaway",
+          "text": "Temná hmota tvoří **27 %** vesmíru. Dokazuje to jeho gravitace na hvězdy a světlo, i když jsme to nikdy přímo neviděli."
+        }
+      ]
+    }
+  ]
+}

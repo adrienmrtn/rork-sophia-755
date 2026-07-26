@@ -1,0 +1,120 @@
+{
+  "id": "course_162_promethee_le_voleur_de_feu",
+  "title": "Prométheusz: a tűztolvaj",
+  "subtitle": "A titán, aki szembeszáll Zeusszal",
+  "subject": "mythologie",
+  "subcategory": "Greece: the gods",
+  "description": "Prométheusz tüzet lop az istenektől az emberek számára, majd végtelen gyötrelmeket visel el. Mítosz a haladásról, a ravaszságról és a szabadság áráról.",
+  "hero": {
+    "image": "promethee_le_voleur_de_feu",
+    "ratio": "16:9",
+    "hook": "Egy titán ellopja a tüzet az Olümposzról. A férfiak civilizációt nyernek. Szerez egy sast és egy láncot."
+  },
+  "sections": [
+    {
+      "id": "course_162_promethee_le_voleur_de_feu_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A **Prométheusz** egy titán, az előző generáció istene. A neve azt idézi, aki előre lát. A görög mítoszokban ő formálja meg az első embereket, megvédi őket **Zeusz**, az Olimposz királyától, és kegyetlen büntetéssel fizet ezért a választásért."
+        },
+        {
+          "type": "paragraph",
+          "text": "Azáltal, hogy tüzet lop a halandóknak, technikát és tudást ad az embereknek. A Kaukázuson végzett kínzásai annak a zseninek a jelképévé válnak, aki szembe mer állni a hatalommal."
+        }
+      ]
+    },
+    {
+      "id": "course_162_promethee_le_voleur_de_feu_p1",
+      "title": "Az ember meztelenül születik, Prometheus-trükk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Azt mondják, hogy Prométheusz agyaggal és vízzel modellezte az első embereket. Testvére, [[Epimétheusz]] túl gyorsan cselekszik. Felelős az állatok felszereléséért, mindent megad: karmokat, szárnyakat, szőrt, sebességet. Amikor a férfira kerül a sor, nem marad semmi. Az emberek törékenynek és védtelennek születnek."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prométheusz úgy dönt, hogy kárpótol. A [[Mecone]]-nek való áldozat közben egy ökröt két részre vág. Egy csúnya bőr alatt jó húst rejt. Étvágygerjesztő zsír alatt elrejti a csontokat. **Zeusz** a jó megjelenést választja. Azóta az emberek ették a húst, és felajánlották a csontokat az isteneknek."
+        },
+        {
+          "type": "funFact",
+          "text": "A tűz elrejtésére Prometheus egy [[Nádpálca]] rudat használ. Velője nagyon lassan ég: a mediterrán pásztorok valóban hordozható öngyújtónak használták."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zeusz dühös, amiért becsapták, és elveszi a tüzet az emberektől. Hő és fény nélkül szinte állati életbe zuhannak vissza."
+        }
+      ]
+    },
+    {
+      "id": "course_162_promethee_le_voleur_de_feu_p2",
+      "title": "A tűzlopás és a kínzás",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Prométheusz belép az Olümposzra. Szikrát lop a Nap szekeréből, vagy **Héphaisztosz**, a kovácsok istenének kovácsából, változattól függően. Üreges szárába rejti, és visszahozza a halandóknak."
+        },
+        {
+          "type": "image",
+          "asset": "prometheus_steal_fire_ancient_greek_painting",
+          "ratio": "4:3",
+          "caption": "A Prométheusz tüzet hoz az emberekbe, a technológia alapja."
+        },
+        {
+          "type": "paragraph",
+          "text": "A görögök számára a tűz nem csak láng. Megtestesíti a **technikát** és a **ok**-t, amely lehetővé teszi az ember számára, hogy átalakítsa a világot. Zeusz visszavág. Az emberiség ellen, később elküldi Pandorát. Prométheusszal szemben a büntetés közvetlen."
+        },
+        {
+          "type": "funFact",
+          "text": "Az ókori gyógyászatban a **máj**-t az érzelmek és a vitalitás székhelyének tekintették. Zeusz ezt az orgonát választotta, hogy megtörje a Titán akaratát."
+        },
+        {
+          "type": "paragraph",
+          "text": "A Titán a **Kaukázus** falához van láncolva. Minden nap egy sas felfalja a máját. Minden este újjászületik az orgona. A kínzás hajnalban újra kezdődik, vég nélkül."
+        }
+      ]
+    },
+    {
+      "id": "course_162_promethee_le_voleur_de_feu_p3",
+      "title": "Héraklész széttöri a láncokat",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Prométheusz évszázadokon át nem volt hajlandó megadni magát. Ismer egy veszélyes titkot: melyik nő szül majd erősebb fiat Zeusznál. A kínzások ellenére hallgat. A zsarnoksággal szembeni ellenállás szimbólumává válik."
+        },
+        {
+          "type": "paragraph",
+          "text": "A hős **Héraklész**, Zeusz fia végül megérkezik a Kaukázusba. Egy nyíllal megöli a sast, és kiszabadítja a foglyot. Zeusz elfogadja a kegyelmet: Prométheusz végre felfedi a titkot a **Thétis** nimfáról. Az istenek királya így elkerüli saját bukását."
+        },
+        {
+          "type": "paragraph",
+          "text": "A sziklára kötött eskü tiszteletben tartása érdekében Prométheusz láncai vasából és kőtöredékből készült gyűrűt visel. A hegyhez „kapcsolt” marad, de szabad."
+        }
+      ]
+    },
+    {
+      "id": "course_162_promethee_le_voleur_de_feu_p4",
+      "title": "Egy mítosz, amely soha nem alszik ki",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A Kr.e. 5. században a tragédiaíró [[Aiszkhülosz]] a „Láncba zárt Prométheuszt” állította színpadra. Később a mítosz inspirálja a tudományt és a haladást. Mary Shelley „Frankenstein” „A modern Prometheus” felirattal: Az élet bölcsesség nélküli megteremtése pusztíthat is."
+        },
+        {
+          "type": "paragraph",
+          "text": "A filozófus [[Gaston Bachelard]] még egy „Prométheusz-komplexumról” beszél: ez a vágy, hogy többet ismerjen meg mestereinél. Manapság gyakran hasonlítjuk össze a mesterséges intelligenciát vagy a genetikát egy új tűzzel: hatalmas erővel, amelyet még mindig rosszul irányítanak."
+        },
+        {
+          "type": "takeaway",
+          "text": "A **Prométheusz** civilizációt kínál a férfiaknak a tűzlopáson keresztül, elvisel egy ezeréves gyötrelmet, majd a **Héraklész** szállítja ki. A haladásnak ára van, és az isteni erőnek is."
+        }
+      ]
+    }
+  ]
+}

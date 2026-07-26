@@ -1,0 +1,122 @@
+{
+  "id": "course_159_le_theatre_de_shakespeare",
+  "title": "Shakespeares theater",
+  "subtitle": "1564-1616",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture + iconic works",
+  "description": "In Londen schreef Shakespeare voor de Globe. Hamlet, Macbeth, Romeo: populair theater dat het hoogtepunt van de Engelse taal is geworden.",
+  "hero": {
+    "image": "le_theatre_de_shakespeare",
+    "ratio": "16:9",
+    "hook": "Een toneelschrijver van een acteur, een theater zonder decors... en eeuwige lijnen."
+  },
+  "sections": [
+    {
+      "id": "course_159_le_theatre_de_shakespeare_intro",
+      "title": "Inleiding",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Willem Shakespeare** (1564-1616) schreef voor het Londense toneel, niet voor de school. Zijn toneelstukken mixen koningen, clowns, geliefden en moordenaars."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vier eeuwen later wordt het nog steeds overal gespeeld."
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p1",
+      "title": "De Globe en de grondbewoners",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Met het gezelschap van [[De mannen van Lord Chamberlain]] speelt hij in het [[Globe Theater]], een openluchtcirkel. De [[grondbewoners]] betalen weinig en blijven dichtbij het podium staan. Het theater is populair, luidruchtig, levendig."
+        },
+        {
+          "type": "paragraph",
+          "text": "Elizabethaans Londen houdt van spektakel. Theaters concurreren met preken en berengevechten. Shakespeare schrijft op deze luidruchtige markt, niet in een ivoren toren."
+        },
+        {
+          "type": "image",
+          "asset": "globe_theatre_london_reconstruction",
+          "ratio": "4:3",
+          "caption": "The Globe: het tafereel werd door de menigte geduwd."
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p2",
+      "title": "Een nieuwe taal",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hij schrijft vaak in Shakespeariaanse blanco verzen: jambische pentameter zonder rijm. Beledigingen, gedichten, monologen: hij bedenkt woorden en vestigt personages (Hamlet, Lady Macbeth) die mythen zijn geworden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hij recycleert kronieken, Italiaans nieuws, oude stukken. De originaliteit zit in de taal en de karakters, niet in de pure verzinsel van de plot."
+        },
+        {
+          "type": "funFact",
+          "text": "Verschillende van zijn stukken zijn pas bij ons terechtgekomen dankzij het [[Eerste folio]] uit 1623, gepubliceerd na zijn dood."
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p3",
+      "title": "Tragedies, komedies, verhalen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hij gaat van lachen naar bloed. *Romeo als Julia*, *othello*, *Koning Lear*: families, macht, jaloezie. De ‘geschiedenisspelen’ spelen Engeland na voor een publiek dat zichzelf graag in epische vorm ziet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Komedies en tragedies reageren op elkaar. De gek spreekt de waarheid; de koning wordt gek. Deze porositeit van tinten verklaart waarom het nog steeds op duizend manieren kan worden gemonteerd."
+        },
+        {
+          "type": "image",
+          "asset": "shakespeare_first_folio_1623",
+          "ratio": "4:3",
+          "caption": "The First Folio: teksten uit de vergetelheid redden."
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p4",
+      "title": "Erfenis",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vertaald, aangepast, gesampled door cinema en rap, blijft Shakespeare een gereedschapskist voor het uiten van ambitie en verlangen. Zijn geheim: schrijven voor acteurs, voor een publiek."
+        },
+        {
+          "type": "paragraph",
+          "text": "Om het theater van Shakespeare volledig te begrijpen, moet je één ding in gedachten houden: elk technisch detail dient een emotie of een idee. Het werk is nooit louter decoratief."
+        },
+        {
+          "type": "paragraph",
+          "text": "Context is net zo belangrijk als stijl. Data, plaatsen, sponsors, publiek: dit alles verklaart waarom een ​​formulier op een bepaald moment verschijnt, en niet eerder."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ten slotte wordt de erfenis over de lange termijn gemeten. Wat we vandaag de dag zien in musea, films of populaire muziek draagt ​​nog steeds de sporen van deze uitvindingen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vertaald in de 18e eeuw in Frankrijk en elders, werd het een wereldklassieker. Elk tijdperk vindt in hem zijn spiegel: romantisch, politiek, postkoloniaal, feministisch."
+        },
+        {
+          "type": "takeaway",
+          "text": "In de Globe vond Shakespeare een populair theater uit waarvan de karakters en taal de wereld veroverden."
+        }
+      ]
+    }
+  ]
+}

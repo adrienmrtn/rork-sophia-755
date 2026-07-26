@@ -1,0 +1,124 @@
+{
+  "id": "course_19_la_bataille_de_stalingrad_1942_1943",
+  "title": "Bitva o Stalingrad",
+  "subtitle": "1942-1943",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "Od léta 1942 do února 1943 se Němci a Sověti navzájem zabíjeli v troskách města na Volze. Stalingrad se stává zlomem druhé světové války.",
+  "hero": {
+    "image": "la_bataille_de_stalingrad",
+    "ratio": "16:9",
+    "hook": "V troskách města považovala armáda za neporazitelné útěky nadobro."
+  },
+  "sections": [
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Od léta **1942** do **Února 1943** svět sleduje pás ruin na **Volha**, velké řece Ruska. U **Stalingrad** (dnes Volgograd) narazila německá armáda na sovětský odpor připravený přinést jakékoli oběti."
+        },
+        {
+          "type": "paragraph",
+          "text": "S více než **jeden milion** mrtvých to byla nejsmrtelnější bitva v historii...a bod zlomu druhé světové války."
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p1",
+      "title": "Hitler se zaměřuje na jižní ropu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Po neúspěchu před Moskvou v roce 1941 zahájil Hitler letní ofenzívu na jih [[Modré pouzdro]]. Cíl: ropa z **Kavkazu**. **Stalingrad**, železniční a říční uzel na Volze, je zpočátku pouze vedlejším cílem. Poté symbol vyhrává: obsazení města, které nese jméno **Stalin**, se stává posedlostí."
+        },
+        {
+          "type": "image",
+          "asset": "battle_of_stalingrad_ruins",
+          "ratio": "4:3",
+          "caption": "Stalingrad v troskách: nelítostné městské bojiště."
+        },
+        {
+          "type": "funFact",
+          "text": "Hitler si byl tak jistý vítězstvím, že si prý nechal vytisknout pozvánky na vítěznou hostinu v hotelu Lux ve Stalingradu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Německá **6. armáda**, které velí generál [[Friedrich Paulus]], je odkloněna do města. Bombardování [[Luftwaffe]], německého letectva, v srpnu 1942 zanechalo krajinu kráterů... ideální pro sovětskou obranu."
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p2",
+      "title": "Bojujte dům po domě",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sovětský generál **Wassily Čujkov** stanovil jednoduchou taktiku: zůstaňte v okruhu **30 metrů** od nepřítele. Německé dělostřelectvo a letadla tedy nemohou udeřit bez zabití vlastních mužů. Němci tomu říkají **Rattenkrieg**, „krysí válka“: bojujeme ve sklepích, stokách, zničených budovách."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Pavlovský dům**, budova řízená hrstkou vojáků, odolávala **58 dnů**. V továrně **Dzeržinský** jsou tanky vyráběny pod bombami a odváženy přímo na frontu. Stalinův **Objednávka 227** shrnuje pořadí: **„Ani krok zpět“**."
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p3",
+      "title": "Kleště, které zavírají past",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zatímco Paulus utíká v troskách, sovětský maršál **Georgij Zukov** připravuje [[Operace Uran]]. Německá křídla, hlídaná špatně vybavenými spojenci (Rumuni, Italové, Maďaři), ustoupila. 19. listopadu 1942  se kleště uzavřely: bylo obklíčeno přibližně **300 000** mužů."
+        },
+        {
+          "type": "funFact",
+          "text": "Sověti vysílali z reproduktorů tikání hodin a pak zprávu: každých **7 sekund** v SSSR zemřel německý voják."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hitler zakázal odchod. [[Hermann Göring]], šéf Luftwaffe, slibuje leteckou přepravu. Nedaří se mu. Hlad, tyfus, **-30 °C**: „kotel“ se stává smrtelnou pastí."
+        }
+      ]
+    },
+    {
+      "id": "course_19_la_bataille_de_stalingrad_1942_1943_p4",
+      "title": "Kapitulace, která mění válku",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "30. ledna 1943 Hitler jmenoval Pauluse **polní maršála**, nejvyšší hodnost, aby ho povzbudil, aby raději zemřel, než aby se vzdal. Paulus kapituloval **února 2**. Z 300 000 obklíčených odešlo **91 000** jako vězni. Poprvé musí nacistická propaganda přiznat totální porážku. Armáda považovaná za neporazitelnou byla rozbita."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "léto 1942",
+              "title": "Modré pouzdro",
+              "detail": "Německá ofenzíva na Kavkaz a Stalingrad."
+            },
+            {
+              "date": "19. listopadu 1942",
+              "title": "Operace Uran",
+              "detail": "Obklíčení 6. armády."
+            },
+            {
+              "date": "2. února 1943",
+              "title": "Kapitulace",
+              "detail": "Paulus se vzdává; bod obratu války."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "**Stalingrad** (**1942-1943**) ničí německou 6. armádu a boří mýtus o nacistické neporazitelnosti v nejsmrtelnější bitvě v dějinách."
+        }
+      ]
+    }
+  ]
+}

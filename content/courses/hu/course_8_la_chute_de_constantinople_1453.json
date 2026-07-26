@@ -1,0 +1,139 @@
+{
+  "id": "course_8_la_chute_de_constantinople_1453",
+  "title": "Konstantinápoly bukása",
+  "subtitle": "1453",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "1453. május 29-én, 53 napos ostrom után, az oszmánok kényszerítették Konstantinápoly falait. Új Róma elesik, és a középkor megváltozik.",
+  "hero": {
+    "image": "la_chute_de_constantinople_1453",
+    "ratio": "16:9",
+    "hook": "Ezer éves sáncok. Ötvenhárom nap ágyú. Egy város, amely lezár egy korszakot."
+  },
+  "sections": [
+    {
+      "id": "course_8_la_chute_de_constantinople_1453_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1453. május 29-én** **53 alvás** ostrom után az oszmán szultán katonái bevonultak **Konstantinápolyba**, a Bizánci Birodalom (a Kelet-Római Birodalom) fővárosába. A város, amely több mint egy évezredig ellenállt, megadta magát az új tüzérség csapásainak."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ez nem csak Bizánc vége. Az „Új Róma” bukása a keleti útvonalak elzárásával arra késztette Európát, hogy más utakat keressen. A középkor bezárul."
+        }
+      ]
+    },
+    {
+      "id": "course_8_la_chute_de_constantinople_1453_p1",
+      "title": "Egy főváros már majdnem meghalt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A Konstantin császár által **330**-ben alapított város hosszú ideig Európa jelképe volt. A 15. században a Bizánci Birodalom nem volt más, mint egy árnyék, amelyet különösen Konstantinápoly kifosztása gyengített meg. Maradt a főváros és néhány görög terület. Körülbelül **50.000** ember él a romok között, ahol egykor **500.000** lélek élt. [[Konstantinápoly kifosztása a 4. keresztes hadjárat során (1204)]]"
+        },
+        {
+          "type": "image",
+          "asset": "constantinople_theodosian_walls",
+          "ratio": "4:3",
+          "caption": "A theodoszi falak, amelyeket sokáig bevehetetlennek tartottak."
+        },
+        {
+          "type": "paragraph",
+          "text": "Legújabb eszköze: a [[Theodosian Walls]], háromszoros sáncsor az V. századból. Ezer évig senki sem kényszerítette őket a földön. Konstantinápoly egy keresztény sziget az oszmán tengerben."
+        },
+        {
+          "type": "funFact",
+          "text": "A bizánciak még körülvéve is folytatták a vitát apró teológiai kérdéseken. A „bizánci vita” kifejezés megragadt."
+        }
+      ]
+    },
+    {
+      "id": "course_8_la_chute_de_constantinople_1453_p2",
+      "title": "II. Mehmed és az ágyú",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A **1451**-ben **Mehmed II**, az Oszmán Birodalom fiatal szultánja **19 Éva**, és egy rögeszme: elfoglalni a várost. Felbérelte az alapítót **Városi**, aki megkovácsolta a „Bazilikát”, egy **8 méter** ágyút, amely **600 kg** súlyú ágyúgolyókat tüzel. A középkori erődítmények elavulnak."
+        },
+        {
+          "type": "image",
+          "asset": "mehmed_ii_portrait_sultan",
+          "ratio": "4:3",
+          "caption": "II. Mehmed, a fiatal szultán, aki Konstantinápolyt akarja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Az ostrom 1453 **április 2-án kezdődik.**Z80** 000–200 000** oszmánokkal, köztük a [[janicsárok]]-vel (a szultáni elit csapatai), az utolsó bizánci császárral, [[XI. Konstantin Palaiologosz]] csak a **7 000** védőket állítja be. Minden este fával és földdel töltik be a hézagokat."
+        },
+        {
+          "type": "funFact",
+          "text": "Urban ágyúja olyan nehéz volt, hogy **60 ökrök** és **400 férfi** kellett mozgatni. Naponta csak **7-szer** lőhetett, különben felrobbanna."
+        }
+      ]
+    },
+    {
+      "id": "course_8_la_chute_de_constantinople_1453_p3",
+      "title": "május 29",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mehmed [[Aranyszarv]]-ben, a város természetes kikötőjében egy vízen átfeszített lánccal elzárva **70 hajókat** szárazföldön vontatott a védelem mögé. **max 29.**, hajnalban az általános támadás a Saint-Romain kapu közelében áttört. Beszélünk egy kis ajtóról is, a **Kerkoporta**, nyitva hagyva."
+        },
+        {
+          "type": "paragraph",
+          "text": "XI. Konstantin beleveti magát a harcba; testét soha nem fogják hivatalosan azonosítani. Mehmed a **Hagia Sophia**-t, a nagy bazilikát mecsetté alakította. Konstantinápoly lesz [[Isztambul]], egy hódító birodalom fővárosa."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1204",
+              "title": "A 4. keresztes hadjárat kizsákmányolása",
+              "detail": "Bizáncot a latinok végleg meggyengítették."
+            },
+            {
+              "date": "1451",
+              "title": "Mehmed csatlakozása II",
+              "detail": "Az ifjú szultán előkészíti a Város elfoglalását."
+            },
+            {
+              "date": "1453. április 2",
+              "title": "Az ostrom kezdete",
+              "detail": "Az oszmán tüzérség a falakhoz csapódik."
+            },
+            {
+              "date": "1453. május 29",
+              "title": "A város bukása",
+              "detail": "Konstantinápoly oszmán fővárossá válik."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_8_la_chute_de_constantinople_1453_p4",
+      "title": "Visszacsapás Európára",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A görög tudósok kézirataikkal Itáliába menekülnek: [[A görög diaszpóra és a reneszánsz]]. Kereskedelmi szinten az oszmánok erősen megadóztatták a keleti útvonalakat. Portugália és Spanyolország az Atlanti-óceánt keresi. A **1492**-ben Kolumbusz Amerikába botlik."
+        },
+        {
+          "type": "paragraph",
+          "text": "A bukás véget vet a [[A bizánci jog és a római örökség]]: Constantinople ezer éven át közvetítette a római jogot és a görög kultúrát. A modern Európa részben ebből a gyászból született: egy ezeréves birodalom kihalt, egy másik világ nyílt meg."
+        },
+        {
+          "type": "takeaway",
+          "text": "**1453. május 29**, Konstantinápoly elesik ezer év ellenállás után. Bizánc vége, oszmán felemelkedés, a reneszánsz felgyorsulása és a nagy felfedezések: sarkalatos dátum."
+        }
+      ]
+    }
+  ]
+}

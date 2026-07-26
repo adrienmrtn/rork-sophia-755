@@ -1,0 +1,126 @@
+{
+  "id": "course_144_la_nouvelle_vague_francaise",
+  "title": "A francia újhullám",
+  "subtitle": "1959-1968",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "A *Mozi jegyzetfüzetek* fiatal kritikusai a kamera mögé állnak. A **1959** és **1968** között az Új Hullám kiszabadította a filmet a stúdióból, és feltalálta a modern szerzői mozit.",
+  "hero": {
+    "image": "la_nouvelle_vague_francaise",
+    "ratio": "16:9",
+    "hook": "A filmkritikusok fényképezőgépeket lopnak, és újra feltalálják a hetedik művészetet."
+  },
+  "sections": [
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A **Új Hullám** (1959-1968) nem egy egyszerű stílus. Ez egy erőkifejtés. A fiatal francia filmrajongók úgy ítélik meg, hogy a stúdiómozi túl fix, túl csiszolt, túl előre megírt. Úgy akarnak filmezni, ahogy egy regényt írsz: szabadon, első személyben."
+        },
+        {
+          "type": "paragraph",
+          "text": "A kritikától a produkció felé haladva a rendezőt teszik a film igazi szerzőjévé. És megváltoztatják a világ filmjét."
+        }
+      ]
+    },
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_p1",
+      "title": "Először az ötletek forradalma",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A díszletek előtt van egy magazin: a **Mozi jegyzetfüzetek**, amelyet **1951**-ben alapított [[André Bazin]]. Körülötte fiatal kritikusok: **Jean-Luc Godard**, **François Truffaut**, **Claude Chabrol**, **Jacques Rivette**, **Éric** RohmerZZZENDBOLDZ. Központi ötletük a [[Szerzői szabályzat]]."
+        },
+        {
+          "type": "image",
+          "asset": "cahiers_du_cinema_magazine_1950s",
+          "ratio": "4:3",
+          "caption": "Les Cahiers du cinéma: az iskola, ahol az új hullám megtanult gondolkodni a filmről."
+        },
+        {
+          "type": "paragraph",
+          "text": "Számukra az igazi alkotó nem a forgatókönyvíró, hanem az, aki rendez. A keretezés, a ritmus, a vágások: ezek a szerző aláírásai, akár egy regényíró stílusa."
+        }
+      ]
+    },
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_p2",
+      "title": "1959: Truffaut és Godard belép a színre",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A **1959**-ben a *A négyszáz ütés*, **François Truffaut** diadalmaskodott Cannes-ban. A film **Antoine Doinel** tinédzserkori szakítást követi nyomon, akit [[Jean-Pierre Léaud]] alakít. A kamera inkább az életet követi, mint egy szigorú forgatókönyvet. Az utolsó pillantás ránk a [[negyedik fal]]-n halad át: a hős a közönségre néz, happy end nélkül."
+        },
+        {
+          "type": "image",
+          "asset": "truffaut_400_coups_antoine_doinel_film",
+          "ratio": "4:3",
+          "caption": "Antoine Doinel szemben a tengerrel: egy fiatal, aki elutasítja a világos sorsot."
+        },
+        {
+          "type": "funFact",
+          "text": "A következő évben Godard *Kifulladt* [[Jean-Paul Belmondo]]-vel, megdöbbenve a hirtelen vágásokkal. Godard a mozdulatok közepén vág, mintha ollóval írna."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ez a két film azt bizonyítja, hogy másként is tudunk mesélni: gyorsabban, szabadabban, közelebb az utcához."
+        }
+      ]
+    },
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_p3",
+      "title": "Hagyja el a stúdiót, és filmezze meg Párizst",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A szünet is technikai jellegű. A [[Éclair Caméflex]] kamerák és az érzékenyebb filmek lehetővé teszik a [[Filmezés helyszínnel és könnyű kamerával]]. Nincs több nehéz stúdió: kávézókban, apartmanokban és Párizs utcáin forgatunk, gyakran természetes fényben."
+        },
+        {
+          "type": "paragraph",
+          "text": "A színészek improvizálnak. A beszéd ismerőssé válik, néha dadog. A mozi úgy lélegzik, mint az élet. Ez a szabadság ihlette azután a [[Cinema Novo]]-t Brazíliában, majd az olyan ultraszigorú szabályokat, mint a dániai [[Dogme 95]], ugyanazon hitelességszomj távoli örökösei."
+        }
+      ]
+    },
+    {
+      "id": "course_144_la_nouvelle_vague_francaise_p4",
+      "title": "Globális örökség",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A **1970** években ez ihlette a **Új Hollywood**-t: **Martin Scorsese**, **Francis Ford Coppola**, **Steve** SpielbergZZENDBOLD amerikai hatékonyság és francia ZZ keverék. Az Új Hullám egy maradandó ötletet támasztott: egy film egyetlen ember hangját hordozhatja."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1951",
+              "title": "Mozi jegyzetfüzetek",
+              "detail": "A folyóirat az ötletek laboratóriumává válik."
+            },
+            {
+              "date": "1959",
+              "title": "A négyszáz ütés",
+              "detail": "Truffaut bevezeti a szerzői mozit Cannes-ban."
+            },
+            {
+              "date": "1960",
+              "title": "Kifulladt",
+              "detail": "Godard megtöri a klasszikus montázst."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "A New Wave kivitte a mozit a stúdióból és az utcákra. Ez tette a rendezőt szerzővé, és ez az ötlet továbbra is formálja a független filmművészetet világszerte."
+        }
+      ]
+    }
+  ]
+}
