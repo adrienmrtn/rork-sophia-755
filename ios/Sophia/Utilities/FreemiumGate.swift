@@ -4,8 +4,9 @@ import Foundation
 ///
 /// Free users get **one free course per day** (the first course they open on a given local
 /// day). That course is fully readable and can be completed. Every *other* course opened the
-/// same day is intro-only (lesson 1): lessons 2+ show a blurred teaser with an in-course
-/// unlock CTA that opens the `debloquer_cours` paywall.
+/// same day is intro-only (lesson 1): the bottom Continue button still slides between pages,
+/// and lessons 2+ show a blurred teaser with a lock overlay that opens the `debloquer_cours`
+/// paywall when tapped.
 ///
 /// The quiz is always premium — even on the daily free course — and opens the `quizz` paywall.
 enum FreemiumGate {
