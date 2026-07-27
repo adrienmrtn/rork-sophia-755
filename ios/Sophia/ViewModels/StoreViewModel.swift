@@ -88,10 +88,42 @@ class StoreViewModel {
     }
 
     /// Annual package for a specific offering identifier, falling back to the current
-    /// offering's annual package. All Sophia offerings mirror the same underlying products,
-    /// so pricing is identical — this mainly keeps analytics attribution on the right offering.
+    /// offering's annual package. Pricing follows whichever offering RevenueCat serves, so a
+    /// price/trial experiment on this context is reflected automatically.
     func annualPackage(forOfferingIdentifier identifier: String) -> Package? {
         offering(identifier: identifier)?.package(identifier: "$rc_annual") ?? annualPackage
+    }
+
+    // MARK: - Trial awareness
+
+    /// Whether a package's store product ships a free-trial introductory offer.
+    ///
+    /// Paywall copy must never promise a free trial the served product doesn't have: RevenueCat
+    /// experiments can assign an offering whose products have no introductory offer, in which
+    /// case the user is charged immediately.
+    func hasFreeTrial(_ package: Package?) -> Bool {
+        package?.storeProduct.introductoryDiscount?.paymentMode == .freeTrial
+    }
+
+    /// Whether the annual package served for a paywall context includes a free trial.
+    func annualHasFreeTrial(forOfferingIdentifier identifier: String) -> Bool {
+        hasFreeTrial(annualPackage(forOfferingIdentifier: identifier))
+    }
+
+    /// Whether the current offering's annual package includes a free trial.
+    var annualHasFreeTrial: Bool { hasFreeTrial(annualPackage) }
+
+    /// Marks the customer as exposed to their experiment variant. RevenueCat only counts
+    /// impressions automatically for its own paywall templates, so every native paywall here must
+    /// report itself or enrolled customers are dropped from experiment results.
+    ///
+    /// Call once per presentation (not from a callback that can fire repeatedly).
+    func trackPaywallImpression(paywallId: String, offeringIdentifier: String? = nil) {
+        let resolved = offeringIdentifier.flatMap { offering(identifier: $0) } ?? offerings?.current
+        guard let resolved else { return }
+        Purchases.shared.trackCustomPaywallImpression(
+            CustomPaywallImpressionParams(paywallId: paywallId, offering: resolved)
+        )
     }
 
     // MARK: - Discount (offre_discount) pricing

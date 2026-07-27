@@ -31,10 +31,19 @@ struct OnboardingV2View: View {
     /// Séquence complète et fixe. Les pages « valeur » (me cultiver → temps d'écran) sont
     /// désormais montrées quel que soit l'objectif choisi. `profile` est l'écran de
     /// récompense « Voici ton profil » inséré juste avant la création de compte.
+    ///
+    /// `trialSteps` détaille la chronologie de l'essai gratuit : la page est retirée quand
+    /// l'offering servie (variante d'expérience RevenueCat) n'inclut pas d'essai, sinon on
+    /// promettrait un essai que l'utilisateur n'aura pas.
     private var screens: [Screen] {
-        [.welcome, .language, .objectives, .objectiveIntro,
-         .questions, .phoneTime, .yearsGrid, .transform, .review, .personalize,
-         .swipe, .loading, .profile, .login, .trialSteps, .reminder, .paywallAnnual, .paywallComparison]
+        var list: [Screen] = [.welcome, .language, .objectives, .objectiveIntro,
+                              .questions, .phoneTime, .yearsGrid, .transform, .review, .personalize,
+                              .swipe, .loading, .profile, .login]
+        if store.offerings == nil || store.annualHasFreeTrial {
+            list.append(.trialSteps)
+        }
+        list.append(contentsOf: [.reminder, .paywallAnnual, .paywallComparison])
+        return list
     }
 
     private static let dotScreens: Set<Screen> = [

@@ -94,6 +94,11 @@ struct SophiaStandardPaywall: View {
         store.paywallPriceDisplay(language: languageManager.current)
     }
 
+    /// The offering served here may come from a RevenueCat experiment without an intro offer.
+    private var hasTrial: Bool {
+        store.annualHasFreeTrial(forOfferingIdentifier: context.rawValue)
+    }
+
     var body: some View {
         ZStack {
             DS.canvas.ignoresSafeArea()
@@ -130,6 +135,7 @@ struct SophiaStandardPaywall: View {
             presentedAt = Date()
             didTrackDismiss = false
             AnalyticsService.trackPaywallViewed(context: context.rawValue, triggerCourseId: course?.id)
+            store.trackPaywallImpression(paywallId: "native_standard", offeringIdentifier: context.rawValue)
             if let course { courseThumb = CourseImageMap.loadImage(for: course.id) }
             withAnimation(.spring(response: 0.55, dampingFraction: 0.85).delay(0.05)) {
                 appeared = true
@@ -278,9 +284,9 @@ struct SophiaStandardPaywall: View {
                     if purchasing {
                         ProgressView().tint(.white)
                     } else {
-                        Image(systemName: "lock.open.fill")
+                        Image(systemName: hasTrial ? "lock.open.fill" : "sparkles")
                             .font(.jakarta(size: 15, weight: .bold))
-                        Text(languageManager.text("paywall.cta.unlockFree"))
+                        Text(languageManager.text(hasTrial ? "paywall.cta.unlockFree" : "paywall.cta.subscribe"))
                     }
                 }
             }
@@ -293,10 +299,11 @@ struct SophiaStandardPaywall: View {
         }
     }
 
-    /// e.g. "Essai gratuit de 3 jours, puis 39,99 €/an (3,33 €/mois)."
+    /// e.g. "Essai gratuit de 3 jours, puis 39,99 €/an (3,33 €/mois)", or the no-trial
+    /// wording when the served product has no introductory offer.
     private var priceLine: String {
         String(
-            format: languageManager.text("paywall.price.trialThenYearly"),
+            format: languageManager.text(hasTrial ? "paywall.price.trialThenYearly" : "paywall.price.yearlyNoTrial"),
             prices.yearlyPrice, prices.yearlyPerMonth
         )
     }
@@ -383,6 +390,11 @@ struct SophiaTrainingPaywall: View {
         store.paywallPriceDisplay(language: languageManager.current)
     }
 
+    /// The offering served here may come from a RevenueCat experiment without an intro offer.
+    private var hasTrial: Bool {
+        store.annualHasFreeTrial(forOfferingIdentifier: context.offeringIdentifier)
+    }
+
     var body: some View {
         ZStack {
             DS.canvas.ignoresSafeArea()
@@ -419,6 +431,7 @@ struct SophiaTrainingPaywall: View {
             presentedAt = Date()
             didTrackDismiss = false
             AnalyticsService.trackPaywallViewed(context: context.rawValue)
+            store.trackPaywallImpression(paywallId: "native_training", offeringIdentifier: context.offeringIdentifier)
             withAnimation(.spring(response: 0.55, dampingFraction: 0.85).delay(0.05)) {
                 appeared = true
             }
@@ -564,9 +577,9 @@ struct SophiaTrainingPaywall: View {
                     if purchasing {
                         ProgressView().tint(.white)
                     } else {
-                        Image(systemName: "lock.open.fill")
+                        Image(systemName: hasTrial ? "lock.open.fill" : "sparkles")
                             .font(.jakarta(size: 15, weight: .bold))
-                        Text(languageManager.text("paywall.cta.unlockFree"))
+                        Text(languageManager.text(hasTrial ? "paywall.cta.unlockFree" : "paywall.cta.subscribe"))
                     }
                 }
             }
@@ -579,10 +592,11 @@ struct SophiaTrainingPaywall: View {
         }
     }
 
-    /// e.g. "Essai gratuit de 3 jours, puis 39,99 €/an (3,33 €/mois)."
+    /// e.g. "Essai gratuit de 3 jours, puis 39,99 €/an (3,33 €/mois)", or the no-trial
+    /// wording when the served product has no introductory offer.
     private var priceLine: String {
         String(
-            format: languageManager.text("paywall.price.trialThenYearly"),
+            format: languageManager.text(hasTrial ? "paywall.price.trialThenYearly" : "paywall.price.yearlyNoTrial"),
             prices.yearlyPrice, prices.yearlyPerMonth
         )
     }
@@ -671,6 +685,13 @@ struct SophiaQuizPaywall: View {
         store.paywallPriceDisplay(language: languageManager.current)
     }
 
+    /// The offering served here may come from a RevenueCat experiment without an intro offer.
+    private var hasTrial: Bool {
+        store.annualHasFreeTrial(forOfferingIdentifier: context.rawValue)
+    }
+
+    /// The third entry talks about the trial, so it swaps to a no-commitment answer when the
+    /// served product has none.
     private var faqItems: [(question: String, answer: String)] {
         [
             (
@@ -682,8 +703,8 @@ struct SophiaQuizPaywall: View {
                 languageManager.text("paywall.quiz.faq.a2")
             ),
             (
-                languageManager.text("paywall.quiz.faq.q3"),
-                languageManager.text("paywall.quiz.faq.a3")
+                languageManager.text(hasTrial ? "paywall.quiz.faq.q3" : "paywall.quiz.faq.q3.noTrial"),
+                languageManager.text(hasTrial ? "paywall.quiz.faq.a3" : "paywall.quiz.faq.a3.noTrial")
             ),
         ]
     }
@@ -725,6 +746,7 @@ struct SophiaQuizPaywall: View {
             presentedAt = Date()
             didTrackDismiss = false
             AnalyticsService.trackPaywallViewed(context: context.rawValue)
+            store.trackPaywallImpression(paywallId: "native_quiz", offeringIdentifier: context.rawValue)
             withAnimation(.spring(response: 0.55, dampingFraction: 0.85).delay(0.05)) {
                 appeared = true
             }
@@ -838,7 +860,7 @@ struct SophiaQuizPaywall: View {
                     } else {
                         Image(systemName: "sparkles")
                             .font(.jakarta(size: 15, weight: .bold))
-                        Text(languageManager.text("paywall.cta.activateTrial"))
+                        Text(languageManager.text(hasTrial ? "paywall.cta.activateTrial" : "paywall.cta.subscribe"))
                     }
                 }
             }
@@ -853,7 +875,7 @@ struct SophiaQuizPaywall: View {
 
     private var priceLine: String {
         String(
-            format: languageManager.text("paywall.price.trialThenYearly"),
+            format: languageManager.text(hasTrial ? "paywall.price.trialThenYearly" : "paywall.price.yearlyNoTrial"),
             prices.yearlyPrice, prices.yearlyPerMonth
         )
     }
@@ -1306,6 +1328,11 @@ struct SophiaCourseUnlockPaywall: View {
         store.paywallPriceDisplay(language: languageManager.current)
     }
 
+    /// The offering served here may come from a RevenueCat experiment without an intro offer.
+    private var hasTrial: Bool {
+        store.annualHasFreeTrial(forOfferingIdentifier: context.rawValue)
+    }
+
     var body: some View {
         ZStack {
             DS.canvas.ignoresSafeArea()
@@ -1351,6 +1378,7 @@ struct SophiaCourseUnlockPaywall: View {
             presentedAt = Date()
             didTrackDismiss = false
             AnalyticsService.trackPaywallViewed(context: context.rawValue, triggerCourseId: course?.id)
+            store.trackPaywallImpression(paywallId: "native_course_unlock", offeringIdentifier: context.rawValue)
             if let course { courseThumb = CourseImageMap.loadImage(for: course.id) }
             withAnimation(.spring(response: 0.55, dampingFraction: 0.85).delay(0.05)) {
                 appeared = true
@@ -1511,9 +1539,9 @@ struct SophiaCourseUnlockPaywall: View {
                     if purchasing {
                         ProgressView().tint(.white)
                     } else {
-                        Image(systemName: "lock.open.fill")
+                        Image(systemName: hasTrial ? "lock.open.fill" : "sparkles")
                             .font(.jakarta(size: 15, weight: .bold))
-                        Text(languageManager.text("paywall.cta.unlockFree"))
+                        Text(languageManager.text(hasTrial ? "paywall.cta.unlockFree" : "paywall.cta.subscribe"))
                     }
                 }
             }
@@ -1528,7 +1556,7 @@ struct SophiaCourseUnlockPaywall: View {
 
     private var priceLine: String {
         String(
-            format: languageManager.text("paywall.price.trialThenYearly"),
+            format: languageManager.text(hasTrial ? "paywall.price.trialThenYearly" : "paywall.price.yearlyNoTrial"),
             prices.yearlyPrice, prices.yearlyPerMonth
         )
     }
@@ -1655,6 +1683,7 @@ struct SophiaDiscountPaywall: View {
             presentedAt = Date()
             didTrackDismiss = false
             AnalyticsService.trackPaywallViewed(context: context.rawValue)
+            store.trackPaywallImpression(paywallId: "native_discount", offeringIdentifier: context.offeringIdentifier)
             withAnimation(.spring(response: 0.55, dampingFraction: 0.85).delay(0.05)) {
                 appeared = true
             }
