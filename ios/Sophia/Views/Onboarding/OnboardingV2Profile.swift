@@ -25,44 +25,83 @@ struct OnboardingV2Profile: View {
         vm.objectiveKeys.isEmpty ? [vm.profileArchetypeKey] : vm.objectiveKeys
     }
 
+    /// Tailles resserrées sur les petits écrans (iPhone SE / mini) pour que la « récompense »
+    /// tienne sans scroll. Le conteneur scrollable reste le garde-fou quand ça ne suffit pas
+    /// (plusieurs objectifs, grande taille de texte, traduction longue).
+    struct Metrics {
+        let topSpacing: CGFloat
+        let sectionSpacing: CGFloat
+        let badge: CGFloat
+        let emoji: CGFloat
+        let cardWidth: CGFloat
+        let cardHeight: CGFloat
+
+        static let regular = Metrics(
+            topSpacing: 44, sectionSpacing: 22,
+            badge: 116, emoji: 52,
+            cardWidth: 168, cardHeight: 214
+        )
+
+        static let compact = Metrics(
+            topSpacing: 16, sectionSpacing: 16,
+            badge: 92, emoji: 42,
+            cardWidth: 148, cardHeight: 188
+        )
+
+        /// `height` = hauteur disponible pour l'écran (hors safe areas).
+        static func fitting(height: CGFloat) -> Metrics {
+            height < 720 ? .compact : .regular
+        }
+    }
+
     var body: some View {
-        ZStack {
-            OV2.bg.ignoresSafeArea()
+        GeometryReader { proxy in
+            let metrics = Metrics.fitting(height: proxy.size.height)
 
-            // Halo doux qui « respire » derrière le badge.
-            Circle()
-                .fill(OV2.accentSoft.opacity(0.10))
-                .frame(width: 340, height: 340)
-                .scaleEffect(haloIn ? 1.05 : 0.75)
-                .blur(radius: 34)
-                .opacity(haloIn ? 1 : 0)
-                .offset(y: -170)
+            // Contenu scrollable + CTA épinglé : la pile (badge, chips d'objectifs, cartes de
+            // cours) a une hauteur minimale supérieure à l'écran sur les petits iPhone, avec
+            // plusieurs objectifs sélectionnés, une grande taille de texte ou une traduction
+            // longue. Sans ce conteneur le CTA sortait de l'écran (et le badge était rogné en
+            // haut) : l'utilisateur ne pouvait plus avancer dans l'onboarding.
+            OV2ScrollableContent {
+                VStack(spacing: 0) {
+                    Spacer().frame(height: metrics.topSpacing)
 
-            VStack(spacing: 0) {
-                Spacer().frame(height: 52)
+                    header(metrics)
 
-                header
+                    Spacer().frame(height: metrics.sectionSpacing)
 
-                Spacer().frame(height: 22)
+                    objectiveReminder
+                        .opacity(reveal >= 1 ? 1 : 0)
+                        .offset(y: reveal >= 1 ? 0 : 16)
 
-                objectiveReminder
-                    .opacity(reveal >= 1 ? 1 : 0)
-                    .offset(y: reveal >= 1 ? 0 : 16)
+                    Spacer().frame(height: metrics.sectionSpacing)
 
-                Spacer().frame(height: 22)
+                    coursesSection(metrics)
+                        .opacity(reveal >= 2 ? 1 : 0)
+                        .offset(y: reveal >= 2 ? 0 : 20)
 
-                coursesSection
-                    .opacity(reveal >= 2 ? 1 : 0)
-                    .offset(y: reveal >= 2 ? 0 : 20)
-
-                Spacer(minLength: 12)
-
+                    Spacer().frame(height: 16)
+                }
+            } footer: {
+                // Reveal autonome (état interne au modifieur) : le CTA apparaît toujours,
+                // même si la séquence d'animation du contenu est interrompue.
                 OnboardingV2Button(
                     title: languageManager.text("onboardingV2.profile.cta"),
                     enabled: true,
                     action: onNext
                 )
-                .opacity(reveal >= 3 ? 1 : 0)
+                .ov2Reveal(delay: 1.5, yOffset: 0)
+            }
+            // Halo doux qui « respire » derrière le badge.
+            .background(alignment: .top) {
+                Circle()
+                    .fill(OV2.accentSoft.opacity(0.10))
+                    .frame(width: 340, height: 340)
+                    .scaleEffect(haloIn ? 1.05 : 0.75)
+                    .blur(radius: 34)
+                    .opacity(haloIn ? 1 : 0)
+                    .offset(y: -60)
             }
         }
         .ov2Background()
@@ -71,17 +110,17 @@ struct OnboardingV2Profile: View {
 
     // MARK: - Header (badge + surnom)
 
-    private var header: some View {
+    private func header(_ metrics: Metrics) -> some View {
         VStack(spacing: 16) {
             ZStack {
                 Circle()
                     .fill(OV2.accent.opacity(0.10))
-                    .frame(width: 116, height: 116)
+                    .frame(width: metrics.badge, height: metrics.badge)
                 Circle()
                     .strokeBorder(OV2.accent.opacity(0.18), lineWidth: 1)
-                    .frame(width: 116, height: 116)
+                    .frame(width: metrics.badge, height: metrics.badge)
                 Text(vm.profileEmoji)
-                    .font(.system(size: 52))
+                    .font(.system(size: metrics.emoji))
                     .scaleEffect(badgeIn ? 1 : 0.4)
                     .opacity(badgeIn ? 1 : 0)
             }
@@ -144,17 +183,17 @@ struct OnboardingV2Profile: View {
 
     // MARK: - Cours qui t'attendent
 
-    private var coursesSection: some View {
+    private func coursesSection(_ metrics: Metrics) -> some View {
         VStack(alignment: .leading, spacing: 12) {
             Text(languageManager.text("onboardingV2.profile.coursesTitle"))
                 .font(DS.title(.title3, .heavy))
                 .foregroundStyle(OV2.ink)
                 .padding(.horizontal, 28)
 
-            ScrollView(.horizontal, showsIndicators: false) {
+            ScrollView(.horizontal) {
                 HStack(spacing: 14) {
                     ForEach(Array(courses.prefix(6).enumerated()), id: \.element.id) { i, course in
-                        courseCard(course)
+                        courseCard(course, metrics)
                             .opacity(reveal >= 2 ? 1 : 0)
                             .offset(y: reveal >= 2 ? 0 : 18)
                             .animation(.spring(response: 0.6, dampingFraction: 0.85).delay(Double(i) * 0.08), value: reveal)
@@ -163,10 +202,11 @@ struct OnboardingV2Profile: View {
                 .padding(.horizontal, 28)
                 .padding(.vertical, 4)
             }
+            .scrollIndicators(.hidden)
         }
     }
 
-    private func courseCard(_ course: Course) -> some View {
+    private func courseCard(_ course: Course, _ metrics: Metrics) -> some View {
         ZStack(alignment: .bottomLeading) {
             Group {
                 if let img = CourseImageMap.loadImage(for: course.id) {
@@ -178,7 +218,7 @@ struct OnboardingV2Profile: View {
                     )
                 }
             }
-            .frame(width: 168, height: 214)
+            .frame(width: metrics.cardWidth, height: metrics.cardHeight)
             .clipped()
 
             LinearGradient(
@@ -200,7 +240,7 @@ struct OnboardingV2Profile: View {
             }
             .padding(12)
         }
-        .frame(width: 168, height: 214)
+        .frame(width: metrics.cardWidth, height: metrics.cardHeight)
         .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
         .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).strokeBorder(OV2.hairline, lineWidth: 1))
         .shadow(color: .black.opacity(0.12), radius: 14, y: 8)
@@ -214,7 +254,7 @@ struct OnboardingV2Profile: View {
         withAnimation(.spring(response: 0.9, dampingFraction: 0.82).delay(0.55)) { nameRevealed = true }
         OnboardingHaptics.selection()
 
-        for step in 1...3 {
+        for step in 1...2 {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.9 + Double(step) * 0.45) {
                 withAnimation(.spring(response: 0.8, dampingFraction: 0.85)) {
                     reveal = step
