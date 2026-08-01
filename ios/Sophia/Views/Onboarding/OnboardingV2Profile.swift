@@ -48,9 +48,10 @@ struct OnboardingV2Profile: View {
             cardWidth: 148, cardHeight: 188
         )
 
-        /// `height` = hauteur disponible pour l'écran (hors safe areas).
+        /// `height` = hauteur disponible pour l'écran (hors safe areas). Le seuil couvre les
+        /// iPhone SE / 8 / mini (≈ 647–728 pt utiles), où la version « regular » ne tient pas.
         static func fitting(height: CGFloat) -> Metrics {
-            height < 720 ? .compact : .regular
+            height < 740 ? .compact : .regular
         }
     }
 
