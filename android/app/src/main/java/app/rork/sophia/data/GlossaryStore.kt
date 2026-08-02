@@ -64,5 +64,9 @@ object GlossaryStore {
     }
 
     private fun normalize(s: String): String =
-        s.lowercase().replace(Regex("[^a-z0-9àâäéèêëïîôùûüç]+"), "")
+        s.lowercase().filter { it.isLetterOrDigit() }
+
+    fun clearCache() {
+        cache.clear()
+    }
 }

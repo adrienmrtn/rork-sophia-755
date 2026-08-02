@@ -34,4 +34,8 @@ object StringStore {
             }
         }
     }
+
+    fun clearCache() {
+        cache.clear()
+    }
 }
