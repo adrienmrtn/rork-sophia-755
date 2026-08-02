@@ -1,0 +1,61 @@
+{
+  "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895",
+  "title": "La découverte des rayons X",
+  "subtitle": "Röntgen, 1895",
+  "subject": "sciences",
+  "subcategory": "Découvertes qui ont changé le monde",
+  "description": "En 1895, Wilhelm Röntgen découvre un rayonnement invisible capable de traverser la matière. En quelques mois, la médecine y voit une révolution.",
+  "hero": {
+    "image": "la_decouverte_des_rayons_x_rontgen",
+    "ratio": "16:9",
+    "hook": "Une main, des os, une photo. La médecine ne sera plus jamais aveugle."
+  },
+  "sections": [
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Le **8 novembre 1895**, à Wurtzbourg (Allemagne), le physicien **Wilhelm Röntgen** remarque un écran qui brille… alors qu'il n'est pas touché par la lumière visible. Quelque chose d'invisible traverse la pièce." },
+        { "type": "paragraph", "text": "Il appelle cela les **rayons X**, le « X » signifiant « inconnu ». En quelques semaines, il photographie les os de la main de sa femme. La radiologie est née." }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p1",
+      "title": "Un hasard de laboratoire",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Röntgen travaille avec un tube où des électrons frappent une cible. Il a couvert le tube de carton noir. Pourtant, un écran fluorescent brille à distance. Il comprend qu'un rayonnement invisible sort du tube." },
+        { "type": "image", "asset": "wilhelm_rontgen_x_ray_hand_1895", "ratio": "4:3", "caption": "La célèbre image : les os de la main et l'alliance." },
+        { "type": "funFact", "text": "Röntgen n'a jamais déposé de brevet sur les rayons X. Il voulait que toute la science puisse s'en servir librement." }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p2",
+      "title": "La médecine s'empare de l'outil",
+      "free": false,
+      "blocks": [
+        { "type": "image", "asset": "early_x_ray_medical_radiograph", "ratio": "4:3", "caption": "Très vite, médecins et armées utilisent les rayons X." },
+        { "type": "paragraph", "text": "Avant, pour « voir » une fracture ou une balle, il fallait souvent ouvrir. Avec les rayons X, on obtient une image de l'intérieur sans couper. Les hôpitaux et les armées adoptent la technique à une vitesse folle." }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p3",
+      "title": "Un danger longtemps ignoré",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Au début, on ignore les risques. Des opérateurs font des radiographies pendant des heures. Des brûlures, puis des cancers apparaissent. Il faudra du temps pour comprendre que les rayons X sont puissants… et dangereux." },
+        { "type": "paragraph", "text": "Aujourd'hui, on protège les patients et les soignants : doses limitées, tabliers de plomb, contrôles stricts." }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p4",
+      "title": "L'héritage",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Les rayons X ont ouvert la voie à toute l'imagerie moderne : scanners, contrôles industriels, et même l'étude de la structure des cristaux (utile plus tard pour l'ADN)." },
+        { "type": "takeaway", "text": "En **1895**, Röntgen découvre les rayons X, un rayonnement invisible qui traverse la matière. La médecine gagne un regard nouveau… à condition d'en maîtriser les risques." }
+      ]
+    }
+  ]
+}

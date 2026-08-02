@@ -1,0 +1,69 @@
+{
+  "id": "course_222_la_crise_de_la_biodiversite",
+  "title": "La crise de la biodiversité",
+  "subtitle": "La 6e extinction",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environnement & avenir",
+  "description": "Les populations d'animaux sauvages ont chuté de **69% depuis 1970**. Nous vivons la sixième extinction de masse de l'histoire de la Terre, la première causée par une seule espèce : nous.",
+  "hero": {
+    "image": "la_crise_de_la_biodiversite",
+    "ratio": "16:9",
+    "hook": "Pas d'astéroïde, pas de volcan : cette fois, l'extinction de masse a un visage humain."
+  },
+  "sections": [
+    {
+      "id": "course_222_la_crise_de_la_biodiversite_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "La Terre a déjà connu cinq grandes extinctions massives, provoquées par des astéroïdes ou des éruptions volcaniques géantes. Aujourd'hui, une sixième est en cours, mais pour la première fois, elle n'a pas de cause naturelle." },
+        { "type": "paragraph", "text": "Les espèces disparaissent aujourd'hui **100 à 1 000 fois plus vite** que le rythme naturel, et le responsable est une seule espèce : la nôtre. Ce cours explique l'ampleur du problème, ses causes, et pourquoi il nous concerne directement." }
+      ]
+    },
+    {
+      "id": "course_222_la_crise_de_la_biodiversite_p1",
+      "title": "Un effondrement mesuré, chiffre par chiffre",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Pour suivre l'état de la nature, les scientifiques utilisent l'**Indice Planète Vivante**, publié chaque année par l'organisation [[WWF]]. Le constat de 2022 est brutal : entre 1970 et 2018, les populations d'animaux sauvages (mammifères, oiseaux, poissons, reptiles, amphibiens) ont chuté en moyenne de **69%** dans le monde." },
+        { "type": "paragraph", "text": "Cette baisse touche surtout les régions tropicales, là où vit le plus d'espèces. En Amérique latine, elle atteint 94%. Cela ne veut pas dire que 94% des espèces ont disparu, mais que leurs populations ont fondu, ce qui les rend très fragiles face à une extinction totale." },
+        { "type": "image", "asset": "amazon_deforestation_rainforest_aerial", "ratio": "16:9", "caption": "La déforestation en Amazonie détruit l'un des plus riches réservoirs de vie de la planète." },
+        { "type": "funFact", "text": "Si l'histoire de la Terre durait 24 heures, les humains seraient apparus à 23h58. Il leur a suffi de deux secondes pour déclencher une extinction de masse." },
+        { "type": "paragraph", "text": "Selon l'[[IPBES]], environ un million d'espèces animales et végétales sont aujourd'hui menacées de disparaître, parfois dans les prochaines décennies." }
+      ]
+    },
+    {
+      "id": "course_222_la_crise_de_la_biodiversite_p2",
+      "title": "Cinq causes, une seule origine",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Ce désastre n'est pas un hasard : il vient directement de notre façon de produire et de consommer. Les scientifiques identifient cinq causes principales. La première et la plus destructrice est le changement d'usage des terres : déforestation pour l'élevage, urbanisation, agriculture intensive qui découpe les habitats naturels en petits morceaux trop isolés pour survivre." },
+        { "type": "paragraph", "text": "Viennent ensuite la surexploitation (surpêche, chasse illégale) et la pollution : pesticides, engrais qui créent des zones mortes dans les océans, microplastiques qui se retrouvent dans toute la chaîne alimentaire." },
+        { "type": "image", "asset": "plastic_pollution_ocean_wildlife", "ratio": "4:3", "caption": "Les microplastiques contaminent désormais chaque niveau de la chaîne alimentaire marine." },
+        { "type": "paragraph", "text": "Les deux derniers moteurs sont les espèces venues d'ailleurs, souvent transportées par erreur par le commerce mondial, qui prennent la place des espèces locales, et le changement climatique, qui bouleverse les températures plus vite que les espèces ne peuvent s'adapter." }
+      ]
+    },
+    {
+      "id": "course_222_la_crise_de_la_biodiversite_p3",
+      "title": "Pourquoi la nature n'est pas gratuite",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "La biodiversité n'est pas qu'une question d'esthétique. La nature nous rend des [[Les services écosystémiques]] essentiels, souvent invisibles parce qu'ils sont gratuits. Le rapport [[Dasgupta Review]] rappelle une évidence trop souvent oubliée : notre économie dépend de la nature, pas l'inverse." },
+        { "type": "image", "asset": "bee_flower_pollination_agriculture", "ratio": "4:3", "caption": "Environ 75% des cultures alimentaires mondiales dépendent des insectes pollinisateurs." },
+        { "type": "paragraph", "text": "Un exemple concret : environ 75% des cultures alimentaires dans le monde dépendent des insectes pour être pollinisées. La nature est aussi notre plus grande pharmacie, puisque 25% des médicaments modernes viennent de molécules trouvées dans les plantes. Elle régule aussi l'eau, forme les sols fertiles et absorbe une partie du CO₂ en excès." },
+        { "type": "paragraph", "text": "En détruisant la biodiversité, nous détruisons donc le capital naturel qui soutient notre propre vie économique et alimentaire, en consommant les ressources de la planète bien plus vite qu'elles ne se renouvellent." }
+      ]
+    },
+    {
+      "id": "course_222_la_crise_de_la_biodiversite_p4",
+      "title": "Des limites à ne pas franchir, une chance de rebondir",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "La biodiversité fait partie des neuf [[limites planétaires]] à ne pas dépasser pour garder une Terre habitable, et ce seuil est déjà franchi. Le vrai danger, ce sont les [[points de bascule écologiques]] : des seuils où un écosystème s'effondre brutalement et de façon presque impossible à inverser, comme une forêt amazonienne qui se transformerait en savane." },
+        { "type": "paragraph", "text": "Des solutions existent pourtant. Lors de la [[COP15]] à Montréal en 2022, les pays du monde se sont fixé l'objectif de protéger 30% des terres et des mers d'ici 2030. Cela suppose de transformer l'agriculture, de restaurer les zones humides et de laisser des corridors pour que les espèces puissent circuler." },
+        { "type": "paragraph", "text": "La nature a une grande capacité de [[résilience]] si on lui laisse de l'espace et du temps. Protéger une forêt, c'est protéger des millions d'espèces tout en gardant un puits de carbone essentiel contre le réchauffement climatique." },
+        { "type": "takeaway", "text": "Les populations d'animaux sauvages ont chuté de 69% entre 1970 et 2018 : c'est la 6e extinction de masse, la première causée par une seule espèce, qui remet en cause les services vitaux que la nature nous rend gratuitement." }
+      ]
+    }
+  ]
+}

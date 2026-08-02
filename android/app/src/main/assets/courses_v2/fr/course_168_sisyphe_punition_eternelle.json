@@ -1,0 +1,112 @@
+{
+  "id": "course_168_sisyphe_punition_eternelle",
+  "title": "Sisyphe : punition éternelle",
+  "subtitle": "Le rocher qui retombe toujours",
+  "subject": "mythologie",
+  "subcategory": "Grèce : les dieux",
+  "description": "Sisyphe trompe la Mort, puis les dieux. Son châtiment : rouler un rocher qui retombe sans fin. Camus en fait le symbole de la lucidité face à l'absurde.",
+  "hero": {
+    "image": "sisyphe_punition_eternelle",
+    "ratio": "16:9",
+    "hook": "Il a trompé la Mort. Les dieux lui donnent un rocher. Et l'éternité pour le pousser."
+  },
+  "sections": [
+    {
+      "id": "course_168_sisyphe_punition_eternelle_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Sisyphe**, fondateur légendaire de Corinthe, est le mortel le plus rusé des mythes grecs. Son intelligence lui permet de défier les dieux. Elle lui vaut aussi le pire des châtiments : un effort qui n'aboutit jamais."
+        },
+        {
+          "type": "paragraph",
+          "text": "Au XXe siècle, **Albert Camus** transforme ce condamné en figure de la condition humaine. De la ruse antique à la révolte moderne, Sisyphe pose une question simple : que faire quand le but semble impossible ?"
+        }
+      ]
+    },
+    {
+      "id": "course_168_sisyphe_punition_eternelle_p1",
+      "title": "Le roi qui enchaîne la Mort",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Homère]] le dit le plus rusé des hommes. Sisyphe voit **Zeus**, roi des dieux, enlever la nymphe **Égine**. Au lieu de se taire, il vend le secret au père de la jeune fille, le dieu-fleuve [[Asopos]], contre une source d'eau pour sa citadelle."
+        },
+        {
+          "type": "image",
+          "asset": "sisyphus_king_corinth_greek_myth",
+          "ratio": "4:3",
+          "caption": "Sisyphe, roi rusé de Corinthe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zeus envoie **Thanatos**, la Mort personnifiée. Sisyphe feint l'admiration pour ses chaînes, lui demande une démonstration… et l'enchaîne. Pendant ce temps, plus personne ne meurt sur Terre. Même les soldats d'**Arès**, dieu de la guerre, ne peuvent plus tomber. Arès doit libérer Thanatos de force."
+        },
+        {
+          "type": "funFact",
+          "text": "Certains linguistes rapprochent « Sisyphe » du grec *sophos*, « sage ». Son nom dirait « le très sage » : une ironie cruelle face à son sort."
+        }
+      ]
+    },
+    {
+      "id": "course_168_sisyphe_punition_eternelle_p2",
+      "title": "Deux fuites, un rocher",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Avant de mourir, Sisyphe ordonne à sa femme **Mérope** de ne pas lui faire de funérailles. Aux Enfers, il se plaint à **Perséphone**, reine du monde des morts : sa femme l'a déshonoré. Il obtient trois jours sur Terre pour réparer. Une fois au soleil, il refuse de revenir."
+        },
+        {
+          "type": "paragraph",
+          "text": "C'est **Hermès**, messager des dieux et conducteur des âmes, qui le ramène de force chez [[Hadès]]. Le châtiment est sur mesure : pousser un énorme rocher jusqu'au sommet d'une colline. À chaque fois, juste avant le but, la pierre redescend."
+        },
+        {
+          "type": "funFact",
+          "text": "Dans certaines traditions anciennes, le rocher de Sisyphe expliquait le cycle des marées ou le mouvement quotidien du soleil."
+        }
+      ]
+    },
+    {
+      "id": "course_168_sisyphe_punition_eternelle_p3",
+      "title": "Camus : imaginer Sisyphe heureux",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Contrairement à [[Prométhée]], dont le foie est dévoré, Sisyphe n'est pas blessé dans sa chair. Sa torture est l'inutilité. En **1942**, Camus publie *Le Mythe de Sisyphe*. Pour lui, Sisyphe est le [[héros absurde]] : il sait que le rocher retombera, et c'est justement cette lucidité qui le grandit."
+        },
+        {
+          "type": "funFact",
+          "text": "En psychiatrie, on a parfois parlé de « sisyphisme » pour décrire la répétition d'actions épuisantes et inutiles."
+        },
+        {
+          "type": "paragraph",
+          "text": "Camus définit l'[[Absurde de Camus et Sisyphe]] comme le choc entre notre besoin de sens et le silence du monde. Chaque descente de la montagne, Sisyphe reprend sa tâche. Sa révolte, c'est de continuer en connaissance de cause. « Il faut imaginer Sisyphe heureux. »"
+        }
+      ]
+    },
+    {
+      "id": "course_168_sisyphe_punition_eternelle_p4",
+      "title": "Le travail de Sisyphe, aujourd'hui",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L'expression « travail de Sisyphe » désigne une tâche pénible, répétitive et vaine. Dans le monde moderne, le mythe parle aux ouvriers à la chaîne comme aux employés pris dans des procédures sans fin. La [[Hubris de Sisyphe]], vouloir tromper les dieux, devient aussi une leçon sur la limite de la ruse."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pourtant le récit garde une force : malgré l'échec annoncé, l'effort continue. Le rocher retombe, mais il n'efface pas la montée. Sisyphe survit parce qu'il incarne la résilience face à un destin sans garantie de victoire."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Sisyphe** trompe la Mort et les dieux, puis pousse éternellement un rocher. **Camus** en fait le symbole de la lucidité : connaître l'absurde, et continuer quand même."
+        }
+      ]
+    }
+  ]
+}

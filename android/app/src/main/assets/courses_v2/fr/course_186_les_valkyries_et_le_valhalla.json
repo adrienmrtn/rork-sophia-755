@@ -1,0 +1,120 @@
+{
+  "id": "course_186_les_valkyries_et_le_valhalla",
+  "title": "Les Valkyries et le Valhalla",
+  "subtitle": "Mythologie nordique",
+  "subject": "mythologie",
+  "subcategory": "Autres mythologies",
+  "description": "Dans le ciel nordique, des guerrières choisissent les morts pour peupler le Valhalla. Leur armée doit affronter le crépuscule des dieux.",
+  "hero": {
+    "image": "les_valkyries_et_le_valhalla",
+    "ratio": "16:9",
+    "hook": "Mourir l'épée à la main n'est pas une fin : c'est une sélection pour la dernière guerre du monde."
+  },
+  "sections": [
+    {
+      "id": "course_186_les_valkyries_et_le_valhalla_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dans la mythologie nordique, la mort au combat n'est pas une fin. C'est une **sélection**. Les **Valkyries**, dont le nom signifie « celles qui choisissent les occis », parcourent les champs de bataille pour Odin, le dieu souverain."
+        },
+        {
+          "type": "paragraph",
+          "text": "Leur mission : emmener les plus braves au **Valhalla**, la « salle des occis ». Ce palais n'est pas un paradis de repos. C'est une caserne céleste. Car Odin prépare une armée pour le [[Ragnarök]], la bataille finale qui doit détruire le monde et tuer les dieux."
+        }
+      ]
+    },
+    {
+      "id": "course_186_les_valkyries_et_le_valhalla_p1",
+      "title": "Odin recrute pour le Ragnarök",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Odin** connaît la prophétie. Au [[Ragnarök]], les géants et les monstres fondront sur [[Asgard]], la demeure des dieux. Pour retarder l'inévitable, il lui faut des soldats d'élite : les **Einherjar**, « ceux qui combattent seuls »."
+        },
+        {
+          "type": "image",
+          "asset": "odin_norse_god_ravens_throne_painting",
+          "ratio": "4:3",
+          "caption": "Odin, maître des dieux, hanté par la fin du monde."
+        },
+        {
+          "type": "funFact",
+          "text": "Le Valhalla n'accueillait que **la moitié** des guerriers morts au combat. L'autre moitié rejoignait le Fólkvangr, domaine de la déesse **Freyja**. Même après une mort héroïque, les héros étaient partagés."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le Valhalla, en Asgard, compte **540 portes**. Chacune est assez large pour que huit cents combattants passent de front. Seuls ceux tombés courageusement, l'épée à la main, y ont droit. Les Valkyries font le tri depuis le ciel."
+        }
+      ]
+    },
+    {
+      "id": "course_186_les_valkyries_et_le_valhalla_p2",
+      "title": "Des guerrières plus sombres qu'on ne croit",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L'image moderne des Valkyries vient souvent du romantisme du XIXe siècle : de douces vierges à cheval. Les textes anciens, comme l'[[Edda poétique]], peignent des figures bien plus dures. Elles sont liées aux corbeaux, oiseaux des cadavres. Certains poèmes les montrent en fileuses macabres : leurs fils sont des boyaux, leurs poids des têtes."
+        },
+        {
+          "type": "image",
+          "asset": "valkyrie_riding_winged_horse_norse_art",
+          "ratio": "4:3",
+          "caption": "Valkyrie en vol : messagère d'Odin et pourvoyeuse de héros."
+        },
+        {
+          "type": "paragraph",
+          "text": "Des figures comme **Brynhildr** ou [[Sigrun]] ont aussi un visage humain : elles hésitent entre les ordres d'Odin et leurs sentiments pour des mortels. Au Valhalla, leur rôle change. Elles quittent l'armure pour servir l'hydromel aux héros. Le geste dit la reconnaissance : le mort brave est devenu l'élite d'Asgard."
+        }
+      ]
+    },
+    {
+      "id": "course_186_les_valkyries_et_le_valhalla_p3",
+      "title": "Chaque jour se battre, chaque soir festoyer",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Au Valhalla, pas de retraite paisible. Au chant du coq [[Gullinkambi]], les Einherjar s'arment et s'entretuent sur la plaine d'[[Idavoll]]. Le soir, les blessures se ferment. Les morts se relèvent. Puis vient le festin."
+        },
+        {
+          "type": "image",
+          "asset": "valhalla_feast_norse_warriors_einherjar_painting",
+          "ratio": "4:3",
+          "caption": "Le festin des Einherjar : combat le jour, banquets la nuit."
+        },
+        {
+          "type": "funFact",
+          "text": "Le sanglier **Sæhrímnir** est bouilli chaque jour par le cuisinier [[Andhrímnir]], puis renaît. L'hydromel coule des pis de la chèvre [[Heidrun]]. Le paradis viking est une salle d'entraînement permanente."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce cycle de violence et de plaisir soude l'armée d'Odin. Des siècles de batailles amicales avant le vrai ennemi."
+        }
+      ]
+    },
+    {
+      "id": "course_186_les_valkyries_et_le_valhalla_p4",
+      "title": "Une mort digne plutôt que la « mort de paille »",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cette vision de l'au-delà a marqué la Scandinavie viking. On valorisait le courage physique. Mourir de vieillesse ou de maladie, la « mort de paille », menait à **Hel**, un royaume terne. Mieux valait tomber les armes à la main."
+        },
+        {
+          "type": "paragraph",
+          "text": "La Valkyrie a traversé les siècles. Richard Wagner l'a fixée dans la mémoire européenne avec la [[Chevauchée des Walkyries]]. Aujourd'hui, elle est devenue un archétype de femme puissante, souvent loin de sa fonction première : pourvoyeuse de cadavres pour un dieu qui prépare sa propre fin."
+        },
+        {
+          "type": "takeaway",
+          "text": "Les **Valkyries** recrutent les meilleurs morts pour le **Valhalla**. Là, les Einherjar combattent et festoient sans fin, en vue du [[Ragnarök]]. Le paradis nordique est une caserne, pas un refuge."
+        }
+      ]
+    }
+  ]
+}

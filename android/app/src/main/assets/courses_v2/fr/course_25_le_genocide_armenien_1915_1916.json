@@ -1,0 +1,125 @@
+{
+  "id": "course_25_le_genocide_armenien_1915_1916",
+  "title": "Le génocide arménien",
+  "subtitle": "1915-1916",
+  "subject": "histoire",
+  "subcategory": "Guerre froide & monde contemporain",
+  "description": "Entre **1915** et **1916**, le gouvernement ottoman organise la déportation et l'extermination systématique d'une grande partie de la population arménienne de l'Empire.",
+  "hero": {
+    "image": "le_genocide_armenien",
+    "ratio": "16:9",
+    "hook": "Le premier génocide du XXe siècle, longtemps sans nom, encore au cœur d'une bataille pour la vérité."
+  },
+  "sections": [
+    {
+      "id": "course_25_le_genocide_armenien_1915_1916_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Entre **1915** et **1916**, en pleine Première Guerre mondiale, le gouvernement de l'Empire ottoman orchestre l'extermination d'une grande partie de sa population arménienne. Environ **deux tiers** des Arméniens de l'empire périssent."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce crime, estimé entre **600 000** et **1,5 million** de morts, poussera plus tard les juristes à forger un mot nouveau : le [[génocide]]. Voici comment une minorité ancestrale a été désignée comme ennemi de l'intérieur, puis détruite."
+        }
+      ]
+    },
+    {
+      "id": "course_25_le_genocide_armenien_1915_1916_p1",
+      "title": "Une minorité sous tension",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Les Arméniens sont l'une des plus anciennes populations chrétiennes d'Anatolie, le cœur de la Turquie actuelle. Dans l'Empire ottoman, le système du [[millet]] leur laisse une autonomie religieuse, mais un statut inférieur. Au XIXe siècle, l'empire décline. Les nationalismes montent. Les Arméniens sont peu à peu vus comme une menace intérieure, proches de la Russie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les [[Massacres hamidiens]] (**1894-1896**), sous le sultan Abdülhamid II, font déjà **100 000** à **300 000** morts. Ils restent impunis. En **1908**, les [[Jeunes-Turcs]], un mouvement nationaliste, suscitent d'abord l'espoir. Puis trois hommes, **Enver**, **Talaat** et **Cemal**, imposent un nationalisme radical : une Turquie ethniquement homogène, sans place pour les minorités non musulmanes."
+        }
+      ]
+    },
+    {
+      "id": "course_25_le_genocide_armenien_1915_1916_p2",
+      "title": "1915 : la mécanique de l'extermination",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La guerre mondiale accélère tout. Après la défaite ottomane de Sarikamis (janvier 1915), Enver pacha accuse les soldats arméniens de trahison. Le **24 avril 1915**, à Constantinople, la capitale, plus de **200** intellectuels et notables sont arrêtés, puis exécutés. Cette date est devenue celle de la commémoration mondiale."
+        },
+        {
+          "type": "image",
+          "asset": "armenian_genocide_deportation_1915",
+          "ratio": "4:3",
+          "caption": "Déportations arméniennes, 1915."
+        },
+        {
+          "type": "funFact",
+          "text": "Le juriste polonais **Raphael Lemkin**, en forgeant plus tard le mot « génocide », pensait explicitement aux Arméniens. La [[définition juridique du génocide]] de l'ONU (1948) en découle."
+        },
+        {
+          "type": "paragraph",
+          "text": "En mai, une loi de déportation donne un cadre légal aux expulsions vers les déserts de Mésopotamie. Les hommes sont souvent massacrés dès la sortie des villages. Femmes, enfants et vieillards sont poussés dans des marches forcées, sans nourriture ni protection."
+        }
+      ]
+    },
+    {
+      "id": "course_25_le_genocide_armenien_1915_1916_p3",
+      "title": "Deir ez-Zor et la fin d'un monde",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Les survivants aboutissent dans des camps rudimentaires du désert syrien, notamment à **Deir ez-Zor**. En 1916, les derniers rescapés y sont encore éliminés, ou meurent d'épuisement et d'épidémies. Des diplomates neutres, comme l'Américain **Henry Morgenthau**, décrivent un « meurtre de race »."
+        },
+        {
+          "type": "paragraph",
+          "text": "En Anatolie, églises et biens sont détruits ou confisqués. Trois millénaires de présence arménienne continue sur ces terres prennent fin. Après la guerre, les principaux responsables fuient. La République de Turquie naissante pratique une politique d'oubli officiel. Les rescapés forment une immense [[diaspora]], une communauté dispersée à travers le monde."
+        }
+      ]
+    },
+    {
+      "id": "course_25_le_genocide_armenien_1915_1916_p4",
+      "title": "Mémoire et reconnaissance",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aujourd'hui encore, la Turquie reconnaît des souffrances et des massacres dans le chaos de la guerre, mais rejette le terme de génocide. Face à ce déni d'État, la diaspora milite pour la reconnaissance. La France (2001) et les États-Unis (2021), parmi d'autres, ont officiellement reconnu le caractère génocidaire des faits."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1894-1896",
+              "title": "Massacres hamidiens",
+              "detail": "Première vague de violences de masse, restée impunie."
+            },
+            {
+              "date": "24 avril 1915",
+              "title": "Arrestation des élites",
+              "detail": "Début symbolique du génocide à Constantinople."
+            },
+            {
+              "date": "1915-1916",
+              "title": "Déportations et massacres",
+              "detail": "600 000 à 1,5 million de morts selon les estimations."
+            },
+            {
+              "date": "1944-1948",
+              "title": "Le mot « génocide »",
+              "detail": "Lemkin forge le concept ; l'ONU l'inscrit en droit."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Entre **1915** et **1916**, l'Empire ottoman organise l'extermination méthodique de centaines de milliers d'Arméniens. Ce crime force le monde à inventer le mot [[génocide]], dont la reconnaissance reste un enjeu politique."
+        }
+      ]
+    }
+  ]
+}

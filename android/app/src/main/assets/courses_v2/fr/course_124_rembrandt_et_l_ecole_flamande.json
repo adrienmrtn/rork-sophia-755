@@ -1,0 +1,151 @@
+{
+  "id": "course_124_rembrandt_et_l_ecole_flamande",
+  "title": "Rembrandt et l'école flamande",
+  "subtitle": "1606-1669",
+  "subject": "art",
+  "subcategory": "Peinture & mouvements",
+  "description": "**Rembrandt van Rijn** est le grand peintre du Siècle d'or hollandais. Autoportraits, scènes bibliques et *Ronde de nuit* : il peint l'âme humaine.",
+  "hero": {
+    "image": "rembrandt_et_l_ecole_flamande",
+    "ratio": "16:9",
+    "hook": "De la gloire d'Amsterdam à la ruine : un peintre qui a fait de l'ombre un langage de l'âme."
+  },
+  "sections": [
+    {
+      "id": "course_124_rembrandt_et_l_ecole_flamande_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Rembrandt van Rijn** (1606-1669) est le maître de l'école hollandaise du XVIIe siècle. Dans le [[siècle d'Or hollandais]], les Pays-Bas deviennent une puissance commerciale et un foyer de liberté de pensée."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ses autoportraits, ses scènes bibliques et sa célèbre *Ronde de nuit* font du clair-obscur un langage émotionnel. Il place l'humain, splendide ou fatigué, au centre de tout."
+        }
+      ]
+    },
+    {
+      "id": "course_124_rembrandt_et_l_ecole_flamande_p1",
+      "title": "Amsterdam : un marché bourgeois",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Au XVIIe siècle, les **Provinces-Unies** dominent le commerce mondial. Contrairement au reste de l'Europe, où l'Église et les rois commandent l'art, le marché hollandais est porté par une bourgeoisie protestante. Elle veut des tableaux pour la maison, pas des fresques d'église."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce contexte favorise les genres : paysage, nature morte, scènes du quotidien. **Vermeer** et [[Hals]] s'y illustrent. Rembrandt s'installe à Amsterdam en **1631** et devient le portraitiste le plus demandé."
+        },
+        {
+          "type": "funFact",
+          "text": "Après sa faillite, son fils Titus et sa compagne Hendrickje créent une société d'art dont Rembrandt est officiellement l'employé, pour protéger ses nouvelles toiles des créanciers."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mais son train de vie est trop grand. En **1656**, la [[faillite personnelle]] le frappe. Maison, meubles et collections partent aux enchères. Il refuse pourtant d'adoucir son style pour plaire à la mode."
+        }
+      ]
+    },
+    {
+      "id": "course_124_rembrandt_et_l_ecole_flamande_p2",
+      "title": "Lumière intérieure et peinture épaisse",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rembrandt réinvente le [[clair-obscur]] hérité du [[Caravage]]. Chez lui, la lumière ne frappe pas seulement pour le spectacle : elle semble filtrer depuis l'intérieur des personnages. Le regard se concentre sur les visages et les mains."
+        },
+        {
+          "type": "image",
+          "asset": "rembrandt_night_watch_painting",
+          "ratio": "4:3",
+          "caption": "La Ronde de nuit : une milice en mouvement, pas un alignement figé."
+        },
+        {
+          "type": "paragraph",
+          "text": "Son autre signature : l'**impasto**, cette peinture posée si épaisse qu'elle crée un relief. À une époque qui veut des surfaces lisses, il ose la matière. On disait qu'on aurait pu soulever certains portraits par le nez. Il cherche le vrai, pas le beau idéal."
+        },
+        {
+          "type": "funFact",
+          "text": "L'analyse chimique a révélé de la plumbonacrite dans ses empâtements : un composé de plomb rare qui aidait ses couches épaisses à sécher plus vite."
+        }
+      ]
+    },
+    {
+      "id": "course_124_rembrandt_et_l_ecole_flamande_p3",
+      "title": "La Ronde de nuit : un portrait qui bouge",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **1642**, Rembrandt livre *La Compagnie du capitaine Frans Banning Cocq*, dite **Ronde de nuit**. Commande pour la [[Kloveniersdoelen]], siège d'une milice bourgeoise d'Amsterdam. D'habitude, les miliciens posent alignés, chacun bien visible puisqu'il a payé."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rembrandt les montre en mouvement, sortant du quartier général. Le clair-obscur hiérarchise les figures : certains passent à l'ombre. La légende dit que les miliciens furieux auraient causé sa chute. En réalité, l'œuvre fut admirée, même si elle déroutait."
+        },
+        {
+          "type": "funFact",
+          "text": "Le titre *Ronde de nuit* est un contresens : la scène est diurne. Des siècles de vernis sale ont tellement assombri la toile qu'on a cru à une patrouille nocturne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Au XVIIIe siècle, pour l'installer à l'Hôtel de Ville, on découpe ses quatre côtés. Des personnages disparaissent. La composition originale était bien plus spacieuse."
+        }
+      ]
+    },
+    {
+      "id": "course_124_rembrandt_et_l_ecole_flamande_p4",
+      "title": "Se peindre soi-même, toute une vie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rembrandt a peint environ **80 à 90 autoportraits** en près de quarante ans. Jeune, il se montre arrogant, couvert de fourrures et de bijoux. Après la ruine et les deuils, le ton change : plus de séduction, une honnêteté crue face au vieillissement."
+        },
+        {
+          "type": "image",
+          "asset": "rembrandt_self_portrait_old_age",
+          "ratio": "4:3",
+          "caption": "Les autoportraits tardifs : un regard sans masque."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1631",
+              "title": "Arrivée à Amsterdam",
+              "detail": "Il devient le portraitiste vedette de la ville."
+            },
+            {
+              "date": "1642",
+              "title": "La Ronde de nuit",
+              "detail": "Portrait de milice en mouvement, révolutionnaire."
+            },
+            {
+              "date": "1656",
+              "title": "Faillite",
+              "detail": "Maison et collections vendues aux enchères."
+            },
+            {
+              "date": "1669",
+              "title": "Mort",
+              "detail": "Il meurt dans un relatif anonymat."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Mort en **1669**, enterré sans faste, il influencera Goya comme [[Francis Bacon]]. Il reste le peintre qui a transformé le pigment en lumière intérieure."
+        },
+        {
+          "type": "takeaway",
+          "text": "Rembrandt a magnifié l'intériorité humaine par le clair-obscur et la peinture épaisse. De la gloire d'Amsterdam à la ruine, ses autoportraits restent un journal unique de la vie."
+        }
+      ]
+    }
+  ]
+}

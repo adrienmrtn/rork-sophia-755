@@ -1,0 +1,145 @@
+{
+  "id": "course_40_la_guerre_de_secession_americaine_1861_1",
+  "title": "La guerre de Sécession américaine",
+  "subtitle": "1861-1865",
+  "subject": "histoire",
+  "subcategory": "Guerre froide & monde contemporain",
+  "description": "De **1861** à **1865**, les États-Unis se déchirent : plus de **620 000** morts. Au cœur du conflit, l'esclavage, l'unité nationale, et la naissance d'un État fédéral plus fort.",
+  "hero": {
+    "image": "la_guerre_de_secession_americaine",
+    "ratio": "16:9",
+    "hook": "La guerre la plus meurtrière de l'histoire américaine, pour l'Union et contre l'esclavage."
+  },
+  "sections": [
+    {
+      "id": "course_40_la_guerre_de_secession_americaine_1861_1_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "De **1861** à **1865**, les États-Unis vivent leur crise la plus grave : la guerre de Sécession. Le Nord (l'Union) contre le Sud (la Confédération). Plus de **620 000** morts."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le conflit transforme une jeune république en puissance industrielle, au prix d'un traumatisme durable sur l'unité nationale et l'esclavage."
+        }
+      ]
+    },
+    {
+      "id": "course_40_la_guerre_de_secession_americaine_1861_1_p1",
+      "title": "Deux Amériques face à face",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le **Nord** s'industrialise, avec salaires et protectionnisme. Le **Sud** reste rural, riche du coton produit par **4 millions** d'esclaves."
+        },
+        {
+          "type": "image",
+          "asset": "slaves_american_southern_plantation",
+          "ratio": "4:3",
+          "caption": "Plantation du Sud : l'esclavage au cœur de l'économie confédérée."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le débat porte aussi sur les **[[Droits des États vs le gouvernement fédéral]]** : qui décide de l'esclavage, l'État local ou Washington ? L'élection d'**Abraham Lincoln** (**novembre 1860**), républicain opposé à l'extension de l'esclavage, sans une seule voix du Sud, déclenche la sécession. Sept États fondent la Confédération, avec **[[Jefferson Davis]]** pour président, et garantissent l'esclavage dans leur constitution."
+        },
+        {
+          "type": "funFact",
+          "text": "Avant la guerre, on disait souvent « les États-Unis *sont* » au pluriel. Après, l'usage du singulier (« *est* ») s'impose : une nation indivisible."
+        }
+      ]
+    },
+    {
+      "id": "course_40_la_guerre_de_secession_americaine_1861_1_p2",
+      "title": "Une guerre totale, puis l'émancipation",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le **12 avril 1861**, les canons sudistes bombardent Fort Sumter, en Caroline du Sud. La guerre, qu'on croyait courte, devient industrielle. À **Antietam** (**17 septembre 1862**), **23 000** victimes en douze heures : la journée la plus sanglante de l'histoire militaire américaine."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'échec de **[[Robert E. Lee]]**, principal général confédéré, permet à Lincoln de signer la **[[Proclamation d'émancipation]]** (**1er janvier 1863**), qui libère les esclaves dans les États rebelles. La guerre pour l'Union devient aussi une guerre pour la liberté, ce qui ferme la porte à un soutien européen au Sud. **Gettysburg** (juillet **1863**) brise l'élan confédéré."
+        },
+        {
+          "type": "image",
+          "asset": "american_civil_war_battle",
+          "ratio": "4:3",
+          "caption": "Bataille de la guerre de Sécession : une violence industrielle inédite."
+        }
+      ]
+    },
+    {
+      "id": "course_40_la_guerre_de_secession_americaine_1861_1_p3",
+      "title": "Victoire du Nord, mort de Lincoln",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**[[Ulysses Grant]]**, général en chef de l'Union, mène une guerre d'usure. Son lieutenant **William Tecumseh Sherman** ravage la Géorgie lors de sa « Marche vers la mer ». Lee capitule à **Appomattox** le **9 avril 1865**."
+        },
+        {
+          "type": "image",
+          "asset": "abraham_lincoln_portrait",
+          "ratio": "1:1",
+          "caption": "Abraham Lincoln, président de l'Union, assassiné cinq jours après Appomattox."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cinq jours plus tard, Lincoln est assassiné par **John Wilkes Booth**, acteur sudiste. La **[[Reconstruction]]**, période de reconstruction du Sud, commence sans lui. En décembre **1865**, [[Le 13e amendement]] abolit l'esclavage dans tout le pays."
+        },
+        {
+          "type": "funFact",
+          "text": "La guerre accélère aussi la chirurgie : des médecins comme **Gurdon Buck** réalisent les premières reconstructions faciales sur des soldats défigurés par les balles Minié."
+        }
+      ]
+    },
+    {
+      "id": "course_40_la_guerre_de_secession_americaine_1861_1_p4",
+      "title": "Cicatrices et héritage",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sous la **[[Reconstruction]]** (**1865-1877**), des Afro-Américains votent et sont élus. Puis vient la réaction : le **[[Ku Klux Klan]]** (**1865**), organisation terroriste blanche, le retrait des troupes fédérales (**1877**), les lois Jim Crow de ségrégation. La ségrégation légale durera près d'un siècle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sur la carte, une nation unie et sans esclavage légal. Dans les faits, une fracture raciale profonde. Et les outils d'une future puissance mondiale : industrie lourde, chemins de fer, État fédéral fort."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1860",
+              "title": "Élection de Lincoln",
+              "detail": "Déclenchement des sécessions."
+            },
+            {
+              "date": "1861",
+              "title": "Fort Sumter",
+              "detail": "Début de la guerre."
+            },
+            {
+              "date": "1863",
+              "title": "Émancipation",
+              "detail": "Proclamation et tournant de Gettysburg."
+            },
+            {
+              "date": "1865",
+              "title": "Appomattox et 13e amendement",
+              "detail": "Fin des combats et abolition constitutionnelle."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "La guerre de Sécession (**1861-1865**) unifie les États-Unis et abolit l'esclavage, au prix de **620 000** morts, tout en laissant une fracture raciale que les lois Jim Crow prolongeront."
+        }
+      ]
+    }
+  ]
+}

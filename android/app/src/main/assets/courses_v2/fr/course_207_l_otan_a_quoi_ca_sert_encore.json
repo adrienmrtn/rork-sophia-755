@@ -1,0 +1,64 @@
+{
+  "id": "course_207_l_otan_a_quoi_ca_sert_encore",
+  "title": "L'OTAN : à quoi ça sert encore ?",
+  "subtitle": "1949 à aujourd'hui",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Conflits & géopolitique",
+  "description": "Fondée contre l'URSS en 1949, l'**OTAN** aurait dû disparaître avec la Guerre froide. Elle est aujourd'hui plus grande et plus active que jamais.",
+  "hero": {
+    "image": "l_otan_a_quoi_ca_sert",
+    "ratio": "16:9",
+    "hook": "Créée pour affronter un ennemi qui n'existe plus depuis 1991, l'OTAN n'a jamais compté autant de membres."
+  },
+  "sections": [
+    {
+      "id": "course_207_l_otan_a_quoi_ca_sert_encore_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "L'**OTAN**, l'Organisation du Traité de l'Atlantique Nord, est l'alliance militaire la plus puissante de l'histoire moderne. Fondée en 1949 en pleine Guerre froide, elle devait protéger l'Europe de l'Ouest contre l'expansion de l'Union soviétique." },
+        { "type": "paragraph", "text": "La disparition de son adversaire en 1991 n'a pourtant pas entraîné sa dissolution. L'organisation a traversé trente ans de quête d'identité, avant que l'invasion russe de l'Ukraine en 2022 ne mette fin à tous les doutes sur son utilité." }
+      ]
+    },
+    {
+      "id": "course_207_l_otan_a_quoi_ca_sert_encore_p1",
+      "title": "La genèse : un bouclier contre le bloc de l'Est",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "L'OTAN naît officiellement le 4 avril 1949, quand douze pays signent le **[[Traité de l'Atlantique Nord]]** à Washington. Cette alliance répond à un besoin urgent de sécurité, alors que l'Armée rouge occupe l'Europe centrale. Son premier secrétaire général, Lord Ismay, résume sa mission d'une phrase restée célèbre : « garder les Russes dehors, les Américains dedans, et les Allemands sous contrôle »." },
+        { "type": "funFact", "text": "L'Islande est le seul pays membre de l'OTAN à ne pas posséder d'armée permanente. Sa contribution repose sur des radars, des garde-côtes et l'accueil d'avions alliés sur son sol." },
+        { "type": "paragraph", "text": "Le cœur du traité est son **[[Article 5]]**, qui établit un principe de défense collective : une attaque contre un membre est considérée comme une attaque contre tous. Durant toute la Guerre froide, ce mécanisme de solidarité automatique dissuade toute offensive soviétique en Europe, un conflit direct étant devenu bien trop coûteux pour être tenté." }
+      ]
+    },
+    {
+      "id": "course_207_l_otan_a_quoi_ca_sert_encore_p2",
+      "title": "L'après-Guerre froide : élargissement et nouvelles missions",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "La chute du mur de Berlin et la dissolution de l'URSS en 1991 plongent l'OTAN dans une crise d'identité. Sans ennemi désigné, l'alliance semble obsolète. Elle choisit pourtant de se réinventer autour de deux axes. Le premier est l'élargissement massif vers l'Est : d'anciens pays du **[[Pacte de Varsovie]]**, comme la Pologne ou la Hongrie, puis les États baltes en 2004, rejoignent l'organisation pour se protéger d'un éventuel retour de l'impérialisme russe." },
+        { "type": "paragraph", "text": "Le second axe est une transformation opérationnelle : l'OTAN commence à intervenir hors de son territoire, par exemple lors de la guerre du Kosovo en 1999, puis en Afghanistan après 2001. Cet élargissement vers l'Est nourrit un vif ressentiment à Moscou, où Vladimir Poutine dénonce une provocation et une rupture des promesses faites à la fin de la Guerre froide." }
+      ]
+    },
+    {
+      "id": "course_207_l_otan_a_quoi_ca_sert_encore_p3",
+      "title": "Le choc de 2022 et le retour à la défense territoriale",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "L'invasion de l'Ukraine par la Russie, le 24 février 2022, met brutalement fin à l'ère des doutes. En quelques jours, l'OTAN retrouve sa mission d'origine : défendre le territoire européen. Le choc pousse la Suède et la Finlande, longtemps neutres, à demander leur adhésion : la Finlande rejoint l'alliance en 2023, la Suède en 2024." },
+        { "type": "image", "asset": "nato_soldiers_tanks_ukraine_support_2022", "ratio": "16:9", "caption": "Depuis 2022, les pays de l'OTAN fournissent à l'Ukraine armements, renseignement et formation militaire." },
+        { "type": "paragraph", "text": "L'alliance, qui compte désormais 32 membres, ne participe pas directement aux combats en Ukraine pour éviter une **escalade nucléaire**, mais elle coordonne un soutien logistique sans précédent. Cette guerre impose aussi un réarmement généralisé en Europe, l'Allemagne débloquant des fonds massifs pour moderniser une armée délaissée depuis trente ans." },
+        { "type": "funFact", "text": "Le sigle de l'organisation existe sous deux formes inversées dans ses deux langues officielles : NATO en anglais et OTAN en français." }
+      ]
+    },
+    {
+      "id": "course_207_l_otan_a_quoi_ca_sert_encore_p4",
+      "title": "L'OTAN face aux défis du XXIe siècle",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Au-delà de la menace russe classique, l'OTAN doit s'adapter à une nouvelle grammaire des conflits. Elle a intégré le **[[Cyberespace]]** et l'espace comme de nouveaux domaines d'opération officiels. Les attaques informatiques contre des infrastructures critiques sont désormais considérées comme des agressions pouvant, dans certains cas, justifier l'entraide collective." },
+        { "type": "paragraph", "text": "L'organisation regarde aussi vers l'Asie : la montée en puissance de la Chine incite l'OTAN à nouer des partenariats avec le Japon, la Corée du Sud ou l'Australie, ce qui inquiète certains membres européens, qui craignent un éloignement de la zone géographique initiale." },
+        { "type": "takeaway", "text": "L'OTAN est passée de 12 à 32 membres entre 1949 et 2024. Elle s'est repositionnée comme pilier central de la sécurité européenne face à la Russie, tout en intégrant de nouveaux domaines de conflit comme le cyberespace." }
+      ]
+    }
+  ]
+}

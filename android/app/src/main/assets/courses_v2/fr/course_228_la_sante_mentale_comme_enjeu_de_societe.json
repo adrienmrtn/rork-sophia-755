@@ -1,0 +1,68 @@
+{
+  "id": "course_228_la_sante_mentale_comme_enjeu_de_societe",
+  "title": "La santé mentale comme enjeu de société",
+  "subtitle": "L'épidémie silencieuse",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environnement & avenir",
+  "description": "La santé mentale représente **20% des maladies dans le monde**, mais ne reçoit que 2% des budgets de santé. Voici pourquoi cette cause longtemps oubliée devient un enjeu de société majeur.",
+  "hero": {
+    "image": "la_sante_mentale_comme_enjeu_de_societe",
+    "ratio": "16:9",
+    "hook": "Une maladie sur cinq dans le monde touche l'esprit, mais reçoit à peine 2% des budgets de santé."
+  },
+  "sections": [
+    {
+      "id": "course_228_la_sante_mentale_comme_enjeu_de_societe_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Longtemps laissée de côté par la médecine, la santé mentale devient l'un des grands défis du XXIe siècle. Elle ne se limite pas à l'absence de troubles psychiatriques : c'est un état de bien-être qui permet à chacun de réaliser son potentiel et de faire face aux difficultés de la vie." },
+        { "type": "paragraph", "text": "Un paradoxe frappant persiste pourtant : ces troubles représentent environ 20% des maladies dans le monde, mais ne reçoivent que 2% des budgets de santé. Ce cours explore les racines de cette crise silencieuse." }
+      ]
+    },
+    {
+      "id": "course_228_la_sante_mentale_comme_enjeu_de_societe_p1",
+      "title": "Une crise sanitaire sous-estimée",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "La **dépression** est aujourd'hui la première cause mondiale de handicap, devant les maladies cardiaques ou le diabète. Cette maladie, marquée par une tristesse durable et une perte d'intérêt pour tout, touche toutes les catégories de population, mais reste sous-diagnostiquée dans de nombreuses régions du monde." },
+        { "type": "image", "asset": "depression_mental_health_person_dark", "ratio": "4:3", "caption": "La dépression est aujourd'hui la première cause mondiale de handicap." },
+        { "type": "paragraph", "text": "L'anxiété généralisée touche environ 300 millions de personnes dans le monde. Ces souffrances mènent parfois au suicide, responsable de 700 000 décès par an, un chiffre supérieur au nombre de victimes des guerres et des catastrophes naturelles réunies." },
+        { "type": "funFact", "text": "Le mot « mélancolie » vient du grec ancien et signifie littéralement « bile noire ». Dans l'Antiquité, on pensait que la dépression était causée par un excès de ce liquide dans le corps." },
+        { "type": "paragraph", "text": "En 2019, l'Organisation mondiale de la santé a franchi une étape symbolique en reconnaissant le [[Le burn-out (épuisement professionnel)]] comme un phénomène lié au travail. Cette reconnaissance déplace la responsabilité de l'individu seul vers son environnement de travail." }
+      ]
+    },
+    {
+      "id": "course_228_la_sante_mentale_comme_enjeu_de_societe_p2",
+      "title": "Une jeunesse particulièrement touchée",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Si toute la population est concernée, les adolescents et jeunes adultes inquiètent particulièrement. Aux États-Unis, l'anxiété et la dépression chez les 12-25 ans ont presque doublé en une décennie, avec un tournant clair vers 2012." },
+        { "type": "image", "asset": "teenagers_smartphones_social_media_anxiety", "ratio": "16:9", "caption": "L'explosion des réseaux sociaux coïncide avec une hausse marquée de l'anxiété chez les jeunes." },
+        { "type": "paragraph", "text": "Cette date correspond à la généralisation du smartphone et des réseaux sociaux. La psychologue Jean Twenge pense que ce changement a bouleversé la sociabilité des jeunes : la [[Comparaison sociale ascendante]], où l'on se compare à des standards de vie irréalistes, crée un sentiment profond d'inadéquation." },
+        { "type": "paragraph", "text": "S'ajoutent la [[Cyber-victimisation]] et le manque de sommeil causé par la lumière des écrans. Les réseaux sociaux fonctionnent sur des boucles de [[Renforcement dopaminergique]] qui peuvent devenir addictives et détourner les jeunes du sport ou du sommeil réparateur." }
+      ]
+    },
+    {
+      "id": "course_228_la_sante_mentale_comme_enjeu_de_societe_p3",
+      "title": "Un coût économique très concret",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "La santé mentale ne concerne pas que la vie privée : elle affecte aussi directement la productivité. Le coût annuel du burn-out et de la souffrance au travail est estimé à 300 milliards de dollars par an, rien qu'aux États-Unis, entre absences, départs répétés et employés présents mais incapables de travailler efficacement." },
+        { "type": "image", "asset": "workplace_burnout_stress_mental_health", "ratio": "4:3", "caption": "Le coût du burn-out se chiffre en centaines de milliards de dollars chaque année." },
+        { "type": "paragraph", "text": "Face à ce coût, les entreprises développent des programmes de prévention, mais le défi reste entier dans les pays pauvres, où consulter un psychiatre est presque impossible. L'un des leviers les plus puissants reste la déstigmatisation : quand une personnalité publique comme l'athlète Simone Biles parle ouvertement de ses difficultés, elle contribue à transformer une source de honte en un vrai sujet de santé." }
+      ]
+    },
+    {
+      "id": "course_228_la_sante_mentale_comme_enjeu_de_societe_p4",
+      "title": "Vers une approche préventive",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "L'avenir de la santé mentale dépend de notre capacité à passer d'une médecine qui traite la crise une fois arrivée, à une approche préventive. Cela suppose de repenser l'urbanisme, l'école et le rythme de travail pour réduire les sources de stress avant qu'elles n'aient un impact." },
+        { "type": "paragraph", "text": "De nouvelles pistes émergent, comme les thérapies numériques ou l'intelligence artificielle, pour pallier le manque de praticiens, bien que ces outils posent aussi des questions sur la confidentialité des données." },
+        { "type": "paragraph", "text": "La santé mentale est aussi liée aux grandes crises actuelles : le concept d'éco-anxiété montre bien comment les menaces globales, comme le climat, affectent directement notre équilibre psychologique. Reconnaître la santé mentale comme un pilier essentiel de nos sociétés devient une condition pour affronter les crises à venir." },
+        { "type": "takeaway", "text": "La santé mentale représente 20% des maladies dans le monde mais seulement 2% des budgets de santé. Entre dépression, burn-out et impact du numérique sur les jeunes, elle devient un enjeu de société aussi urgent qu'économique." }
+      ]
+    }
+  ]
+}

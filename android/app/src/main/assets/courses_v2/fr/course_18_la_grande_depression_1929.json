@@ -1,0 +1,135 @@
+{
+  "id": "course_18_la_grande_depression_1929",
+  "title": "La Grande Dépression",
+  "subtitle": "1929",
+  "subject": "histoire",
+  "subcategory": "Révolutions & conflits modernes",
+  "description": "Le **24 octobre 1929**, Wall Street s'effondre. En trois ans, le chômage touche **25 %** des Américains et la crise ouvre la voie aux extrêmes en Europe.",
+  "hero": {
+    "image": "la_grande_depression_1929",
+    "ratio": "16:9",
+    "hook": "Un jeudi à Wall Street, et le monde bascule dans une décennie de misère."
+  },
+  "sections": [
+    {
+      "id": "course_18_la_grande_depression_1929_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le **24 octobre 1929**, le **Jeudi noir**, la Bourse de New York s'effondre. Ce n'est pas qu'un accident financier. C'est le début de la **Grande Dépression**, une paralysie économique mondiale."
+        },
+        {
+          "type": "paragraph",
+          "text": "En trois ans, la richesse produite dans le monde chute d'environ **15 %**. Le chômage touche **25 %** des Américains. Les démocraties européennes vacillent. Voici comment une bulle a tout emporté."
+        }
+      ]
+    },
+    {
+      "id": "course_18_la_grande_depression_1929_p1",
+      "title": "Les Années folles et la bulle",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dans les **Années folles** (les années 1920), l'Amérique consomme à crédit : auto, radio, électroménager. Entre 1920 et 1929, le **Dow Jones**, l'indice qui mesure le prix des grandes actions américaines, est multiplié par six. Le moteur de la bulle : l'[[Achat d'actions sur marge]]. On emprunte pour acheter des titres, en misant sur leur hausse."
+        },
+        {
+          "type": "image",
+          "asset": "roaring_twenties_jazz_1920s",
+          "ratio": "4:3",
+          "caption": "Les Années folles : euphorie, crédit et spéculation."
+        },
+        {
+          "type": "funFact",
+          "text": "Le jour du krach, à la Bourse de Chicago, des courtiers auraient pendu une cigogne virtuelle… accusée d'avoir apporté le malheur au lieu de la prospérité."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dès 1928, la production stagne et les prix agricoles chutent. Les usines fabriquent plus que les gens ne peuvent acheter : c'est la [[surproduction]]. Le marché est [[surévalué]], trop cher par rapport à la réalité. Quand le doute gagne, tout le monde vend en même temps."
+        }
+      ]
+    },
+    {
+      "id": "course_18_la_grande_depression_1929_p2",
+      "title": "Du krach à la faillite des banques",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le **24 octobre**, onze millions d'ordres de vente. Le **29**, « Mardi noir », la chute s'accélère. Entre 1929 et 1932, le marché perd **89 %** de sa valeur. Puis viennent les [[bank runs]] : des vagues de clients qui retirent leur argent en panique. Environ **9 000** banques américaines font faillite."
+        },
+        {
+          "type": "image",
+          "asset": "unemployed_queue_great_depression",
+          "ratio": "4:3",
+          "caption": "Files de chômeurs : le visage social de la crise."
+        },
+        {
+          "type": "funFact",
+          "text": "Des Américains ruinés attelaient des chevaux à leurs voitures pour économiser l'essence. On les appelait les « Hoover Cars », du nom du président [[Herbert Hoover]], jugé trop passif face à la crise."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sans crédit, les usines ferment. La production chute d'environ **46 %**. Sans protection sociale digne de ce nom, des millions de personnes dépendent des soupes populaires."
+        }
+      ]
+    },
+    {
+      "id": "course_18_la_grande_depression_1929_p3",
+      "title": "La crise gagne l'Europe",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Les États-Unis rapatrient leurs prêts. L'Europe s'asphyxie. L'[[étalon-or]], un système où les monnaies sont liées à l'or, propage la crise : pour garder l'or, les banques centrales montent les taux d'intérêt, ce qui freine encore l'économie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les politiques de [[déflation]] (baisser les prix et les salaires pour « assainir ») échouent. En Allemagne, le chômage atteint **30 %**. Adolf Hitler exploite le désespoir contre [[Weimar]], la fragile république allemande. En **janvier 1933**, il arrive au pouvoir. La crise économique ouvre la porte à la catastrophe politique."
+        }
+      ]
+    },
+    {
+      "id": "course_18_la_grande_depression_1929_p4",
+      "title": "Roosevelt et le New Deal",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Élu en **1932**, **Franklin D. Roosevelt** lance le [[Le New Deal de Roosevelt (1933)]]. Fin du [[laissez-faire]] pur, l'idée que l'État ne doit pas toucher au marché. L'État mise sur la [[relance]] : grands travaux, régulation des banques, début de protection sociale. La reprise reste fragile… jusqu'à la mobilisation de 1941."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "24 oct. 1929",
+              "title": "Jeudi noir",
+              "detail": "Effondrement de Wall Street."
+            },
+            {
+              "date": "1929-1933",
+              "title": "Faillites bancaires",
+              "detail": "Environ 9 000 banques américaines disparaissent."
+            },
+            {
+              "date": "1933",
+              "title": "New Deal",
+              "detail": "Roosevelt impose l'intervention de l'État."
+            },
+            {
+              "date": "janv. 1933",
+              "title": "Hitler au pouvoir",
+              "detail": "La crise allemande nourrit le nazisme."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Après le krach de **1929**, le Dow Jones perd **89 %** de sa valeur, **25 %** des Américains sont au chômage, et la crise favorise l'arrivée d'Hitler au pouvoir en **1933**."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "id": "course_155_nighthawks_hopper",
+  "title": "Nighthawks, Hopper",
+  "subtitle": "1942",
+  "subject": "art",
+  "subcategory": "Cinéma, photo & architecture + œuvres iconiques",
+  "description": "Dans un diner de New York, Hopper peint la solitude urbaine américaine. Nighthawks devient l'icône d'une Amérique éclairée et isolée.",
+  "hero": {
+    "image": "nighthawks_hopper",
+    "ratio": "16:9",
+    "hook": "Quatre personnes, un comptoir, et personne ne se parle vraiment."
+  },
+  "sections": [
+    {
+      "id": "course_155_nighthawks_hopper_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **1942**, l'Américain **Edward Hopper** peint *Nighthawks* : un [[diner]] de nuit, des clients silencieux, des rues vides."
+        },
+        {
+          "type": "paragraph",
+          "text": "C'est l'image même de l'aliénation urbaine américaine."
+        }
+      ]
+    },
+    {
+      "id": "course_155_nighthawks_hopper_p1",
+      "title": "Hopper et le réel américain",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Élève de [[Robert Henri]], Hopper peint motels, stations-service, fenêtres. Pas de scandale cubiste : une clarté froide, des ombres longues, des Américains seuls ensemble."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hopper construit des scènes comme des plateaux de cinéma. Angles nets, couleurs plates, personnages coupés les uns des autres. On dirait des acteurs après la réplique."
+        },
+        {
+          "type": "image",
+          "asset": "hopper_nighthawks_painting",
+          "ratio": "4:3",
+          "caption": "La vitrine comme aquarium."
+        }
+      ]
+    },
+    {
+      "id": "course_155_nighthawks_hopper_p2",
+      "title": "1942, l'Amérique en guerre",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le tableau est achevé peu après [[Pearl Harbor]]. La nation est en guerre, mais Hopper montre l'arrière-front émotionnel : insomniaques, café brûlant, silence."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le diner n'a pas de porte visible. L'espace devient piège doux : on est éclairé, exposé, isolé. La ville moderne offre la lumière sans la chaleur humaine."
+        },
+        {
+          "type": "funFact",
+          "text": "Hopper a dit s'être inspiré d'un restaurant de Greenwich Village, simplifié jusqu'à l'essentiel."
+        }
+      ]
+    },
+    {
+      "id": "course_155_nighthawks_hopper_p3",
+      "title": "Cinéma et postérité",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Ridley Scott]] et [[Wim Wenders]], entre autres, ont recyclé cette lumière de neon et cette solitude. *Nighthawks* est devenu un décor mental du XXe siècle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Peint pendant la Seconde Guerre mondiale, le tableau ignore les drapeaux. Il parle d'une autre fatigue : celle des nuits américaines ordinaires."
+        },
+        {
+          "type": "image",
+          "asset": "american_diner_night_neon",
+          "ratio": "4:3",
+          "caption": "Le neon : chaleur artificielle, froideur humaine."
+        }
+      ]
+    },
+    {
+      "id": "course_155_nighthawks_hopper_p4",
+      "title": "Héritage",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aujourd'hui encore, l'œuvre dit quelque chose des villes : être entouré sans être relié. Une peinture simple, une émotion durable."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour bien saisir Nighthawks, Hopper, il faut garder une chose en tête : chaque détail technique sert une émotion ou une idée. L'œuvre n'est jamais seulement décorative."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le contexte compte autant que le style. Dates, lieux, commanditaires, public : tout cela explique pourquoi une forme apparaît à un moment précis, et pas avant."
+        },
+        {
+          "type": "paragraph",
+          "text": "Enfin, l'héritage se mesure dans le temps long. Ce que nous voyons aujourd'hui dans les musées, les films ou la musique populaire porte encore la trace de ces inventions."
+        },
+        {
+          "type": "paragraph",
+          "text": "Affiches, pastiches, séries TV : *Nighthawks* est devenu un décor mental. Sa force tient à ce qu'il ne raconte presque rien… et qu'on y projette tout."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour bien saisir Nighthawks, Hopper, il faut garder une chose en tête : chaque détail technique sert une émotion ou une idée. L'œuvre n'est jamais seulement décorative."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le contexte compte autant que le style. Dates, lieux, commanditaires, public : tout cela explique pourquoi une forme apparaît à un moment précis, et pas avant."
+        },
+        {
+          "type": "takeaway",
+          "text": "Avec Nighthawks, Hopper a fait d'un diner de 1942 le portrait définitif de la solitude moderne."
+        }
+      ]
+    }
+  ]
+}

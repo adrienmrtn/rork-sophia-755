@@ -1,0 +1,116 @@
+{
+  "id": "course_175_jason_et_la_toison_d_or",
+  "title": "Jason et la Toison d'Or",
+  "subtitle": "La quête des Argonautes",
+  "subject": "mythologie",
+  "subcategory": "Grèce : les héros",
+  "description": "Jason et les Argonautes partent en Colchide chercher la Toison d'Or. Derrière l'aventure, une histoire d'amour et de trahison avec la magicienne Médée.",
+  "hero": {
+    "image": "jason_et_la_toison_d_or",
+    "ratio": "16:9",
+    "hook": "Cinquante héros, un navire magique, une toison gardée par un dragon. Et une magicienne sans qui rien n'aurait réussi."
+  },
+  "sections": [
+    {
+      "id": "course_175_jason_et_la_toison_d_or_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Jason** rassemble les **[[Argonautes]]**, une élite de héros grecs, pour aller chercher la **Toison d'Or** : la toison d'un bélier divin, suspendue en [[Colchide]], région qui correspond à peu près à la Géorgie actuelle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce voyage est l'un des plus anciens récits de navigation de l'Occident. Il parle de légitimité royale, d'aide divine… et surtout de la passion destructrice entre Jason et **Médée**, magicienne qui rendra la victoire possible, puis terrible."
+        }
+      ]
+    },
+    {
+      "id": "course_175_jason_et_la_toison_d_or_p1",
+      "title": "Une sandale, un trône, un piège",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jason est le fils d'Éson, roi de Iolcos en Thessalie. Son oncle [[Pélias]] a usurpé le trône. Élevé par le centaure [[Chiron]], Jason revient réclamer son héritage. En chemin, il aide une vieille femme à traverser un torrent. C'est [[Héra]] déguisée. Il perd une sandale dans la boue."
+        },
+        {
+          "type": "funFact",
+          "text": "En Colchide, on plaçait parfois des peaux de mouton au fond des rivières pour piéger les paillettes d'or. La « toison d'or » a peut-être une racine minière réelle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pélias a peur : un oracle l'avait averti de l'homme à la sandale unique. Il promet le trône si Jason rapporte la Toison, gardée par un dragon. Jason fait construire l'[[Argo]], navire à proue parlante grâce à un bois sacré de [[Dodone]]. À bord : **Héraclès**, **Orphée**, **Castor et Pollux**, et bien d'autres."
+        },
+        {
+          "type": "image",
+          "asset": "argonauts_ship_argo_jason_greek_myth",
+          "ratio": "4:3",
+          "caption": "L'Argo, premier grand navire de la légende grecque."
+        }
+      ]
+    },
+    {
+      "id": "course_175_jason_et_la_toison_d_or_p2",
+      "title": "Rochers qui s'entrechoquent",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En route, les Argonautes sauvent le roi Phinée des **Harpies**, monstres qui lui volaient sa nourriture. En échange, Phinée révèle comment franchir les **Roches Symplégades**, falaises qui s'écrasent sur tout navire à l'entrée de la mer Noire."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jason lâche une colombe. Les rochers se referment sur ses plumes, puis s'ouvrent. L'Argo passe de justesse. En Colchide, le roi **Aeétès** impose des travaux impossibles : atteler des taureaux de feu, labourer le champ d'[[Arès]], semer des dents de dragon d'où naissent des guerriers. Sans aide, Jason mourrait."
+        }
+      ]
+    },
+    {
+      "id": "course_175_jason_et_la_toison_d_or_p3",
+      "title": "Médée, architecte de la victoire",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Aphrodite]], déesse de l'amour, fait tomber **Médée**, fille d'Aeétès et prêtresse d'[[Hécate]], amoureuse de Jason. Elle lui donne un onguent contre le feu des taureaux. Pour les guerriers nés des dents, elle lui conseille de jeter une pierre au milieu d'eux : ils s'entretuent."
+        },
+        {
+          "type": "image",
+          "asset": "medea_jason_greek_myth_waterhouse_painting",
+          "ratio": "4:3",
+          "caption": "Médée et Jason : la magie au service de la quête."
+        },
+        {
+          "type": "paragraph",
+          "text": "Elle endort enfin le dragon. Jason décroche la Toison. Pour fuir, Médée tue son frère **Absyrtos** et disperse ses restes en mer. Aeétès s'arrête pour recueillir le corps. Le couple est uni… et déjà maudit."
+        }
+      ]
+    },
+    {
+      "id": "course_175_jason_et_la_toison_d_or_p4",
+      "title": "Trahison et chute",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "À Iolcos, Pélias refuse de céder. Médée trompe ses filles : elles « rajeunissent » leur père en le découpant. Le couple, chassé, se réfugie à Corinthe. Des années plus tard, Jason veut épouser la fille du roi Créon. Médée se venge : robe empoisonnée pour la rivale, puis meurtre de leurs propres enfants."
+        },
+        {
+          "type": "image",
+          "asset": "medea_vengeance_delacroix_painting",
+          "ratio": "4:3",
+          "caption": "La vengeance de Médée, après la trahison de Jason."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jason vieillit seul. Il meurt misérablement, écrasé par un morceau pourri de l'Argo sous lequel il se reposait. Le héros qui avait tout gagné par l'aide d'autrui finit détruit pour avoir renié celle qui l'avait sauvé."
+        },
+        {
+          "type": "takeaway",
+          "text": "Jason conquiert la Toison grâce à Médée et à l'[[Argo]]. Sa trahison brise leur pacte et mène à la ruine : le mythe montre qu'un héros qui renie ses alliés finit par tout perdre."
+        }
+      ]
+    }
+  ]
+}

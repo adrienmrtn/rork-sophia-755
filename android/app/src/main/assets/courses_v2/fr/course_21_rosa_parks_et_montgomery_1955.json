@@ -1,0 +1,135 @@
+{
+  "id": "course_21_rosa_parks_et_montgomery_1955",
+  "title": "Rosa Parks et Montgomery",
+  "subtitle": "1955",
+  "subject": "histoire",
+  "subcategory": "Guerre froide & monde contemporain",
+  "description": "Le **1er décembre 1955**, une couturière refuse de céder sa place dans un bus à Montgomery. Son arrestation lance un boycott de **381 jours** et change le mouvement des droits civiques.",
+  "hero": {
+    "image": "rosa_parks_et_montgomery_1955",
+    "ratio": "16:9",
+    "hook": "Un siège refusé, 381 jours de boycott, et le Sud ségrégationniste commence à vaciller."
+  },
+  "sections": [
+    {
+      "id": "course_21_rosa_parks_et_montgomery_1955_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le **1er décembre 1955**, à Montgomery, capitale de l'Alabama, une couturière de 42 ans refuse de se lever. Son nom : **Rosa Parks**. Un passager blanc veut sa place. Elle dit non."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce n'est pas un caprice. Dans le Sud américain, la loi sépare encore Noirs et Blancs partout. Son arrestation déclenche un boycott des bus qui dure **381 jours**. Un jeune pasteur encore peu connu, **Martin Luther King Jr.**, y trouve sa voix."
+        }
+      ]
+    },
+    {
+      "id": "course_21_rosa_parks_et_montgomery_1955_p1",
+      "title": "Un Sud coupé en deux",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Au milieu des années 1950, le Sud vit sous les lois [[Jim Crow]]. Ces règles imposent la séparation raciale : écoles, hôpitaux, fontaines, transports. En **1896**, un arrêt de la Cour suprême, [[Plessy v. Ferguson]], avait même validé l'idée « séparés mais égaux »."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dans les bus de Montgomery, les Noirs s'assoient à l'arrière. Si la zone blanche est pleine, ceux du milieu doivent se lever. Rosa Parks n'est pas une passagère prise au hasard. Militante de [[La NAACP]], une association pour les droits civiques, elle a suivi une formation à la [[Highlander Folk School]], un centre où l'on apprend la résistance non violente. Son calme et son respectabilité en font le visage idéal d'un combat public."
+        }
+      ]
+    },
+    {
+      "id": "course_21_rosa_parks_et_montgomery_1955_p2",
+      "title": "Le refus du 1er décembre",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ce soir-là, le chauffeur James Blake ordonne à quatre passagers noirs de se lever pour un seul Blanc. Seule Parks refuse. Elle est arrêtée. Dès le lendemain, des tracts appellent à boycotter les bus le jour de son procès, le **5 décembre**."
+        },
+        {
+          "type": "funFact",
+          "text": "Neuf mois plus tôt, **Claudette Colvin**, une lycéenne de 15 ans, avait déjà refusé de céder sa place. Les militants ne l'avaient pas mise en avant : enceinte et célibataire, elle était jugée trop « fragile » pour convaincre l'opinion."
+        },
+        {
+          "type": "image",
+          "asset": "rosa_parks_arrest_montgomery_bus",
+          "ratio": "4:3",
+          "caption": "L'arrestation de Rosa Parks, point de départ du boycott."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour tenir, la communauté crée la Montgomery Improvement Association. À sa tête : Martin Luther King Jr., pasteur de 26 ans. Le 5 décembre, les bus roulent presque vides. Ce qui devait durer un jour devient un bras de fer de plus d'un an."
+        }
+      ]
+    },
+    {
+      "id": "course_21_rosa_parks_et_montgomery_1955_p3",
+      "title": "381 jours sans bus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Les Noirs représentent environ **75 %** des usagers. On organise le covoiturage. Des taxis baissent leurs tarifs au prix du ticket. La répression suit : harcèlement, assurances annulées, menaces. En janvier 1956, la maison de King est dynamitée. Face aux décombres, il appelle au calme. Ce moment impose son autorité morale."
+        },
+        {
+          "type": "image",
+          "asset": "montgomery_bus_boycott_1955",
+          "ratio": "4:3",
+          "caption": "Pendant le boycott, les bus de Montgomery circulent presque vides."
+        },
+        {
+          "type": "paragraph",
+          "text": "La compagnie de bus perd environ **65 %** de ses recettes. Les commerces du centre-ville souffrent. Ce qui était un conflit local devient une affaire nationale : les caméras du pays regardent Montgomery."
+        }
+      ]
+    },
+    {
+      "id": "course_21_rosa_parks_et_montgomery_1955_p4",
+      "title": "La Cour suprême tranche",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En parallèle, les avocats s'appuient sur [[Brown v. Board of Education (1954)]], l'arrêt qui a interdit la ségrégation à l'école. Le **13 novembre 1956**, la Cour suprême confirme : la ségrégation dans les bus d'Alabama est contraire à la Constitution. Le **21 décembre**, Parks et King montent symboliquement à l'avant d'un bus."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1er déc. 1955",
+              "title": "Arrestation de Rosa Parks",
+              "detail": "Elle refuse de céder son siège à Montgomery."
+            },
+            {
+              "date": "5 déc. 1955",
+              "title": "Début du boycott",
+              "detail": "Les bus roulent à vide ; King prend la tête du mouvement."
+            },
+            {
+              "date": "13 nov. 1956",
+              "title": "Décision de la Cour suprême",
+              "detail": "La ségrégation des bus est jugée inconstitutionnelle."
+            },
+            {
+              "date": "21 déc. 1956",
+              "title": "Fin du boycott",
+              "detail": "381 jours plus tard, la victoire est acquise."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Le prix est lourd : Parks perd son emploi et quitte Montgomery sous les menaces. Mais le modèle est lancé. Il aboutira au [[Civil Rights Act de 1964]], la grande loi qui interdit la ségrégation dans les lieux publics."
+        },
+        {
+          "type": "takeaway",
+          "text": "En **381 jours**, le boycott de Montgomery prouve qu'une désobéissance civile organisée peut faire tomber la ségrégation locale et révéler un leader : Martin Luther King."
+        }
+      ]
+    }
+  ]
+}

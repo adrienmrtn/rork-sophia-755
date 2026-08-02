@@ -1,0 +1,112 @@
+{
+  "id": "course_78_comment_fonctionne_l_electricite_dans_no",
+  "title": "Comment fonctionne l'électricité dans notre corps ?",
+  "subtitle": "Nerfs & ions",
+  "subject": "sciences",
+  "subcategory": "La Terre et l'Univers",
+  "description": "Penser, battre du cœur, lever un bras : tout cela circule d'abord comme de l'électricité vivante, portée non par des électrons, mais par des ions.",
+  "hero": {
+    "image": "comment_fonctionne_l_electricite_dans_notre_corps",
+    "ratio": "16:9",
+    "hook": "Votre corps est un réseau électrique. Mais ici, le courant, ce sont des ions, pas des électrons."
+  },
+  "sections": [
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dans une prise murale, le courant, ce sont des **électrons** qui circulent. Dans votre corps, c'est différent : ce sont des **ions**, des atomes chargés, qui entrent et sortent des cellules. Ce flux crée les signaux qui font penser, battre le cœur et contracter un muscle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sans cette électricité vivante, aucune pensée, aucun geste, aucun pouls. Comprendre le corps, c'est aussi comprendre ce langage de charges."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p1",
+      "title": "Le clic électrique du neurone",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un **neurone** au repos n'envoie pas de message, mais il se « charge ». Sa membrane sépare l'intérieur et l'extérieur de la cellule. Grâce aux [[pompes sodium-potassium]], il maintient un [[potentiel de repos]] d'environ **-70 millivolts** : l'intérieur est plus négatif que l'extérieur."
+        },
+        {
+          "type": "image",
+          "asset": "neuron_electrical_signal_brain",
+          "ratio": "auto",
+          "caption": "Les neurones communiquent par de brèves impulsions électriques."
+        },
+        {
+          "type": "paragraph",
+          "text": "Quand un stimulus arrive, des canaux s'ouvrent. Le sodium entre d'un coup. La polarité s'inverse : c'est le [[potentiel d'action]], un signal tout-ou-rien qui file le long de l'axone, parfois sur un mètre. Comme une vague électrique."
+        },
+        {
+          "type": "funFact",
+          "text": "Le cerveau éveillé produit environ **20 watts**, assez pour une petite LED. Pourtant, il consomme près de **20 %** des calories du corps."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p2",
+      "title": "À la synapse, l'électricité devient chimie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Les neurones ne se touchent pas vraiment. Entre eux, un minuscule fossé : la **synapse**. Le signal électrique ne peut pas le sauter. Alors le bout de l'axone libère des [[neurotransmetteurs]], des molécules messagères comme l'acétylcholine ou le [[glutamate]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ces messagers se fixent sur le neurone suivant comme une clé dans une serrure. Selon le message, ils excitent ou inhibent. Des milliers de ces décisions simultanées forment la pensée."
+        },
+        {
+          "type": "funFact",
+          "text": "Certains signaux nerveux voyagent à **120 m/s** (plus de **430 km/h**). Assez pour réagir à une brûlure sur l'orteil en une fraction de seconde."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p3",
+      "title": "Le cœur a son propre pacemaker",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le cœur n'attend pas un ordre du cerveau pour chaque battement. Dans l'oreillette droite, le **nœud sinusal** génère ses propres impulsions, environ **60 à 100** fois par minute au repos. Le signal se propage, contracte d'abord les oreillettes, puis les ventricules."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cette activité est assez forte pour être lue sur la peau : c'est l'**électrocardiogramme (ECG)**. Si le rythme se dérègle, on parle d'**arythmie**. Le cœur bat alors de façon désordonnée et pompe mal."
+        },
+        {
+          "type": "funFact",
+          "text": "L'anguille électrique utilise le même principe de cellules excitables, mais en série : jusqu'à **600 volts**, assez pour paralyser une proie."
+        }
+      ]
+    },
+    {
+      "id": "course_78_comment_fonctionne_l_electricite_dans_no_p4",
+      "title": "Du geste volontaire au défibrillateur",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pour lever le bras, un potentiel d'action descend jusqu'au muscle. L'acétylcholine déclenche une vague électrique locale, puis une libération de calcium. Les protéines du muscle glissent l'une sur l'autre : contraction."
+        },
+        {
+          "type": "paragraph",
+          "text": "La **défibrillation** utilise le même principe à l'envers : un choc externe remet toutes les cellules « à zéro » pour que le nœud sinusal reprenne le tempo. Des prothèses bioniques captent aussi ces faibles signaux pour commander une main artificielle."
+        },
+        {
+          "type": "takeaway",
+          "text": "Le vivant parle en flux d'ions et en potentiels d'action. Pensée, cœur et muscles partagent le même langage électrique."
+        }
+      ]
+    }
+  ]
+}

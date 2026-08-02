@@ -1,0 +1,72 @@
+{
+  "id": "course_210_la_guerre_en_ukraine_expliquee",
+  "title": "La guerre en Ukraine expliquée",
+  "subtitle": "Depuis le 24 février 2022",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Conflits & géopolitique",
+  "description": "Une invasion censée durer trois jours est devenue la plus grande guerre en Europe depuis 1945. Retour sur les causes et les conséquences du conflit en **Ukraine**.",
+  "hero": {
+    "image": "la_guerre_en_ukraine_expliquee",
+    "ratio": "16:9",
+    "hook": "Une offensive éclair censée durer trois jours s'est transformée en la plus grande guerre en Europe depuis 1945."
+  },
+  "sections": [
+    {
+      "id": "course_210_la_guerre_en_ukraine_expliquee_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Le 24 février 2022, la Russie lance une offensive militaire massive contre l'**Ukraine**, déclenchant le conflit le plus dévastateur sur le sol européen depuis 1945. Cet événement n'est pas soudain : il est l'aboutissement de tensions accumulées depuis des décennies autour de la souveraineté ukrainienne." }
+      ]
+    },
+    {
+      "id": "course_210_la_guerre_en_ukraine_expliquee_p1",
+      "title": "L'héritage post-soviétique et le choc des identités",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Les racines de la guerre plongent dans la dislocation de l'URSS en 1991. L'indépendance de l'Ukraine est vécue par une partie des élites russes, dont Vladimir Poutine, comme une amputation du cœur historique de la Russie, qui refuse de la voir comme une nation pleinement souveraine." },
+        { "type": "funFact", "text": "Le président ukrainien Volodymyr Zelensky a prêté sa voix à l'ours Paddington dans la version ukrainienne du film, un clin d'œil à sa carrière d'acteur avant la politique." },
+        { "type": "paragraph", "text": "L'Ukraine, qui possédait le troisième arsenal nucléaire mondial en 1991, choisit de se désarmer. Par le **[[Mémorandum de Budapest (1994)]]**, elle échange ses ogives contre des garanties d'intégrité territoriale. Mais son rapprochement avec l'UE et l'OTAN est vu par le Kremlin comme un encerclement hostile." },
+        { "type": "paragraph", "text": "La rupture définitive vient en 2014, quand le peuple ukrainien chasse un président pro-russe lors de la révolution de Maïdan. En réaction, la Russie annexe illégalement la Crimée et soutient une insurrection séparatiste dans le **[[Donbass]]** : un conflit gelé pendant huit ans qui servira de laboratoire à la guerre totale de 2022." }
+      ]
+    },
+    {
+      "id": "course_210_la_guerre_en_ukraine_expliquee_p2",
+      "title": "Le basculement de février 2022",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le 24 février 2022, l'armée russe lance son offensive sur plusieurs fronts. L'objectif de Moscou est de renverser le gouvernement de Kyiv en quelques jours, une ambition qui repose sur une erreur majeure : la sous-estimation de la cohésion nationale ukrainienne et de la modernisation de son armée depuis 2014." },
+        { "type": "image", "asset": "ukraine_war_destroyed_city_2022", "ratio": "16:9", "caption": "L'invasion russe de février 2022 a provoqué d'importantes destructions dans de nombreuses villes ukrainiennes." },
+        { "type": "paragraph", "text": "Le président Volodymyr Zelensky refuse l'évacuation proposée par les États-Unis, déclarant : « J'ai besoin de munitions, pas d'un taxi ». Par ses messages quotidiens, il devient le symbole d'une nation qui refuse de plier." },
+        { "type": "paragraph", "text": "La bataille de Kyiv se solde par un échec russe cinglant au printemps 2022. Face à une résistance ukrainienne mobile utilisant des armes occidentales, Moscou retire ses troupes du nord pour se concentrer sur l'est et le sud : le conflit bascule dans une guerre d'usure, avec une ligne de front de plus de 1 000 kilomètres." }
+      ]
+    },
+    {
+      "id": "course_210_la_guerre_en_ukraine_expliquee_p3",
+      "title": "Un séisme économique et sécuritaire mondial",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "L'onde de choc de l'invasion dépasse les frontières ukrainiennes. Les puissances occidentales déploient un arsenal de sanctions sans précédent pour paralyser la machine de guerre russe : l'exclusion des banques russes du système **[[SWIFT]]** et le gel des réserves de la banque centrale marquent une rupture historique. Ces mesures bouleversent aussi les flux énergétiques, l'Europe devant engager une transition rapide loin du gaz russe, dont elle dépendait à 40 %." },
+        { "type": "funFact", "text": "Au début du conflit, le gouvernement ukrainien a mis à jour son application « Diia » pour permettre aux citoyens de signaler en temps réel la position des chars russes." },
+        { "type": "paragraph", "text": "Le secteur agricole est l'autre grande victime : l'Ukraine, surnommée « le grenier à blé de l'Europe », voit ses ports bloqués, menaçant de famine des pays dépendant de ses céréales. Le conflit ressoude aussi l'Alliance atlantique, poussant la Finlande et la Suède à rejoindre l'OTAN." }
+      ]
+    },
+    {
+      "id": "course_210_la_guerre_en_ukraine_expliquee_p4",
+      "title": "Vers une guerre de longue durée",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Après plus de deux ans de combats, la guerre devient un conflit de haute intensité où drones et satellites côtoient des méthodes de tranchées d'un autre siècle. L'échec des contre-offensives ukrainiennes de 2023 montre que le terrain est devenu très difficile à reconquérir, entre champs de mines et surveillance constante du champ de bataille." },
+        { "type": "image", "asset": "nato_soldiers_tanks_ukraine_support_2022", "ratio": "4:3", "caption": "Le soutien militaire occidental à l'Ukraine, via l'OTAN, s'est intensifié tout au long du conflit." },
+        { "type": "paragraph", "text": "L'enjeu devient celui de l'endurance industrielle : la Russie a basculé son économie vers un modèle de guerre totale, tandis que l'Ukraine dépend de la continuité de l'aide militaire et financière occidentale." },
+        { "type": "timeline", "events": [
+          { "date": "1991", "title": "Indépendance de l'Ukraine", "detail": "Dislocation de l'URSS, l'Ukraine devient un État souverain." },
+          { "date": "2014", "title": "Maïdan et annexion de la Crimée", "detail": "La Russie annexe la Crimée et arme les séparatistes du Donbass." },
+          { "date": "2022", "title": "Invasion à grande échelle", "detail": "La Russie envahit l'Ukraine sur plusieurs fronts le 24 février." },
+          { "date": "2023-2024", "title": "Élargissement de l'OTAN", "detail": "La Finlande puis la Suède rejoignent l'Alliance atlantique." }
+        ] },
+        { "type": "takeaway", "text": "La résistance ukrainienne a transformé une invasion éclair censée durer trois jours en une guerre d'usure globale, qui a redéfini les alliances issues de la Guerre froide et bouleversé la sécurité énergétique et alimentaire mondiale." }
+      ]
+    }
+  ]
+}

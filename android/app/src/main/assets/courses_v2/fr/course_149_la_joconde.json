@@ -1,0 +1,70 @@
+{
+  "id": "course_149_la_joconde",
+  "title": "La Joconde",
+  "subtitle": "1503-1519",
+  "subject": "art",
+  "subcategory": "Œuvres iconiques",
+  "description": "Peinte par **Léonard de Vinci** entre **1503** et **1519**, *La Joconde* est devenue l'icône absolue du Louvre. Technique, sourire mystérieux… et un vol en **1911** qui a tout changé.",
+  "hero": {
+    "image": "la_joconde",
+    "ratio": "16:9",
+    "hook": "Un sourire, un vol, un mythe : comment un portrait est devenu l'œuvre la plus célèbre du monde."
+  },
+  "sections": [
+    {
+      "id": "course_149_la_joconde_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "*La Joconde*, peinte entre **1503** et **1519** par **Léonard de Vinci**, est le tableau le plus visité du monde. Exposée au **Louvre**, elle fascine autant par sa technique que par son histoire. Ce n'est pas seulement un beau portrait. C'est un mythe fabriqué par l'art, la science et un fait divers." },
+        { "type": "paragraph", "text": "Pourquoi ce visage plutôt qu'un autre ? Parce que Léonard y a concentré des innovations, et parce qu'un vol spectaculaire l'a rendue célèbre à l'échelle planétaire." }
+      ]
+    },
+    {
+      "id": "course_149_la_joconde_p1",
+      "title": "Léonard et le sfumato",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le portrait commence à Florence vers **1503**. Le commanditaire est le marchand **Francesco del Giocondo**. Le modèle serait son épouse, [[Lisa Gherardini]]. Mais Léonard ne livre jamais le tableau. Il le garde, le retouche pendant des années, et l'emporte en France, où il meurt en **1519**." },
+        { "type": "image", "asset": "mona_lisa_leonardo_da_vinci_louvre_painting", "ratio": "4:3", "caption": "La Joconde au Louvre : un petit panneau de peuplier devenu icône mondiale." },
+        { "type": "paragraph", "text": "Sa technique signature est le [[sfumato léonardien]] : des glacis, couches très fines, qui effacent les contours. Plus de ligne dure. Le visage fond dans l'air. Léonard ajoute aussi la [[Perspective atmosphérique]] : le paysage lointain bleuit et s'adoucit, comme dans la vraie vision." }
+      ]
+    },
+    {
+      "id": "course_149_la_joconde_p2",
+      "title": "Le sourire qui joue avec l'œil",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le fameux sourire n'est pas qu'une émotion peinte. Il joue avec notre [[Vision périphérique]]. Quand on fixe les yeux du modèle, les bords de la rétine voient la bouche en ombres douces : le sourire semble présent. Quand on regarde directement la bouche, il s'atténue." },
+        { "type": "image", "asset": "mona_lisa_smile_detail_close_up", "ratio": "1:1", "caption": "Plus on le fixe, plus le sourire semble se dérober." },
+        { "type": "funFact", "text": "Léonard, à la fois peintre et savant, étudiait l'optique. Le mystère du sourire repose en partie sur une connaissance précise de la façon dont l'œil humain traite les ombres." },
+        { "type": "paragraph", "text": "Résultat : le visage semble vivant, changeant, presque conscient de notre regard." }
+      ]
+    },
+    {
+      "id": "course_149_la_joconde_p3",
+      "title": "1911 : le vol qui invente la célébrité",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Au XIXe siècle, *La Joconde* est admirée, mais pas encore l'œuvre n°1 du Louvre. Tout bascule le **21 août 1911**. [[Vincenzo Peruggia]], un vitrier italien du musée, la dérobe : c'est le [[vol de la Joconde (1911)]]. Il la cache sous sa blouse et sort tranquillement." },
+        { "type": "image", "asset": "mona_lisa_stolen_1911_newspaper_headline", "ratio": "4:3", "caption": "1911 : l'absence du tableau fait la une et crée une star." },
+        { "type": "paragraph", "text": "L'enquête vire au scandale. Le poète [[Guillaume Apollinaire]] est emprisonné un temps. [[Pablo Picasso]] est interrogé. Quand le tableau réapparaît en **1913**, il n'est plus seulement une peinture. Il est une célébrité." }
+      ]
+    },
+    {
+      "id": "course_149_la_joconde_p4",
+      "title": "Une icône sous verre",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Aujourd'hui, peinte sur bois de peuplier, elle vit derrière un [[Verre pare-balles]], dans une vitrine climatisée. Attaques à l'acide, jets d'objets : la protection est devenue nécessaire. Et les parodies, de Duchamp jusqu'à Internet, prouvent qu'elle est devenue un langage universel." },
+        { "type": "timeline", "events": [
+          { "date": "1503", "title": "Début du portrait", "detail": "Léonard commence La Joconde à Florence." },
+          { "date": "1519", "title": "Mort de Léonard", "detail": "Le tableau reste en France." },
+          { "date": "1911", "title": "Le vol", "detail": "Peruggia transforme l'œuvre en mythe médiatique." },
+          { "date": "1913", "title": "Retour", "detail": "Le tableau revient au Louvre en star mondiale." }
+        ] },
+        { "type": "takeaway", "text": "*La Joconde* doit sa gloire autant au génie de Léonard (sfumato, sourire optique) qu'à l'histoire : un vol en 1911 a transformé un chef-d'œuvre admiré en icône planétaire." }
+      ]
+    }
+  ]
+}

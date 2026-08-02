@@ -1,0 +1,141 @@
+{
+  "id": "course_14_la_commune_de_paris_1871",
+  "title": "La Commune de Paris",
+  "subtitle": "1871",
+  "subject": "histoire",
+  "subcategory": "Révolutions & conflits modernes",
+  "description": "Du 18 mars au 28 mai 1871, Paris se gouverne seul pendant **72 jours**. L'expérience s'achève dans la Semaine sanglante, une répression qui marque durablement la mémoire française.",
+  "hero": {
+    "image": "la_commune_de_paris_1871",
+    "ratio": "16:9",
+    "hook": "72 jours où Paris se gouverne seul… avant d'être écrasé dans le sang."
+  },
+  "sections": [
+    {
+      "id": "course_14_la_commune_de_paris_1871_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Du **18 mars** au **28 mai 1871**, Paris vit une expérience rare : la **Commune**. Pendant **72 jours**, la capitale se gouverne seule. Elle refuse d'obéir au gouvernement installé à **Versailles** et tente une démocratie plus sociale."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce soulèvement naît d'une défaite nationale, d'un siège affamé et d'une fracture entre un Paris radical et une province plus conservatrice. Il s'achève par la **Semaine sanglante**."
+        }
+      ]
+    },
+    {
+      "id": "course_14_la_commune_de_paris_1871_p1",
+      "title": "Après la défaite et le siège",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tout part de la [[Guerre franco-prussienne]] (**1870-1871**). L'empereur français **Napoléon III** est capturé à **Sedan**. Paris endure ensuite un siège de quatre mois. On mange chevaux, animaux du zoo, puis rats. La capitulation paraît humiliante."
+        },
+        {
+          "type": "image",
+          "asset": "paris_commune_barricades_1871",
+          "ratio": "4:3",
+          "caption": "Barricades parisiennes pendant la Commune de 1871."
+        },
+        {
+          "type": "funFact",
+          "text": "À Noël **1870**, certains restaurants de luxe servirent consommée d'éléphant ou civet de kangourou, issus de la ménagerie du Jardin des Plantes."
+        },
+        {
+          "type": "paragraph",
+          "text": "En février, [[Adolphe Thiers]] dirige une Assemblée surtout monarchiste, repliée à Versailles. Le **18 mars**, il veut saisir les canons de la [[Garde Nationale]], une milice de Parisiens armés, stockés à **Montmartre**. La foule fraternise avec les soldats. Thiers évacue Paris. Un Comité central prend le contrôle de la ville."
+        }
+      ]
+    },
+    {
+      "id": "course_14_la_commune_de_paris_1871_p2",
+      "title": "Ce que la Commune a tenté",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le **28 mars**, la Commune est proclamée. Ouvriers, artisans, journalistes, proches de l'[[Internationale ouvrière]] (un réseau de syndicats et de partis ouvriers) : le conseil légifère dans l'urgence. Remise des loyers. Abolition du travail de nuit des boulangers. Ateliers abandonnés remis aux coopératives."
+        },
+        {
+          "type": "image",
+          "asset": "paris_city_hall_commune_1871",
+          "ratio": "4:3",
+          "caption": "L'Hôtel de Ville, cœur politique de la Commune."
+        },
+        {
+          "type": "paragraph",
+          "text": "Elle proclame aussi la séparation de l'Église et de l'État, l'école laïque et gratuite, et fait abattre la **colonne Vendôme**, symbole de l'Empire. [[Louise Michel]], institutrice et militante, incarne le rôle central des femmes dans les clubs et sur les barricades."
+        }
+      ]
+    },
+    {
+      "id": "course_14_la_commune_de_paris_1871_p3",
+      "title": "La Semaine sanglante",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le **21 mai**, les troupes de Versailles entrent dans Paris. C'est la **Semaine sanglante**. Quartier par quartier, barricade après barricade, la répression est féroce. Des otages sont fusillés. Les Tuileries et l'Hôtel de Ville brûlent."
+        },
+        {
+          "type": "image",
+          "asset": "bloody_week_1871_paris",
+          "ratio": "4:3",
+          "caption": "La Semaine sanglante : Paris repris rue par rue."
+        },
+        {
+          "type": "funFact",
+          "text": "Durant la Commune, le drapeau rouge devient l'emblème officiel de Paris, remplaçant le tricolore jugé trop lié aux pouvoirs qui avaient capitulé."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les [[Fédérés]], nom donné aux partisans de la Commune, reculent jusqu'au cimetière du **Père-Lachaise**. **147** derniers combattants y sont fusillés au **Mur des Fédérés**. Bilan : entre **10 000 et 30 000** morts en une semaine, puis des déportations en Nouvelle-Calédonie."
+        }
+      ]
+    },
+    {
+      "id": "course_14_la_commune_de_paris_1871_p4",
+      "title": "Un mythe qui dure",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pour le philosophe **Karl Marx** et l'Internationale, la Commune est la première expérience de pouvoir ouvrier. Sa répression consolide pourtant la **IIIe République** « d'ordre ». Des idées communardes (laïcité, droits sociaux) reviendront plus tard dans le droit républicain."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "18 mars 1871",
+              "title": "Montmartre",
+              "detail": "Thiers échoue à saisir les canons ; Paris bascule."
+            },
+            {
+              "date": "28 mars 1871",
+              "title": "Proclamation",
+              "detail": "La Commune est officiellement instaurée."
+            },
+            {
+              "date": "21-28 mai 1871",
+              "title": "Semaine sanglante",
+              "detail": "Versailles écrase l'insurrection."
+            },
+            {
+              "date": "28 mai 1871",
+              "title": "Mur des Fédérés",
+              "detail": "Fin des combats au Père-Lachaise."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "En **72 jours**, la Commune de Paris a tenté une démocratie sociale radicale, avant d'être anéantie lors de la Semaine sanglante, au prix de dizaines de milliers de morts."
+        }
+      ]
+    }
+  ]
+}

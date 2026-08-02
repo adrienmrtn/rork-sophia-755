@@ -1,0 +1,4 @@
+-keep class com.revenuecat.** { *; }
+-keep class com.mixpanel.** { *; }
+-keep class com.facebook.** { *; }
+-dontwarn com.facebook.**

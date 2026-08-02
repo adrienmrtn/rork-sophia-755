@@ -1,0 +1,67 @@
+{
+  "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales",
+  "title": "Pourquoi les abeilles sont-elles vitales ?",
+  "subtitle": "Les petites ouvrières de notre alimentation",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environnement & avenir",
+  "description": "Sans les abeilles, **75% des cultures alimentaires mondiales** seraient en danger. Ces petites ouvrières discrètes soutiennent notre alimentation, et leurs populations s'effondrent.",
+  "hero": {
+    "image": "pourquoi_les_abeilles_sont_vitales",
+    "ratio": "16:9",
+    "hook": "Elles ne font pas que du miel : sans elles, une bonne partie de notre alimentation disparaîtrait."
+  },
+  "sections": [
+    {
+      "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        { "type": "paragraph", "text": "On pense souvent aux abeilles seulement pour leur miel. En réalité, elles rendent un service bien plus grand : elles permettent à la majorité des plantes à fleurs de se reproduire. Ce service vaut des centaines de milliards de dollars chaque année." },
+        { "type": "paragraph", "text": "Depuis quelques décennies, ces insectes essentiels disparaissent à une vitesse inquiétante. Comprendre leur rôle et les causes de leur déclin permet de mieux saisir un enjeu direct pour notre alimentation future." }
+      ]
+    },
+    {
+      "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p1",
+      "title": "La pollinisation, un travail discret mais essentiel",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "La [[pollinisation]] est le transport du pollen, les cellules mâles d'une fleur, jusqu'à l'organe femelle d'une autre fleur de la même espèce. Le vent ou l'eau peuvent parfois le faire, mais la majorité des plantes à fleurs préfèrent un transport animal. En cherchant du nectar et du pollen pour leur colonie, les abeilles assurent ce transport sans même le savoir." },
+        { "type": "image", "asset": "honey_bee_pollinating_flower_closeup", "ratio": "4:3", "caption": "En butinant, l'abeille transporte le pollen de fleur en fleur." },
+        { "type": "funFact", "text": "Une abeille peut visiter jusqu'à 700 fleurs par jour. Pour produire seulement 500 grammes de miel, toute une colonie doit voler l'équivalent de trois fois le tour de la Terre." },
+        { "type": "paragraph", "text": "Environ **75% des cultures alimentaires mondiales** dépendent, au moins un peu, des pollinisateurs comme les abeilles. Cela inclut le café, le cacao, les pommes, les amandes ou les avocats. La contribution de la pollinisation à l'économie mondiale est estimée entre 235 et 577 milliards de dollars par an." }
+      ]
+    },
+    {
+      "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p2",
+      "title": "Pourquoi les colonies s'effondrent",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Le déclin des abeilles n'a pas une seule cause : plusieurs menaces agissent en même temps. Depuis les années 1990, certains apiculteurs perdent jusqu'à 30 à 50% de leurs colonies chaque hiver, alors que la perte naturelle devrait tourner autour de 10%. Ce phénomène de disparition brutale est parfois appelé [[colony collapse disorder]]." },
+        { "type": "image", "asset": "neonicotinoid_pesticide_spraying_field", "ratio": "4:3", "caption": "Les néonicotinoïdes pénètrent toute la plante, y compris le nectar et le pollen." },
+        { "type": "paragraph", "text": "Les [[Les néonicotinoïdes]], une famille d'insecticides, sont particulièrement en cause. Ils imprègnent toute la plante, y compris son nectar et son pollen. Même à faible dose, ils désorientent les abeilles, qui ne retrouvent plus leur ruche, et affaiblissent leur système immunitaire." },
+        { "type": "paragraph", "text": "S'ajoutent à cela un acarien parasite qui transmet des virus mortels, la disparition des fleurs sauvages à cause des monocultures, et le changement climatique, qui décale les périodes de floraison par rapport au réveil des insectes." }
+      ]
+    },
+    {
+      "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p3",
+      "title": "Il n'y a pas qu'une seule abeille",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Quand on dit « abeille », on pense presque toujours à l'abeille domestique, celle qui vit en ruche et produit du miel. Elle n'est pourtant qu'une espèce parmi plus de **20 000** dans le monde, dont les bourdons ou les osmies. La plupart sont solitaires et ne font pas de miel, mais jouent un rôle écologique tout aussi important." },
+        { "type": "funFact", "text": "Certaines fleurs, comme celles de la tomate, ne libèrent leur pollen que sous une vibration précise. Les abeilles domestiques ne savent pas le faire, mais les bourdons oui, grâce à une technique appelée sonication." },
+        { "type": "paragraph", "text": "Ces espèces sauvages sont souvent spécialisées sur une plante précise, qu'elles sont parfois les seules à pouvoir polliniser efficacement. Elles sont aussi plus vulnérables que l'abeille domestique, car elles ne bénéficient d'aucun suivi ni soin humain. Leur disparition fragilise toute la [[chaîne trophique]], puisque de nombreux oiseaux dépendent des fruits et graines issus de cette pollinisation." }
+      ]
+    },
+    {
+      "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p4",
+      "title": "Ce qu'on peut encore changer",
+      "free": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Réduire l'usage des pesticides reste le levier le plus efficace. L'Union européenne a interdit en 2018 trois néonicotinoïdes majeurs en plein champ. En parallèle, remettre en place des [[infrastructures agroécologiques]], comme des haies ou des bandes fleuries, recrée des zones refuges pour les insectes." },
+        { "type": "paragraph", "text": "Chacun peut aussi agir simplement : planter des fleurs locales dans son jardin ou laisser sa pelouse un peu plus longue avant de la tondre offre un vrai refuge aux abeilles quand les fleurs se font rares." },
+        { "type": "paragraph", "text": "Protéger les pollinisateurs n'est pas qu'une question de nature à préserver : c'est une stratégie de survie à long terme, puisque leur travail soutient directement la capacité des plantes à nous nourrir." },
+        { "type": "takeaway", "text": "Les abeilles et les 20 000 espèces de pollinisateurs sauvages assurent la reproduction de 75% des cultures alimentaires mondiales. Leur déclin, causé par les pesticides, les parasites et la perte d'habitat, menace directement notre alimentation." }
+      ]
+    }
+  ]
+}

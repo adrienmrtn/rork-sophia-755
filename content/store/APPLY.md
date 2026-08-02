@@ -48,7 +48,36 @@ REVENUECAT_SECRET_API_KEY=sk_... python3 scripts/configure_revenuecat_offering.p
 
 - [ ] App language picker → Terms / Privacy show that language (not English)
 - [ ] French Terms / Privacy unchanged
-- [ ] `PYTHONPATH=scripts python3 scripts/translate_legal_docs.py qa --lang all` → PASS
+- [ ] `python3 scripts/qa_android_phase_e.py` → PASS (Android Phase E gate; also covers Play legal lint)
 - [ ] ASC listing fields reviewed by a native speaker before release
 - [ ] RC product titles visible for the 9 store locales
 - [ ] Sandbox purchase still works (étape 8)
+
+
+---
+
+# Android / Google Play Console
+
+Play drafts generated from ASC listings (Apple → Google wording):
+
+| Field | Source key in `play_listing.<lang>.json` |
+|-------|------------------------------------------|
+| App name | `name` |
+| Short description | `short_description` |
+| Full description | `full_description` |
+| What's new | `whats_new` |
+
+Locales with drafts: `en tr pl ro nl el sv hu bg cs`.
+
+Also paste RC product titles from `revenuecat_products.<lang>.json` (`Sophia_monthly`, `Sophia_yearly`).
+
+In-app legal documents for Android live under `android/app/src/main/assets/legal/<lang>.json` (Play Billing wording).
+
+## Play QA checklist
+
+- [ ] `python3 scripts/qa_android_phase_e.py` → PASS
+- [ ] Profile → Terms / Privacy show the selected language
+- [ ] Paywall legal row: Restore · Terms · Privacy
+- [ ] Login legal note tappable
+- [ ] Restore purchases refreshes premium
+- [ ] Play listing drafts reviewed by a native speaker before release

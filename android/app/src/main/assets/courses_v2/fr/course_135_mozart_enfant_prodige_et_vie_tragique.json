@@ -1,0 +1,145 @@
+{
+  "id": "course_135_mozart_enfant_prodige_et_vie_tragique",
+  "title": "Mozart : enfant prodige et vie tragique",
+  "subtitle": "1756-1791",
+  "subject": "art",
+  "subcategory": "Musique",
+  "description": "Wolfgang Amadeus Mozart, génie précoce de Salzbourg à Vienne, invente l'indépendance du compositeur et laisse un Requiem inachevé.",
+  "hero": {
+    "image": "mozart_enfant_prodige_et_vie_tragique",
+    "ratio": "16:9",
+    "hook": "Six cents œuvres en trente-cinq ans : le météore de Salzbourg."
+  },
+  "sections": [
+    {
+      "id": "course_135_mozart_enfant_prodige_et_vie_tragique_intro",
+      "title": "Introduction",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Wolfgang Amadeus Mozart** (**1756**-**1791**) incarne le génie précoce. Né à **Salzbourg**, il produit plus de **600** œuvres en trente-cinq ans et transforme la musique occidentale."
+        },
+        {
+          "type": "paragraph",
+          "text": "Son parcours raconte aussi un basculement social : du musicien serviteur de cour à l'artiste indépendant. Cette quête, coûteuse et fragile, annonce le [[romantisme]] et la figure moderne du compositeur libre."
+        }
+      ]
+    },
+    {
+      "id": "course_135_mozart_enfant_prodige_et_vie_tragique_p1",
+      "title": "L'enfant prodige sur les routes d'Europe",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Né le **27 janvier 1756**, Wolfgang montre dès trois ans des dons hors normes. Son père **Leopold**, violoniste et pédagogue ambitieux, organise dès six ans des tournées : Vienne, Versailles, Londres, Rome. Ces voyages forgent son oreille : il absorbe toutes les grammaires musicales du continent."
+        },
+        {
+          "type": "image",
+          "asset": "young_mozart_performing_european_tour_painting",
+          "ratio": "4:3",
+          "caption": "Le jeune Mozart en tournée : un prodige exhibé devant les cours d'Europe."
+        },
+        {
+          "type": "paragraph",
+          "text": "En Italie, en **1770**, un exploit frappe les esprits : après une seule audition du *Miserere* de [[Gregorio Allegri]] à la Chapelle Sixtine, il le retranscrit de mémoire. Partition protégée, menace d'excommunication : le prodige contourne l'interdit. Mais cette enfance en carrosse le prive de repères stables."
+        },
+        {
+          "type": "funFact",
+          "text": "À Londres en 1764, un savant de la Royal Society examine l'enfant : il soupçonne une supercherie sur son âge, tant l'improvisation paraît surhumaine."
+        }
+      ]
+    },
+    {
+      "id": "course_135_mozart_enfant_prodige_et_vie_tragique_p2",
+      "title": "Vienne : la rupture avec la cour",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En **1781**, Mozart ne supporte plus [[La condition du musicien au XVIIIe siècle]] sous l'**archevêque Colloredo**. Après une dispute célèbre (un « coup de pied au derrière » du secrétaire), il s'installe à **Vienne**. Acte historique : il devient l'un des premiers compositeurs « free-lance »."
+        },
+        {
+          "type": "image",
+          "asset": "mozart_marriage_of_figaro_vienna_opera",
+          "ratio": "4:3",
+          "caption": "Les Noces de Figaro : l'opéra gagne une psychologie moderne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Son génie dramatique explose avec *Les Noces de Figaro* (**1786**). Il fréquente la [[franc-maçonnerie]] (loge « La Bienfaisance », **1784**), influence visible dans *[[La Flûte enchantée]]*. Ses **27** concertos pour piano dialoguent entre soliste et orchestre : sommet du [[classicisme]]. Mais sa gestion financière est désastreuse."
+        },
+        {
+          "type": "funFact",
+          "text": "Mozart aimait le billard au point d'avoir sa propre table : un luxe rare. Il composait parfois entre deux coups de queue."
+        }
+      ]
+    },
+    {
+      "id": "course_135_mozart_enfant_prodige_et_vie_tragique_p3",
+      "title": "1791 : la Flûte enchantée et le Requiem",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L'année **1791** est un paradoxe : déclin physique, apogée créatrice. Il achève *La Flûte enchantée*, qui vulgarise des thèmes maçonniques pour le grand public. Puis un émissaire mystérieux commande un **Requiem** sous le sceau du secret. Malade, Mozart se persuade qu'il écrit sa propre messe funèbre."
+        },
+        {
+          "type": "image",
+          "asset": "mozart_requiem_manuscript_last_work",
+          "ratio": "4:3",
+          "caption": "Le Requiem : une commande secrète, une œuvre inachevée."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il meurt le **5 décembre 1791**, à 35 ans. La légende d'un empoisonnement par **Antonio Salieri** est romantique ; les historiens parlent plutôt d'infection ou de fièvre rhumatismale. Son élève **Franz Xaver Süssmayr** termine le *Requiem* pour que la veuve **Constance** touche le solde de la commande."
+        },
+        {
+          "type": "funFact",
+          "text": "Le commanditaire secret était le comte von Walsegg, qui faisait passer pour siennes des œuvres achetées à des compositeurs."
+        }
+      ]
+    },
+    {
+      "id": "course_135_mozart_enfant_prodige_et_vie_tragique_p4",
+      "title": "Mythe de la fosse commune et héritage",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mozart est inhumé dans une tombe communautaire, pratique imposée par l'empereur **Joseph II** pour des raisons d'hygiène. Ce n'était pas un affront : c'était la norme pour une grande part de la bourgeoisie viennoise. **Beethoven** et **Schubert** bâtiront ensuite sur ses fondations."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1756",
+              "title": "Naissance à Salzbourg",
+              "detail": "Le prodige commence sous la tutelle de Leopold."
+            },
+            {
+              "date": "1781",
+              "title": "Rupture avec Colloredo",
+              "detail": "Mozart s'installe à Vienne en indépendant."
+            },
+            {
+              "date": "1786",
+              "title": "Les Noces de Figaro",
+              "detail": "L'opéra gagne une psychologie moderne."
+            },
+            {
+              "date": "1791",
+              "title": "Mort et Requiem",
+              "detail": "Une œuvre inachevée devient mythe."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "En 35 ans, Mozart a révolutionné symphonie, opéra et concerto, s'émancipant de la cour avant de mourir en laissant un Requiem inachevé."
+        }
+      ]
+    }
+  ]
+}
