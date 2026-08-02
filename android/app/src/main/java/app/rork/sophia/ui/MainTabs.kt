@@ -44,6 +44,8 @@ import app.rork.sophia.ui.home.HomeTikTokScreen
 import app.rork.sophia.ui.library.LibraryScreen
 import app.rork.sophia.ui.paywall.PaywallContext
 import app.rork.sophia.ui.paywall.PaywallScreen
+import app.rork.sophia.ui.legal.LegalDocKind
+import app.rork.sophia.ui.legal.LegalDocumentScreen
 import app.rork.sophia.ui.profile.AmbassadorScreen
 import app.rork.sophia.ui.profile.FeedbackScreen
 import app.rork.sophia.ui.profile.ProfileScreen
@@ -52,7 +54,7 @@ import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.training.TrainingScreen
 
-private enum class OverlayScreen { Friends, Feedback, Ambassador }
+private enum class OverlayScreen { Friends, Feedback, Ambassador, Terms, Privacy }
 
 @Composable
 fun MainTabs(
@@ -75,12 +77,14 @@ fun MainTabs(
     var rewardSteps by remember { mutableStateOf<List<PostCompletionRewardStep>?>(null) }
     var pendingCompletionCourseId by remember { mutableStateOf<String?>(null) }
     var levelBeforeCompletion by remember { mutableIntStateOf(1) }
+    var paywallPresentedAtMs by remember { mutableStateOf<Long?>(null) }
 
-    LaunchedEffect(language, isPremium) {
+    LaunchedEffect(language, isPremium, progress.subjectXP) {
         app.analytics.updateContext(
             language = language.code,
             isPremium = isPremium,
             onboardingCompleted = app.onboardingStore.isCompleted,
+            unlockedSubjects = progress.subjectXP.keys,
         )
     }
 
@@ -161,22 +165,35 @@ fun MainTabs(
         paywall != null -> {
             val ctx = paywall!!
             LaunchedEffect(ctx) {
-                app.analytics.trackPaywallViewed(ctx.offeringId)
+                paywallPresentedAtMs = System.currentTimeMillis()
+                app.analytics.trackPaywallViewed(ctx.analyticsContext)
             }
             PaywallScreen(
                 context = ctx,
                 language = language,
                 storeViewModel = storeViewModel,
                 onDismiss = {
-                    app.analytics.trackPaywallDismissed(ctx.offeringId, 0)
+                    val duration = paywallPresentedAtMs?.let {
+                        ((System.currentTimeMillis() - it) / 1000).toInt().coerceAtLeast(0)
+                    } ?: 0
+                    app.analytics.trackPaywallDismissed(ctx.analyticsContext, duration)
+                    paywallPresentedAtMs = null
                     paywall = null
                 },
                 onPurchased = {
-                    app.analytics.trackPurchaseCompleted(ctx.offeringId)
+                    // Meta filled via onPurchaseMeta below; keep dismiss path clean.
                     if (ctx == PaywallContext.OFFRE_DISCOUNT) {
                         app.discountManager.markExpired()
                     }
+                    paywallPresentedAtMs = null
                     paywall = null
+                },
+                onPurchaseMeta = { offeringId, packageId ->
+                    app.analytics.trackPurchaseCompleted(
+                        context = ctx.analyticsContext,
+                        offeringId = offeringId ?: ctx.offeringId,
+                        packageId = packageId,
+                    )
                 },
             )
             return
@@ -195,6 +212,22 @@ fun MainTabs(
         }
         overlay == OverlayScreen.Ambassador -> {
             AmbassadorScreen(
+                language = language,
+                onBack = { overlay = null },
+            )
+            return
+        }
+        overlay == OverlayScreen.Terms -> {
+            LegalDocumentScreen(
+                kind = LegalDocKind.Terms,
+                language = language,
+                onBack = { overlay = null },
+            )
+            return
+        }
+        overlay == OverlayScreen.Privacy -> {
+            LegalDocumentScreen(
+                kind = LegalDocKind.Privacy,
                 language = language,
                 onBack = { overlay = null },
             )
@@ -318,6 +351,9 @@ fun MainTabs(
                     onOpenFriends = { overlay = OverlayScreen.Friends },
                     onOpenFeedback = { overlay = OverlayScreen.Feedback },
                     onOpenAmbassador = { overlay = OverlayScreen.Ambassador },
+                    onOpenTerms = { overlay = OverlayScreen.Terms },
+                    onOpenPrivacy = { overlay = OverlayScreen.Privacy },
+                    onRestorePurchases = { storeViewModel.restore() },
                 )
             }
         }
@@ -338,7 +374,7 @@ fun MainTabs(
                 DiscountSideTab(
                     state = discount,
                     onClick = {
-                        app.analytics.trackDiscountOfferViewed("home_banner")
+                        app.analytics.trackDiscountOfferViewed("side_tab")
                         app.discountManager.markShownToday()
                         paywall = PaywallContext.OFFRE_DISCOUNT
                     },

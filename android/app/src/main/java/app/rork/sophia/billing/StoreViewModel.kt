@@ -14,6 +14,7 @@ import com.revenuecat.purchases.PurchasesError
 import com.revenuecat.purchases.getOfferingsWith
 import com.revenuecat.purchases.interfaces.ReceiveCustomerInfoCallback
 import com.revenuecat.purchases.paywalls.events.CustomPaywallImpressionParams
+import com.revenuecat.purchases.restorePurchasesWith
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -164,5 +165,20 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
 
     fun setPremiumDebug(value: Boolean) {
         _isPremium.value = value
+    }
+
+    fun restore(onResult: (success: Boolean, message: String?) -> Unit = { _, _ -> }) {
+        if (!Purchases.isConfigured) {
+            onResult(false, "RevenueCat non configuré")
+            return
+        }
+        Purchases.sharedInstance.restorePurchasesWith(
+            onError = { error -> onResult(false, error.message) },
+            onSuccess = { info ->
+                val active = info.entitlements[AppConfig.PREMIUM_ENTITLEMENT]?.isActive == true
+                _isPremium.value = active
+                onResult(active, if (active) null else "Aucun abonnement trouvé")
+            },
+        )
     }
 }

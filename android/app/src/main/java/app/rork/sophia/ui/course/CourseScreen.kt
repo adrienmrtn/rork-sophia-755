@@ -41,6 +41,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.ContentCatalog
+import app.rork.sophia.data.CourseSessionTracker
 import app.rork.sophia.data.InAppReviewHelper
 import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.ShareHelper
@@ -82,6 +83,13 @@ fun CourseScreen(
     }
     val pagerState = rememberPagerState(pageCount = { pages.size.coerceAtLeast(1) })
     val scope = rememberCoroutineScope()
+    val sessionTracker = remember(course.id) {
+        CourseSessionTracker(
+            courseId = course.id,
+            subject = course.subjectEnum.storageKey,
+            lessonCount = pages.size.coerceAtLeast(1),
+        )
+    }
 
     LaunchedEffect(Unit) {
         progressManager.recordFirstCourseOpenedIfNeeded(course.id)
@@ -89,18 +97,12 @@ fun CourseScreen(
 
     DisposableEffect(course.id) {
         onDispose {
-            val completed = progressManager.courseProgress(course.id)?.isCompleted == true
-            app.analytics.trackCourseSessionEnded(
-                courseId = course.id,
-                subject = course.subjectEnum.storageKey,
-                lessonIndex = pagerState.currentPage,
-                lessonCount = pages.size,
-                completed = completed,
-            )
+            app.analytics.trackCourseSessionEnded(sessionTracker.endProps())
         }
     }
 
     if (showQuiz) {
+        LaunchedEffect(Unit) { sessionTracker.markQuiz() }
         QuizScreen(
             course = course,
             language = language,
@@ -116,6 +118,7 @@ fun CourseScreen(
     }
 
     LaunchedEffect(pagerState.currentPage) {
+        sessionTracker.recordLessonReached(pagerState.currentPage)
         progressManager.updateLessonIndex(course.id, pagerState.currentPage)
         InAppReviewHelper.requestIfEligible(
             context = context,
@@ -222,6 +225,7 @@ fun CourseScreen(
                         // On the last locked page, no-op (parity with iOS).
                         if (courseLocked) {
                             if (!isLast) {
+                                sessionTracker.recordContinueTap()
                                 scope.launch { pagerState.animateScrollToPage(pagerState.currentPage + 1) }
                             }
                             return@Button
@@ -230,6 +234,7 @@ fun CourseScreen(
                             if (FreemiumGate.canCompleteCourse(isPremium, isDailyFreeCourse)) {
                                 if (!wasCompletedBefore) {
                                     progressManager.markCourseCompleted(course.id)
+                                    sessionTracker.markCompleted()
                                     app.analytics.trackCourseCompleted(
                                         courseId = course.id,
                                         subject = course.subjectEnum.storageKey,
@@ -241,6 +246,7 @@ fun CourseScreen(
                                 if (course.hasQuiz) showQuiz = true else onDismiss()
                             }
                         } else {
+                            sessionTracker.recordContinueTap()
                             scope.launch { pagerState.animateScrollToPage(pagerState.currentPage + 1) }
                         }
                     },

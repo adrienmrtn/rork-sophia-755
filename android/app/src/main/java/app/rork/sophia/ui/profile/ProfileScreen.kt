@@ -54,6 +54,9 @@ fun ProfileScreen(
     onOpenFriends: () -> Unit = {},
     onOpenFeedback: () -> Unit = {},
     onOpenAmbassador: () -> Unit = {},
+    onOpenTerms: () -> Unit = {},
+    onOpenPrivacy: () -> Unit = {},
+    onRestorePurchases: () -> Unit = {},
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
@@ -208,6 +211,26 @@ fun ProfileScreen(
             colors = ButtonDefaults.buttonColors(containerColor = DS.surfaceMuted, contentColor = DS.ink),
         ) { Text("Envoyer un feedback") }
         Spacer(Modifier.height(16.dp))
+        Text(
+            text = StringStore.text(context, "settings.section.legal", language),
+            style = SophiaTypography.titleMedium,
+        )
+        Spacer(Modifier.height(8.dp))
+        LegalSettingsRow(
+            label = StringStore.text(context, "settings.terms.title", language),
+            onClick = onOpenTerms,
+        )
+        LegalSettingsRow(
+            label = StringStore.text(context, "settings.privacy.title", language),
+            onClick = onOpenPrivacy,
+        )
+        if (!isPremium) {
+            LegalSettingsRow(
+                label = StringStore.text(context, "settings.restore.title", language),
+                onClick = onRestorePurchases,
+            )
+        }
+        Spacer(Modifier.height(16.dp))
         Text(text = StringStore.text(context, "language.section", language), style = SophiaTypography.titleMedium)
         Spacer(Modifier.height(8.dp))
         AppLanguage.entries.forEach { lang ->
@@ -246,5 +269,20 @@ fun ProfileScreen(
             modifier = Modifier.clickable(onClick = onResetOnboarding),
         )
     }
+}
+
+@Composable
+private fun LegalSettingsRow(label: String, onClick: () -> Unit) {
+    Text(
+        text = label,
+        style = SophiaTypography.bodyLarge,
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(DS.controlShape)
+            .background(DS.surface)
+            .clickable(onClick = onClick)
+            .padding(horizontal = 14.dp, vertical = 14.dp),
+    )
+    Spacer(Modifier.height(6.dp))
 }
 

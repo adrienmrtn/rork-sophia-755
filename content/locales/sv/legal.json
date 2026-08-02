@@ -1,0 +1,111 @@
+{
+  "terms": [
+    {
+      "id": "1",
+      "title": "1. Godkännande av villkor",
+      "body": "Genom att ladda ner, installera eller använda Sophia-appen (\"Appen\") samtycker du till att vara bunden av dessa Användarvillkor (\"Villkoren\"). Om du inte accepterar dessa villkor, använd inte appen."
+    },
+    {
+      "id": "2",
+      "title": "2. Beskrivning av tjänsten",
+      "body": "Sophia är en pedagogisk mobilapp med allmän kunskap som erbjuder kurser, frågesporter och interaktivt innehåll. Appen är tillgänglig på iOS och kan erbjuda gratis innehåll såväl som premiumprenumerationer."
+    },
+    {
+      "id": "3",
+      "title": "3. Konto och användning",
+      "body": "Att skapa ett konto (via Apple eller Google) erbjuds för att spara dina framsteg och synkronisera dem mellan dina enheter. Nya användare loggar in under onboarding; befintliga användare kan skapa ett konto när som helst från Inställningar. Utan ett konto lagras dina förloppsdata lokalt på din enhet och ominstallation av appen kan leda till att den går förlorad. Du kan ta bort ditt konto när som helst från Inställningar."
+    },
+    {
+      "id": "4",
+      "title": "4. Prenumerationer och köp",
+      "body": "Sophia erbjuder premiumprenumerationer (månadsvis och årligen) via Apples App Store. Priserna visas i appen och kan variera beroende på land. Betalningen debiteras ditt Apple ID-konto vid köpbekräftelse. Prenumerationer förnyas automatiskt om inte automatisk förnyelse stängs av minst 24 timmar före slutet av den aktuella perioden. Du kan hantera och avbryta prenumerationer i dina kontoinställningar för App Store."
+    },
+    {
+      "id": "5",
+      "title": "5. Gratis provperiod",
+      "body": "En gratis provperiod kan erbjudas nya användare. När provperioden är slut, kommer prenumerationen automatiskt att konverteras till en betald prenumeration om den inte avslutas i förväg. Eventuell oanvänd del av en gratis provperiod förverkas vid köp av ett abonnemang."
+    },
+    {
+      "id": "6",
+      "title": "6. Immateriella rättigheter",
+      "body": "Allt appinnehåll (text, illustrationer, design, logotyp, kurser, frågesporter) är skyddat av upphovsrätt och förblir Sophias exklusiva egendom. All otillåten reproduktion, distribution eller användning är strängt förbjuden."
+    },
+    {
+      "id": "7",
+      "title": "7. Ansvarsbegränsning",
+      "body": "Innehåll i appen tillhandahålls i utbildnings- och informationssyfte. Sophia garanterar inte riktigheten, fullständigheten eller aktualiteten för den information som presenteras. Appen tillhandahålls \"i befintligt skick\" utan garantier av något slag."
+    },
+    {
+      "id": "8",
+      "title": "8. Ändringar av villkor",
+      "body": "Sophia förbehåller sig rätten att när som helst ändra dessa villkor. Användare kommer att meddelas om betydande förändringar. Fortsatt användning av appen efter ändringar utgör godkännande av de nya villkoren."
+    },
+    {
+      "id": "9",
+      "title": "9. Tillämplig lag",
+      "body": "Dessa villkor regleras av fransk lag. Alla tvister som rör tolkningen eller genomförandet av dessa villkor ska överlämnas till behörig domstol."
+    },
+    {
+      "id": "10",
+      "title": "10. Kontakt",
+      "body": "För alla frågor angående dessa villkor kan du kontakta oss via App Store eller via e-post på adressen som anges på vår App Store-sida."
+    }
+  ],
+  "privacy": [
+    {
+      "id": "1",
+      "title": "1. Inledning",
+      "body": "Denna integritetspolicy beskriver hur Sophia (\"vi\", \"vår\" eller \"appen\") samlar in, använder och skyddar din personliga information. Vi är angelägna om att skydda din integritet och hantera dina uppgifter på ett transparent sätt."
+    },
+    {
+      "id": "2",
+      "title": "2. Data som samlas in",
+      "body": "Sophia är designad med dataminimering i åtanke. Appen lagrar på din enhet:\n\n- Dina framsteg i kurser och frågesporter\n- Dina preferenser (intressen, mål)\n- Din streak (på varandra följande dagar av användning)\n- Dina favoritbanor\n\nDenna lokala data överförs inte till våra servrar.\n\nAppen skickar även anonyma användningshändelser till Mixpanel (EU-region) för att förstå hur appen används och förbättra den. Dessa händelser inkluderar inte ditt namn, din e-postadress eller ditt personliga innehåll.\n\nOm du skickar feedback via formuläret i appen i Inställningar, skickas ditt meddelande och, om det anges, din e-postadress till Formspree så att vi kan svara. Teknisk information (appversion, språk, enhet) bifogas automatiskt."
+    },
+    {
+      "id": "3",
+      "title": "3. Prenumerationsdata",
+      "body": "Om du prenumererar på en premiumplan hanteras transaktionen helt av Apple via App Store. Vi har inte tillgång till din betalningsinformation (kortnummer, faktureringsadress). Vi får endast bekräftelse på din prenumerationsstatus via RevenueCat, vår prenumerationshanteringspartner."
+    },
+    {
+      "id": "4",
+      "title": "4. RevenueCat",
+      "body": "Vi använder RevenueCat för att hantera prenumerationer i appen. RevenueCat kan samla in en anonym enhetsidentifierare för att verifiera din prenumerationsstatus. Ingen personligt identifierbar information delas. För mer information, se RevenueCats sekretesspolicy på deras hemsida."
+    },
+    {
+      "id": "5",
+      "title": "5. Analysdata (Mixpanel)",
+      "body": "Vi använder Mixpanel, värd i Europeiska Unionen, för att mäta appanvändning (besökta skärmar, öppnade kurser, interaktioner med betalvägg, etc.). Mixpanel får en anonym enhetsidentifierare, appversion, språk och aggregerade användningshändelser. Ingen personligt identifierbar information samlas in. Du kan kontakta oss för att begära radering av denna analysdata."
+    },
+    {
+      "id": "6",
+      "title": "6. Apple Analytics",
+      "body": "Appen kan också dra nytta av anonym statistik från Apple (App Analytics). Denna data är aggregerad och kan inte användas för att identifiera dig personligen. Du kan inaktivera analysdelning i dina iPhone-inställningar (Inställningar > Sekretess > Analys och förbättringar)."
+    },
+    {
+      "id": "7",
+      "title": "7. Datalagring",
+      "body": "Dina förloppsdata lagras lokalt på din enhet (UserDefaults). Om du skapar ett konto (Apple eller Google) säkerhetskopieras det också säkert till våra Supabase-servrar (värd i EU) för att möjliggöra synkronisering mellan dina enheter. Om du avinstallerar appen raderas lokal data; radering av ditt konto tar permanent bort tillhörande data på servern."
+    },
+    {
+      "id": "8",
+      "title": "8. Datadelning",
+      "body": "Vi säljer, hyr ut eller delar inte personuppgifter med tredje part för kommersiella eller reklamändamål. Data som överförs är begränsade till: Apple och RevenueCat (prenumerationer), Mixpanel (anonym analys, EU), Formspree (användarfeedback skickas frivilligt från Inställningar)."
+    },
+    {
+      "id": "9",
+      "title": "9. Användarrättigheter",
+      "body": "Enligt den allmänna dataskyddsförordningen (GDPR) och tillämpliga lagar har du följande rättigheter:\n\n- Rätt till tillgång till dina uppgifter\n– Rätt till rättelse\n- Rätt till radering (återställ i Inställningar)\n- Rätt till dataportabilitet\n– Rätt att invända\n\nFör att utöva dessa rättigheter, kontakta oss via adressen som anges på vår App Store-sida."
+    },
+    {
+      "id": "10",
+      "title": "10. Skydd av minderåriga",
+      "body": "Sophia är en pedagogisk app som passar alla åldrar. Vi samlar inte medvetet in personuppgifter från barn under 16 år. Appen innehåller inget olämpligt innehåll."
+    },
+    {
+      "id": "11",
+      "title": "11. Ändringar",
+      "body": "Vi förbehåller oss rätten att när som helst ändra denna policy. Eventuella ändringar kommer att meddelas via en appuppdatering.\n\nSenast uppdaterad: juli 2026"
+    }
+  ]
+}

@@ -94,5 +94,11 @@ class AuthService(private val appContext: Context) {
         if (Purchases.isConfigured) {
             runCatching { Purchases.sharedInstance.logIn(uid) }
         }
+        // Align Mixpanel identity with RevenueCat / Supabase user id.
+        runCatching {
+            (appContext.applicationContext as? app.rork.sophia.SophiaApplication)
+                ?.analytics
+                ?.identify(uid)
+        }
     }
 }

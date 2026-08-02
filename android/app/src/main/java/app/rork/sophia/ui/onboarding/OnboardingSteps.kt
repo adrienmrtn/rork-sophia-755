@@ -70,6 +70,8 @@ import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Course
 import app.rork.sophia.ui.components.CourseImage
+import app.rork.sophia.ui.legal.LegalDocKind
+import app.rork.sophia.ui.legal.LegalDocumentScreen
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
@@ -1023,6 +1025,15 @@ private fun ProfileCourseCard(
 @Composable
 internal fun LoginStep(language: AppLanguage, onGoogle: () -> Unit, onSkip: () -> Unit) {
     val context = LocalContext.current
+    var legalDoc by remember { mutableStateOf<LegalDocKind?>(null) }
+    if (legalDoc != null) {
+        LegalDocumentScreen(
+            kind = legalDoc!!,
+            language = language,
+            onBack = { legalDoc = null },
+        )
+        return
+    }
     Column(
         modifier = Modifier.fillMaxSize().padding(DS.Space.l),
         verticalArrangement = Arrangement.SpaceBetween,
@@ -1055,6 +1066,40 @@ internal fun LoginStep(language: AppLanguage, onGoogle: () -> Unit, onSkip: () -
                     .clickable(onClick = onSkip)
                     .padding(8.dp),
             )
+            // auth.legal.prefix + tappable Terms / Privacy
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.Center,
+            ) {
+                Text(
+                    StringStore.text(context, "auth.legal.prefix", language) + " ",
+                    style = SophiaTypography.labelMedium,
+                    color = DS.inkTertiary,
+                )
+            }
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.Center,
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Text(
+                    StringStore.text(context, "legal.terms.title", language),
+                    style = SophiaTypography.labelMedium,
+                    color = DS.accentSoft,
+                    modifier = Modifier
+                        .clickable { legalDoc = LegalDocKind.Terms }
+                        .padding(horizontal = 6.dp, vertical = 4.dp),
+                )
+                Text("·", color = DS.inkTertiary)
+                Text(
+                    StringStore.text(context, "legal.privacy.title", language),
+                    style = SophiaTypography.labelMedium,
+                    color = DS.accentSoft,
+                    modifier = Modifier
+                        .clickable { legalDoc = LegalDocKind.Privacy }
+                        .padding(horizontal = 6.dp, vertical = 4.dp),
+                )
+            }
         }
     }
 }

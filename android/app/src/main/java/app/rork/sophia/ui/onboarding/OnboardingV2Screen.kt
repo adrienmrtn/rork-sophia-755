@@ -28,24 +28,24 @@ import app.rork.sophia.ui.paywall.OnboardingPaywallFlow
 import app.rork.sophia.ui.theme.DS
 import kotlinx.coroutines.launch
 
-private enum class OnboardingStep {
-    Welcome,
-    Language,
-    Objectives,
-    ObjectiveIntro,
-    Questions,
-    PhoneTime,
-    YearsGrid,
-    Transform,
-    Review,
-    Personalize,
-    Swipe,
-    Loading,
-    Profile,
-    Login,
-    Trial,
-    Reminder,
-    Paywall,
+private enum class OnboardingStep(val analyticsName: String) {
+    Welcome("welcome"),
+    Language("language"),
+    Objectives("objective"),
+    ObjectiveIntro("objective_intro"),
+    Questions("questions"),
+    PhoneTime("phone_time"),
+    YearsGrid("years_grid"),
+    Transform("transform"),
+    Review("review"),
+    Personalize("personalize"),
+    Swipe("swipe_courses"),
+    Loading("loading"),
+    Profile("profile"),
+    Login("login"),
+    Trial("trial_steps"),
+    Reminder("reminder"),
+    Paywall("paywall_annual"),
 }
 
 @Composable
@@ -66,7 +66,9 @@ fun OnboardingV2Screen(
     val scope = rememberCoroutineScope()
 
     LaunchedEffect(Unit) { app.analytics.trackOnboardingStarted() }
-    LaunchedEffect(step) { app.analytics.trackOnboardingStep(step.ordinal, step.name) }
+    LaunchedEffect(step) {
+        app.analytics.trackOnboardingStep(step.ordinal, step.analyticsName)
+    }
 
     fun finish(isPremiumAtExit: Boolean) {
         likedCourseIds.forEach { id ->
@@ -125,7 +127,10 @@ fun OnboardingV2Screen(
                         if (!set.add(key)) set.remove(key)
                     }
                 },
-                onContinue = { step = OnboardingStep.ObjectiveIntro },
+                onContinue = {
+                    app.analytics.trackOnboardingInterestsSet(selectedObjectives)
+                    step = OnboardingStep.ObjectiveIntro
+                },
             )
             OnboardingStep.ObjectiveIntro -> TapContinueStep(
                 titleKey = "onboardingV2.objectiveIntro.title",
@@ -197,6 +202,19 @@ fun OnboardingV2Screen(
                     storeViewModel = storeViewModel,
                     onDismiss = { finish(false) },
                     onPurchased = { finish(true) },
+                    onPurchaseMeta = { offeringId, packageId ->
+                        app.analytics.trackPurchaseCompleted(
+                            context = "fin_onboarding",
+                            offeringId = offeringId,
+                            packageId = packageId,
+                        )
+                    },
+                    onComparisonShown = {
+                        app.analytics.trackOnboardingStep(
+                            stepIndex = step.ordinal,
+                            stepName = "paywall_comparison",
+                        )
+                    },
                 )
             }
         }

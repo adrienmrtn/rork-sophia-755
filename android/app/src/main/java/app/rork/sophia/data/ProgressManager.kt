@@ -1,6 +1,7 @@
 package app.rork.sophia.data
 
 import android.content.Context
+import app.rork.sophia.SophiaApplication
 import app.rork.sophia.domain.CollectionProgressEvent
 import app.rork.sophia.domain.Course
 import app.rork.sophia.domain.CourseProgress
@@ -225,12 +226,21 @@ class ProgressManager(context: Context) {
     private fun bumpStreak(current: UserProgress): Int {
         val today = today()
         val last = current.lastActiveDate
-        return when {
+        val next = when {
             last == today -> current.streak.coerceAtLeast(1)
             last == LocalDate.now().minusDays(1).format(DateTimeFormatter.ISO_LOCAL_DATE) ->
                 current.streak + 1
             else -> 1
         }
+        if (next > current.streak) {
+            runCatching {
+                SophiaApplication.instance.analytics.trackStreakUpdated(
+                    streakDays = next,
+                    isNewRecord = true,
+                )
+            }
+        }
+        return next
     }
 
     fun replaceAll(progress: UserProgress) {

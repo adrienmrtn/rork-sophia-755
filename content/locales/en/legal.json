@@ -1,0 +1,111 @@
+{
+  "terms": [
+    {
+      "id": "1",
+      "title": "1. Acceptance of terms",
+      "body": "By downloading, installing, or using the Sophia app (the \"App\"), you agree to be bound by these Terms of Service (\"Terms\"). If you do not accept these terms, please do not use the App."
+    },
+    {
+      "id": "2",
+      "title": "2. Description of the service",
+      "body": "Sophia is an educational general-knowledge mobile app offering courses, quizzes, and interactive content. The App is available on iOS and may offer free content as well as premium subscriptions."
+    },
+    {
+      "id": "3",
+      "title": "3. Account and use",
+      "body": "Creating an account (via Apple or Google) is offered to save your progress and sync it across your devices. New users sign in during onboarding; existing users can create an account at any time from Settings. Without an account, your progress data is stored locally on your device and reinstalling the App may result in its loss. You can delete your account at any time from Settings."
+    },
+    {
+      "id": "4",
+      "title": "4. Subscriptions and purchases",
+      "body": "Sophia offers premium subscriptions (monthly and annual) through Apple's App Store. Prices are displayed in the App and may vary by country. Payment is charged to your Apple ID account upon purchase confirmation. Subscriptions renew automatically unless auto-renew is turned off at least 24 hours before the end of the current period. You can manage and cancel subscriptions in your App Store account settings."
+    },
+    {
+      "id": "5",
+      "title": "5. Free trial",
+      "body": "A free trial may be offered to new users. When the trial period ends, the subscription will automatically convert to a paid subscription unless cancelled beforehand. Any unused portion of a free trial is forfeited when purchasing a subscription."
+    },
+    {
+      "id": "6",
+      "title": "6. Intellectual property",
+      "body": "All App content (text, illustrations, design, logo, courses, quizzes) is protected by copyright and remains the exclusive property of Sophia. Any unauthorized reproduction, distribution, or use is strictly prohibited."
+    },
+    {
+      "id": "7",
+      "title": "7. Limitation of liability",
+      "body": "Content in the App is provided for educational and informational purposes. Sophia does not guarantee the accuracy, completeness, or timeliness of the information presented. The App is provided \"as is\" without warranty of any kind."
+    },
+    {
+      "id": "8",
+      "title": "8. Changes to terms",
+      "body": "Sophia reserves the right to modify these Terms at any time. Users will be notified of significant changes. Continued use of the App after changes constitutes acceptance of the new terms."
+    },
+    {
+      "id": "9",
+      "title": "9. Governing law",
+      "body": "These Terms are governed by French law. Any dispute relating to the interpretation or performance of these Terms shall be submitted to the competent courts."
+    },
+    {
+      "id": "10",
+      "title": "10. Contact",
+      "body": "For any questions regarding these Terms, you can contact us via the App Store or by email at the address listed on our App Store page."
+    }
+  ],
+  "privacy": [
+    {
+      "id": "1",
+      "title": "1. Introduction",
+      "body": "This Privacy Policy describes how Sophia (\"we\", \"our\", or the \"App\") collects, uses, and protects your personal information. We are committed to protecting your privacy and handling your data transparently."
+    },
+    {
+      "id": "2",
+      "title": "2. Data collected",
+      "body": "Sophia is designed with data minimization in mind. The App stores on your device:\n\n- Your progress in courses and quizzes\n- Your preferences (interests, goals)\n- Your streak (consecutive days of use)\n- Your favorite courses\n\nThis local data is not transmitted to our servers.\n\nThe App also sends anonymous usage events to Mixpanel (EU region) to understand how the app is used and improve it. These events do not include your name, email, or personal content.\n\nIf you send feedback via the in-app form in Settings, your message and, if provided, your email address are transmitted to Formspree so we can respond. Technical information (app version, language, device) is attached automatically."
+    },
+    {
+      "id": "3",
+      "title": "3. Subscription data",
+      "body": "If you subscribe to a premium plan, the transaction is handled entirely by Apple via the App Store. We do not have access to your payment information (card number, billing address). We only receive confirmation of your subscription status via RevenueCat, our subscription management partner."
+    },
+    {
+      "id": "4",
+      "title": "4. RevenueCat",
+      "body": "We use RevenueCat to manage in-app subscriptions. RevenueCat may collect an anonymous device identifier to verify your subscription status. No personally identifiable information is shared. For more information, see RevenueCat's privacy policy on their website."
+    },
+    {
+      "id": "5",
+      "title": "5. Analytics data (Mixpanel)",
+      "body": "We use Mixpanel, hosted in the European Union, to measure App usage (screens visited, courses opened, paywall interactions, etc.). Mixpanel receives an anonymous device identifier, app version, language, and aggregated usage events. No personally identifiable information is collected. You may contact us to request deletion of this analytics data."
+    },
+    {
+      "id": "6",
+      "title": "6. Apple Analytics",
+      "body": "The App may also benefit from anonymous statistics provided by Apple (App Analytics). This data is aggregated and cannot be used to identify you personally. You can disable analytics sharing in your iPhone settings (Settings > Privacy > Analytics & Improvements)."
+    },
+    {
+      "id": "7",
+      "title": "7. Data storage",
+      "body": "Your progress data is stored locally on your device (UserDefaults). If you create an account (Apple or Google), it is also securely backed up to our Supabase servers (hosted in the European Union) to enable syncing across your devices. Uninstalling the App deletes the local data; deleting your account permanently removes the associated data on the server."
+    },
+    {
+      "id": "8",
+      "title": "8. Data sharing",
+      "body": "We do not sell, rent, or share personal data with third parties for commercial or advertising purposes. Data transmitted is limited to: Apple and RevenueCat (subscriptions), Mixpanel (anonymous analytics, EU), Formspree (user feedback voluntarily sent from Settings)."
+    },
+    {
+      "id": "9",
+      "title": "9. User rights",
+      "body": "Under the General Data Protection Regulation (GDPR) and applicable laws, you have the following rights:\n\n- Right of access to your data\n- Right to rectification\n- Right to erasure (reset in Settings)\n- Right to data portability\n- Right to object\n\nTo exercise these rights, contact us via the address listed on our App Store page."
+    },
+    {
+      "id": "10",
+      "title": "10. Protection of minors",
+      "body": "Sophia is an educational app suitable for all ages. We do not knowingly collect personal data from children under 16. The App contains no inappropriate content."
+    },
+    {
+      "id": "11",
+      "title": "11. Changes",
+      "body": "We reserve the right to modify this policy at any time. Any changes will be communicated through an App update.\n\nLast updated: July 2026"
+    }
+  ]
+}

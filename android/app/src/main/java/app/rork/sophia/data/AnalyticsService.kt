@@ -2,6 +2,7 @@ package app.rork.sophia.data
 
 import android.content.Context
 import app.rork.sophia.AppConfig
+import app.rork.sophia.BuildConfig
 import com.mixpanel.android.mpmetrics.MixpanelAPI
 import org.json.JSONArray
 import org.json.JSONObject
@@ -14,22 +15,30 @@ class AnalyticsService(context: Context) {
             it.registerSuperProperties(
                 JSONObject()
                     .put("platform", "android")
-                    .put("app_version", "1.0.0"),
+                    .put("app_version", BuildConfig.VERSION_NAME),
             )
         }
     }.getOrNull()
 
-    fun updateContext(language: String, isPremium: Boolean, onboardingCompleted: Boolean) {
+    fun updateContext(
+        language: String,
+        isPremium: Boolean,
+        onboardingCompleted: Boolean,
+        unlockedSubjects: Collection<String> = emptyList(),
+    ) {
         mixpanel?.registerSuperProperties(
             JSONObject()
                 .put("language", language)
                 .put("is_premium", isPremium)
-                .put("onboarding_completed", onboardingCompleted),
+                .put("onboarding_completed", onboardingCompleted)
+                .put("unlocked_subjects", JSONArray(unlockedSubjects.toList())),
         )
+        mixpanel?.people?.set("interests", JSONArray(unlockedSubjects.toList()))
     }
 
     fun identify(userId: String) {
         mixpanel?.identify(userId)
+        mixpanel?.people?.identify(userId)
     }
 
     fun track(event: String, props: Map<String, Any?> = emptyMap()) {
@@ -65,7 +74,11 @@ class AnalyticsService(context: Context) {
     fun trackOnboardingStep(stepIndex: Int, stepName: String, action: String? = null) =
         track(
             "onboarding_step_viewed",
-            mapOf("step_index" to stepIndex, "step_name" to stepName, "action" to action),
+            buildMap {
+                put("step_index", stepIndex)
+                put("step_name", stepName)
+                if (action != null) put("action", action)
+            },
         )
 
     fun trackOnboardingCompleted(sawPaywall: Boolean, isPremium: Boolean) =
@@ -74,8 +87,17 @@ class AnalyticsService(context: Context) {
             mapOf("saw_paywall" to sawPaywall, "is_premium_at_exit" to isPremium),
         )
 
+    fun trackOnboardingInterestsSet(objectives: Collection<String>) =
+        track("onboarding_interests_set", mapOf("objectives" to objectives.toList()))
+
     fun trackPaywallViewed(context: String, courseId: String? = null) =
-        track("paywall_viewed", mapOf("context" to context, "trigger_course_id" to courseId))
+        track(
+            "paywall_viewed",
+            buildMap {
+                put("context", context)
+                if (courseId != null) put("trigger_course_id", courseId)
+            },
+        )
 
     fun trackPaywallDismissed(context: String, durationSeconds: Int) =
         track("paywall_dismissed", mapOf("context" to context, "duration_seconds" to durationSeconds))
@@ -86,7 +108,11 @@ class AnalyticsService(context: Context) {
     fun trackPurchaseCompleted(context: String, offeringId: String? = null, packageId: String? = null) {
         track(
             "purchase_completed",
-            mapOf("context" to context, "offering_id" to offeringId, "package_id" to packageId),
+            buildMap {
+                put("context", context)
+                if (offeringId != null) put("offering_id", offeringId)
+                if (packageId != null) put("package_id", packageId)
+            },
         )
         mixpanel?.people?.set("is_premium", true)
     }
@@ -133,7 +159,11 @@ class AnalyticsService(context: Context) {
     fun trackFreemiumGateHit(gateType: String, subject: String? = null, courseId: String? = null) =
         track(
             "freemium_gate_hit",
-            mapOf("gate_type" to gateType, "subject" to subject, "course_id" to courseId),
+            buildMap {
+                put("gate_type", gateType)
+                if (subject != null) put("subject", subject)
+                if (courseId != null) put("course_id", courseId)
+            },
         )
 
     fun trackDeepLinkOpened(courseId: String) =
@@ -146,28 +176,22 @@ class AnalyticsService(context: Context) {
     fun trackFeedbackFailed(category: String) =
         track("feedback_failed", mapOf("category" to category))
 
-    fun trackCourseSessionEnded(
-        courseId: String,
-        subject: String,
-        lessonIndex: Int,
-        lessonCount: Int,
-        completed: Boolean,
-    ) = track(
-        "course_session_ended",
-        mapOf(
-            "course_id" to courseId,
-            "subject" to subject,
-            "lesson_index" to lessonIndex,
-            "lesson_count" to lessonCount,
-            "completed" to completed,
-        ),
-    )
+    fun trackCourseSessionEnded(props: Map<String, Any?>) = track("course_session_ended", props)
 
-    fun trackLockedContentTapped(gateType: String, courseId: String?, subject: String?) =
-        track(
-            "locked_content_tapped",
-            mapOf("gate_type" to gateType, "course_id" to courseId, "subject" to subject),
-        )
+    fun trackLockedContentTapped(
+        gateType: String,
+        courseId: String?,
+        subject: String?,
+        surface: String = "course",
+    ) = track(
+        "locked_content_tapped",
+        buildMap {
+            put("gate_type", gateType)
+            put("surface", surface)
+            if (courseId != null) put("course_id", courseId)
+            if (subject != null) put("subject", subject)
+        },
+    )
 
     fun trackAmbassadorOpened() = track("ambassador_opened")
     fun trackAmbassadorSubmitted() = track("ambassador_submitted")

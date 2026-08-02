@@ -25,6 +25,7 @@ class LanguageManager(context: Context) {
         ContentCatalog.clearCache()
         StringStore.clearCache()
         GlossaryStore.clearCache()
+        LegalDocumentStore.clearCache()
         _current.value = language
     }
 }

@@ -42,6 +42,8 @@ import app.rork.sophia.SophiaApplication
 import app.rork.sophia.billing.StoreViewModel
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
+import app.rork.sophia.ui.legal.LegalDocKind
+import app.rork.sophia.ui.legal.LegalDocumentScreen
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
@@ -52,12 +54,12 @@ import com.revenuecat.purchases.PurchasesError
 import com.revenuecat.purchases.interfaces.PurchaseCallback
 import com.revenuecat.purchases.models.StoreTransaction
 
-enum class PaywallContext(val offeringId: String) {
+enum class PaywallContext(val offeringId: String, val analyticsContext: String = offeringId) {
     FIN_ONBOARDING("fin_onboarding"),
     OFFRE_DISCOUNT("offre_discount"),
     DEBLOQUER_COURS("debloquer_cours"),
     QUIZZ("quizz"),
-    ENTRAINEMENT("quizz"),
+    ENTRAINEMENT(offeringId = "quizz", analyticsContext = "entrainement"),
 }
 
 @Composable
@@ -66,21 +68,49 @@ fun OnboardingPaywallFlow(
     storeViewModel: StoreViewModel,
     onDismiss: () -> Unit,
     onPurchased: () -> Unit,
+    onPurchaseMeta: (offeringId: String?, packageId: String?) -> Unit = { _, _ -> },
+    onComparisonShown: () -> Unit = {},
 ) {
     var showComparison by remember { mutableStateOf(false) }
+    var legalDoc by remember { mutableStateOf<LegalDocKind?>(null) }
     LaunchedEffect(Unit) { storeViewModel.fetchOfferings() }
     val offerings by storeViewModel.offerings.collectAsState()
     val annual = remember(offerings) { storeViewModel.annualPackage(PaywallContext.FIN_ONBOARDING.offeringId) }
     val monthly = remember(offerings) { storeViewModel.monthlyPackage(PaywallContext.FIN_ONBOARDING.offeringId) }
+
+    if (legalDoc != null) {
+        LegalDocumentScreen(
+            kind = legalDoc!!,
+            language = language,
+            onBack = { legalDoc = null },
+        )
+        return
+    }
+
+    val legalFooter: @Composable () -> Unit = {
+        PaywallLegalRow(
+            language = language,
+            onRestore = { storeViewModel.restore() },
+            onTerms = { legalDoc = LegalDocKind.Terms },
+            onPrivacy = { legalDoc = LegalDocKind.Privacy },
+        )
+    }
 
     if (!showComparison) {
         OnboardingAnnualPaywall(
             language = language,
             annual = annual,
             storeViewModel = storeViewModel,
-            onViewAllPlans = { showComparison = true },
+            onViewAllPlans = {
+                showComparison = true
+                onComparisonShown()
+            },
             onDismiss = onDismiss,
-            onPurchased = onPurchased,
+            onPurchased = {
+                onPurchaseMeta(PaywallContext.FIN_ONBOARDING.offeringId, annual?.identifier)
+                onPurchased()
+            },
+            legalFooter = legalFooter,
         )
     } else {
         OnboardingComparisonPaywall(
@@ -89,7 +119,11 @@ fun OnboardingPaywallFlow(
             monthly = monthly,
             storeViewModel = storeViewModel,
             onDismiss = onDismiss,
-            onPurchased = onPurchased,
+            onPurchased = { pkg ->
+                onPurchaseMeta(PaywallContext.FIN_ONBOARDING.offeringId, pkg)
+                onPurchased()
+            },
+            legalFooter = legalFooter,
         )
     }
 }
@@ -101,25 +135,49 @@ fun PaywallScreen(
     storeViewModel: StoreViewModel,
     onDismiss: () -> Unit,
     onPurchased: () -> Unit,
+    onPurchaseMeta: (offeringId: String?, packageId: String?) -> Unit = { _, _ -> },
 ) {
+    var legalDoc by remember { mutableStateOf<LegalDocKind?>(null) }
+    if (legalDoc != null) {
+        LegalDocumentScreen(
+            kind = legalDoc!!,
+            language = language,
+            onBack = { legalDoc = null },
+        )
+        return
+    }
+    val legalFooter: @Composable () -> Unit = {
+        PaywallLegalRow(
+            language = language,
+            onRestore = { storeViewModel.restore() },
+            onTerms = { legalDoc = LegalDocKind.Terms },
+            onPrivacy = { legalDoc = LegalDocKind.Privacy },
+        )
+    }
     when (context) {
         PaywallContext.FIN_ONBOARDING -> OnboardingPaywallFlow(
             language = language,
             storeViewModel = storeViewModel,
             onDismiss = onDismiss,
             onPurchased = onPurchased,
+            onPurchaseMeta = onPurchaseMeta,
+            // Comparison analytics only needed from onboarding step tracker.
         )
         PaywallContext.OFFRE_DISCOUNT -> DiscountPaywall(
             language = language,
             storeViewModel = storeViewModel,
             onDismiss = onDismiss,
             onPurchased = onPurchased,
+            onPurchaseMeta = onPurchaseMeta,
+            legalFooter = legalFooter,
         )
         PaywallContext.QUIZZ -> QuizPaywall(
             language = language,
             storeViewModel = storeViewModel,
             onDismiss = onDismiss,
             onPurchased = onPurchased,
+            onPurchaseMeta = onPurchaseMeta,
+            legalFooter = legalFooter,
         )
         else -> StandardPaywall(
             context = context,
@@ -127,6 +185,8 @@ fun PaywallScreen(
             storeViewModel = storeViewModel,
             onDismiss = onDismiss,
             onPurchased = onPurchased,
+            onPurchaseMeta = onPurchaseMeta,
+            legalFooter = legalFooter,
         )
     }
 }
@@ -139,6 +199,7 @@ private fun OnboardingAnnualPaywall(
     onViewAllPlans: () -> Unit,
     onDismiss: () -> Unit,
     onPurchased: () -> Unit,
+    legalFooter: @Composable () -> Unit,
 ) {
     val context = LocalContext.current
     var purchasing by remember { mutableStateOf(false) }
@@ -226,6 +287,7 @@ private fun OnboardingAnnualPaywall(
             TextButton(onClick = onViewAllPlans, modifier = Modifier.fillMaxWidth()) {
                 Text(StringStore.text(context, "onboardingV2.pw.viewAllPlans", language), color = DS.accentSoft)
             }
+            legalFooter()
             TextButton(onClick = onDismiss, modifier = Modifier.fillMaxWidth()) {
                 Text(StringStore.text(context, "home.skip", language), color = DS.inkTertiary)
             }
@@ -240,7 +302,8 @@ private fun OnboardingComparisonPaywall(
     monthly: Package?,
     storeViewModel: StoreViewModel,
     onDismiss: () -> Unit,
-    onPurchased: () -> Unit,
+    onPurchased: (packageId: String?) -> Unit,
+    legalFooter: @Composable () -> Unit,
 ) {
     val context = LocalContext.current
     var yearlySelected by remember { mutableStateOf(true) }
@@ -359,10 +422,11 @@ private fun OnboardingComparisonPaywall(
                     onStart = { purchasing = true },
                     onDone = { purchasing = false },
                     onError = { error = it; purchasing = false },
-                    onPurchased = onPurchased,
+                    onPurchased = { onPurchased(pkg?.identifier) },
                 )
             },
         )
+        legalFooter()
         TextButton(onClick = onDismiss, modifier = Modifier.fillMaxWidth()) {
             Text(StringStore.text(context, "home.skip", language), color = DS.inkTertiary)
         }
@@ -375,6 +439,8 @@ private fun DiscountPaywall(
     storeViewModel: StoreViewModel,
     onDismiss: () -> Unit,
     onPurchased: () -> Unit,
+    onPurchaseMeta: (offeringId: String?, packageId: String?) -> Unit,
+    legalFooter: @Composable () -> Unit,
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
@@ -482,7 +548,10 @@ private fun DiscountPaywall(
                             onStart = { purchasing = true },
                             onDone = { purchasing = false },
                             onError = { error = it; purchasing = false },
-                            onPurchased = onPurchased,
+                            onPurchased = {
+                                onPurchaseMeta(PaywallContext.OFFRE_DISCOUNT.offeringId, annual?.identifier)
+                                onPurchased()
+                            },
                         )
                     },
                     enabled = !purchasing,
@@ -503,6 +572,7 @@ private fun DiscountPaywall(
                     style = SophiaTypography.labelMedium,
                     textAlign = TextAlign.Center,
                 )
+                legalFooter()
                 TextButton(onClick = onDismiss) {
                     Text(StringStore.text(context, "home.skip", language), color = Color.White.copy(alpha = 0.75f))
                 }
@@ -517,6 +587,8 @@ private fun QuizPaywall(
     storeViewModel: StoreViewModel,
     onDismiss: () -> Unit,
     onPurchased: () -> Unit,
+    onPurchaseMeta: (offeringId: String?, packageId: String?) -> Unit,
+    legalFooter: @Composable () -> Unit,
 ) {
     val context = LocalContext.current
     LaunchedEffect(Unit) {
@@ -649,10 +721,14 @@ private fun QuizPaywall(
                         onStart = { purchasing = true },
                         onDone = { purchasing = false },
                         onError = { error = it; purchasing = false },
-                        onPurchased = onPurchased,
+                        onPurchased = {
+                            onPurchaseMeta(PaywallContext.QUIZZ.offeringId, annual?.identifier)
+                            onPurchased()
+                        },
                     )
                 },
             )
+            legalFooter()
             TextButton(onClick = onDismiss) {
                 Text(StringStore.text(context, "home.skip", language), color = DS.inkSecondary)
             }
@@ -667,6 +743,8 @@ private fun StandardPaywall(
     storeViewModel: StoreViewModel,
     onDismiss: () -> Unit,
     onPurchased: () -> Unit,
+    onPurchaseMeta: (offeringId: String?, packageId: String?) -> Unit,
+    legalFooter: @Composable () -> Unit,
 ) {
     val appContext = LocalContext.current
     LaunchedEffect(context) {
@@ -769,10 +847,14 @@ private fun StandardPaywall(
                         onStart = { purchasing = true },
                         onDone = { purchasing = false },
                         onError = { error = it; purchasing = false },
-                        onPurchased = onPurchased,
+                        onPurchased = {
+                            onPurchaseMeta(context.offeringId, annual?.identifier)
+                            onPurchased()
+                        },
                     )
                 },
             )
+            legalFooter()
             TextButton(onClick = onDismiss, modifier = Modifier.align(Alignment.CenterHorizontally)) {
                 Text(StringStore.text(appContext, "home.skip", language), color = DS.inkSecondary)
             }
@@ -823,6 +905,44 @@ private fun PurchaseButton(text: String, enabled: Boolean, onClick: () -> Unit) 
             fontWeight = FontWeight.SemiBold,
             fontSize = 16.sp,
             textAlign = TextAlign.Center,
+        )
+    }
+}
+
+@Composable
+internal fun PaywallLegalRow(
+    language: AppLanguage,
+    onRestore: () -> Unit,
+    onTerms: () -> Unit,
+    onPrivacy: () -> Unit,
+) {
+    val context = LocalContext.current
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(top = 4.dp, bottom = 8.dp),
+        horizontalArrangement = Arrangement.Center,
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Text(
+            StringStore.text(context, "paywall.restore", language),
+            style = SophiaTypography.labelMedium,
+            color = DS.inkSecondary,
+            modifier = Modifier.clickable(onClick = onRestore).padding(horizontal = 6.dp, vertical = 4.dp),
+        )
+        Text("·", color = DS.inkTertiary)
+        Text(
+            StringStore.text(context, "paywall.terms", language),
+            style = SophiaTypography.labelMedium,
+            color = DS.inkSecondary,
+            modifier = Modifier.clickable(onClick = onTerms).padding(horizontal = 6.dp, vertical = 4.dp),
+        )
+        Text("·", color = DS.inkTertiary)
+        Text(
+            StringStore.text(context, "paywall.privacy", language),
+            style = SophiaTypography.labelMedium,
+            color = DS.inkSecondary,
+            modifier = Modifier.clickable(onClick = onPrivacy).padding(horizontal = 6.dp, vertical = 4.dp),
         )
     }
 }
