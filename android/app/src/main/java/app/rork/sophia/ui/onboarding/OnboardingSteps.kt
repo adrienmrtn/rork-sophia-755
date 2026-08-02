@@ -1,7 +1,12 @@
 package app.rork.sophia.ui.onboarding
 
 import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.core.RepeatMode
+import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.infiniteRepeatable
+import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -9,20 +14,27 @@ import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
@@ -43,16 +55,21 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.scale
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Course
+import app.rork.sophia.ui.components.CourseImage
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
@@ -103,28 +120,168 @@ internal fun WelcomeStep(language: AppLanguage, onContinue: () -> Unit) {
 }
 
 @Composable
-internal fun LanguageStep(language: AppLanguage, onSelect: (AppLanguage) -> Unit) {
+internal fun LanguageStep(
+    language: AppLanguage,
+    onSelect: (AppLanguage) -> Unit,
+    onContinue: () -> Unit,
+) {
     val context = LocalContext.current
+    val scrollState = rememberScrollState()
+    var showScrollHint by remember { mutableStateOf(true) }
+    var revealed by remember { mutableIntStateOf(0) }
+    val bounce by rememberInfiniteTransition(label = "langHint").animateFloat(
+        initialValue = 0f,
+        targetValue = 3f,
+        animationSpec = infiniteRepeatable(tween(900), RepeatMode.Reverse),
+        label = "bounce",
+    )
+
+    LaunchedEffect(Unit) {
+        AppLanguage.entries.forEachIndexed { index, _ ->
+            delay(150L + index * 60L)
+            revealed = index + 1
+        }
+    }
+    LaunchedEffect(scrollState.value) {
+        if (scrollState.value > 24 && showScrollHint) {
+            showScrollHint = false
+        }
+    }
+
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .verticalScroll(rememberScrollState())
-            .padding(DS.Space.l),
+            .padding(horizontal = DS.Space.l),
     ) {
         Spacer(Modifier.height(48.dp))
-        Text(StringStore.text(context, "onboardingV2.language.title", language), style = SophiaTypography.titleLarge)
+        Text(
+            StringStore.text(context, "onboardingV2.language.title", language),
+            style = SophiaTypography.titleLarge,
+            textAlign = TextAlign.Center,
+            modifier = Modifier.fillMaxWidth(),
+        )
         Text(
             StringStore.text(context, "onboardingV2.language.subtitle", language),
             style = SophiaTypography.bodyMedium,
-            modifier = Modifier.padding(top = 8.dp, bottom = 24.dp),
+            textAlign = TextAlign.Center,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 8.dp, bottom = 20.dp),
         )
-        AppLanguage.entries.forEach { lang ->
-            SelectRow(
-                label = "${lang.flag}  ${lang.displayName}",
-                selected = lang == language,
-                onClick = { onSelect(lang) },
-            )
-            Spacer(Modifier.height(8.dp))
+
+        Box(modifier = Modifier.weight(1f).fillMaxWidth()) {
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .verticalScroll(scrollState),
+                verticalArrangement = Arrangement.spacedBy(12.dp),
+            ) {
+                AppLanguage.entries.forEachIndexed { index, lang ->
+                    val visible = index < revealed
+                    LanguageRow(
+                        language = lang,
+                        selected = lang == language,
+                        visible = visible,
+                        onClick = { onSelect(lang) },
+                    )
+                }
+                Spacer(Modifier.height(36.dp))
+            }
+
+            AnimatedVisibility(
+                visible = showScrollHint,
+                modifier = Modifier.align(Alignment.BottomCenter),
+                enter = fadeIn(),
+                exit = fadeOut(tween(250)),
+            ) {
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    modifier = Modifier.fillMaxWidth(),
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(56.dp)
+                            .background(
+                                Brush.verticalGradient(
+                                    listOf(DS.canvas.copy(alpha = 0f), DS.canvas),
+                                ),
+                            ),
+                    )
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .background(DS.canvas)
+                            .padding(bottom = 8.dp),
+                        horizontalArrangement = Arrangement.Center,
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        Text(
+                            "▼",
+                            color = DS.inkSecondary,
+                            fontSize = 11.sp,
+                            modifier = Modifier.offset(y = bounce.dp),
+                        )
+                        Text(
+                            StringStore.text(context, "onboardingV2.language.scrollHint", language),
+                            style = SophiaTypography.labelMedium,
+                            color = DS.inkSecondary,
+                            modifier = Modifier.padding(horizontal = 8.dp),
+                        )
+                        Text(
+                            "▼",
+                            color = DS.inkSecondary,
+                            fontSize = 11.sp,
+                            modifier = Modifier.offset(y = bounce.dp),
+                        )
+                    }
+                }
+            }
+        }
+
+        PrimaryCta(StringStore.text(context, "common.continue", language), onContinue)
+        Spacer(Modifier.height(12.dp))
+    }
+}
+
+@Composable
+private fun LanguageRow(
+    language: AppLanguage,
+    selected: Boolean,
+    visible: Boolean,
+    onClick: () -> Unit,
+) {
+    val alpha by animateFloatAsState(if (visible) 1f else 0f, tween(320), label = "langAlpha")
+    val offsetY by animateFloatAsState(if (visible) 0f else 18f, tween(320), label = "langY")
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .offset(y = offsetY.dp)
+            .alpha(alpha)
+            .clip(DS.controlShape)
+            .background(DS.surface)
+            .border(if (selected) 2.dp else 1.dp, if (selected) DS.accent else DS.hairline, DS.controlShape)
+            .clickable(onClick = onClick)
+            .padding(horizontal = 16.dp, vertical = 16.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Text(language.flag, fontSize = 26.sp)
+        Spacer(Modifier.size(12.dp))
+        Text(
+            language.displayName,
+            style = SophiaTypography.bodyLarge.copy(fontWeight = FontWeight.SemiBold),
+            modifier = Modifier.weight(1f),
+        )
+        Box(
+            modifier = Modifier
+                .size(22.dp)
+                .border(2.dp, if (selected) DS.accent else DS.hairline, CircleShape)
+                .background(if (selected) DS.accent else Color.Transparent, CircleShape),
+            contentAlignment = Alignment.Center,
+        ) {
+            if (selected) {
+                Text("✓", color = Color.White, fontSize = 11.sp, fontWeight = FontWeight.Bold)
+            }
         }
     }
 }
@@ -592,69 +749,274 @@ internal fun LoadingProfileStep(language: AppLanguage, onContinue: () -> Unit) {
     }
 }
 
+private data class ProfileMetrics(
+    val topSpacing: Dp,
+    val sectionSpacing: Dp,
+    val badge: Dp,
+    val emojiSp: Int,
+    val cardWidth: Dp,
+    val cardHeight: Dp,
+) {
+    companion object {
+        val Regular = ProfileMetrics(44.dp, 22.dp, 116.dp, 52, 168.dp, 214.dp)
+        val Compact = ProfileMetrics(16.dp, 16.dp, 92.dp, 42, 148.dp, 188.dp)
+
+        fun fitting(heightDp: Dp): ProfileMetrics =
+            if (heightDp < 740.dp) Compact else Regular
+    }
+}
+
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 internal fun ProfileRewardStep(
     language: AppLanguage,
-    objectiveKey: String,
-    likedTitles: List<String>,
+    objectiveKeys: List<String>,
+    likedCourseIds: List<String>,
     onContinue: () -> Unit,
 ) {
     val context = LocalContext.current
-    var appear by remember { mutableStateOf(false) }
-    LaunchedEffect(Unit) { appear = true }
-    val scale by animateFloatAsState(if (appear) 1f else 0.9f, tween(450), label = "profile")
+    val archetype = objectiveKeys.firstOrNull() ?: "cultivate"
+    val objectives = objectiveKeys.ifEmpty { listOf(archetype) }
+    val awaitingCourses = remember(language, likedCourseIds) {
+        val excluded = likedCourseIds.toSet()
+        ContentCatalog.courses(context, language)
+            .filter { it.id !in excluded }
+            .shuffled()
+            .take(5)
+    }
 
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(DS.Space.l)
-            .scale(scale),
-        verticalArrangement = Arrangement.SpaceBetween,
-    ) {
-        Column {
-            Spacer(Modifier.height(40.dp))
-            Text(
-                StringStore.text(context, "onboardingV2.profile.eyebrow", language),
-                style = SophiaTypography.labelLarge,
-                color = DS.accentSoft,
-            )
-            Spacer(Modifier.height(8.dp))
-            Text(
-                StringStore.text(context, "onboardingV2.profile.nickname.$objectiveKey", language),
-                style = SophiaTypography.displayLarge,
-            )
-            Spacer(Modifier.height(8.dp))
-            Text(
-                StringStore.text(context, "onboardingV2.profile.tagline.$objectiveKey", language),
-                style = SophiaTypography.bodyMedium,
-            )
-            Spacer(Modifier.height(24.dp))
-            Text(
-                StringStore.text(context, "onboardingV2.profile.objectiveTitle", language),
-                style = SophiaTypography.titleMedium,
-            )
-            Spacer(Modifier.height(8.dp))
-            Text(
-                StringStore.text(context, "onboardingV2.objective.$objectiveKey", language),
-                style = SophiaTypography.bodyLarge,
+    var badgeIn by remember { mutableStateOf(false) }
+    var nameRevealed by remember { mutableStateOf(false) }
+    var reveal by remember { mutableIntStateOf(0) }
+    LaunchedEffect(Unit) {
+        delay(200)
+        badgeIn = true
+        delay(350)
+        nameRevealed = true
+        delay(450)
+        reveal = 1
+        delay(450)
+        reveal = 2
+    }
+    // CTA reveal is independent of content animation (parity with iOS).
+    var ctaVisible by remember { mutableStateOf(false) }
+    LaunchedEffect(Unit) {
+        delay(1500)
+        ctaVisible = true
+    }
+    val badgeScale by animateFloatAsState(if (badgeIn) 1f else 0.4f, tween(450), label = "badge")
+    val nameAlpha by animateFloatAsState(if (nameRevealed) 1f else 0f, tween(400), label = "name")
+    val objAlpha by animateFloatAsState(if (reveal >= 1) 1f else 0f, tween(400), label = "obj")
+    val coursesAlpha by animateFloatAsState(if (reveal >= 2) 1f else 0f, tween(400), label = "courses")
+    val ctaAlpha by animateFloatAsState(if (ctaVisible) 1f else 0f, tween(400), label = "cta")
+
+    BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
+        val metrics = ProfileMetrics.fitting(maxHeight)
+        Column(modifier = Modifier.fillMaxSize()) {
+            Column(
                 modifier = Modifier
-                    .clip(DS.controlShape)
-                    .background(DS.accentTint)
-                    .padding(14.dp)
-                    .fillMaxWidth(),
-            )
-            if (likedTitles.isNotEmpty()) {
-                Spacer(Modifier.height(20.dp))
-                Text(
-                    StringStore.text(context, "onboardingV2.profile.coursesTitle", language),
-                    style = SophiaTypography.titleMedium,
-                )
-                likedTitles.take(3).forEach { title ->
-                    Text("• $title", style = SophiaTypography.bodyMedium, modifier = Modifier.padding(top = 6.dp))
+                    .weight(1f)
+                    .fillMaxWidth()
+                    .verticalScroll(rememberScrollState()),
+                horizontalAlignment = Alignment.CenterHorizontally,
+            ) {
+                Spacer(Modifier.height(metrics.topSpacing))
+
+                Box(
+                    modifier = Modifier
+                        .size(metrics.badge)
+                        .scale(badgeScale)
+                        .clip(CircleShape)
+                        .background(DS.accent.copy(alpha = 0.10f))
+                        .border(1.dp, DS.accent.copy(alpha = 0.18f), CircleShape),
+                    contentAlignment = Alignment.Center,
+                ) {
+                    Text(
+                        OBJECTIVE_EMOJI[archetype] ?: "📚",
+                        fontSize = metrics.emojiSp.sp,
+                    )
                 }
+
+                Spacer(Modifier.height(16.dp))
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    modifier = Modifier
+                        .padding(horizontal = 28.dp)
+                        .alpha(nameAlpha),
+                ) {
+                    Text(
+                        StringStore.text(context, "onboardingV2.profile.eyebrow", language).uppercase(Locale.getDefault()),
+                        style = SophiaTypography.labelMedium,
+                        color = DS.accentSoft,
+                        letterSpacing = 1.2.sp,
+                    )
+                    Spacer(Modifier.height(8.dp))
+                    Text(
+                        StringStore.text(context, "onboardingV2.profile.nickname.$archetype", language),
+                        style = SophiaTypography.displayLarge,
+                        textAlign = TextAlign.Center,
+                        maxLines = 2,
+                        overflow = TextOverflow.Ellipsis,
+                    )
+                    Spacer(Modifier.height(8.dp))
+                    Text(
+                        StringStore.text(context, "onboardingV2.profile.tagline.$archetype", language),
+                        style = SophiaTypography.bodyMedium,
+                        textAlign = TextAlign.Center,
+                    )
+                }
+
+                Spacer(Modifier.height(metrics.sectionSpacing))
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .alpha(objAlpha)
+                        .offset(y = if (reveal >= 1) 0.dp else 16.dp),
+                ) {
+                    Text(
+                        StringStore.text(context, "onboardingV2.profile.objectiveTitle", language)
+                            .uppercase(Locale.getDefault()),
+                        style = SophiaTypography.labelMedium,
+                        color = DS.inkTertiary,
+                        letterSpacing = 1.sp,
+                    )
+                    Spacer(Modifier.height(10.dp))
+                    FlowRow(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 24.dp),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterHorizontally),
+                        verticalArrangement = Arrangement.spacedBy(8.dp),
+                    ) {
+                        objectives.forEach { key ->
+                            Row(
+                                modifier = Modifier
+                                    .clip(CircleShape)
+                                    .background(DS.surface)
+                                    .border(1.dp, DS.accent.copy(alpha = 0.25f), CircleShape)
+                                    .padding(horizontal = 14.dp, vertical = 9.dp),
+                                verticalAlignment = Alignment.CenterVertically,
+                            ) {
+                                Text(OBJECTIVE_EMOJI[key] ?: "📚", fontSize = 15.sp)
+                                Spacer(Modifier.size(8.dp))
+                                Text(
+                                    StringStore.text(context, "onboardingV2.objective.$key", language),
+                                    style = SophiaTypography.bodyMedium.copy(fontWeight = FontWeight.SemiBold),
+                                    color = DS.ink,
+                                )
+                            }
+                        }
+                    }
+                }
+
+                if (awaitingCourses.isNotEmpty()) {
+                    Spacer(Modifier.height(metrics.sectionSpacing))
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .alpha(coursesAlpha)
+                            .offset(y = if (reveal >= 2) 0.dp else 20.dp),
+                    ) {
+                        Text(
+                            StringStore.text(context, "onboardingV2.profile.coursesTitle", language),
+                            style = SophiaTypography.titleMedium,
+                            modifier = Modifier.padding(horizontal = 28.dp),
+                        )
+                        Spacer(Modifier.height(12.dp))
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .horizontalScroll(rememberScrollState())
+                                .padding(horizontal = 28.dp, vertical = 4.dp),
+                            horizontalArrangement = Arrangement.spacedBy(14.dp),
+                        ) {
+                            awaitingCourses.forEach { course ->
+                                ProfileCourseCard(
+                                    course = course,
+                                    language = language,
+                                    width = metrics.cardWidth,
+                                    height = metrics.cardHeight,
+                                )
+                            }
+                        }
+                    }
+                }
+                Spacer(Modifier.height(16.dp))
+            }
+
+            // Pinned CTA — always tappable even before fade-in completes.
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = DS.Space.l)
+                    .padding(bottom = 12.dp)
+                    .alpha(ctaAlpha.coerceAtLeast(0.35f)),
+            ) {
+                PrimaryCta(
+                    text = StringStore.text(context, "onboardingV2.profile.cta", language),
+                    onClick = onContinue,
+                )
             }
         }
-        PrimaryCta(StringStore.text(context, "onboardingV2.profile.cta", language), onContinue)
+    }
+}
+
+@Composable
+private fun ProfileCourseCard(
+    course: Course,
+    language: AppLanguage,
+    width: Dp,
+    height: Dp,
+) {
+    val context = LocalContext.current
+    Box(
+        modifier = Modifier
+            .width(width)
+            .height(height)
+            .clip(RoundedCornerShape(20.dp))
+            .border(1.dp, DS.hairline, RoundedCornerShape(20.dp)),
+    ) {
+        CourseImage(
+            courseId = course.id,
+            modifier = Modifier.fillMaxSize(),
+            contentScale = ContentScale.Crop,
+        )
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(
+                    Brush.verticalGradient(
+                        listOf(Color.Transparent, Color.Black.copy(alpha = 0.15f), Color.Black.copy(alpha = 0.78f)),
+                    ),
+                ),
+        )
+        Column(
+            modifier = Modifier
+                .align(Alignment.BottomStart)
+                .padding(12.dp),
+            verticalArrangement = Arrangement.spacedBy(6.dp),
+        ) {
+            Text(
+                StringStore.text(
+                    context,
+                    "subject.${course.subjectEnum.storageKey}.short",
+                    language,
+                ).uppercase(Locale.getDefault()),
+                style = SophiaTypography.labelMedium.copy(fontSize = 11.sp, fontWeight = FontWeight.Bold),
+                color = Color.White,
+                modifier = Modifier
+                    .clip(CircleShape)
+                    .background(Color.White.copy(alpha = 0.22f))
+                    .padding(horizontal = 8.dp, vertical = 4.dp),
+            )
+            Text(
+                course.title,
+                style = SophiaTypography.bodyMedium.copy(fontWeight = FontWeight.Bold, color = Color.White),
+                maxLines = 3,
+                overflow = TextOverflow.Ellipsis,
+            )
+        }
     }
 }
 

@@ -112,10 +112,11 @@ fun OnboardingV2Screen(
     Box(modifier = Modifier.fillMaxSize().background(DS.canvas)) {
         when (step) {
             OnboardingStep.Welcome -> WelcomeStep(language) { step = OnboardingStep.Language }
-            OnboardingStep.Language -> LanguageStep(language) {
-                onLanguageSelected(it)
-                step = OnboardingStep.Objectives
-            }
+            OnboardingStep.Language -> LanguageStep(
+                language = language,
+                onSelect = onLanguageSelected,
+                onContinue = { step = OnboardingStep.Objectives },
+            )
             OnboardingStep.Objectives -> ObjectivesStep(
                 language = language,
                 selected = selectedObjectives,
@@ -162,10 +163,8 @@ fun OnboardingV2Screen(
             OnboardingStep.Loading -> LoadingProfileStep(language) { step = OnboardingStep.Profile }
             OnboardingStep.Profile -> ProfileRewardStep(
                 language = language,
-                objectiveKey = primaryObjective,
-                likedTitles = likedCourseIds.mapNotNull { id ->
-                    ContentCatalog.course(context, language, id)?.title
-                },
+                objectiveKeys = selectedObjectives.toList().ifEmpty { listOf(primaryObjective) },
+                likedCourseIds = likedCourseIds,
                 onContinue = { step = OnboardingStep.Login },
             )
             OnboardingStep.Login -> LoginStep(
