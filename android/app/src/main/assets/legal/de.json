@@ -8,17 +8,17 @@
     {
       "id": "2",
       "title": "2. Beschreibung des Dienstes",
-      "body": "Sophia ist eine mobile Lern-App für Allgemeinbildung mit Kursen, Quizzen und interaktiven Inhalten. Die App ist für iOS verfügbar und kann sowohl kostenlose Inhalte als auch Premium-Abonnements anbieten."
+      "body": "Sophia ist eine mobile Lern-App für Allgemeinbildung mit Kursen, Quizzen und interaktiven Inhalten. Die App ist für Android verfügbar und kann sowohl kostenlose Inhalte als auch Premium-Abonnements anbieten."
     },
     {
       "id": "3",
       "title": "3. Konto und Nutzung",
-      "body": "Die Erstellung eines Kontos (über Apple oder Google) wird angeboten, um deinen Fortschritt zu speichern und zwischen deinen Geräten zu synchronisieren. Neue Nutzer melden sich während des Onboardings an; bestehende Nutzer können jederzeit in den Einstellungen ein Konto erstellen. Ohne Konto werden deine Fortschrittsdaten lokal auf deinem Gerät gespeichert und eine Neuinstallation der App kann zu deren Verlust führen. Du kannst dein Konto jederzeit in den Einstellungen löschen."
+      "body": "Die Erstellung eines Kontos (über Google) wird angeboten, um deinen Fortschritt zu speichern und zwischen deinen Geräten zu synchronisieren. Neue Nutzer melden sich während des Onboardings an; bestehende Nutzer können jederzeit in den Einstellungen ein Konto erstellen. Ohne Konto werden deine Fortschrittsdaten lokal auf deinem Gerät gespeichert und eine Neuinstallation der App kann zu deren Verlust führen. Du kannst dein Konto jederzeit in den Einstellungen löschen."
     },
     {
       "id": "4",
       "title": "4. Abonnements und Käufe",
-      "body": "Sophia bietet Premium-Abonnements (monatlich und jährlich) über den Play Store von Apple an. Die Preise werden in der App angezeigt und können je nach Land variieren. Die Zahlung wird bei Bestätigung des Kaufs deinem Apple-ID-Konto belastet. Das Abonnement verlängert sich automatisch, sofern die automatische Verlängerung nicht mindestens 24 Stunden vor Ende des laufenden Zeitraums deaktiviert wird. Du kannst deine Abonnements in den Einstellungen deines App-Store-Kontos verwalten und kündigen."
+      "body": "Sophia bietet Premium-Abonnements (monatlich und jährlich) über den Play Store von Google an. Die Preise werden in der App angezeigt und können je nach Land variieren. Die Zahlung wird bei Bestätigung des Kaufs deinem Google-Konto belastet. Das Abonnement verlängert sich automatisch, sofern die automatische Verlängerung nicht mindestens 24 Stunden vor Ende des laufenden Zeitraums deaktiviert wird. Du kannst deine Abonnements in den Einstellungen deines App-Store-Kontos verwalten und kündigen."
     },
     {
       "id": "5",
@@ -65,7 +65,7 @@
     {
       "id": "3",
       "title": "3. Abonnementdaten",
-      "body": "Wenn du ein Premium-Abonnement abschließt, wird die Transaktion vollständig von Apple über den Play Store abgewickelt. Wir haben keinen Zugriff auf deine Zahlungsinformationen (Kartennummer, Rechnungsadresse). Wir erhalten lediglich die Bestätigung deines Abonnementstatus über RevenueCat, unseren Partner für die Abonnementverwaltung."
+      "body": "Wenn du ein Premium-Abonnement abschließt, wird die Transaktion vollständig von Google über den Play Store abgewickelt. Wir haben keinen Zugriff auf deine Zahlungsinformationen (Kartennummer, Rechnungsadresse). Wir erhalten lediglich die Bestätigung deines Abonnementstatus über RevenueCat, unseren Partner für die Abonnementverwaltung."
     },
     {
       "id": "4",
@@ -79,18 +79,18 @@
     },
     {
       "id": "6",
-      "title": "6. Apple-Analysedaten",
-      "body": "Die App kann außerdem von anonymen Statistiken profitieren, die von Apple bereitgestellt werden (Play Console analytics). Diese Daten sind aggregiert und lassen keine persönliche Identifizierung zu. Du kannst die Weitergabe von Analysedaten in den Einstellungen deines Android devices deaktivieren (Einstellungen > Datenschutz > Analyse & Verbesserungen)."
+      "title": "6. Google-Play-Analysendaten",
+      "body": "Die App kann außerdem von anonymen Statistiken profitieren, die von Google bereitgestellt werden (Play Console analytics). Diese Daten sind aggregiert und lassen keine persönliche Identifizierung zu. Du kannst die Weitergabe von Analysedaten in den Einstellungen deines Android devices deaktivieren (Einstellungen > Datenschutz > Analyse & Verbesserungen)."
     },
     {
       "id": "7",
       "title": "7. Datenspeicherung",
-      "body": "Alle deine Fortschrittsdaten werden lokal auf deinem Gerät über UserDefaults gespeichert. Sie werden nicht in der Cloud gesichert. Beim Deinstallieren der App werden diese Daten endgültig gelöscht."
+      "body": "Alle deine Fortschrittsdaten werden lokal auf deinem Gerät über local app storage gespeichert. Sie werden nicht in der Cloud gesichert. Beim Deinstallieren der App werden diese Daten endgültig gelöscht."
     },
     {
       "id": "8",
       "title": "8. Weitergabe von Daten",
-      "body": "Wir verkaufen, vermieten oder teilen keine personenbezogenen Daten mit Dritten zu kommerziellen oder Werbezwecken. Die übermittelten Daten beschränken sich auf: Apple und RevenueCat (Abonnements), Mixpanel (anonyme Analysen, EU), Formspree (freiwillig aus den Einstellungen gesendetes Nutzerfeedback)."
+      "body": "Wir verkaufen, vermieten oder teilen keine personenbezogenen Daten mit Dritten zu kommerziellen oder Werbezwecken. Die übermittelten Daten beschränken sich auf: Google und RevenueCat (Abonnements), Mixpanel (anonyme Analysen, EU), Formspree (freiwillig aus den Einstellungen gesendetes Nutzerfeedback)."
     },
     {
       "id": "9",

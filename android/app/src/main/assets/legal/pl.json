@@ -8,17 +8,17 @@
     {
       "id": "2",
       "title": "2. Opis usługi",
-      "body": "Sophia to edukacyjna aplikacja mobilna o charakterze ogólnym, oferująca kursy, quizy i treści interaktywne. Aplikacja jest dostępna na iOS i może oferować bezpłatne treści oraz subskrypcje premium."
+      "body": "Sophia to edukacyjna aplikacja mobilna o charakterze ogólnym, oferująca kursy, quizy i treści interaktywne. Aplikacja jest dostępna na Androidzie i może oferować bezpłatne treści oraz subskrypcje premium."
     },
     {
       "id": "3",
       "title": "3. Konto i korzystanie",
-      "body": "Oferowane jest utworzenie konta (za pośrednictwem Apple lub Google), aby zapisać swoje postępy i zsynchronizować je na swoich urządzeniach. Nowi użytkownicy logują się podczas wdrażania; obecni użytkownicy mogą w dowolnym momencie utworzyć konto w Ustawieniach. Bez konta Twoje dane o postępach będą przechowywane lokalnie na Twoim urządzeniu i ponowna instalacja aplikacji może spowodować ich utratę. Możesz usunąć swoje konto w dowolnym momencie w Ustawieniach."
+      "body": "Oferowane jest utworzenie konta (za pośrednictwem Google), aby zapisać swoje postępy i zsynchronizować je na swoich urządzeniach. Nowi użytkownicy logują się podczas wdrażania; obecni użytkownicy mogą w dowolnym momencie utworzyć konto w Ustawieniach. Bez konta Twoje dane o postępach będą przechowywane lokalnie na Twoim urządzeniu i ponowna instalacja aplikacji może spowodować ich utratę. Możesz usunąć swoje konto w dowolnym momencie w Ustawieniach."
     },
     {
       "id": "4",
       "title": "4. Subskrypcje i zakupy",
-      "body": "Sophia oferuje subskrypcje premium (miesięczne i roczne) za pośrednictwem sklepu Apple Play Store. Ceny są wyświetlane w aplikacji i mogą się różnić w zależności od kraju. Płatność zostanie pobrana z Twojego konta Google account po potwierdzeniu zakupu. Subskrypcje odnawiają się automatycznie, chyba że automatyczne odnawianie zostanie wyłączone co najmniej 24 godziny przed końcem bieżącego okresu. Możesz zarządzać subskrypcjami i je anulować w ustawieniach konta Play Store."
+      "body": "Sophia oferuje subskrypcje premium (miesięczne i roczne) za pośrednictwem sklepu Google Play Store. Ceny są wyświetlane w aplikacji i mogą się różnić w zależności od kraju. Płatność zostanie pobrana z Twojego konta Google account po potwierdzeniu zakupu. Subskrypcje odnawiają się automatycznie, chyba że automatyczne odnawianie zostanie wyłączone co najmniej 24 godziny przed końcem bieżącego okresu. Możesz zarządzać subskrypcjami i je anulować w ustawieniach konta Play Store."
     },
     {
       "id": "5",
@@ -65,7 +65,7 @@
     {
       "id": "3",
       "title": "3. Dane abonamentowe",
-      "body": "Jeśli subskrybujesz plan premium, transakcję w całości obsługuje Apple za pośrednictwem Play Store. Nie mamy dostępu do informacji o Twojej płatności (numer karty, adres rozliczeniowy). Potwierdzenie statusu Twojej subskrypcji otrzymujemy wyłącznie za pośrednictwem RevenueCat, naszego partnera w zakresie zarządzania subskrypcjami."
+      "body": "Jeśli subskrybujesz plan premium, transakcję w całości obsługuje Google za pośrednictwem Play Store. Nie mamy dostępu do informacji o Twojej płatności (numer karty, adres rozliczeniowy). Potwierdzenie statusu Twojej subskrypcji otrzymujemy wyłącznie za pośrednictwem RevenueCat, naszego partnera w zakresie zarządzania subskrypcjami."
     },
     {
       "id": "4",
@@ -79,18 +79,18 @@
     },
     {
       "id": "6",
-      "title": "6. Analityka Apple",
-      "body": "Aplikacja może także korzystać z anonimowych statystyk udostępnianych przez firmę Apple (Play Console analytics). Dane te mają charakter zbiorczy i nie pozwalają na identyfikację użytkownika. Możesz wyłączyć udostępnianie analiz w ustawieniach swojego Android device'a (Ustawienia > Prywatność > Analityka i ulepszenia)."
+      "title": "6. Analityka Google",
+      "body": "Aplikacja może także korzystać z anonimowych statystyk udostępnianych przez firmę Google (Play Console analytics). Dane te mają charakter zbiorczy i nie pozwalają na identyfikację użytkownika. Możesz wyłączyć udostępnianie analiz w ustawieniach swojego Android device'a (Ustawienia > Prywatność > Analityka i ulepszenia)."
     },
     {
       "id": "7",
       "title": "7. Przechowywanie danych",
-      "body": "Twoje dane o postępie są przechowywane lokalnie na Twoim urządzeniu (UserDefaults). Jeśli utworzysz konto (Apple lub Google), jego kopia zapasowa zostanie również bezpiecznie utworzona na naszych serwerach Supabase (hostowanych w Unii Europejskiej), aby umożliwić synchronizację między Twoimi urządzeniami. Odinstalowanie aplikacji powoduje usunięcie danych lokalnych; usunięcie konta powoduje trwałe usunięcie powiązanych danych z serwera."
+      "body": "Twoje dane o postępie są przechowywane lokalnie na Twoim urządzeniu (local app storage). Jeśli utworzysz konto (Google), jego kopia zapasowa zostanie również bezpiecznie utworzona na naszych serwerach Supabase (hostowanych w Unii Europejskiej), aby umożliwić synchronizację między Twoimi urządzeniami. Odinstalowanie aplikacji powoduje usunięcie danych lokalnych; usunięcie konta powoduje trwałe usunięcie powiązanych danych z serwera."
     },
     {
       "id": "8",
       "title": "8. Udostępnianie danych",
-      "body": "Nie sprzedajemy, nie wynajmujemy ani nie udostępniamy danych osobowych stronom trzecim w celach komercyjnych lub reklamowych. Przesyłane dane ograniczają się do: Apple i RevenueCat (subskrypcje), Mixpanel (anonimowa analityka, UE), Formspree (opinie użytkowników przesyłane dobrowolnie z Ustawień)."
+      "body": "Nie sprzedajemy, nie wynajmujemy ani nie udostępniamy danych osobowych stronom trzecim w celach komercyjnych lub reklamowych. Przesyłane dane ograniczają się do: Google i RevenueCat (subskrypcje), Mixpanel (anonimowa analityka, UE), Formspree (opinie użytkowników przesyłane dobrowolnie z Ustawień)."
     },
     {
       "id": "9",

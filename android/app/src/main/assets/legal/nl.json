@@ -8,17 +8,17 @@
     {
       "id": "2",
       "title": "2. Beschrijving van de dienst",
-      "body": "Sophia is een educatieve mobiele app voor algemene kennis die cursussen, quizzen en interactieve inhoud biedt. De app is beschikbaar op iOS en biedt mogelijk zowel gratis inhoud als premiumabonnementen."
+      "body": "Sophia is een educatieve mobiele app voor algemene kennis die cursussen, quizzen en interactieve inhoud biedt. De app is beschikbaar op Android en biedt mogelijk zowel gratis inhoud als premiumabonnementen."
     },
     {
       "id": "3",
       "title": "3. Account en gebruik",
-      "body": "Er wordt aangeboden een account aan te maken (via Apple of Google) om uw voortgang op te slaan en deze op uw apparaten te synchroniseren. Nieuwe gebruikers loggen in tijdens onboarding; bestaande gebruikers kunnen op elk moment een account aanmaken via Instellingen. Zonder account worden uw voortgangsgegevens lokaal op uw apparaat opgeslagen en het opnieuw installeren van de app kan tot verlies leiden. U kunt uw account op elk gewenst moment verwijderen via Instellingen."
+      "body": "Er wordt aangeboden een account aan te maken (via Google) om uw voortgang op te slaan en deze op uw apparaten te synchroniseren. Nieuwe gebruikers loggen in tijdens onboarding; bestaande gebruikers kunnen op elk moment een account aanmaken via Instellingen. Zonder account worden uw voortgangsgegevens lokaal op uw apparaat opgeslagen en het opnieuw installeren van de app kan tot verlies leiden. U kunt uw account op elk gewenst moment verwijderen via Instellingen."
     },
     {
       "id": "4",
       "title": "4. Abonnementen en aankopen",
-      "body": "Sophia biedt premiumabonnementen (maandelijks en jaarlijks) aan via de Play Store van Apple. Prijzen worden weergegeven in de App en kunnen per land verschillen. De betaling wordt bij aankoopbevestiging in rekening gebracht op uw Google account-account. Abonnementen worden automatisch verlengd, tenzij automatisch verlengen ten minste 24 uur vóór het einde van de huidige periode is uitgeschakeld. U kunt abonnementen beheren en opzeggen in uw Play Store-accountinstellingen."
+      "body": "Sophia biedt premiumabonnementen (maandelijks en jaarlijks) aan via de Google Play Store. Prijzen worden weergegeven in de App en kunnen per land verschillen. De betaling wordt bij aankoopbevestiging in rekening gebracht op uw Google account-account. Abonnementen worden automatisch verlengd, tenzij automatisch verlengen ten minste 24 uur vóór het einde van de huidige periode is uitgeschakeld. U kunt abonnementen beheren en opzeggen in uw Play Store-accountinstellingen."
     },
     {
       "id": "5",
@@ -65,7 +65,7 @@
     {
       "id": "3",
       "title": "3. Abonnementsgegevens",
-      "body": "Als u zich abonneert op een premium abonnement, wordt de transactie volledig door Apple afgehandeld via de Play Store. Wij hebben geen toegang tot uw betalingsgegevens (kaartnummer, factuuradres). We ontvangen alleen een bevestiging van uw abonnementsstatus via RevenueCat, onze abonnementsbeheerpartner."
+      "body": "Als u zich abonneert op een premium abonnement, wordt de transactie volledig door Google afgehandeld via de Play Store. Wij hebben geen toegang tot uw betalingsgegevens (kaartnummer, factuuradres). We ontvangen alleen een bevestiging van uw abonnementsstatus via RevenueCat, onze abonnementsbeheerpartner."
     },
     {
       "id": "4",
@@ -80,17 +80,17 @@
     {
       "id": "6",
       "title": "6. Google Play / Android analytics",
-      "body": "De App kan ook profiteren van anonieme statistieken van Apple (Play Console analytics). Deze gegevens worden samengevoegd en kunnen niet worden gebruikt om u persoonlijk te identificeren. U kunt het delen van analyses uitschakelen in uw Android device-instellingen (Instellingen > Privacy > Analyses en verbeteringen)."
+      "body": "De App kan ook profiteren van anonieme statistieken van Google (Play Console analytics). Deze gegevens worden samengevoegd en kunnen niet worden gebruikt om u persoonlijk te identificeren. U kunt het delen van analyses uitschakelen in uw Android device-instellingen (Instellingen > Privacy > Analyses en verbeteringen)."
     },
     {
       "id": "7",
       "title": "7. Gegevensopslag",
-      "body": "Uw voortgangsgegevens worden lokaal op uw apparaat opgeslagen (UserDefaults). Als u een account aanmaakt (Apple of Google), wordt er ook een veilige back-up van gemaakt op onze Supabase-servers (gehost in de Europese Unie) om synchronisatie op al uw apparaten mogelijk te maken. Als u de app verwijdert, worden de lokale gegevens verwijderd; Als u uw account verwijdert, worden de bijbehorende gegevens op de server permanent verwijderd."
+      "body": "Uw voortgangsgegevens worden lokaal op uw apparaat opgeslagen (local app storage). Als u een account aanmaakt (Google), wordt er ook een veilige back-up van gemaakt op onze Supabase-servers (gehost in de Europese Unie) om synchronisatie op al uw apparaten mogelijk te maken. Als u de app verwijdert, worden de lokale gegevens verwijderd; Als u uw account verwijdert, worden de bijbehorende gegevens op de server permanent verwijderd."
     },
     {
       "id": "8",
       "title": "8. Gegevens delen",
-      "body": "Wij verkopen, verhuren of delen geen persoonlijke gegevens met derden voor commerciële of reclamedoeleinden. De verzonden gegevens zijn beperkt tot: Apple en RevenueCat (abonnementen), Mixpanel (anonieme analyses, EU), Formspree (gebruikersfeedback vrijwillig verzonden vanuit Instellingen)."
+      "body": "Wij verkopen, verhuren of delen geen persoonlijke gegevens met derden voor commerciële of reclamedoeleinden. De verzonden gegevens zijn beperkt tot: Google en RevenueCat (abonnementen), Mixpanel (anonieme analyses, EU), Formspree (gebruikersfeedback vrijwillig verzonden vanuit Instellingen)."
     },
     {
       "id": "9",

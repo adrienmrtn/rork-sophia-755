@@ -8,17 +8,17 @@
     {
       "id": "2",
       "title": "2. Beskrivning av tjänsten",
-      "body": "Sophia är en pedagogisk mobilapp med allmän kunskap som erbjuder kurser, frågesporter och interaktivt innehåll. Appen är tillgänglig på iOS och kan erbjuda gratis innehåll såväl som premiumprenumerationer."
+      "body": "Sophia är en pedagogisk mobilapp med allmän kunskap som erbjuder kurser, frågesporter och interaktivt innehåll. Appen är tillgänglig på Android och kan erbjuda gratis innehåll såväl som premiumprenumerationer."
     },
     {
       "id": "3",
       "title": "3. Konto och användning",
-      "body": "Att skapa ett konto (via Apple eller Google) erbjuds för att spara dina framsteg och synkronisera dem mellan dina enheter. Nya användare loggar in under onboarding; befintliga användare kan skapa ett konto när som helst från Inställningar. Utan ett konto lagras dina förloppsdata lokalt på din enhet och ominstallation av appen kan leda till att den går förlorad. Du kan ta bort ditt konto när som helst från Inställningar."
+      "body": "Att skapa ett konto (via Google) erbjuds för att spara dina framsteg och synkronisera dem mellan dina enheter. Nya användare loggar in under onboarding; befintliga användare kan skapa ett konto när som helst från Inställningar. Utan ett konto lagras dina förloppsdata lokalt på din enhet och ominstallation av appen kan leda till att den går förlorad. Du kan ta bort ditt konto när som helst från Inställningar."
     },
     {
       "id": "4",
       "title": "4. Prenumerationer och köp",
-      "body": "Sophia erbjuder premiumprenumerationer (månadsvis och årligen) via Apples Play Store. Priserna visas i appen och kan variera beroende på land. Betalningen debiteras ditt Google account-konto vid köpbekräftelse. Prenumerationer förnyas automatiskt om inte automatisk förnyelse stängs av minst 24 timmar före slutet av den aktuella perioden. Du kan hantera och avbryta prenumerationer i dina kontoinställningar för Play Store."
+      "body": "Sophia erbjuder premiumprenumerationer (månadsvis och årligen) via Google Play Store. Priserna visas i appen och kan variera beroende på land. Betalningen debiteras ditt Google account-konto vid köpbekräftelse. Prenumerationer förnyas automatiskt om inte automatisk förnyelse stängs av minst 24 timmar före slutet av den aktuella perioden. Du kan hantera och avbryta prenumerationer i dina kontoinställningar för Play Store."
     },
     {
       "id": "5",
@@ -65,7 +65,7 @@
     {
       "id": "3",
       "title": "3. Prenumerationsdata",
-      "body": "Om du prenumererar på en premiumplan hanteras transaktionen helt av Apple via Play Store. Vi har inte tillgång till din betalningsinformation (kortnummer, faktureringsadress). Vi får endast bekräftelse på din prenumerationsstatus via RevenueCat, vår prenumerationshanteringspartner."
+      "body": "Om du prenumererar på en premiumplan hanteras transaktionen helt av Google via Play Store. Vi har inte tillgång till din betalningsinformation (kortnummer, faktureringsadress). Vi får endast bekräftelse på din prenumerationsstatus via RevenueCat, vår prenumerationshanteringspartner."
     },
     {
       "id": "4",
@@ -80,17 +80,17 @@
     {
       "id": "6",
       "title": "6. Google Play / Android analytics",
-      "body": "Appen kan också dra nytta av anonym statistik från Apple (Play Console analytics). Denna data är aggregerad och kan inte användas för att identifiera dig personligen. Du kan inaktivera analysdelning i dina Android device-inställningar (Inställningar > Sekretess > Analys och förbättringar)."
+      "body": "Appen kan också dra nytta av anonym statistik från Google (Play Console analytics). Denna data är aggregerad och kan inte användas för att identifiera dig personligen. Du kan inaktivera analysdelning i dina Android device-inställningar (Inställningar > Sekretess > Analys och förbättringar)."
     },
     {
       "id": "7",
       "title": "7. Datalagring",
-      "body": "Dina förloppsdata lagras lokalt på din enhet (UserDefaults). Om du skapar ett konto (Apple eller Google) säkerhetskopieras det också säkert till våra Supabase-servrar (värd i EU) för att möjliggöra synkronisering mellan dina enheter. Om du avinstallerar appen raderas lokal data; radering av ditt konto tar permanent bort tillhörande data på servern."
+      "body": "Dina förloppsdata lagras lokalt på din enhet (local app storage). Om du skapar ett konto (Google) säkerhetskopieras det också säkert till våra Supabase-servrar (värd i EU) för att möjliggöra synkronisering mellan dina enheter. Om du avinstallerar appen raderas lokal data; radering av ditt konto tar permanent bort tillhörande data på servern."
     },
     {
       "id": "8",
       "title": "8. Datadelning",
-      "body": "Vi säljer, hyr ut eller delar inte personuppgifter med tredje part för kommersiella eller reklamändamål. Data som överförs är begränsade till: Apple och RevenueCat (prenumerationer), Mixpanel (anonym analys, EU), Formspree (användarfeedback skickas frivilligt från Inställningar)."
+      "body": "Vi säljer, hyr ut eller delar inte personuppgifter med tredje part för kommersiella eller reklamändamål. Data som överförs är begränsade till: Google och RevenueCat (prenumerationer), Mixpanel (anonym analys, EU), Formspree (användarfeedback skickas frivilligt från Inställningar)."
     },
     {
       "id": "9",

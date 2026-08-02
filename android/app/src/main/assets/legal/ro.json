@@ -8,17 +8,17 @@
     {
       "id": "2",
       "title": "2. Descrierea serviciului",
-      "body": "Sophia este o aplicație mobilă educațională de cunoștințe generale care oferă cursuri, chestionare și conținut interactiv. Aplicația este disponibilă pe iOS și poate oferi conținut gratuit, precum și abonamente premium."
+      "body": "Sophia este o aplicație mobilă educațională de cunoștințe generale care oferă cursuri, chestionare și conținut interactiv. Aplicația este disponibilă pe Android și poate oferi conținut gratuit, precum și abonamente premium."
     },
     {
       "id": "3",
       "title": "3. Cont și utilizare",
-      "body": "Crearea unui cont (prin Apple sau Google) este oferită pentru a vă salva progresul și a-l sincroniza pe dispozitivele dvs. Utilizatorii noi se conectează în timpul integrării; utilizatorii existenți își pot crea un cont în orice moment din Setări. Fără un cont, datele dvs. de progres sunt stocate local pe dispozitivul dvs., iar reinstalarea aplicației poate duce la pierderea acesteia. Vă puteți șterge contul oricând din Setări."
+      "body": "Crearea unui cont (prin Google) este oferită pentru a vă salva progresul și a-l sincroniza pe dispozitivele dvs. Utilizatorii noi se conectează în timpul integrării; utilizatorii existenți își pot crea un cont în orice moment din Setări. Fără un cont, datele dvs. de progres sunt stocate local pe dispozitivul dvs., iar reinstalarea aplicației poate duce la pierderea acesteia. Vă puteți șterge contul oricând din Setări."
     },
     {
       "id": "4",
       "title": "4. Abonamente și achiziții",
-      "body": "Sophia oferă abonamente premium (lunare și anuale) prin Play Store Apple. Prețurile sunt afișate în aplicație și pot varia în funcție de țară. Plata este debitată în contul dvs. Google account la confirmarea achiziției. Abonamentele se reînnoiesc automat, cu excepția cazului în care reînnoirea automată este dezactivată cu cel puțin 24 de ore înainte de sfârșitul perioadei curente. Puteți gestiona și anula abonamentele din setările contului dvs. Play Store."
+      "body": "Sophia oferă abonamente premium (lunare și anuale) prin Google Play Store. Prețurile sunt afișate în aplicație și pot varia în funcție de țară. Plata este debitată în contul dvs. Google account la confirmarea achiziției. Abonamentele se reînnoiesc automat, cu excepția cazului în care reînnoirea automată este dezactivată cu cel puțin 24 de ore înainte de sfârșitul perioadei curente. Puteți gestiona și anula abonamentele din setările contului dvs. Play Store."
     },
     {
       "id": "5",
@@ -65,7 +65,7 @@
     {
       "id": "3",
       "title": "3. Datele abonamentului",
-      "body": "Dacă vă abonați la un plan premium, tranzacția este gestionată în întregime de Apple prin Play Store. Nu avem acces la informațiile dvs. de plată (numărul cardului, adresa de facturare). Primim doar confirmarea stării dvs. de abonament prin RevenueCat, partenerul nostru de gestionare a abonamentului."
+      "body": "Dacă vă abonați la un plan premium, tranzacția este gestionată în întregime de Google prin Play Store. Nu avem acces la informațiile dvs. de plată (numărul cardului, adresa de facturare). Primim doar confirmarea stării dvs. de abonament prin RevenueCat, partenerul nostru de gestionare a abonamentului."
     },
     {
       "id": "4",
@@ -80,17 +80,17 @@
     {
       "id": "6",
       "title": "6. Google Play / Android analytics",
-      "body": "Aplicația poate beneficia și de statistici anonime furnizate de Apple (Play Console analytics). Aceste date sunt agregate și nu pot fi folosite pentru a vă identifica personal. Puteți dezactiva partajarea analizelor în setările Android device (Setări > Confidențialitate > Analize și îmbunătățiri)."
+      "body": "Aplicația poate beneficia și de statistici anonime furnizate de Google (Play Console analytics). Aceste date sunt agregate și nu pot fi folosite pentru a vă identifica personal. Puteți dezactiva partajarea analizelor în setările Android device (Setări > Confidențialitate > Analize și îmbunătățiri)."
     },
     {
       "id": "7",
       "title": "7. Stocarea datelor",
-      "body": "Datele dvs. de progres sunt stocate local pe dispozitivul dvs. (UserDefaults). Dacă creați un cont (Apple sau Google), acesta este, de asemenea, salvat în siguranță pe serverele noastre Supabase (găzduite în Uniunea Europeană) pentru a permite sincronizarea pe dispozitivele dvs. Dezinstalarea aplicației șterge datele locale; ștergerea contului dvs. elimină definitiv datele asociate de pe server."
+      "body": "Datele dvs. de progres sunt stocate local pe dispozitivul dvs. (local app storage). Dacă creați un cont (Google), acesta este, de asemenea, salvat în siguranță pe serverele noastre Supabase (găzduite în Uniunea Europeană) pentru a permite sincronizarea pe dispozitivele dvs. Dezinstalarea aplicației șterge datele locale; ștergerea contului dvs. elimină definitiv datele asociate de pe server."
     },
     {
       "id": "8",
       "title": "8. Partajarea datelor",
-      "body": "Nu vindem, închiriem și nu partajăm date cu caracter personal cu terți în scopuri comerciale sau publicitare. Datele transmise sunt limitate la: Apple și RevenueCat (abonamente), Mixpanel (analitice anonime, UE), Formspree (feedback-ul utilizatorului trimis voluntar din Setări)."
+      "body": "Nu vindem, închiriem și nu partajăm date cu caracter personal cu terți în scopuri comerciale sau publicitare. Datele transmise sunt limitate la: Google și RevenueCat (abonamente), Mixpanel (analitice anonime, UE), Formspree (feedback-ul utilizatorului trimis voluntar din Setări)."
     },
     {
       "id": "9",

@@ -65,7 +65,7 @@
     {
       "id": "3",
       "title": "3. Subscription data",
-      "body": "If you subscribe to a premium plan, the transaction is handled entirely by Apple via the Play Store. We do not have access to your payment information (card number, billing address). We only receive confirmation of your subscription status via RevenueCat, our subscription management partner."
+      "body": "If you subscribe to a premium plan, the transaction is handled entirely by Google via the Play Store. We do not have access to your payment information (card number, billing address). We only receive confirmation of your subscription status via RevenueCat, our subscription management partner."
     },
     {
       "id": "4",
@@ -80,17 +80,17 @@
     {
       "id": "6",
       "title": "6. Google Play / Android analytics",
-      "body": "The App may also benefit from anonymous statistics provided by Apple (Play Console analytics). This data is aggregated and cannot be used to identify you personally. You can disable analytics sharing in your Android device settings (Google > Manage your Google Account > Data & privacy)."
+      "body": "The App may also benefit from anonymous statistics provided by Google (Play Console analytics). This data is aggregated and cannot be used to identify you personally. You can disable analytics sharing in your Android device settings (Google > Manage your Google Account > Data & privacy)."
     },
     {
       "id": "7",
       "title": "7. Data storage",
-      "body": "Your progress data is stored locally on your device (UserDefaults). If you create an account (Google), it is also securely backed up to our Supabase servers (hosted in the European Union) to enable syncing across your devices. Uninstalling the App deletes the local data; deleting your account permanently removes the associated data on the server."
+      "body": "Your progress data is stored locally on your device (local app storage). If you create an account (Google), it is also securely backed up to our Supabase servers (hosted in the European Union) to enable syncing across your devices. Uninstalling the App deletes the local data; deleting your account permanently removes the associated data on the server."
     },
     {
       "id": "8",
       "title": "8. Data sharing",
-      "body": "We do not sell, rent, or share personal data with third parties for commercial or advertising purposes. Data transmitted is limited to: Apple and RevenueCat (subscriptions), Mixpanel (anonymous analytics, EU), Formspree (user feedback voluntarily sent from Settings)."
+      "body": "We do not sell, rent, or share personal data with third parties for commercial or advertising purposes. Data transmitted is limited to: Google and RevenueCat (subscriptions), Mixpanel (anonymous analytics, EU), Formspree (user feedback voluntarily sent from Settings)."
     },
     {
       "id": "9",

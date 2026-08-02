@@ -8,17 +8,17 @@
     {
       "id": "2",
       "title": "2. Descrição do serviço",
-      "body": "A Sophia é uma aplicação móvel educativa de cultura geral que oferece cursos, questionários e conteúdos interativos. A Aplicação está disponível em iOS e pode oferecer conteúdos gratuitos, bem como subscrições premium."
+      "body": "A Sophia é uma aplicação móvel educativa de cultura geral que oferece cursos, questionários e conteúdos interativos. A Aplicação está disponível em Android e pode oferecer conteúdos gratuitos, bem como subscrições premium."
     },
     {
       "id": "3",
       "title": "3. Conta e utilização",
-      "body": "A criação de uma conta (através da Apple ou Google) é proposta para guardar o teu progresso e sincronizá-lo entre os teus dispositivos. Os novos utilizadores iniciam sessão durante a integração; os utilizadores existentes podem criar uma conta a qualquer momento nas definições. Sem conta, os teus dados de progresso são armazenados localmente no teu dispositivo e reinstalar a Aplicação pode resultar na sua perda. Podes eliminar a tua conta a qualquer momento nas definições."
+      "body": "A criação de uma conta (através da Google) é proposta para guardar o teu progresso e sincronizá-lo entre os teus dispositivos. Os novos utilizadores iniciam sessão durante a integração; os utilizadores existentes podem criar uma conta a qualquer momento nas definições. Sem conta, os teus dados de progresso são armazenados localmente no teu dispositivo e reinstalar a Aplicação pode resultar na sua perda. Podes eliminar a tua conta a qualquer momento nas definições."
     },
     {
       "id": "4",
       "title": "4. Subscrições e compras",
-      "body": "A Sophia oferece subscrições premium (mensal e anual) através da Play Store da Apple. Os preços são apresentados na Aplicação e podem variar consoante o teu país. O pagamento é cobrado na tua conta Google account após a confirmação da compra. A subscrição renova-se automaticamente, exceto se a renovação automática for desativada pelo menos 24 horas antes do fim do período em curso. Podes gerir e cancelar as tuas subscrições nas definições da tua conta da Play Store."
+      "body": "A Sophia oferece subscrições premium (mensal e anual) através da Play Store da Google. Os preços são apresentados na Aplicação e podem variar consoante o teu país. O pagamento é cobrado na tua conta Google account após a confirmação da compra. A subscrição renova-se automaticamente, exceto se a renovação automática for desativada pelo menos 24 horas antes do fim do período em curso. Podes gerir e cancelar as tuas subscrições nas definições da tua conta da Play Store."
     },
     {
       "id": "5",
@@ -65,7 +65,7 @@
     {
       "id": "3",
       "title": "3. Dados de subscrição",
-      "body": "Se subscreveres um plano premium, a transação é gerida integralmente pela Apple através da Play Store. Não temos acesso às tuas informações de pagamento (número do cartão, morada de faturação). Recebemos apenas a confirmação do teu estado de subscrição através do RevenueCat, o nosso parceiro de gestão de subscrições."
+      "body": "Se subscreveres um plano premium, a transação é gerida integralmente pela Google através da Play Store. Não temos acesso às tuas informações de pagamento (número do cartão, morada de faturação). Recebemos apenas a confirmação do teu estado de subscrição através do RevenueCat, o nosso parceiro de gestão de subscrições."
     },
     {
       "id": "4",
@@ -80,17 +80,17 @@
     {
       "id": "6",
       "title": "6. Dados do Google Play / Android analytics",
-      "body": "A Aplicação pode também beneficiar de estatísticas anónimas fornecidas pela Apple (Play Console analytics). Estes dados são agregados e não permitem identificar-te pessoalmente. Podes desativar a partilha de dados analíticos nas definições do teu Android device (Definições > Privacidade > Análise e melhorias)."
+      "body": "A Aplicação pode também beneficiar de estatísticas anónimas fornecidas pela Google (Play Console analytics). Estes dados são agregados e não permitem identificar-te pessoalmente. Podes desativar a partilha de dados analíticos nas definições do teu Android device (Definições > Privacidade > Análise e melhorias)."
     },
     {
       "id": "7",
       "title": "7. Armazenamento de dados",
-      "body": "Todos os teus dados de progresso são armazenados localmente no teu dispositivo através do UserDefaults. Não são guardados na cloud. Desinstalar a Aplicação elimina definitivamente estes dados."
+      "body": "Todos os teus dados de progresso são armazenados localmente no teu dispositivo através do local app storage. Não são guardados na cloud. Desinstalar a Aplicação elimina definitivamente estes dados."
     },
     {
       "id": "8",
       "title": "8. Partilha de dados",
-      "body": "Não vendemos, alugamos nem partilhamos quaisquer dados pessoais com terceiros para fins comerciais ou publicitários. Os dados transmitidos limitam-se a: Apple e RevenueCat (subscrições), Mixpanel (análise anónima, UE), Formspree (comentários de utilizadores enviados voluntariamente a partir das definições)."
+      "body": "Não vendemos, alugamos nem partilhamos quaisquer dados pessoais com terceiros para fins comerciais ou publicitários. Os dados transmitidos limitam-se a: Google e RevenueCat (subscrições), Mixpanel (análise anónima, UE), Formspree (comentários de utilizadores enviados voluntariamente a partir das definições)."
     },
     {
       "id": "9",

@@ -48,7 +48,7 @@ REVENUECAT_SECRET_API_KEY=sk_... python3 scripts/configure_revenuecat_offering.p
 
 - [ ] App language picker → Terms / Privacy show that language (not English)
 - [ ] French Terms / Privacy unchanged
-- [ ] `PYTHONPATH=scripts python3 scripts/translate_legal_docs.py qa --lang all` → PASS
+- [ ] `python3 scripts/qa_android_phase_e.py` → PASS (Android Phase E gate; also covers Play legal lint)
 - [ ] ASC listing fields reviewed by a native speaker before release
 - [ ] RC product titles visible for the 9 store locales
 - [ ] Sandbox purchase still works (étape 8)
@@ -75,6 +75,7 @@ In-app legal documents for Android live under `android/app/src/main/assets/legal
 
 ## Play QA checklist
 
+- [ ] `python3 scripts/qa_android_phase_e.py` → PASS
 - [ ] Profile → Terms / Privacy show the selected language
 - [ ] Paywall legal row: Restore · Terms · Privacy
 - [ ] Login legal note tappable

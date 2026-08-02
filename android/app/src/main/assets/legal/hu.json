@@ -8,17 +8,17 @@
     {
       "id": "2",
       "title": "2. A szolgáltatás leírása",
-      "body": "A Sophia egy általános tudású, oktatási mobilalkalmazás, amely tanfolyamokat, vetélkedőket és interaktív tartalmakat kínál. Az alkalmazás iOS-en érhető el, és ingyenes tartalmakat, valamint prémium előfizetéseket kínálhat."
+      "body": "A Sophia egy általános tudású, oktatási mobilalkalmazás, amely tanfolyamokat, vetélkedőket és interaktív tartalmakat kínál. Az alkalmazás Android-en érhető el, és ingyenes tartalmakat, valamint prémium előfizetéseket kínálhat."
     },
     {
       "id": "3",
       "title": "3. Számla és használat",
-      "body": "Fiók létrehozása (az Apple-n vagy a Google-on keresztül) a folyamat mentéséhez és az eszközök közötti szinkronizáláshoz kínálja fel. Új felhasználók bejelentkeznek a belépés során; A meglévő felhasználók bármikor létrehozhatnak fiókot a Beállításokban. Fiók nélkül az előrehaladás adatai helyileg az eszközön tárolódnak, és az alkalmazás újratelepítése az elvesztéshez vezethet. Fiókját bármikor törölheti a Beállításokban."
+      "body": "Fiók létrehozása (a Google-on keresztül) a folyamat mentéséhez és az eszközök közötti szinkronizáláshoz kínálja fel. Új felhasználók bejelentkeznek a belépés során; A meglévő felhasználók bármikor létrehozhatnak fiókot a Beállításokban. Fiók nélkül az előrehaladás adatai helyileg az eszközön tárolódnak, és az alkalmazás újratelepítése az elvesztéshez vezethet. Fiókját bármikor törölheti a Beállításokban."
     },
     {
       "id": "4",
       "title": "4. Előfizetések és vásárlások",
-      "body": "A Sophia prémium előfizetéseket kínál (havi és éves) az Apple Play Store-on keresztül. Az árak az alkalmazásban jelennek meg, és országonként változhatnak. A fizetés az Google account-fiókját terheli a vásárlás megerősítésekor. Az előfizetések automatikusan megújulnak, hacsak az automatikus megújítást nem kapcsolják ki legalább 24 órával az aktuális időszak vége előtt. Az előfizetéseket az Play Store-fiók beállításaiban kezelheti és lemondhatja."
+      "body": "A Sophia prémium előfizetéseket kínál (havi és éves) az Google Play Store-on keresztül. Az árak az alkalmazásban jelennek meg, és országonként változhatnak. A fizetés az Google account-fiókját terheli a vásárlás megerősítésekor. Az előfizetések automatikusan megújulnak, hacsak az automatikus megújítást nem kapcsolják ki legalább 24 órával az aktuális időszak vége előtt. Az előfizetéseket az Play Store-fiók beállításaiban kezelheti és lemondhatja."
     },
     {
       "id": "5",
@@ -65,7 +65,7 @@
     {
       "id": "3",
       "title": "3. Előfizetési adatok",
-      "body": "Ha prémium csomagra fizet elő, a tranzakciót teljes egészében az Apple bonyolítja le az Play Store-on keresztül. Nem férünk hozzá fizetési adataihoz (kártyaszám, számlázási cím). Az előfizetés állapotáról csak a RevenueCat-en, az előfizetéskezelő partnerünkön keresztül kapunk visszaigazolást."
+      "body": "Ha prémium csomagra fizet elő, a tranzakciót teljes egészében a Google bonyolítja le a Play Store-on keresztül. Nem férünk hozzá fizetési adataihoz (kártyaszám, számlázási cím). Az előfizetés állapotáról csak a RevenueCat-en, az előfizetéskezelő partnerünkön keresztül kapunk visszaigazolást."
     },
     {
       "id": "4",
@@ -80,17 +80,17 @@
     {
       "id": "6",
       "title": "6. Google Play / Android analytics",
-      "body": "Az Alkalmazás az Apple által biztosított anonim statisztikákból is profitálhat (Play Console analytics). Ezek az adatok összesítettek, és nem használhatók fel az Ön személyes azonosítására. Az analitikai megosztást az Android device beállításaiban (Beállítások > Adatvédelem > Elemzés és fejlesztések) kapcsolhatja ki."
+      "body": "Az Alkalmazás a Google által biztosított anonim statisztikákból is profitálhat (Play Console analytics). Ezek az adatok összesítettek, és nem használhatók fel az Ön személyes azonosítására. Az analitikai megosztást az Android device beállításaiban (Beállítások > Adatvédelem > Elemzés és fejlesztések) kapcsolhatja ki."
     },
     {
       "id": "7",
       "title": "7. Adattárolás",
-      "body": "Az előrehaladás adatait helyileg az eszközön tárolja (UserDefaults). Ha létrehoz egy fiókot (Apple vagy Google), akkor arról biztonságosan biztonsági másolatot készítünk (az Európai Unióban üzemeltetett) Supabase szervereinkre, hogy lehetővé tegye a szinkronizálást az eszközök között. Az alkalmazás eltávolítása törli a helyi adatokat; fiókjának törlésével véglegesen eltávolítja a kapcsolódó adatokat a szerverről."
+      "body": "Az előrehaladás adatait helyileg az eszközön tárolja (local app storage). Ha létrehoz egy fiókot (Google), akkor arról biztonságosan biztonsági másolatot készítünk (az Európai Unióban üzemeltetett) Supabase szervereinkre, hogy lehetővé tegye a szinkronizálást az eszközök között. Az alkalmazás eltávolítása törli a helyi adatokat; fiókjának törlésével véglegesen eltávolítja a kapcsolódó adatokat a szerverről."
     },
     {
       "id": "8",
       "title": "8. Adatmegosztás",
-      "body": "Személyes adatokat nem adunk el, bérelünk és nem osztunk meg harmadik felekkel kereskedelmi vagy reklámcélokból. A továbbított adatok a következőkre korlátozódnak: Apple és RevenueCat (előfizetések), Mixpanel (névtelen analitika, EU), Formspree (a Beállításokból önkéntesen küldött felhasználói visszajelzés)."
+      "body": "Személyes adatokat nem adunk el, bérelünk és nem osztunk meg harmadik felekkel kereskedelmi vagy reklámcélokból. A továbbított adatok a következőkre korlátozódnak: Google és RevenueCat (előfizetések), Mixpanel (névtelen analitika, EU), Formspree (a Beállításokból önkéntesen küldött felhasználói visszajelzés)."
     },
     {
       "id": "9",

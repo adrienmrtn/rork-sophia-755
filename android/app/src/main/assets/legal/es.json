@@ -8,17 +8,17 @@
     {
       "id": "2",
       "title": "2. Descripción del servicio",
-      "body": "Sophia es una aplicación móvil educativa de cultura general que ofrece cursos, cuestionarios y contenidos interactivos. La Aplicación está disponible en iOS y puede ofrecer contenidos gratuitos, así como suscripciones premium."
+      "body": "Sophia es una aplicación móvil educativa de cultura general que ofrece cursos, cuestionarios y contenidos interactivos. La Aplicación está disponible en Android y puede ofrecer contenidos gratuitos, así como suscripciones premium."
     },
     {
       "id": "3",
       "title": "3. Cuenta y uso",
-      "body": "Se ofrece la creación de una cuenta (mediante Apple o Google) para guardar tu progreso y sincronizarlo entre tus dispositivos. Los nuevos usuarios inician sesión durante la incorporación; los usuarios existentes pueden crear una cuenta en cualquier momento desde los ajustes. Sin cuenta, tus datos de progreso se almacenan localmente en tu dispositivo y reinstalar la Aplicación puede provocar su pérdida. Puedes eliminar tu cuenta en cualquier momento desde los ajustes."
+      "body": "Se ofrece la creación de una cuenta (mediante Google) para guardar tu progreso y sincronizarlo entre tus dispositivos. Los nuevos usuarios inician sesión durante la incorporación; los usuarios existentes pueden crear una cuenta en cualquier momento desde los ajustes. Sin cuenta, tus datos de progreso se almacenan localmente en tu dispositivo y reinstalar la Aplicación puede provocar su pérdida. Puedes eliminar tu cuenta en cualquier momento desde los ajustes."
     },
     {
       "id": "4",
       "title": "4. Suscripciones y compras",
-      "body": "Sophia ofrece suscripciones premium (mensual y anual) a través de la Play Store de Apple. Los precios se muestran en la Aplicación y pueden variar según tu país. El pago se cargará a tu cuenta de Google account al confirmar la compra. La suscripción se renueva automáticamente, salvo que la renovación automática se desactive al menos 24 horas antes del final del periodo en curso. Puedes gestionar y cancelar tus suscripciones en los ajustes de tu cuenta de la Play Store."
+      "body": "Sophia ofrece suscripciones premium (mensual y anual) a través de la Google Play Store. Los precios se muestran en la Aplicación y pueden variar según tu país. El pago se cargará a tu cuenta de Google account al confirmar la compra. La suscripción se renueva automáticamente, salvo que la renovación automática se desactive al menos 24 horas antes del final del periodo en curso. Puedes gestionar y cancelar tus suscripciones en los ajustes de tu cuenta de la Play Store."
     },
     {
       "id": "5",
@@ -65,7 +65,7 @@
     {
       "id": "3",
       "title": "3. Datos de suscripción",
-      "body": "Si contratas una suscripción premium, la transacción es gestionada íntegramente por Apple a través de la Play Store. No tenemos acceso a tu información de pago (número de tarjeta, dirección de facturación). Solo recibimos la confirmación de tu estado de suscripción a través de RevenueCat, nuestro socio de gestión de suscripciones."
+      "body": "Si contratas una suscripción premium, la transacción es gestionada íntegramente por Google a través de la Play Store. No tenemos acceso a tu información de pago (número de tarjeta, dirección de facturación). Solo recibimos la confirmación de tu estado de suscripción a través de RevenueCat, nuestro socio de gestión de suscripciones."
     },
     {
       "id": "4",
@@ -80,17 +80,17 @@
     {
       "id": "6",
       "title": "6. Datos de Google Play / Android analytics",
-      "body": "La Aplicación también puede beneficiarse de las estadísticas anónimas proporcionadas por Apple (Play Console analytics). Estos datos son agregados y no permiten identificarte personalmente. Puedes desactivar el uso compartido de datos analíticos en los ajustes de tu Android device (Ajustes > Privacidad > Análisis y mejoras)."
+      "body": "La Aplicación también puede beneficiarse de las estadísticas anónimas proporcionadas por Google (Play Console analytics). Estos datos son agregados y no permiten identificarte personalmente. Puedes desactivar el uso compartido de datos analíticos en los ajustes de tu dispositivo Android (Ajustes > Privacidad > Análisis y mejoras)."
     },
     {
       "id": "7",
       "title": "7. Almacenamiento de datos",
-      "body": "Todos tus datos de progreso se almacenan localmente en tu dispositivo mediante UserDefaults. No se guardan en la nube. Desinstalar la Aplicación elimina de forma definitiva estos datos."
+      "body": "Todos tus datos de progreso se almacenan localmente en tu dispositivo mediante local app storage. No se guardan en la nube. Desinstalar la Aplicación elimina de forma definitiva estos datos."
     },
     {
       "id": "8",
       "title": "8. Compartición de datos",
-      "body": "No vendemos, alquilamos ni compartimos ningún dato personal con terceros con fines comerciales o publicitarios. Los datos transmitidos se limitan a: Apple y RevenueCat (suscripciones), Mixpanel (analítica anónima, UE), Formspree (comentarios de usuarios enviados voluntariamente desde los ajustes)."
+      "body": "No vendemos, alquilamos ni compartimos ningún dato personal con terceros con fines comerciales o publicitarios. Los datos transmitidos se limitan a: Google y RevenueCat (suscripciones), Mixpanel (analítica anónima, UE), Formspree (comentarios de usuarios enviados voluntariamente desde los ajustes)."
     },
     {
       "id": "9",

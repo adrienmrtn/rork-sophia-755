@@ -65,7 +65,7 @@
     {
       "id": "3",
       "title": "3. Données d'abonnement",
-      "body": "Si vous souscrivez à un abonnement premium, la transaction est gérée entièrement par Apple via le Play Store. Nous n'avons pas accès à vos informations de paiement (numéro de carte, adresse de facturation). Nous recevons uniquement la confirmation de votre statut d'abonnement via RevenueCat, notre partenaire de gestion des abonnements."
+      "body": "Si vous souscrivez à un abonnement premium, la transaction est gérée entièrement par Google via le Play Store. Nous n'avons pas accès à vos informations de paiement (numéro de carte, adresse de facturation). Nous recevons uniquement la confirmation de votre statut d'abonnement via RevenueCat, notre partenaire de gestion des abonnements."
     },
     {
       "id": "4",
@@ -80,17 +80,17 @@
     {
       "id": "6",
       "title": "6. Données Google Play / Android analytics",
-      "body": "L'Application peut également bénéficier des statistiques anonymes fournies par Apple (Play Console analytics). Ces données sont agrégées et ne permettent pas de vous identifier personnellement. Vous pouvez désactiver le partage d'analytics dans les réglages de votre appareil Android (Google > Gérer votre compte Google > Données et confidentialité)."
+      "body": "L'Application peut également bénéficier des statistiques anonymes fournies par Google (Play Console analytics). Ces données sont agrégées et ne permettent pas de vous identifier personnellement. Vous pouvez désactiver le partage d'analytics dans les réglages de votre appareil Android (Google > Gérer votre compte Google > Données et confidentialité)."
     },
     {
       "id": "7",
       "title": "7. Stockage des données",
-      "body": "Vos données de progression sont stockées localement sur votre appareil (UserDefaults). Si vous créez un compte (Google), elles sont également sauvegardées de façon sécurisée sur nos serveurs Supabase (hébergés dans l'Union européenne) afin de permettre la synchronisation entre vos appareils. La désinstallation de l'Application supprime les données locales ; la suppression de votre compte efface définitivement les données associées sur le serveur."
+      "body": "Vos données de progression sont stockées localement sur votre appareil (local app storage). Si vous créez un compte (Google), elles sont également sauvegardées de façon sécurisée sur nos serveurs Supabase (hébergés dans l'Union européenne) afin de permettre la synchronisation entre vos appareils. La désinstallation de l'Application supprime les données locales ; la suppression de votre compte efface définitivement les données associées sur le serveur."
     },
     {
       "id": "8",
       "title": "8. Partage de données",
-      "body": "Nous ne vendons, ne louons et ne partageons aucune donnée personnelle avec des tiers à des fins commerciales ou publicitaires. Les données transmises sont limitées à : Apple et RevenueCat (abonnements), Mixpanel (analytics anonymes, UE), Formspree (retours utilisateurs envoyés volontairement depuis les réglages)."
+      "body": "Nous ne vendons, ne louons et ne partageons aucune donnée personnelle avec des tiers à des fins commerciales ou publicitaires. Les données transmises sont limitées à : Google et RevenueCat (abonnements), Mixpanel (analytics anonymes, UE), Formspree (retours utilisateurs envoyés volontairement depuis les réglages)."
     },
     {
       "id": "9",

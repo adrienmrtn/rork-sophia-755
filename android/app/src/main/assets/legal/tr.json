@@ -8,17 +8,17 @@
     {
       "id": "2",
       "title": "2. Hizmetin açıklaması",
-      "body": "Sophia, kurslar, testler ve etkileşimli içerik sunan eğitici bir genel bilgi mobil uygulamasıdır. Uygulama iOS'ta mevcuttur ve premium aboneliklerin yanı sıra ücretsiz içerik de sunabilir."
+      "body": "Sophia, kurslar, testler ve etkileşimli içerik sunan eğitici bir genel bilgi mobil uygulamasıdır. Uygulama Android'de mevcuttur ve premium aboneliklerin yanı sıra ücretsiz içerik de sunabilir."
     },
     {
       "id": "3",
       "title": "3. Hesap ve kullanım",
-      "body": "İlerlemenizi kaydetmek ve cihazlarınızla senkronize etmek için bir hesap oluşturma (Apple veya Google aracılığıyla) önerilir. Yeni kullanıcılar katılım sırasında oturum açar; mevcut kullanıcılar istedikleri zaman Ayarlar'dan hesap oluşturabilirler. Hesap olmadan ilerleme verileriniz cihazınızda yerel olarak depolanır ve Uygulamanın yeniden yüklenmesi verilerin kaybolmasına neden olabilir. Hesabınızı istediğiniz zaman Ayarlar'dan silebilirsiniz."
+      "body": "İlerlemenizi kaydetmek ve cihazlarınızla senkronize etmek için bir hesap oluşturma (Google aracılığıyla) önerilir. Yeni kullanıcılar katılım sırasında oturum açar; mevcut kullanıcılar istedikleri zaman Ayarlar'dan hesap oluşturabilirler. Hesap olmadan ilerleme verileriniz cihazınızda yerel olarak depolanır ve Uygulamanın yeniden yüklenmesi verilerin kaybolmasına neden olabilir. Hesabınızı istediğiniz zaman Ayarlar'dan silebilirsiniz."
     },
     {
       "id": "4",
       "title": "4. Abonelikler ve satın almalar",
-      "body": "Sophia, Apple Play Store aracılığıyla premium abonelikler (aylık ve yıllık) sunmaktadır. Fiyatlar Uygulamada görüntülenir ve ülkeye göre değişebilir. Ödeme, satın alma onayının ardından Google account hesabınızdan tahsil edilir. Otomatik yenileme, cari dönemin bitiminden en az 24 saat önce kapatılmadığı sürece abonelikler otomatik olarak yenilenir. Abonelikleri Play Store hesap ayarlarınızdan yönetebilir ve iptal edebilirsiniz."
+      "body": "Sophia, Google Play Store aracılığıyla premium abonelikler (aylık ve yıllık) sunmaktadır. Fiyatlar Uygulamada görüntülenir ve ülkeye göre değişebilir. Ödeme, satın alma onayının ardından Google account hesabınızdan tahsil edilir. Otomatik yenileme, cari dönemin bitiminden en az 24 saat önce kapatılmadığı sürece abonelikler otomatik olarak yenilenir. Abonelikleri Play Store hesap ayarlarınızdan yönetebilir ve iptal edebilirsiniz."
     },
     {
       "id": "5",
@@ -65,7 +65,7 @@
     {
       "id": "3",
       "title": "3. Abonelik verileri",
-      "body": "Premium plana abone olursanız işlem tamamen Apple tarafından Play Store aracılığıyla gerçekleştirilir. Ödeme bilgilerinize (kart numarası, fatura adresi) erişimimiz yok. Abonelik durumunuzun onayını yalnızca abonelik yönetimi ortağımız RevenueCat aracılığıyla alırız."
+      "body": "Premium plana abone olursanız işlem tamamen Google tarafından Play Store aracılığıyla gerçekleştirilir. Ödeme bilgilerinize (kart numarası, fatura adresi) erişimimiz yok. Abonelik durumunuzun onayını yalnızca abonelik yönetimi ortağımız RevenueCat aracılığıyla alırız."
     },
     {
       "id": "4",
@@ -79,18 +79,18 @@
     },
     {
       "id": "6",
-      "title": "6.Apple Analitikleri",
-      "body": "Uygulama aynı zamanda Apple tarafından sağlanan anonim istatistiklerden de yararlanabilir (Play Console analytics). Bu veriler toplanır ve sizi kişisel olarak tanımlamak için kullanılamaz. Analiz paylaşımını Android device ayarlarınızda (Ayarlar > Gizlilik > Analizler ve İyileştirmeler) devre dışı bırakabilirsiniz."
+      "title": "6.Google Analitikleri",
+      "body": "Uygulama aynı zamanda Google tarafından sağlanan anonim istatistiklerden de yararlanabilir (Play Console analytics). Bu veriler toplanır ve sizi kişisel olarak tanımlamak için kullanılamaz. Analiz paylaşımını Android cihaz ayarlarınızda (Ayarlar > Gizlilik > Analizler ve İyileştirmeler) devre dışı bırakabilirsiniz."
     },
     {
       "id": "7",
       "title": "7. Veri depolama",
-      "body": "İlerleme verileriniz yerel olarak cihazınızda saklanır (UserDefaults). Bir hesap (Apple veya Google) oluşturursanız, cihazlarınız arasında senkronizasyonu mümkün kılmak için bu hesap aynı zamanda Supabase sunucularımıza (Avrupa Birliği'nde barındırılan) güvenli bir şekilde yedeklenir. Uygulamanın kaldırılması yerel verileri siler; hesabınızı silmek, sunucudaki ilişkili verileri kalıcı olarak kaldırır."
+      "body": "İlerleme verileriniz yerel olarak cihazınızda saklanır (local app storage). Bir hesap (Google) oluşturursanız, cihazlarınız arasında senkronizasyonu mümkün kılmak için bu hesap aynı zamanda Supabase sunucularımıza (Avrupa Birliği'nde barındırılan) güvenli bir şekilde yedeklenir. Uygulamanın kaldırılması yerel verileri siler; hesabınızı silmek, sunucudaki ilişkili verileri kalıcı olarak kaldırır."
     },
     {
       "id": "8",
       "title": "8. Veri paylaşımı",
-      "body": "Kişisel verileri ticari veya reklam amaçlı olarak üçüncü taraflara satmıyor, kiralamıyor veya paylaşmıyoruz. İletilen veriler şunlarla sınırlıdır: Apple ve RevenueCat (abonelikler), Mixpanel (anonim analitik, AB), Formspree (Ayarlardan gönüllü olarak gönderilen kullanıcı geri bildirimi)."
+      "body": "Kişisel verileri ticari veya reklam amaçlı olarak üçüncü taraflara satmıyor, kiralamıyor veya paylaşmıyoruz. İletilen veriler şunlarla sınırlıdır: Google ve RevenueCat (abonelikler), Mixpanel (anonim analitik, AB), Formspree (Ayarlardan gönüllü olarak gönderilen kullanıcı geri bildirimi)."
     },
     {
       "id": "9",
