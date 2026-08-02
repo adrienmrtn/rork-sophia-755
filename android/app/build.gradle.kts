@@ -85,7 +85,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
 
     // RevenueCat
-    implementation("com.revenuecat.purchases:purchases:8.14.0")
+    implementation("com.revenuecat.purchases:purchases:9.26.1")
 
     // Supabase
     implementation(platform("io.github.jan-tennert.supabase:bom:3.1.1"))

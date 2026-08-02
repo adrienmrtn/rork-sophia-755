@@ -1,5 +1,6 @@
 package app.rork.sophia.ui.paywall
 
+import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -48,7 +49,6 @@ import com.revenuecat.purchases.Package
 import com.revenuecat.purchases.PurchaseParams
 import com.revenuecat.purchases.Purchases
 import com.revenuecat.purchases.PurchasesError
-import com.revenuecat.purchases.getOfferingsWith
 import com.revenuecat.purchases.interfaces.PurchaseCallback
 import com.revenuecat.purchases.models.StoreTransaction
 
@@ -68,11 +68,15 @@ fun OnboardingPaywallFlow(
     onPurchased: () -> Unit,
 ) {
     var showComparison by remember { mutableStateOf(false) }
-    val packages = rememberOfferings(PaywallContext.FIN_ONBOARDING)
+    LaunchedEffect(Unit) { storeViewModel.fetchOfferings() }
+    val offerings by storeViewModel.offerings.collectAsState()
+    val annual = remember(offerings) { storeViewModel.annualPackage(PaywallContext.FIN_ONBOARDING.offeringId) }
+    val monthly = remember(offerings) { storeViewModel.monthlyPackage(PaywallContext.FIN_ONBOARDING.offeringId) }
+
     if (!showComparison) {
         OnboardingAnnualPaywall(
             language = language,
-            annual = packages.annual,
+            annual = annual,
             storeViewModel = storeViewModel,
             onViewAllPlans = { showComparison = true },
             onDismiss = onDismiss,
@@ -81,8 +85,8 @@ fun OnboardingPaywallFlow(
     } else {
         OnboardingComparisonPaywall(
             language = language,
-            annual = packages.annual,
-            monthly = packages.monthly,
+            annual = annual,
+            monthly = monthly,
             storeViewModel = storeViewModel,
             onDismiss = onDismiss,
             onPurchased = onPurchased,
@@ -111,6 +115,12 @@ fun PaywallScreen(
             onDismiss = onDismiss,
             onPurchased = onPurchased,
         )
+        PaywallContext.QUIZZ -> QuizPaywall(
+            language = language,
+            storeViewModel = storeViewModel,
+            onDismiss = onDismiss,
+            onPurchased = onPurchased,
+        )
         else -> StandardPaywall(
             context = context,
             language = language,
@@ -119,27 +129,6 @@ fun PaywallScreen(
             onPurchased = onPurchased,
         )
     }
-}
-
-private data class OfferingPackages(val annual: Package? = null, val monthly: Package? = null)
-
-@Composable
-private fun rememberOfferings(context: PaywallContext): OfferingPackages {
-    var annual by remember { mutableStateOf<Package?>(null) }
-    var monthly by remember { mutableStateOf<Package?>(null) }
-    LaunchedEffect(context) {
-        if (!Purchases.isConfigured) return@LaunchedEffect
-        Purchases.sharedInstance.getOfferingsWith(
-            onError = {},
-            onSuccess = { offerings ->
-                val offering = offerings.getOffering(context.offeringId) ?: offerings.current
-                annual = offering?.annual ?: offering?.availablePackages
-                    ?.firstOrNull { it.packageType.name.contains("ANNUAL", ignoreCase = true) }
-                monthly = offering?.monthly
-            },
-        )
-    }
-    return OfferingPackages(annual, monthly)
 }
 
 @Composable
@@ -154,8 +143,16 @@ private fun OnboardingAnnualPaywall(
     val context = LocalContext.current
     var purchasing by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
-    val price = annual?.product?.price?.formatted
-        ?: StringStore.text(context, "paywall.plan.fallback.yearlyPrice", language)
+    val hasTrial = storeViewModel.hasFreeTrial(annual)
+    val yearly = storeViewModel.formattedPrice(
+        annual,
+        StringStore.text(context, "paywall.plan.fallback.yearlyPrice", language),
+    )
+    val perMonth = storeViewModel.formattedYearlyPerMonth(annual, yearly)
+
+    LaunchedEffect(Unit) {
+        storeViewModel.trackPaywallImpression("onboarding_annual")
+    }
 
     Column(
         modifier = Modifier
@@ -175,17 +172,25 @@ private fun OnboardingAnnualPaywall(
                 Text("✨", fontSize = 40.sp)
             }
             Spacer(Modifier.height(24.dp))
-            Text(
-                StringStore.text(context, "onboardingV2.pw.tryFree", language),
-                style = SophiaTypography.titleLarge,
-                textAlign = TextAlign.Center,
-            )
-            Spacer(Modifier.height(10.dp))
-            Text(
-                StringStore.text(context, "onboardingV2.pw.thenPrice", language, price, price),
-                style = SophiaTypography.bodyMedium,
-                textAlign = TextAlign.Center,
-            )
+            if (hasTrial) {
+                Text(
+                    StringStore.text(context, "onboardingV2.pw.tryFree", language),
+                    style = SophiaTypography.titleLarge.copy(color = DS.success),
+                    textAlign = TextAlign.Center,
+                )
+                Spacer(Modifier.height(10.dp))
+                Text(
+                    StringStore.text(context, "onboardingV2.pw.thenPrice", language, perMonth, yearly),
+                    style = SophiaTypography.bodyMedium,
+                    textAlign = TextAlign.Center,
+                )
+            } else {
+                Text(
+                    StringStore.text(context, "onboardingV2.pw.priceNoTrial", language, perMonth, yearly),
+                    style = SophiaTypography.titleLarge,
+                    textAlign = TextAlign.Center,
+                )
+            }
             Spacer(Modifier.height(12.dp))
             Text(
                 StringStore.text(context, "onboardingV2.pw.twoTaps", language),
@@ -200,7 +205,11 @@ private fun OnboardingAnnualPaywall(
         }
         Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
             PurchaseButton(
-                text = StringStore.text(context, "onboardingV2.pw.startTrial", language),
+                text = StringStore.text(
+                    context,
+                    if (hasTrial) "onboardingV2.pw.startTrial" else "onboardingV2.pw.subscribe",
+                    language,
+                ),
                 enabled = !purchasing,
                 onClick = {
                     purchasePackage(
@@ -240,10 +249,21 @@ private fun OnboardingComparisonPaywall(
     val features = listOf(
         "allSubjects", "unlimited", "quiz", "favorites", "noAds", "weekly",
     )
-    val annualPrice = annual?.product?.price?.formatted
-        ?: StringStore.text(context, "paywall.plan.fallback.yearlyPrice", language)
-    val monthlyPrice = monthly?.product?.price?.formatted
-        ?: StringStore.text(context, "paywall.plan.fallback.monthlyPrice", language)
+    val annualPrice = storeViewModel.formattedPrice(
+        annual,
+        StringStore.text(context, "paywall.plan.fallback.yearlyPrice", language),
+    )
+    val monthlyPrice = storeViewModel.formattedPrice(
+        monthly,
+        StringStore.text(context, "paywall.plan.fallback.monthlyPrice", language),
+    )
+    val yearlyHasTrial = storeViewModel.hasFreeTrial(annual)
+    val monthlyHasTrial = storeViewModel.hasFreeTrial(monthly)
+    val selectedHasTrial = if (yearlySelected) yearlyHasTrial else monthlyHasTrial
+
+    LaunchedEffect(Unit) {
+        storeViewModel.trackPaywallImpression("onboarding_comparison")
+    }
 
     Column(
         modifier = Modifier
@@ -298,7 +318,11 @@ private fun OnboardingComparisonPaywall(
             PlanCard(
                 title = StringStore.text(context, "onboardingV2.pw.yearly", language),
                 price = annualPrice,
-                badge = StringStore.text(context, "onboardingV2.pw.trialBadge", language),
+                badge = if (yearlyHasTrial) {
+                    StringStore.text(context, "onboardingV2.pw.trialBadge", language)
+                } else {
+                    StringStore.text(context, "paywall.discount.perYear", language)
+                },
                 selected = yearlySelected,
                 onClick = { yearlySelected = true },
             )
@@ -306,7 +330,11 @@ private fun OnboardingComparisonPaywall(
             PlanCard(
                 title = StringStore.text(context, "onboardingV2.pw.monthly", language),
                 price = monthlyPrice,
-                badge = StringStore.text(context, "onboardingV2.pw.monthlyBilling", language),
+                badge = if (monthlyHasTrial) {
+                    StringStore.text(context, "onboardingV2.pw.trialBadge", language)
+                } else {
+                    StringStore.text(context, "onboardingV2.pw.monthlyBilling", language)
+                },
                 selected = !yearlySelected,
                 onClick = { yearlySelected = false },
             )
@@ -316,7 +344,11 @@ private fun OnboardingComparisonPaywall(
             }
         }
         PurchaseButton(
-            text = StringStore.text(context, "onboardingV2.pw.startTrial", language),
+            text = StringStore.text(
+                context,
+                if (selectedHasTrial) "onboardingV2.pw.startTrial" else "onboardingV2.pw.subscribe",
+                language,
+            ),
             enabled = !purchasing,
             onClick = {
                 val pkg = if (yearlySelected) annual else monthly
@@ -347,11 +379,23 @@ private fun DiscountPaywall(
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
     val discount by app.discountManager.state.collectAsState()
-    val packages = rememberOfferings(PaywallContext.OFFRE_DISCOUNT)
+    LaunchedEffect(Unit) {
+        storeViewModel.fetchOfferings()
+        storeViewModel.trackPaywallImpression(
+            paywallId = "native_discount",
+            offeringIdentifier = PaywallContext.OFFRE_DISCOUNT.offeringId,
+        )
+    }
+    val offerings by storeViewModel.offerings.collectAsState()
+    val annual = remember(offerings) {
+        storeViewModel.annualPackage(PaywallContext.OFFRE_DISCOUNT.offeringId)
+    }
     var purchasing by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
-    val promo = packages.annual?.product?.price?.formatted
-        ?: StringStore.text(context, "paywall.discount.fallbackPrice", language)
+    val promo = storeViewModel.formattedPrice(
+        annual,
+        StringStore.text(context, "paywall.discount.fallbackPrice", language),
+    )
     val regular = StringStore.text(context, "paywall.plan.fallback.yearlyPrice", language)
 
     Box(
@@ -433,7 +477,7 @@ private fun DiscountPaywall(
                     onClick = {
                         purchasePackage(
                             context = context,
-                            pkg = packages.annual,
+                            pkg = annual,
                             storeViewModel = storeViewModel,
                             onStart = { purchasing = true },
                             onDone = { purchasing = false },
@@ -468,6 +512,155 @@ private fun DiscountPaywall(
 }
 
 @Composable
+private fun QuizPaywall(
+    language: AppLanguage,
+    storeViewModel: StoreViewModel,
+    onDismiss: () -> Unit,
+    onPurchased: () -> Unit,
+) {
+    val context = LocalContext.current
+    LaunchedEffect(Unit) {
+        storeViewModel.fetchOfferings()
+        storeViewModel.trackPaywallImpression(
+            paywallId = "native_quiz",
+            offeringIdentifier = PaywallContext.QUIZZ.offeringId,
+        )
+    }
+    val offerings by storeViewModel.offerings.collectAsState()
+    val annual = remember(offerings) {
+        storeViewModel.annualPackage(PaywallContext.QUIZZ.offeringId)
+    }
+    val hasTrial = storeViewModel.hasFreeTrial(annual)
+    val yearly = storeViewModel.formattedPrice(
+        annual,
+        StringStore.text(context, "paywall.plan.fallback.yearlyPrice", language),
+    )
+    val perMonth = storeViewModel.formattedYearlyPerMonth(annual, yearly)
+    var purchasing by remember { mutableStateOf(false) }
+    var error by remember { mutableStateOf<String?>(null) }
+    var expandedFaq by remember { mutableStateOf<Int?>(null) }
+
+    val faq = listOf(
+        "paywall.quiz.faq.q1" to "paywall.quiz.faq.a1",
+        "paywall.quiz.faq.q2" to "paywall.quiz.faq.a2",
+        (if (hasTrial) "paywall.quiz.faq.q3" else "paywall.quiz.faq.q3.noTrial") to
+            (if (hasTrial) "paywall.quiz.faq.a3" else "paywall.quiz.faq.a3.noTrial"),
+    )
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(DS.canvas)
+            .padding(DS.Space.l),
+    ) {
+        Column(
+            modifier = Modifier
+                .weight(1f)
+                .verticalScroll(rememberScrollState()),
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ) {
+            Spacer(Modifier.height(20.dp))
+            Text(
+                StringStore.text(context, "paywall.quiz.title", language),
+                style = SophiaTypography.titleLarge,
+                textAlign = TextAlign.Center,
+            )
+            Spacer(Modifier.height(10.dp))
+            Text(
+                StringStore.text(context, "paywall.quiz.subtitle", language),
+                style = SophiaTypography.bodyMedium,
+                textAlign = TextAlign.Center,
+            )
+            Spacer(Modifier.height(22.dp))
+            faq.forEachIndexed { index, (qKey, aKey) ->
+                val expanded = expandedFaq == index
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 5.dp)
+                        .clip(DS.cardShape)
+                        .background(DS.surface)
+                        .border(
+                            1.dp,
+                            if (expanded) DS.accentSoft.copy(alpha = 0.35f) else DS.hairline,
+                            DS.cardShape,
+                        )
+                        .clickable { expandedFaq = if (expanded) null else index }
+                        .padding(16.dp),
+                ) {
+                    Row(verticalAlignment = Alignment.Top) {
+                        Text(
+                            StringStore.text(context, qKey, language),
+                            style = SophiaTypography.bodyMedium.copy(fontWeight = FontWeight.SemiBold),
+                            color = DS.ink,
+                            modifier = Modifier.weight(1f),
+                        )
+                        Text(if (expanded) "▲" else "▼", color = DS.inkTertiary, fontSize = 12.sp)
+                    }
+                    AnimatedVisibility(visible = expanded) {
+                        Text(
+                            StringStore.text(context, aKey, language),
+                            style = SophiaTypography.labelMedium,
+                            color = DS.inkSecondary,
+                            modifier = Modifier.padding(top = 10.dp),
+                        )
+                    }
+                }
+            }
+            Spacer(Modifier.height(16.dp))
+            Text(
+                "★★★★★  4,8 · " + StringStore.text(context, "paywall.quiz.rating", language),
+                style = SophiaTypography.labelMedium,
+                color = DS.inkTertiary,
+            )
+            if (error != null) {
+                Spacer(Modifier.height(10.dp))
+                Text(error!!, color = DS.danger, style = SophiaTypography.labelMedium)
+            }
+        }
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(10.dp),
+        ) {
+            Text(
+                StringStore.text(
+                    context,
+                    if (hasTrial) "paywall.price.trialThenYearly" else "paywall.price.yearlyNoTrial",
+                    language,
+                    yearly,
+                    perMonth,
+                ),
+                style = SophiaTypography.labelMedium,
+                color = DS.inkTertiary,
+                textAlign = TextAlign.Center,
+            )
+            PurchaseButton(
+                text = StringStore.text(
+                    context,
+                    if (hasTrial) "paywall.cta.activateTrial" else "paywall.cta.subscribe",
+                    language,
+                ),
+                enabled = !purchasing,
+                onClick = {
+                    purchasePackage(
+                        context = context,
+                        pkg = annual,
+                        storeViewModel = storeViewModel,
+                        onStart = { purchasing = true },
+                        onDone = { purchasing = false },
+                        onError = { error = it; purchasing = false },
+                        onPurchased = onPurchased,
+                    )
+                },
+            )
+            TextButton(onClick = onDismiss) {
+                Text(StringStore.text(context, "home.skip", language), color = DS.inkSecondary)
+            }
+        }
+    }
+}
+
+@Composable
 private fun StandardPaywall(
     context: PaywallContext,
     language: AppLanguage,
@@ -476,23 +669,35 @@ private fun StandardPaywall(
     onPurchased: () -> Unit,
 ) {
     val appContext = LocalContext.current
-    val packages = rememberOfferings(context)
+    LaunchedEffect(context) {
+        storeViewModel.fetchOfferings()
+        val paywallId = when (context) {
+            PaywallContext.ENTRAINEMENT -> "native_training"
+            PaywallContext.DEBLOQUER_COURS -> "native_course_unlock"
+            else -> "native_standard"
+        }
+        storeViewModel.trackPaywallImpression(paywallId, context.offeringId)
+    }
+    val offerings by storeViewModel.offerings.collectAsState()
+    val annual = remember(offerings, context) { storeViewModel.annualPackage(context.offeringId) }
+    val hasTrial = storeViewModel.hasFreeTrial(annual)
     var purchasing by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
     val title = when (context) {
         PaywallContext.DEBLOQUER_COURS -> StringStore.text(appContext, "paywall.course.title", language)
-        PaywallContext.QUIZZ, PaywallContext.ENTRAINEMENT ->
-            StringStore.text(appContext, "paywall.quiz.title", language)
+        PaywallContext.ENTRAINEMENT -> StringStore.text(appContext, "paywall.quiz.title", language)
         else -> "Sophia Premium"
     }
     val subtitle = when (context) {
         PaywallContext.DEBLOQUER_COURS -> StringStore.text(appContext, "paywall.course.subtitle", language)
-        PaywallContext.QUIZZ, PaywallContext.ENTRAINEMENT ->
-            StringStore.text(appContext, "paywall.quiz.subtitle", language)
+        PaywallContext.ENTRAINEMENT -> StringStore.text(appContext, "paywall.quiz.subtitle", language)
         else -> StringStore.text(appContext, "paywall.premiumHeadline", language)
     }
-    val price = packages.annual?.product?.price?.formatted
-        ?: StringStore.text(appContext, "paywall.plan.fallback.yearlyPrice", language)
+    val yearly = storeViewModel.formattedPrice(
+        annual,
+        StringStore.text(appContext, "paywall.plan.fallback.yearlyPrice", language),
+    )
+    val perMonth = storeViewModel.formattedYearlyPerMonth(annual, yearly)
 
     Column(
         modifier = Modifier
@@ -519,6 +724,18 @@ private fun StandardPaywall(
                     modifier = Modifier.padding(vertical = 6.dp),
                 )
             }
+            Spacer(Modifier.height(12.dp))
+            Text(
+                StringStore.text(
+                    appContext,
+                    if (hasTrial) "paywall.price.trialThenYearly" else "paywall.price.yearlyNoTrial",
+                    language,
+                    yearly,
+                    perMonth,
+                ),
+                style = SophiaTypography.labelMedium,
+                color = DS.inkSecondary,
+            )
             if (error != null) {
                 Spacer(Modifier.height(12.dp))
                 Text(error!!, color = DS.danger, style = SophiaTypography.labelMedium)
@@ -534,12 +751,20 @@ private fun StandardPaywall(
         }
         Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
             PurchaseButton(
-                text = "$price · " + StringStore.text(appContext, "paywall.trialBadge", language),
+                text = StringStore.text(
+                    appContext,
+                    when {
+                        context == PaywallContext.DEBLOQUER_COURS && hasTrial -> "paywall.cta.unlockFree"
+                        hasTrial -> "paywall.cta.activateTrial"
+                        else -> "paywall.cta.subscribe"
+                    },
+                    language,
+                ),
                 enabled = !purchasing,
                 onClick = {
                     purchasePackage(
                         context = appContext,
-                        pkg = packages.annual,
+                        pkg = annual,
                         storeViewModel = storeViewModel,
                         onStart = { purchasing = true },
                         onDone = { purchasing = false },

@@ -186,6 +186,11 @@ data class UserProgress(
     val hasSeenCourseTermsCoachmark: Boolean = false,
 )
 
+/**
+ * Freemium rules (parity with iOS):
+ * - 1 free course / day: intro page readable; pages 2+ show lock overlay (CTA via lock only).
+ * - Quiz / training always premium.
+ */
 object FreemiumGate {
     fun isLessonContentLocked(
         lessonIndex: Int,

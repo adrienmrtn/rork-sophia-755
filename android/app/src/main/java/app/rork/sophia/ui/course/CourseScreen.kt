@@ -195,38 +195,14 @@ fun CourseScreen(
                         )
                     }
                     if (locked) {
-                        Column(
-                            modifier = Modifier
-                                .fillMaxSize()
-                                .background(DS.canvas.copy(alpha = 0.92f))
-                                .padding(DS.Space.l),
-                            verticalArrangement = Arrangement.Center,
-                            horizontalAlignment = Alignment.CenterHorizontally,
-                        ) {
-                            Text(
-                                text = StringStore.text(context, "home.locked", language),
-                                style = SophiaTypography.titleMedium,
+                        // Overlay-only: teaser content stays underneath; paywall opens via lock tap.
+                        CourseLessonLockOverlay {
+                            app.analytics.trackLockedContentTapped(
+                                gateType = "debloquer_cours",
+                                courseId = course.id,
+                                subject = course.subjectEnum.storageKey,
                             )
-                            Spacer(Modifier.height(12.dp))
-                            Button(
-                                onClick = {
-                                    app.analytics.trackLockedContentTapped(
-                                        gateType = "debloquer_cours",
-                                        courseId = course.id,
-                                        subject = course.subjectEnum.storageKey,
-                                    )
-                                    onRequestPaywall("debloquer_cours")
-                                },
-                                colors = ButtonDefaults.buttonColors(containerColor = DS.accent),
-                                shape = DS.controlShape,
-                            ) {
-                                Text(
-                                    text = "Premium",
-                                    fontFamily = PlusJakartaSans,
-                                    fontWeight = FontWeight.SemiBold,
-                                    color = Color.White,
-                                )
-                            }
+                            onRequestPaywall("debloquer_cours")
                         }
                     }
                 }
@@ -239,8 +215,17 @@ fun CourseScreen(
                 horizontalArrangement = Arrangement.spacedBy(12.dp),
             ) {
                 val isLast = pagerState.currentPage >= pages.lastIndex
+                val courseLocked = !isPremium && !isDailyFreeCourse
                 Button(
                     onClick = {
+                        // Locked 2nd+ course: bottom CTA advances pages; paywall only via lock overlay.
+                        // On the last locked page, no-op (parity with iOS).
+                        if (courseLocked) {
+                            if (!isLast) {
+                                scope.launch { pagerState.animateScrollToPage(pagerState.currentPage + 1) }
+                            }
+                            return@Button
+                        }
                         if (isLast) {
                             if (FreemiumGate.canCompleteCourse(isPremium, isDailyFreeCourse)) {
                                 if (!wasCompletedBefore) {
@@ -254,13 +239,6 @@ fun CourseScreen(
                                     onCourseCompleted()
                                 }
                                 if (course.hasQuiz) showQuiz = true else onDismiss()
-                            } else {
-                                app.analytics.trackLockedContentTapped(
-                                    gateType = "debloquer_cours",
-                                    courseId = course.id,
-                                    subject = course.subjectEnum.storageKey,
-                                )
-                                onRequestPaywall("debloquer_cours")
                             }
                         } else {
                             scope.launch { pagerState.animateScrollToPage(pagerState.currentPage + 1) }
@@ -272,7 +250,7 @@ fun CourseScreen(
                 ) {
                     Text(
                         text = when {
-                            !isLast -> StringStore.text(context, "course.continue", language)
+                            courseLocked || !isLast -> StringStore.text(context, "course.continue", language)
                                 .takeIf { it != "course.continue" } ?: "Continuer"
                             course.hasQuiz -> StringStore.text(context, "course.quiz", language)
                                 .takeIf { it != "course.quiz" } ?: "Quiz"

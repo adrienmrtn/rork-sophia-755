@@ -172,10 +172,21 @@ fun OnboardingV2Screen(
                 onGoogle = {
                     scope.launch {
                         runCatching { app.authService.signInWithGoogle(context) }
-                        step = OnboardingStep.Trial
+                        // Skip trial explanation when the served annual product has no free trial.
+                        step = if (storeViewModel.shouldShowTrialSteps()) {
+                            OnboardingStep.Trial
+                        } else {
+                            OnboardingStep.Reminder
+                        }
                     }
                 },
-                onSkip = { step = OnboardingStep.Trial },
+                onSkip = {
+                    step = if (storeViewModel.shouldShowTrialSteps()) {
+                        OnboardingStep.Trial
+                    } else {
+                        OnboardingStep.Reminder
+                    }
+                },
             )
             OnboardingStep.Trial -> TrialStepsStep(language) { step = OnboardingStep.Reminder }
             OnboardingStep.Reminder -> ReminderStep(language, onContinue = ::advanceFromReminder)
