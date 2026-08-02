@@ -80,10 +80,17 @@ fun OnboardingV2Screen(
         onComplete()
     }
 
+    fun scheduleTrialReminderIfEligible() {
+        // Only schedule when the served annual product actually has a free trial.
+        // Reminder step runs even on no-trial paths; must not notify "trial ending".
+        if (storeViewModel.annualHasFreeTrial()) {
+            TrialReminderScheduler.scheduleTrialEndingReminder(context)
+        }
+    }
+
     val notificationPermission = rememberLauncherForActivityResult(
         ActivityResultContracts.RequestPermission(),
     ) {
-        TrialReminderScheduler.scheduleTrialEndingReminder(context)
         MetaAdsService.setTrackingEnabled(true)
         if (isPremium) finish(true)
         else {
@@ -93,7 +100,6 @@ fun OnboardingV2Screen(
     }
 
     fun advanceFromReminder() {
-        TrialReminderScheduler.scheduleTrialEndingReminder(context)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             notificationPermission.launch(Manifest.permission.POST_NOTIFICATIONS)
         } else {
@@ -201,7 +207,10 @@ fun OnboardingV2Screen(
                     language = language,
                     storeViewModel = storeViewModel,
                     onDismiss = { finish(false) },
-                    onPurchased = { finish(true) },
+                    onPurchased = {
+                        scheduleTrialReminderIfEligible()
+                        finish(true)
+                    },
                     onPurchaseMeta = { offeringId, packageId ->
                         app.analytics.trackPurchaseCompleted(
                             context = "fin_onboarding",
