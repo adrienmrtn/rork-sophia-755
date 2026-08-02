@@ -38,6 +38,17 @@ Native Kotlin + Jetpack Compose port of the Sophia iOS app.
 - **Ambassador** Formspree candidature from profile
 - **Play In-App Review** (3rd lesson of first course)
 - **Mixpanel EU** funnel events (onboarding, course, quiz, locks, discount)
+- **15 languages** (Phase A) + onboarding language scroll / scrollable profile (Phase B)
+- **Trial/no-trial paywalls**, RC impressions, quiz FAQ, lock overlay (Phase C)
+- **Legal docs** (Play-adapted), restore, analytics parity, Play store packs (Phase D)
+
+## Phase E QA (no APK)
+
+```bash
+python3 scripts/qa_android_phase_e.py
+```
+
+See [`QA.md`](./QA.md) for the full static checklist and deferred device checks.
 
 ## What you still need to provide
 
@@ -53,10 +64,10 @@ Until the RevenueCat key is set, the app runs in free mode (`goog_REPLACE_ME`). 
 ## Content pipeline
 
 ```bash
-python3 scripts/export_ios_content_for_android.py
+python3 scripts/export_ios_content_for_android.py --from-ref origin/main
 ```
 
-Exports FR catalog from iOS Swift sources into `app/src/main/assets/locales/`.
+Exports locale catalogs, UI strings (new langs), and CoursesV2 into `app/src/main/assets/`.
 
 ## Build from CLI
 
