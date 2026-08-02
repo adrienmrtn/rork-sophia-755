@@ -28,6 +28,9 @@ struct OnboardingV2PaywallAnnual: View {
         store.paywallPriceDisplay(language: languageManager.current)
     }
 
+    /// A RevenueCat experiment can serve an offering whose annual product has no intro offer.
+    private var hasTrial: Bool { store.annualHasFreeTrial }
+
     var body: some View {
         VStack(spacing: 0) {
             HStack {
@@ -66,7 +69,7 @@ struct OnboardingV2PaywallAnnual: View {
                 OnboardingV2Button(
                     title: purchasing
                         ? languageManager.text("common.processing")
-                        : languageManager.text("onboardingV2.pw.startTrial"),
+                        : languageManager.text(hasTrial ? "onboardingV2.pw.startTrial" : "onboardingV2.pw.subscribe"),
                     enabled: !purchasing,
                     action: purchase
                 )
@@ -75,19 +78,34 @@ struct OnboardingV2PaywallAnnual: View {
             }
         }
         .ov2Background()
+        .onAppear {
+            store.trackPaywallImpression(paywallId: "onboarding_annual")
+        }
     }
 
+    /// With a trial, the offer leads with the free days (in green). Without one, the price is
+    /// the whole headline — promising a free trial that isn't served would be misleading.
     private var headline: some View {
-        let green = languageManager.text("onboardingV2.pw.tryFree")
-        let rest = String(
-            format: languageManager.text("onboardingV2.pw.thenPrice"),
-            prices.yearlyPerMonth, prices.yearlyPrice
-        )
-        return (
-            Text(green + " ").font(DS.title(.title2, .heavy)).foregroundColor(OV2.success)
-            + Text(rest).font(DS.title(.title2, .heavy)).foregroundColor(OV2.ink)
-        )
-        .multilineTextAlignment(.center)
+        let content: Text = {
+            guard hasTrial else {
+                return Text(
+                    String(
+                        format: languageManager.text("onboardingV2.pw.priceNoTrial"),
+                        prices.yearlyPerMonth, prices.yearlyPrice
+                    )
+                )
+                .font(DS.title(.title2, .heavy))
+                .foregroundColor(OV2.ink)
+            }
+            let green = languageManager.text("onboardingV2.pw.tryFree")
+            let rest = String(
+                format: languageManager.text("onboardingV2.pw.thenPrice"),
+                prices.yearlyPerMonth, prices.yearlyPrice
+            )
+            return Text(green + " ").font(DS.title(.title2, .heavy)).foregroundColor(OV2.success)
+                + Text(rest).font(DS.title(.title2, .heavy)).foregroundColor(OV2.ink)
+        }()
+        return content.multilineTextAlignment(.center)
     }
 
     private var closeButton: some View {
@@ -141,6 +159,15 @@ struct OnboardingV2PaywallComparison: View {
         store.paywallPriceDisplay(language: languageManager.current)
     }
 
+    /// Trial availability is per product, so each plan card is checked independently: an
+    /// experiment can remove the intro offer from one plan only.
+    private var yearlyHasTrial: Bool { store.hasFreeTrial(store.annualPackage) }
+    private var monthlyHasTrial: Bool { store.hasFreeTrial(store.monthlyPackage) }
+
+    private var selectedHasTrial: Bool {
+        selected == .yearly ? yearlyHasTrial : monthlyHasTrial
+    }
+
     var body: some View {
         VStack(spacing: 0) {
             HStack {
@@ -170,7 +197,7 @@ struct OnboardingV2PaywallComparison: View {
                 OnboardingV2Button(
                     title: purchasing
                         ? languageManager.text("common.processing")
-                        : languageManager.text("onboardingV2.pw.startTrial"),
+                        : languageManager.text(selectedHasTrial ? "onboardingV2.pw.startTrial" : "onboardingV2.pw.subscribe"),
                     enabled: !purchasing,
                     action: purchase
                 )
@@ -181,10 +208,13 @@ struct OnboardingV2PaywallComparison: View {
             .padding(.horizontal, 24)
         }
         .ov2Background()
+        .onAppear {
+            store.trackPaywallImpression(paywallId: "onboarding_comparison")
+        }
     }
 
-    /// Free / PRO column width — wide enough for DE `Kostenlos`, still aligned for icons.
-    private var comparisonColumnWidth: CGFloat { 68 }
+    /// Free / PRO column width — room for TR/HU/BG free labels with scale, still aligned for icons.
+    private var comparisonColumnWidth: CGFloat { 72 }
 
     private var comparisonTable: some View {
         VStack(spacing: 0) {
@@ -250,7 +280,7 @@ struct OnboardingV2PaywallComparison: View {
                     Text(isYearly ? prices.yearlyPrice : prices.monthlyPrice)
                         .font(DS.sans(.body, .bold))
                         .foregroundStyle(OV2.ink)
-                    if isYearly {
+                    if isYearly ? yearlyHasTrial : monthlyHasTrial {
                         Text(languageManager.text("onboardingV2.pw.trialBadge"))
                             .font(DS.sans(.caption2, .bold))
                             .foregroundStyle(OV2.success)

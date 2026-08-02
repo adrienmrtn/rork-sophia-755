@@ -66,8 +66,12 @@ struct OnboardingV2Button: View {
             Text(title)
                 .font(DS.sans(.headline, .semibold))
                 .foregroundStyle(.white)
+                .lineLimit(2)
+                .minimumScaleFactor(0.8)
+                .multilineTextAlignment(.center)
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 17)
+                .padding(.horizontal, 12)
                 .background(
                     Capsule(style: .continuous)
                         .fill(enabled ? OV2.accent : OV2.accent.opacity(0.35))
@@ -78,6 +82,47 @@ struct OnboardingV2Button: View {
         .sensoryFeedback(.impact(weight: .medium), trigger: tap)
         .padding(.horizontal, 24)
         .padding(.bottom, 20)
+    }
+}
+
+// MARK: - Contenu scrollable + CTA épinglé
+
+/// Contenu vertical qui devient scrollable dès qu'il dépasse l'écran, avec un CTA
+/// **toujours** visible en bas.
+///
+/// Les écrans de l'OB empilent des éléments de hauteur fixe (badges, cartes, chips). Sur un
+/// petit iPhone, avec une grande taille de texte (Dynamic Type) ou une traduction longue, la
+/// pile dépasse la hauteur disponible : le `VStack` déborde, le CTA se retrouve sous le bord
+/// de l'écran et l'utilisateur est **bloqué**. Ce conteneur évite ce cas : le contenu défile,
+/// le CTA reste épinglé.
+struct OV2ScrollableContent<Content: View, Footer: View>: View {
+    private let content: () -> Content
+    private let footer: () -> Footer
+
+    init(
+        @ViewBuilder content: @escaping () -> Content,
+        @ViewBuilder footer: @escaping () -> Footer
+    ) {
+        self.content = content
+        self.footer = footer
+    }
+
+    var body: some View {
+        VStack(spacing: 0) {
+            GeometryReader { proxy in
+                ScrollView(.vertical) {
+                    content()
+                        .frame(maxWidth: .infinity)
+                        // Contenu calé en haut quand il tient (mise en page d'origine),
+                        // scrollable dès qu'il dépasse.
+                        .frame(minHeight: proxy.size.height, alignment: .top)
+                }
+                .scrollIndicators(.hidden)
+                .scrollBounceBehavior(.basedOnSize)
+            }
+
+            footer()
+        }
     }
 }
 

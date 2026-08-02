@@ -1,0 +1,122 @@
+{
+  "id": "course_159_le_theatre_de_shakespeare",
+  "title": "Shakespeare színháza",
+  "subtitle": "1564-1616",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture + iconic works",
+  "description": "Londonban Shakespeare a Globe-ba írt. Hamlet, Macbeth, Rómeó: népszerű színház, amely az angol nyelv csúcsává vált.",
+  "hero": {
+    "image": "le_theatre_de_shakespeare",
+    "ratio": "16:9",
+    "hook": "Színész dramaturg, díszletek nélküli színház... és örök sorok."
+  },
+  "sections": [
+    {
+      "id": "course_159_le_theatre_de_shakespeare_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**William Shakespeare** (1564-1616) a londoni színpadnak írt, nem az iskolának. Drámáiban királyok, bohócok, szerelmesek és bérgyilkosok keverednek."
+        },
+        {
+          "type": "paragraph",
+          "text": "Négy évszázaddal később is mindenhol játsszák."
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p1",
+      "title": "A Földgömb és a földesek",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A [[Lord Chamberlain emberei]] társulattal a [[Globe Színház]] szabadtéri körben játszik. A [[földiek]] keveset fizet, és állva marad a színpad közelében. A színház népszerű, zajos, nyüzsgő."
+        },
+        {
+          "type": "paragraph",
+          "text": "Az Elizabethan London szereti a látványt. A színházak prédikációkkal és medveviadalokkal versenyeznek. Shakespeare ezen a zajos piacon ír, nem egy elefántcsonttoronyban."
+        },
+        {
+          "type": "image",
+          "asset": "globe_theatre_london_reconstruction",
+          "ratio": "4:3",
+          "caption": "The Globe: a jelenet a tömegbe tolta."
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p2",
+      "title": "Egy új nyelv",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gyakran írja Shakespeare-féle üres versben: jambikus pentaméter rím nélkül. Sértések, versek, monológok: szavakat talál ki és mítoszmá vált szereplőket (Hamlet, Lady Macbeth) állít fel."
+        },
+        {
+          "type": "paragraph",
+          "text": "Újrahasznosítja a krónikat, olasz híreket, régi darabokat. Az eredetiség a nyelvben és a karakterekben van, nem pedig a cselekmény puszta kitalálásában."
+        },
+        {
+          "type": "funFact",
+          "text": "Több darabja csak a halála után megjelent 1623-as [[Első Folio]]-nek köszönhetően jutott el hozzánk."
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p3",
+      "title": "Tragédiák, vígjátékok, történetek",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A nevetéstől a vérig megy. *Rómeó és Júlia*, *Othello*, *Learkirály*: családok, hatalom, féltékenység. A „történelemjátékok” újrajátsszák Angliát olyan közönség számára, akik szeretik magukat epikus formában látni."
+        },
+        {
+          "type": "paragraph",
+          "text": "A vígjátékok és a tragédiák egymásra reagálnak. Az őrült igazat beszél; a király megőrül. A tónusoknak ez a porozitása megmagyarázza, hogy miért lehet még mindig ezerféleképpen felszerelni."
+        },
+        {
+          "type": "image",
+          "asset": "shakespeare_first_folio_1623",
+          "ratio": "4:3",
+          "caption": "Az első fólió: szövegek megmentése a feledéstől."
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p4",
+      "title": "Örökség",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A film és a rap által lefordított, adaptált, mintavételezett Shakespeare eszköztár marad az ambíciók és vágyak kifejezésére. Titka: színészeknek írni, tömeg előtt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Shakespeare színházának teljes megértéséhez egy dolgot kell szem előtt tartania: minden technikai részlet egy érzelmet vagy egy ötletet szolgál ki. Az alkotás soha nem csak dekoratív."
+        },
+        {
+          "type": "paragraph",
+          "text": "A kontextus legalább annyira számít, mint a stílus. Dátumok, helyek, szponzorok, nyilvánosság: mindez megmagyarázza, hogy egy űrlap miért egy adott pillanatban jelenik meg, és miért nem korábban."
+        },
+        {
+          "type": "paragraph",
+          "text": "Végül az örökséget hosszú távon mérik. Amit ma múzeumokban, filmekben vagy populáris zenében látunk, az ma is magán viseli e találmányok nyomait."
+        },
+        {
+          "type": "paragraph",
+          "text": "A 18. században Franciaországban és másutt lefordítva világklasszikussá vált. Minden korszak megtalálja benne a tükrét: romantikus, politikai, posztkoloniális, feminista."
+        },
+        {
+          "type": "takeaway",
+          "text": "A Globe-on Shakespeare feltalált egy népszerű színházat, amelynek karakterei és nyelve meghódította a világot."
+        }
+      ]
+    }
+  ]
+}

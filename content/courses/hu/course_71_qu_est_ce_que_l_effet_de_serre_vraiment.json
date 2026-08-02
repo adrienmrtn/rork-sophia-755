@@ -1,0 +1,108 @@
+{
+  "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment",
+  "title": "Mi az üvegházhatás (valójában)?",
+  "subtitle": "Klíma és légkör",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Az üvegházhatás nem elsősorban probléma: a láthatatlan köpeny az, amely megakadályozza a Föld fagyását. Az igazi probléma az, ha túl gyorsan besűríted.",
+  "hero": {
+    "image": "qu_est_ce_que_l_effet_de_serre",
+    "ratio": "16:9",
+    "hook": "Az üvegházhatás nélkül a Föld jeges sivatag lenne. Ha túl sok, akkor túlmelegszik."
+  },
+  "sections": [
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Képzeljünk el egy napfénybe zárt autót: az ablakok beengedik a fényt, de a meleg nehezen tud kiszállni. Az utastér felmelegszik. A Föld [[üvegházhatás]] kicsit így működik, üveg helyett levegővel."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ez a jelenség **természetes** és létfontosságú. Enélkül a földgömb átlaghőmérséklete **-18 °C** felé csökkenne. Vele **+15 °C** körül járunk. A jelenlegi probléma nem a léte, hanem a tevékenységünk általi gyors **Felerősítése**."
+        }
+      ]
+    },
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p1",
+      "title": "Hogyan tartja a bolygó hőjét",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A Nap elsősorban látható fényt küld. A légkör hagyja, hogy elmúljon. A szárazföld és az óceánok felmelegednek, majd ezt az energiát visszasugározzák **infravörös hő** formájában, amely hullámok „hosszabbak”, mint a látható fény."
+        },
+        {
+          "type": "image",
+          "asset": "factory_chimneys_greenhouse_gas_emissions",
+          "ratio": "auto",
+          "caption": "Az ipari kibocsátások erősítik az üvegházhatást."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bizonyos gázok, [[Üvegházhatású gázok]] ezt a hőt elnyelik és minden irányban kisugározzák, így a talaj felé is. A levegőben található nitrogén és oxigén alig látja el ezt a feladatot. A vízgőz, a **CO₂** és a **metán** ezt nagyon jól teszi."
+        },
+        {
+          "type": "funFact",
+          "text": "Az „üvegházhatás” elnevezés kissé félrevezető. Egy igazi üvegház főként a felszálló meleg levegő blokkolásával fűt. A légkör az infravörös sugarak elnyelésével felfogja a hőt."
+        }
+      ]
+    },
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p2",
+      "title": "Amikor az emberek megvastagítják a takarót",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az ipari forradalom óta a szenet, az olajat és a gázt elégetik. Ez a több millió évig föld alá temetett szén visszatér a levegőbe. Az erdőirtás csökkenti a CO₂-t elnyelő erdők számát is. Az állattenyésztés és a rizstermesztés metánt ad hozzá, körülbelül **80-szor** több „fűtést”, mint a CO₂-t 20 év alatt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eredmény: a CO₂-koncentráció körülbelül **280**-ről több mint **420** ppm-re nőtt. Ekkora szintet nem láttak [[pliocén]] óta, körülbelül **3 millió évvel ezelőtt**, amikor a tengerek magasabbak voltak."
+        }
+      ]
+    },
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p3",
+      "title": "Milyen energikusabb az éghajlatváltozás",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A klimatológusok ezreinek munkáját szintetizáló [[IPCC]] egyértelmű: az 1950 óta tartó felmelegedés évezredek óta példátlan, emberi eredete pedig bizonyított."
+        },
+        {
+          "type": "paragraph",
+          "text": "A levegőben és az óceánokban több energia több szélsőséget jelent: szárazabb aszályok, hevesebb esőzések, olvadó gleccserek és jégsapkák, emelkedő tengerszint. És egy gyorsító: amikor a fehér jég eltűnik, a sötét talaj és a víz több napfényt nyel el. A [[Földi albedó]] esik, és a bolygó még gyorsabban melegszik."
+        },
+        {
+          "type": "funFact",
+          "text": "A Vénusz a „tömött” üvegházhatást mutatja: 96%-os CO₂ atmoszféra és körülbelül **460 °C** a földön, ami elegendő az ólom megolvadásához."
+        }
+      ]
+    },
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p4",
+      "title": "Korlátozza a növekedést, alkalmazkodjon a többihez",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A nemzetközi cél az iparosodás előtti korszakhoz képest **+1,5 °C** vagy **+2 °C** alatt maradni, elkerülve az olyan veszélyes küszöböket, mint a [[örök fagy]] felolvadása, amely még több metánt bocsátana ki."
+        },
+        {
+          "type": "paragraph",
+          "text": "Két kar: **csökkentse** a kibocsátást (tiszta energia, józanság, erdők) és **ZAdaptál** ahhoz, ami már elkötelezte magát. A CO₂ évszázadokig a levegőben marad: amit ma kibocsátunk, az sokáig megmarad."
+        },
+        {
+          "type": "takeaway",
+          "text": "Természetes üvegházhatás nélkül a Föld befagyna **-18 °C** körül. Fosszilis tüzelőanyagokkal történő felerősítése a CO₂-szintet **3 millió előestéjén** nem látott szintre emeli."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu",
+  "title": "Grekisk tragedi och antik teater",
+  "subtitle": "500-talet f.Kr",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture + iconic works",
+  "description": "I Aten uppfann Aischylos, Sofokles och Euripides tragedin. Kör, hybris, katarsis: en teater för att tänka på staden.",
+  "hero": {
+    "image": "la_tragedie_grecque_et_le_theatre_antique",
+    "ratio": "16:9",
+    "hook": "Masker under solen för att läka staden genom chock."
+  },
+  "sections": [
+    {
+      "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "På 500-talet f.Kr., i Aten, föddes **tragedi**. Det är inte en privat underhållning: det är en medborgerlig rit, framförd inför tusentals medborgare."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aischylos, Sofokles, Euripides uppfann en konst som blandade gudar, politik och passioner."
+        }
+      ]
+    },
+    {
+      "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu_p1",
+      "title": "Kören och orkestern",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[kör i grekisk tragedi]] sjunger, dansar, kommenterar. Skådespelarna, maskerade, förkroppsligar hjältar och gudar. En rik medborgare finansierar showen: det är [[choregia]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dionysia, Dionysos festivaler, anordnar tävlingar. Tragedin uppstår i denna religiösa och medborgerliga ram. Att vinna innebär att hedra staden lika mycket som guden."
+        },
+        {
+          "type": "image",
+          "asset": "epidaurus_ancient_theatre",
+          "ratio": "4:3",
+          "caption": "Epidauros teater: akustik som ett mirakel av sten."
+        }
+      ]
+    },
+    {
+      "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu_p2",
+      "title": "Hybris och höst",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den tragiska hjälten ger ofta efter för [[hybris]], överdriften som trotsar ordningen. Fallet som följer är inte gratis: det ifrågasätter rättvisa, öde, ansvar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aischylus lägger till skådespelare; Sofokles förfinar psykologin; Euripides stör säkerheten. Tre stilar för samma maskin: få folk att tänka när de rör sig."
+        },
+        {
+          "type": "funFact",
+          "text": "[[deus ex machina]] fick ibland en gud sänkt av en kran för att lösa handlingen... redan kritiserad för sin bekvämlighet."
+        }
+      ]
+    },
+    {
+      "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu_p3",
+      "title": "katarsis",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Enligt Aristoteles orsakar tragedi [[katarsis]]: en rening genom medlidande och terror. Vi går skakade, men fridfulla. Teater helar staden genom att iscensätta dess rädsla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Allmänheten känner ofta till myten. Intresset är inte twisten, det är sättet. Hur kommer Oidipus att falla? Hur ska Antigone säga nej?"
+        },
+        {
+          "type": "image",
+          "asset": "greek_theatre_masks_tragedy",
+          "ratio": "4:3",
+          "caption": "Masker: en känsla läsbar på långt håll."
+        }
+      ]
+    },
+    {
+      "id": "course_158_la_tragedie_grecque_et_le_theatre_antiqu_p4",
+      "title": "Arv",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Shakespeare, opera, film: Grekisk tragedi förblir ödets grammatik på scenen. Våra moderna antihjältar är fortfarande skyldiga honom sina undergångar."
+        },
+        {
+          "type": "paragraph",
+          "text": "För att till fullo förstå grekisk tragedi och antik teater måste du ha en sak i åtanke: varje teknisk detalj tjänar en känsla eller en idé. Verket är aldrig bara dekorativt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kontexten spelar lika stor roll som stilen. Datum, platser, sponsorer, offentliga: allt detta förklarar varför ett formulär visas vid ett visst tillfälle, och inte tidigare."
+        },
+        {
+          "type": "paragraph",
+          "text": "Slutligen mäts arv på lång sikt. Det vi idag ser på museer, filmer eller populärmusik bär fortfarande spåren av dessa uppfinningar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Från Wagners opera till katastroffilm, den tragiska strukturen lever kvar. Vi har bytt gudar; inte alltid faller."
+        },
+        {
+          "type": "takeaway",
+          "text": "I Aten uppfann tragedin en medborgerlig teater där hybris, refräng och katarsis lär staden att se på sig själv."
+        }
+      ]
+    }
+  ]
+}

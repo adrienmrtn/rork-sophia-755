@@ -1,0 +1,140 @@
+{
+  "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum",
+  "title": "Aztekiska gudar och människooffer",
+  "subtitle": "Blod för solen",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Bland aztekerna går solen bara upp om gudarna får blod. En hård, men sammanhängande, kosmologi i hjärtat av deras imperium.",
+  "hero": {
+    "image": "les_dieux_azteques_et_les_sacrifices_humains",
+    "ratio": "16:9",
+    "hook": "Utan blod skulle solen stanna: sådan är aztekernas kosmiska skuld."
+  },
+  "sections": [
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Azteker**, eller Mexica, tror att universum är bräckligt. Gudarna behöver blod för att solen ska fortsätta sin kurs. Utan erbjudanden skulle kaoset återvända."
+        },
+        {
+          "type": "paragraph",
+          "text": "Det som förskräckte spanjorerna bygger på en tydlig idé: gudars och människors liv är sammanlänkade. Så här fungerar denna kosmologi."
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p1",
+      "title": "De fem solarna: en värld som redan är död fyra gånger",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Enligt [[Fem solar]]-myten har fyra epoker redan försvunnit i katastrofer. Vi upplever den femte solen, [[Nahui Ollin]] (”4-Movement”), som lovade att sluta i jordbävningar."
+        },
+        {
+          "type": "image",
+          "asset": "aztec_five_suns_teotihuacan_pyramid_sun_stone",
+          "ratio": "4:3",
+          "caption": "Solens sten: Aztekisk tid förvandlas till successiva epoker."
+        },
+        {
+          "type": "paragraph",
+          "text": "I **Teotihuacán**, en helig stad på centralplatån, kastar gudarna sig in i en eld för att bli sol och måne. Men solen står kvar. De andra gudarna erbjuder sedan sitt eget blod för att sätta det i rörelse. Män ärver denna skuld."
+        },
+        {
+          "type": "funFact",
+          "text": "För aztekerna är uppoffring inte omotiverad grymhet: det är återbetalningen av en gudomlig skuld, [[De fem solarnas kosmologi och kosmisk skuld]]."
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p2",
+      "title": "En pantheon av dualiteter",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den centrala guden är [[Huitzilopochtli]], krigsguden och middagssolen. Varje natt kämpar han mot mörkret för att återfödas på morgonen. Vid hans sida ger [[Tlaloc]] regn, därför skördar, eller svält."
+        },
+        {
+          "type": "image",
+          "asset": "huitzilopochtli_aztec_sun_god_codex",
+          "ratio": "4:3",
+          "caption": "Huitzilopochtli, krigarsol som kräver att få näring."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Quetzalcoatl]], den befjädrade ormen, förkroppsligar kunskap och civilisation. Hans rival [[Tezcatlipoca]], Smoking Mirror, styr natten, ödet och magin. Jorden själv har ett fruktansvärt ansikte: [[Coatlicue]], slukar modergudinna."
+        },
+        {
+          "type": "funFact",
+          "text": "Det dyrbara blodet som erbjuds gudarna kallas [[chalchihuatl]], \"ädelvatten\". Det extraherade hjärtat ses som en solgnista som återvände till himlen."
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p3",
+      "title": "Blomsterkrigen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "För att skaffa offer organiserar aztekerna [[Xochiyaoyotl]], \"blomsterkrigen\": rituella strider vars mål inte är att döda, utan att fånga levande krigare som är värda att erbjudas."
+        },
+        {
+          "type": "image",
+          "asset": "aztec_sacrifice_pyramid_templo_mayor_codex",
+          "ratio": "4:3",
+          "caption": "Offer på toppen av templet: hjärtat presenterat för solen."
+        },
+        {
+          "type": "paragraph",
+          "text": "På toppen av **Templo borgmästare** i Tenochtitlán, huvudstaden vid sjön, utvinner en präst hjärtat med en kniv från **Obsidian**, en vass vulkansten. Gesten är offentlig, högtidlig, tänkt som en tjänst till solen."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Myt",
+              "title": "Gudarnas offer",
+              "detail": "Solen får gudomligt blod för att gå framåt."
+            },
+            {
+              "date": "Imperium",
+              "title": "Blomsterkrig",
+              "detail": "Fånga krigare för erbjudanden."
+            },
+            {
+              "date": "1519",
+              "title": "Spansk chock",
+              "detail": "Cortés anländer; systemet kollapsar."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p4",
+      "title": "Slutet på en värld, bestående spår",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Spanska krönikor blåser ibland upp figurerna för att motivera erövringen. Men offersystemet är väldigt verkligt. I **1519** framkallar ankomsten av **Hernán Cortés** slutet på detta rituella universum."
+        },
+        {
+          "type": "paragraph",
+          "text": "Men aztekiska figurer överlever i synkretism: Jungfrun från Guadalupe dyker upp på en sida som en gång länkades till en modergudinna. Att förstå dessa uppoffringar är att förstå en kultur som sätter kosmos överlevnad över individen."
+        },
+        {
+          "type": "takeaway",
+          "text": "Bland aztekerna gav mänskligt blod näring till solen. Gudarna har redan betalat med sina liv: män betalar tillbaka denna skuld genom uppoffringar, särskilt via **blomsterkrig**."
+        }
+      ]
+    }
+  ]
+}

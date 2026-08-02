@@ -1,0 +1,96 @@
+{
+  "id": "course_47_pourquoi_baille_t_on",
+  "title": "De ce căscăm?",
+  "subtitle": "Corp și creier",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Toată lumea căscă: oameni, câini, uneori chiar fetuși. Probabil că nu din cauza „lipsă de oxigen”. Iată cele mai puternice piste.",
+  "hero": {
+    "image": "pourquoi_baille_t_on",
+    "ratio": "16:9",
+    "hook": "Cascati. Vecinul tău căscă. Și nu este (aproape) contagioasă întâmplător."
+  },
+  "sections": [
+    {
+      "id": "course_47_pourquoi_baille_t_on_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Căsatul pare obișnuit. Este însă un reflex complex: maxilar, torace, diafragmă, se implică tot corpul. Lei, câini, oameni: multe animale căscă."
+        },
+        {
+          "type": "paragraph",
+          "text": "Multă vreme am spus: „este să avem mai mult oxigen”. Această idee este acum în mare măsură abandonată. Explicațiile moderne sunt mai interesante."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p1",
+      "title": "Nu (mai ales) pentru oxigen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Experimentele au arătat că creșterea oxigenului din aer nu împiedică căscatul. Scădeți puțin și dioxidul de carbon. Deci căscatul nu este o simplă „prindere din urmă pentru aer”."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un avantaj puternic astăzi: căscatul ajută **dacă setați temperatura aveți nevoie**. Inspirând larg și întinzând fața, vom „aerisi” și vom răci puțin capul, mai ales când suntem obosiți."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p2",
+      "title": "De ce este contagioasă?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "contagious_yawning_people_group",
+          "ratio": "4:3",
+          "caption": "A vedea pe cineva căscând este adesea suficient pentru a declanșa reflexul."
+        },
+        {
+          "type": "paragraph",
+          "text": "La oameni, a vedea, a auzi sau chiar a citi cuvântul „căscat” poate declanșa un căscat. Nu este doar o imitație stupidă: afectează și **empatiza** și circuitele cerebrale legate de [[Neuronii oglindă și contagiozitatea]], neuroni care se activează atunci când acționăm... sau când vedem pe cineva acționând."
+        },
+        {
+          "type": "funFact",
+          "text": "Copiii mici căscă puțin din cauza contagiunii. Această sensibilitate vine mai târziu, alături de anumite abilități sociale."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p3",
+      "title": "Căscăm deja înainte de a ne naște",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fetușii căscă din jurul celei de-a 11-a săptămâni de sarcină. La această vârstă, plămânii lor nu respiră încă aer. Deci, din nou, nu este vorba despre „rămînerea fără oxigen”."
+        },
+        {
+          "type": "paragraph",
+          "text": "La făt, căscatul ar putea ajuta la dezvoltarea maxilarului și a mușchilor faciali."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p4",
+      "title": "Căscă pentru a rămâne alert?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cascăm adesea când suntem obosiți... dar și chiar înainte de un test, sau când ne plictisim în timp ce încercăm să rămânem concentrați. Întinderea poate stimula sistemul nervos și poate ajuta **să rămână în alertă**."
+        },
+        {
+          "type": "takeaway",
+          "text": "Căsatul probabil nu este o lipsă de oxigen. Ar servi mai degrabă la reglarea creierului (temperatura, vigilență) și, la om, se răspândește și prin contagiune socială."
+        }
+      ]
+    }
+  ]
+}

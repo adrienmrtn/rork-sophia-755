@@ -1,0 +1,140 @@
+{
+  "id": "course_16_la_bataille_de_verdun_1916",
+  "title": "Bitva o Verdun",
+  "subtitle": "1916",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "Po **299 dní** se Francouzi a Němci od sebe odtrhli kolem Verdunu. **700 000** ztráty s téměř nulovým územním ziskem: symbol hrůzy ze zákopů.",
+  "hero": {
+    "image": "la_bataille_de_verdun_1916",
+    "ratio": "16:9",
+    "hook": "299 dní na pár kilometrů bahna a 700 000 mužů mimo akci."
+  },
+  "sections": [
+    {
+      "id": "course_16_la_bataille_de_verdun_1916_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V **1916**, během **299 dnů**, se Francouzi a Němci střetli na několika kilometrech čtverečních kolem **Verdun**, pevnosti ve východní Francii. To není žádný oslnivý průlom. Je to bitva o vyčerpání, přibližně **700 000** mrtvých nebo zraněných."
+        },
+        {
+          "type": "paragraph",
+          "text": "Verdun se stává symbolem hrůzy ze zákopů. O desetiletí později se z toho stalo také francouzsko-německé usmíření."
+        }
+      ]
+    },
+    {
+      "id": "course_16_la_bataille_de_verdun_1916_p1",
+      "title": "Německý plán: vykrvácet Francii",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Od roku 1914 je západní fronta zamrzlá v [[Zákopová válka]]: linie příkopů od Severního moře do Švýcarska. Německý generál **Erich von Falkenhayn** chce „vykrvácet Francii“. Vybere si Verdun, místo, které Paříž nemůže opustit, aniž by ztratila tvář. Operace se nazývá [[Gericht]], „soud“."
+        },
+        {
+          "type": "image",
+          "asset": "battle_of_verdun_trenches_1916",
+          "ratio": "4:3",
+          "caption": "Verdunské zákopy: krajina pohlcená dělostřelectvem."
+        },
+        {
+          "type": "funFact",
+          "text": "Zahajovací bombardování **21. února 1916** bylo tak prudké, že bylo slyšet až do Vogéz, více než **150 km**."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Únor 21**, **1200 dě** ostřeluje francouzské linie. **25**, **pevnost z Douaumont**, klíč k obraně, padl téměř bez boje. Paris teď musí vše vsadit na Verdun: Falkenhaynova past funguje."
+        }
+      ]
+    },
+    {
+      "id": "course_16_la_bataille_de_verdun_1916_p2",
+      "title": "Pétain, Posvátná cesta a rotace vojsk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Generál **Philippe Pétain** organizuje přežití sektoru. **Posvátná cesta** spojuje [[Bar-le-Duc]], město vzadu, s Verdunem: téměř **6 000 kamionů** za den, jedno vozidlo každých **14 sekund**. Když se porouchá, odtlačíme kamion do příkopu, abychom neblokovali silnici."
+        },
+        {
+          "type": "image",
+          "asset": "voie_sacree_verdun_trucks",
+          "ratio": "4:3",
+          "caption": "Voie Sacrée, životně důležitá tepna francouzského zásobování."
+        },
+        {
+          "type": "paragraph",
+          "text": "S [[Noria]] Pétain rychle střídal divize: zůstali jsme krátce na frontě, pak se nám ulevilo. Výsledek: přibližně **70 %** francouzské armády v té či oné době bojuje ve Verdunu. Bitva se stává národní zkušeností."
+        }
+      ]
+    },
+    {
+      "id": "course_16_la_bataille_de_verdun_1916_p3",
+      "title": "K čertu děl, téměř bez zisku",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V létě Verdun ulehčila francouzsko-britská ofenzíva dále na sever [[Bitva na Sommě (1916)]]. Pod vedením generála **Roberta Nivelle** Francouzi dobyli zpět Douaumont a poté Fort Vaux. Bitva skončila 18. prosince 1916. Řádky se sotva pohnuly."
+        },
+        {
+          "type": "funFact",
+          "text": "Fleury-devant-Douaumont byl dobyt a znovu obsazen **16krát** za dva měsíce, poté byl vymazán z mapy. Je to jedna z „mrtvých vesnic pro Francii“, stále spravovaná bez obyvatel."
+        },
+        {
+          "type": "paragraph",
+          "text": "Přibližně **370 000** Francouzi a **330 000** Němci padli nebo byli zmrzačeni. [[Těžké dělostřelectvo Velké války]] zabíjí víc než boj zblízka. [[Červené zóny]] zůstávají nevhodné pro jakýkoli civilní život: příliš mnoho nevybuchlé munice, příliš mnoho otrávené půdy."
+        }
+      ]
+    },
+    {
+      "id": "course_16_la_bataille_de_verdun_1916_p4",
+      "title": "Od kostnice po podání ruky",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V **Kostnice v Douaumont** (1932) jsou uloženy ostatky **130 000** smíšených francouzských a německých vojáků. **S 22. září 1984**, francouzský prezident **François Mitterrand** a německý kancléř **Helmut Kohl** se před pomníkem drží za ruce. Verdun se stává symbolem evropského míru."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "21. února 1916",
+              "title": "Gerichtova předehra",
+              "detail": "Bezprecedentní dělostřelecká palba."
+            },
+            {
+              "date": "25. února 1916",
+              "title": "vodopády Douaumont",
+              "detail": "Politický šok v Paříži."
+            },
+            {
+              "date": "léto 1916",
+              "title": "Součet",
+              "detail": "Spojenci uvolňují frontu Verdun."
+            },
+            {
+              "date": "18. prosince 1916",
+              "title": "Konec bitvy",
+              "detail": "Téměř žádný územní zisk."
+            },
+            {
+              "date": "22. září 1984",
+              "title": "Mitterrand-Kohl",
+              "detail": "Gesto francouzsko-německého smíření."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "**Verdun** (**1916**): **299** dny průmyslové války, ztráty přibližně **700 000** pro nulový územní zisk a později symbol francouzsko-německého usmíření."
+        }
+      ]
+    }
+  ]
+}

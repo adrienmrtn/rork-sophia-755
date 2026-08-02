@@ -1,0 +1,154 @@
+{
+  "id": "course_121_la_renaissance_italienne",
+  "title": "Renașterea italiană",
+  "subtitle": "secolul XIV-XVI",
+  "subject": "art",
+  "subcategory": "Painting & Movements",
+  "description": "În două secole, Italia a reinventat pictura, sculptura și arhitectura și a schimbat modul în care vedem lumea.",
+  "hero": {
+    "image": "la_renaissance_italienne",
+    "ratio": "16:9",
+    "hook": "În două secole, Italia a reinventat arta și modul nostru de a privi lumea."
+  },
+  "sections": [
+    {
+      "id": "course_121_la_renaissance_italienne_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Renașterea italiană (secolele XIV-XVI) nu este doar o schimbare de stil. Este un nou mod de a vedea lumea. În două secole, Italia a pus observația, rațiunea și individul în centrul tuturor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Născută în orașele bogate ale peninsulei, această revoluție reinventează pictura, sculptura și arhitectura. Două forțe motrice îl conduc: redescoperirea antichității grecești și romane și invenții tehnice îndrăznețe."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p1",
+      "title": "Florența, orașul care aprinde fitilul",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Totul începe în **Florența**, care a dominat economia europeană în secolul al XIV-lea datorită textilelor și băncilor. Familia **Medici** a preluat puterea acolo. Acești bancheri folosesc [[Patronaj]], finanțarea artiștilor, ca instrument de prestigiu."
+        },
+        {
+          "type": "funFact",
+          "text": "Pentru a ocoli interdicția de a împrumuta cu dobândă, Medici au inventat trucuri bancare. Biserica închide ochii atâta timp cât finanțează capele."
+        },
+        {
+          "type": "image",
+          "asset": "lorenzo_de_medici_portrait_florence",
+          "ratio": "4:3",
+          "caption": "Laurent de Medici, cunoscut sub numele de „Magnificiul”, mare protector al artiștilor."
+        },
+        {
+          "type": "paragraph",
+          "text": "În același timp, **umanismul** schimbă locul omului. Gânditori precum [[Pico della Mirandola]] susțin că ființele umane sunt capabile să înțeleagă natura prin rațiune. În **1453**, căderea Constantinopolului îi împinge pe savanți în Italia cu manuscrise grecești uitate."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p2",
+      "title": "Pictarea realului: perspectivă și corp",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În secolul al XV-lea, arhitectul **Brunelleschi** a inventat în jurul lui **1420** [[perspectiva liniară]]. A dispărut Evul Mediu, unde ceea ce era mai important era pictat mai mare: spațiul urmează acum reguli matematice, ca o fereastră deschisă către realitate."
+        },
+        {
+          "type": "image",
+          "asset": "brunelleschi_linear_perspective_florence",
+          "ratio": "4:3",
+          "caption": "Perspectiva dă iluzia de adâncime pe o suprafață plană."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Leonardo da Vinci** merge mai departe: el disecă corpurile pentru a înțelege mușchii și nervii și, de asemenea, pictează emoțiile. Vopseaua în ulei, provenită din Flandra, înlocuiește treptat [[tempera]] și permite [[clarobscur]]: aceste contraste de umbră și lumină care dau relief."
+        },
+        {
+          "type": "funFact",
+          "text": "Corpul pe care Leonardo l-a studiat cel mai mult a fost cel al unui bărbat de o sută de ani. Examinând-o, el a descris unul dintre primele cazuri cunoscute de arteră blocată de vârstă."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p3",
+      "title": "Leonardo, Michelangelo, Rafael",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La începutul secolului al XVI-lea, Roma a luat locul Florenței, purtată de papi ca **Iulius al II-lea**. Aceasta este epoca „omului complet”. **Leonardo da Vinci** este modelul: pictor, inginer, anatomist."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Michelangelo** întruchipează puterea. **David** lui devine simbolul Florenței. Între **1508** și **1512**, a pictat tavanul **Capelei Sistine**: 500 de metri pătrați pe Geneza."
+        },
+        {
+          "type": "image",
+          "asset": "michelangelo_david_sistine_chapel_ceiling",
+          "ratio": "4:3",
+          "caption": "Michelangelo, de la David până la tavanul Capelei Sixtine."
+        },
+        {
+          "type": "funFact",
+          "text": "În *Judecata de Apoi*, Michelangelo și-a pictat propria față pe piele jupuită: un mod de a exprima cât de mult îl epuizase această lucrare."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Rafael** întruchipează harul. Fresca sa *Școala din Atena* reunește marii gânditori ai Antichității într-o armonie care va servi drept model timp de secole."
+        }
+      ]
+    },
+    {
+      "id": "course_121_la_renaissance_italienne_p4",
+      "title": "O moștenire care străbate Europa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "După moartea lui Raphaël în **1520**, echilibrul este perturbat. Artiștii alungesc corpurile și forțează culorile: acesta este [[Manierism]], o artă mai agitată. Regele Franței **Francisc I** îl invită pe Leonardo și lansează **Renașterea engleză**, cu castelele din Loara."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1420",
+              "title": "Perspectivă liniară",
+              "detail": "Brunelleschi pune spațiu în ecuații, la Florența."
+            },
+            {
+              "date": "1453",
+              "title": "Căderea Constantinopolului",
+              "detail": "Savanții fug în Italia cu manuscrisele lor grecești."
+            },
+            {
+              "date": "1504",
+              "title": "David lui Michelangelo",
+              "detail": "Florența alege un simbol al mândriei civice."
+            },
+            {
+              "date": "1508-1512",
+              "title": "Capela Sixtină",
+              "detail": "Michelangelo a pictat tavanul Genesis."
+            },
+            {
+              "date": "1520",
+              "title": "Moartea lui Rafael",
+              "detail": "Înalta Renaștere se încheie, începe manierismul."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Născută la Florența datorită familiei Medici, Renașterea italiană a revoluționat arta cu perspectiva (în jurul anului 1420) și studiul corpului, înainte de a atinge apogeul la Roma cu Leonardo, Michelangelo și Rafael."
+        }
+      ]
+    }
+  ]
+}

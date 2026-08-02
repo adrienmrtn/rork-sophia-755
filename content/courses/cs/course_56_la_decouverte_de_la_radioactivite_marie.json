@@ -1,0 +1,100 @@
+{
+  "id": "course_56_la_decouverte_de_la_radioactivite_marie",
+  "title": "Objev radioaktivity",
+  "subtitle": "Marie Curie",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Marie Curie s Pierrem Curiem a Henri Becquerelem otevírá kapitolu radioaktivity. Dvě Nobelovy ceny, ohromná práce a nesmírné dědictví.",
+  "hero": {
+    "image": "la_decouverte_de_la_radioactivite_marie_curie",
+    "ratio": "16:9",
+    "hook": "Navážila tuny rudy, aby izolovala pár gramů neviditelného prvku."
+  },
+  "sections": [
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Marie Curie** (rozená Maria Skłodowska) je první ženou, která získala Nobelovu cenu. Zůstává jedinou osobou, která získala **dva** ve dvou různých vědách: ve fyzice a poté v chemii."
+        },
+        {
+          "type": "paragraph",
+          "text": "Její předmět: **radioaktivita**, tedy skutečnost, že určité atomy spontánně vysílají energii a částice."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p1",
+      "title": "Úzké dveře do vědy",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Narodila se v Polsku a odjela studovat do Paříže, protože tamní univerzity ženám zavřely mnoho dveří. Tvrdě pracuje, často v nejistých podmínkách."
+        },
+        {
+          "type": "paragraph",
+          "text": "Provdala se za **Pierre Curie**, fyzika. Společně tvořili na tu dobu vzácné laboratorní duo."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p2",
+      "title": "Pojmenujte neviditelné",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V **1896** si **Henri Becquerel** všiml, že uranové závoje zakrývají fotografické desky bez světla. Marie Curie se rozhodne tento fenomén podrobně prostudovat. Vymyslela slovo **radioaktivita**."
+        },
+        {
+          "type": "image",
+          "asset": "marie_curie_pitchblende_radioactivity",
+          "ratio": "4:3",
+          "caption": "Tuny smolince k izolaci radia a polonia."
+        },
+        {
+          "type": "paragraph",
+          "text": "S Pierrem objevuje dva nové prvky: **polonium** (pojmenovaný po Polsku) a **radium**. K jejich izolaci je třeba zpracovat obrovské množství rudy, smoly."
+        },
+        {
+          "type": "funFact",
+          "text": "Radium ve tmě slabě svítí. Nejprve jsme byli ohromeni... než jsme pochopili, jak je to nebezpečné."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p3",
+      "title": "Sláva a cena k zaplacení",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V roce **1903** obdrželi Marie, Pierre a Becquerel Nobelovu cenu za fyziku. V **1911** získala Nobelovu cenu za chemii samotná Marie. Pierre zemřel nešťastnou náhodou v roce 1906. Pokračuje."
+        },
+        {
+          "type": "paragraph",
+          "text": "Během první světové války organizovala mobilní rentgenové jednotky pro ošetřování raněných. Své tělo vystavuje dávkám, o kterých bychom dnes věděli, že jsou nepřijatelné."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p4",
+      "title": "Oboustranné dědictví",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Radioaktivita umožnila radioterapii proti některým druhům rakoviny... a také jaderným zbraním. Znalosti jsou neutrální; jeho použití není."
+        },
+        {
+          "type": "takeaway",
+          "text": "Marie Curie přeměnila podivné pozorování v novou vědu: radioaktivitu. Jeho práce otevřela moderní fyziku... za cenu rizik, která byla tehdy špatně pochopena."
+        }
+      ]
+    }
+  ]
+}

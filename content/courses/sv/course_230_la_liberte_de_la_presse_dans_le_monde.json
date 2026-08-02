@@ -1,0 +1,122 @@
+{
+  "id": "course_230_la_liberte_de_la_presse_dans_le_monde",
+  "title": "Pressfrihet runt om i världen",
+  "subtitle": "En lag under press",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Mindre än **10% före överföringar befolkning** bor i ett land där pressen verkligen är fri. Mellan statlig censur och ekonomiskt tryck är denna grundläggande rättighet på tillbakagång nästan överallt.",
+  "hero": {
+    "image": "la_liberte_de_la_presse_dans_le_monde",
+    "ratio": "16:9",
+    "hook": "Att informera kostar ibland frihet, eller till och med livet: en resa till hjärtat av en bräcklig rättighet."
+  },
+  "sections": [
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**pressfrihet** är en av de bästa indikatorerna på ett lands demokratiska hälsa. Den är inte begränsad till rätten att publicera: den inkluderar medborgarnas möjlighet att få tillgång till verifierad information oberoende av de befogenheter som finns. Över hela världen är denna rättighet under dubbelt tryck: direkt förtryck i auktoritära regimer och en mer diskret försvagning av själva demokratierna."
+        }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p1",
+      "title": "Ett allt farligare yrke",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Varje år publicerar organisationen [[Reportrar utan gränser (RSF)]] en referensrapport om hindren för journalistyrket runt om i världen."
+        },
+        {
+          "type": "image",
+          "asset": "press_freedom_world_map_RSF_index",
+          "ratio": "16:9",
+          "caption": "Mindre än 10 % av världens befolkning bor i ett land där pressen verkligen är fri."
+        },
+        {
+          "type": "paragraph",
+          "text": "Uppgifterna för 2024 är alarmerande: mindre än **10%** av världens befolkning bor i ett område där pressen arbetar utan hinder. Medan länder som Norge håller hög standard, anser stora regioner som Kina, Ryssland och Iran att undersökande journalistik är en form av svek."
+        },
+        {
+          "type": "funFact",
+          "text": "I Turkmenistan kontrollerar staten information så strikt att den förbjöd ordet \"coronavirus\" i media i början av pandemin 2020."
+        },
+        {
+          "type": "paragraph",
+          "text": "År 2023 har minst 79 journalister mist livet i utövandet av sitt yrke, ofta inriktade på att tysta pinsamma utredningar. Nästan 600 journalister fängslas varje år runt om i världen."
+        }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p2",
+      "title": "Demokratier är inte immuna",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tvärtemot vad många tror är pressfrihet inte garanterad för alltid i västländer. Det genomgick mer diskreta förvandlingar där, kopplat till [[mediakoncentration]] och det ekonomiska inflytandet från några få stora koncerner."
+        },
+        {
+          "type": "paragraph",
+          "text": "I Ungern implementerade [[Viktor Orbán]] en effektiv strategi: snarare än att förbjuda oppositionsmedia, gynnade han deras övertagande av dem som stod nära regeringen, och förvandlade gradvis medielandskapet till en officiell ekokammare."
+        },
+        {
+          "type": "paragraph",
+          "text": "I Frankrike handlar debatten främst om koncentrationen av media i händerna på ett fåtal stora grupper, vilket väcker farhågor för självcensur hos redaktionen. På andra håll ökar kränkande rättsliga förfaranden, kallade [[SLAPP]], för att skrämma kritiska röster."
+        }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p3",
+      "title": "Pengar, journalistikens nya motståndare",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bortom politiska hot står journalistiken inför en djup ekonomisk kris. Den historiska modellen, baserad på individuell försäljning och annonsering, har kollapsat med digital teknik, där de stora plattformarna nu fångar majoriteten av onlineannonseringen."
+        },
+        {
+          "type": "image",
+          "asset": "newspaper_crisis_digital_transformation_journalism",
+          "ratio": "4:3",
+          "caption": "Pressens historiska ekonomiska modell har kollapsat med digital teknik."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denna minskning av resurser får många lokala tidningar att stänga, vilket skapar \"informationsöknar\" där ingen övervakar lokala förtroendevaldas agerande. Inför detta växer nya modeller fram, finansierade genom donationer eller direktprenumerationer, som Mediapart i Frankrike eller ProPublica i USA, som bevisar att även oberoende journalistik kan vara lönsamt."
+        },
+        {
+          "type": "funFact",
+          "text": "Den första tryckta tidningen i historien, \"Relationen\", lanserades i Strasbourg 1605 av Johann Carolus, långt innan det lagliga uppfinnandet av pressfriheten."
+        }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p4",
+      "title": "Kollar verkligheten i en värld mättad med bilder",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den digitala tidsåldern har gjort informationen snabbare, men den har också öppnat dörren till [[desinformation]]. Algoritmer för sociala medier gynnar känslomässigt innehåll framför faktaanalys, vilket splittrar vår delade syn på världen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Journalistens roll utvecklas därför i riktning mot verklighetens ”checkare”, i ett permanent flöde av bilder och data. Etiska frågor blir mer komplexa, som i fotojournalistik i konfliktområden, där respekten för mänsklig värdighet ibland krockar med behovet av att visa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Att försvara pressfriheten kräver därför bättre reglering av stora digitala plattformar och stärkt medieutbildning. Utan en fri press som kan verifiera fakta riskerar den demokratiska debatten att upplösas i en värld där alla åsikter är lika, oavsett sanningshalt."
+        },
+        {
+          "type": "takeaway",
+          "text": "Mindre än 10 % av världens befolkning bor i ett land där pressen verkligen är fri. Mellan direkt förtryck, ekonomiska påtryckningar och digital desinformation är denna grundläggande rätt till demokrati på tillbakagång nästan överallt."
+        }
+      ]
+    }
+  ]
+}

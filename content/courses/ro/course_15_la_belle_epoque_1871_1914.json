@@ -1,0 +1,129 @@
+{
+  "id": "course_15_la_belle_epoque_1871_1914",
+  "title": "Belle Epoque",
+  "subtitle": "1871-1914",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "Între sfârșitul războiului din 1870 și august 1914, Europa a crezut în progres. Electricitate, expoziții, arte noi... și fracturi care duc la catastrofă.",
+  "hero": {
+    "image": "la_belle_epoque",
+    "ratio": "16:9",
+    "hook": "Patruzeci de ani de credință în progres... înainte ca totul să se schimbe în 1914."
+  },
+  "sections": [
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Belle Époque** desemnează perioada de pace relativă dintre sfârșitul [[Războiul franco-prusac]] (**1871**) și izbucnirea [[Primul Război Mondial]] (**Z1914ZZENDBOLD**). Credem în știință, în progres, în rațiune."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pentru clasele bogate din Europa de Vest, au fost patru decenii de confort și invenție. Dar sub furnir strălucesc deja fracturi sociale și rivalități care vor arunca totul în aer."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p1",
+      "title": "Când tehnologia transformă viața de zi cu zi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O a doua revoluție industrială aduce **electricitate**, **ulei**, chimie. Tramvaiul și metroul (Paris, **1900**) schimbă orașul. S-au născut mașina și avionul. Telefonul scurtează distanțele."
+        },
+        {
+          "type": "image",
+          "asset": "paris_universal_exhibition_1900",
+          "ratio": "4:3",
+          "caption": "Expoziția Universală din 1900 de la Paris, o vitrină a progresului."
+        },
+        {
+          "type": "funFact",
+          "text": "Numele „Belle Epoque” apare numai după **1914**. Contemporanii nu au trăit în „Belle Epoque”: supraviețuitorii tranșeelor ​​au fost cei care au inventat acest paradis pierdut."
+        },
+        {
+          "type": "paragraph",
+          "text": "Târgul mondial **1900** atrage **50 de milioane** vizitatori. Cinematograful fraților Lumière și Moulin Rouge fac din Paris o capitală a divertismentului. [[Pozitivismul lui Auguste Comte]], o filozofie foarte influentă, rezumă optimismul: știința va rezolva totul."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p2",
+      "title": "În culise",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În spatele bulevardelor, lucrătorii lucrează adesea **10 tigăi la 12 minereuri** pe zi, fără protecție reală. Sărăcia urbană alimentează tensiunile între clase."
+        },
+        {
+          "type": "image",
+          "asset": "eiffel_tower_1889",
+          "ratio": "4:3",
+          "caption": "Turnul Eiffel (1889), icoană a unei modernități care nu avantajează toată lumea."
+        },
+        {
+          "type": "paragraph",
+          "text": "La scară globală, Europa împarte Africa. [[Conferința de la Berlin]] (**1884-1885**) stabilește granițe fără a consulta popoarele în cauză. În Franța, [[Afacerea Dreyfus]] sfâșie Republica: un ofițer evreu, Alfred Dreyfus, este condamnat pe nedrept pentru spionaj, iar antisemitismul iese la iveală."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p3",
+      "title": "Arte noi, apoi toamna",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Artele explodează. [[Art Nouveau]] curbează fațadele. [[fauvism]] și [[Cubism]] zguduie pictura. Medicul [[Sigmund Freud]] explorează inconștientul. Albert Einstein publică [[relativitatea]] în **1905**: spațiul și timpul nu mai sunt ceea ce credeam."
+        },
+        {
+          "type": "funFact",
+          "text": "În **1913**, baletul *Ritul primăverii* de Igor Stravinsky a stârnit un asemenea scandal la Paris, încât spectatorii au ajuns în lovituri."
+        },
+        {
+          "type": "paragraph",
+          "text": "Apoi totul se schimbă. La **28 unit 1914**, arhiducele **Franz Ferdinand**, moștenitorul Austro-Ungariei, a fost asasinat la Saraievo. Roțile de viteză ale alianțelor sunt puse în mișcare. Pe **4 august**, Regatul Unit intră în război. Credința în progres moare în tranșee."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1871",
+              "title": "Sfârșitul războiului franco-prusac",
+              "detail": "Nașterea unei Germanii unificate, resentimente franceze."
+            },
+            {
+              "date": "1889",
+              "title": "Turnul Eiffel",
+              "detail": "Simbol al modernității tehnice."
+            },
+            {
+              "date": "1894-1906",
+              "title": "afacerea Dreyfus",
+              "detail": "Republica se sfâșie."
+            },
+            {
+              "date": "1900",
+              "title": "Expozitia Universala",
+              "detail": "Paris, vitrina lumii."
+            },
+            {
+              "date": "august 1914",
+              "title": "Marele Război",
+              "detail": "Belle Epoque se termină brusc."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Belle Époque (**1871-1914**) combină progresul tehnic și fracturile profunde, înainte de a se scufunda în haosul Marelui Război."
+        }
+      ]
+    }
+  ]
+}

@@ -401,10 +401,13 @@ struct CourseView: View {
         Button {
             let g = UIImpactFeedbackGenerator(style: .medium)
             g.impactOccurred()
+            // Cours verrouillé (2e+ du jour) : le bouton bas slide comme d'habitude.
+            // Le paywall ne s'ouvre que via le cadenas sur les pages floutées.
             if isCourseLocked {
-                // Free user's 2nd+ course of the day: only the intro is readable; the CTA
-                // opens the course-unlock paywall (framed as "your free course is used up").
-                presentDebloquerPaywall()
+                guard !isLastLesson else { return }
+                sessionTracker?.recordContinueTap()
+                currentIndex += 1
+                progressManager.updateLessonProgress(courseId: course.id, lessonIndex: currentIndex)
                 return
             }
             if isLastLesson {
@@ -434,15 +437,11 @@ struct CourseView: View {
             }
         } label: {
             HStack(spacing: 8) {
-                if isCourseLocked {
-                    Image(systemName: "lock.open.fill")
-                        .font(.subheadline.weight(.semibold))
-                    Text(languageManager.text("course.unlock.cta"))
-                } else {
-                    Text(isLastLesson ? languageManager.text("course.finish") : languageManager.text("common.continue"))
-                    Image(systemName: isLastLesson ? "checkmark" : "arrow.right")
-                        .font(.subheadline.weight(.semibold))
-                }
+                Text(isLastLesson && !isCourseLocked
+                      ? languageManager.text("course.finish")
+                      : languageManager.text("common.continue"))
+                Image(systemName: isLastLesson && !isCourseLocked ? "checkmark" : "arrow.right")
+                    .font(.subheadline.weight(.semibold))
             }
         }
         .buttonStyle(DSPrimaryButtonStyle())

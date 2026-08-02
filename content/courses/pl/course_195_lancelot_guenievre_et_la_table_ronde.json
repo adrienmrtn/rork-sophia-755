@@ -1,0 +1,120 @@
+{
+  "id": "course_195_lancelot_guenievre_et_la_table_ronde",
+  "title": "Lancelot, Ginewra i Okrągły Stół",
+  "subtitle": "Camelot i jego upadek",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Artur, Lancelot, Ginewra: największa legenda zachodniego średniowiecza. Ideał rycerskości zniszczony przez zakazaną miłość.",
+  "hero": {
+    "image": "lancelot_guenievre_et_la_table_ronde",
+    "ratio": "16:9",
+    "hook": "Najlepszy rycerz na świecie kocha żonę króla. Camelot nie wyzdrowieje."
+  },
+  "sections": [
+    {
+      "id": "course_195_lancelot_guenievre_et_la_table_ronde_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Legenda o królu **Artur** i jego rycerzach **Okrągłego Stołu** to wielki cykl mitologiczny zachodniego średniowiecza. Nazywamy to **Materiał z Bretanii**: mieszanka niejasnej historii, celtyckiego folkloru i chrześcijańskiej moralności."
+        },
+        {
+          "type": "paragraph",
+          "text": "W sercu tej historii rozgrywa się bardzo ludzka tragedia: zakazana miłość pomiędzy **Lancelotem**, najlepszym rycerzem, a królową **Ginewra**, żoną Artura. Ta miłość, celebrowana jako doskonałość, staje się trucizną, która powala **Camelot**."
+        }
+      ]
+    },
+    {
+      "id": "course_195_lancelot_guenievre_et_la_table_ronde_p1",
+      "title": "U źródeł mitu: między historią a folklorem celtyckim",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Żadnego jednego autora. Między VI a XV wiekiem gromadzą się historie. Za Arturem widzimy bretońskiego watażkę, być może imieniem **Artur**, który po odejściu Rzymian stawiałby opór Sasom. Wokół niego rosną **Merlinie**, wróżki, magiczne miecze."
+        },
+        {
+          "type": "image",
+          "asset": "king_arthur_excalibur_sword_stone_medieval",
+          "ratio": "4:3",
+          "caption": "Artur wyciąga miecz ze skały: znak prawowitego króla."
+        },
+        {
+          "type": "funFact",
+          "text": "W zamku Winchester w Anglii nadal wisi XIII-wieczny „Okrągły Stół”. Henryk VIII kazał go namalować, aby powiązać się z Arturem."
+        },
+        {
+          "type": "paragraph",
+          "text": "Podczas [[próba miecza]] tylko prawdziwy król może wyciągnąć **Excalibur** ze skały lub kowadła. Koronowany w Camelocie Artur założył **Okrągły Stół**. Jego okrągły kształt znosi hierarchię: wokół niego każdy rycerz jest równy swojemu sąsiadowi, łącznie z królem."
+        }
+      ]
+    },
+    {
+      "id": "course_195_lancelot_guenievre_et_la_table_ronde_p2",
+      "title": "Poszukiwanie Graala i mutacja duchowa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stopniowo walka ustępuje miejsca duchowej wyprawie: **Święty Graal**. W starych tekstach celtyckich naczynie magiczne, w XII wieku stało się kielichem Chrystusa. Wewnętrzna czystość jest tak samo ważna jak siła."
+        },
+        {
+          "type": "image",
+          "asset": "holy_grail_knights_round_table_medieval_painting",
+          "ratio": "4:3",
+          "caption": "Poszukiwanie Graala zmienia Okrągły Stół w duchową przygodę."
+        },
+        {
+          "type": "funFact",
+          "text": "Słowo „graal” pochodzi ze starożytnego języka francuskiego i początkowo oznaczało duże naczynie do serwowania mięs, a nie cenny kawałek."
+        },
+        {
+          "type": "paragraph",
+          "text": "Przy stole na przeznaczonego rycerza czeka [[Oblężenie niebezpieczne]]. Tylko **Gilead**, **Percival** i **Bohorta** docierają do Graala. **Lancelot z Jeziora**, „najlepszy rycerz na świecie”, zawodzi: miłość do Ginewry czyni go niegodnym boskiej wizji."
+        }
+      ]
+    },
+    {
+      "id": "course_195_lancelot_guenievre_et_la_table_ronde_p3",
+      "title": "Zdrada Ginewry i zburzenie porządku",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Miłość Lancelota i Ginewry ucieleśnia [[Średniowieczna miłość dworska (fin'amor)]]: rycerz oddaje się na służbę swojej pani. Ale Ginewra jest żoną mrocznego władcy. Zdrada ma charakter nie tylko małżeński: jest feudalna."
+        },
+        {
+          "type": "image",
+          "asset": "lancelot_guinevere_medieval_romance_painting",
+          "ratio": "4:3",
+          "caption": "Lancelot i Ginewra: miłość, która łamie Camelot."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Mordred**, kazirodczy siostrzeniec lub syn Artura, w zależności od wersji, ujawnia romans. Artur skazuje Ginewrę na stos. Lancelot ratuje ją, ale zabija braci **Gawaina** w walce wręcz. Rozpad Okrągłego Stołu: wojna domowa, koniec utopii."
+        }
+      ]
+    },
+    {
+      "id": "course_195_lancelot_guenievre_et_la_table_ronde_p4",
+      "title": "Koniec świata i mit o śpiącym królu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W **Camlanna** Artur zabija Mordreda i otrzymuje śmiertelną ranę. Excalibur wraca do Pani Jeziora. Ginewra trafia do klasztoru, Lancelot do pustelnika. Mówi się, że Artur wyrusza na wyspę **Avalon**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Staje się [[Rex Quondam Rexque Futurus]], „byłym królem, przyszłym królem”: śpiącym królem, który powróci w najgorszym momencie. Camelot umiera w legendzie i tak przetrwa."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Lancelot** miłość do **Ginewra** niszczy Camelot. Poszukiwanie **Graala** kończy się sukcesem tylko dla czystych: Lancelot, najlepszy rycerz, pozostaje poza świętym progiem."
+        }
+      ]
+    }
+  ]
+}

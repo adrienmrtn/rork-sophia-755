@@ -1,0 +1,114 @@
+{
+  "id": "course_41_pourquoi_le_ciel_est_il_bleu",
+  "title": "Proč je nebe modré?",
+  "subtitle": "Světlo a atmosféra",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Pohled na modrou oblohu je tak samozřejmostí, že se zapomínáme ptát proč. Odpověď spočívá ve světle Slunce a vzduchu, kterým procházíme, abychom ho viděli.",
+  "hero": {
+    "image": "pourquoi_le_ciel_est_il_bleu",
+    "ratio": "16:9",
+    "hook": "Nebe není natřeno modře: je to kouzelný trik světla a vzduchu."
+  },
+  "sections": [
+    {
+      "id": "course_41_pourquoi_le_ciel_est_il_bleu_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dívat se na modrou oblohu je tak běžné, že se zapomínáme ptát, proč tomu tak je. **atmosféra**, vrstva plynu, která obklopuje Zemi, však nemá žádnou vlastní barvu. Tato barva pochází z velmi přesného setkání mezi světlem Slunce a molekulami plynu, které se vznášejí kolem nás."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pochopit tuto modrou znamená pochopit, jak se světlo šíří a **rozptyluje**, to znamená, že se vrací ve všech směrech, místo aby šlo přímo. A milé překvapení: je to úplně stejný jev, který barví oblohu do červena a oranžova při západu slunce."
+        }
+      ]
+    },
+    {
+      "id": "course_41_pourquoi_le_ciel_est_il_bleu_p1",
+      "title": "Bílé světlo skryje všechny barvy",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sluneční světlo se nám zdá bílé, ale ve skutečnosti obsahuje všechny barvy duhy: je [[Spektrum viditelného světla]]. Každá barva odpovídá **vlnové délky**, velikosti její světelné „vlny“. Modrá a fialová mají krátké vlny; červená má dlouhé vlny."
+        },
+        {
+          "type": "funFact",
+          "text": "Na Měsíci není vzduch, který by rozptyloval světlo. Výsledek: tam zůstává obloha **co to znamená?**, i když svítí Slunce. Důkaz, že barva oblohy pochází ze vzduchu, ne ze Slunce."
+        },
+        {
+          "type": "paragraph",
+          "text": "Protože mezi Sluncem a našima očima není vzduch prázdný: je naplněn drobnými molekulami **plynu, zejména dusíkem, přibližně **Z78**%** vzduchu a kyslíkem přibližně **21%**. Jsou mnohem menší než světelné vlny. Když je paprsek zasáhne, už nejde přímo: je poslán zpět do všech směrů. Tento malý odraz je výchozím bodem pro barvu oblohy."
+        }
+      ]
+    },
+    {
+      "id": "course_41_pourquoi_le_ciel_est_il_bleu_p2",
+      "title": "Difúze: proč modrá vítězí",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V **1871** dal britský fyzik **Lord Rayleigh** tento jev do rovnice. Zjistil, že čím kratší barvu má barva, tím více se odráží ve všech směrech molekulami vzduchu. Je to [[Rayleighův rozptyl]]."
+        },
+        {
+          "type": "funFact",
+          "text": "Obloha Marsu je opakem naší: prach bohatý na železo ji během dne činí růžovou, ale její západy jsou **modrá**. Vše závisí na tom, co obsahuje vzduch."
+        },
+        {
+          "type": "image",
+          "asset": "blue_sky_sunlight_scattering_atmosphere",
+          "ratio": "4:3",
+          "caption": "Modré světlo je vzduchem rozptylováno všemi směry."
+        },
+        {
+          "type": "paragraph",
+          "text": "Konkrétně je modré světlo rozptýleno přibližně **9krát více** než červené. Červená cestuje vzduchem téměř v přímé linii, zatímco modrá se odrazí všude. To je důvod, proč, ať se podíváte kamkoli na oblohu, modrá se vždy dostane do vašich očí: celá obloha jakoby „září“ touto rozptýlenou modří."
+        }
+      ]
+    },
+    {
+      "id": "course_41_pourquoi_le_ciel_est_il_bleu_p3",
+      "title": "Tak proč ne fialová?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nabízí se logická otázka: pokud jsou nejkratší vlny nejvíce rozptýlené, měla by vyhrát fialová, protože její vlna je ještě kratší než modrá. Obloha také obsahuje hodně rozptýlené fialové."
+        },
+        {
+          "type": "paragraph",
+          "text": "Odpověď není na obloze, ale v našem oku. Barvy zachycujeme pomocí senzorů zvaných **šišky**, buněk v sítnici, které jsou citlivé na světlo. Jsou mnohem citlivější na modrou než fialovou. Kromě toho Slunce vysílá více modrého světla než fialového světla. Náš mozek pak udělá jakýsi průměr a vidí krásně modře. Zvíře citlivé na jiné barvy by nepochybně vidělo úplně jinou oblohu."
+        }
+      ]
+    },
+    {
+      "id": "course_41_pourquoi_le_ciel_est_il_bleu_p4",
+      "title": "A večerní červená?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Západ slunce se řídí stejnými pravidly, ale mění jednu věc: vzdálenost. V poledne světlo prochází tenkou vrstvou vzduchu. Večer, když je Slunce nízko, musí jeho paprsky projít **mnohem více vzduchu**, než se k nám dostanou."
+        },
+        {
+          "type": "image",
+          "asset": "sunset_red_orange_sky_atmosphere",
+          "ratio": "16:9",
+          "caption": "Na úrovni horizontu prochází světlo mnohem větší tloušťkou vzduchu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na této dlouhé cestě je všechna modrá rozptýlena ještě předtím, než k nám dorazí: je filtrována tloušťkou vzduchu. Zůstávají jen nejodolnější barvy, červená a oranžová. V případě prachu nebo znečištění přichází do hry [[Mie difuze]]: částice větší než molekuly vzduchu činí oblohu mléčnou nebo posilují tyto oranžové odstíny."
+        },
+        {
+          "type": "takeaway",
+          "text": "Obloha je modrá, protože krátké vlny jsou asi **Z9krát** více rozptýleny vzduchem než dlouhé vlny. Při západu slunce projde vzduchem tolik světla, že se k nám stále dostane jen červená."
+        }
+      ]
+    }
+  ]
+}

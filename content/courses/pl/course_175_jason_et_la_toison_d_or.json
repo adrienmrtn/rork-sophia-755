@@ -1,0 +1,116 @@
+{
+  "id": "course_175_jason_et_la_toison_d_or",
+  "title": "Jazon i złote runo",
+  "subtitle": "Wyprawa Argonautów",
+  "subject": "mythologie",
+  "subcategory": "Greece: the heroes",
+  "description": "Jazon i Argonauci udają się do Kolchidy w poszukiwaniu Złotego Runa. Za przygodą kryje się historia miłości i zdrady z magikiem Medeą.",
+  "hero": {
+    "image": "jason_et_la_toison_d_or",
+    "ratio": "16:9",
+    "hook": "Pięćdziesięciu bohaterów, magiczny statek, runo strzeżone przez smoka. I magik, bez którego nic by się nie udało."
+  },
+  "sections": [
+    {
+      "id": "course_175_jason_et_la_toison_d_or_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Jasona** gromadzi **[[Argonauci]]**, elitę greckich bohaterów, aby zdobyć **Złote Runo**: runo boskiego barana zawieszone w [[Kolchida]], regionie mniej więcej odpowiadającym dzisiejszej Gruzji."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ta podróż jest jedną z najstarszych historii nawigacyjnych na Zachodzie. Mówi o legitymacji królewskiej, boskiej pomocy... a przede wszystkim o niszczycielskiej pasji pomiędzy Jasonem i **Medea**, magikiem, który sprawi, że zwycięstwo będzie możliwe, a potem straszne."
+        }
+      ]
+    },
+    {
+      "id": "course_175_jason_et_la_toison_d_or_p1",
+      "title": "Sandał, tron, pułapka",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jason jest synem Ajzona, króla Iolcos w Tesalii. Jego wujek [[Pelias]] uzurpował sobie tron. Wychowany przez centaura [[Chiron]], Jason powraca, aby odebrać swoje dziedzictwo. Po drodze pomaga starszej kobiecie przejść przez strumień. To [[Hera]] w przebraniu. Gubi sandał w błocie."
+        },
+        {
+          "type": "funFact",
+          "text": "W Kolchidzie czasami na dnie rzek umieszczano skóry owcze, aby złapać płatki złota. „Złote runo” może mieć prawdziwy korzeń górniczy."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pelias się boi: wyrocznia ostrzegała go przed mężczyzną w jedynym sandale. Obiecuje tron, jeśli Jazon przywróci Runo strzeżone przez smoka. Jason zbudował [[Argo]], statek z gadającym dziobem, używając świętego drewna z [[Dodona]]. Na pokładzie: **Herakles**, **Orfeusz**, **Castor i Pollux** i wiele innych."
+        },
+        {
+          "type": "image",
+          "asset": "argonauts_ship_argo_jason_greek_myth",
+          "ratio": "4:3",
+          "caption": "Argo, pierwszy wielki statek w greckiej legendzie."
+        }
+      ]
+    },
+    {
+      "id": "course_175_jason_et_la_toison_d_or_p2",
+      "title": "Zderzające się skały",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Po drodze Argonauci ratują króla Fineusa przed **Harpia**, potworami, które kradną mu jedzenie. W zamian Phinée zdradza, jak pokonać **Skały Symplegades**, klify, które uderzają w każdy statek u wejścia do Morza Czarnego."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jazon wypuszcza gołębicę. Skały zamykają się na jego piórach, a następnie otwierają. Argo ledwo mija. W Kolchidzie król **Aetes** narzuca niemożliwe zadania: zaprzężenie ognistych byków, zaoranie pola [[Ares]], zasiew zębów smoka, z których rodzą się wojownicy. Bez pomocy Jason umarłby."
+        }
+      ]
+    },
+    {
+      "id": "course_175_jason_et_la_toison_d_or_p3",
+      "title": "Medea, architektka zwycięstwa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Afrodyta]], bogini miłości, sprawia, że ​​**Medea**, córka Aeetesa i kapłanka [[Hekate]], zakochuje się w Jasonie. Ona daje mu maść na ogień byków. W przypadku wojowników zrodzonych z zębów radzi mu rzucić między nich kamień: zabijają się nawzajem."
+        },
+        {
+          "type": "image",
+          "asset": "medea_jason_greek_myth_waterhouse_painting",
+          "ratio": "4:3",
+          "caption": "Medea i Jazon: magia w służbie wyprawy."
+        },
+        {
+          "type": "paragraph",
+          "text": "W końcu uśpiła smoka. Jason zdejmuje Runo. Aby uciec, Medea zabija swojego brata **Absyrtos** i rozprasza jego szczątki w morzu. Aeetes zatrzymuje się, żeby zabrać ciało. Para jest zjednoczona… i już przeklęta."
+        }
+      ]
+    },
+    {
+      "id": "course_175_jason_et_la_toison_d_or_p4",
+      "title": "Zdrada i upadek",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W Iolcos Pelias nie chce się poddać. Medea oszukuje swoje córki: one „odmładzają” ojca, tnąc go. Wypędzeni małżonkowie schronili się w Koryncie. Wiele lat później Jazon chce poślubić córkę króla Kreona. Medea mści się: otruta sukienka dla rywalki, potem morderstwo własnych dzieci."
+        },
+        {
+          "type": "image",
+          "asset": "medea_vengeance_delacroix_painting",
+          "ratio": "4:3",
+          "caption": "Zemsta Medei po zdradzie Jasona."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jason starzeje się sam. Umiera żałośnie, przygnieciony zgniłym kawałkiem Argo, pod którym odpoczywał. Bohater, który wygrał wszystko z pomocą innych, zostaje zniszczony za to, że zaparł się Tego, który go uratował."
+        },
+        {
+          "type": "takeaway",
+          "text": "Jason podbija Runo dzięki Medei i [[Argo]]. Jego zdrada zrywa pakt i prowadzi do ruiny: mit pokazuje, że bohater, który wypiera się swoich sojuszników, traci wszystko."
+        }
+      ]
+    }
+  ]
+}

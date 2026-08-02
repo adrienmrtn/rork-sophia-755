@@ -1,11 +1,14 @@
 import SwiftUI
 
 /// Page 2 — choix de la langue. Langue de l'appareil présélectionnée (`LanguageManager`).
+/// Liste verticale scrollable : on met en avant le geste de slide pour les langues hors écran.
 struct OnboardingV2Language: View {
     @Environment(LanguageManager.self) private var languageManager
     let onNext: () -> Void
 
     @State private var revealed = 0
+    @State private var showScrollHint = true
+    @State private var hintBounce = false
 
     var body: some View {
         VStack(spacing: 0) {
@@ -26,15 +29,31 @@ struct OnboardingV2Language: View {
 
             Spacer().frame(height: 28)
 
-            ScrollView(showsIndicators: false) {
-                VStack(spacing: 12) {
-                    ForEach(Array(AppLanguage.allCases.enumerated()), id: \.element.id) { index, language in
-                        languageRow(language)
-                            .opacity(index < revealed ? 1 : 0)
-                            .offset(y: index < revealed ? 0 : 18)
+            ZStack(alignment: .bottom) {
+                ScrollView(showsIndicators: false) {
+                    VStack(spacing: 12) {
+                        ForEach(Array(AppLanguage.allCases.enumerated()), id: \.element.id) { index, language in
+                            languageRow(language)
+                                .opacity(index < revealed ? 1 : 0)
+                                .offset(y: index < revealed ? 0 : 18)
+                        }
+                    }
+                    .padding(.horizontal, 24)
+                    .padding(.bottom, 36)
+                }
+                .onScrollGeometryChange(for: CGFloat.self) { geometry in
+                    geometry.contentOffset.y
+                } action: { _, offset in
+                    if offset > 24, showScrollHint {
+                        withAnimation(.easeOut(duration: 0.25)) { showScrollHint = false }
                     }
                 }
-                .padding(.horizontal, 24)
+
+                if showScrollHint {
+                    scrollHint
+                        .transition(.opacity.combined(with: .move(edge: .bottom)))
+                        .allowsHitTesting(false)
+                }
             }
 
             OnboardingV2Button(title: languageManager.text("common.continue"), action: onNext)
@@ -48,6 +67,38 @@ struct OnboardingV2Language: View {
                     }
                 }
             }
+            withAnimation(
+                .easeInOut(duration: 0.9)
+                .repeatForever(autoreverses: true)
+                .delay(0.6)
+            ) {
+                hintBounce = true
+            }
+        }
+    }
+
+    private var scrollHint: some View {
+        VStack(spacing: 0) {
+            LinearGradient(
+                colors: [OV2.bg.opacity(0), OV2.bg],
+                startPoint: .top,
+                endPoint: .bottom
+            )
+            .frame(height: 56)
+
+            HStack(spacing: 8) {
+                Image(systemName: "chevron.down")
+                    .font(.system(size: 12, weight: .bold))
+                    .offset(y: hintBounce ? 3 : 0)
+                Text(languageManager.text("onboardingV2.language.scrollHint"))
+                    .font(DS.sans(.caption, .semibold))
+                Image(systemName: "chevron.down")
+                    .font(.system(size: 12, weight: .bold))
+                    .offset(y: hintBounce ? 3 : 0)
+            }
+            .foregroundStyle(OV2.inkSecondary)
+            .padding(.bottom, 8)
+            .background(OV2.bg)
         }
     }
 

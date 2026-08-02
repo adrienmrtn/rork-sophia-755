@@ -1,0 +1,132 @@
+{
+  "id": "course_223_l_economie_circulaire",
+  "title": "Döngüsel ekonomi",
+  "subtitle": "Tek kullanımlık her şeyden uzaklaşmak",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "**Çıkartın, üretin, atın**: bu model gezegeni tüketiyor. Döngüsel ekonomi bunun tersini öneriyor: Nesneleri ve malzemeleri mümkün olduğu kadar uzun süre dolaşımda tutmak.",
+  "hero": {
+    "image": "l_economie_circulaire",
+    "ratio": "16:9",
+    "hook": "Peki ya atık olmasaydı? Doğadan ilham alan bir ekonomik modelin iddiasıdır."
+  },
+  "sections": [
+    {
+      "id": "course_223_l_economie_circulaire_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sanayi devriminden bu yana ekonomimiz tek yönde çalıştı: Kaynakları çıkarıyoruz, nesneler üretiyoruz ve sonra onları çöpe atıyoruz. Bu model kaynakların sonsuz olduğunu varsayar. Değiller."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Döngüsel ekonomi** doğadan ilham alan ve gerçekte hiçbir şeyin kaybolmadığı başka bir mantık sunuyor. Ürün ve malzemelerin değerini atığa dönüştürmek yerine mümkün olduğu kadar uzun süre dolaşımda tutmayı amaçlamaktadır."
+        }
+      ]
+    },
+    {
+      "id": "course_223_l_economie_circulaire_p1",
+      "title": "Doğrusal model sınırlarına ulaşıyor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Modern ekonomi, **doğrusal** adı verilen bir model üzerine inşa edildi: çıkar, üret, at. Doğadan hammadde alıyoruz, onlardan ürünler yapıyoruz ve bu ürünler eskidiğinde veya modası geçtiğinde atık haline geliyor."
+        },
+        {
+          "type": "image",
+          "asset": "landfill_waste_garbage_linear_economy",
+          "ratio": "16:9",
+          "caption": "“Al, yap, at” modeli kaynakların sonsuz olduğunu varsayar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu sistem kaynakların sınırsız olduğu ve doğanın tüm kirliliği absorbe edebileceği fikrine dayanmaktadır. Ancak bugün küresel ekonomi her yıl 1,7 gezegene eşdeğer kaynak tüketiyor. [[Lityum]] gibi dijital teknolojiler için gerekli olan bazı metallerin bulunması 2040 gibi erken bir tarihte zor hale gelebilir."
+        },
+        {
+          "type": "funFact",
+          "text": "İnsanlık tarafından üretilen tüm plastiğin yalnızca %9'u geri dönüştürüldü. Geri kalanı doğaya ya da çöplüklere atılıyor ve 450 yıl boyunca orada kalabiliyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Temizlik ve atık yönetimi maliyeti neredeyse hiçbir zaman bir ürünün satış fiyatına dahil edilmez. Bu, daha sonra herkes tarafından ödenen gizli bir maliyettir."
+        }
+      ]
+    },
+    {
+      "id": "course_223_l_economie_circulaire_p2",
+      "title": "Geri dönüşümden önce onarın",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Döngüsel ekonomi, her zaman aynı öncelik sırasına göre çeşitli döngüler sunar: En kısa döngü daha iyidir çünkü daha az enerji ve malzeme israfına neden olur. Her şey **eko-tasarım** ile başlar, yani dayanıklı ve sökülmesi kolay malzemeleri seçerek, bir ürünün yaratılışından itibaren çevresel etkisini düşünmek anlamına gelir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ardından **yeniden kullanma** gelir (bir nesne, ikinci el pazarında olduğu gibi dönüştürülmeden sahipliğini değiştirir), ardından bir ürünün ömrünü uzatan **onarım** gelir. Bu adımlar, bir nesnenin ömrünü gönüllü olarak kısaltan bu uygulama olan [[Planlı eskitme]] ile doğrudan mücadele eder."
+        },
+        {
+          "type": "image",
+          "asset": "recycling_sorting_waste_materials",
+          "ratio": "4:3",
+          "caption": "Geri dönüşüm, yeniden kullanım ve onarımdan sonra son çare olarak gelir."
+        },
+        {
+          "type": "paragraph",
+          "text": "**geri dönüşüm** yalnızca son çare olarak ortaya çıkar. Kullanışlı olmaya devam ediyor: Alüminyumun geri dönüştürülmesi, onu ham cevher [[Boksit]]'den çıkarmaktan %95 daha az enerji tüketir. Ancak yine de bir nesneyi yeniden kullanmaktan daha az verimlidir."
+        }
+      ]
+    },
+    {
+      "id": "course_223_l_economie_circulaire_p3",
+      "title": "Bugün neden hala zor?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tüm ilgisine rağmen döngüsel ekonomi basit bir sorunla karşı karşıya: Doğrusal model genellikle kısa vadede **daha az pahalı** kalıyor. Yeni malzemeyi çıkarmak, özellikle hammaddeler ucuz olduğunda, bazen karmaşık atıkların ayrıştırılmasından ve geri dönüştürülmesinden daha az maliyetli olur."
+        },
+        {
+          "type": "image",
+          "asset": "repair_right_electronics_reuse",
+          "ratio": "4:3",
+          "caption": "“Onarım hakkı”, üreticilerin yedek parça sağlamasını gerektirir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu durumla karşı karşıya kalan kamu otoriteleri giderek daha fazla müdahale ediyor. Avrupa Birliği 2020'de daha sıkı sürdürülebilirlik kuralları uygulayan bir plan başlattı. En önemli eksenlerden biri, elektronik cihaz üreticilerine birkaç yıl boyunca yedek parça sağlama yükümlülüğü getiren “onarım hakkı”dır."
+        },
+        {
+          "type": "paragraph",
+          "text": "Başka bir kaldıraç: Üreticilerin, ürünlerinin atık yönetimi için ödeme yapmasını sağlayan [[Genişletilmiş Üretici Sorumluluğu]]. Bu onlara daha az kirletici ve onarımı daha kolay nesneler tasarlama konusunda mali bir teşvik sağlıyor."
+        }
+      ]
+    },
+    {
+      "id": "course_223_l_economie_circulaire_p4",
+      "title": "Kaynak toplumuna doğru",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Döngüsel ekonomi yalnızca bir geri dönüşüm sorunu değil: daha ayık ve daha dayanıklı bir toplum projesidir. Bir ülke, ithal hammaddelere daha az bağımlı olarak, daha istikrarsız bir dünyada güvenlik de kazanır."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu dönüşümün başarısı aynı zamanda tüketiciler olarak bizlere de bağlı. 3R kuralı, azalt, yeniden kullan, geri dönüştür, ilk adımla başlar: azaltın, yani satın almanın gerçekten gerekli olup olmadığını kendinize sorun. İklim üzerinde en büyük etkiye sahip olan bu ilk eylemdir."
+        },
+        {
+          "type": "funFact",
+          "text": "Bugün bir ton eski akıllı telefon elektronik panosunda, geleneksel bir altın madeninden çıkarılan bir ton cevherden daha fazla altın var."
+        },
+        {
+          "type": "takeaway",
+          "text": "Döngüsel ekonomi, gezegenimizin fiziksel sınırlarına saygı göstermek amacıyla eko-tasarım, onarım ve geri dönüşüm yoluyla kaynakları dolaşımda tutarak \"çıkarma, yapma, atma\" döngüsünü kırmayı amaçlıyor."
+        }
+      ]
+    }
+  ]
+}

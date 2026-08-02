@@ -1,0 +1,120 @@
+{
+  "id": "course_196_merlin_l_enchanteur",
+  "title": "Merlin trollkarlen",
+  "subtitle": "Arthurs Mage",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Merlin, Arthurs rådgivare, profet och magiker: en gestalt född av en demon och ett dop, arkitekt av Camelot, fånge av sin egen kärlek.",
+  "hero": {
+    "image": "merlin_l_enchanteur",
+    "ratio": "16:9",
+    "hook": "Son till en demon, döpt från vaggan: Merlin tjänar det goda med krafter födda från det onda."
+  },
+  "sections": [
+    {
+      "id": "course_196_merlin_l_enchanteur_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Merlin** är den västerländska medeltidens mest kända magiker. Bard, profet, rådgivare till kung **Arthur**: han står på gränsen mellan den antika keltiska världen och kristen ridderlighet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dess natur är paradoxal. En del av honom kommer från demoner, den andra från himlen. Hans berättelse är inte en magisk show: det är kampen för en hybridväsen som väljer att tjäna det goda, tills kärleken tar bort honom från världen."
+        }
+      ]
+    },
+    {
+      "id": "course_196_merlin_l_enchanteur_p1",
+      "title": "Hybridursprunget mellan demon och dop",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I poeten **Robert de Boron** (1100-talet) vill demonerna skapa en antikrist. En [[Inkubus demon]], en ande som förenar sig med en sovande kvinna, förför en ung from kristen kvinna. Planen misslyckas: mamman bekänner och låter döpa barnet."
+        },
+        {
+          "type": "image",
+          "asset": "merlin_wizard_medieval_manuscript_illumination",
+          "ratio": "4:3",
+          "caption": "Merlin, figur av den medeltida magikern mellan skog och innergård."
+        },
+        {
+          "type": "funFact",
+          "text": "Namnet \"Merlin\" kommer från walesiskan **Myrddin**. Geoffrey av Monmouth ändrade \"d\" till \"l\" för att undvika en ordlek för nära latinets *skit*."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Dop]] raderar förbannelsen, men lämnar krafterna: kunskap om det förflutna (demoniskt arv) och gåvan från [[Profetia i medeltida kultur]]. Merlin kan ändra form. Bakom honom hittar vi **Myrddin Wyllt**, en walesisk bard från 600-talet som, galen efter ett slag, flydde in i skogen [[Celyddon]]."
+        }
+      ]
+    },
+    {
+      "id": "course_196_merlin_l_enchanteur_p2",
+      "title": "Arkitekten bakom det Arthuriska ödet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Merlin är ingen illusionist. Han är rikets garant. Han hjälper kung [[Utherpendragon]] att ta sig an egenskaperna hos hertigen av Cornwall för att ansluta sig till hertiginnan **Igerne**. Från denna natt föddes **Arthur**."
+        },
+        {
+          "type": "image",
+          "asset": "merlin_arthur_camelot_medieval_illustration",
+          "ratio": "4:3",
+          "caption": "Merlin guidar Arthur till tronen och Camelot."
+        },
+        {
+          "type": "paragraph",
+          "text": "Han uppfostrar barnet i hemlighet, orkestrerar svärdet i städet och leder sedan Arthur till Lady of the Lake för att skaffa [[Excalibur]], vars slida skyddar mot dödliga sår. På **Camelot** designar han **Runt bord** och placerar [[Belägring Farlig]], en ledig plats reserverad för den renaste riddaren. Han ser farorna komma. Han vet också att ödet alltid går över till slut."
+        }
+      ]
+    },
+    {
+      "id": "course_196_merlin_l_enchanteur_p3",
+      "title": "Trollkarlens fall: kärlek och att glömma",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Merlin möter sitt slut. Men han blir kär i **Viviane**, Lady of the Lake, nära Barentonfontänen. Han lär henne sina hemligaste trollformler, även om han vet att hon kommer att förlora den."
+        },
+        {
+          "type": "image",
+          "asset": "viviane_lady_of_the_lake_merlin_medieval_art",
+          "ratio": "4:3",
+          "caption": "Viviane låser in Merlin: slutet på magiernas tid."
+        },
+        {
+          "type": "funFact",
+          "text": "Beroende på version låser Viviane in honom i en hagtornsbuske, ett glastorn eller en **Brocéliande**-hålighet. Odödlig, Merlin är inte död: han sover utanför världen."
+        },
+        {
+          "type": "paragraph",
+          "text": "När riddarna åker till gralen har Merlins magi inte längre plats. Dess tillbakadragande markerar övergången från myternas tid till trons tid."
+        }
+      ]
+    },
+    {
+      "id": "course_196_merlin_l_enchanteur_p4",
+      "title": "Litterärt arv och ärkemagikerns gestalt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Merlin stirrade på bilden av den gamle vise mannen: skägg, stav, gåtor. Från honom kommer **Gandalf** för Tolkien och **Dumbledore** för Rowling. Han är adjuvanten som vet, men som inte kan agera i hjältens ställe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bro mellan den vilda skogen och domstolen, han håller ett [[druidisk]]-avtryck samtidigt som han ger kungarna råd. Än idag viskar han att imperier är sköra, och att visdom inte alltid skyddar en själv."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Merlin**, född av en demon och räddad genom dopet, bygger ödet för **Arthur** försvinner sedan, fånge av **Viviane**: den varaktiga modellen av den västerländska trollkarlen."
+        }
+      ]
+    }
+  ]
+}

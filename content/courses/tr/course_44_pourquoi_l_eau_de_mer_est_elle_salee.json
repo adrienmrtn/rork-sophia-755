@@ -1,0 +1,100 @@
+{
+  "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee",
+  "title": "Deniz suyu neden tuzludur?",
+  "subtitle": "Okyanuslar",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Bir litre deniz suyunda yaklaşık 35 gram tuz bulunur. Bu tuz milyarlarca yıl boyunca birikmiştir. İşte nereden geliyor?",
+  "hero": {
+    "image": "pourquoi_l_eau_de_mer_est_salee",
+    "ratio": "16:9",
+    "hook": "Irmaklar yumuşaktır. Okyanuslar tuzludur. İşin sırrı zaman ve buharlaşmadır."
+  },
+  "sections": [
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Okyanuslar gezegenin **%70**'sinden fazlasını kaplıyor. Ortalama olarak bir litre deniz suyu yaklaşık olarak **35 gram tuz** içerir. Bu bir tesadüf değil, çok uzun bir sürecin sonucudur."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tuz, hazır halde gökten “düşmez”. Kıtalardan seyahat eder, sonra okyanusta sıkışıp kalır."
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p1",
+      "title": "Tuz topraktan ilk önce gelir",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Havadan geçen yağmur bir miktar karbondioksit alır. Hafif asidik hale gelir. Kayaların üzerine düşerken yavaşça onlara saldırır: bu **kimyasal özellikleridur**."
+        },
+        {
+          "type": "image",
+          "asset": "ocean_sea_salt_evaporation",
+          "ratio": "auto",
+          "caption": "Tuz bataklıkları: Buharlaşma deniz suyunda çözünmüş tuzu yoğunlaştırır."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nehirler daha sonra çözünmüş mineralleri, özellikle de sofra tuzunun iki bileşeni olan **sodyum** ve **klorini**'yi taşır. Bunları denize atıyorlar."
+        },
+        {
+          "type": "funFact",
+          "text": "Okyanus tabanındaki su altı volkanları ve kaplıcalar da tuz ekliyor. Ancak asıl kısım hala kıtalardan geliyor."
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p2",
+      "title": "Nehirler neden tuzlu değildir?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Güzel soru: Eğer nehirler tuz getiriyorsa, Rhône veya Seine'nin suyu neden tuzlu değil? Çünkü oradaki tuz çok seyrelmiş ve nehirlerdeki su sürekli yenilendiği için."
+        },
+        {
+          "type": "paragraph",
+          "text": "Okyanusta ise durum farklıdır. Güneşin altında su **buharlaşır** ve gökyüzüne geri döner. Tuz, **kalır**. Yıllar geçtikçe, yüzyıllar boyunca birikiyor. Biz buna [[Hidrolojik döngü ve tuz birikimi]] diyoruz."
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p3",
+      "title": "Tuz aynı zamanda okyanusları da dolaştırır",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tuzlu su, tatlı suya göre daha **yoğun** (aynı hacim için “daha ​​ağırdır”). Kutuplarda yüzey suyu donduğunda tuzun bir kısmı çevredeki sıvı suya salınır. Bu su daha da yoğunlaşarak dibe doğru iner."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu hareket büyük okyanus akıntılarının yönlendirilmesine yardımcı olur. Bu akımlar ısıyı ve besinleri dünyanın her yerine taşır. Tuz sadece bir zevk meselesi değildir; gezegenin iklim motorunun bir parçasıdır."
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p4",
+      "title": "Her yerde aynı tuz değil",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tuzluluk her yerde aynı değildir. Ekvator yakınında güçlü buharlaşma tuzun yoğunlaşmasına neden olabilir. Büyük nehirlerin veya eriyen buz kütlelerinin yakınında su daha yumuşaktır. Ölü Deniz uç bir örnektir: çok az su ayrılır, çok fazla tuz kalır."
+        },
+        {
+          "type": "takeaway",
+          "text": "Deniz suyu tuzludur çünkü nehirler kıtalardan mineraller getirir ve buharlaşma tuzu okyanusta bırakır. Bu birikim milyarlarca yıldır devam ediyor."
+        }
+      ]
+    }
+  ]
+}

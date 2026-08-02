@@ -1,0 +1,106 @@
+{
+  "id": "course_48_comment_fonctionne_la_memoire",
+  "title": "Hoe werkt het geheugen?",
+  "subtitle": "Brein",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Het geheugen is geen camera. Elke herinnering wordt gereconstrueerd. Dit is hoe de hersenen coderen, opslaan... en soms uitvinden.",
+  "hero": {
+    "image": "comment_fonctionne_la_memoire",
+    "ratio": "16:9",
+    "hook": "Onthouden is niet het herlezen van een bestand. Het reconstrueert een scène."
+  },
+  "sections": [
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_intro",
+      "title": "Inleiding",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We stellen ons het geheugen vaak voor als een harde schijf: we nemen op, we slaan op, we herlezen. Zo werken de hersenen niet. Elke keer dat je eraan denkt, **herbouwen** een scène uit fragmenten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Het is krachtig... en feilbaar. Dit begrijpen betekent begrijpen waarom we vergeten, waarom we fouten maken en waarom we leren."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p1",
+      "title": "Meerdere herinneringen, niet slechts één",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "human_brain_anatomy",
+          "ratio": "4:3",
+          "caption": "Verschillende delen van de hersenen verwerken verschillende vormen van geheugen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Allereerst is er het [[Werkgeheugen]]: datgene wat je een paar seconden “in gedachten” houdt, zoals een telefoonnummer. Het is beperkt, gemiddeld ongeveer **7 elementen**. Dan **langegheugen**: feiten, herinneringen aan gebeurtenissen, vaardigheden zoals fietsen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Deze systemen leven niet allemaal op dezelfde plek in de hersenen. De **prefrontale cortex**, het voorste deel van de hersenen achter het voorhoofd, helpt veel bij het werkgeheugen. Andere regio's, zoals de **neocortex**, de buitenste laag van de hersenen, slaan de lange termijn op."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p2",
+      "title": "Hoe een herinnering wordt vastgelegd",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "hippocampus_brain_anatomy_scan",
+          "ratio": "4:3",
+          "caption": "De hippocampus, een diepe structuur, helpt bij het vormen van nieuwe herinneringen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Om informatie van kwetsbaar naar duurzaam te laten gaan, moeten de hersenen de verbindingen tussen **neuronen**, de zenuwcellen, versterken. We hebben het over **consolidatie**, de transformatie van een recente herinnering in een blijvend spoor. Een kleine structuur genaamd **zeepaardje**, in de vorm van een zeepaardje in de temporale kwab, speelt een sleutelrol in herinneringen aan gebeurtenissen."
+        },
+        {
+          "type": "funFact",
+          "text": "Slaap, vooral bepaalde fasen, helpt om te consolideren wat we gedurende de dag hebben geleerd. Herzien en dan slapen werkt vaak beter dan herzien tot 3 uur 's nachts."
+        },
+        {
+          "type": "paragraph",
+          "text": "Een bekende regel, gekoppeld aan **-onderzoeker Donald Hebb**: neuronen die samen vuren, hebben de neiging zich sterker te verbinden. Samenvattend: “wat samen licht, verbindt samen”. Dit is het principe van **neuroplasticitis**, het vermogen van de hersenen om hun verbindingen te wijzigen."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p3",
+      "title": "Onthouden is wijzigen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wanneer u een herinnering oproept, wordt deze tijdelijk **kneedbaar**, bewerkbaar. Details uit het heden kunnen naar binnen glippen. Vervolgens slaan de hersenen het weer op. Daarom kunnen twee getuigen van hetzelfde ongeval verschillende versies vertellen."
+        },
+        {
+          "type": "paragraph",
+          "text": "We kunnen zelfs **onze wals** creëren: scènes waarvan we denken dat ze waar zijn, maar die nooit hebben plaatsgevonden, of niet zo. Het brein vult de gaten op met wat het al weet."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p4",
+      "title": "Vergeten is niet altijd een mislukking",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Als je elk onnodig detail zou onthouden, zou je verzadigd zijn. Vergeten helpt ons te generaliseren, te beslissen en de essentie te behouden. Een goed geheugen sorteert zoveel als het vasthoudt."
+        },
+        {
+          "type": "takeaway",
+          "text": "Het geheugen is een actieve reconstructie, geen perfecte registratie. Het is afhankelijk van verschillende systemen, wordt vooral tijdens de slaap geconsolideerd en kan bij elke herinnering vervormd raken."
+        }
+      ]
+    }
+  ]
+}

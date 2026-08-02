@@ -1,0 +1,140 @@
+{
+  "id": "course_193_quetzalcoatl",
+  "title": "Quetzalcoatla",
+  "subtitle": "Pierzasty Wąż",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Quetzalcoatl, Pierzasty Wąż, jest bogiem cywilizacji mezoamerykańskiej. Jej mit łączy w sobie stworzenie, wygnanie i fatalne spotkanie z Cortésem.",
+  "hero": {
+    "image": "quetzalcoatl",
+    "ratio": "16:9",
+    "hook": "Bóg, król i proroctwo: Pierzasty Wąż obejmuje dwa tysiące lat historii Meksyku."
+  },
+  "sections": [
+    {
+      "id": "course_193_quetzalcoatl_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Quetzalcoatla**, „Pierzasty Wąż”, to jedna z najbogatszych postaci w prekolumbijskim Meksyku. Jest czczony od ponad dwóch tysiącleci, od [[Teotihuacan]], dużego miasta na centralnym płaskowyżu, po Azteków, a wśród Majów pod nazwą [[Kukulkan]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jednoczy ziemię (wąż) i niebo (pióro). Bóg cywilizacji, wiedzy i porządku moralnego, jego mit w końcu krzyżuje się z prawdziwą historią: hiszpańskim podbojem **1519**."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p1",
+      "title": "Bóg, który wynalazł kukurydzę",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W [[nahuatl]], **Quetzalcoatla** pochodzi od [[kwezal]], ptaka z zielonymi piórami, oraz od *płaszcz*, węża. To zjednoczenie czyni go pomostem między człowiekiem a boskością."
+        },
+        {
+          "type": "image",
+          "asset": "quetzalcoatl_feathered_serpent_aztec_sculpture",
+          "ratio": "4:3",
+          "caption": "Quetzalcoatl, Pierzasty Wąż: ziemia i niebo splecione."
+        },
+        {
+          "type": "paragraph",
+          "text": "W [[Kosmogonia Pięciu Słońc]] schodzi do [[Mictlan]], świata umarłych, aby zebrać kości dawnych ludzi. Przywraca je do życia swoją krwią. Następnie kradnie mrówkom **kukurydzę**: założycielskie pożywienie Meksyku. Jako bóg wiatru otwiera także drogę deszczom [[Tlaloc]]."
+        },
+        {
+          "type": "funFact",
+          "text": "Pióra ogona quetzala mogą mierzyć **60 cm**. Wśród Majów i Azteków za zabicie ptaka groziła kara śmierci: odebrano mu kilka piór, a następnie wypuszczono."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p2",
+      "title": "Król-kapłan Tuły",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mit ma także oblicze historyczne: **Topiltzina Quetzalcoatla**, król-kapłan **Tuła** w X wieku. Chciałby zreformować kult i zastąpić ofiary ludzkie ofiarami z kwiatów i motyli."
+        },
+        {
+          "type": "image",
+          "asset": "tula_toltec_pyramid_warriors_sculpture_mexico",
+          "ratio": "4:3",
+          "caption": "Tula, miasto Tolteków powiązane z panowaniem i upadkiem Quetzalcoatla."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jego rywal **Tezcatlipoca** namawia go do wypicia pulque, sfermentowanego napoju. Upokorzony król zesłany na wschód. Według legendy obiecuje wrócić za rok „Un Reed”. Ta obietnica będzie miała wagę."
+        },
+        {
+          "type": "funFact",
+          "text": "Po swoim odejściu Quetzalcoatl czasami staje się Gwiazdą Poranną: planetą Wenus. Bóg nie umiera, on zmienia formę."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p3",
+      "title": "1519: kiedy mit spotyka Cortésa",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W **1519** **Hernána Cortésa** przybywa na wschód, rok „Jednej Trzciny” kalendarza azteckiego, ten, w którym oczekiwano powrotu boga. Cesarz **Montezumy II** waha się: czy powinien walczyć z najeźdźcą, czy powitać bóstwo?"
+        },
+        {
+          "type": "image",
+          "asset": "herna_u0301n_corte_u0301s_arrival_mexico_1519_moctezuma_painting",
+          "ratio": "4:3",
+          "caption": "1519: przybycie Cortésa spełnia obietnicę boskiego powrotu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wysyła dary ze złota i piór. [[Konkwistadorzy]] postrzegają to jako zaproszenie. Mit, prawdziwy lub wzmocniony po fakcie, staje się bronią psychologiczną u schyłku [[Tenochtitlan]], stolicy Azteków."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Mit",
+              "title": "Twórca",
+              "detail": "Kości umarłych, boska krew, dar kukurydzy."
+            },
+            {
+              "date": "X wiek",
+              "title": "Wygnanie z Tuły",
+              "detail": "Król-kapłan udaje się na wschód."
+            },
+            {
+              "date": "1519",
+              "title": "Cortes",
+              "detail": "Oczekiwany powrót staje się podbojem."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p4",
+      "title": "Symbol, który nigdy nie umiera",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Po podboju Quetzalcoatl nie zniknął. Niektórzy mnisi wierzą, że widzą tam apostoła. Później niepodległy Meksyk uczynił z niego symbol prekolumbijskiej wielkości. XX-wieczni muraliści, tacy jak Diego Rivera, przedstawiają go jako duszę kraju."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nawet dzisiaj Pierzasty Wąż wyraża tożsamość: korzenie w ziemi, ambicje zwrócone ku niebu."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Quetzalcoatla**, Pierzasty Wąż, jest bogiem cywilizacji mezoamerykańskiej. Stwórca, król na wygnaniu, a następnie fatalna przepowiednia w **1519**, pozostaje centralnym symbolem Meksyku."
+        }
+      ]
+    }
+  ]
+}

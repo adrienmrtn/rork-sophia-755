@@ -1,0 +1,145 @@
+{
+  "id": "course_131_la_naissance_de_la_musique_electronique",
+  "title": "Az elektronikus zene születése",
+  "subtitle": "1920-1990",
+  "subject": "art",
+  "subcategory": "Music",
+  "description": "Theremintől Chicagó és Detroit klubjaiig az elektronikus zene zenekar nélkül talál ki hangokat, és átalakítja a világtáncot.",
+  "hero": {
+    "image": "la_naissance_de_la_musique_electronique",
+    "ratio": "16:9",
+    "hook": "A laboratóriumoktól a táncparkettig: hogyan találták ki a gépek az új zenét."
+  },
+  "sections": [
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az elektronikus zene nem a szórakozóhelyeken kezdődik. Laboratóriumokban születik, amikor a feltalálók olyan hangokat keresnek, amiket hegedűből vagy zongorából lehetetlen kivenni."
+        },
+        {
+          "type": "paragraph",
+          "text": "Az 1920-as évek [[Theremin]]-jétől a [[Chicago Ház]]-ig és a [[Detroiti techno]]-ig egy ötlet ível át az évszázadon: a gép nem csak rögzít, hanem alkot is. Ma a világpop és a [[diagramok]] nagy részét strukturálja."
+        }
+      ]
+    },
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_p1",
+      "title": "Az úttörők: Theremintől a musique betonig",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A **1920**-ben az orosz feltaláló, **Leon Theremin** (Lev Termen) megtervezte a [[Theremin]]-t: egy érintés nélkül játszott eszközt. A kezek az antennák közelében mozognak elektromágneses térben. A hang siklik, szinte hangos, és hamarosan a sci-fi filmeket is kísérti."
+        },
+        {
+          "type": "image",
+          "asset": "theremin_instrument_leon_theremin_1920",
+          "ratio": "4:3",
+          "caption": "A Theremin: egy hangszer, amelyet a levegőben játszanak, a húrok érintése nélkül."
+        },
+        {
+          "type": "paragraph",
+          "text": "1945 után a kutatás megváltoztatta a terepet. Párizsban a közrádióban **Pierre Schaeffer** és **Péter Henry** feltalálta a zenei betont: a mindennapi zajok rögzítését, majd vágását, megfordítását, mágnesszalagra hurkolását. Kölnben más stúdiók a tiszta szintézist részesítik előnyben: oszcillátorokból születő hangok, akusztikus forrás nélkül. A jelenlegi termelést továbbra is ez a két út támasztja alá: az egyik oldalon a [[mintavétel]], a másik oldalon a szintézis."
+        },
+        {
+          "type": "funFact",
+          "text": "Theremin bemutatta hangszerét Leninnek. A szovjet vezető lenyűgözve állítólag több száz példányt kért, hogy elterjessze a technikai modernitást a Szovjetunióban."
+        }
+      ]
+    },
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_p2",
+      "title": "A Moog, Wendy Carlos és a Kraftwerk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az 1960-as években **Robert Moog** amerikai mérnök tranzisztorokkal miniatürizálta a szintetizátort. A **1968**-ben **Wendy Carlos** *Bekapcolt Bach* című albuma bizonyítja, hogy az elektronika képes klasszikus komplexitást hordozni. A kütyü hangszerré válik."
+        },
+        {
+          "type": "image",
+          "asset": "moog_synthesizer_robert_moog_1960s",
+          "ratio": "4:3",
+          "caption": "A Moog szintetizátor: a gép elhagyja a labort a stúdióba."
+        },
+        {
+          "type": "paragraph",
+          "text": "Düsseldorfban a német **Kraftwerk** csoport, amelyet **Ralf Hütter** és **Florian Schneider** alapított, hideg és ismétlődő popot kényszerít. A *Autópálya* (**1974**) és a *Az embergép* (**1978**) az autópályáról, a robotról, a városról énekelnek. Ritmusuk később az amerikai hip-hop és az európai tánczenét táplálta."
+        },
+        {
+          "type": "image",
+          "asset": "kraftwerk_band_dusseldorf_1970s",
+          "ratio": "4:3",
+          "caption": "Kraftwerk: az ember-gép, mint művészi személyiség."
+        },
+        {
+          "type": "funFact",
+          "text": "Egyes turnékon a Kraftwerk manökeneket küldött a maguk képében a sajtótájékoztatókra, a végletekig feszegetve az ember-gép fogalmát."
+        }
+      ]
+    },
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_p3",
+      "title": "Chicago és Detroit: elektronikus tánc",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az 1980-as években az olyan megfizethető gépek, mint a **Roland TR-808** dobgép, megváltoztatták a játékot. Chicagóban, a fekete és meleg közösségek által látogatott klubokban a DJ **Frankie Knuckles** finomítja a [[Chicago Ház]]-t: szabályos 4/4-es ritmus, diszkóból örökölt melegség."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Detroit**-ben, az autógyárak hanyatlásával jellemezhető városban három egyetemi barát (**Juan Atkins**, **Derrick May**, **Kevin Saunderson**) sötétebb esztétikát talál ki: a ZZG0GZZZZDetroitiXno-t. Európába exportálva erős visszhangra talált Berlinben a fal leomlása után. [[Detroiti techno]]"
+        },
+        {
+          "type": "funFact",
+          "text": "A TR-808 kereskedelmi kudarcot vallott: a profik „irreálisnak” találták. Használtan adják el, és a chicagói tönkrement DJ-k fegyverévé válik."
+        }
+      ]
+    },
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_p4",
+      "title": "A számítógép, mindenki stúdiója",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az 1990-es évektől a [[számítógépes zenei szoftverek]] (számítógéppel segített zene) egy egyszerű PC-t stúdióvá alakított. Az elektronika elhagyja a klubot reklám, mozi és szinte minden pop miatt. A [[Chicago house és Detroit techno]] egy globális nyelv gyökerei maradnak."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1920",
+              "title": "Theremin",
+              "detail": "Leon Theremin feltalál egy hangszert, amelyet érintés nélkül játszanak."
+            },
+            {
+              "date": "1948-1950",
+              "title": "Konkrét zene",
+              "detail": "Schaeffer és Henry manipulálják a Párizsban rögzített hangokat."
+            },
+            {
+              "date": "1968-1978",
+              "title": "Moog és Kraftwerk",
+              "detail": "A szintetizátor belép a tömegkultúrába."
+            },
+            {
+              "date": "1980-as évek",
+              "title": "House és techno",
+              "detail": "Chicago és Detroit feltalálják a modern elektronikus táncot."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Az 1950-es években laboratóriumokban született elektronikus zene ma a világ produkciójának nagy részét alkotja, a klubtól a slágerparádéig."
+        }
+      ]
+    }
+  ]
+}

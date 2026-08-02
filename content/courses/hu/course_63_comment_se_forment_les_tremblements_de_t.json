@@ -1,0 +1,116 @@
+{
+  "id": "course_63_comment_se_forment_les_tremblements_de_t",
+  "title": "Hogyan jönnek létre a földrengések?",
+  "subtitle": "Hibák és hullámok",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "A Földön minden évben több százezer földrengés történik. A legtöbb láthatatlan. Néhányuk egész várost megváltoztat.",
+  "hero": {
+    "image": "comment_se_forment_les_tremblements_de_terre",
+    "ratio": "16:9",
+    "hook": "A földrengés nem a föld szeszélye. Ez egy olyan energia, amely túl sokáig várt."
+  },
+  "sections": [
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A Földön évente körülbelül **500 000 észlelhető földrengés** történik. Csak egy kis része okoz nagy károkat. A földrengés nem véletlen: a sziklákban felhalmozódott energia hirtelen vége."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ennek megértéséhez a bolygó felszínét mozgó lemezek rejtvényének kell tekintenünk. Ahol ezek a lemezek egymáshoz dörzsölődnek, ott feszültség nő… amíg el nem törik."
+        }
+      ]
+    },
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_p1",
+      "title": "Folyamatosan mozgó lemezek",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A Föld felszíne körülbelül tíz nagy **tektonikus lemezre** van felosztva. A kabát puhább rétegén, a [[Asztenoszféra]]-en csúsznak. A sebességük? Körülbelül **1-10 cm-es ventilátor**, körülbelül annyi, mint egy köröm növekedése."
+        },
+        {
+          "type": "image",
+          "asset": "earthquake_collapsed_buildings_urban",
+          "ratio": "auto",
+          "caption": "A földrengések hirtelen felszabadítják a hibák során felhalmozódott energiát."
+        },
+        {
+          "type": "paragraph",
+          "text": "A határokon három forgatókönyv dominál. A lemezek eltávolodnak egymástól (óceáni gerincek). Összeütköznek: néha az egyik a másik alá merül, ez a [[Szubdukció]]. Vagy egymás mellett csúsznak, például a [[A San Andreas-hiba]] mentén Kaliforniában, körülbelül **1 300 km** hosszúságban."
+        },
+        {
+          "type": "funFact",
+          "text": "A San Andreas mentén Los Angeles évente körülbelül **6 cm**-vel közelebb kerül San Franciscóhoz. **15 millió évben** a két város szomszédos lenne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Különösen ezeken a határokon fordulnak elő földrengések. A lemezek mozgását a kőzetek súrlódása akadályozza. Az energia csendben halmozódik fel."
+        }
+      ]
+    },
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_p2",
+      "title": "Amikor a hiba elenged",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Földrengés történik a **hiba** mentén: két sziklatömb közötti törés. Elméletileg a lemezeknek folyamatosan csúszniuk kell. A gyakorlatban a súrlódás gyakran blokkolja ezt a csúszást."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ez idő alatt a plakkok tovább nőnek. A szikla kissé deformálódik, mint egy íj. Rugalmas kényszerekről beszélünk. Ez évtizedekig, néha évszázadokig tarthat."
+        },
+        {
+          "type": "paragraph",
+          "text": "Az ellenállási határ túllépése esetén a blokkok hirtelen elcsúsznak. Az energia **eizmikus hullámok** formájában távozik. A mélységi töréspont neve **fókusz**. A felszínen a pont fent a **epicentrum**, ahol a hatások gyakran a legerősebbek."
+        }
+      ]
+    },
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_p3",
+      "title": "Az erő mérése, a szökőártól való félelem",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A földrengés energiájának mérésére a szeizmológusok elsősorban a [[nagyságrendi skála]] momentumot használják. Ez egy logaritmikus skála: minden fok megszorozza az energiát hozzávetőlegesen **32**-vel. Egy **8** méretű földrengés ezért körülbelül **1000-szer** több energiát szabadít fel, mint egy **6** erősségű földrengés."
+        },
+        {
+          "type": "funFact",
+          "text": "Vannak **0** vagy negatív erősségű földrengések is. Ezek nagyon kicsi események, csak nagyon érzékeny érzékelőkkel láthatók."
+        },
+        {
+          "type": "paragraph",
+          "text": "A modern műszerekkel valaha mért legerősebb a **Valdivia**, Chilében, **1960**-ben: **9,5** magnitúdó. Ha a fókusz az óceán alatt van, és megemeli a tengerfenéket, az elmozdult vízoszlop **cunami**-t hozhat létre. **2004**-ben egy **9,1** erejű földrengés Szumátra közelében szökőárt váltott ki, amely 14 országot sújtott, és körülbelül **227 000** életét követelte."
+        }
+      ]
+    },
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_p4",
+      "title": "Hullámok, éberség és épületek, amelyek ellenállnak",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A szakítás után többféle hullám távozik. A **P hullámok** (elsődleges) érkeznek először: összenyomják a sziklát, mint egy harmonika. Aztán jönnek a **ZZ** (másodlagos) hullámok, lassabbak és gyakran pusztítóbbak. A felszíni hullámok ekkor nagyon jól láthatóan oszcillálják a talajt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Még nem tudjuk, hogyan lehet megjósolni egy nagy földrengés pontos napját. Másrészt feltérképezzük a kockázati területeket. A [[Szeizmikus tervezés]] ütésálló épületeket tervez: mobil alapokat, óriás lengéscsillapítókat, energiát elnyelő szerkezeteket. Japánban a korai figyelmeztetések észlelik a P-hullámokat, és leállíthatják a gázt vagy lelassíthatják a vonatokat, mielőtt a legveszélyesebb hullámok megérkeznének."
+        },
+        {
+          "type": "takeaway",
+          "text": "Földrengés akkor következik be, amikor a törés mentén megakadt sziklák hirtelen több évtizedes feszültséget oldanak fel. Az energia hullámokban terjed, és minden egyes magnitúdófok megszorozza ezt az energiát körülbelül **32**-vel."
+        }
+      ]
+    }
+  ]
+}

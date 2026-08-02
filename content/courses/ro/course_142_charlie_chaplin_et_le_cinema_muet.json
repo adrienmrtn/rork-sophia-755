@@ -1,0 +1,131 @@
+{
+  "id": "course_142_charlie_chaplin_et_le_cinema_muet",
+  "title": "Charlie Chaplin și cinematograful mut",
+  "subtitle": "1889-1977",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "**Charlie Chaplin** îl inventează pe Charlot, un vagabond în pălărie melon și devine primul star mondial de cinema. De la tăcut la vorbit, el transformă râsul în artă.",
+  "hero": {
+    "image": "charlie_chaplin_et_le_cinema_muet",
+    "ratio": "16:9",
+    "hook": "Înainte de radio și TV, un rătăcitor mut a făcut să râdă întreaga planetă."
+  },
+  "sections": [
+    {
+      "id": "course_142_charlie_chaplin_et_le_cinema_muet_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Charlie Chaplin** (1889-1977) este prima celebritate globală adevărată. Într-o eră a sărăciei industriale, personajul său **Charlotte**, un vagabond demn și stângaci, oferă o față a umanității. Fără să vorbească, face oamenii să râdă și să plângă la Tokyo, Paris sau New York."
+        },
+        {
+          "type": "paragraph",
+          "text": "Acest curs urmărește traiectoria lui: de la originile cinematografiei la capodoperele mute, apoi la exilul forțat. Chaplin nu este doar un clovn. Este un autor total."
+        }
+      ]
+    },
+    {
+      "id": "course_142_charlie_chaplin_et_le_cinema_muet_p1",
+      "title": "De la cinematograf la Hollywood",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cinematograful s-a născut dintr-o invenție franceză: [[Cinematograf]] al [[Frații Lumière și cinematograful timpuriu]], patentat în **1895**. **28 decembrie 1895**, la Grand Café de Paris, a avut loc prima proiecție publică plătită. Primele filme sunt documente scurte: o ieșire din fabrică, un tren într-o gară."
+        },
+        {
+          "type": "image",
+          "asset": "lumiere_brothers_first_cinema_projection_paris_1895",
+          "ratio": "4:3",
+          "caption": "1895: cinematograful devine un spectacol colectiv la Paris."
+        },
+        {
+          "type": "paragraph",
+          "text": "Foarte repede, [[Georges Méliès]], iluzionist francez, a inventat ficțiunea și trucurile. Apoi, industria este structurată în Statele Unite. **Hollywood** devine capitala viselor, studiourile sale producând filme pe o linie de asamblare. În această fabrică se va stabili Chaplin."
+        }
+      ]
+    },
+    {
+      "id": "course_142_charlie_chaplin_et_le_cinema_muet_p2",
+      "title": "Charlot, străinul universal",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Născut în sărăcie la Londra în **1889**, Charles Spencer Chaplin a crescut între cabarete și case pentru săraci. Antrenat la [[music-hall]], a ajuns la Hollywood. În **1914**, a inventat aproape accidental costumul lui **Charlotte**: pălărie melon prea mică, pantaloni prea largi, baston și mustață."
+        },
+        {
+          "type": "image",
+          "asset": "charlie_chaplin_tramp_bowler_hat_cane",
+          "ratio": "4:3",
+          "caption": "Charlot: un domn fără bani, recunoscut într-o siluetă."
+        },
+        {
+          "type": "funFact",
+          "text": "Chaplin a adunat costumul în câteva minute într-un dressing de studio, împrumutând haine prea mari și prea mici de la ceilalți actori."
+        },
+        {
+          "type": "paragraph",
+          "text": "Charlot nu este doar amuzant. El simbolizează omul care se agață de demnitatea sa în ciuda sărăciei. Chaplin folosește [[Slapstick]], comedia căderilor și loviturilor, dar adaugă o emoție rară: tandrețea."
+        }
+      ]
+    },
+    {
+      "id": "course_142_charlie_chaplin_et_le_cinema_muet_p3",
+      "title": "Rezistă vorbirii, înfruntă dictatori",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În **1927**, cinematograful sonor sosește cu *Cântăreața de jazz*. Chaplin, co-fondator al [[Artiști uniți]], rezistă. A-i oferi lui Charlot o voce înseamnă a-i rupe universalitatea. Prin urmare, continuă să tace cu *Luminile orașului* (**1931**)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Apoi istoria îl ajunge din urmă. În **1940**, a regizat *Dictatorul*, o satira lui **Adolf Hitler**. Este primul său film care vorbește complet, filmat în timp ce Statele Unite erau încă ferite de nazism. Clovnul devine un artist dedicat."
+        }
+      ]
+    },
+    {
+      "id": "course_142_charlie_chaplin_et_le_cinema_muet_p4",
+      "title": "Exilul și moștenirea unui autor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "După 1945 au fost înființate [[Războiul Rece]] și [[macartismul]]. Bănuit de idei de stânga, Chaplin este monitorizat. În **1952**, când a plecat în Europa, Statele Unite i-au interzis să se întoarcă. S-a stabilit în [[Vevey]], Elveția, pentru tot restul vieții."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1895",
+              "title": "Nașterea cinematografiei",
+              "detail": "Prima proiecție publică a fraților Lumière."
+            },
+            {
+              "date": "1914",
+              "title": "Nașterea lui Charlot",
+              "detail": "Chaplin își inventează costumul legendar."
+            },
+            {
+              "date": "1940",
+              "title": "Dictatorul",
+              "detail": "Primul film vorbitor al lui Chaplin, satira lui Hitler."
+            },
+            {
+              "date": "1952",
+              "title": "Exilul forțat",
+              "detail": "Interzis de a rămâne în Statele Unite, a plecat în Elveția."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Chaplin a inventat un limbaj universal tăcut. Autor complet (actor, regizor, compozitor), a dovedit că cinematografia populară poate fi și o artă politică și emoțională."
+        }
+      ]
+    }
+  ]
+}

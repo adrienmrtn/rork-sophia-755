@@ -1,0 +1,114 @@
+{
+  "id": "course_42_pourquoi_reve_t_on",
+  "title": "Miért álmodunk?",
+  "subtitle": "Agy és alvás",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Minden éjjel körülbelül két órát álmodsz. A legtöbb álom elhalványul, amikor felébredsz. Íme, mit ért ma a tudomány erről a rejtélyről.",
+  "hero": {
+    "image": "pourquoi_reve_t_on",
+    "ratio": "16:9",
+    "hook": "Hat évről álmodozol az életedből. És szinte mindent elfelejtesz."
+  },
+  "sections": [
+    {
+      "id": "course_42_pourquoi_reve_t_on_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Minden éjjel körülbelül **két órát** álmodozik. Egy életen át ez majdnem **kalap ev**. Amikor azonban felébredsz, a legtöbb ilyen történet másodperceken belül eltűnik."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nem minden tudós ért egyet a „miért” kérdésben. De egyre jobban tudják, **amikor** álmodunk, és hogy mit csinál az agy ezalatt: újraszervezi az emlékeket, teszteli a forgatókönyveket és megemészti az érzelmeket."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p1",
+      "title": "Az alvás nincs „kikapcsolva”",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az alvás nem jelenti a teljes kikapcsolást. Körülbelül **ciklusokkal** **90 százalék** halad előre, éjszakánként többször is. Minden ciklusban az agy különböző fázisokon megy keresztül: könnyű alváson, mély alváson, amely hasznos a test helyreállításához, majd egy nagyon különleges fázison."
+        },
+        {
+          "type": "image",
+          "asset": "sleeping_person_rem_dream",
+          "ratio": "4:3",
+          "caption": "A REM alvás során a szemek a szemhéj alatt mozognak."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ennek a fázisnak a neve [[REM alvás]]. Az agy majdnem olyan aktív, mint ébren van, de a testet megbénítja a [[Izom atonia]]. Ez különösen ott van, ahol hosszú, narratív álmok születnek. Ez a bénulás megakadályozza, hogy fizikailag „játsszuk el”, amit álmodunk."
+        },
+        {
+          "type": "funFact",
+          "text": "Éjszakánként **4-6-szor**-t álmodunk. Az ébredéstől számított tíz percen belül elfelejtjük a **95%**-t. Ha emlékszik egy álomra, az gyakran azért van, mert közvetlenül közben vagy közvetlenül utána ébredt fel."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p2",
+      "title": "Mi értelme az álmodozásnak?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Freud** úgy gondolta, hogy az álmok főleg rejtett vágyakat tárnak fel. Manapság a kutatók inkább a konkrétabb magyarázatokat részesítik előnyben, amelyek az agyi képalkotáson, az agyi tevékenységet megjelenítő technikákon alapulnak. Az álmodás különösen aktiválja a **limbikus renderelés**, az érzelmekhez kapcsolódó mélystruktúrák halmazát."
+        },
+        {
+          "type": "image",
+          "asset": "brain_activity_dreaming_scan",
+          "ratio": "4:3",
+          "caption": "Az álmok során az agy működik: érzelmek, képek, emlékek."
+        },
+        {
+          "type": "paragraph",
+          "text": "Három fő pálya dominál. Először is: **rendezd a memóriát**, tartsd meg a hasznosat, engedd el a többit. Másodszor: **Veszélyre való képzés** egy valós kockázat nélküli világban. Harmadik: **Az érzelmek megemésztése**: álmok közben az agy újra felkeresi az erős pillanatokat kevesebb **norepinefrin** segítségével, amely a stresszhez és az ébrenléthez kapcsolódó neurotranszmitter."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p3",
+      "title": "Miért felejtjük el az álmainkat?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az emlékek tartós tárolásához az agynak bizonyos vegyszerekre van szüksége. A paradox alvás során azonban a noradrenalin szintje csökken. Eredmény: az álom nagyon törékeny emlékezetben marad."
+        },
+        {
+          "type": "paragraph",
+          "text": "Amint kinyitod a szemed, a nap fénye, hangjai és gondolatai összetörik ezt a törékeny emléket. A legjobb módja annak megtartásának? Írja le az álmot **azonnal**, mielőtt még elköltözik."
+        },
+        {
+          "type": "funFact",
+          "text": "A színes televíziózás előtt kevesen mondták, hogy színesen álmodnak. Ma a legtöbben igen. Vizuális környezetünk még álmaink textúráját is befolyásolja."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p4",
+      "title": "Mi a helyzet a tudatos álmodozással?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Néha úgy ébredünk rá, **, hogy álmodunk**, miközben alszunk: ez **Tényes álom**. Az agynak a logikához és az önreflexióhoz kapcsolódó területe, a **prefrontális kéreg** ekkor egy kicsit világít."
+        },
+        {
+          "type": "paragraph",
+          "text": "Néhányan ezután befolyásolhatják a környezetet, vagy rémálmot alakíthatnak át. A kutatók még ezt a jelenséget is tanulmányozzák, hogy segítsenek a sportolóknak mentálisan megismételni a gesztusokat, vagy kezelni az ismétlődő rémálmokat."
+        },
+        {
+          "type": "takeaway",
+          "text": "Különösen a [[REM alvás]] alatt álmodozunk, amikor az agy aktív, a test pedig lebénult. Az álmodozás valószínűleg segít a memória és az érzelmek kezelésében, még akkor is, ha ébredéskor szinte mindent elfelejtünk."
+        }
+      ]
+    }
+  ]
+}

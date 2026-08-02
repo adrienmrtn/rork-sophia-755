@@ -1,0 +1,144 @@
+{
+  "id": "course_126_le_cubisme_picasso_et_braque",
+  "title": "Kubismus: Picasso a Braque",
+  "subtitle": "1907-1920",
+  "subject": "art",
+  "subcategory": "Painting & Movements",
+  "description": "V letech 1907 až 1920 **Picasso** a **Braque** rozbily objekt na fasety viděné z několika úhlů současně. Nejradikálnější revoluce od dob renesance.",
+  "hero": {
+    "image": "le_cubisme_picasso_et_braque",
+    "ratio": "16:9",
+    "hook": "Co kdyby obraz už nebyl oknem, ale objektem rekonstruovaným ze všech úhlů?"
+  },
+  "sections": [
+    {
+      "id": "course_126_le_cubisme_picasso_et_braque_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kubismus se zrodil mezi **1907** a **1908**. Je to možná nejradikálnější revoluce od pohledu [[Quattrocento]], italského 15. století. **Pablo Picasso** a **George Braque** rozdělí objekt na geometrické fragmenty."
+        },
+        {
+          "type": "paragraph",
+          "text": "Už žádné malování oken na světě. Malíř už přírodu nekopíruje: rekonstruuje ji. Tato dekonstrukce otevírá cestu k abstraktnímu umění."
+        }
+      ]
+    },
+    {
+      "id": "course_126_le_cubisme_picasso_et_braque_p1",
+      "title": "Cézanne a střet masek",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Před kubismem hledal **Paul Cézanne** pevnost forem za měnícím se světlem. Radí „léčit přírodu skrze válec, kouli, kužel“. Ve svých pohledech na horu Sainte-Victoire zplošťuje prostor a znásobuje úhly pohledu díky [[průchody]], těmto zónám, kde se roviny spojují."
+        },
+        {
+          "type": "image",
+          "asset": "cezanne_mont_sainte_victoire_painting",
+          "ratio": "4:3",
+          "caption": "Cézanne: příroda viděná jako soubor svazků."
+        },
+        {
+          "type": "funFact",
+          "text": "V roce 1907 Picasso popsal svou návštěvu muzea Trocadéro nikoli jako lekci krásy, ale jako exorcismus tváří v tvář síle masek."
+        },
+        {
+          "type": "paragraph",
+          "text": "V **1907** Picasso objevil v etnografickém muzeu [[Trocadéro]] [[Africké a oceánské umění]]. Masky nekopírují obličej: konceptualizují ho. Objekt už není namalován tak, jak ho vidíme, ale jak ho známe."
+        }
+      ]
+    },
+    {
+      "id": "course_126_le_cubisme_picasso_et_braque_p2",
+      "title": "Analytický kubismus: pitvání objektu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V **1907** Picasso dokončil *Mladé dámy z Avignonu*. Pět aktů s ostrými fasetami; některé tváře se stávají maskami. I jeho přítel básník [[Apolinář]] je ohromen."
+        },
+        {
+          "type": "image",
+          "asset": "picasso_les_demoiselles_d_avignon_painting",
+          "ratio": "4:3",
+          "caption": "Les Demoiselles d'Avignon: bod, odkud není návratu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Od **1908** k **1912** Picasso a Braque vynalezli **analytický ký kubismus**. Pozorují objem ze všech úhlů a tyto pohledy zároveň staví na plátno. Barva téměř zmizí: šedá a okrová, aby přinutila oko do prostoru. Drobné indicie (klávesa, kytarová struna) nám brání upadnout do totální abstrakce."
+        },
+        {
+          "type": "funFact",
+          "text": "Spolupráci posunuli tak daleko, že se někdy oblékali jako dělníci, aby zdůraznili řemeslnou stránku svého výzkumu."
+        }
+      ]
+    },
+    {
+      "id": "course_126_le_cubisme_picasso_et_braque_p3",
+      "title": "Syntetický kubismus a koláž",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kolem **1912**, tváří v tvář riziku nečitelnosti, vynalezli **syntetický kubismus**. Již neřežeme předmět na tisíc fragmentů: shrnujeme jej podle jeho nejjasnějších znaků. Pak se objeví [[koláž]]: noviny, tapety nalepené na plátně."
+        },
+        {
+          "type": "image",
+          "asset": "picasso_cubist_collage_newspaper",
+          "ratio": "4:3",
+          "caption": "Do obrazu vstupuje koláž: realita."
+        },
+        {
+          "type": "funFact",
+          "text": "Braque, bývalý malíř a dekoratér, natíral falešné dřevo ocelovým hřebenem tak dokonale, že se zdálo skutečnější než skutečně lepené dřevo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Barva se vrací. Tvary se rozšiřují. Kytara může být jen křivka. Obraz už není zrcadlem: je to autonomní objekt, konstruovaný podle svých vlastních zákonů."
+        }
+      ]
+    },
+    {
+      "id": "course_126_le_cubisme_picasso_et_braque_p4",
+      "title": "Dědictví, které přesahuje malbu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kubismus se rychle rozšířil. **Juan Gray** přináší matematickou přísnost; [[Skupina Puteaux]] jej přizpůsobuje estetice stroje. Hnutí živilo italský futurismus, abstrakci Mondriana a ovlivnilo [[grafický design]] podobnou architekturu."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1907",
+              "title": "Mladé dámy z Avignonu",
+              "detail": "Picasso porušuje kánony klasického aktu."
+            },
+            {
+              "date": "1908-1912",
+              "title": "Analytický kubismus",
+              "detail": "Picasso a Braque objekt pitvají."
+            },
+            {
+              "date": "1912",
+              "title": "Koláž a syntetický kubismus",
+              "detail": "Realita vstupuje do díla ve fragmentech."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Divák se stává především aktivním: je na něm, aby obraz překomponoval. Umění se konečně odděluje od prostého napodobování."
+        },
+        {
+          "type": "takeaway",
+          "text": "Picasso a Braque prolomili renesanční perspektivu a vynalezli koláž a přeměnili obraz v mentální architekturu, spíše zrcadlo reality."
+        }
+      ]
+    }
+  ]
+}

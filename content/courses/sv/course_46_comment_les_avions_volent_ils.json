@@ -1,0 +1,100 @@
+{
+  "id": "course_46_comment_les_avions_volent_ils",
+  "title": "Hur flyger plan?",
+  "subtitle": "Flygfysik",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Ett plan som väger flera hundra ton flyger. Det är inte magi: det är en fråga om vingform, hastighet och krafter som balanserar varandra.",
+  "hero": {
+    "image": "comment_les_avions_volent",
+    "ratio": "16:9",
+    "hook": "Tyngre än en lastbil, och ändå stannar den i luften. Så här gör du."
+  },
+  "sections": [
+    {
+      "id": "course_46_comment_les_avions_volent_ils_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ett stort flygplan kan väga **hundratals ton**. Hur kan något så tungt stanna i luften? Svaret ligger i vingarnas form och planets hastighet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fyra huvudkrafter är i spel: **sticka** (framåt), **dra** (luftbromsning), **vikt** (nedåt) och **lyfta** (uppåt)."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p1",
+      "title": "Vingen, en intelligent form",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sett från sidan är en flygplansvinge inte platt. Toppen är mer rundad än botten. När planet rör sig snabbt måste luften gå runt denna form."
+        },
+        {
+          "type": "image",
+          "asset": "airplane_wing_cross_section_flight",
+          "ratio": "auto",
+          "caption": "Vingens profil skapar lyftet som lyfter planet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Luften som passerar ovan accelererar lite. Hans tryck sjunker. Under vingen förblir trycket starkare. Denna skillnad trycker vingen uppåt: det här är **lyfta**. Det förklaras ofta med principen om **Bernoulli**, uppkallad efter en 1700-talsforskare, och med det faktum att vingen också böjer luften nedåt."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p2",
+      "title": "Du behöver fart",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Utan hastighet, inte tillräckligt med luft som passerar över vingen, inte tillräckligt med lyft. Det är därför ett plan behöver en lång bana för att lyfta: motorerna måste accelerera det tillräckligt hårt."
+        },
+        {
+          "type": "funFact",
+          "text": "Fåglar använder samma allmänna idé: deras vingar skapar lyft. Men de slår med vingarna för att ta sig framåt. Planet rör sig framåt tack vare sina motorer."
+        },
+        {
+          "type": "paragraph",
+          "text": "Under kryssningsflyg balanserar lyft vikten. Motorernas dragkraft balanserar luftmotståndet. Planet rör sig sedan framåt med en ungefär konstant hastighet."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p3",
+      "title": "Gå upp, ner, vänd",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "För att klättra lutar piloten (eller omborddatorn) nosen lite uppåt och justerar dragkraften. För att gå ner minskar vi ofta dragkraften. För att vända lutas planet åt sidan med hjälp av rörliga delar av vingarna, skevroder."
+        },
+        {
+          "type": "paragraph",
+          "text": "När vi landar saktar vi ner farten. Klaffar sträcker sig från vingen för att öka lyftet vid låga hastigheter. Då nuddar hjulen marken, och bromsarna (ibland även tryckväxlare) stoppar planet."
+        }
+      ]
+    },
+    {
+      "id": "course_46_comment_les_avions_volent_ils_p4",
+      "title": "Det är inte \"lättare än luft\"",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En heliumballong flyter eftersom den är mindre tät än luft. Ett plan, nej: det är mycket tätare. Den flyger eftersom den **styrka** ser ut att bära den, tack vare dess hastighet och formen på vingarna."
+        },
+        {
+          "type": "takeaway",
+          "text": "Ett flygplan flyger tack vare **lyfta** skapad av dess vingar som rör sig genom luften. Hastighet är viktigt: utan den \"trycker\" vingen inte längre tillräckligt uppåt för att kompensera för vikten."
+        }
+      ]
+    }
+  ]
+}

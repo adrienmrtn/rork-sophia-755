@@ -1,0 +1,116 @@
+{
+  "id": "course_198_sindbad_le_marin",
+  "title": "Szindbád, a tengerész",
+  "subtitle": "Hét utazás",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Szindbád, a tengerész: Hét utazás, szörnyek és kincsek. A csodálatos mögött az iszlám aranykor kereskedő-kalandorának portréja.",
+  "hero": {
+    "image": "sindbad_le_marin",
+    "ratio": "16:9",
+    "hook": "Hétszer távozik gazdagon vagy kíváncsian. Hétszer megtöri a tenger. Hétszer még gazdagabban tér vissza."
+  },
+  "sections": [
+    {
+      "id": "course_198_sindbad_le_marin_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Szindbád, a tengerész** a **Arab éjszakák**-hez tartozik, de nem a gyűjtemény régi perzsa magjához. Hét utazásból álló ciklusa később, Egyiptomban, a 15. század környékén zajlott."
+        },
+        {
+          "type": "paragraph",
+          "text": "Megtestesíti a **Iszlám Aranykorszak utazó-kereskedőjét**: jámborság, kapzsiság, bátorság és képtelenség egykoron gazdagon nyugton ülni. A szörnyek mögött egy allegóriát olvashatunk a szerencse felemelkedéséről és bukásáról."
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p1",
+      "title": "A kaland ciklikus szerkezete",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A történet Bagdadban kezdődik. **Szindbád, a tengerész**, aki immár idős és gazdag, elmeséli megpróbáltatásait egy szintén Szindbád (néha Hindbad) nevű hordárnak. Az osztálykontraszt azonnali."
+        },
+        {
+          "type": "image",
+          "asset": "baghdad_medieval_islamic_golden_age_trade",
+          "ratio": "4:3",
+          "caption": "Bagdad, Szindbád utazásainak indulási és visszatérési pontja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Minden utazás ugyanazt a mechanikát követi: az ülő élet fáradtsága, indulás [[Basra]] kikötőjéből, hajótörés, túlélés egy ismeretlen földön, kincsekkel megrakott visszatérés. A [[Iszlám kozmológia]] jelentéssel megtöltött hetes szám kezdeményező dimenziót ad a sorozatnak: a meggondolatlanságtól a bölcsességig."
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p2",
+      "title": "Fantasztikus bestiárium a mítosz és a valóság között",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A **Szikla** (vagy Rokh), egy madár, amelynek szárnyfesztávolsága eltakarja a napot, nyomot hagyott a világ képzeletében. Kelet-Afrika partjain arab utazók történeteinek visszhangját látjuk."
+        },
+        {
+          "type": "image",
+          "asset": "sinbad_roc_giant_bird_illustration",
+          "ratio": "4:3",
+          "caption": "A Roc, Szindbád óriásmadara."
+        },
+        {
+          "type": "funFact",
+          "text": "A Roc-ot valószínűleg a **Aepyornis**, egy madagaszkári elefántmadár ihlette, amely 1000 körül tűnt el. Tojásai 150-szer akkorák voltak, mint egy csirke tojásé."
+        },
+        {
+          "type": "paragraph",
+          "text": "Szindbád a hátába kapaszkodó **Tenger Öregével**, valamint a **teknős szigettel**, a megtévesztő talajjal is szembenéz. A **Gyémántok Völgye**, ahová húst dobnak a drágakövek ragasztására, már az Ősök között kering. A [[Középkori arab kereskedelmi útvonalak]] évszázados csodálatos üledékei."
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p3",
+      "title": "Az arab kereskedelem aranykorának tükre",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A helyszín történelmi. A 8. és 9. században bászrai és szirafi tengerészek uralták az Indiai-óceánt. Szindbád állomásai igazi helyeket idéznek: [[Serendib]] (Ceylon) a fűszerekért, Délkelet-Ázsia a kámforért, a partok a gyöngyért."
+        },
+        {
+          "type": "image",
+          "asset": "arab_indian_ocean_trade_routes_medieval_ship",
+          "ratio": "4:3",
+          "caption": "Arab hajók az Indiai-óceáni útvonalakon."
+        },
+        {
+          "type": "paragraph",
+          "text": "Szindbád nem harcos: ő egy kereskedő-kalandor, tekintélyes státusz egy olyan társadalomban, amely értékeli a kereskedelmet. Ott találjuk a monszunt, a hajókat, amelyeket kókuszrosttal varrtak, nem pedig szögeket. Nyugati párhuzam: [[Marco Polo (nyugati párhuzam)]], amely tényekben írja le Ázsiát, ahol Szindbád csodákra fest."
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p4",
+      "title": "Egyetemes örökség: Kelettől Nyugatig",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A 18. században **Antoine Galland** fordításában az utazás táplálja [[Kalandregény]] Európát, Defoe-tól Jules Verne-ig. A mozi gyakran magánemberré teszi a hercegnők szolgálatában. Hiba: Szindbád kezdetben bagdadi városlakó, aki hit és találékonyság révén maradt fenn."
+        },
+        {
+          "type": "funFact",
+          "text": "A Szindbád név a „Szind folyó hercegét”, az Indust idézné az arab és az indiai világ kereszteződésében."
+        },
+        {
+          "type": "takeaway",
+          "text": "A **Szindbád** az iszlám tengeri aranykort testesíti meg a **hét** ciklikus utakon: a szikla és a gyémántok valóságot takarnak, az Indiai-óceán arab kereskedői mestereiét."
+        }
+      ]
+    }
+  ]
+}

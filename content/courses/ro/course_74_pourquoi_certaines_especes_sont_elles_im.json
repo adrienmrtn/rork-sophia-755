@@ -1,0 +1,108 @@
+{
+  "id": "course_74_pourquoi_certaines_especes_sont_elles_im",
+  "title": "De ce unele specii sunt nemuritoare?",
+  "subtitle": "Biologie și longevitate",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Unele specii par să sfideze moartea. Meduze care intineresc, hidre fara imbatranire: secretul este in repararea celulara.",
+  "hero": {
+    "image": "pourquoi_certaines_especes_sont_immortelles",
+    "ratio": "16:9",
+    "hook": "Îmbătrânirea nu este o lege absolută a vieții. Unele specii au găsit vina."
+  },
+  "sections": [
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Îmbătrânim, apoi murim. Cu toate acestea, meduza [[Turritopsis dohrnii]] poate reveni la stadiul juvenil și poate începe din nou. Scoica **Ming** a trăit **507 ani**. Îmbătrânirea nu este așadar o regulă universală: este un proces pe care anumite specii îl ocolesc."
+        },
+        {
+          "type": "paragraph",
+          "text": "Studiind aceste excepții, cercetătorii caută mai puțin nemurirea științifico-fantastică decât trucurile vieții pentru a repara mai bine celulele."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p1",
+      "title": "De ce celulele noastre se uzează",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Îmbătrânirea nu înseamnă doar „usarea” ca o mașinărie. Este un dezechilibru: daunele se acumulează mai repede decât reparațiile."
+        },
+        {
+          "type": "image",
+          "asset": "chromosome_dna_telomere_aging_cell",
+          "ratio": "auto",
+          "caption": "Telomerii, la capetele cromozomilor, se scurtează cu fiecare diviziune celulară."
+        },
+        {
+          "type": "paragraph",
+          "text": "La capetele cromozomilor noștri, [[Telomerii]] acționează ca vârfurile șireurilor. Cu fiecare diviziune celulară, acestea se scurtează. Prea scurtă, celula încetează să se divizeze. În același timp, metabolismul produce molecule agresive care dăunează proteinelor și ADN-ului. Celulele „zombie” se acumulează apoi și inflamează țesuturile din jurul lor."
+        },
+        {
+          "type": "funFact",
+          "text": "Tardigradul, un mic „urs de apă”, aproape că se poate opri din viață prin uscare. Metabolismul său scade la **99,99%** și supraviețuiește vidului spațiului sau radiațiilor extreme fără a îmbătrâni cu adevărat."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p2",
+      "title": "Campioni care evită moartea",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[Turritopsis dohrnii]] rănit sau înfometat își transformă celulele adulte în celule „vide”, apoi devine din nou polip, stadiul inițial. Acest pas înapoi, numit transdiferențiere, îi conferă o formă de **nemurire biologic**."
+        },
+        {
+          "type": "paragraph",
+          "text": "**hidra**, un mic polip de apă dulce, își reînnoiește întregul corp datorită unui aport aproape nelimitat de celule [[celule stem]]. Nu prezintă semne măsurabile de îmbătrânire. Balena arcului poate depăși **200 de ani** datorită reparării ADN-ului ultra-eficiente și rezistenței puternice la cancer."
+        },
+        {
+          "type": "funFact",
+          "text": "Homarii produc telomeraza peste tot în corpul lor: telomerii lor nu se scurtează. Ei cresc de-a lungul vieții și mor mai ales când năpârlirea devine prea costisitoare."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p3",
+      "title": "Ce învață medicina din ea",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ideea nu mai este doar de a trata Alzheimer sau osteoartrita una câte una, ci de a ataca însăși îmbătrânirea. **senolitici** urmăresc eliminarea celulelor zombie. La animale, acest lucru a întinerit deja anumite funcții."
+        },
+        {
+          "type": "paragraph",
+          "text": "Limitarea caloriilor fără malnutriție activează, de asemenea, căile de reparare, în special prin încetinirea [[mTOR]], o proteină care accelerează creșterea... și uneori scade. Alte laboratoare încearcă să „sufle ceasul” celulelor, precum meduzele, fără a le transforma în tumori."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p4",
+      "title": "Nemuritor, dar nu invincibil",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Chiar și o specie nemuritoare din punct de vedere biologic moare din cauza prădătorilor, bolilor sau dezastrelor. Moartea rămâne o forță motrice a evoluției: dă loc unor generații noi, mai bine adaptate."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pentru oameni, provocarea realistă nu este de a trăi veșnic, ci de a prelungi anii **în stare bună de sănătate**. Tehnologia transformată în longevitate ar ridica, de asemenea, întrebări uriașe de echitate și resurse."
+        },
+        {
+          "type": "takeaway",
+          "text": "Nemurirea biologică se bazează pe repararea sau resetarea celulelor. Meduza Turritopsis dohrnii este din ce în ce mai tânără; hidra se reînnoiește constant. Îmbătrânirea nu este o fatalitate universală."
+        }
+      ]
+    }
+  ]
+}

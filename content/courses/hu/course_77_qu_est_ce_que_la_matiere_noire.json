@@ -1,0 +1,108 @@
+{
+  "id": "course_77_qu_est_ce_que_la_matiere_noire",
+  "title": "Mi a sötét anyag?",
+  "subtitle": "Láthatatlan kozmosz",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Soha nem láttuk őt. Pedig enélkül a galaxisok szétesnének. A sötét anyag az Univerzum láthatatlan ragasztója.",
+  "hero": {
+    "image": "qu_est_ce_que_la_matiere_noire",
+    "ratio": "16:9",
+    "hook": "Képzelj el egy láthatatlan ragasztót, amely összetartja a galaxisokat. Nem látjuk őt, de látjuk, mit tart vissza."
+  },
+  "sections": [
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Érzi a szelet anélkül, hogy látná: mozognak az ágak, repül a haj. **Sötét anyag** egy kicsit ilyen a kozmosz léptékében. Nem ragyog, nem veri vissza a fényt, nem zárja el a sugarakat. Csak abból „látjuk”, amit mozgásra késztet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ez az Univerzum hozzávetőleg **27%-át** képviselné, ötször többet, mint az összes közönséges anyag: csillagok, bolygók, gáz. Enélkül a galaxisok túl gyorsan forognának ahhoz, hogy összetartsanak."
+        }
+      ]
+    },
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_p1",
+      "title": "Túl gyorsan csillagoz a külterületen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A **1970** években **Vera Rubin** amerikai csillagász spirálgalaxisokban mérte a csillagok sebességét. A Naprendszerben minél távolabb megyünk a Naptól, annál lassabban forogunk. Ugyanerre a mintára számított."
+        },
+        {
+          "type": "image",
+          "asset": "dark_matter_galaxy_cluster",
+          "ratio": "auto",
+          "caption": "A sötét anyag a galaxishalmazokra gyakorolt ​​gravitációs hatása révén árulja el jelenlétét."
+        },
+        {
+          "type": "paragraph",
+          "text": "Most a szélen lévő csillagok **-t gyorsan**-be forgattak, mint a középen lévők. Csak a látható tömeggel el kellett volna repülniük. Ezért szükség volt egy láthatatlan tömegre, egy **halo**-re, egy láthatatlan gömb alakú burokra a galaxis körül, hogy visszatartsa őket. A [[galaxis forgási görbe]] a sötét anyag zászlóshajója lett."
+        },
+        {
+          "type": "funFact",
+          "text": "Vera Rubinnak régóta meg kellett küzdenie, hogy komolyan vegyék. Princeton hosszú ideig megtagadta tőle a csillagászati ​​doktorátust… mert nő volt, egészen 1975-ig."
+        }
+      ]
+    },
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_p2",
+      "title": "miből készült? Még mindig keresünk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ez nem egy közönséges anyag, az úgynevezett **barion**, amely protonokból és neutronokból áll: nem lép kölcsönhatásba a fénnyel. Átszeli a Földet és minket anélkül, hogy látható nyomot hagyna."
+        },
+        {
+          "type": "paragraph",
+          "text": "A régóta kedvelt ólom, a **WIMP**, egy gyengén kölcsönható masszív részecske, egy nehéz részecske lenne a [[A fizika szabványos modellje]], az ismert elemi részecskéket leíró elméleten kívül. **Liquidxeon** detektorok, amelyek a föld alá vannak temetve, ritka sokkhatásban reménykednek. Egyelőre egyértelmű siker nélkül. Mások a **axion**-re, egy ultrakönnyű részecskére vagy a gravitációra támaszkodnak, amelyet felül kell vizsgálni. Eközben a sötét anyag meggörbíti a teret, és létrehozza a [[Gravitációs lencsék]]-t, amely torzítja egy hatalmas tárgy fényét."
+        }
+      ]
+    },
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_p3",
+      "title": "És a sötét energia, a másik rejtély",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A sötét anyag vonz. A **1998**-ben felfedezett [[Sötét energia]] ennek az ellenkezőjét teszi: felgyorsítja a **Világegyetem** tágulását, a galaxisok növekvő távolságát. A galaxisok egyre gyorsabban távolodnak, miközben a gravitációnak le kell lassítania a mozgást."
+        },
+        {
+          "type": "paragraph",
+          "text": "Súlya körülbelül a kozmosz **68%-a** lenne. A sötét anyaggal ez **95%** láthatatlan univerzummá teszi. Minden, amit látunk, az atomok és a fény, csak egy söpredék **5 %**."
+        },
+        {
+          "type": "funFact",
+          "text": "A nagyon távoli jövőben a sötét energia más galaxisokat olyan mértékben eltolhat, hogy láthatatlanná tegyék őket a Tejútrendszerből: egy majdnem üres égbolt."
+        }
+      ]
+    },
+    {
+      "id": "course_77_qu_est_ce_que_la_matiere_noire_p4",
+      "title": "Hatalmas bizonyíték, részecske nem található",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Egyrészt közvetett bizonyítékok halmozódnak fel: galaktikus forgások, **kozmikus háttér**, a fiatal univerzum fosszilis sugárzása, az Univerzum filamentuma. Másrészt nincs közvetlen részecskedetektálás."
+        },
+        {
+          "type": "paragraph",
+          "text": "A 21. századnak döntenie kell: új részecskék családot választ, vagy a gravitációról való új gondolkodásmódot. A sötét anyag nem csak az égbolt egy részlete. Ez az a laboratórium, ahol feltalálják a holnap fizikáját."
+        },
+        {
+          "type": "takeaway",
+          "text": "A sötét anyag alkotja az Univerzum **27 %**-jét. A csillagokra és a fényre gyakorolt ​​gravitációja bizonyítja, még akkor is, ha soha nem láttuk közvetlenül."
+        }
+      ]
+    }
+  ]
+}

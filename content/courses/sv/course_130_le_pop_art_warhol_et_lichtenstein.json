@@ -1,0 +1,138 @@
+{
+  "id": "course_130_le_pop_art_warhol_et_lichtenstein",
+  "title": "Popkonst: Warhol och Lichtenstein",
+  "subtitle": "1950-1970-talet",
+  "subject": "art",
+  "subcategory": "Painting & Movements",
+  "description": "Pop Art svarar på konsumtionssamhället. **Warhol** och **Lichtenstein** gör reklam, serier och stjärnor till stor konst.",
+  "hero": {
+    "image": "le_pop_art_warhol_et_lichtenstein",
+    "ratio": "16:9",
+    "hook": "En burk soppa, en låda med serietidningar: tänk om det banala var århundradets ikon?"
+  },
+  "sections": [
+    {
+      "id": "course_130_le_pop_art_warhol_et_lichtenstein_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Popkonst**, från mitten av **1950** till **1970** åren, svarar på [[Amerikanska konsumtionssamhället på 1950-60-talet]] och masskultur. Reklam, serier, Hollywoodstjärnor: allt blir material för konst."
+        },
+        {
+          "type": "paragraph",
+          "text": "Med **Andy Warhol** och **Roy Lichtenstein** suddas gränsen ut mellan museet och snabbköpet. Det vardagliga föremålet blir en ikon. Verkets värde och konstnärens roll störs."
+        }
+      ]
+    },
+    {
+      "id": "course_130_le_pop_art_warhol_et_lichtenstein_p1",
+      "title": "Från vardagen till museet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pop Art föddes i **Storbritannien** med [[Oberoende grupp]], men det var i **USA**, under åren **1960**, som den exploderade. Efter kriget, välstånd, stormarknader, logotyper överallt: amerikanernas visuella landskap har förändrats."
+        },
+        {
+          "type": "funFact",
+          "text": "1957 definierade Richard Hamilton Pop Art med adjektiv: \"efemär\", \"billig\", \"sexig\". En konst att konsumera lika snabbt som en tidning."
+        },
+        {
+          "type": "paragraph",
+          "text": "Popkonstnärer motsatte sig den [[Abstrakt expressionism]], dessa introspektiva dukar dominerade då. När Warhol målar soppor visar han att individen definieras av vad han köper. Upprepning dränerar bilden av dess känslor och lämnar bara dess kommersiella effektivitet kvar."
+        }
+      ]
+    },
+    {
+      "id": "course_130_le_pop_art_warhol_et_lichtenstein_p2",
+      "title": "Warhol: verkstaden som fabrik",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Andy Warhol** (1928-1987), tidigare grafisk reklamdesigner, tillämpar industrimetoder på konst. Hans **Fabrik** i New York är inte längre en ensam fristad: assistenter och vänner producerar tillsammans."
+        },
+        {
+          "type": "image",
+          "asset": "andy_warhol_factory_silkscreen_marilyn",
+          "ratio": "4:3",
+          "caption": "Marilyn i serie: stjärnan som en reproducerbar produkt."
+        },
+        {
+          "type": "funFact",
+          "text": "Warhol samlade mer än 600 \"tidskapslar\": lådor där han kastade brev, räkningar och till och med matrester."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dess drottningteknik: [[Screentryck]], som gör att en bild kan reproduceras dussintals gånger. Genom att multiplicera Marilyn Monroe illustrerar han idén om [[Aura och mekaniserad reproduktion (Walter Benjamin)]]: ju mer bilden cirkulerar, desto mindre \"helig\" är den, desto mer blir den en ikon. Berömmelse i sig är en produkt."
+        }
+      ]
+    },
+    {
+      "id": "course_130_le_pop_art_warhol_et_lichtenstein_p3",
+      "title": "Lichtenstein: den förstorade serieserien",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Roy Lichtenstein** (1923-1997) attackerar språket i **serier**. Han isolerar en panel laddad med känslomässig kliché och målar den i monumentalt format."
+        },
+        {
+          "type": "image",
+          "asset": "roy_lichtenstein_comic_ben_day_dots_painting",
+          "ratio": "4:3",
+          "caption": "Handmålade Ben-Day-prickar: fabriken imiterad av gester."
+        },
+        {
+          "type": "funFact",
+          "text": "För att bedöma en komposition tittade Lichtenstein på sina målningar upp och ner i en spegel, för att se om de höll upp på ett rent abstrakt sätt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dess signatur: [[Ben-Day]]-punkten, dessa små industriella tryckprickar som skapar nyanser. Han målar dem för hand med stenciler: timmar för att imitera vad en maskin gör på några sekunder. *Whaam!* förvandlar en avledningslåda till en modern historisk målning."
+        }
+      ]
+    },
+    {
+      "id": "course_130_le_pop_art_warhol_et_lichtenstein_p4",
+      "title": "Arv: från marknad till nätverk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pop Art förändrar marknaden och institutionerna. Konstnärens märke spelar lika stor roll som gesten. I **2022** nådde ett porträtt av Marilyn av Warhol **195 miljoner** dollar: massbilden, sakraliserad, blir den mest värdefulla varan."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1957",
+              "title": "Definition av Pop",
+              "detail": "Hamilton sammanfattar rörelsen: tillfällig, billig, sexig."
+            },
+            {
+              "date": "1960-talet",
+              "title": "Fabrik och serier",
+              "detail": "Warhol och Lichtenstein inför popestetiken i USA."
+            },
+            {
+              "date": "2022",
+              "title": "Marilyn för 195 miljoner dollar",
+              "detail": "Massikonen blir marknadens absoluta trofé."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Warhols förutsägelse om \"15 minuter av berömmelse\" har blivit vår digitala vardag. Memes och bildåtervinning är ett direkt resultat av denna revolution."
+        },
+        {
+          "type": "takeaway",
+          "text": "Popkonsten bröt barriären mellan högkonst och masskultur. Genom screentryck och Ben-Day-prickar förvandlade Warhol och Lichtenstein vardagliga föremål och stjärnor till bestående ikoner."
+        }
+      ]
+    }
+  ]
+}

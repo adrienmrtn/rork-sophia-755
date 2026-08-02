@@ -1,0 +1,138 @@
+{
+  "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri",
+  "title": "Ozonhålet (och dess återhämtning)",
+  "subtitle": "1985-2065",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Ett gigantiskt hål ovanför Antarktis, ett fördrag undertecknat av 197 länder, och en planet som läker. Här är **denda stora ekologiska krisen** som mänskligheten redan har löst.",
+  "hero": {
+    "image": "le_trou_de_la_couche_d_ozone",
+    "ratio": "16:9",
+    "hook": "Ett hål i himlen, upptäckt av en slump, och stängt av ett fördrag undertecknat av hela världen."
+  },
+  "sections": [
+    {
+      "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1985 kunde brittiska forskare stationerade i Antarktis inte tro på deras mätningar: en del av himlen verkade ha förlorat sitt skydd mot solen. Det var inte ett enhetsfel, utan ett rejält hål i ozonskiktet, denna osynliga sköld som skyddar oss alla. Den här kursen berättar historien om hur världen upptäckte denna fara och, ovanligt, hur den lyckades fixa den."
+        }
+      ]
+    },
+    {
+      "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_p1",
+      "title": "En ömtålig sköld, ett behändigt gift",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**ozonlagret** ligger mellan 15 och 35 kilometer över havet, i [[Stratosfär]], och absorberar det mesta av **UV-B**, dessa strålar från solen som är kraftfulla nog att skada vår hud och levande cellers DNA. På 1930-talet uppfann industrin **klorfluorkolväten**, eller [[Klorfluorkolväten (CFC)]]: gaser som ansågs vara perfekta, billiga, som placerades överallt, i kylskåp, luftkonditioneringsapparater och aerosolburkar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Problemet är att dessa gaser är för stabila: istället för att brytas ner nära marken stiger de till stratosfären. 1974 varnade kemisterna Mario Molina och Frank Sherwood Rowland: under påverkan av solen frigör CFC klor, som förstör ozon. De fick Nobelpriset 1995, men nästan ingen lyssnade på dem då."
+        }
+      ]
+    },
+    {
+      "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_p2",
+      "title": "1985: chocken, sedan det globala avtalet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1985 bekräftade British Antarctic Survey nyheten: varje vår öppnar sig ett spektakulärt hål i ozonskiktet ovanför [[Antarktis]]. NASA-satelliter hade redan dessa data, men deras programvara hade avfärdat det som för extremt för att vara sant."
+        },
+        {
+          "type": "image",
+          "asset": "ozone_hole_antarctica_satellite_image_nasa",
+          "ratio": "16:9",
+          "caption": "Ozonhålet ovanför Antarktis, sett med satellit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hotet mot människors hälsa tas på största allvar och världen reagerar snabbt. 1987 undertecknade länderna [[Montrealprotokollet (1987)]], ett fördrag som organiserade en gradvis utfasning av CFC. Den har bara 24 länder vid starten; idag samlar den **197**, alla medlemmar i FN."
+        },
+        {
+          "type": "funFact",
+          "text": "Montrealprotokollet är det enda fördraget i FN:s historia som ratificerats av alla länder i världen, utan undantag."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denna framgång beror på en tydlig regel för alla och en gemensam fond som hjälper fattiga länder att ändra sina maskiner. Även tillverkare, som till en början var emot det, slutade följa efter genom att hitta lönsamma ersättningsprodukter."
+        }
+      ]
+    },
+    {
+      "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_p3",
+      "title": "Varför är klimatet svårare?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Denna framgång citeras ofta för att säga att vi skulle kunna lösa klimatförändringarna på samma sätt. Men de två problemen skiljer sig åt: ozonhålet kom från ett litet antal gaser som producerats av ett litet antal fabriker, som var lätta att rikta in sig på. [[Koldioxid (CO₂)]] kommer ur nästan allt vårt moderna samhälle gör, att flytta, värma, odla, bygga: att minska CO₂ kräver att hela den globala ekonomin förändras, inte bara en handfull kemiska fabriker."
+        },
+        {
+          "type": "paragraph",
+          "text": "Goda nyheter förresten: CFC var också kraftfulla växthusgaser. Genom att förbjuda dem bromsade Montrealprotokollet också den globala uppvärmningen, utan att det var dess primära mål."
+        },
+        {
+          "type": "funFact",
+          "text": "Utan detta fördrag skulle CFC ha kunnat tillföra jorden ytterligare cirka 1°C till 2050, bara på grund av deras växthuseffekt."
+        }
+      ]
+    },
+    {
+      "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_p4",
+      "title": "En långsam men väldigt verklig återhämtning",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Klor som redan stiger i atmosfären tar tid att försvinna: det var inte förrän i mitten av 1990-talet som nivåerna av skadliga gaser stabiliserades. Sedan början av 2000-talet har läkningen varit tydlig och mätbar."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1974",
+              "title": "Den vetenskapliga varningen",
+              "detail": "Molina och Rowland upptäcker kopplingen mellan CFC och ozon."
+            },
+            {
+              "date": "1985",
+              "title": "Hålet är bekräftat",
+              "detail": "British Antarctic Survey publicerar sina uppgifter."
+            },
+            {
+              "date": "1987",
+              "title": "Montrealprotokollet",
+              "detail": "Undertecknande av fördraget, nu ratificerat av 197 länder."
+            },
+            {
+              "date": "2000",
+              "title": "Början av läkning",
+              "detail": "Nivåerna av skadliga gaser stabiliseras äntligen."
+            },
+            {
+              "date": "2065",
+              "title": "Återgå till det normala (planerad)",
+              "detail": "Ozonskiktet bör återgå till 1980 års nivå."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Om fördraget fortsätter att respekteras bör ozonskiktet återgå till 1980 års tillstånd genom **2065-2070**, vilket förhindrar miljontals hudcancer och grå starr. Vi måste vara vaksamma: hemliga utsläpp av CFC upptäcktes i Östasien för några år sedan, ett bevis på att ett globalt avtal bara fungerar om det ständigt övervakas."
+        },
+        {
+          "type": "takeaway",
+          "text": "Ozonhålet är fortfarande den enda stora miljökrisen som helt och hållet lösts genom globalt samarbete: ett fördrag som undertecknades 1987 av 197 länder, med vetenskapligt mätbara resultat."
+        }
+      ]
+    }
+  ]
+}

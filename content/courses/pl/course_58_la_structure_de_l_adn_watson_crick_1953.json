@@ -1,0 +1,102 @@
+{
+  "id": "course_58_la_structure_de_l_adn_watson_crick_1953",
+  "title": "Struktura DNA",
+  "subtitle": "1953",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "W 1953 roku Watson i Crick opisali podwójną helisę DNA. Za tą chwałą kryje się kluczowe dzieło Rosalind Franklin.",
+  "hero": {
+    "image": "la_structure_de_l_adn",
+    "ratio": "16:9",
+    "hook": "Kształt cząsteczki… i tajemnica dziedziczności."
+  },
+  "sections": [
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wiedzieliśmy, że cechy przechodzą z rodziców na dzieci. Ale jaki obiekt chemiczny niesie tę informację? W połowie XX wieku odpowiedź stała się jaśniejsza: **DNA**."
+        },
+        {
+          "type": "paragraph",
+          "text": "W **1953**, **Jamesa Watsona** i **Franciszka Cricka** opublikowali słynny model: **wdrożyć**. Formularz ten wyjaśnia, w jaki sposób DNA może się kopiować."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p1",
+      "title": "Znalezienie wsparcia dla dziedziczności",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "DNA (kwas dezoksyrybonukleinowy) to długa cząsteczka występująca w naszych komórkach. Zawiera chemiczne „litery”, które tworzą kod. Ale w latach czterdziestych i pięćdziesiątych XX wieku nie znaliśmy jeszcze jego trójwymiarowej formy."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bez formy trudno zrozumieć, w jaki sposób można powielić ten kod w każdym podziale komórki."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p2",
+      "title": "Zdjęcie, które zmienia wszystko",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "rosalind_franklin_photo_51_x_ray",
+          "ratio": "4:3",
+          "caption": "Zdjęcie 51 Rosalind Franklin ukazuje spiralną strukturę."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Rozalinda Franklin**, fizyk i chemik, uzyskuje zdjęcia rentgenowskie DNA. Jej słynne **Zdjęcie 51** pokazuje wyraźne dowody istnienia helisy."
+        },
+        {
+          "type": "paragraph",
+          "text": "Watson i Crick przeglądają te dane (w warunkach obecnie uznawanych za nieuczciwe wobec Franklina) i budują swój model. Franklin zmarł w 1958 roku; Nagroda Nobla z 1962 r. trafi do Watsona, Cricka i Wilkinsa, a nie do niej."
+        },
+        {
+          "type": "funFact",
+          "text": "Franklin wykonał także poważną pracę nad wirusami. W popularnych źródłach od dawna niedocenia się jego roli w DNA."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p3",
+      "title": "Dlaczego podwójna helisa ma znaczenie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "dna_double_helix_model_watson_crick",
+          "ratio": "4:3",
+          "caption": "Dwa uzupełniające się wątki: kopia staje się możliwa do wyobrażenia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dwie nici owijają się wokół siebie. Litery są zwrócone ku sobie parami. Kiedy nici się rozdzielą, każda z nich może służyć jako model do rekonstrukcji drugiej. Dziedziczność staje się zrozumiałym mechanizmem chemicznym."
+        }
+      ]
+    },
+    {
+      "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p4",
+      "title": "Nowoczesna biologia zaczyna się tutaj",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Z tego odkrycia narodziła się nowoczesna genetyka, sekwencjonowanie, testy DNA, terapie genowe. A także debaty etyczne: co zrobić z tą władzą?"
+        },
+        {
+          "type": "takeaway",
+          "text": "W **1953** model podwójnej helisy wyjaśnia, w jaki sposób DNA przechowuje i kopiuje informacje od żywych istot. Franklin dostarczył decydujący dowód, który został zbyt długo usunięty z narracji."
+        }
+      ]
+    }
+  ]
+}

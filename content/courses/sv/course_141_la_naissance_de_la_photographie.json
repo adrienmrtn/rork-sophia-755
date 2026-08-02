@@ -1,0 +1,131 @@
+{
+  "id": "course_141_la_naissance_de_la_photographie",
+  "title": "Fotografiets födelse",
+  "subtitle": "1839",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "I **1839** hittade flera uppfinnare äntligen hur man fäster en bild på en tallrik. På mindre än ett sekel har fotografi förändrat hur vi ser, minns och tror.",
+  "hero": {
+    "image": "la_naissance_de_la_photographie",
+    "ratio": "16:9",
+    "hook": "Hur en kemisk uppfinning stal målningens monopol på verkligheten."
+  },
+  "sections": [
+    {
+      "id": "course_141_la_naissance_de_la_photographie_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I århundraden har konstnärer använt [[mörkrum]]: en mörk låda som projicerar omvärlden på en vägg. Problemet förblir detsamma: bilden försvinner så fort du släcker ljuset. I **1839** föddes fotografi officiellt. Det är inte ett enda genis verk, utan en kapplöpning mellan franska och brittiska uppfinnare."
+        },
+        {
+          "type": "paragraph",
+          "text": "På mindre än ett sekel befriade denna process måleriet från sin roll som dokument och blev det första massmediet. Det förändrar vårt förhållande till tid, minne och visuell sanning."
+        }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p1",
+      "title": "Från Niépce till daguerreotypien",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Allt börjar med **Nicéphore Niépce**, fransk uppfinnare. Runt **1826-1827** fixar han den första permanenta bilden: *Utsikt från fönstret i Gras*. Han belägger en plåtplatta med [[Bitumen från Judeen]], en tjära som stelnar i ljuset. Exponeringen varar ungefär **8 timmar**: solen hinner lysa upp båda sidor av byggnaderna."
+        },
+        {
+          "type": "image",
+          "asset": "niepce_first_photograph_view_from_window_gras",
+          "ratio": "4:3",
+          "caption": "Det äldsta kända fotografiet, taget av Niépce från hans fönster."
+        },
+        {
+          "type": "funFact",
+          "text": "På den här bilden syns skuggorna från de två fasaderna samtidigt: fotograferingen varade så länge att solen cirklade runt himlen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Efter Niépces död upptäckte hans medarbetare **Louis Daguerre** effekten av jod och kvicksilverångor på silver. Han utvecklade **daguerreotypi**, presenterad för Vetenskapsakademin i **1839**. I England utvecklade **William Fox Talbot** samtidigt [[William Fox Talbots kalotyp]], som gör att flera kopior kan göras av ett negativ."
+        }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p2",
+      "title": "Porträttet för alla, beviset för alla",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Från åren **1840** lämnade fotografiet laboratorierna. Fram till dess var att ha ditt porträtt en lyx förbehållen dem som kunde betala en målare. Med studiorna och [[Carte-de-visite]], ett litet, billigt format, har bourgeoisin och sedan arbetarklassen tillgång till bilden av sig själva."
+        },
+        {
+          "type": "image",
+          "asset": "louis_daguerre_daguerreotype_silver_plate",
+          "ratio": "4:3",
+          "caption": "Daguerreotypien: en unik bild, i slående detalj, på silverplåt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fotot blir också bevis. Under Krimkriget (**1855**) rapporterar **Roger Fenton** bilder från fronten. Under det amerikanska inbördeskriget fotograferade **Matthew Brady** soldater och slagfält. Händelsen berättas inte längre bara: den visas."
+        }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p3",
+      "title": "När målning måste återuppfinna sig själv",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Om en maskin kopierar ett ansikte bättre än en målare, vilken nytta är det med färg längre? Det är [[Fotografiets inverkan på det figurativa måleriet]]: figurativ konst förlorar sitt monopol på verkligheten. Befriade från denna plikt utforskar konstnärerna något annat: den lysande känslan med [[Impressionism]], sedan deformationen av former med [[Kubism]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fotografi gör gradvis anspråk på sitt eget språk: inramning, ljus, ögonblick. Det är inte längre en enkel kopia av världen. Det blir en konst i sin egen rätt."
+        }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p4",
+      "title": "Kodak och bildkultur",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I slutet av 1800-talet ersatte George Eastman, grundare av Kodak, tunga glasplattor med flexibel film. Enheten blir portabel. Sloganen \"Du trycker på knappen, vi gör resten\" markerar amatörens födelse. Familjealbumet och den globala rapporten föds tillsammans."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1826",
+              "title": "Första bilden av Niépce",
+              "detail": "Utsikt från Gras-fönstret, efter timmars exponering."
+            },
+            {
+              "date": "1839",
+              "title": "Daguerreotypien",
+              "detail": "Daguerre presenterar sin process i Paris."
+            },
+            {
+              "date": "1841",
+              "title": "Kalotypen",
+              "detail": "Talbot tillåter utskrift av flera kopior."
+            },
+            {
+              "date": "1888",
+              "title": "Kodak för alla",
+              "detail": "Eastman demokratiserar amatörkameran."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Född i **1839**, fotografi fixade först verkligheten bättre än målning, och uppfann sedan vår moderna [[Visuell kultur]]: den där vi först tror på det vi ser."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "id": "course_55_la_theorie_de_la_gravitation_newton_1687",
+  "title": "Teoria grawitacji",
+  "subtitle": "Newtona, 1687",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "W 1687 roku Newton opublikował prosty i ogromny pomysł: ta sama siła powoduje upadek jabłka i obrót Księżyca. Oto, co to zmienia.",
+  "hero": {
+    "image": "la_theorie_de_la_gravitation_newton",
+    "ratio": "16:9",
+    "hook": "Jabłko, Księżyc, planety: jedna siła wyjaśniająca wszystko."
+  },
+  "sections": [
+    {
+      "id": "course_55_la_theorie_de_la_gravitation_newton_1687_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Przed Newtonem wiedzieliśmy już dużo o planetach dzięki **Galileusz**, włoskiemu fizykowi z XVII wieku i **[[Johannesa Keplera]]**, astronomowi, który opisał orbity eliptyczne. Brakowało jednak wyraźnego związku pomiędzy tym, co spada na Ziemię, a tym, co wiruje na niebie."
+        },
+        {
+          "type": "paragraph",
+          "text": "W **1687** **Izaaka Newtona** opublikował *[[Philosophiae Naturalis Principia Mathematica]]ZZXG0Z*, *Principia*, dzieło założycielskie fizyki klasycznej. Twierdzi, że grawitacja jest **uniwersalna**: działa wszędzie i w ten sam sposób."
+        }
+      ]
+    },
+    {
+      "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p1",
+      "title": "Świat przed syntezą",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kepler opisał orbity planet za pomocą precyzyjnych praw: orbity w **elipsa**, równe obszary omiatane w jednakowym czasie. Galileusz badał upadek ciał. Ale dlaczego planety pozostają na swojej trajektorii? Co ich „ciągnie”?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Newton odpowiada: **przyciąganie grawitacyjne**, siła, która przyciąga dwie masy do siebie. Ziemia przyciąga Księżyc. Słońce przyciąga Ziemię. Przyciągasz także kawałek Ziemi... nawet jeśli jest malutki."
+        }
+      ]
+    },
+    {
+      "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p2",
+      "title": "Prawo w jednym zdaniu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "isaac_newton_apple_tree_woolsthorpe",
+          "ratio": "4:3",
+          "caption": "Historia jabłka to przede wszystkim historia. Pomysł jest prawdziwy."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dwa ciała przyciągają się z siłą, która wzrasta wraz z ich **masą**, ilością materii, i maleje w miarę ich oddalania. Dokładniej: siła słabnie wraz z **kwadratem odległości**. Podwojenie odległości dzieli siłę przyciągania przez cztery. Im dalej jesteś, tym szybciej atrakcyjność słabnie."
+        },
+        {
+          "type": "image",
+          "asset": "planets_orbit_solar_system_gravity",
+          "ratio": "16:9",
+          "caption": "Planety nieustannie „spadają” w stronę Słońca… i tęsknią za nim: to jest orbita."
+        },
+        {
+          "type": "funFact",
+          "text": "Księżyc nieustannie „spada” w stronę Ziemi. Ponieważ ma również dużą prędkość poprzeczną, kręci się wokół zamiast się rozbijać."
+        }
+      ]
+    },
+    {
+      "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p3",
+      "title": "Prawa ruchu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Newton podaje także trzy **prawo ruchu**. Podsumowując: obiekt utrzymuje prędkość, jeśli nie ma siły, zasada **bezwładność**; siła zmienia prędkość; każde działanie wywołuje odwrotną reakcję."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dzięki temu możemy obliczyć trajektorie, **pływać**, wzloty i spadki oceanów pod wpływem Księżyca i Słońca oraz orbity. Fizyka staje się narzędziem przewidywania."
+        }
+      ]
+    },
+    {
+      "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p4",
+      "title": "Potężne… ale nie ostatnie słowo",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dwa wieki później **[[Alberta Einsteina]]** poprawi Newtona pod kątem ekstremalnych przypadków, bardzo dużych prędkości i bardzo dużych grawitacji za pomocą [[Grawitacja relatywistyczna (Einstein)]]. Grawitacja staje się wtedy zakrzywieniem czasoprzestrzeni i nie jest już niewidzialną siłą. Ale jeśli chodzi o wystrzelenie rakiety lub zrozumienie pływów, Newton pozostaje doskonały."
+        },
+        {
+          "type": "takeaway",
+          "text": "Newton jednoczy niebo i Ziemię: grawitacja przyciąga wszędzie masy. Jest to jedna z największych syntez naukowych w historii."
+        }
+      ]
+    }
+  ]
+}

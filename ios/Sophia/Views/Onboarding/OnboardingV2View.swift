@@ -26,15 +26,49 @@ struct OnboardingV2View: View {
         case welcome, language, objectives, objectiveIntro
         case questions, phoneTime, yearsGrid, transform, review, personalize
         case swipe, loading, profile, login, trialSteps, reminder, paywallAnnual, paywallComparison
+
+        /// Nom envoyé à l'analytics : la séquence étant dynamique (page d'essai retirée quand
+        /// l'offering n'inclut pas d'essai), l'index seul ne désigne pas un écran stable.
+        var analyticsName: String {
+            switch self {
+            case .welcome: "welcome"
+            case .language: "language"
+            case .objectives: "objective"
+            case .objectiveIntro: "objective_intro"
+            case .questions: "questions"
+            case .phoneTime: "phone_time"
+            case .yearsGrid: "years_grid"
+            case .transform: "transform"
+            case .review: "review"
+            case .personalize: "personalize"
+            case .swipe: "swipe_courses"
+            case .loading: "loading"
+            case .profile: "profile"
+            case .login: "login"
+            case .trialSteps: "trial_steps"
+            case .reminder: "reminder"
+            case .paywallAnnual: "paywall_annual"
+            case .paywallComparison: "paywall_comparison"
+            }
+        }
     }
 
     /// Séquence complète et fixe. Les pages « valeur » (me cultiver → temps d'écran) sont
     /// désormais montrées quel que soit l'objectif choisi. `profile` est l'écran de
     /// récompense « Voici ton profil » inséré juste avant la création de compte.
+    ///
+    /// `trialSteps` détaille la chronologie de l'essai gratuit : la page est retirée quand
+    /// l'offering servie (variante d'expérience RevenueCat) n'inclut pas d'essai, sinon on
+    /// promettrait un essai que l'utilisateur n'aura pas.
     private var screens: [Screen] {
-        [.welcome, .language, .objectives, .objectiveIntro,
-         .questions, .phoneTime, .yearsGrid, .transform, .review, .personalize,
-         .swipe, .loading, .profile, .login, .trialSteps, .reminder, .paywallAnnual, .paywallComparison]
+        var list: [Screen] = [.welcome, .language, .objectives, .objectiveIntro,
+                              .questions, .phoneTime, .yearsGrid, .transform, .review, .personalize,
+                              .swipe, .loading, .profile, .login]
+        if store.offerings == nil || store.annualHasFreeTrial {
+            list.append(.trialSteps)
+        }
+        list.append(contentsOf: [.reminder, .paywallAnnual, .paywallComparison])
+        return list
     }
 
     private static let dotScreens: Set<Screen> = [
@@ -68,7 +102,7 @@ struct OnboardingV2View: View {
         }
         .onAppear {
             AnalyticsService.trackOnboardingStarted()
-            AnalyticsService.trackOnboardingStepViewed(stepIndex: 0)
+            AnalyticsService.trackOnboardingStepViewed(stepIndex: 0, stepName: Screen.welcome.analyticsName)
         }
     }
 
@@ -137,7 +171,7 @@ struct OnboardingV2View: View {
         lastAdvanceAt = now
         OnboardingHaptics.selection()
         stepIndex = next
-        AnalyticsService.trackOnboardingStepViewed(stepIndex: next)
+        AnalyticsService.trackOnboardingStepViewed(stepIndex: next, stepName: list[next].analyticsName)
     }
 
     private func finish() {

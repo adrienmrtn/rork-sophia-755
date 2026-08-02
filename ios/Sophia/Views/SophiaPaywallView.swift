@@ -28,7 +28,7 @@ enum SophiaPaywallContext: String, Identifiable {
 ///
 /// - `.offreDiscount` → `SophiaDiscountPaywall` (flash sale, `offre_discount`, 19,99 €/an).
 /// - `.entrainement` → `SophiaTrainingPaywall` (sells the spaced-repetition training method).
-/// - `.quizz` → `SophiaQuizPaywall` (App Store rating, auto-playing quiz demo, reviews carousel).
+/// - `.quizz` → `SophiaQuizPaywall` (auto-playing quiz demo, FAQ, activate-trial CTA).
 /// - `.debloquerCours` → `SophiaCourseUnlockPaywall` (rating, 6-courses/day stat, reviews, countdown).
 /// - `.finOnboarding` → `SophiaStandardPaywall` (single annual plan, 39,99 €/an, 3-day trial).
 struct SophiaPaywallView: View {

@@ -1,0 +1,108 @@
+{
+  "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment",
+  "title": "Sera etkisi nedir (gerçekte)?",
+  "subtitle": "İklim ve atmosfer",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Sera etkisi öncelikle bir sorun değildir: Dünyanın donmasını engelleyen görünmez mantodur. Asıl sorun, onu çok çabuk kalınlaştırdığınızda ortaya çıkar.",
+  "hero": {
+    "image": "qu_est_ce_que_l_effet_de_serre",
+    "ratio": "16:9",
+    "hook": "Sera etkisi olmasaydı Dünya buzlu bir çöl olurdu. Fazlasıyla aşırı ısınır."
+  },
+  "sections": [
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Güneşin altında kapalı bir araba hayal edin: Camlar ışığın içeri girmesine izin veriyor, ancak ısı dışarı çıkmakta zorlanıyor. Yolcu bölmesi ısınır. Dünya'nın [[Sera gazı]]'si biraz buna benzer, cam yerine havayla çalışır."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu fenomen **doğal** ve hayatidir. Bu olmasaydı, dünyanın ortalama sıcaklığı **-18 °C**'ye düşerdi. Onunla birlikte **+15 °C** civarındayız. Mevcut sorun onun varlığı değil: faaliyetlerimiz tarafından hızlı **amplifikasyonu**."
+        }
+      ]
+    },
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p1",
+      "title": "Gezegen ısısını nasıl koruyor?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Güneş esas olarak görünür ışık gönderir. Atmosfer geçmesine izin veriyor. Karalar ve okyanuslar ısınır, ardından bu enerjiyi görünür ışıktan \"daha uzun\" olan **eksik ısı** biçiminde geri yayar."
+        },
+        {
+          "type": "image",
+          "asset": "factory_chimneys_greenhouse_gas_emissions",
+          "ratio": "auto",
+          "caption": "Endüstriyel emisyonlar sera etkisini güçlendiriyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Sera gazı]] adlı bazı gazlar bu ısıyı emer ve yer dahil her yöne yayar. Havada çoğunluğu oluşturan nitrojen ve oksijen bu işi pek yapamaz. Su buharı, **CO₂** ve **meta** bunu çok iyi yapar."
+        },
+        {
+          "type": "funFact",
+          "text": "“Sera etkisi” ismi biraz yanıltıcıdır. Gerçek bir sera esas olarak yükselen sıcak havayı engelleyerek ısınır. Atmosfer kızılötesi ışınları emerek ısıyı hapseder."
+        }
+      ]
+    },
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p2",
+      "title": "İnsanlar battaniyeyi kalınlaştırdığında",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sanayi devriminden bu yana kömür, petrol ve gaz yakıldı. Milyonlarca yıldır yer altında gömülü olan bu karbon tekrar havaya karışıyor. Ormansızlaşma aynı zamanda CO₂ emen ormanları da azaltır. Hayvancılık ve pirinç ekimi, 20 yılda CO₂'den yaklaşık **80 kat** daha fazla \"ısıtıcı\" metan katıyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sonuç: CO₂ konsantrasyonu yaklaşık **280**'den milyonda **420** parçanın üzerine çıktı. Böyle bir seviye, denizlerin daha yüksek olduğu [[Pliyosen]]'den (yaklaşık **Z3** milyon yıl önce) beri görülmemişti."
+        }
+      ]
+    },
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p3",
+      "title": "Ne kadar enerjik bir iklim değişir",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Binlerce klimatologun çalışmasının sentezi olan [[IPCC]] açıktır: 1950'den bu yana yaşanan ısınmanın bin yıldır eşi benzeri görülmemiş bir olaydır ve bunun insan kaynaklı olduğu kesindir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Havada ve okyanuslarda daha fazla enerji, daha fazla aşırılık anlamına gelir: daha kuru kuraklıklar, daha şiddetli yağmurlar, eriyen buzullar ve buzullar, yükselen deniz seviyeleri. Ve bir hızlandırıcı da var: Beyaz buz kaybolduğunda, koyu renkli toprak ve su daha fazla güneş ışığını emer. [[Karasal albedo]] düşüyor ve gezegen daha da hızlı ısınıyor."
+        },
+        {
+          "type": "funFact",
+          "text": "Venüs \"sıkıştırılmış\" sera etkisini gösteriyor: %96 CO₂ atmosferi ve yerde yaklaşık **460 °C**, kurşunu eritmeye yetecek kadar."
+        }
+      ]
+    },
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p4",
+      "title": "Artışı sınırlayın, gerisine uyum sağlayın",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Uluslararası hedef, [[sürekli donmuş toprak]]'nin çözülmesi gibi daha fazla metan açığa çıkaracak tehlikeli eşiklerden kaçınmak için sanayi öncesi döneme kıyasla **+1,5 °C** veya **+2 °C**'nin altında kalmayı hedefliyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "İki kaldıraç: **Emisyon** azaltın (temiz enerji, ayıklık, ormanlar) ve **zaten tutarlılık sağlananlara uyum sağlayın**. CO₂ yüzyıllarca havada kalır: bugün yaydığımız şey uzun süre dayanır."
+        },
+        {
+          "type": "takeaway",
+          "text": "Doğal bir sera etkisi olmasaydı, Dünya **-18 °C** civarında donardı. Fosil yakıtlarla çoğalması, CO₂'yi **3 milyon yıldır** görülmemiş seviyelere itiyor."
+        }
+      ]
+    }
+  ]
+}

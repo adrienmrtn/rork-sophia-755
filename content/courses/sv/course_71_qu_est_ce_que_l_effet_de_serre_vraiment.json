@@ -1,0 +1,108 @@
+{
+  "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment",
+  "title": "Vad är växthuseffekten (egentligen)?",
+  "subtitle": "Klimat & atmosfär",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Växthuseffekten är inte i första hand ett problem: det är den osynliga manteln som hindrar jorden från att frysa. Det verkliga problemet är när du tjocknar det för snabbt.",
+  "hero": {
+    "image": "qu_est_ce_que_l_effet_de_serre",
+    "ratio": "16:9",
+    "hook": "Utan växthuseffekten skulle jorden vara en isig öken. Med för mycket överhettas den."
+  },
+  "sections": [
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Föreställ dig en bil stängd i solen: fönstren släpper in ljuset, men värmen har svårt att ta sig ut. Passagerarutrymmet värms upp. Jordens [[växthusgaser]] fungerar lite så här, med luft istället för glas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Detta fenomen är **naturlig** och livsviktigt. Utan det skulle jordens medeltemperatur falla mot **-18 °C**. Med honom är vi runt **+15 °C**. Det aktuella problemet är inte dess existens: det är dess snabba **förstärkning** av våra aktiviteter."
+        }
+      ]
+    },
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p1",
+      "title": "Hur planeten håller värmen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Solen sänder främst synligt ljus. Atmosfären låter det passera. Landet och haven värms upp och utstrålar sedan denna energi tillbaka i form av **infrarött ljus**, vågor som är \"längre\" än synligt ljus."
+        },
+        {
+          "type": "image",
+          "asset": "factory_chimneys_greenhouse_gas_emissions",
+          "ratio": "auto",
+          "caption": "Industriella utsläpp förstärker växthuseffekten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vissa gaser, [[växthusgaser]], absorberar denna värme och strålar ut den i alla riktningar, även mot marken. Kväve och syre, majoriteten i luften, gör knappast det här jobbet. Vattenånga, **CO₂** och **metan** gör detta mycket bra."
+        },
+        {
+          "type": "funFact",
+          "text": "Namnet \"växthuseffekt\" är lite missvisande. Ett riktigt växthus värmer främst genom att blockera den stigande varma luften. Atmosfären fångar värme genom att absorbera infraröda strålar."
+        }
+      ]
+    },
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p2",
+      "title": "När människor förtjockar filten",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sedan den industriella revolutionen har kol, olja och gas bränts. Detta kol, begravt under jorden i miljontals år, återvänder till luften. Avskogning minskar också skogar som absorberade CO₂. Boskap och risodling tillför metan, ungefär **80 gäng** mer \"uppvärmning\" än CO₂ under 20 år."
+        },
+        {
+          "type": "paragraph",
+          "text": "Resultat: CO₂-koncentrationen ökade från ungefär **280** till mer än **420** delar per miljon. En sådan nivå hade inte setts sedan [[Pliocen]], för cirka **Z3** miljoner år sedan, då havet var högre."
+        }
+      ]
+    },
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p3",
+      "title": "Vilket mer energiskt klimat förändras",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "[[IPCC]], som syntetiserar tusentals klimatologers arbete, är tydlig: uppvärmningen sedan 1950 är aldrig tidigare skådad över årtusenden, och dess mänskliga ursprung är etablerat."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mer energi i luften och haven innebär fler extremer: torrare torka, våldsammare regn, smältande glaciärer och istäcken, stigande havsnivåer. Och en accelerator: när den vita isen försvinner absorberar den mörka jorden och vattnet mer solljus. [[Jordbunden albedo]] faller och planeten värms upp ännu snabbare."
+        },
+        {
+          "type": "funFact",
+          "text": "Venus visar den \"packade\" växthuseffekten: en atmosfär av 96 % CO₂ och cirka **460 °C** på marken, tillräckligt för att smälta bly."
+        }
+      ]
+    },
+    {
+      "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p4",
+      "title": "Begränsa ökningen, anpassa till resten",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Det internationella målet syftar till att förbli under **+1,5°C** eller **+2°C** jämfört med den förindustriella eran, för att undvika farliga trösklar såsom upptining av [[permafrost]], vilket skulle släppa ut ännu mer metan."
+        },
+        {
+          "type": "paragraph",
+          "text": "Två spakar: **minska** utsläpp (ren energi, nykterhet, skogar) och **anpassas** till vad som redan har åtagit sig. CO₂ finns kvar i luften i århundraden: det vi släpper ut idag varar länge."
+        },
+        {
+          "type": "takeaway",
+          "text": "Utan en naturlig växthuseffekt skulle jorden frysa runt **-18 °C**. Dess förstärkning med fossila bränslen driver CO₂ till nivåer som inte setts på **3 miljoner dollar**."
+        }
+      ]
+    }
+  ]
+}

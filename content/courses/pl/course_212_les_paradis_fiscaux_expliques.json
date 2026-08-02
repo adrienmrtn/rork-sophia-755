@@ -1,0 +1,108 @@
+{
+  "id": "course_212_les_paradis_fiscaux_expliques",
+  "title": "Raje podatkowe wyjaśnione",
+  "subtitle": "Ukryto 10 000 miliardów",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Około 10% światowego bogactwa unika podatków na nieprzejrzystych terytoriach. Jak działa ten system i dlaczego jest tak odporny?",
+  "hero": {
+    "image": "les_paradis_fiscaux_expliques",
+    "ratio": "16:9",
+    "hook": "Populacja Kajmanów wynosi 65 000 i prowadzi ponad 100 000 przedsiębiorstw. Witamy w świecie rajów podatkowych."
+  },
+  "sections": [
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Niektóre terytoria, często małe, pozwalają firmom i wielkim fortunom niemal całkowicie uniknąć podatku obowiązującego w ich kraju pochodzenia. Nazywamy je **rajami podatkowymi**. Szacuje się, że znajduje się tam około 10 bilionów dolarów, czyli od 8 do 10% światowego bogactwa."
+        },
+        {
+          "type": "paragraph",
+          "text": "To nie jest problem tylko księgowych: pozbawia stany 600 miliardów dolarów rocznie, czyli pieniędzy, które mogłyby sfinansować szpitale czy szkoły. Oto jak działa ten dyskretny system i dlaczego tak dobrze opiera się próbom regulacji."
+        }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p1",
+      "title": "Jak ukryte są pieniądze",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Raj podatkowy opiera się na trzech filarach: podatkach bliskich zeru, dużej przejrzystości i niewielkiej współpracy z innymi krajami. Terytoria te przyciągają w ten sposób kapitał z całego świata, co nazywamy gospodarką [[Na morzu]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na wielu z tych terytoriów możliwe jest utworzenie firmy fasadowej: firmy bez biura i pracowników, która istnieje tylko na papierze. Jego jedynym celem jest często ukrycie tożsamości prawdziwego właściciela pieniędzy, zwanego właścicielem rzeczywistym."
+        },
+        {
+          "type": "image",
+          "asset": "cayman_islands_offshore_banking_paradise",
+          "ratio": "4:3",
+          "caption": "Kajmany, mimo niewielkich rozmiarów, jedno z największych centrów finansowych na świecie."
+        },
+        {
+          "type": "funFact",
+          "text": "Kajmany mają zaledwie 65 000 mieszkańców, ale zarejestrowanych jest na nich ponad 100 000 firm: jest to piąte na świecie centrum finansowe depozytów bankowych, zajmujące powierzchnię mniejszą niż Paryż."
+        }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p2",
+      "title": "Sztuka osiągania zysku zanika",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W przypadku dużych firm cel niekoniecznie jest nielegalny: mówimy o **optymalizacja podatkowa**, czyli umiejętne wykorzystanie przepisów każdego kraju, aby płacić niższe podatki. Główne narzędzie nazywa się [[Ceny transferowe]]: firma sama ustala cenę wymian pomiędzy własnymi spółkami zależnymi, aby pokazać swoje zyski tam, gdzie podatek jest najniższy."
+        },
+        {
+          "type": "paragraph",
+          "text": "Powszechną metodą jest przeniesienie marki lub patentu na spółkę zależną zlokalizowaną w raju podatkowym. Pozostałe spółki zależne, zlokalizowane np. we Francji, muszą wówczas płacić ogromne sumy za prawo do używania tej marki. Płatności te zmniejszają lokalnie dochód do opodatkowania, zwiększając go jednocześnie w raju podatkowym."
+        },
+        {
+          "type": "funFact",
+          "text": "Francuskie słowo „raj podatkowy” pochodzi z błędu w tłumaczeniu: w języku angielskim „raj podatkowy”, czyli bezpieczna przystań dla pieniędzy (raj), a nie raj (niebo). Pomieszanie dźwięków zmieniło znaczenie słowa."
+        }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p3",
+      "title": "Świat reaguje (trochę)",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kryzys finansowy z 2008 roku, a następnie publikacja [[Dokumenty Panamskie]] w 2016 roku wywołały falę oburzenia. Pod naciskiem OECD i G20 banki muszą teraz automatycznie przekazywać organom podatkowym informacje o swoich zagranicznych klientach."
+        },
+        {
+          "type": "paragraph",
+          "text": "Najbardziej znaczący postęp nastąpił w 2021 r., kiedy to umowa międzynarodowa ustaliła minimalną stawkę podatku w wysokości 15% dla przedsiębiorstw międzynarodowych. Pomysł: uniemożliwić krajom konkurowanie ze sobą poprzez ciągłe obniżanie podatków w celu przyciągnięcia przedsiębiorstw. Jeśli firma płaci w raju podatkowym tylko 5%, jej kraj macierzysty może teraz ubiegać się o pozostałe 10%."
+        }
+      ]
+    },
+    {
+      "id": "course_212_les_paradis_fiscaux_expliques_p4",
+      "title": "Sprawiedliwość podatkowa nadal krucha",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kiedy największe fortuny unikają podatków, to klasa średnia i małe lokalne przedsiębiorstwa ponoszą większą część ciężarów podatkowych. Osłabia to również usługi publiczne, takie jak opieka zdrowotna czy edukacja, ze względu na brak zasobów."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bitwa przenosi się obecnie w stronę technologii cyfrowych: platformy internetowe nie potrzebują już biur, aby zarabiać w danym kraju, co sprawia, że ​​granice podatkowe stają się coraz bardziej nieszczelne. Administracje wykorzystują obecnie duże zbiory danych do wykrywania nieprawidłowości i domagają się rejestrów publicznych ujawniających tożsamość prawdziwych właścicieli przedsiębiorstw."
+        },
+        {
+          "type": "takeaway",
+          "text": "Raje podatkowe chronią około 10% światowego bogactwa dzięki tajemnicy bankowej i prawie zerowemu opodatkowaniu. Od 2021 r. globalna minimalna stawka podatkowa wynosząca 15% ma na celu ograniczenie tego uchylania się od płacenia podatków, ale bitwa pozostaje daleka od wygranej."
+        }
+      ]
+    }
+  ]
+}

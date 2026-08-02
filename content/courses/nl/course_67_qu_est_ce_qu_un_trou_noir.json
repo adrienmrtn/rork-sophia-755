@@ -1,0 +1,120 @@
+{
+  "id": "course_67_qu_est_ce_qu_un_trou_noir",
+  "title": "Wat is een zwart gat?",
+  "subtitle": "Extreme ernst",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Een zwart gat is geen kosmische stofzuiger. Het is een gebied waar de zwaartekracht zo sterk is dat zelfs licht niet kan ontsnappen.",
+  "hero": {
+    "image": "qu_est_ce_qu_un_trou_noir",
+    "ratio": "16:9",
+    "hook": "Er komt niets uit, zelfs geen licht. Uiteindelijk hebben we echter de schaduw ervan gefotografeerd."
+  },
+  "sections": [
+    {
+      "id": "course_67_qu_est_ce_qu_un_trou_noir_intro",
+      "title": "Inleiding",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Een zwart gat is een gebied van **ruimte-tijd**, het weefsel dat ruimte en tijd verenigt, waar de zwaartekracht zo intens is dat de snelheid die nodig is om te ontsnappen groter is dan die van het licht. Er komt niets uit: maakt niet uit, geen lichtsignaal."
+        },
+        {
+          "type": "paragraph",
+          "text": "Het is geen ‘gat’ in de zin van een tunnel. Het is een extreme materiaalconcentratie die deze stof zeer sterk buigt. Zwarte gaten waren lang een pure theorie die voortkwam uit de vergelijkingen van Einstein en worden tegenwoordig op verschillende manieren waargenomen."
+        }
+      ]
+    },
+    {
+      "id": "course_67_qu_est_ce_qu_un_trou_noir_p1",
+      "title": "Wanneer een ster instort",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Een stellair zwart gat ontstaat vaak uit de dood van een zeer massieve ster, die minstens **20 tot 25 keer de massa van de zon heeft. Tijdens zijn leven houdt de ster stand dankzij een evenwicht: de zwaartekracht trekt naar het midden, de druk van **kernfusie**** duwt naar buiten. In het hart van de ster wordt waterstof omgezet in helium."
+        },
+        {
+          "type": "image",
+          "asset": "black_hole_accretion_disk_galaxy",
+          "ratio": "auto",
+          "caption": "Een zwart gat omringd door zijn gloeiende accretieschijf."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wanneer de brandstof opraakt, daalt de druk. Het hart van de ster is verpletterd. Een explosie van **supernova** kan vervolgens de melkweg verlichten. Als de resterende kern groot genoeg is, is er niets dat de compressie kan stoppen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Centraal in de theorie beschrijft de theorie een [[De zwaartekrachtsingulariteit]]: een punt waar dichtheid en kromming extreem worden, en waar onze huidige vergelijkingen niet meer goed werken. Daaromheen vinden we de [[Gebeurtenishorizon]]: een onzichtbare rand. Eenmaal overgestoken is er geen terugkeer meer mogelijk naar de rest van het universum."
+        },
+        {
+          "type": "funFact",
+          "text": "Als je in een zwart gat valt, trekt de zwaartekracht veel harder aan je voeten dan aan je hoofd. Dit uitrekken heet ‘spaghettificatie’."
+        }
+      ]
+    },
+    {
+      "id": "course_67_qu_est_ce_qu_un_trou_noir_p2",
+      "title": "Geen kosmische stofzuiger",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In tegenstelling tot wat vaak wordt gedacht, zuigt een zwart gat niet alles op wat in de verte voorbijgaat. De zwaartekracht hangt af van de massa en de afstand, zoals bij elk object. Als de zon zou worden vervangen door een zwart gat met dezelfde massa, zou de aarde in een baan om de aarde blijven draaien. Maar zonder licht en warmte zouden we bevriezen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Er zijn ook **superzware zwarte gaten**, met een massa van miljoenen tot miljarden zonsmassa’s, in het hart van bijna alle sterrenstelsels. In de Melkweg is dat **Boogschutter***, ongeveer **4 duizend** zonsmassa’s."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ze worden vaak opgemerkt dankzij de [[Accretie schijf]]: een ring van gas en stof die heel snel om hen heen draait. Wrijving verwarmt dit materiaal totdat het extreem helder wordt in röntgenstralen of radiogolven. Op deze lichtgevende achtergrond zien we dan de schaduw van het zwarte gat."
+        }
+      ]
+    },
+    {
+      "id": "course_67_qu_est_ce_qu_un_trou_noir_p3",
+      "title": "2019: het eerste beeld",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In **april 2019** geeft het Event Horizon Telescope-project het eerste beeld van een zwart gat vrij. Door acht radiotelescopen te combineren met behulp van de [[Interferometrie]] creëren onderzoekers een virtuele telescoop ter grootte van de aarde."
+        },
+        {
+          "type": "paragraph",
+          "text": "Het doelwit is **M87***, het superzware zwarte gat in het sterrenstelsel Messier 87, **55 miljoen** lichtjaren verwijderd. We zien een heldere ring rond een donker gebied: het silhouet van de waarnemingshorizon. In **2022** volgt een afbeelding van onze buurman Boogschutter A*."
+        },
+        {
+          "type": "funFact",
+          "text": "Sinds **2015** hebben de LIGO- en Virgo-observatoria ook **zwaartekrachtgolven** gedetecteerd: kleine trillingen in de ruimte-tijd die worden geproduceerd wanneer twee zwarte gaten samensmelten."
+        }
+      ]
+    },
+    {
+      "id": "course_67_qu_est_ce_qu_un_trou_noir_p4",
+      "title": "Hawking en langzame verdamping",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In **1974** liet de Britse natuurkundige **Stefan Hawking** zien dat een zwart gat niet helemaal zwart zou zijn. Door kwantumeffecten nabij de horizon zou het zeer zwakke straling uitzenden: de [[Hawking-straling]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Resultaat: een geïsoleerd zwart gat zou langzaam massa verliezen en uiteindelijk verdampen. Voor een stellair zwart gat zou dit fantastisch langer duren dan de huidige leeftijd van het universum. Dit idee roept ook de informatieparadox op: wat gebeurt er met de informatie over wat erin valt als het zwarte gat verdwijnt?"
+        },
+        {
+          "type": "paragraph",
+          "text": "In de buurt van een zwart gat verstrijkt de tijd ook langzamer voor een waarnemer op afstand, een relativistisch effect van **tijdsdilatatie**. Deze objecten behoren nog steeds tot de beste laboratoria voor het testen van de grenzen van de natuurkunde."
+        },
+        {
+          "type": "takeaway",
+          "text": "Een zwart gat wordt vaak gevormd door de ineenstorting van een massieve ster. Het wordt begrensd door de waarnemingshorizon, een grens die voor het eerst werd gefotografeerd in **2019** rond M87*."
+        }
+      ]
+    }
+  ]
+}

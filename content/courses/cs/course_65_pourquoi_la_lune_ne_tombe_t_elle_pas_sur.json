@@ -1,0 +1,120 @@
+{
+  "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur",
+  "title": "Proč Měsíc nespadne na Zemi?",
+  "subtitle": "Orbita a gravitace",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Měsíc neustále klesá k Zemi. Prostě jí to pokaždé chybí. Přesně taková je orbita.",
+  "hero": {
+    "image": "pourquoi_la_lune_ne_tombe_pas",
+    "ratio": "16:9",
+    "hook": "Měsíc k nám padá. Prostě jí chybí Země na každém kroku."
+  },
+  "sections": [
+    {
+      "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pokud zemská gravitace přitáhne Měsíc, proč do nás nenarazí? Odpověď se zdá bizarní: Měsíc **skutečně padá** směrem k Zemi. Prostě jí to každou chvíli chybí."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tato rovnováha mezi pádem a boční rychlostí je **orbitální**, zakřivená trajektorie kolem hvězdy. Anglický fyzik **Isaac Newton** jako první sjednotil pád jablka a pohyb hvězd se stejnou myšlenkou."
+        },
+        {
+          "type": "funFact",
+          "text": "Pokud byste na Zemi vážili **60 kg**, na Měsíci byste vážili jen asi **10**: jeho gravitace je šestkrát slabší."
+        }
+      ]
+    },
+    {
+      "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p1",
+      "title": "Newtonův pomyslný kánon",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Newton si představí dělo na vrcholu hory tak vysoké, že by se vynořilo z atmosféry. Vystřelíme míč vodorovně. S malým výkonem rychle padá. S větší silou jde dál."
+        },
+        {
+          "type": "image",
+          "asset": "newton_cannonball_orbit_thought_experiment",
+          "ratio": "auto",
+          "caption": "Newtonův myšlenkový experiment s dělovou koulí: klíč k pochopení oběžné dráhy."
+        },
+        {
+          "type": "paragraph",
+          "text": "Při specifické rychlosti zvané [[Rychlost satelitu]] se děje něco pozoruhodného. Když míč padá, Země, která je kulatá, se pod ním zakřivuje stejnou rychlostí. Projektil padá... aniž by se kdy dotkl země. Je v **trvalém volném pádu**, tažen gravitací, aniž by havaroval."
+        },
+        {
+          "type": "paragraph",
+          "text": "Měsíc dělá to samé. Má dostatečnou boční rychlost, aby proměnila pád ve smyčku. Bez této rychlosti by se ponořil přímo k nám."
+        }
+      ]
+    },
+    {
+      "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p2",
+      "title": "Dvě síly, jedna rovnováha",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Měsíc obíhá přibližně **Najeto 384 000 km**. Jeho boční rychlost je přibližně **1 km/s**. Kdyby se náhle zastavil, během několika dní by havaroval. Pokud by gravitace náhle zmizela, šlo by prostorem po přímce, podle principu [[Setrvačnost]]: těleso si udržuje svou rychlost, pokud není zpomaleno."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Newtonův zákon univerzální gravitace]] říká, že každá hmota přitahuje každou jinou hmotu a tato přitažlivost klesá se vzdáleností, přesněji s druhou mocninou vzdálenosti. Čím blíže je satelit, tím rychleji musí jet, aby se vyhnul pádu."
+        },
+        {
+          "type": "funFact",
+          "text": "Mezinárodní vesmírná stanice ve výšce pouhých **400 km** se pohybuje rychlostí přibližně **28 000 km/h**. Oběhne Zemi za **90 minut**. Měsíc, který je dále, trvá **27,3 dne**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Takže oběžná dráha není žádná magie. Je to neustálý kompromis mezi „padám“ a „pohybuji se příliš rychle na to, abych se trefil“."
+        }
+      ]
+    },
+    {
+      "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p3",
+      "title": "Příliv a odliv tlačí Měsíc pryč",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Oběžná dráha není pevná. Do hry vstupují [[Slapové síly]]. Gravitace Měsíce táhne silněji na stranu Země, která je k ní přivrácená, než na střed. Deformuje oceány a vytváří vybouleninu vody."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vzhledem k tomu, že se Země otáčí kolem své osy rychleji, než se kolem ní otáčí Měsíc, posouvá se tento hřeben o kousek před Měsíc. Tření velmi mírně zpomaluje rotaci Země: naše dny se prodlužují přibližně o **1,4 milisekundy** za století. Výměnou za to se Měsíc vzdálí o přibližně **3,8 cm** za rok."
+        },
+        {
+          "type": "paragraph",
+          "text": "Před miliardami let byl Měsíc mnohem blíž. Přílivy byly obrovské. Toto smíchání vody a chemie mohlo pomoci raným formám života. A dinosauři žili na Zemi, kde dny trvaly pouze **22 nebo 23 hodin**."
+        }
+      ]
+    },
+    {
+      "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p4",
+      "title": "Zatmění...zatím",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dnes je Slunce geometrickou shodou okolností asi **400krát** větší než Měsíc, ale také **400krát** dále. Ti dva proto mají stejnou **jevnou velikost**, úhel, pod kterým je vidíme na obloze. Úplné zatmění Slunce je možné."
+        },
+        {
+          "type": "paragraph",
+          "text": "Asi za **600 milionů let** bude Měsíc příliš daleko na to, aby zcela zakryl Slunce. Zůstanou jen prstencová zatmění: světelný prstenec kolem měsíčního disku. Z dlouhodobého hlediska by se Země a Měsíc mohly synchronizovat: každé těleso by druhému vždy ukazovalo stejnou tvář. Ale Slunce tím, že se stane **červeným obrem**, konečnou fází hvězdy, jako je ta naše, změní systém mnohem dříve."
+        },
+        {
+          "type": "takeaway",
+          "text": "Měsíc se nezřítí, protože jeho boční rychlost vyvažuje přitažlivost Země: je v permanentním volném pádu. A stále se vzdaluje zhruba o **3,8 cm** ročně."
+        }
+      ]
+    }
+  ]
+}

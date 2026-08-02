@@ -1,0 +1,120 @@
+{
+  "id": "course_186_les_valkyries_et_le_valhalla",
+  "title": "Walkirie i Walhalla",
+  "subtitle": "Mitologia nordycka",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Na północnym niebie wojownicy wybierają zmarłych, aby zaludnili Walhallę. Ich armia musi stawić czoła zmierzchowi bogów.",
+  "hero": {
+    "image": "les_valkyries_et_le_valhalla",
+    "ratio": "16:9",
+    "hook": "Śmierć z mieczem w dłoni to nie koniec: to wybór do ostatniej wojny świata."
+  },
+  "sections": [
+    {
+      "id": "course_186_les_valkyries_et_le_valhalla_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W mitologii nordyckiej śmierć w bitwie nie jest końcem. To jest wybór ****. **Walkirie**, których nazwa oznacza „ci, którzy wybierają zabójstwa”, wędrują po polach bitew dla Odyna, suwerennego boga."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ich misja: zabrać najodważniejszych do **Walhalla**, „pokoju śmierci”. Ten pałac nie jest rajem odpoczynku. To niebiańskie koszary. Ponieważ Odyn przygotowuje armię na [[Ragnarök]], ostateczną bitwę, która musi zniszczyć świat i zabić bogów."
+        }
+      ]
+    },
+    {
+      "id": "course_186_les_valkyries_et_le_valhalla_p1",
+      "title": "Odyn rekrutuje Ragnaröka",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Odyn** zna przepowiednię. W [[Ragnarök]] olbrzymy i potwory zstąpią do [[Asgardu]], siedziby bogów. Aby opóźnić nieuniknione, potrzebuje elitarnych żołnierzy: **Einherjara**, „tych, którzy walczą samotnie”."
+        },
+        {
+          "type": "image",
+          "asset": "odin_norse_god_ravens_throne_painting",
+          "ratio": "4:3",
+          "caption": "Odyn, władca bogów, nawiedzony końcem świata."
+        },
+        {
+          "type": "funFact",
+          "text": "Valhalla gościła jedynie **połowa** wojowników, którzy zginęli w bitwie. Druga połowa dołączyła do Fólkvangr, domeny bogini **Freja**. Nawet po bohaterskiej śmierci bohaterowie byli podzieleni."
+        },
+        {
+          "type": "paragraph",
+          "text": "Valhalla w Asgardzie ma bramy **540**. Każdy z nich jest wystarczająco duży, aby mogło obok siebie przejść ośmiuset wojowników. Tylko ci, którzy polegli odważnie, z mieczem w dłoni, mają do tego prawo. Walkirie porządkują sprawy z nieba."
+        }
+      ]
+    },
+    {
+      "id": "course_186_les_valkyries_et_le_valhalla_p2",
+      "title": "Wojownicy ciemniejsi niż nam się wydaje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Współczesny wizerunek Walkirii często wywodzi się z XIX-wiecznego romantyzmu: łagodne dziewice na koniach. Stare teksty, jak [[Poetycka Edda]], malują znacznie ostrzejsze postacie. Są powiązane z wronami, ptakami trupów. Niektóre wiersze przedstawiają ich jako makabrycznych przędziorków: ich nici to wnętrzności, ich ciężary to głowy."
+        },
+        {
+          "type": "image",
+          "asset": "valkyrie_riding_winged_horse_norse_art",
+          "ratio": "4:3",
+          "caption": "Walkiria w locie: posłaniec Odyna i dostawca bohaterów."
+        },
+        {
+          "type": "paragraph",
+          "text": "Postacie takie jak **Brynhildr** czy [[Sygrun]] również mają ludzką twarz: wahają się pomiędzy rozkazami Odyna a uczuciami do śmiertelników. W Walhalli ich rola się zmienia. Opuszczają zbroję, aby podać bohaterom miód. Gest mówi o uznaniu: dzielni umarli stali się elitą Asgardu."
+        }
+      ]
+    },
+    {
+      "id": "course_186_les_valkyries_et_le_valhalla_p3",
+      "title": "Każdego dnia do walki, każdego wieczoru do świętowania",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W Walhalli nie ma spokojnego odwrotu. Na pianie koguta [[Gulinkambi]] Einherjarowie zbroją się i zabijają siebie nawzajem na równinie [[Idavoll]]. Wieczorem rany się zamykają. Umarli powstają ponownie. Potem nadchodzi uczta."
+        },
+        {
+          "type": "image",
+          "asset": "valhalla_feast_norse_warriors_einherjar_painting",
+          "ratio": "4:3",
+          "caption": "Uczta Einherjara: walka w dzień, uczty w nocy."
+        },
+        {
+          "type": "funFact",
+          "text": "Dzik **Sæhrímnir** jest codziennie gotowany przez kucharza [[Andhrímnir]], a następnie odradzany. Miód pitny wypływa z wymion kozy [[Heidrun]]. Raj Wikingów to stała sala szkoleniowa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ten cykl przemocy i przyjemności jednoczy armię Odyna. Stulecia przyjaznych bitew przed prawdziwym wrogiem."
+        }
+      ]
+    },
+    {
+      "id": "course_186_les_valkyries_et_le_valhalla_p4",
+      "title": "Godna śmierć zamiast „śmierci słomianej”",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ta wizja życia pozagrobowego naznaczyła Skandynawię Wikingów. Ceniona była odwaga fizyczna. Śmierć ze starości lub choroby, „słomiana śmierć”, doprowadziła do **Hel**, nudnego królestwa. Lepiej było upaść z bronią w ręku."
+        },
+        {
+          "type": "paragraph",
+          "text": "Walkiria istniała na przestrzeni wieków. Richard Wagner utrwalił to w europejskiej pamięci za pomocą [[Wyścig Walkirii]]. Dziś stała się archetypem potężnej kobiety, często dalekiej od swojej podstawowej funkcji: dostarczania zwłok dla boga, który knuje swój własny koniec."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Walkirie** rekrutują najlepszych trupów do **Walhalla**. Tam Einherjar walczą i ucztują bez końca, przygotowując się do [[Ragnarök]]. Nordycki raj to koszary, a nie schronienie."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "id": "course_63_comment_se_forment_les_tremblements_de_t",
+  "title": "Cum se formează cutremurele?",
+  "subtitle": "Defecte și valuri",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "În fiecare an, Pământul suferă sute de mii de cutremure. Majoritatea sunt invizibile. Câțiva schimbă orașe întregi.",
+  "hero": {
+    "image": "comment_se_forment_les_tremblements_de_terre",
+    "ratio": "16:9",
+    "hook": "Un cutremur nu este un capriciu al pământului. Aceasta este o energie care a așteptat prea mult timp."
+  },
+  "sections": [
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În fiecare an, Pământul înregistrează aproximativ **500.000 cutremure detectabile**. Doar o mică parte provoacă pagube mari. Un cutremur nu este o coincidență: este sfârșitul brusc al unei lungi acumulări de energie în roci."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pentru a înțelege acest lucru, trebuie să vedem suprafața planetei ca un puzzle de plăci în mișcare. Acolo unde aceste plăci se freacă, tensiunea crește... până se rupe."
+        }
+      ]
+    },
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_p1",
+      "title": "Plăci care se mișcă constant",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Suprafața pământului este împărțită în aproximativ zece **plăci tectonice** mari. Ele alunecă pe un strat mai moale al hainei, [[Astenosfera]]. Viteza lor? Aproximativ **1 tigaie de 10 cm pe an**, aproximativ la fel ca creșterea unei unghii."
+        },
+        {
+          "type": "image",
+          "asset": "earthquake_collapsed_buildings_urban",
+          "ratio": "auto",
+          "caption": "Cutremurele eliberează brusc energia acumulată de-a lungul faliilor."
+        },
+        {
+          "type": "paragraph",
+          "text": "La granițe domină trei scenarii. Plăcile se depărtează (crestele oceanice). Se ciocnesc: uneori unul se scufundă sub celălalt, este [[Subducție]]. Sau alunecă unul lângă altul, ca de-a lungul [[Falia San Andreas]] din California, aproximativ **1 300 km** lungime."
+        },
+        {
+          "type": "funFact",
+          "text": "De-a lungul San Andreas, Los Angeles se apropie de San Francisco cu aproximativ **6 cm** pe an. În **15 milioane de ani**, cele două orașe ar fi vecine."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mai ales la aceste frontiere au loc cutremure. Mișcarea plăcilor este împiedicată de frecarea rocilor. Energia se acumulează în tăcere."
+        }
+      ]
+    },
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_p2",
+      "title": "Când vina se lasă",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un cutremur are loc de-a lungul unei **vina**: o fractură între două blocuri de rocă. În teorie, plăcile ar trebui să alunece continuu. În practică, frecarea blochează adesea această alunecare."
+        },
+        {
+          "type": "paragraph",
+          "text": "În acest timp, plăcile continuă să crească. Stânca se deformează puțin, ca un arc care se trage. Vorbim de constrângeri elastice. Acest lucru poate dura zeci de ani, uneori secole."
+        },
+        {
+          "type": "paragraph",
+          "text": "Când limita de rezistență este depășită, blocurile alunecă brusc. Energia pleacă sub formă de **unde eismice**. Punctul de rupere de adâncime se numește **se concentreze**. La suprafață, punctul de deasupra este **epicentru**, unde efectele sunt adesea cele mai puternice."
+        }
+      ]
+    },
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_p3",
+      "title": "Măsurând puterea, temându-mă de tsunami",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pentru a măsura energia unui cutremur, seismologii folosesc în principal [[Scara de magnitudine]]. Este o scară logaritmică: fiecare grad înmulțește energia cu aproximativ **32**. Prin urmare, un cutremur cu magnitudinea **8** eliberează de aproximativ **de 1.000 de ori** mai multă energie decât un cutremur cu magnitudinea **6**."
+        },
+        {
+          "type": "funFact",
+          "text": "Există și cutremure de **0** sau cu magnitudine negativă. Sunt evenimente foarte mici, vizibile doar cu senzori foarte sensibili."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cea mai puternică măsurată vreodată cu instrumente moderne este cea a **Valdivia**, în Chile, în **1960**: magnitudine **9,5**. Dacă focalizarea este sub ocean și ridică fundul mării, coloana de apă deplasată poate crea un **tsunami**. În **2004**, un cutremur de magnitudinea **9,1** în apropiere de Sumatra a declanșat un tsunami care a lovit 14 țări și s-a soldat cu aproximativ **227.000** de vieți."
+        }
+      ]
+    },
+    {
+      "id": "course_63_comment_se_forment_les_tremblements_de_t_p4",
+      "title": "Valuri, alertă și clădiri care rezistă",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "După despărțire, mai multe tipuri de valuri pleacă. **Unda P** (primare) sosesc primele: comprimă stânca ca un acordeon. Apoi vin undele **ZZ** (secundar), mai lente și adesea mai distructive. Undele de suprafață fac apoi ca solul să oscileze foarte vizibil."
+        },
+        {
+          "type": "paragraph",
+          "text": "Încă nu știm cum să prezicem ziua exactă a unui cutremur major. Pe de altă parte, cartografiam zonele de risc. [[Inginerie seismică]] proiectează clădiri capabile să reziste la tremur: fundații mobile, amortizoare gigantice, structuri care absorb energie. În Japonia, avertismentele timpurii detectează undele P și pot întrerupe gazul sau încetini trenurile înainte de sosirea celor mai periculoase valuri."
+        },
+        {
+          "type": "takeaway",
+          "text": "Un cutremur are loc atunci când pietrele blocate de-a lungul unei falii eliberează brusc decenii de tensiune. Energia călătorește în valuri și fiecare grad de magnitudine înmulțește acea energie cu aproximativ **32**."
+        }
+      ]
+    }
+  ]
+}

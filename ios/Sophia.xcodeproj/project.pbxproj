@@ -214,6 +214,15 @@
 				de,
 				pt,
 				it,
+				tr,
+				pl,
+				ro,
+				nl,
+				el,
+				sv,
+				hu,
+				bg,
+				cs,
 				Base,
 			);
 			mainGroup = 105FC5712E9EAD3100EA8BCF;
@@ -450,7 +459,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.11;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = app.rork.assvmps5x7hpyq0ezcsut;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -494,7 +503,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.11;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = app.rork.assvmps5x7hpyq0ezcsut;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;

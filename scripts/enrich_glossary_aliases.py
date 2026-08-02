@@ -33,10 +33,13 @@ import unicodedata
 from collections import defaultdict
 from pathlib import Path
 
+from i18n_languages import NON_FR_LANGS
+
 ROOT = Path(__file__).resolve().parents[1]
 LOCALE_DIR = ROOT / "ios" / "Sophia" / "Resources" / "Locales"
 CONTENT_LOCALES = ROOT / "content" / "locales"
-LANGS = ["en", "es", "de", "pt", "it"]
+
+LANGS = NON_FR_LANGS
 
 LINK_RE = re.compile(r"<([^<>]+)>")
 PAREN_RE = re.compile(r"\(([^)]+)\)")
@@ -92,6 +95,15 @@ ARTICLES = {
     "de": ("der ", "die ", "das ", "dem ", "den ", "ein ", "eine "),
     "pt": ("o ", "a ", "os ", "as ", "um ", "uma "),
     "it": ("il ", "lo ", "la ", "i ", "gli ", "le ", "un ", "uno ", "una ", "l'"),
+    "tr": ("bir ",),
+    "pl": (),
+    "ro": ("un ", "o ", "niște "),
+    "nl": ("de ", "het ", "een "),
+    "el": ("ο ", "η ", "το ", "οι ", "τα ", "ένας ", "μία ", "ένα "),
+    "sv": ("en ", "ett ", "den ", "det ", "de "),
+    "hu": ("a ", "az ", "egy "),
+    "bg": ("един ", "една ", "едно "),
+    "cs": (),
 }
 
 
@@ -196,8 +208,18 @@ def load_bundle(lang: str) -> tuple[list[dict], dict[str, dict]]:
     return courses, glossary
 
 
-def load_canonical_glossary(lang: str) -> dict[str, dict]:
-    """Rebuild the CSV-only glossary (no tap aliases) — source of truth for enrich."""
+def load_canonical_glossary(lang: str, *, from_json: bool = False) -> dict[str, dict]:
+    """Rebuild the CSV-only glossary (no tap aliases) — source of truth for enrich.
+
+    For locales without CSV exports (new MT languages), ``from_json=True`` uses the
+    current bundled glossary as the canonical base (idempotent alias layering).
+    """
+    if from_json or lang not in GLOSSARY_CSV:
+        gloss = json.loads((LOCALE_DIR / f"glossary.{lang}.json").read_text(encoding="utf-8"))
+        # Drop previously generated short/link aliases? We cannot distinguish
+        # perfectly; treat current file as canonical when from_json.
+        return gloss
+
     sys.path.insert(0, str(ROOT / "scripts"))
     from generate_en_locale_json import load_en_courses_rows, load_en_glossary  # noqa: WPS433
     from import_content_from_csv import parse_all_courses  # noqa: WPS433
@@ -243,11 +265,12 @@ def enrich_lang(
     *,
     only: str = "",
     limit: int = 0,
+    from_json: bool = False,
 ) -> tuple[dict[str, dict], list[dict], dict]:
     import fnmatch
 
     courses, current = load_bundle(lang)
-    canonical = load_canonical_glossary(lang)
+    canonical = load_canonical_glossary(lang, from_json=from_json or lang not in GLOSSARY_CSV)
     if only:
         patterns = [p.strip() for p in only.split(",") if p.strip()]
         courses = [
@@ -417,11 +440,14 @@ def cmd_enrich(args: argparse.Namespace) -> int:
             print(f"Unknown lang {lang}", file=sys.stderr)
             return 1
         before = json.loads((LOCALE_DIR / f"glossary.{lang}.json").read_text(encoding="utf-8"))
-        canonical = load_canonical_glossary(lang)
+        from_json = bool(getattr(args, "from_json", False) or lang not in GLOSSARY_CSV)
+        canonical = load_canonical_glossary(lang, from_json=from_json)
         cov_before = measure_coverage(lang, before)
-        after, aliases, stats = enrich_lang(lang, only=args.only, limit=args.limit)
-        # enrich_lang always starts from CSV canonical, then adds aliases for the
-        # selected courses (all courses when --only/--limit omitted). Idempotent.
+        after, aliases, stats = enrich_lang(
+            lang, only=args.only, limit=args.limit, from_json=from_json
+        )
+        # enrich_lang starts from CSV canonical (or JSON for new locales), then
+        # adds aliases. Idempotent for CSV langs; JSON mode layers on current file.
 
         errs = validate_enrichment(canonical, after)
         cov_after = measure_coverage(lang, after)
@@ -500,6 +526,11 @@ def main() -> int:
     p.add_argument("--only", default="")
     p.add_argument("--limit", type=int, default=0)
     p.add_argument("--dry-run", action="store_true")
+    p.add_argument(
+        "--from-json",
+        action="store_true",
+        help="Use bundled glossary JSON as canonical (for langs without CSV)",
+    )
     p.set_defaults(func=cmd_enrich)
 
     q = sub.add_parser("qa", help="Hard QA on recoverable <> coverage")

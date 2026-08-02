@@ -1,0 +1,114 @@
+{
+  "id": "course_174_ulysse_et_les_sirenes",
+  "title": "Ulisses i syreny",
+  "subtitle": "Słuchaj, nie umierając",
+  "subject": "mythologie",
+  "subcategory": "Greece: the heroes",
+  "description": "Syreny obiecują absolutną wiedzę. Odyseusz jest jedynym śmiertelnikiem, który usłyszał ich pieśń i przeżył dzięki podstępowi, który stał się wzorem samokontroli.",
+  "hero": {
+    "image": "ulysse_et_les_sirenes",
+    "ratio": "16:9",
+    "hook": "Ich piosenka obiecuje wiedzieć wszystko. Każdy, kto tego słucha, umiera. Ulisses chce usłyszeć… i pozostać przy życiu."
+  },
+  "sections": [
+    {
+      "id": "course_174_ulysse_et_les_sirenes_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W dwunastej piosence **Odyseja** Ulisses musi przejść w pobliżu **[[Syreny]]**. Ich głos jest tak piękny, że zastępuje wolę. Żeglarze, którzy się zbliżają, osiadają na mieliźnie i giną."
+        },
+        {
+          "type": "paragraph",
+          "text": "To nie tylko przygoda na morzu. To pojedynek pragnienia wiedzy z niebezpieczeństwem poddania się. Dzięki swojemu [[Metys]], swojej przebiegłej inteligencji, Ulisses staje się jedynym śmiertelnikiem, który może zasmakować tej zakazanej przyjemności nie tracąc przy tym życia."
+        }
+      ]
+    },
+    {
+      "id": "course_174_ulysse_et_les_sirenes_p1",
+      "title": "Kobiety-ptaki, a nie syreny z ogonami",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W **Homera** Syreny nie są kobietami-rybami. Są to stworzenia pół-kobiet, pół-ptaków. Ich wyspa jest usiana kościami marynarzy. Piękno pieśni kontrastuje z grozą brzegu."
+        },
+        {
+          "type": "image",
+          "asset": "sirens_island_greek_mythology_bones_shore",
+          "ratio": "4:3",
+          "caption": "Wyspa Syren: nieodparta melodia, zabójczy brzeg."
+        },
+        {
+          "type": "funFact",
+          "text": "W greckich miastach na grobowcach często rzeźbiono syreny. Postrzegano je jako muzy z zaświatów, towarzyszące duszom zmarłych."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ich pułapka jest nie tylko zmysłowa. Obiecują **absolutną wiedzę**: wszystko, co wydarzyło się na świecie, wszystko, co dzieje się na ziemi. Dla Ulissesa, przede wszystkim ciekawskiego, jest to najwyższa pokusa, bardziej niebezpieczna do pokonania niż potwór. [[Wojna trojańska]]"
+        }
+      ]
+    },
+    {
+      "id": "course_174_ulysse_et_les_sirenes_p2",
+      "title": "Wosk, maszt i plan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mag **Kirka** ostrzegł go. Ulisses przygotowuje precyzyjną strategię. Zatyka uszy swoim towarzyszom **woskiem pszczelim**. Nie powinni nic słyszeć. Chce słuchać."
+        },
+        {
+          "type": "image",
+          "asset": "ulysses_tied_mast_sirens_waterhouse_painting",
+          "ratio": "4:3",
+          "caption": "Ulisses przywiązany do masztu, jako jedyny słyszy śpiew syren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zostaje **amocowany do masztu**. Jasny porządek: jeśli poprosi o zwolnienie, wręcz przeciwnie, musimy zacieśnić więzy. Kiedy piosenka się zwiększa, Ulisses traci spokój i krzyczy, żeby go rozwiązano. Jego ludzie, głusi i wierni planowi, są posłuszni jedynie racjonalnemu Odyseuszowi z przeszłości, a nie urzeczonemu Odyseuszowi chwili. Statek przepływa."
+        }
+      ]
+    },
+    {
+      "id": "course_174_ulysse_et_les_sirenes_p3",
+      "title": "Przywiąż się z wyprzedzeniem, aby się nie poddać",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ta scena ilustruje to, co w naukach społecznych nazywa się [[Wstępne zaangażowanie]]. Wiemy, że w obliczu pokusy będziemy słabi. Dlatego sami ograniczamy nasze możliwości, zanim tam dotrzemy."
+        },
+        {
+          "type": "funFact",
+          "text": "W 1990 roku NASA i ESA nazwały sondę **Ulisses**. Podobnie jak bohaterka opuszcza znane drogi, aby eksplorować bieguny Słońca."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na tym obrazie nawiązuje laureat Nagrody Nobla **Ryszarda Talara**. Ludzie nie zawsze są racjonalni. Potrzebuje [[Szturchać]], „pomocnej dłoni”, czyli zasad chroniących go przed nim samym: automatycznego przelewu do oszczędności, aplikacji blokujących sieci. Podobnie jak Ulisses, przyczepiamy się do masztu w obliczu współczesnych syren."
+        }
+      ]
+    },
+    {
+      "id": "course_174_ulysse_et_les_sirenes_p4",
+      "title": "Od wiedzy do grzechu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W **Średniowiecze** obraz się zmienia. Kobieta ptak staje się kobietą rybą. Kościół odczytuje syreny jako symbole pożądania. Maszt Ulissesa porównywany jest czasem do krzyża: tarczy przed pokusą."
+        },
+        {
+          "type": "paragraph",
+          "text": "U Homera jednak nie chodziło o cielesne pragnienia, ale o wiedzę. Odyseusz nie jest ani świętym, ani zwykłym poszukiwaczem przygód. To człowiek, który wykorzystuje inteligencję do poruszania się pomiędzy pragnieniem absolutów a potrzebą przetrwania."
+        },
+        {
+          "type": "takeaway",
+          "text": "Ulisses przeżywa pieśń [[Syreny]] przez [[Wstępne zaangażowanie]]: przywiązany do masztu, słucha; jego ludzie z uszami zatkanymi woskiem trzymają kurs."
+        }
+      ]
+    }
+  ]
+}

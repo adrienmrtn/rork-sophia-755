@@ -1,0 +1,112 @@
+{
+  "id": "course_75_la_photosynthese_expliquee_simplement",
+  "title": "Fotosinteza explicată simplu",
+  "subtitle": "Plante și energie",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Plantele fac ceva extraordinar: gătesc zahăr cu lumină, apă și aer. Și ne oferă oxigen în dar.",
+  "hero": {
+    "image": "la_photosynthese_expliquee_simplement",
+    "ratio": "16:9",
+    "hook": "O frunză este o bucătărie solară: lumină, apă, aer... și iată zahăr."
+  },
+  "sections": [
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Imaginați-vă o plantă în miniatură în fiecare frunză. Este nevoie de trei ingrediente banale: **lumina de Soare**, **apă** de la rădăcini și **CO₂** din aer. Iese cu **zahăr** pentru a crește și eliberează **oxigen**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Această performanță se numește **fotosinteză**. Fără el, fără păduri, fără oxigen respirabil, aproape fără viață complexă pe Pământ."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p1",
+      "title": "Unde se întâmplă în foaie?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În celula vegetală, organele verzi, **cloroplastele**, găzduiesc [[Clorofilă]]. Acest pigment captează în principal albastrul și roșul luminii. Verdele se întoarce: de aceea frunzele ni se par verzi."
+        },
+        {
+          "type": "image",
+          "asset": "leaf_photosynthesis_sunlight_chloroplasts",
+          "ratio": "auto",
+          "caption": "Frunzele captează lumina soarelui pentru fotosinteză."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ecuația simplă: CO₂ + apă + lumină → zahăr + oxigen. Gazul intră prin pori mici, [[stomate]]. Apa se ridică din rădăcini. Zahărul devine lemn, fructe, rădăcini; oxigenul trece în aer."
+        },
+        {
+          "type": "funFact",
+          "text": "Clorofila „refuză” verde. Ea preferă albastrul și roșu, mai eficient pentru a-și excita electronii și pentru a lansa mașina energetică."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p2",
+      "title": "Doi pași: capturare, apoi craft",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În primul rând, **faza luminoasă**. Lumina descompune moleculele de apă. Oxigenul scapă. Energia este stocată în două „baterii” chimice, **ATP** și **NADPH**."
+        },
+        {
+          "type": "paragraph",
+          "text": "În continuare, **procesul de fabricatie**, [[Ciclul Calvin]], numit după chimistul **Melvin Calvin**. Cu energia din baterii, planta asamblează carbonul din CO₂ în glucoză. Nu este nevoie de lumina directă a soarelui în această etapă, dar depinde în întregime de ceea ce lumina a produs înainte."
+        },
+        {
+          "type": "funFact",
+          "text": "Pentru a urma calea carbonului în frunză, Calvin a folosit izotopi radioactivi din cercetările bombei atomice. Premiul Nobel pentru **1961**."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p3",
+      "title": "Când oxigenul a schimbat planeta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cu aproximativ **în urmă cu 2,4 miliarde ani**, bacteriile fotosintetice, **cianobacteriile**, au început să elibereze masiv oxigen. Aceasta este **Oxidare mare**. Pentru multe organizații ale vremii, a fost otravă."
+        },
+        {
+          "type": "paragraph",
+          "text": "Apoi oxigenul a permis stratul de ozon și o respirație mult mai eficientă. Aerul pe care îl respirăm este, practic, „produsul rezidual” a miliarde de ani de fotosinteză."
+        },
+        {
+          "type": "funFact",
+          "text": "Despre **jumate** din oxigenul Pământului provine din fitoplanctonul din oceane, nu doar din păduri."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p4",
+      "title": "O producție modestă, un rol imens",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O frunză transformă doar **1 din 3%** din energia solară primită în biomasă. La scară globală, acest lucru este suficient pentru a alimenta lanțurile alimentare și pentru a absorbi cantități enorme de CO₂."
+        },
+        {
+          "type": "paragraph",
+          "text": "De aici și interesul pentru păduri, oceane... și chiar pentru fotosinteza artificială pentru climă. Un melc de mare, *Elysia chlorotica*, merge atât de departe încât „fură” cloroplastele din alge pentru a trăi puțin din energia solară."
+        },
+        {
+          "type": "takeaway",
+          "text": "Fotosinteza transformă lumina, apa și CO₂ în zahăr și regenerează oxigenul. Este gătitul solar la baza aproape întregii vieți."
+        }
+      ]
+    }
+  ]
+}

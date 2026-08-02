@@ -1,0 +1,100 @@
+{
+  "id": "course_231_les_migrations_climatiques",
+  "title": "Klímavándorlások",
+  "subtitle": "2050-re 216 millió lakhelyet hagytak el?",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Az éghajlat emberek százmillióit fogja kényszeríteni otthonaikból, de még egyetlen nemzetközi jog sem védi őket.",
+  "hero": {
+    "image": "les_migrations_climatiques",
+    "ratio": "16:9",
+    "hook": "Az éghajlat már több embert űz ki, mint a háború, de egyetlen törvény sem tudja, minek nevezzük őket."
+  },
+  "sections": [
+    {
+      "id": "course_231_les_migrations_climatiques_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A vízállás emelkedése nem mindig jelenti magát látványos hullámmal: először egy mezőt, majd egy kutat, majd egy egész falut felemészt. Másutt az extrém meleg miatt szinte lehetetlen belélegezni a levegőt. Mindkét esetben egész családoknak kell távozniuk, nem a háború, hanem az éghajlat miatt. Ezeknek a kényszerű távozásoknak a neve: **klímavándorlás**. A probléma az, hogy egyetlen nemzetközi jog sem ismeri el őket igazán."
+        }
+      ]
+    },
+    {
+      "id": "course_231_les_migrations_climatiques_p1",
+      "title": "A kivándorlás már nagyobb, mint a háború",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A **2022**-ben egy adat jelentett fordulópontot: az éghajlati katasztrófák **60 millió belső elmozdulást** okoztak, vagyis magán az országon belüli kényszerű távozást. Ez a szám most először haladta meg a háborúk elől menekülőkét."
+        },
+        {
+          "type": "funFact",
+          "text": "**2009**-ben [[Maldív-szigetek]] kormánya miniszteri tanácsot tartott a víz alatt, oxigéntartályban és búvárruhában, hogy figyelmeztesse a világot a szigetcsoport lehetséges eltűnésére."
+        },
+        {
+          "type": "image",
+          "asset": "2015_refugee_migration_crisis_europe_mediterranean",
+          "ratio": "16:9",
+          "caption": "A migránsok átkelnek a Földközi-tengeren: a klímaválság most a politikai válságok mellett a távozások mozgatórugója."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ami ezután fog történni, az még aggasztóbbnak tűnik: a **Világbank** becslése szerint hatalmas erőfeszítés nélkül az éghajlatváltozás **216 millió embert** kényszeríthet arra, hogy **2050** költözzön. Bangladesben az óceán felemészti a mezőgazdasági területeket; a szubszaharai Afrikában vízhiány van; a csendes-óceáni térségben egyes szigetállamok területük teljes eltűnését kockáztatják."
+        }
+      ]
+    },
+    {
+      "id": "course_231_les_migrations_climatiques_p2",
+      "title": "Két szakadási sebesség: ütés és kopás",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Az éghajlat kétféleképpen szorítja ki a populációkat. **Hirtelen katasztrófák**, akárcsak a viharok, hirtelen, de gyakran átmeneti eltávozásokat okoznak, még mielőtt a lakosok visszapattanó képessége kimerülne az ismétlés miatt. **Lassú degradáció** örökre átalakít egy területet: az emelkedő vízszint miatt a talaj sóssá válik, elpusztítja a termést, még mielőtt a víz elérné az otthont, míg az elsivatagosodás a legelőket fokozatosan kietlen földekké változtatja, a nomád közösségeket a [[Kényszertelepítés]] vagy a város száműzetése felé taszítja."
+        },
+        {
+          "type": "paragraph",
+          "text": "Új fenyegetés aggasztja a tudósokat: ****. Ha a hőmérséklet és a páratartalom meghalad egy bizonyos küszöböt, a test már nem tudja magát lehűteni izzadással. 2050-re a Perzsa-öböl vagy Dél-Ázsia egyes részei halálossá válhatnak mindenki számára, aki néhány óránál tovább tartózkodik a szabadban."
+        }
+      ]
+    },
+    {
+      "id": "course_231_les_migrations_climatiques_p3",
+      "title": "Jogi vákuum a globális válsággal szemben",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A válság bizonyítékai ellenére a klíma miatt kitelepített emberek egy [[\"klímamenekült\" jogi vákuuma]]-ba esnek. A médiában elterjedt „klímamenekült” kifejezésnek nincs értéke a nemzetközi jogban: az 1951-es genfi ​​egyezmény a saját államuk által üldözött embereket védi, de a klímaváltozás nem egy konkrét üldöző hibája, hanem globális jelenség."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hivatalos státusz nélkül ezeknek az embereknek nem származik előnye a **[[visszaküldés tilalma]]** elve, amely megtiltja, hogy valakit olyan helyre küldjenek vissza, ahol az élete veszélyben lenne. A védelem hiánya igazságtalanságot teremt: a leginkább érintett országok szennyezték a legkevésbé, míg a gazdag országok gyakran lezárják határaikat. Innen ered a **légkondicionálás** ötlete: az iparosodott országok erkölcsi felelőssége a saját fejlődésük miatt sebezhetővé tett lakossággal szemben."
+        }
+      ]
+    },
+    {
+      "id": "course_231_les_migrations_climatiques_p4",
+      "title": "A felismerés és a helyi alkalmazkodás felé",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Egyes országok már új megoldásokat keresnek. A kis szigetállamok azt fontolgatják, hogy az ENSZ által elismert nemzet maradnak, még akkor is, ha szigetük eltűnt a víz alatt. Kiribati például földet vásárolt a Fidzsi-szigeteken, hogy szükség esetén felkészüljön a teljes lakosság áttelepítésére."
+        },
+        {
+          "type": "paragraph",
+          "text": "2018-ban a **Globális migrációs paktum** elkezdte tárgyalni a távozások környezeti okait. De továbbra is a prioritás marad **helyi alkalmazkodás**: gátak, sóálló növények, figyelmeztető rendszerek, hogy az emberek minél tovább otthon maradhassanak. Mivel a migrációt mindig kudarcként élik meg, és a hatalmas és rendezetlen áramlások feszültséget szítanak a víz és a lakható föld körül."
+        },
+        {
+          "type": "takeaway",
+          "text": "2022-ben az éghajlati katasztrófák 60 millió belső elköltözést fognak okozni, ami most először haladja meg a háborús menekültek számát. Elismert jogi státusz hiányában ezek a lakosság védtelen marad a válsággal szemben, amely 2050-ig 216 millió embert érinthet."
+        }
+      ]
+    }
+  ]
+}

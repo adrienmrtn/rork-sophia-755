@@ -1,0 +1,100 @@
+{
+  "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee",
+  "title": "Proč je mořská voda slaná?",
+  "subtitle": "Oceány",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Jeden litr mořské vody obsahuje přibližně 35 gramů soli. Tato sůl se nahromadila za miliardy let. Odtud pochází.",
+  "hero": {
+    "image": "pourquoi_l_eau_de_mer_est_salee",
+    "ratio": "16:9",
+    "hook": "Řeky jsou mírné. Oceány jsou slané. Tajemstvím je čas a vypařování."
+  },
+  "sections": [
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Oceány pokrývají více než **70 %** planety. V průměru jeden litr mořské vody obsahuje přibližně **35 gramů pevné látky**. Není to náhoda: je to výsledek velmi dlouhého procesu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sůl „nepadá“ z nebe hotová. Cestuje z kontinentů a poté uvízne v oceánu."
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p1",
+      "title": "Sůl pochází ze země jako první",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Déšť procházející vzduchem nabírá trochu oxidu uhličitého. Stává se mírně kyselým. Když padá na skály, jemně na ně útočí: toto je **chemická eroze**."
+        },
+        {
+          "type": "image",
+          "asset": "ocean_sea_salt_evaporation",
+          "ratio": "auto",
+          "caption": "Solné bažiny: odpařováním se koncentruje sůl rozpuštěná v mořské vodě."
+        },
+        {
+          "type": "paragraph",
+          "text": "Řeky pak přinášejí rozpuštěné minerály, zejména **sodík** a **chlor**, dvě složky kuchyňské soli. Vysypou je do moře."
+        },
+        {
+          "type": "funFact",
+          "text": "Podvodní sopky a horké prameny na dně oceánu také přidávají soli. Hlavní část ale stále pochází z kontinentů."
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p2",
+      "title": "Proč řeky nejsou slané?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dobrá otázka: když řeky přinášejí sůl, proč není voda v Rhôně nebo Seině slaná? Protože sůl je tam hodně zředěná a protože voda v řekách se neustále obnovuje."
+        },
+        {
+          "type": "paragraph",
+          "text": "V oceánu je to jiné. Pod Sluncem se voda **odpařuje** a vrací se na oblohu. Sůl, **zůstává**. Rok za rokem, století za stoletím se hromadí. Toto se nazývá [[Hydrologický cyklus a akumulace solí]]."
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p3",
+      "title": "Sůl také cirkuluje oceány",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Slaná voda je **hustší** („těžší“ při stejném objemu) než sladká voda. Na pólech se při zamrzání povrchové vody sůl částečně uvolňuje do okolní kapalné vody. Tato voda se stává ještě hustší a padá ke dnu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tento pohyb pomáhá řídit velké mořské proudy. Tyto proudy přenášejí teplo a živiny po celém světě. Sůl není jen otázkou chuti: je součástí klimatického motoru planety."
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p4",
+      "title": "Ne všude stejná sůl",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Slanost není všude stejná. V blízkosti rovníku může silné odpařování koncentrovat sůl. V blízkosti velkých řek nebo tajících ledových krů je voda měkčí. Mrtvé moře je extrémní případ: odchází velmi málo vody, zůstává hodně soli."
+        },
+        {
+          "type": "takeaway",
+          "text": "Mořská voda je slaná, protože řeky přinášejí minerály z kontinentů a odpařování zanechává sůl v oceánu. Tato akumulace probíhá již miliardy let."
+        }
+      ]
+    }
+  ]
+}

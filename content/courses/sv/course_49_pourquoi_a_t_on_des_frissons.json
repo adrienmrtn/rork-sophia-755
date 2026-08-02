@@ -1,0 +1,102 @@
+{
+  "id": "course_49_pourquoi_a_t_on_des_frissons",
+  "title": "Varför får vi frossa?",
+  "subtitle": "Kropp & känslor",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Kyla, rädsla, musik: rysningar har flera orsaker. De passerar alla genom nervsystemet, men inte av samma anledningar.",
+  "hero": {
+    "image": "pourquoi_a_t_on_des_frissons",
+    "ratio": "16:9",
+    "hook": "En rysning av kyla och en rysning av musik berättar inte samma historia."
+  },
+  "sections": [
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Du huttrar när du går ut i regnet. Du ryser också när du hör en låt som gör dig upprörd. Samma ord, olika mekanismer."
+        },
+        {
+          "type": "paragraph",
+          "text": "I båda fallen reagerar kroppen snabbt. Men den ena används främst för att värma upp, den andra handlar mer om njutning och känslor."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p1",
+      "title": "Kylans spänning: en minipanna",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kroppen vill stanna runt **37 °C**. När huden upptäcker kyla, varnar den ett område i hjärnan, **hypotalamus**, som fungerar som en termostat."
+        },
+        {
+          "type": "image",
+          "asset": "goosebumps_cold_skin",
+          "ratio": "4:3",
+          "caption": "Gåshud: en gammal reflex för att höja hacklet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Musklerna drar ihop sig mycket snabbt och upprepade gånger: det här är rysningen. Dessa sammandragningar producerar värme. \"Gåshud\" kommer från en gammal reflex: att höja hårstråna för att bättre isolera. Hemma, med lite päls, fungerar den främst som en rest."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p2",
+      "title": "Rädslans spänning",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ställd inför ett hot aktiveras [[sympatiska nervsystemet]] (den \"alerta\" grenen av nervsystemet). Den släpper **adrenalin**. Musklerna spänns, hjärtat rasar, huden kan frossa."
+        },
+        {
+          "type": "image",
+          "asset": "adrenaline_stress_response_body",
+          "ratio": "4:3",
+          "caption": "Adrenalin förbereder kroppen för att reagera snabbt."
+        },
+        {
+          "type": "funFact",
+          "text": "Samma system förklarar varför du kan få gåshud när du tittar på en skräckfilm... medan du är mysig i soffan."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p3",
+      "title": "Spänningen med musik",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vissa spänningar, ibland kallade \"frossa\", kommer med en stark känsla: musik, tal, film. De aktiverar hjärnans **belöningar**-krets, med **dopamin**, ett ämne kopplat till njutning."
+        },
+        {
+          "type": "paragraph",
+          "text": "Detta är inte användbart för omedelbar överlevnad. Snarare är det kroppen som reagerar på en intensiv känsla, som en förbigående våg."
+        }
+      ]
+    },
+    {
+      "id": "course_49_pourquoi_a_t_on_des_frissons_p4",
+      "title": "När ska man oroa sig?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Frossa med hög feber kan signalera en infektion. Ständiga frossa utan tydlig anledning förtjänar läkarvård. Men för det mesta är en rysning av kyla, stress eller musik helt enkelt att kroppen gör sitt jobb."
+        },
+        {
+          "type": "takeaway",
+          "text": "Kalla rysningar producerar värme. De som är rädda förbereder sig på att reagera. Musiken rör känslomässig njutning. Samma känsla, olika orsaker."
+        }
+      ]
+    }
+  ]
+}

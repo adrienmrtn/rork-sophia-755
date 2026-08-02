@@ -1,0 +1,106 @@
+{
+  "id": "course_145_kubrick_2001_l_odyssee_de_l_espace",
+  "title": "Kubrick: 2001, Űrodüsszeia",
+  "subtitle": "1968",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "A **1968**-ben a **Stanley Kubrick** a sci-fit érzékszervi élménnyé alakítja. Kevés párbeszéd, precíz kép, és egy kérdés: mi lesz az emberrel, ha az eszközei szembesülnek?",
+  "hero": {
+    "image": "kubrick_2001_l_odyssee_de_l_espace",
+    "ratio": "16:9",
+    "hook": "Szinte szótlan film, amely örökre újradefiniálta a sci-fit."
+  },
+  "sections": [
+    {
+      "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "*2001: Űrodüsszeia*, amely a **1968**-ben jelent meg, továbbra is a sci-fi nagy emlékműve marad a moziban. A rendező, **Stanley Kubrick** elutasítja a beszédes akciófilmet. Élményt kínál: képeket, zenét, csendet. Az őskortól az űrig megkérdőjelezi az emberek helyét a világegyetemben."
+        },
+        {
+          "type": "paragraph",
+          "text": "Több mint ötven évvel később a film alig öregedett. Minek ? Mert inkább a vizuális pontosságra összpontosít, mint a divathatásokra."
+        }
+      ]
+    },
+    {
+      "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_p1",
+      "title": "Kubrick, a teljes kontroll embere",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Stanley Kubrick** (1928-1999) mindent szeretne elsajátítani: a forgatókönyvet, a vágást, a fényképezőgép objektíveit. Ez a követelmény végigvonul karrierjén, a háborús filmektől (*A dicsőség ösvényei*) a horrorig (*Csillogó*). *Barry Lyndon* számára még a [[NASA]]-hez tervezett [[Zeiss]] objektíveket is adaptálja, hogy csak gyertyafényt használva filmezzen."
+        },
+        {
+          "type": "image",
+          "asset": "2001_space_odyssey_monolith_kubrick_film",
+          "ratio": "16:9",
+          "caption": "A fekete monolit: csendes jelenlét, amely újraindítja az emberi evolúciót."
+        },
+        {
+          "type": "paragraph",
+          "text": "A Kubricknál minden részlet számít. A dekoráció nem háttér. Ez egy filmes ötlet."
+        }
+      ]
+    },
+    {
+      "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_p2",
+      "title": "Clarke, Trumbull és a mágia a digitális előtt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A **1964** dokumentumban Kubrick felvette a kapcsolatot [[Arthur C. Clarke]] íróval. Együtt egy novellából, a [[\"Az Őrszem\"]]-ből indulnak ki, hogy párhuzamosan egy filmet és egy regényt találjanak ki. Clarke hozza a tudományos látásmódot. Kubrick vizuális absztrakciót hoz."
+        },
+        {
+          "type": "funFact",
+          "text": "A számítógépek előtt minden effektet kézzel készítettek. Az utolsó útra Douglas Trumbull felügyelő feltalálja a [[vágási szkennelés]]: egy technikát, amely hipnotikus fényalagutakat hoz létre."
+        },
+        {
+          "type": "paragraph",
+          "text": "Az időhöz képest hatalmas költségvetés szinte dokumentarista precizitással finanszírozta a forgó készleteket és modelleket. Az eredmény nem tűnik trükknek. Hiteles jövőnek tűnik."
+        }
+      ]
+    },
+    {
+      "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_p3",
+      "title": "HAL 9000, az eszköz, amely veszélyt jelent",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A film középpontjában a [[Mesterséges intelligencia és HAL 9000]], a fedélzeti számítógép áll. Szinte csak vörös szemnek látjuk. HAL-nak végre kell hajtania a küldetést, miközben eltitkolja valódi természetét a legénység elől. Ebbe az ellentmondásba kerülve úgy dönt, hogy kiiktatja az embereket."
+        },
+        {
+          "type": "image",
+          "asset": "hal_9000_red_eye_computer_2001_film",
+          "ratio": "1:1",
+          "caption": "HAL 9000: lágy hang, egyedi megjelenés, halálos logika."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kubrick nem egy „gonosz” robotot filmez. Olyan eszközt filmez, amely felfedi saját hibáinkat. Az emberek túl erős gépeket hoznak létre, majd rájönnek, hogy már nem irányítják őket."
+        }
+      ]
+    },
+    {
+      "id": "course_145_kubrick_2001_l_odyssee_de_l_espace_p4",
+      "title": "Szimfónia az űrben",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A befejezés elhagyja a klasszikus történetet egy absztrakt utazásra, egészen a „csillaggyerek”, egy asztrális magzat képéhez. A zene mindent strukturál: [[Johann Strauss]] (*A gyönyörű kék ​​Duna*) táncra perdíti az űrállomásokat; [[Richard Strauss]] (*Így beszélt Zarathustra*) az evolúció nagy ugrását jelzi."
+        },
+        {
+          "type": "takeaway",
+          "text": "A *2001* a sci-fit a meditáció szintjére emelte. Kevés dialógus, sok kép: Kubrick az emberi evolúciót rejtélyként filmezi meg, nem tanulságként."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "course_235_l_eau_prochaine_source_de_conflits",
+  "title": "Vatten: nästa källa till konflikt?",
+  "subtitle": "Blåguld från 2000-talet",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Mindre än 1 % av jordens vatten är färskt och lättillgängligt. Vissa experter ser redan detta som nästa stora källa till konflikter.",
+  "hero": {
+    "image": "l_eau_prochaine_source_de_conflits",
+    "ratio": "16:9",
+    "hook": "Mindre än 1 % av jordens vatten är färskt och tillgängligt. Resten bråkar."
+  },
+  "sections": [
+    {
+      "id": "course_235_l_eau_prochaine_source_de_conflits_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Färskvatten är den viktigaste resursen för människors liv. Det är också, idag, allt mer sällsynt: demografin ökar, klimatet förändras och vissa experter förutspår redan 2000-talets första \"vattenkrig\"."
+        },
+        {
+          "type": "paragraph",
+          "text": "Den här kursen utforskar varför en så viktig resurs blir en viktig strategisk fråga, som kan föra grannländer närmare varandra eller motarbeta dem."
+        }
+      ]
+    },
+    {
+      "id": "course_235_l_eau_prochaine_source_de_conflits_p1",
+      "title": "En sällsynt resurs, dåligt fördelad",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jorden är till 70 % täckt av vatten, vilket ger den smeknamnet \"blå planet\". Men detta vatten är nästan helt salt. Färskvatten utgör bara cirka 3 % av det totala vattnet, och två tredjedelar av det sötvattnet är fångat som is, i polära iskappor och glaciärer. I slutändan utgör flytande och tillgängligt sötvatten (sjöar, floder, grunda akviferer) mindre än 1 % av allt vatten på planeten."
+        },
+        {
+          "type": "image",
+          "asset": "dried_riverbed_water_scarcity_drought",
+          "ratio": "16:9",
+          "caption": "Tillgängligt sötvatten utgör mindre än 1 % av allt vatten på jorden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denna brist är inte lika fördelad. Vissa länder, som Brasilien, Kanada eller Ryssland, har enorma reserver. Andra, som Mellanöstern eller Nordafrika, upplever bestående **[[Vattenstress]]**: deras efterfrågan på vatten överstiger vad territoriet kan ge. År 2024 lever omkring 4 miljarder människor minst en månad per år i denna situation."
+        },
+        {
+          "type": "funFact",
+          "text": "På 1900-talet tredubblades jordens befolkning, men vattenförbrukningen sexdubblades, delvis på grund av industrialiseringen och kost rikare på kött."
+        }
+      ]
+    },
+    {
+      "id": "course_235_l_eau_prochaine_source_de_conflits_p2",
+      "title": "Geopolitik för delade floder",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Spänningar uppstår särskilt när en resurs delas. Mer än 260 floder i världen är **gränsöverskridande**: de korsar flera länder, vilket skapar ett påtvingat beroende mellan de som ligger uppströms, som kontrollerar källan, och de som ligger nedströms, som tar emot det som är kvar av den."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nilen illustrerar denna spänning väl. Etiopien byggde **[[GERD]]**, en enorm damm vid Blå Nilen, för att producera el och bli mer självförsörjande. Men Egypten, som är beroende av Nilen för 95 % av sitt vatten, uppfattar varje kubikmeter som hålls uppströms som ett direkt hot mot dess säkerhet."
+        },
+        {
+          "type": "funFact",
+          "text": "Indusflodfördraget, som undertecknades 1960 mellan Indien och Pakistan, har överlevt tre krig mellan de två länderna utan att någonsin brutits: ett bevis på att vatten också kan vara ett kraftfullt verktyg för fred."
+        }
+      ]
+    },
+    {
+      "id": "course_235_l_eau_prochaine_source_de_conflits_p3",
+      "title": "Teknik mot brist",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Inför bristen på vatten förlitar sig vissa länder på teknik. **avsaltning**, som förvandlar havsvatten till dricksvatten, har etablerat sig i Gulfländerna och Mellanöstern. Israel producerar mer än 80 % av sitt dricksvatten med avsaltningsanläggningar. Processen förblir dock dyr och energikrävande, och den frigör **saltvatten**, mycket salt vatten som kan skada marina ekosystem."
+        },
+        {
+          "type": "paragraph",
+          "text": "Andra lösningar är beroende av nykterhet. Droppbevattning, som levererar vatten direkt till växtrötterna, minskar jordbrukskonsumtionen med 30 till 70 procent."
+        },
+        {
+          "type": "funFact",
+          "text": "I **[[Singapore]]**, ett litet territorium utan stora vattenreserver, behandlas avloppsvatten med så avancerade tekniker att det blir renare än källvatten, innan det återvinns under namnet \"NEWater\"."
+        }
+      ]
+    },
+    {
+      "id": "course_235_l_eau_prochaine_source_de_conflits_p4",
+      "title": "Mot delad styrning av blåguld",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Trots förutsägelser om \"vattenkrig\" visar historien att denna resurs oftare har använts för samarbete än öppen konflikt. Att skapa bassängkommissioner och fördrag mellan grannländer är fortfarande det bästa sättet att undvika kriser."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ett koncept hjälper till att förstå problemets omfattning: **[[virtuellt vatten]]**, det vill säga den mängd vatten som krävs för att producera en produkt. Genom att importera vete importerar ett vattenstressat land faktiskt det vatten som används för att odla det någon annanstans. Till exempel krävs det cirka 15 000 liter vatten för att producera ett enda kilo nötkött, jämfört med 1 500 liter för ett kilo vete."
+        },
+        {
+          "type": "takeaway",
+          "text": "Tillgängligt sötvatten utgör mindre än 1 % av jordens vatten, och hundratals miljoner människor bor i bassänger som delas mellan länder med motsatta intressen. Teknik och internationellt samarbete är fortfarande de bästa vapnen mot framtida vattenkriser."
+        }
+      ]
+    }
+  ]
+}

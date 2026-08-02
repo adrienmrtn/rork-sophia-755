@@ -1,0 +1,114 @@
+{
+  "id": "course_42_pourquoi_reve_t_on",
+  "title": "Neden rüya görürüz?",
+  "subtitle": "Beyin ve uyku",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Her gece yaklaşık iki saat rüya görüyorsun. Çoğu rüya uyandığınızda kaybolur. İşte bilimin bugün bu gizem hakkında anladığı şey:",
+  "hero": {
+    "image": "pourquoi_reve_t_on",
+    "ratio": "16:9",
+    "hook": "Hayatınızın altı yılını hayal ediyorsunuz. Ve neredeyse her şeyi unutuyorsun."
+  },
+  "sections": [
+    {
+      "id": "course_42_pourquoi_reve_t_on_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Her gece yaklaşık **iki biliniyor** rüya görerek geçirirsiniz. Bir ömür boyunca bu neredeyse **altı yıl** demektir. Ancak uyandığınızda bu hikayelerin çoğu saniyeler içinde kaybolur."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tüm bilim adamları \"neden\" konusunda hemfikir değil. Ancak ne zaman rüya gördüğümüzü ve beynin bu süre zarfında ne yaptığını ****Z**** giderek daha iyi biliyorlar: anıları yeniden düzenliyor, senaryoları test ediyor ve duyguları sindiriyor."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p1",
+      "title": "Uyku “kapalı” değil",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Uyku tam bir kapanma değildir. Gecede birkaç kez **döngü** yaklaşık **90 dakika** ilerler. Her döngüde beyin farklı aşamalardan geçer: Hafif uyku, vücudun toparlanması için yararlı olan derin uyku ve ardından çok özel bir aşama."
+        },
+        {
+          "type": "image",
+          "asset": "sleeping_person_rem_dream",
+          "ratio": "4:3",
+          "caption": "REM uykusu sırasında gözler göz kapaklarının altında hareket eder."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu aşamaya [[paradoksal uyku]] denir. Beyin neredeyse uyanık olduğu kadar aktiftir ancak vücut [[Kas atonisi]] tarafından felç edilmiştir. Burası özellikle uzun, anlatısal rüyaların doğduğu yerdir. Bu felç, hayal ettiğimiz şeyi fiziksel olarak “oynamamızı” engeller."
+        },
+        {
+          "type": "funFact",
+          "text": "Gecede 4 ila 6 kez **rüya görüyoruz. Uyandıktan bir dakika sonra burada ses çıkacak hindistan**Z**%95**'yi unutuyoruz. Bir rüyayı hatırlıyorsanız, bunun nedeni genellikle rüya sırasında ya da hemen sonrasında uyanmış olmanızdır."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p2",
+      "title": "Rüya görmenin amacı nedir?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Freud**, rüyaların çoğunlukla gizli arzuları ortaya çıkardığını düşünüyordu. Günümüzde araştırmacılar, beyin görüntülemeye dayalı, beyin aktivitesini görselleştiren tekniklere dayanan daha somut açıklamaları tercih ediyor. Rüya görmek özellikle duygularla bağlantılı derin yapılar dizisi olan **limbik sistem** harekete geçirir."
+        },
+        {
+          "type": "image",
+          "asset": "brain_activity_dreaming_scan",
+          "ratio": "4:3",
+          "caption": "Rüyalar sırasında beyin çalışır: duygular, görüntüler, anılar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Üç ana parça hakimdir. İlk olarak: **Hafızayı sıralayın**, faydalı olanı saklayın, gerisini bırakın. İkincisi: Gerçek risklerin olmadığı bir dünyada **Tehlikeliye karşı eğitim**. Üçüncüsü: **yaşlarda sindirmek**: rüyalar sırasında beyin, stres ve uyanıklıkla bağlantılı bir nörotransmiter olan **norepinefrin**'nin azalmasıyla güçlü anları yeniden ziyaret eder."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p3",
+      "title": "Rüyalarımızı neden unutuyoruz?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bir anıyı kalıcı olarak saklamak için beynin bazı kimyasallara ihtiyacı vardır. Ancak paradoksal uyku sırasında norepinefrin seviyesi düşer. Sonuç: Rüya çok kırılgan bir hafızada kalır."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gözlerinizi açtığınız anda günün ışığı, sesleri ve düşünceleri bu kırılgan anıyı eziyor. Bunu saklamanın en iyi yolu? Daha hareket etmeden rüyanızı **hemen hemen** yazın."
+        },
+        {
+          "type": "funFact",
+          "text": "Renkli televizyondan önce çok az kişi renkli rüya gördüğünü söylüyordu. Bugün çoğu öyle. Görsel çevremiz rüyalarımızın dokusunu bile etkiler."
+        }
+      ]
+    },
+    {
+      "id": "course_42_pourquoi_reve_t_on_p4",
+      "title": "Lucid rüya görmeye ne dersiniz?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bazen uykuda kalırken **rüyada gördüğümüzün** farkına varırız: bu **berrak rüya görmemektir**. Beynin mantık ve öz-yansıtmayla bağlantılı bir alanı olan **prefrontal korteks**, daha sonra biraz aydınlanır."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bazıları ortamı etkileyebilir veya bir kabusa dönüşebilir. Hatta araştırmacılar, sporcuların zihinsel olarak jestleri tekrarlamalarına yardımcı olmak veya tekrarlayan kabusları tedavi etmek için bu fenomen üzerinde çalışıyorlar."
+        },
+        {
+          "type": "takeaway",
+          "text": "Özellikle beynin aktif olduğu ve vücudun felç olduğu [[paradoksal uyku]] aşamasında rüya görürüz. Uyandığımızda neredeyse her şeyi unutsak bile rüya görmek muhtemelen hafızayı ve duyguları yönetmeye yardımcı olur."
+        }
+      ]
+    }
+  ]
+}

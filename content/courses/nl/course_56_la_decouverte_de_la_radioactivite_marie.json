@@ -1,0 +1,100 @@
+{
+  "id": "course_56_la_decouverte_de_la_radioactivite_marie",
+  "title": "De ontdekking van radioactiviteit",
+  "subtitle": "Marie Curie",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Marie Curie opent samen met Pierre Curie en Henri Becquerel het hoofdstuk radioactiviteit. Twee Nobelprijzen, overweldigend werk en een immense erfenis.",
+  "hero": {
+    "image": "la_decouverte_de_la_radioactivite_marie_curie",
+    "ratio": "16:9",
+    "hook": "Ze woog tonnen erts om een ​​paar gram van een onzichtbaar element te isoleren."
+  },
+  "sections": [
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_intro",
+      "title": "Inleiding",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Marie Curie** (geboren Maria Skłodowska) is de eerste vrouw die een Nobelprijs ontvangt. Ze blijft de enige persoon die **twee** heeft ontvangen in twee verschillende wetenschappen: natuurkunde en vervolgens scheikunde."
+        },
+        {
+          "type": "paragraph",
+          "text": "Het onderwerp: **radioactiviteit**, dat wil zeggen het feit dat bepaalde atomen spontaan energie en deeltjes sturen."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p1",
+      "title": "Een smalle deur naar de wetenschap",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ze werd geboren in Polen en ging in Parijs studeren omdat lokale universiteiten veel deuren sloten voor vrouwen. Ze werkt hard, vaak in precaire omstandigheden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zij trouwde met **Pierre Curie**, natuurkundige. Samen vormden ze voor die tijd een zeldzaam laboratoriumduo."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p2",
+      "title": "Benoem het onzichtbare",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In **1896** merkte **Henri Bequerel** op dat uranium fotografische platen zonder licht versluiert. Marie Curie besluit dit fenomeen in detail te bestuderen. Ze vond het woord **radioactiviteit** uit."
+        },
+        {
+          "type": "image",
+          "asset": "marie_curie_pitchblende_radioactivity",
+          "ratio": "4:3",
+          "caption": "Tonnen pekblende om radium en polonium te isoleren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Met Pierre ontdekt ze twee nieuwe elementen: **polonium** (vernoemd naar Polen) en **radium**. Om ze te isoleren moeten enorme hoeveelheden erts, pekblende, worden verwerkt."
+        },
+        {
+          "type": "funFact",
+          "text": "Radium gloeit zwakjes op in het donker. We waren eerst verbaasd… voordat we beseften hoe gevaarlijk het was."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p3",
+      "title": "Glorie en prijs om te betalen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In **1903** ontvingen Marie, Pierre en Becquerel de Nobelprijs voor de natuurkunde. In **1911** ontving Marie alleen de Nobelprijs voor de Scheikunde. Pierre stierf per ongeluk in 1906. Ze vervolgt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tijdens de Eerste Wereldoorlog organiseerde ze mobiele röntgeneenheden om de gewonden te behandelen. Ze stelt haar lichaam bloot aan doses waarvan we vandaag de dag zouden weten dat ze onaanvaardbaar zijn."
+        }
+      ]
+    },
+    {
+      "id": "course_56_la_decouverte_de_la_radioactivite_marie_p4",
+      "title": "Een dubbelzijdige erfenis",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Radioactiviteit heeft radiotherapie tegen bepaalde vormen van kanker mogelijk gemaakt... en ook tegen kernwapens. Kennis is neutraal; het gebruik ervan is dat niet."
+        },
+        {
+          "type": "takeaway",
+          "text": "Marie Curie transformeerde een vreemde observatie in een nieuwe wetenschap: radioactiviteit. Zijn werk opende de moderne natuurkunde... ten koste van de risico's die toen slecht begrepen werden."
+        }
+      ]
+    }
+  ]
+}

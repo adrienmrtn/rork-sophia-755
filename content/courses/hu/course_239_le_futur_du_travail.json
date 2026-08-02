@@ -1,0 +1,112 @@
+{
+  "id": "course_239_le_futur_du_travail",
+  "title": "A munka jövője",
+  "subtitle": "Automatizálás és mesterséges intelligencia",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "A mesterséges intelligencia és az új foglalkoztatási formák felrázzák az ipari korszakból örökölt munkamodellt.",
+  "hero": {
+    "image": "le_futur_du_travail",
+    "ratio": "16:9",
+    "hook": "A gépek gyorsabban működnek, mint valaha. Majd kiderül, mi lesz még hátra az emberekkel."
+  },
+  "sections": [
+    {
+      "id": "course_239_le_futur_du_travail_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A munka nemcsak jövedelmünket határozza meg, hanem társadalmi identitásunkat és napjaink jelentését is. A mesterséges intelligencia, a robotika és az új munkamódszerek azonban ma felforgatják ezt az ipari korszakból örökölt modellt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ez a kurzus azt vizsgálja, hogyan változtatja meg a munka formáját, és milyen nagy kérdéseket vet fel ez az átalakulás: kevesebb óra, több gép és a vagyon új megosztása."
+        }
+      ]
+    },
+    {
+      "id": "course_239_le_futur_du_travail_p1",
+      "title": "Vége a Henry Forddal született modellnek",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A modern munka régóta egy olyan ötlet köré szerveződik, amelyet **[[Henry Ford]]** népszerűsített, aki 1926-ban létrehozta a 40 órás hetet. Ez a választás nem a nagylelkűség gesztusa volt: a szabadidővel rendelkező dolgozók is vásárlókká válnak, akik maguk is megvásárolhatják az általuk előállított termékeket."
+        },
+        {
+          "type": "funFact",
+          "text": "1930-ban John Maynard Keynes közgazdász azt jósolta, hogy unokái a technológiai fejlődésnek köszönhetően csak heti 15 órát fognak dolgozni. Majdnem egy évszázaddal később már megvan ez a technológia, de még mindig ugyanolyan keményen dolgozunk."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ez a modell ma összeomlik a **gig gazdaság**, a „giga” gazdaság javára: az Egyesült Államokban több mint 57 millió munkavállaló értékesíti szolgáltatásait digitális platformokon keresztül, a hagyományos foglalkoztatáson kívül. Az automatizálás egyre összetettebb feladatokat is átvesz, míg a 2020-as járvány miatt felgyorsult távmunka átformálja a munkavégzés földrajzát."
+        }
+      ]
+    },
+    {
+      "id": "course_239_le_futur_du_travail_p2",
+      "title": "AI és a kreatív pusztítás kihívása",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A munka jövőjéről szóló vita gyakran **[[Schumpeter József]]** filozófus és közgazdász gondolatán alapul: a **[[Kreatív rombolás]]**. Szerinte minden technológiai forradalom tönkreteszi a régi szakmákat, de végül új, gyakran képzettebb szakmákat hoz létre. A generatív mesterséges intelligencia azonban újat vezet be: most először fenyegeti az irodai munkákat és az intellektuálisnak tekintett szakmákat."
+        },
+        {
+          "type": "funFact",
+          "text": "2023-ban egy tanulmány kimutatta, hogy a mesterséges intelligencia az emberek 99%-ánál jobban teljesít egy kreativitásteszten, ami megkérdőjelezi azt az elképzelést, hogy a kreativitás az utolsó előnyünk a gépekkel szemben."
+        },
+        {
+          "type": "paragraph",
+          "text": "Három forgatókönyv rajzolódik ki. Az optimista a termelékenység növekedését képzeli el, amely megszabadítja az embereket az ismétlődő feladatoktól. A pesszimista attól tart, hogy a mesterséges intelligencia gyorsabban fejlődik, mint az átképzési képességünk, ami hatalmas munkanélküliséget okoz. A hibrid végül az emberek és a gépek együttműködésén alapul, ahol a kulcskészség az eszközök irányításának képessége lesz, nem pedig a rögzített know-how elsajátítása."
+        }
+      ]
+    },
+    {
+      "id": "course_239_le_futur_du_travail_p3",
+      "title": "Ossza újra az időt és a pénzt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A kétsebességes társadalom kockázatával szemben új eszközöket tanulmányoznak. A **univerzális alapjövedelem** azt javasolja, hogy minden állampolgárnak fix összeget fizessenek feltételek nélkül, hogy biztosítsák az életet egy olyan gazdaságban, ahol a munka egyre szakaszosabb."
+        },
+        {
+          "type": "image",
+          "asset": "ai_generative_writing_artificial_intelligence",
+          "ratio": "16:9",
+          "caption": "Az automatizálás, a mesterséges intelligencia és az új foglalkoztatási formák átformálják a munka világát."
+        },
+        {
+          "type": "paragraph",
+          "text": "Emellett egyre nagyobb teret hódít a **[[4 napos hét]]** ötlete: ha a gépek kevesebb idő alatt többet termelnek, logikusnak tűnik, hogy cserébe csökkenjen az emberi munkaidő a foglalkoztatás megőrzése és a dolgozók egészségének megőrzése érdekében. Továbbra is kérdéses a finanszírozás: ha az értéket egyre inkább a szoftver teremti meg, akkor az adókat kétségtelenül a munkajövedelemről a tőkejövedelemre kell áthelyezni."
+        }
+      ]
+    },
+    {
+      "id": "course_239_le_futur_du_travail_p4",
+      "title": "Milyen értelmet adjunk a holnap munkájának",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A gazdasági egyenlet feloldása után egy mélyebb kérdés marad: mi lesz napjaink értelmével egy olyan világban, ahol a munka kevésbé központi szerepet játszik? Történelmileg a munka strukturálta a mindennapi életet és az önbecsülést. Részleges eltűnése vagy unalomhoz, vagy az önkéntes, művészi vagy civil tevékenységek felélesztéséhez vezethet."
+        },
+        {
+          "type": "funFact",
+          "text": "A „munka” szó a latin tripalium szóból származik, amely a kínzás három szálból álló eszköze. Eredet, amely arra emlékeztet bennünket, hogy sokáig szenvedésnek tekintették, mielőtt identitássá vált."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ebben az összefüggésben a tanulás megtanulása elengedhetetlen készséggé válik. A valódi kérdés nemcsak technológiai, hanem politikai is: a mesterséges intelligenciát a képességeink növelésére, vagy csak az üzleti költségek csökkentésére használjuk? A válasz dönti el, hogy a holnapi munka felszabadulás vagy új kényszer lesz-e."
+        },
+        {
+          "type": "takeaway",
+          "text": "A munka jövőjét az egyedülálló alkalmazottak megszűnése, a gigagazdaság javára és a mesterséges intelligencia kihívása jellemzi, amely először veszélyezteti a szellemi állásokat. Társadalmi modellünknek kétségtelenül újra kell osztania a termelékenységnövekedést, egyetemes jövedelem vagy rövidebb munkahét révén."
+        }
+      ]
+    }
+  ]
+}

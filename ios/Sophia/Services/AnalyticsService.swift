@@ -86,10 +86,13 @@ enum AnalyticsService {
         track("onboarding_started")
     }
 
-    static func trackOnboardingStepViewed(stepIndex: Int, action: String? = nil) {
+    /// `stepName` est fourni par le coordinateur d'onboarding : la séquence est dynamique
+    /// (la page d'essai est retirée quand l'offering n'inclut pas d'essai), donc un index seul
+    /// ne suffit pas à identifier l'écran.
+    static func trackOnboardingStepViewed(stepIndex: Int, stepName: String? = nil, action: String? = nil) {
         var props: [String: MixpanelType] = [
             "step_index": stepIndex,
-            "step_name": onboardingStepName(for: stepIndex),
+            "step_name": stepName ?? onboardingStepName(for: stepIndex),
         ]
         if let action { props["action"] = action }
         track("onboarding_step_viewed", props)
@@ -255,22 +258,28 @@ enum AnalyticsService {
 
     // MARK: - Helpers
 
+    /// Repli utilisé seulement si l'appelant ne fournit pas de nom : l'ordre reflète la
+    /// séquence complète de `OnboardingV2View` (essai gratuit inclus).
     static func onboardingStepName(for index: Int) -> String {
         switch index {
         case 0: "welcome"
         case 1: "language"
         case 2: "objective"
-        case 3: "right_place"
-        case 4: "swipe_courses"
+        case 3: "objective_intro"
+        case 4: "questions"
         case 5: "phone_time"
-        case 6: "weeks_lost"
-        case 7: "review"
-        case 8: "loading"
-        case 9: "login"
-        case 10: "trial_steps"
-        case 11: "reminder"
-        case 12: "paywall_annual"
-        case 13: "paywall_comparison"
+        case 6: "years_grid"
+        case 7: "transform"
+        case 8: "review"
+        case 9: "personalize"
+        case 10: "swipe_courses"
+        case 11: "loading"
+        case 12: "profile"
+        case 13: "login"
+        case 14: "trial_steps"
+        case 15: "reminder"
+        case 16: "paywall_annual"
+        case 17: "paywall_comparison"
         default: "unknown"
         }
     }

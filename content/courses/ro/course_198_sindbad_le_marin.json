@@ -1,0 +1,116 @@
+{
+  "id": "course_198_sindbad_le_marin",
+  "title": "Sindbad marinarul",
+  "subtitle": "Șapte călătorii",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Sinbad marinarul: șapte călătorii, monștri și comori. În spatele minunatului, portretul negustorului-aventurier al epocii de aur islamice.",
+  "hero": {
+    "image": "sindbad_le_marin",
+    "ratio": "16:9",
+    "hook": "De șapte ori pleacă bogat sau curios. De șapte ori marea o sparge. De șapte ori se întoarce și mai bogat."
+  },
+  "sections": [
+    {
+      "id": "course_198_sindbad_le_marin_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Sindbad marinarul** aparține **Nopti Arabe**, dar nu și vechiului nucleu persan al colecției. Ciclul său de șapte călătorii a avut loc mai târziu, în Egipt, în jurul secolului al XV-lea."
+        },
+        {
+          "type": "paragraph",
+          "text": "El întruchipează călătorul-negustor al **Epoca Islamului**: evlavie, lăcomie, curaj și incapacitatea de a sta nemișcat cândva bogat. În spatele monștrilor, citim o alegorie a norocului în creștere și coborâre."
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p1",
+      "title": "Structura ciclică a aventurii",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Povestea se deschide la Bagdad. **Sindbad Marinarul**, acum bătrân și bogat, povestește calvarurile sale unui portar pe nume și Sindbad (uneori Hindbad). Contrastul de clasă este imediat."
+        },
+        {
+          "type": "image",
+          "asset": "baghdad_medieval_islamic_golden_age_trade",
+          "ratio": "4:3",
+          "caption": "Bagdad, punct de plecare și întoarcere pentru călătoriile lui Sindbad."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fiecare călătorie urmează aceeași mecanică: oboseala vieții sedentare, plecare din portul [[Basra]], naufragiu, supraviețuire pe un tărâm necunoscut, întoarcere încărcată cu comori. Numărul șapte, încărcat cu semnificații în [[Cosmologie islamică]], conferă seriei o dimensiune inițiatică: de la imprudență la înțelepciune."
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p2",
+      "title": "Un bestiar fantastic între mit și realitate",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**stâncă** (sau Rokh), o pasăre a cărei anvergură a aripilor ascunde soarele, și-a lăsat amprenta asupra imaginației lumii. Vedem ecoul poveștilor călătorilor arabi de pe coastele Africii de Est."
+        },
+        {
+          "type": "image",
+          "asset": "sinbad_roc_giant_bird_illustration",
+          "ratio": "4:3",
+          "caption": "Roc, pasărea uriașă a călătoriilor lui Sindbad."
+        },
+        {
+          "type": "funFact",
+          "text": "Roc este probabil inspirat de **Aepyornis**, o pasăre elefant din Madagascar care a dispărut în jurul anului 1000. Ouăle sale aveau de până la 150 de ori volumul unui ou de găină."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sindbad se confruntă, de asemenea, cu **Bătrânul Mării**, care se lipește de spate, și cu **insula broasca testoasa**, teren înșelător. **valea diamantelor**, unde se aruncă carne pentru a lipi pietrele prețioase, circulă deja printre Antici. Sedimentele minunate ale secolelor [[Rute comerciale arabe medievale]]."
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p3",
+      "title": "Oglinda Epocii de Aur a comerțului arab",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cadrul este istoric. În secolele al VIII-lea și al IX-lea, marinarii din Basra și Siraf dominau Oceanul Indian. Opririle lui Sindbad evocă locuri reale: [[Serendib]] (Ceylon) pentru condimente, Asia de Sud-Est pentru camfor, coastele pentru perle."
+        },
+        {
+          "type": "image",
+          "asset": "arab_indian_ocean_trade_routes_medieval_ship",
+          "ratio": "4:3",
+          "caption": "Nave arabe pe rutele Oceanului Indian."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sindbad nu este un războinic: este un comerciant-aventurier, un statut prestigios într-o societate care prețuiește comerțul. Acolo găsim musonul, corăbii mai degrabă cusute cu fibre de cocos decât bătute în cuie. Paralela vestică: [[Marco Polo (paralela vestică)]], care descrie Asia în fapte, unde Sindbad o pictează în minuni."
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p4",
+      "title": "Patrimoniul universal: de la Est la Vest",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tradusă în secolul al XVIII-lea de **Antoine Galland**, călătoria hrănește [[Roman de aventuri]], de la Defoe la Jules Verne. Cinematograful îl face adesea un corsar în slujba prințeselor. Eroare: Sindbad este inițial un oraș din Bagdad, supraviețuind prin credință și ingeniozitate."
+        },
+        {
+          "type": "funFact",
+          "text": "Numele Sindbad l-ar evoca pe „prințul râului Sindh”, Indusul, la răscrucea dintre lumea arabă și cea indiană."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Sinbad** întruchipează epoca de aur maritimă islamică în **șapt** călătorii ciclice: Stânca și diamantele maschează o realitate, cea a negustorilor arabi stăpâni ai Oceanului Indian."
+        }
+      ]
+    }
+  ]
+}

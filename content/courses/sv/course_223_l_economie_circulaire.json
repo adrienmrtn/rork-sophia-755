@@ -1,0 +1,132 @@
+{
+  "id": "course_223_l_economie_circulaire",
+  "title": "Den cirkulära ekonomin",
+  "subtitle": "Att komma bort från allt engångsbruk",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "**Extrahera, tillverka, släng**: denna modell utarmar planeten. Den cirkulära ekonomin föreslår motsatsen: att hålla föremål och material i omlopp så länge som möjligt.",
+  "hero": {
+    "image": "l_economie_circulaire",
+    "ratio": "16:9",
+    "hook": "Tänk om avfall inte fanns? Det är satsningen på en ekonomisk modell inspirerad av naturen."
+  },
+  "sections": [
+    {
+      "id": "course_223_l_economie_circulaire_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sedan den industriella revolutionen har vår ekonomi arbetat i en riktning: vi utvinner resurser, vi tillverkar föremål och sedan kastar vi dem. Denna modell antar att resurserna är oändliga. Det är de inte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Den **cirkulär ekonomi** erbjuder en annan logik, inspirerad av naturen, där ingenting går förlorat. Det syftar till att hålla värdet av produkter och material i omlopp så länge som möjligt, istället för att omvandla dem till avfall."
+        }
+      ]
+    },
+    {
+      "id": "course_223_l_economie_circulaire_p1",
+      "title": "Den linjära modellen når sina gränser",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den moderna ekonomin byggdes på en modell som heter **linjär**: extrahera, tillverka, slänga. Vi tar råvaror från naturen, vi tillverkar produkter av dem, och när de är utslitna eller ur mode blir dessa produkter avfall."
+        },
+        {
+          "type": "image",
+          "asset": "landfill_waste_garbage_linear_economy",
+          "ratio": "16:9",
+          "caption": "Modellen \"ta, gör, släng\" förutsätter oändliga resurser."
+        },
+        {
+          "type": "paragraph",
+          "text": "Detta system bygger på tanken att resurserna är obegränsade och att naturen kan ta upp all förorening. Men idag förbrukar den globala ekonomin motsvarande 1,7 planeter i resurser varje år. Vissa metaller som är viktiga för digital teknik, som [[Litium]], kan bli svåra att hitta redan 2040."
+        },
+        {
+          "type": "funFact",
+          "text": "Endast 9% av all plast som någonsin producerats av mänskligheten har återvunnits. Resten hamnar i naturen eller på deponi, där den kan ligga kvar i 450 år."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kostnaden för städning och avfallshantering ingår nästan aldrig i försäljningspriset för en produkt. Det är en dold kostnad som betalas senare av alla."
+        }
+      ]
+    },
+    {
+      "id": "course_223_l_economie_circulaire_p2",
+      "title": "Reparera före återvinning",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den cirkulära ekonomin erbjuder flera slingor, och alltid i samma prioritetsordning: den kortaste slingan är bättre, eftersom den slösar mindre energi och material. Allt börjar med **ekodesign**, det vill säga att tänka på miljöpåverkan från en produkt från dess skapelse, genom att välja material som är hållbara och lätta att demontera."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sedan kommer **återanvändning** (ett objekt byter ägare utan att omvandlas, som på en begagnatmarknad), sedan **reparera**, som förlänger livslängden på en produkt. Dessa steg bekämpar [[Planerad inkurans]] direkt, denna praxis som medvetet minskar ett objekts livslängd."
+        },
+        {
+          "type": "image",
+          "asset": "recycling_sorting_waste_materials",
+          "ratio": "4:3",
+          "caption": "Återvinning kommer som en sista utväg, efter återanvändning och reparation."
+        },
+        {
+          "type": "paragraph",
+          "text": "**återvinning** förekommer endast som en sista utväg. Det är fortfarande användbart: återvinning av aluminium förbrukar 95 % mindre energi än att utvinna det från rå malm, [[Bauxit]]. Men det är fortfarande mindre effektivt än att bara återanvända ett föremål."
+        }
+      ]
+    },
+    {
+      "id": "course_223_l_economie_circulaire_p3",
+      "title": "Varför är det fortfarande svårt idag",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Trots allt intresse står den cirkulära ekonomin inför ett enkelt problem: den linjära modellen förblir ofta **less dyr på kort sikt**. Att utvinna nytt material kostar ibland mindre än att sortera och återvinna komplext avfall, särskilt när råvarorna är billiga."
+        },
+        {
+          "type": "image",
+          "asset": "repair_right_electronics_reuse",
+          "ratio": "4:3",
+          "caption": "\"Rätten att reparera\" kräver att tillverkarna tillhandahåller reservdelar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Inför detta ingriper offentliga myndigheter alltmer. Europeiska unionen lanserade en plan 2020 som inför strängare hållbarhetsregler. En av de stora axlarna är \"rätten att reparera\", som tvingar tillverkare av elektroniska apparater att tillhandahålla reservdelar under flera år."
+        },
+        {
+          "type": "paragraph",
+          "text": "En annan hävstång: [[Utökat producentansvar]], som får tillverkare att betala för avfallshanteringen av sina produkter. Detta ger dem ett ekonomiskt incitament att designa föremål som är mindre förorenande och lättare att reparera."
+        }
+      ]
+    },
+    {
+      "id": "course_223_l_economie_circulaire_p4",
+      "title": "Mot ett resurssamhälle",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den cirkulära ekonomin är inte bara en fråga om återvinning: det är ett projekt för ett mer nyktert och mer motståndskraftigt samhälle. Genom att vara mindre beroende av importerade råvaror får ett land också trygghet i en mer instabil värld."
+        },
+        {
+          "type": "paragraph",
+          "text": "Framgången för denna omvandling beror också på oss som konsumenter. 3R-regeln, reducera, återanvänd, återvinn, börjar med det första steget: reducera, det vill säga, fråga dig själv om köpet verkligen är nödvändigt. Det är denna första åtgärd som har störst effekt på klimatet."
+        },
+        {
+          "type": "funFact",
+          "text": "Idag finns det mer guld i ett ton gamla elektroniska smarttelefonkort än i ett ton malm som utvinns från en traditionell guldgruva."
+        },
+        {
+          "type": "takeaway",
+          "text": "Den cirkulära ekonomin syftar till att bryta \"extrahera, tillverka, slänga\"-cykeln genom att hålla resurserna i omlopp genom ekodesign, reparation och återvinning, för att respektera vår planets fysiska gränser."
+        }
+      ]
+    }
+  ]
+}

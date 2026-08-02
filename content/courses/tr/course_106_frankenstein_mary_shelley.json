@@ -1,0 +1,121 @@
+{
+  "id": "course_106_frankenstein_mary_shelley",
+  "title": "Frankeştayn, Mary Shelley",
+  "subtitle": "1818",
+  "subject": "litterature",
+  "subcategory": "Anglo-Saxons & world literature",
+  "description": "1818'de 18 yaşındaki Mary Shelley ilk büyük bilim kurgu romanını yazdı. Victor Frankenstein hayatı yaratıyor, sonra yaratığından kaçıyor: Etiği olmayan bilime dair bir masal.",
+  "hero": {
+    "image": "frankenstein_mary_shelley",
+    "ratio": "16:9",
+    "hook": "Fırtınalı bir gece, şairler arasındaki bir bahis ve modern Prometheus efsanesi."
+  },
+  "sections": [
+    {
+      "id": "course_106_frankenstein_mary_shelley_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1818**'de yayınlanan **Frankenstein veya Modern Prometheus**, ilk büyük **bilim kurgu** romanı olarak kabul edilir. **Mary Shelley** bunu yazdığında yalnızca **18 gün**, **[[Romantizm]]** noir'ın ve zamanının bilimsel tartışmalarının kavşağındaydı."
+        },
+        {
+          "type": "paragraph",
+          "text": "Victor Frankenstein ve onun isimsiz varlığı sadece gotik korku karakterleri değil. Kalıcı bir soru soruyorlar: Yarattığımız ve sonra terk ettiğimiz bilince ne olur? Roman, **[[Yaratıcının sorumluluğu (Modern Prometheus)]]** sorguluyor: Sonrasının sorumluluğunu almadan bir hayat yaratamayız."
+        }
+      ]
+    },
+    {
+      "id": "course_106_frankenstein_mary_shelley_p1",
+      "title": "Cenevre Gölü Laboratuvarı: Kıyamet benzeri bir oluşum",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1816**'de, Endonezya'daki **Tambora** yanardağının patlaması Avrupa'yı bir **[[Yazsız Yıl (1816)]]**'ye sürükledi: gri gökyüzü, kaybolan mahsuller, kıyamet atmosferi. Mary Shelley, **Percy Shelley** ve **Lord Byron** ile **Villa Diodati** on Lake Cenevre'de kalıyor. Byron, can sıkıntısını gidermek için bir korkutucu hikaye yarışması sunuyor."
+        },
+        {
+          "type": "image",
+          "asset": "mary_shelley_portrait_painting",
+          "ratio": "4:3",
+          "caption": "Mary Shelley, Gotik korkunun çok ötesine geçen bir efsanenin yazarı."
+        },
+        {
+          "type": "image",
+          "asset": "lake_geneva_villa_diodati_storm",
+          "ratio": "16:9",
+          "caption": "Villa Diodati: 1816 fırtınasında Frankenstein'ın doğuşu."
+        },
+        {
+          "type": "funFact",
+          "text": "Byron'ın doktoru John Polidori de modern vampirin kuruluş metnini Drakula'dan önce Diodati'de yazmıştır."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mary Shelley, cesetlerin kaslarını uyandıran bu deneylerden **[[Galvanizm]]**'den ilham alıyor. Bir hayalinde, gözlerinin önünde canlanan bir yaratığın karşısında bir öğrenci görür. Katılımcılar arasında tek başına, bahsi sonuna kadar görüyor ve bir başyapıt yaratıyor."
+        }
+      ]
+    },
+    {
+      "id": "course_106_frankenstein_mary_shelley_p2",
+      "title": "Victor Frankenstein ya da bilimsel kibir",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Victor Frankeştayn**, **[[Kibir]]**'yi temsil ediyor: doğal düzene meydan okuyan hırs. **Ingolstadt**'da zengin olmak için değil, tanrılardan ateşi çalan Yunan titanı gibi **Modern Prometheus** olmak için \"hayatın sırrını\" arıyor. Yaratığı uyandığında rüya hemen kabusa dönüşür."
+        },
+        {
+          "type": "image",
+          "asset": "frankenstein_monster_illustration_1831",
+          "ratio": "4:3",
+          "caption": "Shelley'nin yaratığı: dehşet verici ama her şeyden önce etkili ve bilinçli."
+        },
+        {
+          "type": "paragraph",
+          "text": "Victor, yarattığı şeyin çirkinliğinden tiksinerek kaçar. Yapay \"oğlunu\" terk eder: Trajediyi tetikleyen, yaratma eyleminin kendisinden çok bu korkaklıktır. Shelley, vicdanı olmayan bir bilimin, reddedilen yaratık kadar yaratıcıyı da kınadığını gösteriyor."
+        }
+      ]
+    },
+    {
+      "id": "course_106_frankenstein_mary_shelley_p3",
+      "title": "Yaratığın Uyanışı: İsimsiz Bir Bilinç",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Romanın özgünlüğü yaratığın sesinde yatmaktadır. Zeki ve güzel konuşan bir köylü aileyi gözlemleyerek ve **Milton**'nin **[[Kayıp Cennet]]** kitabını okuyarak öğrendi. **[[Tabula rasa]]**'ye göre \"iyi\" olarak doğmuştur ve erkeklerin şiddetle reddedilmesi nedeniyle kendisini yozlaşmış olarak görmektedir."
+        },
+        {
+          "type": "quote",
+          "text": "Kötüyüm çünkü mutsuzum.",
+          "attribution": "Mary Shelley, Frankeştayn"
+        },
+        {
+          "type": "paragraph",
+          "text": "Artık tek başına acı çekmemek için bir arkadaş ister; Victor korkudan reddediyor. Bu yüzden onu kendi yalnızlığına indirgemek için sevdiği her şeyi yok eder. Roman, **[[Sosyal determinizm]]** yansımasına dönüşüyor: toplum bazen farklı olanı dışlayarak kendi canavarlarını yaratıyor."
+        }
+      ]
+    },
+    {
+      "id": "course_106_frankenstein_mary_shelley_p4",
+      "title": "Modern bir efsane ve onun evrensel gelecek kuşakları",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Roman **Arktik**'de sona erer, Victor ölür, yaratık kendini yok etme sözü vererek sislerin arasında kaybolur. Bugün “Frankenstein”, mucidinin elinden kaçan her türlü teknolojiyi ifade ediyor: GDO'lar, yapay zeka, genetik mühendisliği. Shelley, **[[Posthümanizm]]**'yi öngörüyor."
+        },
+        {
+          "type": "funFact",
+          "text": "Popüler kültürde canavara genellikle “Frankenstein” adı verilir. Gerçekte yaratıcı Frankenstein'dır: Varlığın adı yoktur, bu da Victor'un babalığı reddettiğinin bir işaretidir."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Frankeştayn** bize, sonrasının sorumluluğunu almadan bir hayat yaratamayacağımızı hatırlatıyor. Asıl canavar çirkinlik değil, doğurduklarımızın terk edilmesidir."
+        }
+      ]
+    }
+  ]
+}

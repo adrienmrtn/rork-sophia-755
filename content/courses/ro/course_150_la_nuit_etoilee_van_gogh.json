@@ -1,0 +1,126 @@
+{
+  "id": "course_150_la_nuit_etoilee_van_gogh",
+  "title": "Noapte înstelată, Van Gogh",
+  "subtitle": "1889",
+  "subject": "art",
+  "subcategory": "Iconic works",
+  "description": "În **1889**, din azilul din Saint-Rémy-de-Provence, **Vincent Van Gogh** a pictat *Noaptea înstelată*. Cerul se învârte: arta încetează să copieze realitatea pentru a exprima o emoție.",
+  "hero": {
+    "image": "la_nuit_etoilee_van_gogh",
+    "ratio": "16:9",
+    "hook": "Dintr-o cameră de azil, Van Gogh pictează un cer care refuză să rămână înțelept."
+  },
+  "sections": [
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "*Noaptea înstelată* (**1889**) este cel mai cunoscut tablou de **Vincent Van Gogh**, pictor născut în [[Olanda]]. Pictat la azilul Saint-Rémy-de-Provence, marchează un punct de cotitură: nu mai pictăm doar ceea ce vedem. Pictăm ceea ce simțim."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cer învolburat, chiparos ca o flacără neagră, sat inventat: lucrarea deschide calea către arta expresivă a secolului al XX-lea."
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p1",
+      "title": "Saint-Rémy: crearea din azil",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În **mai 1889**, după [[Drama de la Arles cu Gauguin]] (criza care l-a costat o parte din ureche), Van Gogh a fost internat la **Saint-Paul-de-Mausole**, lângă Saint-Rémy. El primește o cameră pentru a picta. Vederea nocturnă se naște mai întâi în spatele gratiilor camerei sale."
+        },
+        {
+          "type": "image",
+          "asset": "van_gogh_saint_paul_asylum_saint_remy_provence",
+          "ratio": "4:3",
+          "caption": "Azilul Saint-Rémy: cadru de constrângere și creație intensă."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pânza amestecă observația și invenția. Recunoaștem dealurile din Alpilles și o mare **chiparos**. Dar satul nu este o copie exactă. Van Gogh reconstituie peisajul pentru a servi emoția."
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p2",
+      "title": "Sculpând cerul cu o pensulă",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tehnic, Van Gogh folosește **Impasto**: vopseaua este groasă, aproape sculptată. Unsprezece stele se rotesc ca nebuloase. Luna portocalie radiază. Cerul devine personajul real."
+        },
+        {
+          "type": "image",
+          "asset": "starry_night_cypress_tree_van_gogh_painting",
+          "ratio": "4:3",
+          "caption": "Chiparosul leagă pământul de cer ca o flacără întunecată."
+        },
+        {
+          "type": "funFact",
+          "text": "Marile suluri ale cerului amintesc de dinamica [[Marele Val de lângă Kanagawa]], un imprimeu japonez pe care Van Gogh l-a admirat. Ea transformă această energie în cosmos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Acest gest anunță [[Arta ca expresie interioară]]: pânza spune o stare de spirit, nu un raport meteorologic."
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p3",
+      "title": "Geniul pe care nimeni nu l-a cumpărat",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Van Gogh a pictat aproape **900 tablouri** în zece ani, dar a murit în **iulie 1890** la Auvers-sur-Oise, la **37 de ani**, aproape necunoscut. Cumnata lui, **Johanna van Gogh-Bonger**, a fost cea care a salvat lucrarea: expoziții, vânzări, publicare de scrisori către fratele său Théo."
+        },
+        {
+          "type": "paragraph",
+          "text": "*Noaptea înstelată* a schimbat mâinile de mai multe ori pentru bani puțini, înainte de a intra în **MoMA** din New York. Pictura disprețuită devine o icoană. [[Fauves]], pictori cu culori violente de la începutul secolului XX, vor recunoaște în el un strămoș."
+        }
+      ]
+    },
+    {
+      "id": "course_150_la_nuit_etoilee_van_gogh_p4",
+      "title": "Un chiparos spre infinit",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Chiparosul leagă pământul de cer: o legătură între viața pământească și în altă parte. Van Gogh a scris că privirea la stele l-a făcut să viseze la moarte ca la o călătorie. Studiile moderne sugerează chiar că steaua strălucitoare din apropierea chiparosului ar putea fi Venus, observată în zori."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1888",
+              "title": "Criza de la Arles",
+              "detail": "Ruptura cu Gauguin precede internarea."
+            },
+            {
+              "date": "1889",
+              "title": "Noapte înstelată",
+              "detail": "Van Gogh pictează cerul din Saint-Rémy."
+            },
+            {
+              "date": "1890",
+              "title": "Moartea la Auvers",
+              "detail": "Artistul a murit la 37 de ani, încă puțin cunoscut."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "*Noaptea înstelată* transformă suferința în limbaj vizual. Van Gogh nu copie noaptea: inventează un cer interior și deschide ușa artei expresive moderne."
+        }
+      ]
+    }
+  ]
+}

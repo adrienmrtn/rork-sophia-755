@@ -1,0 +1,122 @@
+{
+  "id": "course_159_le_theatre_de_shakespeare",
+  "title": "Shakespeares teater",
+  "subtitle": "1564-1616",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture + iconic works",
+  "description": "I London skrev Shakespeare för Globen. Hamlet, Macbeth, Romeo: populär teater som har blivit det engelska språkets höjdpunkt.",
+  "hero": {
+    "image": "le_theatre_de_shakespeare",
+    "ratio": "16:9",
+    "hook": "En skådespelares dramatiker, en teater utan kulisser... och eviga repliker."
+  },
+  "sections": [
+    {
+      "id": "course_159_le_theatre_de_shakespeare_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**William Shakespeare** (1564-1616) skrev för Londonscenen, inte för skolan. Hans pjäser blandar kungar, clowner, älskare och lönnmördare."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fyra århundraden senare spelas den fortfarande överallt."
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p1",
+      "title": "Globen och jordgubbarna",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Med [[Lord Chamberlains män]]-truppen spelar han på [[Globens teater]], en friluftscirkel. [[grundlingar]] betalar lite och blir stående nära scenen. Teatern är populär, bullrig, livlig."
+        },
+        {
+          "type": "paragraph",
+          "text": "Elizabethanska London älskar skådespel. Teatrar tävlar med predikningar och björnslagsmål. Shakespeare skriver på denna bullriga marknad, inte i ett elfenbenstorn."
+        },
+        {
+          "type": "image",
+          "asset": "globe_theatre_london_reconstruction",
+          "ratio": "4:3",
+          "caption": "Globen: scenen trängdes in i mängden."
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p2",
+      "title": "Ett nytt språk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Han skriver ofta på shakespearesk blank vers: jambisk pentameter utan rim. Förolämpningar, dikter, monologer: han hittar på ord och etablerar karaktärer (Hamlet, Lady Macbeth) som har blivit myter."
+        },
+        {
+          "type": "paragraph",
+          "text": "Han återvinner krönikor, italienska nyheter, gamla bitar. Originaliteten ligger i språket och karaktärerna, inte i handlingens rena uppfinning."
+        },
+        {
+          "type": "funFact",
+          "text": "Flera av hans stycken har bara kommit till oss tack vare [[Första folio]] från 1623, publicerad efter hans död."
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p3",
+      "title": "Tragedier, komedier, berättelser",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Han går från skratt till blod. *Romeo och Julia*, *Othello*, *Kung Lear*: familjer, makt, svartsjuka. \"Historiepjäserna\" återskapar England för en publik som gillar att se sig själva i episk form."
+        },
+        {
+          "type": "paragraph",
+          "text": "Komedier och tragedier svarar på varandra. Galningen talar sanning; kungen blir galen. Denna porositet av toner förklarar varför den fortfarande kan monteras på tusen sätt."
+        },
+        {
+          "type": "image",
+          "asset": "shakespeare_first_folio_1623",
+          "ratio": "4:3",
+          "caption": "The First Folio: rädda texter från glömskan."
+        }
+      ]
+    },
+    {
+      "id": "course_159_le_theatre_de_shakespeare_p4",
+      "title": "Arv",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Översatt, bearbetad, samplade av film och rap förblir Shakespeare en verktygslåda för att uttrycka ambition och lust. Hans hemlighet: att skriva för skådespelare, inför en folkmassa."
+        },
+        {
+          "type": "paragraph",
+          "text": "För att förstå Shakespeares teater till fullo måste du ha en sak i åtanke: varje teknisk detalj tjänar en känsla eller en idé. Verket är aldrig bara dekorativt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kontexten spelar lika stor roll som stilen. Datum, platser, sponsorer, offentliga: allt detta förklarar varför ett formulär visas vid ett visst tillfälle, och inte tidigare."
+        },
+        {
+          "type": "paragraph",
+          "text": "Slutligen mäts arv på lång sikt. Det vi idag ser på museer, filmer eller populärmusik bär fortfarande spåren av dessa uppfinningar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Översatt på 1700-talet i Frankrike och på andra håll blev den en världsklassiker. Varje era finner sin spegel i honom: romantisk, politisk, postkolonial, feministisk."
+        },
+        {
+          "type": "takeaway",
+          "text": "På Globen uppfann Shakespeare en populär teater vars karaktärer och språk erövrade världen."
+        }
+      ]
+    }
+  ]
+}

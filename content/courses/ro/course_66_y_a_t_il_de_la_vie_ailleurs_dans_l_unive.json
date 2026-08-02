@@ -1,0 +1,120 @@
+{
+  "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive",
+  "title": "Există viață în altă parte în Univers?",
+  "subtitle": "Exobiologie",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Mii de miliarde de planete și totuși liniște radio. Știința caută viață în altă parte, fără a promite omuleți verzi.",
+  "hero": {
+    "image": "y_a_t_il_de_la_vie_ailleurs_dans_l_univers",
+    "ratio": "16:9",
+    "hook": "Universul este imens. Deci de ce nu răspunde nimeni?"
+  },
+  "sections": [
+    {
+      "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Universul observabil conține aproximativ **2 trilioane** galaxii, colecții uriașe de stele, fiecare cu sute de miliarde de stele. Cu ajutorul statisticilor, planetele potențial locuibile ar trebui să fie nenumărate. Cu toate acestea, de la începutul astronomiei moderne, nu am avut contacte confirmate."
+        },
+        {
+          "type": "paragraph",
+          "text": "Această contradicție are un nume: paradoxul **Fermi**, după fizicianul **Enrico Fermi**. Întrebarea nu mai este doar science fiction. Se încadrează în [[Exobiologie]]: știința care studiază condițiile pentru apariția vieții în altă parte și mijloacele de detectare a acesteia."
+        }
+      ]
+    },
+    {
+      "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_p1",
+      "title": "Ce pare să ceară viața",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ca să privim în altă parte, plecăm de la singurul exemplu cunoscut: viața terestră. Se bazează în principal pe chimia **carbon**, un atom care formează molecule complexe, și pe **apă lichidă**, care permite reacțiilor chimice să aibă loc bine."
+        },
+        {
+          "type": "image",
+          "asset": "radio_telescope_seti",
+          "ratio": "auto",
+          "caption": "Radiotelescoapele scanează cerul, ascultând un posibil semnal."
+        },
+        {
+          "type": "paragraph",
+          "text": "O planetă candidată trebuie să fie adesea localizată în locuibila [[Zona locuibila]] a stelei sale: nici prea aproape, altfel apa se evaporă, nici prea departe, altfel apa îngheață. Începând cu anii 1990, au fost descoperite mai mult de **5.500 de exoplanetă**, planete din jurul altor stele decât Soarele. Aproape fiecare stea din galaxia noastră ar avea cel puțin una."
+        },
+        {
+          "type": "funFact",
+          "text": "Există mai multe stele în universul observabil decât granule de nisip pe toate plajele Pământului."
+        },
+        {
+          "type": "paragraph",
+          "text": "În **1961**, astronomul **Frank Drake** a propus [[Ecuația Drake]]: o formulă care înmulțește factorii — stele, planete locuibile, durata civilizațiilor — pentru a estima numărul de civilizații capabile să comunice pe Calea Lactee. Cifrele rămân foarte incerte. Formula este folosită în principal pentru a structura dezbaterea."
+        }
+      ]
+    },
+    {
+      "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_p2",
+      "title": "Oaze în sistemul solar",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nu este nevoie să mergi la alte stele imediat. În sistemul nostru solar, mai multe lumi sunt interesante. **Europa**, o lună a lui Jupiter, adăpostește probabil un ocean de apă lichidă sub o crustă de gheață. Acest ocean ar rămâne lichid datorită [[Forțele mareelor]]: enorma atracție a lui Jupiter deformează Europa și îi încălzește interiorul prin frecare."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Enceladus**, o mică lună a lui Saturn, ejectează **geizere**, jeturi de abur și materie. Sonda **Cassini** a găsit semne de activitate **hidrotermal**, încălzită prin reacții chimice pe fundul oceanului, capabilă în principiu să hrănească microbii fără lumina soarelui."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pe **Jder**, apa lichidă curgea odată la suprafață. Roboții caută [[Biosemnături]]: urme fosile sau chimice ale vieții trecute, înainte ca planeta să-și piardă o mare parte din atmosferă și apa."
+        }
+      ]
+    },
+    {
+      "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_p3",
+      "title": "Marea liniște",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În **1950**, Fermi întreabă: Dacă civilizații avansate există în mii, de ce nu vedem nicio urmă a acestora? Universul este vechi. O civilizație cu doar un milion de ani înainte ar fi avut timp să iasă în evidență, chiar și fără să călătorească cu viteza luminii."
+        },
+        {
+          "type": "paragraph",
+          "text": "O ipoteză este cea a lui [[Filtru grozav]]: un pas aproape imposibil de făcut în evoluție, de exemplu trecerea la viața complexă, sau autodistrugerea tehnologică. Ori l-am trecut deja, ori este în fața noastră."
+        },
+        {
+          "type": "paragraph",
+          "text": "Alte idei: este posibil să nu ascultăm semnalele potrivite. Programul **SETI**, Search for Extraterrestrial Intelligence, scanează în principal unde radio. Sau civilizațiile sunt prea scurte și prea îndepărtate pentru a se încrucișa. Sau chiar [[Ipoteza grădinii zoologice]]: Pământul ar fi lăsat voluntar deoparte, ca o rezervă."
+        }
+      ]
+    },
+    {
+      "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_p4",
+      "title": "Cum căutăm astăzi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Telescopul spațial **James Webb** analizează lumina care trece prin atmosfera planetelor îndepărtate folosind [[Spectroscopie]], tăierea luminii pentru a identifica gazele prezente. Căutăm gaze precum oxigenul sau metanul în cantități ciudate, posibile semne de viață."
+        },
+        {
+          "type": "funFact",
+          "text": "Dacă cineva din galaxia Andromeda s-ar uita la noi „chiar acum”, ar vedea Pământul așa cum a fost **acum 2,5 milioane de ani**: este nevoie de atât de mult pentru ca lumina să călătorească."
+        },
+        {
+          "type": "paragraph",
+          "text": "Chiar și viața microbiană ar schimba totul: s-ar dovedi că lucrurile vii nu sunt un accident unic. Între timp, sondele **A călători** transportă discuri de aur cu sunete și imagini ale Pământului încă de la **1977**. Probabilitatea de interceptare: aproape zero. Trebuie să nu te simți singur: intact."
+        },
+        {
+          "type": "takeaway",
+          "text": "Planetele sunt nenumărate și viața pare plauzibilă din punct de vedere statistic. Dar absența contactului, paradoxul Fermi, ne amintește că inteligența tehnologică ar putea fi foarte rară, sau foarte scurtă."
+        }
+      ]
+    }
+  ]
+}

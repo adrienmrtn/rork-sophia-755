@@ -1,0 +1,122 @@
+{
+  "id": "course_230_la_liberte_de_la_presse_dans_le_monde",
+  "title": "Svoboda tisku po celém světě",
+  "subtitle": "Zákon pod tlakem",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "Méně než **10 % světové populace** žije v zemi, kde je tisk skutečně svobodný. Mezi státní cenzurou a ekonomickým tlakem je toto základní právo téměř všude na ústupu.",
+  "hero": {
+    "image": "la_liberte_de_la_presse_dans_le_monde",
+    "ratio": "16:9",
+    "hook": "Informování někdy stojí svobodu, nebo dokonce život: cesta do srdce křehké pravice."
+  },
+  "sections": [
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Svoboda tisku** je jedním z nejlepších ukazatelů demokratického zdraví země. Není omezeno na právo zveřejňovat: zahrnuje možnost občanů získat přístup k ověřeným informacím nezávisle na příslušných pravomocích. Na celém světě je toto právo pod dvojím tlakem: přímou represí v autoritářských režimech a diskrétnějším oslabováním v samotných demokraciích."
+        }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p1",
+      "title": "Stále nebezpečnější povolání",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Organizace [[Reportéři bez hranic (RSF)]] každoročně vydává referenční zprávu o překážkách novinářské profese ve světě."
+        },
+        {
+          "type": "image",
+          "asset": "press_freedom_world_map_RSF_index",
+          "ratio": "16:9",
+          "caption": "Méně než 10 % světové populace žije v zemi, kde je tisk skutečně svobodný."
+        },
+        {
+          "type": "paragraph",
+          "text": "Údaje za rok 2024 jsou alarmující: méně než **10 %** světové populace žije v oblasti, kde tisk funguje bez překážek. Zatímco země jako Norsko udržují vysoké standardy, velké regiony jako Čína, Rusko a Írán považují investigativní žurnalistiku za formu zrady."
+        },
+        {
+          "type": "funFact",
+          "text": "V Turkmenistánu stát kontroluje informace tak přísně, že na začátku pandemie v roce 2020 zakázal v médiích slovo „koronavirus“."
+        },
+        {
+          "type": "paragraph",
+          "text": "V roce 2023 přišlo o život při výkonu své profese nejméně 79 novinářů, jejichž cílem je často umlčet trapná vyšetřování. Každý rok je po celém světě uvězněno téměř 600 novinářů."
+        }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p2",
+      "title": "Demokracie nejsou imunní",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Na rozdíl od všeobecného přesvědčení není svoboda tisku v západních zemích zaručena navždy. Prošla tam diskrétnějšími proměnami, souvisejícími se [[mediální koncentrace]] a finančním vlivem několika velkých skupin."
+        },
+        {
+          "type": "paragraph",
+          "text": "V Maďarsku [[Viktor Orbán]] zavedl účinnou strategii: místo zákazu opozičních médií upřednostnil jejich převzetí těmi, kdo jsou blízcí vládě, a postupně proměnil mediální krajinu v oficiální echo komoru."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ve Francii se debata týká především koncentrace médií v rukou několika velkých skupin, což vyvolává obavy z autocenzury ze strany redakce. Jinde se množí nezákonná soudní řízení, nazývaná [[SLAPP]], aby zastrašila kritické hlasy."
+        }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p3",
+      "title": "Peníze, nový protivník žurnalistiky",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Kromě politických hrozeb čelí žurnalistika hluboké ekonomické krizi. Historický model založený na individuálním prodeji a reklamě se s digitální technologií zhroutil a velké platformy nyní zachycují většinu online reklamy."
+        },
+        {
+          "type": "image",
+          "asset": "newspaper_crisis_digital_transformation_journalism",
+          "ratio": "4:3",
+          "caption": "Historický ekonomický model tisku se s digitální technologií zhroutil."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tento pokles zdrojů způsobuje zavření mnoha místních novin a vytváří „informační pouště“, kde nikdo nesleduje činnost místních volených představitelů. Tváří v tvář tomu se objevují nové modely financované z darů nebo přímých předplatných, jako je Mediapart ve Francii nebo ProPublica ve Spojených státech, které dokazují, že i nezávislá žurnalistika může být zisková."
+        },
+        {
+          "type": "funFact",
+          "text": "První tištěné noviny v historii, „Relation“, byly zahájeny ve Štrasburku v roce 1605 Johannem Carolusem, dlouho před právním vynálezem svobody tisku."
+        }
+      ]
+    },
+    {
+      "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p4",
+      "title": "Kontrola reality ve světě nasyceném obrazy",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Digitální věk zrychlil informace, ale také otevřel dveře k [[dezinformace]]. Algoritmy sociálních médií upřednostňují emocionální obsah před faktickou analýzou, čímž fragmentují náš sdílený pohled na svět."
+        },
+        {
+          "type": "paragraph",
+          "text": "Role novináře se tedy vyvíjí směrem k „kontrolorovi“ reality v permanentním toku obrazů a dat. Etické otázky se stávají složitějšími, jako je tomu ve fotožurnalistice v oblastech konfliktů, kde se respekt k lidské důstojnosti někdy střetává s potřebou projevovat se."
+        },
+        {
+          "type": "paragraph",
+          "text": "Obrana svobody tisku proto vyžaduje lepší regulaci hlavních digitálních platforem a posílené mediální vzdělávání. Bez svobodného tisku schopného ověřovat fakta hrozí, že se demokratická debata rozplyne ve světě, kde jsou si všechny názory rovny, bez ohledu na jejich pravdivost."
+        },
+        {
+          "type": "takeaway",
+          "text": "Méně než 10 % světové populace žije v zemi, kde je tisk skutečně svobodný. Mezi přímou represí, ekonomickým tlakem a digitální dezinformací je toto základní právo na demokracii téměř všude na ústupu."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "id": "course_137_la_naissance_du_rock_n_roll",
+  "title": "Nașterea rock’n’roll-ului",
+  "subtitle": "1954-1960",
+  "subject": "art",
+  "subcategory": "Music",
+  "description": "La mijlocul anilor 1950, blues-ul negru și country alb s-au unit: Elvis, Chuck Berry și Little Richard au inventat rock'n'roll-ul.",
+  "hero": {
+    "image": "la_naissance_du_rock_n_roll",
+    "ratio": "16:9",
+    "hook": "Un țipăt, o chitară electrică și America adolescentă are muzica ei."
+  },
+  "sections": [
+    {
+      "id": "course_137_la_naissance_du_rock_n_roll_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rock'n'roll nu a apărut din senin în mijlocul anilor **1950**. În Statele Unite, a fuzionat muzica mult timp despărțită de bariere rasiale: blues, country și [[evangheliei]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Trei figuri poartă pauză: **Elvis Presley**, **Chuck Berry** și **Micul Richard**. Mai mult decât un stil, este o cultură a tineretului și o oglindă a tensiunilor din [[Segregare]]."
+        }
+      ]
+    },
+    {
+      "id": "course_137_la_naissance_du_rock_n_roll_p1",
+      "title": "Blues, country și rhythm and blues",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Până atunci, două lumi coexistau în Sud: cultura neagră (blus electric, gospel) și cultura albă (țară). Podul se numește [[Rhythm and blues]]: o versiune urbană și electrificată a blues-ului care a atras, de la sfârșitul anilor 1940, tinerii albi în căutare de ritm."
+        },
+        {
+          "type": "paragraph",
+          "text": "Se naște **rockabilly**, un hibrid country și blues. **Elvis Presley**, din Tupelo, a crescut între bisericile penticostale și blues-ul de pe Beale Street. În **1954**, la producătorul [[Sam Phillips]] din Memphis, a înregistrat *E bine*. Dar [[Segregarea în industria muzicală americană]] rămâne regula: artiștii de culoare rămân adesea limitați la circuite marginale, în timp ce un interpret alb poate traversa piața națională."
+        },
+        {
+          "type": "funFact",
+          "text": "Termenul „rock’n’roll” s-a referit mai întâi la pitching-ul unei nave, apoi, în blues-ul anilor 1920, la actul sexual, înainte de a fi popularizat de DJ [[Alan Freed]]."
+        }
+      ]
+    },
+    {
+      "id": "course_137_la_naissance_du_rock_n_roll_p2",
+      "title": "Elvis, Chuck Berry, Little Richard",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La [[Sun Records]], Elvis devine icoana. Corpul său în mișcare a șocat America puritană și a pecetluit alianța dintre rock și adolescență."
+        },
+        {
+          "type": "image",
+          "asset": "elvis_presley_sun_records_memphis_1954",
+          "ratio": "4:3",
+          "caption": "Elvis la Sun Records: rock-ul își găsește fața."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Chuck Berry** oferă structura: chitara **riff**, un motiv repetat care devine coloana vertebrală a piesei. Cântă despre mașini, liceu, libertate. **Micul Richard** țipă și lovește pianul în picioare: energie brută moștenită din fervoarea evangheliei."
+        },
+        {
+          "type": "image",
+          "asset": "chuck_berry_guitar_rock_and_roll",
+          "ratio": "4:3",
+          "caption": "Chuck Berry: riff-ul de chitară ca gramatică a rock-ului."
+        },
+        {
+          "type": "image",
+          "asset": "little_richard_piano_1950s_rock",
+          "ratio": "4:3",
+          "caption": "Micul Richard: strigătul și pianul ca o explozie."
+        },
+        {
+          "type": "funFact",
+          "text": "În 1956, la *Emisiunea Ed Sullivan*, camerele l-au filmat pe Elvis doar deasupra taliei: mișcările sale șoldurilor erau considerate prea scandaloase."
+        }
+      ]
+    },
+    {
+      "id": "course_137_la_naissance_du_rock_n_roll_p3",
+      "title": "Rock, rasă și drepturi civile",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pentru prima dată, adolescenții alb-negru împărtășesc aceiași idoli, în ciuda [[legile lui Jim Crow]]. Dar integrarea rămâne asimetrică. Industria se înmulțește [[acoperă]]: versiuni albe diluate de hituri negre, mai bine promovate la radio. *Tutti Frutti* de la Pat Boone a depășit originalul lui Little Richard pentru o lungă perioadă de timp."
+        },
+        {
+          "type": "paragraph",
+          "text": "În ciuda acestor spoliări, rock-ul hrănește spiritul [[Mișcarea pentru Drepturile Civile]]. Prin încălcarea codurilor parentale, tinerii anilor 1950 au început o chestionare morală și rasială a Americii."
+        },
+        {
+          "type": "funFact",
+          "text": "Chuck Berry nu și-a luat trupa în turneu: a angajat muzicieni locali în fiecare oraș, pentru a economisi bani și a evita tensiunile rasiale la hotel."
+        }
+      ]
+    },
+    {
+      "id": "course_137_la_naissance_du_rock_n_roll_p4",
+      "title": "De la invazia britanică la moștenire",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În jurul lui **1960**, primul vânt se stinge (Elvis la armată, Little Richard la religie). Dar genul a cucerit deja Regatul Unit. **Beatles** și **Rolling Stones** reinterpretează standardele americane: „British Invasion” transformă rock-ul în artă de album și protest. Fără încălcarea **1954**, contraculturile anilor 1960 nu ar fi avut același motor sonic."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1954",
+              "title": "E bine",
+              "detail": "Elvis la Sam Phillips: fuziunea devine lovită."
+            },
+            {
+              "date": "1955-1956",
+              "title": "Berry și Richard",
+              "detail": "Riff-ul, țipătul și energia definesc genul."
+            },
+            {
+              "date": "1956",
+              "title": "Ed Sullivan",
+              "detail": "Corpul lui Elvis scandalizează televiziunea."
+            },
+            {
+              "date": "anii 1960",
+              "title": "Invazia britanică",
+              "detail": "Rockul american se întoarce din Europa amplificat."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Născut în 1954 din fuziunea dintre rhythm and blues și country, rock'n'roll-ul lui Elvis, Berry și Little Richard le-a oferit tinerilor un prim limbaj comun împotriva segregării."
+        }
+      ]
+    }
+  ]
+}

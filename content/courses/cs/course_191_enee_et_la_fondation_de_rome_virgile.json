@@ -1,0 +1,130 @@
+{
+  "id": "course_191_enee_et_la_fondation_de_rome_virgile",
+  "title": "Aeneas a založení Říma (Virgil)",
+  "subtitle": "Aeneida",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "V Aeneid Virgil vypráví, jak Aeneas, princ, který utekl z Tróje, překročil Středozemní moře, aby založil linii Říma.",
+  "hero": {
+    "image": "enee_et_la_fondation_de_rome",
+    "ratio": "16:9",
+    "hook": "Prchající Trojan nese na svých bedrech svého otce: Z tohoto vyhnanství se rodí Řím."
+  },
+  "sections": [
+    {
+      "id": "course_191_enee_et_la_fondation_de_rome_virgile_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Aeneid** je skvělá báseň od **Virgil**. Vypráví odyseu **Aeneas**, trojského prince, který přežil pád Tróje. Veden bohy překročil Středozemní moře, aby v Itálii našel linii, která vedla do Říma."
+        },
+        {
+          "type": "paragraph",
+          "text": "Není to jen dobrodružství. Je to mýtus o zrození římské moci, napsaný, aby dal Římu minulost hodnou Homéra."
+        }
+      ]
+    },
+    {
+      "id": "course_191_enee_et_la_fondation_de_rome_virgile_p1",
+      "title": "Vergilius píše pro Augusta",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Na konci 1. století před naším letopočtem, po občanských válkách, chtěl císař **srpen** stabilizovat svou moc. Pověřuje Virgila, aby napsal epos hodný Homera. Dílo slouží i [[augustovská propaganda]]: spojení prince s božským hrdinou."
+        },
+        {
+          "type": "image",
+          "asset": "dido_aeneas_carthage_painting",
+          "ratio": "4:3",
+          "caption": "Virgil, básník Eneidy, bojovník za Řím chtěný osudem."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vergilius tam působil jedenáct let (29-19 př. Kr.). Prvních šest písní sleduje putování po moři. Dalších šest vypráví o válce v Itálii. Píše v [[Daktylské hexametry]], verši velkých antických eposů."
+        },
+        {
+          "type": "funFact",
+          "text": "Virgil zemřel v roce **19** př. n. l. a požádal, aby byl rukopis spálen, považován za nedokončený. Augustus zakazuje poslouchat. Národní epos Řím se objevuje proti vůli svého autora."
+        }
+      ]
+    },
+    {
+      "id": "course_191_enee_et_la_fondation_de_rome_virgile_p2",
+      "title": "Útěk z Tróje a láska v Kartágu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Když Trója hoří, na konci [[Trojská válka]] dostává Aeneas, syn bohyně **Venuše** a smrtelníka Anchise, rozkaz uprchnout. Odchází, nese svého otce na ramenou, syna Ascania v ruce a bere s sebou [[Penates]], bohy krbu. Toto gesto definuje [[římské piety]]: povinnost k rodině, bohům a osudu."
+        },
+        {
+          "type": "image",
+          "asset": "aeneas_fleeing_burning_troy_anchises_painting",
+          "ratio": "4:3",
+          "caption": "Aeneas prchá z hořící Tróje, otec a syn s ním."
+        },
+        {
+          "type": "paragraph",
+          "text": "V Kartágu miluje královnu **Dido**. Ale [[Jupiter]], král římských bohů, ho povolá zpět k jeho misi. Aeneas odchází. Dido spáchá sebevraždu a prokleje svou linii: mýtus tak vysvětluje budoucí nenávist mezi Římem a Kartágem, před [[Punské války]]."
+        },
+        {
+          "type": "funFact",
+          "text": "Aeneův syn, Ascanius, se také nazývá Iule. Rodina [[Julii]], včetně Julia Caesara a Augusta, si nárokuje tento božský původ prostřednictvím Venuše."
+        }
+      ]
+    },
+    {
+      "id": "course_191_enee_et_la_fondation_de_rome_virgile_p3",
+      "title": "Válka v Laziu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Po sestupu do pekla Aeneas dorazí do **Lazio** ve střední Itálii. Král **Latinus** mu slíbí svou dceru **Lavinia**. Ale princ **Turnus** podporovaný [[Juno]], bohyní nepřátelskou Trojanům, rozpoutá válku."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aeneas porazí Turnuse a založí **Lavinium**. Později jeho syn založil [[Alba Longa]], ze kterého se narodili Romulus a Remus. Mýtus tak spojuje Tróju s Římem v jediném řetězci."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Trója",
+              "title": "Let Aeneas",
+              "detail": "Zachraňuje otce, syna a domácí bohy."
+            },
+            {
+              "date": "Kartágo",
+              "title": "Dido",
+              "detail": "Zlomená láska, kletba proti Římu."
+            },
+            {
+              "date": "Lazio",
+              "title": "Vítězství nad Turnusem",
+              "detail": "Založení Lavinium, začátek Říma."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_191_enee_et_la_fondation_de_rome_virgile_p4",
+      "title": "Hrdina povinnosti",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ve středověku se Vergilius stal téměř prorockým mudrcem. Dante z něj dělá svého průvodce v [[Božská komedie]]. Ale Aeneas není šťastný hrdina: nese tíhu osudu. Řím se zrodil z vyhnanství, z obětované lásky a z války."
+        },
+        {
+          "type": "takeaway",
+          "text": "V **Aeneid** Virgil dělá **Aeneas**, přeživší Tróju, mýtického předka Říma. Hrdina ztělesňuje **pietas**: povinnost před touhou, osud před osobním štěstím."
+        }
+      ]
+    }
+  ]
+}

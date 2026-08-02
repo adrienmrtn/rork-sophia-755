@@ -1,0 +1,114 @@
+{
+  "id": "course_41_pourquoi_le_ciel_est_il_bleu",
+  "title": "De ce este cerul albastru?",
+  "subtitle": "Lumină și atmosferă",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Privirea la cerul albastru este atât de banal încât uităm să ne întrebăm de ce. Răspunsul se află în lumina Soarelui și în aerul prin care trecem pentru a-l vedea.",
+  "hero": {
+    "image": "pourquoi_le_ciel_est_il_bleu",
+    "ratio": "16:9",
+    "hook": "Cerul nu este vopsit în albastru: este un truc magic de lumină și aer."
+  },
+  "sections": [
+    {
+      "id": "course_41_pourquoi_le_ciel_est_il_bleu_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Privirea spre cerul albastru este atât de obișnuit încât uităm să ne întrebăm de ce este. **atmosfera**, stratul de gaz care înconjoară Pământul, însă, nu are culoare proprie. Această culoare provine dintr-o întâlnire foarte precisă dintre lumina Soarelui și moleculele de gaz care plutesc în jurul nostru."
+        },
+        {
+          "type": "paragraph",
+          "text": "Înțelegerea acestui albastru înseamnă înțelegerea modului în care lumina se deplasează și **dispersa**, adică se întoarce în toate direcțiile în loc să meargă drept. Și surpriză plăcută: este exact același fenomen care colorează cerul în roșu și portocaliu la apus."
+        }
+      ]
+    },
+    {
+      "id": "course_41_pourquoi_le_ciel_est_il_bleu_p1",
+      "title": "Lumina albă ascunde toate culorile",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lumina Soarelui ne apare albă, dar de fapt conține toate culorile curcubeului: este [[Spectrul luminii vizibile]]. Fiecare culoare corespunde unei **lungime de undă**, mărimea „undei” sale de lumină. Albastrul și violetul au unde scurte; roșul are valuri lungi."
+        },
+        {
+          "type": "funFact",
+          "text": "Pe Lună, nu există aer care să împrăștie lumina. Rezultat: acolo, cerul rămâne **negru în plină zi**, chiar și atunci când Soarele strălucește. Dovada că culoarea cerului vine din aer, nu din Soare."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pentru că, între Soare și ochii noștri, aerul nu este gol: este umplut cu molecule minuscule **gaz, azot special, aproximativ**Z78**%** din aer, și oxigen, aproximativ **21%**. Sunt mult mai mici decât undele luminoase. Când o rază îi lovește, nu mai merge drept: este trimisă înapoi în toate direcțiile. Această mică săritură este punctul de plecare pentru culoarea cerului."
+        }
+      ]
+    },
+    {
+      "id": "course_41_pourquoi_le_ciel_est_il_bleu_p2",
+      "title": "Difuzie: de ce câștigă albastru",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În **1871**, fizicianul britanic **Lordul Rayleigh** a pus acest fenomen într-o ecuație. El a descoperit că, cu cât o culoare are o culoare mai scurtă, cu atât este mai mult reflectată în toate direcțiile de moleculele de aer. Aceasta este [[împrăștierea Rayleigh]]."
+        },
+        {
+          "type": "funFact",
+          "text": "Cerul lui Marte este opusul nostru: praful său bogat în fier îl face roz în timpul zilei, dar apusurile lui sunt **albastru**. Totul depinde de ce conține aerul."
+        },
+        {
+          "type": "image",
+          "asset": "blue_sky_sunlight_scattering_atmosphere",
+          "ratio": "4:3",
+          "caption": "Lumina albastră este împrăștiată în toate direcțiile prin aer."
+        },
+        {
+          "type": "paragraph",
+          "text": "Concret, lumina albastră este împrăștiată de aproximativ **de 9 ori mai mult** decât roșie. Roșul călătorește prin aer aproape în linie dreaptă, în timp ce albastrul ricoșează peste tot. Acesta este motivul pentru care, oriunde te uiți pe cer, albastrul ajunge întotdeauna la ochi: întregul cer pare să „lumineze” cu acest albastru împrăștiat."
+        }
+      ]
+    },
+    {
+      "id": "course_41_pourquoi_le_ciel_est_il_bleu_p3",
+      "title": "Deci de ce nu violet?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Se ridică o întrebare logică: dacă undele cele mai scurte sunt cele mai dispersate, violetul ar trebui să învingă, deoarece valul său este chiar mai scurt decât cel al albastrului. Cerul conține și o mulțime de violet împrăștiat."
+        },
+        {
+          "type": "paragraph",
+          "text": "Răspunsul nu este în cer, ci în ochii noștri. Captăm culorile folosind senzori numiți **conuri**, celule din retină care sunt sensibile la lumină. Sunt mult mai sensibili la albastru decât la violet. În plus, Soarele emite mai multă lumină albastră decât lumină violetă. Creierul nostru face apoi un fel de medie și vede un albastru frumos. Un animal sensibil la alte culori ar vedea, fără îndoială, un cer complet diferit."
+        }
+      ]
+    },
+    {
+      "id": "course_41_pourquoi_le_ciel_est_il_bleu_p4",
+      "title": "Și roșu seara?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Apusul urmează aceleași reguli, dar schimbă un lucru: distanța. La amiază, lumina trece printr-un strat subțire de aer. Seara, când Soarele este jos, razele lui trebuie să treacă prin **mult mai mult aer** înainte de a ajunge la noi."
+        },
+        {
+          "type": "image",
+          "asset": "sunset_red_orange_sky_atmosphere",
+          "ratio": "16:9",
+          "caption": "La nivelul orizontului, lumina trece printr-o grosime mult mai mare de aer."
+        },
+        {
+          "type": "paragraph",
+          "text": "În această călătorie lungă, tot albastrul se împrăștie bine înainte de a ajunge la noi: este filtrat de grosimea aerului. Raman doar culorile cele mai rezistente, rosiile si portocaliile. Dacă există praf sau poluare, intră în joc [[Mie difuzie]]: particulele mai mari decât moleculele de aer fac cerul lăptos sau întăresc aceste nuanțe portocalii."
+        },
+        {
+          "type": "takeaway",
+          "text": "Cerul este albastru deoarece undele scurte sunt de aproximativ **Z** de 9 ori mai dispersate prin aer decât undele lungi. La apus, lumina trece prin atât de mult aer, încât doar roșul mai ajunge la noi."
+        }
+      ]
+    }
+  ]
+}

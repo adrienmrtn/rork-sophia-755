@@ -1,0 +1,108 @@
+{
+  "id": "course_74_pourquoi_certaines_especes_sont_elles_im",
+  "title": "Varför är vissa arter odödliga?",
+  "subtitle": "Biologi & livslängd",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Vissa arter verkar trotsa döden. Maneter som föryngrar, hydrerar utan åldrande: hemligheten ligger i cellulär reparation.",
+  "hero": {
+    "image": "pourquoi_certaines_especes_sont_immortelles",
+    "ratio": "16:9",
+    "hook": "Åldrande är inte en absolut livslag. Vissa arter har hittat felet."
+  },
+  "sections": [
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vi blir gamla, sedan dör vi. Maneten [[Turritopsis dohrnii]] kan dock återgå till ett ungdomsstadium och börja om. Musslan **Ming** levde **507 år**. Åldrande är därför inte en universell regel: det är en process som vissa arter kringgår."
+        },
+        {
+          "type": "paragraph",
+          "text": "Genom att studera dessa undantag letar forskare mindre efter science fiction-odödlighet än efter livets knep för att bättre reparera celler."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p1",
+      "title": "Varför våra celler slits ut",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Åldrande handlar inte bara om att \"slitas ut\" som en maskin. Det är en obalans: skador ackumuleras snabbare än reparationer."
+        },
+        {
+          "type": "image",
+          "asset": "chromosome_dna_telomere_aging_cell",
+          "ratio": "auto",
+          "caption": "Telomerer, i ändarna av kromosomerna, förkortas med varje celldelning."
+        },
+        {
+          "type": "paragraph",
+          "text": "I ändarna av våra kromosomer fungerar [[Telomerer]] som skosnören. Med varje celldelning förkortas de. För kort slutar cellen att dela sig. Samtidigt producerar ämnesomsättningen aggressiva molekyler som skadar proteiner och DNA. \"Zombie\"-celler ackumuleras sedan och inflammerar vävnaderna runt dem."
+        },
+        {
+          "type": "funFact",
+          "text": "Tardigraden, en liten \"vattenbjörn\", kan nästan sluta leva genom att torka ut. Hans ämnesomsättning sjunker till **99,99%**, och han överlever vakuumet av rymden eller extrem strålning utan att verkligen åldras."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p2",
+      "title": "Mästare som undviker döden",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den skadade eller svältande [[Turritopsis dohrnii]] förvandlar sina vuxna celler till \"tomma\" celler och blir sedan en polyp igen, startstadiet. Detta steg tillbaka, som kallas transdifferentiering, ger det en form av **biologisk odödlighet**."
+        },
+        {
+          "type": "paragraph",
+          "text": "**hydra**, en liten sötvattenspolyp, förnyar hela sin kropp tack vare ett nästan obegränsat utbud av [[stamceller]]. Hon visar inga mätbara tecken på åldrande. Grönlandsvalen kan överstiga **200 år** tack vare ultraeffektiv DNA-reparation och stark motståndskraft mot cancer."
+        },
+        {
+          "type": "funFact",
+          "text": "Hummer gör telomeras överallt i kroppen: deras telomerer förkortas inte. De växer under hela livet och dör, särskilt när det blir för dyrt att smälta."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p3",
+      "title": "Vad medicin lär sig av det",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tanken är inte längre bara att behandla Alzheimers eller artros en efter en, utan att angripa åldrandet i sig. **senolytika** syftar till att eliminera zombieceller. Hos djur har detta redan föryngrat vissa funktioner."
+        },
+        {
+          "type": "paragraph",
+          "text": "Att begränsa kalorier utan undernäring aktiverar också reparationsvägar, särskilt genom att bromsa ner [[mTOR]], ett protein som påskyndar tillväxten... och ibland minskar. Andra laboratorier försöker \"vinda klockan\" av celler, som maneter, utan att omvandla dem till tumörer."
+        }
+      ]
+    },
+    {
+      "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p4",
+      "title": "Odödlig, men inte oövervinnelig",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Även en biologiskt odödlig art dör av rovdjur, sjukdomar eller katastrofer. Döden förblir en drivkraft för evolutionen: den ger vika för nya, bättre anpassade generationer."
+        },
+        {
+          "type": "paragraph",
+          "text": "För människor är den realistiska utmaningen inte att leva för evigt, utan att förlänga åren **med god hälsa**. Livslängd som omvandlas till teknologi skulle också väcka enorma frågor om rättvisa och resurser."
+        },
+        {
+          "type": "takeaway",
+          "text": "Biologisk odödlighet förlitar sig på att reparera eller återställa celler. Turritopsis dohrnii-maneten blir allt yngre; hydran förnyar sig hela tiden. Åldrande är inte ett universellt dödsfall."
+        }
+      ]
+    }
+  ]
+}

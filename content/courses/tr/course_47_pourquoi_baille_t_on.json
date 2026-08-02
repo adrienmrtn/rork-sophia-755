@@ -1,0 +1,96 @@
+{
+  "id": "course_47_pourquoi_baille_t_on",
+  "title": "Neden esniyoruz?",
+  "subtitle": "Vücut ve beyin",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Herkes esniyor: insanlar, köpekler, hatta bazen fetüsler bile. Muhtemelen \"oksijen eksikliği\" nedeniyle değildir. İşte en güçlü potansiyel müşteriler.",
+  "hero": {
+    "image": "pourquoi_baille_t_on",
+    "ratio": "16:9",
+    "hook": "Esniyorsun. Komşunuz esniyor. Ve (neredeyse) şans eseri bulaşıcı değildir."
+  },
+  "sections": [
+    {
+      "id": "course_47_pourquoi_baille_t_on_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Esnemek sıradan görünüyor. Ancak bu karmaşık bir reflekstir: Çene, göğüs, diyafram, tüm vücut devreye girer. Aslanlar, köpekler, insanlar: Birçok hayvan esniyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Uzun zamandır “daha ​​fazla oksijene sahip olmak” dedik. Bu fikir artık büyük ölçüde terk edilmiştir. Modern açıklamalar daha ilginç."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p1",
+      "title": "(Özellikle) oksijen için değil",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Deneyler, havadaki oksijen miktarının artmasının esnemeyi engellemediğini göstermiştir. Karbondioksiti de biraz düşürün. Yani esnemek basit bir “hava yakalamak” değildir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bugün güçlü bir ipucu: Esnemek **beyin ısısını düzenlemeye yardımcı olur**. Geniş nefes alıp yüzümüzü esneterek, özellikle yorgun olduğumuzda kafamızı biraz “havalandıracağız” ve serinleteceğiz."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p2",
+      "title": "Neden bulaşıcıdır?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "contagious_yawning_people_group",
+          "ratio": "4:3",
+          "caption": "Birinin esnediğini görmek çoğu zaman refleksi tetiklemek için yeterlidir."
+        },
+        {
+          "type": "paragraph",
+          "text": "İnsanlarda \"esneme\" kelimesini görmek, duymak ve hatta okumak bile esnemeyi tetikleyebilir. Bu sadece aptalca bir taklit değil: aynı zamanda **Empati**'yi ve Ayna bağlı beyin devrelerini, yani biz hareket ettiğimizde ya da birisinin hareket ettiğini gördüğümüzde etkinleşen nöronları da etkiliyor. [[Ayna nöronlar ve bulaşıcılık]]"
+        },
+        {
+          "type": "funFact",
+          "text": "Küçük çocuklar bulaşma nedeniyle çok az esniyorlar. Bu duyarlılık daha sonra belirli sosyal becerilerle birlikte gelir."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p3",
+      "title": "Doğmadan önce zaten esniyoruz",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fetüsler hamileliğin **11. haftasından** itibaren esniyor. Bu yaşta akciğerleri henüz hava solumamaktadır. Yani yine söylüyorum, mesele \"oksijen tükenmesi\" değil."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fetüste esneme, çene ve yüz kaslarının gelişmesine yardımcı olabilir."
+        }
+      ]
+    },
+    {
+      "id": "course_47_pourquoi_baille_t_on_p4",
+      "title": "Uyanık kalmak için esnemek mi?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sık sık yorulduğumuzda esniyoruz... ama aynı zamanda bir sınavdan hemen önce ya da odaklanmaya çalışırken sıkıldığımızda da esniyoruz. Esneme sinir sistemini uyarabilir ve **** uyanık kalmanıza yardımcı olabilir."
+        },
+        {
+          "type": "takeaway",
+          "text": "Esneme muhtemelen oksijen eksikliği değildir. Daha çok beyni (sıcaklık, uyanıklık) düzenlemeye hizmet eder ve insanlarda sosyal bulaşma yoluyla da yayılır."
+        }
+      ]
+    }
+  ]
+}

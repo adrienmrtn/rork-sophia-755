@@ -1,0 +1,114 @@
+{
+  "id": "course_174_ulysse_et_les_sirenes",
+  "title": "Ulysses ve Sirenler",
+  "subtitle": "Ölmeden dinleyin",
+  "subject": "mythologie",
+  "subcategory": "Greece: the heroes",
+  "description": "Sirenler mutlak bilgiyi vaat ediyor. Odysseus, bir öz kontrol modeli haline gelen hile sayesinde şarkılarını duyup hayatta kalan tek ölümlüdür.",
+  "hero": {
+    "image": "ulysse_et_les_sirenes",
+    "ratio": "16:9",
+    "hook": "Şarkıları her şeyi bilmeyi vaat ediyor. Bunu dinleyen herkes ölür. Ulysses duymak istiyor... ve hayatta kalmak istiyor."
+  },
+  "sections": [
+    {
+      "id": "course_174_ulysse_et_les_sirenes_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Odyssey**'nin onikinci kantosunda Ulysses, **[[Deniz kızları]]** yanından geçmelidir. Sesleri o kadar güzel ki iradeye üstün geliyor. Yaklaşan denizciler karaya oturur ve ölür."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu sadece denizde bir macera değil. Bilgiye olan susuzluk ile teslim olma tehlikesi arasındaki düellodur. Kurnaz zekası [[Metis]] sayesinde Ulysses, bu yasak zevki hayatını kaybetmeden tadan tek ölümlü olur."
+        }
+      ]
+    },
+    {
+      "id": "course_174_ulysse_et_les_sirenes_p1",
+      "title": "Kuşkadınları, kuyruklu denizkızları değil",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Homeros**'de Deniz Kızları balık kadınlar değildir. Yarı kadın, yarı kuş yaratıklardır. Adaları denizcilerin kemikleriyle dolu. Şarkının güzelliği kıyının dehşetiyle tezat oluşturuyor."
+        },
+        {
+          "type": "image",
+          "asset": "sirens_island_greek_mythology_bones_shore",
+          "ratio": "4:3",
+          "caption": "Sirenlerin adası: karşı konulamaz melodi, ölümcül kıyı."
+        },
+        {
+          "type": "funFact",
+          "text": "Yunan şehirlerinde Sirenler genellikle mezarların üzerine oyulmuştu. Ölülerin ruhlarına eşlik eden, öbür dünyadan ilham perileri olarak görülüyorlardı."
+        },
+        {
+          "type": "paragraph",
+          "text": "Onların tuzağı sadece şehvetli değildir. **mutlak bilgi** vaat ediyorlar: [[Truva Savaşı]]'de olan her şey, dünyada olan her şey. Her şeyden önce merak uyandıran Ulysses için bu, yenilmesi bir canavardan daha tehlikeli, en büyük ayartmadır."
+        }
+      ]
+    },
+    {
+      "id": "course_174_ulysse_et_les_sirenes_p2",
+      "title": "Balmumu, direk ve plan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sihirbaz **Sirke** onu uyardı. Ulysses kesin bir strateji hazırlıyor. Arkadaşlarının kulaklarını **balmumu** ile tıkıyor. Hiçbir şey duymamalılar. Dinlemek istiyor."
+        },
+        {
+          "type": "image",
+          "asset": "ulysses_tied_mast_sirens_waterhouse_painting",
+          "ratio": "4:3",
+          "caption": "Sirenlerin şarkısını duyabilen tek kişi Ulysses direğe bağlıydı."
+        },
+        {
+          "type": "paragraph",
+          "text": "**yön** bağlanır. Açık emir: Serbest bırakılmasını isterse tam tersine bağları sıkılaştırmalıyız. Şarkı yükseldiğinde Ulysses sakinliğini kaybeder ve çözülmesi için bağırır. Sağır ve plana sadık olan adamları, o anın büyüsüne kapılan Odysseus'a değil, yalnızca önceki rasyonel Odysseus'a itaat ederler. Gemi geçiyor."
+        }
+      ]
+    },
+    {
+      "id": "course_174_ulysse_et_les_sirenes_p3",
+      "title": "Teslim olmamak için kendinizi önceden bağlayın",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bu sahne, sosyal bilimlerin [[Ön taahhüt]] dediği şeyi göstermektedir. Günaha karşı zayıf olacağımızı biliyoruz. Bu yüzden oraya varmadan önce seçeneklerimizi kendimiz sınırlandırıyoruz."
+        },
+        {
+          "type": "funFact",
+          "text": "1990 yılında NASA ve ESA, sondaya **Ulysses** adını verdi. Kahraman gibi o da Güneş'in kutuplarını keşfetmek için bilinen yollardan ayrılır."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nobel ödüllü ekonomist **Richard Thaler** bu görüntüden yararlanıyor. İnsan her zaman rasyonel değildir. Bir [[Dürtmek]]'ye, bir \"yardım eline\" veya kendisini kendisinden koruyacak kurallara ihtiyacı var: tasarruflara otomatik aktarım, ağları engelleyen uygulamalar. Ulysses gibi modern sirenlerin karşısında kendimizi direğe bağlıyoruz."
+        }
+      ]
+    },
+    {
+      "id": "course_174_ulysse_et_les_sirenes_p4",
+      "title": "Bilgiden günaha",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Orta Çağ**'da görüntü değişir. Kuş kadın, balık kadına dönüşür. Kilise, Sirenleri şehvetin sembolü olarak görüyor. Ulysses'in direği bazen haçla karşılaştırılır: günaha karşı bir kalkan."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ancak Homeros'ta mesele cinsel arzu değil, bilgiydi. Odysseus ne bir aziz ne de basit bir maceracıdır. O, mutlaklık arzusu ile hayatta kalma ihtiyacı arasında gezinmek için zekayı kullanan bir adamdır."
+        },
+        {
+          "type": "takeaway",
+          "text": "Ulysses, [[Ön taahhüt]] tarafından [[Deniz kızları]] şarkısından kurtulur: direğe bağlı, dinler; kulakları balmumuyla tıkanmış adamları yollarında kalıyor."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup",
+  "title": "De ce erup vulcanii?",
+  "subtitle": "Magma și plăci",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Un vulcan este o deschidere în scoarța terestră. Magma sub presiune se ridică acolo și devine lavă. Acesta este motivul pentru care Pământul „scuipă”.",
+  "hero": {
+    "image": "pourquoi_les_volcans_entrent_en_eruption",
+    "ratio": "16:9",
+    "hook": "Sub picioarele noastre, Pământul nu este înghețat. Uneori deschide o fereastră de foc."
+  },
+  "sections": [
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un vulcan nu este doar un munte care sufla foc. Este o deschidere în învelișul exterior al Pământului. În acest fel se ridică **magma**: un amestec de roci topite și gaz sub presiune ridicată. Odată ajunsă în aer liber, această magmă devine **spălat**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pentru a înțelege o erupție, trebuie să priviți sub suprafață: căldura din interiorul planetei, mișcarea plăcilor și felul în care gazele creează presiune, un pic ca scuturarea unei sticle de sifon."
+        }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p1",
+      "title": "Sub picioarele noastre, nimic nu este în loc",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pământul este format din straturi. La suprafață, **crustă** este un plic rigid, de **5 până la 70 km grosime. May jos se află**mantul****, aproximarea**2 900 km** adâncime. Blana este în mare parte solidă, dar pe perioade foarte lungi de timp poate curge foarte lent, ca mierea ultra-groasă."
+        },
+        {
+          "type": "image",
+          "asset": "volcano_eruption_lava",
+          "ratio": "auto",
+          "caption": "O erupție: ridicarea magmei la suprafață."
+        },
+        {
+          "type": "paragraph",
+          "text": "Această căldură internă face ca materia să se ridice și să coboare: aceștia sunt **întărire prin convecție**. Ei împing bucăți mari de crustă numite plăci. Aceasta este [[Tectonica plăcilor]]: suprafața pământului este tăiată în plăci care se depărtează, se ciocnesc sau alunecă una de alta."
+        },
+        {
+          "type": "funFact",
+          "text": "Anumite creșteri foarte rapide aduc înapoi diamantele formate la mai mult de **150 km** adâncime. Nu au timp să se schimbe pe drum."
+        },
+        {
+          "type": "paragraph",
+          "text": "La [[dorsal]], plăcile se depărtează și magma se ridică ușor. Într-o zonă de [[Subducție]], o placă se scufundă sub alta și poartă apă cu ea. Această apă scade punctul de topire al rocilor: se formează magma, apoi se ridică."
+        }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p2",
+      "title": "De la magmă la erupție",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Roca nu se topește doar „pentru că e fierbinte”. Există trei factori declanșatori: o creștere a temperaturii, o scădere a presiunii sau adăugarea de apă. Odată formată, magma este mai puțin densă decât roca din jurul ei. Prin urmare, încearcă să se ridice, un pic ca o bula de aer în apă."
+        },
+        {
+          "type": "paragraph",
+          "text": "Adesea, se oprește mai întâi într-o cameră **magmă**, un rezervor la câțiva kilometri sub suprafață. Acolo, gazele dizolvate formează bule atunci când presiunea scade. Dacă „dopul” de rocă de deasupra nu mai ține, începe erupția."
+        },
+        {
+          "type": "funFact",
+          "text": "Erupția **Tambora** din **1815**, Indonezia, a fost atât de puternică încât a răcit clima globală. **1816** a fost supranumit „anul fără vară”, cu recolte dezastruoase în Europa și America de Nord."
+        }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p3",
+      "title": "Fluid sau exploziv?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nu toate erupțiile sunt la fel. Totul depinde de **vâscozitatea** a magmei, adică dacă este mai degrabă lichidă sau lipicioasă. O magmă fluidă, ca la **Hawaii** sau la Piton de la Fournaise (insula Reunion), lasă gazele să scape. Curgeri de lavă: erupție **efuzivă**."
+        },
+        {
+          "type": "paragraph",
+          "text": "O magmă lipicioasă prinde gazele. Presiunea crește, apoi totul explodează. Cenușa, blocurile și [[nori de foc]] (nori aprinși de gaz și cenușă care se rostogolesc pe pante) pot devasta apoi zona înconjurătoare. Acesta este stilul vulcanilor precum Muntele **Sfânta Elena** (Statele Unite) sau **Pinatubo** (Filipine)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un vulcan poate rămâne calm timp de secole. În **79** după. î.Hr., **Vezuviu**, lângă Napoli, a îngropat Pompeiul sub cenuşă. Aproximativ **80%** din activitatea vulcanică a lumii are loc sub oceane, departe de ochii noștri."
+        }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p4",
+      "title": "Pericol, fertilitate, viață abisală",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vulcanii au modelat atmosfera timpurie a Pământului prin emiterea de gaze. Cenușa lor îmbogățește și solul: multe regiuni agricole fertile trăiesc la poalele vulcanilor activi. Dar o erupție foarte mare poate trimite particule de sulf înalt în atmosferă și poate răci clima timp de luni de zile."
+        },
+        {
+          "type": "paragraph",
+          "text": "Unele site-uri, cum ar fi [[supervulcan]] din Yellowstone din Statele Unite, sunt monitorizate îndeaproape. Sub mare, în apropierea crestelor, [[fumători de culoare]] vărsă fluide arzătoare bogate în minerale. Ecosistemele trăiesc acolo fără lumina soarelui, hrănite de chimia izvoarelor termale."
+        },
+        {
+          "type": "takeaway",
+          "text": "Vulcanii expulzează magma sub presiune, în special la limitele plăcilor tectonice. Vâscozitatea magmei decide dacă erupția curge liniștit sau explodează."
+        }
+      ]
+    }
+  ]
+}

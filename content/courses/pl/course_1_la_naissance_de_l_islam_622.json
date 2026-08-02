@@ -1,0 +1,152 @@
+{
+  "id": "course_1_la_naissance_de_l_islam_622",
+  "title": "Narodziny islamu",
+  "subtitle": "622",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "W 622 r. kupiec z Mekki imieniem Mahomet uciekł ze swojego miasta do Medyny. To odejście, Hegira, wyznacza pierwszy rok islamu i początek światowej cywilizacji.",
+  "hero": {
+    "image": "la_naissance_de_l_islam_622",
+    "ratio": "16:9",
+    "hook": "Jak kupiec na wygnaniu zrodził w ciągu dwudziestu lat cywilizację światową."
+  },
+  "sections": [
+    {
+      "id": "course_1_la_naissance_de_l_islam_622_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W **622** kupiec z Mekki, na terenie dzisiejszej Arabii Saudyjskiej, musi uciekać ze swojego miasta. Chcemy go zabić. Ten mężczyzna nazywa się **Mahomet**. Jego wyjazd w kierunku oazy Medyny ma nazwę: **Hegira**. Później ta data stała się pierwszym rokiem kalendarza muzułmańskiego."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nikt tego jeszcze nie widzi. Ale w ciągu niecałego stulecia przesłanie zrodzone na tej pustyni doprowadzi do upadku wielkich imperiów i powstania państwa rozciągającego się od Hiszpanii po bramy Indii. Oto jak to się wszystko zaczęło."
+        }
+      ]
+    },
+    {
+      "id": "course_1_la_naissance_de_l_islam_622_p1",
+      "title": "Arabia zapomniana przez świat",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W VII wieku Arabia nie interesowała prawie nikogo. Żyjemy tam w plemionach. [[Beduini]], pustynni nomadzi, żyją obok kilku miast handlowych, takich jak Mekka. Religia jest tam politeistyczna: modli się do wielu bożków. Sercem kultu jest sześcienne sanktuarium **Kaaba**. Tam gromadzą się pielgrzymi, a wraz z nimi pieniądze. Potężne plemię [[Kurajsz]] kontroluje ten handel."
+        },
+        {
+          "type": "funFact",
+          "text": "W Kaabie znajdowało się około **360 bożków**, czyli mniej więcej po jednym na każdy dzień arabskiego kalendarza księżycowego. Mahomet kazał ich wszystkich usunąć w ciągu jednego dnia."
+        },
+        {
+          "type": "image",
+          "asset": "mecca_7th_century",
+          "ratio": "4:3",
+          "caption": "Mekka, skrzyżowanie dróg handlowych i centrum pielgrzymek w VII wieku."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wokoło toczą się w niekończących się wojnach dwaj giganci: [[Cesarstwo Bizantyjskie i Sasanidów]], czyli Cesarstwo Wschodniorzymskie i Cesarstwo Perskie. To właśnie w tej pustce **Mahomet**, urodzony około **570**, miał otrzymać objawienia od **610** w jaskini na górze Hira. Jego idea **Jedynego Boga** zagraża handlowi Mekki, który żyje z bożków."
+        }
+      ]
+    },
+    {
+      "id": "course_1_la_naissance_de_l_islam_622_p2",
+      "title": "622: Hegira, wszystko się zmienia",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zagrożony śmiercią Mahomet przyjmuje zaproszenie do oazy zwanej Yathrib. Jego mieszkańcy szukają arbitra, który załagodzi ich konflikty. Ten odjazd to **Hegira**. Tam nie jest już tylko prorokiem: staje się przywódcą. Stworzył [[Konstytucja Medyny]], pakt między klanami i założył [[Umma]], wspólnotę wierzących wykraczającą poza więzy krwi."
+        },
+        {
+          "type": "funFact",
+          "text": "Przed Hegirą Medyna nazywała się **Jatrib**. Przemianowane na „miasto Proroka” (Madinat al-Nabi) zachowało tę nazwę do dziś."
+        },
+        {
+          "type": "image",
+          "asset": "medina_prophet_s_mosque",
+          "ratio": "4:3",
+          "caption": "Medyna, „miasto Proroka”, pierwsza stolica islamu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rozpoczyna się wojna z Mekką. Muhammad przeprowadza [[naloty]], szybkie naloty, aby odciąć wrogie karawany. Mimo przewagi liczebnej jego wierni zwyciężyli w **Badr** w **624**. To zwycięstwo odbiera się jako cud. Pomimo porażki pod Uhud oparli się **Oblężenie Medyny** w **627**. Jego autorytet jest potwierdzany."
+        }
+      ]
+    },
+    {
+      "id": "course_1_la_naissance_de_l_islam_622_p3",
+      "title": "630: triumfalny powrót",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W **630** sytuacja jest odwrotna. Mahomet maszeruje do Mekki z **10 000 ludzi**. Miasto poddaje się bez walki. Zamiast się zemścić, udziela **ogólne ułaskawienia**. Ten gest popycha plemiona do przyłączenia się do niego."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wchodzi do **Kaaba**, niszczy jego bożki i poświęca je jednemu Bogu. Po jego śmierci w **632** po raz pierwszy prawie cała Arabia została zjednoczona. Następnie władza przechodzi w ręce [[Kalif]], jego następców. Abu Bakr, ówczesny Umar, rozpoczął szybką ekspansję w kierunku Syrii, Iraku i Egiptu."
+        },
+        {
+          "type": "funFact",
+          "text": "Pierwszym **muezzin** islamu, tym, który wzywa do modlitwy, był Bilal, były niewolnik z Etiopii: symbol równości między wierzącymi, której broni orędzie."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "622",
+              "title": "Hegirę",
+              "detail": "Wyjazd do Medyny, początek ery muzułmańskiej."
+            },
+            {
+              "date": "624",
+              "title": "Bitwa pod Badrem",
+              "detail": "Pierwsze duże zwycięstwo z przewagą liczebną."
+            },
+            {
+              "date": "627",
+              "title": "Oblężenie Medyny",
+              "detail": "Społeczeństwo stawia opór i narzuca swoją władzę."
+            },
+            {
+              "date": "630",
+              "title": "Zdobycie Mekki",
+              "detail": "Poddaj się bez walki i ogólnego przebaczenia."
+            },
+            {
+              "date": "632",
+              "title": "Śmierć Mahometa",
+              "detail": "Arabia jest zjednoczona pod jedną władzą."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_1_la_naissance_de_l_islam_622_p4",
+      "title": "Korzenie cywilizacji",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ekspansja ma charakter nie tylko militarny. Jest także zorganizowana. Zdobywcy utworzyli [[Dhimma]]: Chrześcijanie i Żydzi zachowywali swoją religię w zamian za podatek, [[dżizja]]. Ta kontrolowana tolerancja ułatwia instalację nowej władzy w zmęczonych regionach Bizancjum."
+        },
+        {
+          "type": "funFact",
+          "text": "Zachwyceni Aleksandrią podczas podboju Egiptu Arabowie woleli założyć nową stolicę, **Fostat** (przyszły Kair), niż zniszczyć starożytne miasto."
+        },
+        {
+          "type": "paragraph",
+          "text": "Spoiwem imperium staje się język arabski: język administracji i język sakralny. Cywilizacja islamska, wspierana także przez ideał [[Święta wojna]], zarówno własny wysiłek, jak i obronę wspólnoty, stała się skrzyżowaniem wiedzy greckiej, perskiej i indyjskiej. Stopniowo starożytność się zbliża."
+        },
+        {
+          "type": "takeaway",
+          "text": "W ciągu zaledwie **22 łac** (610-632) Mahomet przekształcił przesłanie duchowe w rzeczywistą władzę polityczną. Położył podwaliny pod imperium, które przez stulecia miało dominować nad częścią świata."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "id": "course_6_la_peste_noire_en_europe_1347_1353",
+  "title": "De Zwarte Dood in Europa",
+  "subtitle": "1347-1353",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "Tussen 1347 en 1353 doodde de builenpest 30 tot 60% van de Europeanen. Een gezondheidscatastrofe die de middeleeuwse samenleving doet schudden en de verschuiving naar een nieuwe wereld versnelt.",
+  "hero": {
+    "image": "la_peste_noire_en_europe",
+    "ratio": "16:9",
+    "hook": "Binnen zes jaar verliest Europa tot de helft van zijn bevolking."
+  },
+  "sections": [
+    {
+      "id": "course_6_la_peste_noire_en_europe_1347_1353_intro",
+      "title": "Inleiding",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tussen **1347** en **1353** wordt Europa getroffen door de **Zwarte Dood**. Veroorzaakt door de bacterie **Yersinia pestis**, doodt het tussen **30 op 60%** van de bevolking, of **25 tot 50 duizend**-mensen."
+        },
+        {
+          "type": "paragraph",
+          "text": "De Europeanen zijn al verzwakt door de hongersnoden van [[Kleine ijstijd]], een afkoeling van het klimaat die de oogsten heeft bedorven. De plaag is niet alleen een gezondheidscrisis. Het is een historische versneller: het doet de heerlijkheidsorde opschudden en dwingt de samenleving zichzelf op een andere manier opnieuw op te bouwen."
+        }
+      ]
+    },
+    {
+      "id": "course_6_la_peste_noire_en_europe_1347_1353_p1",
+      "title": "Van Azië tot Italië",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "De bacterie circuleert voor het eerst onder knaagdieren in Centraal-Azië. De [[Pax Mongolica]], een periode van relatieve vrede onder het Mongoolse rijk, en de [[Zijderoute]], een commercieel netwerk dat Azië met Europa verbond, boden hem veilige routes. Aan de Genuese balie van [[Caffa]], op de Krim, belegerd door de [[Gouden Horde]] (een Mongools imperium van de steppen), verschuift de ziekte richting de Middellandse Zee. Galeien vluchten naar Italië."
+        },
+        {
+          "type": "image",
+          "asset": "black_death_burial_medieval_plague",
+          "ratio": "4:3",
+          "caption": "Pestbegrafenissen: Europa ontdekt massale sterfte."
+        },
+        {
+          "type": "paragraph",
+          "text": "In **Oktober 1347** meerden ze aan bij **Messina**, op Sicilië. Ondanks de verdrijving van de schepen is het kwaad al aan de kade. In **1348** bereikte hij Marseille en vervolgens heel Europa via de netwerken van Italiaanse kooplieden."
+        },
+        {
+          "type": "funFact",
+          "text": "De belegering van Caffa wordt vaak aangehaald als een van de eerste voorbeelden van biologische oorlogsvoering: de Mongolen zouden besmette lijken over de muren hebben gekatapulteerd."
+        }
+      ]
+    },
+    {
+      "id": "course_6_la_peste_noire_en_europe_1347_1353_p2",
+      "title": "Machteloos medicijn",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Artsen vertrouwen op [[Galen]], een oude Griekse arts, en de [[Miasma-theorie]]: het idee dat ziekten voortkomen uit bedorven lucht. Ze zien de echte vector niet, de rattenvlo ([[Xenopsylla cheopis]]). Als de ratten doodgaan, gaan de vlooien over op de mens."
+        },
+        {
+          "type": "image",
+          "asset": "plague_doctor_mask_beak",
+          "ratio": "4:3",
+          "caption": "De pestdokter met het snavelmasker: een bescherming die eerder symbolisch dan effectief is."
+        },
+        {
+          "type": "paragraph",
+          "text": "De builenvorm doet de lymfeklieren opzwellen. Sepsis maakt de huid zwart. Longontsteking wordt van mens op mens overgedragen en is dodelijk binnen **24 tot 48 uur**. In drukke en vuile steden is de verspreiding zeer snel."
+        }
+      ]
+    },
+    {
+      "id": "course_6_la_peste_noire_en_europe_1347_1353_p3",
+      "title": "Angst, flagellanten, pogroms",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "De samenleving wankelt. De [[Flagellanten]] slaan zichzelf in het openbaar op om God gunstig te stemmen. Kunst vindt de Danses Macabres uit. Bij gebrek aan een verklaring gaan we op zoek naar daders: de [[Joodse pogroms (1348-1349)]] bloedden de Rhônevallei en het Germaanse rijk. Beschuldigd van het vergiftigen van de bronnen, werden duizenden Joden afgeslacht. Paus [[Clemens VI]], destijds in Avignon, probeerde hen te beschermen. Te weinig, te laat."
+        },
+        {
+          "type": "funFact",
+          "text": "In Avignon bleef Clemens VI tussen twee grote vuren zitten om “de lucht te zuiveren”. De hitte hield de vlooien op afstand: hij overleefde."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[Boccaccio]], een Florentijnse schrijver, beschrijft hoe vaders hun zonen in de steek laten. Liefdadigheid, de buurt, het gezin: alles stort ineen onder de angst voor besmetting."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1346",
+              "title": "Caffa",
+              "detail": "De pest bereikt de Genuese handelspost op de Krim."
+            },
+            {
+              "date": "1347",
+              "title": "Messina",
+              "detail": "De Genuese galeien importeren de plaag naar Europa."
+            },
+            {
+              "date": "1348",
+              "title": "Europese golf",
+              "detail": "Frankrijk, Engeland, het keizerrijk: de dood breidt zich uit."
+            },
+            {
+              "date": "1353",
+              "title": "Terugvloeiing",
+              "detail": "De epidemie kalmeert, Europa is getransformeerd."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_6_la_peste_noire_en_europe_1347_1353_p4",
+      "title": "Na de dood volgt de verschuiving",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Richting **1353** ebt de pandemie weg. Arbeid is schaars geworden. De lonen stijgen, de herendiensten dalen en de lijfeigenschap in het Westen neemt af. De heren moeten onderhandelen. Paradoxaal genoeg heeft de ramp de overlevenden sterker gemaakt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Het falen van de autoriteiten ten aanzien van de plaag voedt ook het kritische denken. We observeren meer, we twijfelen aan de oude dogma’s. Door dorpen leeg te halen en erfenissen te herverdelen, bereidde de Zwarte Dood, ondanks zichzelf, de basis voor de Renaissance."
+        },
+        {
+          "type": "takeaway",
+          "text": "Tussen **1347** en **1353** doodde de Zwarte Dood tot de helft van Europa. Deze demografische schok verzwakt de heerschappij, verhoogt de prijs van arbeid en versnelt de toegang tot een nieuwe wereld."
+        }
+      ]
+    }
+  ]
+}

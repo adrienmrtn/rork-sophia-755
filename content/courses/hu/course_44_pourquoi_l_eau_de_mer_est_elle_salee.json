@@ -1,0 +1,100 @@
+{
+  "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee",
+  "title": "Miért sós a tengervíz?",
+  "subtitle": "Óceánok",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Egy liter tengervíz körülbelül 35 gramm sót tartalmaz. Ez a só évmilliárdok alatt halmozódott fel. Innen származik.",
+  "hero": {
+    "image": "pourquoi_l_eau_de_mer_est_salee",
+    "ratio": "16:9",
+    "hook": "A folyók szelídek. Az óceánok sósak. A titok az idő és a párolgás."
+  },
+  "sections": [
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Óceánok borítják a bolygó több mint **70%-át**. Egy liter tengervíz átlagosan körülbelül **35 gramm tartalmaz**. Ez nem véletlen: ez egy nagyon hosszú folyamat eredménye."
+        },
+        {
+          "type": "paragraph",
+          "text": "A só nem „hullik” az égből készen. A kontinensekről utazik, majd csapdába esik az óceánban."
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p1",
+      "title": "A só először a földből származik",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A levegőben áthaladó eső egy kis szén-dioxidot felvesz. Enyhén savas lesz. Ahogy a sziklákra esik, finoman megtámadja őket: ez **kémiai erózió**."
+        },
+        {
+          "type": "image",
+          "asset": "ocean_sea_salt_evaporation",
+          "ratio": "auto",
+          "caption": "Sós mocsarak: a párolgás koncentrálja a tengervízben oldott sót."
+        },
+        {
+          "type": "paragraph",
+          "text": "A folyók ezután oldott ásványi anyagokat hordoznak, különösen a **nátriumot** és a **klór**, az asztali só két összetevőjét. A tengerbe dobják őket."
+        },
+        {
+          "type": "funFact",
+          "text": "A víz alatti vulkánok és az óceán fenekén lévő forró források szintén sókat adnak. De a fő rész továbbra is a kontinensekről származik."
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p2",
+      "title": "Miért nem sósak a folyók?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jó kérdés: ha a folyók sót hoznak, miért nem sós a Rhône vagy a Szajna vize? Mert ott nagyon felhígult a só, és mert a folyók vize folyamatosan megújul."
+        },
+        {
+          "type": "paragraph",
+          "text": "Az óceánban más a helyzet. A Nap alatt a víz **ZZ elpárolog** és visszatér az égre. A só, **marad**. Évről évre, évszázadról évszázadra felhalmozódik. Nevezzük ezt a [[Hidrológiai ciklus és sófelhalmozódás]]."
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p3",
+      "title": "A só az óceánokban is kering",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A sós víz **sűrűbb** („nehezebb” azonos térfogat esetén), mint az édesvíz. A pólusoknál a felszíni víz megfagyásakor a só részben a környező folyékony vízbe kerül. Ez a víz még sűrűbbé válik, és a fenékre zuhan."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ez a mozgás segít a nagy óceáni áramlatok meghajtásában. Ezek az áramlatok hőt és tápanyagokat szállítanak szerte a világon. A só nem csak ízlés kérdése: a bolygó klímamotorjának része."
+        }
+      ]
+    },
+    {
+      "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p4",
+      "title": "Nem mindenhol ugyanaz a só",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A sótartalom nem mindenhol egyforma. Az Egyenlítő közelében az erős párolgás a sót koncentrálhatja. Nagy folyók vagy olvadó jégtáblák közelében a víz lágyabb. A Holt-tenger extrém eset: nagyon kevés víz távozik, sok só marad."
+        },
+        {
+          "type": "takeaway",
+          "text": "A tengervíz sós, mert a folyók ásványi anyagokat hoznak a kontinensekről, a párolgás pedig az óceánban hagyja a sót. Ez a felhalmozódás évmilliárdok óta tart."
+        }
+      ]
+    }
+  ]
+}

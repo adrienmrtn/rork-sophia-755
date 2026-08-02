@@ -1,0 +1,131 @@
+{
+  "id": "course_141_la_naissance_de_la_photographie",
+  "title": "De geboorte van fotografie",
+  "subtitle": "1839",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "In **1839** hebben verschillende uitvinders eindelijk ontdekt hoe ze een afbeelding op een bord kunnen bevestigen. In minder dan een eeuw tijd heeft fotografie de manier veranderd waarop we zien, herinneren en geloven.",
+  "hero": {
+    "image": "la_naissance_de_la_photographie",
+    "ratio": "16:9",
+    "hook": "Hoe een chemische uitvinding het monopolie van de schilderkunst op de werkelijkheid wegnam."
+  },
+  "sections": [
+    {
+      "id": "course_141_la_naissance_de_la_photographie_intro",
+      "title": "Inleiding",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Eeuwenlang gebruikten kunstenaars de [[donkere kamer]]: een donkere doos die de buitenwereld op een muur projecteert. Het probleem blijft hetzelfde: het beeld verdwijnt zodra je het licht uitdoet. In **1839** werd fotografie officieel geboren. Het is niet het werk van één enkel genie, maar een race tussen Franse en Britse uitvinders."
+        },
+        {
+          "type": "paragraph",
+          "text": "In minder dan een eeuw bevrijdde dit proces de schilderkunst van haar rol als document en werd het de eerste massamedia. Het verandert onze relatie tot tijd, herinnering en visuele waarheid."
+        }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p1",
+      "title": "Van Niépce tot de daguerreotypie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Het begint allemaal met **Nicéphore Niépce**, Franse uitvinder. Rond **1826-1827** fixeert hij het eerste permanente beeld: *Het is de voorhoede van Gras*. Hij bedekt een tinnen plaat met [[Bitumen uit Judea]], een teer die hard wordt in het licht. De belichting duurt ongeveer **8 uur**: de zon heeft de tijd om beide zijden van de gebouwen te verlichten."
+        },
+        {
+          "type": "image",
+          "asset": "niepce_first_photograph_view_from_window_gras",
+          "ratio": "4:3",
+          "caption": "De oudst bekende foto, gemaakt door Niépce vanuit zijn raam."
+        },
+        {
+          "type": "funFact",
+          "text": "Op deze afbeelding zijn de schaduwen van de twee gevels tegelijkertijd zichtbaar: het schieten duurde zo lang dat de zon om de hemel cirkelde."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na de dood van Niépce ontdekte zijn medewerker **Louis Daguerre** het effect van jodium- en kwikdampen op zilver. Hij ontwikkelde het **daguerreotype**, gepresenteerd aan de Academie van Wetenschappen in **1839**. In Engeland ontwikkelde **William Fox Talbot** gelijktijdig het [[Calotype van William Fox Talbot]], waarmee meerdere kopieën van een negatief gemaakt kunnen worden."
+        }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p2",
+      "title": "Het portret voor iedereen, het bewijs voor iedereen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vanaf de jaren **1840** verliet de fotografie de laboratoria. Tot dan toe was het hebben van een portret een luxe die voorbehouden was aan degenen die een schilder konden betalen. Met de studio's en het [[carte-de-visite]], een klein, goedkoop formaat, kregen de burgerij en vervolgens de arbeidersklasse toegang tot het imago van zichzelf."
+        },
+        {
+          "type": "image",
+          "asset": "louis_daguerre_daguerreotype_silver_plate",
+          "ratio": "4:3",
+          "caption": "De daguerreotypie: een unieke afbeelding, in opvallend detail, op verzilverd tafelzilver."
+        },
+        {
+          "type": "paragraph",
+          "text": "De foto geldt tevens als bewijs. Tijdens de Krimoorlog (**1855**) rapporteert **Roger Fenton** beelden van het front. Tijdens de Amerikaanse Burgeroorlog fotografeerde **Mattheüs Brady** soldaten en slagvelden. De gebeurtenis wordt niet langer alleen maar verteld: ze wordt getoond."
+        }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p3",
+      "title": "Wanneer het schilderen zichzelf opnieuw moet uitvinden",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Als een machine een gezicht beter kopieert dan een schilder, wat voor nut heeft verf dan nog? Het is [[De impact van fotografie op figuratieve schilderkunst]]: figuratieve kunst verliest haar monopolie op de werkelijkheid. Bevrijd van deze plicht onderzoeken de kunstenaars iets anders: de lichtsensatie met [[Impressionisme]], en vervolgens de vervorming van vormen met [[Kubisme]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "De fotografie claimt stilaan haar eigen taal: kadrering, licht, moment. Het is niet langer een simpele kopie van de wereld. Het wordt een kunst op zich."
+        }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p4",
+      "title": "Kodak en beeldcultuur",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aan het einde van de 19e eeuw verving George Eastman, oprichter van Kodak, zware glasplaten door flexibele folie. Het apparaat wordt draagbaar. De slogan ‘Jij drukt op de knop, wij doen de rest’ markeert de geboorte van de amateur. Het familiealbum en het globale rapport worden samen geboren."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1826",
+              "title": "Eerste foto van Niépce",
+              "detail": "Uitzicht vanuit het Gras-raam, na urenlange blootstelling."
+            },
+            {
+              "date": "1839",
+              "title": "De daguerreotypie",
+              "detail": "Daguerre presenteert zijn proces in Parijs."
+            },
+            {
+              "date": "1841",
+              "title": "Het calotype",
+              "detail": "Talbot maakt het afdrukken van meerdere exemplaren mogelijk."
+            },
+            {
+              "date": "1888",
+              "title": "Kodak voor iedereen",
+              "detail": "Eastman democratiseert de amateurcamera."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "Geboren in **1839**, legde fotografie eerst de werkelijkheid beter vast dan schilderkunst, en vond vervolgens onze moderne [[Visuele cultuur]] uit: dat waarin we eerst geloven wat we zien."
+        }
+      ]
+    }
+  ]
+}

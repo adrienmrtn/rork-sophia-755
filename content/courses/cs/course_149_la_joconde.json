@@ -1,0 +1,137 @@
+{
+  "id": "course_149_la_joconde",
+  "title": "Mona Lisa",
+  "subtitle": "1503-1519",
+  "subject": "art",
+  "subcategory": "Iconic works",
+  "description": "Namaloval **Leonardo da Vinci** mezi **1503** a **1519**, *Mona Lisa* se stala absolutní ikonou Louvru. Technika, tajemný úsměv… a let v **1911**, který vše změnil.",
+  "hero": {
+    "image": "la_joconde",
+    "ratio": "16:9",
+    "hook": "Úsměv, krádež, mýtus: jak se portrét stal nejslavnějším dílem na světě."
+  },
+  "sections": [
+    {
+      "id": "course_149_la_joconde_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "*Mona Lisa*, namalovaná mezi **1503** a **1519** od **Leonarda da Vinci**, je nejnavštěvovanějším obrazem na světě. Vystaveno na **Louvre**, fascinuje jak svou technikou, tak svou historií. Není to jen krásný portrét. Je to mýtus vytvořený uměním, vědou a zprávou."
+        },
+        {
+          "type": "paragraph",
+          "text": "Proč spíše tato tvář než jiná? Protože tam Leonardo soustředil inovace, a protože ho velkolepý let proslavil v celosvětovém měřítku."
+        }
+      ]
+    },
+    {
+      "id": "course_149_la_joconde_p1",
+      "title": "Leonardo a sfumato",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Portrét začíná ve Florencii kolem **1503**. Sponzorem je obchodník **Francesco del Giocondo**. Modelkou je prý jeho manželka [[Lisa Gherardiniová]]. Leonard ale obraz nikdy nedoručí. Nechal si ho, léta ho retušoval a odvezl do Francie, kde v roce **1519** zemřel."
+        },
+        {
+          "type": "image",
+          "asset": "mona_lisa_leonardo_da_vinci_louvre_painting",
+          "ratio": "4:3",
+          "caption": "Mona Lisa v Louvru: malý topolový panel, který se stal globální ikonou."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jeho charakteristická technika je [[Leonardian sfumato]]: glazury, velmi tenké vrstvy, které smazávají kontury. Už žádná tvrdá linie. Obličej taje ve vzduchu. Leonardo také přidává [[Atmosférická perspektiva]]: vzdálená krajina zmodrá a změkne, jako ve skutečném vidění."
+        }
+      ]
+    },
+    {
+      "id": "course_149_la_joconde_p2",
+      "title": "Úsměv, který si hraje s očima",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pověstný úsměv není jen namalovaná emoce. Hraje s naším [[Periferní vidění]]. Když se díváme do očí modelu, okraje sítnice vidí ústa v měkkých stínech: úsměv se zdá přítomný. Když se podíváte přímo do úst, ubývá."
+        },
+        {
+          "type": "image",
+          "asset": "mona_lisa_smile_detail_close_up",
+          "ratio": "1:1",
+          "caption": "Čím víc na to zíráte, tím víc úsměv vypadá, že mizí."
+        },
+        {
+          "type": "funFact",
+          "text": "Leonardo, malíř a učenec, studoval optiku. Záhada úsměvu částečně spočívá na přesné znalosti toho, jak lidské oko zpracovává stíny."
+        },
+        {
+          "type": "paragraph",
+          "text": "Výsledek: tvář se zdá živá, mění se, téměř si uvědomuje náš pohled."
+        }
+      ]
+    },
+    {
+      "id": "course_149_la_joconde_p3",
+      "title": "1911: let, který vynalezl slávu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V 19. století byla *Mona Lisa* obdivována, ale ještě nebyla dílem číslo jedna v Louvru. Vše se změnilo dne **A 21. srpna 1911**. Ukradne ho italský sklenář z muzea [[Vincenzo Peruggia]]: je to [[Krádež Mony Lisy (1911)]]. Schová si ho pod blůzu a tiše zhasne."
+        },
+        {
+          "type": "image",
+          "asset": "mona_lisa_stolen_1911_newspaper_headline",
+          "ratio": "4:3",
+          "caption": "1911: absence obrazu přináší zprávy a vytváří hvězdu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vyšetřování se změní ve skandál. Básník [[Guillaume Apollinaire]] byl na čas uvězněn. [[Pablo Picasso]] je rozhovor. Když se obraz znovu objeví v **1913**, už to není jen obraz. Je to celebrita."
+        }
+      ]
+    },
+    {
+      "id": "course_149_la_joconde_p4",
+      "title": "Ikona pod sklem",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dnes, malovaná na topolovém dřevě, žije za [[Neprůstřelné sklo]], v klimatizovaném výkladci. Útoky kyselinou, házení předmětů: ochrana se stala nutností. A parodie, od Duchampa po internet, dokazují, že se stal univerzálním jazykem."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1503",
+              "title": "Začátek portrétu",
+              "detail": "Leonardo zahajuje Mona Lisa ve Florencii."
+            },
+            {
+              "date": "1519",
+              "title": "Smrt Leonarda",
+              "detail": "Obraz zůstává ve Francii."
+            },
+            {
+              "date": "1911",
+              "title": "Let",
+              "detail": "Peruggia přetváří dílo v mediální mýtus."
+            },
+            {
+              "date": "1913",
+              "title": "Zadní",
+              "detail": "Obraz se vrací do Louvru jako světová hvězda."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "*Mona Lisa* vděčí za svou slávu jak genialitě Leonarda (sfumato, optický úsměv), tak historii: krádež v roce 1911 proměnila obdivované mistrovské dílo v globální ikonu."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859",
+  "title": "Darwinova evoluční teorie",
+  "subtitle": "1859",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "V roce 1859 vydal Darwin The Origin of Species. Ústřední myšlenka: živé věci se v průběhu času mění přirozeným výběrem.",
+  "hero": {
+    "image": "la_theorie_de_l_evolution_de_darwin",
+    "ratio": "16:9",
+    "hook": "Druhy nejsou pevně dané. Mění se. Pomalu. Ale jistě."
+  },
+  "sections": [
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V **1859** **Charles Darwin** publikoval *O původu druhů*. Kniha šokuje, fascinuje, rozděluje. Jeho ústřední myšlenka je však jednoduchá na formulaci."
+        },
+        {
+          "type": "paragraph",
+          "text": "Živé věci se liší. Některé variace pomáhají přežít a rozmnožovat se. Tyto variace se přenášejí. V průběhu generací se populace mění."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p1",
+      "title": "Cesta, která otevírá oči",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "charles_darwin_portrait",
+          "ratio": "4:3",
+          "caption": "Darwin, britský přírodovědec 19. století."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jako malý chlapec odjíždí Darwin na lodi **Beagle**. Po léta pozoroval rostliny, zkameněliny, ptáky. Na Galapágách si všiml, že okolní ptáci mají různé zobáky v závislosti na jejich potravě."
+        },
+        {
+          "type": "image",
+          "asset": "darwin_finches_galapagos_beaks",
+          "ratio": "4:3",
+          "caption": "Trysky přizpůsobené různým dietám: silný indikátor."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p2",
+      "title": "Přirozený výběr, v jednoduché angličtině",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Představte si populaci zvířat. Někteří běhají o něco rychleji, tráví o něco lépe, odolají chladu o něco více. Pokud jim to pomůže přežít a mít mláďata, tyto vlastnosti se stanou běžnějšími."
+        },
+        {
+          "type": "paragraph",
+          "text": "Není to tak, že by se jednotlivci „chtějí“ vyvíjet. Je to filtr: prostředí uchovává to, co funguje. Darwin tomu říká **přirozený výběr**."
+        },
+        {
+          "type": "funFact",
+          "text": "Darwin čekal před vydáním dlouho. Bál se skandálu. Další přírodovědec, **Alfred Russell Wallace**, dospěl k podobným myšlenkám: to přimělo Darwina k vydání své knihy."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p3",
+      "title": "Střet myšlenek",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V 19. století mnozí věřili, že druhy byly stvořeny tak, jak byly. Říci, že se mění a že lidé sdílejí historii s jinými zvířaty, otřásá náboženstvím a společností."
+        },
+        {
+          "type": "paragraph",
+          "text": "Věda postupuje: fosilie, geografie druhů, později genetika, potvrzují obecnou představu."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p4",
+      "title": "A dnes?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nyní víme, že DNA nese variace. Evoluci pozorujeme v laboratoři (bakterie, viry) a v přírodě. Bojujeme také s bakteriemi odolnými vůči antibiotikům: to je živá evoluce."
+        },
+        {
+          "type": "takeaway",
+          "text": "Darwin ukázal, že živé bytosti se vyvíjejí přirozeným výběrem: vlastnosti užitečné pro přežití a reprodukci se šíří. Moderní genetika tento rámec potvrdila a objasnila."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "course_75_la_photosynthese_expliquee_simplement",
+  "title": "Fotosynteza wyjaśniona w prosty sposób",
+  "subtitle": "Rośliny i energia",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Rośliny robią coś niezwykłego: gotują cukier za pomocą światła, wody i powietrza. I dają nam tlen w prezencie.",
+  "hero": {
+    "image": "la_photosynthese_expliquee_simplement",
+    "ratio": "16:9",
+    "hook": "Liść to kuchnia słoneczna: światło, woda, powietrze... a tu cukier."
+  },
+  "sections": [
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wyobraź sobie miniaturową fabrykę w każdym liściu. Potrzebne są trzy przyziemne składniki: **światło ze Słońca**, **woda** z korzeni i **CO₂** z powietrza. Wychodzi z **cukier**, aby rosnąć i uwalnia **tlen**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ten wyczyn nazywa się **fotosynteza**. Bez niej nie ma lasów, nie ma tlenu, którym można oddychać, i prawie nie ma złożonego życia na Ziemi."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p1",
+      "title": "Gdzie to się dzieje w arkuszu?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W komórce roślinnej zielone organelle, **chloroplastyka**, mieszczą [[Chlorofil]]. Pigment ten wychwytuje głównie kolor niebieski i czerwony światła. Zieleń powraca: dlatego liście wydają nam się zielone."
+        },
+        {
+          "type": "image",
+          "asset": "leaf_photosynthesis_sunlight_chloroplasts",
+          "ratio": "auto",
+          "caption": "Liście wychwytują światło słoneczne w celu fotosyntezy."
+        },
+        {
+          "type": "paragraph",
+          "text": "Proste równanie: CO₂ + woda + światło → cukier + tlen. Gaz przedostaje się przez maleńkie pory, [[szparki]]. Woda podnosi się z korzeni. Cukier staje się drewnem, owocami, korzeniami; tlen uchodzi do powietrza."
+        },
+        {
+          "type": "funFact",
+          "text": "Chlorofil „odmawia” zieleni. Woli kolor niebieski i czerwony, co skuteczniej pobudza jej elektrony i uruchamia maszynę energetyczną."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p2",
+      "title": "Dwa kroki: przechwytywanie, potem tworzenie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Najpierw **faza jasna**. Światło rozbija cząsteczki wody. Tlen ucieka. Energia jest magazynowana w dwóch „bateriach” chemicznych: **ATP** i **NADPH**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Następnie **faza produkcyjna**, [[Cykl Calvina]], nazwany na cześć chemika **Melwina Kalwina**. Dzięki energii z akumulatorów roślina przekształca węgiel z CO₂ w glukozę. Na tym etapie nie ma potrzeby bezpośredniego światła słonecznego, ale zależy to całkowicie od tego, co światło wytworzyło wcześniej."
+        },
+        {
+          "type": "funFact",
+          "text": "Aby prześledzić ścieżkę węgla w liściu, Calvin wykorzystał izotopy radioaktywne pochodzące z badań nad bombą atomową. Nagroda Nobla w **1961**."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p3",
+      "title": "Kiedy tlen zmienił planetę",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Około **2,4 miliarda lat temu** bakterie fotosyntetyczne, **cyjanobakterie**, zaczęły masowo uwalniać tlen. To jest **Wielkie Utlenienie**. Dla wielu ówczesnych organizacji była to trucizna."
+        },
+        {
+          "type": "paragraph",
+          "text": "Wtedy tlen umożliwił warstwę ozonową i znacznie sprawniejsze oddychanie. Powietrze, którym oddychamy, jest w zasadzie „produktem odpadowym” miliardów lat fotosyntezy."
+        },
+        {
+          "type": "funFact",
+          "text": "O **Polska** tlenu na Ziemi pochodzi z fitoplanktonu w oceanach, a nie tylko w lasach."
+        }
+      ]
+    },
+    {
+      "id": "course_75_la_photosynthese_expliquee_simplement_p4",
+      "title": "Skromny dorobek, ogromna rola",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Liść przekształca **1 w 3%** otrzymanej energii słonecznej w biomasę. W skali globalnej wystarczy to, aby zasilić łańcuchy pokarmowe i pochłonąć ogromne ilości CO₂."
+        },
+        {
+          "type": "paragraph",
+          "text": "Stąd zainteresowanie lasami, oceanami… a nawet sztuczną fotosyntezą dla klimatu. Ślimak morski *Elysia chlorotica* posuwa się nawet do „kradnięcia” chloroplastów z alg, aby trochę żyć dzięki energii słonecznej."
+        },
+        {
+          "type": "takeaway",
+          "text": "Fotosynteza przekształca światło, wodę i CO₂ w cukier i regeneruje tlen. To gotowanie słoneczne, które leży u podstaw niemal całego życia."
+        }
+      ]
+    }
+  ]
+}

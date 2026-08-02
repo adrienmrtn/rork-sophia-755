@@ -1,0 +1,116 @@
+{
+  "id": "course_198_sindbad_le_marin",
+  "title": "Sindbad sjömannen",
+  "subtitle": "Sju resor",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Sinbad the Sailor: Seven Voyages, Monsters and Treasures. Bakom det underbara, porträttet av den islamiska guldålderns köpman-äventyrare.",
+  "hero": {
+    "image": "sindbad_le_marin",
+    "ratio": "16:9",
+    "hook": "Sju gånger lämnar han rik eller nyfiken. Sju gånger bryter havet den. Sju gånger kommer han tillbaka ännu rikare."
+  },
+  "sections": [
+    {
+      "id": "course_198_sindbad_le_marin_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Sindbad sjömannen** tillhör **Arabiska nätter**, men inte till den gamla persiska kärnan i samlingen. Hans cykel på sju resor ägde rum senare, i Egypten, runt 1400-talet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Han förkroppsligar resenären och köpmannen i den **islamiska guldåldern**: fromhet, girighet, mod och oförmågan att sitta still en gång rik. Bakom monstren läser vi en allegori om förmögenhet som stiger och faller."
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p1",
+      "title": "Äventyrets cykliska struktur",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Berättelsen börjar i Bagdad. **Sindbad sjömannen**, nu gammal och rik, berättar om sina prövningar för en portier som också heter Sindbad (ibland Hindbad). Klasskontrasten är omedelbar."
+        },
+        {
+          "type": "image",
+          "asset": "baghdad_medieval_islamic_golden_age_trade",
+          "ratio": "4:3",
+          "caption": "Bagdad, avgångs- och returpunkt för Sindbads resor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Varje resa följer samma mekanik: trötthet av stillasittande liv, avgång från hamnen i [[Basra]], skeppsbrott, överlevnad i ett okänt land, återkomst lastad med skatter. Siffran sju, laddad med mening i [[Islamisk kosmologi]], ger serien en inledande dimension: från oförsiktighet till visdom."
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p2",
+      "title": "Ett fantastiskt bestiarium mellan myt och verklighet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Sten** (eller Rokh), en fågel vars vingspann skymmer solen, har satt sina spår i världens fantasi. Vi ser ekot av berättelser om arabiska resenärer på östra Afrikas kuster."
+        },
+        {
+          "type": "image",
+          "asset": "sinbad_roc_giant_bird_illustration",
+          "ratio": "4:3",
+          "caption": "Roc, jättefågel på Sindbads resor."
+        },
+        {
+          "type": "funFact",
+          "text": "Roc är förmodligen inspirerad av **Aepyornis**, en elefantfågel från Madagaskar som försvann runt år 1000. Dess ägg var upp till 150 gånger volymen av ett hönsägg."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sindbad möter också **Havets gamla man**, som klamrar sig fast vid hans rygg, och **sköldpadda-ön**, vilseledande mark. **-dalen av diamanter**, där kött kastas för att fästa ädelstenarna, cirkulerar redan bland de gamla. De underbara sedimenten från århundraden av [[Medeltida arabiska handelsvägar]]."
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p3",
+      "title": "Spegeln av den arabiska handelns guldålder",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Inställningen är historisk. På 800- och 800-talen dominerade sjömän från Basra och Siraf Indiska oceanen. Sindbads hållplatser framkallar verkliga platser: [[Serendib]] (Ceylon) för kryddor, Sydostasien för kamfer, kusterna för pärlor."
+        },
+        {
+          "type": "image",
+          "asset": "arab_indian_ocean_trade_routes_medieval_ship",
+          "ratio": "4:3",
+          "caption": "Arabiska fartyg på rutterna i Indiska oceanen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sindbad är ingen krigare: han är en köpman-äventyrare, en prestigefylld status i ett samhälle som värdesätter handel. Där finner vi monsunen, skepp sydda med kokosfibrer snarare än spikade. Västlig parallell: [[Marco Polo (västlig parallell)]], som beskriver Asien i fakta, där Sindbad målar upp det i underverk."
+        }
+      ]
+    },
+    {
+      "id": "course_198_sindbad_le_marin_p4",
+      "title": "Universellt arv: från öst till väst",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Översatt på 1700-talet av **Antoine Galland**, resor ger näring åt den europeiska [[Äventyrsroman]], från Defoe till Jules Verne. Biografen gör honom ofta till privatist i prinsessornas tjänst. Fel: Sindbad är från början en stadsbor från Bagdad, som överlever genom tro och uppfinningsrikedom."
+        },
+        {
+          "type": "funFact",
+          "text": "Namnet Sindbad skulle frammana \"prinsen av Sindh-floden\", Indus, vid korsningen mellan den arabiska och den indiska världen."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Sinbad** förkroppsligar den islamiska maritima guldåldern i **sju** cykliska resor: Klippan och diamanterna maskerar en verklighet, den för de arabiska köpmännen i Indiska oceanen."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "id": "course_129_l_art_abstrait_kandinsky_et_mondrian",
+  "title": "Abstrakt konst: Kandinsky och Mondrian",
+  "subtitle": "1910-1920-talen",
+  "subject": "art",
+  "subcategory": "Painting & Movements",
+  "description": "För första gången representerar en målning inte längre någonting av den synliga världen. **Kandinsky** frigör formulär; **Mondrian** reducerar allt till geometri.",
+  "hero": {
+    "image": "l_art_abstrait_kandinsky_et_mondrian",
+    "ratio": "16:9",
+    "hook": "Tänk om en målning inte längre behövde berätta historien om världen för att röra människor?"
+  },
+  "sections": [
+    {
+      "id": "course_129_l_art_abstrait_kandinsky_et_mondrian_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Under åren **1910** och **1920** bröt abstraktionen målningens äldsta regel: [[mimesis]], skyldigheten att representera den synliga världen. Bordet är inte längre ett fönster: det är ett autonomt objekt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Två parallella uppdrag: **Wassily Kandinsky** översätter själen genom fria former; **Piet Mondrian** söker universums lagar i ren geometri."
+        }
+      ]
+    },
+    {
+      "id": "course_129_l_art_abstrait_kandinsky_et_mondrian_p1",
+      "title": "Kandinsky: att måla som man komponerar",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Wassily Kandinsky** (1866-1944), rysk advokat som blev målare, bosatte sig i München. Runt **1910**, när han återvänder hem i skymningen, överväldigas han av en målning vars ämne han inte känner igen. Det är en av hans, upp och ner. Likheten med verkligheten framstår då för honom som ett hinder."
+        },
+        {
+          "type": "image",
+          "asset": "kandinsky_first_abstract_watercolor_1910",
+          "ratio": "4:3",
+          "caption": "Omkring 1910 tog Kandinsky steget mot abstraktion."
+        },
+        {
+          "type": "funFact",
+          "text": "Begåvad med synestesi sa han att han \"hörde\" färger och \"se\" ljud. Därav dess titlar: Kompositioner, improvisationer."
+        },
+        {
+          "type": "paragraph",
+          "text": "I **1911** publicerade han *Andlighet i konst* och teoretiserade [[lyrisk abstraktion]]. Varje färg har en vibration: blått framkallar det himmelska; gul, mer aggressiv, kan \"låta\" som en trumpet. Måleri måste verka på själen som musik, utan berättande."
+        }
+      ]
+    },
+    {
+      "id": "course_129_l_art_abstrait_kandinsky_et_mondrian_p2",
+      "title": "Mondrian: balansera i raka linjer",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Holländaren **Piet Mondrian** (1872-1944) kommer fram till abstraktion genom en långsam [[dekantering]] av verkligheten. Mellan **1908** och **1912** visar hans serie av träd stammen och grenarna som försvinner till förmån för ett ramverk av linjer."
+        },
+        {
+          "type": "image",
+          "asset": "mondrian_tree_series_abstraction_painting",
+          "ratio": "4:3",
+          "caption": "Från trädet till nätverket av linjer: Mondrian förenklar det till det väsentliga."
+        },
+        {
+          "type": "funFact",
+          "text": "Han bad ofta att få sitta med ryggen mot fönstret på restauranger, för att inte se träd och trädgårdar som han ansåg vara alltför oordnade."
+        },
+        {
+          "type": "paragraph",
+          "text": "I **1917** grundade han rörelsen **De Stijl** och teoretiserade **neoplasticism**: att reducera konst till kosmos element. Allt som återstår är den raka linjen och de tre primärfärgerna. Den rätta vinkeln måste återspegla balansen mellan universella krafter, långt ifrån individuella känslor. Han förbjöd till och med grönt från sin studio, som ansågs vara för \"naturligt\"."
+        }
+      ]
+    },
+    {
+      "id": "course_129_l_art_abstrait_kandinsky_et_mondrian_p3",
+      "title": "Bauhaus: abstraktion i livet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Abstraktionen stannar inte i museet. På [[Bauhaus]], en skola för arkitektur och tillämpad konst grundad av [[Walter Gropius]] i **1919**, samarbetar målare, arkitekter och designers. Kandinsky undervisar där; Mondrians estetik inspirerar till planer och fasader."
+        },
+        {
+          "type": "image",
+          "asset": "bauhaus_weimar_gropius_building_1919",
+          "ratio": "4:3",
+          "caption": "Bauhaus: när abstrakt konst möter design och arkitektur."
+        },
+        {
+          "type": "funFact",
+          "text": "På Bauhaus lät Kandinsky sina elever associera former och färger. Han avslutade: gul triangel, röd fyrkant, blå cirkel."
+        },
+        {
+          "type": "paragraph",
+          "text": "Modern design är född: \"form följer funktion\". Gerrit Rietvelds berömda Röda och Blå stol verkar som en 3D Mondrian. Mondrian fann att det verkliga föremålet bröt abstraktionens renhet."
+        }
+      ]
+    },
+    {
+      "id": "course_129_l_art_abstrait_kandinsky_et_mondrian_p4",
+      "title": "Ett arv runt omkring oss",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Utan en historia att berätta, inbjuder målningen betraktaren att projicera sin egen mening. Denna frihet öppnar upp för [[Konceptuell konst]], där idén går före materialet. Efter krigen säger abstraktionen också vad figuration inte längre kan förmedla."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1910-1911",
+              "title": "Abstrakt Kandinsky",
+              "detail": "The Spiritual in Art teoretiserar lyrisk abstraktion."
+            },
+            {
+              "date": "1917",
+              "title": "De Stijl",
+              "detail": "Mondrian reducerar konst till linjer och primärfärger."
+            },
+            {
+              "date": "1919",
+              "title": "Bauhaus",
+              "detail": "Abstraktion kommer in i design och arkitektur."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Från våra smartphone-gränssnitt till urban skyltning, deras lärdom återstår. Den amerikanska [[Abstrakt expressionism]] och [[Minimal Art]] fortsätter revolutionen."
+        },
+        {
+          "type": "takeaway",
+          "text": "Abstrakt konst föds på två sätt: Kandinsky frigör formerna för att uttrycka själen; Mondrian geometriserar världen för att sikta på det universella."
+        }
+      ]
+    }
+  ]
+}

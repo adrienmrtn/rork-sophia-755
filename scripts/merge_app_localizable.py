@@ -1,53 +1,54 @@
 #!/usr/bin/env python3
-"""Merge per-locale AppLocalizable dictionaries into a single 6-language file."""
+"""Rebuild AppLocalizable.swift from shipped dictionaries + UI JSON packs.
+
+Prefer ``scripts/translate_ui_strings.py inject`` for the nine new locales.
+This helper keeps the same table(for:) shape when reshuffling existing packs.
+"""
 
 from __future__ import annotations
 
+import json
 import re
 from pathlib import Path
 
+from i18n_languages import NON_FR_LANGS, SWIFT_CASE_BY_CODE
+
 ROOT = Path(__file__).resolve().parents[1]
 TARGET = ROOT / "ios/Sophia/Utilities/AppLocalizable.swift"
+LOCALES_DIR = ROOT / "content" / "locales"
 
 DICT_RE = re.compile(
     r"private static let (?P<name>\w+): \[String: String\] = \[(?P<body>.*?)^\s*\]",
     re.S | re.M,
 )
 
-EXTRA_LANGUAGE_KEYS: dict[str, dict[str, str]] = {
-    "french": {
-        "language.spanish": "Español",
-        "language.german": "Deutsch",
-        "language.portuguese": "Português",
-        "language.italian": "Italiano",
-    },
-    "english": {
-        "language.spanish": "Español",
-        "language.german": "Deutsch",
-        "language.portuguese": "Português",
-        "language.italian": "Italiano",
-    },
-    "spanish": {
-        "language.german": "Alemán",
-        "language.portuguese": "Portugués",
-        "language.italian": "Italiano",
-    },
-    "german": {
-        "language.spanish": "Spanisch",
-        "language.portuguese": "Portugiesisch",
-        "language.italian": "Italienisch",
-    },
-    "portuguese": {
-        "language.spanish": "Espanhol",
-        "language.german": "Alemão",
-        "language.italian": "Italiano",
-    },
-    "italian": {
-        "language.spanish": "Spagnolo",
-        "language.german": "Tedesco",
-        "language.portuguese": "Portoghese",
-    },
+NATIVE_LANGUAGE_NAMES: dict[str, str] = {
+    "french": "Français",
+    "english": "English",
+    "spanish": "Español",
+    "german": "Deutsch",
+    "portuguese": "Português",
+    "italian": "Italiano",
+    "turkish": "Türkçe",
+    "polish": "Polski",
+    "romanian": "Română",
+    "dutch": "Nederlands",
+    "greek": "Ελληνικά",
+    "swedish": "Svenska",
+    "hungarian": "Magyar",
+    "bulgarian": "Български",
+    "czech": "Čeština",
 }
+
+ALL_LANGUAGE_KEYS: dict[str, str] = {
+    f"language.{name}": label for name, label in NATIVE_LANGUAGE_NAMES.items()
+}
+
+SHIPPED_CODES = ["fr", "en", *NON_FR_LANGS]
+# Unique while preserving order (en appears in NON_FR_LANGS).
+_seen: set[str] = set()
+SHIPPED_CODES = [c for c in SHIPPED_CODES if not (c in _seen or _seen.add(c))]
+SHIPPED_DICT_NAMES = [SWIFT_CASE_BY_CODE[c] for c in SHIPPED_CODES]
 
 
 def extract_dict(source: str, name: str) -> str:
@@ -57,13 +58,8 @@ def extract_dict(source: str, name: str) -> str:
     raise SystemExit(f"Dictionary {name!r} not found")
 
 
-def inject_language_keys(body: str, lang: str) -> str:
-    extras = EXTRA_LANGUAGE_KEYS.get(lang, {})
-    if not extras:
-        return body
-    # Only inject keys that are not already present, so the script is
-    # idempotent and safe to re-run against an already-merged file.
-    missing = {k: v for k, v in extras.items() if f'"{k}"' not in body}
+def inject_language_keys(body: str) -> str:
+    missing = {k: v for k, v in ALL_LANGUAGE_KEYS.items() if f'"{k}"' not in body}
     if not missing:
         return body
     lines = body.splitlines()
@@ -72,92 +68,23 @@ def inject_language_keys(body: str, lang: str) -> str:
     for line in lines:
         out.append(line)
         if not inserted and '"language.english"' in line:
+            indent = re.match(r"^(\s*)", line).group(1)
             for key, value in missing.items():
-                indent = re.match(r"^(\s*)", line).group(1)
                 out.append(f'{indent}"{key}": "{value}",')
             inserted = True
     if not inserted:
-        raise SystemExit(f"Could not inject language keys for {lang}")
+        raise SystemExit("Could not inject language keys")
     return "\n".join(out)
 
 
-def render() -> str:
-    # AppLocalizable.swift in the working tree is the single source of truth for
-    # every language. Reading from it (instead of divergent remote branches)
-    # keeps this script idempotent and prevents regressing hand-edited strings.
-    local_src = TARGET.read_text(encoding="utf-8")
-
-    french = inject_language_keys(extract_dict(local_src, "french"), "french")
-    english = inject_language_keys(extract_dict(local_src, "english"), "english")
-    spanish = inject_language_keys(extract_dict(local_src, "spanish"), "spanish")
-    german = inject_language_keys(extract_dict(local_src, "german"), "german")
-    portuguese = inject_language_keys(extract_dict(local_src, "portuguese"), "portuguese")
-
-    italian_body = (ROOT / "content/locales/it/ui_strings_swift.txt").read_text(encoding="utf-8").strip("\n")
-    italian = inject_language_keys(italian_body, "italian")
-
-    return f"""import Foundation
-
-enum AppLocalizable {{
-    static func string(_ key: String, language: AppLanguage) -> String {{
-        switch language {{
-        case .french:
-            return french[key] ?? english[key] ?? key
-        case .english:
-            return english[key] ?? key
-        case .spanish:
-            return spanish[key] ?? english[key] ?? key
-        case .german:
-            return german[key] ?? english[key] ?? key
-        case .portuguese:
-            return portuguese[key] ?? english[key] ?? key
-        case .italian:
-            return italian[key] ?? english[key] ?? key
-        }}
-    }}
-
-    // MARK: - French
-
-    private static let french: [String: String] = [
-{french}
-    ]
-
-    // MARK: - English
-
-    private static let english: [String: String] = [
-{english}
-    ]
-
-    // MARK: - Spanish
-
-    private static let spanish: [String: String] = [
-{spanish}
-    ]
-
-    // MARK: - German
-
-    private static let german: [String: String] = [
-{german}
-    ]
-
-    // MARK: - Portuguese
-
-    private static let portuguese: [String: String] = [
-{portuguese}
-    ]
-
-    // MARK: - Italian
-
-    private static let italian: [String: String] = [
-{italian}
-    ]
-}}
-"""
-
-
 def main() -> None:
-    TARGET.write_text(render(), encoding="utf-8")
-    print(f"Wrote {TARGET}")
+    # Delegate to the UI inject path so both tools stay aligned.
+    from translate_ui_strings import inject
+
+    inject()
+    print(f"Shipped dicts: {', '.join(SHIPPED_DICT_NAMES)}")
+    packs = sorted(p.parent.name for p in LOCALES_DIR.glob("*/ui_strings.json"))
+    print(f"JSON UI packs present: {', '.join(packs)}")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,106 @@
+{
+  "id": "course_51_la_decouverte_de_la_penicilline_fleming",
+  "title": "Penisilinin keşfi",
+  "subtitle": "Fleming'in, 1928",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "1928'de Alexander Fleming, küfün kültür kabındaki bakterileri öldürdüğünü fark etti. Bu şanstan ilk büyük antibiyotik doğdu.",
+  "hero": {
+    "image": "la_decouverte_de_la_penicilline",
+    "ratio": "16:9",
+    "hook": "Unutulmuş bir kutu, bir küf ve ilaç ters dönüyor."
+  },
+  "sections": [
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Antibiyotiklerden önce basit bir enfeksiyon öldürebiliyordu. Bir kesik, zatürre, bir savaş yarası: Beden çoğunlukla tek başına savaşıyordu."
+        },
+        {
+          "type": "paragraph",
+          "text": "**1928**'de İskoç doktor **Alexander Fleming** tesadüfen bakterileri öldürebilen bir madde keşfetti. Buna **penisilin** adı verilecek. Ancak onu gerçek bir ilaca dönüştürmek yine de yıllar alacak."
+        }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p1",
+      "title": "Unutulmuş bir kutu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Fleming Londra'da bakteriler üzerinde çalışıyor. Tatilden döndüğünde eski kültür kutularına bakıyor. Bunlardan birinde **kalıp** büyüdü. Etrafındaki bakteriler öldü."
+        },
+        {
+          "type": "image",
+          "asset": "alexander_fleming_penicillin_petri_dish",
+          "ratio": "4:3",
+          "caption": "Fleming ve anahtar fikir: Küfteki bir şey bakterileri durdurur."
+        },
+        {
+          "type": "paragraph",
+          "text": "Küf **Penisilyum** cinsine aittir. Fleming antibakteriyel bir madde ürettiğini anlıyor. Buna penisilin diyor. Ancak hastaları tedavi edecek kadar arındıramaz."
+        },
+        {
+          "type": "funFact",
+          "text": "Fleming daha sonra, daha düzenli olsaydı kutuyu atacağını söyledi. Laboratuvardaki karışıklık keşfe yardımcı oldu."
+        }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p2",
+      "title": "Oxford fikri tedaviye dönüştürüyor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1940** yıllarının başında Oxford'da **Howard Florey** ve **Ernst Zinciri** işe geri döndü. Ekipleriyle birlikte penisilin önce hayvanlar üzerinde izole edildi, konsantre edildi ve test edildi."
+        },
+        {
+          "type": "paragraph",
+          "text": "İkinci Dünya Savaşı işleri acil hale getirdi: enfekte askerlerin tedavi edilmesi gerekiyordu. Penisilin laboratuvardan stratejik bir konuya taşınıyor."
+        }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p3",
+      "title": "Toplu üretim",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "penicillin_antibiotic_production_laboratory",
+          "ratio": "4:3",
+          "caption": "Küf yetiştirmenin endüstriyel yollarını icat etmek gerekiyordu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Milyonlarca insanı tedavi etmek için çok büyük miktarlara ihtiyaç var. Amerika Birleşik Devletleri savaş sırasında üretimi sanayileştirdi. Dev fıçılar bira gibi küflenmeyi engelliyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "**1945**'de Fleming, Florey ve Chain Nobel Ödülü'nü aldı. Tıp antibiyotik çağına giriyor."
+        }
+      ]
+    },
+    {
+      "id": "course_51_la_decouverte_de_la_penicilline_fleming_p4",
+      "title": "Direnişin gölgesi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Günümüzde çok fazla yanlış kullanılan antibiyotik, bazı bakterilerin **direniş** olmasına olanak tanıdı: ilaçlar artık onları öldürmüyor. Fleming bu risk konusunda zaten uyarmıştı."
+        },
+        {
+          "type": "takeaway",
+          "text": "Penisilin, Fleming'in **1928**'de gözlemlediği bir tesadüften doğmuş, daha sonra Florey, Chain ve savaş endüstrisi sayesinde ilaç haline gelmiştir. Eskitmediğin sürece milyonlarca hayat kurtardı."
+        }
+      ]
+    }
+  ]
+}

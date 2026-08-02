@@ -1,0 +1,100 @@
+{
+  "id": "course_50_comment_le_savon_tue_t_il_les_virus",
+  "title": "Hoe doodt zeep virussen?",
+  "subtitle": "Hygiëne",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Zeep is geen “magie”. Het tast de vetlaag van bepaalde virussen aan en trekt deze uit uw huid. Dit is waarom 20 seconden belangrijk zijn.",
+  "hero": {
+    "image": "comment_le_savon_tue_les_virus",
+    "ratio": "16:9",
+    "hook": "Een eenvoudig wapen tegen virussen: moleculen die van water houden... en van vet."
+  },
+  "sections": [
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_intro",
+      "title": "Inleiding",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tijdens de COVID-19-pandemie staat een heel eenvoudig gebaar opnieuw centraal: je handen wassen met zeep. Er is geen laboratorium nodig. Alleen water, zeep en een beetje tijd."
+        },
+        {
+          "type": "paragraph",
+          "text": "Waarom werkt het zo goed? Omdat veel gevaarlijke virussen een envelop van vet met zich meedragen. En zeep is uitstekend voor het vernietigen van vet."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p1",
+      "title": "De zwakte van bepaalde virussen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sommige virussen, zoals het **coronavirus** of het griepvirus, hebben een buitenlaag van lipiden (vetten). Deze envelop beschermt ze... totdat ze zeep tegenkomen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Andere virussen, “naked” genoemd, hebben deze envelop niet. Ze zijn beter bestand tegen zeep en alcohol. Gelukkig zijn veel van de virussen die via handen en druppels reizen, omhuld."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p2",
+      "title": "Zeep, een tweezijdig molecuul",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "handwashing_soap_water_hands",
+          "ratio": "4:3",
+          "caption": "Wrijven zorgt ervoor dat de zeep alle hoeken van de handen bereikt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zeepmoleculen zijn [[oppervlakteactieve stoffen]]. Ze hebben een kop die van water houdt en een staart die van vet houdt. De staart zakt weg in de vettige envelop van het virus. Het hoofd blijft naar het water gericht."
+        },
+        {
+          "type": "paragraph",
+          "text": "Resultaat: de envelop scheurt. Het virus is uitgeschakeld. Vervolgens voert het water het vuil weg. Zeep “verbrandt” het virus niet als een zuur: het **kwijt** op en verwijdert het."
+        },
+        {
+          "type": "funFact",
+          "text": "Het is hetzelfde principe dat vet uit een pan verwijdert: de zeep pakt het vet en laat het met het water los."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p3",
+      "title": "Waarom 20 seconden",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Het kost tijd voordat de zeep alle plooien bereikt: tussen de vingers, onder de nagels, rond de polsen. Ongeveer **20 seconden** wrijving is het vaak aanbevolen minimum."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zonder wrijving werkt zeep minder goed. Water alleen ook niet: het tast het vetomhulsel niet effectief aan."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p4",
+      "title": "Zeep of hydroalcoholische gel?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Een gel met minimaal **60%** alcohol kan ook veel omhulde virussen vernietigen. Maar als er zichtbaar vuil of vet aanwezig is, is de gel minder effectief: het vuil werkt als een scherm. In dit geval blijft zeep en water de beste keuze."
+        },
+        {
+          "type": "takeaway",
+          "text": "Zeep doodt veel virussen door hun vettige laagjes weg te scheuren en ze vervolgens met water weg te spoelen. Tijd + wrijving = efficiëntie."
+        }
+      ]
+    }
+  ]
+}

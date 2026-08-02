@@ -1,0 +1,108 @@
+{
+  "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve",
+  "title": "Hogyan tárolja az agy az emlékeket?",
+  "subtitle": "Memória és neuronok",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "A memória nem fiókok könyvtára. Ez egy élő neuronhálózat, amelyek erősítik egymást, újjáépítik magukat és néha hibáznak.",
+  "hero": {
+    "image": "comment_le_cerveau_stocke_les_souvenirs",
+    "ratio": "16:9",
+    "hook": "Az emlék nem fájl: ez egy út, amelyet az agy megtanult újra megtenni."
+  },
+  "sections": [
+    {
+      "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A memóriát gyakran merevlemezként képzeljük el. A valóságban ez egy élő hálózat. **neuronok milliárdjai**, idegsejtek, újra összekapcsolódnak, megerősödnek vagy gyengülnek attól függően, hogy mit tapasztalunk."
+        },
+        {
+          "type": "paragraph",
+          "text": "Semmit sem tárolnak egy helyen. Az emlék egy elosztott nyom, kezdetben törékeny, alvás után szilárdabb, és mindig egy kicsit rekonstruálódik, amikor emlékszünk rá."
+        }
+      ]
+    },
+    {
+      "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p1",
+      "title": "Megerősítő kapcsolatok",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Két idegsejt közötti érintkezési pontot **szinapszis**-nek nevezik, vagyis azt a csomópontot, ahol az idegi jel áthalad. Az emberi agyban megközelítőleg **86 milliárd** neuron és több mint **100 000 milliárd** szinapszis található."
+        },
+        {
+          "type": "image",
+          "asset": "hippocampus_memory_brain",
+          "ratio": "auto",
+          "caption": "A hippokampusz központi szerepet játszik az emlékek kialakulásában."
+        },
+        {
+          "type": "paragraph",
+          "text": "Amikor az információ ismétlődik vagy erős érzelmekhez kapcsolódik, ugyanazok a neuronok együtt aktiválódnak. Könnyebben kiválthatóak: ez a [[Hosszú távú potencírozás]], a szinapszisok tartós megerősödése. Minél többet használunk egy áramkört, annál „szélesebb” lesz az út. A memória tehát nem egy tárolt objektum, hanem egy **nyom** a hálózatban."
+        },
+        {
+          "type": "funFact",
+          "text": "Az agy tárolókapacitása a becslések szerint körülbelül **2,5 petabájt**, ami több millió órányi videónak felel meg. De ez nem korong: ez egy élő szövet, amely újraszerveződik."
+        }
+      ]
+    },
+    {
+      "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p2",
+      "title": "A csikóhal, az emlékek állomásfőnöke",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A **csikóhal**, egy kis építmény a [[temporális lebeny]] templomok mögötti régióban, nem őrzi örökké az emlékeket. Fogadja őket, **kódol**, memórianyomokká alakítja, majd újra elosztja a **kéreg**-ben, az agy külső rétegében. Ennek az átvitelnek a neve **konszolidáció**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Főleg a **alvás** alatt történik. Működő hippokampusz nélkül a jelen pillanatban élhetünk, de már nem őrizünk új tudatos emlékeket. Egy jelenben ragadunk, közelmúlt nélkül."
+        },
+        {
+          "type": "funFact",
+          "text": "Az 1953-ban megműtt **H.M.** beteg már nem alkotott új emlékeket. A tükörben való rajzolásban azonban minden nap fejlődött, anélkül, hogy eszébe jutott volna, hogy már próbálkozott volna: emléke a gesztusokról sértetlen maradt."
+        }
+      ]
+    },
+    {
+      "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p3",
+      "title": "Emlékezni annyi, mint újjáépíteni",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Egy memória előhívása nem egy videó lejátszása. Minden alkalommal, amikor kiveszi, **formátum**, módosíthatóvá válik. Aktuális érzelmeink, új tudásunk vagy egy javaslatunk módosíthatja azt, mielőtt „újra rögzítené”."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Erzsébet Loftus** pszichológus megmutatta, hogy egyszerű kérdésekkel beültethető **hamis emlékek**. Innen a mai óvatosság a szemtanúk vallomásával szemben: jóhiszeműen az agy pótolja a hiányokat."
+        }
+      ]
+    },
+    {
+      "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p4",
+      "title": "Több emlék egyetlen agyban",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A tények és életepizódok emlékezete, amit elmondhatunk, főként a hippocampuson halad át. A [[procedurális memória]], azaz a kerékpározás vagy az úszás, ehelyett a **kisagy**-től, az agy hátsó részén található szerkezettől és más régebbi struktúráktól függ."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ez az oka annak, hogy egyes amnéziás betegek elfelejtik saját nevüket, de mégis zongoráznak. A memória nem egyetlen fiók, hanem rendszerek mozaikja."
+        },
+        {
+          "type": "takeaway",
+          "text": "Az emlék egy dinamikus nyom: a szinapszisok megerősödnek, megszilárdulnak, különösen éjszaka, és minden emlékeztetővel újjáépülnek. Ez soha nem fix fájl."
+        }
+      ]
+    }
+  ]
+}

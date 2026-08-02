@@ -1,0 +1,98 @@
+{
+  "id": "course_59_la_decouverte_de_l_anesthesie",
+  "title": "Anestezinin keşfi",
+  "subtitle": "İlaç",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "1846'dan önce ameliyatlar çoğunlukla bilinçli olarak ve aşırı acı çekerek yapılıyordu. Anestezi ameliyatı işkenceye değil bakıma dönüştürür.",
+  "hero": {
+    "image": "la_decouverte_de_l_anesthesie",
+    "ratio": "16:9",
+    "hook": "1846'da bir gün Boston'da ameliyat artık acıya karşı bir yarış olmaktan çıktı."
+  },
+  "sections": [
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Uyumadan amputasyonu hayal edin. 19. yüzyılın ortalarından önce bu bir normdu. Hastayı bağlarız, hızlı hareket ederiz, dua ederiz."
+        },
+        {
+          "type": "paragraph",
+          "text": "**anestezi** her şeyi değiştirir: ağrının farkına varmadan ameliyat yapmanızı sağlar. Modern cerrahi nihayet zaman alabilir."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p1",
+      "title": "Önce: hıza karşı acı",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "surgery_without_anesthesia_19th_century",
+          "ratio": "4:3",
+          "caption": "Anestezi olmadan cerrahın son derece hızlı olması gerekiyordu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cerrahlar hızlarına göre değerlendirildi. İnsanları hareketsiz kılmak için alkol, afyon veya kaba kuvvet kullanıldı. Birçok hasta şoktan, enfeksiyondan veya kanamadan öldü."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p2",
+      "title": "1846: eterin günü",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "ether_anesthesia_first_demonstration_1846",
+          "ratio": "4:3",
+          "caption": "Boston'da halka açık bir gösteri tıp dünyasını ikna etti."
+        },
+        {
+          "type": "paragraph",
+          "text": "**16 Ekim 1846**, Boston'da diş hekimi **William Morton** bir hastaya **eter** nefes almasını sağlıyor. Cerrah **John Warren** bir boyun tümörü üzerinde ameliyat yapıyor. Hasta çığlık atmıyor. Oda şaşkına döndü."
+        },
+        {
+          "type": "funFact",
+          "text": "Warren'ın \"Beyler, bu bir saçmalık değil\" dediği bildirildi. Bu ifade meşhur kaldı."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p3",
+      "title": "Sonraki: kloroform ve tartışmalar",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bunu özellikle Büyük Britanya'da popüler hale gelen **kloroform** gibi diğer ürünler takip etti. Kimin neyi “icat ettiği” konusunda rekabetler ortaya çıkıyor. Patentin önemi yok: Fikir tüm dünyaya yayılıyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Geriye bir sorun kalıyor: Öldürmeden uykuya dalmak. Dozunu ayarlamalı, nefesinizi ve kalbinizi izlemelisiniz. Yeni bir uzmanlık doğuyor."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p4",
+      "title": "Bugün anestezi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Günümüzde anestezi uzmanı hassas gazlar ve ilaçlar, her şeyi ölçen makineler kullanıyor. Tüm vücudunuzu veya sadece bir bölgeyi (lokal veya lokorejyonel anestezi) uyutabilirsiniz."
+        },
+        {
+          "type": "takeaway",
+          "text": "**1846**'de eterin gösterilmesinden bu yana anestezi ameliyatta devrim yarattı: daha az ağrı, daha fazla zaman, daha fazla hassasiyet... ve güvenlik başlı başına bir bilim haline geldi."
+        }
+      ]
+    }
+  ]
+}

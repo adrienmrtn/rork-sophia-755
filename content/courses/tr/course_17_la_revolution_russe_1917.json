@@ -1,0 +1,146 @@
+{
+  "id": "course_17_la_revolution_russe_1917",
+  "title": "Rus Devrimi",
+  "subtitle": "1917",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "Rusya, sekiz aydan kısa bir süre içinde Çarların iktidarından Bolşeviklerin iktidarına geçti. 1917, dünyayı onlarca yıl boyunca bölecek bir model icat ediyor.",
+  "hero": {
+    "image": "la_revolution_russe_1917",
+    "ratio": "16:9",
+    "hook": "Sekiz ay içinde bin yıllık bir imparatorluk devriliyor... ve 20. yüzyıl ikiye ayrılıyor."
+  },
+  "sections": [
+    {
+      "id": "course_17_la_revolution_russe_1917_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1917**'de, sekiz aydan kısa bir süre içinde Rusya, mutlak monarşiden, **Vladimir Lenin** liderliğindeki devrimci bir parti olan **bolşevikler** liderliğindeki bir rejime geçti. Bu basit bir ayaklanma değil. Bir imparatorluğun savaşın ağırlığı altında çökmesi, ardından boşluğa düşmesidir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu değişim, 20. yüzyılın büyük bir bölümünde dünyayı bölecek bir model yaratıyor."
+        }
+      ]
+    },
+    {
+      "id": "course_17_la_revolution_russe_1917_p1",
+      "title": "Nefesi kesilmiş bir Rusya",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1914'ten bu yana [[Birinci Dünya Savaşı]]'ye bağlı olan Rusya artık takip etmiyor. Şimdiden **1,7 milyon** ölü asker. İsyanlar. Başkent **Petrograd**'de (şimdi St. Petersburg) un ve kömür kıtlığı var. Çar **Nicholas II**, Rusya parlamentosu [[Douma]] tarafından talep edilen reformları reddediyor."
+        },
+        {
+          "type": "image",
+          "asset": "tsar_nicholas_ii_portrait",
+          "ratio": "4:3",
+          "caption": "Nicholas II, monarşinin son çarı, gücü tükeniyor."
+        },
+        {
+          "type": "funFact",
+          "text": "Sarayda etkili bir keşiş olan [[Rasputin]]'yi öldürmeyi amaçlayan zehir, keklerin içindeki şekerin akmasıyla etkisiz hale getirilmiş olacaktı: Suikast efsanesi, tahtın itibarsızlığı hakkında çok şey söylüyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "**1915**'de cephede komutayı devralan çar, yenilgilerin tek sorumlusu haline gelir. Rasputin'in Çariçe **Alexandra** üzerindeki etkisi sonuçta imparatorluk ailesinin prestijini mahvetti."
+        }
+      ]
+    },
+    {
+      "id": "course_17_la_revolution_russe_1917_p2",
+      "title": "Şubat: Romanovların sonu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Şubat 1917**'de (o zamanlar Rusya'da kullanılan, Batı'da birkaç gün geciken [[Jülyen takvimi]]'ye göre), devrim ekmekten başladı. İşçiler sokağa çıkıyor. Garnizon kardeşleşiyor. Nicholas II tahttan feragat ediyor **2 Mart**: **Romanov** hanedanının 300 yıllık hükümdarlığı sona erdi."
+        },
+        {
+          "type": "image",
+          "asset": "russian_revolution_1917_petrograd",
+          "ratio": "4:3",
+          "caption": "Petrograd 1917: Sokak tahttan önce gelir."
+        },
+        {
+          "type": "paragraph",
+          "text": "O zaman “çifte iktidar” devreye giriyor. Bir yanda yasal bir **Geçici Hükümet**. Diğer yanda, fabrikaları ve kışlaları kontrol eden işçi ve askerlerden oluşan bir konsey olan [[Petrograd Sovyeti]]. **Alexander Kerenski**, geçici figür, Rusya'yı savaşta tutuyor. Halk barış, ekmek ve toprak istiyor."
+        }
+      ]
+    },
+    {
+      "id": "course_17_la_revolution_russe_1917_p3",
+      "title": "Ekim: Lenin iktidara geliyor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lenin, Rusya'yı zayıflatmayı uman Almanya tarafından organize edilen bir \"öncü trenle\" sürgünden dönüyor. Nisan ayından itibaren [[Nisan Tezleri]] bağırıyordu: **“Barış, Ekmek, Toprak”**. Bolşevikler, olağanüstü organizatör [[Leon Troçki]] ile ayaklanmaya hazırlandı."
+        },
+        {
+          "type": "image",
+          "asset": "lenin_portrait",
+          "ratio": "4:3",
+          "caption": "Lenin, organize bir devralmanın stratejisti."
+        },
+        {
+          "type": "funFact",
+          "text": "Kışlık Saray alındığında çarların şarap mahzenleri o kadar genişti ki, devrimin sarhoşluğa dönüşmesini önlemek için muhafızların görevlendirilmesi gerekiyordu."
+        },
+        {
+          "type": "paragraph",
+          "text": "**7 Kasım 1917** (Rus takvimine göre 25 Ekim) gecesi, köprüler, istasyonlar ve telgraflar neredeyse tek kurşun bile atılmadan yıkıldı. Bunu Geçici Hükümet'in merkezi olan Kışlık Saray takip ediyor. Daha sonra **1922**'ye kadar kanlı bir iç savaş başlar."
+        }
+      ]
+    },
+    {
+      "id": "course_17_la_revolution_russe_1917_p4",
+      "title": "SSCB'nin doğuşu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bolşeviklerin siyasi polisi **Çeka** terörü başlatıyor. Temmuz **1918**'de imparatorluk ailesi Yekaterinburg'da idam edildi. [[Brest-Litovsk]] Barışı, ağır toprak kayıpları pahasına Rusya'yı savaştan uzaklaştırır. **1922**'de, Marx'ın fikirleriyle Lenin'in yöntemini birleştiren ideoloji olan [[Marksizm-Leninizm]] üzerine inşa edilen ilk devlet olan **SSCB** doğdu."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Şubat. 1917",
+              "title": "Şubat Devrimi",
+              "detail": "Nicholas II'nin tahttan çekilmesi."
+            },
+            {
+              "date": "Nisan 1917",
+              "title": "Nisan Tezleri",
+              "detail": "Lenin geçici olanla uzlaşmayı reddediyor."
+            },
+            {
+              "date": "Ekim/Kasım 1917",
+              "title": "Devralmak",
+              "detail": "Petrograd'da Bolşevik darbesi."
+            },
+            {
+              "date": "Mart 1918",
+              "title": "Brest-Litovsk",
+              "detail": "Savaşın sonu, toprak kayıpları."
+            },
+            {
+              "date": "1922",
+              "title": "SSCB'nin doğuşu",
+              "detail": "Kalıcı olarak yeni bir devlet kurulur."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "**1917**'de çarlığın çöküşü ve Bolşeviklerin yönetimi ele geçirmesi, bir ekmek isyanını dünyanın ilk komünist devletinin doğuşuna dönüştürdü."
+        }
+      ]
+    }
+  ]
+}

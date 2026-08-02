@@ -1,0 +1,120 @@
+{
+  "id": "course_196_merlin_l_enchanteur",
+  "title": "Merlin, a varázsló",
+  "subtitle": "Arthur mágusa",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Merlin, Arthur tanácsadója, prófétája és mágusa: démonból és keresztségből született alak, Camelot építésze, saját szerelmének foglya.",
+  "hero": {
+    "image": "merlin_l_enchanteur",
+    "ratio": "16:9",
+    "hook": "Egy démon fia, bölcsőtől megkeresztelkedett: Merlin a jót szolgálja a rosszból született erőkkel."
+  },
+  "sections": [
+    {
+      "id": "course_196_merlin_l_enchanteur_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Kis sólyom** a nyugati középkor leghíresebb bűvésze. Bárd, próféta, **Arthur** király tanácsadója: az ókori kelta világ és a keresztény lovagság határán áll."
+        },
+        {
+          "type": "paragraph",
+          "text": "A természete paradox. Egy része a démonoktól származik, a másik a mennyből. Története nem egy varázslaté: egy hibrid lény küzdelme, aki a jó szolgálatát választja, amíg a szerelem el nem távolítja a világtól."
+        }
+      ]
+    },
+    {
+      "id": "course_196_merlin_l_enchanteur_p1",
+      "title": "A démon és a keresztség hibrid eredete",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A **Robert de Boron** (XII. század) költőben a démonok antikrisztust akarnak létrehozni. Egy [[inkubus démon]], egy szellem, amely egyesül egy alvó nővel, elcsábít egy fiatal jámbor keresztény nőt. A terv kudarcot vall: az anya gyóntat, és megkeresztelteti a gyermeket."
+        },
+        {
+          "type": "image",
+          "asset": "merlin_wizard_medieval_manuscript_illumination",
+          "ratio": "4:3",
+          "caption": "Merlin, a középkori mágus alakja az erdő és az udvar között."
+        },
+        {
+          "type": "funFact",
+          "text": "A „Merlin” név a walesi **Myrddin** szóból származik. Geoffrey of Monmouth megváltoztatta a „d” betűt „l”-re, hogy elkerülje a latin *szar* szójátékhoz túl közeli szójátékot."
+        },
+        {
+          "type": "paragraph",
+          "text": "A [[Keresztség]] eltörli az átkot, de hagyja az erőket: a múlt ismerete (démoni örökség) és a [[prófécia a középkori kultúrában]] ajándékozása. Merlin tud alakot váltani. Mögötte **Myrddin Wyllt**, egy 6. századi walesi bárdot találunk, aki egy csata után megőrülve [[Celyddon]] erdejébe menekült."
+        }
+      ]
+    },
+    {
+      "id": "course_196_merlin_l_enchanteur_p2",
+      "title": "Az artúri sors építésze",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Merlin nem illuzionista. Ő a királyság kezese. Segít [[Utherpendragon]] királynak felvenni Cornwall hercegének vonásait, hogy csatlakozzon **Igerne** hercegnőhöz. Ebből az éjszakából született **Arthur**."
+        },
+        {
+          "type": "image",
+          "asset": "merlin_arthur_camelot_medieval_illustration",
+          "ratio": "4:3",
+          "caption": "Merlin a trónhoz vezeti Arthurt és Camelotot."
+        },
+        {
+          "type": "paragraph",
+          "text": "Titokban felneveli a gyermeket, az üllőben hangszereli a kardot, majd elvezeti Arthurt a Tó Hölgyéhez, hogy megszerezze a [[Excalibur]]-t, akinek hüvelye megvéd a halálos sebektől. A **Camelot**-nél ő tervezi a **Kerekasztalt**, és elhelyezi a [[Veszélyes ostrom]]-t, a legtisztább lovagnak fenntartott üres széket. Látja a közelgő veszélyeket. Azt is tudja, hogy a sors a végén mindig elmúlik."
+        }
+      ]
+    },
+    {
+      "id": "course_196_merlin_l_enchanteur_p3",
+      "title": "A varázsló bukása: szerelem és felejtés",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Merlin eléri a végét. A Barenton-kút közelében azonban beleszeret **Viviane**-be, a tó hölgyébe. Megtanítja a legtitkosabb varázslataira, bár tudja, hogy elveszíti."
+        },
+        {
+          "type": "image",
+          "asset": "viviane_lady_of_the_lake_merlin_medieval_art",
+          "ratio": "4:3",
+          "caption": "Viviane bezárja Merlint: a mágusok idejének vége."
+        },
+        {
+          "type": "funFact",
+          "text": "A változattól függően Viviane galagonyabokorba, üvegtoronyba vagy **Brocéliande** üregbe zárja. Halhatatlan, Merlin nem halt meg: a világon kívül alszik."
+        },
+        {
+          "type": "paragraph",
+          "text": "Amikor a lovagok a Grálhoz indulnak, Merlin mágiájának már nincs helye. Visszavonása a mítoszok korából a hit korába való átmenetet jelzi."
+        }
+      ]
+    },
+    {
+      "id": "course_196_merlin_l_enchanteur_p4",
+      "title": "Irodalmi örökség és a főmágus alakja",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Merlin az öreg bölcs képére meredt: szakáll, bot, találós kérdések. Tőle a **Gandalf** Tolkien és **Dumbledore** Rowling esetében. Ő az adjuváns, aki tud, de nem tud fellépni a hős helyett."
+        },
+        {
+          "type": "paragraph",
+          "text": "Híd a vad erdő és az udvar között, [[Druida]] lenyomatot őriz, miközben tanácsot ad a királyoknak. Még ma is azt suttogja, hogy a birodalmak törékenyek, és a bölcsesség nem mindig védi meg magát."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Kis sólyom**, aki egy démon szülötte és a keresztség által megmentett, megtervezi **ArthurZZENDBOLD sorsát, majd ZZ eltűnik, **Viviane**** foglya: a nyugati varázsló tartós modellje."
+        }
+      ]
+    }
+  ]
+}

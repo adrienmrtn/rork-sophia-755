@@ -1,0 +1,129 @@
+{
+  "id": "course_15_la_belle_epoque_1871_1914",
+  "title": "A Belle Époque",
+  "subtitle": "1871-1914",
+  "subject": "histoire",
+  "subcategory": "Modern Revolutions & Conflicts",
+  "description": "Az 1870-es háború vége és 1914 augusztusa között Európa hitt a haladásban. Villany, kiállítások, új művészetek... és katasztrófához vezető törések.",
+  "hero": {
+    "image": "la_belle_epoque",
+    "ratio": "16:9",
+    "hook": "Negyven év hit a fejlődésben… mielőtt minden megváltozott volna 1914-ben."
+  },
+  "sections": [
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A **Belle Époque** a viszonylagos béke időszakát jelöli a [[francia-porosz háború]] (**1871**) vége és a [[Első világháború]] (**ENDBOLDZZZ4ZZENDBOLDZ1**) között. Hiszünk a tudományban, a haladásban, az értelemben."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nyugat-Európa gazdag rétegei számára ez négy évtizednyi kényelem és találmány volt. De a furnér alatt már ott ragyognak a társadalmi törések és rivalizálás, amelyek mindent felrobbantanak."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p1",
+      "title": "Amikor a technológia átalakítja a mindennapi életet",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A második ipari forradalom elhozza a **elektromos áram**, **olaj**, a kémiát. A villamos és a metró (Párizs, **1900**) megváltoztatja a várost. Megszületik az autó és a repülőgép. A telefon lerövidíti a távolságokat."
+        },
+        {
+          "type": "image",
+          "asset": "paris_universal_exhibition_1900",
+          "ratio": "4:3",
+          "caption": "Az 1900-as párizsi egyetemes kiállítás, a haladás bemutatója."
+        },
+        {
+          "type": "funFact",
+          "text": "A „Belle Époque” név csak a **1914** után jelenik meg. A kortársak nem a Belle Époque-ban éltek: a lövészárkok túlélői találták fel ezt az elveszett paradicsomot."
+        },
+        {
+          "type": "paragraph",
+          "text": "A **1900 Világkiállítás** **50 millió** látogatót vonz. A Lumière testvérek mozija és a Moulin Rouge a szórakozás fővárosává teszik Párizst. [[Auguste Comte pozitivizmusa]], egy nagyon befolyásos filozófia az optimizmust összegzi: a tudomány mindent megold."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p2",
+      "title": "Színfalak mögött",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A körutak mögött a munkások gyakran **10-12 óra** naponta dolgoznak valódi védelem nélkül. A városi szegénység szítja az osztályok közötti feszültséget."
+        },
+        {
+          "type": "image",
+          "asset": "eiffel_tower_1889",
+          "ratio": "4:3",
+          "caption": "Az Eiffel-torony (1889), a modernitás ikonja, amely nem mindenki számára előnyös."
+        },
+        {
+          "type": "paragraph",
+          "text": "Globális szinten Európa osztozik Afrikában. A [[Berlini Konferencia]] (**1884-1885**) az érintett népek megkérdezése nélkül állítja fel a határokat. Franciaországban a [[Dreyfus-ügy]] szétszakítja a Köztársaságot: egy zsidó tisztet, Alfred Dreyfust jogtalanul ítélik el kémkedésért, és napvilágra kerül az antiszemitizmus."
+        }
+      ]
+    },
+    {
+      "id": "course_15_la_belle_epoque_1871_1914_p3",
+      "title": "Új művészetek, aztán az ősz",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A művészetek felrobbannak. A [[Art Nouveau]] meggörbíti a homlokzatokat. A [[fauvizmus]] és a [[Kubizmus]] felrázza a festéket. Az orvos [[Sigmund Freud]] a tudattalant kutatja. Albert Einstein publikálja a [[Relativitás]] **1905**-ben: a tér és az idő már nem az, amit gondoltunk."
+        },
+        {
+          "type": "funFact",
+          "text": "A **1913**-ben Igor Sztravinszkij *A tavaszi rítusa* című balettje akkora botrányt kavart Párizsban, hogy a nézők összecsaptak."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aztán minden megváltozik. **1914. június 28-án** **Ferenc Ferdinánd** főherceget, Ausztria-Magyarország örökösét meggyilkolták Szarajevóban. A szövetségek fogaskerekei beindulnak. **augusztus 4**-én az Egyesült Királyság belép a háborúba. A fejlődésbe vetett hit meghal a lövészárokban."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1871",
+              "title": "A francia-porosz háború vége",
+              "detail": "Egységes Németország születése, francia harag."
+            },
+            {
+              "date": "1889",
+              "title": "Eiffel-torony",
+              "detail": "A technikai modernitás jelképe."
+            },
+            {
+              "date": "1894-1906",
+              "title": "Dreyfus-ügy",
+              "detail": "A Köztársaság szétszakítja magát."
+            },
+            {
+              "date": "1900",
+              "title": "Univerzális Kiállítás",
+              "detail": "Párizs, a világ kirakata."
+            },
+            {
+              "date": "1914 augusztus",
+              "title": "Nagy Háború",
+              "detail": "A Belle Époque hirtelen véget ér."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "A Belle Époque (**1871-1914**) a technikai fejlődést és a mély töréseket ötvözi, mielőtt belesüllyedne a Nagy Háború káoszába."
+        }
+      ]
+    }
+  ]
+}

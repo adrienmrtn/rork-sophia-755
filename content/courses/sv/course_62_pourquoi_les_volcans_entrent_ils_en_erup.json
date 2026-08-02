@@ -1,0 +1,116 @@
+{
+  "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup",
+  "title": "Varför får vulkaner utbrott?",
+  "subtitle": "Magma & tallrikar",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "En vulkan är en öppning i jordskorpan. Magma under tryck stiger där och blir till lava. Det är därför jorden \"spottar\".",
+  "hero": {
+    "image": "pourquoi_les_volcans_entrent_en_eruption",
+    "ratio": "16:9",
+    "hook": "Under våra fötter är jorden inte frusen. Ibland öppnar hon ett eldfönster."
+  },
+  "sections": [
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En vulkan är inte bara ett berg som andas eld. Det är en öppning i jordens yttre hölje. På detta sätt stiger **magma**: en blandning av smält sten och gas under högt tryck. Väl ute i det fria blir denna magma **tvättas**."
+        },
+        {
+          "type": "paragraph",
+          "text": "För att förstå ett utbrott måste du titta under ytan: värmen inuti planeten, plattornas rörelse och hur gaserna bygger upp trycket, lite som att skaka en flaska läsk."
+        }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p1",
+      "title": "Under våra fötter är ingenting stilla",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jorden är gjord av lager. På ytan är **skorpa** ett styvt hölje, **5 till 70 km tjockt. Nedanför ligger **mantle****, till ca**2 900 km** djup. Pälsen är för det mesta solid, men under mycket långa perioder kan den flyta mycket långsamt, som ultratjock honung."
+        },
+        {
+          "type": "image",
+          "asset": "volcano_eruption_lava",
+          "ratio": "auto",
+          "caption": "Ett utbrott: magma stiger till ytan."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denna inre värme får materia att stiga och falla: dessa är **konvektionsströmmar**. De trycker ut stora bitar av skorpan som kallas plack. Detta är [[Platttektonik]]: jordens yta är uppskuren i plattor som rör sig isär, kolliderar eller glider mot varandra."
+        },
+        {
+          "type": "funFact",
+          "text": "Vissa mycket snabba uppgångar ger diamanter som bildats på mer än **150 km** djup. De har inte tid att byta om på vägen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vid [[rygg-]] flyttar plattorna isär och magman reser sig lätt. I ett område av [[Subduktion]] dyker en tallrik under en annan och bär med sig vatten. Detta vatten sänker smältpunkten för stenar: magma bildas och stiger sedan."
+        }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p2",
+      "title": "Från magma till utbrott",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sten smälter inte bara \"för att det är varmt\". Det finns tre triggers: en temperaturhöjning, ett tryckfall eller tillsats av vatten. När magma väl har bildats är den mindre tät än berget runt den. Den försöker därför resa sig, lite som en luftbubbla i vatten."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ofta stannar den först i en **magma-kammare**, en reservoar några kilometer under ytan. Där bildar de lösta gaserna bubblor när trycket minskar. Om \"pluggen\" av sten ovanför inte längre håller, börjar utbrottet."
+        },
+        {
+          "type": "funFact",
+          "text": "Utbrottet av **Tambora** i **1815**, Indonesien, var så kraftfullt att det kylde det globala klimatet. **1816** fick smeknamnet \"året utan sommar\", med katastrofala skördar i Europa och Nordamerika."
+        }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p3",
+      "title": "Flytande eller explosivt?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Alla utslag är inte likadana. Allt beror på magmans **viskositet**, det vill säga om den är ganska flytande eller klibbig. En flytande magma, som vid **Hawaii** eller vid Piton de la Fournaise (Reunion Island), låter gaserna fly. Lavaflöden: utbrott **översvallande**."
+        },
+        {
+          "type": "paragraph",
+          "text": "En klibbig magma fångar gaserna. Trycket ökar, sedan exploderar allt. Aska, block och [[eldiga moln]] (brinnande moln av gas och aska som rullar nerför sluttningarna) kan sedan ödelägga det omgivande området. Detta är stilen med vulkaner som Mount **Saint Helens** (USA) eller **Pinatubo** (Filippinerna)."
+        },
+        {
+          "type": "paragraph",
+          "text": "En vulkan kan också förbli lugn i århundraden. I **79** efter. BC, **Vesuvius**, nära Neapel, begravde Pompeji under aska. Om **80%** av världens vulkaniska aktivitet sker under haven, långt från våra ögon."
+        }
+      ]
+    },
+    {
+      "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p4",
+      "title": "Fara, fertilitet, avgrundsliv",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vulkaner formade jordens tidiga atmosfär genom att släppa ut gaser. Deras aska berikar också jorden: många bördiga jordbruksregioner lever vid foten av aktiva vulkaner. Men ett mycket stort utbrott kan skicka svavelpartiklar högt upp i atmosfären och kyla klimatet i månader."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vissa sajter, som Yellowstones [[supervulkan]] i USA, övervakas noga. Under havet, nära åsarna, spyr [[svarta rökare]] brinnande vätskor rika på mineraler. Ekosystem lever där utan solljus, näring av de varma källornas kemi."
+        },
+        {
+          "type": "takeaway",
+          "text": "Vulkaner driver ut magma under tryck, särskilt vid tektoniska plattgränser. Magmans viskositet avgör om utbrottet flyter tyst eller exploderar."
+        }
+      ]
+    }
+  ]
+}

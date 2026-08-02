@@ -1,0 +1,154 @@
+{
+  "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus",
+  "title": "Nașterea zeilor greci",
+  "subtitle": "Kronos, Zeus, Olimp",
+  "subject": "mythologie",
+  "subcategory": "Greece: the gods",
+  "description": "Înainte de Zeus, tatăl său Cronos și-a devorat copiii. Așa a dat naștere vidului zeilor Olimpului.",
+  "hero": {
+    "image": "la_naissance_des_dieux_grecs",
+    "ratio": "16:9",
+    "hook": "Înainte de Olimp, lumea se naște în gol, violență și lovituri de stat în familie."
+  },
+  "sections": [
+    {
+      "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Înainte ca zeii lui **Olimp** să domnească, mitologia greacă își imaginează un vid original: **Haos**. Nu este o mizerie zgomotoasă. Este un gol, un abis din care iese viața."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nașterea zeilor nu este dulce. Este o serie de crize și capturi de putere. Poetul **Hesiod**, în secolul al VIII-lea î.Hr., o povestește în [[Teogonia lui Hesiod]]. Așa trece lumea de la gol la curtea lui **Zeus**."
+        }
+      ]
+    },
+    {
+      "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus_p1",
+      "title": "Din Haos se nasc Pământul și Cerul",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Din **Haos** forțele se nasc mai întâi fără chip uman. **Gaia**, Pământul, oferă un teren solid. **Tartru** este o închisoare adânc sub lume. **Eros**, dorința, permite ființelor să se unească."
+        },
+        {
+          "type": "image",
+          "asset": "gaia_primordial_goddess_greek_mythology",
+          "ratio": "4:3",
+          "caption": "Gaia, Pământul, prima putere a lumii grecești."
+        },
+        {
+          "type": "paragraph",
+          "text": "Numai Gaia generează **Ouranos**, Cerul Înstelat. Din cuplul lor se nasc **Titanii**, zeii forței brute și monștrii: **Ciclopii** și **Hecatonchire**, uriași cu o sută de brațe."
+        },
+        {
+          "type": "funFact",
+          "text": "Pentru greci, lumea nu se naște din nimic. Se naște dintr-o separare: spațiul dintre Cer și Pământ dă în sfârșit loc vieții."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ouranos își urăște copiii. Le încuie în pântecele Gaiei. Pământul se sufocă. Se pregătește prima revoluție a cosmosului."
+        }
+      ]
+    },
+    {
+      "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus_p2",
+      "title": "Kronos își răsturnează tatăl",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gaia forjează o seceră de [[neclintit]], un metal legendar de duritate absolută. Doar cel mai tânăr Titan, vicleanul **Kronos**, acceptă să acționeze. Ascuns de partea mamei sale, el îl castrează pe Ouranos și separă pentru totdeauna Raiul de Pământ."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kronos devine rege. Dar sângele lui Ouranos încă fecundează lumea: **Erinele**, zeițele răzbunării familiei, și **Afrodita**, zeița iubirii, au apărut din spuma mării."
+        },
+        {
+          "type": "funFact",
+          "text": "Numele **Afrodita** provine din grecescul „aphros”, „spumă”. Nașterea sa amintește de crima care a deschis domnia lui Cronos."
+        },
+        {
+          "type": "paragraph",
+          "text": "O profeție îl amenință pe Cronos: unul dintre fiii săi îl va detrona. Pentru a o evita, își devorează copiii de îndată ce se nasc, **Hestia**, **Demeter**, **Hera**, **Hades**, **Poseidon**. Zeii greci au temeri foarte umane: este divinul grec [[Antropomorfismul divin grecesc]]."
+        }
+      ]
+    },
+    {
+      "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus_p3",
+      "title": "Zeus își eliberează frații și surorile",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Rhea**, soția lui Kronos, refuză să-și piardă ultimul copil. Ea îi întinde o piatră înfășată. Bebelușul adevărat, **Zeus**, crește în secret în peștera [[Dicté]], în Creta. [[Curete]], războinici sacri, își acoperă strigătele cu strigătele lor. Capra **Amalthée** îl hrănește."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ca adult, Zeus îl forțează pe Cronos să-și regurgiteze frații. Copiii ies gata să lupte. Începe **Titanomahia**, un război de zece ani între Titani și viitorii olimpici. Cyclops îi oferă lui Zeus arma decisivă: **fulgerul**."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1",
+              "title": "Haos",
+              "detail": "Vidul original deschide spațiul lumii."
+            },
+            {
+              "date": "2",
+              "title": "Gaia și Ouranos",
+              "detail": "Pământul și Cerul generează Titanii."
+            },
+            {
+              "date": "3",
+              "title": "regele Kronos",
+              "detail": "Își castrează tatăl, apoi își devorează copiii."
+            },
+            {
+              "date": "4",
+              "title": "Victoria lui Zeus",
+              "detail": "Fulgerul decide Titanomahia."
+            },
+            {
+              "date": "5",
+              "title": "Olimp",
+              "detail": "Zeus, Poseidon și Hades împart lumea."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Titanii sunt aruncați în Tartar. **Zeus** ia cerul, **Poseidon** mările, **Hades** lumea morților. **Olimp** devine o curte divină, mai ordonată decât forța titanilor."
+        }
+      ]
+    },
+    {
+      "id": "course_161_la_naissance_des_dieux_grecs_cronos_zeus_p4",
+      "title": "O ordine fragilă, foarte umană",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Chiar și învingător, Zeus rămâne îngrijorat. Se căsătorește cu **Métis**, Înțelepciunea, apoi o înghite de frica unui fiu mai puternic. Din acest act se naște **Atena**, ieșind complet înarmată din craniul tatălui ei: strategia devine stâlpul puterii."
+        },
+        {
+          "type": "funFact",
+          "text": "Cuvântul **panică** provine de la zeul **Bang**. În timpul unui război împotriva uriașilor, strigătul lui ar fi semănat teroare bruscă și irațională."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aceste mituri nu fac din zei modele de virtute. Îi fac oglinzi: gelozie, teamă de succesiune, sete de domnie. De la Haos la Olimp, grecii spun povestea modului în care civilizația încearcă să stăpânească violența crudă."
+        },
+        {
+          "type": "takeaway",
+          "text": "Mitologia greacă trece de la **Haos** la ordinul **Olimp** prin lovituri succesive de forță. Zeii ne împărtășesc pasiunile, dar nu și mortalitatea noastră."
+        }
+      ]
+    }
+  ]
+}

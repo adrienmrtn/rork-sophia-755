@@ -1,0 +1,128 @@
+{
+  "id": "course_225_la_montee_des_eaux",
+  "title": "Yükselen sular",
+  "subtitle": "Deniz seviyeleri yükseliyor",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "2100 yılına gelindiğinde okyanus seviyeleri **Bölge** metre kadar artabilir. Bütün ülkeler ve kıyı megakentleri için bu artık uzak bir hipotez değil, bir planlama meselesidir.",
+  "hero": {
+    "image": "la_montee_des_eaux",
+    "ratio": "16:9",
+    "hook": "Deniz her yıl biraz daha yükseliyor ve bazı ülkeler şimdiden hamle yapmayı planlıyor."
+  },
+  "sections": [
+    {
+      "id": "course_225_la_montee_des_eaux_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Binlerce yıldır okyanus seviyeleri kabaca sabit kaldı. Sanayi çağından bu yana tırmanıyor ve bu yükselişin hızı yıldan yıla artıyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "2100 yılına gelindiğinde, emisyon seçimlerimize bağlı olarak okyanuslar 30 santimetreden bir metreye kadar yükselebilir. Pek çok kıyı şeridi için bu artık uzak bir tehdit değil, çok somut bir planlama sorunudur."
+        }
+      ]
+    },
+    {
+      "id": "course_225_la_montee_des_eaux_p1",
+      "title": "İki mekanizma, tek yön",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Deniz seviyeleri iki farklı fiziksel nedenden dolayı yükseliyor. Birincisi [[Termal genleşme]]: Su ısındığında her sıvı gibi molekülleri daha fazla hareket eder ve hacmi biraz artar. Okyanuslar, 1970 yılından bu yana insan faaliyeti nedeniyle üretilen aşırı ısının %90'ından fazlasını emdi ve bu ısı okyanusların hacmini artırıyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "İkinci neden ise kuru karadaki buzların erimesidir. Bunu, halihazırda su üzerinde yüzen ve erimesi deniz seviyelerinin yükselmesine neden olmayan Arktik buz kütlesiyle karıştırmamaya dikkat edin. Bunlar [[Buz tabakası]], Grönland ve Antarktika'nın zeminine yerleştirilen ve gerçekten de tatlı su ekleyerek okyanusları taşan devasa buz tabakaları."
+        },
+        {
+          "type": "image",
+          "asset": "greenland_ice_sheet_melting_glacier",
+          "ratio": "16:9",
+          "caption": "Grönland'ın erimesi tam olsaydı okyanuslar 7 metre yükselirdi."
+        },
+        {
+          "type": "funFact",
+          "text": "Grönland her yıl yaklaşık 280 milyar ton buz kaybediyor; bu da Fransa'nın tamamını 50 santimetrelik bir tabakayla kaplamaya yetecek kadar su anlamına geliyor."
+        }
+      ]
+    },
+    {
+      "id": "course_225_la_montee_des_eaux_p2",
+      "title": "Bilim adamlarını endişelendiren hız",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1880'den bu yana küresel deniz seviyeleri yaklaşık 20 santimetre arttı. Her şeyden önce araştırmacıları alarma geçiren şey mevcut hızdır: 20. yüzyılda yılda 1,4 mm civarındaydı, **Bugün yılda 3,6 mm**, %150'den fazla bir hızlanma."
+        },
+        {
+          "type": "paragraph",
+          "text": "[[IPCC]] uzmanları, okyanusların sıcaklık değişikliklerine tepki vermesinin zaman alması nedeniyle, emisyonlar şimdi büyük ölçüde azalmış olsa bile bu eğilimin onlarca yıl devam edeceğini tahmin ediyor."
+        },
+        {
+          "type": "image",
+          "asset": "coastal_flooding_sea_level_rise_city",
+          "ratio": "4:3",
+          "caption": "50 cm'lik bir yükselme, 100 yıllık bir su baskını yıllık bir olaya dönüşebilir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gerçek tehlike, denizlerin ortalama olarak biraz daha yüksek olması değil, aynı zamanda denizlerin çoğalmasıdır: 50 santimetrelik bir yükselme, yüzyılda bir beklenen bir felaketi neredeyse yıllık bir olaya dönüştürmek için yeterli olabilir. [[Fırtına dalgalanmaları ve yüz yıllık seller]]"
+        }
+      ]
+    },
+    {
+      "id": "course_225_la_montee_des_eaux_p3",
+      "title": "Coğrafi adaletsizlik",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Yükselen su seviyeleri esas olarak küresel ısınmaya en az katkıda bulunan bölgeleri etkiliyor. Nil, Mekong veya Ganj gibi büyük nehir deltaları ön saflarda yer alıyor. 170 milyon kişinin yaşadığı Bangladeş'te 1 metrelik artış toprakların yüzde 17'sinin kaybına neden olabilir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Maldivler veya Kiribati gibi küçük ada devletleri için tamamen su altında kaybolmak artık bir bilim kurgu hipotezi değil, gerçek bir siyasi planlama konusu. Tam tersine, Miami veya New York gibi zengin mega şehirler su kanallarına ve pompalara milyarlarca dolar yatırım yapıyor."
+        },
+        {
+          "type": "image",
+          "asset": "jakarta_indonesia_sinking_flooding_maldives",
+          "ratio": "16:9",
+          "caption": "Cakarta, yükselen sularla yerin çökmesini birleştiriyor; bu çifte bir tehdit."
+        },
+        {
+          "type": "funFact",
+          "text": "2009 yılında Maldivler hükümeti, büyük bir iklim konferansı öncesinde dünyayı uyarmak için dalgıç kıyafetleriyle bir su altı kabine toplantısı düzenledi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Endonezya'nın **Cakarta** kentinde, yeraltı suyunun aşırı pompalanması nedeniyle şehir daha da yerin dibine batıyor. Bu çifte tehditle karşı karşıya kalan ülke, radikal bir karar alarak Borneo adasında yepyeni bir başkent Nusantara'yı inşa etti."
+        }
+      ]
+    },
+    {
+      "id": "course_225_la_montee_des_eaux_p4",
+      "title": "Uyum sağlayın veya geri adım atın",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bu zorluk karşısında iki strateji birbirini tamamlıyor. Birincisi, artışı 2100'ün üzerine yavaşlatmak için ısınmayı sınırlamak. İkincisi, [[Mangrov]]'ler veya kum tepeleri gibi doğal savunmaları güçlendirerek veya Hollanda'daki büyük çalışmalar gibi daha ağır çözümlerle zaten kaçınılmaz olana uyum sağlamak."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bazı durumlarda tek çözüm geriye gitmek olacaktır: Felaketler çok sık tekrarlanmadan önce insanları ve faaliyetleri iç bölgelere taşımak. Bu, yüzyıllardır kıyıya bağlı kalan toplumlar için gerçek bir alışkanlık değişimidir."
+        },
+        {
+          "type": "takeaway",
+          "text": "Deniz seviyeleri, termal genleşme ve kara buzlarının erimesinin birleşik etkisi altında yılda 3,6 mm yükseliyor. 2100 yılına gelindiğinde bu artış bir metreye ulaşabilir ve yüz milyonlarca insanı yerinden etmeye zorlayabilir."
+        }
+      ]
+    }
+  ]
+}

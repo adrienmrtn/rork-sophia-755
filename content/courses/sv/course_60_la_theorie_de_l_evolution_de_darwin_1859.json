@@ -1,0 +1,102 @@
+{
+  "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859",
+  "title": "Darwins evolutionsteori",
+  "subtitle": "1859",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "År 1859 publicerade Darwin The Origin of Species. Den centrala idén: levande saker förändras över tid genom naturligt urval.",
+  "hero": {
+    "image": "la_theorie_de_l_evolution_de_darwin",
+    "ratio": "16:9",
+    "hook": "Arter är inte fixerade. De förändras. Långsamt. Men säkert."
+  },
+  "sections": [
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1859** publicerade **Charles Darwin** *Om arternas ursprung*. Boken chockerar, fascinerar, splittrar. Dess centrala idé är dock enkel att formulera."
+        },
+        {
+          "type": "paragraph",
+          "text": "Levande saker varierar. Vissa varianter hjälper till att överleva och föröka sig. Dessa variationer överförs. Under generationer förändras befolkningen."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p1",
+      "title": "Den ögonöppnande resan",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "charles_darwin_portrait",
+          "ratio": "4:3",
+          "caption": "Darwin, brittisk naturforskare från 1800-talet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Som en ung pojke lämnar Darwin på skeppet **Beagle**. I åratal observerade han växter, fossiler, fåglar. På Galapagosöarna märkte han att närliggande fåglar hade olika näbbar beroende på deras mat."
+        },
+        {
+          "type": "image",
+          "asset": "darwin_finches_galapagos_beaks",
+          "ratio": "4:3",
+          "caption": "Munstycken anpassade till olika dieter: en stark indikator."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p2",
+      "title": "Naturligt urval, på vanlig engelska",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Föreställ dig en population av djur. Vissa springer lite snabbare, smälter lite bättre, står emot kylan lite mer. Om det hjälper dem att överleva och få ungar blir dessa egenskaper vanligare."
+        },
+        {
+          "type": "paragraph",
+          "text": "Det är inte så att individer \"vill\" utvecklas. Det är ett filter: miljön behåller det som fungerar. Darwin kallar detta **naturligt urval**."
+        },
+        {
+          "type": "funFact",
+          "text": "Darwin väntade länge innan han publicerade. Han fruktade skandal. En annan naturforskare, **Alfred Russell Wallace**, kom på liknande idéer: detta fick Darwin att släppa sin bok."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p3",
+      "title": "Idékrocken",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "På 1800-talet trodde många att arter skapades som de var. Att säga att de förändras, och att människor delar en historia med andra djur, skakar om religionen och samhället."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vetenskapen går framåt: fossiler, arternas geografi och senare genetik bekräftar den allmänna idén."
+        }
+      ]
+    },
+    {
+      "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p4",
+      "title": "Och idag?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vi vet nu att DNA bär på variationer. Vi observerar evolution i labbet (bakterier, virus) och i naturen. Vi bekämpar också bakterier som är resistenta mot antibiotika: detta är levande evolution."
+        },
+        {
+          "type": "takeaway",
+          "text": "Darwin visade att levande saker utvecklas genom naturligt urval: egenskaper användbara för överlevnad och reproduktion sprids. Modern genetik har bekräftat och förtydligat detta ramverk."
+        }
+      ]
+    }
+  ]
+}

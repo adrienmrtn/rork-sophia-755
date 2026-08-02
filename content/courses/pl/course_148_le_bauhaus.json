@@ -1,0 +1,126 @@
+{
+  "id": "course_148_le_bauhaus",
+  "title": "Bauhausu",
+  "subtitle": "1919-1933",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "Pomiędzy **1919** i **1933** szkoła **Bauhaus** łączy sztukę, rzemiosło i przemysł w Niemczech. Zamknięty przez nazistów, mimo to rozpowszechnił nowoczesny design na całym świecie.",
+  "hero": {
+    "image": "le_bauhaus",
+    "ratio": "16:9",
+    "hook": "14-letnia niemiecka szkoła zaprojektowała współczesny świat, od krzeseł po smartfony."
+  },
+  "sections": [
+    {
+      "id": "course_148_le_bauhaus_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Bauhaus** (1919-1933) to najbardziej wpływowa szkoła artystyczna i projektowa XX wieku. Założony w Niemczech tuż po I wojnie światowej, odrzuca niepotrzebny XIX-wieczny wystrój. Jego cel: wynalezienie prostego języka, dostosowanego do epoki przemysłowej."
+        },
+        {
+          "type": "paragraph",
+          "text": "Łącząc sztukę, rzemiosło i technikę kładzie podwaliny pod nowoczesny [[Funkcjonalizm w projektowaniu]]. Jego życie jest krótkie. Jego dziedzictwo jest wszędzie."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p1",
+      "title": "Weimar 1919: zniesienie hierarchii sztuk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "W **1919** architekt **Waltera Gropiusa** założył Bauhaus w **Weimar**. Jego manifest jest jasny: ostatecznym celem wszelkiego stworzenia jest architektura. Koniec z granicami pomiędzy szlachetnymi „sztukami pięknymi” a wtórnymi „sztukami stosowanymi”. Rzemiosło staje się podstawą wszystkiego."
+        },
+        {
+          "type": "image",
+          "asset": "bauhaus_weimar_1919_walter_gropius_building",
+          "ratio": "4:3",
+          "caption": "Bauhaus: szkoła, w której uczysz się poprzez tworzenie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Każdy warsztat ma dwóch mistrzów: artystę i rzemieślnika. Uczą tam takie postacie jak [[Wasilija Kandinsky’ego]], rosyjski malarz abstrakcyjny. Szkoła nawiązuje także dialog z [[De Stijl]], holenderskim ruchem mającym obsesję na punkcie prostokąta i czystych kolorów."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p2",
+      "title": "Forma podąża za funkcją",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Następnie zainstalowana w **Dessau** szkoła przeszła na produkcję masową. Słynne hasło: **„forma podążania za działaniem”**. Ozdobę uważa się za niepotrzebną. Poszukujemy prostych, pięknych przedmiotów, które można wyprodukować w fabryce."
+        },
+        {
+          "type": "funFact",
+          "text": "**Marcela Breuera**, nauczyciel w Bauhausie, poddaje recyklingowi rury stalowe z rowerów, aby wynaleźć lekkie krzesła. Materiał fabryczny staje się meblami do salonu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Warsztaty testują metal, szkło, tekstylia i typografię. Celem nie jest już pojedynczy obiekt luksusowy. Jest to obiekt typowy, dostępny dla jak największej liczby osób."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p3",
+      "title": "Zamknięty przez nazistów, uratowany przez wygnanie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Szkoła jest denerwująca. Zarzuca się mu, że jest zbyt nowoczesny, zbyt międzynarodowy, zbyt lewicowy. Po pobycie w Berlinie pod dowództwem **Miesa van der Rohe** przyszedł [[Zamknięcie przez nazistów (1933)]]. Reżim postrzega to jako „kulturowy bolszewizm”."
+        },
+        {
+          "type": "image",
+          "asset": "mies_van_der_rohe_modernist_architecture",
+          "ratio": "4:3",
+          "caption": "Mies van der Rohe: ostatnie kierownictwo Bauhausu, następnie amerykańskie wygnanie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Zamknięcie staje się dyfuzją. Mistrzowie jadą do Stanów Zjednoczonych, Wielkiej Brytanii, Palestyny. W Tel Awiwie ich pomysły pielęgnują [[Białe Miasto Tel Awiw]], rozległy zespół białej nowoczesnej architektury."
+        }
+      ]
+    },
+    {
+      "id": "course_148_le_bauhaus_p4",
+      "title": "Projekt, który stał się niewidoczny przez oczywistość",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dziś dziedzictwo Bauhausu jest wszędzie: meble w płaskich opakowaniach, proste budynki, przejrzyste interfejsy, bezszeryfowa typografia [[bezszeryfowy]]. IKEA, lotniska, nasze telefony: geometryczna przejrzystość Bauhausu stała się zwyczajnym wystrojem świata."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1919",
+              "title": "Fundacja w Weimarze",
+              "detail": "Gropius otwiera szkołę artystyczno-rzemieślno-przemysłową."
+            },
+            {
+              "date": "1925",
+              "title": "Dessau",
+              "detail": "Przejście na produkcję masową."
+            },
+            {
+              "date": "1933",
+              "title": "Zamknięcie nazistów",
+              "detail": "Wygnanie rozprzestrzenia Bauhaus na cały świat."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "W ciągu zaledwie 14 lat Bauhaus wynalazł nowoczesną koncepcję projektowania: mniej ozdób, więcej funkcji, przedmioty, które są piękne, bo są użyteczne. Jej polityczne zamknięcie tylko przyspieszyło podbój życia codziennego."
+        }
+      ]
+    }
+  ]
+}

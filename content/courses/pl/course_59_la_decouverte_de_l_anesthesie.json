@@ -1,0 +1,98 @@
+{
+  "id": "course_59_la_decouverte_de_l_anesthesie",
+  "title": "Odkrycie znieczulenia",
+  "subtitle": "Medycyna",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Przed 1846 rokiem operację przeprowadzano często świadomie i z ogromnym bólem. Znieczulenie przekształca operację w opiekę, a nie torturę.",
+  "hero": {
+    "image": "la_decouverte_de_l_anesthesie",
+    "ratio": "16:9",
+    "hook": "Pewnego dnia w 1846 roku w Bostonie operacja przestała być wyścigiem z bólem."
+  },
+  "sections": [
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_intro",
+      "title": "Wprowadzenie",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Wyobraź sobie amputację bez zasypiania. Przed połową XIX wieku była to norma. Przypinamy pacjenta pasami, poruszamy się szybko, modlimy się."
+        },
+        {
+          "type": "paragraph",
+          "text": "**znieczulenie** zmienia wszystko: pozwala działać bez świadomości bólu. Nowoczesna chirurgia może wreszcie zająć trochę czasu."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p1",
+      "title": "Przed: prędkość kontra cierpienie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "surgery_without_anesthesia_19th_century",
+          "ratio": "4:3",
+          "caption": "Bez znieczulenia chirurg musiał działać niezwykle szybko."
+        },
+        {
+          "type": "paragraph",
+          "text": "Chirurgów oceniano na podstawie szybkości. Do unieruchamiania ludzi używano alkoholu, opium lub brutalnej siły. Wielu pacjentów zmarło z powodu wstrząsu, infekcji lub krwotoku."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p2",
+      "title": "1846: dzień eteru",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "ether_anesthesia_first_demonstration_1846",
+          "ratio": "4:3",
+          "caption": "Publiczna demonstracja w Bostonie przekonała świat medyczny."
+        },
+        {
+          "type": "paragraph",
+          "text": "**16 października 1846** w Bostonie dentysta **Williama Mortona** każe pacjentowi wdychać **eter**. Chirurg **Johna Warrena** operuje guza szyi. Pacjent nie krzyczy. Pokój jest oszołomiony."
+        },
+        {
+          "type": "funFact",
+          "text": "Warren podobno powiedział: „Panowie, to nie jest bzdura”. Wyrażenie to pozostało popularne."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p3",
+      "title": "Dalej: chloroform i debaty",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Potem pojawiły się inne produkty, takie jak **chloroform**, spopularyzowany zwłaszcza w Wielkiej Brytanii. Pojawia się rywalizacja o to, kto co „wynalazł”. Patent nie ma znaczenia: pomysł rozprzestrzenia się na cały świat."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pozostaje jeden problem: uśpić bez zabijania. Trzeba to dawkować, monitorować oddech i serce. Rodzi się nowa specjalność."
+        }
+      ]
+    },
+    {
+      "id": "course_59_la_decouverte_de_l_anesthesie_p4",
+      "title": "Dzisiaj znieczulenie",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dziś anestezjolog posługuje się precyzyjnymi gazami i lekami, maszynami, które wszystko mierzą. Można uśpić całe ciało lub tylko jego obszar (znieczulenie miejscowe lub lokoregionalne)."
+        },
+        {
+          "type": "takeaway",
+          "text": "Od czasu demonstracji eteru w **1846** znieczulenie zmieniło chirurgię: mniej bólu, więcej czasu, więcej precyzji... a bezpieczeństwo stało się nauką samą w sobie."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "id": "course_124_rembrandt_et_l_ecole_flamande",
+  "title": "Rembrandt och den flamländska skolan",
+  "subtitle": "1606-1669",
+  "subject": "art",
+  "subcategory": "Painting & Movements",
+  "description": "**Rembrandt van Rijn** är den holländska guldålderns store målare. Självporträtt, bibliska scener och *Nattskift*: han målar den mänskliga själen.",
+  "hero": {
+    "image": "rembrandt_et_l_ecole_flamande",
+    "ratio": "16:9",
+    "hook": "Från Amsterdams härlighet till ruin: en målare som gjorde skugga till ett själsspråk."
+  },
+  "sections": [
+    {
+      "id": "course_124_rembrandt_et_l_ecole_flamande_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Rembrandt van Rijn** (1606-1669) är mästaren på den holländska skolan på 1600-talet. I [[holländska guldåldern]] blir Nederländerna en kommersiell makt och ett centrum för tankefrihet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hans självporträtt, hans bibliska scener och hans berömda *Nattvakt* gör chiaroscuro till ett känslomässigt språk. Det placerar människor, fantastiska eller trötta, i centrum för allt."
+        }
+      ]
+    },
+    {
+      "id": "course_124_rembrandt_et_l_ecole_flamande_p1",
+      "title": "Amsterdam: en borgerlig marknad",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "På 1600-talet dominerade **Förenade provinsen** världshandeln. Till skillnad från resten av Europa, där kyrkan och kungarna kontrollerar konsten, drivs den holländska marknaden av en protestantisk bourgeoisi. Hon vill ha tavlor till huset, inte kyrkfresker."
+        },
+        {
+          "type": "paragraph",
+          "text": "Detta sammanhang gynnar genrer: landskap, stilleben, vardagsscener. **Vermeer** och [[Hals]] sticker ut. Rembrandt flyttade till Amsterdam i **1631** och blev den mest eftertraktade porträttmålaren."
+        },
+        {
+          "type": "funFact",
+          "text": "Efter hans konkurs skapade hans son Titus och hans partner Hendrickje ett konstföretag där Rembrandt officiellt var anställd, för att skydda sina nya målningar från borgenärer."
+        },
+        {
+          "type": "paragraph",
+          "text": "Men hans livsstil är för stor. I **1656** träffar [[personlig konkurs]] honom. Hus, möbler och samlingar går på auktion. Han vägrar dock att mjuka upp sin stil för att behaga mode."
+        }
+      ]
+    },
+    {
+      "id": "course_124_rembrandt_et_l_ecole_flamande_p2",
+      "title": "Invändigt ljus och tjock färg",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rembrandt återuppfinner [[chiaroscuro]] som ärvts från [[Caravaggio]]. I hans verk är ljuset inte bara för att visa: det verkar filtrera inifrån karaktärerna. Blicken fokuserar på ansikten och händer."
+        },
+        {
+          "type": "image",
+          "asset": "rembrandt_night_watch_painting",
+          "ratio": "4:3",
+          "caption": "Nattvakten: en milis i rörelse, inte en fast uppställning."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hans andra signatur: **impasto**, denna färg applicerad så tjock att den skapar en relief. I en tid som vill ha släta ytor vågar han använda material. Det sades att vissa porträtt kunde ha lyfts av deras näsor. Han söker det sanna, inte det vackra idealet."
+        },
+        {
+          "type": "funFact",
+          "text": "Kemisk analys avslöjade plumbonacrit i sin impasto: en sällsynt blyförening som hjälpte dess tjocka lager att torka snabbare."
+        }
+      ]
+    },
+    {
+      "id": "course_124_rembrandt_et_l_ecole_flamande_p3",
+      "title": "Nattvakten: ett porträtt som rör sig",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I **1642** levererar Rembrandt *Kapten Frans Banning Cocqs sällskap*, känd som **Nattvakt**. Order för [[Kloveniersdoelen]], högkvarter för en borgerlig milis i Amsterdam. Vanligtvis poserar milismännen i en rad, var och en väl synlig eftersom de har betalat."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rembrandt visar dem i rörelse och lämnar högkvarteret. Chiaroscuro hierarkiserar figurerna: några övergår i skuggan. Legenden säger att de rasande milismännen orsakade dess fall. I verkligheten beundrades verket, även om det var förvirrande."
+        },
+        {
+          "type": "funFact",
+          "text": "Titeln *Nattskift* är en feltolkning: scenen är dagaktiv. Århundraden av smutsig lack har mörkat duken så mycket att den såg ut som en nattpatrull."
+        },
+        {
+          "type": "paragraph",
+          "text": "På 1700-talet, för att installera den vid rådhuset, skars dess fyra sidor. Karaktärerna försvinner. Den ursprungliga kompositionen var mycket rymligare."
+        }
+      ]
+    },
+    {
+      "id": "course_124_rembrandt_et_l_ecole_flamande_p4",
+      "title": "Måla dig själv, en livstid",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rembrandt målade ungefär **80 till 90 självporträtt** under nästan fyrtio år. Ung, han verkar arrogant, täckt av pälsar och smycken. Efter ruinen och sorgen ändras tonen: mer förförelse, en rå ärlighet inför åldrandet."
+        },
+        {
+          "type": "image",
+          "asset": "rembrandt_self_portrait_old_age",
+          "ratio": "4:3",
+          "caption": "Sena självporträtt: en look utan mask."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1631",
+              "title": "Ankomst till Amsterdam",
+              "detail": "Han blir stadens stjärnporträttör."
+            },
+            {
+              "date": "1642",
+              "title": "Nattvakten",
+              "detail": "Porträtt av milis på väg, revolutionärt."
+            },
+            {
+              "date": "1656",
+              "title": "Konkurs",
+              "detail": "Hus och samlingar säljs på auktion."
+            },
+            {
+              "date": "1669",
+              "title": "Död",
+              "detail": "Han dog i relativ anonymitet."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Död i **1669**, begravd utan pompa och ståt, han kommer att påverka Goya som [[Francis Bacon]]. Han förblir målaren som förvandlade pigment till inre ljus."
+        },
+        {
+          "type": "takeaway",
+          "text": "Rembrandt förstorade människans inre genom chiaroscuro och tjock färg. Från Amsterdams härlighet till ruin, hans självporträtt förblir en unik dagbok över livet."
+        }
+      ]
+    }
+  ]
+}

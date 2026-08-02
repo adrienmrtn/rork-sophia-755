@@ -1,0 +1,100 @@
+{
+  "id": "course_50_comment_le_savon_tue_t_il_les_virus",
+  "title": "Hur dödar tvål virus?",
+  "subtitle": "Hygien",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Tvål är inte \"magi\". Det angriper det feta skalet hos vissa virus och drar ut dem ur huden. Här är varför 20 sekunder är viktiga.",
+  "hero": {
+    "image": "comment_le_savon_tue_les_virus",
+    "ratio": "16:9",
+    "hook": "Ett enkelt vapen mot virus: molekyler som gillar vatten... och fett."
+  },
+  "sections": [
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Under covid-19-pandemin har en mycket enkel gest återigen blivit central: att tvätta händerna med tvål. Inget behov av ett laboratorium. Bara vatten, tvål och lite tid."
+        },
+        {
+          "type": "paragraph",
+          "text": "Varför fungerar det så bra? Eftersom många farliga virus bär ett hölje av fett. Och tvål är utmärkt för att förstöra fett."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p1",
+      "title": "Svagheten hos vissa virus",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vissa virus, som **coronavirus** eller influensavirus, har ett yttre hölje av lipider (fetter). Detta kuvert skyddar dem... tills det stöter på tvål."
+        },
+        {
+          "type": "paragraph",
+          "text": "Andra virus, kallade \"nakna\", har inte detta hölje. De är mer resistenta mot tvål och alkohol. Lyckligtvis är många av de virus som färdas genom händer och droppar omslutna."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p2",
+      "title": "Tvål, en tvåsidig molekyl",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "handwashing_soap_water_hands",
+          "ratio": "4:3",
+          "caption": "Gnuggning hjälper tvålen att nå varje hörn av händerna."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tvålmolekyler är [[ytaktiva ämnen]]. De har ett huvud som gillar vatten och en svans som gillar fett. Svansen sjunker ner i virusets feta hölje. Huvudet förblir vänt mot vattnet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Resultat: kuvertet går sönder. Viruset är inaktiverat. Då bär vattnet bort skräpet. Tvål \"bränner\" inte viruset som en syra: det **förlora** och tar bort det."
+        },
+        {
+          "type": "funFact",
+          "text": "Det är samma princip som tar bort fett från en kastrull: tvålen tar tag i fettet och låter det gå med vattnet."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p3",
+      "title": "Varför 20 sekunder",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Det tar tid för tvålen att nå alla veck: mellan fingrarna, under naglarna, runt handlederna. Omkring **20 sekunder** friktion, detta är det minimum som ofta rekommenderas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Utan friktion fungerar tvål mindre bra. Enbart vatten heller: det angriper inte effektivt det feta höljet."
+        }
+      ]
+    },
+    {
+      "id": "course_50_comment_le_savon_tue_t_il_les_virus_p4",
+      "title": "Tvål eller hydroalkoholisk gel?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En gel med minst **60%** alkohol kan också förstöra många höljeförsedda virus. Men om det finns synlig smuts eller fett är gelén mindre effektiv: smutsen fungerar som en skärm. I det här fallet förblir tvål och vatten det bästa valet."
+        },
+        {
+          "type": "takeaway",
+          "text": "Tvål dödar många virus genom att slita bort deras feta hölje och sedan tvätta bort dem med vattnet. Tid + friktion = effektivitet."
+        }
+      ]
+    }
+  ]
+}

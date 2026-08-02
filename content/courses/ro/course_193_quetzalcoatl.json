@@ -1,0 +1,140 @@
+{
+  "id": "course_193_quetzalcoatl",
+  "title": "Quetzalcoatl",
+  "subtitle": "Șarpele cu pene",
+  "subject": "mythologie",
+  "subcategory": "Other mythologies",
+  "description": "Quetzalcoatl, șarpele cu pene, este zeul civilizației mezoamericane. Mitul său îmbină creația, exilul și întâlnirea fatală cu Cortés.",
+  "hero": {
+    "image": "quetzalcoatl",
+    "ratio": "16:9",
+    "hook": "Dumnezeu, rege și profeție: șarpele cu pene se întinde pe două mii de ani de istorie mexicană."
+  },
+  "sections": [
+    {
+      "id": "course_193_quetzalcoatl_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Quetzalcoatl**, „Șarpele cu pene”, este una dintre cele mai bogate figuri din Mexicul precolumbian. El a fost venerat de mai bine de două milenii, de la [[Teotihuacan]], un oraș mare de pe platoul central, până la azteci și printre mayași sub numele [[Kukulkán]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "El unește pământul (șarpele) și cerul (pana). Zeu al civilizației, cunoașterii și ordinii morale, mitul său ajunge să se intersecteze cu istoria reală: cucerirea spaniolă a **1519**."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p1",
+      "title": "Zeul care a inventat porumbul",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În [[nahuatl]], **Quetzalcoatl** provine de la [[quetzal]], pasărea cu pene verzi, și de la *coatl*, șarpele. Această unire o face puntea dintre uman și divin."
+        },
+        {
+          "type": "image",
+          "asset": "quetzalcoatl_feathered_serpent_aztec_sculpture",
+          "ratio": "4:3",
+          "caption": "Quetzalcoatl, șarpele cu pene: pământ și cer împletite."
+        },
+        {
+          "type": "paragraph",
+          "text": "În [[Cosmogonia celor cinci sori]], el coboară la [[Mictlán]], lumea morților, pentru a colecta oasele oamenilor din trecut. El îi readuce la viață cu sângele său. Apoi fură **porumb** furnicilor: hrana fondatoare a Mexicului. Ca zeu al vântului, el deschide și drumul către ploile lui [[Tlaloc]]."
+        },
+        {
+          "type": "funFact",
+          "text": "Penele cozii quetzalului pot măsura **60 cm**. Printre mayași și azteci, uciderea păsării era pedepsită cu moartea: i-au fost luate câteva pene, apoi eliberate."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p2",
+      "title": "Regele-preot din Tula",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mitul are și o față istorică: **Topiltzin Quetzalcoatl**, rege-preot al **Tula** în secolul al X-lea. Ar fi vrut să reformeze cultul și să înlocuiască sacrificiile umane cu ofrande de flori și fluturi."
+        },
+        {
+          "type": "image",
+          "asset": "tula_toltec_pyramid_warriors_sculpture_mexico",
+          "ratio": "4:3",
+          "caption": "Tula, oraș toltec legat de domnia și căderea lui Quetzalcoatl."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rivalul său **Tezcatlipoca** îl împinge să bea pulque, o băutură fermentată. Umilit, regele a exilat spre est. Potrivit legendei, el promite să se întoarcă un an „Un Reed”. Această promisiune va avea greutate."
+        },
+        {
+          "type": "funFact",
+          "text": "După plecarea sa, Quetzalcoatl devine uneori Steaua Dimineții: planeta Venus. Zeul nu moare, el își schimbă forma."
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p3",
+      "title": "1519: când mitul îl întâlnește pe Cortés",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În **1519**, **Hernán Cortés** ajunge în est, anul „One Reed” al calendarului aztec, cel în care era așteptată întoarcerea zeului. Împăratul **Moctezuma II** ezită: ar trebui să luptăm cu un invadator sau să primim o divinitate?"
+        },
+        {
+          "type": "image",
+          "asset": "herna_u0301n_corte_u0301s_arrival_mexico_1519_moctezuma_painting",
+          "ratio": "4:3",
+          "caption": "1519: sosirea lui Cortés îndeplinește promisiunea întoarcerii divine."
+        },
+        {
+          "type": "paragraph",
+          "text": "El trimite daruri de aur și pene. [[cuceritorii]] văd asta ca pe o invitație. Mitul, adevărat sau amplificat după fapt, devine o armă psihologică în căderea [[Tenochtitlán]], capitala aztecă."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "Mit",
+              "title": "Creator",
+              "detail": "Oasele morților, sângele divin, darul de porumb."
+            },
+            {
+              "date": "secolul al X-lea",
+              "title": "Exilat din Tula",
+              "detail": "Preotul-rege merge spre est."
+            },
+            {
+              "date": "1519",
+              "title": "Cortes",
+              "detail": "Revenirea așteptată devine cucerire."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_193_quetzalcoatl_p4",
+      "title": "Un simbol care nu moare niciodată",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "După cucerire, Quetzalcoatl nu a dispărut. Unii călugări cred că văd un apostol acolo. Mai târziu, Mexicul independent a făcut din el o emblemă a măreției precolumbiene. Muraliștii secolului XX, precum Diego Rivera, îl pictează ca pe sufletul țării."
+        },
+        {
+          "type": "paragraph",
+          "text": "Chiar și astăzi, Șarpele cu pene exprimă o identitate: rădăcini în pământ, ambiție îndreptată spre cer."
+        },
+        {
+          "type": "takeaway",
+          "text": "**Quetzalcoatl**, Șarpele cu pene, este zeul civilizației mezoamericane. Creator, rege exilat, apoi profeție fatală în **1519**, el rămâne un simbol central al Mexicului."
+        }
+      ]
+    }
+  ]
+}

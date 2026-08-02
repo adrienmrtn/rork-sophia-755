@@ -1,0 +1,104 @@
+{
+  "id": "course_216_la_dette_mondiale",
+  "title": "Globální dluh",
+  "subtitle": "Více než 300 % celosvětového HDP",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Globální dluh nikdy nebyl vyšší. Máme se toho obávat, nebo je to normální nástroj pro financování růstu a čelit krizím?",
+  "hero": {
+    "image": "la_dette_mondiale",
+    "ratio": "16:9",
+    "hook": "Japonsko dluží ekvivalent 260 % ​​svého HDP... a nikoho to netrápí. Zde je důvod."
+  },
+  "sections": [
+    {
+      "id": "course_216_la_dette_mondiale_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Globální dluh států, podniků a domácností dohromady dnes přesahuje **300% světového HDP**, což je absolutní rekord v ekonomické historii."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tento působivý údaj skrývá jemnější realitu: dluh umožňuje financovat růst, reagovat na zdravotní krize nebo se připravit na ekologický přechod. Nese s sebou ale také riziko kolapsu důvěry."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p1",
+      "title": "Jak se stát zadlužuje",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stát se zadluží, když jeho výdaje strukturálně převyšují jeho daňové příjmy. Tento rozpočtový deficit je vyrovnán půjčkami na finančních trzích. Podle [[Keynesiánská teorie]] jsou půjčky na stimulaci ekonomiky v době krize legitimní za předpokladu, že budou splaceny, jakmile se vrátí růst."
+        },
+        {
+          "type": "paragraph",
+          "text": "V praxi si vlády půjčují snadno ve špatných časech, ale zřídka splácejí v dobrých časech. Dluh se pak dlouhodobě kumuluje. Případ Japonska je fascinující: s dluhem blízkým 260 % ​​jeho HDP by země logicky měla být v krizi. Není tomu tak, protože většinu dluhu drží jeho vlastní banky a střadatelé, chránění před zahraničními trhy."
+        },
+        {
+          "type": "funFact",
+          "text": "Spojené království dokončilo splácení dluhů z napoleonských válek a finanční bubliny z roku 1720 až v roce 2015."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p2",
+      "title": "Ne všechny dluhy jsou stejné",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Skutečné nebezpečí dluhu závisí nejen na jeho výši, ale také na měně, ve které je půjčován. Bohaté země si půjčují ve svých vlastních měnách, což investory uklidňuje."
+        },
+        {
+          "type": "image",
+          "asset": "japan_government_debt_statistics_chart",
+          "ratio": "16:9",
+          "caption": "Globální veřejný dluh dnes přesahuje 300 % HDP planety."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rozvojové země si často musí půjčovat v dolarech kvůli nedostatku měny považované za dostatečně stabilní. Pokud jejich národní měna ztratí hodnotu vůči dolaru, částka, která má být splacena, exploduje přes noc. V těchto krizích [[MMF]] často zasahuje, ale obecně ukládá přísné zásady úspor, které těžce zatěžují obyvatelstvo."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p3",
+      "title": "Může být dluh nekonečný?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Debata stojí proti dvěma vizím ekonomiky. [[Moderní monetární teorie]] tvrdí, že stát nemůže zbankrotovat, pokud si půjčuje ve své vlastní měně: skutečný limit není libovolný údaj, jako je 60 % uložených Maastrichtskou smlouvou v Evropě, ale úroveň inflace."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jiní, opatrnější ekonomové se obávají, že příliš mnoho dluhů zastraší důvěru trhu, což povede k prudkému nárůstu úrokových sazeb. Krize eurozóny v letech 2010 až 2012 toto riziko ilustrovala: země jako Řecko, které byly zbaveny vlastní centrální banky, zaznamenaly nárůst úrokových sazeb za půjčky tak, že ohrožovaly samotnou existenci evropské měny."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p4",
+      "title": "Nové tváře dluhů",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Globální dluh se netýká pouze států: rostoucí podíl na něm nesou také podniky a domácnosti, někdy prostřednictvím špatně regulovaných finančních hráčů. Objevuje se také nová diskuse kolem klimatického dluhu: měli bychom s dluhem, který financuje energetickou transformaci, zacházet jinak než s dluhem, který financuje jednoduchou spotřebu?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Otázka spravedlnosti mezi generacemi zůstává ústřední: zadlužit se dnes znamená brát daně od zítřka. Pokud však tyto peníze financují udržitelnou infrastrukturu nebo dobré vzdělání, lze je také považovat za dar předaný budoucím generacím, nikoli za zátěž."
+        },
+        {
+          "type": "takeaway",
+          "text": "Globální dluh přesahuje 300 % HDP planety, což je historický rekord. Jeho nebezpečnost závisí méně na jeho výši než na měně, ve které je vypůjčena: Japonsko dokazuje, že dluh ve výši 260 % ​​může zůstat stabilní, pokud je držen lokálně."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "id": "course_223_l_economie_circulaire",
+  "title": "De circulaire economie",
+  "subtitle": "Even weg van alles wat wegwerpbaar is",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "**Extraheren, fabrikant, weggooien**: dit model put de planeet uit. De circulaire economie stelt het tegenovergestelde voor: objecten en materialen zo lang mogelijk in omloop houden.",
+  "hero": {
+    "image": "l_economie_circulaire",
+    "ratio": "16:9",
+    "hook": "Wat als afval niet bestond? Het is de inzet van een economisch model geïnspireerd door de natuur."
+  },
+  "sections": [
+    {
+      "id": "course_223_l_economie_circulaire_intro",
+      "title": "Inleiding",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sinds de industriële revolutie heeft onze economie in één richting gewerkt: we winnen hulpbronnen, we vervaardigen voorwerpen en gooien ze vervolgens weg. Dit model gaat ervan uit dat de hulpbronnen oneindig zijn. Dat zijn ze niet."
+        },
+        {
+          "type": "paragraph",
+          "text": "De **circulaire economie** biedt een andere logica, geïnspireerd door de natuur, waarbij niets echt verloren gaat. Het doel is om de waarde van producten en materialen zo lang mogelijk in omloop te houden, in plaats van ze om te zetten in afval."
+        }
+      ]
+    },
+    {
+      "id": "course_223_l_economie_circulaire_p1",
+      "title": "Het lineaire model bereikt zijn grenzen",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "De moderne economie is gebouwd op een model genaamd **lineair**: extraheren, produceren, weggooien. We halen grondstoffen uit de natuur, we maken er producten van, en als ze eenmaal versleten of uit de mode zijn, worden deze producten afval."
+        },
+        {
+          "type": "image",
+          "asset": "landfill_waste_garbage_linear_economy",
+          "ratio": "16:9",
+          "caption": "Het ‘nemen, maken, weggooien’-model gaat uit van oneindige hulpbronnen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dit systeem is gebaseerd op het idee dat de hulpbronnen onbeperkt zijn en dat de natuur alle vervuiling kan absorberen. Maar vandaag de dag verbruikt de wereldeconomie jaarlijks het equivalent van 1,7 planeten aan grondstoffen. Bepaalde metalen die essentieel zijn voor digitale technologieën, zoals [[Lithium]], zouden al in 2040 moeilijk te vinden kunnen worden."
+        },
+        {
+          "type": "funFact",
+          "text": "Slechts 9% van al het plastic dat ooit door de mensheid is geproduceerd, is gerecycled. De rest belandt in de natuur of op een stortplaats, waar het 450 jaar kan blijven liggen."
+        },
+        {
+          "type": "paragraph",
+          "text": "De kosten voor schoonmaak en afvalbeheer zijn vrijwel nooit inbegrepen in de verkoopprijs van een product. Het zijn verborgen kosten, die later door iedereen worden betaald."
+        }
+      ]
+    },
+    {
+      "id": "course_223_l_economie_circulaire_p2",
+      "title": "Repareer vóór recycling",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "De circulaire economie biedt meerdere kringlopen, en altijd in dezelfde volgorde van prioriteit: de kortste lus is beter, omdat deze minder energie en materiaal verspilt. Het begint allemaal met **eco-ontwerp**, dat wil zeggen nadenken over de milieu-impact van een product vanaf de creatie ervan, door materialen te kiezen die duurzaam en gemakkelijk te demonteren zijn."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dan komt **hergebruiken** (een object verandert van eigenaar zonder te worden getransformeerd, zoals op een tweedehandsmarkt), en vervolgens **reparatie**, dat de levensduur van een product verlengt. Deze stappen bestrijden rechtstreeks [[Geplande veroudering]], deze praktijk die vrijwillig de levensduur van een object verkort."
+        },
+        {
+          "type": "image",
+          "asset": "recycling_sorting_waste_materials",
+          "ratio": "4:3",
+          "caption": "Recycling komt als laatste redmiddel, na hergebruik en reparatie."
+        },
+        {
+          "type": "paragraph",
+          "text": "**recycling** gebeurt alleen als laatste redmiddel. Het blijft nuttig: het recyclen van aluminium kost 95% minder energie dan het winnen van ruw erts, [[Bauxiet]]. Maar het is nog steeds minder efficiënt dan simpelweg een object hergebruiken."
+        }
+      ]
+    },
+    {
+      "id": "course_223_l_economie_circulaire_p3",
+      "title": "Waarom is het vandaag de dag nog steeds moeilijk?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ondanks al haar belangstelling wordt de circulaire economie geconfronteerd met een eenvoudig probleem: het lineaire model blijft op de korte termijn vaak **harde verzorger**. Het winnen van nieuw materiaal kost soms minder dan het sorteren en recyclen van complex afval, vooral als de grondstoffen goedkoop zijn."
+        },
+        {
+          "type": "image",
+          "asset": "repair_right_electronics_reuse",
+          "ratio": "4:3",
+          "caption": "Het ‘recht op reparatie’ vereist dat fabrikanten reserveonderdelen leveren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Geconfronteerd hiermee grijpen de overheden steeds vaker in. De Europese Unie lanceerde in 2020 een plan dat strengere duurzaamheidsregels oplegt. Een van de belangrijkste pijlers is het ‘recht op reparatie’, dat fabrikanten van elektronische apparaten verplicht om gedurende meerdere jaren reserveonderdelen te leveren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nog een hefboom: de [[Uitgebreide producentenverantwoordelijkheid]], die fabrikanten laat betalen voor het afvalbeheer van hun producten. Dit geeft hen een financiële prikkel om objecten te ontwerpen die minder vervuilend zijn en gemakkelijker te repareren."
+        }
+      ]
+    },
+    {
+      "id": "course_223_l_economie_circulaire_p4",
+      "title": "Op weg naar een hulpbronnenmaatschappij",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "De circulaire economie is niet alleen een kwestie van recycling: het is een project voor een soberder en veerkrachtiger samenleving. Door minder afhankelijk te zijn van geïmporteerde grondstoffen wint een land ook aan veiligheid in een meer instabiele wereld."
+        },
+        {
+          "type": "paragraph",
+          "text": "Het succes van deze transformatie hangt ook van ons als consumenten af. De 3R-regel, reduceren, hergebruiken, recyclen, begint met de eerste stap: reduceren, dat wil zeggen: vraag jezelf af of de aankoop echt nodig is. Het is deze eerste actie die het grootste effect heeft op het klimaat."
+        },
+        {
+          "type": "funFact",
+          "text": "Tegenwoordig zit er meer goud in een ton oude elektronische borden van smartphones dan in een ton erts gewonnen uit een traditionele goudmijn."
+        },
+        {
+          "type": "takeaway",
+          "text": "De circulaire economie heeft tot doel de cyclus van ‘onttrekken, maken, weggooien’ te doorbreken door hulpbronnen in circulatie te houden door middel van ecologisch ontwerp, reparatie en recycling, om de fysieke grenzen van onze planeet te respecteren."
+        }
+      ]
+    }
+  ]
+}

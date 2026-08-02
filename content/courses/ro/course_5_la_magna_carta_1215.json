@@ -1,0 +1,133 @@
+{
+  "id": "course_5_la_magna_carta_1215",
+  "title": "Magna Carta",
+  "subtitle": "1215",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "În iunie 1215, John Lackland și-a aplicat sigiliul pe o carte impusă de baronii săi. Un text feudal devine, de-a lungul secolelor, simbolul legii deasupra regelui.",
+  "hero": {
+    "image": "la_magna_carta_1215",
+    "ratio": "16:9",
+    "hook": "Un rege încolțit semnează. Opt secole mai târziu, întreaga lume încă vorbește despre asta."
+  },
+  "sections": [
+    {
+      "id": "course_5_la_magna_carta_1215_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În iunie **1215**, în lunca **Runnymede**, lângă Londra, regele Angliei **John Lackland** și-a aplicat sigiliul pe **Magna Carta**, „Marea Cartă”. Acesta nu este un gest de generozitate. Este un impas: baronii, mari domni ai regatului, vor sa sparga arbitrarul regal."
+        },
+        {
+          "type": "paragraph",
+          "text": "Textul s-a născut pentru a evita un război civil. Aplicarea sa imediată eșuează. Cu toate acestea, el devine treptat simbolul unei idei explozive: chiar și regele este sub lege."
+        }
+      ]
+    },
+    {
+      "id": "course_5_la_magna_carta_1215_p1",
+      "title": "John Lackland pe marginea prăpastiei",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rege de la **1199**, Jean are un dezastru după altul. Înfruntându-se cu regele Franței [[Filip II Augustus]], a suferit [[Pierderea Normandiei (1204)]]. Pentru a-și recuceri pământurile, el apasă pe [[sistem feudal]]: regele dă pământ în schimbul loialității și al serviciului militar, dar Ioan înmulțește impozitele, ostaticii și amenzile arbitrare. Obiceiurile care îl legau de vasalii săi s-au spulberat."
+        },
+        {
+          "type": "paragraph",
+          "text": "Conflictul cu Papa [[Inocențiu III]] l-a izolat și mai mult. După înfrângerea lui [[Bouvines]] (**1214**), unde Philip Augustus a învins o coaliție care includea Anglia, baronii s-au răsculat și au luat Londra. Jean nu mai are de ales: să negocieze sau să piardă coroana."
+        },
+        {
+          "type": "funFact",
+          "text": "Porecla „Sans Terre” nu provine din înfrângerile sale franceze. Ultimul fiu al lui Henric al II-lea, pur și simplu nu primise nicio prerogativă la naștere."
+        }
+      ]
+    },
+    {
+      "id": "course_5_la_magna_carta_1215_p2",
+      "title": "Runnymede, 63 de clauze",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La **15 unit 1215**, părțile s-au întâlnit la Runnymede. Influențat de [[Stephen Langton]], documentul are **63 clauze**. Doi dintre ei schimbă totul. Clauza **39**: niciun om liber nu poate fi arestat fără o judecată a semenilor săi. Clauza **40**: regele nu poate vinde sau amâna justiția."
+        },
+        {
+          "type": "image",
+          "asset": "magna_carta_1215_manuscript",
+          "ratio": "4:3",
+          "caption": "Magna Carta din 1215, pergament devenit un mit politic."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nu este încă democrație. Carta vorbește în principal despre „oameni liberi”, nu despre iobagi, țărani legați de pământ. Este în primul rând un tratat de pace între rege și baronii săi. Dar ideea este afirmată: puterea are limite scrise."
+        }
+      ]
+    },
+    {
+      "id": "course_5_la_magna_carta_1215_p3",
+      "title": "De la un eșec la un mit",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Încă din august, Ioan a anulat textul de către papă. Războiul civil se reia. Carta supraviețuiește datorită morții regelui în **1216**: tânărul **Henric al III-lea** o reedează pentru a potoli regatul. Confirmat din nou și din nou, intră în legea engleză."
+        },
+        {
+          "type": "funFact",
+          "text": "Nu există un singur original din 1215, ci mai multe exemplare trimise județelor. Doar patru au supraviețuit."
+        },
+        {
+          "type": "paragraph",
+          "text": "În secolul al XVII-lea, juriști precum [[Edward Coke]] au scos-o împotriva absolutismului Stuarților, acești regi care doreau să guverneze fără limite. Un pergament medieval devine strămoșul pretins al libertăților parlamentare."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1204",
+              "title": "Pierderea Normandiei",
+              "detail": "John Lackland își pierde venitul continental."
+            },
+            {
+              "date": "1214",
+              "title": "Bouvines",
+              "detail": "Înfrângerea îl izolează definitiv pe rege."
+            },
+            {
+              "date": "1215",
+              "title": "Magna Carta",
+              "detail": "Sigiliu aplicat pe Runnymede sub presiunea baronilor."
+            },
+            {
+              "date": "1216",
+              "title": "Reeditare",
+              "detail": "Henric al III-lea salvează textul pentru a stabiliza tronul."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_5_la_magna_carta_1215_p4",
+      "title": "O moștenire globală",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Coloniștii britanici duc carta în America. Părinții fondatori s-au inspirat din aceasta pentru [[Declarația drepturilor]], primele amendamente la Constituția americană. [[Habeas corpus]], principiul care interzice arestările arbitrare, extinde clauza 39. În **1948**, [[Eleanor Roosevelt]] o vede ca pe o „Marea Cartă” pentru întreaga umanitate."
+        },
+        {
+          "type": "paragraph",
+          "text": "Astăzi, în Anglia rămân în vigoare doar trei clauze. Nu face nimic. Magna Carta contează mai puțin ca o lege vie decât ca un simbol: nimeni nu este mai presus de lege."
+        },
+        {
+          "type": "takeaway",
+          "text": "Smulsă de la John Lackland în **1215**, Magna Carta afirmă că și regele este sub lege. Dintr-un tratat între baroni și rege s-a născut unul dintre miturile fondatoare ale libertăților moderne."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "id": "course_216_la_dette_mondiale",
+  "title": "Global skuld",
+  "subtitle": "Mer än 300 % av den globala BNP",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Globala skulder har aldrig varit högre. Ska vi vara oroliga för det, eller är det ett normalt verktyg för att finansiera tillväxt och möta kriser?",
+  "hero": {
+    "image": "la_dette_mondiale",
+    "ratio": "16:9",
+    "hook": "Japan är skyldig motsvarande 260% av sin BNP... och ingen oroar sig. Här är varför."
+  },
+  "sections": [
+    {
+      "id": "course_216_la_dette_mondiale_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den globala skulden, den för stater, företag och hushåll tillsammans, överstiger idag **300 % före globala BNP**, ett absolut rekord i ekonomisk historia."
+        },
+        {
+          "type": "paragraph",
+          "text": "Denna imponerande siffra döljer en mer nyanserad verklighet: skuld gör det möjligt att finansiera tillväxt, svara på hälsokriser eller förbereda sig för den ekologiska omställningen. Men det medför också risken för att förtroendet kollapsar."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p1",
+      "title": "Hur en stat hamnar i skuld",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En stat blir skuldsatt när dess utgifter strukturellt överstiger dess skatteintäkter. Detta budgetunderskott täcks av upplåning på finansmarknaderna. Enligt [[Keynesiansk teori]] är upplåning för att stimulera ekonomin i kristider legitimt, förutsatt att det betalas tillbaka när tillväxten återvänder."
+        },
+        {
+          "type": "paragraph",
+          "text": "I praktiken lånar regeringar lätt i dåliga tider, men betalar sällan tillbaka i goda tider. Skulden ackumuleras sedan på lång sikt. Fallet med Japan är fascinerande: med en skuld nära 260 % ​​av dess BNP borde landet logiskt sett vara i kris. Det är det dock inte, eftersom det mesta av dess skulder innehas av dess egna banker och sparare, skyddade från utländska marknader."
+        },
+        {
+          "type": "funFact",
+          "text": "Förenade kungariket avslutade först 2015 att betala av skulder från Napoleonkrigen och en finansbubbla 1720."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p2",
+      "title": "Alla skulder är inte lika",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Den verkliga faran med en skuld beror inte bara på dess belopp, utan på den valuta som den lånas i. Rika länder lånar i sina egna valutor, vilket lugnar investerarna."
+        },
+        {
+          "type": "image",
+          "asset": "japan_government_debt_statistics_chart",
+          "ratio": "16:9",
+          "caption": "Den globala offentliga skulden överstiger idag 300 % av planetens BNP."
+        },
+        {
+          "type": "paragraph",
+          "text": "Utvecklingsländer måste ofta låna i dollar, på grund av brist på en valuta som anses stabil nog. Om deras nationella valuta tappar i värde mot dollarn exploderar beloppet som ska återbetalas över en natt. I dessa kriser ingriper [[IMF]] ofta, men påtvingar generellt strikta sparpolitik som väger tungt på befolkningen."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p3",
+      "title": "Kan skulden vara oändlig?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En debatt motsätter sig två visioner om ekonomin. [[Modern monetär teori]] hävdar att en stat inte kan gå i konkurs så länge den lånar i sin egen valuta: den verkliga gränsen är inte en godtycklig siffra, som de 60 % som infördes genom Maastrichtfördraget i Europa, utan inflationsnivån."
+        },
+        {
+          "type": "paragraph",
+          "text": "Andra, mer försiktiga ekonomer fruktar att för mycket skulder kommer att skrämma bort marknadens förtroende, vilket leder till en kraftig ränteuppgång. Krisen i euroområdet, mellan 2010 och 2012, illustrerade denna risk: länder som Grekland, berövade sin egen centralbank, såg sina låneräntor skjuta i höjden till den grad att de hotade själva existensen av den europeiska valutan."
+        }
+      ]
+    },
+    {
+      "id": "course_216_la_dette_mondiale_p4",
+      "title": "Skuldens nya ansikten",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Globala skulder berör inte bara stater: företag och hushåll bär också en växande del av den, ibland via dåligt reglerade finansiella aktörer. En ny debatt växer också fram kring klimatskulden: ska vi behandla skulden som finansierar energiomställningen annorlunda än den som finansierar enkel konsumtion?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Frågan om rättvisa mellan generationerna är fortfarande central: att skuldsätta sig idag innebär att ta skatter från imorgon. Men om dessa pengar finansierar hållbar infrastruktur eller bra utbildning kan de också ses som en gåva som förs vidare till kommande generationer snarare än en börda."
+        },
+        {
+          "type": "takeaway",
+          "text": "Globala skulder överstiger 300 % av planetens BNP, ett historiskt rekord. Dess farlighet beror mindre på dess belopp än på den valuta som den lånas i: Japan bevisar att en skuld på 260 % ​​kan förbli stabil om den hålls lokalt."
+        }
+      ]
+    }
+  ]
+}

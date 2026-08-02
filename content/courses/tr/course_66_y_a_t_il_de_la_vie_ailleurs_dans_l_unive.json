@@ -1,0 +1,120 @@
+{
+  "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive",
+  "title": "Evrenin başka yerlerinde yaşam var mı?",
+  "subtitle": "Ekzobiyoloji",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "Binlerce milyarlarca gezegen ve yine de radyo sessizliği. Bilim, küçük yeşil adamlar vaat etmeden başka yerlerde yaşam arıyor.",
+  "hero": {
+    "image": "y_a_t_il_de_la_vie_ailleurs_dans_l_univers",
+    "ratio": "16:9",
+    "hook": "Evren çok büyüktür. Peki neden kimse yanıt vermiyor?"
+  },
+  "sections": [
+    {
+      "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gözlemlenebilir evren, her biri yüz milyarlarca yıldız içeren yaklaşık **2 spor** galaksiyi, devasa yıldız koleksiyonlarını içerir. İstatistiklerin yardımıyla potansiyel olarak yaşanabilir gezegenlerin sayısız olması gerekir. Ancak modern astronominin başlangıcından bu yana doğrulanmış hiçbir bağlantımız olmadı."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu çelişkinin bir adı var: **Fermi** paradoksu, fizikçi **Enrico Fermi**'den esinlenilerek. Soru artık sadece bilim kurgu değil. [[Ekzobiyoloji]] kapsamına girer: Başka yerlerde yaşamın ortaya çıkmasıyla ilgili koşulları ve onu tespit etme yollarını inceleyen bilim."
+        }
+      ]
+    },
+    {
+      "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_p1",
+      "title": "Hayat ne soruyor gibi görünüyor",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Başka bir yere bakmak için bilinen tek örnekten başlıyoruz: karasal yaşam. Temel olarak karmaşık moleküller oluşturan bir atom olan **karbon** kimyasına ve kimyasal reaksiyonların iyi gerçekleşmesine izin veren **sıvı suya** dayanmaktadır."
+        },
+        {
+          "type": "image",
+          "asset": "radio_telescope_seti",
+          "ratio": "auto",
+          "caption": "Radyo teleskopları gökyüzünü tarar ve olası bir sinyali dinler."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aday gezegenin genellikle yıldızının [[Yaşanabilir bölge]] bölgesinde bulunması gerekir: ne çok yakın, aksi takdirde su buharlaşır, ne de çok uzak, aksi halde su donar. 1990'lardan beri **5 500'den fazla ötegezegen**, Güneş dışındaki yıldızların etrafındaki gezegenler keşfedildi. Galaksimizdeki hemen hemen her yıldızda en az bir tane bulunur."
+        },
+        {
+          "type": "funFact",
+          "text": "Gözlemlenebilir evrende, Dünya'nın tüm kumsallarındaki kum tanelerinden daha fazla yıldız vardır."
+        },
+        {
+          "type": "paragraph",
+          "text": "**1961**'de gökbilimci **Frank Drake**, [[Drake denklemi]]'yi önerdi: Samanyolu'nda iletişim kurabilen uygarlıkların sayısını tahmin etmek için yıldızlar, yaşanabilir gezegenler, uygarlıkların süresi gibi faktörleri çoğaltan bir formül. Rakamlar oldukça belirsizliğini koruyor. Formül esas olarak tartışmayı yapılandırmak için kullanılır."
+        }
+      ]
+    },
+    {
+      "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_p2",
+      "title": "Güneş sistemindeki vahalar",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Hemen başka yıldızlara gitmeye gerek yok. Güneş sistemimizde birçok dünya ilgi çekicidir. Jüpiter'in bir uydusu olan **Avrupa**, muhtemelen bir buz kabuğunun altında sıvı su okyanusunu barındırıyor. Bu okyanus, [[Gelgit kuvvetleri]] sayesinde sıvı olarak kalacaktı: Jüpiter'in muazzam çekimi Europa'yı deforme ediyor ve sürtünme nedeniyle iç kısmını ısıtıyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Satürn'ün küçük bir uydusu olan **Enceladus**, buhar ve madde jetleri olan **gayzerleri** fırlatır. **Cassini** sondası, okyanusun dibindeki kimyasal reaksiyonlarla ısınan ve prensipte güneş ışığı olmadan mikropları besleyebilen **hidrotermal** aktivitesinin işaretlerini buldu."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Mart**'de bir zamanlar yüzeyde sıvı su akıyordu. Robotlar [[Biyoimzalar]]'yi arıyor: gezegenin atmosferinin ve suyunun büyük bir bölümünü kaybetmesinden önceki geçmiş yaşamın fosil veya kimyasal izleri."
+        }
+      ]
+    },
+    {
+      "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_p3",
+      "title": "Büyük sessizlik",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1950**'de Fermi şunu soruyor: Eğer gelişmiş uygarlıkların sayısı binlerceyse neden onlardan hiçbir iz göremiyoruz? Evren yaşlıdır. Yalnızca bir milyon yıl ilerideki bir uygarlığın, ışık hızında seyahat etmese bile öne çıkma zamanı olurdu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bir hipotez [[Harika Filtre]]'dir: Evrimde atılması neredeyse imkansız bir adım, örneğin karmaşık yaşama geçiş veya teknolojik olarak kendi kendini yok etme. Ya çoktan geçtik ya da önümüzde."
+        },
+        {
+          "type": "paragraph",
+          "text": "Diğer fikirler: Doğru sinyalleri dinlemiyor olabiliriz. **SETI** programı, Dünya Dışı Zekayı Arama, esas olarak radyo dalgalarını tarar. Ya da medeniyetler çok kısa ve yolların kesişemeyeceği kadar uzakta. Ya da [[Hayvanat bahçesi hipotezi]]: Dünya gönüllü olarak bir rezerv gibi bir kenara bırakılacaktı."
+        }
+      ]
+    },
+    {
+      "id": "course_66_y_a_t_il_de_la_vie_ailleurs_dans_l_unive_p4",
+      "title": "Bugün nasıl arama yapıyoruz?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**James Webb** uzay teleskobu, mevcut gazları tanımlamak için ışığın kesilmesi olan [[Spektroskopi]]'yi kullanarak uzak gezegenlerin atmosferinden geçen ışığı analiz eder. Garip miktarlarda oksijen veya metan gibi gazları, olası yaşam belirtilerini arıyoruz."
+        },
+        {
+          "type": "funFact",
+          "text": "Andromeda galaksisindeki biri bize \"şu anda\" baksaydı, Dünya'yı **2,5 milyon yıl önceki** haliyle görürdü: ışığın seyahat etmesi bu kadar uzun sürer."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mikrobiyal yaşam bile her şeyi değiştirecek, canlıların benzersiz bir tesadüf olmadığını kanıtlayacaktı. Bu arada **Seyahat etmek** sondaları, **1977**'den beri Dünya'nın seslerini ve görüntülerini içeren altın diskler taşıyor. Ele geçirme olasılığı: neredeyse sıfır. Yalnız hissetmenize gerek yok: sağlam."
+        },
+        {
+          "type": "takeaway",
+          "text": "Gezegenler sayısızdır ve yaşam istatistiksel olarak makul görünmektedir. Ancak Fermi paradoksu olarak adlandırılan temasın yokluğu, bize teknolojik zekanın çok nadir ya da çok kısa sürebileceğini hatırlatıyor."
+        }
+      ]
+    }
+  ]
+}

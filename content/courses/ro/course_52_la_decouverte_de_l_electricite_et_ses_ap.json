@@ -1,0 +1,108 @@
+{
+  "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap",
+  "title": "Descoperirea energiei electrice",
+  "subtitle": "De la Franklin la Tesla",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "Electricitatea nu a fost inventată brusc. A fost mai întâi observat, apoi înțeles, apoi domesticit. Iată pașii cheie.",
+  "hero": {
+    "image": "la_decouverte_de_l_electricite",
+    "ratio": "16:9",
+    "hook": "De la fulger la smartphone: două secole pentru a îmblânzi invizibilul."
+  },
+  "sections": [
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_intro",
+      "title": "Introducere",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Electricitatea există în natură: fulger, pește electric, frecare. Ceea ce a schimbat lumea a fost să înveți să **legume şi fructe**, **transport** și să-l folosești."
+        },
+        {
+          "type": "paragraph",
+          "text": "Această poveste se întinde pe mai mult de două secole, cu experimente riscante și rivalități mari."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p1",
+      "title": "Înțelegerea fulgerului",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În secolul al XVIII-lea, **Benjamin Franklin** a arătat că fulgerul este un fenomen electric. Experimentul său de zbor de zmeu (deseori spus într-o manieră fictivă) își propune să demonstreze că cerul și mașina de frecare joacă cu aceeași forță."
+        },
+        {
+          "type": "image",
+          "asset": "benjamin_franklin_kite_lightning_experiment",
+          "ratio": "4:3",
+          "caption": "Franklin leagă fulgerul și electricitatea: o idee periculoasă, dar fundamentală."
+        },
+        {
+          "type": "paragraph",
+          "text": "De asemenea, am inventat **tunet**, o tijă metalică care oferă fulgerului o cale sigură către sol. Electricitatea lasă mister pentru a intra în inginerie."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p2",
+      "title": "Faraday: producerea curentului",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "În secolul al XIX-lea, **Michael Faraday** a arătat că un magnet care se mișcă în apropierea unui fir poate crea un curent electric. Acesta este **inducţie**. Fără această idee, nici dinam, nici alternator, nici centrală modernă."
+        },
+        {
+          "type": "image",
+          "asset": "faraday_electromagnetic_induction_experiment",
+          "ratio": "4:3",
+          "caption": "Faraday transformă mișcarea și magnetismul în curent."
+        },
+        {
+          "type": "funFact",
+          "text": "Faraday provenea dintr-un mediu umil și a început ca legător de cărți. A învățat știința citind ceea ce credea."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p3",
+      "title": "Edison versus Tesla",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La sfârșitul secolului al XIX-lea, două tabere s-au ciocnit. **Thomas Edison** împinge curent continuu. **Nikola Tesla** (și compania Westinghouse) apără curentul alternativ, care este mai ușor de transportat pe distanțe lungi."
+        },
+        {
+          "type": "image",
+          "asset": "tesla_edison_electric_power_station",
+          "ratio": "4:3",
+          "caption": "Curentul alternativ câștigă putere în orașe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Câștigări în curent alternativ pentru rețelele urbane. Orașele se luminează. Fabricile își schimbă ritmul."
+        }
+      ]
+    },
+    {
+      "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p4",
+      "title": "O lume conectată",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Astăzi, electricitatea alimentează spitalele, trenurile, internetul, frigiderele. Provocarea nu mai este doar să o produci, ci să o faci în mod curat și fiabil."
+        },
+        {
+          "type": "takeaway",
+          "text": "Electricitatea a fost înțeleasă și apoi domesticită: Franklin pentru fulger, Faraday pentru a produce curent, Tesla și curent alternativ pentru a o aduce în case. Viața noastră de zi cu zi depinde încă de asta."
+        }
+      ]
+    }
+  ]
+}

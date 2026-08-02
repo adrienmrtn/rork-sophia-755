@@ -1,0 +1,131 @@
+{
+  "id": "course_141_la_naissance_de_la_photographie",
+  "title": "Fotoğrafın doğuşu",
+  "subtitle": "1839",
+  "subject": "art",
+  "subcategory": "Cinema, photography & architecture",
+  "description": "**1839**'de birçok mucit nihayet bir görüntünün bir plakaya nasıl ekleneceğini buldu. Bir yüzyıldan kısa bir süre içinde fotoğrafçılık görme, hatırlama ve inanma şeklimizi değiştirdi.",
+  "hero": {
+    "image": "la_naissance_de_la_photographie",
+    "ratio": "16:9",
+    "hook": "Kimyasal bir buluş resmin gerçeklik üzerindeki tekelini nasıl çaldı?"
+  },
+  "sections": [
+    {
+      "id": "course_141_la_naissance_de_la_photographie_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Yüzyıllardır sanatçılar, dış dünyayı duvara yansıtan karanlık bir kutu olan [[Karanlık kamera]] kullandılar. Sorun aynı kalıyor: Işığı kapattığınızda görüntü kayboluyor. **1839**'de fotoğrafçılık resmi olarak doğdu. Bu tek bir dahinin eseri değil, Fransız ve İngiliz mucitler arasındaki bir yarıştır."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu süreç, bir yüzyıldan kısa bir süre içinde resmi belge rolünden kurtardı ve ilk kitle iletişim aracı oldu. Zaman, hafıza ve görsel gerçekle olan ilişkimizi değiştirir."
+        }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p1",
+      "title": "Niépce'den dagerreyotipine",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Her şey Fransız mucit **Nicéphore Niépce** ile başlıyor. **1826-1827** civarında, ilk kalıcı görüntüyü düzeltti: *Yağ* penceresinden görünüm. Bir teneke levhayı, ışıkta sertleşen bir katran olan [[Yahudiye bitümü]] ile kaplıyor. Maruziyet yaklaşık **8 saat** sürer: Güneşin binaların her iki tarafını da aydınlatması için yeterli zamanı vardır."
+        },
+        {
+          "type": "image",
+          "asset": "niepce_first_photograph_view_from_window_gras",
+          "ratio": "4:3",
+          "caption": "Niépce'nin penceresinden çektiği bilinen en eski fotoğraf."
+        },
+        {
+          "type": "funFact",
+          "text": "Bu görüntüde iki cephenin gölgeleri aynı anda görülebiliyor: Çekim o kadar uzun sürdü ki güneş gökyüzünde daire çizdi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Niépce'nin ölümünden sonra ortağı **Louis Daguerre**, iyot ve cıva buharlarının gümüş üzerindeki etkisini keşfetti. **Dagerreyotipi**'yi geliştirdi ve Bilimler Akademisi'ne **1839**'de sunuldu. İngiltere'de, **William Fox Talbot** aynı anda bir negatiften birkaç kopya yapılmasına olanak tanıyan [[William Fox Talbot'un kalotipi]]'yi geliştirdi."
+        }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p2",
+      "title": "Herkes için portre, herkes için kanıt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1840** yıllarından itibaren fotoğrafçılık laboratuvarlardan çıktı. O zamana kadar portreye sahip olmak, ressama para ödeyebilenlere özgü bir lükstü. Stüdyolar ve küçük, ucuz bir format olan [[kartvizit]] ile burjuvazi ve ardından işçi sınıfı kendi imajına erişim kazandı."
+        },
+        {
+          "type": "image",
+          "asset": "louis_daguerre_daguerreotype_silver_plate",
+          "ratio": "4:3",
+          "caption": "Dagerreyotipi: gümüş plaka üzerinde çarpıcı ayrıntılara sahip benzersiz bir görüntü."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fotoğraf da kanıt oluyor. Kırım Savaşı sırasında (**1855**), **Roger Fenton** önden görüntüleri aktarıyor. Amerikan İç Savaşı sırasında, **Matthew Brady** askerleri ve savaş alanlarını fotoğrafladı. Olay artık sadece anlatılmıyor: gösteriliyor."
+        }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p3",
+      "title": "Resim kendini yeniden icat etmek zorunda kaldığında",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Eğer bir makine bir yüzü ressamdan daha iyi kopyalıyorsa, boyanın artık ne faydası var? [[Fotoğrafın figüratif resme etkisi]]: figüratif sanat gerçeklik üzerindeki tekelini kaybediyor. Bu görevden kurtulan sanatçılar başka bir şeyi keşfediyor: [[İzlenimcilik]] ile ışık hissini, ardından [[Kübizm]] ile şekillerin deformasyonunu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fotoğraf yavaş yavaş kendi diline sahip çıkıyor: çerçeveleme, ışık, an. Artık dünyanın basit bir kopyası değil. Kendi başına bir sanat haline gelir."
+        }
+      ]
+    },
+    {
+      "id": "course_141_la_naissance_de_la_photographie_p4",
+      "title": "Kodak ve görüntü kültürü",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "19. yüzyılın sonunda Kodak'ın kurucusu George Eastman, ağır cam plakaları esnek filmlerle değiştirdi. Cihaz taşınabilir hale gelir. “Siz düğmeye basın, gerisini biz hallederiz” sloganı amatörlüğün doğuşunu simgeliyor. Aile albümü ve küresel rapor birlikte doğar."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1826",
+              "title": "Niépce'nin ilk fotoğrafı",
+              "detail": "Saatlerce maruz kaldıktan sonra Gras penceresinden görünüm."
+            },
+            {
+              "date": "1839",
+              "title": "Dagerreyotipi",
+              "detail": "Daguerre sürecini Paris'te sunuyor."
+            },
+            {
+              "date": "1841",
+              "title": "Kalotip",
+              "detail": "Talbot birden fazla kopyanın basılmasına izin veriyor."
+            },
+            {
+              "date": "1888",
+              "title": "Herkes için Kodak",
+              "detail": "Eastman amatör kamerayı demokratikleştiriyor."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "**1839**'de doğan fotoğraf, önce gerçekliği resimden daha iyi sabitledi, sonra modern [[Görsel kültür]] icat etti: gördüğümüze ilk önce inandığımız yer."
+        }
+      ]
+    }
+  ]
+}

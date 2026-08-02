@@ -1,0 +1,124 @@
+{
+  "id": "course_68_la_theorie_de_la_relativite_pour_tous",
+  "title": "Teorie relativity pro každého",
+  "subtitle": "Einstein 1905 a 1915",
+  "subject": "sciences",
+  "subcategory": "The Earth and the Universe",
+  "description": "V letech 1905 a 1915 Einstein změnil naši představu o prostoru, čase a gravitaci. A bez jejích výpočtů by se vaše GPS mýlila o několik kilometrů.",
+  "hero": {
+    "image": "la_theorie_de_la_relativite_pour_tous",
+    "ratio": "16:9",
+    "hook": "Čas nejsou univerzální hodiny. A gravitace není neviditelná struna."
+  },
+  "sections": [
+    {
+      "id": "course_68_la_theorie_de_la_relativite_pour_tous_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "V **1905** a **1915** publikoval **Albert Einstein** dvě teorie, které otřásly fyzikou. Do té doby jsme se většinou řídili [[Newton]]: čas plynul všem stejně a všude."
+        },
+        {
+          "type": "paragraph",
+          "text": "Einstein ukazuje, že prostor a čas jsou propojeny a že gravitaci lze chápat jako zakřivení této tkáně. Tyto myšlenky vysvětlují [[černé díry]] a [[Velký třesk]]. Každý den také opravují GPS vašeho telefonu."
+        }
+      ]
+    },
+    {
+      "id": "course_68_la_theorie_de_la_relativite_pour_tous_p1",
+      "title": "1905: speciální teorie relativity",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**speciální teorie relativity** je založena na dvou jednoduchých myšlenkách. Přírodní zákony platí pro každého, kdo se pohybuje konstantní rychlostí. A rychlost světla ve vakuu, **asi 300 000 km/s**, je stejná pro všechny, ať už se k němu přibližujeme, nebo se od něj vzdalujeme."
+        },
+        {
+          "type": "image",
+          "asset": "albert_einstein_portrait_princeton",
+          "ratio": "auto",
+          "caption": "Albert Einstein, autor teorie relativity."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aby si světlo drželo stále stejnou rychlost, musí se přizpůsobit čas. Toto je [[Dilatace času]]: čím rychleji se objekt pohybuje, tím pomaleji mu ubíhá čas ve srovnání s někým, kdo je v klidu. To není iluze. **atomové hodiny**, přístroje, které měří čas s extrémní přesností, jej změřily."
+        },
+        {
+          "type": "paragraph",
+          "text": "Einstein také kreslí [[E=mc²]]: hmota je velmi koncentrovaná forma energie. Protože **c**, rychlost světla, je obrovská, velmi malá hmota může uvolnit kolosální energii. Je pilířem [[jaderná fyzika]], studia atomových jader a jejich reakcí."
+        },
+        {
+          "type": "funFact",
+          "text": "V roce 1905 nebyl Einstein univerzitním profesorem. Pracuje jako zkoušející na patentovém úřadu ve švýcarském Bernu."
+        }
+      ]
+    },
+    {
+      "id": "course_68_la_theorie_de_la_relativite_pour_tous_p2",
+      "title": "1915: gravitace jako zakřivení",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "O deset let později Einstein publikoval **obecnou relativitu**. Newton viděl gravitaci jako neviditelnou sílu přitahující masy k sobě. Einstein nabízí další obrázek: **prostor-čas**, prostor a čas spojené v jediné tkanině, tvoří pružnou tkaninu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Těžká hmota, jako je Slunce, tuto tkáň vyhloubí. Imagine a bowling ball on a trampoline. Míč hozený vedle neletí přímo: sleduje dutinu. Stejně tak Země obíhá, protože sleduje zakřivení vytvořené Sluncem."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tyto křivky sleduje i světlo. In **1919**, the British astronomer **Arthur Eddington** verified it during an eclipse: the apparent position of stars behind the Sun is slightly shifted. Einstein se stane slavným přes noc."
+        }
+      ]
+    },
+    {
+      "id": "course_68_la_theorie_de_la_relativite_pour_tous_p3",
+      "title": "GPS, kapesní",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Satelity GPS rotují rychlostí přibližně **14 000 km/h** ve výšce **20 000 km**. Chcete-li najít svou polohu na nejbližší metr, jejich hodiny musí zůstat synchronizované s těmi na zemi. Ale současně působí dva relativistické efekty."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kvůli jejich rychlosti plyne čas o něco pomaleji, což je efekt speciální teorie relativity: zpoždění přibližně **7 mikrovlnek** za den. Kvůli slabší gravitaci ve výšce tam čas plyne o něco rychleji, což je účinek obecné teorie relativity: přibližně **45 mikrosekundů** předem."
+        },
+        {
+          "type": "funFact",
+          "text": "Bez relativistických oprav by chyba polohy GPS mohla dosáhnout přibližně **11 km** za den."
+        },
+        {
+          "type": "paragraph",
+          "text": "Výsledkem je čistý pokrok přibližně **38 mikrosekund** za den. Zdá se to malinké. To už je při rychlosti světla pro navigaci obrovské."
+        }
+      ]
+    },
+    {
+      "id": "course_68_la_theorie_de_la_relativite_pour_tous_p4",
+      "title": "Vlny, černé díry, rozpínající se vesmír",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Obecná teorie relativity předpovídá černé díry: oblasti, kde je zakřivení tak silné, že už nevychází ani světlo. Einstein pochyboval o jejich skutečné existenci. [[radioastronomie]], pozorování oblohy v rádiových vlnách a nedávné snímky je potvrdily."
+        },
+        {
+          "type": "paragraph",
+          "text": "V **1916** také předpověděl **gravitace**: vlnění v časoprostoru způsobené kosmickými katastrofami, jako je sloučení dvou černých děr. Musíme počkat, až je **2015** a observatoř **LIGO**, pozemní detektor citlivý na vesmírné vibrace, odhalí."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nakonec tyto rovnice otevírají cestu k rozpínajícímu se vesmíru, který je základem modelu velkého třesku. Einstein nejprve přidal kosmologickou konstantu****, matematický termín pro vynucení pevného vesmíru. Hubbleova pozorování ho později přesvědčila o opaku."
+        },
+        {
+          "type": "takeaway",
+          "text": "**E=mc²** spojuje hmotu a energii. Obecná teorie relativity říká, že gravitace ohýbá časoprostor. Bez těchto oprav by se vaše GPS každý den mýlila o několik kilometrů."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "course_232_la_blockchain_et_les_cryptomonnaies",
+  "title": "Blockchain a kryptoměny",
+  "subtitle": "Od roku 2009",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Environment & the future",
+  "description": "**blockchain** vynalezl účetní knihu, se kterou si nikdo nemůže zasahovat sám, a připravil tak cestu pro novou digitální ekonomiku.",
+  "hero": {
+    "image": "la_blockchain_et_les_cryptomonnaies",
+    "ratio": "16:9",
+    "hook": "Kniha účtů, které nikdo nevlastní, ale které společně monitorují tisíce počítačů."
+  },
+  "sections": [
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_intro",
+      "title": "Úvod",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Představte si knihu účtů, kterou nevlastní nikdo, ale kterou aktualizují tisíce počítačů současně po celém světě a kterou je téměř nemožné zfalšovat. Toto je prvotní myšlenka **blockchainu**, technologie často redukované na svou první aplikaci, **Bitcoin**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tím, že tento vynález umožnil směňovat hodnotu bez procházení bankou, dal vzniknout celé paralelní ekonomice, mezi sliby finanční svobody a tvrdou kritikou jejích energetických nákladů."
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p1",
+      "title": "Registr, který nikdo neovládá sám",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Základem blockchainu je jednoduchá myšlenka: **distribuovaná účetní kniha**. Na rozdíl od banky, která si vede své účty na vlastních serverech, se blockchain opírá o síť [[vrstevníci]], tedy tisíce počítačů, z nichž každý uchovává identickou kopii všech transakcí."
+        },
+        {
+          "type": "funFact",
+          "text": "Úplně první blok bitcoinového blockchainu, nazývaný „blok geneze“, obsahoval skrytou zprávu: titulní strana britských novin z 3. ledna 2009, která hovořila o státní záchraně bank. Politický souhlas jeho tvůrce."
+        },
+        {
+          "type": "paragraph",
+          "text": "Každá transakce je nejprve ověřena sítí a poté seskupena s ostatními do **blok**. Tento blok je pak propojen s předchozím díky matematickému výpočtu nazvanému [[hash]]: jakýsi unikátní digitální otisk prstu. Výsledkem je nepřerušovaný řetězec bloků, odtud název blockchain. Pro úpravu jediné staré transakce byste museli přepočítat celý řetězec a přesvědčit více než polovinu sítě, což je ve velkém měřítku téměř nemožné."
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p2",
+      "title": "Bitcoin a Ethereum: od platby k programu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**Bitcoin**, spuštěný v **2009** anonymní osobou (nebo skupinou) pod jménem [[Satoshi Nakamoto]], dokázal, že peněžní systém by mohl fungovat bez centrální banky. Aby byl zaručen jeho nedostatek, jeho tvůrce stanovil přísný strop: nikdy nemůže existovat více než **21 milionů bitcoinů**, trochu jako zlato je na Zemi omezeno."
+        },
+        {
+          "type": "image",
+          "asset": "blockchain_technology_distributed_ledger_visualization",
+          "ratio": "4:3",
+          "caption": "Každá transakce je před přidáním do řetězce ověřena sítí počítačů."
+        },
+        {
+          "type": "paragraph",
+          "text": "V roce 2015 se objevila druhá generace blockchainu se **Ethereum**. Jeho skvělá inovace: **chytrá smlouva**. Jde o programy, které se spouštějí automaticky, jakmile je splněna podmínka, například automatické proplácení v případě zpoždění vlaku, bez nutnosti přejíždět přes prostředníka."
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p3",
+      "title": "Kritici: energie a nestabilita",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Úspěch kryptoměn není bez problémů. Nejdiskutovanější se týká **Z** sítě bitcoinů: její roční výdaje na elektřinu jsou dnes srovnatelné s výdaji celé země, jako je Argentina."
+        },
+        {
+          "type": "paragraph",
+          "text": "Trh také trpí extrémní **volatilita**: cena bitcoinu se může během několika hodin lišit o 10 nebo 20 %. Tato nestabilita v současnosti brání tomu, aby se stala skutečnou každodenní měnou."
+        },
+        {
+          "type": "paragraph",
+          "text": "Konečně, relativní anonymita transakcí byla někdy využívána k nezákonným činnostem. Blockchain ale ve skutečnosti zůstává zcela transparentní: úřady mohou sledovat tok peněz, což ztěžuje praní než v klasickém hotovostním systému."
+        }
+      ]
+    },
+    {
+      "id": "course_232_la_blockchain_et_les_cryptomonnaies_p4",
+      "title": "Směrem k institucionální integraci",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dnes kryptoměny opouštějí marže a vstupují do tradičních financí. Velké banky nyní nabízejí svým zákazníkům držení digitálních aktiv a několik států zvažuje vytvoření vlastní oficiální digitální měny, **[[MNBC]]** (digitální měna centrální banky)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Jako most mezi oběma světy slouží **stablecoiny**, kryptoměny, jejichž cena je stabilizovaná díky rezervě dolarů nebo eur. Kromě financí přijímají blockchain kvůli své spolehlivosti také sektory, jako je luxus (boj proti padělání), logistika (sledování kontejnerů) nebo zdravotnictví (zajištění lékařských záznamů)."
+        },
+        {
+          "type": "funFact",
+          "text": "V roce 2021 se Salvador stal první zemí na světě, která přijala bitcoiny jako zákonné platidlo vedle amerického dolaru, což vyžaduje, aby jej každý obchodník přijal, pokud má technické prostředky."
+        },
+        {
+          "type": "takeaway",
+          "text": "Blockchain, vytvořený v roce 2009, je sdílená účetní kniha, kterou je téměř nemožné zfalšovat, s maximální nabídkou bitcoinů stanovenou na 21 milionů jednotek. Položil základy dnešní nové digitální ekonomiky v plné institucionální integraci."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "id": "course_9_l_empire_azteque",
+  "title": "Az Azték Birodalom",
+  "subtitle": "1325-1521",
+  "subject": "histoire",
+  "subcategory": "Antiquity & Middle Ages",
+  "description": "Kevesebb mint két évszázad alatt az aztékok 200 000 lakosú fővárost építettek egy tóra. Tiszteletre és áldozatra alapozott birodalmuk két év alatt összeomlott a spanyolok ellen.",
+  "hero": {
+    "image": "l_empire_azteque",
+    "ratio": "16:9",
+    "hook": "Vízparti város, lakottabb, mint London. Aztán két év múlva semmi."
+  },
+  "sections": [
+    {
+      "id": "course_9_l_empire_azteque_intro",
+      "title": "Bevezetés",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A mai Mexikó szívében az aztékok kevesebb mint két évszázad alatt fővárost építettek egy tavon, amelyet **200 000 lakos lakott**. Nagyobb, mint London vagy Róma egyszerre. Hatalmuk egyesíti a vízépítést, az igényes vallást és az állandó háborút."
+        },
+        {
+          "type": "paragraph",
+          "text": "**1519** és **1521** között ez a birodalom összeomlott. Nemcsak Cortés, a spanyol hódító ágyúi alatt, hanem alattvalói gyűlölete és egy láthatatlan fegyver: a betegség alatt."
+        }
+      ]
+    },
+    {
+      "id": "course_9_l_empire_azteque_p1",
+      "title": "Mocsarakból vízi fővárosba",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A **Mexikó**, akiket aztékoknak fogunk nevezni, a mitikus [[Aztlán]] északról származnak. A 13. században érkeztek Mexikó völgyébe. Megvetve jelet keresnek istenüktől [[Huitzilopochtli]], a nap és a háború istenétől: egy sas, aki egy kígyót fal a kaktuszon. A **1325**-ben a **Texcoco**-tó egyik szigetén találják. Megszületett a [[Tenochtitlán]], leendő fővárosuk."
+        },
+        {
+          "type": "paragraph",
+          "text": "A város táplálására tökéletesítették a [[A chinampák]] sárból és növényekből készült, ultratermékeny mesterséges szigeteket. Három töltés, töltések, csatornák: a város tóerőddé és óriási piaccá válik."
+        },
+        {
+          "type": "funFact",
+          "text": "Az aztékok nem használták a kereket szállításra, és nem voltak teherhordó állatok. Mégis több millió tonna követ mozgattak meg piramisaikhoz."
+        }
+      ]
+    },
+    {
+      "id": "course_9_l_empire_azteque_p2",
+      "title": "A hármas szövetség és a tiszteletadás",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1428**-ben Tenochtitlán két szomszédos várossal, Texcocóval és Tlacopannal szövetkezett: a **Hármas Szövetség**. Hamarosan Mexikó egyedül dominál. Birodalmuk nem asszimilálódik: rendszeres **tisztelgés**-t, kukoricát, kakaót, tollat, fémeket követel. A tőke gazdagsága táplálja a leigázott népek gyűlöletét, mint például a [[Tlaxcaltecs]], az aztékok ádáz ellenségei."
+        },
+        {
+          "type": "image",
+          "asset": "tenochtitlan_aztec_city_illustration",
+          "ratio": "4:3",
+          "caption": "Tenochtitlán, a tavi metropolisz az azték birodalom szívében."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ez egy háborús gépezet, aminek örökös hódításokra van szüksége. Amikor a spanyolok megérkeznek, már csak egyesíteniük kell ezeket az ellenérzéseket."
+        },
+        {
+          "type": "funFact",
+          "text": "A kakaóbabot fizetőeszközként használták. Tenochtitlánban egy nyúl tíz babot ért; jó alkatú rabszolga, körülbelül száz."
+        }
+      ]
+    },
+    {
+      "id": "course_9_l_empire_azteque_p3",
+      "title": "Istenek, Cortés és a himlő",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A [[Az Öt Nap kozmogónia]], egy azték mítosz szerint a nap csak akkor marad életben, ha emberi vér táplálja. A [[Templo polgármestere]], a központban található nagy piramisban az áldozatok nem önkényes kegyetlenség, hanem az aztékok számára a világnak a folytatáshoz szükségesek."
+        },
+        {
+          "type": "paragraph",
+          "text": "**1519**-ben **Hernán Cortés** érkezett néhány száz spanyollal. [[Moctezuma II]], az azték császár tétovázik. Az acél, a fegyverek és a lovak ijesztőek. De a fő gyilkos a [[Himlő]], egy európai betegség, amely ellen a lakosságnak nincs immunitása. Cortés több ezer bennszülött szövetségesével ostromolja a fővárost."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1325",
+              "title": "Tenochtitlán alapítása",
+              "detail": "Mexikó a Texcoco-tó partján telepszik le."
+            },
+            {
+              "date": "1428",
+              "title": "Hármas Szövetség",
+              "detail": "Az azték birodalmi terjeszkedés kezdete."
+            },
+            {
+              "date": "1519",
+              "title": "Cortés érkezése",
+              "detail": "A spanyolok megérkeznek Mexikóba."
+            },
+            {
+              "date": "1521",
+              "title": "Tenochtitlán bukása",
+              "detail": "A birodalom vége 80 napos ostrom után."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_9_l_empire_azteque_p4",
+      "title": "A romokon, Mexikóban",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1521**-ben **80 alvás** ostrom után Tenochtitlán elesett. Éhesen, víztől megfosztottan, betegségektől pusztítva. Köveiből épült Mexikóváros, a spanyol gyarmat, a [[Új Spanyolország]] fővárosa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nem minden tűnik el. A [[chinampák]] még mindig létezik. A [[Nahuatl]]-t, az aztékok nyelvét több mint egymillió ember beszéli. A sas és a kígyó továbbra is Mexikó jelképe. Egy ragyogó civilizáció marad fenn az emlékezetben és a tájban."
+        },
+        {
+          "type": "takeaway",
+          "text": "Az aztékok **200 000** lakosú metropoliszt építettek egy tóra. Tisztelgési rendszerük és a [[Himlő]] lehetővé tette néhány száz spanyol számára, hogy a helyi szövetségesek segítségével két év alatt elpusztítsa a birodalmat."
+        }
+      ]
+    }
+  ]
+}

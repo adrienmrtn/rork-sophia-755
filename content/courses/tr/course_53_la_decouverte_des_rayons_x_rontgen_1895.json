@@ -1,0 +1,98 @@
+{
+  "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895",
+  "title": "X ışınlarının keşfi",
+  "subtitle": "Röntgen, 1895",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "1895 yılında Wilhelm Röntgen maddeden geçebilen görünmez radyasyonu keşfetti. Birkaç ay içinde tıpta bir devrim yaşandı.",
+  "hero": {
+    "image": "la_decouverte_des_rayons_x_rontgen",
+    "ratio": "16:9",
+    "hook": "Bir el, kemikler, bir fotoğraf. Tıp bir daha asla kör olmayacak."
+  },
+  "sections": [
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**8 Kasım 1895**, in Würzburg (Germany), the physicist **Wilhelm Röntgen** notices a screen that shines... even though it is not affected by visible light. Görünmez bir şey odanın içinden geçiyor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kendisi buna **X** ışınları adını veriyor; \"X\" ise \"bilinmeyen\" anlamına geliyor. Birkaç hafta içinde karısının el kemiklerinin fotoğrafını çekti. Radyoloji doğdu."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p1",
+      "title": "Bir laboratuvar kazası",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Röntgen, elektronların hedefe çarptığı bir tüple çalışıyor. Tüpü siyah kartonla kapladı. Ancak uzaktan floresan bir ekran parlıyor. Görünmez radyasyonun tüpten çıktığını anlıyor."
+        },
+        {
+          "type": "image",
+          "asset": "wilhelm_rontgen_x_ray_hand_1895",
+          "ratio": "4:3",
+          "caption": "Ünlü resim: El kemikleri ve alyans."
+        },
+        {
+          "type": "funFact",
+          "text": "Röntgen hiçbir zaman X ışınlarına ilişkin bir patent başvurusunda bulunmadı. Tüm bilimin bunları özgürce kullanabilmesini istiyordu."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p2",
+      "title": "Tıp aleti ele geçirdi",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "early_x_ray_medical_radiograph",
+          "ratio": "4:3",
+          "caption": "Çok hızlı bir şekilde doktorlar ve ordular röntgen ışınlarını kullanmaya başladı."
+        },
+        {
+          "type": "paragraph",
+          "text": "Daha önce, bir kırığı veya kurşunu \"görmek\" için genellikle onu açmak zorundaydınız. X-ışınları ile kesmeden iç mekanın görüntüsünü elde ediyoruz. Hastaneler ve ordular bu tekniği son derece hızlı bir şekilde benimsiyor."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p3",
+      "title": "Uzun süredir görmezden gelinen tehlike",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "İlk başta riskleri görmezden geliyoruz. Operatörler saatlerce röntgen çekiyor. Yanıklar, ardından kanserler ortaya çıkar. X ışınlarının güçlü ve tehlikeli olduğunu anlamak zaman alacak."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bugün hastaları ve bakıcıları koruyoruz: sınırlı dozlar, kurşun önlükler, sıkı kontroller."
+        }
+      ]
+    },
+    {
+      "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p4",
+      "title": "Miras",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "X-ışınları tüm modern görüntülemenin yolunu açtı: tarayıcılar, endüstriyel kontroller ve hatta (daha sonra DNA için faydalı olan) kristallerin yapısının incelenmesi."
+        },
+        {
+          "type": "takeaway",
+          "text": "**1895**'de Röntgen, maddeden geçen görünmez bir radyasyon olan X ışınlarını keşfetti. Tıp, risklerin kontrol altına alınması şartıyla yeni bir bakış açısı kazanıyor."
+        }
+      ]
+    }
+  ]
+}

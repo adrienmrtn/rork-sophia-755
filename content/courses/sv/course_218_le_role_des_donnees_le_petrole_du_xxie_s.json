@@ -1,0 +1,108 @@
+{
+  "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s",
+  "title": "Datans roll (\"det 21:a århundradets olja\")",
+  "subtitle": "Den mest värdefulla digitala resursen",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "De säger att data är den nya oljan. Men till skillnad från olja tar de aldrig slut, och blir mer värdefulla ju mer de stöts på.",
+  "hero": {
+    "image": "le_role_des_donnees",
+    "ratio": "16:9",
+    "hook": "Facebook kan gissa att någon ska gifta sig eller flytta innan de ens vet ordet av det."
+  },
+  "sections": [
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En fras har etablerat sig sedan 2010-talet: **data** skulle vara \"det 21:a århundradets olja\". Tanken är enkel: när de väl förfinats av algoritmer blir de motorn för tillväxt och global makt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Men till skillnad från olja, en resurs som tar slut, förbrukas data aldrig: den kan kopieras i det oändliga och blir mer värdefull när den kombineras med annan information. Här är varför det omformade den globala ekonomin."
+        }
+      ]
+    },
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p1",
+      "title": "Förutsäga vårt beteende före oss själva",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Det verkliga värdet av data ligger inte i en enkel lista med namn eller adresser, utan i dess förmåga att förutsäga våra framtida beteenden. Varje sökning, varje rörelse, varje klick lämnar ett spår som teknikföretag lägger ihop för att skapa ett mycket exakt porträtt av varje person."
+        },
+        {
+          "type": "funFact",
+          "text": "Facebook kan upptäcka en stor livsförändring, som ett kommande äktenskap eller flytt, innan den inblandade personen ens är helt medveten om det, genom att upptäcka små variationer i deras onlinevanor."
+        },
+        {
+          "type": "paragraph",
+          "text": "Detta systematiska utnyttjande av vårt beteende har gett upphov till vad forskaren Shoshana Zuboff kallar **övervakningskapitalism**: människor är inte längre bara en kund, de blir råvaran i ett system som säljer förutsägelser till högstbjudande."
+        }
+      ]
+    },
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p2",
+      "title": "Varför dessa jättar är nästan omöjliga att konkurrera med",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dataekonomin fungerar i en positiv cykel: ju mer data ett företag har, desto bättre tjänst, vilket lockar fler användare, som genererar ännu mer data. Artificiell intelligens har accelererat detta fenomen: en [[maskininlärning]]-algoritm tränad på miljarder exempel blir mer exakt och snabbare att förbättra än en konkurrent med begränsade resurser."
+        },
+        {
+          "type": "image",
+          "asset": "artificial_intelligence_machine_learning_datacenter",
+          "ratio": "16:9",
+          "caption": "Datacenter förbrukar lika mycket el som hela städer för att bearbeta dessa enorma informationsflöden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dessa jättar, [[GAFAM]] i USA och BATX i Kina, nöjer sig inte längre med att dominera sin ursprungliga sektor: de använder sitt försprång i data för att expandera till hälso-, finans- eller uppkopplade bilar, vilket blockerar tillgången till innovation på många områden."
+        }
+      ]
+    },
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p3",
+      "title": "Europa slår tillbaka med GDPR",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Inför denna makt etablerade Europeiska unionen 2018 [[GDPR]], en förordning som i teorin ger makten tillbaka till medborgarna över deras egen personliga information: transparens, rätt att bli glömd, obligatoriskt samtycke."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dess styrka kommer från dess extraterritorialitet: alla företag som hanterar uppgifter om europeiska medborgare måste följa detta, med böter på upp till 4 % av sin globala omsättning. Detta tvingade jättar som Meta eller Amazon att se över sina metoder runt om i världen, vilket gjorde Europa till en ovillig global regulator."
+        },
+        {
+          "type": "funFact",
+          "text": "Innan GDPR-kravet på tydlighet skulle det ha tagit en genomsnittlig person runt 76 arbetsdagar att läsa alla användarvillkor för de digitala tjänster de använder under ett enda år."
+        }
+      ]
+    },
+    {
+      "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p4",
+      "title": "Data, en suveränitetsfråga",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Utöver ekonomin har data blivit ett maktverktyg för staterna själva, som kan använda dem för att övervaka sin befolkning eller vägleda den allmänna opinionen. Länder som inte kan skydda sina medborgares data riskerar en form av tekniskt beroende, känd som ett brott mot [[digital suveränitet]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "De kommande decenniernas stora utmaning kommer att vara att hitta en balans mellan de framsteg som möjliggörs av storskalig dataanalys och respekten för privatlivet, en väsentlig förutsättning för individuell frihet i ett allt mer sammankopplat samhälle."
+        },
+        {
+          "type": "takeaway",
+          "text": "Data har blivit en strategisk tillgång vars värde kommer från dess förmåga att förutsäga vårt beteende. Denna ekonomi gynnar tekniska jättar som är nästan omöjliga att konkurrera med, vilket Europa svarar på med strikt reglering: GDPR."
+        }
+      ]
+    }
+  ]
+}

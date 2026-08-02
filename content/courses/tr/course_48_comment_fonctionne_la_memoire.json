@@ -1,0 +1,106 @@
+{
+  "id": "course_48_comment_fonctionne_la_memoire",
+  "title": "Bellek nasıl çalışır?",
+  "subtitle": "Beyin",
+  "subject": "sciences",
+  "subcategory": "Our daily life explained",
+  "description": "Bellek bir kamera değildir. Her anı yeniden inşa edilir. Beyin bu şekilde kodlar, saklar… ve bazen icat eder.",
+  "hero": {
+    "image": "comment_fonctionne_la_memoire",
+    "ratio": "16:9",
+    "hook": "Hatırlamak bir dosyayı yeniden okumak değildir. Bir sahneyi yeniden inşa ediyor."
+  },
+  "sections": [
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Belleği genellikle bir sabit disk olarak hayal ederiz: kaydederiz, saklarız, yeniden okuruz. Beyin bu şekilde çalışmıyor. Her hatırladığınızda, parçalardan oluşan bir sahneyi **yeniden inşa edilmeye dayanıklı**."
+        },
+        {
+          "type": "paragraph",
+          "text": "Güçlüdür... ve yanılabilir. Bunu anlamak, neden unuttuğumuzu, neden hata yaptığımızı ve neden öğrendiğimizi anlamak anlamına gelir."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p1",
+      "title": "Bir değil birden fazla anı",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "human_brain_anatomy",
+          "ratio": "4:3",
+          "caption": "Beynin farklı bölgeleri farklı hafıza biçimlerini yönetir."
+        },
+        {
+          "type": "paragraph",
+          "text": "İlk olarak [[Çalışma belleği]] var: Birkaç saniye boyunca “aklınızda” tuttuğunuz şey, telefon numarası gibi. Ortalama olarak **7 oğla** civarında sınırlıdır. Daha sonra **uzun süreli hafıza**: gerçekler, olayların anıları, bisiklete binmek gibi beceriler."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bu sistemlerin hepsi beyinde aynı yerde yaşamaz. Beynin alnın arkasındaki ön kısmı olan **prefrontal korteks**, çalışma belleğine çok yardımcı olur. Beynin dış katmanı olan **neokorteks** gibi diğer bölgeler uzun vadeli bilgileri depolar."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p2",
+      "title": "Bir hafıza nasıl sabitlenir?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "hippocampus_brain_anatomy_scan",
+          "ratio": "4:3",
+          "caption": "Derin bir yapı olan hipokampus yeni anıların oluşmasına yardımcı olur."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bilginin kırılgan durumdan dayanıklı duruma geçmesi için beynin **oyunlar** yani sinir hücreleri arasındaki bağlantıları güçlendirmesi gerekir. **konsolidasyon**, yani güncel bir anının kalıcı bir iz haline dönüştürülmesinden bahsediyoruz. Temporal lobda yer alan ve deniz atına benzeyen **hipokampus** adı verilen küçük yapı, olayların hafızasında önemli bir rol oynuyor."
+        },
+        {
+          "type": "funFact",
+          "text": "Uyku, özellikle de belirli aşamalar, gün içinde öğrendiklerimizi pekiştirmeye yardımcı olur. Önce gözden geçirmek, sonra uyumak genellikle sabah 3'e kadar gözden geçirmekten daha iyi sonuç verir."
+        },
+        {
+          "type": "paragraph",
+          "text": "**Donald Hebb** ile bağlantılı ünlü bir kural: Birlikte ateşlenen nöronlar daha güçlü bağlanma eğilimindedir. Özetle: “Bir araya gelen ışıklar bir araya getirir”. Bu **noroplastit**, yani beynin bağlantılarını değiştirme yeteneği ilkesidir."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p3",
+      "title": "Hatırlamak değiştirmektir",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Bir anıyı geri çağırdığınızda, geçici olarak **dövülebilir**, düzenlenebilir hale gelir. Şimdiki zamanın ayrıntıları içeri sızabilir. Daha sonra beyin bunları tekrar saklar. Bu nedenle aynı kazanın iki tanığı farklı versiyonlar anlatabilir."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hatta **yanlış anılar** bile yaratabiliriz: doğru olduğuna inandığımız ama hiç gerçekleşmemiş ya da öyle olmayan sahneler. Beyin boşlukları zaten bildikleriyle doldurur."
+        }
+      ]
+    },
+    {
+      "id": "course_48_comment_fonctionne_la_memoire_p4",
+      "title": "Unutmak her zaman başarısızlık değildir",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gereksiz her ayrıntıyı hatırlasaydınız doymuş olurdunuz. Unutmak genelleme yapmamıza, karar vermemize, esasları korumamıza yardımcı olur. İyi bir hafıza, sakladığı kadarını sıralar."
+        },
+        {
+          "type": "takeaway",
+          "text": "Bellek, mükemmel bir kayıt değil, aktif bir yeniden yapılanmadır. Birçok sisteme dayanır, özellikle uyku sırasında konsolidasyona uğrar ve her hatırlatmada bozulabilir."
+        }
+      ]
+    }
+  ]
+}

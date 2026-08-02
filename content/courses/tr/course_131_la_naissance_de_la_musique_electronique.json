@@ -1,0 +1,145 @@
+{
+  "id": "course_131_la_naissance_de_la_musique_electronique",
+  "title": "Elektronik müziğin doğuşu",
+  "subtitle": "1920-1990",
+  "subject": "art",
+  "subcategory": "Music",
+  "description": "Theremin'den Chicago ve Detroit kulüplerine kadar elektronik müzik, orkestra olmadan sesler icat ediyor ve dünya dansını dönüştürüyor.",
+  "hero": {
+    "image": "la_naissance_de_la_musique_electronique",
+    "ratio": "16:9",
+    "hook": "Laboratuvarlardan dans pistlerine: Makineler yeni müziği nasıl icat etti?"
+  },
+  "sections": [
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_intro",
+      "title": "Giriş",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gece kulüplerinde elektronik müzik başlamıyor. Mucitlerin bir keman veya piyanodan elde edilmesi imkansız olan sesleri aradığı laboratuvarlarda doğar."
+        },
+        {
+          "type": "paragraph",
+          "text": "1920'lerin [[Theremin]]'sinden [[Chicago evi]] ve [[Detroit tekno]]'ye kadar, yüzyıla yayılan bir fikir var: makine sadece kayıt yapmakla kalmıyor, yaratabilir de. Bugün dünya popunun büyük bir bölümünü ve [[çizelgeler]]'yi yapılandırıyor."
+        }
+      ]
+    },
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_p1",
+      "title": "Öncüler: Theremin'den Musique Concrete'e",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "**1920**'de Rus mucit **Leon Theremin** (Lev Termen), [[Theremin]]'yi tasarladı: temassız çalınan bir cihaz. Eller elektromanyetik alanda antenlerin yakınında hareket eder. Ses neredeyse sesli bir şekilde kayar ve çok geçmeden bilim kurgu filmlerinin peşini bırakmaz."
+        },
+        {
+          "type": "image",
+          "asset": "theremin_instrument_leon_theremin_1920",
+          "ratio": "4:3",
+          "caption": "Theremin: Tellere dokunmadan havada çalınan bir enstrüman."
+        },
+        {
+          "type": "paragraph",
+          "text": "1945'ten sonra araştırmaların alanı değişti. Paris'te, halka açık radyoda, **Pierre Schaeffer** ve **Peter Henry** müzik betonunu icat etti: gündelik sesleri kaydetmek, sonra onları kesmek, tersine çevirmek, manyetik bantta döngüye almak. Köln'deki diğer stüdyolar saf sentezi tercih ediyor: akustik kaynağı olmayan, osilatörlerden doğan sesler. Bu iki yol hâlâ mevcut üretimin temelini oluşturuyor: bir yanda [[örnekleme]], diğer yanda sentez."
+        },
+        {
+          "type": "funFact",
+          "text": "Theremin enstrümanını Lenin'e sundu. Büyülenen Sovyet liderinin, SSCB'de teknik modernliği yaymak için yüzlerce kopya talep ettiği bildirildi."
+        }
+      ]
+    },
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_p2",
+      "title": "Moog, Wendy Carlos ve Kraftwerk",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1960'larda Amerikalı mühendis **Robert Moog** sentezleyiciyi transistörlerle minyatürleştirdi. **1968**, **Wendy Carlos**'nin *Açık Bach* albümü, elektroniğin klasik karmaşıklığı taşıyabileceğini kanıtlıyor. Gadget bir araca dönüşür."
+        },
+        {
+          "type": "image",
+          "asset": "moog_synthesizer_robert_moog_1960s",
+          "ratio": "4:3",
+          "caption": "Moog sentezleyici: makine stüdyoya gitmek üzere laboratuvardan ayrılır."
+        },
+        {
+          "type": "paragraph",
+          "text": "Düsseldorf'ta, **Ralf Hütter** ve **Florian Schneider** tarafından kurulan Alman grup **Kraftwerk**, soğuk ve tekrarlayan popu empoze ediyor. *Otoban* (**1974**) ve *Adam Makinesi* (**1978**) ile otoyol, robot ve şehir hakkında şarkı söylüyorlar. Ritimleri daha sonra Amerikan hip-hop'unu ve Avrupa dans müziğini besleyecekti."
+        },
+        {
+          "type": "image",
+          "asset": "kraftwerk_band_dusseldorf_1970s",
+          "ratio": "4:3",
+          "caption": "Kraftwerk: Sanatsal kişilik olarak insan-makine."
+        },
+        {
+          "type": "funFact",
+          "text": "Kraftwerk, belirli turlarda basın toplantıları için kendilerine benzeyen mankenler göndererek insan-makine kavramının sınırlarını zorladı."
+        }
+      ]
+    },
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_p3",
+      "title": "Chicago ve Detroit: elektronik dans",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1980'lerde **Roland TR-808** davul makinesi gibi uygun fiyatlı makineler oyunu değiştirdi. Chicago'da, siyahi ve eşcinsel toplulukların uğrak yeri olan kulüplerde DJ **Frankie Knuckles**, [[Chicago evi]]'yi geliştiriyor: düzenli 4/4 ritim, diskodan miras alınan sıcaklık."
+        },
+        {
+          "type": "paragraph",
+          "text": "Otomobil fabrikalarının düşüşe geçtiği **Detroit'in** şehrinde, üç üniversite arkadaşı (**Juan Atkins**, **Derrick Mayıs**, **Kevin Saunderson**) daha karanlık bir estetik icat etti: [[Detroit tekno]]. Avrupa'ya ihraç edilen bu ürün, Duvar'ın yıkılmasının ardından Berlin'de güçlü bir yankı buldu."
+        },
+        {
+          "type": "funFact",
+          "text": "TR-808 ticari bir başarısızlıktı: profesyoneller onu \"gerçekçi\" bulmadı. İkinci el olarak satılan bu ürün, Chicago'nun meteliksiz DJ'lerinin silahı haline geliyor."
+        }
+      ]
+    },
+    {
+      "id": "course_131_la_naissance_de_la_musique_electronique_p4",
+      "title": "Bilgisayar, herkesin stüdyosu",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "1990'lardan itibaren [[bilgisayar müzik yazılımı]] (bilgisayar destekli müzik), basit bir bilgisayarı bir stüdyoya dönüştürdü. Elektronik, reklam, sinema ve neredeyse tüm pop için kulüpten ayrılıyor. [[Chicago house ve Detroit tekno]] küresel bir dilin kökleri olmaya devam ediyor."
+        },
+        {
+          "type": "timeline",
+          "events": [
+            {
+              "date": "1920",
+              "title": "Theremin",
+              "detail": "Leon Theremin temassız çalınan bir enstrüman icat etti."
+            },
+            {
+              "date": "1948-1950",
+              "title": "Beton müziği",
+              "detail": "Schaeffer ve Henry, Paris'te kaydedilen sesleri değiştiriyor."
+            },
+            {
+              "date": "1968-1978",
+              "title": "Moog ve Kraftwerk",
+              "detail": "Sentezleyici kitle kültürüne giriyor."
+            },
+            {
+              "date": "1980'ler",
+              "title": "Ev ve tekno",
+              "detail": "Chicago ve Detroit modern elektronik dansı icat etti."
+            }
+          ]
+        },
+        {
+          "type": "takeaway",
+          "text": "1950'lerde laboratuvarlarda doğan elektronik müzik, bugün kulüplerden hit geçit törenine kadar dünya üretiminin büyük bir bölümünü oluşturuyor."
+        }
+      ]
+    }
+  ]
+}

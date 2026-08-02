@@ -1,0 +1,104 @@
+{
+  "id": "course_213_l_evasion_fiscale_des_multinationales",
+  "title": "Skatteflykt från multinationella företag",
+  "subtitle": "Hur betalar GAFAM så lite skatt?",
+  "subject": "comprendreLeMonde",
+  "subcategory": "Economy & society",
+  "description": "Digitala jättar betalar ofta hånfulla skatter jämfört med deras vinster. Detta är inte alltid olagligt: ​​det är resultatet av kryphål i internationell rätt.",
+  "hero": {
+    "image": "l_evasion_fiscale_des_multinationales",
+    "ratio": "16:9",
+    "hook": "Under 2014 betalade Apple en effektiv skattesats på nära 0,005 % i Irland. Hur är detta möjligt?"
+  },
+  "sections": [
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_intro",
+      "title": "Introduktion",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "GAFAM, det vill säga Google, Apple, Facebook (Meta), Amazon och Microsoft, är bland de rikaste företagen i världen. Men i proportion till sin vinst betalar de ofta mycket mindre skatt än ett traditionellt små och medelstora företag."
+        },
+        {
+          "type": "paragraph",
+          "text": "Detta är inte bedrägeri i strikt mening: det är **skatteoptimering**, det vill säga skickligt utnyttjande av kryphål i internationell rätt. Denna mekanism berövar stater hundratals miljarder dollar varje år. Så här fungerar det och hur världen försöker svara på det."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p1",
+      "title": "En skatt utformad för fabriker, inte för digitala",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Det internationella skattesystemet utformades i början av 1900-talet för en industriell ekonomi: ett företag måste ha fabriker eller kontor i ett land, det som kallas [[fast driftställe]], för att beskattas där."
+        },
+        {
+          "type": "paragraph",
+          "text": "Digital teknik har brutit denna koppling till territoriet. Idag kan ett företag dominera en marknad, fånga data från miljontals användare och tjäna mycket pengar i ett land, utan att äga en enda byggnad där. Hon kan sedan skilja platsen där hon tjänar sina pengar från platsen där hon deklarerar dem."
+        },
+        {
+          "type": "funFact",
+          "text": "2014 fann amerikanska IRS att Microsoft hade flyttat över 39 miljarder dollar i vinst till Puerto Rico genom immateriella rättigheter, vilket sparat mer än 6,5 miljarder dollar i skatt."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p2",
+      "title": "En brist på hundratals miljarder",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Enligt OECD kostar dessa metoder offentliga budgetar runt om i världen mellan 100 och 240 miljarder dollar per år, eller 4 till 10 % av alla företagsskatter som samlas in på planeten."
+        },
+        {
+          "type": "image",
+          "asset": "multinational_corporate_tax_avoidance_structure",
+          "ratio": "16:9",
+          "caption": "De digitala jättarnas europeiska högkvarter ligger ofta i länder där skatterna är lägst."
+        },
+        {
+          "type": "paragraph",
+          "text": "Detta underskott tvingar stater att välja mellan att höja skatterna på hushåll och små och medelstora företag, eller att minska offentliga utgifter såsom hälsa eller utbildning. Ett lokalt företag betalar i genomsnitt en mycket högre skattesats än ett multinationellt företag, vilket skapar orättvis konkurrens."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p3",
+      "title": "Svaret: en global minimiskatt",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Under 2021, under OECD:s och G20:s beskydd, etablerade ett historiskt avtal en [[globala minimiskatten på 15 %]]. Den riktar sig till företag vars omsättning överstiger 750 miljoner euro: om de bara betalar 5 % skatt i ett land kan deras ursprungsland nu göra anspråk på de saknade 10 %."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vissa länder, som Frankrike, har också skapat en nationell skatt som direkt riktar sig till digitala jättars omsättning. Samtidigt måste multinationella företag nu publicera, land för land, var deras anställda befinner sig, deras vinster och deras skatter: transparens som gör det möjligt att identifiera de mest uppenbara avvikelserna."
+        }
+      ]
+    },
+    {
+      "id": "course_213_l_evasion_fiscale_des_multinationales_p4",
+      "title": "Irland, Europas optimeringshuvudstad",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Irland, med sin officiella skattesats på 12,5 % och sina hemliga avtal kallade [[skatteavgöranden]], har blivit den europeiska pivoten för skatteoptimering. Tack vare en komplex struktur betalade Apple en effektiv skattesats på nära 0,005 % 2014."
+        },
+        {
+          "type": "paragraph",
+          "text": "EU-kommissionen har krävt Irland 13 miljarder euro i obetalda skatter från Apple, men landet har länge vägrat att driva in dem: man fruktar att alltför strikta regler kommer att få huvudkontor att fly till andra regioner i världen. Försvarare av skatterättvisa påpekar också att denna andel på 15 % fortfarande är lägre än genomsnittet för utvecklade länder, och att de fattigaste länderna, ofta de som drabbas hårdast av skatteflykt, bara kommer att få tillbaka en liten del."
+        },
+        {
+          "type": "takeaway",
+          "text": "GAFAM har länge utnyttjat kryphål i internationell rätt för att betala hånfulla skatter, vilket kostar offentliga budgetar upp till 240 miljarder dollar per år. Sedan 2021 har en global minimiskatt på 15 % försökt korrigera denna obalans, men kampen för en rättvisare beskattning fortsätter."
+        }
+      ]
+    }
+  ]
+}

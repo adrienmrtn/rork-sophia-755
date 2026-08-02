@@ -1,0 +1,102 @@
+{
+  "id": "course_54_la_decouverte_du_micro_ondes_par_acciden",
+  "title": "De ontdekking van de magnetron",
+  "subtitle": "Per ongeluk",
+  "subject": "sciences",
+  "subcategory": "Discoveries that changed the world",
+  "description": "In 1945 merkte een ingenieur dat zijn reep was gesmolten nabij een radar. Uit deze observatie werd de magnetron geboren.",
+  "hero": {
+    "image": "la_decouverte_du_micro_ondes",
+    "ratio": "16:9",
+    "hook": "Een gesmolten chocoladereep... en de moderne keuken verandert."
+  },
+  "sections": [
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_intro",
+      "title": "Inleiding",
+      "free": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In **1945**, in de Verenigde Staten, werkt ingenieur **Percy Spencer** aan radars. Op een dag merkt hij dat de reep in zijn zak is gesmolten. Niet vanwege lichaamswarmte: vanwege radargolven."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hij test met mais: de popcorn knalt. Het idee van een oven die anders verwarmt was geboren."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p1",
+      "title": "Van radar tot de keuken",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "percy_spencer_microwave_discovery_radar",
+          "ratio": "4:3",
+          "caption": "Radars uit de Tweede Wereldoorlog maakten al gebruik van microgolven."
+        },
+        {
+          "type": "paragraph",
+          "text": "**microgolven** zijn elektromagnetische golven, net als radiolicht, maar 'energetischer' dan veel conventionele radiogolven. Tijdens de oorlog werden ze vooral gebruikt als radar om vliegtuigen en boten te detecteren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Spencer begrijpt dat ze ook water en vetten in voedsel kunnen roeren... en het daardoor kunnen verwarmen."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p2",
+      "title": "De eerste oven is enorm",
+      "free": false,
+      "blocks": [
+        {
+          "type": "image",
+          "asset": "first_microwave_oven_radarange_1947",
+          "ratio": "4:3",
+          "caption": "De eerste commerciële magnetronoven had het formaat van een kast."
+        },
+        {
+          "type": "paragraph",
+          "text": "Het eerste commerciële model, de **Radarrange**, werd uitgebracht rond **1947**. Het is enorm, duur en vooral bedoeld voor restaurants of boten. Het zal tientallen jaren duren om het te miniaturiseren en betaalbaar te maken voor woningen."
+        },
+        {
+          "type": "funFact",
+          "text": "Aanvankelijk waren sommigen bang dat de oven ‘het voedsel radioactief zou maken’. Niet waar: microgolven worden warm, ze maken je niet radioactief."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p3",
+      "title": "Hoe warmt het eigenlijk op?",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Microgolven trillen vooral watermoleculen (en een beetje vetten en suikers). Door dit roeren ontstaat er **Z-warmte** in het voedsel, en niet alleen op het oppervlak, zoals in een pan."
+        },
+        {
+          "type": "paragraph",
+          "text": "Daarom kan een gerecht aan de buitenkant heet zijn en in het midden lauw als het dik is: de golven dringen niet oneindig diep door."
+        }
+      ]
+    },
+    {
+      "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p4",
+      "title": "Een alledaags voorwerp",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vanaf de jaren zeventig en tachtig verscheen de magnetron in miljoenen keukens. Het verandert gewoonten: snel opwarmen, kant-en-klaarmaaltijden, sneller leven."
+        },
+        {
+          "type": "takeaway",
+          "text": "De magnetron is ontstaan ​​uit een toeval waargenomen door Percy Spencer bij een radar. De golven brengen vooral het water in het voedsel in beroering en verwarmen het van binnenuit."
+        }
+      ]
+    }
+  ]
+}
