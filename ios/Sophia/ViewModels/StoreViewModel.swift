@@ -6,6 +6,10 @@ import RevenueCat
 class StoreViewModel {
     var offerings: Offerings?
     var isPremium: Bool = false
+    /// Active Premium entitlement currently in a free-trial period.
+    var isInFreeTrial: Bool = false
+    /// True when the free trial expires tomorrow (calendar day) — drives the in-app mini banner.
+    var trialExpiresInOneDay: Bool = false
     var isLoading: Bool = false
     var isPurchasing: Bool = false
     var error: String?
@@ -17,8 +21,28 @@ class StoreViewModel {
 
     private func listenForUpdates() async {
         for await info in Purchases.shared.customerInfoStream {
-            self.isPremium = info.entitlements["premium"]?.isActive == true
+            applyCustomerInfo(info)
         }
+    }
+
+    private func applyCustomerInfo(_ info: CustomerInfo) {
+        let entitlement = info.entitlements["premium"]
+        isPremium = entitlement?.isActive == true
+        isInFreeTrial = isPremium && entitlement?.periodType == .trial
+        trialExpiresInOneDay = Self.isTrialExpiringInOneDay(entitlement)
+    }
+
+    /// Calendar-day check: trial is active and expires tomorrow.
+    private static func isTrialExpiringInOneDay(_ entitlement: EntitlementInfo?) -> Bool {
+        guard let entitlement,
+              entitlement.isActive,
+              entitlement.periodType == .trial,
+              let expiration = entitlement.expirationDate else { return false }
+        let calendar = Calendar.current
+        let startToday = calendar.startOfDay(for: Date())
+        let startExpiration = calendar.startOfDay(for: expiration)
+        let days = calendar.dateComponents([.day], from: startToday, to: startExpiration).day
+        return days == 1
     }
 
     func fetchOfferings() async {
@@ -37,7 +61,7 @@ class StoreViewModel {
         do {
             let result = try await Purchases.shared.purchase(package: package)
             if !result.userCancelled {
-                isPremium = result.customerInfo.entitlements["premium"]?.isActive == true
+                applyCustomerInfo(result.customerInfo)
                 return isPremium
             }
             return false
@@ -54,7 +78,7 @@ class StoreViewModel {
     func restore() async {
         do {
             let info = try await Purchases.shared.restorePurchases()
-            isPremium = info.entitlements["premium"]?.isActive == true
+            applyCustomerInfo(info)
         } catch {
             self.error = error.localizedDescription
         }
@@ -63,7 +87,7 @@ class StoreViewModel {
     func checkStatus() async {
         do {
             let info = try await Purchases.shared.customerInfo()
-            isPremium = info.entitlements["premium"]?.isActive == true
+            applyCustomerInfo(info)
         } catch {
             self.error = error.localizedDescription
         }

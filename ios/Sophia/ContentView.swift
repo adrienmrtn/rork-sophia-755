@@ -19,6 +19,7 @@ struct ContentView: View {
     @State private var pendingCourse: Course? = nil
     @State private var autoSwipeCourseId: String? = nil
     @State private var pendingCourseSource = "home_tinder"
+    @State private var showTrialEndingBanner: Bool = false
 
     var body: some View {
         ZStack {
@@ -157,9 +158,21 @@ struct ContentView: View {
                 .zIndex(40)
             }
 
+            if showTrialEndingBanner {
+                VStack(spacing: 0) {
+                    TrialEndingMiniBanner()
+                        .transition(.move(edge: .top).combined(with: .opacity))
+                    Spacer(minLength: 0)
+                }
+                .safeAreaPadding(.top)
+                .allowsHitTesting(false)
+                .zIndex(60)
+            }
+
         }
         .animation(.easeInOut(duration: 0.3), value: discountManager.isGiftPending)
         .animation(.spring(response: 0.5, dampingFraction: 0.8), value: discountManager.isActive)
+        .animation(.easeInOut(duration: 0.25), value: showTrialEndingBanner)
         .fullScreenCover(item: $paywallContext) { context in
             SophiaPaywallView(
                 context: context,
@@ -198,6 +211,7 @@ struct ContentView: View {
                 isPremium: storeVM.isPremium,
                 onboardingCompleted: true
             )
+            presentTrialEndingBannerIfNeeded()
             // ATT est demandée dès l'ouverture de l'app (voir SophiaApp), plus ici.
             guard HomeCardPresentation.style == .legacy else { return }
             if !progressManager.hasSeenSwipeTutorial {
@@ -207,6 +221,9 @@ struct ContentView: View {
                     }
                 }
             }
+        }
+        .onChange(of: storeVM.trialExpiresInOneDay) { _, _ in
+            presentTrialEndingBannerIfNeeded()
         }
         .onChange(of: storeVM.isPremium) { _, isPremium in
             AnalyticsService.updateUserContext(
@@ -219,6 +236,29 @@ struct ContentView: View {
             openDeepLinkedCourse(courseId)
         }
         .trackAnalyticsLifecycle(isPremium: storeVM.isPremium)
+    }
+
+    /// In-app only: tiny banner the calendar day before trial end, once per day, auto-hides in 1s.
+    private func presentTrialEndingBannerIfNeeded() {
+        guard auth.isSignedIn, storeVM.trialExpiresInOneDay, !showTrialEndingBanner else { return }
+        let defaults = UserDefaults.standard
+        let key = "sophia_trial_ending_banner_day"
+        let day = Self.dayKey(for: Date())
+        if defaults.string(forKey: key) == day { return }
+        defaults.set(day, forKey: key)
+        withAnimation(.easeIn(duration: 0.2)) {
+            showTrialEndingBanner = true
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            withAnimation(.easeOut(duration: 0.25)) {
+                showTrialEndingBanner = false
+            }
+        }
+    }
+
+    private static func dayKey(for date: Date) -> String {
+        let comps = Calendar.current.dateComponents([.year, .month, .day], from: date)
+        return String(format: "%04d-%02d-%02d", comps.year ?? 0, comps.month ?? 0, comps.day ?? 0)
     }
 
     private func courseSourceForCurrentTab() -> String {
