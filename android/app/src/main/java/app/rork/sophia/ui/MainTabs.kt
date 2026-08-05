@@ -1,8 +1,14 @@
 package app.rork.sophia.ui
 
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInVertically
+import androidx.compose.animation.slideOutVertically
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AutoStories
 import androidx.compose.material.icons.filled.Home
@@ -23,6 +29,7 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
@@ -37,6 +44,7 @@ import app.rork.sophia.domain.Course
 import app.rork.sophia.domain.PostCompletionRewardStep
 import app.rork.sophia.ui.collections.CollectionsScreen
 import app.rork.sophia.ui.components.PostCompletionRewardFlow
+import app.rork.sophia.ui.components.TrialEndingMiniBanner
 import app.rork.sophia.ui.course.CourseScreen
 import app.rork.sophia.ui.home.DiscountGiftOverlay
 import app.rork.sophia.ui.home.DiscountSideTab
@@ -53,6 +61,10 @@ import app.rork.sophia.ui.social.FriendsScreen
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.training.TrainingScreen
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
+import kotlinx.coroutines.delay
 
 private enum class OverlayScreen { Friends, Feedback, Ambassador, Terms, Privacy }
 
@@ -67,6 +79,7 @@ fun MainTabs(
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
     val isPremium by storeViewModel.isPremium.collectAsState()
+    val trialExpiresInOneDay by storeViewModel.trialExpiresInOneDay.collectAsState()
     val progress by app.progressManager.progress.collectAsState()
     val discount by app.discountManager.state.collectAsState()
     var selectedTab by remember { mutableIntStateOf(0) }
@@ -78,6 +91,7 @@ fun MainTabs(
     var pendingCompletionCourseId by remember { mutableStateOf<String?>(null) }
     var levelBeforeCompletion by remember { mutableIntStateOf(1) }
     var paywallPresentedAtMs by remember { mutableStateOf<Long?>(null) }
+    var showTrialEndingBanner by remember { mutableStateOf(false) }
 
     LaunchedEffect(language, isPremium, progress.subjectXP) {
         app.analytics.updateContext(
@@ -86,6 +100,18 @@ fun MainTabs(
             onboardingCompleted = app.onboardingStore.isCompleted,
             unlockedSubjects = progress.subjectXP.keys,
         )
+    }
+
+    // In-app only: tiny banner the calendar day before trial end, once per day, auto-hides in 1s.
+    LaunchedEffect(trialExpiresInOneDay) {
+        if (!trialExpiresInOneDay) return@LaunchedEffect
+        val prefs = context.getSharedPreferences("sophia_prefs", android.content.Context.MODE_PRIVATE)
+        val day = SimpleDateFormat("yyyy-MM-dd", Locale.US).format(Date())
+        if (prefs.getString("sophia_trial_ending_banner_day", null) == day) return@LaunchedEffect
+        prefs.edit().putString("sophia_trial_ending_banner_day", day).apply()
+        showTrialEndingBanner = true
+        delay(1000)
+        showTrialEndingBanner = false
     }
 
     LaunchedEffect(deepLinkCourseId, language) {
@@ -380,6 +406,17 @@ fun MainTabs(
                     },
                 )
             }
+        }
+
+        AnimatedVisibility(
+            visible = showTrialEndingBanner,
+            modifier = Modifier
+                .align(Alignment.TopCenter)
+                .statusBarsPadding(),
+            enter = fadeIn() + slideInVertically { -it },
+            exit = fadeOut() + slideOutVertically { -it },
+        ) {
+            TrialEndingMiniBanner(language = language)
         }
     }
 }

@@ -5,9 +5,11 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import app.rork.sophia.AppConfig
 import com.revenuecat.purchases.CustomerInfo
+import com.revenuecat.purchases.EntitlementInfo
 import com.revenuecat.purchases.Offering
 import com.revenuecat.purchases.Offerings
 import com.revenuecat.purchases.Package
+import com.revenuecat.purchases.PeriodType
 import com.revenuecat.purchases.Purchases
 import com.revenuecat.purchases.PurchasesConfiguration
 import com.revenuecat.purchases.PurchasesError
@@ -20,12 +22,23 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import java.text.NumberFormat
+import java.util.Calendar
 import java.util.Currency
+import java.util.Date
 import java.util.Locale
+import java.util.concurrent.TimeUnit
 
 class StoreViewModel(app: Application) : AndroidViewModel(app) {
     private val _isPremium = MutableStateFlow(false)
     val isPremium: StateFlow<Boolean> = _isPremium.asStateFlow()
+
+    /** Active Premium entitlement currently in a free-trial period. */
+    private val _isInFreeTrial = MutableStateFlow(false)
+    val isInFreeTrial: StateFlow<Boolean> = _isInFreeTrial.asStateFlow()
+
+    /** True when the free trial expires tomorrow (calendar day) — drives the in-app mini banner. */
+    private val _trialExpiresInOneDay = MutableStateFlow(false)
+    val trialExpiresInOneDay: StateFlow<Boolean> = _trialExpiresInOneDay.asStateFlow()
 
     private val _configured = MutableStateFlow(false)
     val configured: StateFlow<Boolean> = _configured.asStateFlow()
@@ -41,6 +54,35 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
         configureIfNeeded()
         refresh()
         fetchOfferings()
+    }
+
+    private fun applyCustomerInfo(customerInfo: CustomerInfo) {
+        val entitlement = customerInfo.entitlements[AppConfig.PREMIUM_ENTITLEMENT]
+        val active = entitlement?.isActive == true
+        _isPremium.value = active
+        _isInFreeTrial.value = active && entitlement?.periodType == PeriodType.TRIAL
+        _trialExpiresInOneDay.value = isTrialExpiringInOneDay(entitlement)
+    }
+
+    /** Calendar-day check: trial is active and expires tomorrow. */
+    private fun isTrialExpiringInOneDay(entitlement: EntitlementInfo?): Boolean {
+        if (entitlement == null || !entitlement.isActive) return false
+        if (entitlement.periodType != PeriodType.TRIAL) return false
+        val expiration = entitlement.expirationDate ?: return false
+        val startToday = startOfDay(Date())
+        val startExpiration = startOfDay(expiration)
+        val days = TimeUnit.MILLISECONDS.toDays(startExpiration.time - startToday.time)
+        return days == 1L
+    }
+
+    private fun startOfDay(date: Date): Date {
+        val calendar = Calendar.getInstance()
+        calendar.time = date
+        calendar.set(Calendar.HOUR_OF_DAY, 0)
+        calendar.set(Calendar.MINUTE, 0)
+        calendar.set(Calendar.SECOND, 0)
+        calendar.set(Calendar.MILLISECOND, 0)
+        return calendar.time
     }
 
     private fun configureIfNeeded() {
@@ -65,8 +107,7 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
         viewModelScope.launch {
             Purchases.sharedInstance.getCustomerInfo(object : ReceiveCustomerInfoCallback {
                 override fun onReceived(customerInfo: CustomerInfo) {
-                    _isPremium.value =
-                        customerInfo.entitlements[AppConfig.PREMIUM_ENTITLEMENT]?.isActive == true
+                    applyCustomerInfo(customerInfo)
                 }
 
                 override fun onError(error: PurchasesError) {
@@ -175,8 +216,8 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
         Purchases.sharedInstance.restorePurchasesWith(
             onError = { error -> onResult(false, error.message) },
             onSuccess = { info ->
-                val active = info.entitlements[AppConfig.PREMIUM_ENTITLEMENT]?.isActive == true
-                _isPremium.value = active
+                applyCustomerInfo(info)
+                val active = _isPremium.value
                 onResult(active, if (active) null else "Aucun abonnement trouvé")
             },
         )
