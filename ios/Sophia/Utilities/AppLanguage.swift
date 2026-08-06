@@ -108,4 +108,14 @@ enum AppLanguage: String, CaseIterable, Identifiable, Codable, Sendable {
         UserDefaults.standard.set(detected.rawValue, forKey: userDefaultsKey)
         return detected
     }
+
+    /// Very-short weekday letters Monday→Sunday for streak calendars (never hardcode French LMMJVSD).
+    var mondayFirstWeekdayLetters: [String] {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: localeIdentifier)
+        let symbols = formatter.veryShortWeekdaySymbols ?? ["S", "M", "T", "W", "T", "F", "S"]
+        guard symbols.count == 7 else { return symbols }
+        // Foundation orders Sunday-first; our week strip is Monday-first.
+        return Array(symbols[1...]) + [symbols[0]]
+    }
 }

@@ -43,11 +43,18 @@ import app.rork.sophia.ui.theme.SophiaTypography
 @Composable
 fun StreakCelebration(
     streak: Int,
+    language: AppLanguage,
     onContinue: () -> Unit,
 ) {
+    val context = LocalContext.current
     var target by remember { mutableFloatStateOf(0.85f) }
     LaunchedEffect(Unit) { target = 1f }
     val scale by animateFloatAsState(target, animationSpec = tween(500), label = "streak")
+    val dayLabel = StringStore.text(
+        context,
+        if (streak <= 1) "course.streak.day" else "course.streak.days",
+        language,
+    )
 
     Box(
         modifier = Modifier
@@ -63,17 +70,17 @@ fun StreakCelebration(
         ) {
             Text("🔥", fontSize = 64.sp)
             Text(
-                text = "$streak jour${if (streak > 1) "s" else ""}",
+                text = "$streak $dayLabel",
                 style = SophiaTypography.displayLarge,
                 textAlign = TextAlign.Center,
             )
             Text(
-                text = "Série en cours — continue demain !",
+                text = StringStore.text(context, "course.streak.onTrack", language),
                 style = SophiaTypography.bodyMedium,
                 textAlign = TextAlign.Center,
             )
-            Spacer(Modifier.height(16.dp))
-            ContinueButton(onContinue)
+            Spacer(modifier.height(16.dp))
+            ContinueButton(language = language, onContinue = onContinue)
         }
     }
 }
@@ -82,8 +89,10 @@ fun StreakCelebration(
 fun RankUpCelebration(
     rankKey: String,
     level: Int,
+    language: AppLanguage,
     onContinue: () -> Unit,
 ) {
+    val context = LocalContext.current
     var target by remember { mutableFloatStateOf(0.9f) }
     LaunchedEffect(Unit) { target = 1f }
     val scale by animateFloatAsState(target, animationSpec = tween(450), label = "rank")
@@ -99,12 +108,19 @@ fun RankUpCelebration(
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier.scale(scale),
         ) {
-            Text("Nouveau rang", style = SophiaTypography.labelLarge, color = DS.accentSoft)
+            Text(
+                text = StringStore.text(context, "globalRank.newRank", language),
+                style = SophiaTypography.labelLarge,
+                color = DS.accentSoft,
+            )
             Spacer(Modifier.height(8.dp))
             Text(rankKey.replaceFirstChar { it.titlecase() }, style = SophiaTypography.displayLarge)
-            Text("Niveau $level", style = SophiaTypography.titleMedium)
+            Text(
+                text = StringStore.text(context, "common.levelShort", language, level),
+                style = SophiaTypography.titleMedium,
+            )
             Spacer(Modifier.height(24.dp))
-            ContinueButton(onContinue)
+            ContinueButton(language = language, onContinue = onContinue)
         }
     }
 }
@@ -159,7 +175,7 @@ fun CollectionCelebration(
                 strokeCap = StrokeCap.Round,
             )
             Spacer(Modifier.height(24.dp))
-            ContinueButton(onContinue)
+            ContinueButton(language = language, onContinue = onContinue)
         }
     }
 }
@@ -167,8 +183,10 @@ fun CollectionCelebration(
 @Composable
 fun LevelUpCelebration(
     level: Int,
+    language: AppLanguage,
     onContinue: () -> Unit,
 ) {
+    val context = LocalContext.current
     var target by remember { mutableFloatStateOf(0.9f) }
     LaunchedEffect(Unit) { target = 1f }
     val scale by animateFloatAsState(target, animationSpec = tween(450), label = "level")
@@ -184,11 +202,18 @@ fun LevelUpCelebration(
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier.scale(scale),
         ) {
-            Text("Niveau supérieur", style = SophiaTypography.labelLarge, color = DS.accentSoft)
+            Text(
+                text = StringStore.text(context, "globalRank.reachedLevel", language, level),
+                style = SophiaTypography.labelLarge,
+                color = DS.accentSoft,
+            )
             Spacer(Modifier.height(8.dp))
-            Text("Niveau $level", style = SophiaTypography.displayLarge)
+            Text(
+                text = StringStore.text(context, "common.levelShort", language, level),
+                style = SophiaTypography.displayLarge,
+            )
             Spacer(Modifier.height(24.dp))
-            ContinueButton(onContinue)
+            ContinueButton(language = language, onContinue = onContinue)
         }
     }
 }
@@ -215,24 +240,36 @@ fun PostCompletionRewardFlow(
     }
 
     when (step) {
-        is PostCompletionRewardStep.Streak -> StreakCelebration(step.days, onContinue = ::next)
+        is PostCompletionRewardStep.Streak ->
+            StreakCelebration(streak = step.days, language = language, onContinue = ::next)
         is PostCompletionRewardStep.RankUp ->
-            RankUpCelebration(rankKey = step.rankKey, level = step.level, onContinue = ::next)
+            RankUpCelebration(
+                rankKey = step.rankKey,
+                level = step.level,
+                language = language,
+                onContinue = ::next,
+            )
         is PostCompletionRewardStep.Collection ->
             CollectionCelebration(event = step.event, language = language, onContinue = ::next)
         is PostCompletionRewardStep.LevelUp ->
-            LevelUpCelebration(level = step.level, onContinue = ::next)
+            LevelUpCelebration(level = step.level, language = language, onContinue = ::next)
     }
 }
 
 @Composable
-private fun ContinueButton(onContinue: () -> Unit) {
+private fun ContinueButton(language: AppLanguage, onContinue: () -> Unit) {
+    val context = LocalContext.current
     Button(
         onClick = onContinue,
         modifier = Modifier.fillMaxWidth().height(52.dp),
         shape = DS.controlShape,
         colors = ButtonDefaults.buttonColors(containerColor = DS.accent),
     ) {
-        Text("Continuer", color = Color.White, fontFamily = PlusJakartaSans, fontWeight = FontWeight.SemiBold)
+        Text(
+            text = StringStore.text(context, "common.continue", language),
+            color = Color.White,
+            fontFamily = PlusJakartaSans,
+            fontWeight = FontWeight.SemiBold,
+        )
     }
 }

@@ -516,7 +516,7 @@ struct StreakCelebrationView: View {
     private var weekStrip: some View {
         let calendar = Calendar.current
         let today = calendar.startOfDay(for: Date())
-        let dayLetters = ["L", "M", "M", "J", "V", "S", "D"]
+        let dayLetters = languageManager.current.mondayFirstWeekdayLetters
         let weekday = calendar.component(.weekday, from: today)
         let mondayOffset = ((weekday + 5) % 7)
         let monday = calendar.date(byAdding: .day, value: -mondayOffset, to: today) ?? today

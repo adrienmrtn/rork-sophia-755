@@ -608,6 +608,38 @@ class Translator:
             if idx >= 0:
                 translated = translated[:idx] + repl + translated[idx + len(term) :]
                 continue
+            # Prefer re-inserting into an empty article/prep slot left by MT
+            # (e.g. "de :" / "do ,") instead of parking the term at the end.
+            empty_slot = re.search(
+                r"\b(de|do|da|del|the|di|du|des|um|uma|un|une|el|il|lo|la|le|les|"
+                r"der|die|das|dem|den|o|a|par|pelo|pela|au|aux|al)\s*([,:])\s+(?!\[)",
+                translated,
+                flags=re.IGNORECASE,
+            )
+            if empty_slot:
+                article = empty_slot.group(1)
+                punct = empty_slot.group(2)
+                insertion = f"{article} {repl}{punct} "
+                translated = (
+                    translated[: empty_slot.start()]
+                    + insertion
+                    + translated[empty_slot.end() :]
+                )
+                continue
+            empty_space = re.search(
+                r"\b(de|do|da|del|the|di|du|des|le|la|par|pelo|pela)\s{2,}(?!\[)",
+                translated,
+                flags=re.IGNORECASE,
+            )
+            if empty_space:
+                article = empty_space.group(1)
+                insertion = f"{article} {repl} "
+                translated = (
+                    translated[: empty_space.start()]
+                    + insertion
+                    + translated[empty_space.end() :]
+                )
+                continue
             # Last resort: append so glossary count never silently drops.
             translated = f"{translated.rstrip()} {repl}"
 
