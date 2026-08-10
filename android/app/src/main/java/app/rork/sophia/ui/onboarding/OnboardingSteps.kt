@@ -190,59 +190,77 @@ internal fun LanguageStep(
                 Spacer(Modifier.height(36.dp))
             }
 
-            AnimatedVisibility(
+            // Extracted: ColumnScope.AnimatedVisibility would be picked inside Column→Box
+            // and fails to compile; use a child composable without ColumnScope receiver.
+            LanguageScrollHint(
                 visible = showScrollHint,
+                bounce = bounce,
+                language = language,
                 modifier = Modifier.align(Alignment.BottomCenter),
-                enter = fadeIn(),
-                exit = fadeOut(tween(250)),
-            ) {
-                Column(
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    modifier = Modifier.fillMaxWidth(),
-                ) {
-                    Box(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(56.dp)
-                            .background(
-                                Brush.verticalGradient(
-                                    listOf(DS.canvas.copy(alpha = 0f), DS.canvas),
-                                ),
-                            ),
-                    )
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .background(DS.canvas)
-                            .padding(bottom = 8.dp),
-                        horizontalArrangement = Arrangement.Center,
-                        verticalAlignment = Alignment.CenterVertically,
-                    ) {
-                        Text(
-                            "▼",
-                            color = DS.inkSecondary,
-                            fontSize = 11.sp,
-                            modifier = Modifier.offset(y = bounce.dp),
-                        )
-                        Text(
-                            StringStore.text(context, "onboardingV2.language.scrollHint", language),
-                            style = SophiaTypography.labelMedium,
-                            color = DS.inkSecondary,
-                            modifier = Modifier.padding(horizontal = 8.dp),
-                        )
-                        Text(
-                            "▼",
-                            color = DS.inkSecondary,
-                            fontSize = 11.sp,
-                            modifier = Modifier.offset(y = bounce.dp),
-                        )
-                    }
-                }
-            }
+            )
         }
 
         PrimaryCta(StringStore.text(context, "common.continue", language), onContinue)
         Spacer(Modifier.height(12.dp))
+    }
+}
+
+@Composable
+private fun LanguageScrollHint(
+    visible: Boolean,
+    bounce: Float,
+    language: AppLanguage,
+    modifier: Modifier = Modifier,
+) {
+    val context = LocalContext.current
+    AnimatedVisibility(
+        visible = visible,
+        modifier = modifier,
+        enter = fadeIn(),
+        exit = fadeOut(tween(250)),
+    ) {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = Modifier.fillMaxWidth(),
+        ) {
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(56.dp)
+                    .background(
+                        Brush.verticalGradient(
+                            listOf(DS.canvas.copy(alpha = 0f), DS.canvas),
+                        ),
+                    ),
+            )
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(DS.canvas)
+                    .padding(bottom = 8.dp),
+                horizontalArrangement = Arrangement.Center,
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Text(
+                    "▼",
+                    color = DS.inkSecondary,
+                    fontSize = 11.sp,
+                    modifier = Modifier.offset(y = bounce.dp),
+                )
+                Text(
+                    StringStore.text(context, "onboardingV2.language.scrollHint", language),
+                    style = SophiaTypography.labelMedium,
+                    color = DS.inkSecondary,
+                    modifier = Modifier.padding(horizontal = 8.dp),
+                )
+                Text(
+                    "▼",
+                    color = DS.inkSecondary,
+                    fontSize = 11.sp,
+                    modifier = Modifier.offset(y = bounce.dp),
+                )
+            }
+        }
     }
 }
 

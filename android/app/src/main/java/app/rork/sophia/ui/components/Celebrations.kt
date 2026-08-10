@@ -79,7 +79,7 @@ fun StreakCelebration(
                 style = SophiaTypography.bodyMedium,
                 textAlign = TextAlign.Center,
             )
-            Spacer(modifier.height(16.dp))
+            Spacer(Modifier.height(16.dp))
             ContinueButton(language = language, onContinue = onContinue)
         }
     }
