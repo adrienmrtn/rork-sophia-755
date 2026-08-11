@@ -109,7 +109,6 @@ struct CourseImageMap {
         "course_67_qu_est_ce_qu_un_trou_noir": "qu_est_ce_qu_un_trou_noir",
         "course_68_la_theorie_de_la_relativite_pour_tous": "la_theorie_de_la_relativite_pour_tous",
         "course_69_comment_se_forment_les_eclairs": "comment_se_forment_les_eclairs",
-        "course_70_comment_fonctionne_un_vaccin": "comment_fonctionne_un_vaccin",
         "course_71_qu_est_ce_que_l_effet_de_serre_vraiment": "qu_est_ce_que_l_effet_de_serre",
         "course_72_pourquoi_dort_on": "pourquoi_dort_on",
         "course_73_comment_le_cerveau_stocke_t_il_les_souve": "comment_le_cerveau_stocke_les_souvenirs",
