@@ -128,8 +128,8 @@ def check_assets(c: Checker) -> None:
                     f"terms={len(d.get('terms', []))} privacy={len(d.get('privacy', []))}",
                 )
         n = len(list((ASSETS / "courses_v2" / lang).glob("*.json")))
-        if n != 239:
-            c.fail(f"courses_v2/{lang} count={n} (expected 239)")
+        if n != 238:
+            c.fail(f"courses_v2/{lang} count={n} (expected 238)")
     if not c.errors or all("courses_v2" not in e and "missing" not in e for e in c.errors[-20:]):
         c.ok("assets present for 15 langs (locales/strings/legal/courses_v2)")
 

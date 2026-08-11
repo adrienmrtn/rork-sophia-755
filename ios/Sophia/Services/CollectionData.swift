@@ -22,7 +22,7 @@ nonisolated enum CollectionData {
             title: "Le Corps Humain : de la Guérison à la Technologie",
             description: "L'évolution de notre rapport à la santé et au progrès biologique.",
             coverAssetName: "collection_le_corps_humain_de_la_guerison_a_la_technologie",
-            courseIds: ["course_70_comment_fonctionne_un_vaccin", "course_58_la_structure_de_l_adn_watson_crick_1953", "course_226_l_ia_et_l_emploi", "course_228_la_sante_mentale_comme_enjeu_de_societe", "course_51_la_decouverte_de_la_penicilline_fleming"]
+            courseIds: ["course_51_la_decouverte_de_la_penicilline_fleming", "course_58_la_structure_de_l_adn_watson_crick_1953", "course_226_l_ia_et_l_emploi", "course_228_la_sante_mentale_comme_enjeu_de_societe"]
         ),
         LearningCollection(
             id: "c_vblwguvnamcf",
@@ -190,7 +190,7 @@ nonisolated enum CollectionData {
             title: "Progrès et Médecine",
             description: "Comment la science a appris à soigner le corps humain et à combattre les virus.",
             coverAssetName: "collection_progres_et_medecine",
-            courseIds: ["course_51_la_decouverte_de_la_penicilline_fleming", "course_70_comment_fonctionne_un_vaccin", "course_59_la_decouverte_de_l_anesthesie", "course_53_la_decouverte_des_rayons_x_rontgen_1895", "course_50_comment_le_savon_tue_t_il_les_virus"]
+            courseIds: ["course_51_la_decouverte_de_la_penicilline_fleming", "course_59_la_decouverte_de_l_anesthesie", "course_53_la_decouverte_des_rayons_x_rontgen_1895", "course_50_comment_le_savon_tue_t_il_les_virus"]
         ),
         LearningCollection(
             id: "g_mpzqlws4_exr09",

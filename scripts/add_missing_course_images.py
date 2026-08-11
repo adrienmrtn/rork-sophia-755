@@ -47,7 +47,6 @@ PLAN = {
 STILL_MISSING_NO_GOOD_MATCH = [
     "course_4_le_couronnement_de_charlemagne_800",       # no image of Leo III's coronation / Aachen available
     "course_34_la_decolonisation_panorama_1945_1975",    # no decolonization-specific image available
-    "course_70_comment_fonctionne_un_vaccin",            # no syringe/immunization photo available
     "course_79_pourquoi_certains_sons_nous_donnent_ils", # no strong "musical frisson" match available
 ]
 
