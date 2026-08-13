@@ -23,6 +23,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Text
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
@@ -42,6 +43,7 @@ import androidx.compose.ui.unit.sp
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.CourseSessionTracker
+import app.rork.sophia.data.GlossaryStore
 import app.rork.sophia.data.InAppReviewHelper
 import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.ShareHelper
@@ -53,7 +55,9 @@ import app.rork.sophia.ui.components.RichTextWithGlossary
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
@@ -78,20 +82,28 @@ fun CourseScreen(
     val wasCompletedBefore = remember(course.id) {
         progressManager.courseProgress(course.id)?.isCompleted == true
     }
-    val pages = remember(course.id, language) {
-        buildPages(context, course, language)
-    }
+    var pages by remember(course.id, language) { mutableStateOf<List<ReaderPage>>(emptyList()) }
+    var pagesReady by remember(course.id, language) { mutableStateOf(false) }
     val pagerState = rememberPagerState(pageCount = { pages.size.coerceAtLeast(1) })
     val scope = rememberCoroutineScope()
     val sessionTracker = remember(course.id) {
         CourseSessionTracker(
             courseId = course.id,
             subject = course.subjectEnum.storageKey,
-            lessonCount = pages.size.coerceAtLeast(1),
+            lessonCount = 1,
         )
     }
 
-    LaunchedEffect(Unit) {
+    LaunchedEffect(course.id, language) {
+        pagesReady = false
+        val appContext = context.applicationContext
+        val loaded = withContext(Dispatchers.IO) {
+            GlossaryStore.preload(appContext, language)
+            buildPages(appContext, course, language)
+        }
+        pages = loaded
+        sessionTracker.lessonCount = loaded.size.coerceAtLeast(1)
+        pagesReady = true
         progressManager.recordFirstCourseOpenedIfNeeded(course.id)
     }
 
@@ -173,6 +185,14 @@ fun CourseScreen(
                 strokeCap = StrokeCap.Round,
             )
 
+            if (!pagesReady) {
+                Box(
+                    modifier = Modifier.weight(1f).fillMaxWidth(),
+                    contentAlignment = Alignment.Center,
+                ) {
+                    CircularProgressIndicator(color = DS.accent)
+                }
+            } else {
             HorizontalPager(
                 state = pagerState,
                 modifier = Modifier.weight(1f),
@@ -209,6 +229,7 @@ fun CourseScreen(
                         }
                     }
                 }
+            }
             }
 
             Row(

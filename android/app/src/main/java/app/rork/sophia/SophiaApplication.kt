@@ -3,7 +3,9 @@ package app.rork.sophia
 import android.app.Application
 import app.rork.sophia.data.AnalyticsService
 import app.rork.sophia.data.AuthService
+import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.DiscountOfferManager
+import app.rork.sophia.data.GlossaryStore
 import app.rork.sophia.data.LanguageManager
 import app.rork.sophia.data.MetaAdsService
 import app.rork.sophia.data.OnboardingStore
@@ -12,9 +14,15 @@ import app.rork.sophia.data.ProgressSyncService
 import app.rork.sophia.data.SocialService
 import app.rork.sophia.data.TrialReminderScheduler
 import app.rork.sophia.data.TutorialFlags
+import app.rork.sophia.ui.components.CourseImageResolver
 import com.facebook.FacebookSdk
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.launch
 
 class SophiaApplication : Application() {
+    private val appScope = CoroutineScope(SupervisorJob() + Dispatchers.Default)
     lateinit var languageManager: LanguageManager
         private set
     lateinit var progressManager: ProgressManager
@@ -58,6 +66,17 @@ class SophiaApplication : Application() {
             MetaAdsService.activateApp(this)
         }
         TrialReminderScheduler.ensureChannel(this)
+
+        // Warm heavy assets off the main thread so the first TikTok swipe / course open
+        // doesn't parse multi‑MB JSON on the UI thread (ANR on low-end devices).
+        val lang = languageManager.current.value
+        appScope.launch(Dispatchers.IO) {
+            runCatching {
+                ContentCatalog.courses(this@SophiaApplication, lang)
+                GlossaryStore.preload(this@SophiaApplication, lang)
+                CourseImageResolver.ensureMap(this@SophiaApplication)
+            }
+        }
     }
 
     companion object {

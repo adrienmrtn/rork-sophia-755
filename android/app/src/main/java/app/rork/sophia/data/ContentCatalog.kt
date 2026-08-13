@@ -4,6 +4,8 @@ import android.content.Context
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Course
 import app.rork.sophia.domain.LearningCollection
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
 import java.util.concurrent.ConcurrentHashMap
 
@@ -21,6 +23,10 @@ object ContentCatalog {
             loadList(context, "locales/courses.${language.code}.json")
         }
     }
+
+    /** Prefer this from UI — avoids ANR while parsing ~3MB locale catalogs. */
+    suspend fun coursesAsync(context: Context, language: AppLanguage): List<Course> =
+        withContext(Dispatchers.IO) { courses(context, language) }
 
     fun collections(context: Context, language: AppLanguage): List<LearningCollection> {
         return collectionCache.getOrPut(language.code) {

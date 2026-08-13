@@ -72,13 +72,18 @@ fun HomeTikTokScreen(
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
-    val cards = remember(language) {
-        ContentCatalog.courses(context, language).shuffled()
-    }
+    var cards by remember(language) { mutableStateOf<List<Course>>(emptyList()) }
+    var catalogReady by remember(language) { mutableStateOf(false) }
     val pagerState = rememberPagerState(pageCount = { cards.size })
     var suppressSwipeCount by remember { mutableStateOf(false) }
     var showExplain by remember {
         mutableStateOf(!app.tutorialFlags.seen(TutorialFlags.Id.HOME_SWIPE))
+    }
+
+    LaunchedEffect(language) {
+        catalogReady = false
+        cards = ContentCatalog.coursesAsync(context.applicationContext, language).shuffled()
+        catalogReady = true
     }
 
     LaunchedEffect(autoSwipeCourseId, cards) {
@@ -123,7 +128,11 @@ fun HomeTikTokScreen(
                 }
             }
 
-            if (cards.isEmpty()) {
+            if (!catalogReady) {
+                Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                    Text("…", style = SophiaTypography.bodyLarge, color = DS.inkSecondary)
+                }
+            } else if (cards.isEmpty()) {
                 Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                     Text(
                         text = StringStore.text(context, "home.allCaughtUp", language)
@@ -138,6 +147,7 @@ fun HomeTikTokScreen(
                     modifier = Modifier.fillMaxSize(),
                     contentPadding = PaddingValues(bottom = 96.dp),
                     pageSpacing = 12.dp,
+                    beyondViewportPageCount = 1,
                 ) { page ->
                     val course = cards[page]
                     TikTokCourseCard(
