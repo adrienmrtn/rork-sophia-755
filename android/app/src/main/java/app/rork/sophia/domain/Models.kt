@@ -56,6 +56,19 @@ data class QuizQuestion(
         }
 }
 
+/** Home/library card fields only — avoids allocating lessons+quiz for the TikTok feed. */
+@Serializable
+data class CourseSummary(
+    val id: String,
+    val title: String,
+    val description: String,
+    val subject: String,
+    val subcategory: String = "",
+) {
+    val subjectEnum: Subject
+        get() = Subject.fromStorageKey(subject) ?: Subject.HISTOIRE
+}
+
 @Serializable
 data class Course(
     val id: String,

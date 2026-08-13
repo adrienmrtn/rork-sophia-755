@@ -28,6 +28,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -65,6 +66,7 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 private enum class OverlayScreen { Friends, Feedback, Ambassador, Terms, Privacy }
 
@@ -78,6 +80,7 @@ fun MainTabs(
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
+    val scope = rememberCoroutineScope()
     val isPremium by storeViewModel.isPremium.collectAsState()
     val trialExpiresInOneDay by storeViewModel.trialExpiresInOneDay.collectAsState()
     val progress by app.progressManager.progress.collectAsState()
@@ -339,7 +342,20 @@ fun MainTabs(
                     autoSwipeCourseId = autoSwipeCourseId,
                     onAutoSwipeConsumed = { autoSwipeCourseId = null },
                     onToggleFavorite = { app.progressManager.toggleFavorite(it) },
-                    onStartCourse = { openCourse(it) },
+                    onStartCourse = { courseId ->
+                        val cached = ContentCatalog.cachedCourse(language, courseId)
+                        if (cached != null) {
+                            openCourse(cached)
+                        } else {
+                            scope.launch {
+                                ContentCatalog.courseAsync(
+                                    context.applicationContext,
+                                    language,
+                                    courseId,
+                                )?.let { openCourse(it) }
+                            }
+                        }
+                    },
                     onUserSwipe = {
                         if (!isPremium) app.discountManager.registerSwipe()
                     },

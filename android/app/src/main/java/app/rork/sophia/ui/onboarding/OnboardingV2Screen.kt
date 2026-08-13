@@ -24,6 +24,7 @@ import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.MetaAdsService
 import app.rork.sophia.data.TrialReminderScheduler
 import app.rork.sophia.domain.AppLanguage
+import app.rork.sophia.ui.components.CourseImageResolver
 import app.rork.sophia.ui.paywall.OnboardingPaywallFlow
 import app.rork.sophia.ui.theme.DS
 import kotlinx.coroutines.launch
@@ -68,6 +69,16 @@ fun OnboardingV2Screen(
     LaunchedEffect(Unit) { app.analytics.trackOnboardingStarted() }
     LaunchedEffect(step) {
         app.analytics.trackOnboardingStep(step.ordinal, step.analyticsName)
+    }
+    // Warm the home feed during paywall so arriving on TikTok home is instant.
+    LaunchedEffect(step, language) {
+        if (step != OnboardingStep.Paywall && step != OnboardingStep.Reminder) return@LaunchedEffect
+        val appContext = context.applicationContext
+        runCatching {
+            val summaries = ContentCatalog.summariesAsync(appContext, language)
+            val firstId = summaries.firstOrNull()?.id ?: return@runCatching
+            CourseImageResolver.decodeDownsampled(appContext, firstId, 720)
+        }
     }
 
     fun finish(isPremiumAtExit: Boolean) {

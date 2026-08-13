@@ -3,6 +3,7 @@ package app.rork.sophia.data
 import android.content.Context
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Course
+import app.rork.sophia.domain.CourseSummary
 import app.rork.sophia.domain.LearningCollection
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -16,7 +17,32 @@ object ContentCatalog {
     }
 
     private val courseCache = ConcurrentHashMap<String, List<Course>>()
+    private val summaryCache = ConcurrentHashMap<String, List<CourseSummary>>()
     private val collectionCache = ConcurrentHashMap<String, List<LearningCollection>>()
+
+    fun cachedSummaries(language: AppLanguage): List<CourseSummary>? =
+        summaryCache[language.code]
+
+    fun cachedCourse(language: AppLanguage, id: String): Course? =
+        courseCache[language.code]?.firstOrNull { it.id == id }
+
+    fun summaries(context: Context, language: AppLanguage): List<CourseSummary> {
+        summaryCache[language.code]?.let { return it }
+        val fromFull = courseCache[language.code]
+        if (fromFull != null) {
+            val mapped = fromFull.map {
+                CourseSummary(it.id, it.title, it.description, it.subject, it.subcategory)
+            }
+            summaryCache[language.code] = mapped
+            return mapped
+        }
+        return summaryCache.getOrPut(language.code) {
+            loadList(context, "locales/courses.${language.code}.json")
+        }
+    }
+
+    suspend fun summariesAsync(context: Context, language: AppLanguage): List<CourseSummary> =
+        withContext(Dispatchers.IO) { summaries(context, language) }
 
     fun courses(context: Context, language: AppLanguage): List<Course> {
         return courseCache.getOrPut(language.code) {
@@ -27,6 +53,9 @@ object ContentCatalog {
     /** Prefer this from UI — avoids ANR while parsing ~3MB locale catalogs. */
     suspend fun coursesAsync(context: Context, language: AppLanguage): List<Course> =
         withContext(Dispatchers.IO) { courses(context, language) }
+
+    suspend fun courseAsync(context: Context, language: AppLanguage, id: String): Course? =
+        withContext(Dispatchers.IO) { course(context, language, id) }
 
     fun collections(context: Context, language: AppLanguage): List<LearningCollection> {
         return collectionCache.getOrPut(language.code) {
@@ -67,6 +96,7 @@ object ContentCatalog {
 
     fun clearCache() {
         courseCache.clear()
+        summaryCache.clear()
         collectionCache.clear()
     }
 }
