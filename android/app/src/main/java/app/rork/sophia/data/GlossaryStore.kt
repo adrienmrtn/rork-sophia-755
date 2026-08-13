@@ -31,7 +31,8 @@ object GlossaryStore {
         courseTitle: String,
         displayTerm: String,
     ): GlossaryEntry? {
-        val table = table(context, language)
+        // Never parse the ~0.8MB glossary on the caller's thread (ANR on course open).
+        val table = cache[language.code] ?: return null
         val primaryKey = if (language == AppLanguage.FRENCH) {
             "$courseTitle|$displayTerm"
         } else {

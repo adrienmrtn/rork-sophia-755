@@ -197,6 +197,7 @@ fun CourseScreen(
                 state = pagerState,
                 modifier = Modifier.weight(1f),
                 userScrollEnabled = true,
+                beyondViewportPageCount = 0,
             ) { index ->
                 val locked = FreemiumGate.isLessonContentLocked(index, isPremium, isDailyFreeCourse)
                 val page = pages.getOrNull(index) ?: return@HorizontalPager

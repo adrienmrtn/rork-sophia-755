@@ -2,6 +2,8 @@ package app.rork.sophia.data
 
 import android.content.Context
 import app.rork.sophia.domain.AppLanguage
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 import java.util.concurrent.ConcurrentHashMap
@@ -32,6 +34,12 @@ object LegalDocumentStore {
         document(context, language).privacy.ifEmpty {
             document(context, AppLanguage.ENGLISH).privacy
         }
+
+    suspend fun termsAsync(context: Context, language: AppLanguage): List<LegalSection> =
+        withContext(Dispatchers.IO) { terms(context, language) }
+
+    suspend fun privacyAsync(context: Context, language: AppLanguage): List<LegalSection> =
+        withContext(Dispatchers.IO) { privacy(context, language) }
 
     private fun document(context: Context, language: AppLanguage): LegalDocumentFile {
         return cache.getOrPut(language.code) {

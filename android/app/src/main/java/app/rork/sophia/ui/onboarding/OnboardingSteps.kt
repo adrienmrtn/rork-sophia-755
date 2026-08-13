@@ -68,7 +68,7 @@ import androidx.compose.ui.unit.sp
 import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
-import app.rork.sophia.domain.Course
+import app.rork.sophia.domain.CourseSummary
 import app.rork.sophia.ui.components.CourseImage
 import app.rork.sophia.ui.legal.LegalDocKind
 import app.rork.sophia.ui.legal.LegalDocumentScreen
@@ -637,12 +637,20 @@ internal fun ReviewStep(language: AppLanguage, onContinue: () -> Unit) {
 @Composable
 internal fun SwipeCoursesStep(
     language: AppLanguage,
-    courses: List<Course>,
+    courses: List<CourseSummary>,
+    ready: Boolean,
     onFinished: (likedIds: List<String>) -> Unit,
 ) {
     val context = LocalContext.current
     var index by remember { mutableIntStateOf(0) }
     var liked by remember { mutableStateOf(listOf<String>()) }
+
+    if (!ready) {
+        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+            Text("…", style = SophiaTypography.bodyLarge, color = DS.inkSecondary)
+        }
+        return
+    }
 
     fun advance(like: Boolean) {
         val course = courses.getOrNull(index) ?: return
@@ -797,9 +805,12 @@ internal fun ProfileRewardStep(
     val context = LocalContext.current
     val archetype = objectiveKeys.firstOrNull() ?: "cultivate"
     val objectives = objectiveKeys.ifEmpty { listOf(archetype) }
-    val awaitingCourses = remember(language, likedCourseIds) {
-        val excluded = likedCourseIds.toSet()
-        ContentCatalog.courses(context, language)
+    val excluded = likedCourseIds.toSet()
+    var awaitingCourses by remember(language, likedCourseIds) {
+        mutableStateOf<List<CourseSummary>>(emptyList())
+    }
+    LaunchedEffect(language, likedCourseIds) {
+        awaitingCourses = ContentCatalog.summariesAsync(context.applicationContext, language)
             .filter { it.id !in excluded }
             .shuffled()
             .take(5)
@@ -984,7 +995,7 @@ internal fun ProfileRewardStep(
 
 @Composable
 private fun ProfileCourseCard(
-    course: Course,
+    course: CourseSummary,
     language: AppLanguage,
     width: Dp,
     height: Dp,
@@ -1001,6 +1012,7 @@ private fun ProfileCourseCard(
             courseId = course.id,
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop,
+            maxEdgePx = 360,
         )
         Box(
             modifier = Modifier

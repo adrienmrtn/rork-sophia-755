@@ -24,11 +24,10 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import app.rork.sophia.SophiaApplication
-import app.rork.sophia.data.ContentCatalog
+import app.rork.sophia.data.rememberCollections
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.data.TutorialFlags
 import app.rork.sophia.domain.AppLanguage
-import app.rork.sophia.domain.Course
 import app.rork.sophia.domain.LearningCollection
 import app.rork.sophia.domain.UserProgress
 import app.rork.sophia.ui.components.FirstOpenExplanation
@@ -40,14 +39,11 @@ fun CollectionsScreen(
     modifier: Modifier = Modifier,
     language: AppLanguage,
     progress: UserProgress,
-    onOpenCourse: (Course) -> Unit,
+    onOpenCourse: (String) -> Unit,
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
-    val collections = remember(language) { ContentCatalog.collections(context, language) }
-    val coursesById = remember(language) {
-        ContentCatalog.courses(context, language).associateBy { it.id }
-    }
+    val collections = rememberCollections(language)
     var showExplain by remember {
         mutableStateOf(!app.tutorialFlags.seen(TutorialFlags.Id.COLLECTIONS))
     }
@@ -69,7 +65,6 @@ fun CollectionsScreen(
                         progress = progress,
                         onClick = {
                             collection.courseIds.firstOrNull()
-                                ?.let { coursesById[it] }
                                 ?.let(onOpenCourse)
                         },
                     )

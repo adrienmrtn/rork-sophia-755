@@ -29,7 +29,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.billing.StoreViewModel
-import app.rork.sophia.data.ContentCatalog
+import app.rork.sophia.data.rememberCourses
 import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.data.TutorialFlags
@@ -58,8 +58,10 @@ fun TrainingScreen(
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
-    val due = remember(progress, language) {
-        progressManager.resolveDueQuestions(ContentCatalog.courses(context, language))
+    val courses = rememberCourses(language)
+    val due = remember(progress, language, courses) {
+        if (courses.isEmpty()) emptyList()
+        else progressManager.resolveDueQuestions(courses)
     }
     var inSession by remember { mutableStateOf(false) }
     var showTrainingOb by remember { mutableStateOf(false) }

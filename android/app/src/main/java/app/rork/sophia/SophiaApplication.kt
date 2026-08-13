@@ -5,6 +5,8 @@ import app.rork.sophia.data.AnalyticsService
 import app.rork.sophia.data.AuthService
 import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.DiscountOfferManager
+import app.rork.sophia.data.GlossaryStore
+import app.rork.sophia.data.StringStore
 import app.rork.sophia.data.LanguageManager
 import app.rork.sophia.data.MetaAdsService
 import app.rork.sophia.data.OnboardingStore
@@ -71,7 +73,10 @@ class SophiaApplication : Application() {
         val lang = languageManager.current.value
         appScope.launch(Dispatchers.IO) {
             runCatching {
+                StringStore.preload(this@SophiaApplication, lang)
                 val summaries = ContentCatalog.summaries(this@SophiaApplication, lang)
+                ContentCatalog.collections(this@SophiaApplication, lang)
+                GlossaryStore.preload(this@SophiaApplication, lang)
                 CourseImageResolver.ensureMap(this@SophiaApplication)
                 summaries.firstOrNull()?.let { first ->
                     CourseImageResolver.decodeDownsampled(this@SophiaApplication, first.id, 720)

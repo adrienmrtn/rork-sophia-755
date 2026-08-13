@@ -20,6 +20,12 @@ object ContentCatalog {
     private val summaryCache = ConcurrentHashMap<String, List<CourseSummary>>()
     private val collectionCache = ConcurrentHashMap<String, List<LearningCollection>>()
 
+    fun cachedCourses(language: AppLanguage): List<Course>? =
+        courseCache[language.code]
+
+    fun cachedCollections(language: AppLanguage): List<LearningCollection>? =
+        collectionCache[language.code]
+
     fun cachedSummaries(language: AppLanguage): List<CourseSummary>? =
         summaryCache[language.code]
 
@@ -62,6 +68,9 @@ object ContentCatalog {
             loadList(context, "locales/collections.${language.code}.json")
         }
     }
+
+    suspend fun collectionsAsync(context: Context, language: AppLanguage): List<LearningCollection> =
+        withContext(Dispatchers.IO) { collections(context, language) }
 
     fun course(context: Context, language: AppLanguage, id: String): Course? =
         courses(context, language).firstOrNull { it.id == id }

@@ -24,6 +24,7 @@ import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.MetaAdsService
 import app.rork.sophia.data.TrialReminderScheduler
 import app.rork.sophia.domain.AppLanguage
+import app.rork.sophia.domain.CourseSummary
 import app.rork.sophia.ui.components.CourseImageResolver
 import app.rork.sophia.ui.paywall.OnboardingPaywallFlow
 import app.rork.sophia.ui.theme.DS
@@ -124,8 +125,11 @@ fun OnboardingV2Screen(
     }
 
     val primaryObjective = selectedObjectives.firstOrNull() ?: "cultivate"
-    val swipeCourses = remember(language) {
-        ContentCatalog.courses(context, language).shuffled().take(5)
+    var swipeCourses by remember(language) { mutableStateOf<List<CourseSummary>>(emptyList()) }
+    var swipeReady by remember(language) { mutableStateOf(false) }
+    LaunchedEffect(language) {
+        swipeCourses = ContentCatalog.summariesAsync(context.applicationContext, language).shuffled().take(5)
+        swipeReady = true
     }
 
     Box(modifier = Modifier.fillMaxSize().background(DS.canvas)) {
@@ -177,6 +181,7 @@ fun OnboardingV2Screen(
             OnboardingStep.Swipe -> SwipeCoursesStep(
                 language = language,
                 courses = swipeCourses,
+                ready = swipeReady,
                 onFinished = { liked ->
                     likedCourseIds = liked
                     step = OnboardingStep.Loading
