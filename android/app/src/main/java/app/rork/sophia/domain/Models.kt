@@ -67,6 +67,15 @@ data class CourseSummary(
 ) {
     val subjectEnum: Subject
         get() = Subject.fromStorageKey(subject) ?: Subject.HISTOIRE
+
+    fun toStub(quizAvailable: Boolean = true) = Course(
+        id = id,
+        title = title,
+        description = description,
+        subject = subject,
+        subcategory = subcategory,
+        quizAvailable = quizAvailable,
+    )
 }
 
 @Serializable
@@ -78,11 +87,12 @@ data class Course(
     val subcategory: String,
     val lessons: List<LessonPage> = emptyList(),
     val quiz: List<QuizQuestion> = emptyList(),
+    val quizAvailable: Boolean = false,
 ) {
     val subjectEnum: Subject
         get() = Subject.fromStorageKey(subject) ?: Subject.HISTOIRE
 
-    val hasQuiz: Boolean get() = quiz.isNotEmpty()
+    val hasQuiz: Boolean get() = quizAvailable || quiz.isNotEmpty()
 
     val readsCount: Int
         get() {

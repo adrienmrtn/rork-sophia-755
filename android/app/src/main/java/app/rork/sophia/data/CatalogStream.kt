@@ -12,9 +12,8 @@ import java.io.InputStreamReader
 /**
  * Streaming catalog reader.
  *
- * Home/library use `course_index.{lang}.json` (~70KB, no quiz/lessons).
- * Opening a course streams `courses.{lang}.json` (quiz only, lessons already stripped)
- * and keeps a single Course in memory.
+ * Home/library/reader open use `course_index.{lang}.json` (~70KB, no quiz/lessons).
+ * Quiz is streamed from `courses.{lang}.json` only when entering QuizScreen.
  */
 object CatalogStream {
     fun readSummaries(input: InputStream): List<CourseSummary> {
@@ -43,6 +42,23 @@ object CatalogStream {
             reader.endArray()
         }
         return null
+    }
+
+    /** Streams `courses.{lang}.json` until [courseId] and returns only that quiz. */
+    fun readQuizForCourse(input: InputStream, courseId: String): List<QuizQuestion> {
+        JsonReader(InputStreamReader(input, Charsets.UTF_8)).use { reader ->
+            reader.beginArray()
+            while (reader.hasNext()) {
+                val quiz = readQuizIfMatch(reader, courseId)
+                if (quiz != null) {
+                    while (reader.hasNext()) reader.skipValue()
+                    reader.endArray()
+                    return quiz
+                }
+            }
+            reader.endArray()
+        }
+        return emptyList()
     }
 
     private fun readSummary(reader: JsonReader): CourseSummary? {
@@ -98,7 +114,41 @@ object CatalogStream {
         reader.endObject()
         if (id != targetId) return null
         if (pendingQuiz != null) quiz = pendingQuiz
-        return Course(id, title, description, subject, subcategory, emptyList(), quiz)
+        return Course(
+            id = id,
+            title = title,
+            description = description,
+            subject = subject,
+            subcategory = subcategory,
+            lessons = emptyList(),
+            quiz = quiz,
+            quizAvailable = quiz.isNotEmpty(),
+        )
+    }
+
+    private fun readQuizIfMatch(reader: JsonReader, targetId: String): List<QuizQuestion>? {
+        reader.beginObject()
+        var id = ""
+        var quiz: List<QuizQuestion>? = null
+        var pendingQuiz: List<QuizQuestion>? = null
+        while (reader.hasNext()) {
+            when (reader.nextName()) {
+                "id" -> id = reader.nextString()
+                "quiz" -> {
+                    if (id.isEmpty()) {
+                        pendingQuiz = readQuizArray(reader)
+                    } else if (id == targetId) {
+                        quiz = readQuizArray(reader)
+                    } else {
+                        reader.skipValue()
+                    }
+                }
+                else -> reader.skipValue()
+            }
+        }
+        reader.endObject()
+        if (id != targetId) return null
+        return quiz ?: pendingQuiz ?: emptyList()
     }
 
     private fun readQuizArray(reader: JsonReader): List<QuizQuestion> {

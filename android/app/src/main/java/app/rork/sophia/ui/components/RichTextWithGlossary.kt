@@ -46,24 +46,21 @@ fun RichTextWithGlossary(
     val segments = remember(raw, language, courseId) { parseSegments(raw) }
     var openEntry by remember { mutableStateOf<GlossaryEntry?>(null) }
 
-    val annotated = remember(segments, language, courseId, courseTitle) {
+    // Lookup happens on tap only. Scanning 2k glossary rows per [[term]] during
+    // composition is what froze MainActivity for 15s on course open (ANR).
+    val annotated = remember(segments) {
         buildAnnotatedString {
             segments.forEach { seg ->
                 if (seg.term != null) {
-                    val entry = GlossaryStore.entry(context, language, courseId, courseTitle, seg.term)
-                    if (entry != null) {
-                        pushStringAnnotation(tag = "glossary", annotation = seg.term)
-                        withStyle(
-                            SpanStyle(
-                                color = DS.accentSoft,
-                                textDecoration = TextDecoration.Underline,
-                                fontWeight = FontWeight.SemiBold,
-                            ),
-                        ) { append(seg.text) }
-                        pop()
-                    } else {
-                        append(seg.text)
-                    }
+                    pushStringAnnotation(tag = "glossary", annotation = seg.term)
+                    withStyle(
+                        SpanStyle(
+                            color = DS.accentSoft,
+                            textDecoration = TextDecoration.Underline,
+                            fontWeight = FontWeight.SemiBold,
+                        ),
+                    ) { append(seg.text) }
+                    pop()
                 } else if (seg.bold) {
                     withStyle(SpanStyle(fontWeight = FontWeight.SemiBold)) { append(seg.text) }
                 } else {

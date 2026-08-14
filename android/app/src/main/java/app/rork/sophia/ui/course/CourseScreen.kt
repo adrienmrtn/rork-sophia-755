@@ -40,6 +40,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.ContentCatalog
+import app.rork.sophia.data.GlossaryStore
 import app.rork.sophia.data.CourseSessionTracker
 import app.rork.sophia.data.InAppReviewHelper
 import app.rork.sophia.data.ProgressManager
@@ -94,6 +95,7 @@ fun CourseScreen(
         pageIndex = 0
         val appContext = context.applicationContext
         val loaded = withContext(Dispatchers.IO) {
+            GlossaryStore.preload(appContext, language)
             buildPages(appContext, course, language)
         }
         pages = loaded

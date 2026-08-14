@@ -11,7 +11,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import app.rork.sophia.billing.StoreViewModel
-import app.rork.sophia.data.DeviceCapabilities
 import app.rork.sophia.ui.SophiaRoot
 import app.rork.sophia.ui.theme.SophiaTheme
 
@@ -21,7 +20,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        capRefreshRateOnGo()
+        capRefreshRate()
         enableEdgeToEdge()
         deepLinkCourseId = courseIdFromIntent(intent)
         setContent {
@@ -42,12 +41,10 @@ class MainActivity : ComponentActivity() {
     }
 
     /**
-     * Redmi A5 panel is 120 Hz. Mali-G57 MP1 cannot sustain Compose at 8 ms/frame.
-     * Cap to 60 Hz on Android Go so the GPU has 16 ms and HyperOS is less likely
-     * to show “Sophia isn’t responding” during the first home composition.
+     * Reading UI does not need 90/120 Hz. Capping to 60 Hz gives Compose 16 ms/frame
+     * on Redmi A5 (120 Hz Go) and on Pixel emulators (ranchu composer).
      */
-    private fun capRefreshRateOnGo() {
-        if (!DeviceCapabilities.isLowRam(this)) return
+    private fun capRefreshRate() {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.R) return
         val params = window.attributes
         params.preferredRefreshRate = 60f

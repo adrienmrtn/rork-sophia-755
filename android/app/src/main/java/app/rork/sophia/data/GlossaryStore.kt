@@ -15,9 +15,14 @@ data class GlossaryEntry(
     val explanation: String = "",
 )
 
+private class GlossaryTable(
+    val exact: Map<String, GlossaryEntry>,
+    val normalized: Map<String, GlossaryEntry>,
+)
+
 object GlossaryStore {
     private val json = Json { ignoreUnknownKeys = true; isLenient = true }
-    private val cache = ConcurrentHashMap<String, Map<String, GlossaryEntry>>()
+    private val cache = ConcurrentHashMap<String, GlossaryTable>()
 
     /** Warm glossary JSON (~0.8MB) off the main thread before first lesson render. */
     suspend fun preload(context: Context, language: AppLanguage) {
@@ -31,42 +36,32 @@ object GlossaryStore {
         courseTitle: String,
         displayTerm: String,
     ): GlossaryEntry? {
-        // Never parse the ~0.8MB glossary on the caller's thread (ANR on course open).
         val table = cache[language.code] ?: return null
-        val primaryKey = if (language == AppLanguage.FRENCH) {
-            "$courseTitle|$displayTerm"
-        } else {
-            "$courseId|$displayTerm"
-        }
-        table[primaryKey]?.let { return it }
-
+        val prefix = if (language == AppLanguage.FRENCH) courseTitle else courseId
+        val primaryKey = "$prefix|$displayTerm"
+        table.exact[primaryKey]?.let { return it }
         val needle = normalize(displayTerm)
-        if (needle.length < 4) return null
-        val prefix = if (language == AppLanguage.FRENCH) "$courseTitle|" else "$courseId|"
-        for ((key, entry) in table) {
-            if (!key.startsWith(prefix)) continue
-            val termPart = key.substringAfter('|')
-            val norm = normalize(termPart)
-            if (norm == needle) return entry
-            if (needle.length >= 4 && norm.length >= 8) {
-                val longer = maxOf(needle.length, norm.length).toDouble()
-                val shorter = minOf(needle.length, norm.length).toDouble()
-                if (shorter / longer >= 0.45 && (norm.contains(needle) || needle.contains(norm))) {
-                    return entry
-                }
-            }
-        }
-        return null
+        if (needle.isEmpty()) return null
+        return table.normalized["$prefix|$needle"]
     }
 
-    private fun table(context: Context, language: AppLanguage): Map<String, GlossaryEntry> {
+    private fun table(context: Context, language: AppLanguage): GlossaryTable {
         return cache.getOrPut(language.code) {
             try {
                 val path = "locales/glossary.${language.code}.json"
                 val text = context.assets.open(path).bufferedReader().use { it.readText() }
-                json.decodeFromString<Map<String, GlossaryEntry>>(text)
+                val exact = json.decodeFromString<Map<String, GlossaryEntry>>(text)
+                val normalized = HashMap<String, GlossaryEntry>(exact.size)
+                for ((key, entry) in exact) {
+                    val bar = key.indexOf('|')
+                    if (bar < 0) continue
+                    val prefix = key.substring(0, bar)
+                    val term = key.substring(bar + 1)
+                    normalized["$prefix|${normalize(term)}"] = entry
+                }
+                GlossaryTable(exact, normalized)
             } catch (_: Exception) {
-                emptyMap()
+                GlossaryTable(emptyMap(), emptyMap())
             }
         }
     }

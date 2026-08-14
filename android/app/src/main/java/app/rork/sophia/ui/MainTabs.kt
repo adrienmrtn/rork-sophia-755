@@ -5,10 +5,12 @@ import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutVertically
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AutoStories
 import androidx.compose.material.icons.filled.Home
@@ -99,6 +101,7 @@ fun MainTabs(
     var levelBeforeCompletion by remember { mutableIntStateOf(1) }
     var paywallPresentedAtMs by remember { mutableStateOf<Long?>(null) }
     var showTrialEndingBanner by remember { mutableStateOf(false) }
+    var readerReady by remember { mutableStateOf(false) }
 
     LaunchedEffect(language, isPremium, progress.subjectXP) {
         if (lowRam) delay(800)
@@ -124,7 +127,10 @@ fun MainTabs(
 
     LaunchedEffect(deepLinkCourseId, language) {
         val id = deepLinkCourseId ?: return@LaunchedEffect
-        ContentCatalog.courseAsync(context.applicationContext, language, id)?.let {
+        val stub = ContentCatalog.cachedStub(language, id)
+            ?: ContentCatalog.courseStubAsync(context.applicationContext, language, id)
+        stub?.let {
+            readerReady = false
             selectedCourse = it
             app.analytics.trackDeepLinkOpened(id)
         }
@@ -144,17 +150,18 @@ fun MainTabs(
         )
         pendingCompletionCourseId = null
         levelBeforeCompletion = ProgressManager.globalLevelProgress(app.progressManager.progress.value.globalXP).level
+        readerReady = false
         selectedCourse = course
     }
 
     fun openCourseById(courseId: String) {
-        val cached = ContentCatalog.cachedCourse(language, courseId)
-        if (cached != null) {
-            openCourse(cached)
+        val stub = ContentCatalog.cachedStub(language, courseId)
+        if (stub != null) {
+            openCourse(stub)
             return
         }
         scope.launch {
-            ContentCatalog.courseAsync(context.applicationContext, language, courseId)?.let {
+            ContentCatalog.courseStubAsync(context.applicationContext, language, courseId)?.let {
                 openCourse(it)
             }
         }
@@ -283,6 +290,21 @@ fun MainTabs(
             return
         }
         selectedCourse != null -> {
+            if (!readerReady) {
+                LaunchedEffect(selectedCourse!!.id) {
+                    // Let the home tree finish disposing and acknowledge the tap
+                    // before loading CourseScreen classes (dex2oat on first open).
+                    delay(if (lowRam) 80L else 24L)
+                    readerReady = true
+                }
+                Box(
+                    modifier = Modifier.fillMaxSize().background(DS.canvas),
+                    contentAlignment = Alignment.Center,
+                ) {
+                    CircularProgressIndicator(color = DS.accent)
+                }
+                return
+            }
             CourseScreen(
                 course = selectedCourse!!,
                 language = language,
