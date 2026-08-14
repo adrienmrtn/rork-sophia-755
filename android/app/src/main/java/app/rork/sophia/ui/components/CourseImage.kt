@@ -1,86 +1,80 @@
 package app.rork.sophia.ui.components
 
-import android.content.Context
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import app.rork.sophia.ui.theme.DS
-import app.rork.sophia.ui.theme.PlusJakartaSans
-import android.graphics.BitmapFactory
-import androidx.compose.foundation.Image
-import androidx.compose.ui.graphics.asImageBitmap
-import kotlinx.serialization.json.Json
-import java.util.concurrent.ConcurrentHashMap
+import app.rork.sophia.data.CourseCoverUrls
+import coil.compose.AsyncImage
+import coil.request.ImageRequest
 
-object CourseImageResolver {
-    private val cache = ConcurrentHashMap<String, String?>()
-    private var map: Map<String, String>? = null
-
-    private fun ensureMap(context: Context) {
-        if (map != null) return
-        map = try {
-            val text = context.assets.open("course_image_map.json").bufferedReader().use { it.readText() }
-            Json.decodeFromString<Map<String, String>>(text)
-        } catch (_: Exception) {
-            emptyMap()
-        }
-    }
-
-    fun assetPath(context: Context, courseId: String): String? {
-        cache[courseId]?.let { return it }
-        ensureMap(context)
-        val stem = map?.get(courseId)
-            ?: courseId.replace(Regex("^course_\\d+_"), "")
-        val candidates = listOf(
-            "images/$stem.jpg",
-            "images/$stem.jpeg",
-            "images/$stem.png",
-            "images/$courseId.jpg",
-        )
-        val found = candidates.firstOrNull { path ->
-            try {
-                context.assets.open(path).close()
-                true
-            } catch (_: Exception) {
-                false
-            }
-        }
-        cache[courseId] = found
-        return found
-    }
-}
-
+/**
+ * One remote cover at a time (Coil disk cache). Never ships JPEGs in the APK.
+ * Falls back to a color tile if the network/cache miss.
+ */
 @Composable
 fun CourseImage(
     courseId: String,
     modifier: Modifier = Modifier,
     contentScale: ContentScale = ContentScale.Crop,
+    maxEdgePx: Int = 720,
 ) {
     val context = LocalContext.current
-    val bitmap = remember(courseId) {
-        CourseImageResolver.assetPath(context, courseId)?.let { path ->
-            runCatching {
-                context.assets.open(path).use { BitmapFactory.decodeStream(it) }
-            }.getOrNull()
-        }
+    val url = remember(courseId) { CourseCoverUrls.url(context, courseId) }
+    val color = remember(courseId) { placeholderColor(courseId) }
+    val letter = remember(courseId) {
+        courseId.substringAfterLast('_').firstOrNull()?.uppercaseChar()?.toString() ?: "S"
     }
-    if (bitmap == null) {
-        Box(modifier = modifier.background(DS.surfaceMuted), contentAlignment = Alignment.Center) {
-            Text("S", fontFamily = PlusJakartaSans, fontSize = 42.sp, color = DS.accent)
-        }
-    } else {
-        Image(
-            bitmap = bitmap.asImageBitmap(),
-            contentDescription = null,
-            modifier = modifier,
-            contentScale = contentScale,
+    Box(modifier = modifier.background(color), contentAlignment = Alignment.Center) {
+        Text(
+            text = letter,
+            fontFamily = FontFamily.SansSerif,
+            fontWeight = FontWeight.Bold,
+            fontSize = 42.sp,
+            color = Color.White.copy(alpha = 0.92f),
         )
+        if (url != null) {
+            AsyncImage(
+                model = ImageRequest.Builder(context)
+                    .data(url)
+                    .size(maxEdgePx)
+                    .crossfade(160)
+                    .memoryCacheKey(courseId)
+                    .diskCacheKey(courseId)
+                    .build(),
+                contentDescription = null,
+                modifier = Modifier.fillMaxSize(),
+                contentScale = contentScale,
+            )
+        }
     }
+}
+
+private fun placeholderColor(courseId: String): Color {
+    var hash = 0
+    for (ch in courseId) hash = hash * 31 + ch.code
+    val palette = intArrayOf(
+        0xFF1A3A6B.toInt(),
+        0xFF2E62C4.toInt(),
+        0xFF387D5A.toInt(),
+        0xFF8F66EB.toInt(),
+        0xFFB14F42.toInt(),
+        0xFF55637A.toInt(),
+    )
+    return Color(palette[kotlin.math.abs(hash) % palette.size])
+}
+
+object CourseImageResolver {
+    fun ensureMap(context: android.content.Context) = CourseCoverUrls.ensureMap(context)
+    fun decodeDownsampled(context: android.content.Context, courseId: String, maxEdgePx: Int = 1080) = null
 }

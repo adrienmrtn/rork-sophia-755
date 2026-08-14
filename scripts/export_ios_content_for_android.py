@@ -6,10 +6,12 @@ Sources (in priority order):
   2. Optional --from-ref (e.g. origin/main) via `git show` / `git archive`
 
 Writes:
-  android/app/src/main/assets/locales/{courses,collections,glossary}.{lang}.json
+  android/app/src/main/assets/locales/{courses,course_index,collections,glossary}.{lang}.json
   android/app/src/main/assets/courses_v2/{lang}/{courseId}.json
   android/app/src/main/assets/strings/{lang}.json   (new langs from ui_strings + overrides)
   android/app/src/main/assets/locales/courses.fr.json (+ collections/glossary) from Swift when present
+
+Course catalogs are slimmed after copy (no lesson bodies; lesson text lives in courses_v2).
 """
 
 from __future__ import annotations
@@ -219,6 +221,11 @@ def main() -> int:
     copied = copy_locale_json(ref)
     print(f"  wrote {len(copied)} locale files")
 
+    print("Slimming course catalogs (drop lesson bodies, write course_index)…")
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from slim_android_catalog import slim_locale_catalogs
+    slim_locale_catalogs()
+
     print("Exporting UI strings for new languages…")
     strings = export_ui_strings(ref)
     print(f"  wrote {len(strings)} string packs")
@@ -249,7 +256,7 @@ def main() -> int:
                 return 1
     missing_locales = []
     for lang in NEW_LANGS:
-        for kind in ("courses", "collections", "glossary"):
+        for kind in ("courses", "course_index", "collections", "glossary"):
             if not (ANDROID_LOCALES / f"{kind}.{lang}.json").is_file():
                 missing_locales.append(f"{kind}.{lang}.json")
     if missing_locales:

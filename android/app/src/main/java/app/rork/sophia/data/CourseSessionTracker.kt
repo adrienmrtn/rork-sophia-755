@@ -6,7 +6,7 @@ package app.rork.sophia.data
 class CourseSessionTracker(
     private val courseId: String,
     private val subject: String,
-    private val lessonCount: Int,
+    var lessonCount: Int,
 ) {
     private val startedAtMs = System.currentTimeMillis()
     private var maxLessonReached = 0

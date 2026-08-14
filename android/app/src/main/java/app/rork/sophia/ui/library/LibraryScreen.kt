@@ -35,10 +35,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.StringStore
+import app.rork.sophia.data.rememberCourseSummaries
 import app.rork.sophia.domain.AppLanguage
-import app.rork.sophia.domain.Course
+import app.rork.sophia.domain.CourseSummary
 import app.rork.sophia.domain.UserProgress
 import app.rork.sophia.ui.components.CourseImage
 import app.rork.sophia.ui.theme.DS
@@ -50,10 +50,10 @@ fun LibraryScreen(
     modifier: Modifier = Modifier,
     language: AppLanguage,
     progress: UserProgress,
-    onOpenCourse: (Course) -> Unit,
+    onOpenCourse: (String) -> Unit,
 ) {
     val context = LocalContext.current
-    val courses = remember(language) { ContentCatalog.courses(context, language) }
+    val courses = rememberCourseSummaries(language)
     var query by remember { mutableStateOf("") }
     val filtered = remember(courses, query) {
         if (query.isBlank()) courses
@@ -100,14 +100,14 @@ fun LibraryScreen(
             modifier = Modifier.fillMaxSize(),
         ) {
             items(filtered, key = { it.id }) { course ->
-                CourseGridCard(course = course, onClick = { onOpenCourse(course) })
+                CourseGridCard(course = course, onClick = { onOpenCourse(course.id) })
             }
         }
     }
 }
 
 @Composable
-private fun CourseGridCard(course: Course, onClick: () -> Unit) {
+private fun CourseGridCard(course: CourseSummary, onClick: () -> Unit) {
     Column(
         modifier = Modifier
             .clip(DS.cardShape)
@@ -121,6 +121,7 @@ private fun CourseGridCard(course: Course, onClick: () -> Unit) {
                 .aspectRatio(4f / 3f)
                 .clip(RoundedCornerShape(topStart = 22.dp, topEnd = 22.dp)),
             contentScale = ContentScale.Crop,
+            maxEdgePx = 360,
         )
         Column(modifier = Modifier.padding(12.dp)) {
             Text(

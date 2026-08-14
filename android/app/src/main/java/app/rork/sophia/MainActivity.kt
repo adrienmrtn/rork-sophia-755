@@ -10,7 +10,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import app.rork.sophia.billing.StoreViewModel
-import app.rork.sophia.data.MetaAdsService
 import app.rork.sophia.ui.SophiaRoot
 import app.rork.sophia.ui.theme.SophiaTheme
 
@@ -22,7 +21,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         deepLinkCourseId = courseIdFromIntent(intent)
-        MetaAdsService.handleOpenUrl(this, intent?.data)
         setContent {
             SophiaTheme {
                 SophiaRoot(
@@ -34,16 +32,10 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-        MetaAdsService.activateApp(application as SophiaApplication)
-    }
-
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
         setIntent(intent)
         deepLinkCourseId = courseIdFromIntent(intent)
-        MetaAdsService.handleOpenUrl(this, intent.data)
     }
 
     private fun courseIdFromIntent(intent: Intent?): String? {

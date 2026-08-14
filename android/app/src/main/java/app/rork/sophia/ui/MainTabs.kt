@@ -28,6 +28,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -64,7 +65,10 @@ import app.rork.sophia.ui.training.TrainingScreen
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 private enum class OverlayScreen { Friends, Feedback, Ambassador, Terms, Privacy }
 
@@ -78,6 +82,7 @@ fun MainTabs(
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
+    val scope = rememberCoroutineScope()
     val isPremium by storeViewModel.isPremium.collectAsState()
     val trialExpiresInOneDay by storeViewModel.trialExpiresInOneDay.collectAsState()
     val progress by app.progressManager.progress.collectAsState()
@@ -116,7 +121,7 @@ fun MainTabs(
 
     LaunchedEffect(deepLinkCourseId, language) {
         val id = deepLinkCourseId ?: return@LaunchedEffect
-        ContentCatalog.course(context, language, id)?.let {
+        ContentCatalog.courseAsync(context.applicationContext, language, id)?.let {
             selectedCourse = it
             app.analytics.trackDeepLinkOpened(id)
         }
@@ -137,6 +142,19 @@ fun MainTabs(
         pendingCompletionCourseId = null
         levelBeforeCompletion = ProgressManager.globalLevelProgress(app.progressManager.progress.value.globalXP).level
         selectedCourse = course
+    }
+
+    fun openCourseById(courseId: String) {
+        val cached = ContentCatalog.cachedCourse(language, courseId)
+        if (cached != null) {
+            openCourse(cached)
+            return
+        }
+        scope.launch {
+            ContentCatalog.courseAsync(context.applicationContext, language, courseId)?.let {
+                openCourse(it)
+            }
+        }
     }
 
     fun buildRewardSteps(courseId: String): List<PostCompletionRewardStep> {
@@ -171,8 +189,10 @@ fun MainTabs(
 
     fun presentRewardsIfNeeded(courseId: String?) {
         if (courseId == null) return
-        val steps = buildRewardSteps(courseId)
-        if (steps.isNotEmpty()) rewardSteps = steps
+        scope.launch {
+            val steps = withContext(Dispatchers.IO) { buildRewardSteps(courseId) }
+            if (steps.isNotEmpty()) rewardSteps = steps
+        }
     }
 
     when {
@@ -339,7 +359,7 @@ fun MainTabs(
                     autoSwipeCourseId = autoSwipeCourseId,
                     onAutoSwipeConsumed = { autoSwipeCourseId = null },
                     onToggleFavorite = { app.progressManager.toggleFavorite(it) },
-                    onStartCourse = { openCourse(it) },
+                    onStartCourse = { openCourseById(it) },
                     onUserSwipe = {
                         if (!isPremium) app.discountManager.registerSwipe()
                     },
@@ -348,13 +368,13 @@ fun MainTabs(
                     modifier = Modifier.padding(padding),
                     language = language,
                     progress = progress,
-                    onOpenCourse = { openCourse(it) },
+                    onOpenCourse = { openCourseById(it) },
                 )
                 2 -> CollectionsScreen(
                     modifier = Modifier.padding(padding),
                     language = language,
                     progress = progress,
-                    onOpenCourse = { openCourse(it) },
+                    onOpenCourse = { openCourseById(it) },
                 )
                 3 -> TrainingScreen(
                     modifier = Modifier.padding(padding),
@@ -372,7 +392,7 @@ fun MainTabs(
                     isPremium = isPremium,
                     onLanguageChange = { app.languageManager.setLanguage(it) },
                     onResetOnboarding = onResetOnboarding,
-                    onOpenCourse = { openCourse(it) },
+                    onOpenCourse = { openCourseById(it) },
                     onShowPaywall = { paywall = PaywallContext.DEBLOQUER_COURS },
                     onOpenFriends = { overlay = OverlayScreen.Friends },
                     onOpenFeedback = { overlay = OverlayScreen.Feedback },

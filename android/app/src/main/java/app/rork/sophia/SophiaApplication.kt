@@ -3,18 +3,28 @@ package app.rork.sophia
 import android.app.Application
 import app.rork.sophia.data.AnalyticsService
 import app.rork.sophia.data.AuthService
+import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.DiscountOfferManager
+import app.rork.sophia.data.StringStore
+import app.rork.sophia.data.CourseCoverUrls
 import app.rork.sophia.data.LanguageManager
-import app.rork.sophia.data.MetaAdsService
 import app.rork.sophia.data.OnboardingStore
 import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.ProgressSyncService
 import app.rork.sophia.data.SocialService
 import app.rork.sophia.data.TrialReminderScheduler
 import app.rork.sophia.data.TutorialFlags
-import com.facebook.FacebookSdk
+import coil.ImageLoader
+import coil.ImageLoaderFactory
+import coil.disk.DiskCache
+import coil.memory.MemoryCache
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.launch
 
-class SophiaApplication : Application() {
+class SophiaApplication : Application(), ImageLoaderFactory {
+    private val appScope = CoroutineScope(SupervisorJob() + Dispatchers.Default)
     lateinit var languageManager: LanguageManager
         private set
     lateinit var progressManager: ProgressManager
@@ -52,12 +62,33 @@ class SophiaApplication : Application() {
         analytics.trackAppOpened()
         analytics.trackSessionIfNeeded(isPremium = false)
 
-        runCatching {
-            FacebookSdk.setClientToken(BuildConfig.META_CLIENT_TOKEN)
-            MetaAdsService.configure(this)
-            MetaAdsService.activateApp(this)
-        }
         TrialReminderScheduler.ensureChannel(this)
+
+        // Warm the slim course index (~70KB) + collections off the main thread.
+        val lang = languageManager.current.value
+        appScope.launch(Dispatchers.IO) {
+            runCatching {
+                StringStore.preload(this@SophiaApplication, lang)
+                ContentCatalog.summaries(this@SophiaApplication, lang)
+                ContentCatalog.collections(this@SophiaApplication, lang)
+                CourseCoverUrls.ensureMap(this@SophiaApplication)
+            }
+        }
+    }
+
+    override fun newImageLoader(): ImageLoader {
+        return ImageLoader.Builder(this)
+            .memoryCache {
+                MemoryCache.Builder(this).maxSizePercent(0.08).build()
+            }
+            .diskCache {
+                DiskCache.Builder()
+                    .directory(cacheDir.resolve("covers"))
+                    .maxSizeBytes(48L * 1024 * 1024)
+                    .build()
+            }
+            .respectCacheHeaders(false)
+            .build()
     }
 
     companion object {

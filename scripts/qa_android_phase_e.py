@@ -100,7 +100,7 @@ def check_app_language(c: Checker) -> None:
 
 def check_assets(c: Checker) -> None:
     for lang in LANGS:
-        for kind in ("courses", "collections", "glossary"):
+        for kind in ("courses", "course_index", "collections", "glossary"):
             p = ASSETS / "locales" / f"{kind}.{lang}.json"
             if not p.is_file():
                 c.fail(f"missing {p.relative_to(ROOT)}")
@@ -171,13 +171,25 @@ def check_catalog(c: Checker) -> None:
             c.fail(f"courses.{lang}.json has course without quiz")
         if sum(len(course.get("quiz") or []) for course in courses) != quiz_total:
             c.fail(f"courses.{lang}.json quiz count != {quiz_total}")
+        if any(course.get("lessons") for course in courses):
+            c.fail(f"courses.{lang}.json still embeds lesson bodies (must be slim)")
+        index = json.loads((ASSETS / "locales" / f"course_index.{lang}.json").read_text(encoding="utf-8"))
+        index_ids = {course["id"] for course in index}
+        if index_ids != fr_ids:
+            c.fail(f"course_index.{lang}.json id set != FR")
+        if any(course.get("quiz") or course.get("lessons") for course in index):
+            c.fail(f"course_index.{lang}.json must be metadata only")
         v2 = {p.name for p in (ASSETS / "courses_v2" / lang).glob("*.json")}
         if v2 != fr_v2:
             c.fail(f"courses_v2/{lang} file set != FR")
         cols = json.loads((ASSETS / "locales" / f"collections.{lang}.json").read_text(encoding="utf-8"))
         if len(cols) != 31:
             c.fail(f"collections.{lang}.json count={len(cols)} (expected 31)")
-    c.ok(f"catalog/quiz/v2 parity OK (courses={len(fr_ids)}, quiz={quiz_total})")
+    images_dir = ASSETS / "images"
+    image_files = list(images_dir.glob("*")) if images_dir.is_dir() else []
+    if image_files:
+        c.fail(f"assets/images still has {len(image_files)} files (must stay out of the APK)")
+    c.ok(f"catalog/quiz/v2 parity OK (courses={len(fr_ids)}, quiz={quiz_total}, slim index)")
 
 
 def check_legal_play(c: Checker) -> None:
@@ -254,6 +266,14 @@ def check_code_wiring(c: Checker) -> None:
         block = re.search(r"if \(courseLocked\) \{(.*?)return@Button", course, re.S)
         if block and "onRequestPaywall" in block.group(1):
             c.fail("CourseScreen courseLocked Continue still calls onRequestPaywall")
+    gradle = (ROOT / "android" / "app" / "build.gradle.kts").read_text(encoding="utf-8")
+    if "facebook-android-sdk" in gradle:
+        c.fail("Facebook SDK still in build.gradle.kts")
+    if "coil-compose" not in gradle:
+        c.fail("coil-compose missing from build.gradle.kts")
+    covers = (JAVA / "data" / "CourseCoverUrls.kt").read_text(encoding="utf-8")
+    if "course-images" not in covers:
+        c.fail("CourseCoverUrls missing course-images bucket")
     c.ok("code wiring smoke OK")
 
 

@@ -28,11 +28,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import app.rork.sophia.SophiaApplication
-import app.rork.sophia.data.ContentCatalog
+import app.rork.sophia.data.rememberCourseSummaries
 import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
-import app.rork.sophia.domain.Course
 import app.rork.sophia.domain.UserProgress
 import app.rork.sophia.ui.social.FriendsLeaderboardSection
 import app.rork.sophia.ui.social.GlobalRankRing
@@ -48,7 +47,7 @@ fun ProfileScreen(
     isPremium: Boolean,
     onLanguageChange: (AppLanguage) -> Unit,
     onResetOnboarding: () -> Unit,
-    onOpenCourse: (Course) -> Unit,
+    onOpenCourse: (String) -> Unit,
     onShowPaywall: () -> Unit = {},
     onGoogleSignIn: () -> Unit = {},
     onOpenFriends: () -> Unit = {},
@@ -65,8 +64,9 @@ fun ProfileScreen(
     val leaderboard by app.socialService.leaderboard.collectAsState()
     val period by app.socialService.period.collectAsState()
     val scope = rememberCoroutineScope()
-    val favorites = progress.favoriteCourseIds.mapNotNull {
-        ContentCatalog.course(context, language, it)
+    val summaries = rememberCourseSummaries(language)
+    val favorites = progress.favoriteCourseIds.mapNotNull { id ->
+        summaries.firstOrNull { it.id == id }
     }
     val level = ProgressManager.globalLevelProgress(progress.globalXP)
     val rankProgress = if (level.xpForLevel == 0) 0f else level.xpIntoLevel.toFloat() / level.xpForLevel
@@ -256,7 +256,7 @@ fun ProfileScreen(
                 style = SophiaTypography.bodyMedium,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .clickable { onOpenCourse(course) }
+                    .clickable { onOpenCourse(course.id) }
                     .padding(vertical = 8.dp),
             )
             HorizontalDivider(color = DS.hairline)

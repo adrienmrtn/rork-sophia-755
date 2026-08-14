@@ -2,6 +2,8 @@ package app.rork.sophia.data
 
 import android.content.Context
 import app.rork.sophia.domain.AppLanguage
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 import java.util.concurrent.ConcurrentHashMap
@@ -17,6 +19,11 @@ object GlossaryStore {
     private val json = Json { ignoreUnknownKeys = true; isLenient = true }
     private val cache = ConcurrentHashMap<String, Map<String, GlossaryEntry>>()
 
+    /** Warm glossary JSON (~0.8MB) off the main thread before first lesson render. */
+    suspend fun preload(context: Context, language: AppLanguage) {
+        withContext(Dispatchers.IO) { table(context, language) }
+    }
+
     fun entry(
         context: Context,
         language: AppLanguage,
@@ -24,7 +31,8 @@ object GlossaryStore {
         courseTitle: String,
         displayTerm: String,
     ): GlossaryEntry? {
-        val table = table(context, language)
+        // Never parse the ~0.8MB glossary on the caller's thread (ANR on course open).
+        val table = cache[language.code] ?: return null
         val primaryKey = if (language == AppLanguage.FRENCH) {
             "$courseTitle|$displayTerm"
         } else {

@@ -1,21 +1,17 @@
 package app.rork.sophia.ui.home
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.detectVerticalDragGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.pager.VerticalPager
-import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -32,6 +28,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -40,8 +38,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -52,12 +52,11 @@ import app.rork.sophia.data.ShareHelper
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.data.TutorialFlags
 import app.rork.sophia.domain.AppLanguage
-import app.rork.sophia.domain.Course
+import app.rork.sophia.domain.CourseSummary
 import app.rork.sophia.ui.components.CourseImage
 import app.rork.sophia.ui.components.FirstOpenExplanation
 import app.rork.sophia.ui.theme.DS
-import app.rork.sophia.ui.theme.PlusJakartaSans
-import app.rork.sophia.ui.theme.SophiaTypography
+import kotlinx.coroutines.delay
 
 @Composable
 fun HomeTikTokScreen(
@@ -67,37 +66,43 @@ fun HomeTikTokScreen(
     autoSwipeCourseId: String?,
     onAutoSwipeConsumed: () -> Unit,
     onToggleFavorite: (String) -> Unit,
-    onStartCourse: (Course) -> Unit,
+    onStartCourse: (String) -> Unit,
     onUserSwipe: () -> Unit = {},
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
-    val cards = remember(language) {
-        ContentCatalog.courses(context, language).shuffled()
+    val cached = remember(language) {
+        ContentCatalog.cachedSummaries(language).orEmpty()
     }
-    val pagerState = rememberPagerState(pageCount = { cards.size })
-    var suppressSwipeCount by remember { mutableStateOf(false) }
-    var showExplain by remember {
-        mutableStateOf(!app.tutorialFlags.seen(TutorialFlags.Id.HOME_SWIPE))
+    var cards by remember(language) { mutableStateOf(cached) }
+    var catalogReady by remember(language) { mutableStateOf(cached.isNotEmpty()) }
+    var index by remember(language) { mutableIntStateOf(0) }
+    var showExplain by remember { mutableStateOf(false) }
+
+    LaunchedEffect(language) {
+        if (cards.isEmpty()) {
+            cards = ContentCatalog.summariesAsync(context.applicationContext, language).shuffled()
+        } else if (cards === cached && cached.isNotEmpty()) {
+            cards = cached.shuffled()
+        }
+        catalogReady = true
+        if (!app.tutorialFlags.seen(TutorialFlags.Id.HOME_SWIPE)) {
+            delay(900)
+            showExplain = true
+        }
     }
 
     LaunchedEffect(autoSwipeCourseId, cards) {
         val id = autoSwipeCourseId ?: return@LaunchedEffect
-        val index = cards.indexOfFirst { it.id == id }
-        if (index >= 0 && index + 1 < cards.size) {
-            suppressSwipeCount = true
-            pagerState.animateScrollToPage(index + 1)
+        val found = cards.indexOfFirst { it.id == id }
+        if (found >= 0 && found + 1 < cards.size) {
+            index = found + 1
+            onUserSwipe()
         }
         onAutoSwipeConsumed()
     }
 
-    LaunchedEffect(pagerState.settledPage) {
-        if (suppressSwipeCount) {
-            suppressSwipeCount = false
-        } else if (pagerState.settledPage > 0) {
-            onUserSwipe()
-        }
-    }
+    val course = cards.getOrNull(index.coerceIn(0, (cards.size - 1).coerceAtLeast(0)))
 
     Box(modifier = modifier.fillMaxSize()) {
         Column(modifier = Modifier.fillMaxSize().background(DS.canvas)) {
@@ -110,8 +115,10 @@ fun HomeTikTokScreen(
             ) {
                 Text(
                     text = "Sophia",
-                    style = SophiaTypography.titleLarge,
-                    fontWeight = FontWeight.ExtraBold,
+                    fontFamily = FontFamily.SansSerif,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 22.sp,
+                    color = DS.ink,
                 )
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Icon(
@@ -123,35 +130,47 @@ fun HomeTikTokScreen(
                 }
             }
 
-            if (cards.isEmpty()) {
+            if (!catalogReady) {
+                Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                    Text("…", fontFamily = FontFamily.SansSerif, color = DS.inkSecondary)
+                }
+            } else if (course == null) {
                 Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                     Text(
                         text = StringStore.text(context, "home.allCaughtUp", language)
                             .takeIf { it != "home.allCaughtUp" }
                             ?: "Tous les cours sont faits — bravo !",
-                        style = SophiaTypography.bodyLarge,
+                        fontFamily = FontFamily.SansSerif,
+                        color = DS.ink,
                     )
                 }
             } else {
-                VerticalPager(
-                    state = pagerState,
-                    modifier = Modifier.fillMaxSize(),
-                    contentPadding = PaddingValues(bottom = 96.dp),
-                    pageSpacing = 12.dp,
-                ) { page ->
-                    val course = cards[page]
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(bottom = 8.dp),
+                ) {
                     TikTokCourseCard(
                         course = course,
                         language = language,
                         isFavorite = course.id in favoriteIds,
                         onToggleFavorite = { onToggleFavorite(course.id) },
-                        onShare = { ShareHelper.shareCourse(context, course) },
-                        onStart = { onStartCourse(course) },
+                        onShare = { ShareHelper.shareCourse(context, course.id, course.title) },
+                        onStart = { onStartCourse(course.id) },
+                        onSwipeNext = {
+                            if (index < cards.lastIndex) {
+                                index += 1
+                                onUserSwipe()
+                            }
+                        },
+                        onSwipePrev = {
+                            if (index > 0) index -= 1
+                        },
                     )
                 }
             }
         }
-        if (showExplain) {
+        if (showExplain && catalogReady && cards.isNotEmpty()) {
             FirstOpenExplanation(
                 language = language,
                 icon = "👆",
@@ -168,14 +187,17 @@ fun HomeTikTokScreen(
 
 @Composable
 private fun TikTokCourseCard(
-    course: Course,
+    course: CourseSummary,
     language: AppLanguage,
     isFavorite: Boolean,
     onToggleFavorite: () -> Unit,
     onShare: () -> Unit,
     onStart: () -> Unit,
+    onSwipeNext: () -> Unit,
+    onSwipePrev: () -> Unit,
 ) {
     val context = LocalContext.current
+    var drag by remember { mutableFloatStateOf(0f) }
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -184,9 +206,23 @@ private fun TikTokCourseCard(
             .background(DS.surface)
     ) {
         Box(
-                modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
+                .fillMaxWidth()
                 .weight(1f)
-                .clip(RoundedCornerShape(topStart = 22.dp, topEnd = 22.dp)),
+                .clip(RoundedCornerShape(topStart = 22.dp, topEnd = 22.dp))
+                .pointerInput(course.id) {
+                    detectVerticalDragGestures(
+                        onVerticalDrag = { _, dy -> drag += dy },
+                        onDragEnd = {
+                            when {
+                                drag < -72f -> onSwipeNext()
+                                drag > 72f -> onSwipePrev()
+                            }
+                            drag = 0f
+                        },
+                        onDragCancel = { drag = 0f },
+                    )
+                },
         ) {
             CourseImage(
                 courseId = course.id,
@@ -194,7 +230,8 @@ private fun TikTokCourseCard(
                 contentScale = ContentScale.Crop,
             )
             Box(
-                    modifier = Modifier.fillMaxSize()
+                modifier = Modifier
+                    .fillMaxSize()
                     .background(
                         Brush.verticalGradient(
                             listOf(Color.Transparent, Color.Black.copy(alpha = 0.55f)),
@@ -232,7 +269,7 @@ private fun TikTokCourseCard(
                 Text(
                     text = course.subjectEnum.name.lowercase().replaceFirstChar { it.titlecase() },
                     color = Color.White.copy(alpha = 0.85f),
-                    fontFamily = PlusJakartaSans,
+                    fontFamily = FontFamily.SansSerif,
                     fontSize = 13.sp,
                     fontWeight = FontWeight.Medium,
                 )
@@ -240,8 +277,8 @@ private fun TikTokCourseCard(
                 Text(
                     text = course.title,
                     color = Color.White,
-                    fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.ExtraBold,
+                    fontFamily = FontFamily.SansSerif,
+                    fontWeight = FontWeight.Bold,
                     fontSize = 24.sp,
                     maxLines = 3,
                     overflow = TextOverflow.Ellipsis,
@@ -252,7 +289,9 @@ private fun TikTokCourseCard(
         Column(modifier = Modifier.padding(DS.Space.m)) {
             Text(
                 text = course.description,
-                style = SophiaTypography.bodyMedium,
+                fontFamily = FontFamily.SansSerif,
+                fontSize = 14.sp,
+                color = DS.inkSecondary,
                 maxLines = 3,
                 overflow = TextOverflow.Ellipsis,
             )
@@ -263,8 +302,9 @@ private fun TikTokCourseCard(
             ) {
                 Icon(Icons.Filled.Visibility, null, tint = DS.inkTertiary, modifier = Modifier.size(16.dp))
                 Text(
-                    text = course.readsCountShort,
-                    style = SophiaTypography.labelMedium,
+                    text = readsCountShort(course.id),
+                    fontFamily = FontFamily.SansSerif,
+                    fontSize = 12.sp,
                     color = DS.inkTertiary,
                 )
             }
@@ -278,11 +318,26 @@ private fun TikTokCourseCard(
                 Text(
                     text = StringStore.text(context, "home.start", language)
                         .takeIf { it != "home.start" } ?: "Commencer",
-                    fontFamily = PlusJakartaSans,
+                    fontFamily = FontFamily.SansSerif,
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 16.sp,
                 )
             }
         }
+    }
+}
+
+private fun readsCountShort(id: String): String {
+    var hash = 0xcbf29ce484222325UL
+    for (byte in id.encodeToByteArray()) {
+        hash = hash xor byte.toULong()
+        hash *= 0x100000001b3UL
+    }
+    val count = 7_000 + (hash % 243_000UL).toInt()
+    val rounded = (count / 100) * 100
+    return if (rounded < 10_000) {
+        String.format("%.1f k", rounded / 1000.0).replace('.', ',')
+    } else {
+        "${rounded / 1000} k"
     }
 }

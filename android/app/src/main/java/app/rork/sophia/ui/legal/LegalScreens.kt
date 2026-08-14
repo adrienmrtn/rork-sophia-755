@@ -15,7 +15,8 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.produceState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
@@ -25,6 +26,8 @@ import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.SophiaTypography
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 
 enum class LegalDocKind { Terms, Privacy }
 
@@ -35,10 +38,12 @@ fun LegalDocumentScreen(
     onBack: () -> Unit,
 ) {
     val context = LocalContext.current
-    val sections = remember(kind, language) {
-        when (kind) {
-            LegalDocKind.Terms -> LegalDocumentStore.terms(context, language)
-            LegalDocKind.Privacy -> LegalDocumentStore.privacy(context, language)
+    val sections by produceState(initialValue = emptyList<LegalSection>(), kind, language) {
+        value = withContext(Dispatchers.IO) {
+            when (kind) {
+                LegalDocKind.Terms -> LegalDocumentStore.terms(context.applicationContext, language)
+                LegalDocKind.Privacy -> LegalDocumentStore.privacy(context.applicationContext, language)
+            }
         }
     }
     val titleKey = when (kind) {

@@ -15,13 +15,17 @@ object StringStore {
         val template = primary[key] ?: english[key] ?: key
         return if (formatArgs.isEmpty()) template else {
             try {
-                // iOS-style %@ → Java %s
                 val javaTemplate = template.replace("%@", "%s")
                 String.format(javaTemplate, *formatArgs)
             } catch (_: Exception) {
                 template
             }
         }
+    }
+
+    fun preload(context: Context, language: AppLanguage) {
+        table(context, language.code)
+        table(context, AppLanguage.ENGLISH.code)
     }
 
     private fun table(context: Context, code: String): Map<String, String> {
