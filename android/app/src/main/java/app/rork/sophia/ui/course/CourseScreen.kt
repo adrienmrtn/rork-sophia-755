@@ -10,8 +10,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.pager.HorizontalPager
-import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
@@ -28,9 +26,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -43,7 +41,6 @@ import androidx.compose.ui.unit.sp
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.CourseSessionTracker
-import app.rork.sophia.data.GlossaryStore
 import app.rork.sophia.data.InAppReviewHelper
 import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.ShareHelper
@@ -56,7 +53,6 @@ import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.jsonArray
@@ -84,8 +80,7 @@ fun CourseScreen(
     }
     var pages by remember(course.id, language) { mutableStateOf<List<ReaderPage>>(emptyList()) }
     var pagesReady by remember(course.id, language) { mutableStateOf(false) }
-    val pagerState = rememberPagerState(pageCount = { pages.size.coerceAtLeast(1) })
-    val scope = rememberCoroutineScope()
+    var pageIndex by remember(course.id) { mutableIntStateOf(0) }
     val sessionTracker = remember(course.id) {
         CourseSessionTracker(
             courseId = course.id,
@@ -96,9 +91,9 @@ fun CourseScreen(
 
     LaunchedEffect(course.id, language) {
         pagesReady = false
+        pageIndex = 0
         val appContext = context.applicationContext
         val loaded = withContext(Dispatchers.IO) {
-            GlossaryStore.preload(appContext, language)
             buildPages(appContext, course, language)
         }
         pages = loaded
@@ -129,18 +124,19 @@ fun CourseScreen(
         return
     }
 
-    LaunchedEffect(pagerState.currentPage) {
-        sessionTracker.recordLessonReached(pagerState.currentPage)
-        progressManager.updateLessonIndex(course.id, pagerState.currentPage)
+    LaunchedEffect(pageIndex, pagesReady) {
+        if (!pagesReady) return@LaunchedEffect
+        sessionTracker.recordLessonReached(pageIndex)
+        progressManager.updateLessonIndex(course.id, pageIndex)
         InAppReviewHelper.requestIfEligible(
             context = context,
             progressManager = progressManager,
             courseId = course.id,
-            lessonIndex = pagerState.currentPage,
+            lessonIndex = pageIndex,
         )
-        val page = pages.getOrNull(pagerState.currentPage) ?: return@LaunchedEffect
+        val page = pages.getOrNull(pageIndex) ?: return@LaunchedEffect
         val locked = FreemiumGate.isLessonContentLocked(
-            pagerState.currentPage,
+            pageIndex,
             isPremium,
             isDailyFreeCourse,
         )
@@ -177,7 +173,7 @@ fun CourseScreen(
             LinearProgressIndicator(
                 progress = {
                     if (pages.isEmpty()) 0f
-                    else (pagerState.currentPage + 1).toFloat() / pages.size
+                    else (pageIndex + 1).toFloat() / pages.size
                 },
                 modifier = Modifier.fillMaxWidth().padding(horizontal = DS.Space.l),
                 color = DS.accent,
@@ -193,33 +189,29 @@ fun CourseScreen(
                     CircularProgressIndicator(color = DS.accent)
                 }
             } else {
-            HorizontalPager(
-                state = pagerState,
-                modifier = Modifier.weight(1f),
-                userScrollEnabled = true,
-                beyondViewportPageCount = 0,
-            ) { index ->
+                val index = pageIndex
                 val locked = FreemiumGate.isLessonContentLocked(index, isPremium, isDailyFreeCourse)
-                val page = pages.getOrNull(index) ?: return@HorizontalPager
-                Box(modifier = Modifier.fillMaxSize()) {
-                    Column(
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .verticalScroll(rememberScrollState())
-                            .padding(DS.Space.l),
-                    ) {
-                        Text(text = page.title, style = SophiaTypography.titleLarge)
-                        Spacer(Modifier.height(16.dp))
-                        RichTextWithGlossary(
-                            raw = page.body,
-                            language = language,
-                            courseId = course.id,
-                            courseTitle = course.title,
-                            color = if (locked) DS.inkTertiary else DS.ink,
-                        )
+                val page = pages.getOrNull(index)
+                Box(modifier = Modifier.weight(1f).fillMaxWidth()) {
+                    if (page != null) {
+                        Column(
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .verticalScroll(rememberScrollState())
+                                .padding(DS.Space.l),
+                        ) {
+                            Text(text = page.title, style = SophiaTypography.titleLarge)
+                            Spacer(Modifier.height(16.dp))
+                            RichTextWithGlossary(
+                                raw = page.body,
+                                language = language,
+                                courseId = course.id,
+                                courseTitle = course.title,
+                                color = if (locked) DS.inkTertiary else DS.ink,
+                            )
+                        }
                     }
                     if (locked) {
-                        // Overlay-only: teaser content stays underneath; paywall opens via lock tap.
                         CourseLessonLockOverlay {
                             app.analytics.trackLockedContentTapped(
                                 gateType = "debloquer_cours",
@@ -231,7 +223,6 @@ fun CourseScreen(
                     }
                 }
             }
-            }
 
             Row(
                 modifier = Modifier
@@ -239,16 +230,14 @@ fun CourseScreen(
                     .padding(DS.Space.l),
                 horizontalArrangement = Arrangement.spacedBy(12.dp),
             ) {
-                val isLast = pagerState.currentPage >= pages.lastIndex
+                val isLast = pageIndex >= pages.lastIndex
                 val courseLocked = !isPremium && !isDailyFreeCourse
                 Button(
                     onClick = {
-                        // Locked 2nd+ course: bottom CTA advances pages; paywall only via lock overlay.
-                        // On the last locked page, no-op (parity with iOS).
                         if (courseLocked) {
                             if (!isLast) {
                                 sessionTracker.recordContinueTap()
-                                scope.launch { pagerState.animateScrollToPage(pagerState.currentPage + 1) }
+                                pageIndex += 1
                             }
                             return@Button
                         }
@@ -269,7 +258,7 @@ fun CourseScreen(
                             }
                         } else {
                             sessionTracker.recordContinueTap()
-                            scope.launch { pagerState.animateScrollToPage(pagerState.currentPage + 1) }
+                            pageIndex += 1
                         }
                     },
                     modifier = Modifier.fillMaxWidth().height(52.dp),

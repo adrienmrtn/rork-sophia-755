@@ -25,7 +25,6 @@ import app.rork.sophia.data.MetaAdsService
 import app.rork.sophia.data.TrialReminderScheduler
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.CourseSummary
-import app.rork.sophia.ui.components.CourseImageResolver
 import app.rork.sophia.ui.paywall.OnboardingPaywallFlow
 import app.rork.sophia.ui.theme.DS
 import kotlinx.coroutines.launch
@@ -76,9 +75,7 @@ fun OnboardingV2Screen(
         if (step != OnboardingStep.Paywall && step != OnboardingStep.Reminder) return@LaunchedEffect
         val appContext = context.applicationContext
         runCatching {
-            val summaries = ContentCatalog.summariesAsync(appContext, language)
-            val firstId = summaries.firstOrNull()?.id ?: return@runCatching
-            CourseImageResolver.decodeDownsampled(appContext, firstId, 720)
+            ContentCatalog.summariesAsync(appContext, language)
         }
     }
 
