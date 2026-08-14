@@ -1,6 +1,9 @@
 package app.rork.sophia.ui.home
 
+import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.spring
 import androidx.compose.foundation.background
+import androidx.compose.foundation.gestures.detectVerticalDragGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -9,10 +12,9 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.pager.VerticalPager
-import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -29,19 +31,26 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.SophiaApplication
@@ -55,7 +64,9 @@ import app.rork.sophia.domain.CourseSummary
 import app.rork.sophia.ui.components.CourseImage
 import app.rork.sophia.ui.components.FirstOpenExplanation
 import app.rork.sophia.ui.theme.DS
+import kotlin.math.roundToInt
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 @Composable
 fun HomeTikTokScreen(
@@ -70,15 +81,14 @@ fun HomeTikTokScreen(
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
-    val lowRam = remember { DeviceCapabilities.isLowRam(context) }
+    val constrained = remember { DeviceCapabilities.isConstrained(context) }
     val cached = remember(language) {
         ContentCatalog.cachedSummaries(language).orEmpty()
     }
     var cards by remember(language) { mutableStateOf(cached) }
     var catalogReady by remember(language) { mutableStateOf(cached.isNotEmpty()) }
     var showExplain by remember { mutableStateOf(false) }
-    var suppressSwipeCount by remember { mutableStateOf(false) }
-    val pagerState = rememberPagerState(pageCount = { cards.size.coerceAtLeast(1) })
+    var index by remember(language) { mutableIntStateOf(0) }
 
     LaunchedEffect(language) {
         if (cards.isEmpty()) {
@@ -87,7 +97,7 @@ fun HomeTikTokScreen(
             cards = cached.shuffled()
         }
         catalogReady = true
-        if (!lowRam && !app.tutorialFlags.seen(TutorialFlags.Id.HOME_SWIPE)) {
+        if (!constrained && !app.tutorialFlags.seen(TutorialFlags.Id.HOME_SWIPE)) {
             delay(900)
             showExplain = true
         }
@@ -97,18 +107,10 @@ fun HomeTikTokScreen(
         val id = autoSwipeCourseId ?: return@LaunchedEffect
         val found = cards.indexOfFirst { it.id == id }
         if (found >= 0 && found + 1 < cards.size) {
-            suppressSwipeCount = true
-            pagerState.animateScrollToPage(found + 1)
-        }
-        onAutoSwipeConsumed()
-    }
-
-    LaunchedEffect(pagerState.settledPage) {
-        if (suppressSwipeCount) {
-            suppressSwipeCount = false
-        } else if (pagerState.settledPage > 0) {
+            index = found + 1
             onUserSwipe()
         }
+        onAutoSwipeConsumed()
     }
 
     Box(modifier = modifier.fillMaxSize()) {
@@ -152,16 +154,21 @@ fun HomeTikTokScreen(
                     )
                 }
             } else {
-                VerticalPager(
-                    state = pagerState,
+                VerticalSnapFeed(
+                    itemCount = cards.size,
+                    index = index,
+                    onIndexChange = { next ->
+                        if (next != index) {
+                            index = next
+                            onUserSwipe()
+                        }
+                    },
                     modifier = Modifier
                         .weight(1f)
                         .fillMaxWidth()
                         .padding(bottom = 8.dp),
-                    beyondViewportPageCount = 0,
-                    pageSpacing = 12.dp,
                 ) { page ->
-                    val course = cards.getOrNull(page) ?: return@VerticalPager
+                    val course = cards[page]
                     TikTokCourseCard(
                         course = course,
                         language = language,
@@ -184,6 +191,111 @@ fun HomeTikTokScreen(
                     showExplain = false
                 },
             )
+        }
+    }
+}
+
+@Composable
+private fun VerticalSnapFeed(
+    itemCount: Int,
+    index: Int,
+    onIndexChange: (Int) -> Unit,
+    modifier: Modifier = Modifier,
+    content: @Composable (Int) -> Unit,
+) {
+    val scope = rememberCoroutineScope()
+    val indexState = rememberUpdatedState(index)
+    val countState = rememberUpdatedState(itemCount)
+    val changeState = rememberUpdatedState(onIndexChange)
+    var drag by remember { mutableFloatStateOf(0f) }
+    val anim = remember { Animatable(0f) }
+    var settling by remember { mutableStateOf(false) }
+    var heightPx by remember { mutableFloatStateOf(0f) }
+    val y = if (settling) anim.value else drag
+
+    Box(
+        modifier = modifier
+            .onSizeChanged { heightPx = it.height.toFloat() }
+            .pointerInput(heightPx) {
+                if (heightPx <= 0f) return@pointerInput
+                detectVerticalDragGestures(
+                    onDragStart = {
+                        if (settling) {
+                            settling = false
+                            drag = anim.value
+                            scope.launch { anim.stop() }
+                        }
+                    },
+                    onVerticalDrag = { _, dy ->
+                        val i = indexState.value
+                        val count = countState.value
+                        if (count <= 1) return@detectVerticalDragGestures
+                        val min = if (i < count - 1) -heightPx else 0f
+                        val max = if (i > 0) heightPx else 0f
+                        drag = (drag + dy).coerceIn(min, max)
+                    },
+                    onDragCancel = {
+                        scope.launch {
+                            settling = true
+                            anim.snapTo(drag)
+                            anim.animateTo(0f, spring())
+                            drag = 0f
+                            settling = false
+                        }
+                    },
+                    onDragEnd = {
+                        val i = indexState.value
+                        val count = countState.value
+                        val threshold = heightPx * 0.18f
+                        val value = drag
+                        scope.launch {
+                            settling = true
+                            anim.snapTo(value)
+                            when {
+                                value < -threshold && i < count - 1 -> {
+                                    changeState.value(i + 1)
+                                    anim.snapTo(value + heightPx)
+                                    drag = 0f
+                                    anim.animateTo(0f, spring())
+                                }
+                                value > threshold && i > 0 -> {
+                                    changeState.value(i - 1)
+                                    anim.snapTo(value - heightPx)
+                                    drag = 0f
+                                    anim.animateTo(0f, spring())
+                                }
+                                else -> {
+                                    anim.animateTo(0f, spring())
+                                }
+                            }
+                            drag = 0f
+                            settling = false
+                        }
+                    },
+                )
+            },
+    ) {
+        val incoming = when {
+            y < 0f && index < itemCount - 1 -> index + 1
+            y > 0f && index > 0 -> index - 1
+            else -> null
+        }
+        if (incoming != null && heightPx > 0f) {
+            val incomingY = if (y < 0f) heightPx + y else -heightPx + y
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .offset { IntOffset(0, incomingY.roundToInt()) },
+            ) {
+                content(incoming)
+            }
+        }
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .offset { IntOffset(0, y.roundToInt()) },
+        ) {
+            content(index)
         }
     }
 }

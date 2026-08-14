@@ -86,7 +86,7 @@ fun MainTabs(
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
     val scope = rememberCoroutineScope()
-    val lowRam = remember { DeviceCapabilities.isLowRam(context) }
+    val constrained = remember { DeviceCapabilities.isConstrained(context) }
     val isPremium by storeViewModel.isPremium.collectAsState()
     val trialExpiresInOneDay by storeViewModel.trialExpiresInOneDay.collectAsState()
     val progress by app.progressManager.progress.collectAsState()
@@ -104,7 +104,7 @@ fun MainTabs(
     var readerReady by remember { mutableStateOf(false) }
 
     LaunchedEffect(language, isPremium, progress.subjectXP) {
-        if (lowRam) delay(800)
+        if (constrained) delay(800)
         app.analytics.updateContext(
             language = language.code,
             isPremium = isPremium,
@@ -294,7 +294,7 @@ fun MainTabs(
                 LaunchedEffect(selectedCourse!!.id) {
                     // Let the home tree finish disposing and acknowledge the tap
                     // before loading CourseScreen classes (dex2oat on first open).
-                    delay(if (lowRam) 80L else 24L)
+                    delay(if (constrained) 80L else 24L)
                     readerReady = true
                 }
                 Box(
@@ -429,7 +429,7 @@ fun MainTabs(
             }
         }
 
-        if (!isPremium && !lowRam && selectedTab == 0 && selectedCourse == null && paywall == null) {
+        if (!isPremium && !constrained && selectedTab == 0 && selectedCourse == null && paywall == null) {
             if (discount.isGiftPending) {
                 DiscountGiftOverlay(
                     language = language,

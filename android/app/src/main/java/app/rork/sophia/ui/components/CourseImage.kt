@@ -41,13 +41,10 @@ fun CourseImage(
     val letter = remember(courseId) {
         courseId.substringAfterLast('_').firstOrNull()?.uppercaseChar()?.toString() ?: "S"
     }
-    val lowRam = remember { DeviceCapabilities.isLowRam(context) }
-    // Android Go / Redmi A5: skip Coil entirely. A previous build with color-only
-    // covers still ANR'd at home, so images are not required for the shell; they
-    // do add OkHttp+decode on a 3–4 GB Unisoc during the expensive first frame.
+    val skipRemote = remember { DeviceCapabilities.isConstrained(context) }
     var loadRemote by remember(courseId) { mutableStateOf(false) }
-    LaunchedEffect(courseId, lowRam) {
-        if (lowRam) return@LaunchedEffect
+    LaunchedEffect(courseId, skipRemote) {
+        if (skipRemote) return@LaunchedEffect
         yield()
         loadRemote = true
     }
@@ -59,7 +56,7 @@ fun CourseImage(
             fontSize = 42.sp,
             color = Color.White.copy(alpha = 0.92f),
         )
-        if (!lowRam && loadRemote && url != null) {
+        if (!skipRemote && loadRemote && url != null) {
             AsyncImage(
                 model = ImageRequest.Builder(context)
                     .data(url)

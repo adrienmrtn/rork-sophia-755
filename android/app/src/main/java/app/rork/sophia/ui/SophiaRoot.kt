@@ -45,7 +45,7 @@ fun SophiaRoot(
     var tabsReady by remember { mutableStateOf(false) }
     val language by app.languageManager.current.collectAsState()
     val conflict by app.progressSyncService.conflict.collectAsState()
-    val lowRam = remember { DeviceCapabilities.isLowRam(context) }
+    val constrained = remember { DeviceCapabilities.isConstrained(context) }
 
     // Paywall dispose + MainTabs first composition in the same frame is the ANR window
     // on Redmi A5 (Android Go / Unisoc T7250). Hold a 1-Text splash until the
@@ -56,7 +56,7 @@ fun SophiaRoot(
             return@LaunchedEffect
         }
         app.analytics.track("home_bridge_shown", DeviceCapabilities.analyticsProps(context))
-        delay(if (lowRam) 480L else 80L)
+        delay(if (constrained) 480L else 80L)
         tabsReady = true
         app.analytics.track("home_tabs_ready", DeviceCapabilities.analyticsProps(context))
     }

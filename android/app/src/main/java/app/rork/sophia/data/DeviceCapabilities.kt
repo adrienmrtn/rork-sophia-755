@@ -32,10 +32,29 @@ object DeviceCapabilities {
         return memoryClassMb
     }
 
+    fun isEmulator(): Boolean {
+        val hardware = Build.HARDWARE
+        val fingerprint = Build.FINGERPRINT
+        val product = Build.PRODUCT
+        val model = Build.MODEL
+        return hardware.contains("ranchu", ignoreCase = true) ||
+            hardware.contains("goldfish", ignoreCase = true) ||
+            fingerprint.startsWith("generic") ||
+            fingerprint.contains("emulator", ignoreCase = true) ||
+            product.contains("sdk", ignoreCase = true) ||
+            model.contains("sdk", ignoreCase = true) ||
+            model.contains("Emulator", ignoreCase = true)
+    }
+
+    /** Go phones + AVD/ranchu: skip Coil and heavy overlays. */
+    fun isConstrained(context: Context): Boolean = isLowRam(context) || isEmulator()
+
     fun analyticsProps(context: Context): Map<String, Any?> = mapOf(
         "low_ram" to isLowRam(context),
+        "emulator" to isEmulator(),
         "memory_class_mb" to memoryClassMb(context),
         "model" to Build.MODEL,
+        "hardware" to Build.HARDWARE,
         "manufacturer" to Build.MANUFACTURER,
         "release" to Build.VERSION.RELEASE,
         "sdk" to Build.VERSION.SDK_INT,
