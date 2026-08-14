@@ -19,6 +19,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.data.CourseCoverUrls
+import app.rork.sophia.data.DeviceCapabilities
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import kotlinx.coroutines.yield
@@ -40,10 +41,13 @@ fun CourseImage(
     val letter = remember(courseId) {
         courseId.substringAfterLast('_').firstOrNull()?.uppercaseChar()?.toString() ?: "S"
     }
-    // Paint the placeholder in the first frame (onboarding → home transition), then
-    // attach Coil so a decode failure cannot take down the arriving screen.
+    val lowRam = remember { DeviceCapabilities.isLowRam(context) }
+    // Android Go / Redmi A5: skip Coil entirely. A previous build with color-only
+    // covers still ANR'd at home, so images are not required for the shell; they
+    // do add OkHttp+decode on a 3–4 GB Unisoc during the expensive first frame.
     var loadRemote by remember(courseId) { mutableStateOf(false) }
-    LaunchedEffect(courseId) {
+    LaunchedEffect(courseId, lowRam) {
+        if (lowRam) return@LaunchedEffect
         yield()
         loadRemote = true
     }
@@ -55,7 +59,7 @@ fun CourseImage(
             fontSize = 42.sp,
             color = Color.White.copy(alpha = 0.92f),
         )
-        if (loadRemote && url != null) {
+        if (!lowRam && loadRemote && url != null) {
             AsyncImage(
                 model = ImageRequest.Builder(context)
                     .data(url)

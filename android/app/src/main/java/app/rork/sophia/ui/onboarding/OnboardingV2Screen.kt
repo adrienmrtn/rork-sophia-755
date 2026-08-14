@@ -21,6 +21,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.billing.StoreViewModel
 import app.rork.sophia.data.ContentCatalog
+import app.rork.sophia.data.GlossaryStore
 import app.rork.sophia.data.TrialReminderScheduler
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.CourseSummary
@@ -69,12 +70,13 @@ fun OnboardingV2Screen(
     LaunchedEffect(step) {
         app.analytics.trackOnboardingStep(step.ordinal, step.analyticsName)
     }
-    // Warm the home feed during paywall so arriving on TikTok home is instant.
+    // Warm the home feed + glossary during paywall so arriving on TikTok home is instant.
     LaunchedEffect(step, language) {
         if (step != OnboardingStep.Paywall && step != OnboardingStep.Reminder) return@LaunchedEffect
         val appContext = context.applicationContext
         runCatching {
             ContentCatalog.summariesAsync(appContext, language)
+            GlossaryStore.preload(appContext, language)
         }
     }
 

@@ -48,6 +48,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.ContentCatalog
+import app.rork.sophia.data.DeviceCapabilities
 import app.rork.sophia.data.ShareHelper
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.data.TutorialFlags
@@ -71,6 +72,7 @@ fun HomeTikTokScreen(
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
+    val lowRam = remember { DeviceCapabilities.isLowRam(context) }
     val cached = remember(language) {
         ContentCatalog.cachedSummaries(language).orEmpty()
     }
@@ -86,7 +88,8 @@ fun HomeTikTokScreen(
             cards = cached.shuffled()
         }
         catalogReady = true
-        if (!app.tutorialFlags.seen(TutorialFlags.Id.HOME_SWIPE)) {
+        // Full-screen animated overlay on Android Go is a second ANR wave ~1s after home.
+        if (!lowRam && !app.tutorialFlags.seen(TutorialFlags.Id.HOME_SWIPE)) {
             delay(900)
             showExplain = true
         }

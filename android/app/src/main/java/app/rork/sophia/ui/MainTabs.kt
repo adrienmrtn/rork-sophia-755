@@ -38,6 +38,7 @@ import androidx.compose.ui.unit.sp
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.billing.StoreViewModel
 import app.rork.sophia.data.ContentCatalog
+import app.rork.sophia.data.DeviceCapabilities
 import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
@@ -83,6 +84,7 @@ fun MainTabs(
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
     val scope = rememberCoroutineScope()
+    val lowRam = remember { DeviceCapabilities.isLowRam(context) }
     val isPremium by storeViewModel.isPremium.collectAsState()
     val trialExpiresInOneDay by storeViewModel.trialExpiresInOneDay.collectAsState()
     val progress by app.progressManager.progress.collectAsState()
@@ -99,6 +101,7 @@ fun MainTabs(
     var showTrialEndingBanner by remember { mutableStateOf(false) }
 
     LaunchedEffect(language, isPremium, progress.subjectXP) {
+        if (lowRam) delay(800)
         app.analytics.updateContext(
             language = language.code,
             isPremium = isPremium,
@@ -404,7 +407,7 @@ fun MainTabs(
             }
         }
 
-        if (!isPremium && selectedTab == 0 && selectedCourse == null && paywall == null) {
+        if (!isPremium && !lowRam && selectedTab == 0 && selectedCourse == null && paywall == null) {
             if (discount.isGiftPending) {
                 DiscountGiftOverlay(
                     language = language,
