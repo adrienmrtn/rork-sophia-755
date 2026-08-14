@@ -50,7 +50,6 @@ Debug APK uses the placeholder RevenueCat key (`goog_REPLACE_ME`) until you set 
 - **Training mini-onboarding** (Discover → 3 screens → fin_onboarding paywalls)
 - **Trial reminder** local notifications + POST_NOTIFICATIONS
 - **Course share** (`sophia://course/{id}`)
-- **Meta Ads** service (consent-gated auto-log)
 - **Ambassador** Formspree candidature from profile
 - **Play In-App Review** (3rd lesson of first course)
 - **Mixpanel EU** funnel events (onboarding, course, quiz, locks, discount)
@@ -73,7 +72,7 @@ See [`QA.md`](./QA.md) for the full static checklist and deferred device checks.
 | RevenueCat Android API key (`goog_…`) | `app/build.gradle.kts` `REVENUECAT_API_KEY` |
 | Google OAuth Android client | Google Cloud Console (package + SHA-1) |
 | Play Billing products | Play Console → linked in RevenueCat |
-| Meta Android key hashes | Meta Developer Console |
+| Course cover upload | `SUPABASE_SERVICE_ROLE_KEY` + `python3 scripts/upload_course_images_to_supabase.py` |
 
 Until the RevenueCat key is set, the app runs in free mode (`goog_REPLACE_ME`). Debug paywall can simulate premium.
 
@@ -85,7 +84,8 @@ python3 scripts/export_ios_content_for_android.py --from-ref origin/main
 
 Exports locale catalogs, UI strings (new langs), and CoursesV2 into `app/src/main/assets/`.
 Then slims `courses.{lang}.json` (quiz + metadata only) and writes `course_index.{lang}.json`
-for the home feed. Cover JPEGs are **not** packaged — the UI uses color placeholders.
+for the home feed. Cover JPEGs are **not** packaged — Coil loads them from the public
+Supabase bucket `course-images` (see `scripts/upload_course_images_to_supabase.py`).
 
 ## Build from CLI
 

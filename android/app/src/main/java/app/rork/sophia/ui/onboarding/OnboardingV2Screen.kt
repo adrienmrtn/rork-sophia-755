@@ -21,7 +21,6 @@ import androidx.activity.result.contract.ActivityResultContracts
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.billing.StoreViewModel
 import app.rork.sophia.data.ContentCatalog
-import app.rork.sophia.data.MetaAdsService
 import app.rork.sophia.data.TrialReminderScheduler
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.CourseSummary
@@ -100,7 +99,6 @@ fun OnboardingV2Screen(
     val notificationPermission = rememberLauncherForActivityResult(
         ActivityResultContracts.RequestPermission(),
     ) {
-        MetaAdsService.setTrackingEnabled(true)
         if (isPremium) finish(true)
         else {
             sawPaywall = true
@@ -112,7 +110,6 @@ fun OnboardingV2Screen(
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             notificationPermission.launch(Manifest.permission.POST_NOTIFICATIONS)
         } else {
-            MetaAdsService.setTrackingEnabled(true)
             if (isPremium) finish(true)
             else {
                 sawPaywall = true

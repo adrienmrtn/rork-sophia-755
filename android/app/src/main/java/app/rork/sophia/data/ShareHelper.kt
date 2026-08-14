@@ -20,6 +20,5 @@ object ShareHelper {
             putExtra(Intent.EXTRA_TEXT, text)
         }
         context.startActivity(Intent.createChooser(intent, title))
-        MetaAdsService.logShare(context, courseId)
     }
 }

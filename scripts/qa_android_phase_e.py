@@ -266,6 +266,14 @@ def check_code_wiring(c: Checker) -> None:
         block = re.search(r"if \(courseLocked\) \{(.*?)return@Button", course, re.S)
         if block and "onRequestPaywall" in block.group(1):
             c.fail("CourseScreen courseLocked Continue still calls onRequestPaywall")
+    gradle = (ROOT / "android" / "app" / "build.gradle.kts").read_text(encoding="utf-8")
+    if "facebook-android-sdk" in gradle:
+        c.fail("Facebook SDK still in build.gradle.kts")
+    if "coil-compose" not in gradle:
+        c.fail("coil-compose missing from build.gradle.kts")
+    covers = (JAVA / "data" / "CourseCoverUrls.kt").read_text(encoding="utf-8")
+    if "course-images" not in covers:
+        c.fail("CourseCoverUrls missing course-images bucket")
     c.ok("code wiring smoke OK")
 
 

@@ -36,7 +36,7 @@ Expected: `errors: none`.
 - Visual small-screen profile CTA with long translations  
 - Real RevenueCat trial vs no-trial packages  
 - Restore against Play Billing sandbox  
-- Google OAuth + Meta key hashes  
+- Google OAuth SHA-1  
 - Live Play Console paste of `play_listing.*`
 
 ## Human / dashboard (out of code)

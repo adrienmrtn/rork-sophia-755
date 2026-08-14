@@ -26,8 +26,6 @@ android {
         buildConfigField("String", "GOOGLE_WEB_CLIENT_ID", "\"716867958674-b9ql8ap6fna2lu9caublcjajdh7978q2.apps.googleusercontent.com\"")
         buildConfigField("String", "FORMSPREE_ENDPOINT", "\"https://formspree.io/f/xwvdybwb\"")
         buildConfigField("String", "FORMSPREE_AMBASSADOR_ENDPOINT", "\"https://formspree.io/f/xpqvqnwb\"")
-        buildConfigField("String", "META_APP_ID", "\"2056318204963651\"")
-        buildConfigField("String", "META_CLIENT_TOKEN", "\"d5806d3f17a5fcabc6a31ea59bd08d99\"")
     }
 
     buildTypes {
@@ -105,8 +103,8 @@ dependencies {
     implementation("androidx.credentials:credentials-play-services-auth:1.3.0")
     implementation("com.google.android.libraries.identity.googleid:googleid:1.1.1")
 
-    // Meta / Facebook
-    implementation("com.facebook.android:facebook-android-sdk:18.0.0")
+    // Remote covers (Supabase Storage) — one image at a time, disk-cached
+    implementation("io.coil-kt:coil-compose:2.7.0")
 
     // Play In-App Review
     implementation("com.google.android.play:review:2.0.2")
