@@ -77,9 +77,13 @@ class SophiaApplication : Application(), ImageLoaderFactory {
     }
 
     override fun newImageLoader(): ImageLoader {
+        // Hardware bitmaps crash Compose on Xiaomi/Redmi ("Software rendering doesn't
+        // support hardware bitmaps") the moment the first cover actually decodes —
+        // which is arriving on home after onboarding, once Supabase URLs 200.
         return ImageLoader.Builder(this)
+            .allowHardware(false)
             .memoryCache {
-                MemoryCache.Builder(this).maxSizePercent(0.08).build()
+                MemoryCache.Builder(this@SophiaApplication).maxSizePercent(0.08).build()
             }
             .diskCache {
                 DiskCache.Builder()

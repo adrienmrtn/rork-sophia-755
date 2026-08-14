@@ -45,6 +45,7 @@ fun SophiaRoot(
                 onLanguageSelected = { app.languageManager.setLanguage(it) },
                 onComplete = {
                     app.onboardingStore.markCompleted()
+                    // Drop the paywall tree first; home + Coil compose on the next frame.
                     showOnboarding = false
                 },
             )

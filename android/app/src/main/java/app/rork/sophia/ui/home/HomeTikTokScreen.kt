@@ -131,11 +131,11 @@ fun HomeTikTokScreen(
             }
 
             if (!catalogReady) {
-                Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                Box(modifier = Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {
                     Text("…", fontFamily = FontFamily.SansSerif, color = DS.inkSecondary)
                 }
             } else if (course == null) {
-                Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                Box(modifier = Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {
                     Text(
                         text = StringStore.text(context, "home.allCaughtUp", language)
                             .takeIf { it != "home.allCaughtUp" }
@@ -147,7 +147,8 @@ fun HomeTikTokScreen(
             } else {
                 Box(
                     modifier = Modifier
-                        .fillMaxSize()
+                        .weight(1f)
+                        .fillMaxWidth()
                         .padding(bottom = 8.dp),
                 ) {
                     TikTokCourseCard(

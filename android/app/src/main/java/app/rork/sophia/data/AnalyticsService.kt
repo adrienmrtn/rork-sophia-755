@@ -26,19 +26,23 @@ class AnalyticsService(context: Context) {
         onboardingCompleted: Boolean,
         unlockedSubjects: Collection<String> = emptyList(),
     ) {
-        mixpanel?.registerSuperProperties(
-            JSONObject()
-                .put("language", language)
-                .put("is_premium", isPremium)
-                .put("onboarding_completed", onboardingCompleted)
-                .put("unlocked_subjects", JSONArray(unlockedSubjects.toList())),
-        )
-        mixpanel?.people?.set("interests", JSONArray(unlockedSubjects.toList()))
+        runCatching {
+            mixpanel?.registerSuperProperties(
+                JSONObject()
+                    .put("language", language)
+                    .put("is_premium", isPremium)
+                    .put("onboarding_completed", onboardingCompleted)
+                    .put("unlocked_subjects", JSONArray(unlockedSubjects.toList())),
+            )
+            mixpanel?.people?.set("interests", JSONArray(unlockedSubjects.toList()))
+        }
     }
 
     fun identify(userId: String) {
-        mixpanel?.identify(userId)
-        mixpanel?.people?.identify(userId)
+        runCatching {
+            mixpanel?.identify(userId)
+            mixpanel?.people?.identify(userId)
+        }
     }
 
     fun track(event: String, props: Map<String, Any?> = emptyMap()) {

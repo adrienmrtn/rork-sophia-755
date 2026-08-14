@@ -41,13 +41,15 @@ class AuthService(private val appContext: Context) {
             } finally {
                 _bootstrapping.value = false
             }
-            SupabaseManager.client.auth.sessionStatus.collect { status ->
-                when (status) {
-                    is SessionStatus.Authenticated -> {
-                        _userId.value = status.session.user?.id
-                        linkRevenueCat()
+            runCatching {
+                SupabaseManager.client.auth.sessionStatus.collect { status ->
+                    when (status) {
+                        is SessionStatus.Authenticated -> {
+                            _userId.value = status.session.user?.id
+                            linkRevenueCat()
+                        }
+                        else -> _userId.value = null
                     }
-                    else -> _userId.value = null
                 }
             }
         }

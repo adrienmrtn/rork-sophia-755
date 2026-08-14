@@ -79,12 +79,14 @@ fun OnboardingV2Screen(
     }
 
     fun finish(isPremiumAtExit: Boolean) {
-        likedCourseIds.forEach { id ->
-            if (!app.progressManager.isFavorite(id)) {
-                app.progressManager.toggleFavorite(id)
+        runCatching {
+            likedCourseIds.forEach { id ->
+                if (!app.progressManager.isFavorite(id)) {
+                    app.progressManager.toggleFavorite(id)
+                }
             }
+            app.analytics.trackOnboardingCompleted(sawPaywall = sawPaywall, isPremium = isPremiumAtExit)
         }
-        app.analytics.trackOnboardingCompleted(sawPaywall = sawPaywall, isPremium = isPremiumAtExit)
         onComplete()
     }
 
