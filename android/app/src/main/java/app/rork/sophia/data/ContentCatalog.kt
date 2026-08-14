@@ -33,22 +33,30 @@ object ContentCatalog {
 
     fun summaries(context: Context, language: AppLanguage): List<CourseSummary> {
         summaryCache[language.code]?.let { return it }
-        val loaded = try {
-            context.assets.open("locales/courses.${language.code}.json").use { stream ->
-                CatalogStream.readSummaries(stream)
-            }
-        } catch (_: Exception) {
-            emptyList()
-        }
+        val loaded = readSummaries(context, language)
         summaryCache[language.code] = loaded
         return loaded
+    }
+
+    private fun readSummaries(context: Context, language: AppLanguage): List<CourseSummary> {
+        val indexPath = "locales/course_index.${language.code}.json"
+        val catalogPath = "locales/courses.${language.code}.json"
+        return try {
+            context.assets.open(indexPath).use { CatalogStream.readSummaries(it) }
+        } catch (_: Exception) {
+            try {
+                context.assets.open(catalogPath).use { CatalogStream.readSummaries(it) }
+            } catch (_: Exception) {
+                emptyList()
+            }
+        }
     }
 
     suspend fun summariesAsync(context: Context, language: AppLanguage): List<CourseSummary> =
         withContext(Dispatchers.IO) { summaries(context, language) }
 
     /**
-     * Lightweight stubs only (no lessons/quiz). Never parse the full 3MB catalog into Course trees.
+     * Lightweight stubs only (no lessons/quiz). Feed/library never touch quiz JSON.
      */
     fun courses(context: Context, language: AppLanguage): List<Course> {
         return summaries(context, language).map {

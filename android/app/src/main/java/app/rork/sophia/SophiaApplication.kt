@@ -66,8 +66,7 @@ class SophiaApplication : Application() {
         }
         TrialReminderScheduler.ensureChannel(this)
 
-        // Warm heavy assets off the main thread so the first TikTok swipe / course open
-        // doesn't parse multi‑MB JSON on the UI thread (ANR on low-end devices).
+        // Warm the slim course index (~70KB) + collections off the main thread.
         val lang = languageManager.current.value
         appScope.launch(Dispatchers.IO) {
             runCatching {

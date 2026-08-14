@@ -12,3 +12,6 @@
 *.aab
 *.keystore
 google-services.json
+
+# Cover JPEGs are not packaged (placeholders only). Do not copy ios CourseImages here.
+app/src/main/assets/images/

@@ -10,8 +10,11 @@ import java.io.InputStream
 import java.io.InputStreamReader
 
 /**
- * Streaming catalog reader. Never materializes the lessons/quiz trees of all 239 courses
- * (that OOM/crashes low-RAM devices like Redmi A5).
+ * Streaming catalog reader.
+ *
+ * Home/library use `course_index.{lang}.json` (~70KB, no quiz/lessons).
+ * Opening a course streams `courses.{lang}.json` (quiz only, lessons already stripped)
+ * and keeps a single Course in memory.
  */
 object CatalogStream {
     fun readSummaries(input: InputStream): List<CourseSummary> {

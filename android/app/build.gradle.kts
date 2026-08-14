@@ -60,6 +60,10 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+    // Cover JPEGs stay out of the APK (OOM on Android Go). Color placeholders in UI.
+    androidResources {
+        ignoreAssetsPattern = "!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~:images"
+    }
 }
 
 dependencies {

@@ -11,7 +11,7 @@ python3 scripts/qa_android_phase_e.py
 Covers:
 
 1. `AppLanguage` = 15 codes  
-2. Assets for all langs: `strings/`, `locales/`, `legal/`, `courses_v2/` (238 courses)  
+2. Assets for all langs: `strings/`, `locales/` (incl. slim `course_index`), `legal/`, `courses_v2/` (238 courses) — no cover JPEGs  
 3. String key parity + critical Phase B–D keys (scroll hint, trial/no-trial, quiz FAQ, legal chrome)  
 4. Catalog / quiz / CoursesV2 id parity vs FR  
 5. Legal Play wording lint (no iOS / App Store / Apple / UserDefaults)  

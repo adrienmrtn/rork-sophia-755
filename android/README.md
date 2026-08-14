@@ -84,6 +84,8 @@ python3 scripts/export_ios_content_for_android.py --from-ref origin/main
 ```
 
 Exports locale catalogs, UI strings (new langs), and CoursesV2 into `app/src/main/assets/`.
+Then slims `courses.{lang}.json` (quiz + metadata only) and writes `course_index.{lang}.json`
+for the home feed. Cover JPEGs are **not** packaged — the UI uses color placeholders.
 
 ## Build from CLI
 
