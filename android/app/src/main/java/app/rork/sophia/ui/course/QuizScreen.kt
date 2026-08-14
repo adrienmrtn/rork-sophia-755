@@ -46,10 +46,10 @@ import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Course
 import app.rork.sophia.domain.QuizAnswer
-import app.rork.sophia.domain.QuizQuestion
 import app.rork.sophia.domain.QuizQuestionType
 import app.rork.sophia.domain.QuizScoring
 import app.rork.sophia.domain.QuizShuffler
+import app.rork.sophia.domain.ShuffledQuestion
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
@@ -108,7 +108,7 @@ fun QuizScreen(
         return
     }
 
-    val questions = remember(course.id) { mutableStateListOf<QuizQuestion>() }
+    val questions = remember(course.id) { mutableStateListOf<ShuffledQuestion>() }
     var quizReady by remember(course.id) { mutableStateOf(false) }
     LaunchedEffect(course.id) {
         val raw = if (course.quiz.isNotEmpty()) {
