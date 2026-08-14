@@ -10,6 +10,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.pager.HorizontalPager
+import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
@@ -17,18 +19,18 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Text
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -40,8 +42,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.ContentCatalog
-import app.rork.sophia.data.GlossaryStore
 import app.rork.sophia.data.CourseSessionTracker
+import app.rork.sophia.data.GlossaryStore
 import app.rork.sophia.data.InAppReviewHelper
 import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.ShareHelper
@@ -54,6 +56,7 @@ import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.jsonArray
@@ -81,7 +84,8 @@ fun CourseScreen(
     }
     var pages by remember(course.id, language) { mutableStateOf<List<ReaderPage>>(emptyList()) }
     var pagesReady by remember(course.id, language) { mutableStateOf(false) }
-    var pageIndex by remember(course.id) { mutableIntStateOf(0) }
+    val pagerState = rememberPagerState(pageCount = { pages.size.coerceAtLeast(1) })
+    val scope = rememberCoroutineScope()
     val sessionTracker = remember(course.id) {
         CourseSessionTracker(
             courseId = course.id,
@@ -92,7 +96,7 @@ fun CourseScreen(
 
     LaunchedEffect(course.id, language) {
         pagesReady = false
-        pageIndex = 0
+        pagerState.scrollToPage(0)
         val appContext = context.applicationContext
         val loaded = withContext(Dispatchers.IO) {
             GlossaryStore.preload(appContext, language)
@@ -126,8 +130,9 @@ fun CourseScreen(
         return
     }
 
-    LaunchedEffect(pageIndex, pagesReady) {
+    LaunchedEffect(pagerState.currentPage, pagesReady) {
         if (!pagesReady) return@LaunchedEffect
+        val pageIndex = pagerState.currentPage
         sessionTracker.recordLessonReached(pageIndex)
         progressManager.updateLessonIndex(course.id, pageIndex)
         InAppReviewHelper.requestIfEligible(
@@ -175,7 +180,7 @@ fun CourseScreen(
             LinearProgressIndicator(
                 progress = {
                     if (pages.isEmpty()) 0f
-                    else (pageIndex + 1).toFloat() / pages.size
+                    else (pagerState.currentPage + 1).toFloat() / pages.size
                 },
                 modifier = Modifier.fillMaxWidth().padding(horizontal = DS.Space.l),
                 color = DS.accent,
@@ -191,11 +196,15 @@ fun CourseScreen(
                     CircularProgressIndicator(color = DS.accent)
                 }
             } else {
-                val index = pageIndex
-                val locked = FreemiumGate.isLessonContentLocked(index, isPremium, isDailyFreeCourse)
-                val page = pages.getOrNull(index)
-                Box(modifier = Modifier.weight(1f).fillMaxWidth()) {
-                    if (page != null) {
+                HorizontalPager(
+                    state = pagerState,
+                    modifier = Modifier.weight(1f).fillMaxWidth(),
+                    beyondViewportPageCount = 0,
+                    userScrollEnabled = true,
+                ) { index ->
+                    val locked = FreemiumGate.isLessonContentLocked(index, isPremium, isDailyFreeCourse)
+                    val page = pages.getOrNull(index) ?: return@HorizontalPager
+                    Box(modifier = Modifier.fillMaxSize()) {
                         Column(
                             modifier = Modifier
                                 .fillMaxSize()
@@ -212,15 +221,15 @@ fun CourseScreen(
                                 color = if (locked) DS.inkTertiary else DS.ink,
                             )
                         }
-                    }
-                    if (locked) {
-                        CourseLessonLockOverlay {
-                            app.analytics.trackLockedContentTapped(
-                                gateType = "debloquer_cours",
-                                courseId = course.id,
-                                subject = course.subjectEnum.storageKey,
-                            )
-                            onRequestPaywall("debloquer_cours")
+                        if (locked) {
+                            CourseLessonLockOverlay {
+                                app.analytics.trackLockedContentTapped(
+                                    gateType = "debloquer_cours",
+                                    courseId = course.id,
+                                    subject = course.subjectEnum.storageKey,
+                                )
+                                onRequestPaywall("debloquer_cours")
+                            }
                         }
                     }
                 }
@@ -232,14 +241,14 @@ fun CourseScreen(
                     .padding(DS.Space.l),
                 horizontalArrangement = Arrangement.spacedBy(12.dp),
             ) {
-                val isLast = pageIndex >= pages.lastIndex
+                val isLast = pagerState.currentPage >= pages.lastIndex
                 val courseLocked = !isPremium && !isDailyFreeCourse
                 Button(
                     onClick = {
                         if (courseLocked) {
                             if (!isLast) {
                                 sessionTracker.recordContinueTap()
-                                pageIndex += 1
+                                scope.launch { pagerState.animateScrollToPage(pagerState.currentPage + 1) }
                             }
                             return@Button
                         }
@@ -260,7 +269,7 @@ fun CourseScreen(
                             }
                         } else {
                             sessionTracker.recordContinueTap()
-                            pageIndex += 1
+                            scope.launch { pagerState.animateScrollToPage(pagerState.currentPage + 1) }
                         }
                     },
                     modifier = Modifier.fillMaxWidth().height(52.dp),
