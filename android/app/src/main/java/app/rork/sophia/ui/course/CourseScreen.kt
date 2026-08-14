@@ -1,6 +1,8 @@
 package app.rork.sophia.ui.course
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -10,8 +12,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.pager.HorizontalPager
-import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
@@ -28,9 +28,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -43,6 +43,7 @@ import androidx.compose.ui.unit.sp
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.CourseSessionTracker
+import app.rork.sophia.data.DeviceCapabilities
 import app.rork.sophia.data.GlossaryStore
 import app.rork.sophia.data.InAppReviewHelper
 import app.rork.sophia.data.ProgressManager
@@ -56,8 +57,9 @@ import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
+import kotlinx.coroutines.yield
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
@@ -84,8 +86,9 @@ fun CourseScreen(
     }
     var pages by remember(course.id, language) { mutableStateOf<List<ReaderPage>>(emptyList()) }
     var pagesReady by remember(course.id, language) { mutableStateOf(false) }
-    val pagerState = rememberPagerState(pageCount = { pages.size.coerceAtLeast(1) })
-    val scope = rememberCoroutineScope()
+    var pageIndex by remember(course.id, language) { mutableIntStateOf(0) }
+    var richReady by remember(course.id, language) { mutableStateOf(false) }
+    val scrollState = rememberScrollState()
     val sessionTracker = remember(course.id) {
         CourseSessionTracker(
             courseId = course.id,
@@ -96,16 +99,29 @@ fun CourseScreen(
 
     LaunchedEffect(course.id, language) {
         pagesReady = false
-        pagerState.scrollToPage(0)
+        richReady = false
+        pageIndex = 0
         val appContext = context.applicationContext
         val loaded = withContext(Dispatchers.IO) {
-            GlossaryStore.preload(appContext, language)
             buildPages(appContext, course, language)
         }
         pages = loaded
         sessionTracker.lessonCount = loaded.size.coerceAtLeast(1)
         pagesReady = true
         progressManager.recordFirstCourseOpenedIfNeeded(course.id)
+    }
+
+    LaunchedEffect(pagesReady, course.id, language) {
+        if (!pagesReady) return@LaunchedEffect
+        yield()
+        delay(if (DeviceCapabilities.isConstrained(context)) 120L else 32L)
+        richReady = true
+        val appContext = context.applicationContext
+        withContext(Dispatchers.IO) { GlossaryStore.preload(appContext, language) }
+    }
+
+    LaunchedEffect(pageIndex) {
+        scrollState.scrollTo(0)
     }
 
     DisposableEffect(course.id) {
@@ -116,31 +132,44 @@ fun CourseScreen(
 
     if (showQuiz) {
         LaunchedEffect(Unit) { sessionTracker.markQuiz() }
-        QuizScreen(
-            course = course,
-            language = language,
-            isPremium = isPremium,
-            progressManager = progressManager,
-            onRequestPaywall = { onRequestPaywall("quizz") },
-            onFinished = {
-                onCourseCompleted()
-                onDismiss()
-            },
-        )
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(DS.canvas)
+                .clickable(
+                    interactionSource = remember { MutableInteractionSource() },
+                    indication = null,
+                    onClick = {},
+                ),
+        ) {
+            QuizScreen(
+                course = course,
+                language = language,
+                isPremium = isPremium,
+                progressManager = progressManager,
+                onRequestPaywall = { onRequestPaywall("quizz") },
+                onFinished = {
+                    onCourseCompleted()
+                    onDismiss()
+                },
+            )
+        }
         return
     }
 
-    LaunchedEffect(pagerState.currentPage, pagesReady) {
-        if (!pagesReady) return@LaunchedEffect
-        val pageIndex = pagerState.currentPage
+    LaunchedEffect(pageIndex, pagesReady, richReady) {
+        if (!pagesReady || !richReady) return@LaunchedEffect
         sessionTracker.recordLessonReached(pageIndex)
         progressManager.updateLessonIndex(course.id, pageIndex)
-        InAppReviewHelper.requestIfEligible(
-            context = context,
-            progressManager = progressManager,
-            courseId = course.id,
-            lessonIndex = pageIndex,
-        )
+        if (pageIndex >= 2) {
+            InAppReviewHelper.requestIfEligible(
+                context = context,
+                progressManager = progressManager,
+                courseId = course.id,
+                lessonIndex = pageIndex,
+            )
+        }
+        delay(400)
         val page = pages.getOrNull(pageIndex) ?: return@LaunchedEffect
         val locked = FreemiumGate.isLessonContentLocked(
             pageIndex,
@@ -156,7 +185,16 @@ fun CourseScreen(
         }
     }
 
-    Box(modifier = Modifier.fillMaxSize()) {
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(DS.canvas)
+            .clickable(
+                interactionSource = remember { MutableInteractionSource() },
+                indication = null,
+                onClick = {},
+            ),
+    ) {
         Column(modifier = Modifier.fillMaxSize().background(DS.canvas)) {
             Row(
                 modifier = Modifier
@@ -180,7 +218,7 @@ fun CourseScreen(
             LinearProgressIndicator(
                 progress = {
                     if (pages.isEmpty()) 0f
-                    else (pagerState.currentPage + 1).toFloat() / pages.size
+                    else (pageIndex + 1).toFloat() / pages.size
                 },
                 modifier = Modifier.fillMaxWidth().padding(horizontal = DS.Space.l),
                 color = DS.accent,
@@ -196,40 +234,43 @@ fun CourseScreen(
                     CircularProgressIndicator(color = DS.accent)
                 }
             } else {
-                HorizontalPager(
-                    state = pagerState,
-                    modifier = Modifier.weight(1f).fillMaxWidth(),
-                    beyondViewportPageCount = 0,
-                    userScrollEnabled = true,
-                ) { index ->
-                    val locked = FreemiumGate.isLessonContentLocked(index, isPremium, isDailyFreeCourse)
-                    val page = pages.getOrNull(index) ?: return@HorizontalPager
-                    Box(modifier = Modifier.fillMaxSize()) {
+                val locked = FreemiumGate.isLessonContentLocked(pageIndex, isPremium, isDailyFreeCourse)
+                val page = pages.getOrNull(pageIndex)
+                Box(modifier = Modifier.weight(1f).fillMaxWidth()) {
+                    if (page != null) {
                         Column(
                             modifier = Modifier
                                 .fillMaxSize()
-                                .verticalScroll(rememberScrollState())
+                                .verticalScroll(scrollState)
                                 .padding(DS.Space.l),
                         ) {
                             Text(text = page.title, style = SophiaTypography.titleLarge)
                             Spacer(Modifier.height(16.dp))
-                            RichTextWithGlossary(
-                                raw = page.body,
-                                language = language,
-                                courseId = course.id,
-                                courseTitle = course.title,
-                                color = if (locked) DS.inkTertiary else DS.ink,
-                            )
-                        }
-                        if (locked) {
-                            CourseLessonLockOverlay {
-                                app.analytics.trackLockedContentTapped(
-                                    gateType = "debloquer_cours",
+                            if (richReady) {
+                                RichTextWithGlossary(
+                                    raw = page.body,
+                                    language = language,
                                     courseId = course.id,
-                                    subject = course.subjectEnum.storageKey,
+                                    courseTitle = course.title,
+                                    color = if (locked) DS.inkTertiary else DS.ink,
                                 )
-                                onRequestPaywall("debloquer_cours")
+                            } else {
+                                Text(
+                                    text = stripWikiMarkup(page.body),
+                                    style = SophiaTypography.bodyLarge,
+                                    color = if (locked) DS.inkTertiary else DS.ink,
+                                )
                             }
+                        }
+                    }
+                    if (locked) {
+                        CourseLessonLockOverlay {
+                            app.analytics.trackLockedContentTapped(
+                                gateType = "debloquer_cours",
+                                courseId = course.id,
+                                subject = course.subjectEnum.storageKey,
+                            )
+                            onRequestPaywall("debloquer_cours")
                         }
                     }
                 }
@@ -241,14 +282,14 @@ fun CourseScreen(
                     .padding(DS.Space.l),
                 horizontalArrangement = Arrangement.spacedBy(12.dp),
             ) {
-                val isLast = pagerState.currentPage >= pages.lastIndex
+                val isLast = pages.isNotEmpty() && pageIndex >= pages.lastIndex
                 val courseLocked = !isPremium && !isDailyFreeCourse
                 Button(
                     onClick = {
                         if (courseLocked) {
                             if (!isLast) {
                                 sessionTracker.recordContinueTap()
-                                scope.launch { pagerState.animateScrollToPage(pagerState.currentPage + 1) }
+                                pageIndex++
                             }
                             return@Button
                         }
@@ -269,7 +310,7 @@ fun CourseScreen(
                             }
                         } else {
                             sessionTracker.recordContinueTap()
-                            scope.launch { pagerState.animateScrollToPage(pagerState.currentPage + 1) }
+                            pageIndex++
                         }
                     },
                     modifier = Modifier.fillMaxWidth().height(52.dp),
@@ -348,6 +389,12 @@ fun GlossaryTermCoachmark(
 }
 
 private data class ReaderPage(val title: String, val body: String)
+
+private fun stripWikiMarkup(raw: String): String =
+    raw.replace("[[", "")
+        .replace("]]", "")
+        .replace("**", "")
+        .replace(Regex("==([^=]+)=="), "$1")
 
 private fun firstGlossaryTerm(raw: String): String? {
     val match = Regex("\\[\\[([^\\]]+)\\]\\]").find(raw) ?: return null
