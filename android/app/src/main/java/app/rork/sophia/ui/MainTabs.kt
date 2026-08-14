@@ -5,12 +5,10 @@ import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutVertically
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AutoStories
 import androidx.compose.material.icons.filled.Home
@@ -101,7 +99,6 @@ fun MainTabs(
     var levelBeforeCompletion by remember { mutableIntStateOf(1) }
     var paywallPresentedAtMs by remember { mutableStateOf<Long?>(null) }
     var showTrialEndingBanner by remember { mutableStateOf(false) }
-    var readerReady by remember { mutableStateOf(false) }
 
     LaunchedEffect(language, isPremium, progress.subjectXP) {
         if (constrained) delay(800)
@@ -130,9 +127,8 @@ fun MainTabs(
         val stub = ContentCatalog.cachedStub(language, id)
             ?: ContentCatalog.courseStubAsync(context.applicationContext, language, id)
         stub?.let {
-            readerReady = false
             selectedCourse = it
-            app.analytics.trackDeepLinkOpened(id)
+            withContext(Dispatchers.IO) { app.analytics.trackDeepLinkOpened(id) }
         }
         onDeepLinkConsumed()
     }
@@ -142,16 +138,19 @@ fun MainTabs(
             app.progressManager.incrementFreeCoursesOpened()
             app.progressManager.claimDailyFreeCourseIfNeeded(course.id)
         }
-        app.analytics.trackCourseOpened(
-            courseId = course.id,
-            subject = course.subjectEnum.storageKey,
-            source = "home_tiktok",
-            isFreeUser = !isPremium,
-        )
         pendingCompletionCourseId = null
         levelBeforeCompletion = ProgressManager.globalLevelProgress(app.progressManager.progress.value.globalXP).level
-        readerReady = false
         selectedCourse = course
+        val courseId = course.id
+        val subject = course.subjectEnum.storageKey
+        scope.launch(Dispatchers.IO) {
+            app.analytics.trackCourseOpened(
+                courseId = courseId,
+                subject = subject,
+                source = "home_tiktok",
+                isFreeUser = !isPremium,
+            )
+        }
     }
 
     fun openCourseById(courseId: String) {
@@ -289,53 +288,6 @@ fun MainTabs(
             )
             return
         }
-        selectedCourse != null -> {
-            if (!readerReady) {
-                LaunchedEffect(selectedCourse!!.id) {
-                    // Let the home tree finish disposing and acknowledge the tap
-                    // before loading CourseScreen classes (dex2oat on first open).
-                    delay(if (constrained) 80L else 24L)
-                    readerReady = true
-                }
-                Box(
-                    modifier = Modifier.fillMaxSize().background(DS.canvas),
-                    contentAlignment = Alignment.Center,
-                ) {
-                    CircularProgressIndicator(color = DS.accent)
-                }
-                return
-            }
-            CourseScreen(
-                course = selectedCourse!!,
-                language = language,
-                isPremium = isPremium,
-                isDailyFreeCourse = app.progressManager.isDailyFreeCourse(selectedCourse!!.id),
-                progressManager = app.progressManager,
-                onCourseCompleted = {
-                    pendingCompletionCourseId = selectedCourse?.id
-                },
-                onDismiss = {
-                    val id = selectedCourse!!.id
-                    val completedId = pendingCompletionCourseId
-                    pendingCompletionCourseId = null
-                    selectedCourse = null
-                    autoSwipeCourseId = id
-                    presentRewardsIfNeeded(completedId)
-                },
-                onRequestPaywall = { key ->
-                    if (key == "debloquer_cours" || key == "quizz") {
-                        app.analytics.trackFreemiumGateHit(key, courseId = selectedCourse?.id)
-                    }
-                    paywall = when (key) {
-                        "quizz" -> PaywallContext.QUIZZ
-                        "offre_discount" -> PaywallContext.OFFRE_DISCOUNT
-                        "fin_onboarding" -> PaywallContext.FIN_ONBOARDING
-                        else -> PaywallContext.DEBLOQUER_COURS
-                    }
-                },
-            )
-            return
-        }
     }
 
     val tabs = listOf(
@@ -427,6 +379,38 @@ fun MainTabs(
                     onRestorePurchases = { storeViewModel.restore() },
                 )
             }
+        }
+
+        selectedCourse?.let { course ->
+            CourseScreen(
+                course = course,
+                language = language,
+                isPremium = isPremium,
+                isDailyFreeCourse = app.progressManager.isDailyFreeCourse(course.id),
+                progressManager = app.progressManager,
+                onCourseCompleted = {
+                    pendingCompletionCourseId = course.id
+                },
+                onDismiss = {
+                    val id = course.id
+                    val completedId = pendingCompletionCourseId
+                    pendingCompletionCourseId = null
+                    selectedCourse = null
+                    autoSwipeCourseId = id
+                    presentRewardsIfNeeded(completedId)
+                },
+                onRequestPaywall = { key ->
+                    if (key == "debloquer_cours" || key == "quizz") {
+                        app.analytics.trackFreemiumGateHit(key, courseId = course.id)
+                    }
+                    paywall = when (key) {
+                        "quizz" -> PaywallContext.QUIZZ
+                        "offre_discount" -> PaywallContext.OFFRE_DISCOUNT
+                        "fin_onboarding" -> PaywallContext.FIN_ONBOARDING
+                        else -> PaywallContext.DEBLOQUER_COURS
+                    }
+                },
+            )
         }
 
         if (!isPremium && !constrained && selectedTab == 0 && selectedCourse == null && paywall == null) {

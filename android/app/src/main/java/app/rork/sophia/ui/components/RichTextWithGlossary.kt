@@ -1,12 +1,12 @@
 package app.rork.sophia.ui.components
 
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.text.ClickableText
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
@@ -18,8 +18,10 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.TextLayoutResult
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
@@ -70,12 +72,19 @@ fun RichTextWithGlossary(
         }
     }
 
-    ClickableText(
+    val layoutResult = remember { mutableStateOf<TextLayoutResult?>(null) }
+
+    Text(
         text = annotated,
         style = SophiaTypography.bodyLarge.copy(color = color),
-        onClick = { offset ->
-            annotated.getStringAnnotations("glossary", offset, offset).firstOrNull()?.let { ann ->
-                openEntry = GlossaryStore.entry(context, language, courseId, courseTitle, ann.item)
+        onTextLayout = { layoutResult.value = it },
+        modifier = Modifier.pointerInput(annotated) {
+            detectTapGestures { pos ->
+                val layout = layoutResult.value ?: return@detectTapGestures
+                val offset = layout.getOffsetForPosition(pos)
+                annotated.getStringAnnotations("glossary", offset, offset).firstOrNull()?.let { ann ->
+                    openEntry = GlossaryStore.entry(context, language, courseId, courseTitle, ann.item)
+                }
             }
         },
     )
