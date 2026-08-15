@@ -15,7 +15,6 @@ import app.rork.sophia.domain.UserProgress
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.update
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import java.time.Instant
@@ -25,6 +24,7 @@ import java.time.format.DateTimeFormatter
 class ProgressManager(context: Context) {
     private val prefs = context.getSharedPreferences("sophia_prefs", Context.MODE_PRIVATE)
     private val json = Json { ignoreUnknownKeys = true; encodeDefaults = true }
+    private val lock = Any()
     private val _progress = MutableStateFlow(load())
     val progress: StateFlow<UserProgress> = _progress.asStateFlow()
 
@@ -47,33 +47,49 @@ class ProgressManager(context: Context) {
         onProgressChanged?.invoke(value)
     }
 
+    /**
+     * Single entry point for progress writes.
+     *
+     * [transform] must stay free of side effects on [_progress]: it is a plain
+     * read-modify-write under [lock], not a compare-and-set retry, so writing the
+     * flow from inside it would publish an intermediate state.
+     */
+    private fun mutate(transform: (UserProgress) -> UserProgress) {
+        synchronized(lock) {
+            val current = _progress.value
+            val next = transform(current)
+            if (next == current) return
+            persist(next)
+        }
+    }
+
     fun isFavorite(courseId: String): Boolean =
         courseId in _progress.value.favoriteCourseIds
 
     fun toggleFavorite(courseId: String) {
-        _progress.update { current ->
+        mutate { current ->
             val favs = current.favoriteCourseIds.toMutableList()
             if (courseId in favs) favs.remove(courseId) else favs.add(courseId)
-            current.copy(favoriteCourseIds = favs).also { persist(it) }
+            current.copy(favoriteCourseIds = favs)
         }
     }
 
     fun incrementFreeCoursesOpened() {
-        _progress.update { current ->
-            current.copy(freeCoursesOpened = current.freeCoursesOpened + 1).also { persist(it) }
+        mutate { current ->
+            current.copy(freeCoursesOpened = current.freeCoursesOpened + 1)
         }
     }
 
     fun claimDailyFreeCourseIfNeeded(courseId: String) {
         val today = today()
-        _progress.update { current ->
+        mutate { current ->
             if (current.dailyFreeCourseDate == today && current.dailyFreeCourseId != null) {
                 current
             } else {
                 current.copy(
                     dailyFreeCourseId = courseId,
                     dailyFreeCourseDate = today,
-                ).also { persist(it) }
+                )
             }
         }
     }
@@ -87,16 +103,16 @@ class ProgressManager(context: Context) {
         _progress.value.courseProgress[courseId]
 
     fun updateLessonIndex(courseId: String, index: Int) {
-        _progress.update { current ->
+        mutate { current ->
             val map = current.courseProgress.toMutableMap()
             val existing = map[courseId] ?: CourseProgress()
             map[courseId] = existing.copy(lastLessonIndex = maxOf(existing.lastLessonIndex, index))
-            current.copy(courseProgress = map).also { persist(it) }
+            current.copy(courseProgress = map)
         }
     }
 
     fun markCourseCompleted(courseId: String) {
-        _progress.update { current ->
+        mutate { current ->
             val map = current.courseProgress.toMutableMap()
             val existing = map[courseId] ?: CourseProgress()
             map[courseId] = existing.copy(isCompleted = true)
@@ -124,12 +140,12 @@ class ProgressManager(context: Context) {
                 lastCourseCompletedDate = today(),
                 streak = bumpStreak(current),
                 lastActiveDate = today(),
-            ).also { persist(it) }
+            )
         }
     }
 
     fun completeQuiz(courseId: String, score: Int, questionIds: List<String>, subjectKey: String) {
-        _progress.update { current ->
+        mutate { current ->
             val map = current.courseProgress.toMutableMap()
             val existing = map[courseId] ?: CourseProgress()
             map[courseId] = existing.copy(
@@ -178,7 +194,7 @@ class ProgressManager(context: Context) {
                 streak = bumpStreak(current),
                 lastActiveDate = today(),
                 lastCourseCompletedDate = today(),
-            ).also { persist(it) }
+            )
         }
     }
 
@@ -194,7 +210,7 @@ class ProgressManager(context: Context) {
     }
 
     fun recordTrainingAnswer(questionId: String, courseId: String, correct: Boolean) {
-        _progress.update { current ->
+        mutate { current ->
             val map = current.trainingQuestionStates.toMutableMap()
             var state = map[questionId] ?: TrainingQuestionState(courseId = courseId)
             state = if (correct) {
@@ -208,7 +224,7 @@ class ProgressManager(context: Context) {
                 state.copy(intervalIndex = 0, nextReviewDate = null)
             }
             map[questionId] = state
-            current.copy(trainingQuestionStates = map).also { persist(it) }
+            current.copy(trainingQuestionStates = map)
         }
     }
 
@@ -244,22 +260,22 @@ class ProgressManager(context: Context) {
     }
 
     fun replaceAll(progress: UserProgress) {
-        persist(progress)
+        synchronized(lock) { persist(progress) }
     }
 
     fun resetProgress() {
-        persist(UserProgress())
+        synchronized(lock) { persist(UserProgress()) }
     }
 
     fun clearPendingRankUp() {
-        _progress.update { current ->
-            current.copy(pendingGlobalRankUp = null).also { persist(it) }
+        mutate { current ->
+            current.copy(pendingGlobalRankUp = null)
         }
     }
 
     fun markStreakShownToday() {
-        _progress.update { current ->
-            current.copy(lastStreakShownDate = today()).also { persist(it) }
+        mutate { current ->
+            current.copy(lastStreakShownDate = today())
         }
     }
 
@@ -269,9 +285,9 @@ class ProgressManager(context: Context) {
     }
 
     fun recordFirstCourseOpenedIfNeeded(courseId: String) {
-        _progress.update { current ->
+        mutate { current ->
             if (current.firstCourseOpenedId != null) current
-            else current.copy(firstCourseOpenedId = courseId).also { persist(it) }
+            else current.copy(firstCourseOpenedId = courseId)
         }
     }
 
@@ -282,8 +298,8 @@ class ProgressManager(context: Context) {
         get() = _progress.value.hasRequestedAppStoreReview
 
     fun markAppStoreReviewRequested() {
-        _progress.update { current ->
-            current.copy(hasRequestedAppStoreReview = true).also { persist(it) }
+        mutate { current ->
+            current.copy(hasRequestedAppStoreReview = true)
         }
     }
 
@@ -291,14 +307,17 @@ class ProgressManager(context: Context) {
         get() = _progress.value.hasSeenCourseTermsCoachmark
 
     fun markCourseTermsCoachmarkSeen() {
-        _progress.update { current ->
-            current.copy(hasSeenCourseTermsCoachmark = true).also { persist(it) }
+        mutate { current ->
+            current.copy(hasSeenCourseTermsCoachmark = true)
         }
     }
 
     fun completedCount(collection: LearningCollection): Int =
+        completedCount(_progress.value, collection)
+
+    private fun completedCount(progress: UserProgress, collection: LearningCollection): Int =
         collection.courseIds.count { id ->
-            _progress.value.courseProgress[id]?.isCompleted == true
+            progress.courseProgress[id]?.isCompleted == true
         }
 
     fun collectionProgressEvents(
@@ -320,10 +339,12 @@ class ProgressManager(context: Context) {
     }
 
     fun awardCollectionCompletionXpIfNeeded(collection: LearningCollection) {
-        _progress.update { current ->
-            if (collection.id in current.globalCollectionXPAwardedIds) return@update current
-            if (completedCount(collection) < collection.courseIds.size || collection.courseIds.isEmpty()) {
-                return@update current
+        mutate { current ->
+            if (collection.id in current.globalCollectionXPAwardedIds) return@mutate current
+            if (completedCount(current, collection) < collection.courseIds.size ||
+                collection.courseIds.isEmpty()
+            ) {
+                return@mutate current
             }
             val awarded = current.globalCollectionXPAwardedIds.toMutableList()
             awarded.add(collection.id)
@@ -344,7 +365,7 @@ class ProgressManager(context: Context) {
                 globalCollectionXPAwardedIds = awarded,
                 globalXP = globalXP,
                 pendingGlobalRankUp = pending,
-            ).also { persist(it) }
+            )
         }
     }
 

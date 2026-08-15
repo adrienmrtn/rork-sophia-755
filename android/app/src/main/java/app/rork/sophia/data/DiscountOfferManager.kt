@@ -8,7 +8,6 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import java.time.LocalDate
@@ -81,6 +80,17 @@ class DiscountOfferManager(context: Context) {
         )
     }
 
+    /**
+     * Single entry point for discount writes. [transform] must not touch [_state]:
+     * this is a plain read-modify-write, not a compare-and-set retry.
+     */
+    private fun mutate(transform: (DiscountState) -> DiscountState) {
+        val current = _state.value
+        val next = transform(current)
+        if (next == current) return
+        persist(next)
+    }
+
     private fun persist(s: DiscountState) {
         prefs.edit()
             .putLong(KEY_START, s.startEpochMs ?: -1L)
@@ -106,10 +116,9 @@ class DiscountOfferManager(context: Context) {
     fun registerSwipe() {
         if (wasShownToday()) return
         val today = today()
-        _state.update { current ->
-            var next = current
-            if (current.swipeDay != today) {
-                next = current.copy(
+        mutate { current ->
+            val base = if (current.swipeDay != today) {
+                current.copy(
                     swipeDay = today,
                     swipeCount = 0,
                     isGiftPending = false,
@@ -117,52 +126,40 @@ class DiscountOfferManager(context: Context) {
                     isExpiredForever = false,
                     remainingSeconds = 0,
                 )
+            } else {
+                current
             }
-            val count = next.swipeCount + 1
-            next = next.copy(swipeCount = count)
-            if (count >= DiscountState.SWIPES_BEFORE_GIFT) {
-                next = next.copy(isGiftPending = true)
-            }
-            persist(next)
-            next
+            val count = base.swipeCount + 1
+            base.copy(
+                swipeCount = count,
+                isGiftPending = base.isGiftPending || count >= DiscountState.SWIPES_BEFORE_GIFT,
+            )
         }
     }
 
     fun consumeGift() {
-        _state.update { persist(it.copy(isGiftPending = false)); it.copy(isGiftPending = false) }
+        mutate { it.copy(isGiftPending = false) }
     }
 
     fun triggerIfNeeded() {
-        _state.update { current ->
-            if (current.hasBeenTriggered) current
-            else {
-                val next = current.copy(
-                    startEpochMs = System.currentTimeMillis(),
-                    isExpiredForever = false,
-                    remainingSeconds = DiscountState.DURATION_MS / 1000,
-                )
-                persist(next)
-                startTicker()
-                next
-            }
+        if (_state.value.hasBeenTriggered) return
+        mutate { current ->
+            current.copy(
+                startEpochMs = System.currentTimeMillis(),
+                isExpiredForever = false,
+                remainingSeconds = DiscountState.DURATION_MS / 1000,
+            )
         }
+        startTicker()
     }
 
     fun markExpired() {
-        _state.update {
-            val next = it.copy(isExpiredForever = true, remainingSeconds = 0)
-            persist(next)
-            ticker?.cancel()
-            next
-        }
+        ticker?.cancel()
+        mutate { it.copy(isExpiredForever = true, remainingSeconds = 0) }
     }
 
     fun markShownToday() {
-        _state.update {
-            val next = it.copy(lastShownDay = today())
-            persist(next)
-            next
-        }
+        mutate { it.copy(lastShownDay = today()) }
     }
 
     private fun startTicker() {
