@@ -28,6 +28,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -84,7 +85,12 @@ fun CourseScreen(
     }
     var pages by remember(course.id, language) { mutableStateOf<List<ReaderPage>>(emptyList()) }
     var pagesReady by remember(course.id, language) { mutableStateOf(false) }
-    val pagerState = rememberPagerState(pageCount = { pages.size.coerceAtLeast(1) })
+    // A pager per course, so the page reached in the previous course cannot leak into
+    // this one. Resetting it with scrollToPage instead would deadlock: that call waits
+    // for the pager's first layout, which only happens once `pagesReady` is true.
+    val pagerState = key(course.id, language) {
+        rememberPagerState(pageCount = { pages.size.coerceAtLeast(1) })
+    }
     val scope = rememberCoroutineScope()
     val sessionTracker = remember(course.id) {
         CourseSessionTracker(
@@ -95,8 +101,6 @@ fun CourseScreen(
     }
 
     LaunchedEffect(course.id, language) {
-        pagesReady = false
-        pagerState.scrollToPage(0)
         val appContext = context.applicationContext
         val loaded = withContext(Dispatchers.IO) {
             GlossaryStore.preload(appContext, language)
@@ -358,6 +362,14 @@ private fun buildPages(
     context: android.content.Context,
     course: Course,
     language: AppLanguage,
+): List<ReaderPage> = structuredPages(context, course, language)
+    .ifEmpty { course.lessons.map { ReaderPage(it.title, it.content) } }
+    .ifEmpty { listOf(ReaderPage(course.title, course.description)) }
+
+private fun structuredPages(
+    context: android.content.Context,
+    course: Course,
+    language: AppLanguage,
 ): List<ReaderPage> {
     val raw = ContentCatalog.structuredContentJson(context, language, course.id)
     if (raw != null) {
@@ -379,8 +391,8 @@ private fun buildPages(
                 ReaderPage(title, body.ifBlank { "…" })
             }
         } catch (_: Exception) {
-            null
-        } ?: course.lessons.map { ReaderPage(it.title, it.content) }
+            emptyList()
+        }
     }
-    return course.lessons.map { ReaderPage(it.title, it.content) }
+    return emptyList()
 }

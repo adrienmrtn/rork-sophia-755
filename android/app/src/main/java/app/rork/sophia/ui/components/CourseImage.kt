@@ -41,10 +41,12 @@ fun CourseImage(
     val letter = remember(courseId) {
         courseId.substringAfterLast('_').firstOrNull()?.uppercaseChar()?.toString() ?: "S"
     }
-    val skipRemote = remember { DeviceCapabilities.isConstrained(context) }
+    // Low-RAM phones get a smaller decode, not a blank tile.
+    val targetPx = remember(maxEdgePx) {
+        if (DeviceCapabilities.isLowRam(context)) minOf(maxEdgePx, 480) else maxEdgePx
+    }
     var loadRemote by remember(courseId) { mutableStateOf(false) }
-    LaunchedEffect(courseId, skipRemote) {
-        if (skipRemote) return@LaunchedEffect
+    LaunchedEffect(courseId) {
         yield()
         loadRemote = true
     }
@@ -56,11 +58,11 @@ fun CourseImage(
             fontSize = 42.sp,
             color = Color.White.copy(alpha = 0.92f),
         )
-        if (!skipRemote && loadRemote && url != null) {
+        if (loadRemote && url != null) {
             AsyncImage(
                 model = ImageRequest.Builder(context)
                     .data(url)
-                    .size(maxEdgePx)
+                    .size(targetPx)
                     .allowHardware(false)
                     .crossfade(false)
                     .memoryCacheKey(courseId)
