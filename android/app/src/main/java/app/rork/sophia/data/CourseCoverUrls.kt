@@ -14,7 +14,9 @@ object CourseCoverUrls {
 
     private val json = Json { ignoreUnknownKeys = true }
     private val slugByCourseId = ConcurrentHashMap<String, String>()
+    private val objectBySlug = ConcurrentHashMap<String, String>()
     @Volatile private var loaded = false
+    @Volatile private var blocksLoaded = false
 
     fun ensureMap(context: Context) {
         if (loaded) return
@@ -32,10 +34,40 @@ object CourseCoverUrls {
         }
     }
 
+    /**
+     * Inline `image` block slugs do not always match the object names in the bucket
+     * (accents encoded as `_u0301`, aliases, casing), so the mapping is resolved
+     * offline by `scripts/build_block_image_map.py`.
+     */
+    fun ensureBlockMap(context: Context) {
+        if (blocksLoaded) return
+        synchronized(this) {
+            if (blocksLoaded) return
+            runCatching {
+                val text = context.assets.open("course_block_images.json")
+                    .bufferedReader()
+                    .use { it.readText() }
+                json.decodeFromString<Map<String, String>>(text).forEach { (slug, obj) ->
+                    objectBySlug[slug] = obj
+                }
+            }
+            blocksLoaded = true
+        }
+    }
+
     fun url(context: Context, courseId: String): String? {
         ensureMap(context)
-        val slug = slugByCourseId[courseId] ?: return null
+        return publicUrl(slugByCourseId[courseId] ?: return null)
+    }
+
+    /** Cover for an inline `image` block, or null when the slug has no object. */
+    fun blockUrl(context: Context, asset: String): String? {
+        ensureBlockMap(context)
+        return publicUrl(objectBySlug[asset] ?: return null)
+    }
+
+    private fun publicUrl(objectName: String): String {
         val base = AppConfig.SUPABASE_URL.trimEnd('/')
-        return "$base/storage/v1/object/public/$BUCKET/$slug.jpg"
+        return "$base/storage/v1/object/public/$BUCKET/$objectName.jpg"
     }
 }

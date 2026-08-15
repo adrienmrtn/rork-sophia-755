@@ -43,6 +43,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.ContentCatalog
+import app.rork.sophia.data.CourseCoverUrls
 import app.rork.sophia.data.CourseSessionTracker
 import app.rork.sophia.data.GlossaryStore
 import app.rork.sophia.data.InAppReviewHelper
@@ -52,7 +53,6 @@ import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Course
 import app.rork.sophia.domain.FreemiumGate
-import app.rork.sophia.ui.components.RichTextWithGlossary
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
@@ -104,6 +104,9 @@ fun CourseScreen(
         val appContext = context.applicationContext
         val loaded = withContext(Dispatchers.IO) {
             GlossaryStore.preload(appContext, language)
+            // Resolves inline image slugs; without this the first block would read
+            // the map from assets during composition.
+            CourseCoverUrls.ensureBlockMap(appContext)
             buildPages(appContext, course, language)
         }
         pages = loaded
@@ -152,7 +155,7 @@ fun CourseScreen(
             isDailyFreeCourse,
         )
         if (!locked && !progressManager.hasSeenCourseTermsCoachmark && !showCoachmark) {
-            val term = firstGlossaryTerm(page.body)
+            val term = firstGlossaryTerm(page)
             if (term != null) {
                 coachmarkTerm = term
                 showCoachmark = true
@@ -214,16 +217,18 @@ fun CourseScreen(
                                 .fillMaxSize()
                                 .verticalScroll(rememberScrollState())
                                 .padding(DS.Space.l),
+                            verticalArrangement = Arrangement.spacedBy(DS.Space.m),
                         ) {
                             Text(text = page.title, style = SophiaTypography.titleLarge)
-                            Spacer(Modifier.height(16.dp))
-                            RichTextWithGlossary(
-                                raw = page.body,
-                                language = language,
-                                courseId = course.id,
-                                courseTitle = course.title,
-                                color = if (locked) DS.inkTertiary else DS.ink,
-                            )
+                            page.blocks.forEach { block ->
+                                ReaderBlockView(
+                                    block = block,
+                                    language = language,
+                                    courseId = course.id,
+                                    courseTitle = course.title,
+                                    locked = locked,
+                                )
+                            }
                         }
                         if (locked) {
                             CourseLessonLockOverlay {
@@ -351,11 +356,16 @@ fun GlossaryTermCoachmark(
     }
 }
 
-private data class ReaderPage(val title: String, val body: String)
+private data class ReaderPage(val title: String, val blocks: List<ReaderBlock>)
 
-private fun firstGlossaryTerm(raw: String): String? {
-    val match = Regex("\\[\\[([^\\]]+)\\]\\]").find(raw) ?: return null
-    return match.groupValues.getOrNull(1)?.trim()?.takeIf { it.isNotEmpty() }
+private fun firstGlossaryTerm(page: ReaderPage): String? {
+    val pattern = Regex("\\[\\[([^\\]]+)\\]\\]")
+    page.blocks.forEach { block ->
+        val raw = block.proseText ?: return@forEach
+        val term = pattern.find(raw)?.groupValues?.getOrNull(1)?.trim()
+        if (!term.isNullOrEmpty()) return term
+    }
+    return null
 }
 
 private fun buildPages(
@@ -363,8 +373,15 @@ private fun buildPages(
     course: Course,
     language: AppLanguage,
 ): List<ReaderPage> = structuredPages(context, course, language)
-    .ifEmpty { course.lessons.map { ReaderPage(it.title, it.content) } }
-    .ifEmpty { listOf(ReaderPage(course.title, course.description)) }
+    .ifEmpty { course.lessons.map { ReaderPage(it.title, paragraphs(it.content)) } }
+    .ifEmpty { listOf(ReaderPage(course.title, paragraphs(course.description))) }
+
+/** Legacy lessons carry one blob of prose, split on blank lines. */
+private fun paragraphs(content: String): List<ReaderBlock> =
+    content.split("\n\n")
+        .map { it.trim() }
+        .filter { it.isNotEmpty() }
+        .map { ReaderBlock.Paragraph(it) }
 
 private fun structuredPages(
     context: android.content.Context,
@@ -379,16 +396,8 @@ private fun structuredPages(
             sections.mapNotNull { el ->
                 val obj = el.jsonObject
                 val title = obj["title"]?.jsonPrimitive?.content ?: return@mapNotNull null
-                val blocks = obj["blocks"]?.jsonArray.orEmpty()
-                val body = blocks.mapNotNull { block ->
-                    val b = block.jsonObject
-                    when (b["type"]?.jsonPrimitive?.content) {
-                        "paragraph", "funFact", "takeaway", "quote" ->
-                            b["text"]?.jsonPrimitive?.content
-                        else -> null
-                    }
-                }.joinToString("\n\n")
-                ReaderPage(title, body.ifBlank { "…" })
+                val blocks = obj["blocks"]?.jsonArray ?: return@mapNotNull null
+                ReaderPage(title, parseReaderBlocks(blocks))
             }
         } catch (_: Exception) {
             emptyList()
