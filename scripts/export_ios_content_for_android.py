@@ -237,6 +237,14 @@ def main() -> int:
         for lang, n in v2_counts.items():
             if n:
                 print(f"  courses_v2/{lang}: {n}")
+
+        # The inline `image` slugs come from the freshly exported courses_v2, so the
+        # slug → Storage object map has to be rebuilt with them.
+        from build_block_image_map import build_block_image_map
+        resolved, unresolved = build_block_image_map()
+        print(f"  course_block_images.json: {len(resolved)} slugs")
+        if unresolved:
+            print(f"  unresolved image slugs: {unresolved}")
     else:
         print("Skipping CoursesV2 (--skip-courses-v2)")
 
