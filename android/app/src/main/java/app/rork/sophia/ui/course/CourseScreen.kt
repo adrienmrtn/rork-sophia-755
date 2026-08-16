@@ -44,6 +44,7 @@ import androidx.compose.ui.unit.sp
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.CourseCoverUrls
+import app.rork.sophia.data.CourseImagePrefetch
 import app.rork.sophia.data.CourseSessionTracker
 import app.rork.sophia.data.GlossaryStore
 import app.rork.sophia.data.InAppReviewHelper
@@ -107,7 +108,11 @@ fun CourseScreen(
             // Resolves inline image slugs; without this the first block would read
             // the map from assets during composition.
             CourseCoverUrls.ensureBlockMap(appContext)
-            buildPages(appContext, course, language)
+            buildPages(appContext, course, language).also { pages ->
+                // Enqueue while the spinner is still up, so the opening pages are
+                // already decoded by the time they are scrolled into view.
+                CourseImagePrefetch.warmAssets(appContext, pages.leadingImageAssets(PREFETCH_IMAGES))
+            }
         }
         pages = loaded
         sessionTracker.lessonCount = loaded.size.coerceAtLeast(1)
@@ -225,7 +230,6 @@ fun CourseScreen(
                                     block = block,
                                     language = language,
                                     courseId = course.id,
-                                    courseTitle = course.title,
                                     locked = locked,
                                 )
                             }
@@ -356,7 +360,19 @@ fun GlossaryTermCoachmark(
     }
 }
 
+private const val PREFETCH_IMAGES = 4
+
 private data class ReaderPage(val title: String, val blocks: List<ReaderBlock>)
+
+/** Inline image assets in reading order, so the first pages are warmed first. */
+private fun List<ReaderPage>.leadingImageAssets(limit: Int): List<String> =
+    asSequence()
+        .flatMap { it.blocks.asSequence() }
+        .filterIsInstance<ReaderBlock.Image>()
+        .map { it.asset }
+        .distinct()
+        .take(limit)
+        .toList()
 
 private fun firstGlossaryTerm(page: ReaderPage): String? {
     val pattern = Regex("\\[\\[([^\\]]+)\\]\\]")

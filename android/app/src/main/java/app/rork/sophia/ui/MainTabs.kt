@@ -9,7 +9,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AutoStories
@@ -455,9 +454,7 @@ fun MainTabs(
 
         AnimatedVisibility(
             visible = showTrialEndingBanner,
-            modifier = Modifier
-                .align(Alignment.TopCenter)
-                .statusBarsPadding(),
+            modifier = Modifier.align(Alignment.TopCenter),
             enter = fadeIn() + slideInVertically { -it },
             exit = fadeOut() + slideOutVertically { -it },
         ) {

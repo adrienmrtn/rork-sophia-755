@@ -55,6 +55,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.ContentCatalog
+import app.rork.sophia.data.CourseImagePrefetch
 import app.rork.sophia.data.DeviceCapabilities
 import app.rork.sophia.data.ShareHelper
 import app.rork.sophia.data.StringStore
@@ -101,6 +102,14 @@ fun HomeTikTokScreen(
             delay(900)
             showExplain = true
         }
+    }
+
+    // Give the reader a head start on the card being read. The delay is the debounce:
+    // it is cancelled on every swipe, so flicking through the feed costs nothing.
+    LaunchedEffect(cards, index) {
+        val courseId = cards.getOrNull(index)?.id ?: return@LaunchedEffect
+        delay(400)
+        CourseImagePrefetch.warmCourse(context.applicationContext, language, courseId)
     }
 
     LaunchedEffect(autoSwipeCourseId, cards) {

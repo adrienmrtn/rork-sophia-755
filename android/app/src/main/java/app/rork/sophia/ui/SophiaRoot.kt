@@ -4,8 +4,13 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.displayCutout
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.systemBars
+import androidx.compose.foundation.layout.union
+import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -62,40 +67,52 @@ fun SophiaRoot(
     }
 
     Surface(modifier = Modifier.fillMaxSize(), color = DS.canvas) {
-        if (showOnboarding) {
-            OnboardingV2Screen(
-                language = language,
-                storeViewModel = storeViewModel,
-                onLanguageSelected = { app.languageManager.setLanguage(it) },
-                onComplete = {
-                    app.onboardingStore.markCompleted()
-                    showOnboarding = false
-                },
-            )
-        } else if (!tabsReady) {
-            Box(
-                modifier = Modifier.fillMaxSize().background(DS.canvas),
-                contentAlignment = Alignment.Center,
-            ) {
-                Text(
-                    text = "Sophia",
-                    fontSize = 28.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = DS.ink,
+        // The activity is edge-to-edge and almost every screen is laid out by hand
+        // rather than in a Scaffold, so headers ran under the status bar and bottom
+        // CTAs under the gesture bar. Consume the insets once, here: the Scaffold in
+        // MainTabs then sees zero and cannot pad twice.
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .windowInsetsPadding(
+                    WindowInsets.systemBars.union(WindowInsets.displayCutout),
+                ),
+        ) {
+            if (showOnboarding) {
+                OnboardingV2Screen(
+                    language = language,
+                    storeViewModel = storeViewModel,
+                    onLanguageSelected = { app.languageManager.setLanguage(it) },
+                    onComplete = {
+                        app.onboardingStore.markCompleted()
+                        showOnboarding = false
+                    },
+                )
+            } else if (!tabsReady) {
+                Box(
+                    modifier = Modifier.fillMaxSize().background(DS.canvas),
+                    contentAlignment = Alignment.Center,
+                ) {
+                    Text(
+                        text = "Sophia",
+                        fontSize = 28.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = DS.ink,
+                    )
+                }
+            } else {
+                MainTabs(
+                    language = language,
+                    storeViewModel = storeViewModel,
+                    deepLinkCourseId = deepLinkCourseId,
+                    onDeepLinkConsumed = onDeepLinkConsumed,
+                    onResetOnboarding = {
+                        app.onboardingStore.reset()
+                        tabsReady = false
+                        showOnboarding = true
+                    },
                 )
             }
-        } else {
-            MainTabs(
-                language = language,
-                storeViewModel = storeViewModel,
-                deepLinkCourseId = deepLinkCourseId,
-                onDeepLinkConsumed = onDeepLinkConsumed,
-                onResetOnboarding = {
-                    app.onboardingStore.reset()
-                    tabsReady = false
-                    showOnboarding = true
-                },
-            )
         }
 
         conflict?.let { c ->

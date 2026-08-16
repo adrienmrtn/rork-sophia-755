@@ -39,15 +39,17 @@ fun RichTextWithGlossary(
     raw: String,
     language: AppLanguage,
     courseId: String,
-    courseTitle: String,
     color: Color = DS.ink,
 ) {
     val context = LocalContext.current
-    val segments = remember(raw, language, courseId) { parseSegments(raw) }
+    val segments = remember(raw, language, courseId) {
+        parseSegments(raw) { term -> GlossaryStore.hasEntry(language, courseId, term) }
+    }
     var openEntry by remember { mutableStateOf<GlossaryEntry?>(null) }
 
-    // Lookup happens on tap only. Scanning 2k glossary rows per [[term]] during
-    // composition is what froze MainActivity for 15s on course open (ANR).
+    // Parsing only asks whether a term exists, which is a map hit on a preloaded
+    // table; the entry itself is read on tap. Scanning the 2k glossary rows per
+    // [[term]] during composition is what froze MainActivity for 15s on course open.
     val annotated = remember(segments) {
         buildAnnotatedString {
             segments.forEach { seg ->
@@ -75,7 +77,7 @@ fun RichTextWithGlossary(
         style = SophiaTypography.bodyLarge.copy(color = color),
         onClick = { offset ->
             annotated.getStringAnnotations("glossary", offset, offset).firstOrNull()?.let { ann ->
-                openEntry = GlossaryStore.entry(context, language, courseId, courseTitle, ann.item)
+                openEntry = GlossaryStore.entry(context, language, courseId, ann.item)
             }
         },
     )
@@ -101,39 +103,60 @@ fun RichTextWithGlossary(
     }
 }
 
-private fun parseSegments(raw: String): List<TextSeg> {
-    val s = raw.replace(Regex("==([^=]+)=="), "$1")
+private fun parseSegments(raw: String, hasEntry: (String) -> Boolean): List<TextSeg> {
     val out = mutableListOf<TextSeg>()
+    appendSegments(raw.replace(Regex("==([^=]+)=="), "$1"), bold = false, out = out, hasEntry = hasEntry)
+    return out
+}
+
+/**
+ * Glossary terms are often authored bold (`**[[Term]]**`). Descending into the bold
+ * span rather than treating it as opaque is what keeps those clickable instead of
+ * printing the brackets.
+ */
+private fun appendSegments(
+    s: String,
+    bold: Boolean,
+    out: MutableList<TextSeg>,
+    hasEntry: (String) -> Boolean,
+) {
     var i = 0
     while (i < s.length) {
-        when {
-            s.startsWith("[[", i) -> {
-                val end = s.indexOf("]]", i + 2)
-                if (end < 0) {
-                    out += TextSeg(s.substring(i))
-                    break
-                }
-                val term = s.substring(i + 2, end).trim()
-                out += TextSeg(term, term = term)
-                i = end + 2
+        val nextTerm = s.indexOf("[[", i)
+        val nextBold = if (bold) -1 else s.indexOf("**", i)
+        val next = when {
+            nextTerm < 0 -> nextBold
+            nextBold < 0 -> nextTerm
+            else -> minOf(nextTerm, nextBold)
+        }
+        if (next < 0) {
+            out += TextSeg(s.substring(i), bold = bold)
+            return
+        }
+        if (next > i) out += TextSeg(s.substring(i, next), bold = bold)
+        if (next == nextTerm) {
+            val end = s.indexOf("]]", next + 2)
+            // A marker with no closing partner is malformed authoring. Drop it and
+            // keep parsing rather than printing the brackets at the reader.
+            if (end < 0) {
+                i = next + 2
+                continue
             }
-            s.startsWith("**", i) -> {
-                val end = s.indexOf("**", i + 2)
-                if (end < 0) {
-                    out += TextSeg(s.substring(i))
-                    break
-                }
-                out += TextSeg(s.substring(i + 2, end), bold = true)
-                i = end + 2
+            val term = s.substring(next + 2, end).trim()
+            out += when {
+                term.isEmpty() -> TextSeg(s.substring(next, end + 2), bold = bold)
+                hasEntry(term) -> TextSeg(term, term = term, bold = bold)
+                else -> TextSeg(term, bold = bold)
             }
-            else -> {
-                val nextBracket = s.indexOf("[[", i).let { if (it < 0) Int.MAX_VALUE else it }
-                val nextBold = s.indexOf("**", i).let { if (it < 0) Int.MAX_VALUE else it }
-                val next = minOf(nextBracket, nextBold, s.length)
-                if (next > i) out += TextSeg(s.substring(i, if (next == Int.MAX_VALUE) s.length else next))
-                i = if (next == Int.MAX_VALUE) s.length else next
+            i = end + 2
+        } else {
+            val end = s.indexOf("**", next + 2)
+            if (end < 0) {
+                i = next + 2
+                continue
             }
+            appendSegments(s.substring(next + 2, end), bold = true, out = out, hasEntry = hasEntry)
+            i = end + 2
         }
     }
-    return out
 }
