@@ -39,7 +39,7 @@ import androidx.compose.ui.unit.sp
 import app.rork.sophia.billing.StoreViewModel
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
-import app.rork.sophia.ui.onboarding.PrimaryCta
+import app.rork.sophia.ui.onboarding.OnboardingCta
 import app.rork.sophia.ui.paywall.OnboardingPaywallFlow
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.SophiaTypography
@@ -193,7 +193,12 @@ private fun ActiveRecallPage(language: AppLanguage, onNext: () -> Unit) {
                 style = SophiaTypography.bodyMedium,
             )
         }
-        PrimaryCta(StringStore.text(context, "training.ob.recall.cta", language), onNext)
+        OnboardingCta(
+            text = StringStore.text(context, "training.ob.recall.cta", language),
+            onClick = onNext,
+            horizontalInset = 0.dp,
+            bottomInset = 0.dp,
+        )
     }
 }
 
@@ -235,7 +240,12 @@ private fun AlgorithmPage(language: AppLanguage, onNext: () -> Unit) {
                 )
             }
         }
-        PrimaryCta(StringStore.text(context, "training.ob.cta.last", language), onNext)
+        OnboardingCta(
+            text = StringStore.text(context, "training.ob.cta.last", language),
+            onClick = onNext,
+            horizontalInset = 0.dp,
+            bottomInset = 0.dp,
+        )
     }
 }
 

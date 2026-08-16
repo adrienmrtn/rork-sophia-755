@@ -1,26 +1,40 @@
 package app.rork.sophia.ui.onboarding
 
+import android.Manifest
+import android.os.Build
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.spring
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInVertically
+import androidx.compose.animation.slideOutVertically
+import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import android.Manifest
-import android.os.Build
-import androidx.activity.compose.rememberLauncherForActivityResult
-import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.ui.unit.dp
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.billing.StoreViewModel
 import app.rork.sophia.data.ContentCatalog
+import app.rork.sophia.data.DeviceCapabilities
 import app.rork.sophia.data.GlossaryStore
 import app.rork.sophia.data.TrialReminderScheduler
 import app.rork.sophia.domain.AppLanguage
@@ -49,6 +63,18 @@ private enum class OnboardingStep(val analyticsName: String) {
     Paywall("paywall_annual"),
 }
 
+/** Steps that carry the progress dots, matching the iOS `dotScreens` set. */
+private val DOT_STEPS = listOf(
+    OnboardingStep.Objectives,
+    OnboardingStep.ObjectiveIntro,
+    OnboardingStep.Questions,
+    OnboardingStep.PhoneTime,
+    OnboardingStep.YearsGrid,
+    OnboardingStep.Review,
+    OnboardingStep.Swipe,
+    OnboardingStep.Loading,
+)
+
 @Composable
 fun OnboardingV2Screen(
     language: AppLanguage,
@@ -59,12 +85,23 @@ fun OnboardingV2Screen(
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
     val isPremium by storeViewModel.isPremium.collectAsState()
+    // Blur and long infinite animations are dropped on Go phones and emulators.
+    val richMotion = remember { !DeviceCapabilities.isConstrained(context) }
     var step by remember { mutableStateOf(OnboardingStep.Welcome) }
     var selectedObjectives by remember { mutableStateOf(setOf<String>()) }
     var phoneMinutes by remember { mutableIntStateOf(180) }
     var likedCourseIds by remember { mutableStateOf(listOf<String>()) }
     var sawPaywall by remember { mutableStateOf(false) }
+    var lastAdvanceAt by remember { mutableLongStateOf(0L) }
     val scope = rememberCoroutineScope()
+
+    // A racing timer (last swipe card, word animation) must not skip a whole screen.
+    fun goTo(next: OnboardingStep) {
+        val now = System.currentTimeMillis()
+        if (now - lastAdvanceAt < 400L) return
+        lastAdvanceAt = now
+        step = next
+    }
 
     LaunchedEffect(Unit) { app.analytics.trackOnboardingStarted() }
     LaunchedEffect(step) {
@@ -131,115 +168,137 @@ fun OnboardingV2Screen(
     }
 
     Box(modifier = Modifier.fillMaxSize().background(DS.canvas)) {
-        when (step) {
-            OnboardingStep.Welcome -> WelcomeStep(language) { step = OnboardingStep.Language }
-            OnboardingStep.Language -> LanguageStep(
-                language = language,
-                onSelect = onLanguageSelected,
-                onContinue = { step = OnboardingStep.Objectives },
-            )
-            OnboardingStep.Objectives -> ObjectivesStep(
-                language = language,
-                selected = selectedObjectives,
-                onToggle = { key ->
-                    selectedObjectives = selectedObjectives.toMutableSet().also { set ->
-                        if (!set.add(key)) set.remove(key)
-                    }
-                },
-                onContinue = {
-                    app.analytics.trackOnboardingInterestsSet(selectedObjectives)
-                    step = OnboardingStep.ObjectiveIntro
-                },
-            )
-            OnboardingStep.ObjectiveIntro -> TapContinueStep(
-                titleKey = "onboardingV2.objectiveIntro.title",
-                language = language,
-                onContinue = { step = OnboardingStep.Questions },
-            )
-            OnboardingStep.Questions -> QuestionsStep(language) { step = OnboardingStep.PhoneTime }
-            OnboardingStep.PhoneTime -> PhoneTimeStep(
-                language = language,
-                minutes = phoneMinutes,
-                onMinutesChange = { phoneMinutes = it },
-                onContinue = { step = OnboardingStep.YearsGrid },
-            )
-            OnboardingStep.YearsGrid -> YearsGridStep(
-                language = language,
-                phoneMinutes = phoneMinutes,
-                onContinue = { step = OnboardingStep.Transform },
-            )
-            OnboardingStep.Transform -> TransformStep(language) { step = OnboardingStep.Review }
-            OnboardingStep.Review -> ReviewStep(language) { step = OnboardingStep.Personalize }
-            OnboardingStep.Personalize -> TapContinueStep(
-                titleKey = "onboardingV2.personalize.text",
-                language = language,
-                hintKey = "onboardingV2.personalize.tapHint",
-                onContinue = { step = OnboardingStep.Swipe },
-            )
-            OnboardingStep.Swipe -> SwipeCoursesStep(
-                language = language,
-                courses = swipeCourses,
-                ready = swipeReady,
-                onFinished = { liked ->
-                    likedCourseIds = liked
-                    step = OnboardingStep.Loading
-                },
-            )
-            OnboardingStep.Loading -> LoadingProfileStep(language) { step = OnboardingStep.Profile }
-            OnboardingStep.Profile -> ProfileRewardStep(
-                language = language,
-                objectiveKeys = selectedObjectives.toList().ifEmpty { listOf(primaryObjective) },
-                likedCourseIds = likedCourseIds,
-                onContinue = { step = OnboardingStep.Login },
-            )
-            OnboardingStep.Login -> LoginStep(
-                language = language,
-                onGoogle = {
-                    scope.launch {
-                        runCatching { app.authService.signInWithGoogle(context) }
-                        // Skip trial explanation when the served annual product has no free trial.
-                        step = if (storeViewModel.shouldShowTrialSteps()) {
-                            OnboardingStep.Trial
-                        } else {
-                            OnboardingStep.Reminder
-                        }
-                    }
-                },
-                onSkip = {
-                    step = if (storeViewModel.shouldShowTrialSteps()) {
-                        OnboardingStep.Trial
-                    } else {
-                        OnboardingStep.Reminder
-                    }
-                },
-            )
-            OnboardingStep.Trial -> TrialStepsStep(language) { step = OnboardingStep.Reminder }
-            OnboardingStep.Reminder -> ReminderStep(language, onContinue = ::advanceFromReminder)
-            OnboardingStep.Paywall -> {
-                LaunchedEffect(Unit) { sawPaywall = true }
-                OnboardingPaywallFlow(
+        AnimatedContent(
+            targetState = step,
+            transitionSpec = {
+                // Pages arrive from above and leave downwards, like the iOS `ov2` transition.
+                (slideInVertically(spring(dampingRatio = 0.9f, stiffness = Spring.StiffnessMediumLow)) {
+                    -it / 8
+                } + fadeIn(tween(280))) togetherWith
+                    (slideOutVertically(tween(240)) { it / 6 } + fadeOut(tween(200)))
+            },
+            label = "onboardingStep",
+        ) { current ->
+            when (current) {
+                OnboardingStep.Welcome -> WelcomeStep(language) { goTo(OnboardingStep.Language) }
+                OnboardingStep.Language -> LanguageStep(
                     language = language,
-                    storeViewModel = storeViewModel,
-                    onDismiss = { finish(false) },
-                    onPurchased = {
-                        scheduleTrialReminderIfEligible()
-                        finish(true)
+                    onSelect = onLanguageSelected,
+                    onContinue = { goTo(OnboardingStep.Objectives) },
+                )
+                OnboardingStep.Objectives -> ObjectivesStep(
+                    language = language,
+                    selected = selectedObjectives,
+                    onToggle = { key ->
+                        selectedObjectives = selectedObjectives.toMutableSet().also { set ->
+                            if (!set.add(key)) set.remove(key)
+                        }
                     },
-                    onPurchaseMeta = { offeringId, packageId ->
-                        app.analytics.trackPurchaseCompleted(
-                            context = "fin_onboarding",
-                            offeringId = offeringId,
-                            packageId = packageId,
-                        )
+                    onContinue = {
+                        app.analytics.trackOnboardingInterestsSet(selectedObjectives)
+                        goTo(OnboardingStep.ObjectiveIntro)
                     },
-                    onComparisonShown = {
-                        app.analytics.trackOnboardingStep(
-                            stepIndex = step.ordinal,
-                            stepName = "paywall_comparison",
+                )
+                OnboardingStep.ObjectiveIntro -> ObjectiveIntroStep(language) {
+                    goTo(OnboardingStep.Questions)
+                }
+                OnboardingStep.Questions -> QuestionsStep(language, richMotion) {
+                    goTo(OnboardingStep.PhoneTime)
+                }
+                OnboardingStep.PhoneTime -> PhoneTimeStep(
+                    language = language,
+                    minutes = phoneMinutes,
+                    onMinutesChange = { phoneMinutes = it },
+                    onContinue = { goTo(OnboardingStep.YearsGrid) },
+                )
+                OnboardingStep.YearsGrid -> YearsGridStep(
+                    language = language,
+                    phoneMinutes = phoneMinutes,
+                    onContinue = { goTo(OnboardingStep.Transform) },
+                )
+                OnboardingStep.Transform -> TransformStep(language) { goTo(OnboardingStep.Review) }
+                OnboardingStep.Review -> ReviewStep(language, richMotion) {
+                    goTo(OnboardingStep.Personalize)
+                }
+                OnboardingStep.Personalize -> PersonalizeStep(language) { goTo(OnboardingStep.Swipe) }
+                OnboardingStep.Swipe -> SwipeCoursesStep(
+                    language = language,
+                    courses = swipeCourses,
+                    ready = swipeReady,
+                    onFinished = { liked ->
+                        likedCourseIds = liked
+                        goTo(OnboardingStep.Loading)
+                    },
+                )
+                OnboardingStep.Loading -> LoadingProfileStep(language) { goTo(OnboardingStep.Profile) }
+                OnboardingStep.Profile -> ProfileRewardStep(
+                    language = language,
+                    objectiveKeys = selectedObjectives.toList().ifEmpty { listOf(primaryObjective) },
+                    likedCourseIds = likedCourseIds,
+                    onContinue = { goTo(OnboardingStep.Login) },
+                )
+                OnboardingStep.Login -> LoginStep(
+                    language = language,
+                    onGoogle = {
+                        scope.launch {
+                            runCatching { app.authService.signInWithGoogle(context) }
+                            // Skip trial explanation when the served annual product has no free trial.
+                            goTo(
+                                if (storeViewModel.shouldShowTrialSteps()) {
+                                    OnboardingStep.Trial
+                                } else {
+                                    OnboardingStep.Reminder
+                                },
+                            )
+                        }
+                    },
+                    onSkip = {
+                        goTo(
+                            if (storeViewModel.shouldShowTrialSteps()) {
+                                OnboardingStep.Trial
+                            } else {
+                                OnboardingStep.Reminder
+                            },
                         )
                     },
                 )
+                OnboardingStep.Trial -> TrialStepsStep(language) { goTo(OnboardingStep.Reminder) }
+                OnboardingStep.Reminder -> ReminderStep(language, onContinue = { advanceFromReminder() })
+                OnboardingStep.Paywall -> {
+                    LaunchedEffect(Unit) { sawPaywall = true }
+                    OnboardingPaywallFlow(
+                        language = language,
+                        storeViewModel = storeViewModel,
+                        onDismiss = { finish(false) },
+                        onPurchased = {
+                            scheduleTrialReminderIfEligible()
+                            finish(true)
+                        },
+                        onPurchaseMeta = { offeringId, packageId ->
+                            app.analytics.trackPurchaseCompleted(
+                                context = "fin_onboarding",
+                                offeringId = offeringId,
+                                packageId = packageId,
+                            )
+                        },
+                        onComparisonShown = {
+                            app.analytics.trackOnboardingStep(
+                                stepIndex = current.ordinal,
+                                stepName = "paywall_comparison",
+                            )
+                        },
+                    )
+                }
             }
+        }
+
+        val dotIndex = DOT_STEPS.indexOf(step)
+        if (dotIndex >= 0) {
+            OnboardingProgressDots(
+                current = dotIndex,
+                total = DOT_STEPS.size,
+                modifier = Modifier.align(Alignment.TopCenter).padding(top = 14.dp),
+            )
         }
     }
 }
