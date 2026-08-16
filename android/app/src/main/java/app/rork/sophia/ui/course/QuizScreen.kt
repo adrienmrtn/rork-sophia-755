@@ -79,40 +79,40 @@ fun QuizScreen(
             app.analytics.trackFreemiumGateHit("quizz", subject = course.subjectEnum.storageKey, courseId = course.id)
         }
         Box(modifier = Modifier.fillMaxSize().background(DS.canvas)) {
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(DS.Space.l),
-            verticalArrangement = Arrangement.Center,
-        ) {
-            Text(
-                text = StringStore.text(context, "training.locked.title", language)
-                    .takeIf { it != "training.locked.title" } ?: "Quiz Premium",
-                style = SophiaTypography.titleLarge,
-            )
-            Spacer(Modifier.height(12.dp))
-            Text(
-                text = "Les quiz sont réservés aux membres Premium.",
-                style = SophiaTypography.bodyMedium,
-            )
-            Spacer(Modifier.height(20.dp))
-            Button(
-                onClick = onRequestPaywall,
-                modifier = Modifier.fillMaxWidth().height(52.dp),
-                shape = DS.controlShape,
-                colors = ButtonDefaults.buttonColors(containerColor = DS.accent),
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(DS.Space.l),
+                verticalArrangement = Arrangement.Center,
             ) {
-                Text("Premium", color = Color.White, fontFamily = PlusJakartaSans, fontWeight = FontWeight.SemiBold)
+                Text(
+                    text = StringStore.text(context, "training.locked.title", language)
+                        .takeIf { it != "training.locked.title" } ?: "Quiz Premium",
+                    style = SophiaTypography.titleLarge,
+                )
+                Spacer(Modifier.height(12.dp))
+                Text(
+                    text = "Les quiz sont réservés aux membres Premium.",
+                    style = SophiaTypography.bodyMedium,
+                )
+                Spacer(Modifier.height(20.dp))
+                Button(
+                    onClick = onRequestPaywall,
+                    modifier = Modifier.fillMaxWidth().height(52.dp),
+                    shape = DS.controlShape,
+                    colors = ButtonDefaults.buttonColors(containerColor = DS.accent),
+                ) {
+                    Text("Premium", color = Color.White, fontFamily = PlusJakartaSans, fontWeight = FontWeight.SemiBold)
+                }
+                Spacer(Modifier.height(12.dp))
+                Text(
+                    text = StringStore.text(context, "home.skip", language),
+                    style = SophiaTypography.labelLarge,
+                    color = DS.inkSecondary,
+                    modifier = Modifier.clickable(onClick = onFinished).padding(8.dp),
+                )
             }
-            Spacer(Modifier.height(12.dp))
-            Text(
-                text = StringStore.text(context, "home.skip", language),
-                style = SophiaTypography.labelLarge,
-                color = DS.inkSecondary,
-                modifier = Modifier.clickable(onClick = onFinished).padding(8.dp),
-            )
-        }
-        Box(modifier = Modifier.padding(DS.Space.s)) { QuizCloseButton(onDismiss) }
+            Box(modifier = Modifier.padding(DS.Space.s)) { QuizCloseButton(onDismiss) }
         }
         return
     }

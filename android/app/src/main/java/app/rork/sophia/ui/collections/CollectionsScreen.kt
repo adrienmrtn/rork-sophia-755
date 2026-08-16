@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CheckCircle
@@ -225,7 +226,7 @@ private fun CollectionRowCard(
             accentIndex = accentIndex,
             modifier = Modifier
                 .size(84.dp)
-                .clip(androidx.compose.foundation.shape.RoundedCornerShape(DS.Radius.small)),
+                .clip(RoundedCornerShape(DS.Radius.small)),
         )
         Column(modifier = Modifier.weight(1f)) {
             Text(text = collection.title, style = SophiaTypography.titleMedium, maxLines = 2)
