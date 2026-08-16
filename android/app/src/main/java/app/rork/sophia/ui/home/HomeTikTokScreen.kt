@@ -92,7 +92,6 @@ fun HomeTikTokScreen(
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
-    val constrained = remember { DeviceCapabilities.isConstrained(context) }
     val cached = remember(language) {
         ContentCatalog.cachedSummaries(language).orEmpty()
     }
@@ -108,7 +107,7 @@ fun HomeTikTokScreen(
             cards = cached.shuffled()
         }
         catalogReady = true
-        if (!constrained && !app.tutorialFlags.seen(TutorialFlags.Id.HOME_SWIPE)) {
+        if (!DeviceCapabilities.isEmulator() && !app.tutorialFlags.seen(TutorialFlags.Id.HOME_SWIPE)) {
             delay(900)
             showExplain = true
         }

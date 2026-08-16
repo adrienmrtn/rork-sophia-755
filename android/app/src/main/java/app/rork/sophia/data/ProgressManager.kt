@@ -333,6 +333,24 @@ class ProgressManager(context: Context) {
         }
     }
 
+    val hasClaimedDailyFreeCourse: Boolean
+        get() = _progress.value.dailyFreeCourseDate == today() &&
+            _progress.value.dailyFreeCourseId != null
+
+    /** Seconds until the free daily course resets, i.e. until local midnight. */
+    fun secondsUntilDailyReset(): Long {
+        val now = java.time.LocalDateTime.now()
+        val midnight = now.toLocalDate().plusDays(1).atStartOfDay()
+        return java.time.Duration.between(now, midnight).seconds.coerceAtLeast(0)
+    }
+
+    /** Debug helper mirroring the iOS settings row: hand back today's free course. */
+    fun resetDailyCourseFlag() {
+        mutate { current ->
+            current.copy(dailyFreeCourseDate = null, dailyFreeCourseId = null)
+        }
+    }
+
     fun completedCount(collection: LearningCollection): Int =
         completedCount(_progress.value, collection)
 

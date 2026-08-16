@@ -115,6 +115,12 @@ class DiscountOfferManager(context: Context) {
 
     fun registerSwipe() {
         if (wasShownToday()) return
+        val current = _state.value
+        // Parity with iOS: never re-arm the gift once the offer ran, is running, or is
+        // already waiting to be opened.
+        if (current.isGiftPending) return
+        if (current.startEpochMs != null && current.swipeDay == today()) return
+        if (current.isExpiredForever && current.swipeDay == today()) return
         val today = today()
         mutate { current ->
             val base = if (current.swipeDay != today) {

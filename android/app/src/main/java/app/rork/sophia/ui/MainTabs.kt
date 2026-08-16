@@ -116,8 +116,9 @@ fun MainTabs(
     }
 
     // In-app only: tiny banner the calendar day before trial end, once per day, auto-hides in 1s.
-    LaunchedEffect(trialExpiresInOneDay) {
-        if (!trialExpiresInOneDay) return@LaunchedEffect
+    val signedInUserId by app.authService.userId.collectAsState()
+    LaunchedEffect(trialExpiresInOneDay, signedInUserId) {
+        if (!trialExpiresInOneDay || signedInUserId == null) return@LaunchedEffect
         val prefs = context.getSharedPreferences("sophia_prefs", android.content.Context.MODE_PRIVATE)
         val day = SimpleDateFormat("yyyy-MM-dd", Locale.US).format(Date())
         if (prefs.getString("sophia_trial_ending_banner_day", null) == day) return@LaunchedEffect
@@ -456,7 +457,10 @@ fun MainTabs(
             }
         }
 
-        if (!isPremium && !constrained && selectedTab == 0 && selectedCourse == null && paywall == null) {
+        // Only emulators skip the offer: low-RAM phones are the core audience for it.
+        if (!isPremium && !DeviceCapabilities.isEmulator() && selectedTab == 0 &&
+            selectedCourse == null && paywall == null
+        ) {
             if (discount.isGiftPending) {
                 DiscountGiftOverlay(
                     language = language,
@@ -471,6 +475,7 @@ fun MainTabs(
             } else if (discount.isActive) {
                 DiscountSideTab(
                     state = discount,
+                    language = language,
                     onClick = {
                         app.analytics.trackDiscountOfferViewed("side_tab")
                         app.discountManager.markShownToday()
