@@ -36,7 +36,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.data.CourseCoverUrls
-import app.rork.sophia.data.DeviceCapabilities
+import app.rork.sophia.data.CourseImagePrefetch
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.ui.components.RichTextWithGlossary
@@ -134,7 +134,6 @@ fun ReaderBlockView(
     block: ReaderBlock,
     language: AppLanguage,
     courseId: String,
-    courseTitle: String,
     locked: Boolean,
 ) {
     val context = LocalContext.current
@@ -150,7 +149,6 @@ fun ReaderBlockView(
             raw = block.text,
             language = language,
             courseId = courseId,
-            courseTitle = courseTitle,
             color = prose,
         )
 
@@ -166,7 +164,6 @@ fun ReaderBlockView(
                 raw = block.text,
                 language = language,
                 courseId = courseId,
-                courseTitle = courseTitle,
                 color = prose,
             )
         }
@@ -179,7 +176,6 @@ fun ReaderBlockView(
                 raw = block.text,
                 language = language,
                 courseId = courseId,
-                courseTitle = courseTitle,
                 color = prose,
             )
         }
@@ -192,7 +188,6 @@ fun ReaderBlockView(
 private fun ImageBlock(block: ReaderBlock.Image) {
     val context = LocalContext.current
     val url = remember(block.asset) { CourseCoverUrls.blockUrl(context, block.asset) }
-    val targetPx = remember { if (DeviceCapabilities.isLowRam(context)) 480 else 720 }
     Column(modifier = Modifier.fillMaxWidth()) {
         Box(
             modifier = Modifier
@@ -206,13 +201,7 @@ private fun ImageBlock(block: ReaderBlock.Image) {
         ) {
             if (url != null) {
                 AsyncImage(
-                    model = ImageRequest.Builder(context)
-                        .data(url)
-                        .size(targetPx)
-                        .crossfade(false)
-                        .memoryCacheKey(block.asset)
-                        .diskCacheKey(block.asset)
-                        .build(),
+                    model = CourseImagePrefetch.request(context, block.asset, url),
                     contentDescription = block.caption,
                     modifier = Modifier.fillMaxSize(),
                     contentScale = if (block.ratio == null) ContentScale.Fit else ContentScale.Crop,

@@ -29,20 +29,35 @@ object GlossaryStore {
         withContext(Dispatchers.IO) { table(context, language) }
     }
 
+    /**
+     * Entries are keyed `"{courseId}|{term}"` in every locale — French included,
+     * which used to be looked up by course title and so never matched.
+     *
+     * Cache-only: the reader preloads the table off the main thread before it renders
+     * a block, and a tap must never turn into an 0.8MB read on the UI thread.
+     */
     fun entry(
         context: Context,
         language: AppLanguage,
         courseId: String,
-        courseTitle: String,
         displayTerm: String,
-    ): GlossaryEntry? {
-        val table = cache[language.code] ?: return null
-        val prefix = if (language == AppLanguage.FRENCH) courseTitle else courseId
-        val primaryKey = "$prefix|$displayTerm"
-        table.exact[primaryKey]?.let { return it }
+    ): GlossaryEntry? = cache[language.code]?.let { lookup(it, courseId, displayTerm) }
+
+    /**
+     * Whether a term is worth rendering as a link. About 8% of the `[[terms]]` in the
+     * content have no entry, and underlining those just invites a tap that does
+     * nothing. Unknown when the table is not loaded yet, so links are kept.
+     */
+    fun hasEntry(language: AppLanguage, courseId: String, displayTerm: String): Boolean {
+        val table = cache[language.code] ?: return true
+        return lookup(table, courseId, displayTerm) != null
+    }
+
+    private fun lookup(table: GlossaryTable, courseId: String, displayTerm: String): GlossaryEntry? {
+        table.exact["$courseId|$displayTerm"]?.let { return it }
         val needle = normalize(displayTerm)
         if (needle.isEmpty()) return null
-        return table.normalized["$prefix|$needle"]
+        return table.normalized["$courseId|$needle"]
     }
 
     private fun table(context: Context, language: AppLanguage): GlossaryTable {
