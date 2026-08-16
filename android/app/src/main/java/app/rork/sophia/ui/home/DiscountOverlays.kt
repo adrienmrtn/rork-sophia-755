@@ -1,11 +1,16 @@
 package app.rork.sophia.ui.home
 
+import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.animateFloat
+import androidx.compose.animation.core.infiniteRepeatable
+import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
@@ -17,6 +22,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -41,15 +47,18 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.data.DiscountState
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
+import app.rork.sophia.ui.components.softPress
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
 import kotlinx.coroutines.delay
+import kotlin.math.roundToInt
 
 private const val TAPS_TO_OPEN = 3
 
@@ -215,37 +224,77 @@ fun DiscountGiftOverlay(
 @Composable
 fun DiscountSideTab(
     state: DiscountState,
+    language: AppLanguage,
     onClick: () -> Unit,
 ) {
+    val context = LocalContext.current
+    var entered by remember { mutableStateOf(false) }
+    LaunchedEffect(Unit) {
+        delay(200)
+        entered = true
+    }
+    val enterOffset by animateFloatAsState(
+        targetValue = if (entered) 0f else 120f,
+        animationSpec = spring(dampingRatio = 0.75f, stiffness = Spring.StiffnessMediumLow),
+        label = "tabEnter",
+    )
+    // Gentle bob so the tab keeps catching the eye without ever moving much.
+    val bob by rememberInfiniteTransition(label = "tabBob").animateFloat(
+        initialValue = 0f,
+        targetValue = 6f,
+        animationSpec = infiniteRepeatable(tween(1400), RepeatMode.Reverse),
+        label = "bob",
+    )
+
     Box(
-        modifier = Modifier
-            .fillMaxHeight()
-            .padding(vertical = 120.dp),
+        modifier = Modifier.fillMaxHeight(),
         contentAlignment = Alignment.CenterEnd,
     ) {
-        Column(
+        Row(
             modifier = Modifier
-                .width(52.dp)
-                .clip(RoundedCornerShape(topStart = 12.dp, bottomStart = 12.dp))
+                .offset { IntOffset((enterOffset + if (entered) bob else 0f).roundToInt(), -30) }
+                .softPress(onClick = onClick)
+                .clip(RoundedCornerShape(topStart = 18.dp, bottomStart = 18.dp))
                 .background(DS.accent)
-                .clickable(onClick = onClick)
-                .padding(vertical = 14.dp, horizontal = 6.dp),
-            horizontalAlignment = Alignment.CenterHorizontally,
+                .border(
+                    1.dp,
+                    Color.White.copy(alpha = 0.15f),
+                    RoundedCornerShape(topStart = 18.dp, bottomStart = 18.dp),
+                )
+                .padding(start = 6.dp, end = 12.dp, top = 12.dp, bottom = 12.dp),
+            verticalAlignment = Alignment.CenterVertically,
         ) {
-            Text(
-                "OFFRE",
-                color = Color.White,
-                fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.Bold,
-                fontSize = 11.sp,
-            )
-            Text(
-                state.formattedRemaining,
-                color = Color.White,
-                fontFamily = PlusJakartaSans,
-                fontSize = 11.sp,
-                modifier = Modifier.padding(top = 6.dp),
-            )
+            Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                repeat(3) {
+                    Box(
+                        modifier = Modifier
+                            .size(3.dp)
+                            .clip(CircleShape)
+                            .background(Color.White.copy(alpha = 0.4f)),
+                    )
+                }
+            }
+            Spacer(Modifier.width(6.dp))
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                Text("🔥", fontSize = 16.sp)
+                Spacer(Modifier.height(4.dp))
+                Text(
+                    text = StringStore.text(context, "discount.sideTab.label", language),
+                    color = Color.White.copy(alpha = 0.85f),
+                    fontFamily = PlusJakartaSans,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 9.sp,
+                    letterSpacing = 0.6.sp,
+                )
+                Spacer(Modifier.height(3.dp))
+                Text(
+                    text = state.formattedRemaining,
+                    color = Color.White,
+                    fontFamily = PlusJakartaSans,
+                    fontWeight = FontWeight.ExtraBold,
+                    fontSize = 13.sp,
+                )
+            }
         }
     }
 }

@@ -1,9 +1,27 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.plugin.compose")
     id("org.jetbrains.kotlin.plugin.serialization")
 }
+
+/**
+ * Keys come from `local.properties` (git-ignored), then a Gradle property, then an
+ * environment variable, and only then the checked-in default. That way a store key can be
+ * set on a laptop or in CI without editing this file or committing a secret.
+ */
+val localProperties = Properties().apply {
+    val file = rootProject.file("local.properties")
+    if (file.exists()) file.inputStream().use { load(it) }
+}
+
+fun secret(name: String, default: String): String =
+    localProperties.getProperty(name)
+        ?: (project.findProperty(name) as String?)
+        ?: System.getenv(name)
+        ?: default
 
 android {
     namespace = "app.rork.sophia"
@@ -17,15 +35,52 @@ android {
         versionName = "1.0.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
-        // Placeholder until you create the RevenueCat Android key (goog_…).
-        buildConfigField("String", "REVENUECAT_API_KEY", "\"goog_REPLACE_ME\"")
-        buildConfigField("String", "REVENUECAT_TEST_API_KEY", "\"test_REPLACE_ME\"")
-        buildConfigField("String", "MIXPANEL_TOKEN", "\"d2e043bfcdd8f53a7ec613d378667519\"")
-        buildConfigField("String", "SUPABASE_URL", "\"https://afnmcoovdvbtkgohtdij.supabase.co\"")
-        buildConfigField("String", "SUPABASE_ANON_KEY", "\"sb_publishable_eNzCyPFfEuKC0tKWr0Hjag_lJ_qsWRw\"")
-        buildConfigField("String", "GOOGLE_WEB_CLIENT_ID", "\"716867958674-b9ql8ap6fna2lu9caublcjajdh7978q2.apps.googleusercontent.com\"")
-        buildConfigField("String", "FORMSPREE_ENDPOINT", "\"https://formspree.io/f/xwvdybwb\"")
-        buildConfigField("String", "FORMSPREE_AMBASSADOR_ENDPOINT", "\"https://formspree.io/f/xpqvqnwb\"")
+        // Set REVENUECAT_API_KEY / REVENUECAT_TEST_API_KEY in local.properties to enable billing.
+        buildConfigField(
+            "String",
+            "REVENUECAT_API_KEY",
+            "\"${secret("REVENUECAT_API_KEY", "goog_REPLACE_ME")}\"",
+        )
+        buildConfigField(
+            "String",
+            "REVENUECAT_TEST_API_KEY",
+            "\"${secret("REVENUECAT_TEST_API_KEY", "test_REPLACE_ME")}\"",
+        )
+        buildConfigField(
+            "String",
+            "MIXPANEL_TOKEN",
+            "\"${secret("MIXPANEL_TOKEN", "d2e043bfcdd8f53a7ec613d378667519")}\"",
+        )
+        buildConfigField(
+            "String",
+            "SUPABASE_URL",
+            "\"${secret("SUPABASE_URL", "https://afnmcoovdvbtkgohtdij.supabase.co")}\"",
+        )
+        buildConfigField(
+            "String",
+            "SUPABASE_ANON_KEY",
+            "\"${secret("SUPABASE_ANON_KEY", "sb_publishable_eNzCyPFfEuKC0tKWr0Hjag_lJ_qsWRw")}\"",
+        )
+        buildConfigField(
+            "String",
+            "GOOGLE_WEB_CLIENT_ID",
+            "\"${
+                secret(
+                    "GOOGLE_WEB_CLIENT_ID",
+                    "716867958674-b9ql8ap6fna2lu9caublcjajdh7978q2.apps.googleusercontent.com",
+                )
+            }\"",
+        )
+        buildConfigField(
+            "String",
+            "FORMSPREE_ENDPOINT",
+            "\"${secret("FORMSPREE_ENDPOINT", "https://formspree.io/f/xwvdybwb")}\"",
+        )
+        buildConfigField(
+            "String",
+            "FORMSPREE_AMBASSADOR_ENDPOINT",
+            "\"${secret("FORMSPREE_AMBASSADOR_ENDPOINT", "https://formspree.io/f/xpqvqnwb")}\"",
+        )
     }
 
     buildTypes {

@@ -28,6 +28,7 @@ import androidx.compose.material.icons.filled.Restore
 import androidx.compose.material.icons.filled.RestartAlt
 import androidx.compose.material.icons.filled.School
 import androidx.compose.material.icons.filled.Star
+import androidx.compose.material.icons.filled.Today
 import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.HorizontalDivider
@@ -257,6 +258,23 @@ fun SettingsScreen(
                 label = StringStore.text(context, "settings.debug.resetOnboarding", language),
                 destructive = true,
                 onClick = { showResetOnboarding = true },
+            )
+            HorizontalDivider(color = DS.hairline)
+            // Hands today's free course back, so the freemium gates can be re-tested.
+            SettingsRow(
+                icon = Icons.Filled.Today,
+                label = StringStore.text(context, "settings.debug.resetDaily", language),
+                subtitle = StringStore.text(
+                    context,
+                    if (app.progressManager.hasClaimedDailyFreeCourse) {
+                        "settings.debug.daily.done"
+                    } else {
+                        "settings.debug.daily.pending"
+                    },
+                    language,
+                ),
+                showChevron = false,
+                onClick = { app.progressManager.resetDailyCourseFlag() },
             )
         }
 

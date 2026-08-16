@@ -55,6 +55,7 @@ import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Course
 import app.rork.sophia.domain.FreemiumGate
 import app.rork.sophia.ui.components.CalmProgressBar
+import app.rork.sophia.ui.components.lockedContentBlur
 import app.rork.sophia.ui.components.CircleIconButton
 import app.rork.sophia.ui.components.SophiaPrimaryButton
 import app.rork.sophia.ui.theme.DS
@@ -161,6 +162,11 @@ fun CourseScreen(
             xpForLevel = level.xpForLevel,
             showQuizCta = course.hasQuiz,
             quizLocked = !isPremium,
+            freemiumNote = if (!isPremium) {
+                StringStore.text(context, "paywall.course.subtitle", language)
+            } else {
+                null
+            },
             onClose = onDismiss,
             onQuiz = {
                 showCompleted = false
@@ -241,18 +247,24 @@ fun CourseScreen(
                         Column(
                             modifier = Modifier
                                 .fillMaxSize()
-                                .verticalScroll(rememberScrollState())
+                                .verticalScroll(rememberScrollState(), enabled = !locked)
                                 .padding(DS.Space.l),
                             verticalArrangement = Arrangement.spacedBy(DS.Space.m),
                         ) {
+                            // The title stays sharp; only the paid body is blurred.
                             Text(text = page.title, style = SophiaTypography.titleLarge)
-                            page.blocks.forEach { block ->
-                                ReaderBlockView(
-                                    block = block,
-                                    language = language,
-                                    courseId = course.id,
-                                    locked = locked,
-                                )
+                            Column(
+                                modifier = Modifier.lockedContentBlur(locked),
+                                verticalArrangement = Arrangement.spacedBy(DS.Space.m),
+                            ) {
+                                page.blocks.forEach { block ->
+                                    ReaderBlockView(
+                                        block = block,
+                                        language = language,
+                                        courseId = course.id,
+                                        locked = locked,
+                                    )
+                                }
                             }
                         }
                         if (locked) {

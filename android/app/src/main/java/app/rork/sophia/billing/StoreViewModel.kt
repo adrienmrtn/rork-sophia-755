@@ -204,6 +204,20 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
         }
     }
 
+    /**
+     * « -58 % » style badge comparing the annual plan to twelve monthly ones. Null when
+     * either price is missing or the annual plan isn't actually cheaper.
+     */
+    fun discountBadge(annual: Package?, monthly: Package?): String? {
+        val annualMicros = annual?.product?.price?.amountMicros ?: return null
+        val monthlyMicros = monthly?.product?.price?.amountMicros ?: return null
+        if (monthlyMicros <= 0) return null
+        val yearOfMonthly = monthlyMicros * 12.0
+        if (annualMicros >= yearOfMonthly) return null
+        val percent = ((1.0 - annualMicros / yearOfMonthly) * 100).toInt()
+        return if (percent <= 0) null else "-$percent%"
+    }
+
     fun setPremiumDebug(value: Boolean) {
         _isPremium.value = value
     }

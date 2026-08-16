@@ -62,6 +62,7 @@ fun CourseCompletedScreen(
     xpForLevel: Int,
     showQuizCta: Boolean,
     quizLocked: Boolean,
+    freemiumNote: String? = null,
     onClose: () -> Unit,
     onQuiz: () -> Unit,
 ) {
@@ -139,6 +140,21 @@ fun CourseCompletedScreen(
                     " · $xpIntoLevel / $xpForLevel XP",
                 style = SophiaTypography.labelMedium,
             )
+        }
+        if (freemiumNote != null) {
+            Spacer(Modifier.height(14.dp))
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clip(DS.controlShape)
+                    .background(DS.accentTint)
+                    .padding(14.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(10.dp),
+            ) {
+                Text("🔒", fontSize = 15.sp)
+                Text(text = freemiumNote, style = SophiaTypography.labelMedium)
+            }
         }
         Spacer(Modifier.weight(1f))
         Row(
