@@ -3,6 +3,7 @@ package app.rork.sophia.ui.course
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -12,11 +13,16 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Slider
 import androidx.compose.material3.SliderDefaults
@@ -64,6 +70,7 @@ fun QuizScreen(
     progressManager: ProgressManager,
     onRequestPaywall: () -> Unit,
     onFinished: () -> Unit,
+    onDismiss: () -> Unit = onFinished,
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
@@ -71,39 +78,41 @@ fun QuizScreen(
         LaunchedEffect(Unit) {
             app.analytics.trackFreemiumGateHit("quizz", subject = course.subjectEnum.storageKey, courseId = course.id)
         }
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(DS.canvas)
-                .padding(DS.Space.l),
-            verticalArrangement = Arrangement.Center,
-        ) {
-            Text(
-                text = StringStore.text(context, "training.locked.title", language)
-                    .takeIf { it != "training.locked.title" } ?: "Quiz Premium",
-                style = SophiaTypography.titleLarge,
-            )
-            Spacer(Modifier.height(12.dp))
-            Text(
-                text = "Les quiz sont réservés aux membres Premium.",
-                style = SophiaTypography.bodyMedium,
-            )
-            Spacer(Modifier.height(20.dp))
-            Button(
-                onClick = onRequestPaywall,
-                modifier = Modifier.fillMaxWidth().height(52.dp),
-                shape = DS.controlShape,
-                colors = ButtonDefaults.buttonColors(containerColor = DS.accent),
+        Box(modifier = Modifier.fillMaxSize().background(DS.canvas)) {
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(DS.Space.l),
+                verticalArrangement = Arrangement.Center,
             ) {
-                Text("Premium", color = Color.White, fontFamily = PlusJakartaSans, fontWeight = FontWeight.SemiBold)
+                Text(
+                    text = StringStore.text(context, "training.locked.title", language)
+                        .takeIf { it != "training.locked.title" } ?: "Quiz Premium",
+                    style = SophiaTypography.titleLarge,
+                )
+                Spacer(Modifier.height(12.dp))
+                Text(
+                    text = "Les quiz sont réservés aux membres Premium.",
+                    style = SophiaTypography.bodyMedium,
+                )
+                Spacer(Modifier.height(20.dp))
+                Button(
+                    onClick = onRequestPaywall,
+                    modifier = Modifier.fillMaxWidth().height(52.dp),
+                    shape = DS.controlShape,
+                    colors = ButtonDefaults.buttonColors(containerColor = DS.accent),
+                ) {
+                    Text("Premium", color = Color.White, fontFamily = PlusJakartaSans, fontWeight = FontWeight.SemiBold)
+                }
+                Spacer(Modifier.height(12.dp))
+                Text(
+                    text = StringStore.text(context, "home.skip", language),
+                    style = SophiaTypography.labelLarge,
+                    color = DS.inkSecondary,
+                    modifier = Modifier.clickable(onClick = onFinished).padding(8.dp),
+                )
             }
-            Spacer(Modifier.height(12.dp))
-            Text(
-                text = StringStore.text(context, "home.skip", language),
-                style = SophiaTypography.labelLarge,
-                color = DS.inkSecondary,
-                modifier = Modifier.clickable(onClick = onFinished).padding(8.dp),
-            )
+            Box(modifier = Modifier.padding(DS.Space.s)) { QuizCloseButton(onDismiss) }
         }
         return
     }
@@ -182,6 +191,7 @@ fun QuizScreen(
         Column(
             modifier = Modifier.fillMaxSize().background(DS.canvas).padding(DS.Space.l),
             verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Text(
                 text = StringStore.text(context, "training.sessionComplete.title", language),
@@ -233,6 +243,8 @@ fun QuizScreen(
             .verticalScroll(rememberScrollState())
             .padding(DS.Space.l),
     ) {
+        QuizCloseButton(onDismiss)
+        Spacer(Modifier.height(8.dp))
         LinearProgressIndicator(
             progress = { (index + 1).toFloat() / questions.size },
             modifier = Modifier.fillMaxWidth(),
@@ -392,5 +404,19 @@ fun QuizScreen(
                 fontWeight = FontWeight.SemiBold,
             )
         }
+    }
+}
+
+@Composable
+private fun QuizCloseButton(onDismiss: () -> Unit) {
+    IconButton(
+        onClick = onDismiss,
+        modifier = Modifier
+            .size(40.dp)
+            .clip(CircleShape)
+            .background(DS.surface)
+            .border(1.dp, DS.hairline, CircleShape),
+    ) {
+        Icon(Icons.Filled.Close, contentDescription = null, tint = DS.inkSecondary)
     }
 }

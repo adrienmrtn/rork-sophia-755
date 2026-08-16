@@ -43,6 +43,32 @@ object CourseImagePrefetch {
     }
 
     /**
+     * Same request the home [app.rork.sophia.ui.components.CourseImage] composable
+     * builds, so a warm cover is a cache hit instead of another network fetch.
+     */
+    fun coverRequest(context: Context, courseId: String, url: String): ImageRequest =
+        ImageRequest.Builder(context)
+            .data(url)
+            .size(targetPx(context))
+            .allowHardware(false)
+            .crossfade(false)
+            .memoryCacheKey(courseId)
+            .diskCacheKey(courseId)
+            .build()
+
+    /** Resolving a cover URL reads the slug map from assets, so it stays off the main thread. */
+    suspend fun warmCovers(context: Context, courseIds: List<String>) {
+        if (courseIds.isEmpty()) return
+        val app = context.applicationContext
+        val urls = withContext(Dispatchers.IO) {
+            courseIds.distinct().mapNotNull { id ->
+                CourseCoverUrls.url(app, id)?.let { id to it }
+            }
+        }
+        urls.forEach { (id, url) -> app.imageLoader.enqueue(coverRequest(app, id, url)) }
+    }
+
+    /**
      * Warms the first [limit] images of a course straight from its JSON, for callers
      * that have not parsed it — the home feed giving the reader a head start.
      */

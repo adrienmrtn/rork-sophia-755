@@ -79,6 +79,7 @@ fun CourseScreen(
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
     var showQuiz by remember { mutableStateOf(false) }
+    var showCompleted by remember(course.id) { mutableStateOf(false) }
     var showCoachmark by remember { mutableStateOf(false) }
     var coachmarkTerm by remember { mutableStateOf<String?>(null) }
     val wasCompletedBefore = remember(course.id) {
@@ -134,9 +135,33 @@ fun CourseScreen(
             isPremium = isPremium,
             progressManager = progressManager,
             onRequestPaywall = { onRequestPaywall("quizz") },
+            onDismiss = {
+                showQuiz = false
+                onDismiss()
+            },
             onFinished = {
                 onCourseCompleted()
                 onDismiss()
+            },
+        )
+        return
+    }
+
+    if (showCompleted) {
+        val level = ProgressManager.globalLevelProgress(progressManager.progress.value.globalXP)
+        CourseCompletedScreen(
+            course = course,
+            language = language,
+            earnedXP = COURSE_COMPLETION_XP,
+            level = level.level,
+            xpIntoLevel = level.xpIntoLevel,
+            xpForLevel = level.xpForLevel,
+            showQuizCta = course.hasQuiz,
+            quizLocked = !isPremium,
+            onClose = onDismiss,
+            onQuiz = {
+                showCompleted = false
+                showQuiz = true
             },
         )
         return
@@ -278,7 +303,7 @@ fun CourseScreen(
                                     )
                                     onCourseCompleted()
                                 }
-                                if (course.hasQuiz) showQuiz = true else onDismiss()
+                                showCompleted = true
                             }
                         } else {
                             sessionTracker.recordContinueTap()
@@ -361,6 +386,9 @@ fun GlossaryTermCoachmark(
 }
 
 private const val PREFETCH_IMAGES = 4
+
+/** Matches the +50 global XP granted by `ProgressManager.markCourseCompleted`. */
+private const val COURSE_COMPLETION_XP = 50
 
 private data class ReaderPage(val title: String, val blocks: List<ReaderBlock>)
 

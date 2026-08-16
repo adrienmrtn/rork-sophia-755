@@ -41,6 +41,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
@@ -79,6 +80,7 @@ fun HomeTikTokScreen(
     onToggleFavorite: (String) -> Unit,
     onStartCourse: (String) -> Unit,
     onUserSwipe: () -> Unit = {},
+    streak: Int = 0,
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
@@ -102,6 +104,14 @@ fun HomeTikTokScreen(
             delay(900)
             showExplain = true
         }
+    }
+
+    // Covers are the first thing the feed shows, so they are warmed with no debounce:
+    // the current card plus the next two, which is what a swipe can reach immediately.
+    LaunchedEffect(cards, index) {
+        if (cards.isEmpty()) return@LaunchedEffect
+        val window = (index..index + COVER_PREFETCH_AHEAD).mapNotNull { cards.getOrNull(it)?.id }
+        CourseImagePrefetch.warmCovers(context.applicationContext, window)
     }
 
     // Give the reader a head start on the card being read. The delay is the debounce:
@@ -138,12 +148,38 @@ fun HomeTikTokScreen(
                     fontSize = 22.sp,
                     color = DS.ink,
                 )
-                Row(verticalAlignment = Alignment.CenterVertically) {
+                Row(
+                    modifier = Modifier
+                        .clip(CircleShape)
+                        .background(DS.surface)
+                        .padding(horizontal = 14.dp, vertical = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(6.dp),
+                ) {
                     Icon(
                         Icons.Filled.LocalFireDepartment,
                         contentDescription = null,
                         tint = DS.warm,
-                        modifier = Modifier.size(20.dp),
+                        modifier = Modifier.size(18.dp),
+                    )
+                    Text(
+                        text = "$streak",
+                        fontFamily = FontFamily.SansSerif,
+                        fontWeight = FontWeight.SemiBold,
+                        fontSize = 15.sp,
+                        color = DS.ink,
+                    )
+                    Text(
+                        text = StringStore.text(
+                            context,
+                            if (streak <= 1) "common.streak.day" else "common.streak.days",
+                            language,
+                        ),
+                        fontFamily = FontFamily.SansSerif,
+                        fontWeight = FontWeight.Medium,
+                        fontSize = 12.sp,
+                        color = DS.inkSecondary,
+                        maxLines = 1,
                     )
                 }
             }
@@ -175,7 +211,10 @@ fun HomeTikTokScreen(
                     modifier = Modifier
                         .weight(1f)
                         .fillMaxWidth()
-                        .padding(bottom = 8.dp),
+                        .padding(bottom = 8.dp)
+                        // The incoming card is drawn at a vertical offset; without this it
+                        // slides over the "Sophia" header and the streak badge.
+                        .clipToBounds(),
                 ) { page ->
                     val course = cards[page]
                     TikTokCourseCard(
@@ -434,6 +473,8 @@ private fun TikTokCourseCard(
         }
     }
 }
+
+private const val COVER_PREFETCH_AHEAD = 2
 
 private fun readsCountShort(id: String): String {
     var hash = 0xcbf29ce484222325UL

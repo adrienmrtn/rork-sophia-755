@@ -2,6 +2,7 @@ package app.rork.sophia.data
 
 import android.content.Context
 import app.rork.sophia.SophiaApplication
+import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.CollectionProgressEvent
 import app.rork.sophia.domain.Course
 import app.rork.sophia.domain.CourseProgress
@@ -12,9 +13,11 @@ import app.rork.sophia.domain.PendingGlobalRankUp
 import app.rork.sophia.domain.QuizQuestion
 import app.rork.sophia.domain.TrainingQuestionState
 import app.rork.sophia.domain.UserProgress
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.withContext
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import java.time.Instant
@@ -228,15 +231,33 @@ class ProgressManager(context: Context) {
         }
     }
 
-    fun resolveDueQuestions(courses: List<Course>): List<Pair<Course, QuizQuestion>> {
-        val due = dueTrainingQuestionIds().toSet()
-        val out = mutableListOf<Pair<Course, QuizQuestion>>()
-        for (course in courses) {
-            for (q in course.quiz) {
-                if (q.id in due) out += course to q
+    /**
+     * Catalog stubs carry an empty `quiz`, so looking questions up on `course.quiz`
+     * always misses. Load each due question from the quiz JSON instead.
+     */
+    suspend fun resolveDueQuestions(
+        context: Context,
+        language: AppLanguage,
+        limit: Int = 20,
+    ): List<Pair<Course, QuizQuestion>> = withContext(Dispatchers.IO) {
+        val snapshot = _progress.value
+        val dueIds = dueTrainingQuestionIds()
+        val out = ArrayList<Pair<Course, QuizQuestion>>(minOf(limit, dueIds.size))
+        val quizByCourse = HashMap<String, List<QuizQuestion>>()
+        for (qid in dueIds) {
+            val courseId = snapshot.trainingQuestionStates[qid]?.courseId?.takeIf { it.isNotBlank() }
+                ?: continue
+            val quiz = quizByCourse.getOrPut(courseId) {
+                ContentCatalog.quizQuestions(context, language, courseId)
             }
+            val question = quiz.firstOrNull { it.id == qid } ?: continue
+            val course = ContentCatalog.cachedStub(language, courseId)
+                ?: ContentCatalog.course(context, language, courseId)
+                ?: continue
+            out += course to question
+            if (out.size >= limit) break
         }
-        return out
+        out
     }
 
     private fun bumpStreak(current: UserProgress): Int {

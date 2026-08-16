@@ -90,7 +90,21 @@ object ContentCatalog {
 
     fun collections(context: Context, language: AppLanguage): List<LearningCollection> {
         return collectionCache.getOrPut(language.code) {
-            loadList(context, "locales/collections.${language.code}.json")
+            val loaded = loadList<LearningCollection>(context, "locales/collections.${language.code}.json")
+            if (language == AppLanguage.FRENCH || loaded.all { it.coverAssetName.isNotBlank() }) {
+                loaded
+            } else {
+                val covers = collectionCache.getOrPut(AppLanguage.FRENCH.code) {
+                    loadList(context, "locales/collections.fr.json")
+                }.associate { it.id to it.coverAssetName }
+                loaded.map { collection ->
+                    if (collection.coverAssetName.isBlank()) {
+                        collection.copy(coverAssetName = covers[collection.id].orEmpty())
+                    } else {
+                        collection
+                    }
+                }
+            }
         }
     }
 

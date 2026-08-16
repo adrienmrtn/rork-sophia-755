@@ -17,6 +17,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.produceState
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -29,7 +30,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.billing.StoreViewModel
-import app.rork.sophia.data.rememberCourses
 import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.data.TutorialFlags
@@ -58,12 +58,18 @@ fun TrainingScreen(
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
-    val courses = rememberCourses(language)
-    val due = remember(progress, language, courses) {
-        if (courses.isEmpty()) emptyList()
-        else progressManager.resolveDueQuestions(courses)
+    // Questions live in the quiz catalog, not in the lightweight course stubs, so the
+    // due set is resolved off the main thread from the training states themselves.
+    val due by produceState(
+        initialValue = emptyList<Pair<Course, QuizQuestion>>(),
+        progress.trainingQuestionStates,
+        language,
+    ) {
+        value = progressManager.resolveDueQuestions(context.applicationContext, language)
     }
-    var inSession by remember { mutableStateOf(false) }
+    // Frozen at start: answering updates the due set, which would otherwise restart
+    // or truncate the running session.
+    var sessionItems by remember { mutableStateOf<List<Pair<Course, QuizQuestion>>>(emptyList()) }
     var showTrainingOb by remember { mutableStateOf(false) }
     var showExplain by remember {
         mutableStateOf(!app.tutorialFlags.seen(TutorialFlags.Id.TRAINING) && isPremium)
@@ -86,12 +92,12 @@ fun TrainingScreen(
         return
     }
 
-    if (inSession && due.isNotEmpty() && isPremium) {
+    if (sessionItems.isNotEmpty() && isPremium) {
         TrainingSession(
             language = language,
-            items = due,
+            items = sessionItems,
             progressManager = progressManager,
-            onDone = { inSession = false },
+            onDone = { sessionItems = emptyList() },
         )
         return
     }
@@ -170,7 +176,7 @@ fun TrainingScreen(
             )
             Spacer(Modifier.height(20.dp))
             Button(
-                onClick = { inSession = true },
+                onClick = { sessionItems = due },
                 modifier = Modifier.fillMaxWidth().height(52.dp),
                 shape = DS.controlShape,
                 colors = ButtonDefaults.buttonColors(containerColor = DS.accent, contentColor = Color.White),
