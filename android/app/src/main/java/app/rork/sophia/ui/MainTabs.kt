@@ -60,6 +60,7 @@ import app.rork.sophia.ui.legal.LegalDocumentScreen
 import app.rork.sophia.ui.profile.AmbassadorScreen
 import app.rork.sophia.ui.profile.FeedbackScreen
 import app.rork.sophia.ui.profile.ProfileScreen
+import app.rork.sophia.ui.profile.SettingsScreen
 import app.rork.sophia.ui.social.FriendsScreen
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
@@ -72,7 +73,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-private enum class OverlayScreen { Friends, Feedback, Ambassador, Terms, Privacy }
+private enum class OverlayScreen { Settings, Friends, Feedback, Ambassador, Terms, Privacy }
 
 @Composable
 fun MainTabs(
@@ -95,6 +96,8 @@ fun MainTabs(
     var autoSwipeCourseId by remember { mutableStateOf<String?>(null) }
     var paywall by remember { mutableStateOf<PaywallContext?>(null) }
     var overlay by remember { mutableStateOf<OverlayScreen?>(null) }
+    // Where "back" lands: settings pushes onto itself, tabs open overlays directly.
+    var overlayParent by remember { mutableStateOf<OverlayScreen?>(null) }
     var rewardSteps by remember { mutableStateOf<List<PostCompletionRewardStep>?>(null) }
     var pendingCompletionCourseId by remember { mutableStateOf<String?>(null) }
     var levelBeforeCompletion by remember { mutableIntStateOf(1) }
@@ -134,6 +137,16 @@ fun MainTabs(
             app.analytics.trackDeepLinkOpened(id)
         }
         onDeepLinkConsumed()
+    }
+
+    fun openFromSettings(screen: OverlayScreen) {
+        overlayParent = OverlayScreen.Settings
+        overlay = screen
+    }
+
+    fun closeOverlay() {
+        overlay = overlayParent
+        overlayParent = null
     }
 
     fun openCourse(course: Course) {
@@ -253,22 +266,42 @@ fun MainTabs(
             )
             return
         }
+        overlay == OverlayScreen.Settings -> {
+            SettingsScreen(
+                language = language,
+                progress = progress,
+                isPremium = isPremium,
+                onBack = { closeOverlay() },
+                onLanguageChange = { app.languageManager.setLanguage(it) },
+                onShowPaywall = {
+                    overlay = null
+                    paywall = PaywallContext.DEBLOQUER_COURS
+                },
+                onOpenFeedback = { openFromSettings(OverlayScreen.Feedback) },
+                onOpenAmbassador = { openFromSettings(OverlayScreen.Ambassador) },
+                onOpenTerms = { openFromSettings(OverlayScreen.Terms) },
+                onOpenPrivacy = { openFromSettings(OverlayScreen.Privacy) },
+                onRestorePurchases = { storeViewModel.restore() },
+                onResetOnboarding = onResetOnboarding,
+            )
+            return
+        }
         overlay == OverlayScreen.Friends -> {
-            FriendsScreen(language = language, onBack = { overlay = null })
+            FriendsScreen(language = language, onBack = { closeOverlay() })
             return
         }
         overlay == OverlayScreen.Feedback -> {
             FeedbackScreen(
                 language = language,
                 isPremium = isPremium,
-                onBack = { overlay = null },
+                onBack = { closeOverlay() },
             )
             return
         }
         overlay == OverlayScreen.Ambassador -> {
             AmbassadorScreen(
                 language = language,
-                onBack = { overlay = null },
+                onBack = { closeOverlay() },
             )
             return
         }
@@ -276,7 +309,7 @@ fun MainTabs(
             LegalDocumentScreen(
                 kind = LegalDocKind.Terms,
                 language = language,
-                onBack = { overlay = null },
+                onBack = { closeOverlay() },
             )
             return
         }
@@ -284,7 +317,7 @@ fun MainTabs(
             LegalDocumentScreen(
                 kind = LegalDocKind.Privacy,
                 language = language,
-                onBack = { overlay = null },
+                onBack = { closeOverlay() },
             )
             return
         }
@@ -387,6 +420,7 @@ fun MainTabs(
                     onUserSwipe = {
                         if (!isPremium) app.discountManager.registerSwipe()
                     },
+                    streak = progress.streak,
                 )
                 1 -> LibraryScreen(
                     modifier = Modifier.padding(padding),
@@ -414,16 +448,10 @@ fun MainTabs(
                     language = language,
                     progress = progress,
                     isPremium = isPremium,
-                    onLanguageChange = { app.languageManager.setLanguage(it) },
-                    onResetOnboarding = onResetOnboarding,
                     onOpenCourse = { openCourseById(it) },
+                    onOpenSettings = { overlay = OverlayScreen.Settings },
                     onShowPaywall = { paywall = PaywallContext.DEBLOQUER_COURS },
                     onOpenFriends = { overlay = OverlayScreen.Friends },
-                    onOpenFeedback = { overlay = OverlayScreen.Feedback },
-                    onOpenAmbassador = { overlay = OverlayScreen.Ambassador },
-                    onOpenTerms = { overlay = OverlayScreen.Terms },
-                    onOpenPrivacy = { overlay = OverlayScreen.Privacy },
-                    onRestorePurchases = { storeViewModel.restore() },
                 )
             }
         }

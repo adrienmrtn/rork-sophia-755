@@ -5,11 +5,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -22,7 +18,6 @@ import app.rork.sophia.data.CourseCoverUrls
 import app.rork.sophia.data.DeviceCapabilities
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
-import kotlinx.coroutines.yield
 
 /**
  * One remote cover at a time (Coil disk cache). Never ships JPEGs in the APK.
@@ -45,11 +40,6 @@ fun CourseImage(
     val targetPx = remember(maxEdgePx) {
         if (DeviceCapabilities.isLowRam(context)) minOf(maxEdgePx, 480) else maxEdgePx
     }
-    var loadRemote by remember(courseId) { mutableStateOf(false) }
-    LaunchedEffect(courseId) {
-        yield()
-        loadRemote = true
-    }
     Box(modifier = modifier.background(color), contentAlignment = Alignment.Center) {
         Text(
             text = letter,
@@ -58,7 +48,7 @@ fun CourseImage(
             fontSize = 42.sp,
             color = Color.White.copy(alpha = 0.92f),
         )
-        if (loadRemote && url != null) {
+        if (url != null) {
             AsyncImage(
                 model = ImageRequest.Builder(context)
                     .data(url)
