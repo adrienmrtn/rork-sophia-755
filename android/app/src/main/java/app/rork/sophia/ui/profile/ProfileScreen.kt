@@ -3,6 +3,7 @@ package app.rork.sophia.ui.profile
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -12,15 +13,20 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -70,13 +76,15 @@ fun ProfileScreen(
     }
     val level = ProgressManager.globalLevelProgress(progress.globalXP)
     val rankProgress = if (level.xpForLevel == 0) 0f else level.xpIntoLevel.toFloat() / level.xpForLevel
+    var showResetOnboarding by remember { mutableStateOf(false) }
 
     LaunchedEffect(userId) {
         if (userId != null) app.socialService.refreshAll()
     }
 
+    Box(modifier = modifier.fillMaxSize()) {
     Column(
-        modifier = modifier
+        modifier = Modifier
             .fillMaxSize()
             .background(DS.canvas)
             .verticalScroll(rememberScrollState())
@@ -231,6 +239,17 @@ fun ProfileScreen(
             )
         }
         Spacer(Modifier.height(16.dp))
+        Text(
+            text = StringStore.text(context, "settings.section.data", language),
+            style = SophiaTypography.titleMedium,
+        )
+        Spacer(Modifier.height(8.dp))
+        LegalSettingsRow(
+            label = StringStore.text(context, "settings.debug.resetOnboarding", language),
+            onClick = { showResetOnboarding = true },
+            destructive = true,
+        )
+        Spacer(Modifier.height(16.dp))
         Text(text = StringStore.text(context, "language.section", language), style = SophiaTypography.titleMedium)
         Spacer(Modifier.height(8.dp))
         AppLanguage.entries.forEach { lang ->
@@ -262,24 +281,54 @@ fun ProfileScreen(
             HorizontalDivider(color = DS.hairline)
         }
         Spacer(Modifier.height(24.dp))
-        Text(
-            text = "Reset onboarding (debug)",
-            style = SophiaTypography.labelLarge,
-            color = DS.danger,
-            modifier = Modifier.clickable(onClick = onResetOnboarding),
+    }
+
+    if (showResetOnboarding) {
+        AlertDialog(
+            onDismissRequest = { showResetOnboarding = false },
+            title = {
+                Text(StringStore.text(context, "settings.onboarding.alert.title", language))
+            },
+            text = {
+                Text(StringStore.text(context, "settings.onboarding.alert.message", language))
+            },
+            confirmButton = {
+                TextButton(
+                    onClick = {
+                        showResetOnboarding = false
+                        onResetOnboarding()
+                    },
+                ) {
+                    Text(
+                        StringStore.text(context, "settings.onboarding.alert.confirm", language),
+                        color = DS.danger,
+                    )
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { showResetOnboarding = false }) {
+                    Text(StringStore.text(context, "settings.reset.alert.cancel", language))
+                }
+            },
         )
+    }
     }
 }
 
 @Composable
-private fun LegalSettingsRow(label: String, onClick: () -> Unit) {
+private fun LegalSettingsRow(
+    label: String,
+    onClick: () -> Unit,
+    destructive: Boolean = false,
+) {
     Text(
         text = label,
         style = SophiaTypography.bodyLarge,
+        color = if (destructive) DS.danger else DS.ink,
         modifier = Modifier
             .fillMaxWidth()
             .clip(DS.controlShape)
-            .background(DS.surface)
+            .background(if (destructive) DS.dangerTint else DS.surface)
             .clickable(onClick = onClick)
             .padding(horizontal = 14.dp, vertical = 14.dp),
     )
