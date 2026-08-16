@@ -54,6 +54,9 @@ import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Course
 import app.rork.sophia.domain.FreemiumGate
+import app.rork.sophia.ui.components.CalmProgressBar
+import app.rork.sophia.ui.components.CircleIconButton
+import app.rork.sophia.ui.components.SophiaPrimaryButton
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
@@ -198,31 +201,24 @@ fun CourseScreen(
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 8.dp, vertical = 4.dp),
+                    .padding(horizontal = DS.Space.s, vertical = 8.dp),
                 verticalAlignment = Alignment.CenterVertically,
             ) {
-            IconButton(onClick = onDismiss) {
-                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back", tint = DS.ink)
-            }
+            CircleIconButton(icon = Icons.AutoMirrored.Filled.ArrowBack, onClick = onDismiss)
             Text(
                 text = course.title,
-                style = SophiaTypography.titleMedium,
+                style = SophiaTypography.titleMedium.copy(fontSize = 16.sp),
                 maxLines = 1,
-                modifier = Modifier.weight(1f),
+                modifier = Modifier.weight(1f).padding(horizontal = 12.dp),
             )
-            IconButton(onClick = { ShareHelper.shareCourse(context, course) }) {
-                Icon(Icons.Filled.Share, contentDescription = "Share", tint = DS.ink)
-            }
+            CircleIconButton(
+                icon = Icons.Filled.Share,
+                onClick = { ShareHelper.shareCourse(context, course) },
+            )
         }
-            LinearProgressIndicator(
-                progress = {
-                    if (pages.isEmpty()) 0f
-                    else (pagerState.currentPage + 1).toFloat() / pages.size
-                },
-                modifier = Modifier.fillMaxWidth().padding(horizontal = DS.Space.l),
-                color = DS.accent,
-                trackColor = DS.hairline,
-                strokeCap = StrokeCap.Round,
+            CalmProgressBar(
+                fraction = if (pages.isEmpty()) 0f else (pagerState.currentPage + 1).toFloat() / pages.size,
+                modifier = Modifier.padding(horizontal = DS.Space.l),
             )
 
             if (!pagesReady) {
@@ -281,14 +277,22 @@ fun CourseScreen(
             ) {
                 val isLast = pagerState.currentPage >= pages.lastIndex
                 val courseLocked = !isPremium && !isDailyFreeCourse
-                Button(
+                SophiaPrimaryButton(
+                    text = when {
+                        courseLocked || !isLast -> StringStore.text(context, "course.continue", language)
+                            .takeIf { it != "course.continue" } ?: "Continuer"
+                        course.hasQuiz -> StringStore.text(context, "course.quiz", language)
+                            .takeIf { it != "course.quiz" } ?: "Quiz"
+                        else -> StringStore.text(context, "course.finish", language)
+                            .takeIf { it != "course.finish" } ?: "Terminer"
+                    },
                     onClick = {
                         if (courseLocked) {
                             if (!isLast) {
                                 sessionTracker.recordContinueTap()
                                 scope.launch { pagerState.animateScrollToPage(pagerState.currentPage + 1) }
                             }
-                            return@Button
+                            return@SophiaPrimaryButton
                         }
                         if (isLast) {
                             if (FreemiumGate.canCompleteCourse(isPremium, isDailyFreeCourse)) {
@@ -310,24 +314,7 @@ fun CourseScreen(
                             scope.launch { pagerState.animateScrollToPage(pagerState.currentPage + 1) }
                         }
                     },
-                    modifier = Modifier.fillMaxWidth().height(52.dp),
-                    shape = DS.controlShape,
-                    colors = ButtonDefaults.buttonColors(containerColor = DS.accent, contentColor = Color.White),
-                ) {
-                    Text(
-                        text = when {
-                            courseLocked || !isLast -> StringStore.text(context, "course.continue", language)
-                                .takeIf { it != "course.continue" } ?: "Continuer"
-                            course.hasQuiz -> StringStore.text(context, "course.quiz", language)
-                                .takeIf { it != "course.quiz" } ?: "Quiz"
-                            else -> StringStore.text(context, "course.finish", language)
-                                .takeIf { it != "course.finish" } ?: "Terminer"
-                        },
-                        fontFamily = PlusJakartaSans,
-                        fontWeight = FontWeight.SemiBold,
-                        fontSize = 16.sp,
-                    )
-                }
+                )
             }
         }
 
