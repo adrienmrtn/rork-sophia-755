@@ -2,6 +2,7 @@ package app.rork.sophia.ui.social
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -19,6 +20,8 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.LinearProgressIndicator
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -46,6 +49,7 @@ import app.rork.sophia.data.FriendsLeaderboardPeriod
 import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
+import app.rork.sophia.ui.components.CircleIconButton
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
@@ -104,7 +108,7 @@ fun FriendsScreen(
             .padding(DS.Space.l),
     ) {
         Row(verticalAlignment = Alignment.CenterVertically) {
-            TextButton(onClick = onBack) { Text("←") }
+            CircleIconButton(icon = Icons.AutoMirrored.Filled.ArrowBack, onClick = onBack)
             Text(
                 StringStore.text(context, "friends.title", language),
                 style = SophiaTypography.titleLarge,
@@ -191,6 +195,7 @@ fun FriendsScreen(
                         .fillMaxWidth()
                         .padding(vertical = 6.dp)
                         .clip(DS.controlShape)
+            .border(1.dp, DS.hairline, DS.controlShape)
                         .background(DS.surface)
                         .padding(12.dp),
                     horizontalArrangement = Arrangement.SpaceBetween,
@@ -283,6 +288,7 @@ private fun LeaderboardRow(
         modifier = Modifier
             .fillMaxWidth()
             .clip(DS.controlShape)
+            .border(1.dp, DS.hairline, DS.controlShape)
             .background(if (row.is_me) DS.accentTint else DS.surface)
             .clickable(enabled = !row.is_me) { onOpenFriend(row) }
             .padding(14.dp),
@@ -322,7 +328,7 @@ private fun FriendProfileSheet(
             .padding(DS.Space.l),
     ) {
         Row(verticalAlignment = Alignment.CenterVertically) {
-            TextButton(onClick = onBack) { Text("←") }
+            CircleIconButton(icon = Icons.AutoMirrored.Filled.ArrowBack, onClick = onBack)
             Text("@${stats.handle}", style = SophiaTypography.titleLarge)
         }
         Spacer(Modifier.height(24.dp))
@@ -436,6 +442,7 @@ private fun PeriodChip(label: String, selected: Boolean, onClick: () -> Unit) {
         color = if (selected) DS.accent else DS.inkSecondary,
         modifier = Modifier
             .clip(DS.controlShape)
+            .border(1.dp, DS.hairline, DS.controlShape)
             .background(if (selected) DS.accentTint else DS.surface)
             .clickable(onClick = onClick)
             .padding(horizontal = 14.dp, vertical = 8.dp),

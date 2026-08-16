@@ -3,6 +3,7 @@ package app.rork.sophia.ui.home
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.spring
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.gestures.detectVerticalDragGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -21,10 +22,12 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.LocalFireDepartment
+import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
@@ -48,7 +51,6 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.IntOffset
@@ -63,9 +65,15 @@ import app.rork.sophia.data.StringStore
 import app.rork.sophia.data.TutorialFlags
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.CourseSummary
+import app.rork.sophia.ui.components.CircleIconButton
 import app.rork.sophia.ui.components.CourseImage
+import app.rork.sophia.ui.components.Pill
+import app.rork.sophia.ui.components.SophiaPrimaryButton
+import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.components.FirstOpenExplanation
 import app.rork.sophia.ui.theme.DS
+import app.rork.sophia.ui.theme.PlusJakartaSans
+import app.rork.sophia.ui.theme.SophiaTypography
 import kotlin.math.roundToInt
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -143,7 +151,7 @@ fun HomeTikTokScreen(
             ) {
                 Text(
                     text = "Sophia",
-                    fontFamily = FontFamily.SansSerif,
+                    fontFamily = PlusJakartaSans,
                     fontWeight = FontWeight.Bold,
                     fontSize = 22.sp,
                     color = DS.ink,
@@ -164,7 +172,7 @@ fun HomeTikTokScreen(
                     )
                     Text(
                         text = "$streak",
-                        fontFamily = FontFamily.SansSerif,
+                        fontFamily = PlusJakartaSans,
                         fontWeight = FontWeight.SemiBold,
                         fontSize = 15.sp,
                         color = DS.ink,
@@ -175,7 +183,7 @@ fun HomeTikTokScreen(
                             if (streak <= 1) "common.streak.day" else "common.streak.days",
                             language,
                         ),
-                        fontFamily = FontFamily.SansSerif,
+                        fontFamily = PlusJakartaSans,
                         fontWeight = FontWeight.Medium,
                         fontSize = 12.sp,
                         color = DS.inkSecondary,
@@ -186,7 +194,7 @@ fun HomeTikTokScreen(
 
             if (!catalogReady) {
                 Box(modifier = Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {
-                    Text("…", fontFamily = FontFamily.SansSerif, color = DS.inkSecondary)
+                    CircularProgressIndicator(color = DS.accent)
                 }
             } else if (cards.isEmpty()) {
                 Box(modifier = Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {
@@ -194,7 +202,7 @@ fun HomeTikTokScreen(
                         text = StringStore.text(context, "home.allCaughtUp", language)
                             .takeIf { it != "home.allCaughtUp" }
                             ?: "Tous les cours sont faits — bravo !",
-                        fontFamily = FontFamily.SansSerif,
+                        fontFamily = PlusJakartaSans,
                         color = DS.ink,
                     )
                 }
@@ -361,116 +369,95 @@ private fun TikTokCourseCard(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(horizontal = DS.Space.l)
-            .clip(DS.cardShape)
-            .background(DS.surface)
+            .padding(horizontal = DS.Space.m, vertical = DS.Space.s)
+            .sophiaCard(elevation = 10.dp)
+            .padding(DS.Space.l),
+        verticalArrangement = Arrangement.spacedBy(14.dp),
     ) {
         Box(
             modifier = Modifier
                 .fillMaxWidth()
                 .weight(1f)
-                .clip(RoundedCornerShape(topStart = 22.dp, topEnd = 22.dp)),
+                .clip(DS.controlShape)
+                .background(DS.surfaceMuted)
+                .border(1.dp, DS.hairline, DS.controlShape),
         ) {
             CourseImage(
                 courseId = course.id,
                 modifier = Modifier.fillMaxSize(),
                 contentScale = ContentScale.Crop,
             )
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .background(
-                        Brush.verticalGradient(
-                            listOf(Color.Transparent, Color.Black.copy(alpha = 0.55f)),
-                        ),
-                    ),
-            )
             Row(
                 modifier = Modifier
                     .align(Alignment.TopEnd)
-                    .padding(8.dp),
-                horizontalArrangement = Arrangement.spacedBy(4.dp),
+                    .padding(12.dp),
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
             ) {
-                IconButton(
+                CircleIconButton(
+                    icon = Icons.Filled.Share,
                     onClick = onShare,
-                    modifier = Modifier.background(Color.Black.copy(alpha = 0.35f), CircleShape),
-                ) {
-                    Icon(Icons.Filled.Share, contentDescription = null, tint = Color.White)
-                }
-                IconButton(
-                    onClick = onToggleFavorite,
-                    modifier = Modifier.background(Color.Black.copy(alpha = 0.35f), CircleShape),
-                ) {
-                    Icon(
-                        if (isFavorite) Icons.Filled.Favorite else Icons.Filled.FavoriteBorder,
-                        contentDescription = null,
-                        tint = if (isFavorite) Color(0xFFFF5A7A) else Color.White,
-                    )
-                }
-            }
-            Column(
-                modifier = Modifier
-                    .align(Alignment.BottomStart)
-                    .padding(DS.Space.m),
-            ) {
-                Text(
-                    text = course.subjectEnum.name.lowercase().replaceFirstChar { it.titlecase() },
-                    color = Color.White.copy(alpha = 0.85f),
-                    fontFamily = FontFamily.SansSerif,
-                    fontSize = 13.sp,
-                    fontWeight = FontWeight.Medium,
+                    size = 38.dp,
                 )
-                Spacer(Modifier.height(4.dp))
-                Text(
-                    text = course.title,
-                    color = Color.White,
-                    fontFamily = FontFamily.SansSerif,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 24.sp,
-                    maxLines = 3,
-                    overflow = TextOverflow.Ellipsis,
+                CircleIconButton(
+                    icon = if (isFavorite) Icons.Filled.Favorite else Icons.Filled.FavoriteBorder,
+                    onClick = onToggleFavorite,
+                    size = 38.dp,
+                    tint = if (isFavorite) DS.accent else DS.inkSecondary,
                 )
             }
         }
 
-        Column(modifier = Modifier.padding(DS.Space.m)) {
-            Text(
-                text = course.description,
-                fontFamily = FontFamily.SansSerif,
-                fontSize = 14.sp,
-                color = DS.inkSecondary,
-                maxLines = 3,
-                overflow = TextOverflow.Ellipsis,
+        Row(
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Pill(
+                text = StringStore.text(
+                    context,
+                    "subject.${course.subjectEnum.storageKey}.short",
+                    language,
+                ),
+                uppercase = true,
+                borderColor = DS.accentSoft.copy(alpha = 0.2f),
             )
-            Spacer(Modifier.height(DS.Space.s))
             Row(
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(6.dp),
+                horizontalArrangement = Arrangement.spacedBy(5.dp),
             ) {
-                Icon(Icons.Filled.Visibility, null, tint = DS.inkTertiary, modifier = Modifier.size(16.dp))
+                Icon(
+                    Icons.Filled.Visibility,
+                    contentDescription = null,
+                    tint = DS.inkTertiary,
+                    modifier = Modifier.size(13.dp),
+                )
                 Text(
                     text = readsCountShort(course.id),
-                    fontFamily = FontFamily.SansSerif,
-                    fontSize = 12.sp,
+                    fontFamily = PlusJakartaSans,
+                    fontWeight = FontWeight.SemiBold,
+                    fontSize = 11.sp,
                     color = DS.inkTertiary,
                 )
             }
-            Spacer(Modifier.height(DS.Space.m))
-            Button(
-                onClick = onStart,
-                modifier = Modifier.fillMaxWidth().height(52.dp),
-                shape = DS.controlShape,
-                colors = ButtonDefaults.buttonColors(containerColor = DS.accent, contentColor = Color.White),
-            ) {
-                Text(
-                    text = StringStore.text(context, "home.start", language)
-                        .takeIf { it != "home.start" } ?: "Commencer",
-                    fontFamily = FontFamily.SansSerif,
-                    fontWeight = FontWeight.SemiBold,
-                    fontSize = 16.sp,
-                )
-            }
         }
+
+        Text(
+            text = course.title,
+            style = SophiaTypography.titleMedium.copy(fontSize = 21.sp, lineHeight = 27.sp),
+            maxLines = 2,
+            overflow = TextOverflow.Ellipsis,
+        )
+        Text(
+            text = course.description,
+            style = SophiaTypography.bodyMedium.copy(lineHeight = 21.sp),
+            maxLines = 4,
+            overflow = TextOverflow.Ellipsis,
+        )
+        SophiaPrimaryButton(
+            text = StringStore.text(context, "home.start", language)
+                .takeIf { it != "home.start" } ?: "Commencer",
+            onClick = onStart,
+            leadingIcon = Icons.Filled.PlayArrow,
+        )
     }
 }
 

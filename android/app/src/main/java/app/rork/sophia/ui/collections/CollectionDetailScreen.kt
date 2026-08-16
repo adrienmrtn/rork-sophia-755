@@ -36,7 +36,10 @@ import app.rork.sophia.data.rememberCourseSummaries
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.LearningCollection
 import app.rork.sophia.domain.UserProgress
+import app.rork.sophia.ui.components.CircleIconButton
 import app.rork.sophia.ui.components.CourseImage
+import app.rork.sophia.ui.components.softPress
+import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.SophiaTypography
 
@@ -68,14 +71,7 @@ fun CollectionDetailScreen(
                 .padding(horizontal = DS.Space.s, vertical = DS.Space.s),
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            IconButton(
-                onClick = onBack,
-                modifier = Modifier
-                    .clip(CircleShape)
-                    .background(DS.surface),
-            ) {
-                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = null, tint = DS.inkSecondary)
-            }
+            CircleIconButton(icon = Icons.AutoMirrored.Filled.ArrowBack, onClick = onBack)
             Spacer(Modifier.weight(1f))
             Text(
                 text = StringStore.text(context, "collections.progress", language, done, collection.courseIds.size),
@@ -116,9 +112,11 @@ fun CollectionDetailScreen(
             val completed = progress.courseProgress[courseId]?.isCompleted == true
             Row(
                 modifier = Modifier
+                    .padding(horizontal = DS.Space.l)
                     .fillMaxWidth()
-                    .clickable { onOpenCourse(courseId) }
-                    .padding(horizontal = DS.Space.l, vertical = 10.dp),
+                    .softPress(onClick = { onOpenCourse(courseId) })
+                    .sophiaCard(shape = DS.controlShape, elevation = 3.dp)
+                    .padding(10.dp),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(14.dp),
             ) {
@@ -158,8 +156,8 @@ fun CollectionDetailScreen(
             if (index != collection.courseIds.lastIndex) {
                 Box(
                     modifier = Modifier
-                        .padding(start = 45.dp)
-                        .size(width = 2.dp, height = 12.dp)
+                        .padding(start = DS.Space.l + 35.dp)
+                        .size(width = 2.dp, height = 14.dp)
                         .background(DS.hairline),
                 )
             }

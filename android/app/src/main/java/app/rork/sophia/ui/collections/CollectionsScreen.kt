@@ -43,6 +43,8 @@ import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.LearningCollection
 import app.rork.sophia.domain.UserProgress
 import app.rork.sophia.ui.components.FirstOpenExplanation
+import app.rork.sophia.ui.components.softPress
+import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.SophiaTypography
 
@@ -157,10 +159,8 @@ private fun FeaturedCollectionCard(
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(DS.cardShape)
-            .background(DS.surface)
-            .border(1.dp, DS.hairline, DS.cardShape)
-            .clickable(onClick = onClick),
+            .softPress(onClick = onClick)
+            .sophiaCard(elevation = 8.dp),
     ) {
         CollectionCover(
             collection = collection,
@@ -213,10 +213,8 @@ private fun CollectionRowCard(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(DS.controlShape)
-            .background(DS.surface)
-            .border(1.dp, DS.hairline, DS.controlShape)
-            .clickable(onClick = onClick)
+            .softPress(onClick = onClick)
+            .sophiaCard(shape = DS.controlShape, elevation = 4.dp)
             .padding(12.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(14.dp),
