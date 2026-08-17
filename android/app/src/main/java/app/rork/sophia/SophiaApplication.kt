@@ -54,6 +54,9 @@ class SophiaApplication : Application(), ImageLoaderFactory {
         progressSyncService = ProgressSyncService(authService)
         progressSyncService.attach(progressManager)
         socialService = SocialService(authService)
+        progressManager.onGlobalXPAwarded = { amount ->
+            appScope.launch { socialService.logXPEvent(amount, "progress") }
+        }
         discountManager = DiscountOfferManager(this)
         analytics = AnalyticsService(this)
         tutorialFlags = TutorialFlags(this)

@@ -56,6 +56,7 @@ import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.UserProgress
 import app.rork.sophia.ui.components.CircleIconButton
+import app.rork.sophia.ui.components.ConfirmDialog
 import app.rork.sophia.ui.components.ScreenTitle
 import app.rork.sophia.ui.components.SectionLabel
 import app.rork.sophia.ui.components.TintedIconBox
@@ -361,28 +362,4 @@ private fun SettingsRow(
             )
         }
     }
-}
-
-@Composable
-private fun ConfirmDialog(
-    title: String,
-    message: String,
-    confirm: String,
-    cancel: String,
-    onConfirm: () -> Unit,
-    onDismiss: () -> Unit,
-) {
-    AlertDialog(
-        onDismissRequest = onDismiss,
-        containerColor = DS.surface,
-        shape = DS.cardShape,
-        title = { Text(title, style = SophiaTypography.titleMedium) },
-        text = { Text(message, style = SophiaTypography.bodyMedium) },
-        confirmButton = {
-            TextButton(onClick = onConfirm) { Text(confirm, color = DS.danger) }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) { Text(cancel, color = DS.inkSecondary) }
-        },
-    )
 }

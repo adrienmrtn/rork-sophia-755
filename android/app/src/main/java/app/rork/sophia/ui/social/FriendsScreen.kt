@@ -33,13 +33,17 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.SophiaApplication
@@ -47,9 +51,11 @@ import app.rork.sophia.data.FriendLeaderboardEntry
 import app.rork.sophia.data.FriendPublicStats
 import app.rork.sophia.data.FriendsLeaderboardPeriod
 import app.rork.sophia.data.ProgressManager
+import app.rork.sophia.data.SendRequestOutcome
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.ui.components.CircleIconButton
+import app.rork.sophia.ui.components.ConfirmDialog
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
@@ -59,6 +65,7 @@ import kotlinx.coroutines.launch
 fun FriendsScreen(
     modifier: Modifier = Modifier,
     language: AppLanguage = AppLanguage.FRENCH,
+    initialFriendUserId: String? = null,
     onBack: () -> Unit,
 ) {
     val context = LocalContext.current
@@ -69,11 +76,13 @@ fun FriendsScreen(
     val pending by social.pendingRequests.collectAsState()
     val leaderboard by social.leaderboard.collectAsState()
     val period by social.period.collectAsState()
-    val error by social.error.collectAsState()
+    val errorKey by social.errorKey.collectAsState()
     val signedIn by app.authService.userId.collectAsState()
 
     var handleInput by remember { mutableStateOf("") }
     var addInput by remember { mutableStateOf("") }
+    var noticeKey by remember { mutableStateOf<String?>(null) }
+    var sending by remember { mutableStateOf(false) }
     var friendStats by remember { mutableStateOf<FriendPublicStats?>(null) }
 
     LaunchedEffect(handle) {
@@ -85,14 +94,19 @@ fun FriendsScreen(
     LaunchedEffect(period) {
         if (signedIn != null) social.refreshLeaderboard()
     }
+    // Opened by tapping a friend on the profile tab: land straight on their card.
+    LaunchedEffect(initialFriendUserId) {
+        val id = initialFriendUserId ?: return@LaunchedEffect
+        friendStats = social.friendStats(id)
+    }
 
-    if (friendStats != null) {
+    friendStats?.let { stats ->
         FriendProfileSheet(
             language = language,
-            stats = friendStats!!,
+            stats = stats,
             onRemove = {
                 scope.launch {
-                    social.removeFriend(friendStats!!.user_id)
+                    social.removeFriend(stats.user_id)
                     friendStats = null
                 }
             },
@@ -128,91 +142,179 @@ fun FriendsScreen(
             return
         }
 
+        // Incoming requests first: they are the only thing here that expects an answer.
+        if (pending.isNotEmpty()) {
+            Text(
+                StringStore.text(context, "friends.requests.title", language),
+                style = SophiaTypography.labelMedium,
+                color = DS.accentSoft,
+            )
+            Spacer(Modifier.height(6.dp))
+            pending.forEach { req ->
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(bottom = 8.dp)
+                        .clip(DS.controlShape)
+                        .border(1.dp, DS.accentSoft, DS.controlShape)
+                        .background(DS.accentTint)
+                        .padding(start = 14.dp, end = 4.dp, top = 4.dp, bottom = 4.dp),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Text(
+                        "@${req.handle}",
+                        style = SophiaTypography.bodyLarge,
+                        modifier = Modifier.weight(1f),
+                    )
+                    TextButton(
+                        onClick = { scope.launch { social.respondToRequest(req.request_id, true) } },
+                    ) {
+                        Text(
+                            StringStore.text(context, "friends.requests.accept", language),
+                            color = DS.accent,
+                            fontWeight = FontWeight.SemiBold,
+                        )
+                    }
+                    TextButton(
+                        onClick = { scope.launch { social.respondToRequest(req.request_id, false) } },
+                    ) {
+                        Text(
+                            StringStore.text(context, "friends.requests.decline", language),
+                            color = DS.inkTertiary,
+                        )
+                    }
+                }
+            }
+            Spacer(Modifier.height(8.dp))
+        }
+
         Text(
-            StringStore.text(context, "friends.handle.edit.title", language),
+            StringStore.text(context, "friends.add.title", language),
             style = SophiaTypography.labelMedium,
         )
+        Text(
+            StringStore.text(context, "friends.add.requestSubtitle", language),
+            style = SophiaTypography.bodyMedium,
+            color = DS.inkSecondary,
+        )
+        Spacer(Modifier.height(6.dp))
         Row(
             horizontalArrangement = Arrangement.spacedBy(8.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
             OutlinedTextField(
-                value = handleInput,
-                onValueChange = { handleInput = it },
-                modifier = Modifier.weight(1f),
-                placeholder = { Text(handle?.let { "@$it" } ?: "@pseudo") },
-                singleLine = true,
-            )
-            Button(
-                onClick = { scope.launch { social.updateHandle(handleInput) } },
-                colors = ButtonDefaults.buttonColors(containerColor = DS.accent),
-            ) {
-                Text(StringStore.text(context, "friends.handle.save", language), color = androidx.compose.ui.graphics.Color.White)
-            }
-        }
-
-        Spacer(Modifier.height(16.dp))
-        Text(StringStore.text(context, "friends.add.title", language), style = SophiaTypography.labelMedium)
-        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            OutlinedTextField(
                 value = addInput,
-                onValueChange = { addInput = it },
+                onValueChange = {
+                    addInput = it
+                    noticeKey = null
+                    social.clearError()
+                },
                 modifier = Modifier.weight(1f),
-                placeholder = { Text("@handle") },
+                placeholder = {
+                    Text("@" + StringStore.text(context, "friends.handle.placeholder", language))
+                },
+                prefix = { Text("@") },
                 singleLine = true,
+                keyboardOptions = KeyboardOptions(
+                    autoCorrectEnabled = false,
+                    capitalization = KeyboardCapitalization.None,
+                    imeAction = ImeAction.Send,
+                ),
             )
             Button(
                 onClick = {
                     scope.launch {
+                        sending = true
                         social.sendFriendRequest(addInput)
-                        addInput = ""
+                            .onSuccess { outcome ->
+                                addInput = ""
+                                noticeKey = when (outcome) {
+                                    SendRequestOutcome.AUTO_ACCEPTED -> "friends.request.autoAccepted"
+                                    SendRequestOutcome.SENT -> "friends.request.sent"
+                                }
+                            }
+                        sending = false
                     }
                 },
+                enabled = !sending && addInput.isNotBlank(),
                 colors = ButtonDefaults.buttonColors(containerColor = DS.ink),
             ) {
                 Text(
                     StringStore.text(context, "friends.add.short", language),
-                    color = androidx.compose.ui.graphics.Color.White,
+                    color = Color.White,
                 )
             }
         }
 
-        if (error != null) {
+        noticeKey?.let { key ->
             Text(
-                error!!,
+                StringStore.text(context, key, language),
+                color = DS.success,
+                style = SophiaTypography.labelMedium,
+                modifier = Modifier.padding(top = 8.dp),
+            )
+        }
+        errorKey?.let { key ->
+            Text(
+                StringStore.text(context, key, language),
                 color = DS.danger,
                 style = SophiaTypography.labelMedium,
                 modifier = Modifier.padding(top = 8.dp),
             )
         }
 
-        if (pending.isNotEmpty()) {
-            Spacer(Modifier.height(16.dp))
-            Text(StringStore.text(context, "friends.requests.title", language), style = SophiaTypography.titleMedium)
-            pending.forEach { req ->
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(vertical = 6.dp)
-                        .clip(DS.controlShape)
-            .border(1.dp, DS.hairline, DS.controlShape)
-                        .background(DS.surface)
-                        .padding(12.dp),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically,
-                ) {
-                    Text("@${req.handle}", style = SophiaTypography.bodyLarge)
-                    Row {
-                        TextButton(onClick = { scope.launch { social.respondToRequest(req.request_id, true) } }) {
-                            Text(StringStore.text(context, "friends.requests.accept", language))
-                        }
-                        TextButton(onClick = { scope.launch { social.respondToRequest(req.request_id, false) } }) {
-                            Text(StringStore.text(context, "friends.requests.decline", language))
-                        }
-                    }
-                }
+        Spacer(Modifier.height(16.dp))
+        Text(
+            StringStore.text(context, "friends.handle.edit.title", language),
+            style = SophiaTypography.labelMedium,
+        )
+        Text(
+            StringStore.text(context, "friends.handle.edit.subtitle", language),
+            style = SophiaTypography.bodyMedium,
+            color = DS.inkSecondary,
+        )
+        Spacer(Modifier.height(6.dp))
+        Row(
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            OutlinedTextField(
+                value = handleInput,
+                onValueChange = {
+                    handleInput = it
+                    noticeKey = null
+                    social.clearError()
+                },
+                modifier = Modifier.weight(1f),
+                placeholder = {
+                    Text(StringStore.text(context, "friends.handle.placeholder", language))
+                },
+                prefix = { Text("@") },
+                singleLine = true,
+                keyboardOptions = KeyboardOptions(
+                    autoCorrectEnabled = false,
+                    capitalization = KeyboardCapitalization.None,
+                    imeAction = ImeAction.Done,
+                ),
+            )
+            Button(
+                onClick = { scope.launch { social.updateHandle(handleInput) } },
+                enabled = handleInput.isNotBlank() && handleInput != handle,
+                colors = ButtonDefaults.buttonColors(containerColor = DS.accent),
+            ) {
+                Text(
+                    StringStore.text(context, "friends.handle.save", language),
+                    color = Color.White,
+                )
             }
         }
+        Text(
+            StringStore.text(context, "friends.handle.rules", language),
+            style = SophiaTypography.labelMedium.copy(fontSize = 11.sp),
+            color = DS.inkTertiary,
+            modifier = Modifier.padding(top = 4.dp),
+        )
 
         Spacer(Modifier.height(16.dp))
         FriendsLeaderboardSection(
@@ -251,7 +353,8 @@ fun FriendsLeaderboardSection(
             ) { onPeriodChange(FriendsLeaderboardPeriod.ALL) }
         }
         Spacer(Modifier.height(8.dp))
-        if (leaderboard.isEmpty()) {
+        // The RPC always returns the caller, so a solo row is still "no friends yet".
+        if (leaderboard.none { !it.is_me }) {
             Text(
                 StringStore.text(context, "friends.empty.title", language),
                 style = SophiaTypography.titleMedium,
@@ -320,6 +423,21 @@ private fun FriendProfileSheet(
     val context = LocalContext.current
     val level = ProgressManager.globalLevelProgress(stats.global_xp)
     val progress = if (level.xpForLevel == 0) 0f else level.xpIntoLevel.toFloat() / level.xpForLevel
+    var confirmRemove by remember { mutableStateOf(false) }
+
+    if (confirmRemove) {
+        ConfirmDialog(
+            title = StringStore.text(context, "friends.remove.title", language),
+            message = StringStore.text(context, "friends.remove.message", language),
+            confirm = StringStore.text(context, "friends.remove.confirm", language),
+            cancel = StringStore.text(context, "settings.reset.alert.cancel", language),
+            onConfirm = {
+                confirmRemove = false
+                onRemove()
+            },
+            onDismiss = { confirmRemove = false },
+        )
+    }
 
     Column(
         modifier = Modifier
@@ -343,7 +461,7 @@ private fun FriendProfileSheet(
             GlobalRankRing(progress = progress, size = 88.dp)
             Spacer(Modifier.height(12.dp))
             Text(
-                level.rank.storageKey.uppercase(),
+                StringStore.text(context, "globalRank.${level.rank.storageKey}", language).uppercase(),
                 style = SophiaTypography.labelLarge,
                 color = DS.accentSoft,
                 letterSpacing = 2.sp,
@@ -384,7 +502,7 @@ private fun FriendProfileSheet(
         }
         Spacer(Modifier.weight(1f))
         Button(
-            onClick = onRemove,
+            onClick = { confirmRemove = true },
             modifier = Modifier.fillMaxWidth().height(48.dp),
             shape = DS.controlShape,
             colors = ButtonDefaults.buttonColors(containerColor = DS.dangerTint, contentColor = DS.danger),

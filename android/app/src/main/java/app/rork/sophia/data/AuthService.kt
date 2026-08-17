@@ -137,6 +137,12 @@ class AuthService(private val appContext: Context) {
     suspend fun signOut() {
         runCatching { SupabaseManager.client.auth.signOut() }
         _userId.value = null
+        // Handle, requests and leaderboard belong to the account that just left.
+        runCatching {
+            (appContext.applicationContext as? app.rork.sophia.SophiaApplication)
+                ?.socialService
+                ?.clearLocalState()
+        }
         if (Purchases.isConfigured) {
             runCatching { Purchases.sharedInstance.logOut() }
         }

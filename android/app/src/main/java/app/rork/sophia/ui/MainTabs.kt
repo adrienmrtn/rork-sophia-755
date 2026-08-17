@@ -95,6 +95,7 @@ fun MainTabs(
     var autoSwipeCourseId by remember { mutableStateOf<String?>(null) }
     var paywall by remember { mutableStateOf<PaywallContext?>(null) }
     var overlay by remember { mutableStateOf<OverlayScreen?>(null) }
+    var pendingFriendUserId by remember { mutableStateOf<String?>(null) }
     // Where "back" lands: settings pushes onto itself, tabs open overlays directly.
     var overlayParent by remember { mutableStateOf<OverlayScreen?>(null) }
     var rewardSteps by remember { mutableStateOf<List<PostCompletionRewardStep>?>(null) }
@@ -286,7 +287,14 @@ fun MainTabs(
             return
         }
         overlay == OverlayScreen.Friends -> {
-            FriendsScreen(language = language, onBack = { closeOverlay() })
+            FriendsScreen(
+                language = language,
+                initialFriendUserId = pendingFriendUserId,
+                onBack = {
+                    pendingFriendUserId = null
+                    closeOverlay()
+                },
+            )
             return
         }
         overlay == OverlayScreen.Feedback -> {
@@ -450,7 +458,10 @@ fun MainTabs(
                     onOpenCourse = { openCourseById(it) },
                     onOpenSettings = { overlay = OverlayScreen.Settings },
                     onShowPaywall = { paywall = PaywallContext.DEBLOQUER_COURS },
-                    onOpenFriends = { overlay = OverlayScreen.Friends },
+                    onOpenFriends = { friendUserId ->
+                        pendingFriendUserId = friendUserId
+                        overlay = OverlayScreen.Friends
+                    },
                 )
             }
         }
