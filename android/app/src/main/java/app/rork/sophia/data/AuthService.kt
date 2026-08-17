@@ -94,7 +94,22 @@ class AuthService(private val appContext: Context) {
     private fun linkRevenueCat() {
         val uid = _userId.value ?: return
         if (Purchases.isConfigured) {
-            runCatching { Purchases.sharedInstance.logIn(uid) }
+            // Same app user id as iOS, so a subscription bought there is recognised here.
+            // StoreViewModel listens for customer-info updates, which is how the entitlement
+            // arrives after this call.
+            runCatching {
+                Purchases.sharedInstance.logIn(
+                    uid,
+                    object : com.revenuecat.purchases.interfaces.LogInCallback {
+                        override fun onReceived(
+                            customerInfo: com.revenuecat.purchases.CustomerInfo,
+                            created: Boolean,
+                        ) = Unit
+
+                        override fun onError(error: com.revenuecat.purchases.PurchasesError) = Unit
+                    },
+                )
+            }
         }
         // Align Mixpanel identity with RevenueCat / Supabase user id.
         runCatching {

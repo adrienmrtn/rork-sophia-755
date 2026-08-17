@@ -4,7 +4,9 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import app.rork.sophia.AppConfig
+import app.rork.sophia.BuildConfig
 import com.revenuecat.purchases.CustomerInfo
+import com.revenuecat.purchases.LogLevel
 import com.revenuecat.purchases.EntitlementInfo
 import com.revenuecat.purchases.Offering
 import com.revenuecat.purchases.Offerings
@@ -15,6 +17,7 @@ import com.revenuecat.purchases.PurchasesConfiguration
 import com.revenuecat.purchases.PurchasesError
 import com.revenuecat.purchases.getOfferingsWith
 import com.revenuecat.purchases.interfaces.ReceiveCustomerInfoCallback
+import com.revenuecat.purchases.interfaces.UpdatedCustomerInfoListener
 import com.revenuecat.purchases.paywalls.events.CustomPaywallImpressionParams
 import com.revenuecat.purchases.restorePurchasesWith
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -88,6 +91,7 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
     private fun configureIfNeeded() {
         if (Purchases.isConfigured) {
             _configured.value = true
+            observeCustomerInfo()
             return
         }
         val key = AppConfig.revenueCatApiKey
@@ -96,10 +100,26 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
             _configured.value = false
             return
         }
+        if (BuildConfig.DEBUG) {
+            Purchases.logLevel = LogLevel.DEBUG
+        }
         Purchases.configure(
             PurchasesConfiguration.Builder(getApplication(), key).build(),
         )
         _configured.value = true
+        observeCustomerInfo()
+    }
+
+    /**
+     * The entitlement can change without this app doing anything: the subscription may have
+     * been bought on iOS and arrive when [Purchases.logIn] attaches the Supabase user id, or
+     * be renewed or cancelled while the app sits in the background. Listening keeps Premium
+     * in sync instead of waiting for the next manual refresh.
+     */
+    private fun observeCustomerInfo() {
+        Purchases.sharedInstance.updatedCustomerInfoListener = UpdatedCustomerInfoListener { info ->
+            applyCustomerInfo(info)
+        }
     }
 
     fun refresh() {
