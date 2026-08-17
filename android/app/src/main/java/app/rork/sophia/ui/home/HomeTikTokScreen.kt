@@ -23,7 +23,6 @@ import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.LocalFireDepartment
 import androidx.compose.material.icons.filled.PlayArrow
-import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -60,7 +59,6 @@ import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.CourseImagePrefetch
 import app.rork.sophia.data.DeviceCapabilities
-import app.rork.sophia.data.ShareHelper
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.data.TutorialFlags
 import app.rork.sophia.domain.AppLanguage
@@ -229,7 +227,6 @@ fun HomeTikTokScreen(
                         language = language,
                         isFavorite = course.id in favoriteIds,
                         onToggleFavorite = { onToggleFavorite(course.id) },
-                        onShare = { ShareHelper.shareCourse(context, course.id, course.title) },
                         onStart = { onStartCourse(course.id) },
                     )
                 }
@@ -361,7 +358,6 @@ private fun TikTokCourseCard(
     language: AppLanguage,
     isFavorite: Boolean,
     onToggleFavorite: () -> Unit,
-    onShare: () -> Unit,
     onStart: () -> Unit,
 ) {
     val context = LocalContext.current
@@ -386,24 +382,15 @@ private fun TikTokCourseCard(
                 modifier = Modifier.fillMaxSize(),
                 contentScale = ContentScale.Crop,
             )
-            Row(
+            CircleIconButton(
+                icon = if (isFavorite) Icons.Filled.Favorite else Icons.Filled.FavoriteBorder,
+                onClick = onToggleFavorite,
+                size = 38.dp,
+                tint = if (isFavorite) DS.accent else DS.inkSecondary,
                 modifier = Modifier
                     .align(Alignment.TopEnd)
                     .padding(12.dp),
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-            ) {
-                CircleIconButton(
-                    icon = Icons.Filled.Share,
-                    onClick = onShare,
-                    size = 38.dp,
-                )
-                CircleIconButton(
-                    icon = if (isFavorite) Icons.Filled.Favorite else Icons.Filled.FavoriteBorder,
-                    onClick = onToggleFavorite,
-                    size = 38.dp,
-                    tint = if (isFavorite) DS.accent else DS.inkSecondary,
-                )
-            }
+            )
         }
 
         Row(
