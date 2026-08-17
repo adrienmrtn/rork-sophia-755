@@ -1,9 +1,5 @@
 package app.rork.sophia.ui.onboarding
 
-import android.Manifest
-import android.os.Build
-import androidx.activity.compose.rememberLauncherForActivityResult
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
@@ -36,11 +32,13 @@ import app.rork.sophia.billing.StoreViewModel
 import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.DeviceCapabilities
 import app.rork.sophia.data.GlossaryStore
+import app.rork.sophia.data.InAppReviewHelper
 import app.rork.sophia.data.TrialReminderScheduler
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.CourseSummary
 import app.rork.sophia.ui.paywall.OnboardingPaywallFlow
 import app.rork.sophia.ui.theme.DS
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 private enum class OnboardingStep(val analyticsName: String) {
@@ -137,25 +135,11 @@ fun OnboardingV2Screen(
         }
     }
 
-    val notificationPermission = rememberLauncherForActivityResult(
-        ActivityResultContracts.RequestPermission(),
-    ) {
+    fun advanceFromReminder() {
         if (isPremium) finish(true)
         else {
             sawPaywall = true
             step = OnboardingStep.Paywall
-        }
-    }
-
-    fun advanceFromReminder() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            notificationPermission.launch(Manifest.permission.POST_NOTIFICATIONS)
-        } else {
-            if (isPremium) finish(true)
-            else {
-                sawPaywall = true
-                step = OnboardingStep.Paywall
-            }
         }
     }
 
@@ -217,8 +201,16 @@ fun OnboardingV2Screen(
                     onContinue = { goTo(OnboardingStep.Transform) },
                 )
                 OnboardingStep.Transform -> TransformStep(language) { goTo(OnboardingStep.Review) }
-                OnboardingStep.Review -> ReviewStep(language, richMotion) {
-                    goTo(OnboardingStep.Personalize)
+                OnboardingStep.Review -> {
+                    // Ask for the Play rating on the page that already talks about ratings,
+                    // once the entrance animation has settled.
+                    LaunchedEffect(Unit) {
+                        delay(900)
+                        InAppReviewHelper.requestOnce(context, app.progressManager)
+                    }
+                    ReviewStep(language, richMotion) {
+                        goTo(OnboardingStep.Personalize)
+                    }
                 }
                 OnboardingStep.Personalize -> PersonalizeStep(language) { goTo(OnboardingStep.Swipe) }
                 OnboardingStep.Swipe -> SwipeCoursesStep(
