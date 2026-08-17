@@ -81,7 +81,6 @@ fun MainTabs(
     storeViewModel: StoreViewModel,
     deepLinkCourseId: String?,
     onDeepLinkConsumed: () -> Unit,
-    onResetOnboarding: () -> Unit,
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
@@ -283,7 +282,6 @@ fun MainTabs(
                 onOpenTerms = { openFromSettings(OverlayScreen.Terms) },
                 onOpenPrivacy = { openFromSettings(OverlayScreen.Privacy) },
                 onRestorePurchases = { storeViewModel.restore() },
-                onResetOnboarding = onResetOnboarding,
             )
             return
         }

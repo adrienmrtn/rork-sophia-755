@@ -12,13 +12,6 @@ class OnboardingStore(context: Context) {
         prefs.edit().putBoolean(KEY, true).apply()
     }
 
-    fun reset() {
-        prefs.edit()
-            .putBoolean(KEY, false)
-            .putBoolean("sophia_special_offer_seen", false)
-            .apply()
-    }
-
     companion object {
         private const val KEY = "sophia_onboarding_completed"
     }

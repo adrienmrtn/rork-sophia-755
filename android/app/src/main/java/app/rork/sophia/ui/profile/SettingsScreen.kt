@@ -82,14 +82,12 @@ fun SettingsScreen(
     onOpenTerms: () -> Unit,
     onOpenPrivacy: () -> Unit,
     onRestorePurchases: () -> Unit,
-    onResetOnboarding: () -> Unit,
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
     val scope = rememberCoroutineScope()
     val userId by app.authService.userId.collectAsState()
     var showResetProgress by remember { mutableStateOf(false) }
-    var showResetOnboarding by remember { mutableStateOf(false) }
     val completedCount = progress.courseProgress.count { it.value.isCompleted }
 
     Column(
@@ -253,13 +251,6 @@ fun SettingsScreen(
                 onClick = { showResetProgress = true },
             )
             HorizontalDivider(color = DS.hairline)
-            SettingsRow(
-                icon = Icons.Filled.RestartAlt,
-                label = StringStore.text(context, "settings.debug.resetOnboarding", language),
-                destructive = true,
-                onClick = { showResetOnboarding = true },
-            )
-            HorizontalDivider(color = DS.hairline)
             // Hands today's free course back, so the freemium gates can be re-tested.
             SettingsRow(
                 icon = Icons.Filled.Today,
@@ -309,20 +300,6 @@ fun SettingsScreen(
                 app.progressManager.resetProgress()
             },
             onDismiss = { showResetProgress = false },
-        )
-    }
-
-    if (showResetOnboarding) {
-        ConfirmDialog(
-            title = StringStore.text(context, "settings.onboarding.alert.title", language),
-            message = StringStore.text(context, "settings.onboarding.alert.message", language),
-            confirm = StringStore.text(context, "settings.onboarding.alert.confirm", language),
-            cancel = StringStore.text(context, "settings.reset.alert.cancel", language),
-            onConfirm = {
-                showResetOnboarding = false
-                onResetOnboarding()
-            },
-            onDismiss = { showResetOnboarding = false },
         )
     }
 }
