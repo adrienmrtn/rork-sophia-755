@@ -39,6 +39,9 @@ class AuthService(private val appContext: Context) {
     private val _bootstrapping = MutableStateFlow(true)
     val bootstrapping: StateFlow<Boolean> = _bootstrapping.asStateFlow()
 
+    /** Supabase id currently attached to RevenueCat, so logIn is not replayed on every emission. */
+    private var revenueCatUserId: String? = null
+
     fun start() {
         scope.launch {
             try {
@@ -138,43 +141,61 @@ class AuthService(private val appContext: Context) {
         runCatching { SupabaseManager.client.auth.signOut() }
         _userId.value = null
         // Handle, requests and leaderboard belong to the account that just left.
-        runCatching {
-            (appContext.applicationContext as? app.rork.sophia.SophiaApplication)
-                ?.socialService
-                ?.clearLocalState()
-        }
+        runCatching { app()?.socialService?.clearLocalState() }
+        revenueCatUserId = null
         if (Purchases.isConfigured) {
+            // Back to an anonymous RevenueCat user. A subscription bought on this device
+            // and Play account is still restorable; one bought on another device is not,
+            // which is exactly what signing out means here.
             runCatching { Purchases.sharedInstance.logOut() }
+        }
+    }
+
+    /**
+     * Sign-in is optional on Android, so RevenueCat runs anonymous until an account shows
+     * up. [Purchases] is configured by [app.rork.sophia.billing.StoreViewModel], which is
+     * built after this service starts, so the first attempt can land before RevenueCat is
+     * ready — hence the retry from the store once it is configured.
+     */
+    fun linkRevenueCatIfNeeded() {
+        val uid = _userId.value ?: return
+        if (!Purchases.isConfigured || revenueCatUserId == uid) return
+        revenueCatUserId = uid
+        // Same app user id as iOS, so a subscription bought there is recognised here.
+        // StoreViewModel listens for customer-info updates, which is how the entitlement
+        // arrives after this call.
+        runCatching {
+            Purchases.sharedInstance.logIn(
+                uid,
+                object : com.revenuecat.purchases.interfaces.LogInCallback {
+                    override fun onReceived(
+                        customerInfo: com.revenuecat.purchases.CustomerInfo,
+                        created: Boolean,
+                    ) {
+                        // Anything bought while anonymous lives in the Play account, not in
+                        // this RevenueCat user. Push the receipts across so a purchase made
+                        // before signing in follows the account.
+                        runCatching { Purchases.sharedInstance.syncPurchases() }
+                    }
+
+                    override fun onError(error: com.revenuecat.purchases.PurchasesError) {
+                        Log.w(TAG, "RevenueCat logIn failed: ${error.message}")
+                        revenueCatUserId = null
+                    }
+                },
+            )
         }
     }
 
     private fun linkRevenueCat() {
         val uid = _userId.value ?: return
-        if (Purchases.isConfigured) {
-            // Same app user id as iOS, so a subscription bought there is recognised here.
-            // StoreViewModel listens for customer-info updates, which is how the entitlement
-            // arrives after this call.
-            runCatching {
-                Purchases.sharedInstance.logIn(
-                    uid,
-                    object : com.revenuecat.purchases.interfaces.LogInCallback {
-                        override fun onReceived(
-                            customerInfo: com.revenuecat.purchases.CustomerInfo,
-                            created: Boolean,
-                        ) = Unit
-
-                        override fun onError(error: com.revenuecat.purchases.PurchasesError) = Unit
-                    },
-                )
-            }
-        }
+        linkRevenueCatIfNeeded()
         // Align Mixpanel identity with RevenueCat / Supabase user id.
-        runCatching {
-            (appContext.applicationContext as? app.rork.sophia.SophiaApplication)
-                ?.analytics
-                ?.identify(uid)
-        }
+        runCatching { app()?.analytics?.identify(uid) }
     }
+
+    private fun app(): app.rork.sophia.SophiaApplication? =
+        appContext.applicationContext as? app.rork.sophia.SophiaApplication
 
     private companion object {
         const val TAG = "SophiaAuth"

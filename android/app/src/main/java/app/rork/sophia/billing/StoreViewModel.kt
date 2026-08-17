@@ -5,6 +5,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import app.rork.sophia.AppConfig
 import app.rork.sophia.BuildConfig
+import app.rork.sophia.SophiaApplication
 import com.revenuecat.purchases.CustomerInfo
 import com.revenuecat.purchases.LogLevel
 import com.revenuecat.purchases.EntitlementInfo
@@ -92,6 +93,7 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
         if (Purchases.isConfigured) {
             _configured.value = true
             observeCustomerInfo()
+            attachSignedInUser()
             return
         }
         val key = AppConfig.revenueCatApiKey
@@ -108,6 +110,18 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
         )
         _configured.value = true
         observeCustomerInfo()
+        attachSignedInUser()
+    }
+
+    /**
+     * AuthService restores the session from Application.onCreate, before this view model
+     * exists, so its own attempt to identify the RevenueCat user can run while Purchases is
+     * still unconfigured. Ask again now that it is.
+     */
+    private fun attachSignedInUser() {
+        runCatching {
+            (getApplication() as? SophiaApplication)?.authService?.linkRevenueCatIfNeeded()
+        }
     }
 
     /**

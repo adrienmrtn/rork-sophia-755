@@ -237,6 +237,13 @@ fun OnboardingV2Screen(
                                 app.authService.signInWithGoogle(context)
                             }.getOrDefault(false)
                             if (!signedIn) return@launch
+                            // A returning user signing in here gets their cloud progress
+                            // back, same as signing in from settings.
+                            runCatching {
+                                app.progressSyncService.pullOnLogin(
+                                    app.progressManager.progress.value,
+                                )
+                            }
                             // Skip trial explanation when the served annual product has no free trial.
                             goTo(
                                 if (storeViewModel.shouldShowTrialSteps()) {
