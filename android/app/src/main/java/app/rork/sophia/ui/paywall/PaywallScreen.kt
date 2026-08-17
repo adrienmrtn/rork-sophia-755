@@ -873,13 +873,20 @@ private fun DiscountPaywall(
     val annual = remember(offerings) {
         storeViewModel.annualPackage(PaywallContext.OFFRE_DISCOUNT.offeringId)
     }
+    // The struck-through price is the regular annual plan, so the saving shown is the real one.
+    val regularAnnual = remember(offerings) { storeViewModel.annualPackage(null) }
     var purchasing by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
     val promo = storeViewModel.formattedPrice(
         annual,
         StringStore.text(context, "paywall.discount.fallbackPrice", language),
     )
-    val regular = StringStore.text(context, "paywall.plan.fallback.yearlyPrice", language)
+    val regular = storeViewModel.formattedPrice(
+        regularAnnual,
+        StringStore.text(context, "paywall.plan.fallback.yearlyPrice", language),
+    )
+    val badge = storeViewModel.percentOff(annual, regularAnnual)
+        ?: StringStore.text(context, "paywall.plan.discount", language)
 
     Box(
         modifier = Modifier
@@ -902,7 +909,7 @@ private fun DiscountPaywall(
                     )
                     Spacer(Modifier.height(18.dp))
                     Text(
-                        text = StringStore.text(context, "paywall.plan.discount", language),
+                        text = badge,
                         color = Color.White,
                         fontFamily = PlusJakartaSans,
                         fontWeight = FontWeight.ExtraBold,

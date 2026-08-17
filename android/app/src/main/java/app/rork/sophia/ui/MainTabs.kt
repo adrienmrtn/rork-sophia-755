@@ -466,22 +466,23 @@ fun MainTabs(
             }
         }
 
-        // Only emulators skip the offer: low-RAM phones are the core audience for it.
-        if (!isPremium && !DeviceCapabilities.isEmulator() && selectedTab == 0 &&
-            selectedCourse == null && paywall == null
-        ) {
+        if (!isPremium && selectedCourse == null && paywall == null) {
             if (discount.isGiftPending) {
-                DiscountGiftOverlay(
-                    language = language,
-                    onOpened = {
-                        app.discountManager.consumeGift()
-                        app.discountManager.triggerIfNeeded()
-                        app.discountManager.markShownToday()
-                        app.analytics.trackDiscountOfferViewed("gift")
-                        paywall = PaywallContext.OFFRE_DISCOUNT
-                    },
-                )
+                // The gift is earned by swiping home, so it opens on home, like iOS.
+                if (selectedTab == 0) {
+                    DiscountGiftOverlay(
+                        language = language,
+                        onOpened = {
+                            app.discountManager.consumeGift()
+                            app.discountManager.triggerIfNeeded()
+                            app.discountManager.markShownToday()
+                            app.analytics.trackDiscountOfferViewed("gift")
+                            paywall = PaywallContext.OFFRE_DISCOUNT
+                        },
+                    )
+                }
             } else if (discount.isActive) {
+                // The countdown follows the user across tabs: it is running either way.
                 DiscountSideTab(
                     state = discount,
                     language = language,

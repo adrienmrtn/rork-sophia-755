@@ -238,6 +238,19 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
         return if (percent <= 0) null else "-$percent%"
     }
 
+    /**
+     * « -50 % » badge of the discount paywall: how much the promo annual saves against the
+     * regular annual. Null unless both prices are known and the promo is actually cheaper,
+     * so the paywall never advertises a discount that the store would not honour.
+     */
+    fun percentOff(promo: Package?, regular: Package?): String? {
+        val promoMicros = promo?.product?.price?.amountMicros ?: return null
+        val regularMicros = regular?.product?.price?.amountMicros ?: return null
+        if (regularMicros <= 0 || promoMicros >= regularMicros) return null
+        val percent = ((1.0 - promoMicros.toDouble() / regularMicros) * 100).toInt()
+        return if (percent <= 0) null else "-$percent%"
+    }
+
     fun setPremiumDebug(value: Boolean) {
         _isPremium.value = value
     }
