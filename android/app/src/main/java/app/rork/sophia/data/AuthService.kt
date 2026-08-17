@@ -1,12 +1,21 @@
 package app.rork.sophia.data
 
+import android.app.Activity
 import android.content.Context
+import android.content.ContextWrapper
+import android.util.Log
+import android.widget.Toast
 import androidx.credentials.CredentialManager
+import androidx.credentials.CredentialOption
 import androidx.credentials.CustomCredential
 import androidx.credentials.GetCredentialRequest
+import androidx.credentials.GetCredentialResponse
 import androidx.credentials.exceptions.GetCredentialCancellationException
+import androidx.credentials.exceptions.GetCredentialException
 import app.rork.sophia.AppConfig
+import app.rork.sophia.BuildConfig
 import com.google.android.libraries.identity.googleid.GetGoogleIdOption
+import com.google.android.libraries.identity.googleid.GetSignInWithGoogleOption
 import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential
 import com.revenuecat.purchases.Purchases
 import io.github.jan.supabase.auth.auth
@@ -55,32 +64,74 @@ class AuthService(private val appContext: Context) {
         }
     }
 
-    suspend fun signInWithGoogle(activityContext: Context) {
-        val googleIdOption = GetGoogleIdOption.Builder()
-            .setFilterByAuthorizedAccounts(false)
-            .setServerClientId(AppConfig.GOOGLE_WEB_CLIENT_ID)
-            .build()
-        val request = GetCredentialRequest.Builder()
-            .addCredentialOption(googleIdOption)
-            .build()
-        val cm = CredentialManager.create(activityContext)
-        try {
-            val result = cm.getCredential(activityContext, request)
-            val credential = result.credential
-            if (credential is CustomCredential &&
-                credential.type == GoogleIdTokenCredential.TYPE_GOOGLE_ID_TOKEN_CREDENTIAL
-            ) {
-                val google = GoogleIdTokenCredential.createFrom(credential.data)
-                SupabaseManager.client.auth.signInWith(IDToken) {
-                    idToken = google.idToken
-                    provider = Google
-                }
-            } else {
-                error("Unexpected credential type")
-            }
-        } catch (_: GetCredentialCancellationException) {
-            // user cancelled
+    /**
+     * @return true when a Supabase session was created. False on cancel or failure.
+     *
+     * One Tap (`GetGoogleIdOption`) is tried first; on emulators and first-run devices it
+     * usually throws "no credentials" with no UI. The button on screen is Sign in with Google,
+     * so we fall back to `GetSignInWithGoogleOption`, which actually shows the account picker.
+     */
+    suspend fun signInWithGoogle(activityContext: Context): Boolean {
+        val activity = activityContext.findActivity() ?: run {
+            Log.e(TAG, "Google sign-in needs an Activity context")
+            return false
         }
+        val cm = CredentialManager.create(activity)
+        val webClientId = AppConfig.GOOGLE_WEB_CLIENT_ID
+
+        suspend fun request(option: CredentialOption): Boolean {
+            val result = cm.getCredential(
+                activity,
+                GetCredentialRequest.Builder().addCredentialOption(option).build(),
+            )
+            return consumeGoogleCredential(result)
+        }
+
+        try {
+            return request(
+                GetGoogleIdOption.Builder()
+                    .setFilterByAuthorizedAccounts(false)
+                    .setServerClientId(webClientId)
+                    .build(),
+            )
+        } catch (_: GetCredentialCancellationException) {
+            return false
+        } catch (e: GetCredentialException) {
+            Log.w(TAG, "One Tap unavailable, falling back to Sign in with Google", e)
+        } catch (e: Exception) {
+            return fail(activity, e)
+        }
+
+        return try {
+            request(GetSignInWithGoogleOption.Builder(webClientId).build())
+        } catch (_: GetCredentialCancellationException) {
+            false
+        } catch (e: Exception) {
+            fail(activity, e)
+        }
+    }
+
+    private suspend fun consumeGoogleCredential(result: GetCredentialResponse): Boolean {
+        val credential = result.credential
+        if (credential !is CustomCredential ||
+            credential.type != GoogleIdTokenCredential.TYPE_GOOGLE_ID_TOKEN_CREDENTIAL
+        ) {
+            error("Unexpected credential type ${credential.type}")
+        }
+        val google = GoogleIdTokenCredential.createFrom(credential.data)
+        SupabaseManager.client.auth.signInWith(IDToken) {
+            idToken = google.idToken
+            provider = Google
+        }
+        return true
+    }
+
+    private fun fail(activity: Activity, e: Exception): Boolean {
+        Log.e(TAG, "Google sign-in failed", e)
+        if (BuildConfig.DEBUG) {
+            Toast.makeText(activity, e.message ?: "Google sign-in failed", Toast.LENGTH_LONG).show()
+        }
+        return false
     }
 
     suspend fun signOut() {
@@ -118,4 +169,17 @@ class AuthService(private val appContext: Context) {
                 ?.identify(uid)
         }
     }
+
+    private companion object {
+        const val TAG = "SophiaAuth"
+    }
+}
+
+private fun Context.findActivity(): Activity? {
+    var ctx: Context = this
+    while (ctx is ContextWrapper) {
+        if (ctx is Activity) return ctx
+        ctx = ctx.baseContext
+    }
+    return null
 }

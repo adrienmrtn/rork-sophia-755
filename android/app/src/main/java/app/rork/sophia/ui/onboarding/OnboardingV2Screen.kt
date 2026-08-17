@@ -241,7 +241,10 @@ fun OnboardingV2Screen(
                     language = language,
                     onGoogle = {
                         scope.launch {
-                            runCatching { app.authService.signInWithGoogle(context) }
+                            val signedIn = runCatching {
+                                app.authService.signInWithGoogle(context)
+                            }.getOrDefault(false)
+                            if (!signedIn) return@launch
                             // Skip trial explanation when the served annual product has no free trial.
                             goTo(
                                 if (storeViewModel.shouldShowTrialSteps()) {
