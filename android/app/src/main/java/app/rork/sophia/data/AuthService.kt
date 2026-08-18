@@ -14,6 +14,7 @@ import androidx.credentials.exceptions.GetCredentialCancellationException
 import androidx.credentials.exceptions.GetCredentialException
 import app.rork.sophia.AppConfig
 import app.rork.sophia.BuildConfig
+import app.rork.sophia.domain.AppLanguage
 import com.google.android.libraries.identity.googleid.GetGoogleIdOption
 import com.google.android.libraries.identity.googleid.GetSignInWithGoogleOption
 import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential
@@ -129,11 +130,20 @@ class AuthService(private val appContext: Context) {
         return true
     }
 
+    /**
+     * A dead button is the worst outcome: the account picker completes, Supabase rejects the
+     * token, and the user sees nothing. So the failure is always surfaced, and the technical
+     * cause always logged under [TAG] — `adb logcat -s SophiaAuth` on a Play build.
+     */
     private fun fail(activity: Activity, e: Exception): Boolean {
         Log.e(TAG, "Google sign-in failed", e)
-        if (BuildConfig.DEBUG) {
-            Toast.makeText(activity, e.message ?: "Google sign-in failed", Toast.LENGTH_LONG).show()
+        val message = if (BuildConfig.DEBUG) {
+            e.message ?: "Google sign-in failed"
+        } else {
+            val language = app()?.languageManager?.current?.value ?: AppLanguage.FRENCH
+            StringStore.text(activity, "auth.error.generic", language)
         }
+        Toast.makeText(activity, message, Toast.LENGTH_LONG).show()
         return false
     }
 

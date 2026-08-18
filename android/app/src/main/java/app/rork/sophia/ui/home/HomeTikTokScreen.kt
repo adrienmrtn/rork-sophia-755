@@ -67,6 +67,7 @@ import app.rork.sophia.ui.components.CircleIconButton
 import app.rork.sophia.ui.components.CourseImage
 import app.rork.sophia.ui.components.Pill
 import app.rork.sophia.ui.components.SophiaPrimaryButton
+import app.rork.sophia.ui.components.inlineRichText
 import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.components.FirstOpenExplanation
 import app.rork.sophia.ui.theme.DS
@@ -433,7 +434,7 @@ private fun TikTokCourseCard(
             overflow = TextOverflow.Ellipsis,
         )
         Text(
-            text = course.description,
+            text = remember(course.description) { inlineRichText(course.description) },
             style = SophiaTypography.bodyMedium.copy(lineHeight = 21.sp),
             maxLines = 4,
             overflow = TextOverflow.Ellipsis,

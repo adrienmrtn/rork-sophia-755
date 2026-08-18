@@ -24,6 +24,7 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -38,6 +39,7 @@ import app.rork.sophia.domain.LearningCollection
 import app.rork.sophia.domain.UserProgress
 import app.rork.sophia.ui.components.CircleIconButton
 import app.rork.sophia.ui.components.CourseImage
+import app.rork.sophia.ui.components.inlineRichText
 import app.rork.sophia.ui.components.softPress
 import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.theme.DS
@@ -90,7 +92,10 @@ fun CollectionDetailScreen(
             Spacer(Modifier.height(16.dp))
             Text(text = collection.title, style = SophiaTypography.titleLarge)
             Spacer(Modifier.height(8.dp))
-            Text(text = collection.description, style = SophiaTypography.bodyLarge)
+            Text(
+                text = remember(collection.description) { inlineRichText(collection.description) },
+                style = SophiaTypography.bodyLarge,
+            )
             Spacer(Modifier.height(14.dp))
             LinearProgressIndicator(
                 progress = { done.toFloat() / total },

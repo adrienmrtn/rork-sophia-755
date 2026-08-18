@@ -29,7 +29,10 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Slider
 import androidx.compose.material3.SliderDefaults
 import androidx.compose.material3.Text
@@ -196,45 +199,61 @@ internal fun YearsGridStep(language: AppLanguage, phoneMinutes: Int, onContinue:
     val buttonAlpha by animateFloatAsState(if (showButton) 1f else 0f, tween(500), label = "gridCta")
 
     Column(modifier = Modifier.fillMaxSize()) {
-        Spacer(Modifier.height(72.dp))
-        Text(
-            text = StringStore.text(context, "onboardingV2.yearsGrid.title", language),
-            style = OV2.title,
-            textAlign = TextAlign.Center,
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 28.dp)
-                .graphicsLayer { alpha = titleAlpha; translationY = (1f - titleAlpha) * 14f },
-        )
-        Spacer(Modifier.height(36.dp))
+        // The CTA is pinned outside the scroll. The cells are square and were sized by
+        // dividing the full width by ten, so on a tablet each one became ~100dp, the eight
+        // rows overflowed the screen, the weighted spacer collapsed to zero and the button
+        // ended up off-screen — the page could not be left. Capping the grid keeps the
+        // proportions of a phone, and the scroll covers short-and-wide windows too.
         Column(
-            modifier = Modifier.fillMaxWidth().padding(horizontal = 36.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp),
+            modifier = Modifier
+                .weight(1f)
+                .fillMaxWidth()
+                .verticalScroll(rememberScrollState()),
+            horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            repeat(totalYears / columns) { row ->
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    repeat(columns) { column ->
-                        val index = row * columns + column
-                        YearCell(
-                            revealed = index < revealed,
-                            red = index < filled,
-                            modifier = Modifier.weight(1f),
-                        )
+            Spacer(Modifier.height(72.dp))
+            Text(
+                text = StringStore.text(context, "onboardingV2.yearsGrid.title", language),
+                style = OV2.title,
+                textAlign = TextAlign.Center,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 28.dp)
+                    .graphicsLayer { alpha = titleAlpha; translationY = (1f - titleAlpha) * 14f },
+            )
+            Spacer(Modifier.height(36.dp))
+            Column(
+                modifier = Modifier
+                    .widthIn(max = GRID_MAX_WIDTH)
+                    .fillMaxWidth()
+                    .padding(horizontal = 36.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                repeat(totalYears / columns) { row ->
+                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        repeat(columns) { column ->
+                            val index = row * columns + column
+                            YearCell(
+                                revealed = index < revealed,
+                                red = index < filled,
+                                modifier = Modifier.weight(1f),
+                            )
+                        }
                     }
                 }
             }
+            Spacer(Modifier.height(28.dp))
+            Text(
+                text = StringStore.text(context, "onboardingV2.yearsGrid.caption", language, redYears),
+                style = OV2.subheadline.copy(color = OV2.danger, fontWeight = FontWeight.Bold),
+                textAlign = TextAlign.Center,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 36.dp)
+                    .graphicsLayer { alpha = captionAlpha; translationY = (1f - captionAlpha) * 12f },
+            )
+            Spacer(Modifier.height(24.dp))
         }
-        Spacer(Modifier.height(28.dp))
-        Text(
-            text = StringStore.text(context, "onboardingV2.yearsGrid.caption", language, redYears),
-            style = OV2.subheadline.copy(color = OV2.danger, fontWeight = FontWeight.Bold),
-            textAlign = TextAlign.Center,
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 36.dp)
-                .graphicsLayer { alpha = captionAlpha; translationY = (1f - captionAlpha) * 12f },
-        )
-        Spacer(Modifier.weight(1f))
         Box(modifier = Modifier.alpha(buttonAlpha)) {
             OnboardingCta(
                 text = StringStore.text(context, "common.continue", language),
@@ -244,6 +263,9 @@ internal fun YearsGridStep(language: AppLanguage, phoneMinutes: Int, onContinue:
         }
     }
 }
+
+/** Ten square cells per row stay phone-sized instead of ballooning on a tablet. */
+private val GRID_MAX_WIDTH = 460.dp
 
 @Composable
 private fun YearCell(revealed: Boolean, red: Boolean, modifier: Modifier = Modifier) {
