@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AutoStories
+import androidx.compose.material.icons.filled.Autorenew
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.RestartAlt
@@ -35,6 +36,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.billing.StoreViewModel
@@ -377,11 +379,13 @@ fun MainTabs(
         }
     }
 
+    // Autorenew is the Material twin of the iOS `arrow.triangle.2.circlepath`; RestartAlt
+    // read as "reset", and it is also the icon of the reset rows in settings.
     val tabs = listOf(
         Triple("tab.home", Icons.Filled.Home, 0),
         Triple("tab.library", Icons.Filled.AutoStories, 1),
         Triple("tab.collections", Icons.Filled.ViewModule, 2),
-        Triple("tab.training", Icons.Filled.RestartAlt, 3),
+        Triple("tab.training", Icons.Filled.Autorenew, 3),
         Triple("tab.profile", Icons.Filled.Person, 4),
     )
 
@@ -396,11 +400,17 @@ fun MainTabs(
                             onClick = { selectedTab = index },
                             icon = { Icon(icon, contentDescription = null) },
                             label = {
+                                // Five tabs and labels as long as "Entraînement": without
+                                // this the label wrapped to two lines and pushed the icon
+                                // out of the item.
                                 Text(
                                     text = StringStore.text(context, key, language),
                                     fontFamily = PlusJakartaSans,
                                     fontSize = 11.sp,
                                     fontWeight = if (selectedTab == index) FontWeight.SemiBold else FontWeight.Normal,
+                                    maxLines = 1,
+                                    softWrap = false,
+                                    overflow = TextOverflow.Ellipsis,
                                 )
                             },
                             colors = NavigationBarItemDefaults.colors(
