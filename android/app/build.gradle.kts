@@ -83,12 +83,24 @@ android {
         )
     }
 
+    // Declared only when the keystore is actually reachable. `file("")` throws while Gradle
+    // configures, which fails every task including assembleDebug — so a machine without the
+    // signing secrets (CI, a fresh clone) could not build at all. Without it the release
+    // stays unsigned, which is the honest outcome: `keytool -printcert -jarfile` on the AAB
+    // is what tells you whether signing happened.
+    val releaseKeystore = secret("SOPHIA_KEYSTORE_PATH", "")
+        .takeIf { it.isNotBlank() }
+        ?.let(::file)
+        ?.takeIf { it.isFile }
+
     signingConfigs {
-        create("release") {
-            storeFile = file(secret("SOPHIA_KEYSTORE_PATH", ""))
-            storePassword = secret("SOPHIA_KEYSTORE_PASSWORD", "")
-            keyAlias = secret("SOPHIA_KEY_ALIAS", "")
-            keyPassword = secret("SOPHIA_KEY_PASSWORD", "")
+        if (releaseKeystore != null) {
+            create("release") {
+                storeFile = releaseKeystore
+                storePassword = secret("SOPHIA_KEYSTORE_PASSWORD", "")
+                keyAlias = secret("SOPHIA_KEY_ALIAS", "")
+                keyPassword = secret("SOPHIA_KEY_PASSWORD", "")
+            }
         }
     }
 
@@ -97,7 +109,7 @@ android {
             buildConfigField("Boolean", "USE_RC_TEST_KEY", "true")
         }
         release {
-            signingConfig = signingConfigs.getByName("release")
+            signingConfig = signingConfigs.findByName("release")
             isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
