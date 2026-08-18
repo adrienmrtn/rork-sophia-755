@@ -83,11 +83,21 @@ android {
         )
     }
 
+    signingConfigs {
+        create("release") {
+            storeFile = file(secret("SOPHIA_KEYSTORE_PATH", ""))
+            storePassword = secret("SOPHIA_KEYSTORE_PASSWORD", "")
+            keyAlias = secret("SOPHIA_KEY_ALIAS", "")
+            keyPassword = secret("SOPHIA_KEY_PASSWORD", "")
+        }
+    }
+
     buildTypes {
         debug {
             buildConfigField("Boolean", "USE_RC_TEST_KEY", "true")
         }
         release {
+            signingConfig = signingConfigs.getByName("release")
             isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),

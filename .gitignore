@@ -10,3 +10,11 @@ content/locales/_v2_mt_cache/
 content/locales/_quiz_v2_mt_cache/
 content/locales/_ui_mt_cache/
 content/locales/_catalog_mt_cache/
+
+# Android signing secrets
+local.properties
+*.jks
+*.keystore
+
+# IDE
+.idea/
