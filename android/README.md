@@ -69,12 +69,14 @@ See [`QA.md`](./QA.md) for the full static checklist and deferred device checks.
 
 | Item | Where |
 |---|---|
-| RevenueCat Android API key (`goog_…`) | `app/build.gradle.kts` `REVENUECAT_API_KEY` |
 | Google OAuth Android client | Google Cloud Console (package + SHA-1) |
 | Play Billing products | Play Console → linked in RevenueCat |
 | Course cover upload | `SUPABASE_SERVICE_ROLE_KEY` + `python3 scripts/upload_course_images_to_supabase.py` |
 
-Until the RevenueCat key is set, the app runs in free mode (`goog_REPLACE_ME`). Debug paywall can simulate premium.
+The RevenueCat key is in the repo (public SDK key, shipped in the APK anyway), so the SDK
+configures itself. Purchases still need the Play products attached to the `premium`
+entitlement, and a build installed **from Play** — Play Billing does not work on a sideloaded
+APK or an emulator without Play Store.
 
 ## Content pipeline
 
