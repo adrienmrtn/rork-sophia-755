@@ -43,6 +43,7 @@ import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.LearningCollection
 import app.rork.sophia.domain.UserProgress
 import app.rork.sophia.ui.components.FirstOpenExplanation
+import app.rork.sophia.ui.components.inlineRichText
 import app.rork.sophia.ui.components.softPress
 import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.theme.DS
@@ -176,7 +177,11 @@ private fun FeaturedCollectionCard(
             Spacer(Modifier.height(8.dp))
             Text(text = collection.title, style = SophiaTypography.titleMedium)
             Spacer(Modifier.height(6.dp))
-            Text(text = collection.description, style = SophiaTypography.bodyMedium, maxLines = 2)
+            Text(
+                text = remember(collection.description) { inlineRichText(collection.description) },
+                style = SophiaTypography.bodyMedium,
+                maxLines = 2,
+            )
             Spacer(Modifier.height(12.dp))
             LinearProgressIndicator(
                 progress = { done.toFloat() / total },

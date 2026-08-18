@@ -19,6 +19,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
@@ -99,6 +100,22 @@ fun RichTextWithGlossary(
                 Text(entry.explanation, style = SophiaTypography.bodyLarge)
                 Spacer(Modifier.height(24.dp))
             }
+        }
+    }
+}
+
+/**
+ * Same authoring markers as the reader — `**bold**`, `==highlight==`, `[[term]]` — resolved
+ * for a plain [Text], with no glossary sheet. Card descriptions come from the translated
+ * catalogs, where roughly 180 of 238 entries per language carry `**` (French has none, which
+ * is why the raw asterisks only ever showed up in the other locales).
+ */
+fun inlineRichText(raw: String): AnnotatedString = buildAnnotatedString {
+    parseSegments(raw) { false }.forEach { seg ->
+        if (seg.bold) {
+            withStyle(SpanStyle(fontWeight = FontWeight.SemiBold)) { append(seg.text) }
+        } else {
+            append(seg.text)
         }
     }
 }
