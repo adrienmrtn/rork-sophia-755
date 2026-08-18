@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  Adaptive-icon foreground: the Sophia phi on a transparent canvas.
+
+  Viewport is 108. Android crops to a circle / squircle; the inner 72 (18–90)
+  is the safe zone. The glyph sits well inside that so the arcs are not clipped.
+-->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
+    <!-- Vertical stem, rounded ends. -->
     <path
-        android:fillColor="#1A3A6B"
-        android:pathData="M30,72 L54,28 L78,72 Z" />
+        android:fillColor="#00000000"
+        android:pathData="M54,26 L54,82"
+        android:strokeWidth="9"
+        android:strokeColor="#FF8DA1"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <!-- Two facing arcs = a circle through the stem. -->
     <path
-        android:fillColor="#F7F8FA"
-        android:pathData="M42,62 L54,40 L66,62 Z" />
+        android:fillColor="#00000000"
+        android:pathData="M34,54 a20,20 0 1,1 40,0 a20,20 0 1,1 -40,0"
+        android:strokeWidth="9"
+        android:strokeColor="#FF8DA1"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
 </vector>
