@@ -31,8 +31,10 @@ android {
         applicationId = "app.rork.sophia"
         minSdk = 26
         targetSdk = 35
-        versionCode = 1
-        versionName = "1.0.0"
+        // Play refuses a versionCode it has already seen, permanently. Bump on every upload,
+        // including a re-upload to internal testing.
+        versionCode = 2
+        versionName = "1.0.1"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         // Public SDK key of the RevenueCat Google Play app. It ships inside every APK, so it
