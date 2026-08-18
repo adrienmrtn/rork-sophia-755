@@ -16,7 +16,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -49,7 +48,6 @@ import app.rork.sophia.data.CourseSessionTracker
 import app.rork.sophia.data.GlossaryStore
 import app.rork.sophia.data.InAppReviewHelper
 import app.rork.sophia.data.ProgressManager
-import app.rork.sophia.data.ShareHelper
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Course
@@ -210,18 +208,14 @@ fun CourseScreen(
                     .padding(horizontal = DS.Space.s, vertical = 8.dp),
                 verticalAlignment = Alignment.CenterVertically,
             ) {
-            CircleIconButton(icon = Icons.AutoMirrored.Filled.ArrowBack, onClick = onDismiss)
-            Text(
-                text = course.title,
-                style = SophiaTypography.titleMedium.copy(fontSize = 16.sp),
-                maxLines = 1,
-                modifier = Modifier.weight(1f).padding(horizontal = 12.dp),
-            )
-            CircleIconButton(
-                icon = Icons.Filled.Share,
-                onClick = { ShareHelper.shareCourse(context, course) },
-            )
-        }
+                CircleIconButton(icon = Icons.AutoMirrored.Filled.ArrowBack, onClick = onDismiss)
+                Text(
+                    text = course.title,
+                    style = SophiaTypography.titleMedium.copy(fontSize = 16.sp),
+                    maxLines = 1,
+                    modifier = Modifier.weight(1f).padding(horizontal = 12.dp),
+                )
+            }
             CalmProgressBar(
                 fraction = if (pages.isEmpty()) 0f else (pagerState.currentPage + 1).toFloat() / pages.size,
                 modifier = Modifier.padding(horizontal = DS.Space.l),

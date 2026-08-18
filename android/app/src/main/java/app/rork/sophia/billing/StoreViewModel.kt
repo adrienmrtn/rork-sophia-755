@@ -5,6 +5,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import app.rork.sophia.AppConfig
 import app.rork.sophia.BuildConfig
+import app.rork.sophia.SophiaApplication
 import com.revenuecat.purchases.CustomerInfo
 import com.revenuecat.purchases.LogLevel
 import com.revenuecat.purchases.EntitlementInfo
@@ -92,6 +93,7 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
         if (Purchases.isConfigured) {
             _configured.value = true
             observeCustomerInfo()
+            attachSignedInUser()
             return
         }
         val key = AppConfig.revenueCatApiKey
@@ -108,6 +110,18 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
         )
         _configured.value = true
         observeCustomerInfo()
+        attachSignedInUser()
+    }
+
+    /**
+     * AuthService restores the session from Application.onCreate, before this view model
+     * exists, so its own attempt to identify the RevenueCat user can run while Purchases is
+     * still unconfigured. Ask again now that it is.
+     */
+    private fun attachSignedInUser() {
+        runCatching {
+            (getApplication() as? SophiaApplication)?.authService?.linkRevenueCatIfNeeded()
+        }
     }
 
     /**
@@ -235,6 +249,19 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
         val yearOfMonthly = monthlyMicros * 12.0
         if (annualMicros >= yearOfMonthly) return null
         val percent = ((1.0 - annualMicros / yearOfMonthly) * 100).toInt()
+        return if (percent <= 0) null else "-$percent%"
+    }
+
+    /**
+     * « -50 % » badge of the discount paywall: how much the promo annual saves against the
+     * regular annual. Null unless both prices are known and the promo is actually cheaper,
+     * so the paywall never advertises a discount that the store would not honour.
+     */
+    fun percentOff(promo: Package?, regular: Package?): String? {
+        val promoMicros = promo?.product?.price?.amountMicros ?: return null
+        val regularMicros = regular?.product?.price?.amountMicros ?: return null
+        if (regularMicros <= 0 || promoMicros >= regularMicros) return null
+        val percent = ((1.0 - promoMicros.toDouble() / regularMicros) * 100).toInt()
         return if (percent <= 0) null else "-$percent%"
     }
 

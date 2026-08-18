@@ -81,7 +81,6 @@ fun MainTabs(
     storeViewModel: StoreViewModel,
     deepLinkCourseId: String?,
     onDeepLinkConsumed: () -> Unit,
-    onResetOnboarding: () -> Unit,
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
@@ -96,6 +95,7 @@ fun MainTabs(
     var autoSwipeCourseId by remember { mutableStateOf<String?>(null) }
     var paywall by remember { mutableStateOf<PaywallContext?>(null) }
     var overlay by remember { mutableStateOf<OverlayScreen?>(null) }
+    var pendingFriendUserId by remember { mutableStateOf<String?>(null) }
     // Where "back" lands: settings pushes onto itself, tabs open overlays directly.
     var overlayParent by remember { mutableStateOf<OverlayScreen?>(null) }
     var rewardSteps by remember { mutableStateOf<List<PostCompletionRewardStep>?>(null) }
@@ -283,12 +283,18 @@ fun MainTabs(
                 onOpenTerms = { openFromSettings(OverlayScreen.Terms) },
                 onOpenPrivacy = { openFromSettings(OverlayScreen.Privacy) },
                 onRestorePurchases = { storeViewModel.restore() },
-                onResetOnboarding = onResetOnboarding,
             )
             return
         }
         overlay == OverlayScreen.Friends -> {
-            FriendsScreen(language = language, onBack = { closeOverlay() })
+            FriendsScreen(
+                language = language,
+                initialFriendUserId = pendingFriendUserId,
+                onBack = {
+                    pendingFriendUserId = null
+                    closeOverlay()
+                },
+            )
             return
         }
         overlay == OverlayScreen.Feedback -> {
@@ -452,27 +458,31 @@ fun MainTabs(
                     onOpenCourse = { openCourseById(it) },
                     onOpenSettings = { overlay = OverlayScreen.Settings },
                     onShowPaywall = { paywall = PaywallContext.DEBLOQUER_COURS },
-                    onOpenFriends = { overlay = OverlayScreen.Friends },
+                    onOpenFriends = { friendUserId ->
+                        pendingFriendUserId = friendUserId
+                        overlay = OverlayScreen.Friends
+                    },
                 )
             }
         }
 
-        // Only emulators skip the offer: low-RAM phones are the core audience for it.
-        if (!isPremium && !DeviceCapabilities.isEmulator() && selectedTab == 0 &&
-            selectedCourse == null && paywall == null
-        ) {
+        if (!isPremium && selectedCourse == null && paywall == null) {
             if (discount.isGiftPending) {
-                DiscountGiftOverlay(
-                    language = language,
-                    onOpened = {
-                        app.discountManager.consumeGift()
-                        app.discountManager.triggerIfNeeded()
-                        app.discountManager.markShownToday()
-                        app.analytics.trackDiscountOfferViewed("gift")
-                        paywall = PaywallContext.OFFRE_DISCOUNT
-                    },
-                )
+                // The gift is earned by swiping home, so it opens on home, like iOS.
+                if (selectedTab == 0) {
+                    DiscountGiftOverlay(
+                        language = language,
+                        onOpened = {
+                            app.discountManager.consumeGift()
+                            app.discountManager.triggerIfNeeded()
+                            app.discountManager.markShownToday()
+                            app.analytics.trackDiscountOfferViewed("gift")
+                            paywall = PaywallContext.OFFRE_DISCOUNT
+                        },
+                    )
+                }
             } else if (discount.isActive) {
+                // The countdown follows the user across tabs: it is running either way.
                 DiscountSideTab(
                     state = discount,
                     language = language,

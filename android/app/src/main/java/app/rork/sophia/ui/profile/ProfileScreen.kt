@@ -34,6 +34,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
@@ -72,13 +73,14 @@ fun ProfileScreen(
     onOpenCourse: (String) -> Unit,
     onOpenSettings: () -> Unit,
     onShowPaywall: () -> Unit = {},
-    onOpenFriends: () -> Unit = {},
+    onOpenFriends: (friendUserId: String?) -> Unit = {},
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
     val userId by app.authService.userId.collectAsState()
     val handle by app.socialService.myHandle.collectAsState()
     val leaderboard by app.socialService.leaderboard.collectAsState()
+    val pending by app.socialService.pendingRequests.collectAsState()
     val period by app.socialService.period.collectAsState()
     val scope = rememberCoroutineScope()
     val summaries = rememberCourseSummaries(language)
@@ -129,7 +131,7 @@ fun ProfileScreen(
                         color = DS.accentSoft,
                     )
                     Text(
-                        text = level.rank.storageKey.replaceFirstChar { it.titlecase() },
+                        text = StringStore.text(context, "globalRank.${level.rank.storageKey}", language),
                         style = SophiaTypography.titleLarge.copy(fontSize = 21.sp),
                         maxLines = 2,
                         overflow = TextOverflow.Ellipsis,
@@ -220,7 +222,7 @@ fun ProfileScreen(
                         app.socialService.setPeriod(it)
                         scope.launch { app.socialService.refreshLeaderboard() }
                     },
-                    onOpenFriend = { onOpenFriends() },
+                    onOpenFriend = { entry -> onOpenFriends(entry.user_id) },
                     nestedScroll = true,
                 )
             }
@@ -229,8 +231,13 @@ fun ProfileScreen(
         ProfileShortcutRow(
             icon = Icons.Filled.Group,
             title = StringStore.text(context, "friends.title", language),
-            subtitle = StringStore.text(context, "friends.add.subtitle", language),
-            onClick = onOpenFriends,
+            subtitle = if (pending.isEmpty()) {
+                StringStore.text(context, "friends.add.subtitle", language)
+            } else {
+                StringStore.text(context, "friends.requests.title", language)
+            },
+            onClick = { onOpenFriends(null) },
+            badgeCount = pending.size,
         )
 
         Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
@@ -302,6 +309,7 @@ private fun ProfileShortcutRow(
     title: String,
     subtitle: String,
     onClick: () -> Unit,
+    badgeCount: Int = 0,
 ) {
     Row(
         modifier = Modifier
@@ -320,6 +328,17 @@ private fun ProfileShortcutRow(
                 style = SophiaTypography.labelMedium,
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis,
+            )
+        }
+        if (badgeCount > 0) {
+            Text(
+                text = "$badgeCount",
+                style = SophiaTypography.labelLarge.copy(fontSize = 13.sp),
+                color = Color.White,
+                modifier = Modifier
+                    .clip(CircleShape)
+                    .background(DS.accent)
+                    .padding(horizontal = 8.dp, vertical = 3.dp),
             )
         }
         Icon(

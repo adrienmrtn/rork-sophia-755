@@ -14,6 +14,15 @@ object InAppReviewHelper {
     ) {
         if (lessonIndex != 2) return
         if (progressManager.firstCourseOpenedId != courseId) return
+        requestOnce(context, progressManager)
+    }
+
+    /**
+     * Play caps how often the dialog can actually appear, so the one shot per install is
+     * spent on whichever trigger fires first — the onboarding testimonials page or the
+     * third lesson of the first course.
+     */
+    fun requestOnce(context: Context, progressManager: ProgressManager) {
         if (progressManager.hasRequestedAppStoreReview) return
         progressManager.markAppStoreReviewRequested()
         val activity = context.findActivity() ?: return

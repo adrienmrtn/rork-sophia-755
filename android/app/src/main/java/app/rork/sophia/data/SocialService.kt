@@ -51,8 +51,9 @@ class SocialService(private val auth: AuthService) {
     private val _period = MutableStateFlow(FriendsLeaderboardPeriod.WEEK)
     val period: StateFlow<FriendsLeaderboardPeriod> = _period.asStateFlow()
 
-    private val _error = MutableStateFlow<String?>(null)
-    val error: StateFlow<String?> = _error.asStateFlow()
+    /** StringStore key, so the message follows the app language instead of being baked in French. */
+    private val _errorKey = MutableStateFlow<String?>(null)
+    val errorKey: StateFlow<String?> = _errorKey.asStateFlow()
 
     private val db get() = SupabaseManager.client.postgrest
 
@@ -60,11 +61,15 @@ class SocialService(private val auth: AuthService) {
         _period.value = period
     }
 
+    fun clearError() {
+        _errorKey.value = null
+    }
+
     fun clearLocalState() {
         _myHandle.value = null
         _pending.value = emptyList()
         _leaderboard.value = emptyList()
-        _error.value = null
+        _errorKey.value = null
     }
 
     suspend fun refreshAll() {
@@ -83,55 +88,64 @@ class SocialService(private val auth: AuthService) {
                 .select { filter { eq("id", userId) } }
                 .decodeSingleOrNull<Row>()
             _myHandle.value = row?.handle
-        }.onFailure { _error.value = it.message }
+        }.onFailure { _errorKey.value = errorKeyFor(it.message) }
     }
 
     suspend fun updateHandle(raw: String): Result<String> {
         @Serializable
         data class Params(val new_handle: String)
         val handle = sanitizeHandle(raw)
+        _errorKey.value = null
         return runCatching {
             val updated = db.rpc("update_my_handle", Params(new_handle = handle)).decodeAs<String>()
             _myHandle.value = updated
             updated
-        }.onFailure { _error.value = mapSocialError(it.message) }
+        }.onFailure { _errorKey.value = errorKeyFor(it.message) }
     }
 
-    suspend fun sendFriendRequest(rawHandle: String): Result<String> {
+    /** @return [SendRequestOutcome] so the UI can tell "request sent" from "you are now friends". */
+    suspend fun sendFriendRequest(rawHandle: String): Result<SendRequestOutcome> {
         @Serializable
         data class Params(val target_handle: String)
         val handle = sanitizeHandle(rawHandle)
+        _errorKey.value = null
+        if (handle.isEmpty()) {
+            _errorKey.value = "friends.error.invalidHandle"
+            return Result.failure(IllegalArgumentException("invalid_handle"))
+        }
         return runCatching {
             val outcome = db.rpc("send_friend_request", Params(target_handle = handle)).decodeAs<String>()
             refreshPendingRequests()
             refreshLeaderboard()
-            outcome
-        }.onFailure { _error.value = mapSocialError(it.message) }
+            if (outcome == "accepted") SendRequestOutcome.AUTO_ACCEPTED else SendRequestOutcome.SENT
+        }.onFailure { _errorKey.value = errorKeyFor(it.message) }
     }
 
     suspend fun respondToRequest(requestId: String, accept: Boolean): Result<Unit> {
         @Serializable
         data class Params(val request_id: String, val accept: Boolean)
+        _errorKey.value = null
         return runCatching {
             db.rpc("respond_friend_request", Params(request_id = requestId, accept = accept))
             refreshPendingRequests()
             refreshLeaderboard()
-        }.onFailure { _error.value = mapSocialError(it.message) }
+        }.onFailure { _errorKey.value = errorKeyFor(it.message) }
     }
 
     suspend fun refreshPendingRequests() {
         runCatching {
             _pending.value = db.rpc("pending_friend_requests").decodeList()
-        }.onFailure { _error.value = mapSocialError(it.message) }
+        }.onFailure { _errorKey.value = errorKeyFor(it.message) }
     }
 
     suspend fun removeFriend(userId: String): Result<Unit> {
         @Serializable
         data class Params(val friend: String)
+        _errorKey.value = null
         return runCatching {
             db.rpc("remove_friend", Params(friend = userId))
             refreshLeaderboard()
-        }.onFailure { _error.value = mapSocialError(it.message) }
+        }.onFailure { _errorKey.value = errorKeyFor(it.message) }
     }
 
     suspend fun refreshLeaderboard() {
@@ -140,7 +154,7 @@ class SocialService(private val auth: AuthService) {
         val period = _period.value.rpcValue
         runCatching {
             _leaderboard.value = db.rpc("friends_leaderboard", Params(period = period)).decodeList()
-        }.onFailure { _error.value = mapSocialError(it.message) }
+        }.onFailure { _errorKey.value = errorKeyFor(it.message) }
     }
 
     suspend fun friendStats(userId: String): FriendPublicStats? {
@@ -164,20 +178,23 @@ class SocialService(private val auth: AuthService) {
         fun sanitizeHandle(raw: String): String =
             raw.trim().removePrefix("@").lowercase()
 
-        fun mapSocialError(message: String?): String {
+        /** Postgres raises bare codes; turn them into StringStore keys. */
+        fun errorKeyFor(message: String?): String {
             val m = message.orEmpty()
             return when {
-                "invalid_handle" in m -> "Pseudo invalide"
-                "handle_taken" in m -> "Pseudo déjà pris"
-                "user_not_found" in m -> "Utilisateur introuvable"
-                "cannot_add_self" in m -> "Tu ne peux pas t'ajouter"
-                "already_friends" in m -> "Déjà amis"
-                "request_already_sent" in m -> "Demande déjà envoyée"
-                "request_not_found" in m -> "Demande introuvable"
-                "not_friends" in m -> "Pas amis"
-                "not_authenticated" in m -> "Connecte-toi d'abord"
-                else -> message ?: "Erreur sociale"
+                "invalid_handle" in m -> "friends.error.invalidHandle"
+                "handle_taken" in m -> "friends.error.handleTaken"
+                "user_not_found" in m -> "friends.error.userNotFound"
+                "cannot_add_self" in m -> "friends.error.cannotAddSelf"
+                "already_friends" in m -> "friends.error.alreadyFriends"
+                "request_already_sent" in m -> "friends.error.requestAlreadySent"
+                "request_not_found" in m -> "friends.error.requestNotFound"
+                "not_friends" in m -> "friends.error.notFriends"
+                "not_authenticated" in m -> "friends.error.notSignedIn"
+                else -> "friends.error.generic"
             }
         }
     }
 }
+
+enum class SendRequestOutcome { SENT, AUTO_ACCEPTED }

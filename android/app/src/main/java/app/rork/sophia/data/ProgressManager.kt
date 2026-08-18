@@ -33,6 +33,12 @@ class ProgressManager(context: Context) {
 
     var onProgressChanged: ((UserProgress) -> Unit)? = null
 
+    /**
+     * Global XP just gained, so it can also be logged as an event: the weekly friends
+     * leaderboard is built from those events, not from the total.
+     */
+    var onGlobalXPAwarded: ((Int) -> Unit)? = null
+
     private fun today(): String = LocalDate.now().format(DateTimeFormatter.ISO_LOCAL_DATE)
 
     private fun load(): UserProgress {
@@ -45,9 +51,11 @@ class ProgressManager(context: Context) {
     }
 
     private fun persist(value: UserProgress) {
+        val xpGained = value.globalXP - _progress.value.globalXP
         prefs.edit().putString(KEY, json.encodeToString(value)).apply()
         _progress.value = value
         onProgressChanged?.invoke(value)
+        if (xpGained > 0) onGlobalXPAwarded?.invoke(xpGained)
     }
 
     /**

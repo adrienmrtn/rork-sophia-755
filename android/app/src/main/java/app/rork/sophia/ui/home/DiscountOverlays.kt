@@ -81,7 +81,8 @@ fun DiscountGiftOverlay(
 
     LaunchedEffect(opened) {
         if (!opened) return@LaunchedEffect
-        delay(420)
+        // Long enough to see the box open before the paywall replaces the screen (iOS: 0.75s).
+        delay(750)
         onOpened()
     }
 

@@ -151,9 +151,29 @@ L'entitlement `premium` suit l'**App User ID**, et l'app utilise l'identifiant S
   liaison d'identités par email), donc deux App User ID, donc pas de transfert. Deux options :
   activer Google Sign-In sur iOS aussi pour que les deux plateformes partagent la même
   identité, ou activer la liaison d'identités côté Supabase.
-- Un utilisateur non connecté qui achète sur Android reste sur un identifiant anonyme RC : son
-  abonnement se rattachera à son compte à la première connexion, mais il ne le retrouvera pas
-  sur un autre appareil avant.
+
+### La connexion est optionnelle sur Android
+
+Contrairement à iOS, l'onboarding Android laisse passer l'étape de connexion. Il faut donc
+que tout fonctionne sans compte, et que la bascule vers un compte ne perde rien :
+
+- **Sans compte**, RevenueCat tourne sur un identifiant anonyme (`$RCAnonymousID:…`). L'achat
+  et l'entitlement `premium` marchent normalement : ils sont liés au compte Google Play de
+  l'appareil. Ce qui ne marche pas : le multi-appareil, la sync de progression, les amis.
+- **À la première connexion**, l'app appelle `Purchases.logIn(uid)` puis `syncPurchases()`.
+  Le second appel est celui qui compte : il repousse les reçus Play vers l'utilisateur
+  identifié, donc un achat fait *avant* de se connecter suit bien le compte.
+- **Vérifie le « transfer behavior »** du projet RevenueCat (Project settings). Sur
+  « Transfer to new App User ID », l'abonnement anonyme rejoint le compte. Sur « Keep with
+  original », il reste sur l'identifiant anonyme et l'utilisateur perd Premium en se
+  connectant.
+- **À la déconnexion**, retour à un identifiant anonyme. Un abonnement acheté sur *cet*
+  appareil reste restaurable via Play ; un abonnement acheté ailleurs, non — c'est le sens
+  même de la déconnexion.
+
+Une conséquence à assumer côté support : un utilisateur qui achète sans compte, change de
+téléphone et n'a jamais créé de compte n'a aucun moyen de récupérer son abonnement en dehors
+du même compte Google Play.
 
 ---
 

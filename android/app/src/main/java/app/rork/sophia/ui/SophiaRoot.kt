@@ -106,11 +106,6 @@ fun SophiaRoot(
                     storeViewModel = storeViewModel,
                     deepLinkCourseId = deepLinkCourseId,
                     onDeepLinkConsumed = onDeepLinkConsumed,
-                    onResetOnboarding = {
-                        app.onboardingStore.reset()
-                        tabsReady = false
-                        showOnboarding = true
-                    },
                 )
             }
         }

@@ -32,8 +32,15 @@ object TrialReminderScheduler {
         manager.createNotificationChannel(channel)
     }
 
-    /** Schedule a reminder ~2 days after now (day before 3-day trial ends). */
+    /**
+     * Schedule a reminder ~2 days after now (day before 3-day trial ends).
+     *
+     * Nothing in the app asks for POST_NOTIFICATIONS, so on API 33+ the reminder only
+     * exists for users who allowed notifications from system settings. Setting an alarm
+     * whose notification would be dropped is pointless, so check first.
+     */
     fun scheduleTrialEndingReminder(context: Context) {
+        if (!NotificationManagerCompat.from(context).areNotificationsEnabled()) return
         ensureChannel(context)
         val alarm = context.getSystemService(AlarmManager::class.java) ?: return
         val intent = Intent(context, TrialReminderReceiver::class.java).setAction(ACTION)
