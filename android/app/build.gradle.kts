@@ -35,16 +35,19 @@ android {
         versionName = "1.0.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
-        // Set REVENUECAT_API_KEY / REVENUECAT_TEST_API_KEY in local.properties to enable billing.
+        // Public SDK key of the RevenueCat Google Play app. It ships inside every APK, so it
+        // sits with the other public keys rather than in local.properties. Google has no
+        // separate sandbox key, hence the same value for debug and release; the indirection
+        // stays so a laptop or CI can point at a different RevenueCat app.
         buildConfigField(
             "String",
             "REVENUECAT_API_KEY",
-            "\"${secret("REVENUECAT_API_KEY", "goog_REPLACE_ME")}\"",
+            "\"${secret("REVENUECAT_API_KEY", "goog_BMgnkFLoHMpayyrxjzVKqTUJvst")}\"",
         )
         buildConfigField(
             "String",
             "REVENUECAT_TEST_API_KEY",
-            "\"${secret("REVENUECAT_TEST_API_KEY", "test_REPLACE_ME")}\"",
+            "\"${secret("REVENUECAT_TEST_API_KEY", "goog_BMgnkFLoHMpayyrxjzVKqTUJvst")}\"",
         )
         buildConfigField(
             "String",
