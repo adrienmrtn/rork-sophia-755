@@ -30,28 +30,103 @@ identifiants Play qui leur sont propres. Prérequis : app publiée sur une piste
 interne** avec un build signé, et compte marchand renseigné (sans ça, l'onglet Abonnements
 reste vide).
 
-1. **Monétisation → Abonnements → Créer**, par exemple `sophia_pro`, avec deux plans de base :
-   - `annual`, période P1Y — correspondra à `$rc_annual`,
-   - `monthly`, période P1M — correspondra à `$rc_monthly`.
-2. Sur `annual`, ajoute une **offre** d'essai gratuit de 3 jours, pour refléter iOS. Le code
-   lit l'essai sur le produit réellement servi : sans offre d'essai, les paywalls passent
-   automatiquement aux formulations « sans essai » (`paywall.price.yearlyNoTrial`,
-   `onboardingV2.pw.priceNoTrial`), il n'y a rien à changer.
-3. Pour l'offre flash, crée le pendant Play du produit promo utilisé sur iOS : soit un second
-   abonnement `sophia_pro_promo` avec un plan `annual`, soit un plan de base annuel moins cher
-   dans `sophia_pro`. C'est lui qui alimentera `offre_discount`.
-4. **Configuration → Test de licence** : ajoute ton compte Google pour acheter sans être
-   débité.
+1. **Monétisation → Produits → Abonnements → Créer**, par exemple `sophia_pro`.
+2. Créer trois **plans de base**, tous en **renouvellement automatique** :
+
+   | Plan de base | Période | Rôle |
+   |---|---|---|
+   | `p1y` | 1 an | `$rc_annual` |
+   | `monthly` | 1 mois | `$rc_monthly` |
+   | `annual-promo` | 1 an, prix plus bas | `$rc_annual` de `offre_discount` |
+
+   Le type de renouvellement est **figé à la création** : un plan créé en prépayé par erreur
+   ne se corrige pas, et son ID est brûlé dès qu'il a été activé. Il faut le désactiver et en
+   créer un autre sous un ID différent. Le champ **Tags** reste vide : rien dans l'app ni dans
+   RevenueCat ne le lit.
+
+   `annual-promo` doit être **strictement moins cher** que `p1y`, sinon
+   `StoreViewModel.percentOff` renvoie null et le paywall flash retombe sur un pourcentage
+   codé en dur, donc faux.
+
+3. L'essai gratuit se crée en **Offre**, et une offre appartient à un seul plan de base : il
+   en faut donc une sur `p1y` **et** une sur `monthly`. Éligibilité « Acquisition de nouveaux
+   clients → N'a jamais eu cet abonnement », une phase **Essai gratuit** de 3 jours (le
+   minimum autorisé par Play), puis **Activer**.
+
+   Google n'accorde qu'un essai par abonnement : qui l'utilise en mensuel n'y a plus droit en
+   annuel. Sans offre d'essai, rien ne casse — les paywalls passent aux formulations « sans
+   essai » (`paywall.price.yearlyNoTrial`, `onboardingV2.pw.priceNoTrial`) — mais les écrans
+   d'essai de l'onboarding disparaissent, car ils lisent l'essai de l'**annuel** de l'offering
+   courant.
+
+4. **Paramètres du compte développeur → Test de licence** : ajoute ton compte Google pour
+   acheter sans être débité. C'est au niveau du compte, pas de l'app.
 
 ## Étape 2 — RevenueCat : ajouter l'app Play au projet existant
 
-1. Ouvre le projet Sophia existant → **Project settings → Apps → New app → Google Play Store**.
-2. Package : `app.rork.sophia`.
-3. **Service Account Credentials** : dans Google Cloud, crée un compte de service, puis dans
-   Play Console → **Utilisateurs et autorisations**, invite ce compte avec les droits de
-   consultation des données financières et de gestion des commandes. Téléverse son JSON dans
-   RevenueCat et attends la pastille verte : c'est ce qui autorise RC à valider les achats
-   Play.
+⚠️ La page Play Console **« Paramètres → Accès à l'API » n'existe plus** : Google l'a
+supprimée. Il n'y a plus de projet Google Cloud à lier explicitement, le rattachement se fait
+uniquement par l'e-mail du compte de service.
+
+**Dans Google Cloud**, un seul projet pour tout :
+
+1. **API et services → Bibliothèque** → activer **Google Play Android Developer API**,
+   **Google Play Developer Reporting API** et **Cloud Pub/Sub API**. La troisième est
+   obligatoire : sans elle, RevenueCat refuse le JSON avec « Google Cloud Pub/Sub API must
+   first be enabled ».
+2. **IAM et administration → Comptes de service → Créer**.
+3. Lui accorder deux rôles — c'est **IAM → Accorder l'accès**, pas l'onglet « Autorisations »
+   du compte de service, qui gère l'inverse (qui peut utiliser ce compte). Un compte sans rôle
+   n'apparaît pas dans la liste IAM, il faut donc créer la liaison :
+   - `roles/pubsub.editor` — passer à `roles/pubsub.admin` si la création du topic échoue,
+     cas documenté par RevenueCat,
+   - `roles/monitoring.viewer`.
+4. **Clés → Ajouter une clé → JSON**. Toujours régénérer la clé **après** une modification de
+   rôles : RevenueCat met la validation en cache.
+
+**Dans Play Console**, [Utilisateurs et autorisations](https://play.google.com/console/users-and-permissions)
+(niveau compte développeur, pas dans une app) → **Inviter un nouvel utilisateur** → l'e-mail
+du compte de service, avec les autorisations de consultation des informations de l'app, des
+données financières, et de gestion des commandes et abonnements. Un compte de service n'a pas
+de boîte mail : rien à accepter, le lien est immédiat.
+
+**Dans RevenueCat**, projet Sophia existant → **Project settings → Apps → New app → Google
+Play Store**, package `app.rork.sophia`, puis téléverse le JSON. La validation côté Play peut
+prendre jusqu'à **36 h** : une erreur d'identifiants pendant ce délai n'est pas forcément une
+mauvaise configuration.
+
+## Étape 2 bis — Notifications temps réel (RTDN)
+
+Play n'envoie rien à RevenueCat directement : il **publie dans un topic Pub/Sub de ton
+projet**, que RevenueCat vient lire via sa propre subscription.
+
+1. Sous le champ du JSON, choisis un topic ou laisse RevenueCat en créer un, puis **Connect to
+   Google** et copie le chemin complet (`projects/<projet>/topics/<topic>`).
+2. Play Console → l'app → **Monétisation → Configuration de la monétisation → Notifications
+   aux développeurs en temps réel** : colle ce chemin, contenu « Abonnements, achats annulés
+   et tous les produits ponctuels », **Enregistrer**.
+3. **Envoyer une notification de test**, puis vérifier le libellé **« Last received »** dans
+   RevenueCat. Son existence suffit à prouver le circuit ; il ne se réhorodate pas forcément à
+   chaque test, et le tableau de bord ne se rafraîchit pas seul.
+4. Sur un topic préexistant, Play n'a pas forcément le droit d'y écrire. Lui accorder
+   `roles/pubsub.publisher` **sur le topic** :
+
+   ```bash
+   gcloud pubsub topics add-iam-policy-binding <TOPIC_ID> --project=<PROJET> \
+     --member="serviceAccount:google-play-developer-notifications@system.gserviceaccount.com" \
+     --role="roles/pubsub.publisher"
+   ```
+
+   Cette adresse est la même pour tous, il n'y a rien à y adapter. En français les libellés de
+   `pubsub.editor` et `pubsub.publisher` se ressemblent : se fier à l'identifiant technique.
+
+Sans RTDN, l'abonnement expire quand même à sa date — RevenueCat revérifie. Ce qu'on perd :
+les **remboursements** ne sont pas détectés, les annulations et échecs de paiement arrivent en
+retard, et les statistiques sont fausses.
+
+Un topic **sans subscription détruit les messages** à la publication. Play signale un succès
+et rien n'est conservé. Pour trancher entre « Play n'écrit pas » et « RevenueCat ne lit pas »,
+créer une subscription de test **avant** l'envoi, puis `gcloud pubsub subscriptions pull`.
 
 ## Étape 3 — Rattacher les produits Play à l'entitlement existant
 
@@ -66,44 +141,65 @@ produit Play à côté du produit App Store — un package peut contenir un prod
 
 | Offering existant | Package | Produit Play à y ajouter | Écran Android |
 |---|---|---|---|
-| `fin_onboarding` | `$rc_annual` | `sophia_pro:annual` | fin d'onboarding |
+| `fin_onboarding` | `$rc_annual` | `sophia_pro:p1y` | fin d'onboarding |
 | `fin_onboarding` | `$rc_monthly` | `sophia_pro:monthly` | comparatif des plans |
-| `debloquer_cours` | `$rc_annual` | `sophia_pro:annual` | cours du jour déjà lu |
-| `quizz` | `$rc_annual` | `sophia_pro:annual` | quiz et entraînement |
-| `offre_discount` | `$rc_annual` | produit promo | offre flash 60 min |
+| `debloquer_cours` | `$rc_annual` | `sophia_pro:p1y` | cours du jour déjà lu |
+| `quizz` | `$rc_annual` | `sophia_pro:p1y` | quiz et entraînement |
+| `offre_discount` | `$rc_annual` | `sophia_pro:annual-promo` | offre flash 60 min |
+
+Un produit Play s'écrit `abonnement:plan_de_base`.
+
+**Un offering doit être marqué « Current »**, et ce n'est pas cosmétique : `offering(null)`
+renvoie l'offering courant, qui sert à la fois de repli quand un identifiant est introuvable,
+de prix barré du paywall flash, et de source de vérité pour l'affichage des écrans d'essai de
+l'onboarding. Mettre `fin_onboarding`.
 
 Le badge d'économie du comparatif est calculé à l'exécution en comparant l'annuel à douze
 mensualités (`StoreViewModel.discountBadge`) : il n'y a rien à saisir pour lui, mais il ne
 s'affichera que si `$rc_monthly` a bien un produit Play.
 
+**Project settings → transfer behavior : « Transfer to new App User ID ».** La connexion étant
+optionnelle sur Android, beaucoup achèteront en anonyme puis créeront un compte ; l'autre
+réglage leur ferait perdre Premium en se connectant.
+
 ## Étape 5 — La clé Android
 
-**Project settings → API keys** : l'app Google Play a sa propre clé publique `goog_…` (la clé
-`appl_…` d'iOS ne fonctionne pas ici). Mets-la dans `android/local.properties`, fichier
-git-ignoré que le build lit avant toute valeur par défaut :
+Elle est **déjà dans le dépôt** : `goog_BMgnkFLoHMpayyrxjzVKqTUJvst`, en valeur par défaut de
+`REVENUECAT_API_KEY` et `REVENUECAT_TEST_API_KEY` dans `android/app/build.gradle.kts`. C'est
+la clé publique du SDK, embarquée dans chaque APK de toute façon. Google n'a pas de clé
+sandbox distincte, d'où la même valeur des deux côtés.
+
+Pour pointer vers un autre projet RevenueCat depuis un poste ou en CI, `local.properties`
+prend le dessus sur le défaut :
 
 ```properties
-sdk.dir=/chemin/vers/Android/sdk
-
 REVENUECAT_API_KEY=goog_xxxxxxxxxxxxxxxxxxxxx
 REVENUECAT_TEST_API_KEY=goog_xxxxxxxxxxxxxxxxxxxxx
 ```
 
-Tant que la clé vaut `goog_REPLACE_ME`, le SDK n'est pas configuré : l'app tourne en mode
-gratuit et le bouton d'achat débloque Premium **localement** pour visiter les écrans. Dès
-qu'une vraie clé est là, ce raccourci disparaît.
+Conséquence du passage à une vraie clé : `purchasePackage` ne simulait Premium en local que
+tant que `Purchases` n'était pas configuré. Le SDK se configure maintenant, donc sur un
+appareil qui n'atteint pas Play Billing — émulateur, APK installé à la main — le bouton
+d'achat répond « Offre indisponible » au lieu de débloquer. Les écrans Premium se testent sur
+un build installé **depuis Play**.
 
 ## Étape 6 — Vérifier
 
-1. Build **debug** sur un appareil connecté avec le compte testeur de licence. Les logs
-   RevenueCat sont en niveau DEBUG dans cette variante, donc les offerings récupérés et les
-   erreurs de configuration apparaissent dans `logcat`.
-2. Ouvre un deuxième cours dans la journée. Le paywall « cours débloqué » doit afficher un
+Les achats ne se testent pas hors Play : il faut un build sur la piste **test interne**,
+installé depuis le Play Store, avec un compte inscrit au test de licence.
+
+1. Ouvre un **deuxième** cours dans la journée. Le paywall « cours débloqué » doit afficher un
    **vrai prix** ; `39,99 €` signifie que le repli codé en dur s'applique, donc que l'offering
    demandé n'a pas de produit Play dans `$rc_annual`.
-3. Achète : l'app passe Premium immédiatement.
-4. Ferme un paywall contextuel : le comparatif annuel/mensuel doit s'ouvrir, avec un prix
-   mensuel réel.
+2. Achète : l'app passe Premium immédiatement, sans redémarrage.
+3. Ferme un paywall contextuel : le comparatif annuel/mensuel doit s'ouvrir, avec un prix
+   mensuel réel et un badge d'essai sur les deux cartes.
+4. Annule l'abonnement depuis le Play Store, **sans ouvrir l'app**, puis regarde
+   RevenueCat → **Customers → Customer History**. L'annulation doit y apparaître : c'est le
+   seul vrai test des RTDN, qu'aucune notification de test ne peut démontrer.
+
+Pour diagnostiquer, un build **debug** suffit : les logs RevenueCat y sont en niveau DEBUG,
+donc les offerings récupérés et les erreurs de configuration apparaissent dans `logcat`.
 
 ---
 
@@ -132,6 +228,23 @@ manque le client **Android**, sans lequel Credential Manager ne peut pas produir
 | `GetCredentialException: No credentials available` | Aucun compte Google sur l'appareil, ou pas de client Android pour ce SHA-1 |
 | Erreur 16 / `Caller not authorized` | Package ou SHA-1 différent de celui déclaré |
 | Supabase `invalid_client` | Client ID Web absent de « Authorized Client IDs » |
+| Le bouton ne fait rien, aucune fenêtre | One Tap n'a rien à proposer. `AuthService` bascule alors sur `GetSignInWithGoogleOption`, et un toast affiche l'erreur en debug |
+
+---
+
+## Diagnostic RevenueCat
+
+| Message | Ce qu'il faut faire |
+|---|---|
+| « Google Cloud Pub/Sub API must first be enabled » | Activer **Cloud Pub/Sub API** dans le projet du compte de service |
+| « credentials do not have permission to create a Pub/Sub topic » | Attendre la propagation IAM (5–10 min), vérifier la liaison avec `gcloud projects get-iam-policy`, puis passer à `roles/pubsub.admin` et régénérer le JSON |
+| « credentials do not have permissions to access the needed Google resources » | Rôles manquants, ou JSON émis avant l'ajout des rôles |
+| Prix `39,99 €` ou `19,99 €` sur un paywall | Repli codé en dur : pas de produit Play dans le `$rc_annual` de cet offering |
+| Offerings vides, aucun prix | Validation des identifiants pas terminée (jusqu'à 36 h) |
+| « Offre indisponible » à l'achat | Build pas installé depuis Play, plan de base non activé, ou `versionCode` différent du build publié |
+| Achat réussi mais Premium inactif | Produit Play pas attaché à l'entitlement `premium` |
+| Premium actif après annulation | RTDN non configurées (étape 2 bis) |
+| Premium perdu en se connectant | Transfer behavior sur « Keep with original » |
 
 ---
 
