@@ -247,8 +247,10 @@ fun DiscountSideTab(
         label = "bob",
     )
 
+    // fillMaxHeight alone let the box shrink to its content width, so CenterEnd had nothing to
+    // align against and the tab sat on the left edge. It belongs on the right, as on iOS.
     Box(
-        modifier = Modifier.fillMaxHeight(),
+        modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.CenterEnd,
     ) {
         Row(
