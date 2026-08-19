@@ -13,6 +13,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -160,13 +162,15 @@ private fun WelcomeReadingPage(language: AppLanguage, onContinue: () -> Unit) {
 @Composable
 private fun ActiveRecallPage(language: AppLanguage, onNext: () -> Unit) {
     val context = LocalContext.current
+    // SpaceBetween on a fixed-height column pushed the CTA off-screen as soon as the graph,
+    // the legend and the stat sentence together exceeded the viewport — which they do on a
+    // short screen and in the languages with longer copy. The page then had no way out.
     Column(
         modifier = Modifier
             .fillMaxSize()
             .padding(DS.Space.l),
-        verticalArrangement = Arrangement.SpaceBetween,
     ) {
-        Column {
+        Column(modifier = Modifier.weight(1f).verticalScroll(rememberScrollState())) {
             Spacer(Modifier.height(48.dp))
             Text(
                 StringStore.text(context, "training.ob.recall.title", language),
@@ -192,6 +196,7 @@ private fun ActiveRecallPage(language: AppLanguage, onNext: () -> Unit) {
                 },
                 style = SophiaTypography.bodyMedium,
             )
+            Spacer(Modifier.height(20.dp))
         }
         OnboardingCta(
             text = StringStore.text(context, "training.ob.recall.cta", language),
@@ -209,9 +214,8 @@ private fun AlgorithmPage(language: AppLanguage, onNext: () -> Unit) {
         modifier = Modifier
             .fillMaxSize()
             .padding(DS.Space.l),
-        verticalArrangement = Arrangement.SpaceBetween,
     ) {
-        Column {
+        Column(modifier = Modifier.weight(1f).verticalScroll(rememberScrollState())) {
             Spacer(Modifier.height(48.dp))
             Text(
                 StringStore.text(context, "training.ob.algo.title", language),
@@ -239,6 +243,7 @@ private fun AlgorithmPage(language: AppLanguage, onNext: () -> Unit) {
                     style = SophiaTypography.bodyMedium,
                 )
             }
+            Spacer(Modifier.height(20.dp))
         }
         OnboardingCta(
             text = StringStore.text(context, "training.ob.cta.last", language),
