@@ -3,6 +3,8 @@ package app.rork.sophia.data
 import android.app.Activity
 import android.content.Context
 import android.content.ContextWrapper
+import android.content.pm.PackageManager
+import android.os.Build
 import android.util.Log
 import android.widget.Toast
 import androidx.credentials.CredentialManager
@@ -30,6 +32,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import java.security.MessageDigest
 
 class AuthService(private val appContext: Context) {
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
@@ -98,7 +101,10 @@ class AuthService(private val appContext: Context) {
                     .setServerClientId(webClientId)
                     .build(),
             )
-        } catch (_: GetCredentialCancellationException) {
+        } catch (e: GetCredentialCancellationException) {
+            // Google also reports some refusals as a cancellation, so this branch used to
+            // swallow real configuration errors. Log it, stay quiet on screen.
+            Log.i(TAG, "One Tap dismissed or cancelled", e)
             return false
         } catch (e: GetCredentialException) {
             Log.w(TAG, "One Tap unavailable, falling back to Sign in with Google", e)
@@ -108,11 +114,41 @@ class AuthService(private val appContext: Context) {
 
         return try {
             request(GetSignInWithGoogleOption.Builder(webClientId).build())
-        } catch (_: GetCredentialCancellationException) {
+        } catch (e: GetCredentialCancellationException) {
+            Log.i(TAG, "Sign in with Google dismissed or cancelled", e)
+            logSigningIdentity(activity)
             false
         } catch (e: Exception) {
             fail(activity, e)
         }
+    }
+
+    /**
+     * Google matches the request against a package name plus the SHA-1 of the certificate the
+     * installed app is actually signed with — for a Play build, Play's app signing key, not the
+     * upload key. Getting that pair wrong looks exactly like a user cancelling: the picker
+     * appears, the tap returns nothing. Printing what the app really is turns that into a fact
+     * you can compare against the Android OAuth client.
+     */
+    private fun logSigningIdentity(context: Context) {
+        val sha1 = runCatching {
+            val pm = context.packageManager
+            @Suppress("DEPRECATION")
+            val certificate = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                pm.getPackageInfo(context.packageName, PackageManager.GET_SIGNING_CERTIFICATES)
+                    .signingInfo
+                    ?.apkContentsSigners
+                    ?.firstOrNull()
+            } else {
+                pm.getPackageInfo(context.packageName, PackageManager.GET_SIGNATURES)
+                    .signatures
+                    ?.firstOrNull()
+            } ?: return@runCatching null
+            MessageDigest.getInstance("SHA-1")
+                .digest(certificate.toByteArray())
+                .joinToString(":") { "%02X".format(it) }
+        }.getOrNull()
+        Log.w(TAG, "package=${context.packageName} signingSha1=$sha1 serverClientId=${AppConfig.GOOGLE_WEB_CLIENT_ID}")
     }
 
     private suspend fun consumeGoogleCredential(result: GetCredentialResponse): Boolean {
@@ -137,6 +173,7 @@ class AuthService(private val appContext: Context) {
      */
     private fun fail(activity: Activity, e: Exception): Boolean {
         Log.e(TAG, "Google sign-in failed", e)
+        logSigningIdentity(activity)
         val message = if (BuildConfig.DEBUG) {
             e.message ?: "Google sign-in failed"
         } else {
