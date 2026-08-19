@@ -1,5 +1,6 @@
 package app.rork.sophia.ui.paywall
 
+import android.app.Activity
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
@@ -30,6 +31,7 @@ import androidx.compose.material.icons.filled.RestartAlt
 import androidx.compose.material.icons.filled.School
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -43,10 +45,12 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.core.view.WindowCompat
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.billing.StoreViewModel
 import app.rork.sophia.data.StringStore
@@ -54,6 +58,7 @@ import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.ui.components.SectionLabel
 import app.rork.sophia.ui.components.softPress
 import app.rork.sophia.ui.components.sophiaCard
+import app.rork.sophia.ui.LocalFullBleedBackground
 import app.rork.sophia.ui.legal.LegalDocKind
 import app.rork.sophia.ui.legal.LegalDocumentScreen
 import app.rork.sophia.ui.theme.DS
@@ -258,7 +263,7 @@ private fun OnboardingAnnualPaywall(
         annual,
         StringStore.text(context, "paywall.plan.fallback.yearlyPrice", language),
     )
-    val perMonth = storeViewModel.formattedYearlyPerMonth(annual, yearly)
+    val perMonth = perMonthLabel(context, language, storeViewModel, annual)
 
     LaunchedEffect(Unit) { storeViewModel.trackPaywallImpression("onboarding_annual") }
 
@@ -362,7 +367,7 @@ private fun ComparisonPaywall(
         monthly,
         StringStore.text(context, "paywall.plan.fallback.monthlyPrice", language),
     )
-    val perMonth = storeViewModel.formattedYearlyPerMonth(annual, annualPrice)
+    val perMonth = perMonthLabel(context, language, storeViewModel, annual)
     val yearlyHasTrial = storeViewModel.hasFreeTrial(annual)
     val monthlyHasTrial = storeViewModel.hasFreeTrial(monthly)
     val selectedHasTrial = if (yearlySelected) yearlyHasTrial else monthlyHasTrial
@@ -471,7 +476,7 @@ private fun CourseUnlockPaywall(
         annual,
         StringStore.text(context, "paywall.plan.fallback.yearlyPrice", language),
     )
-    val perMonth = storeViewModel.formattedYearlyPerMonth(annual, yearly)
+    val perMonth = perMonthLabel(context, language, storeViewModel, annual)
     val dailyCourseId = app.progressManager.progress.value.dailyFreeCourseId
     val secondsToReset = remember { app.progressManager.secondsUntilDailyReset() }
     var purchasing by remember { mutableStateOf(false) }
@@ -588,7 +593,7 @@ private fun TrainingPaywall(
         annual,
         StringStore.text(context, "paywall.plan.fallback.yearlyPrice", language),
     )
-    val perMonth = storeViewModel.formattedYearlyPerMonth(annual, yearly)
+    val perMonth = perMonthLabel(context, language, storeViewModel, annual)
     var purchasing by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
 
@@ -694,7 +699,7 @@ private fun QuizPaywall(
         annual,
         StringStore.text(context, "paywall.plan.fallback.yearlyPrice", language),
     )
-    val perMonth = storeViewModel.formattedYearlyPerMonth(annual, yearly)
+    val perMonth = perMonthLabel(context, language, storeViewModel, annual)
     var purchasing by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
     var expandedFaq by remember { mutableStateOf<Int?>(null) }
@@ -888,11 +893,29 @@ private fun DiscountPaywall(
     val badge = storeViewModel.percentOff(annual, regularAnnual)
         ?: StringStore.text(context, "paywall.plan.discount", language)
 
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(Brush.verticalGradient(listOf(DS.accent, DS.accentSoft))),
-    ) {
+    // Insets are consumed at the root, so painting the gradient here alone left the strips
+    // behind the status and navigation bars on the pale canvas. Handing the brush up paints it
+    // edge to edge instead, and the bar icons are flipped to light for the dark gradient.
+    val setFullBleed = LocalFullBleedBackground.current
+    val gradient = remember { Brush.verticalGradient(listOf(DS.accent, DS.accentSoft)) }
+    val view = LocalView.current
+    DisposableEffect(Unit) {
+        setFullBleed(gradient)
+        val window = (view.context as? Activity)?.window
+        val controller = window?.let { WindowCompat.getInsetsController(it, view) }
+        val previousLightBars = controller?.isAppearanceLightStatusBars
+        controller?.isAppearanceLightStatusBars = false
+        controller?.isAppearanceLightNavigationBars = false
+        onDispose {
+            setFullBleed(null)
+            previousLightBars?.let {
+                controller.isAppearanceLightStatusBars = it
+                controller.isAppearanceLightNavigationBars = it
+            }
+        }
+    }
+
+    Box(modifier = Modifier.fillMaxSize()) {
         Column(modifier = Modifier.fillMaxSize()) {
             Row(modifier = Modifier.fillMaxWidth().padding(horizontal = DS.Space.l, vertical = 8.dp)) {
                 PaywallCloseButton(onClose = onDismiss, light = true)
@@ -1059,6 +1082,25 @@ private fun priceLineText(
     yearly,
     perMonth,
 )
+
+/**
+ * The monthly equivalent of an annual plan, with its unit: « 4,00 € / mois ». The bare amount
+ * landed in the price line as a naked "(4,00 €)", which reads as a second, cheaper price
+ * rather than a per-month breakdown. Falls back to the already-suffixed localised string when
+ * RevenueCat has no price to divide.
+ */
+private fun perMonthLabel(
+    context: android.content.Context,
+    language: AppLanguage,
+    storeViewModel: StoreViewModel,
+    annual: Package?,
+): String {
+    val amount = storeViewModel.formattedYearlyPerMonth(annual, "")
+    if (amount.isEmpty()) {
+        return StringStore.text(context, "paywall.plan.fallback.yearlyMonthly", language)
+    }
+    return "$amount ${StringStore.text(context, "paywall.plan.perMonth", language)}"
+}
 
 private fun purchasePackage(
     context: android.content.Context,
