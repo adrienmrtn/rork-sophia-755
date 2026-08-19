@@ -16,14 +16,17 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -38,6 +41,14 @@ import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.SophiaTypography
 import kotlinx.coroutines.delay
 
+/**
+ * Set by a screen that paints its own full-screen background, so the strips left behind the
+ * status and navigation bars match it. Insets are consumed once in [SophiaRoot], which means a
+ * screen inside cannot reach behind them on its own: the discount paywall's gradient stopped
+ * at the padding and left a pale band top and bottom.
+ */
+val LocalFullBleedBackground = staticCompositionLocalOf<(Brush?) -> Unit> { {} }
+
 @Composable
 fun SophiaRoot(
     storeViewModel: StoreViewModel,
@@ -46,6 +57,7 @@ fun SophiaRoot(
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
+    var fullBleed by remember { mutableStateOf<Brush?>(null) }
     var showOnboarding by remember { mutableStateOf(!app.onboardingStore.isCompleted) }
     var tabsReady by remember { mutableStateOf(false) }
     val language by app.languageManager.current.collectAsState()
@@ -67,46 +79,56 @@ fun SophiaRoot(
     }
 
     Surface(modifier = Modifier.fillMaxSize(), color = DS.canvas) {
-        // The activity is edge-to-edge and almost every screen is laid out by hand
-        // rather than in a Scaffold, so headers ran under the status bar and bottom
-        // CTAs under the gesture bar. Consume the insets once, here: the Scaffold in
-        // MainTabs then sees zero and cannot pad twice.
         Box(
             modifier = Modifier
                 .fillMaxSize()
-                .windowInsetsPadding(
-                    WindowInsets.systemBars.union(WindowInsets.displayCutout),
-                ),
+                .then(fullBleed?.let { Modifier.background(it) } ?: Modifier),
         ) {
-            if (showOnboarding) {
-                OnboardingV2Screen(
-                    language = language,
-                    storeViewModel = storeViewModel,
-                    onLanguageSelected = { app.languageManager.setLanguage(it) },
-                    onComplete = {
-                        app.onboardingStore.markCompleted()
-                        showOnboarding = false
-                    },
-                )
-            } else if (!tabsReady) {
-                Box(
-                    modifier = Modifier.fillMaxSize().background(DS.canvas),
-                    contentAlignment = Alignment.Center,
+            // The activity is edge-to-edge and almost every screen is laid out by hand
+            // rather than in a Scaffold, so headers ran under the status bar and bottom
+            // CTAs under the gesture bar. Consume the insets once, here: the Scaffold in
+            // MainTabs then sees zero and cannot pad twice.
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .windowInsetsPadding(
+                        WindowInsets.systemBars.union(WindowInsets.displayCutout),
+                    ),
+            ) {
+                CompositionLocalProvider(
+                    LocalFullBleedBackground provides { brush -> fullBleed = brush },
                 ) {
-                    Text(
-                        text = "Sophia",
-                        fontSize = 28.sp,
-                        fontWeight = FontWeight.Bold,
-                        color = DS.ink,
-                    )
+                    if (showOnboarding) {
+                        OnboardingV2Screen(
+                            language = language,
+                            storeViewModel = storeViewModel,
+                            onLanguageSelected = { app.languageManager.setLanguage(it) },
+                            onComplete = {
+                                app.onboardingStore.markCompleted()
+                                showOnboarding = false
+                            },
+                        )
+                    } else if (!tabsReady) {
+                        Box(
+                            modifier = Modifier.fillMaxSize().background(DS.canvas),
+                            contentAlignment = Alignment.Center,
+                        ) {
+                            Text(
+                                text = "Sophia",
+                                fontSize = 28.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = DS.ink,
+                            )
+                        }
+                    } else {
+                        MainTabs(
+                            language = language,
+                            storeViewModel = storeViewModel,
+                            deepLinkCourseId = deepLinkCourseId,
+                            onDeepLinkConsumed = onDeepLinkConsumed,
+                        )
+                    }
                 }
-            } else {
-                MainTabs(
-                    language = language,
-                    storeViewModel = storeViewModel,
-                    deepLinkCourseId = deepLinkCourseId,
-                    onDeepLinkConsumed = onDeepLinkConsumed,
-                )
             }
         }
 
