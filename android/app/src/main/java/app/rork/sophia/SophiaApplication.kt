@@ -65,13 +65,13 @@ class SophiaApplication : Application(), ImageLoaderFactory {
         analytics.trackAppOpened()
         analytics.trackSessionIfNeeded(isPremium = false)
 
-        TrialReminderScheduler.ensureChannel(this)
-
         // Warm the slim course index (~70KB) + collections off the main thread.
         val lang = languageManager.current.value
         appScope.launch(Dispatchers.IO) {
             runCatching {
                 StringStore.preload(this@SophiaApplication, lang)
+                // Named from the string table, so it has to follow the preload.
+                TrialReminderScheduler.ensureChannel(this@SophiaApplication)
                 ContentCatalog.summaries(this@SophiaApplication, lang)
                 ContentCatalog.collections(this@SophiaApplication, lang)
                 CourseCoverUrls.ensureMap(this@SophiaApplication)

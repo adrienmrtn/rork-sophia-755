@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import app.rork.sophia.AppConfig
 import app.rork.sophia.BuildConfig
 import app.rork.sophia.SophiaApplication
+import app.rork.sophia.data.TrialReminderScheduler
 import com.revenuecat.purchases.CustomerInfo
 import com.revenuecat.purchases.LogLevel
 import com.revenuecat.purchases.EntitlementInfo
@@ -44,6 +45,10 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
     private val _trialExpiresInOneDay = MutableStateFlow(false)
     val trialExpiresInOneDay: StateFlow<Boolean> = _trialExpiresInOneDay.asStateFlow()
 
+    /** Exact end of the running free trial, when RevenueCat knows it. Aims the local reminder. */
+    private val _trialExpirationDate = MutableStateFlow<Date?>(null)
+    val trialExpirationDate: StateFlow<Date?> = _trialExpirationDate.asStateFlow()
+
     private val _configured = MutableStateFlow(false)
     val configured: StateFlow<Boolean> = _configured.asStateFlow()
 
@@ -63,9 +68,18 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
     private fun applyCustomerInfo(customerInfo: CustomerInfo) {
         val entitlement = customerInfo.entitlements[AppConfig.PREMIUM_ENTITLEMENT]
         val active = entitlement?.isActive == true
+        val inTrial = active && entitlement?.periodType == PeriodType.TRIAL
         _isPremium.value = active
-        _isInFreeTrial.value = active && entitlement?.periodType == PeriodType.TRIAL
+        _isInFreeTrial.value = inTrial
         _trialExpiresInOneDay.value = isTrialExpiringInOneDay(entitlement)
+        val trialEnd = if (inTrial) entitlement?.expirationDate else null
+        _trialExpirationDate.value = trialEnd
+        // Pending alarms are dropped on reboot, the trial may have started on another device,
+        // and the purchase path can only assume a 3-day trial. Re-aim the reminder from the
+        // authoritative expiry every time it lands; an unchanged target is a no-op.
+        if (trialEnd != null) {
+            TrialReminderScheduler.scheduleTrialEndingReminder(getApplication(), trialEnd)
+        }
     }
 
     /** Calendar-day check: trial is active and expires tomorrow. */
