@@ -33,6 +33,7 @@ import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.DeviceCapabilities
 import app.rork.sophia.data.GlossaryStore
 import app.rork.sophia.data.InAppReviewHelper
+import app.rork.sophia.data.NotificationPermission
 import app.rork.sophia.data.TrialReminderScheduler
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.CourseSummary
@@ -55,6 +56,7 @@ private enum class OnboardingStep(val analyticsName: String) {
     Swipe("swipe_courses"),
     Loading("loading"),
     Profile("profile"),
+    Notifications("notifications"),
     Login("login"),
     Trial("trial_steps"),
     Reminder("reminder"),
@@ -131,9 +133,22 @@ fun OnboardingV2Screen(
         // Only schedule when the served annual product actually has a free trial.
         // Reminder step runs even on no-trial paths; must not notify "trial ending".
         if (storeViewModel.annualHasFreeTrial()) {
-            TrialReminderScheduler.scheduleTrialEndingReminder(context)
+            // RevenueCat rarely knows the expiry this early, so this arms an assumed 3-day
+            // trial; StoreViewModel re-aims it once the real expiration date arrives.
+            TrialReminderScheduler.scheduleTrialEndingReminder(
+                context,
+                storeViewModel.trialExpirationDate.value,
+            )
         }
     }
+
+    /** The notifications page has nothing to add once the permission is already settled. */
+    fun stepAfterProfile(): OnboardingStep =
+        if (NotificationPermission.shouldAsk(context)) {
+            OnboardingStep.Notifications
+        } else {
+            OnboardingStep.Login
+        }
 
     fun advanceFromReminder() {
         if (isPremium) finish(true)
@@ -227,8 +242,11 @@ fun OnboardingV2Screen(
                     language = language,
                     objectiveKeys = selectedObjectives.toList().ifEmpty { listOf(primaryObjective) },
                     likedCourseIds = likedCourseIds,
-                    onContinue = { goTo(OnboardingStep.Login) },
+                    onContinue = { goTo(stepAfterProfile()) },
                 )
+                OnboardingStep.Notifications -> NotificationsStep(language) {
+                    goTo(OnboardingStep.Login)
+                }
                 OnboardingStep.Login -> LoginStep(
                     language = language,
                     onGoogle = {

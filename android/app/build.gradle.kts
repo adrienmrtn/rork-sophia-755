@@ -33,7 +33,7 @@ android {
         targetSdk = 35
         // Play refuses a versionCode it has already seen, permanently. Bump on every upload,
         // including a re-upload to internal testing.
-        versionCode = 4
+        versionCode = 5
         versionName = "1.0.3"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
