@@ -1,15 +1,34 @@
 #!/usr/bin/env python3
-"""Translate French CoursesV2 sources into every non-FR app language.
+"""Machine-translate French CoursesV2 sources into the other app languages.
 
 Reads ``content/courses/fr/*.json``, writes ``content/courses/<lang>/<id>.json``.
 Does NOT modify French sources. Preserves structure, assets, ids, and inline
 markup (``**bold**``, ``[[glossary]]``). Glossary markers are remapped to the
 existing per-locale glossary display terms when possible.
 
+**This produces a draft, not a shippable edition.** Machine translation gets
+articles wrong around a spliced glossary term and reads proper nouns as common
+nouns. Output must clear ``scripts/check_course_translation.py`` before it
+ships, and anything it flags goes through the authored workflow instead
+(``make_translation_briefs.py`` then ``apply_translation_briefs.py``, per
+``content/TRANSLATION_GUIDE_EN.md``).
+
+Two guarantees this script does make:
+
+* Names listed in ``scripts/proper_nouns.json`` survive translation. Without
+  that list the engine renders Degas as "Entgasen" in German and Corneille as
+  "Varju" in Hungarian, and leaves character names of translated literature in
+  French.
+* A glossary term is never parked at the end of a paragraph to keep the count
+  up. When it cannot be placed where it belongs, the term is dropped and the
+  segment is written to a report, which makes the loss loud in two places: here
+  and in the validator's ``glossary-count`` rule.
+
 Usage:
     python scripts/translate_courses_v2.py --lang en
     python scripts/translate_courses_v2.py --lang all
     python scripts/translate_courses_v2.py --lang es --limit 5
+    python scripts/translate_courses_v2.py --lang de --report /tmp/de-unplaced.json
 """
 
 from __future__ import annotations
@@ -260,6 +279,29 @@ SEN_B0, SEN_B1 = "ZZBOLDZZ", "ZZENDBOLDZZ"
 SEN_G0, SEN_G1 = "ZZGLOSSZZ", "ZZENDGLOSSZZ"
 SEN_I0, SEN_I1 = "ZZITALZZ", "ZZENDITALZZ"
 
+PROPER_NOUNS_PATH = Path(__file__).resolve().parent / "proper_nouns.json"
+
+
+def load_proper_nouns(lang: str) -> list[tuple[re.Pattern[str], str]]:
+    """Substitutions that must be applied instead of translating.
+
+    Longest first, so ``Impression, soleil levant`` wins over ``Impression``.
+    A name in ``never_translate`` maps to itself; a name in the language's own
+    table maps to that language's established form.
+    """
+    if not PROPER_NOUNS_PATH.is_file():
+        return []
+    registry = json.loads(PROPER_NOUNS_PATH.read_text(encoding="utf-8"))
+    mapping: dict[str, str] = {name: name for name in registry.get("never_translate", [])}
+    mapping.update(registry.get("per_language", {}).get(lang, {}))
+    return [
+        (re.compile(rf"(?<!\w){re.escape(source)}(?!\w)"), target)
+        for source, target in sorted(mapping.items(), key=lambda item: -len(item[0]))
+    ]
+
+
+SEN_N0, SEN_N1 = "ZZNAMEZZ", "ZZENDNAMEZZ"
+
 def protect_markup(text: str) -> tuple[str, list[str]]:
     """Swap markdown markers for sentinels while keeping inner text visible to MT."""
     text = MARKER_BOLD_GLOSS.sub(
@@ -430,12 +472,56 @@ class Translator:
         if self.cache_path.exists():
             self.cache = json.loads(self.cache_path.read_text(encoding="utf-8"))
         self.glossary = load_glossary(lang)
+        self.proper_nouns = load_proper_nouns(lang)
+        #: Glossary terms that could not be placed, as (course_id, key, term).
+        self.unplaced: list[tuple[str, str, str]] = []
+        self.course_id = ""
+        self.segment_key = ""
+
+    def drop_name_cache(self) -> int:
+        """Forget cached translations of any string containing a registered name.
+
+        Entries cached before ``proper_nouns.json`` existed hold the mangled
+        rendering, and the cache is consulted before protection runs, so those
+        strings have to be re-translated for the registry to take effect.
+        """
+        stale = [
+            source
+            for source in self.cache
+            if any(pattern.search(source) for pattern, _ in self.proper_nouns)
+        ]
+        for source in stale:
+            del self.cache[source]
+        if stale:
+            self.save()
+        return len(stale)
 
     def save(self) -> None:
         self.cache_path.write_text(
             json.dumps(self.cache, ensure_ascii=False, indent=0),
             encoding="utf-8",
         )
+
+    def _protect_names(self, text: str) -> tuple[str, list[str]]:
+        """Hide registered proper nouns behind opaque tokens before translation."""
+        targets: list[str] = []
+        for pattern, target in self.proper_nouns:
+            def swap(_match: re.Match[str], target: str = target) -> str:
+                targets.append(target)
+                return f"{SEN_N0}{len(targets) - 1}{SEN_N1}"
+
+            text = pattern.sub(swap, text)
+        return text, targets
+
+    def _restore_names(self, text: str, targets: list[str]) -> str:
+        for index, target in enumerate(targets):
+            text = re.sub(
+                rf"ZZ\s*NAME\s*ZZ\s*{index}\s*ZZ\s*END\s*NAME\s*ZZ",
+                target.replace("\\", "\\\\"),
+                text,
+                flags=re.IGNORECASE,
+            )
+        return re.sub(r"ZZ\s*(?:END)?\s*NAME\s*ZZ\d*(?:ZZ\s*END\s*NAME\s*ZZ)?", "", text, flags=re.IGNORECASE)
 
     def _apply_mt(self, text: str) -> str:
         """Translate one FR string using cache; network only on miss."""
@@ -446,6 +532,7 @@ class Translator:
         if text in self.cache:
             return self.cache[text]
         protected, tokens = protect_markup(text)
+        protected, names = self._protect_names(protected)
         if len(protected) < 4000:
             translated = _translate_one(self.target, protected)
         else:
@@ -462,6 +549,7 @@ class Translator:
                 chunks.append(_translate_one(self.target, buf))
             translated = " ".join(chunks)
         translated = restore_markup(translated, tokens)
+        translated = self._restore_names(translated, names)
         self.cache[text] = translated
         return translated
 
@@ -482,6 +570,7 @@ class Translator:
 
         def job(src: str) -> tuple[str, str]:
             protected, tokens = protect_markup(src)
+            protected, names = self._protect_names(protected)
             if len(protected) < 4000:
                 translated = _translate_one(self.target, protected)
             else:
@@ -498,6 +587,7 @@ class Translator:
                     chunks.append(_translate_one(self.target, buf))
                 translated = " ".join(chunks)
             translated = restore_markup(translated, tokens)
+            translated = self._restore_names(translated, names)
             return src, translated
 
         with ThreadPoolExecutor(max_workers=workers) as pool:
@@ -640,8 +730,12 @@ class Translator:
                     + translated[empty_space.end() :]
                 )
                 continue
-            # Last resort: append so glossary count never silently drops.
-            translated = f"{translated.rstrip()} {repl}"
+            # Nowhere left to put it. Appending to the end of the paragraph
+            # would keep the glossary count up while producing exactly the
+            # defect we are trying to eliminate: a hole mid-sentence and an
+            # underlined term dangling after the final period. Report it
+            # instead and let the authored workflow rewrite the segment.
+            self.unplaced.append((self.course_id, self.segment_key, term))
 
         # Clean accidental empty / broken markers from older paths.
         translated = translated.replace("[[]]", "")
@@ -681,6 +775,7 @@ def map_value(value, translator: Translator, course_id: str, key: str | None = N
         if key in SKIP_KEYS or is_passthrough(value):
             return value
         if "[[" in value:
+            translator.segment_key = key or "?"
             return translator.translate_with_glossary(value, course_id)
         return translator.translate_plain(value)
     return value
@@ -688,6 +783,7 @@ def map_value(value, translator: Translator, course_id: str, key: str | None = N
 
 def translate_course(data: dict, translator: Translator) -> dict:
     course_id = data["id"]
+    translator.course_id = course_id
     return map_value(data, translator, course_id)
 
 
@@ -728,6 +824,16 @@ def main() -> int:
         default="",
         help="Comma-separated course ids (or filenames) to translate",
     )
+    parser.add_argument(
+        "--report",
+        type=Path,
+        help="Write the list of glossary terms that could not be placed as JSON",
+    )
+    parser.add_argument(
+        "--refresh-names",
+        action="store_true",
+        help="Re-translate cached strings containing a name from proper_nouns.json",
+    )
     args = parser.parse_args()
 
     langs = LANGS if args.lang == "all" else [args.lang]
@@ -753,6 +859,9 @@ def main() -> int:
     for lang in langs:
         print(f"\n=== Translating {len(sources)} courses → {lang} ===")
         translator = Translator(lang)
+        if args.refresh_names:
+            dropped = translator.drop_name_cache()
+            print(f"  dropped {dropped} cached string(s) containing a registered proper noun")
         # Phase 1: warm cache in parallel over unique FR strings.
         unique: list[str] = []
         seen: set[str] = set()
@@ -792,6 +901,29 @@ def main() -> int:
                 translator.save()
         translator.save()
         print(f"Done {lang}: wrote {done}, skipped existing {skipped}, errors {errors}")
+
+        if translator.unplaced:
+            print(
+                f"\n  {len(translator.unplaced)} glossary term(s) had no place in the "
+                f"translated sentence and were dropped rather than parked at the end of "
+                f"a paragraph. Rewrite these segments through the authored workflow "
+                f"(see content/TRANSLATION_GUIDE_EN.md):",
+                file=sys.stderr,
+            )
+            for course_id, segment_key, term in translator.unplaced[:20]:
+                print(f"    {course_id} [{segment_key}] {term!r}", file=sys.stderr)
+            if len(translator.unplaced) > 20:
+                print(f"    ... and {len(translator.unplaced) - 20} more", file=sys.stderr)
+            if args.report:
+                report = [
+                    {"course": course_id, "segment": segment_key, "term": term}
+                    for course_id, segment_key, term in translator.unplaced
+                ]
+                args.report.write_text(
+                    json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+                )
+                print(f"  Report written to {args.report}", file=sys.stderr)
+
         if errors:
             return 1
     return 0
