@@ -48,26 +48,44 @@ FORBIDDEN_CHARS = {
     "\ufeff": "byte-order mark",
 }
 
-#: Function words that must never be left stranded before punctuation. This is
-#: the fingerprint of a glossary term that was deleted from mid-sentence.
-STRANDED_EN = (
-    "the|a|an|of|by|in|to|for|with|from|and|or|as|on|at|that|this|its|his|her|their|"
-    "into|about|through|during|between|against|than|but|is|was|were|are"
-)
-STRANDED_RE = re.compile(rf"\b({STRANDED_EN})\s*([,;:.!?])", re.IGNORECASE)
+#: Determiners and prepositions that cannot legally sit against punctuation.
+#: A paragraph reading "weakened above all by :" is one from which a glossary
+#: term was deleted, and this is how we find it. The punctuation must be
+#: followed by whitespace or end of segment, so "5 a.m. train" is not a hit.
+STRANDED_EN = "the|a|an|of|by|with|from|into|during|between|against|for|and"
+STRANDED_RE = re.compile(rf"\b({STRANDED_EN})\s*([,;:.!?])(?=\s|$)", re.IGNORECASE)
 
 FRENCH_LEFTOVERS = re.compile(
     r"\b(les|des|une|dans|avec|pour|sont|qui|que|quoi|aussi|si\u00e8cle|si\u00e8cles|"
-    r"ainsi|alors|entre|leur|leurs|cette|cet|ces|plus|tout|tous|toute|toutes|"
-    r"apr\u00e8s|avant|depuis|jusqu|chez|sous|vers|autour|contre|pendant|selon|"
-    r"est\-\u00e0\-dire|c'est|n'est|d'un|d'une|l'un|au|aux|du)\b"
+    r"ainsi|alors|entre|leur|leurs|cette|cet|ces|tout|tous|toute|toutes|"
+    r"apr\u00e8s|depuis|jusqu|chez|sous|autour|contre|pendant|selon|"
+    r"est-\u00e0-dire|c'est|n'est|d'un|d'une|l'un|aux|du)\b"
 )
-# Words that are legitimate English or fixed proper-noun parts and must not trip
-# the French-leftover heuristic.
-FRENCH_ALLOWLIST = re.compile(
-    r"\b(a|an|the|Les|Le|La|L'|Du|De|Des|Sans|Salon|Jardin|Champ|Champs|Mont|Sacr\u00e9|"
-    r"Coeur|C\u0153ur|Arc|Palais|Louvre|Orsay|Comm|Prix|Grand|Petit|Notre|Dame|Rue|Place|"
-    r"Cit\u00e9|\u00cele|Ile|Saint|Sainte|Bois|Beaux|Arts|Nouvelle|Vague|Guernica)\b"
+#: French fragments that are ordinary English usage or fixed names, and so are
+#: removed from a segment before the leftover heuristic runs.
+FRENCH_SET_PHRASES = (
+    "avant-garde",
+    "art nouveau",
+    "art deco",
+    "fin de siecle",
+    "fin de si\u00e8cle",
+    "musique concr\u00e8te",
+    "plein air",
+    "trompe-l'oeil",
+    "papier coll\u00e9",
+    "objet trouv\u00e9",
+    "coup d'\u00e9tat",
+    "coup de gr\u00e2ce",
+    "film noir",
+    "auteur",
+    "atelier",
+    "salon",
+    "chiaroscuro",
+    "cahiers du cin\u00e9ma",
+    "arts premiers",
+    "belle \u00e9poque",
+    "ancien r\u00e9gime",
+    "nouvelle vague",
 )
 
 VOWEL_SOUND_EXCEPTIONS_CONSONANT = ("one", "once", "uni", "use", "user", "usu", "euro", "eul")
@@ -76,11 +94,22 @@ VOWEL_SOUND_EXCEPTIONS_VOWEL = ("hour", "honest", "honor", "honour", "heir")
 # Articles that must not precede a glossary key that already carries one.
 LEADING_ARTICLES = ("the ", "a ", "an ")
 
+# "30 000" -- a French thousands separator. English wants "30,000".
 FRENCH_THOUSANDS_RE = re.compile(r"\b\d{1,3}(?: \d{3})+\b")
-FRENCH_DECIMAL_RE = re.compile(r"\b\d+,\d+\s*(%|km|kg|m|cm|mm|\u00b0)")
-ROMAN_CENTURY_RE = re.compile(r"\b[IVXL]+(?:e|\u00e8me|er)\b")
+# "3,5 %" -- a French decimal comma. The lookahead keeps "33,000 men" out: a
+# thousands group has exactly three digits, a decimal fraction one or two.
+FRENCH_DECIMAL_RE = re.compile(r"\b\d+,\d{1,2}(?!\d)\s*(?:[%\u00b0]|(?:km|kg|cm|mm|m|g|l)\b)")
+# "XVe siecle" -- a French ordinal. Two or more numerals, so the article "Le"
+# (L + e) in a French proper name such as "Le Havre" is not a false positive.
+ROMAN_CENTURY_RE = re.compile(r"\b[IVXL]{2,}(?:e|\u00e8me|er)\b")
+ROMAN_CENTURY_SPELLED_RE = re.compile(r"\b[IVXL]+(?:e|\u00e8me)\s+(?:si\u00e8cle|century)\b")
 BC_FRENCH_RE = re.compile(r"av\.?\s*J\.?-?C|apr\.?\s*J\.?-?C")
 LEAKED_TOKEN_RE = re.compile(r"ZZ[A-Z0-9]*|__[A-Z]+__|\{\{\s*\w+\s*\}\}")
+
+#: Closing punctuation that may legally follow a comma or colon with no space:
+#: American style puts the comma inside the quotation marks.
+CLOSERS = "\\s\\d\"'\u201c\u201d\u2019\\)\\]"
+MISSING_SPACE_RE = re.compile(rf"[,;:](?=[^{CLOSERS}])")
 
 
 class Finding:
@@ -105,6 +134,38 @@ def bold_spans(text: str) -> list[str]:
     """The contents of each ``**...**`` pair, ignoring an unpaired trailing marker."""
     parts = text.split("**")
     return parts[1:-1:2] if len(parts) % 2 else []
+
+
+def residual_french(text: str) -> tuple[str, str] | None:
+    """First untranslated French function word, or None.
+
+    Original-language material is exempt, because it is deliberate: glossary
+    keys, anything inside italic or bold markers (work titles and foreign terms
+    are marked that way), the set phrases English has borrowed outright, and any
+    word sitting next to a capitalised one, which makes it part of a proper name
+    such as *Cahiers du cinema* or the Salon des Refuses.
+    """
+    candidate = GLOSSARY_SPAN_RE.sub(" ", text)
+    candidate = re.sub(r"\*\*.+?\*\*|\*.+?\*", " ", candidate)
+    lowered = candidate.lower()
+    for phrase in FRENCH_SET_PHRASES:
+        start = 0
+        while (index := lowered.find(phrase, start)) >= 0:
+            candidate = candidate[:index] + " " * len(phrase) + candidate[index + len(phrase) :]
+            lowered = candidate.lower()
+            start = index + len(phrase)
+
+    for match in FRENCH_LEFTOVERS.finditer(candidate):
+        before = candidate[: match.start()].rstrip()
+        after = candidate[match.end() :].lstrip()
+        previous_word = re.search(r"([\w'\u00c0-\u024f-]+)$", before)
+        next_word = re.match(r"([\w'\u00c0-\u024f-]+)", after)
+        neighbours = [w.group(1) for w in (previous_word, next_word) if w]
+        if any(word[:1].isupper() for word in neighbours):
+            continue
+        context = candidate[max(0, match.start() - 45) : match.end() + 45].strip()
+        return match.group(0), " ".join(context.split())
+    return None
 
 
 def article_before(text: str, span_start: int) -> str | None:
@@ -147,12 +208,17 @@ def check_segment(
     if english.count("[[") != english.count("]]"):
         report("glossary-unbalanced", snippet(english, 0, 120))
     for span in bold_spans(english):
-        if span != span.strip():
-            report("bold-whitespace", f"bold span wraps whitespace: {span!r}")
-        elif span.endswith((",", ";", ":", "!", "?")) or (span.endswith(".") and " " in span.rstrip(".")):
-            report("bold-punctuation", f"bold span swallows punctuation: {span!r}")
-        elif not span:
+        if not span:
             report("bold-empty", "empty bold span")
+        elif span != span.strip():
+            report("bold-whitespace", f"bold span wraps whitespace: {span!r}")
+        elif span.endswith((",", ";", ":", "!", "?")):
+            report("bold-punctuation", f"bold span swallows punctuation: {span!r}")
+        elif span.endswith(".") and len(span.split()) >= 4:
+            # A trailing period on a short span is an initial or an abbreviation
+            # ("Josef K.", "T.S. Eliot"); on a long one it is a swallowed
+            # sentence break.
+            report("bold-punctuation", f"bold span swallows a sentence break: {span!r}")
 
     # --- glossary ---------------------------------------------------------
     french_terms = glossary_terms_in(french)
@@ -210,11 +276,7 @@ def check_segment(
 
     # --- stranded function words (the empty slot left behind) --------------
     for match in STRANDED_RE.finditer(english):
-        word = match.group(1).lower()
-        # "as," / "is," / "that," are legitimate mid-sentence; only flag the
-        # determiner and preposition classes, which cannot precede punctuation.
-        if word in {"the", "a", "an", "of", "by", "with", "from", "into", "during", "between", "against"}:
-            report("stranded-function-word", snippet(english, match.start()))
+        report("stranded-function-word", snippet(english, match.start()))
 
     # --- typography -------------------------------------------------------
     for char, label in FORBIDDEN_CHARS.items():
@@ -225,8 +287,9 @@ def check_segment(
         report("space-before-punctuation", snippet(english, re.search(r"\s[,;:!?]", english).start()))
     if "  " in english:
         report("double-space", snippet(english, english.find("  ")))
-    if re.search(r"[,;:](?=[^\s\d\"'\u201c\)\]])", english):
-        report("missing-space-after-punctuation", snippet(english, re.search(r"[,;:](?=[^\s\d\"'\u201c\)\]])", english).start()))
+    match = MISSING_SPACE_RE.search(english)
+    if match:
+        report("missing-space-after-punctuation", snippet(english, match.start()))
     if english != english.strip():
         report("edge-whitespace", "leading or trailing whitespace")
 
@@ -241,7 +304,7 @@ def check_segment(
     match = FRENCH_DECIMAL_RE.search(english)
     if match:
         report("french-decimal-comma", f"{match.group(0)!r} should use a period")
-    match = ROMAN_CENTURY_RE.search(english)
+    match = ROMAN_CENTURY_RE.search(english) or ROMAN_CENTURY_SPELLED_RE.search(english)
     if match:
         report("roman-ordinal", f"{match.group(0)!r} should be an English ordinal")
     match = BC_FRENCH_RE.search(english)
@@ -249,18 +312,10 @@ def check_segment(
         report("french-era", f"{match.group(0)!r} should be BC/AD")
 
     # --- residual French --------------------------------------------------
-    candidate = GLOSSARY_SPAN_RE.sub(" ", english)
-    candidate = re.sub(r"\*+", "", candidate)
-    for match in FRENCH_LEFTOVERS.finditer(candidate):
-        word = match.group(0)
-        # Italicised or capitalised runs are original-language titles and names.
-        if FRENCH_ALLOWLIST.fullmatch(word):
-            continue
-        context = candidate[max(0, match.start() - 40) : match.end() + 40]
-        if re.search(rf"\*[^*]*\b{re.escape(word)}\b[^*]*\*", english):
-            continue
-        report("french-leftover", f"{word!r}: {context.strip()}")
-        break
+    match = residual_french(english)
+    if match:
+        word, context = match
+        report("french-leftover", f"{word!r}: {context}")
 
 
 def check_course(course_id: str, lang: str, allowed_by_course: dict[str, list[str]]) -> list[Finding]:
