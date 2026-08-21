@@ -57,9 +57,10 @@ STRANDED_SPACED_RE = re.compile(
     re.IGNORECASE,
 )
 #: Only these can never end a clause even without the space. English strands
-#: prepositions freely ("the tools he worked with."), so `for.` and `between.`
-#: are correct and must not be reported.
-STRANDED_TIGHT_RE = re.compile(r"\b(the|an|of)\s*([,;:.!?])(?=\s|$)", re.IGNORECASE)
+#: prepositions freely ("the tools he worked with.", "what is it made of?"), so
+#: a preposition before a sentence-final mark is correct; only a comma, colon or
+#: semicolon after one is evidence of a term deleted from the slot.
+STRANDED_TIGHT_RE = re.compile(r"\b(the|an)\s*([,;:.!?])(?=\s|$)|\bof\s*([,;:])(?=\s|$)", re.IGNORECASE)
 
 FRENCH_LEFTOVERS = re.compile(
     r"\b(les|des|une|dans|avec|sont|qui|quoi|aussi|si\u00e8cle|si\u00e8cles|"

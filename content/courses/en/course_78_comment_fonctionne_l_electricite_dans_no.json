@@ -4,11 +4,11 @@
   "subtitle": "Nerves & ions",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "Thinking, beating of the heart, raising an arm: all this circulates first of all like living electricity, carried not by electrons, but by ions.",
+  "description": "Thinking, a heartbeat, lifting an arm: all of it travels first as living electricity, carried not by electrons but by ions.",
   "hero": {
     "image": "comment_fonctionne_l_electricite_dans_notre_corps",
     "ratio": "16:9",
-    "hook": "Your body is an electrical network. But here, the current is ions, not electrons."
+    "hook": "Your body is an electrical network. Only here the current is made of ions, not electrons."
   },
   "sections": [
     {
@@ -18,55 +18,55 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "In a wall socket, the current is **electrons** which circulate. In your body, it's different: they are **ions**, charged atoms, which enter and leave the cells. This flow creates the signals that make the heart think, the heart beat, and the muscle contract."
+          "text": "In a wall socket, the current is a flow of **electrons**. In your body it works differently: **ions**, atoms that carry a charge, move in and out of the cells. That flow creates the signals that let you think, keep your heart beating, and make a muscle contract."
         },
         {
           "type": "paragraph",
-          "text": "Without this living electricity, no thought, no gesture, no pulse. Understanding the body also means understanding this language of charges."
+          "text": "Without this living electricity there would be no thought, no movement, no pulse. Understanding the body also means understanding this language of charges."
         }
       ]
     },
     {
       "id": "course_78_comment_fonctionne_l_electricite_dans_no_p1",
-      "title": "The electric click of the neuron",
+      "title": "The electric click of a neuron",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A **neuron** at rest does not send a message, but it “charges”. Its membrane separates the inside and outside of the cell. Thanks to the [[sodium-potassium pumps]], it maintains a [[resting potential]] of approximately **-70 millivolts**: the inside is more negative than the outside."
+          "text": "A **neuron** at rest sends no message, but it does “charge up.” Its membrane separates the inside of the cell from the outside. Thanks to its [[sodium-potassium pumps]], it holds a [[resting potential]] of about **-70 millivolts**: the inside is more negative than the outside."
         },
         {
           "type": "image",
           "asset": "neuron_electrical_signal_brain",
           "ratio": "auto",
-          "caption": "Neurons communicate through brief electrical impulses."
+          "caption": "Neurons talk to each other in brief electrical pulses"
         },
         {
           "type": "paragraph",
-          "text": "When a stimulus arrives, channels open. The sodium comes in all at once. The polarity is reversed: it is the [[The neuronal action potential]], an all-or-nothing signal which runs along the axon, sometimes over a meter. Like an electric wave."
+          "text": "When a stimulus arrives, channels open. Sodium rushes in. The polarity flips, and that is the [[action potential]], an all-or-nothing signal that races along the axon, sometimes for a full meter. Like an electrical wave."
         },
         {
           "type": "funFact",
-          "text": "The waking brain produces about **20 watts**, enough for a small LED. However, it consumes almost **20%** of the body's calories."
+          "text": "An awake brain runs on about **20 watts**, enough for a small LED. Even so, it burns close to **20%** of the body's calories."
         }
       ]
     },
     {
       "id": "course_78_comment_fonctionne_l_electricite_dans_no_p2",
-      "title": "At the synapse, electricity becomes chemistry",
+      "title": "At the synapse, electricity turns into chemistry",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "The neurons don't really touch each other. Between them, a tiny gap: the **synapse**. The electrical signal cannot skip it. Then the end of the axon releases , messenger molecules such as acetylcholine or . [[Neurotransmitters]] [[glutamate]]"
+          "text": "Neurons do not really touch. Between them lies a tiny gap: the **synapse**. The electrical signal cannot jump it. So the tip of the axon releases [[neurotransmitters]], messenger molecules such as acetylcholine or [[glutamate]]."
         },
         {
           "type": "paragraph",
-          "text": "These messengers attach themselves to the next neuron like a key in a lock. Depending on the message, they excite or inhibit. Thousands of these simultaneous decisions form thought."
+          "text": "These messengers fit onto the next neuron like a key in a lock. Depending on the message, they either excite it or hold it back. Thousands of these decisions at once add up to thought."
         },
         {
           "type": "funFact",
-          "text": "Some nerve signals travel at **120 m/s** (more than **430 km/h**). Enough to react to a burn on the toe in a split second."
+          "text": "Some nerve signals travel at **120 m/s**, more than **430 km/h**. Fast enough to react to a burn on your toe in a fraction of a second."
         }
       ]
     },
@@ -77,34 +77,34 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "The heart does not wait for a command from the brain for each beat. In the right atrium, the **sinus node** generates its own impulses, approximately **60 to 100** times per minute at rest. The signal propagates, first contracts the atria, then the ventricles."
+          "text": "The heart does not wait for an order from the brain for every beat. In the right atrium, the **sinus node** generates its own pulses, about **60 to 100** times a minute at rest. The signal spreads out, squeezing the atria first, then the ventricles."
         },
         {
           "type": "paragraph",
-          "text": "This activity is strong enough to be read on the skin: it is the **electrocardiogram (ECG)**. If the rhythm becomes disturbed, we speak of **arrhythmia**. The heart then beats disorderly and pumps poorly."
+          "text": "This activity is strong enough to be read from the skin, which is what an **electrocardiogram (ECG)** does. When the rhythm goes wrong, doctors call it an **arrhythmia**. The heart then beats out of order and pumps badly."
         },
         {
           "type": "funFact",
-          "text": "The electric eel uses the same principle of excitable cells, but in series: up to **600 volts**, enough to paralyze prey."
+          "text": "The electric eel uses the same excitable cells, only wired in series: up to **600 volts**, enough to paralyze its prey."
         }
       ]
     },
     {
       "id": "course_78_comment_fonctionne_l_electricite_dans_no_p4",
-      "title": "From voluntary gesture to defibrillator",
+      "title": "From a lifted arm to the defibrillator",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "To raise the arm, an action potential travels down to the muscle. Acetylcholine triggers a local electrical wave, then a release of calcium. The muscle proteins slide over each other: contraction."
+          "text": "To lift your arm, an action potential runs down to the muscle. Acetylcholine sets off a local electrical wave, then a release of calcium. The muscle proteins slide over one another, and that is the contraction."
         },
         {
           "type": "paragraph",
-          "text": "**defibrillation** uses the same principle in reverse: an external shock resets all the cells “to zero” so that the sinus node resumes tempo. Bionic prosthetics also capture these weak signals to control an artificial hand."
+          "text": "**Defibrillation** uses the same principle in reverse: a shock from outside resets every cell “to zero” so the sinus node can take the tempo back. Bionic limbs also pick up these faint signals to drive an artificial hand."
         },
         {
           "type": "takeaway",
-          "text": "Living things speak in ion flows and action potentials. Thought, heart and muscles share the same electrical language."
+          "text": "Living bodies speak in flows of ions and action potentials. Thought, heart, and muscle all share the same electrical language."
         }
       ]
     }

@@ -1,14 +1,14 @@
 {
   "id": "course_69_comment_se_forment_les_eclairs",
-  "title": "How are lightning formed?",
+  "title": "How does lightning form?",
   "subtitle": "Thunderstorms",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "Lightning is not magic: it is a huge electrical discharge in a storm cloud. Here's how she prepares, then how she hits.",
+  "description": "Lightning is not magic: it is an enormous electrical discharge inside a storm cloud. Here is how it builds up, and then how it strikes.",
   "hero": {
     "image": "comment_se_forment_les_eclairs",
     "ratio": "16:9",
-    "hook": "In a fraction of a second, the air rises to 30,000°C. Five times hotter than the surface of the Sun."
+    "hook": "In a fraction of a second, the air hits 30,000°C. Five times hotter than the surface of the Sun."
   },
   "sections": [
     {
@@ -18,93 +18,93 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A lightning bolt releases colossal energy in the blink of an eye. The air in the lightning channel rises to approximately **30,000 °C**. Thunder is just the sound of this brutal heat."
+          "text": "A bolt of lightning releases colossal energy in the blink of an eye. The air inside the lightning channel climbs to roughly **30,000°C**. Thunder is nothing more than the sound of that brutal heat."
         },
         {
           "type": "paragraph",
-          "text": "To understand lightning, you have to follow three steps: how the cloud gets charged, how the electricity finds a path, and why you hear thunder afterwards."
+          "text": "To understand lightning, follow three steps: how the cloud builds up its charge, how the electricity finds a path, and why the thunder reaches you afterward."
         }
       ]
     },
     {
       "id": "course_69_comment_se_forment_les_eclairs_p1",
-      "title": "In the cloud, charges separate",
+      "title": "Inside the cloud, charges pull apart",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Lightning occurs mainly in : very large storm clouds, which can rise to around **15 km**. Inside, the air rises and falls very strongly. [[cumulonimbus]]"
+          "text": "Lightning is mostly born inside [[cumulonimbus]] clouds: huge storm towers that can rise to about **15 km**. Inside them, air rushes up and down very hard."
         },
         {
           "type": "image",
           "asset": "cumulonimbus_thunderstorm_cloud",
           "ratio": "4:3",
-          "caption": "The cumulonimbus: the storm factory."
+          "caption": "The cumulonimbus: the storm factory"
         },
         {
           "type": "paragraph",
-          "text": "In this chaos, small **ice crystals** rise, and heavier ice grains () descend. When they collide, electrical charges are exchanged. Little by little, the top of the cloud becomes rather positive, the base rather negative. [[sleet]]"
+          "text": "In that chaos, small **ice crystals** ride upward while heavier grains of ice ([[sleet]]) fall. Each collision swaps a little electric charge. Bit by bit, the top of the cloud turns positive and the base turns negative."
         },
         {
           "type": "funFact",
-          "text": "Lake Maracaibo, in Venezuela, is one of the most lightning-hit places on the planet: almost daily storms are observed there for a large part of the year."
+          "text": "Lake Maracaibo, in Venezuela, is one of the most lightning-struck places on the planet: storms there are almost a daily event for much of the year."
         }
       ]
     },
     {
       "id": "course_69_comment_se_forment_les_eclairs_p2",
-      "title": "When the air lets go: the discharge",
+      "title": "When the air gives way: the discharge",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Air is a bad conductor. But if the difference in charge becomes too great (often **hundreds of millions of volts**), the air ends up giving way. Molecules lose electrons: they become conductive. It's the . [[Air ionization]]"
+          "text": "Air is a poor conductor. But if the difference in charge grows too large (often **hundreds of millions of volts**), the air finally gives in. Molecules lose electrons and start to conduct. That is [[ionization of the air]]."
         },
         {
           "type": "paragraph",
-          "text": "An invisible channel leaves the cloud in small leaps. From the ground, electric nets rise especially from points (trees, lightning rods, buildings). When the two come together, the circuit closes."
+          "text": "An invisible channel leaves the cloud in short jumps. From the ground, electrical streamers reach up, mostly from sharp points: trees, lightning rods, buildings. When the two meet, the circuit closes."
         },
         {
           "type": "paragraph",
-          "text": "The great light that we see, the **arc back**, rises mainly from the ground towards the cloud. The current can reach tens of thousands of amps. Several discharges can follow one another in the same channel: hence the flickering effect."
+          "text": "The bright flash we actually see, the **return stroke**, travels mostly from the ground back up to the cloud. The current can reach tens of thousands of amperes. Several discharges can follow one another down the same channel, which is what makes lightning flicker."
         }
       ]
     },
     {
       "id": "course_69_comment_se_forment_les_eclairs_p3",
-      "title": "Why does thunder come later?",
+      "title": "Why the thunder comes later",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "The lightning heats the air so quickly that it suddenly expands. This shock wave becomes **thunder**. The light comes almost immediately; the sound advances at approximately **340 m/s**."
+          "text": "The bolt heats the air so fast that it expands all at once. That shock wave becomes **thunder**. The light reaches you almost instantly. The sound only travels at about **340 m/s**."
         },
         {
           "type": "paragraph",
-          "text": "Simple tip: count the seconds between lightning and thunder, then divide by **3**. You get an estimate of the distance in kilometers."
+          "text": "A simple trick: count the seconds between the flash and the thunder, then divide by **3**. That gives you a rough distance in kilometers."
         },
         {
           "type": "funFact",
-          "text": "The Earth is struck by approximately **100 lightning bolts per second** on average. In France, there are around **one million** impacts on the ground per year."
+          "text": "The Earth is hit by about **100 bolts of lightning per second** on average. France alone records around **a million** ground strikes a year."
         }
       ]
     },
     {
       "id": "course_69_comment_se_forment_les_eclairs_p4",
-      "title": "Danger, fertility and curiosities",
+      "title": "Danger, fertilizer and oddities",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Lightning remains dangerous, especially outdoors, near isolated trees or water. It also starts fires. But it has a lesser known effect: it helps produce nitrogen compounds that fertilize the soil with rain."
+          "text": "Lightning remains dangerous, above all out in the open, near lone trees or water. It also starts fires. But it has a less famous effect: it helps make nitrogen compounds that the rain then carries down to fertilize the soil."
         },
         {
           "type": "paragraph",
-          "text": "Above the storms, cameras also captured bizarre phenomena, such as : brief glows in the upper atmosphere, invisible to the naked eye from the ground. [[Leprechauns]]"
+          "text": "Above thunderstorms, cameras have also caught strange phenomena such as [[Sprites]]: brief glows high in the atmosphere, invisible to the naked eye from the ground."
         },
         {
           "type": "takeaway",
-          "text": "In a cumulonimbus, ice/sleet collisions separate the charges. When the voltage becomes too high, the air is ionized: the lightning heats up to ~30,000°C, and this sudden expansion produces thunder."
+          "text": "Inside a cumulonimbus, collisions between ice and sleet pull the charges apart. When the voltage grows too strong, the air ionizes: the bolt heats it to about 30,000°C, and that violent expansion makes the thunder."
         }
       ]
     }
