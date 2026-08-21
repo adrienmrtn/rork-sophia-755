@@ -1,14 +1,14 @@
 {
   "id": "course_57_l_invention_d_internet",
-  "title": "The invention of the Internet",
+  "title": "The Invention of the Internet",
   "subtitle": "Networks",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "The Internet does not have a single inventor. It's a long chain: a military network, a common language, then the Web for humans.",
+  "description": "The Internet has no single inventor. It is a long chain: a military network, a common language, then the Web for human beings.",
   "hero": {
     "image": "l_invention_d_internet",
     "ratio": "16:9",
-    "hook": "First a network to resist the war. Then the whole world tunes in."
+    "hook": "First a network built to survive a war. Then the whole world plugged in."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "The Internet was not born from a single genius in a garage. It is a collective construction over several decades."
+          "text": "The Internet was not born from a lone genius in a garage. It was built collectively, across several decades."
         },
         {
           "type": "paragraph",
-          "text": "Three simple steps to remember: a first network (ARPANET), a common language (TCP/IP), then an easy interface (the Web)."
+          "text": "Three simple stages are worth remembering: a first network (ARPANET), a common language (TCP/IP), then an easy interface (the Web)."
         }
       ]
     },
@@ -33,17 +33,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "At the end of the **1960** years, in the midst of the Cold War, the American army financed a project: connecting computers so that they continued to communicate even if part of the network was destroyed."
+          "text": "In the late **1960s**, in the middle of the Cold War, the American military funded a project: link computers so they could keep talking even if part of the network was destroyed."
         },
         {
           "type": "image",
           "asset": "arpanet_1969_computer_ucla",
           "ratio": "4:3",
-          "caption": "ARPANET first connects a few American universities."
+          "caption": "ARPANET first connected a handful of American universities"
         },
         {
           "type": "paragraph",
-          "text": "This network is called **ARPANET**. Messages are split into small packets which take different paths. If one road falls, another takes over."
+          "text": "That network was called **ARPANET**. Messages were cut into small packets that traveled by different routes. If one route went down, another took over."
         }
       ]
     },
@@ -54,17 +54,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "For different networks to understand each other, common rules are needed. **Vint Cerf** and **Bob Kahn** are developing the **TCP/IP** protocol: a language that tells how to cut, address and recompose data."
+          "text": "For different networks to understand each other, they needed shared rules. **Vint Cerf** and **Bob Kahn** worked out the **TCP/IP** protocol, a language that says how to split up data, address it, and put it back together."
         },
         {
           "type": "image",
           "asset": "vint_cerf_bob_kahn_internet",
           "ratio": "4:3",
-          "caption": "Cerf and Kahn: the architects of the language of the Internet."
+          "caption": "Cerf and Kahn: the architects of the language of the Internet"
         },
         {
           "type": "funFact",
-          "text": "On January 1 **1983**, ARPANET officially switched to TCP/IP. Many consider this date to be the technical “birth” of the Internet."
+          "text": "On January 1, **1983**, ARPANET switched officially to TCP/IP. Many people treat that date as the technical “birth” of the Internet."
         }
       ]
     },
@@ -75,11 +75,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "The Internet is the network. The **World Wide Web**, invented by **Tim Berners-Lee** at CERN at the beginning of the years **1990**, is the easy layer: pages, links, browsers."
+          "text": "The Internet is the network itself. The **World Wide Web**, invented by **Tim Berners-Lee** at CERN in the early **1990s**, is the easy layer on top: pages, links, browsers."
         },
         {
           "type": "paragraph",
-          "text": "Without the Web, the Internet would remain primarily a tool for experts. With it, everyone can click."
+          "text": "Without the Web, the Internet would have stayed a tool for experts. With it, anyone can click."
         }
       ]
     },
@@ -90,11 +90,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Today, the Internet carries emails, videos, banks, hospitals, GPS. It has also created new problems: disinformation, surveillance, digital divide."
+          "text": "Today the Internet carries email, video, banking, hospitals, GPS. It has created new problems too: disinformation, surveillance, the digital divide."
         },
         {
           "type": "takeaway",
-          "text": "The Internet was born from ARPANET, became universal thanks to TCP/IP, and accessible thanks to the Web. This is not a unique invention, it is a shared architecture."
+          "text": "The Internet grew out of ARPANET, became universal thanks to TCP/IP, and became usable thanks to the Web. It is not one invention, it is a shared architecture."
         }
       ]
     }

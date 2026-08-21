@@ -1,14 +1,14 @@
 {
   "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895",
-  "title": "The discovery of X-rays",
-  "subtitle": "Roentgen, 1895",
+  "title": "The Discovery of X-Rays",
+  "subtitle": "Röntgen, 1895",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "In 1895, Wilhelm Röntgen discovered invisible radiation capable of passing through matter. In a few months, medicine saw a revolution.",
+  "description": "In 1895, Wilhelm Röntgen discovered an invisible radiation that passes straight through matter. Within months, medicine saw a revolution in it.",
   "hero": {
     "image": "la_decouverte_des_rayons_x_rontgen",
     "ratio": "16:9",
-    "hook": "A hand, bones, a photo. Medicine will never again be blind."
+    "hook": "A hand, a few bones, a photograph. Medicine would never be blind again."
   },
   "sections": [
     {
@@ -18,64 +18,64 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**November 8, 1895**, in Würzburg (Germany), the physicist **Wilhelm Röntgen** notices a screen that shines... even though it is not affected by visible light. Something invisible crosses the room."
+          "text": "On **8 November 1895**, in Würzburg, Germany, the physicist **Wilhelm Röntgen** noticed a screen glowing even though no visible light was reaching it. Something invisible was crossing the room."
         },
         {
           "type": "paragraph",
-          "text": "He calls this the **X** rays, the “X” meaning “unknown.” Within a few weeks, he photographed the bones of his wife's hand. Radiology was born."
+          "text": "He called it **X-rays**, the “X” standing for “unknown.” Within weeks he had photographed the bones of his wife's hand. Radiology was born."
         }
       ]
     },
     {
       "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p1",
-      "title": "A laboratory accident",
+      "title": "An accident in the laboratory",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Röntgen works with a tube where electrons hit a target. He covered the tube with black cardboard. However, a fluorescent screen glows from a distance. He understands that invisible radiation comes out of the tube."
+          "text": "Röntgen worked with a tube in which electrons strike a target. He had wrapped the tube in black cardboard. A fluorescent screen some distance away glowed all the same. He understood that an invisible radiation was escaping from the tube."
         },
         {
           "type": "image",
           "asset": "wilhelm_rontgen_x_ray_hand_1895",
           "ratio": "4:3",
-          "caption": "The famous image: the hand bones and the wedding ring."
+          "caption": "The famous image: the bones of a hand and a wedding ring"
         },
         {
           "type": "funFact",
-          "text": "Röntgen never filed a patent on X-rays. He wanted all science to be able to use them freely."
+          "text": "Röntgen never took out a patent on X-rays. He wanted all of science to be free to use them."
         }
       ]
     },
     {
       "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p2",
-      "title": "Medicine seizes the tool",
+      "title": "Medicine seizes the new tool",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "early_x_ray_medical_radiograph",
           "ratio": "4:3",
-          "caption": "Very quickly, doctors and armies used X-rays."
+          "caption": "Doctors and armies took up X-rays almost at once"
         },
         {
           "type": "paragraph",
-          "text": "Before, to “see” a fracture or a bullet, you often had to open it. With X-rays, we obtain an image of the interior without cutting. Hospitals and armies are adopting the technique at breakneck speed."
+          "text": "Until then, “seeing” a fracture or a bullet usually meant cutting the patient open. X-rays gave an image of the inside without a single incision. Hospitals and armies adopted the technique at a furious pace."
         }
       ]
     },
     {
       "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p3",
-      "title": "A long-ignored danger",
+      "title": "A danger ignored for decades",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "At first, we ignore the risks. Operators take x-rays for hours. Burns, then cancers appear. It will take time to understand that X-rays are powerful… and dangerous."
+          "text": "At the start, nobody knew the risks. Operators ran X-ray sessions for hours at a time. Burns appeared, then cancers. It took years to accept that X-rays are powerful and dangerous at once."
         },
         {
           "type": "paragraph",
-          "text": "Today, we protect patients and caregivers: limited doses, lead aprons, strict controls."
+          "text": "Today both patients and medical staff are protected: limited doses, lead aprons, strict controls."
         }
       ]
     },
@@ -86,11 +86,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "X-rays paved the way for all modern imaging: scanners, industrial controls, and even the study of the structure of crystals (later useful for DNA)."
+          "text": "X-rays opened the way to all of modern imaging: medical scanners, industrial inspection, and even the study of crystal structure, which later proved decisive for DNA."
         },
         {
           "type": "takeaway",
-          "text": "In **1895**, Röntgen discovered X-rays, an invisible radiation that passes through matter. Medicine is gaining a new perspective... on condition that the risks are controlled."
+          "text": "In **1895**, Röntgen discovered X-rays, an invisible radiation that passes through matter. Medicine gained a new kind of sight, provided it learned to control the risks."
         }
       ]
     }

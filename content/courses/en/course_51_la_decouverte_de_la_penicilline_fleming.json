@@ -1,14 +1,14 @@
 {
   "id": "course_51_la_decouverte_de_la_penicilline_fleming",
-  "title": "The discovery of penicillin",
+  "title": "The Discovery of Penicillin",
   "subtitle": "Fleming, 1928",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "In 1928, Alexander Fleming noticed that a mold had killed bacteria on a culture dish. From this chance the first great antibiotic was born.",
+  "description": "In 1928, Alexander Fleming noticed that a mold had killed the bacteria on a culture dish. That accident produced the first great antibiotic.",
   "hero": {
     "image": "la_decouverte_de_la_penicilline",
     "ratio": "16:9",
-    "hook": "A forgotten box, a mold, and the medicine turns upside down."
+    "hook": "A forgotten dish, a patch of mold, and medicine changes forever."
   },
   "sections": [
     {
@@ -18,72 +18,72 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Before antibiotics, a simple infection could kill. A cut, pneumonia, a war wound: the body often fought alone."
+          "text": "Before antibiotics, a simple infection could kill. A cut, a case of pneumonia, a battlefield wound: the body often had to fight alone."
         },
         {
           "type": "paragraph",
-          "text": "In **1928**, the Scottish doctor **Alexander Fleming** accidentally discovered a substance capable of killing bacteria. It will be called **penicillin**. But it will still take years to make it into a real medicine."
+          "text": "In **1928**, the Scottish doctor **Alexander Fleming** stumbled on a substance that could kill bacteria. It would be called **penicillin**. But turning it into a real medicine took years more."
         }
       ]
     },
     {
       "id": "course_51_la_decouverte_de_la_penicilline_fleming_p1",
-      "title": "A forgotten box",
+      "title": "A forgotten dish",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Fleming studies bacteria in London. Coming back from vacation, he looks at old culture boxes. On one of them, a **mold** grew. Around her, the bacteria are dead."
+          "text": "Fleming was studying bacteria in London. Back from vacation, he looked over some old culture dishes. On one of them, a **mold** had grown. All around it, the bacteria were dead."
         },
         {
           "type": "image",
           "asset": "alexander_fleming_penicillin_petri_dish",
           "ratio": "4:3",
-          "caption": "Fleming and the key idea: something in the mold stops the bacteria."
+          "caption": "Fleming and the key idea: something in the mold stops bacteria"
         },
         {
           "type": "paragraph",
-          "text": "The mold belongs to the genus **Penicillium**. Fleming understands that it produces an antibacterial substance. He calls it penicillin. But he cannot purify it enough to treat the sick."
+          "text": "The mold belonged to the genus **Penicillium**. Fleming realized that it produced an antibacterial substance, and he named it penicillin. But he could never purify enough of it to treat patients."
         },
         {
           "type": "funFact",
-          "text": "Fleming later said that if he had been more orderly, he would have thrown the box away. The mess in the lab helped the discovery."
+          "text": "Fleming said later that if he had been tidier, he would have thrown the dish away. A messy lab helped the discovery along."
         }
       ]
     },
     {
       "id": "course_51_la_decouverte_de_la_penicilline_fleming_p2",
-      "title": "Oxford turns idea into cure",
+      "title": "Oxford turns the idea into a cure",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "At the beginning of the **1940** years, in Oxford, **Howard Florey** and **Ernst Chain** returned to work. With their team, they isolated, concentrated and tested penicillin on animals, then on humans."
+          "text": "In the early **1940s**, at Oxford, **Howard Florey** and **Ernst Chain** picked up the work. With their team, they isolated penicillin, concentrated it, and tested it on animals and then on humans."
         },
         {
           "type": "paragraph",
-          "text": "The Second World War made things urgent: infected soldiers had to be treated. Penicillin moves from the laboratory to a strategic issue."
+          "text": "The Second World War made the job urgent: infected soldiers had to be treated. Penicillin went from a lab curiosity to a strategic asset."
         }
       ]
     },
     {
       "id": "course_51_la_decouverte_de_la_penicilline_fleming_p3",
-      "title": "Mass produce",
+      "title": "Making it by the ton",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "penicillin_antibiotic_production_laboratory",
           "ratio": "4:3",
-          "caption": "It was necessary to invent industrial ways of growing mold."
+          "caption": "New industrial methods had to be invented just to grow the mold"
         },
         {
           "type": "paragraph",
-          "text": "To treat millions of people, enormous quantities are needed. The United States industrialized production during the war. Giant vats make mold miss like beer."
+          "text": "Treating millions of people meant producing enormous quantities. The United States industrialized production during the war. Giant tanks grew the mold much the way a brewery makes beer."
         },
         {
           "type": "paragraph",
-          "text": "In **1945**, Fleming, Florey and Chain received the Nobel Prize. Medicine is entering the age of antibiotics."
+          "text": "In **1945**, Fleming, Florey and Chain received the Nobel Prize. Medicine entered the age of antibiotics."
         }
       ]
     },
@@ -94,11 +94,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Today, too many misused antibiotics have allowed certain bacteria to become **resistant**: the drugs no longer kill them. Fleming had already warned of this risk."
+          "text": "Today, too many antibiotics badly used have let some bacteria turn **resistant**: the drugs no longer kill them. Fleming had warned about that risk long before."
         },
         {
           "type": "takeaway",
-          "text": "Penicillin was born from a coincidence observed by Fleming in **1928**, then became a medicine thanks to Florey, Chain and the war industry. It has saved millions of lives... as long as you don't wear it out."
+          "text": "Penicillin came out of an accident Fleming noticed in **1928**, then became a medicine thanks to Florey, Chain and the wartime industry. It has saved millions of lives, so long as we do not wear it out."
         }
       ]
     }

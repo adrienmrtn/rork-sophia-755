@@ -1,14 +1,14 @@
 {
   "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup",
-  "title": "Why do volcanoes erupt?",
+  "title": "Why Do Volcanoes Erupt?",
   "subtitle": "Magma & plates",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "A volcano is an opening in the earth's crust. Magma under pressure rises there and becomes lava. This is why the Earth “spits”.",
+  "description": "A volcano is an opening in the Earth's crust. Magma under pressure rises through it and becomes lava. Here is why the Earth “spits.”",
   "hero": {
     "image": "pourquoi_les_volcans_entrent_en_eruption",
     "ratio": "16:9",
-    "hook": "Beneath our feet, the Earth is not frozen. Sometimes she opens a window of fire."
+    "hook": "Under our feet, the Earth is not still. Sometimes it opens a window of fire."
   },
   "sections": [
     {
@@ -18,40 +18,40 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A volcano is not just a mountain that breathes fire. It is an opening in the outer envelope of the Earth. This way rises the **magma**: a mixture of molten rocks and gas under high pressure. Once in the open air, this magma becomes **washed**."
+          "text": "A volcano is not just a mountain that spits fire. It is an opening in the Earth's outer shell. Through it rises **magma**: a mix of molten rock and gas under high pressure. Once out in the open air, that magma becomes **lava**."
         },
         {
           "type": "paragraph",
-          "text": "To understand an eruption, you have to look beneath the surface: the heat inside the planet, the movement of the plates, and the way the gases build up pressure, a bit like shaking a bottle of soda."
+          "text": "To understand an eruption, you have to look below the surface: the planet's inner heat, the movement of the plates, and the way gas drives the pressure up, a little like a bottle of soda that has been shaken."
         }
       ]
     },
     {
       "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p1",
-      "title": "Under our feet, nothing is still",
+      "title": "Under our feet, nothing stands still",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "The Earth is made of layers. On the surface, the **crust** is a rigid envelope, **5 to 70 km thick. Below lies the **mantle****, to about **2 900 km** depth. The coat is mostly solid, but over very long periods of time it can flow very slowly, like ultra-thick honey."
+          "text": "The Earth is made of layers. At the surface, the **crust** is a rigid shell, **5 to 70 km** thick. Below it the **mantle** reaches down to about **2,900 km**. The mantle is mostly solid, but over very long stretches of time it can flow very slowly, like ultra-thick honey."
         },
         {
           "type": "image",
           "asset": "volcano_eruption_lava",
           "ratio": "auto",
-          "caption": "An eruption: the rise of magma to the surface."
+          "caption": "An eruption: magma rising all the way to the surface"
         },
         {
           "type": "paragraph",
-          "text": "This internal heat causes matter to rise and fall: these are **convection currents**. They push out large pieces of crust called plaques. This is : the earth's surface is cut into plates which move apart, collide or slide against each other. [[Plate tectonics]]"
+          "text": "This inner heat makes material rise and sink again: these are **convection currents**. They push the big pieces of crust we call plates. This is [[Plate tectonics]]: the Earth's surface is cut into plates that pull apart, collide, or slide against one another."
         },
         {
           "type": "funFact",
-          "text": "Certain very rapid rises bring back diamonds formed at more than **150 km** depth. They don't have time to change on the way."
+          "text": "Some very fast rises bring up diamonds formed more than **150 km** down. They have no time to change on the way."
         },
         {
           "type": "paragraph",
-          "text": "At , the plates move apart and the magma rises easily. In a zone of , one plate dives under another and carries water with it. This water lowers the melting point of rocks: magma forms, then rises. [[dorsal]] [[Subduction]]"
+          "text": "At the ocean [[ridges]], the plates pull apart and magma rises easily. In a [[subduction]] zone, one plate dives under another and drags water down with it. That water lowers the melting point of the rock: magma forms, then rises."
         }
       ]
     },
@@ -62,53 +62,53 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Rock doesn't just melt \"because it's hot.\" There are three triggers: a rise in temperature, a drop in pressure, or the addition of water. Once formed, magma is less dense than the rock around it. It therefore tries to rise, a bit like an air bubble in water."
+          "text": "Rock does not melt just “because it is hot.” Three triggers matter: a rise in temperature, a drop in pressure, or the arrival of water. Once it has formed, magma is less dense than the rock around it. So it tries to rise, a little like an air bubble in water."
         },
         {
           "type": "paragraph",
-          "text": "Often, it stops first in a **magma chamber**, a reservoir a few kilometers below the surface. There, the dissolved gases form bubbles when the pressure decreases. If the “plug” of rock above no longer holds, the eruption begins."
+          "text": "Often it stops first in a **magma chamber**, a reservoir a few kilometers below the surface. There, the dissolved gases turn into bubbles as the pressure falls. When the rock “plug” above can no longer hold, the eruption begins."
         },
         {
           "type": "funFact",
-          "text": "The eruption of **Tambora** in **1815**, Indonesia, was so powerful that it cooled the global climate. **1816** was nicknamed \"the year without summer\", with disastrous harvests in Europe and North America."
+          "text": "The eruption of **Tambora** in **1815**, in Indonesia, was so powerful that it cooled the world's climate. **1816** was nicknamed “the year without a summer,” with disastrous harvests in Europe and North America."
         }
       ]
     },
     {
       "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p3",
-      "title": "Fluid or explosive?",
+      "title": "Runny or explosive?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Not all breakouts are the same. It all depends on the **viscosity** of the magma, that is to say whether it is rather liquid or sticky. A fluid magma, like at **Hawaii** or at Piton de la Fournaise (Reunion Island), lets the gases escape. Lava flows: eruption **effusive**."
+          "text": "Not all eruptions are alike. Everything depends on the **viscosity** of the magma, that is, on whether it is runny or sticky. Runny magma, as in **Hawaii** or at Piton de la Fournaise on Reunion Island, lets the gas escape. The lava flows: an **effusive** eruption."
         },
         {
           "type": "paragraph",
-          "text": "A sticky magma traps the gases. The pressure builds, then everything explodes. Ashes, blocks and  (burning clouds of gas and ash rolling down the slopes) can then devastate the surrounding area. This is the style of volcanoes like Mount **Saint Helens** (United States) or **Pinatubo** (Philippines). [[fiery clouds]]"
+          "text": "Sticky magma traps the gas. The pressure builds, then everything blows. Ash, blocks, and [[pyroclastic flows]] (burning clouds of gas and ash that race down the slopes) can then wreck the surroundings. That is the style of volcanoes like **Mount St. Helens** in the United States or **Pinatubo** in the Philippines."
         },
         {
           "type": "paragraph",
-          "text": "A volcano can also remain calm for centuries. In **79** after. BC, **Vesuvius**, near Naples, buried Pompeii under ashes. About **80%** of the world's volcanic activity happens beneath the oceans, far from our eyes."
+          "text": "A volcano can also stay quiet for centuries. In **AD 79**, **Vesuvius**, near Naples, buried Pompeii under ash. About **80%** of the world's volcanic activity happens under the oceans, far from our eyes."
         }
       ]
     },
     {
       "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p4",
-      "title": "Danger, fertility, abyssal life",
+      "title": "Danger, fertile soil, life in the deep",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Volcanoes shaped Earth's early atmosphere by emitting gases. Their ashes also enrich the soil: many fertile agricultural regions live at the foot of active volcanoes. But a very large eruption can send sulfur particles high into the atmosphere and cool the climate for months."
+          "text": "Volcanoes shaped the Earth's early atmosphere by releasing gas. Their ash also enriches the soil: many fertile farming regions sit at the foot of active volcanoes. But a very large eruption can send sulfur particles high into the atmosphere and cool the climate for months."
         },
         {
           "type": "paragraph",
-          "text": "Some sites, such as in Yellowstone in the United States, are closely monitored. Under the sea, near the ridges, the [[supervolcano]] spew burning fluids rich in minerals. Ecosystems live there without sunlight, nourished by the chemistry of hot springs. [[black smokers]]"
+          "text": "Some sites, such as the Yellowstone [[supervolcano]] in the United States, are watched closely. Under the sea, near the ridges, [[black smokers]] spew out scalding fluids rich in minerals. Whole ecosystems live there without sunlight, fed by the chemistry of the hot springs."
         },
         {
           "type": "takeaway",
-          "text": "Volcanoes expel magma under pressure, especially at tectonic plate boundaries. The viscosity of the magma decides whether the eruption flows quietly or explodes."
+          "text": "Volcanoes push out magma under pressure, above all at the boundaries of the tectonic plates. The viscosity of the magma decides whether an eruption flows quietly or explodes."
         }
       ]
     }

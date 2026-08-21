@@ -1,14 +1,14 @@
 {
   "id": "course_55_la_theorie_de_la_gravitation_newton_1687",
-  "title": "The theory of gravitation",
+  "title": "The Theory of Gravitation",
   "subtitle": "Newton, 1687",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "In 1687, Newton published a simple and immense idea: the same force causes an apple to fall and the Moon to rotate. Here's what that changes.",
+  "description": "In 1687, Newton published a simple and enormous idea: the same force makes an apple fall and keeps the Moon in its orbit. Here is what it changed.",
   "hero": {
     "image": "la_theorie_de_la_gravitation_newton",
     "ratio": "16:9",
-    "hook": "An apple, the Moon, the planets: a single force to explain everything."
+    "hook": "An apple, the Moon, the planets: one single force explains them all."
   },
   "sections": [
     {
@@ -18,26 +18,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Before Newton, we already knew a lot about the planets thanks to **Galileo**, an Italian physicist from the 17th century, and , an astronomer who described elliptical orbits. But a clear connection between what falls on Earth and what spins in the sky was missing. **[[Johannes Kepler]]**"
+          "text": "Before Newton, a great deal was already known about the planets, thanks to **Galileo**, the Italian physicist of the 17th century, and **[[Johannes Kepler]]**, the astronomer who described elliptical orbits. What was missing was a clear link between what falls on Earth and what turns in the sky."
         },
         {
           "type": "paragraph",
-          "text": "In **1687**, **Isaac Newton** published the **, the *Principia*, the founding work of classical physics. He asserts that gravitation is **universal**: it acts everywhere, in the same way. [[Philosophiae Naturalis Principia Mathematica]]"
+          "text": "In **1687**, **Isaac Newton** published the *[[Philosophiae Naturalis Principia Mathematica]]*, the *Principia*, the founding work of classical physics. In it he argued that gravitation is **universal**: it acts everywhere, and always in the same way."
         }
       ]
     },
     {
       "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p1",
-      "title": "The world before synthesis",
+      "title": "The world before the synthesis",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kepler had described the orbits of the planets with precise laws: orbits in **ellipse**, equal swept areas in equal time. Galileo had studied the fall of bodies. But why do the planets stay on their trajectory? What “pulls” them?"
+          "text": "Kepler had described the paths of the planets with precise laws: orbits shaped like an **ellipse**, equal areas swept out in equal times. Galileo had studied falling bodies. But why do the planets stay on their tracks? What “pulls” them?"
         },
         {
           "type": "paragraph",
-          "text": "Newton answers: a **gravitational attraction**, a force that pulls two masses toward each other. The Earth attracts the Moon. The Sun attracts the Earth. And you also attract a little bit of the Earth... even if it's tiny."
+          "text": "Newton's answer was a **gravitational attraction**, a force that draws two masses toward each other. The Earth pulls the Moon. The Sun pulls the Earth. And you pull a little on the Earth too, even if the effect is tiny."
         }
       ]
     },
@@ -50,51 +50,51 @@
           "type": "image",
           "asset": "isaac_newton_apple_tree_woolsthorpe",
           "ratio": "4:3",
-          "caption": "The story of the apple is above all a story. The idea is real."
+          "caption": "The apple story is mostly a legend, but the idea behind it is real"
         },
         {
           "type": "paragraph",
-          "text": "Two bodies attract each other with a force which increases with their **mass**, the quantity of matter, and decreases as they move away. More precisely: the force weakens with the **square of the distance**. Doubling the distance divides the attraction by four. The further away you are, the faster the attraction weakens."
+          "text": "Two bodies attract each other with a force that grows with their **mass**, the amount of matter they contain, and weakens as they move apart. More precisely, the force falls off with the **square of the distance**. Double the distance and the pull drops to a quarter. The farther away you are, the faster it fades."
         },
         {
           "type": "image",
           "asset": "planets_orbit_solar_system_gravity",
           "ratio": "16:9",
-          "caption": "The planets are constantly “falling” towards the Sun… and missing it: this is the orbit."
+          "caption": "The planets keep “falling” toward the Sun and keep missing it, and that is an orbit"
         },
         {
           "type": "funFact",
-          "text": "The Moon is constantly “falling” toward Earth. Since it also has high lateral speed, it spins around instead of crashing."
+          "text": "The Moon is “falling” toward the Earth all the time. Because it also carries a large sideways speed, it circles around us instead of crashing into us."
         }
       ]
     },
     {
       "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p3",
-      "title": "The laws of movement",
+      "title": "The laws of motion",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Newton also gives three **laws of motion**. In summary: an object keeps its speed if there is no force, the principle of **inertia**; a force changes the speed; every action has an opposite reaction."
+          "text": "Newton also set out three **laws of motion**. In short: an object keeps its speed when no force acts on it, the principle of **inertia**; a force changes that speed; every action meets an opposite reaction."
         },
         {
           "type": "paragraph",
-          "text": "With this, we can calculate trajectories, **tides**, the rises and descents of the oceans under the effect of the Moon and the Sun, and the orbits. Physics becomes a prediction tool."
+          "text": "With those laws you can calculate trajectories, **tides**, the rise and fall of the oceans under the pull of the Moon and the Sun, and orbits. Physics became a tool for prediction."
         }
       ]
     },
     {
       "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p4",
-      "title": "Powerful… but not the last word",
+      "title": "Powerful, but not the last word",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Two centuries later,  corrected Newton for extreme cases, very high speeds and very high gravity, with the . Gravity then becomes a curvature of space-time, and no longer an invisible force. But for launching a rocket or understanding the tides, Newton remains excellent. **[[Albert Einstein]]** [[Relativistic gravitation (Einstein)]]"
+          "text": "Two centuries later, **[[Albert Einstein]]** corrected Newton for the extreme cases, very high speeds and very strong gravity, with [[Relativistic gravitation (Einstein)]]. Gravity became a curvature of space-time instead of an invisible force. But for launching a rocket or explaining the tides, Newton is still excellent."
         },
         {
           "type": "takeaway",
-          "text": "Newton unifies heaven and Earth: gravitation attracts masses everywhere. It is one of the greatest scientific syntheses in history."
+          "text": "Newton united the sky and the Earth: gravitation pulls on masses everywhere. It is one of the greatest syntheses in the history of science."
         }
       ]
     }

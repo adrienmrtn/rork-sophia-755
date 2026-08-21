@@ -1,14 +1,14 @@
 {
   "id": "course_54_la_decouverte_du_micro_ondes_par_acciden",
-  "title": "The discovery of the microwave",
+  "title": "The Discovery of the Microwave Oven",
   "subtitle": "By accident",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "In 1945, an engineer noticed that his candy bar had melted near a radar. From this observation the microwave oven was born.",
+  "description": "In 1945, an engineer noticed that the chocolate bar in his pocket had melted next to a radar set. That observation gave us the microwave oven.",
   "hero": {
     "image": "la_decouverte_du_micro_ondes",
     "ratio": "16:9",
-    "hook": "A melted chocolate bar… and modern cuisine changes."
+    "hook": "One melted chocolate bar, and the modern kitchen changes."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "In **1945**, in the United States, engineer **Percy Spencer** works on radars. One day he notices that the candy bar in his pocket has melted. Not because of body heat: because of radar waves."
+          "text": "In **1945**, in the United States, the engineer **Percy Spencer** was working on radar. One day he noticed that the chocolate bar in his pocket had melted. Body heat was not the cause: the radar waves were."
         },
         {
           "type": "paragraph",
-          "text": "He tests with corn: the popcorn pops. The idea of ​​an oven that heats differently was born."
+          "text": "He tried it with corn kernels: the popcorn burst. The idea of an oven that heats differently was born."
         }
       ]
     },
@@ -35,51 +35,51 @@
           "type": "image",
           "asset": "percy_spencer_microwave_discovery_radar",
           "ratio": "4:3",
-          "caption": "World War II radars already used microwaves."
+          "caption": "Radar sets in the Second World War already ran on microwaves"
         },
         {
           "type": "paragraph",
-          "text": "**microwaves** are electromagnetic waves, like radio light, but more \"energetic\" than many conventional radio waves. During the war, they were mainly used for radar to detect planes and boats."
+          "text": "**Microwaves** are electromagnetic waves, from the same family as light and radio, but more “energetic” than most ordinary radio waves. During the war they served mainly in radar, spotting planes and ships."
         },
         {
           "type": "paragraph",
-          "text": "Spencer understands that they can also agitate water and fats in food... and therefore heat it."
+          "text": "Spencer understood that they could also shake the water and the fat inside food, and so heat it."
         }
       ]
     },
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p2",
-      "title": "The first oven is huge",
+      "title": "The first oven was enormous",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "first_microwave_oven_radarange_1947",
           "ratio": "4:3",
-          "caption": "The first commercial microwave oven was the size of a cabinet."
+          "caption": "The first commercial microwave oven stood as tall as a wardrobe"
         },
         {
           "type": "paragraph",
-          "text": "The first commercial model, the **Radarange**, was released around **1947**. It is huge, expensive, and mainly intended for restaurants or boats. It will take decades to miniaturize it and make it affordable for homes."
+          "text": "The first commercial model, the **Radarange**, came out around **1947**. It was huge, expensive, and aimed at restaurants and ships. Shrinking it and making it affordable for households took decades."
         },
         {
           "type": "funFact",
-          "text": "At first, some were afraid that the oven would “make the food radioactive.” False: microwaves heat up, they do not make you radioactive."
+          "text": "At first some people worried that the oven would “make food radioactive.” It does not: microwaves heat food, they do not make it radioactive."
         }
       ]
     },
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p3",
-      "title": "How does it really heat up?",
+      "title": "How it really heats",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Microwaves mainly vibrate water molecules (and a little fats and sugars). This agitation creates **heat inside** the food, not just on the surface like a pan."
+          "text": "Microwaves mostly make water molecules vibrate, and fats and sugars a little. That agitation creates heat **inside** the food, not only at the surface the way a frying pan does."
         },
         {
           "type": "paragraph",
-          "text": "This is why a dish can be hot on the outside and lukewarm in the center if it is thick: the waves do not penetrate infinitely deep."
+          "text": "That is why a thick dish can be scalding on the outside and lukewarm at the center: the waves do not reach infinitely deep."
         }
       ]
     },
@@ -90,11 +90,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "From the 1970s-1980s, the microwave oven entered millions of kitchens. It changes habits: reheat quickly, ready meals, faster life."
+          "text": "From the 1970s and 1980s on, the microwave oven moved into millions of kitchens. It changed habits: quick reheating, ready meals, a faster pace of life."
         },
         {
           "type": "takeaway",
-          "text": "The microwave was born from a coincidence observed by Percy Spencer near a radar. The waves mainly agitate the water in the food and heat it from the inside."
+          "text": "The microwave oven grew out of an accident Percy Spencer noticed beside a radar set. The waves mainly shake the water in food and heat it from the inside."
         }
       ]
     }

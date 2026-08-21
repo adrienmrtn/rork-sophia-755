@@ -4,11 +4,11 @@
   "subtitle": "Light & atmosphere",
   "subject": "sciences",
   "subcategory": "Our daily life explained",
-  "description": "Looking at the blue sky is so commonplace that we forget to ask why. The answer lies in the light of the Sun and the air we pass through to see it.",
+  "description": "Looking at a blue sky is so ordinary that we forget to ask why. The answer lies in the light of the Sun and in the air we look through to see it.",
   "hero": {
     "image": "pourquoi_le_ciel_est_il_bleu",
     "ratio": "16:9",
-    "hook": "The sky is not painted blue: it is a magic trick of light and air."
+    "hook": "The sky is not painted blue: it is a magic trick performed by light and air."
   },
   "sections": [
     {
@@ -18,95 +18,95 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Looking up at the blue sky is so commonplace that we forget to ask why it is. The **atmosphere**, the layer of gas that surrounds the Earth, however, has no color of its own. This color comes from a very precise encounter between the light of the Sun and the gas molecules that float around us."
+          "text": "Looking up at a blue sky is so ordinary that we forget to ask why it is blue. The **atmosphere**, the layer of gas wrapped around the Earth, has no color of its own. That shade comes from a very precise meeting between sunlight and the gas molecules floating around us."
         },
         {
           "type": "paragraph",
-          "text": "Understanding this blue means understanding how light travels and **dispersed**, that is to say, it returns in all directions instead of going straight. And nice surprise: it's exactly the same phenomenon that colors the sky red and orange at sunset."
+          "text": "Understanding this blue means understanding how light travels and **scatters**, that is, how it bounces off in every direction instead of running straight ahead. And here is the bonus: the same effect turns the sky red and orange at sunset."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p1",
-      "title": "White light hides all colors",
+      "title": "White light hides every color",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sunlight appears white to us, but it actually contains all the colors of the rainbow: it is [[visible spectrum of light]]. Each color corresponds to a **wavelength**, the size of its light “wave”. Blue and violet have short waves; red has long waves."
+          "text": "Sunlight looks white to us, but it actually holds every color of the rainbow: that is the [[visible light spectrum]]. Each color matches a **wavelength**, the size of its light “wave.” Blue and violet have short waves; red has long ones."
         },
         {
           "type": "funFact",
-          "text": "On the Moon, there is no air to scatter light. Result: there, the sky remains **black in broad daylight**, even when the Sun shines. Proof that the color of the sky comes from the air, not the Sun."
+          "text": "On the Moon there is no air to scatter light. The result: up there the sky stays **black in broad daylight**, even with the Sun shining. Proof that the color of the sky comes from the air, not from the Sun."
         },
         {
           "type": "paragraph",
-          "text": "Because between the Sun and our eyes, the air is not empty: it is filled with tiny **gas molecules, especially nitrogen, approximately 78%** of the air, and oxygen, approximately **21%**. They are much smaller than light waves. When a ray hits them, it no longer goes straight: it is sent back in all directions. This little bounce is the starting point for the color of the sky."
+          "text": "Between the Sun and our eyes, the air is not empty. It is packed with tiny **gas molecules**, mostly nitrogen, about **78%** of the air, and oxygen, about **21%**. They are far smaller than the waves of light. When a ray hits them, it stops running straight and is thrown off in every direction. That little bounce is where the color of the sky begins."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p2",
-      "title": "Diffusion: why blue wins",
+      "title": "Scattering: why blue wins",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "In **1871**, the British physicist **Lord Rayleigh** put this phenomenon into an equation. He discovered that the shorter a color a color has, the more it is reflected in all directions by air molecules. It's the [[Rayleigh scattering]]."
+          "text": "In **1871**, the British physicist **Lord Rayleigh** put the effect into an equation. He found that the shorter a color's wave, the more the air molecules throw it around. This is [[Rayleigh scattering]]."
         },
         {
           "type": "funFact",
-          "text": "The sky of Mars is the opposite of ours: its iron-rich dust makes it pink during the day, but its sunsets are **blue**. It all depends on what the air contains."
+          "text": "The sky of Mars does the opposite of ours: its iron-rich dust makes it pink by day, while its sunsets turn **blue**. Everything depends on what the air is carrying."
         },
         {
           "type": "image",
           "asset": "blue_sky_sunlight_scattering_atmosphere",
           "ratio": "4:3",
-          "caption": "Blue light is scattered in all directions by air."
+          "caption": "Blue light is scattered in every direction by the air"
         },
         {
           "type": "paragraph",
-          "text": "Concretely, blue light is scattered approximately **9 times more** than red. Red travels through the air almost in a straight line, while blue ricochets everywhere. This is why, wherever you look in the sky, blue always ends up reaching your eyes: the entire sky seems to “glow” with this scattered blue."
+          "text": "In practice, blue light is scattered about **9 times more** than red. Red crosses the air almost in a straight line, while blue ricochets everywhere. That is why, wherever you look in the sky, some blue always ends up reaching your eyes: the whole sky seems to “glow” with this scattered blue."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p3",
-      "title": "So why not purple?",
+      "title": "So why not violet?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A logical question arises: if the shortest waves are the most dispersed, violet should win, because its wave is even shorter than that of blue. The sky also contains a lot of scattered purple."
+          "text": "There is a logical objection here: if the shortest waves scatter the most, violet should win, since its wave is even shorter than blue's. And the sky does hold plenty of scattered violet."
         },
         {
           "type": "paragraph",
-          "text": "The answer is not in the sky, but in our eye. We capture colors using sensors called **cones**, cells in the retina that are sensitive to light. They are much more sensitive to blue than purple. In addition, the Sun sends out more blue light than violet light. Our brain then does a sort of average and sees a beautiful blue. An animal sensitive to other colors would undoubtedly see a completely different sky."
+          "text": "The answer is not in the sky but in our eyes. We pick up colors with sensors called **cones**, light-sensitive cells in the retina. They are far more sensitive to blue than to violet. On top of that, the Sun sends out more blue light than violet. Our brain averages all of it and sees a clean blue. An animal tuned to other colors would probably see a completely different sky."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p4",
-      "title": "And the evening red?",
+      "title": "And the red of evening?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "The sunset follows the same rules, but changes one thing: the distance. At noon, light passes through a thin layer of air. In the evening, when the Sun is low, its rays must pass through **much more air** before reaching us."
+          "text": "Sunset follows the same rules but changes one thing: distance. At midday, light crosses a thin layer of air. In the evening, with the Sun low, its rays have to cross **far more air** before they reach us."
         },
         {
           "type": "image",
           "asset": "sunset_red_orange_sky_atmosphere",
           "ratio": "16:9",
-          "caption": "At horizon level, light passes through a much greater thickness of air."
+          "caption": "Close to the horizon, light crosses a far greater thickness of air"
         },
         {
           "type": "paragraph",
-          "text": "On this long journey, all the blue is dispersed well before reaching us: it is filtered by the thickness of the air. Only the most resistant colors remain, reds and oranges. If there is dust or pollution, [[Mie diffusion]] comes into play: particles larger than air molecules make the sky milky or enhance these orange hues."
+          "text": "Over that long path, the blue is scattered away long before it gets to us, filtered out by the sheer depth of the air. Only the toughest colors are left, the reds and the oranges. When dust or pollution is in the way, [[Mie scattering]] takes over: particles bigger than air molecules turn the sky milky or deepen those orange tones."
         },
         {
           "type": "takeaway",
-          "text": "The sky is blue because short waves are about 9 times more dispersed by air than long waves. At sunset, light passes through so much air that only the red still reaches us."
+          "text": "The sky is blue because short waves are scattered about **9 times more** by the air than long waves. At sunset, light crosses so much air that only red still gets through to us."
         }
       ]
     }

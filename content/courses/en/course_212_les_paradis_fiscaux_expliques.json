@@ -1,14 +1,14 @@
 {
   "id": "course_212_les_paradis_fiscaux_expliques",
-  "title": "Tax havens explained",
-  "subtitle": "10,000 billion stashed away",
+  "title": "Tax Havens Explained",
+  "subtitle": "$10 trillion in hiding",
   "subject": "comprendreLeMonde",
   "subcategory": "Economy & society",
-  "description": "Around 10% of global wealth escapes taxes in opaque territories. How does this system work, and why is it so resilient?",
+  "description": "About 10% of the world's wealth escapes tax in secretive territories. How does the system work, and why does it survive so well?",
   "hero": {
     "image": "les_paradis_fiscaux_expliques",
     "ratio": "16:9",
-    "hook": "The Cayman Islands have a population of 65,000 and over 100,000 businesses. Welcome to the world of tax havens."
+    "hook": "The Cayman Islands have 65,000 residents and more than 100,000 companies. Welcome to the world of tax havens."
   },
   "sections": [
     {
@@ -18,36 +18,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Certain territories, often tiny, allow companies and large fortunes to almost completely escape the tax of their country of origin. We call these **tax havens**. It is estimated that around $10 trillion, or 8 to 10% of the world's wealth, is housed there."
+          "text": "Some territories, often tiny ones, let companies and great fortunes escape almost all the tax they owe at home. These are **tax havens**. An estimated $10 trillion, roughly 8 to 10% of the world's wealth, sits in them."
         },
         {
           "type": "paragraph",
-          "text": "This is not just a problem for accountants: it deprives states of 600 billion dollars per year, money that could have financed hospitals or schools. Here's how this discreet system works, and why it resists attempts at regulation so well."
+          "text": "This is not only a problem for accountants. It deprives states of $600 billion a year, money that could have paid for hospitals or schools. Here is how this discreet system works, and why it resists regulation so well."
         }
       ]
     },
     {
       "id": "course_212_les_paradis_fiscaux_expliques_p1",
-      "title": "How is money hidden",
+      "title": "How the money hides",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A tax haven is based on three pillars: taxes close to zero, great opacity, and little cooperation with other countries. These territories thus attract capital from all over the world, what we call the [[Offshore]] economy."
+          "text": "A tax haven rests on three pillars: taxes close to zero, deep secrecy, and very little cooperation with other countries. Territories like these attract capital from all over the world, in what is known as the [[offshore]] economy."
         },
         {
           "type": "paragraph",
-          "text": "In many of these territories, it is possible to create a shell company: a business without an office or employees, which exists only on paper. Its sole purpose is often to hide the identity of the true owner of the money, called the beneficial owner."
+          "text": "In several of them you can set up a shell company: a business with no office and no employees, existing only on paper. Its one purpose is usually to hide the identity of the person who really owns the money, the beneficial owner."
         },
         {
           "type": "image",
           "asset": "cayman_islands_offshore_banking_paradise",
           "ratio": "4:3",
-          "caption": "The Cayman Islands, one of the largest financial centers in the world despite their small size."
+          "caption": "The Cayman Islands, one of the largest financial centers in the world despite their small size"
         },
         {
           "type": "funFact",
-          "text": "The Cayman Islands have only 65,000 inhabitants, but more than 100,000 companies are registered there: it is the fifth financial center in the world for bank deposits, on an area smaller than Paris."
+          "text": "The Cayman Islands have only 65,000 residents, but more than 100,000 companies are registered there. That makes them the world's fifth-largest financial center for bank deposits, on a territory smaller than Paris."
         }
       ]
     },
@@ -58,15 +58,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "For large companies, the objective is not necessarily illegal: we are talking about **tax optimization**, that is to say the skillful use of the rules of each country to pay less taxes. The main tool is called : a company itself sets the price of exchanges between its own subsidiaries, to show its profits where the tax is lowest. [[transfer price]]"
+          "text": "For large companies the goal is not necessarily illegal. It is called **tax optimization**: using each country's rules cleverly in order to pay less. The main tool is [[transfer pricing]], where a company sets the price of the trades between its own subsidiaries, so that its profits show up where the tax is lowest."
         },
         {
           "type": "paragraph",
-          "text": "A common method is to transfer a brand or patent to a subsidiary located in a tax haven. The other subsidiaries, located for example in France, must then pay enormous sums for the right to use this brand. These payments reduce their taxable profit locally, while increasing it in the tax haven."
+          "text": "A common method is to move a brand or a patent to a subsidiary based in a tax haven. The other subsidiaries, in France for example, then have to pay huge sums for the right to use that brand. Those payments cut their taxable profit locally, while inflating it in the tax haven."
         },
         {
           "type": "funFact",
-          "text": "The French word “tax haven” comes from a translation error: the English says “tax haven”, a safe harbor for money (haven), not a paradise (heaven). A confusion of sounds has changed the meaning of the word."
+          "text": "The French phrase for a tax haven, “paradis fiscal,” comes from a mistranslation. English says “haven,” a safe harbor for money, not “heaven.” Two words that sound alike changed the meaning."
         }
       ]
     },
@@ -77,30 +77,30 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "The financial crisis of 2008, then the publication of  in 2016, caused a wave of indignation. Under pressure from the OECD and the G20, banks must now automatically transmit information on their foreign clients to the tax administrations. [[Panama Papers]]"
+          "text": "The financial crisis of 2008, then the publication of the [[Panama Papers]] in 2016, set off a wave of outrage. Under pressure from the OECD and the G20, banks must now pass information about their foreign clients to tax authorities automatically."
         },
         {
           "type": "paragraph",
-          "text": "The most significant progress took place in 2021, with an international agreement setting a minimum tax rate of 15% for multinationals. The idea: to prevent countries from competing with each other by endlessly lowering their taxes to attract businesses. If a company only pays 5% in a tax haven, its home country can now claim the remaining 10%."
+          "text": "The biggest step forward came in 2021, with an international deal setting a minimum tax rate of 15% for multinationals. The idea is to stop countries from competing by cutting their taxes without end to attract companies. If a firm pays only 5% in a tax haven, its home country can now claim the remaining 10%."
         }
       ]
     },
     {
       "id": "course_212_les_paradis_fiscaux_expliques_p4",
-      "title": "Tax justice still fragile",
+      "title": "Fragile progress toward tax fairness",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "When the largest fortunes escape taxes, it is the middle classes and small local businesses that bear a greater share of the tax burden. This also weakens public services such as health or education, due to lack of resources."
+          "text": "When the largest fortunes escape tax, the middle class and small local businesses carry a bigger share of the burden. Public services such as health and education are weakened too, for lack of money."
         },
         {
           "type": "paragraph",
-          "text": "The battle is now moving towards digital: online platforms no longer need offices to make money in a country, which makes tax borders increasingly porous. Administrations are now using big data to spot anomalies, and are demanding public registers revealing the identity of the real owners of companies."
+          "text": "The battle is now moving to the digital world. Online platforms no longer need offices to make money in a country, which makes tax borders more and more porous. Tax authorities now use big data to spot anomalies, and campaigners want public registers showing who really owns each company."
         },
         {
           "type": "takeaway",
-          "text": "Tax havens shelter around 10% of the world's wealth thanks to banking secrecy and almost zero taxation. Since 2021, a global minimum tax rate of 15% has attempted to limit this evasion, but the battle remains far from won."
+          "text": "Tax havens hold about 10% of the world's wealth, thanks to banking secrecy and taxes close to zero. Since 2021 a global minimum tax rate of 15% has tried to limit this flight of capital, but the battle is far from won."
         }
       ]
     }

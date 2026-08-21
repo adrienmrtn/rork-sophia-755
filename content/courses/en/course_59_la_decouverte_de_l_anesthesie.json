@@ -1,14 +1,14 @@
 {
   "id": "course_59_la_decouverte_de_l_anesthesie",
-  "title": "The discovery of anesthesia",
+  "title": "The Discovery of Anesthesia",
   "subtitle": "Medicine",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "Before 1846, an operation was often carried out consciously and in extreme pain. Anesthesia transforms surgery into care, not torture.",
+  "description": "Before 1846, patients were often awake and in extreme pain while surgeons worked. Anesthesia turned an operation into treatment instead of torture.",
   "hero": {
     "image": "la_decouverte_de_l_anesthesie",
     "ratio": "16:9",
-    "hook": "One day in 1846, in Boston, surgery ceased to be a race against pain."
+    "hook": "One day in 1846, in Boston, surgery stopped being a race against pain."
   },
   "sections": [
     {
@@ -18,64 +18,64 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Imagine an amputation without falling asleep. Before the mid-19th century, this was the norm. We strap the patient in, we move quickly, we pray."
+          "text": "Imagine an amputation with nothing to put you to sleep. Before the middle of the 19th century, that was the norm. The patient was strapped down, the surgeon worked fast, and everyone prayed."
         },
         {
           "type": "paragraph",
-          "text": "**anesthesia** changes everything: it allows you to operate without awareness of pain. Modern surgery can finally take its time."
+          "text": "**Anesthesia** changed everything: it made it possible to operate without the patient feeling pain. Modern surgery could finally take its time."
         }
       ]
     },
     {
       "id": "course_59_la_decouverte_de_l_anesthesie_p1",
-      "title": "Before: speed versus suffering",
+      "title": "Before: speed against suffering",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "surgery_without_anesthesia_19th_century",
           "ratio": "4:3",
-          "caption": "Without anesthesia, the surgeon had to be extremely fast."
+          "caption": "Without anesthesia, the surgeon had to be extremely fast"
         },
         {
           "type": "paragraph",
-          "text": "Surgeons were judged on their speed. Alcohol, opium, or brute force were used to immobilize people. Many patients died from shock, infection, or hemorrhage."
+          "text": "Surgeons were judged on their speed. Alcohol, opium, or brute force held the patient still. Many patients died of shock, of infection, or of bleeding."
         }
       ]
     },
     {
       "id": "course_59_la_decouverte_de_l_anesthesie_p2",
-      "title": "1846: the day of the ether",
+      "title": "1846: the day of ether",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "ether_anesthesia_first_demonstration_1846",
           "ratio": "4:3",
-          "caption": "In Boston, a public demonstration convinced the medical world."
+          "caption": "In Boston, a public demonstration convinced the medical world"
         },
         {
           "type": "paragraph",
-          "text": "**October 16, 1846**, in Boston, the dentist **William Morton** makes a patient inhale **ether**. Surgeon **John Warren** operates on a neck tumor. The patient is not screaming. The room is stunned."
+          "text": "On **October 16, 1846**, in Boston, the dentist **William Morton** had a patient breathe in **ether**. The surgeon **John Warren** removed a tumor from the man's neck. The patient did not scream. The room was stunned."
         },
         {
           "type": "funFact",
-          "text": "Warren reportedly said, “Gentlemen, this is not a humbug.” The phrase has remained famous."
+          "text": "Warren is said to have announced: “Gentlemen, this is no humbug.” In other words, no trick. The line has stayed famous ever since."
         }
       ]
     },
     {
       "id": "course_59_la_decouverte_de_l_anesthesie_p3",
-      "title": "Next: chloroform and debates",
+      "title": "Next: chloroform and arguments",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Other products followed, such as **chloroform**, popularized in particular in Great Britain. Rivalries arise over who “invented” what. The patent doesn't matter: the idea is spreading all over the world."
+          "text": "Other products followed, such as **chloroform**, which caught on especially in Britain. Rivalries broke out over who had “invented” what. The patent hardly mattered: the idea spread around the world."
         },
         {
           "type": "paragraph",
-          "text": "There remains one problem: to put to sleep without killing. You have to dose it, monitor your breathing and your heart. A new specialty is born."
+          "text": "One problem remained: putting people to sleep without killing them. Doses had to be measured, breathing and the heart watched. A new specialty was born."
         }
       ]
     },
@@ -86,11 +86,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Today, the anesthesiologist uses precise gases and drugs, machines that measure everything. You can put the whole body to sleep or just an area (local or locoregional anesthesia)."
+          "text": "Today an anesthetist uses precise gases and drugs, with machines that measure everything. The whole body can be put to sleep, or only one area (local or regional anesthesia)."
         },
         {
           "type": "takeaway",
-          "text": "Since the demonstration of ether in **1846**, anesthesia has transformed surgery: less pain, more time, more precision... and safety has become a science in its own right."
+          "text": "Since the ether demonstration of **1846**, anesthesia has transformed surgery: less pain, more time, more precision, and a level of safety that has become a science of its own."
         }
       ]
     }

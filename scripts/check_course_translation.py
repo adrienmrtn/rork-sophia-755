@@ -62,7 +62,7 @@ STRANDED_SPACED_RE = re.compile(
 STRANDED_TIGHT_RE = re.compile(r"\b(the|an|of)\s*([,;:.!?])(?=\s|$)", re.IGNORECASE)
 
 FRENCH_LEFTOVERS = re.compile(
-    r"\b(les|des|une|dans|avec|pour|sont|qui|que|quoi|aussi|si\u00e8cle|si\u00e8cles|"
+    r"\b(les|des|une|dans|avec|sont|qui|quoi|aussi|si\u00e8cle|si\u00e8cles|"
     r"ainsi|alors|entre|leur|leurs|cette|cet|ces|tout|tous|toute|toutes|"
     r"apr\u00e8s|depuis|jusqu|chez|sous|autour|contre|pendant|selon|"
     r"est-\u00e0-dire|c'est|n'est|d'un|d'une|l'un|aux|du)\b"
@@ -101,7 +101,7 @@ INITIALISM_VOWEL_LETTERS = set("AEFHILMNORSX")
 
 #: Abbreviations whose period belongs inside a bold span.
 ABBREVIATION_TAIL_RE = re.compile(
-    r"(?:\b[A-Z]|Jr|Sr|St|Mt|Dr|Mr|Mrs|Ms|Prof|Gen|Col|Capt|Inc|Ltd|etc|vol|no)\.$"
+    r"(?:\b[A-Za-z]|Jr|Sr|St|Mt|Dr|Mr|Mrs|Ms|Prof|Gen|Col|Capt|Inc|Ltd|etc|vol|no)\.$"
 )
 
 # Articles that must not precede a glossary key that already carries one.

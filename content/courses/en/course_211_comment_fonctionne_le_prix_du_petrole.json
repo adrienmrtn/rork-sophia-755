@@ -1,14 +1,14 @@
 {
   "id": "course_211_comment_fonctionne_le_prix_du_petrole",
-  "title": "How does the price of oil work?",
-  "subtitle": "The nerve of the world economy",
+  "title": "How Does the Price of Oil Work?",
+  "subtitle": "The lifeblood of the world economy",
   "subject": "comprendreLeMonde",
   "subcategory": "Economy & society",
-  "description": "The price of oil is not set by a single seller. It is born from a **tug of war** between producing countries, financial markets and sudden crises, sometimes to the point of absurdity.",
+  "description": "No single seller sets the price of oil. It comes out of a **tug of war** between producing countries, financial markets and sudden crises, sometimes to the point of absurdity.",
   "hero": {
     "image": "comment_fonctionne_le_prix_du_petrole",
     "ratio": "16:9",
-    "hook": "In 2020, oil sellers paid their buyers to get rid of it. Here's why."
+    "hook": "In 2020, oil sellers paid their buyers to take the barrels away. Here is why."
   },
   "sections": [
     {
@@ -18,78 +18,78 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Oil is sometimes called the “blood of the economy.” Its price influences inflation, the price of gasoline, and even the stability of certain countries. However, no one sets this price with a stamp."
+          "text": "Oil is sometimes called “the blood of the economy.” Its price feeds into inflation, into what you pay at the pump, even into the stability of whole countries. And yet nobody sets that price with a stamp."
         },
         {
           "type": "paragraph",
-          "text": "It is born from a meeting between three forces: the countries that extract the oil, the financial markets that trade it before it even leaves the ground, and the crises that make everyone panic. Head to the deserts of Arabia, the plains of Texas, and the screens of Chicago."
+          "text": "It comes out of a meeting between three forces: the countries that pump the oil, the financial markets that trade it before it even leaves the ground, and the crises that send everyone into a panic. Next stop, the deserts of Arabia, the plains of Texas, and the trading screens of Chicago."
         }
       ]
     },
     {
       "id": "course_211_comment_fonctionne_le_prix_du_petrole_p1",
-      "title": "OPEC versus American shale: the battle of supply",
+      "title": "OPEC against American shale: the battle over supply",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "The oil market has a particularity: in the short term, demand hardly falls when prices rise. Cars, factories and planes cannot change energy overnight. Economists call this the **inelasticity** of demand."
+          "text": "The oil market has one peculiar feature: in the short run, demand barely falls when prices rise. Cars, factories and planes cannot switch energy source overnight. Economists call this the **inelasticity** of demand."
         },
         {
           "type": "paragraph",
-          "text": "Since 1960, a group of producing countries has organized itself to influence this market: the . By agreeing on production quotas, its members seek to maintain high prices. Since 2016, Russia has joined the alliance, forming [[OPEC]]+. Together, these countries control around 40% of the world's oil."
+          "text": "Since 1960, a group of producing countries has organized to steer this market: [[OPEC]]. By agreeing on production quotas, its members try to keep prices high. Russia joined the alliance in 2016, forming OPEC+. Together these countries control about 40% of the world's oil."
         },
         {
           "type": "funFact",
-          "text": "A single barrel of oil, 159 liters, contains as much energy as one person's manual labor for about a year."
+          "text": "A single barrel of oil, 159 liters, holds as much energy as a person working by hand for about a year."
         },
         {
           "type": "paragraph",
-          "text": "But this power has been shaken up. Thanks to a technique called hydraulic fracturing, the United States became the world's largest oil producer in ten years, overtaking Saudi Arabia. This new offer, which is quicker to adjust, has made the market more competitive and more difficult for OPEC+ to control."
+          "text": "But that power has been shaken. Thanks to a technique called hydraulic fracturing, the United States became the world's top oil producer in ten years, overtaking Saudi Arabia. This new supply can be adjusted much faster, which has made the market more competitive and harder for OPEC+ to control."
         }
       ]
     },
     {
       "id": "course_211_comment_fonctionne_le_prix_du_petrole_p2",
-      "title": "“Paper” oil: when finance gets involved",
+      "title": "“Paper” oil: when finance joins in",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Beyond the actual barrels delivered by ship or pipeline, oil is also traded on financial markets. Most transactions go through a futures market: we buy a barrel today which will only be delivered in one, three or six months."
+          "text": "Beyond the real barrels delivered by ship or pipeline, oil also trades on the financial markets. Most deals go through a futures market: you buy a barrel today that will only be delivered in one, three or six months."
         },
         {
           "type": "image",
           "asset": "oil_futures_trading_floor_markets",
           "ratio": "16:9",
-          "caption": "Oil trades on financial markets long before it is delivered."
+          "caption": "Oil is traded on the financial markets long before it is delivered"
         },
         {
           "type": "paragraph",
-          "text": "Banks and hedge funds buy and sell these contracts without ever wanting to touch a single barrel: they simply bet on whether prices will rise or fall. This brings money to the market, but also makes prices more nervous. Two prices serve as a reference in the world: , oil from the North Sea, and WTI, oil from Texas. The gap between the two reflects differences in quality and transportation. [[Brent]]"
+          "text": "Banks and hedge funds buy and sell these contracts with no intention of ever touching a barrel. They are simply betting that prices will rise or fall. That brings money into the market, but it also makes prices jumpier. Two prices serve as benchmarks worldwide: [[Brent]], oil from the North Sea, and WTI, oil from Texas. The gap between them reflects differences in quality and transport."
         }
       ]
     },
     {
       "id": "course_211_comment_fonctionne_le_prix_du_petrole_p3",
-      "title": "Prices collapsing... or exploding",
+      "title": "Prices that collapse... or explode",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "The oil market operates in brutal cycles. When prices rise for a long time, producers invest in expensive deposits, which ultimately creates an oversupply. When prices remain low, the opposite happens: we explore less, which prepares for the next shortage."
+          "text": "The oil market moves in brutal cycles. When prices stay high for a long time, producers invest in expensive fields, which eventually creates a glut. When prices stay low, the opposite happens: less exploration, which sets up the next shortage."
         },
         {
           "type": "paragraph",
-          "text": "The COVID-19 crisis has shown this spectacularly. In April 2020, the global economy came to a sudden halt: no one was flying or driving, but the wells continued to produce. The storage tanks were filled to the brim. The price of WTI then fell to minus $37: sellers were paying their buyers to clear their stocks."
+          "text": "The COVID-19 crisis showed this in spectacular fashion. In April 2020 the world economy stopped dead. Nobody was flying or driving, but the wells kept pumping, and the storage tanks filled to the brim. The price of WTI fell to minus $37, which meant sellers were paying buyers to take the oil off their hands."
         },
         {
           "type": "paragraph",
-          "text": "Conversely, in 2022, Russia's invasion of Ukraine raised fears of a shortage: Russia being the second largest exporter in the world, Brent exceeded $130 in a few weeks. Oil therefore remains a nervous barometer of world tensions."
+          "text": "The reverse happened in 2022. Russia's invasion of Ukraine raised the fear of a shortage, and since Russia is the world's second-largest exporter, Brent passed $130 within weeks. Oil remains a nervous barometer of the world's tensions."
         },
         {
           "type": "funFact",
-          "text": "It takes around 7 liters of oil to make a single smartphone, between the extraction of materials, plastic parts and transport."
+          "text": "It takes about 7 liters of oil to make a single smartphone, counting the extraction of the materials, the plastic parts and the transport."
         }
       ]
     },
@@ -100,15 +100,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "In the long term, oil faces a new challenge: the transition to clean energy. If electric cars reduce global demand, producing countries could engage in a price war to sell their reserves before they lose their value."
+          "text": "In the long run, oil faces a new challenge: the shift to clean energy. If electric cars cut world demand, producing countries could start a price war to sell their reserves before they lose their value."
         },
         {
           "type": "paragraph",
-          "text": "However, a paradox threatens the market: as investors abandon new oil projects for climate reasons, supply could fall faster than demand, causing new price surges. Oil will not disappear suddenly: it remains essential for plastics, fertilizers, and heavy transport such as aviation."
+          "text": "One paradox threatens the market all the same. Because investors are turning away from new oil projects for climate reasons, supply could fall faster than demand, setting off fresh price spikes. Oil will not vanish overnight, since it is still essential to plastics, fertilizers and heavy transport such as aviation."
         },
         {
           "type": "takeaway",
-          "text": "The price of oil is the result of a standoff between OPEC+, American shale production and speculative financial markets. Result: prices capable of collapsing or exploding at the slightest geopolitical shock."
+          "text": "The price of oil comes out of a tug of war between OPEC+, American shale production and speculative financial markets. The result is a market that can collapse or explode at the slightest geopolitical shock."
         }
       ]
     }

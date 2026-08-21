@@ -1,10 +1,10 @@
 {
   "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859",
-  "title": "Darwin's theory of evolution",
+  "title": "Darwin's Theory of Evolution",
   "subtitle": "1859",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "In 1859, Darwin published The Origin of Species. The central idea: living things change over time by natural selection.",
+  "description": "In 1859, Darwin published On the Origin of Species. The core idea: living things change over time through natural selection.",
   "hero": {
     "image": "la_theorie_de_l_evolution_de_darwin",
     "ratio": "16:9",
@@ -18,68 +18,68 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "In **1859**, **Charles Darwin** published *On the Origin of Species*. The book shocks, fascinates, divides. Its central idea is, however, simple to formulate."
+          "text": "In **1859**, **Charles Darwin** published *On the Origin of Species*. The book shocked, thrilled, and divided its readers. Its central idea, though, is simple to state."
         },
         {
           "type": "paragraph",
-          "text": "Living things vary. Some variations help survive and reproduce. These variations are transmitted. Over generations, populations change."
+          "text": "Living things vary. Some variations help them survive and reproduce. Those variations are passed on. Generation after generation, populations change."
         }
       ]
     },
     {
       "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p1",
-      "title": "The eye-opening journey",
+      "title": "The voyage that opened his eyes",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "charles_darwin_portrait",
           "ratio": "4:3",
-          "caption": "Darwin, 19th century British naturalist."
+          "caption": "Darwin, the British naturalist of the 19th century"
         },
         {
           "type": "paragraph",
-          "text": "As a young boy, Darwin leaves on the ship **Beagle**. For years, he observed plants, fossils, birds. In the Galapagos Islands, he noticed that nearby birds had different beaks depending on their food."
+          "text": "As a young man, Darwin sailed on the ship **Beagle**. For years he studied plants, fossils, and birds. In the Galapagos Islands, he noticed that closely related birds had different beaks depending on what they ate."
         },
         {
           "type": "image",
           "asset": "darwin_finches_galapagos_beaks",
           "ratio": "4:3",
-          "caption": "Nozzles adapted to different diets: a strong indicator."
+          "caption": "Beaks matched to different diets: a powerful clue"
         }
       ]
     },
     {
       "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p2",
-      "title": "Natural selection, in plain English",
+      "title": "Natural selection, in plain words",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Imagine a population of animals. Some run a little faster, digest a little better, resist the cold a little more. If it helps them survive and have young, these traits become more common."
+          "text": "Imagine a population of animals. Some run a little faster, digest a little better, stand the cold a little longer. If that helps them survive and have young, those traits become more common."
         },
         {
           "type": "paragraph",
-          "text": "It’s not that individuals “want” to evolve. It's a filter: the environment keeps what works. Darwin calls this **natural selection**."
+          "text": "It is not that individuals “want” to evolve. It is a filter: the environment tends to keep what works. Darwin called this **natural selection**."
         },
         {
           "type": "funFact",
-          "text": "Darwin waited a long time before publishing. He feared scandal. Another naturalist, **Alfred Russell Wallace**, came to similar ideas: this pushed Darwin to release his book."
+          "text": "Darwin waited a long time before publishing. He feared the scandal. Another naturalist, **Alfred Russel Wallace**, reached very similar ideas, and that pushed Darwin to bring out his book."
         }
       ]
     },
     {
       "id": "course_60_la_theorie_de_l_evolution_de_darwin_1859_p3",
-      "title": "The clash of ideas",
+      "title": "A clash of ideas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "In the 19th century, many believed that species were created as they were. To say that they change, and that humans share a history with other animals, shakes up religion and society."
+          "text": "In the 19th century, many people believed that species had been created exactly as they are. Saying that they change, and that humans share a history with other animals, unsettled both religion and society."
         },
         {
           "type": "paragraph",
-          "text": "Science is progressing: fossils, the geography of species, then later genetics, confirm the general idea."
+          "text": "Science, for its part, moved forward: fossils, the geography of species, and later genetics all confirmed the general idea."
         }
       ]
     },
@@ -90,11 +90,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "We now know that DNA carries variations. We observe evolution in the lab (bacteria, viruses) and in nature. We also fight bacteria resistant to antibiotics: this is live evolution."
+          "text": "We now know that DNA carries the variations. Evolution can be watched in the lab (bacteria, viruses) and in the wild. We also fight bacteria that resist antibiotics, and that is evolution happening live."
         },
         {
           "type": "takeaway",
-          "text": "Darwin showed that living things evolve by natural selection: traits useful for survival and reproduction spread. Modern genetics has confirmed and clarified this framework."
+          "text": "Darwin showed that life evolves by natural selection: the traits that help survival and reproduction spread. Modern genetics has confirmed and sharpened that framework."
         }
       ]
     }

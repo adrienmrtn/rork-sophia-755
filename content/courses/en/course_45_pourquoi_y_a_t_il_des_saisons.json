@@ -4,11 +4,11 @@
   "subtitle": "Earth & Sun",
   "subject": "sciences",
   "subcategory": "Our daily life explained",
-  "description": "The seasons do not come from Earth being closer or further from the Sun. The real cause is the tilt of the Earth's axis.",
+  "description": "The seasons do not come from Earth being closer to or farther from the Sun. The real cause is the tilt of Earth's axis.",
   "hero": {
     "image": "pourquoi_y_a_t_il_des_saisons",
     "ratio": "16:9",
-    "hook": "No, summer is not coming because the Earth is getting closer to the Sun."
+    "hook": "No, summer does not arrive because Earth moves closer to the Sun."
   },
   "sections": [
     {
@@ -18,32 +18,32 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Many people think that summer comes when the Earth is **closer** to the Sun, and winter comes when it is **far**. This is false. And we see it straight away: when it's summer in France, it's winter in Australia."
+          "text": "Many people think summer comes when Earth is **closer** to the Sun, and winter when it is **farther** away. That is wrong. And you can see it right away: when it is summer in France, it is winter in Australia."
         },
         {
           "type": "paragraph",
-          "text": "The real explanation lies in one thing: the axis of rotation of the Earth is **tilted**, tilted relative to the plane of its orbit around the Sun."
+          "text": "The real explanation comes down to one thing: Earth's axis of rotation is **tilted**, leaning relative to the plane of its orbit around the Sun."
         }
       ]
     },
     {
       "id": "course_45_pourquoi_y_a_t_il_des_saisons_p1",
-      "title": "The Earth tilts",
+      "title": "Earth leans",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "The Earth rotates on its axis in **24 hours**: it is day and night. It also orbits the Sun in **year year** in an orbit shaped like a **ellipse**, a slightly flattened circle. But its axis, the imaginary line from the North Pole to the South Pole, is not straight in relation to its orbit. It leans approximately **23.5 degrees**: this is the . [[Axial tilt of the Earth (23.5°)]]"
+          "text": "Earth spins on itself in **24 hours**, which gives us day and night. It also travels around the Sun in **one year**, on an orbit shaped like an **ellipse**, a slightly flattened circle. But its axis, the imaginary line from the North Pole to the South Pole, is not perpendicular to that orbit. It leans by about **23.5 degrees**, and that is [[Earth's axial tilt (23.5°)]]."
         },
         {
           "type": "image",
           "asset": "earth_summer_winter_seasons_illustration",
           "ratio": "auto",
-          "caption": "The tilt of the Earth's axis explains the cycle of the seasons."
+          "caption": "The tilt of Earth's axis explains the cycle of the seasons"
         },
         {
           "type": "paragraph",
-          "text": "This tilt stays in roughly the same direction all year round. It always points to the same region of the sky, near the North Star. Result: depending on where the Earth is in its orbit, one hemisphere “looks” more at the Sun, the other less."
+          "text": "The tilt keeps pointing in roughly the same direction all year. It always aims at the same patch of sky, near the North Star. The result: depending on where Earth sits on its orbit, one hemisphere “faces” the Sun more and the other less."
         }
       ]
     },
@@ -54,45 +54,45 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "In summer in the northern hemisphere, the North Pole tilts toward the Sun. The days are longer: the **photoperiod**, the ratio between the length of day and night, increases. The rays also arrive “straight” on the ground: the energy is concentrated on a smaller surface. So it's warmer."
+          "text": "In summer in the northern hemisphere, the North Pole leans toward the Sun. The days grow longer: the **photoperiod**, the ratio between the length of day and night, goes up. The rays also hit the ground more “head-on,” so the energy is packed into a smaller area. That is why it gets hotter."
         },
         {
           "type": "funFact",
-          "text": "In January, the Earth is even a little **closer** to the Sun than in July: it is the **perihelion**, the closest point in the orbit. And yet, it's winter here. Proof that distance does not explain the seasons."
+          "text": "In January, Earth is in fact a little **closer** to the Sun than in July. That point is the **perihelion**, the nearest point of the orbit. And yet January is winter in the north. Proof that distance does not explain the seasons."
         },
         {
           "type": "paragraph",
-          "text": "In winter, it's the opposite: short days, more oblique rays, energy spread over a larger surface. Less heat received. The **solstices**, times when the Sun reaches its northernmost or southernmost position, mark the start of summer or winter."
+          "text": "In winter it is the reverse: short days, more slanted rays, energy spread over a larger area. Less heat received. The **solstices**, the moments when the Sun reaches its northernmost or southernmost position, mark the start of summer or winter."
         }
       ]
     },
     {
       "id": "course_45_pourquoi_y_a_t_il_des_saisons_p3",
-      "title": "And near the equator?",
+      "title": "What about near the equator?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Near the **equator**, the imaginary line that divides the Earth into two hemispheres, tilt changes little the length of the day. There aren't really four seasons like in Europe, but rather drier and wetter periods."
+          "text": "Near the **equator**, the imaginary line that splits Earth into two hemispheres, the tilt barely changes the length of the day. There are not really four seasons as in Europe, but rather drier and wetter periods."
         },
         {
           "type": "paragraph",
-          "text": "At **pôles**, the effect is extreme: several months of continuous day in summer, several months of night in winter. The contrast is much stronger there than in France."
+          "text": "At the **poles**, the effect is extreme: several months of continuous daylight in summer, several months of night in winter. The contrast there is far sharper than in France."
         }
       ]
     },
     {
       "id": "course_45_pourquoi_y_a_t_il_des_saisons_p4",
-      "title": "A planet without tilt",
+      "title": "A planet with no tilt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "If the Earth's axis were perfectly straight, every place would receive roughly the same amount of sunlight all year round. No more real summer, no more real winter. The climate, the cultures, the animal migrations: everything would be different."
+          "text": "If Earth's axis stood perfectly straight, every place would get roughly the same amount of sunlight all year. No real summer, no real winter. Climate, crops, animal migrations: everything would be different."
         },
         {
           "type": "takeaway",
-          "text": "The seasons come from the tilt of the Earth's axis, approximately **23.5°**, not from the distance from the Sun. One hemisphere leans towards the Sun: it's summer. The other leans towards the opposite: it's winter."
+          "text": "The seasons come from the **tilt** of Earth's axis, about **23.5°**, not from the distance to the Sun. One hemisphere leans toward the Sun: that is summer. The other leans away: that is winter."
         }
       ]
     }
