@@ -4,11 +4,11 @@
   "subtitle": "Since 2009",
   "subject": "comprendreLeMonde",
   "subcategory": "Environment & the future",
-  "description": "The **blockchain** invented a ledger that no one can tamper with alone, paving the way for a new digital economy.",
+  "description": "The **blockchain** invented a ledger that no one can forge alone. That idea opened the way to a whole new digital economy.",
   "hero": {
     "image": "la_blockchain_et_les_cryptomonnaies",
     "ratio": "16:9",
-    "hook": "A book of accounts that no one owns, but that thousands of computers monitor together."
+    "hook": "An account book that nobody owns, and that thousands of computers keep watch over together."
   },
   "sections": [
     {
@@ -18,30 +18,30 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Imagine a book of accounts that no one person owns, but that thousands of computers update at the same time, all over the world, and that it is almost impossible to falsify. This is the initial idea of ​​the **blockchain**, a technology often reduced to its first application, the **Bitcoin**."
+          "text": "Imagine an account book that nobody owns alone, kept up to date at the same moment by thousands of computers all over the world, and almost impossible to forge. That is the starting idea of the **blockchain**, a technology often reduced to its first application, **Bitcoin**."
         },
         {
           "type": "paragraph",
-          "text": "By making it possible to exchange value without going through a bank, this invention gave rise to an entire parallel economy, between promises of financial freedom and severe criticism of its energy cost."
+          "text": "By letting people exchange value without going through a bank, this invention created a whole parallel economy, caught between promises of financial freedom and harsh criticism of its energy bill."
         }
       ]
     },
     {
       "id": "course_232_la_blockchain_et_les_cryptomonnaies_p1",
-      "title": "A register that no one controls alone",
+      "title": "A ledger that nobody controls alone",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "At the heart of blockchain is a simple idea: the **distributed ledger**. Unlike a bank, which keeps its accounts on its own servers, the blockchain relies on a network of , that is to say thousands of computers which each keep an identical copy of all transactions. [[peers]]"
+          "text": "At the heart of the blockchain sits a simple idea: the **distributed ledger**. A bank keeps its accounts on its own servers. A blockchain instead relies on a network of [[peers]], thousands of computers that each hold an identical copy of every transaction."
         },
         {
           "type": "funFact",
-          "text": "The very first block of the Bitcoin blockchain, called the “genesis block”, contained a hidden message: the front page of a British newspaper on January 3, 2009, which spoke of the state bailout of the banks. A political nod from its creator."
+          "text": "The very first block of the Bitcoin blockchain, known as the “genesis block,” carried a hidden message: the front page of a British newspaper from January 3, 2009, about the state bailout of the banks. A political wink from its creator."
         },
         {
           "type": "paragraph",
-          "text": "Each transaction is first verified by the network and then grouped with others into a **block**. This block is then linked to the previous one thanks to a mathematical calculation called : a kind of unique digital fingerprint. The result is an uninterrupted chain of blocks, hence the name blockchain. To modify a single old transaction, you would have to recalculate the entire chain and convince more than half of the network, which is almost impossible on a large scale. [[hashing]]"
+          "text": "Each transaction is checked by the network, then bundled with others into a **block**. That block is tied to the one before it by a mathematical operation called [[hashing]], a kind of unique digital fingerprint. The result is an unbroken chain of blocks, hence the name blockchain. Changing a single old transaction would mean recalculating the whole chain and convincing more than half the network, which is close to impossible at this scale."
         }
       ]
     },
@@ -52,59 +52,59 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "The **Bitcoin**, launched in **2009** by an anonymous person (or group) under the name , proved that a monetary system could function without a central bank. To guarantee its scarcity, its creator has set a strict ceiling: never more than **21 million bitcoins** can exist, a bit like gold is limited on Earth. [[Satoshi Nakamoto]]"
+          "text": "**Bitcoin**, launched in **2009** by a person (or a group) who stayed anonymous under the name [[Satoshi Nakamoto]], proved that a monetary system could work without a central bank. To guarantee scarcity, its creator set a hard ceiling: there will never be more than **21 million bitcoins**, much as gold is limited on Earth."
         },
         {
           "type": "image",
           "asset": "blockchain_technology_distributed_ledger_visualization",
           "ratio": "4:3",
-          "caption": "Each transaction is verified by a network of computers before being added to the chain."
+          "caption": "Every transaction is checked by a network of computers before it joins the chain"
         },
         {
           "type": "paragraph",
-          "text": "In 2015, a second generation of blockchain appeared with **Ethereum**. Its great innovation: **smart contracts**. These are programs that run automatically as soon as a condition is met, for example automatic reimbursement in the event of a train delay, without the need to go through an intermediary."
+          "text": "In 2015, a second generation of blockchain arrived with **Ethereum**. Its big innovation: **smart contracts**. These are programs that run by themselves as soon as a condition is met: an automatic refund when a train is late, for example, with no middleman involved."
         }
       ]
     },
     {
       "id": "course_232_la_blockchain_et_les_cryptomonnaies_p3",
-      "title": "Critics: energy and instability",
+      "title": "The criticisms: energy and instability",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "The success of cryptocurrencies is not without its problems. The most discussed concerns the **energy consumption** of the Bitcoin network: its annual electricity expenditure is today comparable to that of an entire country like Argentina."
+          "text": "The success of cryptocurrencies comes with problems. The most debated one is the **energy use** of the Bitcoin network: its yearly electricity bill now matches that of an entire country such as Argentina."
         },
         {
           "type": "paragraph",
-          "text": "The market also suffers from extreme **volatility**: the price of Bitcoin can vary by 10 or 20% in a few hours. This instability currently prevents it from becoming a real everyday currency."
+          "text": "The market also suffers from extreme **volatility**: the price of Bitcoin can swing 10% or 20% in a few hours. That instability keeps it, for now, from becoming a real everyday currency."
         },
         {
           "type": "paragraph",
-          "text": "Finally, the relative anonymity of transactions has sometimes been used for illegal activities. But the blockchain actually remains completely transparent: the authorities can follow the flow of money, which makes laundering more difficult than in the classic cash system."
+          "text": "Finally, the relative anonymity of transactions has sometimes served illegal activity. Yet a blockchain is in fact completely transparent: the authorities can follow the flow of money, which makes laundering harder than in the classic world of cash."
         }
       ]
     },
     {
       "id": "course_232_la_blockchain_et_les_cryptomonnaies_p4",
-      "title": "Towards institutional integration",
+      "title": "Toward institutional integration",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Today, cryptocurrencies are leaving the margins to enter traditional finance. Large banks now offer to hold digital assets for their customers, and several states are considering creating their own official digital currency, a **[[MNBC]]** (central bank digital currency)."
+          "text": "Cryptocurrencies are now leaving the margins and entering traditional finance. Large banks offer to hold digital assets for their clients, and several states are thinking about issuing their own official digital money, a **[[CBDC]]** (central bank digital currency)."
         },
         {
           "type": "paragraph",
-          "text": "**stablecoins**, cryptocurrencies whose price is stabilized thanks to a reserve of dollars or euros, serve as a bridge between the two worlds. Beyond finance, sectors such as luxury (to fight counterfeiting), logistics (to track containers) or health (to secure medical records) are also adopting blockchain for its reliability."
+          "text": "**Stablecoins**, cryptocurrencies whose price is pegged to a reserve of dollars or euros, act as a bridge between the two worlds. Beyond finance, sectors such as luxury goods (to fight counterfeiting), logistics (to track containers) and health care (to secure medical records) are adopting blockchain for its reliability."
         },
         {
           "type": "funFact",
-          "text": "In 2021, El Salvador became the first country in the world to adopt Bitcoin as legal tender, alongside the US dollar, requiring every merchant to accept it if they have the technical means."
+          "text": "In 2021, El Salvador became the first country in the world to adopt Bitcoin as legal tender alongside the US dollar, obliging every merchant with the technical means to accept it."
         },
         {
           "type": "takeaway",
-          "text": "Created in 2009, the blockchain is a shared ledger that is almost impossible to falsify, with a maximum supply of bitcoins set at 21 million units. It laid the foundations of a new digital economy today in full institutional integration."
+          "text": "Created in 2009, the blockchain is a shared ledger that is almost impossible to forge, and the supply of bitcoins is capped at 21 million units. It laid the groundwork for a new digital economy that institutions are now absorbing."
         }
       ]
     }

@@ -48,12 +48,18 @@ FORBIDDEN_CHARS = {
     "\ufeff": "byte-order mark",
 }
 
-#: Determiners and prepositions that cannot legally sit against punctuation.
-#: A paragraph reading "weakened above all by :" is one from which a glossary
-#: term was deleted, and this is how we find it. The punctuation must be
-#: followed by whitespace or end of segment, so "5 a.m. train" is not a hit.
-STRANDED_EN = "the|a|an|of|by|with|from|into|during|between|against|for|and"
-STRANDED_RE = re.compile(rf"\b({STRANDED_EN})\s*([,;:.!?])(?=\s|$)", re.IGNORECASE)
+#: A paragraph reading "weakened above all by :" is one a glossary term was
+#: deleted from, and the space before the punctuation is the tell. Any function
+#: word separated from its punctuation that way is a defect.
+STRANDED_SPACED_RE = re.compile(
+    r"\b(the|a|an|of|by|with|from|in|to|for|and|or|as|on|at|into|during|between|against)"
+    r"\s+([,;:.!?])(?=\s|$)",
+    re.IGNORECASE,
+)
+#: Only these can never end a clause even without the space. English strands
+#: prepositions freely ("the tools he worked with."), so `for.` and `between.`
+#: are correct and must not be reported.
+STRANDED_TIGHT_RE = re.compile(r"\b(the|an|of)\s*([,;:.!?])(?=\s|$)", re.IGNORECASE)
 
 FRENCH_LEFTOVERS = re.compile(
     r"\b(les|des|une|dans|avec|pour|sont|qui|que|quoi|aussi|si\u00e8cle|si\u00e8cles|"
@@ -90,6 +96,13 @@ FRENCH_SET_PHRASES = (
 
 VOWEL_SOUND_EXCEPTIONS_CONSONANT = ("one", "once", "uni", "use", "user", "usu", "euro", "eul")
 VOWEL_SOUND_EXCEPTIONS_VOWEL = ("hour", "honest", "honor", "honour", "heir")
+#: Letters whose spoken name begins with a vowel, for initialisms read aloud.
+INITIALISM_VOWEL_LETTERS = set("AEFHILMNORSX")
+
+#: Abbreviations whose period belongs inside a bold span.
+ABBREVIATION_TAIL_RE = re.compile(
+    r"(?:\b[A-Z]|Jr|Sr|St|Mt|Dr|Mr|Mrs|Ms|Prof|Gen|Col|Capt|Inc|Ltd|etc|vol|no)\.$"
+)
 
 # Articles that must not precede a glossary key that already carries one.
 LEADING_ARTICLES = ("the ", "a ", "an ")
@@ -176,9 +189,15 @@ def article_before(text: str, span_start: int) -> str | None:
 
 
 def starts_with_vowel_sound(term: str) -> bool:
-    word = re.sub(r"^[^A-Za-z]+", "", term).lower()
-    if not word:
+    raw = re.sub(r"^[^A-Za-z]+", "", term)
+    if not raw:
         return False
+    first = raw.split()[0].strip(".,:;")
+    # An initialism is read letter by letter, so the sound is the letter's name:
+    # "an MIT study", "an NGO", but "a UN resolution".
+    if len(first) >= 2 and first.isupper() and first.isalpha():
+        return first[0] in INITIALISM_VOWEL_LETTERS
+    word = raw.lower()
     if word.startswith(VOWEL_SOUND_EXCEPTIONS_VOWEL):
         return True
     if word.startswith(VOWEL_SOUND_EXCEPTIONS_CONSONANT):
@@ -214,10 +233,10 @@ def check_segment(
             report("bold-whitespace", f"bold span wraps whitespace: {span!r}")
         elif span.endswith((",", ";", ":", "!", "?")):
             report("bold-punctuation", f"bold span swallows punctuation: {span!r}")
-        elif span.endswith(".") and len(span.split()) >= 4:
-            # A trailing period on a short span is an initial or an abbreviation
-            # ("Josef K.", "T.S. Eliot"); on a long one it is a swallowed
-            # sentence break.
+        elif span.endswith(".") and not ABBREVIATION_TAIL_RE.search(span):
+            # A trailing period is fine when it belongs to a name or an
+            # abbreviation ("Josef K.", "Martin Luther King Jr."); otherwise the
+            # span has swallowed a sentence break.
             report("bold-punctuation", f"bold span swallows a sentence break: {span!r}")
 
     # --- glossary ---------------------------------------------------------
@@ -275,8 +294,10 @@ def check_segment(
                 )
 
     # --- stranded function words (the empty slot left behind) --------------
-    for match in STRANDED_RE.finditer(english):
-        report("stranded-function-word", snippet(english, match.start()))
+    for pattern in (STRANDED_SPACED_RE, STRANDED_TIGHT_RE):
+        for match in pattern.finditer(english):
+            report("stranded-function-word", snippet(english, match.start()))
+            break
 
     # --- typography -------------------------------------------------------
     for char, label in FORBIDDEN_CHARS.items():
