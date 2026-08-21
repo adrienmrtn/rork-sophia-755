@@ -1,14 +1,14 @@
 {
   "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr",
-  "title": "Why do seasons exist on other planets?",
+  "title": "Why do other planets have seasons?",
   "subtitle": "Planets & orbits",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "On Earth, the seasons come from the tilt of the axis. Elsewhere, this same principle gives winters of 42 years… or almost no season at all.",
+  "description": "On Earth, the seasons come from the tilt of the axis. Elsewhere the same rule gives winters that last 42 years, or almost no seasons at all.",
   "hero": {
     "image": "pourquoi_les_saisons_existent_sur_d_autres_planetes",
     "ratio": "16:9",
-    "hook": "Our four seasons are a moderate case. Elsewhere, a summer can last for decades."
+    "hook": "Our four seasons are the mild case. Elsewhere, one summer can last for decades."
   },
   "sections": [
     {
@@ -18,55 +18,55 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "On Earth, summer and winter arise mainly from the **inclination** of the axis: approximately **23.5°**. The Sun hits harder on one hemisphere, then the other. This model seems obvious. In the Solar System, it is rather a moderate version."
+          "text": "On Earth, summer and winter come mostly from the **tilt** of the axis, about **23.5°**. The Sun beats down harder on one hemisphere, then on the other. The pattern feels obvious to us. In the solar system, it is really the mild version."
         },
         {
           "type": "paragraph",
-          "text": "Each planet combines its inclination and the shape of its orbit. Result: worlds without seasons, others with extreme contrasts, and winters that last for decades."
+          "text": "Every planet combines its own tilt with the shape of its orbit. The result: worlds with no seasons, others with extreme contrasts, and winters that run for decades."
         }
       ]
     },
     {
       "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p1",
-      "title": "Tilt, engine of contrasts",
+      "title": "Tilt, the engine of contrast",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "The [[Obliquity]] is the angle between the axis of rotation of a planet and the perpendicular to its orbit. The larger it is, the more marked the seasons."
+          "text": "[[Obliquity]] is the angle between a planet's rotation axis and the perpendicular to its orbit. The bigger that angle, the sharper the seasons."
         },
         {
           "type": "image",
           "asset": "uranus_planet_nasa",
           "ratio": "auto",
-          "caption": "Uranus, tilted at about 98°, experiences extreme seasons lasting 42 years."
+          "caption": "Uranus, tilted by about 98°, has extreme seasons that last 42 years"
         },
         {
           "type": "paragraph",
-          "text": "**Uranus** is the extreme case: inclination of approximately **98°**, almost lying down. It takes **84 years** to go around the Sun. Each pole then receives nearly **42 years** of continuous day, then **42 years** of total night. **March**, at **25.2°**, resembles Earth, but its year lasts **687 terrestrial days**: spring and autumn of six months. **Jupiter** and **Mercury**, almost straight, have almost no seasons."
+          "text": "**Uranus** is the extreme case: a tilt of about **98°**, almost lying on its side. It takes **84 years** to go around the Sun. Each pole then gets nearly **42 years** of continuous daylight, followed by **42 years** of total night. **Mars**, at **25.2°**, is much like Earth, but its year lasts **687 Earth days**, so spring and autumn run six months each. **Jupiter** and **Mercury**, almost upright, have virtually no seasons."
         },
         {
           "type": "funFact",
-          "text": "On Uranus and Neptune, extreme pressures could “rain” diamonds formed from atmospheric carbon."
+          "text": "On Uranus and Neptune, the extreme pressure may make it “rain” diamonds formed out of carbon from the atmosphere."
         }
       ]
     },
     {
       "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p2",
-      "title": "When the distance from the Sun also matters",
+      "title": "When distance from the Sun counts too",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "On Earth, the orbit is almost circular: the distance from the Sun varies little. It is therefore not what makes summer or winter, but the angle of the rays."
+          "text": "Earth's orbit is nearly circular, so the distance to the Sun barely changes. Summer and winter do not come from that distance, but from the angle of the rays."
         },
         {
           "type": "paragraph",
-          "text": "On **March**, the orbit is much more oval, more **eccentric**: from **207 to 249 million km**. In the Southern Hemisphere, summer falls near , the closest point to the Sun. Shorter, but warmer summers. This thermal shock sometimes triggers planetary **** dust storms that obscure the sky. [[<perihelion>]]"
+          "text": "On **Mars**, the orbit is far more oval, more **eccentric**: from **207 to 249 million km**. In the southern hemisphere, summer falls near [[perihelion]], the closest point to the Sun. Summers there are shorter, but hotter. That thermal shock sometimes sets off planet-wide **dust storms** that blot out the sky."
         },
         {
           "type": "funFact",
-          "text": "In **2018**, a seasonal Martian storm permanently stopped the Opportunity rover by blocking the Sun."
+          "text": "In **2018**, a seasonal Martian storm finished off the Opportunity rover for good by hiding the Sun from it."
         }
       ]
     },
@@ -77,34 +77,34 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Mercury**, without real atmosphere or inclination, lives mainly in daily **** extremes: **430 °C** in the Sun, **-180 °C** at night. **Venus** rotates in reverse, in  from east to west, with extreme tilt, but its monstrous **greenhouse effect traps heat in the atmosphere and equalizes the temperature towards **Z460** °C** everywhere, all the time. [[Retrograde rotation]]"
+          "text": "**Mercury**, with no real atmosphere and no tilt, lives through **daily** extremes instead: **430°C** in the sunlight, **-180°C** at night. **Venus** spins the other way, in [[Retrograde rotation]] from east to west, and its tilt is extreme, but its monstrous **greenhouse effect** traps heat in the atmosphere and levels the temperature at about **460°C** everywhere, all the time."
         },
         {
           "type": "paragraph",
-          "text": "**Saturn**, tilted like the Earth, has seasons of about **7 years**. The angle of the [[<rings of Saturn>]] changes the light received by each hemisphere and even changes the color of the clouds."
+          "text": "**Saturn**, tilted much like Earth, has seasons of about **7 years**. The angle of the [[rings of Saturn]] changes how much light each hemisphere receives, and even shifts the color of the clouds."
         },
         {
           "type": "funFact",
-          "text": "On Venus, one day, its rotation lasts longer than a year, its revolution: **243** terrestrial days against **225**."
+          "text": "On Venus, a single spin of the planet takes longer than one trip around the Sun: **243** Earth days against **225**."
         }
       ]
     },
     {
       "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p4",
-      "title": "Why does Earth have stable seasons?",
+      "title": "Why Earth's seasons stay stable",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Without the **Moon**, the Earth's inclination would oscillate chaotically between 0° and more than 80° over millions of years. Uranus-type seasons would make the climate almost uninhabitable. The Moon acts as a **gravitational stabilizer**."
+          "text": "Without the **Moon**, Earth's tilt would swing chaotically between 0° and more than 80° over millions of years. Uranus-style seasons would make the climate almost unlivable. The Moon acts as a **gravitational stabilizer**."
         },
         {
           "type": "paragraph",
-          "text": "When looking for habitable s, astronomers also look at the stability of the axis. Mild and regular seasons are not a detail: they are part of the conditions for sustainable living. [[<exoplanets>]]"
+          "text": "So when astronomers hunt for habitable [[exoplanets]], they also look at how stable the axis is. Mild, regular seasons are not a detail: they are part of what lasting life requires."
         },
         {
           "type": "takeaway",
-          "text": "The seasons arise mainly from the inclination of the axis. On Uranus, they last for decades; on Mars, the oval orbit makes them asymmetrical. The Moon protects those on Earth."
+          "text": "Seasons come mostly from the tilt of the axis. On Uranus they last for decades, and on Mars the oval orbit makes them lopsided. On Earth, the Moon keeps them steady."
         }
       ]
     }

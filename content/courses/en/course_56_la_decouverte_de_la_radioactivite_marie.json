@@ -4,11 +4,11 @@
   "subtitle": "Marie Curie",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "Marie Curie, with Pierre Curie and Henri Becquerel, opens the chapter of radioactivity. Two Nobel Prizes, overwhelming work, and an immense legacy.",
+  "description": "With Pierre Curie and Henri Becquerel, Marie Curie opened the chapter of radioactivity. Two Nobel Prizes, a crushing workload, and an immense legacy.",
   "hero": {
     "image": "la_decouverte_de_la_radioactivite_marie_curie",
     "ratio": "16:9",
-    "hook": "She weighed tons of ore to isolate a few grams of an invisible element."
+    "hook": "She processed tons of ore to isolate a few grams of an invisible element."
   },
   "sections": [
     {
@@ -18,81 +18,81 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Marie Curie** (born Maria Skłodowska) is the first woman to receive a Nobel Prize. She remains the only person to have received **two** in two different sciences: physics, then chemistry."
+          "text": "**Marie Curie**, born Maria Skłodowska, was the first woman to receive a Nobel Prize. She is still the only person to have won **two** of them in two different sciences: physics, then chemistry."
         },
         {
           "type": "paragraph",
-          "text": "Its subject: **radioactivity**, that is to say the fact that certain atoms spontaneously send energy and particles."
+          "text": "Her subject was **radioactivity**, the fact that certain atoms spontaneously give off energy and particles."
         }
       ]
     },
     {
       "id": "course_56_la_decouverte_de_la_radioactivite_marie_p1",
-      "title": "A narrow door to science",
+      "title": "A narrow door into science",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Born in Poland, she went to study in Paris because local universities closed many doors to women. She works hard, often in precarious conditions."
+          "text": "Born in Poland, she left to study in Paris because the universities at home closed many doors to women. She worked hard, often in makeshift conditions."
         },
         {
           "type": "paragraph",
-          "text": "She married **Pierre Curie**, physicist. Together, they formed a rare laboratory duo for the time."
+          "text": "She married the physicist **Pierre Curie**. Together they formed a laboratory partnership that was rare for the time."
         }
       ]
     },
     {
       "id": "course_56_la_decouverte_de_la_radioactivite_marie_p2",
-      "title": "Name the invisible",
+      "title": "Naming the invisible",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "In **1896**, **Henri Becquerel** noticed that uranium veils photographic plates without light. Marie Curie decides to study this phenomenon in detail. She invented the word **radioactivity**."
+          "text": "In **1896**, **Henri Becquerel** noticed that uranium fogged photographic plates with no light involved. Marie Curie decided to study the phenomenon in detail. She coined the word **radioactivity**."
         },
         {
           "type": "image",
           "asset": "marie_curie_pitchblende_radioactivity",
           "ratio": "4:3",
-          "caption": "Tons of pitchblende to isolate radium and polonium."
+          "caption": "Tons of pitchblende to isolate radium and polonium"
         },
         {
           "type": "paragraph",
-          "text": "With Pierre, she discovers two new elements: **polonium** (named after Poland) and **radium**. To isolate them, enormous quantities of ore, pitchblende, must be processed."
+          "text": "With Pierre she discovered two new elements: **polonium**, named after Poland, and **radium**. Isolating them meant processing huge quantities of an ore called pitchblende."
         },
         {
           "type": "funFact",
-          "text": "Radium glows faintly in the dark. We were amazed at first… before understanding how dangerous it was."
+          "text": "Radium glows faintly in the dark. People marveled at it first, and only later understood how dangerous it was."
         }
       ]
     },
     {
       "id": "course_56_la_decouverte_de_la_radioactivite_marie_p3",
-      "title": "Glory and price to pay",
+      "title": "Glory and the price to pay",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "In **1903**, Marie, Pierre and Becquerel received the Nobel Prize in physics. In **1911**, Marie alone received the Nobel Prize in Chemistry. Pierre died accidentally in 1906. She continues."
+          "text": "In **1903**, Marie, Pierre and Becquerel received the Nobel Prize in Physics. In **1911**, Marie received the Nobel Prize in Chemistry on her own. Pierre died in an accident in 1906. She kept working."
         },
         {
           "type": "paragraph",
-          "text": "During the First World War, she organized mobile x-ray units to treat the wounded. She exposes her body to doses that today we would know are unacceptable."
+          "text": "During the First World War she organized mobile X-ray units to help treat the wounded. She exposed her own body to doses that we would judge unacceptable today."
         }
       ]
     },
     {
       "id": "course_56_la_decouverte_de_la_radioactivite_marie_p4",
-      "title": "A double-sided legacy",
+      "title": "A legacy with two faces",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Radioactivity has enabled radiotherapy against certain cancers… and also nuclear weapons. Knowledge is neutral; its uses are not."
+          "text": "Radioactivity made radiation therapy against some cancers possible, and it made nuclear weapons possible too. Knowledge itself is neutral. What people do with it is not."
         },
         {
           "type": "takeaway",
-          "text": "Marie Curie transformed a strange observation into a new science: radioactivity. His work opened up modern physics… at the cost of risks then poorly understood."
+          "text": "Marie Curie turned a strange observation into a new science: radioactivity. Her work opened the way to modern physics, at the cost of risks nobody understood at the time."
         }
       ]
     }

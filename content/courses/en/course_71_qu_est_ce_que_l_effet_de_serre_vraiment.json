@@ -4,11 +4,11 @@
   "subtitle": "Climate & atmosphere",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "The greenhouse effect is not primarily a problem: it is the invisible mantle that prevents the Earth from freezing. The real issue is when you thicken it too quickly.",
+  "description": "The greenhouse effect is not a problem in itself: it is the invisible blanket that keeps the Earth from freezing. The real trouble starts when we thicken it too fast.",
   "hero": {
     "image": "qu_est_ce_que_l_effet_de_serre",
     "ratio": "16:9",
-    "hook": "Without the greenhouse effect, the Earth would be an icy desert. With too much, it overheats."
+    "hook": "Without the greenhouse effect, the Earth would be a desert of ice. With too much of it, the planet overheats."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Imagine a car closed in the sun: the windows let the light in, but the heat has difficulty getting out. The passenger compartment heats up. The [[Greenhouse gases (GHG)]] of Earth works a bit like that, with air instead of glass."
+          "text": "Picture a closed car in the sun: the windows let the light in, but the heat struggles to get back out. The inside warms up. The Earth's [[greenhouse effect]] works a little like that, with air in place of glass."
         },
         {
           "type": "paragraph",
-          "text": "This phenomenon is **natural** and vital. Without it, the average temperature of the globe would fall towards **-18 °C**. With him, we are around **+15 °C**. The current problem is not its existence: it is its rapid **amplification** by our activities."
+          "text": "The phenomenon is **natural** and vital. Without it, the average temperature of the globe would drop toward **-18°C**. With it, we sit around **+15°C**. Today's problem is not that it exists: it is the rapid **amplification** caused by our own activities."
         }
       ]
     },
@@ -33,21 +33,21 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "The Sun mainly sends visible light. The atmosphere lets it pass. The land and oceans heat up, then radiate this energy back in the form of **infrared heat**, waves that are “longer” than visible light."
+          "text": "The Sun mainly sends visible light. The atmosphere lets it through. The ground and the oceans warm up, then send that energy back as **infrared heat**, waves “longer” than visible light."
         },
         {
           "type": "image",
           "asset": "factory_chimneys_greenhouse_gas_emissions",
           "ratio": "auto",
-          "caption": "Industrial emissions reinforce the greenhouse effect."
+          "caption": "Industrial emissions strengthen the greenhouse effect"
         },
         {
           "type": "paragraph",
-          "text": "Certain gases, , absorb this heat and radiate it in all directions, including towards the ground. Nitrogen and oxygen, the majority in the air, hardly do this job. Water vapor, **CO₂** and **methane** do this very well. [[Greenhouse gases (GHG)]]"
+          "text": "Certain gases, the [[greenhouse gases]], absorb that heat and send it back in every direction, including down toward the ground. Nitrogen and oxygen, which make up most of the air, barely do this job at all. Water vapor, **CO₂** and **methane** do it very well."
         },
         {
           "type": "funFact",
-          "text": "The name “greenhouse effect” is a bit misleading. A real greenhouse heats mainly by blocking the rising hot air. The atmosphere traps heat by absorbing infrared rays."
+          "text": "The name “greenhouse effect” is a little misleading. A real greenhouse warms up mainly by blocking the hot air that rises. The atmosphere traps heat in another way, by absorbing infrared rays."
         }
       ]
     },
@@ -58,11 +58,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Since the industrial revolution, coal, oil and gas have been burned. This carbon, buried underground for millions of years, returns to the air. Deforestation also reduces forests that absorbed CO₂. Raising and growing rice adds methane, about **80 times** more “heating” than CO₂ over 20 years."
+          "text": "Since the industrial revolution, we have burned coal, oil and gas. That carbon, buried underground for millions of years, goes straight back into the air. Deforestation also removes the forests that used to absorb CO₂. Livestock and rice growing add methane, about **80 times** more warming than CO₂ over 20 years."
         },
         {
           "type": "paragraph",
-          "text": "Result: the CO₂ concentration increased from approximately **280** to more than **420** parts per million. Such a level had not been seen since , around **Z3** million years ago, when seas were higher. [[Pliocene]]"
+          "text": "The result: the concentration of CO₂ has gone from about **280** to more than **420** parts per million. Such a level had not been seen since the [[Pliocene]], roughly **3 million years** ago, when the seas stood higher."
         }
       ]
     },
@@ -73,34 +73,34 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "The [[IPCC]], which synthesizes the work of thousands of climatologists, is clear: the warming since 1950 is unprecedented over millennia, and its human origin is established."
+          "text": "The [[IPCC]], which pulls together the work of thousands of climate scientists, is blunt: the warming since 1950 has no precedent over thousands of years, and its human origin is established."
         },
         {
           "type": "paragraph",
-          "text": "More energy in the air and oceans means more extremes: drier droughts, more violent rains, melting glaciers and ice caps, rising sea levels. And an accelerator: when the white ice disappears, the dark soil and water absorb more sunlight. The [[Terrestrial albedo]] is falling, and the planet is warming even faster."
+          "text": "More energy in the air and the oceans means sharper extremes: drier droughts, more violent rain, melting glaciers and ice caps, rising seas. And there is an accelerator: when the white ice vanishes, dark ground and dark water soak up more sunlight. That is [[terrestrial albedo]] falling, and the planet warms faster still."
         },
         {
           "type": "funFact",
-          "text": "Venus shows the “packed” greenhouse effect: an atmosphere of 96% CO₂, and about **460 °C** on the ground, enough to melt lead."
+          "text": "Venus shows the greenhouse effect “running away”: an atmosphere that is 96% CO₂, and about **460°C** at ground level, hot enough to melt lead."
         }
       ]
     },
     {
       "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p4",
-      "title": "Limit the increase, adapt to the rest",
+      "title": "Limit the rise, adapt to the rest",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "The international objective aims to remain below **+1.5°C** or **+2°C** compared to the pre-industrial era, to avoid dangerous thresholds such as the thawing of , which would release even more methane. [[permafrost]]"
+          "text": "The international goal is to stay under **+1.5°C** or **+2°C** compared with the pre-industrial era, to avoid dangerous thresholds such as the thawing of the [[permafrost]], which would release even more methane."
         },
         {
           "type": "paragraph",
-          "text": "Two levers: **reduce** emissions (clean energy, sobriety, forests) and **adapted** to what is already committed. CO₂ remains in the air for centuries: what we emit today lasts a long time."
+          "text": "Two levers: **cut** emissions (clean energy, using less, forests) and **adapt** to what is already locked in. CO₂ stays in the air for centuries, so what we emit today weighs on us for a long time."
         },
         {
           "type": "takeaway",
-          "text": "Without a natural greenhouse effect, the Earth would freeze around **-18 °C**. Its amplification by fossil fuels pushes CO₂ to levels not seen for **3 million years**."
+          "text": "Without the natural greenhouse effect, the Earth would freeze toward **-18°C**. Amplifying it with fossil fuels has pushed CO₂ to levels not seen for **3 million years**."
         }
       ]
     }

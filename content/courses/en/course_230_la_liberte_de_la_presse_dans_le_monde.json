@@ -1,14 +1,14 @@
 {
   "id": "course_230_la_liberte_de_la_presse_dans_le_monde",
   "title": "Press freedom around the world",
-  "subtitle": "A law under pressure",
+  "subtitle": "A right under pressure",
   "subject": "comprendreLeMonde",
   "subcategory": "Environment & the future",
-  "description": "Less than **10% of the world's population** lives in a country where the press is truly free. Between state censorship and economic pressure, this essential right is in decline almost everywhere.",
+  "description": "Fewer than **10% of the world's people** live in a country with a truly free press. Between state censorship and economic pressure, this essential right is retreating almost everywhere.",
   "hero": {
     "image": "la_liberte_de_la_presse_dans_le_monde",
     "ratio": "16:9",
-    "hook": "Informing sometimes costs freedom, or even life: a journey to the heart of a fragile right."
+    "hook": "Reporting the news can cost you your freedom, or your life: a journey into a fragile right."
   },
   "sections": [
     {
@@ -18,55 +18,55 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**freedom of the press** is one of the best indicators of the democratic health of a country. It is not limited to the right to publish: it includes the ability of citizens to access verified information independent of the powers in place. Throughout the world, this right is under double pressure: direct repression in authoritarian regimes, and a more discreet weakening in democracies themselves."
+          "text": "**Press freedom** is one of the best indicators of a country's democratic health. It is not only the right to publish: it includes the ability of citizens to reach information that has been checked and is independent of those in power. Around the world, the right faces pressure from two sides: direct repression in authoritarian regimes, and a quieter erosion inside democracies themselves."
         }
       ]
     },
     {
       "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p1",
-      "title": "An increasingly dangerous profession",
+      "title": "A job that keeps getting more dangerous",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Each year, the [[Reporters Without Borders (RSF)]] organization publishes a reference report on the obstacles to the profession of journalism around the world."
+          "text": "Every year the organization [[Reporters Without Borders (RSF)]] publishes a benchmark report on the obstacles journalists face around the world."
         },
         {
           "type": "image",
           "asset": "press_freedom_world_map_RSF_index",
           "ratio": "16:9",
-          "caption": "Less than 10% of the world's population lives in a country where the press is truly free."
+          "caption": "Fewer than 10% of the world's people live in a country with a truly free press"
         },
         {
           "type": "paragraph",
-          "text": "The 2024 data is alarming: less than **10%** of the world's population lives in an area where the press works without hindrance. While countries like Norway maintain high standards, large regions like China, Russia and Iran consider investigative journalism to be a form of betrayal."
+          "text": "The 2024 data is alarming: fewer than **10%** of the world's people live where the press can work without hindrance. Countries like Norway keep high standards, but vast regions such as China, Russia and Iran treat investigative journalism as a form of treason."
         },
         {
           "type": "funFact",
-          "text": "In Turkmenistan, the state controls information so strictly that it banned the word “coronavirus” in the media at the start of the 2020 pandemic."
+          "text": "In Turkmenistan, the state controls information so tightly that it banned the word “coronavirus” from the media at the start of the 2020 pandemic."
         },
         {
           "type": "paragraph",
-          "text": "In 2023, at least 79 journalists have lost their lives in the exercise of their profession, often targeted to silence embarrassing investigations. Nearly 600 journalists are imprisoned each year around the world."
+          "text": "In 2023, at least 79 journalists lost their lives doing their job, often targeted to silence an inconvenient investigation. Close to 600 journalists are held in prison each year around the world."
         }
       ]
     },
     {
       "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p2",
-      "title": "Democracies are not immune",
+      "title": "Democracies are not safe either",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Contrary to popular belief, press freedom is not guaranteed forever in Western countries. It underwent more discreet transformations there, linked to the [[media concentration]] and the financial influence of a few large groups."
+          "text": "Contrary to a common belief, press freedom is not won forever in Western countries. There it goes through quieter changes, tied to [[media concentration]] and to the financial influence of a few large groups."
         },
         {
           "type": "paragraph",
-          "text": "In Hungary,  implemented an effective strategy: rather than banning opposition media, he favored their takeover by those close to the government, gradually transforming the media landscape into an official echo chamber. [[Viktor Orbán]]"
+          "text": "In Hungary, [[Viktor Orbán]] built an effective strategy: instead of banning opposition outlets, he encouraged their purchase by allies of the government, slowly turning the media landscape into an official echo chamber."
         },
         {
           "type": "paragraph",
-          "text": "In France, the debate mainly concerns the concentration of the media in the hands of a few large groups, which raises fears of self-censorship by the editorial staff. Elsewhere, abusive legal proceedings, called , are increasing to intimidate critical voices. [[SLAPP]]"
+          "text": "In France, the debate is mostly about a handful of big groups owning the media, which raises the fear that newsrooms will censor themselves. Elsewhere, abusive lawsuits known as [[SLAPP]] are multiplying to intimidate critical voices."
         }
       ]
     },
@@ -77,44 +77,44 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Beyond political threats, journalism is facing a deep economic crisis. The historical model, based on individual sales and advertising, has collapsed with digital technology, with the large platforms now capturing the majority of online advertising."
+          "text": "Beyond political threats, journalism faces a deep economic crisis. The old model, built on single-copy sales and advertising, collapsed with the digital shift, as the big platforms captured most online advertising."
         },
         {
           "type": "image",
           "asset": "newspaper_crisis_digital_transformation_journalism",
           "ratio": "4:3",
-          "caption": "The historical economic model of the press has collapsed with digital technology."
+          "caption": "The historic business model of the press collapsed with the digital shift"
         },
         {
           "type": "paragraph",
-          "text": "This drop in resources is causing many local newspapers to close, creating “information deserts” where no one is monitoring the action of local elected officials. Faced with this, new models are emerging, financed by donations or direct subscriptions, such as Mediapart in France or ProPublica in the United States, which prove that independent journalism can also be profitable."
+          "text": "That loss of revenue is closing local papers and creating “news deserts” where nobody watches what elected officials do. New models are emerging in response, funded by donations or direct subscriptions, like Mediapart in France and ProPublica in the United States, which prove that independent journalism can also pay for itself."
         },
         {
           "type": "funFact",
-          "text": "The first printed newspaper in history, the “Relation”, was launched in Strasbourg in 1605 by Johann Carolus, well before the legal invention of freedom of the press."
+          "text": "The first printed newspaper in history, the “Relation,” was launched in Strasbourg in 1605 by Johann Carolus, long before press freedom existed in law."
         }
       ]
     },
     {
       "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p4",
-      "title": "Checking reality in a world saturated with images",
+      "title": "Checking reality in a world flooded with images",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "The digital age has made information faster, but it has also opened the door to . Social media algorithms favor emotional content over factual analysis, fragmenting our shared view of the world. [[disinformation]]"
+          "text": "The digital age made information faster, but it also opened the door to [[disinformation]]. Social media algorithms favor emotional content over factual analysis, breaking up our shared picture of the world."
         },
         {
           "type": "paragraph",
-          "text": "The role of the journalist is therefore evolving towards that of a “checker” of reality, in a permanent flow of images and data. Ethical questions become more complex, as in photojournalism in conflict zones, where respect for human dignity sometimes clashes with the need to show."
+          "text": "So the journalist's role is shifting toward that of a “verifier” of reality, inside a permanent flow of images and data. The ethical questions get harder, as in photojournalism in a war zone, where respect for human dignity sometimes collides with the need to show what happened."
         },
         {
           "type": "paragraph",
-          "text": "Defending press freedom therefore requires better regulation of major digital platforms and strengthened media education. Without a free press capable of verifying facts, democratic debate risks dissolving in a world where all opinions are equal, regardless of their veracity."
+          "text": "Defending press freedom therefore means better regulation of the big digital platforms and stronger media education. Without a free press able to check the facts, democratic debate risks dissolving into a world where every opinion counts the same, however untrue."
         },
         {
           "type": "takeaway",
-          "text": "Less than 10% of the world's population lives in a country where the press is truly free. Between direct repression, economic pressures and digital disinformation, this essential right to democracy is in decline almost everywhere."
+          "text": "Fewer than 10% of the world's people live in a country with a truly free press. Between direct repression, economic pressure and digital disinformation, a right that democracy depends on is retreating almost everywhere."
         }
       ]
     }

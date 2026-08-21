@@ -1,14 +1,14 @@
 {
   "id": "course_63_comment_se_forment_les_tremblements_de_t",
-  "title": "How are earthquakes formed?",
+  "title": "How do earthquakes happen?",
   "subtitle": "Faults & waves",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "Every year, the Earth experiences hundreds of thousands of earthquakes. Most are invisible. A few change entire cities.",
+  "description": "Every year the Earth records hundreds of thousands of earthquakes. Most go unnoticed. A few change whole cities.",
   "hero": {
     "image": "comment_se_forment_les_tremblements_de_terre",
     "ratio": "16:9",
-    "hook": "An earthquake is not a whim of the ground. This is an energy that has waited too long."
+    "hook": "An earthquake is not a whim of the ground. It is energy that has waited far too long."
   },
   "sections": [
     {
@@ -18,97 +18,97 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Each year, the Earth records approximately **500,000 detectable earthquakes**. Only a small part causes big damage. An earthquake is not a coincidence: it is the sudden end of a long accumulation of energy in the rocks."
+          "text": "Every year the Earth records about **500,000 earthquakes** that instruments can detect. Only a small share cause serious damage. A quake is not random: it is the sudden end of a long build-up of energy inside the rock."
         },
         {
           "type": "paragraph",
-          "text": "To understand this, we must see the surface of the planet as a puzzle of moving plates. Where these plates rub together, tension builds…until it breaks."
+          "text": "To understand it, picture the surface of the planet as a jigsaw of moving plates. Where those plates rub against each other, the strain rises, until something snaps."
         }
       ]
     },
     {
       "id": "course_63_comment_se_forment_les_tremblements_de_t_p1",
-      "title": "Plates that constantly move",
+      "title": "Plates that never stop moving",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "The earth's surface is divided into around ten large **tectonic plates**. They slide on a softer layer of the coat, the . Their speed? About **1 to 10 cm per year**, about the same as the growth of a fingernail. [[Asthenosphere]]"
+          "text": "The Earth's surface is cut into about a dozen large **tectonic plates**. They slide on a softer layer of the mantle, the [[asthenosphere]]. How fast? Roughly **1 to 10 cm a year**, about the speed a fingernail grows."
         },
         {
           "type": "image",
           "asset": "earthquake_collapsed_buildings_urban",
           "ratio": "auto",
-          "caption": "Earthquakes suddenly release the energy accumulated along faults."
+          "caption": "Earthquakes release in one go the energy stored along a fault"
         },
         {
           "type": "paragraph",
-          "text": "At the borders, three scenarios dominate. The plates are moving apart (oceanic ridges). They collide: sometimes one dives under the other, it's . Or they slide side by side, like along the [[Subduction]] in California, approximately **1 300 km** long. [[The San Andreas Fault]]"
+          "text": "At the boundaries, three situations dominate. The plates pull apart, as at the ocean ridges. They collide, and [[Subduction]] is what happens when one dives beneath the other. Or they slide side by side, as along the [[San Andreas Fault]] in California, about **1,300 km** long."
         },
         {
           "type": "funFact",
-          "text": "Along the San Andreas, Los Angeles gets closer to San Francisco by about **6 cm** per year. In **15 million years**, the two cities would be neighbors."
+          "text": "Along the San Andreas, Los Angeles is moving toward San Francisco by about **6 cm** a year. In **15 million years** the two cities would be neighbors."
         },
         {
           "type": "paragraph",
-          "text": "It is especially at these borders that earthquakes occur. The movement of the plates is hindered by the friction of the rocks. Energy accumulates silently."
+          "text": "It is mainly at these boundaries that earthquakes are born. Friction between rocks blocks the movement of the plates. The energy builds up in silence."
         }
       ]
     },
     {
       "id": "course_63_comment_se_forment_les_tremblements_de_t_p2",
-      "title": "When the fault lets go",
+      "title": "When the fault gives way",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "An earthquake occurs along a **fault**: a fracture between two blocks of rock. In theory, the plates should slide continuously. In practice, friction often blocks this sliding."
+          "text": "An earthquake happens along a **fault**: a fracture between two blocks of rock. In theory the plates should slide without ever stopping. In practice, friction often locks that sliding."
         },
         {
           "type": "paragraph",
-          "text": "During this time, the plaques continue to grow. The rock deforms a little, like a bow being drawn. We speak of elastic constraints. This can last decades, sometimes centuries."
+          "text": "Meanwhile the plates keep pushing. The rock deforms a little, like a bow being drawn. This is called elastic strain. It can last for decades, sometimes for centuries."
         },
         {
           "type": "paragraph",
-          "text": "When the resistance limit is exceeded, the blocks suddenly slide. The energy leaves in the form of **eismic waves**. The depth break point is called the **focus**. On the surface, the point just above is the **epicenter**, where the effects are often strongest."
+          "text": "When the limit of resistance is passed, the blocks slip all at once. The energy leaves as **seismic waves**. The point where the rock breaks, deep down, is the **focus**. At the surface, the point directly above it is the **epicenter**, where the effects are often strongest."
         }
       ]
     },
     {
       "id": "course_63_comment_se_forment_les_tremblements_de_t_p3",
-      "title": "Measuring power, fearing the tsunami",
+      "title": "Measuring the power, fearing the tsunami",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "To measure the energy of an earthquake, seismologists mainly use the moment . It's a logarithmic scale: each degree multiplies the energy by approximately **32**. An earthquake of magnitude **8** therefore releases approximately **1,000 times** more energy than an earthquake of magnitude **6**. [[The magnitude scale (Richter/Moment)]]"
+          "text": "To measure the energy of an earthquake, seismologists mostly use the moment [[magnitude scale]]. It is logarithmic: each degree multiplies the energy by about **32**. So a magnitude **8** earthquake releases about **1,000 times** more energy than a magnitude **6** one."
         },
         {
           "type": "funFact",
-          "text": "There are also earthquakes of **0** or negative magnitude. These are very small events, visible only with very sensitive sensors."
+          "text": "There are also earthquakes of magnitude **0** or below. These are tiny events, visible only to very sensitive instruments."
         },
         {
           "type": "paragraph",
-          "text": "The strongest ever measured with modern instruments is that of **Valdivia**, in Chile, in **1960**: magnitude **9.5**. If the focus is under the ocean and raises the seafloor, the displaced water column can create a **tsunami**. In **2004**, an earthquake of magnitude **9.1** near Sumatra triggered a tsunami that struck 14 countries and claimed approximately **227,000** lives."
+          "text": "The strongest ever measured with modern instruments struck **Valdivia**, in Chile, in **1960**: magnitude **9.5**. If the focus lies under the ocean and lifts the seafloor, the displaced column of water can create a **tsunami**. In **2004**, a magnitude **9.1** earthquake near Sumatra set off a tsunami that hit 14 countries and killed about **227,000** people."
         }
       ]
     },
     {
       "id": "course_63_comment_se_forment_les_tremblements_de_t_p4",
-      "title": "Waves, alert and buildings that resist",
+      "title": "Waves, warnings, and buildings that hold",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "After the breakup, several types of waves leave. The **P waves** (primary) arrive first: they compress the rock like an accordion. Then come the **ZZ** (secondary) waves, slower and often more destructive. The surface waves then cause the ground to oscillate very visibly."
+          "text": "After the break, several kinds of waves set off. The **P waves** (primary) arrive first: they squeeze the rock like an accordion. Then come the **S waves** (secondary), slower and often more destructive. Surface waves follow and make the ground roll in a very visible way."
         },
         {
           "type": "paragraph",
-          "text": "We do not yet know how to predict the exact day of a major earthquake. On the other hand, we map the risk areas.  designs buildings capable of withstanding shocks: mobile foundations, giant shock absorbers, structures that absorb energy. In Japan, early warnings detect P waves and can cut off gas or slow trains before the most dangerous waves arrive. [[Seismic engineering]]"
+          "text": "We still cannot predict the exact day of a big earthquake. We can, however, map the areas at risk. [[Earthquake engineering]] designs buildings that can take the shaking: sliding foundations, giant dampers, structures that soak up the energy. In Japan, early warning systems detect the P waves and can shut off the gas or slow the trains before the most dangerous waves arrive."
         },
         {
           "type": "takeaway",
-          "text": "An earthquake occurs when rocks stuck along a fault suddenly release decades of tension. Energy travels in waves, and each degree of magnitude multiplies that energy by approximately **32**."
+          "text": "An earthquake is born when rocks locked along a fault release decades of strain in a single moment. The energy travels as waves, and each degree of magnitude multiplies that energy by about **32**."
         }
       ]
     }

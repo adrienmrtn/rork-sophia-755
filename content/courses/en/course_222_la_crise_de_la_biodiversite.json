@@ -1,14 +1,14 @@
 {
   "id": "course_222_la_crise_de_la_biodiversite",
   "title": "The biodiversity crisis",
-  "subtitle": "The 6th extinction",
+  "subtitle": "The sixth extinction",
   "subject": "comprendreLeMonde",
   "subcategory": "Environment & the future",
-  "description": "Wildlife populations have fallen by **69% since 1970**. We are experiencing the sixth mass extinction in Earth's history, the first caused by a single species: us.",
+  "description": "Wild animal populations have fallen by **69% since 1970**. We are living through the sixth mass extinction in the Earth's history, and the first one caused by a single species: us.",
   "hero": {
     "image": "la_crise_de_la_biodiversite",
     "ratio": "16:9",
-    "hook": "No asteroid, no volcano: this time, the mass extinction has a human face."
+    "hook": "No asteroid, no volcano: this time the mass extinction has a human face."
   },
   "sections": [
     {
@@ -18,65 +18,65 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "The Earth has already experienced five major mass extinctions, caused by asteroids or giant volcanic eruptions. Today, a sixth is underway, but for the first time, it has no natural cause."
+          "text": "The Earth has already been through five great mass extinctions, set off by asteroids or giant volcanic eruptions. A sixth is under way now, but for the first time it has no natural cause."
         },
         {
           "type": "paragraph",
-          "text": "Species are disappearing today **100 to 1,000 times faster** than the natural rate, and the culprit is a single species: ours. This course explains the scale of the problem, its causes, and why it directly concerns us."
+          "text": "Species are disappearing **100 to 1,000 times faster** than the natural rate, and the culprit is a single species: ours. This course explains the scale of the problem, its causes, and why it concerns us directly."
         }
       ]
     },
     {
       "id": "course_222_la_crise_de_la_biodiversite_p1",
-      "title": "A measured collapse, figure by figure",
+      "title": "A collapse measured, figure by figure",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "To track the state of nature, scientists use the **Living Planet Index**, published annually by the [[WWF]] organization. The observation for 2022 is stark: between 1970 and 2018, populations of wild animals (mammals, birds, fish, reptiles, amphibians) fell on average by **69%** worldwide."
+          "text": "To track the state of nature, scientists use the **Living Planet Index**, published each year by [[WWF]]. The 2022 edition is brutal: between 1970 and 2018, populations of wild animals (mammals, birds, fish, reptiles, amphibians) fell by an average of **69%** worldwide."
         },
         {
           "type": "paragraph",
-          "text": "This decline mainly affects tropical regions, where the most species live. In Latin America, it reaches 94%. This does not mean that 94% of species have disappeared, but that their populations have declined, which makes them very fragile in the face of total extinction."
+          "text": "The decline hits tropical regions hardest, where the most species live. In Latin America it reaches 94%. That does not mean 94% of species have vanished, but that their populations have shrunk, which leaves them very exposed to complete extinction."
         },
         {
           "type": "image",
           "asset": "amazon_deforestation_rainforest_aerial",
           "ratio": "16:9",
-          "caption": "Deforestation in the Amazon is destroying one of the richest reservoirs of life on the planet."
+          "caption": "Deforestation in the Amazon destroys one of the richest reservoirs of life on the planet"
         },
         {
           "type": "funFact",
-          "text": "If Earth's history lasted 24 hours, humans would have appeared at 11:58 p.m. It only took them two seconds to trigger a mass extinction."
+          "text": "If the history of the Earth lasted 24 hours, humans would have appeared at 11:58 p.m. Two seconds were enough for them to set off a mass extinction."
         },
         {
           "type": "paragraph",
-          "text": "According to , around a million animal and plant species are now threatened with extinction, sometimes in the coming decades. [[IPBES]]"
+          "text": "According to [[IPBES]], about one million animal and plant species are now threatened with extinction, some of them within the coming decades."
         }
       ]
     },
     {
       "id": "course_222_la_crise_de_la_biodiversite_p2",
-      "title": "Five causes, one origin",
+      "title": "Five causes, one single origin",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "This disaster is not a coincidence: it comes directly from our way of producing and consuming. Scientists identify five main causes. The first and most destructive is the change in land use: deforestation for livestock farming, urbanization, intensive agriculture which cuts up natural habitats into small pieces that are too isolated to survive."
+          "text": "This disaster is no accident. It comes straight from the way we produce and consume. Scientists identify five main causes. The first and most destructive is land use change: forests cleared for livestock, cities spreading, intensive farming that cuts natural habitats into fragments too small and too isolated to survive."
         },
         {
           "type": "paragraph",
-          "text": "Then comes overexploitation (overfishing, illegal hunting) and pollution: pesticides, fertilizers which create dead zones in the oceans, microplastics which are found throughout the food chain."
+          "text": "Next come overexploitation (overfishing, illegal hunting) and pollution: pesticides, fertilizers that create dead zones in the oceans, microplastics that end up all along the food chain."
         },
         {
           "type": "image",
           "asset": "plastic_pollution_ocean_wildlife",
           "ratio": "4:3",
-          "caption": "Microplastics now contaminate every level of the marine food chain."
+          "caption": "Microplastics now contaminate every level of the marine food chain"
         },
         {
           "type": "paragraph",
-          "text": "The last two drivers are species from elsewhere, often mistakenly transported by global trade, which take the place of local species, and climate change, which is changing temperatures faster than species can adapt."
+          "text": "The last two drivers are species from elsewhere, often carried in by mistake through global trade, which push local species out, and climate change, which shifts temperatures faster than species can adapt."
         }
       ]
     },
@@ -87,44 +87,44 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Biodiversity is not just a question of aesthetics. Nature gives us essential s, often invisible because they are free. The [[Ecosystem services]] report points out something too often forgotten: our economy depends on nature, not the other way around. [[Dasgupta Review]]"
+          "text": "Biodiversity is not just a matter of beauty. Nature provides essential [[ecosystem services]], invisible most of the time because they cost nothing. The [[Dasgupta Review]] restates something obvious that is too often forgotten: our economy depends on nature, not the other way around."
         },
         {
           "type": "image",
           "asset": "bee_flower_pollination_agriculture",
           "ratio": "4:3",
-          "caption": "About 75% of the world's food crops depend on pollinating insects."
+          "caption": "About 75% of the world's food crops depend on pollinating insects"
         },
         {
           "type": "paragraph",
-          "text": "A concrete example: around 75% of the world's food crops depend on insects to be pollinated. Nature is also our greatest pharmacy, since 25% of modern medicines come from molecules found in plants. It also regulates water, forms fertile soils and absorbs part of the excess CO₂."
+          "text": "One concrete example: about 75% of food crops worldwide depend on insects for pollination. Nature is also our largest pharmacy, since 25% of modern medicines come from molecules found in plants. It regulates water, builds fertile soil and absorbs part of the excess CO₂."
         },
         {
           "type": "paragraph",
-          "text": "By destroying biodiversity, we are therefore destroying the natural capital that supports our own economic and food life, by consuming the planet's resources much faster than they are renewed."
+          "text": "By destroying biodiversity, we destroy the natural capital that supports our own economy and our own food supply, consuming the planet's resources far faster than they renew themselves."
         }
       ]
     },
     {
       "id": "course_222_la_crise_de_la_biodiversite_p4",
-      "title": "Limits not to be crossed, a chance to bounce back",
+      "title": "Limits not to cross, and a chance to bounce back",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Biodiversity is one of the nine that must not be exceeded to keep the Earth habitable, and this threshold has already been crossed. The real danger is the [[planetary boundaries]]: thresholds where an ecosystem collapses suddenly and in a way that is almost impossible to reverse, like an Amazonian forest transforming into a savannah. [[Ecological tipping points]]"
+          "text": "Biodiversity is one of the nine [[planetary boundaries]] that must not be crossed if the Earth is to stay livable, and this one has already been crossed. The real danger lies in [[ecological tipping points]], thresholds where an ecosystem collapses suddenly and almost irreversibly, as when an Amazon forest turns into savanna."
         },
         {
           "type": "paragraph",
-          "text": "However, solutions exist. At the [[COP15]] in Montreal in 2022, the world's countries set the goal of protecting 30% of land and seas by 2030. This involves transforming agriculture, restoring wetlands and leaving corridors for species to circulate."
+          "text": "Solutions do exist. At [[COP15]] in Montreal in 2022, countries set themselves the target of protecting 30% of land and seas by 2030. That means transforming farming, restoring wetlands and leaving corridors so species can move."
         },
         {
           "type": "paragraph",
-          "text": "Nature has a great capacity for  if we give it space and time. Protecting a forest means protecting millions of species while maintaining an essential carbon sink against global warming. [[resilience]]"
+          "text": "Nature has a great capacity for [[resilience]] if we leave it space and time. Protecting a forest protects millions of species while keeping a carbon sink that matters against global warming."
         },
         {
           "type": "takeaway",
-          "text": "Wild animal populations fell by 69% between 1970 and 2018: this is the 6th mass extinction, the first caused by a single species, which calls into question the vital services that nature provides us free of charge."
+          "text": "Wild animal populations fell by 69% between 1970 and 2018. This is the sixth mass extinction, the first caused by a single species, and it puts at risk the vital services nature provides us for free."
         }
       ]
     }

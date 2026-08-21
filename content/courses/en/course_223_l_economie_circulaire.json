@@ -1,14 +1,14 @@
 {
   "id": "course_223_l_economie_circulaire",
   "title": "The circular economy",
-  "subtitle": "Getting away from everything disposable",
+  "subtitle": "Beyond the throwaway world",
   "subject": "comprendreLeMonde",
   "subcategory": "Environment & the future",
-  "description": "**Extract, manufacture, throw away**: this model is depleting the planet. The circular economy proposes the opposite: keeping objects and materials in circulation as long as possible.",
+  "description": "**Take, make, throw away**: that model is draining the planet. The circular economy proposes the opposite, keeping objects and materials in use for as long as possible.",
   "hero": {
     "image": "l_economie_circulaire",
     "ratio": "16:9",
-    "hook": "What if waste didn't exist? It is the bet of an economic model inspired by nature."
+    "hook": "What if waste simply did not exist? That is the bet of an economic model copied from nature."
   },
   "sections": [
     {
@@ -18,40 +18,40 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Since the industrial revolution, our economy has worked in one direction: we extract resources, we manufacture objects, then we throw them away. This model assumes that resources are infinite. They are not."
+          "text": "Since the industrial revolution, our economy has run in one direction: we extract resources, we make objects, then we throw them away. The model assumes that resources are infinite. They are not."
         },
         {
           "type": "paragraph",
-          "text": "The **circular economy** offers another logic, inspired by nature, where nothing is really lost. It aims to keep the value of products and materials in circulation for as long as possible, instead of transforming them into waste."
+          "text": "The **circular economy** offers another logic, borrowed from nature, where nothing is truly lost. It aims to keep the value of products and materials in circulation as long as possible instead of turning them into waste."
         }
       ]
     },
     {
       "id": "course_223_l_economie_circulaire_p1",
-      "title": "The linear model reaches its limits",
+      "title": "The linear model hits its limits",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "The modern economy was built on a model called **linear**: extract, manufacture, throw away. We take raw materials from nature, we make products from them, and once worn out or out of fashion, these products become waste."
+          "text": "The modern economy was built on what is called a **linear** model: take, make, throw away. We pull raw materials out of nature, turn them into products, and once those products are worn out or out of fashion, they become waste."
         },
         {
           "type": "image",
           "asset": "landfill_waste_garbage_linear_economy",
           "ratio": "16:9",
-          "caption": "The “take, make, throw away” model assumes infinite resources."
+          "caption": "The “take, make, throw away” model assumes infinite resources"
         },
         {
           "type": "paragraph",
-          "text": "This system is based on the idea that resources are unlimited, and that nature can absorb all pollution. But today, the global economy consumes the equivalent of 1.7 planets in resources each year. Certain metals essential to digital technologies, such as , could become difficult to find as early as 2040. [[Lithium]]"
+          "text": "The system rests on the idea that resources are unlimited and that nature can absorb all the pollution. Yet the world economy now uses the resources of 1.7 planets every year. Some metals that digital technology cannot do without, such as [[Lithium]], could become hard to find as early as 2040."
         },
         {
           "type": "funFact",
-          "text": "Only 9% of all plastic ever produced by humanity has been recycled. The rest ends up in nature or in landfill, where it can remain for 450 years."
+          "text": "Only 9% of all the plastic humanity has ever produced has been recycled. The rest ends up in nature or in landfill, where it can stay for 450 years."
         },
         {
           "type": "paragraph",
-          "text": "The cost of cleaning and waste management is almost never included in the selling price of a product. It's a hidden cost, paid later by everyone."
+          "text": "The cost of cleaning up and managing waste is almost never included in the sale price of a product. It is a hidden cost, paid later by everyone."
         }
       ]
     },
@@ -62,69 +62,69 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "The circular economy offers several loops, and always in the same order of priority: the shortest loop is better, because it wastes less energy and material. It all starts with **eco-design**, that is to say thinking about the environmental impact of a product from its creation, by choosing materials that are durable and easy to dismantle."
+          "text": "The circular economy offers several loops, always in the same order of priority: the shortest loop is the best, because it wastes less energy and less material. Everything starts with **eco-design**, which means thinking about a product's environmental impact from the moment it is drawn, choosing durable materials that are easy to take apart."
         },
         {
           "type": "paragraph",
-          "text": "Then comes **reuse** (an object changes ownership without being transformed, as on a second-hand market), then **repair**, which extends the life of a product. These steps directly combat , this practice which deliberately reduces the lifespan of an object. [[Planned obsolescence]]"
+          "text": "Then comes **reuse** (an object changes owner without being transformed, as on a secondhand market), then **repair**, which extends a product's life. These steps fight directly against [[Planned obsolescence]], the practice of deliberately shortening the life of an object."
         },
         {
           "type": "image",
           "asset": "recycling_sorting_waste_materials",
           "ratio": "4:3",
-          "caption": "Recycling comes as a last resort, after reuse and repair."
+          "caption": "Recycling comes last, after reuse and repair"
         },
         {
           "type": "paragraph",
-          "text": "**recycling** only occurs as a last resort. It remains useful: recycling aluminum consumes 95% less energy than extracting it from raw ore, . But it's still less efficient than simply reusing an object. [[Bauxite]]"
+          "text": "**Recycling** comes only as a last resort. It still helps: recycling aluminum uses 95% less energy than extracting it from the raw ore, [[Bauxite]]. But it is always less efficient than simply reusing an object."
         }
       ]
     },
     {
       "id": "course_223_l_economie_circulaire_p3",
-      "title": "Why is it still difficult today",
+      "title": "Why it is still hard today",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Despite all its interest, the circular economy faces a simple problem: the linear model often remains **less expensive in the short term**. Extracting new material sometimes costs less than sorting and recycling complex waste, especially when the raw materials are cheap."
+          "text": "For all its promise, the circular economy runs into a simple problem: the linear model is often **cheaper in the short term**. Extracting new material sometimes costs less than sorting and recycling a complex piece of waste, especially when raw materials are cheap."
         },
         {
           "type": "image",
           "asset": "repair_right_electronics_reuse",
           "ratio": "4:3",
-          "caption": "The “right to repair” requires manufacturers to provide spare parts."
+          "caption": "The “right to repair” forces manufacturers to supply spare parts"
         },
         {
           "type": "paragraph",
-          "text": "Faced with this, public authorities are increasingly intervening. The European Union launched a plan in 2020 that imposes stricter sustainability rules. One of the major axes is the “right to repair”, which obliges manufacturers of electronic devices to provide spare parts for several years."
+          "text": "Governments are stepping in more and more. In 2020 the European Union launched a plan that imposes stricter durability rules. One of its main pillars is the “right to repair,” which obliges makers of electronic devices to supply spare parts for several years."
         },
         {
           "type": "paragraph",
-          "text": "Another lever: the [[Extended Producer Responsibility]], which makes manufacturers pay for the waste management of their products. This gives them a financial incentive to design objects that are less polluting and easier to repair."
+          "text": "Another lever is [[Extended Producer Responsibility]], which makes manufacturers pay for the waste their products create. That gives them a financial reason to design objects that pollute less and are easier to repair."
         }
       ]
     },
     {
       "id": "course_223_l_economie_circulaire_p4",
-      "title": "Towards a resource society",
+      "title": "Toward a society of resources",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "The circular economy is not just a question of recycling: it is a project for a more sober and more resilient society. By depending less on imported raw materials, a country also gains security in a more unstable world."
+          "text": "The circular economy is not only about recycling. It is a project for a society that consumes less and holds up better. By depending less on imported raw materials, a country also gains security in a more unstable world."
         },
         {
           "type": "paragraph",
-          "text": "The success of this transformation also depends on us, as consumers. The 3R rule, reduce, reuse, recycle, starts with the first step: reduce, that is, ask yourself if the purchase is really necessary. It is this first action that has the greatest effect on the climate."
+          "text": "The success of this shift also depends on us, as consumers. The rule of the three Rs, reduce, reuse, recycle, starts with the first step: reduce, which means asking whether a purchase is really needed. That first move is the one with the biggest effect on the climate."
         },
         {
           "type": "funFact",
-          "text": "Today there is more gold in a ton of old smartphone electronic boards than in a ton of ore extracted from a traditional gold mine."
+          "text": "There is more gold in a ton of old smartphone circuit boards today than in a ton of ore dug out of a conventional gold mine."
         },
         {
           "type": "takeaway",
-          "text": "The circular economy aims to break the “extract, make, throw away” cycle by keeping resources in circulation through eco-design, repair and recycling, to respect the physical limits of our planet."
+          "text": "The circular economy aims to break the “take, make, throw away” cycle by keeping resources in circulation through eco-design, repair and recycling, so that we live within the physical limits of our planet."
         }
       ]
     }

@@ -162,6 +162,36 @@ Un fichier JSON par cours : `content/courses/fr/<course_id>.json`.
 
 ---
 
+## 8. Traductions
+
+Le FR est la source. Chaque langue a son édition, écrite d'après le FR et non
+transcrite mot à mot. La spécification est `content/TRANSLATION_GUIDE_EN.md`
+(rédigée pour l'anglais ; seules les sections nombres, guillemets et noms
+propres changent d'une langue à l'autre).
+
+Chaîne d'outils, dans l'ordre :
+
+1. `scripts/make_translation_briefs.py --lang <lg>` : un brief par cours,
+   contenant les segments FR adressés par clé stable et les seules clés de
+   glossaire que la langue enregistre pour ce cours.
+2. Rédaction de l'édition : une valeur par clé de segment.
+3. `scripts/apply_translation_briefs.py --lang <lg> --from <dir>` : reconstruit
+   le cours en clonant le squelette FR, donc ids, types de blocs, assets et
+   flags freemium ne peuvent pas dériver.
+4. `scripts/check_course_translation.py --lang <lg>` : doit afficher `Clean.`
+   Le passage est bloquant.
+5. `scripts/sync_locale_catalog_titles.py --lang <lg>` : réaligne titres,
+   descriptions et titres de leçons du catalogue legacy (les cartes de la home)
+   sur le contenu structuré.
+6. `scripts/build_courses.py` : écrit les ressources bundlées.
+
+`scripts/translate_courses_v2.py` reste utile pour produire un brouillon, mais
+sa sortie n'est pas livrable telle quelle : elle doit passer le validateur, et
+tout ce qu'il signale repasse par les étapes 1 à 4. Les noms propres que la
+traduction automatique déforme sont listés dans `scripts/proper_nouns.json`.
+
+---
+
 ## 7. Journal des itérations
 
 ### Itération 1 (retours sur le pilote)
