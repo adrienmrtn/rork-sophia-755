@@ -4,11 +4,11 @@
   "subtitle": "1920-1990",
   "subject": "art",
   "subcategory": "Music",
-  "description": "Od Thereminu po kluby v Chicagu a Detroitu, elektronická hudba vymýšlí zvuky bez orchestru a přetváří světový tanec.",
+  "description": "Od thereminu po kluby v Chicagu a Detroitu elektronická hudba vymýšlí zvuky bez orchestru a mění tanec na celé planetě.",
   "hero": {
     "image": "la_naissance_de_la_musique_electronique",
     "ratio": "16:9",
-    "hook": "Od laboratoří po taneční parkety: jak stroje vynalezly novou hudbu."
+    "hook": "Z laboratoří na taneční parket: jak stroje vymyslely novou hudbu."
   },
   "sections": [
     {
@@ -18,67 +18,67 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Elektronická hudba nezačíná v nočních klubech. Rodí se v laboratořích, kdy vynálezci hledají zvuky, které nelze získat z houslí nebo klavíru."
+          "text": "Elektronická hudba nezačíná v nočním klubu. Rodí se v laboratořích, když vynálezci hledají zvuky, které z houslí ani z klavíru nedostanete."
         },
         {
           "type": "paragraph",
-          "text": "Od [[Theremin]] z 20. let po [[Dům v Chicagu]] a [[Detroitské techno]] jedna myšlenka překračuje století: stroj umí tvořit, nejen nahrávat. Dnes strukturuje velkou část světového popu a [[grafy]]."
+          "text": "Od nástroje [[Theremin]] ve 20. letech přes žánr [[Dům v Chicagu]] až k [[Detroitské techno]] jde stoletím jedna myšlenka: stroj umí tvořit, nejen nahrávat. Dnes strukturuje velkou část světového popu i [[grafy]]."
         }
       ]
     },
     {
       "id": "course_131_la_naissance_de_la_musique_electronique_p1",
-      "title": "Průkopníci: od Thereminu po muziku beton",
+      "title": "Průkopníci: od thereminu ke konkrétní hudbě",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V **1920** navrhl ruský vynálezce **Leon Theremin** (Lev Termen) [[Theremin]]: zařízení hrané bez kontaktu. Ruce se pohybují v blízkosti antén v elektromagnetickém poli. Zvuk klouže, téměř vokálně, a brzy pronásleduje sci-fi filmy."
+          "text": "V **1920** ruský vynálezce **Leon Theremin** (Lev Termen) sestrojí [[Theremin]]: přístroj, na který se hraje bez dotyku. Ruce se pohybují u antén v elektromagnetickém poli. Zvuk klouže, skoro jako hlas, a brzy straší ve sci-fi filmech."
         },
         {
           "type": "image",
           "asset": "theremin_instrument_leon_theremin_1920",
           "ratio": "4:3",
-          "caption": "Theremin: nástroj hraný ve vzduchu, aniž by se dotýkal strun."
+          "caption": "Theremin: nástroj, na který se hraje ve vzduchu, bez strun"
         },
         {
           "type": "paragraph",
-          "text": "Po roce 1945 výzkum změnil terén. V Paříži ve veřejném rozhlase **Pierre Schaeffer** a **Petr Henry** vynalezli hudební beton: zaznamenávat každodenní zvuky, pak je stříhat, invertovat, smyčkovat je na magnetickou pásku. V Kolíně nad Rýnem jiná studia preferují čistou syntézu: zvuky zrozené z oscilátorů, bez akustického zdroje. Tyto dvě cesty stále stojí za současnou tvorbou: na jedné straně [[odběr vzorků]], na straně druhé syntéza."
+          "text": "Po roce 1945 se výzkum stěhuje. V Paříži, ve veřejném rozhlase, **Pierre Schaeffer** a **Pierre Henry** vymýšlejí konkrétní hudbu: nahrát ruchy všedního dne, pak je stříhat, otáčet a smyčkovat na magnetofonovém pásku. V Kolíně nad Rýnem jiné studio sází na čistou syntézu: zvuky z oscilátorů, bez akustického zdroje. Tyto dvě cesty pořád drží dnešní produkci: na jedné straně [[Odběr vzorků]], na druhé syntéza."
         },
         {
           "type": "funFact",
-          "text": "Theremin představil svůj nástroj Leninovi. Fascinovaný sovětský vůdce si údajně vyžádal stovky výtisků, aby šířil technickou modernost v SSSR."
+          "text": "Theremin předvedl nástroj Leninovi. Fascinovaný sovětský vůdce prý chtěl stovky kusů, aby v SSSR šířil technickou modernu."
         }
       ]
     },
     {
       "id": "course_131_la_naissance_de_la_musique_electronique_p2",
-      "title": "The Moog, Wendy Carlos a Kraftwerk",
+      "title": "Moog, Wendy Carlos a Kraftwerk",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V 60. letech minulého století americký inženýr **Robert Moog** miniaturizoval syntezátor pomocí tranzistorů. V **1968**, **Wendy Carlosová** album *Zapnutý Bach* dokazuje, že elektronika může nést klasickou složitost. Gadget se stává nástrojem."
+          "text": "V 60. letech americký inženýr **Robert Moog** zmenšil syntezátor pomocí tranzistorů. V **1968** album *Switched-On Bach* od **Wendy Carlos** ukázalo, že elektronika unese klasickou složitost. Z hračky se stal nástroj."
         },
         {
           "type": "image",
           "asset": "moog_synthesizer_robert_moog_1960s",
           "ratio": "4:3",
-          "caption": "Syntetizátor Moog: stroj odjíždí z laboratoře do studia."
+          "caption": "Syntezátor Moog: stroj opouští laboratoř a jde do studia"
         },
         {
           "type": "paragraph",
-          "text": "V Düsseldorfu německá skupina **Kraftwerk**, kterou založili **Ralf Hütter** a **Florian Schneider**, vnucuje chladný a repetitivní pop. Se *dálnice* (**1974**) a *Muž Stroj* (**1978**) zpívají o dálnici, robotu, městě. Jejich rytmus později živil americký hip-hop a evropskou taneční hudbu."
+          "text": "V Düsseldorfu německá skupina **Kraftwerk**, kterou založili **Ralf Hütter** a **Florian Schneider**, prosadila chladný a opakující se pop. Alby *Autobahn* (**1974**) a *The Man-Machine* (**1978**) zpívají o dálnici, robotovi a městě. Jejich rytmus později nakrmil americký hip-hop i evropskou taneční hudbu."
         },
         {
           "type": "image",
           "asset": "kraftwerk_band_dusseldorf_1970s",
           "ratio": "4:3",
-          "caption": "Kraftwerk: člověk-stroj jako umělecká osobnost."
+          "caption": "Kraftwerk: člověk-stroj jako umělecká maska"
         },
         {
           "type": "funFact",
-          "text": "Na určitých turné Kraftwerk posílali figuríny v jejich podobě na tiskové konference, čímž posunuli koncept člověk-stroj na hranici možností."
+          "text": "Na některých turné posílali Kraftwerk na tiskovky figuríny podle sebe a dotáhli tak myšlenku člověka-stroje až do konce."
         }
       ]
     },
@@ -89,26 +89,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V 80. letech změnily hru cenově dostupné stroje jako bicí automat **Roland TR-808**. V Chicagu, v klubech navštěvovaných černošskými a gay komunitami, DJ **Frankie Knuckles** vylepšuje [[Dům v Chicagu]]: pravidelný 4/4 rytmus, vřelost zděděná z diskotéky."
+          "text": "V 80. letech dostupné stroje jako rytmický automat **Roland TR-808** změnily pravidla. V Chicagu, v klubech černošských a gay komunit, DJ **Frankie Knuckles** brousil žánr [[Dům v Chicagu]]: pravidelný rytmus 4/4 a teplo zděděné z disca."
         },
         {
           "type": "paragraph",
-          "text": "V **Detroit**, městě poznamenaném úpadkem automobilových továren, vynalezli tři přátelé z univerzity (**Juan Atkins**, **Derrick May**, **Kevin Saunderson**) temnější estetiku: ZZZZZG0Zské techno.ZZZZG0Z Vyvezený do Evropy našel po pádu zdi silný ohlas v Berlíně. [[Detroitské techno]]"
+          "text": "V **Detroitu**, městě poznamenaném úpadkem automobilek, tři univerzitní přátelé (**Juan Atkins**, **Derrick May**, **Kevin Saunderson**) vymysleli temnější estetiku: [[Detroitské techno]]. V Evropě našlo silnou odezvu v Berlíně po pádu zdi."
         },
         {
           "type": "funFact",
-          "text": "TR-808 byl komerční neúspěch: profesionálové to považovali za „nerealistické“. Prodává se z druhé ruky a stává se zbraní chicagských mizerných DJs."
+          "text": "TR-808 byl obchodní propadák: profíci ho měli za „nerealistický”. Ve výprodeji z druhé ruky se stal zbraní chudých chicagských DJ."
         }
       ]
     },
     {
       "id": "course_131_la_naissance_de_la_musique_electronique_p4",
-      "title": "Počítač, studio každého",
+      "title": "Počítač, studio pro každého",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Od 90. let [[počítačový hudební software]] (computer-assisted music) proměnil jednoduché PC ve studio. Elektronika opouští klub pro reklamu, kino a téměř veškerý pop. [[Chicago house a detroitské techno]] zůstávají kořeny globálního jazyka."
+          "text": "Od 90. let [[DAW software]] (hudba s pomocí počítače) proměnil obyčejné PC ve studio. Elektronika opustila klub a šla do reklamy, filmu a skoro do celého popu. [[Chicago house a detroitské techno]] zůstávají kořeny světového jazyka."
         },
         {
           "type": "timeline",
@@ -116,28 +116,28 @@
             {
               "date": "1920",
               "title": "Theremin",
-              "detail": "Leon Theremin vynalezl nástroj, na který se hraje bez kontaktu."
+              "detail": "Leon Theremin vynalezl nástroj, na který se hraje bez dotyku."
             },
             {
               "date": "1948-1950",
               "title": "Konkrétní hudba",
-              "detail": "Schaeffer a Henry manipulují se zvuky nahranými v Paříži."
+              "detail": "Schaeffer a Henry v Paříži upravují nahrané zvuky."
             },
             {
               "date": "1968-1978",
               "title": "Moog a Kraftwerk",
-              "detail": "Syntetizátor vstupuje do masové kultury."
+              "detail": "Syntezátor vstupuje do masové kultury."
             },
             {
-              "date": "80. léta 20. století",
+              "date": "80. léta",
               "title": "House a techno",
-              "detail": "Chicago a Detroit vynalézají moderní elektronický tanec."
+              "detail": "Chicago a Detroit vymýšlejí moderní elektronický tanec."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Elektronická hudba, která se zrodila v laboratořích v 50. letech 20. století, dnes tvoří velkou část světové produkce, od klubu až po hitparádu."
+          "text": "Elektronická hudba se zrodila v laboratořích 50. let a dnes strukturuje velkou část světové produkce, od klubu po hitparádu."
         }
       ]
     }

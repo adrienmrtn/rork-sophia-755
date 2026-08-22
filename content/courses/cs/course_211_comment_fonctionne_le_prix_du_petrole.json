@@ -1,14 +1,14 @@
 {
   "id": "course_211_comment_fonctionne_le_prix_du_petrole",
   "title": "Jak funguje cena ropy?",
-  "subtitle": "Nervy světové ekonomiky",
+  "subtitle": "Nerv světové ekonomiky",
   "subject": "comprendreLeMonde",
   "subcategory": "Economy & society",
-  "description": "Cenu ropy neurčuje jediný prodejce. Rodí se ze **válčení** mezi producentskými zeměmi, finančními trhy a náhlými krizemi, někdy až do bodu absurdity.",
+  "description": "Cenu ropy neurčí jediný prodejce. Rodí se z **přetahované** mezi producentskými zeměmi, finančními trhy a náhlými krizemi, někdy až do absurdna.",
   "hero": {
     "image": "comment_fonctionne_le_prix_du_petrole",
     "ratio": "16:9",
-    "hook": "V roce 2020 platili prodejci ropy svým kupujícím, aby se jí zbavili. Zde je důvod."
+    "hook": "Roku 2020 prodejci ropy platili kupcům, aby se jí zbavili. Tady je proč."
   },
   "sections": [
     {
@@ -18,78 +18,78 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ropa je někdy nazývána „krev ekonomiky“. Jeho cena ovlivňuje inflaci, cenu benzínu a dokonce i stabilitu některých zemí. Tuto cenu však nikdo nestanoví razítkem."
+          "text": "Ropě se někdy říká „krev ekonomiky”. Její cena ovlivní inflaci, cenu benzinu i stabilitu některých zemí. Přesto ji nikdo neurčí razítkem."
         },
         {
           "type": "paragraph",
-          "text": "Vzniká ze setkání tří sil: zemí, které ropu těží, finančních trhů, které s ní obchodují ještě předtím, než vůbec opustí zem, a krizí, které všechny přivádějí k panice. Vydejte se do pouští Arábie, na pláně Texasu a na obrazovky Chicaga."
+          "text": "Rodí se ze setkání tří sil: zemí, které ropu těží, finančních trhů, které ji směňují, ještě než vyjede ze země, a krizí, které všechny vyděsí. Směr: arabské pouště, texaské pláně a chicagské obrazovky."
         }
       ]
     },
     {
       "id": "course_211_comment_fonctionne_le_prix_du_petrole_p1",
-      "title": "OPEC versus americká břidlice: bitva o zásobování",
+      "title": "OPEC proti americké břidlici: bitva nabídky",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Trh s ropou má zvláštnost: z krátkodobého hlediska poptávka téměř neklesá, když ceny rostou. Auta, továrny a letadla nemohou změnit energii přes noc. Ekonomové tomu říkají **neelasticita** poptávky."
+          "text": "Ropný trh má zvláštnost: v krátkém čase poptávka skoro neklesne, když ceny stoupají. Auta, továrny a letadla nemohou změnit energii ze dne na den. Ekonomové tomu říkají **neelasticita** poptávky."
         },
         {
           "type": "paragraph",
-          "text": "Od roku 1960 se skupina produkujících zemí organizovala, aby ovlivnila tento trh: [[OPEC]]. Dohodnutím produkčních kvót se její členové snaží udržet vysoké ceny. Od roku 2016 se k alianci připojilo Rusko a vytvořilo OPEC+. Společně tyto země kontrolují kolem 40 % světové ropy."
+          "text": "Od roku 1960 se skupina producentských zemí organizuje, aby na ten trh tlačila: [[OPEC]]. Dohodou o produkčních kvótách se členové snaží udržet vysoké ceny. Od roku 2016 se k alianci přidalo Rusko a vzniklo OPEC+. Dohromady ty země ovládají zhruba 40% světové ropy."
         },
         {
           "type": "funFact",
-          "text": "Jediný barel ropy, 159 litrů, obsahuje tolik energie, jako manuální práce jednoho člověka na zhruba rok."
+          "text": "Jediný barel ropy, 159 litrů, obsahuje tolik energie jako ruční práce jednoho člověka zhruba za rok."
         },
         {
           "type": "paragraph",
-          "text": "Ale tato moc byla otřesena. Díky technice zvané hydraulické štěpení se Spojené státy během deseti let staly největším světovým producentem ropy a předstihly tak Saúdskou Arábii. Tato nová nabídka, která se rychleji přizpůsobuje, učinila trh konkurenceschopnějším a pro OPEC+ je obtížnější kontrolovat."
+          "text": "Tu moc ale někdo vykolejil. Díky technice zvané hydraulické štěpení se Spojené státy za deset let staly prvním světovým producentem ropy a předstihly Saúdskou Arábii. Ta nová nabídka, rychlejší na úpravu, udělala trh konkurenčnější a pro OPEC+ hůř ovladatelný."
         }
       ]
     },
     {
       "id": "course_211_comment_fonctionne_le_prix_du_petrole_p2",
-      "title": "„Papírový“ olej: když se zapojí finance",
+      "title": "„Papírová” ropa: když se vloží finance",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kromě skutečných barelů dodávaných lodí nebo potrubím se ropa obchoduje také na finančních trzích. Většina transakcí prochází termínovým trhem: dnes kupujeme barel, který bude dodán pouze za jeden, tři nebo šest měsíců."
+          "text": "Vedle skutečných barelů dodaných lodí nebo ropovodem se ropa směňuje i na finančních trzích. Většina transakcí jde přes termínový trh: dnes koupíš barel, který se dodá až za jeden, tři nebo šest měsíců."
         },
         {
           "type": "image",
           "asset": "oil_futures_trading_floor_markets",
           "ratio": "16:9",
-          "caption": "Ropa se na finančních trzích obchoduje dlouho před jejím dodáním."
+          "caption": "Ropa se směňuje na finančních trzích dávno před dodáním."
         },
         {
           "type": "paragraph",
-          "text": "Banky a hedgeové fondy nakupují a prodávají tyto kontrakty, aniž by se chtěly dotknout jediného sudu: jednoduše sázejí na to, zda ceny porostou nebo klesnou. To přináší na trh peníze, ale také znervózňuje ceny. Jako referenční ve světě slouží dvě ceny: [[Brent]], ropa ze Severního moře, a WTI, ropa z Texasu. Rozdíl mezi těmito dvěma odráží rozdíly v kvalitě a dopravě."
+          "text": "Banky a spekulativní fondy ty kontrakty kupují a prodávají, aniž by kdy chtěly sáhnout na jediný barel: jen sázejí na růst nebo pokles cen. To na trh přinese peníze, ale taky udělá ceny nervóznější. Dvě ceny slouží světu jako reference: [[Brent]], ropa Severního moře, a WTI, ropa z Texasu. Rozdíl mezi nimi odráží kvalitu i dopravu."
         }
       ]
     },
     {
       "id": "course_211_comment_fonctionne_le_prix_du_petrole_p3",
-      "title": "Ceny padají... nebo explodují",
+      "title": "Ceny, které se zhroutí… nebo vybuchnou",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Trh s ropou funguje v brutálních cyklech. Když ceny dlouhodobě rostou, producenti investují do drahých ložisek, což v konečném důsledku vytváří převis nabídky. Když ceny zůstanou nízké, stane se opak: méně zkoumáme, což se připraví na další nedostatek."
+          "text": "Ropný trh funguje v brutálních cyklech. Když ceny dlouho stoupají, producenti investují do drahých ložisek, což časem vytvoří přebytek nabídky. Když ceny zůstanou nízko, stane se opak: míň se hledá, což připraví příští nedostatek."
         },
         {
           "type": "paragraph",
-          "text": "Krize COVID-19 to velkolepě ukázala. V dubnu 2020 se globální ekonomika náhle zastavila: nikdo nelétal ani neřídil, ale vrty pokračovaly v produkci. Zásobní nádrže byly naplněny po okraj. Cena WTI pak klesla na minus 37 dolarů: prodejci platili svým kupujícím, aby vyčistili své zásoby."
+          "text": "Krize covidu-19 to ukázala spektakulárně. V dubnu 2020 se světová ekonomika zastavila naráz: nikdo neletěl ani nejezdil, ale vrty dál produkovaly. Zásobníky se naplnily po okraj. Cena WTI pak spadla na minus 37 dolarů: prodejci platili kupcům, aby je zbavili zásob."
         },
         {
           "type": "paragraph",
-          "text": "Naopak v roce 2022 vyvolala ruská invaze na Ukrajinu obavy z nedostatku: Rusko je druhým největším vývozcem na světě a Brent během několika týdnů překročil 130 dolarů. Ropa proto zůstává nervózním barometrem světového napětí."
+          "text": "Naopak roku 2022 ruská invaze na Ukrajinu vyvolala strach z nedostatku: Rusko je druhý světový vývozce, Brent za pár týdnů přesáhl 130 dolarů. Ropa tak zůstává nervózním barometrem světového napětí."
         },
         {
           "type": "funFact",
-          "text": "Na výrobu jediného smartphonu je potřeba asi 7 litrů ropy, mezi těžbou materiálů, plastovými díly a dopravou."
+          "text": "Na výrobu jediného chytrého telefonu je potřeba zhruba 7 litrů ropy, mezi těžbou materiálů, plastovými díly a dopravou."
         }
       ]
     },
@@ -100,15 +100,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Z dlouhodobého hlediska stojí ropa před novou výzvou: přechodem na čistou energii. Pokud elektromobily sníží celosvětovou poptávku, producentské země by se mohly pustit do cenové války, aby prodaly své rezervy dříve, než ztratí svou hodnotu."
+          "text": "V dlouhém čase ropa čelí nové výzvě: přechodu k čistým energiím. Když elektrická auta sníží světovou poptávku, producentské země se mohou pustit do cenové války, aby zásoby prodaly, než ztratí hodnotu."
         },
         {
           "type": "paragraph",
-          "text": "Trh však ohrožuje paradox: protože investoři opouštějí nové ropné projekty z klimatických důvodů, nabídka by mohla klesat rychleji než poptávka, což by způsobilo nové nárůsty cen. Ropa nezmizí náhle: zůstává nezbytná pro plasty, hnojiva a těžkou dopravu, jako je letectví."
+          "text": "Trh ale ohrožuje paradox: protože investoři z klimatických důvodů opouštějí nové ropné projekty, nabídka může klesnout rychleji než poptávka a vyvolat nové cenové skoky. Ropa nezmizí naráz: zůstává nepostradatelná pro plasty, hnojiva i těžkou dopravu, jako je letectví."
         },
         {
           "type": "takeaway",
-          "text": "Cena ropy je výsledkem patové situace mezi OPEC+, americkou těžbou z břidlic a spekulativními finančními trhy. Výsledek: ceny schopné kolapsu nebo výbuchu při sebemenším geopolitickém šoku."
+          "text": "Cena ropy vzniká z přetahované mezi OPEC+, americkou břidlicovou produkcí a spekulativními finančními trhy. Výsledek: kurzy schopné se zhroutit nebo vybuchnout při nejmenším geopolitickém šoku."
         }
       ]
     }

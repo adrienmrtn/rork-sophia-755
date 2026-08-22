@@ -1,14 +1,14 @@
 {
   "id": "course_200_re_et_la_creation_du_monde_egypte",
-  "title": "Ra a stvoření světa (Egypt)",
-  "subtitle": "Tvůrčí slunce",
+  "title": "Re a stvoření světa (Egypt)",
+  "subtitle": "Slunce stvořitel",
   "subject": "mythologie",
   "subcategory": "Other mythologies",
-  "description": "Re, sluneční bůh Egypta: stvořil svět, každý den křižuje oblohu, v noci bojuje s chaosem a trestá lidi svým Okem.",
+  "description": "Re, sluneční bůh Egypta: stvoří svět, každý den přejede nebe, v noci bojuje s chaosem a lidi potrestá svým Okem.",
   "hero": {
     "image": "re_et_la_creation_du_monde_egypte",
     "ratio": "16:9",
-    "hook": "Každé svítání je vítězství. Bez Raovy lodi by se svět propadl zpět do nicoty."
+    "hook": "Každý úsvit je vítězství. Bez Reovy bárky by svět spadl zpátky do nicoty."
   },
   "sections": [
     {
@@ -18,101 +18,101 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**D** (nebo Râ) není jen slunce. Pro Egypťany ze **Heliopolis**, města slunečního uctívání poblíž dnešní Káhiry, je to samotný princip existence: stvořit svět a pak ho každou noc bránit před nicotou."
+          "text": "**Re** (neboli Rá) není jen slunce. Pro Egypťany z **Heliopole**, města slunečního kultu u dnešní Káhiry, je samým principem existence: stvořit svět a pak ho každou noc bránit proti nicotě."
         },
         {
           "type": "paragraph",
-          "text": "Jeho postava po tři tisíciletí překračovala státní náboženství. Porozumět Re znamená pochopit, jak Egypt uvažoval o zrození vesmíru, o křehkosti řádu a proč je každý úsvit vítězstvím, které je třeba znovu dobýt."
+          "text": "Tři tisíciletí jeho postava prochází státním náboženstvím. Pochopit Rea znamená pochopit, jak Egypt myslel zrod vesmíru, křehkost řádu a proč je každý úsvit vítězství, které se musí znovu vybojovat."
         }
       ]
     },
     {
       "id": "course_200_re_et_la_creation_du_monde_egypte_p1",
-      "title": "Vznik světa: prapůvodní mohyla",
+      "title": "Vynoření světa: prvotní pahorek",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Před časem je tu **Podstatné jméno**: temná, nekonečná voda, plná choroboplodných zárodků. [[Heliopolská kosmogonie]] popisuje vzhled **Atum**, „toho, kdo je dokončen“. Generuje se a vynořuje se na **Pierre Benben**, prvním pevném bodě."
+          "text": "Před časem je **Nun**: temná, nekonečná voda plná zárodků. [[Heliopolská kosmogonie]] popisuje zjevení **Atuma**, „toho, kdo je dokončený”. Zplodí se sám a vynoří se na **kameni Benben**, prvním pevném bodě."
         },
         {
           "type": "image",
           "asset": "atum_primordial_egyptian_creation_benben",
           "ratio": "4:3",
-          "caption": "Atum se vynořuje z podstatného jména na Benbenově kameni."
+          "caption": "Atum se vynoří z Nunu na kameni Benben"
         },
         {
           "type": "funFact",
-          "text": "V Heliopolis kněží udržovali posvátného ptáka, **Bénou** (předchůdce Fénixe), který měl být duší Ra a měl přistát na Benbenu, aby oznámil nový cyklus."
+          "text": "V Heliopoli kněží chovali posvátného ptáka **Benu** (předka fénixe), prý duši Rea, který usedne na Benben, aby ohlásil nový cyklus."
         },
         {
           "type": "paragraph",
-          "text": "Atoum sám vytváří **Zelí** (vzduch) a **tefnut** (vlhkost), poté **Geb** (Země) a **Matice** (Nebe), oddělené tak, aby zanechaly obytný prostor. **Osiris**, **Isis**, **Seth** a **Nephthys** se rodí: s Atumem, **velký Ennead** (devítka). [[Egyptský božský synkretismus]] by později spojil Atum a Re do jediné kreativní postavy."
+          "text": "Sám Atum stvoří **Šua** (vzduch) a **Tefnut** (vlhkost), pak **Geba** (Zemi) a **Nut** (Nebe), oddělené, aby zbyl prostor k životu. Narodí se **Osiris**, **Isis**, **Seth** a **Nephthys**: s Atumem **velká Enneada** (devítka). [[Egyptský božský synkretismus]] později Atuma a Rea slije do jediné stvořitelské postavy."
         }
       ]
     },
     {
       "id": "course_200_re_et_la_creation_du_monde_egypte_p2",
-      "title": "Maat proti Isfetu: nebezpečná cesta lodi",
+      "title": "Maat proti Isfetu: nebezpečná plavba bárky",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Přes den se Re plaví na lodi **Mandjet**. Za soumraku přechází přes **Mesektet** a překračuje dvanáct hodin [[Duat]], svět mrtvých. Toto není odpočinek: je to válka proti **Isfet**, nepořádku."
+          "text": "Ve dne Re pluje na bárce **Mandžet**. Za soumraku přestoupí na **Mesektet** a projde dvanáct hodin říše [[Duat]], světa mrtvých. Není to odpočinek: je to válka proti **Isfetu**, neřádu."
         },
         {
           "type": "image",
           "asset": "ra_solar_barque_egyptian_hieroglyphics",
           "ratio": "4:3",
-          "caption": "Solární člun Re, každodenní motor času."
+          "caption": "Reova sluneční bárka, denní motor času"
         },
         {
           "type": "funFact",
-          "text": "Od 4. dynastie měli téměř všichni faraoni ve svém jménu „Re“: říkali si „synové Re“, garanti slunečního cyklu."
+          "text": "Od 4. dynastie skoro všichni faraoni nesou „Re” ve jméně: říkají si „syn Rea”, ručitelé slunečního cyklu."
         },
         {
           "type": "paragraph",
-          "text": "Had **Apopis** se snaží převrátit loď nebo pít vody nebeského Nilu. Sám **Seth** někdy brání luk. Když se Ra za úsvitu znovu narodí v převleku **Khépri**, skarabea, je to **Maât** (rovnováha), která opět vítězí. Zatmění? Apopis málem vyhrál."
+          "text": "Had **Apop** se snaží bárku převrhnout nebo vypít vody nebeského Nilu. Sám **Seth** někdy brání příď. Když Re za úsvitu znovu povstane v podobě **Cheprera**, vrubouna, znovu zvítězí **Maat** (rovnováha). Zatmění? Apop skoro vyhrál."
         }
       ]
     },
     {
       "id": "course_200_re_et_la_creation_du_monde_egypte_p3",
-      "title": "Vzpoura lidí a destruktivní oko",
+      "title": "Vzpoura lidí a ničivé oko",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dokonce i Ra stárne. V příběhu \"The Destruction of Men\" se jeho kosti stanou stříbrnými a lidstvo se proti němu spikne. Uraženě vypustí své ohnivé Oko: bohyně [[Sekhmet]], krvežíznivá lvice."
+          "text": "I Re stárne. V příběhu „Zkáza lidstva” mu kosti ze stříbra a lidstvo se spikne proti němu. Urážený vypustí žhavé Oko: bohyni [[Sekhmet]], krvežíznivou lvici."
         },
         {
           "type": "image",
           "asset": "sekhmet_hathor_lioness_egyptian_goddess",
           "ratio": "4:3",
-          "caption": "Sekhmet, Oko Re, než se znovu stane Hathor."
+          "caption": "Sekhmet, Reovo Oko, než se znovu stane Hathor"
         },
         {
           "type": "paragraph",
-          "text": "Masakr hrozí zánikem stvoření. Rê vaří tisíce sklenic piva zbarveného červeným okrem, které se rozlévá na polích. Sekhmet v domnění, že pije krev, se opije a uklidní se: stane se sladkou **Hathor**. Mýtus vysvětluje zlo a ospravedlňuje svátek opilství, kde lidé pili na oslavu spásy lidí."
+          "text": "Masakr hrozí uhasit stvoření. Re nechá namíchat tisíce džbánů piva obarveného červeným okrem a vylít je na pole. Sekhmet, která si myslí, že pije krev, se opije a uklidní: stane se z ní mírná **Hathor**. Mýtus vysvětluje zlo a ospravedlní slavnost opojení, kde se pilo na záchranu lidí."
         }
       ]
     },
     {
       "id": "course_200_re_et_la_creation_du_monde_egypte_p4",
-      "title": "Potomstvo a splynutí: avatar Amon-Re",
+      "title": "Odkaz a slévání: avatár Amon-Re",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V Nové říši se thébský bůh **Amon** spojil s Re: **Amon-Rê** se narodil, „Král bohů“, neviditelný stvořitel a viditelné slunce. Pro něj se tyčí největší svatyně, jako je [[Chrám Karnak]]."
+          "text": "V Nové říši se thébský bůh **Amon** slíje s Reem: zrodí se **Amon-Re**, „král bohů”, neviditelný stvořitel a viditelné slunce. Pro něj vyrostou nejširší svatyně, jako [[Chrám Karnak]]."
         },
         {
           "type": "paragraph",
-          "text": "Pyramidy a obelisky zkameňují sluneční paprsky, aby pozvedly faraona k jeho nebeskému otci. Dokonce i reforma **Achnaton**, která vnutila kult **Aten** (disk), zradikalizovala již tak sluneční myšlenku. Ra zůstává nepřekonatelným symbolem egyptské stability."
+          "text": "Pyramidy a obelisky zkamení sluneční paprsky, aby faraona zvedly k nebeskému otci. I reforma **Achnatona**, která vnutila kult **Atona** (kotouče), vyostřila už sluneční myšlenku. Re zůstává nepřekonatelným symbolem egyptské stability."
         },
         {
           "type": "takeaway",
-          "text": "**D** vytváří svět z Heliopolis, brání ho každou noc na své lodi proti **Apopis** a trestá a poté zachraňuje lidstvo prostřednictvím Oka **Sekhmet**. Stává se **Amon-Rê** a vládne na vrcholu Egypta faraonů."
+          "text": "**Re** stvoří svět z Heliopole, každou noc ho v bárce brání proti **Apopovi** a lidstvo potrestá i zachrání Okem **Sekhmet**. Jako **Amon-Re** vládne na vrcholu faraonského Egypta."
         }
       ]
     }

@@ -1,14 +1,14 @@
 {
   "id": "course_172_thesee_et_le_minotaure",
-  "title": "Theseus a Minotaurus",
-  "subtitle": "Vlákno, monstrum, plachty",
+  "title": "Théseus a Mínotaurus",
+  "subtitle": "Nit, nestvůra, plachty",
   "subject": "mythologie",
   "subcategory": "Greece: the heroes",
-  "description": "Theseus zabije Minotaura pomocí Ariadnina vlákna. Zapomene ale vyměnit plachty: jeho otec Aegeus se vrhne do moře, které dodnes nese jeho jméno.",
+  "description": "Théseus zabije Mínotaura díky Ariadnině niti. Zapomene ale změnit plachty: otec Aigeus se vrhne do moře, které po něm pořád nese jméno.",
   "hero": {
     "image": "thesee_et_le_minotaure",
     "ratio": "16:9",
-    "hook": "Monstrum v bludišti. Vlákno, které se dostane ven. Zapomenuté plachty, které křtí moře."
+    "hook": "Nestvůra v labyrintu. Nit, která tě vyvede. Zapomenuté plachty, které pokřtí moře."
   },
   "sections": [
     {
@@ -18,101 +18,101 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Theseus**, zakládající hrdina Athén, se utká se **Minotaurem**, tvorem napůl mužem a napůl býkem ukrytým v [[Labyrint]] na Krétě. V příběhu se snoubí odvaha, romantická vychytralost a rodinná tragédie."
+          "text": "**Théseus**, zakladatelský hrdina Athén, čelí **Mínotaurovi**, tvoru napůl člověku a napůl býku, schovanému v krétském [[Labyrint]]. Vyprávění mísí odvahu, milostnou lest a rodinnou tragédii."
         },
         {
           "type": "paragraph",
-          "text": "Zabitím netvora Theseus osvobodí Athény od krvavého tributu. Ale zapomenutý detail, černé plachty místo bílých, bude stát jeho otce život a dá jeho jméno Egejskému moři."
+          "text": "Zabít nestvůru znamená osvobodit Athény od krvavé daně. Zapomenutý detail, černé plachty místo bílých, ale bude stát život otce a dá jméno Egejskému moři."
         }
       ]
     },
     {
       "id": "course_172_thesee_et_le_minotaure_p1",
-      "title": "Minotaurus a pocta Athén",
+      "title": "Mínotaurus a athénská daň",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Krétský král **Minos** odmítá obětovat bílého býka **Poseidon**, bohu moří. Aby se pomstil, Poseidon inspiruje v královně **Pasiphaé** vášeň pro zvíře. Minotaurus se narodil. Minos pověří vynálezce [[Bludiště]], aby postavil vězení bez východu: Labyrint."
+          "text": "Krétský král **Mínós** odmítne obětovat bílého býka **Poseidónovi**, bohu moří. Z pomsty Poseidón vnukne královně **Pásifaé** vášeň k zvířeti. Narodí se Mínotaurus. Mínós pověří vynálezce [[Daedalus]] stavbou vězení bez východu: Labyrintu."
         },
         {
           "type": "image",
           "asset": "theseus_minotaur_cretan_labyrinth_painting",
           "ratio": "4:3",
-          "caption": "Minotaurus, zavřený v krétském labyrintu."
+          "caption": "Mínotaurus, zavřený v krétském Labyrintu"
         },
         {
           "type": "paragraph",
-          "text": "Kréta pak dominuje moři: [[Thalassokracie]]. Po prohrané válce musí Atény každých devět let odevzdat **sedm mladých mužů a sedm mladých dívek** jako jídlo netvorovi. Při třetí dodávce se **Theseus**, syn krále **Egejské**, dobrovolně přihlásí."
+          "text": "Kréta tehdy ovládá moře: [[Thalassokracie]]. Po prohrané válce musí Athény každých devět let dodat **sedm jinochů a sedm dívek** nestvůře za potravu. Při třetí dodávce se přihlásí **Théseus**, syn krále **Aigea**."
         },
         {
           "type": "funFact",
-          "text": "Aegeus a Theseus se dohodnou na signálu: **bílý** pluje, pokud se hrdina vrátí živý, **déšť**, pokud je mrtvý. Tento detail rozhodne o dramatu."
+          "text": "Aigeus a Théseus se dohodnou na znamení: **bílé** plachty, když se hrdina vrátí živý, **černé**, když zemře. Ten detail rozhodne drama."
         }
       ]
     },
     {
       "id": "course_172_thesee_et_le_minotaure_p2",
-      "title": "Strouhanka",
+      "title": "Ariadnina nit",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Na Krétě se **Ariane**, dcera Minos, zamiluje do Thesea. Ví, že síla v Labyrintu nestačí. S pomocí Daedala mu dá klubko vlny: [[Strouhanka]]. Připevní ho ke vchodu a při pohybu vpřed odmotává nit."
+          "text": "Na Krétě se **Ariadné**, Mínóova dcera, zamiluje do Thésea. Ví, že v Labyrintu síla nestačí. S pomocí Daidala mu předá klubko vlny: [[Ariadnino vlákno]]. Přiváže ho u vchodu a odvíjí nit, jak jde dál."
         },
         {
           "type": "image",
           "asset": "ariadne_thread_theseus_labyrinth_painting",
           "ratio": "4:3",
-          "caption": "Ariadna dá Théseovi nit, která mu zachrání život."
+          "caption": "Ariadné předá Théseovi nit, která mu zachrání život"
         },
         {
           "type": "paragraph",
-          "text": "Theseus zabije Minotaura, pak přetočí vlákno, aby se dostal ven. Prchá s mladými Athéňany a Ariadnou. Ale na ostrově **Naxos** ji nechá spát. Někteří říkají, že ji chtěl za manželku bůh **Dionýsos**. Ariadna, zoufalá a poté zbožštěná, dostává zlatou korunu, která se stala souhvězdím."
+          "text": "Théseus zabije Mínotaura a pak nit namotá, aby vyšel. Uteče s athénskou mládeží i s Ariadnou. Na ostrově **Naxos** ji ale opustí ve spánku. Někteří říkají, že ji chtěl za ženu bůh **Dionýsos**. Ariadné, zoufalá a pak zbožštěná, dostane zlatou korunu, z níž se stane souhvězdí."
         }
       ]
     },
     {
       "id": "course_172_thesee_et_le_minotaure_p3",
-      "title": "Černé plachty Cape Sounion",
+      "title": "Černé plachty mysu Súnion",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Návrat by měl být oslavou. Opojený vítězstvím nebo sužovaný Ariadninou opuštěností Théseus zapomene natáhnout bílé plachty. Loď se pod černými plachtami blíží k Aténám."
+          "text": "Návrat měl být slavnost. Opilý vítězstvím nebo rozrušený opuštěním Ariadny Théseus zapomene vytáhnout bílé plachty. Loď se blíží k Athénám pod černými plachtami."
         },
         {
           "type": "image",
           "asset": "cape_sounion_aegean_sea_cliff_sunset",
           "ratio": "4:3",
-          "caption": "Cape Sounion, odkud Aegeus sledoval návrat svého syna."
+          "caption": "Mys Súnion, odkud Aigeus hlídal návrat syna"
         },
         {
           "type": "paragraph",
-          "text": "Na **Cape Sounion** starý král Aegeus prohlíží obzor. Vidí jen temnotu smutku. Přesvědčen, že jeho syn je mrtvý, vrhá se z útesu. Moře se od té doby jmenovalo: **AEgejské více**. Theseus přichází jako král... a osiřel svou vlastní nedbalostí."
+          "text": "Na **mysu Súnion** starý král Aigeus hlídá obzor. Vidí jen čerň smutku. Přesvědčený, že syn je mrtvý, skočí z útesu. Moře od té doby nese jeho jméno: **Egejské moře**. Théseus vystoupí jako král a sirotek vlastní nedbalostí."
         },
         {
           "type": "funFact",
-          "text": "„Loď Theseus“ se stal filozofickým paradoxem: když vyměníme všechna prkna jedno po druhém, je to stále ta samá loď?"
+          "text": "„Théseova loď” se stala filozofickým paradoxem: když vyměníš všechna prkna jedno po druhém, je to pořád táž loď?"
         }
       ]
     },
     {
       "id": "course_172_thesee_et_le_minotaure_p4",
-      "title": "Theseus, král Athén",
+      "title": "Théseus, král Athén",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Korunovaný Theseus se stává organizujícím králem. Připisuje se mu [[Synoecismus]]: sjednocení měst Attiky kolem Athén. Založil [[Panathenaia]], velké městské festivaly. Možná se kombinuje s právem."
+          "text": "Korunovaný Théseus se stane organizujícím králem. Připisují mu [[Synoecismus]]: sjednocení osad Attiky kolem Athén. Založí [[Panathenaia]], velké svátky obce. Síla se spojí s právem."
         },
         {
           "type": "paragraph",
-          "text": "Jeho vláda zahrnuje další dobrodružství, jako je boj proti [[Amazonky]]. Labyrint však zůstává jeho známkou: vědět, jak rozluštit nerozlučitelné, a přitom zůstat zranitelný vůči zapomnění. Theseus ukuje velikost Athén z popela rodinné tragédie."
+          "text": "Jeho vláda počítá i jiná dobrodružství, jako boj proti [[Amazonky]]. Labyrint ale zůstane jeho značkou: umět rozmotat spleť a zůstat zranitelný zapomněním. Théseus kuje velikost Athén na popelu rodinného dramatu."
         },
         {
           "type": "takeaway",
-          "text": "**Theseus** zabije **Minotaura** díky vláknu **Ariane**. Tím, že zapomene vyměnit plachty, způsobí sebevraždu svého otce **Egejské**, který dává jméno Egejskému moři."
+          "text": "**Théseus** zabije **Mínotaura** díky niti **Ariadny**. Když zapomene změnit plachty, vyvolá sebevraždu otce **Aigea**, který dá jméno Egejskému moři."
         }
       ]
     }

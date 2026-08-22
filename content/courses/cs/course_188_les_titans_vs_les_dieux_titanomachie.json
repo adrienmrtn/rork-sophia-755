@@ -1,14 +1,14 @@
 {
   "id": "course_188_les_titans_vs_les_dieux_titanomachie",
-  "title": "Titáni vs. bohové (Titanomachy)",
+  "title": "Titáni proti bohům (Titanomachie)",
   "subtitle": "Válka o Olymp",
   "subject": "mythologie",
   "subcategory": "Other mythologies",
-  "description": "Deset let bojoval Zeus a olympionici s Kronosem a Titány. Vítězství založilo řád řeckého světa.",
+  "description": "Deset let bojují Zeus a Olympané proti Kronovi a Titánům. Vítězství založí řád řeckého světa.",
   "hero": {
     "image": "les_titans_vs_les_dieux_titanomachie",
     "ratio": "16:9",
-    "hook": "Deset let kosmické války: děti svrhly své otce, aby založily Olymp."
+    "hook": "Deset let kosmické války: děti svrhnou otce, aby založily Olymp."
   },
   "sections": [
     {
@@ -18,36 +18,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Titanomachie** je prvotní válka řecké mytologie. **deset let** proti sobě postavilo **Titáni**, starou božskou generaci, proti **Olympionikům** vedeným mladým **Zeus**."
+          "text": "**Titanomachie** je prvotní válka řecké mytologie. Po **deset let** staví proti sobě **Titány**, starší božskou generaci, a **Olympany** vedené mladým **Diem**."
         },
         {
           "type": "paragraph",
-          "text": "Není to jen rodinný spor. Je to přechod ze světa hrubé síly do světa řádu a práva. Vítězství Dia navždy stanoví, kdo vládne nad oblohou, mořem a mrtvými."
+          "text": "Není to jen rodinná hádka. Je to přechod od světa hrubé síly ke světu řádu a zákona. Diovo vítězství natrvalo určí, kdo vládne nebi, moři a mrtvým."
         }
       ]
     },
     {
       "id": "course_188_les_titans_vs_les_dieux_titanomachie_p1",
-      "title": "Cronus požírá, Zeus se bouří",
+      "title": "Kronos požírá, Zeus se vzbouří",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vše začíná **Kronos**, nejmladšího z Titánů. Po sesazení svého otce Ouranose z trůnu se obává stejného osudu. Své děti požírá, jakmile se narodí. Jeho žena **Rhéa** zachrání toho posledního: **Zeus**. Podává mu zavinutý kámen. Dítě vyrůstá v tajnosti na Krétě."
+          "text": "Všechno začne u **Krona**, nejmladšího z Titánů. Když svrhl otce Úrana, bojí se téhož osudu. Požírá děti hned po narození. Manželka **Rheia** zachrání posledního: **Dia**. Podá mu zabalený kámen. Dítě roste v tajnosti na Krétě."
         },
         {
           "type": "image",
           "asset": "titanomachy_titans_olympians_ancient_greek_painting",
           "ratio": "4:3",
-          "caption": "Titáni versus olympionici: deset let na rozhodnutí, kdo bude vládnout."
+          "caption": "Titáni proti Olympanům: deset let, aby se rozhodlo, kdo vládne"
         },
         {
           "type": "funFact",
-          "text": "Podle některých verzí je Zeus krmen kozou **Amalthée**. Při hraní si zlomí jeden ze svých rohů: stane se z něj **roh hojnosti**, vždy plné jídla."
+          "text": "Podle některých verzí Dia kojí koza **Amaltheia**. Při hře zlomí jeden z jejích rohů: stane se z něj **roh hojnosti**, vždycky plný jídel."
         },
         {
           "type": "paragraph",
-          "text": "V dospělosti Zeus nutí Kronos, aby znovu vyvrhl **Hestia**, **Demeter**, **Hera**, **Hades** a **Poseidon**. Mladí bohové se usadí na **Olympus**. Kronos a titáni drží horu **Othrys** v Thesálii. Válka se zasekává. Jsou potřeba další spojenci."
+          "text": "Dospělý Zeus donutí Krona vyplivnout **Hestii**, **Démétér**, **Héru**, **Háda** a **Poseidóna**. Mladí bohové se usadí na **Olympu**. Kronos a Titáni drží horu **Othrys** v Thesálii. Válka uvážne. Potřebují další spojence."
         }
       ]
     },
@@ -58,61 +58,61 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Zeus osvobozuje ze **Tatar**, vězení pod podsvětím, **Kyklop** a **Hecatonchires**. Kyklopové, kováři s jediným okem, vyrábějí rozhodující zbraně: **blesk** pro Dia, **trojzubec** pro Poseidona, neviditelná helma pro Háda."
+          "text": "Zeus osvobodí z **Tartaru**, vězení pod podsvětím, **Kyklópy** a **Hekatoncheiry**. Kyklópové, jednookí kováři, vyrobí rozhodující zbraně: **blesk** pro Dia, **trojzubec** pro Poseidóna, přilbu neviditelnosti pro Háda."
         },
         {
           "type": "image",
           "asset": "cyclops_forging_zeus_thunderbolt_painting",
           "ratio": "4:3",
-          "caption": "Kyklopové ukují Zeusův blesk."
+          "caption": "Kyklópové kují Diův blesk"
         },
         {
           "type": "paragraph",
-          "text": "Tři Hecatonchires, Cottos, Briarée a Gygès, mají sto paží a padesát hlav. Odtrhávají části hor a vrhají je na Titány. Pod blesky a kameny se starý svět hroutí. Poražení Titáni jsou připoutáni k Tartaru. Jejich věznitelé: Hécatonchires, včerejší vězni."
+          "text": "Tři Hekatoncheirové, Kottos, Briareós a Gygés, mají sto paží a padesát hlav. Trhají kusy hor a hází je na Titány. Pod blesky a skalami se starý svět zřítí. Poražené Titány spoutají v Tartaru. Jejich žalářníci: Hekatoncheirové, včerejší vězni."
         }
       ]
     },
     {
       "id": "course_188_les_titans_vs_les_dieux_titanomachie_p3",
-      "title": "Sdílení oblohy, moře a mrtvých",
+      "title": "Dělení nebe, moře a mrtvých",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Výherci losují. **Zeus** přijímá nebe a příkaz. **Poseidon** přijímá moře. **Hades** přijímá podsvětí. Olympský řád nahrazuje cyklus vraždy."
+          "text": "Vítězové losují. **Zeus** dostane nebe a velení. **Poseidón** dostane moře. **Hádés** dostane podzemní svět. Olympanský řád nahradí cyklus otcovražd."
         },
         {
           "type": "image",
           "asset": "zeus_poseidon_hades_three_brothers_myth",
           "ratio": "4:3",
-          "caption": "Zeus, Poseidon a Hádes: tři bratři, tři domény."
+          "caption": "Zeus, Poseidón a Hádés: tři bratři, tři říše"
         },
         {
           "type": "funFact",
-          "text": "Někteří ušetření Titáni si udrží místo v novém řádu. [[Themis]], garant božího zákona, zůstává po boku Dia."
+          "text": "Někteří ušetření Titáni si v novém řádu nechají místo. [[Themis]], ručitelka božského zákona, zůstane po Diově boku."
         },
         {
           "type": "paragraph",
-          "text": "Mír zůstává křehký. **Gaïa**, matka Titánů, stále rodí hrozby: monstrum [[Typhon]], pak [[Gigantomachy (pokračování Titanomachy)]], válka proti obrům. Tentokrát bohové potřebují k porážce smrtelníka, **Herakles**. Začala éra hrdinů."
+          "text": "Mír zůstává křehký. **Gaia**, matka Titánů, ještě zrodí hrozby: nestvůru [[Typhon]] a pak [[Gigantomachy (pokračování Titanomachy)]], válku proti Gigantům. Tentokrát bohové potřebují smrtelníka **Hérakla**, aby zvítězili. Éra hrdinů začala."
         }
       ]
     },
     {
       "id": "course_188_les_titans_vs_les_dieux_titanomachie_p4",
-      "title": "Od titánů k titanu a k atlasu",
+      "title": "Od Titánů k titanu a až k atlasu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Slovo „titanic“ stále připomíná jejich sílu. V roce 1795 po nich chemik [[Martin Heinrich Klaproth]] pojmenoval **titan** pro jeho odolnost. Satelity Saturnu, planety Cronos mezi Římany, nesou jména Titánů."
+          "text": "Slovo „titánský” pořád připomíná jejich sílu. V roce 1795 chemik [[Martin Heinrich Klaproth]] pojmenuje **titan** podle nich, pro jeho odolnost. Satelity Saturnu, planety Krona u Římanů, nesou jména Titánů."
         },
         {
           "type": "paragraph",
-          "text": "Titan **Atlas** zůstává známý díky [[Atlas drží oblohu]]. Inspirují se jím kartografové: [[Mercator]] umisťuje svou postavu do sbírek map. Kniha samotná se brzy nazývá **atlas**."
+          "text": "Titán **Atlas** zůstává slavný díky [[Atlas drží oblohu]]. Kartografové se tím inspirují: [[Mercator]] položí jeho figuru na sbírky map. Kniha sama se brzy jmenuje **atlas**."
         },
         {
           "type": "takeaway",
-          "text": "Olympionici svrhnou **Kronos** díky Cyclops a Hecatonchires. Titáni padají do Tartaru. Zeus, Poseidon a Hádes sdílejí svět: rodí se řád Olympu."
+          "text": "Olympané svrhnou **Krona** díky Kyklópům a Hekatoncheirům. Titáni padnou do Tartaru. Zeus, Poseidón a Hádés si rozdělí svět: řád Olympu je na světě."
         }
       ]
     }
