@@ -1,14 +1,14 @@
 {
   "id": "course_149_la_joconde",
-  "title": "A Mona Lisa",
+  "title": "Mona Lisa",
   "subtitle": "1503-1519",
   "subject": "art",
   "subcategory": "Obras icônicas",
-  "description": "Pintado por **Leonardo da Vinci** entre **1503** e **1519**, *Para Mona Lisa* tornou-se o ícone absoluto do Louvre. Técnica, sorriso misterioso… e um voo em **1911** que mudou tudo.",
+  "description": "Pintada por **Leonardo da Vinci** entre **1503** e **1519**, *Mona Lisa* (A Gioconda) virou o ícone absoluto do Louvre. Técnica, sorriso misterioso… e um roubo em **1911** que mudou tudo.",
   "hero": {
     "image": "la_joconde",
     "ratio": "16:9",
-    "hook": "Um sorriso, um roubo, um mito: como um retrato se tornou a obra mais famosa do mundo."
+    "hook": "Um sorriso, um roubo, um mito: como um retrato virou a obra mais famosa do mundo."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "*Para Mona Lisa*, pintada entre **1503** e **1519** por **Leonardo da Vinci**, é a pintura mais visitada do mundo. Exposta no **Louvre**, fascina tanto pela sua técnica como pela sua história. Não é apenas um belo retrato. É um mito feito pela arte, pela ciência e por uma notícia."
+          "text": "*Mona Lisa*, pintada entre **1503** e **1519** por **Leonardo da Vinci**, é o quadro mais visitado do mundo. Exposta no **Louvre**, fascina tanto pela técnica quanto pela história. Não é só um belo retrato. É um mito fabricado pela arte, pela ciência e por um crime."
         },
         {
           "type": "paragraph",
-          "text": "Por que esse rosto e não outro? Porque Leonardo concentrou ali inovações e porque um voo espetacular o tornou famoso em escala global."
+          "text": "Por que este rosto, e não outro? Porque Leonardo concentrou nele inovações, e porque um roubo espetacular a tornou famosa no planeta inteiro."
         }
       ]
     },
@@ -33,38 +33,38 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "O retrato começa em Florença por volta de **1503**. O patrocinador é o comerciante **Francesco del Giocondo**. A modelo seria sua esposa, . Mas Leonard nunca entrega a pintura. Ele o guardou, retocou durante anos e o levou para a França, onde faleceu em **1519**. [[Lisa Gherardini]]"
+          "text": "O retrato começa em Florença por volta de **1503**. O encomendante é o mercador **Francesco del Giocondo**. O modelo seria a esposa dele, [[Lisa Gherardini]]. Mas Leonardo nunca entrega o quadro. Ele o guarda, retoca durante anos e o leva à França, onde morre em **1519**."
         },
         {
           "type": "image",
           "asset": "mona_lisa_leonardo_da_vinci_louvre_painting",
           "ratio": "4:3",
-          "caption": "A Mona Lisa no Louvre: um pequeno painel de choupo que se tornou um ícone global."
+          "caption": "Mona Lisa no Louvre: um pequeno painel de choupo que virou ícone mundial"
         },
         {
           "type": "paragraph",
-          "text": "Sua técnica de assinatura é: esmaltes, camadas muito finas, que apagam os contornos. Não há mais linha dura. O rosto derrete no ar. Leonardo também acrescenta o [[Esfumado Leonardiano]]: a paisagem distante fica azul e suaviza, como na visão real. [[Perspectiva Atmosférica]]"
+          "text": "A técnica-assinatura dele é o [[sfumato leonardiano]]: velaturas, camadas muito finas, que apagam os contornos. Acabou a linha dura. O rosto se dissolve no ar. Leonardo acrescenta também a [[Perspetiva atmosférica]]: a paisagem distante azula e suaviza, como na visão real."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p2",
-      "title": "O sorriso que brinca com os olhos",
+      "title": "O sorriso que brinca com o olho",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "O famoso sorriso não é apenas uma emoção pintada. Ele brinca com nosso . Quando olhamos para os olhos da modelo, as bordas da retina veem a boca em sombras suaves: o sorriso parece presente. Quando você olha diretamente para a boca, ela diminui. [[Visão periférica]]"
+          "text": "O famoso sorriso não é só uma emoção pintada. Ele brinca com a nossa [[Visão periférica]]. Quando se fixam os olhos do modelo, as bordas da retina veem a boca em sombras suaves: o sorriso parece presente. Quando se olha direto para a boca, ele some."
         },
         {
           "type": "image",
           "asset": "mona_lisa_smile_detail_close_up",
           "ratio": "1:1",
-          "caption": "Quanto mais você olha para ele, mais o sorriso parece desaparecer."
+          "caption": "Quanto mais se fixa, mais o sorriso parece se esquivar"
         },
         {
           "type": "funFact",
-          "text": "Leonardo, pintor e estudioso, estudou óptica. O mistério do sorriso reside em parte no conhecimento preciso de como o olho humano processa as sombras."
+          "text": "Leonardo, ao mesmo tempo pintor e sábio, estudava a óptica. O mistério do sorriso se apoia em parte num saber preciso de como o olho humano trata as sombras."
         },
         {
           "type": "paragraph",
@@ -74,33 +74,33 @@
     },
     {
       "id": "course_149_la_joconde_p3",
-      "title": "1911: o voo que inventou a fama",
+      "title": "1911: o roubo que inventa a celebridade",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "No século XIX, *Para Mona Lisa* era admirada, mas ainda não era a obra número um do Louvre. Tudo mudou em **21 de agosto de 1911**. , um vidraceiro italiano do museu, rouba: é . Ele esconde debaixo da blusa e sai silenciosamente. [[Vincenzo Peruggia]] [[voo da Mona Lisa (1911)]]"
+          "text": "No século XIX, *Mona Lisa* é admirada, mas ainda não é a obra número 1 do Louvre. Tudo vira no **21 de agosto de 1911**. [[Vincenzo Peruggia]], um vidraceiro italiano do museu, a rouba: é [[O roubo da Mona Lisa (1911)]]. Ele a esconde debaixo do jaleco e sai calmo."
         },
         {
           "type": "image",
           "asset": "mona_lisa_stolen_1911_newspaper_headline",
           "ratio": "4:3",
-          "caption": "1911: a ausência da pintura ganha as manchetes e cria uma estrela."
+          "caption": "1911: a ausência do quadro vira manchete e cria uma estrela"
         },
         {
           "type": "paragraph",
-          "text": "A investigação se transforma em um escândalo. O poeta  fica preso por um tempo.  é questionado. Quando a pintura reaparece em **1913**, já não é apenas uma pintura. Ele é uma celebridade. [[Guillaume Apollinaire]] [[Pablo Picasso]]"
+          "text": "A investigação vira escândalo. O poeta [[Guillaume Apollinaire]] fica preso por um tempo. [[Pablo Picasso]] é interrogado. Quando o quadro reaparece em **1913**, já não é só uma pintura. É uma celebridade."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p4",
-      "title": "Um ícone sob o vidro",
+      "title": "Um ícone sob vidro",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hoje, pintado sobre madeira de choupo, vive atrás de um [[Vidro à prova de bala]], numa montra climatizada. Ataques com ácido, arremesso de objetos: a proteção tornou-se necessária. E as paródias, de Duchamp à Internet, provam que esta se tornou uma linguagem universal."
+          "text": "Hoje, pintada em madeira de choupo, ela vive atrás de um [[Vidro à prova de bala]], numa vitrine climatizada. Ataques com ácido, objetos atirados: a proteção se tornou necessária. E as paródias, de Duchamp até a internet, provam que ela virou uma linguagem universal."
         },
         {
           "type": "timeline",
@@ -108,28 +108,28 @@
             {
               "date": "1503",
               "title": "Início do retrato",
-              "detail": "Leonardo começa A Mona Lisa em Florença."
+              "detail": "Leonardo começa Mona Lisa em Florença."
             },
             {
               "date": "1519",
               "title": "Morte de Leonardo",
-              "detail": "A pintura permanece na França."
+              "detail": "O quadro permanece na França."
             },
             {
               "date": "1911",
-              "title": "O voo",
-              "detail": "Peruggia transforma a obra em um mito midiático."
+              "title": "O roubo",
+              "detail": "Peruggia transforma a obra em mito da imprensa."
             },
             {
               "date": "1913",
-              "title": "Voltar",
-              "detail": "A pintura retorna ao Louvre como estrela mundial."
+              "title": "Retorno",
+              "detail": "O quadro volta ao Louvre como estrela mundial."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "*Para Mona Lisa* deve sua glória tanto à genialidade de Leonardo (sfumato, sorriso óptico) quanto à história: um roubo em 1911 transformou uma obra-prima admirada em um ícone global."
+          "text": "*Mona Lisa* deve a fama tanto ao gênio de Leonardo (sfumato, sorriso óptico) quanto à história: um roubo em 1911 transformou uma obra admirada em ícone planetário."
         }
       ]
     }
