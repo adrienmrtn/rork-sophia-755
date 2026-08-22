@@ -5,12 +5,11 @@ Every rule here maps to a rule in ``content/TRANSLATION_GUIDE_<LANG>.md``. The
 checks are deliberately mechanical: they catch the failure modes the machine
 translation pipeline used to produce (glossary terms parked at the end of a
 paragraph, empty article slots, unbalanced markers, leaked protection tokens,
-untranslated number formats) plus the typography rules of that language's
-edition.
+untranslated number formats) plus the typography rules of that language.
 
 Usage:
     python scripts/check_course_translation.py --lang en
-    python scripts/check_course_translation.py --lang es --verbose course_10*
+    python scripts/check_course_translation.py --lang de --verbose course_10*
     python scripts/check_course_translation.py --lang es --json report.json
 """
 
@@ -120,79 +119,8 @@ ABBREVIATION_TAIL_RE = re.compile(
 # Articles that must not precede a glossary key that already carries one.
 LEADING_ARTICLES = ("the ", "a ", "an ")
 ES_LEADING_ARTICLES = ("el ", "la ", "los ", "las ", "un ", "una ")
-EN_ARTICLE_BEFORE_RE = re.compile(r"\b(the|a|an)$", re.IGNORECASE)
-ES_ARTICLE_BEFORE_RE = re.compile(r"\b(el|la|los|las|un|una)$", re.IGNORECASE)
-
 #: Words that are French leftovers in English but ordinary Spanish.
 ES_LEFTOVER_EXCLUDE = frozenset({"entre", "que", "les", "une"})
-
-
-class LangConfig:
-    __slots__ = (
-        "stranded_spaced",
-        "stranded_tight",
-        "leading_articles",
-        "article_before_re",
-        "check_a_an",
-        "check_french_decimal",
-        "leftover_exclude",
-        "thousands_msg",
-        "roman_msg",
-        "era_msg",
-    )
-
-    def __init__(
-        self,
-        *,
-        stranded_spaced: re.Pattern[str],
-        stranded_tight: re.Pattern[str],
-        leading_articles: tuple[str, ...],
-        article_before_re: re.Pattern[str],
-        check_a_an: bool,
-        check_french_decimal: bool,
-        leftover_exclude: frozenset[str],
-        thousands_msg: str,
-        roman_msg: str,
-        era_msg: str,
-    ) -> None:
-        self.stranded_spaced = stranded_spaced
-        self.stranded_tight = stranded_tight
-        self.leading_articles = leading_articles
-        self.article_before_re = article_before_re
-        self.check_a_an = check_a_an
-        self.check_french_decimal = check_french_decimal
-        self.leftover_exclude = leftover_exclude
-        self.thousands_msg = thousands_msg
-        self.roman_msg = roman_msg
-        self.era_msg = era_msg
-
-
-LANGS: dict[str, LangConfig] = {
-    "en": LangConfig(
-        stranded_spaced=STRANDED_SPACED_RE,
-        stranded_tight=STRANDED_TIGHT_RE,
-        leading_articles=LEADING_ARTICLES,
-        article_before_re=EN_ARTICLE_BEFORE_RE,
-        check_a_an=True,
-        check_french_decimal=True,
-        leftover_exclude=frozenset(),
-        thousands_msg="{0!r} should use a comma",
-        roman_msg="{0!r} should be an English ordinal",
-        era_msg="{0!r} should be BC/AD",
-    ),
-    "es": LangConfig(
-        stranded_spaced=ES_STRANDED_SPACED_RE,
-        stranded_tight=ES_STRANDED_TIGHT_RE,
-        leading_articles=ES_LEADING_ARTICLES,
-        article_before_re=ES_ARTICLE_BEFORE_RE,
-        check_a_an=False,
-        check_french_decimal=False,
-        leftover_exclude=ES_LEFTOVER_EXCLUDE,
-        thousands_msg="{0!r} should use a period",
-        roman_msg="{0!r} should be 'siglo XV' (no French ordinal)",
-        era_msg="{0!r} should be a. C. / d. C.",
-    ),
-}
 
 # "30 000" -- a French thousands separator. English wants "30,000".
 FRENCH_THOUSANDS_RE = re.compile(r"\b\d{1,3}(?: \d{3})+\b")
@@ -210,6 +138,89 @@ LEAKED_TOKEN_RE = re.compile(r"ZZ[A-Z0-9]*|__[A-Z]+__|\{\{\s*\w+\s*\}\}")
 #: American style puts the comma inside the quotation marks.
 CLOSERS = "\\s\\d\"'\u201c\u201d\u2019\\)\\]"
 MISSING_SPACE_RE = re.compile(rf"[,;:](?=[^{CLOSERS}])")
+
+
+class LanguageRules:
+    """Per-language checks. English is the default; others override."""
+
+    def __init__(
+        self,
+        *,
+        stranded_spaced: re.Pattern[str],
+        stranded_tight: re.Pattern[str],
+        leading_articles: tuple[str, ...],
+        leftover_extra_skip: frozenset[str] = frozenset(),
+        check_a_an: bool = True,
+        flag_space_thousands: bool = True,
+        thousands_hint: str = "should use a comma",
+        flag_decimal_comma: bool = True,
+        century_hint: str = "should be an English ordinal",
+        era_hint: str = "should be BC/AD",
+    ) -> None:
+        self.stranded_spaced = stranded_spaced
+        self.stranded_tight = stranded_tight
+        self.leading_articles = leading_articles
+        self.leftover_extra_skip = leftover_extra_skip
+        self.check_a_an = check_a_an
+        self.flag_space_thousands = flag_space_thousands
+        self.thousands_hint = thousands_hint
+        self.flag_decimal_comma = flag_decimal_comma
+        self.century_hint = century_hint
+        self.era_hint = era_hint
+
+
+ENGLISH_RULES = LanguageRules(
+    stranded_spaced=STRANDED_SPACED_RE,
+    stranded_tight=STRANDED_TIGHT_RE,
+    leading_articles=LEADING_ARTICLES,
+)
+
+GERMAN_RULES = LanguageRules(
+    stranded_spaced=re.compile(
+        r"\b(der|die|das|dem|den|des|ein|eine|eines|einem|einen|von|vom|mit|"
+        r"durch|f\u00fcr|bei|zum|zur|und|oder|als)"
+        r"\s+([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    # Only articles that cannot end a clause. German strands prepositions
+    # freely ("womit er arbeitete.").
+    stranded_tight=re.compile(
+        # "ein." is often the separable prefix of einsetzen/einfallen, not an article.
+        r"\b(der|die|das|eine)\s*([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    leading_articles=("der ", "die ", "das ", "dem ", "den ", "des ", "ein ", "eine "),
+    leftover_extra_skip=frozenset({"des"}),  # German genitive article
+    check_a_an=False,
+    flag_space_thousands=True,
+    thousands_hint="should use a period (30.000)",
+    flag_decimal_comma=False,  # German decimals are commas
+    century_hint="should be an Arabic ordinal (15. Jahrhundert)",
+    era_hint="should be v. Chr. / n. Chr.",
+)
+
+SPANISH_RULES = LanguageRules(
+    stranded_spaced=ES_STRANDED_SPACED_RE,
+    stranded_tight=ES_STRANDED_TIGHT_RE,
+    leading_articles=ES_LEADING_ARTICLES,
+    leftover_extra_skip=ES_LEFTOVER_EXCLUDE,
+    check_a_an=False,
+    flag_space_thousands=True,
+    thousands_hint="should use a period (30.000)",
+    flag_decimal_comma=False,  # Spanish decimals are commas
+    century_hint="should be 'siglo XV' (no French ordinal)",
+    era_hint="should be a. C. / d. C.",
+)
+
+RULES_BY_LANG: dict[str, LanguageRules] = {
+    "en": ENGLISH_RULES,
+    "de": GERMAN_RULES,
+    "es": SPANISH_RULES,
+}
+
+
+def rules_for(lang: str) -> LanguageRules:
+    return RULES_BY_LANG.get(lang, ENGLISH_RULES)
 
 
 class Finding:
@@ -236,7 +247,7 @@ def bold_spans(text: str) -> list[str]:
     return parts[1:-1:2] if len(parts) % 2 else []
 
 
-def residual_french(text: str, leftover_exclude: frozenset[str] = frozenset()) -> tuple[str, str] | None:
+def residual_french(text: str, extra_skip: frozenset[str] = frozenset()) -> tuple[str, str] | None:
     """First untranslated French function word, or None.
 
     Original-language material is exempt, because it is deliberate: glossary
@@ -256,8 +267,7 @@ def residual_french(text: str, leftover_exclude: frozenset[str] = frozenset()) -
             start = index + len(phrase)
 
     for match in FRENCH_LEFTOVERS.finditer(candidate):
-        word = match.group(0).lower()
-        if word in leftover_exclude:
+        if match.group(0).lower() in extra_skip:
             continue
         before = candidate[: match.start()].rstrip()
         after = candidate[match.end() :].lstrip()
@@ -271,10 +281,18 @@ def residual_french(text: str, leftover_exclude: frozenset[str] = frozenset()) -
     return None
 
 
-def article_before(text: str, span_start: int, article_re: re.Pattern[str] = EN_ARTICLE_BEFORE_RE) -> str | None:
+ARTICLE_BEFORE_RE = {
+    "en": re.compile(r"\b(the|a|an)$", re.IGNORECASE),
+    "de": re.compile(r"\b(der|die|das|dem|den|des|ein|eine|eines|einem|einen)$", re.IGNORECASE),
+    "es": re.compile(r"\b(el|la|los|las|un|una)$", re.IGNORECASE),
+}
+
+
+def article_before(text: str, span_start: int, lang: str = "en") -> str | None:
     before = text[:span_start].rstrip()
     before = re.sub(r"(\*\*|\*|==)$", "", before).rstrip()
-    match = article_re.search(before)
+    pattern = ARTICLE_BEFORE_RE.get(lang, ARTICLE_BEFORE_RE["en"])
+    match = pattern.search(before)
     return match.group(1).lower() if match else None
 
 
@@ -303,7 +321,8 @@ def check_segment(
     allowed: set[str],
     allowed_norm: dict[str, str],
     findings: list[Finding],
-    rules: LangConfig,
+    rules: LanguageRules,
+    lang: str = "en",
 ) -> None:
     def report(rule: str, detail: str) -> None:
         findings.append(Finding(course_id, key, rule, detail))
@@ -353,7 +372,7 @@ def check_segment(
         if re.match(r"(s\b|'s|s')", tail):
             report("glossary-inflected", f"suffix attached after ]]: {snippet(english, match.end())}")
 
-        article = article_before(english, match.start(), rules.article_before_re)
+        article = article_before(english, match.start(), lang)
         if article:
             lowered = stripped.lower()
             if lowered.startswith(rules.leading_articles):
@@ -391,8 +410,11 @@ def check_segment(
             break
 
     # --- typography -------------------------------------------------------
+    # Glossary keys are registered strings; they may legally contain a curly
+    # apostrophe or a pair of guillemets. Only the surrounding prose is ours.
+    prose_for_chars = GLOSSARY_SPAN_RE.sub(" ", english)
     for char, label in FORBIDDEN_CHARS.items():
-        index = english.find(char)
+        index = prose_for_chars.find(char)
         if index >= 0:
             report("forbidden-char", f"{label}: {snippet(english, index)}")
     if re.search(r"\s[,;:!?](?!\))", english):
@@ -410,22 +432,23 @@ def check_segment(
         report("leaked-token", f"{leaked.group(0)!r}: {snippet(english, leaked.start())}")
 
     # --- localisation of numbers and eras ---------------------------------
-    match = FRENCH_THOUSANDS_RE.search(english)
-    if match:
-        report("french-thousands-separator", rules.thousands_msg.format(match.group(0)))
-    if rules.check_french_decimal:
+    if rules.flag_space_thousands:
+        match = FRENCH_THOUSANDS_RE.search(english)
+        if match:
+            report("french-thousands-separator", f"{match.group(0)!r} {rules.thousands_hint}")
+    if rules.flag_decimal_comma:
         match = FRENCH_DECIMAL_RE.search(english)
         if match:
             report("french-decimal-comma", f"{match.group(0)!r} should use a period")
     match = ROMAN_CENTURY_RE.search(english) or ROMAN_CENTURY_SPELLED_RE.search(english)
     if match:
-        report("roman-ordinal", rules.roman_msg.format(match.group(0)))
+        report("roman-ordinal", f"{match.group(0)!r} {rules.century_hint}")
     match = BC_FRENCH_RE.search(english)
     if match:
-        report("french-era", rules.era_msg.format(match.group(0)))
+        report("french-era", f"{match.group(0)!r} {rules.era_hint}")
 
     # --- residual French --------------------------------------------------
-    match = residual_french(english, rules.leftover_exclude)
+    match = residual_french(english, rules.leftover_extra_skip)
     if match:
         word, context = match
         report("french-leftover", f"{word!r}: {context}")
@@ -439,7 +462,6 @@ def check_course(course_id: str, lang: str, allowed_by_course: dict[str, list[st
     except FileNotFoundError:
         return [Finding(course_id, "-", "missing-translation", f"no {lang} file")]
 
-    rules = LANGS[lang]
     fr_segments = dict(segments(french))
     tr_segments = dict(segments(translated))
 
@@ -458,10 +480,11 @@ def check_course(course_id: str, lang: str, allowed_by_course: dict[str, list[st
 
     allowed = set(allowed_by_course.get(course_id, []))
     allowed_norm = {normalise_term(term): term for term in allowed}
+    rules = rules_for(lang)
 
     for key, english in tr_segments.items():
         check_segment(
-            course_id, key, fr_segments.get(key, ""), english, allowed, allowed_norm, findings, rules
+            course_id, key, fr_segments.get(key, ""), english, allowed, allowed_norm, findings, rules, lang
         )
 
     # Whole-course glossary budget: every French term must survive somewhere.
@@ -483,8 +506,6 @@ def main() -> int:
     parser.add_argument("--json", type=Path, help="Write the full report as JSON")
     parser.add_argument("--rule", action="append", help="Only report these rules")
     args = parser.parse_args()
-    if args.lang not in LANGS:
-        parser.error(f"unsupported --lang {args.lang!r}; known: {', '.join(sorted(LANGS))}")
 
     allowed_by_course = glossary_keys_by_course(args.lang)
     course_ids = [p.stem for p in sorted((CONTENT_ROOT / "fr").glob("*.json"))]
