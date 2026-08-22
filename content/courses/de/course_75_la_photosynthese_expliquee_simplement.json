@@ -1,14 +1,14 @@
 {
   "id": "course_75_la_photosynthese_expliquee_simplement",
-  "title": "Photosynthese einfach erklärt",
-  "subtitle": "Pflanzen & Energie",
+  "title": "Die Photosynthese einfach erklärt",
+  "subtitle": "Pflanzen und Energie",
   "subject": "sciences",
   "subcategory": "Die Erde und das Universum",
-  "description": "Pflanzen leisten etwas Außergewöhnliches: Sie kochen Zucker mit Licht, Wasser und Luft. Und sie schenken uns Sauerstoff.",
+  "description": "Pflanzen tun etwas Außergewöhnliches: Sie kochen Zucker aus Licht, Wasser und Luft. Und sie schenken uns den Sauerstoff dazu.",
   "hero": {
     "image": "la_photosynthese_expliquee_simplement",
     "ratio": "16:9",
-    "hook": "Ein Blatt ist eine Solarküche: Licht, Wasser, Luft ... und hier ist Zucker."
+    "hook": "Ein Blatt ist eine Sonnenküche: Licht, Wasser, Luft… und schon ist Zucker da."
   },
   "sections": [
     {
@@ -18,93 +18,93 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Stellen Sie sich in jedem Blatt eine Miniaturpflanze vor. Es braucht drei alltägliche Zutaten: **Licht der Sonne**, **Wasser** von den Wurzeln und **CO₂** von der Luft. Es produziert **Zucker**, um zu wachsen, und setzt **Sauerstoff** frei."
+          "text": "Stellen Sie sich in jedem Blatt eine Miniaturfabrik vor. Sie nimmt drei banale Zutaten: das **Sonnenlicht**, das **Wasser** der Wurzeln und das **CO₂** der Luft. Herauskommen **Zucker** zum Wachsen und **Sauerstoff**."
         },
         {
           "type": "paragraph",
-          "text": "Dieses Kunststück nennt sich **Photosynthese**. Ohne sie gibt es keine Wälder, keinen atembaren Sauerstoff und fast kein komplexes Leben auf der Erde."
+          "text": "Dieser Kunstgriff heißt **Photosynthese**. Ohne ihn keine Wälder, kein atembarer Sauerstoff, fast kein komplexes Leben auf der Erde."
         }
       ]
     },
     {
       "id": "course_75_la_photosynthese_expliquee_simplement_p1",
-      "title": "Wo kommt es im Blatt vor?",
+      "title": "Wo es im Blatt geschieht",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "In der Pflanzenzelle beherbergen grüne Organellen, die **Chloroplasten**, das . Dieses Pigment fängt hauptsächlich das Blau und Rot des Lichts ein. Grün kehrt zurück: Deshalb erscheinen uns die Blätter grün. [[Das Chlorophyll]]"
+          "text": "In der Pflanzenzelle beherbergen grüne Organellen, die **Chloroplasten**, das [[Chlorophyll]]. Dieses Pigment fängt vor allem das Blau und Rot des Lichts. Das Grün wird zurückgeworfen: darum erscheinen uns die Blätter grün."
         },
         {
           "type": "image",
           "asset": "leaf_photosynthesis_sunlight_chloroplasts",
           "ratio": "auto",
-          "caption": "Blätter fangen Sonnenlicht für die Photosynthese ein."
+          "caption": "Die Blätter fangen das Sonnenlicht für die Photosynthese."
         },
         {
           "type": "paragraph",
-          "text": "Die einfache Gleichung: CO₂ + Wasser + Licht → Zucker + Sauerstoff. Das Gas dringt durch winzige Poren ein [[Spaltöffnungen]], die . Wasser steigt aus den Wurzeln auf. Zucker wird zu Holz, Frucht, Wurzeln; der Sauerstoff gelangt in die Luft."
+          "text": "Die einfache Gleichung: CO₂ + Wasser + Licht → Zucker + Sauerstoff. Das Gas tritt durch winzige Poren ein, die [[Stomata]]. Das Wasser steigt aus den Wurzeln. Der Zucker wird zu Holz, Früchten, Wurzeln; der Sauerstoff geht in die Luft."
         },
         {
           "type": "funFact",
-          "text": "Chlorophyll „verweigert“ Grün. Sie bevorzugt Blau und Rot, da sie ihre Elektronen effektiver anregt und die Energiemaschine in Gang setzt."
+          "text": "Das Chlorophyll “lehnt” Grün ab. Es bevorzugt Blau und Rot, die seine Elektronen wirksamer anregen und die Energiemaschine starten."
         }
       ]
     },
     {
       "id": "course_75_la_photosynthese_expliquee_simplement_p2",
-      "title": "Zwei Schritte: Erfassen, dann erstellen",
+      "title": "Zwei Zeiten: einfangen, dann herstellen",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Zuerst die **Lichtphase**. Licht bricht Wassermoleküle auf. Sauerstoff entweicht. Energie wird in zwei chemischen „Batterien“ gespeichert, der **ATP** und der **NADPH**."
+          "text": "Zuerst die **Lichtphase**. Das Licht spaltet Wassermoleküle. Der Sauerstoff entweicht. Die Energie wird in zwei chemischen “Batterien” gespeichert, dem **ATP** und dem **NADPH**."
         },
         {
           "type": "paragraph",
-          "text": "Als nächstes folgt die Herstellungsphase ****, die [[Der Calvin-Zyklus]], benannt nach dem Chemiker **Melvin Calvin**. Mit der Energie aus den Batterien baut die Pflanze Kohlenstoff aus CO₂ zu Glukose zusammen. Zu diesem Zeitpunkt ist keine direkte Sonneneinstrahlung erforderlich, aber es hängt ganz davon ab, was das Licht zuvor erzeugt hat."
+          "text": "Dann die **Herstellungsphase**, der [[Calvin-Zyklus]], benannt nach dem Chemiker **Melvin Calvin**. Mit der Energie der Batterien baut die Pflanze den Kohlenstoff des CO₂ zu Glucose. Direktes Sonnenlicht braucht diese Stufe nicht, aber sie hängt ganz von dem ab, was das Licht zuvor erzeugt hat."
         },
         {
           "type": "funFact",
-          "text": "Um den Weg des Kohlenstoffs im Blatt zu verfolgen, nutzte Calvin radioaktive Isotope aus der Atombombenforschung. Nobelpreis in **1961**."
+          "text": "Um den Weg des Kohlenstoffs im Blatt zu verfolgen, nutzte Calvin radioaktive Isotope aus der Atombombenforschung. Nobelpreis **1961**."
         }
       ]
     },
     {
       "id": "course_75_la_photosynthese_expliquee_simplement_p3",
-      "title": "Als Sauerstoff den Planeten veränderte",
+      "title": "Als der Sauerstoff den Planeten veränderte",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vor etwa **2,4 Milliarden Tage** begannen photosynthetische Bakterien, **Cyanobakterium**, massiv Sauerstoff freizusetzen. Das ist die **Starke Oxidation**. Für viele Organisationen der damaligen Zeit war es Gift."
+          "text": "Vor etwa **2,4 Milliarden** Jahren beginnen photosynthetische Bakterien, die **Cyanobakterien**, massenhaft Sauerstoff abzugeben. Das ist die **Große Oxidation**. Für viele damalige Organismen war das ein Gift."
         },
         {
           "type": "paragraph",
-          "text": "Dann ermöglichte Sauerstoff den Abbau der Ozonschicht und eine wesentlich effizientere Atmung. Die Luft, die wir atmen, ist im Grunde das „Abfallprodukt“ der Photosynthese über Milliarden von Jahren."
+          "text": "Dann ermöglichte der Sauerstoff die Ozonschicht und eine weit wirksamere Atmung. Die Luft, die wir atmen, ist im Groben der “Abfall” von Milliarden Jahren Photosynthese."
         },
         {
           "type": "funFact",
-          "text": "Etwa **die Hälfte** des Sauerstoffs der Erde stammt aus Phytoplankton in den Ozeanen, nicht nur aus Wäldern."
+          "text": "Etwa **die Hälfte** des irdischen Sauerstoffs kommt vom Phytoplankton der Ozeane, nicht nur von den Wäldern."
         }
       ]
     },
     {
       "id": "course_75_la_photosynthese_expliquee_simplement_p4",
-      "title": "Eine bescheidene Leistung, eine immense Rolle",
+      "title": "Ein bescheidener Wirkungsgrad, eine immense Rolle",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ein Blatt wandelt nur **1 bis 3 %** der empfangenen Sonnenenergie in Biomasse um. Im globalen Maßstab reicht das aus, um Nahrungsketten zu ernähren und enorme Mengen CO₂ zu absorbieren."
+          "text": "Ein Blatt wandelt nur **1 bis 3%** der empfangenen Sonnenenergie in Biomasse. Im Maßstab des Planeten reicht das trotzdem, die Nahrungsketten zu speisen und enorme Mengen CO₂ aufzunehmen."
         },
         {
           "type": "paragraph",
-          "text": "Daher das Interesse an Wäldern, Ozeanen … und sogar an künstlicher Photosynthese für das Klima. Eine Meeresschnecke, *Elysia chlorotica*, geht sogar so weit, Chloroplasten von Algen zu „stehlen“, um ein wenig von Sonnenenergie zu leben."
+          "text": "Daher das Interesse an Wäldern, Ozeanen… und sogar an künstlicher Photosynthese für das Klima. Eine Meeresschnecke, *Elysia chlorotica*, “stiehlt” Chloroplasten von Algen, um ein wenig von Sonnenenergie zu leben."
         },
         {
           "type": "takeaway",
-          "text": "Die Photosynthese wandelt Licht, Wasser und CO₂ in Zucker um und regeneriert Sauerstoff. Es ist das solare Kochen, das die Grundlage fast allen Lebens bildet."
+          "text": "Die Photosynthese verwandelt Licht, Wasser und CO₂ in Zucker und erneuert den Sauerstoff. Sie ist die Sonnenküche am Grund fast allen Lebens."
         }
       ]
     }
