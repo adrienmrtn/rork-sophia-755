@@ -1,14 +1,14 @@
 {
   "id": "course_220_la_desinformation_et_les_fake_news",
-  "title": "Dezinformacja i fałszywe wiadomości",
-  "subtitle": "Leżenie w epoce wirusowej",
+  "title": "Dezinformacja i fałszywe informacje",
+  "subtitle": "Kłamstwo w erze wirusowej",
   "subject": "comprendreLeMonde",
   "subcategory": "Economy & society",
-  "description": "W mediach społecznościowych fałszywe informacje rozprzestrzeniają się 6 razy szybciej niż prawda. Dlaczego i jak się chronić?",
+  "description": "Fałszywe informacje lecą 6 razy szybciej niż prawda w mediach społecznościowych. Czemu, i jak się przed nimi bronić?",
   "hero": {
     "image": "la_desinformation_et_les_fake_news",
     "ratio": "16:9",
-    "hook": "Badanie MIT wykazało, że fałszywe wiadomości rozchodzą się na Twitterze 6 razy szybciej niż prawda. Oto dlaczego."
+    "hook": "Badanie MIT pokazało, że fałszywe informacje lecą 6 razy szybciej niż prawda na Twitterze. Oto czemu."
   },
   "sections": [
     {
@@ -18,85 +18,85 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kłamstwo służące celom politycznym nie jest niczym nowym: jego ślady znaleziono już w starożytności. Jednak Internet i sieci społecznościowe zmieniły sytuację: fałszywe informacje nie krążą już tylko od państwa do jego ludności, ale teraz rozprzestrzeniają się poziomo, między obywatelami."
+          "text": "Kłamać w politycznym celu nie jest niczym nowym: ślady idą aż do starożytności. Ale Internet i media społecznościowe zmieniły reguły: fałszywa informacja nie idzie już tylko od państwa do ludności, rozchodzi się teraz w poziomie, między obywatelami."
         },
         {
           "type": "paragraph",
-          "text": "Ta zmiana stworzyła świat, w którym prawda czasami wydaje się opcjonalna w obliczu wirusowości. Zrozumienie, w jaki sposób rozprzestrzenia się **dezinformacja** i kto na tym zyskuje, stało się niezbędne do utrzymania zaufania między obywatelami."
+          "text": "Ten zwrot stworzył świat, w którym prawda czasem zdaje się opcjonalna wobec wirusowości. Zrozumieć, jak rozchodzi się **dezinformacja** i kto na niej korzysta, stało się kluczowe, żeby zachować zaufanie między obywatelami."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p1",
-      "title": "Dlaczego kłamstwa podróżują szybciej niż prawda",
+      "title": "Czemu kłamstwo leci szybciej niż prawda",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Musimy odróżnić dezinformację, celowo rozpowszechnianą w celu manipulacji, od prostych, uczciwych błędów. Sukces tych fałszywych wiadomości opiera się na tym, co badacze nazywają gospodarką uwagi: algorytmy mediów społecznościowych zaprojektowano tak, aby maksymalizować czas spędzany przed ekranem, a nasze mózgi silniej reagują na emocje i szok niż na niuanse."
+          "text": "Trzeba oddzielić dezinformację, puszczaną świadomie, żeby manipulować, od zwykłej pomyłki w dobrej wierze. Sukces tych fałszywych informacji stoi na tym, co badacze nazywają **gospodarką uwagi**: algorytmy mediów społecznościowych mają maksymalizować czas przed ekranem, a nasze mózgi mocniej reagują na emocję i szok niż na niuans."
         },
         {
           "type": "funFact",
-          "text": "Badanie przeprowadzone przez [[MIT]] opublikowane w 2018 roku wykazało, że fałszywe wiadomości rozprzestrzeniają się około 6 razy szybciej niż zweryfikowane wiadomości na Twitterze, ponieważ wydają się nowsze i bardziej intensywne emocjonalnie."
+          "text": "Badanie [[MIT]] z 2018 pokazało, że fałszywe informacje rozchodzą się około 6 razy szybciej niż sprawdzone na Twitterze, bo wydają się nowsze i mocniejsze emocjonalnie."
         },
         {
           "type": "paragraph",
-          "text": "Algorytmy blokują także internautów w [[filtruj pęcherzyki]]: pokazują im jedynie treści potwierdzające ich już istniejące opinie. Osoba przekonana o teorii spiskowej każdą nową nieprawdziwą informację traktuje wówczas jako dodatkowy dowód, co bardzo utrudnia jej późniejsze sprostowanie."
+          "text": "Algorytmy też budują [[Filtruj bąbelki]]: pokazują tylko treści, które potwierdzają już obecne opinie. Osoba przekonana o teorii spiskowej bierze wtedy każdą nową fałszywą informację za kolejny dowód, a późniejsza korekta staje się bardzo trudna."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p2",
-      "title": "Przemysł kłamstw pomiędzy państwami a zyskiem",
+      "title": "Przemysł kłamstwa, między państwami a zyskiem",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dezinformacja stała się prawdziwym przemysłem. Państwa takie jak Rosja, za pośrednictwem Internet Research Agency, utworzyły tysiące fałszywych automatycznych kont, aby wywołać napięcia w zachodnich demokracjach, nawet nie próbując bronić konkretnego obozu: często celem jest wywołanie chaosu i przekonanie ludzi, że „wszyscy kłamią”."
+          "text": "Dezinformacja stała się prawdziwym przemysłem. Państwa jak Rosja, przez Internet Research Agency, stworzyły tysiące fałszywych, zautomatyzowanych kont, żeby podgrzewać napięcia w zachodnich demokracjach, nawet bez bronienia konkretnej strony: celem często jest chaos i przekonanie, że „wszyscy kłamią”."
         },
         {
           "type": "image",
           "asset": "fake_news_social_media_manipulation_phone",
           "ratio": "4:3",
-          "caption": "Fałszywe informacje rozprzestrzeniają się w ciągu kilku sekund w sieciach społecznościowych."
+          "caption": "Fałszywe informacje rozchodzą się w kilka sekund w mediach społecznościowych."
         },
         {
           "type": "paragraph",
-          "text": "Istnieje również wymiar czysto lukratywny: w mieście Veles w Macedonii Północnej młodzi przedsiębiorcy w 2016 roku bez przekonania politycznego utworzyli sensacyjne strony internetowe, wyłącznie po to, aby zarabiać pieniądze na ruchu generowanym w sieciach społecznościowych. Kłamstwo staje się wówczas prostym, dochodowym towarem."
+          "text": "Jest też czysto zarobkowy wymiar: w mieście Veles, w Macedonii Północnej, młodzi przedsiębiorcy stworzyli w 2016 sensacyjne strony bez żadnego politycznego przekonania, tylko po to, by zarobić na ruchu w mediach społecznościowych. Kłamstwo staje się wtedy zwykłym rentownym towarem."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p3",
-      "title": "Jak oddzielić fakty od fikcji",
+      "title": "Jak oddzielić prawdę od fałszu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "W obliczu tego potopu świat informacji organizuje się sam. **sprawdzanie faktów**, czyli weryfikacja faktów, stało się samodzielną dyscypliną dziennikarską. Agencje takie jak [[AFP]] lub wyspecjalizowane redakcje korzystają z narzędzi wyszukiwania obrazów w celu wykrywania podróbek i analizowania podejrzanych treści."
+          "text": "Wobec tej fali świat informacji się organizuje. **Weryfikacja faktów**, czyli sprawdzanie faktów, stała się osobną dyscypliną dziennikarską. Agencje jak [[AFP]] albo wyspecjalizowane redakcje używają narzędzi do wyszukiwania obrazów, żeby łapać fotomontaże i analizować podejrzane treści."
         },
         {
           "type": "paragraph",
-          "text": "Jednak wyścig pomiędzy atakiem a obroną pozostaje nierówny. Pojawienie się [[Deepfakes]], sfałszowanych przez sztuczną inteligencję filmów, w których dana osoba jest zmuszana do mówienia czegokolwiek z niepokojącym realizmem, sprawia, że ​​niewprawnemu oku coraz trudniej jest rozróżnić prawdę od fałszu."
+          "text": "Ale wyścig ataku i obrony zostaje nierówny. Pojawienie się [[Deepfakes]], filmów sfałszowanych przez sztuczną inteligencję, w których każe się komuś mówić cokolwiek z niepokojącym realizmem, coraz bardziej utrudnia odróżnienie prawdy od fałszu niewytrenowanemu oku."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p4",
-      "title": "Odnajdywanie zaufania w świecie obrazów",
+      "title": "Odzyskać zaufanie w świecie obrazów",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Długoterminowe skutki dezinformacji są głębokie: mówimy obecnie o epoce **postprawda**, w której obiektywne fakty mają czasami mniejszą wagę niż emocje i osobiste przekonania. Ta uogólniona relatywizacja osłabia pewność niezbędną do wspólnego stawienia czoła globalnym wyzwaniom, takim jak klimat czy zdrowie publiczne."
+          "text": "Długi skutek dezinformacji jest głęboki: mówi się dziś o erze **postprawdy**, w której fakty obiektywne czasem ważą mniej niż emocje i osobiste wierzenia. To powszechne relatywizowanie kruszy zaufanie potrzebne, żeby razem stawić czoła światowym wyzwaniom, jak klimat albo zdrowie publiczne."
         },
         {
           "type": "paragraph",
-          "text": "Najpewniejszą odpowiedzią pozostaje edukacja medialna: nauka weryfikowania źródła, porównywania kilku informacji i zrozumienia, jak działają algorytmy. Niektórzy polegają również na technologiach certyfikacji treści, aby zagwarantować pochodzenie filmu od momentu jego powstania. Tymczasem czujność wszystkich pozostaje pierwszą linią obrony."
+          "text": "Najtwardsza odpowiedź zostaje edukacją medialną: nauczyć się sprawdzać źródło, krzyżować kilka informacji i rozumieć, jak działają algorytmy. Niektórzy stawiają też na technologie certyfikacji treści, żeby gwarantować pochodzenie filmu od chwili powstania. Na razie czujność każdego zostaje pierwszą linią obrony."
         },
         {
           "type": "takeaway",
-          "text": "Fałszywe informacje rozprzestrzeniają się w sieciach społecznościowych średnio 6 razy szybciej niż prawda, ponieważ wykorzystują nasze emocje i pragnienie nowości. W obliczu deepfakes i farm trolli edukacja medialna pozostaje najlepszą bronią pozwalającą zachować zbiorowe zaufanie."
+          "text": "Fałszywe informacje rozchodzą się średnio 6 razy szybciej niż prawda w mediach społecznościowych, bo żerują na emocjach i głodzie nowości. Wobec deepfakes i farm trolli edukacja medialna zostaje najlepszą bronią, żeby zachować zbiorowe zaufanie."
         }
       ]
     }

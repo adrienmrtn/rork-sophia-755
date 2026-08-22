@@ -4,11 +4,11 @@
   "subtitle": "Ziemia i Słońce",
   "subject": "sciences",
   "subcategory": "Our daily life explained",
-  "description": "Pory roku nie wynikają z tego, że Ziemia jest bliżej lub dalej od Słońca. Prawdziwą przyczyną jest nachylenie osi Ziemi.",
+  "description": "Pory roku nie biorą się stąd, że Ziemia jest bliżej albo dalej od Słońca. Prawdziwa przyczyna to nachylenie osi Ziemi.",
   "hero": {
     "image": "pourquoi_y_a_t_il_des_saisons",
     "ratio": "16:9",
-    "hook": "Nie, lato nie nadchodzi, bo Ziemia zbliża się do Słońca."
+    "hook": "Nie, lato nie przychodzi dlatego, że Ziemia zbliża się do Słońca."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Wiele osób uważa, że ​​lato nadchodzi, gdy Ziemia jest **bliżej** Słońca, a zima przychodzi, gdy jest **daleko**. To jest fałszywe. I od razu to widzimy: kiedy we Francji jest lato, w Australii jest zima."
+          "text": "Wielu ludzi myśli, że lato przychodzi, gdy Ziemia jest **bliżej** Słońca, a zima, gdy jest **dalej**. To nieprawda. Widać to od razu: gdy we Francji jest lato, w Australii jest zima."
         },
         {
           "type": "paragraph",
-          "text": "Prawdziwe wyjaśnienie kryje się w jednym: oś obrotu Ziemi jest **pochylona**, nachylona względem płaszczyzny jej orbity wokół Słońca."
+          "text": "Prawdziwe wyjaśnienie sprowadza się do jednego: oś obrotu Ziemi jest **nachylona**, przechylona względem płaszczyzny orbity wokół Słońca."
         }
       ]
     },
@@ -33,17 +33,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ziemia obraca się wokół własnej osi w **24 godziny**: jest dzień i noc. Okrąża także Słońce w **rok rok** po orbicie w kształcie **elipsa**, czyli lekko spłaszczonego koła. Jednak jego oś, wyimaginowana linia łącząca biegun północny z biegunem południowym, nie jest prosta w stosunku do orbity. Pochyla się w przybliżeniu **23,5 stopnia**: jest to [[Nachylenie osiowe Ziemi (23,5°)]]."
+          "text": "Ziemia obraca się wokół własnej osi w **24 godziny**: to dzień i noc. Krąży też wokół Słońca w **rok** po orbicie w kształcie **elipsy**, lekko spłaszczonego koła. Ale jej oś, wyobrażona linia od bieguna północnego do południowego, nie stoi prosto względem orbity. Pochyla się o około **23,5 stopnia**: to [[Nachylenie osiowe Ziemi (23,5°)]]."
         },
         {
           "type": "image",
           "asset": "earth_summer_winter_seasons_illustration",
           "ratio": "auto",
-          "caption": "Nachylenie osi Ziemi wyjaśnia cykl pór roku."
+          "caption": "Nachylenie osi Ziemi wyjaśnia cykl pór roku"
         },
         {
           "type": "paragraph",
-          "text": "To nachylenie pozostaje mniej więcej w tym samym kierunku przez cały rok. Zawsze wskazuje na ten sam obszar nieba, w pobliżu Gwiazdy Polarnej. Wynik: w zależności od tego, gdzie na orbicie znajduje się Ziemia, jedna półkula „patrzy” na Słońce bardziej, druga mniej."
+          "text": "To nachylenie przez cały rok trzyma mniej więcej ten sam kierunek. Wskazuje zawsze ten sam rejon nieba, blisko Gwiazdy Polarnej. Skutek: zależnie od miejsca Ziemi na orbicie jedna półkula „patrzy” bardziej na Słońce, druga mniej."
         }
       ]
     },
@@ -54,45 +54,45 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Latem na półkuli północnej biegun północny pochyla się w stronę Słońca. Dni są dłuższe: wzrasta **fotoperiod**, stosunek długości dnia do nocy. Promienie docierają również bardziej „prosto” na ziemię: energia jest skoncentrowana na mniejszej powierzchni. Więc jest cieplej."
+          "text": "Latem na półkuli północnej biegun północny pochyla się ku Słońcu. Dni są dłuższe: **fotoperiod**, stosunek długości dnia do nocy, rośnie. Promienie padają też bardziej „prosto” na grunt: energia zbiera się na mniejszej powierzchni. Jest więc cieplej."
         },
         {
           "type": "funFact",
-          "text": "W styczniu Ziemia jest jeszcze trochę **Słońce bliżej** niż w lipcu: jest to **peryhelium**, najbliższy punkt orbity. A mimo to panuje tu zima. Dowód na to, że odległość nie wyjaśnia pór roku."
+          "text": "W styczniu Ziemia jest nawet trochę **bliżej** Słońca niż w lipcu: to **peryhelium**, najbliższy punkt orbity. A jednak u nas jest zima. Dowód, że odległość nie tłumaczy pór roku."
         },
         {
           "type": "paragraph",
-          "text": "Zimą jest odwrotnie: krótkie dni, bardziej ukośne promienie, energia rozłożona na większej powierzchni. Mniej odbieranego ciepła. **przesilenie**, czas, w którym Słońce osiąga swoje najbardziej wysunięte na północ lub południe położenie, wyznacza początek lata lub zimy."
+          "text": "Zimą jest odwrotnie: krótkie dni, bardziej skośne promienie, energia rozłożona na większej powierzchni. Mniej przyjętego ciepła. **Przesilenia**, chwile gdy Słońce sięga pozycji najdalej na północ albo na południe, znaczą początek lata albo zimy."
         }
       ]
     },
     {
       "id": "course_45_pourquoi_y_a_t_il_des_saisons_p3",
-      "title": "A w pobliżu równika?",
+      "title": "A blisko równika?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "W pobliżu **równik**, wyimaginowanej linii dzielącej Ziemię na dwie półkule, nachylenie zmienia nieznacznie długość dnia. Tak naprawdę nie ma czterech pór roku, jak w Europie, ale raczej okresy suchsze i bardziej wilgotne."
+          "text": "Blisko **równika**, wyobrażonej linii, która dzieli Ziemię na dwie półkule, nachylenie mało zmienia długość dnia. Nie ma naprawdę czterech pór jak w Europie, raczej okresy suchsze i wilgotniejsze."
         },
         {
           "type": "paragraph",
-          "text": "W **słupy** efekt jest ekstremalny: kilka miesięcy nieprzerwanego dnia latem i kilka miesięcy nocy zimą. Kontrast jest tam znacznie silniejszy niż we Francji."
+          "text": "Na **biegunach** efekt jest skrajny: kilka miesięcy ciągłego dnia latem, kilka miesięcy nocy zimą. Kontrast jest tam dużo ostrzejszy niż we Francji."
         }
       ]
     },
     {
       "id": "course_45_pourquoi_y_a_t_il_des_saisons_p4",
-      "title": "Planeta bez pochylenia",
+      "title": "Planeta bez nachylenia",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Gdyby oś Ziemi była idealnie prosta, każde miejsce otrzymywałoby mniej więcej taką samą ilość światła słonecznego przez cały rok. Nigdy więcej prawdziwego lata, nigdy więcej prawdziwej zimy. Klimat, kultura, migracje zwierząt: wszystko byłoby inne."
+          "text": "Gdyby oś Ziemi stała całkiem prosto, każde miejsce dostawałoby mniej więcej tyle samo słońca przez cały rok. Koniec prawdziwego lata, koniec prawdziwej zimy. Klimat, uprawy, migracje zwierząt: wszystko wyglądałoby inaczej."
         },
         {
           "type": "takeaway",
-          "text": "Pory roku wynikają z nachylenia osi Ziemi, w przybliżeniu **23,5°**, a nie odległości od Słońca. Jedna półkula pochyla się w stronę Słońca: jest lato. Drugi skłania się ku czemuś przeciwnemu: jest zima."
+          "text": "Pory roku biorą się z **nachylenia** osi Ziemi, około **23,5°**, nie z odległości od Słońca. Jedna półkula pochyla się ku Słońcu: to lato. Druga pochyla się w przeciwną stronę: to zima."
         }
       ]
     }

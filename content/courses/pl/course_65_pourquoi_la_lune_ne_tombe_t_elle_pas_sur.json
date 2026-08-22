@@ -4,11 +4,11 @@
   "subtitle": "Orbita i grawitacja",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "Księżyc nieustannie opada w stronę Ziemi. Po prostu za każdym razem za tym tęskni. To właśnie jest orbita.",
+  "description": "Księżyc spada ku Ziemi bez przerwy. Po prostu za każdym razem ją mija. Właśnie to jest orbita.",
   "hero": {
     "image": "pourquoi_la_lune_ne_tombe_pas",
     "ratio": "16:9",
-    "hook": "Księżyc opada w naszą stronę. Po prostu tęskni za Ziemią na każdym kroku."
+    "hook": "Księżyc spada ku nam. Po prostu za każdym okrążeniem mija Ziemię."
   },
   "sections": [
     {
@@ -18,40 +18,40 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Jeśli grawitacja Ziemi przyciąga Księżyc, dlaczego nie uderza on w nas? Odpowiedź wydaje się dziwna: Księżyc **rzeczywiście spada** w stronę Ziemi. Po prostu tęskni za tym w każdej chwili."
+          "text": "Jeśli ziemska grawitacja ciągnie Księżyc, czemu nie roztrzaska się o nas? Odpowiedź brzmi dziwnie: Księżyc naprawdę **spada** ku Ziemi. Tylko za każdym razem ją mija."
         },
         {
           "type": "paragraph",
-          "text": "Ta równowaga między opadaniem a prędkością boczną to **orbitalny**, zakrzywiona trajektoria wokół gwiazdy. Angielski fizyk **Izaaka Newtona** jako pierwszy połączył upadek jabłka i ruch gwiazd w ten sam sposób."
+          "text": "Ta równowaga między spadkiem a prędkością w bok to **orbita**, krzywa droga wokół ciała niebieskiego. Angielski fizyk **Isaac Newton** jako pierwszy spiął spadek jabłka i ruch gwiazd tą samą myślą."
         },
         {
           "type": "funFact",
-          "text": "Gdybyś ważył **60 kg** na Ziemi, na Księżycu ważyłbyś tylko około **10**: jego grawitacja jest sześciokrotnie słabsza."
+          "text": "Gdybyś ważył **60 kg** na Ziemi, na Księżycu ważyłbyś tylko około **10**: jego grawitacja jest sześć razy słabsza."
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p1",
-      "title": "Wyimaginowany kanon Newtona",
+      "title": "Wyimaginowana armata Newtona",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Newton wyobraża sobie armatę na szczycie góry tak wysoką, że wyłoniłaby się z atmosfery. Strzelamy piłką poziomo. Przy małej mocy szybko spada. Z większą siłą idzie dalej."
+          "text": "Newton wyobraża sobie armatę na szczycie góry tak wysokiej, że wychodzi z atmosfery. Strzelasz kulą poziomo. Przy małej sile szybko spada. Przy większej leci dalej."
         },
         {
           "type": "image",
           "asset": "newton_cannonball_orbit_thought_experiment",
           "ratio": "auto",
-          "caption": "Eksperyment myślowy Newtona z kulą armatnią: klucz do zrozumienia orbity."
+          "caption": "Eksperyment myślowy z kulą armatnią Newtona: klucz do orbity."
         },
         {
           "type": "paragraph",
-          "text": "Przy określonej prędkości, zwanej [[Prędkość orbitalna]], dzieje się coś niezwykłego. Gdy piłka spada, Ziemia, która jest okrągła, zakrzywia się pod nią w tym samym tempie. Pocisk spada… nawet nie dotykając ziemi. Znajduje się w **im opuścićm spadku**, ciągnięty przez grawitację bez rozbicia się."
+          "text": "Przy precyzyjnej prędkości, zwanej [[Prędkość orbitalna]], dzieje się coś szczególnego. Gdy kula spada, Ziemia, która jest okrągła, zgina się pod nią w tym samym tempie. Pocisk spada... i nigdy nie dotyka gruntu. Jest w **stałym spadku swobodnym**, ciągnięty przez grawitację, a jednak nie rozbija się."
         },
         {
           "type": "paragraph",
-          "text": "Księżyc robi to samo. Ma wystarczającą prędkość boczną, aby zamienić upadek w pętlę. Bez tej prędkości zanurkowałby prosto w naszą stronę."
+          "text": "Księżyc robi to samo. Ma dość prędkości w bok, żeby zamienić spadek w pętlę. Bez tej prędkości runąłby prosto na nas."
         }
       ]
     },
@@ -62,57 +62,57 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Księżyc krąży wokół około **384 000 km**. Jego prędkość poprzeczna wynosi w przybliżeniu **1 km/s**. Gdyby zatrzymał się nagle, rozbiłby się w ciągu kilku dni. Gdyby grawitacja nagle zniknęła, poruszałaby się w przestrzeni po linii prostej, zgodnie z zasadą [[Bezwładność]]: ciało utrzymuje prędkość, jeśli nie jest zwalniane."
+          "text": "Księżyc krąży w odległości około **384.000 km**. Jego prędkość boczna to około **1 km/s**. Gdyby stanął nagle, roztrzaskałby się w kilka dni. Gdyby grawitacja zniknęła naraz, poszedłby prosto w przestrzeń, zgodnie z zasadą [[Bezwładność]]: ciało zachowuje prędkość, jeśli nic go nie hamuje."
         },
         {
           "type": "paragraph",
-          "text": "[[Prawo powszechnego ciążenia Newtona]] mówi, że każda masa przyciąga każdą inną masę i to przyciąganie maleje wraz z odległością, a dokładniej z kwadratem odległości. Im bliżej znajduje się satelita, tym szybciej musi lecieć, aby uniknąć upadku."
+          "text": "[[Prawo powszechnego ciążenia Newtona]] mówi, że każda masa przyciąga każdą inną masę, a przyciąganie maleje z odległością, ściślej z kwadratem odległości. Im bliżej satelita, tym szybciej musi iść, żeby nie spaść."
         },
         {
           "type": "funFact",
-          "text": "Międzynarodowa Stacja Kosmiczna, znajdująca się na wysokości zaledwie **400 km**, porusza się z prędkością około **28 000 km/h**. Okrąża Ziemię w **90 minut**. Dalej Księżyc zajmuje **27,3 dnia**."
+          "text": "Międzynarodowa Stacja Kosmiczna, zaledwie **400 km** nad Ziemią, pędzi z prędkością około **28.000 km/h**. Okrąża Ziemię w **90 minut**. Księżyc, dalej, potrzebuje **27,3 dnia**."
         },
         {
           "type": "paragraph",
-          "text": "Zatem orbita nie jest magią. To ciągły kompromis pomiędzy „Padam” a „Poruszam się zbyt szybko, aby trafić”."
+          "text": "Orbita nie jest więc magią. To stały kompromis między „spadam” a „idę za szybko, żeby trafić”."
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p3",
-      "title": "Pływy odpychają Księżyc",
+      "title": "Pływy odsuwają Księżyc",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Orbita nie jest ustalona. W grę wchodzą [[Siły pływowe]]. Grawitacja Księżyca oddziałuje mocniej na stronę Ziemi zwróconą ku niemu niż na środek. Deformuje oceany i tworzy wybrzuszenie wody."
+          "text": "Orbita nie stoi w miejscu. W grę wchodzą [[Siły pływowe]]. Grawitacja Księżyca ciągnie mocniej tę stronę Ziemi, która jest do niego zwrócona, niż środek. Odkształca oceany i robi garb wody."
         },
         {
           "type": "paragraph",
-          "text": "Ponieważ Ziemia obraca się wokół własnej osi szybciej niż Księżyc wokół niej, grzbiet ten przesuwa się nieco przed Księżyc. Tarcie bardzo nieznacznie spowalnia obrót Ziemi: nasze dni wydłużają się o około **1,4 milisekundy** na stulecie. W zamian Księżyc oddala się o około **3,8 cm** rocznie."
+          "text": "Ponieważ Ziemia kręci się wokół siebie szybciej, niż Księżyc krąży wokół niej, ten garb wyprzedza Księżyc trochę. Tarcie bardzo lekko spowalnia obrót Ziemi: nasze doby wydłużają się o około **1,4 milisekundy** na stulecie. W zamian Księżyc oddala się o około **3,8 cm** rocznie."
         },
         {
           "type": "paragraph",
-          "text": "Miliardy lat temu Księżyc był znacznie bliżej. Przypływy były ogromne. To zmieszanie wody i chemii mogło pomóc wczesnym formom życia. A dinozaury żyły na Ziemi, gdzie dni trwały tylko **22 lub 23 godziny**."
+          "text": "Miliardy lat temu Księżyc był dużo bliżej. Pływy były ogromne. To mieszanie wody i chemii mogło pomóc pierwszym formom życia. A dinozaury żyły na Ziemi, gdzie doby trwały tylko **22 albo 23 godziny**."
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p4",
-      "title": "Zaćmienia… na razie",
+      "title": "Zaćmienia... na razie",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dzisiaj, dzięki geometrycznemu zbiegowi okoliczności, Słońce jest około **400 razy** większe od Księżyca, ale także **400 razy** dalej. Zatem oba mają ten sam **rozmiarowy pozor**, czyli kąt, pod jakim je widzimy na niebie. Możliwe są całkowite zaćmienia Słońca."
+          "text": "Dziś, przez zbieżność geometryczną, Słońce jest około **400 razy** większe niż Księżyc, ale też **400 razy** dalej. Oba mają więc tę samą **wielkość pozorną**, kąt, pod którym je widzisz na niebie. Całkowite zaćmienia Słońca są możliwe."
         },
         {
           "type": "paragraph",
-          "text": "Za około **600 milionów łac** Księżyc będzie zbyt daleko, aby całkowicie zasłonić Słońce. Pozostaną tylko zaćmienia pierścieniowe: pierścień światła wokół dysku Księżyca. W bardzo dłuższej perspektywie Ziemia i Księżyc mogłyby się zsynchronizować: każde ciało zawsze pokazywałoby drugiemu tę samą twarz. Ale Słońce, stając się **czerwony olbrzym**, końcową fazą gwiazdy takiej jak nasza, przekształci układ znacznie wcześniej."
+          "text": "Za około **600 milionów lat** Księżyc będzie za daleko, żeby całkiem zasłonić Słońce. Zostaną tylko zaćmienia obrączkowe: pierścień światła wokół tarczy Księżyca. W bardzo długim terminie Ziemia i Księżyc mogłyby się zsynchronizować: każde ciało pokazywałoby drugiej zawsze tę samą twarz. Ale Słońce, stając się **czerwonym olbrzymem**, końcową fazą gwiazdy jak nasza, zmieni układ dużo wcześniej."
         },
         {
           "type": "takeaway",
-          "text": "Księżyc nie rozbija się, ponieważ jego prędkość poprzeczna równoważy przyciąganie Ziemi: znajduje się on w ciągłym swobodnym spadku. I nadal oddala się o około **3,8 cm** rocznie."
+          "text": "Księżyc nie roztrzaska się, bo jego prędkość boczna równoważy ziemskie przyciąganie: jest w stałym spadku swobodnym. I wciąż oddala się o około **3,8 cm** rocznie."
         }
       ]
     }

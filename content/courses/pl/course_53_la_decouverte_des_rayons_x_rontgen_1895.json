@@ -1,14 +1,14 @@
 {
   "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895",
-  "title": "Odkrycie promieni rentgenowskich",
-  "subtitle": "Roentgena, 1895",
+  "title": "Odkrycie promieni X",
+  "subtitle": "Röntgen, 1895",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "W 1895 roku Wilhelm Röntgen odkrył niewidzialne promieniowanie zdolne przenikać przez materię. W ciągu kilku miesięcy w medycynie nastąpiła rewolucja.",
+  "description": "W 1895 roku Wilhelm Röntgen odkrywa niewidzialne promieniowanie zdolne przenikać materię. W kilka miesięcy medycyna widzi w tym rewolucję.",
   "hero": {
     "image": "la_decouverte_des_rayons_x_rontgen",
     "ratio": "16:9",
-    "hook": "Ręka, kości, zdjęcie. Medycyna już nigdy nie będzie ślepa."
+    "hook": "Dłoń, kości, zdjęcie. Medycyna już nigdy nie będzie ślepa."
   },
   "sections": [
     {
@@ -18,22 +18,22 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**8 listopada 1895** w Würzburgu (Niemcy) fizyk **Wilhelma Röntgena** zauważa ekran, który świeci... mimo że nie ma na niego wpływu światło widzialne. Coś niewidzialnego przechodzi przez pokój."
+          "text": "**8 listopada 1895**, w Würzburgu (Niemcy), fizyk **Wilhelm Röntgen** zauważa ekran, który świeci, choć nie trafia weń światło widzialne. Coś niewidzialnego przenika pokój."
         },
         {
           "type": "paragraph",
-          "text": "Nazywa to promieniami **X**, gdzie „X” oznacza „nieznane”. W ciągu kilku tygodni sfotografował kości dłoni swojej żony. Narodziła się radiologia."
+          "text": "Nazywa to **promieniami X**, a „X” znaczy „nieznane”. W kilka tygodni fotografuje kości dłoni swojej żony. Rodzi się radiologia."
         }
       ]
     },
     {
       "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p1",
-      "title": "Wypadek w laboratorium",
+      "title": "Przypadek laboratoryjny",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Röntgen pracuje z lampą, w której elektrony uderzają w cel. Przykrył tubę czarnym kartonem. Jednakże ekran fluorescencyjny świeci z daleka. Rozumie, że z tuby wydobywa się niewidzialne promieniowanie."
+          "text": "Röntgen pracuje z rurką, w której elektrony uderzają w tarczę. Zakrył rurkę czarną tekturą. A jednak ekran fluorescencyjny świeci z daleka. Rozumie, że z rurki wychodzi niewidzialne promieniowanie."
         },
         {
           "type": "image",
@@ -43,39 +43,39 @@
         },
         {
           "type": "funFact",
-          "text": "Röntgen nigdy nie złożył patentu na promienie rentgenowskie. Chciał, aby cała nauka mogła swobodnie z nich korzystać."
+          "text": "Röntgen nigdy nie złożył patentu na promienie X. Chciał, żeby cała nauka mogła z nich korzystać swobodnie."
         }
       ]
     },
     {
       "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p2",
-      "title": "Medycyna chwyta narzędzie",
+      "title": "Medycyna bierze narzędzie",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "early_x_ray_medical_radiograph",
           "ratio": "4:3",
-          "caption": "Bardzo szybko lekarze i wojsko zastosowali promienie rentgenowskie."
+          "caption": "Bardzo szybko lekarze i armie używają promieni X."
         },
         {
           "type": "paragraph",
-          "text": "Wcześniej, aby „zobaczyć” pęknięcie lub kulę, często trzeba było ją otworzyć. Za pomocą promieni rentgenowskich uzyskujemy obraz wnętrza bez cięcia. Szpitale i armie wdrażają tę technikę w zawrotnym tempie."
+          "text": "Wcześniej, żeby „zobaczyć” złamanie albo kulę, często trzeba było otwierać. Z promieniami X dostajesz obraz wnętrza bez cięcia. Szpitale i armie biorą technikę z szaloną prędkością."
         }
       ]
     },
     {
       "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p3",
-      "title": "Długo ignorowane niebezpieczeństwo",
+      "title": "Niebezpieczeństwo długo ignorowane",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Na początku ignorujemy ryzyko. Operatorzy godzinami wykonują zdjęcia rentgenowskie. Oparzenia, następnie pojawiają się nowotwory. Zrozumienie, że promienie rentgenowskie są potężne… i niebezpieczne, zajmie trochę czasu."
+          "text": "Na początku ryzyka się nie zna. Operatorzy robią zdjęcia godzinami. Pojawiają się oparzenia, potem nowotwory. Minie czas, zanim zrozumiemy, że promienie X są potężne i groźne."
         },
         {
           "type": "paragraph",
-          "text": "Dziś chronimy pacjentów i opiekunów: ograniczone dawki, ołowiane fartuchy, rygorystyczne kontrole."
+          "text": "Dziś chroni się pacjentów i personel: ograniczone dawki, ołowiane fartuchy, ścisła kontrola."
         }
       ]
     },
@@ -86,11 +86,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Promienie rentgenowskie utorowały drogę całemu współczesnemu obrazowaniu: skanerom, kontroli przemysłowej, a nawet badaniu struktury kryształów (później przydatnemu do DNA)."
+          "text": "Promienie X otworzyły drogę całej nowoczesnej obrazowości: tomografom, kontroli przemysłowej, a nawet badaniu struktury kryształów (przydatne później przy DNA)."
         },
         {
           "type": "takeaway",
-          "text": "W **1895** Röntgen odkrył promienie rentgenowskie, niewidzialne promieniowanie przechodzące przez materię. Medycyna zyskuje nową perspektywę... pod warunkiem kontroli ryzyka."
+          "text": "W **1895** Röntgen odkrywa promienie X, niewidzialne promieniowanie, które przenika materię. Medycyna zyskuje nowe spojrzenie, o ile opanuje ryzyko."
         }
       ]
     }

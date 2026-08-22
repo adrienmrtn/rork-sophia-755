@@ -1,14 +1,14 @@
 {
   "id": "course_170_meduse_et_persee",
   "title": "Meduza i Perseusz",
-  "subtitle": "Spojrzenie, które przeraża",
+  "subtitle": "Wzrok, który petryfikuje",
   "subject": "mythologie",
   "subcategory": "Greece: the gods",
-  "description": "Meduza skamieniała spojrzeniem. Perseusz pokonuje ją za pomocą lustrzanej tarczy, a następnie ratuje Andromedę. Głowa Gorgony staje się symbolem ochronnym.",
+  "description": "Meduza petryfikuje jednym spojrzeniem. Perseusz zwycięża dzięki tarczy-lustrze, potem ratuje Andromedę. Głowa Gorgony staje się znakiem ochrony.",
   "hero": {
     "image": "meduse_et_persee",
     "ratio": "16:9",
-    "hook": "Spojrzenie, które zmienia życie w kamień. Bohater, który tylko odważa się spojrzeć w odbicie."
+    "hook": "Spojrzenie, które zmienia życie w kamień. Bohater, który ośmiela się patrzeć tylko na odbicie."
   },
   "sections": [
     {
@@ -18,86 +18,86 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mit o **Perseuszu** i **Meduzy** to jedna z największych greckich przygód. To nie tylko walka z potworem. To także opowieść o pięknie zamienionym w horror i o bohaterze, który zwycięża sprytem."
+          "text": "Mit **Perseusza** i **Meduzy** należy do wielkich greckich przygód. To nie tylko walka z potworem. To też historia urody zmienionej w zgrozę i bohatera, który wygrywa samą przebiegłością."
         },
         {
           "type": "paragraph",
-          "text": "Meduza, [[gorgona]], petryfikuje każdego, kto napotka jej wzrok. Perseusz, aby przeżyć, zgadza się widzieć niebezpieczeństwo tylko przez lustro."
+          "text": "Meduza, [[gorgona]], petryfikuje każdego, kto skrzyżuje z nią wzrok. Perseusz, żeby przeżyć, zgadza się widzieć niebezpieczeństwo tylko w lustrze."
         }
       ]
     },
     {
       "id": "course_170_meduse_et_persee_p1",
-      "title": "Od kapłanki do potwora",
+      "title": "Z kapłanki w potwora",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Zdaniem Owidiusza [[Metamorfozy]] Meduza nie jest przede wszystkim potworem. Jest to młoda kobieta o jasnych włosach, kapłanka w świątyni **Atena**, bogini mądrości. Jej uroda przyciąga **Posejdona**, boga mórz, który gwałci ją w sanktuarium."
+          "text": "Według poematu [[Metamorfozy]] Owidiusza Meduza najpierw nie jest potworem. Jest młodą kobietą o lśniących włosach, kapłanką w świątyni **Ateny**, bogini mądrości. Jej uroda przyciąga **Posejdona**, boga mórz, który gwałci ją w sanktuarium."
         },
         {
           "type": "paragraph",
-          "text": "W starożytnej logice tragicznej Atena karze ofiarę. Włosy Meduzy zmieniają się w węże. Jego wygląd **paraliżować**. Wygnana na krańce świata wraz z siostrami Steno i Euryale, mieszka w jaskini otoczonej posągami: nieszczęśników, którzy ją widzieli."
+          "text": "W tragicznej logice starożytnej Atena karze ofiarę. Włosy Meduzy stają się wężami. Jej spojrzenie **petryfikuje**. Wygnana na skraj świata z siostrami Steno i Euryale, żyje w grocie otoczonej posągami: nieszczęśnikami, którzy ją zobaczyli."
         },
         {
           "type": "image",
           "asset": "medusa_gorgon_snakes_hair_caravaggio_painting",
           "ratio": "4:3",
-          "caption": "Meduza, Gorgona o zabójczym spojrzeniu."
+          "caption": "Meduza, Gorgona o śmiertelnym wzroku"
         },
         {
           "type": "funFact",
-          "text": "Krew z lewego boku Meduzy była śmiertelną trucizną. Ten po prawej stronie potrafił wskrzeszać zmarłych: tajemnicę, którą Atena powierzyła później **Asklepiusowi**, bogu medycyny."
+          "text": "Krew z lewej strony Meduzy była śmiertelną trucizną. Ta z prawej mogła wskrzeszać umarłych: sekret, który Atena powierzyła potem **Asklepiosowi**, bogu medycyny."
         }
       ]
     },
     {
       "id": "course_170_meduse_et_persee_p2",
-      "title": "Perseusz zbroi się przeciwko niemożliwemu",
+      "title": "Perseusz zbroi się przeciw niemożliwemu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Król **Polidektes** chce zabrać Perseusza, aby uwieść jego matkę **Danaé**. Stawia przed nią samobójcze wyzwanie: przywróć głowę Meduzy. Perseusz jest synem **Zeusa**. Bogowie mu pomagają."
+          "text": "Król **Polidektes** chce odsunąć Perseusza, żeby uwieść jego matkę **Danae**. Wyznacza mu samobójcze zadanie: przynieść głowę Meduzy. Perseusz jest synem **Zeusa**. Bogowie mu pomagają."
         },
         {
           "type": "paragraph",
-          "text": "**Hermès** daje mu skrzydlate sandały i [[harfa]], ultraostry zakrzywiony miecz. **Hades** pożycza mu [[Kinee]], hełm niewidzialności. Atena udziela zdecydowanej rady: swojej tarczy z polerowanego brązu, której można używać jako **żyrandol**."
+          "text": "**Hermes** daje mu skrzydlate sandały i [[Harpa]], zakrzywiony, niezwykle ostry miecz. **Hades** pożycza mu [[Kinee]], hełm niewidzialności. Atena daje decydującą radę: swoją tarczę z wypolerowanego brązu, do użycia jako **lustro**."
         },
         {
           "type": "image",
           "asset": "perseus_mirror_shield_medusa_painting",
           "ratio": "4:3",
-          "caption": "Perseusz zbliża się do Meduzy, patrząc tylko na swoje odbicie."
+          "caption": "Perseusz zbliża się do Meduzy, patrząc tylko na odbicie"
         },
         {
           "type": "paragraph",
-          "text": "Perseusz zaskakuje śpiącą Meduzę. Kierując się odbiciem, odcina sobie głowę. Od dekoltu sprężynka [[Pegaz, zrodzony z krwi Meduzy]] i gigant [[Chrysaora]]. Meduza nadal była w ciąży z Posejdonem."
+          "text": "Perseusz zastaje Meduzę śpiącą. Prowadzony odbiciem, ścina jej głowę. Z karku wytryskują [[Pegaz, zrodzony z krwi Meduzy]] i olbrzym [[Chrysaora]]. Meduza była jeszcze brzemienna z Posejdonem."
         }
       ]
     },
     {
       "id": "course_170_meduse_et_persee_p3",
-      "title": "Andromeda i Powrót",
+      "title": "Andromeda i powrót",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Głowa zachowuje swoją moc. Perseusz umieszcza go w [[Kibisi]], magicznej torbie. Lecąc nad Etiopią, widzi księżniczkę **Andromeda** przykutą do skały. Jest oferowany **Keto**, potworowi morskiemu wysłanemu przez Posejdona, aby ukarać dumę jego matki Kasjopei."
+          "text": "Głowa zachowuje moc. Perseusz chowa ją w [[Kibisi]], magicznym worku. Przelatując nad Etiopią, widzi księżniczkę **Andromedę** przykutą do skały. Oddano ją **Ketosowi**, morskiemu potworowi posłanemu przez Posejdona, by ukarać pychę jej matki Kasjopei."
         },
         {
           "type": "image",
           "asset": "perseus_rescue_andromeda_sea_monster_painting",
           "ratio": "4:3",
-          "caption": "Perseusz uwalnia Andromedę za pomocą głowy Meduzy."
+          "caption": "Perseusz uwalnia Andromedę dzięki głowie Meduzy"
         },
         {
           "type": "funFact",
-          "text": "Niektóre legendy mówią, że Perseusz stworzył czerwony koral, umieszczając głowę Meduzy na wodorostach: krew stwardniała rośliny."
+          "text": "Część legend mówi, że Perseusz stworzył czerwony koral, kładąc głowę Meduzy na wodorostach: krew miała stwardnieć rośliny."
         },
         {
           "type": "paragraph",
-          "text": "Perseusz petryfikuje potwora, poślubia Andromedę, po czym wraca do Seriphos. Stojąc twarzą w twarz z Polydectesem i jego dworem, wystawia głowę. Jego wrogowie stają się posągami. Tyrania ustaje."
+          "text": "Perseusz petryfikuje potwora, żeni się z Andromedą, potem wraca na Serifos. Przed Polidektesem i jego dworem wyjmuje głowę. Wrogowie stają się posągami. Tyrania się kończy."
         }
       ]
     },
@@ -108,15 +108,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Perseusz oddaje głowę Atenie. Naprawia to na swoim **egid**, swojej boskiej tarczy. Meduza zmienia się z potwora, który można zabić, w siłę ochronną. Ten wizerunek, [[Gorgoneion]], zdobi greckie świątynie, monety i tarcze."
+          "text": "Perseusz oddaje głowę Atenie. Ona mocuje ją na **egidzie**, boskiej tarczy. Meduza przechodzi od potwora do zgładzenia do siły ochronnej. Ta podobizna, [[Gorgoneion]], zdobi świątynie, monety i greckie tarcze."
         },
         {
           "type": "paragraph",
-          "text": "Jego funkcją jest [[Apotropaiczny]]: odpieranie zła poprzez sam grozę twarzy. Meduza na przestrzeni wieków stała się także postacią tragiczną, później ikoną współczesności: traumą, władzą, fascynacją. Nawet dom Versace wybrał swoją głowę, aby „skamieniać” wygląd."
+          "text": "Jej funkcja jest [[Apotropaiczny]]: odwracać zło samym horrorem twarzy. Przez stulecia Meduza staje się też tragiczną figurą, potem nowożytną ikoną: trauma, władza, fascynacja. Nawet dom Versace wybrał jej głowę, by „petryfikować” spojrzenie."
         },
         {
           "type": "takeaway",
-          "text": "**Perseusz** pokonuje **Meduza** dzięki odbiciu tarczy. Głowa przekazana **Atenia** staje się **Gorgoneion**, symbolem ochronnym starożytnej Grecji."
+          "text": "**Perseusz** zwycięża **Meduzę** dzięki odbiciu tarczy. Głowa, oddana **Atenie**, staje się **Gorgoneionem**, ochronnym znakiem starożytnej Grecji."
         }
       ]
     }

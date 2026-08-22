@@ -1,14 +1,14 @@
 {
   "id": "course_225_la_montee_des_eaux",
-  "title": "Podnoszące się wody",
-  "subtitle": "Poziom mórz podnosi się",
+  "title": "Podnoszenie się wód",
+  "subtitle": "Poziom mórz idzie w górę",
   "subject": "comprendreLeMonde",
   "subcategory": "Environment & the future",
-  "description": "Do 2100 r. poziom oceanów może podnieść się o **Jeden** metr. W przypadku całych krajów i nadmorskich megamiast nie jest to już odległa hipoteza, ale kwestia planowania.",
+  "description": "Do 2100 poziom oceanów może skoczyć o **metr**. Dla całych krajów i nadmorskich megamiast to już nie odległa hipoteza, tylko kwestia planowania.",
   "hero": {
     "image": "la_montee_des_eaux",
     "ratio": "16:9",
-    "hook": "Poziom morza z roku na rok podnosi się nieco bardziej, a niektóre kraje już planują tę przeprowadzkę."
+    "hook": "Morze co rok wchodzi trochę wyżej, a niektóre kraje już planują przeprowadzkę."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Od tysięcy lat poziom oceanów pozostaje mniej więcej stabilny. Od ery przemysłowej następuje jego wzrost, a tempo tego wzrostu przyspiesza z roku na rok."
+          "text": "Przez tysiące lat poziom oceanów zostawał mniej więcej stabilny. Od ery przemysłowej idzie w górę, a tempo tej wspinaczki przyspiesza z roku na rok."
         },
         {
           "type": "paragraph",
-          "text": "Do roku 2100 poziom oceanów może wzrosnąć o 30 centymetrów do jednego metra, w zależności od naszych wyborów dotyczących emisji. Dla wielu wybrzeży nie jest to już odległe zagrożenie, ale bardzo konkretny problem planowania."
+          "text": "Do 2100 oceany mogą podnieść się o 30 centymetrów do metra, zależnie od naszych wyborów emisji. Dla wielu wybrzeży to już nie odległa groźba, tylko konkretny problem zagospodarowania."
         }
       ]
     },
@@ -33,94 +33,94 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Poziom mórz podnosi się z dwóch różnych powodów fizycznych. Pierwsza to [[Rozszerzalność cieplna]]: gdy woda się nagrzewa, jej cząsteczki poruszają się bardziej, a jej objętość nieznacznie wzrasta, jak każda ciecz. Oceany pochłonęły ponad 90% nadmiaru ciepła powstałego w wyniku działalności człowieka od 1970 r., a ciepło to zwiększa swoją objętość."
+          "text": "Poziom mórz rośnie z dwóch różnych przyczyn fizycznych. Pierwsza to [[Rozszerzalność cieplna]]: gdy woda się ogrzewa, jej cząsteczki ruszają się mocniej i objętość trochę rośnie, jak w każdej cieczy. Oceany wchłonęły ponad 90% nadmiaru ciepła z działalności człowieka od 1970, i to ciepło pęcznieje ich objętość."
         },
         {
           "type": "paragraph",
-          "text": "Drugim powodem jest topnienie lodu znajdującego się na suchym lądzie. Należy uważać, aby nie pomylić go z krze arktyczną, która już unosi się na wodzie i której topnienie nie powoduje podniesienia się poziomu mórz. Są to [[Arkusze lodowe]], te ogromne czapy lodowe umieszczone na dnie Grenlandii i Antarktydy, które realnie powodują przepełnienie oceanów poprzez dodanie świeżej wody."
+          "text": "Druga przyczyna to topnienie lodu leżącego na stałym lądzie. Uważaj, żeby nie mylić go z arktyczną krą, która już pływa na wodzie i której topnienie nie podnosi poziomu mórz. To [[Tafla lodu]], te ogromne czapy lodu na gruncie Grenlandii i Antarktydy, naprawdę przelewa oceany, dokładając do nich słodką wodę."
         },
         {
           "type": "image",
           "asset": "greenland_ice_sheet_melting_glacier",
           "ratio": "16:9",
-          "caption": "Topnienie Grenlandii, gdyby było całkowite, podniosłoby poziom oceanów o 7 metrów."
+          "caption": "Całkowite stopienie Grenlandii podniosłoby oceany o 7 metrów."
         },
         {
           "type": "funFact",
-          "text": "Grenlandia traci co roku około 280 miliardów ton lodu, czyli tyle wody, aby pokryć całą Francję warstwą o grubości 50 centymetrów."
+          "text": "Grenlandia traci co rok około 280 miliardów ton lodu, dość wody, by przykryć całą Francję warstwą 50 centymetrów."
         }
       ]
     },
     {
       "id": "course_225_la_montee_des_eaux_p2",
-      "title": "Prędkość, która niepokoi naukowców",
+      "title": "Tempo, które niepokoi naukowców",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Od 1880 roku poziom mórz na świecie podniósł się o około 20 centymetrów. Badaczy niepokoi przede wszystkim obecna prędkość: w XX wieku wynosiła ona około 1,4 mm rocznie, w porównaniu do dzisiejszego **3,6 mm uchylnego**, co oznacza przyspieszenie o ponad 150%."
+          "text": "Od 1880 światowy poziom mórz skoczył o około 20 centymetrów. Najbardziej alarmuje badaczy obecne tempo: około 1,4 mm rocznie w XX wieku, wobec **3,6 mm rocznie** dziś, przyspieszenie o ponad 150%."
         },
         {
           "type": "paragraph",
-          "text": "Eksperci [[IPCC]] szacują, że tendencja ta utrzyma się przez dziesięciolecia, nawet jeśli obecnie emisje zostaną drastycznie zmniejszone, ponieważ oceany potrzebują czasu, aby zareagować na zmiany temperatury."
+          "text": "Eksperci [[IPCC]] szacują, że ten trend pójdzie dalej przez dekady, nawet gdybyśmy już teraz ostro ścięli emisje, bo oceany długo reagują na zmiany temperatury."
         },
         {
           "type": "image",
           "asset": "coastal_flooding_sea_level_rise_city",
           "ratio": "4:3",
-          "caption": "Wzrost o 50 cm może zamienić trwającą 100 lat powódź w wydarzenie coroczne."
+          "caption": "Wzrost o 50 cm może zamienić powódź stulecia w zdarzenie coroczne."
         },
         {
           "type": "paragraph",
-          "text": "Prawdziwym zagrożeniem jest nie tylko średnio nieco podniesione morze, ale pomnożenie [[Wezbrania i powodzie 100-letnie]]: podniesienie się o 50 centymetrów może wystarczyć, aby przewidywana katastrofa, która zdarza się raz na sto lat, zamieniła się w wydarzenie niemal coroczne."
+          "text": "Prawdziwe niebezpieczeństwo to nie tylko trochę wyższe morze średnio, lecz mnożenie [[Fale sztormowe i stuletnie powodzie]]: podniesienie o 50 centymetrów potrafi zamienić katastrofę oczekiwaną raz na stulecie w zdarzenie prawie coroczne."
         }
       ]
     },
     {
       "id": "course_225_la_montee_des_eaux_p3",
-      "title": "Niesprawiedliwość geograficzna",
+      "title": "Geograficzna niesprawiedliwość",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Podnoszący się poziom wody dotyka głównie regionów, które w najmniejszym stopniu przyczyniły się do globalnego ocieplenia. Na pierwszej linii frontu znajdują się duże delty rzek, takie jak Nil, Mekong czy Ganges. W Bangladeszu, gdzie żyje 170 milionów mieszkańców, podwyższenie o jeden metr może spowodować utratę 17% terytorium."
+          "text": "Podnoszenie się wód bije zwłaszcza w regiony, które najmniej dołożyły się do ocieplenia klimatu. Wielkie delty rzeczne, jak Nil, Mekong albo Ganges, stoją w pierwszej linii. W Bangladeszu, gdzie żyje 170 milionów mieszkańców, wzrost o metr może zabrać 17% terytorium."
         },
         {
           "type": "paragraph",
-          "text": "Dla małych państw wyspiarskich, takich jak Malediwy czy Kiribati, całkowite zniknięcie pod wodą nie jest już hipotezą science fiction, ale prawdziwym przedmiotem planowania politycznego. Z drugiej strony bogate megamiasta, takie jak Miami czy Nowy Jork, inwestują miliardy w wały i pompy."
+          "text": "Dla małych państw wyspiarskich jak Malediwy albo Kiribati zniknięcie całkiem pod wodą nie jest już hipotezą z fantastyki, tylko prawdziwym tematem planowania politycznego. Z kolei bogate megamiasta jak Miami albo Nowy Jork inwestują miliardy w wały i pompy."
         },
         {
           "type": "image",
           "asset": "jakarta_indonesia_sinking_flooding_maldives",
           "ratio": "16:9",
-          "caption": "Dżakarta łączy w sobie podnoszący się poziom wód i osiadanie gruntu, co stanowi podwójne zagrożenie."
+          "caption": "Dżakarta łączy podnoszenie się wód z osiadaniem gruntu, podwójną groźbę."
         },
         {
           "type": "funFact",
-          "text": "W 2009 roku rząd Malediwów zorganizował podwodne posiedzenie gabinetu w kombinezonach piankowych, aby ostrzec świat przed ważną konferencją klimatyczną."
+          "text": "W 2009 rząd Malediwów zrobił posiedzenie rady ministrów pod wodą, w skafandrach nurkowych, żeby ostrzec świat przed wielką konferencją klimatyczną."
         },
         {
           "type": "paragraph",
-          "text": "W **Dżakarta** w Indonezji miasto zapada się głębiej w ziemię z powodu nadmiernego pompowania wód gruntowych. W obliczu tego podwójnego zagrożenia kraj podjął radykalną decyzję o budowie zupełnie nowej stolicy, Nusantary, na wyspie Borneo."
+          "text": "W **Dżakarcie**, w Indonezji, miasto dodatkowo zapada się w grunt przez nadmierne pompowanie wód podziemnych. Wobec tej podwójnej groźby kraj podjął radykalną decyzję: zbudować zupełnie nową stolicę, Nusantarę, na wyspie Borneo."
         }
       ]
     },
     {
       "id": "course_225_la_montee_des_eaux_p4",
-      "title": "Dostosuj się lub cofnij",
+      "title": "Dostosować się albo się cofnąć",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "W obliczu tego wyzwania dwie strategie uzupełniają się. Pierwszym z nich jest ograniczenie ocieplenia, aby spowolnić wzrost powyżej roku 2100. Drugim jest dostosowanie się do tego, co już jest nieuniknione, poprzez wzmocnienie naturalnych mechanizmów obronnych, takich jak [[Mangrowe]] lub wydmy, lub za pomocą cięższych rozwiązań, takich jak główne zakłady w Holandii."
+          "text": "Dwie strategie się uzupełniają wobec tego wyzwania. Pierwsza: ograniczyć ocieplenie, żeby zahamować wzrost po 2100. Druga: dostosować się do tego, co już nieuniknione, wzmacniając naturalne tarcze, jak [[Mangrowe]] albo wydmy, albo cięższymi rozwiązaniami, jak wielkie roboty Holandii."
         },
         {
           "type": "paragraph",
-          "text": "W niektórych przypadkach jedynym rozwiązaniem będzie cofnięcie się: przeniesienie ludzi i działań w głąb lądu, zanim katastrofy będą się zbyt często powtarzać. To realna zmiana nawyków społeczeństw od wieków przywiązanych do wybrzeża."
+          "text": "W niektórych przypadkach jedynym wyjściem będzie odwrót: przenieść mieszkańców i działalność w głąb lądu, zanim katastrofy zaczną się powtarzać zbyt często. To prawdziwa zmiana nawyku dla społeczeństw przywiązanych do wybrzeża od wieków."
         },
         {
           "type": "takeaway",
-          "text": "Poziom mórz podnosi się o 3,6 mm rocznie pod wpływem połączonego efektu rozszerzalności cieplnej i topnienia lodu lądowego. Do roku 2100 wzrost ten może osiągnąć jeden metr i wymusić wysiedlenie setek milionów ludzi."
+          "text": "Poziom mórz rośnie o 3,6 mm rocznie, przez połączenie rozszerzalności cieplnej i topnienia lodu lądowego. Do 2100 ten wzrost może dojść do metra i zmusić do przeprowadzki setki milionów ludzi."
         }
       ]
     }

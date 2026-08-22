@@ -1,14 +1,14 @@
 {
   "id": "course_63_comment_se_forment_les_tremblements_de_t",
   "title": "Jak powstają trzęsienia ziemi?",
-  "subtitle": "Usterki i fale",
+  "subtitle": "Uskoki i fale",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "Każdego roku Ziemia doświadcza setek tysięcy trzęsień ziemi. Większość jest niewidoczna. Kilka zmienia całe miasta.",
+  "description": "Co roku Ziemia notuje setki tysięcy wstrząsów. Większość jest niewidoczna. Kilka zmienia całe miasta.",
   "hero": {
     "image": "comment_se_forment_les_tremblements_de_terre",
     "ratio": "16:9",
-    "hook": "Trzęsienie ziemi nie jest kaprysem ziemi. To jest energia, która czekała zbyt długo."
+    "hook": "Trzęsienie to nie kaprys gruntu. To energia, która czekała za długo."
   },
   "sections": [
     {
@@ -18,97 +18,97 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Każdego roku na Ziemi rejestruje się około **500 000 ujawnionych trzęsień ziemi**. Tylko niewielka część powoduje duże szkody. Trzęsienie ziemi to nie przypadek: to nagły koniec długiego gromadzenia energii w skałach."
+          "text": "Co roku Ziemia notuje około **500.000 wstrząsów** możliwych do wykrycia. Tylko mała część robi duże szkody. Trzęsienie ziemi to nie przypadek: to gwałtowny koniec długiego zbierania energii w skałach."
         },
         {
           "type": "paragraph",
-          "text": "Aby to zrozumieć, musimy postrzegać powierzchnię planety jako układankę ruchomych płyt. Tam, gdzie te płytki ocierają się o siebie, narasta napięcie… aż do pęknięcia."
+          "text": "Żeby to zrozumieć, trzeba zobaczyć powierzchnię planety jako puzzle płyt w ruchu. Tam, gdzie te płyty się ocierają, napięcie rośnie... aż pęknie."
         }
       ]
     },
     {
       "id": "course_63_comment_se_forment_les_tremblements_de_t_p1",
-      "title": "Płyty, które ciągle się poruszają",
+      "title": "Płyty, które nie przestają iść",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Powierzchnia Ziemi jest podzielona na około dziesięć dużych **płyt tektonicznych**. Ślizgają się po bardziej miękkiej warstwie sierści, [[Astenosfera]]. Ich prędkość? Około **1 do 10 cm przypada**, mniej więcej tyle samo, co wzrost paznokcia."
+          "text": "Powierzchnia Ziemi jest pocięta na około dziesięć wielkich **płyt tektonicznych**. Suną po bardziej miękkiej warstwie płaszcza, [[Astenosfera]]. Ich prędkość? Około **1-10 cm na rok**, mniej więcej jak wzrost paznokcia."
         },
         {
           "type": "image",
           "asset": "earthquake_collapsed_buildings_urban",
           "ratio": "auto",
-          "caption": "Trzęsienia ziemi nagle uwalniają energię zgromadzoną wzdłuż uskoków."
+          "caption": "Wstrząsy oddają naraz energię zebraną wzdłuż uskoków."
         },
         {
           "type": "paragraph",
-          "text": "Na granicach dominują trzy scenariusze. Płyty oddalają się od siebie (grzbiety oceaniczne). Zderzają się: czasami jedno nurkuje pod drugim, jest to [[Subdukcja]]. Albo ślizgają się obok siebie, jak wzdłuż [[Usterka San Andreas]] w Kalifornii, o długości około **1 300 km**."
+          "text": "Na granicach rządzą trzy scenariusze. Płyty się rozchodzą (grzbiety oceaniczne). Zderzają się: czasem jedna nurkuje pod drugą, to [[Subdukcja]]. Albo suną bok w bok, jak wzdłuż uskoku [[San Andreas]] w Kalifornii, długiego na około **1.300 km**."
         },
         {
           "type": "funFact",
-          "text": "Wzdłuż San Andreas Los Angeles zbliża się do San Francisco o około **6 cm** rocznie. Za **15 milionów łac** oba miasta będą sąsiadami."
+          "text": "Wzdłuż San Andreas Los Angeles zbliża się do San Francisco o około **6 cm** rocznie. Za **15 milionów lat** oba miasta byłyby sąsiadami."
         },
         {
           "type": "paragraph",
-          "text": "To właśnie na tych granicach zdarzają się trzęsienia ziemi. Ruch płyt jest utrudniony przez tarcie skał. Energia gromadzi się po cichu."
+          "text": "Właśnie na tych granicach rodzą się wstrząsy. Ruch płyt hamuje tarcie skał. Energia zbiera się w ciszy."
         }
       ]
     },
     {
       "id": "course_63_comment_se_forment_les_tremblements_de_t_p2",
-      "title": "Kiedy usterka ustąpi",
+      "title": "Gdy uskok puszcza",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Trzęsienie ziemi występuje wzdłuż **konieczne**: pęknięcia pomiędzy dwoma blokami skalnymi. Teoretycznie płyty powinny przesuwać się w sposób ciągły. W praktyce tarcie często blokuje to poślizg."
+          "text": "Trzęsienie dzieje się wzdłuż **uskoku**: pęknięcia między dwoma blokami skały. W teorii płyty powinny sunąć bez przerwy. W praktyce tarcie często blokuje ten poślizg."
         },
         {
           "type": "paragraph",
-          "text": "W tym czasie płytki nadal rosną. Skała lekko się odkształca, jak naciągnięty łuk. Mówimy o więzach sprężystych. Może to trwać dziesięciolecia, czasem stulecia."
+          "text": "Tymczasem płyty wciąż pchają. Skała trochę się odkształca, jak łuk, który napinasz. Mówimy o naprężeniach sprężystych. To może trwać dekady, czasem stulecia."
         },
         {
           "type": "paragraph",
-          "text": "Po przekroczeniu limitu oporu bloki nagle się przesuwają. Energia opuszcza w postaci **Fale** Zeizmiczne. Punkt przerwania głębokości nazywany jest **centrum**. Na pozór punkt tuż powyżej to **epicentrum**, gdzie efekty są często najsilniejsze."
+          "text": "Gdy próg wytrzymałości pęka, bloki suną naraz. Energia idzie jako **fale sejsmiczne**. Punkt pęknięcia w głębi to **ognisko**. Na powierzchni punkt tuż nad nim to **epicentrum**, tam skutki bywają najsilniejsze."
         }
       ]
     },
     {
       "id": "course_63_comment_se_forment_les_tremblements_de_t_p3",
-      "title": "Pomiar mocy, obawa przed tsunami",
+      "title": "Mierzyć siłę, bać się tsunami",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Do pomiaru energii trzęsienia ziemi sejsmolodzy wykorzystują głównie moment [[Skala wielkości]]. Jest to skala logarytmiczna: każdy stopień mnoży energię przez około **32**. Trzęsienie ziemi o sile **8** uwalnia zatem około **1000 razy** więcej energii niż trzęsienie ziemi o sile **6**."
+          "text": "Żeby zmierzyć energię wstrząsu, sejsmolodzy stosują głównie to, co zwiemy [[skala wielkości]] momentu. To skala logarytmiczna: każdy stopień mnoży energię mniej więcej przez **32**. Wstrząs o magnitudzie **8** oddaje więc około **1.000 razy** więcej energii niż wstrząs o magnitudzie **6**."
         },
         {
           "type": "funFact",
-          "text": "Występują również trzęsienia ziemi o sile **0** lub wielkości ujemnej. Są to bardzo małe zdarzenia, widoczne tylko za pomocą bardzo czułych czujników."
+          "text": "Bywają też wstrząsy o magnitudzie **0** albo ujemnej. To całkiem drobne zdarzenia, widoczne tylko na bardzo czułych czujnikach."
         },
         {
           "type": "paragraph",
-          "text": "Najsilniejszy, jaki kiedykolwiek zmierzono za pomocą nowoczesnych instrumentów, to **Valdivia** w Chile, w **1960**: wielkość **9.5**. Jeśli ognisko znajduje się pod oceanem i podnosi dno morskie, przemieszczony słup wody może spowodować **tsunami**. W **2004** trzęsienie ziemi o magnitudzie **9.1** w pobliżu Sumatry wywołało tsunami, które nawiedziło 14 krajów i pochłonęło życie około **227 000**."
+          "text": "Najsilniejszy zmierzony nowoczesnymi przyrządami to ten w **Valdivii** w Chile, w **1960**: magnituda **9,5**. Jeśli ognisko leży pod oceanem i podnosi dno, przesunięty słup wody może zrobić **tsunami**. W **2004** wstrząs o magnitudzie **9,1** koło Sumatry uruchomił tsunami, które uderzyło w 14 krajów i zabiło około **227.000** osób."
         }
       ]
     },
     {
       "id": "course_63_comment_se_forment_les_tremblements_de_t_p4",
-      "title": "Fale, czujność i budynki, które stawiają opór",
+      "title": "Fale, alarm i budynki, które trzymają",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Po rozstaniu odchodzi kilka rodzajów fal. **Fale P** (pierwotne) przybywają pierwsi: ściskają skałę jak akordeon. Następnie przychodzą fale **Z** (wtórne), wolniejsze i często bardziej niszczycielskie. Fale powierzchniowe powodują wówczas bardzo widoczne oscylacje gruntu."
+          "text": "Po pęknięciu idą różne typy fal. **Fale P** (pierwotne) przychodzą pierwsze: ściskają skałę jak akordeon. Potem **fale S** (wtórne), wolniejsze i często groźniejsze. Fale powierzchniowe kołyszą potem grunt bardzo widocznie."
         },
         {
           "type": "paragraph",
-          "text": "Nie wiemy jeszcze, jak przewidzieć dokładny dzień dużego trzęsienia ziemi. Z drugiej strony mapujemy obszary ryzyka. [[Inżynieria trzęsień ziemi]] projektuje budynki odporne na wstrząsy: fundamenty ruchome, gigantyczne amortyzatory, konstrukcje pochłaniające energię. W Japonii wczesne ostrzeżenia wykrywają fale P i mogą odciąć gaz lub spowolnić pociągi, zanim nadejdą najniebezpieczniejsze fale."
+          "text": "Dnia wielkiego wstrząsu wciąż nie umiemy przewidzieć. Za to mapujemy strefy ryzyka. [[Inżynieria trzęsień ziemi]] projektuje budynki, które zniosą drżenie: ruchome fundamenty, wielkie amortyzatory, konstrukcje, które łykają energię. W Japonii wczesne alarmy łapią fale P i mogą odciąć gaz albo zwolnić pociągi, zanim dojdą najgroźniejsze fale."
         },
         {
           "type": "takeaway",
-          "text": "Trzęsienie ziemi ma miejsce, gdy skały utknięte wzdłuż uskoku nagle uwalniają dziesięciolecia napięcia. Energia przemieszcza się falami, a każdy stopień wielkości mnoży tę energię w przybliżeniu przez **32**."
+          "text": "Trzęsienie rodzi się, gdy skały zablokowane wzdłuż uskoku oddają naraz dekady napięcia. Energia jedzie falami, a każdy stopień magnitudy mnoży tę energię mniej więcej przez **32**."
         }
       ]
     }

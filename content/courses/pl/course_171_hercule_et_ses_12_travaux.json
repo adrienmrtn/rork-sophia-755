@@ -1,14 +1,14 @@
 {
   "id": "course_171_hercule_et_ses_12_travaux",
-  "title": "Herkules i jego 12 prac",
+  "title": "Herakles i jego 12 prac",
   "subtitle": "Od chaosu do Olimpu",
   "subject": "mythologie",
   "subcategory": "Greece: the heroes",
-  "description": "Herakles, syn Zeusa, w przypływie szaleństwa zabija swoją rodzinę. Jego Dwanaście Prac jest pokutą: zabijanie potworów, a następnie pokonanie samej śmierci.",
+  "description": "Herakles, syn Zeusa, zabija rodzinę w napadzie szaleństwa. Dwanaście Prac to pokuta: zabić potwory, potem pokonać samą śmierć.",
   "hero": {
     "image": "hercule_et_ses_12_travaux",
     "ratio": "16:9",
-    "hook": "Dwanaście testów, aby oczyścić przestępstwo. Półbóg, który trafia wśród bogów."
+    "hook": "Dwanaście prób, żeby zmyć zbrodnię. Półbóg, który kończy wśród bogów."
   },
   "sections": [
     {
@@ -18,30 +18,30 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Herakles**, zwany przez Rzymian **Herkules**, to największy grecki bohater. Syn [[Zeus]], króla bogów i śmiertelnika **Alkmena**, jest nie tylko kolosem. Uosabia siłę, ale także przemoc i odkupienie."
+          "text": "**Herakles**, zwany przez Rzymian **Herkulesem**, jest największym greckim bohaterem. Syn boga [[Zeus]] i śmiertelniczki **Alkmeny**, nie jest tylko kolosem. Uosabia siłę, ale też przemoc i odkupienie."
         },
         {
           "type": "paragraph",
-          "text": "Jego **Dwanaście dzieł** nie jest dobrowolną pogonią za chwałą. To pokuta za straszliwą zbrodnię. Oczyszczając świat z potworów, Herakles otwiera drogę do cywilizacji... i zyskuje rzadki przywilej, nieśmiertelność."
+          "text": "Jego **Dwanaście Prac** nie jest dobrowolnym pędem po sławę. To pokuta za potworną zbrodnię. Czyszcząc świat z potworów, Herakles otwiera drogę cywilizacji... i zyskuje, rzadki przywilej, nieśmiertelność."
         }
       ]
     },
     {
       "id": "course_171_hercule_et_ses_12_travaux_p1",
-      "title": "Szaleństwo, zbrodnia, pokuta Hery",
+      "title": "Szaleństwo Hery, zbrodnia, pokuta",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Hera]], prawowita żona Zeusa, nienawidzi dziecka zrodzonego z niewierności. Z kołyski wysyła dwa węże. Niemowlę dusi je gołymi rękami. Później Herakles poślubił **Mégarę**, córkę króla Teb. Hera następnie doprowadza go do szaleństwa: masakruje swoją żonę i dzieci."
+          "text": "[[Hera]], prawowita żona Zeusa, nienawidzi dziecka z niewierności. Już w kołysce posyła dwa węże. Niemowlę dusi je gołymi rękami. Później Herakles żeni się z **Megarą**, córką króla Teb. Hera uderza go wtedy szaleństwem: masakruje żonę i dzieci."
         },
         {
           "type": "paragraph",
-          "text": "Ta zbrodnia krwi, [[Miazmat]], stawia go poza społeczeństwem. Wyrocznia delficka nakazuje mu służyć swojemu kuzynowi, królowi **Eurysteusz**. Ten straszliwy władca, prowadzony przez Herę, nakłada na niego dziesięć, potem dwanaście prac, bo niektórych nie chce policzyć."
+          "text": "Ta zbrodnia krwi, [[Miazmat]], stawia go poza społecznością. Wyrocznia w Delfach każe mu służyć kuzynowi, królowi **Eurystheusowi**. Ten lękliwy władca, prowadzony przez Herę, nakłada mu dziesięć prac, potem dwanaście, bo części nie chce zaliczyć."
         },
         {
           "type": "funFact",
-          "text": "Według legendy mleko Hery wytryskające z jej piersi, gdy podstępnie karmiła piersią Heraklesa, utworzyło na niebie **Drogę Mleczną**."
+          "text": "Według legendy mleko Hery, tryskające z piersi, gdy karmiła Heraklesa podstępem, miało utworzyć na niebie **Drogę Mleczną**."
         }
       ]
     },
@@ -52,40 +52,40 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pierwszym wyzwaniem jest **Lew nemejski** o nieprzeniknionej skórze. Herakles go dusi, a następnie odziera ze skóry własnymi pazurami. Ta skórka, [[Leonte]], staje się jego zbroją. Następny jest **Lern Hydra**, wąż o wielu głowach: na każdą odciętą głowę odrastają dwie. Wraz ze swoim siostrzeńcem Iolaosem przyżega szyje ogniem."
+          "text": "Pierwsze wyzwanie to **Lew nemejski**, o skórze nieprzebitej. Herakles dusi go, potem obdziera własnymi pazurami. Ta skóra, [[Leonte]], staje się jego zbroją. Potem przychodzi **Hydra lernejska**, wąż o wielu głowach: za każdą uciętą wyrastają dwie. Z siostrzeńcem Iolaosem wypala karki ogniem."
         },
         {
           "type": "image",
           "asset": "hercules_nemean_lion_hydra_labours_painting",
           "ratio": "4:3",
-          "caption": "Herakles w obliczu lwa nemejskiego i hydry."
+          "caption": "Herakles wobec Lwa nemejskiego i Hydry"
         },
         {
           "type": "funFact",
-          "text": "Starożytni powiedzieli, że Zeus umieścił Lwa Nemejskiego wśród gwiazd: konstelacji **Lwa**."
+          "text": "Starożytni mówili, że Zeus umieścił Lwa nemejskiego wśród gwiazd: tak powstała konstelacja **Lwa**."
         },
         {
           "type": "paragraph",
-          "text": "Rejestr zmian **Augiasz**. Tysiące wołów nie zostało oczyszczonych od trzydziestu lat. Eurystheus chce upokorzyć bohatera. Herakles odwraca rzeki [[Alfeusz]] i Peneus: w ciągu jednego dnia prąd unosi nawóz. Inteligencja jest tak samo dobra, jak salwa mięśniowa."
+          "text": "**Stajnie Augiasza** zmieniają rejestr. Tysięcy wołów nie czyszczono od trzydziestu lat. Eurystheus chce upokorzyć bohatera. Herakles odwraca rzeki [[Alfeusz]] i Penejos: w jeden dzień nurt zabiera gnój. Inteligencja waży tyle co mięśnie."
         }
       ]
     },
     {
       "id": "course_171_hercule_et_ses_12_travaux_p3",
-      "title": "Na krańce świata",
+      "title": "Aż po same krańce świata",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Praca przenosi go z Grecji: Byk Kreteński, klacze ludożerne, pas **Hippolita**, królowej Amazonek. Dla stada olbrzyma **Gerion** na dalekim zachodzie Herakles otworzył przejście między Morzem Śródziemnym a Atlantykiem: [[Filary Herkulesa]], dziś Cieśnina Gibraltarska."
+          "text": "Prace oddalają go od Grecji: Byk kreteński, klacze pożerające ludzi, pas **Hippolity**, królowej Amazonek. Po stado olbrzyma **Geriona**, na skrajnym Zachodzie, Herakles otwiera przejście między Morzem Śródziemnym i Atlantykiem: [[Słupy Herkulesa]], dziś cieśnina Gibraltarska."
         },
         {
           "type": "paragraph",
-          "text": "Kradnie **złote jabłka** Hesperydom, oszukując tytana [[Atlas]], który niesie niebo. Ostatnia praca jest najstraszniejsza: zejście do Zaświatów i sprowadzenie **Cerberusa**, wielogłowego psa. Wyjście z życia jest symbolicznym pokonaniem śmierci."
+          "text": "Kradnie **złote jabłka** Hesperyd, knując z tytanem [[Atlas]], który dźwiga niebo. Ostatnia praca jest najstraszniejsza: zejść do Zaświatów i sprowadzić **Cerbera**, psa o wielu głowach. Wyjść stamtąd żywym to symbolicznie pokonać śmierć."
         },
         {
           "type": "funFact",
-          "text": "Odkrywca Orellana nazwałby rzekę **Amazonka**, wierząc, że widział na jej brzegach wojownicze kobiety, co przypomina mitowe Amazonki."
+          "text": "Odkrywca Orellana miał nazwać rzekę **Amazonką**, bo wydawało mu się, że widzi wojowniczki na brzegach, echem Amazonek z mitu."
         }
       ]
     },
@@ -96,21 +96,21 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dzieła się kończą, ale nie tragedie. Jego żona **Déjanire** każe mu nosić tunikę nasiąkniętą trującą krwią [[Centaur]] Nessus. Spalony żywcem Herakles wspina się na stos na górze Oeta. Jego śmiertelna część płonie. Jej boska esencja wznosi się ku Olimpowi: jest to **apoteoza**."
+          "text": "Prace się kończą, tragedie nie. Żona **Dejanira** każe mu włożyć tunikę przesiąkniętą zatrutą krwią istoty [[centaur]], Nessosa. Palony żywcem, Herakles wchodzi na stos na górze Ojta. Śmiertelna część spala się. Boska esencja idzie ku Olimpowi: to **apoteoza**."
         },
         {
           "type": "image",
           "asset": "hercules_olympus_divinization_rubens_painting",
           "ratio": "4:3",
-          "caption": "Apoteoza Heraklesa: bohater przyłącza się do bogów."
+          "caption": "Apoteoza Heraklesa: bohater dołącza do bogów"
         },
         {
           "type": "paragraph",
-          "text": "Pojednany z Herą poślubia **Hebé**, wieczną młodość. Rzymianie przyjęli jego postać pod nazwą **Herkules**. „Herkulesowa praca” nadal oznacza ogromne zadanie. Herakles to nie tylko pogromca potworów: to architekt porządku."
+          "text": "Pojednany z Herą, żeni się z **Hebe**, wieczną młodością. Rzymianie przyjmują jego postać pod imieniem **Herkulesa**. „Herkulesowa praca” oznacza wciąż ogromne zadanie. Herakles nie jest tylko zabójcą potworów: jest architektem ładu."
         },
         {
           "type": "takeaway",
-          "text": "**Herakles** (Herkules) wykonuje dwanaście prac, aby odpokutować za morderstwo swojej rodziny. Od Lwa Nemejskiego po Cerbera, przechodzi od chaosu do cywilizacji... i zyskuje nieśmiertelność."
+          "text": "**Herakles** (Herkules) spełnia dwanaście prac, by odpokutować morderstwo rodziny. Od Lwa nemejskiego do Cerbera idzie od chaosu do cywilizacji... i zyskuje nieśmiertelność."
         }
       ]
     }

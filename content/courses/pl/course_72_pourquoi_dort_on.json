@@ -4,11 +4,11 @@
   "subtitle": "Ciało i mózg",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "Jedną trzecią życia spędzamy śpiąc. To nie jest czas stracony: sen oczyszcza mózg, regeneruje ciało i zapisuje wspomnienia.",
+  "description": "Śpisz jedną trzecią życia. To nie czas stracony: sen czyści mózg, naprawia ciało i wbija wspomnienia.",
   "hero": {
     "image": "pourquoi_dort_on",
     "ratio": "16:9",
-    "hook": "Spanie nie polega na wyłączeniu się: to wielka nocna praca organizmu."
+    "hook": "Spać to nie gasnąć: to wielki nocny plac budowy ciała."
   },
   "sections": [
     {
@@ -18,89 +18,89 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "W ciągu 75 lat życia śpimy blisko **25 łac**. Przez długi czas wierzyliśmy, że sen to tylko przerwa. W rzeczywistości jest to praca aktywna, równie istotna jak picie czy jedzenie."
+          "text": "Przy życiu 75 lat śpisz blisko **25 lat**. Długo wierzono, że sen to tylko pauza. W rzeczywistości to aktywna praca, tak samo niezbędna jak picie albo jedzenie."
         },
         {
           "type": "paragraph",
-          "text": "Nauka nie zna jeszcze wszystkich odpowiedzi na pytanie „dlaczego” śpimy. Ale ona doskonale wie, co się dzieje, gdy nie śpimy i co noc po cichu naprawia."
+          "text": "Nauka nie ma jeszcze wszystkich odpowiedzi na „dlaczego” śpimy. Ale bardzo dobrze wie, co się dzieje, gdy nie śpisz, i co noc naprawia w ciszy."
         }
       ]
     },
     {
       "id": "course_72_pourquoi_dort_on_p1",
-      "title": "Co objawia brak snu",
+      "title": "Co pokazuje brak snu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "W **1964** amerykański student **Randy'ego Gardnera** pozostał **11 dni** bez snu. Halucynacje, paranoja, załamanie umysłu: dowód na to, że mózg nie może przetrwać bez odpoczynku."
+          "text": "W **1964** amerykański student **Randy Gardner** zostaje **11 dni** bez snu. Halucynacje, paranoja, umysł, który się sypie: dowód, że mózg nie wytrzymuje bez odpoczynku."
         },
         {
           "type": "image",
           "asset": "sleeping_person_bedroom_night",
           "ratio": "auto",
-          "caption": "Sen niezbędny do regeneracji mózgu i ciała."
+          "caption": "Sen, niezbędny do regeneracji mózgu i ciała."
         },
         {
           "type": "paragraph",
-          "text": "U szczurów całkowity brak snu zabija **2 w 3 zażywać**, podobnie jak głód. U ludzi rzadka choroba genetyczna, **Śmiertelna bezsenność rodzinna**, również prowadzi do śmierci. Codziennie 17 godzin bezsenności odpowiada poziomowi alkoholu we krwi **0,5 g/l**. Mózg wymusza wtedy [[Mikrosny]], krótkie mimowolne przerwy w świadomości."
+          "text": "U szczura całkowity brak snu zabija w **2-3 tygodnie**, jak głód. U człowieka rzadka choroba genetyczna, **śmiertelna bezsenność rodzinna**, też prowadzi do śmierci. Na co dzień 17 godzin czuwania równa się stężeniu alkoholu **0,5 g/l**. Mózg wymusza wtedy [[mikrosny]], krótkie mimowolne przerwy świadomości."
         },
         {
           "type": "funFact",
-          "text": "Po swoim rekordzie Randy Gardner spał **14 godzin** prosto. Obudził się i był w stanie normalnie funkcjonować, ale powrót jego snu do normalnego rytmu zajął tygodnie."
+          "text": "Po rekordzie Randy Gardner spał **14 godzin** z rzędu. Obudził się zdolny do działania, ale jego sen potrzebował tygodni, żeby wrócić do zwykłego rytmu."
         }
       ]
     },
     {
       "id": "course_72_pourquoi_dort_on_p2",
-      "title": "W nocy mózg się oczyszcza",
+      "title": "W nocy mózg robi porządki",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Podczas snu mózg się nie zatrzymuje: zmienia tryby. **konik morski**, kluczowa struktura pamięci w kształcie konika morskiego, „odtwarza” dzień i wysyła informacje do [[Kora nowa]], zewnętrznej warstwy mózgu, w celu trwałego przechowywania. Wynik: często po dobrze przespanej nocy uczymy się **20 do 40%**."
+          "text": "W czasie snu mózg nie staje: zmienia tryb. **Hipokamp**, kluczowa struktura pamięci w kształcie konika morskiego, „odtwarza” dzień i wysyła informacje ku warstwie [[Kora nowa]], zewnętrznej powłoce mózgu, na trwały zapis. Skutek: po dobrej nocy uczysz się często **20-40%** lepiej."
         },
         {
           "type": "paragraph",
-          "text": "Głęboki sen wyzwala także **wzrost hormonów**, który naprawia mięśnie i tkanki oraz stymuluje [[Cytokiny]], cząsteczki sygnalizacyjne układu odpornościowego. Kolejne ważne odkrycie: [[Układ glimfatyczny]], sieć drenażu mózgowego **dziesięciokrotnie** bardziej aktywna w nocy. Usuwa odpady, w tym białka powiązane z ryzykiem choroby Alzheimera."
+          "text": "Głęboki sen odpala też **hormon wzrostu**, który naprawia mięśnie i tkanki, i pobudza [[cytokiny]], cząsteczki sygnałowe układu odpornościowego. Inne wielkie odkrycie: [[Układ glimfatyczny]], sieć drenażu mózgu **dziesięć razy** bardziej aktywna w nocy. Wyrzuca odpady, w tym białka związane z ryzykiem Alzheimera."
         },
         {
           "type": "funFact",
-          "text": "Podczas głębokiego snu komórki mózgowe kurczą się o około **60%**. Powstała w ten sposób przestrzeń pozwala na lepszą cyrkulację płynu czyszczącego."
+          "text": "W głębokim śnie komórki mózgu kurczą się o około **60%**. Tak powstała przestrzeń lepiej puszcza płyn czyszczący."
         }
       ]
     },
     {
       "id": "course_72_pourquoi_dort_on_p3",
-      "title": "Kto śpi, ile i jak",
+      "title": "Kto ile śpi i jak",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Koty śpią **12 o 16:00**: bezpieczne dla drapieżników. Żyrafy czasami zadowalają się **30 minut do 2 godzin**, w krótkich drzemkach, gotowe do ucieczki. Delfiny śpią, używając **a następnie usuń półkuli**, czyli jednej połowy mózgu na raz, aby unosić się i oddychać."
+          "text": "Koty śpią **12-16 godzin**: drapieżniki w bezpieczeństwie. Żyrafy zadowalają się czasem **30 minutami do 2 godzin**, w krótkich drzemkach, gotowe do ucieczki. Delfiny śpią **jedną półkulą**, połową mózgu naraz, żeby wciąż wychodzić po oddech."
         },
         {
           "type": "paragraph",
-          "text": "Niemowlęta śpią do **18 godzin**, z dużą ilością [[paradoksalny sen]], fazy snów z szybkimi ruchami gałek ocznych. Ta faza pomaga [[Synaptogeneza]], wytwarzanie połączeń między neuronami."
+          "text": "Niemowlęta śpią aż **18 godzin**, z dużą ilością [[Sen REM]], fazy snów z szybkimi ruchami oczu. Ta faza pomaga procesowi [[synaptogeneza]], budowie połączeń między neuronami."
         }
       ]
     },
     {
       "id": "course_72_pourquoi_dort_on_p4",
-      "title": "Wewnętrzny zegar i niebieskie światło",
+      "title": "Zegar wewnętrzny i niebieskie światło",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Do łóżka popychają nas dwie siły: zmęczenie, które narasta w ciągu dnia, oraz [[Rytmy dobowe i melatonina]], czyli wewnętrzny zegar ustawiony na **24 godziny**. Kiedy przygasa światło, mózg uwalnia **melatonina**, hormon, który przygotowuje organizm do snu, nie narzucając go."
+          "text": "Dwie siły pchają cię do łóżka: zmęczenie zbierane w dzień oraz [[Rytmy dobowe i melatonina]], wewnętrzny zegar ustawiony na **24 godziny**. Gdy światło słabnie, mózg uwalnia **melatoninę**, hormon, który przygotowuje ciało do snu, ale go nie narzuca."
         },
         {
           "type": "paragraph",
-          "text": "Ekrany wieczorem oszukują ten zegar i opóźniają zasypianie. W weekend tak naprawdę nie „nadrabiamy” niedoborów snu: zmęczenie zmniejsza się, ale nie wszystkie szkody. Regularne godziny pracy, ciemny i chłodny pokój pozostają najlepszymi sprzymierzeńcami."
+          "text": "Ekrany wieczorem oszukują ten zegar i opóźniają zaśnięcie. W weekend „nie odrabiasz” naprawdę długu snu: spada zmęczenie, nie wszystkie szkody. Stałe godziny, ciemny i chłodny pokój zostają najlepszymi sojusznikami."
         },
         {
           "type": "takeaway",
-          "text": "Sen oczyszcza mózg, regeneruje ciało i wzmacnia pamięć. Całkowita deprywacja zabija w ciągu kilku tygodni: sen nie jest luksusem, jest niezbędnym utrzymaniem."
+          "text": "Sen czyści mózg, naprawia ciało i utrwala pamięć. Całkowita deprywacja zabija w kilka tygodni: sen to nie luksus, to niezbędny serwis."
         }
       ]
     }

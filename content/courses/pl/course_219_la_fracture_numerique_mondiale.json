@@ -1,14 +1,14 @@
 {
   "id": "course_219_la_fracture_numerique_mondiale",
-  "title": "Globalna przepaść cyfrowa",
+  "title": "Światowa przepaść cyfrowa",
   "subtitle": "Jedna trzecia ludzkości offline",
   "subject": "comprendreLeMonde",
   "subcategory": "Economy & society",
-  "description": "2,7 miliarda ludzi nadal nie ma dostępu do Internetu. W coraz bardziej cyfrowym świecie ten brak połączenia staje się nową formą wykluczenia.",
+  "description": "2,7 miliarda osób wciąż nie ma dostępu do Internetu. W świecie coraz bardziej cyfrowym ten brak połączenia staje się nową formą wykluczenia.",
   "hero": {
     "image": "la_fracture_numerique_mondiale",
     "ratio": "16:9",
-    "hook": "Kenia wynalazła płatność telefonem dziesięć lat przed Europą ze względu na brak oddziałów banków."
+    "hook": "Kenia wymyśliła płatność telefonem dziesięć lat przed Europą, bo brakowało oddziałów bankowych."
   },
   "sections": [
     {
@@ -18,85 +18,85 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Podczas gdy społeczeństwa rozwinięte przeżywają rewolucję napędzaną sztuczną inteligencją, brutalna rzeczywistość pozostaje niezmieniona: **2,7 miliarda ludzi**, czyli około jedna trzecia ludzkości, wciąż nie ma dostępu do Internetu."
+          "text": "Gdy rozwinięte społeczeństwa żyją rewolucją napędzaną sztuczną inteligencją, zostaje brutalny fakt: **2,7 miliarda osób**, około jednej trzeciej ludzkości, wciąż nie ma dostępu do Internetu."
         },
         {
           "type": "paragraph",
-          "text": "Ta **przepaść cyfrowa** to nie tylko opóźnienie techniczne: stała się prawdziwą barierą, która trzyma miliony ludzi z dala od edukacji, zdrowia i światowej gospodarki. Oto dlaczego utrzymuje się i jak niektóre kraje próbują go wypełnić."
+          "text": "Ta **przepaść cyfrowa** to nie tylko opóźnienie techniczne: stała się prawdziwą barierą, która odcina miliony ludzi od edukacji, zdrowia i gospodarki świata. Oto czemu trwa i jak niektóre kraje próbują ją zasypać."
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p1",
-      "title": "Mapa świata z dwiema prędkościami",
+      "title": "Mapa świata na dwóch prędkościach",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Do 2024 r. około 5,4 miliarda ludzi na całym świecie będzie miało dostęp do Internetu, jednak w najbiedniejszych regionach postęp w tym zakresie ulegnie stagnacji. Europa i Ameryka Północna przekraczają 90% połączeń, podczas gdy Afryka Subsaharyjska utrzymuje się na poziomie zaledwie 37%."
+          "text": "W 2024 około 5,4 miliarda osób jest podłączonych do Internetu na świecie, ale postęp stoi w najbiedniejszych regionach. Europa i Ameryka Północna przekraczają 90% połączeń, a Afryka Subsaharyjska zostaje na zaledwie 37%."
         },
         {
           "type": "paragraph",
-          "text": "Wyłączenie to wynika z kilku przyczyn. Po pierwsze, brak infrastruktury: instalacja światłowodów w niektórych odizolowanych regionach jest uważana przez operatorów za zbyt kosztowną. Następnie cena: w niektórych krajach prosty podstawowy [[smartfon]] stanowi kilkumiesięczną pensję. Wreszcie bariera językowa (około 70% treści internetowych jest w języku angielskim) i brak szkoleń cyfrowych ograniczają korzystanie z nich nawet wtedy, gdy istnieje połączenie."
+          "text": "To wykluczenie ma kilka przyczyn. Najpierw brak infrastruktury: położenie światłowodu w niektórych izolowanych regionach operatorzy uznają za zbyt drogie. Potem cena: w niektórych krajach zwykły [[smartfon]] z niższej półki to kilka miesięcy pensji. Wreszcie bariera języka (około 70% treści w sieci jest po angielsku) i brak szkolenia cyfrowego ograniczają użycie nawet wtedy, gdy połączenie już jest."
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p2",
-      "title": "Kiedy brak infrastruktury wymusza innowacje",
+      "title": "Gdy brak infrastruktury wymusza innowację",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Podział ten działa jak mnożnik nierówności. W świecie, w którym praca zdalna, e-commerce i edukacja online ([[MOOC]]) stają się normą, brak połączenia oznacza bycie niewidocznym dla globalnej gospodarki."
+          "text": "Ta przepaść mnoży nierówności. W świecie, w którym telepraca, handel online i edukacja online ([[MOOC]]) stają się normą, brak połączenia znaczy zniknąć dla gospodarki świata."
         },
         {
           "type": "image",
           "asset": "digital_divide_africa_rural_village_smartphone",
           "ratio": "16:9",
-          "caption": "Na wielu obszarach wiejskich telefon komórkowy pozostaje jedynym punktem dostępu do Internetu."
+          "caption": "W wielu regionach wiejskich telefon komórkowy zostaje jedynym punktem dostępu do Internetu."
         },
         {
           "type": "paragraph",
-          "text": "Kenia pokazuje inną ścieżkę: z powodu braku wystarczającej liczby oddziałów banków w 2007 roku kraj masowo przyjął prosty system płatności SMS, [[Kenijczyk M-Pesa]], pokonując Europę o dziesięć lat. System ten umożliwił milionom ludzi nieposiadających konta bankowego dokonywanie bezpiecznych transakcji za pomocą samego telefonu."
+          "text": "Kenia pokazuje inną drogę: z braku wystarczających oddziałów bankowych kraj od 2007 masowo przyjął płatność zwykłym SMS-em. System to [[Kenijczyk M-Pesa]], i wyprzedził Europę o dziesięć lat. Dzięki niemu miliony osób bez konta bankowego zrobiły bezpieczne transakcje zwykłym telefonem."
         },
         {
           "type": "funFact",
-          "text": "Kenia nazwała tę strategię „przeskokiem technologicznym”: zamiast instalować kosztowną i przestarzałą infrastrukturę, kraj od razu przeszedł na bardziej nowoczesne i tańsze rozwiązanie."
+          "text": "Kenia nazwała tę strategię technologicznym „skokiem przez kozła”: zamiast stawiać drogie i przestarzałe sieci, kraj od razu przeszedł do nowocześniejszego i tańszego rozwiązania."
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p3",
-      "title": "Internet satelitarny: rozwiązanie obwarowane warunkami",
+      "title": "Internet z satelity: rozwiązanie pod warunkami",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aby połączyć najbardziej odizolowane wioski, nowi gracze liczą na przestrzeń. Projekt [[Starlink]] wysyła tysiące satelitów na niską orbitę, umożliwiając szybkie połączenie nawet na pustyniach lub w wysokich górach, bez konieczności układania ani jednego kabla."
+          "text": "Żeby podłączyć najbardziej izolowane wsie, nowi gracze stawiają na kosmos. Projekt [[Starlink]] wysyła tysiące satelitów na niską orbitę i daje szybkie połączenie nawet na pustyni albo w wysokich górach, bez kładzenia choćby jednego kabla."
         },
         {
           "type": "paragraph",
-          "text": "Jednak koszt abonamentu i sprzętu pozostaje na poziomie zachodnich standardów, co sprawia, że ​​rozwiązania te są niedostępne dla najuboższej ludności wiejskiej bez pomocy zewnętrznej. Likwidacji przepaści cyfrowej nie można zatem osiągnąć wyłącznie za pomocą technologii: wymaga to również woli politycznej, aby uczynić Internet dostępnym dla wszystkich."
+          "text": "Ale koszt abonamentu i sprzętu zostaje przy zachodnich stawkach, więc te rozwiązania nie trafiają do najbiedniejszych wsi bez pomocy z zewnątrz. Zasypanie przepaści cyfrowej nie uda się samą technologią: trzeba też woli politycznej, żeby Internet stał się dobrem dostępnym dla wszystkich."
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p4",
-      "title": "Sztuczna inteligencja, nowa luka",
+      "title": "Sztuczna inteligencja, nowa dziura",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Szybki rozwój sztucznej inteligencji grozi dalszym pogłębieniem tego podziału. Wymaga ogromnej mocy obliczeniowej i danych, zasobów skoncentrowanych w rękach kilku krajów i firm. Odłączone populacje ryzykują wówczas uzależnieniem od narzędzi zaprojektowanych bez uwzględnienia ich kultury i języka."
+          "text": "Szybki wzrost sztucznej inteligencji grozi jeszcze pogłębieniem tej przepaści. Wymaga ogromnej mocy obliczeniowej i danych, zasobów skupionych w rękach kilku krajów i firm. Ludzie bez połączenia ryzykują wtedy zależność od narzędzi zaprojektowanych bez ich kultury i języka."
         },
         {
           "type": "paragraph",
-          "text": "Luka w umiejętnościach pomiędzy uczniami podłączonymi i niepowiązanymi może również bardzo szybko się powiększyć. Wyzwaniem na nadchodzące lata nie będzie już zatem wyłącznie zapewnienie połączenia, ale zagwarantowanie sprawiedliwego dostępu do tworzenia wartości cyfrowej poprzez połączenie niższych kosztów, treści lokalnych i szkoleń."
+          "text": "Różnica kompetencji między uczniami podłączonymi i niepodłączonymi może też rosnąć bardzo szybko. Stawką najbliższych lat nie będzie już tylko dać połączenie, lecz zagwarantować sprawiedliwy dostęp do tworzenia wartości cyfrowej: niższe koszty, lokalne treści i szkolenie."
         },
         {
           "type": "takeaway",
-          "text": "2,7 miliarda ludzi pozostaje obecnie wykluczonych z Internetu, a różnica ta może się pogłębić w związku ze sztuczną inteligencją. Zmniejszenie tej luki wymaga przekształcenia łączności w prawdziwe dobro dostępne dla wszystkich, a nie tylko produkt do sprzedaży."
+          "text": "2,7 miliarda osób zostaje dziś poza Internetem, a sztuczna inteligencja grozi pogłębieniem tej przepaści. Zmniejszenie luki wymaga, żeby łączność stała się prawdziwym dobrem dla wszystkich, a nie tylko towarem na sprzedaż."
         }
       ]
     }

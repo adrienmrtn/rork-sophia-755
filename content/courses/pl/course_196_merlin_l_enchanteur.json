@@ -1,10 +1,10 @@
 {
   "id": "course_196_merlin_l_enchanteur",
-  "title": "Merlin Zaklinacz",
+  "title": "Merlin Czarodziej",
   "subtitle": "Mag Artura",
   "subject": "mythologie",
   "subcategory": "Other mythologies",
-  "description": "Merlin, doradca Artura, prorok i mag: postać zrodzona z demona i chrztu, architekt Camelotu, więzień własnej miłości.",
+  "description": "Merlin, doradca Artura, prorok i mag: postać zrodzona z demona i chrztu, budowniczy Camelot, więzień własnej miłości.",
   "hero": {
     "image": "merlin_l_enchanteur",
     "ratio": "16:9",
@@ -18,82 +18,82 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Merlinie** to najsłynniejszy magik zachodniego średniowiecza. Bard, prorok, doradca króla **Artur**: stoi na pograniczu starożytnego świata celtyckiego i rycerstwa chrześcijańskiego."
+          "text": "**Merlin** jest najsłynniejszym magiem zachodniego średniowiecza. Bard, prorok, doradca króla **Artura**: stoi na granicy dawnego świata celtyckiego i chrześcijańskiego rycerstwa."
         },
         {
           "type": "paragraph",
-          "text": "Jego natura jest paradoksalna. Część jego pochodzi od demonów, druga z nieba. Jego historia to nie spektakl magiczny: to walka hybrydowej istoty, która postanawia służyć dobru, dopóki miłość nie usunie jej ze świata."
+          "text": "Jego natura jest paradoksalna. Część idzie od demonów, część z nieba. To nie historia magicznego widowiska: to walka istoty hybrydowej, która wybiera służbę dobru, aż miłość wyjmuje ją ze świata."
         }
       ]
     },
     {
       "id": "course_196_merlin_l_enchanteur_p1",
-      "title": "Hybrydowe pochodzenie demona i chrztu",
+      "title": "Hybrydowe pochodzenie między demonem a chrztem",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "U poety **Roberta de Borona** (XII w.) demony chcą stworzyć antychrysta. Demon [[Inkub demon]], duch jednoczący się ze śpiącą kobietą, uwodzi młodą pobożną chrześcijankę. Plan się nie udaje: matka spowiada się i daje ochrzcić dziecko."
+          "text": "U poety **Roberta de Boron** (XII wiek) demony chcą stworzyć antychrysta. [[Inkub demon]], duch, który łączy się ze śpiącą kobietą, uwodzi pobożną chrześcijankę. Plan pada: matka spowiada się i chrzci dziecko."
         },
         {
           "type": "image",
           "asset": "merlin_wizard_medieval_manuscript_illumination",
           "ratio": "4:3",
-          "caption": "Merlin, postać średniowiecznego maga między lasem a dziedzińcem."
+          "caption": "Merlin, postać średniowiecznego maga między lasem a dworem"
         },
         {
           "type": "funFact",
-          "text": "Nazwa „Merlin” pochodzi od walijskiego **Myrddin**. Geoffrey z Monmouth zmienił „d” na „l”, aby uniknąć gry słów zbyt bliskiej łacińskiemu *gówno*."
+          "text": "Imię „Merlin” idzie z walijskiego **Myrddin**. Geoffrey z Monmouth zmienił „d” na „l”, by uniknąć gry słów zbyt bliskiej łacińskiemu *merda*."
         },
         {
           "type": "paragraph",
-          "text": "[[Chrzest]] usuwa klątwę, ale pozostawia moce: wiedzę o przeszłości (demoniczne dziedzictwo) i dar [[Proroctwo w kulturze średniowiecznej]]. Merlin potrafi zmieniać kształt. Za nim znajdziemy **Myrddina Wyllta**, walijskiego barda z VI wieku, który oszalały po bitwie uciekł do lasu [[Celyddon]]."
+          "text": "[[Chrzest]] zmazuje klątwę, ale zostawia moce: znajomość przeszłości (dziedzictwo demoniczne) i dar [[Proroctwo w kulturze średniowiecznej]]. Merlin potrafi się przemieniać. Za nim stoi **Myrddin Wyllt**, walijski bard z VI wieku, który po bitwie, szalony, ucieka do lasu [[Celyddon]]."
         }
       ]
     },
     {
       "id": "course_196_merlin_l_enchanteur_p2",
-      "title": "Architekt przeznaczenia arturiańskiego",
+      "title": "Architekt arturiańskiego losu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Merlin nie jest iluzjonistą. On jest gwarantem królestwa. Pomaga królowi [[Utherpendragon]] przybrać cechy księcia Kornwalii, aby dołączyć do księżnej **Igerna**. Tej nocy narodził się **Artur**."
+          "text": "Merlin nie jest iluzjonistą. Jest gwarantem królestwa. Pomaga królowi [[Utherpendragon]] przybrać rysy księcia Kornwalii, by dotrzeć do księżnej **Igerny**. Z tej nocy rodzi się **Artur**."
         },
         {
           "type": "image",
           "asset": "merlin_arthur_camelot_medieval_illustration",
           "ratio": "4:3",
-          "caption": "Merlin prowadzi Artura do tronu i Camelotu."
+          "caption": "Merlin prowadzi Artura ku tronowi i Camelot"
         },
         {
           "type": "paragraph",
-          "text": "Wychowuje dziecko w tajemnicy, ustawia miecz w kowadle, a następnie prowadzi Artura do Pani Jeziora, aby zdobyć [[Excalibur]], którego powłoka chroni przed śmiertelnymi ranami. W **Camelot** projektuje **Okrągły Stół** i umieszcza [[Oblężenie niebezpieczne]], wolne miejsce zarezerwowane dla najczystszego rycerza. Widzi nadchodzące niebezpieczeństwa. Wie też, że przeznaczenie zawsze w końcu przemija."
+          "text": "Wychowuje dziecko w tajemnicy, orkiestruje miecz w kowadle, potem prowadzi Artura do Pani Jeziora po [[Excalibur]], której pochwa chroni przed śmiertelnymi ranami. W **Camelot** wymyśla **Okrągły Stół** i stawia [[Oblężenie niebezpieczne]], puste miejsce zarezerwowane dla najczystszego rycerza. Widzi nadchodzące niebezpieczeństwa. Wie też, że los i tak przejdzie."
         }
       ]
     },
     {
       "id": "course_196_merlin_l_enchanteur_p3",
-      "title": "Upadek zaklinacza: miłość i zapomnienie",
+      "title": "Upadek czarodzieja: miłość i zapomnienie",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Merlin spotyka swój koniec. Jednak zakochuje się w **Viviana**, Pani Jeziora, niedaleko fontanny Barenton. Uczy ją swoich najtajniejszych zaklęć, choć wie, że je straci."
+          "text": "Merlin zna swój koniec. Mimo to kocha **Vivianę**, Panią Jeziora, przy źródle Barenton. Uczy ją najskrytszych czarów, choć wie, że przez nią zginie."
         },
         {
           "type": "image",
           "asset": "viviane_lady_of_the_lake_merlin_medieval_art",
           "ratio": "4:3",
-          "caption": "Viviana zamyka Merlina: koniec czasów magów."
+          "caption": "Viviana zamyka Merlina: koniec czasu magów"
         },
         {
           "type": "funFact",
-          "text": "W zależności od wersji Viviana zamyka go w krzaku głogu, szklanej wieży lub **Brocéliande**. Nieśmiertelny Merlin nie umarł: śpi poza światem."
+          "text": "Według wersji Viviana zamyka go w krzaku głogu, szklanej wieży albo wnęce **Brocéliande**. Nieśmiertelny Merlin nie umarł: śpi poza światem."
         },
         {
           "type": "paragraph",
-          "text": "Kiedy rycerze wyruszają po Graala, na magię Merlina nie ma już miejsca. Jej wycofanie oznacza przejście od czasów mitów do czasów wiary."
+          "text": "Gdy rycerze idą po Graala, magia Merlina nie ma już miejsca. Jego odejście znaczy przejście od czasu mitów do czasu wiary."
         }
       ]
     },
@@ -104,15 +104,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Merlin wpatrywał się w wizerunek starego mędrca: brodę, laskę, zagadki. Od niego pochodzą **Gandalf** dla Tolkiena i **Chrabąszcz** dla Rowling. Jest adiuwantem, który wie, ale nie może działać zamiast bohatera."
+          "text": "Merlin utrwalił obraz starego mędrca: broda, laska, zagadki. Od niego idą **Gandalf** u Tolkiena i **Dumbledore** u Rowling. Jest pomocnikiem, który wie, ale nie może działać zamiast bohatera."
         },
         {
           "type": "paragraph",
-          "text": "Most pomiędzy dzikim lasem a dworem, trzyma odcisk [[Druid]] doradzając królom. Nawet dzisiaj szepcze, że imperia są kruche i że mądrość nie zawsze się chroni."
+          "text": "Most między dzikim lasem a dworem, zostawia piętno [[Druid]] i jednocześnie doradza królom. Dziś jeszcze szepcze, że imperia są kruche, a mądrość nie zawsze chroni przed sobą samym."
         },
         {
           "type": "takeaway",
-          "text": "**Merlinie**, zrodzony z demona i ocalony przez chrzest, buduje los **Artur**, po czym znika, więzień **Viviana**: trwały model zachodniego czarodzieja."
+          "text": "**Merlin**, zrodzony z demona i ocalony przez chrzest, buduje los **Artura**, potem znika, więzień **Viviany**: trwały wzór zachodniego czarodzieja."
         }
       ]
     }
