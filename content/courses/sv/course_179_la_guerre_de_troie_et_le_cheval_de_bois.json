@@ -1,68 +1,68 @@
 {
   "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois",
-  "title": "Det trojanska kriget och trähästen",
+  "title": "Trojanska kriget och trähästen",
   "subtitle": "Grekisk mytologi",
   "subject": "mythologie",
   "subcategory": "Greece: the heroes",
-  "description": "Tio år av belägring, gudar på båda sidor, sedan en trähäst. Den största episka berättelsen om det antika Grekland och arketypen för militära list.",
+  "description": "Tio års belägring, gudar på båda sidor, sedan en trähäst. Den största episka berättelsen i det antika Grekland, och urbilden för militär list.",
   "hero": {
     "image": "la_guerre_de_troie_et_le_cheval_de_bois",
     "ratio": "16:9",
-    "hook": "Ett gyllene äpple, en kidnappad kvinna, sedan tio års krig: Troja faller inte under vapen, utan av en trähäst."
+    "hook": "Ett gyllene äpple, en bortrövad kvinna, sedan tio års krig: Troja faller inte för vapen, utan för en trähäst."
   },
   "sections": [
     {
       "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Trojanska kriget** är den stora historien om antikens Grekland, förevigad av Homeros i Iliaden. En koalition av grekiska städer belägrade [[Ilium]], ett annat namn för Troja, i **tio år**. Gudar tar parti. Hjältar dör för ära."
+          "text": "**Trojanska kriget** är det antika Greklands stora berättelse, odödliggjord av Homeros i Iliaden. En koalition av grekiska städer belägrar [[Ilium]], ett annat namn för Troja, i **tio år**. Gudar tar parti. Hjältar dör för äran."
         },
         {
           "type": "paragraph",
-          "text": "Staden ger inte efter för våld. Hon faller av ett list: **trähästen**. Denna list har blivit en universell symbol, från slagfältet till dagens datavirus."
+          "text": "Staden viker inte för styrka. Den faller för en list: **trähästen**. Knepet blev en evig bild, från slagfältet till dagens datorvirus."
         }
       ]
     },
     {
       "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_p1",
-      "title": "Ett gyllene äpple börjar allt",
+      "title": "Ett gyllene äpple sätter allt i rörelse",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Allt börjar vid Peleus och nymfen Thetis bröllop. **Eris**, discordens gudinna, är inte inbjuden. Rasande kastar hon ett gyllene äpple graverat \"Till de vackraste\". Tre gudinnor gör anspråk på henne: **Hera**, **Athena** och **Afrodite**."
+          "text": "Allt börjar vid bröllopet mellan Peleus och nymfen Thetis. **Eris**, tvedräktens gudinna, är inte bjuden. Rasande kastar hon ett gyllene äpple graverat „Åt den skönaste”. Tre gudinnor gör anspråk: **Hera**, **Athena** och **Afrodite**."
         },
         {
           "type": "paragraph",
-          "text": "Zeus frågar en dödligs åsikt: **Paris**, prins av Troja. Hera lovar honom makt, Athena seger i strid, Afrodite kärleken till den vackraste kvinnan. Han väljer Afrodite. Hon erbjuder honom **Hélène**, hustru till **Menelaos**, kung av Sparta. Paris tar honom till Troja. Grekland står upp för att få tillbaka det."
+          "text": "Zeus ber en dödlig om råd: **Paris**, prins av Troja. Hera lovar makt, Athena seger i strid, Afrodite den skönaste kvinnans kärlek. Han väljer Afrodite. Hon ger honom **Helena**, hustru till **Menelaos**, kung i Sparta. Paris för henne till Troja. Grekland reser sig för att hämta henne."
         },
         {
           "type": "funFact",
-          "text": "I Hisarlik, Turkiet, hittade arkeologer en bränd stad runt **1184 f.Kr.**: den möjliga platsen för historiska Troja, bakom myten."
+          "text": "Vid Hisarlik i Turkiet har arkeologer funnit en bränd stad omkring **1184** f.Kr.: den möjliga platsen för det historiska Troja bakom myten."
         }
       ]
     },
     {
       "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_p2",
-      "title": "Tio år av belägring utan vinnare",
+      "title": "Tio års belägring utan segrare",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Agamemnon**, bror till Menelaos och kung av Mykene, tar kommandot. En enorm flotta lämnar: Achilles, Ajax, den vise Nestor, den listige **Ulysses**. Grekerna, eller akaerna, landar i [[Troad]], regionen Troja, och belägringen börjar."
+          "text": "**Agamemnon**, bror till Menelaos och kung i Mykene, tar befälet. En väldig flotta går ut: Akilles, Aias, den vise Nestor, den listige **Odysseus**. Grekerna, eller ahaierna, landstiger i [[Troad]], Trojas bygd, och belägringen börjar."
         },
         {
           "type": "image",
           "asset": "greek_fleet_trojan_war_thousand_ships_painting",
           "ratio": "4:3",
-          "caption": "Den grekiska flottan: legenden talar om tusen fartyg."
+          "caption": "Den grekiska flottan: sagan talar om tusen skepp"
         },
         {
           "type": "paragraph",
-          "text": "Trojas murar sägs vara oförstörbara, byggda med hjälp av Poseidon och Apollo. I tio år kämpade vi på slätten [[Scamander]] utan beslut. På jorden dör människor. På Olympen hjälper Hera och Athena grekerna; Afrodite och Apollo skyddar sönerna till [[Priam]], den gamle kungen av Troja."
+          "text": "Trojas murar sägs vara ointagliga, byggda med hjälp av Poseidon och Apollon. I tio år slåss man på slätten vid [[Scamander]] utan avgörande. På jorden dör männen. På Olympen hjälper Hera och Athena grekerna. Afrodite och Apollon skyddar sönerna till [[Priam]], Trojas gamle kung."
         }
       ]
     },
@@ -73,32 +73,32 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Styrka räcker inte. **Ulysses**, kung av Ithaca och mästare på [[Metis]] (intelligent knep), uppfinner fällan. Grekerna bränner sitt läger, låtsas lämna och gömmer sig nära ön [[Tenedos]]. På stranden lämnar de en enorm ihålig **trähäst**, fylld med soldater."
+          "text": "Styrkan räcker inte. **Odysseus**, kung på Ithaka och mästare på [[Metis]] (den intelligenta listen), hittar på fällan. Grekerna bränner lägret, låtsas ge sig av och gömmer sig vid ön [[Tenedos]]. På stranden lämnar de en väldig ihålig **trähäst**, fylld med soldater."
         },
         {
           "type": "image",
           "asset": "trojan_horse_wooden_troy_ancient_painting",
           "ratio": "4:3",
-          "caption": "Den trojanska hästen: vilseledande offer, soldater inuti."
+          "caption": "Trojanska hästen: ett vilseledande offer, soldater inuti"
         },
         {
           "type": "paragraph",
-          "text": "Den grekiska spionen **Annat** övertygar trojanerna om att hästen är ett erbjudande för Athena. Prästen **Laocoon** ropar fälla: vi ignorerar honom. En del av vallarna revs för att hästen skulle komma in. På natten kom grekerna ut, öppnade portarna och den återvändande armén avslutade staden."
+          "text": "Den grekiske spionen **Sinon** övertygar trojanerna om att hästen är ett offer åt Athena. Prästen **Laokoon** skriker att det är en fälla: man lyssnar inte. En del av muren rivs för att få in hästen. Om natten kryper grekerna ut, öppnar portarna, och den återvända hären gör slut på staden."
         },
         {
           "type": "funFact",
-          "text": "Uttrycket \"ansiktet som sjösatte tusen skepp\", för Helen, kommer från poeten Christopher Marlowe. Vi uppfann till och med på skämt \"helen\", en skönhetsenhet lika med tusen skepp."
+          "text": "Uttrycket „ansiktet som sjösatte tusen skepp”, om Helena, kommer från skalden Christopher Marlowe. På skämt har man till och med uppfunnit „helenen”, en skönhetsenhet lika med tusen skepp."
         }
       ]
     },
     {
       "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_p4",
-      "title": "Syndafallet och arvet",
+      "title": "Fallet och arvet",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Troy brinner. Priam dödas. De överlevande blir slavar. Endast prinsen **Aeneas** flydde med sin far och sina gudar [[Lares]]; senare skulle den romerska legenden göra honom till Roms stamfader. Vinnarna är inte skonade: deras farliga återkomst ([[Hjältarnas återkomst (Nostoi)]]) är ofta tragiska. Agamemnon mördas. Odysseus vandrar i tio år till."
+          "text": "Troja brinner. Priamos dödas. De överlevande blir slavar. Bara prinsen **Aeneas** flyr med sin far och sina gudar [[Lares]]. Senare gör den romerska sagan honom till Roms stamfar. Segerherrarna skonades inte: deras farliga hemfärder ([[Hjältarnas återkomst (Nostoi)]]) blir ofta tragiska. Agamemnon mördas. Odysseus irrade i ytterligare tio år."
         },
         {
           "type": "timeline",
@@ -106,28 +106,28 @@
             {
               "date": "Myt",
               "title": "Paris dom",
-              "detail": "Ett guldäpple, Helene kidnappade, kriget börjar."
+              "detail": "Ett gyllene äpple, Helena bortrövad, kriget börjar."
             },
             {
               "date": "10 år",
-              "title": "Belägring av Troja",
-              "detail": "Vallarna håller; gudar och hjältar kolliderar."
+              "title": "Belägringen av Troja",
+              "detail": "Murarna håller. Gudar och hjältar slår mot varandra."
             },
             {
-              "date": "Fatal natt",
-              "title": "trähäst",
+              "date": "Ödesdiger natt",
+              "title": "Trähästen",
               "detail": "Odysseus list öppnar den ointagliga staden."
             },
             {
-              "date": "Efter",
+              "date": "Efteråt",
               "title": "Nostoi",
-              "detail": "Segrarnas återkomst förvandlas ofta till olycka."
+              "detail": "Segerherrarnas hemfärder slår ofta över i olycka."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Född ur ett gudomligt gräl om ett gyllene äpple, slutade det trojanska kriget först efter tio år: inte med våld, utan av Ulysses och en trähästs list som förstörde staden på en natt."
+          "text": "Fött ur en gudomlig tvist om ett gyllene äpple tar trojanska kriget slut först efter **tio år**: inte genom styrka, utan genom Odysseus list och en trähäst som förgör staden på en natt."
         }
       ]
     }

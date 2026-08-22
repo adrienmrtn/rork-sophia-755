@@ -1,74 +1,74 @@
 {
   "id": "course_17_la_revolution_russe_1917",
-  "title": "Den ryska revolutionen",
+  "title": "Ryska revolutionen",
   "subtitle": "1917",
   "subject": "histoire",
   "subcategory": "Modern Revolutions & Conflicts",
-  "description": "På mindre än åtta månader övergick Ryssland från tsarernas makt till bolsjevikernas. 1917 uppfinner en modell som kommer att dela världen i årtionden.",
+  "description": "På mindre än åtta månader gick Ryssland från tsarernas makt till bolsjevikernas. 1917 skapade en modell som skulle splittra världen i decennier.",
   "hero": {
     "image": "la_revolution_russe_1917",
     "ratio": "16:9",
-    "hook": "På åtta månader störtas ett tusen år gammalt imperium... och 1900-talet delas i två delar."
+    "hook": "På åtta månader vacklar ett tusenårigt rike... och 1900-talet spricker itu."
   },
   "sections": [
     {
       "id": "course_17_la_revolution_russe_1917_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I **1917**, på mindre än åtta månader, gick Ryssland från en absolut monarki till en regim ledd av **bolsjevikerna**, ett revolutionärt parti ledd av **Vladimir Lenin**. Detta är inte ett enkelt uppror. Det är ett imperiums kollaps under krigets tyngd, sedan fallet i tomheten."
+          "text": "År **1917**, på mindre än åtta månader, gick Ryssland från envälde till ett styre lett av **bolsjevikerna**, ett revolutionärt parti under **Vladimir Lenin**. Det var inte ett enkelt uppror. Det var ett rikes sammanbrott under krigets tyngd, och sedan erövringen av tomrummet."
         },
         {
           "type": "paragraph",
-          "text": "Detta skifte uppfinner en modell som kommer att dela världen under en stor del av 1900-talet."
+          "text": "Det omslaget skapade en modell som skulle splittra världen under en stor del av 1900-talet."
         }
       ]
     },
     {
       "id": "course_17_la_revolution_russe_1917_p1",
-      "title": "Ett Ryssland andfådd",
+      "title": "Ett Ryssland som inte orkar mer",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Engagerad i [[Första världskriget]] sedan 1914, Ryssland följer inte längre. Redan **1,7 miljoner** döda soldater. Myterier. Brist på mjöl och kol i **Petrograd**, huvudstaden (nuvarande St. Petersburg). Tsar **Nikolaus II** vägrar de reformer som begärts av [[Douma]], det ryska parlamentet."
+          "text": "Indraget i [[Första världskriget]] sedan 1914 hänger Ryssland inte längre med. Redan **1,7 miljoner** döda soldater. Myterier. Brist på mjöl och kol i **Petrograd**, huvudstaden (i dag Sankt Petersburg). Tsaren **Nikolaj II** vägrar de reformer som [[Douma]], den ryska riksdagen, kräver."
         },
         {
           "type": "image",
           "asset": "tsar_nicholas_ii_portrait",
           "ratio": "4:3",
-          "caption": "Nicholas II, sista tsaren i en monarki som håller på att ta slut."
+          "caption": "Nikolaj II, siste tsar i en monarki som inte orkar mer"
         },
         {
           "type": "funFact",
-          "text": "Giftet som var avsett att döda [[Rasputin]], en inflytelserik munk vid hovet, skulle ha neutraliserats av sockret i kakorna där det hade halats: legenden om hans attentat säger mycket om tronens misskreditering."
+          "text": "Giftet som skulle döda [[Rasputin]], en munk med stort inflytande vid hovet, ska ha släckts av sockret i kakorna där man gömt det. Legenden om mordet säger mycket om hur lågt tronen hade sjunkit."
         },
         {
           "type": "paragraph",
-          "text": "Genom att ta kommandot vid fronten i **1915** blir tsaren ensam ansvarig för nederlagen. Rasputins inflytande på tsarina **Alexandra** förstörde till sist den kejserliga familjens prestige."
+          "text": "När tsaren tog befälet vid fronten år **1915** blev han ensam ansvarig för nederlagen. Rasputins grepp om tsaritsan **Alexandra** fullbordade kejsarfamiljens prestigefall."
         }
       ]
     },
     {
       "id": "course_17_la_revolution_russe_1917_p2",
-      "title": "Februari: slutet av Romanovs",
+      "title": "Februari: slutet för Romanov",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I **februari 1917** (enligt [[Juliansk kalender]] som då användes i Ryssland, försenad med flera dagar i väst), började revolutionen från bröd. Arbetarna går ut på gatorna. Garnisonen förbrödrar. Nicholas II abdikerar den **2 mars**: **Z** 300 år av Romanovdynastins regeringstid tar slut."
+          "text": "I **februari 1917** (enligt [[Juliansk kalender]], som då gällde i Ryssland och låg flera dagar efter väst) börjar revolutionen med brödet. Arbetarkvinnorna går ut på gatan. Garnisonen sluter upp. Nikolaj II abdikerar den **2 mars**: **300 år** av Romanovvälde tar slut."
         },
         {
           "type": "image",
           "asset": "russian_revolution_1917_petrograd",
           "ratio": "4:3",
-          "caption": "Petrograd 1917: gatan har företräde framför tronen."
+          "caption": "Petrograd 1917: gatan tar över tronen"
         },
         {
           "type": "paragraph",
-          "text": "En \"dubbel makt\" inträder sedan. Å ena sidan en laglig **provisorisk regering**. Å andra sidan, [[Petrograd sovjet]], ett råd av arbetare och soldater som kontrollerar fabriker och baracker. **Alexander Kerenskij**, provisorisk figur, håller Ryssland kvar i kriget. Folket vill ha fred, bröd och jord."
+          "text": "Då uppstår en „dubbelmakt”. På ena sidan en laglig **provisorisk regering**. På den andra [[Petrogradsovjeten]], ett råd av arbetare och soldater som styr fabriker och kaserner. **Aleksandr Kerenskij**, ansiktet för det provisoriska, håller Ryssland kvar i kriget. Folket vill ha fred, bröd och jord."
         }
       ]
     },
@@ -79,66 +79,66 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Lenin återvänder från exil i ett \"ledståg\" organiserat av Tyskland, som hoppas kunna försvaga Ryssland. Från april skräller hans [[Apriluppsatser]]: **\"Fred, bröd, jord\"**. Med [[Leon Trotskij]], enastående organisatör, förberedde bolsjevikerna upproret."
+          "text": "Lenin kommer tillbaka från exilen i ett „plomberat tåg” som Tyskland ordnat, i hopp om att försvaga Ryssland. Redan i april slår hans [[Apriluppsatser]] till: **„Fred, bröd, jord”**. Med [[Leon Trotskij]], en organisatör utan like, förbereder bolsjevikerna upproret."
         },
         {
           "type": "image",
           "asset": "lenin_portrait",
           "ratio": "4:3",
-          "caption": "Lenin, strateg för ett organiserat maktövertagande."
+          "caption": "Lenin, strategen bakom ett planerat maktövertagande"
         },
         {
           "type": "funFact",
-          "text": "När Vinterpalatset intogs var tsarernas vinkällare så vidsträckta att vakter var tvungna att placeras ut för att förhindra att revolutionen hamnade i fylleri."
+          "text": "När Vinterpalatset togs var tsarernas vinkällare så väldiga att vakter måste sättas ut för att revolutionen inte skulle sjunka i fylla."
         },
         {
           "type": "paragraph",
-          "text": "Natten till **7 november 1917** (25 oktober enligt den ryska kalendern) föll broar, stationer och telegrafer nästan utan att ett skott avlossades. Vinterpalatset, säte för den provisoriska regeringen, följer. Sedan börjar ett blodigt inbördeskrig fram till **1922**."
+          "text": "I natten till den **7 november 1917** (25 oktober enligt den ryska kalendern) faller broar, stationer och telegraf nästan utan skott. Vinterpalatset, den provisoriska regeringens säte, följer. Sedan börjar ett blodigt inbördeskrig fram till **1922**."
         }
       ]
     },
     {
       "id": "course_17_la_revolution_russe_1917_p4",
-      "title": "Sovjetunionens födelse",
+      "title": "Sovjetunionen föds",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Cheka**, bolsjevikernas politiska polis, inleder terror. I juli **1918** avrättades den kejserliga familjen i Jekaterinburg. Freden i [[Brest-Litovsk]] avlägsnar Ryssland från kriget till priset av stora territoriella förluster. I **1922** föddes **USSR**, den första staten byggd på [[Marxism-leninism]], ideologin som kombinerar Marx idéer och Lenins metod."
+          "text": "**Tjekan**, bolsjevikernas politiska polis, sätter terrorn i gång. I juli **1918** avrättas kejsarfamiljen i Jekaterinburg. Freden i [[Brest-Litovsk]] tar Ryssland ur kriget till priset av tunga landförluster. År **1922** föds **Sovjetunionen**, den första staten byggd på [[Marxism-leninism]], ideologin som blandar Marx idéer med Lenins metod."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "feb. 1917",
-              "title": "Februari revolution",
-              "detail": "Abdikation av Nicholas II."
+              "title": "Februarirevolutionen",
+              "detail": "Nikolaj II abdikerar."
             },
             {
               "date": "april 1917",
               "title": "Apriluppsatser",
-              "detail": "Lenin vägrar kompromissa med det provisoriska."
+              "detail": "Lenin vägrar kompromiss med den provisoriska makten."
             },
             {
-              "date": "okt/nov. 1917",
-              "title": "Övertagande",
-              "detail": "Bolsjevikkupp i Petrograd."
+              "date": "okt./nov. 1917",
+              "title": "Maktövertagandet",
+              "detail": "Bolsjevikisk kupp i Petrograd."
             },
             {
               "date": "mars 1918",
               "title": "Brest-Litovsk",
-              "detail": "Slutet på kriget, territoriella förluster."
+              "detail": "Ur kriget, landförluster."
             },
             {
               "date": "1922",
-              "title": "Sovjetunionens födelse",
-              "detail": "En ny stat upprättas permanent."
+              "title": "Sovjetunionen föds",
+              "detail": "En ny stat sätter sig fast."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "I **1917** förvandlade tsarismens kollaps och bolsjevikernas maktövertagande en brödrevolt till födelsen av världens första kommunistiska stat."
+          "text": "År **1917** vände tsarismens fall och bolsjevikernas kupp ett bröduppror till födelsen av den första kommunistiska världsstaten."
         }
       ]
     }

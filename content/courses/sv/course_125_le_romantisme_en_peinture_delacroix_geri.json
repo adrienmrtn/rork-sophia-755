@@ -1,53 +1,53 @@
 {
   "id": "course_125_le_romantisme_en_peinture_delacroix_geri",
-  "title": "Romantik i målning (Delacroix, Géricault)",
+  "title": "Romantiken i måleriet (Delacroix, Géricault)",
   "subtitle": "1810-1850",
   "subject": "art",
   "subcategory": "Painting & Movements",
-  "description": "Mellan 1810 och 1850 gjorde romantiken uppror mot nyklassicismens kyla. Färg kontra teckning, passion mot förnuft: **Géricault** och **Delacroix**.",
+  "description": "Mellan 1810 och 1850 reste sig romantiken mot nyklassicismens kyla. Färg mot linje, lidelse mot förnuft: **Géricault** och **Delacroix**.",
   "hero": {
     "image": "le_romantisme_en_peinture",
     "ratio": "16:9",
-    "hook": "När målning slutar imitera antika statyer för att måla passion och skandal."
+    "hook": "Ögonblicket då måleriet slutade kopiera antika statyer och började måla lidelse och skandal."
   },
   "sections": [
     {
       "id": "course_125_le_romantisme_en_peinture_delacroix_geri_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**romantisk** i målning blomstrar mellan **1810** och **1850**. Det står i motsats till strängheten hos [[Davids nyklassicism]]: mindre kall anledning, mer känslor, rörelse och plåga."
+          "text": "**Romantiken** i måleriet blomstrade mellan **1810** och **1850**. Den satte sig mot strängheten i [[Davids nyklassicism]]: mindre kallt förnuft, mer känsla, rörelse och plåga."
         },
         {
           "type": "paragraph",
-          "text": "Med **Théodore Géricault** och **Eugène Delacroix** blir måleriet en spegel av passioner och politiska dramer. Genom att placera färg ovanför teckningen öppnade de vägen till impressionism."
+          "text": "Med **Théodore Géricault** och **Eugène Delacroix** blev måleriet en spegel för lidelse och politiskt drama. Genom att sätta färgen över linjen öppnade de vägen till impressionismen."
         }
       ]
     },
     {
       "id": "course_125_le_romantisme_en_peinture_delacroix_geri_p1",
-      "title": "Bryt med den akademiska ordningen",
+      "title": "Brottet med den akademiska ordningen",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I början av 1800-talet dominerade [[nyklassicism]]. Dess ledare, **Jacques-Louis David**, förespråkar klarhet, balans och moral. Designen räknas mer än färgen: den ena är intellektet, den andra njutningen av sinnena."
+          "text": "I början av 1800-talet styrde [[nyklassicism]]. Dess ledare, **Jacques-Louis David**, predikade klarhet, balans och moral. Linjen vägde tyngre än färgen: den ena var intellektet, den andra sinnenas njutning."
         },
         {
           "type": "image",
           "asset": "jacques_louis_david_oath_of_horatii_painting",
           "ratio": "4:3",
-          "caption": "Davids ed av Horatii: det neoklassiska idealet om rigor."
+          "caption": "Davids Horatiernas ed: nyklassicismens ideal av stränghet"
         },
         {
           "type": "funFact",
-          "text": "Vid presentationen av *Horasernas ed* svimmade åskådarna av verkets kraft: till och med nyklassicismen, innan den blev akademisk, visste hur den skulle röra sig."
+          "text": "När *Horatiernas ed* visades första gången svimmade kvinnor i publiken av kraften i den: även nyklassicismen, innan den blev akademisk, kunde röra människor."
         },
         {
           "type": "paragraph",
-          "text": "Romantiker vill ha drama, mystik, våld av känslor. De föredrar [[Shakespeare]] eller [[Byron]] framför grekiska hjältar och vild natur med städat landskap. Beröringen blir mer synlig, kontrasterna mer markerade."
+          "text": "Romantikerna ville ha drama, mysterium, våldsam känsla. De föredrog [[Shakespeare]] eller [[Byron]] framför grekiska hjältar, och vild natur framför prydliga landskap. Penseldraget blev synligt, kontrasterna hårdare."
         }
       ]
     },
@@ -58,61 +58,61 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Théodore Géricault** för romantiken till det offentliga torget med *Float av Medusa* (**1819**). Verket är baserat på en verklig skandal: förlisningen av fregatten *Manet* i **1816**. En kapten utsedd av kunglig gunst överger cirka **150** sjömän på en provisorisk flotte."
+          "text": "**Théodore Géricault** drev romantiken ut på det offentliga torget med *Medusas flotte* (**1819**). Målningen växte ur en verklig skandal: fregatten *Méduse*s förlisning **1816**. En kapten utnämnd av kunglig gunst övergav omkring **150** sjömän på en provisorisk flotte."
         },
         {
           "type": "image",
           "asset": "gericault_raft_of_the_medusa_painting",
           "ratio": "4:3",
-          "caption": "Medusas flotte: anonyma människors vånda i monumentalt format."
+          "caption": "Medusas flotte: namnlösa mäns dödskamp, i monumentalt format"
         },
         {
           "type": "funFact",
-          "text": "Géricault hade en kopia av flotten i naturlig storlek byggd av samma snickare från Méduse, en överlevande från skeppsvraket, för att kontrollera varje planka."
+          "text": "Géricault lät Méduses egen timmerman, en överlevande, bygga en fullskalig kopia av flotten, så att han kunde kontrollera varje planka."
         },
         {
           "type": "paragraph",
-          "text": "Han studerar lik för att måla sanningen om kroppar. På en duk i kunglig storlek visar han anonyma människors vånda. Överst i kompositionen viftar en svart sjöman med en trasa mot ett litet skepp: en [[abolitionist]]-gest och en kritik av eliten."
+          "text": "Han studerade lik för att kunna måla kroppar troget. På en duk i det format som vanligtvis reserverades för kungar visade han namnlösa män som dog. Högst upp i kompositionen viftar en svart sjöman med en trasa mot ett litet skepp vid horisonten: en [[abolitionist]] gest och ett angrepp på eliten."
         }
       ]
     },
     {
       "id": "course_125_le_romantisme_en_peinture_delacroix_geri_p3",
-      "title": "Delacroix: färg, frihet, Orient",
+      "title": "Delacroix: färg, frihet, Östern",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Efter Géricaults förtida död blev **Eugène Delacroix** ledare för rörelsen. För honom bär **färg** på känslor. Hans akademiska rival, [[Jean-Auguste-Dominique Ingres]], försvarar den jämna och precisa linjen."
+          "text": "Efter Géricaults tidiga död blev **Eugène Delacroix** rörelsens ledare. För honom bar **färgen** känslan. Hans akademiske rival, [[Jean-Auguste-Dominique Ingres]], försvarade den släta, precisa linjen."
         },
         {
           "type": "image",
           "asset": "delacroix_liberty_leading_the_people_painting",
           "ratio": "4:3",
-          "caption": "Liberty Leading the People firar de tre härliga åren 1830."
+          "caption": "Friheten på barrikaderna hyllar julirevolutionen 1830"
         },
         {
           "type": "paragraph",
-          "text": "*Frihet leder folket* (**1830**) firar [[Tre härliga]], de revolutionära dagarna i juli. Allegorin om frihet går med studenten, arbetaren och ungen i Paris."
+          "text": "*Friheten på barrikaderna* (**1830**) hyllar [[Juli revolution]], de tre upprorets dagar i juli. Friheten själv, en allegori, marscherar vid sidan av studenten, arbetaren och Paris gatubarn."
         },
         {
           "type": "funFact",
-          "text": "I Alger 1832 gick Delacroix i hemlighet in i ett harem tack vare en hamnkapten. Dessa skisser kommer att mata *Kvinnor från Alger i deras lägenhet*."
+          "text": "I Alger 1832 smugglade en hamnkapten in Delacroix i ett harem. De skisserna födde *Kvinnorna i Alger i sin våning*."
         },
         {
           "type": "paragraph",
-          "text": "I **1832** förvandlar hans resa till Marocko hans palett. Där upptäckte han ett nytt ljus och grundade delvis [[orientalism]]. Han förstår också att skuggan inte är svart, utan full av färgade reflektioner: en lärdom som impressionisterna kommer att minnas."
+          "text": "**1832** förvandlade en resa till Marocko hans palett. Där fann han ett nytt slags ljus, och han var med och grundade [[orientalism]]. Han förstod också att skuggan inte är svart utan full av färgade reflexer, en läxa impressionisterna skulle minnas."
         }
       ]
     },
     {
       "id": "course_125_le_romantisme_en_peinture_delacroix_geri_p4",
-      "title": "Arvet från romantiken",
+      "title": "Romantikens arv",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Romantiken dog inte 1850: den muterade. Genom att frigöra beröringen och färgen påverkar Delacroix **Van Gogh** och **Cézanne**. Konstnären är inte längre en enkel bödel av order: han blir en visionär."
+          "text": "Romantiken dog inte 1850; den muterade. Genom att befria penseldraget och färgen påverkade Delacroix **Van Gogh** och **Cézanne**. Konstnären slutade vara någon som bara fyllde beställningar och blev en siare."
         },
         {
           "type": "timeline",
@@ -120,27 +120,27 @@
             {
               "date": "1819",
               "title": "Medusas flotte",
-              "detail": "Géricault förvandlar en skandal till en historiemålning."
+              "detail": "Géricault vände en skandal till historiemåleri."
             },
             {
               "date": "1830",
-              "title": "Frihet leder folket",
-              "detail": "Delacroix målar julirevolutionen."
+              "title": "Friheten på barrikaderna",
+              "detail": "Delacroix målade julirevolutionen."
             },
             {
               "date": "1832",
-              "title": "Res till Marocko",
+              "title": "Resan till Marocko",
               "detail": "Ett nytt ljus för Delacroix palett."
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Hos dem blir historiemåleriet samhällskritik. Konsten måste skaka om, inte bara smickra."
+          "text": "Med dem blev historiemåleriet samhällskritik. Konsten fanns där för att oroa, inte bara för att smickra."
         },
         {
           "type": "takeaway",
-          "text": "Romantiken ersätter passion med förnuft och färgens vibration för teckningens rigoritet. Géricault och Delacroix gör individuella känslor till ett universellt ämne."
+          "text": "Romantiken satte lidelsen i förnuftets ställe, och färgens vibration i linjens stränghets ställe. Géricault och Delacroix gjorde den individuella känslan till ett universellt ämne."
         }
       ]
     }

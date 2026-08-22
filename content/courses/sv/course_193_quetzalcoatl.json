@@ -1,99 +1,99 @@
 {
   "id": "course_193_quetzalcoatl",
   "title": "Quetzalcoatl",
-  "subtitle": "Den befjädrade ormen",
+  "subtitle": "Den fjäderprydda ormen",
   "subject": "mythologie",
   "subcategory": "Other mythologies",
-  "description": "Quetzalcoatl, den befjädrade ormen, är den mesoamerikanska civilisationens gud. Dess myt kombinerar skapande, exil och det ödesdigra mötet med Cortés.",
+  "description": "Quetzalcoatl, den fjäderprydda ormen, är den mesoamerikanska civilisationens gud. Myten blandar skapelse, exil och det ödesdigra mötet med Cortes.",
   "hero": {
     "image": "quetzalcoatl",
     "ratio": "16:9",
-    "hook": "Gud, kung och profetia: den befjädrade ormen sträcker sig över två tusen år av mexikansk historia."
+    "hook": "Gud, kung och profetia: den fjäderprydda ormen går genom två tusen år av mexikansk historia."
   },
   "sections": [
     {
       "id": "course_193_quetzalcoatl_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Quetzalcoatl**, den \"fjädrade ormen\", är en av de rikaste figurerna i det förcolumbianska Mexiko. Han har vördats i mer än två årtusenden, från [[Teotihuacán]], en stor stad på centralplatån, till aztekerna och bland mayafolket under namnet [[Kukulkán]]."
+          "text": "**Quetzalcoatl**, „den fjäderprydda ormen”, är en av de rikaste gestalterna i det förcolumbianska Mexiko. Han dyrkas i mer än två årtusenden, från [[Teotihuacán]], höglandets stora stad, till aztekerna, och hos maya under namnet [[Kukulkán]]."
         },
         {
           "type": "paragraph",
-          "text": "Han förenar jorden (ormen) och himlen (fjädern). Gud av civilisation, kunskap och moralisk ordning, hans myt hamnar i korsning med verklig historia: den spanska erövringen av **1519**."
+          "text": "Han förenar jorden (ormen) och himlen (fjädern). Som gud för civilisation, kunskap och moralisk ordning korsar hans myt till slut den verkliga historien: den spanska erövringen **1519**."
         }
       ]
     },
     {
       "id": "course_193_quetzalcoatl_p1",
-      "title": "Guden som uppfann majs",
+      "title": "Guden som uppfinner majsen",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I [[Nahuatl]] kommer **Quetzalcoatl** från [[quetzal]], fågeln med gröna fjädrar, och från *coatl*, ormen. Denna förening gör den till bron mellan det mänskliga och det gudomliga."
+          "text": "På [[Nahuatl]] kommer **Quetzalcoatl** från [[quetzal]], fågeln med de gröna fjädrarna, och från *coatl*, ormen. Föreningen gör honom till bron mellan människa och gud."
         },
         {
           "type": "image",
           "asset": "quetzalcoatl_feathered_serpent_aztec_sculpture",
           "ratio": "4:3",
-          "caption": "Quetzalcoatl, den befjädrade ormen: jord och himmel sammanflätade."
+          "caption": "Quetzalcoatl, den fjäderprydda ormen: jord och himmel i varandra"
         },
         {
           "type": "paragraph",
-          "text": "I [[Kosmogoni av de fem solarna]] stiger han ner till [[Mictlán]], de dödas värld, för att samla ben från tidigare människor. Han ger dem liv igen med sitt blod. Sedan stjäl han **majs** från myrorna: Mexikos grundmat. Som vindens gud öppnar han också vägen till regnet i [[Tlaloc]]."
+          "text": "I [[Fem solar kosmogoni]] stiger han ner i [[Mictlán]], de dödas värld, för att hämta benen efter de människor som varit. Han ger dem liv igen med sitt blod. Sedan stjäl han **majsen** från myrorna: Mexikos grundföda. Som vindens gud öppnar han också vägen för [[Tlaloc]] regn."
         },
         {
           "type": "funFact",
-          "text": "Quetzalens stjärtfjädrar kan mäta **60 cm**. Bland maya- och aztekerna var dödsstraffet att döda fågeln: några fjädrar togs från den och släpptes sedan."
+          "text": "Quetzalens stjärtfjädrar kan bli **60 cm**. Hos maya och azteker kunde det kosta livet att döda fågeln: man tog några fjädrar och släppte den sedan."
         }
       ]
     },
     {
       "id": "course_193_quetzalcoatl_p2",
-      "title": "Kung-prästen av Tula",
+      "title": "Kungprästen i Tula",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Myten har också ett historiskt ansikte: **Topiltzin Quetzalcoatl**, kung-präst i **Tula** på 1000-talet. Han skulle ha velat reformera kulten och ersätta människooffer med offer av blommor och fjärilar."
+          "text": "Myten har också ett historiskt ansikte: **Topiltzin Quetzalcoatl**, kungpräst i **Tula** på 900-talet. Han ska ha velat reformera kulten och byta ut människooffer mot blommor och fjärilar."
         },
         {
           "type": "image",
           "asset": "tula_toltec_pyramid_warriors_sculpture_mexico",
           "ratio": "4:3",
-          "caption": "Tula, Toltec-staden kopplad till Quetzalcoatls regeringstid och fall."
+          "caption": "Tula, toltekisk stad knuten till Quetzalcoatls styre och fall"
         },
         {
           "type": "paragraph",
-          "text": "Hans rival **Tezcatlipoca** pressar honom att dricka pulque, en fermenterad dryck. Förödmjukad förvisade kungen österut. Enligt legenden lovar han att återvända ett år \"Un Reed\". Detta löfte kommer att väga tungt."
+          "text": "Rivalen **Tezcatlipoca** får honom att dricka pulque, en jäst dryck. Förödmjukad går kungen i exil österut. Enligt sägnen lovar han att återvända ett år „Ett rör”. Löftet ska väga tungt."
         },
         {
           "type": "funFact",
-          "text": "Efter hans avgång blir Quetzalcoatl ibland Morgonstjärnan: planeten Venus. Guden dör inte, han ändrar form."
+          "text": "Efter avfärden blir Quetzalcoatl ibland morgonstjärnan: planeten Venus. Guden dör inte, han byter form."
         }
       ]
     },
     {
       "id": "course_193_quetzalcoatl_p3",
-      "title": "1519: när myten möter Cortés",
+      "title": "1519: när myten möter Cortes",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I **1519** anländer **Hernán Cortés** i öster, \"One Reed\"-året i den aztekiska kalendern, det år då gudens återkomst förväntades. Kejsar **Moctezuma II** tvekar: ska vi slåss mot en inkräktare eller välkomna en gudomlighet?"
+          "text": "**1519** landstiger **Hernán Cortés** i öster, året „Ett rör” i den aztekiska kalendern, det år då gudens återkomst väntades. Kejsar **Moctezuma II** tvekar: ska man slåss mot en inkräktare eller ta emot en gudom?"
         },
         {
           "type": "image",
           "asset": "herna_u0301n_corte_u0301s_arrival_mexico_1519_moctezuma_painting",
           "ratio": "4:3",
-          "caption": "1519: Cortés ankomst möter löftet om gudomlig återkomst."
+          "caption": "1519: Cortes ankomst korsar löftet om gudomlig återkomst"
         },
         {
           "type": "paragraph",
-          "text": "Han skickar gåvor av guld och fjädrar. [[Conquistadors]] ser detta som en inbjudan. Myten, sann eller förstärkt i efterhand, blir ett psykologiskt vapen under hösten [[Tenochtitlán]], den aztekiska huvudstaden."
+          "text": "Han skickar gåvor av guld och fjädrar. [[Conquistadors]] ser en inbjudan. Myten, sann eller uppblåst i efterhand, blir ett psykologiskt vapen i fallet för [[Tenochtitlán]], aztekernas huvudstad."
         },
         {
           "type": "timeline",
@@ -101,17 +101,17 @@
             {
               "date": "Myt",
               "title": "Skapare",
-              "detail": "Ben från de döda, gudomligt blod, majsgåva."
+              "detail": "De dödas ben, gudomligt blod, majsens gåva."
             },
             {
               "date": "900-talet",
-              "title": "Exil från Tula",
-              "detail": "Prästkungen går österut."
+              "title": "Exilen från Tula",
+              "detail": "Kungprästen far österut."
             },
             {
               "date": "1519",
               "title": "Cortes",
-              "detail": "Den förväntade avkastningen blir erövring."
+              "detail": "Den väntade återkomsten blir erövring."
             }
           ]
         }
@@ -119,20 +119,20 @@
     },
     {
       "id": "course_193_quetzalcoatl_p4",
-      "title": "En symbol som aldrig dör",
+      "title": "Ett tecken som inte dör",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Efter erövringen försvann inte Quetzalcoatl. Vissa munkar tror att de ser en apostel där. Senare gjorde det oberoende Mexiko det till ett emblem för förcolumbiansk storhet. Muralister från 1900-talet, som Diego Rivera, målar det som landets själ."
+          "text": "Efter erövringen försvinner Quetzalcoatl inte. Vissa munkar tror att de ser en apostel. Senare gör det självständiga Mexiko honom till emblem för förcolumbiansk storhet. 1900-talets muralmålare, som Diego Rivera, målar honom som landets själ."
         },
         {
           "type": "paragraph",
-          "text": "Än idag uttrycker den befjädrade ormen en identitet: rötter i jorden, ambition vänd mot himlen."
+          "text": "Än i dag säger den fjäderprydda ormen en identitet: rötter i jorden, blick mot himlen."
         },
         {
           "type": "takeaway",
-          "text": "**Quetzalcoatl**, Feathered Serpent, är den mesoamerikanska civilisationens gud. Skapare, landsförvisad kung, sedan fatal profetia i **1519**, han är fortfarande en central symbol för Mexiko."
+          "text": "**Quetzalcoatl**, den fjäderprydda ormen, är den mesoamerikanska civilisationens gud. Skapare, landsflyktig kung, sedan ödesdiger profetia **1519**, förblir han ett centralt tecken för Mexiko."
         }
       ]
     }

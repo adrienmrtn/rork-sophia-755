@@ -1,28 +1,28 @@
 {
   "id": "course_178_antigone_devoir_familial_vs_loi_de_l_eta",
-  "title": "Antigone: familjeplikt vs statlig lag",
-  "subtitle": "Samvete kontra dekret",
+  "title": "Antigone: familjeplikt mot statens lag",
+  "subtitle": "Samvete mot dekret",
   "subject": "mythologie",
   "subcategory": "Greece: the heroes",
-  "description": "Antigone begraver sin bror mot kung Kreons order. Sofokles utgör en konflikt som fortfarande är aktuell: statlig lag eller högre moralisk plikt?",
+  "description": "Antigone begraver sin bror mot kung Kreons order. Sofokles ställer en konflikt som fortfarande gäller: statens lag eller en högre moralisk plikt?",
   "hero": {
     "image": "antigone_devoir_familial_vs_loi",
     "ratio": "16:9",
-    "hook": "En kung förbjuder att begrava en förrädare. En syster lyder inte. Två domare drabbar samman och Thebe kollapsar."
+    "hook": "En kung förbjuder att en förrädare begravs. En syster lyder inte. Två rättvisor krockar, och Thebe rasar."
   },
   "sections": [
     {
       "id": "course_178_antigone_devoir_familial_vs_loi_de_l_eta_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Antigone** är dotter till Oidipus och Jocasta. Mot **441 f.Kr.**, den tragediska **Sofokles** gjorde henne till hjältinna i en pjäs som har blivit universell."
+          "text": "**Antigone** är dotter till Oidipus och Iokaste. Omkring **441** f.Kr. gör tragikern **Sofokles** henne till hjältinna i ett stycke som blev allmängiltigt."
         },
         {
           "type": "paragraph",
-          "text": "Inför kung **Creon** ställer hon en fråga som sträcker sig över århundraden: när en statlig lag motsäger en högre moralisk övertygelse, ska vi lyda eller göra motstånd? Det är inte gott mot ont här. Det är två rättvisa idéer som kolliderar."
+          "text": "Inför kungen **Kreon** ställer hon en fråga som går genom seklerna: när en statlig lag krockar med en högre moralisk övertygelse, ska du lyda eller göra motstånd? Här är det inte det goda mot det onda. Det är två idéer om rättvisa som slår mot varandra."
         }
       ]
     },
@@ -33,86 +33,86 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I [[Thebe]], efter Oidipus exil, skulle hans söner **Eteocle** och **Polyneices** styra i tur och ordning. Eteocles vägrar ge sig. Polyneices attackerar sin egen stad med en främmande armé. De två bröderna dödar varandra."
+          "text": "I [[Thebe]], efter Oidipus landsflykt, skulle sönerna **Eteokles** och **Polyneikes** regera turvis. Eteokles vägrar släppa makten. Polyneikes angriper sin egen stad med en främmande här. De två bröderna dödar varandra."
         },
         {
           "type": "image",
           "asset": "antigone_creon_thebes_greek_tragedy",
           "ratio": "4:3",
-          "caption": "Antigone inför Creon: familjefruktighet mot statlig ordning."
+          "caption": "Antigone inför Kreon: familjepieteten mot statens order"
         },
         {
           "type": "paragraph",
-          "text": "Creon, deras farbror, tar makten. Eteocles, stadens försvarare, kommer att ha en högtidlig begravning. Polyneices, behandlade som en förrädare, kommer att förbli obegravda. För grekerna är det skrämmande: utan ritual vandrar själen nära [[Styx]], underjordens flod, utan vila."
+          "text": "Kreon, deras morbror, tar makten. Eteokles, stadens försvarare, ska få en högtidlig begravning. Polyneikes, behandlad som förrädare, ska ligga utan grav. För grekerna är det skräck: utan rit irrar själen vid [[Styx]], underjordens flod, utan vila."
         },
         {
           "type": "funFact",
-          "text": "En enkel handfull jord räckte, symboliskt, för att fullborda begravningsriten. Antigones handling är diskret... och kantas av konsekvenser."
+          "text": "En enkel näve jord räckte, symboliskt, för att fullgöra gravriten. Antigones handling är diskret... och tung av följder."
         }
       ]
     },
     {
       "id": "course_178_antigone_devoir_familial_vs_loi_de_l_eta_p2",
-      "title": "Begrav trots förbudet",
+      "title": "Begrava trots förbudet",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Antigone vägrar. Hon förnekar inte Polyneices svek. Den säger att ingen kung kan avbryta de plikter som är skyldiga de döda. Hennes syster **Ismène** tvekar, försiktigt. Antigone verkar ensam och täcker kroppen."
+          "text": "Antigone vägrar. Hon förnekar inte Polyneikes förräderi. Hon hävdar att ingen kung kan stryka plikterna mot de döda. Systern **Ismene** tvekar, försiktig. Antigone handlar ensam och täcker kroppen."
         },
         {
           "type": "image",
           "asset": "antigone_burying_polynices_ancient_greek_painting",
           "ratio": "4:3",
-          "caption": "Antigone utför begravningsriten för Polyneices."
+          "caption": "Antigone fullgör gravriten för Polyneikes"
         },
         {
           "type": "paragraph",
-          "text": "Innan Creon hävdar hon [[Naturrätt]]: \"oskrivna och oföränderliga\" lagar, äldre än mänskliga dekret. Creon ser detta som ett hot mot staten. Han dömer henne till att muras upp levande."
+          "text": "Inför Kreon åberopar hon [[Naturrätt]]: lagar „oskrivna och orubbliga”, äldre än mänskliga dekret. Kreon ser ett hot mot staten. Han dömer henne att muras in levande."
         }
       ]
     },
     {
       "id": "course_178_antigone_devoir_familial_vs_loi_de_l_eta_p3",
-      "title": "När oflexibilitet förstör allt",
+      "title": "När orubbligheten slår sönder allt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Haemon**, son till Creon och fästman till Antigone, försöker resonera med sin far. Creon låser in sig själv. Spåmannen **Tirésias** tillkännager gudarnas vrede: staden besudlas av det övergivna liket och av Antigones fängelse."
+          "text": "**Haimon**, Kreons son och Antigones fästman, försöker tala sin far till rätta. Kreon stänger inne sig. Siaren **Teiresias** varnar för gudarnas vrede: staden är fläckad av det övergivna liket och av Antigones fångenskap."
         },
         {
           "type": "image",
           "asset": "haemon_antigone_tomb_death_tragedy_painting",
           "ratio": "4:3",
-          "caption": "Vid graven, för sent: tragedin tar Antigone och Haemon."
+          "caption": "Vid graven, för sent: tragedin tar Antigone och Haimon"
         },
         {
           "type": "paragraph",
-          "text": "Creon ger sig till slut, för sent. Antigone hängde sig. Haemon begår självmord. **Eurydice**, Creons hustru, tar livet av sig. Genom att vilja rädda lagen förstörde Creon sin familj. Han förblir ensam, kung över en ordning som har blivit tom."
+          "text": "Kreon ger med sig till sist, för sent. Antigone har hängt sig. Haimon tar sitt liv. **Eurydike**, Kreons hustru, tar också sitt liv. I viljan att rädda lagen har Kreon förintat sin familj. Han blir ensam, kung över en ordning som blivit tom."
         }
       ]
     },
     {
       "id": "course_178_antigone_devoir_familial_vs_loi_de_l_eta_p4",
-      "title": "En politisk myt som ständigt återläses",
+      "title": "En politisk myt som ständigt läses om",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sofokles gör inte Creon till en enkel skurk. Han är en ledare som vill undvika kaos. Antigone är extremt stel. [[Hegelsk dialektik av Antigone]] ser kollisionen mellan två sfärer: familjen mot staden."
+          "text": "Sofokles gör inte Kreon till en enkel skurk. Han är en hövding som vill undvika kaos. Antigone själv är extremt stel. [[Den hegelianska dialektiken i Antigone]] ser krocken mellan två sfärer: familjen mot staden."
         },
         {
           "type": "funFact",
-          "text": "1944 utfördes [[Antigone av Jean Anouilh (1944)]] under ockupationen. Den tyska censuren såg det som Creons order; den franska allmänheten läser där ofta motståndsrörelsens heroism."
+          "text": "År 1944 spelas [[Antigone av Jean Anouilh (1944)]] under ockupationen. Den tyska censuren ser Kreons ordning. Den franska publiken läser ofta motståndets hjältemod."
         },
         {
           "type": "paragraph",
-          "text": "Konflikten mellan individuellt samvete och statsförnuft förblir kärnan i det politiska tänkandet. Antigone påminner oss om att absolut rättvisa, utan dialog, kan förstöra dem som den påstår sig försvara."
+          "text": "Konflikten mellan det enskilda samvetet och statens skäl sitter kvar i politiskt tänkande. Antigone påminner om att den absoluta rättvisan, utan samtal, kan förstöra dem den säger sig försvara."
         },
         {
           "type": "takeaway",
-          "text": "Antigone motsätter sig familjens heliga lagar mot Creons dekret. Deras ömsesidiga vägran att kompromissa förstör Thebe och den kungliga härstamningen."
+          "text": "Antigone ställer familjens heliga lagar mot Kreons dekret. Deras ömsesidiga vägran att kompromissa slår sönder Thebe och kungahuset."
         }
       ]
     }

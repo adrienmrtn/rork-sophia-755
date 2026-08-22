@@ -1,102 +1,102 @@
 {
   "id": "course_215_les_inegalites_nord_sud",
-  "title": "Nord-Syd ojämlikhet",
-  "subtitle": "En värld med två hastigheter",
+  "title": "Ojämlikheten mellan nord och syd",
+  "subtitle": "En värld i två hastigheter",
   "subject": "comprendreLeMonde",
   "subcategory": "Economy & society",
-  "description": "De rikaste 10% på planeten fångar mer än hälften av den globala inkomsten. Den extrema fattigdomen har dock delats med fyra på trettio år.",
+  "description": "De rikaste **10%** på jorden tar mer än hälften av all världsinkomst. Ändå är den extrema fattigdomen en fjärdedel av vad den var för trettio år sedan.",
   "hero": {
     "image": "les_inegalites_nord_sud",
     "ratio": "16:9",
-    "hook": "En amerikan tjänar på en timme vad en bosatt i Niger tjänar på en hel arbetsdag."
+    "hook": "En amerikan tjänar på en timme det en person i Niger tjänar på en hel arbetsdag."
   },
   "sections": [
     {
       "id": "course_215_les_inegalites_nord_sud_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Klyftan mellan rika och fattiga länder är fortfarande en av de mest slående fakta i världen idag. Globaliseringen lovade ett närmande när det gäller levnadsstandarden, men rikedomsklyftorna är fortfarande enorma mellan nationer."
+          "text": "Klyftan mellan rika och fattiga länder är fortfarande ett av de mest slående dragen i världen i dag. Globaliseringen lovade att levnadsstandarden skulle närma sig, men skillnaderna i rikedom mellan nationer är fortfarande enorma."
         },
         {
           "type": "paragraph",
-          "text": "Men den senaste tidens historia är inte bara dyster: extrem fattigdom har minskat snabbare än någonsin på trettio år. Den här kursen utforskar rötterna till dessa ojämlikheter, och orsakerna till denna märkliga paradox."
+          "text": "Den senaste historien är ändå inte bara mörk. Extrem fattigdom har backat snabbare de senaste trettio åren än någonsin förr. Den här kursen tittar på rötterna till ojämlikheterna, och på skälen till den märkliga paradoxen."
         }
       ]
     },
     {
       "id": "course_215_les_inegalites_nord_sud_p1",
-      "title": "En värld med två hastigheter",
+      "title": "En värld i två hastigheter",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "De **** rikaste 10 % av världens befolkning tar över 52 % av den globala inkomsten. De fattigaste 50 % får bara dela på 8 % av kakan. Denna koncentration av rikedom har aldrig varit större i mänsklighetens historia."
+          "text": "De **rikaste 10%** av världens befolkning tar mer än **52%** av den globala inkomsten. De fattigaste **50%** delar på bara **8%** av kakan. Rikedom har aldrig varit så koncentrerad i mänsklighetens historia."
         },
         {
           "type": "paragraph",
-          "text": "Denna klyfta ses också i förväntad livslängd: den når 83 år i Japan, men sjunker till 55 år i Centralafrikanska republiken. Dessa klyftor beror inte på slumpen: de kommer från mycket ojämlik tillgång till dricksvatten, mat och hälsovård."
+          "text": "Klyftan syns också i medellivslängden: **83 år** i Japan, men **55 år** i Centralafrikanska republiken. De här gapen är inte slump. De kommer från djupt ojämlik tillgång till rent vatten, mat och sjukvård."
         },
         {
           "type": "funFact",
-          "text": "En invånare i USA tjänar i genomsnitt, på en timmes arbete, lika mycket som en invånare i Niger på en hel dag."
+          "text": "På en timmes arbete tjänar en genomsnittlig invånare i USA lika mycket som någon i Niger tjänar på en hel dag."
         }
       ]
     },
     {
       "id": "course_215_les_inegalites_nord_sud_p2",
-      "title": "Historiska rötter lever fortfarande",
+      "title": "Historiska rötter som fortfarande lever",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "För att förstå dessa skillnader måste vi gå tillbaka till koloniseringen. Europeiska makter organiserade många södra territorier som leverantörer av råvaror (kaffe, kakao, bomull), och bromsade sin egen industrialisering för att skydda sina egna fabriker."
+          "text": "För att förstå de här gapen måste du gå tillbaka till koloniseringen. De europeiska makterna organiserade många territorier i syd som leverantörer av råvaror (kaffe, kakao, bomull) och höll tillbaka deras industrialisering för att skydda sina egna fabriker."
         },
         {
           "type": "image",
           "asset": "global_inequality_rich_poor_contrast_photograph",
           "ratio": "16:9",
-          "caption": "Förmögenhetsklyftorna mellan norr och söder är fortfarande bland de största på planeten."
+          "caption": "Rikedomsklyftan mellan nord och syd är fortfarande bland de vidaste på jorden"
         },
         {
           "type": "paragraph",
-          "text": "Denna logik fortsätter idag genom [[handelsvillkor]]: länder i söder säljer ofta råvaror vars pris varierar mycket, medan de köper tillverkade produkter vars pris bara ökar. Till detta kommer skuldens tyngd: att betala tillbaka räntor tar ibland mer plats i en nationell budget än utbildning eller hälsa."
+          "text": "Samma logik fortsätter i dag genom [[Ojämlika bytesvillkor]]: länderna i syd säljer mest råvaror vars priser slår vilt, medan de köper tillverkade varor vars priser bara går upp. Skulden lägger till tyngd, eftersom räntebetalningarna ibland tar en större del av en statsbudget än utbildning eller hälsa."
         }
       ]
     },
     {
       "id": "course_215_les_inegalites_nord_sud_p3",
-      "title": "Verkliga framsteg, men ojämna",
+      "title": "Verkliga framsteg, ojämnt delade",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "De senaste trettio åren har dock sett en spektakulär nedgång i absolut fattigdom, som drabbade 36 % av världens befolkning 1990, jämfört med mindre än 10 % före 2020. Dessa framsteg kommer främst från Kinas och Indiens snabba tillväxt."
+          "text": "De senaste trettio åren har ändå gett en spektakulär reträtt för den absoluta fattigdomen, som drabbade **36%** av världens befolkning **1990** och mindre än **10%** före **2020**. De framstegen kommer framför allt från Kinas och Indiens bländande tillväxt."
         },
         {
           "type": "paragraph",
-          "text": "Dessa framsteg har en dold sida: detta är vad ekonomen Branko Milanovics [[\"elefantkurva\"]] visar. Den asiatiska medelklassen har sett sina inkomster explodera, men arbetarklassen i rika länder har stagnerat, inför global konkurrens. Att minska ojämlikheterna mellan länder har därför inte förhindrat nya spänningar även inom rika länder."
+          "text": "Framstegen har ett dolt ansikte, och det är vad [[\"Elefantkurvan\"]] ritad av ekonomen Branko Milanovic visar. Inkomsterna exploderade för den asiatiska medelklassen, medan arbetarklassens inkomster i rika länder stagnerade under trycket från global konkurrens. Att sluta gapet mellan länder hindrade inte nya spänningar inuti de rika länderna själva."
         }
       ]
     },
     {
       "id": "course_215_les_inegalites_nord_sud_p4",
-      "title": "Klimat, en ny skiljelinje",
+      "title": "Klimatet, den nya spricklinjen",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ojämlikheterna mellan nord och syd beror nu på klimatet. Länderna i söder, som historiskt sett är minst ansvariga för utsläpp av växthusgaser, är ändå de mest utsatta för torka, översvämningar och stigande vattennivåer."
+          "text": "Framtiden för ojämlikheten mellan nord och syd avgörs nu på klimatet. Länderna i syd, historiskt minst ansvariga för utsläppen av växthusgaser, är mest utsatta för torka, översvämningar och stigande hav."
         },
         {
           "type": "paragraph",
-          "text": "För att på ett hållbart sätt minska dessa klyftor undersöker det internationella samfundet nya vägar: [[officiellt bistånd]] inriktat på energiomställningen, eller avskrivning av de ömtåliga ländernas skulder. Så länge de rikastes rikedom växer snabbare än de fattigastes kommer spänningarna att förbli höga."
+          "text": "För att stänga de här gapen på riktigt prövar det internationella samfundet nya vägar: [[officiellt bistånd]] riktat mot energiomställningen, eller att skriva av skulden för de sköraste länderna. Så länge de rikastes rikedom växer snabbare än de fattigastes kommer spänningarna att stanna höga."
         },
         {
           "type": "takeaway",
-          "text": "De rikaste 10 % av världen tar över hälften av den globala inkomsten, men extrem fattigdom har minskat snabbare än någonsin på trettio år tack vare Kinas och Indiens framväxt. Nästa stora utmaning i denna klyfta mellan nord och syd blir klimatet."
+          "text": "De rikaste **10%** i världen tar mer än hälften av den globala inkomsten, men den extrema fattigdomen har fallit snabbare på trettio år än någonsin förr, tack vare Kinas och Indiens uppgång. Nästa stora utmaning längs den här klyftan mellan nord och syd blir klimatet."
         }
       ]
     }

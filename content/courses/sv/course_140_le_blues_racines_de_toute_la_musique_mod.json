@@ -1,78 +1,78 @@
 {
   "id": "course_140_le_blues_racines_de_toute_la_musique_mod",
-  "title": "Blues: rötter till all modern musik",
+  "title": "Blues: rötterna till all modern musik",
   "subtitle": "1870-1960",
   "subject": "art",
   "subcategory": "Music",
-  "description": "Född i bomullsfälten i Mississippi, uppfann blues rutnätet med 12 mått och gav näring åt jazz, rock, soul och hiphop.",
+  "description": "Född på Mississippis bomullsfält uppfinner bluesen 12-taktersmallen och föder jazz, rock, soul och hiphop.",
   "hero": {
     "image": "le_blues_racines_de_toute_la_musique_moderne",
     "ratio": "16:9",
-    "hook": "Ett rop i bomullsfälten, och all modern musik har en rot."
+    "hook": "Ett skrik på bomullsfälten, och hela den moderna musiken har en rot."
   },
   "sections": [
     {
       "id": "course_140_le_blues_racines_de_toute_la_musique_mod_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Blues är inte bara en genre. Det är matrisen för mycket av västerländsk populärmusik på 1900-talet. Den föddes i utmattningen av bomullsfälten i **Mississippi**, i slutet av 1800-talet, som motstånd och uttryck för afroamerikaner."
+          "text": "Blues är inte bara en genre. Det är matrisen för en stor del av 1900-talets västerländska populärmusik. Den föds i nöden på **Mississippis** bomullsfält, i slutet av 1800-talet, som motstånd och röst för afroamerikanerna."
         },
         {
           "type": "paragraph",
-          "text": "Från jazz till rock'n'roll, från soul till hiphop, dess strukturer och känslor spola fortfarande våra öron. Att förstå blues innebär att gå tillbaka till källan till ett rop förvandlat till konst."
+          "text": "Från jazz till rock'n'roll, från soul till hiphop, vattnar dess strukturer och känsla fortfarande våra öron. Att förstå bluesen är att gå till källan för ett skrik som blev konst."
         }
       ]
     },
     {
       "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p1",
-      "title": "Bomullsfält, rop och 12 mått",
+      "title": "Bomullsfält, hollers och 12 takter",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mellan **1870** och **1890**, i [[Djupa södern]] som präglas av segregation och delägares misär, syntetiserar bluesen afrikanska muntliga traditioner. [[Fält ropar]] (ensamma arbetsrop) och [[Arbetslåtar]] (låtar tidsinställda för att synkronisera ansträngningen) möter [[spirituals]], religiösa sånger som ibland bär budskap om frihet."
+          "text": "Mellan **1870** och **1890**, i [[Djupa södern]] präglad av segregation och lantbrukarnas nöd, smälter bluesen samman afrikanska muntliga traditioner. [[Fält ropar]] (ensamma arbetsskrik) och [[Arbetslåtar]] (taktfasta sånger för att synka slitet) korsar [[spirituals]], religiösa sånger som ibland bar frihetsbudskap."
         },
         {
           "type": "paragraph",
-          "text": "Den stora innovationen: [[struktur i 12 åtgärder]], ett rutnät med tre ackord som fungerar som en duk för improvisation. [[blå lappar]], böjda toner, imiterar röstens smärta. Gitarren, ofta med en [[Flaskhals]] (glas- eller metallrör gled över strängarna), för dialog med sångaren."
+          "text": "Den stora nyheten: [[12-stavsstrukturen]], ett schema av tre ackord som blir duk för improvisation. [[blå lappar]], böjda toner, härmar röstens smärta. Gitarren, ofta med [[Flaskhals]] (ett glas- eller metallrör som glids över strängarna), talar med sångaren."
         },
         {
           "type": "funFact",
-          "text": "I texterna kodade ordet \"ryttare\" ofta en älskare, för att ta upp tabu teman inför en oinformerad publik."
+          "text": "I texterna kodade ordet „rider” (ryttare) ofta en älskare, för att närma tabun inför en oinvigd publik."
         }
       ]
     },
     {
       "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p2",
-      "title": "Robert Johnson och deltamyten",
+      "title": "Robert Johnson och myten om Deltat",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Delta of MississippiEdit**, mellan Memphis och Vicksburg, är vaggan för **Delta blues**, en rå form av genren. **Robert Johnson** (**1911**-**1938**) spelar den vandrande musikern: endast **29**-inspelningar, ett enormt inflytande. Hans [[fingerplockning]] behandlar gitarren som en miniatyrorkester."
+          "text": "**Mississippideltat**, mellan Memphis och Vicksburg, är vaggan för **Delta blues**, genrens råa form. **Robert Johnson** (**1911**-**1938**) är den vandrande musikern: bara **29** inspelningar, ett väldigt inflytande. Hans [[Fingerpicking]] behandlar gitarren som en miniatyrorkester."
         },
         {
           "type": "image",
           "asset": "mississippi_delta_blues_cotton_fields",
           "ratio": "4:3",
-          "caption": "Mississippideltat: vaggan av landsbygdsblues."
+          "caption": "Mississippideltat: den rurala bluesens vagga"
         },
         {
           "type": "image",
           "asset": "robert_johnson_blues_guitarist_crossroads",
           "ratio": "4:3",
-          "caption": "Robert Johnson: 29 titlar, en evig legend."
+          "caption": "Robert Johnson: 29 låtar, en evig legend"
         },
         {
           "type": "paragraph",
-          "text": "Legenden säger att han sålde sin själ till djävulen vid en [[vägskäl]] (korsning) i utbyte mot sitt mästerskap. Bluesen kallades då ofta \"djävulens musik\", jämfört med kyrkasånger. Johnson dog av förgiftning i ung ålder. *Cross Road Blues* och *Sweet Home Chicago* håller på att bli standarder."
+          "text": "Legenden säger att han sålde själen till djävulen vid ett [[vägskäl]] mot mästerskapet. Bluesen kallades då ofta „djävulens musik”, mot kyrkans sånger. Johnson dör förgiftad, ung. *Cross Road Blues* och *Sweet Home Chicago* blir standarder."
         },
         {
           "type": "funFact",
-          "text": "Han spelade in vänd mot väggen i ett hotellrum i San Antonio, inte av blyghet, utan för att utnyttja akustiken i rummet."
+          "text": "Han spelade in vänd mot väggen i ett hotellrum i San Antonio, inte av blyghet, utan för att utnyttja rummets akustik."
         }
       ]
     },
@@ -83,61 +83,61 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Under åren **1940** tog den stora migrationen miljontals afroamerikaner till det industriella norr. I **Chicago** blir bluesen elektrifierad för att överrösta ljudet från fabrikerna. **Muddy Waters** och **Howlin' Wolf** imponerar på elgitarr, bas, trummor."
+          "text": "På **1940-talet** för den stora migrationen miljoner afroamerikaner mot det industriella Norr. I **Chicago** elektrifieras bluesen för att täcka fabrikslarmet. **Muddy Waters** och **Howlin' Wolf** sätter elgitarr, bas, trummor."
         },
         {
           "type": "image",
           "asset": "muddy_waters_chicago_electric_blues",
           "ratio": "4:3",
-          "caption": "Muddy Waters i Chicago: blues kopplad till strömmen."
+          "caption": "Muddy Waters i Chicago: bluesen inkopplad på strömmen"
         },
         {
           "type": "paragraph",
-          "text": "Denna elektrifiering leder till rock'n'roll. **Chuck Berry** och **Bo Diddley** tar upp tempot. På 1960-talet återexporterade **Rolling Stones** (namnet från en Muddy Waters-låt) och **Led Zeppelin** dessa rötter till en vit publik, ofta utan att de ursprungliga skaparna tjänade en förmögenhet."
+          "text": "Den elektrifieringen leder till rock'n'roll. **Chuck Berry** och **Bo Diddley** höjer tempot. På 1960-talet återexporterar **Rolling Stones** (namnet ur en låt av Muddy Waters) och **Led Zeppelin** rötterna till en vit publik, ofta utan att de ursprungliga skaparna får förmögenheten."
         },
         {
           "type": "funFact",
-          "text": "Muddy Waters \"upptäcktes\" av musikforskaren Alan Lomax medan han fortfarande körde traktor på en bomullsplantage."
+          "text": "Muddy Waters „upptäcktes” av musikologen Alan Lomax medan han fortfarande körde traktor på en bomullsplantage."
         }
       ]
     },
     {
       "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p4",
-      "title": "Från B.B. King till provtagning",
+      "title": "Från B.B. King till sampling",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Jazz lånar strukturer och improvisation från den. Soul och R&B håller hans röst visceral. Hiphop återvinner sitt arv genom [[Provtagning]] av gammal vinyl. **B.B. kung** populariserade det melodiska gitarrsolot. Mer än en historisk stil förblir bluesen ett språk om förlorad kärlek, orättvisa och hopp."
+          "text": "Jazzen lånar strukturer och improvisation. Soul och R&B behåller den viscerala rösten. Hiphop återbrukar arvet genom [[provtagning]] av gamla vinylskivor. **B.B. King** populariserar det melodiska gitarrsolot. Mer än en historisk stil förblir bluesen ett språk om förlorad kärlek, orätt och hopp."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1870-1890",
-              "title": "Födelse i djupa södern",
-              "detail": "Hollers, spirituals och grid i 12 mått."
+              "title": "Födelse i Deep South",
+              "detail": "Hollers, spirituals och 12-taktersschema."
             },
             {
               "date": "1930-talet",
               "title": "Robert Johnson",
-              "detail": "Myten om deltat och vägskälet."
+              "detail": "Myten om Deltat och vägskälet."
             },
             {
               "date": "1940-1950-talet",
               "title": "Elektriska Chicago",
-              "detail": "Muddy Waters banar väg för rock."
+              "detail": "Muddy Waters öppnar vägen till rock."
             },
             {
               "date": "1960-talet",
               "title": "Brittisk renässans",
-              "detail": "Stones och Zeppelin globaliserar bluesen."
+              "detail": "Stones och Zeppelin gör bluesen världsvid."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Född från lidandet av svarta samhällen i Mississippi, gav bluesen världen 12-taktsdiagrammet och, via Chicago, rock och mycket mer."
+          "text": "Född ur de svarta samhällenas lidande i Mississippi gav bluesen världen 12-taktersschemat och, via Chicago, rocken och mycket mer."
         }
       ]
     }

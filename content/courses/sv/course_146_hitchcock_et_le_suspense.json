@@ -1,89 +1,89 @@
 {
   "id": "course_146_hitchcock_et_le_suspense",
-  "title": "Hitchcock och spänning",
+  "title": "Hitchcock och spänningen",
   "subtitle": "1899-1980",
   "subject": "art",
   "subcategory": "Cinema, photography & architecture",
-  "description": "**Alfred Hitchcock** uppfinner modern spänning: ger publiken information som karaktärerna inte har. Med *Psykologi*, *Vertigo* eller *Bakrutan* manipulerar han vår blick.",
+  "description": "**Alfred Hitchcock** uppfann den moderna spänningen: ge publiken information som rollerna saknar. I *Psycho*, *Vertigo* och *Fönstret åt gården* styr han blicken.",
   "hero": {
     "image": "hitchcock_et_le_suspense",
     "ratio": "16:9",
-    "hook": "Den verkliga spänningen förvånar inte: den låter dig se bomben under bordet."
+    "hook": "Riktig spänning överraskar inte: den låter dig se bomben under bordet."
   },
   "sections": [
     {
       "id": "course_146_hitchcock_et_le_suspense_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Alfred Hitchcock** (1899-1980) har fått smeknamnet \"spänningens mästare\". I mer än femtio filmer förvandlade han thrillern till konsten att manipulera. *Psykologi*, *Vertigo*, *Bakrutan*: varje gång berättar kameran inte bara en historia. Hon leker med våra nerver."
+          "text": "**Alfred Hitchcock** (1899-1980) kallades „mästaren i spänning”. På mer än femtio filmer gjorde han thrillern till en konstart i manipulation. *Psycho*, *Vertigo*, *Fönstret åt gården*: kameran berättar inte bara en historia. Den leker med nerverna."
         },
         {
           "type": "paragraph",
-          "text": "Hans favoritämne är inte brott. Det är utseendet: skuld, besatthet, voyeurism. Hitchcock filmar tittaren lika mycket som karaktärerna."
+          "text": "Hans favoritämne är inte brottet. Det är blicken: skuld, besatthet, voyeurism. Hitchcock filmar åskådaren lika mycket som rollerna."
         }
       ]
     },
     {
       "id": "course_146_hitchcock_et_le_suspense_p1",
-      "title": "Överraskning kontra spänning",
+      "title": "Överraskning mot spänning",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I **1966** förklarar Hitchcock sin metod för [[François Truffaut]], fransk kritiker och sedan filmskapare. **överraskning**, säger han, är en bomb som exploderar utan förvarning: en kort chock. **spänning** visar publiken bomben medan karaktärerna ignorerar den. Spänningen håller i sig. Vi blir delaktiga och maktlösa."
+          "text": "År **1966** förklarade Hitchcock sin metod för [[François Truffaut]], fransk kritiker som sedan blev filmskapare. **Överraskning**, sade han, är en bomb som exploderar utan varning: en kort chock. **Spänning** är att visa bomben för publiken medan rollerna inte vet om den. Spänningen varar. Vi blir medbrottslingar, och maktlösa."
         },
         {
           "type": "image",
           "asset": "alfred_hitchcock_portrait_director",
           "ratio": "4:3",
-          "caption": "Hitchcock: ett ansikte, en siluett, ett globalt varumärke av spänning."
+          "caption": "Hitchcock: ett ansikte, en silhuett, ett världsvarumärke för rysning"
         },
         {
           "type": "funFact",
-          "text": "För att föra fram handlingen använder han ofta en [[MacGuffin]]: ett föremål eller en hemlighet som motiverar karaktärerna, men vars exakta natur spelar liten roll. Det viktiga är jakten."
+          "text": "För att driva handlingen använder han ofta en [[MacGuffin]]: ett föremål eller en hemlighet som sätter rollerna i rörelse, men vars exakta natur knappt spelar roll. Det som räknas är jakten."
         },
         {
           "type": "paragraph",
-          "text": "Denna informationsasymmetri är dess grammatik. Så fort vi vet mer än hjälten fruktar vi för honom."
+          "text": "Den informationsklyftan är hans grammatik. Så fort vi vet mer än hjälten blir vi rädda för honom."
         }
       ]
     },
     {
       "id": "course_146_hitchcock_et_le_suspense_p2",
-      "title": "Tekniska uppfinningar för att filma ångest",
+      "title": "Tekniska grepp för att filma ångest",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I **1948**, med *Repet*, simulerar Hitchcock en unik [[sekvensbild]]: filmen verkar vara inspelad i ett svep. Rullarna håller bara tio minuter, så han gömmer skären bakom en rygg eller en mörk möbel. Effekten är kvävande: vi förblir inlåsta med mördarna."
+          "text": "År **1948**, i *Repet*, låtsas Hitchcock att allt är en enda [[sekvensbild]]: filmen ser ut att vara tagen i ett svep. Rullarna räckte bara tio minuter, så han gömde klippen bakom en rygg eller en mörk möbel. Effekten kväver: vi stannar instängda med mördarna."
         },
         {
           "type": "image",
           "asset": "hitchcock_vertigo_james_stewart_kim_novak_film",
           "ratio": "4:3",
-          "caption": "Vertigo: Vertigo filmad som en förvrängning av rymden."
+          "caption": "Vertigo: svindeln filmad som en distorsion av rummet"
         },
         {
           "type": "paragraph",
-          "text": "I **1958**, för *Vertigo*, uppfann han [[Dolly Zoom]]: kameran rör sig bakåt medan zoomen går framåt (eller vice versa). Utrymmet är förvrängt. Vi ser inte yrseln längre. Vi känner det."
+          "text": "År **1958**, i *Vertigo*, uppfann han [[Dolly Zoom]]: kameran backar medan zoomen går fram (eller tvärtom). Rummet slår sig. Vi ser inte längre svindeln. Vi känner den."
         }
       ]
     },
     {
       "id": "course_146_hitchcock_et_le_suspense_p3",
-      "title": "Vi är alla voyörer",
+      "title": "Vi är alla voyeurer",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I *Bakrutan* (**1954**), en fotograf med brutet ben spionerar på sina grannar. Han är åskådarens dubbelgångare i mörkret. Hitchcock använder [[Subjektiv kamera]]: vi ser exakt vad hjälten ser, inget mer."
+          "text": "I *Fönstret åt gården* (**1954**) spanar en fotograf med brutet ben på grannarna. Han är åskådarens dubbelgångare i mörkret. Hitchcock använder [[Subjektiv kamera]]: vi ser exakt det hjälten ser, inget mer."
         },
         {
           "type": "paragraph",
-          "text": "Denna identifiering är moralisk såväl som visuell. Vi letar efter ledtrådar, men vi delar också skulden att titta på det som inte angår oss. Hitchcock blandar thriller och [[psykoanalys]]: begravda rädslor, förbjudna begär, dubbla identiteter."
+          "text": "Identifikationen är moralisk lika mycket som visuell. Vi letar ledtrådar, men vi delar också skulden i att titta på det som inte angår oss. Hitchcock blandar thriller och [[psykoanalys]]: begravda rädslor, förbjudna begär, dubbla identiteter."
         }
       ]
     },
@@ -94,11 +94,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hitchcock förvandlade sitt namn till ett varumärke, tills hans tv-serie *Aalfred Hitchcock presentatör*. För *Psykologi* förbjuder han inträde efter sessionens början: hemligheten blir en händelse. Hans samarbete med kompositören [[Bernard Herrmann]] länkar samman musik och [[montering]] för att få upp publikens puls."
+          "text": "Hitchcock gjorde sitt namn till ett varumärke, ända till tv-serien *Alfred Hitchcock presenterar*. Till *Psycho* förbjöd han sen ankomst: hemligheten blev ett evenemang. Samarbetet med kompositören [[Bernard Herrmann]] knöt musiken till [[redigering]] och drev upp publikens puls."
         },
         {
           "type": "takeaway",
-          "text": "Hitchcock kodifierade modern spänning: informera betraktaren, rikta blicken och förvandla rädsla till kontrollerad njutning. Decennier senare har thrillern fortfarande sin grammatik att tacka honom."
+          "text": "Hitchcock kodifierade den moderna spänningen: informera åskådaren, styra blicken och vända rädsla till kontrollerad njutning. Årtionden senare är thrillerns grammatik fortfarande hans."
         }
       ]
     }
