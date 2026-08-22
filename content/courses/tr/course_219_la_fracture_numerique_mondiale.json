@@ -4,11 +4,11 @@
   "subtitle": "İnsanlığın üçte biri çevrimdışı",
   "subject": "comprendreLeMonde",
   "subcategory": "Economy & society",
-  "description": "2,7 milyar insanın hâlâ internete erişimi yok. Giderek dijitalleşen dünyada, bu bağlantı eksikliği yeni bir dışlanma biçimine dönüşüyor.",
+  "description": "2,7 milyar kişi hâlâ internete erişemez. Gitgide daha dijital bir dünyada bu bağlantısızlık yeni bir dışlanma biçimi olur.",
   "hero": {
     "image": "la_fracture_numerique_mondiale",
     "ratio": "16:9",
-    "hook": "Kenya, banka şubelerinin bulunmaması nedeniyle Avrupa'dan on yıl önce telefonla ödemeyi icat etti."
+    "hook": "Kenya, banka şubesi yokluğunda Avrupa'dan on yıl önce telefonla ödemeyi icat etti."
   },
   "sections": [
     {
@@ -18,85 +18,85 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Gelişmiş toplumlar yapay zekanın yönlendirdiği bir devrim yaşarken, acımasız bir gerçek varlığını sürdürüyor: **2,7 bin dolar**, yani insanlığın yaklaşık üçte biri hâlâ internete erişemiyor."
+          "text": "Gelişmiş toplumlar yapay zekânın taşıdığı bir devrim yaşarken sert bir gerçek durur: **2,7 milyar kişi**, yani insanlığın kabaca üçte biri, hâlâ internete erişemez."
         },
         {
           "type": "paragraph",
-          "text": "Bu **dijital uçurum** sadece teknik bir gecikme değil: milyonlarca insanı eğitimden, sağlıktan ve küresel ekonomiden uzak tutan gerçek bir engel haline geldi. İşte bu yüzden devam ediyor ve bazı ülkeler bunu nasıl doldurmaya çalışıyor."
+          "text": "Bu **dijital uçurum** yalnızca teknik bir gecikme değildir: milyonlarca insanı eğitimden, sağlıktan ve dünya ekonomisinden uzak tutan gerçek bir bariyer olmuştur. Neden sürdüğünü ve bazı ülkelerin nasıl kapatmaya çalıştığını görelim."
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p1",
-      "title": "İki hızlı dünya haritası",
+      "title": "İki hızlı bir dünya haritası",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "2024 yılına gelindiğinde dünya çapında yaklaşık 5,4 milyar insan internete bağlı olacak, ancak en yoksul bölgelerde ilerleme durağanlaşıyor. Avrupa ve Kuzey Amerika bağlantı oranı %90'ı aşarken, Sahraaltı Afrika sadece %37'de kalıyor."
+          "text": "2024'te dünyada yaklaşık 5,4 milyar kişi internete bağlıdır, ama en yoksul bölgelerde ilerleme duraklar. Avrupa ve Kuzey Amerika %90'ın üzerindedir; Sahra altı Afrika ise yalnızca %37'de kalır."
         },
         {
           "type": "paragraph",
-          "text": "Bu dışlanma çeşitli nedenlerden kaynaklanmaktadır. Birincisi, altyapı eksikliği: belirli izole bölgelere optik fiber kurulumunun operatörler tarafından çok maliyetli olduğu düşünülüyor. Sonra fiyat: Bazı ülkelerde basit bir giriş seviyesi telefon, birkaç aylık maaşı temsil ediyor. Son olarak, dil engeli (web içeriğinin yaklaşık %70'i İngilizce'dir) ve bağlantı mevcut olsa bile dijital eğitim sınırlamasının olmaması. [[akıllı telefon]]"
+          "text": "Bu dışlanmanın birkaç nedeni vardır. Önce altyapı yokluğu: bazı ıssız bölgelerde fiber döşemek işletmecilere fazla pahalı gelir. Sonra fiyat: bazı ülkelerde giriş seviyesi [[akıllı telefon]] birkaç aylık maaşa bedeldir. Son olarak dil bariyeri (web içeriğinin yaklaşık %70'i İngilizcedir) ve dijital eğitim eksikliği, bağlantı olsa bile kullanımı kısıtlar."
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p2",
-      "title": "Altyapı eksikliği inovasyonu zorladığında",
+      "title": "Altyapı yokluğu yeniliği zorlayınca",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bu bölünme eşitsizliklerin çarpanı görevi görüyor. Uzaktan çalışmanın, e-ticaretin ve çevrimiçi eğitimin ([[KAÇD]]) norm haline geldiği bir dünyada, bağlantıda olmamak küresel ekonomi için görünmez olmak anlamına geliyor."
+          "text": "Bu uçurum eşitsizlikleri çarpar. Uzaktan çalışma, çevrimiçi ticaret ve [[KAÇD]] norm olunca, bağlı olmamak dünya ekonomisi için görünmez kalmak demektir."
         },
         {
           "type": "image",
           "asset": "digital_divide_africa_rural_village_smartphone",
           "ratio": "16:9",
-          "caption": "Birçok kırsal bölgede cep telefonu internete erişim için tek bağlantı noktası olmaya devam ediyor."
+          "caption": "Pek çok kırsal bölgede cep telefonu hâlâ internete tek erişim noktasıdır"
         },
         {
           "type": "paragraph",
-          "text": "Kenya başka bir yol gösteriyor: Yeterli banka şubesinin bulunmaması nedeniyle ülke 2007'de basit bir SMS ödeme sistemini kitlesel olarak benimsedi; [[Kenya M-Pesa]], Avrupa'yı on yıl farkla geride bıraktı. Bu sistem, banka hesabı olmayan milyonlarca kişinin sadece bir telefonla güvenli işlem yapmasına olanak sağladı."
+          "text": "Kenya başka bir yolu gösterir: yeterli banka şubesi olmadığı için ülke 2007'den itibaren salt SMS ile ödeme sistemi [[Kenya M-Pesa]] yöntemini kitlesel benimsedi, Avrupa'yı on yıl geçti. Bu sistem, hesabı olmayan milyonlarca kişinin sıradan bir telefonla güvenli işlem yapmasını sağladı."
         },
         {
           "type": "funFact",
-          "text": "Kenya bu stratejiyi teknolojik sıçrama olarak adlandırdı: Pahalı ve modası geçmiş altyapı kurmak yerine, ülke doğrudan daha modern ve daha ucuz bir çözüme geçti."
+          "text": "Kenya bu stratejiye teknolojik “koyun sıçrayışı” adını taktı: pahalı ve eskimiş altyapılar kurmak yerine ülke doğrudan daha modern ve daha ucuz bir çözüme geçti."
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p3",
-      "title": "Uydu İnternet: koşullara bağlı bir çözüm",
+      "title": "Uydu interneti: koşullu bir çözüm",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En izole köyleri birbirine bağlamak için yeni oyuncular uzaya yatırım yapıyor. [[Starlink]] projesi binlerce uyduyu alçak yörüngeye göndererek çöllerde veya yüksek dağlarda bile tek bir kablo döşemeye gerek kalmadan hızlı bağlantıya olanak tanıyor."
+          "text": "En yalıtık köyleri bağlamak için yeni oyuncular uzaya oynar. [[Starlink]] projesi alçak yörüngeye binlerce uydu gönderir; çölde veya yüksek dağda, tek bir kablo döşemeden hızlı bağlantı sağlar."
         },
         {
           "type": "paragraph",
-          "text": "Ancak abonelik ve ekipmanın maliyeti Batı standartlarına uygun kalıyor ve bu da bu çözümleri en yoksul kırsal nüfus için dış yardım olmadan erişilemez kılıyor. Bu nedenle dijital uçurumun çözümü yalnızca teknolojiyle sağlanamaz; aynı zamanda İnternet'i herkes için erişilebilir hale getirmek için siyasi irade de gerekir."
+          "text": "Ama abonelik ve donanım maliyeti Batı standartlarına hizalı kalır; dış yardım olmadan en yoksul kırsal nüfus bunlara erişemez. Dijital uçurumu kapatmak yalnızca teknolojiyle olmaz: interneti herkese açık bir mal yapmak için siyasi irade de gerekir."
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p4",
-      "title": "Yapay zeka, yeni bir boşluk",
+      "title": "Yapay zekâ, yeni bir hendek",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Yapay zekanın hızlı yükselişi bu uçurumu daha da genişletme tehlikesi taşıyor. Muazzam bilgi işlem ve veri gücü, kaynakların birkaç ülke ve şirketin elinde toplanması gerekiyor. Bağlantısı kopmuş popülasyonlar, kültürleri veya dilleri dikkate alınmadan tasarlanan araçlara bağımlı olma riskiyle karşı karşıya kalır."
+          "text": "Yapay zekânın hızlı yükselişi bu uçurumu daha da derinleştirme tehdidi taşır. Devasa hesap ve veri gücü ister; bu kaynaklar birkaç ülke ve şirketin elinde toplanır. Bağlantısız nüfuslar o zaman kendi kültürleri veya dilleri düşünülmeden tasarlanmış araçlara bağımlı kalma riski taşır."
         },
         {
           "type": "paragraph",
-          "text": "Bağlantılı ve bağlantısız öğrenciler arasındaki beceri farkı da çok hızlı bir şekilde genişleyebilir. Dolayısıyla önümüzdeki yıllardaki zorluk artık sadece bağlantı sağlamak değil, daha düşük maliyetler, yerel içerik ve eğitimi birleştirerek dijital değer yaratmaya adil erişimi garanti etmek olacak."
+          "text": "Bağlı ve bağlı olmayan öğrenciler arasındaki beceri farkı da çok çabuk açılabilir. Önümüzdeki yılların meselesi yalnızca bir bağlantı getirmek değil, maliyet düşüşü, yerel içerik ve eğitimi birleştirerek dijital değer yaratımına adil erişimi güvenceye almaktır."
         },
         {
           "type": "takeaway",
-          "text": "Bugün 2,7 milyar insan internetin dışında kalıyor ve bu durum yapay zekayla daha da kötüleşme riski taşıyor. Bu açığı azaltmak, bağlantının yalnızca satılacak bir ürüne değil, herkesin erişebileceği gerçek bir mala dönüştürülmesini gerektirir."
+          "text": "Bugün 2,7 milyar kişi hâlâ internetin dışında kalır; yapay zekâyla bu uçurum derinleşebilir. Farkı kapatmak, bağlantıyı satılacak bir üründen çok herkese açık gerçek bir mala çevirmeyi ister."
         }
       ]
     }

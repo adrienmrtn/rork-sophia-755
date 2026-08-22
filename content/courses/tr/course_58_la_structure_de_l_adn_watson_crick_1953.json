@@ -4,11 +4,11 @@
   "subtitle": "1953",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "1953'te Watson ve Crick DNA çift sarmalını tanımladılar. Bu görkemin arkasında Rosalind Franklin'in hayati eseri var.",
+  "description": "1953'te Watson ve Crick, DNA'nın çift sarmalını betimler. Bu ünün arkasında Rosalind Franklin'in kilit emeği vardır.",
   "hero": {
     "image": "la_structure_de_l_adn",
     "ratio": "16:9",
-    "hook": "Bir molekülün şekli... ve kalıtımın sırrı."
+    "hook": "Bir molekülün biçimi... ve kalıtımın sırrı."
   },
   "sections": [
     {
@@ -18,26 +18,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Özelliklerin ebeveynlerden çocuklara geçtiğini biliyorduk. Peki bu bilgiyi hangi kimyasal nesne taşıyor? 20. yüzyılın ortalarında cevap daha da netleşti: **DNA**."
+          "text": "Özelliklerin ebeveynden çocuğa geçtiği biliniyordu. Ama bu bilgiyi hangi kimyasal nesne taşır? 20. yüzyılın ortasında cevap netleşir: **DNA**."
         },
         {
           "type": "paragraph",
-          "text": "**1953**, **James Watson** ve **Francis Crick**'de ünlü bir model yayınladı: **çift pervane**. Bu form DNA'nın kendisini nasıl kopyalayabildiğini açıklamaktadır."
+          "text": "**1953**'te **James Watson** ve **Francis Crick** ünlü bir model yayımlar: **çift sarmal**. Bu biçim, DNA'nın nasıl kopyalanabildiğini açıklar."
         }
       ]
     },
     {
       "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p1",
-      "title": "Kalıtım için destek bulma",
+      "title": "Kalıtımın taşıyıcısını bulmak",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "DNA (deoksiribonükleik asit) hücrelerimizde bulunan uzun bir moleküldür. Bir kod oluşturan kimyasal “harfler” içerir. Ancak 1940'lı ve 1950'li yıllarda henüz 3 boyutlu formunu bilmiyorduk."
+          "text": "DNA (deoksiribonükleik asit) hücrelerimizde bulunan uzun bir moleküldür. Bir kod oluşturan kimyasal “harfler” içerir. Ama 1940-1950'lerde üç boyutlu biçimi henüz bilinmez."
         },
         {
           "type": "paragraph",
-          "text": "Form olmadan bu kodun her hücre bölünmesinde nasıl kendini kopyalayabildiğini anlamak zordur."
+          "text": "Biçim olmadan, bu kodun her hücre bölünmesinde nasıl çoğaltılabileceği iyi anlaşılmaz."
         }
       ]
     },
@@ -50,51 +50,51 @@
           "type": "image",
           "asset": "rosalind_franklin_photo_51_x_ray",
           "ratio": "4:3",
-          "caption": "Rosalind Franklin'in 51 numaralı fotoğrafı sarmal bir yapıyı ortaya çıkarıyor."
+          "caption": "Rosalind Franklin'in Fotoğraf 51'i sarmal bir yapı gösterir"
         },
         {
           "type": "paragraph",
-          "text": "**Rosalind Franklin**, fizikçi ve kimyager, DNA'nın X-ışını görüntülerini elde ediyor. Ünlü **Fotoğraf 51**, bir sarmalın açık kanıtını gösteriyor."
+          "text": "Fizikçi ve kimyacı **Rosalind Franklin**, X ışınlarıyla DNA görüntüleri alır. Ünlü **Fotoğraf 51** bir sarmalın açık izlerini gösterir."
         },
         {
           "type": "paragraph",
-          "text": "Watson ve Crick bu verileri görüyor (artık Franklin için adil olmayan koşullar altında) ve modellerini oluşturuyorlar. Franklin 1958'de öldü; 1962 Nobel'i Watson, Crick ve Wilkins'e gidecek, ona değil."
+          "text": "Watson ve Crick bu verilere bakar (bugün Franklin için adaletsiz sayılan koşullarda) ve modellerini kurar. Franklin 1958'de ölür; 1962 Nobeli Watson, Crick ve Wilkins'e gider, ona değil."
         },
         {
           "type": "funFact",
-          "text": "Franklin ayrıca virüsler üzerinde de büyük çalışmalar yaptı. Popüler açıklamalarda DNA'daki rolü uzun süredir hafife alınmıştır."
+          "text": "Franklin virüsler üzerine de önemli işler yaptı. DNA'daki rolü popüler anlatılarda uzun süre küçümsendi ve silindi."
         }
       ]
     },
     {
       "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p3",
-      "title": "Çift sarmal neden önemlidir?",
+      "title": "Çift sarmal neden önemlidir",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "dna_double_helix_model_watson_crick",
           "ratio": "4:3",
-          "caption": "Birbirini tamamlayan iki unsur: kopya hayal edilebilir hale gelir."
+          "caption": "İki tamamlayıcı iplik: kopya artık hayal edilebilir"
         },
         {
           "type": "paragraph",
-          "text": "İki iplik birbirine sarılır. Harfler çiftler halinde birbirine bakar. İplikler ayrıldığında her biri diğerinin yeniden inşası için bir model görevi görebilir. Kalıtım anlaşılabilir bir kimyasal mekanizma haline gelir."
+          "text": "İki iplik birbirine sarılır. Harfler çiftler halinde yüz yüze gelir. İplikler ayrılınca her biri diğerini yeniden kurmak için kalıp olabilir. Kalıtım anlaşılır bir kimyasal düzenek olur."
         }
       ]
     },
     {
       "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p4",
-      "title": "Modern biyoloji burada başlıyor",
+      "title": "Modern biyoloji burada başlar",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bu keşiften modern genetik, dizileme, DNA testleri ve gen tedavileri doğmuştur. Ve ayrıca etik tartışmalar: Bu güçle ne yapmalı?"
+          "text": "Bu keşiften modern genetik, dizileme, DNA testleri ve gen tedavileri doğar. Etik tartışmalar da gelir: bu güçle ne yapılacak?"
         },
         {
           "type": "takeaway",
-          "text": "**1953**'de çift sarmal modeli, DNA'nın canlılardan bilgiyi nasıl depoladığını ve kopyaladığını açıklıyor. Franklin, anlatıdan çok uzun süre önce silinmiş olan belirleyici kanıtları sundu."
+          "text": "**1953**'te çift sarmal modeli, DNA'nın canlı bilgisini nasıl sakladığını ve kopyaladığını açıklar. Franklin, anlatıdan fazla uzun silinen belirleyici kanıtlar verdi."
         }
       ]
     }

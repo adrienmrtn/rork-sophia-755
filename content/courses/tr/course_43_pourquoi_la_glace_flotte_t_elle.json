@@ -4,11 +4,11 @@
   "subtitle": "Su ve moleküller",
   "subject": "sciences",
   "subcategory": "Our daily life explained",
-  "description": "Buz suyun üzerinde yüzer. Bu normal gibi görünse de aslında çok nadirdir. Ve neyse ki Dünya'daki yaşam için.",
+  "description": "Buz suyun üstünde yüzer. Normal gibi durur, ama aslında çok enderdir. Ve Dünya'daki hayat için şanstır.",
   "hero": {
     "image": "pourquoi_la_glace_flotte",
     "ratio": "16:9",
-    "hook": "Buz akarsa göller dibe kadar donardı. Ve sudaki yaşam hayatta kalmakta zorluk çekerdi."
+    "hook": "Buz batsaydı göller dibine kadar donardı. Sudaki hayatın ayakta kalması zorlaşırdı."
   },
   "sections": [
     {
@@ -18,32 +18,32 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bardaktaki bir buz küpü, okyanusta bir buzdağı: buz **yüzüyor**. Biz bunu sıradan buluyoruz. Ancak çoğu madde için katı daha **yoğundur**, dolayısıyla aynı hacimde daha ağırdır: batar."
+          "text": "Bardaktaki bir buz kalıbı, okyanustaki bir aysberg: buz **yüzer**. Bunu sıradan bulursun. Oysa çoğu madde için katı daha **yoğundur**, yani aynı hacimde daha ağırdır: batar."
         },
         {
           "type": "paragraph",
-          "text": "Su bunun tersini yapar. Bu istisna molekülünün şeklinden kaynaklanmaktadır. Ve kışın birçok gölü kurtardı."
+          "text": "Su tersini yapar. Bu istisna molekülünün biçiminden gelir. Ve kışın pek çok gölü kurtarmıştır."
         }
       ]
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p1",
-      "title": "V şeklinde bir molekül",
+      "title": "V biçimli bir molekül",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bir su molekülü, iki **hidrojen** atomuna bağlı bir **oksijen** atomudur. Düz değildir: bir **V** oluşturur. Bu şekil nedeniyle, elektrik yükleri eşit şekilde dağılmamıştır: molekül **kutupsal** olup, bir ucu hafif negatif ve diğer ucu hafif pozitiftir."
+          "text": "Bir su molekülü, iki **hidrojen** atomuna bağlı bir **oksijen** atomudur. Düz değildir: bir **V** çizer. Bu biçim yüzünden elektrik yükleri eşit dağılmaz: molekül **kutupludur**, bir ucu hafif negatif, öteki hafif pozitiftir."
         },
         {
           "type": "image",
           "asset": "water_molecule_model_crystal",
           "ratio": "4:3",
-          "caption": "Su molekülü: komşularını çeken ve iten bir V."
+          "caption": "Su molekülü: komşularını çeken ve iten bir V"
         },
         {
           "type": "paragraph",
-          "text": "Sonuç: Su molekülleri birbirlerini [[Hidrojen bağları]] sayesinde küçük mıknatıslar gibi çekerler. Sıvı içinde yakın dururlar ama yine de hareket ederler. Buzda farklı şekilde donarlar."
+          "text": "Sonuç: su molekülleri küçük mıknatıslar gibi [[Hidrojen bağları]] ile birbirini çeker. Sıvıda yakın dururlar ama hâlâ hareket ederler. Buzda başka türlü donup kalırlar."
         }
       ]
     },
@@ -54,36 +54,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**0 °C** civarında su katılaşır. Moleküller buz oluşturmak için kendilerini bir çeşit altı kenarlı bal peteği olan **altıgen** ağı halinde organize ediyorlar. Daha sonra aralarında sıvı duruma göre daha fazla **boş** bırakırlar."
+          "text": "Yaklaşık **0°C**'de su katılaşır. Buzu kurmak için moleküller **altıgen** bir ağ, altı kenarlı bir arı peteği gibi dizilir. Aralarında sıvı halden daha çok **boşluk** bırakırlar."
         },
         {
           "type": "funFact",
-          "text": "Bu nedenle dolu bir şişe su dondurucuda patlayabilir: buz, sıvı sudan daha fazla hacim kaplar."
+          "text": "Bu yüzden dolu bir su şişesi dondurucuda **patlayabilir**: buz, sıvı sudan daha çok hacim kaplar."
         },
         {
           "type": "paragraph",
-          "text": "Aynı hacimde daha az malzeme şu anlama gelir: **Daha az yoğun**. Ancak yoğunluğu etrafındaki sıvıdan daha az olan bir cisim yükselir. Bu nedenle buz suyun üzerinde yüzer. Buna **anormal durumu** denir: neredeyse tüm maddelerin aksine su, **4 °C** altında soğudukça genişler."
+          "text": "Aynı hacimde daha az madde demek: **daha az yoğun**. Çevresindeki sıvıdan az yoğun bir cisim yükselir. Buz bu yüzden suyun üstünde yüzer. Buna suyun **anormal genleşmesi** denir: neredeyse bütün maddelerin tersine su **4°C**'nin altında soğurken genleşir."
         },
         {
           "type": "image",
           "asset": "iceberg_floating_arctic_ocean",
           "ratio": "16:9",
-          "caption": "Buzun yoğunluğu sıvı sudan daha az olduğu için buzdağı yüzer."
+          "caption": "Aysberg yüzer çünkü buz sıvı sudan daha az yoğundur"
         }
       ]
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p3",
-      "title": "Göller için neden hayati önem taşıyor?",
+      "title": "Göller için neden yaşamsaldır",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dondurmanın akıp akmadığını hayal edin. Yüzeyde oluşuyor, sonra dibe batıyordu. Göl, tabana kadar katman katman donacaktı. Yaz çoğu zaman her şeyi eritmeye yetmezdi."
+          "text": "Buz batsaydı diye düşün. Yüzeyde oluşur, sonra dibe düşerdi. Göl katman katman, ta dibine kadar donardı. Yaz çoğu zaman hepsini eritmeye yetmezdi."
         },
         {
           "type": "paragraph",
-          "text": "Şans eseri buz üstte kalıyor. Bir **nemli örtü** oluşturur. Donmuş yüzeyin altında, balıkların ve su bitkilerinin hayatta kalması için yeterli olan, sıvı suyun en yoğun olduğu sıcaklık olan **4 °C** civarında sıvı su kalabilir."
+          "text": "Neyse ki buz üstte kalır. Bir **yalıtım kapağı** kurar. Donmuş yüzeyin altında sıvı su **4°C** civarında, sıvı suyun en yoğun olduğu sıcaklıkta kalabilir; balıkların ve su bitkilerinin yaşamasına yeter."
         }
       ]
     },
@@ -94,11 +94,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Beyaz buz kütlesi, yüksek **albedo** yani yansıtma gücü sayesinde Güneş ışığının büyük bir kısmını uzaya geri yansıtır. Eğer kaybolursa karanlık okyanus daha fazla ısıyı emer. Bu ısınmayı hızlandırır: bir kısır döngü."
+          "text": "Beyaz buzul örtüsü yüksek **albedo**su, yani yansıtma gücü sayesinde Güneş ışığının büyük kısmını uzaya geri yollar. Yok olursa koyu okyanus daha çok ısı emer. Isınmayı hızlandırır: kısır bir döngü."
         },
         {
           "type": "takeaway",
-          "text": "Buz yüzer çünkü katılaştıkça su daha \"havalandırılmış\" bir ağ oluşturur: sıvı sudan daha az yoğun hale gelir. Bu istisna kışın sudaki yaşamı korur."
+          "text": "Buz yüzer çünkü katılaşırken su daha “havadar” bir ağ kurar: sıvı sudan daha az yoğun olur. Bu istisna kışın sucul hayatı korur."
         }
       ]
     }

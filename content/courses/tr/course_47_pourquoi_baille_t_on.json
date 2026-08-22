@@ -1,14 +1,14 @@
 {
   "id": "course_47_pourquoi_baille_t_on",
-  "title": "Neden esniyoruz?",
-  "subtitle": "Vücut ve beyin",
+  "title": "Neden esneriz?",
+  "subtitle": "Beden ve beyin",
   "subject": "sciences",
   "subcategory": "Our daily life explained",
-  "description": "Herkes esniyor: insanlar, köpekler, hatta bazen fetüsler bile. Muhtemelen \"oksijen eksikliği\" nedeniyle değildir. İşte en güçlü potansiyel müşteriler.",
+  "description": "Herkes esner: insanlar, köpekler, bazen henüz doğmamış bebekler bile. İş büyük olasılıkla “oksijen eksiği” değildir. İşte en sağlam izler.",
   "hero": {
     "image": "pourquoi_baille_t_on",
     "ratio": "16:9",
-    "hook": "Esniyorsun. Komşunuz esniyor. Ve (neredeyse) şans eseri bulaşıcı değildir."
+    "hook": "Sen esnersin. Komşun esner. Bu (neredeyse) rastlantıya bağlı bir bulaşma değildir."
   },
   "sections": [
     {
@@ -18,62 +18,62 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Esnemek sıradan görünüyor. Ancak bu karmaşık bir reflekstir: Çene, göğüs, diyafram, tüm vücut devreye girer. Aslanlar, köpekler, insanlar: Birçok hayvan esniyor."
+          "text": "Esnemek sıradan görünür. Oysa karmaşık bir reflekstir: çene, göğüs, diyafram, bütün beden katılır. Aslan, köpek, insan: birçok hayvan esner."
         },
         {
           "type": "paragraph",
-          "text": "Uzun zamandır “daha ​​fazla oksijene sahip olmak” dedik. Bu fikir artık büyük ölçüde terk edilmiştir. Modern açıklamalar daha ilginç."
+          "text": "Uzun süre şöyle dendi: “daha çok oksijen almak için”. Bu fikir bugün büyük ölçüde bırakıldı. Çağdaş açıklamalar daha ilginçtir."
         }
       ]
     },
     {
       "id": "course_47_pourquoi_baille_t_on_p1",
-      "title": "(Özellikle) oksijen için değil",
+      "title": "Özellikle oksijen için değil",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Deneyler, havadaki oksijen miktarının artmasının esnemeyi engellemediğini göstermiştir. Karbondioksiti de biraz düşürün. Yani esnemek basit bir “hava yakalamak” değildir."
+          "text": "Deneyler gösterdi: havadaki oksijeni artırmak esnemeyi durdurmaz. Karbondioksiti biraz düşürmek de durdurmaz. Demek esneme basit bir “hava yetiştirme” değildir."
         },
         {
           "type": "paragraph",
-          "text": "Bugün güçlü bir ipucu: Esnemek **beyin ısısını düzenlemeye yardımcı olur**. Geniş nefes alıp yüzümüzü esneterek, özellikle yorgun olduğumuzda kafamızı biraz “havalandıracağız” ve serinleteceğiz."
+          "text": "Bugün güçlü bir iz vardır: esneme **beyin sıcaklığını düzenlemeye** yardım eder. Derin nefes alıp yüzü gererek başı biraz “havalandırır” ve soğuturuz, özellikle yorgun olduğumuzda."
         }
       ]
     },
     {
       "id": "course_47_pourquoi_baille_t_on_p2",
-      "title": "Neden bulaşıcıdır?",
+      "title": "Neden bulaşıcıdır",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "contagious_yawning_people_group",
           "ratio": "4:3",
-          "caption": "Birinin esnediğini görmek çoğu zaman refleksi tetiklemek için yeterlidir."
+          "caption": "Birinin esnediğini görmek çoğu kez refleksi tetiklemeye yeter"
         },
         {
           "type": "paragraph",
-          "text": "İnsanlarda \"esneme\" kelimesini görmek, duymak ve hatta okumak bile esnemeyi tetikleyebilir. Bu sadece aptalca bir taklit değil: aynı zamanda **Empati**'yi ve Ayna bağlı beyin devrelerini, yani biz hareket ettiğimizde ya da birisinin hareket ettiğini gördüğümüzde etkinleşen nöronları da etkiliyor. [[Ayna nöronlar ve bulaşıcılık]]"
+          "text": "İnsanda bir esnemeyi görmek, işitmek, hatta “esnemek” sözcüğünü okumak bile esnemeyi tetikleyebilir. Bu kaba bir taklit değildir: **empati**ye ve [[Ayna nöronlar ve bulaşıcılık]] ile bağlı beyin devrelerine de dokunur. Bu nöronlar bir eylem yapınca veya birinin yaptığını görünce ateşlenir."
         },
         {
           "type": "funFact",
-          "text": "Küçük çocuklar bulaşma nedeniyle çok az esniyorlar. Bu duyarlılık daha sonra belirli sosyal becerilerle birlikte gelir."
+          "text": "Küçük çocuklar bulaşmayla pek az esner. Bu duyarlılık daha sonra, kimi toplumsal becerilerle birlikte gelir."
         }
       ]
     },
     {
       "id": "course_47_pourquoi_baille_t_on_p3",
-      "title": "Doğmadan önce zaten esniyoruz",
+      "title": "Daha doğmadan esneriz",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Fetüsler hamileliğin **11. haftasından** itibaren esniyor. Bu yaşta akciğerleri henüz hava solumamaktadır. Yani yine söylüyorum, mesele \"oksijen tükenmesi\" değil."
+          "text": "Fetüsler gebeliğin yaklaşık **11. haftasından** itibaren esner. O yaşta akciğerleri henüz havayı solumaz. Demek yine “oksijen eksiği” için değildir."
         },
         {
           "type": "paragraph",
-          "text": "Fetüste esneme, çene ve yüz kaslarının gelişmesine yardımcı olabilir."
+          "text": "Fetüste esneme, çene kasları ile yüz kaslarının gelişmesine yardım ediyor olabilir."
         }
       ]
     },
@@ -84,11 +84,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sık sık yorulduğumuzda esniyoruz... ama aynı zamanda bir sınavdan hemen önce ya da odaklanmaya çalışırken sıkıldığımızda da esniyoruz. Esneme sinir sistemini uyarabilir ve **** uyanık kalmanıza yardımcı olabilir."
+          "text": "Yorgunken sık esneriz... ama bir sınavın hemen öncesinde veya sıkılıp yine de odaklanmak isterken de. Gerilme sinir sistemini uyarabilir ve **uyanık kalmaya** yardım eder."
         },
         {
           "type": "takeaway",
-          "text": "Esneme muhtemelen oksijen eksikliği değildir. Daha çok beyni (sıcaklık, uyanıklık) düzenlemeye hizmet eder ve insanlarda sosyal bulaşma yoluyla da yayılır."
+          "text": "Esneme büyük olasılıkla bir oksijen eksiği değildir. Daha çok beyni düzenlemeye (sıcaklık, uyanıklık) yarar ve insanda toplumsal bulaşmayla da yayılır."
         }
       ]
     }

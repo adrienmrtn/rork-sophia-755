@@ -4,11 +4,11 @@
   "subtitle": "Sonbahar ve pigmentler",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "Sonbahar renkleri icat etmez; onları maskeleyen yeşili ortadan kaldırır. Gösterinin arkasında kışı atlatmak için bir hayatta kalma stratejisi var.",
+  "description": "Sonbahar renkleri icat etmez: onları gizleyen yeşili çeker. Gösterinin altında kışı geçirmek için bir hayatta kalma stratejisi vardır.",
   "hero": {
     "image": "pourquoi_les_feuilles_changent_de_couleur",
     "ratio": "16:9",
-    "hook": "Sonbahar yaprakları makyaj yapmaz; yeşili çıkarırlar."
+    "hook": "Sonbahar yaprakları makyaj yapmaz: üzerlerindeki yeşili çıkarır."
   },
   "sections": [
     {
@@ -18,85 +18,85 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Her sonbaharda ormanlar yeşilden altına, bakırdan mora dönüşür. Bu estetik bir heves değil. Bu bir stratejidir: Ağaç, kış için yapraklarını dökmeden önce elinden geleni yapar."
+          "text": "Her sonbahar ormanlar yeşilden altına, bakıra, mora döner. Bu estetik bir kapris değildir. Bir stratejidir: ağaç, kış için yapraklarını bırakmadan önce alabildiğini geri alır."
         },
         {
           "type": "paragraph",
-          "text": "Sıcak renkler birdenbire ortaya çıkmaz. Çoğu zaman zaten oradaydılar, yeşilliğin altına gizlenmişlerdi. Sonbaharı anlamak, büyük bir biyokimyasal temizliği anlamak demektir."
+          "text": "Sıcak renkler yoktan çıkmaz. Çoğu zaman zaten oradaydılar, yeşilin altında gizli. Sonbaharı anlamak, büyük bir biyokimyasal temizlik anlamaktır."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p1",
-      "title": "Her şeyi gizleyen yeşil",
+      "title": "Her şeyi örten yeşil",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "İlkbahardan yaz sonuna kadar yapraklar, fotosentezi besleyen pigment olan **klorofil** ile doludur. Işık altında bozulur ama ağaç sürekli onun yerini alır. Hakim olduğu sürece yaprak yeşil kalır."
+          "text": "İlkbahardan yaz sonuna dek yapraklar fotosentezi besleyen pigment **klorofil** doludur. Işıkta bozulur, ama ağaç onu durmadan yeniler. O egemen olduğu sürece yaprak yeşil kalır."
         },
         {
           "type": "image",
           "asset": "leaf_color_change_autumn_chlorophyll",
           "ratio": "auto",
-          "caption": "Sonbaharda klorofil kaybolur ve yaprakların renkleri ortaya çıkar."
+          "caption": "Sonbaharda klorofil kaybolur ve yaprak renklerini açığa çıkarır"
         },
         {
           "type": "paragraph",
-          "text": "Ancak yaprak aynı zamanda **karotenoid**, sarı ve turuncu pigmentler de içerir (havuçlarda olduğu gibi). Yazın oradalar ama yeşilin altında görünmüyorlar. Sonbaharda klorofil üretimi durur. Yeşil kaybolur, sarı ve turuncu ortaya çıkar."
+          "text": "Oysa yaprakta sarı ve turuncu pigmentler olan **karotenoidler** de vardır (havuçtaki gibi). Yazın oradadırlar, ama yeşilin altında görünmezler. Sonbaharda klorofil üretimi durur. Yeşil silinir, sarı ve turuncu ortaya çıkar."
         },
         {
           "type": "funFact",
-          "text": "“Klorofil” Yunanca *kloro* (yeşil) ve *filon* (yaprak) kelimelerinden gelir. “Karotenoid”, bu pigmentin ilk tanımlandığı yer olan havucun kökünü paylaşıyor."
+          "text": "“Klorofil” Yunanca *chloros* (yeşil) ve *phyllon* (yaprak) sözcüklerinden gelir. “Karotenoid” ise… havucun kökünü paylaşır; pigment önce orada tanındı."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p2",
-      "title": "Gerçek tetikleyici: gecelerin uzaması",
+      "title": "Asıl tetikleyici: uzayan geceler",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sonbaharı başlatan özellikle soğuk değil, gecelerin uzunluğudur. Ağaçlar bunu [[fitokromlar]] ışık sensörlerini kullanarak ölçüyor. Geceler uzadıkça her yaprağa hormonal bir sinyal gider."
+          "text": "Sonbaharı başlatan asıl soğuk değil, gecelerin süresidir. Ağaçlar bunu ışık algılayıcıları [[fitokromlar]] sayesinde ölçer. Geceler uzayınca her yaprağa hormonal bir sinyal gider."
         },
         {
           "type": "paragraph",
-          "text": "Yaprak sapının tabanında bir çeşit başlık olan [[Ayırma bölgesi]] oluşur. Özsu daha az yükselir, şekerler daha az düşer. İzole edildiğinde yaprak klorofilini daha hızlı bozar. Daha stabil olan sarılar birkaç hafta kalır, ardından yaprak düşer."
+          "text": "Yaprak sapının dibinde bir tıpa gibi [[ayırma bölgesi]] oluşur. Özsu daha az yükselir, şekerler kötü iner. Yalnız kalan yaprak klorofilini daha hızlı parçalar. Daha kararlı sarılar birkaç hafta kalır, sonra yaprak düşer."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p3",
-      "title": "Parlak kırmızılar nereden geliyor?",
+      "title": "Parlak kırmızılar nereden gelir",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sarı zaten oradaydı. Kırmızı ve mor genellikle sezon sonunda **yapılır**. Bunlar [[Antosiyaninler]] olup, şekerler yaprakta sıkışıp kaldığında üretilir."
+          "text": "Sarı zaten oradaydı. Kırmızı ve mor ise çoğu zaman mevsim sonunda **üretilir**. Bunlar, yaprakta sıkışmış şekerler varken üretilen [[Antosiyaninler]]."
         },
         {
           "type": "paragraph",
-          "text": "Neden kağıdı atmadan hemen önce enerji yatırımı yapasınız ki? Muhtemelen geri dönüşüm sırasında ****'yi korumak için. Ağaç **azine** ve diğer değerli besinleri kurtarır. Klorofil olmadan güneş hala aktif olan dokulara zarar verebilir. Antosiyaninler köklere doğru büyük hareket sırasında güneş filtresi görevi görür."
+          "text": "Yaprağı atmadan hemen önce neden enerji harcanır? Muhtemelen geri dönüşüm sırasında onu **korumak** için. Ağaç **azotu** ve başka değerli besinleri geri alır. Klorofil olmayınca güneş hâlâ çalışan dokuları zedeleyebilir. Antosiyaninler, köklere büyük taşınma sürerken güneş filtresi gibi işler."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p4",
-      "title": "Neden bazı sonbaharlar daha çok yanar?",
+      "title": "Bazı sonbaharlar neden daha alev alev",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En güzel kırmızılar genellikle güneşli günlerden ve serin, don olmayan gecelerden doğar. Bol şeker, antosiyaninlere dönüşüm. Gri ve yağmurlu bir sonbahar, daha mat tonlar verir. Gösteriden önce erken don, yaprakları öldürür."
+          "text": "En güzel kırmızılar çoğu zaman güneşli gündüzlerden ve don olmayan serin gecelerden doğar. Bol şeker, antosiyanine dönüşüm. Gri ve yağmurlu bir sonbahar daha donuk tonlar verir. Erken don, gösteriden önce yaprakları öldürür."
         },
         {
           "type": "paragraph",
-          "text": "Sonunda geriye kalan tek şey orman tabanından gelen kahverengi maddeler olan [[tanenler]]'dir. Bazı araştırmalar ayrıca parlak renklerin [[yaprak bitleri]]'yi uyardığına inanıyor: ağaç şekli, güçlü dişler, başka bir yere gitmek daha iyi."
+          "text": "Sonda orman örtüsünde kahverengi maddeler [[tanenler]] kalır, başka pek bir şey değil. Bazı çalışmalar parlak renklerin [[yaprak bitleri]] için de uyarı olduğunu düşünür: ağaç formda, savunma güçlü, başka yere gitmek daha iyi."
         },
         {
           "type": "takeaway",
-          "text": "Sonbahar, klorofil kaybolduğunda zaten mevcut olan sarıları ortaya çıkarır ve bazen yaprak dökülmesinden önce besin geri dönüşümünü korumak için kırmızıya döner."
+          "text": "Sonbahar, klorofil kaybolunca zaten var olan sarıları açığa çıkarır; bazen de yaprak düşmeden önce besin geri dönüşümünü korumak için kırmızı üretir."
         }
       ]
     }

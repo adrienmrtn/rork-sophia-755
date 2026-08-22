@@ -1,14 +1,14 @@
 {
   "id": "course_230_la_liberte_de_la_presse_dans_le_monde",
-  "title": "Dünya çapında basın özgürlüğü",
-  "subtitle": "Baskı altındaki bir yasa",
+  "title": "Dünyada basın özgürlüğü",
+  "subtitle": "Baskı altındaki bir hak",
   "subject": "comprendreLeMonde",
   "subcategory": "Environment & the future",
-  "description": "**Dünyanın %10'undan azı** basının gerçekten özgür olduğu bir ülkede yaşıyor. Devlet sansürü ve ekonomik baskı arasında bu temel hak neredeyse her yerde geriliyor.",
+  "description": "Dünya nüfusunun **%10**'undan azı basının gerçekten özgür olduğu bir ülkede yaşar. Devlet sansürü ile ekonomik baskılar arasında bu vazgeçilmez hak neredeyse her yerde geriler.",
   "hero": {
     "image": "la_liberte_de_la_presse_dans_le_monde",
     "ratio": "16:9",
-    "hook": "Bilgilendirme bazen özgürlüğe, hatta hayata mal olabilir: kırılgan bir hakkın kalbine yapılan bir yolculuk."
+    "hook": "Haberi vermek bazen özgürlüğe, hatta hayata mal olur: kırılgan bir hakkın kalbine yolculuk."
   },
   "sections": [
     {
@@ -18,36 +18,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Basın özgürlüğü** bir ülkenin demokratik sağlığının en iyi göstergelerinden biridir. Bu, yayınlama hakkıyla sınırlı değildir: vatandaşların, yürürlükteki yetkilerden bağımsız olarak doğrulanmış bilgilere erişme yeteneğini de içerir. Dünyanın her yerinde bu hak çifte baskı altındadır: otoriter rejimlerde doğrudan baskı ve demokrasilerin kendisinde daha ihtiyatlı bir zayıflama."
+          "text": "**Basın özgürlüğü** bir ülkenin demokratik sağlığının en iyi göstergelerinden biridir. Yayımlama hakkına indirgenmez: yurttaşların doğrulanmış ve iktidarlardan bağımsız bir bilgiye erişme kapasitesini de içerir. Bütün dünyada bu hak çifte baskı altındadır: otoriter rejimlerde doğrudan baskı, demokrasilerin kendi içinde daha sessiz bir zayıflama."
         }
       ]
     },
     {
       "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p1",
-      "title": "Giderek daha tehlikeli bir meslek",
+      "title": "Gitgide daha tehlikeli bir meslek",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Sınır Tanımayan Gazeteciler (RSF)]] kuruluşu, her yıl dünya çapında gazetecilik mesleğinin önündeki engellere ilişkin bir referans raporu yayınlıyor."
+          "text": "Her yıl [[Sınır Tanımayan Gazeteciler (RSF)]] örgütü, dünyada gazetecilik mesleğinin önündeki engeller üzerine referans bir rapor yayımlar."
         },
         {
           "type": "image",
           "asset": "press_freedom_world_map_RSF_index",
           "ratio": "16:9",
-          "caption": "Dünya nüfusunun %10'undan azı basının gerçekten özgür olduğu bir ülkede yaşıyor."
+          "caption": "Dünya nüfusunun %10'undan azı basının gerçekten özgür olduğu bir ülkede yaşar"
         },
         {
           "type": "paragraph",
-          "text": "2024 verileri endişe verici: Dünya nüfusunun **%10**'den azı, basının hiçbir engel olmadan çalıştığı bir bölgede yaşıyor. Norveç gibi ülkeler yüksek standartları korurken Çin, Rusya ve İran gibi büyük bölgeler araştırmacı gazeteciliği bir tür ihanet olarak görüyor."
+          "text": "2024 verileri kaygı vericidir: dünya nüfusunun **%10**'undan azı basının engelsiz çalıştığı bir bölgede yaşar. Norveç gibi ülkeler yüksek standartları tutarken Çin, Rusya veya İran gibi geniş bölgeler soruşturma gazeteciliğini bir ihanet biçimi sayar."
         },
         {
           "type": "funFact",
-          "text": "Türkmenistan'da devlet bilgileri o kadar sıkı kontrol ediyor ki, 2020 salgınının başlangıcında medyada \"koronavirüs\" kelimesini yasakladı."
+          "text": "Türkmenistan'da devlet bilgiyi o kadar sıkı kontrol eder ki 2020 salgınının başında medyada “coronavirus” sözcüğünü yasakladı."
         },
         {
           "type": "paragraph",
-          "text": "2023 yılında en az 79 gazeteci mesleğini icra ederken hayatını kaybetti ve çoğu zaman utanç verici soruşturmaları susturmayı hedef aldı. Dünyada her yıl 600'e yakın gazeteci hapsediliyor."
+          "text": "2023'te en az 79 gazeteci mesleğini yaparken öldü, çoğu rahatsız edici soruşturmaları susturmak için hedef alındı. Dünyada her yıl yaklaşık 600 gazeteci hapsedilir."
         }
       ]
     },
@@ -58,63 +58,63 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Yaygın inanışın aksine Batılı ülkelerde basın özgürlüğü sonsuza kadar garanti altında değildir. Orada, [[medya konsantrasyonu]]'ye ve birkaç büyük grubun mali etkisine bağlı olarak daha ihtiyatlı dönüşümler geçirdi."
+          "text": "Yaygın bir kanının tersine, basın özgürlüğü Batı ülkelerinde sonsuza dek kazanılmış değildir. Orada daha sessiz dönüşümler geçirir; [[medya konsantrasyonu]] ve birkaç büyük grubun mali etkisiyle bağlıdır."
         },
         {
           "type": "paragraph",
-          "text": "Macaristan'da [[Viktor Orbán]] etkili bir strateji uyguladı: muhalif medyayı yasaklamak yerine hükümete yakın olanların eline geçmesini destekledi ve medya ortamını yavaş yavaş resmi bir yankı odasına dönüştürdü."
+          "text": "Macaristan'da [[Viktor Orbán]] etkili bir strateji kurdu: muhalif medyayı yasaklamak yerine hükümete yakınların onları satın almasını kayırdı, medya manzarasını yavaş yavaş resmi bir yankı odasına çevirdi."
         },
         {
           "type": "paragraph",
-          "text": "Fransa'da tartışma esas olarak medyanın birkaç büyük grubun elinde toplanmasıyla ilgili; bu da yazı işleri personelinin otosansür uygulayacağı korkusunu artırıyor. Başka yerlerde, [[tokat]] adı verilen kötü niyetli yasal işlemler, eleştirel sesleri korkutmak için artıyor."
+          "text": "Fransa'da tartışma özellikle birkaç büyük grubun elindeki medya yığılması üzerinedir; haber odalarının oto-sansüründen korkulur. Başka yerlerde eleştirel sesleri sindirmek için [[tokat]] denen kötüye kullanılmış davalar çoğalır."
         }
       ]
     },
     {
       "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p3",
-      "title": "Gazeteciliğin yeni düşmanı para",
+      "title": "Para, gazeteciliğin yeni hasmı",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Gazetecilik, siyasi tehditlerin ötesinde derin bir ekonomik krizle karşı karşıya. Bireysel satış ve reklama dayalı tarihsel model, dijital teknolojiyle birlikte çöktü ve büyük platformlar artık çevrimiçi reklamcılığın çoğunluğunu ele geçirdi."
+          "text": "Siyasi tehditlerin ötesinde gazetecilik derin bir ekonomik krize çarpar. Sayı satışı ve reklama dayalı tarihi model dijitalle çöktü; büyük platformlar artık çevrimiçi reklamın asıl payını kapar."
         },
         {
           "type": "image",
           "asset": "newspaper_crisis_digital_transformation_journalism",
           "ratio": "4:3",
-          "caption": "Basının tarihsel ekonomik modeli dijital teknolojiyle birlikte çöktü."
+          "caption": "Basının tarihi ekonomik modeli dijitalle çöktü"
         },
         {
           "type": "paragraph",
-          "text": "Kaynaklardaki bu düşüş birçok yerel gazetenin kapanmasına neden oluyor ve yerel seçilmiş yetkililerin eylemlerini kimsenin izlemediği “bilgi çölleri” yaratıyor. Bununla karşı karşıya kalınca, bağışlarla veya doğrudan aboneliklerle finanse edilen Fransa'daki Mediapart veya ABD'deki ProPublica gibi bağımsız gazeteciliğin de karlı olabileceğini kanıtlayan yeni modeller ortaya çıkıyor."
+          "text": "Bu kaynak düşüşü birçok yerel gazeteyi kapatır, yerel seçilmişlerin eylemini kimsenin izlemediği “bilgi çölleri” yaratır. Buna karşı bağış veya doğrudan abonelikle finanse edilen yeni modeller belirir, Fransa'da Mediapart veya ABD'de ProPublica gibi; bağımsız gazeteciliğin de kârlı olabileceğini kanıtlarlar."
         },
         {
           "type": "funFact",
-          "text": "Tarihteki ilk basılı gazete olan “Relation”, basın özgürlüğünün yasal olarak icat edilmesinden çok önce, Johann Carolus tarafından 1605 yılında Strasbourg'da çıkarılmıştı."
+          "text": "Tarihin ilk basılı gazetesi “Relation”, Johann Carolus tarafından 1605'te Strasbourg'da çıkarıldı, basın özgürlüğünün yasal icadından çok önce."
         }
       ]
     },
     {
       "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p4",
-      "title": "Görüntülere doymuş bir dünyada gerçekliğin kontrol edilmesi",
+      "title": "Görüntüyle doymuş bir dünyada gerçeği doğrulamak",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dijital çağ bilgiyi daha hızlı hale getirdi ama aynı zamanda [[dezenformasyon]]'nin kapısını da açtı. Sosyal medya algoritmaları, duygusal içeriği olgusal analize tercih ederek ortak dünya görüşümüzü parçalıyor."
+          "text": "Dijital çağ bilgiyi hızlandırdı, ama [[dezenformasyon]] kapısını da açtı. Sosyal ağ algoritmaları olgusal çözümlemeden çok duygusal içerikleri kayırır, dünyaya ortak bakışımızı parçalar."
         },
         {
           "type": "paragraph",
-          "text": "Bu nedenle gazetecinin rolü, görüntülerin ve verilerin kalıcı akışında gerçekliğin \"denetleyicisi\" konumuna doğru evriliyor. İnsan onuruna saygının bazen gösterme ihtiyacıyla çatıştığı çatışma bölgelerindeki foto muhabirliğinde olduğu gibi, etik sorular daha karmaşık hale geliyor."
+          "text": "Gazetecinin rolü bu yüzden, sürekli bir görüntü ve veri akışında gerçeğin “doğrulayıcısı”na evrilir. Etik sorular daha karmaşık olur, örneğin çatışma bölgesindeki foto muhabirliğinde, insan onuruna saygı bazen gösterme zorunluluğuna çarpar."
         },
         {
           "type": "paragraph",
-          "text": "Bu nedenle basın özgürlüğünün savunulması, büyük dijital platformların daha iyi düzenlenmesini ve güçlendirilmiş medya eğitimini gerektirir. Gerçekleri doğrulama kapasitesine sahip özgür bir basın olmadan, demokratik tartışma, doğruluklarına bakılmaksızın tüm görüşlerin eşit olduğu bir dünyada çözülme tehlikesiyle karşı karşıya kalır."
+          "text": "Basın özgürlüğünü savunmak bu yüzden büyük dijital platformların daha iyi düzenlenmesini ve güçlendirilmiş bir medya eğitimini ister. Olguları doğrulayabilen özgür bir basın olmadan demokratik tartışma, doğruluğu ne olursa olsun bütün görüşlerin eşit sayıldığı bir dünyada erime riski taşır."
         },
         {
           "type": "takeaway",
-          "text": "Dünya nüfusunun %10'undan azı basının gerçekten özgür olduğu bir ülkede yaşıyor. Doğrudan baskı, ekonomik baskılar ve dijital dezenformasyon nedeniyle bu temel demokrasi hakkı neredeyse her yerde düşüşte."
+          "text": "Dünya nüfusunun %10'undan azı basının gerçekten özgür olduğu bir ülkede yaşar. Doğrudan baskı, ekonomik baskılar ve dijital dezenformasyon arasında demokrasiye vazgeçilmez bu hak neredeyse her yerde geriler."
         }
       ]
     }

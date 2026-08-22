@@ -1,14 +1,14 @@
 {
   "id": "course_234_la_securite_alimentaire_mondiale",
   "title": "Küresel gıda güvenliği",
-  "subtitle": "800 milyon insan",
+  "subtitle": "800 milyon kişi",
   "subject": "comprendreLeMonde",
   "subcategory": "Environment & the future",
-  "description": "Dünya herkese yetecek kadar yiyecek üretiyor. Peki neden **800 milyon insan** hala aç kalıyor?",
+  "description": "Dünya herkese yetecek kadar gıda üretir. Öyleyse neden **800 milyon kişi** hâlâ açlık çeker?",
   "hero": {
     "image": "la_securite_alimentaire_mondiale",
     "ratio": "16:9",
-    "hook": "800 milyon insanın açlığı gıda sorunu değil, paylaşım sorunudur."
+    "hook": "800 milyon insanın açlığı bir gıda sorunu değil, paylaşım sorunudur."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bugün dünyada **800 milyona yakın insan**, yani on kişiden biri açlık çekiyor. İnsanlık hiçbir zaman bu kadar çok yiyecek üretmediği için bu rakam daha da tuhaf: istatistiksel olarak herkese yetecek kadar yiyecek var."
+          "text": "Bugün dünyada yaklaşık **800 milyon kişi** açlık çeker, yani her on kişiden biri. Bu sayı daha da tuhaftır, çünkü insanlık hiç bu kadar çok gıda üretmemiştir: istatistiklere göre herkese yetecek kadar yiyecek vardır."
         },
         {
           "type": "paragraph",
-          "text": "Dolayısıyla açlık bir nicelik sorunu değil, bir dağıtım sorunudur. Küresel gıda güvenliğini anlamak, bolluk ve kıtlığın neden aynı gezegende bir arada var olabileceğini anlamak anlamına gelir."
+          "text": "Açlık o halde bir miktar sorunu değil, dağıtım sorunudur. Küresel gıda güvenliğini anlamak, bolluk ile kıtlığın aynı gezegende nasıl bir arada durabildiğini anlamaktır."
         }
       ]
     },
@@ -33,21 +33,21 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Birleşmiş Milletler gıda ajansı **[[FAO]]**'ye göre kronik yetersiz beslenme 2024 yılında hâlâ yaklaşık 800 milyon insanı etkiliyor. Bu küresel rakam çok farklı gerçekleri gizliyor. En çok etkilenen bölgeler, nüfusun dörtte birinden fazlasının düzenli olarak gıda sıkıntısı çektiği Sahra Altı Afrika ve Güney Asya'dır."
+          "text": "Birleşmiş Milletler'in gıda ajansı **[[FAO]]** 2024'te kronik yetersiz beslenmenin hâlâ yaklaşık 800 milyon kişiyi vurduğunu bildirir. Bu küresel sayı çok farklı gerçekleri gizler. En ağır bölgeler Sahraaltı Afrika'dadır, orada nüfusun dörtte birinden fazlası düzenli olarak gıdasız kalır; bir diğeri Güney Asya'dır."
         },
         {
           "type": "image",
           "asset": "famine_sub_saharan_africa_malnutrition_child",
           "ratio": "auto",
-          "caption": "Açlık, özellikle Sahra altı Afrika'da hâlâ yüz milyonlarca insanı etkiliyor."
+          "caption": "Açlık hâlâ yüz milyonlarca kişiyi, özellikle Sahraaltı Afrika'da vurur"
         },
         {
           "type": "paragraph",
-          "text": "Yiyecek sıkıntısının çeşitli biçimleri vardır. **yetersiz beslenme** kalori eksikliğine karşılık gelir. **Mikro nesin eksiklikleri**, genellikle \"gizli açlık\" olarak adlandırılan, temel vitamin veya minerallerden yoksun olan 2 milyar insanı etkiliyor ve bunun büyüme veya sağlık üzerinde olumsuz sonuçları oluyor. Son olarak, **yetersiz beslenme** şaşırtıcı bir şekilde obeziteyi de içeriyor: gelişmekte olan birçok ülkede insanlar yavaş yavaş taze ürünleri, kalorisi yüksek ancak besin değeri açısından zayıf işlenmiş gıdalarla değiştiriyor."
+          "text": "Gıda sıkıntısının birkaç biçimi vardır. **Yetersiz beslenme** kalori eksikliğine karşılık gelir. Çoğu zaman “gizli açlık” denen **mikrobesin eksiklikleri** 2 milyar kişiyi vurur: büyüme veya sağlık üzerinde sonuçları olan vitamin veya temel mineral yoksunluğu. Son olarak **kötü beslenme** şaşırtıcı biçimde obeziteyi de kapsar: birçok gelişmekte olan ülkede sakinler taze ürünleri, kalorisi yüksek ama besin değeri zayıf işlenmiş gıdalarla değiştirir."
         },
         {
           "type": "funFact",
-          "text": "Küresel gıda israfını sadece %25 oranında azaltabilseydik, teorik olarak bugün açlık çeken 800 milyon insanın tamamını doyurabilirdik."
+          "text": "Küresel gıda israfını yalnızca %25 düşürsek, bugün açlık çeken 800 milyon kişinin tümünü kuramsal olarak doyurabilirdik."
         }
       ]
     },
@@ -58,53 +58,53 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dünya şu anda kişi başına günde 2.800 kilokaloriye eşdeğer üretiyor; bu, açlığı ortadan kaldırmaya fazlasıyla yetiyor. Dolayısıyla asıl sorun kıtlık değil, erişimdir: En yoksul nüfus, fiyatları dünya piyasalarında sürekli değişen gıdaları satın alma imkanına sahip değil."
+          "text": "Dünya şu anda kişi başına günde 2.800 kilokalori eşdeğeri üretir, açlığı silmeye fazlasıyla yeter. Asıl sorun kıtlık değil, **erişim**dir: en yoksul nüfuslar, dünya piyasalarında durmadan değişen fiyatlı gıdaları satın alacak güce sahip değildir."
         },
         {
           "type": "paragraph",
-          "text": "Bu paradoksun diğer tarafı **atık**'dir. Her yıl küresel üretimin yaklaşık üçte biri, yani 1,3 milyar ton gıda kayboluyor. Yoksul ülkelerde kayıplar erkenden ortaya çıkıyor: depolama yerlerinin olmaması, soğuk odaların bulunmaması, yolların kötü durumda olması. Zengin ülkelerde atıklar daha sonra dağıtım ve tüketim sırasında ortaya çıkıyor."
+          "text": "Bu paradoksun öteki yüzü **israf**tır. Dünya üretiminin yaklaşık üçte biri, yani 1,3 milyar ton gıda, her yıl kaybolur. Yoksul ülkelerde kayıplar erkendir: depo yokluğu, soğuk oda yokluğu, bozuk yollar. Zengin ülkelerde israf daha sonra, dağıtım ve tüketim anında olur."
         },
         {
           "type": "funFact",
-          "text": "2010'lu yıllardan bu yana obezite ve obeziteye bağlı hastalıklar, dünya çapında her yıl yetersiz beslenmeden daha fazla insanı öldürüyor; bu, küresel halk sağlığı açısından tarihi bir dönüm noktası."
+          "text": "2010'lardan beri obezite ve kilo fazlasına bağlı hastalıklar, her yıl yetersiz beslenmeden daha çok insan öldürür: küresel kamu sağlığı için tarihi bir dönüş."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p3",
-      "title": "Gıda jeopolitik bir silah haline geldiğinde",
+      "title": "Gıda jeopolitik bir silah olunca",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Gıda güvenliği aynı zamanda bir jeopolitik meselesidir. Pek çok ülke, birkaç büyük tarımsal güçten gelen ihracata bağımlıdır ve bu da onları en ufak bir tıkanmaya karşı çok savunmasız kılmaktadır. Ukrayna ve Rusya birlikte dünya buğday ihracatının yaklaşık %30'unu gerçekleştiriyor. Bu akış durduğunda, gelecekteki hasatların müzakere edildiği Chicago'daki **[[vadeli işlem piyasası]]** fiyatlar hızla yükselirken, Mısır veya Lübnan gibi ülkeler ciddi bir sosyal krize sürükleniyor."
+          "text": "Gıda güvenliği aynı zamanda bir jeopolitik sorudur. Birçok ülke birkaç büyük tarım gücünün ihracatına bağlıdır, bu da onları en küçük tıkanmada çok kırılgan kılar. Ukrayna ve Rusya birlikte dünya buğday ihracatının yaklaşık %30'unu sağlar. Bu akış durunca fiyatlar, gelecekteki hasatların alınıp satıldığı Chicago **[[vadeli işlem piyasası]]** üzerinde fırlar ve Mısır veya Lübnan gibi ülkeler ağır bir toplumsal krize kayar."
         },
         {
           "type": "paragraph",
-          "text": "Bu kırılganlık aynı zamanda 1960'larda yapılan bir seçimden de kaynaklanıyor: **[[Yeşil Devrim]]**. Bu yeni tarım teknikleri dalgası verimi büyük ölçüde artırdı, ancak aynı zamanda ürün çeşitliliğini de azalttı ve çiftçileri kimyasal gübrelere bağımlı hale getirdi. Sonuç olarak, petrol fiyatlarındaki her artış ekmeğin fiyatlarını doğrudan etkiliyor."
+          "text": "Bu kırılganlık ayrıca 1960'larda yapılan bir seçimden gelir: **[[Yeşil Devrim]]**. Bu yeni tarım teknikleri dalgası verimi güçlü biçimde artırdı, ama ekim çeşitliliğini de düşürdü ve çiftçileri kimyasal gübreye bağımlı kıldı. Sonuç: petrol fiyatındaki her yükseliş ekmek fiyatına doğrudan yansır."
         },
         {
           "type": "paragraph",
-          "text": "**Gıda gücü** kavramı, gıda ihracatının bir diplomatik baskı aracı olarak, hatta karşıt bir ülkeye karşı bir yaptırım olarak gönüllü olarak kullanılmasını ifade eder."
+          "text": "**Gıda gücü** kavramı, gıda ihracatını diplomasi baskısı, hatta hasım bir ülkeye yaptırım olarak isteyerek kullanmayı adlandırır."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p4",
-      "title": "Gezegeni tüketmeden 10 milyar insanı besleyin",
+      "title": "Gezegeni tüketmeden 10 milyar insanı doyurmak",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "2050 yılında dünya nüfusunun 10 milyara ulaşması bekleniyor. İklim değişikliği, kuraklıkları ve selleri artırarak, ekilebilir arazileri yerinden ederek, halihazırda mahsulleri tehdit ediyor. Yoğun tarım aynı zamanda toprağı ve yeraltı suyunu da tüketiyor ve bu sular bazen dolmasından daha hızlı tükeniyor."
+          "text": "2050'ye kadar dünya nüfusu 10 milyar kişiye varabilir. İklim değişikliği kuraklık ve sel çoğaltarak verimi şimdiden tehdit eder, ekilebilir toprakları kaydırır. Yoğun tarım ayrıca toprakları ve yeraltı su tabakalarını tüketir; bunlar bazen dolduklarından daha hızlı boşalır."
         },
         {
           "type": "paragraph",
-          "text": "Geleceğin yollarından biri **[[tarımsal ekoloji]]**: kimyasallarla mücadele etmek yerine kompost veya ürün rotasyonu gibi doğal döngülere dayanarak üretim yapmak. Buradaki zorluk, gezegeni daha fazla tüketmeden, her insanın sağlıklı gıdalara kalıcı erişimini garanti etmektir."
+          "text": "Gelecek yollarından biri **[[tarımsal ekoloji]]** adını taşır: kompost veya ekim nöbeti gibi doğal döngülere dayanarak üretmek, onları kimyasal ürünlerle dövmek yerine. Mesele her insan için sağlıklı gıdaya kalıcı erişimi, gezegeni daha fazla tüketmeden güvenceye almaktır."
         },
         {
           "type": "takeaway",
-          "text": "Dünya herkesi beslemeye yetecek kadar kalori üretiyor. Dolayısıyla 800 milyon insanın açlığı erişim sorunu, atık ve iklim değişikliğinin daha da kötüleştirdiği jeopolitik krizlerden kaynaklanıyor."
+          "text": "Dünya herkesi doyuracak kadar kalori üretir. 800 milyon kişinin açlığı o halde bir erişim, israf ve jeopolitik kriz sorunundan gelir; iklim değişikliği bunu ağırlaştırır."
         }
       ]
     }

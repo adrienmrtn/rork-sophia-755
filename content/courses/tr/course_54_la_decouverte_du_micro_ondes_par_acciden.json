@@ -1,14 +1,14 @@
 {
   "id": "course_54_la_decouverte_du_micro_ondes_par_acciden",
   "title": "Mikrodalganın keşfi",
-  "subtitle": "Kazara",
+  "subtitle": "Bir kazayla",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "1945'te bir mühendis, şeker çubuğunun bir radarın yakınında eridiğini fark etti. Bu gözlemden mikrodalga fırın doğdu.",
+  "description": "1945'te bir mühendis, radarın yanında çikolatasının eridiğini fark eder. Bu gözlemden mikrodalga fırın doğacaktır.",
   "hero": {
     "image": "la_decouverte_du_micro_ondes",
     "ratio": "16:9",
-    "hook": "Eritilmiş bir çikolata… ve modern mutfak değişiyor."
+    "hook": "Erimiş bir çikolata... ve modern mutfak değişir."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Amerika Birleşik Devletleri'ndeki **1945**'de mühendis **Percy Spencer** radarlar üzerinde çalışıyor. Bir gün cebindeki şekerin eridiğini fark eder. Vücut ısısından değil, radar dalgalarından."
+          "text": "**1945**'te Amerika Birleşik Devletleri'nde mühendis **Percy Spencer** radarlar üzerinde çalışır. Bir gün cebindeki çikolatanın eridiğini fark eder. Beden ısısından değil: radarın dalgalarından."
         },
         {
           "type": "paragraph",
-          "text": "Mısırla test yapıyor: patlamış mısır patlıyor. Farklı şekilde ısınan bir fırın fikri doğdu."
+          "text": "Mısırla dener: patlamış mısır patlar. Başka türlü ısıtan bir fırın fikri doğmuştur."
         }
       ]
     },
@@ -35,51 +35,51 @@
           "type": "image",
           "asset": "percy_spencer_microwave_discovery_radar",
           "ratio": "4:3",
-          "caption": "İkinci Dünya Savaşı radarları zaten mikrodalgaları kullanıyordu."
+          "caption": "İkinci Dünya Savaşı radarları mikrodalgaları zaten kullanıyordu"
         },
         {
           "type": "paragraph",
-          "text": "**mikrodalgalar** radyo ışığı gibi elektromanyetik dalgalardır ancak birçok geleneksel radyo dalgasından daha \"enerjik\"tir. Savaş sırasında çoğunlukla uçakları ve tekneleri tespit etmek için radar olarak kullanıldılar."
+          "text": "**Mikrodalgalar** elektromanyetik dalgalardır, radyo ışığı gibi, ama birçok klasik radyo dalgasından daha “enerjik”. Savaşta başlıca uçak ve gemileri bulmak için radarlarda kullanılır."
         },
         {
           "type": "paragraph",
-          "text": "Spencer, bunların yiyeceklerdeki su ve yağları da karıştırabileceğini ve dolayısıyla onu ısıtabileceğini biliyor."
+          "text": "Spencer, bunların yiyeceklerdeki suyu ve yağları da titretebileceğini... dolayısıyla ısıtabileceğini anlar."
         }
       ]
     },
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p2",
-      "title": "İlk fırın çok büyük",
+      "title": "İlk fırın kocamandır",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "first_microwave_oven_radarange_1947",
           "ratio": "4:3",
-          "caption": "İlk ticari mikrodalga fırın bir dolap büyüklüğündeydi."
+          "caption": "İlk ticari mikrodalga fırın neredeyse bir dolap kadar büyüktür"
         },
         {
           "type": "paragraph",
-          "text": "İlk ticari model olan **Radarange**, **1947** civarında piyasaya sürüldü. Çok büyük, pahalı ve esas olarak restoranlar veya tekneler için tasarlandı. Onu minyatürleştirmek ve evler için uygun fiyatlı hale getirmek onlarca yıl alacak."
+          "text": "İlk ticari model **Radarange**, **1947** dolayında çıkar. Devasadır, pahalıdır ve daha çok restoranlara veya gemilere yöneliktir. Küçültülüp evlere uygun fiyata inmesi onyıllar sürer."
         },
         {
           "type": "funFact",
-          "text": "İlk başta bazıları fırının \"yiyeceği radyoaktif hale getireceğinden\" korkuyorlardı. Yanlış: Mikrodalgalar ısınır, sizi radyoaktif yapmazlar."
+          "text": "Başta kimi kişiler fırının “yiyecekleri radyoaktif kılacağından” korkardı. Yanlış: mikrodalgalar ısıtır, radyoaktif kılmaz."
         }
       ]
     },
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p3",
-      "title": "Gerçekten nasıl ısınıyor?",
+      "title": "Gerçekten nasıl ısıtır",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mikrodalgalar esas olarak su moleküllerini (ve biraz da yağ ve şekeri) titreştirir. Bu çalkalama, tava gibi sadece yüzeyde değil, yiyeceğin içinde **ısı** yaratır."
+          "text": "Mikrodalgalar başlıca su moleküllerini (biraz da yağları ve şekerleri) titreştirir. Bu titreşim ısıyı tavanın yaptığı gibi yalnızca yüzeyde değil, yiyeceğin **içinde** yaratır."
         },
         {
           "type": "paragraph",
-          "text": "Bu nedenle, eğer bir tabak kalınsa, dışı sıcak, ortası ılık olabilir: Dalgalar sonsuz derinliğe nüfuz etmez."
+          "text": "Bu yüzden kalın bir yemek dışı yanıp ortası ılık kalabilir: dalgalar sonsuza dek derine işlemez."
         }
       ]
     },
@@ -90,11 +90,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "1970'lerden 1980'lere kadar mikrodalga fırın milyonlarca mutfağa girdi. Alışkanlıkları değiştirir: hızlı bir şekilde yeniden ısıtmak, hazır yemekler, daha hızlı yaşam."
+          "text": "1970-1980'lerden itibaren mikrodalga fırın milyonlarca mutfağa girer. Alışkanlıkları değiştirir: çabuk ısıtmak, hazır yemekler, daha hızlı yaşam."
         },
         {
           "type": "takeaway",
-          "text": "Mikrodalga, Percy Spencer'ın bir radar yakınında gözlemlediği bir tesadüften doğmuştur. Dalgalar esas olarak yiyeceğin içindeki suyu çalkalar ve onu içeriden ısıtır."
+          "text": "Mikrodalga, Percy Spencer'ın bir radar yanında gözlediği bir rastlantıdan doğar. Dalgalar başlıca yiyecekteki suyu titreştirir ve onu içeriden ısıtır."
         }
       ]
     }

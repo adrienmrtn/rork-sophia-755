@@ -1,14 +1,14 @@
 {
   "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s",
   "title": "Verilerin rolü (“21. yüzyılın petrolü”)",
-  "subtitle": "En değerli dijital kaynak",
+  "subtitle": "Dijital çağın en değerli kaynağı",
   "subject": "comprendreLeMonde",
   "subcategory": "Economy & society",
-  "description": "Verinin yeni petrol olduğunu söylüyorlar. Ancak petrolden farklı olarak hiçbir zaman tükenmezler ve karşılaşıldıkça daha da değerli hale gelirler.",
+  "description": "Verinin yeni petrol olduğu söylenir. Ama petrolden farklı olarak hiç tükenmez ve başka verilerle kesiştikçe daha değerli olur.",
   "hero": {
     "image": "le_role_des_donnees",
     "ratio": "16:9",
-    "hook": "Facebook, birisinin evlendiğini veya taşınacağını bile bilmeden tahmin edebilir."
+    "hook": "Facebook, birinin evleneceğini veya taşınacağını, kendisi farkına varmadan önce tahmin edebilir."
   },
   "sections": [
     {
@@ -18,70 +18,70 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "2010'lu yıllardan bu yana bir deyim oluştu: **veri** \"21. yüzyılın petrolü\" olurdu. Fikir basit: Algoritmalar tarafından geliştirildiğinde büyümenin ve küresel gücün motoru haline gelirler."
+          "text": "2010'lu yıllardan beri bir cümle yerleşti: **veri** “21. yüzyılın petrolü”dür. Fikir yalın: algoritmalar onu arıttığında büyümenin ve dünya gücünün motoru olur."
         },
         {
           "type": "paragraph",
-          "text": "Ancak tükenen bir kaynak olan petrolden farklı olarak veriler hiçbir zaman tüketilmez: Sonsuza kadar kopyalanabilir ve diğer bilgilerle birleştirildiğinde daha değerli hale gelir. İşte bu yüzden küresel ekonomiyi yeniden şekillendirdi."
+          "text": "Ama tükenen bir kaynak olan petrolden farklı olarak veri hiç tüketilmez: sonsuz kez kopyalanabilir ve başka bilgilerle kesiştikçe daha değerli olur. İşte bu yüzden dünya ekonomisini yeniden çizdi."
         }
       ]
     },
     {
       "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p1",
-      "title": "Davranışlarımızı kendimizden önce tahmin etmek",
+      "title": "Davranışlarımızı bizden önce tahmin etmek",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Verilerin gerçek değeri basit bir isim veya adres listesinde değil, gelecekteki davranışlarımızı tahmin edebilme yeteneğinde yatmaktadır. Her arama, her hareket, her tıklama, teknoloji şirketlerinin her bir kişinin çok net bir portresini oluşturmak için bir araya getirdiği bir iz bırakıyor."
+          "text": "Verinin asıl değeri bir isim veya adres listesinde değil, gelecekteki davranışlarımızı tahmin etme gücündedir. Her arama, her yolculuk, her tıklama bir iz bırakır; teknoloji şirketleri bunları toplayıp her kişi için çok net bir portre çizer."
         },
         {
           "type": "funFact",
-          "text": "Facebook, yaklaşan bir evlilik veya taşınma gibi büyük bir yaşam değişikliğini, ilgili kişi bunun tam olarak farkına bile varmadan, çevrimiçi alışkanlıklarındaki küçük değişiklikleri tespit ederek tespit edebiliyor."
+          "text": "Facebook, yaklaşan bir evlilik veya taşınma gibi büyük bir yaşam değişimini, kişi henüz tam farkında değilken, çevrimiçi alışkanlıklarındaki küçük sapmaları yakalayarak görebilir."
         },
         {
           "type": "paragraph",
-          "text": "Davranışlarımızın bu sistematik sömürüsü, araştırmacı Shoshana Zuboff'un **büyük harf kullanımını gözetleme** dediği şeye yol açtı: insanlar artık sadece bir müşteri değil, en yüksek teklifi verene tahminler satan bir sistemin hammaddesi haline geldiler."
+          "text": "Davranışlarımızın bu sistemli sömürüsü, araştırmacı Shoshana Zuboff'un **gözetim kapitalizmi** dediği şeyi doğurdu: insan artık yalnızca müşteri değildir, tahminleri en çok verene satan bir sistemin hammaddesi olur."
         }
       ]
     },
     {
       "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p2",
-      "title": "Bu devlerle rekabet etmek neden neredeyse imkansız?",
+      "title": "Bu devlerle neden neredeyse rekabet edilemez",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Veri ekonomisi verimli bir döngü içinde çalışır: Bir şirket ne kadar çok veriye sahip olursa, hizmeti o kadar iyi olur, bu da daha fazla kullanıcıyı çeker ve daha fazla veri üretir. Yapay zeka bu olguyu hızlandırdı: Milyarlarca örnek üzerinde eğitilmiş bir [[makine öğrenimi]] algoritması, sınırlı kaynaklara sahip bir rakibe göre daha hassas ve daha hızlı bir şekilde geliştirilebilir hale geliyor."
+          "text": "Veri ekonomisi erdemli bir çemberle işler: bir şirket ne kadar çok veriye sahipse hizmeti o kadar iyileşir, bu da daha çok kullanıcı çeker, onlar da daha çok veri üretir. Yapay zekâ bu olayı hızlandırdı: milyarlarca örnekle eğitilmiş [[makine öğrenimi]] algoritması, kısıtlı kaynaklı bir rakipten daha isabetli ve daha çabuk gelişir."
         },
         {
           "type": "image",
           "asset": "artificial_intelligence_machine_learning_datacenter",
           "ratio": "16:9",
-          "caption": "Veri merkezleri, bu devasa bilgi akışını işlemek için tüm şehirlerin tükettiği kadar elektrik tüketiyor."
+          "caption": "Veri merkezleri bu devasa bilgi akışını işlemek için bütün kentler kadar elektrik tüketir"
         },
         {
           "type": "paragraph",
-          "text": "Bu devler, yani ABD'deki [[GAFAM]] ve Çin'deki BATX, artık kendi orijinal sektörlerine hükmetmekle yetinmiyor: sağlık, finans veya bağlantılı arabalara genişlemek için verilerdeki lider konumlarını kullanıyorlar ve birçok alanda yeniliğe erişimi engelliyorlar."
+          "text": "Bu devler, ABD'deki [[GAFAM]] ve Çin'deki BATX, artık yalnızca kendi sektörlerini yönetmekle yetinmez: veri üstünlüklerini sağlık, finans veya bağlı arabaya yayar, pek çok alanda yeniliğin kapısını kilitler."
         }
       ]
     },
     {
       "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p3",
-      "title": "Avrupa, GDPR ile karşılık veriyor",
+      "title": "Avrupa, GDPR ile karşı saldırıya geçer",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bu güçle karşı karşıya kalan Avrupa Birliği, 2018'de [[GDPR]]'yi oluşturdu. Bu düzenleme, teorik olarak vatandaşlara kendi kişisel bilgileri üzerinde yeniden yetki veriyor: şeffaflık, unutulma hakkı, zorunlu rıza."
+          "text": "Bu güç karşısında Avrupa Birliği 2018'de [[Avrupa GDPR'si]] kuralını koydu; yurttaşa kendi kişisel bilgileri üzerinde teoride yeniden söz hakkı verir: şeffaflık, unutulma hakkı, zorunlu rıza."
         },
         {
           "type": "paragraph",
-          "text": "Gücü, ülke sınırlarının dışında olmasından geliyor: Avrupa vatandaşlarının verilerini işleyen herhangi bir şirket, küresel cirosunun %4'üne kadar para cezasına tabi olarak bu yasaya uymak zorundadır. Bu, Meta ve Amazon gibi devleri dünya çapındaki uygulamalarını gözden geçirmeye zorladı ve Avrupa'yı isteksiz bir küresel düzenleyici haline getirdi."
+          "text": "Gücü sınır ötesi etkisinden gelir: Avrupalı yurttaşların verisini işleyen her şirket uymak zorundadır, yoksa dünya cirosunun %4'üne varan para cezası öder. Bu, Meta veya Amazon gibi devleri dünya çapında pratiklerini gözden geçirmeye zorladı, Avrupa'yı istemeden küresel bir düzenleyici yaptı."
         },
         {
           "type": "funFact",
-          "text": "GDPR'nin açıklık zorunluluğundan önce, bir kişinin kullandığı dijital hizmetlere ilişkin tüm hizmet şartlarını tek bir yıl içinde okuması ortalama 76 iş günü sürüyordu."
+          "text": "GDPR'nin dayattığı açıklık yükümlülüğünden önce, sıradan bir kişinin bir yılda kullandığı dijital hizmetlerin tüm kullanım koşullarını okuması yaklaşık 76 iş günü sürerdi."
         }
       ]
     },
@@ -92,15 +92,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Veriler, ekonominin ötesinde, Devletlerin kendi nüfuslarını izlemek veya kamuoyunu yönlendirmek için kullanabilecekleri bir güç aracı haline geldi. Vatandaşlarının verilerini koruyamayan ülkeler, [[dijital egemenlik]] ihlali olarak bilinen bir tür teknolojik bağımlılık riskiyle karşı karşıya kalıyor."
+          "text": "Ekonominin ötesinde veri, devletlerin kendi nüfusunu izlemek veya kamuoyunu yönlendirmek için kullandığı bir iktidar aracı oldu. Yurttaşlarının verisini koruyamayan ülkeler teknolojik bir bağımlılığa düşer; buna [[dijital egemenlik]] ihlali denir."
         },
         {
           "type": "paragraph",
-          "text": "Önümüzdeki on yılların en büyük mücadelesi, büyük ölçekli veri analizinin sağladığı ilerleme ile her zamankinden daha bağlantılı bir toplumda bireysel özgürlüğün temel koşulu olan mahremiyete saygı arasında bir denge bulmak olacaktır."
+          "text": "Önümüzdeki onlarca yılın büyük sınavı, büyük ölçekli veri analizinin izin verdiği ilerleme ile mahremiyete saygı arasında denge kurmak olacak. Mahremiyet, gitgide daha bağlı bir toplumda bireysel özgürlüğün temel şartıdır."
         },
         {
           "type": "takeaway",
-          "text": "Veriler, değeri davranışlarımızı tahmin etme yeteneğinden gelen stratejik bir varlık haline geldi. Bu ekonomi, rekabet edilmesi neredeyse imkansız olan ve Avrupa'nın katı düzenlemelerle yanıt verdiği teknolojik devleri destekliyor: GDPR."
+          "text": "Veri, değerini davranışlarımızı tahmin etme gücünden alan stratejik bir varlık oldu. Bu ekonomi neredeyse rakipsiz teknoloji devlerini kayırır; Avrupa buna katı bir düzenlemeyle yanıt verir: GDPR."
         }
       ]
     }

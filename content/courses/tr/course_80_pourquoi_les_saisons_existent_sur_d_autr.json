@@ -1,14 +1,14 @@
 {
   "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr",
-  "title": "Mevsimler neden diğer gezegenlerde var?",
+  "title": "Başka gezegenlerde mevsimler neden var?",
   "subtitle": "Gezegenler ve yörüngeler",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "Dünya'da mevsimler eksen eğikliğinden kaynaklanır. Başka yerlerde aynı prensip 42 yıllık kışlar ya da neredeyse hiç mevsim yaşanmadığını gösteriyor.",
+  "description": "Dünya'da mevsimler eksenin eğiminden gelir. Başka yerde aynı ilke 42 yıllık kışlar… veya neredeyse hiç mevsim vermez.",
   "hero": {
     "image": "pourquoi_les_saisons_existent_sur_d_autres_planetes",
     "ratio": "16:9",
-    "hook": "Dört mevsimimiz ılımlı bir durum. Başka yerlerde bir yaz onlarca yıl sürebilir."
+    "hook": "Dört mevsimimiz ılımlı bir örnektir. Başka yerde bir yaz onyıllarca sürebilir."
   },
   "sections": [
     {
@@ -18,93 +18,93 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dünya'da yaz ve kış esas olarak eksenin **eğiminden** kaynaklanır: yaklaşık **23,5°**. Güneş önce bir yarım küreye, sonra diğerine daha sert vurur. Bu model açık görünüyor. Güneş Sisteminde ise oldukça ılımlı bir versiyondur."
+          "text": "Dünya'da yaz ve kış özellikle eksenin **eğiminden** doğar: yaklaşık **23,5°**. Güneş bir yarıküreye, sonra ötekine daha sert vurur. Bu model apaçık görünür. Güneş Sistemi'nde daha çok ılımlı bir sürümdür."
         },
         {
           "type": "paragraph",
-          "text": "Her gezegen kendi eğimini ve yörüngesinin şeklini birleştirir. Sonuç: Mevsimlerin olmadığı dünyalar, aşırı zıtlıkların olduğu başka dünyalar ve onlarca yıl süren kışlar."
+          "text": "Her gezegen eğimini yörüngesinin biçimiyle birleştirir. Sonuç: mevsimsiz dünyalar, aşırı karşıtlıklı başka dünyalar ve onyıllarca süren kışlar."
         }
       ]
     },
     {
       "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p1",
-      "title": "Eğim, kontrastların motoru",
+      "title": "Eğim, karşıtlıkların motoru",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[eğiklik]], bir gezegenin dönme ekseni ile yörüngesine dik olan açı arasındaki açıdır. Ne kadar büyük olursa mevsimler o kadar belirgin olur."
+          "text": "[[eğiklik]], bir gezegenin dönme ekseni ile yörüngesine dik doğru arasındaki açıdır. Ne kadar büyükse mevsimler o kadar belirgindir."
         },
         {
           "type": "image",
           "asset": "uranus_planet_nasa",
           "ratio": "auto",
-          "caption": "Yaklaşık 98° eğik olan Uranüs, 42 yıl süren aşırı mevsimler yaşar."
+          "caption": "Yaklaşık 98° eğimli Uranüs, 42 yıllık aşırı mevsimler yaşar"
         },
         {
           "type": "paragraph",
-          "text": "**Uranüs** bunun uç örneğidir: yaklaşık **98°** eğim, neredeyse yatay konumdadır. Güneş'in etrafında dolaşmak **84 yıl** alır. Daha sonra her kutup yaklaşık **42 yıl** sürekli gündüz, ardından **42 yıl** toplam gece alır. **25,2°** noktasındaki **Mart** Dünya'ya benzer, ancak yılı **687 karasal silah emin**: altı aylık ilkbahar ve sonbahar. **Jüpiter** ve **Merkür** neredeyse düzdür ve neredeyse hiç mevsimi yoktur."
+          "text": "**Uranüs** uç örnektir: yaklaşık **98°** eğim, neredeyse yatık. Güneş'in turunu **84 yılda** tamamlar. Her kutup o zaman yaklaşık **42 yıl** kesintisiz gündüz, sonra **42 yıl** tam gece alır. **25,2°** ile **Mars** Dünya'ya benzer, ama yılı **687** Dünya günü sürer: altı aylık ilkbahar ve sonbahar. Neredeyse dik **Jüpiter** ve **Merkür**'de mevsim neredeyse yoktur."
         },
         {
           "type": "funFact",
-          "text": "Uranüs ve Neptün'e aşırı basınçlar, atmosferik karbondan oluşan elmasları \"yağdırabilir\"."
+          "text": "Uranüs ve Neptün'de aşırı basınçlar, atmosferdeki karbondan oluşan elmasları “yağdırabilir”."
         }
       ]
     },
     {
       "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p2",
-      "title": "Güneş'e olan mesafe de önemli olduğunda",
+      "title": "Güneş'e uzaklık da sayınca",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dünya'da yörünge neredeyse daireseldir; Güneş'e olan mesafe çok az değişir. Dolayısıyla yazı ya da kışı yapan şey değil, ışınların açısıdır."
+          "text": "Dünya'da yörünge neredeyse daireseldir: Güneş'e olan uzaklık az değişir. Yazı veya kışı yapan bu uzaklık değil, ışınların açısıdır."
         },
         {
           "type": "paragraph",
-          "text": "**Mart**'de yörünge çok daha oval, daha **Eksantrik**: **207'den 249 milyon km**'ye. Güney Yarımküre'de yaz, Güneş'e en yakın nokta olan [[günberi]] yakınlarına düşer. Daha kısa ama daha sıcak yazlar. Bu termal şok bazen gökyüzünü gizleyen gezegensel **** toz fırtınalarını tetikler."
+          "text": "**Mars**'ta yörünge çok daha oval, daha **dışmerkezlidir**: **207 ile 249 milyon km**. Güney yarıkürede yaz, Güneş'e en yakın nokta [[günberi]] yakınına düşer. Yazlar daha kısa, ama daha sıcak. Bu ısıl şok bazen gökyüzünü örten gezegensel **toz fırtınaları** tetikler."
         },
         {
           "type": "funFact",
-          "text": "**2018**'de mevsimsel bir Mars fırtınası, Güneş'i engelleyerek Opportunity gezginini kalıcı olarak durdurdu."
+          "text": "**2018**'de mevsimlik bir Mars fırtınası, Güneş'i kapatarak Opportunity gezginini kesin durdurdu."
         }
       ]
     },
     {
       "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p3",
-      "title": "Venüs, Merkür, Satürn: diğer kurallar",
+      "title": "Venüs, Merkür, Satürn: başka kurallar",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Merkür**, gerçek bir atmosferi veya eğimi olmadan, esas olarak günlük **** noktalarda yaşar: Güneş'te**430 °C**, geceleri **-180 °C**. **Venus** ters yönde döner, [[Retrograd rotasyon]] aşırı eğimle doğudan batıya doğru döner, ancak korkunç **sera etkisi ısıyı atmosferde hapseder ve sıcaklığı her yerde, her zaman **Z460** °C**'ye eşitler."
+          "text": "Gerçek atmosferi ve eğimi olmayan **Merkür** özellikle **günlük** uçlar yaşar: Güneş'te **430°C**, gecede **-180°C**. **Venüs** tersine döner, doğudan batıya [[Retrograd rotasyon]] ile, uç bir eğimle; ama canavar **sera etkisi** ısıyı atmosferde hapseder ve sıcaklığı her yerde, her zaman **460°C** civarına eşitler."
         },
         {
           "type": "paragraph",
-          "text": "Dünya gibi eğik olan **Satürn**, yaklaşık **7 yıl** mevsimlere sahiptir. [[Satürn'ün halkaları]]'nin açısı her yarım kürenin aldığı ışığı değiştirir, hatta bulutların rengini bile değiştirir."
+          "text": "Dünya gibi eğimli **Satürn**'ün yaklaşık **7 yıllık** mevsimleri vardır. [[Satürn'ün halkaları]] açısı her yarıkürenin aldığı ışığı değiştirir, bulutların rengini bile oynatır."
         },
         {
           "type": "funFact",
-          "text": "Venüs'te bir gün, dönüşü bir yıldan daha uzun sürer, devrimi: **243** **225**'ye karşı karasal günler."
+          "text": "Venüs'te bir gün, yani dönüşü, bir yıldan, yani dolanımından uzundur: **243** Dünya gününe karşı **225**."
         }
       ]
     },
     {
       "id": "course_80_pourquoi_les_saisons_existent_sur_d_autr_p4",
-      "title": "Dünya'da neden sabit mevsimler var?",
+      "title": "Dünya'nın mevsimleri neden kararlı",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Evet** olmasaydı, Dünya'nın eğimi milyonlarca yıl boyunca 0° ila 80° arasında kaotik bir şekilde salınırdı. Uranüs tipi mevsimler iklimi neredeyse yaşanmaz hale getirecektir. Ay bir **bileşenlerin dengeleyicisi** görevi görür."
+          "text": "**Ay** olmasa Dünya'nın eğimi milyonlarca yılda 0° ile 80° üstü arasında kaotik salınırdı. Uranüs tipi mevsimler iklimi neredeyse yaşanmaz kılardı. Ay bir **kütleçekim dengeleyicisi** gibi işler."
         },
         {
           "type": "paragraph",
-          "text": "Gökbilimciler yaşanabilir [[dış gezegenler]] ararken eksenin kararlılığına da bakıyorlar. Ilıman ve düzenli mevsimler bir ayrıntı değil; sürdürülebilir yaşam koşullarının bir parçası."
+          "text": "Yaşanabilir [[dış gezegenler]] ararken gökbilimciler bu yüzden eksenin kararlılığına da bakar. Yumuşak ve düzenli mevsimler bir ayrıntı değildir: kalıcı yaşamın koşullarındandır."
         },
         {
           "type": "takeaway",
-          "text": "Mevsimler esas olarak eksen eğiminden kaynaklanır. Uranüs'te onlarca yıl sürerler; Mars'taki oval yörünge onları asimetrik hale getiriyor. Ay, Dünyadakileri korur."
+          "text": "Mevsimler özellikle eksenin eğiminden doğar. Uranüs'te onyıllarca sürer; Mars'ta oval yörünge onları asimetrik kılar. Ay, Dünya'nınkileri korur."
         }
       ]
     }
