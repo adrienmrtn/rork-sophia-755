@@ -4,11 +4,11 @@
   "subtitle": "Ozeane",
   "subject": "sciences",
   "subcategory": "Unser Alltag erklärt",
-  "description": "Ein Liter Meerwasser enthält etwa 35 Gramm Salz. Dieses Salz hat sich über Milliarden von Jahren angesammelt. Hier kommt es her.",
+  "description": "Ein Liter Meerwasser enthält etwa 35 Gramm Salz. Dieses Salz hat sich über Milliarden Jahre gesammelt. Hier kommt es her.",
   "hero": {
     "image": "pourquoi_l_eau_de_mer_est_salee",
     "ratio": "16:9",
-    "hook": "Die Flüsse sind sanft. Die Ozeane sind salzig. Das Geheimnis ist Zeit und Verdunstung."
+    "hook": "Die Flüsse sind süß. Die Ozeane sind salzig. Das Geheimnis ist Zeit und Verdunstung."
   },
   "sections": [
     {
@@ -18,81 +18,81 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ozeane bedecken mehr als **70 %** des Planeten. Im Durchschnitt enthält ein Liter Meerwasser etwa 35 Gramm Salz. Das ist kein Zufall, sondern das Ergebnis eines sehr langen Prozesses."
+          "text": "Die Ozeane bedecken mehr als **70%** der Erde. Im Schnitt enthält ein Liter Meerwasser etwa **35 Gramm Salz**. Das ist kein Zufall: Es ist das Ergebnis eines sehr langen Prozesses."
         },
         {
           "type": "paragraph",
-          "text": "Salz „fällt“ nicht fertig vom Himmel. Es wandert von den Kontinenten aus weiter und wird dann im Ozean gefangen."
+          "text": "Salz “fällt” nicht fertig vom Himmel. Es wandert von den Kontinenten und bleibt dann im Ozean gefangen."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p1",
-      "title": "Salz kommt zuerst aus der Erde",
+      "title": "Das Salz kommt zuerst vom Land",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Regen, der durch die Luft strömt, nimmt etwas Kohlendioxid auf. Es wird leicht sauer. Wenn es auf die Felsen fällt, greift es diese sanft an: Das ist **Erosionshemd**."
+          "text": "Regen nimmt auf dem Weg durch die Luft ein wenig Kohlendioxid auf. Er wird leicht sauer. Fällt er auf Gestein, greift er es sacht an: das ist die **chemische Erosion**."
         },
         {
           "type": "image",
           "asset": "ocean_sea_salt_evaporation",
           "ratio": "auto",
-          "caption": "Salzwiesen: Durch Verdunstung wird das im Meerwasser gelöste Salz konzentriert."
+          "caption": "Salinen: Die Verdunstung konzentriert das im Meerwasser gelöste Salz"
         },
         {
           "type": "paragraph",
-          "text": "Die Flüsse transportieren dann gelöste Mineralien, insbesondere **Natrium** und **Chlor**, die beiden Bestandteile von Speisesalz. Sie werfen sie ins Meer."
+          "text": "Die Flüsse tragen dann gelöste Mineralien mit, vor allem **Natrium** und **Chlor**, die beiden Zutaten von Speisesalz. Sie schütten sie ins Meer."
         },
         {
           "type": "funFact",
-          "text": "Auch Unterwasservulkane und heiße Quellen auf dem Meeresboden tragen zur Salzzufuhr bei. Aber der Hauptteil kommt immer noch von den Kontinenten."
+          "text": "Unterseevulkane und heiße Quellen am Meeresboden liefern ebenfalls Salze. Der größte Teil kommt aber weiter von den Kontinenten."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p2",
-      "title": "Warum sind Flüsse nicht salzig?",
+      "title": "Warum Flüsse nicht salzig sind",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Gute Frage: Wenn die Flüsse Salz bringen, warum ist das Wasser der Rhône oder der Seine dann nicht salzig? Weil das Salz dort sehr verdünnt ist und weil das Wasser in den Flüssen ständig erneuert wird."
+          "text": "Gute Frage: Wenn Flüsse Salz bringen, warum ist das Wasser von Rhone oder Seine dann nicht salzig? Weil das Salz dort stark verdünnt ist, und weil Flusswasser ständig erneuert wird."
         },
         {
           "type": "paragraph",
-          "text": "Im Ozean ist das anders. Unter der Sonne verdunstet Wasser **ZENDBOLDZZ und kehrt in den Himmel zurück. Das Salz **bleibt****. Jahr für Jahr, Jahrhundert für Jahrhundert häuft es sich an. Wir nennen es . [[Wasserkreislauf und Salzansammlung]]"
+          "text": "Im Ozean ist das anders. Unter der Sonne **verdunstet** das Wasser und kehrt in den Himmel zurück. Das Salz **bleibt**. Jahr für Jahr, Jahrhundert für Jahrhundert sammelt es sich. Das ist [[Der Wasserkreislauf und die Ansammlung von Salzen]]."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p3",
-      "title": "Salz zirkuliert auch in den Ozeanen",
+      "title": "Salz treibt auch die Ozeane an",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Salzwasser ist **dichter** („schwerer“ bei gleichem Volumen) als Süßwasser. Wenn an den Polen Oberflächenwasser gefriert, wird Salz teilweise in das umgebende flüssige Wasser abgegeben. Dieses Wasser wird noch dichter und sinkt zu Boden."
+          "text": "Salzwasser ist **dichter** (“schwerer” bei gleichem Volumen) als Süßwasser. An den Polen wird beim Gefrieren der Oberfläche ein Teil des Salzes ins flüssige Wasser daneben gedrückt. Dieses Wasser wird noch dichter und sinkt zum Grund."
         },
         {
           "type": "paragraph",
-          "text": "Diese Bewegung trägt dazu bei, große Meeresströmungen anzutreiben. Diese Strömungen transportieren Wärme und Nährstoffe rund um den Globus. Salz ist nicht nur Geschmackssache: Es ist Teil des Klimamotors unseres Planeten."
+          "text": "Diese Bewegung hilft, große Meeresströmungen in Gang zu halten. Die Strömungen tragen Wärme und Nährstoffe um den Globus. Salz ist nicht nur Geschmack: Es gehört zum Klimamotor der Erde."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p4",
-      "title": "Nicht überall das gleiche Salz",
+      "title": "Nicht überall dasselbe Salz",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Der Salzgehalt ist nicht überall gleich. In der Nähe des Äquators kann es durch starke Verdunstung zu einer Salzanreicherung kommen. In der Nähe großer Flüsse oder schmelzender Eisschollen ist das Wasser weicher. Das Tote Meer ist ein Extremfall: Es fließt nur sehr wenig Wasser aus, es bleibt viel Salz zurück."
+          "text": "Der Salzgehalt ist nicht überall gleich. Nahe dem Äquator kann starke Verdunstung das Salz konzentrieren. Nahe großen Flüssen oder schmelzendem Packeis ist das Wasser süßer. Das Tote Meer ist ein Extremfall: Es fließt kaum Wasser ab, viel Salz bleibt."
         },
         {
           "type": "takeaway",
-          "text": "Meerwasser ist salzig, weil Flüsse Mineralien von den Kontinenten transportieren und das Salz durch Verdunstung im Ozean zurückbleibt. Diese Anhäufung findet seit Milliarden von Jahren statt."
+          "text": "Meerwasser ist salzig, weil Flüsse Mineralien von den Kontinenten bringen und die Verdunstung das Salz im Ozean lässt. Diese Ansammlung läuft seit Milliarden Jahren."
         }
       ]
     }

@@ -1,14 +1,14 @@
 {
   "id": "course_220_la_desinformation_et_les_fake_news",
   "title": "Desinformation und Fake News",
-  "subtitle": "Lügen im viralen Zeitalter",
+  "subtitle": "Die Lüge im viralen Zeitalter",
   "subject": "comprendreLeMonde",
   "subcategory": "Wirtschaft & Gesellschaft",
-  "description": "Falsche Informationen verbreiten sich in den sozialen Medien sechsmal schneller als die Wahrheit. Warum und wie kann man sich schützen?",
+  "description": "Falsche Informationen verbreiten sich in sozialen Netzwerken sechsmal schneller als die Wahrheit. Warum, und wie schützt man sich?",
   "hero": {
     "image": "la_desinformation_et_les_fake_news",
     "ratio": "16:9",
-    "hook": "Eine MIT-Studie ergab, dass sich gefälschte Nachrichten auf Twitter sechsmal schneller verbreiten als die Wahrheit. Hier erfahren Sie, warum."
+    "hook": "Eine Studie des MIT zeigte: Fake News reisen auf Twitter sechsmal schneller als die Wahrheit. Hier, warum."
   },
   "sections": [
     {
@@ -18,85 +18,85 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Lügen aus politischen Gründen sind nichts Neues: Schon in der Antike wurden Spuren davon gefunden. Aber das Internet und die sozialen Netzwerke haben die Situation verändert: Falsche Informationen zirkulieren nicht mehr nur von einem Staat an seine Bevölkerung, sondern verbreiten sich nun horizontal zwischen den Bürgern."
+          "text": "Zu lügen, um ein politisches Ziel zu erreichen, ist nichts Neues. Spuren davon gibt es seit der Antike. Internet und soziale Netzwerke haben die Lage aber geändert: Falsche Information läuft nicht mehr nur vom Staat zur Bevölkerung. Sie verbreitet sich jetzt waagerecht, von Bürger zu Bürger."
         },
         {
           "type": "paragraph",
-          "text": "Dieser Wandel hat eine Welt geschaffen, in der die Wahrheit angesichts der Viralität manchmal optional erscheint. Um das Vertrauen zwischen den Bürgern aufrechtzuerhalten, ist es wichtig zu verstehen, wie sich **Z-Desinformation** verbreitet und wer davon profitiert."
+          "text": "Dieser Umschwung hat eine Welt geschaffen, in der Wahrheit neben Viralität manchmal nachrangig wirkt. Zu verstehen, wie sich **Desinformation** ausbreitet und wer davon profitiert, ist wesentlich geworden, um das Vertrauen zwischen Bürgern zu schützen."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p1",
-      "title": "Warum sich Lügen schneller verbreiten als die Wahrheit",
+      "title": "Warum die Lüge schneller reist als die Wahrheit",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Wir müssen Desinformation, die absichtlich zur Manipulation verbreitet wird, von einfachen ehrlichen Fehlern unterscheiden. Der Erfolg dieser Fake News beruht auf dem, was Forscher als Aufmerksamkeitsökonomie bezeichnen: Social-Media-Algorithmen sind darauf ausgelegt, die Bildschirmzeit zu maximieren, und unser Gehirn reagiert stärker auf Emotionen und Schock als auf Nuancen."
+          "text": "Man muss Desinformation, die absichtlich täuscht, von einem schlichten Irrtum in gutem Glauben unterscheiden. Der Erfolg dieser Falschmeldungen beruht auf dem, was Forscher die **Aufmerksamkeitsökonomie** nennen: Die Algorithmen sozialer Netzwerke sind dafür gebaut, die Zeit vor dem Bildschirm zu maximieren. Unser Gehirn reagiert stärker auf Emotion und Schock als auf Nuance."
         },
         {
           "type": "funFact",
-          "text": "Eine 2018 veröffentlichte Studie von  ergab, dass sich Fake News etwa 6-mal schneller verbreiten als verifizierte Nachrichten auf Twitter, weil sie frischer und emotional intensiver wirken. [[MIT]]"
+          "text": "Eine Studie des [[MIT]] von 2018 zeigte: Falsche Informationen verbreiten sich auf Twitter etwa sechsmal schneller als geprüfte Nachrichten, weil sie neuer und emotional intensiver wirken."
         },
         {
           "type": "paragraph",
-          "text": "Algorithmen sperren Internetnutzer auch in ein [[Die Filterblasen (filter bubbles)]]: Sie zeigen ihnen nur Inhalte, die ihre bereits bestehende Meinung bestätigen. Eine Person, die von einer Verschwörungstheorie überzeugt ist, sieht dann jede neue falsche Information als zusätzlichen Beweis an, was eine spätere Korrektur sehr schwierig macht."
+          "text": "Die Algorithmen sperren Nutzer außerdem in [[Filterblasen]]: Sie zeigen ihnen nur Inhalte, die schon vorhandene Meinungen bestätigen. Wer von einer Verschwörungstheorie überzeugt ist, sieht dann jede neue Falschmeldung als weiteren Beweis. Jede spätere Korrektur wird dadurch sehr schwer."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p2",
-      "title": "Eine Industrie der Lügen, zwischen Staaten und Profit",
+      "title": "Eine Industrie der Lüge, zwischen Staaten und Profit",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Desinformation ist zu einer echten Industrie geworden. Staaten wie Russland haben über die Internet Research Agency Tausende von gefälschten automatisierten Konten erstellt, um Spannungen innerhalb westlicher Demokratien zu schüren, ohne auch nur zu versuchen, ein bestimmtes Lager zu verteidigen: Das Ziel besteht oft darin, Chaos zu schaffen und die Menschen glauben zu lassen, dass „jeder lügt“."
+          "text": "Desinformation ist zu einer echten Industrie geworden. Staaten wie Russland haben über die Internet Research Agency Tausende automatisierte Fake-Konten geschaffen, um Spannungen in westlichen Demokratien anzuheizen, oft ohne ein bestimmtes Lager zu stützen. Das Ziel ist häufig Chaos, und der Eindruck, “alle lügen”."
         },
         {
           "type": "image",
           "asset": "fake_news_social_media_manipulation_phone",
           "ratio": "4:3",
-          "caption": "In sozialen Netzwerken verbreiten sich in Sekundenschnelle falsche Informationen."
+          "caption": "Falsche Informationen verbreiten sich in Sekunden über soziale Netzwerke"
         },
         {
           "type": "paragraph",
-          "text": "Es gibt auch eine rein lukrative Dimension: In der Stadt Veles in Nordmazedonien gründeten junge Unternehmer im Jahr 2016 ohne politische Überzeugung sensationelle Websites, nur um mit dem in sozialen Netzwerken generierten Traffic Geld zu verdienen. Die Lüge wird dann zu einer einfachen, gewinnbringenden Ware."
+          "text": "Es gibt auch eine rein lukrative Seite: In der Stadt Veles in Nordmazedonien gründeten junge Unternehmer 2016 reißerische Seiten ohne jede politische Überzeugung, nur um mit dem Traffic in sozialen Netzwerken Geld zu verdienen. Die Lüge wird dann zur schlichten, rentablen Ware."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p3",
-      "title": "Wie man Fakten von Fiktion trennt",
+      "title": "Wie man Wahres von Falschem trennt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Angesichts dieser Flut organisiert sich die Informationswelt. **Faktenprüfung**, also die Überprüfung von Fakten, ist zu einer eigenständigen journalistischen Disziplin geworden. Agenturen wie  oder spezialisierte Redaktionen nutzen Bildsuchtools, um Fälschungen zu erkennen und verdächtige Inhalte zu analysieren. [[AFP]]"
+          "text": "Gegen diese Flut organisiert sich die Nachrichtenwelt. Die **Faktenprüfung**, also die Prüfung der Fakten, ist zu einer eigenen journalistischen Disziplin geworden. Agenturen wie die [[AFP]] oder spezialisierte Redaktionen nutzen Bildersuche, um Fälschungen zu erkennen und verdächtige Inhalte zu prüfen."
         },
         {
           "type": "paragraph",
-          "text": "Doch das Rennen zwischen Angriff und Verteidigung bleibt ungleich. Das Erscheinen von , durch künstliche Intelligenz manipulierten Videos, in denen eine Person dazu gebracht wird, alles mit verstörendem Realismus zu sagen, macht die Unterscheidung zwischen wahr und falsch für ein ungeübtes Auge immer schwieriger. [[Deepfakes]]"
+          "text": "Der Wettlauf zwischen Angriff und Abwehr bleibt aber ungleich. Mit [[Deepfakes]], von künstlicher Intelligenz gefälschten Videos, in denen man einer Person mit verstörendem Realismus beliebige Sätze in den Mund legt, wird die Trennung von wahr und falsch für ein ungeübtes Auge immer schwerer."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p4",
-      "title": "Vertrauen in eine Welt der Bilder finden",
+      "title": "Vertrauen wiederfinden in einer Welt der Bilder",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Die langfristigen Auswirkungen von Fehlinformationen sind tiefgreifend: Wir sprechen jetzt von einer **Post-Wahrheit**-Ära, in der objektive Fakten manchmal weniger Gewicht haben als Emotionen und persönliche Überzeugungen. Diese pauschale Relativierung schwächt das nötige Selbstvertrauen, um globale Herausforderungen wie das Klima oder die öffentliche Gesundheit gemeinsam anzugehen."
+          "text": "Die Langzeitwirkung der Desinformation reicht tief: Man spricht inzwischen von der Ära der **Postfaktizität**, in der objektive Fakten manchmal weniger wiegen als Emotionen und persönliche Überzeugungen. Diese allgemeine Relativierung schwächt das Vertrauen, das nötig ist, um gemeinsame Weltprobleme wie Klima oder öffentliche Gesundheit anzugehen."
         },
         {
           "type": "paragraph",
-          "text": "Die sicherste Antwort bleibt die Medienerziehung: Lernen, eine Quelle zu überprüfen, mehrere Informationen miteinander zu vergleichen und zu verstehen, wie Algorithmen funktionieren. Einige verlassen sich auch auf Technologien zur Inhaltszertifizierung, um die Herkunft eines Videos von seiner Erstellung an zu gewährleisten. In der Zwischenzeit bleibt die Wachsamkeit aller die erste Verteidigungslinie."
+          "text": "Die solideste Antwort bleibt Medienbildung: lernen, eine Quelle zu prüfen, mehrere Informationen zu kreuzen und zu verstehen, wie Algorithmen arbeiten. Manche setzen auch auf Technik zur Beglaubigung von Inhalten, um den Ursprung eines Videos schon bei der Aufnahme zu sichern. Bis dahin bleibt die Wachsamkeit jedes Einzelnen die erste Verteidigungslinie."
         },
         {
           "type": "takeaway",
-          "text": "Falsche Informationen verbreiten sich in sozialen Netzwerken im Durchschnitt sechsmal schneller als die Wahrheit, weil sie unsere Emotionen und unseren Durst nach Neuem ausnutzen. Angesichts von Deepfakes und Trollfarmen bleibt Medienerziehung die beste Waffe, um das kollektive Vertrauen zu bewahren."
+          "text": "Falsche Informationen verbreiten sich in sozialen Netzwerken im Schnitt sechsmal schneller als die Wahrheit, weil sie unsere Emotionen und unseren Hunger nach Neuem ausnutzen. Gegen Deepfakes und Trollfabriken bleibt Medienbildung die beste Waffe, um das gemeinsame Vertrauen zu schützen."
         }
       ]
     }

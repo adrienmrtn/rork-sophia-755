@@ -4,11 +4,11 @@
   "subtitle": "Newton, 1687",
   "subject": "sciences",
   "subcategory": "Entdeckungen, die die Welt veränderten",
-  "description": "Im Jahr 1687 veröffentlichte Newton eine einfache und gewaltige Idee: Dieselbe Kraft bewirkt, dass ein Apfel fällt und der Mond rotiert. Hier erfahren Sie, was sich dadurch ändert.",
+  "description": "1687 veröffentlichte Newton eine einfache und riesige Idee: Dieselbe Kraft lässt einen Apfel fallen und den Mond kreisen. Hier, was das ändert.",
   "hero": {
     "image": "la_theorie_de_la_gravitation_newton",
     "ratio": "16:9",
-    "hook": "Ein Apfel, der Mond, die Planeten: eine einzige Kraft, die alles erklärt."
+    "hook": "Ein Apfel, der Mond, die Planeten: eine Kraft für alles."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vor Newton wussten wir dank **Galilei**, einem italienischen Physiker aus dem 17. Jahrhundert, und, einem Astronomen, der elliptische Umlaufbahnen beschrieb, bereits viel über die Planeten. Es fehlte jedoch ein klarer Zusammenhang zwischen dem **[[Johannes Kepler]]**, was auf die Erde fällt, und den Drehungen am Himmel."
+          "text": "Vor Newton wusste man über die Planeten schon viel, dank **Galilei**, dem italienischen Physiker des 17. Jahrhunderts, und **[[Johannes Kepler]]**, dem Astronomen der elliptischen Bahnen. Es fehlte aber der klare Zusammenhang zwischen dem, was auf der Erde fällt, und dem, was am Himmel kreist."
         },
         {
           "type": "paragraph",
-          "text": "In **1687** veröffentlichte **Isaac Newton** den **, den *Principia*, das Gründungswerk der klassischen Physik. Er behauptet, dass die Gravitation **universal** ist: Sie wirkt überall auf die gleiche Weise. [[Philosophiae Naturalis Principia Mathematica]]"
+          "text": "Im Jahr **1687** veröffentlichte **Isaac Newton** die *[[Philosophiae Naturalis Principia Mathematica]]*, die *Principia*, das Gründungswerk der klassischen Physik. Darin sagt er: Die Gravitation ist **universell**. Sie wirkt überall auf dieselbe Weise."
         }
       ]
     },
@@ -33,11 +33,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kepler hatte die Umlaufbahnen der Planeten mit präzisen Gesetzen beschrieben: Umlaufbahnen in **Ellipsen**, gleiche überstrichene Flächen in gleicher Zeit. Galilei hatte den Fall von Körpern untersucht. Aber warum bleiben die Planeten auf ihrer Flugbahn? Was „zieht“ sie?"
+          "text": "Kepler hatte die Planetenbahnen mit genauen Gesetzen beschrieben: Bahnen als **Ellipse**, in gleicher Zeit überstrichene gleiche Flächen. Galilei hatte den Fall der Körper untersucht. Aber warum bleiben die Planeten auf ihrer Bahn? Was “zieht” sie?"
         },
         {
           "type": "paragraph",
-          "text": "Newton antwortet: eine **Gravitationsanziehung**, eine Kraft, die zwei Massen zueinander zieht. Die Erde zieht den Mond an. Die Sonne zieht die Erde an. Und Sie ziehen auch ein kleines Stück Erde an ... auch wenn es winzig ist."
+          "text": "Newton antwortete: eine **Gravitationsanziehung**, eine Kraft, die zwei Massen zueinander zieht. Die Erde zieht den Mond. Die Sonne zieht die Erde. Und jeder Körper zieht die Erde ein wenig, auch wenn das winzig ist."
         }
       ]
     },
@@ -50,21 +50,21 @@
           "type": "image",
           "asset": "isaac_newton_apple_tree_woolsthorpe",
           "ratio": "4:3",
-          "caption": "Die Geschichte des Apfels ist vor allem eine Geschichte. Die Idee ist real."
+          "caption": "Die Apfelgeschichte ist vor allem eine Erzählung. Die Idee selbst ist echt."
         },
         {
           "type": "paragraph",
-          "text": "Zwei Körper ziehen sich gegenseitig mit einer Kraft an, die mit ihrer **Masse**, der Materiemenge, zunimmt und bei ihrer Entfernung abnimmt. Genauer gesagt: Die Kraft schwächt sich mit dem **Quadrat der Distanz** ab. Durch die Verdoppelung der Entfernung wird die Attraktion vervierfacht. Je weiter man entfernt ist, desto schneller lässt die Anziehungskraft nach."
+          "text": "Zwei Körper ziehen sich mit einer Kraft an, die mit ihrer **Masse** wächst, der Menge an Materie, und nachlässt, wenn man sie voneinander entfernt. Genauer: Die Kraft schwächt sich mit dem **Quadrat der Entfernung**. Verdoppelt man die Distanz, sinkt die Anziehung auf ein Viertel. Je weiter weg, desto schneller lässt sie nach."
         },
         {
           "type": "image",
           "asset": "planets_orbit_solar_system_gravity",
           "ratio": "16:9",
-          "caption": "Die Planeten „fallen“ ständig auf die Sonne zu … und verfehlen sie: Das ist die Umlaufbahn."
+          "caption": "Die Planeten “fallen” ständig zur Sonne und verfehlen sie: das ist die Bahn"
         },
         {
           "type": "funFact",
-          "text": "Der Mond „fällt“ ständig auf die Erde zu. Da es auch eine hohe Quergeschwindigkeit hat, dreht es sich, anstatt abzustürzen."
+          "text": "Der Mond “fällt” dauernd zur Erde. Weil er zugleich eine große Seitwärtsgeschwindigkeit hat, kreist er, statt aufzuschlagen."
         }
       ]
     },
@@ -75,26 +75,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Newton gibt außerdem drei **Bewegungsgesetze** an. Zusammengefasst: Ein Objekt behält seine Geschwindigkeit, wenn keine Kraft wirkt, das Prinzip der **Trägheit**; eine Kraft verändert die Geschwindigkeit; Jede Aktion hat eine gegenteilige Reaktion."
+          "text": "Newton gab auch drei **Bewegungsgesetze**. Kurz: Ein Körper behält seine Geschwindigkeit, wenn keine Kraft wirkt, das Prinzip der **Trägheit**. Eine Kraft ändert die Geschwindigkeit. Jede Aktion hat eine entgegengesetzte Reaktion."
         },
         {
           "type": "paragraph",
-          "text": "Damit können wir Flugbahnen, **Gezeiten**, die Hebungen und Senkungen der Ozeane unter dem Einfluss von Mond und Sonne sowie die Umlaufbahnen berechnen. Die Physik wird zum Vorhersageinstrument."
+          "text": "Damit kann man Bahnen berechnen, **Gezeiten**, das Steigen und Fallen der Meere durch Mond und Sonne, und Umlaufbahnen. Physik wird zum Werkzeug der Vorhersage."
         }
       ]
     },
     {
       "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p4",
-      "title": "Mächtig ... aber nicht das letzte Wort",
+      "title": "Stark, aber nicht das letzte Wort",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Zwei Jahrhunderte später korrigierte Newton mit dem **[[Albert Einstein]]** für Extremfälle, sehr hohe Geschwindigkeiten und sehr hohe Schwerkraft. Die Schwerkraft wird dann zu einer Krümmung der Raumzeit und nicht mehr zu einer unsichtbaren Kraft. Aber wenn es darum geht, eine Rakete zu starten oder die Gezeiten zu verstehen, ist Newton immer noch hervorragend. [[Die relativistische Gravitation (Einstein)]]"
+          "text": "Zwei Jahrhunderte später korrigierte **[[Albert Einstein]]** Newton für Extremfälle, sehr hohe Geschwindigkeiten und sehr starke Gravitation. Gemeint ist [[Die relativistische Gravitation (Einstein)]]. Die Schwerkraft wird dann zur Krümmung der Raumzeit, nicht mehr zu einer unsichtbaren Kraft. Für den Start einer Rakete oder das Verständnis der Gezeiten bleibt Newton aber ausgezeichnet."
         },
         {
           "type": "takeaway",
-          "text": "Newton vereint Himmel und Erde: Die Gravitation zieht überall Massen an. Es ist eine der größten wissenschaftlichen Synthesen der Geschichte."
+          "text": "Newton eint Himmel und Erde: Die Gravitation zieht Massen überall an. Das ist eine der größten wissenschaftlichen Synthesen der Geschichte."
         }
       ]
     }

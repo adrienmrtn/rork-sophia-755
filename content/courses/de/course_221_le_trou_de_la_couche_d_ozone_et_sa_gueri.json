@@ -1,14 +1,14 @@
 {
   "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri",
-  "title": "Das Ozonloch (und seine Wiederherstellung)",
+  "title": "Das Ozonloch (und seine Heilung)",
   "subtitle": "1985-2065",
   "subject": "comprendreLeMonde",
   "subcategory": "Umwelt & Zukunft",
-  "description": "Ein riesiges Loch über der Antarktis entdeckt, ein von 197 Ländern unterzeichneter Vertrag und ein Planet, der heilt. Hier ist **die größten ökologischen Daten**, die die Menschheit bereits gelöst hat.",
+  "description": "Ein riesiges Loch über der Antarktis, ein Vertrag von 197 Ländern, und ein Planet, der heilt. Hier **die einzige große ökologische Krise**, die die Menschheit schon gelöst hat.",
   "hero": {
     "image": "le_trou_de_la_couche_d_ozone",
     "ratio": "16:9",
-    "hook": "Ein Loch im Himmel, zufällig entdeckt und durch einen von der ganzen Welt unterzeichneten Vertrag geschlossen."
+    "hook": "Ein Loch im Himmel, zufällig entdeckt, und durch einen Vertrag geschlossen, den die ganze Welt unterzeichnete."
   },
   "sections": [
     {
@@ -18,88 +18,88 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "1985 konnten in der Antarktis stationierte britische Wissenschaftler ihre Messungen nicht glauben: Ein Teil des Himmels schien seinen Schutz vor der Sonne verloren zu haben. Es war kein Gerätefehler, sondern ein echtes Loch in der Ozonschicht, diesem unsichtbaren Schutzschild, der uns alle schützt. Dieser Kurs erzählt die Geschichte, wie die Welt diese Gefahr entdeckte und, was ungewöhnlich ist, wie sie es schaffte, sie zu beheben."
+          "text": "1985 trauten britische Wissenschaftler in der Antarktis ihren Messungen nicht: Ein Teil des Himmels schien seinen Schutz gegen die Sonne verloren zu haben. Das war kein Gerätefehler, sondern ein echtes Loch in der Ozonschicht, diesem unsichtbaren Schild, der uns alle schützt. Dieser Kurs erzählt, wie die Welt diese Gefahr entdeckte und, selten genug, wie sie sie zu reparieren schaffte."
         }
       ]
     },
     {
       "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_p1",
-      "title": "Ein zerbrechlicher Schild, ein handliches Gift",
+      "title": "Ein brüchiger Schild, ein praktisches Gift",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Die **ozonschicht** befindet sich zwischen 15 und 35 Kilometern über dem Meeresspiegel im  und absorbiert den größten Teil des **UV-B**, dieser Strahlen der Sonne, die stark genug sind, um unsere Haut und die DNA lebender Zellen zu schädigen. In den 1930er Jahren erfand die Industrie **Fluorchlorkohlenwasserstoffe** oder : Gase, die als perfekt und kostengünstig galten und überall eingesetzt wurden, in Kühlschränken, Klimaanlagen und Aerosoldosen. [[Stratosphäre]] [[Die Fluorchlorkohlenwasserstoffe (FCKW)]]"
+          "text": "Die **Ozonschicht** liegt zwischen 15 und 35 Kilometern Höhe, in der [[Stratosphäre]], und schluckt die meisten **UV-B**, jene Sonnenstrahlen, die stark genug sind, Haut und die DNA lebender Zellen zu schädigen. In den 1930er Jahren erfand die Industrie die **Fluorchlorkohlenwasserstoffe**, also [[Die Fluorchlorkohlenwasserstoffe (FCKW)]]: Gase, die als perfekt und billig galten. Man steckte sie überall hinein, in Kühlschränke, Klimaanlagen und Spraydosen."
         },
         {
           "type": "paragraph",
-          "text": "Das Problem ist, dass diese Gase zu stabil sind: Statt in Bodennähe abzubauen, steigen sie in die Stratosphäre auf. 1974 warnten die Chemiker Mario Molina und Frank Sherwood Rowland: Unter dem Einfluss der Sonne setzen FCKW Chlor frei, das Ozon zerstört. Sie erhielten 1995 den Nobelpreis, doch damals hörte ihnen fast niemand zu."
+          "text": "Das Problem: Diese Gase sind zu stabil. Statt sich nahe am Boden abzubauen, steigen sie bis in die Stratosphäre. 1974 warnten die Chemiker Mario Molina und Frank Sherwood Rowland: Unter der Sonne setzen FCKW Chlor frei, das Ozon zerstört. 1995 erhielten sie den Nobelpreis. Damals hörte ihnen fast niemand zu."
         }
       ]
     },
     {
       "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_p2",
-      "title": "1985: Der Schock, dann das globale Abkommen",
+      "title": "1985: der Schock, dann der Weltvertrag",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "1985 bestätigte der British Antarctic Survey die Nachricht: Jedes Frühjahr öffnet sich über  ein spektakuläres Loch in der Ozonschicht. NASA-Satelliten verfügten bereits über diese Daten, aber ihre Software hatte sie als zu extrem abgetan, um wahr zu sein. [[Antarktis]]"
+          "text": "1985 bestätigte der British Antarctic Survey die Nachricht: Jeden Frühling öffnet sich ein spektakuläres Loch in der Ozonschicht über der [[Antarktis]]. Die Satelliten der NASA hatten die Daten schon, aber ihre Programme hatten sie verworfen, als zu extrem, um wahr zu sein."
         },
         {
           "type": "image",
           "asset": "ozone_hole_antarctica_satellite_image_nasa",
           "ratio": "16:9",
-          "caption": "Das Ozonloch über der Antarktis, per Satellit gesehen."
+          "caption": "Das Ozonloch über der Antarktis, vom Satelliten aus gesehen"
         },
         {
           "type": "paragraph",
-          "text": "Die Bedrohung der menschlichen Gesundheit wird sehr ernst genommen und die Welt reagiert schnell. Im Jahr 1987 unterzeichneten die Länder den [[Das Montrealer Protokoll (1987)]], einen Vertrag, der den schrittweisen Ausstieg aus FCKW organisierte. Zu Beginn sind es nur 24 Länder; Heute vereint es **197** alle Mitglieder der Vereinten Nationen."
+          "text": "Die Gefahr für die menschliche Gesundheit wurde sehr ernst genommen, und die Welt reagierte schnell. 1987 unterzeichneten die Staaten [[Das Protokoll von Montreal (1987)]], einen Vertrag, der das schrittweise Ende der FCKW organisiert. Am Anfang sind es nur 24 Länder. Heute sind es **197**, alle Mitglieder der Vereinten Nationen."
         },
         {
           "type": "funFact",
-          "text": "Das Montrealer Protokoll ist der einzige Vertrag in der Geschichte der Vereinten Nationen, der ausnahmslos von allen Ländern der Welt ratifiziert wurde."
+          "text": "Das Protokoll von Montreal ist der einzige Vertrag in der Geschichte der Vereinten Nationen, den alle Länder der Welt ratifiziert haben, ohne Ausnahme."
         },
         {
           "type": "paragraph",
-          "text": "Dieser Erfolg ist auf eine klare Regelung für alle und einen gemeinsamen Fonds zurückzuführen, der armen Ländern hilft, ihre Maschinen zu wechseln. Sogar Hersteller, die zunächst dagegen waren, folgten schließlich diesem Beispiel und fanden profitable Ersatzprodukte."
+          "text": "Dieser Erfolg ruht auf einer klaren Regel für alle und auf einem gemeinsamen Fonds, der armen Ländern hilft, ihre Maschinen zu wechseln. Selbst die Industrie, zuerst dagegen, zog am Ende mit, weil sie rentable Ersatzstoffe fand."
         }
       ]
     },
     {
       "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_p3",
-      "title": "Warum ist das Klima schwieriger?",
+      "title": "Warum das Klima schwerer ist",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dieser Erfolg wird oft als Argument dafür angeführt, dass wir den Klimawandel auf die gleiche Weise lösen könnten. Die beiden Probleme sind jedoch unterschiedlich: Das Ozonloch entstand durch eine kleine Anzahl von Gasen, die von einer kleinen Anzahl von Fabriken produziert wurden und leicht zu bekämpfen waren.  entsteht aus fast allem, was unsere moderne Gesellschaft tut, sich bewegen, heizen, kultivieren, bauen: Die Reduzierung von CO₂ erfordert eine Veränderung der gesamten Weltwirtschaft, nicht nur einer Handvoll Chemiefabriken. [[Kohlendioxid (CO₂)]]"
+          "text": "Man zitiert diesen Erfolg oft, um zu sagen, man könne den Klimawandel genauso lösen. Die beiden Probleme unterscheiden sich aber: Das Ozonloch kam von wenigen Gasen aus wenigen Fabriken, leicht zu treffen. [[Kohlendioxid (CO₂)]] entsteht dagegen bei fast allem, was unsere moderne Gesellschaft tut, fahren, heizen, anbauen, bauen. CO₂ zu senken verlangt, die ganze Weltwirtschaft zu ändern, nicht nur eine Handvoll Chemiewerke."
         },
         {
           "type": "paragraph",
-          "text": "Gute Nachrichten übrigens: Auch FCKW waren starke Treibhausgase. Mit ihrem Verbot hat das Montrealer Protokoll auch die globale Erwärmung verlangsamt, ohne dass dies sein primäres Ziel gewesen wäre."
+          "text": "Eine gute Nachricht nebenbei: FCKW waren auch starke Treibhausgase. Indem man sie verbot, hat das Protokoll von Montreal also auch die Erwärmung gebremst, obwohl das nicht sein erstes Ziel war."
         },
         {
           "type": "funFact",
-          "text": "Ohne diesen Vertrag hätten FCKW allein aufgrund ihres Treibhauseffekts bis 2050 zu einer zusätzlichen Erwärmung der Erde um etwa 1 °C führen können."
+          "text": "Ohne diesen Vertrag hätten FCKW der Erde bis 2050 rund 1°C Extra-Erwärmung bringen können, allein durch ihren Treibhauseffekt."
         }
       ]
     },
     {
       "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_p4",
-      "title": "Eine langsame, aber sehr reale Erholung",
+      "title": "Eine langsame Heilung, aber eine echte",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Chlor, das bereits in der Atmosphäre aufsteigt, braucht Zeit, um zu verschwinden: Erst Mitte der 1990er Jahre stabilisierte sich der Gehalt an schädlichen Gasen. Seit Anfang der 2000er Jahre ist die Heilung klar und messbar."
+          "text": "Das Chlor, das schon in der Atmosphäre steckt, braucht Zeit, um zu verschwinden. Erst Mitte der 1990er Jahre stabilisierten sich die schädlichen Gase. Seit Anfang der 2000er Jahre ist die Heilung klar und messbar."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1974",
-              "title": "Der wissenschaftliche Alarm",
+              "title": "Die wissenschaftliche Warnung",
               "detail": "Molina und Rowland entdecken den Zusammenhang zwischen FCKW und Ozon."
             },
             {
@@ -109,28 +109,28 @@
             },
             {
               "date": "1987",
-              "title": "Montreal-Protokoll",
-              "detail": "Unterzeichnung des Vertrags, inzwischen von 197 Ländern ratifiziert."
+              "title": "Protokoll von Montreal",
+              "detail": "Unterzeichnung des Vertrags, heute von 197 Ländern ratifiziert."
             },
             {
               "date": "2000",
               "title": "Beginn der Heilung",
-              "detail": "Die Konzentration schädlicher Gase stabilisiert sich endlich."
+              "detail": "Die schädlichen Gase stabilisieren sich endlich."
             },
             {
               "date": "2065",
               "title": "Rückkehr zur Normalität (geplant)",
-              "detail": "Die Ozonschicht sollte auf das Niveau von 1980 zurückkehren."
+              "detail": "Die Ozonschicht soll wieder das Niveau von 1980 erreichen."
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Wenn der Vertrag weiterhin eingehalten wird, sollte die Ozonschicht bis **2065-2070** wieder in den Zustand von 1980 zurückkehren und so Millionen von Hautkrebs und Katarakten verhindern. Wir müssen wachsam bleiben: Vor einigen Jahren wurden in Ostasien heimliche FCKW-Emissionen entdeckt, ein Beweis dafür, dass ein globales Abkommen nur funktioniert, wenn es ständig überwacht wird."
+          "text": "Wird der Vertrag weiter eingehalten, soll die Ozonschicht um **2065-2070** wieder den Zustand von 1980 erreichen und Millionen Hautkrebsfälle und graue Stare verhindern. Wachsamkeit bleibt nötig: Vor wenigen Jahren entdeckte man heimliche FCKW-Emissionen in Ostasien. Ein Weltvertrag wirkt nur, wenn man ihn dauernd überwacht."
         },
         {
           "type": "takeaway",
-          "text": "Das Ozonloch bleibt die einzige große Umweltkrise, die vollständig durch globale Zusammenarbeit gelöst werden konnte: ein 1987 von 197 Ländern unterzeichneter Vertrag mit wissenschaftlich messbaren Ergebnissen."
+          "text": "Das Ozonloch bleibt die einzige große Umweltkrise, die eine weltweite Zusammenarbeit ganz gelöst hat: ein Vertrag von 1987, unterzeichnet von 197 Ländern, mit wissenschaftlich messbaren Ergebnissen."
         }
       ]
     }

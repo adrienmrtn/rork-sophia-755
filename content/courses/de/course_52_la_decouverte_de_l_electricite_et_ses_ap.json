@@ -1,14 +1,14 @@
 {
   "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap",
   "title": "Die Entdeckung der Elektrizität",
-  "subtitle": "Von Franklin bis Tesla",
+  "subtitle": "Von Franklin zu Tesla",
   "subject": "sciences",
   "subcategory": "Entdeckungen, die die Welt veränderten",
-  "description": "Elektrizität wurde nicht plötzlich erfunden. Es wurde zuerst beobachtet, dann verstanden und dann domestiziert. Hier sind die wichtigsten Schritte.",
+  "description": "Elektrizität wurde nicht auf einen Schlag erfunden. Man hat sie zuerst beobachtet, dann verstanden, dann gezähmt. Hier sind die entscheidenden Schritte.",
   "hero": {
     "image": "la_decouverte_de_l_electricite",
     "ratio": "16:9",
-    "hook": "Vom Blitz zum Smartphone: Zwei Jahrhunderte, um das Unsichtbare zu zähmen."
+    "hook": "Vom Blitz zum Smartphone: zwei Jahrhunderte, um das Unsichtbare zu zähmen."
   },
   "sections": [
     {
@@ -18,32 +18,32 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Elektrizität gibt es in der Natur: Blitze, elektrische Fische, Reibung. Was die Welt veränderte, war das Lernen, **Produkte**, **transport** und es zu nutzen."
+          "text": "Elektrizität gibt es in der Natur: Blitz, elektrische Fische, Reibung. Was die Welt veränderte, war zu lernen, sie zu **erzeugen**, zu **transportieren** und zu nutzen."
         },
         {
           "type": "paragraph",
-          "text": "Diese Geschichte erstreckt sich über mehr als zwei Jahrhunderte, mit riskanten Experimenten und großen Rivalitäten."
+          "text": "Diese Geschichte zieht sich über mehr als zwei Jahrhunderte, mit riskanten Versuchen und großen Rivalitäten."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p1",
-      "title": "Blitz verstehen",
+      "title": "Den Blitz verstehen",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Im 18. Jahrhundert zeigte **Benjamin Franklin**, dass Blitze ein elektrisches Phänomen sind. Sein Drachenflug-Experiment (oft fiktional erzählt) soll beweisen, dass der Himmel und die Reibungsmaschine mit der gleichen Kraft spielen."
+          "text": "Im 18. Jahrhundert zeigte **Benjamin Franklin**, dass der Blitz ein elektrisches Phänomen ist. Sein Drachenversuch, oft romantisch erzählt, sollte beweisen: Himmel und Reibungsmaschine spielen mit derselben Kraft."
         },
         {
           "type": "image",
           "asset": "benjamin_franklin_kite_lightning_experiment",
           "ratio": "4:3",
-          "caption": "Franklin verbindet Blitz und Elektrizität: eine gefährliche, aber grundlegende Idee."
+          "caption": "Franklin verbindet Blitz und Elektrizität: eine gefährliche, aber grundlegende Idee"
         },
         {
           "type": "paragraph",
-          "text": "Wir haben auch den **Donner** erfunden, einen Metallstab, der Blitzen einen sicheren Weg zum Boden bietet. Elektrizität hinterlässt Rätsel auf dem Weg in die Technik."
+          "text": "Man erfand auch den **Blitzableiter**, eine Metallstange, die dem Blitz einen sicheren Weg in den Boden gibt. Elektrizität verließ das Geheimnis und wurde zur Technik."
         }
       ]
     },
@@ -54,17 +54,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Im 19. Jahrhundert zeigte **Michael Faraday**, dass ein Magnet, der sich in der Nähe eines Drahtes bewegt, elektrischen Strom erzeugen kann. Dies ist die **induktion**. Ohne diese Idee kein Dynamo, keine Lichtmaschine, kein modernes Kraftwerk."
+          "text": "Im 19. Jahrhundert zeigte **Michael Faraday**, dass ein Magnet, der sich neben einem Draht bewegt, elektrischen Strom erzeugen kann. Das ist die **Induktion**. Ohne diese Idee kein Dynamo, kein Generator, kein modernes Kraftwerk."
         },
         {
           "type": "image",
           "asset": "faraday_electromagnetic_induction_experiment",
           "ratio": "4:3",
-          "caption": "Faraday wandelt Bewegung und Magnetismus in Strom um."
+          "caption": "Faraday macht aus Bewegung und Magnetismus Strom"
         },
         {
           "type": "funFact",
-          "text": "Faraday stammte aus einfachen Verhältnissen und begann als Buchbinder. Er lernte Naturwissenschaften, indem er las, was ihm vertraut war."
+          "text": "Faraday kam aus einfachen Verhältnissen und begann als Buchbinder. Er lernte Wissenschaft, indem er las, was er einband."
         }
       ]
     },
@@ -75,32 +75,32 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ende des 19. Jahrhunderts kam es zum Zusammenstoß zweier Lager. **Thomas Edison** treibt Gleichstrom voran. **Nikola Tesla** (und die Firma Westinghouse) verteidigen Wechselstrom, der sich leichter über große Entfernungen transportieren lässt."
+          "text": "Ende des 19. Jahrhunderts standen sich zwei Lager gegenüber. **Thomas Edison** trieb den Gleichstrom voran. **Nikola Tesla** und die Firma Westinghouse verteidigten den Wechselstrom, der sich leichter über weite Strecken transportieren lässt."
         },
         {
           "type": "image",
           "asset": "tesla_edison_electric_power_station",
           "ratio": "4:3",
-          "caption": "Wechselstrom gewinnt in Städten an Bedeutung."
+          "caption": "Der Wechselstrom gewinnt, weil er Städte versorgen kann"
         },
         {
           "type": "paragraph",
-          "text": "Wechselstrom gewinnt für städtische Netze. Die Städte leuchten. Fabriken verändern ihr Tempo."
+          "text": "Der Wechselstrom setzte sich für die städtischen Netze durch. Die Städte leuchteten auf. Die Fabriken änderten ihr Tempo."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p4",
-      "title": "Eine vernetzte Welt",
+      "title": "Eine Welt am Strom",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Heutzutage werden Krankenhäuser, Züge, das Internet und Kühlschränke mit Strom versorgt. Die Herausforderung besteht nicht mehr nur darin, es zu produzieren, sondern dies sauber und zuverlässig zu tun."
+          "text": "Heute treibt Elektrizität Krankenhäuser, Züge, das Internet, Kühlschränke. Die Aufgabe ist nicht mehr nur, sie zu erzeugen, sondern sauber und zuverlässig."
         },
         {
           "type": "takeaway",
-          "text": "Elektrizität wurde verstanden und dann domestiziert: Franklin für Blitze, Faraday für die Stromerzeugung, Tesla und Wechselstrom, um ihn in die Häuser zu bringen. Unser tägliches Leben hängt immer noch davon ab."
+          "text": "Elektrizität wurde verstanden und dann gezähmt: Franklin für den Blitz, Faraday für die Stromerzeugung, Tesla und der Wechselstrom, um ihn in die Häuser zu bringen. Unser Alltag hängt immer noch davon ab."
         }
       ]
     }

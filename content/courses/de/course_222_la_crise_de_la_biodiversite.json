@@ -1,14 +1,14 @@
 {
   "id": "course_222_la_crise_de_la_biodiversite",
   "title": "Die Biodiversitätskrise",
-  "subtitle": "Das 6. Aussterben",
+  "subtitle": "Das 6. Massenaussterben",
   "subject": "comprendreLeMonde",
   "subcategory": "Umwelt & Zukunft",
-  "description": "Die Wildtierbestände sind seit 1970 um **69 % zurückgegangen**. Wir erleben das sechste Massensterben in der Erdgeschichte, das erste, das von einer einzigen Spezies verursacht wurde: uns.",
+  "description": "Die Bestände wilder Tiere sind seit **1970 um 69%** eingebrochen. Wir leben das sechste Massenaussterben der Erdgeschichte, das erste, das eine einzige Art verursacht: wir.",
   "hero": {
     "image": "la_crise_de_la_biodiversite",
     "ratio": "16:9",
-    "hook": "Kein Asteroid, kein Vulkan: Diesmal hat das Massensterben ein menschliches Gesicht."
+    "hook": "Kein Asteroid, kein Vulkan: Diesmal trägt das Massenaussterben ein menschliches Gesicht."
   },
   "sections": [
     {
@@ -18,113 +18,113 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Die Erde hat bereits fünf große Massensterben erlebt, die durch Asteroiden oder riesige Vulkanausbrüche verursacht wurden. Heute ist der sechste im Gange, aber zum ersten Mal hat er keine natürliche Ursache."
+          "text": "Die Erde hat schon fünf große Massenaussterben erlebt, ausgelöst durch Asteroiden oder gewaltige Vulkanausbrüche. Heute läuft ein sechstes. Zum ersten Mal hat es aber keine natürliche Ursache."
         },
         {
           "type": "paragraph",
-          "text": "Arten verschwinden heute **100- bis 1.000-mal schneller** als die natürliche Rate, und der Übeltäter ist eine einzige Art: unsere. Dieser Kurs erklärt das Ausmaß des Problems, seine Ursachen und warum es uns direkt betrifft."
+          "text": "Arten verschwinden heute **100- bis 1.000-mal schneller** als im natürlichen Takt, und verantwortlich ist eine einzige Art: unsere. Dieser Kurs erklärt das Ausmaß, die Ursachen, und warum uns das direkt betrifft."
         }
       ]
     },
     {
       "id": "course_222_la_crise_de_la_biodiversite_p1",
-      "title": "Ein maßvoller Zusammenbruch, Figur für Figur",
+      "title": "Ein gemessener Zusammenbruch, Zahl für Zahl",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Um den Zustand der Natur zu verfolgen, verwenden Wissenschaftler den **Living Planet Index**, der jährlich von der Organisation  veröffentlicht wird. Die Beobachtung für 2022 ist krass: Zwischen 1970 und 2018 gingen die Populationen wilder Tiere (Säugetiere, Vögel, Fische, Reptilien, Amphibien) weltweit im Durchschnitt um **69 %** zurück. [[WWF]]"
+          "text": "Um den Zustand der Natur zu verfolgen, nutzen Wissenschaftler den **Living Planet Index**, den die Organisation [[WWF]] jedes Jahr veröffentlicht. Der Befund von 2022 ist hart: Zwischen 1970 und 2018 sind die Bestände wilder Tiere (Säuger, Vögel, Fische, Reptilien, Amphibien) weltweit im Schnitt um **69%** gefallen."
         },
         {
           "type": "paragraph",
-          "text": "Dieser Rückgang betrifft vor allem tropische Regionen, in denen die meisten Arten leben. In Lateinamerika erreicht sie 94 %. Dies bedeutet nicht, dass 94 % der Arten verschwunden sind, sondern dass ihre Populationen zurückgegangen sind, was sie angesichts des völligen Aussterbens sehr anfällig macht."
+          "text": "Dieser Rückgang trifft vor allem die Tropen, dort wo die meisten Arten leben. In Lateinamerika erreicht er 94%. Das heißt nicht, dass 94% der Arten verschwunden sind. Ihre Bestände sind aber geschmolzen, und das macht sie gegenüber einem völligen Aussterben sehr verletzlich."
         },
         {
           "type": "image",
           "asset": "amazon_deforestation_rainforest_aerial",
           "ratio": "16:9",
-          "caption": "Die Abholzung im Amazonasgebiet zerstört eines der reichsten Lebensreservoirs auf dem Planeten."
+          "caption": "Die Abholzung im Amazonas zerstört eines der reichsten Lebensreservoire der Erde"
         },
         {
           "type": "funFact",
-          "text": "Wenn die Erdgeschichte 24 Stunden gedauert hätte, wären die Menschen um 23:58 Uhr aufgetaucht. Sie brauchten nur zwei Sekunden, um ein Massensterben auszulösen."
+          "text": "Dauerte die Erdgeschichte 24 Stunden, wären Menschen um 23:58 Uhr erschienen. Zwei Sekunden reichten ihnen, ein Massenaussterben auszulösen."
         },
         {
           "type": "paragraph",
-          "text": "Laut  sind mittlerweile rund eine Million Tier- und Pflanzenarten vom Aussterben bedroht, teilweise in den kommenden Jahrzehnten. [[IPBES]]"
+          "text": "Laut der [[IPBES]] sind heute rund eine Million Tier- und Pflanzenarten vom Verschwinden bedroht, manchmal schon in den nächsten Jahrzehnten."
         }
       ]
     },
     {
       "id": "course_222_la_crise_de_la_biodiversite_p2",
-      "title": "Fünf Ursachen, ein Ursprung",
+      "title": "Fünf Ursachen, ein einziger Ursprung",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Diese Katastrophe ist kein Zufall: Sie ist direkt auf unsere Art zu produzieren und zu konsumieren zurückzuführen. Wissenschaftler identifizieren fünf Hauptursachen. Die erste und zerstörerischste ist die Veränderung der Landnutzung: Abholzung der Wälder für die Viehwirtschaft, Urbanisierung, intensive Landwirtschaft, die natürliche Lebensräume in kleine Stücke zerschneidet, die zu isoliert sind, um zu überleben."
+          "text": "Diese Katastrophe ist kein Zufall: Sie kommt direkt von unserer Art zu produzieren und zu verbrauchen. Wissenschaftler nennen fünf Hauptursachen. Die erste und zerstörerischste ist die Änderung der Landnutzung: Rodung für Viehzucht, Städtebau, intensive Landwirtschaft, die Lebensräume in kleine, zu isolierte Stücke schneidet."
         },
         {
           "type": "paragraph",
-          "text": "Dann kommt Raubbau (Überfischung, illegale Jagd) und Umweltverschmutzung: Pestizide, Düngemittel, die tote Zonen in den Ozeanen schaffen, Mikroplastik, das in der gesamten Nahrungskette zu finden ist."
+          "text": "Danach kommen Übernutzung (Überfischung, illegale Jagd) und Verschmutzung: Pestizide, Dünger, die tote Zonen in den Ozeanen schaffen, Mikroplastik, das in der gesamten Nahrungskette landet."
         },
         {
           "type": "image",
           "asset": "plastic_pollution_ocean_wildlife",
           "ratio": "4:3",
-          "caption": "Mikroplastik verunreinigt mittlerweile jede Stufe der marinen Nahrungskette."
+          "caption": "Mikroplastik belastet inzwischen jede Stufe der marinen Nahrungskette"
         },
         {
           "type": "paragraph",
-          "text": "Die letzten beiden Treiber sind Arten von anderswo, die oft fälschlicherweise durch den globalen Handel transportiert werden und die lokalen Arten verdrängen, und der Klimawandel, der die Temperaturen schneller verändert, als sich die Arten anpassen können."
+          "text": "Die letzten beiden Treiber sind Arten von anderswo, oft versehentlich durch den Welthandel verschleppt, die lokale Arten verdrängen, und der Klimawandel, der Temperaturen schneller verschiebt, als Arten sich anpassen können."
         }
       ]
     },
     {
       "id": "course_222_la_crise_de_la_biodiversite_p3",
-      "title": "Warum die Natur nicht frei ist",
+      "title": "Warum die Natur nicht umsonst ist",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Biodiversität ist nicht nur eine Frage der Ästhetik. Die Natur gibt uns essentielle s, oft unsichtbar, weil sie kostenlos sind. Der -Bericht weist auf etwas hin, das allzu oft vergessen wird: Unsere Wirtschaft hängt von der Natur ab und nicht umgekehrt. [[Ökosystemleistungen]] [[Dasgupta Review]]"
+          "text": "Biodiversität ist keine reine Schönheitsfrage. Die Natur liefert uns wesentliche [[Ökosystemdienstleistungen]], oft unsichtbar, weil sie nichts kosten. Der Bericht [[Dasgupta Review]] erinnert an eine zu oft vergessene Selbstverständlichkeit: Unsere Wirtschaft hängt von der Natur ab, nicht umgekehrt."
         },
         {
           "type": "image",
           "asset": "bee_flower_pollination_agriculture",
           "ratio": "4:3",
-          "caption": "Etwa 75 % der weltweiten Nahrungspflanzen sind auf bestäubende Insekten angewiesen."
+          "caption": "Rund 75% der weltweiten Nahrungspflanzen hängen von bestäubenden Insekten ab"
         },
         {
           "type": "paragraph",
-          "text": "Ein konkretes Beispiel: Rund 75 % der weltweiten Nahrungspflanzen sind auf die Bestäubung durch Insekten angewiesen. Die Natur ist auch unsere größte Apotheke, da 25 % der modernen Medikamente aus Molekülen stammen, die in Pflanzen vorkommen. Außerdem reguliert es den Wasserhaushalt, bildet fruchtbare Böden und absorbiert einen Teil des überschüssigen CO₂."
+          "text": "Ein konkretes Beispiel: Rund 75% der Nahrungspflanzen weltweit brauchen Insekten zur Bestäubung. Die Natur ist auch unsere größte Apotheke, denn 25% der modernen Medikamente stammen aus Molekülen, die man in Pflanzen fand. Sie reguliert außerdem Wasser, bildet fruchtbare Böden und nimmt einen Teil des überschüssigen CO₂ auf."
         },
         {
           "type": "paragraph",
-          "text": "Indem wir die biologische Vielfalt zerstören, zerstören wir auch das Naturkapital, das unser eigenes Wirtschafts- und Ernährungsleben unterstützt, indem wir die Ressourcen des Planeten viel schneller verbrauchen als sie erneuern."
+          "text": "Wenn wir die Biodiversität zerstören, zerstören wir also das Naturkapital, das unser eigenes wirtschaftliches und ernährungsbezogenes Leben trägt. Wir verbrauchen die Ressourcen der Erde viel schneller, als sie sich erneuern."
         }
       ]
     },
     {
       "id": "course_222_la_crise_de_la_biodiversite_p4",
-      "title": "Grenzen, die nicht überschritten werden dürfen, eine Chance, wieder auf die Beine zu kommen",
+      "title": "Grenzen, die man nicht überschreiten darf, und eine Chance zur Erholung",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Die biologische Vielfalt ist eine der neun , die nicht überschritten werden dürfen, um die Erde bewohnbar zu halten, und diese Schwelle wurde bereits überschritten. Die wirkliche Gefahr liegt im : Schwellenwerte, an denen ein Ökosystem plötzlich und auf eine Weise zusammenbricht, die kaum rückgängig zu machen ist, wie ein Amazonaswald, der sich in eine Savanne verwandelt. [[Planetengrenzen]] [[ökologische Wendepunkte]]"
+          "text": "Die Biodiversität gehört zu den neun [[Planetare Grenzen]], die man nicht überschreiten darf, damit die Erde bewohnbar bleibt. Diese Schwelle ist schon überschritten. Die echte Gefahr sind [[Ökologische Kipppunkte]]: Schwellen, an denen ein Ökosystem abrupt und fast unumkehrbar zusammenbricht, etwa ein Amazonaswald, der zur Savanne würde."
         },
         {
           "type": "paragraph",
-          "text": "Es gibt jedoch Lösungen. Beim  in Montreal im Jahr 2022 haben sich die Länder der Welt das Ziel gesetzt, bis 2030 30 % der Land- und Meere zu schützen. Dazu gehört die Umgestaltung der Landwirtschaft, die Wiederherstellung von Feuchtgebieten und die Schaffung von Korridoren für die Zirkulation von Arten. [[COP15]]"
+          "text": "Lösungen gibt es trotzdem. Auf der [[COP15]] in Montreal 2022 setzten sich die Länder der Welt das Ziel, bis 2030 30% der Land- und Meeresflächen zu schützen. Das verlangt, die Landwirtschaft umzubauen, Feuchtgebiete wiederherzustellen und Korridore zu lassen, damit Arten wandern können."
         },
         {
           "type": "paragraph",
-          "text": "Die Natur hat eine große Kapazität für , wenn wir ihr Raum und Zeit geben. Einen Wald zu schützen bedeutet, Millionen von Arten zu schützen und gleichzeitig eine wichtige Kohlenstoffsenke gegen die globale Erwärmung aufrechtzuerhalten. [[Widerstandsfähigkeit]]"
+          "text": "Die Natur hat eine große [[Resilienz]], wenn man ihr Raum und Zeit lässt. Einen Wald zu schützen heißt, Millionen Arten zu schützen und zugleich eine wesentliche Kohlenstoffsenke gegen die Erwärmung zu behalten."
         },
         {
           "type": "takeaway",
-          "text": "Die Wildtierpopulationen gingen zwischen 1970 und 2018 um 69 % zurück: Dies ist das sechste Massensterben, das erste, das durch eine einzelne Art verursacht wurde, was die lebenswichtigen Dienste, die uns die Natur kostenlos zur Verfügung stellt, in Frage stellt."
+          "text": "Die Bestände wilder Tiere sind zwischen 1970 und 2018 um 69% gefallen: Das ist das 6. Massenaussterben, das erste, das eine einzige Art verursacht, und es stellt die lebenswichtigen Dienste infrage, die uns die Natur umsonst leistet."
         }
       ]
     }
