@@ -1,10 +1,10 @@
 {
   "id": "course_59_la_decouverte_de_l_anesthesie",
   "title": "Objev anestezie",
-  "subtitle": "Lék",
+  "subtitle": "Lékařství",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "Před rokem 1846 byla operace často prováděna při vědomí a v extrémních bolestech. Anestezie přeměňuje operaci na péči, nikoli na mučení.",
+  "description": "Před rokem 1846 se operovalo často při vědomí a v hrozné bolesti. Anestezie z chirurgie udělala péči, ne mučení.",
   "hero": {
     "image": "la_decouverte_de_l_anesthesie",
     "ratio": "16:9",
@@ -18,28 +18,28 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Představte si amputaci, aniž byste usnuli. Před polovinou 19. století to byla norma. Pacienta připoutáme, rychle se pohybujeme, modlíme se."
+          "text": "Představ si amputaci bez uspání. Před polovinou 19. století to byla norma. Pacienta svážou, jdou rychle, modlí se."
         },
         {
           "type": "paragraph",
-          "text": "**anestézie** mění vše: umožňuje vám pracovat bez vědomí bolesti. Moderní chirurgie si dá konečně na čas."
+          "text": "**Anestezie** změní všechno: dovolí operovat bez vědomí bolesti. Moderní chirurgie si konečně může dát čas."
         }
       ]
     },
     {
       "id": "course_59_la_decouverte_de_l_anesthesie_p1",
-      "title": "Předtím: rychlost versus utrpení",
+      "title": "Předtím: rychlost proti utrpení",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "surgery_without_anesthesia_19th_century",
           "ratio": "4:3",
-          "caption": "Bez anestezie musel být chirurg extrémně rychlý."
+          "caption": "Bez anestezie musel chirurg pracovat extrémně rychle."
         },
         {
           "type": "paragraph",
-          "text": "Chirurgové byli posuzováni podle rychlosti. K znehybnění lidí se používal alkohol, opium nebo hrubá síla. Mnoho pacientů zemřelo na šok, infekci nebo krvácení."
+          "text": "Chirurgy hodnotili podle rychlosti. K imobilizaci sloužil alkohol, opium nebo holá síla. Mnoho pacientů umíralo na šok, infekci nebo krvácení."
         }
       ]
     },
@@ -52,30 +52,30 @@
           "type": "image",
           "asset": "ether_anesthesia_first_demonstration_1846",
           "ratio": "4:3",
-          "caption": "Veřejná demonstrace v Bostonu přesvědčila lékařský svět."
+          "caption": "Veřejná ukázka v Bostonu přesvědčí lékařský svět."
         },
         {
           "type": "paragraph",
-          "text": "**O 16. října 1846** v Bostonu zubař **William Morton** přiměje pacienta vdechnout **éter**. Chirurg **John Warren** operuje nádor krku. Pacient nekřičí. Místnost je ohromená."
+          "text": "**16. října 1846** v Bostonu zubař **William Morton** nechá pacienta vdechnout **éter**. Chirurg **John Warren** operuje nádor na krku. Pacient nekřičí. Sál oněmí."
         },
         {
           "type": "funFact",
-          "text": "Warren údajně řekl: \"Pánové, tohle není humbug.\" Fráze zůstala slavná."
+          "text": "Warren prý řekl: „Gentlemen, this is no humbug” (tohle není podvod). Věta zůstala slavná."
         }
       ]
     },
     {
       "id": "course_59_la_decouverte_de_l_anesthesie_p3",
-      "title": "Dále: chloroform a debaty",
+      "title": "Pak chloroform a spory",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Následovaly další produkty, jako **chloroform**, popularizovaný zejména ve Velké Británii. Vznikají rivality, kdo co „vynalezl“. Na patentu nezáleží: nápad se šíří po celém světě."
+          "text": "Přijdou další látky, třeba **chloroform**, oblíbený hlavně v Británii. Rozhoří se spory, kdo co „vynalezl”. Na patentu nesejde: nápad se rozběhne po světě."
         },
         {
           "type": "paragraph",
-          "text": "Zůstává jeden problém: uspat bez zabíjení. Musíte to dávkovat, sledovat dýchání a srdce. Zrodila se nová specialita."
+          "text": "Zůstane problém: uspat, a přitom nezabít. Je třeba dávkovat, hlídat dech i srdce. Rodí se nový obor."
         }
       ]
     },
@@ -86,11 +86,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dnes anesteziolog používá přesné plyny a léky, stroje, které všechno změří. Můžete uspat celé tělo nebo jen oblast (lokální nebo lokoregionální anestezie)."
+          "text": "Dnes anesteziolog používá přesné plyny a léky i přístroje, které měří všechno. Lze uspat celé tělo, nebo jen jednu oblast (místní či svodná anestezie)."
         },
         {
           "type": "takeaway",
-          "text": "Od demonstrace éteru v **1846** anestezie proměnila chirurgii: méně bolesti, více času, více přesnosti... a bezpečnost se stala vědou sama o sobě."
+          "text": "Od ukázky éteru v **1846** anestezie změnila chirurgii: méně bolesti, víc času, víc přesnosti. A bezpečnost, která se stala vědou sama o sobě."
         }
       ]
     }

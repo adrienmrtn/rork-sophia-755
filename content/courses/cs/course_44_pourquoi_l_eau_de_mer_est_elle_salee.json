@@ -4,11 +4,11 @@
   "subtitle": "Oceány",
   "subject": "sciences",
   "subcategory": "Our daily life explained",
-  "description": "Jeden litr mořské vody obsahuje přibližně 35 gramů soli. Tato sůl se nahromadila za miliardy let. Odtud pochází.",
+  "description": "Litr mořské vody nese zhruba 35 gramů soli. Ta sůl se hromadila miliardy let. Tady je, odkud jde.",
   "hero": {
     "image": "pourquoi_l_eau_de_mer_est_salee",
     "ratio": "16:9",
-    "hook": "Řeky jsou mírné. Oceány jsou slané. Tajemstvím je čas a vypařování."
+    "hook": "Řeky jsou sladké. Oceány jsou slané. Tajemství je čas a vypařování."
   },
   "sections": [
     {
@@ -18,81 +18,81 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Oceány pokrývají více než **70 %** planety. V průměru jeden litr mořské vody obsahuje přibližně **35 gramů pevné látky**. Není to náhoda: je to výsledek velmi dlouhého procesu."
+          "text": "Oceány pokrývají víc než **70%** planety. V průměru nese litr mořské vody zhruba **35 gramů soli**. Není to náhoda: je to výsledek velmi dlouhého procesu."
         },
         {
           "type": "paragraph",
-          "text": "Sůl „nepadá“ z nebe hotová. Cestuje z kontinentů a poté uvízne v oceánu."
+          "text": "Sůl „nespadne” z nebe hotová. Cestuje z pevnin a pak zůstane v oceánu uvězněná."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p1",
-      "title": "Sůl pochází ze země jako první",
+      "title": "Sůl jde nejdřív ze země",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Déšť procházející vzduchem nabírá trochu oxidu uhličitého. Stává se mírně kyselým. Když padá na skály, jemně na ně útočí: toto je **chemická eroze**."
+          "text": "Déšť, když jde vzduchem, nabere trochu oxidu uhličitého. Stane se lehce kyselým. Když dopadne na skály, pomalu je narušuje: to je **chemická eroze**."
         },
         {
           "type": "image",
           "asset": "ocean_sea_salt_evaporation",
           "ratio": "auto",
-          "caption": "Solné bažiny: odpařováním se koncentruje sůl rozpuštěná v mořské vodě."
+          "caption": "Solné pánve: vypařování zahušťuje sůl rozpuštěnou v mořské vodě"
         },
         {
           "type": "paragraph",
-          "text": "Řeky pak přinášejí rozpuštěné minerály, zejména **sodík** a **chlor**, dvě složky kuchyňské soli. Vysypou je do moře."
+          "text": "Řeky pak odnesou rozpuštěné minerály, hlavně **sodík** a **chlor**, dvě složky kuchyňské soli. Nakonec je vylejí do moře."
         },
         {
           "type": "funFact",
-          "text": "Podvodní sopky a horké prameny na dně oceánu také přidávají soli. Hlavní část ale stále pochází z kontinentů."
+          "text": "Podmořské sopky a horké prameny na dně oceánů sůl taky přidají. Hlavní díl ale pořád jde z pevnin."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p2",
-      "title": "Proč řeky nejsou slané?",
+      "title": "Proč řeky slané nejsou",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dobrá otázka: když řeky přinášejí sůl, proč není voda v Rhôně nebo Seině slaná? Protože sůl je tam hodně zředěná a protože voda v řekách se neustále obnovuje."
+          "text": "Dobrá otázka: když řeky sůl přinášejí, proč voda Rhôny nebo Seiny slaná není? Protože je tam sůl velmi zředěná a protože se voda řek pořád obnovuje."
         },
         {
           "type": "paragraph",
-          "text": "V oceánu je to jiné. Pod Sluncem se voda **odpařuje** a vrací se na oblohu. Sůl, **zůstává**. Rok za rokem, století za stoletím se hromadí. Toto se nazývá [[Hydrologický cyklus a akumulace solí]]."
+          "text": "V oceánu je to jinak. Pod Sluncem se voda **vypaří** a vrátí se na oblohu. Sůl **zůstane**. Rok za rokem, století za stoletím se hromadí. Říká se tomu [[hydrologický cyklus a akumulace solí]]."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p3",
-      "title": "Sůl také cirkuluje oceány",
+      "title": "Sůl taky pohání oceány",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Slaná voda je **hustší** („těžší“ při stejném objemu) než sladká voda. Na pólech se při zamrzání povrchové vody sůl částečně uvolňuje do okolní kapalné vody. Tato voda se stává ještě hustší a padá ke dnu."
+          "text": "Slaná voda je **hustší** (na stejný objem „těžší”) než sladká. U pólů, když povrchová voda zamrzne, část soli se vrátí do kapalné vody kolem. Ta voda ještě zhoustne a klesne ke dnu."
         },
         {
           "type": "paragraph",
-          "text": "Tento pohyb pomáhá řídit velké mořské proudy. Tyto proudy přenášejí teplo a živiny po celém světě. Sůl není jen otázkou chuti: je součástí klimatického motoru planety."
+          "text": "Ten pohyb pomáhá táhnout velké oceánské proudy. Ty proudy vozí teplo a živiny kolem planety. Sůl není jen otázka chuti: patří k klimatickému motoru Země."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p4",
-      "title": "Ne všude stejná sůl",
+      "title": "Ne všude stejně slaná",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Slanost není všude stejná. V blízkosti rovníku může silné odpařování koncentrovat sůl. V blízkosti velkých řek nebo tajících ledových krů je voda měkčí. Mrtvé moře je extrémní případ: odchází velmi málo vody, zůstává hodně soli."
+          "text": "Salinita není všude stejná. U rovníku silné vypařování sůl zahušťuje. U velkých řek nebo tajícího mořského ledu je voda sladší. Mrtvé moře je extrém: odteče velmi málo vody, zůstane hodně soli."
         },
         {
           "type": "takeaway",
-          "text": "Mořská voda je slaná, protože řeky přinášejí minerály z kontinentů a odpařování zanechává sůl v oceánu. Tato akumulace probíhá již miliardy let."
+          "text": "Mořská voda je slaná, protože řeky přinášejí minerály z pevnin a protože vypařování nechá sůl v oceánu. To hromadění trvá už miliardy let."
         }
       ]
     }

@@ -1,10 +1,10 @@
 {
   "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap",
   "title": "Objev elektřiny",
-  "subtitle": "Od Franklina po Teslu",
+  "subtitle": "Od Franklina k Teslovi",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "Elektřina nebyla vynalezena náhle. Nejprve bylo pozorováno, pak pochopeno a poté domestikováno. Zde jsou klíčové kroky.",
+  "description": "Elektřinu nevymysleli naráz. Nejdřív ji pozorovali, pak pochopili, pak zkrotili. Tady jsou klíčové kroky.",
   "hero": {
     "image": "la_decouverte_de_l_electricite",
     "ratio": "16:9",
@@ -18,89 +18,89 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Elektřina existuje v přírodě: blesk, elektrická ryba, tření. To, co změnilo svět, bylo naučit se **produkt**, **přeprava** a používat je."
+          "text": "Elektřina v přírodě existuje: blesk, elektrické ryby, tření. Svět změnila až dovednost ji **vyrábět**, **přenášet** a používat."
         },
         {
           "type": "paragraph",
-          "text": "Tento příběh trvá více než dvě století, s riskantními experimenty a velkým soupeřením."
+          "text": "Ten příběh se táhne přes dvě století, s riskantními pokusy a velkými rivalitami."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p1",
-      "title": "Pochopení blesku",
+      "title": "Pochopit blesk",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V 18. století **Benjamin Franklin** ukázal, že blesk je elektrický jev. Jeho experiment s pouštěním draka (často vyprávěný beletrizovaným způsobem) má za cíl dokázat, že nebe a třecí stroj hrají stejnou silou."
+          "text": "V **18. století** **Benjamin Franklin** ukáže, že blesk je elektrický jev. Jeho pokus s drakem (často vyprávěný románově) má dokázat, že nebe i třecí stroj hrají se stejnou silou."
         },
         {
           "type": "image",
           "asset": "benjamin_franklin_kite_lightning_experiment",
           "ratio": "4:3",
-          "caption": "Franklin spojuje blesk a elektřinu: nebezpečná, ale základní myšlenka."
+          "caption": "Franklin spojí blesk a elektřinu: nebezpečná, ale zakládající myšlenka"
         },
         {
           "type": "paragraph",
-          "text": "Vynalezli jsme také **hrom**, kovovou tyč, která blesku nabízí bezpečnou cestu k zemi. Elektřina zanechává tajemství, aby vstoupila do strojírenství."
+          "text": "Vymyslí i **hromosvod**, kovovou tyč, která blesku nabídne bezpečnou cestu do země. Elektřina vyjde z tajemství a vstoupí do inženýrství."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p2",
-      "title": "Faraday: vyrábí proud",
+      "title": "Faraday: vyrábět proud",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V 19. století **Michael Faraday** ukázal, že magnet pohybující se v blízkosti drátu může vytvořit elektrický proud. Toto je **indukce**. Bez této myšlenky žádné dynamo, žádný alternátor, žádná moderní elektrárna."
+          "text": "V **19. století** **Michael Faraday** ukáže, že magnet v pohybu u drátu umí vytvořit elektrický proud. To je **indukce**. Bez té myšlenky není dynamo, není alternátor, není moderní elektrárna."
         },
         {
           "type": "image",
           "asset": "faraday_electromagnetic_induction_experiment",
           "ratio": "4:3",
-          "caption": "Faraday transformuje pohyb a magnetismus na proud."
+          "caption": "Faraday promění pohyb a magnetismus v proud"
         },
         {
           "type": "funFact",
-          "text": "Faraday pocházel ze skromných poměrů a začínal jako knihař. Naučil se vědě tím, že četl, co spoléhal."
+          "text": "Faraday vyšel ze skromného prostředí a začal jako knihař. Vědu se naučil čtením toho, co vázal."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p3",
-      "title": "Edison versus Tesla",
+      "title": "Edison proti Teslovi",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Na konci 19. století se střetly dva tábory. **Thomas Edison** tlačí stejnosměrný proud. **Nikola Tesla** (a společnost Westinghouse) hájí střídavý proud, který se snadněji přepravuje na velké vzdálenosti."
+          "text": "Koncem **19. století** se střetnou dva tábory. **Thomas Edison** tlačí stejnosměrný proud. **Nikola Tesla** (a společnost Westinghouse) brání střídavý proud, snadněji přenositelný na dlouhé vzdálenosti."
         },
         {
           "type": "image",
           "asset": "tesla_edison_electric_power_station",
           "ratio": "4:3",
-          "caption": "Ve městech sílí střídavý proud."
+          "caption": "Střídavý proud vyhraje, aby napájel města"
         },
         {
           "type": "paragraph",
-          "text": "U městských sítí vítězí střídavý proud. Města svítí. Továrny mění tempo."
+          "text": "Střídavý proud vyhraje pro městské sítě. Města se rozsvítí. Továrny změní rytmus."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p4",
-      "title": "Propojený svět",
+      "title": "Zapojený svět",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Elektřina dnes pohání nemocnice, vlaky, internet, ledničky. Výzvou už není jen to vyrobit, ale udělat to čistě a spolehlivě."
+          "text": "Dnes elektřina točí nemocnice, vlaky, internet i ledničky. Výzva už není jen vyrábět, ale vyrábět čistě a spolehlivě."
         },
         {
           "type": "takeaway",
-          "text": "Elektřina byla pochopena a následně domestikována: Franklin pro blesk, Faraday pro výrobu proudu, Tesla a střídavý proud pro jeho přivedení do domácností. Náš každodenní život na tom stále závisí."
+          "text": "Elektřinu nejdřív pochopili a pak zkrotili: Franklin u blesku, Faraday u výroby proudu, Tesla a střídavý proud, aby ho dovedli do domů. Náš všední den na ní pořád závisí."
         }
       ]
     }

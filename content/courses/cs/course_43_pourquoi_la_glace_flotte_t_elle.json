@@ -4,11 +4,11 @@
   "subtitle": "Voda a molekuly",
   "subject": "sciences",
   "subcategory": "Our daily life explained",
-  "description": "Led plave na vodě. Zdá se to normální, ale ve skutečnosti je to velmi vzácné. A naštěstí pro život na Zemi.",
+  "description": "Led plave na vodě. Zdá se to samozřejmé, ale ve skutečnosti je to velmi vzácné. A naštěstí pro život na Zemi.",
   "hero": {
     "image": "pourquoi_la_glace_flotte",
     "ratio": "16:9",
-    "hook": "Kdyby led tekl, jezera by zamrzla na dno. A život ve vodě by jen těžko přežíval."
+    "hook": "Kdyby led klesal, jezera by zamrzla až ke dnu. A život ve vodě by to měl těžké."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ledová kostka ve sklenici, ledovec v oceánu: led **plave**. Připadá nám to banální. U většiny látek je však pevná látka více **hustý**, tedy těžší pro stejný objem: klesá."
+          "text": "Kostka ledu ve sklenici, ledovec v oceánu: led **plave**. Připadá ti to banální. U většiny látek je ale pevná fáze **hustší**, tedy na stejný objem těžší: klesne."
         },
         {
           "type": "paragraph",
-          "text": "Voda dělá opak. Tato výjimka pochází z tvaru jeho molekuly. A v zimě to zachránilo mnoho jezer."
+          "text": "Voda dělá opak. Ta výjimka jde z tvaru její molekuly. A v zimě zachránila nejedno jezero."
         }
       ]
     },
@@ -33,72 +33,72 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Molekula vody je atom **kyslíku** spojený se dvěma atomy **vodíku**. Není přímá: tvoří **PROTI**. Kvůli tomuto tvaru nejsou elektrické náboje distribuovány rovnoměrně: molekula je **polární**, s jedním koncem mírně záporným a druhým mírně kladným."
+          "text": "Molekula vody je atom **kyslíku** spojený se dvěma atomy **vodíku**. Není rovná: tvoří **V**. Kvůli tomu tvaru nejsou elektrické náboje rozložené stejně: molekula je **polární**, s jedním koncem lehce záporným a druhým lehce kladným."
         },
         {
           "type": "image",
           "asset": "water_molecule_model_crystal",
           "ratio": "4:3",
-          "caption": "Molekula vody: V, která přitahuje a odpuzuje své sousedy."
+          "caption": "Molekula vody: V, které přitahuje a odpuzuje sousedky"
         },
         {
           "type": "paragraph",
-          "text": "Výsledek: molekuly vody se vzájemně přitahují [[Vodíkové vazby]], jako malé magnety. V kapalině zůstávají blízko, ale stále se pohybují. V ledu mrznou jinak."
+          "text": "Výsledek: molekuly vody se k sobě táhnou [[vodíkové vazby]], jako malé magnety. V kapalině zůstanou blízko sebe, ale pořád se hýbou. V ledu ztuhnou jinak, do pevné mřížky."
         }
       ]
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p2",
-      "title": "Když voda zamrzne, zabírá místo",
+      "title": "Když voda ztuhne, zabere víc místa",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kolem **0 °C** voda tuhne. Aby vytvořily led, molekuly se organizují do **šestiúhelníkový** sítě, jakési šestistranné plástve. Mezi sebou pak nechají více **prázdný** než v kapalném stavu."
+          "text": "Kolem **0 °C** voda ztuhne. Aby vznikl led, molekuly se srovnají do **šestiúhelníkové** sítě, jakýchsi šestibokých včelích pláství. Mezi sebou nechají víc **prázdna** než v kapalině."
         },
         {
           "type": "funFact",
-          "text": "To je důvod, proč plná láhev vody může **prasknout** v mrazničce: led zabírá větší objem než tekutá voda."
+          "text": "Proto plná lahev vody může v mrazáku **prasknout**: led zabere víc objemu než kapalná voda."
         },
         {
           "type": "paragraph",
-          "text": "Méně materiálu ve stejném objemu znamená: **méně zaneprázdněný**. Objekt méně hustý než kapalina kolem něj však stoupá. Led proto plave na vodě. Toto se nazývá **anomálie expanze vody**: na rozdíl od téměř všech látek se voda při ochlazování pod **4 °C** rozpíná."
+          "text": "Méně hmoty ve stejném objemu znamená: **menší hustota**. A objekt méně hustý než kapalina kolem stoupá. Led proto plave na vodě. Říká se tomu **anomálie roztažnosti vody**: na rozdíl skoro od všech látek se voda při chladnutí pod **4 °C** rozpíná."
         },
         {
           "type": "image",
           "asset": "iceberg_floating_arctic_ocean",
           "ratio": "16:9",
-          "caption": "Ledovec plave, protože led má menší hustotu než kapalná voda."
+          "caption": "Ledovec plave, protože led je méně hustý než kapalná voda"
         }
       ]
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p3",
-      "title": "Proč je životně důležitý pro jezera",
+      "title": "Proč na tom jezera závisí",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Představte si, že by zmrzlina tekla. Vytvořil by se na povrchu, pak by klesl ke dnu. Jezero by zamrzlo vrstvu po vrstvě, až na dno. Léto by často nestačilo na to, aby všechno rozplynulo."
+          "text": "Představ si, že by led klesal. Vznikl by na hladině a pak by spadl ke dnu. Jezero by zamrzalo vrstvu po vrstvě, až dolů. Léto by často nestačilo všechno rozpustit."
         },
         {
           "type": "paragraph",
-          "text": "Naštěstí led zůstává nahoře. Tvoří **izolační kryt**. Pod zamrzlým povrchem může kapalná voda zůstat kolem **4 °C**, což je teplota, kdy je kapalná voda nejhustší, dostačující k přežití ryb a vodních rostlin."
+          "text": "Naštěstí led zůstane nahoře. Utvoří **izolační poklop**. Pod zamrzlou hladinou může kapalná voda zůstat kolem **4 °C**, teploty, kde je kapalná voda nejhustší, dost na to, aby ryby i vodní rostliny přežily."
         }
       ]
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p4",
-      "title": "A také pro klima",
+      "title": "A pro klima taky",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bílá ledová kra odráží velkou část slunečního světla zpět do vesmíru díky své vysoké odrazivosti **albedo**. Pokud zmizí, temný oceán absorbuje více tepla. To urychluje oteplování: začarovaný kruh."
+          "text": "Bílý mořský led vrátí do vesmíru velkou část slunečního světla díky vysokému **albedu**, odrazivé schopnosti. Když zmizí, tmavý oceán pohltí víc tepla. To zrychlí oteplování: začarovaný kruh."
         },
         {
           "type": "takeaway",
-          "text": "Led plave, protože jak tuhne, voda vytváří „provzdušněnější“ síť: stává se méně hustým než kapalná voda. Tato výjimka chrání vodní život v zimě."
+          "text": "Led plave, protože voda při tuhnutí utvoří „vzdušnější” síť: stane se méně hustou než kapalná voda. Ta výjimka v zimě chrání vodní život."
         }
       ]
     }

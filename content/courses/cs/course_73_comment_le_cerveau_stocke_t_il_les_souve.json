@@ -4,11 +4,11 @@
   "subtitle": "Paměť a neurony",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "Paměť není knihovna šuplíků. Je to živá síť neuronů, které se navzájem posilují, obnovují a někdy dělají chyby.",
+  "description": "Paměť není knihovna šuplíků. Je to živá síť neuronů, které se posilují, znovu skládají a někdy se pletou.",
   "hero": {
     "image": "comment_le_cerveau_stocke_les_souvenirs",
     "ratio": "16:9",
-    "hook": "Paměť není soubor: je to cesta, kterou se mozek naučil předělávat."
+    "hook": "Vzpomínka není soubor: je to cesta, kterou se mozek naučil znovu projít."
   },
   "sections": [
     {
@@ -18,89 +18,89 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Paměť si často představujeme jako pevný disk. Ve skutečnosti je to živá síť. Miliardy **neuronů**, nervových buněk, se znovu spojují, posilují nebo oslabují v závislosti na tom, co zažíváme."
+          "text": "Paměť si často představíš jako pevný disk. Ve skutečnosti je to živá síť. Miliardy **neuronů**, nervových buněk, se znovu napojují, posilují nebo slábnou podle toho, co žiješ."
         },
         {
           "type": "paragraph",
-          "text": "Nic není uloženo na jednom místě. Vzpomínka je distribuovaná stopa, na začátku křehká, po spánku pevnější a vždy trochu rekonstruovaná, když si na ni vzpomeneme."
+          "text": "Nic neleží na jednom místě. Vzpomínka je rozptýlená stopa, na začátku křehká, po spánku pevnější, a vždycky trochu znovu složená, když si ji vybavíš."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p1",
-      "title": "Spojení, která posilují",
+      "title": "Spoje, které se posílí",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mezi dvěma neurony se bod kontaktu nazývá **synapse**, spojení, kudy prochází nervový signál. Lidský mozek má přibližně **86 miliard** neuronů a více než **100 000 miliard** synapsí."
+          "text": "Mezi dvěma neurony se místo styku jmenuje **synapse**, spoj, kudy jde nervový signál. Lidský mozek má asi **86 miliard** neuronů a víc než **100.000 miliard** synapsí."
         },
         {
           "type": "image",
           "asset": "hippocampus_memory_brain",
           "ratio": "auto",
-          "caption": "Hipokampus hraje ústřední roli při utváření vzpomínek."
+          "caption": "Hipokampus hraje ústřední roli při vzniku vzpomínek."
         },
         {
           "type": "paragraph",
-          "text": "Když se informace opakují nebo jsou spojeny se silnou emocí, aktivují se stejné neurony společně. Jejich spojení se snáze spustí: je to [[Dlouhodobá potenciace]], trvalé posílení synapsí. Čím více se okruh používá, tím „širší“ se cesta stává. Paměť tedy není uložený objekt, ale **stopa** v síti."
+          "text": "Když se informace opakuje nebo se váže k silné emoci, tytéž neurony se spustí spolu. Jejich pouto se stane snadněji vyvolatelné: je to [[Dlouhodobá potenciace]], trvalé posílení synapsí. Čím víc se okruh používá, tím „širší” cesta je. Vzpomínka tedy není uložený předmět, ale **stopa** v síti."
         },
         {
           "type": "funFact",
-          "text": "Úložná kapacita mozku se odhaduje na přibližně **2,5 petabajtů**, což je ekvivalent milionů hodin videa. Ale není to disk: je to živá tkáň, která se sama reorganizuje."
+          "text": "Kapacita úložiště mozku se odhaduje na asi **2,5 petabajtů**, ekvivalent milionů hodin videa. Ale není to disk: je to živá tkáň, která se přestavuje."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p2",
-      "title": "Mořský koník, přednosta vzpomínek",
+      "title": "Hipokampus, výpravčí vzpomínek",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**mořský koník**, malá stavba v [[temporálního laloku]], oblasti za chrámy, neuchovává vzpomínky navždy. Přijímá je, **zakódovat**, převádí je na paměťové stopy a poté je redistribuuje do **kůra**, vnější vrstvy mozku. Tento převod se nazývá **konsolidace**."
+          "text": "**Hipokampus**, malá struktura [[temporálního laloku]], oblasti za spánky, vzpomínky neschovává navždy. Přijme je, **zakóduje**, promění ve stopu paměti a pak je přerozdělí do **kortexu**, vnější vrstvy mozku. Tomu přesunu se říká **konsolidace**."
         },
         {
           "type": "paragraph",
-          "text": "Provádí se hlavně během **spánku**. Bez fungujícího hipokampu můžeme žít v přítomném okamžiku, ale už nedržíme nové vědomé vzpomínky. Zůstáváme uvězněni v přítomnosti bez nedávné minulosti."
+          "text": "Děje se hlavně ve **spánku**. Bez funkčního hipokampu můžeš žít přítomný okamžik, ale nové vědomé vzpomínky už neuložíš. Zůstaneš v přítomnosti bez nedávné minulosti."
         },
         {
           "type": "funFact",
-          "text": "Pacient **H.M.**, operovaný v roce 1953, již netvořil nové vzpomínky. Každý den však pokročil v kreslení do zrcadla, aniž by si pamatoval, že už to zkusil: jeho paměť na gesta byla nedotčená."
+          "text": "Pacient **H.M.**, operovaný roku 1953, už nové vzpomínky netvořil. Přesto každý den postupoval v kreslení v zrcadle, aniž si pamatoval, že to už zkoušel: paměť gest zůstala nedotčená."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p3",
-      "title": "Pamatovat si znamená znovu stavět",
+      "title": "Vybavit si znamená znovu složit",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vyvolání paměti neznamená opětovné přehrávání videa. Pokaždé, když jej vyjmete, stane se **tvárný**, upravitelným. Naše současné emoce, naše nové poznatky nebo sugesce je mohou upravit dříve, než budou „znovu zaznamenány“."
+          "text": "Vybavit vzpomínku není přehrát video. Pokaždé, když ji vytáhneš, znovu se stane **tvárnou**, měnitelnou. Emoce chvíle, nové znalosti nebo sugesce ji mohou změnit, než se „znovu nahraje”."
         },
         {
           "type": "paragraph",
-          "text": "Psycholožka **Elizabeth Loftusová** ukázala, že můžete implantovat **falešné vzpomínky** jednoduchými otázkami. Proto dnešní opatrnost tváří v tvář očitým svědectvím: v dobré víře mozek zaplňuje mezery."
+          "text": "Psycholožka **Elizabeth Loftus** ukázala, že **falešné vzpomínky** lze vsadit obyčejnými otázkami. Proto je dnes u očitých svědectví opatrnost: v dobré víře mozek díry zalepí."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p4",
-      "title": "Více vzpomínek v jednom mozku",
+      "title": "Několik pamětí v jednom mozku",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vzpomínka na fakta a životní epizody, co můžeme vyprávět, prochází hlavně hipokampem. [[Procedurální paměť]], tedy cyklistika nebo plavání, závisí místo toho na **mozeček**, struktuře v zadní části mozku, a dalších starších strukturách."
+          "text": "Paměť faktů a životních epizod, to, co umíš vyprávět, jde hlavně přes hipokampus. [[Procedurální paměť]], ta na kolo nebo plavání, závisí spíš na **mozečku**, struktuře vzadu v mozku, a na jiných starších strukturách."
         },
         {
           "type": "paragraph",
-          "text": "To je důvod, proč někteří pacienti s amnézií zapomínají své vlastní jméno, ale stále hrají na klavír. Paměť není jedna zásuvka: je to mozaika systémů."
+          "text": "Proto někteří amnestičtí pacienti zapomenou vlastní jméno, ale pořád hrají na piano. Paměť není jediný šuplík: je to mozaika systémů."
         },
         {
           "type": "takeaway",
-          "text": "Vzpomínka je dynamická stopa: synapse posílené, konsolidované zejména v noci a přestavované s každou připomínkou. Nikdy to není pevný soubor."
+          "text": "Vzpomínka je dynamická stopa: posílené synapse, upevněné hlavně v noci a znovu složené při každém vybavení. Nikdy to není zafixovaný soubor."
         }
       ]
     }

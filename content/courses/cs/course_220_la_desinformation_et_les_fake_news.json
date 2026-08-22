@@ -1,14 +1,14 @@
 {
   "id": "course_220_la_desinformation_et_les_fake_news",
   "title": "Dezinformace a fake news",
-  "subtitle": "Leží ve virovém věku",
+  "subtitle": "Lež ve virálním věku",
   "subject": "comprendreLeMonde",
   "subcategory": "Economy & society",
-  "description": "Falešné informace se na sociálních sítích šíří 6x rychleji než pravda. Proč a jak se chránit?",
+  "description": "Lživé zprávy se na sociálních sítích šíří 6krát rychleji než pravda. Proč, a jak se před nimi bránit?",
   "hero": {
     "image": "la_desinformation_et_les_fake_news",
     "ratio": "16:9",
-    "hook": "Studie MIT ukázala, že falešné zprávy se na Twitteru šíří 6krát rychleji než pravda. Zde je důvod."
+    "hook": "Studie z MIT ukázala, že fake news na Twitteru letí 6krát rychleji než pravda. Tady je proč."
   },
   "sections": [
     {
@@ -18,85 +18,85 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Lhaní pro politický účel není nic nového: jeho stopy byly nalezeny již od antiky. Internet a sociální sítě však situaci změnily: nepravdivé informace již nešíří pouze ze státu k jeho obyvatelům, ale nyní se šíří horizontálně, mezi občany."
+          "text": "Lhát kvůli politice není nic nového: stopy sahají až do antiky. Internet a sociální sítě ale pravidla změnily: lež už nejde jen od státu k lidem, šíří se vodorovně, mezi občany."
         },
         {
           "type": "paragraph",
-          "text": "Tento posun vytvořil svět, kde se pravda někdy tváří v tvář viralitě zdá být volitelná. Pochopení toho, jak se šíří **dezinformace** a kdo z nich má prospěch, se stalo nezbytným pro zachování důvěry mezi občany."
+          "text": "Ten zvrat udělal svět, kde pravda občas vypadá jako volitelná vedle virality. Pochopit, jak se **dezinformace** šíří a komu slouží, je nutné k tomu, aby mezi lidmi zůstala důvěra."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p1",
-      "title": "Proč lži cestují rychleji než pravda",
+      "title": "Proč lež cestuje rychleji než pravda",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Musíme rozlišovat dezinformace, záměrně šířené za účelem manipulace, od prostých upřímných omylů. Úspěch těchto falešných zpráv závisí na tom, co výzkumníci nazývají ekonomikou pozornosti: algoritmy sociálních médií jsou navrženy tak, aby maximalizovaly čas strávený na obrazovce a naše mozky reagují silněji na emoce a šok než na nuance."
+          "text": "Dezinformace, šířená schválně kvůli manipulaci, není totéž co omyl v dobré víře. Úspěch lživých zpráv stojí na tom, čemu výzkumníci říkají **ekonomika pozornosti**: algoritmy sociálních sítí maximalizují čas u obrazovky a náš mozek reaguje silněji na emoci a šok než na nuance."
         },
         {
           "type": "funFact",
-          "text": "Studie [[MIT]] zveřejněná v roce 2018 ukázala, že falešné zprávy se šíří asi 6krát rychleji než ověřené zprávy na Twitteru, protože vypadají novější a emocionálně intenzivnější."
+          "text": "Studie z [[MIT]] z roku 2018 ukázala, že lživé zprávy se na Twitteru šíří asi 6krát rychleji než ověřené, protože působí nověji a emocionálně ostřeji."
         },
         {
           "type": "paragraph",
-          "text": "Algoritmy také uzamknou uživatele internetu do [[filtrovat bubliny]]: zobrazují jim pouze obsah potvrzující jejich již existující názory. Člověk přesvědčený o konspirační teorii pak vidí každou novou nepravdivou informaci jako další důkaz, což velmi ztěžuje případnou následnou opravu."
+          "text": "Algoritmy taky zavřou lidi do [[filtrovat bubliny]]: ukazují jen obsah, který potvrzuje už hotové názory. Kdo věří konspirační teorii, bere každou novou lež jako další důkaz, a pozdější oprava je pak velmi těžká."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p2",
-      "title": "Průmysl lží, mezi státy a ziskem",
+      "title": "Průmysl lži: státy i zisk",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dezinformace se staly skutečným průmyslem. Státy jako Rusko prostřednictvím Internet Research Agency vytvořily tisíce falešných automatizovaných účtů, aby vyvolaly napětí v západních demokraciích, aniž by se pokusily bránit konkrétní tábor: cílem je často vytvořit chaos a přimět lidi, aby věřili, že „všichni lžou“."
+          "text": "Dezinformace se stala opravdovým průmyslem. Státy jako Rusko přes Internet Research Agency vytvořily tisíce falešných automatických účtů, aby v západních demokraciích přiživily napětí. Často nebrání ani jeden tábor: cílem je chaos a dojem, že „lže každý“."
         },
         {
           "type": "image",
           "asset": "fake_news_social_media_manipulation_phone",
           "ratio": "4:3",
-          "caption": "Falešné informace se na sociálních sítích šíří během několika sekund."
+          "caption": "Lživé zprávy se na sociálních sítích rozběhnou během vteřin."
         },
         {
           "type": "paragraph",
-          "text": "Existuje také čistě lukrativní rozměr: ve městě Veles v Severní Makedonii mladí podnikatelé v roce 2016 vytvořili senzační stránky bez jakéhokoli politického přesvědčení, pouze aby vydělali peníze prostřednictvím návštěvnosti generované na sociálních sítích. Lež se pak stává prostým výnosným zbožím."
+          "text": "Je tu i čistě výdělečná stránka: ve městě Veles v Severní Makedonii mladí podnikatelé v roce 2016 zakládali senzacechtivé weby bez jakéhokoli politického přesvědčení, jen kvůli penězům z návštěvnosti. Lež se tak stala obyčejným výnosným zbožím."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p3",
-      "title": "Jak oddělit fakta od fikce",
+      "title": "Jak oddělit pravdu od lži",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tváří v tvář této záplavě se svět informací organizuje sám. **ověřování faktů**, tedy ověřování faktů, se stalo samo o sobě novinářskou disciplínou. Agentury jako [[AFP]] nebo specializované redakce používají nástroje pro vyhledávání obrázků k detekci padělků a analýze podezřelého obsahu."
+          "text": "Proti té záplavě se informační svět organizuje. **Fact-checking**, tedy ověřování faktů, se stal samostatnou novinářskou disciplínou. Agentury jako [[AFP]] nebo specializované redakce používají nástroje na hledání obrázků, aby odhalily podvrhy a rozpitvaly podezřelý obsah."
         },
         {
           "type": "paragraph",
-          "text": "Ale závod mezi útokem a obranou zůstává nerovný. Vzhled [[Deepfakes]], videí zfalšovaných umělou inteligencí, kde je člověk nucen říci cokoli se znepokojivým realismem, činí rozlišení mezi pravdou a nepravdou pro netrénované oko stále obtížnější."
+          "text": "Závod mezi útokem a obranou ale zůstává nerovný. Příchod [[Deepfakes]], videí zfalšovaných umělou inteligencí, kde člověku s děsivou věrností vložíš do úst cokoli, dělá rozdíl mezi pravdou a lží pro necvičené oko čím dál těžší."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p4",
-      "title": "Nalezení důvěry ve světě obrázků",
+      "title": "Najít znovu důvěru ve světě obrazů",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dlouhodobý účinek dezinformací je hluboký: nyní mluvíme o éře **post-pravdy**, kde objektivní fakta mají někdy menší váhu než emoce a osobní přesvědčení. Tato generalizovaná relativizace oslabuje důvěru nezbytnou ke společnému řešení globálních problémů, jako je klima nebo veřejné zdraví."
+          "text": "Dlouhodobý účinek dezinformace jde hluboko: mluví se o éře **post-pravdy**, kde objektivní fakta občas váží méně než emoce a osobní víra. Tahle plošná relativizace oslabí důvěru, bez které se společně nepostavíš klimatickým ani zdravotním výzvám."
         },
         {
           "type": "paragraph",
-          "text": "Nejspolehlivější odpovědí zůstává mediální výchova: naučit se ověřovat zdroj, křížově odkazovat na několik informací a pochopit, jak fungují algoritmy. Někteří také spoléhají na technologie certifikace obsahu, aby zaručili původ videa od jeho vytvoření. Mezitím zůstává ostražitost všech první obrannou linií."
+          "text": "Nejpevnější odpověď zůstává mediální výchova: naučit se ověřit zdroj, křížit informace a pochopit, jak algoritmy fungují. Někteří sázejí i na certifikaci obsahu, aby byl původ videa jistý od vzniku. Do té doby je první linií obrany pozornost každého z nás."
         },
         {
           "type": "takeaway",
-          "text": "Falešné informace se na sociálních sítích šíří v průměru 6x rychleji než pravda, protože zneužívají naše emoce a naši touhu po novinkách. Tváří v tvář deepfakes a trollím farmám zůstává mediální výchova nejlepší zbraní k zachování kolektivní důvěry."
+          "text": "Lživé zprávy se na sociálních sítích šíří v průměru 6krát rychleji než pravda, protože hrají na emoce a chuť po novinkách. Proti deepfakes a trollím farmám zůstává mediální výchova nejlepší zbraní, jak udržet kolektivní důvěru."
         }
       ]
     }

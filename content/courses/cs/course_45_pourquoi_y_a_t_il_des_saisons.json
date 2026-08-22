@@ -1,14 +1,14 @@
 {
   "id": "course_45_pourquoi_y_a_t_il_des_saisons",
   "title": "Proč existují roční období?",
-  "subtitle": "Země & Slunce",
+  "subtitle": "Země a Slunce",
   "subject": "sciences",
   "subcategory": "Our daily life explained",
-  "description": "Roční období nepocházejí ze Země, která je blíže nebo dále od Slunce. Skutečnou příčinou je naklonění zemské osy.",
+  "description": "Roční období nejdou z toho, že je Země blíž nebo dál od Slunce. Skutečná příčina je sklon zemské osy.",
   "hero": {
     "image": "pourquoi_y_a_t_il_des_saisons",
     "ratio": "16:9",
-    "hook": "Ne, léto nepřichází, protože Země se přibližuje Slunci."
+    "hook": "Ne, léto nepřijde proto, že se Země přiblíží ke Slunci."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mnoho lidí si myslí, že léto přichází, když je Země **blíže** Slunci, a zima přichází, když je **daleko**. To není pravda. A vidíme to hned: když je ve Francii léto, v Austrálii je zima."
+          "text": "Hodně lidí si myslí, že léto přijde, když je Země **blíž** ke Slunci, a zima, když je **dál**. Není to pravda. A vidíš to hned: když je u nás léto, v Austrálii je zima."
         },
         {
           "type": "paragraph",
-          "text": "Skutečné vysvětlení spočívá v jedné věci: osa rotace Země je **nakloněná**, nakloněná vzhledem k rovině její oběžné dráhy kolem Slunce."
+          "text": "Skutečné vysvětlení drží jedna věc: osa otáčení Země je **skloněná**, nakloněná vůči rovině své dráhy kolem Slunce."
         }
       ]
     },
@@ -33,51 +33,51 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Země se otočí kolem své osy za **24 hodin**: je den a noc. Také obíhá kolem Slunce v **rok rok** po dráze ve tvaru **elipsa**, což je mírně zploštělý kruh. Ale jeho osa, pomyslná čára od severního pólu k jižnímu pólu, není přímá vzhledem k jeho oběžné dráze. Nakloní se přibližně **23,5 ohromeni**: je to [[Axiální sklon Země (23,5°)]]."
+          "text": "Země se otočí kolem sebe za **24 hodin**: to je den a noc. Kolem Slunce oběhne za **rok** po dráze ve tvaru **elipsy**, lehce zploštělého kruhu. Její osa, pomyslná čára od severního pólu k jižnímu, ale vůči dráze není rovná. Naklání se zhruba o **23,5 stupně**: to je [[Axiální sklon Země (23,5°)]]."
         },
         {
           "type": "image",
           "asset": "earth_summer_winter_seasons_illustration",
           "ratio": "auto",
-          "caption": "Sklon zemské osy vysvětluje cyklus ročních období."
+          "caption": "Sklon zemské osy vysvětlí cyklus ročních období"
         },
         {
           "type": "paragraph",
-          "text": "Tento sklon zůstává po celý rok zhruba ve stejném směru. Vždy ukazuje na stejnou oblast oblohy, blízko Polárky. Výsledek: v závislosti na tom, kde se Země nachází na své oběžné dráze, se jedna hemisféra „kouká“ do Slunce více, druhá méně."
+          "text": "Ten sklon zůstane skoro pořád ve stejném směru. Míří vždy k téže oblasti oblohy, blízko Polárky. Výsledek: podle toho, kde Země na dráze stojí, jedna polokoule „kouká” na Slunce víc, druhá míň."
         }
       ]
     },
     {
       "id": "course_45_pourquoi_y_a_t_il_des_saisons_p2",
-      "title": "Více světla, více tepla",
+      "title": "Víc světla, víc tepla",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V létě na severní polokouli se severní pól naklání směrem ke Slunci. Dny jsou delší: zvětšuje se **fotoperioda**, poměr mezi délkou dne a noci. Paprsky také dopadají „příměji“ na zem: energie se soustředí na menší povrch. Takže je tepleji."
+          "text": "V létě na severní polokouli se severní pól nakloní ke Slunci. Dny jsou delší: **fotoperioda**, poměr délky dne a noci, roste. Paprsky dopadají na zem i „rovněji”: energie se soustředí na menší plochu. Je proto tepleji."
         },
         {
           "type": "funFact",
-          "text": "V lednu je Země ještě o něco **blíže** ke Slunci než v červenci: je to **přísluní**, nejbližší bod na oběžné dráze. A přesto je tu zima. Důkaz, že vzdálenost nevysvětluje roční období."
+          "text": "V lednu je Země dokonce o něco **blíž** ke Slunci než v červenci: to je **přísluní**, nejbližší bod dráhy. A přesto je u nás zima. Důkaz, že vzdálenost roční období nevysvětlí."
         },
         {
           "type": "paragraph",
-          "text": "V zimě je to naopak: krátké dny, více šikmé paprsky, energie rozprostřená na větší plochu. Méně přijatého tepla. **slunovrat**, časy, kdy Slunce dosáhne své nejsevernější nebo nejjižnější polohy, označují začátek léta nebo zimy."
+          "text": "V zimě je to naopak: krátké dny, šikmější paprsky, energie rozprostřená na větší plochu. Méně přijatého tepla. **Slunovraty**, chvíle, kdy Slunce dosáhne nejsevernější nebo nejjižnější polohy, označí začátek léta nebo zimy."
         }
       ]
     },
     {
       "id": "course_45_pourquoi_y_a_t_il_des_saisons_p3",
-      "title": "A blízko rovníku?",
+      "title": "A u rovníku?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V blízkosti **rovník**, pomyslné čáry, která rozděluje Zemi na dvě polokoule, náklon mění jen málo délky dne. Nejsou tam vlastně čtyři roční období jako v Evropě, ale spíše sušší a vlhčí období."
+          "text": "U **rovníku**, pomyslné čáry, která Zemi rozdělí na dvě polokoule, sklon délku dne skoro nezmění. Čtyři roční období jako v Evropě tam vlastně nejsou, spíš sušší a vlhčí období."
         },
         {
           "type": "paragraph",
-          "text": "Na **póly** je účinek extrémní: několik měsíců nepřetržitého dne v létě, několik měsíců noci v zimě. Kontrast je tam mnohem silnější než ve Francii."
+          "text": "Na **pólech** je účinek extrémní: několik měsíců souvislého dne v létě, několik měsíců noci v zimě. Kontrast je tam mnohem silnější než u nás."
         }
       ]
     },
@@ -88,11 +88,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pokud by byla zemská osa dokonale přímá, do každého místa by po celý rok dopadalo zhruba stejné množství slunečního světla. Už žádné skutečné léto, žádná pravá zima. Podnebí, kultury, migrace zvířat: všechno by bylo jiné."
+          "text": "Kdyby zemská osa byla úplně rovná, každé místo by celý rok dostávalo zhruba stejně slunce. Žádné pravé léto, žádná pravá zima. Klima, plodiny, tahy zvířat: všechno by bylo jiné."
         },
         {
           "type": "takeaway",
-          "text": "Roční období pocházejí ze sklonu zemské osy, přibližně **23,5°**, nikoli ze vzdálenosti od Slunce. Jedna polokoule se naklání ke Slunci: je léto. Druhý se kloní k opaku: je zima."
+          "text": "Roční období jdou ze **sklonu** zemské osy, zhruba **23,5°**, ne ze vzdálenosti od Slunce. Jedna polokoule se nakloní ke Slunci: je léto. Druhá se nakloní naopak: je zima."
         }
       ]
     }

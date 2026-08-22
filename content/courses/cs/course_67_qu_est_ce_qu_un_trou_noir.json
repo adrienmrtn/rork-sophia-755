@@ -1,14 +1,14 @@
 {
   "id": "course_67_qu_est_ce_qu_un_trou_noir",
   "title": "Co je černá díra?",
-  "subtitle": "Extrémní závažnost",
+  "subtitle": "Extrémní gravitace",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "Černá díra není kosmický vysavač. Je to oblast, kde je gravitace tak silná, že ani světlo nemůže uniknout.",
+  "description": "Černá díra není vesmírný vysavač. Je to oblast, kde je gravitace tak silná, že ani světlo neunikne.",
   "hero": {
     "image": "qu_est_ce_qu_un_trou_noir",
     "ratio": "16:9",
-    "hook": "Nic nevychází, ani světlo. Nakonec jsme však fotili jeho stín."
+    "hook": "Nic z ní nevyjde, ani světlo. Přesto se povedlo vyfotit její stín."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Černá díra je oblast **prostor-čas**, látka spojující prostor a čas, kde je gravitace tak intenzivní, že rychlost potřebná k úniku převyšuje rychlost světla. Nic nevychází: nevadí, žádný světelný signál."
+          "text": "Černá díra je oblast **časoprostoru**, tkaniny, která spojuje prostor a čas, kde je gravitace tak intenzivní, že rychlost nutná k úniku překoná rychlost světla. Nic z ní nevyjde: ani hmota, ani světelný signál."
         },
         {
           "type": "paragraph",
-          "text": "Není to „díra“ ve smyslu tunelu. Je to extrémní koncentrace materiálu, který tuto látku velmi silně ohýbá. Dlouhá čistá teorie vyplývající z Einsteinových rovnic, černé díry jsou dnes pozorovány několika způsoby."
+          "text": "Není to „díra” ve smyslu tunelu. Je to extrémní koncentrace hmoty, která tu tkaninu hodně zakřiví. Dlouho čistá teorie z Einsteinových rovnic, černé díry se dnes pozorují několika způsoby."
         }
       ]
     },
@@ -33,86 +33,86 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hvězdná černá díra se často rodí ze smrti velmi hmotné hvězdy, jejíž hmotnost je nejméně **20 až 25 dní před dodáním. Hvězda se během svého života drží díky rovnováze: gravitace táhne ke středu, tlak**jaderné** fúze** tlačí ven. V srdci hvězdy se vodík přeměňuje na helium."
+          "text": "Hvězdná černá díra se často zrodí smrtí velmi hmotné hvězdy, nejméně **20 až 25krát** hmotnější než Slunce. Za života hvězda drží díky rovnováze: gravitace táhne ke středu, tlak **jaderné fúze** tlačí ven. V jádru se vodík mění v helium."
         },
         {
           "type": "image",
           "asset": "black_hole_accretion_disk_galaxy",
           "ratio": "auto",
-          "caption": "Černá díra obklopená svým žhavým akrečním diskem."
+          "caption": "Černá díra obklopená žhavým akrečním diskem."
         },
         {
           "type": "paragraph",
-          "text": "Když dojde palivo, tlak klesne. Srdce hvězdy je rozdrcené. Exploze **supernova** pak může osvětlit galaxii. Pokud je zbývající jádro dostatečně masivní, kompresi nic nebrání."
+          "text": "Když palivo dojde, tlak se zhroutí. Jádro hvězdy se smáčkne. Výbuch **supernovy** pak může osvítit galaxii. Je-li zbylé jádro dost hmotné, kompresi už nic nezastaví."
         },
         {
           "type": "paragraph",
-          "text": "Ve středu teorie popisuje [[Gravitační singularita]]: bod, kde se hustota a zakřivení stávají extrémními a kde naše současné rovnice přestávají dobře fungovat. Kolem něj najdeme [[Horizont událostí]]: neviditelnou hranici. Po překročení není možný návrat do zbytku vesmíru."
+          "text": "Ve středu teorie popisuje [[Gravitační singularita]]: bod, kde hustota a zakřivení extrémně stoupnou a naše dnešní rovnice přestanou dobře fungovat. Kolem je [[horizont událostí]]: neviditelná hranice. Jakmile ji překročíš, návrat do zbytku vesmíru už není."
         },
         {
           "type": "funFact",
-          "text": "Pokud byste spadli směrem k černé díře, gravitace by táhla mnohem silněji na vaše nohy než na vaši hlavu. Toto protahování se nazývá „špagetifikace“."
+          "text": "Kdybys padal k černé díře, gravitace by nohy táhla mnohem silněji než hlavu. Tomu natažení se říká „spaghetizace”."
         }
       ]
     },
     {
       "id": "course_67_qu_est_ce_qu_un_trou_noir_p2",
-      "title": "Žádný kosmický vysavač",
+      "title": "Ne vesmírný vysavač",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Na rozdíl od všeobecného přesvědčení černá díra nenasaje vše, co projde v dálce. Jeho gravitace závisí na jeho hmotnosti a vzdálenosti, jako u každého předmětu. Pokud by Slunce bylo nahrazeno černou dírou stejné hmotnosti, Země by pokračovala v oběhu. Bez světla a tepla bychom ale zmrzli."
+          "text": "Na rozdíl od běžné představy černá díra nenasává všechno, co mine daleko. Její gravitace závisí na hmotnosti a vzdálenosti, jako u každého tělesa. Kdyby Slunce nahradila černá díra stejné hmotnosti, Země by dál obíhala. Ale bez světla a tepla bychom zmrzli."
         },
         {
           "type": "paragraph",
-          "text": "V srdci téměř všech galaxií jsou také **supermasivní černé díry** o hmotnosti milionů až miliard Slunce. V Mléčné dráze je to **Střelec A***, přibližně **4 miliony** hmotnosti Slunce."
+          "text": "Existují i **supermasivní černé díry**, od milionů po miliardy slunečních hmot, v srdci skoro všech galaxií. V Mléčné dráze je to **Sagittarius A***, asi **4 miliony** slunečních hmot."
         },
         {
           "type": "paragraph",
-          "text": "Často jsou spatřeni díky [[Akreční disk]]: prstenci plynu a prachu, který kolem nich velmi rychle rotuje. Třením se tento materiál zahřívá, dokud se v rentgenových nebo rádiových vlnách nestane extrémně jasným. Na tomto světelném pozadí pak vidíme stín černé díry."
+          "text": "Často je najdeme podle [[akreční disk]]: prstence plynu a prachu, který kolem nich velmi rychle obíhá. Tření tu hmotu zahřeje, až extrémně září v rentgenu nebo rádiových vlnách. Na tom světlém pozadí pak vidíme stín černé díry."
         }
       ]
     },
     {
       "id": "course_67_qu_est_ce_qu_un_trou_noir_p3",
-      "title": "2019: první obrázek",
+      "title": "2019: první snímek",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V **Adubnu 2019** projekt Event Horizon Telescope zveřejnil první snímek černé díry. Spojením osmi radioteleskopů pomocí [[Interferometrie]] vědci vytvoří virtuální dalekohled o velikosti Země."
+          "text": "V **dubnu 2019** projekt Event Horizon Telescope zveřejní první snímek černé díry. Sloučením osmi radioteleskopů pomocí [[interferometrie]] vědci vytvoří virtuální dalekohled o velikosti Země."
         },
         {
           "type": "paragraph",
-          "text": "Cílem je **M87***, supermasivní černá díra v galaxii Messier 87, **55 milionů** světelných let daleko. Kolem tmavé oblasti vidíme jasný prsten: siluetu horizontu událostí. V **2022** následuje obrázek našeho souseda Střelce A*."
+          "text": "Cílem je **M87***, supermasivní černá díra galaxie Messier 87, vzdálená **55 milionů** světelných let. Vidíme světlý prstenec kolem tmavé zóny: siluetu horizontu událostí. Roku **2022** přijde i snímek našeho souseda Sagittarius A*."
         },
         {
           "type": "funFact",
-          "text": "Od **2015** observatoře LIGO a Virgo také detekovaly **gravitace**: malé vibrace časoprostoru vznikající při splynutí dvou černých děr."
+          "text": "Od **2015** observatoře LIGO a Virgo zachytí i **gravitační vlny**: drobné chvění časoprostoru, když se dvě černé díry sloučí."
         }
       ]
     },
     {
       "id": "course_67_qu_est_ce_qu_un_trou_noir_p4",
-      "title": "Hawking a pomalé odpařování",
+      "title": "Hawking a pomalé vypařování",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "V **1974** britský fyzik **Stephen Hawking** ukázal, že černá díra nebude úplně černá. Kvůli kvantovým efektům v blízkosti horizontu by vyzařovalo velmi slabé záření: [[Hawkingovo záření]]."
+          "text": "Roku **1974** britský fyzik **Stephen Hawking** ukáže, že černá díra by nebyla úplně černá. Kvůli kvantovým jevům u horizontu by vysílala velmi slabé záření: [[Hawkingovo záření]]."
         },
         {
           "type": "paragraph",
-          "text": "Výsledek: izolovaná černá díra by pomalu ztrácela hmotu a nakonec by se vypařila. U hvězdné černé díry by to trvalo fantasticky déle než současný věk vesmíru. Tato myšlenka také vyvolává informační paradox: co se stane s informací o tom, co spadlo dovnitř, pokud černá díra zmizí?"
+          "text": "Výsledek: izolovaná černá díra by pomalu ztrácela hmotnost a nakonec se vypařila. U hvězdné černé díry by to trvalo fantasticky déle, než je dnešní věk vesmíru. Ta myšlenka taky zvedá paradox informace: kam se poděje informace o tom, co do ní spadlo, když černá díra zmizí?"
         },
         {
           "type": "paragraph",
-          "text": "V blízkosti černé díry čas pro vzdáleného pozorovatele také plyne pomaleji, což je relativistický efekt **dilatace času**. Tyto objekty zůstávají mezi nejlepšími laboratořemi pro testování limitů fyziky."
+          "text": "U černé díry čas pro vzdáleného pozorovatele taky plyne pomaleji, relativistický jev **dilatace času**. Ty objekty zůstávají mezi nejlepšími laboratořemi, kde testovat meze fyziky."
         },
         {
           "type": "takeaway",
-          "text": "Černá díra často vzniká kolapsem hmotné hvězdy. Je ohraničen horizontem událostí, hranicí vyfotografovanou poprvé v **2019** kolem M87*."
+          "text": "Černá díra často vznikne zhroucením hmotné hvězdy. Ohraničuje ji horizont událostí, hranice vyfotografovaná poprvé roku **2019** kolem M87*."
         }
       ]
     }

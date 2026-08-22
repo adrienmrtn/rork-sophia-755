@@ -4,11 +4,11 @@
   "subtitle": "1953",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "V roce 1953 popsali Watson a Crick dvoušroubovici DNA. Za touto slávou stojí zásadní dílo Rosalind Franklinové.",
+  "description": "V roce 1953 Watson a Crick popíšou dvojitou šroubovici DNA. Za tou slávou stojí klíčová práce Rosalind Franklin.",
   "hero": {
     "image": "la_structure_de_l_adn",
     "ratio": "16:9",
-    "hook": "Tvar molekuly... a tajemství dědičnosti."
+    "hook": "Tvar jedné molekuly... a tajemství dědičnosti."
   },
   "sections": [
     {
@@ -18,51 +18,51 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Věděli jsme, že vlastnosti přecházejí z rodičů na děti. Ale který chemický objekt nese tuto informaci? V polovině 20. století byla odpověď jasnější: **DNA**."
+          "text": "Vědělo se, že znaky jdou z rodičů na děti. Jaký chemický objekt ale tu informaci nese? V polovině **20. století** se odpověď zpřesní: **DNA**."
         },
         {
           "type": "paragraph",
-          "text": "V **1953** publikovali **James Watson** a **Francis Crick** slavný model: **dvojitá vrtule**. Tato forma vysvětluje, jak se DNA může kopírovat."
+          "text": "V **1953** **James Watson** a **Francis Crick** zveřejní slavný model: **dvojitou šroubovici**. Ten tvar vysvětlí, jak se DNA umí kopírovat."
         }
       ]
     },
     {
       "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p1",
-      "title": "Hledání podpory pro dědičnost",
+      "title": "Najít nosič dědičnosti",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "DNA (deoxyribonukleová kyselina) je dlouhá molekula nacházející se v našich buňkách. Obsahuje chemická „písmena“, která tvoří kód. Ale ve 40. a 50. letech jsme ještě neznali jeho 3D podobu."
+          "text": "DNA (deoxyribonukleová kyselina) je dlouhá molekula v našich buňkách. Nese chemická „písmena”, která tvoří kód. V letech 1940-1950 ale ještě neznají její 3D tvar."
         },
         {
           "type": "paragraph",
-          "text": "Bez formuláře je obtížné pochopit, jak lze tento kód duplikovat při každém buněčném dělení."
+          "text": "Bez tvaru špatně chápeš, jak se ten kód umí zdvojit při každém dělení buňky."
         }
       ]
     },
     {
       "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p2",
-      "title": "Fotka, která všechno změní",
+      "title": "Fotka, která změní všechno",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "rosalind_franklin_photo_51_x_ray",
           "ratio": "4:3",
-          "caption": "Fotografie 51 Rosalind Franklin odhaluje spirálovitou strukturu."
+          "caption": "Snímek 51 Rosalind Franklin ukáže šroubovicovou strukturu"
         },
         {
           "type": "paragraph",
-          "text": "**Rosalind Franklinová**, fyzik a chemik, získává rentgenové snímky DNA. Její slavný **Obrázek 51** ukazuje jasný důkaz šroubovice."
+          "text": "**Rosalind Franklin**, fyzička a chemička, získá snímky DNA paprsky X. Její slavný **Snímek 51** ukáže jasné stopy šroubovice."
         },
         {
           "type": "paragraph",
-          "text": "Watson a Crick vidí tato data (za podmínek, které jsou nyní vůči Franklinovi považovány za nespravedlivé) a sestavují svůj model. Franklin zemřel v roce 1958; Nobelovu cenu za rok 1962 dostane Watson, Crick a Wilkins, ne ona."
+          "text": "Watson a Crick ta data uvidí (za podmínek, které se dnes u Franklin berou jako nespravedlivé) a složí svůj model. Franklin zemře v roce 1958; Nobelovu cenu z roku 1962 dostanou Watson, Crick a Wilkins, ne ona."
         },
         {
           "type": "funFact",
-          "text": "Franklin také udělal velkou práci na virech. Jeho role v DNA byla v populárních zprávách dlouho podceňována."
+          "text": "Franklin udělala i zásadní práci o virech. Její roli u DNA populární vyprávění dlouho podcenila."
         }
       ]
     },
@@ -75,26 +75,26 @@
           "type": "image",
           "asset": "dna_double_helix_model_watson_crick",
           "ratio": "4:3",
-          "caption": "Dva komplementární prvky: kopie se stává představitelnou."
+          "caption": "Dva komplementární řetězce: kopie se stane představitelnou"
         },
         {
           "type": "paragraph",
-          "text": "Dva prameny se omotávají kolem sebe. Písmena stojí proti sobě ve dvojicích. Když se prameny oddělí, každý může sloužit jako model pro rekonstrukci druhého. Dědičnost se stává pochopitelným chemickým mechanismem."
+          "text": "Dva řetězce se vinou. Písmena si stojí naproti v párech. Když se řetězce oddělí, každý může sloužit jako vzor k rekonstrukci druhého. Dědičnost se stane srozumitelným chemickým mechanismem."
         }
       ]
     },
     {
       "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p4",
-      "title": "Zde začíná moderní biologie",
+      "title": "Tady startuje moderní biologie",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Z tohoto objevu se rodí moderní genetika, sekvenování, testy DNA, genové terapie. A také etické debaty: co s touto mocí dělat?"
+          "text": "Z toho objevu se zrodí moderní genetika, sekvenování, testy DNA, genové terapie. I etické debaty: co s touhle mocí?"
         },
         {
           "type": "takeaway",
-          "text": "V **1953** model dvojité šroubovice vysvětluje, jak DNA ukládá a kopíruje informace od živých tvorů. Franklin poskytl rozhodující důkazy příliš dlouho vymazané z vyprávění."
+          "text": "V **1953** model dvojité šroubovice vysvětlí, jak DNA ukládá a kopíruje informaci živého. Franklin dodala rozhodující důkazy, které vyprávění příliš dlouho vymazávalo."
         }
       ]
     }
