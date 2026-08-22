@@ -1,14 +1,14 @@
 {
   "id": "course_159_le_theatre_de_shakespeare",
-  "title": "Teatr Szekspira",
+  "title": "Teatr Williama Szekspira",
   "subtitle": "1564-1616",
   "subject": "art",
   "subcategory": "Cinema, photography & architecture + iconic works",
-  "description": "W Londynie Szekspir pisał dla „The Globe”. Hamlet, Makbet, Romeo: popularny teatr, który stał się szczytem języka angielskiego.",
+  "description": "W Londynie Szekspir pisze dla Globe. Hamlet, Macbeth, Romeo: popularny teatr, który został szczytem angielskiego języka.",
   "hero": {
     "image": "le_theatre_de_shakespeare",
     "ratio": "16:9",
-    "hook": "Dramaturg aktorski, teatr bez scenografii... i wiecznych kresek."
+    "hook": "Dramaturg-aktor, teatr bez dekoracji i kwestie, które nie umierają."
   },
   "sections": [
     {
@@ -18,103 +18,103 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Williama Szekspira** (1564-1616) pisał dla sceny londyńskiej, a nie dla szkoły. W jego sztukach mieszają się królowie, klauni, kochankowie i zabójcy."
+          "text": "**William Shakespeare** (1564-1616) pisze dla londyńskiej sceny, nie dla szkoły. Jego sztuki mieszają królów, klaunów, kochanków i zabójców."
         },
         {
           "type": "paragraph",
-          "text": "Cztery wieki później nadal gra się w nią wszędzie."
+          "text": "Cztery wieki później gra się go wciąż wszędzie."
         }
       ]
     },
     {
       "id": "course_159_le_theatre_de_shakespeare_p1",
-      "title": "Globe i ziemianie",
+      "title": "Teatr Globe i ziemianki",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Z zespołem [[Ludzie Lorda Chamberlaina]] gra w [[Teatr Glob]], czyli kręgu plenerowym. [[Ziemianki]] płacą niewiele i stoją blisko sceny. Teatr jest popularny, głośny, tętniący życiem."
+          "text": "Gra w zespole [[Ludzie Lorda Chamberlaina]]. Scena to [[Teatr Globe (1599)]], krąg pod gołym niebem. [[ziemianki]] płacą mało i stoją blisko sceny. Teatr jest ludowy, hałaśliwy, żywy."
         },
         {
           "type": "paragraph",
-          "text": "Elżbietański Londyn uwielbia spektakle. Teatry rywalizują ze sobą kazaniami i walkami niedźwiedzi. Szekspir pisze na tym hałaśliwym rynku, a nie w wieży z kości słoniowej."
+          "text": "Elżbietański Londyn lubi widowisko. Teatry konkurują z kazaniami i walkami niedźwiedzi. Szekspir pisze na tym hałaśliwym rynku, nie w wieży z kości słoniowej."
         },
         {
           "type": "image",
           "asset": "globe_theatre_london_reconstruction",
           "ratio": "4:3",
-          "caption": "The Globe: scena wepchnęła się w tłum."
+          "caption": "Teatr Globe: scena wsunięta prosto w tłum"
         }
       ]
     },
     {
       "id": "course_159_le_theatre_de_shakespeare_p2",
-      "title": "Nowy język",
+      "title": "Nowy język sceny",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Często pisze szekspirowskim pustym wierszem: pentametr jambiczny bez rymu. Obelgi, wiersze, monologi: wymyśla słowa i ustanawia postacie (Hamlet, Lady Makbet), które stały się mitami."
+          "text": "Często pisze białym wierszem szekspirowskim: pentametrem jambicznym bez rymu. Obelgi, poematy, monologi: wymyśla słowa i ustala charaktery (Hamlet, Lady Macbeth), które stały się mitami."
         },
         {
           "type": "paragraph",
-          "text": "Poddaje recyklingowi kroniki, wiadomości włoskie, stare kawałki. Oryginalność tkwi w języku i postaciach, a nie w czystym wymyśleniu fabuły."
+          "text": "Przerabia kroniki, nowele włoskie, stare sztuki. Oryginalność leży w języku i charakterach, nie w czystym wymyśle intrygi."
         },
         {
           "type": "funFact",
-          "text": "Kilka jego utworów dotarło do nas dopiero dzięki wydanemu już po jego śmierci folio [[Pierwsze folio]] z 1623 roku."
+          "text": "Kilka jego sztuk ocalało tylko dlatego, że wyszło [[Pierwsze folio]] z 1623, już po śmierci autora."
         }
       ]
     },
     {
       "id": "course_159_le_theatre_de_shakespeare_p3",
-      "title": "Tragedie, komedie, opowiadania",
+      "title": "Tragedie, komedie, historie",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Przechodzi od śmiechu do krwi. *Romeo i Julia*, *Otello*, *Król Lear*: rodziny, władza, zazdrość. „Sztuki historyczne” przedstawiają historię Anglii dla publiczności, która lubi oglądać siebie w epickiej formie."
+          "text": "Przechodzi od śmiechu do krwi. *Romeo i Julia*, *Otello*, *Król Lear*: rodziny, władza, zazdrość. Sztuki historyczne odgrywają Anglię dla publiczności, która lubi widzieć się w epopei."
         },
         {
           "type": "paragraph",
-          "text": "Komedie i tragedie wzajemnie się uzupełniają. Szaleniec mówi prawdę; król wpada w szał. Ta porowatość tonów wyjaśnia, dlaczego nadal można go zamontować na tysiąc sposobów."
+          "text": "Komedie i tragedie sobie odpowiadają. Błazen mówi prawdę; król wpada w obłęd. Ta porowatość tonów tłumaczy, że wciąż można go wystawiać na tysiąc sposobów."
         },
         {
           "type": "image",
           "asset": "shakespeare_first_folio_1623",
           "ratio": "4:3",
-          "caption": "Pierwsze folio: ocalanie tekstów od zapomnienia."
+          "caption": "Pierwsze folio: ocalić teksty od zapomnienia"
         }
       ]
     },
     {
       "id": "course_159_le_theatre_de_shakespeare_p4",
-      "title": "Dziedzictwo",
+      "title": "Spuścizna",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tłumaczony, adaptowany, samplowany przez kino i rap, Szekspir pozostaje zestawem narzędzi do wyrażania ambicji i pragnień. Jego sekret: pisanie dla aktorów przed publicznością."
+          "text": "Tłumaczony, adaptowany, brany przez kino i rap, Szekspir zostaje skrzynką narzędzi do mówienia o ambicji i pragnieniu. Jego sekret: pisać dla aktorów, przed tłumem."
         },
         {
           "type": "paragraph",
-          "text": "Aby w pełni zrozumieć teatr Szekspira, należy pamiętać o jednym: każdy szczegół techniczny służy jakiejś emocji lub idei. Praca nigdy nie ma wyłącznie charakteru dekoracyjnego."
+          "text": "Żeby dobrze wziąć teatr Szekspira, trzymaj jedno w głowie: każdy detal techniki służy emocji albo idei. Dzieło nigdy nie jest tylko ozdobą salonu."
         },
         {
           "type": "paragraph",
-          "text": "Kontekst jest tak samo ważny jak styl. Daty, miejsca, sponsorzy, publiczność: to wszystko wyjaśnia, dlaczego formularz pojawia się w konkretnym momencie, a nie wcześniej."
+          "text": "Kontekst liczy się tak samo jak styl. Daty, miejsca, zleceniodawcy, publiczność: to wszystko tłumaczy, czemu dana forma zjawia się w konkretnej chwili, a nie wcześniej."
         },
         {
           "type": "paragraph",
-          "text": "Wreszcie dziedzictwo mierzy się w perspektywie długoterminowej. To, co dziś widzimy w muzeach, filmach czy muzyce popularnej, wciąż nosi ślady tych wynalazków."
+          "text": "Wreszcie dziedzictwo mierzy się w długim czasie. To, co dziś widzisz w muzeach, filmach albo muzyce popularnej, wciąż niesie ślad tych wynalazków."
         },
         {
           "type": "paragraph",
-          "text": "Przetłumaczona w XVIII wieku we Francji i poza nią, stała się światową klasyką. Każda epoka znajduje w nim swoje odbicie: romantyczna, polityczna, postkolonialna, feministyczna."
+          "text": "Tłumaczony od XVIII wieku we Francji i gdzie indziej, staje się klasykiem świata. Każda epoka znajduje w nim swoje lustro: romantyczne, polityczne, postkolonialne, feministyczne."
         },
         {
           "type": "takeaway",
-          "text": "W Globe Szekspir stworzył popularny teatr, którego bohaterowie i język podbili świat."
+          "text": "W Globe Szekspir wymyślił ludowy teatr, którego charaktery i język zdobyły świat."
         }
       ]
     }

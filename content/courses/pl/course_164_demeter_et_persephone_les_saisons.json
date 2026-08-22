@@ -1,14 +1,14 @@
 {
   "id": "course_164_demeter_et_persephone_les_saisons",
   "title": "Demeter i Persefona",
-  "subtitle": "Dlaczego istnieją pory roku?",
+  "subtitle": "Dlaczego istnieją pory roku",
   "subject": "mythologie",
   "subcategory": "Greece: the gods",
-  "description": "Hades porywa Persefonę. Jego matka Demeter, bogini żniw, opuszcza ziemię, aby umarła z głodu. Mit wyjaśniający pory roku.",
+  "description": "Hades porywa Persefonę. Jej matka Demeter, bogini żniw, pozwala ziemi umrzeć z głodu. Mit, który tłumaczy pory roku.",
   "hero": {
     "image": "demeter_et_persephone",
     "ratio": "16:9",
-    "hook": "Kiedy dziewczyna znika pod ziemią, jej matka wstrzymuje żniwa. Świat odkrywa zimę."
+    "hook": "Gdy córka znika pod ziemią, matka zatrzymuje żniwa. Świat po raz pierwszy poznaje zimę."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Demeter** to grecka bogini urodzaju i płodności. Jej córka **Persefona** ucieleśnia wiosnę. Ich historia wyjaśnia, dlaczego ziemia umiera zimą i odradza się latem. [[Cykl rolniczy w religii greckiej]]"
+          "text": "**Demeter** jest grecką boginią żniw i płodności. Jej córka **Persefona** uosabia wiosnę. Ich historia tłumaczy [[Cykl rolniczy w religii greckiej]]: czemu ziemia umiera zimą i odradza się latem."
         },
         {
           "type": "paragraph",
-          "text": "To także dramat matki i córki, pomiędzy światem żywych i umarłych. Z tej historii narodziły się [[Tajemnice eleuzyjskie]], tajne rytuały, które zapewniały wtajemniczonym nadzieję w obliczu śmierci."
+          "text": "To także dramat matki i córki, między światem żywych a światem umarłych. Z tej opowieści rodzą się [[Tajemnice eleuzyjskie]], tajne obrzędy, które obiecywały wtajemniczonym nadzieję wobec śmierci."
         }
       ]
     },
@@ -33,36 +33,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Najpierw nazywamy Persefonę **Korach**, „młodą dziewczyną”. Pewnego dnia na łące zrywa żonkila. Ziemia się otwiera. **Hades**, król podziemi, pojawia się na swoim rydwanie. Za tajną zgodą **Zeusa**, ojca młodej dziewczyny, zabiera ją do Zaświatów, aby uczynić ją swoją królową."
+          "text": "Persefonę nazywają najpierw **Kore**, „dziewczyną”. Pewnego dnia na łące zrywa narcyza. Ziemia się otwiera. **Hades**, król podziemnego świata, wypada na rydwanie. Za cichą zgodą **Zeusa**, ojca dziewczyny, unosi ją do Zaświatów, żeby uczynić ją królową."
         },
         {
           "type": "image",
           "asset": "hades_abduction_persephone_bernini_sculpture",
           "ratio": "4:3",
-          "caption": "Porwanie Persefony: wiosna znika pod ziemią."
+          "caption": "Porwanie Persefony: wiosna znika nagle pod ziemią"
         },
         {
           "type": "funFact",
-          "text": "Według mitu **Gaja**, Ziemia, stworzyła tego narcyza na rozkaz Zeusa. Jego zapach musiał uwięzić Persefonę."
+          "text": "Według mitu **Gaja**, Ziemia, stworzyła ten narcyz na rozkaz Zeusa. Jego zapach miał złapać Persefonę w pułapkę."
         },
         {
           "type": "paragraph",
-          "text": "Demeter niepocieszona opuszcza Olimp. Zapobiega kiełkowaniu ziemi. Pola pozostają jałowe. A **głód** zagraża ludziom, a co za tym idzie ofiarom składanym bogom. Zeus musi zareagować."
+          "text": "Demeter, nieutulona, opuszcza Olimp. Zabrania ziemi kiełkować. Pola zostają jałowe. **Głód** grozi ludziom, a więc i ofiarom składanym bogom. Zeus musi zareagować."
         }
       ]
     },
     {
       "id": "course_164_demeter_et_persephone_les_saisons_p2",
-      "title": "Nasiona granatu decydują o losie",
+      "title": "Pestki granatu decydują o losie",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Zeus wysyła **Hermes**, posłańca bogów, aby zażądał zwrotu Persefony. Hades udaje, że jest posłuszny. Zanim wyjdzie, daje jej trochę **nasiona granatu**. Kto je w krainie umarłych, należy do niego. Pułapka jest zastawiona."
+          "text": "Zeus posyła **Hermesa**, posłańca bogów, żądać powrotu Persefony. Hades udaje posłuszeństwo. Zanim odejdzie, częstuje ją kilkoma **pestkami granatu**. Kto je w królestwie umarłych, do niego należy. Pułapka jest zastawiona."
         },
         {
           "type": "paragraph",
-          "text": "Niezbędny jest kompromis. Persefona część roku spędzi z Hadesem, resztę z matką. Kiedy wraca na górę, Demeter sprawia, że ​​przyroda znów jest zielona: jest wiosna i lato. Kiedy wraca na dół, bogini żniw wycofuje swoje łaski: jest jesień i zima."
+          "text": "Trzeba kompromisu. Persefona spędzi część roku u Hadesa, resztę u matki. Gdy wraca na powierzchnię, Demeter zazielenia całą naturę: to wiosna i lato. Gdy schodzi z powrotem, bogini żniw cofa swoją łaskę: to jesień i zima."
         },
         {
           "type": "timeline",
@@ -70,7 +70,7 @@
             {
               "date": "1",
               "title": "Porwanie",
-              "detail": "Hades zabiera Persefonę pod ziemię."
+              "detail": "Hades unosi Persefonę pod ziemię."
             },
             {
               "date": "2",
@@ -80,65 +80,65 @@
             {
               "date": "3",
               "title": "Granat",
-              "detail": "Persefona zjada nasiona w Zaświatach."
+              "detail": "Persefona je pestki w Zaświatach."
             },
             {
               "date": "4",
-              "title": "Partycypujący",
-              "detail": "Dzieli rok pomiędzy matkę i męża."
+              "title": "Podział",
+              "detail": "Dzieli rok między matkę i męża na zmianę."
             },
             {
               "date": "5",
               "title": "Pory roku",
-              "detail": "Jego ruch tam i z powrotem rytmizuje cykl żniwny."
+              "detail": "Jej drogi w tę i z powrotem rytmują uprawy."
             }
           ]
         },
         {
           "type": "funFact",
-          "text": "Niektóre wersje mówią, że Persefona nie zjada tych nasion przez przypadek. Ciekawość lub rozwijające się przywiązanie: historia staje się także wejściem w dorosłość."
+          "text": "Niektóre wersje mówią, że Persefona nie je tych pestek przez przypadek. Ciekawość albo rodzące się przywiązanie: opowieść staje się też wejściem w dorosłość."
         }
       ]
     },
     {
       "id": "course_164_demeter_et_persephone_les_saisons_p3",
-      "title": "W Eleusis nadzieja po nocy",
+      "title": "W Eleusis nadzieja po nocy ciemnej",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Podczas swoich wędrówek Demeter przebrana za staruszkę zatrzymuje się w **Eleusis** niedaleko Aten. Powitana przez rodzinę królewską, w końcu odkrywa swoją boską naturę i nakazuje budowę świątyni. Rodzą się [[Tajemnice eleuzyjskie]]."
+          "text": "W czasie tułaczki Demeter zatrzymuje się w **Eleusis**, koło Aten, przebrana za starą kobietę. Przyjęta przez rodzinę królewską, wreszcie objawia boską naturę i każe zbudować świątynię. Rodzą się [[Tajemnice eleuzyjskie]]."
         },
         {
           "type": "paragraph",
-          "text": "Wtajemniczeni idą dziewięć dni, poszczą, piją **kykeon**, napój jęczmienny i miętowy. W [[Telesterion]], ogromnym pokoju inicjacyjnym, światło świeci po ciemności. Tam, w największej tajemnicy, odsłaniane są przedmioty sakralne."
+          "text": "Wtajemniczeni idą dziewięć dni, poszczą, piją **kykeon**, napój z jęczmienia i mięty. W [[Telesterion]], ogromnej sali inicjacji, po ciemności wybucha światło. Pokazuje się tam święte przedmioty, w największej tajemnicy."
         },
         {
           "type": "funFact",
-          "text": "Niektórzy współcześni badacze uważają, że kykeon zawierał sporysz, grzyb halucynogenny. To wyjaśniałoby wizje zgłaszane przez wtajemniczonych."
+          "text": "Część współczesnych badaczy sądzi, że kykeon zawierał sporysz, grzyb halucynogenny. To tłumaczyłoby wizje opisywane przez wtajemniczonych."
         },
         {
           "type": "paragraph",
-          "text": "Rytuał naśladuje podróż bogini. Przejście przez śmierć natury z Demeter, a następnie odrodzenie się z Persefoną: uczestnicy wierzyli, że w zaświatach czeka ich lepszy los."
+          "text": "Obrzęd naśladuje podróż bogini. Przejść śmierć natury z Demeter, potem odrodzić się z Persefoną: uczestnicy wierzyli, że zyskają lepszy los w zaświatach."
         }
       ]
     },
     {
       "id": "course_164_demeter_et_persephone_les_saisons_p4",
-      "title": "Ziarno, które umiera, aby się odrodzić",
+      "title": "Ziarno, które umiera, żeby odrosnąć",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dla Greków ziarno pszenicy zakopane w ziemi spotkał taki sam los jak Persefona. Znika pod ziemią, by powrócić jako łodyga. Mit łączy rolnictwo, śmierć i odrodzenie."
+          "text": "Dla Greków ziarno pszenicy schowane w glebie przeżywa ten sam los co Persefona. Znika pod ziemią, żeby wrócić jako źdźbło. Mit spina rolnictwo, śmierć i odrodzenie."
         },
         {
           "type": "paragraph",
-          "text": "Opowiada także o dawnym małżeństwie, często odbieranym jako bolesne rozstanie: młoda dziewczyna opuszcza matkę i przenosi się do innego domu. Ostateczne porozumienie między Hadesem i Demeter łączy przeciwieństwa: cień i światło, śmierć i życie."
+          "text": "Mówi też o dawnym małżeństwie, często przeżywanym jako bolesne odejście: dziewczyna opuszcza matkę, by wejść do innego domu. Między Hadesem i Demeter ostateczne porozumienie trzyma przeciwieństwa razem: cień i światło, śmierć i życie."
         },
         {
           "type": "takeaway",
-          "text": "Pobyt **Personia** w Zaświatach wyznacza pory roku: jej nieobecność powoduje żałobę **Démeter** (jesień-zima), jej powrót powoduje odrodzenie się roślin (wiosna-lato)."
+          "text": "Pobyt **Persefony** w Zaświatach rytmuje pory roku: jej nieobecność budzi żałobę **Demeter** (jesień-zima), jej powrót odradza rośliny (wiosna-lato)."
         }
       ]
     }

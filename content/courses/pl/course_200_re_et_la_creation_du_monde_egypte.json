@@ -1,14 +1,14 @@
 {
   "id": "course_200_re_et_la_creation_du_monde_egypte",
   "title": "Ra i stworzenie świata (Egipt)",
-  "subtitle": "Kreatywne słońce",
+  "subtitle": "Słońce stwórca",
   "subject": "mythologie",
   "subcategory": "Other mythologies",
-  "description": "Re, słoneczny bóg Egiptu: stwarza świat, codziennie przemierza niebo, nocą walczy z chaosem i karze ludzi swoim Okiem.",
+  "description": "Ra, egipski bóg słońca: stwarza świat, codziennie przepływa niebo, nocą walczy z chaosem i karze ludzi swoim Okiem.",
   "hero": {
     "image": "re_et_la_creation_du_monde_egypte",
     "ratio": "16:9",
-    "hook": "Każdy świt jest zwycięstwem. Bez łodzi Ra świat ponownie pogrążyłby się w nicości."
+    "hook": "Każdy świt jest zwycięstwem. Bez łodzi Ra świat spadłby z powrotem w nicość."
   },
   "sections": [
     {
@@ -18,101 +18,101 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**D** (lub Râ) to nie tylko słońce. Dla Egipcjan z **Heliopolis**, miasta kultu słońca niedaleko dzisiejszego Kairu, jest to sama zasada istnienia: tworzenie świata, a następnie co noc obrona go przed nicością."
+          "text": "**Ra** (albo Re) nie jest tylko słońcem. Dla Egipcjan z **Heliopolis**, miasta kultu solarnego koło dzisiejszego Kairu, jest samą zasadą istnienia: stworzyć świat, potem bronić go każdej nocy przed nicością."
         },
         {
           "type": "paragraph",
-          "text": "Przez trzy tysiąclecia jego postać przekroczyła religię państwową. Zrozumienie Re oznacza zrozumienie, jak Egipt myślał o narodzinach wszechświata, kruchości porządku i dlaczego każdy świt jest zwycięstwem, które należy odbić."
+          "text": "Przez trzy tysiąclecia jego postać przechodzi przez religię państwa. Zrozumieć Ra to zrozumieć, jak Egipt myślał narodziny wszechświata, kruchość ładu i czemu każdy świt jest zwycięstwem do odzyskania."
         }
       ]
     },
     {
       "id": "course_200_re_et_la_creation_du_monde_egypte_p1",
-      "title": "Powstanie świata: pierwotny kurhan",
+      "title": "Wyjście świata: prawezgórze",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Przed czasem jest **Rzeczownik**: ciemna, nieskończona woda, pełna zarazków. [[Kosmogonia heliopolityczna]] opisuje wygląd **Atum**, „ukończonego”. Generuje się sam i pojawia się na **Pierre'a Benbena**, pierwszym stałym punkcie."
+          "text": "Przed czasem jest **Nun**: mroczna, nieskończona woda, pełna zarodków. [[Kosmogonia heliopolitańska]] opisuje pojawienie się **Atuma**, „tego, który jest dokończony”. Rodzi sam siebie i wyłania się na **kamieniu Benben**, pierwszym stałym punkcie."
         },
         {
           "type": "image",
           "asset": "atum_primordial_egyptian_creation_benben",
           "ratio": "4:3",
-          "caption": "Atum wyłania się z rzeczownika na kamieniu Benben."
+          "caption": "Atum wyłania się z Nunu na kamieniu Benben"
         },
         {
           "type": "funFact",
-          "text": "W Heliopolis kapłani utrzymywali świętego ptaka, **Bénou** (przodek feniksa), który miał być duszą Ra i miał wylądować na Benbenie, aby ogłosić nowy cykl."
+          "text": "W Heliopolis kapłani utrzymywali świętego ptaka, **Benu** (przodka feniksa), mającego być duszą Ra i siadać na Benben, by ogłosić nowy cykl."
         },
         {
           "type": "paragraph",
-          "text": "Samotnie Atoum tworzy **Kapusta** (powietrze) i **Tefnut** (wilgotność), następnie **Geb** (Ziemia) i **Nakrętka** (Niebo), oddzielone, aby opuścić przestrzeń życiową. **Ozyrys**, **Izyda**, **Set** i **Neftyda** rodzą się: z Atumem **wielki Ennead** (dziewięć). [[Synkretyzm egipskiego Boga]] połączył później Atuma i Ra w jedną twórczą postać."
+          "text": "Sam Atum stwarza **Szu** (powietrze) i **Tefnut** (wilgoć), potem **Geba** (Ziemię) i **Nut** (Niebo), rozdzielone, by zostawić przestrzeń życia. Rodzą się **Ozyrys**, **Izyda**, **Set** i **Neftyda**: z Atumem **wielka Enneada** (dziewięcioro). [[Synkretyzm egipskiego Boga]] scali później Atuma i Ra w jedną postać stwórczą."
         }
       ]
     },
     {
       "id": "course_200_re_et_la_creation_du_monde_egypte_p2",
-      "title": "Maat przeciwko Isfet: niebezpieczna podróż łodzią",
+      "title": "Maat przeciw Isfet: niebezpieczna podróż łodzi",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "W ciągu dnia Re pływa na łodzi **Mandżet**. O zmierzchu mija **Mesektet** i przekracza dwanaście godzin [[Duat]], świata umarłych. To nie jest odpoczynek: to wojna przeciwko **Isfet**, nieporządkowi."
+          "text": "Dniem Ra płynie łodzią **Mandżet**. O zmierzchu przechodzi na **Mesektet** i przebywa dwanaście godzin [[Duat]], świata zmarłych. To nie odpoczynek: to wojna przeciw **Isfet**, nieładowi."
         },
         {
           "type": "image",
           "asset": "ra_solar_barque_egyptian_hieroglyphics",
           "ratio": "4:3",
-          "caption": "Słoneczna łódź Re, codzienny silnik czasu."
+          "caption": "Słoneczna łódź Ra, codzienny motor czasu"
         },
         {
           "type": "funFact",
-          "text": "Począwszy od IV dynastii, prawie wszyscy faraonowie mieli w imieniu „Re”: nazywali siebie „synami Re”, gwarantami cyklu słonecznego."
+          "text": "Od IV dynastii niemal wszyscy faraonowie noszą „Ra” w imieniu: mówią o sobie „syn Ra”, gwaranci cyklu solarnego."
         },
         {
           "type": "paragraph",
-          "text": "Wąż **Apopis** pragnie przewrócić łódź lub wypić wody niebiańskiego Nilu. **Set** czasami broni łuku. Kiedy Ra odradza się o świcie w przebraniu **Chepri**, skarabeusza, to **Maât** (równowaga) zwycięża po raz kolejny. Zaćmienie? Apopis prawie wygrał."
+          "text": "Wąż **Apop** chce wywrócić łódź albo wypić wody niebiańskiego Nilu. Sam **Set** broni czasem dziobu. Gdy Ra odradza się o świcie pod rysami **Chepri**, skarabeusza, wygrywa znów **Maat** (równowaga). Zaćmienie? Apop prawie wygrał."
         }
       ]
     },
     {
       "id": "course_200_re_et_la_creation_du_monde_egypte_p3",
-      "title": "Bunt ludzi i niszczycielskie oko",
+      "title": "Bunt ludzi i niszczące oko",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nawet Ra się starzeje. W opowieści „Zagłada ludzi” jego kości stają się srebrne, a ludzkość spiskuje przeciwko niemu. Obrażony uwalnia swoje ogniste Oko: boginię [[Sechmet]], krwiożerczą lwicę."
+          "text": "Nawet Ra się starzeje. W opowieści „Zniszczenie ludzi” jego kości stają się srebrem, a ludzkość knuje przeciw niemu. Obrażony spuszcza swoje gorejące Oko: boginię [[Sechmet]], krwawą lwicę."
         },
         {
           "type": "image",
           "asset": "sekhmet_hathor_lioness_egyptian_goddess",
           "ratio": "4:3",
-          "caption": "Sekhmet, Oko Re, zanim ponownie stał się Hathorem."
+          "caption": "Sechmet, Oko Ra, zanim znów staje się Hathor"
         },
         {
           "type": "paragraph",
-          "text": "Masakra grozi unicestwieniem stworzenia. Rê warzy tysiące słoików piwa zabarwionego czerwoną ochrą, rozlewanego na polach. Sekhmet wierząc, że pije krew, upija się i uspokaja: staje się słodkim **Hathor**. Mit wyjaśnia zło i usprawiedliwia święto pijaństwa, podczas którego ludzie pili, aby uczcić zbawienie ludzi."
+          "text": "Rzeź grozi zgaszeniem stworzenia. Ra każe warzyć tysiące dzbanów piwa barwionego czerwoną ochrą i wylać je na pola. Sechmet, myśląc że pije krew, upija się i uspokaja: staje się łagodną **Hathor**. Mit tłumaczy zło i uzasadnia święto upojenia, na którym pito, by świętować ocalenie ludzi."
         }
       ]
     },
     {
       "id": "course_200_re_et_la_creation_du_monde_egypte_p4",
-      "title": "Potomność i fuzja: awatar Amon-Re",
+      "title": "Dziedzictwo i fuzja: awatar Amon-Ra",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "W Nowym Królestwie tebański bóg **Amon** połączył się z Re: narodził się **Amon-Rê**, „Król Bogów”, niewidzialny stwórca i widzialne słońce. Dla niego powstają największe sanktuaria, takie jak [[Świątynia Karnak]]."
+          "text": "W Nowym Państwie tebański bóg **Amon** scala się z Ra: rodzi się **Amon-Ra**, „Król Bogów”, niewidzialny stwórca i widzialne słońce. Dla niego wznoszą się najszersze sanktuaria, jak [[Świątynia Karnak]]."
         },
         {
           "type": "paragraph",
-          "text": "Piramidy i obeliski kamienią promienie słoneczne, aby wznieść faraona ku jego niebiańskiemu ojcu. Nawet reforma **Echnatona**, która narzuciła kult **Atona** (dysku), zradykalizowała i tak już słoneczną ideę. Ra pozostaje nie do pokonania symbolem egipskiej stabilności."
+          "text": "Piramidy i obeliski petryfikują promienie słońca, by unieść faraona ku niebiańskiemu ojcu. Nawet reforma **Echnatona**, która narzuciła kult **Atona** (tarczy), wyostrzała ideę już solarną. Ra zostaje nieprzekraczalnym symbolem egipskiej stałości."
         },
         {
           "type": "takeaway",
-          "text": "**D** stwarza świat z Heliopolis, broni go każdej nocy w swojej łodzi przed **Apopis** i karze, a następnie ratuje ludzkość poprzez Oko **Sechmet**. Stając się **Amon-Rê**, panuje na szczycie Egiptu faraonów."
+          "text": "**Ra** stwarza świat z Heliopolis, broni go każdej nocy w łodzi przeciw **Apopowi** i karze, a potem ratuje ludzkość Okiem **Sechmet**. Jako **Amon-Ra** panuje na szczycie Egiptu faraonów."
         }
       ]
     }

@@ -1,14 +1,14 @@
 {
   "id": "course_146_hitchcock_et_le_suspense",
-  "title": "Hitchcock i napięcie",
+  "title": "Hitchcock i suspens",
   "subtitle": "1899-1980",
   "subject": "art",
   "subcategory": "Cinema, photography & architecture",
-  "description": "**Alfreda Hitchcocka** wymyśla nowoczesne napięcie: przekazuje widzowi informacje, których nie mają bohaterowie. Dzięki *Psychologia*, *Zawrót głowy* czy *Tylne okno* manipuluje naszym spojrzeniem.",
+  "description": "**Alfred Hitchcock** wymyśla nowoczesny suspens: dajesz publiczności informację, której nie mają bohaterowie. *Psychoza*, *Zawrót głowy* i *Okno na podwórze* pokazują, jak steruje naszym spojrzeniem.",
   "hero": {
     "image": "hitchcock_et_le_suspense",
     "ratio": "16:9",
-    "hook": "Prawdziwe napięcie nie zaskakuje: pozwala zobaczyć bombę pod stołem."
+    "hook": "Prawdziwy suspens nie zaskakuje: zostawia ci bombę pod stołem."
   },
   "sections": [
     {
@@ -18,57 +18,57 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Alfreda Hitchcocka** (1899-1980) nazywany jest „mistrzem napięcia”. W ponad pięćdziesięciu filmach przekształcił thriller w sztukę manipulacji. *Psychologia*, *Zawrót głowy*, *Okno na tył*: za każdym razem kamera nie tylko opowiada historię. Ona igra z naszymi nerwami."
+          "text": "**Alfred Hitchcock** (1899-1980) bywa nazywany „mistrzem suspensu”. W ponad pięćdziesięciu filmach zamienia thriller w sztukę manipulacji. *Psychoza*, *Zawrót głowy*, *Okno na podwórze*: kamera nie tylko opowiada historię. Gra na naszych nerwach."
         },
         {
           "type": "paragraph",
-          "text": "Jego ulubionym tematem nie jest kryminał. To spojrzenie: poczucie winy, obsesja, podglądactwo. Hitchcock filmuje widza tak samo jak bohaterów."
+          "text": "Jego ulubiony temat to nie zbrodnia. To spojrzenie: wina, obsesja, podglądactwo. Hitchcock filmuje widza tak samo jak postacie."
         }
       ]
     },
     {
       "id": "course_146_hitchcock_et_le_suspense_p1",
-      "title": "Zaskoczenie kontra napięcie",
+      "title": "Zaskoczenie kontra suspens",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "W **1966** Hitchcock wyjaśnia swoją metodę [[François Truffauta]], francuskiemu krytykowi, a następnie filmowcowi. **niespodzianka**, jak mówi, to bomba, która wybucha bez ostrzeżenia: krótki szok. **niepewność** pokazuje widzom bombę, podczas gdy bohaterowie ją ignorują. Napięcie trwa. Stajemy się współwinni i bezsilni."
+          "text": "W **1966** Hitchcock wykłada metodę w rozmowie [[François Truffauta]], wtedy krytyka, potem reżysera. **Zaskoczenie**, mówi, to bomba, która wybucha bez zapowiedzi: krótki wstrząs. **Suspens** to pokazać bombę publiczności, gdy postacie o niej nie wiedzą. Napięcie trwa. Stajesz się wspólnikiem i jesteś bezsilny."
         },
         {
           "type": "image",
           "asset": "alfred_hitchcock_portrait_director",
           "ratio": "4:3",
-          "caption": "Hitchcock: twarz, sylwetka, globalna marka dreszczyku emocji."
+          "caption": "Hitchcock: twarz, sylwetka i światowa marka dreszczowca"
         },
         {
           "type": "funFact",
-          "text": "Aby przyspieszyć fabułę, często używa [[MacGuffina]]: przedmiotu lub sekretu, który motywuje bohaterów, ale którego dokładny charakter nie ma większego znaczenia. Najważniejsze jest polowanie."
+          "text": "Żeby pchać intrygę, często używa [[MacGuffina]]: przedmiotu albo sekretu, który motywuje bohaterów, ale którego treść mało znaczy. Liczy się pogoń."
         },
         {
           "type": "paragraph",
-          "text": "Ta asymetria informacji jest jej gramatyką. Gdy tylko dowiemy się więcej niż bohater, zaczynamy się o niego bać."
+          "text": "Ta nierówność informacji to jego gramatyka. Gdy wiesz więcej niż bohater, boisz się o niego."
         }
       ]
     },
     {
       "id": "course_146_hitchcock_et_le_suspense_p2",
-      "title": "Wynalazki techniczne do filmowania niepokoju",
+      "title": "Wynalazki techniczne, które filmują lęk",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "W **1948**, za pomocą *Lina*, Hitchcock symuluje unikalne [[ujęcie sekwencyjne]]: film wydaje się być kręcony za jednym razem. Rolki trwają tylko dziesięć minut, więc chowa cięcia za plecami lub ciemnym meblem. Efekt jest przytłaczający: pozostajemy zamknięci z mordercami."
+          "text": "W **1948**, w filmie *Sznur*, Hitchcock udaje jedno [[ujęcie sekwencyjne]]: film wygląda, jakby kręcono go bez cięć. Taśmy trwają tylko dziesięć minut, więc chowa sklejenia za plecami albo ciemnym meblem. Efekt dusi: zostajesz zamknięty z zabójcami."
         },
         {
           "type": "image",
           "asset": "hitchcock_vertigo_james_stewart_kim_novak_film",
           "ratio": "4:3",
-          "caption": "Zawrót głowy: zawrót głowy sfilmowany jako zniekształcenie przestrzeni."
+          "caption": "Zawrót głowy: lęk sfilmowany jako zniekształcenie przestrzeni"
         },
         {
           "type": "paragraph",
-          "text": "W **1958** dla *Zawrót głowy* wynalazł [[Dolly Zoom]]: kamera cofa się wraz ze wzrostem zoomu (lub odwrotnie). Przestrzeń jest zniekształcona. Nie widzimy już zawrotów głowy. Czujemy to."
+          "text": "W **1958**, przy *Zawrót głowy*, wymyśla [[Dolly Zoom]]: kamera jedzie wstecz, a zoom idzie do przodu (albo odwrotnie). Przestrzeń się wygina. Zawrotu już nie oglądasz. Czujesz go."
         }
       ]
     },
@@ -79,26 +79,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "W *Okno na tydzie* (**1954**) fotograf ze złamaną nogą szpieguje swoich sąsiadów. Jest sobowtórem widza w ciemności. Hitchcock posługuje się aparatem [[Subiektywny aparat]]: widzimy dokładnie to, co widzi bohater, nic więcej."
+          "text": "W *Oknie na podwórze* (**1954**) fotograf ze złamaną nogą śledzi sąsiadów. Jest sobowtórem widza w ciemności. Tu działa [[Kamera subiektywna]]: widzimy dokładnie to, co widzi bohater, nic więcej."
         },
         {
           "type": "paragraph",
-          "text": "Identyfikacja ta ma charakter zarówno moralny, jak i wizualny. Szukamy wskazówek, ale mamy też poczucie winy, że patrzymy na to, co nas nie dotyczy. Hitchcock miesza thriller z [[psychoanaliza]]: pogrzebane lęki, zakazane pragnienia, podwójna tożsamość."
+          "text": "To utożsamienie jest moralne tak samo jak wizualne. Szukasz tropów, ale dzielisz też winę za patrzenie tam, gdzie ci nie wolno. Hitchcock splata thriller i [[psychoanaliza]]: ukryte lęki, zakazane pragnienia, podwójne tożsamości."
         }
       ]
     },
     {
       "id": "course_146_hitchcock_et_le_suspense_p4",
-      "title": "Marka, muzyka, dziedzictwo",
+      "title": "Marka, muzyka i dziedzictwo",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hitchcock przekształcił swoje nazwisko w markę, aż do czasu, gdy jego serial telewizyjny *Alfred Hitchcock przedstawia*. Dla *Psychologia* zabrania wejścia po rozpoczęciu sesji: tajemnica staje się wydarzeniem. Jego współpraca z kompozytorką [[Bernarda Herrmanna]] łączy muzykę i [[montaż]], aby przyspieszyć puls publiczności."
+          "text": "Hitchcock robi z nazwiska markę, aż po serial *Alfred Hitchcock przedstawia*. Przy *Psychoza* zamyka drzwi po starcie seansu: sekret staje się wydarzeniem. Współpraca [[Bernarda Herrmanna]] wiąże muzykę i [[redagowanie]], żeby przyspieszyć puls widowni."
         },
         {
           "type": "takeaway",
-          "text": "Hitchcock skodyfikował współczesne napięcie: informowanie widza, kierowanie jego spojrzeniem i przekształcanie strachu w kontrolowaną przyjemność. Dziesiątki lat później thriller nadal zawdzięcza mu swoją gramatykę."
+          "text": "Hitchcock skodyfikował nowoczesny suspens: informować widza, prowadzić jego wzrok i zamieniać strach w kontrolowaną przyjemność. Dekady później thriller wciąż żyje jego gramatyką."
         }
       ]
     }

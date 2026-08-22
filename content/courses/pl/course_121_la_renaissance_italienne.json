@@ -1,14 +1,14 @@
 {
   "id": "course_121_la_renaissance_italienne",
-  "title": "Włoski renesans",
+  "title": "Renesans włoski",
   "subtitle": "XIV-XVI wiek",
   "subject": "art",
   "subcategory": "Painting & Movements",
-  "description": "W ciągu dwóch stuleci Włochy na nowo odkryły malarstwo, rzeźbę i architekturę oraz zmieniły sposób, w jaki postrzegamy świat.",
+  "description": "W dwa stulecia Włochy wymyślają na nowo malarstwo, rzeźbę i architekturę i zmieniają sposób, w jaki patrzymy na świat.",
   "hero": {
     "image": "la_renaissance_italienne",
     "ratio": "16:9",
-    "hook": "W ciągu dwóch stuleci Włochy na nowo odkryły sztukę i nasz sposób patrzenia na świat."
+    "hook": "W dwa stulecia Włochy wymyślają na nowo sztukę i nasz sposób patrzenia na świat."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Renesans włoski (XIV-XVI w.) to nie tylko zmiana stylu. To nowy sposób patrzenia na świat. W ciągu dwóch stuleci Włochy umieściły obserwację, rozum i jednostkę w centrum wszystkiego."
+          "text": "Renesans włoski (XIV-XVI wiek) to nie tylko zmiana stylu. To nowy sposób widzenia świata. W dwa stulecia Włochy stawiają obserwację, rozum i jednostkę w centrum wszystkiego."
         },
         {
           "type": "paragraph",
-          "text": "Ta rewolucja, zrodzona w bogatych miastach półwyspu, odkrywa na nowo malarstwo, rzeźbę i architekturę. Napędzają go dwie siły napędowe: ponowne odkrycie starożytności greckiej i rzymskiej oraz śmiałe wynalazki techniczne."
+          "text": "Zrodzona w bogatych miastach półwyspu, ta rewolucja wymyśla na nowo malarstwo, rzeźbę i architekturę. Niosą ją dwa motory: ponowne odkrycie antyku greckiego i rzymskiego oraz śmiałe wynalazki techniczne."
         }
       ]
     },
@@ -33,46 +33,46 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Wszystko zaczyna się we Florencji****, jest to XIV wersja europejskiego systemu bankowego. Władza przejęła tam rodzinę**Médicis**. Bankowcy ci używają [[Patronat]], finansowania artystów, jako narzędzia prestiżowego."
+          "text": "Wszystko zaczyna się we **Florencji**, która w XIV wieku dominuje w europejskiej gospodarce dzięki tkaninom i bankom. Władzę bierze rodzina **Medyceuszy**. Ci bankierzy używają [[Patronat]], finansowania artystów, jako narzędzia prestiżu."
         },
         {
           "type": "funFact",
-          "text": "Aby obejść zakaz pożyczania na procent, Medyceusze wymyślili sztuczki bankowe. Kościół przymyka oczy, dopóki finansuje kaplice."
+          "text": "Żeby obejść zakaz pożyczania na procent, Medyceusze wymyślają bankowe fortele. Kościół przymyka oczy, dopóki fundują kaplice."
         },
         {
           "type": "image",
           "asset": "lorenzo_de_medici_portrait_florence",
           "ratio": "4:3",
-          "caption": "Laurent de Medici, zwany „Wspaniałym”, wielkim opiekunem artystów."
+          "caption": "Wawrzyniec Medyceusz, zwany Wspaniałym, wielki protektor artystów"
         },
         {
           "type": "paragraph",
-          "text": "Jednocześnie **humanizm** zmienia miejsce człowieka. Myśliciele tacy jak [[Szczyt Mirandoli]] twierdzą, że ludzie są w stanie zrozumieć naturę za pomocą rozumu. W **1453** upadek Konstantynopola spycha uczonych do Włoch z zapomnianymi greckimi rękopisami."
+          "text": "Równolegle **humanizm** zmienia miejsce człowieka. Myśliciele tacy jak [[Pico della Mirandola]] twierdzą, że człowiek potrafi zrozumieć naturę rozumem. W **1453** upadek Konstantynopola pcha uczonych do Włoch z zapomnianymi greckimi rękopisami."
         }
       ]
     },
     {
       "id": "course_121_la_renaissance_italienne_p2",
-      "title": "Malowanie rzeczywistości: perspektywy i ciała",
+      "title": "Malować prawdę: perspektywa i ciało",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "W XV wieku architekt **Brunelleschiego** wynalazł wokół **1420** [[perspektywa liniowa]]. Dawno minęły średniowiecze, kiedy to, co ważniejsze, malowano w większym formacie: przestrzeń podlega teraz matematycznym regułom, jak okno otwarte na rzeczywistość."
+          "text": "W XV wieku architekt **Brunelleschi** około **1420** wynajduje [[perspektywa liniowa]]. Koniec średniowiecza, w którym malowano większym to, co ważniejsze: przestrzeń idzie teraz za regułami matematyki, jak otwarte okno na rzeczywistość."
         },
         {
           "type": "image",
           "asset": "brunelleschi_linear_perspective_florence",
           "ratio": "4:3",
-          "caption": "Perspektywa daje iluzję głębi na płaskiej powierzchni."
+          "caption": "Perspektywa daje złudzenie głębi na płaskiej powierzchni"
         },
         {
           "type": "paragraph",
-          "text": "**Leonarda da Vinci** idzie dalej: dokonuje sekcji ciała, aby zrozumieć mięśnie i nerwy, a także maluje emocje. Pochodząca z Flandrii farba olejna stopniowo zastępuje [[Tempera]] i pozwala [[Światłocień]]: te kontrasty cienia i światła dają ulgę."
+          "text": "**Leonardo da Vinci** idzie dalej: sekcjonuje ciała, żeby zrozumieć mięśnie i nerwy, i malować także emocje. Farba olejna, przyszła z Flandrii, stopniowo wypiera [[tempera]] i pozwala na [[światłocień]]: te kontrasty cienia i światła, które dają relief."
         },
         {
           "type": "funFact",
-          "text": "Ciało, które Leonardo badał najczęściej, to ciało stuletniego mężczyzny. Badając go, opisał jeden z pierwszych znanych przypadków zablokowania tętnicy ze względu na wiek."
+          "text": "Ciało, które Leonardo badał najdłużej, należało do stupięćletniego starca. Przy badaniu opisał jeden z pierwszych znanych przypadków tętnicy zatkanej wiekiem."
         }
       ]
     },
@@ -83,36 +83,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Na początku XVI wieku miejsce Florencji zajął Rzym, niesiony przez budujących papieży takich jak **Juliusz II**. To era „człowieka kompletnego”. **Leonarda da Vinci** to model: malarz, inżynier, anatom."
+          "text": "Na początku XVI wieku Rzym zajmuje miejsce Florencji, niesiony przez papieży-budowniczych jak **Juliusz II**. To czas \"człowieka uniwersalnego\". **Leonardo da Vinci** jest jego wzorem: malarz, inżynier, anatom."
         },
         {
           "type": "paragraph",
-          "text": "**Michał Anioł** ucieleśnia siłę. Jego **Dawid** staje się symbolem Florencji. Pomiędzy **1508** a **1512** namalował sufit **Kaplica Sykstyńska**: 500 metrów kwadratowych na Genesis."
+          "text": "**Michał Anioł** wciela siłę. Jego **Dawid** staje się symbolem Florencji. Między **1508** a **1512** maluje sklepienie **Kaplicy Sykstyńskiej**: 500 metrów kwadratowych Księgi Rodzaju."
         },
         {
           "type": "image",
           "asset": "michelangelo_david_sistine_chapel_ceiling",
           "ratio": "4:3",
-          "caption": "Michał Anioł, od Dawida po sufit Kaplicy Sykstyńskiej."
+          "caption": "Michał Anioł, od Dawida do sklepienia Kaplicy Sykstyńskiej"
         },
         {
           "type": "funFact",
-          "text": "W *Sąd Ostateczny* Michał Anioł namalował własną twarz na obdartej ze skóry skórze: w ten sposób wyraził, jak bardzo wyczerpała go ta praca."
+          "text": "W *Sądzie Ostatecznym* Michał Anioł namalował własną twarz na zdartą skórę: sposób, by powiedzieć, jak ta praca go wykończyła."
         },
         {
           "type": "paragraph",
-          "text": "**Rafał** ucieleśnia wdzięk. Jego fresk *Szkoła Ateńska* skupia wielkich myślicieli starożytności w harmonii, która będzie służyć za wzór przez wieki."
+          "text": "**Rafael** wciela wdzięk. Jego fresk *Szkoła Ateńska* zbiera wielkich myślicieli antyku w harmonii, która przez stulecia będzie wzorem."
         }
       ]
     },
     {
       "id": "course_121_la_renaissance_italienne_p4",
-      "title": "Dziedzictwo, które przemierza Europę",
+      "title": "Dziedzictwo, które przecina Europę",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Po śmierci Raphaëla w **1520** równowaga zostaje zachwiana. Artyści wydłużają bryły i narzucają kolory: to [[Manieryzm]], sztuka bardziej niespokojna. Król Francji **Franciszek I** zaprasza Leonarda i inauguruje **Francuski renesans** z zamkami nad Loarą."
+          "text": "Po śmierci Rafaela w **1520** równowaga się psuje. Artyści wydłużają ciała i forsują kolory: to [[manieryzm]], sztuka bardziej niespokojna. Król Francji **Franciszek I.** zaprasza Leonarda i odpala **renesans francuski**, z zamkami nad Loarą."
         },
         {
           "type": "timeline",
@@ -120,33 +120,33 @@
             {
               "date": "1420",
               "title": "Perspektywa liniowa",
-              "detail": "Brunelleschi umieszcza przestrzeń w równaniach we Florencji."
+              "detail": "Brunelleschi kładzie przestrzeń w równania, we Florencji."
             },
             {
               "date": "1453",
               "title": "Upadek Konstantynopola",
-              "detail": "Uczeni uciekają do Włoch ze swoimi greckimi rękopisami."
+              "detail": "Uczeni uciekają do Włoch z greckimi rękopisami."
             },
             {
               "date": "1504",
               "title": "Dawid Michała Anioła",
-              "detail": "Florencja wybiera symbol dumy obywatelskiej."
+              "detail": "Florencja wybiera sobie symbol obywatelskiej dumy."
             },
             {
               "date": "1508-1512",
               "title": "Kaplica Sykstyńska",
-              "detail": "Michał Anioł namalował sufit Genesis."
+              "detail": "Michał Anioł maluje sklepienie Księgi Rodzaju."
             },
             {
               "date": "1520",
               "title": "Śmierć Rafaela",
-              "detail": "Kończy się wysoki renesans, zaczyna się manieryzm."
+              "detail": "Wysoki renesans się kończy, zaczyna się manieryzm."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Narodzony we Florencji za sprawą Medyceuszy włoski renesans zrewolucjonizował sztukę poprzez perspektywę (około 1420 r.) i naukę o ciele, zanim osiągnął swój szczyt w Rzymie wraz z Leonardem, Michałem Aniołem i Rafaelem."
+          "text": "Zrodzony we Florencji dzięki Medyceuszom, renesans włoski rewolucjonizuje sztukę perspektywą (około 1420) i studium ciała, zanim osiąga szczyt w Rzymie z Leonardem, Michałem Aniołem i Rafaelem."
         }
       ]
     }
