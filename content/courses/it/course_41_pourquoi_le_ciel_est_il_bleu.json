@@ -1,14 +1,14 @@
 {
   "id": "course_41_pourquoi_le_ciel_est_il_bleu",
-  "title": "Perchè il cielo è azzurro?",
+  "title": "Perché il cielo è blu?",
   "subtitle": "Luce e atmosfera",
   "subject": "sciences",
   "subcategory": "La nostra quotidianità spiegata",
-  "description": "Guardare il cielo azzurro è così banale che ci dimentichiamo di chiederci perché. La risposta sta nella luce del Sole e nell'aria che attraversiamo per vederlo.",
+  "description": "Guardare il cielo blu è così banale che si dimentica di chiedersi perché. La risposta sta nella luce del Sole e nell'aria che si attraversa per vederla.",
   "hero": {
     "image": "pourquoi_le_ciel_est_il_bleu",
     "ratio": "16:9",
-    "hook": "Il cielo non è dipinto di blu: è un gioco di magia di luce e aria."
+    "hook": "Il cielo non è dipinto di blu: è un gioco di prestigio della luce e dell'aria."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Guardare il cielo azzurro è così comune che ci dimentichiamo di chiederci perché lo sia. L'**atmosfera**, lo strato di gas che circonda la Terra, tuttavia, non ha un colore proprio. Questo colore nasce da un incontro molto preciso tra la luce del Sole e le molecole di gas che fluttuano attorno a noi."
+          "text": "Alzare gli occhi verso il cielo blu è così banale che si dimentica di chiedersi perché lo è. L'**atmosfera**, lo strato di gas che circonda la Terra, non ha però nessun colore proprio. Questa tinta viene da un incontro molto preciso tra la luce del Sole e le molecole di gas che fluttuano intorno a noi."
         },
         {
           "type": "paragraph",
-          "text": "Comprendere questo blu significa comprendere come la luce viaggia e **così disperso**, cioè ritorna in tutte le direzioni invece di andare dritta. E bella sorpresa: è esattamente lo stesso fenomeno che colora il cielo di rosso e arancione al tramonto."
+          "text": "Capire questo blu significa capire come la luce viaggia e si **disperde**, cioè si rimanda in tutte le direzioni invece di filare dritta. E buona notizia: è esattamente lo stesso fenomeno che colora il cielo di rosso e arancione al tramonto."
         }
       ]
     },
@@ -33,55 +33,55 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La luce del sole ci appare bianca, ma in realtà contiene tutti i colori dell'arcobaleno: è [[Lo spettro visibile della luce]]. Ogni colore corrisponde ad una **lunghezza d'onda**, la dimensione della sua “onda” luminosa. Il blu e il viola hanno onde corte; il rosso ha onde lunghe."
+          "text": "La luce del Sole ci sembra bianca, ma in realtà contiene tutti i colori dell'arcobaleno: è [[Lo spettro visibile della luce]]. Ogni colore corrisponde a una **lunghezza d'onda**, la misura della sua “onda” luminosa. Il blu e il viola hanno onde corte; il rosso ha onde lunghe."
         },
         {
           "type": "funFact",
-          "text": "Sulla Luna non c'è aria che diffonda la luce. Risultato: lì il cielo rimane **nero in pieno giorno**, anche quando splende il sole. La prova che il colore del cielo deriva dall'aria, non dal sole."
+          "text": "Sulla Luna non c'è aria per disperdere la luce. Risultato: là, il cielo resta **nero in pieno giorno**, anche quando il Sole brilla. La prova che il colore del cielo viene dall'aria, non dal Sole."
         },
         {
           "type": "paragraph",
-          "text": "Perché tra il Sole e i nostri occhi l'aria non è vuota: è piena di minuscole molecole di **gas, in particolare di azoto, circa il 78%** dell'aria, e di ossigeno, circa **21%**. Sono molto più piccole delle onde luminose. Quando un raggio li colpisce, non va più dritto: viene rimandato indietro in tutte le direzioni. Questo piccolo rimbalzo è il punto di partenza per il colore del cielo."
+          "text": "Perché tra il Sole e i tuoi occhi l'aria non è vuota: è piena di minuscole **molecole di gas**, soprattutto azoto, circa il **78%** dell'aria, e ossigeno, circa il **21%**. Sono ben più piccole delle onde di luce. Quando un raggio le colpisce, non fila più dritto: è rimandato in tutte le direzioni. Questo piccolo rimbalzo è il punto di partenza del colore del cielo."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p2",
-      "title": "Diffusione: perché vince il blu",
+      "title": "La diffusione: perché vince il blu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "In **1871**, il fisico britannico **Signore Rayleigh** ha messo questo fenomeno in un'equazione. Scoprì che più un colore è corto, più viene riflesso in tutte le direzioni dalle molecole d'aria. È lo [[Diffusione di Rayleigh]]."
+          "text": "Nel **1871**, il fisico britannico **Lord Rayleigh** mette questo fenomeno in equazione. Scopre che più un colore ha un'onda corta, più è rimandato in tutti i sensi dalle molecole d'aria. È lo [[scattering di Rayleigh]]."
         },
         {
           "type": "funFact",
-          "text": "Il cielo di Marte è l'opposto del nostro: la sua polvere ricca di ferro lo rende rosa durante il giorno, ma i suoi tramonti sono **blu**. Tutto dipende da cosa contiene l'aria."
+          "text": "Il cielo di Marte fa l'inverso del nostro: la sua polvere ricca di ferro lo rende rosato di giorno, ma i suoi tramonti sono **blu**. Tutto dipende da ciò che contiene l'aria."
         },
         {
           "type": "image",
           "asset": "blue_sky_sunlight_scattering_atmosphere",
           "ratio": "4:3",
-          "caption": "La luce blu viene diffusa in tutte le direzioni dall'aria."
+          "caption": "La luce blu è dispersa in tutte le direzioni dall'aria"
         },
         {
           "type": "paragraph",
-          "text": "Concretamente, la luce blu è diffusa circa **altri 9 giri** di quella rossa. Il rosso viaggia nell'aria quasi in linea retta, mentre il blu rimbalza ovunque. Ecco perché, ovunque si guardi nel cielo, il blu finisce sempre per raggiungere i nostri occhi: tutto il cielo sembra “brillare” di questo azzurro sparso."
+          "text": "In concreto, la luce blu è dispersa circa **9 volte di più** della rossa. Il rosso attraversa l'aria quasi in linea retta, mentre il blu rimbalza ovunque. Ecco perché, dovunque tu guardi nel cielo, del blu finisce sempre per arrivare ai tuoi occhi: il cielo intero sembra “brillare” di questo blu sparso."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p3",
-      "title": "Allora perché non il viola?",
+      "title": "Allora, perché non viola?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sorge una domanda logica: se le onde più corte sono le più disperse, dovrebbe vincere il viola, perché la sua onda è ancora più corta di quella del blu. Il cielo contiene anche molto viola sparso."
+          "text": "Una domanda logica si pone: se le onde più corte sono le più disperse, dovrebbe vincere il viola, perché la sua onda è ancora più corta di quella del blu. Il cielo contiene d'altronde molto viola disperso."
         },
         {
           "type": "paragraph",
-          "text": "La risposta non è nel cielo, ma nei nostri occhi. Catturiamo i colori utilizzando sensori chiamati **coni**, cellule della retina sensibili alla luce. Sono molto più sensibili al blu che al viola. Inoltre, il Sole emette più luce blu che viola. Il nostro cervello allora fa una sorta di media e vede un bellissimo blu. Un animale sensibile agli altri colori vedrebbe senza dubbio un cielo completamente diverso."
+          "text": "La risposta non sta nel cielo, ma nel nostro occhio. Noi captiamo i colori grazie a sensori chiamati **coni**, cellule della retina sensibili alla luce. Sono ben più sensibili al blu che al viola. In più, il Sole manda più luce blu che viola. Il nostro cervello fa allora una specie di media e vede un bel blu. Un animale sensibile ad altri colori vedrebbe senza dubbio un cielo del tutto diverso."
         }
       ]
     },
@@ -92,21 +92,21 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Il tramonto segue le stesse regole, ma cambia una cosa: la distanza. A mezzogiorno la luce attraversa un sottile strato d'aria. La sera, quando il Sole è basso, i suoi raggi devono attraversare **molta più aria** prima di raggiungerci."
+          "text": "Il tramonto segue le stesse regole, ma cambia una cosa: la distanza. A mezzogiorno, la luce attraversa un sottile strato d'aria. La sera, quando il Sole è basso, i suoi raggi devono attraversare **molta più aria** prima di arrivarci."
         },
         {
           "type": "image",
           "asset": "sunset_red_orange_sky_atmosphere",
           "ratio": "16:9",
-          "caption": "A livello dell’orizzonte, la luce attraversa uno spessore d’aria molto maggiore."
+          "caption": "A filo dell'orizzonte, la luce attraversa uno spessore d'aria ben più grande"
         },
         {
           "type": "paragraph",
-          "text": "In questo lungo viaggio, tutto il blu si disperde ben prima di raggiungerci: è filtrato dallo spessore dell'aria. Rimangono solo i colori più resistenti, i rossi e gli arancioni. Se c'è polvere o inquinamento entra in gioco [[La mia diffusione]]: particelle più grandi delle molecole dell'aria rendono il cielo lattiginoso o esaltano queste tonalità arancioni."
+          "text": "Su questo lungo tragitto, tutto il blu è disperso ben prima di arrivare fino a noi: è come filtrato dallo spessore dell'aria. Restano allora solo i colori più resistenti, i rossi e gli arancioni. Se c'è polvere o inquinamento, entra in gioco la [[diffusione di Mie]]: particelle più grandi delle molecole d'aria rendono il cielo lattiginoso o rafforzano queste tinte aranciate."
         },
         {
           "type": "takeaway",
-          "text": "Il cielo è azzurro perché le onde corte sono circa 9 volte più disperse nell'aria rispetto alle onde lunghe. Al tramonto la luce attraversa così tanta aria che solo il rosso ci arriva ancora."
+          "text": "Il cielo è blu perché le onde corte sono circa **9 volte più disperse** dall'aria delle onde lunghe. Al tramonto, la luce attraversa tanta aria che solo il rosso ci arriva ancora."
         }
       ]
     }

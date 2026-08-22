@@ -4,7 +4,7 @@
   "subtitle": "Cervello",
   "subject": "sciences",
   "subcategory": "La nostra quotidianità spiegata",
-  "description": "La memoria non è una macchina fotografica. Ogni ricordo viene ricostruito. Questo è il modo in cui il cervello codifica, memorizza... e talvolta inventa.",
+  "description": "La memoria non è una telecamera. Ogni ricordo viene ricostruito. Ecco come il cervello codifica, archivia... e a volte inventa.",
   "hero": {
     "image": "comment_fonctionne_la_memoire",
     "ratio": "16:9",
@@ -18,32 +18,32 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Spesso immaginiamo la memoria come un disco rigido: registriamo, archiviamo, rileggiamo. Il cervello non funziona così. Ogni volta che ricordi, **ricostruisci** una scena partendo da frammenti."
+          "text": "Spesso si immagina la memoria come un disco fisso: si registra, si mette in ordine, si rilegge. Il cervello non funziona così. Ogni volta che ti ricordi, **ricostruisci** una scena a partire da frammenti."
         },
         {
           "type": "paragraph",
-          "text": "È potente... e fallibile. Comprendere questo significa capire perché dimentichiamo, perché commettiamo errori e perché impariamo."
+          "text": "È potente... e fallibile. Capirlo significa capire perché si dimentica, perché ci si sbaglia, e perché si impara."
         }
       ]
     },
     {
       "id": "course_48_comment_fonctionne_la_memoire_p1",
-      "title": "Diversi ricordi, non uno solo",
+      "title": "Più memorie, non una sola",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "human_brain_anatomy",
           "ratio": "4:3",
-          "caption": "Diverse aree del cervello gestiscono diverse forme di memoria."
+          "caption": "Zone diverse del cervello gestiscono forme diverse di memoria."
         },
         {
           "type": "paragraph",
-          "text": "Innanzitutto c'è lo [[La memoria di lavoro]]: quello che tieni “in mente” per qualche secondo, come un numero di telefono. È limitato, in media circa **7 elementi**. Poi, **la memoria a lungo finisce**: fatti, ricordi di eventi, abilità come andare in bicicletta."
+          "text": "C'è prima la [[memoria di lavoro]]: quello che tieni “in testa” per pochi secondi, come un numero di telefono. È limitata, circa **7 elementi** in media. Poi la **memoria a lungo termine**: fatti, ricordi di eventi, abilità come andare in bicicletta."
         },
         {
           "type": "paragraph",
-          "text": "Questi sistemi non vivono tutti nello stesso posto nel cervello. La **corteccia prefrontale**, la parte anteriore del cervello dietro la fronte, aiuta molto con la memoria di lavoro. Altre regioni, come la **neocorteccia**, lo strato esterno del cervello, immagazzinano a lungo termine."
+          "text": "Questi sistemi non abitano tutti nello stesso punto del cervello. La **corteccia prefrontale**, la parte anteriore del cervello dietro la fronte, aiuta molto la memoria di lavoro. Altre regioni, come la **neocorteccia**, lo strato esterno del cervello, archiviano il lungo termine."
         }
       ]
     },
@@ -60,15 +60,15 @@
         },
         {
           "type": "paragraph",
-          "text": "Affinché le informazioni passino da fragili a durevoli, il cervello deve rafforzare le connessioni tra i **neuroni**, le cellule nervose. Stiamo parlando di **consolidamento**, la trasformazione di un ricordo recente in una traccia duratura. Una piccola struttura chiamata **ippocampo**, a forma di cavalluccio marino nel lobo temporale, svolge un ruolo chiave nella memoria degli eventi."
+          "text": "Perché un'informazione passi dal fragile al duraturo, il cervello deve rafforzare le connessioni tra **neuroni**, le cellule nervose. Si parla di **consolidamento**, la trasformazione di un ricordo recente in una traccia duratura. Una piccola struttura chiamata **ippocampo**, a forma di cavalluccio marino nel lobo temporale, ha un ruolo chiave per i ricordi degli eventi."
         },
         {
           "type": "funFact",
-          "text": "Il sonno, soprattutto in alcune fasi, aiuta a consolidare quanto appreso durante la giornata. Ripassare e poi dormire spesso funziona meglio che ripassare fino alle 3 del mattino."
+          "text": "Il sonno, soprattutto alcune fasi, aiuta a consolidare ciò che si è imparato nella giornata. Ripassare e poi dormire funziona spesso meglio che ripassare fino alle 3 del mattino."
         },
         {
           "type": "paragraph",
-          "text": "Una regola famosa, legata al ricercatore **Donald Hebb**: i neuroni che si attivano insieme tendono a connettersi più forte. In sintesi: “ciò che illumina insieme lega insieme”. Questo è il principio della **neuroplasticità**, la capacità del cervello di modificare le proprie connessioni."
+          "text": "Una regola famosa, legata al ricercatore **Donald Hebb**: i neuroni che si attivano insieme tendono a connettersi più forte. In sintesi: “ciò che si accende insieme si lega insieme”. È il principio della **neuroplasticità**, la capacità del cervello di modificare le sue connessioni."
         }
       ]
     },
@@ -79,11 +79,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Quando richiami un ricordo, diventa temporaneamente **malleabile**, modificabile. Possono scivolare dettagli del presente. Poi il cervello li immagazzina di nuovo. Ecco perché due testimoni dello stesso incidente possono raccontare versioni diverse."
+          "text": "Quando richiami un ricordo, diventa temporaneamente **malleabile**, modificabile. Dettagli del presente possono infilarsi. Poi il cervello lo archivia di nuovo. Per questo due testimoni dello stesso incidente possono raccontare versioni diverse."
         },
         {
           "type": "paragraph",
-          "text": "Possiamo anche creare **falsi ricordi**: scene che crediamo vere, ma che non sono mai accadute, o non così. Il cervello riempie le lacune con ciò che già sa."
+          "text": "Si possono persino creare **falsi ricordi**: scene che si credono vere, ma che non sono mai accadute, o non così. Il cervello riempie i buchi con ciò che già conosce."
         }
       ]
     },
@@ -94,11 +94,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Se ricordassi ogni dettaglio non necessario, saresti saturo. Dimenticare ci aiuta a generalizzare, a decidere, a conservare l'essenziale. Una buona memoria seleziona tanto quanto conserva."
+          "text": "Se ti ricordassi ogni dettaglio inutile, saresti saturo. L'oblio aiuta a generalizzare, a decidere, a tenere l'essenziale. Una buona memoria seleziona tanto quanto conserva."
         },
         {
           "type": "takeaway",
-          "text": "La memoria è una ricostruzione attiva, non una registrazione perfetta. Si basa su diversi sistemi, si consolida soprattutto durante il sonno e può deformarsi ad ogni sollecito."
+          "text": "La memoria è una ricostruzione attiva, non una registrazione perfetta. Si appoggia su più sistemi, si consolida soprattutto durante il sonno, e può deformarsi a ogni richiamo."
         }
       ]
     }

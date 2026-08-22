@@ -1,14 +1,14 @@
 {
   "id": "course_50_comment_le_savon_tue_t_il_les_virus",
-  "title": "In che modo il sapone uccide i virus?",
+  "title": "Come il sapone uccide i virus?",
   "subtitle": "Igiene",
   "subject": "sciences",
   "subcategory": "La nostra quotidianità spiegata",
-  "description": "Il sapone non è “magico”. Attacca il guscio grasso di alcuni virus e li estrae dalla pelle. Ecco perché 20 secondi sono importanti.",
+  "description": "Il sapone non è “magico”. Attacca il guscio grasso di certi virus e li stacca dalla tua pelle. Ecco perché 20 secondi contano.",
   "hero": {
     "image": "comment_le_savon_tue_les_virus",
     "ratio": "16:9",
-    "hook": "Un'arma semplice contro i virus: molecole a cui piace l'acqua... e il grasso."
+    "hook": "Un'arma semplice contro i virus: molecole che amano l'acqua e il grasso."
   },
   "sections": [
     {
@@ -18,51 +18,51 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Durante la pandemia da COVID-19, un gesto molto semplice è tornato centrale: lavarsi le mani con il sapone. Non c'è bisogno di un laboratorio. Solo acqua, sapone e un po' di tempo."
+          "text": "Durante la pandemia di COVID-19, un gesto molto semplice è tornato centrale: lavarsi le mani con il sapone. Non serve un laboratorio. Solo acqua, sapone, e un po' di tempo."
         },
         {
           "type": "paragraph",
-          "text": "Perché funziona così bene? Perché molti virus pericolosi portano con sé un involucro fatto di grasso. E il sapone è eccellente per distruggere il grasso."
+          "text": "Perché funziona così bene? Perché molti virus pericolosi portano un involucro fatto di grasso. E il sapone è eccellente per distruggere il grasso."
         }
       ]
     },
     {
       "id": "course_50_comment_le_savon_tue_t_il_les_virus_p1",
-      "title": "La debolezza di alcuni virus",
+      "title": "La debolezza di certi virus",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Alcuni virus, come **coronavirus** o il virus dell'influenza, hanno un rivestimento esterno costituito da lipidi (grassi). Questa busta li protegge... finché non incontra il sapone."
+          "text": "Certi virus, come i **coronavirus** o il virus dell'influenza, hanno un involucro esterno fatto di lipidi (dei grassi). Questo involucro li protegge, finché non incontra il sapone."
         },
         {
           "type": "paragraph",
-          "text": "Altri virus, detti “nudi”, non hanno questo involucro. Sono più resistenti al sapone e all'alcool. Fortunatamente, molti dei virus che viaggiano attraverso le mani e le goccioline sono avvolti."
+          "text": "Altri virus, detti “nudi”, non hanno questo involucro. Resistono meglio al sapone e all'alcol. Per fortuna, molti dei virus che circolano attraverso le mani e le goccioline sono avvolti."
         }
       ]
     },
     {
       "id": "course_50_comment_le_savon_tue_t_il_les_virus_p2",
-      "title": "Sapone, una molecola a due facce",
+      "title": "Il sapone, una molecola a due facce",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "handwashing_soap_water_hands",
           "ratio": "4:3",
-          "caption": "Lo sfregamento aiuta il sapone a raggiungere ogni angolo delle mani."
+          "caption": "Lo sfregamento aiuta il sapone a raggiungere tutti gli angoli delle mani."
         },
         {
           "type": "paragraph",
-          "text": "Le molecole di sapone sono . Hanno una testa a cui piace l'acqua e una coda a cui piace il grasso. La coda affonda nell'involucro grasso del virus. La testa rimane rivolta verso l'acqua. [[tensioattivi]]"
+          "text": "Le molecole di sapone sono [[tensioattivi]]. Hanno una testa che ama l'acqua e una coda che ama il grasso. La coda si infila nell'involucro grasso del virus. La testa resta rivolta verso l'acqua."
         },
         {
           "type": "paragraph",
-          "text": "Risultato: la busta si strappa. Il virus è disabilitato. Poi l'acqua porta via i detriti. Il sapone non “brucia” il virus come un acido: **sciogliere** e lo elimina."
+          "text": "Risultato: l'involucro si strappa. Il virus è disattivato. Poi l'acqua porta via i detriti. Il sapone non “brucia” il virus come un acido: lo **dissolve** e lo toglie."
         },
         {
           "type": "funFact",
-          "text": "È lo stesso principio che serve per sgrassare una padella: il sapone afferra il grasso e lo lascia andare con l'acqua."
+          "text": "È lo stesso principio che fa andare via il grasso da una padella: il sapone aggancia il grasso e lo lascia partire con l'acqua."
         }
       ]
     },
@@ -73,11 +73,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ci vuole tempo perché il sapone raggiunga tutte le pieghe: tra le dita, sotto le unghie, attorno ai polsi. Circa **20 secondi** di attrito, questo è il minimo spesso consigliato."
+          "text": "Serve tempo perché il sapone raggiunga tutte le pieghe: tra le dita, sotto le unghie, intorno ai polsi. Circa **20 secondi** di sfregamento: è il minimo spesso raccomandato."
         },
         {
           "type": "paragraph",
-          "text": "Senza attrito, il sapone funziona meno bene. Anche l'acqua da sola: non attacca efficacemente l'involucro grasso."
+          "text": "Senza sfregamento, il sapone funziona meno bene. L'acqua da sola neanche: non attacca in modo efficace l'involucro grasso."
         }
       ]
     },
@@ -88,11 +88,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Un gel con almeno **60%** di alcol può anche distruggere molti virus avvolti. Ma se è presente sporco o grasso visibile, il gel è meno efficace: lo sporco funge da schermo. In questo caso acqua e sapone resta la scelta migliore."
+          "text": "Un gel con almeno il **60%** di alcol può distruggere anche molti virus avvolti. Ma se c'è sporcizia visibile o grasso, il gel è meno efficace: lo sporco fa da schermo. In quel caso, sapone e acqua restano la scelta migliore."
         },
         {
           "type": "takeaway",
-          "text": "Il sapone uccide molti virus strappandone il rivestimento grasso e poi lavandoli via con l'acqua. Tempo + attrito = efficienza."
+          "text": "Il sapone uccide molti virus strappando il loro involucro grasso, poi portandoli via con l'acqua. Tempo + sfregamento = efficacia."
         }
       ]
     }
