@@ -4,11 +4,11 @@
   "subtitle": "Zeus'a meydan okuyan Titan",
   "subject": "mythologie",
   "subcategory": "Greece: the gods",
-  "description": "Prometheus, insanlar için tanrılardan ateşi çalar, sonra da sonsuz işkenceye katlanır. İlerleme, kurnazlık ve özgürlüğün bedeli hakkında bir efsane.",
+  "description": "Prometheus insanlar için tanrıların ateşini çalar, sonra sonsuz bir işkenceye katlanır. İlerleme, kurnazlık ve özgürlüğün bedeli üzerine bir mit.",
   "hero": {
     "image": "promethee_le_voleur_de_feu",
     "ratio": "16:9",
-    "hook": "Bir Titan, Olimpos'tan ateşi çalar. İnsanlar medeniyet kazanır. Bir kartal ve bir zincir kazanır."
+    "hook": "Bir Titan Olimpos'un ateşini çalar. İnsanlar uygarlık kazanır. O ise bir kartal ve bir zincir kazanır."
   },
   "sections": [
     {
@@ -18,63 +18,63 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Prometheus**, önceki neslin tanrısı olan bir Titan'dır. Adı öngörülü olanı çağrıştırır. Yunan mitlerinde ilk insanları şekillendirir, onları Olympus kralı **Zeus**'ye karşı korur ve bu seçiminin bedelini korkunç bir cezayla öder."
+          "text": "**Prometheus** bir Titan'dır, önceki kuşağın tanrısı. Adı öngöreni çağrıştırır. Yunan mitlerinde ilk insanları yoğurur, onları Olimpos kralı **Zeus**'a karşı korur ve bu seçimin bedelini korkunç bir cezayla öder."
         },
         {
           "type": "paragraph",
-          "text": "Ölümlüler için ateşi çalarak insanlara teknik ve bilgi verir. Kafkasya'ya yaptığı işkence, iktidara meydan okumaya cesaret eden dehanın sembolü haline gelir."
+          "text": "Ölümlüler için ateşi çalarak insanlara tekniği ve bilgiyi verir. Kafkasya'daki işkencesi, iktidara meydan okumaya cüret eden dehanın simgesi olur."
         }
       ]
     },
     {
       "id": "course_162_promethee_le_voleur_de_feu_p1",
-      "title": "İnsan çıplak doğar, Prometheus numarası",
+      "title": "İnsan çıplak doğar, Prometheus kurnazlık eder",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Prometheus'un ilk insanı kil ve su ile modellediği söylenir. Kardeşi [[Epimetheus]] çok hızlı davranıyor. Hayvanları donatmaktan sorumlu, her şeyi veriyor: pençeler, kanatlar, kürk, hız. Sıra erkeğe gelince geriye hiçbir şey kalmıyor. İnsanlar kırılgan ve savunmasız doğarlar."
+          "text": "Prometheus'un ilk insanları kil ve suyla yoğurduğu anlatılır. Kardeşi [[Epimetheus]] ise fazla acele eder. Hayvanları donatmakla görevlidir, her şeyi dağıtır: pençe, kanat, kürk, hız. Sıra insana gelince geriye hiçbir şey kalmaz. İnsan kırılgan ve savunmasız doğar."
         },
         {
           "type": "paragraph",
-          "text": "Prometheus tazminat ödemeye karar verir. [[Mekon]]'ye yapılan kurban töreni sırasında bir öküzü iki parçaya böler. Çirkin derisinin altında iyi et gizlidir. İştah açıcı yağın altında kemikleri gizler. **Zeus** güzel görünümü seçer. O zamandan beri insanlar etini yiyor ve kemiklerini tanrılara sunuyor."
+          "text": "Prometheus açığı kapatmaya karar verir. [[Mekon]] adlı yerde bir kurban sırasında öküzü ikiye böler. Çirkin bir derinin altına iyi eti gizler. İştah açıcı yağın altına kemikleri gizler. **Zeus** güzel görünüşü seçer. O günden beri insanlar eti yer, kemikleri tanrılara sunar."
         },
         {
           "type": "funFact",
-          "text": "Prometheus, yangını gizlemek için bir [[Ferule]] çubuğu kullanıyor. İliği çok yavaş yanıyor: Akdenizli çobanlar onu gerçekten taşınabilir bir çakmak olarak kullanıyorlardı."
+          "text": "Ateşi gizlemek için Prometheus bir [[Ferule]] sapı kullanır. Özü çok yavaş yanar: Akdenizli çobanlar bunu gerçekten taşınır çakmak gibi kullanırdı."
         },
         {
           "type": "paragraph",
-          "text": "Aldatıldığı için öfkelenen Zeus, insanlardan ateşi alır. Isı ve ışık olmadan neredeyse hayvani bir yaşama geri dönerler."
+          "text": "Aldatıldığı için öfkelenen Zeus, insanlardan ateşi geri alır. Isı ve ışık olmadan neredeyse hayvani bir yaşama düşerler."
         }
       ]
     },
     {
       "id": "course_162_promethee_le_voleur_de_feu_p2",
-      "title": "Ateş hırsızlığı ve işkence",
+      "title": "Ateşin çalınması ve işkence",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Prometheus Olympus'a girer. Versiyona bağlı olarak Güneş'in arabasından veya demirciler tanrısı **Hephaestus**'nin demirhanesinden bir kıvılcım çalar. Onu içi boş sapının içinde saklıyor ve onu ölümlülere geri getiriyor."
+          "text": "Prometheus Olimpos'a sızar. Kıvılcımı Güneş'in arabasından, ya da versiyonlara göre demirciler tanrısı **Hephaistos**'un ocağından çalar. Onu oyuk sapına gizler ve ölümlülere götürür."
         },
         {
           "type": "image",
           "asset": "prometheus_steal_fire_ancient_greek_painting",
           "ratio": "4:3",
-          "caption": "Prometheus, teknolojinin kurucu eylemi olan ateşi insanlara getirir."
+          "caption": "Prometheus insanlara ateşi getirir, tekniğin kurucu eylemi"
         },
         {
           "type": "paragraph",
-          "text": "Yunanlılar için ateş sadece bir alev değildir. O, insanın dünyayı dönüştürmesine olanak tanıyan **teknik** ve **akıl**'yi bünyesinde barındırır. Zeus misilleme yapar. İnsanlığa karşı daha sonra Pandora'yı gönderecektir. Prometheus'a karşı ceza doğrudandır."
+          "text": "Yunanlılar için ateş yalnızca bir alev değildir. **Teknik** ve **akıl**dır, insanın dünyayı dönüştürmesini sağlayan şey. Zeus karşılık verir. İnsanlığa karşı ileride Pandora'yı gönderecektir. Prometheus'a karşı ceza doğrudandır."
         },
         {
           "type": "funFact",
-          "text": "Antik tıpta **hızla** duyguların ve canlılığın merkezi olarak görülüyordu. Zeus, Titan'ın iradesini kırmak için bu organı seçti."
+          "text": "Antik hekimlikte **karaciğer**, duyguların ve diriliğin yuvası sayılırdı. Zeus, Titan'ın iradesini kırmak için bu organı seçer."
         },
         {
           "type": "paragraph",
-          "text": "Titan, **Kafkasya**'daki bir duvara zincirlenmiştir. Her gün bir kartal onun karaciğerini yer. Her gece organ yeniden doğuyor. İşkence şafak vakti yeniden başlıyor, sonu gelmiyor."
+          "text": "Titan **Kafkasya**'nın bir yamacına zincirlenir. Her gün bir kartal karaciğerini yer. Her gece organ yeniden doğar. İşkence şafakta yeniden başlar, sonsuza dek."
         }
       ]
     },
@@ -85,34 +85,34 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Yüzyıllar boyunca Prometheus pes etmeyi reddetti. Tehlikeli bir sırrı biliyor: Hangi kadının Zeus'tan daha güçlü bir oğul doğuracağı. İşkenceye rağmen sessiz kalıyor. Zulme karşı direnişin sembolü haline gelir."
+          "text": "Yüzyıllar boyunca Prometheus teslim olmayı reddeder. Tehlikeli bir sır bilir: hangi kadın Zeus'tan güçlü bir oğul doğuracaktır. İşkenceye rağmen susar. Tiranlığa direnişin simgesi olur."
         },
         {
           "type": "paragraph",
-          "text": "Zeus'un oğlu kahraman **Herakles** sonunda Kafkasya'ya varır. Kartalı okla öldürür ve esiri serbest bırakır. Zeus lütfu kabul eder: Prometheus sonunda peri **Thétis** hakkındaki sırrı açıklar. Tanrıların kralı böylece kendi düşüşünden kaçınır."
+          "text": "Zeus'un oğlu kahraman **Herakles** sonunda Kafkasya'ya varır. Kartalı bir okla devirir ve tutsağı kurtarır. Zeus affı kabul eder: Prometheus nihayet peri **Thetis** hakkındaki sırrı açıklar. Tanrıların kralı böylece kendi düşüşünden kaçınır."
         },
         {
           "type": "paragraph",
-          "text": "Prometheus, kendisini kayaya bağlayan yemine saygı göstermek için zincirlerinin demirinden ve bir taş parçasından yapılmış bir yüzük takar. Dağa “bağlı” ama özgür kalıyor."
+          "text": "Onu kayaya bağlayan yemini tutmak için Prometheus, zincirlerinin demirinden ve bir taş parçasından bir yüzük taşır. Dağa “bağlı” kalır, ama özgürdür."
         }
       ]
     },
     {
       "id": "course_162_promethee_le_voleur_de_feu_p4",
-      "title": "Asla sönmeyecek bir efsane",
+      "title": "Sönmeyen bir mit",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "MÖ 5. yüzyılda trajedi yazarı [[Aiskhylos]] \"Prometheus Bound\"u sahneledi. Daha sonra efsane bilime ve ilerlemeye ilham verir. Mary Shelley'nin altyazısı \"Frankenstein\" \"Modern Prometheus\": Bilgelik olmadan hayat yaratmak aynı zamanda yok edebilir."
+          "text": "M.Ö. 5. yüzyılda trajedi yazarı [[Aiskhylos]] *Zincire Vurulmuş Prometheus* sahnesini kurar. Daha sonra mit, bilime ve ilerlemeye ilham verir. Mary Shelley *Frankenstein*'a “Modern Prometheus” alt başlığını koyar: bilgeliği olmadan yaşam yaratmak da yok edebilir."
         },
         {
           "type": "paragraph",
-          "text": "Filozof [[Gaston Bachelard]] bile bir “Prometheus kompleksinden” söz ediyor: kişinin efendilerinden daha fazlasını bilme arzusu. Günümüzde yapay zekayı veya genetiği sıklıkla yeni bir ateşe benzetiyoruz: Muazzam bir güç, hâlâ yeterince kontrol edilemiyor."
+          "text": "Filozof [[Gaston Bachelard]] bir “Prometheus kompleksi”nden bile söz eder: ustalarından daha çok bilme isteği. Bugün yapay zekâ ya da genetik sık sık yeni bir ateşe benzetilir: uçsuz bucaksız, henüz kötü idare edilen bir güç."
         },
         {
           "type": "takeaway",
-          "text": "**Prometheus**, ateş hırsızlığı yoluyla insanlara medeniyet sunuyor, bin yıllık bir işkenceye katlanıyor ve ardından **Herakles** tarafından kurtarılıyor. İlerlemenin bir bedeli vardır ve ilahi gücün de bir bedeli vardır."
+          "text": "**Prometheus** insanlara ateşi çalarak uygarlık sunar, binyıllık bir işkenceye katlanır, sonra **Herakles** tarafından kurtarılır. İlerlemenin bir bedeli vardır, tanrısal iktidarın da."
         }
       ]
     }

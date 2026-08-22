@@ -1,14 +1,14 @@
 {
   "id": "course_216_la_dette_mondiale",
-  "title": "Küresel borç",
-  "subtitle": "Küresel GSYİH'nın %300'ünden fazlası",
+  "title": "Dünya borcu",
+  "subtitle": "Dünya GSYİH'sinin %300'ünden fazla",
   "subject": "comprendreLeMonde",
   "subcategory": "Economy & society",
-  "description": "Küresel borç hiç bu kadar yüksek olmamıştı. Bu konuda endişelenmeli miyiz yoksa büyümeyi finanse etmek ve krizlerle yüzleşmek için normal bir araç mı?",
+  "description": "Dünya borcu hiç bu kadar yüksek olmadı. Kaygılanmalı mıyız, yoksa büyüme finanse etmek ve krizlerle yüzleşmek için normal bir araç mıdır?",
   "hero": {
     "image": "la_dette_mondiale",
     "ratio": "16:9",
-    "hook": "Japonya'nın GSYİH'sının %260'ına eşdeğer borcu var... ve kimse endişelenmesin. İşte nedeni."
+    "hook": "Japonya GSYİH'sinin %260'ı kadar borçludur... ve kimse kaygılanmaz. İşte nedeni."
   },
   "sections": [
     {
@@ -18,51 +18,51 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Devletlerin, işletmelerin ve hane halklarının toplam borcu, bugün küresel GSYİH'nın **%300'ünü aşıyor**, bu ekonomi tarihinde mutlak bir rekor."
+          "text": "Devletlerin, şirketlerin ve hanelerin birleşik dünya borcu bugün **dünya GSYİH'sinin %300**'ünü aşar, iktisat tarihinin mutlak bir rekoru."
         },
         {
           "type": "paragraph",
-          "text": "Bu etkileyici rakam daha incelikli bir gerçeği gizliyor: Borç, büyümeyi finanse etmeyi, sağlık krizlerine yanıt vermeyi veya ekolojik geçişe hazırlanmayı mümkün kılıyor. Ancak aynı zamanda güvenin çökmesi riskini de beraberinde getiriyor."
+          "text": "Bu etkileyici sayı daha nüanslı bir gerçeği gizler: borç büyümeyi finanse etmeye, sağlık krizlerine cevap vermeye veya ekolojik geçişi hazırlamaya yarar. Ama içinde bir güven çöküşü riski de taşır."
         }
       ]
     },
     {
       "id": "course_216_la_dette_mondiale_p1",
-      "title": "Bir devlet nasıl borçlanır?",
+      "title": "Bir devlet nasıl borçlanır",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bir Devlet, harcamaları yapısal olarak vergi gelirlerini aştığında borçlanır. Bu bütçe açığı finansal piyasalardan borçlanarak kapatılmaktadır. [[Keynesyen teori]]'ye göre, kriz zamanlarında ekonomiyi canlandırmak için borçlanmak, büyüme geri geldiğinde geri ödendiği sürece meşrudur."
+          "text": "Bir devlet harcamaları vergi gelirlerini yapısal olarak aşınca borçlanır. Bu bütçe açığı finans piyasalarından borç alınarak kapatılır. [[Keynesyen teori]] şunu söyler: kriz döneminde ekonomiyi uyarmak için borçlanmak meşrudur, büyüme dönünce ödemek şartıyla."
         },
         {
           "type": "paragraph",
-          "text": "Uygulamada hükümetler kötü zamanlarda kolayca borçlanırlar, ancak iyi zamanlarda nadiren geri öderler. Borç daha sonra uzun vadede birikir. Japonya'nın durumu büyüleyici: GSYH'sinin %260'ına yakın borcu olan ülkenin mantıksal olarak krizde olması gerekir. Ancak öyle değil çünkü borcunun büyük kısmı dış piyasalardan korunan kendi bankaları ve tasarruf sahiplerinin elinde."
+          "text": "Pratikte hükümetler zor dönemde kolay borçlanır, bolluk döneminde ise nadiren öder. Borç o zaman kalıcı birikir. Japonya örneği büyüleyicidir: GSYİH'sinin %260'ına yakın borcuyla ülke mantıken krizde olmalıdır. Yine de değildir, çünkü borcunun esası kendi bankalarının ve tasarruf sahiplerinin elindedir, yabancı piyasalardan uzakta."
         },
         {
           "type": "funFact",
-          "text": "Birleşik Krallık, Napolyon Savaşları ve 1720 mali balonundan kalma borçlarını ancak 2015 yılında ödeyebildi."
+          "text": "Birleşik Krallık, Napolyon savaşlarından ve 1720'deki bir finans balonundan kalan borçları ancak 2015'te bitirdi."
         }
       ]
     },
     {
       "id": "course_216_la_dette_mondiale_p2",
-      "title": "Tüm borçlar eşit değildir",
+      "title": "Bütün borçlar bir değildir",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Borcun gerçek tehlikesi sadece borcun miktarına değil aynı zamanda ödünç alındığı para birimine de bağlıdır. Zengin ülkeler kendi para birimleriyle borçlanıyor, bu da yatırımcılara güven veriyor."
+          "text": "Bir borcun gerçek tehlikesi yalnız tutarına değil, hangi para biriminde alındığına da bağlıdır. Zengin ülkeler kendi para birimlerinde borçlanır, bu da yatırımcıları rahatlatır."
         },
         {
           "type": "image",
           "asset": "japan_government_debt_statistics_chart",
           "ratio": "16:9",
-          "caption": "Bugün küresel kamu borcu gezegenin GSYİH'sının %300'ünü aşıyor."
+          "caption": "Dünya kamu borcu bugün gezegen GSYİH'sinin %300'ünü aşar"
         },
         {
           "type": "paragraph",
-          "text": "Gelişmekte olan ülkeler, yeterince istikrarlı kabul edilen bir para biriminin bulunmaması nedeniyle sıklıkla dolar cinsinden borçlanmak zorunda kalıyor. Ulusal paraları dolar karşısında değer kaybederse, geri ödenecek tutar bir gecede patlıyor. Bu krizlere [[IMF]] sık sık müdahale ediyor ancak genel olarak halk üzerinde ağır bir yük oluşturan katı tasarruf politikaları dayatıyor."
+          "text": "Gelişmekte olan ülkeler ise çoğu zaman dolar üzerinden borçlanmak zorundadır, yeterince istikrarlı sayılan bir para birimleri yoktur. Ulusal paraları dolar karşısında değer yitirirse ödenecek tutar bir günde patlar. Bu krizlerde [[IMF]] sık müdahale eder, ama genelde halka ağır basan katı tasarruf politikaları dayatır."
         }
       ]
     },
@@ -73,11 +73,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bir tartışma ekonominin iki vizyonuna karşı çıkıyor. La [[Modern Para Teorisi]], bir devletin kendi para birimi cinsinden borçlandığı sürece iflas edemeyeceğini öne sürüyor: Gerçek sınır, Avrupa'da Maastricht Antlaşması'nın dayattığı %60 gibi keyfi bir rakam değil, enflasyon düzeyidir."
+          "text": "Bir tartışma iki ekonomi görüşünü karşı karşıya getirir. [[Modern Para Teorisi]] bir devletin kendi para biriminde borçlandığı sürece iflas edemeyeceğini söyler: asıl sınır Avrupa'da Maastricht Antlaşması'nın dayattığı %60 gibi keyfi bir sayı değil, enflasyon düzeyidir."
         },
         {
           "type": "paragraph",
-          "text": "Daha ihtiyatlı olan diğer ekonomistler, çok fazla borcun piyasa güvenini korkutup faiz oranlarında keskin bir artışa yol açacağından korkuyorlar. 2010 ile 2012 yılları arasındaki avro bölgesi krizi bu riski ortaya koydu: Yunanistan gibi kendi merkez bankalarından mahrum kalan ülkeler, borçlanma oranlarının Avrupa para biriminin varlığını tehdit edecek noktaya kadar yükseldiğini gördüler."
+          "text": "Daha temkinli başka ekonomistler fazla borcun piyasa güvenini kaçırmasından, faizlerin sert yükselmesinden korkar. 2010-2012 avro bölgesi krizi bu riski gösterdi: kendi merkez bankasından yoksun Yunanistan gibi ülkeler borç faizlerinin, Avrupa parasının varlığını bile tehdit edecek kadar fırladığını gördü."
         }
       ]
     },
@@ -88,15 +88,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Küresel borç yalnızca Devletleri ilgilendirmiyor: İşletmeler ve hane halkları da, bazen kötü düzenlenmiş finansal aktörler aracılığıyla, giderek artan bir paya sahip oluyor. İklim borcu etrafında da yeni bir tartışma ortaya çıkıyor: Enerji geçişini finanse eden borca, basit tüketimi finanse eden borçtan farklı mı davranmalıyız?"
+          "text": "Dünya borcu yalnız devletleri ilgilendirmez: şirketler ve haneler de giderek büyüyen, bazen az düzenlenen finans aktörleri üzerinden bir pay taşır. İklim borcu etrafında da yeni bir tartışma doğar: enerji geçişini finanse eden borç ile salt tüketimi finanse eden borç aynı mı muamele görmeli?"
         },
         {
           "type": "paragraph",
-          "text": "Nesiller arası adalet sorunu hâlâ merkezi bir konu: bugün borca ​​girmek, yarından vergi almak anlamına geliyor. Ama eğer bu para sürdürülebilir altyapıyı veya iyi eğitimi finanse ediyorsa, bu bir yükten ziyade gelecek nesillere aktarılan bir hediye olarak da görülebilir."
+          "text": "Kuşaklar arası adalet sorusu merkezi kalır: bugün borçlanmak yarının vergilerinden pay almak demektir. Ama bu para kalıcı altyapılar veya iyi bir eğitim finanse ederse gelecek kuşaklara bir yük değil bir armağan da sayılabilir."
         },
         {
           "type": "takeaway",
-          "text": "Küresel borç, tarihi bir rekorla gezegenin GSYİH'sının %300'ünü aştı. Tehlikeliliği miktarından çok, ödünç alındığı para birimine bağlıdır: Japonya, %260'lık bir borcun yerel olarak tutulması durumunda sabit kalabileceğini kanıtlıyor."
+          "text": "Dünya borcu gezegen GSYİH'sinin %300'ünü aşar, tarihi bir rekor. Tehlikesi tutarından çok alındığı para birimine bağlıdır: Japonya, yerelde tutulursa %260'lık bir borcun istikrarlı kalabileceğini kanıtlar."
         }
       ]
     }

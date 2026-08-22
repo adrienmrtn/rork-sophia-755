@@ -1,14 +1,14 @@
 {
   "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois",
-  "title": "Truva Savaşı ve Tahta At",
+  "title": "Truva Savaşı ve tahta at",
   "subtitle": "Yunan mitolojisi",
   "subject": "mythologie",
   "subcategory": "Greece: the heroes",
-  "description": "On yıl süren kuşatma, her iki tarafta da tanrılar, ardından tahta bir at. Antik Yunan'ın en büyük destansı öyküsü ve askeri hilenin arketipi.",
+  "description": "On yıllık kuşatma, iki tarafta tanrılar, sonra bir tahta at. Antik Yunan'ın en büyük destanı ve askeri kurnazlığın arketipi.",
   "hero": {
     "image": "la_guerre_de_troie_et_le_cheval_de_bois",
     "ratio": "16:9",
-    "hook": "Altın bir elma, kaçırılan bir kadın, ardından on yıl süren savaş: Truva silah altına değil, tahta atın eline düşüyor."
+    "hook": "Bir altın elma, kaçırılan bir kadın, sonra on yıl savaş: Truva silahla değil, bir tahta atla düşer."
   },
   "sections": [
     {
@@ -18,51 +18,51 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Truva Savaşı**, Homeros'un İlyada'da ölümsüzleştirdiği antik Yunanistan'ın büyük hikayesidir. Yunan şehirlerinden oluşan bir koalisyon, Truva'nın diğer adı olan [[ilium]]'yi **biz yıl boyunca** kuşattı. Tanrılar taraf tutar. Kahramanlar onurları için ölürler."
+          "text": "**Truva Savaşı**, Homeros'un İlyada'da ölümsüzleştirdiği antik Yunan'ın büyük anlatısıdır. Yunan kentlerinden bir koalisyon [[ilium]] kentini, yani Truva'yı, **on yıl** kuşatır. Tanrılar taraf tutar. Kahramanlar onur için ölür."
         },
         {
           "type": "paragraph",
-          "text": "Şehir güce boyun eğmez. Bir taktikle düşüyor: **tahta**. Bu hile, savaş alanlarından günümüzün bilgisayar virüslerine kadar evrensel bir simge haline geldi."
+          "text": "Kent kuvvete yenik düşmez. Bir düzenbazlıkla düşer: **tahta at**. Bu kurnazlık evrensel bir simge olmuştur; savaş alanından bugünün bilgisayar virüslerine kadar uzanır."
         }
       ]
     },
     {
       "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_p1",
-      "title": "Her şeyi bir altın elma başlatır",
+      "title": "Bir altın elma her şeyi başlatır",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Her şey Peleus ile peri Thetis'in düğününde başlar. Anlaşmazlık tanrıçası **Eris** davet edilmedi. Öfkeyle üzerinde \"En güzele\" yazılı altın bir elma fırlatır. Üç tanrıça onu sahipleniyor: **Hera**, **Athena** ve **Afrodit**."
+          "text": "Her şey Peleus ile su perisi Thetis'in düğününde başlar. Nifak tanrıçası **Eris** çağrılmaz. Öfkeyle “En güzele” yazılı bir altın elma fırlatır. Üç tanrıça onu ister: **Hera**, **Athena** ve **Afrodit**."
         },
         {
           "type": "paragraph",
-          "text": "Zeus bir ölümlüye fikrini sorar: **Paris**, Truva prensi. Hera ona gücü, Athena savaşta zaferi, Afrodit ise en güzel kadının aşkını vaat eder. Afrodit'i seçer. Ona Sparta kralı **Menelaos**'nin karısı **Helen**'yi teklif ediyor. Paris onu Truva'ya götürür. Yunanistan onu geri almak için ayağa kalkıyor."
+          "text": "Zeus bir ölümlünün görüşünü ister: Truva prensi **Paris**. Hera ona iktidar, Athena savaşta zafer, Afrodit en güzel kadının aşkını vaat eder. O Afrodit'i seçer. Afrodit ona Sparta kralı **Menelaos**'un eşi **Helen**'i sunar. Paris onu Truva'ya götürür. Yunanistan onu geri almak için ayağa kalkar."
         },
         {
           "type": "funFact",
-          "text": "Arkeologlar Türkiye'nin Hisarlık şehrinde M.Ö. **1184 civarında yanmış bir şehir buldular.**: Efsanenin arkasında yatan tarihi Truva'nın olası yeri."
+          "text": "Türkiye'de Hisarlık'ta arkeologlar **M.Ö. 1184** civarında yanmış bir kent bulmuştur: efsanenin ardındaki tarihsel Truva'nın olası yeri."
         }
       ]
     },
     {
       "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_p2",
-      "title": "Kazananı olmayan on yıllık kuşatma",
+      "title": "On yıl, kazananı olmayan kuşatma",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Menelaus'un kardeşi ve Miken kralı **Agamemnon** komutayı devralır. Büyük bir filo ayrılıyor: Aşil, Ajax, bilge Nestor, kurnaz **Ulysses**. Yunanlılar veya Akhalar Truva bölgesi [[Yol]]'ye çıkarlar ve kuşatma başlar."
+          "text": "Menelaos'un kardeşi ve Mykenai kralı **Agamemnon** komutayı alır. Kocaman bir filo yola çıkar: Aşil, Aias, bilge Nestor, kurnaz **Odysseus**. Yunanlar, yani Akhalar, Truva yöresi [[Yol]] kıyısına çıkar ve kuşatma başlar."
         },
         {
           "type": "image",
           "asset": "greek_fleet_trojan_war_thousand_ships_painting",
           "ratio": "4:3",
-          "caption": "Yunan filosu: efsane bin gemiden bahsediyor."
+          "caption": "Yunan filosu: efsane bin gemiden söz eder"
         },
         {
           "type": "paragraph",
-          "text": "Poseidon ve Apollon'un yardımıyla inşa edilen Truva'nın duvarlarının yıkılmaz olduğu söyleniyor. On yıl boyunca [[Dolandırıcı]] ovasında kararsız bir şekilde savaştık. Yeryüzünde insanlar ölüyor. Olympus'ta Hera ve Athena Yunanlılara yardım eder; Afrodit ve Apollon, Truva'nın eski kralı [[Priam]]'nin oğullarını korur."
+          "text": "Truva surları Poseidon ile Apollon'un yardımıyla yapılmış, yıkılmaz sayılır. On yıl boyunca [[Dolandırıcı]] ovasında karar çıkmaz. Karada insanlar ölür. Olympos'ta Hera ve Athena Yunanlara yardım eder; Afrodit ve Apollon, Truva'nın yaşlı kralı [[Priam]] adına oğulları korur."
         }
       ]
     },
@@ -73,61 +73,61 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Güç yeterli değil. Ithaca kralı ve [[Metis]]'nin (akıllı hile) ustası **Ulysses**, tuzağı icat etti. Yunanlılar kamplarını yakıyor, gidiyormuş gibi yapıyor ve [[Bozcaada]] adası yakınlarında saklanıyor. Sahilde, içi askerlerle dolu kocaman, içi boş bir **tahta** bırakıyorlar."
+          "text": "Kuvvet yetmez. Ithaka kralı ve [[Metis]] (zeki kurnazlık) ustası **Odysseus** tuzağı icat eder. Yunanlar kampını yakar, gitmiş gibi yapar ve [[Bozcaada]] adası yakınında gizlenir. Kıyıda, içi asker dolu kocaman oyuk bir **tahta at** bırakırlar."
         },
         {
           "type": "image",
           "asset": "trojan_horse_wooden_troy_ancient_painting",
           "ratio": "4:3",
-          "caption": "Truva atı: aldatıcı adak, içeride askerler."
+          "caption": "Truva atı: aldatıcı adak, içinde askerler"
         },
         {
           "type": "paragraph",
-          "text": "Yunan casusu **Aksi takdirde**, Truva atlarını atın Athena'ya bir adak olduğuna ikna eder. Rahip **Laokon** tuzak diye bağırıyor: Onu görmezden geliyoruz. Atın girebilmesi için surların bir kısmı yıkıldı. Gece Yunanlılar dışarı çıkıp kapıları açtılar ve geri dönen ordu şehrin işini bitirdi."
+          "text": "Yunan casusu **Sinon**, atın Athena için bir adak olduğuna Truvalıları inandırır. Rahip **Laokoon** tuzak diye bağırır: dinlenmez. Atı sokmak için surların bir kısmını yıkarlar. Gece Yunanlar çıkar, kapıları açar, geri dönen ordu kenti bitirir."
         },
         {
           "type": "funFact",
-          "text": "Helen için \"bin gemiyi suya indiren yüz\" tabiri şair Christopher Marlowe'dan geliyor. Hatta şakalaşarak bin gemiye eşit güzellik birimi olan “helen”i bile icat ettik."
+          "text": "Helen için “bin gemiyi denize indiren yüz” deyişi şair Christopher Marlowe'dan gelir. Şaka yollu, bin gemiye eşit bir güzellik birimi “helen” bile uydurulmuştur."
         }
       ]
     },
     {
       "id": "course_179_la_guerre_de_troie_et_le_cheval_de_bois_p4",
-      "title": "Düşüş ve Miras",
+      "title": "Düşüş ve miras",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Troy yanıyor. Priamos öldürüldü. Hayatta kalanlar köle haline gelir. Yalnızca prens **Aeneas**, babası ve tanrıları [[Larlar]] ile birlikte kaçtı; daha sonra Roma efsanesi onu Roma'nın atası yapacaktı. Kazananlar bağışlanmadı: Tehlikeli dönüşleri ([[Kahramanların dönüşü (Nostoi)]]) genellikle trajiktir. Agamemnon öldürülür. Odysseus on yıl daha dolaşır."
+          "text": "Truva yanar. Priam öldürülür. Sağ kalanlar köle olur. Yalnız prens **Aineias** babası ve ev tanrıları [[Larlar]] ile kaçar; Roma efsanesi onu sonra Roma'nın atası yapacaktır. Galipler de kurtulmaz: tehlikeli dönüşleri ([[Kahramanların dönüşü (Nostoi)]]) çoğu zaman trajiktir. Agamemnon öldürülür. Odysseus on yıl daha dolaşır."
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "efsane",
-              "title": "Paris'in kararı",
-              "detail": "Helene'nin kaçırdığı altın elmayla savaş başlar."
+              "date": "Efsane",
+              "title": "Paris'in yargısı",
+              "detail": "Bir altın elma, Helen kaçırılır, savaş başlar."
             },
             {
               "date": "10 yıl",
-              "title": "Truva Kuşatması",
-              "detail": "Surlar ayakta; tanrılar ve kahramanlar çarpışır."
+              "title": "Truva kuşatması",
+              "detail": "Surlar dayanır; tanrılar ve kahramanlar çarpışır."
             },
             {
-              "date": "Ölümcül gece",
-              "title": "tahta at",
-              "detail": "Odysseus'un hilesi zaptedilemez şehrin kapısını açar."
+              "date": "Kader gecesi",
+              "title": "Tahta at",
+              "detail": "Odysseus'un kurnazlığı alınmaz kenti açar."
             },
             {
-              "date": "Sonrasında",
+              "date": "Sonra",
               "title": "Nostoi",
-              "detail": "Galiplerin dönüşü çoğu zaman talihsizliğe dönüşür."
+              "detail": "Galiplerin dönüşü çoğu zaman felakete döner."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Altın bir elma için yapılan ilahi bir tartışmadan doğan Truva Savaşı ancak on yıl sonra sona erdi: Zorla değil, Ulysses'in kurnazlığı ve şehri bir gecede yok eden tahta bir at sayesinde."
+          "text": "Bir altın elma yüzünden çıkan tanrısal kavgadan doğan Truva Savaşı ancak **on yıl** sonra biter: kuvvetle değil, Odysseus'un kurnazlığı ve kenti bir gecede yıkan tahta atla."
         }
       ]
     }

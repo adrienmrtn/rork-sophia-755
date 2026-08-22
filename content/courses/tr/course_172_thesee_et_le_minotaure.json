@@ -4,11 +4,11 @@
   "subtitle": "İplik, canavar, yelkenler",
   "subject": "mythologie",
   "subcategory": "Greece: the heroes",
-  "description": "Theseus, Ariadne'nin ipini kullanarak Minotaur'u öldürür. Ancak yelkenleri değiştirmeyi unutur; babası Aegeus kendini hâlâ kendi adını taşıyan denize atar.",
+  "description": "Theseus, Ariadne'nin ipliği sayesinde Minotaur'u öldürür. Ama yelkenleri değiştirmeyi unutur: babası Aigeus denize atlar, deniz hâlâ onun adını taşır.",
   "hero": {
     "image": "thesee_et_le_minotaure",
     "ratio": "16:9",
-    "hook": "Labirentte bir canavar. Dışarı çıkacak bir konu. Bir denizi vaftiz eden unutulmuş yelkenler."
+    "hook": "Bir labirentte bir canavar. Çıkmak için bir iplik. Bir denize adını veren unutulmuş yelkenler."
   },
   "sections": [
     {
@@ -18,101 +18,101 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Theseus**, Atina'nın kurucu kahramanı, Girit'teki [[Labirent]]'de saklanan yarı insan, yarı boğa yaratık **Minotor** ile yüzleşir. Hikaye cesareti, romantik kurnazlığı ve aile trajedisini birleştiriyor."
+          "text": "Atina'nın kurucu kahramanı **Theseus**, Girit'teki [[Labirent]] içinde gizlenen yarı insan yarı boğa **Minotaur** ile yüzleşir. Anlatı cesareti, âşık kurnazlığını ve aile trajedisini harmanlar."
         },
         {
           "type": "paragraph",
-          "text": "Theseus, canavarı öldürerek Atina'yı kanlı bir haraçtan kurtarır. Ancak unutulan bir detay, beyaz yerine siyah yelkenler babasının hayatına mal olacak ve adını Ege'ye verecektir."
+          "text": "Canavarı öldürerek Theseus Atina'yı kanlı bir haracıdan kurtarır. Ama unutulan bir ayrıntı, beyaz yerine kara yelkenler, babasının hayatına mal olur ve Ege Denizi'ne adını verir."
         }
       ]
     },
     {
       "id": "course_172_thesee_et_le_minotaure_p1",
-      "title": "Minotaur ve Atina'nın haraç",
+      "title": "Minotaur ve Atina'nın haracı",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Girit Kralı **Minolar**, denizler tanrısı **Poseidon**'ye beyaz bir boğa kurban etmeyi reddediyor. Poseidon intikam almak için Kraliçe **Pasiphaé**'de hayvanlara karşı bir tutku uyandırır. Minotaur doğdu. Minos, mucit [[Labirent]]'yi çıkışı olmayan bir hapishane inşa etmesi için görevlendirir: Labirent."
+          "text": "Girit kralı **Minos**, denizler tanrısı **Poseidon**'a beyaz bir boğa kurban etmeyi reddeder. Öcünü almak için Poseidon kraliçe **Pasiphae**'ye hayvana karşı bir tutku aşılar. Minotaur doğar. Minos, mucit [[Daedalus]] çıkışsız bir zindan kursun diye görevlendirir: Labirent."
         },
         {
           "type": "image",
           "asset": "theseus_minotaur_cretan_labyrinth_painting",
           "ratio": "4:3",
-          "caption": "Minotaur, Girit Labirenti'nde kilitli."
+          "caption": "Minotaur, Girit Labirenti'ne kapatılmış halde"
         },
         {
           "type": "paragraph",
-          "text": "Girit artık denize hakim oluyor: [[Talasokrasi]]. Kaybedilen bir savaştan sonra Atina her dokuz yılda bir canavara yiyecek olarak **yedi genç erkek ve yedi genç kızı** teslim etmek zorundadır. Üçüncü teslimatta, Kral **Ege**'nin oğlu **Theseus** gönüllü oluyor."
+          "text": "Girit o sırada denize hükmeder: bir [[Talasokrasi]]. Yenilen bir savaştan sonra Atina her dokuz yılda **yedi genç erkek ve yedi genç kız** canavara yem olarak vermek zorundadır. Üçüncü teslimatta kral **Aigeus**'un oğlu **Theseus** gönüllü olur."
         },
         {
           "type": "funFact",
-          "text": "Aegeus ve Theseus bir sinyal üzerinde anlaşırlar: Kahraman canlı dönerse **beyaz** yelken açar, kahraman ölürse **siyah** yelken açar. Bu detay bir dramayı belirleyecek."
+          "text": "Aigeus ile Theseus bir işaret üzerinde anlaşır: kahraman canlı dönerse **beyaz** yelkenler, ölmüşse **kara** yelkenler. Bu ayrıntı bir dramı karara bağlayacaktır."
         }
       ]
     },
     {
       "id": "course_172_thesee_et_le_minotaure_p2",
-      "title": "Ekmek kırıntıları",
+      "title": "Ariadne'nin ipliği",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Girit'te Minos'un kızı **Ariane**, Theseus'a aşık olur. Labirent'te gücün yeterli olmadığını biliyor. Daedalus'un yardımıyla ona bir yün yumağı verir: [[Ekmek kırıntıları]]. Onu girişe takıyor ve ileri doğru ilerledikçe ipliği çözüyor."
+          "text": "Girit'te Minos'un kızı **Ariadne** Theseus'a âşık olur. Labirentte gücün yetmeyeceğini bilir. Daidalos'un yardımıyla ona bir yün yumağı verir: [[Ariadne'nin konusu]]. Theseus onu girişe bağlar ve ilerlerken ipliği çözer."
         },
         {
           "type": "image",
           "asset": "ariadne_thread_theseus_labyrinth_painting",
           "ratio": "4:3",
-          "caption": "Ariadne Theseus'a hayatını kurtaracak ipi verir."
+          "caption": "Ariadne Theseus'a hayatını kurtaracak ipliği verir"
         },
         {
           "type": "paragraph",
-          "text": "Theseus Minotaur'u öldürür ve oradan çıkmak için ipliği geri sarar. Genç Atinalılar ve Ariadne ile birlikte kaçar. Ancak **Naxos** adasında onun uykusunu bırakır. Bazıları tanrı **Dionysos**'un onu karısı olarak istediğini söylüyor. Çaresiz kalan ve sonra tanrılaştırılan Ariadne, takımyıldız haline gelen altın bir taç alır."
+          "text": "Theseus Minotaur'u öldürür, sonra çıkmak için ipliği geri sarar. Genç Atinalılar ve Ariadne ile kaçar. Ama **Naksos** adasında onu uykudayken bırakır. Kimileri tanrı **Dionysos**'un onu eş istediğini söyler. Umuda kapılan, sonra tanrılaştırılan Ariadne, bir takımyıldız olan altın bir taç alır."
         }
       ]
     },
     {
       "id": "course_172_thesee_et_le_minotaure_p3",
-      "title": "Sounion Burnu'nun siyah yelkenleri",
+      "title": "Sunion Burnu'nun kara yelkenleri",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dönüş bir kutlama olmalı. Zafer sarhoşluğuna kapılan veya Ariadne'nin terk edilmesinden rahatsız olan Theseus, beyaz yelkenleri kaldırmayı unutur. Gemi siyah yelkenlerle Atina'ya yaklaşıyor."
+          "text": "Dönüş bir şenlik olmalıdır. Zaferin sarhoşluğu ya da Ariadne'yi bırakmanın bunalımıyla Theseus beyaz yelkenleri çekmeyi unutur. Gemi Atina'ya kara yelkenlerle yaklaşır."
         },
         {
           "type": "image",
           "asset": "cape_sounion_aegean_sea_cliff_sunset",
           "ratio": "4:3",
-          "caption": "Aegeus'un oğlunun dönüşünü izlediği Sounion Burnu."
+          "caption": "Sunion Burnu, Aigeus'un oğlunun dönüşünü gözlediği yer"
         },
         {
           "type": "paragraph",
-          "text": "**Sounion Burnu**'da yaşlı kral Aegeus ufku tarıyor. Sadece yasın karanlığını görüyor. Oğlunun öldüğüne kanaat getirerek kendini uçurumdan atar. O zamandan beri denize **Ege Denizi** adı verildi. Theseus kral olarak gelir... ve kendi ihmali yüzünden yetim kalır."
+          "text": "**Sunion Burnu**'nda yaşlı kral Aigeus ufku tarar. Yalnız yasın karasını görür. Oğlunun öldüğüne inanıp uçurumdan atlar. Deniz o günden beri onun adını taşır: **Ege Denizi**. Theseus kral olarak iner... ve kendi ihmaliyle yetim kalır."
         },
         {
           "type": "funFact",
-          "text": "“Theseus'un gemisi” felsefi bir paradoksa dönüştü: Tüm kalasları tek tek değiştirsek yine aynı tekne olur mu?"
+          "text": "“Theseus'un gemisi” felsefi bir paradoks olmuştur: tahtaları tek tek değiştirirsen, bu hâlâ aynı tekne midir, değil midir?"
         }
       ]
     },
     {
       "id": "course_172_thesee_et_le_minotaure_p4",
-      "title": "Atina kralı Theseus",
+      "title": "Theseus, Atina kralı",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Taç giyen Theseus, örgütleyici bir kral olur. [[Sinoeizm]] ona atfedilir: Atina çevresindeki Attika kasabalarının birleşmesi. Büyük şehir festivalleri olan [[Panathenaia]]'yi kurdu. Might, sağla birleşir."
+          "text": "Taç giyince Theseus örgütleyen bir kral olur. Ona [[Sinoeizm]] atfedilir: Attika köylerinin Atina çevresinde birleşmesi. Kentin büyük şenlikleri [[Panathenaia]] onun eliyle kurulur. Güç hukuka bağlanır."
         },
         {
           "type": "paragraph",
-          "text": "Onun saltanatı, [[Amazonlar]]'ye karşı mücadele gibi başka maceraları da içeriyor. Ancak Labirent damgasını taşıyor: Unutulmaya karşı savunmasız kalırken içinden çıkılamaz olanı nasıl çözeceğini bilmek. Theseus, bir aile trajedisinin küllerinden Atina'nın büyüklüğünü yaratıyor."
+          "text": "Saltanatı başka serüvenler de sayar, [[Amazonlar]] ile savaş gibi. Ama Labirent onun damgası olarak kalır: içinden çıkılmazı çözmeyi bilmek, yine de unutkanlığa açık kalmak. Theseus Atina'nın büyüklüğünü bir aile dramasının külleri üzerine kurar."
         },
         {
           "type": "takeaway",
-          "text": "**Theseus**, **Ariane**'nin ipliği sayesinde **Minotor**'yi öldürür. Yelkenleri değiştirmeyi unutarak Ege Denizi'ne adını veren babası **Ege**'nin intiharına neden olur."
+          "text": "**Theseus** **Ariadne**'nin ipliği sayesinde **Minotaur**'u öldürür. Yelkenleri değiştirmeyi unutunca babası **Aigeus**'un intiharına yol açar; Ege Denizi ona adını borçludur."
         }
       ]
     }

@@ -4,11 +4,11 @@
   "subtitle": "Mısır mitolojisi",
   "subject": "mythologie",
   "subcategory": "Other mythologies",
-  "description": "Cinayet, parçalanma, mumya ve intikam: Osiris ve Set'in döngüsü Mısır kraliyetini ve ölümden sonraki yaşam umudunu kurdu.",
+  "description": "Cinayet, parçalama, mumya ve öç: Osiris ile Set döngüsü Mısır krallığını ve ölümden sonra yaşam umudunu kurar.",
   "hero": {
     "image": "osiris_et_set_mythologie_egyptienne",
     "ratio": "16:9",
-    "hook": "Bir kardeş kralı öldürür, cesedini on dört parçaya böler. Bir kız kardeş onu bir araya getirir. Bir oğul intikam alır. Bütün Mısır bu suçtan çıkıyor."
+    "hook": "Bir kardeş kralı öldürür, bedenini on dört parçaya ayırır. Bir kız kardeş onu toplar. Bir oğul öç alır. Bütün Mısır bu suçtan çıkar."
   },
   "sections": [
     {
@@ -18,82 +18,82 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Osiris** ve **Ayarlamak** döngüsü, eski Mısır'ın büyük hikayesidir. Bu sadece bir aile trajedisi değil. Düzen ([[Ma'at]], uyum) ile kısır kaos arasındaki mücadeledir."
+          "text": "**Osiris** ile **Set** döngüsü eski Mısır'ın büyük anlatısıdır. Yalnızca bir aile trajedisi değildir. Düzen ([[Ma'at]], yani uyum) ile kısır kaos arasındaki savaştır."
         },
         {
           "type": "paragraph",
-          "text": "Mısırlılar, Osiris'in öldürülmesi, parçalanması ve dirilişi aracılığıyla krallığı, Nil'in bereketini ve ölümden sonraki yaşamı düşünürler. Yaşayan her firavun bir **Horus**'dur. Her ölü kral bir **Osiris**'ye dönüşür."
+          "text": "Osiris'in cinayeti, parçalanması ve dirilişi üzerinden Mısırlılar krallığı, Nil'in bereketini ve ölümden sonraki yaşamı düşünür. Yaşayan her firavun bir **Horus**'tur. Ölen her kral bir **Osiris** olur."
         }
       ]
     },
     {
       "id": "course_182_osiris_et_set_mythologie_egyptienne_p1",
-      "title": "Set Osiris'i öldürür",
+      "title": "Set, Osiris'i öldürür",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Osiris** uygarlaştırıcı bir kraldır. Kız kardeşi-karısı **IŞİD** ile birlikte tarım ve hukuk dersleri veriyor. Çöl ve şiddet tanrısı olan kardeşi **Ayarlamak** ondan nefret ediyor. Bir ziyafette Set muhteşem bir sandık sunar: Onu, ona tam olarak uyan kişiye sunacaktır."
+          "text": "**Osiris** uygarlaştırıcı bir kraldır. Eşi-kız kardeşi **İsis** ile tarımı ve yasaları öğretir. Çöl ve şiddet tanrısı kardeşi **Set** ondan nefret eder. Bir ziyafette Set görkemli bir sandık sunar: içine tam oturana verecektir."
         },
         {
           "type": "image",
           "asset": "osiris_egyptian_god_green_skin_painting",
           "ratio": "4:3",
-          "caption": "Yeşil tenli Osiris: ölüm değil, bitki örtüsü yeniden doğuyor."
+          "caption": "Yeşil tenli Osiris: ölüm değil, yeniden doğan bitki örtüsü"
         },
         {
           "type": "paragraph",
-          "text": "Osiris'in ölçülerini gizlice alan Set, onu yatırır, sandığı kilitler, kurşunla mühürler ve Nil'e atar. Daha sonra Isis cesedi bulduğunda Set onu **14 parçaya** keser ve vadiye dağıtır. Sağlam bir beden olmazsa ahirette huzur olmaz."
+          "text": "Osiris'in ölçülerini gizlice almış olan Set onu yatırır, sandığı kilitler, kurşunla mühürler ve Nil'e atar. Sonra İsis bedeni bulunca Set onu **14 parça**ya ayırır ve vadide dağıtır. Bütün bir beden yoksa öte dünyada huzur yoktur."
         },
         {
           "type": "funFact",
-          "text": "Osiris genellikle yeşile boyanır. Bu renk çürümeyi değil, Nil taşkınlarından sonra tarlalar gibi yeniden doğuşu söylüyor."
+          "text": "Osiris sık sık yeşil boyanır. Bu renk çürümeyi söylemez: Nil taşkınından sonra tarlalar gibi yeniden doğuşu söyler."
         }
       ]
     },
     {
       "id": "course_182_osiris_et_set_mythologie_egyptienne_p2",
-      "title": "IŞİD mumyayı icat etti",
+      "title": "İsis mumyayı icat eder",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**IŞİD**, büyük sihirbaz, parçaları aramaya başlar. Kız kardeşi Nephthys ve tanrı [[Anubis]]'nin yardımıyla, bir parça bulduğu her yerde bir kutsal alan inşa eder. Geriye bir sorun kalıyor: Fallus [[Oxyrhynchus]] balığı tarafından yutulmuş. IŞİD onun yerine yeni birini getiriyor."
+          "text": "Büyük büyücü **İsis** parçaları aramaya çıkar. Kız kardeşi Nephthys ve tanrı [[Anubis]] yardımıyla, her parça bulduğu yere bir tapınak diker. Bir sorun kalır: fallusu Nil balığı [[Oxyrhynchus]] yutmuştur. İsis yerine bir tane biçimlendirir."
         },
         {
           "type": "image",
           "asset": "isis_egyptian_goddess_winged_resurrection_painting",
           "ratio": "4:3",
-          "caption": "Kanatları uzatılmış İsis: Osiris'i canlandıran nefes."
+          "caption": "Kanatları açık İsis: Osiris'i canlandıran soluk"
         },
         {
           "type": "paragraph",
-          "text": "Isis ve Anubis, parçaları toplayıp şeritler halinde sararak ilk **mumyasını** yaratır. Isis, kanatlarını çırparak Osiris'e kısa bir hayat verdi. İşte o zaman, kaderinde düzeni yeniden sağlamak olan varis **Horus**'ye hamile kaldı."
+          "text": "Parçaları toplayıp sargılara sararak İsis ve Anubis **ilk mumyayı** yaratır. Bir kanat çırpışıyla İsis, Osiris'e kısa bir yaşam üfler. Tam o sırada düzeni geri getirecek vârisi **Horus**'u tasarlar."
         },
         {
           "type": "funFact",
-          "text": "Bazı metinlere göre İsis'in arayışı sırasında gözyaşları o kadar çoktu ki Mısırlılar bu gözyaşlarında Nil'in yıllık taşkınlarının efsanevi kökenini gördüler."
+          "text": "Bazı metinlere göre İsis'in arayışındaki gözyaşları öyle boldur ki Mısırlılar Nil'in yıllık taşkınının efsanevi kaynağını orada görürdü."
         }
       ]
     },
     {
       "id": "course_182_osiris_et_set_mythologie_egyptienne_p3",
-      "title": "Horus babasının intikamını alıyor",
+      "title": "Horus babasının öcünü alır",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Khemmis]] bataklıklarında gizlice büyüyen **Horus**, şahin formuna dönüşür. Bir yetişkin olarak, [[D]] başkanlığındaki tanrılar mahkemesi önünde tahtta hak iddia ediyor. Set ile çatışma onlarca yıl sürüyor: düellolar, hileler, yaralanmalar. Horus bir gözünü kaybeder; Set doğurganlığını kaybeder."
+          "text": "[[Khemmis]] bataklıklarında gizlice büyüyen **Horus** şahin biçiminde yetişir. Yetişkin olunca tanrıların mahkemesi önünde, [[ra]] başkanlığında tahtı ister. Set ile çatışma onyıllarca sürer: düellolar, kurnazlıklar, yaralar. Horus bir gözünü yitirir; Set bereketini."
         },
         {
           "type": "image",
           "asset": "eye_of_horus_egyptian_symbol_protection",
           "ratio": "4:3",
-          "caption": "Horus'un Gözü (Oudjat): kaostan yeniden kazanılan bütünlük."
+          "caption": "Horus'un gözü (Udjat): kaosun elinden geri alınan bütünlük"
         },
         {
           "type": "paragraph",
-          "text": "[[Thoth]] tarafından yeniden oluşturulan göz, şifa ve korumanın sembolü haline geliyor. Tanrılar karar verir: Set, özellikle güneş enerjili teknede [[Apophis]] yılanıyla savaşarak hizmet etmeye mahkum edilir. Horus taç giydi. Bundan sonra her firavun “yaşayan bir Horus” olacaktır."
+          "text": "[[Thoth]] tarafından yeniden kurulan göz, şifa ve koruma simgesi olur. Tanrılar karar verir: Set hizmete mahkûm edilir, özellikle güneş teknesinde yılan [[Apophis]] ile savaşarak. Horus taç giyer. Bundan böyle her firavun bir “yaşayan Horus” olacaktır."
         }
       ]
     },
@@ -104,15 +104,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mumyalanmış Osiris artık yeryüzünde hüküm süremez. Ölülerin krallığı **Amenti**'nin hükümdarı olur. Bakışları altında [[Ölülerin Kitabı]]'de anlatılan **kalbin tartılması** gerçekleşir. Ölen kişinin kalbi, Ma'at'ın tüyüne bakan bir terazinin üzerine yerleştirilir."
+          "text": "Mumyalanmış Osiris yeryüzünde hüküm süremez. Ölüler ülkesi **Amenti**'nin egemeni olur. Bakışı altında, [[Ölülerin Kitabı]] içinde anlatılan **kalp tartısı** yapılır. Ölenin kalbi, Ma'at'ın tüyünün karşısında teraziye konur."
         },
         {
           "type": "paragraph",
-          "text": "Eğer kalp hafifse, ölen kişi \"doğru sese sahiptir\" ve Osiris'in sonsuzluğuna girer. Hatalarla doluysa, canavar [[Ammit]] onu yutar: kesin unutuş. Kral ve köylü aynı kriterlere göre yargılanır. Horus şimdiki zamanı yönetir; Gerisini Osiris halleder."
+          "text": "Kalp hafifse ölü “sesi doğru” sayılır ve Osiris'in sonsuzluğuna girer. Suçlarla ağırsa canavar [[Ammit]] onu yutar: kesin unutuluş. Kral ve köylü aynı ölçütlerle yargılanır. Horus bugünü yönetir; Osiris bundan sonrasını sağlar."
         },
         {
           "type": "takeaway",
-          "text": "**Osiris** ve **Ayarlamak** efsanesi Mısır'ın üç sütununu oluşturur: kraliyet ailesi (yaşayan Horus), mumyalama (öteki yaşam için sağlam vücut) ve Osiris'in bakışı altında ölümden sonra adalet umudu."
+          "text": "**Osiris** ile **Set** efsanesi Mısır'ın üç direğini kurar: krallık (yaşayan Horus), mumyalama (öte dünya için bütün beden) ve Osiris'in bakışı altında ölümden sonra adalet umudu."
         }
       ]
     }

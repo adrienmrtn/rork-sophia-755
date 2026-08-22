@@ -1,14 +1,14 @@
 {
   "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum",
-  "title": "Aztek Tanrıları ve İnsan Kurbanları",
+  "title": "Aztek tanrıları ve insan kurbanları",
   "subtitle": "Güneş için kan",
   "subject": "mythologie",
   "subcategory": "Other mythologies",
-  "description": "Azteklerde güneş ancak tanrılar kan aldığında doğar. İmparatorluklarının kalbinde sert ama tutarlı bir kozmoloji var.",
+  "description": "Azteklerde güneş, tanrılar kan almazsa doğmaz. Sert ama tutarlı bir kozmoloji, imparatorluklarının kalbindedir.",
   "hero": {
     "image": "les_dieux_azteques_et_les_sacrifices_humains",
     "ratio": "16:9",
-    "hook": "Kan olmasaydı güneş dururdu: Azteklerin kozmik borcu budur."
+    "hook": "Kan olmazsa güneş durur: Azteklerin kozmik borcu budur."
   },
   "sections": [
     {
@@ -18,61 +18,61 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Aztekler** veya Meksika, evrenin kırılgan olduğuna inanıyor. Güneşin yoluna devam edebilmesi için tanrıların kana ihtiyacı var. Teklifler olmasaydı kaos geri dönerdi."
+          "text": "**Aztekler**, yani Mexica, evrenin kırılgan olduğuna inanır. Güneş yoluna devam etsin diye tanrıların kana ihtiyacı vardır. Sunu olmadan kaos geri gelir."
         },
         {
           "type": "paragraph",
-          "text": "İspanyolları dehşete düşüren şey açık bir fikre dayanıyordu: Tanrıların ve insanların hayatları birbirine bağlıydı. Bu kozmoloji şu şekilde işliyor."
+          "text": "İspanyolları dehşete düşüren şey, açık bir fikre dayanır: tanrıların yaşamı ile insanların yaşamı bağlıdır. İşte bu kozmolojinin işleyişi."
         }
       ]
     },
     {
       "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p1",
-      "title": "Beş Güneş: Zaten dört kez ölmüş bir dünya",
+      "title": "Beş Güneş: dört kez ölmüş bir dünya",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Beş Güneş]] efsanesine göre dört çağ çoktan felaketlerle yok olmuştur. Depremle sonuçlanacağı vaat edilen beşinci güneşi, [[Nahui Ollin]] (“4-Hareket”) yaşıyoruz."
+          "text": "[[Beş Güneş]] mitine göre dört çağ çoktan felaketlerle yok olmuştur. Biz beşinci güneşin, [[Nahui Ollin]] (“4-Hareket”) çağının içindeyiz; sonu depremlerle gelecektir."
         },
         {
           "type": "image",
           "asset": "aztec_five_suns_teotihuacan_pyramid_sun_stone",
           "ratio": "4:3",
-          "caption": "Güneş Taşı: Aztek zamanı birbirini takip eden dönemlere dönüşür."
+          "caption": "Güneş Taşı: Aztek zamanı ardışık çağlar halinde döner"
         },
         {
           "type": "paragraph",
-          "text": "Merkezi platodaki kutsal bir şehir olan **Teotihuacán**'de tanrılar güneş ve ay olmak için kendilerini ateşe atarlar. Ama güneş hala duruyor. Diğer tanrılar daha sonra bunu harekete geçirmek için kendi kanlarını sunarlar. Erkekler bu borcu devralır."
+          "text": "Orta platonun kutsal kenti **Teotihuacán**'da tanrılar güneş ve ay olmak için bir ateşe atlar. Ama güneş kıpırdamaz. Öteki tanrılar o zaman onu yürütmek için kendi kanlarını sunar. İnsanlar bu borcu miras alır."
         },
         {
           "type": "funFact",
-          "text": "Aztekler için fedakarlık karşılıksız bir zulüm değildir: İlahi bir borcun geri ödenmesidir, [[Beş Güneş'in kozmolojisi ve kozmik borç]]."
+          "text": "Aztekler için kurban bedava bir zulüm değildir: tanrısal bir borcun ödenmesidir, [[Beş Güneş'in kozmolojisi ve kozmik borç]]."
         }
       ]
     },
     {
       "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p2",
-      "title": "Bir ikilikler panteonu",
+      "title": "İkilikler panteonu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Merkezi tanrı [[Huitzilopochtli]], savaş tanrısı ve öğle güneşidir. Her gece, sabaha yeniden doğmak için karanlıkla savaşır. Onun yanında [[Tlaloc]] yağmur, dolayısıyla mahsul veya kıtlık verir."
+          "text": "Merkezdeki tanrı, savaşın ve öğle güneşinin tanrısı [[Huitzilopochtli]] olur. Her gece karanlıkla savaşır, sabah yeniden doğmak için. Yanında [[Tlaloc]] yağmuru, yani hasadı ya da kıtlığı verir."
         },
         {
           "type": "image",
           "asset": "huitzilopochtli_aztec_sun_god_codex",
           "ratio": "4:3",
-          "caption": "Huitzilopochtli, beslenmeyi talep eden savaşçı güneş."
+          "caption": "Huitzilopochtli, beslenmeyi isteyen savaşçı güneş"
         },
         {
           "type": "paragraph",
-          "text": "[[Quetzalcoatl]], Tüylü Yılan, bilgiyi ve medeniyeti bünyesinde barındırır. Rakibi [[Tezcatlipoca]], Dumanlı Ayna geceyi, kaderi ve büyüyü yönetiyor. Dünyanın kendisinin de korkunç bir yüzü var: [[Kaplama]], yiyip bitiren ana tanrıça."
+          "text": "[[Quetzalcoatl]], Tüylü Yılan, bilgiyi ve uygarlığı cisimleştirir. Rakibi [[Tezcatlipoca]], Dumanlı Ayna, geceye, kadere ve büyüye hükmeder. Toprağın kendisinin de korkunç bir yüzü vardır: yutan ana tanrıça [[Kaplama]]."
         },
         {
           "type": "funFact",
-          "text": "Tanrılara sunulan değerli kana [[chalchihuatl]], yani “değerli su” denir. Çıkarılan kalbin gökyüzüne dönen bir güneş kıvılcımı olduğu düşünülüyor."
+          "text": "Tanrılara sunulan değerli kana [[chalchihuatl]] denir, “değerli su”. Çıkarılan yürek, göğe iade edilen bir güneş kıvılcımı gibi düşünülür."
         }
       ]
     },
@@ -83,35 +83,35 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aztekler kurban elde etmek için [[Xochiyaoyotl]], yani \"çiçek savaşları\" düzenlerler: amacı öldürmek değil, teklif edilmeye değer yaşayan savaşçıları yakalamak olan ritüel dövüşler."
+          "text": "Kurban bulmak için Aztekler [[Xochiyaoyotl]] düzenler, “çiçek savaşları”: amaç öldürmek değil, sunuya layık canlı savaşçıları yakalamaktır."
         },
         {
           "type": "image",
           "asset": "aztec_sacrifice_pyramid_templo_mayor_codex",
           "ratio": "4:3",
-          "caption": "Tapınağın tepesinde kurban: Güneşe sunulan kalp."
+          "caption": "Tapınak tepesinde kurban: yürek güneşe sunulur"
         },
         {
           "type": "paragraph",
-          "text": "Göl kıyısındaki başkent Tenochtitlán'daki **Templo Belediye Başkanı**'nin tepesinde bir rahip, keskin bir volkanik taş olan **Obsidyen**'den bir bıçakla kalbi çıkarıyor. Bu jest halka açıktır, ciddidir ve güneşe sunulan bir hizmet olarak düşünülür."
+          "text": "Göl başkenti Tenochtitlán'daki **Templo Mayor**'un tepesinde bir rahip, keskin volkanik taş **obsidyen** bıçakla yüreği çıkarır. Jest kamusal ve törenseldir; güneşe verilen bir hizmet gibi düşünülür."
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "efsane",
+              "date": "Mit",
               "title": "Tanrıların kurbanı",
-              "detail": "Güneş ilerlemek için ilahi kanı alır."
+              "detail": "Güneş, ilerlemek için tanrısal kan alır."
             },
             {
               "date": "İmparatorluk",
               "title": "Çiçek savaşları",
-              "detail": "Teklifler için savaşçıları yakalamak."
+              "detail": "Sunu için savaşçı yakalamak."
             },
             {
               "date": "1519",
               "title": "İspanyol şoku",
-              "detail": "Cortes gelir; sistem çöker."
+              "detail": "Cortés gelir; sistem çöker."
             }
           ]
         }
@@ -119,20 +119,20 @@
     },
     {
       "id": "course_192_les_dieux_azteques_et_les_sacrifices_hum_p4",
-      "title": "Dünyanın sonu, kalıcı izler",
+      "title": "Bir dünyanın sonu, kalıcı izler",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "İspanyol kronikleri bazen fethi haklı çıkarmak için rakamları şişiriyor. Ancak kurban sistemi oldukça gerçektir. **1519**'de **Hernán Cortés**'nin gelişi bu ritüel evrenin sonunu hızlandırıyor."
+          "text": "İspanyol vakayinameleri fethi haklı göstermek için sayıları bazen şişirir. Ama kurban sistemi gerçektir. **1519**'da **Hernán Cortés**'in gelişi bu ritüel evrenin sonunu hızlandırır."
         },
         {
           "type": "paragraph",
-          "text": "Bununla birlikte, Aztek figürleri senkretizm içinde varlığını sürdürüyor: Guadalupe Bakiresi, bir zamanlar bir ana tanrıçayla bağlantılı olan bir sitede görünüyor. Bu fedakarlıkları anlamak, evrenin hayatta kalmasını bireyin üstüne koyan bir kültürü anlamaktır."
+          "text": "Yine de Aztek figürleri senkretizmde yaşar: Guadalupe Bakiresi, bir zamanlar bir ana tanrıçayla bağlı bir yerde görünür. Bu kurbanları anlamak, kozmosun varlığını bireyin üstüne koyan bir kültürü anlamaktır."
         },
         {
           "type": "takeaway",
-          "text": "Azteklerde insan kanı güneşi besliyordu. Tanrılar zaten hayatlarıyla ödediler: İnsanlar bu borcu fedakarlık yoluyla, özellikle de **çiçek savaşları** aracılığıyla ödüyorlar."
+          "text": "Azteklerde insan kanı güneşi besler. Tanrılar yaşamlarını çoktan vermiştir: insanlar bu borcu kurbanla öder, özellikle **çiçek savaşları** yoluyla."
         }
       ]
     }

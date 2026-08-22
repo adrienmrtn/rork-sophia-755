@@ -270,7 +270,7 @@ TURKISH_RULES = LanguageRules(
         re.IGNORECASE,
     ),
     leading_articles=("bir ", "bu ", "şu "),
-    leftover_extra_skip=frozenset(),
+    leftover_extra_skip=frozenset({"dans"}),  # Turkish noun "dance"; French "in"
     check_a_an=False,
     flag_space_thousands=True,
     thousands_hint="should use a period (30.000)",

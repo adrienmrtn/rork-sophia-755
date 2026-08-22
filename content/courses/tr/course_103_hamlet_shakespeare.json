@@ -1,14 +1,14 @@
 {
   "id": "course_103_hamlet_shakespeare",
   "title": "Hamlet, Shakespeare",
-  "subtitle": "1601 civarında",
+  "subtitle": "yaklaşık 1601",
   "subject": "litterature",
   "subcategory": "Anglo-Saxons & world literature",
-  "description": "1601 civarında Shakespeare, babasının öldürülmesi karşısında tereddüt eden bir prens olan Hamlet'i yazdı. İntikam, simüle edilmiş delilik ve “Olmak ya da olmamak” arasında bilincin modern kahramanı doğuyor.",
+  "description": "Yaklaşık 1601'de Shakespeare, babasının cinayeti karşısında tereddüt eden prens Hamlet'i yazar. İntikam, yalancı delilik ve “Olmak ya da olmamak” ile bilincin modern kahramanı doğar.",
   "hero": {
     "image": "hamlet_shakespeare",
     "ratio": "16:9",
-    "hook": "Bir hayalet, kararsız bir prens ve tiyatronun en ünlü varoluşsal sorusu."
+    "hook": "Bir hayalet, tereddüt eden bir prens ve tiyatronun en ünlü varoluş sorusu."
   },
   "sections": [
     {
@@ -18,102 +18,102 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**1601**'ye, **William Shakespeare**, **[[Hamlet, Danimarka Prensi]]** yazıyor. Bu yalnızca bir intikam trajedisi değil: Eylem ile şüphe arasında bölünmüş modern bir vicdanın portresi. “**Olmak ya da eksik**” monologu Batı tiyatrosunun en temel varoluşsal sorusu haline geldi."
+          "text": "Yaklaşık **1601**'de **William Shakespeare** **[[Hamlet, Danimarka Prensi]]** oyununu yazar. Bu yalnızca bir intikam tragedyası değildir. Eylem ile kuşku arasında bölünmüş modern bir bilincin portresidir. “**Olmak ya da olmamak**” monoloğu, Batı tiyatrosunun varoluş sorusu olmuştur."
         },
         {
           "type": "paragraph",
-          "text": "Hayaletler, delilik simülasyonu, son düello: Oyun, doğaüstünü ve psikolojiyi zamanından önce harmanlıyor. Hamlet, hemen harekete geçen klasik dürtüsel kahramanlar gibi değildir. Hızlı hareket edemeyecek kadar çok düşünüyor ve onu ölümsüz yapan da tam olarak bu. Shakespeare burada kendisi dahil her şeyden şüphe eden bir karakter icat ediyor."
+          "text": "Hayaletler, yalancı delilik, son düello: oyun doğaüstünü erken bir psikolojiyle karıştırır. Hamlet, hemen eyleme geçen klasik kahramanlara benzemez. Hızlı davranamayacak kadar çok düşünür; onu ölümsüz kılan da budur. Shakespeare burada her şeyden, kendinden bile kuşku duyan bir karakter icat eder."
         }
       ]
     },
     {
       "id": "course_103_hamlet_shakespeare_p1",
-      "title": "Elizabeth dönemi bağlamı: bir dünya tiyatrosu",
+      "title": "Elizabeth dönemi: dünyanın tiyatrosu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Shakespeare, İngiliz tiyatrosunun zirvesindeyken **Elizabeth ben** yönetiminde yazdı. Oyunlar, zengin ve fakirlerin bütçelerine göre ayakta veya oturarak omuz omuza verdikleri, gökyüzüne açık, dairesel ahşap bir tiyatro olan **Globe Tiyatrosu**'da oynanıyor. Oyuncuların tamamı erkek: Kadın rolleri dönemin yasalarına uygun olarak ergenler tarafından oynanıyor."
+          "text": "Shakespeare, İngiliz tiyatrosunun zirvesinde, **I. Elizabeth** döneminde yazar. Oyunlar **Globe Tiyatrosu**'nda oynanır: gökyüzüne açık, yuvarlak ahşap bir tiyatro. Zengin ve yoksul, kesesine göre ayakta veya oturarak yan yanadır. Oyuncuların hepsi erkektir. Kadın rollerini, dönemin yasası gereği ergenler oynar."
         },
         {
           "type": "image",
           "asset": "william_shakespeare_portrait",
           "ratio": "4:3",
-          "caption": "William Shakespeare, dünyada en çok konuşulan trajedinin yazarı."
+          "caption": "William Shakespeare: dünyanın en çok yorumlanan tragedyasının yazarı"
         },
         {
           "type": "funFact",
-          "text": "Ophélie rolü, zamanın geleneklerine uygun olarak sesi henüz değişmemiş bir genç tarafından yaratıldı."
+          "text": "Ofelya rolünü, sesi henüz kalınlaşmamış bir ergen yarattı. Dönemin âdeti buydu."
         },
         {
           "type": "image",
           "asset": "globe_theatre_london_elizabethan",
           "ratio": "16:9",
-          "caption": "The Globe Theatre: Hamlet'in seyircinin beğenisini kazandığı Elizabeth dönemi tiyatro sahnesi."
+          "caption": "Globe Tiyatrosu: Hamlet'in seyirciyi kazandığı Elizabeth dönemi sahnesi"
         },
         {
           "type": "paragraph",
-          "text": "Shakespeare düz gerçekçilikten çok kalbin hakikatini arar. Hamlet, **Protestan Reformasyonu**'un Alman üniversite şehri olan **[[Wittenberg]]**'deki eğitiminden dönüyor. Oyunda Shakespeare, **Claudius**'yi tuzağa düşürmek ve kralın suçunu doğrulamak için \"Fare Kapanı\" adlı oyun içinde bir oyun sahneliyor. Tiyatro dünyanın aynası ve hakikatin aracı haline gelir."
+          "text": "Shakespeare yavan gerçekçilikten çok yüreğin doğruluğunu arar. **[[Wittenberg]]**, **Protestan Reformu**'nun beşiği bir Alman üniversite kentidir. Hamlet oradan döner. Oyunda Shakespeare, kral **Claudius**'u tuzağa düşürmek ve suçunu sınamak için oyun içinde oyun kurar: “Fare Kapanı”. Tiyatro dünyanın aynası ve bir doğruluk aracı olur."
         }
       ]
     },
     {
       "id": "course_103_hamlet_shakespeare_p2",
-      "title": "İntikam sarmalı ve tereddütün ağırlığı",
+      "title": "İntikam sarmalı ve tereddüdün ağırlığı",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Danimarka Kralı, Kraliçe **Gertrude** ile evlenip tahta çıkan kardeşi **Claudius** tarafından öldürülür. Ölen kralın hayaleti suçu **Hamlet**'ye açıklıyor. Görev açık görünüyor: babanın intikamını almak. Ancak Hamlet şüphe ediyor: Bu hayalet gerçekten onun babası mı, yoksa aldatıcı bir iblis mi? Hıristiyan ahlakına göre intikam adil midir?"
+          "text": "Danimarka kralını kardeşi **Claudius** öldürür. Claudius kraliçe **Gertrude** ile evlenir ve tahtı alır. Ölü kralın hayaleti suçu **Hamlet**'e açıklar. Görev net görünür: babayı öde. Ama Hamlet kuşku duyar. Bu hayalet gerçekten babası mıdır, yoksa aldatan bir cin mi? İntikam, Hıristiyan ahlakının gözünde adil midir?"
         },
         {
           "type": "paragraph",
-          "text": "**[[Misilleme kanunu]]** ile cinayeti kınayan Hıristiyan vicdanı arasında kalan adam, şüphe uyandırmadan soruşturma yapmak için deli numarası yapıyor. Bu strateji başarısız olur: danışman **Polonius**'nin kızı **Ophelia**'nin kalbini kırar ve yanlışlıkla bir halının arkasına saklanarak Polonius'u öldürür. Bu sarmal, neredeyse tüm ana karakterlerin yok olduğu Danimarka sarayındaki son katliama yol açar."
+          "text": "**[[Lex talionis]]** ile cinayeti yasaklayan Hıristiyan vicdan arasında sıkışır. Kuşku uyandırmadan soruşturmak için deliliği taklit eder. Strateji bozulur. Danışman **Polonius**'un kızı **Ofelya**'nın yüreğini kırar. Halının ardında gizlenen Polonius'u da yanlışlıkla öldürür. Çark, Danimarka sarayının son katliamına gider. Başlıca kişilerin neredeyse hepsi ölür."
         }
       ]
     },
     {
       "id": "course_103_hamlet_shakespeare_p3",
-      "title": "Danimarka'nın melankolisi ve yozlaşması",
+      "title": "Melankoli ve Danimarka'nın çürümesi",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "\"Danimarka Krallığı'nda çürümüş bir şeyler var. » Oyun ahlaki çürümeyi solur. Hamlet'in dili hastalık, çürüme ve ceset imgeleriyle doludur. **[[16. yüzyılda melankoli]]** onu parlak ama felçli kılar: Shakespeare'in zamanında, yaratıcılıkla ama aynı zamanda eylemsizlikle bağlantılı tıbbi bir ruh hali olarak kabul edilirdi."
+          "text": "“Danimarka krallığında çürümüş bir şeyler var.” Oyun ahlaki bir çürümeyle nefes alır. Hamlet'in dili hastalık, çürüme ve ceset imgeleriyle doludur. **[[16. yüzyılda melankoli]]** onu parlak ama felçli kılar. Shakespeare'in çağında bu, yaratıcılığa da eylemsizliğe de bağlı tıbbi bir mizaç sayılırdı."
         },
         {
           "type": "image",
           "asset": "hamlet_skull_yorick_delacroix_painting",
           "ratio": "4:3",
-          "caption": "Hamlet ve Yorick'in kafatası: ölüm bize her türlü hırsın beyhudeliğini hatırlatır."
+          "caption": "Hamlet ve Yorick'in kafatası: ölüm her hırsın boşluğunu hatırlatır"
         },
         {
           "type": "quote",
-          "text": "Olmak ya da olmamak, bütün mesele bu.",
-          "attribution": "William Shakespeare, Hamlet, perde III, sahne 1"
+          "text": "Olmak ya da olmamak, işte bütün mesele bu.",
+          "attribution": "William Shakespeare, Hamlet, III. perde, 1. sahne"
         },
         {
           "type": "paragraph",
-          "text": "Bu ünlü monolog varoluşun kendisini sorguluyor: Yaşamın acılarına katlanmak mı yoksa onlardan kaçmak için ölmek mi daha iyidir? Harekete geçmek, yozlaşmış bir dünyada kirlenmek demektir; harekete geçmemek kötülüğün zafer kazanmasına izin vermektir. Hamlet, düşünce ile eylemi uzlaştıramayan ilk modern kahraman olur. **[[Elizabeth dönemi intikamı ve onuru]]** kısmen bu tıkanıklığı açıklıyor: Onurlu bir adam, ailesine yapılan saldırının intikamını almak zorundaydı, ancak bu görev hukuk ve ahlakla gerilime girdi."
+          "text": "Bu ünlü monolog varoluşun kendisini sorar: hayatın acısına katlanmak mı, yoksa kaçmak için ölmek mi yeğdir? Eylemek, çürümüş bir dünyada kirlenmektir. Eylememek, kötülüğün kazanmasına izin vermektir. Hamlet, düşünce ile eylemi barıştıramayan ilk modern kahraman olur. **[[Elizabeth dönemi intikamı ve onuru]]** tıkanmasını kısmen açıklar: namuslu bir adam ailesine yapılan hakareti öderdi, ama bu görev yasa ve ahlakla çatışırdı."
         }
       ]
     },
     {
       "id": "course_103_hamlet_shakespeare_p4",
-      "title": "Evrensel bir mitin mirası ve nesilleri",
+      "title": "Evrensel bir mitin mirası",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dört yüzyıl boyunca Hamlet durmadan yeniden yorumlandı. 19. yüzyılın **Romantikleri**, işkence gören sanatçıyı orada gördü; **Freud**, **[[Oedipus kompleksi]]**'yi okudu. Oyun, bir ebeveynin kaybını, dünyanın karanlığını ve yetişkinliğe acı dolu geçişi anlatıyor."
+          "text": "Dört yüzyıldır Hamlet durmadan yeniden yorumlanır. 19. yüzyılın **Romantikler**i onda bunalımlı sanatçıyı gördü. **Freud** onda **[[Oedipus kompleksi]]** okudu. Oyun bir ebeveynin yitimi, dünyanın karanlığı ve yetişkinliğe acılı geçiş üzerine konuşur."
         },
         {
           "type": "paragraph",
-          "text": "Etkisi tiyatronun ötesine geçiyor: sinema, opera, çizgi roman, popüler psikoloji. Shakespeare bir ortaçağ hayalet öyküsünü insan bilincine ilişkin metafizik bir araştırmaya dönüştürüyor. Hamlet, düşünmenin zaten bir tür acıya dönüştüğü kararsızlık trajedisi olmaya devam ediyor."
+          "text": "Etkisi tiyatronun ötesine taşar: sinema, opera, çizgi roman, popüler psikoloji. Shakespeare ortaçağ bir hayalet hikâyesini, insan bilinci üzerine metafizik bir soruşturmaya çevirir. Hamlet kararsızlığın tragedyası olarak kalır. Düşünmek bile bir acı biçimi olur."
         },
         {
           "type": "takeaway",
-          "text": "**Hamlet**, bir kahramanın hızlı davrandığı için değil, derinden şüphe ettiği için ölümsüz olabileceğini gösteriyor. Burada Shakespeare tiyatronun modernliğini icat ediyor: Düşünmek zaten acı çekmek demektir."
+          "text": "**Hamlet** bir kahramanın hızlı davrandığı için değil, derin kuşku duyduğu için ölümsüz olabileceğini gösterir. Shakespeare burada tiyatronun modernliğini icat eder: düşünmek, zaten acı çekmektir."
         }
       ]
     }

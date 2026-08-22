@@ -1,14 +1,14 @@
 {
   "id": "course_212_les_paradis_fiscaux_expliques",
-  "title": "Vergi cennetleri açıklandı",
-  "subtitle": "10.000 milyar saklandı",
+  "title": "Vergi cennetleri, açık anlatım",
+  "subtitle": "Gizlenen 10.000 milyar",
   "subject": "comprendreLeMonde",
   "subcategory": "Economy & society",
-  "description": "Küresel servetin yaklaşık yüzde 10'u şeffaf olmayan bölgelerde vergiden kaçıyor. Bu sistem nasıl çalışıyor ve neden bu kadar dayanıklı?",
+  "description": "Dünya servetinin yaklaşık %10'u opak topraklarda vergiden kaçar. Bu sistem nasıl işler ve neden bu kadar direnir?",
   "hero": {
     "image": "les_paradis_fiscaux_expliques",
     "ratio": "16:9",
-    "hook": "Cayman Adaları'nda 65.000 nüfus ve 100.000'in üzerinde işletme bulunmaktadır. Vergi cennetleri dünyasına hoş geldiniz."
+    "hook": "Cayman Adaları'nda 65.000 kişi yaşar, 100.000'den fazla şirket vardır. Hoş geldin vergi cennetleri dünyasına."
   },
   "sections": [
     {
@@ -18,89 +18,89 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Çoğu zaman küçük olan bazı bölgeler, şirketlerin ve büyük servetlerin menşe ülkelerinin vergisinden neredeyse tamamen kurtulmalarına olanak tanıyor. Biz bunlara **vergi cennetleri** diyoruz. Yaklaşık 10 trilyon doların, yani dünya servetinin %8 ila 10'unun burada barındırıldığı tahmin ediliyor."
+          "text": "Çoğu zaman minicik bazı topraklar, şirketlerin ve büyük servetlerin kendi ülkelerindeki vergiden neredeyse tümüyle kaçmasına izin verir. Buna **vergi cennetleri** denir. Orada yaklaşık 10.000 milyar dolar, yani dünya servetinin %8-10'u, durduğu tahmin edilir."
         },
         {
           "type": "paragraph",
-          "text": "Bu sadece muhasebecilerin sorunu değil: devletleri, hastaneleri veya okulları finanse edebilecek yılda 600 milyar dolardan mahrum bırakıyor. Bu gizli sistemin nasıl çalıştığını ve neden düzenleme girişimlerine bu kadar iyi direndiğini burada bulabilirsiniz."
+          "text": "Bu yalnız muhasebecilerin sorunu değildir: devletleri yılda 600 milyar dolardan yoksun bırakır, hastane veya okul finanse edebilecek bir paradır. İşte bu sessiz sistem nasıl işler ve düzenleme denemelerine neden bu kadar direnir."
         }
       ]
     },
     {
       "id": "course_212_les_paradis_fiscaux_expliques_p1",
-      "title": "Para nasıl gizlenir?",
+      "title": "Para nasıl saklanır",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bir vergi cenneti üç temele dayanır: sıfıra yakın vergiler, büyük ölçüde şeffaflık ve diğer ülkelerle çok az işbirliği. Bu bölgeler böylece [[Açık deniz]] ekonomisi dediğimiz dünyanın her yerinden sermaye çekiyor."
+          "text": "Bir vergi cenneti üç ayağa dayanır: sıfıra yakın vergiler, büyük bir opaklık ve diğer ülkelerle az işbirliği. Bu topraklar böylece dünyanın her yerinden sermaye çeker, buna [[açık deniz]] ekonomisi denir."
         },
         {
           "type": "paragraph",
-          "text": "Bu bölgelerin çoğunda paravan şirket kurmak mümkündür: ofisi veya çalışanı olmayan, yalnızca kağıt üzerinde var olan bir işletme. Tek amacı genellikle paranın gerçek sahibinin (intifa hakkı sahibi) kimliğini gizlemektir."
+          "text": "Bu toprakların birkaçında bir perde şirket kurmak mümkündür: ofisi de çalışanı da olmayan, yalnızca kâğıtta var olan bir şirket. Tek amacı çoğu zaman paranın gerçek sahibinin, nihai yararlanıcının, kimliğini saklamaktır."
         },
         {
           "type": "image",
           "asset": "cayman_islands_offshore_banking_paradise",
           "ratio": "4:3",
-          "caption": "Cayman Adaları, küçük boyutlarına rağmen dünyanın en büyük finans merkezlerinden biri."
+          "caption": "Cayman Adaları, küçük boyutuna rağmen dünyanın en büyük finans merkezlerinden biri"
         },
         {
           "type": "funFact",
-          "text": "Cayman Adaları'nda yalnızca 65.000 kişi yaşamaktadır, ancak burada 100.000'den fazla şirket kayıtlıdır: Paris'ten daha küçük bir alanda, banka mevduatları açısından dünyadaki beşinci finans merkezidir."
+          "text": "Cayman Adaları'nda yalnızca 65.000 kişi yaşar, ama 100.000'den fazla şirket kayıtlıdır: Paris'ten küçük bir toprakta banka mevduatları için dünya beşincisi finans merkezidir."
         }
       ]
     },
     {
       "id": "course_212_les_paradis_fiscaux_expliques_p2",
-      "title": "Kâr etme sanatı ortadan kalkıyor",
+      "title": "Bir kârı yok etme sanatı",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Büyük şirketler için amaç mutlaka yasa dışı değildir: **Vergi miktarından** bahsediyoruz, yani daha az vergi ödemek için her ülkenin kurallarının ustaca kullanılması anlamına geliyor. Ana araca [[Transfer fiyatlandırması]] denir: Bir şirket, verginin en düşük olduğu yerde karını göstermek için kendi bağlı ortaklıkları arasındaki borsaların fiyatını kendisi belirler."
+          "text": "Büyük şirketler için hedef mutlaka yasadışı değildir: **vergi optimizasyonu** denir, yani her ülkenin kurallarını ustaca kullanarak daha az vergi ödemek. Başlıca araç [[transfer fiyatlandırması]] adını taşır: bir şirket kendi bağlı ortaklıkları arasındaki alışverişin fiyatını kendisi koyar, kârını verginin en düşük olduğu yerde gösterir."
         },
         {
           "type": "paragraph",
-          "text": "Yaygın bir yöntem, bir marka veya patentin vergi cennetinde bulunan bir bağlı kuruluşa devredilmesidir. Örneğin Fransa'da bulunan diğer yan kuruluşlar, bu markayı kullanma hakkı için çok büyük meblağlar ödemek zorunda kalacak. Bu ödemeler vergiye tabi karlarını yerel olarak azaltırken, vergi cennetinde artırıyor."
+          "text": "Sık bir yöntem, bir markayı veya patenti vergi cennetindeki bir bağlı ortağa taşımaktır. Örneğin Fransa'daki diğer bağlı ortaklıklar o zaman bu markayı kullanma hakkı için kocaman meblağlar ödemek zorunda kalır. Bu ödemeler yerelde vergilendirilen kârı düşürür, vergi cennetinde ise şişirir."
         },
         {
           "type": "funFact",
-          "text": "Fransızca \"vergi cenneti\" kelimesi bir çeviri hatasından gelmektedir: İngilizce \"vergi cenneti\" diyor, para için güvenli bir liman (cennet), bir cennet (cennet) değil. Seslerin karışıklığı kelimenin anlamını değiştirdi."
+          "text": "“Vergi cenneti” deyimi bir çeviri kaymasından gelir: İngilizce “tax haven” der, para için güvenli bir liman (haven), bir cennet (heaven) değil. Ses benzerliği sözcüğün anlamını değiştirdi."
         }
       ]
     },
     {
       "id": "course_212_les_paradis_fiscaux_expliques_p3",
-      "title": "Dünya tepki veriyor (biraz)",
+      "title": "Dünya (biraz) tepki verir",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "2008'deki mali kriz ve ardından 2016'da [[Panama Belgeleri]]'nin yayınlanması bir öfke dalgasına neden oldu. OECD ve G20'nin baskısı altında, bankaların artık yabancı müşterilerine ilişkin bilgileri otomatik olarak vergi idarelerine iletmesi gerekiyor."
+          "text": "2008 finans krizi, sonra 2016'da [[Panama Belgeleri]] sızıntısının yayımlanması bir öfke dalgası doğurdu. OECD ve G20 baskısı altında bankalar artık yabancı müşterilerinin bilgilerini vergi idarelerine otomatik iletmek zorundadır."
         },
         {
           "type": "paragraph",
-          "text": "En önemli ilerleme, çok uluslu şirketler için minimum %15 vergi oranı belirleyen uluslararası bir anlaşmayla 2021'de gerçekleşti. Fikir: İşletmeleri çekmek için vergileri sürekli düşürerek ülkelerin birbirleriyle rekabet etmesini önlemek. Eğer bir şirket vergi cennetinde sadece %5'lik bir ödeme yapıyorsa, kendi ülkesi artık kalan %10'u talep edebilir."
+          "text": "En belirgin adım 2021'de geldi: çokuluslu şirketler için %15'lik asgari bir vergi oranı koyan uluslararası bir anlaşma. Fikir: ülkelerin şirket çekmek için vergilerini sonsuza dek indirmesini engellemek. Bir şirket bir vergi cennetinde yalnızca %5 öderse kendi ülkesi artık kalan %10'u isteyebilir."
         }
       ]
     },
     {
       "id": "course_212_les_paradis_fiscaux_expliques_p4",
-      "title": "Vergi adaleti hâlâ kırılgan",
+      "title": "Hâlâ kırılgan bir vergi adaleti",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En büyük servetler vergiden kaçtığında, vergi yükünün daha büyük bir kısmını orta sınıflar ve küçük yerel işletmeler üstleniyor. Bu durum aynı zamanda kaynak yetersizliği nedeniyle sağlık ve eğitim gibi kamu hizmetlerini de zayıflatıyor."
+          "text": "En büyük servetler vergiden kaçınca yükün daha büyük payını orta sınıflar ve yerli küçük şirketler taşır. Bu da sağlık veya eğitim gibi kamu hizmetlerini, imkân yokluğundan, zayıflatır."
         },
         {
           "type": "paragraph",
-          "text": "Savaş artık dijitale doğru ilerliyor: Çevrimiçi platformların artık bir ülkede para kazanmak için ofislere ihtiyacı yok, bu da vergi sınırlarını giderek daha geçirgen hale getiriyor. Yönetimler artık anormallikleri tespit etmek için büyük verileri kullanıyor ve şirketlerin gerçek sahiplerinin kimliğini ortaya çıkaran kamu kayıtlarını talep ediyor."
+          "text": "Savaş bugün dijitale kayar: çevrimiçi platformların bir ülkede para kazanmak için ofise ihtiyacı kalmaz, vergi sınırlarını giderek daha geçirgen kılar. İdareler artık anormallikleri yakalamak için büyük veri kullanır ve şirketlerin gerçek sahiplerinin kimliğini açığa vuran kamuya açık siciller ister."
         },
         {
           "type": "takeaway",
-          "text": "Vergi cennetleri, bankacılık gizliliği ve neredeyse sıfır vergilendirme sayesinde dünya servetinin yaklaşık %10'unu barındırıyor. 2021'den bu yana küresel minimum vergi oranı olan %15, bu kaçakçılığı sınırlamaya çalışıyor ancak mücadele kazanılmaktan çok uzak."
+          "text": "Vergi cennetleri banka sırrı ve neredeyse sıfır vergi sayesinde dünya servetinin yaklaşık %10'unu barındırır. 2021'den beri %15'lik küresel bir asgari vergi oranı bu kaçışı sınırlamaya çalışır, ama savaş henüz kazanılmaktan uzaktır."
         }
       ]
     }
