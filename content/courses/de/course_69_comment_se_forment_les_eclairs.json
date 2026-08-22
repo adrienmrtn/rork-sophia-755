@@ -4,11 +4,11 @@
   "subtitle": "Gewitter",
   "subject": "sciences",
   "subcategory": "Die Erde und das Universum",
-  "description": "Blitze sind keine Zauberei: Es handelt sich um eine gewaltige elektrische Entladung in einer Gewitterwolke. Hier erfahren Sie, wie sie sich vorbereitet und wie sie dann zuschlägt.",
+  "description": "Ein Blitz ist keine Magie: Es ist eine gewaltige elektrische Entladung in einer Gewitterwolke. So bereitet sie sich vor, und so schlägt sie ein.",
   "hero": {
     "image": "comment_se_forment_les_eclairs",
     "ratio": "16:9",
-    "hook": "Im Bruchteil einer Sekunde steigt die Luft auf 30.000 °C. Fünfmal heißer als die Oberfläche der Sonne."
+    "hook": "In einem Bruchteil einer Sekunde wird die Luft 30.000 °C heiß. Fünfmal heißer als die Sonnenoberfläche."
   },
   "sections": [
     {
@@ -18,74 +18,74 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ein Blitz setzt im Handumdrehen enorme Energie frei. Die Luft im Blitzkanal steigt auf ca. **30.000 °C**. Donner ist nur das Geräusch dieser brutalen Hitze."
+          "text": "Ein Blitz setzt in einem Augenblick kolossale Energie frei. Die Luft im Blitzkanal steigt auf etwa **30.000 °C**. Der Donner ist nur der Lärm dieser plötzlichen Hitze."
         },
         {
           "type": "paragraph",
-          "text": "Um Blitze zu verstehen, muss man drei Schritte befolgen: wie die Wolke aufgeladen wird, wie die Elektrizität ihren Weg findet und warum man danach Donner hört."
+          "text": "Wer den Blitz verstehen will, folgt drei Schritten: wie die Wolke sich auflädt, wie die Elektrizität einen Weg findet, und warum man den Donner danach hört."
         }
       ]
     },
     {
       "id": "course_69_comment_se_forment_les_eclairs_p1",
-      "title": "In der Cloud fallen die Gebühren getrennt an",
+      "title": "In der Wolke trennen sich die Ladungen",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Blitze treten hauptsächlich in  auf: sehr große Gewitterwolken, die bis zu **15 km** aufsteigen können. Im Inneren steigt und sinkt die Luft sehr stark. [[Cumulonimbus]]"
+          "text": "Blitze entstehen vor allem in den [[Cumulonimbus]]: sehr großen Gewitterwolken, die bis etwa **15 km** aufsteigen können. Im Innern steigt und fällt die Luft sehr heftig."
         },
         {
           "type": "image",
           "asset": "cumulonimbus_thunderstorm_cloud",
           "ratio": "4:3",
-          "caption": "Der Cumulonimbus: die Sturmfabrik."
+          "caption": "Der Cumulonimbus: die Gewitterfabrik."
         },
         {
           "type": "paragraph",
-          "text": "In diesem Chaos steigen kleine **Eiskristalle** auf und schwerere Eiskörner () sinken ab. Beim Zusammenstoß kommt es zum Austausch elektrischer Ladungen. Nach und nach wird die Oberseite der Wolke eher positiv, die Basis eher negativ. [[Schneeregen]]"
+          "text": "In diesem Chaos steigen kleine **Eiskristalle** auf, und schwerere Eiskörner ([[Graupel]]) sinken. Wenn sie zusammenstoßen, tauschen sie elektrische Ladungen. Nach und nach wird der Wolkenkopf eher positiv, die Basis eher negativ."
         },
         {
           "type": "funFact",
-          "text": "Der Maracaibo-See in Venezuela ist einer der am stärksten von Blitzen heimgesuchten Orte der Welt: Einen Großteil des Jahres über werden dort fast täglich Stürme beobachtet."
+          "text": "Der Maracaibo-See in Venezuela gehört zu den am stärksten vom Blitz getroffenen Orten der Erde: fast tägliche Gewitter beobachtet man dort einen großen Teil des Jahres."
         }
       ]
     },
     {
       "id": "course_69_comment_se_forment_les_eclairs_p2",
-      "title": "Wenn die Luft loslässt: der Ausfluss",
+      "title": "Wenn die Luft nachgibt: die Entladung",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Luft ist ein schlechter Leiter. Wenn der Ladungsunterschied jedoch zu groß wird (häufig **Hunderte Millionen Volt**), gibt die Luft schließlich nach. Moleküle verlieren Elektronen: Sie werden leitend. Es ist der . [[Luftionisierung]]"
+          "text": "Luft ist ein schlechter Leiter. Wird der Ladungsunterschied zu groß (oft **Hunderte Millionen Volt**), gibt die Luft nach. Die Moleküle verlieren Elektronen: sie werden leitfähig. Das ist die [[Ionisation der Luft]]."
         },
         {
           "type": "paragraph",
-          "text": "Ein unsichtbarer Kanal verlässt die Wolke in kleinen Sprüngen. Aus dem Boden ragen Stromnetze vor allem an Punkten (Bäume, Blitzableiter, Gebäude) empor. Wenn beide zusammenkommen, schließt sich der Stromkreis."
+          "text": "Ein unsichtbarer Kanal geht von der Wolke in kleinen Sprüngen aus. Vom Boden steigen elektrische Fäden vor allem von Spitzen auf (Bäume, Blitzableiter, Gebäude). Treffen sich beide, schließt sich der Kreis."
         },
         {
           "type": "paragraph",
-          "text": "Das große Licht, das wir sehen, der **Bogen zurück**, steigt hauptsächlich vom Boden in Richtung der Wolke. Der Strom kann Zehntausende Ampere erreichen. Im selben Kanal können mehrere Entladungen aufeinander folgen: daher der Flackereffekt."
+          "text": "Das große Licht, das man sieht, der **Rückschlag**, steigt vor allem vom Boden zur Wolke. Der Strom kann Zehntausende Ampere erreichen. Mehrere Entladungen können im selben Kanal folgen: daher das Flackern."
         }
       ]
     },
     {
       "id": "course_69_comment_se_forment_les_eclairs_p3",
-      "title": "Warum kommt der Donner später?",
+      "title": "Warum der Donner danach kommt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Der Blitz erwärmt die Luft so schnell, dass sie sich plötzlich ausdehnt. Diese Schockwelle wird zu **Donner**. Das Licht kommt fast sofort; Der Schall breitet sich mit etwa **340 m/s** aus."
+          "text": "Der Blitz erhitzt die Luft so schnell, dass sie sich mit einem Schlag ausdehnt. Diese Schockwelle wird zum **Donner**. Das Licht kommt fast sofort an; der Schall läuft mit etwa **340 m/s**."
         },
         {
           "type": "paragraph",
-          "text": "Einfacher Tipp: Zählen Sie die Sekunden zwischen Blitz und Donner und teilen Sie sie dann durch **3**. Sie erhalten eine Schätzung der Entfernung in Kilometern."
+          "text": "Ein einfacher Trick: die Sekunden zwischen Blitz und Donner zählen und durch **3** teilen. So erhält man eine Schätzung der Entfernung in Kilometern."
         },
         {
           "type": "funFact",
-          "text": "Die Erde wird im Durchschnitt von etwa **100 Blitze pro Sekunde** getroffen. In Frankreich kommt es pro Jahr zu etwa **Eine Million** Einschlägen am Boden."
+          "text": "Die Erde wird im Schnitt von etwa **100 Blitzen pro Sekunde** getroffen. In Frankreich zählt man rund **eine Million** Einschläge am Boden pro Jahr."
         }
       ]
     },
@@ -96,15 +96,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Blitze bleiben gefährlich, insbesondere im Freien, in der Nähe einzelner Bäume oder von Gewässern. Es löst auch Brände aus. Aber es hat eine weniger bekannte Wirkung: Es hilft bei der Produktion von Stickstoffverbindungen, die den Boden durch Regen düngen."
+          "text": "Der Blitz bleibt gefährlich, vor allem im Freien, nahe isolierter Bäume oder am Wasser. Er löst auch Brände aus. Aber er hat einen weniger bekannten Effekt: Er hilft, Stickstoffverbindungen zu bilden, die mit dem Regen die Böden düngen."
         },
         {
           "type": "paragraph",
-          "text": "Über den Stürmen fingen Kameras auch bizarre Phänomene ein [[Kobolde]], wie zum Beispiel: kurze Leuchten in der oberen Atmosphäre, die vom Boden aus für das bloße Auge unsichtbar sind."
+          "text": "Über den Gewittern haben Kameras auch seltsame Phänomene festgehalten, etwa die [[Kobolde]]: kurze Leuchten in der hohen Atmosphäre, vom Boden mit bloßem Auge unsichtbar."
         },
         {
           "type": "takeaway",
-          "text": "In einem Cumulonimbus trennen Eis/Graupel-Kollisionen die Ladungen. Wenn die Spannung zu hoch wird, wird die Luft ionisiert: Der Blitz erhitzt sich auf etwa 30.000 °C und diese plötzliche Ausdehnung erzeugt Donner."
+          "text": "Im Cumulonimbus trennen Zusammenstöße von Eis und Graupel die Ladungen. Wird die Spannung zu groß, ionisiert sich die Luft: der Blitz erhitzt auf etwa 30.000 °C, und diese plötzliche Ausdehnung erzeugt den Donner."
         }
       ]
     }
