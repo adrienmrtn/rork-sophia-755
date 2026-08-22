@@ -1,14 +1,14 @@
 {
   "id": "course_75_la_photosynthese_expliquee_simplement",
-  "title": "Fotosíntesis explicada de forma sencilla",
+  "title": "La fotosíntesis explicada de forma simple",
   "subtitle": "Plantas y energía",
   "subject": "sciences",
   "subcategory": "La Tierra y el Universo",
-  "description": "Las plantas hacen algo extraordinario: cuecen el azúcar con luz, agua y aire. Y nos regalan oxígeno.",
+  "description": "Las plantas hacen algo extraordinario: cocinan azúcar con luz, agua y aire. Y nos regalan el oxígeno.",
   "hero": {
     "image": "la_photosynthese_expliquee_simplement",
     "ratio": "16:9",
-    "hook": "Una hoja es una cocina solar: luz, agua, aire... y aquí está el azúcar."
+    "hook": "Una hoja es una cocina solar: luz, agua, aire… y sale azúcar."
   },
   "sections": [
     {
@@ -18,55 +18,55 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Imagina una planta en miniatura en cada hoja. Se necesitan tres ingredientes mundanos: **luz del suelo**, **agua** de las raíces y **CO₂** del aire. Sale con **azúcar** para crecer y libera **oxígeno**."
+          "text": "Imagina una fábrica minúscula en cada hoja. Toma tres ingredientes banales: la **luz del Sol**, el **agua** de las raíces y el **CO₂** del aire. Saca **azúcar** para crecer y expulsa **oxígeno**."
         },
         {
           "type": "paragraph",
-          "text": "Esta hazaña se llama **fotosíntesis**. Sin él, no habría bosques, ni oxígeno respirable, ni casi ninguna vida compleja en la Tierra."
+          "text": "Esa hazaña se llama la **fotosíntesis**. Sin él, no hay bosques, no hay oxígeno respirable, casi no hay vida compleja en la Tierra."
         }
       ]
     },
     {
       "id": "course_75_la_photosynthese_expliquee_simplement_p1",
-      "title": "¿Dónde sucede en la hoja?",
+      "title": "Dónde ocurre en la hoja",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En la célula vegetal, los orgánulos verdes, los **cloroplastos**, albergan el . Este pigmento captura principalmente el azul y el rojo de la luz. El verde vuelve: por eso las hojas nos parecen verdes. [[La clorofila]]"
+          "text": "En la célula vegetal, unos orgánulos verdes, los **cloroplastos**, albergan la [[clorofila]]. Ese pigmento capta sobre todo el azul y el rojo de la luz. El verde, él, se devuelve: por eso las hojas nos parecen verdes."
         },
         {
           "type": "image",
           "asset": "leaf_photosynthesis_sunlight_chloroplasts",
           "ratio": "auto",
-          "caption": "Las hojas capturan la luz solar para la fotosíntesis."
+          "caption": "Las hojas captan la luz del Sol para la fotosíntesis"
         },
         {
           "type": "paragraph",
-          "text": "La ecuación simple: CO₂ + agua + luz → azúcar + oxígeno. El gas entra por unos diminutos poros, los . El agua sube desde las raíces. El azúcar se convierte en madera, fruta, raíz; el oxígeno pasa al aire. [[estomas]]"
+          "text": "La ecuación simple: CO₂ + agua + luz → azúcar + oxígeno. El gas entra por poros minúsculos, los [[estomas]]. El agua sube de las raíces. El azúcar se vuelve madera, frutos, raíces; el oxígeno se va al aire."
         },
         {
           "type": "funFact",
-          "text": "La clorofila “rechaza” el verde. Prefiere el azul y el rojo, más eficaces para excitar sus electrones y poner en marcha la máquina de energía."
+          "text": "La clorofila “rechaza” el verde. Prefiere el azul y el rojo, más eficaces para excitar sus electrones y poner en marcha la máquina energética."
         }
       ]
     },
     {
       "id": "course_75_la_photosynthese_expliquee_simplement_p2",
-      "title": "Dos pasos: capturar y luego crear",
+      "title": "Dos tiempos: capturar, luego fabricar",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Primero, la **bombilla**. La luz rompe las moléculas de agua. El oxígeno se escapa. La energía se almacena en dos “baterías” químicas, la **ATP** y la **NADPH**."
+          "text": "Primero, la **fase luminosa**. La luz rompe moléculas de agua. El oxígeno se escapa. La energía se guarda en dos “pilas” químicas, el **ATP** y el **NADPH**."
         },
         {
           "type": "paragraph",
-          "text": "A continuación, la fase de fabricación del ****, el [[El ciclo de Calvin]], que lleva el numero del quimico**Melvin Calvin**. Con la energía de las baterías, la planta transforma el carbono del CO₂ en glucosa. No es necesaria la luz solar directa en esta etapa, pero depende completamente de lo que haya producido la luz antes."
+          "text": "Luego, la **fase de fabricación**, el [[ciclo de Calvin]], nombrado por el químico **Melvin Calvin**. Con la energía de las pilas, la planta ensambla el carbono del CO₂ en glucosa. No hace falta sol directo en esta etapa, pero depende por completo de lo que la luz ha producido antes."
         },
         {
           "type": "funFact",
-          "text": "Para seguir el camino del carbono en la hoja, Calvin utilizó isótopos radiactivos procedentes de la investigación de la bomba atómica. Premio Nobel en **1961**."
+          "text": "Para seguir el trayecto del carbono en la hoja, Calvin usó isótopos radiactivos salidos de las investigaciones sobre la bomba atómica. Premio Nobel en **1961**."
         }
       ]
     },
@@ -77,34 +77,34 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hace unos **Hace 2.400 millones de años**, las bacterias fotosintéticas, las **cianobacterias**, comenzaron a liberar oxígeno masivamente. Esta es la **Gran Oxidación**. Para muchas organizaciones de la época, era un veneno."
+          "text": "Hace unos **2.400 millones de años**, unas bacterias fotosintéticas, las **cianobacterias**, se ponen a expulsar oxígeno a gran escala. Es la **Gran Oxidación**. Para muchos organismos de la época, era un veneno."
         },
         {
           "type": "paragraph",
-          "text": "Luego el oxígeno permitió la capa de ozono y una respiración mucho más eficiente. El aire que respiramos es, básicamente, el “producto de desecho” de miles de millones de años de fotosíntesis."
+          "text": "Luego el oxígeno permitió la capa de ozono y una respiración mucho más eficaz. El aire que respiramos es, a grandes rasgos, el “residuo” de miles de millones de años de fotosíntesis."
         },
         {
           "type": "funFact",
-          "text": "Aproximadamente **la mitad** del oxígeno de la Tierra proviene del fitoplancton de los océanos, no solo de los bosques."
+          "text": "Alrededor de **la mitad** del oxígeno terrestre viene del fitoplancton de los océanos, no solo de los bosques."
         }
       ]
     },
     {
       "id": "course_75_la_photosynthese_expliquee_simplement_p4",
-      "title": "Una producción modesta, un papel inmenso",
+      "title": "Un rendimiento modesto, un papel inmenso",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Una hoja sólo convierte **1 a 3%** de la energía solar recibida en biomasa. A escala global, esto es suficiente para alimentar las cadenas alimentarias y absorber enormes cantidades de CO₂."
+          "text": "Una hoja solo convierte el **1 a 3%** de la energía solar recibida en biomasa. A escala del planeta, eso basta sin embargo para alimentar las cadenas alimentarias y absorber cantidades enormes de CO₂."
         },
         {
           "type": "paragraph",
-          "text": "De ahí el interés por los bosques, los océanos… e incluso la fotosíntesis artificial para el clima. Una babosa de mar, *Elysia clorótica*, llega incluso a “robar” cloroplastos a las algas para vivir un poco de energía solar."
+          "text": "De ahí el interés de los bosques, de los océanos… e incluso de la fotosíntesis artificial para el clima. Una babosa de mar, *Elysia chlorotica*, llega a “robar” cloroplastos a las algas para vivir un poco a energía solar."
         },
         {
           "type": "takeaway",
-          "text": "La fotosíntesis transforma la luz, el agua y el CO₂ en azúcar y regenera el oxígeno. La cocina solar es la base de casi toda la vida."
+          "text": "La fotosíntesis transforma luz, agua y CO₂ en azúcar, y regenera el oxígeno. Es la cocina solar en la base de casi toda la vida."
         }
       ]
     }

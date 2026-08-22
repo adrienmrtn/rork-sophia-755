@@ -4,7 +4,7 @@
   "subtitle": "Nervios e iones",
   "subject": "sciences",
   "subcategory": "La Tierra y el Universo",
-  "description": "Pensar, latir el corazón, levantar un brazo: todo esto circula ante todo como electricidad viva, transportada no por electrones, sino por iones.",
+  "description": "Pensar, latir el corazón, levantar un brazo: todo eso circula primero como electricidad viva, llevada no por electrones, sino por iones.",
   "hero": {
     "image": "comment_fonctionne_l_electricite_dans_notre_corps",
     "ratio": "16:9",
@@ -18,74 +18,74 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En una toma de corriente la corriente son **electrones** que circulan. En tu cuerpo es diferente: son **iones**, átomos cargados, que entran y salen de las células. Este flujo crea las señales que hacen que el corazón piense, lata y el músculo se contraiga."
+          "text": "En un enchufe de pared, la corriente son **electrones** que circulan. En tu cuerpo es distinto: son **iones**, átomos cargados, que entran y salen de las células. Ese flujo crea las señales que hacen pensar, latir el corazón y contraer un músculo."
         },
         {
           "type": "paragraph",
-          "text": "Sin esta electricidad viva, no hay pensamiento, ni gesto, ni pulso. Comprender el cuerpo significa también comprender este lenguaje de cargas."
+          "text": "Sin esa electricidad viva, ningún pensamiento, ningún gesto, ningún pulso. Comprender el cuerpo es también comprender ese lenguaje de cargas."
         }
       ]
     },
     {
       "id": "course_78_comment_fonctionne_l_electricite_dans_no_p1",
-      "title": "El clic eléctrico de la neurona.",
+      "title": "El clic eléctrico de la neurona",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Una **neurona** en reposo no envía mensaje, pero “carga”. Su membrana separa el interior y el exterior de la célula. Gracias al [[bombas de sodio-potasio]] mantiene un [[potencial de reposo]] de aproximadamente **-70 milivoltios**: el interior es más negativo que el exterior."
+          "text": "Una **neurona** en reposo no envía mensaje, pero se “carga”. Su membrana separa el interior y el exterior de la célula. Gracias a las [[bombas de sodio-potasio]], mantiene un [[potencial de reposo]] de unos **-70 milivoltios**: el interior es más negativo que el exterior."
         },
         {
           "type": "image",
           "asset": "neuron_electrical_signal_brain",
           "ratio": "auto",
-          "caption": "Las neuronas se comunican mediante breves impulsos eléctricos."
+          "caption": "Las neuronas se comunican por breves impulsos eléctricos"
         },
         {
           "type": "paragraph",
-          "text": "Cuando llega un estímulo, se abren canales. El sodio entra de golpe. La polaridad está invertida: es el [[El potencial de acción neuronal]], una señal de todo o nada que recorre el axón, a veces a más de un metro. Como una onda eléctrica."
+          "text": "Cuando llega un estímulo, se abren unos canales. El sodio entra de un golpe. La polaridad se invierte: es el [[potencial de acción]], una señal de todo o nada que corre a lo largo del axón, a veces un metro. Como una ola eléctrica."
         },
         {
           "type": "funFact",
-          "text": "El cerebro en vigilia produce alrededor de **20 vatio**, suficiente para un pequeño LED. Sin embargo, consume casi el **20%** de las calorías del cuerpo."
+          "text": "El cerebro despierto produce unos **20 vatios**, bastante para un LED pequeño. Sin embargo, consume cerca del **20%** de las calorías del cuerpo."
         }
       ]
     },
     {
       "id": "course_78_comment_fonctionne_l_electricite_dans_no_p2",
-      "title": "En la sinapsis, la electricidad se convierte en química.",
+      "title": "En la sinapsis, la electricidad se vuelve química",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En realidad, las neuronas no se tocan entre sí. Entre ellos, un pequeño espacio: la **sinapsis**. La señal eléctrica no puede saltarlo. Luego el extremo del axón libera , moléculas mensajeras como la acetilcolina o . [[Los neurotransmisores]] [[glutamato]]"
+          "text": "Las neuronas no se tocan de verdad. Entre ellas, un foso minúsculo: la **sinapsis**. La señal eléctrica no puede saltarlo. Entonces el extremo del axón libera [[neurotransmisores]], moléculas mensajeras como la acetilcolina o el [[glutamato]]."
         },
         {
           "type": "paragraph",
-          "text": "Estos mensajeros se adhieren a la siguiente neurona como una llave en una cerradura. Dependiendo del mensaje, excitan o inhiben. Miles de estas decisiones simultáneas forman el pensamiento."
+          "text": "Esos mensajeros se fijan en la neurona siguiente como una llave en una cerradura. Según el mensaje, excitan o inhiben. Miles de esas decisiones simultáneas forman el pensamiento."
         },
         {
           "type": "funFact",
-          "text": "Algunas señales nerviosas viajan a **120 m/s** (más de **430 kilómetros por hora**). Lo suficiente como para reaccionar ante una quemadura en el dedo del pie en una fracción de segundo."
+          "text": "Algunas señales nerviosas viajan a **120 m/s** (más de **430 km/h**). Bastante para reaccionar a una quemadura en el dedo del pie en una fracción de segundo."
         }
       ]
     },
     {
       "id": "course_78_comment_fonctionne_l_electricite_dans_no_p3",
-      "title": "El corazón tiene su propio marcapasos.",
+      "title": "El corazón tiene su propio marcapasos",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "El corazón no espera una orden del cerebro para cada latido. En la aurícula derecha, el **nodo sinusal** genera sus propios impulsos, aproximadamente **60 a 100** veces por minuto en reposo. La señal se propaga, primero contrae las aurículas y luego los ventrículos."
+          "text": "El corazón no espera una orden del cerebro para cada latido. En la aurícula derecha, el **nódulo sinusal** genera sus propios impulsos, unas **60 a 100** veces por minuto en reposo. La señal se propaga, contrae primero las aurículas y luego los ventrículos."
         },
         {
           "type": "paragraph",
-          "text": "Esta actividad es lo suficientemente fuerte como para leerse en la piel: es el **electrocardiograma (ECG)**. Si el ritmo se altera, hablamos de **aritmia**. Entonces el corazón late desordenadamente y bombea mal."
+          "text": "Esa actividad es bastante fuerte para leerse en la piel: es el **electrocardiograma (ECG)**. Si el ritmo se desregula, se habla de **arritmia**. El corazón late entonces de forma desordenada y bombea mal."
         },
         {
           "type": "funFact",
-          "text": "La anguila eléctrica utiliza el mismo principio de células excitables, pero en serie: hasta **600 voltios**, suficientes para paralizar a sus presas."
+          "text": "La anguila eléctrica usa el mismo principio de células excitables, pero en serie: hasta **600 voltios**, bastante para paralizar una presa."
         }
       ]
     },
@@ -96,15 +96,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Para levantar el brazo, un potencial de acción desciende hasta el músculo. La acetilcolina desencadena una onda eléctrica local y luego una liberación de calcio. Las proteínas musculares se deslizan unas sobre otras: contracción."
+          "text": "Para levantar el brazo, un potencial de acción baja hasta el músculo. La acetilcolina dispara una ola eléctrica local y luego una liberación de calcio. Las proteínas del músculo se deslizan una sobre otra: contracción."
         },
         {
           "type": "paragraph",
-          "text": "**desfibrilación** utiliza el mismo principio a la inversa: una descarga externa restablece todas las células \"a cero\" para que el nodo sinusal reanude el ritmo. Las prótesis biónicas también captan estas débiles señales para controlar una mano artificial."
+          "text": "La **desfibrilación** usa el mismo principio al revés: un choque externo pone todas las células “a cero” para que el nódulo sinusal retome el tempo. Unas prótesis biónicas captan también esas señales débiles para mandar una mano artificial."
         },
         {
           "type": "takeaway",
-          "text": "Los seres vivos hablan mediante flujos de iones y potenciales de acción. El pensamiento, el corazón y los músculos comparten el mismo lenguaje eléctrico."
+          "text": "Lo vivo habla en flujos de iones y en potenciales de acción. Pensamiento, corazón y músculos comparten el mismo lenguaje eléctrico."
         }
       ]
     }
