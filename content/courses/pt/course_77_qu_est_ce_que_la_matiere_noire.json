@@ -1,14 +1,14 @@
 {
   "id": "course_77_qu_est_ce_que_la_matiere_noire",
-  "title": "O que é matéria escura?",
+  "title": "O que é a matéria escura?",
   "subtitle": "Cosmos invisível",
   "subject": "sciences",
   "subcategory": "A Terra e o Universo",
-  "description": "Nós nunca a vimos. No entanto, sem ele, as galáxias desmoronariam. A matéria escura é a cola invisível do Universo.",
+  "description": "Ninguém nunca a viu. Mesmo assim, sem ela as galáxias se desfaziam. A matéria escura é a cola invisível do Universo.",
   "hero": {
     "image": "qu_est_ce_que_la_matiere_noire",
     "ratio": "16:9",
-    "hook": "Imagine uma cola invisível que mantém as galáxias unidas. Não a vemos, mas vemos o que ela está escondendo."
+    "hook": "Imagine uma cola invisível que segura as galáxias. Você não a vê, mas vê o que ela segura."
   },
   "sections": [
     {
@@ -18,51 +18,51 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Você sente o vento sem vê-lo: os galhos se movem, os cabelos voam. **equipamento de segurança** é um pouco assim na escala do cosmos. Não brilha, não reflete luz, não bloqueia nenhum raio. Nós apenas o “vemos” pelo que ele faz se mover."
+          "text": "Você sente o vento sem ver: os galhos mexem, o cabelo voa. A **matéria escura** é um pouco isso na escala do cosmos. Ela não brilha, não reflete a luz, não bloqueia raio nenhum. A gente só a “vê” pelo que ela faz mexer."
         },
         {
           "type": "paragraph",
-          "text": "Representaria aproximadamente **27%** do Universo, cinco vezes mais do que toda a matéria comum: estrelas, planetas, gás. Sem ele, as galáxias girariam rápido demais para se manterem unidas."
+          "text": "Ela representaria cerca de **27%** do Universo, cinco vezes mais que toda a matéria comum: estrelas, planetas, gás. Sem ela, as galáxias girariam rápido demais para se manter juntas."
         }
       ]
     },
     {
       "id": "course_77_qu_est_ce_que_la_matiere_noire_p1",
-      "title": "Estrelas muito rápidas na periferia",
+      "title": "Estrelas rápidas demais na borda",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nos anos **1970**, a astrônoma americana **Vera Rubin** mediu a velocidade das estrelas em galáxias espirais. No Sistema Solar, quanto mais nos afastamos do Sol, mais lentamente giramos. Ela esperava o mesmo padrão."
+          "text": "Nos anos **1970**, a astrônoma americana **Vera Rubin** mede a velocidade das estrelas nas galáxias espirais. No Sistema Solar, quanto mais a gente se afasta do Sol, mais devagar se gira. Ela esperava o mesmo esquema."
         },
         {
           "type": "image",
           "asset": "dark_matter_galaxy_cluster",
           "ratio": "auto",
-          "caption": "A matéria escura trai a sua presença através do seu efeito gravitacional nos aglomerados de galáxias."
+          "caption": "A matéria escura trai sua presença pelo efeito gravitacional sobre os aglomerados de galáxias"
         },
         {
           "type": "paragraph",
-          "text": "Agora as estrelas na borda giravam **rapidamente** quanto as do centro. Com apenas a massa visível, eles deveriam ter voado. Foi, portanto, necessário ter uma massa invisível, um **halo**, um envelope esférico invisível ao redor da galáxia, para mantê-los afastados.  tornou-se a principal prova da matéria escura. [[Curva de rotação da galáxia]]"
+          "text": "Só que as estrelas da borda giravam **tão rápido** quanto as do centro. Só com a massa visível, elas teriam voado embora. Era preciso então uma massa invisível, um **halo**, um envoltório esférico invisível em volta da galáxia, para as segurar. [[A curva de rotação das galáxias]] virou a prova-chave da matéria escura."
         },
         {
           "type": "funFact",
-          "text": "Vera Rubin teve que lutar há muito tempo para ser levada a sério. Princeton recusou-lhe durante muito tempo o doutoramento em astronomia… porque ela era mulher, até 1975."
+          "text": "Vera Rubin lutou muito tempo para ser levada a sério. Princeton recusou por muito tempo um doutorado em astronomia a ela, porque ela era mulher, até 1975."
         }
       ]
     },
     {
       "id": "course_77_qu_est_ce_que_la_matiere_noire_p2",
-      "title": "Do que é feito? Ainda estamos procurando",
+      "title": "Do que ela é feita? Ainda se procura",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Não é matéria comum, chamada **bariônica**, composta de prótons e nêutrons: ela não interage com a luz. Atravessa a Terra e nós sem deixar vestígios visíveis."
+          "text": "Não é matéria comum, dita **bariônica**, feita de prótons e nêutrons: ela não interage com a luz. Atravessa a Terra e a gente sem deixar rastro visível."
         },
         {
           "type": "paragraph",
-          "text": "O líder há muito preferido, o **WIMP**, uma partícula massiva de interação fraca, seria uma partícula pesada fora de [[Modelo padrão]], a teoria que descreve partículas elementares conhecidas. Os detectores **líquidoxeon**, enterrados no subsolo, esperam por um raro choque. Sem sucesso claro no momento. Outros contam com o **axion**, uma partícula ultraleve, ou com uma gravidade a ser revisada. Enquanto isso, a matéria escura curva o espaço e cria s, que distorcem a luz de um objeto massivo. [[Lentes gravitacionais]]"
+          "text": "A pista favorita por muito tempo, o **WIMP**, partícula massiva de interação fraca, seria uma partícula pesada fora do [[Modelo padrão da física]], a teoria que descreve as partículas elementares conhecidas. Detectores de **xenônio líquido**, enterrados no subsolo, esperam um choque raro. Sem sucesso claro por enquanto. Outros apostam no **áxion**, partícula ultraleve, ou numa gravidade a revisar. Enquanto isso, a matéria escura curva o espaço e cria [[lentes gravitacionais]], que deformam a luz de um objeto massivo."
         }
       ]
     },
@@ -73,34 +73,34 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A matéria escura atrai. O [[Energia escura]], descoberto em **1998**, faz o oposto: acelera a **expansão do Universo**, o aumento da distância das galáxias. As galáxias estão se afastando cada vez mais rápido, enquanto a gravidade deveria desacelerar o movimento."
+          "text": "A matéria escura atrai. [[A energia escura]], descoberta em **1998**, faz o inverso: ela acelera a **expansão do Universo**, o afastamento crescente das galáxias. As galáxias se afastam cada vez mais rápido, quando a gravidade deveria frear o movimento."
         },
         {
           "type": "paragraph",
-          "text": "Pesaria aproximadamente **68%** do cosmos. Com a matéria escura, isso torna **95%** do Universo invisível. Tudo o que vemos, átomos e luz, é apenas uma escória de **5%**."
+          "text": "Ela pesaria cerca de **68%** do cosmos. Com a matéria escura, isso dá **95%** de Universo invisível. Tudo o que vemos, átomos e luz, não passa de uma espuma de **5%**."
         },
         {
           "type": "funFact",
-          "text": "Num futuro muito distante, a energia escura poderá afastar outras galáxias a ponto de torná-las invisíveis da Via Láctea: um céu quase vazio."
+          "text": "Num futuro bem distante, a energia escura poderia afastar as outras galáxias até elas ficarem invisíveis da Via Láctea: um céu quase vazio."
         }
       ]
     },
     {
       "id": "course_77_qu_est_ce_que_la_matiere_noire_p4",
-      "title": "Evidências massivas, partícula não encontrada",
+      "title": "Provas em massa, partícula introvável",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Por um lado, estão se acumulando evidências indiretas: rotações galácticas, **fundo cósmico em micro-ondas**, radiação fóssil do universo jovem, estrutura de filamentos do Universo. Por outro lado, nenhuma detecção direta de partículas."
+          "text": "De um lado, as provas indiretas se acumulam: rotações galácticas, **fundo cósmico de micro-ondas**, radiação fóssil do universo jovem, estrutura em filamentos do Universo. Do outro, nenhuma detecção direta de partícula."
         },
         {
           "type": "paragraph",
-          "text": "O século XXI terá de decidir: uma nova família de partículas ou uma nova forma de pensar sobre a gravidade. A matéria escura não é apenas um detalhe do céu. É o laboratório onde a física de amanhã será inventada."
+          "text": "O século XXI terá de decidir: nova família de partículas, ou novo jeito de pensar a gravidade. A matéria escura não é um detalhe do céu. É o laboratório onde se inventa a física de amanhã."
         },
         {
           "type": "takeaway",
-          "text": "A matéria escura forma **27%** do Universo. É comprovado pela sua gravidade nas estrelas e na luz, mesmo que nunca o tenhamos visto diretamente."
+          "text": "A matéria escura forma **27%** do Universo. A gente a prova pela gravidade que ela exerce sobre as estrelas e a luz, mesmo sem nunca a ter visto de frente."
         }
       ]
     }

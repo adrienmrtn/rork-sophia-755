@@ -1,14 +1,14 @@
 {
   "id": "course_238_la_transition_energetique",
   "title": "A transição energética",
-  "subtitle": "Rumo à neutralidade carbónica",
+  "subtitle": "Rumo à neutralidade de carbono",
   "subject": "comprendreLeMonde",
   "subcategory": "Ambiente & futuro",
-  "description": "O mundo está tentando substituir os combustíveis fósseis por fontes mais limpas. Uma mudança tão necessária quanto difícil.",
+  "description": "O mundo tenta substituir as energias fósseis por fontes mais limpas. Uma mudança tão necessária quanto difícil.",
   "hero": {
     "image": "la_transition_energetique",
     "ratio": "16:9",
-    "hook": "A energia solar se tornou a energia mais barata da história. Resta apenas armazená-lo."
+    "hook": "O solar se tornou a energia mais barata da história. Resta armazená-la."
   },
   "sections": [
     {
@@ -18,36 +18,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Durante muito tempo, a humanidade mudou as fontes de energia por escolha de eficiência: da madeira para o carvão, depois do carvão para o petróleo. A atual **transferência de energia** é diferente: pela primeira vez, é imposta por uma restrição de sobrevivência, as alterações climáticas."
+          "text": "Por muito tempo, a humanidade trocou de fonte de energia por escolha de eficiência: da madeira ao carvão, depois do carvão ao petróleo. A **transição energética** atual é diferente: pela primeira vez, ela é imposta por uma restrição de sobrevivência, o descontrole do clima."
         },
         {
           "type": "paragraph",
-          "text": "Este curso explora como o mundo está tentando substituir os combustíveis fósseis por fontes mais limpas e por que essa mudança é tão difícil quanto necessária."
+          "text": "Este curso explora como o mundo tenta substituir as energias fósseis por fontes mais limpas, e por que essa mudança é tão difícil quanto necessária."
         }
       ]
     },
     {
       "id": "course_238_la_transition_energetique_p1",
-      "title": "1,5°C: o objetivo que move tudo",
+      "title": "1,5°C: o objetivo que comanda tudo",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "O quadro que hoje orienta todas as políticas energéticas chama-se , assinado em 2015. Este tratado compromete os países do mundo a limitar o aquecimento global, com um objectivo específico: permanecer, se possível, abaixo de 1,5°C acima dos níveis anteriores à era industrial. Cada décimo de grau adicional piora os eventos climáticos extremos. **[[Acordo de Paris (2015) e os objetivos climáticos]]**"
+          "text": "O quadro que hoje orienta todas as políticas energéticas se chama **[[Acordo de Paris (2015) e os objetivos climáticos]]**, assinado em 2015. Esse tratado compromete os países do mundo a limitar o aquecimento climático, com um objetivo preciso: ficar se possível abaixo de 1,5°C acima dos níveis de antes da era industrial. Cada décimo de grau a mais agrava os fenômenos meteorológicos extremos."
         },
         {
           "type": "image",
           "asset": "solar_panel_farm_photovoltaic_field",
           "ratio": "16:9",
-          "caption": "Painéis solares e turbinas eólicas simbolizam a mudança mundial em direção a fontes de energia de baixo carbono."
+          "caption": "Painéis solares e turbinas eólicas simbolizam a virada do mundo rumo a fontes de energia de baixo carbono"
         },
         {
           "type": "paragraph",
-          "text": "Para cumprir este objetivo, os Estados visam : um equilíbrio entre os gases com efeito de estufa emitidos pelas atividades humanas e a sua absorção pelas florestas, solos, oceanos ou tecnologias de captura. Isto pressupõe que as emissões globais parem de aumentar antes de 2025 e depois caiam acentuadamente nos anos subsequentes. **[[neutralidade de carbono]]**"
+          "text": "Para respeitar esse objetivo, os Estados miram a **[[neutralidade de carbono]]**: um equilíbrio entre os gases de efeito estufa emitidos pelas atividades humanas e a absorção pelas florestas, pelos solos, pelos oceanos ou por tecnologias de captura. Isso exige que as emissões mundiais parem de crescer antes de 2025, e depois caiam com força nos anos seguintes."
         },
         {
           "type": "funFact",
-          "text": "O custo da energia solar caiu 90% entre 2010 e 2020, um declínio mais rápido do que quase qualquer outra tecnologia na história económica. Em 2023, a energia solar tornar-se-á mesmo a fonte de electricidade mais barata alguma vez produzida em muitas partes do mundo."
+          "text": "O custo da energia solar caiu 90% entre 2010 e 2020, uma queda mais rápida que a de quase qualquer outra tecnologia na história econômica. Em 2023, o solar até se tornou a fonte de eletricidade mais barata já produzida em muitas regiões do mundo."
         }
       ]
     },
@@ -58,34 +58,34 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "O principal motor da transição é económico. A energia solar fotovoltaica ****, Anteriormente reservado em satélites, você receberá um pagamento pré-pago por menos de quinze anos, graças ao progresso técnico e à economia de escalonamento. Ó**Z**, instalado sobretudo no mar onde os ventos são mais fortes e regulares, atingiu também uma verdadeira maturidade industrial. Em 2023, quase 90% da nova capacidade eléctrica instalada em todo o mundo já provirá de energias renováveis."
+          "text": "O principal motor da transição é econômico. O **solar fotovoltaico**, outrora reservado aos satélites, teve o preço dividido por dez em quinze anos, graças aos avanços técnicos e às economias de escala. A **energia eólica**, sobretudo instalada no mar, onde os ventos são mais fortes e regulares, também atingiu uma verdadeira maturidade industrial. Em 2023, cerca de 90% das novas capacidades elétricas instaladas no mundo já vinham de energias renováveis."
         },
         {
           "type": "paragraph",
-          "text": "Permanece um grande desafio: as energias solar e eólica sofrem de intermitência ****, ou seja, não produzem eletricidade continuamente. Daí a importância das baterias de grande capacidade, cujo preço acompanhou a mesma queda espetacular da solar, tornando os carros elétricos cada vez mais competitivos."
+          "text": "Resta um desafio enorme: o solar e a eólica sofrem de **intermitência**, ou seja, não produzem eletricidade o tempo todo. Daí a importância das baterias de grande capacidade, cujo preço seguiu a mesma queda espetacular do solar, tornando os carros elétricos cada vez mais competitivos."
         },
         {
           "type": "funFact",
-          "text": "A China fabrica atualmente mais de 80% dos painéis solares do mundo e mais de 70% das baterias de iões de lítio para veículos eléctricos. A transição energética do Ocidente depende, portanto, em grande parte de uma cadeia produtiva chinesa."
+          "text": "A China fabrica hoje mais de 80% dos painéis solares do mundo e mais de 70% das baterias de íon-lítio para veículos elétricos. A transição energética do Ocidente, portanto, depende em grande parte de uma cadeia de fabricação chinesa."
         }
       ]
     },
     {
       "id": "course_238_la_transition_energetique_p3",
-      "title": "Novos obstáculos: armazenamento e metais raros",
+      "title": "Os novos obstáculos: armazenamento e metais raros",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Apesar deste entusiasmo, a transição enfrenta limites muito reais. Ao contrário do gás ou do carvão, que podem ser queimados à vontade, as energias renováveis ​​requerem redes eléctricas mais flexíveis, com armazenamento ou fontes de reserva, como o hidrogénio ou a energia nuclear."
+          "text": "Apesar desse entusiasmo, a transição esbarra em limites bem reais. Ao contrário do gás ou do carvão, que se pode queimar à vontade, as energias renováveis pedem redes elétricas mais flexíveis, com armazenamento ou fontes de reserva como o hidrogênio ou o nuclear."
         },
         {
           "type": "paragraph",
-          "text": "Outro obstáculo é a mudança da dependência do petróleo para uma dependência do **[[terras raras]]** e de outros metais, como o lítio ou o cobalto, necessários para fabricar baterias e turbinas eólicas. A China controla uma grande parte da refinação global destes materiais, criando novas vulnerabilidades para a Europa e os Estados Unidos."
+          "text": "Outro obstáculo é a passagem de uma dependência do petróleo a uma dependência das **[[terras raras]]** e de outros metais, como o lítio ou o cobalto, necessários para fabricar baterias e turbinas eólicas. A China controla uma fatia enorme do refino mundial desses materiais, o que cria novas vulnerabilidades para a Europa e os Estados Unidos."
         },
         {
           "type": "paragraph",
-          "text": "Finalmente, a transição encontra resistência social: as indústrias de combustíveis fósseis ainda empregam milhões de pessoas, e transformar estes empregos sem os destruir é uma condição essencial para que a transição seja aceite por todos."
+          "text": "Por fim, a transição encontra uma resistência social: as indústrias fósseis ainda empregam milhões de pessoas, e transformar esses empregos sem destruí-los é uma condição essencial para que a transição seja aceita por todos."
         }
       ]
     },
@@ -96,19 +96,19 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "O futuro energético não se baseia, sem dúvida, numa solução única, mas numa mistura de várias. O **[[Hidrogênio verde]]** parece ser uma peça fundamental para a descarbonização dos sectores mais difíceis, como a produção de aço ou a aviação, onde a electricidade por si só não é suficiente."
+          "text": "O futuro energético provavelmente não se apoia numa só solução, e sim numa mistura de várias. O **[[Hidrogênio verde]]** aparece como peça-chave para descarbonizar os setores mais difíceis, como a produção de aço ou a aviação, ali onde a eletricidade sozinha não basta."
         },
         {
           "type": "paragraph",
-          "text": "A transição também exige **sobriedade**: consumir menos e melhor, isolando edifícios ou reduzindo resíduos industriais, continua frequentemente a ser a alavanca mais eficaz e menos dispendiosa."
+          "text": "A transição também pede **sobriedade**: consumir menos e melhor, isolando edifícios ou reduzindo o desperdício industrial, continua muitas vezes a alavanca mais eficaz e mais barata."
         },
         {
           "type": "funFact",
-          "text": "Algumas baterias experimentais funcionam através da gravidade: levantam pesados ​​blocos de betão com o excesso de electricidade solar do dia e depois deixam-nos descer à noite para produzir electricidade através de uma turbina."
+          "text": "Algumas baterias experimentais funcionam graças à gravidade: elas sobem blocos pesados de concreto com o excedente de eletricidade solar do dia, e depois os deixam descer à noite para produzir eletricidade por uma turbina."
         },
         {
           "type": "takeaway",
-          "text": "O custo da energia solar caiu 90% em quinze anos, tornando-se a fonte de eletricidade mais barata da história. Mas o armazenamento de energia e o fornecimento de metais raros continuam a ser os principais desafios da transição energética."
+          "text": "O custo do solar caiu 90% em quinze anos, e se tornou a fonte de eletricidade mais barata da história. Mas o armazenamento da energia e o abastecimento em metais raros continuam os grandes desafios da transição energética."
         }
       ]
     }

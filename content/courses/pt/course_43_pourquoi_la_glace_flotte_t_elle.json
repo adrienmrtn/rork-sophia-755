@@ -4,11 +4,11 @@
   "subtitle": "Água e moléculas",
   "subject": "sciences",
   "subcategory": "O nosso quotidiano explicado",
-  "description": "O gelo flutua na água. Isso parece normal, mas na verdade é muito raro. E felizmente para a vida na Terra.",
+  "description": "O gelo flutua na água. Parece normal, mas na verdade é bem raro. E felizmente para a vida na Terra.",
   "hero": {
     "image": "pourquoi_la_glace_flotte",
     "ratio": "16:9",
-    "hook": "Se o gelo fluisse, os lagos congelariam até o fundo. E a vida na água teria dificuldade em sobreviver."
+    "hook": "Se o gelo afundasse, os lagos congelariam até o fundo. E a vida na água teria dificuldade para sobreviver."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Um cubo de gelo num copo, um iceberg no oceano: o gelo **flutua**. Achamos isso banal. Porém, para a maioria das substâncias, o sólido é mais **denso**, portanto mais pesado para o mesmo volume: ele afunda."
+          "text": "Um cubo de gelo num copo, um iceberg no oceano: o gelo **flutua**. A gente acha isso banal. Mesmo assim, para a maioria das substâncias, o sólido é mais **denso**, portanto mais pesado para o mesmo volume: ele afunda."
         },
         {
           "type": "paragraph",
-          "text": "A água faz o oposto. Essa exceção vem do formato de sua molécula. E salvou muitos lagos no inverno."
+          "text": "A água faz o inverso. Essa exceção vem da forma da sua molécula. E ela salvou muitos lagos no inverno."
         }
       ]
     },
@@ -33,57 +33,57 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Uma molécula de água é um átomo de **oxigênio** conectado a dois átomos de **hidrogênio**. Não é reto: forma um **V**. Devido a esta forma, as cargas elétricas não estão distribuídas igualmente: a molécula é **polar**, com uma extremidade ligeiramente negativa e a outra ligeiramente positiva."
+          "text": "Uma molécula de água é um átomo de **oxigênio** ligado a dois átomos de **hidrogênio**. Ela não é reta: forma um **V**. Por causa dessa forma, as cargas elétricas não se distribuem de modo igual: a molécula é **polar**, com uma ponta um pouco negativa e a outra um pouco positiva."
         },
         {
           "type": "image",
           "asset": "water_molecule_model_crystal",
           "ratio": "4:3",
-          "caption": "A molécula de água: um V que atrai e repele seus vizinhos."
+          "caption": "A molécula de água: um V que atrai e repele as vizinhas"
         },
         {
           "type": "paragraph",
-          "text": "Resultado: as moléculas de água se atraem através do [[As ligações de hidrogênio]], como pequenos ímãs. No líquido, eles permanecem próximos, mas ainda se movem. No gelo, eles congelam de maneira diferente."
+          "text": "Resultado: as moléculas de água se atraem umas às outras por [[ligações de hidrogênio]], como pequenos ímãs. No líquido, elas ficam próximas mas ainda se mexem. No gelo, elas se fixam de outro jeito."
         }
       ]
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p2",
-      "title": "Quando a água congela, ela ocupa espaço",
+      "title": "Quando a água congela, ela ocupa mais espaço",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Por volta de **0 °C**, a água solidifica. Para formar gelo, as moléculas se organizam em uma rede **hexagonal**, uma espécie de favo de mel de seis lados. Eles então deixam mais **vazio** entre eles do que no estado líquido."
+          "text": "Perto de **0 °C**, a água se solidifica. Para formar o gelo, as moléculas se organizam numa rede **hexagonal**, uma espécie de favo de seis lados. Elas deixam então mais **vazio** entre si do que no estado líquido."
         },
         {
           "type": "funFact",
-          "text": "É por isso que uma garrafa cheia de água pode **explodido** no congelador: o gelo ocupa mais volume do que a água líquida."
+          "text": "Por isso uma garrafa de água cheia pode **estourar** no congelador: o gelo ocupa mais volume que a água líquida."
         },
         {
           "type": "paragraph",
-          "text": "Menos material no mesmo volume significa: **menos denso**. No entanto, um objeto menos denso que o líquido ao seu redor sobe. O gelo, portanto, flutua na água. Isso é chamado de anomalia de expansão da água ****: ao contrário de todas as substâncias, a água se expande na medida que esfria sob**4 °C**."
+          "text": "Menos matéria no mesmo volume quer dizer: **menos densa**. Ora, um objeto menos denso que o líquido ao redor sobe. O gelo então flutua na água. É o que se chama **anomalia da dilatação da água**: ao contrário de quase todas as substâncias, a água se dilata ao esfriar abaixo de **4 °C**."
         },
         {
           "type": "image",
           "asset": "iceberg_floating_arctic_ocean",
           "ratio": "16:9",
-          "caption": "Um iceberg flutua porque o gelo é menos denso que a água líquida."
+          "caption": "Um iceberg flutua porque o gelo é menos denso que a água líquida"
         }
       ]
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p3",
-      "title": "Por que é vital para lagos",
+      "title": "Por que isso é vital para os lagos",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Imagine se o sorvete escorresse. Ele se formaria na superfície e depois afundaria. O lago congelaria camada por camada, até o fundo. O verão muitas vezes não seria suficiente para derreter tudo."
+          "text": "Imagine se o gelo afundasse. Ele se formaria na superfície, depois cairia no fundo. O lago congelaria camada após camada, até embaixo. O verão muitas vezes não bastaria para derreter tudo."
         },
         {
           "type": "paragraph",
-          "text": "Felizmente, o gelo permanece no topo. Forma uma cobertura isolante ****. Abaixo da área de superfície congelada, a água líquida pode permanecer em torno de**4 °C**, a temperatura onde a água líquida é mais densa, suficiente para a sobrevivência de peixes e plantas aquáticas."
+          "text": "Felizmente, o gelo fica em cima. Ele forma uma **tampa isolante**. Sob a superfície congelada, a água líquida pode ficar perto de **4 °C**, temperatura em que a água líquida é mais densa, o bastante para peixes e plantas aquáticas sobreviverem."
         }
       ]
     },
@@ -94,11 +94,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "O bloco de gelo branco reflete grande parte da luz do Sol de volta ao espaço graças ao seu alto **albedo**, seu poder reflexivo. Se desaparecer, o oceano escuro absorve mais calor. Isto acelera o aquecimento: um círculo vicioso."
+          "text": "O gelo marinho branco devolve grande parte da luz do Sol para o espaço graças ao seu **albedo** elevado, seu poder refletor. Se ele some, o oceano escuro absorve mais calor. Isso acelera o aquecimento: um círculo vicioso."
         },
         {
           "type": "takeaway",
-          "text": "O gelo flutua porque, à medida que se solidifica, a água forma uma rede mais “arejada”: torna-se menos densa que a água líquida. Esta exceção protege a vida aquática no inverno."
+          "text": "O gelo flutua porque, ao se solidificar, a água forma uma rede mais “arejada”: ela fica menos densa que a água líquida. Essa exceção protege a vida aquática no inverno."
         }
       ]
     }

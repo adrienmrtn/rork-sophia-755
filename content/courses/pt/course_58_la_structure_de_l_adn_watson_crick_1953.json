@@ -4,11 +4,11 @@
   "subtitle": "1953",
   "subject": "sciences",
   "subcategory": "Descobertas que mudaram o mundo",
-  "description": "Em 1953, Watson e Crick descreveram a dupla hélice do DNA. Por trás dessa glória está o trabalho crucial de Rosalind Franklin.",
+  "description": "Em 1953, Watson e Crick descrevem a dupla hélice do DNA. Por trás dessa glória, o trabalho decisivo de Rosalind Franklin.",
   "hero": {
     "image": "la_structure_de_l_adn",
     "ratio": "16:9",
-    "hook": "A forma de uma molécula… e o segredo da hereditariedade."
+    "hook": "A forma de uma molécula, e o segredo da hereditariedade."
   },
   "sections": [
     {
@@ -18,26 +18,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sabíamos que as características passam de pais para filhos. Mas que objeto químico carrega essa informação? Em meados do século XX, a resposta tornou-se mais clara: **ADN**."
+          "text": "Já se sabia que os traços passam dos pais aos filhos. Mas que objeto químico carrega essa informação? No meio do século XX, a resposta se precisa: o **DNA**."
         },
         {
           "type": "paragraph",
-          "text": "Em **1953**, **James Watson** e **Francisco Crick** publicaram um modelo famoso: a hélice dupla ****. Este formulário explica como o DNA pode se copiar."
+          "text": "Em **1953**, **James Watson** e **Francis Crick** publicam um modelo famoso: a **dupla hélice**. Essa forma explica como o DNA pode se copiar."
         }
       ]
     },
     {
       "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p1",
-      "title": "Encontrando suporte para a hereditariedade",
+      "title": "Achar o suporte da hereditariedade",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "O DNA (ácido desoxirribonucléico) é uma molécula longa encontrada em nossas células. Contém “letras” químicas que formam um código. Mas nas décadas de 1940 e 1950, ainda não conhecíamos a sua forma 3D."
+          "text": "O DNA (ácido desoxirribonucleico) é uma molécula longa presente nas nossas células. Ele contém “letras” químicas que formam um código. Mas nos anos 1940-1950 ainda não se conhece a forma em 3D."
         },
         {
           "type": "paragraph",
-          "text": "Sem a forma fica difícil entender como esse código pode se duplicar a cada divisão celular."
+          "text": "Sem a forma, fica difícil entender como esse código pode se duplicar a cada divisão celular."
         }
       ]
     },
@@ -50,36 +50,36 @@
           "type": "image",
           "asset": "rosalind_franklin_photo_51_x_ray",
           "ratio": "4:3",
-          "caption": "A foto 51 de Rosalind Franklin revela uma estrutura helicoidal."
+          "caption": "A Foto 51 de Rosalind Franklin revela uma estrutura helicoidal"
         },
         {
           "type": "paragraph",
-          "text": "**Rosalind Franklin**, física e química, obtém imagens de raios X de DNA. Sua famosa **Figura 51** mostra evidências claras de uma hélice."
+          "text": "**Rosalind Franklin**, física e química, obtém imagens do DNA por raios X. Sua famosa **Foto 51** mostra pistas claras de uma hélice."
         },
         {
           "type": "paragraph",
-          "text": "Watson e Crick veem estes dados (em condições agora consideradas injustas para Franklin) e constroem o seu modelo. Franklin morreu em 1958; o Nobel de 1962 irá para Watson, Crick e Wilkins, não para ela."
+          "text": "Watson e Crick veem esses dados (em condições hoje vistas como injustas para Franklin) e constroem o modelo. Franklin morre em 1958; o Nobel de 1962 vai para Watson, Crick e Wilkins, não para ela."
         },
         {
           "type": "funFact",
-          "text": "Franklin também fez um trabalho importante com vírus. O seu papel no ADN tem sido subestimado há muito tempo nos relatos populares."
+          "text": "Franklin também fez trabalhos maiores sobre vírus. Seu papel no DNA ficou tempo demais apagado nos relatos populares."
         }
       ]
     },
     {
       "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p3",
-      "title": "Por que a dupla hélice é importante",
+      "title": "Por que a dupla hélice importa",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "dna_double_helix_model_watson_crick",
           "ratio": "4:3",
-          "caption": "Duas vertentes complementares: a cópia torna-se imaginável."
+          "caption": "Duas fitas complementares: a cópia fica imaginável"
         },
         {
           "type": "paragraph",
-          "text": "Dois fios se enrolam. As letras ficam frente a frente em pares. Quando os fios se separam, cada um pode servir de modelo para reconstruir o outro. A hereditariedade se torna um mecanismo químico compreensível."
+          "text": "Duas fitas se enrolam. As letras se enfrentam aos pares. Quando as fitas se separam, cada uma pode servir de modelo para reconstruir a outra. A hereditariedade vira um mecanismo químico compreensível."
         }
       ]
     },
@@ -90,11 +90,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dessa descoberta nascem a genética moderna, o sequenciamento, os testes de DNA, as terapias genéticas. E também debates éticos: o que fazer com esse poder?"
+          "text": "Dessa descoberta nascem a genética moderna, o sequenciamento, os testes de DNA, as terapias gênicas. E também debates éticos: o que fazer com esse poder?"
         },
         {
           "type": "takeaway",
-          "text": "Em **1953**, o modelo de dupla hélice explica como o DNA armazena e copia informações de seres vivos. Franklin forneceu evidências decisivas há muito apagadas da narrativa."
+          "text": "Em **1953**, o modelo da dupla hélice explica como o DNA guarda e copia a informação do vivente. Franklin deu provas decisivas apagadas tempo demais do relato."
         }
       ]
     }

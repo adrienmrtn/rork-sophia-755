@@ -1,14 +1,14 @@
 {
   "id": "course_225_la_montee_des_eaux",
-  "title": "Águas subindo",
-  "subtitle": "O nível do mar está subindo",
+  "title": "A subida do nível do mar",
+  "subtitle": "O nível dos mares sobe",
   "subject": "comprendreLeMonde",
   "subcategory": "Ambiente & futuro",
-  "description": "Até 2100, o nível dos oceanos poderá subir **hum metrô**. Para países inteiros e megacidades costeiras, esta já não é uma hipótese distante, mas uma questão de planeamento.",
+  "description": "Até 2100, o nível dos oceanos pode subir **um metro**. Para países inteiros e megacidades costeiras, isso já não é hipótese distante: é questão de planejamento.",
   "hero": {
     "image": "la_montee_des_eaux",
     "ratio": "16:9",
-    "hook": "O nível do mar sobe um pouco mais a cada ano e alguns países já estão a planear a sua mudança."
+    "hook": "O mar sobe um pouco mais a cada ano, e alguns países já planejam a mudança."
   },
   "sections": [
     {
@@ -18,36 +18,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Durante milhares de anos, os níveis dos oceanos permaneceram praticamente estáveis. Desde a era industrial, tem vindo a aumentar e a velocidade deste aumento está a acelerar de ano para ano."
+          "text": "Durante milhares de anos, o nível dos oceanos ficou mais ou menos estável. Desde a era industrial, ele sobe, e essa subida acelera ano após ano."
         },
         {
           "type": "paragraph",
-          "text": "Até 2100, os oceanos poderão aumentar entre 30 centímetros e um metro, dependendo das nossas escolhas em termos de emissões. Para muitas zonas costeiras, isto já não é uma ameaça distante, mas sim um problema de planeamento muito concreto."
+          "text": "Até 2100, os oceanos podem subir de 30 centímetros a um metro, conforme as nossas escolhas de emissões. Para muitos litorais, isso já não é ameaça distante: é um problema concreto de urbanismo."
         }
       ]
     },
     {
       "id": "course_225_la_montee_des_eaux_p1",
-      "title": "Dois mecanismos, uma direção",
+      "title": "Dois mecanismos, uma só direção",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "O nível do mar está a subir por duas razões físicas diferentes. A primeira é : quando a água esquenta, suas moléculas se movem mais e seu volume aumenta um pouco, como qualquer líquido. Os oceanos absorveram mais de 90% do excesso de calor gerado pela atividade humana desde 1970, e esse calor está a aumentar o seu volume. [[Expansão térmica]]"
+          "text": "O nível dos mares sobe por duas razões físicas diferentes. A primeira é a [[Dilatação térmica]]: quando a água esquenta, as moléculas se agitam mais e o volume aumenta um pouco, como em qualquer líquido. Os oceanos absorveram mais de 90% do calor extra gerado pela atividade humana desde 1970, e esse calor faz o volume crescer."
         },
         {
           "type": "paragraph",
-          "text": "A segunda razão é o derretimento do gelo colocado em terra firme. Tenha cuidado para não confundi-lo com o bloco de gelo do Ártico, que já flutua na água e cujo derretimento não provoca a subida do nível do mar. São as , essas imensas calotas polares colocadas no solo da Groenlândia e da Antártica, que realmente fazem os oceanos transbordarem ao adicionar água doce. [[Mantos de gelo]]"
+          "text": "A segunda razão é o derretimento do gelo que está em terra firme. Cuidado para não confundir com o gelo marinho do Ártico, que já flutua na água e cujo derretimento não sobe o nível dos mares. São os [[Indlandsis]], essas imensas calotas de gelo pousadas no solo da Groenlândia e da Antártida, que de fato transbordam os oceanos ao acrescentar água doce."
         },
         {
           "type": "image",
           "asset": "greenland_ice_sheet_melting_glacier",
           "ratio": "16:9",
-          "caption": "O derretimento da Groenlândia, se fosse completo, aumentaria os oceanos em 7 metros."
+          "caption": "O derretimento total da Groenlândia elevaria os oceanos em 7 metros."
         },
         {
           "type": "funFact",
-          "text": "A Gronelândia perde cerca de 280 mil milhões de toneladas de gelo todos os anos, ou água suficiente para cobrir toda a França com uma camada de 50 centímetros."
+          "text": "A Groenlândia perde cerca de 280 bilhões de toneladas de gelo por ano, água suficiente para cobrir a França inteira com uma camada de 50 centímetros."
         }
       ]
     },
@@ -58,21 +58,21 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Desde 1880, o nível global do mar aumentou cerca de 20 centímetros. É sobretudo a velocidade atual que alarma os investigadores: rondava os 1,4 mm por ano no século XX, contra os **Z3**,6 mm por ano de hoje, uma aceleração superior a 150%."
+          "text": "Desde 1880, o nível mundial dos mares subiu cerca de 20 centímetros. O que mais alarma os pesquisadores é a velocidade atual: era cerca de 1,4 mm por ano no século XX, contra **3,6 mm por ano** hoje, uma aceleração de mais de 150%."
         },
         {
           "type": "paragraph",
-          "text": "Os especialistas da [[IPCC]] estimam que esta tendência continuará durante décadas, mesmo que as emissões tenham sido drasticamente reduzidas agora, porque os oceanos demoram a responder às mudanças de temperatura."
+          "text": "Os especialistas do [[IPCC]] estimam que essa tendência vai continuar por décadas, mesmo se cortássemos as emissões agora de forma drástica, porque os oceanos demoram a reagir às mudanças de temperatura."
         },
         {
           "type": "image",
           "asset": "coastal_flooding_sea_level_rise_city",
           "ratio": "4:3",
-          "caption": "Uma subida de 50 cm pode transformar uma inundação de 100 anos num evento anual."
+          "caption": "Uma alta de 50 cm pode transformar uma inundação centenária em evento anual."
         },
         {
           "type": "paragraph",
-          "text": "O perigo real não é apenas um mar ligeiramente mais alto em média, mas a multiplicação de [[Surtos e inundações de 100 anos]]: uma subida de 50 centímetros pode ser suficiente para transformar um desastre esperado uma vez por século num acontecimento quase anual."
+          "text": "O verdadeiro perigo não é só um mar um pouco mais alto na média, mas a multiplicação de [[Surtos de tempestade e inundações centenárias]]: uma elevação de 50 centímetros pode bastar para transformar uma catástrofe esperada uma vez por século em evento quase anual."
         }
       ]
     },
@@ -83,44 +83,44 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "O aumento dos níveis da água está a afectar principalmente as regiões que menos contribuíram para o aquecimento global. Os grandes deltas de rios, como os do Nilo, do Mekong ou do Ganges, estão na linha da frente. Em Bangladesh, onde vivem 170 milhões de habitantes, um aumento de um metro poderia causar a perda de 17% do território."
+          "text": "A subida das águas atinge sobretudo regiões que menos contribuíram para o aquecimento climático. Os grandes deltas fluviais, como os do Nilo, do Mekong ou do Ganges, estão na linha de frente. No Bangladesh, onde vivem 170 milhões de habitantes, uma alta de um metro pode fazer perder 17% do território."
         },
         {
           "type": "paragraph",
-          "text": "Para pequenos Estados insulares como as Maldivas ou Kiribati, desaparecer totalmente debaixo de água já não é uma hipótese de ficção científica, mas sim um verdadeiro tema de planeamento político. Por outro lado, megacidades ricas como Miami ou Nova Iorque investem milhares de milhões em diques e bombas."
+          "text": "Para pequenos Estados insulares como as Maldivas ou Kiribati, desaparecer por completo debaixo da água já não é hipótese de ficção científica: é um tema real de planejamento político. Já megacidades ricas como Miami ou Nova York investem bilhões em diques e bombas."
         },
         {
           "type": "image",
           "asset": "jakarta_indonesia_sinking_flooding_maldives",
           "ratio": "16:9",
-          "caption": "Jacarta combina a subida das águas e a subsidência do solo, uma dupla ameaça."
+          "caption": "Jacarta acumula subida das águas e afundamento do solo, uma ameaça dupla."
         },
         {
           "type": "funFact",
-          "text": "Em 2009, o governo das Maldivas realizou uma reunião de gabinete subaquática em trajes de mergulho para alertar o mundo antes de uma grande conferência sobre o clima."
+          "text": "Em 2009, o governo das Maldivas fez uma reunião de ministros debaixo d'água, de roupa de mergulho, para alertar o mundo antes de uma grande conferência sobre o clima."
         },
         {
           "type": "paragraph",
-          "text": "Em **Jacarta**, Indonésia, a cidade está afundando ainda mais devido ao bombeamento excessivo de águas subterrâneas. Perante esta dupla ameaça, o país tomou a decisão radical de construir uma nova capital, Nusantara, na ilha de Bornéu."
+          "text": "Em **Jacarta**, na Indonésia, a cidade ainda afunda no solo por causa do bombeamento excessivo dos aquíferos. Diante dessa ameaça dupla, o país decidiu construir uma capital nova, Nusantara, na ilha de Bornéu."
         }
       ]
     },
     {
       "id": "course_225_la_montee_des_eaux_p4",
-      "title": "Adapte-se ou dê um passo atrás",
+      "title": "Adaptar-se, ou recuar",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Duas estratégias se complementam diante desse desafio. A primeira é limitar o aquecimento para abrandar o aumento para além de 2100. A segunda é adaptar-se ao que já é inevitável, reforçando as defesas naturais como s ou dunas, ou com soluções mais pesadas como as grandes obras na Holanda. [[Manguezal]]"
+          "text": "Duas estratégias se completam diante desse desafio. A primeira é limitar o aquecimento para frear a alta depois de 2100. A segunda é se adaptar ao que já é inevitável, reforçando defesas naturais como o [[Manguezal]] ou as dunas, ou com soluções mais pesadas, como as grandes obras dos Países Baixos."
         },
         {
           "type": "paragraph",
-          "text": "Em alguns casos, a única solução será retroceder: deslocar pessoas e actividades para o interior antes que os desastres se repitam com demasiada frequência. Esta é uma verdadeira mudança de hábito para sociedades que estão ligadas ao litoral há séculos."
+          "text": "Em certos casos, a única saída será recuar: deslocar moradores e atividades para o interior antes que as catástrofes se repitam demais. Isso muda de verdade o hábito de sociedades ligadas ao litoral há séculos."
         },
         {
           "type": "takeaway",
-          "text": "O nível do mar está a aumentar 3,6 mm por ano, sob o efeito combinado da expansão térmica e do derretimento do gelo terrestre. Até 2100, este aumento poderá atingir um metro e forçar a deslocação de centenas de milhões de pessoas."
+          "text": "O nível dos mares sobe 3,6 mm por ano, pelo efeito combinado da dilatação térmica e do derretimento do gelo terrestre. Até 2100, essa alta pode chegar a um metro e forçar o deslocamento de centenas de milhões de pessoas."
         }
       ]
     }

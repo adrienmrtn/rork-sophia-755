@@ -1,14 +1,14 @@
 {
   "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment",
-  "title": "Qual é o efeito estufa (realmente)?",
+  "title": "O que é o efeito estufa (de verdade)?",
   "subtitle": "Clima e atmosfera",
   "subject": "sciences",
   "subcategory": "A Terra e o Universo",
-  "description": "O efeito estufa não é principalmente um problema: é o manto invisível que impede o congelamento da Terra. O verdadeiro problema é quando você engrossa muito rapidamente.",
+  "description": "O efeito estufa não é primeiro um problema: é o manto invisível que impede a Terra de congelar. O verdadeiro ponto é quando o engrossamos depressa demais.",
   "hero": {
     "image": "qu_est_ce_que_l_effet_de_serre",
     "ratio": "16:9",
-    "hook": "Sem o efeito estufa, a Terra seria um deserto gelado. Com muito, superaquece."
+    "hook": "Sem efeito estufa, a Terra seria um deserto de gelo. Com efeito demais, ela superaquece."
   },
   "sections": [
     {
@@ -18,89 +18,89 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Imagine um carro fechado ao sol: as janelas deixam entrar luz, mas o calor tem dificuldade de sair. O habitáculo aquece. O [[efeito de estufa]] da Terra funciona um pouco assim, com ar em vez de vidro."
+          "text": "Imagine um carro fechado no sol: os vidros deixam a luz entrar, mas o calor tem dificuldade para sair. O interior do carro esquenta. O [[efeito de estufa]] da Terra funciona um pouco assim, com o ar no lugar do vidro."
         },
         {
           "type": "paragraph",
-          "text": "Este fenômeno é **natural** e vital. Sem ele, a temperatura média do globo cairia para **-18ºC**. Com ele, estamos em torno de **+15ºC**. O problema atual não é a sua existência: é a sua rápida **amplificação** pelas nossas atividades."
+          "text": "Esse fenômeno é **natural** e vital. Sem ele, a temperatura média do globo cairia para cerca de **-18 °C**. Com ele, ficamos por volta de **+15 °C**. O problema atual não é a existência dele: é a **amplificação** rápida pelas nossas atividades."
         }
       ]
     },
     {
       "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p1",
-      "title": "Como o planeta mantém seu calor",
+      "title": "Como o planeta guarda o calor",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "O Sol envia principalmente luz visível. A atmosfera deixa passar. A terra e os oceanos aquecem e depois irradiam esta energia de volta na forma de **calor infravermelho**, ondas que são “mais longas” que a luz visível."
+          "text": "O Sol manda sobretudo luz visível. A atmosfera a deixa passar. O solo e os oceanos esquentam, depois devolvem essa energia na forma de **calor infravermelho**, ondas mais “longas” que a luz visível."
         },
         {
           "type": "image",
           "asset": "factory_chimneys_greenhouse_gas_emissions",
           "ratio": "auto",
-          "caption": "As emissões industriais reforçam o efeito estufa."
+          "caption": "As emissões industriais reforçam o efeito estufa"
         },
         {
           "type": "paragraph",
-          "text": "Certos gases, , absorvem esse calor e o irradiam em todas as direções, inclusive em direção ao solo. O nitrogênio e o oxigênio, a maioria no ar, dificilmente fazem esse trabalho. Vapor de água, **CO₂** e **metano** fazem isso muito bem. [[Os gases de efeito estufa (GEE)]]"
+          "text": "Alguns gases, [[Os gases de efeito estufa]], absorvem esse calor e o devolvem em todas as direções, inclusive para o solo. O nitrogênio e o oxigênio, maioria no ar, quase não fazem esse trabalho. O vapor de água, o **CO₂** e o **metano** fazem isso muito bem."
         },
         {
           "type": "funFact",
-          "text": "O nome “efeito estufa” é um pouco enganador. Uma verdadeira estufa aquece principalmente bloqueando a subida do ar quente. A atmosfera retém o calor absorvendo os raios infravermelhos."
+          "text": "O nome “efeito estufa” engana um pouco. Uma estufa de verdade esquenta sobretudo ao bloquear o ar quente que sobe. A atmosfera prende o calor pela absorção dos raios infravermelhos."
         }
       ]
     },
     {
       "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p2",
-      "title": "Quando os humanos engrossam o cobertor",
+      "title": "Quando o ser humano engrossa o cobertor",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Desde a revolução industrial, carvão, petróleo e gás foram queimados. Este carbono, enterrado no subsolo durante milhões de anos, regressa ao ar. O desmatamento também reduz as florestas que absorveram CO₂. Cultivar e cultivar arroz adiciona metano, cerca de **80 vezes** mais “aquecimento” do que CO₂ ao longo de 20 anos."
+          "text": "Desde a revolução industrial, queimamos carvão, petróleo e gás. Esse carbono, enterrado no solo há milhões de anos, volta para o ar. O desmatamento também reduz as florestas que absorviam CO₂. A pecuária e o cultivo de arroz acrescentam metano, cerca de **80 vezes** mais “aquecedor” que o CO₂ em 20 anos."
         },
         {
           "type": "paragraph",
-          "text": "Resultado: a concentração de CO₂ aumentou de aproximadamente **280** para mais de **420** partes por milhão. Tal nível não era visto desde , cerca de **Z3** milhões de anos atrás, quando os mares estavam mais elevados. [[Plioceno]]"
+          "text": "Resultado: a concentração de CO₂ passou de cerca de **280** para mais de **420** partes por milhão. Um nível desses não era visto desde o [[Plioceno]], há cerca de **3 milhões de anos**, quando os mares estavam mais altos."
         }
       ]
     },
     {
       "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p3",
-      "title": "Que mudanças climáticas mais energéticas",
+      "title": "O que muda num clima mais energético",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "O [[IPCC]], que sintetiza o trabalho de milhares de climatologistas, é claro: o aquecimento desde 1950 não tem precedentes ao longo de milénios e a sua origem humana está estabelecida."
+          "text": "O [[IPCC]], que junta o trabalho de milhares de climatologistas, é claro: o aquecimento desde 1950 não tem precedente em milênios, e a origem humana está estabelecida."
         },
         {
           "type": "paragraph",
-          "text": "Mais energia no ar e nos oceanos significa mais extremos: secas mais secas, chuvas mais violentas, derretimento de geleiras e calotas polares, aumento do nível do mar. E um acelerador: quando o gelo branco desaparece, o solo escuro e a água absorvem mais luz solar. O [[Albedo terrestre]] está caindo e o planeta está aquecendo ainda mais rápido."
+          "text": "Mais energia no ar e nos oceanos significa extremos mais marcados: secas mais secas, chuvas mais violentas, geleiras e calotas que derretem, nível do mar que sobe. E um acelerador: quando o gelo branco some, o solo e a água escuros absorvem mais sol. É o [[albedo terrestre]] que cai, e o planeta esquenta ainda mais depressa."
         },
         {
           "type": "funFact",
-          "text": "Vênus mostra o efeito estufa “compactado”: ​​uma atmosfera de 96% CO₂ e cerca de **460ºC** no solo, o suficiente para derreter chumbo."
+          "text": "Vênus mostra o efeito estufa “descontrolado”: uma atmosfera com 96% de CO₂, e cerca de **460 °C** no solo, o bastante para derreter o chumbo."
         }
       ]
     },
     {
       "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p4",
-      "title": "Limite o aumento, adapte-se ao resto",
+      "title": "Limitar a alta, adaptar-se ao resto",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "O objetivo internacional visa permanecer abaixo de **+1, 5ºC** ou **+2ºC** em comparação com a era pré-industrial, para evitar limiares perigosos como o descongelamento de [[permafrost]], que libertaria ainda mais metano."
+          "text": "A meta internacional é ficar abaixo de **+1,5 °C** ou **+2 °C** em relação à era pré-industrial, para evitar limiares perigosos como o degelo do [[pergelissolo]], que liberaria ainda mais metano."
         },
         {
           "type": "paragraph",
-          "text": "Duas alavancas: **reduzir** emissões (energia limpa, sobriedade, florestas) e **adaptado** ao que já está comprometido. O CO₂ permanece no ar durante séculos: o que emitimos hoje dura muito tempo."
+          "text": "Duas alavancas: **reduzir** as emissões (energias limpas, sobriedade, florestas) e **adaptar-se** ao que já está em curso. O CO₂ fica séculos no ar: o que emitimos hoje pesa por muito tempo."
         },
         {
           "type": "takeaway",
-          "text": "Sem um efeito estufa natural, a Terra congelaria em torno de **-18ºC**. A sua amplificação por combustíveis fósseis empurra o CO₂ para níveis nunca vistos há **3 mil anos**."
+          "text": "Sem efeito estufa natural, a Terra congelaria por volta de **-18 °C**. A amplificação pelas energias fósseis empurra o CO₂ a níveis inéditos há **3 milhões de anos**."
         }
       ]
     }
