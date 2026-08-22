@@ -1,14 +1,14 @@
 {
   "id": "course_217_l_economie_de_plateforme_uber_airbnb",
-  "title": "La economía de plataformas (Uber, Airbnb, etc.)",
+  "title": "La economía de plataformas (Uber, Airbnb...)",
   "subtitle": "Capitalismo sin fábricas",
   "subject": "comprendreLeMonde",
   "subcategory": "Economía y sociedad",
-  "description": "Uber, Airbnb y Deliveroo no poseen casi nada: ni coches, ni apartamentos, ni empleados. ¿Cómo se convirtieron estas plataformas en gigantes globales?",
+  "description": "Uber, Airbnb y Deliveroo no poseen casi nada: ni coches, ni pisos, ni empleados. ¿Cómo se volvieron estas plataformas gigantes mundiales?",
   "hero": {
     "image": "l_economie_de_plateforme",
     "ratio": "16:9",
-    "hook": "Uber nunca ha tenido un solo automóvil, pero ha alterado el transporte en todo el mundo."
+    "hook": "Uber no ha poseído nunca un solo coche, y aun así dio la vuelta al transporte en todo el mundo."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Uber, Airbnb, Amazon o Deliveroo pertenecen a una nueva categoría de empresas: **plataformas digitales**. No solo digitalizan servicios que ya existían: cambian la forma misma de poseer, trabajar y estar protegido."
+          "text": "Uber, Airbnb, Amazon y Deliveroo pertenecen a un tipo nuevo de empresa: la **plataforma digital**. No se limitan a poner en línea servicios que ya existían. Cambian lo que significa poseer, trabajar y estar protegido."
         },
         {
           "type": "paragraph",
-          "text": "Este modelo inventó una nueva forma de capitalismo, que cuestiona nuestro contrato social. Entendamos cómo funciona y por qué es tan debatido."
+          "text": "Este modelo ha inventado una forma nueva de capitalismo, que pone en cuestión nuestro contrato social. Veamos cómo funciona, y por qué provoca tanta discusión."
         }
       ]
     },
@@ -33,74 +33,74 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Una empresa tradicional posee fábricas, vehículos, inventario y emplea empleados. Una plataforma rompe este modelo: se convierte en una simple infraestructura digital que conecta oferta y demanda, sin producir nada por sí misma."
+          "text": "Una empresa tradicional posee fábricas, vehículos y existencias, y emplea personal. Una plataforma rompe ese modelo. Se vuelve una simple pieza de infraestructura digital que conecta oferta y demanda, sin producir nada ella misma."
         },
         {
           "type": "paragraph",
-          "text": "Este sistema se basa en : cuantos más usuarios tiene una plataforma, más útil se vuelve, lo que atrae aún más usuarios. Para un servicio de transporte, cuantos más conductores estén disponibles, más corta será la espera, lo que atrae a más clientes, quienes a su vez atraen a más conductores. Este círculo casi siempre conduce a situaciones de cuasi monopolio. [[Efecto de red]]"
+          "text": "El sistema funciona con el [[efecto de red]]: cuantos más usuarios tiene una plataforma, más útil se vuelve, lo que atrae aún más usuarios. En un servicio de viajes, cuantos más conductores hay, más corta es la espera, lo que trae más clientes, que a su vez traen más conductores. Ese círculo casi siempre termina en algo cercano a un monopolio."
         },
         {
           "type": "funFact",
-          "text": "Uber ha gastado miles de millones de dólares en la investigación de vehículos autónomos, con el objetivo final de deshacerse de su último gran costo: el conductor humano."
+          "text": "Uber ha gastado miles de millones de dólares en investigación de coches autónomos, con el fin a largo plazo de quitarse su último gran coste: el conductor humano."
         }
       ]
     },
     {
       "id": "course_217_l_economie_de_plateforme_uber_airbnb_p2",
-      "title": "Trabajar sin las protecciones del empleo",
+      "title": "Trabajo sin las protecciones del empleo",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Esta innovación técnica va acompañada de una innovación jurídica más controvertida. En el [[economía de conciertos]], la plataforma rechaza la condición de empleador para presentarse como un simple intermediario tecnológico, que evita pagar cotizaciones a la seguridad social, un salario mínimo o vacaciones retribuidas."
+          "text": "Esa innovación técnica viene con una jurídica mucho más discutida. Es el mundo de la [[gig economy]]: la plataforma rechaza el papel de empleador y se presenta como un simple intermediario tecnológico, lo que le ahorra cotizaciones sociales, un salario mínimo y vacaciones pagadas."
         },
         {
           "type": "image",
           "asset": "gig_economy_workers_strike_protest",
           "ratio": "16:9",
-          "caption": "Los conductores y repartidores a menudo se clasifican como autónomos, no como empleados."
+          "caption": "Conductores y repartidores se clasifican a menudo como autónomos y no como personal"
         },
         {
           "type": "paragraph",
-          "text": "El trabajador se convierte en un trabajador independiente que soporta por sí solo todos los riesgos: enfermedad, accidente, caída de la demanda. Sin embargo, a menudo queda sujeto a las reglas de aplicación (precios impuestos, rating, sanciones), situación que llamamos **subordinación algorítmica**. Ante esto, los tribunales de varios países han comenzado a imponer el [[Recalificación]] de estos contratos como empleo asalariado real."
+          "text": "El trabajador se vuelve un contratista que carga solo con todos los riesgos: enfermedad, accidente, una caída de la demanda. Y aun así siguen aplicándose las reglas de la app, de las tarifas fijas a las valoraciones y las sanciones, una situación conocida como **subordinación algorítmica**. En respuesta, tribunales de varios países han empezado a ordenar la [[Recalificación]] de estos contratos como empleos reales con estatuto de asalariado."
         }
       ]
     },
     {
       "id": "course_217_l_economie_de_plateforme_uber_airbnb_p3",
-      "title": "Ciudades al revés",
+      "title": "Ciudades vueltas del revés",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "El impacto de estas plataformas va más allá del mundo del trabajo: también está transformando las ciudades. Airbnb, al facilitar alquileres turísticos a corto plazo, compite con los hoteles tradicionales y al mismo tiempo reduce el número de alojamientos disponibles para los residentes."
+          "text": "El impacto de estas plataformas va más allá del mundo del trabajo. También remodela las ciudades. Al facilitar los alquileres turísticos de corta duración, Airbnb compite con los hoteles tradicionales y recorta el número de viviendas disponibles para los residentes."
         },
         {
           "type": "paragraph",
-          "text": "Resultado: los alquileres están subiendo en el centro de las ciudades y metrópolis como París o Barcelona han tenido que imponer reglas estrictas, como cuotas de días de alquiler. Los estados también están tratando de establecer **impuestos digitales** para que estas plataformas paguen su parte de impuestos donde realmente ganan su dinero."
+          "text": "El resultado es la subida de los alquileres en los centros, y ciudades como París y Barcelona han tenido que imponer reglas estrictas, como techos al número de noches que se puede alquilar un piso. Los Estados también intentan introducir una **tributación digital**, para que estas plataformas paguen su parte de impuesto allí donde ganan de verdad su dinero."
         },
         {
           "type": "funFact",
-          "text": "En Nueva York, la estricta regulación contra Airbnb en 2023 provocó que el número de anuncios legales cayera un 80% en unos pocos meses."
+          "text": "En Nueva York, una regulación estricta de Airbnb en 2023 recortó el número de anuncios legales un 80% en pocos meses."
         }
       ]
     },
     {
       "id": "course_217_l_economie_de_plateforme_uber_airbnb_p4",
-      "title": "¿Hacia un nuevo estatus para los trabajadores?",
+      "title": "¿Hacia un estatuto nuevo para los trabajadores?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La economía de plataformas ha traído servicios rápidos y a menudo menos costosos, y ha facilitado que algunas personas encuentren ingresos. Pero esta eficacia se basa en un debilitamiento de las protecciones construidas en el siglo XX."
+          "text": "La economía de plataformas ha traído servicios rápidos que a menudo son más baratos, y ha facilitado a algunas personas encontrar un ingreso. Pero esa eficacia descansa en debilitar las protecciones construidas a lo largo del siglo XX."
         },
         {
           "type": "paragraph",
-          "text": "El debate actual gira en torno a la creación de un estatus intermedio, entre asalariado y autónomo, con portabilidad de derechos: cada trabajador acumularía protecciones sociales, independientemente del número de plataformas para las que trabaje. El futuro de este modelo dependerá de la capacidad de los reguladores para regularlo sin sofocar la innovación."
+          "text": "El debate actual es crear un estatuto intermedio, entre asalariado y contratista, con derechos portátiles: cada trabajador acumularía protección social sea cual sea el número de plataformas para las que trabaje. El futuro del modelo dependerá de si los reguladores pueden enmarcarlo sin ahogar la innovación."
         },
         {
           "type": "takeaway",
-          "text": "La economía de plataformas se basa en un capitalismo sin fábricas que explota el efecto de red, al tiempo que transforma a sus trabajadores en autónomos, a menudo precarios. La batalla por mejores protecciones sociales, sin romper este modelo, apenas ha comenzado."
+          "text": "La economía de plataformas descansa en un capitalismo sin fábricas que explota el efecto de red, al tiempo que convierte a sus trabajadores en contratistas a menudo precarios. La lucha por una mejor protección social, sin romper el modelo, no ha hecho más que empezar."
         }
       ]
     }
