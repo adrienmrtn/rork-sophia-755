@@ -10,7 +10,7 @@ untranslated number formats) plus the typography rules of that language.
 Usage:
     python scripts/check_course_translation.py --lang en
     python scripts/check_course_translation.py --lang de --verbose course_10*
-    python scripts/check_course_translation.py --lang de --json report.json
+    python scripts/check_course_translation.py --lang pt --json report.json
 """
 
 from __future__ import annotations
@@ -184,9 +184,31 @@ GERMAN_RULES = LanguageRules(
     era_hint="should be v. Chr. / n. Chr.",
 )
 
+PORTUGUESE_RULES = LanguageRules(
+    stranded_spaced=re.compile(
+        r"\b(o|a|os|as|um|uma|de|do|da|dos|das|em|no|na|por|para|com|e|ou)"
+        r"\s+([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    # "a," is ordinary in lists ("a, b e c"); "um." is often a numeral.
+    stranded_tight=re.compile(
+        r"\b(o|os|as|uma)\s*([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    leading_articles=("o ", "a ", "os ", "as ", "um ", "uma "),
+    leftover_extra_skip=frozenset({"entre", "du"}),
+    check_a_an=False,
+    flag_space_thousands=True,
+    thousands_hint="should use a period (30.000)",
+    flag_decimal_comma=False,  # Portuguese decimals are commas
+    century_hint="should be 'século XV'",
+    era_hint="should be a.C. / d.C.",
+)
+
 RULES_BY_LANG: dict[str, LanguageRules] = {
     "en": ENGLISH_RULES,
     "de": GERMAN_RULES,
+    "pt": PORTUGUESE_RULES,
 }
 
 
@@ -255,6 +277,7 @@ def residual_french(text: str, extra_skip: frozenset[str] = frozenset()) -> tupl
 ARTICLE_BEFORE_RE = {
     "en": re.compile(r"\b(the|a|an)$", re.IGNORECASE),
     "de": re.compile(r"\b(der|die|das|dem|den|des|ein|eine|eines|einem|einen)$", re.IGNORECASE),
+    "pt": re.compile(r"\b(o|a|os|as|um|uma)$", re.IGNORECASE),
 }
 
 
