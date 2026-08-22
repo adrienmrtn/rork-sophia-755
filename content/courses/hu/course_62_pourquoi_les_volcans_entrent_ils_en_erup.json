@@ -4,11 +4,11 @@
   "subtitle": "Magma és lemezek",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "A vulkán egy nyílás a földkéregben. A nyomás alatt álló magma ott felemelkedik és láva lesz. Ezért „köp a Föld”.",
+  "description": "A vulkán nyílás a földkéregben. Nyomás alatti magma emelkedik fel, és lávává válik. Ezért „köp” a Föld.",
   "hero": {
     "image": "pourquoi_les_volcans_entrent_en_eruption",
     "ratio": "16:9",
-    "hook": "A lábunk alatt nincs fagyva a Föld. Néha kinyit egy tűzablakot."
+    "hook": "A lábunk alatt a Föld nem merev. Néha tűzablakot nyit."
   },
   "sections": [
     {
@@ -18,40 +18,40 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A vulkán nem csak egy hegy, amely tüzet lehel. Ez egy nyílás a Föld külső burkában. Így emelkedik a **magma**: olvadt kőzetek és gázok keveréke nagy nyomás alatt. A szabad levegőn ez a magma **mosott** lesz."
+          "text": "A vulkán nem csak tűzokádó hegy. Nyílás a Föld külső burkában. Itt emelkedik fel a **magma**: olvadt kőzet és gáz keveréke, erős nyomás alatt. A szabad levegőn ez a magma **lávává** válik."
         },
         {
           "type": "paragraph",
-          "text": "A kitörés megértéséhez be kell nézni a felszín alá: a hőt a bolygó belsejében, a lemezek mozgását, és azt, ahogy a gázok nyomást építenek fel, kicsit olyan, mintha egy üveg üdítős rázogatnának."
+          "text": "Egy kitöréshez a felszín alá kell nézni: a bolygó belső hőjére, a lemezek mozgására, és arra, hogyan emelik a gázok a nyomást, mint egy felrázott szódásüvegben."
         }
       ]
     },
     {
       "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p1",
-      "title": "A lábunk alatt semmi sem mozdul",
+      "title": "A lábunk alatt semmi sem mozdulatlan",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A Föld rétegekből áll. A felszínen a **kéreg** merev burok, **5-70 km vastag. Lassan található a**mantle****, ezt**2 900 km** mélységig. A szőrzet többnyire tömör, de nagyon hosszú időn keresztül nagyon lassan tud folyni, akár az ultrasűrű méz."
+          "text": "A Föld rétegekből áll. A felszínen a **kéreg** merev burok, **5-70 km** vastag. Alatta a **köpeny** terül el, nagyjából **2.900 km** mélységig. A köpeny főleg szilárd, de nagyon hosszú időn nagyon lassan folyhat, mint egy sűrű méz."
         },
         {
           "type": "image",
           "asset": "volcano_eruption_lava",
           "ratio": "auto",
-          "caption": "Kitörés: a magma felszínre emelkedése."
+          "caption": "Egy kitörés: a magma útja a felszínig."
         },
         {
           "type": "paragraph",
-          "text": "Ez a belső hő hatására az anyag felemelkedik és süllyed: ezek **konvekciós áramok**. Nagy kéregdarabokat nyomnak ki, úgynevezett plakkok. Ez a [[Lemeztektonika]]: a földfelszín lemezekre van vágva, amelyek egymástól elmozdulnak, ütköznek vagy egymásnak csúsznak."
+          "text": "Ez a belső hő anyagot emel és süllyeszt: ezek a **konvekciós áramlások**. Ők tolják a kéreg nagy darabjait, a lemezeket. Ez a [[Lemeztektonika]]: a Föld felszíne lemezekre van vágva, amelyek szétcsúsznak, ütköznek vagy elcsúsznak egymás mellett."
         },
         {
           "type": "funFact",
-          "text": "Bizonyos nagyon gyors emelkedések visszahozzák a több mint **150 km** mélységben keletkezett gyémántokat. Útközben nincs idejük átöltözni."
+          "text": "Egyes nagyon gyors feláramlások **150 km**-nél mélyebben született gyémántokat hoznak fel. Útközben nincs idejük átalakulni."
         },
         {
           "type": "paragraph",
-          "text": "A [[háti]]-nél a lemezek eltávolodnak egymástól, és a magma könnyen felemelkedik. A [[Szubdukció]] területén az egyik tányér a másik alá merül, és vizet visz magával. Ez a víz csökkenti a kőzetek olvadáspontját: magma képződik, majd felemelkedik."
+          "text": "A [[gerincek]] mentén a lemezek szétnyílnak, és a magma könnyen feljön. Egy [[szubdukció]] övezetében egy lemez a másik alá bukik, és vizet visz magával. Ez a víz csökkenti a kőzetek olvadáspontját: magma születik, aztán feljön."
         }
       ]
     },
@@ -62,53 +62,53 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A rock nem csak azért olvad meg, \"mert meleg\". Három kiváltó tényező van: a hőmérséklet emelkedése, a nyomás csökkenése vagy a víz hozzáadása. Miután kialakult, a magma kevésbé sűrű, mint a körülötte lévő kőzet. Ezért megpróbál felemelkedni, kicsit úgy, mint egy légbuborék a vízben."
+          "text": "A kőzet nem csak „azért olvad, mert meleg van”. Három indító számít: hőemelkedés, nyomáscsökkenés, vagy víz hozzáadása. Ha már megvan, a magma ritkább, mint a körülötte lévő kőzet. Ezért próbál feljönni, mint egy légbuborék a vízben."
         },
         {
           "type": "paragraph",
-          "text": "Gyakran először egy **magma kamrában** áll meg, egy tározóban, néhány kilométerrel a felszín alatt. Ott az oldott gázok a nyomás csökkenésekor buborékokat képeznek. Ha a fenti szikla „dugója” már nem tartja magát, a kitörés megkezdődik."
+          "text": "Gyakran először egy **magmakamrában** áll meg, néhány kilométerrel a felszín alatt. Ott az oldott gázok buborékokat képeznek, amikor a nyomás csökken. Ha a felette lévő kőzetdugó nem bírja, indul a kitörés."
         },
         {
           "type": "funFact",
-          "text": "Az indonéziai **1815** **Tambora** kitörése olyan erős volt, hogy lehűtötte a globális klímát. A **1816** „a nyár nélküli év” becenevet kapta, Európában és Észak-Amerikában katasztrofális termésekkel."
+          "text": "A **Tambora** **1815**-ös indonéziai kitörése olyan erős volt, hogy lehűtötte a világ éghajlatát. **1816**-ot „a nyár nélküli évnek” nevezték, katasztrofális terméssel Európában és Észak-Amerikában."
         }
       ]
     },
     {
       "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p3",
-      "title": "Folyadék vagy robbanásveszélyes?",
+      "title": "Folyékony vagy robbanékony?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nem minden kitörés egyforma. Minden a magma **viszkozitásától** függ, vagyis attól, hogy inkább folyékony vagy ragadós. A folyékony magma, mint például a **Hawaii** vagy a Piton de la Fournaise (Reunion-sziget), lehetővé teszi a gázok eltávozását. Lávafolyások: kitörés **dagályos**."
+          "text": "Nem minden kitörés egyforma. A magma **viszkozitásától** függ, vagyis attól, mennyire folyékony vagy ragadós. A folyékony magma, mint **Hawaii** szigetén vagy a Piton de la Fournaise-nál (Réunion), kiengedi a gázokat. A láva folyik: **effúzív** kitörés."
         },
         {
           "type": "paragraph",
-          "text": "A ragadós magma csapdába ejti a gázokat. A nyomás nő, aztán minden felrobban. Hamu, tömbök és [[tüzes felhők]] (égő gáz- és hamufelhők gördülnek le a lejtőn) ezután tönkretehetik a környéket. Ez az olyan vulkánok stílusa, mint a Mount **Szent Ilona** (Egyesült Államok) vagy **Pinatubo** (Fülöp-szigetek)."
+          "text": "A ragadós magma bezárja a gázokat. A nyomás nő, aztán minden felrobban. Hamu, tömbök és [[piroklasztikus áramlások]] (forró gáz- és hamufelhők, amelyek a lejtőn zúdulnak le) akkor tarthatják romba a környéket. Ilyen a **Saint Helens** (Egyesült Államok) vagy a **Pinatubo** (Fülöp-szigetek) stílusa."
         },
         {
           "type": "paragraph",
-          "text": "Egy vulkán is nyugodt maradhat évszázadokig. **79** után. Kr.e., **Vezúv**, Nápoly közelében, hamu alá temette Pompeiit. A világ vulkáni tevékenységének körülbelül **80%-a** az óceánok alatt zajlik, távol a szemünktől."
+          "text": "Egy vulkán évszázadokig is csendben maradhat. I. sz. **79**-ben a **Vezúv**, Nápoly mellett, hamu alá temette Pompejit. A világ vulkáni tevékenységének nagyjából **80%**-a az óceánok alatt zajlik, a szemünk elől rejtve."
         }
       ]
     },
     {
       "id": "course_62_pourquoi_les_volcans_entrent_ils_en_erup_p4",
-      "title": "Veszély, termékenység, mélységi élet",
+      "title": "Veszély, termékenység, mélytengeri élet",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A vulkánok gázok kibocsátásával formálták a Föld korai légkörét. Hamujuk gazdagítja a talajt is: számos termékeny mezőgazdasági régió él aktív vulkánok lábánál. De egy nagyon nagy kitörés kénrészecskéket juttathat magasra a légkörbe, és hónapokra lehűtheti az éghajlatot."
+          "text": "A vulkánok gázokat okádva formálták a Föld ősi légkörét. A hamujuk a talajt is gazdagítja: sok termékeny mezőgazdasági vidék aktív vulkánok lábánál él. De egy nagyon nagy kitörés kénrészecskéket lőhet magasan a légkörbe, és hónapokra lehűtheti az éghajlatot."
         },
         {
           "type": "paragraph",
-          "text": "Egyes oldalakat, például a Yellowstone-i [[szupervulkán]]-t az Egyesült Államokban szorosan figyelik. A tenger alatt, a gerincek közelében a [[fekete dohányosok]] ásványi anyagokban gazdag égő folyadékokat lövell ki. Az ökoszisztémák napfény nélkül élnek ott, a meleg források kémiájából táplálkozva."
+          "text": "Egyes helyeket, mint a yellowstone-i [[szupervulkán]] az Egyesült Államokban, szorosan figyelnek. A tenger alatt, a gerincek közelében, a [[fekete dohányosok]] forró, ásványokban gazdag folyadékot okádnak. Ökoszisztémák élnek ott napfény nélkül, a forró források kémiájából táplálkozva."
         },
         {
           "type": "takeaway",
-          "text": "A vulkánok nyomás alatt kiszorítják a magmát, különösen a tektonikus lemezek határain. A magma viszkozitása dönti el, hogy a kitörés csendesen folyik-e vagy felrobban."
+          "text": "A vulkánok nyomás alatti magmát lövellnek ki, főleg a tektonikus lemezek határain. A magma viszkozitása dönti el, hogy a kitörés csendesen folyik, vagy robban."
         }
       ]
     }

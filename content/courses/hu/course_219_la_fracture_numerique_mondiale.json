@@ -1,14 +1,14 @@
 {
   "id": "course_219_la_fracture_numerique_mondiale",
-  "title": "A globális digitális szakadék",
+  "title": "A világ digitális szakadéka",
   "subtitle": "Az emberiség egyharmada offline",
   "subject": "comprendreLeMonde",
   "subcategory": "Economy & society",
-  "description": "2,7 milliárd ember még mindig nem fér hozzá az internethez. Az egyre digitálisabbá váló világban ez a kapcsolathiány a kirekesztés új formájává válik.",
+  "description": "2,7 milliárd embernek még mindig nincs internete. Egy egyre digitálisabb világban a kapcsolat hiánya új kirekesztés lett.",
   "hero": {
     "image": "la_fracture_numerique_mondiale",
     "ratio": "16:9",
-    "hook": "Kenya tíz évvel Európa előtt találta fel a telefonos fizetést, a bankfiókok hiánya miatt."
+    "hook": "Kenya tíz évvel Európa előtt találta fel a telefonos fizetést, mert kevés volt a bankfiók."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Miközben a fejlett társadalmakban a mesterséges intelligencia által vezérelt forradalom zajlik, a brutális valóság továbbra is fennáll: **2,7 milliárd parázs**, vagyis az emberiség körülbelül egyharmada még mindig nem fér hozzá az internethez."
+          "text": "A fejlett társadalmak a mesterséges intelligencia forradalmát élik, de egy durva tény megmarad: **2,7 milliárd embernek**, az emberiség nagyjából egyharmadának, még mindig nincs internete."
         },
         {
           "type": "paragraph",
-          "text": "Ez a **digitális megosztottság** nem csupán technikai késés: valódi akadály lett, amely emberek millióit tartja távol az oktatástól, az egészségügytől és a világgazdaságtól. Íme, miért marad fenn, és hogyan próbálják egyes országok betölteni."
+          "text": "Ez a **digitális szakadék** nem csak technikai lemaradás. Igazi gát lett: milliókat tart távol az oktatástól, az egészségügytől és a világgazdaságtól. Ezért marad fenn, és így próbálják egyes országok áthidalni."
         }
       ]
     },
@@ -33,70 +33,70 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "2024-re világszerte körülbelül 5,4 milliárd ember csatlakozik az internethez, de a fejlődés a legszegényebb régiókban stagnál. Európa és Észak-Amerika kapcsolata meghaladja a 90%-ot, míg a szubszaharai Afrika továbbra is csak 37%-on áll."
+          "text": "2024-ben nagyjából 5,4 milliárd ember kapcsolódik az internethez, de a szegényebb vidékeken a növekedés megállt. Európa és Észak-Amerika 90% fölött van. A Szaharától délre fekvő Afrika csak 37%-on."
         },
         {
           "type": "paragraph",
-          "text": "Ez a kizárás több okra vezethető vissza. Először is, az infrastruktúra hiánya: az optikai szálak egyes elszigetelt régiókban történő telepítését az üzemeltetők túl költségesnek tartják. Aztán az ár: egyes országokban egy egyszerű belépő szintű [[okostelefon]] több havi fizetést jelent. Végül a nyelvi akadály (a webes tartalom körülbelül 70%-a angol nyelvű) és a digitális képzés hiánya még kapcsolat fennállása esetén is korlátozza a használatot."
+          "text": "A kirekesztésnek több oka van. Először a hálózat hiánya: a szigetelt vidékekre optikai kábelt vinni a szolgáltatóknak túl drága. Aztán az ár: egyes országokban egy belépő szintű [[okostelefon]] többhavi bér. Végül a nyelv (a webtartalom nagyjából 70%-a angol) és a digitális tudás hiánya akkor is korlátoz, ha van net."
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p2",
-      "title": "Amikor az infrastruktúra hiánya kényszeríti az innovációt",
+      "title": "Amikor a hiány kényszerít az újításra",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ez a megosztottság az egyenlőtlenségek szorzójaként működik. Egy olyan világban, ahol a távmunka, az e-kereskedelem és az online oktatás ([[MOOC]]) általánossá válik, a kapcsolat hiánya azt jelenti, hogy láthatatlanná válik a globális gazdaság számára."
+          "text": "Ez a szakadék sokszorozza az egyenlőtlenséget. Ahol a távmunka, a webáruház és az online oktatás (a [[MOOC]]) lett a norma, a kapcsolat nélkül maradó ember láthatatlan a világgazdaság számára."
         },
         {
           "type": "image",
           "asset": "digital_divide_africa_rural_village_smartphone",
           "ratio": "16:9",
-          "caption": "Sok vidéki területen továbbra is a mobiltelefon az egyetlen hozzáférési pont az internethez."
+          "caption": "Sok vidéki térségben a mobiltelefon marad az egyetlen kapu az internethez"
         },
         {
           "type": "paragraph",
-          "text": "Kenya egy másik utat is szemléltet: elegendő bankfiók hiánya miatt az ország 2007-ben tömegesen bevezetett egy egyszerű SMS-fizetési rendszert, a [[Kenyai M-Pesa]]-t, tíz évvel megelőzve Európát. Ez a rendszer bankszámlával nem rendelkező emberek milliói számára tette lehetővé, hogy biztonságos tranzakciókat bonyolítsanak le egyetlen telefonnal."
+          "text": "Kenya más utat mutat: kevés bankfiók miatt 2007-től tömegesen jött be egy SMS-es fizetés, a [[Kenyai M-Pesa]], tíz évvel Európa előtt. Milliók tudtak bankszámla nélkül is biztonságosan fizetni egy sima telefonnal."
         },
         {
           "type": "funFact",
-          "text": "Kenya ezt a stratégiát technológiai ugrásnak nevezte: a drága és elavult infrastruktúra telepítése helyett az ország közvetlenül egy modernebb és olcsóbb megoldás felé lépett."
+          "text": "Kenya ezt technológiai „bárányugrásnak” hívta: ahelyett, hogy drága, elavult hálózatot épített volna, egyből egy modernebb és olcsóbb megoldásra lépett."
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p3",
-      "title": "Műholdas internet: feltételekhez kötött megoldás",
+      "title": "Műholdas internet: megoldás feltételekkel",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A legelszigeteltebb falvak összekapcsolása érdekében új játékosok bankolnak az űrben. A [[Starlink]] projekt több ezer műholdat küld alacsony pályára, lehetővé téve a gyors csatlakozást még sivatagokban vagy magas hegyekben is anélkül, hogy egyetlen kábelt kellene lefektetni."
+          "text": "A legeldugottabb falukat új szereplők az űrből akarják bekötni. A [[Starlink]] ezer számra küld alacsony pályás műholdakat. Gyors netet ad sivatagban és magas hegyen is, kábel nélkül."
         },
         {
           "type": "paragraph",
-          "text": "De az előfizetés és a felszerelés költsége továbbra is a nyugati szabványokhoz igazodik, ami külső segítség nélkül elérhetetlenné teszi ezeket a megoldásokat a legszegényebb vidéki lakosság számára. A digitális megosztottság feloldása tehát nem valósítható meg pusztán technológiával: politikai akarat is szükséges ahhoz, hogy az Internetet mindenki számára elérhetővé tegyük."
+          "text": "Az előfizetés és a készülék ára mégis nyugati szintű, ezért a legszegényebb vidéki embereknek külső segítség nélkül elérhetetlen. A szakadékot tehát nem oldja meg önmagában a technika. Politikai akarat kell ahhoz, hogy az internet mindenkié legyen, ne csak áru."
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p4",
-      "title": "Mesterséges intelligencia, új szakadék",
+      "title": "A mesterséges intelligencia, egy új árok",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A mesterséges intelligencia gyors térnyerése azzal fenyeget, hogy tovább szélesíti ezt a szakadékot. Óriási számítási és adatteljesítményt igényel, néhány ország és vállalat kezében koncentrált erőforrásokat. Az elszakadt populációk ekkor azt kockáztatják, hogy függővé válnak olyan eszközöktől, amelyeket kultúrájuk vagy nyelvük figyelembevétele nélkül terveztek."
+          "text": "A mesterséges intelligencia gyors felfutása még mélyítheti ezt a szakadékot. Hatalmas számítási kapacitást és adatot kíván, és ez kevés ország és cég kezében van. A lekapcsolt közösségek olyan eszközöktől függhetnek, amelyeket a kultúrájuk és a nyelvük nélkül terveztek."
         },
         {
           "type": "paragraph",
-          "text": "A kapcsolt és nem kapcsolattal rendelkező tanulók közötti készségek szakadéka is nagyon gyorsan nőhet. A következő évek kihívása tehát már nem csupán a kapcsolat biztosítása lesz, hanem a digitális értékteremtéshez való méltányos hozzáférés garantálása az alacsonyabb költségek, a helyi tartalom és a képzés kombinálásával."
+          "text": "A kapcsolódó és a lemaradó diákok tudáskülönbsége is gyorsan nőhet. A következő évek tétje már nem csak a csatlakozás, hanem az igazságos belépés a digitális értékteremtésbe: olcsóbb hozzáférés, helyi tartalom, képzés."
         },
         {
           "type": "takeaway",
-          "text": "2,7 milliárd embert ma is kirekesztettek az internetről, és ez a megosztottság a mesterséges intelligencia miatt tovább súlyosbodhat. Ennek a szakadéknak a csökkentése megköveteli, hogy a csatlakozást valódi, mindenki számára elérhető jóvá kell alakítani, és nem csak eladható termékké."
+          "text": "Ma 2,7 milliárd ember van az interneten kívül. A mesterséges intelligencia ezt a szakadékot még nagyobbra nyithatja. Csökkenteni csak akkor lehet, ha a kapcsolat valódi közjó lesz, nem csupán eladható termék."
         }
       ]
     }

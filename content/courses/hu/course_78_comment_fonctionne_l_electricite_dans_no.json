@@ -1,14 +1,14 @@
 {
   "id": "course_78_comment_fonctionne_l_electricite_dans_no",
-  "title": "Hogyan működik az elektromosság a testünkben?",
+  "title": "Hogyan működik az elektromosság a testedben?",
   "subtitle": "Idegek és ionok",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "Gondolkodás, szívdobogás, kar felemelése: mindez először úgy kering, mint az élő elektromosság, amit nem elektronok, hanem ionok hordoznak.",
+  "description": "Gondolkodás, szívverés, karfelemelés: először mind élő elektromosságként fut. Nem elektronok viszik, hanem ionok.",
   "hero": {
     "image": "comment_fonctionne_l_electricite_dans_notre_corps",
     "ratio": "16:9",
-    "hook": "A tested egy elektromos hálózat. De itt az áram ionokból áll, nem elektronokból."
+    "hook": "A tested elektromos hálózat. Itt az áram ion, nem elektron."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A fali konnektorban az áram **elektronok**, amelyek keringenek. A testedben ez más: ezek **ionok**, töltött atomok, amelyek belépnek és elhagyják a sejteket. Ez az áramlás létrehozza azokat a jeleket, amelyek gondolkodásra késztetik a szívet, dobogtatják és összehúzzák az izmokat."
+          "text": "A fali konnektorban az áram keringő **elektron**. A testedben más a helyzet: **ionok**, töltött atomok lépnek be a sejtekbe és ki belőlük. Ez az áramlás adja a jeleket, amelyek gondolkodtatnak, vertetik a szívet és húzzák az izmot."
         },
         {
           "type": "paragraph",
-          "text": "E nélkül az élő elektromosság nélkül nincs gondolat, nincs gesztus, nincs pulzus. A test megértése a töltések nyelvének megértését is jelenti."
+          "text": "E nélkül az élő elektromosság nélkül nincs gondolat, nincs mozdulat, nincs pulzus. A testet megérteni a töltések nyelvét is jelenti."
         }
       ]
     },
@@ -33,78 +33,78 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A nyugalmi állapotban lévő **neuron** nem küld üzenetet, hanem „tölt”. Membránja elválasztja a sejt belsejét és külsejét. A [[nátrium-kálium szivattyúk]]-nek köszönhetően körülbelül **-70 millivolt** [[nyugalmi potenciál]] tart fenn: a belső negatívabb, mint a külső."
+          "text": "Egy nyugalomban lévő **neuron** nem küld üzenetet, de „töltődik”. A membránja elválasztja a sejt belsejét a külsejétől. [[nátrium-kálium szivattyúk]] tartják fenn a körülbelül **-70 millivoltos** [[nyugalmi potenciál]] értéket: belül negatívabb, mint kívül."
         },
         {
           "type": "image",
           "asset": "neuron_electrical_signal_brain",
           "ratio": "auto",
-          "caption": "A neuronok rövid elektromos impulzusokkal kommunikálnak."
+          "caption": "A neuronok rövid elektromos impulzusokkal beszélnek"
         },
         {
           "type": "paragraph",
-          "text": "Amikor egy inger érkezik, csatornák nyílnak meg. A nátrium egyszerre jön be. A polaritás fordított: ez a [[akciós potenciál]], egy mindent vagy semmit jel, amely az axon mentén fut, néha egy métert is meghaladva. Mint egy elektromos hullám."
+          "text": "Ha inger jön, csatornák nyílnak. A nátrium egyszerre beözönlik. A polaritás megfordul: ez az [[akciós potenciál]], mindent vagy semmit jel, amely az axonon szalad, néha egy méteren át. Elektromos hullám."
         },
         {
           "type": "funFact",
-          "text": "Az éber agy körülbelül **20 watt** termel, ami elég egy kis LED-hez. Azonban a szervezet kalóriájának majdnem **20%-át** fogyasztja el."
+          "text": "Az éber agy nagyjából **20 wattot** termel, elég egy kis LED-nek. Mégis a test kalóriáinak majdnem **20%**-át viszi el."
         }
       ]
     },
     {
       "id": "course_78_comment_fonctionne_l_electricite_dans_no_p2",
-      "title": "A szinapszisban az elektromosság kémiává válik",
+      "title": "A szinapszisnál az áram kémiává válik",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A neuronok nem igazán érintik egymást. Közöttük egy apró rés: a **szinapszis**. Az elektromos jel nem hagyhatja ki. Ezután az axon vége felszabadítja a [[Neurotranszmitterek]], hírvivő molekulákat, mint az acetilkolin vagy a [[glutamát]]."
+          "text": "A neuronok nem igazán érintik egymást. Közöttük apró rés van: a **szinapszis**. Az elektromos jel nem ugorhatja át. Az axon vége ezért [[neurotranszmitterek]] molekuláit ereszti ki, hírvivőket, például acetilkolint vagy [[glutamát]] anyagot."
         },
         {
           "type": "paragraph",
-          "text": "Ezek a hírvivők úgy kapcsolódnak a következő neuronhoz, mint egy kulcs a zárban. Az üzenettől függően gerjesztenek vagy gátolnak. Ezeknek az egyidejű döntéseknek ezrei alkotják a gondolatot."
+          "text": "Ezek a hírvivők a következő neuronra tapadnak, mint kulcs a zárba. Az üzenettől függően izgatnak vagy gátolnak. Több ezer ilyen döntés egyszerre alkotja a gondolatot."
         },
         {
           "type": "funFact",
-          "text": "Egyes idegi jelek **120 m/s** sebességgel haladnak (több mint **430 km/h**). Elég ahhoz, hogy a másodperc töredéke alatt reagáljon a lábujj égésére."
+          "text": "Egyes idegjelek **120 m/s** sebességgel mennek (több mint **430 km/h**). Elég, hogy egy lábujjégésre a másodperc tört része alatt reagálj."
         }
       ]
     },
     {
       "id": "course_78_comment_fonctionne_l_electricite_dans_no_p3",
-      "title": "A szívnek saját pacemakere van",
+      "title": "A szívnek saját pacemakerje van",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A szív nem vár parancsot az agytól minden egyes ütemre. A jobb pitvarban a **sinus csomópont** saját impulzusokat generál, körülbelül **60-100** percenként nyugalmi állapotban. A jel továbbterjed, először a pitvarokat, majd a kamrákat összehúzza."
+          "text": "A szív nem vár agyi parancsot minden ütésre. A jobb pitvarban a **sinuscsomó** saját impulzusokat gyárt, nyugalomban nagyjából **60-100**-szor percenként. A jel tovaterjed, először a pitvarokat húzza össze, aztán a kamrákat."
         },
         {
           "type": "paragraph",
-          "text": "Ez a tevékenység elég erős ahhoz, hogy leolvasható legyen a bőrön: ez a **Elektrokardiogram (EKG)**. Ha a ritmus zavarttá válik, **aritmiáról** beszélünk. A szív ekkor rendellenesen ver, és rosszul pumpál."
+          "text": "Ez az aktivitás elég erős ahhoz, hogy a bőrön leolvashasd: ez az **elektrokardiogram (EKG)**. Ha a ritmus elromlik, **aritmiáról** beszélünk. A szív akkor rendezetlenül ver, és rosszul pumpál."
         },
         {
           "type": "funFact",
-          "text": "Az elektromos angolna ugyanazt az ingerelhető cellák elvét használja, de sorosan: **600 műrepülő**, ami elegendő a zsákmány megbénításához."
+          "text": "Az elektromos angolna ugyanazt az ingerelhető-sejt elvet használja, csak sorba kötve: akár **600 volt**, elég a zsákmány megbénításához."
         }
       ]
     },
     {
       "id": "course_78_comment_fonctionne_l_electricite_dans_no_p4",
-      "title": "Az önkéntes gesztustól a defibrillátorig",
+      "title": "Az akaratlagos mozdulattól a defibrillátorig",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A kar felemeléséhez akciós potenciál jut le az izomba. Az acetilkolin helyi elektromos hullámot vált ki, majd kalcium felszabadul. Az izomfehérjék egymáson csúsznak: összehúzódás."
+          "text": "Hogy felemeld a karod, akciós potenciál fut le az izomig. Az acetilkolin helyi elektromos hullámot indít, aztán kalciumot enged ki. Az izomfehérjék egymáson csúsznak: összehúzódás."
         },
         {
           "type": "paragraph",
-          "text": "A **defibrilláció** ugyanezt az elvet fordítva is használja: egy külső sokk visszaállítja az összes cellát „nullára”, így a szinuszcsomó újraindul. A bionikus protézisek ezeket a gyenge jeleket is rögzítik a mesterséges kéz irányításához."
+          "text": "A **defibrillálás** ugyanazt az elvet fordítva használja: külső sokk nullázza a sejteket, hogy a sinuscsomó újra tartsa a tempót. Bionikus protézisek ezeket a gyenge jeleket is lesik, hogy mesterséges kezet irányítsanak."
         },
         {
           "type": "takeaway",
-          "text": "Az élőlények ionáramlásokban és akciós potenciálokban beszélnek. A gondolat, a szív és az izmok ugyanazt az elektromos nyelvet használják."
+          "text": "Az élő szervezet ionáramokban és akciós potenciálokban beszél. Gondolat, szív és izmok ugyanazt az elektromos nyelvet osztják."
         }
       ]
     }

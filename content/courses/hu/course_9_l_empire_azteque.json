@@ -1,14 +1,14 @@
 {
   "id": "course_9_l_empire_azteque",
-  "title": "Az Azték Birodalom",
+  "title": "Az azték birodalom",
   "subtitle": "1325-1521",
   "subject": "histoire",
   "subcategory": "Antiquity & Middle Ages",
-  "description": "Kevesebb mint két évszázad alatt az aztékok 200 000 lakosú fővárost építettek egy tóra. Tiszteletre és áldozatra alapozott birodalmuk két év alatt összeomlott a spanyolok ellen.",
+  "description": "Két évszázad alatt az aztékok tavon építettek 200.000 lakosú fővárost. A birodalmuk, adóztatáson és áldozaton, két év alatt omlott össze a spanyolok előtt.",
   "hero": {
     "image": "l_empire_azteque",
     "ratio": "16:9",
-    "hook": "Vízparti város, lakottabb, mint London. Aztán két év múlva semmi."
+    "hook": "Egy város a vízen, népesebb, mint London. Aztán két év alatt semmi."
   },
   "sections": [
     {
@@ -18,55 +18,55 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A mai Mexikó szívében az aztékok kevesebb mint két évszázad alatt fővárost építettek egy tavon, amelyet **200 000 lakos lakott**. Nagyobb, mint London vagy Róma egyszerre. Hatalmuk egyesíti a vízépítést, az igényes vallást és az állandó háborút."
+          "text": "A mai Mexikó közepén az aztékok két évszázad alatt tavon építettek fővárost, **200.000 lakossal**. Nagyobb volt, mint akkor London vagy Róma. A hatalmuk keverte a vízügyi zsenialitást, a szigorú vallást és a folyamatos háborút."
         },
         {
           "type": "paragraph",
-          "text": "**1519** és **1521** között ez a birodalom összeomlott. Nemcsak Cortés, a spanyol hódító ágyúi alatt, hanem alattvalói gyűlölete és egy láthatatlan fegyver: a betegség alatt."
+          "text": "**1519** és **1521** között ez a birodalom összeomlott. Nem csak Cortés, a spanyol konkvisztádor ágyúi alatt, hanem az alattvalói gyűlölete és egy láthatatlan fegyver, a betegség alatt."
         }
       ]
     },
     {
       "id": "course_9_l_empire_azteque_p1",
-      "title": "Mocsarakból vízi fővárosba",
+      "title": "A mocsártól a vízi fővárosig",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A **Mexikó**, akiket aztékoknak fogunk nevezni, a mitikus [[Aztlán]] északról származnak. A 13. században érkeztek Mexikó völgyébe. Megvetve jelet keresnek istenüktől [[Huitzilopochtli]], a nap és a háború istenétől: egy sas, aki egy kígyót fal a kaktuszon. A **1325**-ben a **Texcoco**-tó egyik szigetén találják. Megszületett a [[Tenochtitlán]], leendő fővárosuk."
+          "text": "A **mexikák**, a nép, amelyet aztékoknak hívunk, a mitikus [[Aztlán]] földről jöttek, északi származási helyről. A **13. században** érkeztek a Mexikó-völgybe. Megvetették őket, és istenük, [[Huitzilopochtli]], a nap és a háború istene jelét keresték: sast, amely kaktuszon kígyót fal. **1325**-ben megtalálták a **Texcoco**-tó egyik szigetén. Így született [[Tenochtitlán]], a későbbi fővárosuk."
         },
         {
           "type": "paragraph",
-          "text": "A város táplálására tökéletesítették a [[A chinampák]] sárból és növényekből készült, ultratermékeny mesterséges szigeteket. Három töltés, töltések, csatornák: a város tóerőddé és óriási piaccá válik."
+          "text": "Hogy etessék a várost, tökéletesítették [[A chinampák]] rendszerét, iszapból és növényekből rakott, rendkívül termékeny mesterséges szigeteket. Három töltésút, gátak, csatornák: a város tavi erőd és óriási piac lett."
         },
         {
           "type": "funFact",
-          "text": "Az aztékok nem használták a kereket szállításra, és nem voltak teherhordó állatok. Mégis több millió tonna követ mozgattak meg piramisaikhoz."
+          "text": "Az aztékok nem használtak kereket a szállításhoz, és nem volt teherhordó állatuk. Mégis millió tonna követ mozgattak a piramisaikhoz."
         }
       ]
     },
     {
       "id": "course_9_l_empire_azteque_p2",
-      "title": "A hármas szövetség és a tiszteletadás",
+      "title": "A Hármas Szövetség és az adó",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**1428**-ben Tenochtitlán két szomszédos várossal, Texcocóval és Tlacopannal szövetkezett: a **Hármas Szövetség**. Hamarosan Mexikó egyedül dominál. Birodalmuk nem asszimilálódik: rendszeres **tisztelgés**-t, kukoricát, kakaót, tollat, fémeket követel. A tőke gazdagsága táplálja a leigázott népek gyűlöletét, mint például a [[Tlaxcaltecs]], az aztékok ádáz ellenségei."
+          "text": "**1428**-ban Tenochtitlán két szomszédos várossal, Texcocóval és Tlacopannal szövetkezett: ez a **Hármas Szövetség**. Hamarosan a mexikák egyedül uralkodtak. A birodalmuk nem olvasztott be: rendszeres **adót** követelt, kukoricát, kakaót, tollat, fémet. A főváros gazdagsága a leigázott népek gyűlöletét táplálta, például a [[Tlaxcaltecs]] népét, az aztékok ádáz ellenségeit."
         },
         {
           "type": "image",
           "asset": "tenochtitlan_aztec_city_illustration",
           "ratio": "4:3",
-          "caption": "Tenochtitlán, a tavi metropolisz az azték birodalom szívében."
+          "caption": "Tenochtitlán, tavi nagyváros az azték birodalom szívében"
         },
         {
           "type": "paragraph",
-          "text": "Ez egy háborús gépezet, aminek örökös hódításokra van szüksége. Amikor a spanyolok megérkeznek, már csak egyesíteniük kell ezeket az ellenérzéseket."
+          "text": "Ez háborús gép volt, amelynek állandó hódítások kellettek. Amikor a spanyolok megérkeztek, csak össze kellett fogniuk ezeket a sérelmeket."
         },
         {
           "type": "funFact",
-          "text": "A kakaóbabot fizetőeszközként használták. Tenochtitlánban egy nyúl tíz babot ért; jó alkatú rabszolga, körülbelül száz."
+          "text": "A kakaóbab volt a pénz. Tenochtitlánban egy nyúl tíz babot ért, egy erős rabszolga körülbelül százat."
         }
       ]
     },
@@ -77,11 +77,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A [[Az Öt Nap kozmogónia]], egy azték mítosz szerint a nap csak akkor marad életben, ha emberi vér táplálja. A [[Templo polgármestere]], a központban található nagy piramisban az áldozatok nem önkényes kegyetlenség, hanem az aztékok számára a világnak a folytatáshoz szükségesek."
+          "text": "[[Az Öt Nap kozmogónia]] szerint, az azték mítosz szerint, a nap csak akkor él, ha emberi vérrel táplálják. A [[Templo polgármestere]] piramisánál, a központ nagy piramisánál az áldozatok nem ingyen kegyetlenség voltak: az aztékoknak szükség volt rájuk, hogy a világ folytatódjon."
         },
         {
           "type": "paragraph",
-          "text": "**1519**-ben **Hernán Cortés** érkezett néhány száz spanyollal. [[Moctezuma II]], az azték császár tétovázik. Az acél, a fegyverek és a lovak ijesztőek. De a fő gyilkos a [[Himlő]], egy európai betegség, amely ellen a lakosságnak nincs immunitása. Cortés több ezer bennszülött szövetségesével ostromolja a fővárost."
+          "text": "**1519**-ben **Hernán Cortés** néhány száz spanyollal szállt partra. [[Moctezuma II]], az azték császár, habozott. Az acél, a lőfegyver és a ló ijesztett. De a fő gyilkos a [[himlő]] volt, európai betegség, amely ellen a lakosságnak nem volt immunitása. Cortés ezernyi őslakos szövetségessel ostromolta a fővárost."
         },
         {
           "type": "timeline",
@@ -89,7 +89,7 @@
             {
               "date": "1325",
               "title": "Tenochtitlán alapítása",
-              "detail": "Mexikó a Texcoco-tó partján telepszik le."
+              "detail": "A mexikák a Texcoco-tóra települnek."
             },
             {
               "date": "1428",
@@ -99,12 +99,12 @@
             {
               "date": "1519",
               "title": "Cortés érkezése",
-              "detail": "A spanyolok megérkeznek Mexikóba."
+              "detail": "A spanyolok partra szállnak Mexikóban."
             },
             {
               "date": "1521",
-              "title": "Tenochtitlán bukása",
-              "detail": "A birodalom vége 80 napos ostrom után."
+              "title": "Tenochtitlán eleste",
+              "detail": "A birodalom vége 80 nap ostrom után."
             }
           ]
         }
@@ -112,20 +112,20 @@
     },
     {
       "id": "course_9_l_empire_azteque_p4",
-      "title": "A romokon, Mexikóban",
+      "title": "A romokon Mexikóváros",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**1521**-ben **80 alvás** ostrom után Tenochtitlán elesett. Éhesen, víztől megfosztottan, betegségektől pusztítva. Köveiből épült Mexikóváros, a spanyol gyarmat, a [[Új Spanyolország]] fővárosa."
+          "text": "**1521**-ben, **80 nap** ostrom után Tenochtitlán elesett. Éhező, víz nélkül, betegségtől pusztítva. A köveiből épült Mexikóváros, [[Új Spanyolország]] fővárosa, a spanyol gyarmaté."
         },
         {
           "type": "paragraph",
-          "text": "Nem minden tűnik el. A [[chinampák]] még mindig létezik. A [[Nahuatl]]-t, az aztékok nyelvét több mint egymillió ember beszéli. A sas és a kígyó továbbra is Mexikó jelképe. Egy ragyogó civilizáció marad fenn az emlékezetben és a tájban."
+          "text": "Nem minden tűnt el. A [[chinampák]] ma is megvannak. A [[Nahuatl]], az aztékok nyelve, több mint egymillió ember nyelve. A sas és a kígyó Mexikó címere maradt. Egy ragyogó civilizáció túlél az emlékezetben és a tájban."
         },
         {
           "type": "takeaway",
-          "text": "Az aztékok **200 000** lakosú metropoliszt építettek egy tóra. Tisztelgési rendszerük és a [[Himlő]] lehetővé tette néhány száz spanyol számára, hogy a helyi szövetségesek segítségével két év alatt elpusztítsa a birodalmat."
+          "text": "Az aztékok **200.000** lakosú nagyvárost építettek egy tavon. Az adórendszerük és a [[himlő]] tette lehetővé, hogy néhány száz spanyol, helyi szövetségesekkel, két év alatt elpusztítsa a birodalmat."
         }
       ]
     }

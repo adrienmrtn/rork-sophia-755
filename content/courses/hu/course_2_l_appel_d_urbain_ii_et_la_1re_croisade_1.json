@@ -1,14 +1,14 @@
 {
   "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1",
-  "title": "Urban II felhívása és az 1. keresztes hadjárat",
+  "title": "II. Orbán felhívása és az 1. keresztes hadjárat",
   "subtitle": "1095",
   "subject": "histoire",
   "subcategory": "Antiquity & Middle Ages",
-  "description": "1095 novemberében Clermontban II. Urbán pápa felhívást indított, amely több tízezer európait küldött Jeruzsálembe. A keresztes hadjáratok születése.",
+  "description": "1095 novemberében Clermontban II. Orbán pápa felhívást intéz a tömeghez, és tízezrek indulnak Jeruzsálem felé. Itt születik a keresztes hadjárat.",
   "hero": {
     "image": "l_appel_d_urbain_ii_et_la_1re_croisade",
     "ratio": "16:9",
-    "hook": "Húszperces beszéd, és a Nyugat elindul Jeruzsálem felé."
+    "hook": "Húszpercnyi beszéd, és a Nyugat elindul Jeruzsálem felé."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Novemberben **1095** Auvergne-ben a **Városi II** pápa a tömeghez szól. Felhívása egyszerű: menj és szabadítsd fel Jeruzsálemet, és segíts a keleti keresztényeken. Cserébe a bűnök bocsánatát."
+          "text": "**1095** novemberében, Auvergne-ben **II. Orbán** pápa a tömeghez szól. A felhívás egyszerű: induljatok, szabadítsátok fel Jeruzsálemet, és segítsétek a keleti keresztényeket. Cserébe a bűnök bocsánata jár."
         },
         {
           "type": "paragraph",
-          "text": "Senki sem képzeli még, hogy ez a beszéd mit fog kiváltani. Emberek tízezrei rohannak majd Kelet felé. A pápaság kitalál egy szent háborút. Sokáig megváltoztatja a nyugati keresztények (gyakran latinoknak nevezett), a keleti bizánci birodalom és a muszlim világ viszonyát."
+          "text": "Senki sem sejti még, mit indít el ez a beszéd. Emberek tízezrei vágnak neki Keletnek. A pápaság szent háborút talál ki. Hosszú időre átrendezi a nyugati keresztények (gyakran latinoknak hívják őket), a keleti Bizánci Birodalom és a muszlim világ viszonyát."
         }
       ]
     },
@@ -33,42 +33,42 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A 7. század óta Jeruzsálem muszlim uralom alatt áll. A keresztény zarándokok még mindig ott járnak. Minden megváltozik a **szeldzsuk törökök**-vel, egy ázsiai harcos néppel. **1071**-ben [[Manzikerti csata]]-ben, Kis-Ázsiában szétverték a Bizánci Birodalom, a Keletrómai Birodalom hadseregét. Ezzel megnyitották Anatóliát, a mai Törökország szívét."
+          "text": "A 7. század óta Jeruzsálem muszlim uralom alatt áll. Keresztény zarándokok még így is eljutnak oda. A fordulat a **szeldzsuk törökökkel** jön, egy Ázsiából érkező harcos néppel. **1071**-ben, Kis-Ázsiában, a [[Manzikerti csata]] során szétverik a Bizánci Birodalom, a keleti Római Birodalom seregét. Ezzel megnyílik Anatólia, a mai Törökország szíve."
         },
         {
           "type": "image",
           "asset": "seljuk_turks_battle_of_manzikert",
           "ratio": "4:3",
-          "caption": "Mantzikert, 1071: Bizánc elveszíti Anatóliát a szeldzsukokkal szemben."
+          "caption": "Manzikert, 1071: Bizánc elveszíti Anatóliát a szeldzsukokkal szemben"
         },
         {
           "type": "paragraph",
-          "text": "Cornered, Bizánc császára, [[Alexios I Komnenos]] Róma segítségét kéri. A [[1054 szakadása]] óta azonban a nyugati katolikus egyház és a keleti ortodox egyház szétvált. II. Urbán számára tökéletes volt a lehetőség: érvényesíteni a pápa hatalmát, és a lovagok erőszakát külső okok felé terelni. Az egyház már megpróbálta korlátozni ezeket a magánharcokat a [[Isten békéje]] mozgalommal, amely a nem harcolók védelmét szolgálta."
+          "text": "Szorult helyzetében a bizánci császár, [[Alexios I Komnenos]], Rómától kér segítséget. Pedig az [[1054-es szakadás]] óta a nyugati katolikus egyház és a keleti ortodox egyház külön él. II. Orbánnak tökéletes az alkalom: erősíti a pápai hatalmat, és a lovagok erőszakát kifelé tereli. Az egyház már próbálta fogni ezeket a magánháborúkat [[Isten békéje]] révén, egy mozgalommal, amely a nem harcolókat védte."
         },
         {
           "type": "funFact",
-          "text": "Mantzikertben Alp Arszlán szultán elfogta a bizánci császárt. Ahelyett, hogy megölte volna, tisztelettel bánt vele, mielőtt elengedte."
+          "text": "Manzikertnél Alp Arslan szultán elfogta a bizánci császárt. Nem ölte meg: tisztelettel bánt vele, aztán elengedte."
         }
       ]
     },
     {
       "id": "course_2_l_appel_d_urbain_ii_et_la_1re_croisade_1_p2",
-      "title": "Clermont: \"Isten úgy akarja!\" »",
+      "title": "Clermont: „Isten akarja!”",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**1095. november 27**, a [[Clermonti Tanács]] nagyegyházi nagygyűlésén a város II. [[Plenáris kényeztetés]] ígér a távozóknak: a bűnök teljes elbocsátását. Az expedíció fegyveres zarándoklattá válik. A **Z** kiáltása: „Isten akarja!” »ZZENDBOLDA ZZ terjed. Az önkéntesek vörös keresztet varrnak a vállukra: „keresztezzük az utakat”."
+          "text": "**1095. november 27-én**, a [[Clermonti Tanács]] nagy egyházi gyűlésén II. Orbán [[Plenáris kényeztetés]] jutalmát ígéri azoknak, akik elindulnak: a bűnökért járó büntetés teljes elengedését. Az út fegyveres zarándoklat lesz. Terjed a kiáltás: **„Isten akarja!”** Az önkéntesek vörös keresztet varrnak a vállukra: keresztesnek állnak."
         },
         {
           "type": "image",
           "asset": "council_of_clermont_1095",
           "ratio": "4:3",
-          "caption": "A Clermont-i Zsinat, 1095: az első keresztes hadjáratot elindító felhívás."
+          "caption": "A clermonti zsinat, 1095: a felhívás, amely elindítja az első keresztes hadjáratot"
         },
         {
           "type": "paragraph",
-          "text": "A hevület gyorsan elszállt a pápától. Az urak előtt [[Remete Péter]] népszerű prédikátor szegények tömegét vezeti Kelet felé. Fegyelem és kellékek nélkül ez a „szegények keresztes hadjárata” kifosztotta az utat, és megtizedelték Anatóliában. A hevület önmagában nem alkot sereget."
+          "text": "A láz hamar kicsúszik a pápa kezéből. A nagyurak előtt [[Remete Péter]], egy népszerű prédikátor, szegények tömegét viszi Keletre. Fegyelem és utánpótlás nélkül ez a „szegények keresztes hadjárata” útközben fosztogat, és Anatóliában elpusztul. A hév önmagában nem csinál sereget."
         }
       ]
     },
@@ -79,43 +79,43 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A **1096**-ben a bárók keresztes hadjárata indul: **Bouillon Godfrey** lotaringiai úr, [[Tarantói Bohemond]] dél-olaszországi normann herceg és más vezetők. Alexis esküt követel tőlük. **Antiochia** (1097-1098), egy szíriai nagyváros hosszú ostroma után a túlélők elérték Jeruzsálemet. 1099 **július** 15-én a város elesett. A mészárlás maradandó nyomot hagy a muszlim emlékezetben."
+          "text": "**1096**-ban indul a bárók keresztes hadjárata: **Bouillon Gottfried**, egy lotaringiai úr, [[Tarantói Bohemond]], egy dél-itáliai normann herceg, és más vezérek. Alexiosz esküt követel tőlük. **Antiókhia** hosszú ostroma után (1097-1098), egy nagy szír városnál, a túlélők elérik Jeruzsálemet. **1099. július 15-én** a város elesik. A mészárlás sokáig ott marad a muszlim emlékezetben."
         },
         {
           "type": "funFact",
-          "text": "Godfrey of Bouillon visszautasítja a királyi címet. Magát [[A Szent Sír szószólója]], Krisztus sírjának védőjének nevezi: túl alázatos, mondja, ahhoz, hogy arany koronát viseljen ott, ahol Krisztus tövist viselt."
+          "text": "Bouillon Gottfried visszautasítja a királyi címet. [[A Szent Sír szószólója]] néven hívatja magát, Krisztus sírjának őreként: túl alázatos, mondja, hogy aranykoronát viseljen ott, ahol Krisztus tövist viselt."
         },
         {
           "type": "paragraph",
-          "text": "A keresztesek megalapították a [[Keresztes államok]] négy kis keresztény államot a Közel-Keleten. Később a [[Templomosok]] szerzetes-katonák védik a zarándokokat. **1187**-ben [[Szaladin]], egy muszlim szultán visszafoglalja Jeruzsálemet. További keresztes hadjáratok következnek majd Saint-Jean-d'Acre, az utolsó latin bástya elestéig **1291**-ben."
+          "text": "A keresztesek létrehozzák a [[Keresztes államok]] négy kis keresztény államát a Közel-Keleten. Később a [[Templomosok]], szerzetes-katonák, védik a zarándokokat. **1187**-ben [[Szaladin]], egy muszlim szultán, visszafoglalja Jeruzsálemet. Újabb keresztes hadjáratok jönnek, egészen Akkó, az utolsó latin erőd elestéig, **1291**-ben."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1071",
-              "title": "Mantzikert",
+              "title": "Manzikert",
               "detail": "Bizánc elveszíti Anatóliát a szeldzsukokkal szemben."
             },
             {
               "date": "1095",
-              "title": "Clermonti Tanács",
-              "detail": "Az Urban II elindítja a keresztes hadjárat felhívását."
+              "title": "Clermonti zsinat",
+              "detail": "II. Orbán meghirdeti a keresztes hadjáratot."
             },
             {
               "date": "1099",
-              "title": "Jeruzsálem elfoglalása",
-              "detail": "A keresztesek megalapították a keleti latin államokat."
+              "title": "Jeruzsálem bevétele",
+              "detail": "A keresztesek megalapítják a keleti latin államokat."
             },
             {
               "date": "1187",
               "title": "Szaladin visszafoglalja Jeruzsálemet",
-              "detail": "A muszlim visszahódítás újraéleszti a keresztes hadjáratokat."
+              "detail": "A muszlim visszafoglalás újabb hadjáratokat indít."
             },
             {
               "date": "1291",
-              "title": "Saint-Jean-d’Acre bukása",
-              "detail": "Vége a latin jelenlétnek a Szentföldön."
+              "title": "Akkó eleste",
+              "detail": "Véget ér a latin jelenlét a Szentföldön."
             }
           ]
         }
@@ -128,15 +128,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Katonai szinten a kaland rosszul végződik. Kulturális szinten azonban összehozza Keletet és Nyugatot: az arabok által közvetített görög tudományt, technikákat, termékeket, katonai megrendelések finanszírozása. Európa ugyanazon zászló alatt tanul mozgósítani."
+          "text": "Katonailag a kaland rosszul végződik. Kulturálisan mégis közelebb hozza Keletet és Nyugatot: görög tudomány arab közvetítéssel, technikák, áruk, a lovagrendek pénzügyei. Európa megtanul egy zászló alatt mozgósítani."
         },
         {
           "type": "paragraph",
-          "text": "Az öröklés továbbra is kétértelmű. II. Urbanus felhívása közös nyugati keresztény identitást kovácsolt össze. De tartós bizalmatlanságot is teremtett a vallások között. Egy néhány percig tartó beszéd két évszázad háborúját és kereskedelmét nyitotta meg."
+          "text": "Az örökség kétélű. II. Orbán felhívása közös nyugati keresztény identitást kovácsol. De tartós gyanakvást is ás a vallások közé. Néhány percnyi beszéd két évszázadnyi háborút és cserét nyit meg."
         },
         {
           "type": "takeaway",
-          "text": "A **1095**-ben II. Urbanus egy bizánci segélykérést fegyveres zarándoklattá alakított át. **1099**-ben Jeruzsálem elesik; a **1291** nyelvben a latin jelenlét összeomlik. A keresztes hadjáratok egyesítették a Nyugatot, és tartósan megosztották az emlékeket."
+          "text": "**1095**-ben II. Orbán fegyveres zarándoklattá fordítja a bizánci segítségkérést. **1099**-ben Jeruzsálem elesik, **1291**-ben a latin jelenlét összeomlik. A keresztes hadjárat összehozta a Nyugatot, és tartósan szétválasztotta az emlékezeteket."
         }
       ]
     }

@@ -1,14 +1,14 @@
 {
   "id": "course_234_la_securite_alimentaire_mondiale",
-  "title": "Globális élelmezésbiztonság",
+  "title": "A világ élelmezésbiztonsága",
   "subtitle": "800 millió ember",
   "subject": "comprendreLeMonde",
   "subcategory": "Environment & the future",
-  "description": "A Föld mindenki számára elegendő élelmet termel. Akkor miért **800 millió parázs** éhezik még mindig?",
+  "description": "A Föld elég ételt termel mindenkinek. Akkor miért éhezik még mindig **800 millió ember**?",
   "hero": {
     "image": "la_securite_alimentaire_mondiale",
     "ratio": "16:9",
-    "hook": "800 millió ember éhezése nem az élelem, hanem a megosztás problémája."
+    "hook": "800 millió ember éhe nem ételhiány, hanem elosztási kérdés."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ma körülbelül **800 millió parázs** szenved éhezéstől a világon, vagyis minden tizedik ember. Ez a szám annál furcsább, mivel az emberiség még soha nem termelt ennyi élelmiszert: statisztikailag mindenki számára elegendő ennivaló."
+          "text": "Ma nagyjából **800 millió ember** éhezik a világon, vagyis minden tizedik. A szám azért furcsa, mert az emberiség soha nem termelt ennyi ételt: statisztikailag mindenkire jutna bőven."
         },
         {
           "type": "paragraph",
-          "text": "Az éhség tehát nem mennyiségi, hanem eloszlási probléma. A globális élelmezésbiztonság megértése azt jelenti, hogy megértjük, miért létezhet együtt a bőség és az éhínség ugyanazon a bolygón."
+          "text": "Az éhség tehát nem mennyiség kérdése, hanem elosztásé. A világ élelmezésbiztonságát akkor érted meg, ha látod, miért fér meg a bőség és az éhínség ugyanazon a bolygón."
         }
       ]
     },
@@ -33,21 +33,21 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A **[[FAO]]**, az Egyesült Nemzetek Élelmiszer-ügynöksége szerint a krónikus alultápláltság 2024-ben is körülbelül 800 millió embert érintett. Ez a globális adat nagyon eltérő valóságot rejt. A leginkább érintett területek a szubszaharai Afrikában vannak, ahol a lakosság több mint egynegyede rendszeresen élelemhiányban szenved, valamint Dél-Ázsiában."
+          "text": "A **[[FAO]]**, az ENSZ élelmezési ügynöksége szerint 2024-ben még mindig nagyjából 800 millió embert érintett a krónikus alultápláltság. A globális szám nagyon különböző valóságokat takar. A leginkább sújtott övezetek a Szubszaharai-Afrikában vannak, ahol a lakosság több mint negyede rendszeresen éhezik, és Dél-Ázsiában."
         },
         {
           "type": "image",
           "asset": "famine_sub_saharan_africa_malnutrition_child",
           "ratio": "auto",
-          "caption": "Az éhezés még mindig több százmillió embert érint, különösen Afrikában a Szaharától délre fekvő országokban."
+          "caption": "Az éhség még mindig több százmillió embert érint, főként a Szubszaharai-Afrikában"
         },
         {
           "type": "paragraph",
-          "text": "Az élelmezési nehézségnek többféle formája van. **alultápláltság** a kalóriahiánynak felel meg. **Mikrotápanyag-hiány**, amelyet gyakran „rejtett éhségnek” neveznek, 2 milliárd olyan embert érint, akik nem rendelkeznek nélkülözhetetlen vitaminokkal vagy ásványi anyagokkal, aminek következményei vannak a növekedésre vagy az egészségre nézve. Végül a **alultápláltság** meglepő módon az elhízást is magában foglalja: sok fejlődő országban az emberek fokozatosan felváltják a friss termékeket feldolgozott, magas kalóriatartalmú, de tápanyagban szegény élelmiszerekkel."
+          "text": "Az élelmezési bajnak több formája van. Az **alultápláltság** kalóriahiány. A **mikrotápanyag-hiány**, gyakran „rejtett éhség”, 2 milliárd embert érint, akiknek vitaminja vagy ásványa hiányzik, és ettől a növekedés vagy az egészség sérül. A **hiányos táplálkozás** meglepő módon az elhízást is magában foglalja: sok fejlődő országban a friss ételt fokozatosan kalóriadús, tápanyagszegény készétel váltja fel."
         },
         {
           "type": "funFact",
-          "text": "Ha mindössze 25%-kal csökkentjük a globális élelmiszer-pazarlást, elméletileg mind a 800 millió embert meg tudnánk etetni, akik ma éheznek."
+          "text": "Ha a világ ételpazarlását csak 25%-kal csökkentenénk, elvben mind a 800 millió éhezőt etetni lehetne."
         }
       ]
     },
@@ -58,53 +58,53 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A világ jelenleg fejenként napi 2800 kilokalóriának felel meg, ami több mint elegendő az éhség megszüntetéséhez. Az igazi probléma tehát nem a hiány, hanem a hozzáférés: a legszegényebb lakosságnak egyszerűen nincs módjuk megvenni az élelmiszereket, amelyek ára folyamatosan változik a világpiacon."
+          "text": "A világ ma fejenként és naponta 2.800 kilokalóriát termel, bőven elég az éhség eltörléséhez. Az igazi baj tehát nem a hiány, hanem a **hozzáférés**: a legszegényebbeknek egyszerűen nincs pénzük olyan ételre, amelynek ára a világpiacon folyton ugrál."
         },
         {
           "type": "paragraph",
-          "text": "Ennek a paradoxonnak a másik oldala a **hulladék**. A világ termelésének körülbelül egyharmada, azaz 1,3 milliárd tonna élelmiszer vész el évente. A szegény országokban a veszteségek korán jelentkeznek: tárolóhelyek hiánya, hűtőkamrák hiánya, rossz állapotú utak. A gazdag országokban a hulladék később, az elosztás és a fogyasztás során keletkezik."
+          "text": "A paradoxon másik oldala a **pazarlás**. A világtermelés nagyjából egyharmada, 1,3 milliárd tonna étel vész el évente. A szegény országokban korán: nincs raktár, nincs hűtőház, rosszak az utak. A gazdagokban később, a terítésnél és a tányéron."
         },
         {
           "type": "funFact",
-          "text": "A 2010-es évek óta az elhízás és az elhízással összefüggő betegségek több ember halálát okozzák világszerte, mint az alultápláltság, ami történelmi fordulópont a globális közegészségügyben."
+          "text": "A 2010-es évek óta az elhízás és a túlsúly betegségei évente több embert ölnek meg a világon, mint az alultápláltság. Történelmi fordulat a globális közegészségben."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p3",
-      "title": "Amikor az élelmiszer geopolitikai fegyverré válik",
+      "title": "Amikor az étel geopolitikai fegyver lesz",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Az élelmezésbiztonság geopolitikai kérdés is. Sok ország néhány nagy mezőgazdasági hatalom exportjától függ, ami nagyon kiszolgáltatottá teszi őket a legkisebb akadályokkal szemben. Ukrajna és Oroszország együttesen a világ búzaexportjának közel 30%-át adja. Amikor ez az áramlás megszűnik, az árak szárnyalnak a chicagói **[[határidős piac]]**-n, ahol a jövő terméséről tárgyalnak, és olyan országok, mint Egyiptom vagy Libanon súlyos társadalmi válságba kerülnek."
+          "text": "Az élelmezésbiztonság geopolitika is. Sok ország néhány nagy agrárhatalom exportjától függ, ezért egyetlen elakadás is sebezhetővé teszi. Ukrajna és Oroszország együtt a világ búzaexportjának közel 30%-át adja. Ha ez a folyam megáll, az árak a chicagói **[[határidős piac]]** jegyzésein szállnak el, ahol a jövőbeli termést kötik, és Egyiptom vagy Libanon súlyos társadalmi válságba billen."
         },
         {
           "type": "paragraph",
-          "text": "Ez a törékenység az 1960-as években történt választásból is adódik: a **[[Zöld forradalom]]**. Az új mezőgazdasági technikák ezen hulláma nagymértékben növelte a hozamokat, de csökkentette a termés sokféleségét, és függővé tette a gazdálkodókat a műtrágyáktól. Ennek eredményeként az olajár minden egyes növekedése közvetlen hatással van a kenyér árára."
+          "text": "A törékenység egy 1960-as évekbeli választásból is jön: a **[[Zöld forradalom]]** hullámából. Az új agrártechnikák meredeken emelték a hozamot, de szűkítették a növények sokféleségét, és a gazdákat vegyi trágyához kötötték. Így minden olajáremelkedés egyenesen a kenyér árára csapódik."
         },
         {
           "type": "paragraph",
-          "text": "A **élelmiszer-hatalom** fogalma pontosan az élelmiszer-export diplomáciai nyomásgyakorlási eszközként, vagy akár szankcióként való felhasználására vonatkozik a szembenálló országgal szemben."
+          "text": "Az **élelmiszerhatalom** épp azt jelenti, hogy egy ország szándékosan használja az ételexportot diplomáciai nyomásra, akár szankcióként is a riválissal szemben."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p4",
-      "title": "10 milliárd ember élelmezése anélkül, hogy kimerítené a bolygót",
+      "title": "10 milliárd ember etetése a bolygó kimerítése nélkül",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "2050-re a világ népessége várhatóan eléri a 10 milliárd főt. Az éghajlatváltozás már a növekvő aszályok és árvizek, valamint a szántóföldek kiszorítása miatt fenyegeti a hozamokat. Az intenzív mezőgazdaság emellett kimeríti a talajt és a talajvizet is, amely olykor gyorsabban csapódik le, mint ahogy feltöltődik."
+          "text": "2050-ig a világ népessége elérheti a 10 milliárdot. Az éghajlatváltozás már most rontja a hozamokat: aszályt és árvizet szaporít, és eltolja a szántót. Az intenzív mezőgazdaság a talajt és a felszín alatti vizeket is kimeríti, amelyek néha gyorsabban ürülnek, mint ahogy újratöltődnek."
         },
         {
           "type": "paragraph",
-          "text": "A jövő egyik útja a **[[agroökológia]]**: a természetes ciklusokra, például komposztra vagy vetésforgóra támaszkodó termelés, nem pedig vegyszerekkel való küzdelem. A kihívás az, hogy minden ember számára állandó hozzáférést biztosítsunk az egészséges élelmiszerekhez, anélkül, hogy a bolygó további kimerülése következne be."
+          "text": "Az egyik jövőbeli út az **[[agroökológia]]**: a természetes körforgásra támaszkodni, komposztra vagy vetésforgóra, ahelyett hogy vegyszerrel harcolnánk ellenük. A tét: minden embernek tartósan jusson egészséges étel, anélkül hogy tovább merítenénk a bolygót."
         },
         {
           "type": "takeaway",
-          "text": "A Föld elegendő kalóriát termel ahhoz, hogy mindenki táplálkozzon. A 800 millió ember éhezése tehát a hozzáférés problémájából, a hulladékból és a geopolitikai válságokból ered, amelyeket az éghajlatváltozás súlyosbított."
+          "text": "A Föld elég kalóriát termel mindenkinek. 800 millió ember éhe tehát hozzáférés, pazarlás és geopolitikai válságok kérdése, amelyet az éghajlatváltozás tovább súlyosbít."
         }
       ]
     }

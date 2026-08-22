@@ -1,14 +1,14 @@
 {
   "id": "course_75_la_photosynthese_expliquee_simplement",
-  "title": "A fotoszintézis egyszerűen elmagyarázható",
+  "title": "A fotoszintézis egyszerűen",
   "subtitle": "Növények és energia",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "A növények valami rendkívüli dolgot művelnek: fénnyel, vízzel és levegővel cukrot főznek. És oxigént adnak nekünk ajándékba.",
+  "description": "A növények különlegeset csinálnak: fényből, vízből és levegőből cukrot főznek. Ajándékba oxigént adnak.",
   "hero": {
     "image": "la_photosynthese_expliquee_simplement",
     "ratio": "16:9",
-    "hook": "A levél napelemes konyha: fény, víz, levegő... és itt a cukor."
+    "hook": "Egy levél napkonyha: fény, víz, levegő, és kész a cukor."
   },
   "sections": [
     {
@@ -18,93 +18,93 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Képzelj el egy miniatűr növényt minden levélben. Három hétköznapi összetevő kell hozzá: **fény Napbolban**, **víz** a gyökerekből és **CO₂** a levegőből. Kijön a **cukor**-vel, hogy növekedjen, és kiadja a **oxigén**-t."
+          "text": "Képzelj el egy miniatűr gyárat minden levélben. Három hétköznapi alapanyag kell: a **napfény**, a gyökerek **vize** és a levegő **CO₂**-je. Kijön belőle a növekedéshez kellő **cukor**, és távozik az **oxigén**."
         },
         {
           "type": "paragraph",
-          "text": "Ezt a teljesítményt **fotoszintézis**-nek hívják. Enélkül nincsenek erdők, nincs lélegző oxigén, szinte nincs összetett élet a Földön."
+          "text": "Ezt a mutatványt **fotoszintézisnek** hívjuk. Nélküle nincs erdő, nincs belélegezhető oxigén, és szinte nincs összetett élet a Földön."
         }
       ]
     },
     {
       "id": "course_75_la_photosynthese_expliquee_simplement_p1",
-      "title": "Hol történik ez a lapon?",
+      "title": "Hol történik ez a levélben",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A növényi sejtben a zöld organellumok, a **kloroplasztok** tartalmazzák a [[Klorofill]]-t. Ez a pigment elsősorban a fény kékjét és vörösét rögzíti. Visszatér a zöld: ezért jelennek meg számunkra zöldek a levelek."
+          "text": "A növényi sejtben zöld szervecskék, a **kloroplasztiszok** rejtik a [[klorofill]] pigmentet. Ez főleg a fény kékjét és vörösét fogja meg. A zöldet visszaveri: ezért látjuk zöldnek a leveleket."
         },
         {
           "type": "image",
           "asset": "leaf_photosynthesis_sunlight_chloroplasts",
           "ratio": "auto",
-          "caption": "A levelek felfogják a napfényt a fotoszintézishez."
+          "caption": "A levelek a napfényt fogják be a fotoszintézishez"
         },
         {
           "type": "paragraph",
-          "text": "Az egyszerű egyenlet: CO₂ + víz + fény → cukor + oxigén. A gáz apró pórusokon, a [[sztóma]]-n keresztül jut be. A víz felszáll a gyökerekből. A cukorból fa, gyümölcs, gyökér lesz; az oxigén a levegőbe kerül."
+          "text": "Az egyszerű egyenlet: CO₂ + víz + fény → cukor + oxigén. A gáz apró pórusokon, a [[sztóma]] nyílásain lép be. A víz a gyökerekből emelkedik. A cukorból fa, gyümölcs, gyökér lesz. Az oxigén a levegőbe megy."
         },
         {
           "type": "funFact",
-          "text": "A klorofill „megtagadja” a zöldet. A kéket és a pirosat részesíti előnyben, amelyek hatékonyabbak az elektronok izgatására és az energiagép beindítására."
+          "text": "A klorofill „visszautasítja” a zöldet. A kéket és a vöröset szereti, mert azok jobban izgatják az elektronjait, és beindítják az energiagépet."
         }
       ]
     },
     {
       "id": "course_75_la_photosynthese_expliquee_simplement_p2",
-      "title": "Két lépés: rögzítés, majd kézműves",
+      "title": "Két ütem: befogás, aztán gyártás",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Először is a **könnyű fazis**. A fény megbontja a vízmolekulákat. Oxigén szökik. Az energiát két kémiai „akkumulátor” tárolja, a **ATP** és a **NADPH**."
+          "text": "Először jön a **fényfüggő szakasz**. A fény széttöri a vízmolekulákat. Az oxigén elszökik. Az energia két kémiai „akkumulátorban” tárolódik: az **ATP**-ben és a **NADPH**-ban."
         },
         {
           "type": "paragraph",
-          "text": "Ezután a **gyártási fázis**, a [[Calvin ciklus]], amelyet **Melvin Calvin** vegyészről neveztek el. Az akkumulátorokból származó energiával az üzem szén-dioxidból glükózzá állítja össze a szenet. Ebben a szakaszban nincs szükség közvetlen napfényre, de ez teljesen attól függ, hogy a fény mit produkált korábban."
+          "text": "Aztán jön a **gyártó szakasz**, [[A Kálvin-ciklus]], **Melvin Calvin** vegyészről. Az akkumulátorok energiájával a növény a CO₂ szénatomjaiból glükózt rak össze. Ehhez a lépéshez nincs szükség közvetlen napra, de teljesen attól függ, amit a fény előtte termelt."
         },
         {
           "type": "funFact",
-          "text": "A levélben lévő szén útjának követésére Calvin az atombomba kutatásából származó radioaktív izotópokat használt. Nobel-díj: **1961**."
+          "text": "Hogy a szén útját kövesse a levélben, Calvin radioaktív izotópokat használt, az atombomba kutatásából. Nobel-díjat kapott **1961**-ben."
         }
       ]
     },
     {
       "id": "course_75_la_photosynthese_expliquee_simplement_p3",
-      "title": "Amikor az oxigén megváltoztatta a bolygót",
+      "title": "Amikor az oxigén átírta a bolygót",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Körülbelül **2,4 milliárd évvel ezelőtt** a fotoszintetikus baktériumok, a **cianobacteriumok** tömegesen kezdtek oxigént felszabadítani. Ez a **Nagy oxidáció**. Sok korabeli szervezet számára méreg volt."
+          "text": "Nagyjából **2,4 milliárd éve** fotoszintetizáló baktériumok, a **cianobaktériumok** tömegesen kezdtek oxigént kibocsátani. Ez a **nagy oxidációs esemény**. Akkor sok élőlénynek méreg volt."
         },
         {
           "type": "paragraph",
-          "text": "Aztán az oxigén lehetővé tette az ózonréteget és sokkal hatékonyabb légzést. A levegő, amit belélegzünk, alapvetően több milliárd éves fotoszintézis „hulladékterméke”."
+          "text": "Aztán az oxigén megengedte az ózonréteget és a sokkal hatékonyabb légzést. A levegő, amit belélegzel, nagyjából milliárd évek fotoszintézisének „hulladéka”."
         },
         {
           "type": "funFact",
-          "text": "A **fél** a Föld oxigénje az óceánok fitoplanktonjából származik, nem csak az erdőkből."
+          "text": "A Föld oxigénjének nagyjából a **fele** az óceánok fitoplanktonjából jön, nem csak az erdőkből."
         }
       ]
     },
     {
       "id": "course_75_la_photosynthese_expliquee_simplement_p4",
-      "title": "Szerény teljesítmény, óriási szerep",
+      "title": "Szerény hatásfok, óriási szerep",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Egy levél a kapott napenergia **1-3%-át**-ra alakítja biomasszává. Világviszonylatban ez elegendő a táplálékláncok táplálásához és hatalmas mennyiségű CO₂ elnyeléséhez."
+          "text": "Egy levél a kapott napenergia csak **1-3%**-át alakítja biomasszává. Bolygószinten ez mégis eteti a táplálékláncokat, és hatalmas mennyiségű CO₂-t nyel el."
         },
         {
           "type": "paragraph",
-          "text": "Innen ered az érdeklődés az erdők, óceánok… és még az éghajlatot szolgáló mesterséges fotoszintézis iránt is. Egy tengeri csiga, a *Elysia chlorotica* odáig megy, hogy „ellopja” a kloroplasztiszokat az algáktól, hogy egy kicsit napenergiával élhessen."
+          "text": "Ezért számítanak az erdők, az óceánok, sőt a mesterséges fotoszintézis is a klímának. Egy tengeri csiga, az *Elysia chlorotica*, odáig megy, hogy „ellopja” az algák kloroplasztiszait, és egy darabig napenergián él."
         },
         {
           "type": "takeaway",
-          "text": "A fotoszintézis a fényt, a vizet és a CO₂-t cukorrá alakítja, és oxigént regenerál. Szinte minden élet alapja a szoláris főzés."
+          "text": "A fotoszintézis fényt, vizet és CO₂-t cukorrá alakít, és oxigént ad vissza. Ez a napkonyha, amelyen szinte minden élet áll."
         }
       ]
     }

@@ -4,11 +4,11 @@
   "subtitle": "1953",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "1953-ban Watson és Crick leírta a DNS kettős hélixet. E dicsőség mögött Rosalind Franklin döntő munkája áll.",
+  "description": "1953-ban Watson és Crick leírta a DNS kettős hélixét. A dicsőség mögött Rosalind Franklin döntő munkája áll.",
   "hero": {
     "image": "la_structure_de_l_adn",
     "ratio": "16:9",
-    "hook": "A molekula alakja… és az öröklődés titka."
+    "hook": "Egy molekula formája... és az öröklődés titka."
   },
   "sections": [
     {
@@ -18,83 +18,83 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tudtuk, hogy a tulajdonságok a szülőkről a gyerekekre szállnak át. De melyik kémiai tárgy hordozza ezt az információt? A 20. század közepén egyértelműbbé vált a válasz: **DNS**."
+          "text": "Tudtuk, hogy a tulajdonságok szülőről gyerekre szállnak. De milyen kémiai tárgy viszi ezt az információt? A 20. század közepén a válasz élesedett: a **DNS**."
         },
         {
           "type": "paragraph",
-          "text": "A **1953**-ben **James Watson** és **Francis Crick** egy híres modellt tett közzé: a **Kettős légcsavart**. Ez a forma elmagyarázza, hogyan tudja a DNS másolni önmagát."
+          "text": "**1953**-ban **James Watson** és **Francis Crick** egy híres modellt közölt: a **kettős hélixet**. Ez a forma megmagyarázza, hogyan másolódhat a DNS."
         }
       ]
     },
     {
       "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p1",
-      "title": "Támogatás keresése az öröklődéshez",
+      "title": "Megtalálni az öröklődés hordozóját",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A DNS (dezoxiribonukleinsav) egy hosszú molekula, amely sejtjeinkben található. Kémiai „betűket” tartalmaz, amelyek kódot alkotnak. De az 1940-es és 1950-es években még nem ismertük ennek 3D-s formáját."
+          "text": "A DNS (dezoxiribonukleinsav) hosszú molekula a sejtjeinkben. Kémiai „betűket” tartalmaz, amelyek kódot alkotnak. Az 1940-1950-es években még nem ismerték a 3D-s formáját."
         },
         {
           "type": "paragraph",
-          "text": "Az űrlap nélkül nehéz megérteni, hogyan lehet ezt a kódot megkettőzni az egyes sejtosztódásoknál."
+          "text": "Forma nélkül azt is rosszul értették, hogyan másolódhat ez a kód minden sejtosztódáskor."
         }
       ]
     },
     {
       "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p2",
-      "title": "A fotó, ami mindent megváltoztat",
+      "title": "A fotó, amely mindent megváltoztat",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "rosalind_franklin_photo_51_x_ray",
           "ratio": "4:3",
-          "caption": "Rosalind Franklin 51. fotója spirális szerkezetet mutat fel."
+          "caption": "Rosalind Franklin 51-es fotója spirális szerkezetet mutat"
         },
         {
           "type": "paragraph",
-          "text": "**Rosalind Franklin** fizikus és vegyész röntgenfelvételeket készít a DNS-ről. Híres **51. kép**-je egyértelmű bizonyítékot mutat egy spirálra."
+          "text": "**Rosalind Franklin**, fizikus és kémikus, röntgensugarakkal készített képeket a DNS-ről. A híres **51-es fotó** tiszta jeleket mutatott egy spirálra."
         },
         {
           "type": "paragraph",
-          "text": "Watson és Crick látja ezeket az adatokat (a Franklinnel szemben most tisztességtelennek tartott feltételek mellett), és megalkotják a modelljüket. Franklin 1958-ban halt meg; az 1962-es Nobelt Watson, Crick és Wilkins kapja, nem ő."
+          "text": "Watson és Crick látta ezeket az adatokat (olyan körülmények között, amelyeket ma igazságtalannak tartanak Franklinnel szemben), és felépítették a modelljüket. Franklin 1958-ban meghalt; az 1962-es Nobel-díj Watsoné, Crické és Wilkinsé lett, az övé nem."
         },
         {
           "type": "funFact",
-          "text": "Franklin komoly munkát végzett a vírusokkal is. A DNS-ben betöltött szerepét régóta alábecsülték a népszerű beszámolókban."
+          "text": "Franklin a vírusokról is fontos munkát végzett. A DNS-ben játszott szerepét a népszerű történetek sokáig alábecsülték."
         }
       ]
     },
     {
       "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p3",
-      "title": "Miért számít a kettős spirál?",
+      "title": "Miért számít a kettős hélix",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "dna_double_helix_model_watson_crick",
           "ratio": "4:3",
-          "caption": "Két egymást kiegészítő szál: a másolat elképzelhetővé válik."
+          "caption": "Két kiegészítő szál: a másolás elképzelhetővé válik"
         },
         {
           "type": "paragraph",
-          "text": "Két szál körbefonja egymást. A betűk párban állnak egymással szemben. Amikor a szálak szétválnak, mindegyik modellként szolgálhat a másik rekonstruálásához. Az öröklődés érthető kémiai mechanizmussá válik."
+          "text": "Két szál tekeredik. A betűk párokban néznek szembe. Amikor a szálak szétválnak, mindegyik mintául szolgálhat a másik újjáépítéséhez. Az öröklődés érthető kémiai mechanizmus lett."
         }
       ]
     },
     {
       "id": "course_58_la_structure_de_l_adn_watson_crick_1953_p4",
-      "title": "A modern biológia itt kezdődik",
+      "title": "Itt indul a modern biológia",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ebből a felfedezésből születik a modern genetika, szekvenálás, DNS-vizsgálatok, génterápiák. És etikai viták is: mit kezdjünk ezzel a hatalommal?"
+          "text": "Ebből a felfedezésből született a modern genetika, a szekvenálás, a DNS-tesztek, a génterápiák. És etikai viták is: mit kezdjünk ezzel a hatalommal?"
         },
         {
           "type": "takeaway",
-          "text": "A **1953**-ben a kettős hélix modell elmagyarázza, hogy a DNS hogyan tárolja és másolja az élőlényekből származó információkat. Franklin döntő bizonyítékot szolgáltatott, túl sokáig törölve a narratívából."
+          "text": "**1953**-ban a kettős hélix modellje megmagyarázza, hogyan tárolja és másolja a DNS az élők információját. Franklin döntő bizonyítékokat adott, amelyeket túl sokáig töröltek a történetből."
         }
       ]
     }

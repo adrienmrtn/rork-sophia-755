@@ -1,14 +1,14 @@
 {
   "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales",
   "title": "Miért létfontosságúak a méhek?",
-  "subtitle": "Ételeink kis munkásai",
+  "subtitle": "Élelmezésünk kis munkásai",
   "subject": "comprendreLeMonde",
   "subcategory": "Environment & the future",
-  "description": "Méhek nélkül a világ élelmiszernövényeinek **75%-a** veszélyben lenne. Ezek a kicsi, nem feltűnő munkások támogatják élelmiszerellátásunkat, és népességük összeomlik.",
+  "description": "Méhek nélkül a **világ élelmiszernövényeinek 75%-a** veszélybe kerülne. Ezek a csendes kis munkások tartják az élelmezésünket, és az állományaik omlanak.",
   "hero": {
     "image": "pourquoi_les_abeilles_sont_vitales",
     "ratio": "16:9",
-    "hook": "Nem csak mézet készítenek: nélkülük élelmiszereink nagy része eltűnne."
+    "hook": "Nem csak mézet csinálnak: nélkülük az élelmezésünk egy jó része eltűnne."
   },
   "sections": [
     {
@@ -18,103 +18,103 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Gyakran csak a méz miatt gondolunk a méhekre. A valóságban sokkal nagyobb szolgáltatást nyújtanak: lehetővé teszik a virágos növények többségének szaporodását. Ez a szolgáltatás évente több száz milliárd dollárt ér."
+          "text": "A méhekre gyakran csak a méz miatt gondolunk. Valójában sokkal nagyobbat adnak: a virágos növények többségének ők teszik lehetővé a szaporodást. Ez a szolgáltatás évente több száz milliárd dollárt ér."
         },
         {
           "type": "paragraph",
-          "text": "Az elmúlt évtizedekben ezek az alapvető rovarok aggasztó sebességgel tűntek el. Szerepük és hanyatlásuk okainak megértése lehetővé teszi számunkra, hogy jobban megértsük jövőbeli élelmiszerellátásunk egyik közvetlen kérdését."
+          "text": "Néhány évtizede ezek a létfontosságú rovarok ijesztő sebességgel tűnnek el. A szerepük és a hanyatlásuk okai közvetlenül a jövőbeli élelmezésünkhöz vezetnek."
         }
       ]
     },
     {
       "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p1",
-      "title": "Beporzás, diszkrét, de nélkülözhetetlen munka",
+      "title": "A beporzás, csendes, de létfontosságú munka",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A [[beporzás]] a virágpor, az egyik virág hímsejtjei szállítása egy másik virág női szervéhez. A szél vagy a víz néha megteheti ezt, de a virágos növények többsége az állatszállítást részesíti előnyben. A méhek azáltal, hogy nektárt és virágport keresnek kolóniájuk számára, anélkül biztosítják ezt a szállítást, hogy tudnának róla."
+          "text": "A [[beporzás]] a virágpor szállítása, egy virág hím sejtjei a másik, azonos fajú virág női szervéig. A szél vagy a víz néha elvégzi, de a virágos növények többsége állati szállítást szeret. Nektárt és virágport keresve a méhek ezt a szállítást anélkül végzik, hogy tudnák."
         },
         {
           "type": "image",
           "asset": "honey_bee_pollinating_flower_closeup",
           "ratio": "4:3",
-          "caption": "Táplálkozás közben a méh virágporról virágra hordja a virágport."
+          "caption": "Gyűjtögetés közben a méh virágról virágra viszi a virágport"
         },
         {
           "type": "funFact",
-          "text": "Egy méh akár 700 virágot is meglátogathat naponta. Mindössze 500 gramm méz előállításához egy teljes kolóniának háromszor annyit kell megkerülnie a Földet."
+          "text": "Egy méh akár 700 virágot is meglátogat egy nap. Csak 500 gramm mézhez egy egész kolóniának a Föld háromszoros kerületét kell berepülnie."
         },
         {
           "type": "paragraph",
-          "text": "A világ élelmiszernövényeinek kb. **75%-a** legalább részben a beporzóktól, például a méhektől függ. Ide tartozik a kávé, a kakaó, az alma, a mandula vagy az avokádó. A beporzás hozzájárulását a globális gazdasághoz évi 235 és 577 milliárd dollár közé becsülik."
+          "text": "A **világ élelmiszernövényeinek nagyjából 75%-a** legalább egy kicsit a méhekhez hasonló beporzókra támaszkodik. Ide tartozik a kávé, a kakaó, az alma, a mandula, az avokádó. A beporzás világgazdasági hozzájárulását évi 235 és 577 milliárd dollár közé teszik."
         }
       ]
     },
     {
       "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p2",
-      "title": "Miért omlanak össze a kolóniák",
+      "title": "Miért omlanak a kolóniák",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A méhek hanyatlásának nem egyetlen oka van: egyszerre több fenyegetés hat. Az 1990-es évek óta egyes méhészek télen telepeik akár 30-50%-át is elveszítették, míg a természetes veszteségnek körülbelül 10%-nak kell lennie. Ezt a hirtelen eltűnés jelenségét néha [[Kolónia összeomlási zavar]]."
+          "text": "A méhek hanyatlásának nincs egyetlen oka: több fenyegetés egyszerre hat. Az 1990-es évek óta egyes méhészek minden télen a kolóniáik 30-50%-át elveszítik, holott a természetes veszteség 10% körül kellene legyen. Ezt a hirtelen eltűnést néha [[kolónia összeomlási zavar]] néven említik."
         },
         {
           "type": "image",
           "asset": "neonicotinoid_pesticide_spraying_field",
           "ratio": "4:3",
-          "caption": "A neonikotinoidok behatolnak az egész növénybe, beleértve a nektárt és a virágport is."
+          "caption": "A neonikotinoidok az egész növénybe bejutnak, a nektárba és a virágporba is"
         },
         {
           "type": "paragraph",
-          "text": "A [[Neonikotinoidok]], a rovarölő szerek családja különösen felelős. Áthatja az egész növényt, beleértve a nektárját és a pollenjét is. Már kis dózisban is elzavarják a méheket, akik már nem találják a kaptárukat, és gyengítik az immunrendszerüket."
+          "text": "A [[Neonikotinoidok]], egy rovarirtó család, különösen gyanúsak. Az egész növényt átitatják, a nektárt és a virágport is. Kis adagban is összezavarják a méheket, amelyek nem találnak haza, és gyengítik az immunrendszerüket."
         },
         {
           "type": "paragraph",
-          "text": "Ehhez jön még egy parazita atka, amely halálos vírusokat terjeszt, a vadvirágok eltűnése a monokultúrák miatt, és a klímaváltozás, amely a virágzási időszakokat a rovarok felébredéséhez képest eltolja."
+          "text": "Ehhez jön egy parazita atka, amely halálos vírusokat visz, a vadvirágok eltűnése a monokultúrák miatt, és a klímaváltozás, amely elcsúsztatja a virágzást a rovarok ébredéséhez képest."
         }
       ]
     },
     {
       "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p3",
-      "title": "Nem csak egy méh létezik",
+      "title": "Nincs egyetlen méh",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Amikor azt mondjuk, hogy „méh”, szinte mindig a házi méhre gondolunk, aki kaptárban él és mézet termel. Ez azonban csak egy faj a több mint **20 000** faj között a világon, beleértve a poszméheket és az osmiát. A legtöbb magányos, és nem készít mézet, de ugyanolyan fontos ökológiai szerepet tölt be."
+          "text": "Ha azt mondjuk, „méh”, szinte mindig a háziméhre gondolunk, arra, amely kaptárban él és mézet csinál. Pedig csak egy faj a világ több mint **20.000** faja közül, a poszméhekkel és a kőművesméhekkel együtt. A többség magányos, nem csinál mézet, de ugyanolyan fontos ökológiai szerepet játszik."
         },
         {
           "type": "funFact",
-          "text": "Egyes virágok, például a paradicsomé, csak meghatározott rezgés hatására bocsátják ki virágporukat. A mézelő méhek nem tudják, hogyan kell ezt megtenni, de a poszméhek igen, köszönhetően a szonikációnak nevezett technikának."
+          "text": "Egyes virágok, például a paradicsom, csak pontos rezgésre engedik el a virágport. A háziméh ezt nem tudja. A poszméh igen, egy szonikáció nevű technikával."
         },
         {
           "type": "paragraph",
-          "text": "Ezek a vadon élő fajok gyakran egy adott növényre specializálódtak, amelyet néha csak ők képesek hatékonyan beporozni. A házi méheknél is sérülékenyebbek, mert nem részesülnek semmilyen emberi megfigyelésből vagy gondozásból. Eltűnésük gyengíti a teljes [[tápláléklánc]], hiszen sok madár függ a beporzásból származó termésektől és magvaktól."
+          "text": "Ezek a vad fajok gyakran egy pontos növényre szakosodtak, amelyet néha csak ők tudnak jól beporozni. A háziméhnél is sebezhetőbbek, mert nincs emberi gondozásuk. Az eltűnésük az egész [[tápláléklánc]] rendszerét gyengíti, mert sok madár a beporzásból született gyümölcsre és magra támaszkodik."
         }
       ]
     },
     {
       "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p4",
-      "title": "Amin még változtathatunk",
+      "title": "Amit még meg lehet változtatni",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A peszticidek használatának csökkentése továbbra is a leghatékonyabb eszköz. Az Európai Unió 2018-ban három fő neonikotinoidot betiltott a szabadföldeken. Ugyanakkor a [[agroökológiai infrastruktúrák]] – például a sövények vagy virágcsíkok – visszahelyezése újjáteremti a rovarok menedékhelyeit."
+          "text": "A növényvédők csökkentése marad a legerősebb emelő. Az Európai Unió 2018-ban három nagy neonikotinoidot tiltott ki a szántóföldről. Mellette az [[agroökológiai infrastruktúrák]], sövények vagy virágsávok, újra menedéket adnak a rovaroknak."
         },
         {
           "type": "paragraph",
-          "text": "Mindenki cselekedhet egyszerűen: ha helyi virágokat ültet a kertjébe, vagy egy kicsit tovább hagyja a pázsitot a nyírás előtt, igazi menedéket nyújt a méheknek, amikor a virágok ritkák."
+          "text": "Te is tudsz egyszerűen tenni: helyi virágot ültetni a kertbe, vagy egy kicsit hosszabban hagyni a gyepet nyírás előtt. Ez igazi menedék a méheknek, amikor kevés a virág."
         },
         {
           "type": "paragraph",
-          "text": "A beporzók védelme nem csupán a természet megóvása, hanem egy hosszú távú túlélési stratégia, hiszen munkájukkal közvetlenül támogatják a növények táplálékát."
+          "text": "A beporzók védelme nem csak természetvédelem. Hosszú távú túlélési stratégia, mert a munkájuk közvetlenül tartja a növények képességét arra, hogy tápláljanak minket."
         },
         {
           "type": "takeaway",
-          "text": "A méhek és a 20 000 vadon élő beporzófaj biztosítja a világ élelmiszernövényeinek 75%-ának szaporodását. Hanyatlásuk, amelyet a növényvédő szerek, a paraziták és az élőhelyek elvesztése okoz, közvetlenül veszélyezteti élelmiszerellátásunkat."
+          "text": "A méhek és a 20.000 vad beporzófaj a világ élelmiszernövényeinek 75%-át tartja életben. A hanyatlásuk, amelyet növényvédők, paraziták és élőhelyvesztés okoz, közvetlenül fenyegeti az élelmezésünket."
         }
       ]
     }

@@ -1,14 +1,14 @@
 {
   "id": "course_220_la_desinformation_et_les_fake_news",
   "title": "Dezinformáció és álhírek",
-  "subtitle": "Hazudni a vírusos korban",
+  "subtitle": "A hazugság a virális korban",
   "subject": "comprendreLeMonde",
   "subcategory": "Economy & society",
-  "description": "A hamis információk hatszor gyorsabban terjednek a közösségi médiában, mint az igazság. Miért, és hogyan védekezhet?",
+  "description": "A hamis hírek hatszor gyorsabban terjednek a közösségi hálókon, mint az igazság. Miért, és hogyan védd magad?",
   "hero": {
     "image": "la_desinformation_et_les_fake_news",
     "ratio": "16:9",
-    "hook": "Egy MIT-tanulmány kimutatta, hogy az álhírek hatszor gyorsabban terjednek a Twitteren, mint az igazság. Íme, miért."
+    "hook": "Egy MIT-tanulmány szerint az álhírek hatszor gyorsabban utaznak a Twitteren, mint az igazság. Ezért."
   },
   "sections": [
     {
@@ -18,85 +18,85 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A politikai célt szolgáló hazudozás nem újdonság: már az ókor óta fellelték ennek nyomait. Az internet és a közösségi hálózatok azonban megváltoztatták a helyzetet: a hamis információk már nem csak egy államból jutnak el a lakossághoz, hanem horizontálisan, az állampolgárok között terjednek."
+          "text": "Hazudni politikai célból nem új: az ókorig nyúlik vissza. Az internet és a közösségi hálók azonban megváltoztatták a játékot. A hamis hír már nem csak államtól népig megy. Most vízszintesen terjed, polgárok között."
         },
         {
           "type": "paragraph",
-          "text": "Ez a váltás egy olyan világot hozott létre, ahol az igazság néha opcionálisnak tűnik a viralitás mellett. A **dezinformáció** terjedésének megértése, és annak megértése, hogy ki profitál belőle, elengedhetetlenné vált a polgárok közötti bizalom megőrzéséhez."
+          "text": "Ettől olyan világ született, ahol a viralitás mellett az igazság néha opcionálisnak látszik. Megérteni, hogyan terjed a **dezinformáció**, és ki jár jól vele, ma a polgárok közti bizalom védelméhez kell."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p1",
-      "title": "Miért terjed a hazugság gyorsabban, mint az igazság?",
+      "title": "Miért utazik gyorsabban a hazugság, mint az igazság",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Meg kell különböztetnünk a manipulálás céljából szándékosan terjesztett dezinformációt az egyszerű őszinte hibáktól. Ennek az álhírnek a sikere azon múlik, amit a kutatók figyelemfelkeltő gazdaságnak neveznek: a közösségi média algoritmusait úgy tervezték, hogy maximalizálják a képernyő előtt töltött időt, és agyunk erősebben reagál az érzelmekre és a sokkokra, mint az árnyalatokra."
+          "text": "El kell választani a dezinformációt, amelyet szándékosan terjesztenek, a jóhiszemű tévedéstől. A hamis hírek sikere a **figyelemgazdaságon** áll: a közösségi algoritmusok a képernyő előtt töltött időt maximalizálják, és az agyunk erősebben reagál az érzelemre és a sokkra, mint az árnyalatra."
         },
         {
           "type": "funFact",
-          "text": "A [[MIT]] 2018-ban publikált tanulmánya kimutatta, hogy az álhírek körülbelül 6-szor gyorsabban terjednek, mint az ellenőrzött hírek a Twitteren, mert újabbnak és érzelmileg intenzívebbnek tűnnek."
+          "text": "A [[MIT]] 2018-as tanulmánya megmutatta, hogy a hamis hírek nagyjából hatszor gyorsabban terjednek a Twitteren, mint az ellenőrzött hírek, mert újabbnak és érzelmileg erősebbnek tűnnek."
         },
         {
           "type": "paragraph",
-          "text": "Az algoritmusok az internetezőket is bezárják a [[szűrőbuborékok]]-be: csak a már meglévő véleményüket megerősítő tartalmakat jelenítenek meg. Az összeesküvés-elméletben meggyõzõdött személy ezután minden új hamis információt további bizonyítéknak tekint, ami nagyon megnehezíti a késõbbi korrekciót."
+          "text": "Az algoritmusok [[szűrőbuborékok]] közé zárják a felhasználót: csak olyan tartalmat mutatnak, amely a már meglévő véleményét igazolja. Aki összeesküvés-elméletben hisz, minden új hamis hírt újabb bizonyítéknak lát. Később javítani nagyon nehéz."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p2",
-      "title": "A hazugságok iparága az államok és a profit között",
+      "title": "Hazugságipar: államok és haszon",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A dezinformáció valódi iparággá vált. Az olyan államok, mint Oroszország, az Internet Research Agencyn keresztül hamis automatizált fiókok ezreit hoztak létre, hogy feszültséget szítsanak a nyugati demokráciákon belül, anélkül, hogy megpróbálnának egy meghatározott tábort megvédeni: a cél gyakran az, hogy káoszt keltsen, és elhitesse az emberekkel, hogy „mindenki hazudik”."
+          "text": "A dezinformáció igazi iparág lett. Oroszország az Internet Research Agencyn keresztül ezer számra hozott létre hamis, automatizált fiókokat, hogy feszültséget szítson a nyugati demokráciákban. Gyakran nem is egy tábort véd: a cél a káosz, és annak elhitetése, hogy „mindenki hazudik”."
         },
         {
           "type": "image",
           "asset": "fake_news_social_media_manipulation_phone",
           "ratio": "4:3",
-          "caption": "A hamis információk másodpercek alatt terjednek a közösségi oldalakon."
+          "caption": "A hamis hírek másodpercek alatt futnak szét a közösségi hálókon"
         },
         {
           "type": "paragraph",
-          "text": "Van egy tisztán jövedelmező dimenzió is: az észak-macedóniai Veles városában fiatal vállalkozók 2016-ban politikai meggyőződés nélkül hoztak létre szenzációhajhász oldalakat, kizárólag azért, hogy a közösségi oldalakon generált forgalomból pénzt keressenek. A hazugság ekkor egyszerű nyereséges árucikké válik."
+          "text": "Van tisztán pénzes oldal is. Velesben, Észak-Macedóniában 2016-ban fiatal vállalkozók szenzációs oldalakat indítottak minden politikai meggyőződés nélkül, csak a közösségi forgalom pénzéért. A hazugság egyszerű, jövedelmező áru lett."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p3",
-      "title": "Hogyan lehet elválasztani a tényt a fikciótól",
+      "title": "Hogyan válaszd szét az igazat a hamistól",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ezzel az özönvízzel szemben az információ világa szerveződik. **tényellenőrzés**, vagyis a tények ellenőrzése, önálló újságírói tudományággá vált. Az olyan ügynökségek, mint a [[AFP]] vagy a szakosított szerkesztőségek képkereső eszközöket használnak a hamisítás észlelésére és a gyanús tartalom elemzésére."
+          "text": "Ezzel az áradattal szemben a hírszakma szerveződik. A **tényellenőrzés**, a tények ellenőrzése, önálló újságírói szak lett. Az [[AFP]] és más szerkesztőségek képlenyomozó eszközökkel keresik a hamisítást, és gyanús tartalmakat elemeznek."
         },
         {
           "type": "paragraph",
-          "text": "De a versenyfutás a támadás és a védekezés között továbbra is egyenlőtlen. A [[Deep hamisítványok]], a mesterséges intelligencia által megmunkált videók megjelenése, ahol az embert zavaró realizmussal mondják ki, egyre nehezebbé teszi az igaz és a hamis megkülönböztetését egy gyakorlatlan szem számára."
+          "text": "A támadás és a védelem versenye mégis egyenlőtlen. Megjelentek a [[Deep hamisítványok]]: mesterséges intelligenciával hamisított videók, amelyekben bárkit bármit elmondatnak, zavarba ejtő realizmussal. Egy gyakorlatlan szemnek egyre nehezebb elválasztani az igazat a hamistól."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p4",
-      "title": "Önbizalom megtalálása a képek világában",
+      "title": "Bizalom egy képekkel teli világban",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A félretájékoztatás hosszú távú hatása mélyreható: most egy **igazság utáni** korszakról beszélünk, ahol az objektív tények néha kisebb súllyal bírnak, mint az érzelmek és a személyes meggyőződések. Ez az általános relativizálás gyengíti az olyan globális kihívások együttes kezeléséhez szükséges bizalmat, mint az éghajlat vagy a közegészségügy."
+          "text": "A dezinformáció hosszú távú hatása mély. Ma **posztigazság** korról beszélünk, ahol a tényszerű valóság néha kevesebbet nyom, mint az érzelem és a személyes hit. Ez a relativizálás gyengíti azt a bizalmat, amely kell a klíma vagy a közegészség közös kihívásaihoz."
         },
         {
           "type": "paragraph",
-          "text": "A legmegbízhatóbb válasz továbbra is a médiaoktatás: a forrás ellenőrzésének megtanulása, több információ kereszthivatkozása és az algoritmusok működésének megértése. Egyesek a tartalomtanúsítási technológiákra is támaszkodnak, hogy garantálják a videó eredetét a létrehozásától kezdve. Addig is mindenkinek az ébersége marad az első védelmi vonal."
+          "text": "A legszilárdabb válasz a médiaoktatás marad: forrást ellenőrizni, több hírt keresztezni, megérteni, hogyan működnek az algoritmusok. Van, aki a tartalom hitelesítésére is számít, hogy egy videó eredete már a készítéskor meglegyen. Addig a te figyelmed az első védvonal."
         },
         {
           "type": "takeaway",
-          "text": "A közösségi oldalakon átlagosan hatszor gyorsabban terjednek a hamis információk, mint az igazság, mert kihasználják érzelmeinket és újdonságszomjunkat. A mélyhamisításokkal és a trollfarmokkal szemben a médiaoktatás továbbra is a legjobb fegyver a kollektív bizalom megőrzésében."
+          "text": "A hamis hírek átlagban hatszor gyorsabban terjednek a közösségi hálókon, mint az igazság, mert az érzelmeinket és az újdonságéhségünket használják. A deepfake-ek és a trollfarmok ellen a médiaoktatás marad a legjobb fegyver a közös bizalom védelmére."
         }
       ]
     }

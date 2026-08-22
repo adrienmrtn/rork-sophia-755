@@ -4,11 +4,11 @@
   "subtitle": "Zivatarok",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "A villám nem varázslat: hatalmas elektromos kisülés a viharfelhőben. Íme, hogyan készül, aztán hogyan üt.",
+  "description": "A villám nem varázslat: hatalmas elektromos kisülés egy zivatarfelhőben. Így készül, aztán így csap le.",
   "hero": {
     "image": "comment_se_forment_les_eclairs",
     "ratio": "16:9",
-    "hook": "A másodperc töredéke alatt a levegő 30 000 °C-ra emelkedik. Ötször melegebb, mint a Nap felszíne."
+    "hook": "Egy másodperc töredéke alatt a levegő 30.000 °C-ra ugrik. Ötször forróbb, mint a Nap felszíne."
   },
   "sections": [
     {
@@ -18,36 +18,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Egy villám egy szempillantás alatt hatalmas energiát szabadít fel. A levegő a villámcsatornában körülbelül **30 000 °C**-ra emelkedik. A mennydörgés csak ennek a brutális hőségnek a hangja."
+          "text": "A villám szempillantás alatt kolosszális energiát enged el. A villámcsatorna levegője nagyjából **30.000 °C**-ra ugrik. A mennydörgés csak ennek a brutális hőnek a zaja."
         },
         {
           "type": "paragraph",
-          "text": "A villámlás megértéséhez három lépést kell követnie: hogyan töltődik fel a felhő, hogyan talál utat az elektromosságnak, és miért hall utána mennydörgést."
+          "text": "A villámhoz három lépést kell követni: hogyan töltődik a felhő, hogyan talál utat az elektromosság, és miért halljuk a dörgést utána."
         }
       ]
     },
     {
       "id": "course_69_comment_se_forment_les_eclairs_p1",
-      "title": "A felhőben a töltések elkülönülnek",
+      "title": "A felhőben a töltések szétválnak",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Villámlás elsősorban a [[zivatarfelhő]]: nagyon nagy viharfelhőkben fordul elő, amelyek **15 km** körülire emelkedhetnek. Belül nagyon erősen emelkedik és süllyed a levegő."
+          "text": "A villámok főleg a [[zivatarfelhő]] típusú felhőkben születnek: nagyon nagy viharfelhőkben, amelyek nagyjából **15 km**-ig emelkedhetnek. Bennük a levegő nagyon erősen emelkedik és süllyed."
         },
         {
           "type": "image",
           "asset": "cumulonimbus_thunderstorm_cloud",
           "ratio": "4:3",
-          "caption": "A cumulonimbus: a vihargyár."
+          "caption": "A zivatarfelhő: a vihar gyára."
         },
         {
           "type": "paragraph",
-          "text": "Ebben a káoszban kis **jégkristályok** emelkednek, és nehezebb jégszemek ([[ónos eső]]-ből) ereszkednek le. Amikor ütköznek, elektromos töltések cserélődnek. Lassanként a felhő teteje inkább pozitív, az alap inkább negatívvá válik."
+          "text": "Ebben a káoszban kis **jégkristályok** emelkednek, nehezebb jégszemek ([[ónos eső]]) pedig süllyednek. Amikor összeütköznek, elektromos töltést cserélnek. Lassan a felhő teteje inkább pozitív lesz, az alapja inkább negatív."
         },
         {
           "type": "funFact",
-          "text": "A venezuelai Maracaibo-tó a bolygó egyik leginkább villámcsapott helye: az év nagy részében szinte naponta figyelhetők meg viharok."
+          "text": "A Maracaibo-tó Venezuelában a Föld egyik leggyakrabban villámló helye: az év nagy részében szinte napi zivatarokat figyelnek ott."
         }
       ]
     },
@@ -58,53 +58,53 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A levegő rossz vezető. De ha a töltéskülönbség túl nagy lesz (gyakran **ZZ százmillió volt**), a levegő végül megadja magát. A molekulák elektronokat veszítenek: vezetőképessé válnak. Ez a [[Levegő ionizáció]]."
+          "text": "A levegő rossz vezető. De ha a töltéskülönbség túl nagy lesz (gyakran **több százmillió volt**), a levegő végül enged. A molekulák elektronokat veszítenek: vezetővé válnak. Ez [[a levegő ionizációja]]."
         },
         {
           "type": "paragraph",
-          "text": "Egy láthatatlan csatorna kis ugrásokkal hagyja el a felhőt. A földről az elektromos hálók különösen pontokból (fák, villámhárítók, épületek) emelkednek ki. Amikor a kettő összeér, az áramkör bezárul."
+          "text": "Egy láthatatlan csatorna kis ugrásokkal indul a felhőből. A talajról elektromos fonalak emelkednek, főleg a csúcsokról (fák, villámhárítók, épületek). Amikor a kettő találkozik, a kör bezárul."
         },
         {
           "type": "paragraph",
-          "text": "A nagy fény, amit látunk, a **ív vissza**, főként a földről emelkedik a felhő felé. Az áramerősség elérheti a több tízezer ampert. Ugyanabban a csatornában több kisülés követheti egymást: innen ered a villogó hatás."
+          "text": "A nagy fény, amit látunk, a **visszatérő ív**, főleg a talajtól a felhő felé szalad. Az áram elérheti a több tízezer ampert. Több kisülés követheti egymást ugyanabban a csatornában: innen a villódzás."
         }
       ]
     },
     {
       "id": "course_69_comment_se_forment_les_eclairs_p3",
-      "title": "Miért jön később a mennydörgés?",
+      "title": "Miért jön a dörgés később",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A villám olyan gyorsan felmelegíti a levegőt, hogy az hirtelen kitágul. Ebből a lökéshullámból **mennydörgés** lesz. A fény szinte azonnal jön; a hang körülbelül **340 m/s** sebességgel halad előre."
+          "text": "A villám olyan gyorsan hevíti a levegőt, hogy az egyszerre tágul. Ez a lökéshullám lesz a **mennydörgés**. A fény szinte azonnal megérkezik; a hang nagyjából **340 m/s**-mal halad."
         },
         {
           "type": "paragraph",
-          "text": "Egyszerű tipp: számolja meg a villámlás és a mennydörgés közötti másodperceket, majd ossza el **3**-vel. Megkapja a becsült távolságot kilométerben."
+          "text": "Egyszerű trükk: számold a másodperceket a villám és a dörgés között, aztán oszd **3**-mal. Így megkapod a távolságot kilométerben."
         },
         {
           "type": "funFact",
-          "text": "A Földet átlagosan körülbelül **100 villa lesz másodpercenként**. Franciaországban évente körülbelül **egy millió** hatás éri a talajt."
+          "text": "A Földet átlagosan nagyjából **100 villám** éri másodpercenként. Franciaországban évente körülbelül **egymillió** talajcsapást számolnak."
         }
       ]
     },
     {
       "id": "course_69_comment_se_forment_les_eclairs_p4",
-      "title": "Veszély, termékenység és érdekességek",
+      "title": "Veszély, termékenység és különlegességek",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A villámlás továbbra is veszélyes, különösen a szabadban, elszigetelt fák vagy víz közelében. Tüzet is indít. De van egy kevésbé ismert hatása: elősegíti a nitrogénvegyületek termelődését, amelyek esővel trágyázzák meg a talajt."
+          "text": "A villám veszélyes marad, különösen szabadban, magányos fák vagy víz közelében. Tüzeket is indít. De van kevésbé ismert hatása: nitrogénvegyületeket segít gyártani, amelyek az esővel trágyázzák a talajt."
         },
         {
           "type": "paragraph",
-          "text": "A viharok felett a kamerák olyan bizarr jelenségeket is rögzítettek, mint a [[Manók]]: a felső légkörben rövid, szabad szemmel láthatatlan fények a földről."
+          "text": "A zivatarok fölött kamerák furcsa jelenségeket is kaptak, például a [[Sprite]] felvillanásait: rövid fényeket a magas légkörben, a talajról szabad szemmel láthatatlanokat."
         },
         {
           "type": "takeaway",
-          "text": "A cumulonimbusban jég/ónos eső ütközések választják el a töltéseket. Ha a feszültség túl magas, a levegő ionizálódik: a villámlás ~30 000°C-ra melegszik fel, és ez a hirtelen tágulás mennydörgést okoz."
+          "text": "Egy zivatarfelhőben a jég és az ónos eső ütközése szétválasztja a töltéseket. Ha a feszültség túl nagy, a levegő ionizálódik: a villám ~30.000 °C-ra hevül, és ez a brutális tágulás adja a dörgést."
         }
       ]
     }

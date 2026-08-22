@@ -1,14 +1,14 @@
 {
   "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri",
-  "title": "Az ózonlyuk (és annak helyreállítása)",
+  "title": "Az ózonlyuk (és a gyógyulása)",
   "subtitle": "1985-2065",
   "subject": "comprendreLeMonde",
   "subcategory": "Environment & the future",
-  "description": "Óriási lyuk az Antarktisz felett, egy szerződést 197 ország írt alá, és egy bolygó, amely gyógyul. Íme **az egyetlen nagy ökológiai válság**, amelyet az emberiség már megoldott.",
+  "description": "Egy óriási lyuk az Antarktisz felett, egy 197 ország által aláírt szerződés, és egy bolygó, amely gyógyul. Ez **az egyetlen nagy ökológiai válság**, amelyet az emberiség már megoldott.",
   "hero": {
     "image": "le_trou_de_la_couche_d_ozone",
     "ratio": "16:9",
-    "hook": "Egy lyuk az égen, amelyet véletlenül fedeztek fel, és amelyet az egész világ aláírt szerződés zárt be."
+    "hook": "Egy lyuk az égen, véletlenül felfedezve, és egy világméretű szerződéssel bezárva."
   },
   "sections": [
     {
@@ -18,99 +18,99 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "1985-ben az Antarktiszon állomásozó brit tudósok nem hitték el méréseiket: úgy tűnt, hogy az ég egy része elvesztette a Nap elleni védelmét. Nem eszközhiba volt, hanem egy igazi lyuk az ózonrétegben, ez a láthatatlan pajzs, amely mindannyiunkat véd. Ez a kurzus arról mesél, hogyan fedezte fel a világ ezt a veszélyt, és szokatlan módon hogyan sikerült elhárítania."
+          "text": "1985-ben brit tudósok az Antarktiszon nem hisznek a méréseiknek: az ég egy darabja mintha elvesztette volna a nap elleni védelmét. Nem volt műszerhiba. Igazi lyuk volt az ózonrétegben, abban a láthatatlan pajzsban, amely mindannyiunkat véd. Ez a kurzus azt meséli el, hogyan találta meg a világ ezt a veszélyt, és ritka módon hogyan javította ki."
         }
       ]
     },
     {
       "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_p1",
-      "title": "Törékeny pajzs, praktikus méreg",
+      "title": "Törékeny pajzs, kényelmes méreg",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A **ozonréteg** 15 és 35 kilométeres tengerszint feletti magasságban, a [[Sztratoszféra]] területén található, és elnyeli a **UV-B** nagy részét, ezek a Nap sugarai, amelyek elég erősek ahhoz, hogy károsítsák bőrünket és az élő sejtek DNS-ét. Az 1930-as években az ipar feltalálta a **klór-fluorozott szenhidrogenket**, vagyis a [[Fluorozott klórozott szénhidrogének (CFC-k)]]: tökéletesnek, olcsónak tartott gázokat, amelyeket mindenhova elhelyezünk, hűtőszekrényekbe, klímaberendezésekbe, aeroszolos dobozokba."
+          "text": "Az **ózonréteg** 15 és 35 kilométer között van, a [[Sztratoszféra]] övezetében, és elnyeli az **UV-B** nagy részét, ezeket a napfényeket, amelyek a bőrt és az élő sejtek DNS-ét is roncsolják. Az 1930-as években az ipar feltalálja a **klór-fluor-szénhidrogéneket**, a [[klór-fluor-szénhidrogének]] gázait: olcsónak és tökéletesnek tartották őket, hűtőkbe, klímákba, spraykbe rakták."
         },
         {
           "type": "paragraph",
-          "text": "A probléma az, hogy ezek a gázok túl stabilak: ahelyett, hogy a talaj közelében lebomlanak, a sztratoszférába emelkednek. 1974-ben Mario Molina és Frank Sherwood Rowland vegyészek figyelmeztettek: a Nap hatására a CFC-kből klór szabadul fel, ami tönkreteszi az ózont. 1995-ben Nobel-díjat kaptak, de akkor szinte senki sem hallgatott rájuk."
+          "text": "Ezek a gázok túl stabilak, ez a baj. Ahelyett, hogy a talaj közelében bomlanának, felmennek a sztratoszférába. 1974-ben Mario Molina és Frank Sherwood Rowland kémikusok riadót fújnak: a nap hatására a CFC klórt enged, és az ózont pusztítja. 1995-ben Nobel-díjat kapnak, de akkoriban szinte senki sem hallgat rájuk."
         }
       ]
     },
     {
       "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_p2",
-      "title": "1985: a sokk, majd a globális megállapodás",
+      "title": "1985: a sokk, aztán a világmegállapodás",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "1985-ben a British Antarktic Survey megerősítette a hírt: minden tavasszal látványos lyuk nyílik a [[Antarktisz]] feletti ózonrétegben. A NASA-műholdak már rendelkeztek ezekkel az adatokkal, de a szoftverük túlságosan szélsőségesnek minősítette, hogy igaz legyen."
+          "text": "1985-ben a British Antarctic Survey megerősíti a hírt: minden tavasszal látványos lyuk nyílik az ózonrétegben az [[Antarktisz]] felett. A NASA műholdjai már bírták az adatokat, de a szoftvereik túl szélsőségesnek tartották őket ahhoz, hogy igazak legyenek."
         },
         {
           "type": "image",
           "asset": "ozone_hole_antarctica_satellite_image_nasa",
           "ratio": "16:9",
-          "caption": "Az ózonlyuk az Antarktisz felett, műholdról látható."
+          "caption": "Az ózonlyuk az Antarktisz felett, műholdról"
         },
         {
           "type": "paragraph",
-          "text": "Az emberi egészséget fenyegető veszélyt nagyon komolyan veszik, és a világ gyorsan reagál. 1987-ben az országok aláírták a [[A Montreali Protokoll (1987)]] szerződést, amely megszervezte a CFC-k fokozatos kivonását. Kezdetben csak 24 országa van; ma összehozza a **197**-t, az Egyesült Nemzetek Szervezetének összes tagját."
+          "text": "Az emberi egészség veszélyét komolyan veszik, és a világ gyorsan lép. 1987-ben az országok aláírják [[A Montreali Protokoll (1987)]] szerződését, amely a CFC fokozatos leállítását szervezi. Először csak 24 ország van benne. Ma **197**, az ENSZ összes tagja."
         },
         {
           "type": "funFact",
-          "text": "A Montreali Jegyzőkönyv az egyetlen szerződés az Egyesült Nemzetek Szervezete történetében, amelyet kivétel nélkül a világ minden országa ratifikált."
+          "text": "A montreali jegyzőkönyv az ENSZ történetének egyetlen szerződése, amelyet a világ minden országa ratifikált, kivétel nélkül."
         },
         {
           "type": "paragraph",
-          "text": "Ez a siker egy mindenki számára világos szabálynak és egy közös alapnak köszönhető, amely segíti a szegény országokat a gépeik cseréjében. Még a gyártók is, akik kezdetben ellenezték, végül követték a példát, és jövedelmező cseretermékeket találtak."
+          "text": "Ez a siker tiszta, mindenkire érvényes szabályon áll, és egy közös alapon, amely a szegényebb országoknak segít gépet cserélni. Még az iparosok is, akik először ellenezték, követték, amikor nyereséges helyettesítőt találtak."
         }
       ]
     },
     {
       "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_p3",
-      "title": "Miért nehezebb az éghajlat?",
+      "title": "Miért nehezebb a klíma",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ezt a sikert gyakran hivatkoznak arra, hogy a klímaváltozást ugyanúgy meg tudjuk oldani. A két probléma azonban különbözik: az ózonlyuk kevés számú gyár által termelt, könnyen célzott gázból származott. A [[Szén-dioxid (CO₂)]] szinte mindenből, amit modern társadalmunk csinál, költözik, fűt, művel, épít: a CO₂ csökkentéséhez az egész világgazdaságot kell megváltoztatni, nem csak néhány vegyi gyárat."
+          "text": "Ezt a sikert gyakran idézik: a klímaváltozást is így lehetne megoldani. A két probléma azonban különbözik. Az ózonlyukat kevés gáz okozta, kevés gyárban, könnyű volt célozni. A [[Szén-dioxid (CO₂)]] majdnem mindenből jön, amit a mai társadalom csinál: közlekedés, fűtés, termelés, építés. A CO₂ csökkentése az egész világgazdaságot kéri, nem csak néhány vegyigyárat."
         },
         {
           "type": "paragraph",
-          "text": "Jó hír egyébként: a CFC-k is erős üvegházhatású gázok voltak. Betiltásával a Montreali Jegyzőkönyv a globális felmelegedést is lassította, anélkül, hogy ez lett volna az elsődleges célja."
+          "text": "Jó hír mellékesen: a CFC-k erős üvegházhatású gázok is voltak. A kitiltásukkal a montreali jegyzőkönyv a felmelegedést is fékezte, pedig ez nem volt az első célja."
         },
         {
           "type": "funFact",
-          "text": "E szerződés nélkül a CFC-k 2050-re körülbelül 1 °C-kal további felmelegedést okozhattak volna a Földön, pusztán üvegházhatásuk miatt."
+          "text": "Enélkül a szerződés nélkül a CFC-k 2050-ig nagyjából 1°C extra felmelegedést adhattak volna a Földnek, csak az üvegházhatásuk miatt."
         }
       ]
     },
     {
       "id": "course_221_le_trou_de_la_couche_d_ozone_et_sa_gueri_p4",
-      "title": "Lassú, de nagyon valódi felépülés",
+      "title": "Lassú, de valódi gyógyulás",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A légkörben már felszálló klórnak időbe telik, amíg eltűnik: csak az 1990-es évek közepén stabilizálódott a káros gázok szintje. A 2000-es évek eleje óta a gyógyulás egyértelmű és mérhető."
+          "text": "A már felment klór sokáig marad a légkörben. A káros gázok szintje csak az 1990-es évek közepén állt meg. A 2000-es évek elejétől a gyógyulás tiszta és mérhető."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1974",
-              "title": "A tudományos riasztás",
-              "detail": "Molina és Rowland felfedezi a kapcsolatot a CFC-k és az ózon között."
+              "title": "A tudományos riadó",
+              "detail": "Molina és Rowland megtalálja a CFC és az ózon kapcsolatát."
             },
             {
               "date": "1985",
-              "title": "A lyuk megerősítést nyert",
-              "detail": "A British Antarktic Survey közzéteszi adatait."
+              "title": "A lyuk megerősítve",
+              "detail": "A British Antarctic Survey közzéteszi az adatait."
             },
             {
               "date": "1987",
-              "title": "Montreali Jegyzőkönyv",
-              "detail": "A szerződés aláírása, amelyet immár 197 ország ratifikált."
+              "title": "Montreali jegyzőkönyv",
+              "detail": "A szerződés aláírása, ma 197 ország ratifikálta."
             },
             {
               "date": "2000",
@@ -119,18 +119,18 @@
             },
             {
               "date": "2065",
-              "title": "Visszatérés a normálhoz (tervezett)",
-              "detail": "Az ózonrétegnek vissza kell térnie az 1980-as szintre."
+              "title": "Visszatérés a normálishoz (várható)",
+              "detail": "Az ózonréteg várhatóan eléri az 1980-as szintet."
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Ha a szerződést továbbra is tiszteletben tartják, az ózonrétegnek vissza kell állnia az 1980-as állapotába **2065-2070**, amivel több millió bőrrákot és szürkehályogot kell megelőzni. Vigyáznunk kell: néhány évvel ezelőtt Kelet-Ázsiában észlelték a CFC titkos kibocsátását, ami azt bizonyítja, hogy egy globális megállapodás csak akkor működik, ha folyamatosan ellenőrzik."
+          "text": "Ha a szerződést továbbra is betartják, az ózonréteg **2065-2070** körül visszanyeri az 1980-as állapotát, és milliónyi bőrrákot és szürkehályogot kerül el. Ébernek kell maradni: néhány éve Kelet-Ázsiában titkos CFC-kibocsátást találtak. Egy világmegállapodás csak akkor működik, ha folyamatosan figyelik."
         },
         {
           "type": "takeaway",
-          "text": "Az ózonlyuk továbbra is az egyetlen olyan jelentős környezeti válság, amelyet teljes egészében globális együttműködéssel sikerült megoldani: egy szerződést 1987-ben írt alá 197 ország, tudományosan mérhető eredményekkel."
+          "text": "Az ózonlyuk marad az egyetlen nagy környezeti válság, amelyet teljes egészében világméretű együttműködés oldott meg: egy 1987-es szerződés 197 országgal, tudományosan mérhető eredménnyel."
         }
       ]
     }

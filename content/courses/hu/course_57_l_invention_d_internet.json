@@ -4,11 +4,11 @@
   "subtitle": "Hálózatok",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "Az internetnek nincs egyetlen feltalálója. Ez egy hosszú lánc: egy katonai hálózat, egy közös nyelv, majd a web az emberek számára.",
+  "description": "Az internetnek nincs egyetlen feltalálója. Hosszú lánc: egy katonai hálózat, egy közös nyelv, aztán a web az embereknek.",
   "hero": {
     "image": "l_invention_d_internet",
     "ratio": "16:9",
-    "hook": "Először egy hálózat, amely ellenáll a háborúnak. Aztán az egész világ ráhangolódik."
+    "hook": "Először egy hálózat, hogy ellenálljon a háborúnak. Aztán az egész világ rácsatlakozott."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Az internet nem egyetlen zsenitől született egy garázsban. Ez egy több évtizedes kollektív építkezés."
+          "text": "Az internet nem egyetlen zseni garázsából született. Évtizedeken át tartó közös építkezés."
         },
         {
           "type": "paragraph",
-          "text": "Három egyszerű lépést érdemes megjegyezni: egy első hálózat (ARPANET), egy közös nyelv (TCP/IP), majd egy egyszerű felület (a web)."
+          "text": "Három egyszerű állomást érdemes megjegyezni: egy első hálózat (ARPANET), egy közös nyelv (TCP/IP), aztán egy könnyű felület (a web)."
         }
       ]
     },
@@ -33,53 +33,53 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A **1960** évek végén, a hidegháború kellős közepén az amerikai hadsereg finanszírozott egy projektet: számítógépek összekapcsolását, hogy azok továbbra is kommunikáljanak akkor is, ha a hálózat egy része megsemmisült."
+          "text": "Az **1960**-as évek végén, a hidegháború kellős közepén az amerikai hadsereg egy projektet finanszírozott: számítógépeket összekötni, hogy akkor is beszéljenek, ha a hálózat egy része megsemmisül."
         },
         {
           "type": "image",
           "asset": "arpanet_1969_computer_ucla",
           "ratio": "4:3",
-          "caption": "Az ARPANET először néhány amerikai egyetemet köt össze."
+          "caption": "Az ARPANET először néhány amerikai egyetemet kötött össze"
         },
         {
           "type": "paragraph",
-          "text": "Ennek a hálózatnak a neve **ARPANET**. Az üzenetek kis csomagokra vannak osztva, amelyek különböző utakon haladnak. Ha az egyik út eldől, egy másik veszi át az irányítást."
+          "text": "Ezt a hálózatot **ARPANET**-nek hívták. Az üzeneteket kis csomagokra vágták, amelyek más-más utat jártak. Ha egy út elesett, egy másik vette át."
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p2",
-      "title": "TCP/IP: ugyanazt a nyelvet beszéli",
+      "title": "TCP/IP: ugyanazt a nyelvet beszélni",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ahhoz, hogy a különböző hálózatok megértsék egymást, közös szabályokra van szükség. A **Vint Cerf** és a **Bob Kahn** a **TCP/IP** protokollt fejleszti: egy olyan nyelvet, amely megmondja, hogyan kell kivágni, címezni és újra összeállítani az adatokat."
+          "text": "Hogy a különböző hálózatok értsék egymást, közös szabályok kellenek. **Vint Cerf** és **Bob Kahn** dolgozta ki a **TCP/IP** protokollt: egy nyelvet, amely megmondja, hogyan vágjuk, címezzük és rakjuk össze az adatokat."
         },
         {
           "type": "image",
           "asset": "vint_cerf_bob_kahn_internet",
           "ratio": "4:3",
-          "caption": "Cerf és Kahn: az Internet nyelvének építészei."
+          "caption": "Cerf és Kahn: az internet nyelvének építészei"
         },
         {
           "type": "funFact",
-          "text": "Január 1-jén **1983** az ARPANET hivatalosan is TCP/IP-re váltott. Sokan ezt a dátumot tekintik az internet technikai „születésének”."
+          "text": "**1983**. január 1-jén az ARPANET hivatalosan TCP/IP-re váltott. Sokan ezt a dátumot tekintik az internet technikai „születésének”."
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p3",
-      "title": "A web emberré teszi a hálózatot",
+      "title": "A web emberivé teszi a hálózatot",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Az internet a hálózat. A **világháló**, amelyet **Tim Berners-Lee** talált ki a CERN-ben a **1990** évek elején, az egyszerű réteg: oldalak, hivatkozások, böngészők."
+          "text": "Az internet a hálózat. A **World Wide Web**, amelyet **Tim Berners-Lee** talált fel a CERN-ben az **1990**-es évek elején, a könnyű réteg: oldalak, linkek, böngészők."
         },
         {
           "type": "paragraph",
-          "text": "A web nélkül az internet elsősorban a szakértők eszköze maradna. Ezzel mindenki kattinthat."
+          "text": "Web nélkül az internet főleg szakértők eszköze maradt volna. Vele bárki kattinthat."
         }
       ]
     },
@@ -90,11 +90,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ma az internet e-maileket, videókat, bankokat, kórházakat és GPS-t hordoz. Új problémákat is teremtett: dezinformációt, megfigyelést, digitális megosztottságot."
+          "text": "Ma az internet viszi a leveleket, a videókat, a bankokat, a kórházakat, a GPS-t. Új bajokat is hozott: dezinformációt, megfigyelést, digitális szakadékot."
         },
         {
           "type": "takeaway",
-          "text": "Az Internet az ARPANET-ből született, a TCP/IP-nek köszönhetően univerzálissá vált, és a webnek köszönhetően elérhetővé vált. Ez nem egyedi találmány, ez egy közös architektúra."
+          "text": "Az internet az ARPANET-ből született, a TCP/IP tette egyetemessé, a web pedig elérhetővé. Nem egyetlen találmány, hanem közös szerkezet."
         }
       ]
     }

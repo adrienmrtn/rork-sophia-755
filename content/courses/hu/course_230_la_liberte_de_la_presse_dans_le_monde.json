@@ -1,14 +1,14 @@
 {
   "id": "course_230_la_liberte_de_la_presse_dans_le_monde",
-  "title": "Sajtószabadság szerte a világon",
-  "subtitle": "Nyomás alatt álló törvény",
+  "title": "A sajtószabadság a világban",
+  "subtitle": "Nyomás alatt álló jog",
   "subject": "comprendreLeMonde",
   "subcategory": "Environment & the future",
-  "description": "A világ lakosságának kevesebb mint **10%-a** él olyan országban, ahol valóban szabad a sajtó. Az állami cenzúra és a gazdasági nyomás között ez az alapvető jog szinte mindenhol hanyatlóban van.",
+  "description": "A világ népességének kevesebb mint **10%-a** él olyan országban, ahol a sajtó igazán szabad. Állami cenzúra és gazdasági nyomás között ez a létfontosságú jog szinte mindenütt visszaszorul.",
   "hero": {
     "image": "la_liberte_de_la_presse_dans_le_monde",
     "ratio": "16:9",
-    "hook": "A tájékoztatás néha szabadságba, de akár életbe is kerül: egy utazás egy törékeny jog szívébe."
+    "hook": "Tájékoztatni néha a szabadságba, vagy az életbe kerül: utazás egy törékeny jog szívébe."
   },
   "sections": [
     {
@@ -18,7 +18,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**A sajtószabadság** az ország demokratikus egészségének egyik legjobb mutatója. Nem korlátozódik a közzétételi jogra: magában foglalja a polgárok azon jogát, hogy az ellenőrzött információkhoz hozzáférjenek a mindenkori hatásköröktől függetlenül. Világszerte kettős nyomás nehezedik erre a jogra: közvetlen elnyomás a tekintélyelvű rendszerekben, és diszkrétebb gyengítés magukban a demokráciákban."
+          "text": "A **sajtószabadság** az egyik legjobb jelzője egy ország demokratikus egészségének. Nem csak a publikálás joga: az is, hogy a polgárok ellenőrzött, a hatalomtól független információhoz jussanak. Az egész világon kettős nyomás éri: közvetlen elnyomás az autoriter rezsimekben, és diszkrétebb gyengülés magukban a demokráciákban."
         }
       ]
     },
@@ -29,44 +29,44 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A [[Riporterek Határok Nélkül (RSF)]] szervezet minden évben referenciajelentést ad ki az újságírói szakma útjában álló akadályokról világszerte."
+          "text": "Minden évben a [[Riporterek Határok Nélkül (RSF)]] szervezet referenciajelentést ad ki arról, milyen akadályok állnak az újságírói szakma előtt a világban."
         },
         {
           "type": "image",
           "asset": "press_freedom_world_map_RSF_index",
           "ratio": "16:9",
-          "caption": "A világ lakosságának kevesebb mint 10%-a él olyan országban, ahol valóban szabad a sajtó."
+          "caption": "A világ népességének kevesebb mint 10%-a él olyan országban, ahol a sajtó igazán szabad"
         },
         {
           "type": "paragraph",
-          "text": "A 2024-es adatok riasztóak: a világ lakosságának kevesebb mint **10%-a** él olyan területen, ahol a sajtó akadálytalanul dolgozik. Míg az olyan országok, mint Norvégia, magas színvonalat tartanak fenn, az olyan nagy régiók, mint Kína, Oroszország és Irán, az oknyomozó újságírást az árulás egy formájának tekintik."
+          "text": "A 2024-es adatok riadóztatók: a világ népességének kevesebb mint **10%**-a él olyan zónában, ahol a sajtó akadály nélkül dolgozik. Norvégia magas szintet tart. Hatalmas térségek, Kína, Oroszország vagy Irán, az oknyomozó újságírást árulásnak veszik."
         },
         {
           "type": "funFact",
-          "text": "Türkmenisztánban az állam olyan szigorúan ellenőrzi az információkat, hogy a 2020-as világjárvány kezdetén betiltotta a médiában a „koronavírus” szót."
+          "text": "Türkmenisztánban az állam olyan szigorúan tartja az információt, hogy a 2020-as járvány elején kitiltotta a „koronavírus” szót a médiából."
         },
         {
           "type": "paragraph",
-          "text": "2023-ban legalább 79 újságíró vesztette életét hivatása gyakorlása közben, gyakran a kínos nyomozások elhallgattatása céljából. Évente közel 600 újságírót börtönöznek be világszerte."
+          "text": "2023-ban legalább 79 újságíró vesztette életét a munkája közben, gyakran azért, hogy kínos nyomozásokat elhallgattassanak. Évente közel 600 újságírót börtönöznek be a világon."
         }
       ]
     },
     {
       "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p2",
-      "title": "A demokráciák nem immunisak",
+      "title": "A demokráciák sem védettek",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A sajtószabadság a közhiedelemmel ellentétben a nyugati országokban nem garantált örökké. Ott diszkrétebb átalakulásokon ment keresztül, a [[médiakoncentráció]]-hez és néhány nagy csoport anyagi befolyásához kapcsolódva."
+          "text": "A bevett képpel szemben a sajtószabadság a nyugati országokban sem örök. Diszkrétebb átalakulások érik, a [[médiakoncentráció]] és néhány nagy csoport pénzügyi befolyása miatt."
         },
         {
           "type": "paragraph",
-          "text": "Magyarországon [[Orbán Viktor]] hatékony stratégiát hajtott végre: az ellenzéki média betiltása helyett inkább a kormányhoz közel állók átvételét részesítette előnyben, fokozatosan hivatalos visszhangkamrává alakítva a médiavilágot."
+          "text": "Magyarországon [[Orbán Viktor]] hatékony stratégiát épített: ahelyett, hogy betiltotta volna az ellenzéki médiát, közeli emberekkel vásároltatta fel, és lassan hivatalos visszhangkamrává tette a médiateret."
         },
         {
           "type": "paragraph",
-          "text": "Franciaországban a vita főként a média néhány nagy csoport kezében való koncentrációjáról szól, ami a szerkesztőség öncenzúrájától való félelmet kelt. Máshol a [[SLAPP]] névre keresztelt visszaélésszerű jogi eljárások fokozódnak a kritikus hangok megfélemlítésére."
+          "text": "Franciaországban a vita főleg arról szól, hogy a média néhány nagy csoport kezében koncentrálódik, és ettől a szerkesztőségek öncenzúrájától tartanak. Máshol visszaélésszerű perek, [[SLAPP]] eljárások, szaporodnak, hogy megfélemlítsék a kritikus hangokat."
         }
       ]
     },
@@ -77,44 +77,44 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A politikai fenyegetéseken túl az újságírás mély gazdasági válsággal néz szembe. Az egyéni értékesítésen és hirdetésen alapuló történelmi modell a digitális technológiával összeomlott, a nagy platformok mára az online hirdetések többségét ragadják meg."
+          "text": "A politikai fenyegetéseken túl az újságírás mély gazdasági válságot él. A történelmi modell, a lapszámárusítás és a reklám, a digitálissal omlott össze. A nagy platformok viszik el az online reklám java részét."
         },
         {
           "type": "image",
           "asset": "newspaper_crisis_digital_transformation_journalism",
           "ratio": "4:3",
-          "caption": "A sajtó történelmi gazdasági modellje összeomlott a digitális technológiával."
+          "caption": "A sajtó történelmi gazdasági modellje a digitálissal omlott össze"
         },
         {
           "type": "paragraph",
-          "text": "Az erőforrások csökkenése miatt sok helyi újság bezár, és „információs sivatagok” keletkeznek, ahol senki sem figyeli a helyi választott tisztviselők tevékenységét. Ezzel szemben új modellek jelennek meg, amelyeket adományokból vagy közvetlen előfizetésekből finanszíroznak, mint például a francia Mediapart vagy az egyesült államokbeli ProPublica, amelyek azt bizonyítják, hogy a független újságírás is lehet nyereséges."
+          "text": "Ettől a forráshiánytól sok helyi lap bezár, „információs sivatagok” születnek, ahol már senki sem figyeli a helyi választottakat. Válaszként új modellek jönnek, adományból vagy közvetlen előfizetésből, mint a francia Mediapart vagy az amerikai ProPublica, amelyek megmutatják, hogy a független újságírás is lehet nyereséges."
         },
         {
           "type": "funFact",
-          "text": "A történelem első nyomtatott újságát, a „Relation”-t Johann Carolus indította útjára Strasbourgban 1605-ben, jóval a sajtószabadság legális feltalálása előtt."
+          "text": "A történelem első nyomtatott lapját, a „Relation” című újságot, 1605-ben Johann Carolus indította Strasbourgban, jóval a sajtószabadság törvényi kitalálása előtt."
         }
       ]
     },
     {
       "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p4",
-      "title": "A valóság ellenőrzése egy képekkel telített világban",
+      "title": "Ellenőrizni a valót egy képekkel telített világban",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A digitális korszak felgyorsította az információt, de egyben megnyitotta a kaput a [[dezinformáció]] előtt is. A közösségi média algoritmusai az érzelmi tartalmat részesítik előnyben a tényelemzés helyett, széttörve a világról alkotott közös nézetünket."
+          "text": "A digitális kor gyorsabbá tette az információt, de ajtót nyitott a [[dezinformáció]] előtt is. A közösségi algoritmusok az érzelmes tartalmat viszik előre a tényszerű elemzés helyett, és széttörik a világról alkotott közös képünket."
         },
         {
           "type": "paragraph",
-          "text": "Az újságíró szerepe tehát a valóság „ellenőrzője” felé fejlődik, a képek és adatok állandó áramlásában. Az etikai kérdések összetettebbé válnak, mint például a konfliktusövezetekben a fotóriporterben, ahol az emberi méltóság tisztelete olykor összeütközésbe kerül a kimutatás igényével."
+          "text": "Az újságíró szerepe ezért a valóság „ellenőrévé” tolódik egy állandó kép- és adatfolyamban. Az etikai kérdések bonyolultabbak lesznek, például a konfliktuszónás fotóriportnál, ahol az emberi méltóság tisztelete néha a megmutatás kényszerébe ütközik."
         },
         {
           "type": "paragraph",
-          "text": "A sajtószabadság védelme ezért a főbb digitális platformok jobb szabályozását és a médiaoktatás megerősítését igényli. A tényeket ellenőrizni képes szabad sajtó nélkül a demokratikus vita feloldódhat egy olyan világban, ahol minden vélemény egyenlő, függetlenül azok valódiságától."
+          "text": "A sajtószabadság védelme tehát jobb szabályozást kér a nagy digitális platformokon, és erősebb médiaoktatást. Szabad, tényeket ellenőrző sajtó nélkül a demokratikus vita abban a világban oldódik fel, ahol minden vélemény ugyanannyit ér, az igazságtól függetlenül."
         },
         {
           "type": "takeaway",
-          "text": "A világ lakosságának kevesebb mint 10%-a él olyan országban, ahol valóban szabad a sajtó. A közvetlen elnyomás, a gazdasági nyomás és a digitális dezinformáció között ez a demokráciához való alapvető jog szinte mindenhol hanyatlóban van."
+          "text": "A világ népességének kevesebb mint 10%-a él olyan országban, ahol a sajtó igazán szabad. Közvetlen elnyomás, gazdasági nyomás és digitális dezinformáció között ez a demokráciához kellő jog szinte mindenütt visszaszorul."
         }
       ]
     }

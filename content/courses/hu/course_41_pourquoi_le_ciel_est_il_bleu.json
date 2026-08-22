@@ -1,14 +1,14 @@
 {
   "id": "course_41_pourquoi_le_ciel_est_il_bleu",
   "title": "Miért kék az ég?",
-  "subtitle": "Fény és hangulat",
+  "subtitle": "Fény és légkör",
   "subject": "sciences",
   "subcategory": "Our daily life explained",
-  "description": "A kék égre nézni annyira közhely, hogy elfelejtjük megkérdezni, miért. A válasz a Nap fényében és a levegőben rejlik, amelyen áthaladunk, hogy lássuk.",
+  "description": "A kék égre nézni annyira hétköznapi, hogy a miértje ritkán jut eszedbe. A válasz a Nap fényében és a levegőben van, amelyen átnézel.",
   "hero": {
     "image": "pourquoi_le_ciel_est_il_bleu",
     "ratio": "16:9",
-    "hook": "Az ég nem kékre van festve: a fény és a levegő varázstrükkje."
+    "hook": "Az ég nincs kékre festve: a fény és a levegő mutatványa."
   },
   "sections": [
     {
@@ -18,55 +18,55 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A kék égre felnézni annyira közhely, hogy elfelejtjük megkérdezni, miért. A **légkör**, a Földet körülvevő gázrétegnek azonban nincs saját színe. Ez a szín a Nap fénye és a körülöttünk lebegő gázmolekulák nagyon pontos találkozásából származik."
+          "text": "Felbekapni a fejed a kék égre annyira hétköznapi, hogy elfelejted megkérdezni, miért kék. A **légkör**, a Földet körülvevő gázréteg, önmagában színtelen. Ez az árnyalat a Nap fényének és a körülöttünk úszó gázmolekuláknak a találkozásából jön."
         },
         {
           "type": "paragraph",
-          "text": "Ennek a kéknek a megértése azt jelenti, hogy megértjük, hogyan terjed a fény, és hogyan **szétszóródik**, vagyis minden irányba visszatér, ahelyett, hogy egyenesen menne. És szép meglepetés: pontosan ugyanaz a jelenség, amely naplementekor pirosra és narancssárgára színezi az eget."
+          "text": "Megérteni ezt a kéket annyi, mint megérteni, hogyan utazik a fény, és hogyan **szóródik**: mindenfelé pattan, ahelyett hogy egyenesen menne. Meglepetés: ugyanaz a jelenség festi vörösre és narancsra az eget napnyugtakor."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p1",
-      "title": "A fehér fény minden színt elrejt",
+      "title": "A fehér fény minden színt rejt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A napfény számunkra fehérnek tűnik, de valójában a szivárvány összes színét tartalmazza: ez a [[látható fény spektruma]]. Mindegyik szín egy **hullámhossznak**-nek felel meg, vagyis a fényhullám méretének. A kék és az ibolya rövid hullámok; a pirosnak hosszú hullámai vannak."
+          "text": "A Nap fénye fehérnek látszik, de a szivárvány minden színét tartalmazza: ez a [[látható fény spektruma]]. Minden színhez **hullámhossz** tartozik, a fény „hullámának” mérete. A kéknek és az ibolyának rövid a hulláma, a vörösnek hosszú."
         },
         {
           "type": "funFact",
-          "text": "A Holdon nincs levegő, ami fényt szórhatna. Eredmény: ott az ég **fekete marad fényes nappal**, még akkor is, ha süt a Nap. Bizonyíték arra, hogy az ég színe a levegőből származik, nem a Napból."
+          "text": "A Holdon nincs levegő, amely szórná a fényt. Ezért ott az ég **nappal is fekete**, akkor is, ha a Nap süt. Bizonyíték: az ég színe a levegőből jön, nem a Napból."
         },
         {
           "type": "paragraph",
-          "text": "Mert a Nap és a szemünk között a levegő nem üres: tele van apró **gázmolekulákkal, különösen nitrogénnel, a levegő kb. **Z78**%- van** és oxigénnel, kb. **21%**. Sokkal kisebbek, mint a fényhullámok. Ha egy sugár eléri őket, már nem megy egyenesen: minden irányba visszaküldik. Ez a kis pattanás az ég színének kiindulópontja."
+          "text": "A Nap és a szemed között a levegő nem üres: apró **gázmolekulák** töltik ki, főleg nitrogén, a levegő nagyjából **78%**-a, és oxigén, nagyjából **21%**. Sokkal kisebbek a fényhullámoknál. Ha egy sugár nekikütközik, nem megy tovább egyenesen: mindenfelé visszaszóródik. Ez a kis pattanás az ég színének kiindulása."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p2",
-      "title": "Diffúzió: miért a kék nyer?",
+      "title": "A szórás: miért nyer a kék",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A **1871**-ben a brit fizikus, **Lord Rayleigh** egyenletbe foglalta ezt a jelenséget. Felfedezte, hogy minél rövidebb egy szín színe, annál jobban visszaverik azt minden irányban a levegőmolekulák. Ez a [[Rayleigh szórása]]."
+          "text": "**1871**-ben **Lord Rayleigh** brit fizikus egyenletbe írja a jelenséget. Azt találja: minél rövidebb egy szín hulláma, annál inkább mindenfelé veri vissza a levegő molekulája. Ez a [[Rayleigh szórása]]."
         },
         {
           "type": "funFact",
-          "text": "A Mars égboltja a miénk ellentéte: vasban gazdag pora nappal rózsaszínűvé teszi, naplementéi viszont **kék**. Minden attól függ, mit tartalmaz a levegő."
+          "text": "A Mars ege a miénk fordítottja: vastartalmú pora nappal rózsássá teszi, a napnyugtái viszont **kékek**. Minden azon múlik, mi van a levegőben."
         },
         {
           "type": "image",
           "asset": "blue_sky_sunlight_scattering_atmosphere",
           "ratio": "4:3",
-          "caption": "A kék fényt a levegő minden irányba szórja."
+          "caption": "A kék fényt a levegő minden irányba szórja"
         },
         {
           "type": "paragraph",
-          "text": "Konkrétan a kék fény körülbelül **9-szer nagyobb** szóródik, mint a piros. A vörös szinte egyenes vonalban halad a levegőben, míg a kék mindenhol ricochet. Ez az oka annak, hogy bármerre is nézel az égen, a kék mindig a szemedbe kerül: az egész égbolt mintha „ragyogna” ettől a szétszórt kéktől."
+          "text": "Konkrétan a kék fény nagyjából **9-szer** jobban szóródik, mint a vörös. A vörös majdnem egyenesen átmegy a levegőn, a kék mindenfelé pattog. Ezért, merre is nézel az égen, kék mindig elér a szemedhez: az egész ég ettől a szétszórt kéktől „világít”."
         }
       ]
     },
@@ -77,11 +77,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Felmerül egy logikus kérdés: ha a legrövidebb hullámok a legszórtabbak, akkor az ibolya nyer, mert a hulláma még a kékénél is rövidebb. Az égbolt is sok elszórt lilát tartalmaz."
+          "text": "Logikus a kérdés: ha a legrövidebb hullámok szóródnak a legjobban, az ibolyának kellene nyernie, mert a hulláma még a kékénél is rövidebb. Az égben van is sok szórt ibolya."
         },
         {
           "type": "paragraph",
-          "text": "A válasz nem az égben van, hanem a szemünkben. A színeket a **kúpok** nevű érzékelőkkel rögzítjük, amelyek a retina fényre érzékeny sejtjei. Sokkal érzékenyebbek a kékre, mint a lilára. Ezenkívül a Nap több kék fényt bocsát ki, mint lila fényt. Az agyunk ekkor egyfajta átlagot csinál, és gyönyörű kéket lát. Egy más színekre érzékeny állat kétségtelenül teljesen más eget látna."
+          "text": "A válasz nem az égben van, hanem a szemedben. A színeket **csapok** fogják, a retina fényérzékeny sejtjei. Sokkal érzékenyebbek a kékre, mint az ibolyára. Ráadásul a Nap több kék fényt küld, mint ibolyát. Az agyad átlagol, és szép kéket lát. Egy más színekre érzékeny állat egészen más eget látna."
         }
       ]
     },
@@ -92,21 +92,21 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A naplemente ugyanazokat a szabályokat követi, de egy dolgot megváltoztat: a távolságot. Délben a fény vékony levegőrétegen halad át. Este, amikor a Nap alacsonyan jár, sugarainak **sokkal több levegőn kell áthaladniuk**, mielőtt elérnének bennünket."
+          "text": "A napnyugta ugyanazokat a szabályokat követi, csak egy dolgot vált: a távolságot. Délben a fény vékony levegőrétegen megy át. Este, amikor a Nap alacsony, a sugarainak **sokkal több levegőt** kell átszelniük, mielőtt hozzád érnek."
         },
         {
           "type": "image",
           "asset": "sunset_red_orange_sky_atmosphere",
           "ratio": "16:9",
-          "caption": "A horizont szintjén a fény sokkal nagyobb vastagságú levegőn halad át."
+          "caption": "A látóhatár szélén a fény jóval vastagabb levegőn megy át"
         },
         {
           "type": "paragraph",
-          "text": "Ezen a hosszú úton minden kék eloszlik jóval azelőtt, hogy elérne hozzánk: a levegő vastagsága megszűri. Csak a legellenállóbb színek maradnak meg, a vörös és a narancs. Ha por vagy szennyeződés van, a diffúziós [[Mie diffúzió]] lép működésbe: a levegőmolekuláknál nagyobb részecskék tejszerűvé teszik az eget, vagy megerősítik ezeket a narancssárga árnyalatokat."
+          "text": "Ezen a hosszú úton minden kék jóval előtted szétszóródik: a levegő vastagsága kiszűri. Csak a legkitartóbb színek maradnak, a vörösek és a narancsok. Ha por vagy szennyezés is van, a [[Mie szétszóródása]] lép be: a levegő molekuláinál nagyobb részecskék tejessé teszik az eget, vagy erősítik ezeket a narancsos árnyalatokat."
         },
         {
           "type": "takeaway",
-          "text": "Az ég kék, mert a rövid hullámokat körülbelül **Z9-szer** jobban szétszórja a levegő, mint a hosszú hullámokat. Napnyugtakor a fény annyi levegőn halad át, hogy még csak a vörös jut el hozzánk."
+          "text": "Az ég kék, mert a rövid hullámokat a levegő nagyjából **9-szer** jobban szórja, mint a hosszúakat. Napnyugtakor a fény annyi levegőn megy át, hogy csak a vörös ér még el hozzád."
         }
       ]
     }

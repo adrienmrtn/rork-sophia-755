@@ -1,14 +1,14 @@
 {
   "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap",
-  "title": "Az elektromosság felfedezése",
-  "subtitle": "Franklintől a Tesláig",
+  "title": "A villamosság felfedezése",
+  "subtitle": "Franklintól Tesláig",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "Az elektromosságot nem hirtelen találták fel. Először megfigyelték, majd megértették, majd háziasították. Íme a legfontosabb lépések.",
+  "description": "A villamosságot nem egy csapásra találták fel. Először megfigyelték, aztán megértették, aztán megszelídítették. Itt a kulcsállomások.",
   "hero": {
     "image": "la_decouverte_de_l_electricite",
     "ratio": "16:9",
-    "hook": "A villámtól az okostelefonig: két évszázad a láthatatlan megszelídítésére."
+    "hook": "A villámtól az okostelefonig: két évszázad, mire a láthatatlant megszelídítették."
   },
   "sections": [
     {
@@ -18,89 +18,89 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A természetben létezik elektromosság: villámlás, elektromos hal, súrlódás. Ami megváltoztatta a világot, az az volt, hogy megtanulta a **előállítani**, **szállítás** és használja azokat."
+          "text": "A villamosság ott van a természetben: villám, elektromos halak, dörzsölés. A világot az változtatta meg, hogy megtanultuk **előállítani**, **szállítani** és használni."
         },
         {
           "type": "paragraph",
-          "text": "Ez a történet több mint két évszázadot ölel fel, kockázatos kísérletekkel és nagy rivalizálással."
+          "text": "Ez a történet több mint két évszázadon át tart, kockázatos kísérletekkel és nagy rivalizálásokkal."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p1",
-      "title": "A villámlás megértése",
+      "title": "Megérteni a villámot",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A 18. században **Benjamin Franklin** kimutatta, hogy a villámlás elektromos jelenség. Sárkányrepülő kísérlete (amelyet gyakran kitalált formában mond el) azt a célt szolgálja, hogy bebizonyítsa, hogy az égbolt és a súrlódó gép ugyanazzal az erővel játszik."
+          "text": "A 18. században **Benjamin Franklin** megmutatta, hogy a villám elektromos jelenség. Sárkányos kísérlete (gyakran megszépítve mesélik) azt akarta bizonyítani, hogy az ég és a dörzsgép ugyanazzal az erővel játszik."
         },
         {
           "type": "image",
           "asset": "benjamin_franklin_kite_lightning_experiment",
           "ratio": "4:3",
-          "caption": "Franklin összekapcsolja a villámot és az elektromosságot: veszélyes, de alapvető ötlet."
+          "caption": "Franklin összeköti a villámot és a villamosságot: veszélyes, de alapvető ötlet"
         },
         {
           "type": "paragraph",
-          "text": "Feltaláltuk a **mennydörgés** fémrudat is, amely biztonságos utat kínál a villámnak a földhöz. Az elektromosság rejtélyt hagy a mérnöki munkához."
+          "text": "Feltalálták a **villámhárítót** is, egy fémrudat, amely biztonságos utat ad a villámnak a föld felé. A villamosság kilépett a titokból, és belépett a mérnöki munkába."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p2",
-      "title": "Faraday: áramot termel",
+      "title": "Faraday: áramot előállítani",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A 19. században **Michael Faraday** kimutatta, hogy a vezeték közelében mozgó mágnes elektromos áramot hozhat létre. Ez a **indukció**. Ezen ötlet nélkül nincs dinamó, nincs generátor, nincs modern erőmű."
+          "text": "A 19. században **Michael Faraday** megmutatta, hogy egy mozgó mágnes a vezeték mellett elektromos áramot hozhat létre. Ez az **indukció**. Enélkül nincs dinamó, nincs alternátor, nincs mai erőmű."
         },
         {
           "type": "image",
           "asset": "faraday_electromagnetic_induction_experiment",
           "ratio": "4:3",
-          "caption": "Faraday a mozgást és a mágnesességet árammá alakítja."
+          "caption": "Faraday a mozgást és a mágnesességet árammá alakítja"
         },
         {
           "type": "funFact",
-          "text": "Faraday szerény háttérből származott, és könyvkötőként kezdte. Úgy tanulta a tudományt, hogy elolvasta, amit reliaba."
+          "text": "Faraday szerény családból jött, és könyvkötőként kezdte. A tudományt azokból a könyvekből tanulta, amelyeket bekötött."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p3",
-      "title": "Edison kontra Tesla",
+      "title": "Edison Tesla ellen",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A 19. század végén két tábor csapott össze. **Thomas Edison** egyenáramot tol. **Nikola Tesla** (és a Westinghouse cég) védi a váltakozó áramot, amely könnyebben szállítható nagy távolságokra."
+          "text": "A 19. század végén két tábor csapott össze. **Thomas Edison** az egyenáramot tolta. **Nikola Tesla** (és a Westinghouse cég) a váltakozó áramot védte, amelyet könnyebb volt nagy távolságra szállítani."
         },
         {
           "type": "image",
           "asset": "tesla_edison_electric_power_station",
           "ratio": "4:3",
-          "caption": "A váltakozó áram erősödik a városokban."
+          "caption": "A váltakozó áram győz, hogy a városokat ellássák"
         },
         {
           "type": "paragraph",
-          "text": "Váltóáram nyeri a városi hálózatokat. A városok világítanak. A gyárak ütemben változnak."
+          "text": "A váltakozó áram győzött a városi hálózatokon. A városok fénybe borultak. A gyárak ritmust váltottak."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p4",
-      "title": "Összekapcsolt világ",
+      "title": "Egy bedugott világ",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ma elektromos áram látja el a kórházakat, a vonatokat, az internetet és a hűtőszekrényeket. A kihívás már nem csak az előállítása, hanem az is, hogy ezt tisztán és megbízhatóan tegyük."
+          "text": "Ma a villamosság kórházakat, vonatokat, internetet, hűtőket hajt. A tét már nemcsak az előállítás, hanem hogy tisztán és megbízhatóan tegyük."
         },
         {
           "type": "takeaway",
-          "text": "Az elektromosságot megértették, majd háziasították: Franklin a villámlásért, Faraday az áramtermelésért, a Tesla és a váltakozó áram az otthonokba juttatásához. A mindennapi életünk továbbra is ezen múlik."
+          "text": "A villamosságot megértették, aztán megszelídítették: Franklin a villámhoz, Faraday az áram előállításához, Tesla és a váltakozó áram a házakig. A mindennapjaink még mindig ettől függenek."
         }
       ]
     }
