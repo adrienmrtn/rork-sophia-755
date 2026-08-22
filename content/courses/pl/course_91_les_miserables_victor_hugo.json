@@ -1,14 +1,14 @@
 {
   "id": "course_91_les_miserables_victor_hugo",
-  "title": "Les Miserables, Victor Hugo",
+  "title": "Nędznicy, Victor Hugo",
   "subtitle": "1862",
   "subject": "litterature",
   "subcategory": "French & European Classics",
-  "description": "Jean Valjean szuka odkupienia we Francji, która nie chce mu przebaczyć. Hugo łączy w sobie romans, kronikę historyczną i działania na rzecz wykluczonych.",
+  "description": "Jean Valjean szuka odkupienia we Francji, która nie chce mu przebaczyć. Hugo splata romans, kronikę historyczną i obronę wykluczonych.",
   "hero": {
     "image": "les_miserables_victor_hugo",
     "ratio": "16:9",
-    "hook": "Kawałek skradzionego chleba, dziewiętnaście lat więzienia, a potem całe życie, by udowodnić, że można na nowo stać się mężczyzną."
+    "hook": "Kawałek skradzionego chleba, dziewiętnaście lat katorgi, potem całe życie, by dowieść, że można znów stać się człowiekiem."
   },
   "sections": [
     {
@@ -18,107 +18,107 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Opublikowane w **1862**, **Les Miserables** to jedna z najczęściej czytanych powieści na świecie. **Wiktor Hugo**, zaangażowany poeta i powieściopisarz, opowiada historię Francji w **XIX wieku** poprzez **Jana Valjeana**, były skazaniec ścigany przez **[[Inspektor Javert]]**. Javert jest nieprzekupnym policjantem. Jest ucieleśnieniem bezlitosnego prawa."
+          "text": "Wydani w **1862** **Nędznicy** należą do najczęściej czytanych powieści świata. **Victor Hugo**, zaangażowany poeta i powieściopisarz, opowiada Francję **XIX wieku** przez **Jeana Valjeana**, byłego katorżnika ściganego przez **[[Inspektor Javert]]**. Javert jest nieprzekupnym policjantem. Uosabia prawo bez litości."
         },
         {
           "type": "paragraph",
-          "text": "Książka łączy w sobie intrygę detektywistyczną, historię miłosną, kronikę historyczną i donos społeczny. Hugo pragnie „dzieła świata”, powieści obejmującej całą epokę. Ma nadzieję rozmawiać ze wszystkimi, ponad granicami. To także wspaniały tekst o nędzy, łasce i możliwości odkupienia."
+          "text": "Książka miesza intrygę policyjną, historię miłosną, kronikę historyczną i oskarżenie społeczne. Hugo chce „dzieła-świata”, powieści, która ogarnia całą epokę. Ma nadzieję mówić do wszystkich, poza granicami. To też wielki tekst o nędzy, łasce i szansie na odkupienie."
         }
       ]
     },
     {
       "id": "course_91_les_miserables_victor_hugo_p1",
-      "title": "Hugo i dzieło zrodzone na emigracji",
+      "title": "Hugo i dzieło zrodzone na wygnaniu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Wiktor Hugo** rozpoczyna powieść w **1845** pod tytułem „Les Misères”. Po zamachu stanu **1851** **Napoleon III**, siostrzeńca Napoleona Bonaparte, Hugo udał się na wygnanie na Wyspy Normandzkie, w Guernsey. Z nowym zapałem bierze swój rękopis. Wygnanie podsyca swój gniew na niesprawiedliwość."
+          "text": "**Victor Hugo** zaczyna powieść już w **1845**, pod tytułem „Nędze”. Po zamachu stanu **1851** **Napoleona III**, siostrzeńca Napoleona Bonaparte, Hugo jedzie na wygnanie na Wyspy Normandzkie, na Guernsey. Wraca do rękopisu z nowym zapałem. Wygnanie karmi jego gniew na niesprawiedliwość."
         },
         {
           "type": "image",
           "asset": "victor_hugo_portrait_photograph",
           "ratio": "4:3",
-          "caption": "Victor Hugo: poeta, prozaik i głos ubóstwa społecznego."
+          "caption": "Victor Hugo: poeta, powieściopisarz i głos nędzy społecznej"
         },
         {
           "type": "funFact",
-          "text": "Aby napisać scenę w kanałach, Hugo uzyskał informacje od paryskich służb drogowych i sam zbadał podziemne galerie."
+          "text": "Żeby napisać scenę w kanałach, Hugo zbierał materiały u służb porządkowych Paryża i sam schodził do podziemnych galerii."
         },
         {
           "type": "paragraph",
-          "text": "Powieść ukazała się w **1862** w Brukseli, po siedemnastu latach pracy. Hugo wstawia długie **[[Dygresje]]**, strony, na których autor przerywa opowieść, aby porozmawiać o historii lub filozofii. Szczególną uwagę poświęca **Waterloo**, bitwie z 1815 roku wyznaczającej koniec imperium napoleońskiego, klasztorom czyli **[[Kanały Paryża]]**, podziemiom stolicy i metaforze nieświadomości społecznej. Strony te zakotwiczają bohaterów w rzeczywistości materialnej i czynią z książki traktat o filozofii społecznej."
+          "text": "Powieść ukazuje się w **1862** w Brukseli, po siedemnastu latach pracy. Hugo wstawia długie **[[Dygresje]]**, strony, na których autor przerywa opowieść, żeby mówić o historii albo filozofii. Poświęca je między innymi **Waterloo**, bitwie z 1815, która zamyka cesarstwo napoleońskie, klasztorom albo **[[Kanały Paryża]]**, podziemiu stolicy i metaforze nieświadomości społecznej. Te strony włączają postaci w materialną rzeczywistość i robią z książki traktat filozofii społecznej."
         }
       ]
     },
     {
       "id": "course_91_les_miserables_victor_hugo_p2",
-      "title": "Jean Valjean: od więzienia do łaski",
+      "title": "Jean Valjean: od katorgi do łaski",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Skazany za kradzież kawałka chleba Valjean spędził **19 łatów** w **[[Kolonie karne i system karny w XIX wieku]]**, więzieniu z pracą przymusową, zwłaszcza w Tulonie. Po wyjściu na wolność w ZZBOLDZŻółtym paszporcie oznaczono go jako byłego skazańca. Staje się wyrzutkiem. Biskup **Myriel**, nazywany „Monseigneur Bienvenu”, daje mu drugą szansę. Przekonuje ją, że otrzymał swoje sztućce w prezencie, gdy Valjean właśnie je ukradł."
+          "text": "Skazany za kradzież kawałka chleba, Valjean spędza **19 lat** w miejscu, które opisuje hasło **[[Kolonia karna i XIX-wieczny system karny]]**, więzieniu z robotami przymusowymi, zwłaszcza w Tulonie. Po wyjściu **żółty paszport** znaczy go jako byłego katorżnika. Staje się pariasem. Biskup **Myriel**, zwany „Monseigneur Bienvenu”, daje mu drugą szansę. Każe mu wierzyć, że dostał srebra w darze, choć Valjean właśnie je ukradł."
         },
         {
           "type": "image",
           "asset": "french_convict_galley_19th_century",
           "ratio": "4:3",
-          "caption": "Więzienie: doświadczenie, które łamie Valjeana przed jego przemianą moralną."
+          "caption": "Katorga: doświadczenie, które łamie Valjeana przed moralną przemianą"
         },
         {
           "type": "quote",
-          "text": "Jan Valjean, mój bracie, nie należysz już do zła, należysz do dobra.",
-          "attribution": "Victor Hugo, Nędznicy — Monseigneur Bienvenu"
+          "text": "Janie Valjean, bracie mój, nie należysz już do zła, należysz do dobra.",
+          "attribution": "Victor Hugo, Nędznicy (biskup Bienvenu)"
         },
         {
           "type": "paragraph",
-          "text": "Pod pseudonimem **Panie Madeleine** Valjean zostaje filantropijnym burmistrzem przemysłowego miasta. Dla Hugo działalność charytatywna może przezwyciężyć nieuchronność społeczną. Ale **Javerta**, wcielenie bezlitosnej sprawiedliwości, nadal go ściga. Nie wyobraża sobie, że przestępca może stać się dobrym człowiekiem."
+          "text": "Pod tożsamością **pana Madeleine** Valjean zostaje filantropijnym burmistrzem miasta przemysłowego. Dla Hugo miłosierdzie może pokonać społeczną fatum. Ale **Javert**, wcielenie sprawiedliwości bez litości, nie przestaje go ścigać. Nie potrafi wyobrazić sobie, że zbrodniarz może stać się dobrym człowiekiem."
         }
       ]
     },
     {
       "id": "course_91_les_miserables_victor_hugo_p3",
-      "title": "Fantyna, Cozetta i barykady",
+      "title": "Fantine, Cosette i barykady",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Fantyna**, pracownica porzucona przez kochanka, który ją uwiódł, pogrąża się w biedzie, aby płacić córce emeryturę **Cozetta**. Dziecko zostaje powierzone **Thénardier**, chciwym karczmarzom. Valjean ratuje ją i staje się obrońcą dziecka. Fabuła przenosi się do Paryża, gdzie powstanie **czerwiec 1832**, powstanie republikańskie stłumione przez wojsko, skupia młodych ludzi w tajnym stowarzyszeniu **[[ABC]]**. Imię to przywołuje na myśl „pokornych”, ludzi."
+          "text": "**Fantine**, robotnica porzucona przez kochanka, który ją uwiódł, tonie w nędzy, żeby płacić za utrzymanie córki **Cosette**. Dziecko oddano **Thénardierom**, chciwym karczmarzom. Valjean ratuje je i staje się opiekunem dziecka. Opowieść skręca do Paryża, gdzie powstanie **czerwca 1832**, republikański zryw zmiażdżony przez armię, zbiera młodzież w tajnym stowarzyszeniu **[[ABC]]**. Nazwa przywołuje *les abaissés*, lud."
         },
         {
           "type": "image",
           "asset": "paris_barricades_1832_painting",
           "ratio": "4:3",
-          "caption": "Barykady 1832 roku: Historia wkracza do powieści."
+          "caption": "Barykady 1832: Historia wchodzi do powieści"
         },
         {
           "type": "paragraph",
-          "text": "Na tych barykadach ginie **Gavroche**, dziecko ulicy, które stało się symbolem złożonej w ofierze niewinności. **Enjolras**, przywódca rebeliantów, ucieleśnia idealistyczną młodość. Valjean ratuje **Mariusz**, młodego mieszczanina zakochanego w Cozetcie, w akcie całkowitego poświęcenia. Zgadza się zaryzykować swoją wolność dla szczęścia tej, którą uważa za swoją córkę."
+          "text": "Na tych barykadach ginie **Gavroche**, dziecko ulicy, które staje się znakiem złożonej w ofierze niewinności. **Enjolras**, wódz buntowników, uosabia idealistyczną młodzież. Valjean ratuje tam **Marius**, młodego mieszczanina zakochanego w Cosette, w akcie całkowitego poświęcenia. Ryzykuje wolność dla szczęścia tej, którą uważa za córkę."
         }
       ]
     },
     {
       "id": "course_91_les_miserables_victor_hugo_p4",
-      "title": "Powieść, która zmienia świadomość",
+      "title": "Powieść, która zmienia sumienia",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Javerta**, ocalony przez Valjeana w czasie powstania, nie potrafi pogodzić prawa z łaską: popełnia samobójstwo rzucając się do Sekwany. Valjean umiera w spokoju, dotrzymując obietnicy danej Myriel. Powieść stanowi filar **[[Literatura zaangażowana]]**, literatury w służbie sprawy społecznej lub politycznej. Hugo potępia brak obowiązku szkolnego, ucisk kobiet i nieludzkość więzień."
+          "text": "**Javert**, uratowany przez Valjeana w chwili powstania, nie potrafi pogodzić prawa i łaski: popełnia samobójstwo, rzucając się do Sekwany. Valjean umiera w pokoju, dotrzymawszy obietnicy danej Myrielowi. Powieść jest filarem **[[Literatura zaangażowana]]**, literatury w służbie sprawy społecznej albo politycznej. Hugo denuncjuje brak obowiązkowej szkoły, ucisk kobiet i nieludzkość więzień."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1845",
-              "title": "Rozpoczęcie projektu",
-              "detail": "Hugo rozpoczyna „Les Misères”."
+              "title": "Początek projektu",
+              "detail": "Hugo zaczyna „Nędze”."
             },
             {
               "date": "1851",
               "title": "Wygnanie",
-              "detail": "Zamach stanu przerywa i ponownie rozpoczyna pisanie."
+              "detail": "Zamach stanu przerywa pisanie, potem je rozpala."
             },
             {
               "date": "1862",
@@ -128,13 +128,13 @@
             {
               "date": "1832",
               "title": "Barykady",
-              "detail": "Powstanie stanowi punkt kulminacyjny Paryża."
+              "detail": "Powstanie buduje paryski climax."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "**Les Misérables**, opublikowane w **1862**, opisuje odkupienie **Jeana Valjeana** pomiędzy dobroczynnością a nieubłaganym prawem. Hugo czyni barykady **1832** symbolem walki o godność człowieka."
+          "text": "**Nędznicy**, wydani w **1862**, opowiadają odkupienie **Jeana Valjeana** między miłosierdziem a nieubłaganym prawem. Hugo robi z barykad **1832** znak walki o ludzką godność."
         }
       ]
     }

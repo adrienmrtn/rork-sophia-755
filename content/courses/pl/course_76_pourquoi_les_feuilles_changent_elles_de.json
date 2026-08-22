@@ -1,14 +1,14 @@
 {
   "id": "course_76_pourquoi_les_feuilles_changent_elles_de",
   "title": "Dlaczego liście zmieniają kolor?",
-  "subtitle": "Jesień i pigmenty",
+  "subtitle": "Jesień i barwniki",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "Jesień nie wymyśla kolorów: usuwa zieleń, która je maskowała. Za serialem strategia przetrwania pozwalająca przetrwać zimę.",
+  "description": "Jesień nie wymyśla barw: zdejmuje zieleń, która je wcześniej zasłaniała. Za widowiskiem stoi strategia przetrwania zimy.",
   "hero": {
     "image": "pourquoi_les_feuilles_changent_de_couleur",
     "ratio": "16:9",
-    "hook": "Jesienne liście nie nakładają makijażu: usuwają zieleń."
+    "hook": "Jesienne liście nie malują się na nowo: po prostu zdejmują zieleń."
   },
   "sections": [
     {
@@ -18,85 +18,85 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Każdej jesieni lasy zmieniają kolor z zielonego na złoty, miedziany i fioletowy. To nie jest fanaberia estetyczna. To strategia: drzewo odzyskuje tyle, ile może, zanim zrzuci liście na zimę."
+          "text": "Każdej jesieni lasy schodzą z zieleni w złoto, miedź i purpurę. To nie kaprys estetyki. To strategia przetrwania: drzewo odzyskuje, co może z liścia, zanim zrzuci go na zimę."
         },
         {
           "type": "paragraph",
-          "text": "Ciepłe kolory nie pojawiają się znikąd. Często już tam były, ukryte pod zielenią. Zrozumienie jesieni oznacza zrozumienie wielkiego oczyszczenia biochemicznego."
+          "text": "Ciepłe barwy nie biorą się znikąd. Często już tam były, schowane pod zielenią. Zrozumieć jesień to zrozumieć wielkie biochemiczne sprzątanie."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p1",
-      "title": "Zieleń, która wszystko ukrywa",
+      "title": "Zieleń, która zasłania wszystko",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Od wiosny do późnego lata liście są pełne **chlorofil**, pigmentu napędzającego fotosyntezę. Rozkłada się pod wpływem światła, ale drzewo stale go zastępuje. Dopóki dominuje, liść pozostaje zielony."
+          "text": "Od wiosny do końca lata liście pęcznieją od **chlorofilu**, barwnika, który napędza fotosyntezę. Światło go niszczy, ale drzewo wciąż go uzupełnia na bieżąco. Dopóki góruje, liść zostaje zielony."
         },
         {
           "type": "image",
           "asset": "leaf_color_change_autumn_chlorophyll",
           "ratio": "auto",
-          "caption": "Jesienią chlorofil znika i odsłania kolory liści."
+          "caption": "Jesienią chlorofil znika i wtedy odsłania prawdziwe barwy liści."
         },
         {
           "type": "paragraph",
-          "text": "Jednak liść zawiera również **karotenoidy**, pigmenty żółte i pomarańczowe (jak w marchwi). Latem są, ale niewidoczne pod zielenią. Jesienią produkcja chlorofilu ustaje. Zieleń blednie, ujawniają się żółcie i pomarańcze."
+          "text": "Liść ma też **karotenoidy**, żółte i pomarańczowe barwniki (jak w marchewce). Latem są na miejscu, ale niewidoczne pod zielenią. Jesienią produkcja chlorofilu ustaje. Zieleń blednie, żółć i pomarańcz wychodzą na wierzch."
         },
         {
           "type": "funFact",
-          "text": "„Chlorofil” pochodzi od greckiego *chlorki* (zielony) i *filon* (liść). „Karotenoid” ma korzenie… marchewki, gdzie po raz pierwszy zidentyfikowano ten pigment."
+          "text": "„Chlorofil” pochodzi z greckiego *chloros* (zielony) i *phyllon* (liść). „Karotenoid” dzieli rdzeń z... marchewką, w której ten barwnik najpierw rozpoznano."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p2",
-      "title": "Prawdziwy czynnik wyzwalający: coraz dłuższe noce",
+      "title": "Prawdziwy spust: noce, które się wydłużają",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "To nie chłód rozpoczyna jesień, ale długość nocy. Drzewa mierzą to za pomocą czujników światła [[fitochromy]]. Kiedy noce stają się dłuższe, do każdego liścia dociera sygnał hormonalny."
+          "text": "Jesieni nie odpala przede wszystkim zimno, tylko długość nocy. Drzewa mierzą ją czujnikami światła, [[fitochromy]]. Gdy noce się wydłużają, sygnał hormonalny idzie do każdego liścia."
         },
         {
           "type": "paragraph",
-          "text": "U nasady ogonków tworzy się [[Strefa separacji]], coś w rodzaju kapelusza. Sok unosi się mniej, cukry słabo opadają. Izolowany liść szybciej rozkłada chlorofil. Bardziej stabilne żółte odcienie utrzymują się przez kilka tygodni, po czym liście opadają."
+          "text": "U nasady ogonka powstaje [[strefa separacji]], rodzaj korka. Soki słabiej idą w górę, cukry źle wracają w dół. Odcięty liść szybciej rozkłada chlorofil. Trwalsze żółcie zostają na kilka tygodni, potem liść spada."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p3",
-      "title": "Skąd się biorą jaskrawe czerwienie?",
+      "title": "Skąd biorą się jaskrawe czerwienie",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Żółty już był. Czerwony i fioletowy są często **powinien** na koniec sezonu. Są to [[Antocyjany]], powstające, gdy cukry pozostają uwięzione w liściu."
+          "text": "Żółć już tam była od dawna. Czerwień i fiolet często są **wytwarzane** dopiero pod koniec sezonu. To [[Antocyjany]], powstające, gdy cukry zostają uwięzione w liściu."
         },
         {
           "type": "paragraph",
-          "text": "Po co inwestować energię tuż przed wyrzuceniem papieru? Prawdopodobnie w celu ochrony **** podczas rezygnacji Drzewo odzyskuje**azine** i inne cenne składniki odżywcze. Bez chlorofilu słońce może uszkodzić wciąż aktywne tkanki. Antocyjany działają jak filtr słoneczny podczas dużego ruchu w kierunku korzeni."
+          "text": "Po co wkładać energię tuż przed zrzuceniem liścia? Pewnie po to, by go **chronić** podczas recyklingu. Drzewo odzyskuje **azot** i inne cenne składniki. Bez chlorofilu słońce może uszkodzić tkanki, które jeszcze pracują. Antocyjany działają jak filtr przeciwsłoneczny na czas wielkiej przeprowadzki do korzeni."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p4",
-      "title": "Dlaczego niektóre jesienie płoną bardziej",
+      "title": "Dlaczego niektóre jesienie płoną mocniej",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Najpiękniejsze czerwienie rodzą się często w wyniku słonecznych dni i chłodnych, bezmroźnych nocy. Dużo cukru, przemiana w antocyjany. Szara i deszczowa jesień daje ciemniejsze odcienie. Wczesne przymrozki zabijają liście przed pokazem."
+          "text": "Najładniejsze czerwienie rodzą się często ze słonecznych dni i chłodnych nocy bez mrozu. Dużo cukru, zamiana w antocyjany. Szara, deszczowa jesień daje barwy bardziej matowe. Wczesny mróz zabija liście przed widowiskiem."
         },
         {
           "type": "paragraph",
-          "text": "Ostatecznie zostają tylko [[garbniki]], brązowe substancje z dna lasu. Niektóre badania uważają również, że jasne kolory ostrzegają [[mszyce]]: kształt drzewa, silna obrona, lepiej udać się gdzie indziej."
+          "text": "Na końcu zostają prawie tylko [[garbniki]], brązowe substancje ściółki. Część badań sądzi też, że jaskrawe barwy ostrzegają [[mszyce]]: drzewo w formie, obrona mocna, lepiej iść gdzie indziej."
         },
         {
           "type": "takeaway",
-          "text": "Jesień ujawnia żółć już obecną, gdy zanika chlorofil, a czasami zmienia kolor na czerwony, aby chronić recykling składników odżywczych przed opadnięciem liści."
+          "text": "Jesień odsłania żółcie, które już były w liściu, gdy znika chlorofil, i czasem robi czerwień, by chronić odzysk składników przed opadnięciem liści."
         }
       ]
     }

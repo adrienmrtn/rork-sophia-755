@@ -4,11 +4,11 @@
   "subtitle": "Światło i atmosfera",
   "subject": "sciences",
   "subcategory": "Our daily life explained",
-  "description": "Patrzenie na błękitne niebo jest tak powszechne, że zapominamy zapytać dlaczego. Odpowiedź leży w świetle Słońca i powietrzu, przez które przechodzimy, aby je zobaczyć.",
+  "description": "Patrzysz na niebieskie niebo tak często, że zapominasz zapytać dlaczego. Odpowiedź leży w świetle Słońca i w powietrzu, przez które je widzisz.",
   "hero": {
     "image": "pourquoi_le_ciel_est_il_bleu",
     "ratio": "16:9",
-    "hook": "Niebo nie jest pomalowane na niebiesko: to magiczna sztuczka światła i powietrza."
+    "hook": "Niebo nie jest pomalowane na niebiesko: to sztuczka światła i powietrza."
   },
   "sections": [
     {
@@ -18,95 +18,95 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Patrzenie w błękitne niebo jest tak powszechne, że zapominamy zapytać, dlaczego tak się dzieje. **atmosfera**, warstwa gazu otaczająca Ziemię, nie ma jednak własnego koloru. Kolor ten powstał w wyniku bardzo precyzyjnego spotkania światła Słońca z cząsteczkami gazu unoszącymi się wokół nas."
+          "text": "Podnosisz oczy ku niebieskiemu niebu tak często, że zapominasz zapytać, czemu takie jest. **Atmosfera**, warstwa gazów wokół Ziemi, nie ma jednak własnego koloru. Ten odcień rodzi się ze ścisłego spotkania światła Słońca i cząsteczek gazu, które unoszą się wokół ciebie."
         },
         {
           "type": "paragraph",
-          "text": "Zrozumienie tego błękitu oznacza zrozumienie, w jaki sposób światło się przemieszcza i **rozpraszać**, co oznacza, że ​​wraca we wszystkich kierunkach, zamiast iść prosto. I miła niespodzianka: to dokładnie to samo zjawisko, które o zachodzie słońca zabarwia niebo na czerwono i pomarańczowo."
+          "text": "Zrozumieć ten błękit znaczy zrozumieć, jak światło podróżuje i się **rozprasza**, czyli odbija we wszystkie strony zamiast iść prosto. I dobra niespodzianka: to dokładnie to samo zjawisko barwi niebo na czerwono i pomarańczowo o zachodzie."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p1",
-      "title": "Białe światło ukrywa wszystkie kolory",
+      "title": "Białe światło chowa wszystkie kolory",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Światło słoneczne wydaje się nam białe, choć w rzeczywistości zawiera wszystkie kolory tęczy: jest to [[widzialne widmo światła]]. Każdy kolor odpowiada **długość fali**, czyli rozmiarowi „fali” świetlnej. Niebieski i fioletowy mają krótkie fale; czerwony ma długie fale."
+          "text": "Światło Słońca wydaje ci się białe, ale naprawdę niesie wszystkie barwy tęczy: to [[Spektrum światła widzialnego]]. Każdy kolor to inna **długość fali**, rozmiar jego „fali” świetlnej. Błękit i fiolet mają fale krótkie; czerwień ma fale długie."
         },
         {
           "type": "funFact",
-          "text": "Na Księżycu nie ma powietrza rozpraszającego światło. Wynik: tam niebo pozostaje **czarny biały dzień**, nawet gdy świeci Słońce. Dowód na to, że kolor nieba pochodzi od powietrza, a nie od Słońca."
+          "text": "Na Księżycu nie ma powietrza, które rozproszyłoby światło. Skutek: tam niebo zostaje **czarne w pełny dzień**, nawet gdy Słońce świeci. Dowód, że kolor nieba idzie z powietrza, nie ze Słońca."
         },
         {
           "type": "paragraph",
-          "text": "Ponieważ między Słońcem a naszymi oczami powietrze nie jest puste: jest wypełnione maleńkimi cząsteczkami gazu **, szczególnie azotu, w przybliżeniu**Z78**%** powietrza i tlenu w przybliżeniu **21%**. Są znacznie mniejsze niż fale świetlne. Kiedy promień w nie uderza, nie biegnie już prosto: jest odsyłany we wszystkich kierunkach. To małe odbicie jest punktem wyjścia dla koloru nieba."
+          "text": "Bo między Słońcem a twoimi oczami powietrze nie jest puste: pełno w nim maleńkich **cząsteczek gazu**, głównie azotu, około **78%** powietrza, i tlenu, około **21%**. Są dużo mniejsze niż fale światła. Gdy promień w nie uderza, nie idzie już prosto: odbija się we wszystkie strony. Ten mały rykoszet jest punktem startu koloru nieba."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p2",
-      "title": "Dyfuzja: dlaczego niebieski wygrywa",
+      "title": "Rozpraszanie: dlaczego wygrywa błękit",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "W **1871** brytyjski fizyk **Lordzie Rayleighu** umieścił to zjawisko w równaniu. Odkrył, że im krótszy jest kolor, tym bardziej jest odbijany we wszystkich kierunkach przez cząsteczki powietrza. To jest [[Rozpraszanie Rayleigha]]."
+          "text": "W **1871** brytyjski fizyk **Lord Rayleigh** wkłada to zjawisko w równanie. Odkrywa, że im krótsza fala koloru, tym mocniej cząsteczki powietrza rzucają go na wszystkie strony. To [[Rozpraszanie Rayleigha]]."
         },
         {
           "type": "funFact",
-          "text": "Niebo Marsa jest przeciwieństwem naszego: jego bogaty w żelazo pył sprawia, że ​​w ciągu dnia jest różowe, ale zachody słońca są **niebieski**. Wszystko zależy od tego, co zawiera powietrze."
+          "text": "Niebo Marsa robi odwrotność naszego: pył bogaty w żelazo czyni je różowym w dzień, ale zachody tam są **niebieskie**. Wszystko zależy od tego, co jest w powietrzu."
         },
         {
           "type": "image",
           "asset": "blue_sky_sunlight_scattering_atmosphere",
           "ratio": "4:3",
-          "caption": "Niebieskie światło jest rozproszone we wszystkich kierunkach przez powietrze."
+          "caption": "Niebieskie światło rozprasza się we wszystkie strony przez powietrze"
         },
         {
           "type": "paragraph",
-          "text": "Konkretnie, światło niebieskie jest rozproszone około **9 razy bardziej** niż światło czerwone. Czerwony przemieszcza się w powietrzu niemal po linii prostej, natomiast niebieski rykoszetuje wszędzie. Dlatego też, gdziekolwiek spojrzysz na niebo, błękit zawsze dotrze do Twoich oczu: całe niebo wydaje się „świecić” tym rozproszonym błękitem."
+          "text": "Konkretnie: światło niebieskie rozprasza się około **9 razy mocniej** niż czerwone. Czerwień idzie przez powietrze prawie prosto, a błękit rykoszetuje wszędzie. Dlatego gdziekolwiek spojrzysz w niebo, błękit i tak dochodzi do twoich oczu: całe niebo zdaje się „świecić” tym rozrzuconym błękitem."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p3",
-      "title": "Dlaczego więc nie fioletowy?",
+      "title": "To czemu nie fiolet?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nasuwa się logiczne pytanie: jeśli fale najkrótsze są najbardziej rozproszone, to powinien zwyciężyć fiolet, bo jego fala jest jeszcze krótsza niż błękitu. Niebo zawiera również dużo rozproszonego fioletu."
+          "text": "Pytanie jest logiczne: jeśli najkrótsze fale rozpraszają się najmocniej, powinien wygrać fiolet, bo jego fala jest jeszcze krótsza niż błękitu. W niebie i tak jest sporo rozproszonego fioletu."
         },
         {
           "type": "paragraph",
-          "text": "Odpowiedź nie jest na niebie, ale w naszych oczach. Przechwytujemy kolory za pomocą czujników zwanych **stożkami**, czyli komórek siatkówki wrażliwych na światło. Są znacznie bardziej wrażliwe na kolor niebieski niż fioletowy. Ponadto Słońce wysyła więcej światła niebieskiego niż fioletowego. Nasz mózg robi wtedy coś w rodzaju średniej i widzi piękny błękit. Zwierzę wrażliwe na inne kolory niewątpliwie zobaczyłoby zupełnie inne niebo."
+          "text": "Odpowiedź nie leży w niebie, tylko w twoim oku. Kolory chwytasz dzięki czujnikom zwanym **czopkami**, komórkom siatkówki wrażliwym na światło. Są dużo czulsze na błękit niż na fiolet. Do tego Słońce wysyła więcej światła niebieskiego niż fioletowego. Twój mózg robi wtedy swego rodzaju średnią i widzi ładny błękit. Zwierzę czułe na inne barwy widziałoby pewnie całkiem inne niebo."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p4",
-      "title": "A wieczorna czerwień?",
+      "title": "A czerwień wieczoru?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Zachód słońca rządzi się tymi samymi zasadami, ale zmienia jedno: odległość. W południe światło przechodzi przez cienką warstwę powietrza. Wieczorem, gdy Słońce jest nisko, jego promienie muszą przejść przez **oceniać więcej powietrza**, zanim do nas dotrą."
+          "text": "Zachód słońca idzie tymi samymi regułami, ale zmienia jedną rzecz: drogę. W południe światło przecina cienką warstwę powietrza. Wieczorem, gdy Słońce stoi nisko, jego promienie muszą przejść **dużo więcej powietrza**, zanim do ciebie dotrą."
         },
         {
           "type": "image",
           "asset": "sunset_red_orange_sky_atmosphere",
           "ratio": "16:9",
-          "caption": "Na poziomie horyzontu światło przechodzi przez znacznie większą gęstość powietrza."
+          "caption": "Tuż nad horyzontem światło przecina znacznie grubszą warstwę powietrza"
         },
         {
           "type": "paragraph",
-          "text": "Podczas tej długiej podróży cały błękit zostaje rozproszony na długo przed dotarciem do nas: jest filtrowany przez gęstość powietrza. Pozostają już tylko najbardziej odporne kolory, czyli czerwienie i pomarańcze. Jeśli pojawi się kurz lub zanieczyszczenia, do akcji wkracza [[Rozproszenie Mie]]: cząstki większe od cząsteczek powietrza sprawiają, że niebo staje się mleczne lub wzmacnia pomarańczowe odcienie."
+          "text": "Na tej długiej drodze cały błękit rozprasza się, zanim do ciebie dojdzie: powietrze jakby go odfiltrowuje. Zostają wtedy barwy najbardziej odporne, czerwienie i pomarańcze. Gdy jest pył albo zanieczyszczenie, w grę wchodzi [[Rozproszenie Mie]]: cząstki większe niż cząsteczki powietrza czynią niebo mlecznym albo wzmacniają te pomarańczowe odcienie."
         },
         {
           "type": "takeaway",
-          "text": "Niebo jest niebieskie, ponieważ fale krótkie są około **Z9** razy bardziej rozpraszane w powietrzu niż fale długie. O zachodzie słońca światło przechodzi przez tak dużą ilość powietrza, że ​​dociera do nas tylko czerwień."
+          "text": "Niebo jest niebieskie, bo fale krótkie rozpraszają się w powietrzu około **9 razy mocniej** niż fale długie. Przy zachodzie światło przecina tyle powietrza, że dochodzi do ciebie już tylko czerwień."
         }
       ]
     }

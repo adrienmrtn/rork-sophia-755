@@ -1,14 +1,14 @@
 {
   "id": "course_68_la_theorie_de_la_relativite_pour_tous",
-  "title": "Teoria względności dla każdego",
-  "subtitle": "Einsteina 1905 i 1915",
+  "title": "Teoria względności dla wszystkich",
+  "subtitle": "Einstein 1905 i 1915",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "W latach 1905 i 1915 Einstein zmienił nasze wyobrażenie o przestrzeni, czasie i grawitacji. Bez jego obliczeń Twój GPS pomyliłby się o kilka kilometrów.",
+  "description": "W 1905 i 1915 Einstein zmienia nasze pojęcie przestrzeni, czasu i grawitacji. Bez jego rachunków GPS myliłby się o kilka kilometrów.",
   "hero": {
     "image": "la_theorie_de_la_relativite_pour_tous",
     "ratio": "16:9",
-    "hook": "Czas nie jest zegarem uniwersalnym. A grawitacja nie jest niewidzialną struną."
+    "hook": "Czas to nie uniwersalny zegar. A grawitacja to nie niewidzialna lina."
   },
   "sections": [
     {
@@ -18,22 +18,22 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "W **1905** i **1915** **Alberta Einsteina** opublikował dwie teorie, które wstrząsnęły fizyką. Do tego czasu kierowaliśmy się głównie [[Niuton]]: czas płynął dla wszystkich i wszędzie tak samo."
+          "text": "W **1905** i **1915** **Albert Einstein** publikuje dwie teorie, które wywracają fizykę. Dotąd szło się głównie za [[Niuton]]: czas płynął tak samo dla wszystkich, wszędzie."
         },
         {
           "type": "paragraph",
-          "text": "Einstein pokazuje, że przestrzeń i czas są ze sobą powiązane i że grawitację można rozumieć jako krzywiznę tej tkanki. Idee te wyjaśniają [[czarne dziury]] i [[Wielki Wybuch]]. Codziennie korygują także GPS w Twoim telefonie."
+          "text": "Einstein pokazuje, że przestrzeń i czas są związane, a grawitację można rozumieć jako wygięcie tej tkaniny. Te myśli tłumaczą [[czarne dziury]] i [[Wielki Wybuch]]. Codziennie poprawiają też GPS w twoim telefonie."
         }
       ]
     },
     {
       "id": "course_68_la_theorie_de_la_relativite_pour_tous_p1",
-      "title": "1905: szczególna teoria względności",
+      "title": "1905: względność szczególna",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**szczególna teoria względności** opiera się na dwóch prostych koncepcjach. Prawa natury są takie same dla wszystkich, którzy poruszają się ze stałą prędkością. A prędkość światła w próżni, **około 300 000 km/s**, jest taka sama dla wszystkich, niezależnie od tego, czy się do niej zbliżamy, czy się od niej oddalamy."
+          "text": "**Względność szczególna** stoi na dwóch prostych myślach. Prawa przyrody są te same dla wszystkich, którzy jadą ze stałą prędkością. A prędkość światła w próżni, **około 300.000 km/s**, jest ta sama dla wszystkich, czy się do niej zbliżasz, czy się oddalasz."
         },
         {
           "type": "image",
@@ -43,49 +43,49 @@
         },
         {
           "type": "paragraph",
-          "text": "Aby światło zawsze utrzymywało tę samą prędkość, czas musi się dostosować. To jest [[Dylatacja czasu]]: im szybciej porusza się obiekt, tym wolniej płynie dla niego czas w porównaniu z osobą w spoczynku. To nie jest iluzja. **egary atomowe**, instrumenty mierzące czas z niezwykłą precyzją, zmierzyły go."
+          "text": "Żeby światło zawsze zachowało tę samą prędkość, czas musi się dopasować. To [[dylatacja czasu]]: im szybciej obiekt jedzie, tym wolniej płynie dla niego czas względem kogoś w spoczynku. To nie złudzenie. **Zegary atomowe**, przyrządy mierzące czas ze skrajną precyzją, to zmierzyły."
         },
         {
           "type": "paragraph",
-          "text": "Einstein rysuje także [[E=mc²]]: masa jest bardzo skoncentrowaną formą energii. Ponieważ prędkość światła **c** jest ogromna, bardzo mała masa może wyzwolić kolosalną energię. Jest filarem [[fizyka jądrowa]], nauki o jądrach atomowych i zachodzących w nich reakcjach."
+          "text": "Einstein wyciąga z tego też [[E=mc²]]: masa jest bardzo skoncentrowaną formą energii. Ponieważ **c**, prędkość światła, jest ogromne, całkiem mała masa potrafi uwolnić kolosalną energię. To filar dziedziny [[fizyka jądrowa]], badania jąder atomowych i ich reakcji."
         },
         {
           "type": "funFact",
-          "text": "W 1905 roku Einstein nie był profesorem uniwersytetu. Pracuje jako egzaminator w urzędzie patentowym w Bernie w Szwajcarii."
+          "text": "W 1905 Einstein nie jest profesorem uniwersytetu. Pracuje jako urzędnik w biurze patentowym w Bernie, w Szwajcarii."
         }
       ]
     },
     {
       "id": "course_68_la_theorie_de_la_relativite_pour_tous_p2",
-      "title": "1915: grawitacja jako krzywizna",
+      "title": "1915: grawitacja jako wygięcie",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dziesięć lat później Einstein opublikował **korzystanie z względności**. Newton postrzegał grawitację jako niewidzialną siłę przyciągającą masy do siebie. Einstein proponuje inny obraz: **przestrzeń-czas**, przestrzeń i czas złączone w jedną tkaninę, tworzą elastyczną tkaninę."
+          "text": "Dziesięć lat później Einstein publikuje **względność ogólną**. Newton widział grawitację jako niewidzialną siłę, która ciągnie masy ku sobie. Einstein daje inny obraz: **czasoprzestrzeń**, przestrzeń i czas spięte w jedną tkaninę, jest tkaniną giętką."
         },
         {
           "type": "paragraph",
-          "text": "Ciężka masa, podobnie jak Słońce, drąży tę tkankę. Wyobraź sobie kulę do kręgli na trampolinie. Piłka rzucona obok nie leci prosto: podąża za zagłębieniem. Podobnie Ziemia krąży po orbicie, ponieważ podąża za krzywizną utworzoną przez Słońce."
+          "text": "Ciężka masa, jak Słońce, wgniata tę tkaninę. Wyobraź sobie kulę bowlingową na trampolinie. Kulka rzucona obok nie idzie prosto: jedzie za wgłębieniem. Tak samo Ziemia krąży, bo jedzie za krzywizną zrobioną przez Słońce."
         },
         {
           "type": "paragraph",
-          "text": "Nawet światło podąża za tymi krzywiznami. W **1919** brytyjski astronom **Arthura Eddingtona** zweryfikował to podczas zaćmienia: pozorna pozycja gwiazd za Słońcem jest nieznacznie przesunięta. Einstein stał się sławny z dnia na dzień."
+          "text": "Nawet światło jedzie tymi krzywymi. W **1919** brytyjski astronom **Arthur Eddington** sprawdza to podczas zaćmienia: pozorna pozycja gwiazd za Słońcem jest lekko przesunięta. Einstein staje się sławny z dnia na dzień."
         }
       ]
     },
     {
       "id": "course_68_la_theorie_de_la_relativite_pour_tous_p3",
-      "title": "GPS, dowód kieszonkowy",
+      "title": "GPS, kieszonkowy dowód",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Satelity GPS obracają się z prędkością około **14 000 km/h** na wysokości **20 000 km**. Aby zlokalizować się z dokładnością do metra, ich zegary muszą być zsynchronizowane z zegarami naziemnymi. Ale jednocześnie działają dwa efekty relatywistyczne."
+          "text": "Satelity GPS krążą z prędkością około **14.000 km/h**, na wysokości **20.000 km**. Żeby umiejscowić cię co do metra, ich zegary muszą zostać zsynchronizowane z tymi na ziemi. Tymczasem dwa efekty relatywistyczne grają naraz."
         },
         {
           "type": "paragraph",
-          "text": "Ze względu na ich prędkość czas płynie nieco wolniej, co jest efektem szczególnej teorii względności: około **7 mikrofal** opóźnienia dziennie. Ze względu na słabszą grawitację na wysokości, czas płynie tam nieco szybciej, co jest efektem ogólnej teorii względności: około **45 mikrosekund** z wyprzedzeniem."
+          "text": "Przez ich prędkość czas płynie tam trochę wolniej, efekt względności szczególnej: około **7 mikrosekund** opóźnienia dziennie. Przez słabszą grawitację na wysokości czas płynie tam trochę szybciej, efekt względności ogólnej: około **45 mikrosekund** wyprzedzenia."
         },
         {
           "type": "funFact",
@@ -93,30 +93,30 @@
         },
         {
           "type": "paragraph",
-          "text": "Rezultatem jest postęp netto o około **38 mikrosekund** dziennie. Wydaje się malutki. Przy prędkości światła to już jest ogromne dla nawigacji."
+          "text": "Bilans to czyste wyprzedzenie około **38 mikrosekund** dziennie. Wygląda na drobiazg. Przy prędkości światła to już ogrom dla nawigacji."
         }
       ]
     },
     {
       "id": "course_68_la_theorie_de_la_relativite_pour_tous_p4",
-      "title": "Fale, czarne dziury, rozszerzający się wszechświat",
+      "title": "Fale, czarne dziury, wszechświat w ekspansji",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ogólna teoria względności przewiduje czarne dziury: obszary, w których krzywizna jest tak silna, że ​​nawet światło nie dociera. Einstein wątpił w ich prawdziwe istnienie. [[radioastronomia]], obserwacje nieba w falach radiowych i najnowsze zdjęcia potwierdziły je."
+          "text": "Względność ogólna przewiduje czarne dziury: obszary, gdzie krzywizna jest tak silna, że nawet światło już nie wychodzi. Einstein wątpił w ich rzeczywiste istnienie. [[radioastronomia]], obserwacja nieba w falach radiowych, i niedawne zdjęcia je potwierdziły."
         },
         {
           "type": "paragraph",
-          "text": "W **1916** przewidział także **fale grawitacyjne**: zmarszczki w czasoprzestrzeni powstałe w wyniku kosmicznych katastrof, takich jak połączenie dwóch czarnych dziur. Musimy poczekać, aż **2015** i obserwatorium **LIGO**, czyli naziemny detektor wrażliwy na wibracje kosmiczne, wykryją je."
+          "text": "W **1916** przewiduje też **fale grawitacyjne**: zmarszczki czasoprzestrzeni po kosmicznych katastrofach, jak złączenie dwóch czarnych dziur. Trzeba czekać do **2015** i obserwatorium **LIGO**, naziemnego detektora czułego na drżenia przestrzeni, żeby je złapać."
         },
         {
           "type": "paragraph",
-          "text": "Wreszcie równania te otwierają drogę do rozszerzającego się wszechświata, będącego podstawą modelu Wielkiego Wybuchu. Einstein najpierw dodał stałą kosmologiczną****, matematyczny termin określający istnienie stałego wszechświata. Obserwacje Hubble'a przekonały go później, że jest inaczej."
+          "text": "Wreszcie te równania otwierają drogę do wszechświata w ekspansji, podstawy modelu Wielkiego Wybuchu. Einstein najpierw dodał **stałą kosmologiczną**, człon matematyczny, żeby wymusić wszechświat nieruchomy. Obserwacje Hubble'a przekonały go potem do odwrotności."
         },
         {
           "type": "takeaway",
-          "text": "**E=mc²** łączy masę i energię. Ogólna teoria względności mówi, że grawitacja zagina czasoprzestrzeń. Bez tych poprawek Twój GPS byłby błędny o kilka kilometrów dziennie."
+          "text": "**E=mc²** wiąże masę i energię. Względność ogólna mówi, że grawitacja wygina czasoprzestrzeń. Bez tych poprawek twój GPS myliłby się o kilka kilometrów każdego dnia."
         }
       ]
     }

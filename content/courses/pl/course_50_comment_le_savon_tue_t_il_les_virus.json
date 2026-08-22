@@ -1,14 +1,14 @@
 {
   "id": "course_50_comment_le_savon_tue_t_il_les_virus",
-  "title": "W jaki sposób mydło zabija wirusy?",
+  "title": "Jak mydło zabija wirusy?",
   "subtitle": "Higiena",
   "subject": "sciences",
   "subcategory": "Our daily life explained",
-  "description": "Mydło nie jest „magią”. Atakuje tłuszczową otoczkę niektórych wirusów i wyciąga je ze skóry. Oto dlaczego 20 sekund ma znaczenie.",
+  "description": "Mydło nie jest „magiczne”. Atakuje tłustą powłokę niektórych wirusów i zrywa je z twojej skóry. Dlatego liczy się 20 sekund.",
   "hero": {
     "image": "comment_le_savon_tue_les_virus",
     "ratio": "16:9",
-    "hook": "Prosta broń przeciwko wirusom: cząsteczki lubiące wodę… i tłuszcz."
+    "hook": "Prosta broń przeciw wirusom: cząsteczki, które lubią wodę i tłuszcz."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Podczas pandemii COVID-19 bardzo prosty gest ponownie stał się kluczowy: mycie rąk mydłem. Nie ma potrzeby korzystania z laboratorium. Tylko woda, mydło i trochę czasu."
+          "text": "W pandemii COVID-19 bardzo prosty gest znów stał się centralny: mycie rąk mydłem. Nie potrzeba laboratorium. Wystarczy woda, mydło i trochę czasu."
         },
         {
           "type": "paragraph",
-          "text": "Dlaczego to działa tak dobrze? Ponieważ wiele niebezpiecznych wirusów ma otoczkę wykonaną z tłuszczu. A mydło doskonale niszczy tłuszcz."
+          "text": "Czemu to działa tak dobrze? Bo wiele groźnych wirusów ma otoczkę z tłuszczu. A mydło świetnie niszczy tłuszcz."
         }
       ]
     },
@@ -33,36 +33,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Niektóre wirusy, takie jak **koronawirus** lub wirus grypy, mają zewnętrzną powłokę zbudowaną z lipidów (tłuszczów). Ta koperta chroni je… do czasu, aż napotka mydło."
+          "text": "Niektóre wirusy, jak **koronawirusy** albo wirus grypy, mają zewnętrzną otoczkę z lipidów (tłuszczów). Ta otoczka je chroni, aż spotka mydło."
         },
         {
           "type": "paragraph",
-          "text": "Inne wirusy, zwane „nagimi”, nie mają tej otoczki. Są bardziej odporne na mydło i alkohol. Na szczęście wiele wirusów przenoszących się przez ręce i kropelki jest otoczkowych."
+          "text": "Inne wirusy, zwane „nagimi”, nie mają tej otoczki. Lepiej znoszą mydło i alkohol. Na szczęście wiele wirusów, które idą przez ręce i kropelki, ma otoczkę."
         }
       ]
     },
     {
       "id": "course_50_comment_le_savon_tue_t_il_les_virus_p2",
-      "title": "Mydło, dwustronna cząsteczka",
+      "title": "Mydło, cząsteczka o dwóch twarzach",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "handwashing_soap_water_hands",
           "ratio": "4:3",
-          "caption": "Dzięki pocieraniu mydło dotrze do każdego zakątka dłoni."
+          "caption": "Tarcie pomaga mydłu dotrzeć do wszystkich zakamarków rąk."
         },
         {
           "type": "paragraph",
-          "text": "Cząsteczki mydła są [[środki powierzchniowo czynne]]. Mają głowę, która lubi wodę i ogon, który lubi tłuszcz. Ogon zatapia się w otoczce tłuszczowej wirusa. Głowa pozostaje zwrócona w stronę wody."
+          "text": "Cząsteczki mydła to [[środki powierzchniowo czynne]]. Mają głowę, która lubi wodę, i ogon, który lubi tłuszcz. Ogon wbija się w tłustą otoczkę wirusa. Głowa zostaje zwrócona ku wodzie."
         },
         {
           "type": "paragraph",
-          "text": "Skutek: rozdarcie koperty. Wirus jest wyłączony. Następnie woda usuwa zanieczyszczenia. Mydło nie „spali” wirusa jak kwas: **rozpuszczać** i usuwa go."
+          "text": "Skutek: otoczka pęka. Wirus jest wyłączony. Potem woda zabiera resztki. Mydło nie „spala” wirusa jak kwas: **rozpuszcza** go i zdejmuje."
         },
         {
           "type": "funFact",
-          "text": "Działa to na tej samej zasadzie, co przy usuwaniu tłuszczu z patelni: mydło chwyta tłuszcz i wypuszcza go wraz z wodą."
+          "text": "To ta sama zasada, która zdejmuje tłuszcz z patelni: mydło chwyta tłuszcz i puszcza go z wodą."
         }
       ]
     },
@@ -73,26 +73,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mydło potrzebuje czasu, aby dotrzeć do wszystkich fałd: między palcami, pod paznokciami, w okolicach nadgarstków. Około **20 sekund** tarcia – jest to często zalecane minimum."
+          "text": "Trzeba czasu, żeby mydło doszło do wszystkich zagięć: między palcami, pod paznokciami, wokół nadgarstków. Około **20 sekund** tarcia to minimum często zalecane."
         },
         {
           "type": "paragraph",
-          "text": "Bez tarcia mydło działa gorzej. Sama woda też nie działa skutecznie na otoczkę tłuszczową."
+          "text": "Bez tarcia mydło działa słabiej. Sama woda też: nie atakuje skutecznie tłustej otoczki."
         }
       ]
     },
     {
       "id": "course_50_comment_le_savon_tue_t_il_les_virus_p4",
-      "title": "Mydło czy żel wodno-alkoholowy?",
+      "title": "Mydło czy żel alkoholowy?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Żel zawierający co najmniej **60%** alkoholu może również zniszczyć wiele wirusów otoczkowych. Jeśli jednak widoczne są zabrudzenia lub tłuszcz, żel jest mniej skuteczny: brud działa jak ekran. W tym przypadku najlepszym wyborem pozostaje mydło i woda."
+          "text": "Żel z co najmniej **60%** alkoholu też potrafi zniszczyć wiele wirusów z otoczką. Ale gdy widać brud albo tłuszcz, żel działa słabiej: brudy robią ekran. Wtedy mydło i woda zostają najlepszym wyborem."
         },
         {
           "type": "takeaway",
-          "text": "Mydło zabija wiele wirusów, odrywając ich tłustą powłokę, a następnie zmywając je wodą. Czas + tarcie = wydajność."
+          "text": "Mydło zabija wiele wirusów, rwąc ich tłustą otoczkę, a potem zabierając je z wodą. Czas i tarcie dają skuteczność."
         }
       ]
     }

@@ -1,14 +1,14 @@
 {
   "id": "course_78_comment_fonctionne_l_electricite_dans_no",
-  "title": "Jak działa prąd w naszym organizmie?",
+  "title": "Jak działa elektryczność w naszym ciele?",
   "subtitle": "Nerwy i jony",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "Myślenie, bicie serca, podnoszenie ręki: wszystko to najpierw krąży jak żywa elektryczność, niesiona nie przez elektrony, ale przez jony.",
+  "description": "Myśleć, bić sercem, unieść ramię: to wszystko krąży najpierw jako żywa elektryczność, niesiona nie przez elektrony, lecz przez jony.",
   "hero": {
     "image": "comment_fonctionne_l_electricite_dans_notre_corps",
     "ratio": "16:9",
-    "hook": "Twoje ciało jest siecią elektryczną. Ale tutaj prąd to jony, a nie elektrony."
+    "hook": "Twoje ciało to sieć elektryczna. Tyle że tutaj prąd to jony, nie elektrony."
   },
   "sections": [
     {
@@ -18,36 +18,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "W gniazdku ściennym prąd wynosi **elektronika**, które krążą. W twoim organizmie jest inaczej: są to **Jiony**, naładowane atomy, które wchodzą i opuszczają komórki. Ten przepływ wytwarza sygnały, które sprawiają, że serce myśli, bije i kurczy się mięsień."
+          "text": "W gniazdku prąd to **elektrony**, które płyną w przewodzie. W twoim ciele jest inaczej: to **jony**, naładowane atomy, wchodzą i wychodzą z komórek. Ten przepływ tworzy sygnały, które każą myśleć, bić sercu i kurczyć mięsień."
         },
         {
           "type": "paragraph",
-          "text": "Bez tej żywej energii elektrycznej nie byłoby myśli, gestów ani tętna. Zrozumienie ciała oznacza także zrozumienie tego języka ładunków."
+          "text": "Bez tej żywej elektryczności nie ma myśli, gestu ani tętna. Zrozumieć ciało to też zrozumieć ten język ładunków."
         }
       ]
     },
     {
       "id": "course_78_comment_fonctionne_l_electricite_dans_no_p1",
-      "title": "Elektryczne kliknięcie neuronu",
+      "title": "Elektryczny klik neuronu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**neuronu** w stanie spoczynku nie wysyła wiadomości, ale „ładuje się”. Jego błona oddziela wnętrze i zewnątrz komórki. Dzięki [[pompy sodowo-potasowe]] utrzymuje [[potencjał spoczynkowy]] na poziomie około **-70 miliwoltów**: wnętrze jest bardziej ujemne niż na zewnątrz."
+          "text": "**Neuron** w spoczynku nie wysyła wiadomości, ale się „ładuje”. Jego błona oddziela wnętrze komórki od zewnątrz. [[pompy sodowo-potasowe]] utrzymują [[potencjał spoczynkowy]] około **-70 miliwoltów**: wnętrze jest bardziej ujemne niż zewnątrz."
         },
         {
           "type": "image",
           "asset": "neuron_electrical_signal_brain",
           "ratio": "auto",
-          "caption": "Neurony komunikują się za pomocą krótkich impulsów elektrycznych."
+          "caption": "Neurony porozumiewają się krótkimi impulsami elektrycznymi."
         },
         {
           "type": "paragraph",
-          "text": "Kiedy pojawia się bodziec, kanały się otwierają. Sód pojawia się w całości na raz. Biegunowość jest odwrócona: jest to [[potencjał czynnościowy]], sygnał typu „wszystko albo nic”, który biegnie wzdłuż aksonu, czasami na odległość ponad metra. Jak fala elektryczna."
+          "text": "Gdy przychodzi bodziec, kanały się otwierają. Sód wchodzi jednym rzutem. Polaryzacja się odwraca: to [[potencjał czynnościowy]], sygnał wszystko-albo-nic, który pędzi wzdłuż aksonu, czasem przez metr. Jak elektryczna fala."
         },
         {
           "type": "funFact",
-          "text": "Mózg na jawie wytwarza około **20 watów**, co wystarczy na małą diodę LED. Pochłania jednak prawie **20%** kalorii organizmu."
+          "text": "Czujny mózg produkuje około **20 watów**, dość na małą diodę LED. A jednak zjada blisko **20%** kalorii ciała."
         }
       ]
     },
@@ -58,53 +58,53 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Neurony tak naprawdę nie stykają się ze sobą. Pomiędzy nimi niewielka szczelina: **synapsa**. Sygnał elektryczny nie może go ominąć. Następnie koniec aksonu uwalnia [[Neuroprzekaźniki]], cząsteczki przekaźnikowe takie jak acetylocholina czy [[glutaminian]]."
+          "text": "Neurony nie stykają się naprawdę. Między nimi jest malutka szczelina: **synapsa**. Sygnał elektryczny nie przeskoczy. Wtedy koniec aksonu uwalnia [[neuroprzekaźniki]], cząsteczki-posłańce, jak acetylocholina albo [[glutaminian]]."
         },
         {
           "type": "paragraph",
-          "text": "Ci posłańcy przyczepiają się do następnego neuronu jak klucz w zamku. W zależności od przekazu pobudzają lub hamują. Tysiące takich jednoczesnych decyzji powstaje w wyniku myśli."
+          "text": "Ci posłańcy siadają na następnym neuronie jak klucz w zamku. Według wiadomości pobudzają albo hamują. Tysiące takich decyzji naraz składają się na myśl."
         },
         {
           "type": "funFact",
-          "text": "Niektóre sygnały nerwowe przemieszczają się z prędkością **120 m/s** (więcej niż **430 kilometrów na godzinę**). Wystarczająco, aby w ułamku sekundy zareagować na oparzenie palca."
+          "text": "Część sygnałów nerwowych pędzi z prędkością **120 m/s** (ponad **430 km/h**). Dość, by zareagować na oparzenie palca u stopy w ułamku sekundy."
         }
       ]
     },
     {
       "id": "course_78_comment_fonctionne_l_electricite_dans_no_p3",
-      "title": "Serce ma swój własny rozrusznik",
+      "title": "Serce ma własny rozrusznik",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Serce nie czeka na polecenie mózgu dotyczące każdego uderzenia. W prawym przedsionku **węzeł zatokowy** generuje w spoczynku własne impulsy, około **60 do 100** razy na minutę. Sygnał rozchodzi się, najpierw kurczy przedsionki, potem komory."
+          "text": "Serce nie czeka na rozkaz mózgu przy każdym uderzeniu. W prawym przedsionku **węzeł zatokowy** sam generuje impulsy, około **60-100** razy na minutę w spoczynku. Sygnał się rozchodzi, kurczy najpierw przedsionki, potem komory."
         },
         {
           "type": "paragraph",
-          "text": "Aktywność ta jest na tyle silna, że ​​można ją odczytać na skórze: jest to **elektrokardiogram (EKG)**. Jeśli rytm zostanie zakłócony, mówimy o **niemiarowość**. Serce bije wtedy nieregularnie i słabo pompuje."
+          "text": "Ta aktywność jest dość silna, by czytać ją ze skóry: to **elektrokardiogram (EKG)**. Gdy rytm się psuje, mówimy o **arytmii**. Serce bije wtedy w nieładzie i słabo pompuje."
         },
         {
           "type": "funFact",
-          "text": "Węgorz elektryczny wykorzystuje tę samą zasadę działania komórek pobudliwych, ale szeregowo: do **600 woltów**, co wystarczy, aby sparaliżować ofiarę."
+          "text": "Węgorz elektryczny używa tej samej zasady pobudliwych komórek, ale szeregowo: aż do **600 woltów**, dość, by sparaliżować ofiarę."
         }
       ]
     },
     {
       "id": "course_78_comment_fonctionne_l_electricite_dans_no_p4",
-      "title": "Od dobrowolnego gestu do defibrylatora",
+      "title": "Od gestu świadomego do defibrylatora",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aby podnieść ramię, potencjał czynnościowy przemieszcza się do mięśnia. Acetylocholina wyzwala lokalną falę elektryczną, a następnie uwalnianie wapnia. Białka mięśniowe przesuwają się po sobie: skurcz."
+          "text": "Żeby unieść ramię, potencjał czynnościowy schodzi aż do mięśnia. Acetylocholina odpala lokalną falę elektryczną, potem uwalnia się wapń. Białka mięśnia ślizgają się po sobie: skurcz."
         },
         {
           "type": "paragraph",
-          "text": "**defibrylacja** wykorzystuje tę samą zasadę w odwrotnej kolejności: wstrząs zewnętrzny resetuje wszystkie komórki „do zera”, dzięki czemu węzeł zatokowy odzyskuje tempo. Protezy bioniczne również wychwytują te słabe sygnały, aby kontrolować sztuczną rękę."
+          "text": "**Defibrylacja** używa tej samej zasady odwrotnie: wstrząs z zewnątrz ustawia wszystkie komórki „na zero”, żeby węzeł zatokowy znów wziął tempo. Protezy bioniczne łapią też te słabe sygnały, by sterować sztuczną ręką."
         },
         {
           "type": "takeaway",
-          "text": "Istoty żywe przemawiają przepływami jonów i potencjałami czynnościowymi. Myśl, serce i mięśnie posługują się tym samym elektrycznym językiem."
+          "text": "Życie mówi strumieniem jonów i potencjałami czynnościowymi. Myśl, serce i mięśnie dzielą ten sam język elektryczny."
         }
       ]
     }

@@ -4,11 +4,11 @@
   "subtitle": "Woda i cząsteczki",
   "subject": "sciences",
   "subcategory": "Our daily life explained",
-  "description": "Lód unosi się na wodzie. Wydaje się to normalne, ale w rzeczywistości zdarza się bardzo rzadko. I na szczęście dla życia na Ziemi.",
+  "description": "Lód pływa po wodzie. Wydaje się to oczywiste, a jest bardzo rzadkie. I na szczęście dla życia na Ziemi.",
   "hero": {
     "image": "pourquoi_la_glace_flotte",
     "ratio": "16:9",
-    "hook": "Gdyby lód płynął, jeziora zamarzłyby na dno. A życie w wodzie miałoby trudności z przetrwaniem."
+    "hook": "Gdyby lód tonął, jeziora zamarzałyby do dna. A życiu w wodzie byłoby trudno przetrwać."
   },
   "sections": [
     {
@@ -18,72 +18,72 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kostka lodu w szklance, góra lodowa w oceanie: lód **pływanie**. Uważamy to za banalne. Jednakże w przypadku większości substancji ciało stałe jest bardziej **gest**, a zatem cięższe przy tej samej objętości: tonie."
+          "text": "Kostka w szklance, góra lodowa w oceanie: lód **pływa**. Wydaje ci się to banalne. A przecież dla większości substancji ciało stałe jest **gęstsze**, więc cięższe przy tej samej objętości: tonie."
         },
         {
           "type": "paragraph",
-          "text": "Woda działa odwrotnie. Ten wyjątek wynika z kształtu jego cząsteczki. I to uratowało wiele jezior zimą."
+          "text": "Woda robi odwrotność. Ten wyjątek idzie z kształtu jej cząsteczki. I uratował niejeden staw zimą."
         }
       ]
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p1",
-      "title": "Cząsteczka w kształcie litery V",
+      "title": "Cząsteczka w kształcie V",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Cząsteczka wody to atom **posiadać** połączony z dwoma atomami **powodow**. To nie jest proste: tworzy **V**. Ze względu na ten kształt ładunki elektryczne nie są rozłożone równomiernie: cząsteczka jest **polarny**, z jednym końcem nieco ujemnym, a drugim lekko dodatnim."
+          "text": "Cząsteczka wody to atom **tlenu** związany z dwoma atomami **wodoru**. Nie jest prosta: tworzy **V**. Przez ten kształt ładunki elektryczne nie rozkładają się równo: cząsteczka jest **polarna**, z jednym końcem lekko ujemnym i drugim lekko dodatnim."
         },
         {
           "type": "image",
           "asset": "water_molecule_model_crystal",
           "ratio": "4:3",
-          "caption": "Cząsteczka wody: litera V, która przyciąga i odpycha swoich sąsiadów."
+          "caption": "Cząsteczka wody: V, które przyciąga i odpycha sąsiadki"
         },
         {
           "type": "paragraph",
-          "text": "Efekt: cząsteczki wody przyciągają się poprzez [[Wiązania wodorowe]], niczym małe magnesy. W cieczy pozostają blisko, ale nadal się poruszają. W lodzie zamarzają inaczej."
+          "text": "Skutek: cząsteczki wody przyciągają się nawzajem przez [[wiązania wodorowe]], jak małe magnesy. W cieczy zostają blisko, ale wciąż się ruszają. W lodzie zastyga to inaczej."
         }
       ]
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p2",
-      "title": "Kiedy woda zamarza, zajmuje miejsce",
+      "title": "Gdy woda zastyga, zajmuje miejsce",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Wokół **0 °C** woda krzepnie. Aby utworzyć lód, cząsteczki organizują się w **dostępną sieć**, rodzaj sześciobocznego plastra miodu. Następnie pozostawiają między sobą więcej **pusty** niż w stanie ciekłym."
+          "text": "Koło **0°C** woda krzepnie. Żeby zrobić lód, cząsteczki układają się w sieć **heksagonalną**, coś jak plaster pszczół o sześciu bokach. Zostawiają wtedy więcej **pustki** między sobą niż w stanie ciekłym."
         },
         {
           "type": "funFact",
-          "text": "Dlatego pełna butelka wody może **pukać** w zamrażarce: lód zajmuje większą objętość niż woda w stanie ciekłym."
+          "text": "Dlatego pełna butelka wody może **pęknąć** w zamrażarce: lód zajmuje więcej objętości niż woda ciekła."
         },
         {
           "type": "paragraph",
-          "text": "Mniej materiału w tej samej objętości oznacza: **mniej gęsty**. Jednakże obiekt o mniejszej gęstości niż otaczająca go ciecz unosi się. Lód zatem unosi się na wodzie. Nazywa się to **anomalią rozszerzalności wody**: w przeciwieństwie do prawie wszystkich substancji, woda rozszerza się podczas ochładzania pod wpływem **4 °C**."
+          "text": "Mniej materii w tej samej objętości znaczy: **mniej gęsta**. A przedmiot mniej gęsty niż ciecz wokół idzie w górę. Lód więc pływa po wodzie. To właśnie **anomalna rozszerzalność wody**: wbrew niemal wszystkim substancjom woda rozszerza się, gdy stygnie poniżej **4°C**."
         },
         {
           "type": "image",
           "asset": "iceberg_floating_arctic_ocean",
           "ratio": "16:9",
-          "caption": "Góra lodowa pływa, ponieważ lód jest mniej gęsty niż woda w stanie ciekłym."
+          "caption": "Góra lodowa pływa, bo lód jest mniej gęsty niż woda ciekła"
         }
       ]
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p3",
-      "title": "Dlaczego jest to istotne dla jezior",
+      "title": "Dlaczego to ratuje jeziora",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Wyobraź sobie, że lody płynęły. Utworzy się na powierzchni, a następnie opadnie na dno. Jezioro zamarzałoby warstwa po warstwie, aż do dna. Lato często nie wystarczyło, aby wszystko roztopić."
+          "text": "Wyobraź sobie, że lód tonie. Tworzyłby się na powierzchni, a potem spadał na dno. Jezioro zamarzałoby warstwa po warstwie, aż do spodu. Lato często nie starczyłoby, żeby wszystko stopić."
         },
         {
           "type": "paragraph",
-          "text": "Na szczęście lód pozostaje na górze. Tworzy **Osłona** izolacyjna. Pod zamarzniętą powierzchnią woda w stanie ciekłym może pozostać w temperaturze około **4 °C**, czyli temperatury, w której woda w stanie ciekłym jest najgęstsza, wystarczającej do przeżycia ryb i roślin wodnych."
+          "text": "Na szczęście lód zostaje na górze. Tworzy **izolującą pokrywę**. Pod zamarzniętą taflą woda ciekła może zostać koło **4°C**, temperatury, w której jest najgęstsza, dość, by ryby i rośliny wodne przeżyły."
         }
       ]
     },
@@ -94,11 +94,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Biała kry odbija dużą część światła słonecznego z powrotem w przestrzeń kosmiczną dzięki wysokiej **albedo**, czyli jej sile odbicia. Jeśli zniknie, ciemny ocean pochłonie więcej ciepła. To przyspiesza ocieplenie: błędne koło."
+          "text": "Biała kra oddaje w kosmos sporą część światła Słońca dzięki wysokiemu **albedo**, sile odbicia. Gdy znika, ciemny ocean łyka więcej ciepła. To przyspiesza ocieplenie: błędne koło."
         },
         {
           "type": "takeaway",
-          "text": "Lód unosi się na wodzie, ponieważ w miarę krzepnięcia woda tworzy bardziej „napowietrzoną” sieć: staje się mniej gęsta niż woda w stanie ciekłym. Wyjątek ten chroni organizmy wodne zimą."
+          "text": "Lód pływa, bo przy krzepnięciu woda buduje sieć bardziej „przewiewną”: staje się mniej gęsta niż woda ciekła. Ten wyjątek chroni życie wodne zimą."
         }
       ]
     }

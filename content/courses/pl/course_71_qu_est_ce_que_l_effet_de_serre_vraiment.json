@@ -1,14 +1,14 @@
 {
   "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment",
-  "title": "Czym jest (tak naprawdę) efekt cieplarniany?",
+  "title": "Czym naprawdę jest efekt cieplarniany?",
   "subtitle": "Klimat i atmosfera",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "Efekt cieplarniany nie jest przede wszystkim problemem: to niewidzialny płaszcz, który zapobiega zamarznięciu Ziemi. Prawdziwym problemem jest to, że zbyt szybko zagęszczasz.",
+  "description": "Efekt cieplarniany to nie przede wszystkim problem: to niewidzialny płaszcz, który nie daje Ziemi zamarznąć. Prawdziwa stawka zaczyna się, gdy zagęszczamy go za szybko.",
   "hero": {
     "image": "qu_est_ce_que_l_effet_de_serre",
     "ratio": "16:9",
-    "hook": "Bez efektu cieplarnianego Ziemia byłaby lodową pustynią. Przy nadmiarze następuje przegrzanie."
+    "hook": "Bez efektu cieplarnianego Ziemia byłaby lodową pustynią. Z nadmiarem się przegrzewa."
   },
   "sections": [
     {
@@ -18,22 +18,22 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Wyobraź sobie samochód zamknięty w słońcu: okna wpuszczają światło, ale upał ma trudności z wydostaniem się na zewnątrz. Przedział pasażerski nagrzewa się. Ziemskie [[gazy cieplarniane]] działają trochę w ten sposób, z powietrzem zamiast szkła."
+          "text": "Wyobraź sobie zamknięty samochód w słońcu: szyby wpuszczają światło, ale ciepło ma kłopot z wyjściem. Kabina się grzeje. [[efekt cieplarniany]] Ziemi działa trochę tak, z powietrzem zamiast szkła."
         },
         {
           "type": "paragraph",
-          "text": "Zjawisko to jest **naturalne** i istotne. Bez tego średnia temperatura na kuli ziemskiej spadłaby w kierunku **-18°C**. Razem z nim jesteśmy w okolicach **+15°C**. Obecnym problemem nie jest jego istnienie, lecz jego szybkie **strach** przez nasze działania."
+          "text": "To zjawisko jest **naturalne** i niezbędne. Bez niego średnia temperatura globu spadłaby ku **-18°C**. Z nim jesteśmy około **+15°C**. Dzisiejszy problem to nie jego istnienie: to szybka **amplifikacja** przez nasze działania."
         }
       ]
     },
     {
       "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p1",
-      "title": "Jak planeta utrzymuje ciepło",
+      "title": "Jak planeta trzyma ciepło",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Słońce wysyła głównie światło widzialne. Atmosfera pozwala temu przejść. Lądy i oceany nagrzewają się, a następnie emitują tę energię z powrotem w postaci **ciepłego podczerwonego**, czyli fal „dłuższych” niż światło widzialne."
+          "text": "Słońce wysyła głównie światło widzialne. Atmosfera je przepuszcza. Grunt i oceany się nagrzewają, potem oddają tę energię jako **ciepło podczerwone**, fale „dłuższe” niż światło widzialne."
         },
         {
           "type": "image",
@@ -43,64 +43,64 @@
         },
         {
           "type": "paragraph",
-          "text": "Niektóre gazy, [[gazy cieplarniane]], pochłaniają to ciepło i emitują je we wszystkich kierunkach, także w stronę ziemi. Azot i tlen, znajdujące się głównie w powietrzu, prawie nie spełniają tej roli. Para wodna, **CO₂** i **meta** robią to bardzo dobrze."
+          "text": "Niektóre gazy, [[gazy cieplarniane]], łykają to ciepło i odsyłają je we wszystkie strony, także ku gruntowi. Azot i tlen, większość powietrza, prawie tego nie robią. Para wodna, **CO₂** i **metan** robią to bardzo dobrze."
         },
         {
           "type": "funFact",
-          "text": "Nazwa „efekt cieplarniany” jest nieco myląca. Prawdziwa szklarnia ogrzewa głównie poprzez blokowanie unoszącego się gorącego powietrza. Atmosfera zatrzymuje ciepło, pochłaniając promienie podczerwone."
+          "text": "Nazwa „efekt cieplarniany” trochę myli. Prawdziwa szklarnia grzeje głównie, bo blokuje ciepłe powietrze, które idzie w górę. Atmosfera więzi ciepło przez pochłanianie promieni podczerwonych."
         }
       ]
     },
     {
       "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p2",
-      "title": "Kiedy ludzie zagęszczają koc",
+      "title": "Gdy człowiek zagęszcza kołdrę",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Od czasu rewolucji przemysłowej spalano węgiel, ropę i gaz. Węgiel ten, zakopany pod ziemią przez miliony lat, powraca do powietrza. Wylesianie zmniejsza również liczbę lasów pochłaniających CO₂. Hodowla zwierząt gospodarskich i uprawa ryżu powodują wydzielanie metanu około **80 razy** więcej „ogrzewania” niż CO₂ w ciągu 20 lat."
+          "text": "Od rewolucji przemysłowej palimy węgiel, ropę i gaz. Ten węgiel, schowany pod ziemią od milionów lat, wraca do powietrza. Wylesianie zmniejsza też lasy, które łykały CO₂. Hodowla i uprawa ryżu dodają metan, około **80 razy** bardziej „grzejący” niż CO₂ w ciągu 20 lat."
         },
         {
           "type": "paragraph",
-          "text": "Wynik: stężenie CO₂ wzrosło z około **280** do ponad **420** części na milion. Takiego poziomu nie widziano od [[pliocen]], czyli około **3 miliony lat temu**, kiedy morza były wyższe."
+          "text": "Skutek: stężenie CO₂ poszło z około **280** do ponad **420** części na milion. Takiego poziomu nie było od epoki [[pliocen]], około **3 milionów lat** temu, gdy morza stały wyżej."
         }
       ]
     },
     {
       "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p3",
-      "title": "Cóż za bardziej energetyczne zmiany klimatu",
+      "title": "Co zmienia bardziej energetyczny klimat",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[IPCC]], będący syntezą prac tysięcy klimatologów, jest jasny: ocieplenie od 1950 r. jest niespotykane od tysiącleci i ustalono jego ludzkie pochodzenie."
+          "text": "[[IPCC]], który zbiera pracę tysięcy klimatologów, mówi jasno: ocieplenie od 1950 nie ma precedensu na tysiąclecia, a jego ludzkie pochodzenie jest ustalone."
         },
         {
           "type": "paragraph",
-          "text": "Więcej energii w powietrzu i oceanach oznacza więcej skrajności: bardziej suche susze, bardziej gwałtowne deszcze, topnienie lodowców i czap lodowych, podnoszenie się poziomu mórz. I akcelerator: kiedy biały lód zniknie, ciemna gleba i woda pochłaniają więcej światła słonecznego. [[Albedo ziemskie]] spada, a planeta ociepla się jeszcze szybciej."
+          "text": "Więcej energii w powietrzu i oceanach to ostrzejsze skraje: suchsze susze, gwałtowniejsze deszcze, topniejące lodowce i czapy, rosnący poziom mórz. I przyspieszacz: gdy biały lód znika, ciemny grunt i woda łykają więcej słońca. To [[albedo ziemskie]] spada, a planeta grzeje się jeszcze szybciej."
         },
         {
           "type": "funFact",
-          "text": "Wenus wykazuje „wypełniony” efekt cieplarniany: atmosfera zawierająca 96% CO₂ i około **460 °C** na ziemi, co wystarcza do stopienia ołowiu."
+          "text": "Wenus pokazuje efekt cieplarniany „rozpędzony”: atmosfera w 96% z CO₂ i około **460°C** przy gruncie, dość, by stopić ołów."
         }
       ]
     },
     {
       "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p4",
-      "title": "Ogranicz wzrost, dostosuj się do reszty",
+      "title": "Ograniczyć wzrost, dostosować się do reszty",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Celem międzynarodowym jest utrzymanie się poniżej **+1,5°C** lub **+2°C** w porównaniu z erą przedindustrialną, aby uniknąć niebezpiecznych progów, takich jak rozmrożenie [[wieczna zmarzlina]], które spowodowałoby uwolnienie jeszcze większej ilości metanu."
+          "text": "Cel międzynarodowy to zostać pod **+1,5°C** albo **+2°C** względem epoki przedprzemysłowej, żeby uniknąć groźnych progów, jak odwilż tego, co zwiemy [[wieczna zmarzlina]], która uwolniłaby jeszcze więcej metanu."
         },
         {
           "type": "paragraph",
-          "text": "Dwie dźwignie: **zmniejszyć** emisji (czysta energia, trzeźwość, lasy) i **dostosowany** do tego, co już zostało założone. CO₂ pozostaje w powietrzu przez stulecia: to, co emitujemy dzisiaj, trwa długo."
+          "text": "Dwie dźwignie: **ciąć** emisje (czysta energia, oszczędność, lasy) i **dostosować się** do tego, co już idzie. CO₂ zostaje w powietrzu stulecia: to, co emitujesz dziś, ciąży długo."
         },
         {
           "type": "takeaway",
-          "text": "Bez naturalnego efektu cieplarnianego Ziemia zamarzłaby wokół **-18 °C**. Jego wzmocnienie przez paliwa kopalne powoduje wzrost emisji CO₂ do poziomu nienotowanego od **3 miliony łac**."
+          "text": "Bez naturalnego efektu cieplarnianego Ziemia zamarzłaby ku **-18°C**. Jego wzmocnienie paliwami kopalnymi pcha CO₂ do poziomów niespotykanych od **3 milionów lat**."
         }
       ]
     }

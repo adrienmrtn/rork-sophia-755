@@ -1,14 +1,14 @@
 {
   "id": "course_223_l_economie_circulaire",
   "title": "Gospodarka o obiegu zamkniętym",
-  "subtitle": "Oderwanie się od wszystkiego, co jednorazowe",
+  "subtitle": "Wyjść z kultury jednorazowości",
   "subject": "comprendreLeMonde",
   "subcategory": "Environment & the future",
-  "description": "**Wyodrębnij, wyprodukuj, wyrzuć**: ten model uszczupla planetę. Gospodarka o obiegu zamkniętym proponuje coś odwrotnego: jak najdłuższe utrzymywanie przedmiotów i materiałów w obiegu.",
+  "description": "**Wydobyć, wyprodukować, wyrzucić**: ten model wyczerpuje planetę. Gospodarka o obiegu zamkniętym proponuje odwrotność: trzymać przedmioty i materiały w obiegu jak najdłużej.",
   "hero": {
     "image": "l_economie_circulaire",
     "ratio": "16:9",
-    "hook": "Co by było, gdyby nie było odpadów? To postawienie na model gospodarczy inspirowany naturą."
+    "hook": "A gdyby odpad nie istniał? To zakład modelu gospodarczego wziętego z przyrody."
   },
   "sections": [
     {
@@ -18,113 +18,113 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Od czasu rewolucji przemysłowej nasza gospodarka zmierza w jednym kierunku: wydobywamy zasoby, produkujemy przedmioty, a następnie je wyrzucamy. Model ten zakłada, że ​​zasoby są nieskończone. Nie są."
+          "text": "Od rewolucji przemysłowej nasza gospodarka działa w jedną stronę: wydobywamy zasoby, robimy przedmioty, potem je wyrzucamy. Ten model zakłada, że zasoby są nieskończone. Nie są."
         },
         {
           "type": "paragraph",
-          "text": "**gospodarka lub zamkniętym** oferuje inną logikę, inspirowaną naturą, w której tak naprawdę nic nie jest stracone. Ma na celu jak najdłuższe utrzymanie wartości produktów i materiałów w obrocie, zamiast przekształcania ich w odpady."
+          "text": "**Gospodarka o obiegu zamkniętym** proponuje inną logikę, wziętą z przyrody, gdzie nic naprawdę nie ginie. Cel: trzymać wartość produktów i materiałów w obiegu jak najdłużej, zamiast zamieniać je w odpady."
         }
       ]
     },
     {
       "id": "course_223_l_economie_circulaire_p1",
-      "title": "Model liniowy osiąga swoje granice",
+      "title": "Model liniowy dochodzi do ściany",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nowoczesna gospodarka została zbudowana na modelu zwanym **liniowy**: wyodrębnić, wyprodukować, wyrzucić. Pobieramy surowce z natury, wytwarzamy z nich produkty, a gdy się zużyją lub wyjdą z mody, stają się odpadem."
+          "text": "Nowoczesna gospodarka stanęła na modelu zwanym **liniowym**: wydobyć, wyprodukować, wyrzucić. Bierzesz surowce z przyrody, robisz z nich produkty, a gdy się zużyją albo wyjdą z mody, te produkty stają się odpadami."
         },
         {
           "type": "image",
           "asset": "landfill_waste_garbage_linear_economy",
           "ratio": "16:9",
-          "caption": "Model „weź, zrób, wyrzuć” zakłada nieskończone zasoby."
+          "caption": "Model „wydobyć, wyprodukować, wyrzucić” zakłada nieskończone zasoby."
         },
         {
           "type": "paragraph",
-          "text": "System ten opiera się na założeniu, że zasoby są nieograniczone i że przyroda jest w stanie wchłonąć wszelkie zanieczyszczenia. Jednak obecnie globalna gospodarka zużywa co roku zasoby odpowiadające 1,7 planety. Znalezienie niektórych metali niezbędnych dla technologii cyfrowych, takich jak [[Lit]], może stać się trudne już w 2040 r."
+          "text": "Ten system stoi na idei, że zasoby są nieograniczone, a przyroda wchłonie całe zanieczyszczenie. Ale dziś gospodarka świata zużywa co rok równowartość 1,7 planety w zasobach. Niektóre metale kluczowe dla technologii cyfrowych, jak [[Lit]], mogą stać się trudne do znalezienia już od 2040."
         },
         {
           "type": "funFact",
-          "text": "Tylko 9% całego plastiku, jaki kiedykolwiek wyprodukowała ludzkość, zostało poddanych recyklingowi. Reszta trafia do natury lub na wysypisko śmieci, gdzie może pozostać przez 450 lat."
+          "text": "Tylko 9% całego plastiku, jaki ludzkość kiedykolwiek wyprodukowała, poszedł do recyklingu. Reszta ląduje w przyrodzie albo na wysypisku, gdzie może zostać 450 lat."
         },
         {
           "type": "paragraph",
-          "text": "Koszt sprzątania i gospodarki odpadami prawie nigdy nie jest wliczony w cenę sprzedaży produktu. To ukryty koszt, który później płacą wszyscy."
+          "text": "Koszt sprzątania i zarządzania odpadami prawie nigdy nie wchodzi w cenę sprzedaży produktu. To koszt ukryty, płacony później przez wszystkich."
         }
       ]
     },
     {
       "id": "course_223_l_economie_circulaire_p2",
-      "title": "Napraw przed recyklingiem",
+      "title": "Naprawiać zanim recyklingować",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Gospodarka o obiegu zamkniętym oferuje kilka pętli i zawsze w tej samej kolejności: najkrótsza pętla jest lepsza, ponieważ marnuje mniej energii i materiałów. Wszystko zaczyna się od **ekoprojekt**, czyli myślenia o wpływie produktu na środowisko od jego powstania, poprzez wybór materiałów, które są trwałe i łatwe w demontażu."
+          "text": "Gospodarka o obiegu zamkniętym proponuje kilka pętli, zawsze w tej samej kolejności: lepiej krótsza pętla, bo marnuje mniej energii i materii. Wszystko zaczyna się od **ekoprojektowania**, czyli myślenia o wpływie produktu na środowisko już przy tworzeniu, przez wybór trwałych materiałów łatwych do rozłożenia."
         },
         {
           "type": "paragraph",
-          "text": "Następnie następuje **ponownie użyć** (przedmiot zmienia właściciela bez przekształcenia, jak na rynku wtórnym), a następnie **naprawa**, który wydłuża żywotność produktu. Kroki te bezpośrednio zwalczają [[Planowane starzenie się]], czyli praktykę dobrowolnie skracającą żywotność obiektu."
+          "text": "Potem idzie **ponowne użycie** (przedmiot zmienia właściciela bez przeróbki, jak na rynku wtórnym), potem **naprawa**, która przedłuża życie produktu. Te etapy walczą wprost z [[Planowane starzenie się]], praktyką, która świadomie skraca życie przedmiotu."
         },
         {
           "type": "image",
           "asset": "recycling_sorting_waste_materials",
           "ratio": "4:3",
-          "caption": "Recykling to ostateczność, po ponownym użyciu i naprawie."
+          "caption": "Recykling przychodzi na końcu, po ponownym użyciu i naprawie."
         },
         {
           "type": "paragraph",
-          "text": "**recykling** ma miejsce tylko w ostateczności. Pozostaje przydatne: recykling aluminium zużywa 95% mniej energii niż wydobycie go z surowej rudy, [[Boksyt]]. Ale nadal jest to mniej wydajne niż zwykłe ponowne użycie obiektu."
+          "text": "**Recykling** wchodzi dopiero jako ostatnia deska. Zostaje użyteczny: recykling aluminium zużywa o 95% mniej energii niż wydobycie z surowej rudy. Ta ruda to [[Boksyt]]. Ale i tak jest mniej skuteczny niż zwykłe ponowne użycie przedmiotu."
         }
       ]
     },
     {
       "id": "course_223_l_economie_circulaire_p3",
-      "title": "Dlaczego dzisiaj jest to nadal trudne",
+      "title": "Czemu dziś wciąż jest trudno",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pomimo całego swojego zainteresowania gospodarka o obiegu zamkniętym stoi przed prostym problemem: model liniowy często pozostaje **Opis w krótkoterminowej**. Wydobycie nowego materiału czasami kosztuje mniej niż sortowanie i recykling odpadów złożonych, zwłaszcza gdy surowce są tanie."
+          "text": "Mimo całego pożytku gospodarka o obiegu zamkniętym wpada na prosty problem: model liniowy zostaje często **tańszy na krótką metę**. Wydobycie nowego surowca kosztuje czasem mniej niż sortowanie i recykling złożonego odpadu, zwłaszcza gdy surowce są tanie."
         },
         {
           "type": "image",
           "asset": "repair_right_electronics_reuse",
           "ratio": "4:3",
-          "caption": "„Prawo do naprawy” wymaga od producentów dostarczenia części zamiennych."
+          "caption": "„Prawo do naprawy” każe producentom dostarczać części zamienne."
         },
         {
           "type": "paragraph",
-          "text": "W obliczu tej sytuacji władze publiczne podejmują coraz większą interwencję. Unia Europejska uruchomiła w 2020 r. plan, który nakłada bardziej rygorystyczne zasady zrównoważonego rozwoju. Jedną z głównych osi jest „prawo do naprawy”, które zobowiązuje producentów urządzeń elektronicznych do dostarczania części zamiennych przez kilka lat."
+          "text": "Wobec tego władze publiczne wkraczają coraz częściej. Unia Europejska odpaliła w 2020 plan, który narzuca twardsze reguły trwałości. Jeden z głównych osi to „prawo do naprawy”, które zmusza producentów elektroniki do dostarczania części zamiennych przez kilka lat."
         },
         {
           "type": "paragraph",
-          "text": "Kolejna dźwignia: [[Rozszerzona odpowiedzialność producenta]], która sprawia, że ​​producenci płacą za zagospodarowanie odpadów powstałych ze swoich produktów. Daje im to zachętę finansową do projektowania obiektów, które są mniej zanieczyszczające środowisko i łatwiejsze w naprawie."
+          "text": "Inna dźwignia: [[Rozszerzona odpowiedzialność producenta]], która każe producentom płacić za zarządzanie odpadami swoich produktów. To finansowo pcha ich do projektowania przedmiotów mniej brudnych i łatwiejszych do naprawy."
         }
       ]
     },
     {
       "id": "course_223_l_economie_circulaire_p4",
-      "title": "W stronę społeczeństwa zasobów",
+      "title": "Ku społeczeństwu zasobu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Gospodarka o obiegu zamkniętym to nie tylko kwestia recyklingu: to projekt na rzecz bardziej trzeźwego i odpornego społeczeństwa. Uzależniając się w mniejszym stopniu od importowanych surowców, kraj zyskuje także bezpieczeństwo w bardziej niestabilnym świecie."
+          "text": "Gospodarka o obiegu zamkniętym to nie tylko recykling: to projekt społeczeństwa bardziej trzeźwego i odpornego. Zależąc mniej od importu surowców, kraj zyskuje też bezpieczeństwo w świecie bardziej chwiejnym."
         },
         {
           "type": "paragraph",
-          "text": "Powodzenie tej transformacji zależy także od nas, jako konsumentów. Zasada 3R – ograniczaj, używaj ponownie, poddawaj recyklingowi zaczyna się od pierwszego kroku: ograniczaj, czyli zadaj sobie pytanie, czy zakup jest naprawdę konieczny. To właśnie to pierwsze działanie ma największy wpływ na klimat."
+          "text": "Sukces tej zmiany zależy też od nas, jako konsumentów. Reguła 3R, redukować, używać ponownie, recyklingować, zaczyna się od pierwszego kroku: redukować, czyli zapytać siebie, czy zakup naprawdę jest potrzebny. Ten pierwszy gest ma największy skutek dla klimatu."
         },
         {
           "type": "funFact",
-          "text": "Dziś w tonie starych płytek elektronicznych do smartfonów znajduje się więcej złota niż w tonie rudy wydobytej z tradycyjnej kopalni złota."
+          "text": "Dziś w tonie starych kart elektronicznych ze smartfonów jest więcej złota niż w tonie rudy z klasycznej kopalni złota."
         },
         {
           "type": "takeaway",
-          "text": "Gospodarka o obiegu zamkniętym ma na celu przerwanie cyklu „wydobądź, wyprodukuj, wyrzuć” poprzez utrzymanie zasobów w obiegu poprzez ekoprojektowanie, naprawy i recykling, aby szanować fizyczne ograniczenia naszej planety."
+          "text": "Gospodarka o obiegu zamkniętym chce złamać cykl „wydobyć, wyprodukować, wyrzucić”, trzymając zasoby w obiegu przez ekoprojektowanie, naprawę i recykling, żeby szanować fizyczne granice naszej planety."
         }
       ]
     }

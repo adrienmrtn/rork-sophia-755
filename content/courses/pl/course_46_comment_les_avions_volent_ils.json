@@ -4,11 +4,11 @@
   "subtitle": "Fizyka lotu",
   "subject": "sciences",
   "subcategory": "Our daily life explained",
-  "description": "Leci samolot ważący kilkaset ton. To nie magia: to kwestia kształtu skrzydła, prędkości i równoważących się sił.",
+  "description": "Samolot o wadze setek ton leci. To nie magia: to sprawa kształtu skrzydła, prędkości i sił, które się równoważą.",
   "hero": {
     "image": "comment_les_avions_volent",
     "ratio": "16:9",
-    "hook": "Cięższy od ciężarówki, a mimo to utrzymuje się w powietrzu. Oto jak to zrobić."
+    "hook": "Cięższy niż ciężarówka, a jednak zostaje w powietrzu. Oto jak."
   },
   "sections": [
     {
@@ -18,81 +18,81 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Duży samolot pasażerski może ważyć **setki ton**. Jak coś tak ciężkiego może unosić się w powietrzu? Odpowiedź leży w kształcie skrzydeł i prędkości samolotu."
+          "text": "Duży samolot pasażerski może ważyć **setki ton**. Jak coś tak ciężkiego zostaje w powietrzu? Odpowiedź tkwi w kształcie skrzydeł i w prędkości samolotu."
         },
         {
           "type": "paragraph",
-          "text": "W grę wchodzą cztery główne siły: **pchnięcie** (do przodu), **ciągnąć** (hamowanie pneumatyczne), **waga** (w dół) i **winda** (w górę)."
+          "text": "Grają cztery główne siły: **ciąg** (do przodu), **opór** (hamowanie przez powietrze), **ciężar** (w dół) i **siła nośna** (w górę)."
         }
       ]
     },
     {
       "id": "course_46_comment_les_avions_volent_ils_p1",
-      "title": "Skrzydło, inteligentny kształt",
+      "title": "Skrzydło, sprytny kształt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Widziane z boku skrzydło samolotu nie jest płaskie. Góra jest bardziej zaokrąglona niż dół. Kiedy samolot porusza się szybko, powietrze musi okrążać ten kształt."
+          "text": "Z boku skrzydło samolotu nie jest płaskie. Góra jest bardziej wypukła niż dół. Gdy samolot jedzie szybko, powietrze musi obejść ten kształt."
         },
         {
           "type": "image",
           "asset": "airplane_wing_cross_section_flight",
           "ratio": "auto",
-          "caption": "Profil skrzydła tworzy windę, która podnosi samolot."
+          "caption": "Profil skrzydła tworzy siłę nośną, która unosi samolot."
         },
         {
           "type": "paragraph",
-          "text": "Powietrze przepływające nad nimi nieco przyspiesza. Jego ciśnienie spada. Pod skrzydłem ciśnienie pozostaje większe. Ta różnica wypycha skrzydło do góry: jest to **winda**. Często tłumaczy się to zasadą **Bernoulliego**, nazwaną na cześć XVIII-wiecznego uczonego, oraz faktem, że skrzydło również odchyla powietrze w dół."
+          "text": "Powietrze, które idzie górą, trochę przyspiesza. Jego ciśnienie spada. Pod skrzydłem ciśnienie zostaje wyższe. Ta różnica pcha skrzydło w górę: to **siła nośna**. Tłumaczy się to często zasadą **Bernoulliego**, od nazwiska uczonego z XVIII wieku, i tym, że skrzydło zrzuca też powietrze w dół."
         }
       ]
     },
     {
       "id": "course_46_comment_les_avions_volent_ils_p2",
-      "title": "Potrzebujesz szybkości",
+      "title": "Potrzeba prędkości",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bez prędkości, za mało powietrza przepływającego nad skrzydłem, za mało siły nośnej. Właśnie dlatego samolot potrzebuje długiego pasa startowego, aby wystartować: silniki muszą go odpowiednio przyspieszyć."
+          "text": "Bez prędkości za mało powietrza idzie po skrzydle, za mało siły nośnej. Dlatego samolot potrzebuje długiego pasa do startu: silniki muszą go mocno rozpędzić."
         },
         {
           "type": "funFact",
-          "text": "Ptaki kierują się tą samą ogólną ideą: ich skrzydła tworzą siłę nośną. Ale machają skrzydłami, aby ruszyć do przodu. Samolot porusza się do przodu dzięki silnikom."
+          "text": "Ptaki używają tej samej ogólnej idei: ich skrzydła dają siłę nośną. Ale one machają skrzydłami, żeby iść do przodu. Samolot jedzie dzięki silnikom."
         },
         {
           "type": "paragraph",
-          "text": "Podczas lotu rejsowego winda równoważy ciężar. Ciąg silników równoważy opór powietrza. Następnie samolot porusza się do przodu z w przybliżeniu stałą prędkością."
+          "text": "W locie rejsowym siła nośna równoważy ciężar. Ciąg silników równoważy opór powietrza. Samolot jedzie wtedy ze stałą, mniej więcej, prędkością."
         }
       ]
     },
     {
       "id": "course_46_comment_les_avions_volent_ils_p3",
-      "title": "Idź w górę, w dół, skręć",
+      "title": "W górę, w dół, w bok",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Aby się wznieść, pilot (lub komputer pokładowy) lekko odchyla nos do góry i reguluje ciąg. Aby zejść, często zmniejszamy ciąg. Aby skręcić, samolot przechyla się na bok za pomocą ruchomych części skrzydeł, czyli lotek."
+          "text": "Żeby iść w górę, pilot (albo komputer pokładowy) unosi trochę nos i dobiera ciąg. Żeby zniżać, często ścina się ciąg. Żeby skręcać, przechyla się samolot na bok dzięki ruchomym częściom skrzydeł, lotkom."
         },
         {
           "type": "paragraph",
-          "text": "Podczas lądowania zwalniamy. Klapy wystają ze skrzydła, aby zwiększyć siłę nośną przy niskich prędkościach. Wtedy koła dotykają ziemi, a hamulce (czasami także odwracacze ciągu) zatrzymują samolot."
+          "text": "Przy lądowaniu zwalniamy. Ze skrzydła wychodzą klapy, żeby podbić siłę nośną przy małej prędkości. Potem koła dotykają ziemi, a hamulce (czasem też odwracacze ciągu) zatrzymują samolot."
         }
       ]
     },
     {
       "id": "course_46_comment_les_avions_volent_ils_p4",
-      "title": "Nie jest „lżejszy od powietrza”",
+      "title": "To nie „lżejszy od powietrza”",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Balon wypełniony helem unosi się, ponieważ ma mniejszą gęstość niż powietrze. Samolot, nie: jest znacznie gęstszy. Leci, bo **wytrzymałość** wygląda, jakby go niósł, dzięki swojej szybkości i kształtowi skrzydeł."
+          "text": "Balon z helem unosi się, bo jest rzadszy od powietrza. Samolot nie: jest dużo gęstszy. Leci, bo **zmusza** powietrze, żeby go niosło, dzięki prędkości i kształtowi skrzydeł."
         },
         {
           "type": "takeaway",
-          "text": "Samolot leci dzięki **winda** utworzonemu przez jego skrzydła poruszające się w powietrzu. Szybkość jest najważniejsza: bez niej skrzydło nie będzie już „pchać” w górę na tyle, aby zrekompensować ciężar."
+          "text": "Samolot leci dzięki **sile nośnej**, którą dają skrzydła w ruchu w powietrzu. Prędkość jest niezbędna: bez niej skrzydło już nie „pcha” dość w górę, żeby zrównoważyć ciężar."
         }
       ]
     }
