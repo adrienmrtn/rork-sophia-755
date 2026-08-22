@@ -4,11 +4,11 @@
   "subtitle": "Tormentas",
   "subject": "sciences",
   "subcategory": "La Tierra y el Universo",
-  "description": "El rayo no es mágico: es una enorme descarga eléctrica en una nube de tormenta. Así es como se prepara y luego cómo golpea.",
+  "description": "Un rayo no es magia: es una enorme descarga eléctrica en una nube de tormenta. Así es cómo se prepara, y luego cómo golpea.",
   "hero": {
     "image": "comment_se_forment_les_eclairs",
     "ratio": "16:9",
-    "hook": "En una fracción de segundo, el aire alcanza los 30.000°C. Cinco veces más caliente que la superficie del Sol."
+    "hook": "En una fracción de segundo, el aire pasa a 30.000 °C. Cinco veces más caliente que la superficie del Sol."
   },
   "sections": [
     {
@@ -18,93 +18,93 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Un rayo libera una energía colosal en un abrir y cerrar de ojos. El aire en el canal del rayo se eleva hasta aproximadamente **30.000 °C**. El trueno es sólo el sonido de este calor brutal."
+          "text": "Un rayo libera una energía colosal en un abrir y cerrar de ojos. El aire en el canal del rayo sube a unos **30.000 °C**. El trueno, él, no es más que el ruido de ese calor brutal."
         },
         {
           "type": "paragraph",
-          "text": "Para entender los rayos, hay que seguir tres pasos: cómo se carga la nube, cómo encuentra un camino la electricidad y por qué se oyen los truenos después."
+          "text": "Para comprender el rayo hay que seguir tres etapas: cómo se carga la nube, cómo la electricidad encuentra un camino y por qué se oye el trueno después."
         }
       ]
     },
     {
       "id": "course_69_comment_se_forment_les_eclairs_p1",
-      "title": "En la nube, los cargos se separan",
+      "title": "En la nube, las cargas se separan",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Los rayos se producen principalmente en : nubes de tormenta muy grandes, que pueden alcanzar alrededor de **15 kilómetros**. En el interior, el aire sube y baja con mucha fuerza. [[cumulonimbus]]"
+          "text": "Los rayos nacen sobre todo en los [[cumulonimbus]]: nubes de tormenta muy grandes, que pueden subir hasta unos **15 km**. Dentro, el aire sube y baja con mucha fuerza."
         },
         {
           "type": "image",
           "asset": "cumulonimbus_thunderstorm_cloud",
           "ratio": "4:3",
-          "caption": "El cumulonimbus: la fábrica de tormentas."
+          "caption": "El cumulonimbus: la fábrica de tormentas"
         },
         {
           "type": "paragraph",
-          "text": "En este caos, pequeños **cristales de hielo** se elevan y los granos de hielo más pesados ​​() descienden. Cuando chocan, se intercambian cargas eléctricas. Poco a poco, la parte superior de la nube se vuelve más bien positiva, la base más bien negativa. [[aguanieve]]"
+          "text": "En ese caos, pequeños **cristales de hielo** suben, y granos de hielo más pesados ([[aguanieve]]) bajan. Cuando se golpean, se intercambian cargas eléctricas. Poco a poco, lo alto de la nube se vuelve más bien positivo, la base más bien negativa."
         },
         {
           "type": "funFact",
-          "text": "El lago de Maracaibo, en Venezuela, es uno de los lugares más afectados por rayos del planeta: allí se observan tormentas casi a diario durante gran parte del año."
+          "text": "El lago de Maracaibo, en Venezuela, es uno de los lugares más fulminados del planeta: se observan tormentas casi diarias gran parte del año."
         }
       ]
     },
     {
       "id": "course_69_comment_se_forment_les_eclairs_p2",
-      "title": "Cuando el aire se suelta: la descarga.",
+      "title": "Cuando el aire suelta: la descarga",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "El aire es un mal conductor. Pero si la diferencia de carga es demasiado grande (a menudo **cientos de millones de voltios**), el aire acaba cediendo. Las moléculas pierden electrones: se vuelven conductoras. Es el . [[ionización del aire]]"
+          "text": "El aire es un mal conductor. Pero si la diferencia de carga se vuelve demasiado fuerte (a menudo **cientos de millones de voltios**), el aire acaba por ceder. Las moléculas pierden electrones: se vuelven conductoras. Es la [[ionización del aire]]."
         },
         {
           "type": "paragraph",
-          "text": "Un canal invisible sale de la nube a pequeños saltos. Desde el suelo, las redes eléctricas se elevan especialmente desde puntos (árboles, pararrayos, edificios). Cuando los dos se juntan, el circuito se cierra."
+          "text": "Un canal invisible parte de la nube a pequeños saltos. Desde el suelo, unos hilos eléctricos suben sobre todo desde las puntas (árboles, pararrayos, edificios). Cuando los dos se juntan, el circuito se cierra."
         },
         {
           "type": "paragraph",
-          "text": "La gran luz que vemos, la **arco hacia atrás**, se eleva principalmente desde el suelo hacia la nube. La corriente puede alcanzar decenas de miles de amperios. En el mismo canal pueden sucederse varias descargas: de ahí el efecto de parpadeo."
+          "text": "La gran luz que se ve, el **arco de retorno**, sube sobre todo del suelo hacia la nube. La corriente puede alcanzar decenas de miles de amperios. Varias descargas pueden sucederse en el mismo canal: de ahí el efecto de parpadeo."
         }
       ]
     },
     {
       "id": "course_69_comment_se_forment_les_eclairs_p3",
-      "title": "¿Por qué el trueno llega más tarde?",
+      "title": "Por qué el trueno llega después",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "El rayo calienta el aire tan rápidamente que de repente se expande. Esta onda de choque se convierte en **verdadno**. La luz llega casi de inmediato; el sonido avanza a aproximadamente **340 m/s**."
+          "text": "El rayo calienta el aire tan rápido que este se dilata de un golpe. Esa onda de choque se vuelve el **trueno**. La luz llega casi de inmediato; el sonido, él, avanza a unos **340 m/s**."
         },
         {
           "type": "paragraph",
-          "text": "Consejo simple: cuente los segundos entre relámpagos y truenos, luego divídalos por **3**. Obtienes una estimación de la distancia en kilómetros."
+          "text": "Truco simple: cuenta los segundos entre el rayo y el trueno, y luego divide por **3**. Obtienes una estimación de la distancia en kilómetros."
         },
         {
           "type": "funFact",
-          "text": "La Tierra recibe una media de aproximadamente **100 rayos por segundo**. En Francia, se producen alrededor de **un millón** de impactos sobre el terreno al año."
+          "text": "La Tierra es golpeada por unos **100 rayos por segundo** de media. En Francia se cuentan alrededor de **un millón** de impactos en el suelo por año."
         }
       ]
     },
     {
       "id": "course_69_comment_se_forment_les_eclairs_p4",
-      "title": "Peligro, fertilidad y curiosidades",
+      "title": "Peligro, fertilidad y rarezas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Los rayos siguen siendo peligrosos, especialmente al aire libre, cerca de árboles aislados o del agua. También provoca incendios. Pero tiene un efecto menos conocido: ayuda a producir compuestos nitrogenados que fertilizan el suelo con la lluvia."
+          "text": "El rayo sigue siendo peligroso, sobre todo al aire libre, cerca de árboles aislados o del agua. También dispara incendios. Pero tiene un efecto menos conocido: ayuda a fabricar compuestos nitrogenados que fertilizan los suelos con la lluvia."
         },
         {
           "type": "paragraph",
-          "text": "Por encima de las tormentas, las cámaras también capturaron fenómenos extraños, como : breves resplandores en la atmósfera superior, invisibles a simple vista desde el suelo. [[duendes]]"
+          "text": "Por encima de las tormentas, las cámaras también han captado fenómenos raros, como los [[Espectros rojos]]: breves destellos en la alta atmósfera, invisibles a simple vista desde el suelo."
         },
         {
           "type": "takeaway",
-          "text": "En un cumulonimbus, las colisiones de hielo y aguanieve separan las cargas. Cuando el voltaje aumenta demasiado, el aire se ioniza: el relámpago se calienta hasta ~30.000°C y esta expansión repentina produce truenos."
+          "text": "En un cumulonimbus, las colisiones hielo/aguanieve separan las cargas. Cuando la tensión se vuelve demasiado fuerte, el aire se ioniza: el rayo calienta a unos 30.000 °C, y esa dilatación brutal produce el trueno."
         }
       ]
     }

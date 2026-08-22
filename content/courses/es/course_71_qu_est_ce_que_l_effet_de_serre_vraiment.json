@@ -1,14 +1,14 @@
 {
   "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment",
-  "title": "¿Qué es (realmente) el efecto invernadero?",
+  "title": "¿Qué es el efecto invernadero (de verdad)?",
   "subtitle": "Clima y atmósfera",
   "subject": "sciences",
   "subcategory": "La Tierra y el Universo",
-  "description": "El efecto invernadero no es principalmente un problema: es el manto invisible el que evita que la Tierra se congele. El verdadero problema es cuando lo espesas demasiado rápido.",
+  "description": "El efecto invernadero no es primero un problema: es el manto invisible que impide que la Tierra se hiele. El verdadero reto es cuando se lo espesa demasiado rápido.",
   "hero": {
     "image": "qu_est_ce_que_l_effet_de_serre",
     "ratio": "16:9",
-    "hook": "Sin el efecto invernadero, la Tierra sería un desierto helado. Con demasiado, se sobrecalienta."
+    "hook": "Sin efecto invernadero, la Tierra sería un desierto de hielo. Con demasiado, se recalienta."
   },
   "sections": [
     {
@@ -18,89 +18,89 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Imaginemos un coche cerrado al sol: las ventanillas dejan entrar la luz, pero el calor apenas sale. El habitáculo se calienta. El [[efecto invernadero]] de la Tierra funciona un poco así, con aire en lugar de vidrio."
+          "text": "Imagina un coche cerrado al sol: los cristales dejan entrar la luz, pero el calor tiene trabajo para salir. El habitáculo se calienta. El [[efecto invernadero]] de la Tierra funciona un poco así, con el aire en lugar del cristal."
         },
         {
           "type": "paragraph",
-          "text": "Este fenómeno es **natural** y vital. Sin él, la temperatura media del globo caería hacia **-18ºC**. Con él estamos alrededor de **+15 °C**. El problema actual no es su existencia: es su rápida **amplificación** por nuestras actividades."
+          "text": "Ese fenómeno es **natural** y vital. Sin él, la temperatura media del globo caería hacia **-18 °C**. Con él, estamos alrededor de **+15 °C**. El problema actual no es su existencia: es su **amplificación** rápida por nuestras actividades."
         }
       ]
     },
     {
       "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p1",
-      "title": "Cómo el planeta mantiene su calor",
+      "title": "Cómo el planeta guarda su calor",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "El Sol envía principalmente luz visible. El ambiente lo deja pasar. La tierra y los océanos se calientan y luego irradian esta energía en forma de **calor infrarrojo**, ondas que son “más largas” que la luz visible."
+          "text": "El Sol envía sobre todo luz visible. La atmósfera la deja pasar. El suelo y los océanos se calientan, y luego devuelven esa energía en forma de **calor infrarrojo**, ondas más “largas” que la luz visible."
         },
         {
           "type": "image",
           "asset": "factory_chimneys_greenhouse_gas_emissions",
           "ratio": "auto",
-          "caption": "Las emisiones industriales refuerzan el efecto invernadero."
+          "caption": "Las emisiones industriales refuerzan el efecto invernadero"
         },
         {
           "type": "paragraph",
-          "text": "Ciertos gases, , absorben este calor y lo irradian en todas direcciones, incluso hacia el suelo. El nitrógeno y el oxígeno, la mayoría en el aire, apenas cumplen esta función. El vapor de agua, **CO₂** y **metano** lo hacen muy bien. [[efecto invernadero]]"
+          "text": "Ciertos gases, los [[gases de efecto invernadero]], absorben ese calor y lo devuelven en todas las direcciones, incluida hacia el suelo. El nitrógeno y el oxígeno, mayoritarios en el aire, casi no hacen ese trabajo. El vapor de agua, el **CO₂** y el **metano** lo hacen muy bien."
         },
         {
           "type": "funFact",
-          "text": "El nombre “efecto invernadero” es un poco engañoso. Un invernadero real calienta principalmente bloqueando el aire caliente ascendente. La atmósfera atrapa el calor absorbiendo rayos infrarrojos."
+          "text": "El nombre “efecto invernadero” es un poco engañoso. Un invernadero de verdad calienta sobre todo al bloquear el aire caliente que sube. La atmósfera, ella, atrapa el calor por absorción de los rayos infrarrojos."
         }
       ]
     },
     {
       "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p2",
-      "title": "Cuando los humanos espesan la manta",
+      "title": "Cuando el humano espesa la manta",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Desde la revolución industrial se han quemado carbón, petróleo y gas. Este carbono, enterrado bajo tierra durante millones de años, regresa al aire. La deforestación también reduce los bosques que absorbieron CO₂. El cultivo y cultivo de arroz añade metano, unas **80 años** más “calentamiento” que el CO₂ en 20 años."
+          "text": "Desde la revolución industrial, se quema carbón, petróleo y gas. Ese carbono, enterrado bajo tierra desde hace millones de años, vuelve al aire. La deforestación reduce también los bosques que absorbían CO₂. La ganadería y el cultivo del arroz añaden metano, unas **80 veces** más “calentador” que el CO₂ en 20 años."
         },
         {
           "type": "paragraph",
-          "text": "Resultado: la concentración de CO₂ aumentó de aproximadamente **280** a más de **420** partes por millón. Un nivel así no se había visto desde , hace unos **Z3** millones de años, cuando los mares estaban más altos. [[Plioceno]]"
+          "text": "Resultado: la concentración de CO₂ ha pasado de unos **280** a más de **420** partes por millón. Un nivel así no se había visto desde el [[Plioceno]], hace unos **3 millones de años**, cuando los mares estaban más altos."
         }
       ]
     },
     {
       "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p3",
-      "title": "¡Qué cambios climáticos más enérgicos!",
+      "title": "Lo que cambia un clima más enérgico",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "El [[IPCC]], que sintetiza el trabajo de miles de climatólogos, es claro: el calentamiento desde 1950 no tiene precedentes en milenios y su origen humano está establecido."
+          "text": "El [[IPCC]], que sintetiza el trabajo de miles de climatólogos, es claro: el calentamiento desde 1950 no tiene precedente en milenios, y su origen humano está establecido."
         },
         {
           "type": "paragraph",
-          "text": "Más energía en el aire y los océanos significa más extremos: sequías más secas, lluvias más violentas, derretimiento de glaciares y casquetes polares, aumento del nivel del mar. Y un acelerador: cuando el hielo blanco desaparece, la tierra oscura y el agua absorben más luz solar. El [[Albedo terrestre]] está cayendo y el planeta se está calentando aún más rápido."
+          "text": "Más energía en el aire y los océanos son extremos más marcados: sequías más secas, lluvias más violentas, glaciares y casquetes que se funden, nivel de los mares que sube. Y un acelerador: cuando desaparece el hielo blanco, el suelo y el agua oscuros absorben más sol. Es el [[albedo terrestre]] que baja, y el planeta se calienta aún más rápido."
         },
         {
           "type": "funFact",
-          "text": "Venus muestra el efecto invernadero “compacto”: una atmósfera con un 96% de CO₂ y alrededor de **460 °C** en el suelo, suficiente para derretir el plomo."
+          "text": "Venus muestra el efecto invernadero “desbocado”: una atmósfera al 96% de CO₂, y unos **460 °C** en el suelo, bastante para fundir el plomo."
         }
       ]
     },
     {
       "id": "course_71_qu_est_ce_que_l_effet_de_serre_vraiment_p4",
-      "title": "Limita el aumento, adáptate al resto",
+      "title": "Limitar la subida, adaptarse al resto",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "El objetivo internacional pretende mantenerse por debajo de **+1, 5°C** o **+2°C** respecto a la era preindustrial, para evitar umbrales peligrosos como el deshielo de [[permafrost]], que liberaría aún más metano."
+          "text": "El objetivo internacional busca quedarse bajo **+1,5 °C** o **+2 °C** respecto a la era preindustrial, para evitar umbrales peligrosos como el deshielo del [[permafrost]], que liberaría aún más metano."
         },
         {
           "type": "paragraph",
-          "text": "Dos palancas: **reducir** emisiones (energía limpia, sobriedad, bosques) y **adaptar** a lo ya comprometido. El CO₂ permanece en el aire durante siglos: lo que emitimos hoy dura mucho tiempo."
+          "text": "Dos palancas: **reducir** las emisiones (energías limpias, sobriedad, bosques) y **adaptarse** a lo que ya está comprometido. El CO₂ se queda siglos en el aire: lo que se emite hoy pesa durante mucho tiempo."
         },
         {
           "type": "takeaway",
-          "text": "Sin un efecto invernadero natural, la Tierra se congelaría alrededor de **-18ºC**. Su amplificación por los combustibles fósiles empuja el CO₂ a niveles no vistos desde hace **3 millones de años**."
+          "text": "Sin efecto invernadero natural, la Tierra se helaría hacia **-18 °C**. Su amplificación por las energías fósiles empuja el CO₂ a niveles inéditos desde hace **3 millones de años**."
         }
       ]
     }

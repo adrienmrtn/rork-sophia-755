@@ -1,14 +1,14 @@
 {
   "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve",
-  "title": "¿Cómo almacena el cerebro los recuerdos?",
+  "title": "¿Cómo guarda el cerebro los recuerdos?",
   "subtitle": "Memoria y neuronas",
   "subject": "sciences",
   "subcategory": "La Tierra y el Universo",
-  "description": "La memoria no es una biblioteca de cajones. Es una red viva de neuronas que se refuerzan entre sí, se reconstruyen y en ocasiones cometen errores.",
+  "description": "La memoria no es una biblioteca de cajones. Es una red viva de neuronas que se refuerzan, se reconstruyen y a veces se equivocan.",
   "hero": {
     "image": "comment_le_cerveau_stocke_les_souvenirs",
     "ratio": "16:9",
-    "hook": "Un recuerdo no es un archivo: es un camino que el cerebro ha aprendido a rehacer."
+    "hook": "Un recuerdo no es un archivo: es un camino que el cerebro ha aprendido a volver a hacer."
   },
   "sections": [
     {
@@ -18,89 +18,89 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A menudo imaginamos la memoria como un disco duro. En realidad, es una red viva. Miles de millones de **neuronas**, células nerviosas, se reconectan, se fortalecen o se debilitan según lo que experimentemos."
+          "text": "A menudo imaginamos la memoria como un disco duro. En realidad es una red viva. Miles de millones de **neuronas**, células nerviosas, se reconectan, se refuerzan o se debilitan según lo que se vive."
         },
         {
           "type": "paragraph",
-          "text": "Nada se almacena en un solo lugar. Un recuerdo es una huella distribuida, frágil al principio, más sólida después del sueño, y siempre un poco reconstruida cuando la recordamos."
+          "text": "Nada se guarda en un solo sitio. Un recuerdo es una huella repartida, frágil al principio, más sólida después del sueño, y siempre un poco reconstruida cuando uno se acuerda."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p1",
-      "title": "Conexiones que se fortalecen",
+      "title": "Unas conexiones que se refuerzan",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Entre dos neuronas, el punto de contacto se llama **sinapsis**, la unión por donde pasa la señal nerviosa. El cerebro humano tiene aproximadamente **86 mil millones** de neuronas y más de **100.000 mil millones** de sinapsis."
+          "text": "Entre dos neuronas, el punto de contacto se llama una **sinapsis**, la unión donde pasa la señal nerviosa. El cerebro humano cuenta unos **86.000 millones** de neuronas y más de **100 billones** de sinapsis."
         },
         {
           "type": "image",
           "asset": "hippocampus_memory_brain",
           "ratio": "auto",
-          "caption": "El hipocampo juega un papel central en la formación de recuerdos."
+          "caption": "El hipocampo juega un papel central en la formación de los recuerdos"
         },
         {
           "type": "paragraph",
-          "text": "Cuando la información se repite o se vincula a una emoción fuerte, las mismas neuronas se activan juntas. Su vínculo se vuelve más fácil de activar: es , el fortalecimiento duradero de las sinapsis. Cuanto más se utiliza un circuito, más “ancho” se vuelve el camino. Por tanto, una memoria no es un objeto almacenado, sino un **rastro** en la red. [[La potenciación a largo plazo (LTP)]]"
+          "text": "Cuando una información se repite o se liga a una emoción fuerte, las mismas neuronas se activan juntas. Su vínculo se vuelve más fácil de disparar: es la [[potenciación a largo plazo]], el refuerzo duradero de las sinapsis. Cuanto más se usa un circuito, más “ancho” se vuelve el camino. Un recuerdo no es, pues, un objeto guardado, sino una **huella** en la red."
         },
         {
           "type": "funFact",
-          "text": "La capacidad de almacenamiento del cerebro se estima en aproximadamente **2,5 petabytes**, el equivalente a millones de horas de vídeo. Pero no es un disco: es un tejido vivo que se está reorganizando."
+          "text": "La capacidad de almacenamiento del cerebro se estima en unos **2,5 petabytes**, el equivalente de millones de horas de vídeo. Pero no es un disco: es un tejido vivo que se reorganiza."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p2",
-      "title": "El caballito de mar, jefe de estación de los recuerdos.",
+      "title": "El hipocampo, jefe de estación de los recuerdos",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "El **caballito de mar**, una pequeña estructura en la [[lóbulo temporal]], región detrás de los templos, no guarda recuerdos para siempre. Los recibe, **codificar**, los transforma en rastros de memoria y luego los redistribuye a la **corteza**, la capa externa del cerebro. Esta transferencia se llama **consolidación**."
+          "text": "El **hipocampo**, pequeña estructura del [[lóbulo temporal]], región detrás de las sienes, no guarda los recuerdos para siempre. Los recibe, los **codifica**, los transforma en huella de memoria y luego los redistribuye hacia el **córtex**, la capa externa del cerebro. Ese traslado se llama la **consolidación**."
         },
         {
           "type": "paragraph",
-          "text": "Se realiza principalmente durante **dormir**. Sin un hipocampo que funcione, podemos vivir en el momento presente, pero ya no mantenemos nuevos recuerdos conscientes. Seguimos estancados en un presente sin un pasado reciente."
+          "text": "Se hace sobre todo durante el **sueño**. Sin hipocampo funcional, se puede vivir el instante presente, pero ya no se fijan recuerdos conscientes nuevos. Uno se queda atrapado en un presente sin pasado reciente."
         },
         {
           "type": "funFact",
-          "text": "El paciente **S.M.**, operado en 1953, ya no formaba nuevos recuerdos. Sin embargo, avanzaba cada día en el dibujo frente al espejo, sin recordar haberlo intentado ya: su memoria de los gestos estaba intacta."
+          "text": "El paciente **H.M.**, operado en 1953, ya no formaba recuerdos nuevos. Sin embargo, progresaba cada día al dibujar en un espejo, sin acordarse de haberlo intentado ya: su memoria de los gestos estaba intacta."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p3",
-      "title": "Recordar es reconstruir",
+      "title": "Acordarse es reconstruir",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Recuperar un recuerdo no es reproducir un vídeo. Cada vez que lo sacas, se vuelve **maleable**, modificable. Nuestras emociones actuales, nuestro nuevo conocimiento o una sugerencia pueden modificarlo antes de que sea “regrabado”."
+          "text": "Recuperar un recuerdo no es volver a poner un vídeo. Cada vez que se saca, se vuelve **maleable**, modificable. Nuestras emociones del momento, nuestros saberes nuevos o una sugerencia pueden modificarlo antes de que se “regrabe”."
         },
         {
           "type": "paragraph",
-          "text": "La psicóloga **Elizabeth Loftus** demostró que se pueden implantar **falsos recuerdos** con preguntas sencillas. De ahí la cautela actual frente al testimonio de los testigos presenciales: de buena fe, el cerebro llena los vacíos."
+          "text": "La psicóloga **Elizabeth Loftus** ha mostrado que se pueden implantar **falsos recuerdos** con preguntas simples. De ahí la prudencia hoy ante los testimonios oculares: de buena fe, el cerebro rellena los huecos."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p4",
-      "title": "Múltiples recuerdos en un solo cerebro",
+      "title": "Varias memorias en un solo cerebro",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La memoria de hechos y episodios de la vida, lo que podemos contar, pasa principalmente por el hipocampo. El [[memoria procesal]], el del ciclismo o la natación, depende en cambio del **cerebelo**, una estructura en la parte posterior del cerebro, y de otras estructuras más antiguas."
+          "text": "La memoria de los hechos y de los episodios de vida, lo que se puede contar, pasa sobre todo por el hipocampo. La [[memoria procedimental]], la de la bici o de la natación, depende más bien del **cerebelo**, estructura en la parte de atrás del cerebro, y de otras estructuras más antiguas."
         },
         {
           "type": "paragraph",
-          "text": "Por eso algunos pacientes con amnesia olvidan su propio nombre pero siguen tocando el piano. La memoria no es un único cajón: es un mosaico de sistemas."
+          "text": "Por eso algunos pacientes amnésicos olvidan su propio nombre pero siguen tocando el piano. La memoria no es un cajón único: es un mosaico de sistemas."
         },
         {
           "type": "takeaway",
-          "text": "Un recuerdo es una huella dinámica: sinapsis reforzadas, consolidadas especialmente por la noche, y reconstruidas con cada recordatorio. Nunca es un archivo fijo."
+          "text": "Un recuerdo es una huella dinámica: sinapsis reforzadas, consolidadas sobre todo de noche, y reconstruidas en cada recuerdo. Nunca es un archivo fijo."
         }
       ]
     }
