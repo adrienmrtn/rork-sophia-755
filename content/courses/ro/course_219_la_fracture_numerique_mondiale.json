@@ -1,14 +1,14 @@
 {
   "id": "course_219_la_fracture_numerique_mondiale",
-  "title": "Decalajul digital global",
-  "subtitle": "O treime din umanitate offline",
+  "title": "Fractura digitală mondială",
+  "subtitle": "O treime din omenire e offline",
   "subject": "comprendreLeMonde",
   "subcategory": "Economy & society",
-  "description": "2,7 miliarde de oameni încă nu au acces la internet. Într-o lume din ce în ce mai digitală, această lipsă de conexiune devine o nouă formă de excludere.",
+  "description": "2,7 miliarde de oameni tot n-au acces la internet. Într-o lume tot mai digitală, lipsa conexiunii devine o formă nouă de excludere.",
   "hero": {
     "image": "la_fracture_numerique_mondiale",
     "ratio": "16:9",
-    "hook": "Kenya a inventat plata prin telefon cu zece ani înaintea Europei, din cauza lipsei sucursalelor bancare."
+    "hook": "Kenya a inventat plata prin telefon cu zece ani înaintea Europei, din lipsă de sucursale bancare."
   },
   "sections": [
     {
@@ -18,51 +18,51 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "În timp ce societățile dezvoltate se confruntă cu o revoluție condusă de inteligența artificială, o realitate brutală persistă: **2,7 miliarde de oameni**, sau aproximativ o treime din umanitate, încă nu au acces la internet."
+          "text": "În timp ce societățile dezvoltate trăiesc o revoluție purtată de inteligența artificială, o realitate brutală persistă: **2,7 miliarde de oameni**, adică cam o treime din omenire, tot n-au acces la internet."
         },
         {
           "type": "paragraph",
-          "text": "Această **divizii digitale** nu este doar o întârziere tehnică: a devenit o adevărată barieră, care ține milioane de oameni departe de educație, sănătate și economia globală. Iată de ce persistă și cum unele țări încearcă să-l umple."
+          "text": "**Fractura digitală** nu e doar o rămânere în urmă tehnică: a devenit o barieră adevărată, care îndepărtează milioane de oameni de educație, de sănătate și de economia mondială. Iată de ce persistă și cum încearcă unele țări s-o astupe."
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p1",
-      "title": "O hartă a lumii cu două viteze",
+      "title": "O hartă a lumii în două viteze",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Până în 2024, aproximativ 5,4 miliarde de oameni vor fi conectați la internet în întreaga lume, dar progresul stagnează în cele mai sărace regiuni. Europa și America de Nord depășesc 90% conexiuni, în timp ce Africa subsahariană rămâne la doar 37%."
+          "text": "În 2024, cam 5,4 miliarde de oameni sunt conectați la internet în lume, dar progresul stagnează în regiunile cele mai sărace. Europa și America de Nord depășesc 90% conexiune, pe când Africa subsahariană rămâne la doar 37%."
         },
         {
           "type": "paragraph",
-          "text": "Această excludere se datorează mai multor cauze. În primul rând, lipsa infrastructurii: instalarea fibrei optice în anumite regiuni izolate este considerată prea costisitoare de către operatori. Apoi, prețul: în unele țări, un simplu entry-level [[smartphone]] reprezintă câteva luni de salariu. În cele din urmă, bariera lingvistică (aproximativ 70% din conținutul web este în limba engleză) și lipsa instruirii digitale limitează utilizarea chiar și atunci când există o conexiune."
+          "text": "Excluderea asta are mai multe cauze. Mai întâi, lipsa infrastructurii: să instalezi fibră optică în unele zone izolate e judecat prea scump de operatori. Apoi prețul: în unele țări, un [[smartphone]] de la intrare în gamă înseamnă mai multe luni de salariu. În sfârșit, bariera limbii (cam 70% din conținutul web e în engleză) și lipsa de formare digitală limitează folosirea chiar și când există o conexiune."
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p2",
-      "title": "Când lipsa infrastructurii forțează inovația",
+      "title": "Când lipsa de infrastructură forțează inovația",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Această divizare acționează ca un multiplicator al inegalităților. Într-o lume în care munca la distanță, comerțul electronic și educația online ([[MOOC]]) devin o normă, a nu fi conectat înseamnă a deveni invizibil pentru economia globală."
+          "text": "Fractura asta acționează ca un multiplicator de inegalități. Într-o lume unde telemunca, comerțul online și educația online ([[MOOC]]) devin norma, să nu fii conectat înseamnă să devii invizibil pentru economia mondială."
         },
         {
           "type": "image",
           "asset": "digital_divide_africa_rural_village_smartphone",
           "ratio": "16:9",
-          "caption": "În multe zone rurale, telefonul mobil rămâne singurul punct de acces la Internet."
+          "caption": "În multe regiuni rurale, telefonul mobil rămâne singurul punct de acces la internet."
         },
         {
           "type": "paragraph",
-          "text": "Kenya ilustrează o altă cale: din cauza lipsei de sucursale bancare suficiente, țara a adoptat masiv un sistem simplu de plată prin SMS în 2007, [[M-Pesa kenyană]], învingând Europa cu zece ani. Acest sistem a permis milioanelor de persoane fără conturi bancare să facă tranzacții securizate doar cu un telefon."
+          "text": "Kenya arată o altă cale: din lipsă de sucursale bancare suficiente, țara a adoptat masiv din 2007 un sistem de plată prin SMS simplu, [[M-Pesa kenyană]], cu zece ani înaintea Europei. Sistemul le-a permis milioanelor de oameni fără cont bancar să facă tranzacții sigure cu un telefon obișnuit."
         },
         {
           "type": "funFact",
-          "text": "Kenya a denumit această strategie „salt tehnologic”: în loc să instaleze infrastructură scumpă și învechită, țara a trecut direct la o soluție mai modernă și mai ieftină."
+          "text": "Kenya a poreclit strategia asta „săritura peste etape”: în loc să instaleze infrastructuri scumpe și depășite, țara a trecut direct la o soluție mai modernă și mai ieftină."
         }
       ]
     },
@@ -73,30 +73,30 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pentru a conecta cele mai izolate sate, noi jucători se bazează pe spațiu. Proiectul [[Starlink]] trimite mii de sateliți pe orbită joasă, permițând o conexiune rapidă chiar și în deșerturi sau munți înalți, fără a fi nevoie să instalați un singur cablu."
+          "text": "Ca să conecteze satele cele mai izolate, actori noi mizează pe spațiu. Proiectul [[Starlink]] trimite mii de sateliți pe orbită joasă și permite o conexiune rapidă chiar în deșerturi sau în munți înalți, fără să pui niciun cablu."
         },
         {
           "type": "paragraph",
-          "text": "Dar costul abonamentului și al echipamentului rămâne aliniat standardelor occidentale, ceea ce face ca aceste soluții să fie inaccesibile celor mai sărace populații rurale fără asistență externă. Prin urmare, rezolvarea decalajului digital nu poate fi realizată numai prin tehnologie: este nevoie și de voință politică pentru a face internetul ceva accesibil tuturor."
+          "text": "Dar costul abonamentului și al materialului rămâne aliniat la standardele occidentale, ceea ce face soluțiile astea inaccesibile populațiilor rurale cele mai sărace fără ajutor din afară. Să rezolvi fractura digitală nu se poate doar prin tehnologie: cere și o voință politică, ca internetul să devină un bun accesibil tuturor."
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p4",
-      "title": "Inteligența artificială, o nouă breșă",
+      "title": "Inteligența artificială, un nou șanț",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Creșterea rapidă a inteligenței artificiale amenință să extindă și mai mult această diviziune. Este nevoie de o putere imensă de calcul și de date, resurse concentrate în mâinile câtorva țări și companii. Populațiile deconectate riscă atunci să devină dependente de instrumentele concepute fără a ține cont de cultura sau limba lor."
+          "text": "Avântul rapid al inteligenței artificiale amenință să adâncească și mai mult fractura. Cere puteri imense de calcul și de date, resurse concentrate în mâinile a câteva țări și firme. Populațiile deconectate riscă atunci să depindă de unelte concepute fără să țină seama de cultura sau de limba lor."
         },
         {
           "type": "paragraph",
-          "text": "Decalajul de competențe dintre studenții conectați și cei neconectați s-ar putea extinde, de asemenea, foarte rapid. Provocarea pentru anii următori nu va mai fi, așadar, doar asigurarea unei conexiuni, ci garantarea accesului echitabil la crearea de valoare digitală, prin combinarea costurilor mai mici, a conținutului local și a formării."
+          "text": "Decalajul de competențe dintre elevii conectați și cei neconectați s-ar putea adânci foarte rapid. Miza anilor următori nu va mai fi doar să aduci o conexiune, ci să garantezi un acces just la crearea de valoare digitală, combinând scăderea costurilor, conținut local și formare."
         },
         {
           "type": "takeaway",
-          "text": "2,7 miliarde de oameni rămân astăzi excluși de pe internet, o diviziune care riscă să se agraveze cu inteligența artificială. Reducerea acestui decalaj necesită transformarea conectivității într-un bun real accesibil tuturor, și nu doar într-un produs de vândut."
+          "text": "2,7 miliarde de oameni rămân azi excluși de pe internet, o fractură care riscă să se agraveze odată cu inteligența artificială. Să reduci decalajul ăsta cere să transformi conectivitatea într-un bun accesibil tuturor, nu doar într-un produs de vânzare."
         }
       ]
     }

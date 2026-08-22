@@ -1,14 +1,14 @@
 {
   "id": "course_59_la_decouverte_de_l_anesthesie",
   "title": "Descoperirea anesteziei",
-  "subtitle": "Medicament",
+  "subtitle": "Medicină",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "Înainte de 1846, o operație era adesea efectuată în mod conștient și cu dureri extreme. Anestezia transformă intervenția chirurgicală în îngrijire, nu în tortură.",
+  "description": "Înainte de 1846, o operație se făcea adesea conștient și cu durere extremă. Anestezia transformă chirurgia în îngrijire, nu în tortură.",
   "hero": {
     "image": "la_decouverte_de_l_anesthesie",
     "ratio": "16:9",
-    "hook": "Într-o zi din 1846, la Boston, intervenția chirurgicală a încetat să mai fie o cursă împotriva durerii."
+    "hook": "Într-o zi din 1846, la Boston, chirurgia încetează să fie o cursă împotriva durerii."
   },
   "sections": [
     {
@@ -18,28 +18,28 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Imaginați-vă o amputare fără a adormi. Înainte de mijlocul secolului al XIX-lea, aceasta era norma. Legăm pacientul, ne mișcăm repede, ne rugăm."
+          "text": "Imaginează o amputație fără adormire. Înainte de mijlocul secolului XIX, asta e norma. Pacientul e legat, se lucrează iute, se roagă."
         },
         {
           "type": "paragraph",
-          "text": "**anestezie** schimbă totul: vă permite să operați fără a fi conștient de durere. Chirurgia modernă își poate lua în sfârșit timpul."
+          "text": "**Anestezia** schimbă totul: poți opera fără conștiința durerii. Chirurgia modernă poate, în sfârșit, să-și ia timpul."
         }
       ]
     },
     {
       "id": "course_59_la_decouverte_de_l_anesthesie_p1",
-      "title": "Înainte: viteză versus suferință",
+      "title": "Înainte: viteza împotriva suferinței",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "surgery_without_anesthesia_19th_century",
           "ratio": "4:3",
-          "caption": "Fără anestezie, chirurgul trebuia să fie extrem de rapid."
+          "caption": "Fără anestezie, chirurgul trebuia să fie extrem de iute."
         },
         {
           "type": "paragraph",
-          "text": "Chirurgii au fost judecați după viteza lor. Alcoolul, opiumul sau forța brută au fost folosite pentru a imobiliza oamenii. Mulți pacienți au murit din cauza șocului, infecției sau hemoragiei."
+          "text": "Chirurgii erau judecați după viteză. Se foloseau alcool, opiu sau forța brută ca să țină pacientul nemișcat. Mulți mureau de șoc, de infecție sau de hemoragie."
         }
       ]
     },
@@ -52,45 +52,45 @@
           "type": "image",
           "asset": "ether_anesthesia_first_demonstration_1846",
           "ratio": "4:3",
-          "caption": "La Boston, o demonstrație publică a convins lumea medicală."
+          "caption": "La Boston, o demonstrație publică convinge lumea medicală."
         },
         {
           "type": "paragraph",
-          "text": "**16 octombrie 1846**, în Boston, dentistul **William Morton** face ca un pacient să inspire **eter**. Chirurgul **John Warren** operează o tumoare la gât. Pacientul nu țipă. Camera este uluită."
+          "text": "Pe **16 octombrie 1846**, la Boston, dentistul **William Morton** îl pune pe un pacient să inhaleze **eter**. Chirurgul **John Warren** operează o tumoare la gât. Pacientul nu urlă. Sala e uluită."
         },
         {
           "type": "funFact",
-          "text": "Warren a spus: „Domnilor, aceasta nu este o farsă”. Fraza a rămas celebră."
+          "text": "Warren ar fi zis: „Domnilor, asta nu e o păcăleală.” Fraza a rămas celebră."
         }
       ]
     },
     {
       "id": "course_59_la_decouverte_de_l_anesthesie_p3",
-      "title": "În continuare: cloroform și dezbateri",
+      "title": "Apoi: cloroform și dezbateri",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Au urmat și alte produse, precum **cloroform**, popularizate în special în Marea Britanie. Rivalitățile apar în privința cine a „inventat” ce. Brevetul nu contează: ideea se răspândește în toată lumea."
+          "text": "Urmează alte produse, ca **cloroformul**, popularizat mai ales în Marea Britanie. Izbucnesc rivalități pe tema cine a „inventat” ce. Brevetul contează puțin: ideea se răspândește în toată lumea."
         },
         {
           "type": "paragraph",
-          "text": "Rămâne o problemă: să adormi fără a ucide. Trebuie să-l dozezi, să-ți monitorizezi respirația și inima. Se naște o nouă specialitate."
+          "text": "Rămâne o problemă: să adormi fără să ucizi. Trebuie să dozezi, să supraveghezi respirația, inima. Se naște o specialitate nouă."
         }
       ]
     },
     {
       "id": "course_59_la_decouverte_de_l_anesthesie_p4",
-      "title": "Anestezie azi",
+      "title": "Anestezia astăzi",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Astăzi, medicul anestezist folosește gaze și medicamente precise, mașini care măsoară totul. Puteți adormi întregul corp sau doar o zonă (anestezie locală sau locoregională)."
+          "text": "Azi anestezistul folosește gaze și medicamente precise, plus aparate care măsoară totul. Poți adormi tot corpul sau doar o zonă (anestezie locală sau locoregională)."
         },
         {
           "type": "takeaway",
-          "text": "De la demonstrarea eterului în **1846**, anestezia a transformat intervenția chirurgicală: mai puțină durere, mai mult timp, mai multă precizie... iar siguranța a devenit o știință în sine."
+          "text": "De la demonstrația eterului din **1846**, anestezia a transformat chirurgia: mai puțină durere, mai mult timp, mai multă precizie, și o siguranță devenită o știință de sine stătătoare."
         }
       ]
     }

@@ -1,14 +1,14 @@
 {
   "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s",
-  "title": "Rolul datelor („uleiul secolului 21”)",
-  "subtitle": "Cea mai valoroasă resursă digitală",
+  "title": "Rolul datelor (petrolul secolului XXI)",
+  "subtitle": "Cea mai prețioasă resursă a digitalului",
   "subject": "comprendreLeMonde",
   "subcategory": "Economy & society",
-  "description": "Se spune că datele sunt noul ulei. Dar, spre deosebire de petrol, ele nu se epuizează niciodată și devin mai valoroase cu cât sunt întâlnite mai mult.",
+  "description": "Se spune că datele sunt noul petrol. Spre deosebire de petrol, însă, nu se epuizează niciodată și devin mai prețioase pe măsură ce le încrucișezi.",
   "hero": {
     "image": "le_role_des_donnees",
     "ratio": "16:9",
-    "hook": "Facebook poate ghici că cineva se căsătorește sau se mută înainte de a-și da seama."
+    "hook": "Facebook poate ghici că o persoană se va căsători sau se va muta înainte ca ea însăși să-și dea seama."
   },
   "sections": [
     {
@@ -18,89 +18,89 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "O frază a devenit stabilită încă din anii 2010: **date** ar fi „uleiul secolului 21”. Ideea este simplă: odată perfecționate de algoritmi, aceștia devin motorul creșterii și al puterii globale."
+          "text": "Din anii 2010 s-a impus o formulă: **datele** ar fi „petrolul secolului XXI”. Ideea e simplă: odată rafinate de algoritmi, ele devin motorul creșterii și al puterii mondiale."
         },
         {
           "type": "paragraph",
-          "text": "Dar, spre deosebire de petrol, o resursă care se epuizează, datele nu sunt niciodată consumate: pot fi copiate la infinit și devin mai valoroase pe măsură ce sunt combinate cu alte informații. Iată de ce a remodelat economia globală."
+          "text": "Spre deosebire de petrol, o resursă care se epuizează, data nu se consumă niciodată: o poți copia la nesfârșit și devine mai prețioasă pe măsură ce o încrucișezi cu alte informații. Iată de ce a redesenat economia mondială."
         }
       ]
     },
     {
       "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p1",
-      "title": "Prezicerea comportamentului nostru înaintea noastră înșine",
+      "title": "Să ne prezică comportamentele înaintea noastră",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Adevărata valoare a datelor nu constă într-o simplă listă de nume sau adrese, ci în capacitatea lor de a ne prezice comportamentele viitoare. Fiecare căutare, fiecare mișcare, fiecare clic lasă o urmă pe care companiile de tehnologie o pun împreună pentru a crea un portret foarte precis al fiecărei persoane."
+          "text": "Adevărata valoare a datelor nu stă într-o listă de nume sau de adrese, ci în puterea de a prezice ce vom face. Fiecare căutare, fiecare deplasare, fiecare clic lasă o urmă. Firmelor de tehnologie le ajunge ca să-ți facă un portret foarte precis."
         },
         {
           "type": "funFact",
-          "text": "Facebook poate observa o schimbare majoră în viață, cum ar fi o viitoare căsătorie sau o mutare, înainte ca persoana implicată să fie pe deplin conștientă de aceasta, detectând mici variații în obiceiurile sale online."
+          "text": "Facebook poate prinde o schimbare importantă de viață, o nuntă sau o mutare, înainte ca persoana însăși să fie pe deplin conștientă, detectând variații mici în obiceiurile ei online."
         },
         {
           "type": "paragraph",
-          "text": "Această exploatare sistematică a comportamentului nostru a dat naștere a ceea ce cercetătorul Shoshana Zuboff numește **supraveghere capitalism**: oamenii nu mai sunt doar un client, ei devin materia primă a unui sistem care vinde predicții celui mai mare ofertant."
+          "text": "Exploatarea sistematică a comportamentelor noastre a născut ceea ce cercetătoarea Shoshana Zuboff numește **capitalism de supraveghere**: omul nu mai e doar client, ci materia primă a unui sistem care vinde predicții celui care plătește mai mult."
         }
       ]
     },
     {
       "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p2",
-      "title": "De ce acești giganți sunt aproape imposibil de concurat",
+      "title": "De ce giganții ăștia sunt aproape imposibil de concurat",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Economia datelor funcționează într-un ciclu virtuos: cu cât o companie are mai multe date, cu atât este mai bun serviciul său, care atrage mai mulți utilizatori, care generează și mai multe date. Inteligența artificială a accelerat acest fenomen: un algoritm [[învățarea automată]] antrenat pe miliarde de exemple devine mai precis și mai rapid de îmbunătățit decât un concurent cu resurse limitate."
+          "text": "Economia datelor merge în cerc virtuos: cu cât o firmă are mai multe date, cu atât serviciul ei se îmbunătățește, ceea ce atrage mai mulți utilizatori, care generează și mai multe date. Inteligența artificială a accelerat fenomenul: un algoritm de [[învățarea automată]] antrenat pe miliarde de exemple devine mai precis și se îmbunătățește mai repede decât un concurent cu resurse slabe."
         },
         {
           "type": "image",
           "asset": "artificial_intelligence_machine_learning_datacenter",
           "ratio": "16:9",
-          "caption": "Centrele de date consumă la fel de multă energie electrică ca și orașe întregi pentru a procesa aceste fluxuri masive de informații."
+          "caption": "Centrele de date consumă cât orașe întregi ca să proceseze fluxurile astea masive de informație."
         },
         {
           "type": "paragraph",
-          "text": "Acești giganți, [[GAFAM]] din Statele Unite și BATX din China, nu se mai mulțumesc să-și domine sectorul inițial: își folosesc avansul în date pentru a se extinde în sănătate, finanțe sau mașini conectate, blocând accesul la inovație în multe domenii."
+          "text": "Giganții ăștia, [[GAFAM]] în Statele Unite și BATX în China, nu se mai mulțumesc să domine sectorul lor de origine: își folosesc avansul în date ca să se întindă spre sănătate, finanțe sau mașina conectată, și blochează accesul la inovație în multe domenii."
         }
       ]
     },
     {
       "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p3",
-      "title": "Europa răspunde cu GDPR",
+      "title": "Europa contraatacă cu GDPR",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "În fața acestei puteri, Uniunea Europeană a instituit în 2018 [[GDPR]], o reglementare care, teoretic, redă cetățenilor putere asupra propriilor informații personale: transparență, dreptul de a fi uitat, consimțământul obligatoriu."
+          "text": "În fața puterii ăsteia, Uniunea Europeană a instituit în 2018 [[GDPR european]], un regulament care, în teorie, le dă înapoi cetățenilor puterea asupra propriilor informații personale: transparență, drept de a fi uitat, consimțământ obligatoriu."
         },
         {
           "type": "paragraph",
-          "text": "Puterea sa provine din extrateritorialitatea sa: orice companie care se ocupă de datele cetățenilor europeni trebuie să se conformeze, sub sancțiunea unor amenzi de până la 4% din cifra de afaceri globală. Acest lucru i-a forțat pe giganți precum Meta sau Amazon să-și revizuiască practicile din întreaga lume, făcând din Europa un organism de reglementare global nedoritor."
+          "text": "Forța lui vine din extrateritorialitate: orice firmă care manipulează datele unor cetățeni europeni trebuie să se conformeze, sub amenințarea unor amenzi de până la 4% din cifra de afaceri mondială. Asta i-a silit pe giganți ca Meta sau Amazon să-și revizuiască practicile în toată lumea. Europa a devenit, fără să vrea, un regulator mondial."
         },
         {
           "type": "funFact",
-          "text": "Înainte de cerința de claritate a GDPR, o persoană ar fi avut nevoie în medie de aproximativ 76 de zile lucrătoare pentru a citi toți termenii și condițiile pentru serviciile digitale pe care le utilizează într-un singur an."
+          "text": "Înainte de obligația de claritate impusă de GDPR, unui om obișnuit i-ar fi trebuit cam 76 de zile de muncă ca să citească toate condițiile de utilizare ale serviciilor digitale pe care le folosește într-un singur an."
         }
       ]
     },
     {
       "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p4",
-      "title": "Datele, o problemă de suveranitate",
+      "title": "Datele, o miză de suveranitate",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dincolo de economie, datele au devenit un instrument de putere pentru statele înseși, care le pot folosi pentru a-și monitoriza populația sau pentru a ghida opinia publică. Țările care nu sunt în măsură să își protejeze datele cetățenilor riscă o formă de dependență tehnologică, cunoscută ca o încălcare a [[suveranitatea digitală]]."
+          "text": "Dincolo de economie, data a devenit un instrument de putere pentru state, care o pot folosi ca să-și supravegheze populația sau să orienteze opinia publică. Țările incapabile să protejeze datele cetățenilor riscă o dependență tehnologică: o lovitură adusă [[suveranitatea digitală]]."
         },
         {
           "type": "paragraph",
-          "text": "Marea provocare a următoarelor decenii va fi găsirea unui echilibru între progresul permis de analiza pe scară largă a datelor și respectarea vieții private, o condiție esențială a libertății individuale într-o societate din ce în ce mai conectată."
+          "text": "Marea provocare a deceniilor următoare va fi să găsim un echilibru între progresul permis de analiza datelor la scară mare și respectul vieții private, condiție esențială a libertății individuale într-o societate tot mai conectată."
         },
         {
           "type": "takeaway",
-          "text": "Datele au devenit un activ strategic a cărui valoare provine din capacitatea de a ne prezice comportamentul. Această economie favorizează giganții tehnologici cu care este aproape imposibil de concurat, la care Europa răspunde cu o reglementare strictă: GDPR."
+          "text": "Datele au devenit un activ strategic a cărui valoare vine din puterea de a ne prezice comportamentele. Economia asta favorizează giganți tehnologici aproape imposibil de concurat. Europa răspunde printr-o reglementare strictă: GDPR."
         }
       ]
     }

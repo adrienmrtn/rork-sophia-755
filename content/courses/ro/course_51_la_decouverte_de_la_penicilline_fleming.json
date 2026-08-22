@@ -4,11 +4,11 @@
   "subtitle": "Fleming, 1928",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "În 1928, Alexander Fleming a observat că un mucegai a ucis bacteriile pe un vas de cultură. Din această șansă s-a născut primul mare antibiotic.",
+  "description": "În 1928, Alexander Fleming observă că un mucegai a omorât bacterii pe o cutie de cultură. Din întâmplarea asta se va naște primul mare antibiotic.",
   "hero": {
     "image": "la_decouverte_de_la_penicilline",
     "ratio": "16:9",
-    "hook": "O cutie uitată, o matriță, iar medicamentul se întoarce cu susul în jos."
+    "hook": "O cutie uitată, un mucegai, și medicina se răstoarnă."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Înainte de antibiotice, o simplă infecție ar putea ucide. O tăietură, pneumonie, o rană de război: corpul lupta adesea singur."
+          "text": "Înainte de antibiotice, o infecție simplă putea ucide. O tăietură, o pneumonie, o rană de război: corpul lupta adesea singur."
         },
         {
           "type": "paragraph",
-          "text": "În **1928**, medicul scoțian **Alexander Fleming** a descoperit accidental o substanță capabilă să omoare bacteriile. Se va numi **penicilina**. Dar va dura totuși ani pentru a-l transforma într-un medicament adevărat."
+          "text": "În **1928**, medicul scoțian **Alexander Fleming** descoperă din întâmplare o substanță capabilă să omoare bacterii. Se va numi **penicilina**. Dar vor mai trebui ani ca să devină un medicament adevărat."
         }
       ]
     },
@@ -33,21 +33,21 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Fleming studiază bacteriile la Londra. Întorcându-se din vacanță, se uită la vechile cutii de cultură. Pe una dintre ele a crescut un **mucegai**. În jurul ei, bacteriile sunt moarte."
+          "text": "Fleming studiază bacterii la Londra. Întors din vacanță, se uită la cutii vechi de cultură. Pe una dintre ele a crescut un **mucegai**. În jurul lui, bacteriile sunt moarte."
         },
         {
           "type": "image",
           "asset": "alexander_fleming_penicillin_petri_dish",
           "ratio": "4:3",
-          "caption": "Fleming și ideea cheie: ceva în mucegai oprește bacteriile."
+          "caption": "Fleming și ideea-cheie: ceva din mucegai oprește bacteriile."
         },
         {
           "type": "paragraph",
-          "text": "Mucegaiul aparține genului **Penicillium**. Fleming înțelege că produce o substanță antibacteriană. Îi spune penicilină. Dar nu o poate purifica suficient pentru a-i trata pe bolnavi."
+          "text": "Mucegaiul ține de genul **Penicillium**. Fleming înțelege că produce o substanță antibacteriană. O numește penicilină. Dar nu reușește s-o purifice destul ca să vindece bolnavi."
         },
         {
           "type": "funFact",
-          "text": "Fleming a spus mai târziu că, dacă ar fi fost mai ordonat, ar fi aruncat cutia. Mizeria din laborator a ajutat la descoperire."
+          "text": "Fleming a spus mai târziu că, dacă ar fi fost mai ordonat, ar fi aruncat cutia. Dezordinea din laborator a ajutat descoperirea."
         }
       ]
     },
@@ -58,32 +58,32 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La începutul anilor **1940**, la Oxford, **Howard Florey** și **Ernst Chain** s-au întors la muncă. Cu echipa lor, au izolat, concentrat și testat penicilina pe animale, apoi pe oameni."
+          "text": "La începutul anilor **1940**, la Oxford, **Howard Florey** și **Ernst Chain** reiau munca. Cu echipa lor, izolează, concentrează și testează penicilina pe animale, apoi pe oameni."
         },
         {
           "type": "paragraph",
-          "text": "Al Doilea Război Mondial a făcut lucrurile urgente: soldații infectați trebuiau tratați. Penicilina trece de la laborator la o problemă strategică."
+          "text": "Al Doilea Război Mondial face treaba urgentă: trebuie tratați soldații infectați. Penicilina trece din laborator în miză strategică."
         }
       ]
     },
     {
       "id": "course_51_la_decouverte_de_la_penicilline_fleming_p3",
-      "title": "Produse de masă",
+      "title": "A produce în masă",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "penicillin_antibiotic_production_laboratory",
           "ratio": "4:3",
-          "caption": "A fost necesar să se inventeze modalități industriale de creștere a mucegaiului."
+          "caption": "A fost nevoie de feluri industriale de a crește mucegaiul."
         },
         {
           "type": "paragraph",
-          "text": "Pentru a trata milioane de oameni, sunt necesare cantități enorme. Statele Unite au industrializat producția în timpul războiului. Cuve uriașe fac să lipsească mucegaiul ca berea."
+          "text": "Ca să tratezi milioane de oameni, trebuie cantități enorme. Statele Unite industrializează producția în timpul războiului. Cuve uriașe fac mucegaiul să fermenteze ca o bere."
         },
         {
           "type": "paragraph",
-          "text": "În **1945**, Fleming, Florey și Chain au primit Premiul Nobel. Medicina intră în era antibioticelor."
+          "text": "În **1945**, Fleming, Florey și Chain primesc premiul Nobel. Medicina intră în era antibioticelor."
         }
       ]
     },
@@ -94,11 +94,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Astăzi, prea multe antibiotice utilizate greșit au permis anumitor bacterii să devină **rezistent**: medicamentele nu le mai ucid. Fleming avertizase deja despre acest risc."
+          "text": "Azi, prea multe antibiotice prost folosite au lăsat unele bacterii să devină **rezistente**: medicamentele nu le mai omoară. Fleming avertizase deja riscul ăsta."
         },
         {
           "type": "takeaway",
-          "text": "Penicilina s-a născut dintr-o coincidență observată de Fleming în **1928**, apoi a devenit un medicament datorită Florey, Chain și industriei de război. A salvat milioane de vieți... atâta timp cât nu îl epuizați."
+          "text": "Penicilina se naște dintr-o întâmplare observată de Fleming în **1928**, apoi devine medicament datorită lui Florey, Chain și industriei de război. A salvat milioane de vieți... cu condiția să n-o uzezi."
         }
       ]
     }

@@ -4,11 +4,11 @@
   "subtitle": "Fizica zborului",
   "subject": "sciences",
   "subcategory": "Our daily life explained",
-  "description": "Un avion cântărind câteva sute de tone zboară. Nu este magie: este o chestiune de forma aripii, viteză și forțe care se echilibrează reciproc.",
+  "description": "Un avion de câteva sute de tone zboară. Nu e magie: e o chestiune de formă a aripii, de viteză și de forțe care se echilibrează.",
   "hero": {
     "image": "comment_les_avions_volent",
     "ratio": "16:9",
-    "hook": "Mai greu decât un camion și totuși rămâne în aer. Iată cum."
+    "hook": "Mai greu decât un camion, și totuși stă în aer. Iată cum."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Un avion de linie mare poate cântări **sută de ton**. Cum poate ceva atât de greu să rămână în aer? Răspunsul constă în forma aripilor și viteza avionului."
+          "text": "Un avion mare de linie poate cântări **sute de tone**. Cum poate ceva atât de greu să rămână în aer? Răspunsul stă în forma aripilor și în viteza avionului."
         },
         {
           "type": "paragraph",
-          "text": "Sunt în joc patru forțe principale: **împingere** (în față), **trage** (frânare cu aer), **groutate** (în jos) și **lift** (în sus)."
+          "text": "Patru forțe principale sunt în joc: **împingerea** (înainte), **rezistența** (frânarea aerului), **greutatea** (în jos) și **portanța** (în sus)."
         }
       ]
     },
@@ -33,7 +33,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Privită din lateral, aripa unui avion nu este plată. Partea de sus este mai rotunjită decât cea de jos. Când avionul se mișcă rapid, aerul trebuie să ocolească această formă."
+          "text": "Văzută dintr-o parte, o aripă de avion nu e plată. Deasupra e mai bombată decât dedesubt. Când avionul înaintează iute, aerul trebuie să ocolească forma asta."
         },
         {
           "type": "image",
@@ -43,56 +43,56 @@
         },
         {
           "type": "paragraph",
-          "text": "Aerul care trece deasupra accelerează puțin. Presiunea lui scade. Sub aripă, presiunea rămâne mai puternică. Această diferență împinge aripa în sus: acesta este **lift**. Este adesea explicat cu principiul **Bernoulli**, numit după un savant din secolul al XVIII-lea, și prin faptul că aripa deviază și aerul în jos."
+          "text": "Aerul care trece deasupra accelerează un pic. Presiunea lui scade. Sub aripă, presiunea rămâne mai mare. Diferența asta împinge aripa în sus: asta e **portanța**. O explicăm adesea cu principiul lui **Bernoulli**, de la un savant din secolul XVIII, și cu faptul că aripa abate și aerul în jos."
         }
       ]
     },
     {
       "id": "course_46_comment_les_avions_volent_ils_p2",
-      "title": "Ai nevoie de viteză",
+      "title": "Trebuie viteză",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Fără viteză, nu trece suficient aer peste aripă, nu este suficientă portanță. Acesta este motivul pentru care un avion are nevoie de o pistă lungă pentru a decola: motoarele trebuie să o accelereze suficient de puternic."
+          "text": "Fără viteză, nu trece destul aer pe aripă, nu e destulă portanță. De-asta un avion are nevoie de o pistă lungă ca să decoleze: motoarele trebuie să-l accelereze destul de tare."
         },
         {
           "type": "funFact",
-          "text": "Păsările folosesc aceeași idee generală: aripile lor creează portanță. Dar își bat din aripi pentru a merge înainte. Avionul avansează datorită motoarelor sale."
+          "text": "Păsările folosesc aceeași idee generală: aripile lor creează portanță. Dar ele bat din aripi ca să înainteze. Avionul, el, înaintează datorită motoarelor."
         },
         {
           "type": "paragraph",
-          "text": "În zborul de croazieră, ridicarea echilibrează greutatea. Forța motoarelor echilibrează rezistența aerului. Avionul se deplasează apoi înainte cu o viteză aproximativ constantă."
+          "text": "În zbor de croazieră, portanța echilibrează greutatea. Împingerea motoarelor echilibrează rezistența aerului. Avionul înaintează atunci cu o viteză cam constantă."
         }
       ]
     },
     {
       "id": "course_46_comment_les_avions_volent_ils_p3",
-      "title": "Du-te în sus, în jos, întoarce-te",
+      "title": "Urcare, coborâre, viraj",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pentru a urca, pilotul (sau computerul de bord) înclină puțin nasul în sus și reglează împingerea. Pentru a coborî, deseori reducem împingerea. Pentru a se întoarce, avionul este înclinat în lateral folosind părți mobile ale aripilor, eleroanele."
+          "text": "Ca să urce, pilotul (sau computerul de bord) înclină un pic nasul în sus și ajustează împingerea. Ca să coboare, se reduce adesea împingerea. Ca să vireze, se înclină avionul pe o parte cu ajutorul unor piese mobile ale aripilor, eleroanele."
         },
         {
           "type": "paragraph",
-          "text": "La aterizare, încetinim. Flapsurile se extind din aripă pentru a crește portanța la viteze mici. Apoi roțile ating solul, iar frânele (uneori și inversoare de tracțiune) opresc avionul."
+          "text": "La aterizare, se încetinește. Din aripă ies flapsuri ca să crească portanța la viteză mică. Apoi roțile ating solul, iar frânele (uneori și inversoarele de împingere) opresc avionul."
         }
       ]
     },
     {
       "id": "course_46_comment_les_avions_volent_ils_p4",
-      "title": "Nu este „mai ușor decât aerul”",
+      "title": "Nu e „mai ușor decât aerul”",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Un balon cu heliu plutește pentru că este mai puțin dens decât aerul. Un avion, nu: este mult mai dens. Zboară pentru că **rezistenţă** arată ca și cum îl poartă, datorită vitezei și formei aripilor sale."
+          "text": "Un balon cu heliu plutește pentru că e mai puțin dens decât aerul. Un avion, nu: e mult mai dens. Zboară pentru că **silește** aerul să-l poarte, datorită vitezei și formei aripilor."
         },
         {
           "type": "takeaway",
-          "text": "Un avion zboară datorită **lift** creat de aripile sale care se mișcă prin aer. Viteza este esențială: fără ea, aripa nu mai „împinge” suficient în sus pentru a compensa greutatea."
+          "text": "Un avion zboară datorită **portanței** create de aripile lui în mișcare prin aer. Viteza e indispensabilă: fără ea, aripa nu mai „împinge” destul în sus ca să compenseze greutatea."
         }
       ]
     }

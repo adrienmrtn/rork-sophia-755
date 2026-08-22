@@ -1,14 +1,14 @@
 {
   "id": "course_223_l_economie_circulaire",
   "title": "Economia circulară",
-  "subtitle": "Scăpa de tot ce este de unică folosință",
+  "subtitle": "Ieșirea din totul de unică folosință",
   "subject": "comprendreLeMonde",
   "subcategory": "Environment & the future",
-  "description": "**Extrageți, fabricați, aruncați**: acest model epuizează planeta. Economia circulară propune contrariul: păstrarea obiectelor și materialelor în circulație cât mai mult timp.",
+  "description": "**Extragi, fabrici, arunci**: modelul ăsta epuizează planeta. Economia circulară propune inversul: să ții obiectele și materialele în circulație cât mai mult.",
   "hero": {
     "image": "l_economie_circulaire",
     "ratio": "16:9",
-    "hook": "Dacă deșeurile nu ar exista? Este pariul unui model economic inspirat din natură."
+    "hook": "Dacă deșeul n-ar exista? E pariul unui model economic inspirat din natură."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "De la revoluția industrială, economia noastră a funcționat într-o singură direcție: extragem resurse, fabricăm obiecte, apoi le aruncăm. Acest model presupune că resursele sunt infinite. Nu sunt."
+          "text": "De la revoluția industrială, economia noastră merge într-un singur sens: extragem resurse, fabricăm obiecte, apoi le aruncăm. Modelul ăsta presupune că resursele sunt infinite. Nu sunt."
         },
         {
           "type": "paragraph",
-          "text": "**Economia circulară** oferă o altă logică, inspirată din natură, unde nimic nu se pierde cu adevărat. Acesta își propune să mențină valoarea produselor și materialelor în circulație cât mai mult timp, în loc să le transforme în deșeuri."
+          "text": "**Economia circulară** propune o altă logică, inspirată din natură, unde nimic nu se pierde cu adevărat. Vrea să țină valoarea produselor și a materialelor în circulație cât mai mult, în loc să le transforme în deșeuri."
         }
       ]
     },
@@ -33,40 +33,40 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Economia modernă a fost construită pe un model numit **liniar**: extrage, fabrica, aruncă. Luăm materii prime din natură, fabricăm produse din ele, iar odată uzate sau demodate, aceste produse devin deșeuri."
+          "text": "Economia modernă s-a construit pe un model zis **liniar**: extragi, fabrici, arunci. Iei materii prime din natură, faci produse, iar odată uzate sau demodate, produsele astea devin deșeuri."
         },
         {
           "type": "image",
           "asset": "landfill_waste_garbage_linear_economy",
           "ratio": "16:9",
-          "caption": "Modelul „luați, faceți, aruncați” presupune resurse infinite."
+          "caption": "Modelul „extragi, fabrici, arunci” presupune resurse infinite."
         },
         {
           "type": "paragraph",
-          "text": "Acest sistem se bazează pe ideea că resursele sunt nelimitate și că natura poate absorbi toată poluarea. Dar astăzi, economia globală consumă echivalentul a 1,7 planete în resurse în fiecare an. Anumite metale esențiale pentru tehnologiile digitale, cum ar fi [[Litiu]], ar putea deveni dificil de găsit încă din 2040."
+          "text": "Sistemul ăsta stă pe ideea că resursele sunt nelimitate și că natura poate absorbi toată poluarea. Dar azi economia mondială consumă în fiecare an echivalentul a 1,7 planete în resurse. Unele metale esențiale tehnologiilor digitale, ca [[Litiu]], ar putea deveni greu de găsit încă din 2040."
         },
         {
           "type": "funFact",
-          "text": "Doar 9% din tot plasticul produs vreodată de umanitate a fost reciclat. Restul ajunge în natură sau în groapa de gunoi, unde poate rămâne timp de 450 de ani."
+          "text": "Doar 9% din tot plasticul produs vreodată de omenire a fost reciclat. Restul ajunge în natură sau la groapa de gunoi, unde poate rămâne 450 de ani."
         },
         {
           "type": "paragraph",
-          "text": "Costul de curățare și gestionarea deșeurilor nu este aproape niciodată inclus în prețul de vânzare al unui produs. Este un cost ascuns, plătit mai târziu de toată lumea."
+          "text": "Costul curățeniei și al gestiunii deșeurilor aproape niciodată nu e inclus în prețul de vânzare al unui produs. E un cost ascuns, plătit mai târziu de toată lumea."
         }
       ]
     },
     {
       "id": "course_223_l_economie_circulaire_p2",
-      "title": "Reparați înainte de reciclare",
+      "title": "Repară înainte să reciclezi",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Economia circulară oferă mai multe bucle și întotdeauna în aceeași ordine de prioritate: cea mai scurtă buclă este mai bună, deoarece risipește mai puțină energie și materiale. Totul începe cu **eco-design**, adică să ne gândim la impactul asupra mediului al unui produs încă de la crearea acestuia, prin alegerea unor materiale durabile și ușor de demontat."
+          "text": "Economia circulară propune mai multe bucle, tot timpul în aceeași ordine de prioritate: mai bine bucla cea mai scurtă, pentru că risipește mai puțină energie și materie. Totul începe cu **ecoproiectarea**, adică să gândești impactul de mediu al unui produs încă de la creare, alegând materiale durabile și ușor de demontat."
         },
         {
           "type": "paragraph",
-          "text": "Apoi urmează **reutilizare** (un obiect își schimbă proprietatea fără a fi transformat, ca pe o piață de second hand), apoi **repara**, care prelungește durata de viață a unui produs. Acești pași combate direct [[Învechirea planificată]], această practică care reduce voluntar durata de viață a unui obiect."
+          "text": "Apoi vine **reutilizarea** (un obiect își schimbă stăpânul fără să fie transformat, ca pe o piață de ocazie), apoi **repararea**, care prelungește viața unui produs. Etapele astea luptă direct împotriva [[Învechirea planificată]], practica asta care scurtează voită durata de viață a unui obiect."
         },
         {
           "type": "image",
@@ -76,55 +76,55 @@
         },
         {
           "type": "paragraph",
-          "text": "**reciclarea** are loc doar ca ultimă soluție. Rămâne util: reciclarea aluminiului consumă cu 95% mai puțină energie decât extragerea lui din minereu brut, [[Bauxită]]. Dar este totuși mai puțin eficient decât simpla reutilizare a unui obiect."
+          "text": "**Reciclarea** intervine doar ca ultimă soluție. Rămâne utilă: să reciclezi aluminiu consumă cu 95% mai puțină energie decât să-l extragi din minereul brut, [[Bauxită]]. Dar e tot timpul mai puțin eficient decât să reutilizezi pur și simplu un obiect."
         }
       ]
     },
     {
       "id": "course_223_l_economie_circulaire_p3",
-      "title": "De ce este greu și astăzi",
+      "title": "De ce e încă greu azi",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "În ciuda întregului interes, economia circulară se confruntă cu o problemă simplă: modelul liniar rămâne adesea **necostisitor pe termen scurt**. Extragerea de material nou costă uneori mai puțin decât sortarea și reciclarea deșeurilor complexe, mai ales când materiile prime sunt ieftine."
+          "text": "Cu tot interesul ei, economia circulară se lovește de o problemă simplă: modelul liniar rămâne des **mai ieftin pe termen scurt**. Să extragi o materie nouă costă uneori mai puțin decât să sortezi și să reciclezi un deșeu complex, mai ales când materiile prime sunt ieftine."
         },
         {
           "type": "image",
           "asset": "repair_right_electronics_reuse",
           "ratio": "4:3",
-          "caption": "„Dreptul la reparație” impune producătorilor să furnizeze piese de schimb."
+          "caption": "„Dreptul la reparare” le impune producătorilor să furnizeze piese de schimb."
         },
         {
           "type": "paragraph",
-          "text": "Față de aceasta, autoritățile publice intervin din ce în ce mai mult. Uniunea Europeană a lansat în 2020 un plan care impune reguli mai stricte de durabilitate. Una dintre axele majore este „dreptul la reparație”, care obligă producătorii de dispozitive electronice să furnizeze piese de schimb timp de câțiva ani."
+          "text": "Ca răspuns, autoritățile intervin tot mai mult. Uniunea Europeană a lansat în 2020 un plan care impune reguli mai stricte de durabilitate. Una dintre axele majore e „dreptul la reparare”, care îi obligă pe producătorii de aparate electronice să furnizeze piese de schimb timp de mai mulți ani."
         },
         {
           "type": "paragraph",
-          "text": "O altă pârghie:  Responsabilitatea pentru producția dispărută, care îi face pe producători să plătească pentru gestionarea deșeurilor din produsele lor. Acest lucru le oferă un stimulent financiar pentru a proiecta obiecte care sunt mai puțin poluante și mai ușor de reparat. [[Responsabilitate extinsă a producătorului]]"
+          "text": "Altă pârghie: [[Responsabilitate extinsă a producătorului]], care îi face pe fabricanți să plătească gestiunea deșeurilor produselor lor. Asta îi îndeamnă financiar să conceapă obiecte mai puțin poluante și mai ușor de reparat."
         }
       ]
     },
     {
       "id": "course_223_l_economie_circulaire_p4",
-      "title": "Spre o societate a resurselor",
+      "title": "Spre o societate a resursei",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Economia circulară nu este doar o chestiune de reciclare: este un proiect pentru o societate mai sobră și mai rezistentă. Depinzând mai puțin de materiile prime importate, o țară câștigă și securitate într-o lume mai instabilă."
+          "text": "Economia circulară nu e doar o chestiune de reciclare: e un proiect de societate mai sobră și mai rezistentă. Depinzând mai puțin de importurile de materii prime, o țară câștigă și în securitate, într-o lume mai instabilă."
         },
         {
           "type": "paragraph",
-          "text": "Succesul acestei transformări depinde și de noi, ca consumatori. Regula 3R, reduce, refolosește, reciclează, începe cu primul pas: reduce, adică întreabă-te dacă achiziția este cu adevărat necesară. Această primă acțiune este cea care are cel mai mare efect asupra climei."
+          "text": "Succesul transformării ăsteia depinde și de noi, ca și consumatori. Regula celor 3R, reduce, reutilizează, reciclează, începe cu prima etapă: reduce, adică să te întrebi dacă achiziția e cu adevărat necesară. Primul gest ăsta are cel mai mare efect asupra climei."
         },
         {
           "type": "funFact",
-          "text": "Astăzi există mai mult aur într-o tonă de plăci electronice vechi de smartphone decât într-o tonă de minereu extras dintr-o mină de aur tradițională."
+          "text": "Azi e mai mult aur într-o tonă de plăci electronice vechi de smartphone decât într-o tonă de minereu extras dintr-o mină de aur clasică."
         },
         {
           "type": "takeaway",
-          "text": "Economia circulară își propune să rupă ciclul „extras, face, aruncă” prin menținerea resurselor în circulație prin eco-proiectare, reparare și reciclare, pentru a respecta limitele fizice ale planetei noastre."
+          "text": "Economia circulară vrea să spargă ciclul „extragi, fabrici, arunci” ținând resursele în circulație prin ecoproiectare, reparare și reciclare, ca să respectăm limitele fizice ale planetei."
         }
       ]
     }
