@@ -1,14 +1,14 @@
 {
   "id": "course_160_la_liberte_de_la_presse_et_le_journalism",
-  "title": "Sajtószabadság és fotóújságírás",
+  "title": "Sajtószabadság és fotóriport",
   "subtitle": "20. század",
   "subject": "art",
   "subcategory": "Cinema, photography & architecture + iconic works",
-  "description": "Cartier-Bressontól Nick Utig a sajtófotó egyetlen képben rögzíti a történelmet. A média szabadsága, etikája és hatalma ugyanabban a keresőben.",
+  "description": "Cartier-Bressontól Nick Utig a sajtófotó egyetlen képbe sűríti a történelmet. Szabadság, etika és médiahatalom ugyanabban a keresőben.",
   "hero": {
     "image": "la_liberte_de_la_presse_et_le_journalisme_photographique",
     "ratio": "16:9",
-    "hook": "Egy fénykép megállíthat egy háborút… vagy hazudhat. Továbbra is tudnunk kell publikálni."
+    "hook": "Egy fotó megállíthat egy háborút. Vagy hazudhat. De előbb közzé kell tenni."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A fotós újságírás akkor születik meg, amikor a kép olyan erősen rögzíti a hírt, mint egy cikk. Egyetlen nézet összefoglalhat egy háborút, éhínséget, győzelmet."
+          "text": "A fotóriport akkor születik, amikor egy kép ugyanolyan erővel rögzíti a hírt, mint egy cikk. Egyetlen felvétel összefoglalhat egy háborút, egy éhínséget, egy győzelmet."
         },
         {
           "type": "paragraph",
-          "text": "De sajtószabadság nélkül ezek a képek a fiókban maradnak."
+          "text": "Sajtószabadság nélkül ezek a képek a fiókban maradnak."
         }
       ]
     },
@@ -33,36 +33,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Henri Cartier-Bresson]] elmélete szerint a „döntő pillanat”: a megfelelő helyen, a megfelelő időben, a megfelelő keretezéssel. [[Gerda Taro]] Capa mellett a spanyol polgárháborúban halt meg. A fotóriporternek megvannak a maga mártírjai."
+          "text": "[[Henri Cartier-Bresson]] megfogalmazza a „döntő pillanatot”: jó helyen lenni, jókor, jó kerettel. [[Gerda Taro]] Capa mellett meghal a spanyol polgárháborúban. A fotóriportnak megvannak a mártírjai."
         },
         {
           "type": "paragraph",
-          "text": "Az illusztrált magazinok, fotóügynökségek megjelenése professzionálissá tette a szakmát. A riporter olyan készülékkel távozik, mint mások notebookjával. A kockázat fizikai."
+          "text": "Az illusztrált magazinok és a fotóügynökségek hivatássá teszik a munkát. A riporter úgy indul fényképezőgéppel, ahogy mások noteszszel. A kockázat testi."
         },
         {
           "type": "image",
           "asset": "cartier_bresson_decisive_moment",
           "ratio": "4:3",
-          "caption": "A Leica a vállán: az utca mint terep."
+          "caption": "Leica a vállon: az utca a terep"
         }
       ]
     },
     {
       "id": "course_160_la_liberte_de_la_presse_et_le_journalism_p2",
-      "title": "Képek, amelyek megváltoztatják a vitát",
+      "title": "Képek, amelyek átírják a vitát",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vietnamban sokkoló a közvélemény [[Nick Ut]] fotója, amelyen egy napalmtól megégett kislány látható. A kép önmagában nem „véget vet” a háborúnak, de lehetetlenné teszi az emberi költségek tagadását."
+          "text": "Vietnámban [[Nick Ut]] fotója egy napalmmal megégetett kislányról felforgatja a közvéleményt. A kép önmagában nem „zárja le” a háborút. De lehetetlenné teszi, hogy letagadd az emberi árat."
         },
         {
           "type": "paragraph",
-          "text": "A nagy demokráciák elméletileg védik a sajtót. A diktatúrák irányítják a keresőt. A kép közzétételének szabadsága politikai barométerré válik."
+          "text": "A nagy demokráciák elvben védik a sajtót. A diktatúrák a keresőt ellenőrzik. Szabad-e egy képet közzétenni: ez politikai hőmérő lesz."
         },
         {
           "type": "funFact",
-          "text": "Sok híres fotót először cenzúráztak vagy megvitattak, mielőtt történelmi bizonyíték lett volna."
+          "text": "Sok híres felvételt először cenzúráztak vagy vitattak. Csak aztán váltak történelmi evidenciává."
         }
       ]
     },
@@ -73,17 +73,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A [[A fotóriporter etikája]] kérdéseket tesz fel: be tudjuk keretezni a szenvedést? Retusálás? A szabad tekintetet a [[Médiakoncentráció és szerkesztői függetlenség]] is veszélyezteti."
+          "text": "[[A fotóriporter etikája]] kérdéseket tesz fel. Szabad-e a szenvedést keretezni? Szabad-e retusálni? A [[Médiakoncentráció és szerkesztői függetlenség]] is veszélyezteti a szabad tekintetet."
         },
         {
           "type": "paragraph",
-          "text": "A digitális korban elengedhetetlen az ellenőrzés: metaadatok, fordított képkeresés, kontextus. A fényképezés erős marad, de gyorsabban manipulálható, mint valaha."
+          "text": "A digitális korban az ellenőrzés kötelező: metaadatok, fordított képkeresés, kontextus. A fotó továbbra is erős. De gyorsabban lehet manipulálni, mint valaha."
         },
         {
           "type": "image",
           "asset": "photojournalism_war_correspondent_camera",
           "ratio": "4:3",
-          "caption": "A riporter: objektívvel felfegyverzett tanú."
+          "caption": "A riporter: tanú, akinek objektív a fegyvere"
         }
       ]
     },
@@ -94,27 +94,27 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A hálózatok korában mindenki fényképez. Soha nem volt még ilyen erős az igény a megbízható, kontextualizált, az információhoz való jog által védett képek iránt."
+          "text": "A közösségi hálózatok korában mindenki fényképez. Megbízható, kontextusba helyezett, a tájékoztatás jogával védett képekre soha nem volt ekkora szükség."
         },
         {
           "type": "paragraph",
-          "text": "A sajtószabadság és a fotós újságírás teljes megértéséhez egy dolgot kell szem előtt tartania: minden technikai részlet egy érzelmet vagy egy ötletet szolgál. Az alkotás soha nem csak dekoratív."
+          "text": "A sajtószabadságot és a fotóriportot akkor érted igazán, ha ezt tartod fejben: minden technikai részlet egy érzést vagy egy gondolatot szolgál. A kép soha nem csak dísz."
         },
         {
           "type": "paragraph",
-          "text": "A kontextus legalább annyira számít, mint a stílus. Dátumok, helyek, szponzorok, nyilvánosság: mindez megmagyarázza, hogy egy űrlap miért egy adott pillanatban jelenik meg, és miért nem korábban."
+          "text": "A kontextus ugyanolyan fontos, mint a stílus. Dátumok, helyek, megrendelők, közönség: ezek magyarázzák, miért éppen akkor jelenik meg egy forma, és miért nem előbb."
         },
         {
           "type": "paragraph",
-          "text": "Végül az örökséget hosszú távon mérik. Amit ma múzeumokban, filmekben vagy populáris zenében látunk, az ma is magán viseli e találmányok nyomait."
+          "text": "Az örökséget hosszú távon méred. Amit ma múzeumban, filmben vagy a popzenében látsz, még mindig viseli ezeknek a találmányoknak a nyomát."
         },
         {
           "type": "paragraph",
-          "text": "Tanítsd a szemed, védd meg a bejelentőket, fizess a terepújságírásért: e nélkül csak az áramlás marad. A 20. századi örökség követelmény, nem nosztalgia."
+          "text": "Neveld a tekintetet, védd a bejelentőket, fizesd a terepmunkát. Enélkül csak az áradat marad. A 20. század öröksége követelmény, nem nosztalgia."
         },
         {
           "type": "takeaway",
-          "text": "Cartier-Bresson Leicájától a háborús fotókig a fotóriporterek bebizonyították, hogy egy ingyenes képnek akkora súlya lehet, mint egy szerkesztőségnek."
+          "text": "Cartier-Bresson Leicájától a háborús felvételekig a fotóriport bebizonyította: egy szabad kép olyan súlyos lehet, mint egy vezércikk."
         }
       ]
     }

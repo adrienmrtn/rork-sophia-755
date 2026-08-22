@@ -1,14 +1,14 @@
 {
   "id": "course_138_bach_et_la_musique_baroque",
-  "title": "Bach és barokk zene",
+  "title": "Bach és a barokk zene",
   "subtitle": "1685-1750",
   "subject": "art",
   "subcategory": "Music",
-  "description": "Johann Sebastian Bach lipcsei kántor a fúgát és az ellenpontot a csúcsra vette, és a barokk építészévé vált.",
+  "description": "Johann Sebastian Bach, lipcsei kántor, a fúgát és az ellenpontot a csúcsra viszi, és a barokk építőmestere lesz.",
   "hero": {
     "image": "bach_et_la_musique_baroque",
     "ratio": "16:9",
-    "hook": "Egy lipcsei kántor építi a Nyugat hangszékesegyházát."
+    "hook": "Egy lipcsei kántor megépíti a Nyugat hangkatedrálisát."
   },
   "sections": [
     {
@@ -18,97 +18,97 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Johann Sebastian Bach** (**1685**-**1750**) gyakran a nyugati zene csúcsának számít. A hangok építője tökéletesíti a **fúga** és a [[Ellenpont]] művészetét: több független dallamvonal, amelyek összefonódnak."
+          "text": "**Johann Sebastian Bachot** (**1685**-**1750**) gyakran a nyugati zene csúcsának tartják. Hangépítész volt: a **fúga** és az [[Ellenpont]] művészetét tökélyre vitte, független dallamvonalakat font össze."
         },
         {
           "type": "paragraph",
-          "text": "Az élete nem az udvari sztáré. Egy zseniális mesteremberé, aki az egyház és a fejedelmek szolgálatában áll, akinek munkásságát csak a 19. században fedeznék fel teljesen újra."
+          "text": "Az élete nem udvari sztárélet volt. Zseniális mesteremberé, az Egyház és a hercegek szolgálatában, akinek művét csak a 19. században fedezték fel igazán."
         }
       ]
     },
     {
       "id": "course_138_bach_et_la_musique_baroque_p1",
-      "title": "Barokk: templom, udvar és színpad",
+      "title": "A barokk: templom, udvar és színpad",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A **barokk** korszak körülbelül **1600**-től Bach haláláig tart. Szereti a kontrasztot, a mozgást, a díszt. **Vivaldi** Olaszországban, **Handel** Németországban, majd Angliában uralja a tájat. A zene három küldetést szolgál: a templomot (orgona és szent ének), a hercegek hálószobáját és a színpadot (opera)."
+          "text": "A **barokk** kor nagyjából **1600**-tól Bach haláláig tartott. Szerette a kontrasztot, a mozgást, a díszítést. **Vivaldi** Olaszországban, **Händel** Németországban, majd Angliában uralta a teret. A zene három urat szolgált: a templomot (orgona és szakrális ének), a hercegek kamaráját és a színpadot (opera)."
         },
         {
           "type": "paragraph",
-          "text": "Bach nem írt operákat, de lírai drámát oltott passióiba és oratóriumaiba. Szintetizálja a francia mértéket, az olasz lírát és a német szigort. Számára a zene isteni rendet tükröz, nem csak élvezetet."
+          "text": "Bach nem írt operát, de a drámáját Passióiba és oratóriumaiba öntötte. Francia mértéket, olasz lírát és német szigort ötvözött. Nála a zene isteni rendet tükrözött, nem csak kellemes hangot."
         },
         {
           "type": "funFact",
-          "text": "1717-ben Weimarban Bach egy hónapot töltött börtönben, mert túlságosan ragaszkodott a lemondáshoz: a herceg megtagadta, hogy Köthenbe utazzon."
+          "text": "1717-ben Weimarban Bach egy hónapot ült börtönben, mert túl erősen akart felmondani: a herceg nem engedte Köthenbe."
         }
       ]
     },
     {
       "id": "course_138_bach_et_la_musique_baroque_p2",
-      "title": "Lipcse: a kántor és kantátái",
+      "title": "Lipcse: a kántor és a kantátái",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bach **Eisenachban** **1685**-ben született zenészdinasztiában. Bach **1723**-ben telepedett le **Lipcse**-ben, mint [[kántor]] Szent Tamás-templom. Elsöprő terhelés: szinte minden héten egy új [[kantáta]], plusz tanítás a [[Thomasschule]]-ben."
+          "text": "**Eisenachban** született **1685**-ben, muzsikusdinasztiában. **1723**-ban **Lipcsébe** költözött, a Tamás-templom [[kántor]] tisztébe. A teher óriási volt: majdnem minden héten új [[kantáta]], plusz tanítás a [[Thomasschule]] iskolában."
         },
         {
           "type": "image",
           "asset": "bach_eisenach_birthplace_portrait",
           "ratio": "4:3",
-          "caption": "Bach, a német zenészek egy sorának örököse."
+          "caption": "Bach, egy német muzsikusdinasztia örököse"
         },
         {
           "type": "image",
           "asset": "leipzig_st_thomas_church_bach_cantor",
           "ratio": "4:3",
-          "caption": "Lipcsei Szent Tamás: Bach kántor mindennapjai."
+          "caption": "A lipcsei Tamás-templom: Bach kántorának mindennapja"
         },
         {
           "type": "paragraph",
-          "text": "Becslések szerint hozzávetőlegesen **300** kantáták készültek, amelyek közül néhány **200** eljutott hozzánk. **20** gyermekei vannak két házasságból; **Carl Philipp Emanuel** és **Johann Christian** maguk is jelentős zeneszerzők lettek. Este a [[Collegium Musicum]] együttest irányítja, amelyhez versenyműveket és világi szviteket ír."
+          "text": "Mintegy **300** kantátát írhatott, közülük körülbelül **200** maradt fenn. Két házasságból **20** gyermeke született. **Carl Philipp Emanuel** és **Johann Christian** maguk is nagy zeneszerzők lettek. Este a [[Collegium Musicum]] együttest vezette, amelynek versenyműveket és világi szvitjeit írta."
         },
         {
           "type": "funFact",
-          "text": "Élete végén John Taylor utazó sebész megműtötte a szemét, Bach nem sokkal a halála előtt megvakult."
+          "text": "Élete végén John Taylor vándorsebész megoperálta a szemét, és Bach nem sokkal a halála előtt megvakult."
         }
       ]
     },
     {
       "id": "course_138_bach_et_la_musique_baroque_p3",
-      "title": "A jól temperált clavier és az újrafelfedezés",
+      "title": "A jól temperált zongora és az újrafelfedezés",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A [[Egyenrangú temperamentum]], az intervallumokat egységesítő hangolási rendszerrel Bach bizonyítja, hogy egy billentyűzet minden billentyűn tud játszani. *Szép temperált billentyűzet* (48 prelúdium és fúga) megnyitja az utat a modern zene felé. Fúgája egy több hang által felvett témát rak egymásra: a matematikai építészetet."
+          "text": "Az [[Egyenrangú temperamentum]] hangolással, amely kiegyenlíti a hangközöket, Bach bebizonyította: egy billentyűs hangszer minden hangnemben játszhat. *A jól temperált zongora* (48 prelúdium és fúga) utat nyitott a modern zenének. Fúgáiban egy témát hangról hangra vesznek át: matematikai építészet."
         },
         {
           "type": "image",
           "asset": "bach_well_tempered_clavier_manuscript_fugue",
           "ratio": "4:3",
-          "caption": "A jól temperált billentyűzet: az összes hang egyetlen billentyűzeten."
+          "caption": "A jól temperált zongora: minden hangnem egy billentyűzeten"
         },
         {
           "type": "paragraph",
-          "text": "Amikor meghalt, a divat a könnyebb [[Galáns stílus]] részesítette előnyben. Bach „gótikusnak” tűnik. A **1829**-ben a fiatal **Felix Mendelssohn** vezényelte a *Szent Máté-passió* Berlinben: a „Bach-reneszánsz” kezdete. Nélküle több száz pontszám tűnt volna el."
+          "text": "Halála után a divat a könnyebb [[stílus gáláns]] felé fordult. Bach „gótikusnak” hangzott. **1829**-ben a fiatal **Felix Mendelssohn** Berlinben vezényelte a *Máté-passiót*: itt indult a „Bach-reneszánsz”. Nélküle százszámra tűnhettek volna el a kották."
         },
         {
           "type": "funFact",
-          "text": "Mendelssohn viccelődött: szükséges volt, hogy egy megtért zsidó és egy színész (barátja, Devrient) visszakerüljön a világba a keresztény zene legnagyobb mesterműve."
+          "text": "Mendelssohn tréfálkozott: kellett egy megtért zsidó és egy színész, a barátja, Devrient, hogy a keresztény zene legnagyobb remekét visszaadják a világnak."
         }
       ]
     },
     {
       "id": "course_138_bach_et_la_musique_baroque_p4",
-      "title": "SDG, utazás és egyetemes örökség",
+      "title": "SDG, Voyager és egyetemes örökség",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A buzgó evangélikus Bach gyakran írt alá **SDG** (*Soli Deo Gloria*: egyedül Istené a dicsőség). A [[számmisztika]]-vel játszik, és a nevét (B-A-C-H) kódolja a jegyzetekben. A **1977**-ben a NASA több munkáját elhelyezte a Voyager szondák [[Aranylemez]]: az emberiség űrbeli nagykövetsége."
+          "text": "Buzgó lutheránusként Bach gyakran írta alá: **SDG** (*Soli Deo Gloria*, egyedül Istené a dicsőség). Játszott a [[Számmisztika]] játékával, és a saját nevét (B-A-C-H) hangokba kódolta. **1977**-ben a NASA több művét tette a Voyager-szondák [[Aranylemez]] lemezére: hangkövetség az emberiségtől az űrbe."
         },
         {
           "type": "timeline",
@@ -116,28 +116,28 @@
             {
               "date": "1685",
               "title": "Születés Eisenachban",
-              "detail": "Egy zenészdinasztia adja Bachot a világnak."
+              "detail": "Egy muzsikusdinasztia adja Bachot a világnak."
             },
             {
               "date": "1723",
               "title": "Kántor Lipcsében",
-              "detail": "Heti kantáták és hatalmas szakrális munka."
+              "detail": "Heti kantáták és hatalmas szakrális életmű."
             },
             {
               "date": "1722-1742",
-              "title": "Jó temperált billentyűzet",
-              "detail": "Minden hang, a fúga, mint egy katedrális."
+              "title": "A jól temperált zongora",
+              "detail": "Minden hangnem, a fúga mint katedrális."
             },
             {
               "date": "1829",
               "title": "Mendelssohn",
-              "detail": "A Szent Máté-passió visszatér a fénybe."
+              "detail": "A Máté-passió újra fényre kerül."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Lipcse kántora, Bach a kontrapontot és a fúgát a csúcsra emelte; Mendelssohn elfelejtette, majd feltámasztotta, ő maradt a barokk építésze."
+          "text": "Lipcsei kántorként Bach a csúcsra vitte az ellenpontot és a fúgát. Elfeledték, aztán Mendelssohn hozta vissza. Ő maradt a barokk építőmestere."
         }
       ]
     }

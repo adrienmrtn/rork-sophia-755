@@ -1,14 +1,14 @@
 {
   "id": "course_182_osiris_et_set_mythologie_egyptienne",
-  "title": "Ozirisz és készlet (egyiptomi mitológia)",
+  "title": "Ozirisz és Széth (egyiptomi mitológia)",
   "subtitle": "Egyiptomi mitológia",
   "subject": "mythologie",
   "subcategory": "Other mythologies",
-  "description": "Gyilkosság, feldarabolás, múmia és bosszú: Ozirisz és Szet körforgása alapozta meg az egyiptomi királyságot és a halál utáni élet reményét.",
+  "description": "Gyilkosság, darabolás, múmia és bosszú: Ozirisz és Széth ciklusa az egyiptomi királyságot és a halál utáni élet reményét alapozza meg.",
   "hero": {
     "image": "osiris_et_set_mythologie_egyptienne",
     "ratio": "16:9",
-    "hook": "Egy testvér megöli a királyt, testét tizennégy darabra vágja. Egy nővére hozza össze. Egy fiú bosszút áll. Egész Egyiptom kiemelkedik ebből a bűnből."
+    "hook": "Egy fivér megöli a királyt, tizennégy darabra vágja. Egy nővér összerakja. Egy fiú bosszút áll. Egész Egyiptom ebből a bűnből születik."
   },
   "sections": [
     {
@@ -18,36 +18,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A **Ozirisz** és a **Készlet** ciklus az ókori Egyiptom nagyszerű története. Ez nem csak családi tragédia. Ez a harc a rend ([[Ma'at]], harmónia) és a steril káosz között."
+          "text": "**Ozirisz** és **Széth** ciklusa az ókori Egyiptom nagy története. Nem csak családi tragédia. Harc a rend ([[Ma'at]], a harmónia) és a meddő káosz között."
         },
         {
           "type": "paragraph",
-          "text": "Ozirisz meggyilkolása, feldarabolása és feltámadása révén az egyiptomiak a királyságra, a Nílus termékenységére és a halál utáni életre gondolnak. Minden élő fáraó **Horus**. Minden halott király **Ozirisz** lesz."
+          "text": "A gyilkosságon, a daraboláson és Ozirisz feltámadásán keresztül az egyiptomiak a királyságot, a Nílus termékenységét és a halál utáni életet gondolták végig. Minden élő fáraó **Hórusz**. Minden holt király **Ozirisz** lesz."
         }
       ]
     },
     {
       "id": "course_182_osiris_et_set_mythologie_egyptienne_p1",
-      "title": "A díszlet megöli Ozirist",
+      "title": "Széth megöli Oziriszt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Ozirisz** civilizálódó király. Nővérével, **Isis**-vel mezőgazdaságot és törvényeket tanít. Bátyja, **Készlet**, a sivatag és az erőszak istene gyűlöli őt. Egy banketten Set egy pompás ládát mutat be: annak ajánlja fel, aki tökéletesen illik hozzá."
+          "text": "**Ozirisz** civilizáló király. **Ízisszel**, nővérével és feleségével együtt tanítja a földművelést és a törvényt. Fivére, **Széth**, a sivatag és az erőszak istene, gyűlöli. Egy lakomán Széth pompás ládát mutat: annak adja, aki tökéletesen belefér."
         },
         {
           "type": "image",
           "asset": "osiris_egyptian_god_green_skin_painting",
           "ratio": "4:3",
-          "caption": "Zöld bőrű Ozirisz: nem a halál, hanem a növényzet újjászületése."
+          "caption": "Ozirisz zöld bőre: nem a halál, hanem az újjáéledő növényzet"
         },
         {
           "type": "paragraph",
-          "text": "Miután titokban megmérte Ozirisz, Set lefektesse, bezárja a ládát, ólommal lezárja és a Nílusba dobja. Később, amikor Isis megtalálja a holttestet, Set felvágja **14 darabra**, és szétszórja a völgyben. Ép test nélkül nincs béke a túlvilágon."
+          "text": "Széth titokban felmérte Ozirisz méreteit. Lefekteti, bezárja a ládát, ólommal lezárja, és a Nílusba dobja. Később, amikor Ízisz megtalálja a testet, Széth **14 darabra** vágja, és szétszórja a völgyben. Ép test nélkül nincs nyugalom a túlvilágon."
         },
         {
           "type": "funFact",
-          "text": "Ozirist gyakran festik zöldre. Ez a szín nem rothadást mond: újjászületést mond, mint a mezők a Nílus áradása után."
+          "text": "Oziriszt gyakran zöldre festik. A szín nem a rothadást jelenti. Az újjászületést jelenti, mint a földek a Nílus áradása után."
         }
       ]
     },
@@ -58,61 +58,61 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Isis**, a nagy bűvész, a töredékek keresésére indul. Nővére, Nephthys és [[Anubis]] isten segítségével minden helyen szentélyt emel, ahol talál egy darabot. Egy probléma maradt: a falloszt felfalta a [[Oxyrhynchus]] hal. Az Isis cserét készít."
+          "text": "**Ízisz**, nagy varázslónő, a darabok keresésére indul. Nővére, Nephthüsz és [[Anubis]] isten segítségével szentélyt emel minden helyen, ahol egy darabot megtalál. Egy gond marad: a hímtagot az [[Oxyrhynchus]] hal ette meg. Ízisz pótlást formáz."
         },
         {
           "type": "image",
           "asset": "isis_egyptian_goddess_winged_resurrection_painting",
           "ratio": "4:3",
-          "caption": "Ízisz kitárt szárnyakkal: a lehelet, amely feléleszti Ozirist."
+          "caption": "Ízisz kiterjesztett szárnyakkal: a lehelet, amely életre kelti Oziriszt"
         },
         {
           "type": "paragraph",
-          "text": "A darabok összegyűjtésével és csíkokba csomagolásával Ízisz és Anubisz létrehozza az első **múmiát**. Ízisz szárnycsapásával rövid életet lehelt Oziriszbe. Ekkor fogant meg **Horus**, a rend helyreállítására hivatott örökös."
+          "text": "A darabok összegyűjtésével és vászonba csavarásával Ízisz és Anubisz megalkotják az **első múmiát**. Egy szárnycsapással Ízisz rövid életet lehel Oziriszbe. Akkor esik teherbe **Hórusszal**, az örökössel, aki helyreállítja a rendet."
         },
         {
           "type": "funFact",
-          "text": "Egyes szövegek szerint Ízisz könnyei olyan bőségesek voltak, hogy az egyiptomiak látták bennük a Nílus éves áradatának mitikus eredetét."
+          "text": "Egyes szövegek szerint Ízisz könnyei a keresés alatt olyan bőségesek voltak, hogy az egyiptomiak ebben látták a Nílus évi áradásának mitikus eredetét."
         }
       ]
     },
     {
       "id": "course_182_osiris_et_set_mythologie_egyptienne_p3",
-      "title": "Horus megbosszulja apját",
+      "title": "Hórusz megbosszulja az apját",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A [[Khemmis]] mocsaraiban titokban nevelkedett **Horus** sólyom formájúvá nő. Felnőttként igényt tart a trónra az istenek törvényszéke előtt, amelynek elnöke [[D]]. A Settel való konfliktus évtizedekig tart: párbajok, trükkök, sérülések. Horus elveszti a szemét; Set elveszti termékenységét."
+          "text": "Titokban nevelkedik [[Khemmis]] mocsaraiban. **Hórusz** sólyom alakjában nő fel. Felnőttként a trónt követeli az istenek bírósága előtt, amelyet [[Ra]] elnököl. A Széthtel vívott harc évtizedekig tart: párbajok, csellek, sebek. Hórusz elveszít egy szemet. Széth elveszíti a termékenységét."
         },
         {
           "type": "image",
           "asset": "eye_of_horus_egyptian_symbol_protection",
           "ratio": "4:3",
-          "caption": "Hórusz szeme (Oudjat): a káoszból visszanyert integritás."
+          "caption": "Hórusz szeme (Udzsat): az épség, amelyet a káosztól nyertek vissza"
         },
         {
           "type": "paragraph",
-          "text": "A [[Thoth]] által újrakomponált szem a gyógyulás és védelem szimbólumává válik. Az istenek döntenek: Set szolgálatra van ítélve, nevezetesen a [[Apophis]] kígyó elleni küzdelem során a napelemes hajón. Hórusz megkoronázva. Ezentúl minden fáraó „élő Hórusz” lesz."
+          "text": "A szemet [[Thoth]] rakja össze, és a gyógyulás meg a védelem jelképe lesz. Az istenek ítélnek: Széth szolgálatra ítéltetik, mindenekelőtt az [[Apophis]] kígyó ellen a napbárkán. Hóruszt megkoronázzák. Ettől fogva minden fáraó „élő Hórusz” lesz."
         }
       ]
     },
     {
       "id": "course_182_osiris_et_set_mythologie_egyptienne_p4",
-      "title": "Ozirisz, a halottak bírája",
+      "title": "Ozirisz, a holtak bírája",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A mumifikálódott Ozirisz többé nem uralkodhat a földön. Ő lesz a **Amenti**, a holtak birodalmának uralkodója. Tekintete alatt zajlik a **Szív mérlegelése**, amelyet a [[A halottak könyve]] ismertet. Az elhunyt szíve egy mérlegre van helyezve, amely Ma'at tolla felé néz."
+          "text": "Múmiaként Ozirisz már nem uralkodhat a földön. Az **Amenti** ura lesz, a holtak birodalmáé. Tekintete alatt zajlik a **szív mérlegelése**, amelyet [[A halottak könyve]] ír le. A holt szívét Ma'at tollával szemben teszik a mérlegre."
         },
         {
           "type": "paragraph",
-          "text": "Ha a szív könnyű, az elhunytnak „jó a hangja”, és belép Ozirisz örökkévalóságába. Ha tele van hibával, a [[Lőszer]] szörnyeteg felfalja: a végérvényes feledés. A királyt és a parasztot azonos szempontok szerint ítélik meg. Hórusz irányítja a jelent; A többiről Osiris gondoskodik."
+          "text": "Ha a szív könnyű, a holt „igaz szavú”, és belép Ozirisz örökkévalóságába. Ha bűnökkel nehéz, az [[Ammit]] szörny felfalja: teljes feledés. Királyt és parasztot ugyanaz a mérték ítél. Hórusz a jelent viszi. Ozirisz a folytatásról gondoskodik."
         },
         {
           "type": "takeaway",
-          "text": "A **Ozirisz** és **Készlet** mítosza Egyiptom három pillérét állítja fel: a királyságot (élő Hórusz), a mumifikációt (ép test a túlvilágra) és a halál utáni igazságszolgáltatás reményét Ozirisz pillantása alatt."
+          "text": "**Ozirisz** és **Széth** mítosza Egyiptom három pillérét alapozza meg: a királyságot (az élő Hórusz), a mumifikálást (ép test a túlvilágra) és a halál utáni igazság reményét Ozirisz tekintete alatt."
         }
       ]
     }

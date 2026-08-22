@@ -1,14 +1,14 @@
 {
   "id": "course_173_ulysse_et_le_cyclope",
   "title": "Odüsszeusz és a küklopsz",
-  "subtitle": "Ravaszság kontra erő",
+  "subtitle": "A ravaszság az erő ellen",
   "subject": "mythologie",
   "subcategory": "Greece: the heroes",
-  "description": "Az Odüsszeiában Odüsszeusz szembeszáll a Polyphemus küklopszszal. [[nyolcad vér]] megmenti, de büszkesége magára vonzza Poszeidón haragját.",
+  "description": "Az Odüsszeiában Odüsszeusz Polüphemosz küklopsszal néz szembe. A [[Metis (ravaszság) a görög kultúrában]] megmenti, de a gőgje Poszeidón haragját hozza rá.",
   "hero": {
     "image": "ulysse_et_le_cyclope",
     "ratio": "16:9",
-    "hook": "Egy félszemű óriás falja fel embereit. Odüsszeusz nem nyerhet erőszakkal. Így kitalál egy nevet: Senki."
+    "hook": "Egy egyszemű óriás felfalja az embereit. Odüsszeusz nem győzhet erővel. Ezért nevet talál ki: Senki."
   },
   "sections": [
     {
@@ -18,97 +18,97 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A trójai háború után **Ulysses**, Ithaka szigetének királya megpróbál hazatérni. Homer elmeséli utazását a **Odüsszeia**-ben. A IX. dalban egy termékeny szigethez közelít, ahol a [[kleos]], félszemű magányos óriások élnek."
+          "text": "A trójai háború után **Odüsszeusz**, Ithaka szigetének királya, haza akar jutni. Homérosz az **Odüsszeiában** meséli el a bolyongását. A IX. énekben termékeny szigetre ér, ahol a [[Cyclopes]] élnek, magányos, egyszemű óriások."
         },
         {
           "type": "paragraph",
-          "text": "Ott találkozik **Polyphemus**-vel, **Poszeidón** tengeristen fiával. Az epizód nem csak egy szörnyeteg mese. Tanulság: [[nyolcad vér]], a ravasz intelligencia, képes legyőzni a nyers erőt. De [[önhittség]] a túlzott büszkeség mindent elronthat."
+          "text": "Ott találkozik **Polüphemoszszal**, **Poszeidón**, a tengeristen fiával. Az epizód nem csak szörnymese. Lecke: a [[Metis (ravaszság) a görög kultúrában]] legyőzheti a nyers erőt. De az [[önhittség]], a túlzó gőg, mindent tönkretehet."
         }
       ]
     },
     {
       "id": "course_173_ulysse_et_le_cyclope_p1",
-      "title": "Vendégszeretet remélt, barbárság talált",
+      "title": "Várt vendégszeretet, talált barbárság",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ulysses tizenkét társával érkezik. A küklopszoknak nincs gyűlésük, nincsenek törvényeik, nincs igazi mezőgazdaságuk. Barlangokban élnek. A görögök hisznek a [[xenia]]-ben: a szent kötelesség az idegenek fogadása Zeusz védelme alatt."
+          "text": "Odüsszeusz tizenkét társával szállt partra. A küklopszoknak nincs gyűlésük, nincs törvényük, nincs igazi földművelésük. Barlangokban élnek. A görögök a [[xenia]] szabályában hisznek: szent kötelesség befogadni az idegent, Zeusz védelme alatt."
         },
         {
           "type": "image",
           "asset": "cyclops_polyphemus_one_eye_greek_myth",
           "ratio": "4:3",
-          "caption": "Polyphemus, a küklopsz, a törvénytelen erő alakja."
+          "caption": "Polüphemosz, a küklopsz, a törvény nélküli erő alakja"
         },
         {
           "type": "paragraph",
-          "text": "A barlangban a férfiak sajtokat és marhákat látnak. A társak el akarnak menni. Odüsszeusz ragaszkodik ahhoz, hogy várja a mestert, és abban reménykedik, hogy gazdája ajándékot kap. Hiba. Polyphemus visszatér, egy hatalmas sziklával eltorlaszolja a bejáratot, és felfal két görögöt. Az erő nem lesz elég. Ravasznak kell lenni."
+          "text": "A barlangban a férfiak sajtot és jószágot láttak. A társak menni akartak. Odüsszeusz ragaszkodott, hogy megvárják a gazdát, vendégajándékban bízva. Hiba. Polüphemosz visszatért, hatalmas sziklával zárta a bejáratot, és két görögöt felfalt. Az erő nem lesz elég. Ravaszság kell."
         }
       ]
     },
     {
       "id": "course_173_ulysse_et_le_cyclope_p2",
-      "title": "Bor, tét és „senki”",
+      "title": "A bor, a karó és a „Senki”",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Odüsszeusz olajfát vág, Athénének, a bölcsesség istennőjének kedves fát. Elrejti. Aztán egy nagyon erős, szinte tiszta bort kínál Polyphemust. Az óriás berúg. Mielőtt elalszik, megkérdezi vendége nevét."
+          "text": "Odüsszeusz olajfakarót faragott, Athéné, a bölcsesség istennője fáját. Elrejtette. Aztán nagyon erős, szinte tiszta bort kínált Polüphemosznak. Az óriás berúgott. Elalvás előtt megkérdezte a vendége nevét."
         },
         {
           "type": "funFact",
-          "text": "Ulysses görögül azt mondja, hogy a neve **Outis**, „senki”. Ez a szó a **nyolcad vér**-t is, a ravaszságot idézi. Homérosz a kettős jelentésre játszik: valóban a csalás győzi le az óriást."
+          "text": "Görögül Odüsszeusz azt mondta, **Outisz** a neve, „Senki”. Ez a szó a **métiszre**, a ravaszságra is rímel. Homérosz a kettős jelentéssel játszik: a ravaszság győzi le az óriást."
         },
         {
           "type": "image",
           "asset": "ulysses_cyclops_blinding_stake_ancient_vase",
           "ratio": "4:3",
-          "caption": "Odüsszeusz és emberei megvakítják Polyphemust, a görög vázák híres jelenetét."
+          "caption": "Odüsszeusz és az emberei megvakítják Polüphemoszt, görög vázák híres jelenete"
         },
         {
           "type": "paragraph",
-          "text": "Ulysses azt válaszolja: „A nevem **Személy**. » Aztán az emberei az égő karót az egyetlen szemébe verik. A többi küklopsz futva jön. „Ki öl meg? » kérdezik. „Személy!” – válaszolja Polyphemus. Elmennek, az isteni gonoszra gondolva."
+          "text": "Odüsszeusz így felelt: „A nevem **Senki**.” Aztán az emberei az izzó karót az egyetlen szembe döfték. A többi küklopsz odasietett. „Ki öl meg?” kérdezték. „Senki!” válaszolta Polüphemosz. Elmentek, isteni bajra gondolva."
         }
       ]
     },
     {
       "id": "course_173_ulysse_et_le_cyclope_p3",
-      "title": "Menj ki a bárányok alá",
+      "title": "Kijutni a juhok alatt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Másnap vak Polyphemus őrzi a kijáratot. Minden birka hátát érzi. Ulysses a leggyapjasabb állatok hasa alá köti társait. Ő maga lóg a legnagyobb kos alatt. Az óriás úgy simogatja az állatot, hogy közben nem érzi az ellenséget."
+          "text": "Másnap a vak Polüphemosz őrizte a kijáratot. Minden juh hátát tapogatta. Odüsszeusz a társait a leggyapjasabb állatok hasa alá kötötte. Ő maga a legnagyobb kos alá kapaszkodott. Az óriás simogatta az állatot, és nem érezte az ellenséget pont alatta."
         },
         {
           "type": "paragraph",
-          "text": "A tengeren Ulysses nem tud ellenállni. Az igazi nevét, származását, városát kiáltja. A [[kleos]]-t akarja, azt a dicsőséget, amely a nevében él. Polyphemus végre átkozhat egy konkrét célpontot apjával, Poszeidónnal."
+          "text": "A tengeren Odüsszeusz nem bírta. Kiáltotta az igazi nevét, a származását, a városát. A [[kleos]] kellett neki, a dicsőség, amely a névvel él túl. Polüphemosz így pontos célt átkozhatott apjánál, Poszeidónnál."
         }
       ]
     },
     {
       "id": "course_173_ulysse_et_le_cyclope_p4",
-      "title": "Az átok, amely megnyitja az Odüsszeát",
+      "title": "Az átok, amely megnyitja az Odüsszeiát",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Polyphemus Poszeidónhoz imádkozik, hogy Ulysses soha ne érkezzen haza, vagy későn, egyedül, miután elvesztette összes társát. Ez az átok strukturálja az ezt követő tíz év vándorlást. A tenger büntetéssé válik."
+          "text": "Polüphemosz Poszeidónhoz imádkozott: Odüsszeusz soha ne érjen haza, vagy csak későn, egyedül, miután minden társát elvesztette. Ez az átok szerkeszti a következő tíz év bolyongását. A tenger büntetés lesz."
         },
         {
           "type": "image",
           "asset": "poseidon_god_sea_trident_greek",
           "ratio": "4:3",
-          "caption": "Poszeidón, a tenger istene megbosszulja fiát, Poliphemust."
+          "caption": "Poszeidón, a tenger istene, megbosszulja a fiát, Polüphemoszt"
         },
         {
           "type": "paragraph",
-          "text": "A mítosz két hősiességgel áll szemben. Az Iliászban az ember erővel és hírnévvel nyer. Az Odüsszeában a visszafogottság révén éljük túl. Odüsszeusz az esze révén győzött. A büszkeség miatt veszített, hogy elismerni akarta."
+          "text": "A mítosz két hősiességet állít szembe. Az Iliászban erővel és hírnévvel győzöl. Az Odüsszeiában önuralommal élsz túl. Odüsszeusz az eszével nyert. A gőgjével vesztett, mert fel akarta ismertetni magát."
         },
         {
           "type": "takeaway",
-          "text": "A Polyphemusszal szemben Ulysses a [[nyolcad vér]] és a „Személy” névnek köszönhetően diadalmaskodik. Azzal, hogy felfedi kilétét [[kleos]] számára, kiváltja Poszeidón haragját, és meghosszabbítja száműzetését."
+          "text": "Polüphemosz ellen Odüsszeusz a [[Metis (ravaszság) a görög kultúrában]] és a „Senki” név révén győz. Amikor a [[kleos]] kedvéért felfedi magát, kiváltja Poszeidón haragját, és meghosszabbítja a száműzetését."
         }
       ]
     }

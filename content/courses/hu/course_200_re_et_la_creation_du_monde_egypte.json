@@ -1,14 +1,14 @@
 {
   "id": "course_200_re_et_la_creation_du_monde_egypte",
-  "title": "Ra és a világ teremtése (Egyiptom)",
-  "subtitle": "A kreatív nap",
+  "title": "Ré és a világ teremtése (Egyiptom)",
+  "subtitle": "A teremtő nap",
   "subject": "mythologie",
   "subcategory": "Other mythologies",
-  "description": "Re, Egyiptom napistene: teremti a világot, minden nap átkel az égen, éjszaka harcol a káosszal, és Szemével bünteti az embereket.",
+  "description": "Ré, Egyiptom napistene: megteremti a világot, minden nap átszeli az eget, éjjel harcol a káosz ellen, és a Szemével bünteti az embereket.",
   "hero": {
     "image": "re_et_la_creation_du_monde_egypte",
     "ratio": "16:9",
-    "hook": "Minden hajnal győzelem. Ra hajója nélkül a világ a semmibe zuhanna."
+    "hook": "Minden hajnal győzelem. Ré bárkája nélkül a világ visszaesne a semmibe."
   },
   "sections": [
     {
@@ -18,101 +18,101 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A **D** (vagy Râ) nem csak a nap. **Heliopolis** egyiptomiak számára, a mai Kairóhoz közeli szoláris imádat városa számára ez a létezés alapelve: megteremteni a világot, majd minden éjjel megvédeni a semmitől."
+          "text": "**Ré** (vagy Rá) nem csak a nap. A **Héliopolisz**-i egyiptomiaknak, a napkultusz városának a mai Kairó közelében, ő maga a létezés elve: megteremteni a világot, aztán minden éjjel megvédeni a semmitől."
         },
         {
           "type": "paragraph",
-          "text": "Alakja három évezreden át keresztezte az államvallást. A Re megértése azt jelenti, hogy megértjük, hogyan gondolkodott Egyiptom az univerzum születéséről, a rend törékenységéről, és arról, hogy miért minden hajnal egy újra meghódítandó győzelem."
+          "text": "Három évezreden át alakja átszövi az állami vallást. Ré megértése annyi, mint megérteni, hogyan gondolta Egyiptom a világegyetem születését, a rend törékenységét, és miért minden hajnal újra megszerzendő győzelem."
         }
       ]
     },
     {
       "id": "course_200_re_et_la_creation_du_monde_egypte_p1",
-      "title": "A világ kialakulása: az ősgörcs",
+      "title": "A világ felbukkanása: az őshalom",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Idő előtt van **Főnév**: sötét, végtelen víz, csupa baktérium. A [[Héliopolita kozmogónia]] **Atum**, „aki elkészült” megjelenését írja le. Létrehozza magát, és a **Pierre Benben** első szilárd pontján jelenik meg."
+          "text": "Az idő előtt ott van a **Nun**: sötét, végtelen víz, csírákkal teli. A [[heliopolita kozmogónia]] **Atum** megjelenését írja le, „azt, aki kész”. Önmagát nemzi, és a **Benben-kövön** bukkan fel, az első szilárd ponton."
         },
         {
           "type": "image",
           "asset": "atum_primordial_egyptian_creation_benben",
           "ratio": "4:3",
-          "caption": "Az Atum a Benben-kő főnévből ered."
+          "caption": "Atum a Nunból emelkedik ki a Benben-kövön"
         },
         {
           "type": "funFact",
-          "text": "Héliopoliszban a papok egy szent madarat tartottak fenn, a **Bénou**-t (a főnix ősét), amely Ra lelke volt, és a Benbenen landolt, hogy új ciklust jelentsen be."
+          "text": "Héliopoliszban a papok szent madarat tartottak, a **Benut** (a főnix ősét), Ré lelkének hitték, és a Benbenre szállva új ciklust hirdetett."
         },
         {
           "type": "paragraph",
-          "text": "Az Atoum egyedül létrehozza a **Káposzta**-t (levegő) és a **Tefnut**-t (páratartalom), majd a **Geb**-t (Föld) és a **Dió**-t (Ég), amelyeket szétválasztva hagy életteret. **Ozirisz**, **Isis**, **Seth** és **Nephthys** születik: Atum mellett a **nagy Enneád** (a kilenc). A [[Egyiptomi isteni szinkretizmus]] később Atumot és Re-t egyetlen alkotó figurává egyesíti."
+          "text": "Egyedül Atum megteremti **Sut** (a levegőt) és **Tefnutot** (a nedvességet), aztán **Gebet** (a Földet) és **Nutot** (az Eget), akiket szétválaszt, hogy életnek legyen hely. Születik **Ozirisz**, **Ízisz**, **Széth** és **Nephthüsz**: Atummal együtt a **nagy Enneasz** (a kilenc). Az [[Egyiptomi isteni szinkretizmus]] később Atumot és Rét egyetlen teremtő alakban olvasztja össze."
         }
       ]
     },
     {
       "id": "course_200_re_et_la_creation_du_monde_egypte_p2",
-      "title": "A Maat az Isfet ellen: a hajó veszedelmes utazása",
+      "title": "A Maat az Isfet ellen: a bárka veszélyes útja",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Napközben Re a **Mandjet** hajón vitorlázik. Alkonyatkor áthalad a **Mesektet** felett, és átlépi a [[Duat]] tizenkét óráját, a holtak világát. Ez nem pihenés: ez háború a **Isfet**, a rendetlenség ellen."
+          "text": "Nappal Ré a **Mandzset** bárkán hajózik. Alkonyatkor átül a **Meszektet**re, és átszeli a [[Duat]] tizenkét óráját, a holtak világát. Ez nem pihenés: háború az **Isfet** ellen, a rendetlenség ellen."
         },
         {
           "type": "image",
           "asset": "ra_solar_barque_egyptian_hieroglyphics",
           "ratio": "4:3",
-          "caption": "Re napelemes hajója, az idő napi motorja."
+          "caption": "Ré napbárkája, az idő mindennapi motorja"
         },
         {
           "type": "funFact",
-          "text": "A 4. dinasztia korától kezdve szinte minden fáraó nevében szerepelt a „Re” név: „Re fiainak”, a napciklus garanciáinak nevezték magukat."
+          "text": "A 4. dinasztiától szinte minden fáraó viseli Ré nevét: „Ré fiának” mondják magukat, a napciklus kezesének."
         },
         {
           "type": "paragraph",
-          "text": "A kígyó **Apopis** arra törekszik, hogy felborítsa a csónakot, vagy megigya az égi Nílus vizét. **Seth** néha maga is védi az íjat. Amikor Ra hajnalban újjászületik **Khépri**, a szkarabeusz képében, ismét a **Maât** (egyenleg) nyer. Napfogyatkozás? Apopis majdnem nyert."
+          "text": "**Apóphisz** kígyó fel akarja borítani a bárkát, vagy meg akarja inni az égi Nílus vizét. **Széth** maga is védi néha az orrot. Amikor Ré hajnalban **Hepri**, a szkarabeusz alakjában újjászületik, a **Maat** (az egyensúly) győz újra. Napfogyatkozás? Apóphisz majdnem nyert."
         }
       ]
     },
     {
       "id": "course_200_re_et_la_creation_du_monde_egypte_p3",
-      "title": "Az emberek lázadása és a pusztító szem",
+      "title": "Az emberek lázadása és a pusztító Szem",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Még Ra is öregszik. A \"The Destruction of Man\" történetében a csontjai ezüstössé válnak, és az emberiség összeesküszik ellene. Sértődötten szabadjára engedi tüzes Szemét: [[Sekhmet]] istennő, vérszomjas oroszlán."
+          "text": "Még Ré is öregszik. Az „Emberek pusztítása” történetében csontjai ezüstté válnak, és az emberiség ellene szövetkezik. Megsértve rászabadítja izzó Szemét: [[Sekhmet]] istennőt, a vérszomjas oroszlánnőt."
         },
         {
           "type": "image",
           "asset": "sekhmet_hathor_lioness_egyptian_goddess",
           "ratio": "4:3",
-          "caption": "Sekhmet, a Re szeme, mielőtt újra Hathor lett volna."
+          "caption": "Sekhmet, Ré Szeme, mielőtt Hathorrá szelídül"
         },
         {
           "type": "paragraph",
-          "text": "A mészárlás a teremtés kioltásával fenyeget. A Rê több ezer korsó vörös okker színű sört főz, amelyeket a mezőkre öntenek. Sekhmet, aki azt hiszi, hogy vért iszik, részeg lesz és megnyugszik: ő lesz az édes **Hathor**. A mítosz megmagyarázza a rosszat, és igazolja a részegség ünnepét, ahol az emberek ittak, hogy megünnepeljék az emberek üdvösségét."
+          "text": "A mészárlás kiolthatja a teremtést. Ré ezer vörös okkerrel festett söröskorsót kevertet, és a földekre önteti. Sekhmet, azt hívén, vért iszik, berúg és megnyugszik: a szelíd **Hathor** lesz belőle. A mítosz magyarázza a rosszat, és igazolja a mámor ünnepét, ahol az emberek üdvéért ittak."
         }
       ]
     },
     {
       "id": "course_200_re_et_la_creation_du_monde_egypte_p4",
-      "title": "Az utókor és a fúzió: Amon-Re avatar",
+      "title": "Utóélet és összeolvadás: Ámon-Ré avatárája",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Az Új Királyságban a thébai isten, **Amon** egyesült Re: **Amon-Rê** született, „az istenek királya”, láthatatlan teremtő és látható nap. Számára emelkednek a legnagyobb szentélyek, mint a [[karnaki templom]]."
+          "text": "Az Újbirodalomban a thébai **Ámon** isten összeolvad Rével: megszületik **Ámon-Ré**, „az Istenek Királya”, láthatatlan teremtő és látható nap. Neki emelik a legnagyobb szentélyeket, például a [[karnaki templom]] együttesét."
         },
         {
           "type": "paragraph",
-          "text": "Piramisok és obeliszkek megkövesítik a napsugarakat, hogy a fáraót mennyei atyja felé emeljék. Még a **Ehnaton** reformja is, amely a **Aten** (a korong) kultuszát kényszerítette ki, radikalizált egy már szoláris eszmét. Ra továbbra is az egyiptomi stabilitás leküzdhetetlen szimbóluma."
+          "text": "Piramisok és obeliszkek megkövesítik a napsugarakat, hogy a fáraót égi apjához emeljék. Még **Ehnaton** reformja is, amely **Aton** (a korong) kultuszát kényszerítette ki, egy már napias gondolatot radikalizált. Ré marad az egyiptomi állandóság meghaladhatatlan jelképe."
         },
         {
           "type": "takeaway",
-          "text": "**D** megteremti a világot Heliopolisból, minden este megvédi azt a csónakjában **Apopis** ellen, és megbünteti, majd megmenti az emberiséget a Szemen keresztül **Sekhmet**. **Amon-Rê** néven a fáraók Egyiptomának csúcsán uralkodik."
+          "text": "**Ré** Héliopoliszból teremti a világot, minden éjjel megvédi bárkájában **Apóphisz** ellen, és a **Sekhmet** Szemen át bünteti, majd megmenti az emberiséget. **Ámon-Révé** válva a fáraók Egyiptomának csúcsán uralkodik."
         }
       ]
     }

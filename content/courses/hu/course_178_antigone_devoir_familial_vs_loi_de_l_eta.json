@@ -1,14 +1,14 @@
 {
   "id": "course_178_antigone_devoir_familial_vs_loi_de_l_eta",
-  "title": "Antigoné: családi kötelesség kontra állami jog",
-  "subtitle": "Lelkiismeret kontra rendelet",
+  "title": "Antigoné: családi kötelesség vagy az állam törvénye",
+  "subtitle": "Lelkiismeret a rendelet ellen",
   "subject": "mythologie",
   "subcategory": "Greece: the heroes",
-  "description": "Antigoné Kreón király parancsa ellenére eltemeti testvérét. Sophoklész olyan konfliktust vet fel, amely még mindig aktuális: államjog vagy magasabb erkölcsi kötelesség?",
+  "description": "Antigoné eltemeti a fivérét Kreón király parancsa ellenére. Szophoklész olyan konfliktust állít elénk, amely ma is él: az állam törvénye, vagy egy magasabb erkölcsi kötelesség?",
   "hero": {
     "image": "antigone_devoir_familial_vs_loi",
     "ratio": "16:9",
-    "hook": "A király megtiltja áruló eltemetését. Egy nővér nem engedelmeskedik. Két igazságszolgáltatás összecsap, Théba összeomlik."
+    "hook": "Egy király megtiltja, hogy eltemessenek egy árulót. Egy nővér engedetlen. Két igazság ütközik, és Théba összeomlik."
   },
   "sections": [
     {
@@ -18,101 +18,101 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Antigone** Oidipusz és Jocasta lánya. A **Kr.e. 441 és Kr.e.**, a tragikus **Szophoklész** egy egyetemessé vált színdarab hősnőjévé tette."
+          "text": "**Antigoné** Oidipusz és Iokaszté lánya. Kb. i. e. **441**-ben **Szophoklész** tette hősnővé egy darabban, amely egyetemes lett."
         },
         {
           "type": "paragraph",
-          "text": "**Creon** királlyal szemben egy évszázadokon átívelő kérdést tesz fel: amikor egy állami törvény ellentmond egy magasabb erkölcsi meggyőződésnek, engedelmeskedjünk vagy ellenálljunk? Itt nem a jó a rossz ellen. Ez az igazságosság két eszméje, amelyek ütköznek."
+          "text": "**Kreón** királlyal szemben olyan kérdést tesz fel, amely évszázadokon át megy: ha az állam törvénye magasabb erkölcsi meggyőződéssel ütközik, engedelmeskedsz, vagy ellenállsz? Itt nem a jó áll a rosszal szemben. Két igazságfogalom csap össze."
         }
       ]
     },
     {
       "id": "course_178_antigone_devoir_familial_vs_loi_de_l_eta_p1",
-      "title": "Két halott testvér, kegyetlen rendelet",
+      "title": "Két holt fivér, egy kegyetlen rendelet",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Théba]]-ben Oidipusz száműzetése után fiainak, **Eteocle** és **Polyneices** sorra kellett uralkodniuk. Eteoklész nem hajlandó megadni magát. Polüneikész idegen hadsereggel támadja meg saját városát. A két testvér megöli egymást."
+          "text": "[[Théba]] városában, Oidipusz száműzetése után, a fiai, **Eteoklész** és **Polüneikész** felváltva kellett volna uralkodjanak. Eteoklész nem adja át a hatalmat. Polüneikész idegen sereggel támad a saját városára. A két fivér egymást öli meg."
         },
         {
           "type": "image",
           "asset": "antigone_creon_thebes_greek_tragedy",
           "ratio": "4:3",
-          "caption": "Antigoné Kreónnal szemben: családi jámborság az államrend ellen."
+          "caption": "Antigoné Kreón előtt: családi jámborság az állami parancs ellen"
         },
         {
           "type": "paragraph",
-          "text": "Kreón, a nagybátyjuk átveszi a hatalmat. Eteoklész, a város védelmezője ünnepélyes temetést tart. Polyneices, akit árulóként kezeltek, temetetlen marad. A görögök számára ez rémisztő: rítus nélkül a lélek pihenés nélkül bolyong a [[Styx]], az Alvilág folyója közelében."
+          "text": "Kreón, a nagybátyjuk, magához veszi a hatalmat. Eteoklész, a város védője, ünnepélyes temetést kap. Polüneikészt árulónak kezelik, sírja sem lesz. A görögöknek ez rémisztő: rítus nélkül a lélek a [[Styx]] mellett bolyong, az alvilág folyójánál, és soha nem nyugszik meg."
         },
         {
           "type": "funFact",
-          "text": "Egy marék föld szimbolikusan elég volt a temetési szertartás befejezéséhez. Antigoné tette diszkrét... és tele van következményekkel."
+          "text": "Egy marék föld szimbolikusan elég volt a temetési rítushoz. Antigoné tette csendes, a következménye mégis hatalmas."
         }
       ]
     },
     {
       "id": "course_178_antigone_devoir_familial_vs_loi_de_l_eta_p2",
-      "title": "Temetni a tilalom ellenére",
+      "title": "Eltemetni a tilalom ellenére",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Antigoné visszautasítja. Nem tagadja Polüneikész árulását. Kimondja, hogy egyetlen király sem törölheti el a halottakkal szembeni kötelességeit. A nővére, **Ismène** tétovázik, óvatos. Az Antigoné egyedül hat, és befedi a testet."
+          "text": "Antigoné nemet mond. Nem tagadja, hogy Polüneikész elárulta a várost. Azt állítja, hogy egy király sem törölheti el, ami a halottaknak jár. A nővére, **Iszméné**, óvatosan habozik. Antigoné egyedül cselekszik, és földdel fedi a testet."
         },
         {
           "type": "image",
           "asset": "antigone_burying_polynices_ancient_greek_painting",
           "ratio": "4:3",
-          "caption": "Antigoné Polyneices temetési szertartását végrehajtva."
+          "caption": "Antigoné elvégzi a temetési rítust Polüneikészért"
         },
         {
           "type": "paragraph",
-          "text": "Kreón előtt [[Természeti törvény]]: „íratlan és megváltoztathatatlan” törvények, régebbi, mint emberi rendeletek. Kreón ezt az állam fenyegetésének tartja. Elítéli, hogy élve befalazzák."
+          "text": "Kreón előtt a [[Természeti törvény]] nevében beszél: „íratlan és rendíthetetlen” szabályokról, amelyek régebbiek minden emberi rendeletnél. Kreón az államot látja veszélyben. Élve falaztatja be."
         }
       ]
     },
     {
       "id": "course_178_antigone_devoir_familial_vs_loi_de_l_eta_p3",
-      "title": "Amikor a rugalmatlanság mindent tönkretesz",
+      "title": "Amikor a merevség mindent tönkretesz",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Haemon**, Kreón fia és Antigoné vőlegénye, okoskodni próbál az apjával. Kreón elzárkózik. A jós **Tirésias** az istenek haragját hirdeti: a várost beszennyezi az elhagyott holttest és Antigoné bebörtönzése."
+          "text": "**Haimón**, Kreón fia és Antigoné vőlegénye, megpróbálja józanítani az apját. Kreón bezárkózik. **Teiresziasz** jós az istenek haragját jelenti: a várost beszennyezi az elhagyott holttest és Antigoné bebörtönzése."
         },
         {
           "type": "image",
           "asset": "haemon_antigone_tomb_death_tragedy_painting",
           "ratio": "4:3",
-          "caption": "A sírnál túl későn: a tragédia elviszi Antigonét és Haemont."
+          "caption": "A sírnál, túl későn: a tragédia elviszi Antigonét és Haimónt"
         },
         {
           "type": "paragraph",
-          "text": "Kreón végre megadja magát, túl későn. Antigoné felakasztotta magát. Haemon öngyilkos lesz. **Eurydice**, Kreón felesége megöli magát. Kreón, amikor meg akarta menteni a törvényt, tönkretette a családját. Egyedül marad, egy kiüresedett rend királya."
+          "text": "Kreón végül enged, túl későn. Antigoné felakasztotta magát. Haimón öngyilkos lesz. **Eurüdiké**, Kreón felesége, szintén megöli magát. A törvényt akarta menteni, és a családját pusztította el. Egyedül marad, egy üressé vált rend királya."
         }
       ]
     },
     {
       "id": "course_178_antigone_devoir_familial_vs_loi_de_l_eta_p4",
-      "title": "Folyamatosan újraolvasott politikai mítosz",
+      "title": "Politikai mítosz, amelyet mindig újraolvasnak",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Szophoklész nem teszi Kreónt egyszerű gazemberré. Ő egy vezető, aki el akarja kerülni a káoszt. Az Antigoné rendkívül merev. A [[Antigoné hegeli dialektikája]] két szféra ütközését látja: a család a város ellen."
+          "text": "Szophoklész nem csinál egyszerű gonosztevőt Kreónból. Vezető, aki a káoszt akarja távol tartani. Antigoné viszont teljesen merev. [[Antigoné hegeli dialektikája]] két szféra ütközését látja benne: a családot a város ellen."
         },
         {
           "type": "funFact",
-          "text": "1944-ben a [[Jean Anouilh: Antigoné (1944)]] a megszállás alatt készült. A német cenzúra Kreón parancsának tekintette; a francia közvélemény gyakran olvassa ott az ellenállás hősiességét."
+          "text": "**1944**-ben [[Jean Anouilh: Antigoné]] került színre a megszállás alatt. A német cenzúra Kreón rendjét látta benne. A francia közönség gyakran az ellenállás hősiességét olvasta ki belőle."
         },
         {
           "type": "paragraph",
-          "text": "Az egyéni lelkiismeret és az állami ész közötti konfliktus továbbra is a politikai gondolkodás középpontjában áll. Az Antigoné emlékeztet bennünket, hogy az abszolút igazságosság párbeszéd nélkül elpusztíthatja azokat, akiket megvédeni szeretne."
+          "text": "Az egyéni lelkiismeret és az államérdek összeütközése ma is a politikai gondolkodás közepén van. Antigoné emlékeztet: a párbeszéd nélküli abszolút igazság azokat is elpusztíthatja, akiket védeni akar."
         },
         {
           "type": "takeaway",
-          "text": "Antigoné szembehelyezkedik a család szent törvényeivel Kreón rendeletével. A megalkuvás kölcsönös megtagadása tönkreteszi Thébát és a királyi nemzetséget."
+          "text": "Antigoné a család szent törvényeit állítja Kreón rendeletével szemben. A kompromisszum közös elutasítása tönkreteszi Thébát és a királyi házat."
         }
       ]
     }

@@ -4,11 +4,11 @@
   "subtitle": "1818",
   "subject": "litterature",
   "subcategory": "Anglo-Saxons & world literature",
-  "description": "1818-ban a 18 éves Mary Shelley megírta az első nagy tudományos-fantasztikus regényt. Victor Frankenstein életet teremt, majd elmenekül teremtménye elől: egy mese az etika nélküli tudományról.",
+  "description": "1818-ban a 18 éves Mary Shelley megírta az első nagy sci-fi regényt. Victor Frankenstein életet teremt, aztán elmenekül a lénye elől: mese a lelkiismeret nélküli tudományról.",
   "hero": {
     "image": "frankenstein_mary_shelley",
     "ratio": "16:9",
-    "hook": "Egy viharos éjszaka, egy fogadás költők között és a modern Prométheusz mítosza."
+    "hook": "Egy viharos éjszaka, egy fogadás költők között, és a modern Prométheusz mítosza."
   },
   "sections": [
     {
@@ -18,74 +18,74 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A **1818**-ben megjelent **Frankenstein a Modern Prometheushoz megy** az első nagyobb **sci-fi**-regény. **Mary Shelley** csak **18 volt eve**, amikor megírta, a **[[Romantika]]** noir és kora tudományos vitáinak metszéspontjában."
+          "text": "**1818**-ban jelent meg a **Frankenstein, avagy a modern Prométheusz**, az első nagy **tudományos-fantasztikus** regény. **Mary Shelley** csak **18** éves volt, amikor megírta, a sötét **[[Romantika]]** és kora tudományos vitáinak találkozásánál."
         },
         {
           "type": "paragraph",
-          "text": "Victor Frankenstein és névtelen lénye nem csak gótikus horror karakterek. Tartós kérdést tesznek fel: mi történik azzal a tudattal, amelyet létrehozunk, majd elhagyunk? A regény megkérdőjelezi a **[[Az alkotó felelőssége (Modern Prometheus)]]**: nem tudunk életet teremteni anélkül, hogy felelősséget ne vállalnánk az utóhatásokért."
+          "text": "Victor Frankenstein és a névtelen lénye több, mint gótikus horrorfigura. Tartós kérdést tesznek fel: mi lesz abból a tudatból, amelyet gyártanak, aztán elhagynak? A regény **[[Az alkotó felelőssége (Modern Prometheus)]]** kérdését méri: nem teremthetsz életet anélkül, hogy a folytatását is vállalnád."
         }
       ]
     },
     {
       "id": "course_106_frankenstein_mary_shelley_p1",
-      "title": "A Genfi-tó laboratóriuma: apokaliptikus genezis",
+      "title": "A genfi-tavi laboratórium: apokaliptikus születés",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A **1816**-ben az indonéziai **Tambora** vulkán kitörése Európát **[[Év nyár nélkül (1816)]]**: szürke ég, elveszett termés, apokaliptikus hangulat. Mary Shelley a **Villa Diodati** szálláshelyen tartózkodik a Genfi-tónál **Percy Shelley** és **Lord Byron** társaságában. Az unalom enyhítésére Byron ijesztő történetversenyt ajánl fel."
+          "text": "**1816**-ban az indonéziai **Tambora** kitörése **[[Év nyár nélkül (1816)]]** állapotába taszította Európát: szürke ég, tönkrement termés, világvége hangulat. Mary Shelley a **Villa Diodatiban** szállt meg, a Genfi-tó partján, **Percy Shelley** és **Lord Byron** társaságában. Az unalom ellen Byron ijesztő történetek versenyét javasolta."
         },
         {
           "type": "image",
           "asset": "mary_shelley_portrait_painting",
           "ratio": "4:3",
-          "caption": "Mary Shelley, egy mítosz szerzője, amely messze túlmutat a gótikus horroron."
+          "caption": "Mary Shelley, egy mítosz szerzője, amely messze túlnyúlik a gótikus horroron"
         },
         {
           "type": "image",
           "asset": "lake_geneva_villa_diodati_storm",
           "ratio": "16:9",
-          "caption": "Villa Diodati: Frankenstein születése az 1816-os viharban."
+          "caption": "A Villa Diodati: Frankenstein születése az 1816-os viharokban"
         },
         {
           "type": "funFact",
-          "text": "John Polidori, Byron orvosa szintén Diodatiban írta a modern vámpír alapító szövegét, Drakula előtt."
+          "text": "John Polidori, Byron orvosa, Diodatinál írta meg a modern vámpír alapregényét is, jóval Dracula előtt."
         },
         {
           "type": "paragraph",
-          "text": "Mary Shelley-t a **[[Galvánosság]]** ihlette, ezek a kísérletek, amelyek mintha felébresztették volna a holttestek izmait. Álmában egy diákot lát egy lény előtt, amely életre kel a szeme előtt. A résztvevők között egyedül látja a fogadást a végéig, és remekművet készít."
+          "text": "Mary Shelley **[[galvánosság]]** kísérleteiből merített, amelyek holttestek izmait látszottak felébreszteni. Éber álomban egy diákot látott a lény előtt, amely a szeme láttára kelt életre. A vendégek közül egyedül vitte végig a fogadást, és remekművet írt."
         }
       ]
     },
     {
       "id": "course_106_frankenstein_mary_shelley_p2",
-      "title": "Victor Frankenstein vagy tudományos hübrisz",
+      "title": "Victor Frankenstein, avagy a tudományos önhittség",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Viktor Frankenstein** megtestesíti a **[[Önhittség]]**: az ambíciót, amely szembeszáll a természetes renddel. **Ingolstadt**-ben az „élet titkát” keresi, nem azért, hogy meggazdagodjon, hanem hogy **Modern Prométheusz** legyen, mint a görög titán, aki tüzet lopott az istenektől. Amikor a teremtménye felébred, az álom azonnal rémálommá változik."
+          "text": "**Victor Frankenstein** **[[Önhittség]]** alakja: a természet rendjét megvető ambíció. **Ingolstadtban** az „élet titkát” keresi, nem azért, hogy gazdag legyen, hanem hogy **modern Prométheusz** legyen, mint a görög titán, aki ellopta az istenek tüzét. Amikor a lénye felébred, az álom azonnal rémálomba fordul."
         },
         {
           "type": "image",
           "asset": "frankenstein_monster_illustration_1831",
           "ratio": "4:3",
-          "caption": "Shelley teremtménye: ijesztő, de mindenekelőtt ékesszóló és tudatos."
+          "caption": "Shelley lénye: ijesztő, de mindenekelőtt ékesszóló és tudatos"
         },
         {
           "type": "paragraph",
-          "text": "Victor undorodva menekül az általa alkotott csúfság elől. Elhagyja mesterséges „fiát”: ez a gyávaság, több, mint maga a teremtés az, ami kiváltja a tragédiát. Shelley megmutatja, hogy a lelkiismeret nélküli tudomány éppúgy elítéli az alkotót, mint az elutasított teremtményt."
+          "text": "Victor undorodva menekül attól, amit csinált. Elhagyja a mesterséges „fiát”: ez a gyávaság indítja el a tragédiát, nem maga a teremtés. Shelley megmutatja, hogy a lelkiismeret nélküli tudomány a teremtőt is elítéli, nemcsak az elutasított lényt."
         }
       ]
     },
     {
       "id": "course_106_frankenstein_mary_shelley_p3",
-      "title": "A teremtmény felébredése: Névtelen tudat",
+      "title": "A lény ébredése: tudat név nélkül",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A regény eredetisége a lény hangjában rejlik. Intelligens és ékesszóló, úgy tanult, hogy egy parasztcsaládot megfigyelt, és elolvasta a **Milton** **[[Elveszett paradicsom]]**. A **[[Tabula rasa]]** szerint „jónak” született, és úgy látja, hogy megrontja magát a férfiak erőszakos elutasítása."
+          "text": "A regény eredetisége a lény hangjában van. Okos és ékesszóló, egy parasztcsaládot figyelve tanul, és **Milton** **[[Elveszett paradicsom]]** művét olvassa. „Jónak” született, filozófiai **[[Tabula rasa]]** értelemben, aztán minden ember erőszakos elutasítása rontja el."
         },
         {
           "type": "quote",
@@ -94,26 +94,26 @@
         },
         {
           "type": "paragraph",
-          "text": "Társat kér, hogy többé ne szenvedjen egyedül; Victor félelemből visszautasítja. Ezért mindent elpusztít, amit a férfi szeret, hogy saját magányába süllyeszthesse. A regény a **[[Társadalmi determinizmus]]**: a társadalom olykor a különbözőek kizárásával hozza létre szörnyeit."
+          "text": "Társat kér, hogy ne szenvedjen egyedül. Victor félelemből nemet mond. A lény ezért mindent elpusztít, amit szeret, hogy magányát a magáéhoz mérje. A regény **[[társadalmi determinizmus]]** elmélkedéssé válik: a társadalom néha úgy gyártja a szörnyeit, hogy kirekeszti a mást."
         }
       ]
     },
     {
       "id": "course_106_frankenstein_mary_shelley_p4",
-      "title": "Modern mítosz és egyetemes utódai",
+      "title": "Modern mítosz és egyetemes utóélet",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A regény a **Sarkvidéki**-vel végződik, Victor halott, a lény eltűnik a ködben, és megígéri, hogy megsemmisíti magát. Manapság a „Frankenstein” minden olyan technológiát jelent, amely elkerüli feltalálóját: GMO-k, mesterséges intelligencia, géntechnológia. Shelley előre látja a **[[Poszthumanizmus]]**."
+          "text": "A regény az **Északi-sarkon** ér véget: Victor halott, a lény ködbe vész, és megígéri, hogy elpusztítja magát. Ma „Frankenstein” minden olyan technológiát jelöl, amely kicsúszik a feltalálója kezéből: génmódosított növények, mesterséges intelligencia, génszerkesztés. Shelley **[[Poszthumanizmus]]** korát látta előre."
         },
         {
           "type": "funFact",
-          "text": "A populáris kultúrában a szörnyet gyakran „Frankensteinnek” nevezik. A valóságban Frankenstein a teremtő: a lénynek nincs neve, Victor apasági tagadásának a jele."
+          "text": "A köznyelv gyakran „Frankensteinnek” hívja a szörnyet. Valójában Frankenstein a teremtő: a lénynek nincs neve, jele annak, hogy Victor nem vállalta az apaságot."
         },
         {
           "type": "takeaway",
-          "text": "A **Frankenstein** arra emlékeztet bennünket, hogy nem tudunk életet teremteni anélkül, hogy felelősséget ne vállalnánk a következményeiért. Az igazi szörnyeteg nem a csúnyaság, hanem annak elhagyása, amit szültünk."
+          "text": "**Frankenstein** emlékeztet: nem teremthetsz életet anélkül, hogy a folytatását is vállalnád. Az igazi szörny nem a rútság, hanem hogy otthagyod, amit a világra hoztál."
         }
       ]
     }

@@ -1,14 +1,14 @@
 {
   "id": "course_193_quetzalcoatl",
   "title": "Quetzalcoatl",
-  "subtitle": "A tollas kígyó",
+  "subtitle": "A Tollas Kígyó",
   "subject": "mythologie",
   "subcategory": "Other mythologies",
-  "description": "Quetzalcoatl, a tollas kígyó, a mezoamerikai civilizáció istene. Mítosza ötvözi a teremtést, a száműzetést és a végzetes találkozást Cortésszel.",
+  "description": "Quetzalcoatl, a Tollas Kígyó, a mezoamerikai civilizáció istene. Mítosza teremtést, száműzetést és a Cortésszel való végzetes találkozást keveri.",
   "hero": {
     "image": "quetzalcoatl",
     "ratio": "16:9",
-    "hook": "Isten, király és prófécia: a tollas kígyó kétezer éves mexikói történelmet ölel fel."
+    "hook": "Isten, király és jóslat: a Tollas Kígyó kétezer év mexikói történelmen megy át."
   },
   "sections": [
     {
@@ -18,61 +18,61 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Quetzalcoatl**, a „tollas kígyó”, a Kolumbusz előtti Mexikó egyik leggazdagabb alakja. Több mint két évezrede tisztelik, [[Teotihuacán]], a központi fennsíkon található nagyvárostól az aztékokig, a maják között pedig [[Kukulkán]] néven."
+          "text": "**Quetzalcoatl**, a „Tollas Kígyó”, a gyarmatosítás előtti Mexikó egyik leggazdagabb alakja. Több mint két évezreden át imádják, [[Teotihuacán]] városától, a fennsík nagy központjától az aztékokig, a majáknál pedig [[Kukulkán]] néven."
         },
         {
           "type": "paragraph",
-          "text": "Egyesíti a földet (a kígyót) és az eget (a tollat). A civilizáció, a tudás és az erkölcsi rend istene, mítosza végül keresztezi a valós történelmet: **1519** spanyol hódítással."
+          "text": "Egyesíti a földet (a kígyót) és az eget (a tollat). A civilizáció, a tudás és az erkölcsi rend istene. Mítosza végül a valós történelemmel kereszteződik: a spanyol hódítással **1519**-ben."
         }
       ]
     },
     {
       "id": "course_193_quetzalcoatl_p1",
-      "title": "Az isten, aki feltalálta a kukoricát",
+      "title": "Az isten, aki feltalálja a kukoricát",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A [[Nahuatl]]-ben a **Quetzalcoatl** a [[szuruku]] zöld tollú madártól és a *coatl*-től, a kígyótól származik. Ez az egyesülés teszi hidat az emberi és az isteni között."
+          "text": "A [[Nahuatl]] nyelvben a **Quetzalcoatl** a [[szuruku]], a zöld tollú madár, és a *coatl*, a kígyó szavakból áll. Ez az unió teszi híddá ember és isten között."
         },
         {
           "type": "image",
           "asset": "quetzalcoatl_feathered_serpent_aztec_sculpture",
           "ratio": "4:3",
-          "caption": "Quetzalcoatl, a tollas kígyó: föld és ég összefonódik."
+          "caption": "Quetzalcoatl, a Tollas Kígyó: föld és ég egymásba fonódik"
         },
         {
           "type": "paragraph",
-          "text": "A [[Öt Nap kozmogónia]]-ben leereszkedik [[Mictlán]]-be, a halottak világába, hogy összegyűjtse a múltbeli emberek csontjait. Vérével kelti őket életre. Aztán ellopja a hangyáktól a **kukorica**-t: Mexikó alapító táplálékát. A szél isteneként utat nyit [[Tlaloc]] esőinek is."
+          "text": "Az [[Öt Nap kozmogónia]] szerint leszáll a [[Mictlán]] birodalmába, a holtak világába, hogy visszaszerezze a korábbi emberek csontjait. A saját vérével ad nekik életet. Aztán ellopja a hangyáktól a **kukoricát**: Mexikó alapételét. Szélistenként utat nyit [[Tlaloc]] esőinek is."
         },
         {
           "type": "funFact",
-          "text": "A quetzal farktollai **60 cm** méretűek. A maják és aztékok körében halállal büntették a madár megölését: néhány tollat ​​elvettek tőle, majd elengedték."
+          "text": "A quetzal faroktollai **60 cm** hosszúak is lehetnek. A majáknál és az aztékoknál a madár megölése halállal járt: néhány tollat vettek le róla, aztán elengedték."
         }
       ]
     },
     {
       "id": "course_193_quetzalcoatl_p2",
-      "title": "Tula király-papja",
+      "title": "Tula királypapja",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A mítosznak történelmi arca is van: **Topiltzin Quetzalcoatl**, **Tula** király-papja a 10. században. Szerette volna megreformálni a kultuszt, és az emberáldozatokat virág- és pillangófelajánlással váltotta volna fel."
+          "text": "A mítosznak történelmi arca is van: **Topiltzin Quetzalcoatl**, **Tula** királypapja a 10. században. A hagyomány szerint reformálni akarta a kultuszt, és az emberi áldozatokat virág- és pillangóáldozatokkal cserélte volna fel."
         },
         {
           "type": "image",
           "asset": "tula_toltec_pyramid_warriors_sculpture_mexico",
           "ratio": "4:3",
-          "caption": "Tula, Quetzalcoatl uralkodásához és bukásához kapcsolódó tolték város."
+          "caption": "Tula, a tolték város, Quetzalcoatl uralmához és bukásához kötve"
         },
         {
           "type": "paragraph",
-          "text": "Riválisa, **Tezcatlipoca** arra készteti, hogy igyon pulque-t, egy fermentált italt. Megalázva a királyt keletre száműzték. A legenda szerint megígéri, hogy egy évre visszatér „Un Reed”. Ennek az ígéretnek súlya lesz."
+          "text": "Riválisa, **Tezcatlipoca**, pulquéra itatja, erjesztett italra. Megalázva a király keletre száműzi magát. A legenda szerint megígéri, hogy egy „Egy Nád” évben visszatér. Ez az ígéret később sokat nyom."
         },
         {
           "type": "funFact",
-          "text": "Távozása után Quetzalcoatl néha Hajnalcsillaggá válik: a Vénusz bolygóvá. Az isten nem hal meg, alakot vált."
+          "text": "Távozása után Quetzalcoatl hol a Hajnalcsillag lesz: a Vénusz bolygó. Az isten nem hal meg, alakot vált."
         }
       ]
     },
@@ -83,17 +83,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A **1519**-ben **Hernán Cortés** keletre érkezik, az azték naptár „Egy nád” évébe, abban az évben, amikor az isten visszatérését várták. **Moctezuma II** császár tétovázik: harcoljunk egy betolakodóval, vagy fogadjunk egy istenséget?"
+          "text": "**1519**-ben **Hernán Cortés** keleten száll partra, az azték naptár „Egy Nád” évében, amikor az isten visszatérését várták. **II. Moctezuma** császár habozik: hódítót kell ütni, vagy istenséget fogadni?"
         },
         {
           "type": "image",
           "asset": "herna_u0301n_corte_u0301s_arrival_mexico_1519_moctezuma_painting",
           "ratio": "4:3",
-          "caption": "1519: Cortés érkezése találkozik az isteni visszatérés ígéretével."
+          "caption": "1519: Cortés érkezése keresztezi az isteni visszatérés ígéretét"
         },
         {
           "type": "paragraph",
-          "text": "Aranyat és tollat ​​küld ajándékba. A [[Konkvisztádorok]] ezt meghívásnak tekinti. A mítosz, igaz vagy utólag felerősítve, pszichológiai fegyverré válik [[Tenochtitlán]], az azték főváros őszén."
+          "text": "Aranyat és tollat küld ajándékba. A [[Konkvisztádorok]] meghívásnak veszik. A mítosz, igaz vagy utólag felnagyított, lélektani fegyver lesz [[Tenochtitlán]], az azték főváros bukásában."
         },
         {
           "type": "timeline",
@@ -101,17 +101,17 @@
             {
               "date": "Mítosz",
               "title": "Teremtő",
-              "detail": "Halottak csontjai, isteni vér, kukorica ajándéka."
+              "detail": "Holtak csontjai, isteni vér, a kukorica ajándéka."
             },
             {
-              "date": "10. század",
+              "date": "10. sz.",
               "title": "Száműzetés Tulából",
-              "detail": "A papkirály keletre megy."
+              "detail": "A királypap keletre indul."
             },
             {
               "date": "1519",
-              "title": "Cortes",
-              "detail": "A várt hozam hódítás lesz."
+              "title": "Cortés",
+              "detail": "A várt visszatérésből hódítás lesz."
             }
           ]
         }
@@ -119,20 +119,20 @@
     },
     {
       "id": "course_193_quetzalcoatl_p4",
-      "title": "Egy szimbólum, amely soha nem hal meg",
+      "title": "Egy szimbólum, amely nem hal meg",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A honfoglalás után Quetzalcoatl nem tűnt el. Egyes szerzetesek azt hiszik, hogy apostolt látnak ott. Később a független Mexikó a Kolumbusz előtti nagyság emblémájává tette. A 20. századi falfestők, mint például Diego Rivera, az ország lelkeként festik le."
+          "text": "A hódítás után Quetzalcoatl nem tűnik el. Egyes szerzetesek apostolt vélnek benne. Később a független Mexikó a gyarmatosítás előtti nagyság jelképévé teszi. A 20. század falfestői, például Diego Rivera, az ország lelkének festik."
         },
         {
           "type": "paragraph",
-          "text": "A Tollas Kígyó még ma is identitást fejez ki: gyökerek a földben, ambíció az ég felé fordult."
+          "text": "Ma is ezt mondja a Tollas Kígyó: gyökerek a földben, ambíció az ég felé."
         },
         {
           "type": "takeaway",
-          "text": "**Quetzalcoatl**, a tollas kígyó, a mezoamerikai civilizáció istene. Teremtő, száműzött király, majd végzetes prófécia a **1519**-ben, továbbra is Mexikó központi szimbóluma."
+          "text": "**Quetzalcoatl**, a Tollas Kígyó, a mezoamerikai civilizáció istene. Teremtő, száműzött király, majd végzetes jóslat **1519**-ben, és ma is Mexikó központi szimbóluma."
         }
       ]
     }

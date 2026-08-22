@@ -1,14 +1,14 @@
 {
   "id": "course_184_romulus_et_remus_la_fondation_de_rome",
-  "title": "Romulus és Remus: Róma alapítása",
-  "subtitle": "római mitológia",
+  "title": "Romulusz és Rémusz: Róma alapítása",
+  "subtitle": "Római mitológia",
   "subject": "mythologie",
   "subcategory": "Other mythologies",
-  "description": "Egy nőstényfarkas szoptatta, Róma alapítói… és testvérgyilkosok. Egy mítosz, amely a törvényt és a határokat a vér elé helyezi.",
+  "description": "Nőstényfarkas szoptatta őket, Rómát alapították, és fivérgyilkosok lettek. Olyan mítosz, amely a törvényt és a szent határt a vér fölé helyezi.",
   "hero": {
     "image": "romulus_et_remus_la_fondation_de_rome",
     "ratio": "16:9",
-    "hook": "Róma nem puha paktumból született. Egy ősfarkasból született, egy szent barázdából... és egy megölt testvérből."
+    "hook": "Róma nem szelíd egyezségből születik. Nőstényfarkasból, szent barázdából és megölt fivérből."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A **Romulus** és a **Rémus** története Róma alapító mítosza. Ez nem gyerekmese. Ez egy kettős szakítás története: egy [[szűzies]], aki megszegi tisztasági fogadalmát, majd egy **testvérgyilkos**, aki a törvényt a vér elé helyezi."
+          "text": "**Romulusz** és **Rémusz** története Róma alapító mítosza. Nem gyerekmese. Kettős törés története: egy [[vestal szűz]] megszegi a tisztasági fogadalmát, aztán egy **fivérgyilkosság** a törvényt a vér fölé helyezi."
         },
         {
           "type": "paragraph",
-          "text": "A római hagyomány nem titkolja ezt a bűnt. Ez teszi a szent határon épült város alapját és az állam fennmaradását, nem pedig a családon."
+          "text": "A római hagyomány nem rejti el ezt a bűnt. Egy város alapjává teszi, amely a szent határra és az állam túlélésére épül, inkább, mint a családra."
         }
       ]
     },
@@ -33,27 +33,27 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hosszú Albában, Aeneas leszármazottainak városában a bitorló **Amulius** testvérére, Numitorra vadászik. A leszármazási ág kioltására rákényszeríti unokahúgát, **Rhéa Silvia**-t, hogy vestal legyen. De **március**, a háború istene egyesül vele. Ikrek születnek."
+          "text": "Alba Longában, Aineiasz utódainak városában, **Amulius** bitorló elűzi a fivérét, Numitort. Hogy a vérvonalat kioltsa, unokahúgát, **Rhea Silviát** vestálissá kényszeríti. De **Mars**, a háború istene, egyesül vele. Ikerfiúk születnek."
         },
         {
           "type": "image",
           "asset": "mars_rhea_silvia_roman_mythology_painting",
           "ratio": "4:3",
-          "caption": "Mars és Rhea Silvia: az ikrek isteni születése."
+          "caption": "Mars és Rhea Silvia: az ikrek isteni születése"
         },
         {
           "type": "paragraph",
-          "text": "Amulius megparancsolja, hogy fulladjanak a Tiberisbe. A megáradt folyó a bölcsőt a **nádor** közelében, a [[Ficus Ruminalis]] fügefa alá helyezi. A **ő-farkas** szoptatja őket; egy harkály, a marsi madár eteti őket. Faustulus pásztor és felesége, Acca Larentia neveli őket."
+          "text": "Amulius elrendeli, hogy a Tiberisbe fojtsák őket. A megáradt folyó a bölcsőt a **Palatinus** közelében teszi le, a [[Ficus Ruminalis]] fügefája alatt. Egy **nőstényfarkas** szoptatja őket, egy harkály, Mars madara, eteti. Faustulus pásztor és felesége, Acca Larentia neveli fel őket."
         },
         {
           "type": "image",
           "asset": "capitoline_wolf_romulus_remus_bronze_sculpture",
           "ratio": "1:1",
-          "caption": "A Capitolium nőstényfarkasa, az árva és ragadozó Róma képe."
+          "caption": "A Capitolium farkasa, az árva és ragadozó Róma képe"
         },
         {
           "type": "funFact",
-          "text": "A „lupa” latinul azt jelenti, hogy nőfarkas… és prostituált. Az ókori szerzők már azt sugallták, hogy az így becézett Acca Larentia volt a legenda igazi „farkasa”."
+          "text": "Latinul a „lupa” nőstényfarkast jelent, és prostituáltat is. Ókori szerzők már sejtették, hogy Acca Larentia, akit így gúnyoltak, volt a legenda igazi „farkasa”."
         }
       ]
     },
@@ -64,80 +64,80 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Felnőttként az ikrek megdöntik Amuliust, és visszaállítják Numitort. Aztán saját várost akarnak alapítani. Romulus a **nádor**-t választja; Remus, az Aventinus. A döntéshez a [[előjelek]]-t veszik: Remus először hat keselyűt lát; Romulus legközelebb tizenkettőt lát."
+          "text": "Felnőttként az ikrek megdöntik Amuliust, és visszaültetik Numitort. Aztán saját várost akarnak. Romulusz a **Palatinust** választja, Rémusz az Aventinust. Madárjeleket kérnek, a [[jósolja]] szerint: Rémusz először hat keselyűt lát, aztán Romulusz tizenkettőt."
         },
         {
           "type": "image",
           "asset": "palatine_hill_rome_founding_myth",
           "ratio": "4:3",
-          "caption": "A Palatinus: a domb, ahol Romulus Rómát követi."
+          "caption": "A Palatinus: a domb, ahol Romulusz megrajzolja Rómát"
         },
         {
           "type": "paragraph",
-          "text": "Romulus felkutatja a [[pomoerium]]-t, a bekerítés szent barázdáját, és halált ígér mindenkinek, aki átlép rajta. Remus dacosan átugrik. Romulus (vagy hadnagya, Celer) megöli. Rómát ie 753. április 21-én alapították. , a naptár I. éve [[Ab Urbe Condita (Kr. e. 753)]]."
+          "text": "Romulusz meghúzza a [[pomoerium]] vonalát, a fal szent barázdáját, és halált ígér annak, aki átlépi. Rémusz dacolva átugorja. Romulusz, vagy a tisztje, Celer, megöli. Róma **április 21-én**, i. e. **753**-ban születik, [[Ab Urbe Condita (Kr. e. 753)]] naptárának első évében."
         },
         {
           "type": "funFact",
-          "text": "Április 21-e továbbra is a „Natale di Roma”. Délben a nap eléri a Pantheon bejáratát: ezt a hatást az ókori építészek a hatalom felnagyítására tervezték volna."
+          "text": "Április 21. ma is a „Natale di Roma”. Délben a nap a Pantheon bejáratát éri: az ókori építészek állítólag így dicsőítették a hatalmat."
         }
       ]
     },
     {
       "id": "course_184_romulus_et_remus_la_fondation_de_rome_p3",
-      "title": "A szabinok elrablása",
+      "title": "A szabin nők elrablása",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Az első probléma: a városban hiányoznak a nők. Romulus játékokat szervez és meghívja a szomszédokat. A buli közepén a rómaiak elrabolják a fiatal lányokat: a **A szabinok elragadtatása**. A **Sabinok** Titus Tatius vezetésével hadat üzennek."
+          "text": "Első gond: a városnak nincsenek női. Romulusz játékokat rendez, és meghívja a szomszédokat. Az ünnep közepén a rómaiak elhurcolják a lányokat: a **szabin nők elrablása**. A **szabinok**, Titus Tatius vezetésével, hadat üzennek."
         },
         {
           "type": "paragraph",
-          "text": "A csatatéren a szabin asszonyok, akik már római gyermekek anyja avatkoztak be apák és férjek közé. A háború megáll. A két nép összeolvad. Romulus és Titus Tatius együtt uralkodnak. A rómaiak a [[Quirites]] nevet vették fel. Róma olyan társadalommá válik, amely integrálja az ellenséget."
+          "text": "A csatatéren a szabin nők, akik már római gyerekek anyái, apáik és férjeik közé állnak. A háború megáll. A két nép összeolvad. Romulusz és Titus Tatius együtt uralkodik. A rómaiak felveszik a [[Quirites]] nevet. Róma olyan társadalom lesz, amely befogadja az ellenségét."
         }
       ]
     },
     {
       "id": "course_184_romulus_et_remus_la_fondation_de_rome_p4",
-      "title": "Romulusból Quirinus lesz",
+      "title": "Romulusz Quirinusszá válik",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Harminchét év uralkodás és a száz „atyából” álló Szenátus létrehozása után Romulus egy viharban tűnt el a Champ de Marson. A hivatalos verzió szerint a Mars a mennybe viszi: istenné válik **Quirinus**. Egy másik verzió azt suttogja, hogy a szenátorok meggyilkolták."
+          "text": "Harminchét év uralom és száz „atya” Szenátusa után Romulusz eltűnik egy viharban a Mars-mezőn. A hivatalos változat szerint Mars viszi az égbe: **Quirinus** isten lesz. Egy másik változat azt suttogja, hogy a szenátorok gyilkolták meg."
         },
         {
           "type": "paragraph",
-          "text": "Marad a [[A Capitolium farkasa]] képe: egy árva város, amely vadságból táplálkozik, és képes a marginalizált embereket a világ uraivá változtatni."
+          "text": "Megmarad [[A Capitolium farkasa]] képe: árva város, vadon táplálva, amely kívülállókból a világ uraivá tudja tenni az embereket."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "Mítosz",
-              "title": "Ikrek születése",
+              "title": "Az ikrek születése",
               "detail": "Mars és Rhea Silvia; a Tiberis nőstényfarkasa."
             },
             {
-              "date": "Kr. e. 753",
+              "date": "i. e. 753",
               "title": "Róma alapítása",
-              "detail": "Romulus megöli Remust, és felkutatja a pomoeriumot."
+              "detail": "Romulusz megöli Rémuszt, és meghúzza a pomoeriumot."
             },
             {
-              "date": "Következő",
-              "title": "A szabinok megerőszakolása",
-              "detail": "Háború, majd a népek összeolvadása."
+              "date": "Később",
+              "title": "A szabin nők elrablása",
+              "detail": "Háború, aztán a két nép összeolvadása."
             },
             {
-              "date": "+37 éves",
-              "title": "Apoteózis",
-              "detail": "Romulus eltűnik, és Quirinus lesz belőle."
+              "date": "+37 év",
+              "title": "Megistenülés",
+              "detail": "Romulusz eltűnik, és Quirinus lesz."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "A testvérgyilkosságon és emberrabláson alapuló Róma mítoszából világos gondolatot merít: az állam fennmaradása és a szent határ tisztelete előbbre való, mint a vérségi kötelék."
+          "text": "Fivérgyilkosságra és elrablásra alapítva Róma tiszta gondolatot merít a mítoszából: az állam túlélése és a szent határ tisztelete a vérségi kötelékek előtt jár."
         }
       ]
     }

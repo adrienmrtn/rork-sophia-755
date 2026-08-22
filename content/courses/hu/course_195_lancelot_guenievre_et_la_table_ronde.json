@@ -1,14 +1,14 @@
 {
   "id": "course_195_lancelot_guenievre_et_la_table_ronde",
-  "title": "Lancelot, Guinevere és a Kerekasztal",
-  "subtitle": "Camelot és bukása",
+  "title": "Lancelot, Ginevra és a Kerekasztal",
+  "subtitle": "Camelot és a bukása",
   "subject": "mythologie",
   "subcategory": "Other mythologies",
-  "description": "Arthur, Lancelot, Guinevere: a nyugati középkor legnagyobb legendája. A tiltott szerelem által lerombolt lovagi ideál.",
+  "description": "Artúr, Lancelot, Ginevra: a nyugati középkor legnagyobb legendája. Egy lovagi ideál, amelyet egy tiltott szerelem rombol szét.",
   "hero": {
     "image": "lancelot_guenievre_et_la_table_ronde",
     "ratio": "16:9",
-    "hook": "A világ legjobb lovagja szereti a király feleségét. Camelot nem tér magához."
+    "hook": "A világ legjobb lovagja a király feleségét szereti. Camelot ebből nem épül fel."
   },
   "sections": [
     {
@@ -18,101 +18,101 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Arthur** király és a **Kerekasztal** lovagjai legendája a nyugati középkor nagy mitológiai ciklusa. **Anyag Bretagne-ból**-nek hívjuk: homályos történelem, kelta folklór és keresztény erkölcs keveréke."
+          "text": "**Artúr** király és a **Kerekasztal** lovagjainak legendája a nyugati középkor nagy mitológiai ciklusa. **Bretagne-i anyagnak** hívják: homályos történelem, kelta folklór és keresztény erkölcs keveréke."
         },
         {
           "type": "paragraph",
-          "text": "A történet középpontjában egy nagyon emberi tragédia áll: a tiltott szerelem **Lancelot**, a legjobb lovag és **Guinevere** királynő, Arthur felesége között. Ez a tökéletességként ünnepelt szerelem a **Camelot** méreggé válik."
+          "text": "A történet közepén nagyon emberi tragédia áll: a tiltott szerelem **Lancelot**, a legjobb lovag, és **Ginevra** királyné, Artúr felesége között. Ezt a szerelmet tökéletességként ünneplik, mégis ez a méreg, amely ledönti **Camelotot**."
         }
       ]
     },
     {
       "id": "course_195_lancelot_guenievre_et_la_table_ronde_p1",
-      "title": "A mítosz forrásainál: a történelem és a kelta folklór között",
+      "title": "A mítosz forrásainál: történelem és kelta folklór között",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nincs egyetlen szerző. A 6. és 15. század között történetek halmozódnak fel. Arthur mögött egy breton hadurat látunk, talán **Arturus** néven, aki a rómaiak távozása után ellenállt volna a szászoknak. Körülötte nőnek **Kis sólyom**, a tündérek, a varázskardok."
+          "text": "Nincs egyetlen szerző. A 6. és a 15. század között halmozódnak a történetek. Artúr mögött egy breton hadvezér sejlik, talán **Arturus**, aki a rómaiak távozása után ellenállt a szászoknak. Körülötte nő **Merlin**, a tündérek, a varázskardok."
         },
         {
           "type": "image",
           "asset": "king_arthur_excalibur_sword_stone_medieval",
           "ratio": "4:3",
-          "caption": "Arthur kihúzza a kardot a sziklából: a jogos király jele."
+          "caption": "Artúr kihúzza a kardot a sziklából: a törvényes király jele"
         },
         {
           "type": "funFact",
-          "text": "Egy 13. századi „kerekasztal” még mindig az angliai Winchester kastélyban lóg. VIII. Henrik megfestette, hogy Arthurhoz kapcsolódjon."
+          "text": "Egy 13. századi „Kerekasztal” még mindig a winchesteri várban lóg, Angliában. VIII. Henrik festette át, hogy Artúrhoz kösse magát."
         },
         {
           "type": "paragraph",
-          "text": "A [[a kard megpróbáltatása]] során csak az igazi király tudja lerántani a **Excalibur**-t a szikláról vagy az üllőről. A Camelotban megkoronázott Arthur megalapította a **Kerekasztalt**. Kör alakja felszámolja a hierarchiát: körülötte minden lovag egyenlő a szomszédjával, beleértve a királyt is."
+          "text": "Amikor eljön [[a kard megpróbáltatása]], csak az igazi király húzhatja ki **Excaliburt** a sziklából vagy az üllőből. Camelotban megkoronázva Artúr megalapítja a **Kerekasztalt**. A körforma eltörli a hierarchiát: körülötte minden lovag egyenlő a szomszédjával, a király is."
         }
       ]
     },
     {
       "id": "course_195_lancelot_guenievre_et_la_table_ronde_p2",
-      "title": "A Grál és a spirituális mutáció keresése",
+      "title": "A Grál-keresés és a szellemi fordulat",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A harc fokozatosan átadja helyét egy spirituális küldetésnek: a **Szent Grálnak**. A régi kelta szövegekben varázslatos étel, a XII. században Krisztus kehelyévé vált. A belső tisztaság legalább annyira számít, mint az erő."
+          "text": "Lassan a harcokat szellemi keresés váltja fel: a **Szent Grál**. A régi kelta szövegekben varázstál, a 12. században Krisztus kelyhe lesz. A belső tisztaság annyit számít, mint az erő."
         },
         {
           "type": "image",
           "asset": "holy_grail_knights_round_table_medieval_painting",
           "ratio": "4:3",
-          "caption": "A Grál keresése a Kerekasztalt spirituális kalandsá változtatja."
+          "caption": "A Grál-keresés szellemi kalanddá alakítja a Kerekasztalt"
         },
         {
           "type": "funFact",
-          "text": "A \"grál\" szó az ókori franciából származik, és kezdetben húsok tálalására szolgáló nagy edényt jelölt ki, nem pedig értékes darabolást."
+          "text": "A „grál” szó az ófranciából jött, és először széles tálat jelentett a húsok tálalásához, nem drága kelyhet."
         },
         {
           "type": "paragraph",
-          "text": "Az asztalnál a [[Veszélyes ostrom]] várja az előre elrendelt lovagot. Csak a **Gileád**, **Percival** és **Bohort** éri el a Grált. **A tó Lancelotja**, a „világ legjobb lovagja”, kudarcot vall: Guinevere iránti szeretete méltatlanná teszi az isteni látomásra."
+          "text": "Az asztalnál a [[Siege Perilous]] a predesztinált lovagra vár. Csak **Galahad**, **Parszifál** és **Bors** éri el a Grált. **Tavi Lancelot**, a „világ legjobb lovagja”, elbukik: Ginevra iránti szerelme méltatlanná teszi az isteni látomásra."
         }
       ]
     },
     {
       "id": "course_195_lancelot_guenievre_et_la_table_ronde_p3",
-      "title": "Guinevere árulása és a rend megsértése",
+      "title": "Ginevra árulása és a rend szakadása",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Lancelot és Guinevere szerelme megtestesíti a [[Középkori udvari szerelem (fin'amor)]]: a lovag hölgye szolgálatába állítja magát. De Guinevere a főúr felesége. Az árulás nem csak házassági, hanem feudális is."
+          "text": "Lancelot és Ginevra szerelme a [[középkori udvari szerelem (fin'amor)]] megtestesítője: a lovag a hölgye szolgálatába áll. De Ginevra a hűbérúr felesége. Az árulás nemcsak házassági: hűbéri is."
         },
         {
           "type": "image",
           "asset": "lancelot_guinevere_medieval_romance_painting",
           "ratio": "4:3",
-          "caption": "Lancelot és Guinevere: a szerelem, ami megtöri Camelotot."
+          "caption": "Lancelot és Ginevra: a szerelem, amely összetöri Camelotot"
         },
         {
           "type": "paragraph",
-          "text": "**Mordred**, Arthur vérfertőző unokaöccse vagy fia, verziótól függően, felfedi az ügyet. Arthur máglyára ítéli Guinevere-t. Lancelot megmenti, de megöli **Gawain** testvéreit a közelharcban. A Kerekasztal szétszakadt: polgárháború, vége az utópiának."
+          "text": "**Mordred**, Artúr unokaöccse vagy vérfertőző fia a változatok szerint, leleplezi a viszonyt. Artúr máglyára ítéli Ginevrát. Lancelot megmenti, de a verekedésben megöli **Gawain** fivéreit. A Kerekasztal szakad: polgárháború, az utópia vége."
         }
       ]
     },
     {
       "id": "course_195_lancelot_guenievre_et_la_table_ronde_p4",
-      "title": "Egy világvége és az alvó király mítosza",
+      "title": "Egy világ vége és az alvó király mítosza",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A **Camlann**-ben Arthur megöli Mordredet, és halálos sebet kap. Az Excaliburt visszaadják a tó asszonyának. Guinevere egy kolostorba kerül, Lancelot pedig remete. Azt mondják, Arthur **Avalon** szigetére indul."
+          "text": "**Camlannnál** Artúr megöli Mordredet, és halálos sebet kap. Excaliburt visszaadják a Tó Hölgyének. Ginevra kolostorban végzi, Lancelot remeteként. Artúr, mondják, az **Avalon** szigetére távozik."
         },
         {
           "type": "paragraph",
-          "text": "Ő lesz a [[Rex Quondam Rexque Futurus]], „volt király, jövendő király”: az alvó király, aki a legrosszabbkor tér vissza. Camelot a legendában hal meg, és így marad életben."
+          "text": "Ő lesz a [[Rex Quondam Rexque Futurus]], „egykor király, majd újra király”: az alvó király, aki a legrosszabb órán tér vissza. Camelot legendában hal meg, és így marad életben."
         },
         {
           "type": "takeaway",
-          "text": "**Lancelot** **Guinevere** szerelme elpusztítja Camelotot. A **Grál** keresése csak a tisztáknak sikerül: Lancelot, a legjobb lovag kívül marad a szent küszöbön."
+          "text": "**Lancelot** **Ginevra** iránti szerelme romba dönti Camelotot. A **Grál** keresése csak a tisztáknak sikerül: Lancelot, a legjobb lovag, a szent küszöbön kívül marad."
         }
       ]
     }

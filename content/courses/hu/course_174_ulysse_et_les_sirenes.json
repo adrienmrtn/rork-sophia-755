@@ -1,14 +1,14 @@
 {
   "id": "course_174_ulysse_et_les_sirenes",
-  "title": "Ulysses és a szirénák",
-  "subtitle": "Hallgass anélkül, hogy meghalnál",
+  "title": "Odüsszeusz és a szirénák",
+  "subtitle": "Hallgatni anélkül, hogy meghalnál",
   "subject": "mythologie",
   "subcategory": "Greece: the heroes",
-  "description": "A szirénák abszolút tudást ígérnek. Odüsszeusz az egyetlen halandó, aki meghallja a dalukat, és túléli, köszönhetően egy cselnek, amely az önuralom mintájává vált.",
+  "description": "A szirénák abszolút tudást ígérnek. Odüsszeusz az egyetlen halandó, aki meghallja a dalukat, és életben marad, egy csel miatt, amely az önuralom mintája lett.",
   "hero": {
     "image": "ulysse_et_les_sirenes",
     "ratio": "16:9",
-    "hook": "Daluk azt ígéri, hogy mindent tud. Mindenki meghal, aki hallgatja. Ulysses hallani akar… és életben akar maradni."
+    "hook": "A daluk mindent ígér. Aki hallgatja, meghal. Odüsszeusz hallani akarja, és életben akar maradni."
   },
   "sections": [
     {
@@ -18,36 +18,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A **Odüsszeia** tizenkettedik énekében Ulyssesnek a **[[Meglökés]]** mellett kell elhaladnia. Olyan szép a hangjuk, hogy felülírja az akaratot. A közeledő tengerészek zátonyra futnak és meghalnak."
+          "text": "Az **Odüsszeia** tizenkettedik énekében Odüsszeusznak el kell hajóznia a **[[Szirénák]]** mellett. A hangjuk olyan szép, hogy kioltja az akaratot. Aki közel megy, zátonyra fut és meghal."
         },
         {
           "type": "paragraph",
-          "text": "Ez nem csak egy kaland a tengeren. Ez a párharc a tudásszomj és az engedés veszélye között. [[Nyolcad vér]]-jének, ravasz intelligenciájának köszönhetően Ulysses lesz az egyetlen halandó, aki élete elvesztése nélkül megízlelheti ezt a tiltott élvezetet."
+          "text": "Ez nem csak tengeri kaland. Párbaj a tudásszomj és a kísértés között. [[Nyolcad vér]] révén, ravasz eszével Odüsszeusz lesz az egyetlen halandó, aki megízleli ezt a tiltott gyönyört, és mégsem veszíti el az életét."
         }
       ]
     },
     {
       "id": "course_174_ulysse_et_les_sirenes_p1",
-      "title": "Madárasszonyok, nem farkú sellők",
+      "title": "Madárasszonyok, nem sellők",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A **Homérosz**-ben a sellők nem halasszonyok. Félig nő, félig madár lények. A szigetük tele van tengerészek csontjaival. A dal szépsége ellentétben áll a part borzalmával."
+          "text": "**Homérosznál** a szirénák nem halfarkú nők. Félig nők, félig madarak. A szigetük tengerészek csontjaival van tele. A dal szépsége a part borzalmával áll szemben."
         },
         {
           "type": "image",
           "asset": "sirens_island_greek_mythology_bones_shore",
           "ratio": "4:3",
-          "caption": "A Szirének szigete: ellenállhatatlan dallam, halálos part."
+          "caption": "A szirénák szigete: ellenállhatatlan dallam, halálos part"
         },
         {
           "type": "funFact",
-          "text": "A görög városokban gyakran faragtak szirénákat a sírokra. Úgy tekintettek rájuk, mint a túlvilági múzsákra, akik a halottak lelkét kísérték."
+          "text": "A görög városokban gyakran faragtak szirénákat a sírokra. A túlvilág múzsáinak látták őket, akik a halottak lelkét kísérik."
         },
         {
           "type": "paragraph",
-          "text": "Csapdájuk nem csak érzéki. Abszolút tudást ígérnek: mindent, ami a földön történt. A mindenekelőtt kíváncsi Ulysses számára ez a legnagyobb kísértés, amely veszélyesebb legyőzni, mint egy szörnyet. [[Trójai háború]]"
+          "text": "A csapdájuk nem csak érzéki. **Abszolút tudást** ígérnek: mindent, ami a [[Trójai háború]] alatt történt, mindent, ami a földön történik. A mindenekelőtt kíváncsi Odüsszeusznak ez a legnagyobb kísértés, veszélyesebb bármely szörnyűnél."
         }
       ]
     },
@@ -58,36 +58,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A bűvész **Circé** figyelmeztette. Ulysses pontos stratégiát készít. Társai fülét **méhviasz**-vel bedugja. Nem kellene semmit hallaniuk. Hallgatni akar."
+          "text": "**Kirké** boszorkány figyelmeztette. Odüsszeusz pontos tervet készít. Társai fülét **méhviasszal** tömítteti. Ők semmit sem hallhatnak. Ő hallani akar."
         },
         {
           "type": "image",
           "asset": "ulysses_tied_mast_sirens_waterhouse_painting",
           "ratio": "4:3",
-          "caption": "Ulysses az árbochoz kötve, az egyetlen, aki hallja a Szirének énekét."
+          "caption": "Odüsszeusz az árbochoz kötözve, egyedül hallja a szirénák dalát"
         },
         {
           "type": "paragraph",
-          "text": "**az árbochoz kapcsolódik**. Egyértelmű sorrend: ha szabadon bocsátását kéri, ellenkezőleg, meg kell szigorítani a kötvényeket. Amikor a dal felcsendül, Ulysses elveszti a nyugalmát, és azt kiáltja, hogy oldják meg. Emberei, akik süketek és hűek a tervhez, csak a korábbi racionális Odüsszeusznak engedelmeskednek, nem a pillanatnyi elragadtatott Odüsszeusznak. A hajó elhalad."
+          "text": "**Az árbochoz kötteti magát**. A parancs tiszta: ha szabadulni akar, a köteleket még szorosabbra kell húzni. Amikor felhangzik a dal, Odüsszeusz elveszti a nyugalmát, és kiabál, hogy oldozzák el. A férfiak süketek, hűek a tervhez, és csak a korábbi, józan Odüsszeusznak engedelmeskednek, nem a megbűvöltnek. A hajó továbbmegy."
         }
       ]
     },
     {
       "id": "course_174_ulysse_et_les_sirenes_p3",
-      "title": "Előre kösd magad, hogy ne add fel",
+      "title": "Előre megkötözni magad, hogy ne ess el",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ez a jelenet azt illusztrálja, amit a társadalomtudomány [[Előzetes kötelezettségvállalás]]-nek nevez. Tudjuk, hogy gyengék leszünk a kísértéssel szemben. Tehát mi magunk korlátozzuk a lehetőségeinket, mielőtt odaérnénk."
+          "text": "A jelenet azt mutatja, amit a társadalomtudomány [[Előzetes kötelezettségvállalás]] néven hív. Tudod, hogy a kísértés előtt gyenge leszel. Ezért már előre szűkíted a saját lehetőségeidet."
         },
         {
           "type": "funFact",
-          "text": "1990-ben a NASA és az ESA egy szondát **Ulysses** névre keresztelt. A hőshöz hasonlóan ő is elhagyja az ismert utakat, hogy felfedezze a Nap sarkait."
+          "text": "**1990**-ben a NASA és az ESA **Ulysses**nek nevez el egy szondát. A hőshöz hasonlóan elhagyja az ismert utakat, hogy a Nap sarkait kutassa."
         },
         {
           "type": "paragraph",
-          "text": "**Richard Thaler** Nobel-díjas közgazdász erre a képre támaszkodik. Az emberek nem mindig racionálisak. Kell neki egy [[Meglökés]], egy „segítő kéz”, vagy szabályok, amelyek megvédik őt önmagától: automatikus átutalás takarékba, hálózatokat blokkoló alkalmazások. Ulysseshez hasonlóan a modern szirénákkal szemben az árbochoz kötjük magunkat."
+          "text": "**Richard Thaler** Nobel-díjas közgazdász erre a képre támaszkodik. Az ember nem mindig józan. Kell neki egy [[Meglökés]], egy finom lökés, vagy olyan szabály, amely megvédi önmagától: automatikus átutalás a megtakarításba, alkalmazás, amely lezárja a közösségi oldalakat. Odüsszeuszhoz hasonlóan mi is az árbochoz kötözzük magunkat a mai szirénák ellen."
         }
       ]
     },
@@ -98,15 +98,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A **Középkorban** a kép megváltozik. A madárasszonyból halasszony lesz. Az egyház a szirénákat a vágy szimbólumaként olvassa. Ulysses árbocát néha a kereszthez hasonlítják: pajzs a kísértés ellen."
+          "text": "A **középkorban** a kép megváltozott. A madárasszony halfarkú nő lett. Az Egyház a szirénákat a kéj jelképeként olvasta. Odüsszeusz árbocát néha a kereszthez hasonlították: pajzs a kísértés ellen."
         },
         {
           "type": "paragraph",
-          "text": "Homérosznál azonban nem a testi vágy volt a kérdés, hanem a tudás. Odüsszeusz sem nem szent, sem nem egyszerű kalandor. Ő egy olyan ember, aki az intelligenciát használja fel arra, hogy eligazodjon az abszolútumok iránti vágy és a túlélés szükségessége között."
+          "text": "Homérosznál azonban nem a testi vágy volt a tét, hanem a tudás. Odüsszeusz sem nem szent, sem nem egyszerű kalandor. Olyan ember, aki az eszével navigál az abszolútum éhsége és a túlélés kényszere között."
         },
         {
           "type": "takeaway",
-          "text": "Ulysses túléli a [[Előzetes kötelezettségvállalás]] [[Meglökés]] dalát: az árbochoz rögzítve hallgat; emberei viasszal bedugva a fülüket, maradjanak az irányvonalon."
+          "text": "Odüsszeusz túléli a [[Szirénák]] dalát [[Előzetes kötelezettségvállalás]] révén: az árbochoz kötözve hallgat, társai viaszos füllel tartják az irányt."
         }
       ]
     }

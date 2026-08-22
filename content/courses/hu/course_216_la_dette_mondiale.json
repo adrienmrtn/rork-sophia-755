@@ -1,14 +1,14 @@
 {
   "id": "course_216_la_dette_mondiale",
-  "title": "Globális adósság",
-  "subtitle": "A globális GDP több mint 300%-a",
+  "title": "A világadósság",
+  "subtitle": "A világ-GDP több mint 300%-a",
   "subject": "comprendreLeMonde",
   "subcategory": "Economy & society",
-  "description": "A globális adósság soha nem volt magasabb. Kell-e aggódnunk emiatt, vagy ez egy normális eszköz a növekedés finanszírozására és a válságokkal való szembenézésre?",
+  "description": "A világadósság soha nem volt magasabb. Aggódjunk miatta, vagy ez a növekedés és a válságok finanszírozásának normális eszköze?",
   "hero": {
     "image": "la_dette_mondiale",
     "ratio": "16:9",
-    "hook": "Japán a GDP 260%-ának megfelelő összeggel tartozik... és senki sem aggódik. Íme, miért."
+    "hook": "Japán a GDP-je 260%-ának megfelelő összeget tartozik... és senki sem izgul. Itt a magyarázat."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A globális adósság, az államok, a vállalkozások és a háztartások adóssága együttvéve ma meghaladja a globális GDP **300%-át**, ami abszolút rekord a gazdaságtörténetben."
+          "text": "A világadósság, az államoké, a cégeké és a háztartásoké együtt, ma **a világ-GDP 300%-án** túl van, abszolút rekord a gazdaságtörténetben."
         },
         {
           "type": "paragraph",
-          "text": "Ez a lenyűgöző adat egy árnyaltabb valóságot rejt: az adósság lehetővé teszi a növekedés finanszírozását, az egészségügyi válságokra való reagálást vagy az ökológiai átmenetre való felkészülést. De magában hordozza a bizalom összeomlásának kockázatát is."
+          "text": "Ez a lenyűgöző szám finomabb valóságot rejt. Az adósság fizeti a növekedést, az egészségügyi válságokra adott választ és a zöld átállást. De azt a kockázatot is viszi, hogy a bizalom összeomlik."
         }
       ]
     },
@@ -33,15 +33,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Egy állam eladósodik, ha kiadásai szerkezetileg meghaladják adóbevételét. Ezt a költségvetési hiányt a pénzügyi piacokon felvett hitelek pótolják. A [[Keynesi elmélet]] szerint a gazdaság élénkítését célzó hitelfelvétel válság idején legitim, feltéve, hogy a növekedés visszatérését követően visszafizetik."
+          "text": "Egy állam akkor adósodik el, amikor a kiadása szerkezetileg magasabb, mint az adóbevétele. Ezt a költségvetési hiányt a pénzügyi piacokon felvett hitellel töltik ki. A [[Keynesi elmélet]] szerint jogos válságban kölcsönözni a gazdaság serkentésére, ha a pénzt visszafizetik, amint a növekedés visszatér."
         },
         {
           "type": "paragraph",
-          "text": "A gyakorlatban a kormányok könnyen vesznek fel hitelt rossz időkben, de ritkán fizetnek vissza jó időben. Ezután az adósság hosszú távon halmozódik fel. Japán esete lenyűgöző: a GDP közel 260%-át kitevő adóssággal az ország logikusan válságba kerül. Azonban nem az, mert adósságának nagy részét saját bankjai és megtakarítói tartják, védve a külföldi piacoktól."
+          "text": "A gyakorlatban a kormányok könnyen kölcsönöznek rossz időkben, de ritkán fizetnek vissza jóban, így az adósság végleg halmozódik. Japán lenyűgöző eset. A GDP-jéhez közeli 260%-os adóssággal az országnak logikusan válságban kellene lennie. Nincs, mert ennek az adósságnak a java a saját bankjaié és megtakarítóié, távol a külföldi piacoktól."
         },
         {
           "type": "funFact",
-          "text": "Az Egyesült Királyság csak 2015-ben fejezte be a napóleoni háborúkból és az 1720-as pénzügyi buborékból származó adósságok kifizetését."
+          "text": "Csak 2015-ben fizette vissza az Egyesült Királyság a napóleoni háborúkból és egy 1720-as pénzügyi buborékból származó adósságait."
         }
       ]
     },
@@ -52,32 +52,32 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Az adósság valós veszélye nemcsak az összegétől függ, hanem attól is, hogy milyen pénznemben vették fel a kölcsönt. A gazdag országok saját valutájukban vesznek fel hitelt, ami megnyugtatja a befektetőket."
+          "text": "Egy adósság igazi veszélye nem csak a méretétől függ, hanem attól a valutától, amelyben felvették. A gazdag országok a saját valutájukban kölcsönöznek, és ez megnyugtatja a befektetőket."
         },
         {
           "type": "image",
           "asset": "japan_government_debt_statistics_chart",
           "ratio": "16:9",
-          "caption": "A globális államadósság ma meghaladja a bolygó GDP-jének 300%-át."
+          "caption": "A világ államadóssága ma a bolygó GDP-jének 300%-a fölött van"
         },
         {
           "type": "paragraph",
-          "text": "A fejlődő országoknak gyakran dollárban kell hitelt felvenniük a kellően stabilnak ítélt valuta hiánya miatt. Ha nemzeti valutájuk értékét veszti a dollárral szemben, a visszafizetendő összeg egyik napról a másikra robbanásszerűen megnő. Ezekben a válságokban a [[IMF]] gyakran beavatkozik, de általában szigorú megtakarítási politikát ír elő, amely nagy terhet ró a lakosságra."
+          "text": "A fejlődő országoknak gyakran dollárban kell kölcsönözniük, mert nincs elég stabilnak látott valutájuk. Ha a nemzeti valutájuk értéket veszít a dollárral szemben, a tartozásuk egyik napról a másikra felrobban. Ezekben a válságokban gyakran belép az [[IMF]], de általában szigorú megszorító politikát kényszerít ki, amely súlyosan nyomja a lakosságot."
         }
       ]
     },
     {
       "id": "course_216_la_dette_mondiale_p3",
-      "title": "Lehet-e végtelen az adósság?",
+      "title": "Lehet végtelen az adósság?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Egy vita a gazdaság két víziója ellen szól. A [[Modern monetáris elmélet]] megerősíti, hogy addig nem mehet csődbe egy állam, amíg saját devizában vesz fel hitelt: a valós határ nem egy önkényes szám, mint a Maastrichti Szerződés által Európában megszabott 60%, hanem az infláció mértéke."
+          "text": "Két gazdaságlátás ütközik itt. A [[Modern monetáris elmélet]] szerint egy állam nem mehet csődbe, amíg a saját valutájában kölcsönöz: az igazi határ nem egy önkényes szám, mint a 60%, amelyet Európában a Maastrichti Szerződés szabott, hanem az infláció szintje."
         },
         {
           "type": "paragraph",
-          "text": "Más, óvatosabb közgazdászok attól tartanak, hogy a túl sok adósság elriasztja a piaci bizalmat, ami a kamatlábak meredek emelkedéséhez vezet. A 2010 és 2012 közötti euróövezeti válság jól illusztrálta ezt a kockázatot: az olyan országokban, mint Görögország, megfosztották saját központi bankjuktól, hitelkamataik olyan mértékben megugrottak, hogy az európai valuta létét fenyegetik."
+          "text": "Óvatosabb közgazdászok attól félnek, hogy a túl sok adósság elijeszti a piacokat, és meredeken felviszi a kamatokat. Az euroövezet 2010-2012-es válsága megmutatta ezt a kockázatot. Olyan országok, mint Görögország, saját jegybank nélkül, az egekbe látták szökni a hitelkamatukat, amíg az európai valuta léte került veszélybe."
         }
       ]
     },
@@ -88,15 +88,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A globális adósság nem csak az államokat érinti: a vállalkozások és a háztartások is egyre nagyobb részt viselnek, néha rosszul szabályozott pénzügyi szereplőkön keresztül. Új vita alakul ki a klímaadósság körül is: másként kezeljük-e az energiaátállást finanszírozó adósságot, mint az egyszerű fogyasztást?"
+          "text": "A világadósság nem csak az államokról szól. A cégek és a háztartások is növekvő részt visznek, néha gyengén szabályozott pénzügyi szereplőkön keresztül. Új vita nyílik a klímaadósság körül: az energetikai átállást finanszírozó hitelt másképp kellene kezelni, mint a hétköznapi fogyasztást finanszírozót?"
         },
         {
           "type": "paragraph",
-          "text": "A nemzedékek közötti igazságosság kérdése továbbra is központi kérdés: ma eladósodni azt jelenti, hogy holnaptól kell adót venni. De ha ebből a pénzből fenntartható infrastruktúrát vagy jó oktatást finanszíroznak, az inkább a jövő nemzedékekre adott ajándéknak tekinthető, semmint tehernek."
+          "text": "A nemzedékek közti igazságosság központi kérdés marad, mert a mai kölcsön holnapi adókból merít. De ha ez a pénz tartós infrastruktúrát vagy jó oktatást fizet, ajándéknak is látható, amelyet a jövő nemzedékeknek adunk, nem tehernek."
         },
         {
           "type": "takeaway",
-          "text": "A globális adósság meghaladja a bolygó GDP-jének 300%-át, ami történelmi rekord. Veszélyessége kevésbé függ az összegétől, mint attól, hogy milyen devizában vették fel: Japán bizonyítja, hogy a 260%-os adósság stabil maradhat, ha helyben tartják."
+          "text": "A világadósság átlépte a bolygó GDP-jének 300%-át, történelmi rekordot. A veszélye kevésbé a méretétől függ, mint attól a valutától, amelyben felvették: Japán bizonyítja, hogy egy 260%-os adósság stabil maradhat, ha otthon tartják."
         }
       ]
     }

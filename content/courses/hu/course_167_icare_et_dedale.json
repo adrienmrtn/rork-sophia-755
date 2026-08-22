@@ -1,14 +1,14 @@
 {
   "id": "course_167_icare_et_dedale",
   "title": "Ikarosz és Daidalosz",
-  "subtitle": "Túl közel repül a naphoz",
+  "subtitle": "A repülés túl közel a naphoz",
   "subject": "mythologie",
   "subcategory": "Greece: the gods",
-  "description": "Daedalus viaszszárnyakat készít, hogy elmeneküljön Krétáról. Fia, Ikarusz túl magasra repül, elesik, és a nevét adja egy tengernek. Mítosz a mértékről és a túlzásról.",
+  "description": "Daidalosz viaszszárnyakat készít, hogy elmeneküljön Krétáról. A fia, Ikarosz, túl magasra száll, lezuhan, és egy tenger kapja a nevét. Mítosz a mértékről és a mértéktelenségről.",
   "hero": {
     "image": "icare_et_dedale",
     "ratio": "16:9",
-    "hook": "Egy apa szárnyakat talál ki. Egy fiú figyelmen kívül hagyja a figyelmeztetést. A tenger őrzi nevét."
+    "hook": "Egy apa szárnyakat talál fel. A fia nem hallgat a figyelmeztetésre. A tenger megőrzi a nevét."
   },
   "sections": [
     {
@@ -18,84 +18,84 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A **Icarus** és apja, **Daedalus** az egyik legismertebb görög mítosz. A tengerbe zuhanó tinédzser képén túl a történet találékonyságról, korlátokról és a túl messzire menés kísértéséről beszél."
+          "text": "**Ikarosz** és az apja, **Daidalosz**, a legismertebb görög mítoszok egyike. A tengerbe zuhanó fiú képén túl a történet leleményességről, határokról és arról a kísértésről beszél, hogy túl messzire menj."
         },
         {
           "type": "paragraph",
-          "text": "Egy lehetetlen menekülés története a [[Hibrisz és többlet]] tanulságává válik: az istenekkel egyenlővé akarni tenni azt jelenti, hogy megkockáztatjuk az égést."
+          "text": "Ez egy lehetetlen szökés története, amely a [[Hybris]] leckéjévé válik: ha az istenekkel akarsz egyenlő lenni, megéghetsz."
         }
       ]
     },
     {
       "id": "course_167_icare_et_dedale_p1",
-      "title": "Daedalus, saját labirintusának foglya",
+      "title": "Daidalosz, a saját labirintusának foglya",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Daedalus** egy legendás feltaláló, a [[Nyolcad vér]], a görögök ravasz intelligenciájának inkarnációja. **Minos** király udvarába száműzve Krétán felépítette a **Labirint**-t, egy olyan bonyolult börtönt, hogy senki sem menekül meg. Elrejti a **Minotaurusz**, a [[Pasiphae]] királynő tiltott szerelmeiből született szörnyeteget."
+          "text": "**Daidalosz** legendás feltaláló, a görög [[Sophia]], a ravasz ész megtestesítője. **Minósz** király udvarába száműzve, Krétán, megépítette a **Labirintust**, olyan bonyolult börtönt, hogy senki sem jött ki belőle. A **Minótauroszt** rejtette, a szörnyet, aki [[Pasiphae]] királynő tiltott szerelméből született."
         },
         {
           "type": "image",
           "asset": "daedalus_labyrinth_crete_minotaur_myth",
           "ratio": "4:3",
-          "caption": "Daedalus, a krétai labirintus építésze."
+          "caption": "Daidalosz, a krétai Labirintus építésze"
         },
         {
           "type": "paragraph",
-          "text": "Amikor Minos megtudja, hogy Daedalus segített a hősnek, **Thészeusz** megszökni Ariadné fonalának köszönhetően, saját munkájukba zárja a feltalálót és kisfiát, **Icarus**. A szárazföldek és a tengerek zárva vannak. Ott marad az ég."
+          "text": "Amikor Minósz megtudta, hogy Daidalosz **Thészeusz** hősnek Ariadné fonalával segített megszökni, a feltalálót és a kisfiát, **Ikaroszt**, a saját művükbe zárta. A föld és a tenger zárva volt. Maradt az ég."
         },
         {
           "type": "funFact",
-          "text": "A francia **„labirintus”** szó ettől a karaktertől származik: egy hely, ahol az ember eltéved, például az általa tervezett labirintus."
+          "text": "A francia **dédale** szó ebből a szereplőből jön: olyan hely, ahol eltévedsz, mint a Labirintus, amelyet ő tervezett."
         },
         {
           "type": "paragraph",
-          "text": "A madarak megfigyelése közben Daedalus két pár szárnyat készít: fát, tollat ​​és **viasz** méhecskét. A technológia kiúttá válik."
+          "text": "A madarakat figyelve Daidalosz két pár szárnyat készített: fából, tollból és **viaszból**. A technika kijárattá vált."
         }
       ]
     },
     {
       "id": "course_167_icare_et_dedale_p2",
-      "title": "Repüljön túl magasan vagy túl alacsonyan",
+      "title": "Túl magasra szállni, vagy túl mélyre",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Indulás előtt Daedalus egy egyszerű szabályt ad Ikarusznak: kövesse a középső utat. Túl alacsony, a páratartalom elnehezíti a tollakat. Túl magasan a nap megolvasztja a viaszt. Ez az óvatosság [[Sophia]]-re emlékeztet, a helyismeret bölcsességére."
+          "text": "Indulás előtt Daidalosz egyszerű szabályt adott Ikarosznak: a középső utat kövesse. Túl lent a nedvesség elnehezíti a tollakat. Túl fent a nap megolvasztja a viaszt. Ez az óvatosság a [[Sophia]] bölcsességére emlékeztet: tudni a helyedet."
         },
         {
           "type": "paragraph",
-          "text": "Eleinte minden rendben van. Apa és fia az Égei-tenger szigetei felett repülnek. A földön élő pásztorok azt hiszik, hogy isteneket látnak. Aztán a részegség elfogja Ikaroszt. Felemelkedik, lenyűgözi az ég. A viasz meglágyul. A tollak lehullanak. Összecsapja csupasz karját, és belemerül a tengerbe."
+          "text": "Eleinte minden jól ment. Apa és fia átrepült az Égei-tenger szigetei fölött. A földön a pásztorok isteneknek hitték őket. Aztán Ikaroszt elkapta a mámor. Emelkedett, lenyűgözve az égtől. A viasz meglágyult. A tollak hullottak. Csupasz karral csapkodott, és a tengerbe zuhant."
         },
         {
           "type": "image",
           "asset": "icarus_falling_sun_bruegel_painting",
           "ratio": "4:3",
-          "caption": "Ikarosz bukása, a festészet témája a reneszánsz óta."
+          "caption": "Ikarosz zuhanása, a reneszánsz óta festészeti téma"
         },
         {
           "type": "funFact",
-          "text": "A mítosz tudományosan paradox: minél magasabbra mész, annál hidegebb lesz. Ikarosznak inkább meg kellett volna fagynia, mintsem látnia, hogy a viasz elolvad."
+          "text": "A mítosz tudományosan ellentmondásos: minél magasabbra mész, annál hidegebb van. Ikarosznak inkább fagynia kellett volna, mint hogy a viasza megolvadjon."
         }
       ]
     },
     {
       "id": "course_167_icare_et_dedale_p3",
-      "title": "Büszkeség, ideális vagy elfeledett részlet?",
+      "title": "Gőg, eszmény vagy elfeledett részlet?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Az öregek mindenekelőtt a büszkeség büntetését látják: Ikarusz azért fizet, mert túl sokat akart. De a romantikusok, mint **Baudelaire**, az ideál hősévé teszik: jobb a napba nézve meghalni, mint óvatosan a földön élni."
+          "text": "Az ókoriak főleg a gőg büntetését látták benne: Ikarosz azért fizetett, mert túl sokat akart. A romantikusok, például **Baudelaire**, az eszmény hősévé tették: jobb a napot nézve meghalni, mint óvatos életet élni a földön."
         },
         {
           "type": "paragraph",
-          "text": "Az idősebb **Pieter Bruegel festő** újabb olvasnivalót kínál. Festményén a bukás csak egy részlet: a szántó folytatja feladatát, a világ egy hősért sem áll meg. Az egyéni bravúr szinte láthatatlanná válik."
+          "text": "**Idősebb Pieter Bruegel** festő más olvasatot ad. A képén a zuhanás csak részlet: a szántó tovább dolgozik, a világ nem áll meg egy hősért. Az egyéni tett szinte láthatatlan lesz."
         },
         {
           "type": "funFact",
-          "text": "Egyes verziók hozzáteszik, hogy Daedalus fia halálát is büntetésnek tekinti: egyszer féltékenységből megölte volna unokaöccsét, **Perdix** túlságosan tehetséges feltalálót."
+          "text": "Egyes változatok szerint Daidalosz a fia halálában saját büntetését is látta: egykor féltékenységből megölte az unokaöccsét, **Perdixet**, a túl tehetséges feltalálót."
         }
       ]
     },
@@ -106,15 +106,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Az áramlatok Ikarusz testét egy sziget felé viszik, amelyet a hős **Héraklész** [[Ikaria]]-nek nevez. A környező tenger a **Ikarian-tenger** néven alakul. Daedalus egyedül éri el Szicíliát, és felajánlja szárnyait **Apollo** istennek, megesküdve, hogy soha többé nem repül."
+          "text": "Az áramlatok Ikarosz testét egy szigethez vitték, amelyet **Héraklész** [[Ikaria]] névre keresztelt. A környékbeli tenger lett az **ikariai tenger**. Daidalosz egyedül Szicíliába jutott, és a szárnyait **Apollón** istennek ajánlotta, esküdve, hogy soha többé nem száll."
         },
         {
           "type": "paragraph",
-          "text": "A mítosz mindenhol fennmarad: a repülésben mint álom és kockázat, a pszichológiában mint „Ikarusz-komplexus” a túl gyors siker vágya. Daedalus továbbra is a kétértelmű feltaláló, aki a legjobbra (a szárnyakra) és a legrosszabbra is képes. [[A labirintus, mint szimbólum]] emlékeztet arra, hogy a technika is korlátozhat."
+          "text": "A mítosz mindenütt fennmaradt: a repülésben mint álom és kockázat, a lélektanban mint „Ikarosz-komplexus”, a túl gyors siker vágya. Daidalosz kétértelmű feltaláló marad, képes a legjobbra (a szárnyakra) és a legrosszabbra is. [[A labirintus, mint szimbólum]] arra emlékeztet, hogy a technika be is zárhat."
         },
         {
           "type": "takeaway",
-          "text": "**Daedalus** viaszszárnyakkal menekül Krétáról. **Icarus** figyelmen kívül hagyja a figyelmeztetést, túl közel repül a naphoz és megfullad. A technológia felszabadít, de mérték nélkül megöl."
+          "text": "**Daidalosz** viaszszárnyakkal menekül Krétáról. **Ikarosz** nem hallgat a figyelmeztetésre, túl közel száll a naphoz, és vízbe fullad. A technika felszabadít. Mérték nélkül öl."
         }
       ]
     }
