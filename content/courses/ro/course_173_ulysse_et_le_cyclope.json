@@ -1,14 +1,14 @@
 {
   "id": "course_173_ulysse_et_le_cyclope",
-  "title": "Ulise și ciclopul",
-  "subtitle": "Viclenie versus forță",
+  "title": "Ulise și Ciclopul",
+  "subtitle": "Viclenia împotriva forței",
   "subject": "mythologie",
   "subcategory": "Greece: the heroes",
-  "description": "În Odisee, Ulise se confruntă cu ciclopul Polifem. [[metis]] lui îl salvează, dar mândria lui atrage mânia lui Poseidon.",
+  "description": "În Odiseea, Ulise îl înfruntă pe ciclopul Polifem. [[metis]] îl salvează, dar orgoliul lui atrage mânia lui Poseidon.",
   "hero": {
     "image": "ulysse_et_le_cyclope",
     "ratio": "16:9",
-    "hook": "Un gigant cu un singur ochi își devorează oamenii. Ulise nu poate câștiga prin forță. Așa că inventează un nume: Nimeni."
+    "hook": "Un uriaș cu un singur ochi își devorează oamenii. Ulise nu poate învinge prin forță. Atunci inventează un nume: Nimeni."
   },
   "sections": [
     {
@@ -18,72 +18,72 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "După războiul troian, **Ulise**, regele insulei Ithaca, încearcă să se întoarcă acasă. Homer își povestește călătoria în **Odiseea**. În cântecul IX, el se apropie de o insulă fertilă în care trăiesc [[Ciclopi]], uriași solitari cu un ochi."
+          "text": "După războiul Troiei, **Ulise**, regele insulei Itaca, încearcă să se întoarcă acasă. Homer îi povestește periplul în **Odiseea**. În cântul IX, acostează pe o insulă fertilă unde trăiesc [[Ciclopi]], uriași solitari cu un singur ochi."
         },
         {
           "type": "paragraph",
-          "text": "Acolo îl întâlnește pe **Polifem**, fiul zeului mării **Poseidon**. Episodul nu este doar o poveste cu monstru. Este o lecție: [[metis]], inteligența vicleană, poate învinge forța brută. Dar [[orgoliu]], mândria excesivă, poate strica totul."
+          "text": "Acolo îl întâlnește pe **Polifem**, fiul zeului mării **Poseidon**. Episodul nu e doar o poveste cu monstru. E o lecție: [[metis]], inteligența vicleană, poate bate forța brută. Dar [[orgoliu]], adică mândria excesivă, poate strica totul."
         }
       ]
     },
     {
       "id": "course_173_ulysse_et_le_cyclope_p1",
-      "title": "Ospitalitate sperată, barbarie găsită",
+      "title": "Ospitalitate așteptată, barbarie găsită",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ulise sosește cu doisprezece însoțitori. Ciclopii nu au adunări, nici legi, nici agricultură adevărată. Ei trăiesc în peșteri. Grecii cred în [[xenia]]: datoria sacră de a primi străini, sub protecția lui Zeus."
+          "text": "Ulise debarcă cu doisprezece tovarăși. Ciclopii n-au nici adunări, nici legi, nici o agricultură adevărată. Trăiesc în peșteri. Grecii, ei, cred în [[xenia]]: datoria sacră de a-l primi pe străin, sub ocrotirea lui Zeus."
         },
         {
           "type": "image",
           "asset": "cyclops_polyphemus_one_eye_greek_myth",
           "ratio": "4:3",
-          "caption": "Polifem, Ciclopul, figură a forței fără lege."
+          "caption": "Polifem, Ciclopul, figură a forței fără lege"
         },
         {
           "type": "paragraph",
-          "text": "În peșteră, bărbații văd brânzeturi și vite. Însoțitorii vor să plece. Ulise insistă să aștepte stăpânul, în speranța unui dar de gazdă. Eroare. Polifem se întoarce, blochează intrarea cu o stâncă imensă și devorează doi greci. Forța nu va fi suficientă. Trebuie să fii viclean."
+          "text": "În peșteră, oamenii văd brânzeturi și vite. Tovarășii vor să plece. Ulise insistă să-l aștepte pe stăpân, nădăjduind un dar de oaspete. Greșeală. Polifem se întoarce, blochează intrarea cu o stâncă imensă și devorează doi greci. Forța nu va ajunge. Trebuie viclenie."
         }
       ]
     },
     {
       "id": "course_173_ulysse_et_le_cyclope_p2",
-      "title": "Vinul, miza și „Nimeni”",
+      "title": "Vinul, țărușul și „Nimeni”",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ulise taie un țăruș de măslin, un lemn drag Atenei, zeița înțelepciunii. O ascunde. Apoi îi oferă lui Polifem un vin foarte tare, aproape pur. Uriașul se îmbată. Înainte de a adormi, el întreabă numele oaspetelui său."
+          "text": "Ulise cioplește un țăruș de măslin, lemn drag Atenei, zeița înțelepciunii. Îl ascunde. Apoi îi oferă lui Polifem un vin foarte tare, aproape curat. Uriașul se îmbată. Înainte să adoarmă, întreabă numele oaspetelui."
         },
         {
           "type": "funFact",
-          "text": "În greacă, Ulise spune că numele lui este **Outis**, „Nimeni”. Acest cuvânt evocă și **métis**, viclenie. Homer joacă pe dublu sens: este într-adevăr viclenia care îl învinge pe uriaș."
+          "text": "În greacă, Ulise spune că se cheamă **Outis**, „Nimeni”. Cuvântul evocă și **metis**, viclenia. Homer joacă pe dublul sens: tocmai viclenia învinge uriașul."
         },
         {
           "type": "image",
           "asset": "ulysses_cyclops_blinding_stake_ancient_vase",
           "ratio": "4:3",
-          "caption": "Ulise și oamenii săi îl orbesc pe Polifem, o scenă faimoasă din vazele grecești."
+          "caption": "Ulise și oamenii lui îl orbesc pe Polifem, scenă vestită a vazelor grecești"
         },
         {
           "type": "paragraph",
-          "text": "Ulise răspunde: „Numele meu este **Persoană**. » Apoi oamenii săi bat ţăruşul care arde într-un singur ochi. Ceilalţi Ciclopi vin în fugă. „Cine te ucide? » intreaba ei. „Persoană!” răspunde Polifem. Ei pleacă, gândindu-se la răul divin."
+          "text": "Ulise răspunde: „Mă cheamă **Nimeni**.” Apoi oamenii lui înfig țărușul încins în ochiul unic. Ceilalți Ciclopi aleargă. „Cine te ucide?” întreabă ei. „Nimeni!” răspunde Polifem. Ei se îndepărtează, gândind la un rău divin."
         }
       ]
     },
     {
       "id": "course_173_ulysse_et_le_cyclope_p3",
-      "title": "Ieși sub oi",
+      "title": "Ieșirea sub oi",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A doua zi, Polifem orb păzește ieșirea. El simte spatele fiecărei oi. Ulise își leagă tovarășii sub pântecele celor mai lânoase animale. El însuși atârnă sub cel mai mare berbec. Uriașul mângâie animalul fără să simtă inamicul chiar dedesubt."
+          "text": "A doua zi, Polifem orb păzește ieșirea. Pipăie spatele fiecărei oi. Ulise își leagă tovarășii sub pântecele animalelor celor mai lânoase. El însuși se atârnă sub berbecul cel mai mare. Uriașul mângâie animalul fără să simtă dușmanul tocmai dedesubt."
         },
         {
           "type": "paragraph",
-          "text": "Odată ajuns la mare, Ulise nu poate rezista. Își strigă adevăratul nume, descendența, orașul. Își dorește [[kleos]], gloria care trăiește în nume. Polifem poate în cele din urmă să blesteme o țintă specifică cu tatăl său Poseidon."
+          "text": "Odată pe mare, Ulise nu rezistă. Își strigă numele adevărat, linia, cetatea. Vrea [[kleos]], gloria care supraviețuiește prin nume. Polifem poate în sfârșit să blesteme o țintă precisă pe lângă tatăl lui, Poseidon."
         }
       ]
     },
@@ -94,21 +94,21 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Polifem se roagă lui Poseidon: ca Ulise să nu ajungă niciodată acasă, sau mai târziu, singur, după ce și-a pierdut toți tovarășii. Acest blestem structurează cei zece ani de rătăcire care urmează. Marea devine o pedeapsă."
+          "text": "Polifem se roagă lui Poseidon: Ulise să n-ajungă niciodată acasă, sau atunci târziu, singur, după ce și-a pierdut toți tovarășii. Blestemul ăsta structurează cei zece ani de rătăcire care urmează. Marea devine o pedeapsă."
         },
         {
           "type": "image",
           "asset": "poseidon_god_sea_trident_greek",
           "ratio": "4:3",
-          "caption": "Poseidon, zeul mării, își răzbună fiul Polifem."
+          "caption": "Poseidon, zeul mării, își răzbună fiul Polifem"
         },
         {
           "type": "paragraph",
-          "text": "Mitul se opune a două eroisme. În Iliada, cineva câștigă prin putere și faimă. În Odiseea, supraviețuim prin reținere. Ulise a câștigat prin inteligență. A pierdut prin mândria de a dori să fie recunoscut."
+          "text": "Mitul opune două eroisme. În Iliada, câștigi prin forță și faimă. În Odiseea, supraviețuiești prin reținere. Ulise a câștigat prin minte. A pierdut prin orgoliul de a vrea să fie recunoscut."
         },
         {
           "type": "takeaway",
-          "text": "În fața lui Polifem, Ulise triumfă datorită [[metis]] și numelui „Persoană”. Dezvăluindu-și identitatea pentru [[kleos]], el declanșează furia lui Poseidon și îi prelungește exilul."
+          "text": "În fața lui Polifem, Ulise triumfă grație lui [[metis]] și numelui „Nimeni”. Dezvăluindu-și identitatea pentru [[kleos]], declanșează mânia lui Poseidon și își prelungește exilul."
         }
       ]
     }

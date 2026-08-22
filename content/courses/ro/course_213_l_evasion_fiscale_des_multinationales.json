@@ -1,14 +1,14 @@
 {
   "id": "course_213_l_evasion_fiscale_des_multinationales",
-  "title": "Evaziunea fiscală de către multinaționale",
-  "subtitle": "Cum plătește GAFAM atât de puține taxe?",
+  "title": "Evaziunea fiscală a multinaționalelor",
+  "subtitle": "Cum plătesc GAFAM atât de puțin impozit",
   "subject": "comprendreLeMonde",
   "subcategory": "Economy & society",
-  "description": "Giganții digitali plătesc adesea taxe derizorii în comparație cu profiturile lor. Acest lucru nu este întotdeauna ilegal: este rezultatul lacunelor din dreptul internațional.",
+  "description": "Giganții digitalului plătesc adesea impozite derizorii pe lângă profiturile lor. Nu e mereu ilegal: e rezultatul unor falii din dreptul internațional.",
   "hero": {
     "image": "l_evasion_fiscale_des_multinationales",
     "ratio": "16:9",
-    "hook": "În 2014, Apple a plătit o cotă efectivă de impozitare de aproape 0,005% în Irlanda. Cum este posibil acest lucru?"
+    "hook": "În 2014, Apple a plătit o cotă efectivă de impozit aproape de 0,005% în Irlanda. Cum e posibil?"
   },
   "sections": [
     {
@@ -18,85 +18,85 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "GAFAM, adică Google, Apple, Facebook (Meta), Amazon și Microsoft, sunt printre cele mai bogate companii din lume. Cu toate acestea, proporțional cu profiturile lor, ei plătesc adesea mult mai puțin impozit decât un IMM tradițional."
+          "text": "GAFAM, adică Google, Apple, Facebook (Meta), Amazon și Microsoft, sunt printre firmele cele mai bogate din lume. Totuși, în raport cu profiturile, plătesc adesea mult mai puțin impozit decât o IMM clasică."
         },
         {
           "type": "paragraph",
-          "text": "Aceasta nu este fraudă în sens strict: este **optimizare fiscală**, adică exploatarea cu pricepere a lacune din dreptul internațional. Acest mecanism privează statele de sute de miliarde de dolari în fiecare an. Iată cum funcționează și cum încearcă lumea să răspundă la asta."
+          "text": "Nu e fraudă în sensul strict: e **optimizare fiscală**, adică exploatarea abilă a faliilor din dreptul internațional. Mecanismul le ia statelor sute de miliarde de dolari în fiecare an. Iată cum funcționează, și cum încearcă lumea să răspundă."
         }
       ]
     },
     {
       "id": "course_213_l_evasion_fiscale_des_multinationales_p1",
-      "title": "O taxă concepută pentru fabrici, nu pentru digital",
+      "title": "Un impozit gândit pentru fabrici, nu pentru digital",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sistemul fiscal internațional a fost conceput la începutul secolului al XX-lea pentru o economie industrială: o companie trebuia să aibă fabrici sau birouri într-o țară, ceea ce se numește permanent [[sediu permanent]], pentru a fi impozitată acolo."
+          "text": "Sistemul fiscal internațional a fost conceput la începutul secolului XX pentru o economie industrială: o firmă trebuia să aibă fabrici sau birouri într-o țară, ceea ce se numește [[sediu permanent]], ca să fie impozitată acolo."
         },
         {
           "type": "paragraph",
-          "text": "Tehnologia digitală a rupt această legătură cu teritoriul. Astăzi, o companie poate domina o piață, poate capta datele a milioane de utilizatori și poate câștiga mulți bani într-o țară, fără să dețină o singură clădire acolo. Ea poate apoi separa locul unde își câștigă banii de locul în care îi declară."
+          "text": "Digitalul a rupt legătura asta cu teritoriul. O firmă poate azi să domine o piață, să capteze datele a milioane de utilizatori și să câștige enorm într-o țară, fără să aibă acolo niciun sediu. Poate atunci să separe locul unde câștigă banii de locul unde îi declară."
         },
         {
           "type": "funFact",
-          "text": "În 2014, IRS-ul american a descoperit că Microsoft a transferat profituri de 39 de miliarde de dolari către Puerto Rico prin drepturi de proprietate intelectuală, economisind peste 6,5 miliarde de dolari în taxe."
+          "text": "În 2014, fiscul american a descoperit că Microsoft mutase 39 de miliarde de dolari de profituri spre Puerto Rico grație unor drepturi de proprietate intelectuală, economisind peste 6,5 miliarde de dolari de impozite."
         }
       ]
     },
     {
       "id": "course_213_l_evasion_fiscale_des_multinationales_p2",
-      "title": "Un deficit de sute de miliarde",
+      "title": "Un gol de sute de miliarde",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Potrivit OCDE, aceste practici costă bugetele publice din întreaga lume între 100 și 240 de miliarde de dolari pe an, sau 4 până la 10% din toate impozitele corporative colectate pe planetă."
+          "text": "După OCDE, practicile astea costă între 100 și 240 de miliarde de dolari pe an bugetele publice din toată lumea, adică 4-10% din toate impozitele pe societăți colectate pe planetă."
         },
         {
           "type": "image",
           "asset": "multinational_corporate_tax_avoidance_structure",
           "ratio": "16:9",
-          "caption": "Sediul european al giganților digitali este adesea situat în țări în care taxele sunt cele mai mici."
+          "caption": "Sediile europene ale giganților digitalului stau adesea în țările unde impozitul e cel mai slab."
         },
         {
           "type": "paragraph",
-          "text": "Acest deficit obligă statele să aleagă între creșterea impozitelor pe gospodării și IMM-uri sau reducerea cheltuielilor publice, cum ar fi sănătatea sau educația. O companie locală plătește în medie o cotă de impozitare mult mai mare decât o multinațională, ceea ce creează concurență neloială."
+          "text": "Golul ăsta de venituri silește statele să aleagă între a crește impozitele gospodăriilor și ale IMM-urilor, sau a tăia cheltuielile publice ca sănătatea sau educația. O firmă locală plătește în medie o cotă de impozitare mult mai înaltă decât o multinațională, ceea ce creează o concurență nedreaptă."
         }
       ]
     },
     {
       "id": "course_213_l_evasion_fiscale_des_multinationales_p3",
-      "title": "Răspunsul: o taxă minimă globală",
+      "title": "Riposta: un impozit minim mondial",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "În 2021, sub egida OCDE și G20, un acord istoric a stabilit un [[Impozit minim global de 15%.]]. Acesta vizează companiile a căror cifră de afaceri depășește 750 de milioane de euro: dacă plătesc doar 5% taxe într-o țară, țara lor de origine poate revendica acum 10%."
+          "text": "În 2021, sub egida OCDE și a G20, un acord istoric a instaurat [[Impozitul minim global de 15%]]. Vizează firmele a căror cifră de afaceri trece de 750 de milioane de euro: dacă plătesc doar 5% impozite într-o țară, țara lor de origine poate acum să ceară cei 10% care lipsesc."
         },
         {
           "type": "paragraph",
-          "text": "Unele țări, precum Franța, au creat și o taxă națională care vizează direct cifra de afaceri a giganților digitali. În același timp, multinaționalele trebuie acum să publice, țară cu țară, locația angajaților lor, profiturile și impozitele lor: transparență care face posibilă identificarea celor mai flagrante discrepanțe."
+          "text": "Unele țări, ca Franța, au creat și o taxă națională care țintește direct cifra de afaceri a giganților digitalului. În paralel, multinaționalele trebuie acum să publice, țară cu țară, unde stau angajații, profiturile și impozitele: o transparență care lasă să se vadă decalajele cele mai flagrante."
         }
       ]
     },
     {
       "id": "course_213_l_evasion_fiscale_des_multinationales_p4",
-      "title": "Irlanda, capitală europeană a optimizării",
+      "title": "Irlanda, capitala europeană a optimizării",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Irlanda, cu cota sa oficială de impozitare de 12,5% și acordurile sale secrete numite [[decizii fiscale]], a devenit pivotul european al optimizării fiscale. Datorită unei structuri complexe, Apple a plătit o cotă efectivă de impozitare apropiată de 0,005% în 2014."
+          "text": "Irlanda, cu cota ei oficială de impozitare de 12,5% și cu acordurile secrete numite [[decizii fiscale]], a devenit pivotul european al optimizării fiscale. Grație unei structuri complexe, Apple a plătit o cotă efectivă de impozit aproape de 0,005% în 2014."
         },
         {
           "type": "paragraph",
-          "text": "Comisia Europeană a cerut Irlandei 13 miliarde de euro taxe neplătite de la Apple, dar țara a refuzat de mult să le încaseze: se teme că reguli prea stricte vor face ca sediile centrale să fugă în alte regiuni ale lumii. Apărătorii justiției fiscale mai subliniază că această rată de 15% rămâne mai mică decât media țărilor dezvoltate și că țările cele mai sărace, adesea cele mai afectate de evaziune fiscală, își vor recupera doar o mică parte."
+          "text": "Comisia Europeană i-a cerut Irlandei 13 miliarde de euro de impozite neplătite de Apple, dar țara a refuzat multă vreme să le încaseze: se teme ca reguli prea stricte să nu alunge sediile sociale spre alte regiuni ale lumii. Apărătorii justiției fiscale amintesc și că cota de 15% rămâne mai jos decât media țărilor dezvoltate, iar țările cele mai sărace, adesea cele mai lovite de evaziunea fiscală, nu vor recupera decât o fărâmă."
         },
         {
           "type": "takeaway",
-          "text": "GAFAM a profitat de mult de lacunele din dreptul internațional pentru a plăti taxe derizorii, costând bugetele publice până la 240 de miliarde de dolari pe an. Din 2021, un impozit minim global de 15% a încercat să corecteze acest dezechilibru, dar lupta pentru o impozitare mai echitabilă continuă."
+          "text": "GAFAM au profitat multă vreme de falii din dreptul internațional ca să plătească impozite derizorii, costând până la 240 de miliarde de dolari pe an bugetele publice. Din 2021, un impozit minim mondial de 15% încearcă să corecteze dezechilibrul, dar bătălia pentru o fiscalitate mai dreaptă continuă."
         }
       ]
     }

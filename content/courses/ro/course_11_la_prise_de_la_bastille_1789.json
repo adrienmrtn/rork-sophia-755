@@ -1,14 +1,14 @@
 {
   "id": "course_11_la_prise_de_la_bastille_1789",
-  "title": "Asaltarea Bastiliei",
+  "title": "Căderea Bastiliei",
   "subtitle": "1789",
   "subject": "histoire",
   "subcategory": "Modern Revolutions & Conflicts",
-  "description": "La 14 iulie 1789, parizienii au luat cu asalt o fortăreață care conținea doar **7 preturi**. Acest gest a devenit simbolul Revoluției Franceze.",
+  "description": "Pe 14 iulie 1789, parizienii iau cu asalt o fortăreață care adăpostea doar **7 prizonieri**. Gestul devine simbolul Revoluției franceze.",
   "hero": {
     "image": "la_prise_de_la_bastille_1789",
     "ratio": "16:9",
-    "hook": "La 14 iulie 1789, Parisul a luat cu asalt o fortăreață... pentru praf de pușcă."
+    "hook": "Pe 14 iulie 1789, Parisul ia cu asalt o fortăreață... pentru praf de pușcă."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pe **14 iulie 1789**, o mulțime de parizieni a mărșăluit pe **Bastille**, o veche cetate la est de Paris. Ei nu vin să elibereze mii de prizonieri. Își doresc în special ca **pulbere** să se apere."
+          "text": "Pe **14 iulie 1789**, o mulțime de parizieni merge spre **Bastilia**, o veche fortăreață la est de Paris. Nu vin să elibereze mii de prizonieri. Vor mai ales **praf de pușcă** ca să se apere."
         },
         {
           "type": "paragraph",
-          "text": "În acea zi, regele **Ludovic al XVI-lea** și-a văzut capitalul scăpând de el. O revoltă pentru arme devine actul fondator al **Revoluția Franceză**. Iată cum."
+          "text": "În ziua aceea, regele **Ludovic al XVI-lea** își vede capitala scăpându-i. O revoltă pentru arme devine actul fondator al **Revoluției franceze**. Iată cum."
         }
       ]
     },
@@ -33,46 +33,46 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "În 1789, regatul a fost ruinat. Ajutarea coloniilor americane în timpul revoluției [[Războiul revoluționar american]] a fost foarte costisitoare. Pentru a ridica noi taxe, Ludovic al XVI-lea a convocat în luna mai **Generalul Statelor**: o adunare a clerului, a nobilimii și a restului poporului."
+          "text": "În 1789, regatul e ruinat. Ajutorul dat coloniilor americane, când era în toi [[Războiul revoluționar american]], a costat foarte scump. Ca să strângă noi impozite, Ludovic al XVI-lea convoacă **Statele Generale** în mai: o adunare a clerului, a nobilimii și a restului poporului."
         },
         {
           "type": "image",
           "asset": "estates_general_1789_france",
           "ratio": "4:3",
-          "caption": "Statele Generale din 1789: Starea a Treia cu care se confruntă clerul și nobilimea."
+          "caption": "Statele Generale din 1789: Starea a Treia în fața clerului și a nobilimii"
         },
         {
           "type": "paragraph",
-          "text": "Sub regimul [[Ancien Regime și cele trei moșii]], societatea era împărțită în trei. Clerul și nobilimea își păstrează privilegiile. **A treia proprietate**, aproape toată lumea, are un singur vot. Blocat, el s-a autoproclamat **National Adunarea** pe **17 uniți**. Trei zile mai târziu, la **OJurământul Jocul Palmierului**, deputații jură să nu se despartă înainte de a fi scris o constituție."
+          "text": "Sub [[Ancien Régime și cele trei moșii]], societatea e tăiată în trei. Clerul și nobilimea își păstrează privilegiile. **Starea a Treia**, aproape toată lumea, are o singură voce. Blocați, se proclamă **Adunare națională** pe **17 iunie**. Trei zile mai târziu, la **Jurământul din Sala de Joc cu Mingea**, deputații jură să nu se despartă până nu vor fi scris o constituție."
         },
         {
           "type": "paragraph",
-          "text": "Regele părea să cedeze, dar a plasat aproximativ **30.000 de soldați** în jurul Parisului. Pe **11 iulia**, el l-a demis pe **Jacques Necker**, foarte popularul său ministru de finanțe. Panica se extinde în capitală."
+          "text": "Regele pare să cedeze, dar așază circa **30.000 de soldați** în jurul Parisului. Pe **11 iulie**, îl destituie pe **Jacques Necker**, ministrul Finanțelor foarte popular. Panica cuprinde capitala."
         }
       ]
     },
     {
       "id": "course_11_la_prise_de_la_bastille_1789_p2",
-      "title": "Pistoale, apoi pulbere",
+      "title": "Puști, apoi praf de pușcă",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**12** și **13** iulie, Parisul se revoltă. Barierele subvențiilor (taxele la intrarea în oraș) sunt arse. Jefuim armele. În dimineața zilei de **14**, mulțimea a confiscat aproximativ **32.000 puști** de la **Invalizi**. Lipsește pulberea."
+          "text": "Pe **12** și **13 iulie**, Parisul se răscoală. Se ard barierele vamale (taxe la intrarea în oraș). Se jefuiesc armurăriile. În dimineața de **14**, mulțimea ia circa **32.000 de puști** de la **Invalizi**. Lipsește praful de pușcă."
         },
         {
           "type": "image",
           "asset": "storming_of_the_bastille_1789",
           "ratio": "4:3",
-          "caption": "Asaltarea Bastiliei, 14 iulie 1789."
+          "caption": "Căderea Bastiliei, 14 iulie 1789"
         },
         {
           "type": "funFact",
-          "text": "În acea zi, Bastilia conținea doar **7 preturi**: 4 falsificatori, 2 bărbați considerați nebuni și un aristocrat. Forța sa a fost mai presus de toate în ceea ce a reprezentat."
+          "text": "În ziua aceea, Bastilia adăpostea doar **7 prizonieri**: 4 falsificatori, 2 bărbați judecați nebuni și un aristocrat. Forța ei stătea mai ales în ceea ce reprezenta."
         },
         {
           "type": "paragraph",
-          "text": "Se zvonește că praful de pușcă este în Bastilia. Pentru mulți, această închisoare întruchipează arbitrariul regelui, mai ales din cauza [[lettre de cachet]], un ordin de detenție fără proces. Guvernatorul **din Launay** refuză să deschidă. Pe la **1:30 p.m.**, s-au auzit focuri: **98 de decese** printre atacatori. Soldații care trec pe lângă oameni aduc tunuri. La sfârșitul după-amiezii, cetatea a căzut. De Launay este linșat în stradă."
+          "text": "Zvonul spune că praful de pușcă e la Bastilia. Pentru mulți, această închisoare întruchipează arbitrariul regelui, mai ales din cauza [[lettre de cachet]], un ordin de încarcerare fără proces. Guvernatorul **de Launay** refuză să deschidă. Pe la **13:30**, izbucnesc focuri: **98 de morți** printre atacatori. Soldați care trec de partea poporului aduc tunuri. Spre sfârșitul după-amiezii, fortăreața cade. De Launay e linșat pe stradă."
         }
       ]
     },
@@ -83,60 +83,60 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pe **15 iulia**, Ludovic al XVI-lea este trezit. „Este aceasta o revoltă?” întreabă el. Ei au răspuns: „Nu, domnule, este o revoluție. » Ironia calendarului: în jurnalul său de vânătoare, regele notase „Nimic” pe 14."
+          "text": "Pe **15 iulie**, îl trezesc pe Ludovic al XVI-lea. „E o revoltă?” întreabă el. I se răspunde: „Nu, Sire, e o revoluție.” Ironia calendarului: în jurnalul de vânătoare, regele notase „Nimic” pe 14."
         },
         {
           "type": "funFact",
-          "text": "Antreprenorul **Palloy**, responsabil cu demolarea Bastiliei, a pus din pietrele ei să taieze domino și a oferit un set din ele fiului regelui, „ca să se poată juca cu rămășițele despotismului”."
+          "text": "Antreprenorul **Palloy**, însărcinat să dărâme Bastilia, a tăiat domino-uri din pietrele ei și i-a dăruit un joc fiului regelui, „ca să se joace cu rămășițele despotismului”."
         },
         {
           "type": "paragraph",
-          "text": "Regele îl amintește pe Necker, își retrage trupele și acceptă cocarda **tricolor**. La ţară, ştirea a alimentat [[Marea Frica]]: ţăranii, temându-se de răzbunare de la nobili, au ars hârtiile de drepturi domniioare. În noaptea de **4 august 1789**, Adunarea a desființat privilegiile."
+          "text": "Regele îl recheamă pe Necker, își retrage trupele și acceptă **cocarda tricoloră**. La țară, vestea alimentează [[Marea Frica]]: țăranii, temându-se de o răzbunare a nobililor, ard hârtiile drepturilor senioriale. În noaptea de **4 august 1789**, Adunarea abolește privilegiile."
         }
       ]
     },
     {
       "id": "course_11_la_prise_de_la_bastille_1789_p4",
-      "title": "De la 14 iulie până la Ziua Națională",
+      "title": "De la 14 iulie la sărbătoarea națională",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A doua zi, Bastilia a fost demolată. Un an mai târziu, **Ziua Federației** sărbătorește unitatea. Dar 14 iulie nu a devenit sărbătoare națională până la **1880**, sub cea de-a Treia Republică."
+          "text": "Chiar a doua zi se dărâmă Bastilia. Un an mai târziu, **Sărbătoarea Federației** celebrează unitatea. Dar 14 iulie devine sărbătoare națională abia în **1880**, sub a Treia Republică."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "5 mai 1789",
-              "title": "Estatele Generale",
-              "detail": "Ludovic al XVI-lea cheamă regatul să iasă din faliment."
+              "title": "Statele Generale",
+              "detail": "Ludovic al XVI-lea convoacă regatul ca să iasă din faliment."
             },
             {
               "date": "20 iunie 1789",
-              "title": "Jocul Jurământului Palmierului",
-              "detail": "Deputații jură să dea Franței o constituție."
+              "title": "Jurământul din Sala de Joc cu Mingea",
+              "detail": "Deputații jură să-i dea Franței o constituție."
             },
             {
               "date": "14 iulie 1789",
-              "title": "Furtunul Bastiliei",
-              "detail": "Parisul confiscă praful de pușcă și un simbol regal."
+              "title": "Căderea Bastiliei",
+              "detail": "Parisul pune mâna pe praful de pușcă și pe un simbol regal."
             },
             {
               "date": "4 august 1789",
               "title": "Abolirea privilegiilor",
-              "detail": "Marea Frica împinge Adunarea să acţioneze."
+              "detail": "Marea Frică împinge Adunarea să acționeze."
             },
             {
               "date": "26 august 1789",
               "title": "Declarația drepturilor",
-              "detail": "Subiecții devin cetățeni în fața legii."
+              "detail": "Supușii devin cetățeni în fața legii."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "**14 iulie 1789**, Parisul ia Bastilia pentru praf de pușcă. Acest gest transformă o criză financiară într-o revoluție și precipită sfârșitul ordinii privilegiilor."
+          "text": "Pe **14 iulie 1789**, Parisul ia Bastilia pentru praf de pușcă. Gestul transformă o criză financiară în revoluție și grăbește sfârșitul ordinii privilegiilor."
         }
       ]
     }
