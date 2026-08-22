@@ -1,59 +1,59 @@
 {
   "id": "course_184_romulus_et_remus_la_fondation_de_rome",
-  "title": "Romulus och Remus: grundandet av Rom",
-  "subtitle": "romersk mytologi",
+  "title": "Romulus och Remus: Roms grundläggning",
+  "subtitle": "Romersk mytologi",
   "subject": "mythologie",
   "subcategory": "Other mythologies",
-  "description": "Ammad av en varg, grundare av Rom... och brodermord. En myt som sätter lag och gränser före blod.",
+  "description": "Ammade av en varginna, Roms grundare... och brödramördare. En myt som sätter lagen och gränsen före blodet.",
   "hero": {
     "image": "romulus_et_remus_la_fondation_de_rome",
     "ratio": "16:9",
-    "hook": "Rom föddes inte ur en mjuk pakt. Hon föddes från en hon-varg, en helig fåra... och en dödad bror."
+    "hook": "Rom föds inte ur ett milt förbund. Den föds ur en varginna, en helig fåra... och en dödad bror."
   },
   "sections": [
     {
       "id": "course_184_romulus_et_remus_la_fondation_de_rome_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Berättelsen om **Romulus** och **Rémus** är grundmyten om Rom. Det här är ingen barnsaga. Det är historien om ett dubbelbrott: en [[vestal]] som bryter sitt kyskhetslöfte, sedan en **brodermord** som sätter lagen framför blod."
+          "text": "Berättelsen om **Romulus** och **Remus** är Roms grundmyt. Det är ingen barnsaga. Det är historien om ett dubbelt brott: en [[vestalisk jungfru]] som bryter kyskhetslöftet, sedan ett **brödramord** som sätter lagen före blodet."
         },
         {
           "type": "paragraph",
-          "text": "Den romerska traditionen döljer inte detta brott. Det gör den till grunden för en stad byggd på den heliga gränsen och statens överlevnad, mer än på familjen."
+          "text": "Den romerska traditionen gömmer inte brottet. Den gör det till sockeln för en stad byggd på den heliga gränsen och statens överlevnad, mer än på familjen."
         }
       ]
     },
     {
       "id": "course_184_romulus_et_remus_la_fondation_de_rome_p1",
-      "title": "Hon-vargen från Tibern",
+      "title": "Tiberns varginna",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I Alba den Långe, staden för Aeneas ättlingar, jagar usurperaren **Amulius** sin bror Numitor. För att släcka härstamningen tvingar han sin systerdotter **Rhéa Silvia** att bli en vestal. Men **Mars**, krigsguden, förenar sig med henne. Tvillingar föds."
+          "text": "I Alba Longa, staden för Aeneas ättlingar, jagar usurpatorn **Amulius** bort sin bror Numitor. För att släcka ätten tvingar han brorsdottern **Rhea Silvia** att bli vestal. Men **Mars**, krigets gud, förenar sig med henne. Tvillingar föds."
         },
         {
           "type": "image",
           "asset": "mars_rhea_silvia_roman_mythology_painting",
           "ratio": "4:3",
-          "caption": "Mars och Rhea Silvia: tvillingarnas gudomliga födelse."
+          "caption": "Mars och Rhea Silvia: tvillingarnas gudomliga börd"
         },
         {
           "type": "paragraph",
-          "text": "Amulius beordrar dem att drunkna i Tibern. Den översvämmade floden placerar vaggan nära **Palatin**, under fikonträdet [[Ficus Ruminalis]]. En **hon-varg** ammar dem; en hackspett, Marsfågel, matar dem. Herden Faustulus och hans fru Acca Larentia uppfostrar dem."
+          "text": "Amulius befaller att de ska dränkas i Tibern. Den svämmande floden lägger vaggan vid **Palatinen**, under fikonet [[Ficus Ruminalis]]. En **varginna** ammar dem. En hackspett, Mars fågel, föder dem. Herden Faustulus och hustrun Acca Larentia uppfostrar dem."
         },
         {
           "type": "image",
           "asset": "capitoline_wolf_romulus_remus_bronze_sculpture",
           "ratio": "1:1",
-          "caption": "Den Capitoline hon-vargen, bild av föräldralösa och rovdjur Rom."
+          "caption": "Kapitolinska varginnan, bilden av ett föräldralöst och rovgirigt Rom"
         },
         {
           "type": "funFact",
-          "text": "På latin betyder \"lupa\" hon-varg... och prostituerad. Forntida författare antydde redan att Acca Larentia, med smeknamnet som sådan, var legendens sanna \"varg\"."
+          "text": "På latin betyder „lupa” varginna... och prostituerad. Antika författare antydde redan att Acca Larentia, kallad så, var sagans verkliga „varginna”."
         }
       ]
     },
@@ -64,36 +64,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Som vuxna störtar tvillingarna Amulius och återställer Numitor. Sedan vill de grunda sin egen stad. Romulus väljer **Palatin**; Remus, aventinen. För att avgöra tar de [[omens]]: Remus ser sex gamar först; Romulus ser nästa tolv."
+          "text": "Som vuxna störtar tvillingarna Amulius och sätter tillbaka Numitor. Sedan vill de grunda en egen stad. Romulus väljer **Palatinen**. Remus väljer Aventinen. För att avgöra tar de [[väntar]]: Remus ser sex gamar först. Romulus ser sedan tolv."
         },
         {
           "type": "image",
           "asset": "palatine_hill_rome_founding_myth",
           "ratio": "4:3",
-          "caption": "Palatinen: kullen där Romulus spårar Rom."
+          "caption": "Palatinen: kullen där Romulus drar upp Rom"
         },
         {
           "type": "paragraph",
-          "text": "Romulus spårar [[pomoerium]], hägnets heliga fåra, och lovar döden till alla som korsar den. Remus hoppar över, i trots. Romulus (eller hans löjtnant Celer) dödar honom. Rom grundades den 21 april 753 f.Kr. , år I av kalendern [[Ab Urbe Condita (753 f.Kr.)]]."
+          "text": "Romulus drar [[pomoerium]], den heliga fåran för vallen, och lovar döden åt den som kliver över. Remus hoppar över, som en utmaning. Romulus (eller hans löjtnant Celer) dödar honom. Rom grundas den **21 april 753** f.Kr., år 1 i kalendern [[Ab Urbe Condita (753 f.Kr.)]]."
         },
         {
           "type": "funFact",
-          "text": "Den 21 april förblir \"Natale di Roma\". Vid middagstid träffar solen ingången till Pantheon: en effekt som gamla arkitekter skulle ha designat för att förstora makten."
+          "text": "Den 21 april är fortfarande „Natale di Roma”. Vid middagstid träffar solen Pantheons port: en effekt som de antika arkitekterna ska ha tänkt ut för att förstärka makten."
         }
       ]
     },
     {
       "id": "course_184_romulus_et_remus_la_fondation_de_rome_p3",
-      "title": "Kidnappningen av sabinerna",
+      "title": "Sabinerinnornas bortrövande",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Första problemet: staden saknar kvinnor. Romulus ordnar lekar och bjuder in grannarna. Mitt under festen kidnappar romarna de unga flickorna: Sabinernas **Bortförande**. **Sabins**, ledd av Titus Tatius, förklarar krig."
+          "text": "Första problemet: staden saknar kvinnor. Romulus ordnar lekar och bjuder in grannarna. Mitt i festen rövar romarna bort de unga kvinnorna: **sabinerinnornas bortrövande**. **Sabinerna**, ledda av Titus Tatius, förklarar krig."
         },
         {
           "type": "paragraph",
-          "text": "På slagfältet ingrep sabinskvinnor, redan mammor till romerska barn, mellan fäder och män. Kriget upphör. De två folken smälter samman. Romulus och Titus Tatius regerar tillsammans. Romarna tog namnet [[Quirites]]. Rom blir ett samhälle som integrerar fienden."
+          "text": "På slagfältet ställer sig de sabinska kvinnorna, redan mödrar till romerska barn, mellan fäder och män. Kriget stannar. De två folken smälter samman. Romulus och Titus Tatius styr tillsammans. Romarna tar namnet [[Quirites]]. Rom blir ett samhälle som tar in fienden."
         }
       ]
     },
@@ -104,32 +104,32 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Efter trettiosju år av regeringstid och skapandet av en senat med hundra \"fäder\", försvann Romulus under en storm på Champ de Mars. Den officiella versionen säger att Mars tar honom till himlen: han blir guden **Quirinus**. En annan version viskar att senatorerna mördade honom."
+          "text": "Efter trettiosju års styre och skapandet av en senat med hundra „fäder” försvinner Romulus i en storm på Marsfältet. Den officiella versionen säger att Mars lyfter honom till himlen: han blir guden **Quirinus**. En annan version viskar att senatorerna mördade honom."
         },
         {
           "type": "paragraph",
-          "text": "Det som återstår är bilden av [[Den kapitolinska vargen]]: en föräldralös stad, närd av vildhet, kapabel att förvandla marginaliserade människor till världens herrar."
+          "text": "Kvar står bilden av [[Den kapitolinska vargen]]: en föräldralös stad, närd av vildhet, i stånd att vända utstötta till världens herrar."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "Myt",
-              "title": "Tvillingars födelse",
-              "detail": "Mars och Rhea Silvia; hon-vargen från Tibern."
+              "title": "Tvillingarnas födelse",
+              "detail": "Mars och Rhea Silvia. Tiberns varginna."
             },
             {
-              "date": "753 f.Kr",
-              "title": "Stiftelsen av Rom",
-              "detail": "Romulus dödar Remus och spårar pomoerium."
+              "date": "753 f.Kr.",
+              "title": "Roms grundläggning",
+              "detail": "Romulus dödar Remus och drar pomoerium."
             },
             {
-              "date": "Följande",
-              "title": "Sabinernas våldtäkt",
-              "detail": "Krig, sedan sammanslagning av folk."
+              "date": "Sedan",
+              "title": "Sabinerinnornas bortrövande",
+              "detail": "Krig, sedan folkens sammansmältning."
             },
             {
-              "date": "+37 år gammal",
+              "date": "+37 år",
               "title": "Apoteos",
               "detail": "Romulus försvinner och blir Quirinus."
             }
@@ -137,7 +137,7 @@
         },
         {
           "type": "takeaway",
-          "text": "Grundat på brodermord och kidnappning, hämtar Rom från sin myt en tydlig idé: statens överlevnad och respekten för den heliga gränsen kommer före blodsband."
+          "text": "Grundad på brödramord och rövande hämtar Rom ur sin myt en klar idé: statens överlevnad och respekten för den heliga gränsen går före blodsbanden."
         }
       ]
     }

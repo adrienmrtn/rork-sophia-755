@@ -372,6 +372,28 @@ GREEK_RULES = LanguageRules(
     era_hint="should be π.Χ. / μ.Χ.",
 )
 
+SWEDISH_RULES = LanguageRules(
+    stranded_spaced=re.compile(
+        r"\b(en|ett|och|eller|av|med|f\u00f6r|p\u00e5|till|fr\u00e5n|om|som)"
+        r"\s+([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    # "den." / "det." / "de." are ordinary pronouns ("gav ut den.").
+    # "en," / "och," are ordinary in lists. Only "samt" cannot end a clause.
+    stranded_tight=re.compile(
+        r"\b(samt)\s*([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    leading_articles=("en ", "ett ", "den ", "det ", "de "),
+    leftover_extra_skip=frozenset({"dans", "du"}),  # Swedish "dance" / "you"
+    check_a_an=False,
+    flag_space_thousands=True,
+    thousands_hint="should use a period (30.000)",
+    flag_decimal_comma=False,  # Swedish decimals are commas
+    century_hint="should be '1400-talet'",
+    era_hint="should be f.Kr. / e.Kr.",
+)
+
 RULES_BY_LANG: dict[str, LanguageRules] = {
     "en": ENGLISH_RULES,
     "de": GERMAN_RULES,
@@ -383,6 +405,7 @@ RULES_BY_LANG: dict[str, LanguageRules] = {
     "ro": ROMANIAN_RULES,
     "nl": DUTCH_RULES,
     "el": GREEK_RULES,
+    "sv": SWEDISH_RULES,
 }
 
 
@@ -463,6 +486,7 @@ ARTICLE_BEFORE_RE = {
         r"\u03bc\u03b9\u03b1|\u03ad\u03bd\u03b1\u03c2)$",
         re.IGNORECASE,
     ),
+    "sv": re.compile(r"\b(en|ett|den|det|de)$", re.IGNORECASE),
 }
 
 
@@ -599,9 +623,15 @@ def check_segment(
         report("space-before-punctuation", snippet(english, re.search(r"\s[,;:!?]", english).start()))
     if "  " in english:
         report("double-space", snippet(english, english.find("  ")))
-    match = MISSING_SPACE_RE.search(english)
-    if match:
+    # Glossary keys may contain a colon (Swedish EU:s, 13:e). Only prose
+    # is checked. Swedish genitive :s and ordinals :e / :a are legal.
+    for match in MISSING_SPACE_RE.finditer(prose_for_chars):
+        if lang == "sv" and match.group(0) == ":" and match.end() < len(prose_for_chars):
+            nxt = prose_for_chars[match.end()]
+            if nxt in "seaSEA":
+                continue
         report("missing-space-after-punctuation", snippet(english, match.start()))
+        break
     if english != english.strip():
         report("edge-whitespace", "leading or trailing whitespace")
 

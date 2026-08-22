@@ -1,53 +1,53 @@
 {
   "id": "course_181_ragnarok_la_fin_du_monde_nordique",
-  "title": "Ragnarök: slutet på den nordiska världen",
-  "subtitle": "nordisk mytologi",
+  "title": "Ragnarök: den nordiska världens slut",
+  "subtitle": "Nordisk mytologi",
   "subject": "mythologie",
   "subcategory": "Other mythologies",
-  "description": "Inte ett gudomligt straff, utan ett accepterat öde: Asgards gudar faller, världen brinner, sedan återföds grönare. Den nordiska apokalypsen.",
+  "description": "Inte ett gudomligt straff, utan ett öde man tar: Asgårds gudar faller, världen brinner, sedan grönskar den igen. Den nordiska apokalypsen.",
   "hero": {
     "image": "ragnarok_la_fin_du_monde_nordique",
     "ratio": "16:9",
-    "hook": "Gudarna vet att de kommer att dö. De går dit ändå. Sedan, under askan, blir jorden grön igen."
+    "hook": "Gudarna vet att de ska dö. De går dit ändå. Sedan, under askan, grönskar jorden."
   },
   "sections": [
     {
       "id": "course_181_ragnarok_la_fin_du_monde_nordique_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Ragnarök** är världens undergång i nordisk mytologi. Det översätts ofta som \"gudarnas skymning\", men den exakta betydelsen är snarare \"makternas öde\". Det är inte ett straff som faller från himlen, inte heller en definitiv ingenting."
+          "text": "**Ragnarök** är världens slut i nordisk mytologi. Man översätter ofta med „gudaskymning”, men den exakta meningen är snarare „makternas öde”. Det är inte ett straff från himlen, och inte ett evigt intet."
         },
         {
           "type": "paragraph",
-          "text": "Det är en oundviklig **Z**-tragedi: ordningen för **Asgard** kollapsar i en sista kamp mot kaos. Och ändå förbereder detta kaos en återfödelse. Slutet är bara ett steg i cykeln."
+          "text": "Det är en **oundviklig** tragedi: **Asgårds** ordning störtar i en sista strid mot kaoset. Och ändå bereder det kaoset en pånyttfödelse. Slutet är bara ett steg i kretsloppet."
         },
         {
           "type": "funFact",
-          "text": "Uttrycket \"gudarnas skymning\" kommer från en förväxling mellan de fornnordiska orden \"rök\" (öde) och \"rökr\" (skymning), populariserade av Wagner."
+          "text": "Uttrycket „gudaskymning” kommer av en förväxling mellan de fornnordiska orden „rök” (öde) och „rökr” (skymning), spridd av Wagner."
         }
       ]
     },
     {
       "id": "course_181_ragnarok_la_fin_du_monde_nordique_p1",
-      "title": "Tecknen före slaget",
+      "title": "Tecknen före striden",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Allt börjar med **Fimbulvinter**: en fantastisk vinter på tre år utan sommar. Kylan bryter familjer isär. Våldet börjar bli utbrett. Sedan ger de magiska låsen vika. Vargen **Fenrir** bryter sina bojor. Dess mun rör vid himmel och jord."
+          "text": "Allt börjar med **fimbulvintern**: en stor vinter på tre år utan sommar. Kylan slår sönder släkter. Våldet blir allmänt. Sedan ger de magiska låsen vika. Vargen **Fenrir** spränger sina kedjor. Gapet når himmel och jord."
         },
         {
           "type": "image",
           "asset": "fenrir_wolf_norse_mythology_chained",
           "ratio": "4:3",
-          "caption": "Fenrir kedjad: den dagen han frigör sig vänds världen upp och ner."
+          "caption": "Fenrir i bojor: den dag han sliter sig loss tippar världen"
         },
         {
           "type": "paragraph",
-          "text": "Ormen **Jörmungandr**, som omger kontinenterna, kämpar i havet: flodvågor och gifter. Kosmiska vargar slukar solen och månen. **Loke**, rymt, befaller [[Naglfar]], ett skepp gjord av de dödas spikar, lastat med jättar mot det sista slagfältet."
+          "text": "Ormen **Jörmungand**, som ringlar kring världsdelarna, slår i havet: flodvågor och gift. De kosmiska vargarna slukar solen och månen. **Loke**, fri igen, styr [[Naglfar]], skeppet av de dödas naglar, lastat med jättar mot det sista slagfältet."
         }
       ]
     },
@@ -58,42 +58,42 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Konfrontationen äger rum på slätten **Vígríðr**. [[Heimdall]], gudarnas väktare, blåser i sitt horn. Asgards gudar går dit och vet att de kommer att förlora. Alla möter sin fiende."
+          "text": "Mötet sker på slätten **Vigrid**. [[Heimdall]], gudarnas väktare, blåser i hornet. Asgårds gudar går dit i vetskap om att de ska förlora. Var och en möter sin fiende."
         },
         {
           "type": "image",
           "asset": "ragnarok_norse_end_world_battle_painting",
           "ratio": "4:3",
-          "caption": "Ragnarök: gudar, monster och eld på samma slätt."
+          "caption": "Ragnarök: gudar, monster och eld på samma slätt"
         },
         {
           "type": "paragraph",
-          "text": "**Oden**, gudarnas fader, slukas av Fenrir. Hans son Víðarr hämnas sin far. **Thor** krossar Jörmungandr med [[Mjölnir]], men dör av sitt gift efter nio steg. Sedan sätter **Surtr**, en eldig jätte från [[Muspelheim]], de nio världarna i brand. Jorden sjunker under havet."
+          "text": "**Oden**, gudarnas fader, slukas av Fenrir. Sonen Vidar hämnas fadern. **Tor** krossar Jörmungand med [[Mjölnir]], men dör av giftet efter nio steg. Sedan tänder **Surt**, eldjätten från [[Muspelheim]], de nio världarna. Jorden sjunker under havet."
         },
         {
           "type": "funFact",
-          "text": "Guden Freyr dör utan sitt magiska svärd: han hade erbjudit det av kärlek för att få jättekvinnan Gerds hand. Även kärlek har ett pris, i dessa myter."
+          "text": "Guden Frej dör utan sitt magiska svärd: han hade skänkt det av kärlek för att vinna jättinnan Gerds hand. Även kärleken har ett pris i de myterna."
         }
       ]
     },
     {
       "id": "course_181_ragnarok_la_fin_du_monde_nordique_p3",
-      "title": "Efter branden blir jorden grön igen",
+      "title": "Efter elden grönskar jorden",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Det som skiljer Ragnarök från linjära apokalypser är återkomsten. När lågorna väl är släckta kommer jorden fram ur vågorna, grönare och bördigare. Åkrarna ger utan att bli sådda."
+          "text": "Det som skiljer Ragnarök från linjära undergångar är återkomsten. När lågorna slocknat stiger jorden ur vattnet, grönare och bördigare. Åkrarna ger utan sådd."
         },
         {
           "type": "image",
           "asset": "yggdrasil_world_tree_norse_mythology",
           "ratio": "4:3",
-          "caption": "Yggdrasil, världsträdet: skydd för överlevande och löfte om fortsättning."
+          "caption": "Yggdrasil, världsträdet: de överlevandes skydd och löftet om en fortsättning"
         },
         {
           "type": "paragraph",
-          "text": "En ny generation av gudar överlever: **Baldr** återvänder från de döda; Tors söner, Magni och Móði, ärver hammaren. Två människor, **Líf** och **Lífþrasir**, gömde sig i [[Yggdrasil]] och livnärde sig på dagg. Deras namn betyder \"Liv\" och \"Fullt av liv\". Mänskligheten börjar igen."
+          "text": "En ny släkt av gudar överlever: **Balder** kommer tillbaka från de döda. Tors söner Magne och Mode ärver hammaren. Två människor, **Liv** och **Livtraser**, har gömt sig i [[Yggdrasil]] och ätit dagg. Namnen betyder „Liv” och „Livets ymnighet”. Mänskligheten börjar om."
         }
       ]
     },
@@ -104,15 +104,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "På 1800-talet populariserade **Richard Wagner** sin [[Götterdämmerung]], \"gudarnas skymning\": slutet på en ordning baserad på brutna eder. För de antika skandinaverna var budskapet enklare och svårare: om slutet är säkert återstår valet av mod."
+          "text": "På 1800-talet sprider **Richard Wagner** sin [[Götterdämmerung]], „gudaskymningen”: slutet för en ordning byggd på brutna eder. För de gamla skandinaverna var budskapet enklare och hårdare: är slutet visst, återstår ändå valet att vara tapper."
         },
         {
           "type": "paragraph",
-          "text": "[[Jämförande apokalypticism]] för den här historien närmare andra ändar av världen: lång vinter, himmelsk strid, översvämning, återfödelse. Eftersom vintern går före våren är Ragnarök inte bara en död. Det är en metamorfos."
+          "text": "[[Jämförande apokalypticism]] ställer berättelsen intill andra världsslut: lång vinter, himmelsk strid, flod, pånyttfödelse. Som vintern går före våren är Ragnarök inte bara en död. Det är en förvandling."
         },
         {
           "type": "takeaway",
-          "text": "**Ragnarök** är inte ingenting: det är gudarnas accepterade öde, en strid där Asgard faller, följt av en jord som återföds. The Nordic lesson: act with courage, even without hope of victory."
+          "text": "**Ragnarök** är inte ett intet: det är gudarnas antagna öde, en strid där Asgård faller, följd av en jord som föds på nytt. Den nordiska läxan: handla tappert, även utan hopp om seger."
         }
       ]
     }

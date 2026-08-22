@@ -1,72 +1,72 @@
 {
   "id": "course_3_la_prise_de_rome_par_les_wisigoths_410",
-  "title": "Visigoternas erövring av Rom",
+  "title": "Västgoternas erövring av Rom",
   "subtitle": "410",
   "subject": "histoire",
   "subcategory": "Antiquity & Middle Ages",
-  "description": "I augusti 410 plundrade Alarics västgoter Rom i tre dagar. För första gången på åtta århundraden går en fiendearmé in i den eviga staden.",
+  "description": "I augusti 410 plundrar Alariks västgoter Rom i tre dagar. För första gången på åtta århundraden går en fientlig armé in i den eviga staden.",
   "hero": {
     "image": "la_prise_de_rome_par_les_wisigoths",
     "ratio": "16:9",
-    "hook": "År 410 föll Rom. Och med det, idén om ett oövervinnerligt imperium."
+    "hook": "År 410 faller Rom. Och med staden idén om ett oövervinnerligt rike."
   },
   "sections": [
     {
       "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I augusti **410** händer det ofattbara. Anförda av sin kung **Alaric** tvingade **Visigoter**, ett germanskt folk, Roms portar. För första gången sedan den galliska plundringen av **390 f.Kr.**, för nästan **800 år sedan**, en fiendearmé plundrade den eviga staden."
+          "text": "I augusti **410** händer det otänkbara. Ledda av sin kung **Alarik** tvingar **västgoterna**, ett germanskt folk, Roms portar. För första gången sedan den galliska plundringen **390** f.Kr., nästan **800 år**, plundrar en fientlig armé den eviga staden."
         },
         {
           "type": "paragraph",
-          "text": "Rom är inte längre imperiets politiska huvudstad, men det förblir dess symboliska hjärta. Denna chock avslöjar en sanning som ingen ville se: det romerska västern höll på att dö."
+          "text": "Rom är inte längre rikets politiska huvudstad, men den förblir dess symboliska hjärta. Chocken avslöjar en sanning ingen ville se: det romerska västerlandet ligger för döden."
         }
       ]
     },
     {
       "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_p1",
-      "title": "Ett tömmande imperium",
+      "title": "Ett rike som töms",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I början av 400-talet saknade det västromerska riket pengar och soldater. För att upprätthålla gränserna multiplicerade han fördrag av typen [[Den romerska foedus]]: så kallade ”barbarer” bosatte sig på territoriet i utbyte mot militärtjänst. Den romerska maskinen håller fortfarande, men det beror på dem den en gång kämpade för att innehålla."
+          "text": "I början av 400-talet saknar Västromerska riket pengar och soldater. För att hålla gränserna multiplicerar det fördrag av typen [[Den romerska foedus]]: folk kallade „barbarer” bosätter sig på territoriet mot militärtjänst. Den romerska maskinen håller ännu, men den beror på dem den förr knappt kunde hålla tillbaka."
         },
         {
           "type": "paragraph",
-          "text": "I **402** överger västkejsaren [[Honorius]] Rom för [[Ravenna]], en stad i Italien som skyddas av dess myrar. Medan hovet går under jorden fortsätter den romerska aristokratin att leva som om ingenting hade förändrats. Verklig makt skiftade mot generaler av germanskt ursprung."
+          "text": "År **402** lämnar västrikes kejsare [[Honorius]] Rom för [[Ravenna]], en italiensk stad skyddad av sina träsk. Medan hovet gräver ner sig lever den romerska aristokratin som om ingenting hade ändrats. Den verkliga makten glider mot generaler av germanskt ursprung."
         },
         {
           "type": "funFact",
-          "text": "När \"Roms\" fall tillkännagavs fick Honorius panik: han trodde att de pratade om hans favoritkyckling, som heter som sådan. De säger lättade över att få veta att det \"bara\" handlade om staden."
+          "text": "När han hörde att „Rom” fallit ska Honorius ha fått panik: han trodde man talade om hans favorithöna, döpt så. Lättad, sägs det, att höra att det „bara” gällde staden."
         }
       ]
     },
     {
       "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_p2",
-      "title": "Alaric, en besviken romare",
+      "title": "Alarik, en besviken romare",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Alarik I]] är inte en vilde från ingenstans. Tidigare officer i den romerska armén, knuffad västerut av [[Hunnarna]], ett nomadfolk från Asien, han vill ha land och en officiell titel för sitt folk. Inför Ravennas förakt använder han Rom som gisslan. Två belägringar, lösensummor, sedan överfallet."
+          "text": "[[Alarik I]] är ingen vilding ur tomma intet. Tidigare officer i den romerska armén, knuffad västerut av [[Hunnarna]], ett nomadfolk från Asien, vill han land och en officiell titel för sitt folk. Inför Ravennas förakt använder han Rom som gisslan. Två belägringar, lösen, sedan stormningen."
         },
         {
           "type": "image",
           "asset": "alaric_king_visigoths",
           "ratio": "4:3",
-          "caption": "Alarik I, västgoternas kung och före detta romersk officer."
+          "caption": "Alarik den förste, västgoternas kung och tidigare romersk officer"
         },
         {
           "type": "paragraph",
-          "text": "Den **A augusti 24, 410** öppnas Salaria-porten. Plundringen varar **vara dagar**. En kristen av [[Arian]] bekännelse (en strömning som inte såg Kristus som lika med Gud Fadern), beordrar Alaric respekt för kyrkornas asyl. Verkligt våld, men inte total förstörelse: han vill bli Roms arvtagare, inte gravgrävaren."
+          "text": "Den **24 augusti 410** öppnas Porta Salaria. Plundringen varar **tre dagar**. Kristen av riktningen [[Arian]] (en lära som inte såg Kristus som jämlik Gud Fadern) befaller Alarik att kyrkornas asyl ska respekteras. Verkligt våld, men inte total förstörelse: han vill vara Roms arvinge, inte dess dödgrävare."
         },
         {
           "type": "funFact",
-          "text": "Enligt legenden, när han dog, avledde hans män floden Busento för att begrava Alaric och hans skatt, och sedan återförde vattnet till sin bädd."
+          "text": "Enligt legenden ska hans män vid hans död ha lett undan floden Busento för att begrava Alarik och hans skatt, och sedan släppt vattnet tillbaka i fåran."
         }
       ]
     },
@@ -77,17 +77,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Från Palestina utbrister [[Sankt Jerome]], en Kyrkans Fader: \"I en enda stad har hela universum förgåtts. » Hedningarna anklagar kristendomen för att ha försvagat Rom. För att svara skriver **Sankt Augustinus** Guds förgår jordens stadZZZ; [[Guds stad]]"
+          "text": "Från Palestina utbrister [[Sankt Jerome]], en kyrkofader: „I en enda stad har hela världen gått under.” Hedningarna anklagar kristendomen för att ha försvagat Rom. Som svar skriver **Augustinus** [[Guds stad]]: de jordiska rikena går under, kyrkan består."
         },
         {
           "type": "image",
           "asset": "sack_of_rome_410_alaric",
           "ratio": "4:3",
-          "caption": "Plundringen av Rom år 410, chock för hela den antika världen."
+          "caption": "Plundringen av Rom 410, en chock för hela antiken"
         },
         {
           "type": "paragraph",
-          "text": "Signalen är tydlig för andra germanska folk, som [[Vandaler]] och [[Franks]]: Väst är ett byte. I **455** plundrade vandalerna Rom mycket hårdare. I **476** avsatte ledaren [[Heruli]] [[Odoacer]] den siste västerländska kejsaren, [[Romulus Augustulus]]. Maktens insignier går till Konstantinopel. Västriket försvinner."
+          "text": "Signalen är tydlig för andra germanska folk, som [[Vandaler]] och [[Franks]]: västern är ett byte. År **455** plundrar vandalerna Rom långt hårdare. År **476** avsätter hövdingen [[Heruli]] [[Odoacer]] den siste kejsaren i väst, [[Romulus Augustulus]]. Maktens insignier går till Konstantinopel. Västriket slocknar."
         },
         {
           "type": "timeline",
@@ -95,21 +95,21 @@
             {
               "date": "402",
               "title": "Ravenna, ny huvudstad",
-              "detail": "Honorius överger Rom för en bättre försvarad stad."
+              "detail": "Honorius lämnar Rom för en bättre skyddad stad."
             },
             {
               "date": "410",
-              "title": "Påse av Rom",
+              "title": "Roms plundring",
               "detail": "Alarik och västgoterna plundrar staden i tre dagar."
             },
             {
               "date": "455",
-              "title": "Vandalsäck",
-              "detail": "Rom plundras på ett mycket mer destruktivt sätt."
+              "title": "Vandalernas plundring",
+              "detail": "Rom plundras långt mer förödande."
             },
             {
               "date": "476",
-              "title": "Slutet på västra imperiet",
+              "title": "Västrikets slut",
               "detail": "Odoacer avsätter Romulus Augustulus."
             }
           ]
@@ -118,20 +118,20 @@
     },
     {
       "id": "course_3_la_prise_de_rome_par_les_wisigoths_410_p4",
-      "title": "Förskjutningen mot medeltiden",
+      "title": "Vändningen mot medeltiden",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Västgoterna bosatte sig så småningom i Aquitaine, sedan i Hispania (nuvarande Spanien). De förstörde inte hela den klassiska kulturen: de blev dess smugglare och blandade romersk lag, kristen tro och germanska traditioner."
+          "text": "Västgoterna slår sig till slut ner i Akvitanien, sedan i Hispania (dagens Spanien). De krossar inte hela den klassiska kulturen: de blir dess förmedlare och blandar romersk rätt, kristen tro och germanska seder."
         },
         {
           "type": "paragraph",
-          "text": "**410**-väskan förblir pausen i minnena. Det är ännu inte det administrativa slutet av imperiet, men det är slutet på illusionen. Medeltida Europa börjar i spillrorna av en myt."
+          "text": "Plundringen **410** förblir brottet i minnena. Det är ännu inte rikets administrativa slut, men det är slutet på illusionen. Det medeltida Europa börjar i spillrorna av en myt."
         },
         {
           "type": "takeaway",
-          "text": "I **410** föll Rom för första gången på **800 år**. Västgoter utbildade i romersk stil plundrade där i tre dagar. Sammandrabbningen sätter scenen för **476** och det medeltida Europa."
+          "text": "År **410** faller Rom för första gången på **800 år**. Västgoter skolade i romersk tjänst plundrar i tre dagar. Chocken banar väg för **476** och det medeltida Europa."
         }
       ]
     }

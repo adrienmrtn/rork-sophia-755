@@ -1,137 +1,137 @@
 {
   "id": "course_39_la_democratie_athenienne",
-  "title": "Atensk demokrati",
-  "subtitle": "500-talet f.Kr",
+  "title": "Den atenska demokratin",
+  "subtitle": "400-talet f.Kr.",
   "subject": "histoire",
   "subcategory": "Cold War & Contemporary World",
-  "description": "På 500-talet f.Kr. uppfann Aten ett system där medborgarna styrde direkt. Lotteridragning, lika säg... och massiv uteslutning.",
+  "description": "På 400-talet f.Kr. uppfinner Aten ett system där medborgarna styr direkt. Lottning, lika talarätt, och en massiv utestängning.",
   "hero": {
     "image": "la_democratie_athenienne",
     "ratio": "16:9",
-    "hook": "Hur en grekisk stad uppfann folkets makt och dess gränser."
+    "hook": "Hur en grekisk stad uppfann folkets makt, och dess gränser."
   },
   "sections": [
     {
       "id": "course_39_la_democratie_athenienne_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "På 500-talet f.Kr. uppfann Aten något radikalt: **[[Politik]]** i den meningen att medborgarna inte längre var undersåtar av en kung, utan skådespelare av sitt öde. Makten (*kratos*) tillhör folket (*demos*). Därav ordet demokrati."
+          "text": "På 400-talet f.Kr. uppfinner Aten något radikalt: **[[Politik]]** i den meningen att medborgarna inte längre är undersåtar till en kung, utan aktörer i sitt öde. Makten (*kratos*) tillhör folket (*demos*). Därav ordet demokrati."
         },
         {
           "type": "paragraph",
-          "text": "Denna direkta demokrati, född ur kriser och reformer, förblir en referens för västerländskt politiskt tänkande, med sina styrkor och sina blinda fläckar."
+          "text": "Den här direkta demokratin, född ur kriser och reformer, förblir en referens för det västerländska politiska tänkandet, med sina styrkor och sina blinda fläckar."
         }
       ]
     },
     {
       "id": "course_39_la_democratie_athenienne_p1",
-      "title": "Reformer som öppnar upp staden",
+      "title": "Reformer som öppnar staden",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "På 700-talet f.Kr. slits Aten mellan aristokrater och skuldsatta bönder. **[[Solon]]**, vald till statsman i **594 f.Kr.**, avskaffar skuldslaveri och öppnar magistrater efter förmögenhet, inte bara blod."
+          "text": "På 600-talet f.Kr. slits Aten mellan aristokrater och skuldsatta bönder. **[[Solon]]**, statsman vald **594** f.Kr., avskaffar slaveri för skuld och öppnar ämbetena efter förmögenhet, inte bara efter blod."
         },
         {
           "type": "paragraph",
-          "text": "Den verkliga vändpunkten är **[[Kleisthenes]]** (**508-507**). Den här reformatorn skapar **10 stammar blandade** för att bryta upp klanerna och etablerar **[[Boule]]**, Council of Five Hundred som lottas. Varje medborgare kan tjäna staden."
+          "text": "Den verkliga vändningen är **[[Kleisthenes]]** (**508-507**). Reformatorn skapar **10 blandade stammar** för att knäcka klanerna och instiftar **[[Boule]]**, de femhundras råd lottade bland medborgarna. Varje medborgare kan tjäna staden."
         },
         {
           "type": "image",
           "asset": "athens_agora_ancient_ruins",
           "ratio": "4:3",
-          "caption": "Atens agora, hjärtat av det civila livet."
+          "caption": "Agoran i Aten, hjärtat i det medborgerliga livet"
         },
         {
           "type": "funFact",
-          "text": "För att ta bort en man som var för mäktig, röstade atenarna **[[Utfrysning]]** på en keramisk skärva: exil i tio år, med ett kvorum på **6 000** väljare."
+          "text": "För att undanröja en man som blivit för mäktig röstade atenarna fram **[[Utfrysning]]** på en keramikskärva: tio års landsflykt, med ett quorum på **6.000** röstande."
         }
       ]
     },
     {
       "id": "course_39_la_democratie_athenienne_p2",
-      "title": "Hur det fungerar under Pericles",
+      "title": "Hur det fungerar under Perikles",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I mitten av 400-talet, under **Perikles**, en strateg omvald femton gånger och en figur av den atenska guldåldern, blev systemet mer öppet. **Ecclesia**, medborgarförsamlingen, träffas cirka **40 gäng** per år på Pnyx kulle. Hon röstar om lagar, krig, fred, budgeten."
+          "text": "Mitt på 400-talet, under **Perikles**, strateg omvald femton gånger och gestalt för Atens guldålder, blir systemet mer öppet. **Ekklesia**, medborgarnas församling, sammanträder ungefär **40 gånger** om året på kullen Pnyx. Den röstar lagar, krig, fred, budget."
         },
         {
           "type": "image",
           "asset": "pericles_bust_sculpture",
           "ratio": "1:1",
-          "caption": "Perikles, strateg omvald femton gånger, figur från den atenska guldåldern."
+          "caption": "Perikles, strateg omvald femton gånger, gestalt för Atens guldålder"
         },
         {
           "type": "paragraph",
-          "text": "**[[Isegoria]]** garanterar lika tal. **[[Misthos]]**, dagpenning, låter de fattigaste sitta. Rättvisa passerar genom **[[Heliaia]]**: **6 000** nämndemän dragna genom lottning. Lottdragningen begränsar monopoliseringen av makten, förutom för militära strateger."
+          "text": "**[[Isegoria]]** garanterar lika talarätt. **[[Misthos]]**, ett dagligt arvode, låter de fattigaste sitta med. Rätten går via **[[Heliaia]]**: **6.000** jurymän lottade. Lottningen begränsar maktens kapning, utom för de militära strategerna."
         }
       ]
     },
     {
       "id": "course_39_la_democratie_athenienne_p3",
-      "title": "En demokrati som utesluter många",
+      "title": "En demokrati som stänger ute många",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Av cirka **300 000** invånare är det bara **30 000 till 50 000** manliga medborgare som röstar. Kvinnor, slavar och metiker (bosatta utlänningar) är undantagna. I **451** skärper Pericles till och med regeln: två medborgarföräldrar krävs."
+          "text": "Av ungefär **300.000** invånare röstar bara **30.000 till 50.000** manliga medborgare. Kvinnor, slavar och metoiker (bosatta utlänningar) stängs ute. År **451** skärper Perikles till och med regeln: det krävs två medborgarföräldrar."
         },
         {
           "type": "paragraph",
-          "text": "Grundande paradox: jämställdhet mellan kamrater bygger på slaveri och utanförskap. En demokrati ansikte mot ansikte, intensiv, men sluten."
+          "text": "Grundläggande paradox: jämlikheten mellan likar vilar på slaveri och utestängning. En demokrati ansikte mot ansikte, intensiv, men sluten."
         },
         {
           "type": "funFact",
-          "text": "Alla som var ointresserade av det offentliga livet kallades *idioter* (”individuell”). Ordet gav \"idiot\": att avskära sig från det allmänna bästa sågs som en brist på förnuft."
+          "text": "Den som struntade i det offentliga livet kallades *idiotes* („privatperson”). Ordet har gett „idiot”: att skära sig från det gemensamma goda räknades som brist på förnuft."
         }
       ]
     },
     {
       "id": "course_39_la_democratie_athenienne_p4",
-      "title": "Bräckligheter och arv",
+      "title": "Sårbarheter och arv",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En [[Demagog]], en talare som smickrar passionerna, kan bära församlingen med känslor. **Platon**, filosof präglad av döden av sin mästare **Sokrates** (**399 f.Kr**), ser i demokratin opinionsvälde mot sanningen, och det typiska exemplet på majoritetens tyranni."
+          "text": "En [[Demagog]], en talare som smeker passionerna, kan ta församlingen med känsla. **Platon**, filosof märkt av mästaren **Sokrates** död (**399** f.Kr.), ser i demokratin opinionens välde mot sanningen, och typexemplet på majoritetens tyranni."
         },
         {
           "type": "paragraph",
-          "text": "Trots sina brister testamenterar Aten bestående idéer: makthavarnas ansvar, likhet inför lagen, motsägelsefull debatt. I dag kommer till och med lottning och direkt demokrati upp i samtida diskussioner."
+          "text": "Trots bristerna lämnar Aten idéer som sitter kvar: de styrandes ansvar, likhet inför lagen, motsägande debatt. I dag kommer till och med lottning och direkt demokrati tillbaka i samtida samtal."
         },
         {
           "type": "timeline",
           "events": [
             {
-              "date": "594 f.Kr",
-              "title": "Solón",
-              "detail": "Slut på skuldslaveri."
+              "date": "594 f.Kr.",
+              "title": "Solon",
+              "detail": "Slut på slaveri för skuld."
             },
             {
-              "date": "508 f.Kr",
+              "date": "508 f.Kr.",
               "title": "Kleisthenes",
-              "detail": "Blandade stammar och Boulé."
+              "detail": "Blandade stammar och Boule."
             },
             {
-              "date": "5:e århundradet",
+              "date": "400-talet",
               "title": "Perikles",
               "detail": "Misthos och radikal demokrati."
             },
             {
-              "date": "399 f.Kr",
+              "date": "399 f.Kr.",
               "title": "Sokrates död",
-              "detail": "Den mörka sidan av folksuveräniteten."
+              "detail": "Folkviljans mörka sida."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Atensk demokrati var en direkt regering av fria manliga medborgare, baserad på lottning och lika tal. Den uteslöt ungefär **85%** av befolkningen, men uppfann västerländsk offentlig debatt."
+          "text": "Den atenska demokratin är ett direkt styre av fria manliga medborgare, byggt på lottning och lika talarätt. Den stängde ute ungefär **85%** av befolkningen, men uppfann den västerländska offentliga debatten."
         }
       ]
     }

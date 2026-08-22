@@ -1,68 +1,68 @@
 {
   "id": "course_56_la_decouverte_de_la_radioactivite_marie",
-  "title": "Upptäckten av radioaktivitet",
+  "title": "Upptäckten av radioaktiviteten",
   "subtitle": "Marie Curie",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "Marie Curie, med Pierre Curie och Henri Becquerel, inleder kapitlet om radioaktivitet. Två Nobelpriser, överväldigande arbete och ett enormt arv.",
+  "description": "Marie Curie, med Pierre Curie och Henri Becquerel, öppnar kapitlet om radioaktivitet. Två Nobelpris, ett tungt arbete, och ett väldigt arv.",
   "hero": {
     "image": "la_decouverte_de_la_radioactivite_marie_curie",
     "ratio": "16:9",
-    "hook": "Hon vägde ton malm för att isolera några gram av ett osynligt element."
+    "hook": "Hon vägde tonvis med malm för att isolera några gram av ett osynligt grundämne."
   },
   "sections": [
     {
       "id": "course_56_la_decouverte_de_la_radioactivite_marie_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Marie Curie** (född Maria Skłodowska) är den första kvinnan att ta emot ett Nobelpris. Hon är fortfarande den enda personen som har fått **två** i två olika vetenskaper: fysik, sedan kemi."
+          "text": "**Marie Curie** (född Maria Skłodowska) är den första kvinnan som får ett Nobelpris. Hon är fortfarande den enda personen som fått **två** i två olika vetenskaper: fysik, sedan kemi."
         },
         {
           "type": "paragraph",
-          "text": "Dess ämne: **radioaktivitet**, det vill säga det faktum att vissa atomer spontant skickar energi och partiklar."
+          "text": "Hennes ämne: **radioaktivitet**, det vill säga att vissa atomer av sig själva sänder ut energi och partiklar."
         }
       ]
     },
     {
       "id": "course_56_la_decouverte_de_la_radioactivite_marie_p1",
-      "title": "En smal dörr till vetenskapen",
+      "title": "En smal dörr in i vetenskapen",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Född i Polen gick hon för att studera i Paris eftersom lokala universitet stängde många dörrar för kvinnor. Hon arbetar hårt, ofta under otrygga förhållanden."
+          "text": "Född i Polen reser hon till Paris för att studera, för de lokala universiteten stänger många dörrar för kvinnor. Hon arbetar hårt, ofta under knappa villkor."
         },
         {
           "type": "paragraph",
-          "text": "Hon gifte sig med **Pierre Curie**, fysiker. Tillsammans bildade de en sällsynt laboratorieduo för tiden."
+          "text": "Hon gifter sig med **Pierre Curie**, fysiker. Tillsammans bildar de ett laboratoriepar som var sällsynt för tiden."
         }
       ]
     },
     {
       "id": "course_56_la_decouverte_de_la_radioactivite_marie_p2",
-      "title": "Namnge det osynliga",
+      "title": "Att namnge det osynliga",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I **1896** märkte **Henri Becquerel** att uran döljer fotografiska plattor utan ljus. Marie Curie bestämmer sig för att studera detta fenomen i detalj. Hon uppfann ordet **radioaktivitet**."
+          "text": "År **1896** ser **Henri Becquerel** att uran slöar fotografiska plåtar utan ljus. Marie Curie beslutar att studera fenomenet i detalj. Hon myntar ordet **radioaktivitet**."
         },
         {
           "type": "image",
           "asset": "marie_curie_pitchblende_radioactivity",
           "ratio": "4:3",
-          "caption": "Tonvis med pitchblende för att isolera radium och polonium."
+          "caption": "Tonvis med beckblände för att isolera radium och polonium."
         },
         {
           "type": "paragraph",
-          "text": "Med Pierre upptäcker hon två nya element: **polonium** (uppkallad efter Polen) och **radium**. För att isolera dem måste enorma mängder malm, pitchblende, bearbetas."
+          "text": "Med Pierre upptäcker hon två nya grundämnen: **polonium** (uppkallat efter Polen) och **radium**. För att isolera dem måste enorma mängder malm behandlas, beckblände."
         },
         {
           "type": "funFact",
-          "text": "Radium lyser svagt i mörkret. Vi blev först förvånade... innan vi förstod hur farligt det var."
+          "text": "Radium lyser svagt i mörkret. Först beundrade man det... innan man förstod faran."
         }
       ]
     },
@@ -73,26 +73,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I **1903** fick Marie, Pierre och Becquerel Nobelpriset i fysik. I **1911** fick Marie ensam Nobelpriset i kemi. Pierre dog av misstag 1906. Hon fortsätter."
+          "text": "År **1903** får Marie, Pierre och Becquerel Nobelpriset i fysik. År **1911** får Marie ensam Nobelpriset i kemi. Pierre dör i en olycka 1906. Hon fortsätter."
         },
         {
           "type": "paragraph",
-          "text": "Under första världskriget organiserade hon mobila röntgenenheter för att behandla sårade. Hon utsätter sin kropp för doser som vi idag skulle veta är oacceptabla."
+          "text": "Under första världskriget organiserar hon mobila röntgenenheter för att vårda sårade. Hon utsätter sin kropp för doser som i dag skulle räknas som oacceptabla."
         }
       ]
     },
     {
       "id": "course_56_la_decouverte_de_la_radioactivite_marie_p4",
-      "title": "Ett dubbelsidigt arv",
+      "title": "Ett arv med två sidor",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Radioaktivitet har möjliggjort strålbehandling mot vissa cancerformer... och även kärnvapen. Kunskap är neutralt; dess användningsområden är det inte."
+          "text": "Radioaktiviteten har gett strålbehandling mot vissa cancerformer... och också kärnvapen. Kunskapen är neutral. Användningen är det inte."
         },
         {
           "type": "takeaway",
-          "text": "Marie Curie förvandlade en märklig observation till en ny vetenskap: radioaktivitet. Hans arbete öppnade upp modern fysik ... till priset av risker som då var dåligt förstått."
+          "text": "Marie Curie förvandlade en märklig iakttagelse till en ny vetenskap: radioaktiviteten. Hennes arbete öppnade den moderna fysiken, till priset av risker som då förstods dåligt."
         }
       ]
     }

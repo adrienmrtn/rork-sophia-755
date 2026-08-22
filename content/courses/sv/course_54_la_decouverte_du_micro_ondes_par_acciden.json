@@ -4,31 +4,31 @@
   "subtitle": "Av en slump",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "1945 märkte en ingenjör att hans godisbit hade smält nära en radar. Ur denna observation föddes mikrovågsugnen.",
+  "description": "År 1945 ser en ingenjör att chokladkakan i fickan har smält nära en radar. Av den iakttagelsen föds mikrovågsugnen.",
   "hero": {
     "image": "la_decouverte_du_micro_ondes",
     "ratio": "16:9",
-    "hook": "En smält chokladkaka... och moderna rätter förändras."
+    "hook": "En smält chokladkaka... och det moderna köket ändras."
   },
   "sections": [
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I **1945**, i USA, arbetar ingenjör **Percy Spencer** med radar. En dag märker han att godisbiten i fickan har smält. Inte på grund av kroppsvärme: på grund av radarvågor."
+          "text": "År **1945** i USA arbetar ingenjören **Percy Spencer** med radar. En dag ser han att chokladkakan i fickan har smält. Inte av kroppsvärmen: av radarns vågor."
         },
         {
           "type": "paragraph",
-          "text": "Han testar med majs: popcornen poppar. Idén om en ugn som värmer annorlunda föddes."
+          "text": "Han testar med majs: popcornen spricker. Idén om en ugn som värmer på ett annat sätt är född."
         }
       ]
     },
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p1",
-      "title": "Från radar till kök",
+      "title": "Från radarn till köket",
       "free": false,
       "blocks": [
         {
@@ -39,11 +39,11 @@
         },
         {
           "type": "paragraph",
-          "text": "**mikrovågor** är elektromagnetiska vågor, som radioljus, men mer \"energiska\" än många konventionella radiovågor. Under kriget användes de främst till radar för att upptäcka flygplan och båtar."
+          "text": "**Mikrovågor** är elektromagnetiska vågor, av samma släkt som ljus och radio, men mer „energiska” än många vanliga radiovågor. Under kriget tjänar de främst radarn att upptäcka plan och fartyg."
         },
         {
           "type": "paragraph",
-          "text": "Spencer förstår att de också kan agitera vatten och fetter i mat... och därför värma upp den."
+          "text": "Spencer förstår att de också kan sätta vatten och fett i maten i rörelse... och alltså värma den."
         }
       ]
     },
@@ -56,30 +56,30 @@
           "type": "image",
           "asset": "first_microwave_oven_radarange_1947",
           "ratio": "4:3",
-          "caption": "Den första kommersiella mikrovågsugnen var storleken på ett skåp."
+          "caption": "Den första kommersiella mikrovågsugnen är stor som ett skåp."
         },
         {
           "type": "paragraph",
-          "text": "Den första kommersiella modellen, **Radarområde**, släpptes runt **1947**. Den är enorm, dyr och främst avsedd för restauranger eller båtar. Det kommer att ta årtionden att miniatyrisera det och göra det överkomligt för hem."
+          "text": "Den första kommersiella modellen, **Radarange**, kommer kring **1947**. Den är enorm, dyr och tänkt mer för restauranger eller fartyg. Det tar årtionden att miniatyrisera den och göra den råd för hushållen."
         },
         {
           "type": "funFact",
-          "text": "Till en början var vissa rädda för att ugnen skulle \"göra maten radioaktiv\". Falskt: mikrovågor värms upp, de gör dig inte radioaktiv."
+          "text": "I början var vissa rädda att ugnen skulle „göra maten radioaktiv”. Fel: mikrovågor värmer, de gör inte radioaktivt."
         }
       ]
     },
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p3",
-      "title": "Hur värmer det egentligen?",
+      "title": "Hur det faktiskt värmer",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mikrovågor vibrerar främst vattenmolekyler (och lite fett och socker). Denna omröring skapar **inuti värme** maten, inte bara på ytan som en panna."
+          "text": "Mikrovågorna sätter främst vattenmolekylerna i vibration (och lite fett och socker). Den rörelsen skapar värme **inuti** maten, inte bara på ytan som en stekpanna."
         },
         {
           "type": "paragraph",
-          "text": "Det är därför en maträtt kan vara varm på utsidan och ljummen i mitten om den är tjock: vågorna tränger inte in oändligt djupt."
+          "text": "Därför kan en rätt vara brännhet utanpå och ljummen i mitten om den är tjock: vågorna går inte oändligt djupt."
         }
       ]
     },
@@ -90,11 +90,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Från 1970-1980-talet kom mikrovågsugnen in i miljontals kök. Det ändrar vanor: värm snabbt upp, färdigrätter, snabbare liv."
+          "text": "Från 1970- och 1980-talet går mikrovågsugnen in i miljoner kök. Den ändrar vanorna: värma snabbt, färdigmat, ett snabbare liv."
         },
         {
           "type": "takeaway",
-          "text": "Mikrovågsugnen föddes från en slump observerad av Percy Spencer nära en radar. Vågorna agiterar huvudsakligen vattnet i maten och värmer det från insidan."
+          "text": "Mikrovågsugnen föds ur en slump som Percy Spencer såg nära en radar. Vågorna sätter främst vattnet i maten i rörelse och värmer den inifrån."
         }
       ]
     }

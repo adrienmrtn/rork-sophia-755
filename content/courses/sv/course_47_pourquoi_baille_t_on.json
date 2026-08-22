@@ -1,94 +1,94 @@
 {
   "id": "course_47_pourquoi_baille_t_on",
   "title": "Varför gäspar vi?",
-  "subtitle": "Kropp & hjärna",
+  "subtitle": "Kropp och hjärna",
   "subject": "sciences",
   "subcategory": "Our daily life explained",
-  "description": "Alla gäspar: människor, hundar, ibland även foster. Det är nog inte för \"syrebrist\". Här är de starkaste ledtrådarna.",
+  "description": "Alla gäspar: människor, hundar, ibland till och med foster. Det handlar troligen inte om att „sakna syre”. Här är de mest hållbara spåren.",
   "hero": {
     "image": "pourquoi_baille_t_on",
     "ratio": "16:9",
-    "hook": "Du gäspar. Din granne gäspar. Och det är (nästan) inte smittsamt av en slump."
+    "hook": "Du gäspar. Grannen gäspar. Och det är (nästan) inte smittsamt av en slump."
   },
   "sections": [
     {
       "id": "course_47_pourquoi_baille_t_on_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Gäspningar verkar vardagligt. Det är dock en komplex reflex: käke, bröstkorg, diafragma, hela kroppen blir involverad. Lejon, hundar, människor: många djur gäspar."
+          "text": "Gäspningen ser banal ut. Ändå är den en komplex reflex: käke, bröstkorg, diafragma, hela kroppen hänger med. Lejon, hundar, människor: många djur gäspar."
         },
         {
           "type": "paragraph",
-          "text": "Länge sa vi: \"det är att ha mer syre\". Denna idé är nu i stort sett övergiven. Moderna förklaringar är mer intressanta."
+          "text": "Länge sade man: „det är för att få mer syre”. Den idén är i stort sett övergiven i dag. De moderna förklaringarna är intressantare."
         }
       ]
     },
     {
       "id": "course_47_pourquoi_baille_t_on_p1",
-      "title": "Inte (särskilt) för syre",
+      "title": "Inte (främst) för syret",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Experiment har visat att ökande syre i luften inte förhindrar gäspningar. Sänk koldioxiden lite heller. Så att gäspa är inte en enkel \"att komma ikapp efter luft\"."
+          "text": "Försök har visat att mer syre i luften inte stoppar gäspningar. Lite mindre koldioxid heller inte. Alltså är gäspningen inte ett enkelt „sätt att hämta luft”."
         },
         {
           "type": "paragraph",
-          "text": "En stark ledning idag: gäspning hjälper **kommer att reglera temperaturen**. Genom att andas brett och sträcka ut ansiktet kommer vi att \"ventilera\" och kyla ner huvudet lite, speciellt när vi är trötta."
+          "text": "Ett starkt spår i dag: gäspningen skulle hjälpa till att **reglera hjärnans temperatur**. Genom att andas in brett och stretcha ansiktet skulle man lite „ventilera” och kyla huvudet, särskilt när man är trött."
         }
       ]
     },
     {
       "id": "course_47_pourquoi_baille_t_on_p2",
-      "title": "Varför smittar det?",
+      "title": "Varför det är smittsamt",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "contagious_yawning_people_group",
           "ratio": "4:3",
-          "caption": "Att se någon gäspa är ofta tillräckligt för att utlösa reflexen."
+          "caption": "Att se någon gäspa räcker ofta för att utlösa reflexen."
         },
         {
           "type": "paragraph",
-          "text": "Hos människor kan se, höra eller till och med läsa ordet \"gäspning\" utlösa en gäspning. Det är inte bara en dum imitation: det påverkar också **empati** och hjärnkretsar kopplade till [[Spegelneuroner och smittsamhet]], neuroner som aktiveras när vi agerar... eller när vi ser någon agera."
+          "text": "Att se, höra eller till och med läsa ordet „gäspa” kan utlösa en gäspning. Det är inte bara dum härmning: det rör också **empati** och hjärnkretsar kopplade till [[spegelneuroner och smittsamhet]], celler som slås på när du gör något... eller när du ser någon annan göra det."
         },
         {
           "type": "funFact",
-          "text": "Små barn gäspar lite på grund av smitta. Denna känslighet kommer senare, tillsammans med vissa sociala färdigheter."
+          "text": "Små barn gäspar sällan av smitta. Den känsligheten kommer senare, samtidigt som vissa sociala färdigheter."
         }
       ]
     },
     {
       "id": "course_47_pourquoi_baille_t_on_p3",
-      "title": "Vi gäspar redan innan vi föds",
+      "title": "Vi gäspar redan före födseln",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Fostret gäspar runt **11:e veckan** av graviditeten. Vid denna ålder andas deras lungor ännu inte luft. Så, återigen, det handlar inte om att \"få slut på syre\"."
+          "text": "Foster gäspar redan från ungefär den **elfte** graviditetsveckan. I den åldern andas lungorna ännu inte luft. Alltså, återigen, är det inte för att „sakna syre”."
         },
         {
           "type": "paragraph",
-          "text": "Hos fostret kan gäspningar hjälpa utvecklingen av käk- och ansiktsmuskler."
+          "text": "Hos fostret kan gäspningen hjälpa musklerna i käke och ansikte att utvecklas."
         }
       ]
     },
     {
       "id": "course_47_pourquoi_baille_t_on_p4",
-      "title": "Gäsp för att hålla sig alert?",
+      "title": "Gäspa för att hålla sig vaken?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vi gäspar ofta när vi är trötta... men också precis innan ett test, eller när vi är uttråkade när vi försöker hålla fokus. Stretching kan stimulera nervsystemet och hjälpa **att hålla sig alert**."
+          "text": "Vi gäspar ofta när vi är trötta... men också precis före en prövning, eller när vi har tråkigt och vill hålla koncentrationen. Stretchingen kan reta nervsystemet och hjälpa oss att **stanna vaksamma**."
         },
         {
           "type": "takeaway",
-          "text": "Gäspning är förmodligen inte brist på syre. Det skulle snarare tjäna till att reglera hjärnan (temperatur, vaksamhet) och hos människor sprids det också genom social smitta."
+          "text": "Gäspningen är troligen inte syrebrist. Den skulle snarare reglera hjärnan (temperatur, vaksamhet) och, hos människan, spridas också genom social smitta."
         }
       ]
     }

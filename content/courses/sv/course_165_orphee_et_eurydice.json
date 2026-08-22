@@ -1,28 +1,28 @@
 {
   "id": "course_165_orphee_et_eurydice",
   "title": "Orfeus och Eurydike",
-  "subtitle": "Kärleken som trotsar döden",
+  "subtitle": "Kärleken som utmanar döden",
   "subject": "mythologie",
   "subcategory": "Greece: the gods",
-  "description": "Orpheus stiger ner till underjorden för att föra tillbaka Eurydike. Hans musik böjer döden. En enda förbjuden blick räcker för att förlora allt.",
+  "description": "Orfeus går ner till Hadesriket för att hämta Eurydike. Musiken böjer döden. En enda förbjuden blick räcker för att förlora allt.",
   "hero": {
     "image": "orphee_et_eurydice",
     "ratio": "16:9",
-    "hook": "Hans lyra lugnar underjorden. Hennes tvivel gör Eurydice för alltid."
+    "hook": "Lyran stillar Hadesriket. Tvivlet ger Eurydike tillbaka för alltid."
   },
   "sections": [
     {
       "id": "course_165_orphee_et_eurydice_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Orfeus** är en musiker vars lyra till och med rör på stenar. När hans fru **Eurydice** dör vägrar han att sörja. Han går ner levande till de döda för att föra tillbaka henne."
+          "text": "**Orfeus** är en musiker vars lyra rör även stenarna. När hustrun **Eurydike** dör vägrar han sörja. Han går levande ner till de döda för att hämta henne."
         },
         {
           "type": "paragraph",
-          "text": "De latinska poeterna [[Vergilius]] och [[Ovidius]] fixade den här historien. Bortom tragisk kärlek är det en berättelse om tvivel, otålighet och konstens kraft inför döden."
+          "text": "De latinska poeterna [[Vergilius]] och [[Ovidius]] fäste berättelsen. Bortom den tragiska kärleken är det en historia om tvivel, otålighet och konstens makt inför döden."
         }
       ]
     },
@@ -33,86 +33,86 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Orpheus är son till Muse **Calliope**. Hans **lyra**, gåva från **Apollo**, konstens gud, används inte bara för att behaga. Hon lugnar djur, flyttar träd, lugnar vild natur. Där andra hjältar vinner med våld, triumferar Orpheus i harmoni."
+          "text": "Orfeus är son till musan **Kalliope**. Hans **lyra**, en gåva av **Apollon**, konstens gud, ska inte bara behaga. Den stillar vilddjur, flyttar träd, lugnar den vilda naturen. Där andra hjältar vinner med kraft segrar Orfeus med harmoni."
         },
         {
           "type": "image",
           "asset": "orpheus_lyre_painting_ancient_myth",
           "ratio": "4:3",
-          "caption": "Orfeus och hans lyra: konsten som makt över världen."
+          "caption": "Orfeus och lyran: konsten som makt över världen"
         },
         {
           "type": "paragraph",
-          "text": "Under expeditionen av **Argonauter**, ledd av hjälten [[Jason]], försöker sirenerna locka till sig besättningen. Orpheus sjunger högre och räddar sina följeslagare. Sedan gifter han sig med dryaden **Eurydice**, en tränymf. Lycka är kort."
+          "text": "På **argonauternas** färd, ledd av hjälten [[Jason]], lockar sirenerna besättningen. Orfeus sjunger starkare och räddar kamraterna. Sedan gifter han sig med dryaden **Eurydike**, en skogsnymf. Lyckan blir kort."
         },
         {
           "type": "funFact",
-          "text": "På bröllopsdagen flyr Eurydice herden [[Aristaeus]]. Hon trampar på en orm. Giftet dödar henne. Hans skugga lämnar mot [[Styx]], helvetets flod."
+          "text": "På bröllopsdagen flyr Eurydike herden [[Aristaeus]]. Hon trampar på en orm. Giftet dödar henne. Hennes skugga går mot [[Styx]], Hadesrikets flod."
         }
       ]
     },
     {
       "id": "course_165_orphee_et_eurydice_p2",
-      "title": "Stig ner levande bland de döda",
+      "title": "Gå levande ner till de döda",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Orpheus försöker en [[Katabasis]]: en nedstigning till helvetet. Inga vapen. Bara hans musik. Hon somnar [[Cerberus]], den trehövdade hunden som vaktar ingången. Hon böjer [[Charon]], de dödas båtsman."
+          "text": "Orfeus försöker en [[Katabasis]]: en nedstigning till Hadesriket. Inga vapen. Bara musiken. Den söver [[Cerberus]], den trehövdade hunden som vaktar ingången. Den böjer [[Charon]], de dödas färjkarl."
         },
         {
           "type": "paragraph",
-          "text": "Framför **Hadès** och **Persephone**, underjordens suveräner, spelar Orpheus sitt livs mest gripande låt. Underjorden stannar för ett ögonblick. **Sisyfos** och **Tantalus** glömmer sin tortyr. [[Erinyes]], hämndens gudinnor, fäller tårar."
+          "text": "Inför **Hades** och **Persefone**, underjordens härskare, spelar Orfeus det mest omskakande stycket i sitt liv. Hadesriket stannar ett ögonblick. **Sisyfos** och **Tantalos** glömmer sin plåga. [[Erinyes]], hämndens gudinnor, fäller tårar."
         },
         {
           "type": "funFact",
-          "text": "I vissa versioner, rör Orpheus Persefone, påminner henne om hans egen kidnappning av Hades. Drottningen av de döda känner igen hennes smärta."
+          "text": "I vissa versioner rör Orfeus Persefone genom att påminna om hennes eget rov av Hades. De dödas drottning känner igen smärtan."
         },
         {
           "type": "paragraph",
-          "text": "Hades accepterar det omöjliga: Eurydice kan gå upp igen. Men ett absolut villkor. Orpheus måste gå framför henne utan att vända sig om tills de når ljuset."
+          "text": "Hades godtar det omöjliga: Eurydike får stiga upp. Men ett absolut villkor. Orfeus måste gå före henne utan att vända sig om förrän de nått ljuset."
         }
       ]
     },
     {
       "id": "course_165_orphee_et_eurydice_p3",
-      "title": "Utseendet som tappar allt",
+      "title": "Blicken som förlorar allt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Att klättra upp igen är en prövning. Bakom honom tystnad. Skuggorna gör inget ljud. Nära utgången råder tvivel. Tänk om Hades hade lurat honom? Orphée **vänder sig om**."
+          "text": "Uppstigningen är ett kalvarium. Bakom honom tystnad. Skuggorna ger inget ljud. Nära utgången vinner tvivlet. Tänk om Hades lurat honom? Orfeus **vänder sig om**."
         },
         {
           "type": "paragraph",
-          "text": "Deras ögon möts för en sekund. Sedan övervinns Eurydike av mörkret. Den här gången kom förlusten från mänskliga misstag. Passagen stängs. Orpheus vandrar och drar sig sedan tillbaka till Thrakien."
+          "text": "Deras blickar möts en sekund. Sedan slukas Eurydike av mörkret. Den här gången kommer förlusten av ett mänskligt fel. Passagen slår igen. Orfeus irrar, sedan drar han sig tillbaka till Thrakien."
         },
         {
           "type": "funFact",
-          "text": "Efter hans död skulle Orpheus huvud, kastat i floden [[Hebrus]], ha drivit till Lesbos. Där skulle hon ha blivit ett orakel, så mäktigt att **Apollo** själv skulle ha krävt hennes tystnad."
+          "text": "Efter hans död ska Orfeus huvud, kastat i floden [[Hebrus]], ha flutit till Lesbos. Där ska det ha blivit ett orakel, så mäktigt att **Apollon** själv krävde tystnad."
         },
         {
           "type": "paragraph",
-          "text": "Hans vägran till någon ny kärlek provocerar raseri hos [[Maenads]], prästinnor från **Dionysos** som gripits av ett rituellt delirium. De sliter isär den. Hans lyra fortsätter dock att sjunga, medtagen av strömmen."
+          "text": "Hans vägran att älska på nytt väcker [[Maenads]] raseri, **Dionysos** prästinnor i rituell extas. De sliter honom i stycken. Lyran sjunger ändå vidare, buren av strömmen."
         }
       ]
     },
     {
       "id": "course_165_orphee_et_eurydice_p4",
-      "title": "Vad myten förmedlade",
+      "title": "Vad myten förde vidare",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Från Orfeus död föddes [[Orphism]], en religiös rörelse som lovade frälsning för själen genom reningsriter. Döden är inte längre ett trist slut, utan en passage att förbereda sig för."
+          "text": "Ur Orfeus död föds [[Orphism]], en religiös riktning som lovade själen frälsning genom rening. Döden är där inte ett trist slut, utan en övergång att förbereda."
         },
         {
           "type": "paragraph",
-          "text": "\"Orpheus blicken\" inspirerar fortfarande opera, film, särskilt med [[Jean Cocteau]] och litteratur. För [[Maurice Blanchot]] är artisten den som ser in i mörkret, även till priset av att förlora det han älskar. Gudarna placerar slutligen lyran på himlen, i en konstellation: konsten varar längre än konstnären."
+          "text": "„Orfeus blick” inspirerar fortfarande operan, filmen, särskilt hos [[Jean Cocteau]], och litteraturen. För [[Maurice Blanchot]] är konstnären den som ser in i mörkret, även till priset av att förlora det han älskar. Gudarna sätter till sist lyran på himlen, som stjärnbild: konsten varar längre än konstnären."
         },
         {
           "type": "takeaway",
-          "text": "**Orfeus** charmar underjorden med sin musik och förlorar sedan **Eurydice** genom att vända för tidigt. Konst kan böja döden; mänskligt tvivel har sista ordet."
+          "text": "**Orfeus** tjusar Hadesriket med musiken och förlorar sedan **Eurydike** när han vänder sig om för tidigt. Konsten kan böja döden. Det mänskliga tvivlet får sista ordet."
         }
       ]
     }

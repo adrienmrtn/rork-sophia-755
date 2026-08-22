@@ -1,47 +1,47 @@
 {
   "id": "course_220_la_desinformation_et_les_fake_news",
-  "title": "Desinformation och falska nyheter",
-  "subtitle": "Ligger i virusåldern",
+  "title": "Desinformation och fake news",
+  "subtitle": "Lögnen i den virala tidsåldern",
   "subject": "comprendreLeMonde",
   "subcategory": "Economy & society",
-  "description": "Falsk information sprids 6 gånger snabbare än sanningen på sociala medier. Varför och hur skyddar man sig?",
+  "description": "Falska nyheter sprids 6 gånger snabbare än sanningen i sociala medier. Varför, och hur skyddar du dig?",
   "hero": {
     "image": "la_desinformation_et_les_fake_news",
     "ratio": "16:9",
-    "hook": "En MIT-studie visade att falska nyheter färdas 6 gånger snabbare än sanningen på Twitter. Här är varför."
+    "hook": "En studie från MIT visade att fake news färdas 6 gånger snabbare än sanningen på Twitter. Här är varför."
   },
   "sections": [
     {
       "id": "course_220_la_desinformation_et_les_fake_news_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Att ljuga för att tjäna ett politiskt syfte är inget nytt: spår av det har hittats sedan antiken. Men Internet och sociala nätverk har förändrat situationen: falsk information cirkulerar inte längre bara från en stat till dess befolkning, den sprids nu horisontellt, mellan medborgarna."
+          "text": "Att ljuga i politiskt syfte är inget nytt: spår finns redan i antiken. Men internet och sociala medier ändrade spelet. Den falska informationen går inte längre bara från en stat till dess befolkning. Den sprids nu vågrätt, mellan medborgare."
         },
         {
           "type": "paragraph",
-          "text": "Denna förändring har skapat en värld där sanningen ibland verkar valfri inför viralitet. Att förstå hur **felaktig information** sprids, och vem som drar nytta av det, har blivit avgörande för att bevara förtroendet mellan medborgarna."
+          "text": "Det skiftet skapade en värld där sanningen ibland ser valfri ut inför viraliteten. Att förstå hur **desinformation** sprids, och vem som tjänar på den, har blivit avgörande för att rädda förtroendet mellan medborgare."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p1",
-      "title": "Varför lögner färdas snabbare än sanningen",
+      "title": "Varför lögnen reser fortare än sanningen",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vi måste skilja desinformation, som medvetet sprids för att manipulera, från enkla ärliga fel. Framgången för dessa falska nyheter beror på vad forskare kallar uppmärksamhetsekonomin: sociala mediers algoritmer är utformade för att maximera skärmtiden, och våra hjärnor reagerar starkare på känslor och chock än på nyansering."
+          "text": "Man måste skilja desinformation, spridd medvetet för att manipulera, från ett vanligt misstag i god tro. Framgången för de här lögnerna vilar på det forskare kallar **uppmärksamhetsekonomin**: algoritmerna i sociala medier är byggda för att maximera tiden framför skärmen, och våra hjärnor reagerar starkare på känsla och chock än på nyans."
         },
         {
           "type": "funFact",
-          "text": "En studie av [[MIT]] publicerad 2018 visade att falska nyheter sprids cirka 6 gånger snabbare än verifierade nyheter på Twitter eftersom de verkar nyare och mer känslomässigt intensiva."
+          "text": "En studie från [[MIT]] som kom 2018 visade att falska nyheter sprids ungefär 6 gånger snabbare än kontrollerade nyheter på Twitter, för att de ser nyare ut och slår hårdare känslomässigt."
         },
         {
           "type": "paragraph",
-          "text": "Algoritmerna låser också Internetanvändare till [[filterbubblor]]: de visar bara innehåll som bekräftar deras redan existerande åsikter. En person som är övertygad om en konspirationsteori ser då varje ny falsk information som ytterligare bevis, vilket gör varje efterföljande korrigering mycket svår."
+          "text": "Algoritmerna stänger också in användare i [[filterbubblor]]: de visar bara innehåll som bekräftar åsikter som redan sitter. Den som är övertygad om en konspirationsteori ser då varje ny lögn som ytterligare ett bevis, vilket gör varje senare rättelse mycket svår."
         }
       ]
     },
@@ -52,51 +52,51 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Desinformation har blivit en riktig bransch. Stater som Ryssland har genom Internet Research Agency skapat tusentals falska automatiserade konton för att väcka spänningar inom västerländska demokratier, utan att ens försöka försvara ett specifikt läger: målet är ofta att skapa kaos och få folk att tro att \"alla ljuger\"."
+          "text": "Desinformation har blivit en verklig industri. Stater som Ryssland, via Internet Research Agency, har skapat tusentals falska automatiserade konton för att hetsa upp spänningar inne i västerländska demokratier, utan att ens försvara ett visst läger. Målet är ofta att skapa kaos och få folk att tro att „alla ljuger”."
         },
         {
           "type": "image",
           "asset": "fake_news_social_media_manipulation_phone",
           "ratio": "4:3",
-          "caption": "Falsk information sprids på några sekunder på sociala nätverk."
+          "caption": "Falska nyheter sprids på några sekunder i sociala medier"
         },
         {
           "type": "paragraph",
-          "text": "Det finns också en rent lukrativ dimension: i staden Veles, i norra Makedonien, skapade unga entreprenörer sensationella sajter 2016 utan någon politisk övertygelse, enbart för att tjäna pengar genom trafik genererad på sociala nätverk. Lögnen blir då en enkel lönsam vara."
+          "text": "Det finns också en rent lukrativ sida: i staden Veles i Nordmakedonien skapade unga entreprenörer 2016 sensationella sajter utan någon politisk övertygelse, bara för att tjäna pengar på trafiken i sociala medier. Lögnen blir då en enkel lönsam vara."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p3",
-      "title": "Hur man skiljer fakta från fiktion",
+      "title": "Hur du skiljer sant från falskt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Inför denna syndaflod organiserar sig informationsvärlden. **faktakontroll**, det vill säga verifiering av fakta, har blivit en journalistisk disciplin i sin egen rätt. Byråer som [[AFP]] eller specialiserade redaktioner använder bildsökningsverktyg för att upptäcka förfalskningar och analysera misstänkt innehåll."
+          "text": "Inför den här floden organiserar sig nyhetsvärlden. **Faktakontroll**, alltså att granska uppgifterna, har blivit en egen journalistisk disciplin. Byråer som [[AFP]] eller specialredaktioner använder bildsök för att upptäcka manipulationer och analysera misstänkt innehåll."
         },
         {
           "type": "paragraph",
-          "text": "Men kapplöpningen mellan anfall och försvar är fortfarande ojämn. Utseendet på [[Deepfakes]], videor fejkade av artificiell intelligens där en person tvingas säga vad som helst med störande realism, gör skillnaden mellan sant och falskt allt svårare för ett otränat öga."
+          "text": "Men kapplöpningen mellan anfall och försvar är ojämn. Framväxten av [[Deepfakes]], videor manipulerade med artificiell intelligens där man kan få vem som helst att säga vad som helst med oroande realism, gör skillnaden mellan sant och falskt allt svårare för ett otränat öga."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p4",
-      "title": "Att hitta förtroende i en värld av bilder",
+      "title": "Att återfinna förtroende i en värld av bilder",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Den långsiktiga effekten av desinformation är djupgående: vi talar nu om en **post-sanning**-era, där objektiva fakta ibland väger mindre än känslor och personliga övertygelser. Denna generaliserade relativisering försvagar det förtroende som krävs för att ta itu med globala utmaningar som klimatet eller folkhälsa tillsammans."
+          "text": "Desinformationens långtidseffekt är djup: man talar nu om **post-sanningens** tidsålder, där objektiva fakta ibland väger mindre än känslor och personliga övertygelser. Den allmänna relativiseringen försvagar det förtroende som behövs för att tillsammans möta globala utmaningar som klimatet eller folkhälsan."
         },
         {
           "type": "paragraph",
-          "text": "Det mest solida svaret förblir medieutbildning: lära sig att verifiera en källa, korsreferenser flera delar av information och förstå hur algoritmer fungerar. Vissa förlitar sig också på innehållscertifieringsteknik för att garantera ursprunget till en video från dess skapelse. Under tiden förblir allas vaksamhet den första försvarslinjen."
+          "text": "Det mest solida svaret är fortfarande medieutbildning: att lära sig kontrollera en källa, korsa flera uppgifter och förstå hur algoritmerna fungerar. Vissa satsar också på teknik som certifierar innehåll, så att en videos ursprung går att garantera redan när den skapas. Tills vidare är var och ens vaksamhet första försvarslinjen."
         },
         {
           "type": "takeaway",
-          "text": "Falsk information sprids i genomsnitt 6 gånger snabbare än sanningen på sociala nätverk, eftersom den utnyttjar våra känslor och vår törst efter nyheter. Inför deepfakes och trollfarmar är medieutbildning det bästa vapnet för att bevara kollektivt förtroende."
+          "text": "Falska nyheter sprids i snitt 6 gånger snabbare än sanningen i sociala medier, för att de utnyttjar våra känslor och vår hunger efter nytt. Inför deepfakes och trollfabriker är medieutbildning fortfarande det bästa vapnet för att rädda det gemensamma förtroendet."
         }
       ]
     }

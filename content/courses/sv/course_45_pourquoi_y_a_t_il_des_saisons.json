@@ -1,28 +1,28 @@
 {
   "id": "course_45_pourquoi_y_a_t_il_des_saisons",
   "title": "Varför finns det årstider?",
-  "subtitle": "Jord & Sol",
+  "subtitle": "Jorden och solen",
   "subject": "sciences",
   "subcategory": "Our daily life explained",
-  "description": "Årstiderna kommer inte från att jorden är närmare eller längre från solen. Den verkliga orsaken är lutningen av jordens axel.",
+  "description": "Årstiderna kommer inte av att jorden är närmare eller längre från solen. Den verkliga orsaken är lutningen på jordens axel.",
   "hero": {
     "image": "pourquoi_y_a_t_il_des_saisons",
     "ratio": "16:9",
-    "hook": "Nej, sommaren kommer inte eftersom jorden närmar sig solen."
+    "hook": "Nej, sommaren kommer inte för att jorden närmar sig solen."
   },
   "sections": [
     {
       "id": "course_45_pourquoi_y_a_t_il_des_saisons_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Många tror att sommaren kommer när jorden är **närmare** till solen, och vintern kommer när det är **långt**. Detta är falskt. Och vi ser det direkt: när det är sommar i Frankrike är det vinter i Australien."
+          "text": "Många tror att sommaren kommer när jorden är **närmare** solen, och vintern när den är **längre bort**. Det stämmer inte. Det syns direkt: när det är sommar i Frankrike är det vinter i Australien."
         },
         {
           "type": "paragraph",
-          "text": "Den verkliga förklaringen ligger i en sak: jordens rotationsaxel är **lutade**, lutad i förhållande till planet för dess omloppsbana runt solen."
+          "text": "Den riktiga förklaringen hänger på en sak: jordens rotationsaxel är **lutad**, sned mot planet för banan runt solen."
         }
       ]
     },
@@ -33,17 +33,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Jorden roterar runt sin axel i **24 timmar**: det är dag och natt. Den kretsar också runt solen i **år år** i en bana formad som en **ellips**, en något tillplattad cirkel. Men dess axel, den imaginära linjen från Nordpolen till Sydpolen, är inte rak i förhållande till sin bana. Den lutar ungefär **23,5 betyg**: det är [[Jordens axiella lutning (23,5°)]]."
+          "text": "Jorden snurrar runt sin axel på **24 timmar**: det är dag och natt. Den går också ett varv runt solen på **ett år**, i en bana formad som en **ellips**, en lätt tillplattad cirkel. Men axeln, den tänkta linjen från nordpolen till sydpolen, står inte rakt mot banan. Den lutar ungefär **23,5 grader**: det är [[Jordens axiella lutning (23,5°)]]."
         },
         {
           "type": "image",
           "asset": "earth_summer_winter_seasons_illustration",
           "ratio": "auto",
-          "caption": "Jordaxelns lutning förklarar årstidernas cykel."
+          "caption": "Lutningen på jordens axel förklarar årstidernas kretslopp."
         },
         {
           "type": "paragraph",
-          "text": "Denna lutning håller sig i ungefär samma riktning året runt. Den pekar alltid mot samma region på himlen, nära Polstjärnan. Resultat: beroende på var jorden befinner sig i sin omloppsbana \"ser\" den ena halvklotet mer mot solen, den andra mindre."
+          "text": "Lutningen pekar ungefär åt samma håll hela året. Den är alltid vänd mot samma del av himlen, nära Polstjärnan. Resultatet: beroende på var jorden står i sin bana „tittar” det ena halvklotet mer mot solen, det andra mindre."
         }
       ]
     },
@@ -54,15 +54,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "På sommaren på norra halvklotet lutar nordpolen mot solen. Dagarna är längre: **fotoperiod**, förhållandet mellan längden på dagen och natten, ökar. Strålarna kommer också mer \"rakt\" till marken: energin koncentreras till en mindre yta. Så det är varmare."
+          "text": "På sommaren på norra halvklotet lutar nordpolen mot solen. Dagarna blir längre: **fotoperioden**, förhållandet mellan dag och natt, ökar. Strålarna träffar också mer „rakt” mot marken: energin samlas på en mindre yta. Då blir det varmare."
         },
         {
           "type": "funFact",
-          "text": "I januari är jorden till och med lite **närmare** från solen än i juli: det är **perihelium**, den närmaste punkten i omloppsbanan. Och ändå är det vinter här. Ett bevis på att avståndet inte förklarar årstiderna."
+          "text": "I januari står jorden till och med lite **närmare** solen än i juli: det är **perihelium**, banans närmaste punkt. Ändå är det vinter hos oss. Beviset på att avståndet inte förklarar årstiderna."
         },
         {
           "type": "paragraph",
-          "text": "På vintern är det tvärtom: korta dagar, mer snedställda strålar, energi spridd över en större yta. Mindre värme mottagen. **solstånd**, tillfällen då solen når sin nordligaste eller sydligaste position, markerar början på sommaren eller vintern."
+          "text": "På vintern är det tvärtom: korta dagar, mer sneda strålar, energi utspridd över en större yta. Mindre värme tas emot. **Solstånden**, ögonblicken när solen når sitt nordligaste eller sydligaste läge, markerar starten på sommar eller vinter."
         }
       ]
     },
@@ -73,11 +73,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nära **ekvator**, den imaginära linjen som delar jorden i två halvklot, ändrar lutningen lite under dagens längd. Det finns egentligen inte fyra årstider som i Europa, utan snarare torrare och blötare perioder."
+          "text": "Nära **ekvatorn**, den tänkta linjen som delar jorden i två halvklot, ändrar lutningen knappt dagens längd. Där finns inte riktigt fyra årstider som i Europa, utan hellre torrare och fuktigare perioder."
         },
         {
           "type": "paragraph",
-          "text": "På **stolpar** är effekten extrem: flera månaders sammanhängande dag på sommaren, flera månaders natt på vintern. Kontrasten är mycket starkare där än i Frankrike."
+          "text": "Vid **polerna** är effekten extrem: flera månader av oavbruten dag på sommaren, flera månader av natt på vintern. Kontrasten är mycket starkare än i Frankrike."
         }
       ]
     },
@@ -88,11 +88,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Om jordens axel var helt rak skulle varje plats få ungefär samma mängd solljus året runt. Ingen mer riktig sommar, ingen mer riktig vinter. Klimatet, kulturerna, djurvandringarna: allt skulle vara annorlunda."
+          "text": "Om jordens axel stod helt rak skulle varje plats få ungefär lika mycket sol hela året. Ingen riktig sommar, ingen riktig vinter. Klimat, odling, djurens flytt: allt skulle se annorlunda ut."
         },
         {
           "type": "takeaway",
-          "text": "Årstiderna kommer från lutningen  på jordens axel, ungefär **23.5°**, inte från avståndet från solen. En halvklot lutar mot solen: det är sommar. Den andra lutar åt motsatsen: det är vinter."
+          "text": "Årstiderna kommer av **lutningen** på jordens axel, ungefär **23,5°**, inte av avståndet till solen. Ett halvklot lutar mot solen: det är sommar. Det andra lutar åt motsatt håll: det är vinter."
         }
       ]
     }

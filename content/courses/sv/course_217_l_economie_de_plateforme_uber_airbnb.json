@@ -1,28 +1,28 @@
 {
   "id": "course_217_l_economie_de_plateforme_uber_airbnb",
-  "title": "Plattformsekonomin (Uber, Airbnb, etc.)",
+  "title": "Plattformsekonomin (Uber, Airbnb...)",
   "subtitle": "Kapitalism utan fabriker",
   "subject": "comprendreLeMonde",
   "subcategory": "Economy & society",
-  "description": "Uber, Airbnb, Deliveroo äger nästan ingenting: inga bilar, inga lägenheter, inga anställda. Hur blev dessa plattformar globala jättar?",
+  "description": "Uber, Airbnb och Deliveroo äger nästan ingenting: inga bilar, inga lägenheter, inga anställda. Hur blev de här plattformarna globala jättar?",
   "hero": {
     "image": "l_economie_de_plateforme",
     "ratio": "16:9",
-    "hook": "Uber har aldrig ägt en enda bil, men det har stört transporter runt om i världen."
+    "hook": "Uber har aldrig ägt en enda bil, och vände ändå transporterna upp och ner över hela världen."
   },
   "sections": [
     {
       "id": "course_217_l_economie_de_plateforme_uber_airbnb_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Uber, Airbnb, Amazon eller Deliveroo tillhör en ny kategori av företag: **digitala plattformar**. De digitaliserar inte bara tjänster som redan fanns: de förändrar själva sättet att äga, arbeta och skyddas."
+          "text": "Uber, Airbnb, Amazon och Deliveroo hör till ett nytt slags bolag: den **digitala plattformen**. De lägger inte bara befintliga tjänster på nätet. De ändrar vad det betyder att äga, att arbeta och att vara skyddad."
         },
         {
           "type": "paragraph",
-          "text": "Denna modell uppfann en ny form av kapitalism, som ifrågasätter vårt sociala kontrakt. Låt oss förstå hur det fungerar och varför det är så debatterat."
+          "text": "Den här modellen har uppfunnit en ny form av kapitalism, en som sätter vårt samhällskontrakt i fråga. Låt oss se hur den fungerar, och varför den väcker så mycket strid."
         }
       ]
     },
@@ -33,55 +33,55 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ett traditionellt företag äger fabriker, fordon, inventarier och anställer anställda. En plattform bryter mot denna modell: den blir en enkel digital infrastruktur som kopplar samman utbud och efterfrågan, utan att producera något själv."
+          "text": "Ett traditionellt bolag äger fabriker, fordon och lager, och det anställer personal. En plattform bryter den modellen. Den blir en enkel bit digital infrastruktur som kopplar ihop utbud och efterfrågan, utan att producera något själv."
         },
         {
           "type": "paragraph",
-          "text": "Detta system är baserat på [[Nätverkseffekt]]: ju fler användare en plattform har, desto mer användbar blir den, vilket attraherar ännu fler användare. För en transporttjänst gäller att ju fler förare som finns tillgängliga, desto kortare väntan, vilket lockar fler kunder, som i sin tur lockar fler förare. Denna cirkel leder nästan alltid till monopolliknande situationer."
+          "text": "Systemet kör på [[Nätverkseffekter]]: ju fler användare en plattform har, desto mer användbar blir den, vilket lockar ännu fler användare. För en åktjänst gäller att ju fler förare som finns, desto kortare väntan, vilket drar in fler kunder, som i sin tur drar in fler förare. Den cirkeln slutar nästan alltid i något nära ett monopol."
         },
         {
           "type": "funFact",
-          "text": "Uber har spenderat miljarder dollar på att forska om självkörande bilar, i slutändan med målet att bli av med sin sista stora kostnad: den mänskliga föraren."
+          "text": "Uber har lagt miljarder dollar på forskning om självkörande bilar, med det långsiktiga målet att bli av med sin sista stora kostnad: den mänskliga föraren."
         }
       ]
     },
     {
       "id": "course_217_l_economie_de_plateforme_uber_airbnb_p2",
-      "title": "Arbeta utan anställningsskydd",
+      "title": "Arbete utan anställningens skydd",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Denna tekniska innovation åtföljs av en mer omtvistad juridisk innovation. I [[Spelningsekonomi och uberisering]] vägrar plattformen arbetsgivarens status att framstå som en enkel teknisk mellanhand, som undviker att betala sociala avgifter, minimilön eller betald ledighet."
+          "text": "Den tekniska innovationen kommer med en juridisk som är långt mer omstridd. Det är världen av [[Spelningsekonomin och uberiseringen]]: plattformen vägrar arbetsgivarrollen och presenterar sig som en enkel teknisk mellanhand, vilket sparar den sociala avgifter, minimilön och betald semester."
         },
         {
           "type": "image",
           "asset": "gig_economy_workers_strike_protest",
           "ratio": "16:9",
-          "caption": "Chaufförer och utkörare klassas ofta som egenföretagare, inte anställda."
+          "caption": "Förare och bud klassas ofta som egenföretagare snarare än som anställda"
         },
         {
           "type": "paragraph",
-          "text": "Arbetaren blir en självständig arbetare som ensam bär alla risker: sjukdom, olycka, minskad efterfrågan. Det är dock ofta föremål för tillämpningens regler (pålagda priser, betyg, sanktioner), en situation som vi kallar **algoritmisk underordning**. Inför detta har domstolar i flera länder börjat tvinga på dessa kontrakts [[Omklassificering]] till verklig löneanställning."
+          "text": "Arbetaren blir en uppdragstagare som bär varje risk ensam: sjukdom, olycka, ett tapp i efterfrågan. Ändå gäller appens regler, från satta taxor till betyg och straff, en situation som kallas **algoritmisk underordning**. Som svar har domstolar i flera länder börjat besluta om [[Omklassificering]] av de kontrakten till riktiga jobb med anställningsstatus."
         }
       ]
     },
     {
       "id": "course_217_l_economie_de_plateforme_uber_airbnb_p3",
-      "title": "Städer vände upp och ner",
+      "title": "Städer vända upp och ner",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Effekterna av dessa plattformar går utöver arbetsvärlden: de förändrar också städer. Airbnb, genom att underlätta korttidsuthyrning av turister, konkurrerar med traditionella hotell samtidigt som det minskar antalet tillgängliga boenden för boende."
+          "text": "Effekten av de här plattformarna går bortom arbetets värld. Den ritar om städer också. Genom att göra korta turistuthyrningar lätta konkurrerar Airbnb med traditionella hotell samtidigt som det skär antalet bostäder som finns för invånarna."
         },
         {
           "type": "paragraph",
-          "text": "Resultat: hyrorna stiger i stadskärnorna, och metropoler som Paris eller Barcelona har varit tvungna att införa strikta regler, såsom kvoter för hyrdagar. Stater försöker också etablera **digital beskattning** så att dessa plattformar betalar sin del av skatterna där de faktiskt tjänar sina pengar."
+          "text": "Resultatet är stigande hyror i stadskärnor, och städer som Paris och Barcelona har tvingats införa strikta regler, som tak för hur många nätter ett hem får hyras ut. Stater försöker också införa **digital beskattning**, så att de här plattformarna betalar sin del av skatten där de verkligen tjänar pengarna."
         },
         {
           "type": "funFact",
-          "text": "I New York ledde strikt reglering mot Airbnb 2023 till att antalet lagliga listor minskade med 80 % på några månader."
+          "text": "I New York skar strikt reglering av Airbnb **2023** antalet lagliga annonser med **80%** på några månader."
         }
       ]
     },
@@ -92,15 +92,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Plattformsekonomin har lett till snabba och ofta billigare tjänster och gjort det lättare för vissa människor att få en inkomst. Men denna effektivitet är baserad på en försvagning av de skydd som byggdes på 1900-talet."
+          "text": "Plattformsekonomin har gett snabba tjänster som ofta är billigare, och den har gjort det lättare för vissa att hitta en inkomst. Men den effektiviteten vilar på att försvaga skydden som byggdes upp under 1900-talet."
         },
         {
           "type": "paragraph",
-          "text": "Den nuvarande debatten handlar om skapandet av en mellanliggande status, mellan anställda och egenföretagare, med möjlighet att överföra rättigheter: varje arbetstagare skulle ackumulera socialt skydd, oavsett antalet plattformar som de arbetar för. Framtiden för denna modell kommer att bero på tillsynsmyndigheternas förmåga att reglera den utan att kväva innovation."
+          "text": "Den aktuella debatten handlar om att skapa en status mitt emellan, någonstans mellan anställd och uppdragstagare, med flyttbara rättigheter: varje arbetare skulle bygga upp socialt skydd oavsett hur många plattformar hen jobbar för. Modellens framtid beror på om tillsynsmyndigheter kan rama in den utan att kväva innovationen."
         },
         {
           "type": "takeaway",
-          "text": "Plattformsekonomin är baserad på fabriksfri kapitalism som utnyttjar nätverkseffekten, samtidigt som de förvandlar sina arbetare till ofta osäkra frilansare. Kampen för bättre sociala skydd, utan att bryta mot denna modell, har bara börjat."
+          "text": "Plattformsekonomin vilar på en kapitalism utan fabriker som utnyttjar nätverkseffekten, samtidigt som den vänder sina arbetare till uppdragstagare som ofta är otrygga. Kampen för bättre socialt skydd, utan att knäcka modellen, har bara börjat."
         }
       ]
     }

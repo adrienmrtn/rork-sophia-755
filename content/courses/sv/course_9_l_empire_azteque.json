@@ -1,28 +1,28 @@
 {
   "id": "course_9_l_empire_azteque",
-  "title": "Det aztekiska riket",
+  "title": "Aztekriket",
   "subtitle": "1325-1521",
   "subject": "histoire",
   "subcategory": "Antiquity & Middle Ages",
-  "description": "På mindre än två århundraden byggde aztekerna en huvudstad med 200 000 invånare på en sjö. Deras imperium, grundat på hyllning och uppoffring, kollapsade på två år mot spanjorerna.",
+  "description": "På mindre än två århundraden bygger aztekerna en huvudstad med 200.000 invånare på en sjö. Deras rike, byggt på tribut och offer, rasar på två år inför spanjorerna.",
   "hero": {
     "image": "l_empire_azteque",
     "ratio": "16:9",
-    "hook": "En stad vid vattnet, mer befolkad än London. Sedan, om två år, ingenting."
+    "hook": "En stad på vattnet, folkrikare än London. Sedan, på två år, ingenting."
   },
   "sections": [
     {
       "id": "course_9_l_empire_azteque_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I hjärtat av dagens Mexiko byggde aztekerna en huvudstad på en sjö på mindre än två århundraden, befolkad av **200 000 invånare**. Större än London eller Rom samtidigt. Deras kraft kombinerar vattenteknik, krävande religion och permanent krig."
+          "text": "I hjärtat av dagens Mexiko bygger aztekerna på mindre än två århundraden en huvudstad på en sjö, med **200.000 invånare**. Större än London eller Rom vid samma tid. Deras makt blandar hydrauliskt snille, en krävande religion och ständig krigföring."
         },
         {
           "type": "paragraph",
-          "text": "Mellan **1519** och **1521** kollapsade detta imperium. Inte bara under Cortés, den spanske conquistadorens kanoner, utan under sina undersåtars hat och under ett osynligt vapen: sjukdom."
+          "text": "Mellan **1519** och **1521** rasar riket. Inte bara under Cortés kanoner, den spanske conquistadoren, utan under undersåtarnas hat och under ett osynligt vapen: sjukdomen."
         }
       ]
     },
@@ -33,40 +33,40 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Mexiko**, folket vi kommer att kalla aztekerna, kommer från den mytomspunna [[Aztlán]], en ursprungsplats i norr. De anlände på 1200-talet till Mexikos dal. Föraktade söker de ett tecken från sin gud [[Huitzilopochtli]], solens och krigets gud: en örn som slukar en orm på en kaktus. I **1325** hittar de den på en holme i sjön **Texcoco**. [[Tenochtitlán]] föddes, deras framtida huvudstad."
+          "text": "**Mexica**, folket man senare kallar azteker, kommer från det mytiska [[Aztlán]], ett ursprungsland i norr. De når Mexikodalen på 1200-talet. Föraktade söker de ett tecken från sin gud [[Huitzilopochtli]], solens och krigets gud: en örn som slukar en orm på en kaktus. År **1325** finner de det på en holme i sjön **Texcoco**. Då föds [[Tenochtitlán]], deras blivande huvudstad."
         },
         {
           "type": "paragraph",
-          "text": "För att föda staden fulländar de [[Chinamporna]], ultrafertila konstgjorda öar gjorda av lera och växter. Tre gångvägar, vallar, kanaler: staden blir en sjöfästning och en gigantisk marknad."
+          "text": "För att föda staden förfinar de [[Chinamporna]], konstgjorda, extremt bördiga öar av gyttja och växter. Tre bankar, fördämningar, kanaler: staden blir en sjöfästning och en jättemarknad."
         },
         {
           "type": "funFact",
-          "text": "Aztekerna använde inte hjulet för transport och hade inga lastdjur. Ändå flyttade de miljontals ton sten för sina pyramider."
+          "text": "Aztekerna använde inte hjulet för transporter och hade inga lastdjur. Ändå flyttade de miljoner ton sten till pyramiderna."
         }
       ]
     },
     {
       "id": "course_9_l_empire_azteque_p2",
-      "title": "Trippelalliansen och hyllningen",
+      "title": "Trippelalliansen och tributen",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I **1428** allierade Tenochtitlán sig med två närliggande städer, Texcoco och Tlacopan: **Trippelallians**. Snart dominerar Mexiko ensamt. Deras imperium assimilerar sig inte: det kräver en vanlig **hyllning**, majs, kakao, fjädrar, metaller. Huvudstadens rikedom underblåser hatet från underkuvade folk, såsom [[Tlaxcaltecs]], aztekernas hårda fiender."
+          "text": "År **1428** sluter Tenochtitlán förbund med två grannstäder, Texcoco och Tlacopan: **Trippelalliansen**. Snart härskar mexica ensamma. Deras rike assimilerar inte: det kräver regelbunden **tribut**, majs, kakao, fjädrar, metaller. Huvudstadens rikedom föder hatet hos de underkuvade folken, som [[Tlaxcaltecs]], aztekernas hårda fiender."
         },
         {
           "type": "image",
           "asset": "tenochtitlan_aztec_city_illustration",
           "ratio": "4:3",
-          "caption": "Tenochtitlán, sjömetropol i hjärtat av det aztekiska imperiet."
+          "caption": "Tenochtitlán, sjömetropolen i hjärtat av aztekriket"
         },
         {
           "type": "paragraph",
-          "text": "Det är en krigsmaskin som behöver eviga erövringar. När spanjorerna anländer kommer de bara att behöva förena dessa förbittringar."
+          "text": "Det är en krigsmaskin som behöver ständiga erövringar. När spanjorerna kommer räcker det att samla de där oförrätterna."
         },
         {
           "type": "funFact",
-          "text": "Kakaobönor användes som valuta. I Tenochtitlán var en kanin värd tio bönor; en slav av god konstitution, ett hundratal."
+          "text": "Kakaobönor tjänade som mynt. I Tenochtitlán kostade en kanin tio bönor, och en slav i god kondition ungefär hundra."
         }
       ]
     },
@@ -77,34 +77,34 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Enligt [[De fem solarnas kosmogoni]], en aztekisk myt, överlever solen bara om den får näring av mänskligt blod. På [[Templo borgmästare]], den stora pyramiden i centrum, är uppoffringar inte omotiverad grymhet: de är, för aztekerna, en nödvändighet för att världen ska fortsätta."
+          "text": "Enligt [[De fem solarnas kosmogoni]], en aztekisk myt, överlever solen bara om den närs med människoblod. Vid [[Templo borgmästare]], den stora pyramiden i centrum, Templo Mayor, är offren ingen gratis grymhet: för aztekerna är de nödvändiga för att världen ska fortsätta."
         },
         {
           "type": "paragraph",
-          "text": "I **1519** anlände **Hernán Cortés** med några hundra spanjorer. [[Moctezuma II]], den aztekiske kejsaren, tvekar. Stål, vapen och hästar är skrämmande. Men den främsta mördaren är [[Smittkoppor]], en europeisk sjukdom mot vilken populationer inte har någon immunitet. Cortés belägrar huvudstaden med tusentals inhemska allierade."
+          "text": "År **1519** landstiger **Hernán Cortés** med några hundra spanjorer. [[Moctezuma II]], den aztekiske kejsaren, tvekar. Stål, eldvapen och hästar skrämmer. Men den stora mördaren är [[smittkoppor]], en europeisk sjukdom som befolkningen saknar immunitet mot. Cortés belägrar huvudstaden med tusentals inhemska bundsförvanter."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1325",
-              "title": "Stiftelsen av Tenochtitlán",
-              "detail": "Mexikan bosätter sig vid Lake Texcoco."
+              "title": "Tenochtitlán grundas",
+              "detail": "Mexica slår sig ner vid sjön Texcoco."
             },
             {
               "date": "1428",
-              "title": "Trippelallians",
-              "detail": "Början av den aztekiska imperiets expansion."
+              "title": "Trippelalliansen",
+              "detail": "Den aztekiska imperiala expansionen börjar."
             },
             {
               "date": "1519",
-              "title": "Cortés ankomst",
-              "detail": "Spanjorerna anländer till Mexiko."
+              "title": "Cortés anländer",
+              "detail": "Spanjorerna landstiger i Mexiko."
             },
             {
               "date": "1521",
-              "title": "Tenochtitláns fall",
-              "detail": "Slutet på imperiet efter 80 dagars belägring."
+              "title": "Tenochtitlán faller",
+              "detail": "Riket slutar efter 80 dagars belägring."
             }
           ]
         }
@@ -112,20 +112,20 @@
     },
     {
       "id": "course_9_l_empire_azteque_p4",
-      "title": "På ruinerna, Mexiko",
+      "title": "På ruinerna: Mexico City",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I **1521**, efter **80 dagar** av belägring, föll Tenochtitlán. Hungrig, berövad vatten, härjad av sjukdomar. Dess stenar användes för att bygga Mexico City, huvudstad i [[Nya Spanien]], den spanska kolonin."
+          "text": "År **1521**, efter **80 dagar** av belägring, faller Tenochtitlán. Uthungrad, utan vatten, härjad av sjukdom. Stenarna används för att bygga Mexico City, huvudstad i [[Nya Spanien]], den spanska kolonin."
         },
         {
           "type": "paragraph",
-          "text": "Allt försvinner inte. [[chinampas]] existerar fortfarande. [[Nahuatl]], aztekernas språk, talas av mer än en miljon människor. Örnen och ormen förblir Mexikos emblem. En lysande civilisation överlever i minne och landskap."
+          "text": "Allt försvinner inte. [[chinampas]] finns kvar. [[Nahuatl]], aztekernas språk, talas av mer än en miljon människor. Örnen och ormen är fortfarande Mexikos emblem. En lysande civilisation överlever i minnet och i landskapet."
         },
         {
           "type": "takeaway",
-          "text": "Aztekerna byggde en metropol med **200 000** invånare på en sjö. Deras hyllningssystem och [[Smittkoppor]] tillät några hundra spanjorer, med hjälp av lokala allierade, att förstöra imperiet på två år."
+          "text": "Aztekerna byggde en metropol med **200.000** invånare på en sjö. Tributsystemet och [[smittkoppor]] lät några hundra spanjorer, hjälpta av lokala bundsförvanter, slå sönder riket på två år."
         }
       ]
     }

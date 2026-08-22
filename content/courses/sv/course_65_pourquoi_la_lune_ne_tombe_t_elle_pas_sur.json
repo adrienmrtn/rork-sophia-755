@@ -1,57 +1,57 @@
 {
   "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur",
-  "title": "Varför faller inte månen till jorden?",
-  "subtitle": "Bana och gravitation",
+  "title": "Varför faller inte månen mot jorden?",
+  "subtitle": "Omloppsbana och gravitation",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "Månen faller ständigt mot jorden. Hon bara saknar det varje gång. Det är precis vad en bana är.",
+  "description": "Månen faller ständigt mot jorden. Den missar bara varje gång. Just det är en omloppsbana.",
   "hero": {
     "image": "pourquoi_la_lune_ne_tombe_pas",
     "ratio": "16:9",
-    "hook": "Månen faller mot oss. Hon saknar bara jorden varje tur."
+    "hook": "Månen faller mot oss. Den missar bara jorden varje varv."
   },
   "sections": [
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Om jordens gravitation drar månen, varför kraschar den inte in i oss? Svaret verkar bisarrt: Månen **falla utom kontroll** mot jorden. Hon bara saknar det varje ögonblick."
+          "text": "Om jordens gravitation drar i månen, varför kraschar den inte mot oss? Svaret låter märkligt: månen **faller** verkligen mot jorden. Den missar bara i varje ögonblick."
         },
         {
           "type": "paragraph",
-          "text": "Denna balans mellan fall- och sidohastighet är en **orbital**, en krökt bana runt en stjärna. Den engelske fysikern **Isaac Newton** var den första som förenade ett äpples fall och stjärnornas rörelse med samma idé."
+          "text": "Den balansen mellan fall och sidofart är en **omloppsbana**, en krökt bana kring en himlakropp. Den engelske fysikern **Isaac Newton** var först med att förena ett äpples fall och himlakropparnas rörelse med samma idé."
         },
         {
           "type": "funFact",
-          "text": "Om du vägde **60 kg** på jorden, skulle du bara väga ungefär **10** på månen: dess gravitation är sex gånger svagare."
+          "text": "Om du vägde **60 kg** på jorden skulle du bara väga ungefär **10** på månen: gravitationen där är sex gånger svagare."
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p1",
-      "title": "Newtons imaginära kanon",
+      "title": "Newtons tänkta kanon",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Newton föreställer sig en kanon på toppen av ett berg så högt att den skulle komma ur atmosfären. Vi skjuter en boll horisontellt. Med lite kraft faller den snabbt. Med mer kraft går han längre."
+          "text": "Newton tänker sig en kanon på toppen av ett berg så högt att det sticker ur atmosfären. Man skjuter en kula vågrätt. Med lite kraft faller den fort. Med mer kraft går den längre."
         },
         {
           "type": "image",
           "asset": "newton_cannonball_orbit_thought_experiment",
           "ratio": "auto",
-          "caption": "Newtons kanonkula tankeexperiment: nyckeln till att förstå omloppsbana."
+          "caption": "Newtons tankeexperiment med kanonkulan: nyckeln till omloppsbanan"
         },
         {
           "type": "paragraph",
-          "text": "Vid en specifik hastighet, kallad [[Orbitalhastighet]], händer något anmärkningsvärt. När bollen faller kröker jorden, som är rund, under den i samma takt. Projektilen faller... utan att någonsin röra marken. Han är i **permanent fritt fall**, dragen av gravitationen utan att krascha."
+          "text": "Vid en precis fart, kallad [[Orbitalhastighet]], händer något anmärkningsvärt. Medan kulan faller kröker sig jorden, som är rund, undan i samma takt. Projektilen faller, utan att någonsin nå marken. Den är i **ständig fritt fall**, dragen av gravitationen utan att krascha."
         },
         {
           "type": "paragraph",
-          "text": "Månen gör samma sak. Hon har tillräckligt med sidohastighet för att förvandla ett fall till en slinga. Utan denna hastighet skulle den dyka rakt mot oss."
+          "text": "Månen gör samma sak. Den har tillräcklig sidofart för att vända ett fall till en slinga. Utan den farten skulle den störta rakt mot oss."
         }
       ]
     },
@@ -62,57 +62,57 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Månen kretsar ungefär **384 000 km**. Dess sidohastighet är ungefär **1 km/s**. Om det slutade plötsligt skulle det krascha inom några dagar. Om gravitationen plötsligt försvann skulle den gå i en rak linje i rymden, enligt principen för [[Tröghet]]: en kropp håller sin hastighet om den inte bromsas."
+          "text": "Månen kretsar på ungefär **384.000 km**. Sidofarten är ungefär **1 km/s**. Om den stannade tvärt skulle den krascha på några dagar. Om gravitationen försvann med ett slag skulle den gå rakt ut i rymden, enligt principen om [[Tröghet]]: en kropp behåller sin fart om den inte bromsas."
         },
         {
           "type": "paragraph",
-          "text": "[[Newtons lag om universell gravitation]] säger att varje massa attraherar varannan massa, och att attraktionen minskar med avståndet, närmare bestämt med kvadraten på avståndet. Ju närmare en satellit är, desto snabbare måste den gå för att undvika att falla."
+          "text": "[[Newtons lag om universell gravitation]] säger att varje massa drar i varje annan massa, och att dragningen minskar med avståndet, närmare bestämt med avståndets kvadrat. Ju närmare en satellit är, desto fortare måste den gå för att inte falla."
         },
         {
           "type": "funFact",
-          "text": "Den internationella rymdstationen, på bara **400 km** höjd, färdas med cirka **28 000 km/h**. Den går runt jorden på **90 minuter**. Månen, längre bort, tar **27,3 dagar**."
+          "text": "Den internationella rymdstationen, bara **400 km** upp, far i ungefär **28.000 km/h**. Den går runt jorden på **90 minuter**. Månen, längre bort, tar **27,3 dygn**."
         },
         {
           "type": "paragraph",
-          "text": "Så banan är inte magisk. Det är en ständig kompromiss mellan \"jag faller\" och \"jag rör mig för snabbt för att slå\"."
+          "text": "Omloppsbanan är alltså ingen magi. Det är en ständig kompromiss mellan „jag faller” och „jag går för fort för att träffa”."
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p3",
-      "title": "Tidvatten driver bort månen",
+      "title": "Tidvattnet skjuter månen bort",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Banan är inte fixerad. [[Tidvattenkrafter]] kommer in i bilden. Månens gravitation drar hårdare på den sida av jorden som är vänd mot den än på mitten. Det deformerar haven och skapar en utbuktning av vatten."
+          "text": "Banen är inte frusen. [[Tidvattenkrafter]] kommer in. Månens gravitation drar hårdare i den sida av jorden som vetter mot den än i centrum. Den deformerar haven och skapar en vattenkulle."
         },
         {
           "type": "paragraph",
-          "text": "Eftersom jorden roterar på sin axel snabbare än månen roterar runt den, går denna ås fram en bit framför månen. Friktion saktar ner jordens rotation mycket något: våra dagar förlängs med ungefär **1,4 millisekunder** per århundrade. I utbyte rör sig månen bort med cirka **3,8 cm** per år."
+          "text": "Eftersom jorden snurrar kring sin axel fortare än månen går runt den ligger kullen lite före månen. Friktionen sakar jordens rotation mycket svagt: våra dygn blir ungefär **1,4 millisekunder** längre per sekel. I utbyte avlägsnar sig månen ungefär **3,8 cm** om året."
         },
         {
           "type": "paragraph",
-          "text": "För miljarder år sedan var månen mycket närmare. Tidvattnet var enormt. Denna blandning av vatten och kemi kan ha hjälpt tidiga livsformer. Och dinosaurierna levde på en jord där dagarna bara varade **22 eller 23 timmar**."
+          "text": "För miljarder år sedan låg månen mycket närmare. Tidvattnet var enormt. Den omrörningen av vatten och kemi kan ha hjälpt de första livsformerna. Och dinosaurierna levde på en jord där dygnet bara varade **22 eller 23 timmar**."
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p4",
-      "title": "Förmörkelser...för nu",
+      "title": "Förmörkelser, tills vidare",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Idag, av en geometrisk slump, är solen ungefär **400 gånger** större än månen, men också **400 gånger** längre bort. De två har därför samma **skenbar storlek**, vinkeln med vilken vi ser dem på himlen. Totala solförmörkelser är möjliga."
+          "text": "I dag, genom en geometrisk slump, är solen ungefär **400 gånger** större än månen, men också **400 gånger** längre bort. De har därför samma **skenbara storlek**, vinkeln vi ser dem under på himlen. Totala solförmörkelser blir möjliga."
         },
         {
           "type": "paragraph",
-          "text": "Om cirka **600 miljoner dollar** kommer månen att vara för långt borta för att helt skymma solen. Allt som återstår är ringformade förmörkelser: en ring av ljus runt månskivan. På mycket lång sikt skulle jorden och månen kunna synkroniseras: varje kropp skulle alltid visa samma ansikte mot den andra. Men solen, genom att bli **röd jätte**, slutfasen av en stjärna som vår, kommer att förvandla systemet mycket tidigare."
+          "text": "Om ungefär **600 miljoner år** ligger månen för långt bort för att täcka solen helt. Kvar blir bara ringformiga förmörkelser: en ljusring kring månskivan. På mycket lång sikt skulle jorden och månen kunna synkas: varje kropp skulle alltid visa samma sida mot den andra. Men solen, när den blir **röd jätte**, slutskedet för en stjärna som vår, ändrar systemet långt före det."
         },
         {
           "type": "takeaway",
-          "text": "Månen kraschar inte eftersom dess sidohastighet balanserar jordens attraktion: den är i permanent fritt fall. Och det går fortfarande bort med cirka **3,8 cm** per år."
+          "text": "Månen kraschar inte för att sidofarten balanserar jordens dragning: den är i ständigt fritt fall. Och den avlägsnar sig fortfarande ungefär **3,8 cm** om året."
         }
       ]
     }

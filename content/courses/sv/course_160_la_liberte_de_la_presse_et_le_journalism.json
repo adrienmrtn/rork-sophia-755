@@ -4,25 +4,25 @@
   "subtitle": "1900-talet",
   "subject": "art",
   "subcategory": "Cinema, photography & architecture + iconic works",
-  "description": "Från Cartier-Bresson till Nick Ut, pressfotot fångar historien i en bild. Medias frihet, etik och makt i samma sökare.",
+  "description": "Från Cartier-Bresson till Nick Ut spikar pressfotot historien i en bild. Frihet, etik och mediemakt sitter i samma sökare.",
   "hero": {
     "image": "la_liberte_de_la_presse_et_le_journalisme_photographique",
     "ratio": "16:9",
-    "hook": "Ett foto kan stoppa ett krig ... eller ljuga. Vi måste fortfarande kunna publicera den."
+    "hook": "Ett foto kan hejda ett krig. Eller ljuga. Först måste det få publiceras."
   },
   "sections": [
     {
       "id": "course_160_la_liberte_de_la_presse_et_le_journalism_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Fotografisk journalistik föds när bilden fixar nyheten lika starkt som en artikel. En enda syn kan sammanfatta ett krig, en hungersnöd, en seger."
+          "text": "Fotojournalistiken föds när bilden fäster aktualiteten lika hårt som en artikel. En enda vy kan sammanfatta ett krig, en svält, en seger."
         },
         {
           "type": "paragraph",
-          "text": "Men utan pressfrihet ligger dessa bilder kvar i en byrålåda."
+          "text": "Utan pressfrihet stannar de bilderna i en låda."
         }
       ]
     },
@@ -33,36 +33,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Henri Cartier-Bresson]] teoretiserar det \"avgörande ögonblicket\": att vara på rätt plats, vid rätt tidpunkt, med rätt inramning. [[Gerda Taro]], tillsammans med Capa, dog under det spanska inbördeskriget. Fotojournalistiken har sina martyrer."
+          "text": "[[Henri Cartier-Bresson]] formulerar „det avgörande ögonblicket”: rätt plats, rätt tid, rätt utsnitt. [[Gerda Taro]], vid Capas sida, dör när hon bevakar spanska inbördeskriget. Fotojournalistiken har sina martyrer."
         },
         {
           "type": "paragraph",
-          "text": "Framträdandet av illustrerade tidskrifter och fotobyråer professionaliserade yrket. Reportern går därifrån med en enhet som andra med en anteckningsbok. Risken är fysisk."
+          "text": "Illustrerade magasin och fotoagenturer gör yrket professionellt. Reporten ger sig av med en kamera som andra med ett block. Risken är fysisk."
         },
         {
           "type": "image",
           "asset": "cartier_bresson_decisive_moment",
           "ratio": "4:3",
-          "caption": "Leica på axeln: gatan som terräng."
+          "caption": "Leican på axeln: gatan som fält"
         }
       ]
     },
     {
       "id": "course_160_la_liberte_de_la_presse_et_le_journalism_p2",
-      "title": "Bilder som förändrar debatten",
+      "title": "Bilder som ändrar debatten",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I Vietnam chockerar [[Nick Ut]]s foto som visar en liten flicka bränd av napalm den allmänna opinionen. Bilden \"sluter\" inte bara kriget, men den gör den mänskliga kostnaden omöjlig att förneka."
+          "text": "I Vietnam skakar fotot av [[Nick Ut]], en flicka bränd av napalm, om opinionen. Bilden „avslutar” inte kriget ensam, men den gör det mänskliga priset omöjligt att förneka."
         },
         {
           "type": "paragraph",
-          "text": "Stora demokratier skyddar teoretiskt pressen. Diktaturer styr sökaren. Friheten att publicera en bild blir en politisk barometer."
+          "text": "De stora demokratierna skyddar pressen i teorin. Diktaturerna styr sökaren. Friheten att publicera en bild blir en politisk termometer."
         },
         {
           "type": "funFact",
-          "text": "Många kända foton censurerades eller diskuterades först innan de blev historiska bevis."
+          "text": "Många berömda bilder censurerades eller ifrågasattes först, innan de blev historiska självklarheter."
         }
       ]
     },
@@ -73,48 +73,48 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Fotojournalistikens etik]] ställer frågor: kan vi rama in lidande? Retuschera? [[Mediekoncentration och redaktionellt oberoende]] hotar också den fria blicken."
+          "text": "[[Fotojournalistikens etik]] ställer frågor: får man rama in lidandet? Retuschera? [[Mediekoncentration och redaktionellt oberoende]] hotar också den fria blicken."
         },
         {
           "type": "paragraph",
-          "text": "I den digitala tidsåldern är verifiering viktigt: metadata, omvänd bildsökning, sammanhang. Fotografi är fortfarande kraftfullt, men det kan manipuleras snabbare än någonsin."
+          "text": "I den digitala tiden krävs kontroll: metadata, omvänd bildsökning, sammanhang. Fotot är fortfarande starkt, men det kan manipuleras snabbare än någonsin."
         },
         {
           "type": "image",
           "asset": "photojournalism_war_correspondent_camera",
           "ratio": "4:3",
-          "caption": "Reportern: vittne beväpnat med ett mål."
+          "caption": "Reporten: vittne beväpnad med ett objektiv"
         }
       ]
     },
     {
       "id": "course_160_la_liberte_de_la_presse_et_le_journalism_p4",
-      "title": "Arv",
+      "title": "Arvet",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I nätverkens tidsålder fotar alla. Behovet av tillförlitliga, kontextualiserade bilder, skyddade av rätten till information, har aldrig varit så starkt."
+          "text": "I nätens tid fotograferar alla. Behovet av tillförlitliga, förklarade bilder, skyddade av rätten att informera, har aldrig varit starkare."
         },
         {
           "type": "paragraph",
-          "text": "För att fullt ut förstå pressfrihet och fotografisk journalistik måste du ha en sak i åtanke: varje teknisk detalj tjänar en känsla eller en idé. Verket är aldrig bara dekorativt."
+          "text": "För att fatta pressfrihet och fotojournalistik ska du hålla en sak i minnet: varje teknisk detalj tjänar en känsla eller en idé. Verket är aldrig bara dekoration."
         },
         {
           "type": "paragraph",
-          "text": "Kontexten spelar lika stor roll som stilen. Datum, platser, sponsorer, offentliga: allt detta förklarar varför ett formulär visas vid ett visst tillfälle, och inte tidigare."
+          "text": "Sammanhanget väger lika tungt som stilen. Datum, platser, uppdragsgivare, publik: allt det förklarar varför en form dyker upp just då, och inte tidigare."
         },
         {
           "type": "paragraph",
-          "text": "Slutligen mäts arv på lång sikt. Det vi idag ser på museer, filmer eller populärmusik bär fortfarande spåren av dessa uppfinningar."
+          "text": "Arvet mäts i det långa loppet. Det vi ser i museer, filmer eller populärmusik bär fortfarande spår av de här uppfinningarna."
         },
         {
           "type": "paragraph",
-          "text": "Träna ögat, försvara whistleblowers, betala för fältjournalistik: utan detta återstår bara flödet. Arvet från 1900-talet är ett krav, inte en nostalgi."
+          "text": "Skola blicken, försvara visselblåsare, betala journalistiken i fält: utan det återstår bara flödet. 1900-talets arv är ett krav, inte nostalgi."
         },
         {
           "type": "takeaway",
-          "text": "Från Cartier-Bressons Leica till krigsbilder, fotojournalistik har bevisat att en fri bild kan väga lika mycket som en redaktionell."
+          "text": "Från Cartier-Bressons Leica till krigsbilderna har fotojournalistiken visat att en fri bild kan väga lika tungt som en ledare."
         }
       ]
     }

@@ -1,120 +1,120 @@
 {
   "id": "course_167_icare_et_dedale",
-  "title": "Ikaros och Daedalus",
-  "subtitle": "Flyger för nära solen",
+  "title": "Ikaros och Daidalos",
+  "subtitle": "Flykten för nära solen",
   "subject": "mythologie",
   "subcategory": "Greece: the gods",
-  "description": "Daedalus gör vaxvingar för att fly från Kreta. Hans son Ikaros flyger för högt, faller och ger sitt namn åt ett hav. En myt om mått och överskott.",
+  "description": "Daidalos gör vaxvingar för att fly Kreta. Sonen Ikaros flyger för högt, faller och ger namn åt ett hav. En myt om måtta och övermod.",
   "hero": {
     "image": "icare_et_dedale",
     "ratio": "16:9",
-    "hook": "En far uppfinner vingar. En son ignorerar varningen. Havet behåller sitt namn."
+    "hook": "En far uppfinner vingar. En son struntar i varningen. Havet behåller hans namn."
   },
   "sections": [
     {
       "id": "course_167_icare_et_dedale_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Ikaros** och hans far **Daedalus** utgör en av de mest kända grekiska myterna. Utöver bilden av tonåringen som faller i havet, talar berättelsen om uppfinningsrikedom, gränser och frestelsen att gå för långt."
+          "text": "**Ikaros** och fadern **Daidalos** bildar en av de mest kända grekiska myterna. Bortom bilden av tonåringen som faller i havet talar berättelsen om uppfinningsrikedom, gränser och frestelsen att gå för långt."
         },
         {
           "type": "paragraph",
-          "text": "Det är berättelsen om en omöjlig flykt som blir en lektion i [[Hybris och överskott]]: att vilja vara lika med gudarna är att riskera att brännas."
+          "text": "Det är historien om en omöjlig flykt som blir en läxa om [[Hybris (och överskott)]]: att vilja likna gudarna är att riskera att bränna sig."
         }
       ]
     },
     {
       "id": "course_167_icare_et_dedale_p1",
-      "title": "Daedalus, fånge i sin egen labyrint",
+      "title": "Daidalos, fånge i sin egen labyrint",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Daedalus** är en legendarisk uppfinnare, inkarnation av [[Metis]], grekernas listiga intelligens. Han förvisades till kung **Minos**:s hov på Kreta och byggde **Labyrint**, ett fängelse så komplext att ingen undkommer. Hon gömmer **Minotaurus**, monster född av drottningen [[Pasiphae]]s förbjudna kärlekar."
+          "text": "**Daidalos** är en sagouppfinnare, gestalten för [[Metis]], grekernas listiga intelligens. Landsförvisad till kung **Minos** hov på Kreta bygger han **Labyrinten**, ett fängelse så knepigt att ingen tar sig ut. Där göms **Minotauros**, monstret fött ur drottning [[Pasiphae]] förbjudna kärlek."
         },
         {
           "type": "image",
           "asset": "daedalus_labyrinth_crete_minotaur_myth",
           "ratio": "4:3",
-          "caption": "Daedalus, arkitekten bakom den kretensiska labyrinten."
+          "caption": "Daidalos, arkitekten bakom den kretensiska labyrinten"
         },
         {
           "type": "paragraph",
-          "text": "När Minos får reda på att Daedalus hjälpte hjälten **Theseus** att fly tack vare Ariadnes tråd låser han in uppfinnaren och hans unge son **Ikaros** i deras eget arbete. Land och hav är låsta. Där återstår himlen."
+          "text": "När Minos får veta att Daidalos hjälpt hjälten **Theseus** att fly med Ariadnes tråd stänger han in uppfinnaren och den unge sonen **Ikaros** i deras eget verk. Land och hav är låsta. Kvar är himlen."
         },
         {
           "type": "funFact",
-          "text": "Det franska ordet **\"labyrint\"** kommer från denna karaktär: en plats där man går vilse, som labyrinten han designade."
+          "text": "Det franska ordet **„dédale”** kommer av den här figuren: en plats där man går vilse, som labyrinten han ritade."
         },
         {
           "type": "paragraph",
-          "text": "Medan han observerar fåglarna gör Daedalus två par vingar: trä, fjädrar och **vax** bi. Tekniken blir en väg ut."
+          "text": "Genom att iaktta fåglarna gör Daidalos två par vingar: trä, fjädrar och **vax**. Tekniken blir en utgång."
         }
       ]
     },
     {
       "id": "course_167_icare_et_dedale_p2",
-      "title": "Flyg för högt eller för lågt",
+      "title": "Flyga för högt, eller för lågt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Innan han lämnar ger Daedalus Ikaros en enkel regel: följ medelvägen. För låg, luftfuktigheten tynger ner fjädrarna. För högt smälter solen vaxet. Denna försiktighet påminner om [[Sophia]], visdomen att veta sin plats."
+          "text": "Före avfärden ger Daidalos Ikaros en enkel regel: håll medelvägen. För lågt tynger fukten fjädrarna. För högt smälter solen vaxet. Den försiktigheten påminner om [[Sophia]], visdomen att känna sin plats."
         },
         {
           "type": "paragraph",
-          "text": "Till en början är allt bra. Far och son flyger över öarna i Egeiska havet. Herdarna på marken tror att de ser gudar. Då griper fyllan Ikaros. Han reser sig, fascinerad av himlen. Vaxet mjuknar. Fjädrarna faller. Han slår med bara armarna och dyker ner i havet."
+          "text": "Först går allt bra. Far och son flyger över öarna i Egeiska havet. Herdarna på marken tror sig se gudar. Sedan griper berusningen Ikaros. Han stiger, trollbunden av himlen. Vaxet mjuknar. Fjädrarna faller. Han slår med bara armar och störtar i havet."
         },
         {
           "type": "image",
           "asset": "icarus_falling_sun_bruegel_painting",
           "ratio": "4:3",
-          "caption": "Ikaros fall, föremål för målning sedan renässansen."
+          "caption": "Ikaros fall, ett motiv i måleriet sedan renässansen"
         },
         {
           "type": "funFact",
-          "text": "Myten är vetenskapligt paradoxal: ju högre du kommer desto kallare blir det. Ikaros borde ha frusit hellre än att se sitt vax smälta."
+          "text": "Myten är vetenskapligt paradoxal: ju högre man kommer, desto kallare blir det. Ikaros borde ha frusit, inte sett vaxet smälta."
         }
       ]
     },
     {
       "id": "course_167_icare_et_dedale_p3",
-      "title": "Stolthet, ideal eller bortglömd detalj?",
+      "title": "Högmod, ideal eller glömd detalj?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "De äldste ser framför allt ett straff för stolthet: Ikaros betalar för att ha velat för mycket. Men romantiker, som **Baudelaire**, gör honom till en idealhjälte: det är bättre att dö och titta på solen än ett försiktigt liv på marken."
+          "text": "De antika ser främst ett straff för högmod: Ikaros betalar för att ha velat för mycket. Romantikerna, som **Baudelaire**, gör honom till idealets hjälte: hellre dö med blicken mot solen än leva försiktigt på marken."
         },
         {
           "type": "paragraph",
-          "text": "Målaren **Pieter Bruegel av de äldre** erbjuder en annan läsning. I hans målning är fallet bara en detalj: plogmannen fortsätter sin uppgift, världen stannar inte för en hjälte. Den individuella bedriften blir nästan osynlig."
+          "text": "Målaren **Pieter Bruegel den äldre** ger en annan läsning. I hans tavla är fallet bara en detalj: plöjaren fortsätter sitt arbete, världen stannar inte för en hjälte. Den enskilda bedriften blir nästan osynlig."
         },
         {
           "type": "funFact",
-          "text": "Vissa versioner tillägger att Daedalus också ser sin sons död som ett straff: en gång, av svartsjuka, skulle han ha dödat sin brorson **Perdix**, en alltför begåvad uppfinnare."
+          "text": "Vissa versioner tillägger att Daidalos också ser sonens död som ett straff: en gång, av avund, ska han ha dödat brorsonen **Perdix**, en alltför begåvad uppfinnare."
         }
       ]
     },
     {
       "id": "course_167_icare_et_dedale_p4",
-      "title": "Ett hav, en ö, en lektion",
+      "title": "Ett hav, en ö, en läxa",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Strömmarna bär Ikaros kropp mot en ö som hjälten **Herakles** döper till [[Ikaria]]. Det omgivande havet blir **Ikarian havet**. Daedalus, ensam, når Sicilien och erbjuder sina vingar till guden **Apollo** och svär att aldrig mer flyga."
+          "text": "Strömmarna bär Ikaros kropp mot en ö som hjälten **Herakles** kallar [[Ikaria]]. Havet omkring blir det **ikariska havet**. Daidalos, ensam, når Sicilien och offrar vingarna åt guden **Apollon**, med löfte att aldrig mer flyga."
         },
         {
           "type": "paragraph",
-          "text": "Myten överlever överallt: inom flygtekniken som dröm och risk, i psykologin som \"Icarus-komplexet\", önskan att lyckas för snabbt. Daedalus förblir den tvetydiga uppfinnaren, kapabel till det bästa (vingarna) såväl som det värsta. [[Labyrinten som symbol]] påminner oss om att tekniken också kan innesluta."
+          "text": "Myten lever överallt: i flyget som dröm och risk, i psykologin som „Ikaroskomplex”, lusten att lyckas för fort. Daidalos förblir den tvetydige uppfinnaren, kapabel till det bästa (vingarna) som det värsta. [[Labyrinten som symbol]] påminner om att tekniken också kan stänga in."
         },
         {
           "type": "takeaway",
-          "text": "**Daedalus** flyr från Kreta med vingar av vax. **Ikaros** ignorerar varningen, flyger för nära solen och drunknar. Tekniken befriar, men utan mått dödar den."
+          "text": "**Daidalos** flyr Kreta med vaxvingar. **Ikaros** struntar i varningen, flyger för nära solen och drunknar. Tekniken befriar, men utan måtta dödar den."
         }
       ]
     }

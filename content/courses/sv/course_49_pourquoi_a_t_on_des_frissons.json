@@ -1,10 +1,10 @@
 {
   "id": "course_49_pourquoi_a_t_on_des_frissons",
-  "title": "Varför får vi frossa?",
-  "subtitle": "Kropp & känslor",
+  "title": "Varför får vi rysningar?",
+  "subtitle": "Kropp och känslor",
   "subject": "sciences",
   "subcategory": "Our daily life explained",
-  "description": "Kyla, rädsla, musik: rysningar har flera orsaker. De passerar alla genom nervsystemet, men inte av samma anledningar.",
+  "description": "Kyla, rädsla, musik: rysningar har flera orsaker. Alla går via nervsystemet, men inte av samma skäl.",
   "hero": {
     "image": "pourquoi_a_t_on_des_frissons",
     "ratio": "16:9",
@@ -13,73 +13,73 @@
   "sections": [
     {
       "id": "course_49_pourquoi_a_t_on_des_frissons_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Du huttrar när du går ut i regnet. Du ryser också när du hör en låt som gör dig upprörd. Samma ord, olika mekanismer."
+          "text": "Du ryser när du går ut i regnet. Du ryser också när en sång slår till. Samma ord, olika mekanismer."
         },
         {
           "type": "paragraph",
-          "text": "I båda fallen reagerar kroppen snabbt. Men den ena används främst för att värma upp, den andra handlar mer om njutning och känslor."
+          "text": "I båda fallen reagerar kroppen snabbt. Men den ena tjänar främst till att värma, den andra rör snarare njutning och känslor."
         }
       ]
     },
     {
       "id": "course_49_pourquoi_a_t_on_des_frissons_p1",
-      "title": "Kylans spänning: en minipanna",
+      "title": "Kylrysningen: en minipanna",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kroppen vill stanna runt **37 °C**. När huden upptäcker kyla, varnar den ett område i hjärnan, **hypotalamus**, som fungerar som en termostat."
+          "text": "Kroppen vill stanna kring **37 °C**. När huden känner kyla varnar den ett område i hjärnan, **hypotalamus**, som fungerar som en termostat."
         },
         {
           "type": "image",
           "asset": "goosebumps_cold_skin",
           "ratio": "4:3",
-          "caption": "Gåshud: en gammal reflex för att höja hacklet."
+          "caption": "Gåshud: en gammal reflex för att resa hårstråna."
         },
         {
           "type": "paragraph",
-          "text": "Musklerna drar ihop sig mycket snabbt och upprepade gånger: det här är rysningen. Dessa sammandragningar producerar värme. \"Gåshud\" kommer från en gammal reflex: att höja hårstråna för att bättre isolera. Hemma, med lite päls, fungerar den främst som en rest."
+          "text": "Musklerna drar ihop sig mycket snabbt och upprepat: det är rysningen. Sammandragningarna ger värme. Gåshuden kommer av en gammal reflex: resa håren för att isolera bättre. Hos oss, med lite päls, är den mest ett arv."
         }
       ]
     },
     {
       "id": "course_49_pourquoi_a_t_on_des_frissons_p2",
-      "title": "Rädslans spänning",
+      "title": "Rädslans rysning",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ställd inför ett hot aktiveras [[sympatiska nervsystemet]] (den \"alerta\" grenen av nervsystemet). Den släpper **adrenalin**. Musklerna spänns, hjärtat rasar, huden kan frossa."
+          "text": "Inför ett hot slår [[Det sympatiska nervsystemet]] (larmgrenen i nervsystemet) på. Det släpper ut **adrenalin**. Musklerna spänns, hjärtat rusar, huden kan rysa."
         },
         {
           "type": "image",
           "asset": "adrenaline_stress_response_body",
           "ratio": "4:3",
-          "caption": "Adrenalin förbereder kroppen för att reagera snabbt."
+          "caption": "Adrenalinet gör kroppen redo att reagera snabbt."
         },
         {
           "type": "funFact",
-          "text": "Samma system förklarar varför du kan få gåshud när du tittar på en skräckfilm... medan du är mysig i soffan."
+          "text": "Samma system förklarar varför du kan få gåshud av en skräckfilm... medan du sitter varm på soffan."
         }
       ]
     },
     {
       "id": "course_49_pourquoi_a_t_on_des_frissons_p3",
-      "title": "Spänningen med musik",
+      "title": "Musikens rysning",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vissa spänningar, ibland kallade \"frossa\", kommer med en stark känsla: musik, tal, film. De aktiverar hjärnans **belöningar**-krets, med **dopamin**, ett ämne kopplat till njutning."
+          "text": "Vissa rysningar, ibland kallade chills, kommer med en stark känsla: musik, tal, film. De slår på hjärnans **belöningskrets**, med **dopamin**, ett ämne knutet till njutning."
         },
         {
           "type": "paragraph",
-          "text": "Detta är inte användbart för omedelbar överlevnad. Snarare är det kroppen som reagerar på en intensiv känsla, som en förbigående våg."
+          "text": "Det är inte nyttigt för att överleva just då. Det är snarare kroppen som svarar på en intensiv känsla, som en våg som går igenom."
         }
       ]
     },
@@ -90,11 +90,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Frossa med hög feber kan signalera en infektion. Ständiga frossa utan tydlig anledning förtjänar läkarvård. Men för det mesta är en rysning av kyla, stress eller musik helt enkelt att kroppen gör sitt jobb."
+          "text": "Rysningar med hög feber kan signalera en infektion. Ständiga rysningar utan klar orsak förtjänar ett läkarbesök. Men oftast är en rysning av kyla, stress eller musik bara kroppen som gör sitt jobb."
         },
         {
           "type": "takeaway",
-          "text": "Kalla rysningar producerar värme. De som är rädda förbereder sig på att reagera. Musiken rör känslomässig njutning. Samma känsla, olika orsaker."
+          "text": "Kylrysningar ger värme. Rädslans gör oss redo att reagera. Musikens rör den känslomässiga njutningen. Samma känsla, olika orsaker."
         }
       ]
     }

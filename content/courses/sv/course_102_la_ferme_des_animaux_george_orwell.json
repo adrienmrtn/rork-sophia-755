@@ -1,90 +1,90 @@
 {
   "id": "course_102_la_ferme_des_animaux_george_orwell",
-  "title": "Animal Farm, George Orwell",
+  "title": "Djurfarmen, George Orwell",
   "subtitle": "1945",
   "subject": "litterature",
   "subcategory": "Anglo-Saxons & world literature",
-  "description": "1945 berättar Orwell om en gård där djuren jagar bort mannen, för att sedan se grisarna återta makten. En tydlig allegori om den ryska revolutionen och revolutionärt svek.",
+  "description": "1945 berättar Orwell om en gård där djuren jagar bort människan och sedan ser grisarna ta makten. En klar allegori över den ryska revolutionen och ett revolutionärt svek.",
   "hero": {
     "image": "la_ferme_des_animaux_orwell",
     "ratio": "16:9",
-    "hook": "Trettio tusen ord, djur och en politisk läxa som världen ännu inte har lärt sig."
+    "hook": "Trettio tusen ord, några gårdsdjur och en politisk läxa som världen fortfarande lär sig."
   },
   "sections": [
     {
       "id": "course_102_la_ferme_des_animaux_george_orwell_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Publicerad i **1945**, **Djurgård** ser ut som en barnberättelse. Under detta enkla utseende beskriver **George Orwell** hur en folklig revolution kan konfiskeras av en korrupt elit. Med knappt **30 000 ord** levererar han en av de mest effektiva **[[Allegori om den ryska revolutionen]]** som någonsin skrivits."
+          "text": "Den kom **1945** och **Djurfarmen** ser ut som en barnberättelse. Under den enkla ytan visar **George Orwell** hur en folklig revolution kan kapas av en korrupt elit. På knappt **30.000 ord** ger han ett av de skarpaste exemplen på **[[Allegori om den ryska revolutionen]]** som skrivits."
         },
         {
           "type": "image",
           "asset": "animal_farm_pigs_barnyard_orwell",
           "ratio": "4:3",
-          "caption": "Svin vid makten: fabeln som fördömer revolutionär korruption."
+          "caption": "Grisar vid makten: fabeln som avslöjar revolutionär korruption"
         }
       ]
     },
     {
       "id": "course_102_la_ferme_des_animaux_george_orwell_p1",
-      "title": "En kirurgisk allegori över sovjetisk historia",
+      "title": "En kirurgisk allegori över den sovjetiska historien",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Boken föddes under **[[Andra världskriget]]**, när Sovjetunionen var västvärldens allierade mot Nazityskland. Att kritisera **Stalin** framstår då som ett politiskt svek. Orwell väntar till slutet av konflikten med att publicera. Varje djur motsvarar en historisk figur: **Gamle major** frammanar **Marx** och **Lenin**, **Napoleon** spårar **StalinZZENDBOLDZBOLDZ, Z**SEND** **Trotski****, rival till Stalin, landsförvisad och mördad."
+          "text": "Boken föds när **[[Andra världskriget]]** rasar och Sovjetunionen är västs allierade mot Nazityskland. Att kritisera **Stalin** räknas då som politiskt svek, så Orwell väntar till krigets slut innan han publicerar. Varje djur svarar mot en historisk figur: **Gamle Major** påminner om **Marx** och **Lenin**, **Napoleon** är gjord efter **Stalin**, och **Snöboll** påminner om **Trotskij**, Stalins rival, landsförvisad och sedan mördad."
         },
         {
           "type": "funFact",
-          "text": "T.S. Eliot, då redaktör, vägrade manuskriptet med motiveringen att intelligenta svin kunde förolämpa statsmän."
+          "text": "T.S. Eliot, då förläggare, refuserade manuskriptet. Skälet: smarta grisar kunde såra politiker."
         },
         {
           "type": "paragraph",
-          "text": "Napoleons **hundkapplöpning** representerar den hemliga polisen och den politiska terrorn. **Malabar**, den hårt arbetande hästen, förkroppsligar **[[proletariat]]** som utnyttjas till en punkt av total utmattning. **Brille-Babil**, grispropagandisten, förvandlar varje misslyckande till en officiell seger och skriver om historien allt eftersom dagarna går. Orwell beskriver **[[Stalinism]]** med precisionen av en broschyr och lättheten i en fabel."
+          "text": "Napoleons **hundar** står för den hemliga polisen och den politiska terrorn. Arbetshästen **Boxer** förkroppsligar **[[proletariat]]** som mjölkas till utmattning. Propaganda-grisen **Skrikhals** vänder varje nederlag till officiell seger och skriver om historien dag för dag. Orwell fångar **[[Stalinism]]** med en pamfletts precision och en fabels lätthet."
         }
       ]
     },
     {
       "id": "course_102_la_ferme_des_animaux_george_orwell_p2",
-      "title": "Skiftet: från utopi till diktatur",
+      "title": "Vändningen: från utopi till diktatur",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Djuren jagar bonden **Jones**, symbol för **[[Tsar Nikolaj II]]**, omvänt i **1917**. De proklamerar **Djurism** och skriver in **Sju budorden** på ladugårdsväggen. Jämställdhet verkar äntligen möjlig. Sedan jagar Napoleon Snowball med sina hundar tränade för våld och sätter igång terror."
+          "text": "Djuren jagar bort bonden **Jones**, gestalten för **[[Tsar Nikolaj II]]**, störtad **1917**. De utropar **animalismen** och skriver de **sju budorden** på ladugårdsväggen. Jämlikheten ser äntligen möjlig ut. Sedan jagar Napoleon bort Snöboll med hundar tränade för våld och sätter terrorn i system."
         },
         {
           "type": "image",
           "asset": "farm_animals_barn_countryside",
           "ratio": "16:9",
-          "caption": "Gården i början: en utopi som tippar mot diktatur."
+          "caption": "Gården i början: en utopi som tippar över mot diktatur"
         },
         {
           "type": "paragraph",
-          "text": "Väderkvarnen blir en symbol för påtvingad mobilisering: djuren tröttnar på att bygga den medan grisarna förklarar sig vara \"intellektuella arbetare\" och monopoliserar resurserna. Äpplen och mjölk är först reserverade för ledare, i namnet på \"hjärnan\" som behöver matas. Korruption börjar med små privilegier och blir sedan en norm. De offentliga rättegångarna och avrättningarna påminner om de stora stalinistiska utrensningarna på 1930-talet."
+          "text": "Väderkvarnen blir tecknet på tvångsmobilisering: djuren sliter med bygget medan grisarna utnämner sig till „intellektuella arbetare” och tar resurserna. Äpplen och mjölk går först till ledarna, i namn av „hjärnan” som måste matas. Korruptionen börjar med små privilegier och blir sedan regel. Skådeprocesserna och avrättningarna påminner om Stalins **stora utrensningar** på 1930-talet."
         }
       ]
     },
     {
       "id": "course_102_la_ferme_des_animaux_george_orwell_p3",
-      "title": "Språkets modifiering och det slutliga sveket",
+      "title": "Språket omskrivet och det sista sveket",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Orwell visar att den som kontrollerar orden kontrollerar den upplevda verkligheten. Grisarna ändrar buden på natten, när djuren sover: \"Inget djur får sova i en säng\" blir \"med lakan.\" Alkoholförbudet får betyget \"överdrivet\". Det kollektiva minnet raderas ord för ord, tills ingen kommer ihåg originalet."
+          "text": "Orwell visar att den som håller orden också håller det människor tar för verklighet. På natten, när djuren sover, ändrar grisarna budorden: „Inget djur ska sova i säng” blir sakta „inget djur ska sova i säng med lakan.” Förbudet mot alkohol får tillägget „till överdrift.” Det kollektiva minnet suddas ut ord för ord, tills ingen minns originalet."
         },
         {
           "type": "quote",
-          "text": "Alla djur är lika, men vissa djur är mer lika än andra.",
-          "attribution": "George Orwell, Animal Farm"
+          "text": "Alla djur är jämlika, men somliga djur är mer jämlika än andra.",
+          "attribution": "George Orwell, Djurfarmen"
         },
         {
           "type": "paragraph",
-          "text": "Det är en **[[Newspeak]]** före sin tid: språket kommunicerar inte längre, det maskerar. Till slut går grisarna på två ben, klär ut sig och banketter med mänskliga bönder. De andra djuren, som ser från gris till människa och från människa till gris, skiljer inte längre från varandra. **[[ryska revolutionen]]** producerade exakt vad den påstod sig slåss mot."
+          "text": "Det här är **[[Newspeak]]** före sin tid: språket kommunicerar inte längre, det täcker bara över. Till slut går grisarna på två ben, klär sig och sitter till bords med mänskliga bönder. De andra djuren tittar från gris till människa och från människa till gris och skiljer dem inte längre. **[[ryska revolutionen]]** födde precis det den sade sig bekämpa."
         }
       ]
     },
@@ -95,15 +95,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Om boken i första hand riktar sig till den ryska revolutionen, går dess budskap bortom den sovjetiska historien. Orwell analyserar underkastelse, propaganda och idealens bräcklighet inför personlig ambition. Utan kritisk utbildning och utan kollektivt minne ser människor sina drömmar om frihet förvrängda av dem som tar makten i folkets namn."
+          "text": "Boken träffar först den ryska revolutionen, men budskapet går bortom den sovjetiska historien. Orwell granskar underkastelse, propaganda och hur sköra ideal blir när personlig ambition vinner. Utan kritisk bildning och utan kollektivt minne ser folket sina frihetsdrömmar tas av dem som griper makten i dess namn."
         },
         {
           "type": "paragraph",
-          "text": "Romanen har sålt mer än **30 tusen** exemplar och berör läsare i alla åldrar och alla kulturer. Som barn läste vi en berättelse om djur; som vuxen läser vi en avhandling om statsvetenskap. Lärdomen förblir enkel och aktuell: när ord förlorar sin mening följer den fysiska friheten snabbt. Här förbereder Orwell de teman som han kommer att driva till det yttersta i **1984** fyra år senare."
+          "text": "Såld i mer än **30 miljoner** exemplar når romanen läsare i alla åldrar och kulturer. Som barn läser du en djurberättelse; som vuxen en politisk avhandling. Lärdomen är enkel och aktuell: när orden tappar sin mening följer den kroppsliga friheten snabbt efter. Här sätter Orwell de teman han fyra år senare driver till ytterlighet i **1984**."
         },
         {
           "type": "takeaway",
-          "text": "**Djurgård** visar att en förrådd revolution innebär manipulation av språk och konfiskering av minne. Orwell bevisar att en kort fabel kan säga mer än ett tusen sidor långt tal."
+          "text": "**Djurfarmen** visar att en förrådd revolution går via språkmanipulation och stöld av minnet. Orwell bevisar att en kort fabel kan säga mer än ett tal på tusen sidor."
         }
       ]
     }

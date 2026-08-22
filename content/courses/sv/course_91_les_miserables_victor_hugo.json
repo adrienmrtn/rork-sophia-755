@@ -1,79 +1,79 @@
 {
   "id": "course_91_les_miserables_victor_hugo",
-  "title": "Les Miserables, Victor Hugo",
+  "title": "Samhällets olycksbarn, Victor Hugo",
   "subtitle": "1862",
   "subject": "litterature",
   "subcategory": "French & European Classics",
-  "description": "Jean Valjean söker återlösning i ett Frankrike som vägrar att förlåta honom. Hugo blandar romansk roman, historisk krönika och opinionsbildning för de utestängda.",
+  "description": "Jean Valjean söker försoning i ett Frankrike som vägrar förlåta honom. Hugo blandar kärleksroman, historisk krönika och försvarstal för de utestängda.",
   "hero": {
     "image": "les_miserables_victor_hugo",
     "ratio": "16:9",
-    "hook": "En bit stulet bröd, nitton år i fängelse, sedan ett helt liv för att bevisa att man kan bli man igen."
+    "hook": "Ett stulet brödstycke, nitton år i straffarbete, sedan ett helt liv för att bevisa att man kan bli människa igen."
   },
   "sections": [
     {
       "id": "course_91_les_miserables_victor_hugo_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Publicerad i **1862**, **Les Miserables** är en av de mest lästa romanerna i världen. **Victor Hugo**, engagerad poet och romanförfattare, berättar historien om Frankrike under **1800-talet** genom **Jean Valjean**, en före detta straffånge som jagades av **[[Inspektör Javert]]**. Javert är en oförgänglig polis. Han förkroppsligar den skoningslösa lagen."
+          "text": "Utgiven **1862** är **Samhällets olycksbarn** en av världens mest lästa romaner. **Victor Hugo**, engagerad poet och romanförfattare, berättar 1800-talets Frankrike genom **Jean Valjean**, en före detta straffånge jagad av **[[Inspektör Javert]]**. Javert är en omutlig polis. Han förkroppsligar lagen utan nåd."
         },
         {
           "type": "paragraph",
-          "text": "Boken kombinerar detektivintriger, kärlekshistoria, historisk krönika och socialt fördömande. Hugo vill ha ett \"världsverk\", en roman som omfattar en hel era. Han hoppas kunna prata med alla, bortom gränserna. Det är också en stor text om elände, nåd och möjligheten till förlösning."
+          "text": "Boken blandar polisintrig, kärlekshistoria, historisk krönika och socialt angrepp. Hugo vill ha ett „världsverk”, en roman som rymmer en hel epok. Han hoppas tala till alla, över gränserna. Det är också en stor text om nöd, nåd och chansen att sona."
         }
       ]
     },
     {
       "id": "course_91_les_miserables_victor_hugo_p1",
-      "title": "Hugo och ett verk född i exil",
+      "title": "Hugo och ett verk fött i exil",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Victor Hugo** börjar romanen i **1845**, under titeln \"Les Misères\". Efter statskuppen av **1851** av **Napoléon III**, brorson till Napoleon Bonaparte, gick Hugo i exil på Kanalöarna, på Guernsey. Han tar upp sitt manuskript med ny iver. Exil matar hans ilska mot orättvisor."
+          "text": "**Victor Hugo** börjar romanen redan **1845**, under titeln „Eländet”. Efter statskuppen **1851**, genomförd av **Napoleon III**, brorson till Napoleon Bonaparte, går Hugo i exil på Kanalöarna, på Guernsey. Han tar upp manuskriptet med ny hetta. Exilen föder hans vrede mot orätten."
         },
         {
           "type": "image",
           "asset": "victor_hugo_portrait_photograph",
           "ratio": "4:3",
-          "caption": "Victor Hugo: poet, romanförfattare och röst för social fattigdom."
+          "caption": "Victor Hugo: poet, romanförfattare och röst för den sociala nöden"
         },
         {
           "type": "funFact",
-          "text": "För att skriva scenen i kloakerna fick Hugo information från Paris vägtjänster och utforskade själv de underjordiska gallerierna."
+          "text": "För scenerna i avloppen dokumenterade Hugo sig hos Paris gatukontor och gick själv ner i de underjordiska gångarna."
         },
         {
           "type": "paragraph",
-          "text": "Romanen dök upp i **1862** i Bryssel, efter sjutton års arbete. Hugo lägger in långa **[[Utvikningar]]**, sidor där författaren avbryter berättelsen för att prata om historia eller filosofi. Han ägnar särskilt **Waterloo**, slaget 1815 som markerar slutet på Napoleonriket, klostren eller **[[Paris avloppsledningar]]**, huvudstadens källare och metafor för det sociala omedvetna. Dessa sidor förankrar karaktärerna i en materiell verklighet och gör boken till en avhandling om social filosofi."
+          "text": "Romanen kommer **1862** i Bryssel, efter sjutton års arbete. Hugo skjuter in långa **[[Utvikningar]]**, sidor där berättelsen stannar så att författaren kan tala historia eller filosofi. Han ägnar sig särskilt åt **Waterloo**, slaget 1815 som avslutar Napoleonriket, åt klostren och åt **[[Paris avlopp]]**, huvudstadens underjord och en bild för det sociala omedvetna. De sidorna sätter gestalterna i en materiell verklighet och gör boken till ett socialt filosofiskt traktat."
         }
       ]
     },
     {
       "id": "course_91_les_miserables_victor_hugo_p2",
-      "title": "Jean Valjean: från fängelse till nåd",
+      "title": "Jean Valjean: från straffkolonin till nåden",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dömd för stöld av en bit bröd tillbringade Valjean **19 år** i **[[straffkolonier och straffsystemet på 1800-talet]]**, fängelse med tvångsarbete, i synnerhet i Toulon. När han släpptes markerade **gul-passet** honom som en före detta dömd. Han blir en utstött. Biskop **Myriel**, med smeknamnet \"Monseigneur Bienvenu\", ger honom en andra chans. Han får henne att tro att han fick sitt bestick i present, när Valjean precis hade stulit det."
+          "text": "Dömd för stöld av ett brödstycke sitter Valjean **19 år** i [[Straffkoloni och 1800-talets straffsystem]], fängelse med tvångsarbete, bland annat i Toulon. När han kommer ut stämplar det **gula passet** honom som före detta straffånge. Han blir en paria. Biskop **Myriel**, kallad „biskop Bienvenu”, ger honom en andra chans. Han låter Valjean tro att silvret var en gåva, fast Valjean just hade stulit det."
         },
         {
           "type": "image",
           "asset": "french_convict_galley_19th_century",
           "ratio": "4:3",
-          "caption": "Fängelse: en upplevelse som knäcker Valjean innan hans moraliska förvandling."
+          "caption": "Straffkolonin: erfarenheten som krossar Valjean före den moraliska vändningen"
         },
         {
           "type": "quote",
-          "text": "Jean Valjean, min bror, du tillhör inte det onda längre, du tillhör det goda.",
-          "attribution": "Victor Hugo, Les Misérables — Monseigneur Bienvenu"
+          "text": "Jean Valjean, min broder, ni tillhör inte längre det onda, ni tillhör det goda.",
+          "attribution": "Victor Hugo, Samhällets olycksbarn (biskop Bienvenu)"
         },
         {
           "type": "paragraph",
-          "text": "Under identiteten **Herr Madeleine** blir Valjean filantropisk borgmästare i en industristad. För Hugo kan välgörenhet övervinna social oundviklighet. Men **Javert**, inkarnationen av skoningslös rättvisa, fortsätter att jaga honom. Han kan inte föreställa sig att en brottsling skulle kunna bli en god man."
+          "text": "Under namnet **herr Madeleine** blir Valjean filantropisk borgmästare i en industristad. För Hugo kan barmhärtigheten besegra det sociala ödet. Men **Javert**, bilden av en rättvisa utan nåd, slutar aldrig jaga honom. Han kan inte tänka sig att en brottsling kan bli en god människa."
         }
       ]
     },
@@ -84,57 +84,57 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Fantine**, arbetare övergiven av älskaren som förförde henne, sjunker ner i fattigdom för att betala sin dotters pension **Cosette**. Barnet anförtros åt **Thénardier**, giriga gästgivare. Valjean räddar henne och blir barnets beskyddare. Berättelsen flyttas till Paris, där upproret av **juni 1832**, ett republikanskt uppror som krossats av armén, för samman unga människor i det hemliga sällskapet **[[ABC]]**. Detta namn framkallar \"de låga\", folket."
+          "text": "**Fantine**, en arbetare övergiven av älskaren som förförde henne, sjunker ner i nöden för att betala dottern **Cosette**s pension. Barnet är lämnat hos **Thénardier**, giriga värdshusvärdar. Valjean räddar henne och blir barnets beskyddare. Berättelsen vänder i Paris, där upproret i **juni 1832**, en republikansk resning krossad av armén, samlar ungdomen i hemliga sällskapet **[[ABC]]**. Namnet anspelar på „de nedsänkta”, folket."
         },
         {
           "type": "image",
           "asset": "paris_barricades_1832_painting",
           "ratio": "4:3",
-          "caption": "Barrikaderna 1832: Historien kommer in i romanen."
+          "caption": "Barrikaderna 1832: historien stiger in i romanen"
         },
         {
           "type": "paragraph",
-          "text": "På dessa barrikader dör **Gavroche**, gatubarn som har blivit en symbol för offrad oskuld. **Enjolras**, ledare för rebellerna, förkroppsligar idealistisk ungdom. Valjean räddar **Marius**, en ung borgare förälskad i Cosette, i en handling av total självuppoffring. Han går med på att riskera sin frihet för lyckan för den han anser vara sin dotter."
+          "text": "På de barrikaderna dör **Gavroche**, gatubarnet som blir tecknet för den offrade oskulden. **Enjolras**, de upproriskas ledare, förkroppsligar den idealistiska ungdomen. Valjean räddar där **Marius**, en ung borgare förälskad i Cosette, i en handling av total självuppoffring. Han tar risken att förlora friheten för lyckan hos den han räknar som sin dotter."
         }
       ]
     },
     {
       "id": "course_91_les_miserables_victor_hugo_p4",
-      "title": "En roman som förändrar medvetandet",
+      "title": "En roman som ändrar samveten",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Javert**, räddad av Valjean vid tiden för upproret, kan inte förena lag och nåd: han begår självmord genom att kasta sig i Seine. Valjean dör i fred, efter att ha hållit sitt löfte till Myriel. Romanen är en grundpelare i **[[Engagerad litteratur]]**, litteratur i en social eller politisk saks tjänst. Hugo fördömer frånvaron av skolplikt, kvinnoförtrycket och omänskligheten i fängelser."
+          "text": "**Javert**, räddad av Valjean under upproret, kan inte förena lag och nåd: han tar sitt liv genom att kasta sig i Seine. Valjean dör i fred, efter att ha hållit sitt löfte till Myriel. Romanen är en pelare i **[[Engagerad litteratur]]**, litteratur i en social eller politisk saks tjänst. Hugo angriper bristen på obligatorisk skola, förtrycket av kvinnor och fängelsernas omänsklighet."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1845",
-              "title": "Start av projektet",
-              "detail": "Hugo börjar \"Les Misères\"."
+              "title": "Projektet börjar",
+              "detail": "Hugo börjar skriva „Eländet”."
             },
             {
               "date": "1851",
               "title": "Exil",
-              "detail": "Statskuppen avbryter och börjar sedan skriva om."
+              "detail": "Statskuppen avbryter och tänder sedan skrivandet på nytt."
             },
             {
               "date": "1862",
-              "title": "Offentliggörande",
-              "detail": "Romanen ges ut i Bryssel."
+              "title": "Utgivning",
+              "detail": "Romanen kommer ut i Bryssel."
             },
             {
               "date": "1832",
               "title": "Barrikader",
-              "detail": "Upproret strukturerar det parisiska klimaxet."
+              "detail": "Upproret bär det parisiska klimaxet."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "**Les Misérables**, publicerad i **1862**, berättar om inlösen av **Jean Valjean** mellan välgörenhet och oförsonlig lag. Hugo gör barrikaderna **1832** till symbolen för kampen för mänsklig värdighet."
+          "text": "**Samhällets olycksbarn**, utgiven **1862**, berättar **Jean Valjean**s försoning mellan barmhärtighet och en obeveklig lag. Hugo gör barrikaderna **1832** till tecknet för kampen om människovärdet."
         }
       ]
     }

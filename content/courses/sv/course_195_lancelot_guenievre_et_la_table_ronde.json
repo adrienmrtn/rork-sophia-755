@@ -1,99 +1,99 @@
 {
   "id": "course_195_lancelot_guenievre_et_la_table_ronde",
   "title": "Lancelot, Guinevere och det runda bordet",
-  "subtitle": "Camelot och dess fall",
+  "subtitle": "Camelot och fallet",
   "subject": "mythologie",
   "subcategory": "Other mythologies",
-  "description": "Arthur, Lancelot, Guinevere: västra medeltidens största legend. Ett ridderlighetsideal förstört av förbjuden kärlek.",
+  "description": "Arthur, Lancelot, Guinevere: den västerländska medeltidens stora legend. Ett riddarideal som krossas av en förbjuden kärlek.",
   "hero": {
     "image": "lancelot_guenievre_et_la_table_ronde",
     "ratio": "16:9",
-    "hook": "Den bästa riddaren i världen älskar kungens fru. Camelot kommer inte att återhämta sig."
+    "hook": "Världens bäste riddare älskar kungens hustru. Camelot hämtar sig aldrig."
   },
   "sections": [
     {
       "id": "course_195_lancelot_guenievre_et_la_table_ronde_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Legenden om kung **Arthur** och hans riddare av **Runda bordet** är den stora mytologiska cykeln under den västerländska medeltiden. Vi kallar det **Material från Bretagne**: en blandning av vag historia, keltisk folklore och kristen moral."
+          "text": "Legenden om kung **Arthur** och riddarna av det **runda bordet** är den stora mytcykeln i det västerländska medeltida Europa. Den kallas **Britanniens materia**: en blandning av suddig historia, keltisk folktro och kristen moral."
         },
         {
           "type": "paragraph",
-          "text": "I hjärtat av berättelsen, en mycket mänsklig tragedi: den förbjudna kärleken mellan **Lancelot**, den bästa riddaren, och drottning **Guinevere**, Arthurs fru. Denna kärlek, hyllad som perfektion, blir giftet som slår ner **Camelot**."
+          "text": "I hjärtat av berättelsen sitter en mycket mänsklig tragedi: den förbjudna kärleken mellan **Lancelot**, den bäste riddaren, och drottning **Guinevere**, Arthurs hustru. Kärleken, hyllad som ett fulländat ideal, blir giftet som fäller **Camelot**."
         }
       ]
     },
     {
       "id": "course_195_lancelot_guenievre_et_la_table_ronde_p1",
-      "title": "Vid mytens källor: mellan historia och keltisk folklore",
+      "title": "Myten vid källan: mellan historia och keltisk folktro",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ingen enskild författare. Mellan 600- och 1400-talen ackumuleras berättelser. Bakom Arthur ser vi en bretonsk krigsherre, kanske vid namn **Arturus**, som skulle ha gjort motstånd mot sachsarna efter romarnas avgång. Runt honom växer **Merlin**, älvorna, de magiska svärden."
+          "text": "Ingen ensam författare. Från 500-talet till 1400-talet hopas berättelserna. Bakom Arthur skymtar en bretonsk krigsledare, kanske kallad **Arturus**, som ska ha stått emot sachsarna efter romarnas avfärd. Runt honom växer **Merlin**, älvorna, de magiska svärden."
         },
         {
           "type": "image",
           "asset": "king_arthur_excalibur_sword_stone_medieval",
           "ratio": "4:3",
-          "caption": "Arthur drar svärdet från klippan: den rättmätige kungens tecken."
+          "caption": "Arthur drar svärdet ur stenen: tecknet på den rättmätige kungen"
         },
         {
           "type": "funFact",
-          "text": "Ett \"Round Table\" från 1200-talet hänger fortfarande i Winchester Castle, England. Henrik VIII lät måla den för att knyta sig till Arthur."
+          "text": "Ett „runt bord” från 1200-talet hänger fortfarande på slottet Winchester i England. Henrik VIII lät måla det för att knyta sig till Arthur."
         },
         {
           "type": "paragraph",
-          "text": "Under [[svärdets prövning]] kan bara den sanne kungen dra **Excalibur** från stenen eller städet. Arthur, krönt i Camelot, grundade **Runt bord**. Dess cirkulära form avskaffar hierarkin: runt den är varje riddare lika med sin nästa, inklusive kungen."
+          "text": "Vid [[svärdets prövning]] kan bara den sanne kungen dra **Excalibur** ur stenen eller städet. Krönt i Camelot grundar Arthur det **runda bordet**. Den runda formen tar bort rangordningen: runt det är varje riddare jämlik med grannen, kungen med."
         }
       ]
     },
     {
       "id": "course_195_lancelot_guenievre_et_la_table_ronde_p2",
-      "title": "Jakten på gralen och andlig mutation",
+      "title": "Jakten på gralen och det andliga skiftet",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Lite i taget ger striderna plats för en andlig strävan: **Heliga Graal**. En magisk maträtt i gamla keltiska texter, den blev Kristi kalk på 1100-talet. Inre renhet betyder lika mycket som styrka."
+          "text": "Sakta ger striderna plats för en andlig jakt: den **heliga gralen**. Ett magiskt fat i de gamla keltiska texterna blir på 1100-talet Kristi kalk. Den inre renheten räknas lika mycket som styrkan."
         },
         {
           "type": "image",
           "asset": "holy_grail_knights_round_table_medieval_painting",
           "ratio": "4:3",
-          "caption": "Jakten på gralen förvandlar det runda bordet till ett andligt äventyr."
+          "caption": "Jakten på gralen gör det runda bordet till ett andligt äventyr"
         },
         {
           "type": "funFact",
-          "text": "Ordet \"graal\" kom från forntida franska och betecknade ursprungligen en stor maträtt för att servera kött, inte ett dyrbart snitt."
+          "text": "Ordet „gral” kom från forntida franska och betydde först ett brett fat för kött, inte en dyrbar bägare."
         },
         {
           "type": "paragraph",
-          "text": "Vid bordet väntar [[Belägring Farlig]] på den förutbestämda riddaren. Endast **Gilead**, **Percival** och **Bohort** når gralen. **Lancelot av sjön**, \"världens bästa riddare\", misslyckas: hans kärlek till Guinevere gör honom ovärdig den gudomliga visionen."
+          "text": "Vid bordet väntar [[Belägring Farlig]] på den förutbestämda riddaren. Bara **Galahad**, **Perceval** och **Bors** når gralen. **Lancelot du Lac**, „världens bäste riddare”, misslyckas: kärleken till Guinevere gör honom ovärdig den gudomliga synen."
         }
       ]
     },
     {
       "id": "course_195_lancelot_guenievre_et_la_table_ronde_p3",
-      "title": "Guineveres svek och ordningens sönderfall",
+      "title": "Guineveres svek och ordningens spricka",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kärleken till Lancelot och Guinevere förkroppsligar [[Medeltida hövisk kärlek (fin'amor)]]: riddaren ställer sig i sin frus tjänst. Men Guinevere är överherrens hustru. Sveket är inte bara äktenskapligt: ​​det är feodalt."
+          "text": "Lancelots och Guineveres kärlek bär [[Medeltida hövisk kärlek (fin'amor)]]: riddaren ställer sig i damens tjänst. Men Guinevere är länsherrehustru. Sveket är inte bara äktenskapligt. Det är feodalt."
         },
         {
           "type": "image",
           "asset": "lancelot_guinevere_medieval_romance_painting",
           "ratio": "4:3",
-          "caption": "Lancelot och Guinevere: kärleken som knäcker Camelot."
+          "caption": "Lancelot och Guinevere: kärleken som krossar Camelot"
         },
         {
           "type": "paragraph",
-          "text": "**Mordred**, Arthurs incestuösa brorson eller son beroende på version, avslöjar affären. Arthur dömer Guinevere till bålet. Lancelot räddar henne, men dödar **Gawain**s bröder i närstriden. Runda bordet slits isär: inbördeskrig, slutet på utopin."
+          "text": "**Mordred**, brorson eller incestson till Arthur beroende på version, avslöjar förhållandet. Arthur dömer Guinevere till bålet. Lancelot räddar henne, men dödar i tumultet **Gawains** bröder. Det runda bordet spricker: inbördeskrig, slut på utopin."
         }
       ]
     },
@@ -104,15 +104,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I **Camlann** dödar Arthur Mordred och får ett dödligt sår. Excalibur återlämnas till Lady of the Lake. Guinevere hamnar i ett kloster, Lancelot en eremit. Arthur, sägs det, åker till ön **Avalon**."
+          "text": "Vid **Camlann** dödar Arthur Mordred och får ett dödligt sår. Excalibur lämnas tillbaka till sjöns dam. Guinevere slutar i kloster, Lancelot som eremit. Arthur, sägs det, far mot ön **Avalon**."
         },
         {
           "type": "paragraph",
-          "text": "Han blir [[Rex Quondam Rexque Futurus]], \"tidigare kung, framtida kung\": den sovande kungen som kommer att återvända vid den värsta tiden. Camelot dör i legenden, och så här överlever den."
+          "text": "Han blir [[Rex Quondam Rexque Futurus]], „kung förr, kung framöver”: den sovande kungen som ska återvända i värsta stund. Camelot dör som legend, och just så överlever den."
         },
         {
           "type": "takeaway",
-          "text": "**Lancelot** kärlek till **Guinevere** förstör Camelot. Jakten på **Graal** lyckas bara för de rena: Lancelot, den bästa riddaren, förblir utanför den heliga tröskeln."
+          "text": "**Lancelots** kärlek till **Guinevere** förstör Camelot. Jakten på **gralen** lyckas bara för de rena. Lancelot, bäste riddaren, stannar utanför den heliga tröskeln."
         }
       ]
     }

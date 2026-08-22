@@ -1,28 +1,28 @@
 {
   "id": "course_189_dionysos_le_dieu_du_vin_et_de_l_exces",
-  "title": "Dionysos: guden för vin och överflöd",
+  "title": "Dionysos: vinets och överskottets gud",
   "subtitle": "Vin, teater, överträdelse",
   "subject": "mythologie",
   "subcategory": "Other mythologies",
-  "description": "Vinets och extasens gud, Dionysos är också den grekiska teaterns beskyddare. Född två gånger avskaffar han gränserna mellan ordning och kaos.",
+  "description": "Vinets och extasens gud är också den grekiska teaterns beskyddare. Dionysos föddes två gånger och suddar ut gränsen mellan ordning och kaos.",
   "hero": {
     "image": "dionysos_le_dieu_du_vin",
     "ratio": "16:9",
-    "hook": "Vinets gud ger inte bara berusning: han uppfinner också teater."
+    "hook": "Vinets gud ger inte bara rus. Han uppfann också teatern."
   },
   "sections": [
     {
       "id": "course_189_dionysos_le_dieu_du_vin_et_de_l_exces_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Dionysos** är den mest paradoxala grekiska guden. Vinets gud, vinstocken och berusningen, han är framför allt metamorfosens gud. Till skillnad från olympierna frusna på deras topp, vandrar han, följt av en bullrig procession."
+          "text": "**Dionysos** är den mest motsägelsefulla av de grekiska gudarna. Han är gud för vin, vinstock och rus, men framför allt för förvandling. Olympierna sitter stilla på toppen. Han vandrar, följd av ett larmande följe."
         },
         {
           "type": "paragraph",
-          "text": "Den avskaffar gränserna mellan gudomligt och mänskligt, ordning och kaos, liv och död. Från dess festivaler kommer [[Teater]] att födas, ett av Greklands största arv."
+          "text": "Han river gränserna mellan gudomligt och mänskligt, ordning och kaos, liv och död. Ur hans fester föddes [[Teater]], ett av Greklands största arv."
         }
       ]
     },
@@ -33,67 +33,67 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dionysos är född ur en tragedi. **Zeus**, gudarnas kung, älskar den dödliga [[Semele]], prinsessan av Thebe. **Hera**, Zeus svartsjuka fru, pressar henne att kräva att hennes älskare ska visa sig i sin sanna gudomliga gestalt."
+          "text": "Dionysos föds ur ett drama. **Zeus**, gudarnas kung, älskar den dödliga [[Semele]], prinsessa i Thebe. **Hera**, Zeus svartsjuka hustru, driver henne att kräva att älskaren visar sig i sin sanna gudomliga gestalt."
         },
         {
           "type": "image",
           "asset": "dionysus_greek_god_wine_grapes_painting",
           "ratio": "4:3",
-          "caption": "Dionysos, gud för vin, extas och metamorfos."
+          "caption": "Dionysos, gud för vin, extas och förvandling"
         },
         {
           "type": "paragraph",
-          "text": "Zeus följer. Blixten dödar Semele. För att rädda barnet lägger Zeus det i sitt eget lår fram till födseln. Dionysos föddes därför \"två gånger\", därav låten tillägnad honom: [[Dithyramb]]."
+          "text": "Zeus gör som hon ber. Blixten dödar Semele. För att rädda barnet lägger Zeus det i sitt eget lår tills det föds. Dionysos är alltså „två gånger född”, och därav sången till hans ära: [[Dithyramb]]."
         },
         {
           "type": "funFact",
-          "text": "Denna myt förklarar varför Dionysos är både dödlig och gudomlig: han har en mänsklig mor och en olympisk far som \"bar\" honom."
+          "text": "Myten förklarar varför Dionysos är både dödlig och gudomlig: han har en mänsklig mor och en olympisk far som „bar” honom."
         }
       ]
     },
     {
       "id": "course_189_dionysos_le_dieu_du_vin_et_de_l_exces_p2",
-      "title": "Maenadernas extas",
+      "title": "Mainadernas extas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Som vuxen reser Dionysos jorden runt för att sprida sin kult. Hans anhängare, särskilt kvinnor som kallas **Maenades** eller Bacchantes, lämnar staden för bergen. Där framkallar dans, musik och vin en trance: att vara \"besatt av guden\"."
+          "text": "Som vuxen vandrar Dionysos världen runt och sprider sin kult. Hans trogna, mest kvinnor kallade **mainader** eller bakkanter, lämnar staden för bergen. Där skapar dans, musik och vin en trans: att bli „besatt av guden”."
         },
         {
           "type": "paragraph",
-          "text": "Dessa riter, kallade [[Mysterier]], störtar den sociala ordningen. För en natt viker förnuftet. Guden lovar befrielse, men också galenskap för dem som vägrar det."
+          "text": "Riterna, kallade [[Mysterier]], vänder upp och ner på samhällsordningen. En natt ger förnuftet vika. Guden lovar befrielse, men också galenskap för den som vägrar honom."
         },
         {
           "type": "image",
           "asset": "maenads_bacchantes_frenzy_dance_ancient_vase",
           "ratio": "4:3",
-          "caption": "Bacchantes i trance: kulten som störtar stadens ordning."
+          "caption": "Bakkanter i trans: kulten som vänder stadsordningen"
         },
         {
           "type": "funFact",
-          "text": "En dag fångar pirater Dionysos för att sälja honom. Han ändrar årorna till ormar och får vinrankor att växa på masten. Skräckslagna hoppar männen i havet och blir delfiner."
+          "text": "Pirater fångar en dag Dionysos för att sälja honom. Han förvandlar årorna till ormar och låter vinrankor växa på masten. Skräckslagna hoppar männen i havet och blir delfiner."
         }
       ]
     },
     {
       "id": "course_189_dionysos_le_dieu_du_vin_et_de_l_exces_p3",
-      "title": "Från kaos kommer teater",
+      "title": "Ur kaoset föds teatern",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I Aten blir denna överflödsgud beskyddare av en medborgerlig konst: teatern. På 600-talet f.Kr. anordnade **Stora Dionysia** dramatiska tävlingar. Allt utgår från dithyramb, en körsång till gudens ära."
+          "text": "I Aten blir den här överskottets gud beskyddare för en medborgerlig konst: teatern. På **500-talet** f.Kr. ordnar **de stora dionysierna** dramatävlingar. Allt utgår från dityramben, en körsång till gudens ära."
         },
         {
           "type": "image",
           "asset": "dionysus_greek_god_wine_theater",
           "ratio": "4:3",
-          "caption": "The Great Dionysia: tillbedjan blir ett stadsspektakel."
+          "caption": "De stora dionysierna: kulten blir stadens skådespel"
         },
         {
           "type": "paragraph",
-          "text": "När en sångare bryter sig från refrängen för att svara, föds skådespelaren. Tragedin blir en plats där staden ser på sina rädslor och konflikter utan att sjunka in i verkligt kaos. Det är [[katarsis]]: rensa dig själv från känslor genom att titta på dem."
+          "text": "När en sångare kliver ur kören och svarar, är skådespelaren född. Tragedin blir den plats där staden ser sina rädslor och konflikter utan att störta ner i verkligt kaos. Det är [[katarsis]]: att rensa känslorna genom att betrakta dem."
         },
         {
           "type": "timeline",
@@ -101,17 +101,17 @@
             {
               "date": "Födelse",
               "title": "Dubbel födelse",
-              "detail": "Semele dör; Zeus fullbordar graviditeten."
+              "detail": "Semele dör. Zeus bär graviditeten till slut."
             },
             {
-              "date": "Dyrkan",
-              "title": "Maenadernas riter",
-              "detail": "Extas, vin, omvänd ordning."
+              "date": "Kult",
+              "title": "Mainadernas riter",
+              "detail": "Extas, vin, omvänd samhällsordning."
             },
             {
-              "date": "Bor. av. AD",
-              "title": "Stora Dionysia",
-              "detail": "Teaterns födelse i Aten."
+              "date": "500-talet f.Kr.",
+              "title": "De stora dionysierna",
+              "detail": "Teatern föds i Aten."
             }
           ]
         }
@@ -119,20 +119,20 @@
     },
     {
       "id": "course_189_dionysos_le_dieu_du_vin_et_de_l_exces_p4",
-      "title": "Dionysos vänd mot Apollo",
+      "title": "Dionysos mot Apollon",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "På 1800-talet motsatte sig filosofen **Nietzsche** två krafter: [[Apollo]], måttets och klarhetens gud, och Dionysos, rusets kraft och det kreativa kaoset. Denna spänning, [[Apollonisk och dionysisk (Nietzsche)]], förklarar för honom den grekiska tragedins storhet."
+          "text": "På **1800-talet** ställer filosofen **Nietzsche** två krafter mot varandra: [[Apollo]], måttets och klarhetens gud, och Dionysos, rusets och det skapande kaosets kraft. Den spänningen, [[Apollonisk och dionysisk (Nietzsche)]], förklarar för honom den grekiska tragedins storhet."
         },
         {
           "type": "paragraph",
-          "text": "Dionysos förblir alltså guden som påminner om en enkel sanning: utan lite oordning finns det ingen konst, inget firande, inget påhitt."
+          "text": "Dionysos förblir guden som påminner om en enkel sanning: utan lite oordning finns varken konst, fest eller påhitt."
         },
         {
           "type": "takeaway",
-          "text": "**Dionysos**, två gånger född, vinets och extasens gud, inspirerar de riter som föder den grekiska **teater**. Han förkroppsligar den fruktbara spänningen mellan måttlighet och överdrift."
+          "text": "**Dionysos**, två gånger född, vinets och extasens gud, ger riterna som föder den grekiska **teatern**. Han bär den fruktbara spänningen mellan måtta och överskott."
         }
       ]
     }
