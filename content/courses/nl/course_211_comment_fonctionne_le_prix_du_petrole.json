@@ -1,14 +1,14 @@
 {
   "id": "course_211_comment_fonctionne_le_prix_du_petrole",
   "title": "Hoe werkt de olieprijs?",
-  "subtitle": "Het lef van de wereldeconomie",
+  "subtitle": "De zenuw van de wereldeconomie",
   "subject": "comprendreLeMonde",
   "subcategory": "Economy & society",
-  "description": "De olieprijs wordt niet bepaald door één enkele verkoper. Het komt voort uit een **touwtrekwedstrijd** tussen producerende landen, financiële markten en plotselinge crises, soms tot op het punt van absurditeit.",
+  "description": "De olieprijs wordt niet door één verkoper vastgelegd. Hij ontstaat uit een **krachtmeting** tussen producerende landen, financiële markten en plotse crises, soms tot in het absurde.",
   "hero": {
     "image": "comment_fonctionne_le_prix_du_petrole",
     "ratio": "16:9",
-    "hook": "In 2020 betaalden olieverkopers hun kopers om ervan af te komen. Dit is waarom."
+    "hook": "In 2020 betaalden olieverkopers hun kopers om de olie kwijt te raken. Hier zie je waarom."
   },
   "sections": [
     {
@@ -18,78 +18,78 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Olie wordt soms het ‘bloed van de economie’ genoemd. De prijs ervan beïnvloedt de inflatie, de prijs van benzine en zelfs de stabiliteit van bepaalde landen. Niemand bepaalt deze prijs echter met een postzegel."
+          "text": "Olie heet soms het „bloed van de economie”. Haar prijs beïnvloedt de inflatie, de benzineprijs, en zelfs de stabiliteit van sommige landen. Toch zet niemand die prijs met één stempel vast."
         },
         {
           "type": "paragraph",
-          "text": "Het komt voort uit een ontmoeting tussen drie krachten: de landen die de olie winnen, de financiële markten die de olie verhandelen voordat deze zelfs maar van de grond komt, en de crises die iedereen in paniek brengen. Ga naar de woestijnen van Arabië, de vlakten van Texas en de schermen van Chicago."
+          "text": "Hij ontstaat uit de ontmoeting van drie krachten: de landen die olie winnen, de financiële markten die haar verhandelen nog voor ze uit de grond komt, en de crises die iedereen in paniek brengen. Richting de woestijnen van Arabië, de vlakten van Texas, en de schermen van Chicago."
         }
       ]
     },
     {
       "id": "course_211_comment_fonctionne_le_prix_du_petrole_p1",
-      "title": "OPEC versus Amerikaanse schalie: de strijd om het aanbod",
+      "title": "OPEC tegen Amerikaanse schalie: de strijd om het aanbod",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "De oliemarkt heeft een bijzonderheid: op de korte termijn daalt de vraag nauwelijks als de prijzen stijgen. Auto's, fabrieken en vliegtuigen kunnen de energie niet van de ene op de andere dag veranderen. Economen noemen dit de **inelasticiteit** van de vraag."
+          "text": "De oliemarkt heeft een bijzonderheid: op korte termijn daalt de vraag bijna niet als de prijzen stijgen. Auto's, fabrieken en vliegtuigen kunnen niet van de ene dag op de andere van energie wisselen. Economen noemen dat de **inelasticiteit** van de vraag."
         },
         {
           "type": "paragraph",
-          "text": "Sinds 1960 heeft een groep producerende landen zich georganiseerd om deze markt te beïnvloeden: de [[OPEC]]. Door het eens te worden over productiequota proberen de leden hoge prijzen te handhaven. Sinds 2016 is Rusland toegetreden tot de alliantie en vormt het OPEC+. Samen beheersen deze landen ongeveer 40% van de olie in de wereld."
+          "text": "Sinds 1960 heeft een groep producerende landen zich georganiseerd om op die markt te wegen: de [[OPEC]]. Door afspraken over productiequota proberen de leden hoge prijzen te houden. Sinds 2016 sloot Rusland zich bij de alliantie aan, en zo ontstond OPEC+. Samen controleren die landen ongeveer 40% van de wereldolie."
         },
         {
           "type": "funFact",
-          "text": "Eén vat olie, 159 liter, bevat evenveel energie als de handenarbeid van één persoon gedurende ongeveer een jaar."
+          "text": "Eén vat olie, 159 liter, bevat evenveel energie als het handwerk van één persoon gedurende ongeveer een jaar."
         },
         {
           "type": "paragraph",
-          "text": "Maar deze macht is opgeschud. Dankzij een techniek die hydraulisch breken wordt genoemd, zijn de Verenigde Staten in tien jaar tijd de grootste olieproducent ter wereld geworden, waarmee ze Saoedi-Arabië hebben ingehaald. Dit nieuwe aanbod, dat sneller kan worden aangepast, heeft de markt concurrerender gemaakt en voor de OPEC+ moeilijker te controleren."
+          "text": "Maar die macht werd door elkaar geschud. Dankzij een techniek die hydraulisch breken heet, werden de Verenigde Staten in tien jaar de grootste olieproducent ter wereld, voor Saudi-Arabië. Dat nieuwe aanbod, sneller aanpasbaar, maakte de markt concurrerender en lastiger te controleren voor OPEC+."
         }
       ]
     },
     {
       "id": "course_211_comment_fonctionne_le_prix_du_petrole_p2",
-      "title": "‘Papieren’ olie: wanneer de financiële sector erbij betrokken raakt",
+      "title": "De „papieren” olie: wanneer de financiële wereld zich ermee bemoeit",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Naast de daadwerkelijke vaten die per schip of pijpleiding worden aangevoerd, wordt olie ook op de financiële markten verhandeld. De meeste transacties verlopen via een termijnmarkt: we kopen vandaag een vat dat pas over één, drie of zes maanden wordt geleverd."
+          "text": "Naast de echte vaten die per schip of pijpleiding worden geleverd, wordt olie ook verhandeld op de financiële markten. De meeste transacties lopen via een termijnmarkt: je koopt vandaag een vat dat pas over één, drie of zes maanden wordt geleverd."
         },
         {
           "type": "image",
           "asset": "oil_futures_trading_floor_markets",
           "ratio": "16:9",
-          "caption": "Olie wordt op de financiële markten verhandeld lang voordat deze wordt geleverd."
+          "caption": "Olie wordt op de financiële markten verhandeld lang voor ze wordt geleverd"
         },
         {
           "type": "paragraph",
-          "text": "Banken en hedgefondsen kopen en verkopen deze contracten zonder ook maar één vat aan te raken: ze wedden eenvoudigweg op de vraag of de prijzen zullen stijgen of dalen. Dit brengt geld op de markt, maar maakt de prijzen ook nerveuzer. In de wereld gelden twee prijzen als referentie: [[Brent]], olie uit de Noordzee, en WTI, olie uit Texas. De kloof tussen de twee weerspiegelt verschillen in kwaliteit en transport."
+          "text": "Banken en hedgefondsen kopen en verkopen die contracten zonder ooit een vat te willen aanraken: ze wedden alleen op stijging of daling van de prijzen. Dat brengt geld naar de markt, maar maakt de prijzen ook zenuwachtiger. Twee prijzen dienen als wereldreferentie: de [[Brent]], olie uit de Noordzee, en de WTI, olie uit Texas. Het verschil tussen beide weerspiegelt kwaliteit en transport."
         }
       ]
     },
     {
       "id": "course_211_comment_fonctionne_le_prix_du_petrole_p3",
-      "title": "Prijzen storten in... of exploderen",
+      "title": "Prijzen die instorten... of exploderen",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "De oliemarkt opereert in brute cycli. Als de prijzen langdurig stijgen, investeren producenten in dure deposito’s, waardoor er uiteindelijk een overaanbod ontstaat. Wanneer de prijzen laag blijven, gebeurt het tegenovergestelde: we onderzoeken minder, wat ons voorbereidt op het volgende tekort."
+          "text": "De oliemarkt werkt in brute cycli. Als de prijzen lang stijgen, investeren producenten in dure velden, wat later een overaanbod schept. Als de prijzen laag blijven, gebeurt het omgekeerde: er wordt minder gezocht, en dat bereidt het volgende tekort voor."
         },
         {
           "type": "paragraph",
-          "text": "De COVID-19-crisis heeft dit op spectaculaire wijze aangetoond. In april 2020 kwam de wereldeconomie plotseling tot stilstand: niemand vloog of reed, maar de bronnen bleven produceren. De opslagtanks waren tot de rand gevuld. De prijs van WTI daalde vervolgens tot minus $37: verkopers betaalden hun kopers om hun aandelen op te ruimen."
+          "text": "De COVID-19-crisis toonde dat spectaculair. In april 2020 stopte de wereldeconomie in één klap: niemand nam nog het vliegtuig of de auto, maar de putten bleven produceren. De opslagtanks liepen tot de rand vol. De WTI-prijs viel toen tot min 37 dollar: verkopers betaalden hun kopers om hun voorraden weg te halen."
         },
         {
           "type": "paragraph",
-          "text": "Omgekeerd deed de Russische invasie van Oekraïne in 2022 de vrees voor een tekort rijzen: Rusland was de op één na grootste exporteur ter wereld en Brent overschreed in een paar weken tijd de $130. Olie blijft daarom een ​​nerveuze barometer van de mondiale spanningen."
+          "text": "Omgekeerd deed de Russische invasie van Oekraïne in 2022 angst voor een tekort ontstaan: Rusland is de tweede exporteur ter wereld, en de Brent ging in enkele weken over 130 dollar. Olie blijft dus een zenuwachtige barometer van wereldspanningen."
         },
         {
           "type": "funFact",
-          "text": "Er is ongeveer 7 liter olie nodig om één smartphone te maken, tussen het winnen van materialen, plastic onderdelen en transport."
+          "text": "Er is ongeveer 7 liter olie nodig om één smartphone te maken, tussen de winning van materialen, de plastic onderdelen en het transport."
         }
       ]
     },
@@ -100,15 +100,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Op de lange termijn staat olie voor een nieuwe uitdaging: de transitie naar schone energie. Als elektrische auto’s de mondiale vraag verminderen, zouden de producerende landen een prijzenoorlog kunnen aangaan om hun reserves te verkopen voordat ze hun waarde verliezen."
+          "text": "Op lange termijn krijgt olie een nieuwe uitdaging: de overstap naar schone energie. Als elektrische auto's de wereldvraag verlagen, kunnen producerende landen een prijzenoorlog starten om hun reserves te verkopen voor die hun waarde verliezen."
         },
         {
           "type": "paragraph",
-          "text": "Er is echter een paradox die de markt bedreigt: als investeerders om klimaatredenen nieuwe olieprojecten laten varen, zou het aanbod sneller kunnen dalen dan de vraag, waardoor nieuwe prijsstijgingen zouden ontstaan. Olie zal niet plotseling verdwijnen: het blijft essentieel voor plastics, meststoffen en zwaar transport zoals de luchtvaart."
+          "text": "Toch dreigt een paradox: omdat investeerders nieuwe olieprojecten laten liggen om klimaatredenen, kan het aanbod sneller dalen dan de vraag, en nieuwe prijsstijgingen uitlokken. Olie verdwijnt niet in één klap: ze blijft onmisbaar voor plastics, meststoffen, en zwaar transport zoals de luchtvaart."
         },
         {
           "type": "takeaway",
-          "text": "De olieprijs is het resultaat van een impasse tussen de OPEC+, de Amerikaanse schalieproductie en de speculatieve financiële markten. Resultaat: prijzen die bij de geringste geopolitieke schok kunnen instorten of exploderen."
+          "text": "De olieprijs komt uit een krachtmeting tussen OPEC+, de Amerikaanse schalieproductie en speculatieve financiële markten. Gevolg: koersen die bij de kleinste geopolitieke schok kunnen instorten of exploderen."
         }
       ]
     }
