@@ -1,14 +1,14 @@
 {
   "id": "course_198_sindbad_le_marin",
-  "title": "denizci Sindbad",
+  "title": "Denizci Sinbad",
   "subtitle": "Yedi yolculuk",
   "subject": "mythologie",
   "subcategory": "Other mythologies",
-  "description": "Denizci Sinbad: Yedi Yolculuk, Canavarlar ve Hazineler. Muhteşemin arkasında, İslam'ın altın çağının tüccar-maceracısının portresi.",
+  "description": "Denizci Sinbad: yedi yolculuk, canavarlar ve hazineler. Masalsı perdenin ardından İslam'ın altın çağının tüccar-serüvencisinin portresi.",
   "hero": {
     "image": "sindbad_le_marin",
     "ratio": "16:9",
-    "hook": "Yedi kez zengin ya da meraklı ayrılır. Yedi defa deniz onu kırar. Yedi kez daha da zengin olarak geri döner."
+    "hook": "Yedi kez zengin veya meraklı yola çıkar. Yedi kez deniz onu kırar. Yedi kez daha zengin döner."
   },
   "sections": [
     {
@@ -18,97 +18,97 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Denizci Sinbad**, **Arap Geceleri**'ye aittir, ancak koleksiyonun eski Pers çekirdeğine ait değildir. Yedi yolculuktan oluşan döngüsü daha sonra, 15. yüzyıl civarında Mısır'da gerçekleşti."
+          "text": "**Denizci Sinbad**, **Binbir Gece Masalları**na aittir ama derlemenin eski Pers çekirdeğine değil. Yedi yolculuk döngüsü daha sonra, Mısır'da, 15. yüzyıl civarında yerleşir."
         },
         {
           "type": "paragraph",
-          "text": "O, **İslami Altın Çağı**'nin gezgin-tüccarını temsil ediyor: dindarlık, açgözlülük, cesaret ve zengin olduktan sonra yerinde duramama. Canavarların arkasında, talihin yükselişi ve düşüşüyle ​​ilgili bir alegori okuyoruz."
+          "text": "**İslam'ın altın çağı**nın gezgin-tüccarını cisimleştirir: dindarlık, hırs, cesaret ve bir kez zengin olunca yerinde duramamak. Canavarların ardında yükselen ve düşen talihin bir alegorisi okunur."
         }
       ]
     },
     {
       "id": "course_198_sindbad_le_marin_p1",
-      "title": "Maceranın döngüsel yapısı",
+      "title": "Serüvenin döngüsel yapısı",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hikaye Bağdat'ta açılıyor. Artık yaşlı ve zengin olan **Denizci Sinbad**, Sindbad (bazen Hindbad) adlı bir kapıcıya yaşadığı sıkıntıları anlatıyor. Sınıf karşıtlığı hemen ortaya çıkıyor."
+          "text": "Anlatı Bağdat'ta açılır. Artık yaşlı ve varlıklı **Denizci Sinbad**, sınavlarını yine Sinbad (bazen Hindbad) adlı bir hamala anlatır. Sınıf karşıtlığı hemen bellidir."
         },
         {
           "type": "image",
           "asset": "baghdad_medieval_islamic_golden_age_trade",
           "ratio": "4:3",
-          "caption": "Bağdat, Sinbad'ın yolculuklarının kalkış ve dönüş noktasıdır."
+          "caption": "Bağdat, Sinbad'ın yolculuklarının çıkış ve dönüş noktası"
         },
         {
           "type": "paragraph",
-          "text": "Her yolculuk aynı mekanizmayı takip eder: Hareketsiz yaşamın yorgunluğu, [[Basra]] limanından ayrılış, gemi kazası, bilinmeyen bir ülkede hayatta kalma, hazinelerle dolu dönüş. [[İslami kozmoloji]]'de anlam yüklü olan yedi rakamı, seriye basiretsizlikten bilgeliğe doğru bir başlangıç ​​boyutu kazandırıyor."
+          "text": "Her yolculuk aynı mekaniği izler: yerleşik hayattan bıkkınlık, [[Basra]] limanından kalkış, gemi kazası, bilinmeyen bir toprakta hayatta kalış, hazinelerle dönüş. [[İslami kozmoloji]] içinde anlam yüklü yedi rakamı diziye bir inisiyasyon boyutu verir: tedbirsizlikten bilgeliğe."
         }
       ]
     },
     {
       "id": "course_198_sindbad_le_marin_p2",
-      "title": "Efsane ve gerçeklik arasında fantastik bir hayvan hikayesi",
+      "title": "Mit ile gerçek arasında fantastik bir hayvanlar kitabı",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kanat açıklığı güneşi gizleyen bir kuş olan **Kaynak** (veya Rokh), dünyanın hayal gücüne damgasını vurdu. Doğu Afrika kıyılarında Arap seyyahların hikâyelerinin yankılarını görüyoruz."
+          "text": "Kanat açıklığı güneşi örten kuş **Rok** (veya Rokh), dünya imgelemini etkilemiştir. Doğu Afrika kıyılarındaki Arap gezgin anlatılarının yankısı görülür."
         },
         {
           "type": "image",
           "asset": "sinbad_roc_giant_bird_illustration",
           "ratio": "4:3",
-          "caption": "Sindbad'ın seyahatlerindeki dev kuş Roc."
+          "caption": "Rok, Sinbad yolculuklarının dev kuşu"
         },
         {
           "type": "funFact",
-          "text": "Roc muhtemelen 1000 yılı civarında Madagaskar'da ortadan kaybolan bir fil kuşu olan **Aepyornis**'den ilham almıştır. Yumurtaları bir tavuk yumurtasının 150 katı kadar hacimdeydi."
+          "text": "Rok büyük olasılıkla Madagaskar'ın yaklaşık yıl 1000'de yok olan fil-kuşu **Aepyornis**'ten esinlenir. Yumurtaları bir tavuk yumurtasının hacminin 150 katına varırdı."
         },
         {
           "type": "paragraph",
-          "text": "Sindbad ayrıca sırtına yapışan **Denizin Yaşlı Adamı** ve aldatıcı yer olan **kalem adası** ile karşı karşıyadır. Mücevherleri yapıştırmak için etin atıldığı **elmas vadisi**, Kadimler arasında zaten dolaşıyor. Yüzyılların harika çökeltileri [[Ortaçağ Arap ticaret yolları]]."
+          "text": "Sinbad sırtına yapışan **Deniz İhtiyarı** ile de karşılaşır, aldatıcı zemin **kaplumbağa ada** ile de. Et atılıp mücevherlerin yapıştığı **elmas vadisi** Antikçağ yazarlarında çoktan dolaşır. Masalsı olan, yüzyıllarca [[Ortaçağ Arap ticaret yolları]] biriktirir."
         }
       ]
     },
     {
       "id": "course_198_sindbad_le_marin_p3",
-      "title": "Arap ticaretinin Altın Çağının aynası",
+      "title": "Arap ticaretinin altın çağının aynası",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ortam tarihidir. 8. ve 9. yüzyıllarda Basra ve Siraflı denizciler Hint Okyanusu'na hakim oldular. Sindbad'ın durakları gerçek yerleri çağrıştırıyor: baharatlar için [[Serendib]] (Seylan), kafur için Güneydoğu Asya, inciler için kıyılar."
+          "text": "Çerçeve tarihseldir. 8. ve 9. yüzyılda Basra ve Siraf denizcileri Hint Okyanusu'na hükmeder. Sinbad'ın durakları gerçek yerleri çağrıştırır: baharat için [[Serendib]] (Seylan), kâfur için Güneydoğu Asya, inci için kıyılar."
         },
         {
           "type": "image",
           "asset": "arab_indian_ocean_trade_routes_medieval_ship",
           "ratio": "4:3",
-          "caption": "Hint Okyanusu rotalarında Arap gemileri."
+          "caption": "Hint Okyanusu yollarında Arap gemileri"
         },
         {
           "type": "paragraph",
-          "text": "Sindbad bir savaşçı değil: o bir tüccar-maceracı, ticarete değer veren bir toplumda prestijli bir statüye sahip. Orada musonu, çivilenmek yerine hindistancevizi lifleriyle dikilmiş gemileri görüyoruz. Batı paraleli: [[Marco Polo (Batı paraleli)]], Asya'yı gerçeklerle anlatırken, Sindbad onu harikalar halinde resmediyor."
+          "text": "Sinbad bir savaşçı değildir: ticareti yücelten bir toplumda saygın bir tüccar-serüvencidir. Muson vardır, çivi yerine hindistancevizi lifiyle dikilmiş gemiler vardır. Batılı paralel: Asya'yı olgularla anlatan [[Marco Polo (Batı paraleli)]]; Sinbad ise onu harikalarla boyar."
         }
       ]
     },
     {
       "id": "course_198_sindbad_le_marin_p4",
-      "title": "Evrensel miras: Doğudan Batıya",
+      "title": "Evrensel miras: Doğu'dan Batı'ya",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "18. yüzyılda **Antoine Galland** tarafından çevrilen seyahat, Defoe'dan Jules Verne'e kadar Avrupa [[Macera romanı]] besliyor. Sinema onu sık sık prenseslerin hizmetinde bir korsan haline getiriyor. Hata: Sindbad başlangıçta Bağdatlı bir şehir sakinidir ve inanç ve yaratıcılık sayesinde hayatta kalmıştır."
+          "text": "18. yüzyılda **Antoine Galland** tarafından çevrilen yolculuklar, Defoe'dan Jules Verne'e Avrupa [[macera romanı]] türünü besler. Sinema onu çoğu zaman prenseslere hizmet eden bir korsan yapar. Yanlış: Sinbad her şeyden önce Bağdatlı bir kentlidir; iman ve zekâyla hayatta kalır."
         },
         {
           "type": "funFact",
-          "text": "Sindbad adı, Arap ve Hint dünyalarının kavşağında bulunan “Sindh nehrinin prensi” İndus'u çağrıştırıyor."
+          "text": "Sinbad adı, Arap ve Hint dünyalarının kavşağında, Indus ırmağı “Sindh'in prensi”ni çağrıştırırdı."
         },
         {
           "type": "takeaway",
-          "text": "**Sinbad**, **yedi** döngüsel yolculukta İslam denizciliğinin altın çağını temsil ediyor: Kaya ve elmaslar, Hint Okyanusu'nun efendileri olan Arap tüccarların gerçekliğini maskeliyor."
+          "text": "**Sinbad**, İslam'ın denizcilik altın çağını **yedi** döngüsel yolculukta cisimleştirir: Rok ve elmaslar bir gerçeği örter, Hint Okyanusu'nun efendisi Arap tüccarların gerçeğini."
         }
       ]
     }

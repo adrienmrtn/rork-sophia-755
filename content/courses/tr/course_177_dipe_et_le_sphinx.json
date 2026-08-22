@@ -1,14 +1,14 @@
 {
   "id": "course_177_dipe_et_le_sphinx",
-  "title": "Oedipus ve Sfenks",
-  "subtitle": "Gizem ve körlük",
+  "title": "Oidipus ve Sfenks",
+  "subtitle": "Bilmece ve körlük",
   "subject": "mythologie",
   "subcategory": "Greece: the heroes",
-  "description": "Oedipus, Sfenks'in bilmecesini çözerek Thebes'i kurtarır. Ancak ruhun bu zaferi, en korkunç trajedinin kapısını açar.",
+  "description": "Oidipus, Sfenks'in bilmecesini çözerek Thebai'yi kurtarır. Aklın bu zaferi yine de en korkunç trajedinin kapısını açar.",
   "hero": {
     "image": "oedipe_et_le_sphinx",
     "ratio": "16:9",
-    "hook": "Bir canavar bir bilmece sorar. Oedipus \"İnsan\" diye yanıt verir. Bir şehri kurtarıyor... ve kendi talihsizliğine doğru yürüyor."
+    "hook": "Bir canavar bilmece sorar. Oidipus “İnsan” der. Bir kenti kurtarır ve kendi felaketine yürür."
   },
   "sections": [
     {
@@ -18,95 +18,95 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Oedipus**, babasını öldürüp annesiyle evlenen trajik kahraman olmadan önce her şeyden önce bir kurtarıcıdır. Orta Yunanistan'daki Boeotia şehri **Thebes**'nin önünde, bilmecesini geçemeyen herkesi yok eden bir canavar olan **Sfenks** ile yüzleşir."
+          "text": "Babasını öldürüp annesiyle evlenen trajik kahraman olmadan önce **Oidipus** önce bir kurtarıcıdır. Orta Yunanistan'da Boiotia kenti **Thebai** önünde, bilmecesini çözemeyeni yiyen canavar **Sfenks** ile yüzleşir."
         },
         {
           "type": "paragraph",
-          "text": "Kılıçla değil akılla kazanır. Ancak bu zafer onu, kendisi hakkında bilmediği şeylerle yüzleşmek zorunda kalacağı bir tahta oturtuyor. Efsane, genel olarak insanın bilgisine... ve trajik bir şekilde kişinin kendine dair bilgisizliğine karşı çıkıyor."
+          "text": "Kılıçla değil, akılla kazanır. Ama bu zafer onu, kendisi hakkında bilmediği şeyle yüzleşeceği bir tahta oturtur. Efsane, insanı genel olarak bilmek ile kendini trajik biçimde tanımamak arasındaki karşıtlığı kurar."
         }
       ]
     },
     {
       "id": "course_177_dipe_et_le_sphinx_p1",
-      "title": "Thebes yolunda bir canavar",
+      "title": "Thebai yolunda bir canavar",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sfenks, genellikle **Hera** ile bağlantılı ilahi bir cezadır. Aslan gövdesi, kadın büstü, kuş kanadı, yılanın kuyruğu: Melez bir yaratık. Şehrin yakınına kurulu, yolları kesiyor. Kral **Laios**, bir kavşakta bilinmeyen bir kişi tarafından öldürülerek ortadan kayboldu. Şehrin gerçek bir lideri yok."
+          "text": "Sfenks çoğu zaman **Hera** ile bağlı ilahi bir cezadır. Aslan gövdesi, kadın göğsü, kuş kanatları, yılan kuyruğu: melez bir yaratık. Kentin yakınına yerleşir, yolları keser. Kral **Laios** bir yol ağzında bir yabancı tarafından öldürülmüş, ortadan kaybolmuştur. Kentin gerçek bir başı yoktur."
         },
         {
           "type": "image",
           "asset": "sphinx_greek_mythology_thebes_monster",
           "ratio": "4:3",
-          "caption": "Thebes Sfenksi, ölümcül bir gizemin koruyucusu."
+          "caption": "Thebai Sfenksi, ölümcül bir bilmecenin bekçisi"
         },
         {
           "type": "paragraph",
-          "text": "Yoldan geçen her kişinin yanıt vermesi gerekir. Başarısızlık ölüm demektir. Vekil [[Kreon]] bile başarısız oluyor. Canavar, Oedipus adında bir yabancının gelişine kadar gizemin mantık üzerindeki zaferini temsil ediyor."
+          "text": "Her geçen yanıt vermek zorundadır. Başarısızlık ölüm demektir. Naip [[Kreon]] bile başarısız olur. Canavar, bir yabancı olan Oidipus gelene dek, bilmecenin akıl üzerindeki zaferini cisimleştirir."
         }
       ]
     },
     {
       "id": "course_177_dipe_et_le_sphinx_p2",
-      "title": "“Hangi varlığın dört, iki, sonra üç ayağı var?”",
+      "title": "“Dört, iki, sonra üç ayağı olan varlık hangisidir?”",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Oidipus Korint'ten kaçar. Bir kahin ona babasını öldürüp annesiyle evleneceğini öngördü. Kaderden kaçtığına inanıyor. Thebes yolunda Sfenks sorusunu sorar: Hangi varlığın sabah dört, öğlen iki, akşam üç ayağı vardır?"
+          "text": "Oidipus Korint'ten kaçar. Bir kehanet ona babasını öldürüp annesiyle evleneceğini söylemiştir. Kaderi savuşturduğunu sanır. Thebai yolunda Sfenks sorusunu sorar: hangi varlık sabah dört ayak, öğlen iki, akşam üç ayak üzerindedir?"
         },
         {
           "type": "image",
           "asset": "oedipus_answering_sphinx_ingres_painting",
           "ratio": "4:3",
-          "caption": "Oidipus'un Sfenks'le yüzleşmesi, zekanın zaferi."
+          "caption": "Oidipus Sfenks'in karşısında, zekânın zaferi"
         },
         {
           "type": "funFact",
-          "text": "**Sfenks** kelimesi Yunanca *sfenks*, \"sıkmak\" veya \"boğmak\" kelimesinden gelir. Hem canavarın öldürme şeklini hem de bir gizemin zihni nasıl felç ettiğini gösteriyor."
+          "text": "**Sfenks** sözcüğü Yunanca *sphingein* fiilinden gelir, “sıkmak” ya da “boğmak”. Hem canavarın öldürme biçimini hem de bir bilmecenin zihni felç etme biçimini adlandırır."
         },
         {
           "type": "paragraph",
-          "text": "Oedipus yanıt verir: **\"Adem\"**. Çocukken dört ayak üzerinde emekler; bir yetişkin olarak iki ayak üzerinde yürür; yaşlı, bir bastona yaslanıyor. Yenilen Sfenks kendini kayadan atar. Bu acımasız bir [[geri dönüş]]. Thebes ücretsizdir. Söz verdiği gibi Oedipus, tacını ve dul kraliçe **Jocasta**'nin elini alır."
+          "text": "Oidipus yanıtlar: **“İnsan”**. Çocuk dört ayak üstünde sürünür; yetişkin iki bacakla yürür; yaşlı bir değneğe yaslanır. Yenilen Sfenks kayadan atlar. Sahne sert bir [[olay örgüsü]] üretir. Thebai özgürdür. Söz verildiği gibi Oidipus tacı ve dul kraliçe **Iokaste**'nin elini alır."
         }
       ]
     },
     {
       "id": "course_177_dipe_et_le_sphinx_p3",
-      "title": "Kim olduğun dışında her şeyi bilmek",
+      "title": "Her şeyi bilmek, kim olduğunu bilmemek",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Oedipus hüküm sürüyor. Şehir gelişiyor. Ancak daha sonra bir veba gelir. **Apollon** şunu açıklıyor: Laius'un katili bulunduğunda bela sona erecek. Oedipus, Sfenks'le yüzleşmeden önceki aynı enerjiyle bir soruşturma başlatır."
+          "text": "Oidipus hüküm sürer. Kent gönenir. Ama sonra bir veba vurur. **Apollon** açıklar: felaket, Laios'un katili bulununca duracaktır. Oidipus, bir zamanlar Sfenks karşısındaki aynı enerjiyle bir soruşturma açar."
         },
         {
           "type": "paragraph",
-          "text": "İroni çok acımasız. “İnsan”ı kim tanımladıysa onun kim olduğunu bilmiyor. Halka açık bir [[diyalektik]], yani bir tartışma düellosunu kazandı, ancak kimliği konusunda kör olmaya devam ediyor. **Sofokles**'de, *Oidipus Kralı*'de trajedinin kalbidir."
+          "text": "İroni acımasızdır. “İnsan”ı tanımlayan, kim olduğunu bilmez. Kamuya açık bir [[diyalektik]], bir sav düellosu kazanmıştır ama kimliğine kör kalır. **Sophokles**'te, *Kral Oidipus* oyununda, trajedinin kalbi budur."
         }
       ]
     },
     {
       "id": "course_177_dipe_et_le_sphinx_p4",
-      "title": "Gerçek ve kör gözler",
+      "title": "Gerçek ve oyulan gözler",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Gerçek ortaya çıkar: Oedipus babası Laius'u öldürür ve annesi Jocasta ile evlenir. Jocasta intihar eder. Oedipus'un gözleri oyulur. Kör olduktan sonra nihayet \"görür\". Kızı Antigone'nin desteğiyle dolaşır ve kendisi de gizemin üç bacaklı yaşlı adamı haline gelir."
+          "text": "Gerçek patlar: Oidipus babası Laios'u öldürmüş, annesi Iokaste ile evlenmiştir. Iokaste intihar eder. Oidipus gözlerini oyar. Kör olunca sonunda “görür”. Kızı Antigone'nin desteğiyle dolaşır; bilmecenin üç ayaklı yaşlısı artık kendisidir."
         },
         {
           "type": "funFact",
-          "text": "**Freud**, [[Oedipus kompleksi]]'yi bu efsaneden sonra adlandırır: Oedipus'u bir canavar yapmak için değil, uygarlığın bastırmayı öğrendiği bilinçdışı arzulardan bahsetmek için."
+          "text": "**Freud** [[Oedipus kompleksi]] adını bu efsaneden alır: Oidipus'u canavar yapmak için değil, uygarlığın bastırmayı öğrettiği bilinçdışı arzulardan söz etmek için."
         },
         {
           "type": "paragraph",
-          "text": "Hikaye Batı kültürünün bir direği haline geliyor: parlak zeka, kaçınılmaz kader ve kişinin kendisi hakkındaki gerçeğin korkunç bedeli."
+          "text": "Anlatı Batı kültürünün bir direği olur: parlak bir zekâ, kaçınılmaz bir kader ve insanın kendi gerçeğini öğrenmesinin korkunç bedeli."
         },
         {
           "type": "takeaway",
-          "text": "Oedipus, Sfenks'in bilmecesine \"İnsan\" cevabını vererek Thebes'i kurtarır. Bu zeka onun farkında olmadan kehaneti, yani kendini kandırma efsanesini fark etmesini engellemez."
+          "text": "Oidipus, Sfenks'in bilmecesine “İnsan” diyerek Thebai'yi kurtarır. Bu parlaklık, kehaneti bilmeden gerçekleştirmesini engellemez: kendine körlüğün efsanesi."
         }
       ]
     }

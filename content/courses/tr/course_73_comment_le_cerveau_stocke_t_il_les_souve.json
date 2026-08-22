@@ -1,14 +1,14 @@
 {
   "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve",
-  "title": "Beyin anıları nasıl saklıyor?",
+  "title": "Beyin anıları nasıl saklar ve depolar?",
   "subtitle": "Bellek ve nöronlar",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "Bellek çekmecelerden oluşan bir kitaplık değildir. Birbirini güçlendiren, kendini yeniden inşa eden ve bazen hata yapan nöronlardan oluşan canlı bir ağdır.",
+  "description": "Bellek bir çekmece kütüphanesi değildir. Güçlenen, yeniden kurulan ve bazen yanılan canlı bir nöron ağıdır bu, sürekli.",
   "hero": {
     "image": "comment_le_cerveau_stocke_les_souvenirs",
     "ratio": "16:9",
-    "hook": "Anı bir dosya değildir; beynin yeniden yapmayı öğrendiği bir yoldur."
+    "hook": "Anı bir dosya değildir: beynin yeniden yapmayı öğrendiği bir yoldur."
   },
   "sections": [
     {
@@ -18,89 +18,89 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Belleği genellikle bir sabit disk olarak hayal ederiz. Gerçekte yaşayan bir ağdır. Milyarlarca **teslim etmek**, sinir hücresi, deneyimlediklerimize bağlı olarak yeniden bağlanır, güçlenir veya zayıflar."
+          "text": "Belleği çoğu zaman bir sabit disk sanırız. Aslında canlı bir ağdır. Milyarlarca sinir hücresi olan **nöron**, yaşadığın şeye göre yeniden bağlanır, güçlenir veya zayıflar."
         },
         {
           "type": "paragraph",
-          "text": "Hiçbir şey tek bir yerde saklanmaz. Bellek, başlangıçta kırılgan, uykudan sonra daha sağlam ve hatırladığımızda her zaman biraz yeniden inşa edilen, dağınık bir izdir."
+          "text": "Hiçbir şey tek bir yerde saklanmaz. Bir anı, başta kırılgan, uykudan sonra daha sağlam, ve her hatırlayışta biraz yeniden kurulmuş, dağınık bir izdir."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p1",
-      "title": "Güçlendiren bağlantılar",
+      "title": "Güçlenen bağlantılar",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "İki nöron arasındaki temas noktasına, sinir sinyalinin geçtiği kavşak olan **sinaps** adı verilir. İnsan beyninde yaklaşık **86 bin** nöron ve **100.000 bin**'den fazla sinaps bulunur."
+          "text": "İki nöron arasındaki temas noktasına **sinaps** denir: sinir sinyalinin geçtiği kavşak. İnsan beyni yaklaşık **86 milyar** nöron ve **100.000 milyardan** fazla sinaps sayar."
         },
         {
           "type": "image",
           "asset": "hippocampus_memory_brain",
           "ratio": "auto",
-          "caption": "Hipokampus anıların oluşumunda merkezi bir rol oynar."
+          "caption": "Hipokampus anıların oluşumunda merkezi bir rol oynar her zaman"
         },
         {
           "type": "paragraph",
-          "text": "Bilgi tekrarlandığında veya güçlü bir duyguyla ilişkilendirildiğinde aynı nöronlar birlikte etkinleşir. Bağlantılarını tetiklemek daha kolay hale gelir: Bu, sinapsların kalıcı olarak güçlendirilmesi olan [[Uzun vadeli potansiyelizasyon]]'dir. Bir devre ne kadar çok kullanılırsa yol o kadar “geniş” olur. Bu nedenle bellek, depolanan bir nesne değil, ağdaki bir **iz**'dir."
+          "text": "Bir bilgi yinelenince veya güçlü bir duyguya bağlanınca aynı nöronlar birlikte etkinleşir. Bağları tetiklenmesi daha kolay olur: buna, sinapsların kalıcı güçlenmesi olan [[Uzun vadeli potansiyelizasyon]] denir. Bir devre ne kadar kullanılırsa yol o kadar “geniş” olur. Bir anı bu yüzden rafa konmuş bir nesne değil, ağdaki bir **iz**dir."
         },
         {
           "type": "funFact",
-          "text": "Beynin depolama kapasitesinin yaklaşık olarak **2,5 petabayt** olduğu tahmin edilmektedir, bu da milyonlarca saatlik videoya eşdeğerdir. Ancak bu bir disk değil, kendini yeniden düzenleyen canlı bir dokudur."
+          "text": "Beynin depolama kapasitesi yaklaşık **2,5 petabayt** kestirilir, milyonlarca saat videoya denk. Ama bu bir disk değildir: kendini yeniden düzenleyen canlı bir dokudur."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p2",
-      "title": "Anıların istasyon şefi denizatı",
+      "title": "Hipokampus, anıların istasyon şefi",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tapınakların arkasındaki bölge olan [[şakak lobu]]'deki küçük bir yapı olan **hipokampus**, anıları sonsuza kadar saklamaz. Bunları alır, **kodlamak**, bunları hafıza izlerine dönüştürür ve ardından bunları beynin dış katmanı olan **korteks**'ye yeniden dağıtır. Bu aktarıma **konsolidasyon** adı verilir."
+          "text": "Şakakların arkasındaki bölge [[şakak lobu]] içinde küçük yapı **hipokampus**, anıları sonsuza dek tutmaz. Onları alır, **kodlar**, bellek izine çevirir, sonra beynin dış katmanı **kortekse** dağıtır. Bu aktarıma **pekiştirme** denir."
         },
         {
           "type": "paragraph",
-          "text": "Esas olarak **uyku** sırasında yapılır. İşleyen bir hipokampus olmadan, şu anda yaşayabiliriz, ancak artık yeni bilinçli anılar taşıyamayız. Yakın geçmişimiz olmayan bir şimdiki zamanda sıkışıp kalıyoruz."
+          "text": "Bu iş özellikle **uyku** sırasında olur. İşleyen bir hipokampus olmadan anı yaşayabilirsin, ama yeni bilinçli anılar sabitleyemezsin. Yakın geçmişi olmayan bir şimdide sıkışırsın."
         },
         {
           "type": "funFact",
-          "text": "1953'te ameliyat edilen **H.M.** hastası artık yeni anılar oluşturmuyordu. Ancak, daha önce denediğini hatırlamadan aynada çizim yapma konusunda her gün ilerleme kaydetti: Hareketlere ilişkin hafızası sağlamdı."
+          "text": "**1953**'te ameliyat edilen hasta **H.M.** artık yeni anı kurmuyordu. Yine de her gün aynada çizmeyi ilerletiyordu, daha önce denediğini hatırlamadan: jest belleği sapasağlamdı."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p3",
-      "title": "Hatırlamak yeniden inşa etmektir",
+      "title": "Hatırlamak, yeniden kurmaktır",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bir anıyı hatırlamak bir videoyu yeniden oynatmak değildir. Onu her çıkardığınızda, **dövülebilir**, değiştirilebilir hale gelir. Mevcut duygularımız, yeni bilgilerimiz veya bir önerimiz onu “yeniden kaydedilmeden” önce değiştirebilir."
+          "text": "Bir anıyı çağırmak bir videoyu yeniden oynamak değildir. Her çıkardığında **biçimlenebilir**, değişebilir olur. O anki duyguların, yeni bilgilerin veya bir telkin, “yeniden kaydedilmeden” önce onu değiştirebilir."
         },
         {
           "type": "paragraph",
-          "text": "Psikolog **Elizabeth Loftus**, basit sorularla **yanlış anılar** ekleyebileceğinizi gösterdi. Bugün görgü tanığının ifadesine karşı ihtiyatlı olmamızın nedeni budur: iyi niyetle beyin boşlukları doldurur."
+          "text": "Psikolog **Elizabeth Loftus**, yalın sorularla **sahte anılar** ekilebileceğini gösterdi. Bu yüzden tanık ifadelerine bugün ihtiyatlı bakılır: iyi niyetle beyin delikleri doldurur."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p4",
-      "title": "Tek beyinde birden fazla anı",
+      "title": "Tek bir beyinde birkaç bellek",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Anlatabildiğimiz gerçeklerin ve yaşam olaylarının hafızası esas olarak hipokampustan geçer. [[prosedürsel hafıza]], bisiklete binme veya yüzmenin hafızası, bunun yerine beynin arkasındaki bir yapı olan **beyincik** ve diğer eski yapılara bağlıdır."
+          "text": "Anlatabildiğin olguların ve yaşam sahnelerinin belleği özellikle hipokampustan geçer. Bisiklet veya yüzme belleği olan [[Prosedürel hafıza]] daha çok beynin arkasındaki yapı **beyincik**e ve daha eski yapılara bağlıdır."
         },
         {
           "type": "paragraph",
-          "text": "Bazı hafıza kaybı hastalarının kendi isimlerini unutup yine de piyano çalmalarının nedeni budur. Bellek tek bir çekmece değildir; bir sistemler mozaiğidir."
+          "text": "Bu yüzden bazı amnezik hastalar kendi adını unutur ama hâlâ piyano çalabilir. Bellek tek bir çekmece değildir: sistemlerin bir mozaiğidir."
         },
         {
           "type": "takeaway",
-          "text": "Bellek dinamik bir izdir: Sinapslar özellikle geceleri güçlenir, pekiştirilir ve her hatırlatmayla yeniden inşa edilir. Asla sabit bir dosya değildir."
+          "text": "Bir anı dinamik bir izdir: özellikle gece pekişen, her hatırlayışta yeniden kurulan güçlenmiş sinapslar. Asla donmuş bir dosya değildir."
         }
       ]
     }

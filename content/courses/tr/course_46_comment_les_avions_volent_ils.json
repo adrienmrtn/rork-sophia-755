@@ -4,11 +4,11 @@
   "subtitle": "Uçuş fiziği",
   "subject": "sciences",
   "subcategory": "Our daily life explained",
-  "description": "Birkaç yüz ton ağırlığındaki bir uçak uçuyor. Bu bir sihir değil; mesele kanat şekli, hız ve kuvvetlerin birbirini dengelemesi meselesi.",
+  "description": "Yüzlerce tonluk bir uçak uçar. Bu sihir değildir: kanadın biçimi, hız ve birbirini dengeleyen kuvvetler işidir.",
   "hero": {
     "image": "comment_les_avions_volent",
     "ratio": "16:9",
-    "hook": "Bir kamyondan daha ağır olmasına rağmen havada kalıyor. İşte nasıl."
+    "hook": "Bir kamyondan ağırdır, yine de havada kalır. İşte nasıl."
   },
   "sections": [
     {
@@ -18,81 +18,81 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Büyük bir uçağın ağırlığı **Yüzlerce ton** olabilir. Bu kadar ağır bir şey nasıl havada kalabilir? Cevap kanatların şeklinde ve uçağın hızında yatıyor."
+          "text": "Büyük bir yolcu uçağı **yüzlerce ton** gelebilir. Bu kadar ağır bir şey havada nasıl durabilir? Cevap kanatların biçiminde ve uçağın hızında yatar."
         },
         {
           "type": "paragraph",
-          "text": "Dört ana kuvvet oyundadır: **itme** (ileri), **sürükleme** (hava frenleme), **ağırlık** (aşağı doğru) ve **kaldırmak** (yukarı doğru)."
+          "text": "Dört ana kuvvet işe karışır: **itki** (ileri doğru), **sürükleme** (havanın frenlemesi), **ağırlık** (aşağı doğru) ve **kaldırma** (yukarı doğru)."
         }
       ]
     },
     {
       "id": "course_46_comment_les_avions_volent_ils_p1",
-      "title": "Kanat, akıllı bir şekil",
+      "title": "Kanat, akıllı bir biçim",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Yandan bakıldığında bir uçağın kanadı düz değildir. Üst kısım alt tarafa göre daha yuvarlaktır. Uçak hızlı hareket ederken havanın bu şeklin etrafında dönmesi gerekir."
+          "text": "Yandan bakınca uçak kanadı düz değildir. Üstü alttan daha bombelidir. Uçak hızlı giderken hava bu biçimin etrafından dolaşmak zorundadır."
         },
         {
           "type": "image",
           "asset": "airplane_wing_cross_section_flight",
           "ratio": "auto",
-          "caption": "Kanadın profili uçağı kaldıran kaldırma kuvvetini oluşturur."
+          "caption": "Kanat profili, uçağı kaldıran kaldırma kuvvetini yaratır"
         },
         {
           "type": "paragraph",
-          "text": "Yukarıdan geçen hava biraz hızlanır. Basıncı düşüyor. Kanadın altındaki basınç daha da güçlü kalıyor. Bu fark kanadı yukarı doğru iter: bu **kaldırmak**'dir. Çoğu zaman adını 18. yüzyıl bilim adamından alan **Bernoulli** prensibiyle ve kanadın havayı da aşağıya doğru saptırdığı gerçeğiyle açıklanır."
+          "text": "Üstten geçen hava biraz hızlanır. Basıncı düşer. Kanadın altında basınç daha yüksek kalır. Bu fark kanadı yukarı iter: buna **kaldırma** denir. Açıklama çoğu kez 18. yüzyıl bilgininin adını taşıyan **Bernoulli** ilkesiyle ve kanadın havayı aşağı saptırmasıyla yapılır."
         }
       ]
     },
     {
       "id": "course_46_comment_les_avions_volent_ils_p2",
-      "title": "Hıza ihtiyacınız var",
+      "title": "Hız şarttır",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hız olmadan, kanat üzerinden yeterince hava geçmiyor, yeterli kaldırma kuvveti olmuyor. Bu nedenle bir uçağın kalkış için uzun bir piste ihtiyacı vardır: motorların onu yeterince hızlandırması gerekir."
+          "text": "Hız yoksa kanadın üzerinden yeterince hava geçmez, kaldırma yetmez. Bu yüzden uçağın kalkmak için uzun piste ihtiyacı vardır: motorlar onu yeterince hızlandırmalıdır."
         },
         {
           "type": "funFact",
-          "text": "Kuşlar da aynı genel fikri kullanır: kanatları kaldırma kuvveti yaratır. Ama ilerlemek için kanatlarını çırpıyorlar. Uçak motorları sayesinde ileri doğru hareket eder."
+          "text": "Kuşlar da aynı genel fikri kullanır: kanatları kaldırma yaratır. Ama onlar ilerlemek için kanat çırpar. Uçak ise motorlarıyla ilerler."
         },
         {
           "type": "paragraph",
-          "text": "Seyir uçuşunda kaldırma ağırlığı dengeler. Motorların itme kuvveti hava sürtünmesini dengeler. Uçak daha sonra yaklaşık olarak sabit bir hızla ileri doğru hareket eder."
+          "text": "Seyir uçuşunda kaldırma ağırlığı dengeler. Motor itkisi havanın sürüklemesini dengeler. Uçak o zaman aşağı yukarı sabit hızla gider."
         }
       ]
     },
     {
       "id": "course_46_comment_les_avions_volent_ils_p3",
-      "title": "Yukarı, aşağı, dön",
+      "title": "Çıkmak, inmek, dönmek",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tırmanmak için pilot (veya araç bilgisayarı) burnu biraz yukarı kaldırır ve itme kuvvetini ayarlar. İnmek için genellikle itme kuvvetini azaltırız. Dönmek için, kanatların hareketli parçaları olan kanatçıklar kullanılarak uçak yana doğru eğilir."
+          "text": "Çıkmak için pilot (veya uçuş bilgisayarı) burnu biraz yukarı eğer ve itkiyi ayarlar. İnmek için çoğu kez itki azaltılır. Dönmek için kanatların hareketli parçaları olan kanatçıklarla uçak yana yatırılır."
         },
         {
           "type": "paragraph",
-          "text": "İnerken yavaşlıyoruz. Düşük hızlarda kaldırma kuvvetini artırmak için kanatlar kanattan uzanır. Daha sonra tekerlekler yere temas eder ve frenler (bazen itme ters çeviricileri de) uçağı durdurur."
+          "text": "İnişte yavaşlanır. Düşük hızda kaldırmayı artırmak için kanattan flaplar çıkar. Sonra tekerlekler yere değer ve frenler (bazen itki geri çeviricileri de) uçağı durdurur."
         }
       ]
     },
     {
       "id": "course_46_comment_les_avions_volent_ils_p4",
-      "title": "\"Havadan hafif\" değil",
+      "title": "Bu “havadan hafif” değildir",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Helyum balonu havadan daha az yoğun olduğu için yüzer. Bir uçak, hayır: çok daha yoğun. Uçuyor çünkü **kuvvet** hızı ve kanatlarının şekli sayesinde onu taşıyormuş gibi görünüyor."
+          "text": "Helyum balonu yüzer çünkü havadan daha az yoğundur. Uçak değil: ondan çok daha yoğundur. Uçar çünkü hızı ve kanat biçimi sayesinde havayı kendini **taşımaya** zorlar."
         },
         {
           "type": "takeaway",
-          "text": "Bir uçak, havada hareket eden kanatların oluşturduğu **kaldırmak** sayesinde uçar. Hız çok önemlidir: Hız olmadığında kanat artık ağırlığı telafi edecek kadar yukarı doğru \"itmez\"."
+          "text": "Uçak, hareket halindeki kanatlarının havada yarattığı **kaldırma** sayesinde uçar. Hız vazgeçilmezdir: o olmadan kanat, ağırlığı karşılamaya yetecek kadar yukarı “itemez”."
         }
       ]
     }

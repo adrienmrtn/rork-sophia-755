@@ -1,14 +1,14 @@
 {
   "id": "course_55_la_theorie_de_la_gravitation_newton_1687",
-  "title": "Yerçekimi teorisi",
+  "title": "Yerçekimi kuramı",
   "subtitle": "Newton, 1687",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "1687'de Newton basit ve muazzam bir fikir yayınladı: Aynı kuvvet bir elmanın düşmesine ve Ay'ın dönmesine neden olur. İşte bu değişiyor.",
+  "description": "1687'de Newton yalın ve kocaman bir fikir yayımlar: aynı kuvvet bir elmayı düşürür ve Ay'ı döndürür. İşte bu neyi değiştirir.",
   "hero": {
     "image": "la_theorie_de_la_gravitation_newton",
     "ratio": "16:9",
-    "hook": "Bir elma, Ay, gezegenler: Her şeyi açıklayan tek bir güç."
+    "hook": "Bir elma, Ay, gezegenler: her şeyi açıklayan tek bir kuvvet."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Newton'dan önce, 17. yüzyıldan kalma İtalyan fizikçi **Galileo** ve eliptik yörüngeleri tanımlayan gökbilimci **[[Johannes Kepler]]** sayesinde gezegenler hakkında zaten çok şey biliyorduk. Ancak Dünya'ya düşenler ile gökyüzünde dönenler arasında açık bir bağlantı yoktu."
+          "text": "Newton'dan önce gezegenler hakkında çok şey biliniyordu: 17. yüzyıl İtalyan fizikçisi **Galileo** ve eliptik yörüngeleri betimleyen gökbilimci **[[Johannes Kepler]]** sayesinde. Ama yeryüzünde düşen ile gökte dönen arasında net bir bağ eksikti."
         },
         {
           "type": "paragraph",
-          "text": "**1687**'de [[Philosophiae Naturalis Principia Mathematica]], **Isaac Newton**, klasik fiziğin kurucu çalışması olan *[[Philosophiae Naturalis Principia Mathematica]]*, *Principia*'yi yayınladı. Yer çekiminin **evrensel** olduğunu ileri sürüyor: Her yerde aynı şekilde etki ediyor."
+          "text": "**1687**'de **Isaac Newton** *[[Philosophiae Naturalis Principia Mathematica]]* eserini, klasik fiziğin kurucu kitabı *Principia*'yı yayımlar. Yerçekiminin **evrensel** olduğunu söyler: her yerde, aynı biçimde işler."
         }
       ]
     },
@@ -33,38 +33,38 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kepler gezegenlerin yörüngelerini kesin yasalarla tanımlamıştı: **elipsler** cinsinden yörüngeler, eşit zamanda eşit taranan alanlar. Galileo cesetlerin düşüşünü incelemişti. Peki gezegenler neden yörüngelerinde kalıyor? Onları “çeken” şey nedir?"
+          "text": "Kepler gezegen yörüngelerini kesin yasalarla betimlemişti: **elips** yörüngeler, eşit zamanda taranan eşit alanlar. Galileo cisimlerin düşüşünü incelemişti. Ama gezegenler neden yörüngelerinde kalır? Onları ne “çeker”?"
         },
         {
           "type": "paragraph",
-          "text": "Newton cevap verir: **kayıtlı çekim**, iki kütleyi birbirine doğru çeken bir kuvvet. Dünya Ay'ı çeker. Güneş Dünya'yı çeker. Ve ayrıca Dünya'nın küçük bir kısmını da çekiyorsunuz... küçücük bile olsa."
+          "text": "Newton cevaplar: bir **çekim kuvveti**, iki kütleyi birbirine çeken bir kuvvet. Dünya Ay'ı çeker. Güneş Dünya'yı çeker. Sen de Dünya'yı biraz çekersin... gerçi bu çekim çok küçüktür."
         }
       ]
     },
     {
       "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p2",
-      "title": "Kanun tek cümleyle",
+      "title": "Tek cümlede yasa",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "isaac_newton_apple_tree_woolsthorpe",
           "ratio": "4:3",
-          "caption": "Elmanın hikayesi her şeyden önce bir hikayedir. Fikir gerçek."
+          "caption": "Elma öyküsü daha çok bir anlatıdır. Fikrin kendisi ise gerçektir"
         },
         {
           "type": "paragraph",
-          "text": "İki cisim birbirini **kütle** yani madde miktarıyla artan ve birbirlerinden uzaklaştıkça azalan bir kuvvetle çeker. Daha kesin olarak: kuvvet  mesafesinin **karesiil** zayıflar. Mesafenin iki katına çıkması çekim gücünü dörde böler. Ne kadar uzakta olursanız çekim o kadar hızlı zayıflar."
+          "text": "İki cisim, madde miktarı olan **kütleleriyle** artan ve uzaklaşınca azalan bir kuvvetle birbirini çeker. Daha kesin söylersek: kuvvet **mesafenin karesiyle** zayıflar. Mesafeyi ikiye katlamak çekimi dörde böler. Uzaklaştıkça çekim hızla zayıflar."
         },
         {
           "type": "image",
           "asset": "planets_orbit_solar_system_gravity",
           "ratio": "16:9",
-          "caption": "Gezegenler sürekli olarak Güneş'e doğru \"düşüyor\"... ve onu kaçırıyorlar: yörünge budur."
+          "caption": "Gezegenler Güneş'e doğru durmadan “düşer” ve ıskalar: bu yörüngedir"
         },
         {
           "type": "funFact",
-          "text": "Ay sürekli Dünya'ya doğru \"düşüyor\". Yanal hızı da yüksek olduğundan çarpmak yerine kendi etrafında dönüyor."
+          "text": "Ay, Dünya'ya doğru sürekli “düşer”. Yanlamasına büyük bir hızı da olduğu için ezilmek yerine çevresinde döner."
         }
       ]
     },
@@ -75,26 +75,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Newton ayrıca üç **hareket kanunu** verir. Özetle: Bir nesne kuvvet olmadığında hızını korur, **eylemsizlik** ilkesi; bir kuvvet hızı değiştirir; her etkinin zıt bir tepkisi vardır."
+          "text": "Newton ayrıca üç **hareket yasası** verir. Özetle: kuvvet yoksa bir cisim hızını korur, **eylemsizlik** ilkesi; bir kuvvet hızı değiştirir; her etkiye zıt bir tepki vardır."
         },
         {
           "type": "paragraph",
-          "text": "Bununla yörüngeleri, **gelgitleri**, Ay ve Güneş etkisindeki okyanusların yükseliş ve alçalmalarını ve yörüngelerini hesaplayabiliriz. Fizik bir tahmin aracı haline geliyor."
+          "text": "Bununla güzergahlar, Ay ve Güneş'in etkisiyle okyanusların inip kalkması olan **gelgitler** ve yörüngeler hesaplanabilir. Fizik bir öngörü aracı olur."
         }
       ]
     },
     {
       "id": "course_55_la_theorie_de_la_gravitation_newton_1687_p4",
-      "title": "Güçlü… ama son söz değil",
+      "title": "Güçlü... ama son söz değil",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "İki yüzyıl sonra, **[[Albert Einstein]]**, [[Göreli çekim (Einstein)]] ile Newton'u aşırı durumlar, çok yüksek hızlar ve çok güçlü yer çekimleri için düzeltecek. Yerçekimi o zaman uzay-zamanın bir eğriliği haline gelir ve artık görünmez bir kuvvet değildir. Ancak bir roket fırlatmak veya gelgitleri anlamak için Newton hala mükemmel."
+          "text": "İki yüzyıl sonra **[[Albert Einstein]]** uç durumlar için, çok büyük hızlar ve çok güçlü çekimler için, [[Göreli çekim (Einstein)]] ile Newton'u düzeltir. Yerçekimi o zaman görünmez bir kuvvet değil, uzay-zamanın eğriliği olur. Ama bir roket fırlatmak veya gelgitleri anlamak için Newton hâlâ üstündür."
         },
         {
           "type": "takeaway",
-          "text": "Newton cenneti ve Dünyayı birleştirir: yerçekimi her yerde kitleleri çeker. Tarihin en büyük bilimsel sentezlerinden biridir."
+          "text": "Newton göğü ve yeri birleştirir: yerçekimi kütleleri her yerde çeker. Tarihin en büyük bilimsel sentezlerinden biridir."
         }
       ]
     }

@@ -4,11 +4,11 @@
   "subtitle": "Marie Curie",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "Marie Curie, Pierre Curie ve Henri Becquerel ile birlikte radyoaktivite bölümünü açıyor. İki Nobel Ödülü, çok büyük bir çalışma ve muazzam bir miras.",
+  "description": "Marie Curie, Pierre Curie ve Henri Becquerel ile radyoaktivite bölümünü açar. İki Nobel, ezici bir emek ve kocaman bir miras.",
   "hero": {
     "image": "la_decouverte_de_la_radioactivite_marie_curie",
     "ratio": "16:9",
-    "hook": "Birkaç gram görünmez elementi izole etmek için tonlarca cevheri tarttı."
+    "hook": "Görünmez bir elementin birkaç gramını ayırmak için tonlarca cevher tarttı."
   },
   "sections": [
     {
@@ -18,81 +18,81 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Marie Curie** (doğum adı Maria Skłodowska) Nobel Ödülü alan ilk kadındır. İki farklı bilim dalında **iki** alan tek kişi olmaya devam ediyor: fizik, sonra kimya."
+          "text": "**Marie Curie** (doğum adı Maria Skłodowska) Nobel ödülü alan ilk kadındır. İki ayrı bilimde, fizik sonra kimya, **iki** ödül almış tek kişi olarak kalır."
         },
         {
           "type": "paragraph",
-          "text": "Konusu: **radyoaktivite**, yani bazı atomların kendiliğinden enerji ve parçacık göndermesi gerçeği."
+          "text": "Konusu **radyoaktivite**dir: yani kimi atomların kendiliğinden enerji ve parçacık göndermesi olayı."
         }
       ]
     },
     {
       "id": "course_56_la_decouverte_de_la_radioactivite_marie_p1",
-      "title": "Bilime açılan dar bir kapı",
+      "title": "Bilime dar bir kapı",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Polonya'da doğdu, okumak için Paris'e gitti çünkü yerel üniversiteler kadınlara birçok kapıyı kapattı. Çoğunlukla güvencesiz koşullarda, çok çalışıyor."
+          "text": "Polonya'da doğar, Paris'te okumaya gider çünkü yerel üniversiteler kadınlara birçok kapıyı kapatır. Çoğu kez güvencesiz koşullarda, çok çalışır."
         },
         {
           "type": "paragraph",
-          "text": "Fizikçi **Pierre Curie** ile evlendi. Birlikte o dönem için nadir bir laboratuvar ikilisi oluşturdular."
+          "text": "Fizikçi **Pierre Curie** ile evlenir. Birlikte, çağları için ender bir laboratuvar ikilisi kurarlar."
         }
       ]
     },
     {
       "id": "course_56_la_decouverte_de_la_radioactivite_marie_p2",
-      "title": "Görünmeyeni adlandırın",
+      "title": "Görünmeze ad koymak",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**1896**'de **Henri Becquerel**, uranyumun ışıksız fotoğraf plakalarını örttüğünü fark etti. Marie Curie bu olguyu ayrıntılı olarak incelemeye karar verir. **radyoaktivite** kelimesini icat etti."
+          "text": "**1896**'da **Henri Becquerel**, uranyumun ışık olmadan fotoğraf plakalarını kararttığını fark eder. Marie Curie bu olayı ayrıntısıyla incelemeye karar verir. **Radyoaktivite** sözcüğünü o icat eder."
         },
         {
           "type": "image",
           "asset": "marie_curie_pitchblende_radioactivity",
           "ratio": "4:3",
-          "caption": "Radyum ve polonyumu izole etmek için tonlarca pitchblend."
+          "caption": "Radyum ve polonyumu ayırmak için tonlarca peşblend"
         },
         {
           "type": "paragraph",
-          "text": "Pierre ile birlikte iki yeni element keşfeder: **polonyum** (adını Polonya'dan almıştır) ve **radyum**. Bunları izole etmek için çok büyük miktarlarda cevherin, yani pitchblend'in işlenmesi gerekir."
+          "text": "Pierre ile iki yeni element keşfeder: **polonyum** (Polonya'dan ad alır) ve **radyum**. Bunları ayırmak için muazzam miktarda cevher, peşblend, işlemek gerekir."
         },
         {
           "type": "funFact",
-          "text": "Radyum karanlıkta hafifçe parlıyor. İlk başta şaşırdık… ne kadar tehlikeli olduğunu anlamadan önce."
+          "text": "Radyum karanlıkta zayıf bir ışıkla parlar. Önce büyülenilir... tehlikesi anlaşılmadan önce."
         }
       ]
     },
     {
       "id": "course_56_la_decouverte_de_la_radioactivite_marie_p3",
-      "title": "Şan ve ödenecek bedel",
+      "title": "Zafer ve ödenen bedel",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**1903**'de Marie, Pierre ve Becquerel fizikte Nobel Ödülü'nü aldı. **1911**'de Nobel Kimya Ödülü'nü tek başına Marie aldı. Pierre 1906'da kazara öldü. Devam ediyor."
+          "text": "**1903**'te Marie, Pierre ve Becquerel fizik Nobeli'ni alır. **1911**'de Marie kimya Nobeli'ni tek başına alır. Pierre 1906'da bir kazada ölür. O devam eder."
         },
         {
           "type": "paragraph",
-          "text": "Birinci Dünya Savaşı sırasında yaralıların tedavisi için gezici röntgen üniteleri düzenledi. Vücudunu bugün kabul edilemez olduğunu bildiğimiz dozlara maruz bırakıyor."
+          "text": "Birinci Dünya Savaşı sırasında yaralıları tedavi etmek için gezici röntgen birimleri örgütler. Bedenini, bugün kabul edilemez sayılacak dozlarda ışına maruz bırakır."
         }
       ]
     },
     {
       "id": "course_56_la_decouverte_de_la_radioactivite_marie_p4",
-      "title": "Çift taraflı bir miras",
+      "title": "Çift yüzlü bir miras",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Radyoaktivite, belirli kanser türlerine ve ayrıca nükleer silahlara karşı radyoterapiyi mümkün kıldı. Bilgi tarafsızdır; kullanımları değildir."
+          "text": "Radyoaktivite kimi kanserlere karşı radyoterapiye izin verdi... nükleer silahlara da. Bilgi yansızdır; kullanımları değildir."
         },
         {
           "type": "takeaway",
-          "text": "Marie Curie tuhaf bir gözlemi yeni bir bilime dönüştürdü: radyoaktivite. Çalışmaları, o zamanlar yeterince anlaşılmayan riskler pahasına, modern fiziğin önünü açtı."
+          "text": "Marie Curie tuhaf bir gözlemi yeni bir bilime çevirdi: radyoaktivite. Çalışması modern fiziği açtı... o sırada kötü anlaşılan riskler pahasına."
         }
       ]
     }

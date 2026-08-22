@@ -4,11 +4,11 @@
   "subtitle": "Karbon nötrlüğüne doğru",
   "subject": "comprendreLeMonde",
   "subcategory": "Environment & the future",
-  "description": "Dünya fosil yakıtları daha temiz kaynaklarla değiştirmeye çalışıyor. Zor olduğu kadar gerekli bir değişim.",
+  "description": "Dünya fosil enerjileri daha temiz kaynaklarla değiştirmeye çalışır. Hem zorunlu hem zor bir dönüşüm.",
   "hero": {
     "image": "la_transition_energetique",
     "ratio": "16:9",
-    "hook": "Güneş enerjisi tarihin en ucuz enerjisi haline geldi. Geriye kalan tek şey onu depolamak."
+    "hook": "Güneş, tarihin en ucuz enerjisi oldu. Geriye onu depolamak kalır."
   },
   "sections": [
     {
@@ -18,55 +18,55 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Uzun bir süre boyunca insanlık enerji kaynaklarını verimlilik tercihine göre değiştirdi: odundan kömüre, sonra kömürden petrole. Mevcut **Enerji üretilir** farklıdır: İlk kez bir hayatta kalma kısıtlaması, yani iklim değişikliği tarafından empoze edilmektedir."
+          "text": "Uzun süre insanlık enerji kaynağını verim için değiştirdi: odundan kömüre, sonra kömürden petrole. Bugünkü **enerji geçişi** başkadır: ilk kez onu bir hayatta kalma kısıtı, iklim bozulması dayatır."
         },
         {
           "type": "paragraph",
-          "text": "Bu ders dünyanın fosil yakıtları daha temiz kaynaklarla değiştirmeye nasıl çalıştığını ve bu değişimin neden gerekli olduğu kadar zor olduğunu araştırıyor."
+          "text": "Bu ders, dünyanın fosil enerjileri daha temiz kaynaklarla nasıl değiştirmeye çalıştığını ve bu dönüşümün neden hem zor hem zorunlu olduğunu inceler."
         }
       ]
     },
     {
       "id": "course_238_la_transition_energetique_p1",
-      "title": "1,5°C: her şeyi yönlendiren hedef",
+      "title": "1,5°C: her şeyi yöneten hedef",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Günümüzün tüm enerji politikalarına rehberlik eden çerçeveye, 2015 yılında imzalanan **[[Paris Anlaşması]]** adı verilmektedir. Bu anlaşma, dünya ülkelerine, belirli bir hedefle, küresel ısınmayı sınırlandırma taahhüdünde bulunmaktadır: Mümkünse, endüstriyel çağ öncesindeki seviyelerin 1,5°C üzerindeki sıcaklığın altında kalmak. Derecenin her onda biri aşırı hava olaylarını daha da kötüleştiriyor."
+          "text": "Bugün bütün enerji politikalarını yönlendiren çerçeve, 2015'te imzalanan **[[Paris Anlaşması]]** adını taşır. Bu antlaşma dünya ülkelerini iklim ısınmasını sınırlamaya bağlar, kesin bir hedefle: mümkünse sanayi öncesi düzeylerin 1,5°C altında kalmak. Her ekstra onda bir derece aşırı hava olaylarını ağırlaştırır."
         },
         {
           "type": "image",
           "asset": "solar_panel_farm_photovoltaic_field",
           "ratio": "16:9",
-          "caption": "Güneş panelleri ve rüzgar türbinleri dünyanın düşük karbonlu enerji kaynaklarına geçişini simgeliyor."
+          "caption": "Güneş panelleri ve rüzgar türbinleri, dünyanın düşük karbonlu enerji kaynaklarına kayışını simgeler"
         },
         {
           "type": "paragraph",
-          "text": "Bu hedefe ulaşmak için Devletler, **[[karbon nötrlüğü]]**'yi amaçlamaktadır: insan faaliyetlerinden kaynaklanan sera gazları ile bunların ormanlar, topraklar, okyanuslar veya yakalama teknolojileri tarafından emilmesi arasında bir denge. Bu, küresel emisyonlardaki artışın 2025'ten önce duracağını, ardından sonraki yıllarda keskin bir şekilde düşeceğini varsayıyor."
+          "text": "Bu hedefe uymak için devletler **[[karbon nötrlüğü]]** arar: insan faaliyetlerinin saldığı sera gazları ile ormanların, toprakların, okyanusların veya yakalama teknolojilerinin soğurması arasında bir denge. Bu, küresel salımların 2025'ten önce artmayı bırakmasını, sonra sonraki yıllarda net biçimde düşmesini varsayar."
         },
         {
           "type": "funFact",
-          "text": "Güneş enerjisinin maliyeti 2010 ile 2020 arasında %90 düştü; bu, ekonomi tarihindeki hemen hemen tüm diğer teknolojilerden daha hızlı bir düşüş. Hatta 2023 yılında güneş enerjisi dünyanın birçok yerinde şimdiye kadar üretilen en ucuz elektrik kaynağı haline gelecek."
+          "text": "Güneş enerjisinin maliyeti 2010 ile 2020 arasında %90 düştü, iktisat tarihinde neredeyse başka hiçbir teknolojiden daha hızlı bir iniş. 2023'te güneş, dünyanın birçok bölgesinde üretilmiş en ucuz elektrik kaynağı bile oldu."
         }
       ]
     },
     {
       "id": "course_238_la_transition_energetique_p2",
-      "title": "Fiyatlarda muhteşem düşüş",
+      "title": "Fiyatlardaki çarpıcı düşüş",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Geçişin ana itici gücü ekonomiktir. Daha önce uydulara ayrılan fotovoltaik güneş enerjisi ****'nin fiyatı, teknik ilerleme ve ölçek ekonomileri sayesinde beş yılda bir gelişme çıktı. Özellikle rüzgarların daha güçlü ve düzenli olduğu denizde curulan**Z** aynı zamanda gerçek endüstriyel olgunluğa da ulaştı. 2023 yılında dünya çapında kurulu yeni elektrik kapasitesinin neredeyse %90'ı yenilenebilir enerjilerden gelecek."
+          "text": "Geçişin başlıca motoru iktisadidir. Bir zamanlar uydulara ayrılmış **fotovoltaik güneş**, teknik ilerleme ve ölçek ekonomileri sayesinde on beş yılda fiyatını ona böldü. Özellikle rüzgarın daha güçlü ve düzenli olduğu denizde kurulan **rüzgar enerjisi** de gerçek bir sanayi olgunluğuna vardı. 2023'te dünyada kurulan yeni elektrik kapasitesinin yaklaşık %90'ı zaten yenilenebilir enerjilerden geliyordu."
         },
         {
           "type": "paragraph",
-          "text": "Büyük bir zorluk devam ediyor: Güneş ve rüzgar enerjisi **aralıklardan** sıkıntı çekiyor, yani sürekli elektrik üretmiyorlar. Fiyatı güneş enerjisiyle aynı çarpıcı düşüşü takip eden ve elektrikli arabaları giderek daha rekabetçi hale getiren büyük kapasiteli pillerin önemi buradan kaynaklanıyor."
+          "text": "Büyük bir sınav kalır: güneş ve rüzgar **kesiklilik** çeker, yani sürekli elektrik üretmez. Bu yüzden büyük kapasiteli piller önemlidir; fiyatları da güneşinki gibi çarpıcı biçimde düştü ve elektrikli arabaları gittikçe daha rekabetçi kıldı."
         },
         {
           "type": "funFact",
-          "text": "Çin şu anda dünyadaki güneş panellerinin %80'inden fazlasını ve elektrikli araçlar için lityum iyon pillerin %70'inden fazlasını üretiyor. Bu nedenle Batı'nın enerji dönüşümü büyük ölçüde Çin imalat zincirine bağlıdır."
+          "text": "Çin bugün dünyadaki güneş panellerinin %80'inden fazlasını ve elektrikli araçlar için lityum-iyon pillerin %70'inden fazlasını üretir. Batı'nın enerji geçişi o halde büyük ölçüde Çinli bir imalat zincirine bağlıdır."
         }
       ]
     },
@@ -77,15 +77,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bu coşkuya rağmen geçiş oldukça gerçek sınırlarla karşı karşıyadır. İstenildiği zaman yakılabilen gaz veya kömürden farklı olarak yenilenebilir enerjiler, hidrojen veya nükleer enerji gibi depolama veya yedek kaynaklara sahip daha esnek elektrik ağlarına ihtiyaç duyar."
+          "text": "Bu coşkuya rağmen geçiş gerçek sınırlara çarpar. İstediğin zaman yakabileceğin gaz veya kömürün tersine, yenilenebilir enerjiler daha esnek elektrik şebekeleri ister: depolama veya hidrojen ya da nükleer gibi yedek kaynaklar."
         },
         {
           "type": "paragraph",
-          "text": "Diğer bir engel ise petrole bağımlılıktan **[[nadir toprak elementleri]]**'ye ve piller ve rüzgar türbinleri yapmak için gerekli olan lityum veya kobalt gibi diğer metallere bağımlılığa geçiştir. Çin, bu malzemelerin küresel olarak rafine edilmesinde büyük bir payı kontrol ediyor ve bu da Avrupa ve ABD için yeni kırılganlıklar yaratıyor."
+          "text": "Başka bir engel, petrol bağımlılığından **[[nadir toprak elementleri]]** ve piller ile rüzgar türbinleri için gereken lityum veya kobalt gibi başka metallere kayıştır. Çin bu malzemelerin küresel arıtımının dev bir payını denetler, bu da Avrupa ve ABD için yeni kırılganlıklar yaratır."
         },
         {
           "type": "paragraph",
-          "text": "Son olarak geçiş toplumsal direnişle karşılaşıyor: Fosil yakıt endüstrileri hâlâ milyonlarca insanı istihdam ediyor ve bu işleri yok etmeden dönüştürmek, geçişin herkes tarafından kabul edilmesinin temel koşulu."
+          "text": "Son olarak geçiş toplumsal bir dirençle karşılaşır: fosil sanayiler hâlâ milyonlarca kişiyi istihdam eder ve bu işleri yok etmeden dönüştürmek, geçişin herkesçe kabul edilmesi için vazgeçilmez bir koşuldur."
         }
       ]
     },
@@ -96,19 +96,19 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Enerjinin geleceği şüphesiz tek bir çözüme değil, birçok çözümün karışımına dayanmaktadır. **[[Yeşil hidrojen]]**, elektriğin tek başına yeterli olmadığı çelik üretimi veya havacılık gibi en zor sektörlerin karbondan arındırılmasında önemli bir parça gibi görünüyor."
+          "text": "Enerji geleceği kuşkusuz tek bir çözüme değil, birkaçının karışımına dayanır. **[[Yeşil hidrojen]]** çelik üretimi veya havacılık gibi elektrikle yetinilemeyen, karbonsuzlaştırması en zor sektörler için kilit bir parça olarak öne çıkar."
         },
         {
           "type": "paragraph",
-          "text": "Geçiş aynı zamanda **ayıklık** gerektirir: binaları yalıtarak veya endüstriyel atıkları azaltarak daha az ve daha iyi tüketmek çoğu zaman en etkili ve en ucuz araç olmaya devam etmektedir."
+          "text": "Geçiş ayrıca **tutumluluk** ister: binaları yalıtarak veya sanayi israfını düşürerek daha az ve daha iyi tüketmek çoğu zaman en etkili ve en ucuz kaldıraç olarak kalır."
         },
         {
           "type": "funFact",
-          "text": "Bazı deneysel piller yer çekimini kullanarak çalışıyor: Ağır beton blokları günün fazla güneş enerjisiyle kaldırıyorlar, sonra akşamları aşağıya inip bir türbin aracılığıyla elektrik üretmelerine izin veriyorlar."
+          "text": "Bazı deneysel piller yerçekimiyle çalışır: gündüzün fazla güneş elektriğiyle ağır beton blokları yükseltir, akşam onları türbin üzerinden elektrik üretmek için indirir."
         },
         {
           "type": "takeaway",
-          "text": "Güneş enerjisinin maliyeti on beş yılda %90 oranında düşerek tarihin en ucuz elektrik kaynağı haline geldi. Ancak enerji depolama ve nadir metallerin temini, enerji geçişindeki en büyük zorluklar olmaya devam ediyor."
+          "text": "Güneşin maliyeti on beş yılda %90 düştü ve tarihin en ucuz elektrik kaynağı oldu. Ama enerji depolama ve nadir metal tedariki, enerji geçişinin büyük sınavları olarak kalır."
         }
       ]
     }

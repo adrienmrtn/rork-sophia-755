@@ -13,6 +13,7 @@ Usage:
     python scripts/check_course_translation.py --lang es --json report.json
     python scripts/check_course_translation.py --lang pt --json report.json
     python scripts/check_course_translation.py --lang it --json report.json
+    python scripts/check_course_translation.py --lang tr --json report.json
 """
 
 from __future__ import annotations
@@ -257,12 +258,34 @@ ITALIAN_RULES = LanguageRules(
     era_hint="should be a.C. / d.C.",
 )
 
+TURKISH_RULES = LanguageRules(
+    stranded_spaced=re.compile(
+        r"\b(bir|ve|ile|icin|i\u00e7in|gibi|bu|su|\u015fu)"
+        r"\s+([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    # "ve," is ordinary in lists; only the indefinite article cannot end a clause.
+    stranded_tight=re.compile(
+        r"\b(bir)\s*([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    leading_articles=("bir ", "bu ", "şu "),
+    leftover_extra_skip=frozenset({"dans"}),  # Turkish noun "dance"; French "in"
+    check_a_an=False,
+    flag_space_thousands=True,
+    thousands_hint="should use a period (30.000)",
+    flag_decimal_comma=False,  # Turkish decimals are commas
+    century_hint="should be '15. yüzyıl'",
+    era_hint="should be M.Ö. / M.S.",
+)
+
 RULES_BY_LANG: dict[str, LanguageRules] = {
     "en": ENGLISH_RULES,
     "de": GERMAN_RULES,
     "es": SPANISH_RULES,
     "pt": PORTUGUESE_RULES,
     "it": ITALIAN_RULES,
+    "tr": TURKISH_RULES,
 }
 
 
@@ -334,6 +357,7 @@ ARTICLE_BEFORE_RE = {
     "es": re.compile(r"\b(el|la|los|las|un|una)$", re.IGNORECASE),
     "pt": re.compile(r"\b(o|a|os|as|um|uma)$", re.IGNORECASE),
     "it": re.compile(r"\b(il|lo|la|i|gli|le|un|uno|una)$", re.IGNORECASE),
+    "tr": re.compile(r"\b(bir|bu|\u015fu)$", re.IGNORECASE),
 }
 
 

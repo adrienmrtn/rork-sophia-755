@@ -1,14 +1,14 @@
 {
   "id": "course_235_l_eau_prochaine_source_de_conflits",
-  "title": "Su: Bir sonraki çatışma kaynağı mı?",
+  "title": "Su: sonraki çatışma kaynağı mı?",
   "subtitle": "21. yüzyılın mavi altını",
   "subject": "comprendreLeMonde",
   "subcategory": "Environment & the future",
-  "description": "Dünyadaki suyun %1'den azı tatlıdır ve kolayca erişilebilir durumdadır. Bazı uzmanlar bunu şimdiden bir sonraki büyük çatışma kaynağı olarak görüyor.",
+  "description": "Yeryüzü suyunun %1'inden azı tatlı ve kolay erişilebilirdir. Bazı uzmanlar bunu şimdiden sonraki büyük çatışma kaynağı sayar.",
   "hero": {
     "image": "l_eau_prochaine_source_de_conflits",
     "ratio": "16:9",
-    "hook": "Dünyadaki suyun %1'den azı tatlı ve erişilebilirdir. Gerisi tartışıyor."
+    "hook": "Yeryüzü suyunun %1'inden azı tatlı ve erişilebilirdir. Gerisi paylaşılır."
   },
   "sections": [
     {
@@ -18,55 +18,55 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tatlı su insan yaşamı için en önemli kaynaktır. Günümüzde bu durum giderek daha nadir hale geliyor: Demografi artıyor, iklim değişiyor ve bazı uzmanlar şimdiden 21. yüzyılın ilk “su savaşlarını” öngörüyor."
+          "text": "Tatlı su, insan hayatı için en vazgeçilmez kaynaktır. Bugün gittikçe de daha kıt olur: nüfus artar, iklim bozulur ve bazı uzmanlar 21. yüzyılın ilk “su savaşları”nı şimdiden öngörür."
         },
         {
           "type": "paragraph",
-          "text": "Bu ders, böylesine hayati bir kaynağın neden komşu ülkeleri birbirine yaklaştırabilecek veya onlara karşı çıkabilecek önemli bir stratejik konu haline geldiğini araştırıyor."
+          "text": "Bu ders, bu kadar hayati bir kaynağın neden komşu ülkeleri yaklaştırabilen veya karşı karşıya getirebilen büyük bir stratejik mesele haline geldiğini inceler."
         }
       ]
     },
     {
       "id": "course_235_l_eau_prochaine_source_de_conflits_p1",
-      "title": "Nadir bir kaynak, kötü dağıtılmış",
+      "title": "Kıt ve kötü paylaştırılmış bir kaynak",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dünyanın %70'i sularla kaplı olduğundan \"mavi gezegen\" lakabını almaktadır. Ancak bu suyun neredeyse tamamı tuzludur. Tatlı su toplamın yalnızca %3'ünü oluşturuyor ve bu tatlı suyun üçte ikisi kutup buz tabakalarında ve buzullarda buz olarak tutuluyor. Sonuç olarak, sıvı ve erişilebilir tatlı su (göller, nehirler, sığ akiferler) gezegendeki tüm suyun %1'inden azını temsil etmektedir."
+          "text": "Yeryüzünün %70'i suyla kaplıdır, bu yüzden ona “mavi gezegen” denir. Ama bu su neredeyse tümüyle tuzludur. Tatlı su toplamın yalnızca yaklaşık %3'üdür ve bu tatlı suyun üçte ikisi kutup takkelerinde ve buzullarda buz olarak kilitlidir. Sonuçta sıvı ve erişilebilir tatlı su (göller, ırmaklar, sığ tabakalar) gezegendeki bütün suyun %1'inden azını oluşturur."
         },
         {
           "type": "image",
           "asset": "dried_riverbed_water_scarcity_drought",
           "ratio": "16:9",
-          "caption": "Erişilebilir tatlı su, Dünya'daki tüm suyun %1'inden azını temsil etmektedir."
+          "caption": "Erişilebilir tatlı su, yeryüzündeki bütün suyun %1'inden azıdır"
         },
         {
           "type": "paragraph",
-          "text": "Bu kıtlık eşit olarak dağılmamaktadır. Brezilya, Kanada veya Rusya gibi bazı ülkelerin muazzam rezervleri var. Orta Doğu ve Kuzey Afrika gibi diğerleri ise kalıcı bir stres yaşıyor: Su talepleri bölgenin sağlayabileceği miktarı aşıyor. 2024 yılında yaklaşık 4 milyar insan yılda en az bir ay bu durumda yaşayacak. **[[Su stresi]]**"
+          "text": "Bu kıtlık eşit dağılmaz. Brezilya, Kanada veya Rusya gibi bazı ülkelerin dev rezervleri vardır. Ortadoğu veya Kuzey Afrika gibi başkaları kalıcı bir **[[su stresi]]** yaşar: su talepleri topraklarının verebileceğini aşar. 2024'te yaklaşık 4 milyar kişi yılın en az bir ayını bu durumda geçirir."
         },
         {
           "type": "funFact",
-          "text": "20. yüzyılda dünya nüfusu üç katına çıktı ancak su tüketimi, kısmen sanayileşme ve et açısından zengin beslenme nedeniyle altı kat arttı."
+          "text": "20. yüzyılda dünya nüfusu üç katına çıktı, ama su tüketimi altı katına çıktı; özellikle sanayileşme ve eti daha bol rejimler yüzünden."
         }
       ]
     },
     {
       "id": "course_235_l_eau_prochaine_source_de_conflits_p2",
-      "title": "Paylaşılan nehirlerin jeopolitiği",
+      "title": "Paylaşılan ırmakların jeopolitiği",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Özellikle bir kaynak paylaşıldığında gerginlikler ortaya çıkar. Dünyadaki 260'tan fazla nehir **sınır aşan**: birkaç ülkeyi geçerek, nehrin yukarısında yer alan, kaynağı kontrol edenlerle, aşağı yönde yer alan ve ondan geriye kalanları alan kişiler arasında zorunlu bir bağımlılık yaratıyorlar."
+          "text": "Gerilimler özellikle bir kaynak paylaşıldığında doğar. Dünyada 260'tan fazla ırmak **sınıraşan**dır: birkaç ülkeyi geçer, kaynağı denetleyen yukarı kıyıdaşlarla geriye kalanı alan aşağı kıyıdaşlar arasında zorunlu bir bağımlılık kurar."
         },
         {
           "type": "paragraph",
-          "text": "Nil bu gerilimi çok iyi gösteriyor. Etiyopya, elektrik üretmek ve kendi kendine daha fazla yeterli hale gelmek için Mavi Nil üzerinde devasa bir baraj olan **[[GERD]]**'yi inşa etti. Ancak suyunun yüzde 95'i Nil'e bağımlı olan Mısır, nehrin yukarısında tutulan her metreküpü kendi güvenliğine yönelik doğrudan bir tehdit olarak algılıyor."
+          "text": "Nil bu gerilimi iyi gösterir. Etiyopya, elektrik üretmek ve daha özerk olmak için Mavi Nil üzerinde **[[GERD]]** adlı dev bir baraj kurdu. Ama suyunun %95'ini Nil'den alan Mısır, yukarıda tutulan her metreküpü kendi güvenliğine doğrudan bir tehdit sayar."
         },
         {
           "type": "funFact",
-          "text": "1960 yılında Hindistan ve Pakistan arasında imzalanan İndus Nehri Anlaşması, iki ülke arasındaki üç savaştan hiç bozulmadan sağ çıktı: suyun barış için de güçlü bir araç olabileceğinin kanıtı."
+          "text": "1960'ta Hindistan ile Pakistan arasında imzalanan İndus ırmağı antlaşması, iki ülke arasındaki üç savaştan sağ çıktı ve hiç bozulmadı: suyun aynı zamanda güçlü bir barış aracı olabileceğinin kanıtı."
         }
       ]
     },
@@ -77,15 +77,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Su kıtlığıyla karşı karşıya kalan bazı ülkeler teknolojiye güveniyor. Deniz suyunu içme suyuna dönüştüren **tuzdan arındırma**, Körfez ülkelerinde ve Orta Doğu'da kendine yer edinmiştir. İsrail, içme suyunun %80'inden fazlasını tuzdan arındırma tesislerini kullanarak üretiyor. Ancak süreç pahalı ve enerji yoğun olmaya devam ediyor ve deniz ekosistemlerine zarar verebilecek çok tuzlu su olan **tuzlu su**'yi açığa çıkarıyor."
+          "text": "Su azaldıkça bazı ülkeler teknolojiye oynar. Deniz suyunu içme suyuna çeviren **tuzdan arındırma**, Körfez ülkelerinde ve Yakındoğu'da yerleşti. İsrail böylece içme suyunun %80'inden fazlasını tuzdan arındırma tesisleriyle üretir. Usul yine de pahalı ve enerji yiyicidir, üstelik deniz ekosistemlerini bozabilen çok tuzlu bir su olan **salamura** bırakır."
         },
         {
           "type": "paragraph",
-          "text": "Diğer çözümler ayıklıkla oynuyor. Suyu doğrudan bitki köklerine ileten damla sulama, tarımsal tüketimi yüzde 30 ila 70 oranında azaltıyor."
+          "text": "Başka çözümler tutumluluğa oynar. Suyu doğrudan bitki köklerine götüren damla sulama, tarımsal tüketimi %30 ile %70 arasında düşürür."
         },
         {
           "type": "funFact",
-          "text": "Büyük su rezervlerinin bulunmadığı küçük bir bölge olan **[[Singapur]]**'de atık su, \"YENİ Su\" adı altında geri dönüştürülmeden önce kaynak suyundan daha saf hale gelecek şekilde ileri teknikler kullanılarak arıtılıyor."
+          "text": "Minik ve büyük su rezervi olmayan **[[Singapur]]** topraklarında atık sular o kadar ileri tekniklerle arıtılır ki kaynak suyundan daha saf hale gelir, sonra “NEWater” adıyla geri dönüştürülür."
         }
       ]
     },
@@ -96,15 +96,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "“Su savaşları” öngörülerine rağmen tarih, bu kaynağın açık çatışmadan çok işbirliği için kullanıldığını gösteriyor. Komşu ülkeler arasında havza komisyonları ve anlaşmalar oluşturmak, krizleri önlemenin en iyi yolu olmaya devam ediyor."
+          "text": "“Su savaşları” kehanetlerine rağmen tarih, bu kaynağın açık çatışmadan çok işbirliğine yaradığını gösterir. Havza komisyonları ve komşu ülkeler arasında antlaşmalar kurmak, krizleri önlemenin hâlâ en iyi yoludur."
         },
         {
           "type": "paragraph",
-          "text": "Sorunun boyutunu anlamaya yardımcı olan bir kavram var: **[[sanal su]]**, yani bir ürünü üretmek için gereken su miktarı. Su sıkıntısı çeken bir ülke, buğday ithal ederek aslında onu başka bir yerde yetiştirmek için kullanılan suyu da ithal ediyor. Örneğin, bir kilogram sığır eti üretmek için yaklaşık 15.000 litre suya ihtiyaç duyulurken, bir kilogram buğday için bu miktar 1.500 litredir."
+          "text": "Sorunun ölçeğini anlamaya bir kavram yardım eder: **[[sanal su]]**, yani bir ürünü üretmek için gereken su miktarı. Buğday ithal eden susuz bir ülke aslında başka yerde ekim için kullanılan suyu ithal eder. Örneğin bir kilogram sığır eti üretmek için yaklaşık 15.000 litre su gerekir, bir kilogram buğday için 1.500 litreye karşılık."
         },
         {
           "type": "takeaway",
-          "text": "Erişilebilir tatlı su, Dünya'daki suyun %1'inden azını temsil ediyor ve yüz milyonlarca insan, karşıt çıkarlara sahip ülkeler tarafından paylaşılan havzalarda yaşıyor. Teknoloji ve uluslararası işbirliği gelecekteki su krizlerine karşı en iyi silah olmaya devam ediyor."
+          "text": "Erişilebilir tatlı su yeryüzü suyunun %1'inden azıdır ve yüz milyonlarca insan, çıkarları çatışan ülkeler arasında paylaşılan havzalarda yaşar. Teknoloji ve uluslararası işbirliği, gelecek su krizlerine karşı hâlâ en iyi silahlardır."
         }
       ]
     }

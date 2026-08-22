@@ -1,14 +1,14 @@
 {
   "id": "course_41_pourquoi_le_ciel_est_il_bleu",
-  "title": "Gökyüzü neden mavi?",
+  "title": "Gökyüzü neden mavidir?",
   "subtitle": "Işık ve atmosfer",
   "subject": "sciences",
   "subcategory": "Our daily life explained",
-  "description": "Mavi gökyüzüne bakmak o kadar sıradan ki nedenini sormayı unutuyoruz. Cevap Güneş'in ışığında ve onu görmek için içinden geçtiğimiz havada yatıyor.",
+  "description": "Mavi gökyüzüne bakmak o kadar sıradandır ki nedenini sormayı unutursun. Yanıt Güneş'in ışığında ve onu görmek için geçtiğin havadadır.",
   "hero": {
     "image": "pourquoi_le_ciel_est_il_bleu",
     "ratio": "16:9",
-    "hook": "Gökyüzü maviye boyanmıyor; bu, ışığın ve havanın sihirli bir numarası."
+    "hook": "Gökyüzü maviye boyanmış değildir: ışıkla havanın bir sihir numarasıdır."
   },
   "sections": [
     {
@@ -18,55 +18,55 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mavi gökyüzüne bakmak o kadar sıradan ki, neden öyle olduğunu sormayı unutuyoruz. Ancak Dünya'yı çevreleyen gaz tabakası olan **atmosfer**'nin kendine ait bir rengi yoktur. Bu renk, Güneş'in ışığı ile etrafımızda dolaşan gaz moleküllerinin çok hassas bir karşılaşmasından kaynaklanmaktadır."
+          "text": "Mavi gökyüzüne bakmak o kadar sıradandır ki nedenini sormayı unutursun. Dünyayı saran gaz katmanı **atmosfer**in kendi rengi yoktur. Bu ton, Güneş ışığı ile çevremizde yüzen gaz moleküllerinin çok belirli bir karşılaşmasından gelir."
         },
         {
           "type": "paragraph",
-          "text": "Bu maviyi anlamak, ışığın nasıl ilerlediğini ve **kesildi**, yani düz gitmek yerine her yöne geri döndüğünü anlamak anlamına gelir. Ve hoş bir sürpriz: Gün batımında gökyüzünü kırmızı ve turuncuya boyayan fenomenin aynısı."
+          "text": "Bu maviyi anlamak, ışığın nasıl yol aldığını ve nasıl **dağıldığını** anlamaktır: dosdoğru gitmek yerine her yöne saçılır. Güzel sürpriz: gün batımında gökyüzünü kırmızı ve turuncuya boyayan da aynı olgudur."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p1",
-      "title": "Beyaz ışık tüm renkleri gizler",
+      "title": "Beyaz ışık bütün renkleri gizler",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Güneş ışığı bize beyaz görünür ama aslında gökkuşağının tüm renklerini içerir: [[Görünür ışık spektrumu]]'dir. Her renk bir **dalgaboyuna**, yani ışık “dalgasının” boyutuna karşılık gelir. Mavi ve morun kısa dalgaları vardır; kırmızının uzun dalgaları var."
+          "text": "Güneş ışığı bize beyaz görünür, ama aslında gökkuşağının bütün renklerini taşır: [[Görünür ışık spektrumu]]. Her renk bir **dalga boyuna**, yani ışıklı “dalga”sının boyutuna karşılık gelir. Mavi ve morun dalgaları kısadır; kırmızınınkiler uzundur."
         },
         {
           "type": "funFact",
-          "text": "Ay'da ışığı dağıtacak hava yoktur. Sonuç: orada, gökyüzü güpegündüz **siyah kalır**, Güneş parladığında bile. Gökyüzünün renginin Güneş'ten değil havadan geldiğinin kanıtı."
+          "text": "Ay'da ışığı dağıtacak hava yoktur. Sonuç: orada gökyüzü Güneş parlasa bile **gündüz siyah** kalır. Kanıt: gökyüzünün rengi havadan gelir, Güneş'ten değil."
         },
         {
           "type": "paragraph",
-          "text": "Çünkü Güneş ile gözlerimiz arasında hava boş değildir: küçük **molekülleri gaz, özellikle havanın yaklaşık**Z78**%**'si olan nitrojen ve yaklaşık olarak **21%**'si olan oksijen ile doludur. Işık dalgalarından çok daha küçüktürler. Bir ışın onlara çarptığında artık düz gitmez; her yöne geri gönderilir. Bu küçük sıçrama gökyüzünün renginin başlangıç ​​noktasıdır."
+          "text": "Çünkü Güneş ile gözlerin arasında hava boş değildir: minik **gaz molekülleri**yle doludur, başta havanın yaklaşık **78%**'i azot, yaklaşık **21%**'i oksijen. Işık dalgalarından çok daha küçüktürler. Bir ışın onlara çarpınca dosdoğru gitmez: her yöne saçılır. Bu küçük sekme gökyüzü renginin başlangıcıdır."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p2",
-      "title": "Difüzyon: neden mavi kazanıyor?",
+      "title": "Saçılma: mavi neden kazanır",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "İngiliz fizikçi **Lord Rayleigh** **1871**'de bu fenomeni bir denklem haline getirdi. Bir rengin rengi ne kadar kısaysa, hava molekülleri tarafından her yöne o kadar fazla yansıtıldığını keşfetti. Bu [[Rayleigh saçılması]]."
+          "text": "**1871**'de İngiliz fizikçi **Lord Rayleigh** bu olguyu denkleme döker. Bir rengin dalgası ne kadar kısaysa hava moleküllerinin onu her yöne o kadar çok saçtığını görür. Buna [[Rayleigh saçılması]] denir."
         },
         {
           "type": "funFact",
-          "text": "Mars'ın gökyüzü bizimkinin tam tersidir: demir açısından zengin tozu gün boyunca onu pembe yapar, ancak gün batımları **mavi**'dir. Her şey havanın ne içerdiğine bağlıdır."
+          "text": "Mars gökyüzü bizimkinin tersini yapar: demir zengin tozu onu gündüz pembemsi yapar, ama gün batımları **mavi**dir. Her şey havanın içinde ne olduğuna bağlıdır."
         },
         {
           "type": "image",
           "asset": "blue_sky_sunlight_scattering_atmosphere",
           "ratio": "4:3",
-          "caption": "Mavi ışık hava yoluyla her yöne dağılır."
+          "caption": "Mavi ışık hava tarafından her yöne saçılır"
         },
         {
           "type": "paragraph",
-          "text": "Somut olarak, mavi ışık kırmızıya göre yaklaşık **9 kat daha fazla** saçılır. Kırmızı havada neredeyse düz bir çizgide ilerlerken mavi her yere seker. Bu nedenle gökyüzüne nereye bakarsanız bakın, mavi daima gözünüze ulaşır: tüm gökyüzü bu dağınık maviyle “parlıyor” gibi görünür."
+          "text": "Somutta mavi ışık kırmızıdan yaklaşık **9 kat fazla** saçılır. Kırmızı havayı neredeyse düz çizgide geçer, mavi her yere seker. Onun için gökyüzünde nereye bakarsan bak, bir mavi mutlaka gözüne ulaşır: bütün gökyüzü bu saçılmış maviyle “parlıyor” gibi durur."
         }
       ]
     },
@@ -77,36 +77,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mantıksal bir soru ortaya çıkıyor: En kısa dalgalar en çok dağılmışsa, menekşe kazanmalı çünkü dalgası mavininkinden bile daha kısadır. Gökyüzü ayrıca bol miktarda dağınık mor içeriyor."
+          "text": "Mantıklı bir soru doğar: en kısa dalgalar en çok saçılıyorsa mor kazanmalı, çünkü dalgası maviden de kısadır. Gökyüzünde saçılmış mor da boldur zaten."
         },
         {
           "type": "paragraph",
-          "text": "Cevap gökyüzünde değil, gözlerimizde. Renkleri, retinadaki ışığa duyarlı hücreler olan **koniler** adı verilen sensörleri kullanarak yakalıyoruz. Maviye mordan çok daha duyarlıdırlar. Ayrıca Güneş, mor ışıktan daha fazla mavi ışık yayar. Beynimiz daha sonra bir çeşit ortalama yapar ve güzel bir mavi görür. Diğer renklere duyarlı bir hayvan hiç şüphesiz bambaşka bir gökyüzü görecektir."
+          "text": "Yanıt gökyüzünde değil, gözdedir. Renkleri **koniler** denen algılayıcılarla, yani ışığa duyarlı retina hücreleriyle yakalarsın. Bunlar mora göre maviye çok daha duyarlıdır. Üstelik Güneş mor ışıktan çok mavi ışık yollar. Beyin bir çeşit ortalama yapar ve güzel bir mavi görür. Başka renklere duyarlı bir hayvan bambaşka bir gökyüzü görürdü."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p4",
-      "title": "Peki akşam kırmızısı?",
+      "title": "Ya akşamın kırmızısı?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Gün batımı da aynı kurallara uyar ancak bir şeyi değiştirir: mesafe. Öğle vakti ışık ince bir hava tabakasından geçer. Akşam, Güneş alçaktayken ışınlarının bize ulaşması için **çok daha fazla havadan** geçmesi gerekir."
+          "text": "Gün batımı aynı kuralları izler, ama bir şeyi değiştirir: mesafeyi. Öğleyin ışık ince bir hava katmanından geçer. Akşam, Güneş alçaktayken, ışınları bize ulaşmadan **çok daha fazla hava** aşmak zorundadır."
         },
         {
           "type": "image",
           "asset": "sunset_red_orange_sky_atmosphere",
           "ratio": "16:9",
-          "caption": "Ufuk seviyesinde ışık çok daha kalın bir havadan geçer."
+          "caption": "Ufuk hizasında ışık çok daha kalın bir hava tabakasından geçer"
         },
         {
           "type": "paragraph",
-          "text": "Bu uzun yolculukta tüm mavilik bize ulaşmadan iyice dağılıyor; havanın yoğunluğu tarafından filtreleniyor. Geriye yalnızca en dayanıklı renkler kaldı; kırmızılar ve turuncular. Toz veya kirlilik varsa difüzyon devreye girer: Hava moleküllerinden daha büyük parçacıklar gökyüzünü sütlü hale getirir veya bu turuncu tonları güçlendirir. [[Mie difüzyonu]]"
+          "text": "Bu uzun yolda bütün mavi bize gelmeden saçılır: havanın kalınlığı onu süzmüş gibi olur. Geriye en dayanıklı renkler, kırmızılar ve turuncular kalır. Toz veya kirlilik varsa [[Mie saçılımı]] devreye girer: hava moleküllerinden iri parçacıklar gökyüzünü süt gibi yapar veya bu turuncu tonları güçlendirir."
         },
         {
           "type": "takeaway",
-          "text": "Gökyüzü mavidir çünkü kısa dalgalar havada uzun dalgalara göre yaklaşık **Z9** kat daha fazla dağılır. Gün batımında ışık o kadar çok havanın içinden geçer ki bize yalnızca kırmızı ışık ulaşır."
+          "text": "Gökyüzü mavidir çünkü kısa dalgalar hava tarafından uzun dalgalardan yaklaşık **9 kat fazla** saçılır. Gün batımında ışık o kadar çok hava aşar ki hâlâ bize ulaşan yalnızca kırmızıdır. Toz veya kirlilik bu sahneyi süt gibi yapabilir ya da turuncuyu daha da güçlendirebilir."
         }
       ]
     }

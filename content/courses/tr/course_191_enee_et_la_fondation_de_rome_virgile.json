@@ -1,14 +1,14 @@
 {
   "id": "course_191_enee_et_la_fondation_de_rome_virgile",
-  "title": "Aeneas ve Roma'nın kuruluşu (Virgil)",
+  "title": "Aeneas ve Roma'nın kuruluşu (Vergilius)",
   "subtitle": "Aeneis",
   "subject": "mythologie",
   "subcategory": "Other mythologies",
-  "description": "Aeneid'de Virgil, Truva'dan kaçan prens Aeneas'ın Roma hattını kurmak için Akdeniz'i nasıl geçtiğini anlatır.",
+  "description": "Aeneis'te Vergilius, Truva'dan kurtulan prens Aeneas'ın Akdeniz'i aşıp Roma soyunu nasıl kurduğunu anlatır.",
   "hero": {
     "image": "enee_et_la_fondation_de_rome",
     "ratio": "16:9",
-    "hook": "Kaçan bir Truvalı, babasını omuzlarında taşır: Bu sürgünden Roma doğar."
+    "hook": "Kaçan bir Truvalı babasını omuzlarında taşır: Roma bu sürgünden doğar."
   },
   "sections": [
     {
@@ -18,36 +18,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Aeneis**, **Vergilius**'nin harika şiiridir. Truva'nın düşüşünden sağ kurtulan Truva prensi **Aeneas**'nin macerasını anlatıyor. Tanrıların rehberliğinde Akdeniz'i geçerek İtalya'da Roma'ya giden soyunu buldu."
+          "text": "**Aeneis**, **Vergilius**'un büyük şiiridir. Truva'nın düşüşünden kurtulan Truvalı prens **Aeneas**'ın yolculuğunu anlatır. Tanrıların kılavuzluğunda Akdeniz'i aşar; İtalya'da Roma'ya gidecek soyu kurmak için."
         },
         {
           "type": "paragraph",
-          "text": "Bu sadece bir macera değil. Roma'ya Homeros'a yakışır bir geçmiş vermek için yazılmış, Roma gücünün doğuşu efsanesidir."
+          "text": "Bu yalnızca bir serüven değildir. Roma gücünün doğuş mitidir; kente Homeros'a layık bir geçmiş vermek için yazılmıştır."
         }
       ]
     },
     {
       "id": "course_191_enee_et_la_fondation_de_rome_virgile_p1",
-      "title": "Virgil Augustus için yazıyor",
+      "title": "Vergilius, Augustus için yazar",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "MÖ 1. yüzyılın sonunda, iç savaşların ardından imparator **Ağustos**, gücünü istikrara kavuşturmak istedi. Virgil'i Homeros'a layık bir destan yazması için görevlendirir. Eser aynı zamanda [[Augustus propagandası]]: prensi ilahi bir kahramana bağlamak."
+          "text": "M.Ö. 1. yüzyılın sonunda, iç savaşlardan sonra imparator **Augustus** iktidarını sabitlemek ister. Vergilius'tan Homeros'a layık bir destan ister. Eser aynı zamanda [[Augustus propagandası]] işlevi görür: hükümdarı tanrısal bir kahramana bağlamak."
         },
         {
           "type": "image",
           "asset": "dido_aeneas_carthage_painting",
           "ratio": "4:3",
-          "caption": "Virgil, Aeneid şairi, kaderin takdir ettiği Roma'nın savunucusu."
+          "caption": "Vergilius, Aeneis'in şairi, kaderin istediği Roma'nın ozanı"
         },
         {
           "type": "paragraph",
-          "text": "Virgil orada on bir yıl çalıştı (MÖ 29-19). İlk altı şarkı denizde gezintiyi konu alıyor. Sonraki altısı İtalya'daki savaşı anlatıyor. Büyük antik destanların mısralarını [[Daktilik heksametreler]]'de yazar."
+          "text": "Vergilius üzerinde on bir yıl çalışır (M.Ö. 29-19). İlk altı şarkı denizdeki sürgünü izler. Sonraki altısı İtalya'daki savaşı anlatır. Antik büyük destanların vezni [[daktilik heksametreler]] ile yazar."
         },
         {
           "type": "funFact",
-          "text": "Virgil MÖ **19**'de öldü ve el yazmasının tamamlanmamış sayılarak yakılmasını istedi. Augustus itaat etmeyi yasaklıyor. Roma'nın ulusal destanı, yazarının iradesine aykırı olarak ortaya çıkıyor."
+          "text": "Vergilius **M.Ö. 19**'da ölür ve bitmemiş saydığı elyazmasının yakılmasını ister. Augustus itaat etmeyi yasaklar. Roma'nın ulusal destanı, yazarının iradesine karşı yayımlanır."
         }
       ]
     },
@@ -58,54 +58,54 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Truva Savaşı]]'nin sonunda Truva yanarken, tanrıça **Venus** ve ölümlü Anchises'in oğlu Aeneas'a kaçmaları emredilir. Omuzlarında babasını, elinde oğlu Ascanius'u taşıyarak ayrılır ve yanına ocak tanrıları [[Penatlar]]'yi alır. Bu jest [[Roma pietaları]]'yi tanımlar: aileye, tanrılara ve kadere karşı görev."
+          "text": "Truva yanarken, [[Truva Savaşı]] biterken, tanrıça **Venüs** ile ölümlü Anchises'in oğlu Aeneas kaçma emri alır. Babasını omuzlarında, oğlu Askanius'u elinden tutarak çıkar; ocak tanrıları [[Penatlar]] da yanındadır. Bu jest [[Roma pietaları]] erdemini tanımlar: aileye, tanrılara ve kadere borç."
         },
         {
           "type": "image",
           "asset": "aeneas_fleeing_burning_troy_anchises_painting",
           "ratio": "4:3",
-          "caption": "Aeneas, babası ve oğluyla birlikte yanan Truva'dan kaçar."
+          "caption": "Aeneas alevli Truva'dan kaçar, baba ve oğul yanındadır"
         },
         {
           "type": "paragraph",
-          "text": "Kartaca'da kraliçe **Dido**'u seviyor. Ancak Roma tanrılarının kralı [[Jüpiter]] onu görevine geri çağırır. Aeneas ayrılır. Dido intihar eder ve soyunu lanetler: Efsane, [[Pön Savaşları]] öncesinde Roma ile Kartaca arasında gelecekte yaşanacak nefreti böyle açıklar."
+          "text": "Kartaca'da kraliçe **Dido**'yu sever. Ama Roma tanrılarının kralı [[Jüpiter]] onu görevine çağırır. Aeneas yeniden yola çıkar. Dido intihar eder ve soyunu lanetler: mit, Roma ile Kartaca arasındaki gelecekteki nefreti [[Pön Savaşları]] öncesinde böyle açıklar."
         },
         {
           "type": "funFact",
-          "text": "Aeneas'ın oğlu Ascanius'a da Iule denir. Julius Caesar ve Augustus'un da aralarında bulunduğu [[Julii]] ailesi, bu ilahi kökenin Venüs aracılığıyla olduğunu iddia ediyor."
+          "text": "Aeneas'ın oğlu Askanius'un öteki adı Iulus'tur. Jül Sezar ve Augustus'un ait olduğu [[Julii]] ailesi, Venüs üzerinden bu tanrısal kökeni sahiplenir."
         }
       ]
     },
     {
       "id": "course_191_enee_et_la_fondation_de_rome_virgile_p3",
-      "title": "Lazio'daki savaş",
+      "title": "Latium'daki savaş",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Cehenneme indikten sonra Aeneas, orta İtalya'daki **Lazio**'ye varır. Kral **Latin** ona kızı **Lavinia**'yi vaat ediyor. Ancak Truva atlarına düşman bir tanrıça olan [[Juno]] tarafından desteklenen prens **Turnus** savaşı başlatır."
+          "text": "Yeraltı dünyasına indikten sonra Aeneas orta İtalya'daki **Latium**'a çıkar. Kral **Latinus** ona kızı **Lavinia**'yı vaat eder. Ama Truvalılara düşman tanrıça [[Juno]] tarafından desteklenen prens **Turnus** savaşı başlatır."
         },
         {
           "type": "paragraph",
-          "text": "Aeneas Turnus'u yener ve **Lavinium**'yi kurar. Daha sonra oğlu, Romulus ve Remus'un doğacağı [[Uzun Alba]]'yi bulacaktı. Böylece efsane Truva'yı tek bir zincirle Roma'ya bağlar."
+          "text": "Aeneas Turnus'u yener ve **Lavinium**'u kurar. Daha sonra oğlu [[Alba Longa]] kentini kuracak, Romulus ile Remus oradan doğacaktır. Mit böylece Truva'yı Roma'ya tek bir zincirle bağlar."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "Truva",
-              "title": "Aeneas'ın Uçuşu",
-              "detail": "Babayı, oğlu ve ev tanrılarını kurtarır."
+              "title": "Aeneas'ın kaçışı",
+              "detail": "Babasını, oğlunu ve ocak tanrılarını kurtarır."
             },
             {
               "date": "Kartaca",
               "title": "Dido",
-              "detail": "Kırık aşk, Roma'ya lanet."
+              "detail": "Kırık bir aşk, Roma'ya lanet."
             },
             {
-              "date": "Lazio",
+              "date": "Latium",
               "title": "Turnus'a karşı zafer",
-              "detail": "Lavinium'un kuruluşu, Roma'nın başlangıcı."
+              "detail": "Lavinium'un kuruluşu, Roma'nın tohumu."
             }
           ]
         }
@@ -113,16 +113,16 @@
     },
     {
       "id": "course_191_enee_et_la_fondation_de_rome_virgile_p4",
-      "title": "Bir görev kahramanı",
+      "title": "Görevin kahramanı",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Orta Çağ'da Virgil neredeyse kehanet gibi bir bilge haline geldi. Dante onu [[İlahi Komedya]]'de rehberi yapar. Ancak Aeneas mutlu bir kahraman değildir; kaderin yükünü taşır. Roma sürgünden, feda edilen aşktan ve savaştan doğdu."
+          "text": "Orta Çağ'da Vergilius neredeyse peygamberce bir bilgeye dönüşür. Dante onu [[İlahi Komedya]] içinde kılavuzu yapar. Ama Aeneas neşeli bir kahraman değildir: kaderin ağırlığını taşır. Roma bir sürgünden, feda edilmiş bir aşktan ve bir savaştan doğar."
         },
         {
           "type": "takeaway",
-          "text": "**Aeneis**'de Virgil, Roma'nın efsanevi atası Truva'dan sağ kurtulan **Aeneas**'yi canlandırıyor. Kahraman **turtalar**'yi temsil ediyor: arzudan önce görev, kişisel mutluluktan önce kader."
+          "text": "**Aeneis**'te Vergilius, Truva'dan kurtulan **Aeneas**'ı Roma'nın efsanevi atası yapar. Kahraman **pietas** erdemini cisimleştirir: arzudan önce görev, kişisel mutluluktan önce kader."
         }
       ]
     }

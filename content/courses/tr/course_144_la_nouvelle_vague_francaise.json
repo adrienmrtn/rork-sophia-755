@@ -1,14 +1,14 @@
 {
   "id": "course_144_la_nouvelle_vague_francaise",
-  "title": "Fransız Yeni Dalgası",
+  "title": "Fransız Nouvelle Vague",
   "subtitle": "1959-1968",
   "subject": "art",
   "subcategory": "Cinema, photography & architecture",
-  "description": "*Sinema defterleri*'den genç eleştirmenler kamera arkasına geçiyor. **1959** ile **1968** arasında Yeni Dalga, filmi stüdyodan kurtardı ve modern auteur sinemasını icat etti.",
+  "description": "*Cahiers du cinéma* dergisinin genç eleştirmenleri kameranın arkasına geçer. **1959** ile **1968** arasında Nouvelle Vague filmi stüdyodan kurtarır ve modern auteur sinemasını icat eder.",
   "hero": {
     "image": "la_nouvelle_vague_francaise",
     "ratio": "16:9",
-    "hook": "Film eleştirmenleri kameraları çalıyor ve yedinci sanatı yeniden keşfediyor."
+    "hook": "Sinema eleştirmenleri kameraları çalar ve yedinci sanatı yeniden icat eder."
   },
   "sections": [
     {
@@ -18,107 +18,107 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Yeni Dalga** (1959-1968) basit bir tarz değil. Bu bir güç kapma işi. Genç Fransız film meraklıları, stüdyo sinemasının fazla sabit, fazla gösterişli ve fazla önceden yazılmış olduğu yargısına varıyor. Roman yazdığın gibi filme almak istiyorlar: Özgürce, birinci şahıs bakış açısıyla."
+          "text": "**Nouvelle Vague** (1959-1968) yalın bir üslup değildir. Bir iktidar alışıdır. Genç Fransız sinefiller stüdyo sinemasını fazla donuk, fazla cilalı, fazla önceden yazılmış bulur. Bir roman yazılır gibi çekmek isterler: özgürce, birinci tekilde."
         },
         {
           "type": "paragraph",
-          "text": "Eleştiriden yapım aşamasına geçerek yönetmeni filmin gerçek yazarı haline getiriyorlar. Ve dünya sinemasını değiştiriyorlar."
+          "text": "Eleştiriden yönetmenliğe geçerek sahneye koyanı filmin gerçek yazarı yaparlar. Ve dünya sinemasını değiştirirler."
         }
       ]
     },
     {
       "id": "course_144_la_nouvelle_vague_francaise_p1",
-      "title": "İlk önce bir fikir devrimi",
+      "title": "Önce bir fikir devrimi",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Setlerden önce bir dergi var: **1951**'de [[André Bazin]] tarafından kurulan **Sinema defterleri**. Etrafında genç eleştirmenler vardı: **Jean-Luc Godard**, **François Truffaut**, **Claude Chabrol**, **Jacques Rivette**, **Éric Rohmer**. Onların temel fikri [[Yazar politikası]] olarak adlandırılıyor."
+          "text": "Platoların önünde bir dergi vardır: **1951**'de [[André Bazin]] tarafından kurulan **Cahiers du cinéma**. Çevresinde genç eleştirmenler: **Jean-Luc Godard**, **François Truffaut**, **Claude Chabrol**, **Jacques Rivette**, **Éric Rohmer**. Merkez fikirleri [[Auteur teorisi]] adını taşır."
         },
         {
           "type": "image",
           "asset": "cahiers_du_cinema_magazine_1950s",
           "ratio": "4:3",
-          "caption": "Les Cahiers du cinéma: Yeni Dalga'nın sinema hakkında düşünmeyi öğrendiği okul."
+          "caption": "*Cahiers du cinéma*: Nouvelle Vague'ın filmi düşünmeyi öğrendiği okul"
         },
         {
           "type": "paragraph",
-          "text": "Onlara göre gerçek yaratıcı senarist değil, yönetmendir. Çerçeveleme, ritim, kesmeler; bunlar bir yazarın imzasıdır, tıpkı bir romancının tarzı gibi."
+          "text": "Onlara göre gerçek yaratıcı senarist değil, sahneye koyandır. Kadraj, ritim, kesmeler: işte bir yazarın imzası, bir romancının üslubu gibi."
         }
       ]
     },
     {
       "id": "course_144_la_nouvelle_vague_francaise_p2",
-      "title": "1959: Truffaut ve Godard sahneye çıkıyor",
+      "title": "1959: Truffaut ve Godard sahneye çıkar",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**1959**'de *Dört Yüz Darbe* - **François Truffaut** Cannes'da zafer kazandı. Film, [[Jean-Pierre Léaud]]'nin canlandırdığı, ayrı yaşayan genç **Antoine Doinel**'yi konu alıyor. Kamera katı bir senaryodan ziyade hayatı takip ediyor. Bize doğru son bakış [[dördüncü duvar]]'den geçiyor: kahraman mutlu sonla bitmeden izleyiciye bakıyor."
+          "text": "**1959**'da **François Truffaut**'nun *400 Darbe* filmi Cannes'da zafer kazanır. Film, [[Jean-Pierre Léaud]] canlandırmasıyla kopuk ergen **Antoine Doinel**'i izler. Kamera korse senaryodan çok hayatı takip eder. Bize çevrilen son bakış [[dördüncü duvar]] çizgisini aşar: kahraman mutlu sonsuz bir bitiş olmadan seyirciye bakar."
         },
         {
           "type": "image",
           "asset": "truffaut_400_coups_antoine_doinel_film",
           "ratio": "4:3",
-          "caption": "Antoine Doinel denize dönük: kesin bir kaderi reddeden bir genç."
+          "caption": "Deniz karşısında Antoine Doinel: çizilmiş kaderi reddeden bir gençlik"
         },
         {
           "type": "funFact",
-          "text": "Ertesi yıl, Godard'ın [[Jean-Paul Belmondo]] ile yaptığı *Nefes nefese*, ani kesintileriyle şok oldu. Godard sanki makasla yazıyormuş gibi hareketlerin ortasını kesiyor."
+          "text": "Ertesi yıl Godard'ın [[Jean-Paul Belmondo]] ile *Serseri Aşıklar* filmi ani kesmeleriyle şok eder. Godard jestlerin ortasından keser, makasla yazıyormuş gibi."
         },
         {
           "type": "paragraph",
-          "text": "Bu iki film hikayeleri farklı şekilde anlatabildiğimizi kanıtlıyor: daha hızlı, daha özgür, sokağa daha yakın."
+          "text": "Bu iki film başka türlü anlatılabileceğini kanıtlar: daha hızlı, daha özgür, sokağa daha yakın."
         }
       ]
     },
     {
       "id": "course_144_la_nouvelle_vague_francaise_p3",
-      "title": "Stüdyoyu bırak, Paris'i çek",
+      "title": "Stüdyodan çıkmak, Paris'i çekmek",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mola aynı zamanda tekniktir. [[Éclair Caméflex]] kameralar ve daha hassas filmler, [[Doğal ortamlarda ve ışıklı kamerada çekim yapmak]]. Artık ağır stüdyolar yok: Kafelerde, apartmanlarda ve Paris sokaklarında, genellikle doğal ışıkta çekim yapıyoruz."
+          "text": "Kopuş tekniktir de. [[Éclair Caméflex]] kameraları ve daha duyarlı filmler [[Yerinde çekim ve hafif kamera]] yolunu açar. Ağır stüdyolar biter: kafelerde, dairelerde, Paris sokaklarında, çoğu zaman doğal ışıkta çekilir."
         },
         {
           "type": "paragraph",
-          "text": "Oyuncular doğaçlama yapıyor. Konuşma tanıdık hale gelir, bazen kekemelik olur. Sinema hayat gibi nefes alır. Bu özgürlük daha sonra Brezilya'daki [[Novo Sineması]]'ye, ardından Danimarka'daki [[Dogma 95]] gibi aşırı katı kurallara ilham kaynağı oldu; bunlar özgünlüğe olan aynı susuzluğun uzak mirasçılarıydı."
+          "text": "Oyuncular doğaçlar. Söz tanıdık, bazen kekeleyen olur. Sinema hayat gibi nefes alır. Bu özgürlük sonra Brezilya'da [[Sinema Novo]] hareketini, Danimarka'da [[Dogma 95]] gibi çok katı kuralları esinler: aynı sahicilik susuzluğunun uzak vârisleri."
         }
       ]
     },
     {
       "id": "course_144_la_nouvelle_vague_francaise_p4",
-      "title": "Küresel bir miras",
+      "title": "Dünya çapında bir miras",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**1970** yıllarında **Yeni Hollywood** bundan ilham aldı: **Martin Scorsese**, **Francis Ford Coppola**, **Steven Spielberg** Amerikan verimliliği ile Fransız özgürlüğünü bir araya getiriyor. Yeni Dalga kalıcı bir fikri empoze etti: Bir film tek bir kişinin sesini taşıyabilir."
+          "text": "**1970**'lerde **Yeni Hollywood** bundan esinlenir: **Martin Scorsese**, **Francis Ford Coppola**, **Steven Spielberg** Amerikan verimini Fransız özgürlüğüyle karıştırır. Nouvelle Vague kalıcı bir fikir dayattı: bir film tek bir kişinin sesini taşıyabilir."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1951",
-              "title": "Sinema defterleri",
-              "detail": "Dergi fikirlerin laboratuvarına dönüşür."
+              "title": "*Cahiers du cinéma*",
+              "detail": "Dergi fikirlerin laboratuvarı olur."
             },
             {
               "date": "1959",
-              "title": "Dört Yüz Darbe",
-              "detail": "Truffaut, Cannes'da auteur sinemasını dayatıyor."
+              "title": "400 Darbe",
+              "detail": "Truffaut auteur sinemasını Cannes'da yerleştirir."
             },
             {
               "date": "1960",
-              "title": "Nefes nefese",
-              "detail": "Godard klasik montajı bozuyor."
+              "title": "Serseri Aşıklar",
+              "detail": "Godard klasik kurguyu kırar."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Yeni Dalga sinemayı stüdyolardan sokağa taşıdı. Yönetmeni auteur yaptı ve bu fikir dünya çapında bağımsız sinemayı şekillendirmeye devam ediyor."
+          "text": "Nouvelle Vague sinemayı stüdyodan çıkarıp sokağa attı. Yönetmeni bir yazar yaptı ve bu fikir bağımsız sinemayı dünyanın her yerinde şekillendirmeye devam eder."
         }
       ]
     }

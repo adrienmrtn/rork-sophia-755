@@ -1,14 +1,14 @@
 {
   "id": "course_213_l_evasion_fiscale_des_multinationales",
-  "title": "Çok uluslu şirketlerin vergi kaçakçılığı",
-  "subtitle": "GAFAM nasıl bu kadar az vergi ödüyor?",
+  "title": "Çokuluslu şirketlerin vergi kaçırması",
+  "subtitle": "GAFAM neden bu kadar az vergi öder",
   "subject": "comprendreLeMonde",
   "subcategory": "Economy & society",
-  "description": "Dijital devler genellikle kârlarıyla karşılaştırıldığında alaycı vergiler ödüyorlar. Bu her zaman yasa dışı değildir: uluslararası hukuktaki boşlukların sonucudur.",
+  "description": "Dijital devler kârlarına kıyasla çoğu zaman gülünç vergiler öder. Bu her zaman yasadışı değildir: uluslararası hukuktaki gediklerin sonucudur.",
   "hero": {
     "image": "l_evasion_fiscale_des_multinationales",
     "ratio": "16:9",
-    "hook": "Apple, 2014 yılında İrlanda'da %0,005'e yakın bir efektif vergi oranı ödedi. Bu nasıl mümkün olabilir?"
+    "hook": "2014'te Apple İrlanda'da %0,005'e yakın etkili bir vergi oranı ödedi. Bu nasıl mümkün olur?"
   },
   "sections": [
     {
@@ -18,66 +18,66 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "GAFAM yani Google, Apple, Facebook (Meta), Amazon ve Microsoft dünyanın en zengin şirketleri arasında yer alıyor. Ancak kârlarına oranla genellikle geleneksel bir KOBİ'den çok daha az vergi öderler."
+          "text": "GAFAM, yani Google, Apple, Facebook (Meta), Amazon ve Microsoft, dünyanın en zengin şirketleri arasındadır. Yine de kârlarına oranla çoğu zaman klasik bir KOBİ'den çok daha az vergi öderler."
         },
         {
           "type": "paragraph",
-          "text": "Bu, tam anlamıyla dolandırıcılık değildir: **Vergi tutarıdır**, yani uluslararası hukuktaki boşluklardan ustaca yararlanılmasıdır. Bu mekanizma, Devletleri her yıl yüz milyarlarca dolardan mahrum bırakıyor. İşte bu nasıl işliyor ve dünya buna nasıl yanıt vermeye çalışıyor."
+          "text": "Bu katı anlamda dolandırıcılık değildir: **vergi optimizasyonu**dur, yani uluslararası hukuktaki gediklerin ustaca kullanılması. Bu mekanizma devletleri her yıl yüzlerce milyar dolardan yoksun bırakır. İşte nasıl işler ve dünya buna nasıl cevap vermeye çalışır."
         }
       ]
     },
     {
       "id": "course_213_l_evasion_fiscale_des_multinationales_p1",
-      "title": "Dijital için değil, fabrikalar için tasarlanmış bir vergi",
+      "title": "Fabrikalar için düşünülmüş, dijital için değil bir vergi",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Uluslararası vergi sistemi 20. yüzyılın başında endüstriyel bir ekonomi için tasarlandı: Bir şirketin [[işyeri]] olarak adlandırılan bir ülkede vergilendirilebilmesi için orada fabrika veya ofis sahibi olması gerekiyordu."
+          "text": "Uluslararası vergi sistemi 20. yüzyılın başında sanayi ekonomisi için kuruldu: bir şirketin bir ülkede fabrikası veya ofisi olmalıydı, buna [[işyeri]] denir, orada vergilendirilmek için."
         },
         {
           "type": "paragraph",
-          "text": "Dijital teknoloji bölgeyle olan bu bağı kopardı. Bugün bir şirket, bir ülkede tek bir binaya bile sahip olmadan, bir pazara hakim olabilir, milyonlarca kullanıcının verilerini ele geçirebilir ve çok para kazanabilir. Daha sonra parasını kazandığı yer ile bunu beyan ettiği yeri ayırabilir."
+          "text": "Dijital bu toprak bağını kırdı. Bir şirket bugün bir piyasaya hükmedebilir, milyonlarca kullanıcının verisini toplayabilir ve bir ülkede kocaman para kazanabilir, tek bir bina bile olmadan. O zaman parasını kazandığı yeri beyan ettiği yerden ayırabilir."
         },
         {
           "type": "funFact",
-          "text": "2014 yılında ABD IRS, Microsoft'un fikri mülkiyet hakları yoluyla 39 milyar dolarlık kârını Porto Riko'ya aktardığını ve 6,5 milyar dolardan fazla vergi tasarrufu sağladığını tespit etti."
+          "text": "2014'te Amerikan vergi idaresi Microsoft'un fikri mülkiyet hakları sayesinde 39 milyar dolar kârı Porto Riko'ya taşıdığını, 6,5 milyar dolardan fazla vergiden tasarruf ettiğini keşfetti."
         }
       ]
     },
     {
       "id": "course_213_l_evasion_fiscale_des_multinationales_p2",
-      "title": "Yüz milyarlarca dolarlık bir eksiklik",
+      "title": "Yüzlerce milyarlık bir kayıp",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "OECD'ye göre, bu uygulamalar dünya genelindeki kamu bütçelerine yılda 100 ile 240 milyar dolar arasında, yani gezegende toplanan tüm kurumlar vergilerinin %4 ila 10'una mal oluyor."
+          "text": "OECD'ye göre bu pratikler dünya kamu bütçelerine yılda 100-240 milyar dolara mal olur, yani gezegende toplanan bütün kurumlar vergisinin %4-10'u."
         },
         {
           "type": "image",
           "asset": "multinational_corporate_tax_avoidance_structure",
           "ratio": "16:9",
-          "caption": "Dijital devlerin Avrupa'daki merkezleri genellikle vergilerin en düşük olduğu ülkelerde bulunuyor."
+          "caption": "Dijital devlerin Avrupa merkezleri çoğu zaman verginin en düşük olduğu ülkelere kurulur"
         },
         {
           "type": "paragraph",
-          "text": "Bu açık, Devletleri hane halkı ve KOBİ'lere uygulanan vergileri artırmak ya da sağlık ve eğitim gibi kamu harcamalarını azaltmak arasında seçim yapmaya zorluyor. Yerel bir şirket ortalama olarak çok uluslu bir şirkete göre çok daha yüksek bir vergi oranı ödüyor ve bu da haksız rekabet yaratıyor."
+          "text": "Bu kayıp devletleri hanelerin ve KOBİ'lerin vergilerini artırmak ile sağlık veya eğitim gibi kamu harcamalarını kısmak arasında seçim yapmaya zorlar. Yerel bir şirket ortalama olarak bir çokulusludan çok daha yüksek bir vergi oranı öder, bu da haksız bir rekabet doğurur."
         }
       ]
     },
     {
       "id": "course_213_l_evasion_fiscale_des_multinationales_p3",
-      "title": "Yanıt: küresel asgari vergi",
+      "title": "Karşılık: küresel bir asgari vergi",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "2021'de OECD ve G20'nin himayesinde tarihi bir anlaşmayla [[%15 küresel minimum vergi]] limiti belirlendi. Ciroları 750 milyon avroyu aşan şirketleri hedef alıyor: Bir ülkede yalnızca %5 vergi ödüyorlarsa, menşe ülkeleri artık eksik olan %10'u talep edebilir."
+          "text": "2021'de OECD ve G20 çatısı altında tarihi bir anlaşma [[%15 küresel asgari vergi]] kuralını getirdi. Cirosu 750 milyon avroyu aşan şirketleri hedefler: bir ülkede yalnızca %5 vergi öderlerse kendi ülkeleri artık eksik %10'u isteyebilir."
         },
         {
           "type": "paragraph",
-          "text": "Fransa gibi bazı ülkeler de doğrudan dijital devlerin cirosunu hedef alan ulusal bir vergi oluşturdu. Aynı zamanda, çokuluslu şirketler artık çalışanlarının konumlarını, karlarını ve vergilerini ülke ülke yayınlamalı: en göze çarpan tutarsızlıkların tespit edilmesini mümkün kılan şeffaflık."
+          "text": "Fransa gibi bazı ülkeler dijital devlerin cirosunu doğrudan hedefleyen ulusal bir vergi de kurdu. Paralel olarak çokuluslular artık ülke ülke çalışanlarının, kârlarının ve vergilerinin nerede olduğunu yayımlamak zorundadır: en göze batan sapmaları yakalamaya yarayan bir şeffaflık."
         }
       ]
     },
@@ -88,15 +88,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "İrlanda, resmi vergi oranı %12,5 ve [[vergi kararları]] adı verilen gizli anlaşmalarıyla vergi optimizasyonunun Avrupa ekseni haline geldi. Apple, karmaşık yapısı sayesinde 2014 yılında %0,005'e yakın bir efektif vergi oranı ödedi."
+          "text": "İrlanda, resmi %12,5'lik vergi oranı ve [[vergi kararları]] denen gizli anlaşmalarıyla Avrupa vergi optimizasyonunun menteşesi oldu. Karmaşık bir yapı sayesinde Apple 2014'te %0,005'e yakın etkili bir vergi oranı ödedi."
         },
         {
           "type": "paragraph",
-          "text": "Avrupa Komisyonu İrlanda'dan Apple'dan 13 milyar avroluk ödenmemiş vergi talep etti, ancak ülke uzun süredir bu vergileri toplamayı reddediyor: Çok katı kuralların merkez ofislerin dünyanın diğer bölgelerine kaçmasına neden olacağından korkuyor. Vergi adaletinin savunucuları, bu yüzde 15'lik oranın gelişmiş ülkeler ortalamasının altında kaldığını ve vergi kaçakçılığından en çok etkilenen en yoksul ülkelerin yalnızca çok küçük bir pay alabileceklerine dikkat çekiyor."
+          "text": "Avrupa Komisyonu İrlanda'dan Apple'ın ödemediği 13 milyar avro vergi istedi, ama ülke uzun süre bunları tahsil etmeyi reddetti: fazla katı kuralların merkezleri dünyanın başka bölgelerine kaçırmasından korkar. Vergi adaleti savunucuları ayrıca bu %15'lik oranın gelişmiş ülkelerin ortalamasının altında kaldığını, vergi kaçırmadan en çok etkilenen en yoksul ülkelerin ise bundan ancak kırıntı alacağını hatırlatır."
         },
         {
           "type": "takeaway",
-          "text": "GAFAM, uzun süredir uluslararası hukuktaki boşluklardan yararlanarak gülünç vergiler ödüyor ve bu da kamu bütçelerine yılda 240 milyar dolara kadar mal oluyor. 2021'den bu yana, küresel minimum %15'lik vergi bu dengesizliği düzeltmeye çalışıyor ancak daha adil vergilendirme için mücadele devam ediyor."
+          "text": "GAFAM uzun süre uluslararası hukuktaki gediklerden yararlanıp gülünç vergiler ödedi, kamu bütçelerine yılda 240 milyar dolara kadar mal oldu. 2021'den beri %15'lik küresel bir asgari vergi bu dengesizliği düzeltmeye çalışır, ama daha adil bir vergi için savaş sürer."
         }
       ]
     }

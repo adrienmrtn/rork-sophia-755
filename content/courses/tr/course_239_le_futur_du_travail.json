@@ -1,14 +1,14 @@
 {
   "id": "course_239_le_futur_du_travail",
-  "title": "İşin geleceği",
+  "title": "Çalışmanın geleceği",
   "subtitle": "Otomasyon ve yapay zeka",
   "subject": "comprendreLeMonde",
   "subcategory": "Environment & the future",
-  "description": "Yapay zeka ve yeni istihdam biçimleri, endüstriyel çağdan miras kalan bir çalışma modelini sarsıyor.",
+  "description": "Yapay zeka ve yeni istihdam biçimleri, sanayi çağından kalma bir çalışma modelini sarsar.",
   "hero": {
     "image": "le_futur_du_travail",
     "ratio": "16:9",
-    "hook": "Makineler her zamankinden daha hızlı çalışıyor. İnsanlara ne yapılacağı henüz bilinmiyor."
+    "hook": "Makineler hiç olmadığı kadar hızlı çalışır. İnsana ne kalacağını bilmek kalır."
   },
   "sections": [
     {
@@ -18,93 +18,93 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Çalışmak yalnızca gelirimizi tanımlamakla kalmıyor, aynı zamanda sosyal kimliğimizi ve günlerimize verdiğimiz anlamı da şekillendiriyor. Ancak günümüzde yapay zeka, robot teknolojisi ve yeni çalışma biçimleri endüstriyel çağdan miras kalan bu modeli sarsıyor."
+          "text": "Çalışma yalnızca gelirlerimizi tanımlamaz: toplumsal kimliğimizi ve günlerimize verdiğimiz anlamı da biçimlendirir. Oysa yapay zeka, robotik ve yeni çalışma biçimleri bugün sanayi çağından kalma bu modeli sarsar."
         },
         {
           "type": "paragraph",
-          "text": "Bu kurs işin nasıl değiştiğini ve bu dönüşümün ortaya çıkardığı büyük soruları araştırıyor: daha az saat, daha fazla makine ve yeni bir servet paylaşımı."
+          "text": "Bu ders, çalışmanın biçim nasıl değiştirdiğini ve bu dönüşümün doğurduğu büyük soruları inceler: daha az saat, daha çok makine ve zenginliklerin yeni bir paylaşımı."
         }
       ]
     },
     {
       "id": "course_239_le_futur_du_travail_p1",
-      "title": "Henry Ford'la doğan modelin sonu",
+      "title": "Henry Ford ile doğan modelin sonu",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Modern çalışma uzun süredir, 1926'da haftanın 40 saatini kuran **[[Henry Ford]]** tarafından popüler hale getirilen bir fikir etrafında örgütleniyordu. Bu seçim bir cömertlik jesti değildi: Boş zamanı olan işçiler aynı zamanda kendi ürettikleri ürünleri satın alabilecek kapasiteye sahip müşteriler haline geliyor."
+          "text": "Modern çalışma uzun süre **[[Henry Ford]]** tarafından yaygınlaştırılan bir fikir etrafında örgütlendi; o 1926'da 40 saatlik haftayı kurdu. Bu seçim bir cömertlik jesti değildi: boş zamanı olan işçiler, kendi ürettikleri malları satın alabilen müşteriler de olur."
         },
         {
           "type": "funFact",
-          "text": "1930'da ekonomist John Maynard Keynes, teknolojik gelişmeler sayesinde torunlarının haftada yalnızca 15 saat çalışacağını öngördü. Neredeyse bir asır sonra bu teknolojiye sahibiz ama hâlâ aynı sıkı şekilde çalışıyoruz."
+          "text": "1930'da iktisatçı John Maynard Keynes, torunlarının teknolojik ilerleme sayesinde haftada yalnızca 15 saat çalışacağını öngörmüştü. Neredeyse bir yüzyıl sonra bu teknolojiye sahibiz, ama hâlâ aynı kadar çalışıyoruz."
         },
         {
           "type": "paragraph",
-          "text": "Bu model bugün **konser ekonomisi**, yani \"konser\" ekonomisi lehine çöküyor: Amerika Birleşik Devletleri'nde 57 milyondan fazla işçi artık hizmetlerini geleneksel istihdamın dışında dijital platformlar aracılığıyla satıyor. Otomasyon aynı zamanda giderek karmaşıklaşan görevleri de üstlenirken, 2020 salgınıyla hızlanan uzaktan çalışma çalışma coğrafyasını yeniden şekillendiriyor."
+          "text": "Bu model bugün **gig ekonomi**, yani “iş başına” ekonomi lehine aşınır: ABD'de 57 milyondan fazla çalışan artık hizmetlerini klasik ücretlilik dışında, dijital platformlar üzerinden satar. Otomasyon gittikçe daha karmaşık görevleri de kapar, 2020 salgınının hızlandırdığı uzaktan çalışma ise çalışmanın coğrafyasının kendisini yeniden çizer."
         }
       ]
     },
     {
       "id": "course_239_le_futur_du_travail_p2",
-      "title": "Yapay zeka ve yaratıcı yıkımın zorluğu",
+      "title": "YZ ve yaratıcı yıkım sınavı",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "İşin geleceğine ilişkin tartışma genellikle filozof ve ekonomist **[[Joseph Schumpeter]]**'nin bir fikrine dayanıyor: **[[Yaratıcı yıkım]]**. Ona göre her teknolojik devrim eski meslekleri yok ediyor, ancak çoğu zaman daha nitelikli yeni mesleklerin ortaya çıkmasına neden oluyor. Ancak üretken yapay zeka yeni bir şey getiriyor: ilk kez ofis işlerini ve entelektüel olarak kabul edilen meslekleri tehdit ediyor."
+          "text": "Çalışmanın geleceği üzerine tartışma çoğu zaman filozof ve iktisatçı **[[Joseph Schumpeter]]** adlı düşünürün bir fikrine dayanır: **[[Yaratıcı yıkım]]**. Ona göre her teknolojik devrim eski meslekleri yok eder, ama çoğu zaman daha nitelikli yenilerini yaratır. Üretici yapay zeka yine de bir yenilik getirir: ilk kez büro işlerini ve zihinsel sayılan meslekleri tehdit eder."
         },
         {
           "type": "funFact",
-          "text": "2023'te yapılan bir çalışma, yapay zekanın yaratıcılık testinde insanların %99'undan daha iyi performans gösterdiğini gösterdi ve yaratıcılığın makinelere karşı son avantajımız olduğu fikrine karşı çıktı."
+          "text": "2023'te bir çalışma, yapay zekanın bir yaratıcılık testinde insanların %99'undan daha başarılı olduğunu gösterdi ve yaratıcılığın makinelere karşı son avantajımız olduğu fikrini sarsdı."
         },
         {
           "type": "paragraph",
-          "text": "Üç senaryo ortaya çıkıyor. İyimser, insanları tekrar eden görevlerden kurtaracak bir üretkenlik artışı hayal eder. Kötümserler, yapay zekanın yeniden eğitim alma yeteneğimizden daha hızlı ilerleyerek kitlesel işsizliğe yol açacağından korkuyor. Son olarak hibrit, insanlar ve makineler arasındaki işbirliğine dayanıyor; burada temel beceri, sabit teknik bilgiye hakim olmak yerine araçları yönetme yeteneği haline geliyor."
+          "text": "Üç senaryo belirir. İyimser olan, insanı tekrarlayan görevlerden kurtaracak bir verim artışı hayal eder. Kötümser olan, YZ'nin yeniden meslek edinme hızımızdan daha çabuk ilerleyip kitlesel işsizlik yaratmasından korkar. Hibrit olan ise insan ile makine işbirliğine oynar: kilit beceri, donmuş bir ustalığı kavramak değil, araçları yönetmek olur."
         }
       ]
     },
     {
       "id": "course_239_le_futur_du_travail_p3",
-      "title": "Zamanı ve parayı yeniden dağıtın",
+      "title": "Zamanı ve parayı yeniden dağıtmak",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "İki hızlı toplum riskiyle karşı karşıya kalan yeni araçlar üzerinde çalışılıyor. **Evrensel temel dondurma**, çalışmanın daha aralıklı hale geldiği bir ekonomide yaşam koşullarını güvence altına almak için her vatandaşa koşulsuz olarak sabit bir miktar ödemeyi teklif ediyor."
+          "text": "İki hızlı bir toplum riski karşısında yeni araçlar incelenir. **Evrensel temel gelir**, çalışma daha kesintili olan bir ekonomide hayat güzergahlarını güvenceye almak için her yurttaşa koşulsuz sabit bir tutar ödemeyi önerir."
         },
         {
           "type": "image",
           "asset": "ai_generative_writing_artificial_intelligence",
           "ratio": "16:9",
-          "caption": "Otomasyon, yapay zeka ve yeni istihdam biçimleri çalışma dünyasını yeniden şekillendiriyor."
+          "caption": "Otomasyon, yapay zeka ve yeni istihdam biçimleri çalışma dünyasını yeniden çizer"
         },
         {
           "type": "paragraph",
-          "text": "Buna ek olarak, **[[4 günlük hafta]]** fikri güç kazanıyor: eğer makineler daha az zamanda daha fazla üretiyorsa, bunun karşılığında istihdamı sürdürmek ve işçilerin sağlığını korumak için insanın çalışma süresinin azalması mantıklı görünüyor. Geriye bir finansman sorunu kalıyor: Eğer yazılım tarafından değer giderek daha fazla yaratılıyorsa, vergilerin şüphesiz emek gelirinden sermaye gelirine kayması gerekecektir."
+          "text": "Bunun yanında **[[4 günlük hafta]]** fikri yer tutar: makineler daha az zamanda daha çok üretiriyorsa, istihdamı korumak ve çalışanların sağlığını gözetmek için insan çalışma süresinin de düşmesi mantıklı görünür. Geriye bir finansman sorusu kalır: değer gittikçe daha çok yazılımlarca yaratılıyorsa, vergiler kuşkusuz emek gelirlerinden sermaye gelirlerine kaymalıdır."
         }
       ]
     },
     {
       "id": "course_239_le_futur_du_travail_p4",
-      "title": "Yarının işine ne anlam verilecek",
+      "title": "Yarının çalışmasına hangi anlam",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ekonomik denklem çözüldükten sonra daha derin bir soru kalıyor: İşin daha az merkezi olduğu bir dünyada günlerimizin anlamı ne olacak? Tarihsel olarak iş, günlük yaşamı ve öz saygıyı yapılandırmıştır. Kısmen ortadan kaybolması ya can sıkıntısına ya da gönüllü, sanatsal veya sivil faaliyetlerin yeniden canlanmasına yol açabilir."
+          "text": "İktisadi denklem çözülünce daha derin bir soru kalır: çalışma daha az merkezi olsa günlerimizin anlamı ne olur? Tarihte çalışma gündeliği ve özsaygıyı yapılandırdı. Kısmi yokoluşu ya can sıkıntısına ya da gönüllü, sanatsal veya yurttaşlık faaliyetlerinin yenilenmesine varabilir."
         },
         {
           "type": "funFact",
-          "text": "“İş” kelimesi, üç kazıklı bir işkence aleti olan Latince tripalium kelimesinden gelmektedir. Kimlik haline gelmeden önce uzun süre acı çekmek olarak algılandığını hatırlatan bir köken."
+          "text": "“Çalışma” sözcüğü Latince tripalium'dan gelir, üç kazıklı bir işkence aleti. Bu köken, kimlik olmadan önce uzun süre bir acı olarak görüldüğünü hatırlatır."
         },
         {
           "type": "paragraph",
-          "text": "Bu bağlamda öğrenmeyi öğrenmek önemli bir beceri haline gelir. Asıl mesele sadece teknolojik değil aynı zamanda politiktir: Yapay zekayı yeteneklerimizi arttırmak için mi kullanacağız, yoksa sadece işletme maliyetlerini düşürmek için mi? Cevap, yarının çalışmasının bir özgürleşme mi yoksa yeni bir kısıtlama mı olacağını belirleyecek."
+          "text": "Bu bağlamda öğrenmeyi öğrenmek vazgeçilmez bir beceri olur. Asıl mesele yalnızca teknolojik değil, siyasidir: yapay zekayı kapasitelerimizi artırmak için mi kullanacağız, yoksa yalnızca şirketlerin maliyetini düşürmek için mi? Yanıt, yarının çalışmasının bir kurtuluş mu yoksa yeni bir kısıt mı olacağını belirler."
         },
         {
           "type": "takeaway",
-          "text": "İşin geleceği, esnek ekonomi lehine bekar çalışanların sona ermesi ve entelektüel işleri ilk kez tehdit eden yapay zekanın meydan okumasıyla işaretleniyor. Sosyal modelimiz hiç şüphesiz üretkenlik kazanımlarını evrensel bir gelir veya daha kısa bir çalışma haftası yoluyla yeniden dağıtmak zorunda kalacak."
+          "text": "Çalışmanın geleceğini tek tip ücretliliğin sonu, gig ekonomi lehine, ve ilk kez zihinsel işleri tehdit eden yapay zeka sınavı işaretler. Toplum modelimiz verim kazançlarını evrensel bir gelir veya daha kısa bir çalışma haftasıyla yeniden dağıtmak zorunda kalabilir."
         }
       ]
     }

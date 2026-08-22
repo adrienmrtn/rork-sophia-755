@@ -1,14 +1,14 @@
 {
   "id": "course_78_comment_fonctionne_l_electricite_dans_no",
-  "title": "Elektrik vücudumuzda nasıl çalışır?",
+  "title": "Bedenimizde elektrik nasıl işler?",
   "subtitle": "Sinirler ve iyonlar",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "Düşünmek, kalbin atması, kolun kaldırılması: Bütün bunlar öncelikle canlı elektrik gibi dolaşır, elektronlar tarafından değil iyonlar tarafından taşınır.",
+  "description": "Düşünmek, kalp atmak, kol kaldırmak: bütün bunlar önce canlı elektrik olarak dolaşır; elektronla değil, iyonla taşınır.",
   "hero": {
     "image": "comment_fonctionne_l_electricite_dans_notre_corps",
     "ratio": "16:9",
-    "hook": "Vücudunuz bir elektrik ağıdır. Ancak burada akım elektronlar değil iyonlardır."
+    "hook": "Bedenin bir elektrik ağıdır. Ama burada akım iyondur, elektron değil."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bir duvar prizinde akım dolaşan **elektronik**'dir. Vücudunuzda ise durum farklıdır: onlar hücrelere giren ve çıkan **iyonik**, yüklü atomlardır. Bu akış, kalbin düşünmesini, kalp atışını ve kasların kasılmasını sağlayan sinyalleri oluşturur."
+          "text": "Duvar prizinde akım, dolaşan **elektron**lardır. Bedeninde iş başka yürür: hücrelere girip çıkan yüklü atomlar, **iyon**lardır. Bu akış düşünmeyi, kalp atışını ve bir kasın kasılmasını sağlayan sinyalleri yaratır."
         },
         {
           "type": "paragraph",
-          "text": "Bu canlı elektrik olmadan hiçbir düşünce, hiçbir jest, hiçbir nabız olmaz. Bedeni anlamak aynı zamanda bu suçlama dilini anlamak anlamına da gelir."
+          "text": "Bu canlı elektrik olmasa hiçbir düşünce, hiçbir jest, hiçbir nabız olmaz. Bedeni anlamak, bu yük dilini de anlamaktır."
         }
       ]
     },
@@ -33,78 +33,78 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dinlenme halindeki bir **teslim etmek** mesaj göndermez ancak \"şarj olur\". Zarı hücrenin içini ve dışını ayırır. [[sodyum-potasyum pompaları]] sayesinde yaklaşık **-70 milivolt** [[dinlenme potansiyeli]] korur: içi dışarıdan daha olumsuzdur."
+          "text": "Dinlenen bir **nöron** mesaj göndermez, ama yine de “şarj olur”. Zarı hücrenin içini dışından ayırır. [[sodyum-potasyum pompaları]] sayesinde yaklaşık **-70 milivolt** [[dinlenme potansiyeli]] tutar: iç taraf, dıştan daha negatiftir."
         },
         {
           "type": "image",
           "asset": "neuron_electrical_signal_brain",
           "ratio": "auto",
-          "caption": "Nöronlar kısa elektriksel uyarılarla iletişim kurar."
+          "caption": "Nöronlar kısa elektrik atımlarıyla haberleşir"
         },
         {
           "type": "paragraph",
-          "text": "Bir uyaran geldiğinde kanallar açılır. Sodyum bir anda gelir. Kutupsallık tersine dönmüştür: akson boyunca, bazen bir metrenin üzerinde uzanan, ya hep ya hiç sinyali olan [[aksiyon potansiyeli]]'dir. Elektrik dalgası gibi."
+          "text": "Bir uyaran gelince kanallar açılır. Sodyum birden girer. Kutupluluk tersine döner: bu [[aksiyon potansiyeli]], akson boyunca, bazen bir metre, ya hep ya hiç bir sinyaldir. Elektrik dalgası gibi."
         },
         {
           "type": "funFact",
-          "text": "Uyanık beyin, küçük bir LED için yeterli olan yaklaşık **20 watt** üretir. Bununla birlikte, vücudun kalorisinin neredeyse %**20%**'sini tüketir."
+          "text": "Uyanık beyin yaklaşık **20 watt** üretir, küçük bir LED'e yeter. Yine de beden kalorisinin yaklaşık **%20**'sini tüketir."
         }
       ]
     },
     {
       "id": "course_78_comment_fonctionne_l_electricite_dans_no_p2",
-      "title": "Sinapsta elektrik kimyaya dönüşür",
+      "title": "Sinapsta elektrik kimya olur",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nöronlar aslında birbirine temas etmiyor. Aralarında küçük bir boşluk var: **sinaps**. Elektrik sinyali bunu atlayamaz. Daha sonra aksonun sonu, asetilkolin veya [[glutamat]] gibi haberci moleküller olan [[Nörotransmitterler]]'yi serbest bırakır."
+          "text": "Nöronlar gerçekten birbirine değmez. Aralarında minik bir hendek vardır: **sinaps**. Elektrik sinyali onu atlayamaz. O zaman akson ucu [[nörotransmitterler]] salar, asetilkolin veya [[glutamat]] gibi haberci moleküller."
         },
         {
           "type": "paragraph",
-          "text": "Bu haberciler kendilerini bir sonraki nörona kilitteki bir anahtar gibi bağlarlar. Mesaja bağlı olarak heyecanlandırır veya engellerler. Bu eş zamanlı kararların binlercesi düşünceyi oluşturur."
+          "text": "Bu haberciler sonraki nörona bir kilide anahtar gibi oturur. Mesaja göre onu uyarır veya baskılar. Binlerce eşzamanlı karar, düşünceyi oluşturur."
         },
         {
           "type": "funFact",
-          "text": "Bazı sinir sinyalleri **120 m/sn** hızında hareket eder (**430 km/s**'den fazla). Ayak parmağındaki yanığa bir saniyede tepki vermeye yetecek kadar."
+          "text": "Bazı sinir sinyalleri **120 m/s** (saatte **430 km**'den fazla) yol alır. Ayaktaki bir yanığa saniyenin kesrinde tepki vermeye yeter."
         }
       ]
     },
     {
       "id": "course_78_comment_fonctionne_l_electricite_dans_no_p3",
-      "title": "Kalbin kendi kalp pili vardır",
+      "title": "Kalbin kendi temposunu kuran düğümü var",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kalp her atışta beyinden komut beklemez. Sağ atriyumda, **sinüs düğümü**, dinlenme sırasında dakikada yaklaşık **60 ila 100** kez kendi uyarılarını üretir. Sinyal yayılır, önce atriyumları, sonra ventrikülleri kasar."
+          "text": "Kalp her atış için beyinden bir emir beklemez. Sağ kulakçıkta **sinüs düğümü** kendi atımlarını üretir, dinlenirken dakikada yaklaşık **60 ile 100** kez. Sinyal yayılır, önce kulakçıkları, sonra karıncıkları kasar."
         },
         {
           "type": "paragraph",
-          "text": "Bu aktivite cilt üzerinde okunabilecek kadar güçlüdür: **elektrokardiyogram (EKG)**. Ritim bozulursa **aritmi**'den söz ederiz. Daha sonra kalp düzensiz bir şekilde atar ve zayıf bir şekilde pompalanır."
+          "text": "Bu etkinlik deriden okunacak kadar güçlüdür: **elektrokardiyogram (EKG)**. Ritim bozulursa buna **aritmi** denir. Kalp o zaman düzensiz atar ve kötü pompalar."
         },
         {
           "type": "funFact",
-          "text": "Elektrikli yılan balığı, uyarılabilir hücrelerle aynı prensibi kullanır, ancak seri halindedir: **600 volt**'ye kadar, avını felç etmeye yetecek kadar."
+          "text": "Elektrikli yılanbalığı aynı uyarılabilir hücre ilkesini kullanır, ama seri: **600 volta** kadar, bir avı felç etmeye yeter."
         }
       ]
     },
     {
       "id": "course_78_comment_fonctionne_l_electricite_dans_no_p4",
-      "title": "Gönüllü jestten defibrilatöre",
+      "title": "İsteğe bağlı jestten defibrilatöre",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kolu kaldırmak için bir aksiyon potansiyeli kasa kadar iner. Asetilkolin, yerel bir elektrik dalgasını ve ardından kalsiyum salınımını tetikler. Kas proteinleri birbiri üzerinde kayar: kasılma."
+          "text": "Kol kaldırmak için bir aksiyon potansiyeli kasa iner. Asetilkolin yerel bir elektrik dalgası, sonra kalsiyum salımı tetikler. Kas proteinleri birbirinin üzerinde kayar: kasılma."
         },
         {
           "type": "paragraph",
-          "text": "**defibrilasyon** aynı prensibi tersten kullanır: harici bir şok tüm hücreleri \"sıfıra\" sıfırlar, böylece sinüs düğümü tempoyu sürdürür. Biyonik protezler de yapay eli kontrol etmek için bu zayıf sinyalleri yakalıyor."
+          "text": "**Defibrilasyon** aynı ilkeyi tersine kullanır: dışarıdan bir şok bütün hücreleri “sıfıra” alır ki sinüs düğümü tempoyu yeniden kursun. Biyonik protezler de yapay bir eli yönetmek için bu zayıf sinyalleri yakalar."
         },
         {
           "type": "takeaway",
-          "text": "Canlılar iyon akışları ve aksiyon potansiyelleri ile konuşurlar. Düşünce, kalp ve kaslar aynı elektrik dilini paylaşır."
+          "text": "Canlı, iyon akışları ve aksiyon potansiyelleriyle konuşur. Düşünce, kalp ve kaslar aynı elektrik dilini paylaşır."
         }
       ]
     }

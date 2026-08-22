@@ -1,14 +1,14 @@
 {
   "id": "course_67_qu_est_ce_qu_un_trou_noir",
   "title": "Kara delik nedir?",
-  "subtitle": "Aşırı Şiddet",
+  "subtitle": "Uç yerçekimi",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "Kara delik kozmik bir elektrikli süpürge değildir. Yer çekiminin ışığın bile kaçamayacağı kadar güçlü olduğu bir bölgedir.",
+  "description": "Kara delik kozmik bir süpürge değildir. Yerçekiminin o kadar güçlü olduğu bir bölgedir ki ışık bile kaçamaz.",
   "hero": {
     "image": "qu_est_ce_qu_un_trou_noir",
     "ratio": "16:9",
-    "hook": "Hiçbir şey çıkmıyor, ışık bile. Ancak sonunda gölgesinin fotoğrafını çektik."
+    "hook": "İçinden hiçbir şey çıkmaz, ışık bile. Yine de gölgesini fotoğraflamayı başardık."
   },
   "sections": [
     {
@@ -18,59 +18,59 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kara delik, uzay ve zamanı birleştiren kumaş olan **uzay-zaman**'nin bir bölgesidir; burada yer çekimi o kadar yoğundur ki kaçmak için gereken hız ışığın hızını aşmaktadır. Hiçbir şey çıkmıyor: ne olursa olsun, ışık sinyali yok."
+          "text": "Kara delik, uzayı ve zamanı birleştiren doku olan **uzay-zaman**ın bir bölgesidir; yerçekimi öyle yoğundur ki kaçmak için gereken hız ışığınkinden büyüktür. İçinden hiçbir şey çıkmaz: ne madde, ne ışık sinyali."
         },
         {
           "type": "paragraph",
-          "text": "Tünel anlamında bir “delik” değil. Bu kumaşı çok güçlü bir şekilde büken, aşırı miktarda malzeme yoğunluğudur. Uzun zamandır Einstein'ın denklemlerinden kaynaklanan saf bir teori olan kara delikler, günümüzde çeşitli şekillerde gözlemlenmektedir."
+          "text": "Bu bir tünel anlamında “delik” değildir. Bu dokuyu çok sert büken uç bir madde yığılmasıdır. Uzun süre Einstein denklemlerinden çıkan salt bir kuramdı; kara delikler bugün birkaç yolla gözlenir."
         }
       ]
     },
     {
       "id": "course_67_qu_est_ce_qu_un_trou_noir_p1",
-      "title": "Bir yıldız çöktüğünde",
+      "title": "Bir yıldız çökünce",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Yıldızsal bir kara delik genellikle çok büyük bir yıldızın ölümünden doğar, en azından Güneş'in kütlesinin 20 ila 25 katı **. Yıldız, ömrü boyunca bir denge sayesinde ayakta kalır: merkeze doğru çeker,**nükleer**karışımın basıncı** dışarı doğru iter. Yıldızın kalbinde hidrojen helyuma dönüşür."
+          "text": "Yıldızsı bir kara delik çoğu zaman çok kütleli bir yıldızın ölümünden doğar, Güneş'in en az **20 ile 25 katı**. Yaşamı boyunca yıldız bir dengeyle durur: yerçekimi merkeze çeker, **nükleer füzyon** basıncı dışarı iter. Yıldızın çekirdeğinde hidrojen helyuma dönüşür."
         },
         {
           "type": "image",
           "asset": "black_hole_accretion_disk_galaxy",
           "ratio": "auto",
-          "caption": "Akkor birikim diskiyle çevrelenmiş bir kara delik."
+          "caption": "Akkor yığılma diskiyle çevrili bir kara delik görünümü"
         },
         {
           "type": "paragraph",
-          "text": "Yakıt bittiğinde basınç düşer. Yıldızın kalbi paramparça oldu. **süpernova**'nin patlaması galaksiyi aydınlatabilir. Geriye kalan çekirdek yeterince büyükse sıkıştırmayı durduracak hiçbir şey yoktur."
+          "text": "Yakıt bitince basınç çöker. Yıldızın çekirdeği ezilir. Bir **süpernova** patlaması o zaman gökadayı aydınlatabilir. Kalan çekirdek yeterince kütleliyse sıkışmayı durduran hiçbir şey kalmaz."
         },
         {
           "type": "paragraph",
-          "text": "Merkezde teori, bir [[Yerçekimi tekilliği]]'yi tanımlıyor: yoğunluğun ve eğriliğin aşırı hale geldiği ve mevcut denklemlerimizin artık iyi işlemediği bir nokta. Etrafında [[Olay ufku]]'yi buluyoruz: görünmez bir sınır. Bir kez geçildiğinde evrenin geri kalanına dönüş mümkün değildir."
+          "text": "Merkezde kuram bir [[Yerçekimi tekilliği]] betimler: yoğunluk ve eğrilik uçlaşır, bugünkü denklemlerimiz orada iyi işlemez hale gelir. Çevresinde [[olay ufku]] durur: görünmez bir sınır. Bir kez geçilince evrenin geri kalanına dönüş artık yoktur."
         },
         {
           "type": "funFact",
-          "text": "Bir kara deliğe doğru düşerseniz, yer çekimi başınıza olduğundan çok daha fazla ayaklarınızı çeker. Bu esnemeye “spagettileşme” denir."
+          "text": "Bir kara deliğe doğru düşseydin, yerçekimi ayaklarını başından çok daha güçlü çekerdi. Bu korkunç gerilmeye “spagettileşme” denir."
         }
       ]
     },
     {
       "id": "course_67_qu_est_ce_qu_un_trou_noir_p2",
-      "title": "Kozmik bir elektrikli süpürge değil",
+      "title": "Kozmik bir süpürge değil",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Yaygın inanışın aksine kara delik, uzaktan geçen her şeyi emmez. Yer çekimi her nesnede olduğu gibi kütlesine ve mesafesine bağlıdır. Eğer Güneş'in yerini aynı kütleye sahip bir kara delik alsaydı, Dünya yörüngesinde dönmeye devam ederdi. Ancak ışık ve ısı olmasaydı donardık."
+          "text": "Yaygın kanının aksine, bir kara delik uzaktan geçen her şeyi yutmaz. Yerçekimi, herhangi bir cisim gibi, kütlesine ve uzaklığa bağlıdır. Güneş aynı kütlede bir kara delikle değişse Dünya yörüngede kalırdı. Ama ışık ve ısı olmadan donardık hemen."
         },
         {
           "type": "paragraph",
-          "text": "Ayrıca hemen hemen tüm galaksilerin kalbinde, milyonlarca ila milyarlarca güneş kütlesine sahip **süper kütleli kara delikler** de bulunmaktadır. Samanyolu'nda **Yaşasın A***, yaklaşık **4 milyon** güneş kütlesidir."
+          "text": "Neredeyse bütün gökadaların merkezinde, milyonlarca ile milyarlarca Güneş kütlesinde **süper kütleli kara delikler** de vardır. Samanyolu'nda bu **Sagittarius A***'dır, yaklaşık **4 milyon** Güneş kütlesi."
         },
         {
           "type": "paragraph",
-          "text": "[[birikim diski]] sayesinde sıklıkla tespit edilirler: etraflarında çok hızlı dönen bir gaz ve toz halkası. Sürtünme, bu malzemeyi X ışınlarında veya radyo dalgalarında aşırı derecede parlak hale gelinceye kadar ısıtır. Daha sonra bu parlak arka planda kara deliğin gölgesini görüyoruz."
+          "text": "Onları çoğu zaman [[Toplanma diski]] sayesinde fark ederiz: çevrelerinde çok hızlı dönen bir gaz ve toz halkası. Sürtünmeler bu maddeyi X ışınlarında veya radyo dalgalarında aşırı parlak olana dek ısıtır. Kara deliğin gölgesi o zaman bu ışıklı fonda görülür."
         }
       ]
     },
@@ -81,15 +81,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**ANisan 2019**'de [[İnterferometri]], Olay Ufku Teleskobu projesi bir kara deliğin ilk görüntüsünü yayınladı. Araştırmacılar, [[İnterferometri]]'yi kullanarak sekiz radyo teleskopunu birleştirerek Dünya boyutunda sanal bir teleskop yaratıyorlar."
+          "text": "**Nisan 2019**'da Event Horizon Telescope projesi bir kara deliğin ilk görüntüsünü yayımlar. Araştırmacılar [[interferometri]] sayesinde sekiz radyoteleskopu birleştirerek Dünya büyüklüğünde sanal bir teleskop kurar."
         },
         {
           "type": "paragraph",
-          "text": "Hedef **M87***, **55 milyon** ışıkyılı uzaklıktaki Messier 87 galaksisindeki süper kütleli kara delik. Karanlık bir alanın etrafında parlak bir halka görüyoruz: olay ufkunun silueti. **2022**'de komşumuz Yay A*'nin bir görüntüsü takip ediyor."
+          "text": "Hedef, **55 milyon** ışık yılı ötedeki Messier 87 gökadasının süper kütleli kara deliği **M87***'tir. Işıklı bir halkanın çevresinde koyu bir bölge görülür: olay ufkunun silueti. **2022**'de komşumuz Sagittarius A*'nın bir görüntüsü gelir."
         },
         {
           "type": "funFact",
-          "text": "**2015**'den bu yana, LIGO ve Başak gözlemevleri ayrıca **parçaların dalgalarını** tespit etti: iki kara delik birleştiğinde oluşan küçük uzay-zaman titreşimleri."
+          "text": "**2015**'ten beri LIGO ve Virgo gözlemevleri **kütleçekim dalgaları** da yakalar: iki kara delik birleşince uzay-zamanda oluşan küçük titremelerdir bunlar."
         }
       ]
     },
@@ -100,19 +100,19 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "İngiliz fizikçi **Stephen Hawking**, **1974** adlı eserinde bir kara deliğin tamamen siyah olamayacağını gösterdi. Ufuk yakınındaki kuantum etkileri nedeniyle çok zayıf radyasyon yayar: [[Hawking radyasyonu]]."
+          "text": "**1974**'te Britanyalı fizikçi **Stephen Hawking** bir kara deliğin bütünüyle kara olmayacağını gösterir. Ufka yakın kuantum etkileri yüzünden çok zayıf bir ışıma yayardı: [[Hawking radyasyonu]]."
         },
         {
           "type": "paragraph",
-          "text": "Sonuç: Yalıtılmış bir kara delik yavaş yavaş kütlesini kaybedecek ve sonunda buharlaşacaktır. Yıldızsal bir kara delik için bu, evrenin şu anki yaşından inanılmaz derecede daha uzun bir zaman alacaktır. Bu fikir aynı zamanda bilgi paradoksunu da gündeme getiriyor: Kara delik kaybolursa içeriye ne düştüğüne dair bilgiye ne olur?"
+          "text": "Sonuç: yalnız bir kara delik yavaş yavaş kütle yitirir ve sonunda buharlaşırdı. Yıldızsı bir kara delik için bu, evrenin bugünkü yaşından fantastik ölçüde daha uzun sürerdi. Bu fikir bilgi paradoksunu da açar: kara delik yok olursa içine düşenin bilgisi ne olur, nereye gider?"
         },
         {
           "type": "paragraph",
-          "text": "Bir kara deliğin yakınında, uzaktaki bir gözlemci için zaman da daha yavaş geçer; bu, **son teslim tarihinin** göreli bir etkisidir. Bu nesneler fiziğin sınırlarını test etmek için en iyi laboratuvarlar arasında yer alıyor."
+          "text": "Bir kara deliğin yanında zaman, uzak bir gözlemci için daha yavaş akar; bu göreli bir **zaman genişlemesi** etkisidir. Bu cisimler fiziğin sınırlarını sınamak için en iyi laboratuvarlar arasında durur."
         },
         {
           "type": "takeaway",
-          "text": "Kara delik çoğunlukla büyük bir yıldızın çökmesi sonucu oluşur. M87* civarında **2019**'de ilk kez fotoğraflanan bir sınır olan olay ufku ile sınırlanmıştır."
+          "text": "Bir kara delik çoğu zaman kütleli bir yıldızın çökmesiyle oluşur. Onu olay ufku sınırlar; bu sınır **2019**'da M87* çevresinde ilk kez fotoğraflanmıştır."
         }
       ]
     }

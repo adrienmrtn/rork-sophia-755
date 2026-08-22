@@ -1,14 +1,14 @@
 {
   "id": "course_220_la_desinformation_et_les_fake_news",
-  "title": "Dezenformasyon ve sahte haberler",
-  "subtitle": "Viral çağda yalan söylemek",
+  "title": "Dezenformasyon ve yalan haber",
+  "subtitle": "Viral çağda yalan",
   "subject": "comprendreLeMonde",
   "subcategory": "Economy & society",
-  "description": "Sosyal medyada yanlış bilgi doğruya göre 6 kat daha hızlı yayılıyor. Neden ve kendinizi nasıl koruyabilirsiniz?",
+  "description": "Yalan bilgi sosyal ağlarda gerçekten 6 kat daha hızlı yayılır. Neden, ve nasıl korunursun?",
   "hero": {
     "image": "la_desinformation_et_les_fake_news",
     "ratio": "16:9",
-    "hook": "MIT'nin yaptığı bir araştırma, sahte haberlerin Twitter'da gerçeklerden 6 kat daha hızlı yayıldığını gösterdi. İşte nedeni."
+    "hook": "Bir MIT çalışması, yalan haberin Twitter'da gerçekten 6 kat hızlı gittiğini gösterdi. İşte nedeni."
   },
   "sections": [
     {
@@ -18,85 +18,85 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Siyasi bir amaca hizmet etmek için yalan söylemek yeni bir şey değil; bunun izleri Antik Çağ'dan beri bulunmuştur. Ancak internet ve sosyal ağlar durumu değiştirdi: Yanlış bilgi artık yalnızca bir Devletten o nüfusa dolaşmıyor, vatandaşlar arasında yatay olarak da yayılıyor."
+          "text": "Siyasi bir amaç için yalan söylemek yeni değildir: izleri Antikçağ'dan beri bulunur. Ama internet ve sosyal ağlar oyunu değiştirdi: yalan bilgi artık yalnızca bir devletten nüfusuna gitmez, yurttaşlar arasında yatay yayılır."
         },
         {
           "type": "paragraph",
-          "text": "Bu değişim, viralite karşısında bazen gerçeğin isteğe bağlı göründüğü bir dünya yarattı. **Dezenformasyon**'nin nasıl yayıldığını ve bundan kimlerin yararlandığını anlamak, vatandaşlar arasındaki güvenin korunması açısından önemli hale geldi."
+          "text": "Bu kayış, viralitenin yanında gerçeğin bazen isteğe bağlı göründüğü bir dünya yarattı. **Dezenformasyonun** nasıl yayıldığını ve kimin kazandığını anlamak, yurttaşlar arasındaki güveni korumak için vazgeçilmez oldu."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p1",
-      "title": "Neden yalanlar gerçeklerden daha hızlı yayılır?",
+      "title": "Yalan gerçekten neden daha hızlı gider",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Manipüle etmek için kasıtlı olarak yayılan dezenformasyonu basit dürüst hatalardan ayırmalıyız. Bu sahte haberin başarısı, araştırmacıların dikkat ekonomisi dediği şeye dayanıyor: Sosyal medya algoritmaları ekran başında geçirilen süreyi en üst düzeye çıkarmak için tasarlandı ve beynimiz, nüanstan çok duygu ve şoka daha güçlü tepki veriyor."
+          "text": "Kasten manipüle etmek için yayılan dezenformasyonu, iyi niyetli basit hatadan ayırmak gerekir. Bu yalan bilgilerin başarısı, araştırmacıların **dikkat ekonomisi** dediği şeye dayanır: sosyal ağ algoritmaları ekran süresini azamiye çıkarmak için tasarlanmıştır ve beynimiz nüanstan çok duyguya ve şoka tepki verir."
         },
         {
           "type": "funFact",
-          "text": "[[MİT]] tarafından 2018 yılında yayınlanan bir araştırma, sahte haberlerin Twitter'da doğrulanmış haberlerden yaklaşık 6 kat daha hızlı yayıldığını, çünkü daha yeni ve duygusal açıdan daha yoğun göründüğünü gösterdi."
+          "text": "[[MİT]] 2018'de yayımladığı bir çalışmada gösterdi: yalan bilgiler Twitter'da doğrulanmış haberlere göre yaklaşık 6 kat daha hızlı yayılır, çünkü daha yeni ve duygusal olarak daha yoğun görünür."
         },
         {
           "type": "paragraph",
-          "text": "Algoritmalar ayrıca İnternet kullanıcılarını filtrelere kilitliyor: onlara yalnızca mevcut görüşlerini doğrulayan içeriği gösteriyor. Komplo teorisine ikna olmuş bir kişi, her yeni yanlış bilgiyi ek bir kanıt olarak görür ve bu da daha sonra herhangi bir düzeltmeyi çok zorlaştırır. [[filtre kabarcıkları]]"
+          "text": "Algoritmalar internet kullanıcılarını [[filtre kabarcıkları]] içine de kapatır: onlara yalnızca zaten sahip oldukları görüşleri doğrulayan içerikler gösterir. Bir komplo teorisine inanmış biri her yeni yalan haberi ek kanıt sanır; sonra yapılacak her düzeltme çok zorlaşır."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p2",
-      "title": "Devletler ve kâr arasında bir yalan endüstrisi",
+      "title": "Yalan sanayisi: devletler ve kâr arasında",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dezenformasyon gerçek bir endüstri haline geldi. Rusya gibi devletler, İnternet Araştırma Ajansı aracılığıyla, belirli bir kampı savunmaya bile çalışmadan, Batı demokrasileri içinde gerilimleri kışkırtmak için binlerce sahte otomatik hesap oluşturdular: Amaç genellikle kaos yaratmak ve insanları \"herkesin yalan söylediğine\" inandırmaktır."
+          "text": "Dezenformasyon gerçek bir sanayi oldu. Rusya gibi devletler, Internet Research Agency üzerinden, Batı demokrasilerindeki gerilimleri körüklemek için binlerce sahte otomatik hesap yarattı; belli bir tarafı savunmayı bile aramaz: amaç çoğu zaman kaos üretmek ve “herkes yalan söylüyor” inancını yerleştirmektir."
         },
         {
           "type": "image",
           "asset": "fake_news_social_media_manipulation_phone",
           "ratio": "4:3",
-          "caption": "Yanlış bilgiler sosyal ağlarda saniyeler içinde yayılıyor."
+          "caption": "Yalan bilgiler sosyal ağlarda birkaç saniyede yayılır"
         },
         {
           "type": "paragraph",
-          "text": "Ayrıca tamamen kazançlı bir boyut da var: Kuzey Makedonya'nın Veles kasabasında genç girişimciler, 2016 yılında herhangi bir siyasi inanç olmaksızın, yalnızca sosyal ağlarda oluşturulan trafik yoluyla para kazanmak için sansasyonel siteler oluşturdular. O zaman yalan basit, karlı bir meta haline gelir."
+          "text": "Salt kazançlı bir boyut da vardır: Kuzey Makedonya'daki Veles kentinde genç girişimciler 2016'da hiçbir siyasi inanç olmadan sansasyonel siteler kurdu, yalnızca sosyal ağ trafiğiyle para kazanmak için. Yalan o zaman kârlı sıradan bir mal olur."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p3",
-      "title": "Gerçeği kurgudan nasıl ayırabilirim?",
+      "title": "Doğruyu yanlıştan nasıl ayırırız",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bu tufanla karşı karşıya kalan bilgi dünyası kendi kendini organize ediyor. **gerçeği kontrol etme**, yani gerçeklerin doğrulanması, başlı başına bir gazetecilik disiplini haline gelmiştir. [[AFP]] gibi ajanslar veya uzman yazı işleri ofisleri, sahtekarlığı tespit etmek ve şüpheli içeriği analiz etmek için görsel arama araçlarını kullanır."
+          "text": "Bu sel karşısında haber dünyası örgütlenir. **Olguları doğrulama** başlı başına bir gazetecilik disiplini oldu. [[AFP]] gibi ajanslar veya uzman haber odaları, montajları yakalamak ve şüpheli içerikleri çözümlemek için görsel arama araçları kullanır."
         },
         {
           "type": "paragraph",
-          "text": "Ancak hücum ve savunma arasındaki yarış eşitsizliğini koruyor. [[Deepfake'ler]], yani yapay zeka tarafından sahte bir şekilde kişiye rahatsız edici bir gerçeklikle her şeyi söyleten videolar, eğitimsiz bir göz için doğru ile yanlış arasındaki ayrımı giderek daha da zorlaştırıyor."
+          "text": "Ama saldırı ile savunma arasındaki yarış eşitsiz kalır. Yapay zekâyla kurulan sahte videolar [[Deepfake'ler]] belirdi; bir kişiye ürkütücü bir gerçekçilikle her şey söyletilir, eğitimsiz bir göz için doğru ile yanlışı ayırmak gitgide zorlaşır."
         }
       ]
     },
     {
       "id": "course_220_la_desinformation_et_les_fake_news_p4",
-      "title": "Görüntülerle dolu bir dünyada güven bulmak",
+      "title": "Görüntü dünyasında güveni yeniden kurmak",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Yanlış bilginin uzun vadeli etkisi çok derin: Artık nesnel gerçeklerin bazen duygulardan ve kişisel inançlardan daha az ağırlık taşıdığı bir **gerçek sonrası** dönemden bahsediyoruz. Bu genelleştirilmiş görecelileştirme, iklim veya halk sağlığı gibi küresel zorluklarla birlikte mücadele etmek için gereken güveni zayıflatıyor."
+          "text": "Dezenformasyonun uzun vadeli etkisi derindir: artık **hakikat sonrası** çağından söz edilir; nesnel olgular bazen duygulardan ve kişisel inançlardan daha az ağır basar. Bu yaygın görecelilik, iklim veya kamu sağlığı gibi ortak sınavları birlikte göğüslemek için gereken güveni zayıflatır."
         },
         {
           "type": "paragraph",
-          "text": "En sağlam cevap medya eğitimi olmaya devam ediyor: Bir kaynağı doğrulamayı öğrenmek, birkaç bilgi parçasına çapraz referans vermek ve algoritmaların nasıl çalıştığını anlamak. Bazıları, bir videonun oluşturulduğu andan itibaren kökenini garanti altına almak için içerik sertifikasyon teknolojilerine de güveniyor. Bu arada herkesin dikkatli olması savunmanın ilk hattı olmaya devam ediyor."
+          "text": "En sağlam yanıt medya eğitimidir: bir kaynağı doğrulamayı, birkaç bilgiyi çaprazlamayı ve algoritmaların nasıl işlediğini öğrenmek. Bazıları bir videonun kökenini yaratıldığı andan itibaren güvenceye alan içerik belgeleme teknolojilerine de oynar. Beklerken herkesin uyanıklığı ilk savunma hattı kalır."
         },
         {
           "type": "takeaway",
-          "text": "Yanlış bilgiler sosyal ağlarda gerçeklerden ortalama 6 kat daha hızlı yayılıyor çünkü duygularımızı ve yeniliğe olan susuzluğumuzu sömürüyor. Deepfake ve trol çiftlikleriyle karşı karşıya kalan medya eğitimi, kolektif güveni korumak için en iyi silah olmaya devam ediyor."
+          "text": "Yalan bilgiler sosyal ağlarda gerçekten ortalama 6 kat daha hızlı yayılır, çünkü duygularımızı ve yenilik açlığımızı sömürür. Deepfake'ler ve trol çiftlikleri karşısında kolektif güveni korumanın en iyi silahı medya eğitimi kalır. Kaynağı sormak, ilk savunma hattıdır."
         }
       ]
     }

@@ -1,14 +1,14 @@
 {
   "id": "course_69_comment_se_forment_les_eclairs",
-  "title": "Yıldırım nasıl oluşur?",
-  "subtitle": "gök gürültülü sağanak yağışlar",
+  "title": "Şimşekler nasıl oluşur?",
+  "subtitle": "Fırtınalar",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "Şimşek sihir değildir; fırtına bulutundaki devasa bir elektrik boşalmasıdır. İşte nasıl hazırlanıyor, sonra nasıl vuruyor.",
+  "description": "Şimşek sihir değildir: fırtına bulutunda kocaman bir elektrik boşalmasıdır. İşte nasıl hazırlanır, sonra nasıl yere vurur.",
   "hero": {
     "image": "comment_se_forment_les_eclairs",
     "ratio": "16:9",
-    "hook": "Saniyeden çok kısa bir sürede hava 30.000°C'ye yükselir. Güneş'in yüzeyinden beş kat daha sıcak."
+    "hook": "Saniyenin kesrinde hava 30.000 °C'ye çıkar. Güneş yüzeyinden beş kat daha sıcak."
   },
   "sections": [
     {
@@ -18,93 +18,93 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bir yıldırım göz açıp kapayıncaya kadar devasa bir enerji açığa çıkarır. Yıldırım kanalındaki hava yaklaşık **30.000 °C**'ye yükselir. Gök gürültüsü sadece bu acımasız sıcaklığın sesidir."
+          "text": "Bir şimşek göz açıp kapayana dek dev bir enerji salar. Şimşek kanalındaki hava yaklaşık **30.000 °C**'ye çıkar. Gök gürültüsü ise bu ani ısının sesinden başka bir şey değildir."
         },
         {
           "type": "paragraph",
-          "text": "Şimşeği anlamak için üç adımı izlemeniz gerekir: Bulutun nasıl yüklendiği, elektriğin nasıl yol bulduğu ve sonrasında neden gök gürültüsü duyduğunuz."
+          "text": "Şimşeği anlamak için üç adımı izlemek gerekir: bulut nasıl yüklenir, elektrik nasıl bir yol bulur ve gök gürültüsünü neden sonra duyarız."
         }
       ]
     },
     {
       "id": "course_69_comment_se_forment_les_eclairs_p1",
-      "title": "Bulutta ücretler ayrıdır",
+      "title": "Bulutta yükler ayrılır",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Yıldırım esas olarak [[kümülonimbüs]]'de meydana gelir: **15 km** civarına kadar yükselebilen çok büyük fırtına bulutları. İçeride hava çok güçlü bir şekilde yükselip alçalıyor."
+          "text": "Şimşekler özellikle [[kümülonimbüs]] içinde doğar: yaklaşık **15 km**'ye kadar yükselebilen çok büyük fırtına bulutları. İçlerinde hava çok sert yükselir ve iner."
         },
         {
           "type": "image",
           "asset": "cumulonimbus_thunderstorm_cloud",
           "ratio": "4:3",
-          "caption": "Kümülonimbus: fırtına fabrikası."
+          "caption": "Kümülonimbüs: fırtına fabrikası"
         },
         {
           "type": "paragraph",
-          "text": "Bu kaosta, küçük **buz kristalleri** yükselir ve daha ağır buz taneleri (du [[sulu kar]]) alçalır. Çarpıştıklarında elektrik yükleri değiştirilir. Yavaş yavaş bulutun tepesi oldukça pozitif, tabanı ise oldukça negatif hale gelir."
+          "text": "Bu kargaşada küçük **buz kristalleri** yükselir, daha ağır buz taneleri ([[sulu kar]]) iner. Çarpışınca elektrik yükü değiş tokuş edilir. Yavaş yavaş bulutun tepesi daha çok artı, tabanı daha çok eksi olur."
         },
         {
           "type": "funFact",
-          "text": "Venezuela'daki Maracaibo Gölü, gezegende yıldırımın en çok çarptığı yerlerden biri: burada yılın büyük bir bölümünde neredeyse her gün fırtınalar yaşanıyor."
+          "text": "Venezuela'daki Maracaibo Gölü, gezegenin en çok yıldırım yiyen yerlerinden biridir: yılın büyük kısmında neredeyse her gün fırtına gözlenir."
         }
       ]
     },
     {
       "id": "course_69_comment_se_forment_les_eclairs_p2",
-      "title": "Hava serbest bırakıldığında: deşarj",
+      "title": "Hava dayanamayınca: boşalma",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hava kötü bir iletkendir. Ancak yük farkı çok fazla olursa (genellikle **yüz yıllık volt**), hava çöker. Moleküller elektronlarını kaybederler; iletken hale gelirler. Bu [[Hava iyonizasyonu]]'dir."
+          "text": "Hava kötü bir iletkendir. Ama yük farkı fazla büyürse (sık sık **yüz milyonlarca volt**), hava sonunda teslim olur. Moleküller elektron yitirir ve iletken hale gelir. Buna [[havanın iyonlaşması]] denir."
         },
         {
           "type": "paragraph",
-          "text": "Görünmez bir kanal küçük sıçrayışlarla buluttan ayrılıyor. Yerden özellikle noktalardan (ağaçlar, paratonerler, binalar) elektrik ağları yükselir. İkisi bir araya gelince devre kapanır."
+          "text": "Görünmez bir kanal buluttan küçük sıçramalarla iner. Yerden, özellikle sivri uçlardan (ağaçlar, paratonerler, binalar) elektrik iplikleri yükselir. İkisi kavuşunca devre kapanır."
         },
         {
           "type": "paragraph",
-          "text": "Gördüğümüz büyük ışık, **ark sırtı**, çoğunlukla yerden buluta doğru yükseliyor. Akım on binlerce ampere ulaşabilir. Aynı kanalda birden fazla deşarj birbirini takip edebilir; dolayısıyla titreme etkisi ortaya çıkar."
+          "text": "Gördüğümüz büyük ışık, **dönüş yayı**, özellikle yerden buluta doğru çıkar. Akım onlarca bin amperi bulabilir. Aynı kanalda birkaç boşalma peş peşe gelebilir: titreme etkisi işte buradan gelir."
         }
       ]
     },
     {
       "id": "course_69_comment_se_forment_les_eclairs_p3",
-      "title": "Gök gürültüsü neden daha sonra geliyor?",
+      "title": "Gök gürültüsü neden sonra gelir",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Yıldırım havayı o kadar hızlı ısıtır ki aniden genişler. Bu şok dalgası **gök hızı** haline gelir. Işık neredeyse anında gelir; ses yaklaşık **340 m/sn** hızında ilerler."
+          "text": "Şimşek havayı o kadar hızlı ısıtır ki hava bir anda genleşir. Bu şok dalgası **gök gürültüsü** olur. Işık neredeyse hemen gelir; ses ise yaklaşık **340 m/s** ilerler."
         },
         {
           "type": "paragraph",
-          "text": "Basit ipucu: Şimşek ve gök gürültüsü arasındaki saniyeleri sayın, ardından **3**'ye bölün. Kilometre cinsinden mesafenin bir tahminini alırsınız."
+          "text": "Yalın bir numara: şimşek ile gök gürültüsü arasındaki saniyeleri say, sonra **3**'e böl. Kilometre cinsinden bir uzaklık tahmini elde edersin."
         },
         {
           "type": "funFact",
-          "text": "Dünya'ya saniyede ortalama **100 adet yıldırım düşmesi**. Fransa'da yılda yaklaşık **Bölge** milyon çarpışma meydana geliyor."
+          "text": "Dünya ortalama saniyede yaklaşık **100 şimşek** yer. Fransa'da yılda yere yaklaşık **bir milyon** darbe düştüğü sayılır."
         }
       ]
     },
     {
       "id": "course_69_comment_se_forment_les_eclairs_p4",
-      "title": "Tehlike, doğurganlık ve meraklar",
+      "title": "Tehlike, verimlilik ve tuhaflıklar",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Yıldırım, özellikle açık havada, izole edilmiş ağaçların veya suyun yakınında tehlikeli olmaya devam ediyor. Aynı zamanda yangınları da başlatır. Ancak daha az bilinen bir etkisi var: Toprağı yağmurla gübreleyen nitrojen bileşiklerinin üretilmesine yardımcı oluyor."
+          "text": "Yıldırım tehlikeli durur, özellikle açık alanda, yalnız ağaçların veya suyun yanında. Yangın da çıkarır. Ama daha az bilinen bir etkisi vardır: yağmurla toprağı gübreleyen azotlu bileşikler yapmaya yardım eder."
         },
         {
           "type": "paragraph",
-          "text": "Kameralar, fırtınaların üzerinde ayrıca [[Spritelar]] gibi tuhaf olayları da yakaladı: atmosferin üst kısmında, yerden çıplak gözle görülemeyen kısa parıltılar."
+          "text": "Fırtınaların üstünde kameralar tuhaf olaylar da yakaladı, örneğin [[Spritelar]]: yüksek atmosferde kısa ışıltılar, yerden çıplak gözle görünmez."
         },
         {
           "type": "takeaway",
-          "text": "Kümülonimbusta buz/karla karışık yağmur çarpışmaları yükleri ayırır. Voltaj çok yükseldiğinde hava iyonlaşır: Yıldırım ~30.000°C'ye kadar ısınır ve bu ani genleşme gök gürültüsüne neden olur."
+          "text": "Bir kümülonimbüste buz ve sulu kar çarpışmaları yükleri ayırır. Gerilim fazla büyüyünce hava iyonlaşır: şimşek yaklaşık 30.000 °C'ye ısınır ve bu ani genleşme gök gürültüsünü üretir."
         }
       ]
     }

@@ -1,14 +1,14 @@
 {
   "id": "course_227_le_populisme_pourquoi_ca_monte_partout",
-  "title": "Popülizm: neden her yerde artıyor?",
-  "subtitle": "2010'lardan bu yana",
+  "title": "Popülizm: neden her yerde yükseliyor",
+  "subtitle": "2010'lu yıllardan beri",
   "subject": "comprendreLeMonde",
   "subcategory": "Environment & the future",
-  "description": "Popülist liderler, Avrupa üzerinden ABD'den Hindistan'a kadar geleneksel partileri sarsıyor. Bu dalga neden **Neredeyse tüm demokrasiler** aynı anda etkiliyor?",
+  "description": "ABD'den Hindistan'a, Avrupa'dan geçerek, popülist liderler geleneksel partileri sarsar. Bu dalga neden **neredeyse bütün demokrasileri** aynı anda vurur?",
   "hero": {
     "image": "le_populisme_pourquoi_ca_monte",
     "ratio": "16:9",
-    "hook": "Halkın elitlere karşı olması: Bir asırdan daha eski ama hiçbir zaman bu kadar ikna edici olmamıştı."
+    "hook": "Halk seçkinlere karşı: bir yüzyıldan eski bir söylem, ama hiç bu kadar ikna etmemişti."
   },
   "sections": [
     {
@@ -18,61 +18,61 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "2010'lardan beri **popülizm** artık marjinal bir olgu değil. Amerika Birleşik Devletleri'nden Hindistan'a, Avrupa ve Latin Amerika üzerinden liderler onlarca yıldır iktidarda olan geleneksel partileri sarsıyor."
+          "text": "2010'lu yıllardan beri **popülizm** artık marjinal bir olgu değildir. ABD'den Hindistan'a, Avrupa ve Latin Amerika'dan geçerek, liderler onyıllardır iktidardaki geleneksel partileri sarsar."
         },
         {
           "type": "paragraph",
-          "text": "Bu hareket birdenbire ortaya çıkmaz. Bunun kökleri çok gerçek ekonomik, kültürel ve teknolojik ayrımlardan kaynaklanmaktadır. Bu ders bu söylemin mantığını ve yükselişinin nedenlerini araştırıyor."
+          "text": "Bu hareket yoktan gelmez. Gerçek ekonomik, kültürel ve teknolojik kırıklara kök salar. Bu ders o söylemin mantığını ve yükselişinin nedenlerini araştırır."
         }
       ]
     },
     {
       "id": "course_227_le_populisme_pourquoi_ca_monte_partout_p1",
-      "title": "Saf halk, yozlaşmış seçkinlere karşı",
+      "title": "Saf halk, yozlaşmış seçkine karşı",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Popülizm kesin bir ekonomik programla değil, çok özel bir politik mantıkla tanımlanıyor. Siyaset bilimci Jan-Werner Müller'e göre bu örgütün ana fikri [[monizm]]'dir: Yalnızca tek bir \"gerçek insan\" olacak ve popülist lider onun tek sözcüsü olacaktır."
+          "text": "Popülizm belirli bir ekonomik programla değil, çok özel bir siyasi mantıkla tanımlanır. Siyaset bilimci Jan-Werner Müller'e göre merkez fikir [[monizm]] adını taşır: tek bir “gerçek halk” vardır ve popülist lider onun yegâne sözcüsüdür."
         },
         {
           "type": "image",
           "asset": "populist_political_rally_crowd_flags",
           "ratio": "16:9",
-          "caption": "Popülist söylem toplumu iki karşıt kampa bölüyor."
+          "caption": "Popülist söylem toplumu iki karşıt kampa böler"
         },
         {
           "type": "paragraph",
-          "text": "Bu vizyon toplumu iki kampa bölüyor: Bir yanda özgün değerlerin taşıyıcısı olan “saf halk”, diğer yanda ise genel çıkarlara ihanet etmekle suçlanan “yozlaşmış seçkinler”. Bu çerçeve çok esnektir: Sağda, fazla küreselci olduğu düşünülen elitlerin aksine, insanlar genellikle ulus tarafından tanımlanır. Solda, finansal seçkinlerle karşı karşıya olan sosyal sınıf tarafından tanımlanıyor."
+          "text": "Bu bakış toplumu iki kampa ayırır: bir yanda sahici değerlerin taşıyıcısı “saf halk”, öte yanda genel çıkarı satmakla suçlanan “yozlaşmış seçkin”. Çerçeve çok esnektir: sağda halk çoğu zaman ulusla tanımlanır, fazla küreselci bulunan bir seçkine karşı. Solda toplumsal sınıfla tanımlanır, mali bir seçkine karşı."
         },
         {
           "type": "funFact",
-          "text": "İlk büyük modern popülist parti olan Amerikan Halk Partisi 1892'de demiryollarının millileştirilmesi çağrısında bulunmuştu çünkü çiftçiler oranların görünmez bir mali elit tarafından belirlendiğine inanıyordu."
+          "text": "İlk büyük modern popülist parti, 1892'deki Amerikan People's Party, demiryollarını kamulaştırmayı zaten isterdi; çünkü çiftçiler tarifelerin görünmez bir mali seçkin tarafından belirlendiğini düşünürdü."
         }
       ]
     },
     {
       "id": "course_227_le_populisme_pourquoi_ca_monte_partout_p2",
-      "title": "Çok gerçek bir öfke",
+      "title": "Oldukça gerçek öfkeler",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bu yükselişi açıklamak için birçok kriz bir araya geliyor. Ekonomik cephede, araştırmacı Branko Milanović, 1988 ile 2008 yılları arasında Asyalı orta sınıfların ve dünyanın en zenginlerinin gelirlerinin arttığını, Batılı orta sınıfların ise durgunlaştığını gösterdi. Bu küçümsenme hissi, kalıcı öfkeyi körükledi."
+          "text": "Bu yükselişi birkaç kriz bir araya gelerek açıklar. Ekonomide araştırmacı Branko Milanović gösterdi: 1988 ile 2008 arasında Asya orta sınıfları ve dünyanın en zenginleri gelirlerinin tırmandığını gördü, Batı orta sınıfları ise durakladı. Bu düşüş duygusu kalıcı bir öfke besledi."
         },
         {
           "type": "image",
           "asset": "2015_refugee_migration_crisis_Europe_Mediterranean",
           "ratio": "4:3",
-          "caption": "2015 göç krizi Avrupa'da kimlik güvensizliği hissini artırdı."
+          "caption": "2015 göç krizi Avrupa'da kimliksel bir güvensizlik duygusu besledi"
         },
         {
           "type": "paragraph",
-          "text": "Bu ekonomik ayrıma ek olarak kültürel bir uçurum da var: Toplumsal değişimlerin hızlanması ve 2015'teki göç krizi, kendisini kentli elitlerin aldığı kararlardan daha uzak hisseden birçok seçmen arasında kimlik güvensizliği yarattı."
+          "text": "Bu ekonomik kırığa kültürel bir yarık eklenir: toplum değişimlerinin hızlanması ve 2015 göç krizi, birçok seçmende kimliksel bir güvensizlik yarattı; kentli seçkinlerin aldığı kararlardan daha uzak hissederler."
         },
         {
           "type": "paragraph",
-          "text": "Son olarak sosyal ağlar siyasal iletişimi dönüştürdü. Kutuplaşmayı pekiştiriyor ve liderlerin geleneksel medyaya başvurmadan basit ve duygusal bir dille izleyicileriyle doğrudan konuşmasına olanak tanıyor."
+          "text": "Son olarak sosyal ağlar siyasi iletişimi dönüştürdü. Kutuplaşmayı güçlendirir ve liderlerin geleneksel medyadan geçmeden, yalın ve duygusal bir dille kamuoyuna doğrudan hitap etmesini sağlar."
         }
       ]
     },
@@ -83,44 +83,44 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Küresel siyasi manzara çok çeşitli popülist figürler sunuyor. Donald Trump, Amerikan Cumhuriyetçi Partisini korumacılık ve milliyetçilik etrafında dönüştürdü. Macaristan'da Viktor Orbán, seçim sonuçlarının artan güç yoğunlaşmasını haklı çıkardığı bir [[Liberal olmayan demokrasiler (Orbán)]] inşa etti."
+          "text": "Dünya siyasi manzarası büyük bir popülist figür çeşitliliği sunar. Donald Trump Amerikan Cumhuriyetçi Partisi'ni korumacılık ve milliyetçilik etrafında dönüştürdü. Macaristan'da Viktor Orbán [[Liberal olmayan demokrasiler (Orbán)]] inşa etti; seçim sonucu artan bir iktidar yığılmasını gerekçelendirir."
         },
         {
           "type": "image",
           "asset": "Donald_Trump_Marine_Le_Pen_populist_leaders",
           "ratio": "16:9",
-          "caption": "Çok farklı isimler elitlerden kopma yönünde aynı retoriği paylaşıyor."
+          "caption": "Çok farklı figürler seçkinlerle kopuşun aynı retoriğini paylaşır"
         },
         {
           "type": "paragraph",
-          "text": "Fransa'da Marine Le Pen, ulusal tercih merkezli bir söylemi sürdürürken seçmen kitlesini genişletmek için [[şeytanlaştırma]] stratejisini izledi. Fransa'da Jean-Luc Mélenchon veya Amerika Birleşik Devletleri'nde Bernie Sanders tarafından somutlaştırılan sol popülizm, daha ziyade zenginliğin yeniden dağıtılmasından yanadır ancak aynı “sistem”den kopma retoriğini paylaşmaktadır."
+          "text": "Fransa'da Marine Le Pen seçmenini genişletmek için [[normalleştirme]] stratejisi yürüttü, ulusal tercih merkezli söylemini koruyarak. Jean-Luc Mélenchon'un Fransa'da veya Bernie Sanders'ın ABD'de cisimleştirdiği sol popülizm daha çok zenginliğin paylaşımını öne çıkarır, ama “sistem”le kopuşun aynı retoriğini paylaşır."
         }
       ]
     },
     {
       "id": "course_227_le_populisme_pourquoi_ca_monte_partout_p4",
-      "title": "Gerçek test: gücün kullanılması",
+      "title": "Asıl sınav: iktidarı kullanmak",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Popülizmin büyük paradoksu iktidara geldiğinde ortaya çıkıyor. Lider artık sistemin rakibi olmakla yetinemez, sistem haline gelir. Asi imajını korumak için, iradesini engellemekle suçlanan yargıçlar veya memurlar gibi yeni düşmanları sıklıkla görevlendiriyor."
+          "text": "Popülizmin büyük paradoksu iktidara varınca belirir. Lider artık sistemin muhalifi olmakla yetinemez: sistem olur. Asi imajını tutmak için çoğu zaman yargıçlar veya memurlar gibi yeni düşmanlar işaret eder; iradesini tıkamakla suçlanırlar."
         },
         {
           "type": "paragraph",
-          "text": "Kurumlar için riskin somutlaştığı nokta burasıdır. Macaristan ve Polonya'da reformlar yargının bağımsızlığını azaltmayı amaçlıyordu. Seçim yenilgisi durumunda, bazı liderler, 2021'de Kongre Binası'na yapılan saldırıda olduğu gibi, oylamanın meşruiyetine bile meydan okuyor."
+          "text": "Kurumlar için risk orada somutlaşır. Macaristan veya Polonya'da reformlar yargının bağımsızlığını kısmayı hedefledi. Seçim yenilgisinde bazı liderler oyunun meşruiyetini bile tartışır, 2021'deki Capitol saldırısında olduğu gibi."
         },
         {
           "type": "funFact",
-          "text": "Amerika Birleşik Devletleri'nin en popüler başkanlarından biri olan Andrew Jackson, neredeyse ayaklanmayla sonuçlanan bir parti için Beyaz Saray'ı halka açtığı için kendisini eleştirenler tarafından \"Kral Çetesi\" lakabını aldı."
+          "text": "ABD'nin en popüler başkanlarından Andrew Jackson'a eleştirenleri “King Mob” (kalabalığın kralı) derdi; çünkü Beyaz Saray'ı halka bir şölen için açmış, iş neredeyse isyana varmıştı."
         },
         {
           "type": "paragraph",
-          "text": "Ancak bu yükseliş aynı zamanda yararlı bir alarm sinyali işlevi de görüyor: geleneksel partileri, endüstriyel egemenlik veya kırsal alanlardaki kamu hizmetleri gibi ihmal edilen konuları ele almaya zorluyor."
+          "text": "Ama bu yükseliş yararlı bir alarm sinyali de olur: geleneksel partileri sanayi egemenliği veya kırsal kamu hizmetleri gibi ihmal edilmiş konulara el atmaya zorlar."
         },
         {
           "type": "takeaway",
-          "text": "Popülizm dünyayı \"saf insanlar\" ve \"yozlaşmış seçkinler\" olarak ikiye bölüyor. Küreselleşmeyle bağlantılı eşitsizlikler ve sosyal ağların güçlendirdiği kültürel güvensizlik nedeniyle 2010'dan bu yana her yerde artıyor."
+          "text": "Popülizm dünyayı “saf halk” ile “yozlaşmış seçkin” diye böler. 2010'dan beri her yerde yükselir; küreselleşmenin eşitsizlikleri ve sosyal ağların büyüttüğü kültürel güvensizlik taşır."
         }
       ]
     }

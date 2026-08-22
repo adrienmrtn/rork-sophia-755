@@ -1,14 +1,14 @@
 {
   "id": "course_159_le_theatre_de_shakespeare",
-  "title": "Shakespeare'in tiyatrosu",
+  "title": "Shakespeare tiyatrosu",
   "subtitle": "1564-1616",
   "subject": "art",
   "subcategory": "Cinema, photography & architecture + iconic works",
-  "description": "Londra'da Shakespeare Globe için yazdı. Hamlet, Macbeth, Romeo: İngiliz dilinin zirvesi haline gelen popüler tiyatro.",
+  "description": "Londra'da Shakespeare Globe için yazar. Hamlet, Macbeth, Romeo: halk tiyatrosu, İngiliz dilinin doruğu olur.",
   "hero": {
     "image": "le_theatre_de_shakespeare",
     "ratio": "16:9",
-    "hook": "Bir oyuncunun oyun yazarı, seti olmayan bir tiyatro... ve sonsuz replikler."
+    "hook": "Oyuncu bir oyun yazarı, dekorsuz bir sahne... ve ölümsüz replikler."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**William Shakespeare** (1564-1616) okul için değil, Londra sahnesi için yazdı. Oyunları kralları, soytarıları, aşıkları ve suikastçıları bir araya getiriyor."
+          "text": "**William Shakespeare** (1564-1616) okul için değil, Londra sahnesi için yazar. Oyunları kralları, soytarıları, âşıkları ve katilleri karıştırır."
         },
         {
           "type": "paragraph",
-          "text": "Dört asır sonra hâlâ her yerde oynanıyor."
+          "text": "Dört yüzyıl sonra hâlâ her yerde oynanır."
         }
       ]
     },
@@ -33,17 +33,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Lord Chamberlain'in Adamları]] grubuyla birlikte açık hava alanı olan [[Küre Tiyatrosu]]'de sahne alıyor. [[topraklılar]] çok az para ödüyor ve sahneye yakın duruyor. Tiyatro popüler, gürültülü ve canlıdır."
+          "text": "[[Lord Chamberlain'in Adamları]] topluluğuyla gökyüzüne açık bir daire olan [[Globe Tiyatrosu]] sahnesinde oynar. [[topraklılar]] az öder ve sahnenin yanında ayakta kalır. Tiyatro halka açıktır, gürültülüdür, canlıdır."
         },
         {
           "type": "paragraph",
-          "text": "Elizabeth dönemi Londrası gösteriyi sever. Tiyatrolar vaazlarla ve ayı dövüşleriyle yarışır. Shakespeare bu gürültülü pazarda yazıyor, fildişi kulede değil."
+          "text": "Elizabeth dönemi Londra'sı seyri sever. Tiyatrolar vaazlarla ve ayı dövüşleriyle yarışır. Shakespeare bu gürültülü pazarda yazar, fildişi kulede değil."
         },
         {
           "type": "image",
           "asset": "globe_theatre_london_reconstruction",
           "ratio": "4:3",
-          "caption": "The Globe: Sahne kalabalığa itildi."
+          "caption": "Globe: kalabalığa itilmiş sahne"
         }
       ]
     },
@@ -54,36 +54,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sık sık Shakespeare tarzı boş dizelerle yazar: kafiyesiz iambik beşli ölçü. Hakaretler, şiirler, monologlar: Kelimeler icat eder ve efsane haline gelmiş karakterleri (Hamlet, Lady Macbeth) yaratır."
+          "text": "Çoğu zaman Shakespeare'in beyaz mısrasıyla yazar: kafiyesiz iambik pentametre. Hakaretler, şiirler, monologlar: sözcükler icat eder ve mit olmuş karakterler (Hamlet, Lady Macbeth) sabitleştirir."
         },
         {
           "type": "paragraph",
-          "text": "Tarihleri, İtalyan haberlerini, eski parçaları geri dönüştürüyor. Orijinallik, olay örgüsünün saf kurgusunda değil, dilde ve karakterlerdedir."
+          "text": "Vakanüvisleri, İtalyan öyküleri, eski oyunları yeniden kullanır. Özgünlük dilde ve karakterlerdedir, olayın salt icadında değil."
         },
         {
           "type": "funFact",
-          "text": "Ölümünden sonra yayınlanan 1623 tarihli [[Birinci Folyo]] sayesinde eserlerinin birçoğu bize ulaştı."
+          "text": "Oyunlarının bir kısmı bize ancak ölümünden sonra yayımlanan 1623 [[Birinci Folyo]] derlemesi sayesinde ulaşır."
         }
       ]
     },
     {
       "id": "course_159_le_theatre_de_shakespeare_p3",
-      "title": "Trajediler, komediler, hikayeler",
+      "title": "Tragedya, komedya, tarihler",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Gülmekten kana geçer. *Romeo ve Juliet*, *otello*, *Kral Lear*: aileler, güç, kıskançlık. “Tarih oyunları”, kendilerini destansı bir biçimde görmekten hoşlanan bir izleyici kitlesi için İngiltere'yi yeniden canlandırıyor."
+          "text": "Gülüşten kana geçer. *Romeo ve Juliet*, *Othello*, *Kral Lear*: aileler, iktidar, kıskançlık. “History plays” İngiltere'yi, kendini destanda görmeyi seven bir kamu için yeniden oynar."
         },
         {
           "type": "paragraph",
-          "text": "Komediler ve trajediler birbirine yanıt verir. Deli doğruyu söyler; kral çıldırır. Tonların bu geçirgenliği, neden hala binlerce farklı şekilde monte edilebildiğini açıklıyor."
+          "text": "Komedyalar ve tragedyalar birbirine yanıt verir. Deli doğruyu söyler; kral deliye döner. Tonların bu geçirgenliği, onu hâlâ bin türlü sahneleyebilmeni açıklar."
         },
         {
           "type": "image",
           "asset": "shakespeare_first_folio_1623",
           "ratio": "4:3",
-          "caption": "Birinci Folio: metinleri unutulmaktan kurtarmak."
+          "caption": "Birinci Folyo: metinleri unutuluştan kurtarmak"
         }
       ]
     },
@@ -94,27 +94,27 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sinema ve rap tarafından tercüme edilen, uyarlanan, örneklenen Shakespeare, hırs ve arzuyu ifade etmek için bir araç kutusu olmaya devam ediyor. Onun sırrı: Kalabalık önünde oyuncular için yazmak."
+          "text": "Çevrilen, uyarlanan, sinema ve rap tarafından örneklenen Shakespeare, hırsı ve arzuyu söylemek için bir alet kutusu olarak kalır. Sırrı: bir kalabalığın önünde, oyuncular için yazmak."
         },
         {
           "type": "paragraph",
-          "text": "Shakespeare'in tiyatrosunu tam olarak anlamak için bir şeyi aklınızda tutmalısınız: Her teknik detay bir duyguya ya da fikre hizmet eder. İş asla sadece dekoratif değildir."
+          "text": "Shakespeare tiyatrosunu iyi kavramak için bir şeyi aklında tut: her teknik ayrıntı bir duyguya veya bir fikre hizmet eder. Eser hiçbir zaman yalnızca süs değildir."
         },
         {
           "type": "paragraph",
-          "text": "Bağlam, stil kadar önemlidir. Tarihler, yerler, sponsorlar, kamu: tüm bunlar bir formun neden daha önce değil de belirli bir anda göründüğünü açıklıyor."
+          "text": "Bağlam, üslup kadar önemlidir. Tarihler, yerler, sipariş verenler, kamu: bir biçimin neden tam o anda, daha önce değil, belirdiğini bunlar açıklar."
         },
         {
           "type": "paragraph",
-          "text": "Son olarak miras uzun vadede ölçülür. Bugün müzelerde, filmlerde ya da popüler müzikte gördüklerimiz hâlâ bu icatların izlerini taşıyor."
+          "text": "Son olarak miras uzun zamanda ölçülür. Müzelerde, filmlerde veya popüler müzikte bugün gördüğümüz şey, hâlâ bu icatların izini taşır."
         },
         {
           "type": "paragraph",
-          "text": "18. yüzyılda Fransa'da ve başka yerlerde tercüme edilen kitap, bir dünya klasiği haline geldi. Her çağ onda kendi aynasını buluyor: romantik, politik, postkolonyal, feminist."
+          "text": "18. yüzyıldan itibaren Fransa'da ve başka yerlerde çevrilen yazar dünya klasiği olur. Her çağ onda kendi aynasını bulur: romantik, siyasi, sömürge sonrası, feminist."
         },
         {
           "type": "takeaway",
-          "text": "Globe'da Shakespeare, karakterleri ve dili dünyayı fetheden popüler bir tiyatro icat etti."
+          "text": "Globe'da Shakespeare, karakterleri ve dili dünyayı fetheden bir halk tiyatrosu icat etti."
         }
       ]
     }

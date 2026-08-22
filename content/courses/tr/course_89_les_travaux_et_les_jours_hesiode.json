@@ -1,14 +1,14 @@
 {
   "id": "course_89_les_travaux_et_les_jours_hesiode",
   "title": "İşler ve Günler, Hesiodos",
-  "subtitle": "MS 8. yüzyıl",
+  "subtitle": "M.Ö. 8. yüzyıl",
   "subject": "litterature",
   "subcategory": "Ancient Greeks & Philosophers",
-  "description": "Hesiod, kardeşi Perses'le konuşuyor: Çalış, adil ol, aşırılıktan sakın. Pandora efsanesi ile tarım takvimi arasında bir çalışma etiği doğuyor.",
+  "description": "Hesiodos kardeşi Perses'e seslenir: çalış, adil ol, ölçüsüzlükten sakın. Pandora miti ile tarım takvimi arasında bir emek etiği doğar.",
   "hero": {
     "image": "les_travaux_et_les_jours_hesiode",
     "ratio": "16:9",
-    "hook": "Bilgelik kılavuzlarından önce bir çiftçi-şair kardeşine ders veriyor."
+    "hook": "Bilgelik elkitaplarından önce bir çiftçi-şair kardeşine vaaz verir."
   },
   "sections": [
     {
@@ -18,68 +18,68 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**M.Ö.8. yüzyıl civarında**, Orta Yunanistan'ın Attika'nın kuzeyindeki bir bölgesi olan [[Boeotia]]'de şair **Hesiodos**, **İşler ve Günler**'yi yazdı. Bu, savaşçı kahramanların destanı değil. Bu, yolsuz yargıçların yardımıyla aile mirasını aldatmakla suçlanan kardeşi **Persler**'ye hitaben yazılmış bir şiirdir."
+          "text": "Yaklaşık **M.Ö. 8. yüzyıl**da, Attika'nın kuzeyinde, Orta Yunanistan'daki [[Boeotia]] bölgesinde, şair **Hesiodos** **İşler ve Günler**'i yazar. Bu bir savaşçı kahraman destanı değildir. Aile mirasında yozlaşmış yargıçların yardımıyla hile yaptığı itham edilen kardeşi **Perses**'e yöneltilmiş bir şiirdir."
         },
         {
           "type": "paragraph",
-          "text": "Hesiodos efsaneyi, ahlakı ve tarımsal tavsiyeleri birleştiriyor. Toprakta çalışmak, adalete saygı duymak, gururdan kaçınmak: gündelik yaşam şiirsel bir malzeme haline gelir. Homer'la birlikte metinleri Yunan mitolojisinin ve düşüncesinin büyük bir bölümünü oluşturdu."
+          "text": "Hesiodos miti, ahlakı ve tarım öğüdünü karıştırır. Toprağı işlemek, adalete uymak, kibri kaçınmak: gündelik hayat şiir malzemesi olur. Homeros ile birlikte metinleri, Yunan mitolojisinin ve düşüncesinin büyük bir kısmını kurar."
         }
       ]
     },
     {
       "id": "course_89_les_travaux_et_les_jours_hesiode_p1",
-      "title": "Kendi alanından konuşan bir şair",
+      "title": "Tarla içinden konuşan bir şair",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Destansı şiirin yarı efsanevi figürü **Homeros**'den farklı olarak Hesiod kendisini sahneye çıkarıyor. Boeotian yöresi **Aşra** adlı köyünü, günümüz Türkiye'sinin bir bölgesi olan Küçük Asya'dan gelen babasını, Perslere karşı duruşmasını anlatıyor. Sanatın ilham veren tanrıçası **İlham perisi**'nin onu seçtiğini söyledi. Ancak üslup hala somut: ek, biç, doğru zamanda yön bul."
+          "text": "Destanın yarı efsane figürü **Homeros**'un tersine Hesiodos kendini sahneye koyar. Köyünü, Boiotia yerleşimi **Ascra**'yı, bugünkü Türkiye topraklarından, Küçük Asya'dan gelen babasını, Perses'e karşı davasını anlatır. Sanatlara esin veren tanrıça **Musa** onu seçer, der. Ton yine somuttur: ekmek, biçmek, doğru anda denize açılmak."
         },
         {
           "type": "image",
           "asset": "hesiod_ancient_greek_poet_illustration",
           "ratio": "4:3",
-          "caption": "Hesiodos: Yunan şiiri de tarlalara iniyor."
+          "caption": "Hesiodos: Yunan şiiri tarlaya da iner."
         },
         {
           "type": "paragraph",
-          "text": "Bu kişisel ses modern bir şeyi duyuruyor: Sadece isimsiz bir ozan değil, dahil olan yazar. Hesiodos saraydan ya da savaş alanından değil, yeryüzünden konuşuyor. Didaktik şiiri, öğreten şiiri icat eder."
+          "text": "Bu kişisel ses modern bir şeyi haber verir: işin içine giren yazar, yalnızca adsız ozan değil. Hesiodos saraydan veya savaş alanından değil, topraktan konuşur. Öğreten bir şiir, didaktik bir şiir icat eder."
         }
       ]
     },
     {
       "id": "course_89_les_travaux_et_les_jours_hesiode_p2",
-      "title": "Prometheus, Pandora ve Çöküş",
+      "title": "Prometheus, Pandora ve gerileyiş",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hesiod, hayatın acımasızlığını açıklamak için erkekler için ateşi çalan titan **Prometheus**'ye ve kavanozu dünyaya kötülük salan ilk kadın **Pandora**'ye anlatır. [[İnsanlığın beş çağı]]'yi ekliyor: altın, gümüş, bronz, kahraman, demir. Adaletin sarsıldığı ve çalışmanın zor olduğu **Demir Çağı**'da yaşıyoruz, en kötüsü."
+          "text": "Hayatın sertliğini açıklamak için Hesiodos, ateşi insanlar için çalan titan **Prometheus**'u ve küpü dünyaya dertleri salan ilk kadın **Pandora**'yı anlatır. Ardından [[insanlığın beş çağı]] gelir: altın, gümüş, tunç, kahramanlar, demir. Biz **demir çağı**nı yaşarız, en kötüsünü; adalet sarsılır, emek ağırdır."
         },
         {
           "type": "funFact",
-          "text": "[[Hesiodos'un Theogony'si]], aynı yazarın bir başka harika şiiri, tanrıların orijinal boşluk olan **Kaos**'dan doğuşunu anlatıyor. Eserler gökten sabana doğru iniyor."
+          "text": "Aynı yazarın diğer büyük şiiri [[Hesiodos'un Theogony'si]], tanrıların doğuşunu ilk boşluk **Kaos**'tan anlatır. İşler ise gökten sabanın yanına iner."
         },
         {
           "type": "image",
           "asset": "prometheus_fire_myth_painting",
           "ratio": "4:3",
-          "caption": "Prometheus ve ateş: Hesiod'da teknik ilerlemenin bir bedeli vardır."
+          "caption": "Prometheus ve ateş: Hesiodos'ta teknik ilerlemenin bir bedeli vardır."
         }
       ]
     },
     {
       "id": "course_89_les_travaux_et_les_jours_hesiode_p3",
-      "title": "Kibire karşı Dikè",
+      "title": "Dike, kibire karşı",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Şiirin ahlaki özü, *Dikè*, adalet, adil düzen ile insanı tanrılarla eşit olduğuna inanmaya iten aşırılık [[Melez]]'nin karşısına çıkıyor. Adaletsiz krallar tanrıların kralı **Zeus** tarafından tehdit ediliyor. Dürüst köylünün bir şansı vardır. Hesiodos cenneti vaat etmiyor. Çaba göstermenin sahtekarlıktan daha iyi olduğunu vaat ediyor."
+          "text": "Şiirin ahlaki çekirdeği *Dike*'yi, yani adaleti ve doğru düzeni, insanı tanrılara denk sanmaya iten ölçüsüzlük [[Kibir]] ile karşı karşıya getirir. Adaletsiz kralları tanrıların kralı **Zeus** tehdit eder. Dürüst köylünün ise bir şansı vardır. Hesiodos cennet vaat etmez. Çabanın sahtekârlıktan üstün olduğunu vaat eder."
         },
         {
           "type": "paragraph",
-          "text": "**işte böyle bir şey** metne ritim katıyor: ne zaman pulluk yapılmalı, ne zaman hasat yapılmalı, ne zaman denize karşı dikkatli olunmalı. Bilgelik mevsimseldir. Doğanın ritimlerini bilmek aynı zamanda o anın iştahından daha büyük bir düzene saygı duymak anlamına da gelir. Perses'e bir kral gibi değil, tembel bir kardeş gibi ders veriliyor."
+          "text": "**İş takvimi** metni ritmlendirir: ne zaman sürmeli, ne zaman üzüm toplamalı, ne zaman denizden sakınmalı. Bilgelik mevsimliktir. Doğanın ritimlerini bilmek, anlık iştahtan daha geniş bir düzene uymaktır. Perses bir kral gibi değil, tembel bir kardeş gibi azarlanır."
         }
       ]
     },
@@ -90,15 +90,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Vergilius**, MÖ 1. yüzyılın Latin şairi. BC, tarım üzerine didaktik bir şiir olan [[Georges]]'de hatırlanacak. Rönesans'ın hümanisti [[Erasmus]]'den modernlere kadar ahlakçılar, bu kitapta bir çalışma etiği okudular. Hesiod nazik değildir. Açıktır ki, iş ve adalet olmadan toplum çürür."
+          "text": "M.Ö. 1. yüzyılın Latin şairi **Vergilius**, tarımı öğreten didaktik şiir [[Georges]] içinde bunu hatırlar. Ahlakçılar, Rönesans hümanisti [[Erasmus]] ile modernlere kadar, orada bir emek etiği okur. Hesiodos yumuşak değildir. Açıktır: emek ve adalet olmadan topluluk çürür."
         },
         {
           "type": "paragraph",
-          "text": "Hesiod ayrıca nefret ve sınama tanrıçası **kötü Eris**'ye karşı komşuyu daha iyi çalışmaya iten faydalı rekabet tanrıçası **iyi Eris**'den de söz eder. Zorlu bir dünyada bu ayrım önemlidir: öykünme savaş değildir. Şiir böylece mevsimlere ve ölçülere bağlı bir birlikte yaşama sanatı haline gelir."
+          "text": "Hesiodos **iyi Eris**'ten de söz eder: komşuyu daha iyi çalışmaya iten yararlı rekabet tanrıçası. Karşısında nefretin ve davanın tanrıçası **kötü Eris** durur. Sert bir dünyada bu ayrım önemlidir: yarış savaş değildir. Şiir böylece mevsimlere ve ölçüye bağlı bir birlikte yaşama sanatı olur."
         },
         {
           "type": "takeaway",
-          "text": "**İşler ve Günler**, günlük tarım yaşamının bir şiirini icat ediyor. Hesiodos kardeşine ve bize şöyle dedi: Tarlanızı işleyin, aşırılıktan kaçının, çünkü Demir Çağı tembelliği veya adaletsizliği affetmez."
+          "text": "**İşler ve Günler** gündelik tarımın şiirini icat eder. Hesiodos kardeşine ve bize der: tarlanı işle, ölçüsüzlükten kaç, çünkü demir çağı tembelliği de adaletsizliği de bağışlamaz."
         }
       ]
     }

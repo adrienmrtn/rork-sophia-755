@@ -1,14 +1,14 @@
 {
   "id": "course_163_pandore_et_la_boite",
   "title": "Pandora ve kutu",
-  "subtitle": "Kötülük kavanozu",
+  "subtitle": "Kötülükler küpü",
   "subject": "mythologie",
   "subcategory": "Greece: the gods",
-  "description": "Tanrıların yarattığı ilk kadın olan Pandora, belalarla dolu bir kavanozu açar. Derinlerde bir umut kalır. Merak ve talihsizlik hakkında bir efsane.",
+  "description": "Tanrıların yarattığı ilk kadın Pandora, belalarla dolu bir küp açar. Dipte umut kalır. Merak ve felaket üzerine bir mit.",
   "hero": {
     "image": "pandore_et_la_boite",
     "ratio": "16:9",
-    "hook": "Bu bir kutu değildi. Bir kavanozdu. Ve içerdiği şey insanların kaderini değiştirdi."
+    "hook": "Bu bir kutu değildi. Bir küptü. Ve içindekiler insanların yazgısını değiştirdi."
   },
   "sections": [
     {
@@ -18,97 +18,97 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Yunan mitolojisinde **Pandora** sadece bir karakter değildir. Tanrıların tuzak olarak yarattığı ilk kadındır. **Zeus**, [[Prometheus]] tarafından vurulan adamları cezalandırmak istiyor."
+          "text": "Yunan mitolojisinde **Pandora** yalnızca bir kişi değildir. Tanrıların tuzak diye yoğurduğu ilk kadındır. **Zeus**, [[Prometheus]] elinden ateş almış insanları cezalandırmak ister."
         },
         {
           "type": "paragraph",
-          "text": "Pandora bir kavanozla gelir. Onu açarak insanın dikkatsizliğine son veren kötülükleri serbest bırakır. Derinlerde gizemli bir şey kalıyor: **umut**. “Pandora’nın kutusunu açmak” deyimi böyle doğdu."
+          "text": "Pandora yanında bir küple gelir. Kapağı açınca insani kaygısızlığı bitiren kötülükleri salıverir. Dipte esrarengiz bir şey kalır: **umut**. “Pandora'nın kutusunu açmak” deyimi işte böyle doğar."
         }
       ]
     },
     {
       "id": "course_163_pandore_et_la_boite_p1",
-      "title": "Tanrılar “güzel bir kötülük” yaratır",
+      "title": "Tanrılar bir “güzel kötülük” üretir",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ateşin çalınmasının ardından Zeus, demircilik tanrısı **Hephaestus**'ye kilden ve sudan bir tanrıça kadar güzel bir kadın modeli yapmasını emreder. Her Olimpiyatçı bir bağış ekler. **Athena** ona dokumayı öğretiyor. **Afrodit** ona çekiciliği katıyor. **Hermes**, tanrıların elçisi, ona hileler ve yalanlar söylüyor."
+          "text": "Ateş çalındıktan sonra Zeus, ocak tanrısı **Hephaistos**'a kil ve sudan, bir tanrıça kadar güzel bir kadın yoğurmasını buyurur. Her Olimposlu bir armağan ekler. **Athena** ona dokumayı öğretir. **Aphrodite** çekicilik verir. Tanrıların habercisi **Hermes** kurnazlığı ve yalanı içine sızdırır."
         },
         {
           "type": "image",
           "asset": "pandora_opening_jar_pithos_painting",
           "ratio": "4:3",
-          "caption": "Pandora, yani \"tüm hediyeleri alan\", erkekleri aldatmak için yaratılmıştır."
+          "caption": "Pandora, “bütün armağanları alan”, insanları aldatmak için yaratılmış"
         },
         {
           "type": "paragraph",
-          "text": "Ona **Pandora** denir: \"tüm hediyeleri alan kişi\". Prometheus, kardeşi **Epimetheus**'u Zeus'tan herhangi bir hediye kabul etmemesi konusunda uyarmıştı. Çok geç. Daha sonra düşünen Epimetheus büyüye kapılır ve onu karşılar."
+          "text": "Adı **Pandora** olur: “bütün armağanları alan”. Prometheus, kardeşi **Epimetheus**'u Zeus'tan hiçbir hediye kabul etmemesi için uyarmıştı. Çok geç. Sonradan düşünen Epimetheus büyüsüne kapılır ve onu evine alır."
         },
         {
           "type": "funFact",
-          "text": "Yunanlılar arasında Pandora bir refakatçi olarak yaratılmadı. Bir ceza olarak, insanlığı vurmayı amaçlayan “güzel bir kötülük” olarak tasarlanmıştır."
+          "text": "Yunanlılarda Pandora bir eş olarak yaratılmaz. İnsanlığı vuracak bir ceza, bir “güzel kötülük” olarak tasarlanır."
         }
       ]
     },
     {
       "id": "course_163_pandore_et_la_boite_p2",
-      "title": "Kavanoz açılır, vebalar uçup gider",
+      "title": "Küp açılır, belalar uçar",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pandora, büyük bir saklama kavanozu olan bir “pithos” taşıyor. Latince metinler ve modern çeviriler onu bir “kutu” haline getirecek. İçeride tanrılar yaşlılığı, hastalığı, kıtlığı, deliliği ve savaşı kilit altında tutuyordu."
+          "text": "Pandora bir “pithos”, büyük bir ambar küpü taşır. Latin metinler ve modern çeviriler bunu bir “kutu” yapacaktır. İçine tanrılar yaşlılığı, hastalığı, kıtlığı, deliliği, savaşı kapatmıştır."
         },
         {
           "type": "funFact",
-          "text": "“Kutu” hatası 16. yüzyıldaki [[Rotterdamlı Erasmus]]'den geliyor. Hesiodos'u tercüme ederken \"pithos\" (kavanoz) ile \"pyxis\"i (küçük kutu) karıştırır."
+          "text": "“Kutu” yanılgısı 16. yüzyılda [[Rotterdamlı Erasmus]] yüzünden doğar. Hesiodos'u çevirirken “pithos” (küp) ile “pyxis” (küçük kutu) sözcüklerini karıştırır."
         },
         {
           "type": "paragraph",
-          "text": "Tanrıların ona yerleştirdiği merakla harekete geçen Pandora, kapağı kaldırır. Vebalar bir anda kaçar. Paniğe kapılarak kavanozu kapatır. Çok geç. Geriye sadece [[Elpis]], yani Hope kaldı, dibe tutunarak."
+          "text": "Tanrıların içine koyduğu merakla itilen Pandora kapağı kaldırır. Belalar birden kaçar. Panikleyince küpü kapatır. Çok geç. Geride yalnızca [[Elpis]], yani Umut, dibe tutunmuş kalır."
         }
       ]
     },
     {
       "id": "course_163_pandore_et_la_boite_p3",
-      "title": "Umut: tedavi mi yoksa tuzak mı?",
+      "title": "Umut: çare mi tuzak mı?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Umut neden kavanozda kalıyor? Antik çağlardan bu yana tartışmalar sürüyor. Eğer kapta sadece kötülükler varsa umudun bir olduğuna mı inanacağız?"
+          "text": "Umut neden küpün içinde kalır? Antikiteden beri tartışılır. Kap yalnızca kötülükler taşıdıysa, umudun da onlardan biri olduğuna mı inanmalı?"
         },
         {
           "type": "paragraph",
-          "text": "Filozof **Nietzsche** gibi bazıları için umut, işkenceyi uzatır: gerçeği kabul etmemizi engeller. Diğerleri için Zeus, umutsuzluğun tek çaresi olarak bunu bilerek bıraktı."
+          "text": "Filozof **Nietzsche** gibi bazılarına göre umut işkenceyi uzatır: gerçekliği kabullenmeyi engeller. Başkalarına göre Zeus onu bile bile bırakmıştır, umutsuzluğa karşı tek çare olarak."
         },
         {
           "type": "paragraph",
-          "text": "Yunanca'da [[Elpis]] yalnızca olumlu değildir. Kelime, iyi ya da kötü gelecek olanın beklentisini ifade eder. Kurtarmaya veya eziyet etmeye muktedir tarafsız bir güç."
+          "text": "Yunancada [[Elpis]] yalnızca olumlu değildir. Sözcük gelecek olanın, iyi ya da kötü, beklenişini adlandırır. Kurtarabilen ya da eziyet edebilen yansız bir güç."
         }
       ]
     },
     {
       "id": "course_163_pandore_et_la_boite_p4",
-      "title": "Efsanenin geride bıraktığı şey",
+      "title": "Mitin ardından kalan",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Theogony'nin yazarı **Hesiodos**'de Pandora'nın hikayesi güçlü bir [[Kadın düşmanlığı]] taşır: Kadın orada erkek için bir yük olarak görünür. Bu efsane sıklıkla Havva ve İncil'deki düşüşle karşılaştırılmıştır."
+          "text": "Theogonia'nın yazarı **Hesiodos**'ta Pandora anlatısı güçlü bir [[Kadın düşmanlığı]] taşır: kadın orada erkeğin yükü gibi görünür. Bu mit sık sık Havva ve İncil'deki düşüşle karşılaştırılmıştır."
         },
         {
           "type": "funFact",
-          "text": "Diğer versiyonlarda kavanozun faydaları vardı. Olympus'a doğru uçtuklarında ölümlüler için erişilemez hale geleceklerdi."
+          "text": "Başka versiyonlarda küp iyilikler taşırdı. Bunlar Olimpos'a uçunca ölümlülerin erişemeyeceği bir yere gitmiş olurlar."
         },
         {
           "type": "paragraph",
-          "text": "Daha sonra Pandora da merakın simgesi haline gelir. Onun itaatsizliği talihsizlik getirir ama aynı zamanda insanlığı çalışmaya, icat etmeye, hayatta kalmaya iter. Günümüzde “Pandora'nın kutusunun açılması”, sonuçları kontrol edilemeyen bir eylemi ifade etmektedir."
+          "text": "Daha sonra Pandora merakın figürü de olur. İtaatsizliği felaketi açar, ama insanlığı çalışmaya, icat etmeye, hayatta kalmaya da iter. Bugün “Pandora'nın kutusunu açmak”, denetlenemez sonuçları olan bir eylemi adlandırır."
         },
         {
           "type": "takeaway",
-          "text": "**Pandora** kavanozu insan dikkatsizliğine son veriyor. Kötülükler yayılır ve **Umut** en altta kalır: Talihsizlik karşısında belirsiz olan tek kontrpuan."
+          "text": "**Pandora**'nın küpü insani kaygısızlığı bitirir. Kötülükler yayılır, **umut** dipte kalır: felakete karşı tek, muğlak karşı ağırlık."
         }
       ]
     }
