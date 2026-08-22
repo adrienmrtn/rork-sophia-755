@@ -1,14 +1,14 @@
 {
   "id": "course_138_bach_et_la_musique_baroque",
-  "title": "Bach- und Barockmusik",
+  "title": "Bach und die Barockmusik",
   "subtitle": "1685-1750",
   "subject": "art",
   "subcategory": "Musik",
-  "description": "Johann Sebastian Bach, Kantor in Leipzig, brachte Fuge und Kontrapunkt auf den Höhepunkt und wurde zum Architekten des Barock.",
+  "description": "Johann Sebastian Bach, Kantor in Leipzig, führt Fuge und Kontrapunkt auf ihren Gipfel und wird zum Baumeister des Barock.",
   "hero": {
     "image": "bach_et_la_musique_baroque",
     "ratio": "16:9",
-    "hook": "Ein Leipziger Kantor baut die Klangkathedrale des Westens."
+    "hook": "Ein Kantor aus Leipzig baut die Klangkathedrale des Abendlands."
   },
   "sections": [
     {
@@ -18,61 +18,61 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Johann Sebastian Bach** (**1685**-**1750**) wird oft als der Höhepunkt der westlichen Musik angesehen. Als Architekt der Klänge bringt er die Kunst der **Zuflucht** und  zur Perfektion: mehrere unabhängige Melodielinien, die ineinandergreifen. [[Kontrapunkt und Fuge]]"
+          "text": "**Johann Sebastian Bach** (**1685**-**1750**) gilt oft als Gipfel der westlichen Musik. Als Baumeister der Klänge führt er die **Fuge** und den [[Kontrapunkt]] zur Vollendung: mehrere unabhängige Melodielinien, die sich ineinanderflechten."
         },
         {
           "type": "paragraph",
-          "text": "Sein Leben ist nicht das eines Hofstars. Es ist das Werk eines genialen Handwerkers im Dienste der Kirche und der Fürsten, dessen Werk erst im 19. Jahrhundert vollständig wiederentdeckt wurde."
+          "text": "Sein Leben ist nicht das eines Hofstars. Es ist das eines genialen Handwerkers im Dienst der Kirche und der Fürsten. Sein Werk wird erst im 19. Jahrhundert wirklich wiederentdeckt."
         }
       ]
     },
     {
       "id": "course_138_bach_et_la_musique_baroque_p1",
-      "title": "Barock: Kirche, Hof und Bühne",
+      "title": "Das Barock: Kirche, Hof und Bühne",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Die Epoche **barock** reicht von etwa **1600** bis zu Bachs Tod. Sie mag Kontraste, Bewegung und Ornamente. **Vivaldi** in Italien, **Handel** in Deutschland und dann in England dominieren die Landschaft. Musik dient drei Missionen: der Kirche (Orgel und geistlicher Gesang), dem Schlafzimmer des Prinzen und der Bühne (Oper)."
+          "text": "Die **Barockzeit** reicht ungefähr von **1600** bis zu Bachs Tod. Sie liebt Kontrast, Bewegung, Ornament. **Vivaldi** in Italien und **Händel** in Deutschland, später in England, beherrschen die Szene. Musik dient drei Aufgaben: der Kirche (Orgel und geistlicher Gesang), der Kammer der Fürsten und der Bühne (Oper)."
         },
         {
           "type": "paragraph",
-          "text": "Bach hat keine Oper geschrieben, aber er hat seinen Passionen und Oratorien lyrische Dramatik verliehen. Es vereint französisches Maß, italienische Lyrik und deutsche Strenge. Für ihn spiegelt Musik eine göttliche Ordnung wider, nicht nur Vergnügen."
+          "text": "Bach schreibt keine Oper, aber er legt lyrisches Drama in seine Passionen und Oratorien. Er verbindet französisches Maß, italienische Melodie und deutsche Strenge. Für ihn spiegelt Musik eine göttliche Ordnung, nicht nur ein Vergnügen."
         },
         {
           "type": "funFact",
-          "text": "1717 saß Bach in Weimar einen Monat im Gefängnis, weil er zu stark auf seinen Rücktritt gedrängt hatte: Der Herzog verweigerte ihm die Ausreise nach Köthen."
+          "text": "1717 in Weimar sitzt Bach einen Monat im Gefängnis, weil er zu hart auf seine Entlassung drängt: der Herzog will ihn nicht nach Köthen ziehen lassen."
         }
       ]
     },
     {
       "id": "course_138_bach_et_la_musique_baroque_p2",
-      "title": "Leipzig: Der Kantor und seine Kantaten",
+      "title": "Leipzig: der Kantor und seine Kantaten",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Geboren in **Eisenach** in **1685** in eine Musikerdynastie, ließ sich Bach in **1723** in **Leipzig** als  der Thomaskirche nieder. Überwältigende Belastung: fast jede Woche ein neues , dazu  unterrichten. [[Kantor]] [[Kantate]] [[Thomasschule]]"
+          "text": "Geboren **1685** in **Eisenach** in einer Musikerfamilie, geht Bach **1723** nach **Leipzig** als [[Kantor]] der Thomaskirche. Die Last ist enorm: fast jede Woche eine neue [[Kantate]], dazu Unterricht an der [[Thomasschule]]."
         },
         {
           "type": "image",
           "asset": "bach_eisenach_birthplace_portrait",
           "ratio": "4:3",
-          "caption": "Bach, Erbe einer Reihe deutscher Musiker."
+          "caption": "Bach, Erbe einer langen Linie deutscher Musiker"
         },
         {
           "type": "image",
           "asset": "leipzig_st_thomas_church_bach_cantor",
           "ratio": "4:3",
-          "caption": "Der heilige Thomas von Leipzig: das tägliche Leben des Kantors Bach."
+          "caption": "Die Thomaskirche in Leipzig: der Alltag des Kantors Bach"
         },
         {
           "type": "paragraph",
-          "text": "Es wird geschätzt, dass etwa **300** Kantaten komponiert wurden, von denen uns einige **200** überliefert sind. Er hat **20** Kinder aus zwei Ehen; **Carl Philipp Emanuel** und **Johann Christian** wurden selbst bedeutende Komponisten. Abends leitet er das [[Collegium Musicum]], ein Ensemble, für das er Konzerte und weltliche Suiten schreibt."
+          "text": "Man schätzt etwa **300** Kantaten, von denen rund **200** erhalten sind. Aus zwei Ehen hat er **20** Kinder. **Carl Philipp Emanuel** und **Johann Christian** werden selbst große Komponisten. Abends leitet er das [[Collegium Musicum]], für das er weltliche Konzerte und Suiten schreibt."
         },
         {
           "type": "funFact",
-          "text": "Am Ende seines Lebens erblindete Bach kurz vor seinem Tod, als er sich einer Augenoperation durch den reisenden Chirurgen John Taylor unterzog."
+          "text": "Gegen Ende seines Lebens operiert der Wanderchirurg John Taylor Bachs Augen. Kurz vor dem Tod erblindet er."
         }
       ]
     },
@@ -83,32 +83,32 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mit dem [[Gleiches Temperament]], einem Stimmsystem, das Intervalle vereinheitlicht, beweist Bach, dass ein Keyboard in allen Tonarten spielen kann. *Das Wohltemperierte Klavier* (48 Präludien und Fugen) öffnet den Weg zur modernen Musik. Seine Fuge überlagert ein mehrstimmig aufgegriffenes Thema: die mathematische Architektur."
+          "text": "[[Die gleichstufige Stimmung]] vereinheitlicht die Intervalle. Damit beweist Bach, dass ein Tasteninstrument in allen Tonarten spielen kann. *Das Wohltemperierte Klavier* (48 Präludien und Fugen) öffnet den Weg zur modernen Musik. Seine Fuge legt ein Thema übereinander, das mehrere Stimmen nacheinander aufgreifen: eine mathematische Architektur."
         },
         {
           "type": "image",
           "asset": "bach_well_tempered_clavier_manuscript_fugue",
           "ratio": "4:3",
-          "caption": "Die wohltemperierte Tastatur: alle Töne auf einer einzigen Tastatur."
+          "caption": "Das Wohltemperierte Klavier: alle Tonarten auf einem einzigen Manual"
         },
         {
           "type": "paragraph",
-          "text": "Als er starb, bevorzugte die Mode das leichtere . Bach wirkt „gotisch“. In **1829** dirigierte der junge **Felix Mendelssohn** die *St. Matthäus-Passion* in Berlin: Beginn der „Bach-Renaissance“. Ohne ihn wären Hunderte Partituren verschwunden. [[galanter Stil]]"
+          "text": "Nach seinem Tod siegt der [[galanter Stil]], leichter und klarer. Bach wirkt “gotisch”. **1829** dirigiert der junge **Felix Mendelssohn** in Berlin die *Matthäuspassion*: der Beginn der “Bach-Renaissance”. Ohne ihn hätten Hunderte Partituren verschwinden können."
         },
         {
           "type": "funFact",
-          "text": "Mendelssohn scherzte: „Ein konvertierter Jude und ein Schauspieler (sein Freund Devrient) mussten der Welt das größte Meisterwerk christlicher Musik zurückgeben.“"
+          "text": "Mendelssohn scherzte: ein konvertierter Jude und ein Schauspieler (sein Freund Devrient) mussten der Welt das größte Meisterwerk der christlichen Musik zurückgeben."
         }
       ]
     },
     {
       "id": "course_138_bach_et_la_musique_baroque_p4",
-      "title": "SDG, Reisen und universelles Erbe",
+      "title": "SDG, Voyager und das universelle Erbe",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bach, ein glühender Lutheraner, signierte oft **SDG** (*Soli Deo Gloria*: Gott allein die Ehre). Er spielt mit dem [[Numerologie]] und codiert seinen Namen (B-A-C-H) in Noten. In **1977** platzierte die NASA mehrere seiner Werke auf dem [[Golden Record]] der Voyager-Sonde: der Klangbotschaft der Menschheit im Weltraum."
+          "text": "Als überzeugter Lutheraner setzt Bach oft **SDG** darunter (*Soli Deo Gloria*: Gott allein die Ehre). Er spielt mit der [[Numerologie]] und legt seinen Namen (B-A-C-H) in Noten. **1977** legt die NASA mehrere seiner Werke auf den [[Golden Record]] der Voyager-Sonden: eine klingende Botschaft der Menschheit ins All."
         },
         {
           "type": "timeline",
@@ -116,28 +116,28 @@
             {
               "date": "1685",
               "title": "Geburt in Eisenach",
-              "detail": "Eine Musikerdynastie bringt Bach in die Welt."
+              "detail": "Eine Musikerfamilie schenkt der Welt Bach."
             },
             {
               "date": "1723",
               "title": "Kantor in Leipzig",
-              "detail": "Wöchentliche Kantaten und immenses geistliches Werk."
+              "detail": "Wöchentliche Kantaten und ein gewaltiges geistliches Werk."
             },
             {
               "date": "1722-1742",
-              "title": "Wohltemperierte Tastatur",
-              "detail": "Alle Töne, die Fuge wie eine Kathedrale."
+              "title": "Wohltemperiertes Klavier",
+              "detail": "Alle Tonarten, die Fuge als Kathedrale."
             },
             {
               "date": "1829",
               "title": "Mendelssohn",
-              "detail": "Die Matthäus-Passion kommt wieder ans Licht."
+              "detail": "Die Matthäuspassion kehrt ins Licht zurück."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Bach, Kantor von Leipzig, brachte Kontrapunkt und Fuge auf den Höhepunkt; Von Mendelssohn vergessen und dann wiederbelebt, bleibt er der Architekt des Barock."
+          "text": "Als Kantor von Leipzig führte Bach Kontrapunkt und Fuge auf ihren Gipfel. Vergessen und von Mendelssohn wiedererweckt, bleibt er der Baumeister des Barock."
         }
       ]
     }

@@ -380,8 +380,11 @@ def check_segment(
             break
 
     # --- typography -------------------------------------------------------
+    # Glossary keys are registered strings; they may legally contain a curly
+    # apostrophe or a pair of guillemets. Only the surrounding prose is ours.
+    prose_for_chars = GLOSSARY_SPAN_RE.sub(" ", english)
     for char, label in FORBIDDEN_CHARS.items():
-        index = english.find(char)
+        index = prose_for_chars.find(char)
         if index >= 0:
             report("forbidden-char", f"{label}: {snippet(english, index)}")
     if re.search(r"\s[,;:!?](?!\))", english):
