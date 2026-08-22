@@ -1,14 +1,14 @@
 {
   "id": "course_59_la_decouverte_de_l_anesthesie",
   "title": "El descubrimiento de la anestesia",
-  "subtitle": "Medicamento",
+  "subtitle": "Medicina",
   "subject": "sciences",
   "subcategory": "Descubrimientos que cambiaron el mundo",
-  "description": "Antes de 1846, las operaciones se realizaban a menudo de forma consciente y con un dolor extremo. La anestesia transforma la cirugía en atención, no en tortura.",
+  "description": "Antes de 1846, una operación se hacía a menudo consciente y con un dolor extremo. La anestesia convierte la cirugía en un cuidado, no en una tortura.",
   "hero": {
     "image": "la_decouverte_de_l_anesthesie",
     "ratio": "16:9",
-    "hook": "Un día de 1846, en Boston, la cirugía dejó de ser una carrera contra el dolor."
+    "hook": "Un día de 1846, en Boston, la cirugía deja de ser una carrera contra el dolor."
   },
   "sections": [
     {
@@ -18,28 +18,28 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Imagínate una amputación sin quedarte dormido. Antes de mediados del siglo XIX, esta era la norma. Atamos al paciente, nos movemos rápidamente, rezamos."
+          "text": "Imagina una amputación sin adormecer. Antes de mediados del siglo XIX, era la norma. Se ata al paciente, se va rápido, se reza."
         },
         {
           "type": "paragraph",
-          "text": "**anestesia** lo cambia todo: permite operar sin conciencia del dolor. La cirugía moderna finalmente puede tomarse su tiempo."
+          "text": "La **anestesia** lo cambia todo: permite operar sin conciencia del dolor. La cirugía moderna puede por fin tomarse su tiempo."
         }
       ]
     },
     {
       "id": "course_59_la_decouverte_de_l_anesthesie_p1",
-      "title": "Antes: velocidad versus sufrimiento",
+      "title": "Antes: la velocidad contra el sufrimiento",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "surgery_without_anesthesia_19th_century",
           "ratio": "4:3",
-          "caption": "Sin anestesia, el cirujano tuvo que ser extremadamente rápido."
+          "caption": "Sin anestesia, el cirujano tenía que ser extremadamente rápido"
         },
         {
           "type": "paragraph",
-          "text": "Los cirujanos fueron juzgados por su velocidad. Se utilizó alcohol, opio o fuerza bruta para inmovilizar a las personas. Muchos pacientes murieron por shock, infección o hemorragia."
+          "text": "A los cirujanos se les juzgaba por su velocidad. Se usaba alcohol, opio o la fuerza bruta para inmovilizar. Muchos pacientes morían del choque, de la infección o de la hemorragia."
         }
       ]
     },
@@ -52,45 +52,45 @@
           "type": "image",
           "asset": "ether_anesthesia_first_demonstration_1846",
           "ratio": "4:3",
-          "caption": "En Boston, una manifestación pública convenció al mundo médico."
+          "caption": "En Boston, una demostración pública convence al mundo médico"
         },
         {
           "type": "paragraph",
-          "text": "**16 de octubre de 1846**, en Boston, el dentista **William Morton** hace que un paciente inhale **éter**. El cirujano **Juan Warren** opera un tumor en el cuello. El paciente no grita. La sala queda atónita."
+          "text": "El **16 de octubre de 1846**, en Boston, el dentista **William Morton** hace inhalar **éter** a un paciente. El cirujano **John Warren** opera un tumor del cuello. El paciente no grita. La sala queda atónita."
         },
         {
           "type": "funFact",
-          "text": "Según se informa, Warren dijo: \"Caballeros, esto no es una patraña\". La frase sigue siendo famosa."
+          "text": "Warren habría declarado: “Señores, esto no es un humbug” (no es un timo). La frase se ha quedado célebre."
         }
       ]
     },
     {
       "id": "course_59_la_decouverte_de_l_anesthesie_p3",
-      "title": "Siguiente: cloroformo y debates",
+      "title": "Después: cloroformo y debates",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Siguieron otros productos, como el **cloroformo**, popularizado especialmente en Gran Bretaña. Surgen rivalidades sobre quién “inventó” qué. La patente no importa: la idea se está extendiendo por todo el mundo."
+          "text": "Siguen otros productos, como el **cloroformo**, popularizado sobre todo en Gran Bretaña. Estallan rivalidades sobre quién ha “inventado” qué. Poco importa la patente: la idea se extiende por el mundo entero."
         },
         {
           "type": "paragraph",
-          "text": "Queda un problema: dormir sin matar. Hay que dosificarlo, vigilar la respiración y el corazón. Nace una nueva especialidad."
+          "text": "Queda un problema: adormecer sin matar. Hay que dosificar, vigilar la respiración, el corazón. Nace una especialidad nueva."
         }
       ]
     },
     {
       "id": "course_59_la_decouverte_de_l_anesthesie_p4",
-      "title": "Anestesia hoy",
+      "title": "La anestesia hoy",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hoy, el anestesiólogo utiliza gases y fármacos precisos, máquinas que lo miden todo. Se puede poner a dormir todo el cuerpo o solo una zona (anestesia local o locorregional)."
+          "text": "Hoy, el anestesista usa gases y medicamentos precisos, máquinas que lo miden todo. Se puede adormecer todo el cuerpo o solo una zona (anestesia local o locorregional)."
         },
         {
           "type": "takeaway",
-          "text": "Desde la demostración del éter en **1846**, la anestesia ha transformado la cirugía: menos dolor, más tiempo, más precisión... y la seguridad se ha convertido en una ciencia por derecho propio."
+          "text": "Desde la demostración del éter en **1846**, la anestesia ha transformado la cirugía: menos dolor, más tiempo, más precisión… y una seguridad que se ha vuelto una ciencia por derecho propio."
         }
       ]
     }
