@@ -4,11 +4,11 @@
   "subtitle": "1870-1960",
   "subject": "art",
   "subcategory": "Música",
-  "description": "Nacido en los campos de algodón de Mississippi, el blues inventó la grilla de 12 compases y nutrió al jazz, el rock, el soul y el hip-hop.",
+  "description": "Nacido en los campos de algodón de Misisipi, el blues inventó la retícula de 12 compases y alimentó el jazz, el rock, el soul y el hip-hop.",
   "hero": {
     "image": "le_blues_racines_de_toute_la_musique_moderne",
     "ratio": "16:9",
-    "hook": "Un grito en los campos de algodón y toda la música moderna tiene una raíz."
+    "hook": "Un grito en los campos de algodón, y toda la música moderna tiene una raíz."
   },
   "sections": [
     {
@@ -18,30 +18,30 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "El blues no es sólo un género. Es la matriz de gran parte de la música popular occidental del siglo XX. Nació en la miseria de los campos de algodón de **Misisipí**, a finales del siglo XIX, como resistencia y expresión de los afroamericanos."
+          "text": "El blues no es solo un género. Es el molde del que salió gran parte de la música popular occidental del siglo XX. Nació de la pobreza de los campos de algodón de **Misisipi** a finales del siglo XIX, como resistencia y como expresión de los afroamericanos."
         },
         {
           "type": "paragraph",
-          "text": "Del jazz al rock'n'roll, del soul al hip-hop, sus estructuras y emociones todavía irrigan nuestros oídos. Comprender el blues significa volver al origen de un grito transformado en arte."
+          "text": "Del jazz al rock and roll, del soul al hip-hop, sus estructuras y su sentimiento siguen recorriendo nuestros oídos. Entender el blues es volver a la fuente de un grito convertido en arte."
         }
       ]
     },
     {
       "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p1",
-      "title": "Campos de algodón, gritos y 12 medidas.",
+      "title": "Campos de algodón, hollers y 12 compases",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Entre **1870** y **1890**, en un [[Field hollers]] marcado por la segregación y la pobreza de los aparceros, el blues sintetiza las tradiciones orales africanas. El [[Work songs]] (gritos de trabajo solitario) y el [[Espirituales]] (canciones cronometradas para sincronizar el esfuerzo) se encuentran con el [[Deep South]], canciones religiosas que a veces transmiten mensajes de libertad."
+          "text": "Entre **1870** y **1890**, en el [[Deep South]] de la segregación y de la miseria aparcera, el blues reunió tradiciones orales africanas. Los [[field hollers]], gritos sueltos lanzados a través de los campos, y las [[work songs]], cantos constantes que marcaban el ritmo del trabajo, se encontraron con los [[spirituals]], canciones religiosas que a veces llevaban un mensaje de libertad."
         },
         {
           "type": "paragraph",
-          "text": "La mayor innovación: el [[estructura en 12 compases]], una grilla de tres acordes que sirve como lienzo para la improvisación. Las, notas flexionadas, imitan el dolor de la voz. La guitarra, a menudo con un [[notas azules]] (tubo de vidrio o metal deslizado sobre las cuerdas), dialoga con el cantante. [[Bottleneck]]"
+          "text": "La gran innovación fue la [[estructura de 12 compases]], una retícula de tres acordes que sirve de lienzo a la improvisación. Las [[blue notes]], notas torcidas, imitan el dolor de una voz. La guitarra, a menudo tocada con un [[bottleneck]], un tubo de vidrio o de metal deslizado por las cuerdas, responde al cantante."
         },
         {
           "type": "funFact",
-          "text": "En las letras, la palabra “jinete” a menudo codificaba a un amante para abordar temas tabú frente a una audiencia desinformada."
+          "text": "En las letras, la palabra “rider” a menudo sustituía a un amante, un modo de cantar temas tabú ante un público que no lo pillaría."
         }
       ]
     },
@@ -52,92 +52,92 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "El **Delta del Misisipi**, entre Memphis y Vicksburg, es la cuna del **blues delta**, una forma cruda del género. **Robert Johnson** (**1911**-**1938**) interpreta al músico errante: sólo grabaciones de **29**, una influencia inmensa. Su  trata la guitarra como una orquesta en miniatura. [[Fingerpicking]]"
+          "text": "El **Delta del Misisipi**, entre Memphis y Vicksburg, es la cuna del **Delta blues**, la forma más cruda del género. **Robert Johnson** (**1911**-**1938**) es el músico errante hecho carne: solo **29** grabaciones, y una influencia inmensa. Su [[fingerpicking]] trata la guitarra como una orquesta en miniatura."
         },
         {
           "type": "image",
           "asset": "mississippi_delta_blues_cotton_fields",
           "ratio": "4:3",
-          "caption": "El delta del Mississippi: cuna del blues rural."
+          "caption": "El Delta del Misisipi: cuna del blues rural"
         },
         {
           "type": "image",
           "asset": "robert_johnson_blues_guitarist_crossroads",
           "ratio": "4:3",
-          "caption": "Robert Johnson: 29 títulos, una leyenda eterna."
+          "caption": "Robert Johnson: 29 temas, una leyenda eterna"
         },
         {
           "type": "paragraph",
-          "text": "Cuenta la leyenda que vendió su alma al diablo en un [[Crossroads]] (encrucijada) a cambio de su maestría. Al blues se le llamaba entonces \"la música del diablo\", en comparación con las canciones de la iglesia. Johnson murió envenenado a una edad temprana. *Blues de cruce de caminos* y *Dulce Hogar Chicago* se están convirtiendo en estándares."
+          "text": "La leyenda dice que vendió el alma al diablo en un [[crossroads]] a cambio de su don. Al blues se le llamaba a menudo “la música del diablo”, frente a los cantos de la iglesia. Johnson murió joven, envenenado. *Cross Road Blues* y *Sweet Home Chicago* se volvieron estándares."
         },
         {
           "type": "funFact",
-          "text": "Grabó de cara a la pared en una habitación de hotel de San Antonio, no por timidez, sino para explotar la acústica de la habitación."
+          "text": "Grabó de cara a la pared en un hotel de San Antonio, no por timidez, sino para usar la acústica de la habitación."
         }
       ]
     },
     {
       "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p3",
-      "title": "Chicago: el blues se vuelve eléctrico",
+      "title": "Chicago: el blues se electrifica",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En los años **1940**, la Gran Migración llevó a millones de afroamericanos al Norte industrial. En **Chicago**, el blues se electrifica para ahogar el ruido de las fábricas. **aguas turbias** y **Lobo aullador** imponen guitarra eléctrica, bajo y batería."
+          "text": "En los años **1940**, la Gran Migración llevó a millones de afroamericanos al Norte industrial. En **Chicago**, el blues se enchufó para cortar el ruido de las fábricas. **Muddy Waters** y **Howlin' Wolf** hicieron de la guitarra eléctrica, el bajo y la batería el nuevo estándar."
         },
         {
           "type": "image",
           "asset": "muddy_waters_chicago_electric_blues",
           "ratio": "4:3",
-          "caption": "Muddy Waters en Chicago: blues conectado a la corriente."
+          "caption": "Muddy Waters en Chicago: el blues cableado a la corriente"
         },
         {
           "type": "paragraph",
-          "text": "Esta electrificación conduce al rock'n'roll. **Chuck Berry** y **bo didley** aceleran el ritmo. En la década de 1960, los **piedras rodantes** (nombre tomado de una canción de Muddy Waters) y **Led Zepelín** reexportaron estas raíces al público blanco, a menudo sin que los creadores originales hicieran una fortuna."
+          "text": "Esa electrificación llevó directo al rock and roll. **Chuck Berry** y **Bo Diddley** aceleraron el tempo. En los años 1960, los **Rolling Stones**, bautizados por una canción de Muddy Waters, y **Led Zeppelin** revendieron esas raíces a un público blanco, a menudo sin que los creadores originales hicieran fortuna."
         },
         {
           "type": "funFact",
-          "text": "Muddy Waters fue \"descubierto\" por el musicólogo Alan Lomax mientras todavía conducía un tractor en una plantación de algodón."
+          "text": "A Muddy Waters lo “descubrió” el musicólogo Alan Lomax mientras aún conducía un tractor en una plantación de algodón."
         }
       ]
     },
     {
       "id": "course_140_le_blues_racines_de_toute_la_musique_mod_p4",
-      "title": "De B.B. King al muestreo",
+      "title": "De B.B. King al sampling",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "El jazz toma prestadas estructuras e improvisación de él. El soul y el R&B mantienen su voz visceral. El hip-hop recicla su herencia a través del [[Sampling]] del vinilo antiguo. **BB Rey** popularizó el solo de guitarra melódico. Más que un estilo histórico, el blues sigue siendo un lenguaje sobre el amor perdido, la injusticia y la esperanza."
+          "text": "El jazz tomó prestadas sus estructuras y su improvisación. El soul y el R&B conservaron su voz visceral. El hip-hop recicla su legado mediante el [[sampling]] de vinilos viejos. **B.B. King** popularizó el solo de guitarra melódico. Más que un estilo histórico, el blues sigue siendo un lenguaje para el amor perdido, la injusticia y la esperanza."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1870-1890",
-              "title": "Nacimiento en el sur profundo",
-              "detail": "Gritos, espirituales y grilla en 12 compases."
+              "title": "Nacimiento en el Deep South",
+              "detail": "Hollers, espirituales y la retícula de 12 compases."
             },
             {
-              "date": "década de 1930",
+              "date": "años 1930",
               "title": "Robert Johnson",
-              "detail": "El mito del Delta y la encrucijada."
+              "detail": "El mito del Delta y de la encrucijada."
             },
             {
-              "date": "Década de 1940-1950",
-              "title": "Chicago eléctrica",
-              "detail": "Muddy Waters allana el camino para el rock."
+              "date": "años 1940-1950",
+              "title": "Chicago eléctrico",
+              "detail": "Muddy Waters abrió el camino al rock."
             },
             {
-              "date": "década de 1960",
-              "title": "Renacimiento británico",
-              "detail": "Stones y Zeppelin globalizan el blues."
+              "date": "años 1960",
+              "title": "Revival británico",
+              "detail": "Los Stones y Zeppelin hicieron el blues global."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Nacido del sufrimiento de las comunidades negras de Mississippi, el blues dio al mundo el gráfico de 12 compases y, a través de Chicago, el rock y mucho más."
+          "text": "Nacido del sufrimiento de las comunidades negras de Misisipi, el blues dio al mundo la retícula de 12 compases. Por vía de Chicago también nos dio el rock, y mucho más."
         }
       ]
     }
