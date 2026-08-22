@@ -1,17 +1,16 @@
 #!/usr/bin/env python3
 """Validate localised course content against the French source and the style guide.
 
-Every rule here maps to a rule in ``content/TRANSLATION_GUIDE_EN.md``. The
+Every rule here maps to a rule in ``content/TRANSLATION_GUIDE_<LANG>.md``. The
 checks are deliberately mechanical: they catch the failure modes the machine
 translation pipeline used to produce (glossary terms parked at the end of a
 paragraph, empty article slots, unbalanced markers, leaked protection tokens,
-untranslated number formats) plus the typography rules we impose on the English
-edition.
+untranslated number formats) plus the typography rules of that language.
 
 Usage:
     python scripts/check_course_translation.py --lang en
-    python scripts/check_course_translation.py --lang en --verbose course_10*
-    python scripts/check_course_translation.py --lang en --json report.json
+    python scripts/check_course_translation.py --lang de --verbose course_10*
+    python scripts/check_course_translation.py --lang de --json report.json
 """
 
 from __future__ import annotations
@@ -126,6 +125,75 @@ CLOSERS = "\\s\\d\"'\u201c\u201d\u2019\\)\\]"
 MISSING_SPACE_RE = re.compile(rf"[,;:](?=[^{CLOSERS}])")
 
 
+class LanguageRules:
+    """Per-language checks. English is the default; others override."""
+
+    def __init__(
+        self,
+        *,
+        stranded_spaced: re.Pattern[str],
+        stranded_tight: re.Pattern[str],
+        leading_articles: tuple[str, ...],
+        leftover_extra_skip: frozenset[str] = frozenset(),
+        check_a_an: bool = True,
+        flag_space_thousands: bool = True,
+        thousands_hint: str = "should use a comma",
+        flag_decimal_comma: bool = True,
+        century_hint: str = "should be an English ordinal",
+        era_hint: str = "should be BC/AD",
+    ) -> None:
+        self.stranded_spaced = stranded_spaced
+        self.stranded_tight = stranded_tight
+        self.leading_articles = leading_articles
+        self.leftover_extra_skip = leftover_extra_skip
+        self.check_a_an = check_a_an
+        self.flag_space_thousands = flag_space_thousands
+        self.thousands_hint = thousands_hint
+        self.flag_decimal_comma = flag_decimal_comma
+        self.century_hint = century_hint
+        self.era_hint = era_hint
+
+
+ENGLISH_RULES = LanguageRules(
+    stranded_spaced=STRANDED_SPACED_RE,
+    stranded_tight=STRANDED_TIGHT_RE,
+    leading_articles=LEADING_ARTICLES,
+)
+
+GERMAN_RULES = LanguageRules(
+    stranded_spaced=re.compile(
+        r"\b(der|die|das|dem|den|des|ein|eine|eines|einem|einen|von|vom|mit|"
+        r"durch|f\u00fcr|bei|zum|zur|und|oder|als)"
+        r"\s+([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    # Only articles that cannot end a clause. German strands prepositions
+    # freely ("womit er arbeitete.").
+    stranded_tight=re.compile(
+        # "ein." is often the separable prefix of einsetzen/einfallen, not an article.
+        r"\b(der|die|das|eine)\s*([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    leading_articles=("der ", "die ", "das ", "dem ", "den ", "des ", "ein ", "eine "),
+    leftover_extra_skip=frozenset({"des"}),  # German genitive article
+    check_a_an=False,
+    flag_space_thousands=True,
+    thousands_hint="should use a period (30.000)",
+    flag_decimal_comma=False,  # German decimals are commas
+    century_hint="should be an Arabic ordinal (15. Jahrhundert)",
+    era_hint="should be v. Chr. / n. Chr.",
+)
+
+RULES_BY_LANG: dict[str, LanguageRules] = {
+    "en": ENGLISH_RULES,
+    "de": GERMAN_RULES,
+}
+
+
+def rules_for(lang: str) -> LanguageRules:
+    return RULES_BY_LANG.get(lang, ENGLISH_RULES)
+
+
 class Finding:
     __slots__ = ("course_id", "key", "rule", "detail")
 
@@ -150,7 +218,7 @@ def bold_spans(text: str) -> list[str]:
     return parts[1:-1:2] if len(parts) % 2 else []
 
 
-def residual_french(text: str) -> tuple[str, str] | None:
+def residual_french(text: str, extra_skip: frozenset[str] = frozenset()) -> tuple[str, str] | None:
     """First untranslated French function word, or None.
 
     Original-language material is exempt, because it is deliberate: glossary
@@ -170,6 +238,8 @@ def residual_french(text: str) -> tuple[str, str] | None:
             start = index + len(phrase)
 
     for match in FRENCH_LEFTOVERS.finditer(candidate):
+        if match.group(0).lower() in extra_skip:
+            continue
         before = candidate[: match.start()].rstrip()
         after = candidate[match.end() :].lstrip()
         previous_word = re.search(r"([\w'\u00c0-\u024f-]+)$", before)
@@ -182,10 +252,17 @@ def residual_french(text: str) -> tuple[str, str] | None:
     return None
 
 
-def article_before(text: str, span_start: int) -> str | None:
+ARTICLE_BEFORE_RE = {
+    "en": re.compile(r"\b(the|a|an)$", re.IGNORECASE),
+    "de": re.compile(r"\b(der|die|das|dem|den|des|ein|eine|eines|einem|einen)$", re.IGNORECASE),
+}
+
+
+def article_before(text: str, span_start: int, lang: str = "en") -> str | None:
     before = text[:span_start].rstrip()
     before = re.sub(r"(\*\*|\*|==)$", "", before).rstrip()
-    match = re.search(r"\b(the|a|an)$", before, re.IGNORECASE)
+    pattern = ARTICLE_BEFORE_RE.get(lang, ARTICLE_BEFORE_RE["en"])
+    match = pattern.search(before)
     return match.group(1).lower() if match else None
 
 
@@ -214,6 +291,8 @@ def check_segment(
     allowed: set[str],
     allowed_norm: dict[str, str],
     findings: list[Finding],
+    rules: LanguageRules,
+    lang: str = "en",
 ) -> None:
     def report(rule: str, detail: str) -> None:
         findings.append(Finding(course_id, key, rule, detail))
@@ -263,15 +342,15 @@ def check_segment(
         if re.match(r"(s\b|'s|s')", tail):
             report("glossary-inflected", f"suffix attached after ]]: {snippet(english, match.end())}")
 
-        article = article_before(english, match.start())
+        article = article_before(english, match.start(), lang)
         if article:
             lowered = stripped.lower()
-            if lowered.startswith(LEADING_ARTICLES):
+            if lowered.startswith(rules.leading_articles):
                 report(
                     "glossary-double-article",
                     f"{article!r} precedes a key that already starts with an article: {stripped!r}",
                 )
-            elif article in {"a", "an"}:
+            elif rules.check_a_an and article in {"a", "an"}:
                 vowel = starts_with_vowel_sound(stripped)
                 if article == "a" and vowel:
                     report("glossary-article-a-an", f"'a' before vowel sound: a {stripped!r}")
@@ -295,7 +374,7 @@ def check_segment(
                 )
 
     # --- stranded function words (the empty slot left behind) --------------
-    for pattern in (STRANDED_SPACED_RE, STRANDED_TIGHT_RE):
+    for pattern in (rules.stranded_spaced, rules.stranded_tight):
         for match in pattern.finditer(english):
             report("stranded-function-word", snippet(english, match.start()))
             break
@@ -320,21 +399,23 @@ def check_segment(
         report("leaked-token", f"{leaked.group(0)!r}: {snippet(english, leaked.start())}")
 
     # --- localisation of numbers and eras ---------------------------------
-    match = FRENCH_THOUSANDS_RE.search(english)
-    if match:
-        report("french-thousands-separator", f"{match.group(0)!r} should use a comma")
-    match = FRENCH_DECIMAL_RE.search(english)
-    if match:
-        report("french-decimal-comma", f"{match.group(0)!r} should use a period")
+    if rules.flag_space_thousands:
+        match = FRENCH_THOUSANDS_RE.search(english)
+        if match:
+            report("french-thousands-separator", f"{match.group(0)!r} {rules.thousands_hint}")
+    if rules.flag_decimal_comma:
+        match = FRENCH_DECIMAL_RE.search(english)
+        if match:
+            report("french-decimal-comma", f"{match.group(0)!r} should use a period")
     match = ROMAN_CENTURY_RE.search(english) or ROMAN_CENTURY_SPELLED_RE.search(english)
     if match:
-        report("roman-ordinal", f"{match.group(0)!r} should be an English ordinal")
+        report("roman-ordinal", f"{match.group(0)!r} {rules.century_hint}")
     match = BC_FRENCH_RE.search(english)
     if match:
-        report("french-era", f"{match.group(0)!r} should be BC/AD")
+        report("french-era", f"{match.group(0)!r} {rules.era_hint}")
 
     # --- residual French --------------------------------------------------
-    match = residual_french(english)
+    match = residual_french(english, rules.leftover_extra_skip)
     if match:
         word, context = match
         report("french-leftover", f"{word!r}: {context}")
@@ -366,9 +447,12 @@ def check_course(course_id: str, lang: str, allowed_by_course: dict[str, list[st
 
     allowed = set(allowed_by_course.get(course_id, []))
     allowed_norm = {normalise_term(term): term for term in allowed}
+    rules = rules_for(lang)
 
     for key, english in tr_segments.items():
-        check_segment(course_id, key, fr_segments.get(key, ""), english, allowed, allowed_norm, findings)
+        check_segment(
+            course_id, key, fr_segments.get(key, ""), english, allowed, allowed_norm, findings, rules, lang
+        )
 
     # Whole-course glossary budget: every French term must survive somewhere.
     fr_total = sum(len(glossary_terms_in(text)) for text in fr_segments.values())
