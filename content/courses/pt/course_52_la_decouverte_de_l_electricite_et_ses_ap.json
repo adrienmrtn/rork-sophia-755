@@ -4,11 +4,11 @@
   "subtitle": "De Franklin a Tesla",
   "subject": "sciences",
   "subcategory": "Descobertas que mudaram o mundo",
-  "description": "A eletricidade não foi inventada de repente. Foi primeiro observado, depois compreendido e depois domesticado. Aqui estão as principais etapas.",
+  "description": "A eletricidade não foi inventada de uma vez. Primeiro foi observada, depois compreendida, depois domesticada. Estas são as etapas-chave.",
   "hero": {
     "image": "la_decouverte_de_l_electricite",
     "ratio": "16:9",
-    "hook": "Do relâmpago ao smartphone: dois séculos para domar o invisível."
+    "hook": "Do raio ao smartphone: dois séculos para domar o invisível."
   },
   "sections": [
     {
@@ -18,89 +18,89 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A eletricidade existe na natureza: raios, peixes elétricos, fricção. O que mudou o mundo foi aprender a **produzir**, **transporte** e usar."
+          "text": "A eletricidade existe na natureza: raios, peixes elétricos, atritos. O que mudou o mundo foi aprender a **produzir**, **transportar** e usar essa força."
         },
         {
           "type": "paragraph",
-          "text": "Esta história se estende por mais de dois séculos, com experiências arriscadas e grandes rivalidades."
+          "text": "Essa história se espalha por mais de dois séculos, com experiências arriscadas e grandes rivalidades."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p1",
-      "title": "Compreendendo os relâmpagos",
+      "title": "Compreender o raio",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "No século 18, **Benjamim Franklin** mostrou que o raio é um fenômeno elétrico. Seu experimento de empinar pipa (muitas vezes contado de maneira ficcional) visa provar que o céu e a máquina de fricção atuam com a mesma força."
+          "text": "No século XVIII, **Benjamin Franklin** mostra que o raio é um fenômeno elétrico. Sua experiência da pipa (muitas vezes contada de modo romanceado) quer provar que o céu e a máquina de atrito brincam com a mesma força."
         },
         {
           "type": "image",
           "asset": "benjamin_franklin_kite_lightning_experiment",
           "ratio": "4:3",
-          "caption": "Franklin liga raios e eletricidade: uma ideia perigosa, mas fundamental."
+          "caption": "Franklin liga raio e eletricidade: uma ideia perigosa, mas fundadora"
         },
         {
           "type": "paragraph",
-          "text": "Também inventamos o **trovão**, uma haste de metal que oferece aos raios um caminho seguro até o solo. Eletricidade deixa mistério para entrar na engenharia."
+          "text": "Inventa-se também o **para-raios**, uma haste de metal que oferece ao raio um caminho seguro até o solo. A eletricidade sai do mistério e entra na engenharia."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p2",
-      "title": "Faraday: produzindo corrente",
+      "title": "Faraday: produzir corrente",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "No século 19, **Michael Faraday** mostrou que um ímã movendo-se próximo a um fio poderia criar uma corrente elétrica. Esta é a indução ****. Sem esta ideia, não há dínamo, nem alternador, nem central eléctrica moderna."
+          "text": "No século XIX, **Michael Faraday** mostra que um ímã em movimento perto de um fio pode criar uma corrente elétrica. É a **indução**. Sem essa ideia, não há dínamo, não há alternador, não há usina elétrica moderna."
         },
         {
           "type": "image",
           "asset": "faraday_electromagnetic_induction_experiment",
           "ratio": "4:3",
-          "caption": "Faraday transforma movimento e magnetismo em corrente."
+          "caption": "Faraday transforma movimento e magnetismo em corrente"
         },
         {
           "type": "funFact",
-          "text": "Faraday veio de uma origem humilde e começou como encadernador. Ele aprendeu ciências lendo o que confiava."
+          "text": "Faraday vinha de um meio humilde e começou como encadernador. Aprendeu ciência lendo o que encadernava."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p3",
-      "title": "Edison versus Tesla",
+      "title": "Edison contra Tesla",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "No final do século XIX, dois campos entraram em confronto. **Tomás Edison** empurra corrente contínua. **Nicola Tesla** (e a empresa Westinghouse) defendem a corrente alternada, que é mais fácil de transportar em longas distâncias."
+          "text": "No fim do século XIX, dois campos se enfrentam. **Thomas Edison** defende a corrente contínua. **Nikola Tesla** (e a empresa Westinghouse) defendem a corrente alternada, mais fácil de transportar por longas distâncias."
         },
         {
           "type": "image",
           "asset": "tesla_edison_electric_power_station",
           "ratio": "4:3",
-          "caption": "A corrente alternada está ganhando força nas cidades."
+          "caption": "A corrente alternada vence para alimentar as cidades"
         },
         {
           "type": "paragraph",
-          "text": "A corrente alternada vence nas redes urbanas. As cidades se iluminam. As fábricas estão mudando de ritmo."
+          "text": "A corrente alternada leva a melhor nas redes urbanas. As cidades se acendem. As fábricas mudam de ritmo."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p4",
-      "title": "Um mundo conectado",
+      "title": "Um mundo ligado",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hoje, a eletricidade alimenta hospitais, trens, internet, geladeiras. O desafio não é mais apenas produzi-lo, mas fazê-lo de forma limpa e confiável."
+          "text": "Hoje, a eletricidade faz girar hospitais, trens, internet, geladeiras. O desafio já não é só produzir, e sim fazer isso de modo limpo e confiável."
         },
         {
           "type": "takeaway",
-          "text": "A eletricidade foi compreendida e depois domesticada: Franklin para os relâmpagos, Faraday para produzir corrente, Tesla e corrente alternada para trazê-la para dentro das casas. Nossa vida diária ainda depende disso."
+          "text": "A eletricidade foi compreendida e depois domesticada: Franklin para o raio, Faraday para produzir a corrente, Tesla e a corrente alternada para levar a energia até as casas. Nosso dia a dia ainda depende disso."
         }
       ]
     }

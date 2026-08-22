@@ -4,11 +4,11 @@
   "subtitle": "Higiene",
   "subject": "sciences",
   "subcategory": "O nosso quotidiano explicado",
-  "description": "Sabão não é “mágico”. Ele ataca a camada gordurosa de certos vírus e os retira da pele. Veja por que 20 segundos são importantes.",
+  "description": "O sabão não é “mágico”. Ele ataca a casca gordurosa de certos vírus e os arranca da sua pele. Veja por que 20 segundos importam.",
   "hero": {
     "image": "comment_le_savon_tue_les_virus",
     "ratio": "16:9",
-    "hook": "Uma arma simples contra vírus: moléculas que gostam de água… e gordura."
+    "hook": "Uma arma simples contra os vírus: moléculas que gostam de água... e de gordura."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Durante a pandemia de COVID-19, um gesto muito simples voltou a ser central: lavar as mãos com sabão. Não há necessidade de laboratório. Só água, sabão e um pouco de tempo."
+          "text": "Durante a pandemia de COVID-19, um gesto bem simples voltou ao centro: lavar as mãos com sabão. Sem precisar de laboratório. Só água, sabão e um pouco de tempo."
         },
         {
           "type": "paragraph",
-          "text": "Por que funciona tão bem? Porque muitos vírus perigosos carregam um envelope feito de gordura. E o sabão é excelente para destruir a gordura."
+          "text": "Por que isso funciona tão bem? Porque muitos vírus perigosos carregam um envelope feito de gordura. E o sabão é ótimo para destruir gordura."
         }
       ]
     },
@@ -33,36 +33,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Alguns vírus, como o **coronavirus** ou o vírus da gripe, têm uma cobertura externa feita de lipídios (gorduras). Este envelope os protege… até encontrar o sabão."
+          "text": "Alguns vírus, como os **coronavírus** ou o vírus da gripe, têm um envelope externo feito de lipídios (gorduras). Esse envelope os protege... até encontrar sabão."
         },
         {
           "type": "paragraph",
-          "text": "Outros vírus, chamados de “nus”, não possuem esse envelope. São mais resistentes ao sabão e ao álcool. Felizmente, muitos dos vírus que viajam pelas mãos e gotículas estão envoltos."
+          "text": "Outros vírus, ditos “nus”, não têm esse envelope. Resistem melhor ao sabão e ao álcool. Por sorte, muitos dos vírus que circulam pelas mãos e pelas gotículas são envelopados."
         }
       ]
     },
     {
       "id": "course_50_comment_le_savon_tue_t_il_les_virus_p2",
-      "title": "Sabão, uma molécula de dois lados",
+      "title": "O sabão, uma molécula de duas faces",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "handwashing_soap_water_hands",
           "ratio": "4:3",
-          "caption": "Esfregar ajuda o sabonete a chegar a todos os cantos das mãos."
+          "caption": "A fricção ajuda o sabão a alcançar todos os cantos das mãos"
         },
         {
           "type": "paragraph",
-          "text": "As moléculas de sabão são . Eles têm uma cabeça que gosta de água e uma cauda que gosta de gordura. A cauda afunda no envelope gorduroso do vírus. A cabeça permanece voltada para a água. [[surfactantes]]"
+          "text": "As moléculas de sabão são [[tensioativos]]. Elas têm uma cabeça que gosta de água e uma cauda que gosta de gordura. A cauda se enfia no envelope gorduroso do vírus. A cabeça permanece virada para a água."
         },
         {
           "type": "paragraph",
-          "text": "Resultado: o envelope rasga. O vírus está desativado. Então a água leva embora os detritos. O sabão não “queima” o vírus como um ácido: ele **dissolver** e o remove."
+          "text": "Resultado: o envelope se rasga. O vírus é desativado. Depois a água leva os detritos. O sabão não “queima” o vírus como um ácido: ele o **dissolve** e o remove."
         },
         {
           "type": "funFact",
-          "text": "É o mesmo princípio que tira a gordura de uma panela: o sabão pega a gordura e a deixa ir junto com a água."
+          "text": "É o mesmo princípio que faz a gordura sair de uma frigideira: o sabão agarra a gordura e a deixa ir embora com a água."
         }
       ]
     },
@@ -73,26 +73,26 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Demora para que o sabonete chegue a todas as dobras: entre os dedos, sob as unhas, ao redor dos pulsos. Cerca de **20 segundos** de atrito, este é o mínimo frequentemente recomendado."
+          "text": "É preciso tempo para o sabão alcançar todas as dobras: entre os dedos, debaixo das unhas, em volta dos pulsos. Cerca de **20 segundos** de fricção, esse é o mínimo muitas vezes recomendado."
         },
         {
           "type": "paragraph",
-          "text": "Sem fricção, o sabão funciona menos bem. A água sozinha também: não ataca eficazmente o envelope gorduroso."
+          "text": "Sem fricção, o sabão funciona pior. A água sozinha tampouco: ela não ataca bem o envelope gorduroso."
         }
       ]
     },
     {
       "id": "course_50_comment_le_savon_tue_t_il_les_virus_p4",
-      "title": "Sabonete ou gel hidroalcoólico?",
+      "title": "Sabão ou álcool em gel?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Um gel com pelo menos álcool **60%** também pode destruir muitos vírus envelopados. Mas se houver sujidade ou gordura visível, o gel é menos eficaz: a sujidade funciona como uma tela. Nesse caso, água e sabão continuam sendo a melhor escolha."
+          "text": "Um gel com pelo menos **60%** de álcool também pode destruir muitos vírus envelopados. Mas se houver sujeira visível ou gordura, o gel rende menos: a sujeira faz tela. Nesse caso, sabão e água continuam a melhor escolha."
         },
         {
           "type": "takeaway",
-          "text": "O sabão mata muitos vírus arrancando suas camadas de gordura e depois lavando-os com água. Tempo + atrito = eficiência."
+          "text": "O sabão mata muitos vírus ao rasgar o envelope gorduroso deles, e depois ao levá-los embora com a água. Tempo + fricção = eficácia."
         }
       ]
     }
