@@ -1,14 +1,14 @@
 {
   "id": "course_91_les_miserables_victor_hugo",
-  "title": "Les Miserables, Victor Hugo",
+  "title": "Die Elenden, Victor Hugo",
   "subtitle": "1862",
   "subject": "litterature",
   "subcategory": "Französische & europäische Klassiker",
-  "description": "Jean Valjean sucht Erlösung in einem Frankreich, das ihm nicht verzeihen will. Hugo vermischt Liebesroman, historische Chronik und Eintreten für die Ausgeschlossenen.",
+  "description": "Jean Valjean sucht Erlösung in einem Frankreich, das ihm nicht verzeihen will. Hugo mischt Liebesroman, historische Chronik und Plädoyer für die Ausgeschlossenen.",
   "hero": {
     "image": "les_miserables_victor_hugo",
     "ratio": "16:9",
-    "hook": "Ein Stück gestohlenes Brot, neunzehn Jahre Gefängnis, dann ein ganzes Leben, um zu beweisen, dass man wieder ein Mann werden kann."
+    "hook": "Ein gestohlenes Stück Brot, neunzehn Jahre Zuchthaus, dann ein ganzes Leben, um zu beweisen, dass man wieder Mensch werden kann."
   },
   "sections": [
     {
@@ -18,62 +18,62 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Les Miserables** wurde in **1862** veröffentlicht und ist einer der meistgelesenen Romane der Welt. **Victor Hugo**, engagierter Dichter und Romancier, erzählt die Geschichte Frankreichs im **19. Jahrhundert** durch **Jean Valjean**, einen ehemaligen Sträfling, der von der **[[Inspektor Javert]]** gejagt wurde. Javert ist ein unbestechlicher Polizist. Er verkörpert das gnadenlose Gesetz."
+          "text": "1862 erschienen, gehören **Die Elenden** zu den meistgelesenen Romanen der Welt. **Victor Hugo**, engagierter Dichter und Romancier, erzählt das Frankreich des **19. Jahrhunderts** durch **Jean Valjean**, einen ehemaligen Sträfling, gejagt von **[[Inspektor Javert]]**. Javert ist ein unbestechlicher Polizist. Er verkörpert das Gesetz ohne Erbarmen."
         },
         {
           "type": "paragraph",
-          "text": "Das Buch vereint Detektivintrige, Liebesgeschichte, historische Chronik und soziale Denunziation. Hugo will ein „Weltwerk“, einen Roman, der eine ganze Epoche umfasst. Er hofft, mit allen über die Grenzen hinaus sprechen zu können. Es ist auch ein großartiger Text über Elend, Gnade und die Möglichkeit der Erlösung."
+          "text": "Das Buch mischt Polizeihandlung, Liebesgeschichte, historische Chronik und soziale Anklage. Hugo will ein “Weltwerk”, einen Roman, der eine ganze Epoche umfasst. Er hofft, zu allen zu sprechen, über Grenzen hinweg. Es ist auch ein großer Text über Elend, Gnade und die Möglichkeit, sich zu erlösen."
         }
       ]
     },
     {
       "id": "course_91_les_miserables_victor_hugo_p1",
-      "title": "Hugo und ein im Exil geborenes Werk",
+      "title": "Hugo und ein Werk, das im Exil entsteht",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Victor Hugo** beginnt den Roman in **1845** unter dem Titel „Les Misères“. Nach dem Staatsstreich von **1851** von **Napoléon III**, dem Neffen von Napoleon Bonaparte, ging Hugo ins Exil auf die Kanalinseln, nach Guernsey. Mit neuem Eifer nimmt er sein Manuskript in Angriff. Der Verbannte nährt seine Wut gegen die Ungerechtigkeit."
+          "text": "**Victor Hugo** beginnt den Roman schon **1845**, unter dem Titel “Die Elenden”. Nach dem Staatsstreich von **1851** durch Napoleon III., Neffen Napoleons, geht Hugo auf die Kanalinseln ins Exil, nach Guernsey. Er nimmt das Manuskript mit neuem Eifer wieder auf. Das Exil nährt seinen Zorn gegen die Ungerechtigkeit."
         },
         {
           "type": "image",
           "asset": "victor_hugo_portrait_photograph",
           "ratio": "4:3",
-          "caption": "Victor Hugo: Dichter, Romancier und Stimme der sozialen Armut."
+          "caption": "Victor Hugo: Dichter, Romancier und Stimme des sozialen Elends."
         },
         {
           "type": "funFact",
-          "text": "Um die Szene in den Abwasserkanälen aufzuzeichnen, holte Hugo Informationen von den Pariser Straßendiensten ein und erkundete selbst die unterirdischen Galerien."
+          "text": "Um die Szene in den Abwässern zu schreiben, hat Hugo sich bei den Pariser Tiefbauämtern dokumentiert und die unterirdischen Galerien selbst erkundet."
         },
         {
           "type": "paragraph",
-          "text": "Der Roman erschien nach siebzehnjähriger Arbeit bei **1862** in Brüssel. Hugo fügt lange -Seiten ein **[[Abschweifungen]]**, auf denen der Autor die Geschichte unterbricht, um über Geschichte oder Philosophie zu sprechen. Besondere Aufmerksamkeit widmet er **Waterloo**, der Schlacht von 1815, die das Ende des Napoleonischen Reiches markierte, den Klöstern oder dem **[[Abwasserkanäle von Paris]]**, dem Keller der Hauptstadt und einer Metapher für das soziale Unbewusste. Diese Seiten verankern die Charaktere in einer materiellen Realität und machen das Buch zu einer Abhandlung über Sozialphilosophie."
+          "text": "Der Roman erscheint **1862** in Brüssel, nach siebzehn Jahren Arbeit. Hugo fügt lange **[[Digressionen]]** ein, Seiten, auf denen der Autor die Erzählung unterbricht, um von Geschichte oder Philosophie zu sprechen. Er widmet sich namentlich **Waterloo**, der Schlacht von 1815, die das Ende des napoleonischen Kaiserreichs markiert, den Klöstern oder der **[[Kanalisation von Paris]]**, dem Untergrund der Hauptstadt und Metapher des sozialen Unbewussten. Diese Seiten verankern die Figuren in einer materiellen Wirklichkeit und machen das Buch zu einem Traktat sozialer Philosophie."
         }
       ]
     },
     {
       "id": "course_91_les_miserables_victor_hugo_p2",
-      "title": "Jean Valjean: vom Gefängnis zur Gnade",
+      "title": "Jean Valjean: vom Zuchthaus zur Gnade",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Valjean wurde wegen Diebstahls eines Stücks Brot verurteilt und verbrachte 19 Jahre **** in , einem Gefängnis mit Zwangsarbeit, insbesondere in Toulon. Als er freigelassen wurde, war er im gelben Pass **** als ehemaliger Sträfling gekennzeichnet. Er wird zum Ausgestoßenen. Bischof **Myriel**, Spitzname „Monseigneur Bienvenu“, bietet ihm eine zweite Chance. Er lässt sie glauben, dass er sein Besteck geschenkt bekommen hat, als Valjean es gerade gestohlen hatte. **[[Gefängnis- und Strafvollzugssystem im 19. Jahrhundert]]**"
+          "text": "Verurteilt wegen des Diebstahls eines Stücks Brot, verbringt Valjean **19 Jahre** im **[[Bagno und Strafvollzug im 19. Jahrhundert]]**, einem Gefängnis mit Zwangsarbeit, namentlich in Toulon. Bei der Entlassung brandmarkt ihn der **gelbe Pass** als ehemaligen Sträfling. Er wird ein Paria. Bischof **Myriel**, genannt “Monseigneur Bienvenu”, bietet ihm eine zweite Chance. Er lässt ihn glauben, das Silbergeschirr sei ein Geschenk gewesen, obwohl Valjean es gerade gestohlen hatte."
         },
         {
           "type": "image",
           "asset": "french_convict_galley_19th_century",
           "ratio": "4:3",
-          "caption": "Gefängnis: eine Erfahrung, die Valjean vor seiner moralischen Transformation zerbricht."
+          "caption": "Das Zuchthaus: Erfahrung, die Valjean bricht, bevor seine moralische Wandlung beginnt."
         },
         {
           "type": "quote",
-          "text": "Jean Valjean, mein Bruder, du gehörst nicht mehr zum Bösen, du gehörst zum Guten.",
-          "attribution": "Victor Hugo, Les Misérables – Monseigneur Bienvenu"
+          "text": "Jean Valjean, mein Bruder, ihr gehört nicht mehr dem Bösen, ihr gehört dem Guten.",
+          "attribution": "Victor Hugo, Die Elenden (Monseigneur Bienvenu)"
         },
         {
           "type": "paragraph",
-          "text": "Unter der Identität von **Herr Madeleine** wird Valjean zum wohltätigen Bürgermeister einer Industriestadt. Für Hugo kann Nächstenliebe die soziale Unvermeidlichkeit überwinden. Aber **Javert**, die Inkarnation gnadenloser Gerechtigkeit, macht weiterhin Jagd auf ihn. Er kann sich nicht vorstellen, dass aus einem Kriminellen ein guter Mann werden könnte."
+          "text": "Unter der Identität von **Monsieur Madeleine** wird Valjean philanthropischer Bürgermeister einer Industriestadt. Für Hugo kann die Nächstenliebe die soziale Fatalität besiegen. Aber **Javert**, Verkörperung einer Justiz ohne Erbarmen, hört nicht auf, ihn zu jagen. Er kann nicht fassen, dass ein Verbrecher ein guter Mensch werden kann."
         }
       ]
     },
@@ -84,28 +84,28 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Fantine**, eine Arbeiterin, die von dem Liebhaber verlassen wurde, der sie verführt hat, stürzt in die Armut, um die Rente ihrer Tochter zu bezahlen **Cosette**. Das Kind wird den **Thénardier**, gierigen Gastwirten, anvertraut. Valjean rettet sie und wird zum Beschützer des Kindes. Die Geschichte verlagert sich nach Paris, wo der Aufstand von **Ich bin im Juni 1832**, ein von der Armee niedergeschlagener republikanischer Aufstand, junge Menschen in der Geheimgesellschaft der **[[ABC]]** zusammenbringt. Dieser Name erinnert an „die Niedrigen“, das Volk."
+          "text": "**Fantine**, eine Arbeiterin, verlassen vom Geliebten, der sie verführt hat, sinkt ins Elend, um die Kost ihrer Tochter **Cosette** zu zahlen. Das Kind ist den **Thénardier** anvertraut, gierigen Wirtsleuten. Valjean rettet sie und wird Beschützer des Kindes. Die Erzählung kippt nach Paris, wo der Aufstand vom **Juni 1832**, eine von der Armee niedergeschlagene republikanische Erhebung, die Jugend in der Geheimgesellschaft der **[[ABC]]** sammelt. Der Name evoziert “die Erniedrigten”, das Volk."
         },
         {
           "type": "image",
           "asset": "paris_barricades_1832_painting",
           "ratio": "4:3",
-          "caption": "Die Barrikaden von 1832: Die Geschichte hält Einzug in den Roman."
+          "caption": "Die Barrikaden von 1832: die Geschichte tritt in den Roman."
         },
         {
           "type": "paragraph",
-          "text": "Auf diesen Barrikaden stirbt **Gavroche**, ein Straßenkind, das zum Symbol geopferter Unschuld geworden ist. **Enjolras**, Anführer der Rebellen, verkörpert idealistische Jugend. Valjean rettet **Marius**, einen jungen Bürger, der in Cosette verliebt ist, in einem Akt völliger Selbstaufopferung. Er willigt ein, seine Freiheit für das Glück der Person zu riskieren, die er als seine Tochter betrachtet."
+          "text": "Auf diesen Barrikaden stirbt **Gavroche**, ein Straßenkind, das zum Symbol der geopferten Unschuld wird. **Enjolras**, Anführer der Aufständischen, verkörpert die idealistische Jugend. Valjean rettet dort **Marius**, einen jungen Bürger, der Cosette liebt, in einem Akt völliger Selbstlosigkeit. Er nimmt die Freiheit aufs Spiel für das Glück derer, die er als Tochter betrachtet."
         }
       ]
     },
     {
       "id": "course_91_les_miserables_victor_hugo_p4",
-      "title": "Ein Roman, der das Bewusstsein verändert",
+      "title": "Ein Roman, der Gewissen ändert",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Javert**, der zur Zeit des Aufstands von Valjean gerettet wurde, kann Gesetz und Gnade nicht in Einklang bringen: Er begeht Selbstmord, indem er sich in die Seine stürzt. Valjean stirbt in Frieden, nachdem er sein Versprechen gegenüber Myriel gehalten hat. Der Roman ist eine Säule des **[[Littérature engagée]]**, der Literatur im Dienste einer sozialen oder politischen Sache. Hugo prangert die fehlende Schulpflicht, die Unterdrückung der Frauen und die Unmenschlichkeit der Gefängnisse an."
+          "text": "**Javert**, von Valjean im Aufstand gerettet, kann Gesetz und Gnade nicht versöhnen: er tötet sich, indem er sich in die Seine stürzt. Valjean stirbt in Frieden, nachdem er Myriel sein Wort gehalten hat. Der Roman ist ein Pfeiler der **[[Littérature engagée]]**, einer Literatur im Dienst einer sozialen oder politischen Sache. Hugo geißelt das Fehlen der Schulpflicht, die Unterdrückung der Frauen und die Unmenschlichkeit der Gefängnisse."
         },
         {
           "type": "timeline",
@@ -113,12 +113,12 @@
             {
               "date": "1845",
               "title": "Beginn des Projekts",
-              "detail": "Hugo beginnt mit „Les Misères“."
+              "detail": "Hugo beginnt “Die Elenden”."
             },
             {
               "date": "1851",
               "title": "Exil",
-              "detail": "Der Staatsstreich unterbricht das Schreiben und beginnt dann erneut."
+              "detail": "Der Staatsstreich unterbricht und feuert dann das Schreiben an."
             },
             {
               "date": "1862",
@@ -128,13 +128,13 @@
             {
               "date": "1832",
               "title": "Barrikaden",
-              "detail": "Der Aufstand prägt den Pariser Höhepunkt."
+              "detail": "Der Aufstand strukturiert den Pariser Höhepunkt."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "**Les Misérables**, veröffentlicht in **1862**, erzählt von der Erlösung von **Jean Valjean** zwischen Wohltätigkeit und unversöhnlichem Gesetz. Hugo macht die **1832**-Barrikaden zum Symbol des Kampfes für die Menschenwürde."
+          "text": "**Die Elenden**, erschienen **1862**, erzählen die Erlösung **Jean Valjeans** zwischen Nächstenliebe und unerbittlichem Gesetz. Hugo macht die Barrikaden von **1832** zum Symbol des Kampfes um die menschliche Würde."
         }
       ]
     }
