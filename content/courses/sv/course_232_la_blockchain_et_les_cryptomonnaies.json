@@ -1,47 +1,47 @@
 {
   "id": "course_232_la_blockchain_et_les_cryptomonnaies",
-  "title": "Blockchain och kryptovalutor",
+  "title": "Blockkedjan och kryptovalutorna",
   "subtitle": "Sedan 2009",
   "subject": "comprendreLeMonde",
   "subcategory": "Environment & the future",
-  "description": "**blockchain** uppfann en reskontra som ingen kan manipulera ensam, vilket banar väg för en ny digital ekonomi.",
+  "description": "**Blockkedjan** skapade en liggare som ingen kan förfalska ensam och öppnade vägen för en ny digital ekonomi.",
   "hero": {
     "image": "la_blockchain_et_les_cryptomonnaies",
     "ratio": "16:9",
-    "hook": "En bok med konton som ingen äger, men som tusentals datorer övervakar tillsammans."
+    "hook": "En räkenskapsbok som ingen äger, men som tusentals datorer vaktar tillsammans."
   },
   "sections": [
     {
       "id": "course_232_la_blockchain_et_les_cryptomonnaies_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Föreställ dig en bok med konton som ingen person äger, men som tusentals datorer uppdateras samtidigt, över hela världen, och som det är nästan omöjligt att förfalska. Detta är den första idén med **blockchain**, en teknik som ofta reduceras till sin första applikation, **Bitcoin**."
+          "text": "Tänk dig en räkenskapsbok som ingen äger ensam, men som tusentals datorer uppdaterar samtidigt, över hela världen, och som nästan inte går att förfalska. Det är grundidén bakom **blockkedjan**, en teknik som ofta reduceras till sin första tillämpning: **Bitcoin**."
         },
         {
           "type": "paragraph",
-          "text": "Genom att göra det möjligt att byta värde utan att gå via en bank, gav denna uppfinning upphov till en hel parallell ekonomi, mellan löften om ekonomisk frihet och hård kritik av dess energikostnad."
+          "text": "Genom att låta värde byta ägare utan bank födde uppfinningen en hel parallell ekonomi, mellan löften om ekonomisk frihet och hård kritik mot energikostnaden."
         }
       ]
     },
     {
       "id": "course_232_la_blockchain_et_les_cryptomonnaies_p1",
-      "title": "Ett register som ingen kontrollerar ensam",
+      "title": "En liggare som ingen styr ensam",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kärnan i blockchain är en enkel idé: **distribuerat svar**. Till skillnad från en bank, som har sina konton på sina egna servrar, förlitar sig blockkedjan på ett nätverk av [[kamrater]], det vill säga tusentals datorer som var och en håller en identisk kopia av alla transaktioner."
+          "text": "I hjärtat av blockkedjan sitter en enkel idé: den **distribuerade liggaren**. Till skillnad från en bank, som håller sina konton på egna servrar, bygger blockkedjan på ett nätverk av [[kamrater]], alltså tusentals datorer som var och en sparar en identisk kopia av alla transaktioner."
         },
         {
           "type": "funFact",
-          "text": "Det allra första blocket av Bitcoin-blockkedjan, kallat \"genesis-blocket\", innehöll ett dolt meddelande: framsidan av en brittisk tidning den 3 januari 2009, som talade om statens räddningsaktion för bankerna. En politisk nick från dess skapare."
+          "text": "Det allra första blocket i Bitcoins blockkedja, kallat „genesisblocket”, bar ett dolt meddelande: löpsedeln från en brittisk tidning den 3 januari 2009, om statens räddning av bankerna. En politisk blinkning från skaparen."
         },
         {
           "type": "paragraph",
-          "text": "Varje transaktion verifieras först av nätverket och grupperas sedan med andra i en **blockera**. Detta block kopplas sedan till det föregående tack vare en matematisk beräkning som kallas [[hashing]]: ett slags unikt digitalt fingeravtryck. Resultatet är en oavbruten kedja av block, därav namnet blockchain. För att ändra en enda gammal transaktion måste du räkna om hela kedjan och övertyga mer än hälften av nätverket, vilket är nästan omöjligt i stor skala."
+          "text": "Varje transaktion granskas först av nätverket och samlas sedan med andra i ett **block**. Blocket kopplas till det förra genom en matematisk uträkning som kallas [[hashing]]: ett slags unikt digitalt fingeravtryck. Resultatet blir en obruten kedja av block, därav namnet blockkedja. För att ändra en enda gammal transaktion måste man räkna om hela kedjan och övertyga mer än hälften av nätverket, vilket i stor skala är nästan omöjligt."
         }
       ]
     },
@@ -52,59 +52,59 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Bitcoin**, som lanserades i **2009** av en anonym person (eller grupp) under namnet [[Satoshi Nakamoto]], bevisade att ett monetärt system skulle kunna fungera utan en centralbank. För att garantera dess brist har dess skapare satt ett strikt tak: aldrig mer än **21 miljoner bitcoins** kan existera, lite som att guld är begränsat på jorden."
+          "text": "**Bitcoin**, lanserad **2009** av en person (eller en grupp) som förblev anonym under namnet [[Satoshi Nakamoto]], visade att ett penningsystem kan fungera utan centralbank. För att hålla valutan sällsynt satte skaparen ett strikt tak: aldrig mer än **21 miljoner bitcoin** ska kunna finnas, ungefär som guldet är begränsat på jorden."
         },
         {
           "type": "image",
           "asset": "blockchain_technology_distributed_ledger_visualization",
           "ratio": "4:3",
-          "caption": "Varje transaktion verifieras av ett nätverk av datorer innan den läggs till i kedjan."
+          "caption": "Varje transaktion granskas av ett nätverk av datorer innan den läggs till kedjan"
         },
         {
           "type": "paragraph",
-          "text": "2015 dök en andra generation av blockchain upp med **Ethereum**. Dess stora innovation: **smarta kontakt**. Det är program som körs automatiskt så fort ett villkor är uppfyllt, till exempel automatisk ersättning vid tågförseningar, utan att behöva gå via en mellanhand."
+          "text": "År 2015 kom en andra generation blockkedja med **Ethereum**. Den stora nyheten: **smarta kontrakt**. Det är program som körs automatiskt när ett villkor är uppfyllt, till exempel en automatisk återbetalning vid tågförsening, utan mellanhand."
         }
       ]
     },
     {
       "id": "course_232_la_blockchain_et_les_cryptomonnaies_p3",
-      "title": "Kritiker: energi och instabilitet",
+      "title": "Kritiken: energi och ostadighet",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Framgången för kryptovalutor är inte utan problem. Det mest diskuterade gäller **energikällor** i Bitcoin-nätverket: dess årliga elutgifter är idag jämförbara med ett helt land som Argentina."
+          "text": "Kryptovalutornas framgång är inte problemfri. Det mest omdiskuterade gäller Bitcoins **energiförbrukning**: nätverkets årliga elanvändning motsvarar i dag ett helt land som Argentina."
         },
         {
           "type": "paragraph",
-          "text": "Marknaden lider också av extrem **flyktighet**: priset på Bitcoin kan variera med 10 eller 20% på några timmar. Denna instabilitet förhindrar för närvarande att den blir en riktig vardagsvaluta."
+          "text": "Marknaden lider också av extrem **volatilitet**: Bitcoinpriset kan svänga 10 eller 20% på några timmar. Den ostadigheten hindrar den än så länge från att bli en riktig vardagsvaluta."
         },
         {
           "type": "paragraph",
-          "text": "Slutligen har den relativa anonymiteten för transaktioner ibland använts för illegala aktiviteter. Men blockkedjan förblir faktiskt helt transparent: myndigheterna kan följa flödet av pengar, vilket gör tvättningen svårare än i det klassiska kontantsystemet."
+          "text": "Den relativa anonymiteten har dessutom ibland tjänat olaglig verksamhet. Men blockkedjan är i själva verket helt genomskinlig: myndigheter kan följa penningflöden, vilket gör penningtvätt svårare än med kontanter."
         }
       ]
     },
     {
       "id": "course_232_la_blockchain_et_les_cryptomonnaies_p4",
-      "title": "Mot institutionell integration",
+      "title": "Mot en institutionell inordning",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Idag lämnar kryptovalutor marginalerna för att gå in i traditionell finans. Stora banker erbjuder nu att hålla digitala tillgångar åt sina kunder, och flera stater överväger att skapa sin egen officiella digitala valuta, en **[[MNBC]]** (centralbanks digital valuta)."
+          "text": "I dag lämnar kryptovalutorna marginalen och går in i den traditionella finansen. Stora banker erbjuder nu förvaring av digitala tillgångar, och flera stater funderar på en egen officiell digital valuta, en **[[CBDC]]** (centralbankens digitala valuta)."
         },
         {
           "type": "paragraph",
-          "text": "**stablecoins**, kryptovalutor vars pris stabiliseras tack vare en reserv på dollar eller euro, fungerar som en bro mellan de två världarna. Bortsett från finans, använder sektorer som lyx (för att bekämpa förfalskning), logistik (att spåra containrar) eller hälsa (för att säkra medicinska journaler) också blockchain för sin tillförlitlighet."
+          "text": "**Stablecoins**, kryptovalutor vars pris hålls stilla med en reserv i dollar eller euro, blir bron mellan de två världarna. Utanför finansen tar lyx (mot förfalskning), logistik (för att följa containrar) och vård (för att skydda journaler) också till blockkedjan för dess tillförlitlighet."
         },
         {
           "type": "funFact",
-          "text": "2021 blev El Salvador det första landet i världen att anta Bitcoin som lagligt betalningsmedel, vid sidan av US-dollarn, vilket kräver att varje handlare accepterar det om de har tekniska medel."
+          "text": "År 2021 blev El Salvador först i världen med att anta Bitcoin som lagligt betalningsmedel, vid sidan av dollarn, och tvingade varje handlare att ta emot den om tekniken finns."
         },
         {
           "type": "takeaway",
-          "text": "Blockchain skapades 2009 och är en delad reskontra som är nästan omöjlig att förfalska, med ett maximalt utbud av bitcoins satt till 21 miljoner enheter. Det lade grunden till en ny digital ekonomi idag i full institutionell integration."
+          "text": "Blockkedjan, skapad 2009, är en delad liggare som nästan inte går att förfalska, med ett tak på 21 miljoner bitcoin. Den lade grunden till en ny digital ekonomi som nu håller på att bäddas in i institutionerna."
         }
       ]
     }

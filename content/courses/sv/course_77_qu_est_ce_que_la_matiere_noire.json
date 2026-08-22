@@ -4,65 +4,65 @@
   "subtitle": "Osynligt kosmos",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "Vi såg henne aldrig. Men utan det skulle galaxer falla isär. Mörk materia är universums osynliga lim.",
+  "description": "Ingen har sett den. Ändå skulle galaxerna slitas isär utan den. Mörk materia är universums osynliga lim.",
   "hero": {
     "image": "qu_est_ce_que_la_matiere_noire",
     "ratio": "16:9",
-    "hook": "Föreställ dig ett osynligt lim som håller ihop galaxer. Vi ser henne inte, men vi ser vad hon håller tillbaka."
+    "hook": "Tänk dig ett osynligt lim som håller ihop galaxerna. Vi ser det inte, men vi ser vad det håller kvar."
   },
   "sections": [
     {
       "id": "course_77_qu_est_ce_que_la_matiere_noire_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Du känner vinden utan att se den: grenarna rör sig, håret flyger. **mörk materia** är lite så på kosmos skala. Det lyser inte, reflekterar inte ljus, blockerar inte några strålar. Vi \"ser\" den bara genom vad den får i rörelse."
+          "text": "Du känner vinden utan att se den: grenarna rör sig, håret flyger. **Mörk materia** är lite så, i kosmisk skala. Den lyser inte, reflekterar inte ljus, blockerar ingen stråle. Vi „ser” den bara genom det den sätter i rörelse."
         },
         {
           "type": "paragraph",
-          "text": "Det skulle representera ungefär **27%** av universum, fem gånger mer än all vanlig materia: stjärnor, planeter, gas. Utan den skulle galaxer snurra för snabbt för att hålla ihop."
+          "text": "Den skulle utgöra ungefär **27%** av universum, fem gånger mer än all vanlig materia: stjärnor, planeter, gas. Utan den skulle galaxerna snurra för fort för att hålla ihop."
         }
       ]
     },
     {
       "id": "course_77_qu_est_ce_que_la_matiere_noire_p1",
-      "title": "Stjärnor för snabbt i utkanten",
+      "title": "Stjärnor som är för snabba i utkanten",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Under åren **1970** mätte den amerikanska astronomen **Vera Rubin** hastigheten på stjärnor i spiralgalaxer. I solsystemet, ju längre vi går från solen, desto långsammare roterar vi. Hon förväntade sig samma mönster."
+          "text": "På **1970-talet** mäter den amerikanska astronomen **Vera Rubin** stjärnornas fart i spiralgalaxer. I solsystemet går det långsammare ju längre bort från solen man är. Hon väntade sig samma mönster."
         },
         {
           "type": "image",
           "asset": "dark_matter_galaxy_cluster",
           "ratio": "auto",
-          "caption": "Mörk materia förråder sin närvaro genom sin gravitationseffekt på galaxhopar."
+          "caption": "Mörk materia avslöjar sig genom gravitationen på galaxhopar"
         },
         {
           "type": "paragraph",
-          "text": "Nu vände stjärnorna på kanten **som snabbt** som de i mitten. Med bara den synliga massan borde de ha flugit iväg. Det var därför nödvändigt att ha en osynlig massa, en **halo**, ett osynligt sfäriskt hölje runt galaxen, för att hålla dem tillbaka. [[Galaxy rotationskurva]] har blivit flaggskeppsbeviset för mörk materia."
+          "text": "Men stjärnorna i kanten snurrade **lika fort** som dem i mitten. Med bara den synliga massan skulle de ha slungats iväg. Det krävdes alltså en osynlig massa, ett **halo**, ett osynligt klot runt galaxen, för att hålla dem kvar. [[Galaxens rotationskurva]] blev huvudbeviset för mörk materia."
         },
         {
           "type": "funFact",
-          "text": "Vera Rubin har länge fått kämpa för att bli tagen på allvar. Princeton vägrade henne en doktorsexamen i astronomi under lång tid ... eftersom hon var kvinna, fram till 1975."
+          "text": "Vera Rubin fick länge slåss för att tas på allvar. Princeton vägrade henne länge en doktorsexamen i astronomi... för att hon var kvinna, ända till 1975."
         }
       ]
     },
     {
       "id": "course_77_qu_est_ce_que_la_matiere_noire_p2",
-      "title": "Vad är den gjord av? Vi letar fortfarande",
+      "title": "Vad består den av? Vi söker fortfarande",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Det är inte vanlig materia, kallad **baryonisk**, sammansatt av protoner och neutroner: den interagerar inte med ljus. Den korsar jorden och oss utan att lämna några synliga spår."
+          "text": "Det är inte vanlig materia, så kallad **baryonisk**, byggd av protoner och neutroner: den samspelar inte med ljuset. Den går genom jorden och genom oss utan synligt spår."
         },
         {
           "type": "paragraph",
-          "text": "Det sedan länge gynnade blyet, **MES**, en svagt interagerande massiv partikel, skulle vara en tung partikel utanför [[Standardmodell för fysik]], teorin som beskriver kända elementarpartiklar. **liquidxeon**-detektorer, begravda under jorden, hoppas på en sällsynt chock. Utan klar framgång för tillfället. Andra förlitar sig på **axion**, en ultralätt partikel, eller på en gravitation som ska granskas. Under tiden böjer mörk materia rymden och skapar [[Gravitationslinser]], som förvränger ljuset från ett massivt föremål."
+          "text": "Det länge mest tippade spåret, **WIMP**, en tung partikel med svag växelverkan, skulle vara en tung partikel utanför [[Standardmodell för fysik]], teorin som beskriver de kända elementarpartiklarna. Detektorer med **flytande xenon**, begravda under jord, hoppas på en sällsynt krock. Ännu utan tydlig succé. Andra satsar på **axionen**, en ultralätt partikel, eller på en gravitation att skriva om. Under tiden böjer mörk materia rummet och skapar [[Gravitationslinser]], som förvränger ljuset från ett tungt objekt."
         }
       ]
     },
@@ -73,34 +73,34 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mörk materia lockar. [[Mörk energi]], upptäckt i **1998**, gör tvärtom: den accelererar **expansion i universum**, det ökande avståndet mellan galaxerna. Galaxer rör sig iväg snabbare och snabbare, medan gravitationen borde bromsa rörelsen."
+          "text": "Mörk materia drar till sig. [[Mörk energi]], upptäckt **1998**, gör tvärtom: den skyndar på **universums expansion**, galaxernas växande avstånd. Galaxerna avlägsnar sig allt fortare, medan gravitationen borde bromsa rörelsen."
         },
         {
           "type": "paragraph",
-          "text": "Den skulle väga ungefär **68%** av kosmos. Med mörk materia gör detta **95%** av det osynliga universum. Allt vi ser, atomer och ljus, är bara ett avskum av **5 %**."
+          "text": "Den skulle väga ungefär **68%** av kosmos. Med mörk materia blir det **95%** osynligt universum. Allt vi ser, atomer och ljus, är bara ett skum på **5%**."
         },
         {
           "type": "funFact",
-          "text": "I en mycket avlägsen framtid kan mörk energi driva bort andra galaxer till den grad att de blir osynliga från Vintergatan: en nästan tom himmel."
+          "text": "I en mycket avlägsen framtid kan mörk energi föra bort de andra galaxerna tills de blir osynliga från Vintergatan: en nästan tom himmel."
         }
       ]
     },
     {
       "id": "course_77_qu_est_ce_que_la_matiere_noire_p4",
-      "title": "Massiva bevis, partikel hittades inte",
+      "title": "Tunga bevis, en partikel som saknas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Å ena sidan ackumuleras indirekta bevis: galaktiska rotationer, **kosmisk mikrovågsbakgrund**, fossil strålning från det unga universum, universums filamentstruktur. Å andra sidan ingen direkt partikeldetektering."
+          "text": "Å ena sidan hopar sig de indirekta bevisen: galaxrotationer, **kosmisk bakgrundsstrålning**, fossilstrålning från det unga universum, universums trådstruktur. Å andra sidan ingen direkt upptäckt av någon partikel."
         },
         {
           "type": "paragraph",
-          "text": "2000-talet måste bestämma sig: en ny familj av partiklar, eller ett nytt sätt att tänka om gravitation. Mörk materia är inte bara en detalj på himlen. Det är laboratoriet där morgondagens fysik uppfinns."
+          "text": "2000-talet måste avgöra: en ny familj av partiklar, eller ett nytt sätt att tänka gravitation. Mörk materia är inte bara en detalj på himlen. Det är laboratoriet där morgondagens fysik uppfinns."
         },
         {
           "type": "takeaway",
-          "text": "Mörk materia bildar **27 %** av universum. Det bevisas av dess gravitation på stjärnor och ljus, även om vi aldrig har sett det direkt."
+          "text": "Mörk materia bildar **27%** av universum. Vi bevisar den genom gravitationen på stjärnor och ljus, även om vi aldrig har sett den direkt."
         }
       ]
     }

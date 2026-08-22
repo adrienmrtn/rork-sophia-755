@@ -1,78 +1,78 @@
 {
   "id": "course_225_la_montee_des_eaux",
-  "title": "Stigande vatten",
-  "subtitle": "Havsnivåerna stiger",
+  "title": "Havsnivåhöjningen",
+  "subtitle": "Haven stiger",
   "subject": "comprendreLeMonde",
   "subcategory": "Environment & the future",
-  "description": "År 2100 kan havsnivån stiga med **en meter**. För hela länder och kustmegastäder är detta inte längre en avlägsen hypotes, utan en fråga om planering.",
+  "description": "Fram till 2100 kan havsnivån stiga med **en meter**. För hela länder och kustmetropoler är det inte längre en avlägsen hypotes, utan en planeringsfråga.",
   "hero": {
     "image": "la_montee_des_eaux",
     "ratio": "16:9",
-    "hook": "Havet stiger lite mer för varje år, och vissa länder planerar redan sin flytt."
+    "hook": "Havet stiger lite mer varje år, och vissa länder planerar redan sin flytt."
   },
   "sections": [
     {
       "id": "course_225_la_montee_des_eaux_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I tusentals år har havsnivåerna förblivit ungefär stabila. Sedan den industriella eran har den klättrat, och hastigheten på denna ökning accelererar från år till år."
+          "text": "I tusentals år låg havsnivån ungefär stilla. Sedan den industriella eran stiger den, och takten ökar år för år."
         },
         {
           "type": "paragraph",
-          "text": "År 2100 kan haven stiga med 30 centimeter till en meter beroende på våra utsläppsval. För många kuster är detta inte längre ett avlägset hot, utan ett mycket konkret planeringsproblem."
+          "text": "Fram till 2100 kan haven höjas med 30 centimeter till en meter, beroende på våra utsläppsval. För många kuster är det inte längre ett avlägset hot, utan ett högst konkret planeringsproblem."
         }
       ]
     },
     {
       "id": "course_225_la_montee_des_eaux_p1",
-      "title": "Två mekanismer, en riktning",
+      "title": "Två mekanismer, en enda riktning",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Havsnivån stiger av två olika fysiska skäl. Den första är [[Termisk expansion]]: när vatten värms upp rör sig dess molekyler mer och dess volym ökar lite, som vilken vätska som helst. Haven har absorberat mer än 90 % av den överskottsvärme som genereras av mänsklig aktivitet sedan 1970, och denna värme ökar deras volym."
+          "text": "Haven stiger av två olika fysiska skäl. Det första är [[Termisk expansion]]: när vattnet värms rör sig molekylerna mer och volymen ökar lite, som hos vilken vätska som helst. Oceanerna har tagit upp mer än 90% av överskottsvärmen från mänsklig aktivitet sedan 1970, och den värmen sväller deras volym."
         },
         {
           "type": "paragraph",
-          "text": "Det andra skälet är smältningen av is placerad på torra land. Var noga med att inte blanda ihop det med det arktiska isflaket, som redan flyter på vattnet och vars smältning inte får havsnivån att stiga. Det här är [[Inlandsis]], dessa enorma inlandsisar placerade på Grönlands och Antarktis mark, som verkligen får haven att svämma över genom att tillsätta färskvatten."
+          "text": "Det andra skälet är smältande is som vilar på fast mark. Blanda inte ihop det med den arktiska havsisen, som redan flyter på vattnet och vars smältning inte höjer havsnivån. Det är [[Inlandsis]], de enorma istäckena på marken på Grönland och Antarktis, som verkligen får oceanerna att svämma över genom att tillföra sötvatten."
         },
         {
           "type": "image",
           "asset": "greenland_ice_sheet_melting_glacier",
           "ratio": "16:9",
-          "caption": "Smältningen av Grönland, om den vore fullständig, skulle höja haven med 7 meter."
+          "caption": "Om hela Grönland smälte skulle oceanerna stiga med 7 meter"
         },
         {
           "type": "funFact",
-          "text": "Grönland förlorar cirka 280 miljarder ton is varje år, eller tillräckligt med vatten för att täcka hela Frankrike med ett lager på 50 centimeter."
+          "text": "Grönland förlorar varje år ungefär 280 miljarder ton is, tillräckligt med vatten för att täcka hela Frankrike med ett lager på 50 centimeter."
         }
       ]
     },
     {
       "id": "course_225_la_montee_des_eaux_p2",
-      "title": "En hastighet som oroar forskarna",
+      "title": "En takt som oroar forskarna",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sedan 1880 har den globala havsnivån stigit med cirka 20 centimeter. Det är framför allt strömhastigheten som larmar forskarna: den var cirka 1,4 mm per år på 1900-talet, jämfört med **3,6 mm per år** idag, en acceleration på mer än 150 %."
+          "text": "Sedan 1880 har den globala havsnivån stigit med ungefär 20 centimeter. Det är framför allt dagens takt som alarmerar forskarna: den låg kring 1,4 mm om året på 1900-talet, mot **3,6 mm om året** i dag, en acceleration på mer än 150%."
         },
         {
           "type": "paragraph",
-          "text": "[[IPCC]]-experter uppskattar att denna trend kommer att fortsätta i årtionden, även om utsläppen minskade drastiskt nu, eftersom haven tar tid att reagera på temperaturförändringar."
+          "text": "Experterna i [[IPCC]] bedömer att trenden kommer att fortsätta i decennier, även om vi skar utsläppen drastiskt redan nu, för oceanerna tar tid på sig att svara på temperaturförändringar."
         },
         {
           "type": "image",
           "asset": "coastal_flooding_sea_level_rise_city",
           "ratio": "4:3",
-          "caption": "En stigning på 50 cm kan göra en 100-årsflod till en årlig händelse."
+          "caption": "En höjning på 50 cm kan förvandla en hundraårsöversvämning till en årlig händelse"
         },
         {
           "type": "paragraph",
-          "text": "Den verkliga faran är inte bara ett något högre hav i genomsnitt, utan multiplikationen av [[Översvämningar och 100-års översvämningar]]: en stigning på 50 centimeter kan räcka för att förvandla en förväntad katastrof som inträffar en gång på ett århundrade till en nästan årlig händelse."
+          "text": "Den verkliga faran är inte bara ett hav som är lite högre i snitt, utan att [[Stormvågor och hundraåriga översvämningar]] blir vanligare: en höjning på 50 centimeter kan räcka för att förvandla en katastrof som väntas en gång per sekel till en nästan årlig händelse."
         }
       ]
     },
@@ -83,44 +83,44 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Stigande vattennivåer påverkar främst regioner som har bidragit minst till den globala uppvärmningen. De stora floddeltan, som Nilen, Mekong eller Ganges, ligger i frontlinjen. I Bangladesh, där det bor 170 miljoner invånare, kan en ökning med en meter orsaka förlust av 17 % av territoriet."
+          "text": "Havsnivåhöjningen slår främst regioner som bidragit minst till den globala uppvärmningen. De stora floddeltana, som Nilens, Mekongs eller Ganges, står i första ledet. I Bangladesh, där 170 miljoner människor bor, skulle en meters höjning kunna kosta 17% av territoriet."
         },
         {
           "type": "paragraph",
-          "text": "För små ö-stater som Maldiverna eller Kiribati är att försvinna helt under vattnet inte längre en science fiction-hypotes, utan ett verkligt ämne för politisk planering. Omvänt investerar rika megastäder som Miami eller New York miljarder i vallar och pumpar."
+          "text": "För små östater som Maldiverna eller Kiribati är att försvinna helt under vattnet inte längre en science fiction-hypotes, utan en verklig politisk planeringsfråga. Rika metropoler som Miami eller New York investerar i stället miljarder i vallar och pumpar."
         },
         {
           "type": "image",
           "asset": "jakarta_indonesia_sinking_flooding_maldives",
           "ratio": "16:9",
-          "caption": "Jakarta kombinerar stigande vatten och sättningar av marken, ett dubbelt hot."
+          "caption": "Jakarta drabbas av både stigande hav och sjunkande mark, ett dubbelt hot"
         },
         {
           "type": "funFact",
-          "text": "2009 höll Maldivernas regering ett undervattenskabinettsmöte i våtdräkter för att varna världen inför en stor klimatkonferens."
+          "text": "År 2009 höll Maldivernas regering ett ministerråd under vattnet, i dykardräkt, för att varna världen inför en stor klimatkonferens."
         },
         {
           "type": "paragraph",
-          "text": "I **Jakarta**, Indonesien, sjunker staden längre ner i marken på grund av överdriven pumpning av grundvatten. Inför detta dubbla hot tog landet det radikala beslutet att bygga en helt ny huvudstad, Nusantara, på ön Borneo."
+          "text": "I **Jakarta**, i Indonesien, sjunker staden dessutom i marken på grund av överdrivet pumpande av grundvatten. Inför det dubbla hotet har landet tagit det radikala beslutet att bygga en helt ny huvudstad, Nusantara, på ön Borneo."
         }
       ]
     },
     {
       "id": "course_225_la_montee_des_eaux_p4",
-      "title": "Anpassa dig, eller ta ett steg tillbaka",
+      "title": "Anpassa sig, eller backa",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Två strategier kompletterar varandra inför denna utmaning. Den första är att begränsa uppvärmningen för att bromsa ökningen efter 2100. Den andra är att anpassa sig till det som redan är oundvikligt, genom att stärka naturliga försvar som [[Mangrove]]s eller sanddyner, eller med tyngre lösningar som de stora verken i Nederländerna."
+          "text": "Två strategier kompletterar varandra inför utmaningen. Den första är att begränsa uppvärmningen för att bromsa höjningen efter 2100. Den andra är att anpassa sig till det som redan är oundvikligt, genom att stärka naturliga försvar som [[Mangrove]] eller dyner, eller med tyngre lösningar som Nederländernas stora arbeten."
         },
         {
           "type": "paragraph",
-          "text": "I vissa fall kommer den enda lösningen att vara att gå bakåt: flytta människor och aktiviteter inåt landet innan katastrofer upprepar sig för ofta. Detta är en verklig vaneförändring för samhällen som har varit knutna till kusten i århundraden."
+          "text": "I vissa fall blir den enda lösningen att backa: flytta invånare och verksamheter inåt landet innan katastroferna upprepas för ofta. Det är en verklig vanaändring för samhällen som hängt vid kusten i århundraden."
         },
         {
           "type": "takeaway",
-          "text": "Havsnivåerna stiger med 3,6 mm per år, till följd av den kombinerade effekten av termisk expansion och smältning av landis. År 2100 kan denna ökning nå en meter och tvinga fram hundratals miljoner människor på flykt."
+          "text": "Havsnivån stiger med 3,6 mm om året, under den kombinerade effekten av termisk expansion och smältande landis. Fram till 2100 kan höjningen nå en meter och tvinga hundratals miljoner människor att flytta."
         }
       ]
     }

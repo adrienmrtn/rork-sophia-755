@@ -1,98 +1,98 @@
 {
   "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee",
-  "title": "Varför är havsvatten salt?",
-  "subtitle": "Hav",
+  "title": "Varför är havsvattnet salt?",
+  "subtitle": "Haven",
   "subject": "sciences",
   "subcategory": "Our daily life explained",
-  "description": "En liter havsvatten innehåller cirka 35 gram salt. Detta salt har ackumulerats under miljarder år. Här kommer det ifrån.",
+  "description": "En liter havsvatten innehåller ungefär 35 gram salt. Saltet har samlats i miljarder år. Här kommer det ifrån.",
   "hero": {
     "image": "pourquoi_l_eau_de_mer_est_salee",
     "ratio": "16:9",
-    "hook": "Floderna är milda. Haven är salta. Hemligheten är tid och avdunstning."
+    "hook": "Floderna är söta. Haven är salta. Hemligheten är tid och avdunstning."
   },
   "sections": [
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hav täcker mer än **70%** av planeten. I genomsnitt innehåller en liter havsvatten cirka **35 gram salt**. Detta är ingen slump: det är resultatet av en mycket lång process."
+          "text": "Haven täcker mer än **70%** av planeten. I snitt innehåller en liter havsvatten ungefär **35 gram salt**. Det är ingen slump. Det är resultatet av en mycket lång process."
         },
         {
           "type": "paragraph",
-          "text": "Salt \"faller\" inte färdigt från himlen. Den reser från kontinenterna och blir sedan instängd i havet."
+          "text": "Saltet „faller” inte färdigt från himlen. Det reser från kontinenterna och blir sedan fångat i oceanen."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p1",
-      "title": "Salt kommer först från jorden",
+      "title": "Saltet kommer först från land",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Regn, som passerar genom luften, tar upp lite koldioxid. Det blir lätt surt. När den faller på klipporna angriper den dem försiktigt: det här är **kemisk erosion**."
+          "text": "När regnet passerar luften tar det upp lite koldioxid. Det blir svagt surt. När det faller på berget angriper det stenen sakta: det är **kemisk erosion**."
         },
         {
           "type": "image",
           "asset": "ocean_sea_salt_evaporation",
           "ratio": "auto",
-          "caption": "Saltkärr: avdunstning koncentrerar saltet löst i havsvatten."
+          "caption": "Saliner: avdunstningen koncentrerar saltet som är löst i havsvattnet."
         },
         {
           "type": "paragraph",
-          "text": "Floderna bär sedan lösta mineraler, särskilt **natrium** och **klor**, de två ingredienserna i bordssalt. De dumpar dem i havet."
+          "text": "Då för floderna med sig lösta mineraler, främst **natrium** och **klor**, de två ingredienserna i bordssalt. De tömmer dem i havet."
         },
         {
           "type": "funFact",
-          "text": "Undervattensvulkaner och varma källor på havsbotten tillför också salter. Men huvuddelen kommer fortfarande från kontinenterna."
+          "text": "Undervattensvulkaner och varma källor på havsbotten tillsätter också salter. Men det mesta kommer fortfarande från kontinenterna."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p2",
-      "title": "Varför är floder inte salta?",
+      "title": "Varför floderna inte är salta",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bra fråga: om floderna för med sig salt, varför är vattnet i Rhône eller Seine inte salt? För att saltet där är mycket utspätt, och för att vattnet i floderna ständigt förnyas."
+          "text": "Bra fråga: om floderna för med sig salt, varför är vattnet i Rhône eller Seine inte salt? För att saltet där är mycket utspätt, och för att flodvattnet ständigt byts ut."
         },
         {
           "type": "paragraph",
-          "text": "I havet är det annorlunda. Under solen förångas vattnet **** och återvänder till himlen. Saltet, **remains**. År efter år, sekel efter århundrade ackumuleras det. Vi kallar detta för [[hydrologisk cykel och saltansamling]]."
+          "text": "I oceanen är det annorlunda. Under solen **avdunstar** vattnet och går tillbaka till himlen. Saltet **stannar**. År efter år, århundrade efter århundrade, samlas det. Det kallas [[hydrologiska cykeln och saltansamling]]."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p3",
-      "title": "Salt cirkulerar också haven",
+      "title": "Saltet sätter också haven i rörelse",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Saltvatten är mer **tät** (\"tyngre\" för samma volym) än sötvatten. Vid polerna, när ytvatten fryser, släpps salt delvis ut i det omgivande flytande vattnet. Detta vatten blir ännu tätare och störtar till botten."
+          "text": "Saltvatten är **tätare** („tyngre” för samma volym) än sötvatten. Vid polerna, när ytvattnet fryser, stöts en del av saltet ut i vattnet runt omkring. Det vattnet blir ännu tätare och sjunker mot botten."
         },
         {
           "type": "paragraph",
-          "text": "Denna rörelse hjälper till att driva stora havsströmmar. Dessa strömmar transporterar värme och näringsämnen runt om i världen. Salt är inte bara en smaksak: det är en del av planetens klimatmotor."
+          "text": "Rörelsen hjälper till att driva stora havsströmmar. Strömmarna för värme och näring runt jorden. Salt är inte bara en smaksak: det hör till planetens klimatmotor."
         }
       ]
     },
     {
       "id": "course_44_pourquoi_l_eau_de_mer_est_elle_salee_p4",
-      "title": "Inte överallt samma salt",
+      "title": "Inte samma salt överallt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Salthalten är inte densamma överallt. Nära ekvatorn kan stark avdunstning koncentrera salt. Nära stora floder eller smältande isflak är vattnet mjukare. Döda havet är ett extremfall: mycket lite vatten lämnar, mycket salt finns kvar."
+          "text": "Salthalten är inte densamma överallt. Nära ekvatorn kan stark avdunstning koncentrera saltet. Nära stora floder eller smältande packis är vattnet sötare. Döda havet är ett extremfall: mycket lite vatten lämnar, mycket salt blir kvar."
         },
         {
           "type": "takeaway",
-          "text": "Havsvatten är salt eftersom floder tar med sig mineraler från kontinenterna, och avdunstning lämnar saltet i havet. Denna ansamling har pågått i miljarder år."
+          "text": "Havsvattnet är salt för att floderna för mineraler från kontinenterna, och för att avdunstningen lämnar saltet i oceanen. Den ansamlingen har pågått i miljarder år."
         }
       ]
     }

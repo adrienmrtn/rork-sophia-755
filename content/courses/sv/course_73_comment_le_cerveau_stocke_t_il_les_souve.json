@@ -4,84 +4,84 @@
   "subtitle": "Minne och neuroner",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "Minnet är inte ett bibliotek med lådor. Det är ett levande nätverk av neuroner som förstärker varandra, bygger om sig själva och ibland gör misstag.",
+  "description": "Minnet är inget bibliotek av lådor. Det är ett levande nät av neuroner som förstärks, byggs om och ibland tar fel.",
   "hero": {
     "image": "comment_le_cerveau_stocke_les_souvenirs",
     "ratio": "16:9",
-    "hook": "Ett minne är inte en fil: det är en väg som hjärnan har lärt sig att göra om."
+    "hook": "Ett minne är ingen fil: det är en stig hjärnan har lärt sig gå igen."
   },
   "sections": [
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Vi föreställer oss ofta minnet som en hårddisk. I verkligheten är det ett levande nätverk. Miljarder **neuroner**, nervceller, återansluter, stärker eller försvagas beroende på vad vi upplever."
+          "text": "Man tänker sig ofta minnet som en hårddisk. I själva verket är det ett levande nät. Miljarder **neuroner**, nervceller, kopplar om, förstärks eller försvagas efter det vi lever."
         },
         {
           "type": "paragraph",
-          "text": "Ingenting lagras på ett ställe. Ett minne är ett distribuerat spår, skört i början, mer solidt efter sömnen och alltid lite rekonstruerat när vi kommer ihåg det."
+          "text": "Inget lagras på ett enda ställe. Ett minne är ett utspritt spår, skört i början, fastare efter sömnen, och alltid lite ombyggt när man minns."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p1",
-      "title": "Samband som stärker",
+      "title": "Kopplingar som förstärks",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mellan två neuroner kallas kontaktpunkten en **synaps**, korsningen där nervsignalen passerar. Den mänskliga hjärnan har ungefär **86 miljarder** neuroner och mer än **100 000 tusen dollar** synapser."
+          "text": "Mellan två neuroner heter kontaktpunkten en **synaps**, knutpunkten där nervsignalen går. Den mänskliga hjärnan räknar ungefär **86 miljarder** neuroner och mer än **100.000 miljarder** synapser."
         },
         {
           "type": "image",
           "asset": "hippocampus_memory_brain",
           "ratio": "auto",
-          "caption": "Hippocampus spelar en central roll i bildandet av minnen."
+          "caption": "Hippocampus spelar en central roll när minnen formas"
         },
         {
           "type": "paragraph",
-          "text": "När information upprepas eller kopplas till en stark känsla, aktiveras samma nervceller tillsammans. Deras länk blir lättare att utlösa: det är [[Långsiktig potentiering]], den varaktiga förstärkningen av synapser. Ju mer en krets används, desto \"bredare\" blir banan. Ett minne är därför inte ett lagrat objekt, utan en **spåra** i nätverket."
+          "text": "När en uppgift upprepas eller binds till en stark känsla tänds samma neuroner tillsammans. Deras länk blir lättare att utlösa: det är [[Långsiktig potentiering]], den varaktiga förstärkningen av synapser. Ju mer en krets används, desto „bredare” blir stigen. Ett minne är alltså inget föremål i en låda, utan ett **spår** i nätet."
         },
         {
           "type": "funFact",
-          "text": "Hjärnans lagringskapacitet uppskattas till cirka **2,5 petabyte**, vilket motsvarar miljontals timmars video. Men det är inte en skiva: det är en levande vävnad som håller på att omorganisera sig själv."
+          "text": "Hjärnans lagringskapacitet skattas till ungefär **2,5 petabyte**, motsvarande miljoner timmar video. Men det är ingen skiva: det är en levande vävnad som organiserar om sig."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p2",
-      "title": "Sjöhästen, minnenas stationsmästare",
+      "title": "Hippocampus, minnenas bangård",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**sjöhäst**, en liten struktur i [[tinningloben]], regionen bakom templen, bevarar inte minnen för alltid. Den tar emot dem, **koda**, omvandlar dem till minnesspår och omfördelar dem sedan till **bark**, det yttre lagret av hjärnan. Denna överföring kallas **konsolidering**."
+          "text": "**Hippocampus**, en liten struktur i [[tinningloben]], området bakom tinningarna, behåller inte minnena för alltid. Den tar emot dem, **kodar** dem, gör om dem till minnesspår och skickar dem vidare mot **cortex**, hjärnans yttre lager. Den överföringen kallas **konsolidering**."
         },
         {
           "type": "paragraph",
-          "text": "Det görs huvudsakligen under **sova**. Utan en fungerande hippocampus kan vi leva i nuet, men vi har inte längre nya medvetna minnen. Vi förblir fast i en nutid utan ett nära förflutet."
+          "text": "Den sker främst under **sömnen**. Utan fungerande hippocampus kan man leva i nuet, men man fäster inte längre nya medvetna minnen. Man fastnar i ett nu utan nära dåtid."
         },
         {
           "type": "funFact",
-          "text": "Patient **H.M.**, opererad 1953, bildade inte längre nya minnen. Men han gick framåt varje dag med att rita i en spegel, utan att komma ihåg att han redan försökt: hans minne av gesterna var intakt."
+          "text": "Patienten **H.M.**, opererad 1953, bildade inte längre nya minnen. Ändå blev han bättre för varje dag på att rita i en spegel, utan att minnas att han redan försökt: rörelseminnet var intakt."
         }
       ]
     },
     {
       "id": "course_73_comment_le_cerveau_stocke_t_il_les_souve_p3",
-      "title": "Att komma ihåg är att bygga om",
+      "title": "Att minnas är att bygga om",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Att återkalla ett minne är inte att spela upp en video. Varje gång du tar ut den blir den **formbar**, som kan ändras. Våra nuvarande känslor, vår nya kunskap eller ett förslag kan modifiera det innan det \"spelas in på nytt\"."
+          "text": "Att plocka fram ett minne är inte att spela om en video. Varje gång man tar ut det blir det **formbart**, möjligt att ändra. Känslorna just då, ny kunskap eller ett förslag kan ändra det innan det „spelas in igen”."
         },
         {
           "type": "paragraph",
-          "text": "Psykolog **Elizabeth Loftus** visade att du kan implantera **falska minnen** med enkla frågor. Därav försiktigheten i dag inför ögonvittnen: i god tro fyller hjärnan i luckorna."
+          "text": "Psykologen **Elizabeth Loftus** har visat att man kan plantera **falska minnen** med enkla frågor. Därav försiktigheten i dag inför ögonvittnen: i god tro fyller hjärnan hålen."
         }
       ]
     },
@@ -92,15 +92,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Minnet av fakta och livsepisoder, vad vi kan berätta, passerar främst genom hippocampus. [[Procedurminne]], det för cykling eller simning, beror istället på **lilla hjärnan**, en struktur på baksidan av hjärnan, och andra äldre strukturer."
+          "text": "Minnet av fakta och livsepisoder, det man kan berätta, går främst via hippocampus. [[Procedurminne]], det för cykeln eller simningen, beror mer på **lillhjärnan**, strukturen bak i hjärnan, och på andra äldre strukturer."
         },
         {
           "type": "paragraph",
-          "text": "Det är därför vissa amnesipatienter glömmer sitt eget namn men spelar fortfarande piano. Minnet är inte en enda låda: det är en mosaik av system."
+          "text": "Därför glömmer vissa amnesipatienter sitt eget namn men spelar fortfarande piano. Minnet är ingen enda låda: det är en mosaik av system."
         },
         {
           "type": "takeaway",
-          "text": "Ett minne är ett dynamiskt spår: synapser förstärks, konsolideras speciellt på natten och återuppbyggs med varje påminnelse. Det är aldrig en fast fil."
+          "text": "Ett minne är ett dynamiskt spår: förstärkta synapser, konsoliderade främst på natten, och ombyggda vid varje återkallande. Det är aldrig en frusen fil."
         }
       ]
     }

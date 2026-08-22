@@ -1,104 +1,104 @@
 {
   "id": "course_85_le_banquet_platon",
-  "title": "Symposiet, Platon",
-  "subtitle": "4:e århundradet f.Kr",
+  "title": "Gästabudet, Platon",
+  "subtitle": "300-talet f.Kr.",
   "subject": "litterature",
   "subcategory": "Ancient Greeks & Philosophers",
-  "description": "Runt en atensk måltid definierar gästerna kärlek. Aristofanes berättar om androgynerna, Sokrates höjer begäret mot skönhet. Platon förvandlar firandet till filosofi.",
+  "description": "Runt en atensk måltid definierar gästerna kärleken. Aristofanes berättar om androgynerna, Sokrates lyfter begäret mot det Sköna. Platon gör festen till filosofi.",
   "hero": {
     "image": "le_banquet_platon",
     "ratio": "16:9",
-    "hook": "En mycket berusad kväll. Och plötsligt den vackraste definitionen av kärlek."
+    "hook": "En kväll med för mycket vin. Och plötsligt den vackraste definitionen av kärlek."
   },
   "sections": [
     {
       "id": "course_85_le_banquet_platon_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I Aten, på **4:e århundradet f.Kr**, skrev **Platon**, grekisk filosof och lärjunge till Sokrates, **Bankett**. På grekiska säger vi *Symposium*. Inramningen är en [[Atensk symposion]], en maskulin måltid efter middagen där utspätt vin och intellektuella diskussioner blandas. Den kvällen är det påtvingade temat **[[Eros]]**, kraften som driver själen mot skönhet."
+          "text": "I Aten, på **300-talet** f.Kr., skriver **Platon**, grekisk filosof och Sokrates lärjunge, **Gästabudet**. På grekiska heter det *Symposion*. Ramen är ett [[Atensk symposion]], en manlig måltid efter middagen där utspätt vin blandas med intellektuellt samtal. Den kvällen är temat **[[Eros]]**, kraften som driver själen mot det sköna."
         },
         {
           "type": "paragraph",
-          "text": "Varje gäst erbjuder en teori om kärlek. Dialogen blir en stigning: från kropp till skönhet, från skönhet till **Idéer**, perfekta och eviga former enligt Platon. Och **Sokrates**, Platons mästare, dömd till döden 399, som ofta i platonska dialoger, har sista ordet."
+          "text": "Varje gäst föreslår en teori om kärleken. Dialogen blir en stigning: från kroppen till det sköna, från det sköna till **idéerna**, fulländade och eviga former enligt Platon. Och **Sokrates**, Platons mästare, dömd till döden år 399, har som så ofta i de platonska dialogerna sista ordet."
         }
       ]
     },
     {
       "id": "course_85_le_banquet_platon_p1",
-      "title": "Drick, prata, tävla",
+      "title": "Dricka, tala, tävla",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Banketten firar segern för poeten **Agathon**, tragisk författare och kvällens värd. Baksmällorna finns fortfarande kvar, men vi bestämmer oss för att berömma Eros snarare än att dricka för mycket. Talen följer varandra: läkare, poeter, politiker. Alla projicerar sin vision om önskan. **Phaedra** talar om kärlek som modets drivkraft. **Pausanias** skiljer ädel kärlek och grov kärlek."
+          "text": "Gästabudet firar segern för poeten **Agathon**, tragisk författare och kvällens värd. Bakfyllan sitter kvar, men man beslutar att prisa Eros hellre än att dricka för mycket. Talen följer på varandra: läkare, poeter, politiker. Var och en projicerar sin syn på begäret. **Faidros** talar om kärleken som motor för tapperhet. **Pausanias** skiljer ädel kärlek från grov."
         },
         {
           "type": "image",
           "asset": "ancient_greek_symposium_banquet_painting",
           "ratio": "4:3",
-          "caption": "Den grekiska symposionen: vin, kronor och tal som social sport."
+          "caption": "Det grekiska symposiet: vin, kronor och talet som social sport"
         },
         {
           "type": "paragraph",
-          "text": "Platon använder festivalen för att göra filosofi utan föreläsningar. Vi skrattar, vi provocerar, vi rättar varandra. Tanken går framåt med vinet, men också tack vare spelets regler: alla måste försvara Eros inför de andra. Vältalighetstävlingen, grekiskan *agon*, blir en tankeskola."
+          "text": "Platon använder festen för att göra filosofi utan föreläsning. Man skrattar, retas, rättar varandra. Idén går framåt med vinet, men också tack vare spelets regel: var och en ska försvara Eros inför de andra. Vältalighetstävlingen, den grekiska *agon*, blir en tankeskola."
         }
       ]
     },
     {
       "id": "course_85_le_banquet_platon_p2",
-      "title": "Myten om androgyner",
+      "title": "Myten om androgynerna",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Det mest kända talet är det av **Aristofanes**, en atensk serieförfattare känd för sina satirer. Förr, sa han, var människor dubbelsinnade. [[androgyner]] blandade maskulina och feminina karaktärer. Andra par förenades. **Zeus**, gudarnas kung, skar dem i två delar för att straffa dem. Sedan dess har alla letat efter sin förlorade halva."
+          "text": "Det mest berömda talet kommer från **Aristofanes**, den atenske komediförfattaren känd för sina satirer. Förr, säger han, var människorna dubbla. [[androgyner]] blandade manliga och kvinnliga drag. Andra par var sammanfogade. **Zeus**, gudarnas kung, högg dem itu som straff. Sedan dess söker var och en sin förlorade hälft."
         },
         {
           "type": "funFact",
-          "text": "Denna berättelse gav det franska uttrycket \"själafrände\". Platon lägger det i munnen på en komiker och går sedan bortom det: kärleken stannar inte vid att hitta en förlorad kropp."
+          "text": "Den historien har gett svenskan uttrycket „själsfrände”. Platon lägger den i munnen på en komiker, sedan går han förbi den: kärleken stannar inte vid att hitta en förlorad kropp."
         },
         {
           "type": "paragraph",
-          "text": "Myten är vacker, öm, lite sorglig. Det förklarar **brist**, denna känsla av ofullständighet som driver oss att leta efter den andre. Men Sokrates går någon annanstans: att älska är inte bara att hålla ihop två halvor. Det handlar om att stiga mot något större än dig själv."
+          "text": "Myten är vacker, öm, lite ledsen. Den förklarar **bristen**, känslan av ofullständighet som driver oss att söka den andre. Men Sokrates går någon annanstans: att älska är inte bara att klistra ihop två halvor. Det är att stiga mot något större än sig själv."
         }
       ]
     },
     {
       "id": "course_85_le_banquet_platon_p3",
-      "title": "Diotima och kärlekens skala",
+      "title": "Diotima och kärlekarnas stege",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sokrates rapporterar undervisningen av **Diotima**, utländsk prästinna och visdomsfigur i dialogen. Eros är varken en fullvärdig gud eller en fattig dödlig: han är en [[daimon]], en mellanvarelse mellan gudar och människor. Han vill ha det han saknar. Älskaren utgår från den vackra kroppen, går vidare till vackra själar, sedan till vackra handlingar, tills **Vackert i sig själv**, den perfekta skönhetsidén."
+          "text": "Sokrates återger undervisningen hos **Diotima**, en främmande prästinna och vishetsgestalt i dialogen. Eros är varken full gud eller fattig dödlig: det är en [[daimon]], en mellanvarelse mellan gudar och människor. Han åtrår det han saknar. Den älskande går från den sköna kroppen, via sköna själar, sedan sköna handlingar, ända till **det Sköna i sig**, den fulländade idén om skönhet."
         },
         {
           "type": "image",
           "asset": "socrates_alcibiades_banquet_painting",
           "ratio": "4:3",
-          "caption": "Sokrates och Alkibiades: begär kan också vara en skola för själen."
+          "caption": "Sokrates och Alkibiades: begäret kan också vara en skola för själen"
         },
         {
           "type": "paragraph",
-          "text": "Det är [[Platonska Eros]], en önskan som utbildar. Senare kommer [[Alcibiades]], en ung, stilig och instabil atensk politiker, berusad, in och hyllar Sokrates som en störande Satyr. Filosofisk kärlek avskaffar inte köttslig oordning. Han förvandlar det till en strävan efter sanning."
+          "text": "Det är [[Platonska Eros]], ett begär som fostrar. Senare störtar [[Alcibiades]], ung atensk politiker, vacker och ostadig, in berusad och prisar Sokrates som en oroande satyr. Den filosofiska kärleken avskaffar inte den köttsliga oron. Den förvandlar den till sanningssökande."
         }
       ]
     },
     {
       "id": "course_85_le_banquet_platon_p4",
-      "title": "Vad \"platoniskt\" kom att betyda",
+      "title": "Vad platonisk till slut har kommit att betyda",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I vanligt språkbruk betyder \"platonisk\" kärlek utan köttsliga relationer. Hos Platon är den rikare: kroppen är en utgångspunkt, inte en skam. Banketten satte sin prägel på kristen teologi, Petrarcas eller Ronsards kärlekspoesi och begärets psykologi. Det visar att att älska är också att lära sig att se."
+          "text": "I vardagsspråket betyder en „platonisk” kärlek en utan köttslig relation. Hos Platon är det rikare: kroppen är en startpunkt, inte en skam. Gästabudet har präglat den kristna teologin, kärlekslyriken hos Petrarca och Ronsard, och begärets psykologi. Det visar att älska också är att lära sig se."
         },
         {
           "type": "takeaway",
-          "text": "I **Bankett** förvandlar Platon en atensk kväll till en skala: vi utgår från en känslig önskan att sikta på en bredare skönhet. Att älska, här, är att lära sig att se bortom sig själv."
+          "text": "I **Gästabudet** gör Platon en atensk kväll till en stege: man går från det sinnliga begäret mot en vidare skönhet. Att älska är här att lära sig se längre än sig själv."
         }
       ]
     }

@@ -1,114 +1,114 @@
 {
   "id": "course_63_comment_se_forment_les_tremblements_de_t",
-  "title": "Hur bildas jordbävningar?",
-  "subtitle": "Fel & vågor",
+  "title": "Hur uppstår jordbävningar?",
+  "subtitle": "Förkastningar och vågor",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "Varje år upplever jorden hundratusentals jordbävningar. De flesta är osynliga. Några byter hela städer.",
+  "description": "Varje år registrerar jorden hundratusentals skalv. De flesta syns inte. Några ändrar hela städer.",
   "hero": {
     "image": "comment_se_forment_les_tremblements_de_terre",
     "ratio": "16:9",
-    "hook": "En jordbävning är inte ett infall av marken. Det här är en energi som har väntat för länge."
+    "hook": "Ett skalv är inget nyckfullt markhumör. Det är energi som väntat för länge."
   },
   "sections": [
     {
       "id": "course_63_comment_se_forment_les_tremblements_de_t_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Varje år registrerar jorden cirka **500 000 detektorer jordbävningar**. Endast en liten del orsakar stor skada. En jordbävning är inte en slump: det är det plötsliga slutet på en lång ansamling av energi i klipporna."
+          "text": "Varje år registrerar jorden ungefär **500.000 skalv** som går att mäta. Bara en liten del gör stor skada. En jordbävning är ingen slump: det är det abrupta slutet på en lång ansamling av energi i berget."
         },
         {
           "type": "paragraph",
-          "text": "För att förstå detta måste vi se planetens yta som ett pussel av rörliga plattor. Där dessa plattor gnuggar ihop, byggs spänningen upp ... tills den går sönder."
+          "text": "För att förstå det måste man se planetens yta som ett pussel av plattor i rörelse. Där plattorna skaver stiger spänningen, tills det brister."
         }
       ]
     },
     {
       "id": "course_63_comment_se_forment_les_tremblements_de_t_p1",
-      "title": "Tallrikar som hela tiden rör sig",
+      "title": "Plattor som aldrig slutar röra sig",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Jordytan är uppdelad i ett tiotal stora **tektoniska plattor**. De glider på ett mjukare lager av pälsen, [[Astenosfären]]. Deras hastighet? Cirka **1 till 10 cm per år**, ungefär samma som tillväxten av en fingernagel."
+          "text": "Jordytan är skuren i ett tiotal stora **tektoniska plattor**. De glider på ett mjukare lager i manteln, [[Astenosfären]]. Farten? Ungefär **1 till 10 cm per år**, ungefär som en nagel växer."
         },
         {
           "type": "image",
           "asset": "earthquake_collapsed_buildings_urban",
           "ratio": "auto",
-          "caption": "Jordbävningar frigör plötsligt den energi som ackumulerats längs förkastningar."
+          "caption": "Skalven släpper på en gång energin som samlats längs förkastningarna"
         },
         {
           "type": "paragraph",
-          "text": "Vid gränserna dominerar tre scenarier. Plattorna rör sig isär (oceaniska åsar). De kolliderar: ibland dyker den ena under den andra, det är [[Subduktion]]. Eller så glider de sida vid sida, som längs [[San Andreas-felet]] i Kalifornien, ungefär **1 300 km** lång."
+          "text": "Vid gränserna dominerar tre scenarier. Plattorna glider isär (oceanryggar). De krockar: ibland dyker en under den andra, det är [[Subduktion]]. Eller de skaver sida vid sida, som längs [[San Andreas-felet]] i Kalifornien, ungefär **1.300 km** långt."
         },
         {
           "type": "funFact",
-          "text": "Längs San Andreas kommer Los Angeles närmare San Francisco med cirka **6 cm** per år. Om **15 miljoner dollar** skulle de två städerna vara grannar."
+          "text": "Längs San Andreas närmar sig Los Angeles San Francisco med ungefär **6 cm** om året. Om **15 miljoner år** skulle städerna vara grannar."
         },
         {
           "type": "paragraph",
-          "text": "Det är särskilt vid dessa gränser som jordbävningar inträffar. Plattornas rörelse hindras av friktionen i stenarna. Energi ackumuleras tyst."
+          "text": "Det är främst vid de gränserna skalven föds. Plattornas rörelse bromsas av bergets friktion. Energin samlas i tysthet."
         }
       ]
     },
     {
       "id": "course_63_comment_se_forment_les_tremblements_de_t_p2",
-      "title": "När felet släpper",
+      "title": "När förkastningen släpper",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En jordbävning inträffar längs en **fel**: en spricka mellan två stenblock. I teorin ska plattorna glida kontinuerligt. I praktiken blockerar friktion ofta denna glidning."
+          "text": "Ett skalv sker längs en **förkastning**: en spricka mellan två bergblock. I teorin borde plattorna glida utan uppehåll. I praktiken stoppar friktionen ofta glidningen."
         },
         {
           "type": "paragraph",
-          "text": "Under denna tid fortsätter plackarna att växa. Stenen deformeras lite, som en båge som dras. Vi talar om elastiska begränsningar. Detta kan pågå i årtionden, ibland århundraden."
+          "text": "Under tiden fortsätter plattorna att trycka. Berget deformeras lite, som en båge man spänner. Man talar om elastiska spänningar. Det kan pågå i decennier, ibland i sekel."
         },
         {
           "type": "paragraph",
-          "text": "När motståndsgränsen överskrids glider blocken plötsligt. Energin lämnar i form av **eismiska vågor**. Djupets brytpunkt kallas **fokus**. På ytan är punkten precis ovanför **epicentrum**, där effekterna ofta är starkast."
+          "text": "När hållfastheten spricker glider blocken med ett ryck. Energin går iväg som **seismiska vågor**. Brottpunkten på djupet kallas **fokuset**. Vid ytan ligger punkten rakt ovanför, **epicentrum**, där effekterna ofta är starkast."
         }
       ]
     },
     {
       "id": "course_63_comment_se_forment_les_tremblements_de_t_p3",
-      "title": "Mäter kraft, fruktar tsunamin",
+      "title": "Mäta kraften, frukta tsunamin",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "För att mäta energin från en jordbävning använder seismologer främst momentet [[magnitudskalan]]. Det är en logaritmisk skala: varje grad multiplicerar energin med ungefär **32**. En jordbävning med magnituden **8** frigör därför ungefär **1 000 gånger** mer energi än en jordbävning med magnituden **6**."
+          "text": "För att mäta energin i ett skalv använder seismologer främst momentets [[magnitudskala]]. Det är en logaritmisk skala: varje steg multiplicerar energin med ungefär **32**. Ett skalv med magnitud **8** släpper alltså ungefär **1.000 gånger** mer energi än ett skalv med magnitud **6**."
         },
         {
           "type": "funFact",
-          "text": "Det finns också jordbävningar av **0** eller negativ magnitud. Dessa är mycket små händelser, synliga endast med mycket känsliga sensorer."
+          "text": "Det finns också skalv med magnitud **0** eller negativ. Det är mycket små händelser, synliga bara med mycket känsliga sensorer."
         },
         {
           "type": "paragraph",
-          "text": "Den starkaste som någonsin uppmätts med moderna instrument är den för **Valdivia**, i Chile, i **1960**: magnitud **9.5**. Om fokus är under havet och höjer havsbotten, kan den förskjutna vattenpelaren skapa en **tsunamin**. I **2004** utlöste en jordbävning av magnituden **9.1** nära Sumatra en tsunami som drabbade 14 länder och krävde cirka **227 000** liv."
+          "text": "Det starkaste som mätts med moderna instrument är det i **Valdivia**, Chile, **1960**: magnitud **9,5**. Om fokuset ligger under havet och lyfter havsbotten kan den undanträngda vattenpelaren skapa en **tsunami**. År **2004** utlöste ett skalv med magnitud **9,1** nära Sumatra en tsunami som slog mot 14 länder och dödade ungefär **227.000** människor."
         }
       ]
     },
     {
       "id": "course_63_comment_se_forment_les_tremblements_de_t_p4",
-      "title": "Vågor, alert och byggnader som gör motstånd",
+      "title": "Vågor, larm och hus som håller",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Efter uppbrottet lämnar flera typer av vågor. **P vågor** (primär) anländer först: de komprimerar stenen som ett dragspel. Sedan kommer **ZZ** (sekundära) vågorna, långsammare och ofta mer destruktiva. Ytvågorna får då marken att svänga mycket synligt."
+          "text": "Efter brottet går flera slags vågor iväg. **P-vågorna** (primära) kommer först: de komprimerar berget som ett dragspel. Sedan kommer **S-vågorna** (sekundära), långsammare och ofta mer destruktiva. Ytvågorna får sedan marken att gunga synligt."
         },
         {
           "type": "paragraph",
-          "text": "Vi vet ännu inte hur vi ska förutsäga den exakta dagen för en stor jordbävning. Däremot kartlägger vi riskområdena. [[Seismisk teknik]] designar byggnader som kan stå emot skakningar: mobila fundament, gigantiska stötdämpare, strukturer som absorberar energi. I Japan upptäcker tidiga varningar P-vågor och kan stänga av gas eller långsamma tåg innan de farligaste vågorna anländer."
+          "text": "Man kan ännu inte förutsäga dagen för ett stort skalv. Däremot kartläggs riskzonerna. [[Jordbävningsteknik]] ritar hus som tål skakningarna: rörliga grunder, jättedämpare, stommar som tar upp energi. I Japan fångar tidiga larm P-vågorna och kan stänga gasen eller sakta tågen innan de farligaste vågorna kommer."
         },
         {
           "type": "takeaway",
-          "text": "En jordbävning inträffar när stenar som fastnat längs en förkastning plötsligt släpper årtionden av spänning. Energi färdas i vågor, och varje magnitud multiplicerar den energin med ungefär **32**."
+          "text": "Ett skalv föds när berg som fastnat längs en förkastning släpper decennier av spänning på en gång. Energin färdas som vågor, och varje magnitudsteg multiplicerar den energin med ungefär **32**."
         }
       ]
     }

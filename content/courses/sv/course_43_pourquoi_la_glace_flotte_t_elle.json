@@ -1,89 +1,89 @@
 {
   "id": "course_43_pourquoi_la_glace_flotte_t_elle",
   "title": "Varför flyter is?",
-  "subtitle": "Vatten & molekyler",
+  "subtitle": "Vatten och molekyler",
   "subject": "sciences",
   "subcategory": "Our daily life explained",
-  "description": "Is flyter på vatten. Detta verkar normalt, men det är faktiskt mycket sällsynt. Och lyckligtvis för livet på jorden.",
+  "description": "Is flyter på vatten. Det verkar självklart, men det är i själva verket mycket sällsynt. Och tur för livet på jorden.",
   "hero": {
     "image": "pourquoi_la_glace_flotte",
     "ratio": "16:9",
-    "hook": "Om isen flödade skulle sjöarna frysa till botten. Och livet i vattnet skulle ha svårt att överleva."
+    "hook": "Om isen sjönk skulle sjöarna frysa till botten. Och livet i vattnet skulle ha svårt att överleva."
   },
   "sections": [
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En isbit i ett glas, ett isberg i havet: isen **flyter**. Vi finner det banalt. Men för de flesta ämnen är den fasta substansen mer **tät**, därför tyngre för samma volym: den sjunker."
+          "text": "En isbit i ett glas, ett isberg i havet: is **flyter**. Vi tycker det är självklart. Ändå är det fasta för de flesta ämnen **tätare**, alltså tyngre för samma volym: det sjunker."
         },
         {
           "type": "paragraph",
-          "text": "Vatten gör tvärtom. Detta undantag kommer från formen på dess molekyl. Och det räddade många sjöar på vintern."
+          "text": "Vattnet gör tvärtom. Undantaget kommer av molekylens form. Och det har räddat många sjöar om vintern."
         }
       ]
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p1",
-      "title": "En V-formad molekyl",
+      "title": "En molekyl formad som ett V",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En vattenmolekyl är en atom av **syre** kopplad till två atomer av **väte**. Den är inte rak: den bildar en **V**. På grund av denna form är de elektriska laddningarna inte lika fördelade: molekylen är **polar**, med ena änden något negativ och den andra något positiv."
+          "text": "En vattenmolekyl är en **syreatom** bunden till två **väteatomer**. Den är inte rak: den bildar ett **V**. På grund av den formen är de elektriska laddningarna inte jämnt fördelade: molekylen är **polär**, med ena änden lätt negativ och den andra lätt positiv."
         },
         {
           "type": "image",
           "asset": "water_molecule_model_crystal",
           "ratio": "4:3",
-          "caption": "Vattenmolekylen: ett V som attraherar och stöter bort sina grannar."
+          "caption": "Vattenmolekylen: ett V som drar och stöter bort sina grannar"
         },
         {
           "type": "paragraph",
-          "text": "Resultat: vattenmolekylerna attraherar varandra av [[Vätebindningar]], som små magneter. I vätskan förblir de nära men rör sig fortfarande. I is fryser de olika."
+          "text": "Resultat: vattenmolekylerna dras till varandra av [[vätebindningar]], som små magneter. I vätskan håller de sig nära men rör sig ännu. I isen stelnar de på ett annat sätt."
         }
       ]
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p2",
-      "title": "När vatten fryser tar det plats",
+      "title": "När vattnet stelnar tar det plats",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Runt **0 °C** stelnar vattnet. För att bilda is organiserar sig molekylerna i ett **hexagonal**-nätverk, en sorts sexsidig bikaka. De lämnar sedan mer **tömma** mellan sig än i flytande tillstånd."
+          "text": "Kring **0°C** stelnar vattnet. För att bilda is ordnar sig molekylerna i ett **hexagonalt** nät, ett slags sexkantiga bikakor. De lämnar då mer **tomrum** mellan sig än i flytande tillstånd."
         },
         {
           "type": "funFact",
-          "text": "Det är därför en hel flaska vatten kan **brista** i frysen: is tar upp mer volym än flytande vatten."
+          "text": "Därför kan en full vattenflaska **spricka** i frysen: isen tar mer volym än flytande vatten."
         },
         {
           "type": "paragraph",
-          "text": "Mindre material i samma volym betyder: **mindre tät**. Men ett föremål som är mindre tät än vätskan runt det stiger. Is flyter därför på vatten. Detta kallas **vattenexpansionsanomali**: till skillnad från nästan alla ämnen expanderar vatten när det svalnar under **4 °C**."
+          "text": "Mindre materia i samma volym betyder: **lägre densitet**. Ett föremål som är mindre tätt än vätskan omkring stiger. Isen flyter alltså på vattnet. Det kallas vattnets **anomaliska utvidgning**: till skillnad från nästan alla ämnen vidgar sig vattnet när det kyls under **4°C**."
         },
         {
           "type": "image",
           "asset": "iceberg_floating_arctic_ocean",
           "ratio": "16:9",
-          "caption": "Ett isberg flyter eftersom is är mindre tät än flytande vatten."
+          "caption": "Ett isberg flyter för att isen är mindre tät än flytande vatten"
         }
       ]
     },
     {
       "id": "course_43_pourquoi_la_glace_flotte_t_elle_p3",
-      "title": "Varför det är viktigt för sjöar",
+      "title": "Varför det är livsviktigt för sjöarna",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tänk om glassen flödade. Det skulle bildas på ytan och sedan sjunka till botten. Sjön skulle frysa lager för lager, ända till botten. Sommaren skulle ofta inte räcka för att smälta bort allt."
+          "text": "Tänk om isen sjönk. Den skulle bildas vid ytan och sedan falla till botten. Sjön skulle frysa lager för lager, ända ner. Sommaren skulle ofta inte räcka för att smälta allt."
         },
         {
           "type": "paragraph",
-          "text": "Som tur är ligger isen kvar på toppen. Den bildar ett **isolerat hotell**. Under den frusna ytan kan flytande vatten finnas kvar runt **4 °C**, temperaturen där flytande vatten är tätast, tillräckligt för att fiskar och vattenväxter ska överleva."
+          "text": "Tur nog stannar isen uppe. Den bildar ett **isolerande lock**. Under den frusna ytan kan det flytande vattnet stanna kring **4°C**, temperaturen där flytande vatten är tätast, tillräckligt för att fiskar och vattenväxter ska överleva."
         }
       ]
     },
@@ -94,11 +94,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Det vita isflaket reflekterar en stor del av solens ljus tillbaka ut i rymden tack vare dess höga **albedo**, dess reflekterande kraft. Om det försvinner, absorberar det mörka havet mer värme. Detta påskyndar uppvärmningen: en ond cirkel."
+          "text": "Den vita havsisen skickar tillbaka en stor del av solljuset mot rymden tack vare sitt höga **albedo**, sin reflektionsförmåga. Försvinner den absorberar det mörka havet mer värme. Det skyndar på uppvärmningen: en ond cirkel."
         },
         {
           "type": "takeaway",
-          "text": "Is flyter eftersom vatten bildar ett mer \"luftat\" nätverk när det stelnar: det blir mindre tätt än flytande vatten. Detta undantag skyddar vattenlevande liv på vintern."
+          "text": "Is flyter för att vattnet, när det stelnar, bildar ett mer „luftigt” nät: det blir mindre tätt än flytande vatten. Det undantaget skyddar livet i vattnet om vintern."
         }
       ]
     }

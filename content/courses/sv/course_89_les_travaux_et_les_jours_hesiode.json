@@ -1,104 +1,104 @@
 {
   "id": "course_89_les_travaux_et_les_jours_hesiode",
-  "title": "Verk och dagar, Hesiod",
-  "subtitle": "800-talet f.Kr",
+  "title": "Verk och dagar, Hesiodos",
+  "subtitle": "700-talet f.Kr.",
   "subject": "litterature",
   "subcategory": "Ancient Greeks & Philosophers",
-  "description": "Hesiod talar till sin bror Perses: arbeta, var rättvis, akta dig för överflöd. Mellan myten om Pandora och jordbrukskalendern föds en arbetsetik.",
+  "description": "Hesiodos talar till sin bror Perses: arbeta, var rättvis, akta dig för övermått. Mellan myten om Pandora och jordbrukskalendern föds en etik för slitet.",
   "hero": {
     "image": "les_travaux_et_les_jours_hesiode",
     "ratio": "16:9",
-    "hook": "Innan visdomshandböcker föreläser en bonde-poet sin bror."
+    "hook": "Innan vishetsböckerna fanns predikade en bondepoet redan för sin bror."
   },
   "sections": [
     {
       "id": "course_89_les_travaux_et_les_jours_hesiode_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Runt **8:e århundradet f.Kr**, i [[Boeotia]], en region i centrala Grekland norr om Attika, skrev poeten **Hesiod** **Verk och dagar**. Detta är inte ett epos av krigarhjältar. Det är en dikt adresserad till hans bror **Persès**, anklagad för att ha lurat ett familjearv med hjälp av korrupta domare."
+          "text": "Runt **700-talet** f.Kr., i [[Boeotia]], en bygd i mellersta Grekland norr om Attika, skrev poeten **Hesiodos** **Verk och dagar**. Det är inget epos om krigare. Det är en dikt till brodern **Perses**, anklagad för att ha fifflat med arvet med hjälp av mutade domare."
         },
         {
           "type": "paragraph",
-          "text": "Hesiod blandar myt, moral och jordbruksråd. Att arbeta jorden, respektera rättvisan, undvika stolthet: vardagen blir poetiskt material. Med Homeros grundade hans texter en stor del av den grekiska mytologin och reflektionen."
+          "text": "Hesiodos blandar myt, moral och jordbruksråd. Bruka jorden, hålla rättvisa, undvika högmod: vardagen blir poesi. Tillsammans med Homeros lägger hans texter grunden för mycket av den grekiska mytologin och tanken."
         }
       ]
     },
     {
       "id": "course_89_les_travaux_et_les_jours_hesiode_p1",
-      "title": "En poet som talar från sitt område",
+      "title": "En poet som talar från åkern",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Till skillnad från **Homer**, en halvlegendarisk figur av den episka dikten, sätter Hesiod sig själv på scen. Han berättar om sin by, **Ashra**, en boeotisk ort, sin far som kom från Mindre Asien, en region i dagens Türkiye, sin rättegång mot Perses. **Musa**, inspirerande konstgudinna, valde honom, sa han. Men tonen förblir konkret: så, skörda, navigera i rätt tid."
+          "text": "Till skillnad från **Homeros**, den halvt sagolika gestalten i eposet, sätter Hesiodos sig själv i bilden. Han nämner byn **Askra** i Boiotien, fadern som kom från Mindre Asien i dagens Turkiet, och processen mot Perses. **Musan**, konstens inspirerande gudinna, valde honom, säger han. Men tonen är jordnära: så, skörda, segla i rätt tid."
         },
         {
           "type": "image",
           "asset": "hesiod_ancient_greek_poet_illustration",
           "ratio": "4:3",
-          "caption": "Hesiod: Grekisk poesi stiger också ner på fälten."
+          "caption": "Hesiodos: den grekiska poesin går också ut på fälten"
         },
         {
           "type": "paragraph",
-          "text": "Denna personliga röst förkunnar något modernt: författaren som engagerar sig, inte bara den anonyme barden. Hesiod talar från jorden, inte från palatset eller slagfältet. Han uppfinner didaktisk poesi, poesi som lär ut."
+          "text": "Den personliga rösten pekar framåt: en författare som tar plats, inte bara en namnlös bard. Hesiodos talar från jorden, inte från palatset eller slagfältet. Han uppfinner didaktisk poesi, poesi som lär ut."
         }
       ]
     },
     {
       "id": "course_89_les_travaux_et_les_jours_hesiode_p2",
-      "title": "Prometheus, Pandora och nedgången",
+      "title": "Prometheus, Pandora och förfallet",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "För att förklara livets hårdhet berättar Hesiod för **Prometheus**, titan som stjäl eld åt män, och **Pandora**, den första kvinnan vars burk släpper ut ondska till världen. Han lägger till [[fem åldrar av mänskligheten]]: guld, silver, brons, hjälte, järn. Vi lever i **Järnåldern**, den värsta, där rättvisan vacklar och arbetet är svårt."
+          "text": "För att förklara livets hårdhet berättar Hesiodos om **Prometheus**, titanen som stjäl elden åt människorna, och om **Pandora**, den första kvinnan, vars kruka släpper ut lidandet över världen. Han lägger till [[Människans fem åldrar]]: guld, silver, brons, hjältar, järn. Vi lever i **järnåldern**, den värsta, där rätten vacklar och arbetet sliter."
         },
         {
           "type": "funFact",
-          "text": "[[Hesiods teogoni]], en annan stor dikt av samma författare, berättar om gudarnas födelse från **Kaos**, det ursprungliga tomrummet. Verken kommer ner från himlen mot plogen."
+          "text": "[[Hesiods teogoni]], samma författares andra stora dikt, berättar hur gudarna föds ur **Kaos**, det ursprungliga tomrummet. Verk och dagar går åt andra hållet: från himlen ner till plogen."
         },
         {
           "type": "image",
           "asset": "prometheus_fire_myth_painting",
           "ratio": "4:3",
-          "caption": "Prometheus och eld: tekniska framsteg har ett pris, i Hesiod."
+          "caption": "Prometheus och elden: hos Hesiodos har teknikens framsteg ett pris"
         }
       ]
     },
     {
       "id": "course_89_les_travaux_et_les_jours_hesiode_p3",
-      "title": "Dikè mot hybris",
+      "title": "Dike mot hybris",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Diktens moraliska hjärta ställer sig mot *Dikè*, rättvisa, bara ordning, mot [[Hybris]], överdriften som driver människan att tro sig vara lika med gudarna. Orättvisa kungar hotas av **Zeus**, gudarnas kung. Den hederliga bonden har en chans. Hesiod lovar inte paradiset. Han lovar att ansträngning är bättre än bedrägeri."
+          "text": "Diktens moraliska hjärta ställer *Dike*, rättvisan och den rätta ordningen, mot [[Hybris]], det övermått som får människan att tro sig jämlik med gudarna. Orättvisa kungar hotas av **Zeus**, gudarnas kung. Den ärlige bonden har ändå en chans. Hesiodos lovar inget paradis. Han lovar att mödan väger tyngre än fusket."
         },
         {
           "type": "paragraph",
-          "text": "**arbetskalender** ger rytm till texten: när man ska plöja, när man ska skörda, när man ska vara försiktig med havet. Visdom är säsongsbetonad. Att känna till naturens rytmer innebär också att respektera en ordning som är större än ögonblickets aptit. Perses föreläses som en lat bror, inte som en kung."
+          "text": "**Arbetskalendern** ger dikten rytm: när man ska plöja, när man ska skörda vinet, när man ska akta sig för havet. Visheten följer årstiderna. Att känna naturens rytmer är också att respektera en ordning större än stundens aptit. Perses blir utskälld som en lat bror, inte som en kung."
         }
       ]
     },
     {
       "id": "course_89_les_travaux_et_les_jours_hesiode_p4",
-      "title": "Jorddikternas förfader",
+      "title": "Förebilden för jordens dikter",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Vergilius**, latinsk poet från 1000-talet f.Kr. BC, kommer att bli ihågkommen i [[georgiker]], en didaktisk dikt om jordbruk. Moralister, från [[Erasmus]], renässansens humanist, till moderna, läste i den en arbetsetik. Hesiod är inte mild. Det är klart: utan arbete och rättvisa ruttnar samhället."
+          "text": "**Vergilius**, den latinske poeten på 100-talet f.Kr., minns den i [[georgiker]], en lärodikt om jordbruk. Moralister från [[Erasmus]], renässanshumanisten, till dagens läsare ser där en etik för slitet. Hesiodos är inte mild. Han är tydlig: utan arbete och utan rättvisa ruttnar gemenskapen."
         },
         {
           "type": "paragraph",
-          "text": "Hesiod talar också om **bra Eris**, gudinnan för användbar rivalitet som driver grannen att arbeta bättre, mot **dåliga Eris**, hatets och prövningens gudinna. I en hård värld är denna distinktion viktig: emulering är inte krig. Dikten blir därmed en konst att leva tillsammans, förankrad i årstider och mått."
+          "text": "Hesiodos talar också om den **goda Eris**, gudinnan för nyttig tävlan som driver grannen att arbeta bättre, mot den **onda Eris**, gudinnan för hat och rättegångar. I en hård värld räknas skillnaden: tävlan är inte krig. Dikten blir ett sätt att leva tillsammans, rotat i årstiderna och i måttet."
         },
         {
           "type": "takeaway",
-          "text": "**Works och Days** uppfinner en poesi från det dagliga jordbrukslivet. Hesiod sade till sin bror och till oss: odla din åker, undvik överflöd, för järnåldern förlåter inte lättja eller orättvisa."
+          "text": "**Verk och dagar** uppfinner en poesi för jordbrukets vardag. Hesiodos säger till sin bror, och till dig: bruka din åker, fly övermåttet, för järnåldern förlåter varken lättja eller orätt."
         }
       ]
     }

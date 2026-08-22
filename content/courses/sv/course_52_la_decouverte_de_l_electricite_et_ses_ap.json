@@ -1,10 +1,10 @@
 {
   "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap",
-  "title": "Upptäckten av elektricitet",
+  "title": "Upptäckten av elektriciteten",
   "subtitle": "Från Franklin till Tesla",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "El uppfanns inte plötsligt. Det observerades först, sedan förstods det, sedan domesticerades det. Här är de viktigaste stegen.",
+  "description": "Elektriciteten uppfanns inte på en gång. Först observerades den, sedan förstods den, sedan tämjdes den. Här är de viktigaste stegen.",
   "hero": {
     "image": "la_decouverte_de_l_electricite",
     "ratio": "16:9",
@@ -13,48 +13,48 @@
   "sections": [
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Elektricitet finns i naturen: blixtar, elektriska fiskar, friktion. Det som förändrade världen var att lära sig att **producent**, **transport** och använda det."
+          "text": "Elektricitet finns i naturen: blixt, elektriska fiskar, gnidning. Det som ändrade världen var att lära sig **producera** den, **transportera** den och använda den."
         },
         {
           "type": "paragraph",
-          "text": "Den här historien sträcker sig över mer än två århundraden, med riskabla experiment och stora rivaliteter."
+          "text": "Den här historien sträcker sig över mer än två århundraden, med riskfyllda försök och stora rivaliteter."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p1",
-      "title": "Förstå blixten",
+      "title": "Att förstå blixten",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "På 1700-talet visade **Benjamin Franklin** att blixtar är ett elektriskt fenomen. Hans drakflygningsexperiment (ofta berättat på ett fiktivt sätt) syftar till att bevisa att himlen och friktionsmaskinen spelar med samma kraft."
+          "text": "På 1700-talet visar **Benjamin Franklin** att blixten är ett elektriskt fenomen. Hans försök med draken (ofta berättat mer romantiskt än det var) ska bevisa att himlen och gnidningsmaskinen leker med samma kraft."
         },
         {
           "type": "image",
           "asset": "benjamin_franklin_kite_lightning_experiment",
           "ratio": "4:3",
-          "caption": "Franklin kopplar samman blixt och elektricitet: en farlig men grundläggande idé."
+          "caption": "Franklin kopplar blixt och elektricitet: en farlig idé, men grundläggande."
         },
         {
           "type": "paragraph",
-          "text": "Vi uppfann också **åska**, en metallstav som ger blixten en säker väg till marken. Elektricitet lämnar mysterium för att komma in i tekniken."
+          "text": "Man uppfinner också **åskledaren**, en metallstång som ger blixten en säker väg till marken. Elektriciteten lämnar mysteriet och går in i ingenjörskonsten."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p2",
-      "title": "Faraday: producerar ström",
+      "title": "Faraday: att skapa ström",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "På 1800-talet visade **Michael Faraday** att en magnet som rörde sig nära en tråd kunde skapa en elektrisk ström. Detta är **induktion**. Utan denna idé, ingen dynamo, ingen generator, inget modernt kraftverk."
+          "text": "På 1800-talet visar **Michael Faraday** att en magnet i rörelse nära en tråd kan skapa elektrisk ström. Det är **induktion**. Utan den idén: ingen dynamo, ingen generator, inget modernt kraftverk."
         },
         {
           "type": "image",
@@ -64,7 +64,7 @@
         },
         {
           "type": "funFact",
-          "text": "Faraday kom från en ödmjuk bakgrund och började som bokbindare. Han lärde sig vetenskap genom att läsa vad han reliaba."
+          "text": "Faraday kom från enkla förhållanden och började som bokbindare. Han lärde sig vetenskapen genom att läsa det han band."
         }
       ]
     },
@@ -75,32 +75,32 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I slutet av 1800-talet drabbade två läger samman. **Thomas Edison** trycker på likström. **Nikola Tesla** (och företaget Westinghouse) försvarar växelström, som är lättare att transportera över långa avstånd."
+          "text": "I slutet av 1800-talet står två läger mot varandra. **Thomas Edison** driver likström. **Nikola Tesla** (och bolaget Westinghouse) försvarar växelström, som är lättare att transportera långa sträckor."
         },
         {
           "type": "image",
           "asset": "tesla_edison_electric_power_station",
           "ratio": "4:3",
-          "caption": "Växelström vinner kraft i städer."
+          "caption": "Växelströmmen vinner när städerna ska matas."
         },
         {
           "type": "paragraph",
-          "text": "Växelströmsvinster för stadsnät. Städerna lyser upp. Fabrikerna ändrar takt."
+          "text": "Växelströmmen segrar för stadsnäten. Städerna tänds. Fabrikerna byter rytm."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p4",
-      "title": "En uppkopplad värld",
+      "title": "En inkopplad värld",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Idag driver elektricitet sjukhus, tåg, internet, kylskåp. Utmaningen är inte längre bara att producera den, utan att göra det rent och tillförlitligt."
+          "text": "I dag driver elektriciteten sjukhus, tåg, internet, kylskåp. Utmaningen är inte längre bara att producera den, utan att göra det rent och tillförlitligt."
         },
         {
           "type": "takeaway",
-          "text": "Elektricitet förstods och sedan domesticerades: Franklin för blixten, Faraday för att producera ström, Tesla och växelström för att föra in den i hemmen. Vårt dagliga liv beror fortfarande på det."
+          "text": "Elektriciteten förstods och tämjdes: Franklin för blixten, Faraday för att skapa ström, Tesla och växelströmmen för att föra den in i hemmen. Vår vardag hänger fortfarande på den."
         }
       ]
     }

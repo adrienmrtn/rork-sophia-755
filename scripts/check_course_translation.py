@@ -623,9 +623,15 @@ def check_segment(
         report("space-before-punctuation", snippet(english, re.search(r"\s[,;:!?]", english).start()))
     if "  " in english:
         report("double-space", snippet(english, english.find("  ")))
-    match = MISSING_SPACE_RE.search(english)
-    if match:
+    # Glossary keys may contain a colon (Swedish EU:s, 13:e). Only prose
+    # is checked. Swedish genitive :s and ordinals :e / :a are legal.
+    for match in MISSING_SPACE_RE.finditer(prose_for_chars):
+        if lang == "sv" and match.group(0) == ":" and match.end() < len(prose_for_chars):
+            nxt = prose_for_chars[match.end()]
+            if nxt in "seaSEA":
+                continue
         report("missing-space-after-punctuation", snippet(english, match.start()))
+        break
     if english != english.strip():
         report("edge-whitespace", "leading or trailing whitespace")
 

@@ -1,106 +1,106 @@
 {
   "id": "course_72_pourquoi_dort_on",
   "title": "Varför sover vi?",
-  "subtitle": "Kropp & hjärna",
+  "subtitle": "Kropp och hjärna",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "Vi sover en tredjedel av våra liv. Det är inte bortkastad tid: sömnen rengör hjärnan, reparerar kroppen och graverar in minnen.",
+  "description": "Vi tillbringar en tredjedel av livet med att sova. Det är ingen förlorad tid: sömnen rensar hjärnan, lagar kroppen och graverar in minnena.",
   "hero": {
     "image": "pourquoi_dort_on",
     "ratio": "16:9",
-    "hook": "Att sova handlar inte om att stänga av: det är kroppens stora nattliga arbete."
+    "hook": "Att sova är inte att släckas: det är kroppens stora nattarbete."
   },
   "sections": [
     {
       "id": "course_72_pourquoi_dort_on_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Under ett liv på 75 år sover vi nära **25 år**. Länge trodde vi att sömnen bara var en paus. I verkligheten är det aktivt arbete, lika viktigt som att dricka eller äta."
+          "text": "På ett liv på 75 år sover man nästan **25 år**. Länge trodde man att sömnen bara var en paus. I själva verket är det ett aktivt arbete, lika livsviktigt som att dricka eller äta."
         },
         {
           "type": "paragraph",
-          "text": "Vetenskapen har ännu inte alla svar på \"varför\" vi sover. Men hon vet mycket väl vad som händer när vi inte sover, och vad natten i tysthet reparerar."
+          "text": "Vetenskapen har ännu inte alla svar på „varför” vi sover. Men den vet mycket väl vad som händer när vi inte sover, och vad natten lagar i tysthet."
         }
       ]
     },
     {
       "id": "course_72_pourquoi_dort_on_p1",
-      "title": "Vilken sömnbrist avslöjar",
+      "title": "Vad sömnbrist avslöjar",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I **1964** förblev den amerikanska studenten **Randy Gardner** **11 dagar** utan att sova. Hallucinationer, paranoia, sinneskollaps: bevis på att hjärnan inte kan överleva utan vila."
+          "text": "År **1964** håller den amerikanske studenten **Randy Gardner** sig vaken **11 dygn**. Hallucinationer, paranoia, ett sinne som rasar: beviset att hjärnan inte håller utan vila."
         },
         {
           "type": "image",
           "asset": "sleeping_person_bedroom_night",
           "ratio": "auto",
-          "caption": "Sömn, avgörande för återhämtning av hjärnan och kroppen."
+          "caption": "Sömnen, oumbärlig för hjärnans och kroppens återhämtning"
         },
         {
           "type": "paragraph",
-          "text": "Hos råttor dödar total frånvaro av sömn i **2 vid 3 vektor**, som svält. Hos människor leder en sällsynt genetisk sjukdom, **Fatal familjär sömnlöshet**, också till döden. På en daglig basis motsvarar 17 timmars vakenhet en alkoholhalt i blodet på **0,5 g/l**. Hjärnan tvingar sedan [[mikrosömn]], korta ofrivilliga pauser i medvetandet."
+          "text": "Hos råttan dödar total sömnbrist på **2 till 3 veckor**, som svält. Hos människan leder en sällsynt genetisk sjukdom, **dödlig familjär sömnlöshet**, också till döden. I vardagen motsvarar 17 timmars vakenhet en alkoholhalt på **0,5 g/l**. Hjärnan tvingar då fram [[Mikrosömnar]], korta ofrivilliga avbrott i medvetandet."
         },
         {
           "type": "funFact",
-          "text": "Efter sitt rekord sov Randy Gardner **14 timmar** rakt. Han vaknade och kunde fungera, men det tog veckor för hans sömn att återgå till ett normalt mönster."
+          "text": "Efter rekordet sov Randy Gardner **14 timmar** i sträck. Han vaknade kapabel att fungera, men sömnen tog veckor på sig att hitta en normal rytm."
         }
       ]
     },
     {
       "id": "course_72_pourquoi_dort_on_p2",
-      "title": "På natten städar hjärnan upp",
+      "title": "På natten städar hjärnan",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Under sömnen stannar inte hjärnan: den ändrar läge. **sjöhäst**, en nyckelminnesstruktur formad som en sjöhäst, \"spelar om\" dagen och skickar informationen till [[Neocortex]], det yttre lagret av hjärnan, för varaktig lagring. Resultat: vi lär oss ofta **20 till 40%** bättre efter en god natts sömn."
+          "text": "Under sömnen stannar hjärnan inte: den byter läge. **Hippocampus**, en nyckelstruktur för minnet formad som en sjöhäst, „spelar om” dagen och skickar informationen mot [[Neocortex]], hjärnans yttre lager, för hållbar lagring. Resultat: man lär ofta **20 till 40%** bättre efter en god natt."
         },
         {
           "type": "paragraph",
-          "text": "Djup sömn utlöser också **växthormon**, som reparerar muskler och vävnader, och stimulerar [[Cytokiner]], immunsystemets signalmolekyler. En annan stor upptäckt: [[glymfatiska systemet]], ett cerebralt dräneringsnätverk **tio gånger** mer aktivt på natten. Det tar bort avfall, inklusive proteiner kopplade till risken för Alzheimers."
+          "text": "Djupsömnen sätter också i gång **tillväxthormon**, som lagar muskler och vävnader, och stimulerar [[cytokiner]], signalsubstanser i immunförsvaret. En annan stor upptäckt: [[Glymfatiska systemet]], ett dräneringsnät i hjärnan som är **tio gånger** mer aktivt på natten. Det för ut avfall, bland annat proteiner kopplade till Alzheimerrisk."
         },
         {
           "type": "funFact",
-          "text": "Under djup sömn krymper hjärncellerna med ungefär **60%**. Utrymmet som sålunda skapas gör att rengöringsvätskan kan cirkulera bättre."
+          "text": "Under djupsömnen drar hjärnans celler ihop sig ungefär **60%**. Utrymmet som uppstår låter rengöringsvätskan cirkulera bättre."
         }
       ]
     },
     {
       "id": "course_72_pourquoi_dort_on_p3",
-      "title": "Vem sover hur mycket och hur",
+      "title": "Vem sover hur mycket, och hur",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Katter sover **12 klockan 16.00**: rovdjur säkra. Giraffer nöjer sig ibland med **30 minuter till 2 minuter**, korta tupplurar, redo att fly. Delfiner sover med **enda halvklot**, ena hjärnhalvan i taget, för att fortsätta komma upp för att andas."
+          "text": "Katter sover **12 till 16 timmar**: rovdjur i trygghet. Giraffer nöjer sig ibland med **30 minuter till 2 timmar**, i korta tupplurar, redo att fly. Delfiner sover med **en enda hemisfär**, en hjärnhalva i taget, för att fortsätta stiga och andas."
         },
         {
           "type": "paragraph",
-          "text": "Bebisar sover till **18.00**, med massor av [[paradoxal sömn]], drömfasen med snabba ögonrörelser. Denna fas hjälper [[Synaptogenes]], produktionen av kopplingar mellan neuroner."
+          "text": "Bebisar sover upp till **18 timmar**, med mycket [[REM-sömn]], drömfasen med snabba ögonrörelser. Den fasen hjälper [[synaptogenes]], tillverkningen av kopplingar mellan neuroner."
         }
       ]
     },
     {
       "id": "course_72_pourquoi_dort_on_p4",
-      "title": "Den interna klockan och blått ljus",
+      "title": "Den inre klockan och det blå ljuset",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Två krafter pressar oss i säng: trötthet som ackumuleras under dagen och [[Dygnsrytm och melatonin]], den interna klockan inställd på **24 timmar**. När ljuset dämpas frigör hjärnan **melatonin**, ett hormon som förbereder kroppen för sömn utan att påtvinga det."
+          "text": "Två krafter knuffar oss i säng: tröttheten som samlas på dagen, och [[Dygnsrytm och melatonin]], den inre klockan ställd på **24 timmar**. När ljuset sjunker släpper hjärnan **melatonin**, ett hormon som förbereder kroppen på sömn utan att tvinga den."
         },
         {
           "type": "paragraph",
-          "text": "Skärmar på kvällen lurar den här klockan och fördröjer att somna. Vi \"tar till\" inte riktigt en sömnskuld på helgen: tröttheten minskar, men inte alla skador. Regelbundna timmar, ett mörkt och svalt rum förblir de bästa allierade."
+          "text": "Skärmar på kvällen lurar den klockan och skjuter upp insomnandet. Man „tar inte igen” en sömnskuld på helgen på riktigt: tröttheten sjunker, inte all skada. Regelbundna tider, mörkt och svalt rum förblir de bästa allierade."
         },
         {
           "type": "takeaway",
-          "text": "Sömnen renar hjärnan, reparerar kroppen och stärker minnet. Total förlust dödar på några veckor: att sova är ingen lyx, det är viktigt underhåll."
+          "text": "Sömnen rensar hjärnan, lagar kroppen och befäster minnet. Total brist dödar på några veckor: att sova är ingen lyx, det är livsviktigt underhåll."
         }
       ]
     }

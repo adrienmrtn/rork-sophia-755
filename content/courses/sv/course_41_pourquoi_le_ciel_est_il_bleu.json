@@ -1,112 +1,112 @@
 {
   "id": "course_41_pourquoi_le_ciel_est_il_bleu",
   "title": "Varför är himlen blå?",
-  "subtitle": "Ljus & atmosfär",
+  "subtitle": "Ljus och atmosfär",
   "subject": "sciences",
   "subcategory": "Our daily life explained",
-  "description": "Att titta på den blå himlen är så vanligt att vi glömmer att fråga varför. Svaret ligger i solens ljus och luften vi passerar genom för att se den.",
+  "description": "Att se den blå himlen är så vardagligt att man glömmer att fråga varför. Svaret sitter i solljuset och i luften man tittar genom.",
   "hero": {
     "image": "pourquoi_le_ciel_est_il_bleu",
     "ratio": "16:9",
-    "hook": "Himlen är inte målad blå: det är ett magiskt trick av ljus och luft."
+    "hook": "Himlen är inte målad blå: det är ett trollslag av ljus och luft."
   },
   "sections": [
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Att titta upp mot den blå himlen är så vanligt att vi glömmer att fråga varför det är så. **atmosfär**, lagret av gas som omger jorden, har dock ingen egen färg. Denna färg kommer från ett mycket exakt möte mellan solens ljus och gasmolekylerna som svävar runt oss."
+          "text": "Att lyfta blicken mot den blå himlen är så vardagligt att man glömmer att fråga varför den är det. **Atmosfären**, gasskiktet runt jorden, har ändå ingen egen färg. Tonen kommer av ett mycket precist möte mellan solljuset och gasmolekylerna som svävar omkring oss."
         },
         {
           "type": "paragraph",
-          "text": "Att förstå detta blå betyder att förstå hur ljus färdas och **skingra**, det vill säga, det återvänder i alla riktningar istället för att gå rakt. Och trevlig överraskning: det är exakt samma fenomen som färgar himlen röd och orange vid solnedgången."
+          "text": "Att förstå det blå är att förstå hur ljuset färdas och **sprids**, alltså studsar åt alla håll i stället för att gå rakt fram. Och en glad överraskning: det är exakt samma fenomen som färgar himlen röd och orange vid solnedgång."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p1",
-      "title": "Vitt ljus döljer alla färger",
+      "title": "Det vita ljuset gömmer alla färger",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Solljus verkar vitt för oss, men det innehåller faktiskt alla regnbågens färger: det är [[synliga ljusspektrumet]]. Varje färg motsvarar en **våglängd**, storleken på dess ljusvåg. Blått och violett har korta vågor; rött har långa vågor."
+          "text": "Solljuset ser vitt ut, men det rymmer i själva verket alla regnbågens färger: det är [[Det synliga ljusspektrumet]]. Varje färg svarar mot en **våglängd**, storleken på dess ljusa „våg”. Blått och violett har korta vågor. Rött har långa."
         },
         {
           "type": "funFact",
-          "text": "På månen finns det ingen luft som sprider ljus. Resultat: där förblir himlen **svart vid fullt dagsljus**, även när solen skiner. Bevis på att himlens färg kommer från luften, inte solen."
+          "text": "På månen finns ingen luft som sprider ljuset. Resultat: där förblir himlen **svart mitt på dagen**, även när solen lyser. Beviset för att himlens färg kommer av luften, inte av solen."
         },
         {
           "type": "paragraph",
-          "text": "För mellan solen och våra ögon är luften inte tom: den är fylld med små **gasmolekyler, särskilt kväve, ungefär **Z78**%** av luften, och syre, ungefär **21%**. De är mycket mindre än ljusvågor. När en stråle träffar dem går den inte längre rakt: den skickas tillbaka åt alla håll. Denna lilla studs är utgångspunkten för himlens färg."
+          "text": "Mellan solen och våra ögon är luften inte tom: den är fylld av pyttesmå **gasmolekyler**, mest kväve, ungefär **78%** av luften, och syre, ungefär **21%**. De är mycket mindre än ljusvågorna. När en stråle träffar dem går den inte rakt fram längre: den studsar åt alla håll. Den lilla studsen är startpunkten för himlens färg."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p2",
-      "title": "Diffusion: varför blå vinner",
+      "title": "Spridningen: varför blått vinner",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I **1871** satte den brittiske fysikern **Lord Rayleigh** detta fenomen i en ekvation. Han upptäckte att ju kortare färg en färg har, desto mer reflekteras den i alla riktningar av luftmolekyler. Det är [[Rayleigh spridning]]."
+          "text": "År **1871** sätter den brittiske fysikern **Lord Rayleigh** fenomenet i ekvation. Han upptäcker att ju kortare våg en färg har, desto mer studsas den åt alla håll av luftens molekyler. Det kallas [[Rayleigh spridning]]."
         },
         {
           "type": "funFact",
-          "text": "Mars himmel är motsatsen till vår: dess järnrika damm gör den rosa under dagen, men dess solnedgångar är **blå**. Allt beror på vad luften innehåller."
+          "text": "Himlen på Mars gör tvärtom mot vår: dess järnrika damm gör den skär på dagen, men solnedgångarna där är **blå**. Allt beror på vad luften innehåller."
         },
         {
           "type": "image",
           "asset": "blue_sky_sunlight_scattering_atmosphere",
           "ratio": "4:3",
-          "caption": "Blått ljus sprids i alla riktningar med luften."
+          "caption": "Det blå ljuset sprids åt alla håll av luften"
         },
         {
           "type": "paragraph",
-          "text": "Konkret sprids blått ljus ungefär **9 gånger havet** än rött. Rött färdas genom luften nästan i en rak linje, medan blå rikoschetterar överallt. Det är därför, var du än tittar på himlen, så hamnar blått alltid i dina ögon: hela himlen verkar \"glöda\" med denna spridda blå."
+          "text": "Konkret sprids det blå ljuset ungefär **9 gånger mer** än det röda. Rött går genom luften nästan rakt, medan blått rikoschetterar överallt. Därför kommer det, var du än tittar på himlen, alltid blått till dina ögon: hela himlen tycks „lysa” av det utspridda blå."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p3",
-      "title": "Så varför inte lila?",
+      "title": "Varför inte violett då?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "En logisk fråga uppstår: om de kortaste vågorna är de mest spridda, borde violett vinna, eftersom dess våg är ännu kortare än den för blå. Himlen innehåller också mycket spridd lila."
+          "text": "En logisk fråga dyker upp: om de kortaste vågorna sprids mest borde violett vinna, för dess våg är ännu kortare än det blås. Himlen rymmer för övrigt mycket utspritt violett."
         },
         {
           "type": "paragraph",
-          "text": "Svaret finns inte i himlen, utan i våra ögon. Vi fångar färger med hjälp av sensorer som kallas **kottar**, celler i näthinnan som är känsliga för ljus. De är mycket känsligare för blått än lila. Dessutom sänder solen ut mer blått ljus än violett ljus. Vår hjärna gör då ett slags medelvärde och ser en vacker blå. Ett djur som är känsligt för andra färger skulle utan tvekan se en helt annan himmel."
+          "text": "Svaret sitter inte i himlen, utan i vårt öga. Vi fångar färgerna med sensorer som kallas **tappar**, celler i näthinnan som är känsliga för ljus. De är mycket känsligare för blått än för violett. Dessutom skickar solen mer blått ljus än violett. Hjärnan gör då ett slags medelvärde och ser ett fint blått. Ett djur känsligt för andra färger skulle nog se en helt annan himmel."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p4",
-      "title": "Och kvällsröda?",
+      "title": "Och kvällens rött?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Solnedgången följer samma regler, men ändrar en sak: avståndet. Vid middagstid passerar ljuset genom ett tunt lager luft. På kvällen, när solen står lågt, måste dess strålar passera genom **mycket havsluft** innan de når oss."
+          "text": "Solnedgången följer samma regler, men byter en sak: avståndet. Vid middag går ljuset genom ett tunt luftskikt. På kvällen, när solen står lågt, måste strålarna ta sig genom **mycket mer luft** innan de når oss."
         },
         {
           "type": "image",
           "asset": "sunset_red_orange_sky_atmosphere",
           "ratio": "16:9",
-          "caption": "På horisontnivå passerar ljus genom en mycket större lufttjocklek."
+          "caption": "Längs horisonten går ljuset genom ett långt tjockare luftlager"
         },
         {
           "type": "paragraph",
-          "text": "På denna långa resa skingras allt blått långt innan det når oss: det filtreras av luftens tjocklek. Endast de mest motståndskraftiga färgerna finns kvar, röda och orangea. Om det finns damm eller föroreningar kommer [[Mie diffusion]] in i bilden: partiklar större än luftmolekyler gör himlen mjölkaktig eller förstärker dessa orange nyanser."
+          "text": "På den långa vägen sprids allt blått långt innan det når oss: det filtreras bort av luftens tjocklek. Kvar blir bara de mest tåliga färgerna, rött och orange. Finns damm eller föroreningar träder [[Mie spridning]] in: partiklar större än luftens molekyler gör himlen mjölkig eller förstärker de orangea tonerna."
         },
         {
           "type": "takeaway",
-          "text": "Himlen är blå eftersom korta vågor är ungefär **Z9** gånger mer spridda av luft än långa vågor. Vid solnedgången passerar ljus genom så mycket luft att bara det röda fortfarande når oss."
+          "text": "Himlen är blå för att korta vågor sprids ungefär **9 gånger mer** av luften än långa. Vid solnedgång går ljuset genom så mycket luft att bara det röda når oss ännu."
         }
       ]
     }

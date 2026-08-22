@@ -1,102 +1,102 @@
 {
   "id": "course_76_pourquoi_les_feuilles_changent_elles_de",
-  "title": "Varför ändrar löv färg?",
-  "subtitle": "Höst & pigment",
+  "title": "Varför byter bladen färg?",
+  "subtitle": "Höst och pigment",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "Hösten uppfinner inte färger: den tar bort det gröna som maskerade dem. Bakom showen, en överlevnadsstrategi för att ta sig igenom vintern.",
+  "description": "Hösten uppfinner inte färgerna: den tar bort det gröna som dolde dem. Bakom skådespelet finns en överlevnadsstrategi för vintern.",
   "hero": {
     "image": "pourquoi_les_feuilles_changent_de_couleur",
     "ratio": "16:9",
-    "hook": "Höstlöven sminkar sig inte: de tar bort det gröna."
+    "hook": "Höstlöven sminkar sig inte: de klär av sig det gröna."
   },
   "sections": [
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Varje höst förändras skogarna från grönt till guld, till koppar, till lila. Detta är inte ett estetiskt infall. Det är en strategi: trädet återhämtar sig vad det kan innan det tappar sina löv för vintern."
+          "text": "Varje höst går skogarna från grönt till guld, koppar och purpur. Det är inget estetiskt nyckfullt. Det är en strategi: trädet tar tillbaka det det kan innan det släpper bladen för vintern."
         },
         {
           "type": "paragraph",
-          "text": "Varma färger dyker inte upp från ingenstans. Ofta var de redan där, gömda under greenen. Att förstå hösten innebär att förstå en stor biokemisk rengöring."
+          "text": "De varma färgerna dyker inte upp ur tomma intet. Ofta fanns de redan där, gömda under grönt. Att förstå hösten är att förstå en stor biokemisk städning."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p1",
-      "title": "Det gröna som döljer allt",
+      "title": "Det gröna som täcker allt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Från vår till sensommar är löven fulla av **klorofyll**, pigmentet som driver fotosyntesen. Det försämras under ljuset, men trädet ersätter det hela tiden. Så länge det dominerar förblir bladet grönt."
+          "text": "Från vår till slutet av sommaren är bladen fulla av **klorofyll**, pigmentet som driver fotosyntesen. Det bryts ner i ljuset, men trädet ersätter det utan uppehåll. Så länge det dominerar förblir bladet grönt."
         },
         {
           "type": "image",
           "asset": "leaf_color_change_autumn_chlorophyll",
           "ratio": "auto",
-          "caption": "På hösten försvinner klorofyllet och avslöjar färgerna på löven."
+          "caption": "På hösten försvinner klorofyllet och bladens färger syns"
         },
         {
           "type": "paragraph",
-          "text": "Men bladet innehåller även **karotenoider**, gula och orangea pigment (som i morötter). På sommaren är de där, men osynliga under det gröna. På hösten upphör klorofyllproduktionen. Det gröna bleknar, det gula och orange avslöjas."
+          "text": "Bladet innehåller också **karotenoider**, gula och orange pigment (som i moroten). På sommaren är de där, men osynliga under grönt. På hösten stannar produktionen av klorofyll. Grönt bleknar, gult och orange träder fram."
         },
         {
           "type": "funFact",
-          "text": "\"Klorofyll\" kommer från grekiskan *chloros* (grön) och *phyllon* (blad). \"Karotenoid\" delar roten till... moroten, där detta pigment först identifierades."
+          "text": "„Klorofyll” kommer av grekiskans *chloros* (grönt) och *phyllon* (blad). „Karotenoid” delar rot med... moroten, där pigmentet först identifierades."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p2",
-      "title": "Den verkliga triggern: nätterna som blir längre",
+      "title": "Den verkliga utlösaren: nätterna som blir längre",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Det är inte speciellt kylan som drar igång hösten, utan nätternas längd. Träden mäter det med hjälp av ljussensorer, [[fytokromer]]. När nätterna blir längre går en hormonsignal till varje blad."
+          "text": "Det är inte främst kylan som sätter i gång hösten, utan nattens längd. Träden mäter den med ljussensorer, [[fytokromer]]. När nätterna blir längre går en hormonell signal mot varje blad."
         },
         {
           "type": "paragraph",
-          "text": "Vid basen av bladskaftet bildas en [[separationszon]], en sorts plugg. Saven stiger mindre, sockerarterna kommer ner dåligt. Isolerat bryter bladet ner sin klorofyll snabbare. De mer stabila gulna ligger kvar i några veckor, sedan faller bladet."
+          "text": "Vid bladskaftets bas bildas en [[separationszon]], ett slags propp. Saven stiger sämre, sockren tar sig dåligt ner. Isolerat bryter bladet ner sitt klorofyll fortare. De mer stabila gulnyanserna stannar några veckor, sedan faller bladet."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p3",
-      "title": "Var kommer de klarröda rötterna ifrån?",
+      "title": "Var de lysande röda kommer ifrån",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Det gula var redan där. Rött och lila är ofta **gjord** i slutet av säsongen. Dessa är [[Antocyaniner]], som produceras när sockerarter förblir fångade i bladet."
+          "text": "Gult fanns redan. Rött och violett **tillverkas** ofta sent på säsongen. Det är [[Antocyaniner]], som bildas när socker blir instängt i bladet."
         },
         {
           "type": "paragraph",
-          "text": "Varför investera energi precis innan du slänger papperet? Förmodligen för att skydda **** under återvinning. Trädet återvinner **azine** och andra värdefulla näringsämnen. Utan klorofyll kan solen skada fortfarande aktiva vävnader. Antocyaniner fungerar som ett solfilter under den stora förflyttningen mot rötterna."
+          "text": "Varför lägga energi just innan bladet slängs? Troligen för att **skydda** det under återvinningen. Trädet tar tillbaka **kväve** och andra värdefulla näringsämnen. Utan klorofyll kan solen skada vävnader som fortfarande arbetar. Antocyaninerna fungerar som solfilter under den stora flytten mot rötterna."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p4",
-      "title": "Varför vissa höstar bränner mer",
+      "title": "Varför vissa höstar flammar mer",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "De vackraste röda föds ofta från soliga dagar och svala frostfria nätter. Mycket socker, omvandling till antocyaniner. En grå och regnig höst ger mattare nyanser. En tidig frost dödar löven innan showen."
+          "text": "De vackraste röda föds ofta av soliga dagar och svala nätter utan frost. Mycket socker, omvandling till antocyaniner. En grå och regnig höst ger mattare toner. En tidig frost dödar bladen före skådespelet."
         },
         {
           "type": "paragraph",
-          "text": "På slutet återstår bara [[tanniner]], bruna ämnen från skogsbotten. Vissa studier tror också att ljusa färger varnar [[bladlöss]]: passform träd, starka betar, bättre att gå någon annanstans."
+          "text": "Till slut återstår knappt mer än [[tanniner]], bruna ämnen i skogsmattan. Vissa studier tror också att de starka färgerna varnar [[bladlöss]]: trädet är i form, försvaret är starkt, bättre att gå någon annanstans."
         },
         {
           "type": "takeaway",
-          "text": "Hösten avslöjar de gula färgerna som redan finns när klorofyllet försvinner, och blir ibland rött för att skydda näringsåtervinningen innan löv faller."
+          "text": "Hösten visar de gula som redan fanns när klorofyllet försvinner, och tillverkar ibland rött för att skydda återvinningen av näring innan bladen faller."
         }
       ]
     }

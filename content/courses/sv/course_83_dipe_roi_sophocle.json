@@ -1,89 +1,89 @@
 {
   "id": "course_83_dipe_roi_sophocle",
-  "title": "Oidipus kungen, Sofokles",
-  "subtitle": "500-talet f.Kr",
+  "title": "Kung Oidipus, Sofokles",
+  "subtitle": "400-talet f.Kr.",
   "subject": "litterature",
   "subcategory": "Ancient Greeks & Philosophers",
-  "description": "Oidipus vill rädda Thebe från en pest. När han undersöker upptäcker han att det är han själv som är boven. Sofokles uppfinner tragedin där man vet är att förlora sig själv.",
+  "description": "Oidipus vill rädda Thebe från en pest. När han undersöker upptäcker han att han själv är den skyldige. Sofokles uppfinner tragedin där att veta är att gå under.",
   "hero": {
     "image": "oedipe_roi_sophocle",
     "ratio": "16:9",
-    "hook": "Han letar efter stadens mördare. Mördaren är han."
+    "hook": "Han söker stadens mördare. Mördaren är han."
   },
   "sections": [
     {
       "id": "course_83_dipe_roi_sophocle_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I Aten, på **5:e århundradet f.Kr**, skapade dramatikern **Sofokles** **Oidipus kung**. **Aristoteles**, grekisk filosof och student till Platon, skulle senare se det som modellen för perfekt tragedi i sin **Poetik**. Under en kväll på teatern leder en kung en utredning. Varje svar för honom närmare avgrunden."
+          "text": "I Aten, på **400-talet** f.Kr., skapar dramatikern **Sofokles** **Kung Oidipus**. **Aristoteles**, grekisk filosof och Platons elev, ska senare se den som mönstret för den fulländade tragedin i **Om diktkonsten**. På en teaterkväll leder en kung en undersökning. Varje svar för honom närmare avgrunden."
         },
         {
           "type": "paragraph",
-          "text": "Staden **Thebe** drabbas av en pest. **orakel**, svar från gudarna som levererats av Delfis helgedom, ber att få straffa mördaren av den tidigare kungen **Laius**. **Oidipus**, nuvarande kung av Thebe, lovar att hitta den. Han vet ännu inte att ödet redan har placerat honom i brottets centrum."
+          "text": "Staden **Thebe** är slagen av pest. **Oraklet**, gudarnas svar från helgedomen i Delfi, kräver att mördaren av den förre kungen **Laios** ska straffas. **Oidipus**, Thebes nuvarande kung, lovar att finna honom. Han vet ännu inte att ödet redan har ställt honom i brottets mitt."
         }
       ]
     },
     {
       "id": "course_83_dipe_roi_sophocle_p1",
-      "title": "Sofokles och grekisk tragedi",
+      "title": "Sofokles och den grekiska tragedin",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Före Sofokles utvecklades atensk tragedi redan med **Aischylos**, den första av de tre stora tragedierna. Sofokles förfinar genren: fler karaktärer, mer psykologisk spänning. Han introducerar **tritagonisten**, den tredje skådespelaren på scenen. På scenen följer **kör** och kommenterar handlingen. Men den verkliga drivkraften är att människan står inför det hon ignorerar."
+          "text": "Före Sofokles utvecklas den atenska tragedin redan med **Aischylos**, den förste av de tre stora tragöderna. Sofokles finslipar genren: fler gestalter, mer psykologisk spänning. Han inför **tritagonisten**, den tredje skådespelaren på scen. På scenen följer **kören** och kommenterar handlingen. Men den verkliga motorn är människan inför det hon inte vet."
         },
         {
           "type": "image",
           "asset": "oedipe_et_le_sphinx",
           "ratio": "4:3",
-          "caption": "Oidipus vänd mot sfinxen: att lösa gåtan går redan in i fällan."
+          "caption": "Oidipus inför sfinxen: att lösa gåtan är redan att gå in i fällan"
         },
         {
           "type": "paragraph",
-          "text": "Myten om Oidipus var känd före pjäsen. Vi minns **Sfinx**, ett monster med huvudet av en kvinna och kroppen av ett lejon. Hans **ainigma**, det grekiska ordet för \"gåta\", frågade: \"Vad är det för djur som går på fyra ben på morgonen, två vid middagstid, tre på kvällen?\" » Oidipus svarar: mannen. Han blir kung av Thebe. Sofokles förvånar inte bara av handlingen. Det överraskar genom hur hjälten upptäcker sanningen **offentligt**, steg för steg, utan att kunna sluta."
+          "text": "Myten om Oidipus var känd före pjäsen. Man minns **sfinxen**, ett monster med kvinnohuvud och lejonkropp. Dess **ainigma**, grekiska för „gåta”, frågade: „Vilket djur går på fyra ben på morgonen, två mitt på dagen, tre på kvällen?” Oidipus svarar: människan. Han blir kung i Thebe. Sofokles överraskar inte bara med handlingen. Han överraskar med hur hjälten upptäcker sanningen **offentligt**, steg för steg, utan att kunna stanna."
         }
       ]
     },
     {
       "id": "course_83_dipe_roi_sophocle_p2",
-      "title": "Utredningen som vänder sig mot utredaren",
+      "title": "Undersökningen som vänder sig mot undersökaren",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Oidipus ifrågasätter spåmannen [[Tiresias]], en blind profet från Thebe som ser det förflutna och framtiden. Sedan frågar han sin fru **Jocasta**, änka efter Laius. Ledtrådarna hopar sig. Mannen han dödade på en väg, kvinnan han gifte sig med, barnen han fick: allt sammanfaller med oraklet han trodde att han flydde genom att lämna Korinth, staden där han trodde att han växte upp."
+          "text": "Oidipus förhör siaaren [[Tiresias]], Thebes blinde profet som ser det förflutna och framtiden. Sedan förhör han sin hustru **Iokaste**, Laios änka. Spåren hopar sig. Mannen han dödade på en väg, kvinnan han gifte sig med, barnen han fick: allt stämmer med oraklet han trodde sig fly när han lämnade Korinth, staden där han trodde sig ha växt upp."
         },
         {
           "type": "funFact",
-          "text": "Aristoteles beundrar särskilt två effekter i denna pjäs: [[peripeti]], en brutal vändning av situationen, och [[anagnoris]], ögonblicket då Oidipus äntligen förstår vem han är."
+          "text": "Aristoteles beundrar särskilt två grepp i pjäsen: [[peripeti]], det brutala omslaget, och [[anagnoris]], ögonblicket när Oidipus äntligen förstår vem han är."
         },
         {
           "type": "paragraph",
-          "text": "Det här är **tragisk ironi**: ju mer Oidipus vill vara rättvis och klar, desto mer accelererar han sitt fall. Att veta detta gör dig inte lugn. Det brinner. Varje fråga som ställs i stadens namn för kungen närmare sitt eget fördömande. Sofokles visar att en briljant intelligens kan bli instrumentet för sin egen undergång."
+          "text": "Det är den **tragiska ironin**: ju mer Oidipus vill vara rättvis och klarsynt, desto fortare störtar han. Vetandet stillar inte. Det bränner. Varje fråga ställd i stadens namn för kungen närmare den egna domen. Sofokles visar att en lysande intelligens kan bli instrumentet för den egna undergången."
         }
       ]
     },
     {
       "id": "course_83_dipe_roi_sophocle_p3",
-      "title": "Se för tydligt och bli förblindad",
+      "title": "Se för klart, sedan blända sig",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "När sanningen kommer fram begår Jocasta självmord. Oidipus sticker ut ögonen. Kungen som såg efter staden blir en man som vägrar se på världen. Sofokles länkar samman [[Öde och fri vilja i grekisk tragedi]]: Oidipus agerade fritt vid varje steg, och ändå uppfyllde varje steg oraklet. Att fly ödet är ibland att uppfylla det."
+          "text": "När sanningen brister tar Iokaste sitt liv. Oidipus sticker ut sina ögon. Kungen som såg för staden blir en man som vägrar se världen. Sofokles binder [[Öde och fri vilja i grekisk tragedi]]: Oidipus har handlat fritt i varje steg, och ändå förverkligade varje steg oraklet. Att fly ödet är ibland att fullborda det."
         },
         {
           "type": "image",
           "asset": "oedipus_sphinx_riddle_painting",
           "ratio": "4:3",
-          "caption": "Sfinxens gåta: kunskapen som räddar Thebe förbereder katastrofen."
+          "caption": "Sfinxens gåta: vetandet som räddar Thebe förbereder katastrofen"
         },
         {
           "type": "paragraph",
-          "text": "Pesten, [[loimos]], var inte bara en sjukdom. Det var den religiösa föroreningen som drabbar en stad som straff för ett brott. Oidipus blir [[pharmakos]], syndabock utvisad för att rena staden. Han lämnar Thebe som en tiggare, bärande på det onda han inte visste att han hade begått."
+          "text": "Pesten, [[loimos]], var inte bara en sjukdom. Det var den religiösa smuts som slår en stad som straff för ett brott. Oidipus blir [[pharmakos]], syndabocken som jagas ut för att rena staden. Han lämnar Thebe som tiggare, bärande det onda han inte visste att han hade begått."
         }
       ]
     },
@@ -94,11 +94,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "På 1900-talet läste **Freud**, grundare av psykoanalysen, [[Oidipuskomplexet (Freud)]] in i myten. Detta psykoanalytiska koncept är mycket långt ifrån Sofokles reflektion över ödet. Bortom psykoanalysen förblir pjäsen modellen för utredningen där detektiven upptäcker att han är skyldig. Thriller, teater, bio: strukturen håller fortfarande."
+          "text": "På 1900-talet läser **Freud**, psykoanalysens grundare, i myten [[Oidipuskomplexet (Freud)]]. Det psykoanalytiska begreppet ligger mycket långt från Sofokles tanke om ödet. Bortom psykoanalysen förblir pjäsen mönstret för undersökningen där detektiven upptäcker att han är skyldig. Deckare, teater, film: strukturen håller fortfarande."
         },
         {
           "type": "takeaway",
-          "text": "**Oidipus kung** visar att du kan vilja allas bästa och förstöra ditt liv genom att söka sanningen. Hos Sofokles är det ingen seger att se klart. Det är ett test som lämnar staden räddad, men mannen trasig."
+          "text": "**Kung Oidipus** visar att man kan vilja allas bästa och förstöra sitt liv genom att söka sanningen. Hos Sofokles är att se klart ingen seger. Det är en prövning som lämnar staden räddad, men mannen krossad."
         }
       ]
     }

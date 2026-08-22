@@ -4,86 +4,86 @@
   "subtitle": "1857",
   "subject": "litterature",
   "subcategory": "French & European Classics",
-  "description": "Emma Bovary blandar ihop det verkliga livet med de sentimentala romaner hon har läst. Flaubert uppfann den moderna romanen och rättegången som gjorde den känd.",
+  "description": "Emma Bovary blandar ihop det verkliga livet med de sentimentala romaner hon läst. Flaubert uppfinner den moderna romanen, och rättegången som gör honom berömd.",
   "hero": {
     "image": "madame_bovary_flaubert",
     "ratio": "16:9",
-    "hook": "En kvinna som har tråkigt i provinserna. Sedan äktenskapsbrott, skulder och ett ord som kommer att bli en diagnos."
+    "hook": "En kvinna som långtråkas i provinsen. Sedan otrohet, skulder, och ett ord som blir en diagnos."
   },
   "sections": [
     {
       "id": "course_92_madame_bovary_flaubert_intro",
-      "title": "Introduktion",
+      "title": "Inledning",
       "free": true,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "I **1857** publicerade **Gustave Flaubert** **Madame Bovary**, en roman om en kvinna som är besviken på provinsen och sjunker in i äktenskapsbrott. Boken markerar ett avbrott i litteraturen. **[[realism]]** föds här: denna rörelse vill beskriva livet som det är, utan att idealisera det."
+          "text": "År **1857** ger **Gustave Flaubert** ut **Madame Bovary**, romanen om en kvinna som besvikits av provinsen och sjunker ner i otrohet. Boken markerar ett brott i litteraturen. Här föds **[[realism]]**: rörelsen vill skildra livet som det är, utan att försköna det."
         },
         {
           "type": "paragraph",
-          "text": "Flaubert kommer att ställas inför rätta för omoral. Hans rättegång kommer att göra romanen till en skandal, sedan en klassiker. Genom **Emma Bovary** ifrågasätter han fiktionens kraft i våra liv. Boken visar hur drömmar som drivs av läsning kan förstöra verkligheten."
+          "text": "Flaubert ställs inför rätta för osedlighet. Processen gör romanen till skandal, sedan till klassiker. Genom **Emma Bovary** prövar han fiktionernas makt över våra liv. Boken visar hur drömmar födda ur läsning kan slå sönder verkligheten."
         }
       ]
     },
     {
       "id": "course_92_madame_bovary_flaubert_p1",
-      "title": "Flaubert och det rätta ordets askes",
+      "title": "Flaubert och askesen kring det rätta ordet",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Gustave Flaubert** isolerar sig i **Croisset**, nära Rouen, och ägnar **fem år**, från 1851 till 1856, åt denna roman. Hans regel: det \"rätta ordet\", det exakta ordet, varken för mycket eller för lite, utan upprepning eller lyrisk betoning. Författaren måste bli osynlig: det är stilen som räknas, inte författaren som tar fram sig själv."
+          "text": "**Gustave Flaubert** stänger in sig i **Croisset**, nära Rouen, och ägnar **fem år**, från 1851 till 1856, åt romanen. Hans regel: det „rätta ordet”, det exakta ordet, varken för mycket eller för lite, utan upprepning och utan lyrisk svulst. Författaren ska bli osynlig: det är stilen som räknas, inte jaget som ställer sig i vägen."
         },
         {
           "type": "image",
           "asset": "gustave_flaubert_portrait_photograph",
           "ratio": "4:3",
-          "caption": "Flaubert: hantverkaren av ren stil."
+          "caption": "Flaubert: hantverkaren bakom den rena stilen"
         },
         {
           "type": "funFact",
-          "text": "\"Madame Bovary, det är jag\": Flaubert pratar inte om självbiografi, utan om total nedsänkning i sin hjältinnas smärta."
+          "text": "„Madame Bovary, det är jag”: Flaubert talar inte om självbiografi, utan om en total nedsänkning i hjältinnans smärta."
         },
         {
           "type": "paragraph",
-          "text": "Han hatar fula **romantisk**, ihålig romantik full av klichéer, samtidigt som han känner igen drömmarnas frestelse. Denna spänning underblåser Emmas drama. Flaubert skrev också kända brev där han berättade om sina arbetsnätter i varje mening."
+          "text": "Han avskyr den billiga **romantiken**, den ihåliga romantiken full av klichéer, samtidigt som han känner drömfrestelsen i sig själv. Den spänningen driver Emmas drama. Flaubert skriver också berömda brev där han berättar om nätterna över varje mening."
         }
       ]
     },
     {
       "id": "course_92_madame_bovary_flaubert_p2",
-      "title": "Emma: konflikten mellan dröm och verklighet",
+      "title": "Emma: krocken mellan dröm och verklighet",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Emma Rouault** växte upp i klostret med sentimentala romaner, berättelser fulla av upphöjda passioner. Hon gifter sig med **Charles Bovary**, en ärlig men tråkig lantläkare. Paret bosätter sig i **Yonville-l'Abbaye**, en liten stad i Normandie där ingenting liknar de hjältinnor Emma har läst."
+          "text": "**Emma Rouault** har vuxit upp i kloster med sentimentala romaner, berättelser fulla av uppskruvade passioner. Hon gifter sig med **Charles Bovary**, en ärlig men grå landsortsläkare. Paret slår sig ner i **Yonville-l'Abbaye**, en liten normandisk stad där ingenting liknar hjältinnorna Emma har läst om."
         },
         {
           "type": "image",
           "asset": "french_provincial_town_19th_century",
           "ratio": "4:3",
-          "caption": "Normandieprovinsen: miljön för tristess som driver Emma mot äktenskapsbrott."
+          "caption": "Den normandiska provinsen: tristessens kuliss som driver Emma mot otrohet"
         },
         {
           "type": "paragraph",
-          "text": "För att slippa tristess älskar Emma **Rodolphe Boulanger**, regionens herre, och sedan **Léon Dupuis**, notarieskrivare. Varje älskare visar sig vara lika banal som sin man. Köpmannen **Lheureux** tvingar henne i skuld: hennes kreditköp förstör henne. Romanen är inspirerad av en nyhet: affären med **Delphine Delamare**, som dog i **1848**."
+          "text": "För att fly ledan älskar Emma **Rodolphe Boulanger**, en godsherre i trakten, sedan **Léon Dupuis**, en notariebiträde. Varje älskare visar sig lika banal som maken. Krämaren **Lheureux** driver henne in i skulder: kreditköpen ruinerar henne. Romanen tar avstamp i ett tidningsfall: saken **Delphine Delamare**, död **1848**."
         }
       ]
     },
     {
       "id": "course_92_madame_bovary_flaubert_p3",
-      "title": "Gratis indirekt stil och provversion",
+      "title": "Fritt indirekt tal och rättegången",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Flaubert uppfinner **[[Fritt indirekt tal]]**. Denna teknik blandar berättarrösten med karaktärens tankar, utan citattecken eller \"hon trodde att\". Läsaren kommer åt Emmas tankar samtidigt som den håller ett ironiskt avstånd. Vi vet inte längre alltid om det är Emma eller berättaren som talar."
+          "text": "Flaubert uppfinner **[[Fritt indirekt tal]]**. Tekniken blandar berättarens röst med gestalternas tankar, utan citattecken och utan „hon tänkte att”. Läsarna kommer in i Emmas tankar och behåller ändå en ironisk distans. Man vet inte alltid om det är Emma eller berättaren som talar."
         },
         {
           "type": "paragraph",
-          "text": "I **1857** frikändes Flaubert från att ha \"förolämpat den allmänna moralen\". Emma begår självmord med **arsenik** som stulits från apoteket **[[Homais]]**, en figur av den triumferande och mediokra bourgeoisin. Charles dör av sorg, deras dotter **Bertha** går till jobbet i en fabrik och Homais får hederskorset. Ingen poetisk rättvisa: världen förblir orättvis."
+          "text": "År **1857** frikänns Flaubert från „brott mot den offentliga moralen”. Emma tar sitt liv med **arsenik** stulen hos apotekaren **[[Homais]]**, gestalten för den segrande och medelmåttiga bourgeoisien. Charles dör av sorg, dottern **Berthe** får gå i fabrik, och Homais får hederskorset. Ingen poetisk rättvisa: världen förblir orättvis."
         }
       ]
     },
@@ -94,15 +94,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Filosofen **Jules de Gaultier** myntade termen **[[Bovarysm]]**: det kroniska missnöjet hos någon som föredrar fantasi framför verklighet. Emma är inte bara en äktenskaplig kvinna. Hon är den första stora gestalten av modern frustration kopplat till konsumtion, begäret efter föremål, lyx och passioner."
+          "text": "Filosofen **Jules de Gaultier** präglar termen **[[Bovarysm]]**: den kroniska otillfredsställelsen hos den som föredrar fantasin framför det verkliga. Emma är inte bara en otrogen hustru. Hon är den första stora gestalten för den moderna frustrationen kopplad till konsumtion, till begäret efter ting, lyx och passioner."
         },
         {
           "type": "paragraph",
-          "text": "Flaubert höjer formen över ämnet: en bok om \"ingenting\", livet för en uttråkad kvinna, kan vara ett mästerverk om stilen är perfekt. Varje scen är konstruerad som en målning, med precisa detaljer som avslöjar Emmas inre tomhet. **Marcel Proust**, **Franz Kafka** och **Ny roman**, en 1900-talsrörelse som bryter mot narrativa konventioner, är skyldiga honom mycket. Rättegången 1857 förvandlade också romanen till ett ämne för offentlig debatt."
+          "text": "Flaubert lyfter formen över ämnet: en bok om „ingenting”, livet hos en kvinna som långtråkas, kan bli ett mästerverk om stilen är fulländad. Varje scen är byggd som en tavla, med precisa detaljer som avslöjar Emmas inre tomhet. **Marcel Proust**, **Franz Kafka** och den **nya romanen**, en strömning på 1900-talet som bryter berättandets konventioner, är skyldiga honom mycket. Processen 1857 gjorde också romanen till ett offentligt debattämne."
         },
         {
           "type": "takeaway",
-          "text": "**Madame Bovary**, publicerad i **1857**, revolutionerar romanen med **[[Fritt indirekt tal]]** och **[[Bovarysm]]**: att förväxla det verkliga livet med den fiktion vi läser kan leda till katastrofer."
+          "text": "**Madame Bovary**, utgiven **1857**, vänder romanen upp och ner med **[[Fritt indirekt tal]]** och **[[Bovarysm]]**: att blanda ihop det verkliga livet med fiktionerna man läser kan sluta i katastrof."
         }
       ]
     }
