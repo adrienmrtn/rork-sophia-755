@@ -1,14 +1,14 @@
 {
   "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales",
-  "title": "De ce sunt vitale albinele?",
-  "subtitle": "Micii lucrători ai mâncării noastre",
+  "title": "De ce sunt albinele vitale?",
+  "subtitle": "Micii lucrători ai alimentației noastre",
   "subject": "comprendreLeMonde",
   "subcategory": "Environment & the future",
-  "description": "Fără albine, **75% din alimentele culturale în lume** ar fi în pericol. Acești muncitori mici, discreti, ne susțin aprovizionarea cu alimente, iar populațiile lor se prăbușesc.",
+  "description": "Fără albine, **75% din culturile alimentare mondiale** ar fi în pericol. Micii lucrători discreți ăștia ne susțin alimentația, iar populațiile lor se prăbușesc.",
   "hero": {
     "image": "pourquoi_les_abeilles_sont_vitales",
     "ratio": "16:9",
-    "hook": "Ei nu fac doar miere: fără ele, o mare parte din mâncarea noastră ar dispărea."
+    "hook": "Nu fac doar miere: fără ele, o bună parte din alimentația noastră ar dispărea."
   },
   "sections": [
     {
@@ -18,103 +18,103 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Adesea ne gândim la albine doar pentru mierea lor. În realitate, oferă un serviciu mult mai mare: permit reproducerea majorității plantelor cu flori. Acest serviciu valorează sute de miliarde de dolari în fiecare an."
+          "text": "Ne gândim des la albine doar pentru mierea lor. În realitate, fac un serviciu mult mai mare: le permit majorității plantelor cu flori să se reproducă. Serviciul ăsta valorează sute de miliarde de dolari în fiecare an."
         },
         {
           "type": "paragraph",
-          "text": "În ultimele decenii, aceste insecte esențiale au dispărut cu o viteză îngrijorătoare. Înțelegerea rolului lor și a cauzelor declinului lor ne permite să înțelegem mai bine o problemă directă pentru viitoarea noastră aprovizionare cu alimente."
+          "text": "De câteva decenii, insectele esențiale astea dispar cu o viteză neliniștitoare. Să le înțelegi rolul și cauzele declinului te ajută să prinzi o miză directă pentru alimentația noastră viitoare."
         }
       ]
     },
     {
       "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p1",
-      "title": "Polenizarea, o meserie discretă, dar esențială",
+      "title": "Polenizarea, o muncă discretă dar esențială",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[polenizare]] este transportul polenului, celulele masculine ale unei flori, către organul feminin al altei flori din aceeași specie. Vântul sau apa pot face uneori acest lucru, dar majoritatea plantelor cu flori preferă transportul animalelor. Căutând nectar și polen pentru colonia lor, albinele asigură acest transport fără să știe."
+          "text": "Prin [[polenizare]] se transportă polenul, celulele masculine ale unei flori, până la organul feminin al altei flori din aceeași specie. Vântul sau apa pot uneori s-o facă, dar majoritatea plantelor cu flori preferă un transport animal. Căutând nectar și polen pentru colonie, albinele asigură transportul ăsta fără măcar să știe."
         },
         {
           "type": "image",
           "asset": "honey_bee_pollinating_flower_closeup",
           "ratio": "4:3",
-          "caption": "În timp ce caută hrană, albina transportă polen din floare în floare."
+          "caption": "Culegând, albina transportă polenul de la o floare la alta."
         },
         {
           "type": "funFact",
-          "text": "O albină poate vizita până la 700 de flori pe zi. Pentru a produce doar 500 de grame de miere, o întreagă colonie trebuie să zboare echivalentul a trei ori în jurul Pământului."
+          "text": "O albină poate vizita până la 700 de flori pe zi. Ca să producă doar 500 de grame de miere, o colonie întreagă trebuie să zboare echivalentul a trei ocoluri ale Pământului."
         },
         {
           "type": "paragraph",
-          "text": "Aproximativ **75% din alimentele culturale în lume** depind, cel puțin oarecum, de polenizatori precum albinele. Aceasta include cafea, cacao, mere, migdale sau avocado. Contribuția polenizării la economia globală este estimată între 235 de miliarde de dolari și 577 de miliarde de dolari pe an."
+          "text": "Cam **75% din culturile alimentare mondiale** depind, măcar puțin, de polenizatori ca albinele. Asta include cafeaua, cacao, merele, migdalele sau avocado. Contribuția polenizării la economia mondială e estimată între 235 și 577 de miliarde de dolari pe an."
         }
       ]
     },
     {
       "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p2",
-      "title": "De ce coloniile se prăbușesc",
+      "title": "De ce se prăbușesc coloniile",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Declinul albinelor nu are o singură cauză: mai multe amenințări acționează în același timp. Din anii 1990, unii apicultori au pierdut până la 30 până la 50% din coloniile lor în fiecare iarnă, în timp ce pierderea naturală ar trebui să fie de aproximativ 10%. Acest fenomen de disparitie brusca se numeste uneori [[tulburarea colapsului coloniei]]."
+          "text": "Declinul albinelor n-are o singură cauză: mai multe amenințări acționează în același timp. Din anii 1990, unii apicultori pierd până la 30 până la 50% din colonii în fiecare iarnă, pe când pierderea naturală ar trebui să se învârtă în jurul a 10%. Fenomenul ăsta de dispariție brutală e numit uneori [[tulburarea colapsului coloniei]]."
         },
         {
           "type": "image",
           "asset": "neonicotinoid_pesticide_spraying_field",
           "ratio": "4:3",
-          "caption": "Neonicotinoizii pătrund în întreaga plantă, inclusiv nectarul și polenul."
+          "caption": "Neonicotinoidele pătrund toată planta, inclusiv nectarul și polenul."
         },
         {
           "type": "paragraph",
-          "text": "[[Neonicotinoizi]], o familie de insecticide, sunt deosebit de responsabile. Ele pătrund în întreaga plantă, inclusiv nectarul și polenul acesteia. Chiar și la doze mici, ele dezorientează albinele, care nu își mai găsesc stupul, și le slăbesc sistemul imunitar."
+          "text": "[[Neonicotinoizi]], o familie de insecticide, sunt deosebit de în cauză. Impregnă toată planta, inclusiv nectarul și polenul. Chiar la doză mică, dezorientează albinele, care nu-și mai găsesc stupul, și le slăbesc sistemul imunitar."
         },
         {
           "type": "paragraph",
-          "text": "La acestea se adaugă un acarian parazit care transmite virusuri mortale, dispariția florilor sălbatice din cauza monoculturii și schimbările climatice, care schimbă perioadele de înflorire în raport cu trezirea insectelor."
+          "text": "Se adaugă un acarian parazit care transmite virusuri mortale, dispariția florilor sălbatice din cauza monoculturilor și schimbarea climatică, care decalează perioadele de înflorire față de trezirea insectelor."
         }
       ]
     },
     {
       "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p3",
-      "title": "Nu există doar o albină",
+      "title": "Nu există o singură albină",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Când spunem „albină”, aproape întotdeauna ne gândim la albina domestică, cea care trăiește în stupi și produce miere. Cu toate acestea, este doar o specie dintre mai mult de **20.000** din lume, inclusiv bondarii și osmia. Majoritatea sunt solitare și nu fac miere, dar joacă un rol ecologic la fel de important."
+          "text": "Când spui „albină”, te gândești aproape tot timpul la albina domestică, cea care trăiește în stup și produce miere. E totuși doar o specie printre peste **20.000** în lume, printre care bondarii sau osmiile. Majoritatea sunt solitare și nu fac miere, dar joacă un rol ecologic la fel de important."
         },
         {
           "type": "funFact",
-          "text": "Anumite flori, precum cele ale roșii, își eliberează polenul doar sub o anumită vibrație. Albinele nu știu cum să facă acest lucru, dar bondarii știu, datorită unei tehnici numite sonicare."
+          "text": "Unele flori, ca cele de tomată, nu-și eliberează polenul decât la o vibrație precisă. Albinele domestice nu știu s-o facă, dar bondarii da, printr-o tehnică numită sonicare."
         },
         {
           "type": "paragraph",
-          "text": "Aceste specii sălbatice sunt adesea specializate pe o anumită plantă, pe care uneori sunt singurele capabile să o polenizeze eficient. De asemenea, sunt mai vulnerabili decât albina domestică, deoarece nu beneficiază de nicio monitorizare sau îngrijire umană. Dispariția lor slăbește întregul [[lanțul trofic]], deoarece multe păsări depind de fructele și semințele rezultate din această polenizare."
+          "text": "Speciile sălbatice astea sunt des specializate pe o plantă precisă, pe care uneori doar ele o pot poleniza eficient. Sunt și mai vulnerabile decât albina domestică, pentru că n-au nicio urmărire și nicio îngrijire umană. Dispariția lor fragilizează [[lanțul trofic]], fiindcă multe păsări depind de fructele și semințele ieșite din polenizarea asta."
         }
       ]
     },
     {
       "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p4",
-      "title": "Ceea ce încă mai putem schimba",
+      "title": "Ce se mai poate schimba",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Reducerea utilizării pesticidelor rămâne cea mai eficientă pârghie. Uniunea Europeană a interzis trei neonicotinoizi majori în câmp deschis în 2018. În același timp, repunerea în loc a [[infrastructuri agroecologice]], precum gardurile vii sau benzile de flori, recreează zone de refugiu pentru insecte."
+          "text": "Să reduci folosirea pesticidelor rămâne pârghia cea mai eficientă. Uniunea Europeană a interzis în 2018 trei neonicotinoide majore la câmp deschis. În paralel, să pui la loc [[infrastructuri agroecologice]], ca garduri vii sau fâșii înflorate, recreează zone de refugiu pentru insecte."
         },
         {
           "type": "paragraph",
-          "text": "De asemenea, oricine poate acționa simplu: să planteze flori locale în grădina lor sau să-și lase gazonul puțin mai mult înainte de a tunde, oferă un adevărat refugiu pentru albine atunci când florile sunt rare."
+          "text": "Fiecare poate acționa și simplu: să plantezi flori locale în grădină sau să-ți lași gazonul un pic mai lung înainte să-l tunde oferi un refugiu adevărat albinelor când florile se răresc."
         },
         {
           "type": "paragraph",
-          "text": "Protejarea polenizatorilor nu este doar o chestiune de conservare a naturii: este o strategie de supraviețuire pe termen lung, deoarece munca lor susține în mod direct capacitatea plantelor de a ne hrăni."
+          "text": "Să protejezi polenizatorii nu e doar o chestiune de natură de păstrat: e o strategie de supraviețuire pe termen lung, fiindcă munca lor susține direct capacitatea plantelor de a ne hrăni."
         },
         {
           "type": "takeaway",
-          "text": "Albinele și 20.000 de specii de polenizatori sălbatici asigură reproducerea a 75% din culturile alimentare ale lumii. Declinul lor, cauzat de pesticide, paraziți și pierderea habitatului, amenință direct aprovizionarea noastră cu alimente."
+          "text": "Albinele și cele 20.000 de specii de polenizatori sălbatici asigură reproducerea a 75% din culturile alimentare mondiale. Declinul lor, cauzat de pesticide, de paraziți și de pierderea habitatului, amenință direct alimentația noastră."
         }
       ]
     }

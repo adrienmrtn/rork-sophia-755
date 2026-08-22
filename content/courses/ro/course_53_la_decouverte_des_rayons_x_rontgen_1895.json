@@ -1,10 +1,10 @@
 {
   "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895",
   "title": "Descoperirea razelor X",
-  "subtitle": "Roentgen, 1895",
+  "subtitle": "Röntgen, 1895",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "În 1895, Wilhelm Röntgen a descoperit radiația invizibilă capabilă să treacă prin materie. În câteva luni, medicina a cunoscut o revoluție.",
+  "description": "În 1895, Wilhelm Röntgen descoperă o radiație invizibilă capabilă să treacă prin materie. În câteva luni, medicina vede acolo o revoluție.",
   "hero": {
     "image": "la_decouverte_des_rayons_x_rontgen",
     "ratio": "16:9",
@@ -18,64 +18,64 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**8 noiembrie 1895**, la Würzburg (Germania), fizicianul **Wilhelm Röntgen** observă un ecran care strălucește... chiar dacă nu este afectat de lumina vizibilă. Ceva invizibil traversează camera."
+          "text": "Pe **8 noiembrie 1895**, la Würzburg (Germania), fizicianul **Wilhelm Röntgen** observă un ecran care strălucește... deși nu e atins de lumina vizibilă. Ceva invizibil traversează camera."
         },
         {
           "type": "paragraph",
-          "text": "El numește asta razele **X**, „X” însemnând „necunoscut”. În câteva săptămâni, a fotografiat oasele mâinii soției sale. S-a născut radiologia."
+          "text": "Numește asta **raze X**, „X” însemnând „necunoscut”. În câteva săptămâni, fotografiază oasele mâinii soției. Radiologia s-a născut."
         }
       ]
     },
     {
       "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p1",
-      "title": "Un accident de laborator",
+      "title": "O întâmplare de laborator",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Röntgen lucrează cu un tub în care electronii lovesc o țintă. A acoperit tubul cu carton negru. Cu toate acestea, un ecran fluorescent strălucește de la distanță. El înțelege că radiațiile invizibile ies din tub."
+          "text": "Röntgen lucrează cu un tub în care electronii lovesc o țintă. A acoperit tubul cu carton negru. Totuși, un ecran fluorescent strălucește la distanță. Înțelege că din tub iese o radiație invizibilă."
         },
         {
           "type": "image",
           "asset": "wilhelm_rontgen_x_ray_hand_1895",
           "ratio": "4:3",
-          "caption": "Imaginea faimoasă: oasele mâinii și verigheta."
+          "caption": "Imaginea celebră: oasele mâinii și verigheta."
         },
         {
           "type": "funFact",
-          "text": "Röntgen nu a depus niciodată un brevet pentru raze X. El dorea ca toată știința să le poată folosi în mod liber."
+          "text": "Röntgen n-a depus niciodată un brevet pe razele X. Voia ca toată știința să se poată folosi de ele liber."
         }
       ]
     },
     {
       "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p2",
-      "title": "Medicina prinde instrumentul",
+      "title": "Medicina pune mâna pe unealtă",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "early_x_ray_medical_radiograph",
           "ratio": "4:3",
-          "caption": "Foarte repede, medicii și armatele au folosit raze X."
+          "caption": "Foarte iute, medici și armate folosesc razele X."
         },
         {
           "type": "paragraph",
-          "text": "Înainte, ca să „vezi” o fractură sau un glonț, trebuia adesea să-l deschizi. Cu raze X, obținem o imagine a interiorului fără tăiere. Spitalele și armatele adoptă tehnica cu viteză vertiginoasă."
+          "text": "Înainte, ca să „vezi” o fractură sau un glonț, trebuia adesea să deschizi. Cu razele X, obții o imagine a interiorului fără să tai. Spitalele și armatele adoptă tehnica cu o viteză nebună."
         }
       ]
     },
     {
       "id": "course_53_la_decouverte_des_rayons_x_rontgen_1895_p3",
-      "title": "Un pericol de mult ignorat",
+      "title": "Un pericol ignorat multă vreme",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La început, ignorăm riscurile. Operatorii fac radiografii ore întregi. Arsuri, apoi apar cancere. Va dura timp pentru a înțelege că razele X sunt puternice... și periculoase."
+          "text": "La început, riscurile sunt ignorate. Operatori fac radiografii ore în șir. Apar arsuri, apoi cancere. Va trebui timp ca să se înțeleagă că razele X sunt puternice... și periculoase."
         },
         {
           "type": "paragraph",
-          "text": "Astăzi, protejăm pacienții și îngrijitorii: doze limitate, șorțuri de plumb, controale stricte."
+          "text": "Azi, protejăm pacienții și îngrijitorii: doze limitate, șorțuri de plumb, controale stricte."
         }
       ]
     },
@@ -86,11 +86,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Razele X au deschis calea pentru toate imaginile moderne: scanere, controale industriale și chiar studiul structurii cristalelor (utile ulterior pentru ADN)."
+          "text": "Razele X au deschis drumul întregii imagistici moderne: scanere, controale industriale, și chiar studiul structurii cristalelor (util mai târziu pentru ADN)."
         },
         {
           "type": "takeaway",
-          "text": "În **1895**, Röntgen a descoperit razele X, o radiație invizibilă care trece prin materie. Medicina capătă o nouă perspectivă... cu condiția ca riscurile să fie controlate."
+          "text": "În **1895**, Röntgen descoperă razele X, o radiație invizibilă care trece prin materie. Medicina câștigă o privire nouă... cu condiția să stăpânească riscurile."
         }
       ]
     }

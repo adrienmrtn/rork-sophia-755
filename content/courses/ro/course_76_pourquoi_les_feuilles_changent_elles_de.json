@@ -1,14 +1,14 @@
 {
   "id": "course_76_pourquoi_les_feuilles_changent_elles_de",
-  "title": "De ce frunzele își schimbă culoarea?",
+  "title": "De ce își schimbă frunzele culoarea?",
   "subtitle": "Toamnă și pigmenți",
   "subject": "sciences",
   "subcategory": "The Earth and the Universe",
-  "description": "Toamna nu inventează culori: îndepărtează verdele care le masca. În spatele spectacolului, o strategie de supraviețuire pentru a trece peste iarnă.",
+  "description": "Toamna nu inventează culorile: scoate verdele care le masca. În spatele spectacolului stă o strategie de supraviețuire ca să treacă iarna.",
   "hero": {
     "image": "pourquoi_les_feuilles_changent_de_couleur",
     "ratio": "16:9",
-    "hook": "Frunzele de toamnă nu se machiază: scot verdele."
+    "hook": "Frunzele de toamnă nu se machiază: se dezbracă de verde."
   },
   "sections": [
     {
@@ -18,85 +18,85 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "În fiecare toamnă, pădurile se schimbă de la verde la auriu, la cupru, la violet. Acesta nu este un capriciu estetic. Este o strategie: copacul își recuperează ce poate înainte de a-și lăsa frunzele pentru iarnă."
+          "text": "În fiecare toamnă, pădurile trec din verde în aur, cupru, purpură. Nu e un capriciu estetic. E o strategie: copacul recuperează ce poate înainte să-și lase frunzele pentru iarnă."
         },
         {
           "type": "paragraph",
-          "text": "Culorile calde nu apar de nicăieri. Adesea, erau deja acolo, ascunși sub verdeață. A înțelege toamna înseamnă a înțelege o curățare biochimică majoră."
+          "text": "Culorile calde nu apar din senin. Adesea erau deja acolo, ascunse sub verde. Să înțelegi toamna înseamnă să înțelegi o mare curățenie biochimică."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p1",
-      "title": "Verdele care ascunde totul",
+      "title": "Verdele care maschează tot",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Din primăvară până la sfârșitul verii, frunzele sunt pline de **clorofila**, pigmentul care alimentează fotosinteza. Se degradează sub lumină, dar copacul îl înlocuiește constant. Atâta timp cât domină, frunza rămâne verde."
+          "text": "Din primăvară până la sfârșitul verii, frunzele sunt pline de **clorofilă**, pigmentul care alimentează fotosinteza. Se degradează la lumină, dar copacul o înlocuiește fără pauză. Cât domină, frunza rămâne verde."
         },
         {
           "type": "image",
           "asset": "leaf_color_change_autumn_chlorophyll",
           "ratio": "auto",
-          "caption": "Toamna, clorofila dispare si dezvaluie culorile frunzelor."
+          "caption": "Toamna, clorofila dispare și lasă să se vadă culorile frunzelor"
         },
         {
           "type": "paragraph",
-          "text": "Cu toate acestea, frunza conține și **carotenoizi**, pigmenți galbeni și portocalii (ca în morcovi). Vara, sunt acolo, dar invizibili sub verde. În toamnă, producția de clorofilă se oprește. Verdele se estompează, galbenul și portocaliul se dezvăluie."
+          "text": "Frunza conține însă și **carotenoizi**, pigmenți galbeni și portocalii (ca în morcov). Vara sunt acolo, dar invizibili sub verde. Toamna, producția de clorofilă se oprește. Verdele se șterge, galbenul și portocaliul se arată."
         },
         {
           "type": "funFact",
-          "text": "„Clorofila” provine din grecescul *cloros* (verde) și *phyllon* (frunză). „Carotenoid” împarte rădăcina... morcovului, unde acest pigment a fost identificat pentru prima dată."
+          "text": "„Clorofilă” vine din grecescul *chloros* (verde) și *phyllon* (frunză). „Carotenoid” împarte rădăcina cu… morcovul, unde pigmentul ăsta a fost identificat întâi."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p2",
-      "title": "Adevăratul declanșator: nopțile care devin mai lungi",
+      "title": "Adevăratul declanșator: nopțile care se lungesc",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nu în special frigul dă startul toamnei, ci lungimea nopților. Copacii îl măsoară folosind senzori de lumină, [[fitocromi]]. Când nopțile devin mai lungi, la fiecare frunză este transmis un semnal hormonal."
+          "text": "Nu frigul pornește toamna în primul rând, ci durata nopților. Copacii o măsoară prin senzori de lumină, [[fitocromi]]. Când nopțile se lungesc, un semnal hormonal pleacă spre fiecare frunză."
         },
         {
           "type": "paragraph",
-          "text": "La baza pețiolului se formează o [[Zona de separare]], un fel de calotă. Seva crește mai puțin, zaharurile coboară prost. Izolată, frunza își degradează clorofila mai repede. Cu cât galbenele mai stabile rămân câteva săptămâni, apoi frunza cade."
+          "text": "La baza pețiolului se formează [[zona de separare]], un fel de dop. Seva urcă mai puțin, zaharurile coboară greu. Izolată, frunza își degradează clorofila mai repede. Galbenii mai stabili rămân câteva săptămâni, apoi frunza cade."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p3",
-      "title": "De unde vin roșul aprins?",
+      "title": "De unde vin roșurile aprinse",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Galbenul era deja acolo. Roșu și violet sunt adesea **făcut** la sfârșitul sezonului. Acestea sunt [[Antocianine]], produse atunci când zaharurile rămân prinse în frunză."
+          "text": "Galbenul era deja acolo. Roșul și violetul, ele, sunt adesea **fabricate** la sfârșitul sezonului. Sunt [[Antocianine]], produse când zaharuri rămân prinse în frunză."
         },
         {
           "type": "paragraph",
-          "text": "De ce să investești energie chiar înainte de a arunca hârtia? Probabil pentru a proteja **** în timpul reciclării. Arborele recuperat**azine** și alți nutrienți valoroși. Fără clorofilă, soarele poate deteriora țesuturile încă active. Antocianinele acționează ca un filtru solar în timpul mișcării mari către rădăcini."
+          "text": "De ce să investești energie tocmai înainte să arunci frunza? Probabil ca s-o **protejezi** în timpul reciclării. Copacul recuperează **azotul** și alți nutrienți prețioși. Fără clorofilă, soarele poate strica țesuturile încă active. Antocianinele lucrează ca un filtru solar cât ține mutarea mare spre rădăcini."
         }
       ]
     },
     {
       "id": "course_76_pourquoi_les_feuilles_changent_elles_de_p4",
-      "title": "De ce unele toamne ard mai mult",
+      "title": "De ce unele toamne ard mai tare",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Cele mai frumoase roșii se nasc adesea din zilele însorite și din nopțile răcoroase, fără îngheț. Mult zahăr, transformare în antociani. O toamnă cenușie și ploioasă dă nuanțe mai terne. Un îngheț timpuriu ucide frunzele înainte de spectacol."
+          "text": "Cele mai frumoase roșuri se nasc adesea din zile însorite și nopți răcoroase, fără ger. Mult zahăr, transformare în antocianine. O toamnă cenușie și ploioasă dă nuanțe mai fade. Un ger timpuriu omoară frunzele înainte de spectacol."
         },
         {
           "type": "paragraph",
-          "text": "La final, nu mai rămâne decât [[taninuri]], substanțe brune din podeaua pădurii. Unele studii mai cred că culorile strălucitoare avertizează [[afidele]]: copac în formă, apărări puternice, mai bine să mergi în altă parte."
+          "text": "La final, nu mai rămân aproape decât [[taninuri]], substanțe brune ale covorului de pădure. Unele studii cred și că culorile vii îi avertizează pe [[afidele]]: copac în formă, apărări tari, mai bine pleci în altă parte."
         },
         {
           "type": "takeaway",
-          "text": "Toamna dezvăluie galbenele deja prezente atunci când clorofila dispare și, uneori, face roșu pentru a proteja reciclarea nutrienților înainte de căderea frunzelor."
+          "text": "Toamna arată galbenii deja prezenți când clorofila dispare și fabrică uneori roșu ca să protejeze reciclarea nutrienților înainte de căderea frunzelor."
         }
       ]
     }

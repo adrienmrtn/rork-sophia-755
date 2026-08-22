@@ -1,14 +1,14 @@
 {
   "id": "course_226_l_ia_et_l_emploi",
-  "title": "AI și angajare",
-  "subtitle": "Amenințare sau nou val?",
+  "title": "IA și locurile de muncă",
+  "subtitle": "Amenințare sau val nou?",
   "subject": "comprendreLeMonde",
   "subcategory": "Environment & the future",
-  "description": "Fiecare revoluție tehnologică a creat temeri pentru angajare. Dar AI generativă afectează pentru prima dată profesiile **intelectual**, nu doar puterea fizică.",
+  "description": "Fiecare revoluție tehnologică a speriat pentru locurile de muncă. Dar IA generativă atinge pentru prima oară meseriile **intelectuale**, nu doar forța fizică.",
   "hero": {
     "image": "l_ia_et_l_emploi",
     "ratio": "16:9",
-    "hook": "Mașinile au înlocuit deja brațele. Vor înlocui acum creierul?"
+    "hook": "Mașinile au înlocuit deja brațe. Vor înlocui acum și creiere?"
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Va distruge inteligența artificială milioane de locuri de muncă sau va crea altele noi? Această întrebare a apărut cu fiecare progres tehnologic major din ultimele două secole."
+          "text": "Inteligența artificială va distruge milioane de locuri de muncă, sau va crea altele noi? Întrebarea revine la fiecare mare avans tehnologic de două secole."
         },
         {
           "type": "paragraph",
-          "text": "De data aceasta, noutatea este în altă parte: AI nu mai înlocuiește doar forța fizică, ci sarcinile pe care le credeam că sunt rezervate minții umane, cum ar fi scrierea unui text sau analiza unui fișier. Acest curs urmărește această frică străveche și explorează ceea ce se schimbă cu adevărat astăzi."
+          "text": "De data asta, noutatea e altundeva: IA nu mai înlocuiește doar forța fizică, ci sarcini pe care le credeam rezervate minții umane, ca să redactezi un text sau să analizezi un dosar. Cursul ăsta reia frica veche și cercetează ce se schimbă cu adevărat azi."
         }
       ]
     },
@@ -33,46 +33,46 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Teama că mașinile vor înlocui oamenii nu este nouă. La începutul secolului al XIX-lea, [[Ludiții (1811-1816)]], muncitori britanici din domeniul textilelor, au distrus războaiele mecanice care le amenințau abilitățile."
+          "text": "Teama că mașina îl înlocuiește pe om nu e nouă. La începutul secolului XIX, [[Ludiții (1811-1816)]], țesători britanici, au distrus războaie de țesut mecanice care le amenințau meșteșugul."
         },
         {
           "type": "image",
           "asset": "luddites_industrial_revolution_machine_breaking",
           "ratio": "4:3",
-          "caption": "În secolul al XIX-lea, ludiții au atacat mașinile care le amenințau profesia."
+          "caption": "În secolul XIX, ludiții loveau în mașinile care le amenințau meseria."
         },
         {
           "type": "paragraph",
-          "text": "Fiecare val tehnologic major a urmat aceeași logică: distruge anumite locuri de muncă, dar creează altele în altă parte. Trecerea de la agricultură la industrie a redus ponderea fermierilor de la 40% la 2% din populația activă într-un secol, fără a provoca șomaj permanent, deoarece acești muncitori s-au mutat în noi sectoare."
+          "text": "Fiecare mare val tehnologic a urmat aceeași logică: distruge unele locuri de muncă, dar creează altele în altă parte. Trecerea de la agricultură la industrie a făcut să cadă ponderea agricultorilor de la 40% la 2% din populația activă într-un secol, fără un șomaj permanent, pentru că lucrătorii ăștia s-au mutat spre sectoare noi."
         },
         {
           "type": "funFact",
-          "text": "Se spune că cuvântul „sabotaj” provine de la muncitorii francezi care și-au aruncat pantofii de lemn, saboții, în roți dințate ale mașinilor pentru a-i bloca, deși originea exactă a cuvântului rămâne dezbătută."
+          "text": "Cuvântul „sabotaj” ar veni de la muncitori francezi care-și aruncau pantofii de lemn, sabotii, în rotițele mașinilor ca să le blocheze, deși originea exactă a cuvântului rămâne dezbătută."
         }
       ]
     },
     {
       "id": "course_226_l_ia_et_l_emploi_p2",
-      "title": "O descoperire: AI atacă profesiile de cunoaștere",
+      "title": "O ruptură: IA atacă meseriile cunoașterii",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "[[Inteligența artificială generativă (AI)]] marchează o schimbare reală, deoarece nu mai respectă doar reguli fixate dinainte: creează conținut original. Calculul clasic a înlocuit sarcinile repetitive precum introducerea datelor. Inteligența artificială modernă poate scrie, analiza un contract, compune muzică sau chiar poate ajuta la stabilirea unui diagnostic medical."
+          "text": "[[Inteligența artificială generativă]] marchează o schimbare adevărată, pentru că nu mai urmează doar reguli fixate dinainte: creează conținuturi originale. Informatica clasică înlocuia sarcini repetitive ca introducerea de date. IA modernă, ea, știe să redacteze, să analizeze un contract, să compună muzică sau chiar să ajute la un diagnostic medical."
         },
         {
           "type": "image",
           "asset": "AI_generative_writing_artificial_intelligence",
           "ratio": "4:3",
-          "caption": "AI generativ abordează sarcini despre care se credea că sunt rezervate minții umane."
+          "caption": "IA generativă atacă sarcini pe care le credeam rezervate minții umane."
         },
         {
           "type": "paragraph",
-          "text": "Această versatilitate expune în special [[muncitori cu gulere albe]], profesii din sectorul serviciilor al căror instrument principal de lucru este analiza. Potrivit rapoartelor recente, avocații, editorii și analiștii financiari se numără printre profesiile cele mai expuse acestei schimbări."
+          "text": "Polivalența asta îi expune mai ales pe [[muncitori cu gulere albe]], meseriile din servicii al căror instrument principal e analiza. După rapoarte recente, juriștii, redactorii și analiștii financiari fac parte dintre meseriile cele mai expuse schimbării."
         },
         {
           "type": "funFact",
-          "text": "În 1950, Alan Turing a prezis că o mașină ar putea păcăli într-o zi un om simulându-i gândirea. De atunci, unele IA au fost creditate drept co-autori ai brevetelor științifice reale."
+          "text": "În 1950, Alan Turing prevedea că o mașină ar putea într-o zi să înșele un om simulându-i gândirea. Unele IA au fost de atunci creditate ca și coautoare ale unor brevete științifice adevărate."
         }
       ]
     },
@@ -83,38 +83,38 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "O viziune mai optimistă vede AI mai degrabă un asistent decât un înlocuitor. Prin automatizarea celor mai puțin interesante sarcini, cum ar fi cercetarea documentară sau rezumatele, ar lăsa profesioniștilor mai mult timp pentru aspectul uman, etic sau strategic al muncii lor."
+          "text": "O viziune mai optimistă vede IA ca un asistent, nu ca un înlocuitor. Automatizând sarcinile cele mai puțin interesante, ca cercetările documentare sau rezumatele, le-ar lăsa profesioniștilor mai mult timp pentru partea umană, etică sau strategică a muncii."
         },
         {
           "type": "paragraph",
-          "text": "Apar deja noi profesii, precum promptul [[Inginer prompt]], care știe să formuleze instrucțiuni precise pentru a obține tot ce este mai bun dintr-o IA. Un medic ajutat de IA nu dispare: poate urmări mai mulți pacienți cu mai multă precizie."
+          "text": "Meserii noi apar deja, ca [[Inginer prompt]], care știe să formuleze instrucțiuni precise ca să obțină ce e mai bun de la o IA. Un medic ajutat de o IA nu dispare: poate urmări mai mulți pacienți, cu mai multă precizie."
         },
         {
           "type": "paragraph",
-          "text": "Punctul de îngrijorare rămâne viteza schimbării. Revoluțiile industriale anterioare au durat decenii, permițând timpului să se adapteze. Industria AI se desfășoară pe parcursul câțiva ani, ceea ce poate crea un deficit de competențe care este dificil de completat pentru mulți lucrători."
+          "text": "Punctul de neliniște rămâne viteza schimbării. Revoluțiile industriale dinainte se întindeau pe decenii, lăsând timp de adaptare. Cea a IA se desfășoară în câțiva ani, ceea ce poate crea un decalaj de competențe greu de acoperit pentru mulți lucrători."
         }
       ]
     },
     {
       "id": "course_226_l_ia_et_l_emploi_p4",
-      "title": "Regândirea muncii și a valorii acesteia",
+      "title": "Să regândești munca și valoarea ei",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Rezultatul acestei schimbări va depinde mai ales de alegerile politice care o însoțesc. Formarea continuă devine esențială pentru a ajuta lucrătorii să-și dezvolte noi competențe."
+          "text": "Ieșirea din schimbarea asta va depinde mai ales de alegerile politice care o vor însoți. Formarea continuă devine indispensabilă ca să-i ajuți pe lucrători să evolueze spre competențe noi."
         },
         {
           "type": "paragraph",
-          "text": "Dezbaterea privind redistribuirea bogăției create de mașini reapare și ea. Dacă AI face posibilă producerea mai mult cu mai puțini lucrători, cum ne putem finanța sistemele sociale? În acest context, ideea unui [[Venit de bază universal (UBI)]] câștigă teren, nu ca utopie, ci ca o adevărată plasă de siguranță."
+          "text": "Dezbaterea despre redistribuirea bogăției create de mașini iese din nou la suprafață. Dacă IA permite să produci mai mult cu mai puțini lucrători, cum finanțezi sistemele sociale? În contextul ăsta, ideea unui [[Venit de bază universal (UBI)]] câștigă teren, nu ca o utopie, ci ca o plasă adevărată de siguranță."
         },
         {
           "type": "paragraph",
-          "text": "Unii propun și o taxă pe utilizarea inteligenței artificiale pentru a compensa reducerea contribuțiilor legate de angajare. Inteligența artificială ne împinge în cele din urmă să regândim locul de muncă însuși în viața noastră."
+          "text": "Unii propun și o taxă pe folosirea inteligenței artificiale, ca să compenseze scăderea contribuțiilor legate de locul de muncă. IA ne împinge în cele din urmă să regândim locul muncii înseși în viețile noastre."
         },
         {
           "type": "takeaway",
-          "text": "Revoluțiile industriale anterioare au distrus locuri de muncă în timp ce au creat altele în altă parte. Inteligența artificială generativă este prima care amenință sarcinile cognitive și creative în același timp, făcând adaptarea mai urgentă ca niciodată."
+          "text": "Revoluțiile industriale dinainte au distrus locuri de muncă creând altele în altă parte. IA generativă e prima care amenință în același timp sarcinile cognitive și pe cele creative, ceea ce face adaptarea mai urgentă ca niciodată."
         }
       ]
     }

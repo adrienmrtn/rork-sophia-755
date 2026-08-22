@@ -1,14 +1,14 @@
 {
   "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap",
-  "title": "Descoperirea energiei electrice",
+  "title": "Descoperirea electricității",
   "subtitle": "De la Franklin la Tesla",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "Electricitatea nu a fost inventată brusc. A fost mai întâi observat, apoi înțeles, apoi domesticit. Iată pașii cheie.",
+  "description": "Electricitatea n-a fost inventată dintr-o lovitură. Mai întâi a fost observată, apoi înțeleasă, apoi îmblânzită. Iată etapele-cheie.",
   "hero": {
     "image": "la_decouverte_de_l_electricite",
     "ratio": "16:9",
-    "hook": "De la fulger la smartphone: două secole pentru a îmblânzi invizibilul."
+    "hook": "De la fulger la smartphone: două secole ca să îmblânzim invizibilul."
   },
   "sections": [
     {
@@ -18,43 +18,43 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Electricitatea există în natură: fulger, pește electric, frecare. Ceea ce a schimbat lumea a fost să înveți să **legume şi fructe**, **transport** și să-l folosești."
+          "text": "Electricitatea există în natură: fulger, pești electrici, frecări. Ce a schimbat lumea e să învățăm s-o **producem**, s-o **transportăm** și să ne folosim de ea."
         },
         {
           "type": "paragraph",
-          "text": "Această poveste se întinde pe mai mult de două secole, cu experimente riscante și rivalități mari."
+          "text": "Povestea asta se întinde pe mai bine de două secole, cu experiențe riscante și rivalități mari."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p1",
-      "title": "Înțelegerea fulgerului",
+      "title": "A înțelege fulgerul",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "În secolul al XVIII-lea, **Benjamin Franklin** a arătat că fulgerul este un fenomen electric. Experimentul său de zbor de zmeu (deseori spus într-o manieră fictivă) își propune să demonstreze că cerul și mașina de frecare joacă cu aceeași forță."
+          "text": "În secolul XVIII, **Benjamin Franklin** arată că fulgerul e un fenomen electric. Experiența lui cu zmeul (adesea povestită romantic) vrea să dovedească faptul că cerul și mașina de frecare se joacă cu aceeași forță."
         },
         {
           "type": "image",
           "asset": "benjamin_franklin_kite_lightning_experiment",
           "ratio": "4:3",
-          "caption": "Franklin leagă fulgerul și electricitatea: o idee periculoasă, dar fundamentală."
+          "caption": "Franklin leagă fulgerul de electricitate: o idee periculoasă, dar fondatoare."
         },
         {
           "type": "paragraph",
-          "text": "De asemenea, am inventat **tunet**, o tijă metalică care oferă fulgerului o cale sigură către sol. Electricitatea lasă mister pentru a intra în inginerie."
+          "text": "Se inventează și **paratrăsnetul**, o tijă metalică ce oferă fulgerului un drum sigur spre sol. Electricitatea iese din mister ca să intre în inginerie."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p2",
-      "title": "Faraday: producerea curentului",
+      "title": "Faraday: a produce curent",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "În secolul al XIX-lea, **Michael Faraday** a arătat că un magnet care se mișcă în apropierea unui fir poate crea un curent electric. Acesta este **inducţie**. Fără această idee, nici dinam, nici alternator, nici centrală modernă."
+          "text": "În secolul XIX, **Michael Faraday** arată că un magnet în mișcare lângă un fir poate crea un curent electric. Asta e **inducția**. Fără ideea asta, nici dinamo, nici alternator, nici centrală electrică modernă."
         },
         {
           "type": "image",
@@ -64,28 +64,28 @@
         },
         {
           "type": "funFact",
-          "text": "Faraday provenea dintr-un mediu umil și a început ca legător de cărți. A învățat știința citind ceea ce credea."
+          "text": "Faraday venea dintr-un mediu modest și a început ca legător de cărți. A învățat știința citind ce lega."
         }
       ]
     },
     {
       "id": "course_52_la_decouverte_de_l_electricite_et_ses_ap_p3",
-      "title": "Edison versus Tesla",
+      "title": "Edison împotriva lui Tesla",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La sfârșitul secolului al XIX-lea, două tabere s-au ciocnit. **Thomas Edison** împinge curent continuu. **Nikola Tesla** (și compania Westinghouse) apără curentul alternativ, care este mai ușor de transportat pe distanțe lungi."
+          "text": "La sfârșitul secolului XIX, două tabere se înfruntă. **Thomas Edison** împinge curentul continuu. **Nikola Tesla** (și societatea Westinghouse) apără curentul alternativ, mai ușor de transportat pe distanțe lungi."
         },
         {
           "type": "image",
           "asset": "tesla_edison_electric_power_station",
           "ratio": "4:3",
-          "caption": "Curentul alternativ câștigă putere în orașe."
+          "caption": "Curentul alternativ câștigă ca să alimenteze orașele."
         },
         {
           "type": "paragraph",
-          "text": "Câștigări în curent alternativ pentru rețelele urbane. Orașele se luminează. Fabricile își schimbă ritmul."
+          "text": "Curentul alternativ învinge pentru rețelele urbane. Orașele se aprind. Fabricile își schimbă ritmul."
         }
       ]
     },
@@ -96,11 +96,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Astăzi, electricitatea alimentează spitalele, trenurile, internetul, frigiderele. Provocarea nu mai este doar să o produci, ci să o faci în mod curat și fiabil."
+          "text": "Azi, electricitatea face să meargă spitale, trenuri, internet, frigidere. Provocarea nu e doar s-o produci, ci s-o faci curat și de încredere."
         },
         {
           "type": "takeaway",
-          "text": "Electricitatea a fost înțeleasă și apoi domesticită: Franklin pentru fulger, Faraday pentru a produce curent, Tesla și curent alternativ pentru a o aduce în case. Viața noastră de zi cu zi depinde încă de asta."
+          "text": "Electricitatea a fost înțeleasă, apoi îmblânzită: Franklin pentru fulger, Faraday ca să producă curentul, Tesla și curentul alternativ ca să-l aducă în case. Cotidianul nostru încă depinde de ea."
         }
       ]
     }

@@ -1,14 +1,14 @@
 {
   "id": "course_230_la_liberte_de_la_presse_dans_le_monde",
-  "title": "Libertatea presei în întreaga lume",
-  "subtitle": "O lege sub presiune",
+  "title": "Libertatea presei în lume",
+  "subtitle": "Un drept sub presiune",
   "subject": "comprendreLeMonde",
   "subcategory": "Environment & the future",
-  "description": "Mai puțin de **10% din populația ușoară** trăiește într-o țară în care presa este cu adevărat liberă. Între cenzura de stat și presiunea economică, acest drept esențial este în declin aproape peste tot.",
+  "description": "Mai puțin de **10% din populația mondială** trăiește într-o țară unde presa e cu adevărat liberă. Între cenzura de stat și presiunile economice, dreptul esențial ăsta dă înapoi aproape pretutindeni.",
   "hero": {
     "image": "la_liberte_de_la_presse_dans_le_monde",
     "ratio": "16:9",
-    "hook": "Informarea costă uneori libertatea, sau chiar viața: o călătorie către inima unui drept fragil."
+    "hook": "Să informezi costă uneori libertatea, sau chiar viața: o călătorie în inima unui drept fragil."
   },
   "sections": [
     {
@@ -18,55 +18,55 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**libertatea presei** este unul dintre cei mai buni indicatori ai sănătății democratice a unei țări. Nu se limitează la dreptul de a publica: include capacitatea cetățenilor de a accesa informații verificate, independent de competențele existente. În întreaga lume, acest drept se află sub dublă presiune: represiune directă în regimurile autoritare și o slăbire mai discretă a democrațiilor înseși."
+          "text": "**Libertatea presei** e unul dintre cei mai buni indicatori ai sănătății democratice a unei țări. Nu se limitează la dreptul de a publica: include capacitatea cetățenilor de a ajunge la o informație verificată și independentă de puterile aflate la conducere. În toată lumea, dreptul ăsta suferă o dublă presiune: o represiune directă în regimurile autoritare și o slăbire mai discretă chiar în democrații."
         }
       ]
     },
     {
       "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p1",
-      "title": "O profesie din ce în ce mai periculoasă",
+      "title": "O meserie tot mai periculoasă",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "În fiecare an, organizația [[Reporteri fără frontiere (RSF)]] publică un raport de referință despre obstacolele din calea profesiei de jurnalism în lume."
+          "text": "În fiecare an, organizația [[Reporteri fără frontiere (RSF)]] publică un raport de referință despre obstacolele din meseria de jurnalist în lume."
         },
         {
           "type": "image",
           "asset": "press_freedom_world_map_RSF_index",
           "ratio": "16:9",
-          "caption": "Mai puțin de 10% din populația lumii trăiește într-o țară în care presa este cu adevărat liberă."
+          "caption": "Mai puțin de 10% din populația mondială trăiește într-o țară unde presa e cu adevărat liberă."
         },
         {
           "type": "paragraph",
-          "text": "Datele din 2024 sunt alarmante: mai puțin de **10%** din populația lumii trăiește într-o zonă în care presa lucrează fără piedici. În timp ce țări precum Norvegia mențin standarde înalte, regiuni mari precum China, Rusia și Iran consideră jurnalismul de investigație o formă de trădare."
+          "text": "Datele din 2024 sunt alarmante: mai puțin de **10%** din populația mondială trăiește într-o zonă unde presa lucrează fără piedici. Dacă țări ca Norvegia păstrează standarde înalte, regiuni vaste ca China, Rusia sau Iran consideră jurnalismul de anchetă o formă de trădare."
         },
         {
           "type": "funFact",
-          "text": "În Turkmenistan, statul controlează informațiile atât de strict încât a interzis cuvântul „coronavirus” în mass-media la începutul pandemiei din 2020."
+          "text": "În Turkmenistan, statul controlează informația atât de strict încât a interzis cuvântul „coronavirus” în media la începutul pandemiei din 2020."
         },
         {
           "type": "paragraph",
-          "text": "În 2023, cel puțin 79 de jurnaliști și-au pierdut viața în exercitarea profesiei lor, deseori vizați să aducă la tăcere investigații jenante. Aproape 600 de jurnalişti sunt închişi în fiecare an în întreaga lume."
+          "text": "În 2023, cel puțin 79 de jurnaliști și-au pierdut viața în exercitarea meseriei, adesea vizați ca să tacă anchete jenante. Aproape 600 de jurnaliști sunt închiși în fiecare an în lume."
         }
       ]
     },
     {
       "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p2",
-      "title": "Democrațiile nu sunt imune",
+      "title": "Democrațiile nu sunt la adăpost",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Contrar credinței populare, libertatea presei nu este garantată pentru totdeauna în țările occidentale. Acolo a suferit transformări mai discrete, legate de [[concentrarea mass-media]] și de influența financiară a câtorva grupuri mari."
+          "text": "Contrar unei idei primite, libertatea presei nu e câștigată pentru totdeauna în țările occidentale. Suferă acolo transformări mai discrete, legate de [[concentrarea mass-media]] și de influența financiară a câtorva grupuri mari."
         },
         {
           "type": "paragraph",
-          "text": "În Ungaria, [[Viktor Orbán]] a implementat o strategie eficientă: în loc să interzică mass-media de opoziție, a favorizat preluarea acestora de către cei apropiați guvernului, transformând treptat peisajul media într-o cameră oficială de ecou."
+          "text": "În Ungaria, [[Viktor Orbán]] a pus la punct o strategie eficientă: în loc să interzică media de opoziție, a favorizat cumpărarea lor de apropiați ai guvernului, transformând încet peisajul mediatic într-o cameră de ecou oficială."
         },
         {
           "type": "paragraph",
-          "text": "În Franța, dezbaterea vizează în principal concentrarea mass-media în mâinile câtorva grupuri mari, ceea ce ridică temeri de autocenzură din partea redacției. În alte părți, procedurile legale abuzive, numite [[SLAPP]], sunt în creștere pentru a intimida vocile critice."
+          "text": "În Franța, dezbaterea poartă mai ales pe concentrarea media în mâinile câtorva grupuri mari, ceea ce face să se teamă de o autocenzură a redacțiilor. Aiurea, urmăriri judiciare abuzive, numite [[SLAPP]], se înmulțesc ca să intimideze vocile critice."
         }
       ]
     },
@@ -77,44 +77,44 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Dincolo de amenințările politice, jurnalismul se confruntă cu o criză economică profundă. Modelul istoric, bazat pe vânzări și publicitate individuale, s-a prăbușit odată cu tehnologia digitală, platformele mari captând acum majoritatea publicității online."
+          "text": "Dincolo de amenințările politice, jurnalismul se lovește de o criză economică profundă. Modelul istoric, bazat pe vânzarea la număr și pe publicitate, s-a prăbușit odată cu digitalul, marile platforme captând acum esențialul publicității online."
         },
         {
           "type": "image",
           "asset": "newspaper_crisis_digital_transformation_journalism",
           "ratio": "4:3",
-          "caption": "Modelul economic istoric al presei s-a prăbușit odată cu tehnologia digitală."
+          "caption": "Modelul economic istoric al presei s-a prăbușit odată cu digitalul."
         },
         {
           "type": "paragraph",
-          "text": "Această scădere a resurselor determină închiderea multor ziare locale, creând „deșerturi informaționale” în care nimeni nu monitorizează acțiunea aleșilor locali. Față de aceasta, apar noi modele, finanțate prin donații sau abonamente directe, precum Mediapart în Franța sau ProPublica în Statele Unite, care demonstrează că și jurnalismul independent poate fi profitabil."
+          "text": "Scăderea de resurse face să se închidă multe ziare locale, creând „deșerturi de informare” unde nimeni nu mai supraveghează acțiunea aleșilor locali. Ca răspuns, apar modele noi, finanțate din donații sau din abonamente directe, ca Mediapart în Franța sau ProPublica în Statele Unite, care dovedesc că un jurnalism independent poate fi și rentabil."
         },
         {
           "type": "funFact",
-          "text": "Primul ziar tipărit din istorie, „Relația”, a fost lansat la Strasbourg în 1605 de către Johann Carolus, cu mult înainte de invenția legală a libertății presei."
+          "text": "Primul ziar tipărit din istorie, „Relation”, a fost lansat la Strasbourg în 1605 de Johann Carolus, cu mult înaintea invenției legale a libertății presei."
         }
       ]
     },
     {
       "id": "course_230_la_liberte_de_la_presse_dans_le_monde_p4",
-      "title": "Verificarea realității într-o lume saturată de imagini",
+      "title": "Să verifici realul într-o lume saturată de imagini",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Era digitală a făcut informația mai rapidă, dar a deschis și ușa către [[dezinformare]]. Algoritmii rețelelor sociale favorizează conținutul emoțional în detrimentul analizei faptice, fragmentând viziunea noastră comună asupra lumii."
+          "text": "Era digitală a făcut informația mai rapidă, dar a deschis și ușa [[dezinformare]]. Algoritmii rețelelor favorizează conținuturile emoționale mai degrabă decât analiza factuală, fragmentând viziunea noastră comună asupra lumii."
         },
         {
           "type": "paragraph",
-          "text": "Rolul jurnalistului evoluează așadar spre cel de „verificator” al realității, într-un flux permanent de imagini și date. Întrebările etice devin mai complexe, ca în fotojurnalismul din zonele de conflict, unde respectul pentru demnitatea umană se ciocnește uneori cu nevoia de a arăta."
+          "text": "Rolul jurnalistului evoluează deci spre cel al unui „verificator” al realului, într-un flux permanent de imagini și de date. Întrebările etice devin mai complexe, ca în fotojurnalismul din zona de conflict, unde respectul demnității umane se lovește uneori de nevoia de a arăta."
         },
         {
           "type": "paragraph",
-          "text": "Apărarea libertății presei necesită, prin urmare, o mai bună reglementare a principalelor platforme digitale și o educație media consolidată. Fără o presă liberă capabilă să verifice faptele, dezbaterea democratică riscă să se dizolve într-o lume în care toate opiniile sunt egale, indiferent de veridicitatea lor."
+          "text": "Să aperi libertatea presei presupune deci o reglementare mai bună a marilor platforme digitale și o educație la media întărită. Fără o presă liberă capabilă să verifice faptele, dezbaterea democratică riscă să se dizolve într-o lume unde toate opiniile se merită, indiferent de veridicitatea lor."
         },
         {
           "type": "takeaway",
-          "text": "Mai puțin de 10% din populația lumii trăiește într-o țară în care presa este cu adevărat liberă. Între represiunea directă, presiunile economice și dezinformarea digitală, acest drept esențial la democrație este în declin aproape peste tot."
+          "text": "Mai puțin de 10% din populația mondială trăiește într-o țară unde presa e cu adevărat liberă. Între represiune directă, presiuni economice și dezinformare digitală, dreptul esențial ăsta pentru democrație dă înapoi aproape pretutindeni."
         }
       ]
     }

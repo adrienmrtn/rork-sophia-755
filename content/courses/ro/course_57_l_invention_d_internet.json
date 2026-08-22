@@ -4,11 +4,11 @@
   "subtitle": "Rețele",
   "subject": "sciences",
   "subcategory": "Discoveries that changed the world",
-  "description": "Internetul nu are un singur inventator. Este un lanț lung: o rețea militară, un limbaj comun, apoi Web-ul pentru oameni.",
+  "description": "Internetul n-are un singur inventator. E un lanț lung: o rețea militară, un limbaj comun, apoi Web-ul pentru oameni.",
   "hero": {
     "image": "l_invention_d_internet",
     "ratio": "16:9",
-    "hook": "Mai întâi o rețea pentru a rezista războiului. Apoi toată lumea se acordă."
+    "hook": "Mai întâi o rețea ca să reziste la război. Apoi toată lumea se leagă."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Internetul nu s-a născut dintr-un singur geniu într-un garaj. Este o construcție colectivă de-a lungul mai multor decenii."
+          "text": "Internetul nu s-a născut dintr-un singur geniu într-un garaj. E o construcție colectivă pe mai multe decenii."
         },
         {
           "type": "paragraph",
-          "text": "Trei pași simpli de reținut: o primă rețea (ARPANET), un limbaj comun (TCP/IP), apoi o interfață ușoară (Web)."
+          "text": "Trei etape simple de ținut minte: o primă rețea (ARPANET), un limbaj comun (TCP/IP), apoi o interfață ușoară (Web-ul)."
         }
       ]
     },
@@ -33,28 +33,28 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La sfârșitul anilor **1960**, în plin Război Rece, armata americană a finanțat un proiect: conectarea calculatoarelor astfel încât acestea să continue să comunice chiar dacă o parte din rețea a fost distrusă."
+          "text": "La sfârșitul anilor **1960**, în plin Război Rece, armata americană finanțează un proiect: să lege calculatoare ca să continue să comunice chiar dacă o parte din rețea e distrusă."
         },
         {
           "type": "image",
           "asset": "arpanet_1969_computer_ucla",
           "ratio": "4:3",
-          "caption": "ARPANET conectează mai întâi câteva universități americane."
+          "caption": "ARPANET leagă mai întâi câteva universități americane."
         },
         {
           "type": "paragraph",
-          "text": "Această rețea se numește **ARPANET**. Mesajele sunt împărțite în pachete mici care iau căi diferite. Dacă un drum cade, altul preia controlul."
+          "text": "Rețeaua asta se numește **ARPANET**. Mesajele sunt tăiate în pachete mici care iau drumuri diferite. Dacă un traseu cade, altul preia ștafeta."
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p2",
-      "title": "TCP/IP: vorbind aceeași limbă",
+      "title": "TCP/IP: a vorbi aceeași limbă",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Pentru ca diferitele rețele să se înțeleagă, sunt necesare reguli comune. **Vint Cerf** și **Bob Kahn** dezvoltă protocolul **TCP/IP**: un limbaj care spune cum să tăiați, adresați și recompuneți datele."
+          "text": "Ca rețele diferite să se înțeleagă, trebuie reguli comune. **Vint Cerf** și **Bob Kahn** pun la punct protocolul **TCP/IP**: un limbaj care spune cum se taie, se adresează și se recompun datele."
         },
         {
           "type": "image",
@@ -64,22 +64,22 @@
         },
         {
           "type": "funFact",
-          "text": "La 1 ianuarie **1983**, ARPANET a trecut oficial la TCP/IP. Mulți consideră că această dată este „nașterea” tehnică a Internetului."
+          "text": "Pe 1 ianuarie **1983**, ARPANET trece oficial la TCP/IP. Mulți consideră data asta „nașterea” tehnică a internetului."
         }
       ]
     },
     {
       "id": "course_57_l_invention_d_internet_p3",
-      "title": "Web-ul face rețeaua umană",
+      "title": "Web-ul face rețeaua omenească",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Internetul este rețeaua. **World Wide Web**, inventat de **Tim Berners-Lee** la CERN la începutul anilor **1990**, este stratul ușor: pagini, link-uri, browsere."
+          "text": "Internetul e rețeaua. **World Wide Web**, inventat de **Tim Berners-Lee** la CERN la începutul anilor **1990**, e stratul ușor: pagini, legături, navigatoare."
         },
         {
           "type": "paragraph",
-          "text": "Fără web, internetul ar rămâne în primul rând un instrument pentru experți. Cu el, toată lumea poate face clic."
+          "text": "Fără Web, internetul ar rămâne mai ales o unealtă de experți. Cu el, oricine poate da click."
         }
       ]
     },
@@ -90,11 +90,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Astăzi, internetul transportă e-mailuri, videoclipuri, bănci, spitale, GPS. De asemenea, a creat noi probleme: dezinformare, supraveghere, decalaj digital."
+          "text": "Azi, internetul poartă mailuri, video, bănci, spitale, GPS. A creat și probleme noi: dezinformare, supraveghere, fractură digitală."
         },
         {
           "type": "takeaway",
-          "text": "Internetul s-a născut din ARPANET, a devenit universal datorită TCP/IP și accesibil datorită Web-ului. Aceasta nu este o invenție unică, este o arhitectură comună."
+          "text": "Internetul se naște din ARPANET, devine universal datorită TCP/IP și accesibil datorită Web-ului. Nu e o invenție unică, e o arhitectură împărtășită."
         }
       ]
     }

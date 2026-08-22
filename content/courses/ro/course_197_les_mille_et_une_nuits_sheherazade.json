@@ -1,14 +1,14 @@
 {
   "id": "course_197_les_mille_et_une_nuits_sheherazade",
-  "title": "Nopțile Arabe (Shéherazade)",
-  "subtitle": "Spune să supraviețuiești",
+  "title": "O mie și una de nopți (Șeherezada)",
+  "subtitle": "A povesti ca să supraviețuiești",
   "subject": "mythologie",
   "subcategory": "Other mythologies",
-  "description": "Șeherazada supraviețuiește 1001 de nopți spunând povești. O colecție născută între Persia, Bagdad și Egipt, devenită un mit mondial.",
+  "description": "Șeherezada supraviețuiește 1001 de nopți povestind. O culegere născută între Persia, Bagdad și Egipt, devenită mit mondial.",
   "hero": {
     "image": "les_mille_et_une_nuits_sheherazade",
     "ratio": "16:9",
-    "hook": "În fiecare noapte, o femeie spune o poveste pentru a nu muri în zori."
+    "hook": "În fiecare noapte, o femeie spune o poveste ca să nu moară în zori."
   },
   "sections": [
     {
@@ -18,101 +18,101 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Nopti Arabe** (*Alf Layla wa-Layla*) nu este o carte a unui singur autor. Este un palimpsest: secole de povești orale și scrise, indiene, persane, arabe, egiptene."
+          "text": "**O mie și una de nopți** (*Alf Layla wa-Layla*) nu e cartea unui singur autor. E un palimpsest: secole de basme orale și scrise, indiene, persane, arabe, egiptene."
         },
         {
           "type": "paragraph",
-          "text": "În centru, o idee amețitoare: o femeie, **Scheherazade**, transformă povestea într-un scut. Atâta timp cât vorbește, regele care a vrut să o omoare trebuie să aștepte. Așa se face că vorbirea devine o armă de supraviețuire."
+          "text": "În centru, o idee amețitoare: o femeie, **Șeherezada**, preface povestirea în scut. Cât vorbește, regele care voia s-o ucidă trebuie să aștepte. Iată cum vorba devine armă de supraviețuire."
         }
       ]
     },
     {
       "id": "course_197_les_mille_et_une_nuits_sheherazade_p1",
-      "title": "O arhitectură a hârtiei: geneza unui text-lume",
+      "title": "O arhitectură de hârtie: geneza unui text-lume",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Miezul provine dintr-o sursă persană, [[Hazār Afsāna]] („O mie de povești”), ei înșiși hrăniți de tradițiile indiene. La Bagdad, sub califii [[Abasizi]] (secolele VIII-XIII), colecția s-a arabizat: legende urbane, anecdote de curte, uneori ton satiric."
+          "text": "Nucleul vine dintr-un fond persan, [[Hazār Afsāna]] („O mie de basme”), hrănit el însuși de tradiții indiene. La Bagdad, sub califii [[Abasizi]] (secolele VIII-XIII), culegerea se arabizează: legende urbane, anecdote de curte, un ton uneori satiric."
         },
         {
           "type": "image",
           "asset": "one_thousand_and_one_nights_arabic_manuscript",
           "ratio": "4:3",
-          "caption": "Manuscrisul celor o mie și una de nopți: un text-univers în formare."
+          "caption": "Manuscris din O mie și una de nopți: un text-lume în formare"
         },
         {
           "type": "funFact",
-          "text": "„O mie și unu” nu înseamnă un număr exact. În arabă, acest număr sugerează abundență, aproape infinit. Unii cărturari l-au văzut chiar ca pe un talisman împotriva ochiului rău."
+          "text": "„O mie și una” nu desemnează un număr exact. În arabă, cifra sugerează belșugul, aproape infinitul. Unii copiști vedeau aici chiar un talisman împotriva deochiului."
         },
         {
           "type": "paragraph",
-          "text": "În Egipt, la momentul [[Mameluci]], au fost adăugate noi cicluri. Surpriză pentru Occident: **Aladin** și **Ali Baba** lipsesc din manuscrisele arabe medievale. Acestea sunt „povesti orfane”, introduse mai târziu prin Europa."
+          "text": "În Egipt, sub [[Mameluci]], se adaugă cicluri noi. Surpriză pentru Occident: **Aladin** și **Ali Baba** lipsesc din manuscrisele arabe medievale. Sunt „basme orfane”, intrate mai târziu pe calea Europei."
         }
       ]
     },
     {
       "id": "course_197_les_mille_et_une_nuits_sheherazade_p2",
-      "title": "Hegemonia Șeherazadei: narațiunea ca scut",
+      "title": "Hegemonia Șeherezadei: narațiunea ca scut",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Regele **Shahryar**, trădat de prima sa soție, se căsătorește cu o tânără în fiecare seară și o ucide în zori. **Scheherazade**, fiica vizirului, se oferă. Ea spune... și se oprește în momentul cel mai tensionat."
+          "text": "Regele **Șahriar**, trădat de prima soție, ia de nevastă în fiecare seară o fată și o omoară în zori. **Șeherezada**, fiica vizirului, se oferă. Povestește... și se oprește în clipa cea mai tensionată."
         },
         {
           "type": "image",
           "asset": "scheherazade_shahryar_king_storyteller_painting",
           "ratio": "4:3",
-          "caption": "Scheherazade cu fața lui Shahryar: narațiune ca un scut."
+          "caption": "Șeherezada în fața lui Șahriar: narațiunea ca scut"
         },
         {
           "type": "paragraph",
-          "text": "She piles up [[povești imbricate (narațiune în cadru)]]: one character tells another, who tells a third. Regele, captiv în dorința de a auzi ce va urma, amână execuția. După **A O mie și una de nopți**, ascultarea l-a schimbat pe Shahryar: și-a găsit din nou empatia. Șeherazada nu doar distra. Ea a reparat un tiran."
+          "text": "Îngrămădește [[povești imbricate (narațiune în cadru)]]: un personaj spune o poveste, care ascunde o a doua, care ascunde o a treia. Regele, captiv al dorinței de a auzi urmarea, amână execuția. După **o mie și una de nopți**, ascultarea l-a schimbat pe Șahriar: își recapătă empatia. Șeherezada n-a făcut doar să-l distreze. A reparat un tiran."
         }
       ]
     },
     {
       "id": "course_197_les_mille_et_une_nuits_sheherazade_p3",
-      "title": "Deplasarea către Occident și inventarea unui mit",
+      "title": "Trecerea spre Occident și inventarea unui mit",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Între **1704** și **1717**, orientalistul francez **Antoine Galland** își publică traducerea. El adaptează textul la gustul curții lui **Ludovic al XIV-lea** și adaugă povești auzite de la [[Hanna Diyab]], o siriană în trecere. Aladdin intră astfel în corpus."
+          "text": "Între **1704** și **1717**, orientalistul francez **Antoine Galland** își publică traducerea. Adaptează textul gustului de la curtea lui **Ludovic al XIV-lea** și adaugă basme auzite de la [[Hanna Diyab]], un sirian aflat în trecere. Aladin intră astfel în corpus."
         },
         {
           "type": "image",
           "asset": "antoine_galland_thousand_nights_french_translation",
           "ratio": "4:3",
-          "caption": "Galland deschide Nopțile Europei din secolul al XVIII-lea."
+          "caption": "Galland deschide Nopțile Europei secolului XVIII"
         },
         {
           "type": "funFact",
-          "text": "Tinerii îl trezeau uneori pe Galland noaptea strigând sub fereastra lui: „Domnule Galland, dacă nu puteți dormi, spuneți-ne una dintre poveștile dumneavoastră!” »"
+          "text": "Tineri îl trezeau uneori pe Galland noaptea, strigând sub fereastră: „Domnule Galland, dacă nu dormi, spune-ne una dintre poveștile tale!”"
         },
         {
           "type": "paragraph",
-          "text": "Succesul inventează un [[Orientalismul european]]: covoare zburătoare, genii, califi deghizați. Viziune fantezie, adesea reductivă, dar de o influență imensă, de la **Proust** la **Borges**, care vedeau în aceste bucle narative însăși imaginea infinitului literar."
+          "text": "Succesul inventează [[orientalismul european]]: covoare zburătoare, duhuri, califi deghizați. Viziune visată, adesea reductivă, dar de o influență imensă, de la **Proust** la **Borges**, care vedea în aceste bucle narative chipul însuși al infinitului literar."
         }
       ]
     },
     {
       "id": "course_197_les_mille_et_une_nuits_sheherazade_p4",
-      "title": "Modernitatea și sfera filozofică a povestirii",
+      "title": "Modernitate și miză filozofică a povestirii",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "De ce spune? Răspunsul Nopților: să țină moartea la distanță. Atâta timp cât vocea Șeherazadei rezonează, zorii fatali sunt suspendați. Ficțiunea dă formă haosului."
+          "text": "De ce să povestești? Nopțile răspund: ca să ții moartea la distanță. Cât răsună vocea Șeherezadei, zorile fatale stau în suspensie. Ficțiunea dă formă haosului."
         },
         {
           "type": "paragraph",
-          "text": "Acest mecanism încă hrănește seria noastră: [[cliffhanger]], această tăietură de pe marginea prăpastiei, este moștenitorul direct al naratorului. O carte deschisă la infinit, care refuză să se închidă."
+          "text": "Mecanica aceasta hrănește încă serialele noastre: [[cliffhanger]], tăierea de pe buza prăpastiei, e moștenitoarea directă a naratoarei. O carte deschisă spre infinit, care refuză să se închidă."
         },
         {
           "type": "takeaway",
-          "text": "**Scheherazade** supraviețuiește **1001** nopților datorită poveștilor încorporate: inventează suspansul ca instrument de supraviețuire și transformă discursul în putere politică."
+          "text": "**Șeherezada** supraviețuiește **1001** de nopți grație povestirilor încastrate: inventează suspansul ca unealtă de supraviețuire și preface vorba în putere politică."
         }
       ]
     }

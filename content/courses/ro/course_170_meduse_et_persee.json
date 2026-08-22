@@ -1,14 +1,14 @@
 {
   "id": "course_170_meduse_et_persee",
-  "title": "Medusa și Perseus",
-  "subtitle": "Aspectul care pietrifică",
+  "title": "Meduza și Perseu",
+  "subtitle": "Privirea care împietrește",
   "subject": "mythologie",
   "subcategory": "Greece: the gods",
-  "description": "Medusa se încremenește cu o privire. Perseus o învinge folosind un scut de oglindă, apoi o salvează pe Andromeda. Capul Gorgonei devine un simbol protector.",
+  "description": "Meduza împietrește dintr-o privire. Perseu o învinge grație unui scut-oglindă, apoi o salvează pe Andromeda. Capul Gorgonei devine un simbol protector.",
   "hero": {
     "image": "meduse_et_persee",
     "ratio": "16:9",
-    "hook": "Un aspect care schimbă viața în piatră. Un erou care îndrăznește doar să privească reflectarea."
+    "hook": "O privire care preface viața în piatră. Un erou care nu îndrăznește să privească decât reflexul."
   },
   "sections": [
     {
@@ -18,105 +18,105 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mitul lui **Perseus** și **Medusa** este una dintre marile aventuri grecești. Nu este doar o luptă împotriva unui monstru. Este, de asemenea, povestea frumuseții transformate în groază și a unui erou care învinge prin viclenie."
+          "text": "Mitul lui **Perseu** și al **Meduzei** e una dintre marile aventuri grecești. Nu e doar o luptă cu un monstru. E și povestea unei frumuseți prefăcute în groază, și a unui erou care câștigă prin viclenie."
         },
         {
           "type": "paragraph",
-          "text": "Medusa, o [[Gorgonă]], încremenește pe oricine îi întâlnește privirea. Perseus, pentru a supraviețui, acceptă să vadă pericolul doar printr-o oglindă."
+          "text": "Meduza, o [[Gorgonă]], împietrește pe oricine îi încrucișează privirea. Perseu, ca să supraviețuiască, acceptă să vadă pericolul doar printr-o oglindă."
         }
       ]
     },
     {
       "id": "course_170_meduse_et_persee_p1",
-      "title": "De la preoteasa la monstru",
+      "title": "De la preoteasă la monstru",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Potrivit lui Ovidiu [[Metamorfoze]], Medusa nu este, în primul rând, un monstru. Este o tânără cu părul strălucitor, preoteasa în templul lui **Atena**, zeița înțelepciunii. Frumusețea ei îl atrage pe **Poseidon**, zeul mărilor, care o violează în sanctuar."
+          "text": "După [[Metamorfoze]] ale lui Ovidiu, Meduza nu e la început un monstru. E o tânără cu părul strălucitor, preoteasă în templul **Atenei**, zeița înțelepciunii. Frumusețea ei îl atrage pe **Poseidon**, zeul mărilor, care o violează în sanctuar."
         },
         {
           "type": "paragraph",
-          "text": "În vechea logică tragică, Athena pedepsește victima. Părul Medusei devine șerpi. Privirea lui **împietrit**. Alungată până la capătul lumii împreună cu surorile ei Stheno și Euryale, ea locuiește într-o peșteră înconjurată de statui: nefericiții care au văzut-o."
+          "text": "Într-o logică tragică antică, Atena o pedepsește pe victimă. Părul Meduzei devine șerpi. Privirea ei **împietrește**. Alungată la capătul lumii cu surorile ei, Stheno și Euriale, trăiește într-o peșteră înconjurată de statue: nefericiții care au văzut-o."
         },
         {
           "type": "image",
           "asset": "medusa_gorgon_snakes_hair_caravaggio_painting",
           "ratio": "4:3",
-          "caption": "Medusa, Gorgon cu o privire de moarte."
+          "caption": "Meduza, Gorgonă cu privire ucigașă"
         },
         {
           "type": "funFact",
-          "text": "Sângele din partea stângă a Medusei era o otravă mortală. Cel din partea dreaptă putea învia morții: un secret pe care Atena l-a încredințat ulterior lui **Asclepius**, zeul medicinei."
+          "text": "Sângele din partea stângă a Meduzei era o otravă de moarte. Cel din partea dreaptă putea învia morții: un secret pe care Atena i l-a încredințat mai târziu lui **Asclepios**, zeul medicinei."
         }
       ]
     },
     {
       "id": "course_170_meduse_et_persee_p2",
-      "title": "Perseus se înarmează împotriva imposibilului",
+      "title": "Perseu se înarmează împotriva imposibilului",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Regele **Polydectès** vrea să-l ia pe Perseus pentru a-și seduce mama **Danaé**. El îi impune o provocare sinucigașă: aduce înapoi capul Medusei. Perseus este fiul lui **Zeus**. Zeii îl ajută."
+          "text": "Regele **Polidectes** vrea să-l îndepărteze pe Perseu ca s-o seducă pe mama lui, **Danae**. Îi impune o provocare sinucigașă: să aducă capul Meduzei. Perseu e fiul lui **Zeus**. Zeii îl ajută."
         },
         {
           "type": "paragraph",
-          "text": "**Hermès** îi oferă sandale cu aripi și o [[harpa]], o sabie curbată ultra-ascuțită. **Hades** îi împrumută [[Kynee]], casca de invizibilitate. Athena oferă sfatul decisiv: scutul ei de bronz lustruit, pentru a fi folosit ca **oglindă**."
+          "text": "**Hermes** îi dă sandale înaripate și o [[Harpe]], sabie curbă ultra ascuțită. **Hades** îi împrumută [[Kynee]], coiful de invizibilitate. Atena oferă sfatul decisiv: scutul ei de bronz lustruit, de folosit ca **oglindă**."
         },
         {
           "type": "image",
           "asset": "perseus_mirror_shield_medusa_painting",
           "ratio": "4:3",
-          "caption": "Perseus se apropie de Medusa privind doar reflexia lui."
+          "caption": "Perseu se apropie de Meduza privind doar reflexul"
         },
         {
           "type": "paragraph",
-          "text": "Perseus o surprinde pe Medusa dormind. Ghidat de reflecție, își taie capul. De la neck spring [[Pegas, născut din sângele Medusei]] și gigantul [[Chrysaor]]. Medusa era încă însărcinată cu Poseidon."
+          "text": "Perseu o surprinde pe Meduza adormită. Ghidat de reflex, îi taie capul. Din gât țâșnesc [[Pegas, născut din sângele Medusei]] și uriașul [[Chrysaor]]. Meduza era încă însărcinată de Poseidon."
         }
       ]
     },
     {
       "id": "course_170_meduse_et_persee_p3",
-      "title": "Andromeda și Întoarcerea",
+      "title": "Andromeda și întoarcerea",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Capul își păstrează puterea. Perseus îl pune în [[Kibisis]], o pungă magică. În timp ce zboară deasupra Etiopiei, o vede pe Prințesa **Andromeda** înlănțuită de o stâncă. Este oferit lui **Ketos**, monstru marin trimis de Poseidon pentru a pedepsi mândria mamei sale Cassiopeia."
+          "text": "Capul își păstrează puterea. Perseu îl pune în [[Kibisis]], o traistă magică. Zburând deasupra Etiopiei, o vede pe prințesa **Andromeda** încătușată de o stâncă. E oferită lui **Cetos**, monstrul marin trimis de Poseidon ca să pedepsească orgoliul mamei ei, Casiopea."
         },
         {
           "type": "image",
           "asset": "perseus_rescue_andromeda_sea_monster_painting",
           "ratio": "4:3",
-          "caption": "Perseus o eliberează pe Andromeda folosind capul Medusei."
+          "caption": "Perseu o eliberează pe Andromeda grație capului Meduzei"
         },
         {
           "type": "funFact",
-          "text": "Unele legende spun că Perseu a creat coral roșu punând capul Medusei pe alge marine: sângele ar fi întărit plantele."
+          "text": "Unele legende spun că Perseu a creat coralul roșu punând capul Meduzei pe alge: sângele ar fi întărit vegetalele."
         },
         {
           "type": "paragraph",
-          "text": "Perseus îl pietrifică pe monstr, se căsătorește cu Andromeda, apoi se întoarce la Seriphos. Înfruntându-se cu Polydectes și curtea lui, își scoate capul afară. Dușmanii lui devin statui. Tirania încetează."
+          "text": "Perseu împietrește monstrul, se însoară cu Andromeda, apoi se întoarce la Serifos. În fața lui Polidectes și a curții, scoate capul. Dușmanii lui devin statue. Tirania se oprește."
         }
       ]
     },
     {
       "id": "course_170_meduse_et_persee_p4",
-      "title": "Gorgoneionul, față protectoare",
+      "title": "Gorgoneion, chip protector",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Perseus îi dă peste cap Atenei. Îl fixează pe **egid**, scutul ei divin. Medusa trece de la a fi un monstru pentru a fi ucis la o putere protectoare. Această efigie, [[Gorgoneion]], împodobește templele, monedele și scuturile grecești."
+          "text": "Perseu îi încredințează capul Atenei. Ea îl fixează pe **egida** ei, scutul divin. Meduza trece de la monstrul de doborât la o putere protectoare. Efigia asta, [[Gorgoneion]], împodobește temple, monede și scuturi grecești."
         },
         {
           "type": "paragraph",
-          "text": "Funcția sa este [[Apotropaic]]: să îndepărteze răul prin chiar oroarea feței. De-a lungul secolelor, Medusa a devenit și o figură tragică, apoi o icoană modernă: traumă, putere, fascinație. Chiar și casa Versace și-a ales capul pentru a „petrifica” aspectul."
+          "text": "Funcția ei e [[Apotropaic]]: să abată răul prin însăși groaza chipului. De-a lungul secolelor, Meduza devine și o figură tragică, apoi o icoană modernă: traumă, putere, fascinație. Până și casa Versace i-a ales capul ca să „împietrească” privirea."
         },
         {
           "type": "takeaway",
-          "text": "**Perseus** îl învinge pe **Medusa** datorită reflexiei unui scut. Capul, dat lui **Atena**, devine **Gorgoneion**, simbolul protector al Greciei antice."
+          "text": "**Perseu** o învinge pe **Meduza** grație reflexului unui scut. Capul, încredințat **Atenei**, devine **Gorgoneion**, simbol protector al Greciei antice."
         }
       ]
     }
