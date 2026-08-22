@@ -14,6 +14,7 @@ Usage:
     python scripts/check_course_translation.py --lang pt --json report.json
     python scripts/check_course_translation.py --lang it --json report.json
     python scripts/check_course_translation.py --lang tr --json report.json
+    python scripts/check_course_translation.py --lang pl --json report.json
 """
 
 from __future__ import annotations
@@ -279,6 +280,27 @@ TURKISH_RULES = LanguageRules(
     era_hint="should be M.Ö. / M.S.",
 )
 
+POLISH_RULES = LanguageRules(
+    # Bare "i" is skipped: "Alaryk I," looks like a stranded conjunction.
+    stranded_spaced=re.compile(
+        r"\b(w|z|na|do|od|po|za|dla|przez|oraz|przy|nad|pod|bez)"
+        r"\s+([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    stranded_tight=re.compile(
+        r"\b(oraz)\s*([,;:.!?])(?=\s|$)",
+        re.IGNORECASE,
+    ),
+    leading_articles=("ten ", "ta ", "to ", "ci ", "te "),
+    leftover_extra_skip=frozenset(),
+    check_a_an=False,
+    flag_space_thousands=True,
+    thousands_hint="should use a period (30.000)",
+    flag_decimal_comma=False,  # Polish decimals are commas
+    century_hint="should be 'XV wiek'",
+    era_hint="should be p.n.e. / n.e.",
+)
+
 RULES_BY_LANG: dict[str, LanguageRules] = {
     "en": ENGLISH_RULES,
     "de": GERMAN_RULES,
@@ -286,6 +308,7 @@ RULES_BY_LANG: dict[str, LanguageRules] = {
     "pt": PORTUGUESE_RULES,
     "it": ITALIAN_RULES,
     "tr": TURKISH_RULES,
+    "pl": POLISH_RULES,
 }
 
 
@@ -358,6 +381,7 @@ ARTICLE_BEFORE_RE = {
     "pt": re.compile(r"\b(o|a|os|as|um|uma)$", re.IGNORECASE),
     "it": re.compile(r"\b(il|lo|la|i|gli|le|un|uno|una)$", re.IGNORECASE),
     "tr": re.compile(r"\b(bir|bu|\u015fu)$", re.IGNORECASE),
+    "pl": re.compile(r"\b(ten|ta|to|ci|te)$", re.IGNORECASE),
 }
 
 
