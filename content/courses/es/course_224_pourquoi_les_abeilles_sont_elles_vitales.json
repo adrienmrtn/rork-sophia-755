@@ -1,14 +1,14 @@
 {
   "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales",
-  "title": "¿Por qué las abejas son vitales?",
-  "subtitle": "Los pequeños trabajadores de nuestra comida.",
+  "title": "Por qué las abejas son vitales",
+  "subtitle": "Las pequeñas trabajadoras detrás de nuestra comida",
   "subject": "comprendreLeMonde",
   "subcategory": "Medio ambiente y futuro",
-  "description": "Sin las abejas, **75% de los cultivos alimentarios mundiales** estarían en peligro. Estos pequeños y discretos trabajadores sustentan nuestro suministro de alimentos y sus poblaciones están colapsando.",
+  "description": "Sin abejas, el **75% de los cultivos alimentarios del mundo** estaría en riesgo. Estas trabajadoras discretas sostienen nuestro abastecimiento de comida, y sus poblaciones se hunden.",
   "hero": {
     "image": "pourquoi_les_abeilles_sont_vitales",
     "ratio": "16:9",
-    "hook": "No sólo producen miel: sin ellos gran parte de nuestra comida desaparecería."
+    "hook": "Hacen más que miel: sin ellas, una gran parte de nuestra comida desaparecería."
   },
   "sections": [
     {
@@ -18,103 +18,103 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A menudo pensamos en las abejas sólo por su miel. En realidad, proporcionan un servicio mucho mayor: permiten reproducir la mayoría de las plantas con flores. Este servicio vale cientos de miles de millones de dólares cada año."
+          "text": "Suele pensarse en las abejas solo por su miel. En verdad prestan un servicio mucho mayor: dejan que la mayoría de las plantas con flores se reproduzcan. Ese servicio vale cientos de miles de millones de dólares cada año."
         },
         {
           "type": "paragraph",
-          "text": "En las últimas décadas, estos insectos esenciales han ido desapareciendo a un ritmo preocupante. Comprender su papel y las causas de su disminución nos permite comprender mejor un problema directo para nuestro futuro suministro de alimentos."
+          "text": "En las últimas décadas, estos insectos esenciales han ido desapareciendo a una velocidad inquietante. Entender su papel, y las causas de su declive, deja claro hasta qué punto está en juego nuestro futuro alimentario."
         }
       ]
     },
     {
       "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p1",
-      "title": "La polinización, un trabajo discreto pero imprescindible",
+      "title": "La polinización, un trabajo discreto y esencial",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": " es el transporte del polen, de las células masculinas de una flor, al órgano femenino de otra flor de la misma especie. A veces el viento o el agua pueden hacer esto, pero la mayoría de las plantas con flores prefieren el transporte animal. Al buscar néctar y polen para su colonia, las abejas proporcionan este transporte sin siquiera saberlo. [[polinización]]"
+          "text": "En términos simples, la [[polinización]] es el transporte del polen, las células masculinas de una flor, hasta el órgano femenino de otra flor de la misma especie. El viento y el agua a veces pueden hacerlo, pero la mayoría de las plantas con flores prefieren un mensajero animal. Al recoger néctar y polen para su colonia, las abejas hacen ese transporte sin saberlo."
         },
         {
           "type": "image",
           "asset": "honey_bee_pollinating_flower_closeup",
           "ratio": "4:3",
-          "caption": "Mientras busca alimento, la abeja transporta el polen de flor en flor."
+          "caption": "Al pecorear, una abeja lleva polen de flor en flor"
         },
         {
           "type": "funFact",
-          "text": "Una abeja puede visitar hasta 700 flores al día. Para producir sólo 500 gramos de miel, una colonia entera debe dar el equivalente a tres vueltas a la Tierra."
+          "text": "Una sola abeja puede visitar hasta 700 flores en un día. Para producir solo 500 gramos de miel, una colonia entera tiene que volar el equivalente a tres vueltas a la Tierra."
         },
         {
           "type": "paragraph",
-          "text": "Aproximadamente el 75% de los cultivos alimentarios del mundo dependen, al menos en parte, de polinizadores como las abejas. Esto incluye café, cacao, manzanas, almendras o aguacates. La contribución de la polinización a la economía global se estima entre 235 mil millones y 577 mil millones de dólares por año."
+          "text": "Alrededor del **75% de los cultivos alimentarios del mundo** dependen, al menos un poco, de polinizadores como las abejas. Eso incluye el café, el cacao, las manzanas, las almendras y los aguacates. La contribución de la polinización a la economía mundial se estima entre 235.000 y 577.000 millones de dólares al año."
         }
       ]
     },
     {
       "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p2",
-      "title": "¿Por qué colapsan las colonias?",
+      "title": "Por qué se hunden las colonias",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "El declive de las abejas no tiene una única causa: varias amenazas actúan al mismo tiempo. Desde la década de 1990, algunos apicultores han perdido entre el 30 y el 50% de sus colonias cada invierno, mientras que la pérdida natural debería rondar el 10%. Este fenómeno de desaparición repentina a veces se denomina . [[trastorno del colapso de colonias]]"
+          "text": "El declive de las abejas no tiene una sola causa: varias amenazas actúan a la vez. Desde los años 1990, algunos apicultores han perdido del 30% al 50% de sus colonias cada invierno, cuando las pérdidas naturales deberían rondar el 10%. Esta desaparición súbita se llama a veces [[colapso de las colonias]]."
         },
         {
           "type": "image",
           "asset": "neonicotinoid_pesticide_spraying_field",
           "ratio": "4:3",
-          "caption": "Los neonicotinoides penetran en toda la planta, incluidos el néctar y el polen."
+          "caption": "Los neonicotinoides se extienden por toda la planta, incluido el néctar y el polen"
         },
         {
           "type": "paragraph",
-          "text": "Los , una familia de insecticidas, son particularmente responsables. Impregnan toda la planta, incluidos su néctar y polen. Incluso en dosis bajas, desorientan a las abejas, que ya no pueden encontrar su colmena, y debilitan su sistema inmunológico. [[Los neonicotinoides]]"
+          "text": "[[Los neonicotinoides]], una familia de insecticidas, tienen una culpa especial. Empapan la planta entera, incluido su néctar y su polen. Incluso en dosis pequeñas desorientan a las abejas, que ya no encuentran la colmena, y debilitan su sistema inmunitario."
         },
         {
           "type": "paragraph",
-          "text": "A esto se suma un ácaro parásito que transmite virus mortales, la desaparición de flores silvestres por monocultivos y el cambio climático, que desplaza los períodos de floración en relación con el despertar de los insectos."
+          "text": "Encima llegan un ácaro parásito que transporta virus mortales, la pérdida de flores silvestres por el monocultivo y el cambio climático, que desajusta las floraciones respecto al momento en que los insectos despiertan."
         }
       ]
     },
     {
       "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p3",
-      "title": "No hay una sola abeja",
+      "title": "Hay más de un tipo de abeja",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Cuando decimos “abeja”, casi siempre pensamos en la abeja doméstica, la que vive en colmenas y produce miel. Sin embargo, es sólo una especie entre las más de **20.000** que existen en el mundo, incluidos los abejorros y la osmia. La mayoría son solitarios y no producen miel, pero desempeñan un papel ecológico igualmente importante."
+          "text": "Cuando decimos “abeja”, casi siempre imaginamos la abeja de la miel, la que vive en una colmena y fabrica miel. Y aun así es solo una especie entre más de **20.000** en el mundo, junto a los abejorros y las abejas albañil. La mayoría son solitarias y no hacen miel, pero su papel ecológico es igual de importante."
         },
         {
           "type": "funFact",
-          "text": "Algunas flores, como las del tomate, liberan su polen sólo bajo una vibración específica. Las abejas no saben cómo hacer esto, pero los abejorros sí, gracias a una técnica llamada sonicación."
+          "text": "Algunas flores, las de tomate entre ellas, sueltan su polen solo bajo una vibración precisa. Las abejas de la miel no pueden, pero los abejorros sí, gracias a una técnica llamada sonicación."
         },
         {
           "type": "paragraph",
-          "text": "Estas especies silvestres suelen estar especializadas en una planta específica, que a veces son las únicas capaces de polinizar eficazmente. También son más vulnerables que la abeja doméstica, porque no se benefician de ningún seguimiento o cuidado humano. Su desaparición debilita todo el [[cadena alimenticia]], ya que muchas aves dependen de los frutos y semillas resultantes de esta polinización."
+          "text": "Estas especies silvestres suelen especializarse en una planta concreta, y a veces son las únicas capaces de polinizarla bien. También son más vulnerables que la abeja de la miel, porque nadie las vigila ni las cuida. Su desaparición debilita toda la [[cadena trófica]], porque muchas aves dependen de los frutos y las semillas que produce la polinización."
         }
       ]
     },
     {
       "id": "course_224_pourquoi_les_abeilles_sont_elles_vitales_p4",
-      "title": "Lo que todavía podemos cambiar",
+      "title": "Lo que aún podemos cambiar",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Reducir el uso de pesticidas sigue siendo la palanca más eficaz. La Unión Europea prohibió tres grandes neonicotinoides en campos abiertos en 2018. Al mismo tiempo, la restauración de [[infraestructura agroecológica]], como setos o franjas de flores, recrea áreas de refugio para los insectos."
+          "text": "Recortar el uso de pesticidas sigue siendo la palanca más eficaz. En 2018 la Unión Europea prohibió tres neonicotinoides principales en campo abierto. Junto a eso, restaurar [[infraestructuras agroecológicas]], como setos o franjas de flores silvestres, recrea refugios para los insectos."
         },
         {
           "type": "paragraph",
-          "text": "Cualquiera también puede actuar de forma sencilla: plantar flores locales en su jardín o dejar el césped un poco más de tiempo antes de cortarlo, ofrece un verdadero refugio para las abejas cuando las flores escasean."
+          "text": "Cualquiera puede actuar de formas simples: plantar flores locales en un jardín, o dejar el césped un poco más alto antes de cortarlo, ofrece a las abejas un refugio real cuando escasean las flores."
         },
         {
           "type": "paragraph",
-          "text": "Proteger a los polinizadores no es sólo una cuestión de preservar la naturaleza: es una estrategia de supervivencia a largo plazo, ya que su trabajo apoya directamente la capacidad de las plantas para alimentarnos."
+          "text": "Proteger a los polinizadores no es solo salvar la naturaleza. Es una estrategia de supervivencia a largo plazo, porque su trabajo sostiene de frente la capacidad de las plantas de alimentarnos."
         },
         {
           "type": "takeaway",
-          "text": "Las abejas y 20.000 especies de polinizadores silvestres aseguran la reproducción del 75% de los cultivos alimentarios del mundo. Su disminución, causada por pesticidas, parásitos y pérdida de hábitat, amenaza directamente nuestro suministro de alimentos."
+          "text": "Las abejas y las 20.000 especies de polinizadores silvestres hacen posible la reproducción del 75% de los cultivos alimentarios del mundo. Su declive, impulsado por pesticidas, parásitos y pérdida de hábitat, es una amenaza directa a nuestra comida."
         }
       ]
     }

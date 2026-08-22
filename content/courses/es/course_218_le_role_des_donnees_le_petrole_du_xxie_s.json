@@ -1,14 +1,14 @@
 {
   "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s",
   "title": "El papel de los datos (el “petróleo del siglo XXI”)",
-  "subtitle": "El recurso digital más valioso",
+  "subtitle": "El recurso más valioso de la era digital",
   "subject": "comprendreLeMonde",
   "subcategory": "Economía y sociedad",
-  "description": "Dicen que los datos son el nuevo petróleo. Pero a diferencia del petróleo, nunca se agotan y se vuelven más valiosos cuanto más se encuentran.",
+  "description": "A los datos se los llama a menudo el nuevo petróleo. Pero a diferencia del petróleo, no se agotan, y valen más cada vez que se combinan con otros datos.",
   "hero": {
     "image": "le_role_des_donnees",
     "ratio": "16:9",
-    "hook": "Facebook puede adivinar que alguien se va a casar o mudarse antes de que se dé cuenta."
+    "hook": "Facebook puede adivinar que vas a casarte o a mudarte antes de que tú mismo lo sepas."
   },
   "sections": [
     {
@@ -18,89 +18,89 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Desde la década de 2010 se ha consolidado una frase: **datos** sería “el petróleo del siglo XXI”. La idea es simple: una vez refinados mediante algoritmos, se convierten en el motor del crecimiento y del poder global."
+          "text": "Una frase se ha quedado desde los años 2010: los **datos** son “el petróleo del siglo XXI”. La idea es simple. Una vez refinados por algoritmos, los datos se vuelven el motor del crecimiento y del poder mundial."
         },
         {
           "type": "paragraph",
-          "text": "Pero a diferencia del petróleo, un recurso que se agota, los datos nunca se consumen: pueden copiarse infinitamente y se vuelven más valiosos a medida que se combinan con otra información. He aquí por qué reformó la economía global."
+          "text": "Pero el petróleo es un recurso que se acaba, y los datos no. Se pueden copiar sin fin, y valen más cada vez que se cruzan con otra información. Por eso han redibujado la economía mundial."
         }
       ]
     },
     {
       "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p1",
-      "title": "Predecir nuestro comportamiento ante nosotros mismos",
+      "title": "Predecir nuestro comportamiento antes de que ocurra",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "El verdadero valor de los datos no reside en una simple lista de nombres o direcciones, sino en su capacidad para predecir nuestros comportamientos futuros. Cada búsqueda, cada movimiento, cada clic deja un rastro que las empresas tecnológicas recogen para crear un retrato muy preciso de cada persona."
+          "text": "El valor real de los datos no está en una lista llana de nombres o direcciones. Está en el poder de predecir lo que haremos a continuación. Cada búsqueda, cada viaje, cada clic deja un rastro, y las tecnológicas recogen esos rastros en un retrato muy preciso de cada persona."
         },
         {
           "type": "funFact",
-          "text": "Facebook puede detectar un cambio importante en la vida, como un próximo matrimonio o mudanza, antes de que la persona involucrada sea plenamente consciente de ello, al detectar pequeñas variaciones en sus hábitos en línea."
+          "text": "Facebook puede detectar un cambio de vida mayor, una boda cercana o una mudanza, antes de que la persona implicada sea del todo consciente, solo captando pequeños giros en sus hábitos en línea."
         },
         {
           "type": "paragraph",
-          "text": "Esta explotación sistemática de nuestro comportamiento ha dado lugar a lo que la investigadora Shoshana Zuboff llama **capitalismo vigilante**: los humanos ya no son sólo un cliente, se convierten en la materia prima de un sistema que vende predicciones al mejor postor."
+          "text": "Esta minería sistemática de nuestro comportamiento creó lo que la investigadora Shoshana Zuboff llama el **capitalismo de vigilancia**. La gente ya no es solo cliente. Se vuelve la materia prima de un sistema que vende predicciones al mejor postor."
         }
       ]
     },
     {
       "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p2",
-      "title": "Por qué es casi imposible competir con estos gigantes",
+      "title": "Por qué estos gigantes son casi imposibles de desafiar",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La economía de los datos funciona en un círculo virtuoso: cuantos más datos tiene una empresa, mejor es su servicio, lo que atrae a más usuarios, que generan aún más datos. La inteligencia artificial ha acelerado este fenómeno: un algoritmo  entrenado en miles de millones de ejemplos se vuelve más preciso y más rápido de mejorar que un competidor con recursos limitados. [[machine learning]]"
+          "text": "La economía de los datos funciona con un círculo virtuoso: cuantos más datos tiene una empresa, mejor es su servicio, lo que atrae más usuarios, que generan aún más datos. La inteligencia artificial lo ha acelerado. Un algoritmo de [[machine learning]] entrenado con miles de millones de ejemplos se vuelve más preciso, y mejora más rápido, que un rival con recursos limitados."
         },
         {
           "type": "image",
           "asset": "artificial_intelligence_machine_learning_datacenter",
           "ratio": "16:9",
-          "caption": "Los centros de datos consumen tanta electricidad como ciudades enteras para procesar estos flujos masivos de información."
+          "caption": "Los centros de datos usan tanta electricidad como ciudades enteras para manejar estos flujos enormes de información"
         },
         {
           "type": "paragraph",
-          "text": "Estos gigantes,  en Estados Unidos y BATX en China, ya no se contentan con dominar su sector original: están utilizando su liderazgo en datos para expandirse a la salud, las finanzas o los automóviles conectados, bloqueando el acceso a la innovación en muchas áreas. [[GAFAM]]"
+          "text": "Estos gigantes, los [[GAFAM]] en Estados Unidos y los BATX en China, ya no se contentan con mandar en su sector original. Usan su ventaja en datos para expandirse hacia la salud, las finanzas y los coches conectados, y cierran el acceso a la innovación en muchos campos."
         }
       ]
     },
     {
       "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p3",
-      "title": "Europa contraataca con el RGPD",
+      "title": "Europa responde con el RGPD",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Frente a este poder, la Unión Europea estableció en 2018 el [[RGPD]], un reglamento que en teoría devuelve a los ciudadanos el poder sobre su propia información personal: transparencia, derecho al olvido, consentimiento obligatorio."
+          "text": "Ante ese poder, en 2018 la Unión Europea introdujo [[El RGPD europeo]], un reglamento que en teoría devuelve a los ciudadanos el control sobre su propia información personal: transparencia, derecho al olvido y consentimiento obligatorio."
         },
         {
           "type": "paragraph",
-          "text": "Su fuerza proviene de su extraterritorialidad: cualquier empresa que maneje datos de ciudadanos europeos debe cumplir, so pena de multas de hasta el 4% de su facturación global. Esto obligó a gigantes como Meta o Amazon a revisar sus prácticas en todo el mundo, convirtiendo a Europa en un regulador global poco dispuesto."
+          "text": "Su fuerza viene de alcanzar más allá de las fronteras de Europa: cualquier empresa que maneje los datos de ciudadanos europeos tiene que cumplir, o ser multada con hasta el 4% de su facturación mundial. Eso empujó a gigantes como Meta y Amazon a cambiar sus prácticas en todas partes, y convirtió a Europa en un regulador mundial casi por accidente."
         },
         {
           "type": "funFact",
-          "text": "Antes del requisito de claridad del RGPD, a una persona promedio le habría tomado alrededor de 76 días hábiles leer todos los términos de servicio de los servicios digitales que utiliza en un solo año."
+          "text": "Antes de que el RGPD obligara a las empresas a ser claras, una persona ordinaria habría necesitado unos 76 días laborables para leer todos los documentos de condiciones de servicio que aceptaba en un solo año."
         }
       ]
     },
     {
       "id": "course_218_le_role_des_donnees_le_petrole_du_xxie_s_p4",
-      "title": "Los datos, una cuestión de soberanía",
+      "title": "Los datos como cuestión de soberanía",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Más allá de la economía, los datos se han convertido en una herramienta de poder para los propios Estados, que pueden utilizarlos para monitorear a su población o guiar la opinión pública. Los países que no pueden proteger los datos de sus ciudadanos corren el riesgo de sufrir una forma de dependencia tecnológica, conocida como violación . [[soberanía digital]]"
+          "text": "Más allá de la economía, los datos se han vuelto una herramienta de poder para los propios Estados, que pueden usarlos para vigilar a su población o dirigir la opinión pública. Los países incapaces de proteger los datos de sus ciudadanos arriesgan una forma de dependencia tecnológica, un golpe directo a su [[soberanía digital]]."
         },
         {
           "type": "paragraph",
-          "text": "El gran desafío de las próximas décadas será encontrar un equilibrio entre el progreso que permite el análisis de datos a gran escala y el respeto a la privacidad, condición esencial de la libertad individual en una sociedad cada vez más conectada."
+          "text": "El gran desafío de las próximas décadas será equilibrar el progreso que permite el análisis de datos a gran escala con la privacidad, la condición básica de la libertad individual en una sociedad cada vez más conectada."
         },
         {
           "type": "takeaway",
-          "text": "Los datos se han convertido en un activo estratégico cuyo valor proviene de su capacidad para predecir nuestro comportamiento. Esta economía favorece a gigantes tecnológicos con los que es casi imposible competir, a los que Europa responde con una regulación estricta: el RGPD."
+          "text": "Los datos se han vuelto un activo estratégico cuyo valor viene de su poder de predecir lo que haremos. Esta economía favorece a gigantes tecnológicos casi imposibles de desafiar, y la respuesta de Europa es una regulación estricta: el RGPD."
         }
       ]
     }

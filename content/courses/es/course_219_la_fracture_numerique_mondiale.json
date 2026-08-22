@@ -1,14 +1,14 @@
 {
   "id": "course_219_la_fracture_numerique_mondiale",
-  "title": "La brecha digital global",
-  "subtitle": "Un tercio de la humanidad desconectado",
+  "title": "La brecha digital mundial",
+  "subtitle": "Un tercio de la humanidad desconectada",
   "subject": "comprendreLeMonde",
   "subcategory": "Economía y sociedad",
-  "description": "2.700 millones de personas todavía no tienen acceso a Internet. En un mundo cada vez más digital, esta falta de conexión se convierte en una nueva forma de exclusión.",
+  "description": "2.700 millones de personas siguen sin acceso a internet. En un mundo cada vez más digital, estar desconectado se ha vuelto una forma nueva de exclusión.",
   "hero": {
     "image": "la_fracture_numerique_mondiale",
     "ratio": "16:9",
-    "hook": "Kenia inventó el pago por teléfono diez años antes que Europa, debido a la falta de sucursales bancarias."
+    "hook": "Kenia inventó el pago por teléfono diez años antes que Europa, porque casi no tenía sucursales bancarias."
   },
   "sections": [
     {
@@ -18,85 +18,85 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mientras las sociedades desarrolladas viven una revolución impulsada por la inteligencia artificial, persiste una realidad brutal: **2.700 millones de personas**, o alrededor de un tercio de la humanidad, todavía no tienen acceso a Internet."
+          "text": "Mientras las sociedades ricas viven una revolución impulsada por la inteligencia artificial, queda un hecho brutal: **2.700 millones de personas**, alrededor de un tercio de la humanidad, siguen sin acceso a internet."
         },
         {
           "type": "paragraph",
-          "text": "Esta **brecha digital** no es sólo un retraso técnico: se ha convertido en una barrera real que mantiene a millones de personas alejadas de la educación, la salud y la economía global. He aquí por qué persiste y cómo algunos países están tratando de cubrirlo."
+          "text": "Esta **brecha digital** no es solo un retraso técnico. Se ha vuelto una barrera real que aleja a millones de personas de la educación, de la sanidad y de la economía mundial. Por qué persiste, y cómo algunos países intentan cerrarla."
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p1",
-      "title": "Un mapa mundial de dos velocidades",
+      "title": "Un mapa del mundo a dos velocidades",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Para 2024, alrededor de 5.400 millones de personas estarán conectadas a Internet en todo el mundo, pero el progreso está estancado en las regiones más pobres. Europa y América del Norte superan el 90% de conexión, mientras que África subsahariana se queda en sólo el 37%."
+          "text": "En 2024, unos 5.400 millones de personas estaban conectadas a internet en el mundo, pero el crecimiento se ha estancado en las regiones más pobres. Europa y América del Norte superan el 90% de cobertura, mientras el África subsahariana se queda en el 37%."
         },
         {
           "type": "paragraph",
-          "text": "Esta exclusión se debe a varias causas. En primer lugar, la falta de infraestructura: los operadores consideran demasiado costosa la instalación de fibra óptica en determinadas regiones aisladas. Luego, el precio: en algunos países, un simple  de nivel inicial representa el salario de varios meses. Finalmente, la barrera del idioma (alrededor del 70% del contenido web está en inglés) y la falta de formación digital limitan su uso incluso cuando existe una conexión. [[smartphone]]"
+          "text": "Esta exclusión tiene varias causas. Primero, la infraestructura que falta: los operadores juzgan demasiado cara la fibra óptica en algunas regiones remotas. Luego el precio: en ciertos países, un [[smartphone]] de entrada cuesta varios meses de salario. Por último, la lengua (alrededor del 70% del contenido web está en inglés) y la falta de formación digital limitan el uso incluso donde hay conexión."
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p2",
-      "title": "Cuando la falta de infraestructura obliga a la innovación",
+      "title": "Cuando la infraestructura que falta obliga a innovar",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Esta división actúa como un multiplicador de las desigualdades. En un mundo donde el trabajo remoto, el comercio electrónico y la educación en línea () se están convirtiendo en la norma, no estar conectado significa volverse invisible para la economía global. [[MOOC]]"
+          "text": "La brecha actúa como un multiplicador de desigualdad. En un mundo donde el teletrabajo, las compras en línea y el aprendizaje en plataformas [[MOOC]] se vuelven la norma, estar desconectado significa volverse invisible para la economía mundial."
         },
         {
           "type": "image",
           "asset": "digital_divide_africa_rural_village_smartphone",
           "ratio": "16:9",
-          "caption": "En muchas zonas rurales, el teléfono móvil sigue siendo el único punto de acceso a Internet."
+          "caption": "En muchas regiones rurales, un teléfono móvil es la única vía en línea"
         },
         {
           "type": "paragraph",
-          "text": "Kenia ilustra otro camino: debido a la falta de suficientes sucursales bancarias, el país adoptó masivamente un sencillo sistema de pago por SMS en 2007, , diez años antes que Europa. Este sistema ha permitido a millones de personas sin cuentas bancarias realizar transacciones seguras con un simple teléfono. [[M-Pesa de Kenia]]"
+          "text": "Kenia muestra otro camino. Con demasiado pocas sucursales bancarias, el país adoptó un sistema de pago basado en mensajes de texto ya en 2007: el [[M-Pesa keniano]], diez años por delante de Europa. Dejó que millones de personas sin cuenta bancaria hicieran transacciones seguras desde un teléfono ordinario."
         },
         {
           "type": "funFact",
-          "text": "Kenia ha denominado esta estrategia como salto tecnológico: en lugar de instalar una infraestructura costosa y obsoleta, el país pasó directamente a una solución más moderna y barata."
+          "text": "Kenia apodó esta estrategia el “leapfrogging” tecnológico: en lugar de construir una infraestructura cara y atrasada, el país saltó directo a una solución más barata y más moderna."
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p3",
-      "title": "Internet satelital: una solución condicional",
+      "title": "Internet por satélite, una solución con condiciones",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Para conectar los pueblos más aislados, nuevos actores apuestan por el espacio. El proyecto  envía miles de satélites a órbita baja, permitiendo una conexión rápida incluso en desiertos o altas montañas, sin tener que tender un solo cable. [[Enlace estelar]]"
+          "text": "Para llegar a los pueblos más aislados, actores nuevos apuestan por el espacio. El proyecto [[Starlink]] pone miles de satélites en órbita baja, lo que lleva conexiones rápidas a desiertos y altas montañas sin tender un solo cable."
         },
         {
           "type": "paragraph",
-          "text": "Pero el costo de la suscripción y del equipo sigue alineado con los estándares occidentales, lo que hace que estas soluciones sean inaccesibles para las poblaciones rurales más pobres sin asistencia externa. Por lo tanto, resolver la brecha digital no se puede lograr únicamente a través de la tecnología: también requiere voluntad política para hacer de Internet algo accesible para todos."
+          "text": "Pero la suscripción y el equipo siguen con precios de clientes occidentales, lo que deja estas soluciones fuera del alcance de las poblaciones rurales más pobres sin ayuda exterior. La tecnología sola no cerrará por tanto la brecha digital: hace falta también voluntad política para tratar el acceso a internet como un bien público."
         }
       ]
     },
     {
       "id": "course_219_la_fracture_numerique_mondiale_p4",
-      "title": "Inteligencia artificial, una nueva brecha",
+      "title": "La inteligencia artificial, una brecha nueva",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "El rápido ascenso de la inteligencia artificial amenaza con ampliar aún más esta brecha. Requiere una inmensa potencia informática y de datos, recursos concentrados en manos de unos pocos países y empresas. Las poblaciones desconectadas corren entonces el riesgo de volverse dependientes de herramientas diseñadas sin tener en cuenta su cultura o su idioma."
+          "text": "El auge rápido de la inteligencia artificial amenaza con ensanchar aún más la brecha. Exige una potencia de cálculo enorme y cantidades enormes de datos, recursos que tienen un puñado de países y empresas. Las poblaciones desconectadas arriesgan entonces depender de herramientas diseñadas sin tener en cuenta su cultura o su lengua."
         },
         {
           "type": "paragraph",
-          "text": "La brecha de habilidades entre estudiantes conectados y no conectados también podría ampliarse muy rápidamente. Por lo tanto, el desafío para los próximos años ya no será solo proporcionar una conexión, sino garantizar un acceso justo a la creación de valor digital, combinando costos más bajos, contenido local y capacitación."
+          "text": "La brecha de competencias entre alumnos conectados y desconectados también podría abrirse muy rápido. La tarea de los próximos años ya no es solo entregar una conexión, sino garantizar un acceso justo a la creación de valor digital, combinando costes más bajos, contenido local y formación."
         },
         {
           "type": "takeaway",
-          "text": "En la actualidad, 2.700 millones de personas siguen excluidas de Internet, una división que corre el riesgo de empeorar con la inteligencia artificial. Reducir esta brecha requiere transformar la conectividad en un bien real accesible para todos, y no solo en un producto para vender."
+          "text": "2.700 millones de personas siguen fuera de internet, y la inteligencia artificial corre el riesgo de empeorar esa brecha. Cerrarla significa convertir la conectividad en un bien público de verdad, no solo en un producto a la venta."
         }
       ]
     }
