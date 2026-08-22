@@ -4,11 +4,11 @@
   "subtitle": "1945",
   "subject": "litterature",
   "subcategory": "Anglo-Saxons & world literature",
-  "description": "1945'te Orwell, hayvanların adamı kovaladığı ve ardından domuzların yeniden güç kazandığını gören bir çiftlikten bahseder. Rus Devrimi'nin ve devrimci ihanetin açık bir alegorisi.",
+  "description": "1945'te Orwell, hayvanların insanı kovduğu, sonra da domuzların iktidarı geri aldığı bir çiftliği anlatır. Rus Devrimi'nin ve ihanete uğrayan bir devrimin berrak bir alegorisidir.",
   "hero": {
     "image": "la_ferme_des_animaux_orwell",
     "ratio": "16:9",
-    "hook": "Otuz bin kelime, hayvanlar ve dünyanın henüz öğrenmediği bir politik ders."
+    "hook": "Otuz bin kelime, birkaç çiftlik hayvanı ve dünyanın henüz öğrenmediği bir siyaset dersi."
   },
   "sections": [
     {
@@ -18,13 +18,13 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**1945**'de yayınlanan **AHayvan Çiftliği** bir çocuk hikayesine benziyor. Bu basit görünümün altında, **George Orwell**, popüler bir devrimin yozlaşmış seçkinler tarafından nasıl ele geçirilebileceğini anlatıyor. Sadece **30.000 kilo** ile şimdiye kadar yazılmış en etkili **[[Rus Devrimi Alegorisi]]**'den birini sunuyor."
+          "text": "**1945**'te çıkan **Hayvan Çiftliği** bir çocuk masalına benzer. Bu yalın görünüşün altında **George Orwell**, bir halk devriminin çürümüş bir seçkinler takımı tarafından nasıl çalınabileceğini gösterir. Henüz **30.000 kelime**yle yazılmış en etkili **[[Rus Devrimi Alegorisi]]** örneklerinden birini verir."
         },
         {
           "type": "image",
           "asset": "animal_farm_pigs_barnyard_orwell",
           "ratio": "4:3",
-          "caption": "İktidardaki domuzlar: Devrimci yolsuzluğu kınayan masal."
+          "caption": "İktidardaki domuzlar: devrimci yozlaşmayı teşhir eden masal"
         }
       ]
     },
@@ -35,36 +35,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kitap, SSCB'nin Batı'nın Nazi Almanya'sına karşı müttefiki olduğu **[[İkinci Dünya Savaşı]]** sırasında doğdu. O halde **Stalin**'yi eleştirmek siyasi bir ihanet gibi görünüyor. Orwell kitabını yayınlamak için çatışmanın bitmesini bekliyor. Her hayvan tarihsel bir figüre karşılık gelir: **Eski Binbaşı**, **Marx**'yi ve **Lenin**'yi çağrıştırır, **Napolyon** **Stalin**'yi takip eder, **Kartopu** geri çağırır **Troçki**, Stalin'in rakibi, sürgüne gönderildi ve ardından suikasta kurban gitti."
+          "text": "Kitap **[[İkinci Dünya Savaşı]]** sürerken doğar; o sırada SSCB, Nazi Almanyası'na karşı Batı'nın müttefikidir. **Stalin**'i eleştirmek o günlerde siyasi ihanet sayılır, bu yüzden Orwell yayımlamak için savaşın bitmesini bekler. Her hayvan tarihi bir figüre denk düşer: **Koca Reis** **Marx**'ı ve **Lenin**'i çağrıştırır, **Napolyon** **Stalin**'i kalıplar, **Kartopu** ise Stalin'in rakibi, sürgün edilip sonra öldürülen **Troçki**'yi hatırlatır."
         },
         {
           "type": "funFact",
-          "text": "T.S. O zamanlar editör olan Eliot, zeki domuzların devlet adamlarını rahatsız edebileceği gerekçesiyle taslağı reddetti."
+          "text": "O sırada yayımcı olan T.S. Eliot taslağı reddetti. Gerekçesi: zeki domuzlar devlet adamlarını gücendirebilirdi."
         },
         {
           "type": "paragraph",
-          "text": "Napolyon'un **köpekleri** gizli polisi ve siyasi terörü temsil ediyor. Çalışkan at **Malabar**, tamamen tükenme noktasına kadar sömürülen **[[proletarya]]**'yi temsil ediyor. Domuz propagandacısı **Brille-Babil**, her başarısızlığı resmi bir zafere dönüştürüyor ve günler geçtikçe tarihi yeniden yazıyor. Orwell, **[[Stalinizm]]**'yi bir kitapçığın kesinliği ve bir masalın hafifliğiyle anlatıyor."
+          "text": "Napolyon'un **köpekleri** gizli polisi ve siyasi terörü temsil eder. Yorulmak bilmeyen yük atı **Boksör**, tükenene kadar sömürülen **[[proletarya]]** figürüdür. Propagandacı domuz **Çığırtkan** her yenilgiyi resmi bir zafere çevirir ve tarihi günbegün yeniden yazar. Orwell **[[Stalinizm]]** olgusunu bir bildiri metninin kesinliği ve bir masalın hafifliğiyle çizer."
         }
       ]
     },
     {
       "id": "course_102_la_ferme_des_animaux_george_orwell_p2",
-      "title": "Değişim: Ütopyadan diktatörlüğe",
+      "title": "Dönüş: ütopyadan diktatörlüğe",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hayvanlar, **1917**'de tersine çevrilmiş, **[[Çar Nicholas II]]**'nin sembolü olan çiftçi **Jones**'yi kovalıyor. **Hayvancılık** ilan ediyorlar ve ahır duvarına **Yedi Emir** yazıyorlar. Nihayet eşitlik mümkün görünüyor. Daha sonra Napolyon şiddete eğitilmiş köpekleriyle Snowball'u kovalar ve terör kurar."
+          "text": "Hayvanlar çiftçi **Jones**'u kovar; o, **1917**'de devrilen **[[Çar Nicholas II]]** figürüdür. **Hayvancılık** ilan eder ve ahır duvarına **Yedi Emir**'i yazarlar. Eşitlik sonunda mümkün görünür. Sonra Napolyon, şiddete alıştırılmış köpekleriyle Kartopu'yu sürer ve terörü yerleştirir."
         },
         {
           "type": "image",
           "asset": "farm_animals_barn_countryside",
           "ratio": "16:9",
-          "caption": "Başlangıçta çiftlik: diktatörlüğe doğru giden bir ütopya."
+          "caption": "Başlangıçta çiftlik: diktatörlüğe kayan bir ütopya"
         },
         {
           "type": "paragraph",
-          "text": "Yel değirmeni zorunlu seferberliğin sembolü haline geliyor: Domuzlar kendilerini “entelektüel işçi” ilan edip kaynakları tekeline alırken hayvanlar onu inşa etmek için yoruluyor. Beslenmesi gereken “beyin” adına elma ve süt ilk önce liderlere ayrıldı. Yolsuzluk küçük ayrıcalıklarla başlar ve daha sonra norm haline gelir. Kamuya açık yargılamalar ve infazlar 1930'lardaki büyük Stalinist tasfiyeleri anımsatıyor."
+          "text": "Yel değirmeni zorunlu seferberliğin simgesi olur: hayvanlar onu yapmak için tükenir, domuzlar ise “zihin işçisi” olduklarını ilan edip kaynakları kapar. Elma ve süt önce yöneticilere ayrılır, beslenmesi gereken “beyin” adına. Yozlaşma küçük ayrıcalıklarla başlar, sonra kural olur. Açık duruşmalar ve idamlar 1930'ların **büyük Stalin tasfiyeleri**ni hatırlatır."
         }
       ]
     },
@@ -75,35 +75,35 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Orwell, kelimeleri kontrol edenin algılanan gerçekliği de kontrol ettiğini gösteriyor. Domuzlar, geceleri hayvanlar uyurken Emirleri değiştirirler: \"Hiçbir hayvan yatakta uyumayacaktır\" ifadesi \"çarşaflı\" olur. Alkol yasağı “aşırı” notunu alıyor. Kolektif hafıza, kimse orijinalini hatırlamayana kadar kelime kelime silinir."
+          "text": "Orwell, sözcükleri kontrol edenin algılanan gerçekliği de kontrol ettiğini gösterir. Domuzlar Emirleri gece, hayvanlar uyurken değiştirir: “Hiçbir hayvan yatakta yatmayacak” sessizce “çarşaflı bir yatakta yatmayacak” olur. İçki yasağına “aşırıya kaçmadan” notu eklenir. Ortak bellek sözcük sözcük silinir, ta ki kimse aslını hatırlamayana dek."
         },
         {
           "type": "quote",
-          "text": "Bütün hayvanlar eşittir ama bazı hayvanlar diğerlerinden daha eşittir.",
+          "text": "Bütün hayvanlar eşittir, ama bazı hayvanlar diğerlerinden daha eşittir.",
           "attribution": "George Orwell, Hayvan Çiftliği"
         },
         {
           "type": "paragraph",
-          "text": "Zamanının ötesinde bir **[[Yenisöylem]]**: Dil artık iletişim kurmuyor, maskeliyor. Sonunda domuzlar iki ayak üzerinde yürür, giyinir ve çiftçilerle ziyafet çekerler. Domuzdan insana, insandan domuza bakan diğer hayvanlar artık birbirlerinden ayırt edilmiyor. **[[Rus Devrimi]]** tam olarak savaştığını iddia ettiği şeyi üretti."
+          "text": "Vaktinden önce bir **[[Yenisöylem]]**: dil artık iletişim kurmaz, gizler. Sonda domuzlar iki ayak üzerinde yürür, giyinir ve insan çiftçilerle ziyafet çeker. Diğer hayvanlar domuza, sonra insana bakar ve artık ayırt edemez. **[[Rus Devrimi]]** tam olarak savaştığını iddia ettiği şeyi üretmiştir."
         }
       ]
     },
     {
       "id": "course_102_la_ferme_des_animaux_george_orwell_p4",
-      "title": "Güç hakkında evrensel bir uyarı",
+      "title": "İktidar üzerine evrensel bir uyarı",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Eğer kitap öncelikle Rus Devrimi'ni hedefliyorsa, mesajı Sovyet tarihinin ötesine geçiyor. Orwell teslimiyeti, propagandayı ve kişisel hırslar karşısında ideallerin kırılganlığını analiz ediyor. Eleştirel eğitim ve kolektif hafıza olmadan, insanlar özgürlük hayallerinin halk adına iktidarı ele geçirenler tarafından çarpıtıldığını görüyorlar."
+          "text": "Kitap önce Rus Devrimi'ni hedefler, ama mesajı Sovyet tarihinin ötesine geçer. Orwell boyun eğmeyi, propagandayı ve kişisel hırs karşısında ideallerin kırılganlığını inceler. Eleştirel eğitim ve ortak bellek olmadan bir halk, özgürlük düşlerinin kendi adına iktidarı alanlar tarafından çalındığını görür."
         },
         {
           "type": "paragraph",
-          "text": "**30 milyon** kopyadan fazla satılan roman, her yaştan ve her kültürden okuyucuya dokunuyor. Çocukken hayvanlarla ilgili bir hikaye okurduk; Bir yetişkin olarak siyaset bilimi üzerine bir inceleme okuruz. Ders basit ve güncel kalıyor: Kelimeler anlamlarını kaybettiğinde, bunu hemen fiziksel özgürlük takip eder. İşte Orwell, dört yıl sonra **1984**'de en uç noktalara iteceği temaları hazırlıyor."
+          "text": "**30 milyon** kopyadan fazla satan roman, her yaştan ve her kültürden okura ulaşır. Çocukken bir hayvan hikâyesi okursun; yetişkinken bir siyaset incelemesi. Ders yalın ve güncel kalır: sözcükler anlamını yitirince fiziksel özgürlük hemen ardından gider. Orwell, dört yıl sonra **1984**'te uçlara taşıyacağı temaları burada hazırlar."
         },
         {
           "type": "takeaway",
-          "text": "**AHayvan Çiftliği** ihanete uğrayan bir devrimin dilin manipülasyonunu ve hafızaya el konulmasını içerdiğini gösteriyor. Orwell kısa bir masalın bin sayfalık bir konuşmadan daha fazlasını anlatabileceğini kanıtlıyor."
+          "text": "**Hayvan Çiftliği** ihanete uğrayan bir devrimin dilin manipülasyonundan ve belleğin gaspından geçtiğini gösterir. Orwell kısa bir masalın bin sayfalık bir nutuktan daha çok şey söyleyebileceğini kanıtlar."
         }
       ]
     }
