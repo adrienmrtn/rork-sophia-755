@@ -1,14 +1,14 @@
 {
   "id": "course_164_demeter_et_persephone_les_saisons",
   "title": "Deméter e Perséfone",
-  "subtitle": "Por que existem as estações?",
+  "subtitle": "Por que as estações existem",
   "subject": "mythologie",
   "subcategory": "Grécia: os deuses",
-  "description": "Hades sequestra Perséfone. Sua mãe, Deméter, deusa da colheita, deixa a terra morrer de fome. Um mito para explicar as estações.",
+  "description": "Hades raptou Perséfone. A mãe dela, Deméter, deusa das colheitas, deixa a terra morrer de fome. Um mito para explicar as estações.",
   "hero": {
     "image": "demeter_et_persephone",
     "ratio": "16:9",
-    "hook": "Quando uma menina desaparece no subsolo, sua mãe interrompe a colheita. O mundo está descobrindo o inverno."
+    "hook": "Quando uma filha some debaixo da terra, a mãe para as colheitas. O mundo descobre o inverno."
   },
   "sections": [
     {
@@ -18,108 +18,108 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Demeter** é a deusa grega da colheita e da fertilidade. Sua filha **Perséfone** personifica a primavera. A história deles explica : por que a terra morre no inverno e renasce no verão. [[O ciclo agrícola na religião grega]]"
+          "text": "**Deméter** é a deusa grega das colheitas e da fertilidade. A filha dela, **Perséfone**, encarna a primavera. A história das duas explica o [[ciclo agrícola na religião grega]]: por que a terra morre no inverno e renasce no verão."
         },
         {
           "type": "paragraph",
-          "text": "É também um drama de mãe e filha, entre o mundo dos vivos e o dos mortos. Dessa história nasceram os , ritos secretos que prometiam esperança aos iniciados diante da morte. [[Os Mistérios de Elêusis]]"
+          "text": "É também um drama de mãe e filha, entre o mundo dos vivos e o dos mortos. Desse relato nascem os [[Mistérios de Elêusis]], ritos secretos que prometiam aos iniciados uma esperança diante da morte."
         }
       ]
     },
     {
       "id": "course_164_demeter_et_persephone_les_saisons_p1",
-      "title": "Hades sequestra a garota",
+      "title": "Hades rapta a jovem",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Chamamos primeiro Perséphone **Corá**, “a jovem”. Um dia, num prado, ela colhe um narciso. A terra se abre. **Hades**, rei do submundo, aparece em sua carruagem. Com o acordo secreto de **Zeus**, pai da jovem, ele a leva ao Submundo para torná-la sua rainha."
+          "text": "No começo, Perséfone se chama **Core**, “a jovem”. Um dia, num prado, ela colhe um narciso. A terra se abre. **Hades**, rei do mundo subterrâneo, surge em sua carruagem. Com o acordo secreto de **Zeus**, pai da jovem, ele a leva aos Infernos para fazê-la rainha."
         },
         {
           "type": "image",
           "asset": "hades_abduction_persephone_bernini_sculpture",
           "ratio": "4:3",
-          "caption": "O sequestro de Perséfone: a primavera desaparece no subsolo."
+          "caption": "O rapto de Perséfone: a primavera some debaixo da terra"
         },
         {
           "type": "funFact",
-          "text": "Segundo o mito, **Gaïa**, a Terra, criou este narciso por ordem de Zeus. Seu cheiro deve ter aprisionado Perséfone."
+          "text": "Segundo o mito, **Gaia**, a Terra, tinha criado esse narciso por ordem de Zeus. O perfume devia prender Perséfone."
         },
         {
           "type": "paragraph",
-          "text": "Deméter, inconsolável, deixa o Olimpo. Impede que a terra germine. Os campos permanecem áridos. A **forma** ameaça os humanos e, portanto, os sacrifícios oferecidos aos deuses. Zeus deve reagir."
+          "text": "Deméter, inconsolável, deixa o Olimpo. Ela proíbe a terra de germinar. Os campos ficam estéreis. Uma **fome** ameaça os humanos, e portanto os sacrifícios oferecidos aos deuses. Zeus precisa reagir."
         }
       ]
     },
     {
       "id": "course_164_demeter_et_persephone_les_saisons_p2",
-      "title": "Sementes de romã decidem o destino",
+      "title": "As sementes de romã decidem o destino",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Zeus envia **Hermes**, mensageiro dos deuses, para exigir o retorno de Perséfone. Hades finge obedecer. Antes de ela ir embora, ele lhe dá algumas sementes de romã ****. Quem come no reino dos mortos pertence a ele. A armadilha está armada."
+          "text": "Zeus manda **Hermes**, mensageiro dos deuses, exigir o retorno de Perséfone. Hades finge obedecer. Antes que ela parta, oferece algumas **sementes de romã**. Quem come no reino dos mortos lhe pertence. A armadilha está armada."
         },
         {
           "type": "paragraph",
-          "text": "É necessário um compromisso. Perséfone passará parte do ano com Hades, o resto com sua mãe. Ao subir novamente, Deméter torna a natureza verde novamente: é primavera e verão. Quando ela desce, a deusa da colheita retira sua graça: é outono e inverno."
+          "text": "Um acordo se impõe. Perséfone passará parte do ano com Hades, o resto com a mãe. Quando ela sobe, Deméter faz a natureza verdejar de novo: é a primavera e o verão. Quando ela desce, a deusa das colheitas retira a graça: é o outono e o inverno."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1",
-              "title": "O sequestro",
-              "detail": "Hades leva Perséfone para o subsolo."
+              "title": "O rapto",
+              "detail": "Hades leva Perséfone para debaixo da terra."
             },
             {
               "date": "2",
               "title": "A fome",
-              "detail": "Deméter interrompe o crescimento das plantas."
+              "detail": "Deméter para o crescimento das plantas."
             },
             {
               "date": "3",
               "title": "A romã",
-              "detail": "Perséfone come sementes no submundo."
+              "detail": "Perséfone come sementes nos Infernos."
             },
             {
               "date": "4",
-              "title": "Compartilhamento",
-              "detail": "Ela divide o ano entre mãe e marido."
+              "title": "A partilha",
+              "detail": "Ela divide o ano entre a mãe e o esposo."
             },
             {
               "date": "5",
               "title": "As estações",
-              "detail": "Suas idas e vindas ritmam o ciclo da colheita."
+              "detail": "O vai e volta dela ritma o ciclo das culturas."
             }
           ]
         },
         {
           "type": "funFact",
-          "text": "Algumas versões dizem que Perséfone não come essas sementes por acidente. Curiosidade ou apego emergente: a história também se torna uma entrada na vida adulta."
+          "text": "Algumas versões dizem que Perséfone não come essas sementes por acaso. Curiosidade ou apego que nasce: o relato vira também uma entrada na vida adulta."
         }
       ]
     },
     {
       "id": "course_164_demeter_et_persephone_les_saisons_p3",
-      "title": "Em Elêusis, esperança depois da noite",
+      "title": "Em Elêusis, a esperança depois da noite",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Durante suas andanças, Deméter para em **Eleusis**, perto de Atenas, disfarçada de velha. Acolhida pela família real, ela acaba revelando sua natureza divina e manda construir um templo. Nascem os . [[Os Mistérios de Elêusis]]"
+          "text": "Durante a errância, Deméter para em **Elêusis**, perto de Atenas, disfarçada de velha. Acolhida pela família real, ela acaba revelando sua natureza divina e manda construir um templo. Nascem os [[Mistérios de Elêusis]]."
         },
         {
           "type": "paragraph",
-          "text": "Os iniciados caminham nove dias, jejuam, bebem **kykeon**, um drink de cevada e hortelã. Na , uma enorme sala de iniciação, a luz brilha depois da escuridão. Os objetos sagrados são ali revelados, no maior sigilo. [[Telesterion]]"
+          "text": "Os iniciados caminham nove dias, jejuam, bebem o **cíceon**, bebida de cevada e hortelã. No [[Telesterion]], imensa sala de iniciação, a luz explode depois da escuridão. Ali se revelam objetos sagrados, no mais absoluto segredo."
         },
         {
           "type": "funFact",
-          "text": "Alguns pesquisadores modernos acreditam que o kykeon continha cravagem, um cogumelo alucinógeno. Isso explicaria as visões relatadas pelos iniciados."
+          "text": "Alguns pesquisadores modernos pensam que o cíceon continha cravagem do centeio, um fungo alucinógeno. Isso explicaria as visões relatadas pelos iniciados."
         },
         {
           "type": "paragraph",
-          "text": "O rito imita a jornada da deusa. Passar pela morte da natureza com Deméter, depois renascer com Perséfone: os participantes acreditavam que teriam um destino melhor na vida após a morte."
+          "text": "O rito imita a viagem da deusa. Atravessar a morte da natureza com Deméter, depois renascer com Perséfone: os participantes acreditavam ganhar um destino melhor no além."
         }
       ]
     },
@@ -130,15 +130,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Para os gregos, o grão de trigo enterrado na terra sofreu o mesmo destino de Perséfone. Ele desaparece no subsolo para retornar como caule. O mito liga agricultura, morte e renascimento."
+          "text": "Para os gregos, o grão de trigo enterrado no solo vive o mesmo destino de Perséfone. Ele some debaixo da terra para voltar como planta. O mito liga agricultura, morte e renascimento."
         },
         {
           "type": "paragraph",
-          "text": "Ele também fala do casamento antigo, muitas vezes vivido como uma partida dolorosa: a jovem deixa a mãe para ingressar em outro lar. Entre Hades e Deméter, o acordo final mantém unidos os opostos: sombra e luz, morte e vida."
+          "text": "Ele fala também do casamento antigo, muitas vezes vivido como uma partida dolorosa: a jovem deixa a mãe para entrar em outro lar. Entre Hades e Deméter, o acordo final segura os contrários juntos: sombra e luz, morte e vida."
         },
         {
           "type": "takeaway",
-          "text": "A permanência de **Perséfone** no Submundo pontua as estações: sua ausência provoca o luto de **Démeter** (outono-inverno), seu retorno faz renascer as plantas (primavera-verão)."
+          "text": "A estadia de **Perséfone** nos Infernos ritma as estações: a ausência provoca o luto de **Deméter** (outono-inverno), o retorno faz as plantas renascerem (primavera-verão)."
         }
       ]
     }

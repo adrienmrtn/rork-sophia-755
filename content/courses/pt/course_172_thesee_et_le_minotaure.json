@@ -4,11 +4,11 @@
   "subtitle": "O fio, o monstro, as velas",
   "subject": "mythologie",
   "subcategory": "Grécia: os heróis",
-  "description": "Teseu mata o Minotauro usando o fio de Ariadne. Mas ele se esquece de trocar as velas: seu pai, Egeu, se joga no mar, que ainda leva seu nome.",
+  "description": "Teseu mata o Minotauro graças ao fio de Ariadne. Mas esquece de trocar as velas: o pai Egeu se joga ao mar, que ainda leva o nome dele.",
   "hero": {
     "image": "thesee_et_le_minotaure",
     "ratio": "16:9",
-    "hook": "Um monstro em um labirinto. Um tópico para sair. Velas esquecidas que batizam um mar."
+    "hook": "Um monstro num labirinto. Um fio para sair. Velas esquecidas que batizam um mar."
   },
   "sections": [
     {
@@ -18,82 +18,82 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Teseu**, herói fundador de Atenas, confronta o **Minotauro**, uma criatura meio homem meio touro escondida no  de Creta. A história combina coragem, astúcia romântica e tragédia familiar. [[Labirinto]]"
+          "text": "**Teseu**, herói fundador de Atenas, enfrenta o **Minotauro**, criatura metade homem, metade touro, escondida no [[Labirinto]] de Creta. O relato mistura coragem, astúcia amorosa e tragédia familiar."
         },
         {
           "type": "paragraph",
-          "text": "Ao matar o monstro, Teseu liberta Atenas de um tributo sangrento. Mas um detalhe esquecido, velas pretas em vez de brancas, custará a vida do seu pai e dará o seu nome ao Mar Egeu."
+          "text": "Ao matar o monstro, Teseu liberta Atenas de um tributo sangrento. Mas um detalhe esquecido, velas pretas no lugar das brancas, vai custar a vida do pai e dar nome ao mar Egeu."
         }
       ]
     },
     {
       "id": "course_172_thesee_et_le_minotaure_p1",
-      "title": "O Minotauro e a homenagem de Atenas",
+      "title": "O Minotauro e o tributo de Atenas",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "O rei **Minos** de Creta se recusa a sacrificar um touro branco a **Poseidon**, deus dos mares. Para se vingar, Poseidon inspira na Rainha **Pasiphaé** a paixão pelo animal. Nasce o Minotauro. Minos incumbe o inventor  de construir uma prisão sem saída: o [[Labirinto]]."
+          "text": "O rei **Minos** de Creta recusa sacrificar um touro branco a **Poseidon**, deus dos mares. Para se vingar, Poseidon inspira à rainha **Pasífae** uma paixão pelo animal. Nasce o Minotauro. Minos encarrega o inventor [[Dédalo]] de construir uma prisão sem saída: o Labirinto."
         },
         {
           "type": "image",
           "asset": "theseus_minotaur_cretan_labyrinth_painting",
           "ratio": "4:3",
-          "caption": "O Minotauro, trancado no Labirinto de Creta."
+          "caption": "O Minotauro, trancado no Labirinto cretense"
         },
         {
           "type": "paragraph",
-          "text": "Creta domina então o mar: um . Depois de uma guerra perdida, Atenas deve entregar a cada nove anos **sete rapazes e sete moças** como alimento para o monstro. Na terceira entrega, **Teseu**, filho do Rei **Egeu**, se voluntaria. [[Talassocracia]]"
+          "text": "Creta então domina o mar: uma [[Talassocracia]]. Depois de uma guerra perdida, Atenas deve entregar a cada nove anos **sete rapazes e sete moças** para o monstro devorar. Na terceira entrega, **Teseu**, filho do rei **Egeu**, se apresenta como voluntário."
         },
         {
           "type": "funFact",
-          "text": "Egeu e Teseu concordam em um sinal: **branco** navega se o herói retornar vivo, **preto navega** se estiver morto. Esse detalhe decidirá um drama."
+          "text": "Egeu e Teseu combinam um sinal: velas **brancas** se o herói voltar vivo, velas **pretas** se ele estiver morto. Esse detalhe vai decidir um drama."
         }
       ]
     },
     {
       "id": "course_172_thesee_et_le_minotaure_p2",
-      "title": "Pão ralado",
+      "title": "O fio de Ariadne",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Em Creta, **Arianne**, filha de Minos, apaixona-se por Teseu. Ela sabe que a força não é suficiente no Labirinto. Com a ajuda de Dédalo, ela lhe dá um novelo de lã: . Ele o prende na entrada e desenrola o fio enquanto avança. [[Pão ralado]]"
+          "text": "Em Creta, **Ariadne**, filha de Minos, se apaixona por Teseu. Ela sabe que a força não basta no Labirinto. Com a ajuda de Dédalo, entrega a ele um novelo de lã: [[O fio de Ariadne]]. Ele amarra o fio na entrada e o desenrola ao avançar."
         },
         {
           "type": "image",
           "asset": "ariadne_thread_theseus_labyrinth_painting",
           "ratio": "4:3",
-          "caption": "Ariadne dá a Teseu o fio que salvará sua vida."
+          "caption": "Ariadne entrega a Teseu o fio que vai salvar a vida dele"
         },
         {
           "type": "paragraph",
-          "text": "Teseu mata o Minotauro e rebobina o fio para sair. Ele foge com os jovens atenienses e Ariadne. Mas na ilha de **Naxos**, ele a deixa dormindo. Alguns dizem que o deus **Dionísio** a queria como esposa. Ariadne, desesperada e depois divinizada, recebe uma coroa de ouro que se tornou uma constelação."
+          "text": "Teseu mata o Minotauro e depois recolhe o fio para sair. Foge com os jovens atenienses e com Ariadne. Mas na ilha de **Naxos**, ele a abandona adormecida. Alguns dizem que o deus **Dionísio** a queria por esposa. Ariadne, desesperada e depois divinizada, recebe uma coroa de ouro que vira constelação."
         }
       ]
     },
     {
       "id": "course_172_thesee_et_le_minotaure_p3",
-      "title": "As velas negras do Cabo Sounion",
+      "title": "As velas pretas do cabo Súnion",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "O retorno deve ser uma celebração. Embriagado pela vitória ou perturbado pelo abandono de Ariadne, Teseu esquece-se de içar as velas brancas. O navio se aproxima de Atenas sob velas negras."
+          "text": "A volta deveria ser festa. Embriagado pela vitória ou perturbado pelo abandono de Ariadne, Teseu esquece de içar as velas brancas. O navio se aproxima de Atenas sob velas pretas."
         },
         {
           "type": "image",
           "asset": "cape_sounion_aegean_sea_cliff_sunset",
           "ratio": "4:3",
-          "caption": "Cabo Sunião, de onde Egeu assistiu ao retorno de seu filho."
+          "caption": "O cabo Súnion, de onde Egeu vigiava o retorno do filho"
         },
         {
           "type": "paragraph",
-          "text": "Em **Cabo Sunião**, o velho rei Aegeus examina o horizonte. Ele só vê a escuridão do luto. Convencido de que seu filho está morto, ele se joga do penhasco. Desde então, o mar foi nomeado: **AMar Egeu**. Teseu chega rei... e órfão por sua própria negligência."
+          "text": "No **cabo Súnion**, o velho rei Egeu esquadrinha o horizonte. Só vê o preto do luto. Convencido de que o filho morreu, joga-se do penhasco. O mar leva desde então o nome dele: o **mar Egeu**. Teseu desembarca rei e órfão por negligência própria."
         },
         {
           "type": "funFact",
-          "text": "O “navio de Teseu” tornou-se um paradoxo filosófico: se substituirmos todas as tábuas uma por uma, ainda será o mesmo barco?"
+          "text": "O “navio de Teseu” virou um paradoxo filosófico: se formos trocando as tábuas uma após a outra, ainda é o mesmo barco?"
         }
       ]
     },
@@ -104,15 +104,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Coroado, Teseu torna-se um rei organizador. A ele é atribuído : a unificação das cidades da Ática em torno de Atenas. Criou os , grandes festivais da cidade. O poder combina com o certo. [[Sinecismo]] [[Panateneias]]"
+          "text": "Coroado, Teseu vira um rei organizador. Atribuem a ele o [[Sinoicismo]]: a unificação das aldeias da Ática em torno de Atenas. Ele institui as [[Panateneias]], grandes festas da cidade. A força se alia ao direito."
         },
         {
           "type": "paragraph",
-          "text": "Seu reinado inclui outras aventuras, como a luta contra o . Mas o Labirinto mantém a sua marca: saber desvendar o inextricável, permanecendo vulnerável ao esquecimento. Teseu forja a grandeza de Atenas a partir das cinzas de uma tragédia familiar. [[Amazonas]]"
+          "text": "O reinado conta outras aventuras, como o combate contra as [[Amazonas]]. Mas o Labirinto continua a marca dele: saber desatar o inextricável e, ainda assim, ficar vulnerável ao esquecimento. Teseu forja a grandeza de Atenas sobre as cinzas de um drama familiar."
         },
         {
           "type": "takeaway",
-          "text": "**Teseu** mata o **Minotauro** graças ao tópico de **Arianne**. Ao esquecer de trocar as velas, provoca o suicídio de seu pai **Egeu**, que dá nome ao Mar Egeu."
+          "text": "**Teseu** mata o **Minotauro** graças ao fio de **Ariadne**. Ao esquecer de trocar as velas, provoca o suicídio do pai **Egeu**, que dá o nome ao mar Egeu."
         }
       ]
     }
