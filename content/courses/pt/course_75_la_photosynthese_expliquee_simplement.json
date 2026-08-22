@@ -1,14 +1,14 @@
 {
   "id": "course_75_la_photosynthese_expliquee_simplement",
-  "title": "Fotossíntese explicada de forma simples",
+  "title": "A fotossíntese explicada de um jeito simples",
   "subtitle": "Plantas e energia",
   "subject": "sciences",
   "subcategory": "A Terra e o Universo",
-  "description": "As plantas fazem algo extraordinário: cozinham o açúcar com luz, água e ar. E eles nos dão oxigênio de presente.",
+  "description": "As plantas fazem uma coisa extraordinária: cozinham açúcar com luz, água e ar. E ainda nos dão o oxigênio de presente.",
   "hero": {
     "image": "la_photosynthese_expliquee_simplement",
     "ratio": "16:9",
-    "hook": "Uma folha é uma cozinha solar: luz, água, ar... e aqui está o açúcar."
+    "hook": "Uma folha é uma cozinha solar: luz, água, ar, e pronto, açúcar."
   },
   "sections": [
     {
@@ -18,55 +18,55 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Imagine uma planta em miniatura em cada folha. São necessários três ingredientes mundanos: **luz do Sol**, **água** das raízes e **CO₂** do ar. Sai com **açúcar** para crescer e libera **oxigênio**."
+          "text": "Imagine uma fábrica minúscula em cada folha. Ela pega três ingredientes banais: a **luz do Sol**, a **água** das raízes e o **CO₂** do ar. Dela saem **açúcar** para crescer e **oxigênio** jogado para fora."
         },
         {
           "type": "paragraph",
-          "text": "Esse feito é chamado de **sessão de fotos**. Sem ele, não há florestas, não há oxigênio respirável, quase não há vida complexa na Terra."
+          "text": "Esse feito se chama **fotossíntese**. Sem ele, sem florestas, sem oxigênio respirável, quase sem vida complexa na Terra."
         }
       ]
     },
     {
       "id": "course_75_la_photosynthese_expliquee_simplement_p1",
-      "title": "Onde isso acontece na folha?",
+      "title": "Onde isso acontece na folha",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Na célula vegetal, organelas verdes, os **cloroplastos**, abrigam o . Este pigmento captura principalmente o azul e o vermelho da luz. O verde volta: é por isso que as folhas nos parecem verdes. [[A clorofila]]"
+          "text": "Na célula vegetal, umas organelas verdes, os **cloroplastos**, abrigam a [[clorofila]]. Esse pigmento capta sobretudo o azul e o vermelho da luz. Já o verde é refletido: por isso as folhas nos parecem verdes."
         },
         {
           "type": "image",
           "asset": "leaf_photosynthesis_sunlight_chloroplasts",
           "ratio": "auto",
-          "caption": "As folhas capturam a luz solar para a fotossíntese."
+          "caption": "As folhas captam a luz do Sol para a fotossíntese"
         },
         {
           "type": "paragraph",
-          "text": "A equação simples: CO₂ + água + luz → açúcar + oxigênio. O gás entra por minúsculos poros, o . A água sobe das raízes. O açúcar vira madeira, fruta, raízes; o oxigênio vai para o ar. [[estômatos]]"
+          "text": "A equação simples: CO₂ + água + luz → açúcar + oxigênio. O gás entra por poros minúsculos, os [[estômatos]]. A água sobe das raízes. O açúcar vira madeira, frutos, raízes; o oxigênio parte para o ar."
         },
         {
           "type": "funFact",
-          "text": "A clorofila “recusa” o verde. Ela prefere o azul e o vermelho, mais eficazes para excitar seus elétrons e lançar a máquina de energia."
+          "text": "A clorofila “recusa” o verde. Ela prefere o azul e o vermelho, mais eficazes para excitar seus elétrons e ligar a máquina de energia."
         }
       ]
     },
     {
       "id": "course_75_la_photosynthese_expliquee_simplement_p2",
-      "title": "Duas etapas: capturar e depois criar",
+      "title": "Dois tempos: captar, depois fabricar",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Primeiro, a fase **luz**. A luz quebra as moléculas de água. O oxigênio escapa. A energia é armazenada em duas “baterias” químicas, a **ATP** e a **NADPH**."
+          "text": "Primeiro, a **fase luminosa**. A luz quebra moléculas de água. O oxigênio escapa. A energia fica guardada em duas “pilhas” químicas, o **ATP** e o **NADPH**."
         },
         {
           "type": "paragraph",
-          "text": "Em seguida, vem a fase de fabricação do ****, o [[O ciclo de Calvin]], em homenagem ao címico**Melvin Calvin**. Com a energia das baterias, a planta transforma carbono do CO₂ em glicose. Não há necessidade de luz solar direta nesta fase, mas depende inteiramente do que a luz produziu antes."
+          "text": "Depois, a **fase de fabricação**, o [[ciclo de Calvin]], nomeado em homenagem ao químico **Melvin Calvin**. Com a energia das pilhas, a planta monta o carbono do CO₂ em glicose. Não precisa de sol direto nessa etapa, mas ela depende por completo do que a luz produziu antes."
         },
         {
           "type": "funFact",
-          "text": "Para seguir o caminho do carbono na folha, Calvin usou isótopos radioativos provenientes de pesquisas sobre a bomba atômica. Prêmio Nobel em **1961**."
+          "text": "Para seguir o caminho do carbono na folha, Calvin usou isótopos radioativos vindos das pesquisas da bomba atômica. Prêmio Nobel em **1961**."
         }
       ]
     },
@@ -77,34 +77,34 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Cerca de **2,4 bilhões de anos atrás**, bactérias fotossintéticas, **cianobactérias**, começaram a liberar oxigênio em massa. Este é o **Ótima oxidação**. Para muitas organizações da época, era um veneno."
+          "text": "Há cerca de **2,4 bilhões de anos**, bactérias fotossintéticas, as **cianobactérias**, passam a soltar oxigênio em massa. É a **Grande Oxidação**. Para muitos organismos da época, aquilo era um veneno."
         },
         {
           "type": "paragraph",
-          "text": "Então o oxigênio permitiu a camada de ozônio e uma respiração muito mais eficiente. O ar que respiramos é, basicamente, o “resíduo” de bilhões de anos de fotossíntese."
+          "text": "Depois o oxigênio permitiu a camada de ozônio e uma respiração bem mais eficiente. O ar que respiramos é, no fundo, o “lixo” de bilhões de anos de fotossíntese."
         },
         {
           "type": "funFact",
-          "text": "Cerca de **metade** do oxigênio da Terra vem do fitoplâncton nos oceanos, não apenas das florestas."
+          "text": "Cerca de **metade** do oxigênio da Terra vem do fitoplâncton dos oceanos, não só das florestas."
         }
       ]
     },
     {
       "id": "course_75_la_photosynthese_expliquee_simplement_p4",
-      "title": "Uma produção modesta, um papel imenso",
+      "title": "Um rendimento modesto, um papel imenso",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Uma folha converte apenas **1 em 3%** da energia solar recebida em biomassa. À escala global, isto é suficiente para alimentar as cadeias alimentares e absorver enormes quantidades de CO₂."
+          "text": "Uma folha converte só **1 a 3%** da energia solar recebida em biomassa. Na escala do planeta, isso ainda assim basta para alimentar as cadeias alimentares e absorver enormes quantidades de CO₂."
         },
         {
           "type": "paragraph",
-          "text": "Daí o interesse pelas florestas, oceanos… e até pela fotossíntese artificial para o clima. Uma lesma do mar, *Elysia clorótica*, chega a “roubar” cloroplastos de algas para viver um pouco de energia solar."
+          "text": "Daí o interesse das florestas, dos oceanos e até da fotossíntese artificial para o clima. Uma lesma-do-mar, *Elysia chlorotica*, chega a “roubar” cloroplastos das algas para viver um pouco à energia solar."
         },
         {
           "type": "takeaway",
-          "text": "A fotossíntese transforma luz, água e CO₂ em açúcar e regenera oxigênio. É a cozinha solar que está na base de quase toda a vida."
+          "text": "A fotossíntese transforma luz, água e CO₂ em açúcar, e regenera o oxigênio. É a cozinha solar na base de quase toda a vida."
         }
       ]
     }

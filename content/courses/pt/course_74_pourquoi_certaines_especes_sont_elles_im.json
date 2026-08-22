@@ -4,11 +4,11 @@
   "subtitle": "Biologia e longevidade",
   "subject": "sciences",
   "subcategory": "A Terra e o Universo",
-  "description": "Algumas espécies parecem desafiar a morte. Águas-vivas que rejuvenescem, hidratam sem envelhecer: o segredo está na reparação celular.",
+  "description": "Algumas espécies parecem desafiar a morte. Medusas que rejuvenescem, hidras sem envelhecimento: o segredo está no conserto das células.",
   "hero": {
     "image": "pourquoi_certaines_especes_sont_immortelles",
     "ratio": "16:9",
-    "hook": "O envelhecimento não é uma lei absoluta da vida. Algumas espécies encontraram a falha."
+    "hook": "Envelhecer não é uma lei absoluta da vida. Algumas espécies acharam a falha."
   },
   "sections": [
     {
@@ -18,70 +18,70 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Envelhecemos e depois morremos. No entanto, a água-viva  pode retornar ao estágio juvenil e começar de novo. O molusco **Ming** viveu **507 anos**. O envelhecimento não é, portanto, uma regra universal: é um processo que certas espécies contornam. [[Turritopsis dohrnii]]"
+          "text": "Nós envelhecemos e depois morremos. Mesmo assim, a medusa [[Turritopsis dohrnii]] pode voltar a um estágio jovem e recomeçar. O molusco **Ming** viveu **507 anos**. Envelhecer, então, não é regra universal: é um processo que certas espécies contornam."
         },
         {
           "type": "paragraph",
-          "text": "Ao estudar essas exceções, os pesquisadores buscam menos a imortalidade da ficção científica do que truques da vida para reparar melhor as células."
+          "text": "Ao estudar essas exceções, os pesquisadores buscam menos a imortalidade de ficção científica do que os truques da vida para consertar melhor as células."
         }
       ]
     },
     {
       "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p1",
-      "title": "Por que nossas células se desgastam",
+      "title": "Por que nossas células se gastam",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Envelhecer não é apenas “desgastar-se” como uma máquina. É um desequilíbrio: os danos acumulam-se mais rapidamente do que as reparações."
+          "text": "Envelhecer não é só “desgastar-se” como uma máquina. É um desequilíbrio: os danos se acumulam mais rápido do que os consertos."
         },
         {
           "type": "image",
           "asset": "chromosome_dna_telomere_aging_cell",
           "ratio": "auto",
-          "caption": "Os telômeros, nas extremidades dos cromossomos, encurtam a cada divisão celular."
+          "caption": "Os telômeros, nas pontas dos cromossomos, encolhem a cada divisão celular"
         },
         {
           "type": "paragraph",
-          "text": "Nas extremidades dos nossos cromossomos,  agem como pontas de cadarços. A cada divisão celular, eles encurtam. Muito curto, a célula para de se dividir. Ao mesmo tempo, o metabolismo produz moléculas agressivas que danificam as proteínas e o DNA. As células “zumbis” então se acumulam e inflamam os tecidos ao seu redor. [[Os telómeros]]"
+          "text": "Nas pontas dos nossos cromossomos, os [[telómeros]] agem como as capinhas de um cadarço. A cada divisão celular, eles encolhem. Curto demais, a célula para de se dividir. Ao mesmo tempo, o metabolismo produz moléculas agressivas que danificam proteínas e DNA. Células “zumbis” então se acumulam e inflamam os tecidos ao redor."
         },
         {
           "type": "funFact",
-          "text": "O tardígrado, um minúsculo “urso d’água”, quase pode deixar de viver ao secar. Seu metabolismo cai para **99,99%**, e ele sobrevive ao vácuo do espaço ou à radiação extrema sem realmente envelhecer."
+          "text": "O tardígrado, um minúsculo “ursinho-d'água”, quase para de viver ao se secar. Seu metabolismo cai **99,99%**, e ele sobrevive ao vácuo espacial ou a radiações extremas sem de fato envelhecer."
         }
       ]
     },
     {
       "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p2",
-      "title": "Campeões que evitam a morte",
+      "title": "Os campeões que contornam a morte",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "O [[Turritopsis dohrnii]] ferido ou faminto transforma suas células adultas em células “brancas” e depois se torna um pólipo novamente, o estágio inicial. Este retrocesso, denominado transdiferenciação, confere-lhe uma forma de **imortalidade biológica**."
+          "text": "A [[Turritopsis dohrnii]] ferida ou faminta transforma suas células adultas em células “em branco” e volta a ser um pólipo, o estágio inicial. Esse recuo, chamado transdiferenciação, dá a ela uma forma de **imortalidade biológica**."
         },
         {
           "type": "paragraph",
-          "text": "O **hidra**, um pequeno pólipo de água doce, renova todo o seu corpo graças a um fornecimento quase ilimitado de . Ela não mostra sinais mensuráveis ​​de envelhecimento. A baleia-da-groenlândia pode ultrapassar **200 anos** graças ao reparo ultraeficiente do DNA e à forte resistência ao câncer. [[células-tronco]]"
+          "text": "A **hidra**, um pequeno pólipo de água doce, renova o corpo inteiro graças a um estoque quase sem fim de [[células-tronco]]. Ela não mostra nenhum sinal mensurável de envelhecimento. A baleia-da-groenlândia, por sua vez, pode passar de **200 anos** graças a um conserto de DNA ultraeficiente e a uma forte resistência ao câncer."
         },
         {
           "type": "funFact",
-          "text": "As lagostas produzem telomerase em todo o corpo: seus telômeros não encurtam. Eles crescem ao longo da vida e morrem especialmente quando a muda se torna muito cara."
+          "text": "As lagostas fabricam telomerase no corpo todo: os telômeros delas não encolhem. Elas crescem a vida inteira e morrem sobretudo quando a muda fica cara demais."
         }
       ]
     },
     {
       "id": "course_74_pourquoi_certaines_especes_sont_elles_im_p3",
-      "title": "O que a medicina aprende com isso",
+      "title": "O que a medicina aproveita",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A ideia não é mais apenas tratar o Alzheimer ou a osteoartrite um por um, mas atacar o próprio envelhecimento. **senolíticos** visam eliminar células zumbis. Nos animais, isso já rejuvenesceu certas funções."
+          "text": "A ideia já não é só tratar Alzheimer ou artrose um por um, e sim atacar o próprio envelhecimento. Os **senolíticos** visam eliminar as células zumbi. Em animais, isso já rejuvenesceu algumas funções."
         },
         {
           "type": "paragraph",
-          "text": "Limitar calorias sem desnutrição também ativa vias de reparação, nomeadamente ao desacelerar , uma proteína que acelera o crescimento... e por vezes o declínio. Outros laboratórios estão tentando “dar corda no relógio” das células, como as águas-vivas, sem transformá-las em tumores. [[mTOR]]"
+          "text": "Limitar as calorias sem desnutrição também liga vias de conserto, em especial ao frear [[mTOR]], uma proteína que acelera o crescimento, e às vezes o declínio. Outros laboratórios tentam “voltar o relógio” das células, como a medusa, sem que elas virem tumores."
         }
       ]
     },
@@ -92,15 +92,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Até mesmo uma espécie biologicamente imortal morre devido a predadores, doenças ou desastres. A morte continua a ser uma força motriz da evolução: dá lugar a gerações novas e mais bem adaptadas."
+          "text": "Mesmo uma espécie biologicamente imortal morre de predador, doença ou catástrofe. A morte continua sendo um motor da evolução: ela abre espaço para gerações novas, mais bem adaptadas."
         },
         {
           "type": "paragraph",
-          "text": "Para os humanos, o desafio realista não é viver para sempre, mas prolongar os anos **com boa saúde**. A longevidade transformada em tecnologia também levantaria enormes questões de equidade e recursos."
+          "text": "Para o ser humano, o alvo realista não é viver para sempre, e sim alongar os anos **com saúde**. Uma longevidade virada tecnologia também levantaria questões enormes de justiça e de recursos."
         },
         {
           "type": "takeaway",
-          "text": "A imortalidade biológica depende da reparação ou reinicialização das células. A água-viva Turritopsis dohrnii está ficando mais jovem; a hidra se renova constantemente. O envelhecimento não é uma fatalidade universal."
+          "text": "A imortalidade biológica se apoia no conserto ou na reinicialização das células. A medusa Turritopsis dohrnii rejuvenesce; a hidra se renova sem parar. Envelhecer não é um destino universal."
         }
       ]
     }

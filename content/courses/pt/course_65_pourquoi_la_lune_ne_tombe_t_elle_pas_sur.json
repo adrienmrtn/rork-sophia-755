@@ -4,11 +4,11 @@
   "subtitle": "Órbita e gravidade",
   "subject": "sciences",
   "subcategory": "A Terra e o Universo",
-  "description": "A Lua está constantemente caindo em direção à Terra. Ela simplesmente sente falta disso todas as vezes. Isso é exatamente o que é uma órbita.",
+  "description": "A Lua cai em direção à Terra o tempo todo. Ela só erra o alvo toda vez. É exatamente isso, uma órbita.",
   "hero": {
     "image": "pourquoi_la_lune_ne_tombe_pas",
     "ratio": "16:9",
-    "hook": "A Lua está caindo em nossa direção. Ela simplesmente sente falta da Terra a cada passo."
+    "hook": "A Lua cai em direção a nós. Ela só erra a Terra a cada volta."
   },
   "sections": [
     {
@@ -18,40 +18,40 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Se a gravidade da Terra atrai a Lua, por que ela não colide conosco? A resposta parece bizarra: a Lua **está de fato caindo** em direção à Terra. Ela simplesmente sente falta disso a cada momento."
+          "text": "Se a gravidade terrestre puxa a Lua, por que ela não se espatifa em nós? A resposta parece estranha: a Lua **cai** mesmo em direção à Terra. Ela só erra o alvo a cada instante."
         },
         {
           "type": "paragraph",
-          "text": "Este equilíbrio entre queda e velocidade lateral é um **orbital**, uma trajetória curva em torno de uma estrela. O físico inglês **Isaac Newton** foi o primeiro a unificar a queda de uma maçã e o movimento das estrelas com a mesma ideia."
+          "text": "Esse equilíbrio entre queda e velocidade lateral é uma **órbita**, uma trajetória curva ao redor de um astro. O físico inglês **Isaac Newton** foi o primeiro a juntar a queda de uma maçã e o movimento dos astros com a mesma ideia."
         },
         {
           "type": "funFact",
-          "text": "Se você pesasse **60 kg** na Terra, pesaria apenas cerca de **10** na Lua: sua gravidade é seis vezes mais fraca."
+          "text": "Se você pesasse **60 kg** na Terra, pesaria só uns **10** na Lua: a gravidade de lá é seis vezes mais fraca."
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p1",
-      "title": "O cânone imaginário de Newton",
+      "title": "O canhão imaginário de Newton",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Newton imagina um canhão no topo de uma montanha tão alto que emergiria da atmosfera. Lançamos uma bola horizontalmente. Com pouca potência, cai rapidamente. Com mais força, ele vai mais longe."
+          "text": "Newton imagina um canhão no topo de uma montanha tão alta que sairia da atmosfera. Dispara-se uma bala na horizontal. Com pouca força, ela cai logo. Com mais força, vai mais longe."
         },
         {
           "type": "image",
           "asset": "newton_cannonball_orbit_thought_experiment",
           "ratio": "auto",
-          "caption": "O experimento mental da bala de canhão de Newton: a chave para entender a órbita."
+          "caption": "O experimento mental da bala de canhão de Newton: a chave para entender a órbita"
         },
         {
           "type": "paragraph",
-          "text": "A uma velocidade específica, chamada , algo notável acontece. À medida que a bola cai, a Terra, que é redonda, curva-se sob ela na mesma proporção. O projétil cai… sem nunca tocar o chão. Ele está em queda livre permanente ****, puxado pela gravidade sem bater. [[Velocidade do satélite]]"
+          "text": "A uma velocidade precisa, chamada [[Velocidade de orbitagem]], acontece algo notável. Enquanto a bala cai, a Terra, que é redonda, se curva sob ela no mesmo ritmo. O projétil cai sem nunca tocar o solo. Ele está em **queda livre permanente**, puxado pela gravidade sem se espatifar."
         },
         {
           "type": "paragraph",
-          "text": "A Lua faz a mesma coisa. Ela tem velocidade lateral suficiente para transformar uma queda em um loop. Sem essa velocidade, ele mergulharia direto em nossa direção."
+          "text": "A Lua faz a mesma coisa. Ela tem velocidade de lado o bastante para transformar uma queda em volta. Sem essa velocidade, cairia reto em nós."
         }
       ]
     },
@@ -62,19 +62,19 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A Lua orbita a aproximadamente **384.000 km**. Sua velocidade lateral é de aproximadamente **1 km/s**. Se parasse repentinamente, travaria em poucos dias. Se a gravidade desaparecesse repentinamente, ela seguiria em linha reta no espaço, de acordo com o princípio de [[Inércia]]: um corpo mantém sua velocidade se não for desacelerado."
+          "text": "A Lua orbita a cerca de **384.000 km**. Sua velocidade lateral é de uns **1 km/s**. Se parasse na hora, se espatifaria em poucos dias. Se a gravidade sumisse de uma vez, ela partiria em linha reta no espaço, segundo o princípio da [[Inércia]]: um corpo guarda a velocidade se nada o freia."
         },
         {
           "type": "paragraph",
-          "text": " diz que toda massa atrai todas as outras massas, e que a atração diminui com a distância, mais precisamente com o quadrado da distância. Quanto mais próximo um satélite estiver, mais rápido ele deverá ir para evitar cair. [[A gravitação universal de Newton]]"
+          "text": "A [[Gravitação universal de Newton]] diz que toda massa atrai toda outra massa, e que a atração diminui com a distância, mais precisamente com o quadrado da distância. Quanto mais perto está um satélite, mais rápido ele precisa ir para não cair."
         },
         {
           "type": "funFact",
-          "text": "A Estação Espacial Internacional, a apenas **400 km** de altitude, está viajando a cerca de **28.000 km/h**. Ele dá uma volta ao redor da Terra em **90 minutos**. A Lua, mais distante, leva **27,3 dias**."
+          "text": "A Estação Espacial Internacional, a só **400 km** de altitude, voa a cerca de **28.000 km/h**. Dá a volta na Terra em **90 minutos**. A Lua, mais longe, leva **27,3 dias**."
         },
         {
           "type": "paragraph",
-          "text": "Portanto, a órbita não é mágica. É um compromisso constante entre “Estou caindo” e “Estou me movendo rápido demais para acertar”."
+          "text": "A órbita, então, não é mágica. É um acordo permanente entre “eu caio” e “avanço rápido demais para tocar”."
         }
       ]
     },
@@ -85,34 +85,34 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A órbita não é fixa. Os s entram em jogo. A gravidade da Lua puxa com mais força o lado da Terra voltado para ela do que o centro. Ele deforma os oceanos e cria uma protuberância de água. [[As forças de maré]]"
+          "text": "A órbita não está parada. [[As forças de maré]] entram em jogo. A gravidade da Lua puxa mais forte o lado da Terra que está virado para ela do que o centro. Ela deforma os oceanos e cria um inchaço de água."
         },
         {
           "type": "paragraph",
-          "text": "Como a Terra gira em seu eixo mais rápido do que a Lua gira em torno dela, essa crista avança um pouco à frente da Lua. A fricção retarda ligeiramente a rotação da Terra: nossos dias aumentam aproximadamente **1,4 milissegundos** por século. Em troca, a Lua se afasta cerca de **3,8 cm** por ano."
+          "text": "Como a Terra gira em torno de si mais depressa do que a Lua gira ao redor dela, esse inchaço avança um pouco à frente da Lua. O atrito desacelera bem de leve a rotação terrestre: nossos dias alongam cerca de **1,4 milissegundo** por século. Em troca, a Lua se afasta cerca de **3,8 cm** por ano."
         },
         {
           "type": "paragraph",
-          "text": "Há bilhões de anos, a Lua estava muito mais próxima. As marés eram enormes. Essa mistura de água e química pode ter ajudado as primeiras formas de vida. E os dinossauros viviam numa Terra onde os dias duravam apenas **22 ou 23 horas**."
+          "text": "Há bilhões de anos, a Lua estava bem mais perto. As marés eram enormes. Essa mistura de água e química talvez tenha ajudado as primeiras formas de vida. E os dinossauros, esses, viviam numa Terra em que os dias duravam só **22 ou 23 horas**."
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p4",
-      "title": "Eclipses… por enquanto",
+      "title": "Eclipses, por enquanto",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Hoje, por coincidência geométrica, o Sol é cerca de **400 vezes** maior que a Lua, mas também **400 vezes** mais distante. Os dois têm portanto o mesmo **tamanho aparente**, o ângulo em que os vemos no céu. Eclipses solares totais são possíveis."
+          "text": "Hoje, por uma coincidência geométrica, o Sol é cerca de **400 vezes** maior que a Lua, mas também **400 vezes** mais longe. Os dois têm então o mesmo **tamanho aparente**, o ângulo sob o qual os vemos no céu. Os eclipses totais de Sol são possíveis."
         },
         {
           "type": "paragraph",
-          "text": "Em cerca de **600 mil anos**, a Lua estará muito longe para obscurecer completamente o Sol. Tudo o que restará serão eclipses anulares: um anel de luz ao redor do disco lunar. A muito longo prazo, a Terra e a Lua poderiam sincronizar-se: cada corpo mostraria sempre a mesma face ao outro. Mas o Sol, ao se tornar **gigante vermelho**, fase final de uma estrela como a nossa, transformará o sistema muito antes."
+          "text": "Daqui a cerca de **600 milhões de anos**, a Lua estará longe demais para esconder o Sol por inteiro. Sobrarão só eclipses anulares: um anel de luz em torno do disco lunar. No prazo bem longo, Terra e Lua poderiam se sincronizar: cada corpo mostraria sempre a mesma face ao outro. Mas o Sol, ao virar **gigante vermelha**, fase final de uma estrela como a nossa, transforma o sistema bem antes."
         },
         {
           "type": "takeaway",
-          "text": "A Lua não cai porque a sua velocidade lateral equilibra a atração da Terra: ela está em queda livre permanente. E ainda está se afastando cerca de **3,8 cm** por ano."
+          "text": "A Lua não se espatifa porque sua velocidade lateral equilibra a atração terrestre: ela está em queda livre permanente. E ainda se afasta cerca de **3,8 cm** por ano."
         }
       ]
     }
