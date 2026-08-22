@@ -1,14 +1,14 @@
 {
   "id": "course_47_pourquoi_baille_t_on",
-  "title": "Warum gähnen wir?",
-  "subtitle": "Körper & Gehirn",
+  "title": "Warum gähnt man?",
+  "subtitle": "Körper und Gehirn",
   "subject": "sciences",
   "subcategory": "Unser Alltag erklärt",
-  "description": "Alle gähnen: Menschen, Hunde, manchmal sogar Föten. Es liegt wahrscheinlich nicht am „Sauerstoffmangel“. Hier sind die stärksten Hinweise.",
+  "description": "Alle gähnen: Menschen, Hunde, manchmal sogar Föten. Wahrscheinlich nicht wegen “Sauerstoffmangel”. Hier sind die stärksten Spuren.",
   "hero": {
     "image": "pourquoi_baille_t_on",
     "ratio": "16:9",
-    "hook": "Du gähnst. Dein Nachbar gähnt. Und es ist (fast) kein Zufall, dass es ansteckend ist."
+    "hook": "Einer gähnt. Der Nachbar gähnt. Und das ist (fast) kein Zufall."
   },
   "sections": [
     {
@@ -18,77 +18,77 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Gähnen scheint alltäglich zu sein. Allerdings handelt es sich um einen komplexen Reflex: Kiefer, Brustkorb, Zwerchfell, der ganze Körper ist beteiligt. Löwen, Hunde, Menschen: Viele Tiere gähnen."
+          "text": "Gähnen wirkt alltäglich. Dabei ist es ein komplexer Reflex: Kiefer, Brustkorb, Zwerchfell, der ganze Körper macht mit. Löwen, Hunde, Menschen: Viele Tiere gähnen."
         },
         {
           "type": "paragraph",
-          "text": "Wir haben lange gesagt: „Es geht darum, mehr Sauerstoff zu haben“. Mittlerweile ist diese Idee weitgehend aufgegeben worden. Moderne Erklärungen sind interessanter."
+          "text": "Lange hieß es: “das bringt mehr Sauerstoff”. Diese Idee gilt heute als überholt. Die modernen Erklärungen sind interessanter."
         }
       ]
     },
     {
       "id": "course_47_pourquoi_baille_t_on_p1",
-      "title": "Nicht (besonders) für Sauerstoff",
+      "title": "Nicht (vor allem) wegen Sauerstoff",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Experimente haben gezeigt, dass ein erhöhter Sauerstoffgehalt der Luft das Gähnen nicht verhindert. Senken Sie auch den Kohlendioxidgehalt etwas. Gähnen ist also kein einfaches „Luftholen“."
+          "text": "Versuche haben gezeigt: Mehr Sauerstoff in der Luft hindert niemanden am Gähnen. Etwas weniger Kohlendioxid auch nicht. Gähnen ist also kein bloßes “Luftnachholen”."
         },
         {
           "type": "paragraph",
-          "text": "Heute ein starker Vorsprung: Gähnen hilft **bei der Regularisierung der Gehirntemperatur**. Durch weites Einatmen und Strecken des Gesichts „belüften“ und kühlen wir den Kopf ein wenig, insbesondere wenn wir müde sind."
+          "text": "Eine starke Spur heute: Gähnen könnte helfen, **die Temperatur des Gehirns zu regeln**. Durch das weite Einatmen und das Dehnen des Gesichts würde der Kopf ein wenig “lüften” und kühlen, vor allem wenn man müde ist."
         }
       ]
     },
     {
       "id": "course_47_pourquoi_baille_t_on_p2",
-      "title": "Warum ist es ansteckend?",
+      "title": "Warum es ansteckt",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "contagious_yawning_people_group",
           "ratio": "4:3",
-          "caption": "Oft reicht es aus, jemanden gähnen zu sehen, um den Reflex auszulösen."
+          "caption": "Schon der Anblick eines Gähnenden löst oft den Reflex aus"
         },
         {
           "type": "paragraph",
-          "text": "Beim Menschen kann das Sehen, Hören oder sogar Lesen des Wortes „Gähnen“ ein Gähnen auslösen. Es ist nicht nur eine dumme Nachahmung: Es beeinflusst auch **Empathie** und Gehirnschaltkreise, die mit  verbunden sind, Neuronen, die aktiviert werden, wenn wir handeln ... oder wenn wir jemanden handeln sehen. [[Spiegelneuronen und Ansteckung]]"
+          "text": "Beim Menschen kann der Anblick, das Hören oder sogar das Lesen des Wortes “gähnen” ein Gähnen auslösen. Das ist keine dumme Nachahmung: Es berührt auch die **Empathie** und Hirnkreise, die mit [[Spiegelneuronen und Ansteckung]] verbunden sind, Nervenzellen, die feuern, wenn man handelt oder jemand anderen handeln sieht."
         },
         {
           "type": "funFact",
-          "text": "Kleine Kinder gähnen aufgrund einer Ansteckung kaum. Diese Sensibilität kommt später hinzu, zusammen mit bestimmten sozialen Fähigkeiten."
+          "text": "Kleine Kinder gähnen kaum durch Ansteckung. Diese Empfindlichkeit kommt später, zusammen mit bestimmten sozialen Fähigkeiten."
         }
       ]
     },
     {
       "id": "course_47_pourquoi_baille_t_on_p3",
-      "title": "Wir gähnen bereits vor unserer Geburt",
+      "title": "Man gähnt schon vor der Geburt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Föten gähnen etwa ab der 11. Schwangerschaftswoche. In diesem Alter kann die Lunge noch keine Luft atmen. Es geht also auch hier nicht darum, dass „der Sauerstoff ausgeht“."
+          "text": "Föten gähnen ab etwa der **11. Woche** der Schwangerschaft. In dem Alter atmen ihre Lungen noch keine Luft. Also, wieder einmal, nicht wegen “Sauerstoffmangel”."
         },
         {
           "type": "paragraph",
-          "text": "Beim Fötus könnte Gähnen die Entwicklung der Kiefer- und Gesichtsmuskulatur fördern."
+          "text": "Beim Fötus könnte das Gähnen die Muskeln von Kiefer und Gesicht mitentwickeln."
         }
       ]
     },
     {
       "id": "course_47_pourquoi_baille_t_on_p4",
-      "title": "Gähnen, um wachsam zu bleiben?",
+      "title": "Gähnen, um wach zu bleiben?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Wir gähnen oft, wenn wir müde sind, aber auch kurz vor einer Prüfung oder wenn uns langweilig ist und wir versuchen, konzentriert zu bleiben. Dehnübungen können das Nervensystem stimulieren und dabei helfen, wachsam zu bleiben."
+          "text": "Man gähnt oft, wenn man müde ist, aber auch kurz vor einer Prüfung, oder wenn Langeweile droht und man konzentriert bleiben will. Das Dehnen könnte das Nervensystem anregen und helfen, **wachsam zu bleiben**."
         },
         {
           "type": "takeaway",
-          "text": "Gähnen ist wahrscheinlich kein Sauerstoffmangel. Es dient eher der Regulierung des Gehirns (Temperatur, Wachsamkeit) und verbreitet sich beim Menschen auch durch soziale Ansteckung."
+          "text": "Gähnen ist wahrscheinlich kein Sauerstoffmangel. Es dient eher dazu, das Gehirn zu regeln (Temperatur, Wachheit) und springt beim Menschen auch durch soziale Ansteckung über."
         }
       ]
     }

@@ -1,14 +1,14 @@
 {
   "id": "course_40_la_guerre_de_secession_americaine_1861_1",
-  "title": "Der amerikanische Bürgerkrieg",
+  "title": "Der amerikanische Sezessionskrieg",
   "subtitle": "1861-1865",
   "subject": "histoire",
   "subcategory": "Kalter Krieg & zeitgenössische Welt",
-  "description": "Von **1861** bis **1865** sind die Vereinigten Staaten auseinandergerissen: mehr als **620.000** Tote. Im Mittelpunkt des Konflikts stehen Sklaverei, nationale Einheit und die Entstehung eines stärkeren Bundesstaates.",
+  "description": "Von **1861** bis **1865** zerrissen sich die Vereinigten Staaten: mehr als **620.000** Tote. Im Kern des Konflikts lagen die Sklaverei, die nationale Einheit und die Geburt eines stärkeren Bundesstaats.",
   "hero": {
     "image": "la_guerre_de_secession_americaine",
     "ratio": "16:9",
-    "hook": "Der tödlichste Krieg in der amerikanischen Geschichte, für die Union und gegen die Sklaverei."
+    "hook": "Der tödlichste Krieg der amerikanischen Geschichte, für die Union und gegen die Sklaverei."
   },
   "sections": [
     {
@@ -18,82 +18,82 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Von **1861** bis **1865** erleben die Vereinigten Staaten ihre schwerste Krise: den Bürgerkrieg. Der Norden (die Union) versus der Süden (die Konföderation). Keine **620.000** Toten mehr."
+          "text": "Von **1861** bis **1865** erlebten die Vereinigten Staaten ihre schwerste Krise: den Sezessionskrieg. Der Norden (die Union) gegen den Süden (die Konföderation). Mehr als **620.000** Tote."
         },
         {
           "type": "paragraph",
-          "text": "Der Konflikt verwandelt eine junge Republik in eine Industriemacht, allerdings auf Kosten der dauerhaften Beeinträchtigung der nationalen Einheit und der Sklaverei."
+          "text": "Der Konflikt verwandelte eine junge Republik in eine Industriemacht, zum Preis eines langen Traumas für die nationale Einheit und die Sklaverei."
         }
       ]
     },
     {
       "id": "course_40_la_guerre_de_secession_americaine_1861_1_p1",
-      "title": "Zwei Amerikas von Angesicht zu Angesicht",
+      "title": "Zwei Amerikas einander gegenüber",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Der **Norden** industrialisiert sich, mit Löhnen und Protektionismus. Der **Süden** bleibt ländlich geprägt und reich an Baumwolle, die von **Z4** Millionen **Z** Sklaven produziert wird."
+          "text": "Der **Norden** industrialisierte sich, mit Löhnen und Schutzzöllen. Der **Süden** blieb ländlich, reich durch Baumwolle, erzeugt von **4 Millionen** Sklaven."
         },
         {
           "type": "image",
           "asset": "slaves_american_southern_plantation",
           "ratio": "4:3",
-          "caption": "Southern Plantation: Sklaverei im Herzen der konföderierten Wirtschaft."
+          "caption": "Südstaatenplantage: die Sklaverei im Zentrum der konföderierten Wirtschaft"
         },
         {
           "type": "paragraph",
-          "text": "Die Debatte betrifft auch den **[[Staatenrechte vs. die Bundesregierung]]**: Wer entscheidet über die Sklaverei, der lokale Staat oder Washington? Die Wahl von **Abraham Lincoln** (**November 1860**), Republikaner gegen die Ausweitung der Sklaverei, ohne eine einzige Stimme aus dem Süden, löst die Sezession aus. Sieben Staaten gründeten die Konföderation mit als Präsidenten und garantierten die Sklaverei in ihren Verfassungen. **[[Jefferson Davis]]**"
+          "text": "Die Debatte betraf auch die **[[Staatsrechte vs. Bundesregierung]]**: Wer entscheidet über die Sklaverei, der Einzelstaat oder Washington? Die Wahl von **Abraham Lincoln** (**November 1860**), einem Republikaner gegen die Ausweitung der Sklaverei, ohne eine einzige Stimme aus dem Süden, löste die Sezession aus. Sieben Staaten gründeten die Konföderation, mit **[[Jefferson Davis]]** als Präsident, und schrieben die Sklaverei in ihre Verfassung."
         },
         {
           "type": "funFact",
-          "text": "Vor dem Krieg sagten wir oft im Plural „die Vereinigten Staaten *Ist*“. Danach ist die Verwendung des Singulars („*Ost*“) unerlässlich: eine unteilbare Nation."
+          "text": "Vor dem Krieg sagte man oft “the United States *are*” im Plural. Danach setzte sich der Singular durch (“*is*”): eine unteilbare Nation."
         }
       ]
     },
     {
       "id": "course_40_la_guerre_de_secession_americaine_1861_1_p2",
-      "title": "Ein totaler Krieg, dann Emanzipation",
+      "title": "Ein totaler Krieg, dann die Emanzipation",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**12. April 1861**, Südliche Kanonen bombardieren Fort Sumter, South Carolina. Der Krieg, von dem wir dachten, dass er kurz sein würde, wurde zum Industriekrieg. In **Antietam** (**17. September 1862**), **23.000** Opfer in zwölf Stunden: der blutigste Tag in der amerikanischen Militärgeschichte."
+          "text": "Am **12. April 1861** beschossen Südstaatengeschütze Fort Sumter in South Carolina. Der Krieg, den man für kurz hielt, wurde industriell. Bei **Antietam** (**17. September 1862**) gab es **23.000** Opfer in zwölf Stunden: der blutigste Tag der amerikanischen Militärgeschichte."
         },
         {
           "type": "paragraph",
-          "text": "Das Scheitern von , dem wichtigsten General der Konföderierten, ermöglichte Lincoln die Unterzeichnung von  (**, 1. Januar 1863,**), wodurch Sklaven in den Rebellenstaaten befreit wurden. Der Krieg um die Union wurde auch zu einem Krieg um die Freiheit, der der europäischen Unterstützung des Südens die Tür verschloss. **Gettysburg** (Juli **1863**) bricht den Schwung der Konföderierten. **[[Robert E. Lee]]** **[[Emanzipationserklärung]]**"
+          "text": "Der Misserfolg von **[[Robert E. Lee]]**, dem wichtigsten konföderierten General, erlaubte Lincoln, **[[Die Emanzipationsproklamation]]** zu unterzeichnen (**1. Januar 1863**). Sie befreite die Sklaven in den rebellischen Staaten. Der Krieg um die Union wurde auch ein Krieg um die Freiheit, was einem europäischen Beistand für den Süden die Tür schloss. **Gettysburg** (Juli **1863**) brach den konföderierten Schwung."
         },
         {
           "type": "image",
           "asset": "american_civil_war_battle",
           "ratio": "4:3",
-          "caption": "Schlacht im Bürgerkrieg: beispiellose industrielle Gewalt."
+          "caption": "Schlacht im Sezessionskrieg: eine neue industrielle Gewalt"
         }
       ]
     },
     {
       "id": "course_40_la_guerre_de_secession_americaine_1861_1_p3",
-      "title": "Nordsieg, Tod von Lincoln",
+      "title": "Sieg des Nordens, Tod Lincolns",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": ", General-in-Chief der Gewerkschaft, führt einen Zermürbungskrieg. Sein Leutnant **William Tecumseh Sherman** verwüstete Georgia während seines „Marsches zum Meer“. Lee ergab sich bei **Appomattox** am **9. April 1865**. **[[Ulysses Grant]]**"
+          "text": "**[[Ulysses Grant]]**, Oberbefehlshaber der Union, führte einen Abnutzungskrieg. Sein Untergebener **William Tecumseh Sherman** verwüstete Georgia bei seinem “Marsch zum Meer”. Lee kapitulierte in **Appomattox** am **9. April 1865**."
         },
         {
           "type": "image",
           "asset": "abraham_lincoln_portrait",
           "ratio": "1:1",
-          "caption": "Abraham Lincoln, Präsident der Union, wurde fünf Tage nach Appomattox ermordet."
+          "caption": "Abraham Lincoln, Präsident der Union, fünf Tage nach Appomattox ermordet"
         },
         {
           "type": "paragraph",
-          "text": "Fünf Tage später wurde Lincoln von **John Wilkes Booth**, einem Südstaatenschauspieler, ermordet. Die [[Der 13. Verfassungszusatz]], die Zeit des **[[Wiederaufbau]]**s des Südens, beginnt ohne ihn. Im Dezember schafften **1865** und die Sklaverei landesweit ab."
+          "text": "Fünf Tage später wurde Lincoln von **John Wilkes Booth**, einem Schauspieler aus dem Süden, ermordet. **[[Die Reconstruction]]**, die Phase des Wiederaufbaus des Südens, begann ohne ihn. Im Dezember **1865** schaffte [[Der 13. Zusatzartikel]] die Sklaverei im ganzen Land ab."
         },
         {
           "type": "funFact",
-          "text": "Der Krieg beschleunigte auch die Chirurgie: Ärzte wie **Gurdon Buck** führten die ersten Gesichtsrekonstruktionen an durch Minié-Kugeln entstellten Soldaten durch."
+          "text": "Der Krieg beschleunigte auch die Chirurgie: Ärzte wie **Gurdon Buck** führten die ersten Gesichtsrekonstruktionen an Soldaten durch, die von Minié-Geschossen entstellt waren."
         }
       ]
     },
@@ -104,19 +104,19 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Unter dem **[[Wiederaufbau]]** (**1865-1877**) stimmten Afroamerikaner ab und wurden gewählt. Dann kommt die Reaktion: die **[[Ku-Klux-Klan]]** (**1865**), weiße Terrororganisation, der Abzug der Bundestruppen (**1877**), Jim-Crow-Segregationsgesetze. Die gesetzliche Segregation würde fast ein Jahrhundert dauern."
+          "text": "**[[Die Reconstruction]]** (**1865-1877**) ließ Afroamerikaner abstimmen und wählen. Dann kam die Gegenreaktion: der **[[Ku-Klux-Klan]]** (**1865**), eine weiße Terrororganisation, der Abzug der Bundestruppen (**1877**), die Jim-Crow-Gesetze der Segregation. Die gesetzliche Segregation dauerte fast ein Jahrhundert."
         },
         {
           "type": "paragraph",
-          "text": "Auf der Karte eine geeinte Nation ohne legale Sklaverei. Tatsächlich gibt es eine tiefe Rassenkluft. Und die Werkzeuge einer künftigen Weltmacht: Schwerindustrie, Eisenbahn, ein starker Bundesstaat."
+          "text": "Auf der Karte eine geeinte Nation ohne legale Sklaverei. In den Tatsachen ein tiefer rassischer Bruch. Und die Werkzeuge einer künftigen Weltmacht: Schwerindustrie, Eisenbahnen, ein starker Bundesstaat."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1860",
-              "title": "Lincoln-Wahl",
-              "detail": "Beginn der Sezessionen."
+              "title": "Wahl Lincolns",
+              "detail": "Auslösung der Sezessionen."
             },
             {
               "date": "1861",
@@ -126,18 +126,18 @@
             {
               "date": "1863",
               "title": "Emanzipation",
-              "detail": "Gettysburg-Proklamation und Wendepunkt."
+              "detail": "Proklamation und Wende von Gettysburg."
             },
             {
               "date": "1865",
-              "title": "Appomattox und 13. Verfassungszusatz",
-              "detail": "Ende der Kämpfe und Abschaffung der Verfassung."
+              "title": "Appomattox und 13. Zusatzartikel",
+              "detail": "Ende der Kämpfe und verfassungsrechtliche Abschaffung."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Der Bürgerkrieg (**1861-1865**) vereinte die Vereinigten Staaten und schaffte die Sklaverei ab, was 620.000 Todesfälle verursachte, während er gleichzeitig eine Rassenkluft hinterließ, die durch die Jim-Crow-Gesetze verlängert werden würde."
+          "text": "Der Sezessionskrieg (**1861-1865**) einte die Vereinigten Staaten und schaffte die Sklaverei ab, zum Preis von **620.000** Toten, und hinterließ zugleich einen rassischen Bruch, den die Jim-Crow-Gesetze verlängerten."
         }
       ]
     }

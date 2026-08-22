@@ -1,14 +1,14 @@
 {
   "id": "course_54_la_decouverte_du_micro_ondes_par_acciden",
   "title": "Die Entdeckung der Mikrowelle",
-  "subtitle": "Zufällig",
+  "subtitle": "Durch Zufall",
   "subject": "sciences",
   "subcategory": "Entdeckungen, die die Welt veränderten",
-  "description": "Im Jahr 1945 bemerkte ein Ingenieur, dass sein Schokoriegel in der Nähe eines Radars geschmolzen war. Aus dieser Beobachtung entstand der Mikrowellenherd.",
+  "description": "1945 merkte ein Ingenieur, dass sein Schokoriegel neben einem Radar geschmolzen war. Aus dieser Beobachtung entstand der Mikrowellenherd.",
   "hero": {
     "image": "la_decouverte_du_micro_ondes",
     "ratio": "16:9",
-    "hook": "Eine geschmolzene Tafel Schokolade … und die moderne Küche verändert sich."
+    "hook": "Ein geschmolzener Schokoriegel, und die moderne Küche ändert sich."
   },
   "sections": [
     {
@@ -18,68 +18,68 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "In **1945** in den Vereinigten Staaten arbeitet der Ingenieur **Percy Spencer** an Radargeräten. Eines Tages bemerkt er, dass der Schokoriegel in seiner Tasche geschmolzen ist. Nicht wegen der Körperwärme, sondern wegen der Radarwellen."
+          "text": "Im Jahr **1945** arbeitete der Ingenieur **Percy Spencer** in den Vereinigten Staaten an Radargeräten. Eines Tages merkte er, dass der Schokoriegel in seiner Tasche geschmolzen war. Nicht durch Körperwärme: durch die Wellen des Radars."
         },
         {
           "type": "paragraph",
-          "text": "Er testet mit Mais: Das Popcorn knallt. Die Idee eines Ofens, der anders heizt, war geboren."
+          "text": "Er testete es mit Mais: Das Popcorn platzte. Die Idee eines Ofens, der anders heizt, war da."
         }
       ]
     },
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p1",
-      "title": "Vom Radar bis zur Küche",
+      "title": "Vom Radar in die Küche",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "percy_spencer_microwave_discovery_radar",
           "ratio": "4:3",
-          "caption": "Radargeräte aus dem Zweiten Weltkrieg nutzten bereits Mikrowellen."
+          "caption": "Die Radargeräte des Zweiten Weltkriegs nutzten schon Mikrowellen"
         },
         {
           "type": "paragraph",
-          "text": "**Mikrowellen** sind elektromagnetische Wellen, wie Radiolicht, aber „energetischer“ als viele herkömmliche Radiowellen. Während des Krieges wurden sie hauptsächlich als Radar zur Ortung von Flugzeugen und Booten eingesetzt."
+          "text": "**Mikrowellen** sind elektromagnetische Wellen, verwandt mit Licht und Funk, aber “energiereicher” als viele gewöhnliche Radiowellen. Im Krieg dienten sie vor allem Radargeräten, um Flugzeuge und Schiffe zu finden."
         },
         {
           "type": "paragraph",
-          "text": "Spencer weiß, dass sie auch Wasser und Fette in Lebensmitteln aufrühren und sie dadurch erhitzen können."
+          "text": "Spencer verstand, dass sie auch das Wasser und die Fette in Lebensmitteln in Bewegung bringen und sie deshalb erhitzen."
         }
       ]
     },
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p2",
-      "title": "Der erste Ofen ist riesig",
+      "title": "Der erste Herd ist riesig",
       "free": false,
       "blocks": [
         {
           "type": "image",
           "asset": "first_microwave_oven_radarange_1947",
           "ratio": "4:3",
-          "caption": "Der erste kommerzielle Mikrowellenherd hatte die Größe eines Schranks."
+          "caption": "Der erste kommerzielle Mikrowellenherd ist so groß wie ein Schrank"
         },
         {
           "type": "paragraph",
-          "text": "Das erste kommerzielle Modell, die **Radarange**, wurde um **1947** herausgebracht. Es ist riesig, teuer und hauptsächlich für Restaurants oder Boote gedacht. Es wird Jahrzehnte dauern, es zu miniaturisieren und für Privathaushalte erschwinglich zu machen."
+          "text": "Das erste Handelsmodell, der **Radarange**, kam um **1947** auf den Markt. Er war riesig, teuer und eher für Restaurants oder Schiffe gedacht. Es dauerte Jahrzehnte, bis er klein und für Haushalte bezahlbar wurde."
         },
         {
           "type": "funFact",
-          "text": "Zunächst befürchteten einige, dass der Ofen „das Essen radioaktiv machen“ würde. Falsch: Mikrowellen erhitzen, sie machen Sie nicht radioaktiv."
+          "text": "Am Anfang fürchteten manche, der Herd “mache Lebensmittel radioaktiv”. Falsch: Mikrowellen erhitzen, sie machen nichts radioaktiv."
         }
       ]
     },
     {
       "id": "course_54_la_decouverte_du_micro_ondes_par_acciden_p3",
-      "title": "Wie heizt es sich wirklich auf?",
+      "title": "Wie die Wärme wirklich entsteht",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mikrowellen versetzen hauptsächlich Wassermoleküle (und ein wenig Fette und Zucker) in Schwingungen. Diese Bewegung erzeugt **Z** Wärme im Inneren des Lebensmittels, nicht nur auf der Oberfläche wie bei einer Pfanne."
+          "text": "Mikrowellen bringen vor allem Wassermoleküle ins Schwingen, Fette und Zucker ein wenig. Diese Bewegung erzeugt Wärme **im Inneren** der Speise, nicht nur an der Oberfläche wie eine Pfanne."
         },
         {
           "type": "paragraph",
-          "text": "Deshalb kann ein Gericht, wenn es dick ist, außen heiß und in der Mitte lauwarm sein: Die Wellen dringen nicht unendlich tief ein."
+          "text": "Deshalb kann ein dickes Gericht außen heiß und in der Mitte lauwarm sein: Die Wellen dringen nicht unbegrenzt tief ein."
         }
       ]
     },
@@ -90,11 +90,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Von den 1970er bis 1980er Jahren hielt der Mikrowellenherd Einzug in Millionen von Küchen. Es verändert Gewohnheiten: schnelles Aufwärmen, Fertiggerichte, schnelleres Leben."
+          "text": "Ab den 1970er und 1980er Jahren kam der Mikrowellenherd in Millionen Küchen. Er änderte die Gewohnheiten: schnell aufwärmen, Fertiggerichte, ein schnelleres Leben."
         },
         {
           "type": "takeaway",
-          "text": "Die Mikrowelle entstand aus einem Zufall, den Percy Spencer in der Nähe eines Radars beobachtete. Die Wellen rühren vor allem das Wasser in den Lebensmitteln um und erhitzen es von innen."
+          "text": "Die Mikrowelle entstand aus einem Zufall, den Percy Spencer neben einem Radar beobachtete. Die Wellen bewegen vor allem das Wasser in den Speisen und erhitzen sie von innen."
         }
       ]
     }

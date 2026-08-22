@@ -4,11 +4,11 @@
   "subtitle": "Der Nerv der Weltwirtschaft",
   "subject": "comprendreLeMonde",
   "subcategory": "Wirtschaft & Gesellschaft",
-  "description": "Der Ölpreis wird nicht von einem einzelnen Verkäufer festgelegt. Es entsteht aus einem **Tauziehen** zwischen Produktionsländern, Finanzmärkten und plötzlichen Krisen, manchmal bis zur Absurdität.",
+  "description": "Den Ölpreis setzt kein einzelner Verkäufer fest. Er entsteht aus einem **Kräftepoker** zwischen Förderländern, Finanzmärkten und plötzlichen Krisen, manchmal bis zum Absurden.",
   "hero": {
     "image": "comment_fonctionne_le_prix_du_petrole",
     "ratio": "16:9",
-    "hook": "Im Jahr 2020 bezahlten Ölverkäufer ihre Käufer, um das Öl loszuwerden. Hier erfahren Sie, warum."
+    "hook": "2020 zahlten Ölverkäufer ihren Käufern Geld, damit sie das Öl abnahmen. Hier steht, warum."
   },
   "sections": [
     {
@@ -18,78 +18,78 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Öl wird manchmal als „Blut der Wirtschaft“ bezeichnet. Sein Preis beeinflusst die Inflation, den Benzinpreis und sogar die Stabilität bestimmter Länder. Allerdings legt niemand diesen Preis mit einem Stempel fest."
+          "text": "Öl heißt manchmal “das Blut der Wirtschaft”. Sein Preis wirkt auf die Inflation, den Benzinpreis und sogar die Stabilität mancher Staaten. Trotzdem setzt niemand diesen Preis mit einem Stempel fest."
         },
         {
           "type": "paragraph",
-          "text": "Es entsteht aus einem Zusammentreffen dreier Kräfte: den Ländern, die das Öl fördern, den Finanzmärkten, die es handeln, bevor es überhaupt den Boden verlässt, und den Krisen, die alle in Panik versetzen. Begeben Sie sich in die Wüsten Arabiens, in die Ebenen von Texas und zu den Bildschirmen von Chicago."
+          "text": "Er entsteht aus dem Zusammentreffen dreier Kräfte: die Länder, die das Öl fördern, die Finanzmärkte, die es handeln, noch bevor es aus dem Boden kommt, und die Krisen, die alle in Panik versetzen. Ab in die Wüsten Arabiens, die Ebenen von Texas und an die Bildschirme in Chicago."
         }
       ]
     },
     {
       "id": "course_211_comment_fonctionne_le_prix_du_petrole_p1",
-      "title": "OPEC versus amerikanisches Schieferöl: der Kampf um die Versorgung",
+      "title": "OPEC gegen US-Schieferöl: der Kampf um das Angebot",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Der Ölmarkt weist eine Besonderheit auf: Kurzfristig sinkt die Nachfrage kaum, wenn die Preise steigen. Autos, Fabriken und Flugzeuge können ihre Energie nicht über Nacht umwandeln. Ökonomen nennen dies die **Unelastizität** der Nachfrage."
+          "text": "Der Ölmarkt hat eine Besonderheit: kurzfristig sinkt die Nachfrage kaum, wenn die Preise steigen. Autos, Fabriken und Flugzeuge können nicht über Nacht die Energie wechseln. Ökonomen nennen das die **Unelastizität** der Nachfrage."
         },
         {
           "type": "paragraph",
-          "text": "Seit 1960 hat sich eine Gruppe von Produktionsländern organisiert, um Einfluss auf diesen Markt zu nehmen: die . Durch die Vereinbarung von Produktionsquoten versuchen die Mitglieder, hohe Preise aufrechtzuerhalten. Seit 2016 ist Russland der Allianz beigetreten und hat die [[OPEC]]+ gegründet. Zusammen kontrollieren diese Länder rund 40 % des weltweiten Öls."
+          "text": "Seit 1960 hat sich eine Gruppe von Förderländern organisiert, um auf diesem Markt Gewicht zu haben: die [[OPEC]]. Mit gemeinsamen Förderquoten wollen ihre Mitglieder hohe Preise halten. Seit 2016 ist Russland der Allianz beigetreten, es entstand die OPEC+. Zusammen kontrollieren diese Länder rund 40% des Weltöls."
         },
         {
           "type": "funFact",
-          "text": "Ein einziges Barrel Öl, 159 Liter, enthält so viel Energie wie die Handarbeit einer Person für etwa ein Jahr."
+          "text": "Ein einziges Fass Öl, 159 Liter, enthält so viel Energie wie die Handarbeit eines Menschen in etwa einem Jahr."
         },
         {
           "type": "paragraph",
-          "text": "Doch diese Macht ist erschüttert. Dank einer Technik namens Hydraulic Fracturing wurden die Vereinigten Staaten innerhalb von zehn Jahren zum weltweit größten Ölproduzenten und überholten Saudi-Arabien. Dieses neue Angebot, das sich schneller anpassen lässt, hat den Markt wettbewerbsintensiver und für die OPEC+ schwieriger zu kontrollieren gemacht."
+          "text": "Aber diese Macht wurde erschüttert. Dank einer Technik namens hydraulisches Fracking wurden die USA in zehn Jahren zum größten Ölproduzenten der Welt und überholten Saudi-Arabien. Dieses neue Angebot lässt sich schneller anpassen. Der Markt wurde wettbewerbsfähiger und für die OPEC+ schwerer zu steuern."
         }
       ]
     },
     {
       "id": "course_211_comment_fonctionne_le_prix_du_petrole_p2",
-      "title": "„Papier“-Öl: Wenn die Finanzen ins Spiel kommen",
+      "title": "Das “Papieröl”: wenn die Finanz mitmischt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Über die eigentlichen per Schiff oder Pipeline gelieferten Fässer hinaus wird Öl auch auf den Finanzmärkten gehandelt. Die meisten Transaktionen laufen über einen Terminmarkt: Wir kaufen heute ein Fass, das erst in einem, drei oder sechs Monaten geliefert wird."
+          "text": "Neben den echten Fässern, die per Schiff oder Pipeline geliefert werden, wird Öl auch an den Finanzmärkten gehandelt. Die meisten Geschäfte laufen über einen Terminmarkt: man kauft heute ein Fass, das erst in einem, drei oder sechs Monaten geliefert wird."
         },
         {
           "type": "image",
           "asset": "oil_futures_trading_floor_markets",
           "ratio": "16:9",
-          "caption": "Öl wird auf den Finanzmärkten gehandelt, lange bevor es geliefert wird."
+          "caption": "Öl wird an den Finanzmärkten gehandelt, lange bevor es geliefert wird"
         },
         {
           "type": "paragraph",
-          "text": "Banken und Hedgefonds kaufen und verkaufen diese Kontrakte, ohne jemals ein einziges Fass anfassen zu wollen: Sie wetten einfach darauf, ob die Preise steigen oder fallen. Das bringt Geld auf den Markt, macht aber auch die Preise nervöser. Als Referenz dienen weltweit zwei Preise: , Öl aus der Nordsee, und WTI, Öl aus Texas. Die Kluft zwischen den beiden spiegelt Unterschiede in Qualität und Transport wider. [[Brent]]"
+          "text": "Banken und Hedgefonds kaufen und verkaufen diese Verträge, ohne je ein Fass anfassen zu wollen. Sie wetten nur auf steigende oder fallende Preise. Das bringt Geld in den Markt, macht die Preise aber auch nervöser. Zwei Preise gelten weltweit als Referenz: der [[Brent]], Öl aus der Nordsee, und der WTI, Öl aus Texas. Die Lücke zwischen beiden spiegelt Unterschiede bei Qualität und Transport."
         }
       ]
     },
     {
       "id": "course_211_comment_fonctionne_le_prix_du_petrole_p3",
-      "title": "Preise kollabieren ... oder explodieren",
+      "title": "Preise, die einbrechen oder explodieren",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Der Ölmarkt unterliegt brutalen Zyklen. Wenn die Preise über einen längeren Zeitraum steigen, investieren die Produzenten in teure Lagerstätten, was letztlich zu einem Überangebot führt. Wenn die Preise niedrig bleiben, passiert das Gegenteil: Wir erforschen weniger, was uns auf die nächste Verknappung vorbereitet."
+          "text": "Der Ölmarkt läuft in brutalen Zyklen. Steigen die Preise lange, investieren die Produzenten in teure Felder. Das schafft später ein Überangebot. Bleiben die Preise niedrig, geschieht das Gegenteil: man sucht weniger, und die nächste Knappheit ist vorbereitet."
         },
         {
           "type": "paragraph",
-          "text": "Die COVID-19-Krise hat dies spektakulär gezeigt. Im April 2020 kam die Weltwirtschaft plötzlich zum Stillstand: Niemand flog oder fuhr, aber die Brunnen förderten weiter. Die Lagertanks waren bis zum Rand gefüllt. Der Preis für WTI fiel daraufhin auf minus 37 US-Dollar: Die Verkäufer bezahlten ihre Käufer für den Verkauf ihrer Lagerbestände."
+          "text": "Die COVID-19-Krise hat das spektakulär gezeigt. Im April 2020 stoppte die Weltwirtschaft auf einen Schlag. Niemand flog mehr, niemand fuhr Auto, aber die Bohrlöcher liefen weiter. Die Lagertanks liefen randvoll. Der WTI-Preis fiel auf minus 37 Dollar: Verkäufer zahlten ihren Käufern, damit sie die Bestände wegnahmen."
         },
         {
           "type": "paragraph",
-          "text": "Umgekehrt weckte der Einmarsch Russlands in der Ukraine im Jahr 2022 die Befürchtung einer Knappheit: Russland ist der zweitgrößte Exporteur der Welt und Brent überstieg innerhalb weniger Wochen die Marke von 130 US-Dollar. Öl bleibt daher ein nervöses Barometer für die Spannungen in der Welt."
+          "text": "Umgekehrt weckte 2022 der russische Einmarsch in die Ukraine die Angst vor einer Knappheit. Russland ist der zweitgrößte Ölexporteur der Welt. Der Brent stieg in wenigen Wochen über 130 Dollar. Öl bleibt ein nervöses Barometer der Weltspannungen."
         },
         {
           "type": "funFact",
-          "text": "Für die Herstellung eines einzigen Smartphones werden zwischen Materialgewinnung, Kunststoffteilen und Transport rund 7 Liter Öl benötigt."
+          "text": "Es braucht etwa 7 Liter Öl, um ein einziges Smartphone herzustellen: vom Abbau der Materialien über die Plastikteile bis zum Transport."
         }
       ]
     },
@@ -100,15 +100,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Langfristig steht Öl vor einer neuen Herausforderung: dem Übergang zu sauberer Energie. Wenn Elektroautos die weltweite Nachfrage verringern, könnten die produzierenden Länder einen Preiskampf führen, um ihre Reserven zu verkaufen, bevor sie an Wert verlieren."
+          "text": "Langfristig steht das Öl vor einer neuen Herausforderung: dem Übergang zu sauberen Energien. Wenn Elektroautos die weltweite Nachfrage senken, könnten Förderländer einen Preiskrieg beginnen. Sie wollen ihre Reserven verkaufen, bevor sie an Wert verlieren."
         },
         {
           "type": "paragraph",
-          "text": "Allerdings droht dem Markt ein Paradoxon: Wenn Investoren aus Klimagründen neue Ölprojekte aufgeben, könnte das Angebot schneller sinken als die Nachfrage, was zu neuen Preisschüben führt. Öl wird nicht plötzlich verschwinden: Es bleibt für Kunststoffe, Düngemittel und Schwertransporte wie die Luftfahrt unverzichtbar."
+          "text": "Ein Paradox bedroht den Markt trotzdem. Weil Investoren neue Ölprojekte aus Klimagründen meiden, könnte das Angebot schneller sinken als die Nachfrage. Dann kämen neue Preisexplosionen. Öl verschwindet nicht auf einen Schlag. Es bleibt unverzichtbar für Kunststoffe, Dünger und den schweren Transport, etwa die Luftfahrt."
         },
         {
           "type": "takeaway",
-          "text": "Der Ölpreis ist das Ergebnis einer Pattsituation zwischen der OPEC+, der amerikanischen Schieferölproduktion und den spekulativen Finanzmärkten. Ergebnis: Preise, die bei der geringsten geopolitischen Erschütterung einbrechen oder explodieren können."
+          "text": "Der Ölpreis entsteht aus einem Kräftepoker zwischen der OPEC+, der amerikanischen Schieferölförderung und spekulativen Finanzmärkten. Ergebnis: Kurse, die beim kleinsten geopolitischen Schock einbrechen oder explodieren können."
         }
       ]
     }

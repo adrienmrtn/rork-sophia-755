@@ -1,14 +1,14 @@
 {
   "id": "course_41_pourquoi_le_ciel_est_il_bleu",
   "title": "Warum ist der Himmel blau?",
-  "subtitle": "Licht & Atmosphäre",
+  "subtitle": "Licht und Atmosphäre",
   "subject": "sciences",
   "subcategory": "Unser Alltag erklärt",
-  "description": "Der Blick in den blauen Himmel ist so alltäglich, dass wir vergessen zu fragen, warum. Die Antwort liegt im Licht der Sonne und der Luft, die wir durchqueren, um sie zu sehen.",
+  "description": "Den blauen Himmel anzusehen ist so alltäglich, dass man vergisst zu fragen, warum. Die Antwort liegt am Licht der Sonne und an der Luft, durch die wir es sehen.",
   "hero": {
     "image": "pourquoi_le_ciel_est_il_bleu",
     "ratio": "16:9",
-    "hook": "Der Himmel ist nicht blau angemalt: Es ist ein Zaubertrick aus Licht und Luft."
+    "hook": "Der Himmel ist nicht blau gestrichen: Es ist ein Trick von Licht und Luft."
   },
   "sections": [
     {
@@ -18,95 +18,95 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Der Blick in den blauen Himmel ist so alltäglich, dass wir vergessen zu fragen, warum das so ist. Die **Atmosphäre**, die Gasschicht, die die Erde umgibt, hat jedoch keine eigene Farbe. Diese Farbe entsteht durch eine sehr präzise Begegnung zwischen dem Licht der Sonne und den Gasmolekülen, die um uns herum schweben."
+          "text": "Den Blick zum blauen Himmel zu heben ist so alltäglich, dass man vergisst zu fragen, warum er so ist. Die **Atmosphäre**, die Gasschicht um die Erde, hat selbst keine eigene Farbe. Dieser Ton kommt aus einer sehr genauen Begegnung zwischen dem Licht der Sonne und den Gasmolekülen, die um uns schweben."
         },
         {
           "type": "paragraph",
-          "text": "Um dieses Blau zu verstehen, muss man verstehen, wie sich Licht ausbreitet und **zestreut**, das heißt, es kehrt in alle Richtungen zurück, anstatt geradeaus zu gehen. Und schöne Überraschung: Es ist genau das gleiche Phänomen, das den Himmel bei Sonnenuntergang rot und orange färbt."
+          "text": "Dieses Blau zu verstehen heißt zu verstehen, wie Licht reist und sich **streut**, also in alle Richtungen geworfen wird statt geradeaus zu fliegen. Und die gute Überraschung: Genau dasselbe Phänomen färbt den Himmel rot und orange beim Sonnenuntergang."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p1",
-      "title": "Weißes Licht verdeckt alle Farben",
+      "title": "Weißes Licht verbirgt alle Farben",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Sonnenlicht erscheint uns weiß, enthält aber tatsächlich alle Farben des Regenbogens: Es ist [[sichtbares Lichtspektrum]]. Jede Farbe entspricht einer **Wellenlänge**, der Größe ihrer Lichtwelle. Blau und Violett haben kurze Wellen; Rot hat lange Wellen."
+          "text": "Das Licht der Sonne wirkt uns weiß, enthält aber in Wahrheit alle Farben des Regenbogens. Das ist [[Das sichtbare Lichtspektrum]]. Jede Farbe entspricht einer **Wellenlänge**, der Größe ihrer Licht-“Welle”. Blau und Violett haben kurze Wellen; Rot hat lange Wellen."
         },
         {
           "type": "funFact",
-          "text": "Auf dem Mond gibt es keine Luft, die Licht streuen könnte. Ergebnis: Dort bleibt der Himmel **schwarz am helllichten Tag**, auch wenn die Sonne scheint. Ein Beweis dafür, dass die Farbe des Himmels von der Luft und nicht von der Sonne kommt."
+          "text": "Auf dem Mond gibt es keine Luft, die das Licht streuen könnte. Ergebnis: Dort bleibt der Himmel **am helllichten Tag schwarz**, selbst wenn die Sonne scheint. Der Beweis, dass die Himmelsfarbe von der Luft kommt, nicht von der Sonne."
         },
         {
           "type": "paragraph",
-          "text": "Denn zwischen der Sonne und unseren Augen ist die Luft nicht leer: Sie ist gefüllt mit winzigen **Gasmoleküle, insbesondere Stickstoff, etwa 78 %** der Luft, und Sauerstoff, etwa **21 %**. Sie sind viel kleiner als Lichtwellen. Wenn ein Strahl auf sie trifft, geht er nicht mehr geradeaus, sondern wird in alle Richtungen zurückgeschickt. Dieser kleine Sprung ist der Ausgangspunkt für die Farbe des Himmels."
+          "text": "Denn zwischen Sonne und Augen ist die Luft nicht leer: Sie ist voll winziger **Gasmoleküle**, vor allem Stickstoff, etwa **78%** der Luft, und Sauerstoff, etwa **21%**. Sie sind viel kleiner als die Lichtwellen. Trifft ein Strahl sie, fliegt er nicht mehr geradeaus: Er wird in alle Richtungen geworfen. Dieser kleine Abprall ist der Ausgangspunkt der Himmelsfarbe."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p2",
-      "title": "Verbreitung: Warum Blau gewinnt",
+      "title": "Die Streuung: warum Blau gewinnt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "In **1871** hat der britische Physiker **Lord Rayleigh** dieses Phänomen in eine Gleichung gebracht. Er entdeckte, dass eine Farbe umso stärker von Luftmolekülen in alle Richtungen reflektiert wird, je kürzer sie ist. Es ist der [[Die Rayleigh-Streuung]]."
+          "text": "Im Jahr **1871** setzte der britische Physiker **Lord Rayleigh** dieses Phänomen in Gleichungen. Er entdeckte: Je kürzer die Welle einer Farbe, desto stärker werfen die Luftmoleküle sie in alle Richtungen. Das ist [[Die Rayleigh-Streuung]]."
         },
         {
           "type": "funFact",
-          "text": "Der Himmel des Mars ist das Gegenteil von unserem: Sein eisenreicher Staub lässt ihn tagsüber rosa erscheinen, aber seine Sonnenuntergänge sind **blau**. Es hängt alles davon ab, was die Luft enthält."
+          "text": "Der Himmel des Mars macht das Gegenteil von unserem: Sein eisenreicher Staub macht ihn tagsüber rosa, aber seine Sonnenuntergänge sind **blau**. Alles hängt davon ab, was in der Luft steckt."
         },
         {
           "type": "image",
           "asset": "blue_sky_sunlight_scattering_atmosphere",
           "ratio": "4:3",
-          "caption": "Blaues Licht wird durch die Luft in alle Richtungen gestreut."
+          "caption": "Blaues Licht wird von der Luft in alle Richtungen gestreut"
         },
         {
           "type": "paragraph",
-          "text": "Konkret wird blaues Licht etwa 9-mal stärker gestreut als rotes. Rot bewegt sich fast geradlinig durch die Luft, während Blau überall abprallt. Aus diesem Grund gelangt überall, wo man in den Himmel blickt, Blau in die Augen: Der ganze Himmel scheint in diesem verstreuten Blau zu „leuchten“."
+          "text": "Konkret wird blaues Licht etwa **9-mal stärker** gestreut als rotes. Rot durchquert die Luft fast geradlinig, während Blau überall abprallt. Deshalb kommt, wohin man auch im Himmel schaut, immer etwas Blau ins Auge: Der ganze Himmel scheint von diesem verstreuten Blau zu “leuchten”."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p3",
-      "title": "Warum also nicht lila?",
+      "title": "Warum dann nicht violett?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Es stellt sich eine logische Frage: Wenn die kürzesten Wellen am stärksten gestreut sind, sollte Violett gewinnen, da seine Welle noch kürzer als die von Blau ist. Der Himmel enthält auch viel vereinzeltes Lila."
+          "text": "Eine logische Frage stellt sich: Wenn die kürzesten Wellen am stärksten gestreut werden, müsste Violett gewinnen, denn seine Welle ist noch kürzer als die von Blau. Der Himmel enthält übrigens viel gestreutes Violett."
         },
         {
           "type": "paragraph",
-          "text": "Die Antwort liegt nicht am Himmel, sondern in unserem Auge. Wir erfassen Farben mithilfe von Sensoren namens **Kegel**, lichtempfindlichen Zellen in der Netzhaut. Sie reagieren viel empfindlicher auf Blau als auf Lila. Darüber hinaus sendet die Sonne mehr blaues als violettes Licht aus. Unser Gehirn bildet dann eine Art Mittelwert und sieht ein wunderschönes Blau. Ein Tier, das auf andere Farben reagiert, würde zweifellos einen völlig anderen Himmel sehen."
+          "text": "Die Antwort liegt nicht im Himmel, sondern in unserem Auge. Wir fangen Farben mit Sensoren namens **Zapfen** auf, Zellen der Netzhaut, die auf Licht reagieren. Sie sind viel empfindlicher für Blau als für Violett. Außerdem sendet die Sonne mehr blaues Licht als violettes. Unser Gehirn bildet dann eine Art Mittelwert und sieht ein schönes Blau. Ein Tier, das für andere Farben empfindlich ist, sähe wohl einen ganz anderen Himmel."
         }
       ]
     },
     {
       "id": "course_41_pourquoi_le_ciel_est_il_bleu_p4",
-      "title": "Und das Abendrot?",
+      "title": "Und das Rot am Abend?",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Der Sonnenuntergang folgt den gleichen Regeln, verändert aber eines: die Entfernung. Mittags dringt Licht durch eine dünne Luftschicht. Abends, wenn die Sonne tief steht, müssen ihre Strahlen viel mehr Luft durchdringen, bevor sie uns erreichen."
+          "text": "Der Sonnenuntergang folgt denselben Regeln, ändert aber eines: die Distanz. Am Mittag durchquert das Licht eine dünne Luftschicht. Am Abend, wenn die Sonne tief steht, müssen ihre Strahlen **viel mehr Luft** durchqueren, bevor sie uns erreichen."
         },
         {
           "type": "image",
           "asset": "sunset_red_orange_sky_atmosphere",
           "ratio": "16:9",
-          "caption": "Auf Horizonthöhe durchdringt das Licht eine viel größere Luftschicht."
+          "caption": "Knapp über dem Horizont durchquert das Licht eine viel größere Luftdicke"
         },
         {
           "type": "paragraph",
-          "text": "Auf dieser langen Reise zerstreut sich alles Blau, bevor es uns erreicht: Es wird durch die dicke Luft gefiltert. Es bleiben nur die widerstandsfähigsten Farben übrig, Rot und Orange. Bei Staub oder Verschmutzung kommt [[Mie-Diffusion]] ins Spiel: Partikel, die größer als Luftmoleküle sind, machen den Himmel milchig oder verstärken diese Orangetöne."
+          "text": "Auf diesem langen Weg wird das ganze Blau gestreut, lange bevor es uns erreicht: Die Dicke der Luft filtert es gleichsam heraus. Übrig bleiben nur die widerstandsfähigsten Farben, die Rot- und Orangetöne. Bei Staub oder Verschmutzung greift die [[Mie-Streuung]]: Teilchen, größer als Luftmoleküle, machen den Himmel milchig oder verstärken diese Orangetöne."
         },
         {
           "type": "takeaway",
-          "text": "Der Himmel ist blau, weil kurze Wellen etwa 9-mal stärker durch die Luft verteilt werden als lange Wellen. Bei Sonnenuntergang durchdringt das Licht so viel Luft, dass uns nur noch das Rote erreicht."
+          "text": "Der Himmel ist blau, weil kurze Wellen von der Luft etwa **9-mal stärker gestreut** werden als lange Wellen. Beim Sonnenuntergang durchquert das Licht so viel Luft, dass nur noch Rot bei uns ankommt."
         }
       ]
     }

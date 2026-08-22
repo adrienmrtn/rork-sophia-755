@@ -1,14 +1,14 @@
 {
   "id": "course_63_comment_se_forment_les_tremblements_de_t",
   "title": "Wie entstehen Erdbeben?",
-  "subtitle": "Störungen und Wellen",
+  "subtitle": "Verwerfungen und Wellen",
   "subject": "sciences",
   "subcategory": "Die Erde und das Universum",
-  "description": "Jedes Jahr erlebt die Erde Hunderttausende Erdbeben. Die meisten sind unsichtbar. Einige wenige verändern ganze Städte.",
+  "description": "Jedes Jahr registriert die Erde Hunderttausende Beben. Die meisten bleiben unsichtbar. Einige verändern ganze Städte.",
   "hero": {
     "image": "comment_se_forment_les_tremblements_de_terre",
     "ratio": "16:9",
-    "hook": "Ein Erdbeben ist keine Laune der Erde. Das ist eine Energie, die zu lange gewartet hat."
+    "hook": "Ein Erdbeben ist keine Laune des Bodens. Es ist eine Energie, die zu lange gewartet hat."
   },
   "sections": [
     {
@@ -18,97 +18,97 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Jedes Jahr registriert die Erde etwa **500.000 nachweisbare Erdbeben**. Nur ein kleiner Teil richtet großen Schaden an. Ein Erdbeben ist kein Zufall: Es ist das plötzliche Ende einer langen Energieansammlung im Gestein."
+          "text": "Jedes Jahr registriert die Erde etwa **500.000 Beben**, die messbar sind. Nur ein kleiner Teil richtet großen Schaden an. Ein Erdbeben ist kein Zufall: Es ist das abrupte Ende einer langen Anspannung im Gestein."
         },
         {
           "type": "paragraph",
-          "text": "Um dies zu verstehen, müssen wir die Oberfläche des Planeten als ein Puzzle aus sich bewegenden Platten betrachten. Wo diese Platten aneinander reiben, baut sich Spannung auf ... bis sie bricht."
+          "text": "Um das zu verstehen, muss man die Oberfläche des Planeten als Puzzle aus bewegten Platten sehen. Wo diese Platten aneinanderreiben, steigt die Spannung, bis es bricht."
         }
       ]
     },
     {
       "id": "course_63_comment_se_forment_les_tremblements_de_t_p1",
-      "title": "Platten, die sich ständig bewegen",
+      "title": "Platten, die ohne Pause wandern",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Die Erdoberfläche ist in etwa zehn große **tektonische Platten** unterteilt. Sie gleiten auf einer weicheren Schicht des Fells, dem . Ihre Geschwindigkeit? Etwa **1 bis 10 cm pro Jahr**, etwa so viel wie das Wachstum eines Fingernagels. [[Asthenosphäre]]"
+          "text": "Die Erdoberfläche ist in etwa zehn große **tektonische Platten** zerschnitten. Sie gleiten auf einer weicheren Schicht des Mantels, der [[Asthenosphäre]]. Ihre Geschwindigkeit? Etwa **1 bis 10 cm pro Jahr**, ungefähr wie das Wachstum eines Nagels."
         },
         {
           "type": "image",
           "asset": "earthquake_collapsed_buildings_urban",
           "ratio": "auto",
-          "caption": "Erdbeben setzen die entlang von Verwerfungen angesammelte Energie plötzlich frei."
+          "caption": "Erdbeben setzen auf einmal die Energie frei, die sich an Verwerfungen gestaut hat"
         },
         {
           "type": "paragraph",
-          "text": "An den Grenzen dominieren drei Szenarien. Die Platten bewegen sich auseinander (ozeanische Rücken). Sie kollidieren: Manchmal taucht einer unter den anderen, es ist . Oder sie gleiten nebeneinander, wie entlang der [[Die Subduktion]] in Kalifornien, etwa **1 300 km** lang. [[Die San-Andreas-Verwerfung]]"
+          "text": "An den Grenzen herrschen drei Szenarien. Die Platten driften auseinander (ozeanische Rücken). Sie stoßen zusammen: Manchmal taucht eine unter die andere, das ist [[Die Subduktion]]. Oder sie gleiten Seite an Seite, wie bei [[Die San-Andreas-Verwerfung]] in Kalifornien, etwa **1.300 km** lang."
         },
         {
           "type": "funFact",
-          "text": "Entlang des San Andreas nähert sich Los Angeles San Francisco um etwa **6 cm** pro Jahr. In **15 Millionen Jahre** wären die beiden Städte Nachbarn."
+          "text": "Entlang von San Andreas nähert sich Los Angeles San Francisco um etwa **6 cm** pro Jahr. In **15 Millionen Jahren** wären die beiden Städte Nachbarn."
         },
         {
           "type": "paragraph",
-          "text": "Gerade an diesen Grenzen kommt es zu Erdbeben. Die Bewegung der Platten wird durch die Reibung der Gesteine ​​behindert. Energie sammelt sich lautlos an."
+          "text": "Vor allem an diesen Grenzen entstehen die Beben. Die Bewegung der Platten wird durch die Reibung der Gesteine gehemmt. Die Energie sammelt sich still."
         }
       ]
     },
     {
       "id": "course_63_comment_se_forment_les_tremblements_de_t_p2",
-      "title": "Wenn der Fehler loslässt",
+      "title": "Wenn die Verwerfung nachgibt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ein Erdbeben ereignet sich entlang einer **-Verwerfung**: einem Bruch zwischen zwei Felsblöcken. Theoretisch sollten die Platten kontinuierlich gleiten. In der Praxis wird dieses Gleiten häufig durch Reibung blockiert."
+          "text": "Ein Beben geschieht entlang einer **Verwerfung**: einem Bruch zwischen zwei Gesteinsblöcken. In der Theorie sollten die Platten ohne Pause gleiten. In der Praxis blockiert die Reibung dieses Gleiten oft."
         },
         {
           "type": "paragraph",
-          "text": "Während dieser Zeit wachsen die Plaques weiter. Der Fels verformt sich ein wenig, wie ein Bogen, der gespannt wird. Wir sprechen von elastischen Zwängen. Dies kann Jahrzehnte, manchmal Jahrhunderte dauern."
+          "text": "Währenddessen drücken die Platten weiter. Das Gestein verformt sich ein wenig, wie ein gespannter Bogen. Man spricht von elastischen Spannungen. Das kann Jahrzehnte dauern, manchmal Jahrhunderte."
         },
         {
           "type": "paragraph",
-          "text": "Beim Überschreiten der Widerstandsgrenze rutschen die Blöcke schlagartig. Die Energie tritt in Form von **eismische Wellen** aus. Der Tiefenbruchpunkt wird **Fokus** genannt. An der Oberfläche ist der Punkt direkt darüber das **epizentrum**, wo die Auswirkungen oft am stärksten sind."
+          "text": "Wenn die Belastungsgrenze überschritten ist, gleiten die Blöcke auf einmal. Die Energie geht als **seismische Wellen** fort. Der Bruchpunkt in der Tiefe heißt **Herd**. An der Oberfläche liegt der Punkt genau darüber, das **Epizentrum**, wo die Wirkung oft am stärksten ist."
         }
       ]
     },
     {
       "id": "course_63_comment_se_forment_les_tremblements_de_t_p3",
-      "title": "Macht messen, Angst vor dem Tsunami haben",
+      "title": "Die Kraft messen, den Tsunami fürchten",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Um die Energie eines Erdbebens zu messen, verwenden Seismologen hauptsächlich das Moment . Es handelt sich um eine logarithmische Skala: Jedes Grad multipliziert die Energie mit ungefähr **32**. Ein Erdbeben der Stärke **8** setzt daher etwa **1.000-schlecht** mehr Energie frei als ein Erdbeben der Stärke **6**. [[Größenskala]]"
+          "text": "Um die Energie eines Bebens zu messen, nutzen Seismologen vor allem die [[Magnitudenskala]] des Moments. Das ist eine logarithmische Skala: Jede Stufe vervielfacht die Energie um etwa **32**. Ein Beben der Magnitude **8** setzt also etwa **1.000-mal** mehr Energie frei als ein Beben der Magnitude **6**."
         },
         {
           "type": "funFact",
-          "text": "Es gibt auch Erdbeben der Stärke **0** oder negativer Stärke. Dabei handelt es sich um sehr kleine Ereignisse, die nur mit sehr empfindlichen Sensoren sichtbar sind."
+          "text": "Es gibt auch Beben der Magnitude **0** oder negativ. Das sind ganz kleine Ereignisse, sichtbar nur mit sehr empfindlichen Sensoren."
         },
         {
           "type": "paragraph",
-          "text": "Der stärkste, der jemals mit modernen Instrumenten gemessen wurde, ist der von **Valdivia** in Chile in **1960**: Stärke **9,5**. Wenn der Schwerpunkt unter dem Ozean liegt und den Meeresboden anhebt, kann die verschobene Wassersäule einen **Tsunami** erzeugen. In **2004** löste ein Erdbeben der Stärke **9,1** in der Nähe von Sumatra einen Tsunami aus, der 14 Länder heimsuchte und etwa **227.000** Todesopfer forderte."
+          "text": "Das stärkste, das je mit modernen Instrumenten gemessen wurde, ist das von **Valdivia** in Chile im Jahr **1960**: Magnitude **9,5**. Liegt der Herd unter dem Ozean und hebt den Meeresboden, kann die verschobene Wassersäule einen **Tsunami** erzeugen. Im Jahr **2004** löste ein Beben der Magnitude **9,1** vor Sumatra einen Tsunami aus, der 14 Länder traf und etwa **227.000** Opfer forderte."
         }
       ]
     },
     {
       "id": "course_63_comment_se_forment_les_tremblements_de_t_p4",
-      "title": "Wellen, Alarm und Gebäude, die Widerstand leisten",
+      "title": "Wellen, Warnung und Gebäude, die standhalten",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nach der Trennung verschwinden verschiedene Arten von Wellen. Die **P-Wellen** (primär) kommen zuerst: Sie komprimieren das Gestein wie eine Ziehharmonika. Dann kommen die **ZZ** (sekundären) Wellen, langsamer und oft zerstörerischer. Die Oberflächenwellen versetzen den Boden dann deutlich sichtbar in Schwingungen."
+          "text": "Nach dem Bruch gehen mehrere Wellentypen los. Die **P-Wellen** (primär) kommen zuerst: Sie stauchen das Gestein wie ein Akkordeon. Dann kommen die **S-Wellen** (sekundär), langsamer und oft zerstörerischer. Die Oberflächenwellen lassen den Boden danach sehr sichtbar schwingen."
         },
         {
           "type": "paragraph",
-          "text": "Wir wissen noch nicht, wie wir den genauen Tag eines schweren Erdbebens vorhersagen können. Zum anderen kartieren wir die Risikogebiete.  entwirft Gebäude, die Stößen standhalten: mobile Fundamente, riesige Stoßdämpfer, Strukturen, die Energie absorbieren. In Japan erkennen Frühwarnungen P-Wellen und können die Gaszufuhr unterbrechen oder Züge verlangsamen, bevor die gefährlichsten Wellen eintreffen. [[Seismische Technik]]"
+          "text": "Den genauen Tag eines großen Bebens kann man noch nicht vorhersagen. Dafür kartiert man die Risikozonen. [[Erdbebeningenieurwesen]] entwirft Gebäude, die Erschütterungen aushalten: bewegliche Fundamente, riesige Dämpfer, Strukturen, die Energie schlucken. In Japan erkennen Frühwarnungen die P-Wellen und können Gas abstellen oder Züge verlangsamen, bevor die gefährlichsten Wellen eintreffen."
         },
         {
           "type": "takeaway",
-          "text": "Ein Erdbeben tritt auf, wenn entlang einer Verwerfung festsitzendes Gestein plötzlich eine jahrzehntelange Spannung freisetzt. Energie breitet sich in Wellen aus und jeder Grad der Stärke multipliziert diese Energie mit ungefähr **32**."
+          "text": "Ein Erdbeben entsteht, wenn blockierte Gesteine entlang einer Verwerfung jahrzehntelange Spannung auf einmal freisetzen. Die Energie reist in Wellen, und jede Magnitudenstufe vervielfacht diese Energie um etwa **32**."
         }
       ]
     }

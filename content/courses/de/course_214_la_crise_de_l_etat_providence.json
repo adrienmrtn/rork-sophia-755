@@ -1,14 +1,14 @@
 {
   "id": "course_214_la_crise_de_l_etat_providence",
-  "title": "Die Krise des Sozialstaates",
+  "title": "Die Krise des Sozialstaats",
   "subtitle": "Ein Gesellschaftsvertrag unter Druck",
   "subject": "comprendreLeMonde",
   "subcategory": "Wirtschaft & Gesellschaft",
-  "description": "Der Sozialstaat wurde nach 1945 ins Leben gerufen, um jeden Bürger vor Krankheit, Arbeitslosigkeit und Alter zu schützen. Heute wird er durch Alterung und Globalisierung erschüttert.",
+  "description": "Nach 1945 entstanden, um jeden Bürger vor Krankheit, Arbeitslosigkeit und Alter zu schützen, gerät der Sozialstaat heute durch Alterung und Globalisierung ins Wanken.",
   "hero": {
     "image": "la_crise_de_l_etat_providence",
     "ratio": "16:9",
-    "hook": "Im Jahr 1960 verfügte Frankreich über vier Arbeitnehmer, um den Ruhestand eines Rentners zu finanzieren. Heute sind nur noch 2 übrig."
+    "hook": "1960 kamen in Frankreich 4 Erwerbstätige auf 1 Rentner. Heute sind es nur noch 2."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Der Begriff „**Wohlfahrtsstaat“** bezeichnet alle Hilfen, die der Staat den Bürgern gewährt, um sie vor Krankheit, Arbeitslosigkeit oder Alter zu schützen. Dieses System entstand in seiner modernen Form kurz nach dem Zweiten Weltkrieg als Versprechen kollektiver Solidarität."
+          "text": "Der **Sozialstaat** meint alle Hilfen, mit denen der Staat die Bürger vor Krankheit, Arbeitslosigkeit oder Alter schützt. In seiner modernen Form entstand dieses System direkt nach dem Zweiten Weltkrieg, als Versprechen kollektiver Solidarität."
         },
         {
           "type": "paragraph",
-          "text": "Seit Ende des 20. Jahrhunderts befindet sich dieser Pfeiler der entwickelten Gesellschaften in einer Finanzierungskrise. Alterung der Bevölkerung, Globalisierung, neue Arbeitsformen: Das Gleichgewicht zwischen sozialer Absicherung und Wirtschaft wird mittlerweile weltweit in Frage gestellt."
+          "text": "Seit dem Ende des 20. Jahrhunderts steckt dieser Pfeiler der Industrieländer in einer Finanzierungskrise. Alterung der Bevölkerung, Globalisierung, neue Arbeitsformen: das Gleichgewicht zwischen sozialem Schutz und Wirtschaft steht heute weltweit in Frage."
         }
       ]
     },
@@ -33,15 +33,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Im Jahr 1942 veröffentlichte der britische Ökonom William Beveridge einen Bericht, der bahnbrechend werden sollte: den . Ihr Ziel ist es, jeden Bürger vor fünf großen Risiken zu schützen: Krankheit, Unwissenheit, unhygienische Bedingungen, Müßiggang und Armut. [[Der Beveridge-Bericht (1942)]]"
+          "text": "1942 veröffentlicht der britische Ökonom William Beveridge einen Bericht, der grundlegend wird: [[Der Beveridge-Bericht]]. Sein Ziel: jeden Bürger gegen fünf große Risiken zu schützen. Krankheit, Unwissenheit, Elend, Untätigkeit und Armut."
         },
         {
           "type": "paragraph",
-          "text": "Frankreich folgte dieser Bewegung und schuf 1945 die Sozialversicherung. Dieses System entstand aus einem politischen Kompromiss innerhalb der [[Conseil National de la Résistance]], der Organisation, die die Widerstandsbewegungen während des Krieges vereinte. Der Staat gibt sich nicht mehr mit Polizeiarbeit oder Justiz zufrieden: Er wird zum Garanten für das Wohlergehen aller."
+          "text": "Frankreich folgt dieser Bewegung und schafft 1945 die Sozialversicherung. Das System entsteht aus einem politischen Kompromiss im [[Conseil National de la Résistance]], der Organisation, die die Widerstandsgruppen im Krieg vereint hatte. Der Staat beschränkt sich nicht mehr auf Polizei und Justiz: er wird zum Garanten des Wohlergehens aller."
         },
         {
           "type": "funFact",
-          "text": "Der Wohlfahrtsstaat wurde nicht von Sozialisten, sondern vom konservativen deutschen Kanzler Otto von Bismarck im Jahr 1883 erfunden. Sein Ziel war strategisch: die Arbeiter zu beruhigen, um eine Revolution zu verhindern."
+          "text": "Den Sozialstaat haben nicht Sozialisten erfunden, sondern der konservative deutsche Kanzler Otto von Bismarck 1883. Sein Ziel war strategisch: die Arbeiter beruhigen, um eine Revolution zu verhindern."
         }
       ]
     },
@@ -52,17 +52,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Das Gleichgewicht der Nachkriegsjahre wurde durch zwei große Entwicklungen gestört. Der erste ist demografischer Natur: Die Menschen leben länger und die Familien bekommen weniger Kinder. Dadurch steigen die Gesundheitskosten und die Bezugsdauer Ihrer Rente verlängert sich."
+          "text": "Das Gleichgewicht der Nachkriegsjahre zerbrach durch zwei große Entwicklungen. Die erste ist demografisch: die Menschen leben länger, die Familien haben weniger Kinder. Das treibt die Gesundheitskosten und verlängert die Zeit, in der man Rente bezieht."
         },
         {
           "type": "image",
           "asset": "elderly_retirees_demographic_aging_population",
           "ratio": "16:9",
-          "caption": "Die Alterung der Bevölkerung belastet die Sozialkonten von Jahr zu Jahr stärker."
+          "caption": "Die Alterung der Bevölkerung lastet jedes Jahr schwerer auf den Sozialkassen"
         },
         {
           "type": "paragraph",
-          "text": "In Frankreich gab es in den 1960er Jahren vier Arbeitnehmer, um den Ruhestand eines einzelnen Rentners zu finanzieren. Heute ist diese Zahl auf weniger als 2 gesunken. Zweite Entwicklung: der Anstieg der Arbeitslosigkeit seit der Ölkrise von 1973 und der Aufstieg von , diesen unabhängigen und prekären Arbeitsplätzen, die weniger zum System beitragen, aber stärker Risiken ausgesetzt sind. [[Gig Economy]]"
+          "text": "In Frankreich kamen in den 1960er Jahren 4 Erwerbstätige auf einen Rentner. Heute liegt diese Zahl unter 2. Zweite Entwicklung: der Anstieg der Arbeitslosigkeit seit den Ölschocks 1973 und der Aufstieg der [[Gig Economy]], dieser unabhängigen, prekären Jobs. Sie zahlen weniger in das System ein und sind den Risiken stärker ausgesetzt."
         }
       ]
     },
@@ -73,34 +73,34 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "In einer globalisierten Wirtschaft können Unternehmen und Kapital problemlos von einem Land in ein anderes wandern. Die zur Finanzierung des Sozialschutzes notwendigen Steuern und Abgaben gelten dann als Nachteil im Vergleich zu Ländern, in denen die Arbeit weniger kostet."
+          "text": "In einer globalisierten Wirtschaft können Unternehmen und Kapital leicht von einem Land ins andere ziehen. Die Steuern und Beiträge, die den Sozialschutz finanzieren, gelten dann als Nachteil gegenüber Ländern, in denen Arbeit billiger ist."
         },
         {
           "type": "paragraph",
-          "text": "Ein interessantes Gegenbeispiel sind die skandinavischen Länder. Schweden und Dänemark behalten ein hohes Maß an Sozialschutz bei und bleiben gleichzeitig sehr wettbewerbsfähig. Ihr Geheimnis heißt : Unternehmen können problemlos Mitarbeiter entlassen, aber im Gegenzug erhalten die Mitarbeiter großzügige Arbeitslosenunterstützung und starke Unterstützung bei der Suche nach einem neuen Arbeitsplatz. [[Flexicurität]]"
+          "text": "Ein interessantes Gegenbeispiel sind die skandinavischen Länder. Schweden oder Dänemark halten ein hohes Schutzniveau und bleiben trotzdem sehr wettbewerbsfähig. Ihr Geheimnis heißt [[Flexicurity]]: die Firmen können leicht entlassen, die Beschäftigten bekommen dafür großzügiges Arbeitslosengeld und starke Hilfe in den neuen Job."
         },
         {
           "type": "funFact",
-          "text": "Dänemark gibt rund 32 % seines BIP für Sozialschutz aus, einer der höchsten Sätze weltweit, und zählt gleichzeitig zu den Ländern, in denen es am einfachsten ist, ein Unternehmen zu gründen."
+          "text": "Dänemark steckt rund 32% seines BIP in den Sozialschutz, einer der höchsten Sätze der Welt. Gleichzeitig gilt es regelmäßig als eines der einfachsten Länder, um eine Firma zu gründen."
         }
       ]
     },
     {
       "id": "course_214_la_crise_de_l_etat_providence_p4",
-      "title": "Sozialschutz neu erfinden",
+      "title": "Den Sozialschutz neu erfinden",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Das System von morgen muss vor neuen Risiken schützen: der Uberisierung der Arbeit, dem ökologischen Wandel und der Abhängigkeit im Alter. Die französische Reform von 2023, die das gesetzliche Renteneintrittsalter auf 64 Jahre anhob, zeigt, wie schwierig es ist, diese Änderungen durchzusetzen."
+          "text": "Das System von morgen muss vor neuen Risiken schützen: der Uberisierung der Arbeit, der ökologischen Wende, der Pflegebedürftigkeit im hohen Alter. Die französische Reform 2023, die das gesetzliche Renteneintrittsalter auf 64 Jahre anhob, zeigt, wie schwer solche Änderungen durchzusetzen sind."
         },
         {
           "type": "paragraph",
-          "text": "Die Debatte betrifft auch die Finanzierung: Sollten wir weiterhin den Großteil des Systems auf die Arbeit ausrichten, auf die Gefahr hin, die Beschäftigung zu benachteiligen, oder auf eine umfassendere Finanzierung durch Steuern umsteigen, wie die [[CSG]] in Frankreich, die sich auf alle Einkommen und nicht nur auf die Löhne auswirkt?"
+          "text": "Die Debatte betrifft auch die Finanzierung. Soll das System weiter vor allem auf der Arbeit lasten, auf die Gefahr hin, Beschäftigung zu belasten? Oder auf eine breitere Finanzierung über Steuern umstellen, wie die [[CSG]] in Frankreich, die alle Einkommen trifft und nicht nur Löhne?"
         },
         {
           "type": "takeaway",
-          "text": "Der Sozialstaat, der 1945 zum Schutz aller Menschen vor Krankheit, Arbeitslosigkeit und Alter gegründet wurde, wird durch die beispiellose Alterung der Bevölkerung und die Globalisierung geschwächt. Ihr Überleben wird von ihrer Fähigkeit abhängen, sich neu zu erfinden, ohne ihr Versprechen der Solidarität zu verlieren."
+          "text": "Der Sozialstaat, 1945 geboren, um jeden vor Krankheit, Arbeitslosigkeit und Alter zu schützen, wird durch eine beispiellose demografische Alterung und durch die Globalisierung geschwächt. Sein Überleben hängt davon ab, ob er sich neu erfinden kann, ohne sein Solidaritätsversprechen zu verlieren."
         }
       ]
     }
