@@ -1,14 +1,14 @@
 {
   "id": "course_196_merlin_l_enchanteur",
   "title": "Merlin, o Encantador",
-  "subtitle": "Mago de Arthur",
+  "subtitle": "O mago de Artur",
   "subject": "mythologie",
   "subcategory": "Outras mitologias",
-  "description": "Merlin, conselheiro, profeta e mago de Arthur: figura nascida de um demônio e batizado, arquiteto de Camelot, prisioneiro de seu próprio amor.",
+  "description": "Merlin, conselheiro de Artur, profeta e mago: uma figura nascida de um demônio e de um batismo, arquiteto de Camelot, prisioneiro do próprio amor.",
   "hero": {
     "image": "merlin_l_enchanteur",
     "ratio": "16:9",
-    "hook": "Filho de um demônio, batizado desde o berço: Merlin serve ao bem com poderes nascidos do mal."
+    "hook": "Filho de um demônio, batizado ainda no berço: Merlin serve o bem com poderes nascidos do mal."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Merlim** é o mágico mais famoso da Idade Média Ocidental. Bardo, profeta, conselheiro do Rei **Artur**: ele está na fronteira entre o antigo mundo celta e a cavalaria cristã."
+          "text": "**Merlin** é o mago mais famoso da Idade Média ocidental. Bardo, profeta, conselheiro do rei **Artur**: ele se põe na fronteira entre o mundo celta antigo e a cavalaria cristã."
         },
         {
           "type": "paragraph",
-          "text": "Sua natureza é paradoxal. Parte dele vem dos demônios, a outra do céu. Sua história não é a de um show de mágica: é a luta de um ser híbrido que escolhe servir o bem, até que o amor o afaste do mundo."
+          "text": "Sua natureza é paradoxal. Uma parte dele vem dos demônios, a outra do céu. Sua história não é a de um espetáculo de magia: é a luta de um ser híbrido que escolhe servir o bem, até o amor o retirar do mundo."
         }
       ]
     },
@@ -33,21 +33,21 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "No poeta **Roberto de Boro** (século XII), os demônios querem criar um anticristo. A [[Demônio íncubo]], um espírito que se une a uma mulher adormecida, seduz uma jovem cristã piedosa. O plano falha: a mãe confessa e batiza a criança."
+          "text": "No relato de **Robert de Boron** (século XII), os demônios querem criar um anticristo. Um [[demônio íncubo]], espírito que se junta a uma mulher adormecida, seduz uma jovem cristã piedosa. O plano fracassa: a mãe se confessa e manda batizar o filho."
         },
         {
           "type": "image",
           "asset": "merlin_wizard_medieval_manuscript_illumination",
           "ratio": "4:3",
-          "caption": "Merlin, figura do mago medieval entre a floresta e o pátio."
+          "caption": "Merlin, figura do mago medieval entre floresta e corte"
         },
         {
           "type": "funFact",
-          "text": "O nome “Merlin” vem do galês **Myrddin**. Geoffrey de Monmouth mudou o “d” para “l” para evitar um trocadilho muito próximo do latim *merda*."
+          "text": "O nome “Merlin” vem do galês **Myrddin**. Godofredo de Monmouth trocou o “d” por “l” para evitar um trocadilho perto demais do latim *merda*."
         },
         {
           "type": "paragraph",
-          "text": "O [[Batismo]] apaga a maldição, mas deixa os poderes: conhecimento do passado (herança demoníaca) e dom de . Merlin pode mudar de forma. Atrás dele, encontramos **Myrddin Wyllt**, um bardo galês do século VI que, enlouquecido após uma batalha, fugiu para a floresta de . [[A profecia na cultura medieval]] [[Celyddon]]"
+          "text": "O [[batismo]] apaga a maldição, mas deixa os poderes: conhecimento do passado (herança demoníaca) e dom de [[profecia na cultura medieval]]. Merlin pode se metamorfosear. Por trás dele, reaparece **Myrddin Wyllt**, bardo galês do século VI que, louco depois de uma batalha, foge para a floresta de [[Celyddon]]."
         }
       ]
     },
@@ -58,61 +58,61 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Merlin não é um ilusionista. Ele é o fiador do reino. Ele ajuda o Rei  a assumir as características do Duque da Cornualha para se juntar à Duquesa **Igerne**. Desta noite nasceu **Artur**. [[Uther Pendragon]]"
+          "text": "Merlin não é um ilusionista. Ele é o fiador do reino. Ajuda o rei [[Uther Pendragon]] a tomar os traços do duque da Cornualha para se juntar à duquesa **Igraine**. Dessa noite nasce **Artur**."
         },
         {
           "type": "image",
           "asset": "merlin_arthur_camelot_medieval_illustration",
           "ratio": "4:3",
-          "caption": "Merlin guia Arthur ao trono e Camelot."
+          "caption": "Merlin guia Artur rumo ao trono e a Camelot"
         },
         {
           "type": "paragraph",
-          "text": "Ele cria a criança em segredo, orquestra a espada na bigorna e depois leva Arthur até a Dama do Lago para obter, cuja bainha protege contra ferimentos mortais. No **Camelo**, ele desenha a **Mesa Redonda** e coloca o [[Excalibur]], assento vago reservado ao mais puro cavaleiro. Ele vê os perigos chegando. Ele também sabe que o destino sempre passa no final. [[Cerco Perigoso]]"
+          "text": "Ele cria o menino em segredo, orquestra a espada na bigorna e depois conduz Artur à Dama do Lago para obter [[Excalibur]], cuja bainha protege de ferimentos mortais. Em **Camelot**, concebe a **Távola Redonda** e coloca o [[Assento Perigoso]], assento vago reservado ao cavaleiro mais puro. Ele vê os perigos chegar. Sabe também que o destino acaba sempre passando."
         }
       ]
     },
     {
       "id": "course_196_merlin_l_enchanteur_p3",
-      "title": "A queda do encantador: amor e esquecimento",
+      "title": "A queda do encantador: o amor e o esquecimento",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Merlin encontra seu fim. Porém, ele se apaixona por **Viviane**, a Senhora do Lago, perto da fonte de Barenton. Ele ensina a ela seus feitiços mais secretos, mesmo sabendo que ela vai perder o controle."
+          "text": "Merlin conhece o próprio fim. Mesmo assim, apaixona-se por **Viviane**, a Dama do Lago, perto da fonte de Barenton. Ele lhe ensina os sortilégios mais secretos, mesmo sabendo que ela o perderá."
         },
         {
           "type": "image",
           "asset": "viviane_lady_of_the_lake_merlin_medieval_art",
           "ratio": "4:3",
-          "caption": "Viviane prende Merlin: o fim do tempo dos magos."
+          "caption": "Viviane encerra Merlin: o fim do tempo dos magos"
         },
         {
           "type": "funFact",
-          "text": "Dependendo da versão, Viviane tranca-o num espinheiro, numa torre de vidro ou numa cavidade **Brocéliande**. Imortal, Merlin não está morto: ele dorme fora do mundo."
+          "text": "Conforme as versões, Viviane o encerra num arbusto de espinheiro, numa torre de vidro ou numa cavidade de **Brocéliande**. Imortal, Merlin não está morto: ele dorme fora do mundo."
         },
         {
           "type": "paragraph",
-          "text": "Quando os cavaleiros partem para o Graal, a magia de Merlin não tem mais espaço. A sua retirada marca a passagem do tempo dos mitos para o tempo da fé."
+          "text": "Quando os cavaleiros partem rumo ao Graal, a magia de Merlin já não tem lugar. Seu retiro marca a passagem do tempo dos mitos ao tempo da fé."
         }
       ]
     },
     {
       "id": "course_196_merlin_l_enchanteur_p4",
-      "title": "Herança literária e figura do arquimago",
+      "title": "Legado literário e figura do arquimago",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Merlin olhou para a imagem do velho sábio: barba, cajado, enigmas. Dele descendem **Gandalf** para Tolkien e **Dumbledore** para Rowling. Ele é o coadjuvante que sabe, mas não pode atuar no lugar do herói."
+          "text": "Merlin fixou a imagem do velho sábio: barba, cajado, enigmas. Dele descendem **Gandalf** em Tolkien e **Dumbledore** em Rowling. Ele é o adjuvante que sabe, mas não pode agir no lugar do herói."
         },
         {
           "type": "paragraph",
-          "text": "Ponte entre a floresta selvagem e a corte, ele mantém uma marca  enquanto aconselha os reis. Ainda hoje ele sussurra que os impérios são frágeis e que a sabedoria nem sempre protege a pessoa. [[Druídico]]"
+          "text": "Ponte entre a floresta selvagem e a corte, ele guarda um traço [[druídico]] ao aconselhar os reis. Ainda hoje, murmura que os impérios são frágeis, e que a sabedoria nem sempre protege a gente de si mesma."
         },
         {
           "type": "takeaway",
-          "text": "**Merlim**, nascido de um demônio e salvo pelo batismo, constrói o destino de **Artur** e depois desaparece, prisioneiro de **Viviane**: o modelo duradouro da encantadora ocidental."
+          "text": "**Merlin**, nascido de um demônio e salvo pelo batismo, constrói o destino de **Artur** e depois desaparece, prisioneiro de **Viviane**: o modelo duradouro do encantador ocidental."
         }
       ]
     }
