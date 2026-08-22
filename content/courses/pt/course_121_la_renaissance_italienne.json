@@ -1,14 +1,14 @@
 {
   "id": "course_121_la_renaissance_italienne",
-  "title": "O Renascimento Italiano",
-  "subtitle": "Século 14 a 16",
+  "title": "O Renascimento italiano",
+  "subtitle": "séculos XIV-XVI",
   "subject": "art",
   "subcategory": "Pintura & movimentos",
-  "description": "Em dois séculos, a Itália reinventou a pintura, a escultura e a arquitetura e mudou a forma como vemos o mundo.",
+  "description": "Em dois séculos, a Itália reinventa a pintura, a escultura e a arquitetura, e muda o nosso jeito de ver o mundo.",
   "hero": {
     "image": "la_renaissance_italienne",
     "ratio": "16:9",
-    "hook": "Em dois séculos, a Itália reinventou a arte e a nossa forma de ver o mundo."
+    "hook": "Em dois séculos, a Itália reinventa a arte e o nosso jeito de olhar o mundo."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "O Renascimento italiano (séculos XIV-XVI) não é apenas uma mudança de estilo. É uma nova maneira de ver o mundo. Em dois séculos, a Itália colocou a observação, a razão e o indivíduo no centro de tudo."
+          "text": "O Renascimento italiano (séculos XIV-XVI) não é só uma mudança de estilo. É um jeito novo de ver o mundo. Em dois séculos, a Itália colocou a observação, a razão e o indivíduo no centro de tudo."
         },
         {
           "type": "paragraph",
-          "text": "Nascida nas cidades ricas da península, esta revolução reinventa a pintura, a escultura e a arquitetura. Duas forças motrizes o impulsionam: a redescoberta da Antiguidade Grega e Romana e invenções técnicas ousadas."
+          "text": "Nascida nas cidades ricas da península, essa revolução reinventou a pintura, a escultura e a arquitetura. Dois motores a sustentaram: a redescoberta da Antiguidade grega e romana, e invenções técnicas ousadas."
         }
       ]
     },
@@ -33,46 +33,46 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tudo começa em **Florença**, que dominou a economia europeia no século XIV graças aos têxteis e à banca. A família **Médici** assumiu o poder ali. Esses banqueiros usam o [[Mecenato]], financiamento para artistas, como ferramenta de prestígio."
+          "text": "Tudo começou em **Florença**, que dominava a economia europeia no século XIV graças ao têxtil e aos bancos. A família **Médici** tomou o poder. Esses banqueiros usavam o [[Mecenato]], o financiamento dos artistas, como ferramenta de prestígio."
         },
         {
           "type": "funFact",
-          "text": "Para contornar a proibição de empréstimos com juros, os Medici inventaram truques bancários. A Igreja faz vista grossa enquanto financia capelas."
+          "text": "Para contornar a proibição de emprestar a juros, os Médici inventaram truques bancários. A Igreja fez vista grossa enquanto eles financiavam capelas."
         },
         {
           "type": "image",
           "asset": "lorenzo_de_medici_portrait_florence",
           "ratio": "4:3",
-          "caption": "Laurent de Medici, conhecido como “o Magnífico”, grande protetor dos artistas."
+          "caption": "Lourenço de Médici, dito “o Magnífico”, grande protetor dos artistas"
         },
         {
           "type": "paragraph",
-          "text": "Ao mesmo tempo, **humanismo** muda o lugar do homem. Pensadores como [[Pico Mirandola]] afirmam que o ser humano é capaz de compreender a natureza através da razão. Em **1453**, a queda de Constantinopla empurra os estudiosos para a Itália com manuscritos gregos esquecidos."
+          "text": "Ao mesmo tempo, o **humanismo** mudou o lugar do homem. Pensadores como [[Pico della Mirandola]] afirmaram que o ser humano é capaz de entender a natureza pela razão. Em **1453**, a queda de Constantinopla empurrou sábios para a Itália com manuscritos gregos esquecidos."
         }
       ]
     },
     {
       "id": "course_121_la_renaissance_italienne_p2",
-      "title": "Pintando o real: perspectiva e corpo",
+      "title": "Pintar o verdadeiro: perspectiva e corpo",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "No século XV, o arquiteto **Brunelleschi** inventou o [[A perspectiva linear na pintura]] em torno de **1420**. Já se foi a Idade Média, onde o que era mais importante era ampliado: o espaço agora segue regras matemáticas, como uma janela aberta para a realidade."
+          "text": "No século XV, o arquiteto **Brunelleschi** inventou por volta de **1420** a [[perspectiva linear]]. Acabou o hábito medieval de pintar maior o que era mais importante: o espaço passou a seguir regras matemáticas, como uma janela aberta sobre o real."
         },
         {
           "type": "image",
           "asset": "brunelleschi_linear_perspective_florence",
           "ratio": "4:3",
-          "caption": "A perspectiva dá a ilusão de profundidade em uma superfície plana."
+          "caption": "A perspectiva dá a ilusão de profundidade numa superfície plana"
         },
         {
           "type": "paragraph",
-          "text": "**Leonardo da Vinci** vai além: disseca corpos para entender músculos e nervos, além de pintar emoções. A tinta a óleo, vinda da Flandres, substitui gradualmente [[Têmpera]] e permite [[claro-escuro]]: estes contrastes de sombra e luz que dão relevo."
+          "text": "**Leonardo da Vinci** foi mais longe: dissecou corpos para entender músculos e nervos, e pintar também as emoções. A pintura a óleo, vinda de Flandres, substituiu aos poucos a [[Têmpera]] e permitiu o [[chiaroscuro]]: contrastes de sombra e luz que dão relevo."
         },
         {
           "type": "funFact",
-          "text": "O corpo que Leonardo mais estudou foi o de um homem de cem anos. Examinando-o, ele descreveu um dos primeiros casos conhecidos de artéria bloqueada pela idade."
+          "text": "O corpo que Leonardo mais estudou era o de um velho de cem anos. Ao examiná-lo, descreveu um dos primeiros casos conhecidos de artéria entupida pela idade."
         }
       ]
     },
@@ -83,70 +83,70 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "No início do século XVI, Roma tomou o lugar de Florença, levada por papas construtores como **Júlio II**. Esta é a era do “homem completo”. **Leonardo da Vinci** é o modelo: pintor, engenheiro, anatomista."
+          "text": "No início do século XVI, Roma tomou o lugar de Florença, impulsionada por papas construtores como **Júlio II**. Foi a época do “homem completo”. **Leonardo da Vinci** foi o modelo: pintor, engenheiro, anatomista."
         },
         {
           "type": "paragraph",
-          "text": "**Miguel Ângelo** personifica força. Seu **Davi** torna-se o símbolo de Florença. Entre **1508** e **1512** pintou o teto da **Capela Sistina**: 500 metros quadrados no Gênesis."
+          "text": "**Michelangelo** encarnou a força. Seu **Davi** virou o símbolo de Florença. Entre **1508** e **1512**, ele pintou o teto da **Capela Sistina**: 500 metros quadrados sobre o Gênesis."
         },
         {
           "type": "image",
           "asset": "michelangelo_david_sistine_chapel_ceiling",
           "ratio": "4:3",
-          "caption": "Michelangelo, de David no teto da Capela Sistina."
+          "caption": "Michelangelo, do Davi ao teto da Capela Sistina"
         },
         {
           "type": "funFact",
-          "text": "Em *O Juízo Final*, Michelangelo pintou o próprio rosto sobre a pele esfolada: uma forma de expressar o quanto esse trabalho o havia esgotado."
+          "text": "Em *O Juízo Final*, Michelangelo pintou o próprio rosto numa pele esfolada: um jeito de dizer o quanto aquele trabalho o tinha esgotado."
         },
         {
           "type": "paragraph",
-          "text": "**Rafael** personifica a graça. Seu afresco *Na Escola de Atenas* reúne os grandes pensadores da Antiguidade numa harmonia que servirá de modelo durante séculos."
+          "text": "**Rafael** encarnou a graça. O afresco *A Escola de Atenas* reuniu os grandes pensadores da Antiguidade numa harmonia que serviu de modelo por séculos."
         }
       ]
     },
     {
       "id": "course_121_la_renaissance_italienne_p4",
-      "title": "Um património que atravessa a Europa",
+      "title": "Um legado que atravessa a Europa",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Após a morte de Raphaël em **1520**, o equilíbrio é perturbado. Os artistas alongam os corpos e forçam as cores: isto é [[Maneirismo]], uma arte mais inquieta. O Rei da França **Francisco I** convidou Leonardo e lançou o **Renascença Francesa**, com os castelos do Loire."
+          "text": "Depois da morte de Rafael em **1520**, o equilíbrio se desfez. Os artistas alongaram os corpos e forçaram as cores: surgiu o [[maneirismo]], uma arte mais inquieta. O rei da França **Francisco I** convidou Leonardo e lançou o **Renascimento francês**, com os castelos do Loire."
         },
         {
           "type": "timeline",
           "events": [
             {
               "date": "1420",
-              "title": "Perspectiva linear",
-              "detail": "Brunelleschi coloca espaço nas equações, em Florença."
+              "title": "A perspectiva linear",
+              "detail": "Brunelleschi põe o espaço em equações, em Florença."
             },
             {
               "date": "1453",
               "title": "Queda de Constantinopla",
-              "detail": "Os estudiosos fogem para a Itália com seus manuscritos gregos."
+              "detail": "Sábios fogem para a Itália com os manuscritos gregos."
             },
             {
               "date": "1504",
-              "title": "David de Michelangelo",
-              "detail": "Florence escolhe um símbolo de orgulho cívico."
+              "title": "O Davi de Michelangelo",
+              "detail": "Florença escolhe um símbolo de orgulho cívico."
             },
             {
               "date": "1508-1512",
               "title": "Capela Sistina",
-              "detail": "Michelangelo pintou o teto do Gênesis."
+              "detail": "Michelangelo pinta o teto do Gênesis."
             },
             {
               "date": "1520",
               "title": "Morte de Rafael",
-              "detail": "Termina a Alta Renascença, começa o Maneirismo."
+              "detail": "O Alto Renascimento se encerra, o maneirismo começa."
             }
           ]
         },
         {
           "type": "takeaway",
-          "text": "Nascido em Florença graças aos Médici, o Renascimento italiano revolucionou a arte com a perspectiva (por volta de 1420) e o estudo do corpo, antes de atingir o seu apogeu em Roma com Leonardo, Michelangelo e Rafael."
+          "text": "Nascido em Florença graças aos Médici, o Renascimento italiano revoluciona a arte com a perspectiva (por volta de 1420) e o estudo do corpo, antes de atingir o auge em Roma com Leonardo, Michelangelo e Rafael."
         }
       ]
     }
