@@ -4,11 +4,11 @@
   "subtitle": "Umlaufbahn und Schwerkraft",
   "subject": "sciences",
   "subcategory": "Die Erde und das Universum",
-  "description": "Der Mond fällt ständig auf die Erde zu. Sie vermisst es einfach jedes Mal. Genau das ist eine Umlaufbahn.",
+  "description": "Der Mond fällt dauernd zur Erde. Er verfehlt sie einfach jedes Mal. Genau das ist eine Umlaufbahn.",
   "hero": {
     "image": "pourquoi_la_lune_ne_tombe_pas",
     "ratio": "16:9",
-    "hook": "Der Mond fällt auf uns zu. Sie verfehlt die Erde einfach auf Schritt und Tritt."
+    "hook": "Der Mond fällt auf uns zu. Er verfehlt die Erde nur bei jeder Runde."
   },
   "sections": [
     {
@@ -18,40 +18,40 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Wenn die Schwerkraft der Erde den Mond anzieht, warum stürzt er dann nicht mit uns zusammen? Die Antwort erscheint bizarr: Der Mond **fällt tatsächlich aus** auf die Erde zu. Sie vermisst es einfach jeden Moment."
+          "text": "Wenn die Erdanziehung den Mond anzieht, warum stürzt er nicht auf uns? Die Antwort klingt seltsam: Der Mond **fällt** wirklich zur Erde. Er verfehlt sie nur in jedem Augenblick."
         },
         {
           "type": "paragraph",
-          "text": "Dieses Gleichgewicht zwischen Fall und Quergeschwindigkeit ist ein **orbital**, eine gekrümmte Flugbahn um einen Stern. Der englische Physiker **Isaac Newton** war der erste, der den Fall eines Apfels und die Bewegung der Sterne mit derselben Idee vereinte."
+          "text": "Dieses Gleichgewicht aus Fall und Seitwärtsgeschwindigkeit ist eine **Umlaufbahn**, eine gebogene Bahn um einen Himmelskörper. Der englische Physiker **Isaac Newton** war der Erste, der den Fall eines Apfels und die Bewegung der Gestirne mit derselben Idee verband."
         },
         {
           "type": "funFact",
-          "text": "Wenn Sie auf der Erde **60 kg** wiegen würden, würden Sie auf dem Mond nur etwa **10** wiegen: Seine Schwerkraft ist sechsmal schwächer."
+          "text": "Würde man auf der Erde **60 kg** wiegen, wären es auf dem Mond nur etwa **10**: Seine Schwerkraft ist sechsmal schwächer."
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p1",
-      "title": "Newtons imaginärer Kanon",
+      "title": "Newtons gedachte Kanone",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Newton stellt sich eine Kanone auf einem Berg vor, die so hoch ist, dass sie aus der Atmosphäre auftauchen würde. Wir schießen einen Ball horizontal. Bei wenig Leistung fällt es schnell ab. Mit mehr Kraft geht er weiter."
+          "text": "Newton stellt sich eine Kanone auf einem Berg vor, so hoch, dass er aus der Atmosphäre ragt. Man schießt eine Kugel waagerecht. Mit wenig Kraft fällt sie schnell zurück. Mit mehr Kraft fliegt sie weiter."
         },
         {
           "type": "image",
           "asset": "newton_cannonball_orbit_thought_experiment",
           "ratio": "auto",
-          "caption": "Newtons Kanonenkugel-Gedankenexperiment: der Schlüssel zum Verständnis der Umlaufbahn."
+          "caption": "Newtons Gedankenversuch mit der Kanonenkugel: der Schlüssel zur Umlaufbahn"
         },
         {
           "type": "paragraph",
-          "text": "Bei einer bestimmten Geschwindigkeit,  genannt, passiert etwas Bemerkenswertes. Wenn der Ball fällt, krümmt sich die runde Erde im gleichen Tempo darunter. Das Projektil fällt … ohne jemals den Boden zu berühren. Er befindet sich im **Dauerbremse Sturz**, von der Schwerkraft angezogen, ohne abzustürzen. [[Satellitengeschwindigkeit]]"
+          "text": "Bei einer bestimmten Geschwindigkeit, der [[Orbitalgeschwindigkeit]], geschieht etwas Bemerkenswertes. Während die Kugel fällt, krümmt sich die runde Erde unter ihr im selben Tempo. Das Geschoss fällt, ohne je den Boden zu berühren. Es ist in **dauerndem freien Fall**, von der Schwerkraft gezogen, ohne aufzuschlagen."
         },
         {
           "type": "paragraph",
-          "text": "Der Mond macht dasselbe. Sie hat genug Seitengeschwindigkeit, um einen Sturz in einen Looping zu verwandeln. Ohne diese Geschwindigkeit würde es direkt auf uns zustürzen."
+          "text": "Der Mond macht dasselbe. Er hat genug Seitwärtsgeschwindigkeit, um aus einem Fall eine Schleife zu machen. Ohne diese Geschwindigkeit würde er gerade auf uns stürzen."
         }
       ]
     },
@@ -62,57 +62,57 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Der Mond umkreist ungefähr **384.000 km**. Seine Quergeschwindigkeit beträgt etwa **1 km/s**. Wenn es plötzlich aufhörte, würde es innerhalb weniger Tage abstürzen. Würde die Schwerkraft plötzlich verschwinden, würde sie sich geradlinig durch den Raum bewegen, nach dem Prinzip von : Ein Körper behält seine Geschwindigkeit bei, wenn er nicht abgebremst wird. [[Trägheit]]"
+          "text": "Der Mond kreist in etwa **384.000 km** Abstand. Seine Seitwärtsgeschwindigkeit liegt bei etwa **1 km/s**. Bliebe er abrupt stehen, stürzte er in wenigen Tagen ab. Verschwände die Schwerkraft auf einmal, flöge er geradlinig ins All, nach dem Prinzip der [[Trägheit]]: Ein Körper behält seine Geschwindigkeit, wenn nichts ihn bremst."
         },
         {
           "type": "paragraph",
-          "text": " besagt, dass jede Masse jede andere Masse anzieht und dass die Anziehung mit der Entfernung, genauer gesagt mit dem Quadrat der Entfernung, abnimmt. Je näher ein Satellit ist, desto schneller muss er fliegen, um nicht abzustürzen. [[Newtons universelle Gravitation]]"
+          "text": "[[Newtons Gravitationsgesetz]] sagt, dass jede Masse jede andere Masse anzieht, und dass die Anziehung mit der Distanz sinkt, genauer mit dem Quadrat der Distanz. Je näher ein Satellit ist, desto schneller muss er fliegen, um nicht zu fallen."
         },
         {
           "type": "funFact",
-          "text": "Die Internationale Raumstation ISS bewegt sich in einer Höhe von nur **400 km** mit einer Geschwindigkeit von etwa **28.000 km/h**. Es umrundet die Erde in **90 Minuten**. Der weiter entfernte Mond benötigt **27,3 Tejo**."
+          "text": "Die Internationale Raumstation, nur **400 km** hoch, rast mit etwa **28.000 km/h**. Sie umrundet die Erde in **90 Minuten**. Der Mond, weiter weg, braucht **27,3 Tage**."
         },
         {
           "type": "paragraph",
-          "text": "Die Umlaufbahn ist also keine Zauberei. Es ist ein ständiger Kompromiss zwischen „Ich falle“ und „Ich bewege mich zu schnell, um zu treffen“."
+          "text": "Die Umlaufbahn ist also kein Zauber. Sie ist ein dauernder Kompromiss zwischen “ich falle” und “ich fliege zu schnell, um zu treffen”."
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p3",
-      "title": "Gezeiten drängen den Mond weg",
+      "title": "Die Gezeiten rücken den Mond weg",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Die Umlaufbahn ist nicht festgelegt. Die s kommen ins Spiel. Die Schwerkraft des Mondes wirkt auf die ihm zugewandte Seite der Erde stärker als auf die Mitte. Es verformt die Ozeane und erzeugt einen Wasservorsprung. [[Die Gezeitenkräfte]]"
+          "text": "Die Bahn steht nicht still. Die [[Gezeitenkräfte]] kommen ins Spiel. Die Schwerkraft des Mondes zieht stärker an der Erdseite, die ihm zugewandt ist, als am Zentrum. Sie verformt die Ozeane und bildet einen Wasserwulst."
         },
         {
           "type": "paragraph",
-          "text": "Da sich die Erde schneller um ihre Achse dreht als der Mond um sie herum, rückt dieser Rücken ein Stück vor den Mond. Reibung verlangsamt die Erdrotation geringfügig: Unsere Tage verlängern sich um etwa **1,4 Millimeter** pro Jahrhundert. Im Gegenzug entfernt sich der Mond um etwa **3,8 cm** pro Jahr."
+          "text": "Weil die Erde sich schneller um sich selbst dreht, als der Mond um sie kreist, eilt dieser Wulst dem Mond ein wenig voraus. Die Reibung bremst die Erddrehung sehr leicht: Unsere Tage werden um etwa **1,4 Millisekunden** pro Jahrhundert länger. Im Gegenzug entfernt sich der Mond um etwa **3,8 cm** pro Jahr."
         },
         {
           "type": "paragraph",
-          "text": "Vor Milliarden Jahren war der Mond viel näher. Die Gezeiten waren riesig. Diese Vermischung von Wasser und Chemie könnte den frühen Lebensformen geholfen haben. Und die Dinosaurier lebten auf einer Erde, auf der die Tage nur **22 oder 23 Stunden** dauerten."
+          "text": "Vor Milliarden Jahren war der Mond viel näher. Die Gezeiten waren riesig. Dieses Mischen von Wasser und Chemie hat vielleicht den ersten Lebensformen geholfen. Und die Dinosaurier lebten auf einer Erde, deren Tage nur **22 oder 23 Stunden** dauerten."
         }
       ]
     },
     {
       "id": "course_65_pourquoi_la_lune_ne_tombe_t_elle_pas_sur_p4",
-      "title": "Finsternisse ... vorerst",
+      "title": "Finsternisse, vorerst",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Heute ist die Sonne durch geometrischen Zufall etwa **400-mal** größer als der Mond, aber auch **400-mal** weiter entfernt. Die beiden haben daher die gleiche scheinbare Größe **ENDBOLDZZ**, den Winkel, in dem wir sie am Himmel sehen. Totale Sonnenfinsternisse sind möglich."
+          "text": "Heute, durch eine geometrische Koinzidenz, ist die Sonne etwa **400-mal** größer als der Mond, aber auch **400-mal** weiter weg. Beide haben also dieselbe **scheinbare Größe**, den Winkel, unter dem man sie am Himmel sieht. Totale Sonnenfinsternisse sind möglich."
         },
         {
           "type": "paragraph",
-          "text": "In etwa **600 Millionen Jahre** wird der Mond zu weit entfernt sein, um die Sonne vollständig zu verdecken. Übrig bleiben nur ringförmige Finsternisse: ein Lichtring um die Mondscheibe. Langfristig könnten sich Erde und Mond synchronisieren: Jeder Körper würde dem anderen immer das gleiche Gesicht zeigen. Aber wenn die Sonne **rülps Riese** wird, die letzte Phase eines Sterns wie unseres, wird sie das System viel früher verändern."
+          "text": "In etwa **600 Millionen Jahren** wird der Mond zu weit sein, um die Sonne ganz zu verdecken. Es bleiben nur ringförmige Finsternisse: ein Lichtring um die Mondscheibe. Auf sehr lange Sicht könnten Erde und Mond sich synchronisieren: Jeder Körper zeigte dem anderen immer dieselbe Seite. Aber die Sonne, wenn sie zum **Roten Riesen** wird, der Endphase eines Sterns wie dem unseren, verändert das System weit früher."
         },
         {
           "type": "takeaway",
-          "text": "Der Mond stürzt nicht ab, weil seine Quergeschwindigkeit die Anziehungskraft der Erde ausgleicht: Er befindet sich im permanenten freien Fall. Und es entfernt sich immer noch um etwa **3,8 cm** pro Jahr."
+          "text": "Der Mond stürzt nicht ab, weil seine Seitwärtsgeschwindigkeit die Erdanziehung ausgleicht: Er ist in dauerndem freien Fall. Und er entfernt sich noch um etwa **3,8 cm** pro Jahr."
         }
       ]
     }
