@@ -1,14 +1,14 @@
 {
   "id": "course_213_l_evasion_fiscale_des_multinationales",
-  "title": "Steuerhinterziehung durch multinationale Konzerne",
-  "subtitle": "Wie zahlt GAFAM so wenig Steuern?",
+  "title": "Die Steuerflucht der Konzerne",
+  "subtitle": "Warum die GAFAM so wenig Steuern zahlen",
   "subject": "comprendreLeMonde",
   "subcategory": "Wirtschaft & Gesellschaft",
-  "description": "Digitale Giganten zahlen im Vergleich zu ihren Gewinnen oft lächerliche Steuern. Dies ist nicht immer illegal: Es ist das Ergebnis von Lücken im Völkerrecht.",
+  "description": "Die Digitalgiganten zahlen oft lächerlich wenig Steuern, verglichen mit ihren Gewinnen. Das ist nicht immer illegal: es folgt aus Lücken im internationalen Recht.",
   "hero": {
     "image": "l_evasion_fiscale_des_multinationales",
     "ratio": "16:9",
-    "hook": "Im Jahr 2014 zahlte Apple in Irland einen effektiven Steuersatz von nahezu 0,005 %. Wie ist das möglich?"
+    "hook": "2014 zahlte Apple in Irland einen effektiven Steuersatz nahe 0,005%. Wie ist das möglich?"
   },
   "sections": [
     {
@@ -18,51 +18,51 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "GAFAM, also Google, Apple, Facebook (Meta), Amazon und Microsoft, gehören zu den reichsten Unternehmen der Welt. Allerdings zahlen sie im Verhältnis zu ihrem Gewinn oft deutlich weniger Steuern als ein traditioneller Mittelständler."
+          "text": "Die GAFAM, also Google, Apple, Facebook (Meta), Amazon und Microsoft, gehören zu den reichsten Unternehmen der Welt. Gemessen an ihren Gewinnen zahlen sie oft weit weniger Steuern als ein klassischer Mittelständler."
         },
         {
           "type": "paragraph",
-          "text": "Dabei handelt es sich nicht um Betrug im engeren Sinne, sondern um **Steueroptimierung**, also um die geschickte Ausnutzung von Lücken im Völkerrecht. Durch diesen Mechanismus entgehen den Staaten jedes Jahr Hunderte Milliarden Dollar. Hier erfahren Sie, wie es funktioniert und wie die Welt versucht, darauf zu reagieren."
+          "text": "Das ist keine Steuerhinterziehung im engen Sinn. Es ist **Steueroptimierung**: die geschickte Nutzung der Lücken im internationalen Recht. Dieser Mechanismus entzieht den Staaten jedes Jahr Hunderte Milliarden Dollar. So funktioniert er, und so versucht die Welt zu antworten."
         }
       ]
     },
     {
       "id": "course_213_l_evasion_fiscale_des_multinationales_p1",
-      "title": "Eine Steuer, die für Fabriken gedacht ist, nicht für die Digitalisierung",
+      "title": "Eine Steuer, gedacht für Fabriken, nicht fürs Digitale",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Das internationale Steuersystem wurde zu Beginn des 20. Jahrhunderts für eine Industriewirtschaft konzipiert: Um dort besteuert zu werden, musste ein Unternehmen über Fabriken oder Büros in einem Land verfügen, einem sogenannten . [[Betriebsstätte]]"
+          "text": "Das internationale Steuersystem entstand Anfang des 20. Jahrhunderts für eine Industrieökonomie. Ein Unternehmen brauchte Fabriken oder Büros in einem Land, eine [[Betriebsstätte]], um dort besteuert zu werden."
         },
         {
           "type": "paragraph",
-          "text": "Die digitale Technologie hat diese Verbindung mit dem Territorium unterbrochen. Heutzutage kann ein Unternehmen einen Markt dominieren, die Daten von Millionen von Nutzern erfassen und in einem Land viel Geld verdienen, ohne dort auch nur ein einziges Gebäude zu besitzen. Sie kann dann den Ort, an dem sie ihr Geld verdient, von dem Ort trennen, an dem sie es deklariert."
+          "text": "Das Digitale hat diese Bindung an das Territorium zerbrochen. Ein Unternehmen kann heute einen Markt beherrschen, die Daten von Millionen Nutzern abschöpfen und in einem Land enorm verdienen, ohne dort auch nur ein Gebäude zu besitzen. Es kann den Ort, an dem es das Geld verdient, vom Ort trennen, an dem es das Geld versteuert."
         },
         {
           "type": "funFact",
-          "text": "Im Jahr 2014 stellte die US-Steuerbehörde IRS fest, dass Microsoft durch geistige Eigentumsrechte Gewinne in Höhe von 39 Milliarden US-Dollar nach Puerto Rico verlagert hatte, wodurch mehr als 6,5 Milliarden US-Dollar an Steuern eingespart wurden."
+          "text": "2014 entdeckte die US-Steuerbehörde, dass Microsoft 39 Milliarden Dollar Gewinn über Rechte des geistigen Eigentums nach Puerto Rico verschoben hatte. Das sparte mehr als 6,5 Milliarden Dollar Steuern."
         }
       ]
     },
     {
       "id": "course_213_l_evasion_fiscale_des_multinationales_p2",
-      "title": "Ein Fehlbetrag von Hunderten Milliarden",
+      "title": "Ein Ausfall von Hunderten Milliarden",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nach Angaben der OECD kosten diese Praktiken die öffentlichen Haushalte auf der ganzen Welt zwischen 100 und 240 Milliarden US-Dollar pro Jahr oder 4 bis 10 % aller weltweit erhobenen Unternehmenssteuern."
+          "text": "Laut OECD kosten diese Praktiken die öffentlichen Haushalte der Welt jedes Jahr zwischen 100 und 240 Milliarden Dollar. Das sind 4 bis 10% aller Körperschaftsteuern, die auf dem Planeten erhoben werden."
         },
         {
           "type": "image",
           "asset": "multinational_corporate_tax_avoidance_structure",
           "ratio": "16:9",
-          "caption": "Die europäischen Hauptsitze digitaler Giganten befinden sich oft in Ländern, in denen die Steuern am niedrigsten sind."
+          "caption": "Die Europasitze der Digitalgiganten stehen oft in den Ländern mit der niedrigsten Steuer"
         },
         {
           "type": "paragraph",
-          "text": "Dieses Defizit zwingt die Staaten dazu, sich zwischen einer Erhöhung der Steuern für Haushalte und KMU oder einer Kürzung der öffentlichen Ausgaben wie Gesundheit oder Bildung zu entscheiden. Ein lokales Unternehmen zahlt im Durchschnitt einen viel höheren Steuersatz als ein multinationales Unternehmen, was zu unlauterem Wettbewerb führt."
+          "text": "Dieser Ausfall zwingt die Staaten zur Wahl: die Steuern von Haushalten und Mittelstand erhöhen oder öffentliche Ausgaben kürzen, etwa bei Gesundheit oder Bildung. Ein lokales Unternehmen zahlt im Schnitt einen deutlich höheren Satz als ein Konzern. Das schafft unfairen Wettbewerb."
         }
       ]
     },
@@ -73,11 +73,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Im Jahr 2021 wurde unter der Schirmherrschaft der OECD und der G20 durch eine historische Vereinbarung ein [[Globale Mindeststeuer von 15 % (OECD, 2021)]] gegründet. Es richtet sich an Unternehmen, deren Umsatz 750 Millionen Euro übersteigt: Wenn sie in einem Land nur 5 % Steuern zahlen, kann ihr Herkunftsland nun die fehlenden 10 % geltend machen."
+          "text": "2021 hat ein historisches Abkommen unter der Ägide von OECD und G20 [[Die globale Mindeststeuer von 15 %]] eingeführt. Es zielt auf Unternehmen mit mehr als 750 Millionen Euro Umsatz. Zahlen sie in einem Land nur 5% Steuern, kann ihr Herkunftsland die fehlenden 10% nachfordern."
         },
         {
           "type": "paragraph",
-          "text": "Einige Länder, wie beispielsweise Frankreich, haben auch eine nationale Steuer eingeführt, die direkt auf den Umsatz digitaler Giganten abzielt. Gleichzeitig müssen multinationale Unternehmen nun Land für Land den Standort ihrer Mitarbeiter, ihre Gewinne und ihre Steuern veröffentlichen: Transparenz, die es ermöglicht, die eklatantesten Diskrepanzen zu erkennen."
+          "text": "Manche Länder, etwa Frankreich, haben zusätzlich eine nationale Steuer geschaffen, die direkt am Umsatz der Digitalgiganten ansetzt. Parallel müssen Konzerne nun Land für Land veröffentlichen, wo ihre Beschäftigten, ihre Gewinne und ihre Steuern sitzen. Diese Transparenz macht die krassesten Verschiebungen sichtbar."
         }
       ]
     },
@@ -88,15 +88,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Irland ist mit seinem offiziellen Steuersatz von 12,5 % und seinen Geheimabkommen namens  zum europäischen Dreh- und Angelpunkt der Steueroptimierung geworden. Dank einer komplexen Struktur zahlte Apple im Jahr 2014 einen effektiven Steuersatz von nahezu 0,005 %. [[Tax Rulings]]"
+          "text": "Irland wurde mit seinem offiziellen Satz von 12,5% und geheimen Abkommen, den [[Tax Rulings]], zum europäischen Drehkreuz der Steueroptimierung. Dank einer komplexen Struktur zahlte Apple 2014 einen effektiven Satz nahe 0,005%."
         },
         {
           "type": "paragraph",
-          "text": "Die Europäische Kommission hat von Apple 13 Milliarden Euro an nicht gezahlten Steuern von Irland gefordert, doch das Land weigert sich lange, diese einzutreiben: Es befürchtet, dass zu strenge Regeln dazu führen werden, dass die Hauptsitze in andere Regionen der Welt fliehen. Befürworter der Steuergerechtigkeit weisen außerdem darauf hin, dass dieser Satz von 15 % immer noch unter dem Durchschnitt der entwickelten Länder liegt und dass die ärmsten Länder, die häufig am stärksten von Steuerhinterziehung betroffen sind, nur einen winzigen Anteil zurückerhalten werden."
+          "text": "Die Europäische Kommission forderte von Irland 13 Milliarden Euro unbezahlter Apple-Steuern. Das Land weigerte sich lange, sie einzutreiben. Es fürchtet, zu strenge Regeln könnten die Sitze in andere Weltregionen vertreiben. Die Verteidiger der Steuergerechtigkeit erinnern auch daran: dieser Satz von 15% liegt noch unter dem Schnitt der Industrieländer. Die ärmsten Länder, oft am stärksten von der Steuerflucht getroffen, holen davon nur einen winzigen Teil zurück."
         },
         {
           "type": "takeaway",
-          "text": "GAFAM nutzt seit langem Lücken im Völkerrecht aus, um lächerliche Steuern zu zahlen, was die öffentlichen Haushalte bis zu 240 Milliarden US-Dollar pro Jahr kostet. Seit 2021 wird mit einer globalen Mindeststeuer von 15 % versucht, dieses Ungleichgewicht zu korrigieren, doch der Kampf um eine gerechtere Besteuerung geht weiter."
+          "text": "Die GAFAM haben lange Lücken im internationalen Recht genutzt, um lächerlich wenig Steuern zu zahlen. Das kostet die öffentlichen Haushalte bis zu 240 Milliarden Dollar im Jahr. Seit 2021 soll eine globale Mindeststeuer von 15% dieses Ungleichgewicht korrigieren. Der Kampf um eine gerechtere Besteuerung geht weiter."
         }
       ]
     }

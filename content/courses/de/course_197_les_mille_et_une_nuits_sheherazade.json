@@ -1,14 +1,14 @@
 {
   "id": "course_197_les_mille_et_une_nuits_sheherazade",
-  "title": "Tausendundeine Nacht (Shéherazade)",
-  "subtitle": "Sag, du sollst überleben",
+  "title": "Tausendundeine Nacht (Scheherazade)",
+  "subtitle": "Erzählen, um zu überleben",
   "subject": "mythologie",
   "subcategory": "Andere Mythologien",
-  "description": "Scheherazade überlebt 1001 Nacht, indem sie Geschichten erzählt. Eine zwischen Persien, Bagdad und Ägypten entstandene Sammlung, die zu einem Weltmythos geworden ist.",
+  "description": "Scheherazade überlebt 1001 Nächte, indem sie Geschichten erzählt. Eine Sammlung, geboren zwischen Persien, Bagdad und Ägypten, die zum Weltmythos wurde.",
   "hero": {
     "image": "les_mille_et_une_nuits_sheherazade",
     "ratio": "16:9",
-    "hook": "Jede Nacht erzählt eine Frau eine Geschichte, um nicht im Morgengrauen zu sterben."
+    "hook": "Jede Nacht erzählt eine Frau eine Geschichte, damit sie im Morgengrauen nicht sterben muss."
   },
   "sections": [
     {
@@ -18,101 +18,101 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Die **Tausendundeine Nacht** (*Alf Layla wa-Layla*) ist kein Buch eines einzelnen Autors. Es ist ein Palimpsest: Jahrhunderte mündlicher und schriftlicher Erzählungen, indisch, persisch, arabisch, ägyptisch."
+          "text": "Die **Tausendundeine Nacht** (*Alf Layla wa-Layla*) ist kein Buch eines einzelnen Autors. Es ist ein Palimpsest: Jahrhunderte mündlicher und schriftlicher Märchen, indisch, persisch, arabisch, ägyptisch."
         },
         {
           "type": "paragraph",
-          "text": "Im Zentrum eine schwindelerregende Idee: Eine Frau, **Scheherazade**, verwandelt die Geschichte in einen Schutzschild. Solange sie spricht, muss der König, der sie töten wollte, warten. So wird Sprache zur Überlebenswaffe."
+          "text": "Im Zentrum steht eine schwindelerregende Idee: eine Frau, **Scheherazade**, macht aus der Erzählung einen Schild. Solange sie spricht, muss der König, der sie töten wollte, warten. So wird das Wort zur Waffe des Überlebens."
         }
       ]
     },
     {
       "id": "course_197_les_mille_et_une_nuits_sheherazade_p1",
-      "title": "Eine Architektur aus Papier: die Entstehung eines Welttextes",
+      "title": "Eine Architektur aus Papier: die Entstehung eines Welttexts",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Der Kern stammt aus einer persischen Quelle, den [[Hazār Afsāna]] („Tausend Geschichten“), die ihrerseits von indischen Traditionen genährt werden. In Bagdad wurde die Sammlung unter den -Kalifen (8.-13. Jahrhundert) arabisiert: urbane Legenden, Hofanekdoten, manchmal satirischer Ton. [[Abbasiden]]"
+          "text": "Der Kern kommt aus einem persischen Fundus, den [[Hazār Afsāna]] (“Tausend Erzählungen”), selbst gespeist von indischen Traditionen. In Bagdad, unter den Kalifen der [[Abbasiden]] (8.-13. Jahrhundert), wird die Sammlung arabisiert: Stadtlegenden, Hofanekdoten, oft ein satirischer Ton."
         },
         {
           "type": "image",
           "asset": "one_thousand_and_one_nights_arabic_manuscript",
           "ratio": "4:3",
-          "caption": "Manuskript aus Tausendundeiner Nacht: ein Welttext in Entstehung."
+          "caption": "Handschrift von Tausendundeine Nacht: ein Welttext im Werden"
         },
         {
           "type": "funFact",
-          "text": "„Tausendundeins“ bedeutet keine genaue Zählung. Auf Arabisch bedeutet diese Zahl Fülle, fast Unendlichkeit. Einige Schriftgelehrte sahen darin sogar einen Talisman gegen den bösen Blick."
+          "text": "“Tausendundeine” meint keine genaue Zahl. Im Arabischen deutet diese Ziffer auf Fülle, fast auf Unendlichkeit. Manche Schreiber sahen darin sogar einen Talisman gegen den bösen Blick."
         },
         {
           "type": "paragraph",
-          "text": "In Ägypten kamen zur Zeit von  neue Zyklen hinzu. Überraschung für den Westen: **Aladdin** und **Ali Baba** fehlen in mittelalterlichen arabischen Manuskripten. Dabei handelt es sich um „Waisenmärchen“, die später über Europa eingeführt wurden. [[Mamluken]]"
+          "text": "In Ägypten, zur Zeit der [[Mamelucken]], kommen neue Zyklen hinzu. Überraschung für den Westen: **Aladin** und **Ali Baba** fehlen in den mittelalterlichen arabischen Handschriften. Es sind “Waisenmärchen”, die später über Europa ins Korpus kamen."
         }
       ]
     },
     {
       "id": "course_197_les_mille_et_une_nuits_sheherazade_p2",
-      "title": "Die Hegemonie von Scheherazade: Erzählung als Schutzschild",
+      "title": "Die Hegemonie der Scheherazade: Erzählen als Schild",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "König **Shahryar**, von seiner ersten Frau verraten, heiratet jeden Abend eine junge Frau und lässt sie im Morgengrauen töten. **Scheherazade**, Tochter des Wesirs, bietet sich an. Sie erzählt … und hält im angespanntesten Moment inne."
+          "text": "König **Schahriyar**, von seiner ersten Frau betrogen, heiratet jeden Abend eine junge Frau und lässt sie im Morgengrauen töten. **Scheherazade**, Tochter des Wesirs, bietet sich an. Sie erzählt und hält genau im spannendsten Moment inne."
         },
         {
           "type": "image",
           "asset": "scheherazade_shahryar_king_storyteller_painting",
           "ratio": "4:3",
-          "caption": "Scheherazade steht Shahryar gegenüber: Erzählung als Schutzschild."
+          "caption": "Scheherazade vor Schahriyar: das Erzählen als Schild"
         },
         {
           "type": "paragraph",
-          "text": "Sie stapelt s: Ein Charakter erzählt es einem anderen, dieser erzählt es einem dritten. Der König, gefangen in dem Wunsch zu hören, was als nächstes passiert, verschiebt die Hinrichtung. Nach **Eine Tausendundeiner Nacht** veränderte das Zuhören Shahryar: Er fand wieder Empathie. Scheherazade hat nicht nur unterhalten. Sie hat einen Tyrannen eingesetzt. [[verschachtelte Geschichten (Rahmenerzählung)]]"
+          "text": "Sie schichtet [[Rahmenerzählungen (Schachtelgeschichten)]] übereinander: eine Figur erzählt von einer anderen, die von einer dritten erzählt. Der König, gefangen vom Wunsch, die Fortsetzung zu hören, schiebt die Hinrichtung auf. Nach **tausendundeiner Nacht** hat das Zuhören Schahriyar verändert: er findet Empathie wieder. Scheherazade hat nicht nur unterhalten. Sie hat einen Tyrannen geheilt."
         }
       ]
     },
     {
       "id": "course_197_les_mille_et_une_nuits_sheherazade_p3",
-      "title": "Die Wende zum Westen und die Erfindung eines Mythos",
+      "title": "Der Umschwung nach Westen und die Erfindung eines Mythos",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Zwischen **1704** und **1717** veröffentlicht der französische Orientalist **Antoine Galland** seine Übersetzung. Er passt den Text an den Geschmack des Hofes von **Ludwig XIV** an und fügt Geschichten hinzu, die er von , einem vorübergehenden Syrer, gehört hat. Aladdin betritt somit den Korpus. [[Hanna Diyab]]"
+          "text": "Zwischen **1704** und **1717** veröffentlicht der französische Orientalist **Antoine Galland** seine Übersetzung. Er passt den Text dem Geschmack am Hof von **Ludwig XIV** an und fügt Märchen hinzu, die er von [[Hanna Diyab]] hörte, einem syrischen Durchreisenden. So kommt Aladin ins Korpus."
         },
         {
           "type": "image",
           "asset": "antoine_galland_thousand_nights_french_translation",
           "ratio": "4:3",
-          "caption": "Galland eröffnet die Nächte im Europa des 18. Jahrhunderts."
+          "caption": "Galland öffnet die Nächte für das Europa des 18. Jahrhunderts"
         },
         {
           "type": "funFact",
-          "text": "Junge Leute weckten Galland manchmal nachts, indem sie unter seinem Fenster riefen: „Herr Galland, wenn Sie nicht schlafen können, erzählen Sie uns eine Ihrer Geschichten!“ »"
+          "text": "Junge Leute weckten Galland manchmal nachts, indem sie unter seinem Fenster riefen: “Herr Galland, wenn Sie nicht schlafen, erzählen Sie uns eine Ihrer Geschichten!”"
         },
         {
           "type": "paragraph",
-          "text": "Der Erfolg erfindet einen : fliegende Teppiche, Geister, verkleidete Kalifen. Fantasievisionen, oft reduktiv, aber von immensem Einfluss, von **Proust** bis **Borges**, die in diesen Erzählschleifen das eigentliche Bild der literarischen Unendlichkeit sahen. [[Europäischer Orientalismus]]"
+          "text": "Der Erfolg erfindet einen [[europäischen Orientalismus]]: fliegende Teppiche, Dschinns, verkleidete Kalifen. Ein Fantasiebild, oft verengend, aber von riesigem Einfluss, von **Proust** bis **Borges**, der in diesen Erzählschleifen das Bild der literarischen Unendlichkeit selbst sah."
         }
       ]
     },
     {
       "id": "course_197_les_mille_et_une_nuits_sheherazade_p4",
-      "title": "Modernität und philosophischer Umfang der Geschichte",
+      "title": "Modernität und philosophische Tragweite der Erzählung",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Warum erzählen? Die Antwort der Nacht: den Tod in Schach halten. Solange Scheherazades Stimme erklingt, ruht die verhängnisvolle Morgendämmerung. Fiktion gibt dem Chaos eine Form."
+          "text": "Warum erzählen? Die Nächte antworten: um den Tod auf Distanz zu halten. Solange Scheherazades Stimme klingt, bleibt die tödliche Morgendämmerung ausgesetzt. Die Fiktion gibt dem Chaos Form."
         },
         {
           "type": "paragraph",
-          "text": "Dieser Mechanismus nährt unsere Serie noch immer: Der [[Cliffhanger]], dieser Schnitt am Rande des Abgrunds, ist der direkte Erbe des Erzählers. Ein Buch, das sich der Unendlichkeit öffnet und sich nicht schließen lässt."
+          "text": "Diese Mechanik nährt noch unsere Serien: der [[Cliffhanger]], dieser Schnitt am Rand des Abgrunds, ist der direkte Erbe der Erzählerin. Ein Buch, das sich ins Unendliche öffnet und sich nicht schließen will."
         },
         {
           "type": "takeaway",
-          "text": "**Scheherazade** überlebt **1001**-Nächte dank eingebetteter Geschichten: Sie erfindet Spannung als Überlebensinstrument und verwandelt Sprache in politische Macht."
+          "text": "**Scheherazade** überlebt **1001** Nächte dank eingeschachtelter Erzählungen: sie erfindet den Spannungsbogen als Werkzeug des Überlebens und macht aus dem Wort politische Macht."
         }
       ]
     }

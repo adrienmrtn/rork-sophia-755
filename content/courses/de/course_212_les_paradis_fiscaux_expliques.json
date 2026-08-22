@@ -1,14 +1,14 @@
 {
   "id": "course_212_les_paradis_fiscaux_expliques",
-  "title": "Steueroasen erklärt",
-  "subtitle": "10.000 Milliarden gebunkert",
+  "title": "Die Steueroasen erklärt",
+  "subtitle": "10.000 Milliarden versteckt",
   "subject": "comprendreLeMonde",
   "subcategory": "Wirtschaft & Gesellschaft",
-  "description": "Etwa 10 % des weltweiten Vermögens entgehen der Besteuerung in undurchsichtigen Gebieten. Wie funktioniert dieses System und warum ist es so widerstandsfähig?",
+  "description": "Rund 10% des Weltvermögens entzieht sich der Steuer in undurchsichtigen Gebieten. Wie funktioniert dieses System, und warum hält es sich so hartnäckig?",
   "hero": {
     "image": "les_paradis_fiscaux_expliques",
     "ratio": "16:9",
-    "hook": "Die Cayman Islands haben eine Bevölkerung von 65.000 und über 100.000 Unternehmen. Willkommen in der Welt der Steueroasen."
+    "hook": "Die Kaimaninseln haben 65.000 Einwohner und mehr als 100.000 Firmen. Willkommen in der Welt der Steueroasen."
   },
   "sections": [
     {
@@ -18,89 +18,89 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bestimmte, oft winzige Gebiete ermöglichen es Unternehmen und großen Vermögen, der Steuer ihres Herkunftslandes fast vollständig zu entgehen. Wir nennen diese **Steueroasen**. Es wird geschätzt, dass dort etwa 10 Billionen US-Dollar oder 8 bis 10 % des Weltvermögens untergebracht sind."
+          "text": "Manche Gebiete, oft winzig, erlauben es Firmen und großen Vermögen, der Steuer ihres Herkunftslandes fast ganz zu entgehen. Man nennt sie **Steueroasen**. Schätzungen zufolge liegen dort rund 10.000 Milliarden Dollar, also 8 bis 10% des Weltvermögens."
         },
         {
           "type": "paragraph",
-          "text": "Dies ist nicht nur ein Problem für Buchhalter: Es entzieht den Staaten jährlich 600 Milliarden Dollar, Geld, mit dem Krankenhäuser oder Schulen hätten finanziert werden können. Hier erfahren Sie, wie dieses diskrete System funktioniert und warum es Regulierungsversuchen so gut widersteht."
+          "text": "Das ist kein bloßes Buchhalterproblem. Es entzieht den Staaten 600 Milliarden Dollar im Jahr, Geld, das Krankenhäuser oder Schulen hätte finanzieren können. So funktioniert dieses diskrete System, und darum trotzt es der Regulierung so gut."
         }
       ]
     },
     {
       "id": "course_212_les_paradis_fiscaux_expliques_p1",
-      "title": "Wie wird Geld versteckt?",
+      "title": "Wie sich das Geld versteckt",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Eine Steueroase basiert auf drei Säulen: Steuern nahe Null, große Intransparenz und wenig Zusammenarbeit mit anderen Ländern. Diese Gebiete ziehen somit Kapital aus der ganzen Welt an, was wir die -Wirtschaft nennen. [[Offshore]]"
+          "text": "Eine Steueroase steht auf drei Säulen: Steuern nahe null, große Undurchsichtigkeit und wenig Kooperation mit anderen Ländern. Diese Gebiete ziehen so Kapital aus der ganzen Welt an. Das nennt man die Wirtschaft [[Offshore]]."
         },
         {
           "type": "paragraph",
-          "text": "In vielen dieser Gebiete ist es möglich, eine Briefkastenfirma zu gründen: ein Unternehmen ohne Büro oder Mitarbeiter, das nur auf dem Papier existiert. Ihr einziger Zweck besteht häufig darin, die Identität des wahren Eigentümers des Geldes, des sogenannten wirtschaftlichen Eigentümers, zu verbergen."
+          "text": "In mehreren dieser Gebiete kann man eine Briefkastenfirma gründen: ein Unternehmen ohne Büro und ohne Mitarbeiter, das nur auf dem Papier existiert. Oft dient es nur dazu, die Identität des wahren Geldbesitzers zu verbergen, den man wirtschaftlichen Eigentümer nennt."
         },
         {
           "type": "image",
           "asset": "cayman_islands_offshore_banking_paradise",
           "ratio": "4:3",
-          "caption": "Die Cayman Islands sind trotz ihrer geringen Größe eines der größten Finanzzentren der Welt."
+          "caption": "Die Kaimaninseln, eines der größten Finanzzentren der Welt trotz ihrer geringen Größe"
         },
         {
           "type": "funFact",
-          "text": "Die Cayman-Inseln haben nur 65.000 Einwohner, aber mehr als 100.000 Unternehmen sind dort registriert: Es ist das fünfte Finanzzentrum der Welt für Bankeinlagen, auf einer Fläche kleiner als Paris."
+          "text": "Die Kaimaninseln haben nur 65.000 Einwohner, aber mehr als 100.000 Firmen sind dort registriert. Gemessen an Bankeinlagen ist das das fünftgrößte Finanzzentrum der Welt, auf einem Gebiet kleiner als Paris."
         }
       ]
     },
     {
       "id": "course_212_les_paradis_fiscaux_expliques_p2",
-      "title": "Die Kunst, Gewinn zu machen, verschwindet",
+      "title": "Die Kunst, einen Gewinn verschwinden zu lassen",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Für große Unternehmen ist das Ziel nicht unbedingt illegal: Es geht um **Steueroptimierung**, also den geschickten Einsatz der Regeln jedes Landes, um weniger Steuern zu zahlen. Das Hauptinstrument heißt : Ein Unternehmen legt den Preis für den Austausch zwischen seinen eigenen Tochtergesellschaften selbst fest, um seine Gewinne dort auszuweisen, wo die Steuer am niedrigsten ist. [[Transferpreis]]"
+          "text": "Für große Unternehmen ist das Ziel nicht unbedingt illegal. Man spricht von **Steueroptimierung**: der geschickten Nutzung der Regeln jedes Landes, um weniger Steuern zu zahlen. Das wichtigste Werkzeug heißt [[Verrechnungspreise]]. Ein Unternehmen setzt selbst die Preise fest, zu denen seine eigenen Töchter miteinander handeln, damit die Gewinne dort auftauchen, wo die Steuer am niedrigsten ist."
         },
         {
           "type": "paragraph",
-          "text": "Eine gängige Methode ist die Übertragung einer Marke oder eines Patents auf eine Tochtergesellschaft mit Sitz in einer Steueroase. Die anderen Tochtergesellschaften, beispielsweise in Frankreich, müssen dann enorme Summen für das Recht zur Nutzung dieser Marke zahlen. Diese Zahlungen reduzieren ihren steuerpflichtigen Gewinn vor Ort, während sie ihn in der Steueroase erhöhen."
+          "text": "Eine häufige Methode: eine Marke oder ein Patent auf eine Tochter in einer Steueroase übertragen. Die anderen Töchter, etwa in Frankreich, müssen dann enorme Summen zahlen, um diese Marke nutzen zu dürfen. Diese Zahlungen senken ihren steuerpflichtigen Gewinn vor Ort und blähen ihn in der Steueroase auf."
         },
         {
           "type": "funFact",
-          "text": "Das französische Wort „Steueroase“ stammt aus einem Übersetzungsfehler: Das Englische sagt „Steueroase“, ein sicherer Hafen für Geld (haven), nicht ein Paradies (heaven). Eine Lautverwirrung hat die Bedeutung des Wortes verändert."
+          "text": "Das Wort “Steueroase” klingt nach einem Idyll. Das englische Original *tax haven* meint aber einen sicheren Hafen für Geld (haven), nicht den Himmel (heaven). Eine Verwechslung der Laute hat den Sinn verschoben."
         }
       ]
     },
     {
       "id": "course_212_les_paradis_fiscaux_expliques_p3",
-      "title": "Die Welt reagiert (ein wenig)",
+      "title": "Die Welt reagiert (ein bisschen)",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Die Finanzkrise von 2008 und die Veröffentlichung von  im Jahr 2016 lösten eine Welle der Empörung aus. Auf Druck der OECD und der G20 müssen Banken nun automatisch Informationen über ihre ausländischen Kunden an die Steuerverwaltungen übermitteln. [[Panama Papers]]"
+          "text": "Die Finanzkrise 2008 und dann die Veröffentlichung der [[Panama Papers]] 2016 lösten eine Welle der Empörung aus. Unter dem Druck von OECD und G20 müssen Banken den Steuerbehörden nun automatisch die Daten ihrer ausländischen Kunden übermitteln."
         },
         {
           "type": "paragraph",
-          "text": "Der bedeutendste Fortschritt wurde im Jahr 2021 erzielt, als ein internationales Abkommen einen Mindeststeuersatz von 15 % für multinationale Unternehmen festlegte. Die Idee: zu verhindern, dass Länder miteinander konkurrieren, indem sie ihre Steuern endlos senken, um Unternehmen anzuziehen. Zahlt ein Unternehmen in einer Steueroase nur 5 %, kann sein Heimatland nun die restlichen 10 % beanspruchen."
+          "text": "Der markanteste Fortschritt kam 2021: ein internationales Abkommen setzte einen Mindeststeuersatz von 15% für Konzerne fest. Die Idee: Länder sollen nicht endlos ihre Steuern senken, um Firmen anzulocken. Zahlt ein Unternehmen in einer Steueroase nur 5%, kann sein Herkunftsland die fehlenden 10% nachfordern."
         }
       ]
     },
     {
       "id": "course_212_les_paradis_fiscaux_expliques_p4",
-      "title": "Steuergerechtigkeit weiterhin fragil",
+      "title": "Eine noch fragile Steuergerechtigkeit",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Wenn die größten Vermögen der Steuer entgehen, sind es die Mittelschichten und kleinen lokalen Unternehmen, die einen größeren Anteil der Steuerlast tragen. Dadurch werden aufgrund fehlender Ressourcen auch öffentliche Dienste wie Gesundheit oder Bildung geschwächt."
+          "text": "Wenn die größten Vermögen der Steuer entgehen, tragen die Mittelschicht und die kleinen lokalen Firmen einen größeren Teil der Last. Das schwächt auch öffentliche Dienste wie Gesundheit oder Bildung, weil das Geld fehlt."
         },
         {
           "type": "paragraph",
-          "text": "Der Kampf verlagert sich nun in Richtung Digital: Online-Plattformen brauchen keine Büros mehr, um in einem Land Geld zu verdienen, was die Steuergrenzen immer durchlässiger macht. Verwaltungen nutzen jetzt Big Data, um Anomalien zu erkennen, und fordern öffentliche Register, aus denen die Identität der tatsächlichen Eigentümer von Unternehmen hervorgeht."
+          "text": "Die Schlacht verschiebt sich heute ins Digitale. Online-Plattformen brauchen keine Büros mehr, um in einem Land Geld zu verdienen. Die Steuergrenzen werden immer durchlässiger. Die Verwaltungen nutzen inzwischen Big Data, um Auffälligkeiten zu finden, und fordern öffentliche Register, die die wahren Eigentümer der Firmen nennen."
         },
         {
           "type": "takeaway",
-          "text": "Steueroasen beherbergen dank Bankgeheimnis und nahezu Nullbesteuerung etwa 10 % des weltweiten Vermögens. Seit 2021 wird mit einem weltweiten Mindeststeuersatz von 15 % versucht, diese Steuerhinterziehung einzudämmen, doch der Kampf ist noch lange nicht gewonnen."
+          "text": "Steueroasen beherbergen rund 10% des Weltvermögens, dank Bankgeheimnis und einer Steuer nahe null. Seit 2021 soll ein weltweiter Mindeststeuersatz von 15% diese Flucht begrenzen. Gewonnen ist die Schlacht noch lange nicht."
         }
       ]
     }

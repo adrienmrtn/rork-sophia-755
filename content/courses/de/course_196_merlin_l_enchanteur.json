@@ -1,14 +1,14 @@
 {
   "id": "course_196_merlin_l_enchanteur",
   "title": "Merlin der Zauberer",
-  "subtitle": "Arthurs Magier",
+  "subtitle": "Der Magier des Artus",
   "subject": "mythologie",
   "subcategory": "Andere Mythologien",
-  "description": "Merlin, Arthurs Berater, Prophet und Magier: eine aus einem Dämon und einer Taufe geborene Figur, Architekt von Camelot, Gefangener seiner eigenen Liebe.",
+  "description": "Merlin, Ratgeber des Artus, Prophet und Magier: eine Gestalt, geboren aus einem Dämon und einer Taufe, Baumeister von Camelot, Gefangener der eigenen Liebe.",
   "hero": {
     "image": "merlin_l_enchanteur",
     "ratio": "16:9",
-    "hook": "Sohn eines Dämons, getauft von der Wiege an: Merlin dient dem Guten mit Kräften, die aus dem Bösen entstehen."
+    "hook": "Sohn eines Dämons, schon in der Wiege getauft: Merlin dient dem Guten mit Kräften, die aus dem Bösen stammen."
   },
   "sections": [
     {
@@ -18,101 +18,101 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Merlin** ist der berühmteste Zauberer des westlichen Mittelalters. Barde, Prophet, Berater von König **Arthur**: Er steht an der Grenze zwischen der alten keltischen Welt und der christlichen Ritterlichkeit."
+          "text": "**Merlin** ist der berühmteste Magier des westlichen Mittelalters. Barde, Prophet, Ratgeber von König **Artus**: er steht an der Grenze zwischen der alten keltischen Welt und der christlichen Ritterschaft."
         },
         {
           "type": "paragraph",
-          "text": "Sein Wesen ist paradox. Ein Teil von ihm stammt von Dämonen, der andere vom Himmel. Seine Geschichte ist keine Zaubershow: Es ist der Kampf eines hybriden Wesens, das sich dafür entscheidet, dem Guten zu dienen, bis ihn die Liebe aus der Welt entfernt."
+          "text": "Seine Natur ist ein Widerspruch. Ein Teil von ihm kommt von den Dämonen, der andere vom Himmel. Seine Geschichte ist kein Zauberkunststück: es ist der Kampf eines Mischwesens, das dem Guten dient, bis die Liebe es aus der Welt nimmt."
         }
       ]
     },
     {
       "id": "course_196_merlin_l_enchanteur_p1",
-      "title": "Der hybride Ursprung zwischen Dämon und Taufe",
+      "title": "Die zwiespältige Herkunft zwischen Dämon und Taufe",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Im Dichter **Robert de Boron** (12. Jahrhundert) wollen die Dämonen einen Antichristen erschaffen. Ein [[Incubus-Dämon]], ein Geist, der sich mit einer schlafenden Frau vereint, verführt eine junge fromme Christin. Der Plan scheitert: Die Mutter beichtet und lässt das Kind taufen."
+          "text": "Beim Dichter **Robert de Boron** (12. Jahrhundert) wollen die Dämonen einen Antichrist schaffen. Ein [[Inkubus-Dämon]], ein Geist, der sich mit einer schlafenden Frau verbindet, verführt eine fromme junge Christin. Der Plan scheitert: die Mutter beichtet und lässt das Kind taufen."
         },
         {
           "type": "image",
           "asset": "merlin_wizard_medieval_manuscript_illumination",
           "ratio": "4:3",
-          "caption": "Merlin, Figur des mittelalterlichen Magiers zwischen Wald und Hof."
+          "caption": "Merlin, Gestalt des mittelalterlichen Magiers zwischen Wald und Hof"
         },
         {
           "type": "funFact",
-          "text": "Der Name „Merlin“ kommt vom walisischen **Myrddin**. Geoffrey of Monmouth änderte das „d“ in „l“, um ein Wortspiel zu vermeiden, das dem lateinischen *Scheiße* zu nahe kommt."
+          "text": "Der Name “Merlin” kommt vom walisischen **Myrddin**. Geoffrey of Monmouth änderte das “d” in “l”, um ein Wortspiel zu vermeiden, das dem lateinischen *merda* zu nahekam."
         },
         {
           "type": "paragraph",
-          "text": "Der [[Die Prophezeiung in der mittelalterlichen Kultur]] löscht den Fluch, lässt aber die Kräfte zurück: Wissen über die Vergangenheit (dämonisches Erbe) und Gabe von . Merlin kann seine Gestalt verändern. Hinter ihm finden wir **Myrddin Wyllt**, einen walisischen Barden aus dem 6. Jahrhundert, der [[Taufe]], verrückt nach einer Schlacht, in den Wald von floh. [[Celyddon]]"
+          "text": "Die [[Taufe]] tilgt den Fluch, lässt aber die Kräfte: Wissen um die Vergangenheit (dämonisches Erbe) und die Gabe der [[Prophezeiung in der mittelalterlichen Kultur]]. Merlin kann sich verwandeln. Hinter ihm steht **Myrddin Wyllt**, ein walisischer Barde des 6. Jahrhunderts, der nach einer Schlacht wahnsinnig in den Wald von [[Celyddon]] floh."
         }
       ]
     },
     {
       "id": "course_196_merlin_l_enchanteur_p2",
-      "title": "Der Architekt des Artus-Schicksals",
+      "title": "Der Baumeister des arturischen Schicksals",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Merlin ist kein Illusionist. Er ist der Garant des Königreichs. Er hilft König , die Züge des Herzogs von Cornwall anzunehmen und sich der Herzogin **Igerne** anzuschließen. Aus dieser Nacht wurde **Arthur** geboren. [[Utherpendragon]]"
+          "text": "Merlin ist kein Illusionist. Er ist der Garant des Reichs. Er hilft König [[Utherpendragon]], die Gestalt des Herzogs von Cornwall anzunehmen, um zur Herzogin **Igraine** zu gelangen. Aus dieser Nacht wird **Artus** geboren."
         },
         {
           "type": "image",
           "asset": "merlin_arthur_camelot_medieval_illustration",
           "ratio": "4:3",
-          "caption": "Merlin führt Arthur zum Thron und nach Camelot."
+          "caption": "Merlin führt Artus zum Thron und nach Camelot"
         },
         {
           "type": "paragraph",
-          "text": "Er zieht das Kind heimlich groß, ordnet das Schwert im Amboss und führt Arthur dann zur Dame vom See, um [[Gefährliche Belagerung]] zu erhalten, dessen Scheide vor tödlichen Wunden schützt. Bei **Camelot** entwirft er den **Runder Tisch** und platziert den [[Excalibur]], einen freien Platz, der dem reinsten Ritter vorbehalten ist. Er sieht die Gefahren kommen. Er weiß auch, dass das Schicksal am Ende immer vergeht."
+          "text": "Er zieht das Kind im Geheimen auf, inszeniert das Schwert im Amboss und führt Artus dann zur Herrin vom See, um [[Excalibur]] zu erhalten, dessen Scheide vor tödlichen Wunden schützt. In **Camelot** entwirft er die **Tafelrunde** und setzt den [[Gefährlicher Sitz]], den leeren Platz für den reinsten Ritter. Er sieht die Gefahren kommen. Er weiß auch, dass das Schicksal am Ende immer durchkommt."
         }
       ]
     },
     {
       "id": "course_196_merlin_l_enchanteur_p3",
-      "title": "Der Untergang des Zauberers: Liebe und Vergessen",
+      "title": "Der Sturz des Zauberers: Liebe und Vergessen",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Merlin findet sein Ende. Er verliebt sich jedoch in **Viviane**, die Dame vom See, in der Nähe des Barenton-Brunnens. Er bringt ihr seine geheimsten Zaubersprüche bei, obwohl er weiß, dass sie es verlieren wird."
+          "text": "Merlin kennt sein Ende. Dennoch verliebt er sich in **Viviane**, die Herrin vom See, an der Quelle von Barenton. Er lehrt sie seine geheimsten Sprüche, obwohl er weiß, dass sie ihn verlieren wird."
         },
         {
           "type": "image",
           "asset": "viviane_lady_of_the_lake_merlin_medieval_art",
           "ratio": "4:3",
-          "caption": "Viviane sperrt Merlin ein: das Ende der Zeit der Magier."
+          "caption": "Viviane schließt Merlin ein: das Ende der Zeit der Magier"
         },
         {
           "type": "funFact",
-          "text": "Je nach Version sperrt Viviane ihn in einen Weißdornbusch, einen Glasturm oder einen **Brocéliande** Hohlraum ein. Merlin ist unsterblich und nicht tot: Er schläft außerhalb der Welt."
+          "text": "Je nach Fassung sperrt Viviane ihn in einen Weißdornbusch, einen gläsernen Turm oder eine Höhlung von **Brocéliande**. Unsterblich, ist Merlin nicht tot: er schläft außerhalb der Welt."
         },
         {
           "type": "paragraph",
-          "text": "Als die Ritter zum Gral aufbrechen, hat Merlins Magie keinen Platz mehr. Sein Rückzug markiert den Übergang von der Zeit der Mythen zur Zeit des Glaubens."
+          "text": "Wenn die Ritter zum Gral aufbrechen, hat Merlins Magie keinen Platz mehr. Sein Rückzug markiert den Übergang von der Zeit der Mythen zur Zeit des Glaubens."
         }
       ]
     },
     {
       "id": "course_196_merlin_l_enchanteur_p4",
-      "title": "Literarisches Erbe und Figur des Erzmagiers",
+      "title": "Literarisches Erbe und Gestalt des Erzmagiers",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Merlin starrte auf das Bild des alten weisen Mannes: Bart, Stab, Rätsel. Von ihm stammen **Gandalf** für Tolkien und **Dumbledore** für Rowling ab. Er ist der Adjuvans, der weiß, aber nicht an die Stelle des Helden treten kann."
+          "text": "Merlin hat das Bild des alten Weisen festgesetzt: Bart, Stab, Rätsel. Von ihm stammen **Gandalf** bei Tolkien und **Dumbledore** bei Rowling. Er ist der Helfer, der weiß, aber nicht anstelle des Helden handeln kann."
         },
         {
           "type": "paragraph",
-          "text": "Als Brücke zwischen dem wilden Wald und dem Hof ​​bewahrt er einen -Abdruck, während er die Könige berät. Noch heute flüstert er, dass Imperien zerbrechlich sind und dass Weisheit einen nicht immer schützt. [[Druidisch]]"
+          "text": "Brücke zwischen wildem Wald und Hof, bleibt er [[druidisch]] geprägt und berät dennoch die Könige. Noch heute flüstert er, dass Reiche zerbrechlich sind und Weisheit nicht immer vor einem selbst schützt."
         },
         {
           "type": "takeaway",
-          "text": "**Merlin**, von einem Dämon geboren und durch die Taufe gerettet, gestaltet das Schicksal von **Arthur** und verschwindet dann als Gefangener von **Viviane**: dem bleibenden Vorbild des westlichen Zauberers."
+          "text": "**Merlin**, geboren aus einem Dämon und gerettet durch die Taufe, baut das Schicksal von **Artus** und verschwindet dann, Gefangener von **Viviane**: das bleibende Vorbild des westlichen Zauberers."
         }
       ]
     }

@@ -1,14 +1,14 @@
 {
   "id": "course_234_la_securite_alimentaire_mondiale",
-  "title": "Globale Ernährungssicherheit",
+  "title": "Die globale Ernährungssicherheit",
   "subtitle": "800 Millionen Menschen",
   "subject": "comprendreLeMonde",
   "subcategory": "Umwelt & Zukunft",
-  "description": "Die Erde produziert genug Nahrung für alle. Warum also hungern **800 Millionen Menschen** immer noch?",
+  "description": "Die Erde erzeugt genug Nahrung für alle. Warum hungern dann noch **800 Millionen Menschen**?",
   "hero": {
     "image": "la_securite_alimentaire_mondiale",
     "ratio": "16:9",
-    "hook": "Der Hunger von 800 Millionen Menschen ist kein Problem der Ernährung, sondern des Teilens."
+    "hook": "Der Hunger von 800 Millionen Menschen ist kein Problem der Nahrung, sondern der Verteilung."
   },
   "sections": [
     {
@@ -18,93 +18,93 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Heute leiden rund **800 Millionen Menschen** auf der Welt an Hunger, also einer von zehn Menschen. Diese Zahl ist umso seltsamer, als die Menschheit noch nie so viel Nahrung produziert hat: Statistisch gesehen gibt es mehr als genug zu essen für alle."
+          "text": "Heute hungern weltweit etwa **800 Millionen Menschen**, also jeder Zehnte. Die Zahl wirkt umso seltsamer, als die Menschheit noch nie so viel Nahrung erzeugt hat: Statistisch gibt es mehr als genug zu essen für alle."
         },
         {
           "type": "paragraph",
-          "text": "Hunger ist also kein Mengenproblem, sondern ein Verteilungsproblem. Um die globale Ernährungssicherheit zu verstehen, muss man verstehen, warum Überfluss und Hungersnot auf demselben Planeten nebeneinander existieren können."
+          "text": "Hunger ist also kein Mengenproblem, sondern ein Verteilungsproblem. Wer die globale Ernährungssicherheit verstehen will, muss verstehen, warum Überfluss und Hungersnot auf demselben Planeten nebeneinander bestehen können."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p1",
-      "title": "Die Geographie des Hungers",
+      "title": "Die Geografie des Hungers",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nach Angaben der UN-Ernährungsorganisation  sind im Jahr 2024 immer noch rund 800 Millionen Menschen von chronischer Unterernährung betroffen. Hinter dieser globalen Zahl verbergen sich ganz unterschiedliche Realitäten. Die am stärksten betroffenen Gebiete liegen in Afrika südlich der Sahara, wo mehr als ein Viertel der Bevölkerung regelmäßig unter Nahrungsmangel leidet, und in Südasien. **[[FAO]]**"
+          "text": "**[[Die FAO]]**, die UN-Agentur für Ernährung, zählte 2024 noch etwa 800 Millionen Menschen mit chronischer Unterernährung. Hinter dieser Gesamtzahl stehen sehr verschiedene Wirklichkeiten. Am stärksten betroffen sind Afrika südlich der Sahara, wo mehr als einem Viertel der Bevölkerung regelmäßig Nahrung fehlt, und Südasien."
         },
         {
           "type": "image",
           "asset": "famine_sub_saharan_africa_malnutrition_child",
           "ratio": "auto",
-          "caption": "Noch immer sind Hunderte Millionen Menschen von Hunger betroffen, vor allem in Afrika südlich der Sahara."
+          "caption": "Hunger trifft noch Hunderte Millionen Menschen, vor allem in Afrika südlich der Sahara."
         },
         {
           "type": "paragraph",
-          "text": "Es gibt verschiedene Formen von Nahrungsmittelnot. **Unterernährung** entspricht einem Kalorienmangel. **Mikronährstoffmangel**, oft als „versteckter Hunger“ bezeichnet, betrifft 2 Milliarden Menschen, denen es an lebenswichtigen Vitaminen oder Mineralstoffen mangelt, mit Folgen für Wachstum oder Gesundheit. Schließlich umfasst **Mangelernährung** überraschenderweise auch Fettleibigkeit: In vielen Entwicklungsländern ersetzen die Menschen nach und nach frische Produkte durch verarbeitete Lebensmittel, die kalorienreich, aber nährstoffarm sind."
+          "text": "Es gibt mehrere Formen von Nahrungsmangel. **Unterernährung** meint fehlende Kalorien. **Mikronährstoffmangel**, oft “versteckter Hunger” genannt, betrifft 2 Milliarden Menschen, denen Vitamine oder wichtige Mineralstoffe fehlen, mit Folgen für Wachstum und Gesundheit. **Mangelernährung** umfasst überraschend auch Fettleibigkeit: In vielen Entwicklungsländern ersetzen die Menschen frische Produkte nach und nach durch verarbeitete Lebensmittel, reich an Kalorien, arm an Nährstoffen."
         },
         {
           "type": "funFact",
-          "text": "Wenn wir die weltweite Lebensmittelverschwendung nur um 25 % reduzieren würden, könnten wir theoretisch alle 800 Millionen Menschen ernähren, die heute an Hunger leiden."
+          "text": "Würde man die weltweite Lebensmittelverschwendung nur um 25% senken, könnte man theoretisch alle 800 Millionen Menschen ernähren, die heute hungern."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p2",
-      "title": "Das Paradoxon von Fülle und Verschwendung",
+      "title": "Das Paradox von Überfluss und Verschwendung",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Die Welt produziert derzeit umgerechnet 2.800 Kilokalorien pro Person und Tag, mehr als genug, um den Hunger zu beseitigen. Das eigentliche Problem ist also nicht der Mangel, sondern der Zugang: Die ärmsten Bevölkerungsgruppen haben einfach nicht die Mittel, Lebensmittel zu kaufen, deren Preise auf den Weltmärkten ständig schwanken."
+          "text": "Die Welt erzeugt derzeit das Äquivalent von 2.800 Kilokalorien pro Person und Tag, mehr als genug, um den Hunger zu beenden. Das wahre Problem ist also nicht der Mangel, sondern der **Zugang**: Die ärmsten Bevölkerungen können Lebensmittel einfach nicht bezahlen, deren Preis auf den Weltmärkten ständig schwankt."
         },
         {
           "type": "paragraph",
-          "text": "Die andere Seite dieses Paradoxons ist **Verschwendung**. Etwa ein Drittel der weltweiten Produktion oder 1,3 Milliarden Tonnen Lebensmittel gehen jedes Jahr verloren. In armen Ländern treten Verluste frühzeitig auf: Mangel an Lagerplätzen, fehlende Kühlräume, Straßen in schlechtem Zustand. In reichen Ländern entsteht Abfall später, bei der Verteilung und beim Konsum."
+          "text": "Die andere Seite dieses Paradoxes ist die **Verschwendung**. Etwa ein Drittel der Weltproduktion, also 1,3 Milliarden Tonnen Nahrung, geht jedes Jahr verloren. In armen Ländern entstehen die Verluste früh: fehlende Lager, keine Kühlräume, schlechte Straßen. In reichen Ländern wird später verschwendet, bei der Verteilung und beim Verzehr."
         },
         {
           "type": "funFact",
-          "text": "Seit den 2010er Jahren sterben weltweit jedes Jahr mehr Menschen an Fettleibigkeit und fettleibigen Krankheiten als an Unterernährung, ein historischer Wendepunkt für die globale öffentliche Gesundheit."
+          "text": "Seit den 2010er Jahren töten Fettleibigkeit und Krankheiten durch Übergewicht jedes Jahr mehr Menschen weltweit als Unterernährung. Ein historischer Wendepunkt für die globale öffentliche Gesundheit."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p3",
-      "title": "Wenn Essen zur geopolitischen Waffe wird",
+      "title": "Wenn Nahrung zur geopolitischen Waffe wird",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Ernährungssicherheit ist auch eine Frage der Geopolitik. Viele Länder sind auf die Exporte einiger weniger großer Agrarmächte angewiesen, was sie sehr anfällig für die geringste Blockade macht. Auf die Ukraine und Russland entfallen zusammen fast 30 % der weltweiten Weizenexporte. Wenn dieser Fluss stoppt, steigen die Preise an der Chicago , wo über zukünftige Ernten verhandelt wird, und Länder wie Ägypten oder der Libanon geraten in eine schwere soziale Krise. **[[Terminmarkt]]**"
+          "text": "Ernährungssicherheit ist auch eine Frage der Geopolitik. Viele Länder hängen von den Exporten weniger großer Agrarmächte ab und sind deshalb bei jeder Blockade sehr verwundbar. Die Ukraine und Russland stellen zusammen fast 30% der weltweiten Weizenexporte. Stoppt dieser Strom, schießen die Preise auf dem **[[Terminmarkt]]** von Chicago in die Höhe, wo künftige Ernten gehandelt werden. Länder wie Ägypten oder der Libanon stürzen dann in eine schwere soziale Krise."
         },
         {
           "type": "paragraph",
-          "text": "Diese Zerbrechlichkeit ist auch auf eine Wahl zurückzuführen, die in den 1960er Jahren getroffen wurde: den . Diese Welle neuer landwirtschaftlicher Techniken hat die Erträge erheblich gesteigert, aber auch die Pflanzenvielfalt verringert und die Landwirte von chemischen Düngemitteln abhängig gemacht. Dadurch hat jede Erhöhung des Ölpreises direkte Auswirkungen auf den Brotpreis. **[[Die Grüne Revolution]]**"
+          "text": "Diese Schwäche kommt auch von einer Entscheidung der 1960er Jahre: **[[Die Grüne Revolution]]**. Diese Welle neuer Agrartechnik hat die Erträge stark erhöht. Sie hat aber auch die Vielfalt der Kulturen verringert und die Bauern von chemischen Düngern abhängig gemacht. Jede Steigerung des Ölpreises schlägt deshalb direkt auf den Brotpreis durch."
         },
         {
           "type": "paragraph",
-          "text": "Das Konzept der **Nahrungskraft** bezieht sich genau auf den freiwilligen Einsatz von Lebensmittelexporten als diplomatisches Druckmittel oder sogar als Sanktion gegen ein gegnerisches Land."
+          "text": "Mit **Food Power** ist gemeint, Nahrungsexporte bewusst als diplomatischen Druck zu nutzen, sogar als Sanktion gegen ein gegnerisches Land."
         }
       ]
     },
     {
       "id": "course_234_la_securite_alimentaire_mondiale_p4",
-      "title": "Ernähren Sie 10 Milliarden Menschen, ohne den Planeten zu erschöpfen",
+      "title": "10 Milliarden Menschen ernähren, ohne den Planeten zu erschöpfen",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Bis 2050 wird die Weltbevölkerung voraussichtlich 10 Milliarden erreichen. Der Klimawandel gefährdet bereits jetzt die Erträge durch zunehmende Dürren und Überschwemmungen und die Verdrängung von Ackerland. Durch die intensive Landwirtschaft erschöpft sich auch der Boden und das Grundwasser, das manchmal schneller abfließt als es füllt."
+          "text": "Bis 2050 dürfte die Weltbevölkerung 10 Milliarden Menschen erreichen. Der Klimawandel bedroht die Erträge schon jetzt, weil Dürren und Überschwemmungen zunehmen und Ackerflächen sich verschieben. Die intensive Landwirtschaft erschöpft außerdem Böden und Grundwasser, das sich manchmal schneller leert, als es sich füllt."
         },
         {
           "type": "paragraph",
-          "text": "Einer der Wege für die Zukunft heißt : Produzieren, indem man auf natürliche Kreisläufe wie Kompost oder Fruchtwechsel setzt, anstatt sie mit Chemikalien zu bekämpfen. Die Herausforderung besteht darin, jedem Menschen einen dauerhaften Zugang zu gesunder Nahrung zu gewährleisten, ohne den Planeten noch weiter zu erschöpfen. **[[Agrarökologie]]**"
+          "text": "Ein Weg in die Zukunft heißt **[[Agrarökologie]]**: erzeugen, indem man sich auf natürliche Kreisläufe stützt, etwa Kompost oder Fruchtfolge, statt sie mit Chemikalien zu bekämpfen. Das Ziel ist, jedem Menschen dauerhaft gesunde Nahrung zu sichern, ohne den Planeten weiter auszulaugen."
         },
         {
           "type": "takeaway",
-          "text": "Die Erde produziert genug Kalorien, um alle zu ernähren. Der Hunger von 800 Millionen Menschen ist daher auf Zugangsprobleme, Verschwendung und geopolitische Krisen zurückzuführen, die durch den Klimawandel noch verschärft werden."
+          "text": "Die Erde erzeugt genug Kalorien, um alle zu ernähren. Der Hunger von 800 Millionen Menschen kommt also von einem Problem des Zugangs, der Verschwendung und geopolitischer Krisen, verschärft durch den Klimawandel."
         }
       ]
     }

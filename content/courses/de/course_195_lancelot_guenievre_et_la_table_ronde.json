@@ -1,14 +1,14 @@
 {
   "id": "course_195_lancelot_guenievre_et_la_table_ronde",
   "title": "Lancelot, Guinevere und die Tafelrunde",
-  "subtitle": "Camelot und sein Untergang",
+  "subtitle": "Camelot und sein Fall",
   "subject": "mythologie",
   "subcategory": "Andere Mythologien",
-  "description": "Arthur, Lancelot, Guinevere: die größte Legende des westlichen Mittelalters. Ein Ideal der Ritterlichkeit, das durch verbotene Liebe zerstört wurde.",
+  "description": "Artus, Lancelot, Guinevere: die größte Legende des westlichen Mittelalters. Ein Ideal der Ritterschaft, zerstört durch eine verbotene Liebe.",
   "hero": {
     "image": "lancelot_guenievre_et_la_table_ronde",
     "ratio": "16:9",
-    "hook": "Der beste Ritter der Welt liebt die Frau des Königs. Camelot wird sich nicht erholen."
+    "hook": "Der beste Ritter der Welt liebt die Frau des Königs. Camelot wird sich davon nicht erholen."
   },
   "sections": [
     {
@@ -18,82 +18,82 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Die Legende von König **Arthur** und seinen Rittern der **Runde Tafel** ist der große mythologische Zyklus des westlichen Mittelalters. Wir nennen es die **Material aus der Bretagne**: eine Mischung aus vager Geschichte, keltischer Folklore und christlicher Moral."
+          "text": "Die Legende von König **Artus** und seinen Rittern der **Tafelrunde** ist der große mythologische Zyklus des westlichen Mittelalters. Man nennt ihn den **bretonischen Stoff**: eine Mischung aus verschwommener Geschichte, keltischer Sage und christlicher Moral."
         },
         {
           "type": "paragraph",
-          "text": "Im Mittelpunkt der Geschichte steht eine sehr menschliche Tragödie: die verbotene Liebe zwischen **Lancelot**, dem besten Ritter, und Königin **Guinevere**, Arthurs Frau. Diese als Perfektion gefeierte Liebe wird zum Gift, das **Camelot** zu Fall bringt."
+          "text": "Im Herzen der Erzählung steht eine sehr menschliche Tragödie: die verbotene Liebe zwischen **Lancelot**, dem besten Ritter, und Königin **Guinevere**, der Gattin des Artus. Diese Liebe, gefeiert als Vollkommenheit, wird zum Gift, das **Camelot** zu Fall bringt."
         }
       ]
     },
     {
       "id": "course_195_lancelot_guenievre_et_la_table_ronde_p1",
-      "title": "An den Quellen des Mythos: zwischen Geschichte und keltischer Folklore",
+      "title": "An den Quellen des Mythos: zwischen Geschichte und keltischer Sage",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Kein einzelner Autor. Zwischen dem 6. und 15. Jahrhundert häufen sich Geschichten. Hinter Arthur sehen wir einen bretonischen Kriegsherrn, vielleicht namens **Arturus**, der den Sachsen nach dem Abzug der Römer Widerstand geleistet hätte. Um ihn herum wachsen **Merlin**, die Feen, die magischen Schwerter."
+          "text": "Es gibt keinen einzelnen Autor. Zwischen dem 6. und dem 15. Jahrhundert häufen sich die Erzählungen. Hinter Artus erkennt man einen britannischen Kriegshäuptling, vielleicht namens **Arturus**, der nach dem Abzug der Römer den Sachsen widerstanden haben soll. Um ihn wachsen **Merlin**, die Feen, die magischen Schwerter."
         },
         {
           "type": "image",
           "asset": "king_arthur_excalibur_sword_stone_medieval",
           "ratio": "4:3",
-          "caption": "Arthur zieht das Schwert aus dem Felsen: das Zeichen des rechtmäßigen Königs."
+          "caption": "Artus zieht das Schwert aus dem Felsen: das Zeichen des rechtmäßigen Königs"
         },
         {
           "type": "funFact",
-          "text": "Im Winchester Castle in England hängt noch immer ein „Runder Tisch“ aus dem 13. Jahrhundert. Heinrich VIII. ließ es malen, um sich mit Artus in Verbindung zu bringen."
+          "text": "Eine “Tafelrunde” aus dem 13. Jahrhundert hängt noch immer auf Schloss Winchester in England. Heinrich VIII. ließ sie bemalen, um sich an Artus zu binden."
         },
         {
           "type": "paragraph",
-          "text": "Während  kann nur der wahre König **Excalibur** vom Felsen oder Amboss ziehen. Arthur wurde in Camelot gekrönt und gründete den **Runder Tisch**. Seine kreisförmige Form hebt die Hierarchie auf: Um ihn herum ist jeder Ritter seinem Nachbarn gleichgestellt, einschließlich des Königs. [[Prüfung des Schwertes]]"
+          "text": "Bei der [[Schwertprüfung]] kann nur der wahre König **Excalibur** aus dem Felsen oder dem Amboss ziehen. In Camelot gekrönt, gründet Artus die **Tafelrunde**. Ihre Kreisform hebt die Hierarchie auf: um sie herum ist jeder Ritter dem Nachbarn gleich, auch der König."
         }
       ]
     },
     {
       "id": "course_195_lancelot_guenievre_et_la_table_ronde_p2",
-      "title": "Die Suche nach dem Gral und die spirituelle Mutation",
+      "title": "Die Gralssuche und die geistliche Wende",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nach und nach weichen die Kämpfe einer spirituellen Suche: dem **Heiligen Gral**. In alten keltischen Texten handelt es sich um ein magisches Gericht, das im 12. Jahrhundert zum Kelch Christi wurde. Innere Reinheit ist genauso wichtig wie Stärke."
+          "text": "Nach und nach weichen die Kämpfe einer geistlichen Suche: dem **Heiligen Gral**. In den alten keltischen Texten ein magischer Teller, wird er im 12. Jahrhundert zum Kelch Christi. Die innere Reinheit zählt so viel wie die Kraft."
         },
         {
           "type": "image",
           "asset": "holy_grail_knights_round_table_medieval_painting",
           "ratio": "4:3",
-          "caption": "Die Suche nach dem Gral verwandelt die Tafelrunde in ein spirituelles Abenteuer."
+          "caption": "Die Gralssuche verwandelt die Tafelrunde in ein geistliches Abenteuer"
         },
         {
           "type": "funFact",
-          "text": "Das Wort „Gral“ stammt aus dem Altfranzösischen und bezeichnete zunächst ein großes Gericht zum Servieren von Fleisch, nicht ein kostbares Stück Fleisch."
+          "text": "Das Wort “Gral” kam aus dem Altfranzösischen und meinte zuerst eine breite Schüssel zum Auftragen von Fleisch, keine kostbare Schale."
         },
         {
           "type": "paragraph",
-          "text": "Am Tisch wartet der [[Gefährliche Belagerung]] auf den vorherbestimmten Ritter. Nur **Gilead**, **Wahrnehmung** und **Bohort** erreichen den Gral. **Lancelot vom See**, „bester Ritter der Welt“, scheitert: Seine Liebe zu Guinevere macht ihn der göttlichen Vision unwürdig."
+          "text": "An der Tafel wartet der [[Gefährlicher Sitz]] auf den vorherbestimmten Ritter. Nur **Galahad**, **Parzival** und **Bors** erreichen den Gral. **Lancelot vom See**, “bester Ritter der Welt”, scheitert: seine Liebe zu Guinevere macht ihn der göttlichen Schau unwürdig."
         }
       ]
     },
     {
       "id": "course_195_lancelot_guenievre_et_la_table_ronde_p3",
-      "title": "Guineveres Verrat und das Zerreißen der Ordnung",
+      "title": "Der Verrat der Guinevere und der Riss der Ordnung",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Die Liebe von Lancelot und Guinevere verkörpert : Der Ritter stellt sich in den Dienst seiner Dame. Aber Guinevere ist die Frau des Oberherrn. Der Verrat ist nicht nur ehelicher Natur, er ist auch feudaler Natur. [[Mittelalterliche höfische Liebe (fin'amor)]]"
+          "text": "Die Liebe von Lancelot und Guinevere verkörpert [[Die mittelalterliche höfische Liebe (fin'amor)]]: der Ritter stellt sich in den Dienst seiner Dame. Aber Guinevere ist die Gattin des Lehnsherrn. Der Verrat ist nicht nur ehelich: er ist feudal."
         },
         {
           "type": "image",
           "asset": "lancelot_guinevere_medieval_romance_painting",
           "ratio": "4:3",
-          "caption": "Lancelot und Guinevere: die Liebe, die Camelot zerbricht."
+          "caption": "Lancelot und Guinevere: die Liebe, die Camelot zerbricht"
         },
         {
           "type": "paragraph",
-          "text": "**Mordred**, Arthurs inzestuöser Neffe oder Sohn, je nach Version, enthüllt die Affäre. Arthur verurteilt Guinevere zum Scheiterhaufen. Lancelot rettet sie, tötet aber **Gawain**s Brüder im Nahkampf. Der Runde Tisch wird auseinandergerissen: Bürgerkrieg, Ende der Utopie."
+          "text": "**Mordred**, Neffe oder inzestuöser Sohn des Artus je nach Fassung, deckt die Liaison auf. Artus verurteilt Guinevere zum Scheiterhaufen. Lancelot rettet sie, tötet im Getümmel aber die Brüder **Gaweins**. Die Tafelrunde reißt: Bürgerkrieg, Ende der Utopie."
         }
       ]
     },
@@ -104,15 +104,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "In **Camlann** tötet Arthur Mordred und erleidet eine tödliche Wunde. Excalibur wird der Dame vom See zurückgegeben. Guinevere landet im Kloster, Lancelot als Einsiedler. Es heißt, Arthur breche zur Insel **Avalon** auf."
+          "text": "Bei **Camlann** tötet Artus Mordred und empfängt eine tödliche Wunde. Excalibur wird der Herrin vom See zurückgegeben. Guinevere endet im Kloster, Lancelot als Einsiedler. Artus, so heißt es, fährt zur Insel **Avalon**."
         },
         {
           "type": "paragraph",
-          "text": "Er wird zum , „ehemaliger König, zukünftiger König“: der schlafende König, der zum schlimmsten Zeitpunkt zurückkehren wird. Der Legende nach stirbt Camelot, und so überlebt es. [[Rex Quondam Rexque Futurus]]"
+          "text": "Er wird zum [[Rex Quondam Rexque Futurus]], “König einst, König künftig”: der schlafende König, der im schlimmsten Augenblick zurückkehrt. Camelot stirbt als Legende, und so überlebt es."
         },
         {
           "type": "takeaway",
-          "text": "**Lancelot**s Liebe zu **Guinevere** zerstört Camelot. Die Suche nach dem **Gral** gelingt nur den Reinen: Lancelot, der beste Ritter, bleibt außerhalb der heiligen Schwelle."
+          "text": "Die Liebe von **Lancelot** zu **Guinevere** zerstört Camelot. Die Suche nach dem **Gral** gelingt nur den Reinen: Lancelot, bester Ritter, bleibt vor der heiligen Schwelle."
         }
       ]
     }

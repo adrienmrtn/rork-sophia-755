@@ -1,14 +1,14 @@
 {
   "id": "course_182_osiris_et_set_mythologie_egyptienne",
-  "title": "Osiris und Set (ägyptische Mythologie)",
+  "title": "Osiris und Seth (ägyptische Mythologie)",
   "subtitle": "Ägyptische Mythologie",
   "subject": "mythologie",
   "subcategory": "Andere Mythologien",
-  "description": "Mord, Zerstückelung, Mumie und Rache: Der Zyklus von Osiris und Set begründete das ägyptische Königtum und die Hoffnung auf ein Leben nach dem Tod.",
+  "description": "Mord, Zerstückelung, Mumie und Rache: der Zyklus von Osiris und Seth begründet das ägyptische Königtum und die Hoffnung auf ein Leben nach dem Tod.",
   "hero": {
     "image": "osiris_et_set_mythologie_egyptienne",
     "ratio": "16:9",
-    "hook": "Ein Bruder tötet den König und schneidet seinen Körper in vierzehn Stücke. Eine Schwester bringt ihn zusammen. Ein Sohn rächt sich. Ganz Ägypten erholt sich von diesem Verbrechen."
+    "hook": "Ein Bruder tötet den König und zerschneidet seinen Leib in vierzehn Stücke. Eine Schwester fügt ihn zusammen. Ein Sohn rächt. Ganz Ägypten entsteht aus diesem Verbrechen."
   },
   "sections": [
     {
@@ -18,36 +18,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Der Zyklus von **Osiris** und **Satz** ist die große Geschichte des alten Ägypten. Dies ist nicht nur eine Familientragödie. Es ist der Kampf zwischen Ordnung (, Harmonie) und sterilem Chaos. [[Ma'at]]"
+          "text": "Der Zyklus von **Osiris** und **Seth** ist die große Erzählung des alten Ägypten. Es ist nicht nur eine Familientragödie. Es ist der Kampf zwischen der Ordnung ([[Ma'at]], die Harmonie) und dem unfruchtbaren Chaos."
         },
         {
           "type": "paragraph",
-          "text": "Durch die Ermordung, Zerstückelung und Auferstehung des Osiris denken die Ägypter über das Königtum, die Fruchtbarkeit des Nils und das Leben nach dem Tod nach. Jeder lebende Pharao ist ein **Horus**. Jeder tote König wird zu einem **Osiris**."
+          "text": "Durch Mord, Zerstückelung und Auferstehung des Osiris erklären sich die Ägypter das Königtum, die Fruchtbarkeit des Nils und das Leben nach dem Tod. Jeder lebende Pharao ist ein **Horus**. Jeder tote König wird ein **Osiris**."
         }
       ]
     },
     {
       "id": "course_182_osiris_et_set_mythologie_egyptienne_p1",
-      "title": "Set tötet Osiris",
+      "title": "Seth tötet Osiris",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Osiris** ist ein zivilisierender König. Zusammen mit seiner Schwesterfrau **Isis** unterrichtet er Landwirtschaft und Jura. Sein Bruder **Satz**, Gott der Wüste und der Gewalt, hasst ihn. Bei einem Bankett präsentiert Set eine prächtige Truhe: Er wird sie demjenigen anbieten, der perfekt hineinpasst."
+          "text": "**Osiris** ist ein zivilisierender König. Mit seiner Schwestergattin **Isis** lehrt er Ackerbau und Gesetze. Sein Bruder **Seth**, Gott der Wüste und der Gewalt, hasst ihn. Bei einem Festmahl zeigt Seth eine prächtige Truhe: er schenkt sie dem, der genau hineinpasst."
         },
         {
           "type": "image",
           "asset": "osiris_egyptian_god_green_skin_painting",
           "ratio": "4:3",
-          "caption": "Osiris mit grüner Haut: nicht der Tod, sondern die wiedergeborene Vegetation."
+          "caption": "Osiris mit grüner Haut: nicht der Tod, sondern die Vegetation, die neu wächst"
         },
         {
           "type": "paragraph",
-          "text": "Nachdem er Osiris heimlich vermessen hat, lässt Set ihn sich hinlegen, verschließt die Truhe, versiegelt sie mit Blei und wirft ihn in den Nil. Später, als Isis die Leiche findet, schneidet Set sie in **14 Stück** und verstreut sie im ganzen Tal. Ohne einen intakten Körper gibt es keinen Frieden im Jenseits."
+          "text": "Nachdem er Osiris heimlich ausgemessen hat, lässt Seth ihn sich hinlegen, schließt die Truhe, versiegelt sie mit Blei und wirft sie in den Nil. Als Isis den Leib später findet, zerschneidet Seth ihn in **14 Stücke** und zerstreut sie im Tal. Ohne unversehrten Körper gibt es keinen Frieden im Jenseits."
         },
         {
           "type": "funFact",
-          "text": "Osiris wird oft grün bemalt. Diese Farbe bedeutet nicht Fäulnis: Sie bedeutet Wiedergeburt, wie die Felder nach der Nilflut."
+          "text": "Osiris wird oft grün gemalt. Diese Farbe meint nicht Fäulnis: sie meint Wiedergeburt, wie die Felder nach der Nilflut."
         }
       ]
     },
@@ -58,21 +58,21 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Isis**, großer Magier, macht sich auf die Suche nach den Fragmenten. Mithilfe ihrer Schwester Nephthys und des Gottes  errichtet sie an jedem Ort, an dem sie ein Stück findet, ein Heiligtum. Ein Problem bleibt bestehen: Der Phallus wurde vom Fisch  verschlungen. Isis stellt einen Ersatz her. [[Anubis]] [[Oxyrhynchus]]"
+          "text": "**Isis**, eine große Magierin, sucht die Fragmente. Mit Hilfe ihrer Schwester Nephthys und des Gottes [[Anubis]] errichtet sie an jedem Fundort ein Heiligtum. Ein Problem bleibt: den Phallus hat der Fisch [[Oxyrhynchos]] verschlungen. Isis formt einen Ersatz."
         },
         {
           "type": "image",
           "asset": "isis_egyptian_goddess_winged_resurrection_painting",
           "ratio": "4:3",
-          "caption": "Isis mit ausgebreiteten Flügeln: der Atem, der Osiris wiederbelebt."
+          "caption": "Isis mit ausgebreiteten Flügeln: der Atem, der Osiris wiederbelebt"
         },
         {
           "type": "paragraph",
-          "text": "Indem sie die Stücke sammeln und in Streifen wickeln, erschaffen Isis und Anubis die erste **-Mumie**. Mit einem Flügelschlag hauchte Isis Osiris für kurze Zeit Leben ein. Damals empfing sie **Horus**, den Erben, der dazu bestimmt war, die Ordnung wiederherzustellen."
+          "text": "Indem sie die Teile zusammenfügen und in Binden wickeln, schaffen Isis und Anubis die **erste Mumie**. Mit einem Flügelschlag haucht Isis Osiris ein kurzes Leben ein. In diesem Moment empfängt sie **Horus**, den Erben, der die Ordnung wiederherstellen soll."
         },
         {
           "type": "funFact",
-          "text": "Einigen Texten zufolge waren die Tränen der Isis während ihrer Suche so groß, dass die Ägypter darin den mythischen Ursprung der jährlichen Nilflut sahen."
+          "text": "Nach manchen Texten waren die Tränen der Isis auf ihrer Suche so reich, dass die Ägypter darin den mythischen Ursprung der jährlichen Nilflut sahen."
         }
       ]
     },
@@ -83,17 +83,17 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Horus** wächst heimlich in den Sümpfen von  auf und nimmt die Form eines Falken an. Als Erwachsener erhebt er Anspruch auf den Thron vor dem Tribunal der Götter unter dem Vorsitz von . Der Konflikt mit Set dauert Jahrzehnte: Duelle, Tricks, Verletzungen. Horus verliert ein Auge; Set verliert seine Fruchtbarkeit. [[Khemmis]] [[Das Konzept der Ma'at]]"
+          "text": "Heimlich aufgezogen in den Sümpfen von [[Chemmis]], wächst **Horus** in Gestalt des Falken heran. Als Erwachsener fordert er den Thron vor dem Gericht der Götter, dem [[Re]] vorsitzt. Der Streit mit Seth dauert Jahrzehnte: Duelle, Listen, Wunden. Horus verliert ein Auge; Seth verliert seine Fruchtbarkeit."
         },
         {
           "type": "image",
           "asset": "eye_of_horus_egyptian_symbol_protection",
           "ratio": "4:3",
-          "caption": "Das Auge des Horus (Oudjat): aus dem Chaos zurückgewonnene Integrität."
+          "caption": "Das Auge des Horus (Udjat): die Unversehrtheit, zurückgewonnen vom Chaos"
         },
         {
           "type": "paragraph",
-          "text": "Das von  neu zusammengesetzte Auge wird zum Symbol für Heilung und Schutz. Die Götter entscheiden: Set wird zum Dienst verurteilt, insbesondere zum Kampf gegen die Schlange  auf dem Solarboot. Horus wird gekrönt. Jeder Pharao wird fortan ein „lebender Horus“ sein. [[Thot]] [[Apophis]]"
+          "text": "Das Auge, von [[Thot]] wiederhergestellt, wird zum Zeichen der Heilung und des Schutzes. Die Götter entscheiden: Seth wird zum Dienst verurteilt, vor allem zum Kampf gegen die Schlange [[Apophis]] auf der Sonnenbarke. Horus wird gekrönt. Jeder Pharao ist fortan ein “lebender Horus”."
         }
       ]
     },
@@ -104,15 +104,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Mumifiziert kann Osiris nicht mehr auf der Erde herrschen. Er wird Herrscher über das **Amenti**, das Königreich der Toten. Unter seinem Blick findet die in  beschriebene **Weihung des Herzens** statt. Das Herz des Verstorbenen wird auf eine Waage gelegt, die der Feder von Ma'at zugewandt ist. [[Das Buch der Toten]]"
+          "text": "Mumifiziert kann Osiris nicht mehr auf der Erde herrschen. Er wird Herrscher des **Amenti**, des Totenreichs. Unter seinem Blick geschieht die **Herzwägung**, beschrieben im [[Totenbuch]]. Das Herz des Verstorbenen kommt auf eine Waage, gegenüber der Feder der Ma'at."
         },
         {
           "type": "paragraph",
-          "text": "Wenn das Herz leicht ist, hat der Verstorbene „richtige Stimme“ und tritt in die Ewigkeit von Osiris ein. Wenn es voller Fehler ist, verschlingt es das -Monster: endgültiges Vergessen. König und Bauer werden nach den gleichen Kriterien beurteilt. Horus verwaltet die Gegenwart; Osiris kümmert sich um den Rest. [[Munition]]"
+          "text": "Ist das Herz leicht, gilt der Verstorbene als “gerechtfertigt” und tritt in die Ewigkeit des Osiris ein. Ist es schwer von Schuld, verschlingt das Ungeheuer [[Ammit]] es: das endgültige Vergessen. König und Bauer werden nach denselben Maßstäben gerichtet. Horus führt die Gegenwart; Osiris sichert die Folge."
         },
         {
           "type": "takeaway",
-          "text": "Der Mythos von **Osiris** und **Satz** begründet drei Säulen Ägyptens: Königtum (lebender Horus), Mumifizierung (intakter Körper für das Leben nach dem Tod) und die Hoffnung auf Gerechtigkeit nach dem Tod unter dem Blick von Osiris."
+          "text": "Der Mythos von **Osiris** und **Seth** begründet drei Säulen Ägyptens: das Königtum (der lebende Horus), die Mumifizierung (ein unversehrter Leib für das Jenseits) und die Hoffnung auf Gerechtigkeit nach dem Tod unter dem Blick des Osiris."
         }
       ]
     }
