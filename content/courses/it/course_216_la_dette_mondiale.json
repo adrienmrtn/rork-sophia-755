@@ -1,14 +1,14 @@
 {
   "id": "course_216_la_dette_mondiale",
-  "title": "Debito globale",
-  "subtitle": "Oltre il 300% del Pil mondiale",
+  "title": "Il debito mondiale",
+  "subtitle": "Oltre il 300% del PIL mondiale",
   "subject": "comprendreLeMonde",
   "subcategory": "Economia & società",
-  "description": "Il debito globale non è mai stato così alto. Dobbiamo preoccuparcene o è uno strumento normale per finanziare la crescita e affrontare le crisi?",
+  "description": "Il debito mondiale non è mai stato così alto. Bisogna preoccuparsene, o è uno strumento normale per finanziare la crescita e affrontare le crisi?",
   "hero": {
     "image": "la_dette_mondiale",
     "ratio": "16:9",
-    "hook": "Il Giappone deve l’equivalente del 260% del suo PIL... e nessuno se ne preoccupa. Ecco perché."
+    "hook": "Il Giappone deve l'equivalente del 260% del suo PIL... e nessuno si preoccupa. Ecco perché."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Il debito globale, quello degli Stati, delle imprese e delle famiglie messi insieme, oggi supera il **300% del PIL globale**, un record assoluto nella storia economica."
+          "text": "Il debito mondiale, quello di Stati, imprese e famiglie messi insieme, supera oggi il **300% del PIL mondiale**, un record assoluto nella storia economica."
         },
         {
           "type": "paragraph",
-          "text": "Questa cifra impressionante nasconde una realtà più sfumata: il debito consente di finanziare la crescita, rispondere alle crisi sanitarie o preparare la transizione ecologica. Ma comporta anche il rischio di un crollo della fiducia."
+          "text": "Questa cifra impressionante nasconde una realtà più sfumata: il debito permette di finanziare la crescita, di rispondere alle crisi sanitarie o di preparare la transizione ecologica. Ma porta anche in sé il rischio di un crollo di fiducia."
         }
       ]
     },
@@ -33,36 +33,36 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Uno Stato si indebita quando le sue spese superano strutturalmente le sue entrate fiscali. Questo deficit di bilancio viene colmato indebitandosi sui mercati finanziari. Secondo , l’indebitamento per stimolare l’economia in tempi di crisi è legittimo, a condizione che venga ripagato una volta ripresa la crescita. [[Teoria keynesiana]]"
+          "text": "Uno Stato si indebita quando le spese superano in modo strutturale le entrate fiscali. Questo deficit di bilancio viene coperto prendendo in prestito sui mercati finanziari. Secondo la [[teoria keynesiana]], indebitarsi per stimolare l'economia in periodo di crisi è legittimo, a condizione di rimborsare una volta tornata la crescita."
         },
         {
           "type": "paragraph",
-          "text": "In pratica, i governi contraggono facilmente prestiti nei periodi difficili, ma raramente ripagano nei periodi favorevoli. Il debito poi si accumula nel lungo termine. Il caso del Giappone è affascinante: con un debito vicino al 260% del PIL, il paese dovrebbe logicamente essere in crisi. Tuttavia non è così, perché la maggior parte del suo debito è detenuto dalle sue stesse banche e dai suoi risparmiatori, al riparo dai mercati esteri."
+          "text": "Nella pratica i governi prendono in prestito facilmente nei periodi difficili, ma rimborsano di rado nei periodi floridi. Il debito si accumula allora in modo duraturo. Il caso del Giappone è affascinante: con un debito vicino al 260% del PIL, il paese dovrebbe logicamente essere in crisi. Eppure non lo è, perché l'essenziale del debito è detenuto dalle sue banche e dai suoi risparmiatori, al riparo dei mercati stranieri."
         },
         {
           "type": "funFact",
-          "text": "Solo nel 2015 il Regno Unito ha finito di ripagare i debiti risalenti alle guerre napoleoniche e alla bolla finanziaria del 1720."
+          "text": "Il Regno Unito ha finito di rimborsare, solo nel 2015, debiti datati alle guerre napoleoniche e a una bolla finanziaria del 1720."
         }
       ]
     },
     {
       "id": "course_216_la_dette_mondiale_p2",
-      "title": "Non tutti i debiti sono uguali",
+      "title": "Non tutti i debiti si equivalgono",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Il vero pericolo di un debito non dipende solo dal suo ammontare, ma anche dalla valuta in cui viene preso in prestito. I paesi ricchi prendono a prestito nelle proprie valute, il che rassicura gli investitori."
+          "text": "Il vero pericolo di un debito non dipende solo dal suo importo, ma dalla moneta in cui viene preso in prestito. I paesi ricchi prendono in prestito nella propria moneta, e questo rassicura gli investitori."
         },
         {
           "type": "image",
           "asset": "japan_government_debt_statistics_chart",
           "ratio": "16:9",
-          "caption": "Il debito pubblico globale oggi supera il 300% del Pil del pianeta."
+          "caption": "Il debito pubblico mondiale supera oggi il 300% del PIL del pianeta."
         },
         {
           "type": "paragraph",
-          "text": "I paesi in via di sviluppo sono spesso costretti a contrarre prestiti in dollari, a causa della mancanza di una valuta considerata sufficientemente stabile. Se la loro valuta nazionale perde valore rispetto al dollaro, l’importo da rimborsare esplode da un giorno all’altro. In queste crisi, gli  intervengono spesso, ma in genere impongono politiche di risparmio rigorose che gravano pesantemente sulle popolazioni. [[FMI]]"
+          "text": "I paesi in via di sviluppo, invece, devono spesso prendere in prestito in dollari, per mancanza di una moneta giudicata abbastanza stabile. Se la loro moneta nazionale perde valore di fronte al dollaro, la somma da rimborsare esplode da un giorno all'altro. In queste crisi interviene spesso il [[FMI]], ma impone in genere politiche di risparmio strette, che pesano forte sulle popolazioni."
         }
       ]
     },
@@ -73,11 +73,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Un dibattito contrappone due visioni dell’economia.  sostiene che uno Stato non può andare in bancarotta finché si indebita nella propria valuta: il vero limite non è una cifra arbitraria, come il 60% imposto dal Trattato di Maastricht in Europa, ma il livello di inflazione. [[La Teoria Monetaria Moderna (MMT)]]"
+          "text": "Un dibattito oppone due visioni dell'economia. [[La Teoria Monetaria Moderna]] afferma che uno Stato non può fallire finché prende in prestito nella propria moneta: il vero limite non è una cifra arbitraria, come il 60% imposto dal trattato di Maastricht in Europa, ma il livello di inflazione."
         },
         {
           "type": "paragraph",
-          "text": "Altri economisti, più cauti, temono che un debito eccessivo possa spaventare la fiducia del mercato, portando a un forte aumento dei tassi di interesse. La crisi dell’eurozona, tra il 2010 e il 2012, ha illustrato questo rischio: paesi come la Grecia, privati ​​della propria banca centrale, hanno visto i loro tassi di indebitamento salire al punto da minacciare l’esistenza stessa della moneta europea."
+          "text": "Altri economisti, più prudenti, temono che troppo debito faccia fuggire la fiducia dei mercati, e trascini un rialzo brutale dei tassi di interesse. La crisi della zona euro, tra il 2010 e il 2012, ha illustrato questo rischio: paesi come la Grecia, privati della propria banca centrale, hanno visto i tassi di prestito involarsi fino a minacciare l'esistenza stessa della moneta europea."
         }
       ]
     },
@@ -88,15 +88,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Il debito globale non riguarda solo gli Stati: anche le imprese e le famiglie ne sopportano una quota crescente, talvolta attraverso attori finanziari scarsamente regolamentati. Sta inoltre emergendo un nuovo dibattito attorno al debito climatico: dovremmo trattare il debito che finanzia la transizione energetica in modo diverso da quello che finanzia il semplice consumo?"
+          "text": "Il debito mondiale non riguarda solo gli Stati: imprese e famiglie ne portano anche una quota crescente, a volte tramite attori finanziari poco regolati. Emerge anche un dibattito nuovo intorno al debito climatico: trattare in modo diverso il debito che finanzia la transizione energetica da quello che finanzia il semplice consumo?"
         },
         {
           "type": "paragraph",
-          "text": "Resta centrale la questione della giustizia tra generazioni: indebitarsi oggi significa prendere tasse domani. Ma se questi soldi finanziano infrastrutture sostenibili o una buona istruzione, possono anche essere visti come un dono trasmesso alle generazioni future piuttosto che come un peso."
+          "text": "La questione della giustizia tra generazioni resta centrale: indebitarsi oggi equivale a prelevare sulle tasse di domani. Ma se questo denaro finanzia infrastrutture durature o una buona istruzione, può anche essere visto come un dono trasmesso alle generazioni future, più che come un fardello."
         },
         {
           "type": "takeaway",
-          "text": "Il debito globale supera il 300% del Pil del pianeta, un record storico. La sua pericolosità dipende meno dal suo ammontare che dalla valuta in cui viene preso in prestito: il Giappone dimostra che un debito del 260% può rimanere stabile se mantenuto localmente."
+          "text": "Il debito mondiale supera il 300% del PIL del pianeta, un record storico. La sua pericolosità dipende meno dall'importo che dalla moneta in cui viene preso in prestito: il Giappone prova che un debito del 260% può restare stabile se è detenuto in loco."
         }
       ]
     }

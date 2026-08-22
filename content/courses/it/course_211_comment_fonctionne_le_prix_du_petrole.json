@@ -1,14 +1,14 @@
 {
   "id": "course_211_comment_fonctionne_le_prix_du_petrole",
   "title": "Come funziona il prezzo del petrolio?",
-  "subtitle": "Il nervo dell’economia mondiale",
+  "subtitle": "Il nervo dell'economia mondiale",
   "subject": "comprendreLeMonde",
   "subcategory": "Economia & società",
-  "description": "Il prezzo del petrolio non è fissato da un singolo venditore. Nasce da un **tiro di guerra** tra paesi produttori, mercati finanziari e crisi improvvise, a volte fino all'assurdo.",
+  "description": "Il prezzo del petrolio non lo fissa un solo venditore. Nasce da un **braccio di ferro** tra paesi produttori, mercati finanziari e crisi improvvise, a volte fino all'assurdo.",
   "hero": {
     "image": "comment_fonctionne_le_prix_du_petrole",
     "ratio": "16:9",
-    "hook": "Nel 2020, i venditori di petrolio hanno pagato i loro acquirenti per liberarsene. Ecco perché."
+    "hook": "Nel 2020 dei venditori di petrolio pagavano gli acquirenti per liberarsene. Ecco perché."
   },
   "sections": [
     {
@@ -18,78 +18,78 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Il petrolio è talvolta chiamato il “sangue dell’economia”. Il suo prezzo influenza l’inflazione, il prezzo della benzina e perfino la stabilità di alcuni paesi. Tuttavia, nessuno fissa questo prezzo con un francobollo."
+          "text": "Il petrolio viene a volte chiamato “il sangue dell'economia”. Il suo prezzo influenza l'inflazione, il costo della benzina, e persino la stabilità di certi paesi. Eppure nessuno lo fissa con un colpo di timbro."
         },
         {
           "type": "paragraph",
-          "text": "Nasce dall’incontro di tre forze: i paesi che estraggono il petrolio, i mercati finanziari che lo commerciano prima ancora che si stacchi dal suolo, e le crisi che mandano nel panico tutti. Dirigiti verso i deserti dell'Arabia, le pianure del Texas e gli schermi di Chicago."
+          "text": "Nasce dall'incontro di tre forze: i paesi che estraggono il petrolio, i mercati finanziari che lo scambiano prima ancora che esca dal suolo, e le crisi che fanno entrare tutti nel panico. Direzione i deserti d'Arabia, le pianure del Texas e gli schermi di Chicago."
         }
       ]
     },
     {
       "id": "course_211_comment_fonctionne_le_prix_du_petrole_p1",
-      "title": "OPEC contro scisto americano: la battaglia dell’offerta",
+      "title": "OPEC contro scisto americano: la battaglia dell'offerta",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Il mercato petrolifero ha una particolarità: a breve termine, la domanda difficilmente diminuisce quando i prezzi salgono. Le automobili, le fabbriche e gli aerei non possono cambiare energia da un giorno all’altro. Gli economisti chiamano ciò la **anelasticità** della domanda."
+          "text": "Il mercato del petrolio ha una particolarità: nel breve periodo la domanda quasi non cala quando i prezzi salgono. Auto, fabbriche e aerei non possono cambiare energia da un giorno all'altro. Gli economisti chiamano questo l'**anelasticità** della domanda."
         },
         {
           "type": "paragraph",
-          "text": "Dal 1960, un gruppo di paesi produttori si è organizzato per influenzare questo mercato: gli . Concordando quote di produzione, i suoi membri cercano di mantenere prezzi elevati. Dal 2016, la Russia ha aderito all’alleanza, formando l’[[OPEC]]+. Insieme, questi paesi controllano circa il 40% del petrolio mondiale."
+          "text": "Dal 1960 un gruppo di paesi produttori si è organizzato per pesare su questo mercato: l'[[OPEC]]. Accordandosi su quote di produzione, i suoi membri cercano di tenere i prezzi alti. Dal 2016 la Russia si è unita all'alleanza, formando l'OPEC+. Insieme, questi paesi controllano circa il 40% del petrolio mondiale."
         },
         {
           "type": "funFact",
-          "text": "Un singolo barile di petrolio, 159 litri, contiene tanta energia quanto il lavoro manuale di una persona per circa un anno."
+          "text": "Un solo barile di petrolio, 159 litri, contiene tanta energia quanto il lavoro manuale di una persona per circa un anno."
         },
         {
           "type": "paragraph",
-          "text": "Ma questo potere è stato scosso. Grazie ad una tecnica chiamata fratturazione idraulica, gli Stati Uniti sono diventati in dieci anni il più grande produttore di petrolio al mondo, superando l’Arabia Saudita. Questa nuova offerta, che è più rapida da adeguare, ha reso il mercato più competitivo e più difficile da controllare per l’OPEC+."
+          "text": "Ma questo potere è stato scosso. Grazie a una tecnica chiamata fratturazione idraulica, gli Stati Uniti sono diventati in dieci anni il primo produttore mondiale di petrolio, superando l'Arabia Saudita. Questa nuova offerta, più rapida da aggiustare, ha reso il mercato più competitivo e più difficile da controllare per l'OPEC+."
         }
       ]
     },
     {
       "id": "course_211_comment_fonctionne_le_prix_du_petrole_p2",
-      "title": "Petrolio “di carta”: quando c’entra la finanza",
+      "title": "Il petrolio “di carta”: quando entra la finanza",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Oltre ai barili effettivamente consegnati tramite nave o oleodotto, il petrolio viene scambiato anche sui mercati finanziari. La maggior parte delle transazioni avviene attraverso il mercato dei futures: oggi compriamo un barile che ci verrà consegnato solo tra uno, tre o sei mesi."
+          "text": "Oltre ai barili veri consegnati da nave o oleodotto, il petrolio si scambia anche sui mercati finanziari. La maggior parte delle transazioni passa da un mercato a termine: si compra oggi un barile che verrà consegnato solo tra uno, tre o sei mesi."
         },
         {
           "type": "image",
           "asset": "oil_futures_trading_floor_markets",
           "ratio": "16:9",
-          "caption": "Il petrolio viene scambiato sui mercati finanziari molto prima della sua consegna."
+          "caption": "Il petrolio si scambia sui mercati finanziari molto prima di essere consegnato."
         },
         {
           "type": "paragraph",
-          "text": "Le banche e gli hedge fund comprano e vendono questi contratti senza mai voler toccare un solo barile: scommettono semplicemente se i prezzi saliranno o scenderanno. Ciò porta denaro sul mercato, ma rende anche i prezzi più nervosi. Due prezzi servono da riferimento nel mondo: , petrolio del Mare del Nord, e WTI, petrolio del Texas. Il divario tra i due riflette le differenze di qualità e di trasporto. [[Brent]]"
+          "text": "Banche e fondi speculativi comprano e vendono questi contratti senza voler mai toccare un barile: scommettono soltanto sul rialzo o sul calo dei prezzi. Questo porta denaro al mercato, ma rende anche i prezzi più nervosi. Due prezzi servono da riferimento nel mondo: il [[Brent]], petrolio del Mare del Nord, e il WTI, petrolio del Texas. Lo scarto tra i due riflette differenze di qualità e di trasporto."
         }
       ]
     },
     {
       "id": "course_211_comment_fonctionne_le_prix_du_petrole_p3",
-      "title": "I prezzi crollano... o esplodono",
+      "title": "Prezzi che crollano... o esplodono",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Il mercato petrolifero opera secondo cicli brutali. Quando i prezzi aumentano per un lungo periodo, i produttori investono in depositi costosi, che alla fine creano un eccesso di offerta. Quando i prezzi rimangono bassi, accade il contrario: esploriamo di meno, il che ci prepara alla prossima carenza."
+          "text": "Il mercato del petrolio funziona a cicli brutali. Quando i prezzi salgono a lungo, i produttori investono in giacimenti costosi, e col tempo creano un eccesso di offerta. Quando i prezzi restano bassi succede il contrario: si esplora di meno, e si prepara la prossima penuria."
         },
         {
           "type": "paragraph",
-          "text": "La crisi del Covid-19 lo ha dimostrato in modo spettacolare. Nell’aprile 2020 l’economia globale si è fermata improvvisamente: nessuno volava o guidava, ma i pozzi continuavano a produrre. I serbatoi di stoccaggio erano pieni fino all'orlo. Il prezzo del WTI è poi sceso a meno 37 dollari: i venditori pagavano i loro acquirenti per liquidare le loro azioni."
+          "text": "La crisi del COVID-19 l'ha mostrato in modo spettacolare. Nell'aprile 2020 l'economia mondiale si è fermata di colpo: nessuno prendeva più l'aereo o l'auto, ma i pozzi continuavano a produrre. I serbatoi di stoccaggio si sono riempiti fino all'orlo. Il prezzo del WTI è allora sceso a meno 37 dollari: dei venditori pagavano gli acquirenti perché li liberassero delle scorte."
         },
         {
           "type": "paragraph",
-          "text": "Al contrario, nel 2022, l’invasione dell’Ucraina da parte della Russia ha fatto temere una carenza: essendo la Russia il secondo maggiore esportatore al mondo, il Brent ha superato i 130 dollari in poche settimane. Il petrolio resta quindi un barometro nervoso delle tensioni mondiali."
+          "text": "Al contrario, nel 2022 l'invasione dell'Ucraina da parte della Russia ha fatto temere una penuria: la Russia è il secondo esportatore mondiale, e il Brent ha superato i 130 dollari in poche settimane. Il petrolio resta dunque un barometro nervoso delle tensioni del mondo."
         },
         {
           "type": "funFact",
-          "text": "Per realizzare un singolo smartphone occorrono circa 7 litri di petrolio, tra estrazione dei materiali, parti in plastica e trasporto."
+          "text": "Servono circa 7 litri di petrolio per fabbricare un solo smartphone, tra estrazione dei materiali, pezzi di plastica e trasporto."
         }
       ]
     },
@@ -100,15 +100,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nel lungo termine, il petrolio si trova ad affrontare una nuova sfida: la transizione verso l’energia pulita. Se le auto elettriche riducessero la domanda globale, i paesi produttori potrebbero impegnarsi in una guerra dei prezzi per vendere le loro riserve prima che perdano valore."
+          "text": "Nel lungo periodo il petrolio affronta una sfida nuova: la transizione verso le energie pulite. Se le auto elettriche riducono la domanda mondiale, i paesi produttori potrebbero lanciarsi in una guerra dei prezzi per vendere le riserve prima che perdano valore."
         },
         {
           "type": "paragraph",
-          "text": "Tuttavia, un paradosso minaccia il mercato: poiché gli investitori abbandonano nuovi progetti petroliferi per ragioni climatiche, l’offerta potrebbe diminuire più rapidamente della domanda, causando nuovi aumenti dei prezzi. Il petrolio non scomparirà all’improvviso: resta essenziale per la plastica, i fertilizzanti e i trasporti pesanti come l’aviazione."
+          "text": "Un paradosso minaccia però il mercato: siccome gli investitori abbandonano i nuovi progetti petroliferi per ragioni climatiche, l'offerta potrebbe calare più in fretta della domanda, e provocare nuovi rincari. Il petrolio non sparirà di colpo: resta indispensabile alle plastiche, ai fertilizzanti e al trasporto pesante, come l'aviazione."
         },
         {
           "type": "takeaway",
-          "text": "Il prezzo del petrolio è il risultato di una situazione di stallo tra l’OPEC+, la produzione americana di shale e i mercati finanziari speculativi. Risultato: prezzi capaci di crollare o esplodere al minimo shock geopolitico."
+          "text": "Il prezzo del petrolio nasce da un braccio di ferro tra l'OPEC+, la produzione americana di scisto e i mercati finanziari speculativi. Risultato: corsi capaci di crollare o di esplodere al minimo shock geopolitico."
         }
       ]
     }

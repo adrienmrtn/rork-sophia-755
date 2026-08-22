@@ -1,14 +1,14 @@
 {
   "id": "course_197_les_mille_et_une_nuits_sheherazade",
-  "title": "Le Mille e una notte (Shéherazade)",
-  "subtitle": "Dillo per sopravvivere",
+  "title": "Le mille e una notte (Sherazade)",
+  "subtitle": "Raccontare per sopravvivere",
   "subject": "mythologie",
   "subcategory": "Altre mitologie",
-  "description": "Scheherazade sopravvive a 1001 notti raccontando storie. Una collezione nata tra Persia, Baghdad ed Egitto, divenuta un mito mondiale.",
+  "description": "Sherazade sopravvive 1001 notti raccontando storie. Una raccolta nata tra Persia, Baghdad e l'Egitto, diventata mito mondiale.",
   "hero": {
     "image": "les_mille_et_une_nuits_sheherazade",
     "ratio": "16:9",
-    "hook": "Ogni notte una donna racconta una storia per non morire all'alba."
+    "hook": "Ogni notte, una donna racconta una storia per non morire all'alba."
   },
   "sections": [
     {
@@ -18,101 +18,101 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Le **Notti Arabe** (*Alf Layla wa-Layla*) non è un libro di un unico autore. È un palinsesto: secoli di racconti orali e scritti, indiani, persiani, arabi, egiziani."
+          "text": "Le **Mille e una notte** (*Alf Layla wa-Layla*) non sono un libro di un solo autore. È un palinsesto: secoli di racconti orali e scritti, indiani, persiani, arabi, egizi."
         },
         {
           "type": "paragraph",
-          "text": "Al centro, un'idea vertiginosa: una donna, **Scheherazade**, trasforma la storia in uno scudo. Finché parla, il re che voleva ucciderla deve aspettare. È così che la parola diventa un’arma di sopravvivenza."
+          "text": "Al centro, un'idea vertiginosa: una donna, **Sherazade**, trasforma il racconto in scudo. Finché parla, il re che voleva ucciderla deve aspettare. Ecco come la parola diventa un'arma di sopravvivenza."
         }
       ]
     },
     {
       "id": "course_197_les_mille_et_une_nuits_sheherazade_p1",
-      "title": "Un'architettura di carta: la genesi di un mondo-testo",
+      "title": "Un'architettura di carta: la genesi di un testo-mondo",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Il nucleo proviene da una fonte persiana, gli  (“Mille racconti”), a loro volta nutriti dalle tradizioni indiane. A Baghdad, sotto i califfi  (VIII-XIII secolo), la raccolta si arabizzò: leggende metropolitane, aneddoti di corte, tono talvolta satirico. [[Hazār Afsāna]] [[Abbasidi]]"
+          "text": "Il nucleo viene da un fondo persiano, le [[Hazār Afsāna]] (“Mille racconti”), a loro volta nutrite di tradizioni indiane. A Baghdad, sotto i califfi [[Abbasidi]] (secoli VIII-XIII), la raccolta si arabizza: leggende urbane, aneddoti di corte, tono a volte satirico."
         },
         {
           "type": "image",
           "asset": "one_thousand_and_one_nights_arabic_manuscript",
           "ratio": "4:3",
-          "caption": "Manoscritto delle Mille e una Notte: un testo-mondo in formazione."
+          "caption": "Manoscritto delle Mille e una notte: un testo-mondo in formazione"
         },
         {
           "type": "funFact",
-          "text": "“Milleuno” non significa un conteggio esatto. In arabo questo numero suggerisce abbondanza, quasi infinito. Alcuni scribi lo consideravano addirittura un talismano contro il malocchio."
+          "text": "“Mille e una” non è un conteggio esatto. In arabo, questo numero suggerisce l'abbondanza, quasi l'infinito. Alcuni scribi ci vedevano persino un talismano contro il malocchio."
         },
         {
           "type": "paragraph",
-          "text": "In Egitto, al tempo di [[Mamelucchi]], furono aggiunti nuovi cicli. Sorpresa per l'Occidente: **Aladino** e **Ali Baba** mancano dai manoscritti arabi medievali. Sono “racconti orfani”, entrati poi attraverso l'Europa."
+          "text": "In Egitto, all'epoca dei [[Mamelucchi]], si aggiungono nuovi cicli. Sorpresa per l'Occidente: **Aladino** e **Alì Babà** mancano nei manoscritti arabi medievali. Sono “racconti orfani”, entrati più tardi attraverso l'Europa."
         }
       ]
     },
     {
       "id": "course_197_les_mille_et_une_nuits_sheherazade_p2",
-      "title": "L'egemonia di Scheherazade: la narrazione come scudo",
+      "title": "L'egemonia di Sherazade: la narrazione come scudo",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Il re **Shahryar**, tradito dalla prima moglie, sposa ogni sera una giovane donna e la fa uccidere all'alba. **Scheherazade**, figlia del visir, si offre. Racconta... e si ferma nel momento più teso."
+          "text": "Il re **Shahriyar**, tradito dalla prima moglie, sposa una giovane ogni sera e la fa uccidere all'alba. **Sherazade**, figlia del visir, si propone. Racconta... e si ferma nel momento più teso."
         },
         {
           "type": "image",
           "asset": "scheherazade_shahryar_king_storyteller_painting",
           "ratio": "4:3",
-          "caption": "Scheherazade di fronte a Shahryar: la narrazione come scudo."
+          "caption": "Sherazade di fronte a Shahriyar: la narrazione come scudo"
         },
         {
           "type": "paragraph",
-          "text": "Accumula : un personaggio lo racconta a un altro, che a sua volta lo racconta a un terzo. Il re, prigioniero del desiderio di sapere cosa succederà dopo, rinvia l'esecuzione. Dopo **Mille e una nota**, l'ascolto ha cambiato Shahryar: ha ritrovato l'empatia. Scheherazade non si limitava a intrattenere. Ha riparato un tiranno. [[storie nidificate (narrativa a cornice)]]"
+          "text": "Accatasta [[storie a incastro (cornice narrativa)]]: un personaggio ne racconta un altro, che ne racconta un terzo. Il re, prigioniero del desiderio di sentire il seguito, rinvia l'esecuzione. Dopo **mille e una notti**, l'ascolto ha cambiato Shahriyar: ritrova l'empatia. Sherazade non ha soltanto divertito. Ha redento un tiranno."
         }
       ]
     },
     {
       "id": "course_197_les_mille_et_une_nuits_sheherazade_p3",
-      "title": "Lo spostamento verso l'Occidente e l'invenzione di un mito",
+      "title": "Il passaggio in Occidente e l'invenzione di un mito",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Tra **1704** e **1717**, l'orientalista francese **Antonio Galland** pubblica la sua traduzione. Adatta il testo al gusto della corte di **Luigi XIV** e aggiunge racconti ascoltati da [[Hanna Diyab]], un siriano di passaggio. Aladino entra così nel corpus."
+          "text": "Tra **1704** e **1717**, l'orientalista francese **Antoine Galland** pubblica la sua traduzione. Adatta il testo al gusto della corte di **Luigi XIV** e aggiunge racconti uditi da [[Hanna Diyab]], un siriano di passaggio. Aladino entra così nel corpus."
         },
         {
           "type": "image",
           "asset": "antoine_galland_thousand_nights_french_translation",
           "ratio": "4:3",
-          "caption": "Galland apre le Notti all'Europa del XVIII secolo."
+          "caption": "Galland apre le Notti all'Europa del secolo XVIII"
         },
         {
           "type": "funFact",
-          "text": "A volte i giovani svegliavano Galland di notte gridando sotto la sua finestra: \"Signor Galland, se non riesce a dormire, raccontaci una delle sue storie!\" »"
+          "text": "Dei giovani svegliavano a volte Galland di notte, gridando sotto la sua finestra: “Signor Galland, se non dorme, ci racconti una delle sue storie!”"
         },
         {
           "type": "paragraph",
-          "text": "Il successo inventa uno : tappeti volanti, geni, califfi sotto mentite spoglie. Visione fantastica, spesso riduttiva, ma di immensa influenza, da **Proust** a **Borges**, che vedeva in questi loop narrativi l'immagine stessa dell'infinito letterario. [[Orientalismo europeo]]"
+          "text": "Il successo inventa un [[orientalismo europeo]]: tappeti volanti, geni, califfi travestiti. Visione fantasticata, spesso riduttiva, ma di un'influenza immensa, da **Proust** a **Borges**, che vedeva in questi anelli narrativi l'immagine stessa dell'infinito letterario."
         }
       ]
     },
     {
       "id": "course_197_les_mille_et_une_nuits_sheherazade_p4",
-      "title": "Modernità e portata filosofica della storia",
+      "title": "Modernità e portata filosofica del racconto",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Perché dirlo? La risposta delle Notti: tenere a bada la morte. Finché risuona la voce di Scheherazade, l'alba fatale è sospesa. La finzione dà forma al caos."
+          "text": "Perché raccontare? Le Notti rispondono: per tenere la morte a distanza. Finché la voce di Sherazade risuona, l'alba fatale è sospesa. La finzione dà forma al caos."
         },
         {
           "type": "paragraph",
-          "text": "Questo meccanismo nutre ancora la nostra serie: lo [[cliffhanger]], questo taglio sull'orlo del precipizio, è l'erede diretto del narratore. Un libro aperto all'infinito, che rifiuta di chiudersi."
+          "text": "Questa meccanica nutre ancora le nostre serie: il [[cliffhanger]], questo taglio sull'orlo del precipizio, è l'erede diretto della narratrice. Un libro aperto sull'infinito, che rifiuta di chiudersi."
         },
         {
           "type": "takeaway",
-          "text": "**Scheherazade** sopravvive alle notti **1001** grazie a storie incorporate: inventa la suspense come strumento di sopravvivenza e trasforma la parola in potere politico."
+          "text": "**Sherazade** sopravvive **1001** notti grazie ai racconti incastrati: inventa il suspense come strumento di sopravvivenza, e trasforma la parola in potere politico."
         }
       ]
     }

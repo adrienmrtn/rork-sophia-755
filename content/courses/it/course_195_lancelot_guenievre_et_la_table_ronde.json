@@ -4,11 +4,11 @@
   "subtitle": "Camelot e la sua caduta",
   "subject": "mythologie",
   "subcategory": "Altre mitologie",
-  "description": "Artù, Lancillotto, Ginevra: la più grande leggenda del Medioevo occidentale. Un ideale di cavalleria distrutto dall'amore proibito.",
+  "description": "Artù, Lancillotto, Ginevra: la più grande leggenda del Medioevo occidentale. Un ideale di cavalleria distrutto da un amore proibito.",
   "hero": {
     "image": "lancelot_guenievre_et_la_table_ronde",
     "ratio": "16:9",
-    "hook": "Il miglior cavaliere del mondo ama la moglie del re. Camelot non si riprenderà."
+    "hook": "Il miglior cavaliere del mondo ama la moglie del re. Camelot non se ne riprenderà."
   },
   "sections": [
     {
@@ -18,11 +18,11 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "La leggenda del re **Artù** e dei suoi cavalieri della **Tavola Rotonda** è il grande ciclo mitologico del Medioevo occidentale. Noi la chiamiamo **Materiale dalla Bretagna**: un misto di storia vaga, folklore celtico e moralità cristiana."
+          "text": "La leggenda del re **Artù** e dei suoi cavalieri della **Tavola Rotonda** è il grande ciclo mitologico del Medioevo occidentale. La si chiama **Materia di Bretagna**: un misto di storia sfocata, folklore celtico e morale cristiana."
         },
         {
           "type": "paragraph",
-          "text": "Al centro della storia, una tragedia molto umana: l'amore proibito tra **Lancillotto**, il miglior cavaliere, e la regina **Ginevra**, la moglie di Artù. Questo amore, celebrato come perfezione, diventa il veleno che fa crollare **Camelot**."
+          "text": "Al cuore del racconto, una tragedia molto umana: l'amore proibito tra **Lancillotto**, il miglior cavaliere, e la regina **Ginevra**, moglie di Artù. Questo amore, celebrato come una perfezione, diventa il veleno che fa cadere **Camelot**."
         }
       ]
     },
@@ -33,21 +33,21 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Nessun singolo autore. Tra il VI e il XV secolo le storie si accumulano. Dietro Artù vediamo un signore della guerra bretone, forse chiamato **Arturo**, che avrebbe resistito ai Sassoni dopo la partenza dei Romani. Intorno a lui crescono **Merlino**, le fate, le spade magiche."
+          "text": "Nessun autore unico. Tra il secolo VI e il secolo XV, i racconti si accumulano. Dietro Artù si intravede un capo di guerra bretone, forse di nome **Arturus**, che avrebbe resistito ai Sassoni dopo la partenza dei Romani. Intorno a lui crescono **Merlino**, le fate, le spade magiche."
         },
         {
           "type": "image",
           "asset": "king_arthur_excalibur_sword_stone_medieval",
           "ratio": "4:3",
-          "caption": "Artù estrae la spada dalla roccia: segno del legittimo re."
+          "caption": "Artù estrae la spada dalla roccia: il segno del re legittimo"
         },
         {
           "type": "funFact",
-          "text": "Una “tavola rotonda” del XIII secolo è ancora appesa nel castello di Winchester, in Inghilterra. Enrico VIII lo fece dipingere per collegarsi ad Artù."
+          "text": "Una “Tavola Rotonda” del secolo XIII è ancora sospesa al castello di Winchester, in Inghilterra. Enrico VIII la fece dipingere per legarsi ad Artù."
         },
         {
           "type": "paragraph",
-          "text": "Durante , solo il vero re può estrarre **Excalibur** dalla roccia o dall'incudine. Incoronato a Camelot, Artù fondò la **Tavola Rotonda**. La sua forma circolare abolisce la gerarchia: attorno ad essa ogni cavaliere è uguale al suo vicino, compreso il re. [[la prova della spada]]"
+          "text": "Durante [[la prova della spada]], solo il vero re può estrarre **Excalibur** dalla roccia o dall'incudine. Incoronato a Camelot, Artù fonda la **Tavola Rotonda**. La forma circolare abolisce la gerarchia: intorno a essa, ogni cavaliere è uguale al vicino, compreso il re."
         }
       ]
     },
@@ -58,42 +58,42 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A poco a poco, il combattimento lascia il posto a una ricerca spirituale: il **Santo Graal**. Piatto magico negli antichi testi celtici, divenne il calice di Cristo nel XII secolo. La purezza interiore conta tanto quanto la forza."
+          "text": "A poco a poco, i combattimenti cedono il posto a una ricerca spirituale: il **Santo Graal**. Piatto magico nei vecchi testi celtici, nel secolo XII diventa il calice di Cristo. La purezza interiore conta quanto la forza."
         },
         {
           "type": "image",
           "asset": "holy_grail_knights_round_table_medieval_painting",
           "ratio": "4:3",
-          "caption": "La ricerca del Graal trasforma la Tavola Rotonda in un'avventura spirituale."
+          "caption": "La ricerca del Graal trasforma la Tavola Rotonda in avventura spirituale"
         },
         {
           "type": "funFact",
-          "text": "La parola \"graal\" deriva dal francese antico e inizialmente designava un piatto grande per servire la carne, non un taglio pregiato."
+          "text": "La parola “graal” veniva dal francese antico e indicava prima un piatto largo per servire le carni, non una coppa preziosa."
         },
         {
           "type": "paragraph",
-          "text": "Al tavolo lo [[Assedio pericoloso]] attende il cavaliere predestinato. Solo **Galaad**, **Perceval** e **Bohort** raggiungono il Graal. **Lancillotto del Lago**, “miglior cavaliere del mondo”, fallisce: il suo amore per Ginevra lo rende indegno della visione divina."
+          "text": "Alla tavola, il [[Seggio Pericoloso]] attende il cavaliere predestinato. Solo **Galaad**, **Perceval** e **Bohort** raggiungono il Graal. **Lancillotto del Lago**, “miglior cavaliere del mondo”, fallisce: il suo amore per Ginevra lo rende indegno della visione divina."
         }
       ]
     },
     {
       "id": "course_195_lancelot_guenievre_et_la_table_ronde_p3",
-      "title": "Il tradimento di Ginevra e la rottura dell'ordine",
+      "title": "Il tradimento di Ginevra e lo strappo dell'ordine",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'amore di Lancillotto e Ginevra incarna : il cavaliere si mette al servizio della sua dama. Ma Ginevra è la moglie del signore supremo. Il tradimento non è solo coniugale: è feudale. [[L'amor cortese medievale (fin'amor)]]"
+          "text": "L'amore di Lancillotto e Ginevra incarna [[l'amor cortese medievale (fin'amor)]]: il cavaliere si mette al servizio della sua dama. Ma Ginevra è la moglie del sovrano. Il tradimento non è solo coniugale: è feudale."
         },
         {
           "type": "image",
           "asset": "lancelot_guinevere_medieval_romance_painting",
           "ratio": "4:3",
-          "caption": "Lancillotto e Ginevra: l'amore che spezza Camelot."
+          "caption": "Lancillotto e Ginevra: l'amore che spezza Camelot"
         },
         {
           "type": "paragraph",
-          "text": "**Mordred**, nipote o figlio incestuoso di Arthur a seconda della versione, rivela la relazione. Arthur condanna Ginevra al rogo. Lancillotto la salva, ma uccide i fratelli di **Gawain** nella mischia. La Tavola Rotonda è dilaniata: guerra civile, fine dell'utopia."
+          "text": "**Mordred**, nipote o figlio incestuoso di Artù secondo le versioni, rivela la relazione. Artù condanna Ginevra al rogo. Lancillotto la salva, ma nella mischia uccide i fratelli di **Galvano**. La Tavola Rotonda si lacera: guerra civile, fine dell'utopia."
         }
       ]
     },
@@ -104,15 +104,15 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "In **Camlann**, Arthur uccide Mordred e riceve una ferita mortale. Excalibur viene restituito alla Signora del Lago. Ginevra finisce in convento, Lancillotto eremita. Arthur, si dice, parte per l'isola di **Avalon**."
+          "text": "A **Camlann**, Artù uccide Mordred e riceve una ferita mortale. Excalibur è restituita alla Dama del Lago. Ginevra finisce in convento, Lancillotto da eremita. Artù, si dice, parte verso l'isola di **Avalon**."
         },
         {
           "type": "paragraph",
-          "text": "Diventa lo [[Rex Quondam Rexque Futurus]], “ex re, futuro re”: il re dormiente che tornerà nel momento peggiore. Camelot muore nella leggenda, ed è così che sopravvive."
+          "text": "Diventa il [[Rex Quondam Rexque Futurus]], “re un tempo, re futuro”: il re dormiente che tornerà nel momento peggiore. Camelot muore in leggenda, e così sopravvive."
         },
         {
           "type": "takeaway",
-          "text": "L'amore di **Lancillotto** per **Ginevra** distrugge Camelot. La ricerca del **Graal** riesce solo per i puri: Lancillotto, il miglior cavaliere, rimane fuori dalla soglia sacra."
+          "text": "L'amore di **Lancillotto** per **Ginevra** distrugge Camelot. La ricerca del **Graal** riesce solo ai puri: Lancillotto, miglior cavaliere, resta fuori dalla soglia sacra."
         }
       ]
     }
